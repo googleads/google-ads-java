@@ -10,7 +10,7 @@ package com.google.ads.googleads.v4.common;
  *
  * Protobuf type {@code google.ads.googleads.v4.common.ManualCpc}
  */
-public  final class ManualCpc extends
+public final class ManualCpc extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.common.ManualCpc)
     ManualCpcOrBuilder {
@@ -107,6 +107,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.BoolValue enhanced_cpc_enabled = 1;</code>
    * @return Whether the enhancedCpcEnabled field is set.
    */
+  @java.lang.Override
   public boolean hasEnhancedCpcEnabled() {
     return enhancedCpcEnabled_ != null;
   }
@@ -118,6 +119,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.BoolValue enhanced_cpc_enabled = 1;</code>
    * @return The enhancedCpcEnabled.
    */
+  @java.lang.Override
   public com.google.protobuf.BoolValue getEnhancedCpcEnabled() {
     return enhancedCpcEnabled_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : enhancedCpcEnabled_;
   }
@@ -128,6 +130,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.BoolValue enhanced_cpc_enabled = 1;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.BoolValueOrBuilder getEnhancedCpcEnabledOrBuilder() {
     return getEnhancedCpcEnabled();
   }

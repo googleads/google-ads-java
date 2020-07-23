@@ -10,7 +10,7 @@ package com.google.ads.googleads.v2.services;
  *
  * Protobuf type {@code google.ads.googleads.v2.services.MutateOperation}
  */
-public  final class MutateOperation extends
+public final class MutateOperation extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v2.services.MutateOperation)
     MutateOperationOrBuilder {
@@ -20,6 +20,13 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private MutateOperation() {
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new MutateOperation();
   }
 
   @java.lang.Override
@@ -35,8 +42,6 @@ private static final long serialVersionUID = 0L;
     if (extensionRegistry == null) {
       throw new java.lang.NullPointerException();
     }
-    int mutable_bitField0_ = 0;
-    int mutable_bitField1_ = 0;
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
         com.google.protobuf.UnknownFieldSet.newBuilder();
     try {
@@ -628,7 +633,8 @@ private static final long serialVersionUID = 0L;
   private int operationCase_ = 0;
   private java.lang.Object operation_;
   public enum OperationCase
-      implements com.google.protobuf.Internal.EnumLite {
+      implements com.google.protobuf.Internal.EnumLite,
+          com.google.protobuf.AbstractMessage.InternalOneOfEnum {
     AD_GROUP_AD_LABEL_OPERATION(17),
     AD_GROUP_AD_OPERATION(1),
     AD_GROUP_BID_MODIFIER_OPERATION(2),
@@ -674,6 +680,8 @@ private static final long serialVersionUID = 0L;
       this.value = value;
     }
     /**
+     * @param value The number of the enum to look for.
+     * @return The enum associated with the given number.
      * @deprecated Use {@link #forNumber(int)} instead.
      */
     @java.lang.Deprecated
@@ -744,7 +752,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.services.AdGroupAdLabelOperation ad_group_ad_label_operation = 17;</code>
+   * @return Whether the adGroupAdLabelOperation field is set.
    */
+  @java.lang.Override
   public boolean hasAdGroupAdLabelOperation() {
     return operationCase_ == 17;
   }
@@ -754,7 +764,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.services.AdGroupAdLabelOperation ad_group_ad_label_operation = 17;</code>
+   * @return The adGroupAdLabelOperation.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.services.AdGroupAdLabelOperation getAdGroupAdLabelOperation() {
     if (operationCase_ == 17) {
        return (com.google.ads.googleads.v2.services.AdGroupAdLabelOperation) operation_;
@@ -768,6 +780,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v2.services.AdGroupAdLabelOperation ad_group_ad_label_operation = 17;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.services.AdGroupAdLabelOperationOrBuilder getAdGroupAdLabelOperationOrBuilder() {
     if (operationCase_ == 17) {
        return (com.google.ads.googleads.v2.services.AdGroupAdLabelOperation) operation_;
@@ -782,7 +795,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.services.AdGroupAdOperation ad_group_ad_operation = 1;</code>
+   * @return Whether the adGroupAdOperation field is set.
    */
+  @java.lang.Override
   public boolean hasAdGroupAdOperation() {
     return operationCase_ == 1;
   }
@@ -792,7 +807,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.services.AdGroupAdOperation ad_group_ad_operation = 1;</code>
+   * @return The adGroupAdOperation.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.services.AdGroupAdOperation getAdGroupAdOperation() {
     if (operationCase_ == 1) {
        return (com.google.ads.googleads.v2.services.AdGroupAdOperation) operation_;
@@ -806,6 +823,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v2.services.AdGroupAdOperation ad_group_ad_operation = 1;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.services.AdGroupAdOperationOrBuilder getAdGroupAdOperationOrBuilder() {
     if (operationCase_ == 1) {
        return (com.google.ads.googleads.v2.services.AdGroupAdOperation) operation_;
@@ -820,7 +838,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.services.AdGroupBidModifierOperation ad_group_bid_modifier_operation = 2;</code>
+   * @return Whether the adGroupBidModifierOperation field is set.
    */
+  @java.lang.Override
   public boolean hasAdGroupBidModifierOperation() {
     return operationCase_ == 2;
   }
@@ -830,7 +850,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.services.AdGroupBidModifierOperation ad_group_bid_modifier_operation = 2;</code>
+   * @return The adGroupBidModifierOperation.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.services.AdGroupBidModifierOperation getAdGroupBidModifierOperation() {
     if (operationCase_ == 2) {
        return (com.google.ads.googleads.v2.services.AdGroupBidModifierOperation) operation_;
@@ -844,6 +866,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v2.services.AdGroupBidModifierOperation ad_group_bid_modifier_operation = 2;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.services.AdGroupBidModifierOperationOrBuilder getAdGroupBidModifierOperationOrBuilder() {
     if (operationCase_ == 2) {
        return (com.google.ads.googleads.v2.services.AdGroupBidModifierOperation) operation_;
@@ -858,7 +881,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.services.AdGroupCriterionLabelOperation ad_group_criterion_label_operation = 18;</code>
+   * @return Whether the adGroupCriterionLabelOperation field is set.
    */
+  @java.lang.Override
   public boolean hasAdGroupCriterionLabelOperation() {
     return operationCase_ == 18;
   }
@@ -868,7 +893,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.services.AdGroupCriterionLabelOperation ad_group_criterion_label_operation = 18;</code>
+   * @return The adGroupCriterionLabelOperation.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.services.AdGroupCriterionLabelOperation getAdGroupCriterionLabelOperation() {
     if (operationCase_ == 18) {
        return (com.google.ads.googleads.v2.services.AdGroupCriterionLabelOperation) operation_;
@@ -882,6 +909,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v2.services.AdGroupCriterionLabelOperation ad_group_criterion_label_operation = 18;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.services.AdGroupCriterionLabelOperationOrBuilder getAdGroupCriterionLabelOperationOrBuilder() {
     if (operationCase_ == 18) {
        return (com.google.ads.googleads.v2.services.AdGroupCriterionLabelOperation) operation_;
@@ -896,7 +924,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.services.AdGroupCriterionOperation ad_group_criterion_operation = 3;</code>
+   * @return Whether the adGroupCriterionOperation field is set.
    */
+  @java.lang.Override
   public boolean hasAdGroupCriterionOperation() {
     return operationCase_ == 3;
   }
@@ -906,7 +936,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.services.AdGroupCriterionOperation ad_group_criterion_operation = 3;</code>
+   * @return The adGroupCriterionOperation.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.services.AdGroupCriterionOperation getAdGroupCriterionOperation() {
     if (operationCase_ == 3) {
        return (com.google.ads.googleads.v2.services.AdGroupCriterionOperation) operation_;
@@ -920,6 +952,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v2.services.AdGroupCriterionOperation ad_group_criterion_operation = 3;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.services.AdGroupCriterionOperationOrBuilder getAdGroupCriterionOperationOrBuilder() {
     if (operationCase_ == 3) {
        return (com.google.ads.googleads.v2.services.AdGroupCriterionOperation) operation_;
@@ -934,7 +967,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.services.AdGroupExtensionSettingOperation ad_group_extension_setting_operation = 19;</code>
+   * @return Whether the adGroupExtensionSettingOperation field is set.
    */
+  @java.lang.Override
   public boolean hasAdGroupExtensionSettingOperation() {
     return operationCase_ == 19;
   }
@@ -944,7 +979,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.services.AdGroupExtensionSettingOperation ad_group_extension_setting_operation = 19;</code>
+   * @return The adGroupExtensionSettingOperation.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.services.AdGroupExtensionSettingOperation getAdGroupExtensionSettingOperation() {
     if (operationCase_ == 19) {
        return (com.google.ads.googleads.v2.services.AdGroupExtensionSettingOperation) operation_;
@@ -958,6 +995,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v2.services.AdGroupExtensionSettingOperation ad_group_extension_setting_operation = 19;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.services.AdGroupExtensionSettingOperationOrBuilder getAdGroupExtensionSettingOperationOrBuilder() {
     if (operationCase_ == 19) {
        return (com.google.ads.googleads.v2.services.AdGroupExtensionSettingOperation) operation_;
@@ -972,7 +1010,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.services.AdGroupFeedOperation ad_group_feed_operation = 20;</code>
+   * @return Whether the adGroupFeedOperation field is set.
    */
+  @java.lang.Override
   public boolean hasAdGroupFeedOperation() {
     return operationCase_ == 20;
   }
@@ -982,7 +1022,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.services.AdGroupFeedOperation ad_group_feed_operation = 20;</code>
+   * @return The adGroupFeedOperation.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.services.AdGroupFeedOperation getAdGroupFeedOperation() {
     if (operationCase_ == 20) {
        return (com.google.ads.googleads.v2.services.AdGroupFeedOperation) operation_;
@@ -996,6 +1038,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v2.services.AdGroupFeedOperation ad_group_feed_operation = 20;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.services.AdGroupFeedOperationOrBuilder getAdGroupFeedOperationOrBuilder() {
     if (operationCase_ == 20) {
        return (com.google.ads.googleads.v2.services.AdGroupFeedOperation) operation_;
@@ -1010,7 +1053,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.services.AdGroupLabelOperation ad_group_label_operation = 21;</code>
+   * @return Whether the adGroupLabelOperation field is set.
    */
+  @java.lang.Override
   public boolean hasAdGroupLabelOperation() {
     return operationCase_ == 21;
   }
@@ -1020,7 +1065,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.services.AdGroupLabelOperation ad_group_label_operation = 21;</code>
+   * @return The adGroupLabelOperation.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.services.AdGroupLabelOperation getAdGroupLabelOperation() {
     if (operationCase_ == 21) {
        return (com.google.ads.googleads.v2.services.AdGroupLabelOperation) operation_;
@@ -1034,6 +1081,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v2.services.AdGroupLabelOperation ad_group_label_operation = 21;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.services.AdGroupLabelOperationOrBuilder getAdGroupLabelOperationOrBuilder() {
     if (operationCase_ == 21) {
        return (com.google.ads.googleads.v2.services.AdGroupLabelOperation) operation_;
@@ -1048,7 +1096,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.services.AdGroupOperation ad_group_operation = 5;</code>
+   * @return Whether the adGroupOperation field is set.
    */
+  @java.lang.Override
   public boolean hasAdGroupOperation() {
     return operationCase_ == 5;
   }
@@ -1058,7 +1108,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.services.AdGroupOperation ad_group_operation = 5;</code>
+   * @return The adGroupOperation.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.services.AdGroupOperation getAdGroupOperation() {
     if (operationCase_ == 5) {
        return (com.google.ads.googleads.v2.services.AdGroupOperation) operation_;
@@ -1072,6 +1124,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v2.services.AdGroupOperation ad_group_operation = 5;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.services.AdGroupOperationOrBuilder getAdGroupOperationOrBuilder() {
     if (operationCase_ == 5) {
        return (com.google.ads.googleads.v2.services.AdGroupOperation) operation_;
@@ -1086,7 +1139,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.services.AdParameterOperation ad_parameter_operation = 22;</code>
+   * @return Whether the adParameterOperation field is set.
    */
+  @java.lang.Override
   public boolean hasAdParameterOperation() {
     return operationCase_ == 22;
   }
@@ -1096,7 +1151,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.services.AdParameterOperation ad_parameter_operation = 22;</code>
+   * @return The adParameterOperation.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.services.AdParameterOperation getAdParameterOperation() {
     if (operationCase_ == 22) {
        return (com.google.ads.googleads.v2.services.AdParameterOperation) operation_;
@@ -1110,6 +1167,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v2.services.AdParameterOperation ad_parameter_operation = 22;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.services.AdParameterOperationOrBuilder getAdParameterOperationOrBuilder() {
     if (operationCase_ == 22) {
        return (com.google.ads.googleads.v2.services.AdParameterOperation) operation_;
@@ -1124,7 +1182,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.services.AssetOperation asset_operation = 23;</code>
+   * @return Whether the assetOperation field is set.
    */
+  @java.lang.Override
   public boolean hasAssetOperation() {
     return operationCase_ == 23;
   }
@@ -1134,7 +1194,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.services.AssetOperation asset_operation = 23;</code>
+   * @return The assetOperation.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.services.AssetOperation getAssetOperation() {
     if (operationCase_ == 23) {
        return (com.google.ads.googleads.v2.services.AssetOperation) operation_;
@@ -1148,6 +1210,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v2.services.AssetOperation asset_operation = 23;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.services.AssetOperationOrBuilder getAssetOperationOrBuilder() {
     if (operationCase_ == 23) {
        return (com.google.ads.googleads.v2.services.AssetOperation) operation_;
@@ -1162,7 +1225,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.services.BiddingStrategyOperation bidding_strategy_operation = 6;</code>
+   * @return Whether the biddingStrategyOperation field is set.
    */
+  @java.lang.Override
   public boolean hasBiddingStrategyOperation() {
     return operationCase_ == 6;
   }
@@ -1172,7 +1237,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.services.BiddingStrategyOperation bidding_strategy_operation = 6;</code>
+   * @return The biddingStrategyOperation.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.services.BiddingStrategyOperation getBiddingStrategyOperation() {
     if (operationCase_ == 6) {
        return (com.google.ads.googleads.v2.services.BiddingStrategyOperation) operation_;
@@ -1186,6 +1253,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v2.services.BiddingStrategyOperation bidding_strategy_operation = 6;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.services.BiddingStrategyOperationOrBuilder getBiddingStrategyOperationOrBuilder() {
     if (operationCase_ == 6) {
        return (com.google.ads.googleads.v2.services.BiddingStrategyOperation) operation_;
@@ -1200,7 +1268,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.services.CampaignBidModifierOperation campaign_bid_modifier_operation = 7;</code>
+   * @return Whether the campaignBidModifierOperation field is set.
    */
+  @java.lang.Override
   public boolean hasCampaignBidModifierOperation() {
     return operationCase_ == 7;
   }
@@ -1210,7 +1280,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.services.CampaignBidModifierOperation campaign_bid_modifier_operation = 7;</code>
+   * @return The campaignBidModifierOperation.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.services.CampaignBidModifierOperation getCampaignBidModifierOperation() {
     if (operationCase_ == 7) {
        return (com.google.ads.googleads.v2.services.CampaignBidModifierOperation) operation_;
@@ -1224,6 +1296,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v2.services.CampaignBidModifierOperation campaign_bid_modifier_operation = 7;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.services.CampaignBidModifierOperationOrBuilder getCampaignBidModifierOperationOrBuilder() {
     if (operationCase_ == 7) {
        return (com.google.ads.googleads.v2.services.CampaignBidModifierOperation) operation_;
@@ -1238,7 +1311,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.services.CampaignBudgetOperation campaign_budget_operation = 8;</code>
+   * @return Whether the campaignBudgetOperation field is set.
    */
+  @java.lang.Override
   public boolean hasCampaignBudgetOperation() {
     return operationCase_ == 8;
   }
@@ -1248,7 +1323,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.services.CampaignBudgetOperation campaign_budget_operation = 8;</code>
+   * @return The campaignBudgetOperation.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.services.CampaignBudgetOperation getCampaignBudgetOperation() {
     if (operationCase_ == 8) {
        return (com.google.ads.googleads.v2.services.CampaignBudgetOperation) operation_;
@@ -1262,6 +1339,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v2.services.CampaignBudgetOperation campaign_budget_operation = 8;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.services.CampaignBudgetOperationOrBuilder getCampaignBudgetOperationOrBuilder() {
     if (operationCase_ == 8) {
        return (com.google.ads.googleads.v2.services.CampaignBudgetOperation) operation_;
@@ -1276,7 +1354,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.services.CampaignCriterionOperation campaign_criterion_operation = 13;</code>
+   * @return Whether the campaignCriterionOperation field is set.
    */
+  @java.lang.Override
   public boolean hasCampaignCriterionOperation() {
     return operationCase_ == 13;
   }
@@ -1286,7 +1366,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.services.CampaignCriterionOperation campaign_criterion_operation = 13;</code>
+   * @return The campaignCriterionOperation.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.services.CampaignCriterionOperation getCampaignCriterionOperation() {
     if (operationCase_ == 13) {
        return (com.google.ads.googleads.v2.services.CampaignCriterionOperation) operation_;
@@ -1300,6 +1382,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v2.services.CampaignCriterionOperation campaign_criterion_operation = 13;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.services.CampaignCriterionOperationOrBuilder getCampaignCriterionOperationOrBuilder() {
     if (operationCase_ == 13) {
        return (com.google.ads.googleads.v2.services.CampaignCriterionOperation) operation_;
@@ -1314,7 +1397,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.services.CampaignDraftOperation campaign_draft_operation = 24;</code>
+   * @return Whether the campaignDraftOperation field is set.
    */
+  @java.lang.Override
   public boolean hasCampaignDraftOperation() {
     return operationCase_ == 24;
   }
@@ -1324,7 +1409,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.services.CampaignDraftOperation campaign_draft_operation = 24;</code>
+   * @return The campaignDraftOperation.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.services.CampaignDraftOperation getCampaignDraftOperation() {
     if (operationCase_ == 24) {
        return (com.google.ads.googleads.v2.services.CampaignDraftOperation) operation_;
@@ -1338,6 +1425,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v2.services.CampaignDraftOperation campaign_draft_operation = 24;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.services.CampaignDraftOperationOrBuilder getCampaignDraftOperationOrBuilder() {
     if (operationCase_ == 24) {
        return (com.google.ads.googleads.v2.services.CampaignDraftOperation) operation_;
@@ -1352,7 +1440,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.services.CampaignExperimentOperation campaign_experiment_operation = 25;</code>
+   * @return Whether the campaignExperimentOperation field is set.
    */
+  @java.lang.Override
   public boolean hasCampaignExperimentOperation() {
     return operationCase_ == 25;
   }
@@ -1362,7 +1452,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.services.CampaignExperimentOperation campaign_experiment_operation = 25;</code>
+   * @return The campaignExperimentOperation.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.services.CampaignExperimentOperation getCampaignExperimentOperation() {
     if (operationCase_ == 25) {
        return (com.google.ads.googleads.v2.services.CampaignExperimentOperation) operation_;
@@ -1376,6 +1468,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v2.services.CampaignExperimentOperation campaign_experiment_operation = 25;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.services.CampaignExperimentOperationOrBuilder getCampaignExperimentOperationOrBuilder() {
     if (operationCase_ == 25) {
        return (com.google.ads.googleads.v2.services.CampaignExperimentOperation) operation_;
@@ -1390,7 +1483,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.services.CampaignExtensionSettingOperation campaign_extension_setting_operation = 26;</code>
+   * @return Whether the campaignExtensionSettingOperation field is set.
    */
+  @java.lang.Override
   public boolean hasCampaignExtensionSettingOperation() {
     return operationCase_ == 26;
   }
@@ -1400,7 +1495,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.services.CampaignExtensionSettingOperation campaign_extension_setting_operation = 26;</code>
+   * @return The campaignExtensionSettingOperation.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.services.CampaignExtensionSettingOperation getCampaignExtensionSettingOperation() {
     if (operationCase_ == 26) {
        return (com.google.ads.googleads.v2.services.CampaignExtensionSettingOperation) operation_;
@@ -1414,6 +1511,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v2.services.CampaignExtensionSettingOperation campaign_extension_setting_operation = 26;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.services.CampaignExtensionSettingOperationOrBuilder getCampaignExtensionSettingOperationOrBuilder() {
     if (operationCase_ == 26) {
        return (com.google.ads.googleads.v2.services.CampaignExtensionSettingOperation) operation_;
@@ -1428,7 +1526,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.services.CampaignFeedOperation campaign_feed_operation = 27;</code>
+   * @return Whether the campaignFeedOperation field is set.
    */
+  @java.lang.Override
   public boolean hasCampaignFeedOperation() {
     return operationCase_ == 27;
   }
@@ -1438,7 +1538,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.services.CampaignFeedOperation campaign_feed_operation = 27;</code>
+   * @return The campaignFeedOperation.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.services.CampaignFeedOperation getCampaignFeedOperation() {
     if (operationCase_ == 27) {
        return (com.google.ads.googleads.v2.services.CampaignFeedOperation) operation_;
@@ -1452,6 +1554,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v2.services.CampaignFeedOperation campaign_feed_operation = 27;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.services.CampaignFeedOperationOrBuilder getCampaignFeedOperationOrBuilder() {
     if (operationCase_ == 27) {
        return (com.google.ads.googleads.v2.services.CampaignFeedOperation) operation_;
@@ -1466,7 +1569,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.services.CampaignLabelOperation campaign_label_operation = 28;</code>
+   * @return Whether the campaignLabelOperation field is set.
    */
+  @java.lang.Override
   public boolean hasCampaignLabelOperation() {
     return operationCase_ == 28;
   }
@@ -1476,7 +1581,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.services.CampaignLabelOperation campaign_label_operation = 28;</code>
+   * @return The campaignLabelOperation.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.services.CampaignLabelOperation getCampaignLabelOperation() {
     if (operationCase_ == 28) {
        return (com.google.ads.googleads.v2.services.CampaignLabelOperation) operation_;
@@ -1490,6 +1597,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v2.services.CampaignLabelOperation campaign_label_operation = 28;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.services.CampaignLabelOperationOrBuilder getCampaignLabelOperationOrBuilder() {
     if (operationCase_ == 28) {
        return (com.google.ads.googleads.v2.services.CampaignLabelOperation) operation_;
@@ -1504,7 +1612,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.services.CampaignOperation campaign_operation = 10;</code>
+   * @return Whether the campaignOperation field is set.
    */
+  @java.lang.Override
   public boolean hasCampaignOperation() {
     return operationCase_ == 10;
   }
@@ -1514,7 +1624,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.services.CampaignOperation campaign_operation = 10;</code>
+   * @return The campaignOperation.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.services.CampaignOperation getCampaignOperation() {
     if (operationCase_ == 10) {
        return (com.google.ads.googleads.v2.services.CampaignOperation) operation_;
@@ -1528,6 +1640,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v2.services.CampaignOperation campaign_operation = 10;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.services.CampaignOperationOrBuilder getCampaignOperationOrBuilder() {
     if (operationCase_ == 10) {
        return (com.google.ads.googleads.v2.services.CampaignOperation) operation_;
@@ -1542,7 +1655,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.services.CampaignSharedSetOperation campaign_shared_set_operation = 11;</code>
+   * @return Whether the campaignSharedSetOperation field is set.
    */
+  @java.lang.Override
   public boolean hasCampaignSharedSetOperation() {
     return operationCase_ == 11;
   }
@@ -1552,7 +1667,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.services.CampaignSharedSetOperation campaign_shared_set_operation = 11;</code>
+   * @return The campaignSharedSetOperation.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.services.CampaignSharedSetOperation getCampaignSharedSetOperation() {
     if (operationCase_ == 11) {
        return (com.google.ads.googleads.v2.services.CampaignSharedSetOperation) operation_;
@@ -1566,6 +1683,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v2.services.CampaignSharedSetOperation campaign_shared_set_operation = 11;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.services.CampaignSharedSetOperationOrBuilder getCampaignSharedSetOperationOrBuilder() {
     if (operationCase_ == 11) {
        return (com.google.ads.googleads.v2.services.CampaignSharedSetOperation) operation_;
@@ -1580,7 +1698,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.services.ConversionActionOperation conversion_action_operation = 12;</code>
+   * @return Whether the conversionActionOperation field is set.
    */
+  @java.lang.Override
   public boolean hasConversionActionOperation() {
     return operationCase_ == 12;
   }
@@ -1590,7 +1710,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.services.ConversionActionOperation conversion_action_operation = 12;</code>
+   * @return The conversionActionOperation.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.services.ConversionActionOperation getConversionActionOperation() {
     if (operationCase_ == 12) {
        return (com.google.ads.googleads.v2.services.ConversionActionOperation) operation_;
@@ -1604,6 +1726,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v2.services.ConversionActionOperation conversion_action_operation = 12;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.services.ConversionActionOperationOrBuilder getConversionActionOperationOrBuilder() {
     if (operationCase_ == 12) {
        return (com.google.ads.googleads.v2.services.ConversionActionOperation) operation_;
@@ -1618,7 +1741,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.services.CustomerExtensionSettingOperation customer_extension_setting_operation = 30;</code>
+   * @return Whether the customerExtensionSettingOperation field is set.
    */
+  @java.lang.Override
   public boolean hasCustomerExtensionSettingOperation() {
     return operationCase_ == 30;
   }
@@ -1628,7 +1753,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.services.CustomerExtensionSettingOperation customer_extension_setting_operation = 30;</code>
+   * @return The customerExtensionSettingOperation.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.services.CustomerExtensionSettingOperation getCustomerExtensionSettingOperation() {
     if (operationCase_ == 30) {
        return (com.google.ads.googleads.v2.services.CustomerExtensionSettingOperation) operation_;
@@ -1642,6 +1769,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v2.services.CustomerExtensionSettingOperation customer_extension_setting_operation = 30;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.services.CustomerExtensionSettingOperationOrBuilder getCustomerExtensionSettingOperationOrBuilder() {
     if (operationCase_ == 30) {
        return (com.google.ads.googleads.v2.services.CustomerExtensionSettingOperation) operation_;
@@ -1656,7 +1784,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.services.CustomerFeedOperation customer_feed_operation = 31;</code>
+   * @return Whether the customerFeedOperation field is set.
    */
+  @java.lang.Override
   public boolean hasCustomerFeedOperation() {
     return operationCase_ == 31;
   }
@@ -1666,7 +1796,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.services.CustomerFeedOperation customer_feed_operation = 31;</code>
+   * @return The customerFeedOperation.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.services.CustomerFeedOperation getCustomerFeedOperation() {
     if (operationCase_ == 31) {
        return (com.google.ads.googleads.v2.services.CustomerFeedOperation) operation_;
@@ -1680,6 +1812,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v2.services.CustomerFeedOperation customer_feed_operation = 31;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.services.CustomerFeedOperationOrBuilder getCustomerFeedOperationOrBuilder() {
     if (operationCase_ == 31) {
        return (com.google.ads.googleads.v2.services.CustomerFeedOperation) operation_;
@@ -1694,7 +1827,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.services.CustomerLabelOperation customer_label_operation = 32;</code>
+   * @return Whether the customerLabelOperation field is set.
    */
+  @java.lang.Override
   public boolean hasCustomerLabelOperation() {
     return operationCase_ == 32;
   }
@@ -1704,7 +1839,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.services.CustomerLabelOperation customer_label_operation = 32;</code>
+   * @return The customerLabelOperation.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.services.CustomerLabelOperation getCustomerLabelOperation() {
     if (operationCase_ == 32) {
        return (com.google.ads.googleads.v2.services.CustomerLabelOperation) operation_;
@@ -1718,6 +1855,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v2.services.CustomerLabelOperation customer_label_operation = 32;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.services.CustomerLabelOperationOrBuilder getCustomerLabelOperationOrBuilder() {
     if (operationCase_ == 32) {
        return (com.google.ads.googleads.v2.services.CustomerLabelOperation) operation_;
@@ -1732,7 +1870,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.services.CustomerNegativeCriterionOperation customer_negative_criterion_operation = 34;</code>
+   * @return Whether the customerNegativeCriterionOperation field is set.
    */
+  @java.lang.Override
   public boolean hasCustomerNegativeCriterionOperation() {
     return operationCase_ == 34;
   }
@@ -1742,7 +1882,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.services.CustomerNegativeCriterionOperation customer_negative_criterion_operation = 34;</code>
+   * @return The customerNegativeCriterionOperation.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.services.CustomerNegativeCriterionOperation getCustomerNegativeCriterionOperation() {
     if (operationCase_ == 34) {
        return (com.google.ads.googleads.v2.services.CustomerNegativeCriterionOperation) operation_;
@@ -1756,6 +1898,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v2.services.CustomerNegativeCriterionOperation customer_negative_criterion_operation = 34;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.services.CustomerNegativeCriterionOperationOrBuilder getCustomerNegativeCriterionOperationOrBuilder() {
     if (operationCase_ == 34) {
        return (com.google.ads.googleads.v2.services.CustomerNegativeCriterionOperation) operation_;
@@ -1770,7 +1913,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.services.CustomerOperation customer_operation = 35;</code>
+   * @return Whether the customerOperation field is set.
    */
+  @java.lang.Override
   public boolean hasCustomerOperation() {
     return operationCase_ == 35;
   }
@@ -1780,7 +1925,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.services.CustomerOperation customer_operation = 35;</code>
+   * @return The customerOperation.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.services.CustomerOperation getCustomerOperation() {
     if (operationCase_ == 35) {
        return (com.google.ads.googleads.v2.services.CustomerOperation) operation_;
@@ -1794,6 +1941,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v2.services.CustomerOperation customer_operation = 35;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.services.CustomerOperationOrBuilder getCustomerOperationOrBuilder() {
     if (operationCase_ == 35) {
        return (com.google.ads.googleads.v2.services.CustomerOperation) operation_;
@@ -1808,7 +1956,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.services.ExtensionFeedItemOperation extension_feed_item_operation = 36;</code>
+   * @return Whether the extensionFeedItemOperation field is set.
    */
+  @java.lang.Override
   public boolean hasExtensionFeedItemOperation() {
     return operationCase_ == 36;
   }
@@ -1818,7 +1968,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.services.ExtensionFeedItemOperation extension_feed_item_operation = 36;</code>
+   * @return The extensionFeedItemOperation.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.services.ExtensionFeedItemOperation getExtensionFeedItemOperation() {
     if (operationCase_ == 36) {
        return (com.google.ads.googleads.v2.services.ExtensionFeedItemOperation) operation_;
@@ -1832,6 +1984,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v2.services.ExtensionFeedItemOperation extension_feed_item_operation = 36;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.services.ExtensionFeedItemOperationOrBuilder getExtensionFeedItemOperationOrBuilder() {
     if (operationCase_ == 36) {
        return (com.google.ads.googleads.v2.services.ExtensionFeedItemOperation) operation_;
@@ -1846,7 +1999,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.services.FeedItemOperation feed_item_operation = 37;</code>
+   * @return Whether the feedItemOperation field is set.
    */
+  @java.lang.Override
   public boolean hasFeedItemOperation() {
     return operationCase_ == 37;
   }
@@ -1856,7 +2011,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.services.FeedItemOperation feed_item_operation = 37;</code>
+   * @return The feedItemOperation.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.services.FeedItemOperation getFeedItemOperation() {
     if (operationCase_ == 37) {
        return (com.google.ads.googleads.v2.services.FeedItemOperation) operation_;
@@ -1870,6 +2027,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v2.services.FeedItemOperation feed_item_operation = 37;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.services.FeedItemOperationOrBuilder getFeedItemOperationOrBuilder() {
     if (operationCase_ == 37) {
        return (com.google.ads.googleads.v2.services.FeedItemOperation) operation_;
@@ -1884,7 +2042,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.services.FeedItemTargetOperation feed_item_target_operation = 38;</code>
+   * @return Whether the feedItemTargetOperation field is set.
    */
+  @java.lang.Override
   public boolean hasFeedItemTargetOperation() {
     return operationCase_ == 38;
   }
@@ -1894,7 +2054,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.services.FeedItemTargetOperation feed_item_target_operation = 38;</code>
+   * @return The feedItemTargetOperation.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.services.FeedItemTargetOperation getFeedItemTargetOperation() {
     if (operationCase_ == 38) {
        return (com.google.ads.googleads.v2.services.FeedItemTargetOperation) operation_;
@@ -1908,6 +2070,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v2.services.FeedItemTargetOperation feed_item_target_operation = 38;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.services.FeedItemTargetOperationOrBuilder getFeedItemTargetOperationOrBuilder() {
     if (operationCase_ == 38) {
        return (com.google.ads.googleads.v2.services.FeedItemTargetOperation) operation_;
@@ -1922,7 +2085,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.services.FeedMappingOperation feed_mapping_operation = 39;</code>
+   * @return Whether the feedMappingOperation field is set.
    */
+  @java.lang.Override
   public boolean hasFeedMappingOperation() {
     return operationCase_ == 39;
   }
@@ -1932,7 +2097,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.services.FeedMappingOperation feed_mapping_operation = 39;</code>
+   * @return The feedMappingOperation.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.services.FeedMappingOperation getFeedMappingOperation() {
     if (operationCase_ == 39) {
        return (com.google.ads.googleads.v2.services.FeedMappingOperation) operation_;
@@ -1946,6 +2113,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v2.services.FeedMappingOperation feed_mapping_operation = 39;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.services.FeedMappingOperationOrBuilder getFeedMappingOperationOrBuilder() {
     if (operationCase_ == 39) {
        return (com.google.ads.googleads.v2.services.FeedMappingOperation) operation_;
@@ -1960,7 +2128,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.services.FeedOperation feed_operation = 40;</code>
+   * @return Whether the feedOperation field is set.
    */
+  @java.lang.Override
   public boolean hasFeedOperation() {
     return operationCase_ == 40;
   }
@@ -1970,7 +2140,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.services.FeedOperation feed_operation = 40;</code>
+   * @return The feedOperation.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.services.FeedOperation getFeedOperation() {
     if (operationCase_ == 40) {
        return (com.google.ads.googleads.v2.services.FeedOperation) operation_;
@@ -1984,6 +2156,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v2.services.FeedOperation feed_operation = 40;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.services.FeedOperationOrBuilder getFeedOperationOrBuilder() {
     if (operationCase_ == 40) {
        return (com.google.ads.googleads.v2.services.FeedOperation) operation_;
@@ -1998,7 +2171,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.services.LabelOperation label_operation = 41;</code>
+   * @return Whether the labelOperation field is set.
    */
+  @java.lang.Override
   public boolean hasLabelOperation() {
     return operationCase_ == 41;
   }
@@ -2008,7 +2183,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.services.LabelOperation label_operation = 41;</code>
+   * @return The labelOperation.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.services.LabelOperation getLabelOperation() {
     if (operationCase_ == 41) {
        return (com.google.ads.googleads.v2.services.LabelOperation) operation_;
@@ -2022,6 +2199,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v2.services.LabelOperation label_operation = 41;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.services.LabelOperationOrBuilder getLabelOperationOrBuilder() {
     if (operationCase_ == 41) {
        return (com.google.ads.googleads.v2.services.LabelOperation) operation_;
@@ -2036,7 +2214,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.services.MediaFileOperation media_file_operation = 42;</code>
+   * @return Whether the mediaFileOperation field is set.
    */
+  @java.lang.Override
   public boolean hasMediaFileOperation() {
     return operationCase_ == 42;
   }
@@ -2046,7 +2226,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.services.MediaFileOperation media_file_operation = 42;</code>
+   * @return The mediaFileOperation.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.services.MediaFileOperation getMediaFileOperation() {
     if (operationCase_ == 42) {
        return (com.google.ads.googleads.v2.services.MediaFileOperation) operation_;
@@ -2060,6 +2242,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v2.services.MediaFileOperation media_file_operation = 42;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.services.MediaFileOperationOrBuilder getMediaFileOperationOrBuilder() {
     if (operationCase_ == 42) {
        return (com.google.ads.googleads.v2.services.MediaFileOperation) operation_;
@@ -2074,7 +2257,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.services.RemarketingActionOperation remarketing_action_operation = 43;</code>
+   * @return Whether the remarketingActionOperation field is set.
    */
+  @java.lang.Override
   public boolean hasRemarketingActionOperation() {
     return operationCase_ == 43;
   }
@@ -2084,7 +2269,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.services.RemarketingActionOperation remarketing_action_operation = 43;</code>
+   * @return The remarketingActionOperation.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.services.RemarketingActionOperation getRemarketingActionOperation() {
     if (operationCase_ == 43) {
        return (com.google.ads.googleads.v2.services.RemarketingActionOperation) operation_;
@@ -2098,6 +2285,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v2.services.RemarketingActionOperation remarketing_action_operation = 43;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.services.RemarketingActionOperationOrBuilder getRemarketingActionOperationOrBuilder() {
     if (operationCase_ == 43) {
        return (com.google.ads.googleads.v2.services.RemarketingActionOperation) operation_;
@@ -2112,7 +2300,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.services.SharedCriterionOperation shared_criterion_operation = 14;</code>
+   * @return Whether the sharedCriterionOperation field is set.
    */
+  @java.lang.Override
   public boolean hasSharedCriterionOperation() {
     return operationCase_ == 14;
   }
@@ -2122,7 +2312,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.services.SharedCriterionOperation shared_criterion_operation = 14;</code>
+   * @return The sharedCriterionOperation.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.services.SharedCriterionOperation getSharedCriterionOperation() {
     if (operationCase_ == 14) {
        return (com.google.ads.googleads.v2.services.SharedCriterionOperation) operation_;
@@ -2136,6 +2328,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v2.services.SharedCriterionOperation shared_criterion_operation = 14;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.services.SharedCriterionOperationOrBuilder getSharedCriterionOperationOrBuilder() {
     if (operationCase_ == 14) {
        return (com.google.ads.googleads.v2.services.SharedCriterionOperation) operation_;
@@ -2150,7 +2343,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.services.SharedSetOperation shared_set_operation = 15;</code>
+   * @return Whether the sharedSetOperation field is set.
    */
+  @java.lang.Override
   public boolean hasSharedSetOperation() {
     return operationCase_ == 15;
   }
@@ -2160,7 +2355,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.services.SharedSetOperation shared_set_operation = 15;</code>
+   * @return The sharedSetOperation.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.services.SharedSetOperation getSharedSetOperation() {
     if (operationCase_ == 15) {
        return (com.google.ads.googleads.v2.services.SharedSetOperation) operation_;
@@ -2174,6 +2371,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v2.services.SharedSetOperation shared_set_operation = 15;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.services.SharedSetOperationOrBuilder getSharedSetOperationOrBuilder() {
     if (operationCase_ == 15) {
        return (com.google.ads.googleads.v2.services.SharedSetOperation) operation_;
@@ -2188,7 +2386,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.services.UserListOperation user_list_operation = 16;</code>
+   * @return Whether the userListOperation field is set.
    */
+  @java.lang.Override
   public boolean hasUserListOperation() {
     return operationCase_ == 16;
   }
@@ -2198,7 +2398,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.services.UserListOperation user_list_operation = 16;</code>
+   * @return The userListOperation.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.services.UserListOperation getUserListOperation() {
     if (operationCase_ == 16) {
        return (com.google.ads.googleads.v2.services.UserListOperation) operation_;
@@ -2212,6 +2414,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v2.services.UserListOperation user_list_operation = 16;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.services.UserListOperationOrBuilder getUserListOperationOrBuilder() {
     if (operationCase_ == 16) {
        return (com.google.ads.googleads.v2.services.UserListOperation) operation_;
@@ -3562,7 +3765,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.services.AdGroupAdLabelOperation ad_group_ad_label_operation = 17;</code>
+     * @return Whether the adGroupAdLabelOperation field is set.
      */
+    @java.lang.Override
     public boolean hasAdGroupAdLabelOperation() {
       return operationCase_ == 17;
     }
@@ -3572,7 +3777,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.services.AdGroupAdLabelOperation ad_group_ad_label_operation = 17;</code>
+     * @return The adGroupAdLabelOperation.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v2.services.AdGroupAdLabelOperation getAdGroupAdLabelOperation() {
       if (adGroupAdLabelOperationBuilder_ == null) {
         if (operationCase_ == 17) {
@@ -3690,6 +3897,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v2.services.AdGroupAdLabelOperation ad_group_ad_label_operation = 17;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v2.services.AdGroupAdLabelOperationOrBuilder getAdGroupAdLabelOperationOrBuilder() {
       if ((operationCase_ == 17) && (adGroupAdLabelOperationBuilder_ != null)) {
         return adGroupAdLabelOperationBuilder_.getMessageOrBuilder();
@@ -3734,7 +3942,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.services.AdGroupAdOperation ad_group_ad_operation = 1;</code>
+     * @return Whether the adGroupAdOperation field is set.
      */
+    @java.lang.Override
     public boolean hasAdGroupAdOperation() {
       return operationCase_ == 1;
     }
@@ -3744,7 +3954,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.services.AdGroupAdOperation ad_group_ad_operation = 1;</code>
+     * @return The adGroupAdOperation.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v2.services.AdGroupAdOperation getAdGroupAdOperation() {
       if (adGroupAdOperationBuilder_ == null) {
         if (operationCase_ == 1) {
@@ -3862,6 +4074,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v2.services.AdGroupAdOperation ad_group_ad_operation = 1;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v2.services.AdGroupAdOperationOrBuilder getAdGroupAdOperationOrBuilder() {
       if ((operationCase_ == 1) && (adGroupAdOperationBuilder_ != null)) {
         return adGroupAdOperationBuilder_.getMessageOrBuilder();
@@ -3906,7 +4119,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.services.AdGroupBidModifierOperation ad_group_bid_modifier_operation = 2;</code>
+     * @return Whether the adGroupBidModifierOperation field is set.
      */
+    @java.lang.Override
     public boolean hasAdGroupBidModifierOperation() {
       return operationCase_ == 2;
     }
@@ -3916,7 +4131,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.services.AdGroupBidModifierOperation ad_group_bid_modifier_operation = 2;</code>
+     * @return The adGroupBidModifierOperation.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v2.services.AdGroupBidModifierOperation getAdGroupBidModifierOperation() {
       if (adGroupBidModifierOperationBuilder_ == null) {
         if (operationCase_ == 2) {
@@ -4034,6 +4251,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v2.services.AdGroupBidModifierOperation ad_group_bid_modifier_operation = 2;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v2.services.AdGroupBidModifierOperationOrBuilder getAdGroupBidModifierOperationOrBuilder() {
       if ((operationCase_ == 2) && (adGroupBidModifierOperationBuilder_ != null)) {
         return adGroupBidModifierOperationBuilder_.getMessageOrBuilder();
@@ -4078,7 +4296,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.services.AdGroupCriterionLabelOperation ad_group_criterion_label_operation = 18;</code>
+     * @return Whether the adGroupCriterionLabelOperation field is set.
      */
+    @java.lang.Override
     public boolean hasAdGroupCriterionLabelOperation() {
       return operationCase_ == 18;
     }
@@ -4088,7 +4308,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.services.AdGroupCriterionLabelOperation ad_group_criterion_label_operation = 18;</code>
+     * @return The adGroupCriterionLabelOperation.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v2.services.AdGroupCriterionLabelOperation getAdGroupCriterionLabelOperation() {
       if (adGroupCriterionLabelOperationBuilder_ == null) {
         if (operationCase_ == 18) {
@@ -4206,6 +4428,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v2.services.AdGroupCriterionLabelOperation ad_group_criterion_label_operation = 18;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v2.services.AdGroupCriterionLabelOperationOrBuilder getAdGroupCriterionLabelOperationOrBuilder() {
       if ((operationCase_ == 18) && (adGroupCriterionLabelOperationBuilder_ != null)) {
         return adGroupCriterionLabelOperationBuilder_.getMessageOrBuilder();
@@ -4250,7 +4473,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.services.AdGroupCriterionOperation ad_group_criterion_operation = 3;</code>
+     * @return Whether the adGroupCriterionOperation field is set.
      */
+    @java.lang.Override
     public boolean hasAdGroupCriterionOperation() {
       return operationCase_ == 3;
     }
@@ -4260,7 +4485,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.services.AdGroupCriterionOperation ad_group_criterion_operation = 3;</code>
+     * @return The adGroupCriterionOperation.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v2.services.AdGroupCriterionOperation getAdGroupCriterionOperation() {
       if (adGroupCriterionOperationBuilder_ == null) {
         if (operationCase_ == 3) {
@@ -4378,6 +4605,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v2.services.AdGroupCriterionOperation ad_group_criterion_operation = 3;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v2.services.AdGroupCriterionOperationOrBuilder getAdGroupCriterionOperationOrBuilder() {
       if ((operationCase_ == 3) && (adGroupCriterionOperationBuilder_ != null)) {
         return adGroupCriterionOperationBuilder_.getMessageOrBuilder();
@@ -4422,7 +4650,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.services.AdGroupExtensionSettingOperation ad_group_extension_setting_operation = 19;</code>
+     * @return Whether the adGroupExtensionSettingOperation field is set.
      */
+    @java.lang.Override
     public boolean hasAdGroupExtensionSettingOperation() {
       return operationCase_ == 19;
     }
@@ -4432,7 +4662,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.services.AdGroupExtensionSettingOperation ad_group_extension_setting_operation = 19;</code>
+     * @return The adGroupExtensionSettingOperation.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v2.services.AdGroupExtensionSettingOperation getAdGroupExtensionSettingOperation() {
       if (adGroupExtensionSettingOperationBuilder_ == null) {
         if (operationCase_ == 19) {
@@ -4550,6 +4782,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v2.services.AdGroupExtensionSettingOperation ad_group_extension_setting_operation = 19;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v2.services.AdGroupExtensionSettingOperationOrBuilder getAdGroupExtensionSettingOperationOrBuilder() {
       if ((operationCase_ == 19) && (adGroupExtensionSettingOperationBuilder_ != null)) {
         return adGroupExtensionSettingOperationBuilder_.getMessageOrBuilder();
@@ -4594,7 +4827,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.services.AdGroupFeedOperation ad_group_feed_operation = 20;</code>
+     * @return Whether the adGroupFeedOperation field is set.
      */
+    @java.lang.Override
     public boolean hasAdGroupFeedOperation() {
       return operationCase_ == 20;
     }
@@ -4604,7 +4839,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.services.AdGroupFeedOperation ad_group_feed_operation = 20;</code>
+     * @return The adGroupFeedOperation.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v2.services.AdGroupFeedOperation getAdGroupFeedOperation() {
       if (adGroupFeedOperationBuilder_ == null) {
         if (operationCase_ == 20) {
@@ -4722,6 +4959,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v2.services.AdGroupFeedOperation ad_group_feed_operation = 20;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v2.services.AdGroupFeedOperationOrBuilder getAdGroupFeedOperationOrBuilder() {
       if ((operationCase_ == 20) && (adGroupFeedOperationBuilder_ != null)) {
         return adGroupFeedOperationBuilder_.getMessageOrBuilder();
@@ -4766,7 +5004,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.services.AdGroupLabelOperation ad_group_label_operation = 21;</code>
+     * @return Whether the adGroupLabelOperation field is set.
      */
+    @java.lang.Override
     public boolean hasAdGroupLabelOperation() {
       return operationCase_ == 21;
     }
@@ -4776,7 +5016,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.services.AdGroupLabelOperation ad_group_label_operation = 21;</code>
+     * @return The adGroupLabelOperation.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v2.services.AdGroupLabelOperation getAdGroupLabelOperation() {
       if (adGroupLabelOperationBuilder_ == null) {
         if (operationCase_ == 21) {
@@ -4894,6 +5136,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v2.services.AdGroupLabelOperation ad_group_label_operation = 21;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v2.services.AdGroupLabelOperationOrBuilder getAdGroupLabelOperationOrBuilder() {
       if ((operationCase_ == 21) && (adGroupLabelOperationBuilder_ != null)) {
         return adGroupLabelOperationBuilder_.getMessageOrBuilder();
@@ -4938,7 +5181,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.services.AdGroupOperation ad_group_operation = 5;</code>
+     * @return Whether the adGroupOperation field is set.
      */
+    @java.lang.Override
     public boolean hasAdGroupOperation() {
       return operationCase_ == 5;
     }
@@ -4948,7 +5193,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.services.AdGroupOperation ad_group_operation = 5;</code>
+     * @return The adGroupOperation.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v2.services.AdGroupOperation getAdGroupOperation() {
       if (adGroupOperationBuilder_ == null) {
         if (operationCase_ == 5) {
@@ -5066,6 +5313,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v2.services.AdGroupOperation ad_group_operation = 5;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v2.services.AdGroupOperationOrBuilder getAdGroupOperationOrBuilder() {
       if ((operationCase_ == 5) && (adGroupOperationBuilder_ != null)) {
         return adGroupOperationBuilder_.getMessageOrBuilder();
@@ -5110,7 +5358,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.services.AdParameterOperation ad_parameter_operation = 22;</code>
+     * @return Whether the adParameterOperation field is set.
      */
+    @java.lang.Override
     public boolean hasAdParameterOperation() {
       return operationCase_ == 22;
     }
@@ -5120,7 +5370,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.services.AdParameterOperation ad_parameter_operation = 22;</code>
+     * @return The adParameterOperation.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v2.services.AdParameterOperation getAdParameterOperation() {
       if (adParameterOperationBuilder_ == null) {
         if (operationCase_ == 22) {
@@ -5238,6 +5490,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v2.services.AdParameterOperation ad_parameter_operation = 22;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v2.services.AdParameterOperationOrBuilder getAdParameterOperationOrBuilder() {
       if ((operationCase_ == 22) && (adParameterOperationBuilder_ != null)) {
         return adParameterOperationBuilder_.getMessageOrBuilder();
@@ -5282,7 +5535,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.services.AssetOperation asset_operation = 23;</code>
+     * @return Whether the assetOperation field is set.
      */
+    @java.lang.Override
     public boolean hasAssetOperation() {
       return operationCase_ == 23;
     }
@@ -5292,7 +5547,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.services.AssetOperation asset_operation = 23;</code>
+     * @return The assetOperation.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v2.services.AssetOperation getAssetOperation() {
       if (assetOperationBuilder_ == null) {
         if (operationCase_ == 23) {
@@ -5410,6 +5667,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v2.services.AssetOperation asset_operation = 23;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v2.services.AssetOperationOrBuilder getAssetOperationOrBuilder() {
       if ((operationCase_ == 23) && (assetOperationBuilder_ != null)) {
         return assetOperationBuilder_.getMessageOrBuilder();
@@ -5454,7 +5712,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.services.BiddingStrategyOperation bidding_strategy_operation = 6;</code>
+     * @return Whether the biddingStrategyOperation field is set.
      */
+    @java.lang.Override
     public boolean hasBiddingStrategyOperation() {
       return operationCase_ == 6;
     }
@@ -5464,7 +5724,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.services.BiddingStrategyOperation bidding_strategy_operation = 6;</code>
+     * @return The biddingStrategyOperation.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v2.services.BiddingStrategyOperation getBiddingStrategyOperation() {
       if (biddingStrategyOperationBuilder_ == null) {
         if (operationCase_ == 6) {
@@ -5582,6 +5844,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v2.services.BiddingStrategyOperation bidding_strategy_operation = 6;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v2.services.BiddingStrategyOperationOrBuilder getBiddingStrategyOperationOrBuilder() {
       if ((operationCase_ == 6) && (biddingStrategyOperationBuilder_ != null)) {
         return biddingStrategyOperationBuilder_.getMessageOrBuilder();
@@ -5626,7 +5889,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.services.CampaignBidModifierOperation campaign_bid_modifier_operation = 7;</code>
+     * @return Whether the campaignBidModifierOperation field is set.
      */
+    @java.lang.Override
     public boolean hasCampaignBidModifierOperation() {
       return operationCase_ == 7;
     }
@@ -5636,7 +5901,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.services.CampaignBidModifierOperation campaign_bid_modifier_operation = 7;</code>
+     * @return The campaignBidModifierOperation.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v2.services.CampaignBidModifierOperation getCampaignBidModifierOperation() {
       if (campaignBidModifierOperationBuilder_ == null) {
         if (operationCase_ == 7) {
@@ -5754,6 +6021,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v2.services.CampaignBidModifierOperation campaign_bid_modifier_operation = 7;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v2.services.CampaignBidModifierOperationOrBuilder getCampaignBidModifierOperationOrBuilder() {
       if ((operationCase_ == 7) && (campaignBidModifierOperationBuilder_ != null)) {
         return campaignBidModifierOperationBuilder_.getMessageOrBuilder();
@@ -5798,7 +6066,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.services.CampaignBudgetOperation campaign_budget_operation = 8;</code>
+     * @return Whether the campaignBudgetOperation field is set.
      */
+    @java.lang.Override
     public boolean hasCampaignBudgetOperation() {
       return operationCase_ == 8;
     }
@@ -5808,7 +6078,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.services.CampaignBudgetOperation campaign_budget_operation = 8;</code>
+     * @return The campaignBudgetOperation.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v2.services.CampaignBudgetOperation getCampaignBudgetOperation() {
       if (campaignBudgetOperationBuilder_ == null) {
         if (operationCase_ == 8) {
@@ -5926,6 +6198,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v2.services.CampaignBudgetOperation campaign_budget_operation = 8;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v2.services.CampaignBudgetOperationOrBuilder getCampaignBudgetOperationOrBuilder() {
       if ((operationCase_ == 8) && (campaignBudgetOperationBuilder_ != null)) {
         return campaignBudgetOperationBuilder_.getMessageOrBuilder();
@@ -5970,7 +6243,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.services.CampaignCriterionOperation campaign_criterion_operation = 13;</code>
+     * @return Whether the campaignCriterionOperation field is set.
      */
+    @java.lang.Override
     public boolean hasCampaignCriterionOperation() {
       return operationCase_ == 13;
     }
@@ -5980,7 +6255,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.services.CampaignCriterionOperation campaign_criterion_operation = 13;</code>
+     * @return The campaignCriterionOperation.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v2.services.CampaignCriterionOperation getCampaignCriterionOperation() {
       if (campaignCriterionOperationBuilder_ == null) {
         if (operationCase_ == 13) {
@@ -6098,6 +6375,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v2.services.CampaignCriterionOperation campaign_criterion_operation = 13;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v2.services.CampaignCriterionOperationOrBuilder getCampaignCriterionOperationOrBuilder() {
       if ((operationCase_ == 13) && (campaignCriterionOperationBuilder_ != null)) {
         return campaignCriterionOperationBuilder_.getMessageOrBuilder();
@@ -6142,7 +6420,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.services.CampaignDraftOperation campaign_draft_operation = 24;</code>
+     * @return Whether the campaignDraftOperation field is set.
      */
+    @java.lang.Override
     public boolean hasCampaignDraftOperation() {
       return operationCase_ == 24;
     }
@@ -6152,7 +6432,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.services.CampaignDraftOperation campaign_draft_operation = 24;</code>
+     * @return The campaignDraftOperation.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v2.services.CampaignDraftOperation getCampaignDraftOperation() {
       if (campaignDraftOperationBuilder_ == null) {
         if (operationCase_ == 24) {
@@ -6270,6 +6552,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v2.services.CampaignDraftOperation campaign_draft_operation = 24;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v2.services.CampaignDraftOperationOrBuilder getCampaignDraftOperationOrBuilder() {
       if ((operationCase_ == 24) && (campaignDraftOperationBuilder_ != null)) {
         return campaignDraftOperationBuilder_.getMessageOrBuilder();
@@ -6314,7 +6597,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.services.CampaignExperimentOperation campaign_experiment_operation = 25;</code>
+     * @return Whether the campaignExperimentOperation field is set.
      */
+    @java.lang.Override
     public boolean hasCampaignExperimentOperation() {
       return operationCase_ == 25;
     }
@@ -6324,7 +6609,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.services.CampaignExperimentOperation campaign_experiment_operation = 25;</code>
+     * @return The campaignExperimentOperation.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v2.services.CampaignExperimentOperation getCampaignExperimentOperation() {
       if (campaignExperimentOperationBuilder_ == null) {
         if (operationCase_ == 25) {
@@ -6442,6 +6729,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v2.services.CampaignExperimentOperation campaign_experiment_operation = 25;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v2.services.CampaignExperimentOperationOrBuilder getCampaignExperimentOperationOrBuilder() {
       if ((operationCase_ == 25) && (campaignExperimentOperationBuilder_ != null)) {
         return campaignExperimentOperationBuilder_.getMessageOrBuilder();
@@ -6486,7 +6774,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.services.CampaignExtensionSettingOperation campaign_extension_setting_operation = 26;</code>
+     * @return Whether the campaignExtensionSettingOperation field is set.
      */
+    @java.lang.Override
     public boolean hasCampaignExtensionSettingOperation() {
       return operationCase_ == 26;
     }
@@ -6496,7 +6786,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.services.CampaignExtensionSettingOperation campaign_extension_setting_operation = 26;</code>
+     * @return The campaignExtensionSettingOperation.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v2.services.CampaignExtensionSettingOperation getCampaignExtensionSettingOperation() {
       if (campaignExtensionSettingOperationBuilder_ == null) {
         if (operationCase_ == 26) {
@@ -6614,6 +6906,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v2.services.CampaignExtensionSettingOperation campaign_extension_setting_operation = 26;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v2.services.CampaignExtensionSettingOperationOrBuilder getCampaignExtensionSettingOperationOrBuilder() {
       if ((operationCase_ == 26) && (campaignExtensionSettingOperationBuilder_ != null)) {
         return campaignExtensionSettingOperationBuilder_.getMessageOrBuilder();
@@ -6658,7 +6951,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.services.CampaignFeedOperation campaign_feed_operation = 27;</code>
+     * @return Whether the campaignFeedOperation field is set.
      */
+    @java.lang.Override
     public boolean hasCampaignFeedOperation() {
       return operationCase_ == 27;
     }
@@ -6668,7 +6963,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.services.CampaignFeedOperation campaign_feed_operation = 27;</code>
+     * @return The campaignFeedOperation.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v2.services.CampaignFeedOperation getCampaignFeedOperation() {
       if (campaignFeedOperationBuilder_ == null) {
         if (operationCase_ == 27) {
@@ -6786,6 +7083,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v2.services.CampaignFeedOperation campaign_feed_operation = 27;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v2.services.CampaignFeedOperationOrBuilder getCampaignFeedOperationOrBuilder() {
       if ((operationCase_ == 27) && (campaignFeedOperationBuilder_ != null)) {
         return campaignFeedOperationBuilder_.getMessageOrBuilder();
@@ -6830,7 +7128,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.services.CampaignLabelOperation campaign_label_operation = 28;</code>
+     * @return Whether the campaignLabelOperation field is set.
      */
+    @java.lang.Override
     public boolean hasCampaignLabelOperation() {
       return operationCase_ == 28;
     }
@@ -6840,7 +7140,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.services.CampaignLabelOperation campaign_label_operation = 28;</code>
+     * @return The campaignLabelOperation.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v2.services.CampaignLabelOperation getCampaignLabelOperation() {
       if (campaignLabelOperationBuilder_ == null) {
         if (operationCase_ == 28) {
@@ -6958,6 +7260,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v2.services.CampaignLabelOperation campaign_label_operation = 28;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v2.services.CampaignLabelOperationOrBuilder getCampaignLabelOperationOrBuilder() {
       if ((operationCase_ == 28) && (campaignLabelOperationBuilder_ != null)) {
         return campaignLabelOperationBuilder_.getMessageOrBuilder();
@@ -7002,7 +7305,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.services.CampaignOperation campaign_operation = 10;</code>
+     * @return Whether the campaignOperation field is set.
      */
+    @java.lang.Override
     public boolean hasCampaignOperation() {
       return operationCase_ == 10;
     }
@@ -7012,7 +7317,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.services.CampaignOperation campaign_operation = 10;</code>
+     * @return The campaignOperation.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v2.services.CampaignOperation getCampaignOperation() {
       if (campaignOperationBuilder_ == null) {
         if (operationCase_ == 10) {
@@ -7130,6 +7437,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v2.services.CampaignOperation campaign_operation = 10;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v2.services.CampaignOperationOrBuilder getCampaignOperationOrBuilder() {
       if ((operationCase_ == 10) && (campaignOperationBuilder_ != null)) {
         return campaignOperationBuilder_.getMessageOrBuilder();
@@ -7174,7 +7482,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.services.CampaignSharedSetOperation campaign_shared_set_operation = 11;</code>
+     * @return Whether the campaignSharedSetOperation field is set.
      */
+    @java.lang.Override
     public boolean hasCampaignSharedSetOperation() {
       return operationCase_ == 11;
     }
@@ -7184,7 +7494,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.services.CampaignSharedSetOperation campaign_shared_set_operation = 11;</code>
+     * @return The campaignSharedSetOperation.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v2.services.CampaignSharedSetOperation getCampaignSharedSetOperation() {
       if (campaignSharedSetOperationBuilder_ == null) {
         if (operationCase_ == 11) {
@@ -7302,6 +7614,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v2.services.CampaignSharedSetOperation campaign_shared_set_operation = 11;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v2.services.CampaignSharedSetOperationOrBuilder getCampaignSharedSetOperationOrBuilder() {
       if ((operationCase_ == 11) && (campaignSharedSetOperationBuilder_ != null)) {
         return campaignSharedSetOperationBuilder_.getMessageOrBuilder();
@@ -7346,7 +7659,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.services.ConversionActionOperation conversion_action_operation = 12;</code>
+     * @return Whether the conversionActionOperation field is set.
      */
+    @java.lang.Override
     public boolean hasConversionActionOperation() {
       return operationCase_ == 12;
     }
@@ -7356,7 +7671,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.services.ConversionActionOperation conversion_action_operation = 12;</code>
+     * @return The conversionActionOperation.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v2.services.ConversionActionOperation getConversionActionOperation() {
       if (conversionActionOperationBuilder_ == null) {
         if (operationCase_ == 12) {
@@ -7474,6 +7791,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v2.services.ConversionActionOperation conversion_action_operation = 12;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v2.services.ConversionActionOperationOrBuilder getConversionActionOperationOrBuilder() {
       if ((operationCase_ == 12) && (conversionActionOperationBuilder_ != null)) {
         return conversionActionOperationBuilder_.getMessageOrBuilder();
@@ -7518,7 +7836,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.services.CustomerExtensionSettingOperation customer_extension_setting_operation = 30;</code>
+     * @return Whether the customerExtensionSettingOperation field is set.
      */
+    @java.lang.Override
     public boolean hasCustomerExtensionSettingOperation() {
       return operationCase_ == 30;
     }
@@ -7528,7 +7848,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.services.CustomerExtensionSettingOperation customer_extension_setting_operation = 30;</code>
+     * @return The customerExtensionSettingOperation.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v2.services.CustomerExtensionSettingOperation getCustomerExtensionSettingOperation() {
       if (customerExtensionSettingOperationBuilder_ == null) {
         if (operationCase_ == 30) {
@@ -7646,6 +7968,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v2.services.CustomerExtensionSettingOperation customer_extension_setting_operation = 30;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v2.services.CustomerExtensionSettingOperationOrBuilder getCustomerExtensionSettingOperationOrBuilder() {
       if ((operationCase_ == 30) && (customerExtensionSettingOperationBuilder_ != null)) {
         return customerExtensionSettingOperationBuilder_.getMessageOrBuilder();
@@ -7690,7 +8013,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.services.CustomerFeedOperation customer_feed_operation = 31;</code>
+     * @return Whether the customerFeedOperation field is set.
      */
+    @java.lang.Override
     public boolean hasCustomerFeedOperation() {
       return operationCase_ == 31;
     }
@@ -7700,7 +8025,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.services.CustomerFeedOperation customer_feed_operation = 31;</code>
+     * @return The customerFeedOperation.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v2.services.CustomerFeedOperation getCustomerFeedOperation() {
       if (customerFeedOperationBuilder_ == null) {
         if (operationCase_ == 31) {
@@ -7818,6 +8145,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v2.services.CustomerFeedOperation customer_feed_operation = 31;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v2.services.CustomerFeedOperationOrBuilder getCustomerFeedOperationOrBuilder() {
       if ((operationCase_ == 31) && (customerFeedOperationBuilder_ != null)) {
         return customerFeedOperationBuilder_.getMessageOrBuilder();
@@ -7862,7 +8190,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.services.CustomerLabelOperation customer_label_operation = 32;</code>
+     * @return Whether the customerLabelOperation field is set.
      */
+    @java.lang.Override
     public boolean hasCustomerLabelOperation() {
       return operationCase_ == 32;
     }
@@ -7872,7 +8202,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.services.CustomerLabelOperation customer_label_operation = 32;</code>
+     * @return The customerLabelOperation.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v2.services.CustomerLabelOperation getCustomerLabelOperation() {
       if (customerLabelOperationBuilder_ == null) {
         if (operationCase_ == 32) {
@@ -7990,6 +8322,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v2.services.CustomerLabelOperation customer_label_operation = 32;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v2.services.CustomerLabelOperationOrBuilder getCustomerLabelOperationOrBuilder() {
       if ((operationCase_ == 32) && (customerLabelOperationBuilder_ != null)) {
         return customerLabelOperationBuilder_.getMessageOrBuilder();
@@ -8034,7 +8367,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.services.CustomerNegativeCriterionOperation customer_negative_criterion_operation = 34;</code>
+     * @return Whether the customerNegativeCriterionOperation field is set.
      */
+    @java.lang.Override
     public boolean hasCustomerNegativeCriterionOperation() {
       return operationCase_ == 34;
     }
@@ -8044,7 +8379,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.services.CustomerNegativeCriterionOperation customer_negative_criterion_operation = 34;</code>
+     * @return The customerNegativeCriterionOperation.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v2.services.CustomerNegativeCriterionOperation getCustomerNegativeCriterionOperation() {
       if (customerNegativeCriterionOperationBuilder_ == null) {
         if (operationCase_ == 34) {
@@ -8162,6 +8499,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v2.services.CustomerNegativeCriterionOperation customer_negative_criterion_operation = 34;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v2.services.CustomerNegativeCriterionOperationOrBuilder getCustomerNegativeCriterionOperationOrBuilder() {
       if ((operationCase_ == 34) && (customerNegativeCriterionOperationBuilder_ != null)) {
         return customerNegativeCriterionOperationBuilder_.getMessageOrBuilder();
@@ -8206,7 +8544,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.services.CustomerOperation customer_operation = 35;</code>
+     * @return Whether the customerOperation field is set.
      */
+    @java.lang.Override
     public boolean hasCustomerOperation() {
       return operationCase_ == 35;
     }
@@ -8216,7 +8556,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.services.CustomerOperation customer_operation = 35;</code>
+     * @return The customerOperation.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v2.services.CustomerOperation getCustomerOperation() {
       if (customerOperationBuilder_ == null) {
         if (operationCase_ == 35) {
@@ -8334,6 +8676,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v2.services.CustomerOperation customer_operation = 35;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v2.services.CustomerOperationOrBuilder getCustomerOperationOrBuilder() {
       if ((operationCase_ == 35) && (customerOperationBuilder_ != null)) {
         return customerOperationBuilder_.getMessageOrBuilder();
@@ -8378,7 +8721,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.services.ExtensionFeedItemOperation extension_feed_item_operation = 36;</code>
+     * @return Whether the extensionFeedItemOperation field is set.
      */
+    @java.lang.Override
     public boolean hasExtensionFeedItemOperation() {
       return operationCase_ == 36;
     }
@@ -8388,7 +8733,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.services.ExtensionFeedItemOperation extension_feed_item_operation = 36;</code>
+     * @return The extensionFeedItemOperation.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v2.services.ExtensionFeedItemOperation getExtensionFeedItemOperation() {
       if (extensionFeedItemOperationBuilder_ == null) {
         if (operationCase_ == 36) {
@@ -8506,6 +8853,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v2.services.ExtensionFeedItemOperation extension_feed_item_operation = 36;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v2.services.ExtensionFeedItemOperationOrBuilder getExtensionFeedItemOperationOrBuilder() {
       if ((operationCase_ == 36) && (extensionFeedItemOperationBuilder_ != null)) {
         return extensionFeedItemOperationBuilder_.getMessageOrBuilder();
@@ -8550,7 +8898,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.services.FeedItemOperation feed_item_operation = 37;</code>
+     * @return Whether the feedItemOperation field is set.
      */
+    @java.lang.Override
     public boolean hasFeedItemOperation() {
       return operationCase_ == 37;
     }
@@ -8560,7 +8910,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.services.FeedItemOperation feed_item_operation = 37;</code>
+     * @return The feedItemOperation.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v2.services.FeedItemOperation getFeedItemOperation() {
       if (feedItemOperationBuilder_ == null) {
         if (operationCase_ == 37) {
@@ -8678,6 +9030,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v2.services.FeedItemOperation feed_item_operation = 37;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v2.services.FeedItemOperationOrBuilder getFeedItemOperationOrBuilder() {
       if ((operationCase_ == 37) && (feedItemOperationBuilder_ != null)) {
         return feedItemOperationBuilder_.getMessageOrBuilder();
@@ -8722,7 +9075,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.services.FeedItemTargetOperation feed_item_target_operation = 38;</code>
+     * @return Whether the feedItemTargetOperation field is set.
      */
+    @java.lang.Override
     public boolean hasFeedItemTargetOperation() {
       return operationCase_ == 38;
     }
@@ -8732,7 +9087,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.services.FeedItemTargetOperation feed_item_target_operation = 38;</code>
+     * @return The feedItemTargetOperation.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v2.services.FeedItemTargetOperation getFeedItemTargetOperation() {
       if (feedItemTargetOperationBuilder_ == null) {
         if (operationCase_ == 38) {
@@ -8850,6 +9207,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v2.services.FeedItemTargetOperation feed_item_target_operation = 38;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v2.services.FeedItemTargetOperationOrBuilder getFeedItemTargetOperationOrBuilder() {
       if ((operationCase_ == 38) && (feedItemTargetOperationBuilder_ != null)) {
         return feedItemTargetOperationBuilder_.getMessageOrBuilder();
@@ -8894,7 +9252,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.services.FeedMappingOperation feed_mapping_operation = 39;</code>
+     * @return Whether the feedMappingOperation field is set.
      */
+    @java.lang.Override
     public boolean hasFeedMappingOperation() {
       return operationCase_ == 39;
     }
@@ -8904,7 +9264,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.services.FeedMappingOperation feed_mapping_operation = 39;</code>
+     * @return The feedMappingOperation.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v2.services.FeedMappingOperation getFeedMappingOperation() {
       if (feedMappingOperationBuilder_ == null) {
         if (operationCase_ == 39) {
@@ -9022,6 +9384,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v2.services.FeedMappingOperation feed_mapping_operation = 39;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v2.services.FeedMappingOperationOrBuilder getFeedMappingOperationOrBuilder() {
       if ((operationCase_ == 39) && (feedMappingOperationBuilder_ != null)) {
         return feedMappingOperationBuilder_.getMessageOrBuilder();
@@ -9066,7 +9429,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.services.FeedOperation feed_operation = 40;</code>
+     * @return Whether the feedOperation field is set.
      */
+    @java.lang.Override
     public boolean hasFeedOperation() {
       return operationCase_ == 40;
     }
@@ -9076,7 +9441,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.services.FeedOperation feed_operation = 40;</code>
+     * @return The feedOperation.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v2.services.FeedOperation getFeedOperation() {
       if (feedOperationBuilder_ == null) {
         if (operationCase_ == 40) {
@@ -9194,6 +9561,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v2.services.FeedOperation feed_operation = 40;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v2.services.FeedOperationOrBuilder getFeedOperationOrBuilder() {
       if ((operationCase_ == 40) && (feedOperationBuilder_ != null)) {
         return feedOperationBuilder_.getMessageOrBuilder();
@@ -9238,7 +9606,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.services.LabelOperation label_operation = 41;</code>
+     * @return Whether the labelOperation field is set.
      */
+    @java.lang.Override
     public boolean hasLabelOperation() {
       return operationCase_ == 41;
     }
@@ -9248,7 +9618,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.services.LabelOperation label_operation = 41;</code>
+     * @return The labelOperation.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v2.services.LabelOperation getLabelOperation() {
       if (labelOperationBuilder_ == null) {
         if (operationCase_ == 41) {
@@ -9366,6 +9738,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v2.services.LabelOperation label_operation = 41;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v2.services.LabelOperationOrBuilder getLabelOperationOrBuilder() {
       if ((operationCase_ == 41) && (labelOperationBuilder_ != null)) {
         return labelOperationBuilder_.getMessageOrBuilder();
@@ -9410,7 +9783,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.services.MediaFileOperation media_file_operation = 42;</code>
+     * @return Whether the mediaFileOperation field is set.
      */
+    @java.lang.Override
     public boolean hasMediaFileOperation() {
       return operationCase_ == 42;
     }
@@ -9420,7 +9795,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.services.MediaFileOperation media_file_operation = 42;</code>
+     * @return The mediaFileOperation.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v2.services.MediaFileOperation getMediaFileOperation() {
       if (mediaFileOperationBuilder_ == null) {
         if (operationCase_ == 42) {
@@ -9538,6 +9915,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v2.services.MediaFileOperation media_file_operation = 42;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v2.services.MediaFileOperationOrBuilder getMediaFileOperationOrBuilder() {
       if ((operationCase_ == 42) && (mediaFileOperationBuilder_ != null)) {
         return mediaFileOperationBuilder_.getMessageOrBuilder();
@@ -9582,7 +9960,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.services.RemarketingActionOperation remarketing_action_operation = 43;</code>
+     * @return Whether the remarketingActionOperation field is set.
      */
+    @java.lang.Override
     public boolean hasRemarketingActionOperation() {
       return operationCase_ == 43;
     }
@@ -9592,7 +9972,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.services.RemarketingActionOperation remarketing_action_operation = 43;</code>
+     * @return The remarketingActionOperation.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v2.services.RemarketingActionOperation getRemarketingActionOperation() {
       if (remarketingActionOperationBuilder_ == null) {
         if (operationCase_ == 43) {
@@ -9710,6 +10092,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v2.services.RemarketingActionOperation remarketing_action_operation = 43;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v2.services.RemarketingActionOperationOrBuilder getRemarketingActionOperationOrBuilder() {
       if ((operationCase_ == 43) && (remarketingActionOperationBuilder_ != null)) {
         return remarketingActionOperationBuilder_.getMessageOrBuilder();
@@ -9754,7 +10137,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.services.SharedCriterionOperation shared_criterion_operation = 14;</code>
+     * @return Whether the sharedCriterionOperation field is set.
      */
+    @java.lang.Override
     public boolean hasSharedCriterionOperation() {
       return operationCase_ == 14;
     }
@@ -9764,7 +10149,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.services.SharedCriterionOperation shared_criterion_operation = 14;</code>
+     * @return The sharedCriterionOperation.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v2.services.SharedCriterionOperation getSharedCriterionOperation() {
       if (sharedCriterionOperationBuilder_ == null) {
         if (operationCase_ == 14) {
@@ -9882,6 +10269,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v2.services.SharedCriterionOperation shared_criterion_operation = 14;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v2.services.SharedCriterionOperationOrBuilder getSharedCriterionOperationOrBuilder() {
       if ((operationCase_ == 14) && (sharedCriterionOperationBuilder_ != null)) {
         return sharedCriterionOperationBuilder_.getMessageOrBuilder();
@@ -9926,7 +10314,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.services.SharedSetOperation shared_set_operation = 15;</code>
+     * @return Whether the sharedSetOperation field is set.
      */
+    @java.lang.Override
     public boolean hasSharedSetOperation() {
       return operationCase_ == 15;
     }
@@ -9936,7 +10326,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.services.SharedSetOperation shared_set_operation = 15;</code>
+     * @return The sharedSetOperation.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v2.services.SharedSetOperation getSharedSetOperation() {
       if (sharedSetOperationBuilder_ == null) {
         if (operationCase_ == 15) {
@@ -10054,6 +10446,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v2.services.SharedSetOperation shared_set_operation = 15;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v2.services.SharedSetOperationOrBuilder getSharedSetOperationOrBuilder() {
       if ((operationCase_ == 15) && (sharedSetOperationBuilder_ != null)) {
         return sharedSetOperationBuilder_.getMessageOrBuilder();
@@ -10098,7 +10491,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.services.UserListOperation user_list_operation = 16;</code>
+     * @return Whether the userListOperation field is set.
      */
+    @java.lang.Override
     public boolean hasUserListOperation() {
       return operationCase_ == 16;
     }
@@ -10108,7 +10503,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.services.UserListOperation user_list_operation = 16;</code>
+     * @return The userListOperation.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v2.services.UserListOperation getUserListOperation() {
       if (userListOperationBuilder_ == null) {
         if (operationCase_ == 16) {
@@ -10226,6 +10623,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v2.services.UserListOperation user_list_operation = 16;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v2.services.UserListOperationOrBuilder getUserListOperationOrBuilder() {
       if ((operationCase_ == 16) && (userListOperationBuilder_ != null)) {
         return userListOperationBuilder_.getMessageOrBuilder();

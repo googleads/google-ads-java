@@ -9,101 +9,109 @@ public interface CarrierConstantOrBuilder extends
 
   /**
    * <pre>
-   * The resource name of the carrier criterion.
+   * Output only. The resource name of the carrier criterion.
    * Carrier criterion resource names have the form:
    * `carrierConstants/{criterion_id}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The resourceName.
    */
   java.lang.String getResourceName();
   /**
    * <pre>
-   * The resource name of the carrier criterion.
+   * Output only. The resource name of the carrier criterion.
    * Carrier criterion resource names have the form:
    * `carrierConstants/{criterion_id}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The bytes for resourceName.
    */
   com.google.protobuf.ByteString
       getResourceNameBytes();
 
   /**
    * <pre>
-   * The ID of the carrier criterion.
+   * Output only. The ID of the carrier criterion.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value id = 2;</code>
+   * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the id field is set.
    */
   boolean hasId();
   /**
    * <pre>
-   * The ID of the carrier criterion.
+   * Output only. The ID of the carrier criterion.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value id = 2;</code>
+   * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The id.
    */
   com.google.protobuf.Int64Value getId();
   /**
    * <pre>
-   * The ID of the carrier criterion.
+   * Output only. The ID of the carrier criterion.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value id = 2;</code>
+   * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.protobuf.Int64ValueOrBuilder getIdOrBuilder();
 
   /**
    * <pre>
-   * The full name of the carrier in English.
+   * Output only. The full name of the carrier in English.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue name = 3;</code>
+   * <code>.google.protobuf.StringValue name = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the name field is set.
    */
   boolean hasName();
   /**
    * <pre>
-   * The full name of the carrier in English.
+   * Output only. The full name of the carrier in English.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue name = 3;</code>
+   * <code>.google.protobuf.StringValue name = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The name.
    */
   com.google.protobuf.StringValue getName();
   /**
    * <pre>
-   * The full name of the carrier in English.
+   * Output only. The full name of the carrier in English.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue name = 3;</code>
+   * <code>.google.protobuf.StringValue name = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.protobuf.StringValueOrBuilder getNameOrBuilder();
 
   /**
    * <pre>
-   * The country code of the country where the carrier is located, e.g., "AR",
+   * Output only. The country code of the country where the carrier is located, e.g., "AR",
    * "FR", etc.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue country_code = 4;</code>
+   * <code>.google.protobuf.StringValue country_code = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the countryCode field is set.
    */
   boolean hasCountryCode();
   /**
    * <pre>
-   * The country code of the country where the carrier is located, e.g., "AR",
+   * Output only. The country code of the country where the carrier is located, e.g., "AR",
    * "FR", etc.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue country_code = 4;</code>
+   * <code>.google.protobuf.StringValue country_code = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The countryCode.
    */
   com.google.protobuf.StringValue getCountryCode();
   /**
    * <pre>
-   * The country code of the country where the carrier is located, e.g., "AR",
+   * Output only. The country code of the country where the carrier is located, e.g., "AR",
    * "FR", etc.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue country_code = 4;</code>
+   * <code>.google.protobuf.StringValue country_code = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.protobuf.StringValueOrBuilder getCountryCodeOrBuilder();
 }

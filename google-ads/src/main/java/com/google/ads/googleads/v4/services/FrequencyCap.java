@@ -11,7 +11,7 @@ package com.google.ads.googleads.v4.services;
  *
  * Protobuf type {@code google.ads.googleads.v4.services.FrequencyCap}
  */
-public  final class FrequencyCap extends
+public final class FrequencyCap extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.services.FrequencyCap)
     FrequencyCapOrBuilder {
@@ -115,6 +115,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int32Value impressions = 1 [(.google.api.field_behavior) = REQUIRED];</code>
    * @return Whether the impressions field is set.
    */
+  @java.lang.Override
   public boolean hasImpressions() {
     return impressions_ != null;
   }
@@ -126,6 +127,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int32Value impressions = 1 [(.google.api.field_behavior) = REQUIRED];</code>
    * @return The impressions.
    */
+  @java.lang.Override
   public com.google.protobuf.Int32Value getImpressions() {
     return impressions_ == null ? com.google.protobuf.Int32Value.getDefaultInstance() : impressions_;
   }
@@ -136,6 +138,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int32Value impressions = 1 [(.google.api.field_behavior) = REQUIRED];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int32ValueOrBuilder getImpressionsOrBuilder() {
     return getImpressions();
   }
@@ -150,7 +153,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.FrequencyCapTimeUnitEnum.FrequencyCapTimeUnit time_unit = 2 [(.google.api.field_behavior) = REQUIRED];</code>
    * @return The enum numeric value on the wire for timeUnit.
    */
-  public int getTimeUnitValue() {
+  @java.lang.Override public int getTimeUnitValue() {
     return timeUnit_;
   }
   /**
@@ -161,7 +164,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.FrequencyCapTimeUnitEnum.FrequencyCapTimeUnit time_unit = 2 [(.google.api.field_behavior) = REQUIRED];</code>
    * @return The timeUnit.
    */
-  public com.google.ads.googleads.v4.enums.FrequencyCapTimeUnitEnum.FrequencyCapTimeUnit getTimeUnit() {
+  @java.lang.Override public com.google.ads.googleads.v4.enums.FrequencyCapTimeUnitEnum.FrequencyCapTimeUnit getTimeUnit() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v4.enums.FrequencyCapTimeUnitEnum.FrequencyCapTimeUnit result = com.google.ads.googleads.v4.enums.FrequencyCapTimeUnitEnum.FrequencyCapTimeUnit.valueOf(timeUnit_);
     return result == null ? com.google.ads.googleads.v4.enums.FrequencyCapTimeUnitEnum.FrequencyCapTimeUnit.UNRECOGNIZED : result;
@@ -667,7 +670,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.FrequencyCapTimeUnitEnum.FrequencyCapTimeUnit time_unit = 2 [(.google.api.field_behavior) = REQUIRED];</code>
      * @return The enum numeric value on the wire for timeUnit.
      */
-    public int getTimeUnitValue() {
+    @java.lang.Override public int getTimeUnitValue() {
       return timeUnit_;
     }
     /**
@@ -680,6 +683,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setTimeUnitValue(int value) {
+      
       timeUnit_ = value;
       onChanged();
       return this;
@@ -692,6 +696,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.FrequencyCapTimeUnitEnum.FrequencyCapTimeUnit time_unit = 2 [(.google.api.field_behavior) = REQUIRED];</code>
      * @return The timeUnit.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.enums.FrequencyCapTimeUnitEnum.FrequencyCapTimeUnit getTimeUnit() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v4.enums.FrequencyCapTimeUnitEnum.FrequencyCapTimeUnit result = com.google.ads.googleads.v4.enums.FrequencyCapTimeUnitEnum.FrequencyCapTimeUnit.valueOf(timeUnit_);

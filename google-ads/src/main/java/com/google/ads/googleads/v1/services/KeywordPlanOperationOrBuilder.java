@@ -14,6 +14,7 @@ public interface KeywordPlanOperationOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.FieldMask update_mask = 4;</code>
+   * @return Whether the updateMask field is set.
    */
   boolean hasUpdateMask();
   /**
@@ -23,6 +24,7 @@ public interface KeywordPlanOperationOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.FieldMask update_mask = 4;</code>
+   * @return The updateMask.
    */
   com.google.protobuf.FieldMask getUpdateMask();
   /**
@@ -41,6 +43,7 @@ public interface KeywordPlanOperationOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.KeywordPlan create = 1;</code>
+   * @return Whether the create field is set.
    */
   boolean hasCreate();
   /**
@@ -49,6 +52,7 @@ public interface KeywordPlanOperationOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.KeywordPlan create = 1;</code>
+   * @return The create.
    */
   com.google.ads.googleads.v1.resources.KeywordPlan getCreate();
   /**
@@ -67,6 +71,7 @@ public interface KeywordPlanOperationOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.KeywordPlan update = 2;</code>
+   * @return Whether the update field is set.
    */
   boolean hasUpdate();
   /**
@@ -76,6 +81,7 @@ public interface KeywordPlanOperationOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.KeywordPlan update = 2;</code>
+   * @return The update.
    */
   com.google.ads.googleads.v1.resources.KeywordPlan getUpdate();
   /**
@@ -96,6 +102,7 @@ public interface KeywordPlanOperationOrBuilder extends
    * </pre>
    *
    * <code>string remove = 3;</code>
+   * @return The remove.
    */
   java.lang.String getRemove();
   /**
@@ -106,6 +113,7 @@ public interface KeywordPlanOperationOrBuilder extends
    * </pre>
    *
    * <code>string remove = 3;</code>
+   * @return The bytes for remove.
    */
   com.google.protobuf.ByteString
       getRemoveBytes();

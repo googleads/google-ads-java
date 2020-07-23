@@ -10,7 +10,7 @@ package com.google.ads.googleads.v4.services;
  *
  * Protobuf type {@code google.ads.googleads.v4.services.KeywordPlanOperation}
  */
-public  final class KeywordPlanOperation extends
+public final class KeywordPlanOperation extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.services.KeywordPlanOperation)
     KeywordPlanOperationOrBuilder {
@@ -185,6 +185,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.FieldMask update_mask = 4;</code>
    * @return Whether the updateMask field is set.
    */
+  @java.lang.Override
   public boolean hasUpdateMask() {
     return updateMask_ != null;
   }
@@ -197,6 +198,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.FieldMask update_mask = 4;</code>
    * @return The updateMask.
    */
+  @java.lang.Override
   public com.google.protobuf.FieldMask getUpdateMask() {
     return updateMask_ == null ? com.google.protobuf.FieldMask.getDefaultInstance() : updateMask_;
   }
@@ -208,6 +210,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.FieldMask update_mask = 4;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.FieldMaskOrBuilder getUpdateMaskOrBuilder() {
     return getUpdateMask();
   }
@@ -221,6 +224,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.resources.KeywordPlan create = 1;</code>
    * @return Whether the create field is set.
    */
+  @java.lang.Override
   public boolean hasCreate() {
     return operationCase_ == 1;
   }
@@ -232,6 +236,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.resources.KeywordPlan create = 1;</code>
    * @return The create.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.resources.KeywordPlan getCreate() {
     if (operationCase_ == 1) {
        return (com.google.ads.googleads.v4.resources.KeywordPlan) operation_;
@@ -245,6 +250,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v4.resources.KeywordPlan create = 1;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.resources.KeywordPlanOrBuilder getCreateOrBuilder() {
     if (operationCase_ == 1) {
        return (com.google.ads.googleads.v4.resources.KeywordPlan) operation_;
@@ -262,6 +268,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.resources.KeywordPlan update = 2;</code>
    * @return Whether the update field is set.
    */
+  @java.lang.Override
   public boolean hasUpdate() {
     return operationCase_ == 2;
   }
@@ -274,6 +281,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.resources.KeywordPlan update = 2;</code>
    * @return The update.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.resources.KeywordPlan getUpdate() {
     if (operationCase_ == 2) {
        return (com.google.ads.googleads.v4.resources.KeywordPlan) operation_;
@@ -288,6 +296,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v4.resources.KeywordPlan update = 2;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.resources.KeywordPlanOrBuilder getUpdateOrBuilder() {
     if (operationCase_ == 2) {
        return (com.google.ads.googleads.v4.resources.KeywordPlan) operation_;
@@ -952,6 +961,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.resources.KeywordPlan create = 1;</code>
      * @return Whether the create field is set.
      */
+    @java.lang.Override
     public boolean hasCreate() {
       return operationCase_ == 1;
     }
@@ -963,6 +973,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.resources.KeywordPlan create = 1;</code>
      * @return The create.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.resources.KeywordPlan getCreate() {
       if (createBuilder_ == null) {
         if (operationCase_ == 1) {
@@ -1080,6 +1091,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v4.resources.KeywordPlan create = 1;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.resources.KeywordPlanOrBuilder getCreateOrBuilder() {
       if ((operationCase_ == 1) && (createBuilder_ != null)) {
         return createBuilder_.getMessageOrBuilder();
@@ -1127,6 +1139,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.resources.KeywordPlan update = 2;</code>
      * @return Whether the update field is set.
      */
+    @java.lang.Override
     public boolean hasUpdate() {
       return operationCase_ == 2;
     }
@@ -1139,6 +1152,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.resources.KeywordPlan update = 2;</code>
      * @return The update.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.resources.KeywordPlan getUpdate() {
       if (updateBuilder_ == null) {
         if (operationCase_ == 2) {
@@ -1262,6 +1276,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v4.resources.KeywordPlan update = 2;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.resources.KeywordPlanOrBuilder getUpdateOrBuilder() {
       if ((operationCase_ == 2) && (updateBuilder_ != null)) {
         return updateBuilder_.getMessageOrBuilder();
@@ -1309,6 +1324,7 @@ private static final long serialVersionUID = 0L;
      * <code>string remove = 3;</code>
      * @return The remove.
      */
+    @java.lang.Override
     public java.lang.String getRemove() {
       java.lang.Object ref = "";
       if (operationCase_ == 3) {
@@ -1336,6 +1352,7 @@ private static final long serialVersionUID = 0L;
      * <code>string remove = 3;</code>
      * @return The bytes for remove.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getRemoveBytes() {
       java.lang.Object ref = "";

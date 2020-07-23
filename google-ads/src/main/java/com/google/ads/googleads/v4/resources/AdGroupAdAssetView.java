@@ -10,7 +10,7 @@ package com.google.ads.googleads.v4.resources;
  *
  * Protobuf type {@code google.ads.googleads.v4.resources.AdGroupAdAssetView}
  */
-public  final class AdGroupAdAssetView extends
+public final class AdGroupAdAssetView extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.resources.AdGroupAdAssetView)
     AdGroupAdAssetViewOrBuilder {
@@ -158,6 +158,7 @@ private static final long serialVersionUID = 0L;
    * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return The resourceName.
    */
+  @java.lang.Override
   public java.lang.String getResourceName() {
     java.lang.Object ref = resourceName_;
     if (ref instanceof java.lang.String) {
@@ -182,6 +183,7 @@ private static final long serialVersionUID = 0L;
    * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return The bytes for resourceName.
    */
+  @java.lang.Override
   public com.google.protobuf.ByteString
       getResourceNameBytes() {
     java.lang.Object ref = resourceName_;
@@ -206,6 +208,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue ad_group_ad = 5 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return Whether the adGroupAd field is set.
    */
+  @java.lang.Override
   public boolean hasAdGroupAd() {
     return adGroupAd_ != null;
   }
@@ -217,6 +220,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue ad_group_ad = 5 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return The adGroupAd.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getAdGroupAd() {
     return adGroupAd_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : adGroupAd_;
   }
@@ -227,6 +231,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue ad_group_ad = 5 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getAdGroupAdOrBuilder() {
     return getAdGroupAd();
   }
@@ -241,6 +246,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue asset = 6 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return Whether the asset field is set.
    */
+  @java.lang.Override
   public boolean hasAsset() {
     return asset_ != null;
   }
@@ -252,6 +258,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue asset = 6 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return The asset.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getAsset() {
     return asset_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : asset_;
   }
@@ -262,6 +269,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue asset = 6 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getAssetOrBuilder() {
     return getAsset();
   }
@@ -276,7 +284,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.AssetFieldTypeEnum.AssetFieldType field_type = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The enum numeric value on the wire for fieldType.
    */
-  public int getFieldTypeValue() {
+  @java.lang.Override public int getFieldTypeValue() {
     return fieldType_;
   }
   /**
@@ -287,7 +295,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.AssetFieldTypeEnum.AssetFieldType field_type = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The fieldType.
    */
-  public com.google.ads.googleads.v4.enums.AssetFieldTypeEnum.AssetFieldType getFieldType() {
+  @java.lang.Override public com.google.ads.googleads.v4.enums.AssetFieldTypeEnum.AssetFieldType getFieldType() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v4.enums.AssetFieldTypeEnum.AssetFieldType result = com.google.ads.googleads.v4.enums.AssetFieldTypeEnum.AssetFieldType.valueOf(fieldType_);
     return result == null ? com.google.ads.googleads.v4.enums.AssetFieldTypeEnum.AssetFieldType.UNRECOGNIZED : result;
@@ -303,6 +311,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.resources.AdGroupAdAssetPolicySummary policy_summary = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the policySummary field is set.
    */
+  @java.lang.Override
   public boolean hasPolicySummary() {
     return policySummary_ != null;
   }
@@ -314,6 +323,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.resources.AdGroupAdAssetPolicySummary policy_summary = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The policySummary.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.resources.AdGroupAdAssetPolicySummary getPolicySummary() {
     return policySummary_ == null ? com.google.ads.googleads.v4.resources.AdGroupAdAssetPolicySummary.getDefaultInstance() : policySummary_;
   }
@@ -324,6 +334,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v4.resources.AdGroupAdAssetPolicySummary policy_summary = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.resources.AdGroupAdAssetPolicySummaryOrBuilder getPolicySummaryOrBuilder() {
     return getPolicySummary();
   }
@@ -338,7 +349,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.AssetPerformanceLabelEnum.AssetPerformanceLabel performance_label = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The enum numeric value on the wire for performanceLabel.
    */
-  public int getPerformanceLabelValue() {
+  @java.lang.Override public int getPerformanceLabelValue() {
     return performanceLabel_;
   }
   /**
@@ -349,7 +360,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.AssetPerformanceLabelEnum.AssetPerformanceLabel performance_label = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The performanceLabel.
    */
-  public com.google.ads.googleads.v4.enums.AssetPerformanceLabelEnum.AssetPerformanceLabel getPerformanceLabel() {
+  @java.lang.Override public com.google.ads.googleads.v4.enums.AssetPerformanceLabelEnum.AssetPerformanceLabel getPerformanceLabel() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v4.enums.AssetPerformanceLabelEnum.AssetPerformanceLabel result = com.google.ads.googleads.v4.enums.AssetPerformanceLabelEnum.AssetPerformanceLabel.valueOf(performanceLabel_);
     return result == null ? com.google.ads.googleads.v4.enums.AssetPerformanceLabelEnum.AssetPerformanceLabel.UNRECOGNIZED : result;
@@ -1218,7 +1229,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.AssetFieldTypeEnum.AssetFieldType field_type = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The enum numeric value on the wire for fieldType.
      */
-    public int getFieldTypeValue() {
+    @java.lang.Override public int getFieldTypeValue() {
       return fieldType_;
     }
     /**
@@ -1231,6 +1242,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setFieldTypeValue(int value) {
+      
       fieldType_ = value;
       onChanged();
       return this;
@@ -1243,6 +1255,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.AssetFieldTypeEnum.AssetFieldType field_type = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The fieldType.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.enums.AssetFieldTypeEnum.AssetFieldType getFieldType() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v4.enums.AssetFieldTypeEnum.AssetFieldType result = com.google.ads.googleads.v4.enums.AssetFieldTypeEnum.AssetFieldType.valueOf(fieldType_);
@@ -1445,7 +1458,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.AssetPerformanceLabelEnum.AssetPerformanceLabel performance_label = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The enum numeric value on the wire for performanceLabel.
      */
-    public int getPerformanceLabelValue() {
+    @java.lang.Override public int getPerformanceLabelValue() {
       return performanceLabel_;
     }
     /**
@@ -1458,6 +1471,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setPerformanceLabelValue(int value) {
+      
       performanceLabel_ = value;
       onChanged();
       return this;
@@ -1470,6 +1484,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.AssetPerformanceLabelEnum.AssetPerformanceLabel performance_label = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The performanceLabel.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.enums.AssetPerformanceLabelEnum.AssetPerformanceLabel getPerformanceLabel() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v4.enums.AssetPerformanceLabelEnum.AssetPerformanceLabel result = com.google.ads.googleads.v4.enums.AssetPerformanceLabelEnum.AssetPerformanceLabel.valueOf(performanceLabel_);

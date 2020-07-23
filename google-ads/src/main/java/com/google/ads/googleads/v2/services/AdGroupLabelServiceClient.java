@@ -1,5 +1,5 @@
 /*
- * Copyright 2019 Google LLC
+ * Copyright 2020 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -21,7 +21,6 @@ import com.google.ads.googleads.v2.services.stub.AdGroupLabelServiceStubSettings
 import com.google.api.core.BetaApi;
 import com.google.api.gax.core.BackgroundResource;
 import com.google.api.gax.rpc.UnaryCallable;
-import com.google.api.pathtemplate.PathTemplate;
 import java.io.IOException;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
@@ -37,8 +36,8 @@ import javax.annotation.Generated;
  * <pre>
  * <code>
  * try (AdGroupLabelServiceClient adGroupLabelServiceClient = AdGroupLabelServiceClient.create()) {
- *   String formattedResourceName = AdGroupLabelServiceClient.formatAdGroupLabelName("[CUSTOMER]", "[AD_GROUP_LABEL]");
- *   AdGroupLabel response = adGroupLabelServiceClient.getAdGroupLabel(formattedResourceName);
+ *   AdGroupLabelName resourceName = AdGroupLabelName.of("[CUSTOMER]", "[AD_GROUP_LABEL]");
+ *   AdGroupLabel response = adGroupLabelServiceClient.getAdGroupLabel(resourceName);
  * }
  * </code>
  * </pre>
@@ -100,43 +99,6 @@ public class AdGroupLabelServiceClient implements BackgroundResource {
   private final AdGroupLabelServiceSettings settings;
   private final AdGroupLabelServiceStub stub;
 
-  private static final PathTemplate AD_GROUP_LABEL_PATH_TEMPLATE =
-      PathTemplate.createWithoutUrlEncoding("customers/{customer}/adGroupLabels/{ad_group_label}");
-
-  /**
-   * Formats a string containing the fully-qualified path to represent a ad_group_label resource.
-   *
-   * @deprecated Use the {@link AdGroupLabelName} class instead.
-   */
-  @Deprecated
-  public static final String formatAdGroupLabelName(String customer, String adGroupLabel) {
-    return AD_GROUP_LABEL_PATH_TEMPLATE.instantiate(
-        "customer", customer,
-        "ad_group_label", adGroupLabel);
-  }
-
-  /**
-   * Parses the customer from the given fully-qualified path which represents a ad_group_label
-   * resource.
-   *
-   * @deprecated Use the {@link AdGroupLabelName} class instead.
-   */
-  @Deprecated
-  public static final String parseCustomerFromAdGroupLabelName(String adGroupLabelName) {
-    return AD_GROUP_LABEL_PATH_TEMPLATE.parse(adGroupLabelName).get("customer");
-  }
-
-  /**
-   * Parses the ad_group_label from the given fully-qualified path which represents a ad_group_label
-   * resource.
-   *
-   * @deprecated Use the {@link AdGroupLabelName} class instead.
-   */
-  @Deprecated
-  public static final String parseAdGroupLabelFromAdGroupLabelName(String adGroupLabelName) {
-    return AD_GROUP_LABEL_PATH_TEMPLATE.parse(adGroupLabelName).get("ad_group_label");
-  }
-
   /** Constructs an instance of AdGroupLabelServiceClient with default settings. */
   public static final AdGroupLabelServiceClient create() throws IOException {
     return create(AdGroupLabelServiceSettings.newBuilder().build());
@@ -193,16 +155,39 @@ public class AdGroupLabelServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (AdGroupLabelServiceClient adGroupLabelServiceClient = AdGroupLabelServiceClient.create()) {
-   *   String formattedResourceName = AdGroupLabelServiceClient.formatAdGroupLabelName("[CUSTOMER]", "[AD_GROUP_LABEL]");
-   *   AdGroupLabel response = adGroupLabelServiceClient.getAdGroupLabel(formattedResourceName);
+   *   AdGroupLabelName resourceName = AdGroupLabelName.of("[CUSTOMER]", "[AD_GROUP_LABEL]");
+   *   AdGroupLabel response = adGroupLabelServiceClient.getAdGroupLabel(resourceName);
    * }
    * </code></pre>
    *
-   * @param resourceName The resource name of the ad group label to fetch.
+   * @param resourceName Required. The resource name of the ad group label to fetch.
+   * @throws com.google.api.gax.rpc.ApiException if the remote call fails
+   */
+  public final AdGroupLabel getAdGroupLabel(AdGroupLabelName resourceName) {
+    GetAdGroupLabelRequest request =
+        GetAdGroupLabelRequest.newBuilder()
+            .setResourceName(resourceName == null ? null : resourceName.toString())
+            .build();
+    return getAdGroupLabel(request);
+  }
+
+  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  /**
+   * Returns the requested ad group label in full detail.
+   *
+   * <p>Sample code:
+   *
+   * <pre><code>
+   * try (AdGroupLabelServiceClient adGroupLabelServiceClient = AdGroupLabelServiceClient.create()) {
+   *   AdGroupLabelName resourceName = AdGroupLabelName.of("[CUSTOMER]", "[AD_GROUP_LABEL]");
+   *   AdGroupLabel response = adGroupLabelServiceClient.getAdGroupLabel(resourceName.toString());
+   * }
+   * </code></pre>
+   *
+   * @param resourceName Required. The resource name of the ad group label to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final AdGroupLabel getAdGroupLabel(String resourceName) {
-    AD_GROUP_LABEL_PATH_TEMPLATE.validate(resourceName, "getAdGroupLabel");
     GetAdGroupLabelRequest request =
         GetAdGroupLabelRequest.newBuilder().setResourceName(resourceName).build();
     return getAdGroupLabel(request);
@@ -216,9 +201,9 @@ public class AdGroupLabelServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (AdGroupLabelServiceClient adGroupLabelServiceClient = AdGroupLabelServiceClient.create()) {
-   *   String formattedResourceName = AdGroupLabelServiceClient.formatAdGroupLabelName("[CUSTOMER]", "[AD_GROUP_LABEL]");
+   *   AdGroupLabelName resourceName = AdGroupLabelName.of("[CUSTOMER]", "[AD_GROUP_LABEL]");
    *   GetAdGroupLabelRequest request = GetAdGroupLabelRequest.newBuilder()
-   *     .setResourceName(formattedResourceName)
+   *     .setResourceName(resourceName.toString())
    *     .build();
    *   AdGroupLabel response = adGroupLabelServiceClient.getAdGroupLabel(request);
    * }
@@ -239,9 +224,9 @@ public class AdGroupLabelServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (AdGroupLabelServiceClient adGroupLabelServiceClient = AdGroupLabelServiceClient.create()) {
-   *   String formattedResourceName = AdGroupLabelServiceClient.formatAdGroupLabelName("[CUSTOMER]", "[AD_GROUP_LABEL]");
+   *   AdGroupLabelName resourceName = AdGroupLabelName.of("[CUSTOMER]", "[AD_GROUP_LABEL]");
    *   GetAdGroupLabelRequest request = GetAdGroupLabelRequest.newBuilder()
-   *     .setResourceName(formattedResourceName)
+   *     .setResourceName(resourceName.toString())
    *     .build();
    *   ApiFuture&lt;AdGroupLabel&gt; future = adGroupLabelServiceClient.getAdGroupLabelCallable().futureCall(request);
    *   // Do something
@@ -263,58 +248,16 @@ public class AdGroupLabelServiceClient implements BackgroundResource {
    * try (AdGroupLabelServiceClient adGroupLabelServiceClient = AdGroupLabelServiceClient.create()) {
    *   String customerId = "";
    *   List&lt;AdGroupLabelOperation&gt; operations = new ArrayList&lt;&gt;();
-   *   boolean partialFailure = false;
-   *   boolean validateOnly = false;
-   *   MutateAdGroupLabelsResponse response = adGroupLabelServiceClient.mutateAdGroupLabels(customerId, operations, partialFailure, validateOnly);
-   * }
-   * </code></pre>
-   *
-   * @param customerId ID of the customer whose ad group labels are being modified.
-   * @param operations The list of operations to perform on ad group labels.
-   * @param partialFailure If true, successful operations will be carried out and invalid operations
-   *     will return errors. If false, all operations will be carried out in one transaction if and
-   *     only if they are all valid. Default is false.
-   * @param validateOnly If true, the request is validated but not executed. Only errors are
-   *     returned, not results.
-   * @throws com.google.api.gax.rpc.ApiException if the remote call fails
-   */
-  public final MutateAdGroupLabelsResponse mutateAdGroupLabels(
-      String customerId,
-      List<AdGroupLabelOperation> operations,
-      boolean partialFailure,
-      boolean validateOnly) {
-
-    MutateAdGroupLabelsRequest request =
-        MutateAdGroupLabelsRequest.newBuilder()
-            .setCustomerId(customerId)
-            .addAllOperations(operations)
-            .setPartialFailure(partialFailure)
-            .setValidateOnly(validateOnly)
-            .build();
-    return mutateAdGroupLabels(request);
-  }
-
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
-  /**
-   * Creates and removes ad group labels. Operation statuses are returned.
-   *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (AdGroupLabelServiceClient adGroupLabelServiceClient = AdGroupLabelServiceClient.create()) {
-   *   String customerId = "";
-   *   List&lt;AdGroupLabelOperation&gt; operations = new ArrayList&lt;&gt;();
    *   MutateAdGroupLabelsResponse response = adGroupLabelServiceClient.mutateAdGroupLabels(customerId, operations);
    * }
    * </code></pre>
    *
-   * @param customerId ID of the customer whose ad group labels are being modified.
-   * @param operations The list of operations to perform on ad group labels.
+   * @param customerId Required. ID of the customer whose ad group labels are being modified.
+   * @param operations Required. The list of operations to perform on ad group labels.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final MutateAdGroupLabelsResponse mutateAdGroupLabels(
       String customerId, List<AdGroupLabelOperation> operations) {
-
     MutateAdGroupLabelsRequest request =
         MutateAdGroupLabelsRequest.newBuilder()
             .setCustomerId(customerId)

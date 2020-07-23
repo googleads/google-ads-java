@@ -13,6 +13,7 @@ public interface MediaVideoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value ad_duration_millis = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the adDurationMillis field is set.
    */
   boolean hasAdDurationMillis();
   /**
@@ -21,6 +22,7 @@ public interface MediaVideoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value ad_duration_millis = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The adDurationMillis.
    */
   com.google.protobuf.Int64Value getAdDurationMillis();
   /**
@@ -38,6 +40,7 @@ public interface MediaVideoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue youtube_video_id = 2 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return Whether the youtubeVideoId field is set.
    */
   boolean hasYoutubeVideoId();
   /**
@@ -46,6 +49,7 @@ public interface MediaVideoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue youtube_video_id = 2 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The youtubeVideoId.
    */
   com.google.protobuf.StringValue getYoutubeVideoId();
   /**
@@ -65,6 +69,7 @@ public interface MediaVideoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue advertising_id_code = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the advertisingIdCode field is set.
    */
   boolean hasAdvertisingIdCode();
   /**
@@ -75,6 +80,7 @@ public interface MediaVideoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue advertising_id_code = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The advertisingIdCode.
    */
   com.google.protobuf.StringValue getAdvertisingIdCode();
   /**
@@ -95,6 +101,7 @@ public interface MediaVideoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue isci_code = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the isciCode field is set.
    */
   boolean hasIsciCode();
   /**
@@ -104,6 +111,7 @@ public interface MediaVideoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue isci_code = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The isciCode.
    */
   com.google.protobuf.StringValue getIsciCode();
   /**

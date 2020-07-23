@@ -10,7 +10,7 @@ package com.google.ads.googleads.v4.services;
  *
  * Protobuf type {@code google.ads.googleads.v4.services.MutateAccountLinkRequest}
  */
-public  final class MutateAccountLinkRequest extends
+public final class MutateAccountLinkRequest extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.services.MutateAccountLinkRequest)
     MutateAccountLinkRequestOrBuilder {
@@ -124,6 +124,7 @@ private static final long serialVersionUID = 0L;
    * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
    * @return The customerId.
    */
+  @java.lang.Override
   public java.lang.String getCustomerId() {
     java.lang.Object ref = customerId_;
     if (ref instanceof java.lang.String) {
@@ -144,6 +145,7 @@ private static final long serialVersionUID = 0L;
    * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
    * @return The bytes for customerId.
    */
+  @java.lang.Override
   public com.google.protobuf.ByteString
       getCustomerIdBytes() {
     java.lang.Object ref = customerId_;
@@ -168,6 +170,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.services.AccountLinkOperation operation = 2 [(.google.api.field_behavior) = REQUIRED];</code>
    * @return Whether the operation field is set.
    */
+  @java.lang.Override
   public boolean hasOperation() {
     return operation_ != null;
   }
@@ -179,6 +182,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.services.AccountLinkOperation operation = 2 [(.google.api.field_behavior) = REQUIRED];</code>
    * @return The operation.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.services.AccountLinkOperation getOperation() {
     return operation_ == null ? com.google.ads.googleads.v4.services.AccountLinkOperation.getDefaultInstance() : operation_;
   }
@@ -189,6 +193,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v4.services.AccountLinkOperation operation = 2 [(.google.api.field_behavior) = REQUIRED];</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.services.AccountLinkOperationOrBuilder getOperationOrBuilder() {
     return getOperation();
   }
@@ -206,6 +211,7 @@ private static final long serialVersionUID = 0L;
    * <code>bool partial_failure = 3;</code>
    * @return The partialFailure.
    */
+  @java.lang.Override
   public boolean getPartialFailure() {
     return partialFailure_;
   }
@@ -221,6 +227,7 @@ private static final long serialVersionUID = 0L;
    * <code>bool validate_only = 4;</code>
    * @return The validateOnly.
    */
+  @java.lang.Override
   public boolean getValidateOnly() {
     return validateOnly_;
   }
@@ -860,6 +867,7 @@ private static final long serialVersionUID = 0L;
      * <code>bool partial_failure = 3;</code>
      * @return The partialFailure.
      */
+    @java.lang.Override
     public boolean getPartialFailure() {
       return partialFailure_;
     }
@@ -909,6 +917,7 @@ private static final long serialVersionUID = 0L;
      * <code>bool validate_only = 4;</code>
      * @return The validateOnly.
      */
+    @java.lang.Override
     public boolean getValidateOnly() {
       return validateOnly_;
     }

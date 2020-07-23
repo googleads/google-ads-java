@@ -10,7 +10,7 @@ package com.google.ads.googleads.v4.common;
  *
  * Protobuf type {@code google.ads.googleads.v4.common.YoutubeVideoAsset}
  */
-public  final class YoutubeVideoAsset extends
+public final class YoutubeVideoAsset extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.common.YoutubeVideoAsset)
     YoutubeVideoAssetOrBuilder {
@@ -108,6 +108,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue youtube_video_id = 1;</code>
    * @return Whether the youtubeVideoId field is set.
    */
+  @java.lang.Override
   public boolean hasYoutubeVideoId() {
     return youtubeVideoId_ != null;
   }
@@ -120,6 +121,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue youtube_video_id = 1;</code>
    * @return The youtubeVideoId.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getYoutubeVideoId() {
     return youtubeVideoId_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : youtubeVideoId_;
   }
@@ -131,6 +133,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue youtube_video_id = 1;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getYoutubeVideoIdOrBuilder() {
     return getYoutubeVideoId();
   }

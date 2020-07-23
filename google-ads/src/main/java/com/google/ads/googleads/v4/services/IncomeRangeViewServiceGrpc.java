@@ -21,7 +21,7 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.10.0)",
+    value = "by gRPC proto compiler",
     comments = "Source: google/ads/googleads/v4/services/income_range_view_service.proto")
 public final class IncomeRangeViewServiceGrpc {
 
@@ -30,49 +30,49 @@ public final class IncomeRangeViewServiceGrpc {
   public static final String SERVICE_NAME = "google.ads.googleads.v4.services.IncomeRangeViewService";
 
   // Static method descriptors that strictly reflect the proto.
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  @java.lang.Deprecated // Use {@link #getGetIncomeRangeViewMethod()} instead. 
-  public static final io.grpc.MethodDescriptor<com.google.ads.googleads.v4.services.GetIncomeRangeViewRequest,
-      com.google.ads.googleads.v4.resources.IncomeRangeView> METHOD_GET_INCOME_RANGE_VIEW = getGetIncomeRangeViewMethodHelper();
-
   private static volatile io.grpc.MethodDescriptor<com.google.ads.googleads.v4.services.GetIncomeRangeViewRequest,
       com.google.ads.googleads.v4.resources.IncomeRangeView> getGetIncomeRangeViewMethod;
 
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetIncomeRangeView",
+      requestType = com.google.ads.googleads.v4.services.GetIncomeRangeViewRequest.class,
+      responseType = com.google.ads.googleads.v4.resources.IncomeRangeView.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<com.google.ads.googleads.v4.services.GetIncomeRangeViewRequest,
       com.google.ads.googleads.v4.resources.IncomeRangeView> getGetIncomeRangeViewMethod() {
-    return getGetIncomeRangeViewMethodHelper();
-  }
-
-  private static io.grpc.MethodDescriptor<com.google.ads.googleads.v4.services.GetIncomeRangeViewRequest,
-      com.google.ads.googleads.v4.resources.IncomeRangeView> getGetIncomeRangeViewMethodHelper() {
     io.grpc.MethodDescriptor<com.google.ads.googleads.v4.services.GetIncomeRangeViewRequest, com.google.ads.googleads.v4.resources.IncomeRangeView> getGetIncomeRangeViewMethod;
     if ((getGetIncomeRangeViewMethod = IncomeRangeViewServiceGrpc.getGetIncomeRangeViewMethod) == null) {
       synchronized (IncomeRangeViewServiceGrpc.class) {
         if ((getGetIncomeRangeViewMethod = IncomeRangeViewServiceGrpc.getGetIncomeRangeViewMethod) == null) {
-          IncomeRangeViewServiceGrpc.getGetIncomeRangeViewMethod = getGetIncomeRangeViewMethod = 
+          IncomeRangeViewServiceGrpc.getGetIncomeRangeViewMethod = getGetIncomeRangeViewMethod =
               io.grpc.MethodDescriptor.<com.google.ads.googleads.v4.services.GetIncomeRangeViewRequest, com.google.ads.googleads.v4.resources.IncomeRangeView>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "google.ads.googleads.v4.services.IncomeRangeViewService", "GetIncomeRangeView"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetIncomeRangeView"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v4.services.GetIncomeRangeViewRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v4.resources.IncomeRangeView.getDefaultInstance()))
-                  .setSchemaDescriptor(new IncomeRangeViewServiceMethodDescriptorSupplier("GetIncomeRangeView"))
-                  .build();
-          }
+              .setSchemaDescriptor(new IncomeRangeViewServiceMethodDescriptorSupplier("GetIncomeRangeView"))
+              .build();
         }
-     }
-     return getGetIncomeRangeViewMethod;
+      }
+    }
+    return getGetIncomeRangeViewMethod;
   }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static IncomeRangeViewServiceStub newStub(io.grpc.Channel channel) {
-    return new IncomeRangeViewServiceStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<IncomeRangeViewServiceStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<IncomeRangeViewServiceStub>() {
+        @java.lang.Override
+        public IncomeRangeViewServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new IncomeRangeViewServiceStub(channel, callOptions);
+        }
+      };
+    return IncomeRangeViewServiceStub.newStub(factory, channel);
   }
 
   /**
@@ -80,7 +80,14 @@ public final class IncomeRangeViewServiceGrpc {
    */
   public static IncomeRangeViewServiceBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new IncomeRangeViewServiceBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<IncomeRangeViewServiceBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<IncomeRangeViewServiceBlockingStub>() {
+        @java.lang.Override
+        public IncomeRangeViewServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new IncomeRangeViewServiceBlockingStub(channel, callOptions);
+        }
+      };
+    return IncomeRangeViewServiceBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -88,7 +95,14 @@ public final class IncomeRangeViewServiceGrpc {
    */
   public static IncomeRangeViewServiceFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new IncomeRangeViewServiceFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<IncomeRangeViewServiceFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<IncomeRangeViewServiceFutureStub>() {
+        @java.lang.Override
+        public IncomeRangeViewServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new IncomeRangeViewServiceFutureStub(channel, callOptions);
+        }
+      };
+    return IncomeRangeViewServiceFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -105,13 +119,13 @@ public final class IncomeRangeViewServiceGrpc {
      */
     public void getIncomeRangeView(com.google.ads.googleads.v4.services.GetIncomeRangeViewRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v4.resources.IncomeRangeView> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetIncomeRangeViewMethodHelper(), responseObserver);
+      asyncUnimplementedUnaryCall(getGetIncomeRangeViewMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
-            getGetIncomeRangeViewMethodHelper(),
+            getGetIncomeRangeViewMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 com.google.ads.googleads.v4.services.GetIncomeRangeViewRequest,
@@ -126,19 +140,15 @@ public final class IncomeRangeViewServiceGrpc {
    * Service to manage income range views.
    * </pre>
    */
-  public static final class IncomeRangeViewServiceStub extends io.grpc.stub.AbstractStub<IncomeRangeViewServiceStub> {
-    private IncomeRangeViewServiceStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private IncomeRangeViewServiceStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class IncomeRangeViewServiceStub extends io.grpc.stub.AbstractAsyncStub<IncomeRangeViewServiceStub> {
+    private IncomeRangeViewServiceStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected IncomeRangeViewServiceStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected IncomeRangeViewServiceStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new IncomeRangeViewServiceStub(channel, callOptions);
     }
 
@@ -150,7 +160,7 @@ public final class IncomeRangeViewServiceGrpc {
     public void getIncomeRangeView(com.google.ads.googleads.v4.services.GetIncomeRangeViewRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v4.resources.IncomeRangeView> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(getGetIncomeRangeViewMethodHelper(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getGetIncomeRangeViewMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -159,19 +169,15 @@ public final class IncomeRangeViewServiceGrpc {
    * Service to manage income range views.
    * </pre>
    */
-  public static final class IncomeRangeViewServiceBlockingStub extends io.grpc.stub.AbstractStub<IncomeRangeViewServiceBlockingStub> {
-    private IncomeRangeViewServiceBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private IncomeRangeViewServiceBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class IncomeRangeViewServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<IncomeRangeViewServiceBlockingStub> {
+    private IncomeRangeViewServiceBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected IncomeRangeViewServiceBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected IncomeRangeViewServiceBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new IncomeRangeViewServiceBlockingStub(channel, callOptions);
     }
 
@@ -182,7 +188,7 @@ public final class IncomeRangeViewServiceGrpc {
      */
     public com.google.ads.googleads.v4.resources.IncomeRangeView getIncomeRangeView(com.google.ads.googleads.v4.services.GetIncomeRangeViewRequest request) {
       return blockingUnaryCall(
-          getChannel(), getGetIncomeRangeViewMethodHelper(), getCallOptions(), request);
+          getChannel(), getGetIncomeRangeViewMethod(), getCallOptions(), request);
     }
   }
 
@@ -191,19 +197,15 @@ public final class IncomeRangeViewServiceGrpc {
    * Service to manage income range views.
    * </pre>
    */
-  public static final class IncomeRangeViewServiceFutureStub extends io.grpc.stub.AbstractStub<IncomeRangeViewServiceFutureStub> {
-    private IncomeRangeViewServiceFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private IncomeRangeViewServiceFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class IncomeRangeViewServiceFutureStub extends io.grpc.stub.AbstractFutureStub<IncomeRangeViewServiceFutureStub> {
+    private IncomeRangeViewServiceFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected IncomeRangeViewServiceFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected IncomeRangeViewServiceFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new IncomeRangeViewServiceFutureStub(channel, callOptions);
     }
 
@@ -215,7 +217,7 @@ public final class IncomeRangeViewServiceGrpc {
     public com.google.common.util.concurrent.ListenableFuture<com.google.ads.googleads.v4.resources.IncomeRangeView> getIncomeRangeView(
         com.google.ads.googleads.v4.services.GetIncomeRangeViewRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(getGetIncomeRangeViewMethodHelper(), getCallOptions()), request);
+          getChannel().newCall(getGetIncomeRangeViewMethod(), getCallOptions()), request);
     }
   }
 
@@ -303,7 +305,7 @@ public final class IncomeRangeViewServiceGrpc {
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new IncomeRangeViewServiceFileDescriptorSupplier())
-              .addMethod(getGetIncomeRangeViewMethodHelper())
+              .addMethod(getGetIncomeRangeViewMethod())
               .build();
         }
       }

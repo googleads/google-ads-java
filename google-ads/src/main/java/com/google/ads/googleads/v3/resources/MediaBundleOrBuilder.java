@@ -13,6 +13,7 @@ public interface MediaBundleOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.BytesValue data = 1 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return Whether the data field is set.
    */
   boolean hasData();
   /**
@@ -21,6 +22,7 @@ public interface MediaBundleOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.BytesValue data = 1 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The data.
    */
   com.google.protobuf.BytesValue getData();
   /**

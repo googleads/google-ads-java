@@ -14,6 +14,7 @@ public interface GclidDateTimePairOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue gclid = 1;</code>
+   * @return Whether the gclid field is set.
    */
   boolean hasGclid();
   /**
@@ -23,6 +24,7 @@ public interface GclidDateTimePairOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue gclid = 1;</code>
+   * @return The gclid.
    */
   com.google.protobuf.StringValue getGclid();
   /**
@@ -43,6 +45,7 @@ public interface GclidDateTimePairOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue conversion_date_time = 2;</code>
+   * @return Whether the conversionDateTime field is set.
    */
   boolean hasConversionDateTime();
   /**
@@ -53,6 +56,7 @@ public interface GclidDateTimePairOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue conversion_date_time = 2;</code>
+   * @return The conversionDateTime.
    */
   com.google.protobuf.StringValue getConversionDateTime();
   /**

@@ -11,7 +11,7 @@ package com.google.ads.googleads.v3.resources;
  *
  * Protobuf type {@code google.ads.googleads.v3.resources.FeedItemValidationError}
  */
-public  final class FeedItemValidationError extends
+public final class FeedItemValidationError extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v3.resources.FeedItemValidationError)
     FeedItemValidationErrorOrBuilder {
@@ -23,6 +23,13 @@ private static final long serialVersionUID = 0L;
   private FeedItemValidationError() {
     validationError_ = 0;
     feedAttributeIds_ = java.util.Collections.emptyList();
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new FeedItemValidationError();
   }
 
   @java.lang.Override
@@ -69,9 +76,9 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 26: {
-            if (!((mutable_bitField0_ & 0x00000004) != 0)) {
+            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
               feedAttributeIds_ = new java.util.ArrayList<com.google.protobuf.Int64Value>();
-              mutable_bitField0_ |= 0x00000004;
+              mutable_bitField0_ |= 0x00000001;
             }
             feedAttributeIds_.add(
                 input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry));
@@ -105,7 +112,7 @@ private static final long serialVersionUID = 0L;
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
     } finally {
-      if (((mutable_bitField0_ & 0x00000004) != 0)) {
+      if (((mutable_bitField0_ & 0x00000001) != 0)) {
         feedAttributeIds_ = java.util.Collections.unmodifiableList(feedAttributeIds_);
       }
       this.unknownFields = unknownFields.build();
@@ -125,7 +132,6 @@ private static final long serialVersionUID = 0L;
             com.google.ads.googleads.v3.resources.FeedItemValidationError.class, com.google.ads.googleads.v3.resources.FeedItemValidationError.Builder.class);
   }
 
-  private int bitField0_;
   public static final int VALIDATION_ERROR_FIELD_NUMBER = 1;
   private int validationError_;
   /**
@@ -135,8 +141,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.FeedItemValidationErrorEnum.FeedItemValidationError validation_error = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The enum numeric value on the wire for validationError.
    */
-  public int getValidationErrorValue() {
+  @java.lang.Override public int getValidationErrorValue() {
     return validationError_;
   }
   /**
@@ -146,8 +153,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.FeedItemValidationErrorEnum.FeedItemValidationError validation_error = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The validationError.
    */
-  public com.google.ads.googleads.v3.errors.FeedItemValidationErrorEnum.FeedItemValidationError getValidationError() {
+  @java.lang.Override public com.google.ads.googleads.v3.errors.FeedItemValidationErrorEnum.FeedItemValidationError getValidationError() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v3.errors.FeedItemValidationErrorEnum.FeedItemValidationError result = com.google.ads.googleads.v3.errors.FeedItemValidationErrorEnum.FeedItemValidationError.valueOf(validationError_);
     return result == null ? com.google.ads.googleads.v3.errors.FeedItemValidationErrorEnum.FeedItemValidationError.UNRECOGNIZED : result;
@@ -161,7 +169,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue description = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the description field is set.
    */
+  @java.lang.Override
   public boolean hasDescription() {
     return description_ != null;
   }
@@ -171,7 +181,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue description = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The description.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getDescription() {
     return description_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : description_;
   }
@@ -182,6 +194,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue description = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getDescriptionOrBuilder() {
     return getDescription();
   }
@@ -197,6 +210,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.Int64Value feed_attribute_ids = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public java.util.List<com.google.protobuf.Int64Value> getFeedAttributeIdsList() {
     return feedAttributeIds_;
   }
@@ -209,6 +223,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.Int64Value feed_attribute_ids = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public java.util.List<? extends com.google.protobuf.Int64ValueOrBuilder> 
       getFeedAttributeIdsOrBuilderList() {
     return feedAttributeIds_;
@@ -222,6 +237,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.Int64Value feed_attribute_ids = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public int getFeedAttributeIdsCount() {
     return feedAttributeIds_.size();
   }
@@ -234,6 +250,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.Int64Value feed_attribute_ids = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getFeedAttributeIds(int index) {
     return feedAttributeIds_.get(index);
   }
@@ -246,6 +263,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.Int64Value feed_attribute_ids = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getFeedAttributeIdsOrBuilder(
       int index) {
     return feedAttributeIds_.get(index);
@@ -261,7 +279,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue extra_info = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the extraInfo field is set.
    */
+  @java.lang.Override
   public boolean hasExtraInfo() {
     return extraInfo_ != null;
   }
@@ -273,7 +293,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue extra_info = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The extraInfo.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getExtraInfo() {
     return extraInfo_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : extraInfo_;
   }
@@ -286,6 +308,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue extra_info = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getExtraInfoOrBuilder() {
     return getExtraInfo();
   }
@@ -543,7 +566,7 @@ private static final long serialVersionUID = 0L;
       }
       if (feedAttributeIdsBuilder_ == null) {
         feedAttributeIds_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000004);
+        bitField0_ = (bitField0_ & ~0x00000001);
       } else {
         feedAttributeIdsBuilder_.clear();
       }
@@ -580,7 +603,6 @@ private static final long serialVersionUID = 0L;
     public com.google.ads.googleads.v3.resources.FeedItemValidationError buildPartial() {
       com.google.ads.googleads.v3.resources.FeedItemValidationError result = new com.google.ads.googleads.v3.resources.FeedItemValidationError(this);
       int from_bitField0_ = bitField0_;
-      int to_bitField0_ = 0;
       result.validationError_ = validationError_;
       if (descriptionBuilder_ == null) {
         result.description_ = description_;
@@ -588,9 +610,9 @@ private static final long serialVersionUID = 0L;
         result.description_ = descriptionBuilder_.build();
       }
       if (feedAttributeIdsBuilder_ == null) {
-        if (((bitField0_ & 0x00000004) != 0)) {
+        if (((bitField0_ & 0x00000001) != 0)) {
           feedAttributeIds_ = java.util.Collections.unmodifiableList(feedAttributeIds_);
-          bitField0_ = (bitField0_ & ~0x00000004);
+          bitField0_ = (bitField0_ & ~0x00000001);
         }
         result.feedAttributeIds_ = feedAttributeIds_;
       } else {
@@ -601,7 +623,6 @@ private static final long serialVersionUID = 0L;
       } else {
         result.extraInfo_ = extraInfoBuilder_.build();
       }
-      result.bitField0_ = to_bitField0_;
       onBuilt();
       return result;
     }
@@ -660,7 +681,7 @@ private static final long serialVersionUID = 0L;
         if (!other.feedAttributeIds_.isEmpty()) {
           if (feedAttributeIds_.isEmpty()) {
             feedAttributeIds_ = other.feedAttributeIds_;
-            bitField0_ = (bitField0_ & ~0x00000004);
+            bitField0_ = (bitField0_ & ~0x00000001);
           } else {
             ensureFeedAttributeIdsIsMutable();
             feedAttributeIds_.addAll(other.feedAttributeIds_);
@@ -673,7 +694,7 @@ private static final long serialVersionUID = 0L;
             feedAttributeIdsBuilder_.dispose();
             feedAttributeIdsBuilder_ = null;
             feedAttributeIds_ = other.feedAttributeIds_;
-            bitField0_ = (bitField0_ & ~0x00000004);
+            bitField0_ = (bitField0_ & ~0x00000001);
             feedAttributeIdsBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getFeedAttributeIdsFieldBuilder() : null;
@@ -723,8 +744,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.FeedItemValidationErrorEnum.FeedItemValidationError validation_error = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The enum numeric value on the wire for validationError.
      */
-    public int getValidationErrorValue() {
+    @java.lang.Override public int getValidationErrorValue() {
       return validationError_;
     }
     /**
@@ -734,8 +756,11 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.FeedItemValidationErrorEnum.FeedItemValidationError validation_error = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @param value The enum numeric value on the wire for validationError to set.
+     * @return This builder for chaining.
      */
     public Builder setValidationErrorValue(int value) {
+      
       validationError_ = value;
       onChanged();
       return this;
@@ -747,7 +772,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.FeedItemValidationErrorEnum.FeedItemValidationError validation_error = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The validationError.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.errors.FeedItemValidationErrorEnum.FeedItemValidationError getValidationError() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v3.errors.FeedItemValidationErrorEnum.FeedItemValidationError result = com.google.ads.googleads.v3.errors.FeedItemValidationErrorEnum.FeedItemValidationError.valueOf(validationError_);
@@ -760,6 +787,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.FeedItemValidationErrorEnum.FeedItemValidationError validation_error = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @param value The validationError to set.
+     * @return This builder for chaining.
      */
     public Builder setValidationError(com.google.ads.googleads.v3.errors.FeedItemValidationErrorEnum.FeedItemValidationError value) {
       if (value == null) {
@@ -777,6 +806,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.FeedItemValidationErrorEnum.FeedItemValidationError validation_error = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return This builder for chaining.
      */
     public Builder clearValidationError() {
       
@@ -794,6 +824,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue description = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the description field is set.
      */
     public boolean hasDescription() {
       return descriptionBuilder_ != null || description_ != null;
@@ -804,6 +835,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue description = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The description.
      */
     public com.google.protobuf.StringValue getDescription() {
       if (descriptionBuilder_ == null) {
@@ -941,9 +973,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.google.protobuf.Int64Value> feedAttributeIds_ =
       java.util.Collections.emptyList();
     private void ensureFeedAttributeIdsIsMutable() {
-      if (!((bitField0_ & 0x00000004) != 0)) {
+      if (!((bitField0_ & 0x00000001) != 0)) {
         feedAttributeIds_ = new java.util.ArrayList<com.google.protobuf.Int64Value>(feedAttributeIds_);
-        bitField0_ |= 0x00000004;
+        bitField0_ |= 0x00000001;
        }
     }
 
@@ -1159,7 +1191,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearFeedAttributeIds() {
       if (feedAttributeIdsBuilder_ == null) {
         feedAttributeIds_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000004);
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
       } else {
         feedAttributeIdsBuilder_.clear();
@@ -1278,7 +1310,7 @@ private static final long serialVersionUID = 0L;
         feedAttributeIdsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
                 feedAttributeIds_,
-                ((bitField0_ & 0x00000004) != 0),
+                ((bitField0_ & 0x00000001) != 0),
                 getParentForChildren(),
                 isClean());
         feedAttributeIds_ = null;
@@ -1297,6 +1329,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue extra_info = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the extraInfo field is set.
      */
     public boolean hasExtraInfo() {
       return extraInfoBuilder_ != null || extraInfo_ != null;
@@ -1309,6 +1342,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue extra_info = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The extraInfo.
      */
     public com.google.protobuf.StringValue getExtraInfo() {
       if (extraInfoBuilder_ == null) {

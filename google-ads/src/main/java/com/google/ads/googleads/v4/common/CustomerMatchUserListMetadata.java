@@ -10,7 +10,7 @@ package com.google.ads.googleads.v4.common;
  *
  * Protobuf type {@code google.ads.googleads.v4.common.CustomerMatchUserListMetadata}
  */
-public  final class CustomerMatchUserListMetadata extends
+public final class CustomerMatchUserListMetadata extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.common.CustomerMatchUserListMetadata)
     CustomerMatchUserListMetadataOrBuilder {
@@ -108,6 +108,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue user_list = 1;</code>
    * @return Whether the userList field is set.
    */
+  @java.lang.Override
   public boolean hasUserList() {
     return userList_ != null;
   }
@@ -120,6 +121,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue user_list = 1;</code>
    * @return The userList.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getUserList() {
     return userList_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : userList_;
   }
@@ -131,6 +133,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue user_list = 1;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getUserListOrBuilder() {
     return getUserList();
   }

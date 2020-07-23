@@ -21,7 +21,7 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.10.0)",
+    value = "by gRPC proto compiler",
     comments = "Source: google/ads/googleads/v2/services/campaign_criterion_service.proto")
 public final class CampaignCriterionServiceGrpc {
 
@@ -30,86 +30,80 @@ public final class CampaignCriterionServiceGrpc {
   public static final String SERVICE_NAME = "google.ads.googleads.v2.services.CampaignCriterionService";
 
   // Static method descriptors that strictly reflect the proto.
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  @java.lang.Deprecated // Use {@link #getGetCampaignCriterionMethod()} instead. 
-  public static final io.grpc.MethodDescriptor<com.google.ads.googleads.v2.services.GetCampaignCriterionRequest,
-      com.google.ads.googleads.v2.resources.CampaignCriterion> METHOD_GET_CAMPAIGN_CRITERION = getGetCampaignCriterionMethodHelper();
-
   private static volatile io.grpc.MethodDescriptor<com.google.ads.googleads.v2.services.GetCampaignCriterionRequest,
       com.google.ads.googleads.v2.resources.CampaignCriterion> getGetCampaignCriterionMethod;
 
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetCampaignCriterion",
+      requestType = com.google.ads.googleads.v2.services.GetCampaignCriterionRequest.class,
+      responseType = com.google.ads.googleads.v2.resources.CampaignCriterion.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<com.google.ads.googleads.v2.services.GetCampaignCriterionRequest,
       com.google.ads.googleads.v2.resources.CampaignCriterion> getGetCampaignCriterionMethod() {
-    return getGetCampaignCriterionMethodHelper();
-  }
-
-  private static io.grpc.MethodDescriptor<com.google.ads.googleads.v2.services.GetCampaignCriterionRequest,
-      com.google.ads.googleads.v2.resources.CampaignCriterion> getGetCampaignCriterionMethodHelper() {
     io.grpc.MethodDescriptor<com.google.ads.googleads.v2.services.GetCampaignCriterionRequest, com.google.ads.googleads.v2.resources.CampaignCriterion> getGetCampaignCriterionMethod;
     if ((getGetCampaignCriterionMethod = CampaignCriterionServiceGrpc.getGetCampaignCriterionMethod) == null) {
       synchronized (CampaignCriterionServiceGrpc.class) {
         if ((getGetCampaignCriterionMethod = CampaignCriterionServiceGrpc.getGetCampaignCriterionMethod) == null) {
-          CampaignCriterionServiceGrpc.getGetCampaignCriterionMethod = getGetCampaignCriterionMethod = 
+          CampaignCriterionServiceGrpc.getGetCampaignCriterionMethod = getGetCampaignCriterionMethod =
               io.grpc.MethodDescriptor.<com.google.ads.googleads.v2.services.GetCampaignCriterionRequest, com.google.ads.googleads.v2.resources.CampaignCriterion>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "google.ads.googleads.v2.services.CampaignCriterionService", "GetCampaignCriterion"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetCampaignCriterion"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v2.services.GetCampaignCriterionRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v2.resources.CampaignCriterion.getDefaultInstance()))
-                  .setSchemaDescriptor(new CampaignCriterionServiceMethodDescriptorSupplier("GetCampaignCriterion"))
-                  .build();
-          }
+              .setSchemaDescriptor(new CampaignCriterionServiceMethodDescriptorSupplier("GetCampaignCriterion"))
+              .build();
         }
-     }
-     return getGetCampaignCriterionMethod;
+      }
+    }
+    return getGetCampaignCriterionMethod;
   }
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  @java.lang.Deprecated // Use {@link #getMutateCampaignCriteriaMethod()} instead. 
-  public static final io.grpc.MethodDescriptor<com.google.ads.googleads.v2.services.MutateCampaignCriteriaRequest,
-      com.google.ads.googleads.v2.services.MutateCampaignCriteriaResponse> METHOD_MUTATE_CAMPAIGN_CRITERIA = getMutateCampaignCriteriaMethodHelper();
 
   private static volatile io.grpc.MethodDescriptor<com.google.ads.googleads.v2.services.MutateCampaignCriteriaRequest,
       com.google.ads.googleads.v2.services.MutateCampaignCriteriaResponse> getMutateCampaignCriteriaMethod;
 
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "MutateCampaignCriteria",
+      requestType = com.google.ads.googleads.v2.services.MutateCampaignCriteriaRequest.class,
+      responseType = com.google.ads.googleads.v2.services.MutateCampaignCriteriaResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<com.google.ads.googleads.v2.services.MutateCampaignCriteriaRequest,
       com.google.ads.googleads.v2.services.MutateCampaignCriteriaResponse> getMutateCampaignCriteriaMethod() {
-    return getMutateCampaignCriteriaMethodHelper();
-  }
-
-  private static io.grpc.MethodDescriptor<com.google.ads.googleads.v2.services.MutateCampaignCriteriaRequest,
-      com.google.ads.googleads.v2.services.MutateCampaignCriteriaResponse> getMutateCampaignCriteriaMethodHelper() {
     io.grpc.MethodDescriptor<com.google.ads.googleads.v2.services.MutateCampaignCriteriaRequest, com.google.ads.googleads.v2.services.MutateCampaignCriteriaResponse> getMutateCampaignCriteriaMethod;
     if ((getMutateCampaignCriteriaMethod = CampaignCriterionServiceGrpc.getMutateCampaignCriteriaMethod) == null) {
       synchronized (CampaignCriterionServiceGrpc.class) {
         if ((getMutateCampaignCriteriaMethod = CampaignCriterionServiceGrpc.getMutateCampaignCriteriaMethod) == null) {
-          CampaignCriterionServiceGrpc.getMutateCampaignCriteriaMethod = getMutateCampaignCriteriaMethod = 
+          CampaignCriterionServiceGrpc.getMutateCampaignCriteriaMethod = getMutateCampaignCriteriaMethod =
               io.grpc.MethodDescriptor.<com.google.ads.googleads.v2.services.MutateCampaignCriteriaRequest, com.google.ads.googleads.v2.services.MutateCampaignCriteriaResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "google.ads.googleads.v2.services.CampaignCriterionService", "MutateCampaignCriteria"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "MutateCampaignCriteria"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v2.services.MutateCampaignCriteriaRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v2.services.MutateCampaignCriteriaResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new CampaignCriterionServiceMethodDescriptorSupplier("MutateCampaignCriteria"))
-                  .build();
-          }
+              .setSchemaDescriptor(new CampaignCriterionServiceMethodDescriptorSupplier("MutateCampaignCriteria"))
+              .build();
         }
-     }
-     return getMutateCampaignCriteriaMethod;
+      }
+    }
+    return getMutateCampaignCriteriaMethod;
   }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static CampaignCriterionServiceStub newStub(io.grpc.Channel channel) {
-    return new CampaignCriterionServiceStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<CampaignCriterionServiceStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<CampaignCriterionServiceStub>() {
+        @java.lang.Override
+        public CampaignCriterionServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new CampaignCriterionServiceStub(channel, callOptions);
+        }
+      };
+    return CampaignCriterionServiceStub.newStub(factory, channel);
   }
 
   /**
@@ -117,7 +111,14 @@ public final class CampaignCriterionServiceGrpc {
    */
   public static CampaignCriterionServiceBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new CampaignCriterionServiceBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<CampaignCriterionServiceBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<CampaignCriterionServiceBlockingStub>() {
+        @java.lang.Override
+        public CampaignCriterionServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new CampaignCriterionServiceBlockingStub(channel, callOptions);
+        }
+      };
+    return CampaignCriterionServiceBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -125,7 +126,14 @@ public final class CampaignCriterionServiceGrpc {
    */
   public static CampaignCriterionServiceFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new CampaignCriterionServiceFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<CampaignCriterionServiceFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<CampaignCriterionServiceFutureStub>() {
+        @java.lang.Override
+        public CampaignCriterionServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new CampaignCriterionServiceFutureStub(channel, callOptions);
+        }
+      };
+    return CampaignCriterionServiceFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -142,7 +150,7 @@ public final class CampaignCriterionServiceGrpc {
      */
     public void getCampaignCriterion(com.google.ads.googleads.v2.services.GetCampaignCriterionRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v2.resources.CampaignCriterion> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetCampaignCriterionMethodHelper(), responseObserver);
+      asyncUnimplementedUnaryCall(getGetCampaignCriterionMethod(), responseObserver);
     }
 
     /**
@@ -152,20 +160,20 @@ public final class CampaignCriterionServiceGrpc {
      */
     public void mutateCampaignCriteria(com.google.ads.googleads.v2.services.MutateCampaignCriteriaRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v2.services.MutateCampaignCriteriaResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getMutateCampaignCriteriaMethodHelper(), responseObserver);
+      asyncUnimplementedUnaryCall(getMutateCampaignCriteriaMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
-            getGetCampaignCriterionMethodHelper(),
+            getGetCampaignCriterionMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 com.google.ads.googleads.v2.services.GetCampaignCriterionRequest,
                 com.google.ads.googleads.v2.resources.CampaignCriterion>(
                   this, METHODID_GET_CAMPAIGN_CRITERION)))
           .addMethod(
-            getMutateCampaignCriteriaMethodHelper(),
+            getMutateCampaignCriteriaMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 com.google.ads.googleads.v2.services.MutateCampaignCriteriaRequest,
@@ -180,19 +188,15 @@ public final class CampaignCriterionServiceGrpc {
    * Service to manage campaign criteria.
    * </pre>
    */
-  public static final class CampaignCriterionServiceStub extends io.grpc.stub.AbstractStub<CampaignCriterionServiceStub> {
-    private CampaignCriterionServiceStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private CampaignCriterionServiceStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class CampaignCriterionServiceStub extends io.grpc.stub.AbstractAsyncStub<CampaignCriterionServiceStub> {
+    private CampaignCriterionServiceStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected CampaignCriterionServiceStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected CampaignCriterionServiceStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new CampaignCriterionServiceStub(channel, callOptions);
     }
 
@@ -204,7 +208,7 @@ public final class CampaignCriterionServiceGrpc {
     public void getCampaignCriterion(com.google.ads.googleads.v2.services.GetCampaignCriterionRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v2.resources.CampaignCriterion> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(getGetCampaignCriterionMethodHelper(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getGetCampaignCriterionMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -215,7 +219,7 @@ public final class CampaignCriterionServiceGrpc {
     public void mutateCampaignCriteria(com.google.ads.googleads.v2.services.MutateCampaignCriteriaRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v2.services.MutateCampaignCriteriaResponse> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(getMutateCampaignCriteriaMethodHelper(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getMutateCampaignCriteriaMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -224,19 +228,15 @@ public final class CampaignCriterionServiceGrpc {
    * Service to manage campaign criteria.
    * </pre>
    */
-  public static final class CampaignCriterionServiceBlockingStub extends io.grpc.stub.AbstractStub<CampaignCriterionServiceBlockingStub> {
-    private CampaignCriterionServiceBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private CampaignCriterionServiceBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class CampaignCriterionServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<CampaignCriterionServiceBlockingStub> {
+    private CampaignCriterionServiceBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected CampaignCriterionServiceBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected CampaignCriterionServiceBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new CampaignCriterionServiceBlockingStub(channel, callOptions);
     }
 
@@ -247,7 +247,7 @@ public final class CampaignCriterionServiceGrpc {
      */
     public com.google.ads.googleads.v2.resources.CampaignCriterion getCampaignCriterion(com.google.ads.googleads.v2.services.GetCampaignCriterionRequest request) {
       return blockingUnaryCall(
-          getChannel(), getGetCampaignCriterionMethodHelper(), getCallOptions(), request);
+          getChannel(), getGetCampaignCriterionMethod(), getCallOptions(), request);
     }
 
     /**
@@ -257,7 +257,7 @@ public final class CampaignCriterionServiceGrpc {
      */
     public com.google.ads.googleads.v2.services.MutateCampaignCriteriaResponse mutateCampaignCriteria(com.google.ads.googleads.v2.services.MutateCampaignCriteriaRequest request) {
       return blockingUnaryCall(
-          getChannel(), getMutateCampaignCriteriaMethodHelper(), getCallOptions(), request);
+          getChannel(), getMutateCampaignCriteriaMethod(), getCallOptions(), request);
     }
   }
 
@@ -266,19 +266,15 @@ public final class CampaignCriterionServiceGrpc {
    * Service to manage campaign criteria.
    * </pre>
    */
-  public static final class CampaignCriterionServiceFutureStub extends io.grpc.stub.AbstractStub<CampaignCriterionServiceFutureStub> {
-    private CampaignCriterionServiceFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private CampaignCriterionServiceFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class CampaignCriterionServiceFutureStub extends io.grpc.stub.AbstractFutureStub<CampaignCriterionServiceFutureStub> {
+    private CampaignCriterionServiceFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected CampaignCriterionServiceFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected CampaignCriterionServiceFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new CampaignCriterionServiceFutureStub(channel, callOptions);
     }
 
@@ -290,7 +286,7 @@ public final class CampaignCriterionServiceGrpc {
     public com.google.common.util.concurrent.ListenableFuture<com.google.ads.googleads.v2.resources.CampaignCriterion> getCampaignCriterion(
         com.google.ads.googleads.v2.services.GetCampaignCriterionRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(getGetCampaignCriterionMethodHelper(), getCallOptions()), request);
+          getChannel().newCall(getGetCampaignCriterionMethod(), getCallOptions()), request);
     }
 
     /**
@@ -301,7 +297,7 @@ public final class CampaignCriterionServiceGrpc {
     public com.google.common.util.concurrent.ListenableFuture<com.google.ads.googleads.v2.services.MutateCampaignCriteriaResponse> mutateCampaignCriteria(
         com.google.ads.googleads.v2.services.MutateCampaignCriteriaRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(getMutateCampaignCriteriaMethodHelper(), getCallOptions()), request);
+          getChannel().newCall(getMutateCampaignCriteriaMethod(), getCallOptions()), request);
     }
   }
 
@@ -394,8 +390,8 @@ public final class CampaignCriterionServiceGrpc {
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new CampaignCriterionServiceFileDescriptorSupplier())
-              .addMethod(getGetCampaignCriterionMethodHelper())
-              .addMethod(getMutateCampaignCriteriaMethodHelper())
+              .addMethod(getGetCampaignCriterionMethod())
+              .addMethod(getMutateCampaignCriteriaMethod())
               .build();
         }
       }

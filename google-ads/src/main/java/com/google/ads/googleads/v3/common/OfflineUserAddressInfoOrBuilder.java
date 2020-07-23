@@ -15,6 +15,7 @@ public interface OfflineUserAddressInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue hashed_first_name = 1;</code>
+   * @return Whether the hashedFirstName field is set.
    */
   boolean hasHashedFirstName();
   /**
@@ -25,6 +26,7 @@ public interface OfflineUserAddressInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue hashed_first_name = 1;</code>
+   * @return The hashedFirstName.
    */
   com.google.protobuf.StringValue getHashedFirstName();
   /**
@@ -45,6 +47,7 @@ public interface OfflineUserAddressInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue hashed_last_name = 2;</code>
+   * @return Whether the hashedLastName field is set.
    */
   boolean hasHashedLastName();
   /**
@@ -54,6 +57,7 @@ public interface OfflineUserAddressInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue hashed_last_name = 2;</code>
+   * @return The hashedLastName.
    */
   com.google.protobuf.StringValue getHashedLastName();
   /**
@@ -72,6 +76,7 @@ public interface OfflineUserAddressInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue city = 3;</code>
+   * @return Whether the city field is set.
    */
   boolean hasCity();
   /**
@@ -80,6 +85,7 @@ public interface OfflineUserAddressInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue city = 3;</code>
+   * @return The city.
    */
   com.google.protobuf.StringValue getCity();
   /**
@@ -97,6 +103,7 @@ public interface OfflineUserAddressInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue state = 4;</code>
+   * @return Whether the state field is set.
    */
   boolean hasState();
   /**
@@ -105,6 +112,7 @@ public interface OfflineUserAddressInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue state = 4;</code>
+   * @return The state.
    */
   com.google.protobuf.StringValue getState();
   /**
@@ -122,6 +130,7 @@ public interface OfflineUserAddressInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue country_code = 5;</code>
+   * @return Whether the countryCode field is set.
    */
   boolean hasCountryCode();
   /**
@@ -130,6 +139,7 @@ public interface OfflineUserAddressInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue country_code = 5;</code>
+   * @return The countryCode.
    */
   com.google.protobuf.StringValue getCountryCode();
   /**
@@ -147,6 +157,7 @@ public interface OfflineUserAddressInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue postal_code = 6;</code>
+   * @return Whether the postalCode field is set.
    */
   boolean hasPostalCode();
   /**
@@ -155,6 +166,7 @@ public interface OfflineUserAddressInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue postal_code = 6;</code>
+   * @return The postalCode.
    */
   com.google.protobuf.StringValue getPostalCode();
   /**

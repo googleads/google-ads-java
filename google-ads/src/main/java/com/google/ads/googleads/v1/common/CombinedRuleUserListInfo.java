@@ -12,7 +12,7 @@ package com.google.ads.googleads.v1.common;
  *
  * Protobuf type {@code google.ads.googleads.v1.common.CombinedRuleUserListInfo}
  */
-public  final class CombinedRuleUserListInfo extends
+public final class CombinedRuleUserListInfo extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v1.common.CombinedRuleUserListInfo)
     CombinedRuleUserListInfoOrBuilder {
@@ -23,6 +23,13 @@ private static final long serialVersionUID = 0L;
   }
   private CombinedRuleUserListInfo() {
     ruleOperator_ = 0;
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new CombinedRuleUserListInfo();
   }
 
   @java.lang.Override
@@ -38,7 +45,6 @@ private static final long serialVersionUID = 0L;
     if (extensionRegistry == null) {
       throw new java.lang.NullPointerException();
     }
-    int mutable_bitField0_ = 0;
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
         com.google.protobuf.UnknownFieldSet.newBuilder();
     try {
@@ -123,7 +129,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.common.UserListRuleInfo left_operand = 1;</code>
+   * @return Whether the leftOperand field is set.
    */
+  @java.lang.Override
   public boolean hasLeftOperand() {
     return leftOperand_ != null;
   }
@@ -135,7 +143,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.common.UserListRuleInfo left_operand = 1;</code>
+   * @return The leftOperand.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.common.UserListRuleInfo getLeftOperand() {
     return leftOperand_ == null ? com.google.ads.googleads.v1.common.UserListRuleInfo.getDefaultInstance() : leftOperand_;
   }
@@ -148,6 +158,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v1.common.UserListRuleInfo left_operand = 1;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.common.UserListRuleInfoOrBuilder getLeftOperandOrBuilder() {
     return getLeftOperand();
   }
@@ -162,7 +173,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.common.UserListRuleInfo right_operand = 2;</code>
+   * @return Whether the rightOperand field is set.
    */
+  @java.lang.Override
   public boolean hasRightOperand() {
     return rightOperand_ != null;
   }
@@ -174,7 +187,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.common.UserListRuleInfo right_operand = 2;</code>
+   * @return The rightOperand.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.common.UserListRuleInfo getRightOperand() {
     return rightOperand_ == null ? com.google.ads.googleads.v1.common.UserListRuleInfo.getDefaultInstance() : rightOperand_;
   }
@@ -187,6 +202,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v1.common.UserListRuleInfo right_operand = 2;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.common.UserListRuleInfoOrBuilder getRightOperandOrBuilder() {
     return getRightOperand();
   }
@@ -200,8 +216,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.enums.UserListCombinedRuleOperatorEnum.UserListCombinedRuleOperator rule_operator = 3;</code>
+   * @return The enum numeric value on the wire for ruleOperator.
    */
-  public int getRuleOperatorValue() {
+  @java.lang.Override public int getRuleOperatorValue() {
     return ruleOperator_;
   }
   /**
@@ -211,8 +228,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.enums.UserListCombinedRuleOperatorEnum.UserListCombinedRuleOperator rule_operator = 3;</code>
+   * @return The ruleOperator.
    */
-  public com.google.ads.googleads.v1.enums.UserListCombinedRuleOperatorEnum.UserListCombinedRuleOperator getRuleOperator() {
+  @java.lang.Override public com.google.ads.googleads.v1.enums.UserListCombinedRuleOperatorEnum.UserListCombinedRuleOperator getRuleOperator() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v1.enums.UserListCombinedRuleOperatorEnum.UserListCombinedRuleOperator result = com.google.ads.googleads.v1.enums.UserListCombinedRuleOperatorEnum.UserListCombinedRuleOperator.valueOf(ruleOperator_);
     return result == null ? com.google.ads.googleads.v1.enums.UserListCombinedRuleOperatorEnum.UserListCombinedRuleOperator.UNRECOGNIZED : result;
@@ -596,6 +614,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.common.UserListRuleInfo left_operand = 1;</code>
+     * @return Whether the leftOperand field is set.
      */
     public boolean hasLeftOperand() {
       return leftOperandBuilder_ != null || leftOperand_ != null;
@@ -608,6 +627,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.common.UserListRuleInfo left_operand = 1;</code>
+     * @return The leftOperand.
      */
     public com.google.ads.googleads.v1.common.UserListRuleInfo getLeftOperand() {
       if (leftOperandBuilder_ == null) {
@@ -767,6 +787,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.common.UserListRuleInfo right_operand = 2;</code>
+     * @return Whether the rightOperand field is set.
      */
     public boolean hasRightOperand() {
       return rightOperandBuilder_ != null || rightOperand_ != null;
@@ -779,6 +800,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.common.UserListRuleInfo right_operand = 2;</code>
+     * @return The rightOperand.
      */
     public com.google.ads.googleads.v1.common.UserListRuleInfo getRightOperand() {
       if (rightOperandBuilder_ == null) {
@@ -935,8 +957,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.enums.UserListCombinedRuleOperatorEnum.UserListCombinedRuleOperator rule_operator = 3;</code>
+     * @return The enum numeric value on the wire for ruleOperator.
      */
-    public int getRuleOperatorValue() {
+    @java.lang.Override public int getRuleOperatorValue() {
       return ruleOperator_;
     }
     /**
@@ -946,8 +969,11 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.enums.UserListCombinedRuleOperatorEnum.UserListCombinedRuleOperator rule_operator = 3;</code>
+     * @param value The enum numeric value on the wire for ruleOperator to set.
+     * @return This builder for chaining.
      */
     public Builder setRuleOperatorValue(int value) {
+      
       ruleOperator_ = value;
       onChanged();
       return this;
@@ -959,7 +985,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.enums.UserListCombinedRuleOperatorEnum.UserListCombinedRuleOperator rule_operator = 3;</code>
+     * @return The ruleOperator.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v1.enums.UserListCombinedRuleOperatorEnum.UserListCombinedRuleOperator getRuleOperator() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v1.enums.UserListCombinedRuleOperatorEnum.UserListCombinedRuleOperator result = com.google.ads.googleads.v1.enums.UserListCombinedRuleOperatorEnum.UserListCombinedRuleOperator.valueOf(ruleOperator_);
@@ -972,6 +1000,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.enums.UserListCombinedRuleOperatorEnum.UserListCombinedRuleOperator rule_operator = 3;</code>
+     * @param value The ruleOperator to set.
+     * @return This builder for chaining.
      */
     public Builder setRuleOperator(com.google.ads.googleads.v1.enums.UserListCombinedRuleOperatorEnum.UserListCombinedRuleOperator value) {
       if (value == null) {
@@ -989,6 +1019,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.enums.UserListCombinedRuleOperatorEnum.UserListCombinedRuleOperator rule_operator = 3;</code>
+     * @return This builder for chaining.
      */
     public Builder clearRuleOperator() {
       

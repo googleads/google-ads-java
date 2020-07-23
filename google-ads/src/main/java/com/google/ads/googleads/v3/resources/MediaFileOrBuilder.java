@@ -15,6 +15,7 @@ public interface MediaFileOrBuilder extends
    * </pre>
    *
    * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * @return The resourceName.
    */
   java.lang.String getResourceName();
   /**
@@ -25,6 +26,7 @@ public interface MediaFileOrBuilder extends
    * </pre>
    *
    * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * @return The bytes for resourceName.
    */
   com.google.protobuf.ByteString
       getResourceNameBytes();
@@ -35,6 +37,7 @@ public interface MediaFileOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the id field is set.
    */
   boolean hasId();
   /**
@@ -43,6 +46,7 @@ public interface MediaFileOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The id.
    */
   com.google.protobuf.Int64Value getId();
   /**
@@ -60,6 +64,7 @@ public interface MediaFileOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.MediaTypeEnum.MediaType type = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The enum numeric value on the wire for type.
    */
   int getTypeValue();
   /**
@@ -68,6 +73,7 @@ public interface MediaFileOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.MediaTypeEnum.MediaType type = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The type.
    */
   com.google.ads.googleads.v3.enums.MediaTypeEnum.MediaType getType();
 
@@ -77,6 +83,7 @@ public interface MediaFileOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.MimeTypeEnum.MimeType mime_type = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The enum numeric value on the wire for mimeType.
    */
   int getMimeTypeValue();
   /**
@@ -85,6 +92,7 @@ public interface MediaFileOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.MimeTypeEnum.MimeType mime_type = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The mimeType.
    */
   com.google.ads.googleads.v3.enums.MimeTypeEnum.MimeType getMimeType();
 
@@ -95,6 +103,7 @@ public interface MediaFileOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue source_url = 7 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return Whether the sourceUrl field is set.
    */
   boolean hasSourceUrl();
   /**
@@ -104,6 +113,7 @@ public interface MediaFileOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue source_url = 7 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The sourceUrl.
    */
   com.google.protobuf.StringValue getSourceUrl();
   /**
@@ -123,6 +133,7 @@ public interface MediaFileOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue name = 8 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return Whether the name field is set.
    */
   boolean hasName();
   /**
@@ -132,6 +143,7 @@ public interface MediaFileOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue name = 8 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The name.
    */
   com.google.protobuf.StringValue getName();
   /**
@@ -150,6 +162,7 @@ public interface MediaFileOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value file_size = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the fileSize field is set.
    */
   boolean hasFileSize();
   /**
@@ -158,6 +171,7 @@ public interface MediaFileOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value file_size = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The fileSize.
    */
   com.google.protobuf.Int64Value getFileSize();
   /**
@@ -175,6 +189,7 @@ public interface MediaFileOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.MediaImage image = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return Whether the image field is set.
    */
   boolean hasImage();
   /**
@@ -183,6 +198,7 @@ public interface MediaFileOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.MediaImage image = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The image.
    */
   com.google.ads.googleads.v3.resources.MediaImage getImage();
   /**
@@ -200,6 +216,7 @@ public interface MediaFileOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.MediaBundle media_bundle = 4 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return Whether the mediaBundle field is set.
    */
   boolean hasMediaBundle();
   /**
@@ -208,6 +225,7 @@ public interface MediaFileOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.MediaBundle media_bundle = 4 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The mediaBundle.
    */
   com.google.ads.googleads.v3.resources.MediaBundle getMediaBundle();
   /**
@@ -225,6 +243,7 @@ public interface MediaFileOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.MediaAudio audio = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the audio field is set.
    */
   boolean hasAudio();
   /**
@@ -233,6 +252,7 @@ public interface MediaFileOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.MediaAudio audio = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The audio.
    */
   com.google.ads.googleads.v3.resources.MediaAudio getAudio();
   /**
@@ -250,6 +270,7 @@ public interface MediaFileOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.MediaVideo video = 11 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return Whether the video field is set.
    */
   boolean hasVideo();
   /**
@@ -258,6 +279,7 @@ public interface MediaFileOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.MediaVideo video = 11 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The video.
    */
   com.google.ads.googleads.v3.resources.MediaVideo getVideo();
   /**

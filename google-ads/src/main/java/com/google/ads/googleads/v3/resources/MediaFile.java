@@ -10,7 +10,7 @@ package com.google.ads.googleads.v3.resources;
  *
  * Protobuf type {@code google.ads.googleads.v3.resources.MediaFile}
  */
-public  final class MediaFile extends
+public final class MediaFile extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v3.resources.MediaFile)
     MediaFileOrBuilder {
@@ -26,6 +26,13 @@ private static final long serialVersionUID = 0L;
   }
 
   @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new MediaFile();
+  }
+
+  @java.lang.Override
   public final com.google.protobuf.UnknownFieldSet
   getUnknownFields() {
     return this.unknownFields;
@@ -38,7 +45,6 @@ private static final long serialVersionUID = 0L;
     if (extensionRegistry == null) {
       throw new java.lang.NullPointerException();
     }
-    int mutable_bitField0_ = 0;
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
         com.google.protobuf.UnknownFieldSet.newBuilder();
     try {
@@ -210,7 +216,8 @@ private static final long serialVersionUID = 0L;
   private int mediatypeCase_ = 0;
   private java.lang.Object mediatype_;
   public enum MediatypeCase
-      implements com.google.protobuf.Internal.EnumLite {
+      implements com.google.protobuf.Internal.EnumLite,
+          com.google.protobuf.AbstractMessage.InternalOneOfEnum {
     IMAGE(3),
     MEDIA_BUNDLE(4),
     AUDIO(10),
@@ -221,6 +228,8 @@ private static final long serialVersionUID = 0L;
       this.value = value;
     }
     /**
+     * @param value The number of the enum to look for.
+     * @return The enum associated with the given number.
      * @deprecated Use {@link #forNumber(int)} instead.
      */
     @java.lang.Deprecated
@@ -259,7 +268,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * @return The resourceName.
    */
+  @java.lang.Override
   public java.lang.String getResourceName() {
     java.lang.Object ref = resourceName_;
     if (ref instanceof java.lang.String) {
@@ -280,7 +291,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * @return The bytes for resourceName.
    */
+  @java.lang.Override
   public com.google.protobuf.ByteString
       getResourceNameBytes() {
     java.lang.Object ref = resourceName_;
@@ -303,7 +316,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the id field is set.
    */
+  @java.lang.Override
   public boolean hasId() {
     return id_ != null;
   }
@@ -313,7 +328,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The id.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getId() {
     return id_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : id_;
   }
@@ -324,6 +341,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getIdOrBuilder() {
     return getId();
   }
@@ -336,8 +354,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.MediaTypeEnum.MediaType type = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The enum numeric value on the wire for type.
    */
-  public int getTypeValue() {
+  @java.lang.Override public int getTypeValue() {
     return type_;
   }
   /**
@@ -346,8 +365,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.MediaTypeEnum.MediaType type = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The type.
    */
-  public com.google.ads.googleads.v3.enums.MediaTypeEnum.MediaType getType() {
+  @java.lang.Override public com.google.ads.googleads.v3.enums.MediaTypeEnum.MediaType getType() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v3.enums.MediaTypeEnum.MediaType result = com.google.ads.googleads.v3.enums.MediaTypeEnum.MediaType.valueOf(type_);
     return result == null ? com.google.ads.googleads.v3.enums.MediaTypeEnum.MediaType.UNRECOGNIZED : result;
@@ -361,8 +381,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.MimeTypeEnum.MimeType mime_type = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The enum numeric value on the wire for mimeType.
    */
-  public int getMimeTypeValue() {
+  @java.lang.Override public int getMimeTypeValue() {
     return mimeType_;
   }
   /**
@@ -371,8 +392,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.MimeTypeEnum.MimeType mime_type = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The mimeType.
    */
-  public com.google.ads.googleads.v3.enums.MimeTypeEnum.MimeType getMimeType() {
+  @java.lang.Override public com.google.ads.googleads.v3.enums.MimeTypeEnum.MimeType getMimeType() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v3.enums.MimeTypeEnum.MimeType result = com.google.ads.googleads.v3.enums.MimeTypeEnum.MimeType.valueOf(mimeType_);
     return result == null ? com.google.ads.googleads.v3.enums.MimeTypeEnum.MimeType.UNRECOGNIZED : result;
@@ -387,7 +409,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue source_url = 7 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return Whether the sourceUrl field is set.
    */
+  @java.lang.Override
   public boolean hasSourceUrl() {
     return sourceUrl_ != null;
   }
@@ -398,7 +422,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue source_url = 7 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The sourceUrl.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getSourceUrl() {
     return sourceUrl_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : sourceUrl_;
   }
@@ -410,6 +436,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue source_url = 7 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getSourceUrlOrBuilder() {
     return getSourceUrl();
   }
@@ -423,7 +450,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue name = 8 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return Whether the name field is set.
    */
+  @java.lang.Override
   public boolean hasName() {
     return name_ != null;
   }
@@ -434,7 +463,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue name = 8 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The name.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getName() {
     return name_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : name_;
   }
@@ -446,6 +477,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue name = 8 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getNameOrBuilder() {
     return getName();
   }
@@ -458,7 +490,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Int64Value file_size = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the fileSize field is set.
    */
+  @java.lang.Override
   public boolean hasFileSize() {
     return fileSize_ != null;
   }
@@ -468,7 +502,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Int64Value file_size = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The fileSize.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getFileSize() {
     return fileSize_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : fileSize_;
   }
@@ -479,6 +515,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int64Value file_size = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getFileSizeOrBuilder() {
     return getFileSize();
   }
@@ -490,7 +527,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.MediaImage image = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return Whether the image field is set.
    */
+  @java.lang.Override
   public boolean hasImage() {
     return mediatypeCase_ == 3;
   }
@@ -500,7 +539,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.MediaImage image = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The image.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.resources.MediaImage getImage() {
     if (mediatypeCase_ == 3) {
        return (com.google.ads.googleads.v3.resources.MediaImage) mediatype_;
@@ -514,6 +555,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v3.resources.MediaImage image = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.resources.MediaImageOrBuilder getImageOrBuilder() {
     if (mediatypeCase_ == 3) {
        return (com.google.ads.googleads.v3.resources.MediaImage) mediatype_;
@@ -528,7 +570,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.MediaBundle media_bundle = 4 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return Whether the mediaBundle field is set.
    */
+  @java.lang.Override
   public boolean hasMediaBundle() {
     return mediatypeCase_ == 4;
   }
@@ -538,7 +582,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.MediaBundle media_bundle = 4 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The mediaBundle.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.resources.MediaBundle getMediaBundle() {
     if (mediatypeCase_ == 4) {
        return (com.google.ads.googleads.v3.resources.MediaBundle) mediatype_;
@@ -552,6 +598,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v3.resources.MediaBundle media_bundle = 4 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.resources.MediaBundleOrBuilder getMediaBundleOrBuilder() {
     if (mediatypeCase_ == 4) {
        return (com.google.ads.googleads.v3.resources.MediaBundle) mediatype_;
@@ -566,7 +613,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.MediaAudio audio = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the audio field is set.
    */
+  @java.lang.Override
   public boolean hasAudio() {
     return mediatypeCase_ == 10;
   }
@@ -576,7 +625,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.MediaAudio audio = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The audio.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.resources.MediaAudio getAudio() {
     if (mediatypeCase_ == 10) {
        return (com.google.ads.googleads.v3.resources.MediaAudio) mediatype_;
@@ -590,6 +641,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v3.resources.MediaAudio audio = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.resources.MediaAudioOrBuilder getAudioOrBuilder() {
     if (mediatypeCase_ == 10) {
        return (com.google.ads.googleads.v3.resources.MediaAudio) mediatype_;
@@ -604,7 +656,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.MediaVideo video = 11 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return Whether the video field is set.
    */
+  @java.lang.Override
   public boolean hasVideo() {
     return mediatypeCase_ == 11;
   }
@@ -614,7 +668,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.MediaVideo video = 11 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The video.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.resources.MediaVideo getVideo() {
     if (mediatypeCase_ == 11) {
        return (com.google.ads.googleads.v3.resources.MediaVideo) mediatype_;
@@ -628,6 +684,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v3.resources.MediaVideo video = 11 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.resources.MediaVideoOrBuilder getVideoOrBuilder() {
     if (mediatypeCase_ == 11) {
        return (com.google.ads.googleads.v3.resources.MediaVideo) mediatype_;
@@ -1238,6 +1295,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * @return The resourceName.
      */
     public java.lang.String getResourceName() {
       java.lang.Object ref = resourceName_;
@@ -1259,6 +1317,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * @return The bytes for resourceName.
      */
     public com.google.protobuf.ByteString
         getResourceNameBytes() {
@@ -1281,6 +1340,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * @param value The resourceName to set.
+     * @return This builder for chaining.
      */
     public Builder setResourceName(
         java.lang.String value) {
@@ -1300,6 +1361,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * @return This builder for chaining.
      */
     public Builder clearResourceName() {
       
@@ -1315,6 +1377,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * @param value The bytes for resourceName to set.
+     * @return This builder for chaining.
      */
     public Builder setResourceNameBytes(
         com.google.protobuf.ByteString value) {
@@ -1337,6 +1401,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the id field is set.
      */
     public boolean hasId() {
       return idBuilder_ != null || id_ != null;
@@ -1347,6 +1412,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The id.
      */
     public com.google.protobuf.Int64Value getId() {
       if (idBuilder_ == null) {
@@ -1488,8 +1554,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.MediaTypeEnum.MediaType type = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * @return The enum numeric value on the wire for type.
      */
-    public int getTypeValue() {
+    @java.lang.Override public int getTypeValue() {
       return type_;
     }
     /**
@@ -1498,8 +1565,11 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.MediaTypeEnum.MediaType type = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * @param value The enum numeric value on the wire for type to set.
+     * @return This builder for chaining.
      */
     public Builder setTypeValue(int value) {
+      
       type_ = value;
       onChanged();
       return this;
@@ -1510,7 +1580,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.MediaTypeEnum.MediaType type = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * @return The type.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.enums.MediaTypeEnum.MediaType getType() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v3.enums.MediaTypeEnum.MediaType result = com.google.ads.googleads.v3.enums.MediaTypeEnum.MediaType.valueOf(type_);
@@ -1522,6 +1594,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.MediaTypeEnum.MediaType type = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * @param value The type to set.
+     * @return This builder for chaining.
      */
     public Builder setType(com.google.ads.googleads.v3.enums.MediaTypeEnum.MediaType value) {
       if (value == null) {
@@ -1538,6 +1612,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.MediaTypeEnum.MediaType type = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * @return This builder for chaining.
      */
     public Builder clearType() {
       
@@ -1553,8 +1628,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.MimeTypeEnum.MimeType mime_type = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The enum numeric value on the wire for mimeType.
      */
-    public int getMimeTypeValue() {
+    @java.lang.Override public int getMimeTypeValue() {
       return mimeType_;
     }
     /**
@@ -1563,8 +1639,11 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.MimeTypeEnum.MimeType mime_type = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @param value The enum numeric value on the wire for mimeType to set.
+     * @return This builder for chaining.
      */
     public Builder setMimeTypeValue(int value) {
+      
       mimeType_ = value;
       onChanged();
       return this;
@@ -1575,7 +1654,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.MimeTypeEnum.MimeType mime_type = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The mimeType.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.enums.MimeTypeEnum.MimeType getMimeType() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v3.enums.MimeTypeEnum.MimeType result = com.google.ads.googleads.v3.enums.MimeTypeEnum.MimeType.valueOf(mimeType_);
@@ -1587,6 +1668,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.MimeTypeEnum.MimeType mime_type = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @param value The mimeType to set.
+     * @return This builder for chaining.
      */
     public Builder setMimeType(com.google.ads.googleads.v3.enums.MimeTypeEnum.MimeType value) {
       if (value == null) {
@@ -1603,6 +1686,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.MimeTypeEnum.MimeType mime_type = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return This builder for chaining.
      */
     public Builder clearMimeType() {
       
@@ -1621,6 +1705,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue source_url = 7 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * @return Whether the sourceUrl field is set.
      */
     public boolean hasSourceUrl() {
       return sourceUrlBuilder_ != null || sourceUrl_ != null;
@@ -1632,6 +1717,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue source_url = 7 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * @return The sourceUrl.
      */
     public com.google.protobuf.StringValue getSourceUrl() {
       if (sourceUrlBuilder_ == null) {
@@ -1783,6 +1869,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue name = 8 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * @return Whether the name field is set.
      */
     public boolean hasName() {
       return nameBuilder_ != null || name_ != null;
@@ -1794,6 +1881,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue name = 8 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * @return The name.
      */
     public com.google.protobuf.StringValue getName() {
       if (nameBuilder_ == null) {
@@ -1944,6 +2032,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value file_size = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the fileSize field is set.
      */
     public boolean hasFileSize() {
       return fileSizeBuilder_ != null || fileSize_ != null;
@@ -1954,6 +2043,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value file_size = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The fileSize.
      */
     public com.google.protobuf.Int64Value getFileSize() {
       if (fileSizeBuilder_ == null) {
@@ -2096,7 +2186,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.resources.MediaImage image = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * @return Whether the image field is set.
      */
+    @java.lang.Override
     public boolean hasImage() {
       return mediatypeCase_ == 3;
     }
@@ -2106,7 +2198,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.resources.MediaImage image = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * @return The image.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.resources.MediaImage getImage() {
       if (imageBuilder_ == null) {
         if (mediatypeCase_ == 3) {
@@ -2224,6 +2318,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v3.resources.MediaImage image = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.resources.MediaImageOrBuilder getImageOrBuilder() {
       if ((mediatypeCase_ == 3) && (imageBuilder_ != null)) {
         return imageBuilder_.getMessageOrBuilder();
@@ -2268,7 +2363,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.resources.MediaBundle media_bundle = 4 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * @return Whether the mediaBundle field is set.
      */
+    @java.lang.Override
     public boolean hasMediaBundle() {
       return mediatypeCase_ == 4;
     }
@@ -2278,7 +2375,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.resources.MediaBundle media_bundle = 4 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * @return The mediaBundle.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.resources.MediaBundle getMediaBundle() {
       if (mediaBundleBuilder_ == null) {
         if (mediatypeCase_ == 4) {
@@ -2396,6 +2495,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v3.resources.MediaBundle media_bundle = 4 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.resources.MediaBundleOrBuilder getMediaBundleOrBuilder() {
       if ((mediatypeCase_ == 4) && (mediaBundleBuilder_ != null)) {
         return mediaBundleBuilder_.getMessageOrBuilder();
@@ -2440,7 +2540,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.resources.MediaAudio audio = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the audio field is set.
      */
+    @java.lang.Override
     public boolean hasAudio() {
       return mediatypeCase_ == 10;
     }
@@ -2450,7 +2552,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.resources.MediaAudio audio = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The audio.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.resources.MediaAudio getAudio() {
       if (audioBuilder_ == null) {
         if (mediatypeCase_ == 10) {
@@ -2568,6 +2672,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v3.resources.MediaAudio audio = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.resources.MediaAudioOrBuilder getAudioOrBuilder() {
       if ((mediatypeCase_ == 10) && (audioBuilder_ != null)) {
         return audioBuilder_.getMessageOrBuilder();
@@ -2612,7 +2717,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.resources.MediaVideo video = 11 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * @return Whether the video field is set.
      */
+    @java.lang.Override
     public boolean hasVideo() {
       return mediatypeCase_ == 11;
     }
@@ -2622,7 +2729,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.resources.MediaVideo video = 11 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * @return The video.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.resources.MediaVideo getVideo() {
       if (videoBuilder_ == null) {
         if (mediatypeCase_ == 11) {
@@ -2740,6 +2849,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v3.resources.MediaVideo video = 11 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.resources.MediaVideoOrBuilder getVideoOrBuilder() {
       if ((mediatypeCase_ == 11) && (videoBuilder_ != null)) {
         return videoBuilder_.getMessageOrBuilder();

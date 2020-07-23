@@ -14,7 +14,7 @@ package com.google.ads.googleads.v3.resources;
  *
  * Protobuf type {@code google.ads.googleads.v3.resources.UserLocationView}
  */
-public  final class UserLocationView extends
+public final class UserLocationView extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v3.resources.UserLocationView)
     UserLocationViewOrBuilder {
@@ -25,6 +25,13 @@ private static final long serialVersionUID = 0L;
   }
   private UserLocationView() {
     resourceName_ = "";
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new UserLocationView();
   }
 
   @java.lang.Override
@@ -40,7 +47,6 @@ private static final long serialVersionUID = 0L;
     if (extensionRegistry == null) {
       throw new java.lang.NullPointerException();
     }
-    int mutable_bitField0_ = 0;
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
         com.google.protobuf.UnknownFieldSet.newBuilder();
     try {
@@ -125,7 +131,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The resourceName.
    */
+  @java.lang.Override
   public java.lang.String getResourceName() {
     java.lang.Object ref = resourceName_;
     if (ref instanceof java.lang.String) {
@@ -146,7 +154,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The bytes for resourceName.
    */
+  @java.lang.Override
   public com.google.protobuf.ByteString
       getResourceNameBytes() {
     java.lang.Object ref = resourceName_;
@@ -169,7 +179,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Int64Value country_criterion_id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the countryCriterionId field is set.
    */
+  @java.lang.Override
   public boolean hasCountryCriterionId() {
     return countryCriterionId_ != null;
   }
@@ -179,7 +191,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Int64Value country_criterion_id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The countryCriterionId.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getCountryCriterionId() {
     return countryCriterionId_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : countryCriterionId_;
   }
@@ -190,6 +204,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int64Value country_criterion_id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getCountryCriterionIdOrBuilder() {
     return getCountryCriterionId();
   }
@@ -202,7 +217,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.BoolValue targeting_location = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the targetingLocation field is set.
    */
+  @java.lang.Override
   public boolean hasTargetingLocation() {
     return targetingLocation_ != null;
   }
@@ -212,7 +229,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.BoolValue targeting_location = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The targetingLocation.
    */
+  @java.lang.Override
   public com.google.protobuf.BoolValue getTargetingLocation() {
     return targetingLocation_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : targetingLocation_;
   }
@@ -223,6 +242,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.BoolValue targeting_location = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.BoolValueOrBuilder getTargetingLocationOrBuilder() {
     return getTargetingLocation();
   }
@@ -606,6 +626,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @return The resourceName.
      */
     public java.lang.String getResourceName() {
       java.lang.Object ref = resourceName_;
@@ -627,6 +648,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @return The bytes for resourceName.
      */
     public com.google.protobuf.ByteString
         getResourceNameBytes() {
@@ -649,6 +671,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @param value The resourceName to set.
+     * @return This builder for chaining.
      */
     public Builder setResourceName(
         java.lang.String value) {
@@ -668,6 +692,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @return This builder for chaining.
      */
     public Builder clearResourceName() {
       
@@ -683,6 +708,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @param value The bytes for resourceName to set.
+     * @return This builder for chaining.
      */
     public Builder setResourceNameBytes(
         com.google.protobuf.ByteString value) {
@@ -705,6 +732,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value country_criterion_id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the countryCriterionId field is set.
      */
     public boolean hasCountryCriterionId() {
       return countryCriterionIdBuilder_ != null || countryCriterionId_ != null;
@@ -715,6 +743,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value country_criterion_id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The countryCriterionId.
      */
     public com.google.protobuf.Int64Value getCountryCriterionId() {
       if (countryCriterionIdBuilder_ == null) {
@@ -858,6 +887,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.BoolValue targeting_location = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the targetingLocation field is set.
      */
     public boolean hasTargetingLocation() {
       return targetingLocationBuilder_ != null || targetingLocation_ != null;
@@ -868,6 +898,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.BoolValue targeting_location = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The targetingLocation.
      */
     public com.google.protobuf.BoolValue getTargetingLocation() {
       if (targetingLocationBuilder_ == null) {

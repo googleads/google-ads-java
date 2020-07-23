@@ -10,7 +10,7 @@ package com.google.ads.googleads.v3.resources;
  *
  * Protobuf type {@code google.ads.googleads.v3.resources.FeedItemTarget}
  */
-public  final class FeedItemTarget extends
+public final class FeedItemTarget extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v3.resources.FeedItemTarget)
     FeedItemTargetOrBuilder {
@@ -26,6 +26,13 @@ private static final long serialVersionUID = 0L;
   }
 
   @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new FeedItemTarget();
+  }
+
+  @java.lang.Override
   public final com.google.protobuf.UnknownFieldSet
   getUnknownFields() {
     return this.unknownFields;
@@ -38,7 +45,6 @@ private static final long serialVersionUID = 0L;
     if (extensionRegistry == null) {
       throw new java.lang.NullPointerException();
     }
-    int mutable_bitField0_ = 0;
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
         com.google.protobuf.UnknownFieldSet.newBuilder();
     try {
@@ -204,7 +210,8 @@ private static final long serialVersionUID = 0L;
   private int targetCase_ = 0;
   private java.lang.Object target_;
   public enum TargetCase
-      implements com.google.protobuf.Internal.EnumLite {
+      implements com.google.protobuf.Internal.EnumLite,
+          com.google.protobuf.AbstractMessage.InternalOneOfEnum {
     CAMPAIGN(4),
     AD_GROUP(5),
     KEYWORD(7),
@@ -217,6 +224,8 @@ private static final long serialVersionUID = 0L;
       this.value = value;
     }
     /**
+     * @param value The number of the enum to look for.
+     * @return The enum associated with the given number.
      * @deprecated Use {@link #forNumber(int)} instead.
      */
     @java.lang.Deprecated
@@ -257,7 +266,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * @return The resourceName.
    */
+  @java.lang.Override
   public java.lang.String getResourceName() {
     java.lang.Object ref = resourceName_;
     if (ref instanceof java.lang.String) {
@@ -278,7 +289,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * @return The bytes for resourceName.
    */
+  @java.lang.Override
   public com.google.protobuf.ByteString
       getResourceNameBytes() {
     java.lang.Object ref = resourceName_;
@@ -301,7 +314,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue feed_item = 2 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * @return Whether the feedItem field is set.
    */
+  @java.lang.Override
   public boolean hasFeedItem() {
     return feedItem_ != null;
   }
@@ -311,7 +326,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue feed_item = 2 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * @return The feedItem.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getFeedItem() {
     return feedItem_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : feedItem_;
   }
@@ -322,6 +339,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue feed_item = 2 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getFeedItemOrBuilder() {
     return getFeedItem();
   }
@@ -334,8 +352,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.FeedItemTargetTypeEnum.FeedItemTargetType feed_item_target_type = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The enum numeric value on the wire for feedItemTargetType.
    */
-  public int getFeedItemTargetTypeValue() {
+  @java.lang.Override public int getFeedItemTargetTypeValue() {
     return feedItemTargetType_;
   }
   /**
@@ -344,8 +363,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.FeedItemTargetTypeEnum.FeedItemTargetType feed_item_target_type = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The feedItemTargetType.
    */
-  public com.google.ads.googleads.v3.enums.FeedItemTargetTypeEnum.FeedItemTargetType getFeedItemTargetType() {
+  @java.lang.Override public com.google.ads.googleads.v3.enums.FeedItemTargetTypeEnum.FeedItemTargetType getFeedItemTargetType() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v3.enums.FeedItemTargetTypeEnum.FeedItemTargetType result = com.google.ads.googleads.v3.enums.FeedItemTargetTypeEnum.FeedItemTargetType.valueOf(feedItemTargetType_);
     return result == null ? com.google.ads.googleads.v3.enums.FeedItemTargetTypeEnum.FeedItemTargetType.UNRECOGNIZED : result;
@@ -359,7 +379,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Int64Value feed_item_target_id = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the feedItemTargetId field is set.
    */
+  @java.lang.Override
   public boolean hasFeedItemTargetId() {
     return feedItemTargetId_ != null;
   }
@@ -369,7 +391,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Int64Value feed_item_target_id = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The feedItemTargetId.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getFeedItemTargetId() {
     return feedItemTargetId_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : feedItemTargetId_;
   }
@@ -380,6 +404,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int64Value feed_item_target_id = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getFeedItemTargetIdOrBuilder() {
     return getFeedItemTargetId();
   }
@@ -393,8 +418,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.FeedItemTargetStatusEnum.FeedItemTargetStatus status = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The enum numeric value on the wire for status.
    */
-  public int getStatusValue() {
+  @java.lang.Override public int getStatusValue() {
     return status_;
   }
   /**
@@ -404,8 +430,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.FeedItemTargetStatusEnum.FeedItemTargetStatus status = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The status.
    */
-  public com.google.ads.googleads.v3.enums.FeedItemTargetStatusEnum.FeedItemTargetStatus getStatus() {
+  @java.lang.Override public com.google.ads.googleads.v3.enums.FeedItemTargetStatusEnum.FeedItemTargetStatus getStatus() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v3.enums.FeedItemTargetStatusEnum.FeedItemTargetStatus result = com.google.ads.googleads.v3.enums.FeedItemTargetStatusEnum.FeedItemTargetStatus.valueOf(status_);
     return result == null ? com.google.ads.googleads.v3.enums.FeedItemTargetStatusEnum.FeedItemTargetStatus.UNRECOGNIZED : result;
@@ -418,7 +445,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue campaign = 4 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * @return Whether the campaign field is set.
    */
+  @java.lang.Override
   public boolean hasCampaign() {
     return targetCase_ == 4;
   }
@@ -428,7 +457,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue campaign = 4 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * @return The campaign.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getCampaign() {
     if (targetCase_ == 4) {
        return (com.google.protobuf.StringValue) target_;
@@ -442,6 +473,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue campaign = 4 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getCampaignOrBuilder() {
     if (targetCase_ == 4) {
        return (com.google.protobuf.StringValue) target_;
@@ -456,7 +488,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue ad_group = 5 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * @return Whether the adGroup field is set.
    */
+  @java.lang.Override
   public boolean hasAdGroup() {
     return targetCase_ == 5;
   }
@@ -466,7 +500,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue ad_group = 5 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * @return The adGroup.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getAdGroup() {
     if (targetCase_ == 5) {
        return (com.google.protobuf.StringValue) target_;
@@ -480,6 +516,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue ad_group = 5 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getAdGroupOrBuilder() {
     if (targetCase_ == 5) {
        return (com.google.protobuf.StringValue) target_;
@@ -494,7 +531,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.KeywordInfo keyword = 7 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return Whether the keyword field is set.
    */
+  @java.lang.Override
   public boolean hasKeyword() {
     return targetCase_ == 7;
   }
@@ -504,7 +543,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.KeywordInfo keyword = 7 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The keyword.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.common.KeywordInfo getKeyword() {
     if (targetCase_ == 7) {
        return (com.google.ads.googleads.v3.common.KeywordInfo) target_;
@@ -518,6 +559,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v3.common.KeywordInfo keyword = 7 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.common.KeywordInfoOrBuilder getKeywordOrBuilder() {
     if (targetCase_ == 7) {
        return (com.google.ads.googleads.v3.common.KeywordInfo) target_;
@@ -532,7 +574,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue geo_target_constant = 8 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * @return Whether the geoTargetConstant field is set.
    */
+  @java.lang.Override
   public boolean hasGeoTargetConstant() {
     return targetCase_ == 8;
   }
@@ -542,7 +586,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue geo_target_constant = 8 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * @return The geoTargetConstant.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getGeoTargetConstant() {
     if (targetCase_ == 8) {
        return (com.google.protobuf.StringValue) target_;
@@ -556,6 +602,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue geo_target_constant = 8 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getGeoTargetConstantOrBuilder() {
     if (targetCase_ == 8) {
        return (com.google.protobuf.StringValue) target_;
@@ -570,6 +617,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.FeedItemTargetDeviceEnum.FeedItemTargetDevice device = 9 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The enum numeric value on the wire for device.
    */
   public int getDeviceValue() {
     if (targetCase_ == 9) {
@@ -583,6 +631,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.FeedItemTargetDeviceEnum.FeedItemTargetDevice device = 9 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The device.
    */
   public com.google.ads.googleads.v3.enums.FeedItemTargetDeviceEnum.FeedItemTargetDevice getDevice() {
     if (targetCase_ == 9) {
@@ -601,7 +650,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.AdScheduleInfo ad_schedule = 10 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return Whether the adSchedule field is set.
    */
+  @java.lang.Override
   public boolean hasAdSchedule() {
     return targetCase_ == 10;
   }
@@ -611,7 +662,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.AdScheduleInfo ad_schedule = 10 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The adSchedule.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.common.AdScheduleInfo getAdSchedule() {
     if (targetCase_ == 10) {
        return (com.google.ads.googleads.v3.common.AdScheduleInfo) target_;
@@ -625,6 +678,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v3.common.AdScheduleInfo ad_schedule = 10 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.common.AdScheduleInfoOrBuilder getAdScheduleOrBuilder() {
     if (targetCase_ == 10) {
        return (com.google.ads.googleads.v3.common.AdScheduleInfo) target_;
@@ -1223,6 +1277,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * @return The resourceName.
      */
     public java.lang.String getResourceName() {
       java.lang.Object ref = resourceName_;
@@ -1244,6 +1299,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * @return The bytes for resourceName.
      */
     public com.google.protobuf.ByteString
         getResourceNameBytes() {
@@ -1266,6 +1322,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * @param value The resourceName to set.
+     * @return This builder for chaining.
      */
     public Builder setResourceName(
         java.lang.String value) {
@@ -1285,6 +1343,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * @return This builder for chaining.
      */
     public Builder clearResourceName() {
       
@@ -1300,6 +1359,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * @param value The bytes for resourceName to set.
+     * @return This builder for chaining.
      */
     public Builder setResourceNameBytes(
         com.google.protobuf.ByteString value) {
@@ -1322,6 +1383,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue feed_item = 2 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * @return Whether the feedItem field is set.
      */
     public boolean hasFeedItem() {
       return feedItemBuilder_ != null || feedItem_ != null;
@@ -1332,6 +1394,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue feed_item = 2 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * @return The feedItem.
      */
     public com.google.protobuf.StringValue getFeedItem() {
       if (feedItemBuilder_ == null) {
@@ -1473,8 +1536,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.FeedItemTargetTypeEnum.FeedItemTargetType feed_item_target_type = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The enum numeric value on the wire for feedItemTargetType.
      */
-    public int getFeedItemTargetTypeValue() {
+    @java.lang.Override public int getFeedItemTargetTypeValue() {
       return feedItemTargetType_;
     }
     /**
@@ -1483,8 +1547,11 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.FeedItemTargetTypeEnum.FeedItemTargetType feed_item_target_type = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @param value The enum numeric value on the wire for feedItemTargetType to set.
+     * @return This builder for chaining.
      */
     public Builder setFeedItemTargetTypeValue(int value) {
+      
       feedItemTargetType_ = value;
       onChanged();
       return this;
@@ -1495,7 +1562,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.FeedItemTargetTypeEnum.FeedItemTargetType feed_item_target_type = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The feedItemTargetType.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.enums.FeedItemTargetTypeEnum.FeedItemTargetType getFeedItemTargetType() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v3.enums.FeedItemTargetTypeEnum.FeedItemTargetType result = com.google.ads.googleads.v3.enums.FeedItemTargetTypeEnum.FeedItemTargetType.valueOf(feedItemTargetType_);
@@ -1507,6 +1576,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.FeedItemTargetTypeEnum.FeedItemTargetType feed_item_target_type = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @param value The feedItemTargetType to set.
+     * @return This builder for chaining.
      */
     public Builder setFeedItemTargetType(com.google.ads.googleads.v3.enums.FeedItemTargetTypeEnum.FeedItemTargetType value) {
       if (value == null) {
@@ -1523,6 +1594,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.FeedItemTargetTypeEnum.FeedItemTargetType feed_item_target_type = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return This builder for chaining.
      */
     public Builder clearFeedItemTargetType() {
       
@@ -1540,6 +1612,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value feed_item_target_id = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the feedItemTargetId field is set.
      */
     public boolean hasFeedItemTargetId() {
       return feedItemTargetIdBuilder_ != null || feedItemTargetId_ != null;
@@ -1550,6 +1623,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value feed_item_target_id = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The feedItemTargetId.
      */
     public com.google.protobuf.Int64Value getFeedItemTargetId() {
       if (feedItemTargetIdBuilder_ == null) {
@@ -1692,8 +1766,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.FeedItemTargetStatusEnum.FeedItemTargetStatus status = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The enum numeric value on the wire for status.
      */
-    public int getStatusValue() {
+    @java.lang.Override public int getStatusValue() {
       return status_;
     }
     /**
@@ -1703,8 +1778,11 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.FeedItemTargetStatusEnum.FeedItemTargetStatus status = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @param value The enum numeric value on the wire for status to set.
+     * @return This builder for chaining.
      */
     public Builder setStatusValue(int value) {
+      
       status_ = value;
       onChanged();
       return this;
@@ -1716,7 +1794,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.FeedItemTargetStatusEnum.FeedItemTargetStatus status = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The status.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.enums.FeedItemTargetStatusEnum.FeedItemTargetStatus getStatus() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v3.enums.FeedItemTargetStatusEnum.FeedItemTargetStatus result = com.google.ads.googleads.v3.enums.FeedItemTargetStatusEnum.FeedItemTargetStatus.valueOf(status_);
@@ -1729,6 +1809,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.FeedItemTargetStatusEnum.FeedItemTargetStatus status = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @param value The status to set.
+     * @return This builder for chaining.
      */
     public Builder setStatus(com.google.ads.googleads.v3.enums.FeedItemTargetStatusEnum.FeedItemTargetStatus value) {
       if (value == null) {
@@ -1746,6 +1828,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.FeedItemTargetStatusEnum.FeedItemTargetStatus status = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return This builder for chaining.
      */
     public Builder clearStatus() {
       
@@ -1762,7 +1845,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue campaign = 4 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * @return Whether the campaign field is set.
      */
+    @java.lang.Override
     public boolean hasCampaign() {
       return targetCase_ == 4;
     }
@@ -1772,7 +1857,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue campaign = 4 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * @return The campaign.
      */
+    @java.lang.Override
     public com.google.protobuf.StringValue getCampaign() {
       if (campaignBuilder_ == null) {
         if (targetCase_ == 4) {
@@ -1890,6 +1977,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.protobuf.StringValue campaign = 4 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
+    @java.lang.Override
     public com.google.protobuf.StringValueOrBuilder getCampaignOrBuilder() {
       if ((targetCase_ == 4) && (campaignBuilder_ != null)) {
         return campaignBuilder_.getMessageOrBuilder();
@@ -1934,7 +2022,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue ad_group = 5 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * @return Whether the adGroup field is set.
      */
+    @java.lang.Override
     public boolean hasAdGroup() {
       return targetCase_ == 5;
     }
@@ -1944,7 +2034,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue ad_group = 5 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * @return The adGroup.
      */
+    @java.lang.Override
     public com.google.protobuf.StringValue getAdGroup() {
       if (adGroupBuilder_ == null) {
         if (targetCase_ == 5) {
@@ -2062,6 +2154,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.protobuf.StringValue ad_group = 5 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
+    @java.lang.Override
     public com.google.protobuf.StringValueOrBuilder getAdGroupOrBuilder() {
       if ((targetCase_ == 5) && (adGroupBuilder_ != null)) {
         return adGroupBuilder_.getMessageOrBuilder();
@@ -2106,7 +2199,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.common.KeywordInfo keyword = 7 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * @return Whether the keyword field is set.
      */
+    @java.lang.Override
     public boolean hasKeyword() {
       return targetCase_ == 7;
     }
@@ -2116,7 +2211,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.common.KeywordInfo keyword = 7 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * @return The keyword.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.common.KeywordInfo getKeyword() {
       if (keywordBuilder_ == null) {
         if (targetCase_ == 7) {
@@ -2234,6 +2331,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v3.common.KeywordInfo keyword = 7 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.common.KeywordInfoOrBuilder getKeywordOrBuilder() {
       if ((targetCase_ == 7) && (keywordBuilder_ != null)) {
         return keywordBuilder_.getMessageOrBuilder();
@@ -2278,7 +2376,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue geo_target_constant = 8 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * @return Whether the geoTargetConstant field is set.
      */
+    @java.lang.Override
     public boolean hasGeoTargetConstant() {
       return targetCase_ == 8;
     }
@@ -2288,7 +2388,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue geo_target_constant = 8 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * @return The geoTargetConstant.
      */
+    @java.lang.Override
     public com.google.protobuf.StringValue getGeoTargetConstant() {
       if (geoTargetConstantBuilder_ == null) {
         if (targetCase_ == 8) {
@@ -2406,6 +2508,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.protobuf.StringValue geo_target_constant = 8 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
+    @java.lang.Override
     public com.google.protobuf.StringValueOrBuilder getGeoTargetConstantOrBuilder() {
       if ((targetCase_ == 8) && (geoTargetConstantBuilder_ != null)) {
         return geoTargetConstantBuilder_.getMessageOrBuilder();
@@ -2448,7 +2551,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.FeedItemTargetDeviceEnum.FeedItemTargetDevice device = 9 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * @return The enum numeric value on the wire for device.
      */
+    @java.lang.Override
     public int getDeviceValue() {
       if (targetCase_ == 9) {
         return ((java.lang.Integer) target_).intValue();
@@ -2461,6 +2566,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.FeedItemTargetDeviceEnum.FeedItemTargetDevice device = 9 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * @param value The enum numeric value on the wire for device to set.
+     * @return This builder for chaining.
      */
     public Builder setDeviceValue(int value) {
       targetCase_ = 9;
@@ -2474,7 +2581,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.FeedItemTargetDeviceEnum.FeedItemTargetDevice device = 9 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * @return The device.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.enums.FeedItemTargetDeviceEnum.FeedItemTargetDevice getDevice() {
       if (targetCase_ == 9) {
         @SuppressWarnings("deprecation")
@@ -2490,6 +2599,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.FeedItemTargetDeviceEnum.FeedItemTargetDevice device = 9 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * @param value The device to set.
+     * @return This builder for chaining.
      */
     public Builder setDevice(com.google.ads.googleads.v3.enums.FeedItemTargetDeviceEnum.FeedItemTargetDevice value) {
       if (value == null) {
@@ -2506,6 +2617,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.FeedItemTargetDeviceEnum.FeedItemTargetDevice device = 9 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * @return This builder for chaining.
      */
     public Builder clearDevice() {
       if (targetCase_ == 9) {
@@ -2524,7 +2636,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.common.AdScheduleInfo ad_schedule = 10 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * @return Whether the adSchedule field is set.
      */
+    @java.lang.Override
     public boolean hasAdSchedule() {
       return targetCase_ == 10;
     }
@@ -2534,7 +2648,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.common.AdScheduleInfo ad_schedule = 10 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * @return The adSchedule.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.common.AdScheduleInfo getAdSchedule() {
       if (adScheduleBuilder_ == null) {
         if (targetCase_ == 10) {
@@ -2652,6 +2768,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v3.common.AdScheduleInfo ad_schedule = 10 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.common.AdScheduleInfoOrBuilder getAdScheduleOrBuilder() {
       if ((targetCase_ == 10) && (adScheduleBuilder_ != null)) {
         return adScheduleBuilder_.getMessageOrBuilder();

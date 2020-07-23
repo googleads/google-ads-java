@@ -15,6 +15,7 @@ public interface PaymentsAccountOrBuilder extends
    * </pre>
    *
    * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The resourceName.
    */
   java.lang.String getResourceName();
   /**
@@ -25,6 +26,7 @@ public interface PaymentsAccountOrBuilder extends
    * </pre>
    *
    * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The bytes for resourceName.
    */
   com.google.protobuf.ByteString
       getResourceNameBytes();
@@ -35,6 +37,7 @@ public interface PaymentsAccountOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue payments_account_id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the paymentsAccountId field is set.
    */
   boolean hasPaymentsAccountId();
   /**
@@ -43,6 +46,7 @@ public interface PaymentsAccountOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue payments_account_id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The paymentsAccountId.
    */
   com.google.protobuf.StringValue getPaymentsAccountId();
   /**
@@ -60,6 +64,7 @@ public interface PaymentsAccountOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue name = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the name field is set.
    */
   boolean hasName();
   /**
@@ -68,6 +73,7 @@ public interface PaymentsAccountOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue name = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The name.
    */
   com.google.protobuf.StringValue getName();
   /**
@@ -87,6 +93,7 @@ public interface PaymentsAccountOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue currency_code = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the currencyCode field is set.
    */
   boolean hasCurrencyCode();
   /**
@@ -97,6 +104,7 @@ public interface PaymentsAccountOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue currency_code = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The currencyCode.
    */
   com.google.protobuf.StringValue getCurrencyCode();
   /**
@@ -117,6 +125,7 @@ public interface PaymentsAccountOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue payments_profile_id = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the paymentsProfileId field is set.
    */
   boolean hasPaymentsProfileId();
   /**
@@ -126,6 +135,7 @@ public interface PaymentsAccountOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue payments_profile_id = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The paymentsProfileId.
    */
   com.google.protobuf.StringValue getPaymentsProfileId();
   /**
@@ -145,6 +155,7 @@ public interface PaymentsAccountOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue secondary_payments_profile_id = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the secondaryPaymentsProfileId field is set.
    */
   boolean hasSecondaryPaymentsProfileId();
   /**
@@ -154,6 +165,7 @@ public interface PaymentsAccountOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue secondary_payments_profile_id = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The secondaryPaymentsProfileId.
    */
   com.google.protobuf.StringValue getSecondaryPaymentsProfileId();
   /**
@@ -172,6 +184,7 @@ public interface PaymentsAccountOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue paying_manager_customer = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the payingManagerCustomer field is set.
    */
   boolean hasPayingManagerCustomer();
   /**
@@ -180,6 +193,7 @@ public interface PaymentsAccountOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue paying_manager_customer = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The payingManagerCustomer.
    */
   com.google.protobuf.StringValue getPayingManagerCustomer();
   /**

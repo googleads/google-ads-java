@@ -11,7 +11,7 @@ package com.google.ads.googleads.v4.common;
  *
  * Protobuf type {@code google.ads.googleads.v4.common.MaximizeConversionValue}
  */
-public  final class MaximizeConversionValue extends
+public final class MaximizeConversionValue extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.common.MaximizeConversionValue)
     MaximizeConversionValueOrBuilder {
@@ -112,6 +112,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.DoubleValue target_roas = 1;</code>
    * @return Whether the targetRoas field is set.
    */
+  @java.lang.Override
   public boolean hasTargetRoas() {
     return targetRoas_ != null;
   }
@@ -127,6 +128,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.DoubleValue target_roas = 1;</code>
    * @return The targetRoas.
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValue getTargetRoas() {
     return targetRoas_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : targetRoas_;
   }
@@ -141,6 +143,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.DoubleValue target_roas = 1;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValueOrBuilder getTargetRoasOrBuilder() {
     return getTargetRoas();
   }

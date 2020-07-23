@@ -11,7 +11,7 @@ package com.google.ads.googleads.v4.resources;
  *
  * Protobuf type {@code google.ads.googleads.v4.resources.AccountLink}
  */
-public  final class AccountLink extends
+public final class AccountLink extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.resources.AccountLink)
     AccountLinkOrBuilder {
@@ -184,6 +184,7 @@ private static final long serialVersionUID = 0L;
    * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return The resourceName.
    */
+  @java.lang.Override
   public java.lang.String getResourceName() {
     java.lang.Object ref = resourceName_;
     if (ref instanceof java.lang.String) {
@@ -206,6 +207,7 @@ private static final long serialVersionUID = 0L;
    * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return The bytes for resourceName.
    */
+  @java.lang.Override
   public com.google.protobuf.ByteString
       getResourceNameBytes() {
     java.lang.Object ref = resourceName_;
@@ -231,6 +233,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int64Value account_link_id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the accountLinkId field is set.
    */
+  @java.lang.Override
   public boolean hasAccountLinkId() {
     return accountLinkId_ != null;
   }
@@ -243,6 +246,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int64Value account_link_id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The accountLinkId.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getAccountLinkId() {
     return accountLinkId_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : accountLinkId_;
   }
@@ -254,6 +258,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int64Value account_link_id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getAccountLinkIdOrBuilder() {
     return getAccountLinkId();
   }
@@ -268,7 +273,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.AccountLinkStatusEnum.AccountLinkStatus status = 3;</code>
    * @return The enum numeric value on the wire for status.
    */
-  public int getStatusValue() {
+  @java.lang.Override public int getStatusValue() {
     return status_;
   }
   /**
@@ -279,7 +284,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.AccountLinkStatusEnum.AccountLinkStatus status = 3;</code>
    * @return The status.
    */
-  public com.google.ads.googleads.v4.enums.AccountLinkStatusEnum.AccountLinkStatus getStatus() {
+  @java.lang.Override public com.google.ads.googleads.v4.enums.AccountLinkStatusEnum.AccountLinkStatus getStatus() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v4.enums.AccountLinkStatusEnum.AccountLinkStatus result = com.google.ads.googleads.v4.enums.AccountLinkStatusEnum.AccountLinkStatus.valueOf(status_);
     return result == null ? com.google.ads.googleads.v4.enums.AccountLinkStatusEnum.AccountLinkStatus.UNRECOGNIZED : result;
@@ -295,7 +300,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.LinkedAccountTypeEnum.LinkedAccountType type = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The enum numeric value on the wire for type.
    */
-  public int getTypeValue() {
+  @java.lang.Override public int getTypeValue() {
     return type_;
   }
   /**
@@ -306,7 +311,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.LinkedAccountTypeEnum.LinkedAccountType type = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The type.
    */
-  public com.google.ads.googleads.v4.enums.LinkedAccountTypeEnum.LinkedAccountType getType() {
+  @java.lang.Override public com.google.ads.googleads.v4.enums.LinkedAccountTypeEnum.LinkedAccountType getType() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v4.enums.LinkedAccountTypeEnum.LinkedAccountType result = com.google.ads.googleads.v4.enums.LinkedAccountTypeEnum.LinkedAccountType.valueOf(type_);
     return result == null ? com.google.ads.googleads.v4.enums.LinkedAccountTypeEnum.LinkedAccountType.UNRECOGNIZED : result;
@@ -321,6 +326,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.resources.ThirdPartyAppAnalyticsLinkIdentifier third_party_app_analytics = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return Whether the thirdPartyAppAnalytics field is set.
    */
+  @java.lang.Override
   public boolean hasThirdPartyAppAnalytics() {
     return linkedAccountCase_ == 5;
   }
@@ -332,6 +338,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.resources.ThirdPartyAppAnalyticsLinkIdentifier third_party_app_analytics = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return The thirdPartyAppAnalytics.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.resources.ThirdPartyAppAnalyticsLinkIdentifier getThirdPartyAppAnalytics() {
     if (linkedAccountCase_ == 5) {
        return (com.google.ads.googleads.v4.resources.ThirdPartyAppAnalyticsLinkIdentifier) linkedAccount_;
@@ -345,6 +352,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v4.resources.ThirdPartyAppAnalyticsLinkIdentifier third_party_app_analytics = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.resources.ThirdPartyAppAnalyticsLinkIdentifierOrBuilder getThirdPartyAppAnalyticsOrBuilder() {
     if (linkedAccountCase_ == 5) {
        return (com.google.ads.googleads.v4.resources.ThirdPartyAppAnalyticsLinkIdentifier) linkedAccount_;
@@ -1058,7 +1066,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.AccountLinkStatusEnum.AccountLinkStatus status = 3;</code>
      * @return The enum numeric value on the wire for status.
      */
-    public int getStatusValue() {
+    @java.lang.Override public int getStatusValue() {
       return status_;
     }
     /**
@@ -1071,6 +1079,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setStatusValue(int value) {
+      
       status_ = value;
       onChanged();
       return this;
@@ -1083,6 +1092,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.AccountLinkStatusEnum.AccountLinkStatus status = 3;</code>
      * @return The status.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.enums.AccountLinkStatusEnum.AccountLinkStatus getStatus() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v4.enums.AccountLinkStatusEnum.AccountLinkStatus result = com.google.ads.googleads.v4.enums.AccountLinkStatusEnum.AccountLinkStatus.valueOf(status_);
@@ -1130,7 +1140,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.LinkedAccountTypeEnum.LinkedAccountType type = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The enum numeric value on the wire for type.
      */
-    public int getTypeValue() {
+    @java.lang.Override public int getTypeValue() {
       return type_;
     }
     /**
@@ -1143,6 +1153,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setTypeValue(int value) {
+      
       type_ = value;
       onChanged();
       return this;
@@ -1155,6 +1166,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.LinkedAccountTypeEnum.LinkedAccountType type = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The type.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.enums.LinkedAccountTypeEnum.LinkedAccountType getType() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v4.enums.LinkedAccountTypeEnum.LinkedAccountType result = com.google.ads.googleads.v4.enums.LinkedAccountTypeEnum.LinkedAccountType.valueOf(type_);
@@ -1203,6 +1215,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.resources.ThirdPartyAppAnalyticsLinkIdentifier third_party_app_analytics = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return Whether the thirdPartyAppAnalytics field is set.
      */
+    @java.lang.Override
     public boolean hasThirdPartyAppAnalytics() {
       return linkedAccountCase_ == 5;
     }
@@ -1214,6 +1227,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.resources.ThirdPartyAppAnalyticsLinkIdentifier third_party_app_analytics = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return The thirdPartyAppAnalytics.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.resources.ThirdPartyAppAnalyticsLinkIdentifier getThirdPartyAppAnalytics() {
       if (thirdPartyAppAnalyticsBuilder_ == null) {
         if (linkedAccountCase_ == 5) {
@@ -1331,6 +1345,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v4.resources.ThirdPartyAppAnalyticsLinkIdentifier third_party_app_analytics = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.resources.ThirdPartyAppAnalyticsLinkIdentifierOrBuilder getThirdPartyAppAnalyticsOrBuilder() {
       if ((linkedAccountCase_ == 5) && (thirdPartyAppAnalyticsBuilder_ != null)) {
         return thirdPartyAppAnalyticsBuilder_.getMessageOrBuilder();

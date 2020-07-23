@@ -9,18 +9,20 @@ public interface PromoteCampaignDraftRequestOrBuilder extends
 
   /**
    * <pre>
-   * The resource name of the campaign draft to promote.
+   * Required. The resource name of the campaign draft to promote.
    * </pre>
    *
-   * <code>string campaign_draft = 1;</code>
+   * <code>string campaign_draft = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+   * @return The campaignDraft.
    */
   java.lang.String getCampaignDraft();
   /**
    * <pre>
-   * The resource name of the campaign draft to promote.
+   * Required. The resource name of the campaign draft to promote.
    * </pre>
    *
-   * <code>string campaign_draft = 1;</code>
+   * <code>string campaign_draft = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+   * @return The bytes for campaignDraft.
    */
   com.google.protobuf.ByteString
       getCampaignDraftBytes();

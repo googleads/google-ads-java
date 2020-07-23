@@ -14,6 +14,7 @@ public interface StructuredSnippetFeedItemOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue header = 1;</code>
+   * @return Whether the header field is set.
    */
   boolean hasHeader();
   /**
@@ -23,6 +24,7 @@ public interface StructuredSnippetFeedItemOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue header = 1;</code>
+   * @return The header.
    */
   com.google.protobuf.StringValue getHeader();
   /**

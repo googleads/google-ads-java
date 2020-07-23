@@ -29,6 +29,7 @@ import com.google.ads.googleads.v4.enums.OfflineUserDataJobTypeEnum.OfflineUserD
 import com.google.ads.googleads.v4.errors.GoogleAdsError;
 import com.google.ads.googleads.v4.errors.GoogleAdsException;
 import com.google.ads.googleads.v4.resources.OfflineUserDataJob;
+import com.google.ads.googleads.v4.services.AddOfflineUserDataJobOperationsRequest;
 import com.google.ads.googleads.v4.services.AddOfflineUserDataJobOperationsResponse;
 import com.google.ads.googleads.v4.services.CreateOfflineUserDataJobResponse;
 import com.google.ads.googleads.v4.services.GoogleAdsRow;
@@ -333,10 +334,11 @@ public class UploadStoreSalesTransactions {
     // Issues a request to add the operations to the offline user data job.
     AddOfflineUserDataJobOperationsResponse response =
         offlineUserDataJobServiceClient.addOfflineUserDataJobOperations(
-            offlineUserDataJobResourceName,
-            // Enables partial failure.
-            BoolValue.of(true),
-            userDataJobOperations);
+            AddOfflineUserDataJobOperationsRequest.newBuilder()
+                .setResourceName(offlineUserDataJobResourceName)
+                .setEnablePartialFailure(BoolValue.of(true))
+                .addAllOperations(userDataJobOperations)
+                .build());
 
     // Prints the status message if any partial failure error is returned.
     // NOTE: The details of each partial failure error are not printed here, you can refer to

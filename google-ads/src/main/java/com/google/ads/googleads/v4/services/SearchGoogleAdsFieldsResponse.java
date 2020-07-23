@@ -10,7 +10,7 @@ package com.google.ads.googleads.v4.services;
  *
  * Protobuf type {@code google.ads.googleads.v4.services.SearchGoogleAdsFieldsResponse}
  */
-public  final class SearchGoogleAdsFieldsResponse extends
+public final class SearchGoogleAdsFieldsResponse extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.services.SearchGoogleAdsFieldsResponse)
     SearchGoogleAdsFieldsResponseOrBuilder {
@@ -119,6 +119,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.resources.GoogleAdsField results = 1;</code>
    */
+  @java.lang.Override
   public java.util.List<com.google.ads.googleads.v4.resources.GoogleAdsField> getResultsList() {
     return results_;
   }
@@ -129,6 +130,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.resources.GoogleAdsField results = 1;</code>
    */
+  @java.lang.Override
   public java.util.List<? extends com.google.ads.googleads.v4.resources.GoogleAdsFieldOrBuilder> 
       getResultsOrBuilderList() {
     return results_;
@@ -140,6 +142,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.resources.GoogleAdsField results = 1;</code>
    */
+  @java.lang.Override
   public int getResultsCount() {
     return results_.size();
   }
@@ -150,6 +153,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.resources.GoogleAdsField results = 1;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.resources.GoogleAdsField getResults(int index) {
     return results_.get(index);
   }
@@ -160,6 +164,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.resources.GoogleAdsField results = 1;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.resources.GoogleAdsFieldOrBuilder getResultsOrBuilder(
       int index) {
     return results_.get(index);
@@ -177,6 +182,7 @@ private static final long serialVersionUID = 0L;
    * <code>string next_page_token = 2;</code>
    * @return The nextPageToken.
    */
+  @java.lang.Override
   public java.lang.String getNextPageToken() {
     java.lang.Object ref = nextPageToken_;
     if (ref instanceof java.lang.String) {
@@ -199,6 +205,7 @@ private static final long serialVersionUID = 0L;
    * <code>string next_page_token = 2;</code>
    * @return The bytes for nextPageToken.
    */
+  @java.lang.Override
   public com.google.protobuf.ByteString
       getNextPageTokenBytes() {
     java.lang.Object ref = nextPageToken_;
@@ -223,6 +230,7 @@ private static final long serialVersionUID = 0L;
    * <code>int64 total_results_count = 3;</code>
    * @return The totalResultsCount.
    */
+  @java.lang.Override
   public long getTotalResultsCount() {
     return totalResultsCount_;
   }
@@ -1035,6 +1043,7 @@ private static final long serialVersionUID = 0L;
      * <code>int64 total_results_count = 3;</code>
      * @return The totalResultsCount.
      */
+    @java.lang.Override
     public long getTotalResultsCount() {
       return totalResultsCount_;
     }

@@ -13,6 +13,7 @@ public interface ProductChannelInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.ProductChannelEnum.ProductChannel channel = 1;</code>
+   * @return The enum numeric value on the wire for channel.
    */
   int getChannelValue();
   /**
@@ -21,6 +22,7 @@ public interface ProductChannelInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.ProductChannelEnum.ProductChannel channel = 1;</code>
+   * @return The channel.
    */
   com.google.ads.googleads.v3.enums.ProductChannelEnum.ProductChannel getChannel();
 }

@@ -21,7 +21,7 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.10.0)",
+    value = "by gRPC proto compiler",
     comments = "Source: google/ads/googleads/v1/services/display_keyword_view_service.proto")
 public final class DisplayKeywordViewServiceGrpc {
 
@@ -30,49 +30,49 @@ public final class DisplayKeywordViewServiceGrpc {
   public static final String SERVICE_NAME = "google.ads.googleads.v1.services.DisplayKeywordViewService";
 
   // Static method descriptors that strictly reflect the proto.
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  @java.lang.Deprecated // Use {@link #getGetDisplayKeywordViewMethod()} instead. 
-  public static final io.grpc.MethodDescriptor<com.google.ads.googleads.v1.services.GetDisplayKeywordViewRequest,
-      com.google.ads.googleads.v1.resources.DisplayKeywordView> METHOD_GET_DISPLAY_KEYWORD_VIEW = getGetDisplayKeywordViewMethodHelper();
-
   private static volatile io.grpc.MethodDescriptor<com.google.ads.googleads.v1.services.GetDisplayKeywordViewRequest,
       com.google.ads.googleads.v1.resources.DisplayKeywordView> getGetDisplayKeywordViewMethod;
 
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetDisplayKeywordView",
+      requestType = com.google.ads.googleads.v1.services.GetDisplayKeywordViewRequest.class,
+      responseType = com.google.ads.googleads.v1.resources.DisplayKeywordView.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<com.google.ads.googleads.v1.services.GetDisplayKeywordViewRequest,
       com.google.ads.googleads.v1.resources.DisplayKeywordView> getGetDisplayKeywordViewMethod() {
-    return getGetDisplayKeywordViewMethodHelper();
-  }
-
-  private static io.grpc.MethodDescriptor<com.google.ads.googleads.v1.services.GetDisplayKeywordViewRequest,
-      com.google.ads.googleads.v1.resources.DisplayKeywordView> getGetDisplayKeywordViewMethodHelper() {
     io.grpc.MethodDescriptor<com.google.ads.googleads.v1.services.GetDisplayKeywordViewRequest, com.google.ads.googleads.v1.resources.DisplayKeywordView> getGetDisplayKeywordViewMethod;
     if ((getGetDisplayKeywordViewMethod = DisplayKeywordViewServiceGrpc.getGetDisplayKeywordViewMethod) == null) {
       synchronized (DisplayKeywordViewServiceGrpc.class) {
         if ((getGetDisplayKeywordViewMethod = DisplayKeywordViewServiceGrpc.getGetDisplayKeywordViewMethod) == null) {
-          DisplayKeywordViewServiceGrpc.getGetDisplayKeywordViewMethod = getGetDisplayKeywordViewMethod = 
+          DisplayKeywordViewServiceGrpc.getGetDisplayKeywordViewMethod = getGetDisplayKeywordViewMethod =
               io.grpc.MethodDescriptor.<com.google.ads.googleads.v1.services.GetDisplayKeywordViewRequest, com.google.ads.googleads.v1.resources.DisplayKeywordView>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "google.ads.googleads.v1.services.DisplayKeywordViewService", "GetDisplayKeywordView"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetDisplayKeywordView"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v1.services.GetDisplayKeywordViewRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v1.resources.DisplayKeywordView.getDefaultInstance()))
-                  .setSchemaDescriptor(new DisplayKeywordViewServiceMethodDescriptorSupplier("GetDisplayKeywordView"))
-                  .build();
-          }
+              .setSchemaDescriptor(new DisplayKeywordViewServiceMethodDescriptorSupplier("GetDisplayKeywordView"))
+              .build();
         }
-     }
-     return getGetDisplayKeywordViewMethod;
+      }
+    }
+    return getGetDisplayKeywordViewMethod;
   }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static DisplayKeywordViewServiceStub newStub(io.grpc.Channel channel) {
-    return new DisplayKeywordViewServiceStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<DisplayKeywordViewServiceStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<DisplayKeywordViewServiceStub>() {
+        @java.lang.Override
+        public DisplayKeywordViewServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new DisplayKeywordViewServiceStub(channel, callOptions);
+        }
+      };
+    return DisplayKeywordViewServiceStub.newStub(factory, channel);
   }
 
   /**
@@ -80,7 +80,14 @@ public final class DisplayKeywordViewServiceGrpc {
    */
   public static DisplayKeywordViewServiceBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new DisplayKeywordViewServiceBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<DisplayKeywordViewServiceBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<DisplayKeywordViewServiceBlockingStub>() {
+        @java.lang.Override
+        public DisplayKeywordViewServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new DisplayKeywordViewServiceBlockingStub(channel, callOptions);
+        }
+      };
+    return DisplayKeywordViewServiceBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -88,7 +95,14 @@ public final class DisplayKeywordViewServiceGrpc {
    */
   public static DisplayKeywordViewServiceFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new DisplayKeywordViewServiceFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<DisplayKeywordViewServiceFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<DisplayKeywordViewServiceFutureStub>() {
+        @java.lang.Override
+        public DisplayKeywordViewServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new DisplayKeywordViewServiceFutureStub(channel, callOptions);
+        }
+      };
+    return DisplayKeywordViewServiceFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -105,13 +119,13 @@ public final class DisplayKeywordViewServiceGrpc {
      */
     public void getDisplayKeywordView(com.google.ads.googleads.v1.services.GetDisplayKeywordViewRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v1.resources.DisplayKeywordView> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetDisplayKeywordViewMethodHelper(), responseObserver);
+      asyncUnimplementedUnaryCall(getGetDisplayKeywordViewMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
-            getGetDisplayKeywordViewMethodHelper(),
+            getGetDisplayKeywordViewMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 com.google.ads.googleads.v1.services.GetDisplayKeywordViewRequest,
@@ -126,19 +140,15 @@ public final class DisplayKeywordViewServiceGrpc {
    * Service to manage display keyword views.
    * </pre>
    */
-  public static final class DisplayKeywordViewServiceStub extends io.grpc.stub.AbstractStub<DisplayKeywordViewServiceStub> {
-    private DisplayKeywordViewServiceStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private DisplayKeywordViewServiceStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class DisplayKeywordViewServiceStub extends io.grpc.stub.AbstractAsyncStub<DisplayKeywordViewServiceStub> {
+    private DisplayKeywordViewServiceStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected DisplayKeywordViewServiceStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected DisplayKeywordViewServiceStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new DisplayKeywordViewServiceStub(channel, callOptions);
     }
 
@@ -150,7 +160,7 @@ public final class DisplayKeywordViewServiceGrpc {
     public void getDisplayKeywordView(com.google.ads.googleads.v1.services.GetDisplayKeywordViewRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v1.resources.DisplayKeywordView> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(getGetDisplayKeywordViewMethodHelper(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getGetDisplayKeywordViewMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -159,19 +169,15 @@ public final class DisplayKeywordViewServiceGrpc {
    * Service to manage display keyword views.
    * </pre>
    */
-  public static final class DisplayKeywordViewServiceBlockingStub extends io.grpc.stub.AbstractStub<DisplayKeywordViewServiceBlockingStub> {
-    private DisplayKeywordViewServiceBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private DisplayKeywordViewServiceBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class DisplayKeywordViewServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<DisplayKeywordViewServiceBlockingStub> {
+    private DisplayKeywordViewServiceBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected DisplayKeywordViewServiceBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected DisplayKeywordViewServiceBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new DisplayKeywordViewServiceBlockingStub(channel, callOptions);
     }
 
@@ -182,7 +188,7 @@ public final class DisplayKeywordViewServiceGrpc {
      */
     public com.google.ads.googleads.v1.resources.DisplayKeywordView getDisplayKeywordView(com.google.ads.googleads.v1.services.GetDisplayKeywordViewRequest request) {
       return blockingUnaryCall(
-          getChannel(), getGetDisplayKeywordViewMethodHelper(), getCallOptions(), request);
+          getChannel(), getGetDisplayKeywordViewMethod(), getCallOptions(), request);
     }
   }
 
@@ -191,19 +197,15 @@ public final class DisplayKeywordViewServiceGrpc {
    * Service to manage display keyword views.
    * </pre>
    */
-  public static final class DisplayKeywordViewServiceFutureStub extends io.grpc.stub.AbstractStub<DisplayKeywordViewServiceFutureStub> {
-    private DisplayKeywordViewServiceFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private DisplayKeywordViewServiceFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class DisplayKeywordViewServiceFutureStub extends io.grpc.stub.AbstractFutureStub<DisplayKeywordViewServiceFutureStub> {
+    private DisplayKeywordViewServiceFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected DisplayKeywordViewServiceFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected DisplayKeywordViewServiceFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new DisplayKeywordViewServiceFutureStub(channel, callOptions);
     }
 
@@ -215,7 +217,7 @@ public final class DisplayKeywordViewServiceGrpc {
     public com.google.common.util.concurrent.ListenableFuture<com.google.ads.googleads.v1.resources.DisplayKeywordView> getDisplayKeywordView(
         com.google.ads.googleads.v1.services.GetDisplayKeywordViewRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(getGetDisplayKeywordViewMethodHelper(), getCallOptions()), request);
+          getChannel().newCall(getGetDisplayKeywordViewMethod(), getCallOptions()), request);
     }
   }
 
@@ -303,7 +305,7 @@ public final class DisplayKeywordViewServiceGrpc {
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new DisplayKeywordViewServiceFileDescriptorSupplier())
-              .addMethod(getGetDisplayKeywordViewMethodHelper())
+              .addMethod(getGetDisplayKeywordViewMethod())
               .build();
         }
       }

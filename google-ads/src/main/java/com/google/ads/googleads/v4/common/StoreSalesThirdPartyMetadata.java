@@ -12,7 +12,7 @@ package com.google.ads.googleads.v4.common;
  *
  * Protobuf type {@code google.ads.googleads.v4.common.StoreSalesThirdPartyMetadata}
  */
-public  final class StoreSalesThirdPartyMetadata extends
+public final class StoreSalesThirdPartyMetadata extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.common.StoreSalesThirdPartyMetadata)
     StoreSalesThirdPartyMetadataOrBuilder {
@@ -176,6 +176,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue advertiser_upload_date_time = 1;</code>
    * @return Whether the advertiserUploadDateTime field is set.
    */
+  @java.lang.Override
   public boolean hasAdvertiserUploadDateTime() {
     return advertiserUploadDateTime_ != null;
   }
@@ -189,6 +190,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue advertiser_upload_date_time = 1;</code>
    * @return The advertiserUploadDateTime.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getAdvertiserUploadDateTime() {
     return advertiserUploadDateTime_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : advertiserUploadDateTime_;
   }
@@ -201,6 +203,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue advertiser_upload_date_time = 1;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getAdvertiserUploadDateTimeOrBuilder() {
     return getAdvertiserUploadDateTime();
   }
@@ -218,6 +221,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.DoubleValue valid_transaction_fraction = 2;</code>
    * @return Whether the validTransactionFraction field is set.
    */
+  @java.lang.Override
   public boolean hasValidTransactionFraction() {
     return validTransactionFraction_ != null;
   }
@@ -232,6 +236,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.DoubleValue valid_transaction_fraction = 2;</code>
    * @return The validTransactionFraction.
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValue getValidTransactionFraction() {
     return validTransactionFraction_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : validTransactionFraction_;
   }
@@ -245,6 +250,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.DoubleValue valid_transaction_fraction = 2;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValueOrBuilder getValidTransactionFractionOrBuilder() {
     return getValidTransactionFraction();
   }
@@ -262,6 +268,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.DoubleValue partner_match_fraction = 3;</code>
    * @return Whether the partnerMatchFraction field is set.
    */
+  @java.lang.Override
   public boolean hasPartnerMatchFraction() {
     return partnerMatchFraction_ != null;
   }
@@ -276,6 +283,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.DoubleValue partner_match_fraction = 3;</code>
    * @return The partnerMatchFraction.
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValue getPartnerMatchFraction() {
     return partnerMatchFraction_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : partnerMatchFraction_;
   }
@@ -289,6 +297,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.DoubleValue partner_match_fraction = 3;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValueOrBuilder getPartnerMatchFractionOrBuilder() {
     return getPartnerMatchFraction();
   }
@@ -306,6 +315,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.DoubleValue partner_upload_fraction = 4;</code>
    * @return Whether the partnerUploadFraction field is set.
    */
+  @java.lang.Override
   public boolean hasPartnerUploadFraction() {
     return partnerUploadFraction_ != null;
   }
@@ -320,6 +330,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.DoubleValue partner_upload_fraction = 4;</code>
    * @return The partnerUploadFraction.
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValue getPartnerUploadFraction() {
     return partnerUploadFraction_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : partnerUploadFraction_;
   }
@@ -333,6 +344,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.DoubleValue partner_upload_fraction = 4;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValueOrBuilder getPartnerUploadFractionOrBuilder() {
     return getPartnerUploadFraction();
   }
@@ -347,6 +359,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue bridge_map_version_id = 5;</code>
    * @return Whether the bridgeMapVersionId field is set.
    */
+  @java.lang.Override
   public boolean hasBridgeMapVersionId() {
     return bridgeMapVersionId_ != null;
   }
@@ -358,6 +371,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue bridge_map_version_id = 5;</code>
    * @return The bridgeMapVersionId.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getBridgeMapVersionId() {
     return bridgeMapVersionId_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : bridgeMapVersionId_;
   }
@@ -368,6 +382,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue bridge_map_version_id = 5;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getBridgeMapVersionIdOrBuilder() {
     return getBridgeMapVersionId();
   }
@@ -382,6 +397,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int64Value partner_id = 6;</code>
    * @return Whether the partnerId field is set.
    */
+  @java.lang.Override
   public boolean hasPartnerId() {
     return partnerId_ != null;
   }
@@ -393,6 +409,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int64Value partner_id = 6;</code>
    * @return The partnerId.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getPartnerId() {
     return partnerId_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : partnerId_;
   }
@@ -403,6 +420,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int64Value partner_id = 6;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getPartnerIdOrBuilder() {
     return getPartnerId();
   }

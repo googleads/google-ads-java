@@ -10,7 +10,7 @@ package com.google.ads.googleads.v1.common;
  *
  * Protobuf type {@code google.ads.googleads.v1.common.CriterionCategoryLocaleAvailability}
  */
-public  final class CriterionCategoryLocaleAvailability extends
+public final class CriterionCategoryLocaleAvailability extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v1.common.CriterionCategoryLocaleAvailability)
     CriterionCategoryLocaleAvailabilityOrBuilder {
@@ -21,6 +21,13 @@ private static final long serialVersionUID = 0L;
   }
   private CriterionCategoryLocaleAvailability() {
     availabilityMode_ = 0;
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new CriterionCategoryLocaleAvailability();
   }
 
   @java.lang.Override
@@ -36,7 +43,6 @@ private static final long serialVersionUID = 0L;
     if (extensionRegistry == null) {
       throw new java.lang.NullPointerException();
     }
-    int mutable_bitField0_ = 0;
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
         com.google.protobuf.UnknownFieldSet.newBuilder();
     try {
@@ -122,8 +128,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.enums.CriterionCategoryLocaleAvailabilityModeEnum.CriterionCategoryLocaleAvailabilityMode availability_mode = 1;</code>
+   * @return The enum numeric value on the wire for availabilityMode.
    */
-  public int getAvailabilityModeValue() {
+  @java.lang.Override public int getAvailabilityModeValue() {
     return availabilityMode_;
   }
   /**
@@ -135,8 +142,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.enums.CriterionCategoryLocaleAvailabilityModeEnum.CriterionCategoryLocaleAvailabilityMode availability_mode = 1;</code>
+   * @return The availabilityMode.
    */
-  public com.google.ads.googleads.v1.enums.CriterionCategoryLocaleAvailabilityModeEnum.CriterionCategoryLocaleAvailabilityMode getAvailabilityMode() {
+  @java.lang.Override public com.google.ads.googleads.v1.enums.CriterionCategoryLocaleAvailabilityModeEnum.CriterionCategoryLocaleAvailabilityMode getAvailabilityMode() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v1.enums.CriterionCategoryLocaleAvailabilityModeEnum.CriterionCategoryLocaleAvailabilityMode result = com.google.ads.googleads.v1.enums.CriterionCategoryLocaleAvailabilityModeEnum.CriterionCategoryLocaleAvailabilityMode.valueOf(availabilityMode_);
     return result == null ? com.google.ads.googleads.v1.enums.CriterionCategoryLocaleAvailabilityModeEnum.CriterionCategoryLocaleAvailabilityMode.UNRECOGNIZED : result;
@@ -150,7 +158,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue country_code = 2;</code>
+   * @return Whether the countryCode field is set.
    */
+  @java.lang.Override
   public boolean hasCountryCode() {
     return countryCode_ != null;
   }
@@ -160,7 +170,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue country_code = 2;</code>
+   * @return The countryCode.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getCountryCode() {
     return countryCode_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : countryCode_;
   }
@@ -171,6 +183,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue country_code = 2;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getCountryCodeOrBuilder() {
     return getCountryCode();
   }
@@ -183,7 +196,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue language_code = 3;</code>
+   * @return Whether the languageCode field is set.
    */
+  @java.lang.Override
   public boolean hasLanguageCode() {
     return languageCode_ != null;
   }
@@ -193,7 +208,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue language_code = 3;</code>
+   * @return The languageCode.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getLanguageCode() {
     return languageCode_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : languageCode_;
   }
@@ -204,6 +221,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue language_code = 3;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getLanguageCodeOrBuilder() {
     return getLanguageCode();
   }
@@ -583,8 +601,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.enums.CriterionCategoryLocaleAvailabilityModeEnum.CriterionCategoryLocaleAvailabilityMode availability_mode = 1;</code>
+     * @return The enum numeric value on the wire for availabilityMode.
      */
-    public int getAvailabilityModeValue() {
+    @java.lang.Override public int getAvailabilityModeValue() {
       return availabilityMode_;
     }
     /**
@@ -596,8 +615,11 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.enums.CriterionCategoryLocaleAvailabilityModeEnum.CriterionCategoryLocaleAvailabilityMode availability_mode = 1;</code>
+     * @param value The enum numeric value on the wire for availabilityMode to set.
+     * @return This builder for chaining.
      */
     public Builder setAvailabilityModeValue(int value) {
+      
       availabilityMode_ = value;
       onChanged();
       return this;
@@ -611,7 +633,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.enums.CriterionCategoryLocaleAvailabilityModeEnum.CriterionCategoryLocaleAvailabilityMode availability_mode = 1;</code>
+     * @return The availabilityMode.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v1.enums.CriterionCategoryLocaleAvailabilityModeEnum.CriterionCategoryLocaleAvailabilityMode getAvailabilityMode() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v1.enums.CriterionCategoryLocaleAvailabilityModeEnum.CriterionCategoryLocaleAvailabilityMode result = com.google.ads.googleads.v1.enums.CriterionCategoryLocaleAvailabilityModeEnum.CriterionCategoryLocaleAvailabilityMode.valueOf(availabilityMode_);
@@ -626,6 +650,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.enums.CriterionCategoryLocaleAvailabilityModeEnum.CriterionCategoryLocaleAvailabilityMode availability_mode = 1;</code>
+     * @param value The availabilityMode to set.
+     * @return This builder for chaining.
      */
     public Builder setAvailabilityMode(com.google.ads.googleads.v1.enums.CriterionCategoryLocaleAvailabilityModeEnum.CriterionCategoryLocaleAvailabilityMode value) {
       if (value == null) {
@@ -645,6 +671,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.enums.CriterionCategoryLocaleAvailabilityModeEnum.CriterionCategoryLocaleAvailabilityMode availability_mode = 1;</code>
+     * @return This builder for chaining.
      */
     public Builder clearAvailabilityMode() {
       
@@ -662,6 +689,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue country_code = 2;</code>
+     * @return Whether the countryCode field is set.
      */
     public boolean hasCountryCode() {
       return countryCodeBuilder_ != null || countryCode_ != null;
@@ -672,6 +700,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue country_code = 2;</code>
+     * @return The countryCode.
      */
     public com.google.protobuf.StringValue getCountryCode() {
       if (countryCodeBuilder_ == null) {
@@ -815,6 +844,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue language_code = 3;</code>
+     * @return Whether the languageCode field is set.
      */
     public boolean hasLanguageCode() {
       return languageCodeBuilder_ != null || languageCode_ != null;
@@ -825,6 +855,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue language_code = 3;</code>
+     * @return The languageCode.
      */
     public com.google.protobuf.StringValue getLanguageCode() {
       if (languageCodeBuilder_ == null) {

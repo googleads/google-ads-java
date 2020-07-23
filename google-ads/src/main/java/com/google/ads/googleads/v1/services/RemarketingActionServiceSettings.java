@@ -1,5 +1,5 @@
 /*
- * Copyright 2019 Google LLC
+ * Copyright 2020 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -44,15 +44,20 @@ import javax.annotation.Generated;
  * </ul>
  *
  * <p>The builder of this class is recursive, so contained classes are themselves builders. When
- * build() is called, the tree of builders is called to create the complete settings object. For
- * example, to set the total timeout of getRemarketingAction to 30 seconds:
+ * build() is called, the tree of builders is called to create the complete settings object.
+ *
+ * <p>For example, to set the total timeout of getRemarketingAction to 30 seconds:
  *
  * <pre>
  * <code>
  * RemarketingActionServiceSettings.Builder remarketingActionServiceSettingsBuilder =
  *     RemarketingActionServiceSettings.newBuilder();
- * remarketingActionServiceSettingsBuilder.getRemarketingActionSettings().getRetrySettings().toBuilder()
- *     .setTotalTimeout(Duration.ofSeconds(30));
+ * remarketingActionServiceSettingsBuilder
+ *     .getRemarketingActionSettings()
+ *     .setRetrySettings(
+ *         remarketingActionServiceSettingsBuilder.getRemarketingActionSettings().getRetrySettings().toBuilder()
+ *             .setTotalTimeout(Duration.ofSeconds(30))
+ *             .build());
  * RemarketingActionServiceSettings remarketingActionServiceSettings = remarketingActionServiceSettingsBuilder.build();
  * </code>
  * </pre>

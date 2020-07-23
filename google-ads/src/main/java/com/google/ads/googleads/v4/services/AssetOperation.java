@@ -12,7 +12,7 @@ package com.google.ads.googleads.v4.services;
  *
  * Protobuf type {@code google.ads.googleads.v4.services.AssetOperation}
  */
-public  final class AssetOperation extends
+public final class AssetOperation extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.services.AssetOperation)
     AssetOperationOrBuilder {
@@ -148,6 +148,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.resources.Asset create = 1;</code>
    * @return Whether the create field is set.
    */
+  @java.lang.Override
   public boolean hasCreate() {
     return operationCase_ == 1;
   }
@@ -159,6 +160,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.resources.Asset create = 1;</code>
    * @return The create.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.resources.Asset getCreate() {
     if (operationCase_ == 1) {
        return (com.google.ads.googleads.v4.resources.Asset) operation_;
@@ -172,6 +174,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v4.resources.Asset create = 1;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.resources.AssetOrBuilder getCreateOrBuilder() {
     if (operationCase_ == 1) {
        return (com.google.ads.googleads.v4.resources.Asset) operation_;
@@ -538,6 +541,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.resources.Asset create = 1;</code>
      * @return Whether the create field is set.
      */
+    @java.lang.Override
     public boolean hasCreate() {
       return operationCase_ == 1;
     }
@@ -549,6 +553,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.resources.Asset create = 1;</code>
      * @return The create.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.resources.Asset getCreate() {
       if (createBuilder_ == null) {
         if (operationCase_ == 1) {
@@ -666,6 +671,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v4.resources.Asset create = 1;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.resources.AssetOrBuilder getCreateOrBuilder() {
       if ((operationCase_ == 1) && (createBuilder_ != null)) {
         return createBuilder_.getMessageOrBuilder();

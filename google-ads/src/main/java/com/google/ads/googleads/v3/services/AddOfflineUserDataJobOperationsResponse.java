@@ -11,7 +11,7 @@ package com.google.ads.googleads.v3.services;
  *
  * Protobuf type {@code google.ads.googleads.v3.services.AddOfflineUserDataJobOperationsResponse}
  */
-public  final class AddOfflineUserDataJobOperationsResponse extends
+public final class AddOfflineUserDataJobOperationsResponse extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v3.services.AddOfflineUserDataJobOperationsResponse)
     AddOfflineUserDataJobOperationsResponseOrBuilder {
@@ -21,6 +21,13 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private AddOfflineUserDataJobOperationsResponse() {
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new AddOfflineUserDataJobOperationsResponse();
   }
 
   @java.lang.Override
@@ -36,7 +43,6 @@ private static final long serialVersionUID = 0L;
     if (extensionRegistry == null) {
       throw new java.lang.NullPointerException();
     }
-    int mutable_bitField0_ = 0;
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
         com.google.protobuf.UnknownFieldSet.newBuilder();
     try {
@@ -103,7 +109,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.rpc.Status partial_failure_error = 1;</code>
+   * @return Whether the partialFailureError field is set.
    */
+  @java.lang.Override
   public boolean hasPartialFailureError() {
     return partialFailureError_ != null;
   }
@@ -116,7 +124,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.rpc.Status partial_failure_error = 1;</code>
+   * @return The partialFailureError.
    */
+  @java.lang.Override
   public com.google.rpc.Status getPartialFailureError() {
     return partialFailureError_ == null ? com.google.rpc.Status.getDefaultInstance() : partialFailureError_;
   }
@@ -130,6 +140,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.rpc.Status partial_failure_error = 1;</code>
    */
+  @java.lang.Override
   public com.google.rpc.StatusOrBuilder getPartialFailureErrorOrBuilder() {
     return getPartialFailureError();
   }
@@ -466,6 +477,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.rpc.Status partial_failure_error = 1;</code>
+     * @return Whether the partialFailureError field is set.
      */
     public boolean hasPartialFailureError() {
       return partialFailureErrorBuilder_ != null || partialFailureError_ != null;
@@ -479,6 +491,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.rpc.Status partial_failure_error = 1;</code>
+     * @return The partialFailureError.
      */
     public com.google.rpc.Status getPartialFailureError() {
       if (partialFailureErrorBuilder_ == null) {

@@ -10,7 +10,7 @@ package com.google.ads.googleads.v4.common;
  *
  * Protobuf type {@code google.ads.googleads.v4.common.UserInterestInfo}
  */
-public  final class UserInterestInfo extends
+public final class UserInterestInfo extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.common.UserInterestInfo)
     UserInterestInfoOrBuilder {
@@ -107,6 +107,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue user_interest_category = 1;</code>
    * @return Whether the userInterestCategory field is set.
    */
+  @java.lang.Override
   public boolean hasUserInterestCategory() {
     return userInterestCategory_ != null;
   }
@@ -118,6 +119,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue user_interest_category = 1;</code>
    * @return The userInterestCategory.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getUserInterestCategory() {
     return userInterestCategory_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : userInterestCategory_;
   }
@@ -128,6 +130,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue user_interest_category = 1;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getUserInterestCategoryOrBuilder() {
     return getUserInterestCategory();
   }

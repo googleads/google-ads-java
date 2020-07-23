@@ -21,7 +21,7 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.10.0)",
+    value = "by gRPC proto compiler",
     comments = "Source: google/ads/googleads/v1/services/language_constant_service.proto")
 public final class LanguageConstantServiceGrpc {
 
@@ -30,49 +30,49 @@ public final class LanguageConstantServiceGrpc {
   public static final String SERVICE_NAME = "google.ads.googleads.v1.services.LanguageConstantService";
 
   // Static method descriptors that strictly reflect the proto.
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  @java.lang.Deprecated // Use {@link #getGetLanguageConstantMethod()} instead. 
-  public static final io.grpc.MethodDescriptor<com.google.ads.googleads.v1.services.GetLanguageConstantRequest,
-      com.google.ads.googleads.v1.resources.LanguageConstant> METHOD_GET_LANGUAGE_CONSTANT = getGetLanguageConstantMethodHelper();
-
   private static volatile io.grpc.MethodDescriptor<com.google.ads.googleads.v1.services.GetLanguageConstantRequest,
       com.google.ads.googleads.v1.resources.LanguageConstant> getGetLanguageConstantMethod;
 
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetLanguageConstant",
+      requestType = com.google.ads.googleads.v1.services.GetLanguageConstantRequest.class,
+      responseType = com.google.ads.googleads.v1.resources.LanguageConstant.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<com.google.ads.googleads.v1.services.GetLanguageConstantRequest,
       com.google.ads.googleads.v1.resources.LanguageConstant> getGetLanguageConstantMethod() {
-    return getGetLanguageConstantMethodHelper();
-  }
-
-  private static io.grpc.MethodDescriptor<com.google.ads.googleads.v1.services.GetLanguageConstantRequest,
-      com.google.ads.googleads.v1.resources.LanguageConstant> getGetLanguageConstantMethodHelper() {
     io.grpc.MethodDescriptor<com.google.ads.googleads.v1.services.GetLanguageConstantRequest, com.google.ads.googleads.v1.resources.LanguageConstant> getGetLanguageConstantMethod;
     if ((getGetLanguageConstantMethod = LanguageConstantServiceGrpc.getGetLanguageConstantMethod) == null) {
       synchronized (LanguageConstantServiceGrpc.class) {
         if ((getGetLanguageConstantMethod = LanguageConstantServiceGrpc.getGetLanguageConstantMethod) == null) {
-          LanguageConstantServiceGrpc.getGetLanguageConstantMethod = getGetLanguageConstantMethod = 
+          LanguageConstantServiceGrpc.getGetLanguageConstantMethod = getGetLanguageConstantMethod =
               io.grpc.MethodDescriptor.<com.google.ads.googleads.v1.services.GetLanguageConstantRequest, com.google.ads.googleads.v1.resources.LanguageConstant>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "google.ads.googleads.v1.services.LanguageConstantService", "GetLanguageConstant"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetLanguageConstant"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v1.services.GetLanguageConstantRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v1.resources.LanguageConstant.getDefaultInstance()))
-                  .setSchemaDescriptor(new LanguageConstantServiceMethodDescriptorSupplier("GetLanguageConstant"))
-                  .build();
-          }
+              .setSchemaDescriptor(new LanguageConstantServiceMethodDescriptorSupplier("GetLanguageConstant"))
+              .build();
         }
-     }
-     return getGetLanguageConstantMethod;
+      }
+    }
+    return getGetLanguageConstantMethod;
   }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static LanguageConstantServiceStub newStub(io.grpc.Channel channel) {
-    return new LanguageConstantServiceStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<LanguageConstantServiceStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<LanguageConstantServiceStub>() {
+        @java.lang.Override
+        public LanguageConstantServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new LanguageConstantServiceStub(channel, callOptions);
+        }
+      };
+    return LanguageConstantServiceStub.newStub(factory, channel);
   }
 
   /**
@@ -80,7 +80,14 @@ public final class LanguageConstantServiceGrpc {
    */
   public static LanguageConstantServiceBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new LanguageConstantServiceBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<LanguageConstantServiceBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<LanguageConstantServiceBlockingStub>() {
+        @java.lang.Override
+        public LanguageConstantServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new LanguageConstantServiceBlockingStub(channel, callOptions);
+        }
+      };
+    return LanguageConstantServiceBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -88,7 +95,14 @@ public final class LanguageConstantServiceGrpc {
    */
   public static LanguageConstantServiceFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new LanguageConstantServiceFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<LanguageConstantServiceFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<LanguageConstantServiceFutureStub>() {
+        @java.lang.Override
+        public LanguageConstantServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new LanguageConstantServiceFutureStub(channel, callOptions);
+        }
+      };
+    return LanguageConstantServiceFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -105,13 +119,13 @@ public final class LanguageConstantServiceGrpc {
      */
     public void getLanguageConstant(com.google.ads.googleads.v1.services.GetLanguageConstantRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v1.resources.LanguageConstant> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetLanguageConstantMethodHelper(), responseObserver);
+      asyncUnimplementedUnaryCall(getGetLanguageConstantMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
-            getGetLanguageConstantMethodHelper(),
+            getGetLanguageConstantMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 com.google.ads.googleads.v1.services.GetLanguageConstantRequest,
@@ -126,19 +140,15 @@ public final class LanguageConstantServiceGrpc {
    * Service to fetch language constants.
    * </pre>
    */
-  public static final class LanguageConstantServiceStub extends io.grpc.stub.AbstractStub<LanguageConstantServiceStub> {
-    private LanguageConstantServiceStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private LanguageConstantServiceStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class LanguageConstantServiceStub extends io.grpc.stub.AbstractAsyncStub<LanguageConstantServiceStub> {
+    private LanguageConstantServiceStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected LanguageConstantServiceStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected LanguageConstantServiceStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new LanguageConstantServiceStub(channel, callOptions);
     }
 
@@ -150,7 +160,7 @@ public final class LanguageConstantServiceGrpc {
     public void getLanguageConstant(com.google.ads.googleads.v1.services.GetLanguageConstantRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v1.resources.LanguageConstant> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(getGetLanguageConstantMethodHelper(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getGetLanguageConstantMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -159,19 +169,15 @@ public final class LanguageConstantServiceGrpc {
    * Service to fetch language constants.
    * </pre>
    */
-  public static final class LanguageConstantServiceBlockingStub extends io.grpc.stub.AbstractStub<LanguageConstantServiceBlockingStub> {
-    private LanguageConstantServiceBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private LanguageConstantServiceBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class LanguageConstantServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<LanguageConstantServiceBlockingStub> {
+    private LanguageConstantServiceBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected LanguageConstantServiceBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected LanguageConstantServiceBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new LanguageConstantServiceBlockingStub(channel, callOptions);
     }
 
@@ -182,7 +188,7 @@ public final class LanguageConstantServiceGrpc {
      */
     public com.google.ads.googleads.v1.resources.LanguageConstant getLanguageConstant(com.google.ads.googleads.v1.services.GetLanguageConstantRequest request) {
       return blockingUnaryCall(
-          getChannel(), getGetLanguageConstantMethodHelper(), getCallOptions(), request);
+          getChannel(), getGetLanguageConstantMethod(), getCallOptions(), request);
     }
   }
 
@@ -191,19 +197,15 @@ public final class LanguageConstantServiceGrpc {
    * Service to fetch language constants.
    * </pre>
    */
-  public static final class LanguageConstantServiceFutureStub extends io.grpc.stub.AbstractStub<LanguageConstantServiceFutureStub> {
-    private LanguageConstantServiceFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private LanguageConstantServiceFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class LanguageConstantServiceFutureStub extends io.grpc.stub.AbstractFutureStub<LanguageConstantServiceFutureStub> {
+    private LanguageConstantServiceFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected LanguageConstantServiceFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected LanguageConstantServiceFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new LanguageConstantServiceFutureStub(channel, callOptions);
     }
 
@@ -215,7 +217,7 @@ public final class LanguageConstantServiceGrpc {
     public com.google.common.util.concurrent.ListenableFuture<com.google.ads.googleads.v1.resources.LanguageConstant> getLanguageConstant(
         com.google.ads.googleads.v1.services.GetLanguageConstantRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(getGetLanguageConstantMethodHelper(), getCallOptions()), request);
+          getChannel().newCall(getGetLanguageConstantMethod(), getCallOptions()), request);
     }
   }
 
@@ -303,7 +305,7 @@ public final class LanguageConstantServiceGrpc {
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new LanguageConstantServiceFileDescriptorSupplier())
-              .addMethod(getGetLanguageConstantMethodHelper())
+              .addMethod(getGetLanguageConstantMethod())
               .build();
         }
       }

@@ -32,58 +32,68 @@ public final class SharedCriterionProto {
       "ed_criterion.proto\022!google.ads.googleads" +
       ".v1.resources\032-google/ads/googleads/v1/c" +
       "ommon/criteria.proto\0322google/ads/googlea" +
-      "ds/v1/enums/criterion_type.proto\032\036google" +
-      "/protobuf/wrappers.proto\032\034google/api/ann" +
-      "otations.proto\"\261\005\n\017SharedCriterion\022\025\n\rre" +
-      "source_name\030\001 \001(\t\0220\n\nshared_set\030\002 \001(\0132\034." +
-      "google.protobuf.StringValue\0221\n\014criterion" +
-      "_id\030\032 \001(\0132\033.google.protobuf.Int64Value\022L" +
-      "\n\004type\030\004 \001(\0162>.google.ads.googleads.v1.e" +
-      "nums.CriterionTypeEnum.CriterionType\022>\n\007" +
-      "keyword\030\003 \001(\0132+.google.ads.googleads.v1." +
-      "common.KeywordInfoH\000\022I\n\ryoutube_video\030\005 " +
-      "\001(\01320.google.ads.googleads.v1.common.You" +
-      "TubeVideoInfoH\000\022M\n\017youtube_channel\030\006 \001(\013" +
-      "22.google.ads.googleads.v1.common.YouTub" +
-      "eChannelInfoH\000\022B\n\tplacement\030\007 \001(\0132-.goog" +
-      "le.ads.googleads.v1.common.PlacementInfo" +
-      "H\000\022T\n\023mobile_app_category\030\010 \001(\01325.google" +
-      ".ads.googleads.v1.common.MobileAppCatego" +
-      "ryInfoH\000\022S\n\022mobile_application\030\t \001(\01325.g" +
-      "oogle.ads.googleads.v1.common.MobileAppl" +
-      "icationInfoH\000B\013\n\tcriterionB\201\002\n%com.googl" +
-      "e.ads.googleads.v1.resourcesB\024SharedCrit" +
-      "erionProtoP\001ZJgoogle.golang.org/genproto" +
-      "/googleapis/ads/googleads/v1/resources;r" +
-      "esources\242\002\003GAA\252\002!Google.Ads.GoogleAds.V1" +
-      ".Resources\312\002!Google\\Ads\\GoogleAds\\V1\\Res" +
-      "ources\352\002%Google::Ads::GoogleAds::V1::Res" +
-      "ourcesb\006proto3"
+      "ds/v1/enums/criterion_type.proto\032\037google" +
+      "/api/field_behavior.proto\032\031google/api/re" +
+      "source.proto\032\036google/protobuf/wrappers.p" +
+      "roto\032\034google/api/annotations.proto\"\236\007\n\017S" +
+      "haredCriterion\022G\n\rresource_name\030\001 \001(\tB0\340" +
+      "A\005\372A*\n(googleads.googleapis.com/SharedCr" +
+      "iterion\022\\\n\nshared_set\030\002 \001(\0132\034.google.pro" +
+      "tobuf.StringValueB*\340A\005\372A$\n\"googleads.goo" +
+      "gleapis.com/SharedSet\0226\n\014criterion_id\030\032 " +
+      "\001(\0132\033.google.protobuf.Int64ValueB\003\340A\003\022Q\n" +
+      "\004type\030\004 \001(\0162>.google.ads.googleads.v1.en" +
+      "ums.CriterionTypeEnum.CriterionTypeB\003\340A\003" +
+      "\022C\n\007keyword\030\003 \001(\0132+.google.ads.googleads" +
+      ".v1.common.KeywordInfoB\003\340A\005H\000\022N\n\ryoutube" +
+      "_video\030\005 \001(\01320.google.ads.googleads.v1.c" +
+      "ommon.YouTubeVideoInfoB\003\340A\005H\000\022R\n\017youtube" +
+      "_channel\030\006 \001(\01322.google.ads.googleads.v1" +
+      ".common.YouTubeChannelInfoB\003\340A\005H\000\022G\n\tpla" +
+      "cement\030\007 \001(\0132-.google.ads.googleads.v1.c" +
+      "ommon.PlacementInfoB\003\340A\005H\000\022Y\n\023mobile_app" +
+      "_category\030\010 \001(\01325.google.ads.googleads.v" +
+      "1.common.MobileAppCategoryInfoB\003\340A\005H\000\022X\n" +
+      "\022mobile_application\030\t \001(\01325.google.ads.g" +
+      "oogleads.v1.common.MobileApplicationInfo" +
+      "B\003\340A\005H\000:e\352Ab\n(googleads.googleapis.com/S" +
+      "haredCriterion\0226customers/{customer}/sha" +
+      "redCriteria/{shared_criterion}B\013\n\tcriter" +
+      "ionB\201\002\n%com.google.ads.googleads.v1.reso" +
+      "urcesB\024SharedCriterionProtoP\001ZJgoogle.go" +
+      "lang.org/genproto/googleapis/ads/googlea" +
+      "ds/v1/resources;resources\242\002\003GAA\252\002!Google" +
+      ".Ads.GoogleAds.V1.Resources\312\002!Google\\Ads" +
+      "\\GoogleAds\\V1\\Resources\352\002%Google::Ads::G" +
+      "oogleAds::V1::Resourcesb\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.ads.googleads.v1.common.CriteriaProto.getDescriptor(),
           com.google.ads.googleads.v1.enums.CriterionTypeProto.getDescriptor(),
+          com.google.api.FieldBehaviorProto.getDescriptor(),
+          com.google.api.ResourceProto.getDescriptor(),
           com.google.protobuf.WrappersProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
-        }, assigner);
+        });
     internal_static_google_ads_googleads_v1_resources_SharedCriterion_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_google_ads_googleads_v1_resources_SharedCriterion_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v1_resources_SharedCriterion_descriptor,
         new java.lang.String[] { "ResourceName", "SharedSet", "CriterionId", "Type", "Keyword", "YoutubeVideo", "YoutubeChannel", "Placement", "MobileAppCategory", "MobileApplication", "Criterion", });
+    com.google.protobuf.ExtensionRegistry registry =
+        com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);
+    registry.add(com.google.api.ResourceProto.resource);
+    registry.add(com.google.api.ResourceProto.resourceReference);
+    com.google.protobuf.Descriptors.FileDescriptor
+        .internalUpdateFileDescriptor(descriptor, registry);
     com.google.ads.googleads.v1.common.CriteriaProto.getDescriptor();
     com.google.ads.googleads.v1.enums.CriterionTypeProto.getDescriptor();
+    com.google.api.FieldBehaviorProto.getDescriptor();
+    com.google.api.ResourceProto.getDescriptor();
     com.google.protobuf.WrappersProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
   }

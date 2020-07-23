@@ -10,7 +10,7 @@ package com.google.ads.googleads.v3.resources;
  *
  * Protobuf type {@code google.ads.googleads.v3.resources.Customer}
  */
-public  final class Customer extends
+public final class Customer extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v3.resources.Customer)
     CustomerOrBuilder {
@@ -22,6 +22,13 @@ private static final long serialVersionUID = 0L;
   private Customer() {
     resourceName_ = "";
     payPerConversionEligibilityFailureReasons_ = java.util.Collections.emptyList();
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new Customer();
   }
 
   @java.lang.Override
@@ -225,9 +232,9 @@ private static final long serialVersionUID = 0L;
           }
           case 128: {
             int rawValue = input.readEnum();
-            if (!((mutable_bitField0_ & 0x00004000) != 0)) {
+            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
               payPerConversionEligibilityFailureReasons_ = new java.util.ArrayList<java.lang.Integer>();
-              mutable_bitField0_ |= 0x00004000;
+              mutable_bitField0_ |= 0x00000001;
             }
             payPerConversionEligibilityFailureReasons_.add(rawValue);
             break;
@@ -237,9 +244,9 @@ private static final long serialVersionUID = 0L;
             int oldLimit = input.pushLimit(length);
             while(input.getBytesUntilLimit() > 0) {
               int rawValue = input.readEnum();
-              if (!((mutable_bitField0_ & 0x00004000) != 0)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 payPerConversionEligibilityFailureReasons_ = new java.util.ArrayList<java.lang.Integer>();
-                mutable_bitField0_ |= 0x00004000;
+                mutable_bitField0_ |= 0x00000001;
               }
               payPerConversionEligibilityFailureReasons_.add(rawValue);
             }
@@ -261,7 +268,7 @@ private static final long serialVersionUID = 0L;
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
     } finally {
-      if (((mutable_bitField0_ & 0x00004000) != 0)) {
+      if (((mutable_bitField0_ & 0x00000001) != 0)) {
         payPerConversionEligibilityFailureReasons_ = java.util.Collections.unmodifiableList(payPerConversionEligibilityFailureReasons_);
       }
       this.unknownFields = unknownFields.build();
@@ -281,7 +288,6 @@ private static final long serialVersionUID = 0L;
             com.google.ads.googleads.v3.resources.Customer.class, com.google.ads.googleads.v3.resources.Customer.Builder.class);
   }
 
-  private int bitField0_;
   public static final int RESOURCE_NAME_FIELD_NUMBER = 1;
   private volatile java.lang.Object resourceName_;
   /**
@@ -292,7 +298,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * @return The resourceName.
    */
+  @java.lang.Override
   public java.lang.String getResourceName() {
     java.lang.Object ref = resourceName_;
     if (ref instanceof java.lang.String) {
@@ -313,7 +321,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * @return The bytes for resourceName.
    */
+  @java.lang.Override
   public com.google.protobuf.ByteString
       getResourceNameBytes() {
     java.lang.Object ref = resourceName_;
@@ -336,7 +346,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the id field is set.
    */
+  @java.lang.Override
   public boolean hasId() {
     return id_ != null;
   }
@@ -346,7 +358,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The id.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getId() {
     return id_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : id_;
   }
@@ -357,6 +371,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getIdOrBuilder() {
     return getId();
   }
@@ -369,7 +384,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue descriptive_name = 4;</code>
+   * @return Whether the descriptiveName field is set.
    */
+  @java.lang.Override
   public boolean hasDescriptiveName() {
     return descriptiveName_ != null;
   }
@@ -379,7 +396,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue descriptive_name = 4;</code>
+   * @return The descriptiveName.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getDescriptiveName() {
     return descriptiveName_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : descriptiveName_;
   }
@@ -390,6 +409,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue descriptive_name = 4;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getDescriptiveNameOrBuilder() {
     return getDescriptiveName();
   }
@@ -404,7 +424,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue currency_code = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return Whether the currencyCode field is set.
    */
+  @java.lang.Override
   public boolean hasCurrencyCode() {
     return currencyCode_ != null;
   }
@@ -416,7 +438,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue currency_code = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The currencyCode.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getCurrencyCode() {
     return currencyCode_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : currencyCode_;
   }
@@ -429,6 +453,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue currency_code = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getCurrencyCodeOrBuilder() {
     return getCurrencyCode();
   }
@@ -441,7 +466,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue time_zone = 6 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return Whether the timeZone field is set.
    */
+  @java.lang.Override
   public boolean hasTimeZone() {
     return timeZone_ != null;
   }
@@ -451,7 +478,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue time_zone = 6 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The timeZone.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getTimeZone() {
     return timeZone_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : timeZone_;
   }
@@ -462,6 +491,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue time_zone = 6 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getTimeZoneOrBuilder() {
     return getTimeZone();
   }
@@ -474,7 +504,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue tracking_url_template = 7;</code>
+   * @return Whether the trackingUrlTemplate field is set.
    */
+  @java.lang.Override
   public boolean hasTrackingUrlTemplate() {
     return trackingUrlTemplate_ != null;
   }
@@ -484,7 +516,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue tracking_url_template = 7;</code>
+   * @return The trackingUrlTemplate.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getTrackingUrlTemplate() {
     return trackingUrlTemplate_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : trackingUrlTemplate_;
   }
@@ -495,6 +529,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue tracking_url_template = 7;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getTrackingUrlTemplateOrBuilder() {
     return getTrackingUrlTemplate();
   }
@@ -507,7 +542,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue final_url_suffix = 11;</code>
+   * @return Whether the finalUrlSuffix field is set.
    */
+  @java.lang.Override
   public boolean hasFinalUrlSuffix() {
     return finalUrlSuffix_ != null;
   }
@@ -517,7 +554,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue final_url_suffix = 11;</code>
+   * @return The finalUrlSuffix.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getFinalUrlSuffix() {
     return finalUrlSuffix_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : finalUrlSuffix_;
   }
@@ -528,6 +567,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue final_url_suffix = 11;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getFinalUrlSuffixOrBuilder() {
     return getFinalUrlSuffix();
   }
@@ -540,7 +580,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.BoolValue auto_tagging_enabled = 8;</code>
+   * @return Whether the autoTaggingEnabled field is set.
    */
+  @java.lang.Override
   public boolean hasAutoTaggingEnabled() {
     return autoTaggingEnabled_ != null;
   }
@@ -550,7 +592,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.BoolValue auto_tagging_enabled = 8;</code>
+   * @return The autoTaggingEnabled.
    */
+  @java.lang.Override
   public com.google.protobuf.BoolValue getAutoTaggingEnabled() {
     return autoTaggingEnabled_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : autoTaggingEnabled_;
   }
@@ -561,6 +605,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.BoolValue auto_tagging_enabled = 8;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.BoolValueOrBuilder getAutoTaggingEnabledOrBuilder() {
     return getAutoTaggingEnabled();
   }
@@ -575,7 +620,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.BoolValue has_partners_badge = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the hasPartnersBadge field is set.
    */
+  @java.lang.Override
   public boolean hasHasPartnersBadge() {
     return hasPartnersBadge_ != null;
   }
@@ -587,7 +634,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.BoolValue has_partners_badge = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The hasPartnersBadge.
    */
+  @java.lang.Override
   public com.google.protobuf.BoolValue getHasPartnersBadge() {
     return hasPartnersBadge_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : hasPartnersBadge_;
   }
@@ -600,6 +649,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.BoolValue has_partners_badge = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.BoolValueOrBuilder getHasPartnersBadgeOrBuilder() {
     return getHasPartnersBadge();
   }
@@ -612,7 +662,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.BoolValue manager = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the manager field is set.
    */
+  @java.lang.Override
   public boolean hasManager() {
     return manager_ != null;
   }
@@ -622,7 +674,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.BoolValue manager = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The manager.
    */
+  @java.lang.Override
   public com.google.protobuf.BoolValue getManager() {
     return manager_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : manager_;
   }
@@ -633,6 +687,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.BoolValue manager = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.BoolValueOrBuilder getManagerOrBuilder() {
     return getManager();
   }
@@ -645,7 +700,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.BoolValue test_account = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the testAccount field is set.
    */
+  @java.lang.Override
   public boolean hasTestAccount() {
     return testAccount_ != null;
   }
@@ -655,7 +712,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.BoolValue test_account = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The testAccount.
    */
+  @java.lang.Override
   public com.google.protobuf.BoolValue getTestAccount() {
     return testAccount_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : testAccount_;
   }
@@ -666,6 +725,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.BoolValue test_account = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.BoolValueOrBuilder getTestAccountOrBuilder() {
     return getTestAccount();
   }
@@ -678,7 +738,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.CallReportingSetting call_reporting_setting = 10;</code>
+   * @return Whether the callReportingSetting field is set.
    */
+  @java.lang.Override
   public boolean hasCallReportingSetting() {
     return callReportingSetting_ != null;
   }
@@ -688,7 +750,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.CallReportingSetting call_reporting_setting = 10;</code>
+   * @return The callReportingSetting.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.resources.CallReportingSetting getCallReportingSetting() {
     return callReportingSetting_ == null ? com.google.ads.googleads.v3.resources.CallReportingSetting.getDefaultInstance() : callReportingSetting_;
   }
@@ -699,6 +763,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v3.resources.CallReportingSetting call_reporting_setting = 10;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.resources.CallReportingSettingOrBuilder getCallReportingSettingOrBuilder() {
     return getCallReportingSetting();
   }
@@ -711,7 +776,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.ConversionTrackingSetting conversion_tracking_setting = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the conversionTrackingSetting field is set.
    */
+  @java.lang.Override
   public boolean hasConversionTrackingSetting() {
     return conversionTrackingSetting_ != null;
   }
@@ -721,7 +788,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.ConversionTrackingSetting conversion_tracking_setting = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The conversionTrackingSetting.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.resources.ConversionTrackingSetting getConversionTrackingSetting() {
     return conversionTrackingSetting_ == null ? com.google.ads.googleads.v3.resources.ConversionTrackingSetting.getDefaultInstance() : conversionTrackingSetting_;
   }
@@ -732,6 +801,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v3.resources.ConversionTrackingSetting conversion_tracking_setting = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.resources.ConversionTrackingSettingOrBuilder getConversionTrackingSettingOrBuilder() {
     return getConversionTrackingSetting();
   }
@@ -744,7 +814,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.RemarketingSetting remarketing_setting = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the remarketingSetting field is set.
    */
+  @java.lang.Override
   public boolean hasRemarketingSetting() {
     return remarketingSetting_ != null;
   }
@@ -754,7 +826,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.RemarketingSetting remarketing_setting = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The remarketingSetting.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.resources.RemarketingSetting getRemarketingSetting() {
     return remarketingSetting_ == null ? com.google.ads.googleads.v3.resources.RemarketingSetting.getDefaultInstance() : remarketingSetting_;
   }
@@ -765,6 +839,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v3.resources.RemarketingSetting remarketing_setting = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.resources.RemarketingSettingOrBuilder getRemarketingSettingOrBuilder() {
     return getRemarketingSetting();
   }
@@ -788,7 +863,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v3.enums.CustomerPayPerConversionEligibilityFailureReasonEnum.CustomerPayPerConversionEligibilityFailureReason pay_per_conversion_eligibility_failure_reasons = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return A list containing the payPerConversionEligibilityFailureReasons.
    */
+  @java.lang.Override
   public java.util.List<com.google.ads.googleads.v3.enums.CustomerPayPerConversionEligibilityFailureReasonEnum.CustomerPayPerConversionEligibilityFailureReason> getPayPerConversionEligibilityFailureReasonsList() {
     return new com.google.protobuf.Internal.ListAdapter<
         java.lang.Integer, com.google.ads.googleads.v3.enums.CustomerPayPerConversionEligibilityFailureReasonEnum.CustomerPayPerConversionEligibilityFailureReason>(payPerConversionEligibilityFailureReasons_, payPerConversionEligibilityFailureReasons_converter_);
@@ -800,7 +877,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v3.enums.CustomerPayPerConversionEligibilityFailureReasonEnum.CustomerPayPerConversionEligibilityFailureReason pay_per_conversion_eligibility_failure_reasons = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The count of payPerConversionEligibilityFailureReasons.
    */
+  @java.lang.Override
   public int getPayPerConversionEligibilityFailureReasonsCount() {
     return payPerConversionEligibilityFailureReasons_.size();
   }
@@ -811,7 +890,10 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v3.enums.CustomerPayPerConversionEligibilityFailureReasonEnum.CustomerPayPerConversionEligibilityFailureReason pay_per_conversion_eligibility_failure_reasons = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @param index The index of the element to return.
+   * @return The payPerConversionEligibilityFailureReasons at the given index.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.enums.CustomerPayPerConversionEligibilityFailureReasonEnum.CustomerPayPerConversionEligibilityFailureReason getPayPerConversionEligibilityFailureReasons(int index) {
     return payPerConversionEligibilityFailureReasons_converter_.convert(payPerConversionEligibilityFailureReasons_.get(index));
   }
@@ -822,7 +904,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v3.enums.CustomerPayPerConversionEligibilityFailureReasonEnum.CustomerPayPerConversionEligibilityFailureReason pay_per_conversion_eligibility_failure_reasons = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return A list containing the enum numeric values on the wire for payPerConversionEligibilityFailureReasons.
    */
+  @java.lang.Override
   public java.util.List<java.lang.Integer>
   getPayPerConversionEligibilityFailureReasonsValueList() {
     return payPerConversionEligibilityFailureReasons_;
@@ -834,7 +918,10 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v3.enums.CustomerPayPerConversionEligibilityFailureReasonEnum.CustomerPayPerConversionEligibilityFailureReason pay_per_conversion_eligibility_failure_reasons = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @param index The index of the value to return.
+   * @return The enum numeric value on the wire of payPerConversionEligibilityFailureReasons at the given index.
    */
+  @java.lang.Override
   public int getPayPerConversionEligibilityFailureReasonsValue(int index) {
     return payPerConversionEligibilityFailureReasons_.get(index);
   }
@@ -1350,7 +1437,7 @@ private static final long serialVersionUID = 0L;
         remarketingSettingBuilder_ = null;
       }
       payPerConversionEligibilityFailureReasons_ = java.util.Collections.emptyList();
-      bitField0_ = (bitField0_ & ~0x00004000);
+      bitField0_ = (bitField0_ & ~0x00000001);
       return this;
     }
 
@@ -1378,7 +1465,6 @@ private static final long serialVersionUID = 0L;
     public com.google.ads.googleads.v3.resources.Customer buildPartial() {
       com.google.ads.googleads.v3.resources.Customer result = new com.google.ads.googleads.v3.resources.Customer(this);
       int from_bitField0_ = bitField0_;
-      int to_bitField0_ = 0;
       result.resourceName_ = resourceName_;
       if (idBuilder_ == null) {
         result.id_ = id_;
@@ -1445,12 +1531,11 @@ private static final long serialVersionUID = 0L;
       } else {
         result.remarketingSetting_ = remarketingSettingBuilder_.build();
       }
-      if (((bitField0_ & 0x00004000) != 0)) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         payPerConversionEligibilityFailureReasons_ = java.util.Collections.unmodifiableList(payPerConversionEligibilityFailureReasons_);
-        bitField0_ = (bitField0_ & ~0x00004000);
+        bitField0_ = (bitField0_ & ~0x00000001);
       }
       result.payPerConversionEligibilityFailureReasons_ = payPerConversionEligibilityFailureReasons_;
-      result.bitField0_ = to_bitField0_;
       onBuilt();
       return result;
     }
@@ -1545,7 +1630,7 @@ private static final long serialVersionUID = 0L;
       if (!other.payPerConversionEligibilityFailureReasons_.isEmpty()) {
         if (payPerConversionEligibilityFailureReasons_.isEmpty()) {
           payPerConversionEligibilityFailureReasons_ = other.payPerConversionEligibilityFailureReasons_;
-          bitField0_ = (bitField0_ & ~0x00004000);
+          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
           ensurePayPerConversionEligibilityFailureReasonsIsMutable();
           payPerConversionEligibilityFailureReasons_.addAll(other.payPerConversionEligibilityFailureReasons_);
@@ -1591,6 +1676,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * @return The resourceName.
      */
     public java.lang.String getResourceName() {
       java.lang.Object ref = resourceName_;
@@ -1612,6 +1698,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * @return The bytes for resourceName.
      */
     public com.google.protobuf.ByteString
         getResourceNameBytes() {
@@ -1634,6 +1721,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * @param value The resourceName to set.
+     * @return This builder for chaining.
      */
     public Builder setResourceName(
         java.lang.String value) {
@@ -1653,6 +1742,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * @return This builder for chaining.
      */
     public Builder clearResourceName() {
       
@@ -1668,6 +1758,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * @param value The bytes for resourceName to set.
+     * @return This builder for chaining.
      */
     public Builder setResourceNameBytes(
         com.google.protobuf.ByteString value) {
@@ -1690,6 +1782,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the id field is set.
      */
     public boolean hasId() {
       return idBuilder_ != null || id_ != null;
@@ -1700,6 +1793,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The id.
      */
     public com.google.protobuf.Int64Value getId() {
       if (idBuilder_ == null) {
@@ -1843,6 +1937,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue descriptive_name = 4;</code>
+     * @return Whether the descriptiveName field is set.
      */
     public boolean hasDescriptiveName() {
       return descriptiveNameBuilder_ != null || descriptiveName_ != null;
@@ -1853,6 +1948,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue descriptive_name = 4;</code>
+     * @return The descriptiveName.
      */
     public com.google.protobuf.StringValue getDescriptiveName() {
       if (descriptiveNameBuilder_ == null) {
@@ -1998,6 +2094,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue currency_code = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * @return Whether the currencyCode field is set.
      */
     public boolean hasCurrencyCode() {
       return currencyCodeBuilder_ != null || currencyCode_ != null;
@@ -2010,6 +2107,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue currency_code = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * @return The currencyCode.
      */
     public com.google.protobuf.StringValue getCurrencyCode() {
       if (currencyCodeBuilder_ == null) {
@@ -2167,6 +2265,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue time_zone = 6 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * @return Whether the timeZone field is set.
      */
     public boolean hasTimeZone() {
       return timeZoneBuilder_ != null || timeZone_ != null;
@@ -2177,6 +2276,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue time_zone = 6 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * @return The timeZone.
      */
     public com.google.protobuf.StringValue getTimeZone() {
       if (timeZoneBuilder_ == null) {
@@ -2320,6 +2420,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue tracking_url_template = 7;</code>
+     * @return Whether the trackingUrlTemplate field is set.
      */
     public boolean hasTrackingUrlTemplate() {
       return trackingUrlTemplateBuilder_ != null || trackingUrlTemplate_ != null;
@@ -2330,6 +2431,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue tracking_url_template = 7;</code>
+     * @return The trackingUrlTemplate.
      */
     public com.google.protobuf.StringValue getTrackingUrlTemplate() {
       if (trackingUrlTemplateBuilder_ == null) {
@@ -2473,6 +2575,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue final_url_suffix = 11;</code>
+     * @return Whether the finalUrlSuffix field is set.
      */
     public boolean hasFinalUrlSuffix() {
       return finalUrlSuffixBuilder_ != null || finalUrlSuffix_ != null;
@@ -2483,6 +2586,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue final_url_suffix = 11;</code>
+     * @return The finalUrlSuffix.
      */
     public com.google.protobuf.StringValue getFinalUrlSuffix() {
       if (finalUrlSuffixBuilder_ == null) {
@@ -2626,6 +2730,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.BoolValue auto_tagging_enabled = 8;</code>
+     * @return Whether the autoTaggingEnabled field is set.
      */
     public boolean hasAutoTaggingEnabled() {
       return autoTaggingEnabledBuilder_ != null || autoTaggingEnabled_ != null;
@@ -2636,6 +2741,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.BoolValue auto_tagging_enabled = 8;</code>
+     * @return The autoTaggingEnabled.
      */
     public com.google.protobuf.BoolValue getAutoTaggingEnabled() {
       if (autoTaggingEnabledBuilder_ == null) {
@@ -2781,6 +2887,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.BoolValue has_partners_badge = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the hasPartnersBadge field is set.
      */
     public boolean hasHasPartnersBadge() {
       return hasPartnersBadgeBuilder_ != null || hasPartnersBadge_ != null;
@@ -2793,6 +2900,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.BoolValue has_partners_badge = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The hasPartnersBadge.
      */
     public com.google.protobuf.BoolValue getHasPartnersBadge() {
       if (hasPartnersBadgeBuilder_ == null) {
@@ -2950,6 +3058,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.BoolValue manager = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the manager field is set.
      */
     public boolean hasManager() {
       return managerBuilder_ != null || manager_ != null;
@@ -2960,6 +3069,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.BoolValue manager = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The manager.
      */
     public com.google.protobuf.BoolValue getManager() {
       if (managerBuilder_ == null) {
@@ -3103,6 +3213,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.BoolValue test_account = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the testAccount field is set.
      */
     public boolean hasTestAccount() {
       return testAccountBuilder_ != null || testAccount_ != null;
@@ -3113,6 +3224,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.BoolValue test_account = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The testAccount.
      */
     public com.google.protobuf.BoolValue getTestAccount() {
       if (testAccountBuilder_ == null) {
@@ -3256,6 +3368,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.resources.CallReportingSetting call_reporting_setting = 10;</code>
+     * @return Whether the callReportingSetting field is set.
      */
     public boolean hasCallReportingSetting() {
       return callReportingSettingBuilder_ != null || callReportingSetting_ != null;
@@ -3266,6 +3379,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.resources.CallReportingSetting call_reporting_setting = 10;</code>
+     * @return The callReportingSetting.
      */
     public com.google.ads.googleads.v3.resources.CallReportingSetting getCallReportingSetting() {
       if (callReportingSettingBuilder_ == null) {
@@ -3409,6 +3523,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.resources.ConversionTrackingSetting conversion_tracking_setting = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the conversionTrackingSetting field is set.
      */
     public boolean hasConversionTrackingSetting() {
       return conversionTrackingSettingBuilder_ != null || conversionTrackingSetting_ != null;
@@ -3419,6 +3534,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.resources.ConversionTrackingSetting conversion_tracking_setting = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The conversionTrackingSetting.
      */
     public com.google.ads.googleads.v3.resources.ConversionTrackingSetting getConversionTrackingSetting() {
       if (conversionTrackingSettingBuilder_ == null) {
@@ -3562,6 +3678,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.resources.RemarketingSetting remarketing_setting = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the remarketingSetting field is set.
      */
     public boolean hasRemarketingSetting() {
       return remarketingSettingBuilder_ != null || remarketingSetting_ != null;
@@ -3572,6 +3689,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.resources.RemarketingSetting remarketing_setting = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The remarketingSetting.
      */
     public com.google.ads.googleads.v3.resources.RemarketingSetting getRemarketingSetting() {
       if (remarketingSettingBuilder_ == null) {
@@ -3709,9 +3827,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<java.lang.Integer> payPerConversionEligibilityFailureReasons_ =
       java.util.Collections.emptyList();
     private void ensurePayPerConversionEligibilityFailureReasonsIsMutable() {
-      if (!((bitField0_ & 0x00004000) != 0)) {
+      if (!((bitField0_ & 0x00000001) != 0)) {
         payPerConversionEligibilityFailureReasons_ = new java.util.ArrayList<java.lang.Integer>(payPerConversionEligibilityFailureReasons_);
-        bitField0_ |= 0x00004000;
+        bitField0_ |= 0x00000001;
       }
     }
     /**
@@ -3721,6 +3839,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v3.enums.CustomerPayPerConversionEligibilityFailureReasonEnum.CustomerPayPerConversionEligibilityFailureReason pay_per_conversion_eligibility_failure_reasons = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return A list containing the payPerConversionEligibilityFailureReasons.
      */
     public java.util.List<com.google.ads.googleads.v3.enums.CustomerPayPerConversionEligibilityFailureReasonEnum.CustomerPayPerConversionEligibilityFailureReason> getPayPerConversionEligibilityFailureReasonsList() {
       return new com.google.protobuf.Internal.ListAdapter<
@@ -3733,6 +3852,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v3.enums.CustomerPayPerConversionEligibilityFailureReasonEnum.CustomerPayPerConversionEligibilityFailureReason pay_per_conversion_eligibility_failure_reasons = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The count of payPerConversionEligibilityFailureReasons.
      */
     public int getPayPerConversionEligibilityFailureReasonsCount() {
       return payPerConversionEligibilityFailureReasons_.size();
@@ -3744,6 +3864,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v3.enums.CustomerPayPerConversionEligibilityFailureReasonEnum.CustomerPayPerConversionEligibilityFailureReason pay_per_conversion_eligibility_failure_reasons = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @param index The index of the element to return.
+     * @return The payPerConversionEligibilityFailureReasons at the given index.
      */
     public com.google.ads.googleads.v3.enums.CustomerPayPerConversionEligibilityFailureReasonEnum.CustomerPayPerConversionEligibilityFailureReason getPayPerConversionEligibilityFailureReasons(int index) {
       return payPerConversionEligibilityFailureReasons_converter_.convert(payPerConversionEligibilityFailureReasons_.get(index));
@@ -3755,6 +3877,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v3.enums.CustomerPayPerConversionEligibilityFailureReasonEnum.CustomerPayPerConversionEligibilityFailureReason pay_per_conversion_eligibility_failure_reasons = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @param index The index to set the value at.
+     * @param value The payPerConversionEligibilityFailureReasons to set.
+     * @return This builder for chaining.
      */
     public Builder setPayPerConversionEligibilityFailureReasons(
         int index, com.google.ads.googleads.v3.enums.CustomerPayPerConversionEligibilityFailureReasonEnum.CustomerPayPerConversionEligibilityFailureReason value) {
@@ -3773,6 +3898,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v3.enums.CustomerPayPerConversionEligibilityFailureReasonEnum.CustomerPayPerConversionEligibilityFailureReason pay_per_conversion_eligibility_failure_reasons = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @param value The payPerConversionEligibilityFailureReasons to add.
+     * @return This builder for chaining.
      */
     public Builder addPayPerConversionEligibilityFailureReasons(com.google.ads.googleads.v3.enums.CustomerPayPerConversionEligibilityFailureReasonEnum.CustomerPayPerConversionEligibilityFailureReason value) {
       if (value == null) {
@@ -3790,6 +3917,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v3.enums.CustomerPayPerConversionEligibilityFailureReasonEnum.CustomerPayPerConversionEligibilityFailureReason pay_per_conversion_eligibility_failure_reasons = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @param values The payPerConversionEligibilityFailureReasons to add.
+     * @return This builder for chaining.
      */
     public Builder addAllPayPerConversionEligibilityFailureReasons(
         java.lang.Iterable<? extends com.google.ads.googleads.v3.enums.CustomerPayPerConversionEligibilityFailureReasonEnum.CustomerPayPerConversionEligibilityFailureReason> values) {
@@ -3807,10 +3936,11 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v3.enums.CustomerPayPerConversionEligibilityFailureReasonEnum.CustomerPayPerConversionEligibilityFailureReason pay_per_conversion_eligibility_failure_reasons = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return This builder for chaining.
      */
     public Builder clearPayPerConversionEligibilityFailureReasons() {
       payPerConversionEligibilityFailureReasons_ = java.util.Collections.emptyList();
-      bitField0_ = (bitField0_ & ~0x00004000);
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -3821,6 +3951,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v3.enums.CustomerPayPerConversionEligibilityFailureReasonEnum.CustomerPayPerConversionEligibilityFailureReason pay_per_conversion_eligibility_failure_reasons = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return A list containing the enum numeric values on the wire for payPerConversionEligibilityFailureReasons.
      */
     public java.util.List<java.lang.Integer>
     getPayPerConversionEligibilityFailureReasonsValueList() {
@@ -3833,6 +3964,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v3.enums.CustomerPayPerConversionEligibilityFailureReasonEnum.CustomerPayPerConversionEligibilityFailureReason pay_per_conversion_eligibility_failure_reasons = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @param index The index of the value to return.
+     * @return The enum numeric value on the wire of payPerConversionEligibilityFailureReasons at the given index.
      */
     public int getPayPerConversionEligibilityFailureReasonsValue(int index) {
       return payPerConversionEligibilityFailureReasons_.get(index);
@@ -3844,6 +3977,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v3.enums.CustomerPayPerConversionEligibilityFailureReasonEnum.CustomerPayPerConversionEligibilityFailureReason pay_per_conversion_eligibility_failure_reasons = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @param index The index of the value to return.
+     * @return The enum numeric value on the wire of payPerConversionEligibilityFailureReasons at the given index.
+     * @return This builder for chaining.
      */
     public Builder setPayPerConversionEligibilityFailureReasonsValue(
         int index, int value) {
@@ -3859,6 +3995,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v3.enums.CustomerPayPerConversionEligibilityFailureReasonEnum.CustomerPayPerConversionEligibilityFailureReason pay_per_conversion_eligibility_failure_reasons = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @param value The enum numeric value on the wire for payPerConversionEligibilityFailureReasons to add.
+     * @return This builder for chaining.
      */
     public Builder addPayPerConversionEligibilityFailureReasonsValue(int value) {
       ensurePayPerConversionEligibilityFailureReasonsIsMutable();
@@ -3873,6 +4011,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v3.enums.CustomerPayPerConversionEligibilityFailureReasonEnum.CustomerPayPerConversionEligibilityFailureReason pay_per_conversion_eligibility_failure_reasons = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @param values The enum numeric values on the wire for payPerConversionEligibilityFailureReasons to add.
+     * @return This builder for chaining.
      */
     public Builder addAllPayPerConversionEligibilityFailureReasonsValue(
         java.lang.Iterable<java.lang.Integer> values) {

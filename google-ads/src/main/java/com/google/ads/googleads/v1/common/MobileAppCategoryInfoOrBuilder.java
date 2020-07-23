@@ -13,6 +13,7 @@ public interface MobileAppCategoryInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue mobile_app_category_constant = 1;</code>
+   * @return Whether the mobileAppCategoryConstant field is set.
    */
   boolean hasMobileAppCategoryConstant();
   /**
@@ -21,6 +22,7 @@ public interface MobileAppCategoryInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue mobile_app_category_constant = 1;</code>
+   * @return The mobileAppCategoryConstant.
    */
   com.google.protobuf.StringValue getMobileAppCategoryConstant();
   /**

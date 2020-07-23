@@ -10,7 +10,7 @@ package com.google.ads.googleads.v2.errors;
  *
  * Protobuf type {@code google.ads.googleads.v2.errors.ErrorLocation}
  */
-public  final class ErrorLocation extends
+public final class ErrorLocation extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v2.errors.ErrorLocation)
     ErrorLocationOrBuilder {
@@ -21,6 +21,13 @@ private static final long serialVersionUID = 0L;
   }
   private ErrorLocation() {
     fieldPathElements_ = java.util.Collections.emptyList();
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new ErrorLocation();
   }
 
   @java.lang.Override
@@ -101,6 +108,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string field_name = 1;</code>
+     * @return The fieldName.
      */
     java.lang.String getFieldName();
     /**
@@ -109,6 +117,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string field_name = 1;</code>
+     * @return The bytes for fieldName.
      */
     com.google.protobuf.ByteString
         getFieldNameBytes();
@@ -119,6 +128,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value index = 2;</code>
+     * @return Whether the index field is set.
      */
     boolean hasIndex();
     /**
@@ -127,6 +137,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value index = 2;</code>
+     * @return The index.
      */
     com.google.protobuf.Int64Value getIndex();
     /**
@@ -145,7 +156,7 @@ private static final long serialVersionUID = 0L;
    *
    * Protobuf type {@code google.ads.googleads.v2.errors.ErrorLocation.FieldPathElement}
    */
-  public  static final class FieldPathElement extends
+  public static final class FieldPathElement extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:google.ads.googleads.v2.errors.ErrorLocation.FieldPathElement)
       FieldPathElementOrBuilder {
@@ -156,6 +167,13 @@ private static final long serialVersionUID = 0L;
     }
     private FieldPathElement() {
       fieldName_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new FieldPathElement();
     }
 
     @java.lang.Override
@@ -171,7 +189,6 @@ private static final long serialVersionUID = 0L;
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -241,7 +258,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string field_name = 1;</code>
+     * @return The fieldName.
      */
+    @java.lang.Override
     public java.lang.String getFieldName() {
       java.lang.Object ref = fieldName_;
       if (ref instanceof java.lang.String) {
@@ -260,7 +279,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string field_name = 1;</code>
+     * @return The bytes for fieldName.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getFieldNameBytes() {
       java.lang.Object ref = fieldName_;
@@ -283,7 +304,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value index = 2;</code>
+     * @return Whether the index field is set.
      */
+    @java.lang.Override
     public boolean hasIndex() {
       return index_ != null;
     }
@@ -293,7 +316,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value index = 2;</code>
+     * @return The index.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getIndex() {
       return index_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : index_;
     }
@@ -304,6 +329,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.protobuf.Int64Value index = 2;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getIndexOrBuilder() {
       return getIndex();
     }
@@ -651,6 +677,7 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>string field_name = 1;</code>
+       * @return The fieldName.
        */
       public java.lang.String getFieldName() {
         java.lang.Object ref = fieldName_;
@@ -670,6 +697,7 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>string field_name = 1;</code>
+       * @return The bytes for fieldName.
        */
       public com.google.protobuf.ByteString
           getFieldNameBytes() {
@@ -690,6 +718,8 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>string field_name = 1;</code>
+       * @param value The fieldName to set.
+       * @return This builder for chaining.
        */
       public Builder setFieldName(
           java.lang.String value) {
@@ -707,6 +737,7 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>string field_name = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearFieldName() {
         
@@ -720,6 +751,8 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>string field_name = 1;</code>
+       * @param value The bytes for fieldName to set.
+       * @return This builder for chaining.
        */
       public Builder setFieldNameBytes(
           com.google.protobuf.ByteString value) {
@@ -742,6 +775,7 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>.google.protobuf.Int64Value index = 2;</code>
+       * @return Whether the index field is set.
        */
       public boolean hasIndex() {
         return indexBuilder_ != null || index_ != null;
@@ -752,6 +786,7 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>.google.protobuf.Int64Value index = 2;</code>
+       * @return The index.
        */
       public com.google.protobuf.Int64Value getIndex() {
         if (indexBuilder_ == null) {
@@ -947,6 +982,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v2.errors.ErrorLocation.FieldPathElement field_path_elements = 2;</code>
    */
+  @java.lang.Override
   public java.util.List<com.google.ads.googleads.v2.errors.ErrorLocation.FieldPathElement> getFieldPathElementsList() {
     return fieldPathElements_;
   }
@@ -957,6 +993,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v2.errors.ErrorLocation.FieldPathElement field_path_elements = 2;</code>
    */
+  @java.lang.Override
   public java.util.List<? extends com.google.ads.googleads.v2.errors.ErrorLocation.FieldPathElementOrBuilder> 
       getFieldPathElementsOrBuilderList() {
     return fieldPathElements_;
@@ -968,6 +1005,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v2.errors.ErrorLocation.FieldPathElement field_path_elements = 2;</code>
    */
+  @java.lang.Override
   public int getFieldPathElementsCount() {
     return fieldPathElements_.size();
   }
@@ -978,6 +1016,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v2.errors.ErrorLocation.FieldPathElement field_path_elements = 2;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.errors.ErrorLocation.FieldPathElement getFieldPathElements(int index) {
     return fieldPathElements_.get(index);
   }
@@ -988,6 +1027,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v2.errors.ErrorLocation.FieldPathElement field_path_elements = 2;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.errors.ErrorLocation.FieldPathElementOrBuilder getFieldPathElementsOrBuilder(
       int index) {
     return fieldPathElements_.get(index);

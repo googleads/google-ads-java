@@ -10,7 +10,7 @@ package com.google.ads.googleads.v4.common;
  *
  * Protobuf type {@code google.ads.googleads.v4.common.ImageAdInfo}
  */
-public  final class ImageAdInfo extends
+public final class ImageAdInfo extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.common.ImageAdInfo)
     ImageAdInfoOrBuilder {
@@ -277,6 +277,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int64Value pixel_width = 4;</code>
    * @return Whether the pixelWidth field is set.
    */
+  @java.lang.Override
   public boolean hasPixelWidth() {
     return pixelWidth_ != null;
   }
@@ -288,6 +289,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int64Value pixel_width = 4;</code>
    * @return The pixelWidth.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getPixelWidth() {
     return pixelWidth_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : pixelWidth_;
   }
@@ -298,6 +300,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int64Value pixel_width = 4;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getPixelWidthOrBuilder() {
     return getPixelWidth();
   }
@@ -312,6 +315,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int64Value pixel_height = 5;</code>
    * @return Whether the pixelHeight field is set.
    */
+  @java.lang.Override
   public boolean hasPixelHeight() {
     return pixelHeight_ != null;
   }
@@ -323,6 +327,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int64Value pixel_height = 5;</code>
    * @return The pixelHeight.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getPixelHeight() {
     return pixelHeight_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : pixelHeight_;
   }
@@ -333,6 +338,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int64Value pixel_height = 5;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getPixelHeightOrBuilder() {
     return getPixelHeight();
   }
@@ -347,6 +353,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue image_url = 6;</code>
    * @return Whether the imageUrl field is set.
    */
+  @java.lang.Override
   public boolean hasImageUrl() {
     return imageUrl_ != null;
   }
@@ -358,6 +365,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue image_url = 6;</code>
    * @return The imageUrl.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getImageUrl() {
     return imageUrl_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : imageUrl_;
   }
@@ -368,6 +376,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue image_url = 6;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getImageUrlOrBuilder() {
     return getImageUrl();
   }
@@ -382,6 +391,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int64Value preview_pixel_width = 7;</code>
    * @return Whether the previewPixelWidth field is set.
    */
+  @java.lang.Override
   public boolean hasPreviewPixelWidth() {
     return previewPixelWidth_ != null;
   }
@@ -393,6 +403,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int64Value preview_pixel_width = 7;</code>
    * @return The previewPixelWidth.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getPreviewPixelWidth() {
     return previewPixelWidth_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : previewPixelWidth_;
   }
@@ -403,6 +414,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int64Value preview_pixel_width = 7;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getPreviewPixelWidthOrBuilder() {
     return getPreviewPixelWidth();
   }
@@ -417,6 +429,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int64Value preview_pixel_height = 8;</code>
    * @return Whether the previewPixelHeight field is set.
    */
+  @java.lang.Override
   public boolean hasPreviewPixelHeight() {
     return previewPixelHeight_ != null;
   }
@@ -428,6 +441,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int64Value preview_pixel_height = 8;</code>
    * @return The previewPixelHeight.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getPreviewPixelHeight() {
     return previewPixelHeight_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : previewPixelHeight_;
   }
@@ -438,6 +452,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int64Value preview_pixel_height = 8;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getPreviewPixelHeightOrBuilder() {
     return getPreviewPixelHeight();
   }
@@ -452,6 +467,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue preview_image_url = 9;</code>
    * @return Whether the previewImageUrl field is set.
    */
+  @java.lang.Override
   public boolean hasPreviewImageUrl() {
     return previewImageUrl_ != null;
   }
@@ -463,6 +479,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue preview_image_url = 9;</code>
    * @return The previewImageUrl.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getPreviewImageUrl() {
     return previewImageUrl_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : previewImageUrl_;
   }
@@ -473,6 +490,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue preview_image_url = 9;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getPreviewImageUrlOrBuilder() {
     return getPreviewImageUrl();
   }
@@ -487,7 +505,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.MimeTypeEnum.MimeType mime_type = 10;</code>
    * @return The enum numeric value on the wire for mimeType.
    */
-  public int getMimeTypeValue() {
+  @java.lang.Override public int getMimeTypeValue() {
     return mimeType_;
   }
   /**
@@ -498,7 +516,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.MimeTypeEnum.MimeType mime_type = 10;</code>
    * @return The mimeType.
    */
-  public com.google.ads.googleads.v4.enums.MimeTypeEnum.MimeType getMimeType() {
+  @java.lang.Override public com.google.ads.googleads.v4.enums.MimeTypeEnum.MimeType getMimeType() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v4.enums.MimeTypeEnum.MimeType result = com.google.ads.googleads.v4.enums.MimeTypeEnum.MimeType.valueOf(mimeType_);
     return result == null ? com.google.ads.googleads.v4.enums.MimeTypeEnum.MimeType.UNRECOGNIZED : result;
@@ -515,6 +533,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue name = 11;</code>
    * @return Whether the name field is set.
    */
+  @java.lang.Override
   public boolean hasName() {
     return name_ != null;
   }
@@ -527,6 +546,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue name = 11;</code>
    * @return The name.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getName() {
     return name_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : name_;
   }
@@ -538,6 +558,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue name = 11;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getNameOrBuilder() {
     return getName();
   }
@@ -551,6 +572,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue media_file = 1;</code>
    * @return Whether the mediaFile field is set.
    */
+  @java.lang.Override
   public boolean hasMediaFile() {
     return imageCase_ == 1;
   }
@@ -562,6 +584,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue media_file = 1;</code>
    * @return The mediaFile.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getMediaFile() {
     if (imageCase_ == 1) {
        return (com.google.protobuf.StringValue) image_;
@@ -575,6 +598,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue media_file = 1;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getMediaFileOrBuilder() {
     if (imageCase_ == 1) {
        return (com.google.protobuf.StringValue) image_;
@@ -591,6 +615,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.BytesValue data = 2;</code>
    * @return Whether the data field is set.
    */
+  @java.lang.Override
   public boolean hasData() {
     return imageCase_ == 2;
   }
@@ -602,6 +627,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.BytesValue data = 2;</code>
    * @return The data.
    */
+  @java.lang.Override
   public com.google.protobuf.BytesValue getData() {
     if (imageCase_ == 2) {
        return (com.google.protobuf.BytesValue) image_;
@@ -615,6 +641,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.BytesValue data = 2;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.BytesValueOrBuilder getDataOrBuilder() {
     if (imageCase_ == 2) {
        return (com.google.protobuf.BytesValue) image_;
@@ -631,6 +658,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int64Value ad_id_to_copy_image_from = 3;</code>
    * @return Whether the adIdToCopyImageFrom field is set.
    */
+  @java.lang.Override
   public boolean hasAdIdToCopyImageFrom() {
     return imageCase_ == 3;
   }
@@ -642,6 +670,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int64Value ad_id_to_copy_image_from = 3;</code>
    * @return The adIdToCopyImageFrom.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getAdIdToCopyImageFrom() {
     if (imageCase_ == 3) {
        return (com.google.protobuf.Int64Value) image_;
@@ -655,6 +684,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int64Value ad_id_to_copy_image_from = 3;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getAdIdToCopyImageFromOrBuilder() {
     if (imageCase_ == 3) {
        return (com.google.protobuf.Int64Value) image_;
@@ -2226,7 +2256,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.MimeTypeEnum.MimeType mime_type = 10;</code>
      * @return The enum numeric value on the wire for mimeType.
      */
-    public int getMimeTypeValue() {
+    @java.lang.Override public int getMimeTypeValue() {
       return mimeType_;
     }
     /**
@@ -2239,6 +2269,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setMimeTypeValue(int value) {
+      
       mimeType_ = value;
       onChanged();
       return this;
@@ -2251,6 +2282,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.MimeTypeEnum.MimeType mime_type = 10;</code>
      * @return The mimeType.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.enums.MimeTypeEnum.MimeType getMimeType() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v4.enums.MimeTypeEnum.MimeType result = com.google.ads.googleads.v4.enums.MimeTypeEnum.MimeType.valueOf(mimeType_);
@@ -2463,6 +2495,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.StringValue media_file = 1;</code>
      * @return Whether the mediaFile field is set.
      */
+    @java.lang.Override
     public boolean hasMediaFile() {
       return imageCase_ == 1;
     }
@@ -2474,6 +2507,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.StringValue media_file = 1;</code>
      * @return The mediaFile.
      */
+    @java.lang.Override
     public com.google.protobuf.StringValue getMediaFile() {
       if (mediaFileBuilder_ == null) {
         if (imageCase_ == 1) {
@@ -2591,6 +2625,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.protobuf.StringValue media_file = 1;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.StringValueOrBuilder getMediaFileOrBuilder() {
       if ((imageCase_ == 1) && (mediaFileBuilder_ != null)) {
         return mediaFileBuilder_.getMessageOrBuilder();
@@ -2637,6 +2672,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.BytesValue data = 2;</code>
      * @return Whether the data field is set.
      */
+    @java.lang.Override
     public boolean hasData() {
       return imageCase_ == 2;
     }
@@ -2648,6 +2684,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.BytesValue data = 2;</code>
      * @return The data.
      */
+    @java.lang.Override
     public com.google.protobuf.BytesValue getData() {
       if (dataBuilder_ == null) {
         if (imageCase_ == 2) {
@@ -2765,6 +2802,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.protobuf.BytesValue data = 2;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.BytesValueOrBuilder getDataOrBuilder() {
       if ((imageCase_ == 2) && (dataBuilder_ != null)) {
         return dataBuilder_.getMessageOrBuilder();
@@ -2811,6 +2849,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.Int64Value ad_id_to_copy_image_from = 3;</code>
      * @return Whether the adIdToCopyImageFrom field is set.
      */
+    @java.lang.Override
     public boolean hasAdIdToCopyImageFrom() {
       return imageCase_ == 3;
     }
@@ -2822,6 +2861,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.Int64Value ad_id_to_copy_image_from = 3;</code>
      * @return The adIdToCopyImageFrom.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getAdIdToCopyImageFrom() {
       if (adIdToCopyImageFromBuilder_ == null) {
         if (imageCase_ == 3) {
@@ -2939,6 +2979,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.protobuf.Int64Value ad_id_to_copy_image_from = 3;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getAdIdToCopyImageFromOrBuilder() {
       if ((imageCase_ == 3) && (adIdToCopyImageFromBuilder_ != null)) {
         return adIdToCopyImageFromBuilder_.getMessageOrBuilder();

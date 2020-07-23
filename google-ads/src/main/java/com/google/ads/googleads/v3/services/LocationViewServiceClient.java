@@ -1,5 +1,5 @@
 /*
- * Copyright 2019 Google LLC
+ * Copyright 2020 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -21,7 +21,6 @@ import com.google.ads.googleads.v3.services.stub.LocationViewServiceStubSettings
 import com.google.api.core.BetaApi;
 import com.google.api.gax.core.BackgroundResource;
 import com.google.api.gax.rpc.UnaryCallable;
-import com.google.api.pathtemplate.PathTemplate;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 import javax.annotation.Generated;
@@ -36,8 +35,8 @@ import javax.annotation.Generated;
  * <pre>
  * <code>
  * try (LocationViewServiceClient locationViewServiceClient = LocationViewServiceClient.create()) {
- *   String formattedResourceName = LocationViewServiceClient.formatLocationViewName("[CUSTOMER]", "[LOCATION_VIEW]");
- *   LocationView response = locationViewServiceClient.getLocationView(formattedResourceName);
+ *   LocationViewName resourceName = LocationViewName.of("[CUSTOMER]", "[LOCATION_VIEW]");
+ *   LocationView response = locationViewServiceClient.getLocationView(resourceName);
  * }
  * </code>
  * </pre>
@@ -99,43 +98,6 @@ public class LocationViewServiceClient implements BackgroundResource {
   private final LocationViewServiceSettings settings;
   private final LocationViewServiceStub stub;
 
-  private static final PathTemplate LOCATION_VIEW_PATH_TEMPLATE =
-      PathTemplate.createWithoutUrlEncoding("customers/{customer}/locationViews/{location_view}");
-
-  /**
-   * Formats a string containing the fully-qualified path to represent a location_view resource.
-   *
-   * @deprecated Use the {@link LocationViewName} class instead.
-   */
-  @Deprecated
-  public static final String formatLocationViewName(String customer, String locationView) {
-    return LOCATION_VIEW_PATH_TEMPLATE.instantiate(
-        "customer", customer,
-        "location_view", locationView);
-  }
-
-  /**
-   * Parses the customer from the given fully-qualified path which represents a location_view
-   * resource.
-   *
-   * @deprecated Use the {@link LocationViewName} class instead.
-   */
-  @Deprecated
-  public static final String parseCustomerFromLocationViewName(String locationViewName) {
-    return LOCATION_VIEW_PATH_TEMPLATE.parse(locationViewName).get("customer");
-  }
-
-  /**
-   * Parses the location_view from the given fully-qualified path which represents a location_view
-   * resource.
-   *
-   * @deprecated Use the {@link LocationViewName} class instead.
-   */
-  @Deprecated
-  public static final String parseLocationViewFromLocationViewName(String locationViewName) {
-    return LOCATION_VIEW_PATH_TEMPLATE.parse(locationViewName).get("location_view");
-  }
-
   /** Constructs an instance of LocationViewServiceClient with default settings. */
   public static final LocationViewServiceClient create() throws IOException {
     return create(LocationViewServiceSettings.newBuilder().build());
@@ -192,8 +154,32 @@ public class LocationViewServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (LocationViewServiceClient locationViewServiceClient = LocationViewServiceClient.create()) {
-   *   String formattedResourceName = LocationViewServiceClient.formatLocationViewName("[CUSTOMER]", "[LOCATION_VIEW]");
-   *   LocationView response = locationViewServiceClient.getLocationView(formattedResourceName);
+   *   LocationViewName resourceName = LocationViewName.of("[CUSTOMER]", "[LOCATION_VIEW]");
+   *   LocationView response = locationViewServiceClient.getLocationView(resourceName);
+   * }
+   * </code></pre>
+   *
+   * @param resourceName Required. The resource name of the location view to fetch.
+   * @throws com.google.api.gax.rpc.ApiException if the remote call fails
+   */
+  public final LocationView getLocationView(LocationViewName resourceName) {
+    GetLocationViewRequest request =
+        GetLocationViewRequest.newBuilder()
+            .setResourceName(resourceName == null ? null : resourceName.toString())
+            .build();
+    return getLocationView(request);
+  }
+
+  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  /**
+   * Returns the requested location view in full detail.
+   *
+   * <p>Sample code:
+   *
+   * <pre><code>
+   * try (LocationViewServiceClient locationViewServiceClient = LocationViewServiceClient.create()) {
+   *   LocationViewName resourceName = LocationViewName.of("[CUSTOMER]", "[LOCATION_VIEW]");
+   *   LocationView response = locationViewServiceClient.getLocationView(resourceName.toString());
    * }
    * </code></pre>
    *
@@ -201,7 +187,6 @@ public class LocationViewServiceClient implements BackgroundResource {
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final LocationView getLocationView(String resourceName) {
-    LOCATION_VIEW_PATH_TEMPLATE.validate(resourceName, "getLocationView");
     GetLocationViewRequest request =
         GetLocationViewRequest.newBuilder().setResourceName(resourceName).build();
     return getLocationView(request);
@@ -215,9 +200,9 @@ public class LocationViewServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (LocationViewServiceClient locationViewServiceClient = LocationViewServiceClient.create()) {
-   *   String formattedResourceName = LocationViewServiceClient.formatLocationViewName("[CUSTOMER]", "[LOCATION_VIEW]");
+   *   LocationViewName resourceName = LocationViewName.of("[CUSTOMER]", "[LOCATION_VIEW]");
    *   GetLocationViewRequest request = GetLocationViewRequest.newBuilder()
-   *     .setResourceName(formattedResourceName)
+   *     .setResourceName(resourceName.toString())
    *     .build();
    *   LocationView response = locationViewServiceClient.getLocationView(request);
    * }
@@ -238,9 +223,9 @@ public class LocationViewServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (LocationViewServiceClient locationViewServiceClient = LocationViewServiceClient.create()) {
-   *   String formattedResourceName = LocationViewServiceClient.formatLocationViewName("[CUSTOMER]", "[LOCATION_VIEW]");
+   *   LocationViewName resourceName = LocationViewName.of("[CUSTOMER]", "[LOCATION_VIEW]");
    *   GetLocationViewRequest request = GetLocationViewRequest.newBuilder()
-   *     .setResourceName(formattedResourceName)
+   *     .setResourceName(resourceName.toString())
    *     .build();
    *   ApiFuture&lt;LocationView&gt; future = locationViewServiceClient.getLocationViewCallable().futureCall(request);
    *   // Do something

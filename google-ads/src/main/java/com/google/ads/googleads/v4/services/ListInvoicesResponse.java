@@ -10,7 +10,7 @@ package com.google.ads.googleads.v4.services;
  *
  * Protobuf type {@code google.ads.googleads.v4.services.ListInvoicesResponse}
  */
-public  final class ListInvoicesResponse extends
+public final class ListInvoicesResponse extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.services.ListInvoicesResponse)
     ListInvoicesResponseOrBuilder {
@@ -107,6 +107,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.resources.Invoice invoices = 1;</code>
    */
+  @java.lang.Override
   public java.util.List<com.google.ads.googleads.v4.resources.Invoice> getInvoicesList() {
     return invoices_;
   }
@@ -117,6 +118,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.resources.Invoice invoices = 1;</code>
    */
+  @java.lang.Override
   public java.util.List<? extends com.google.ads.googleads.v4.resources.InvoiceOrBuilder> 
       getInvoicesOrBuilderList() {
     return invoices_;
@@ -128,6 +130,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.resources.Invoice invoices = 1;</code>
    */
+  @java.lang.Override
   public int getInvoicesCount() {
     return invoices_.size();
   }
@@ -138,6 +141,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.resources.Invoice invoices = 1;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.resources.Invoice getInvoices(int index) {
     return invoices_.get(index);
   }
@@ -148,6 +152,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.resources.Invoice invoices = 1;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.resources.InvoiceOrBuilder getInvoicesOrBuilder(
       int index) {
     return invoices_.get(index);

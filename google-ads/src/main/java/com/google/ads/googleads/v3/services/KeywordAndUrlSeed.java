@@ -10,7 +10,7 @@ package com.google.ads.googleads.v3.services;
  *
  * Protobuf type {@code google.ads.googleads.v3.services.KeywordAndUrlSeed}
  */
-public  final class KeywordAndUrlSeed extends
+public final class KeywordAndUrlSeed extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v3.services.KeywordAndUrlSeed)
     KeywordAndUrlSeedOrBuilder {
@@ -21,6 +21,13 @@ private static final long serialVersionUID = 0L;
   }
   private KeywordAndUrlSeed() {
     keywords_ = java.util.Collections.emptyList();
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new KeywordAndUrlSeed();
   }
 
   @java.lang.Override
@@ -61,9 +68,9 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 18: {
-            if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
               keywords_ = new java.util.ArrayList<com.google.protobuf.StringValue>();
-              mutable_bitField0_ |= 0x00000002;
+              mutable_bitField0_ |= 0x00000001;
             }
             keywords_.add(
                 input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry));
@@ -84,7 +91,7 @@ private static final long serialVersionUID = 0L;
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
     } finally {
-      if (((mutable_bitField0_ & 0x00000002) != 0)) {
+      if (((mutable_bitField0_ & 0x00000001) != 0)) {
         keywords_ = java.util.Collections.unmodifiableList(keywords_);
       }
       this.unknownFields = unknownFields.build();
@@ -104,7 +111,6 @@ private static final long serialVersionUID = 0L;
             com.google.ads.googleads.v3.services.KeywordAndUrlSeed.class, com.google.ads.googleads.v3.services.KeywordAndUrlSeed.Builder.class);
   }
 
-  private int bitField0_;
   public static final int URL_FIELD_NUMBER = 1;
   private com.google.protobuf.StringValue url_;
   /**
@@ -113,7 +119,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue url = 1;</code>
+   * @return Whether the url field is set.
    */
+  @java.lang.Override
   public boolean hasUrl() {
     return url_ != null;
   }
@@ -123,7 +131,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue url = 1;</code>
+   * @return The url.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getUrl() {
     return url_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : url_;
   }
@@ -134,6 +144,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue url = 1;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getUrlOrBuilder() {
     return getUrl();
   }
@@ -147,6 +158,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.StringValue keywords = 2;</code>
    */
+  @java.lang.Override
   public java.util.List<com.google.protobuf.StringValue> getKeywordsList() {
     return keywords_;
   }
@@ -157,6 +169,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.StringValue keywords = 2;</code>
    */
+  @java.lang.Override
   public java.util.List<? extends com.google.protobuf.StringValueOrBuilder> 
       getKeywordsOrBuilderList() {
     return keywords_;
@@ -168,6 +181,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.StringValue keywords = 2;</code>
    */
+  @java.lang.Override
   public int getKeywordsCount() {
     return keywords_.size();
   }
@@ -178,6 +192,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.StringValue keywords = 2;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getKeywords(int index) {
     return keywords_.get(index);
   }
@@ -188,6 +203,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.StringValue keywords = 2;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getKeywordsOrBuilder(
       int index) {
     return keywords_.get(index);
@@ -417,7 +433,7 @@ private static final long serialVersionUID = 0L;
       }
       if (keywordsBuilder_ == null) {
         keywords_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000001);
       } else {
         keywordsBuilder_.clear();
       }
@@ -448,22 +464,20 @@ private static final long serialVersionUID = 0L;
     public com.google.ads.googleads.v3.services.KeywordAndUrlSeed buildPartial() {
       com.google.ads.googleads.v3.services.KeywordAndUrlSeed result = new com.google.ads.googleads.v3.services.KeywordAndUrlSeed(this);
       int from_bitField0_ = bitField0_;
-      int to_bitField0_ = 0;
       if (urlBuilder_ == null) {
         result.url_ = url_;
       } else {
         result.url_ = urlBuilder_.build();
       }
       if (keywordsBuilder_ == null) {
-        if (((bitField0_ & 0x00000002) != 0)) {
+        if (((bitField0_ & 0x00000001) != 0)) {
           keywords_ = java.util.Collections.unmodifiableList(keywords_);
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000001);
         }
         result.keywords_ = keywords_;
       } else {
         result.keywords_ = keywordsBuilder_.build();
       }
-      result.bitField0_ = to_bitField0_;
       onBuilt();
       return result;
     }
@@ -519,7 +533,7 @@ private static final long serialVersionUID = 0L;
         if (!other.keywords_.isEmpty()) {
           if (keywords_.isEmpty()) {
             keywords_ = other.keywords_;
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000001);
           } else {
             ensureKeywordsIsMutable();
             keywords_.addAll(other.keywords_);
@@ -532,7 +546,7 @@ private static final long serialVersionUID = 0L;
             keywordsBuilder_.dispose();
             keywordsBuilder_ = null;
             keywords_ = other.keywords_;
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000001);
             keywordsBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getKeywordsFieldBuilder() : null;
@@ -580,6 +594,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue url = 1;</code>
+     * @return Whether the url field is set.
      */
     public boolean hasUrl() {
       return urlBuilder_ != null || url_ != null;
@@ -590,6 +605,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue url = 1;</code>
+     * @return The url.
      */
     public com.google.protobuf.StringValue getUrl() {
       if (urlBuilder_ == null) {
@@ -727,9 +743,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.google.protobuf.StringValue> keywords_ =
       java.util.Collections.emptyList();
     private void ensureKeywordsIsMutable() {
-      if (!((bitField0_ & 0x00000002) != 0)) {
+      if (!((bitField0_ & 0x00000001) != 0)) {
         keywords_ = new java.util.ArrayList<com.google.protobuf.StringValue>(keywords_);
-        bitField0_ |= 0x00000002;
+        bitField0_ |= 0x00000001;
        }
     }
 
@@ -923,7 +939,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearKeywords() {
       if (keywordsBuilder_ == null) {
         keywords_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
       } else {
         keywordsBuilder_.clear();
@@ -1028,7 +1044,7 @@ private static final long serialVersionUID = 0L;
         keywordsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
                 keywords_,
-                ((bitField0_ & 0x00000002) != 0),
+                ((bitField0_ & 0x00000001) != 0),
                 getParentForChildren(),
                 isClean());
         keywords_ = null;

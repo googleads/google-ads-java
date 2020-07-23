@@ -10,7 +10,7 @@ package com.google.ads.googleads.v2.common;
  *
  * Protobuf type {@code google.ads.googleads.v2.common.HotelCityInfo}
  */
-public  final class HotelCityInfo extends
+public final class HotelCityInfo extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v2.common.HotelCityInfo)
     HotelCityInfoOrBuilder {
@@ -20,6 +20,13 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private HotelCityInfo() {
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new HotelCityInfo();
   }
 
   @java.lang.Override
@@ -35,7 +42,6 @@ private static final long serialVersionUID = 0L;
     if (extensionRegistry == null) {
       throw new java.lang.NullPointerException();
     }
-    int mutable_bitField0_ = 0;
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
         com.google.protobuf.UnknownFieldSet.newBuilder();
     try {
@@ -99,7 +105,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue city_criterion = 1;</code>
+   * @return Whether the cityCriterion field is set.
    */
+  @java.lang.Override
   public boolean hasCityCriterion() {
     return cityCriterion_ != null;
   }
@@ -109,7 +117,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue city_criterion = 1;</code>
+   * @return The cityCriterion.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getCityCriterion() {
     return cityCriterion_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : cityCriterion_;
   }
@@ -120,6 +130,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue city_criterion = 1;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getCityCriterionOrBuilder() {
     return getCityCriterion();
   }
@@ -452,6 +463,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue city_criterion = 1;</code>
+     * @return Whether the cityCriterion field is set.
      */
     public boolean hasCityCriterion() {
       return cityCriterionBuilder_ != null || cityCriterion_ != null;
@@ -462,6 +474,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue city_criterion = 1;</code>
+     * @return The cityCriterion.
      */
     public com.google.protobuf.StringValue getCityCriterion() {
       if (cityCriterionBuilder_ == null) {

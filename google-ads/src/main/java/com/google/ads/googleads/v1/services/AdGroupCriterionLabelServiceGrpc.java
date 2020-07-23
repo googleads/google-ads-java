@@ -21,7 +21,7 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.10.0)",
+    value = "by gRPC proto compiler",
     comments = "Source: google/ads/googleads/v1/services/ad_group_criterion_label_service.proto")
 public final class AdGroupCriterionLabelServiceGrpc {
 
@@ -30,86 +30,80 @@ public final class AdGroupCriterionLabelServiceGrpc {
   public static final String SERVICE_NAME = "google.ads.googleads.v1.services.AdGroupCriterionLabelService";
 
   // Static method descriptors that strictly reflect the proto.
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  @java.lang.Deprecated // Use {@link #getGetAdGroupCriterionLabelMethod()} instead. 
-  public static final io.grpc.MethodDescriptor<com.google.ads.googleads.v1.services.GetAdGroupCriterionLabelRequest,
-      com.google.ads.googleads.v1.resources.AdGroupCriterionLabel> METHOD_GET_AD_GROUP_CRITERION_LABEL = getGetAdGroupCriterionLabelMethodHelper();
-
   private static volatile io.grpc.MethodDescriptor<com.google.ads.googleads.v1.services.GetAdGroupCriterionLabelRequest,
       com.google.ads.googleads.v1.resources.AdGroupCriterionLabel> getGetAdGroupCriterionLabelMethod;
 
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetAdGroupCriterionLabel",
+      requestType = com.google.ads.googleads.v1.services.GetAdGroupCriterionLabelRequest.class,
+      responseType = com.google.ads.googleads.v1.resources.AdGroupCriterionLabel.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<com.google.ads.googleads.v1.services.GetAdGroupCriterionLabelRequest,
       com.google.ads.googleads.v1.resources.AdGroupCriterionLabel> getGetAdGroupCriterionLabelMethod() {
-    return getGetAdGroupCriterionLabelMethodHelper();
-  }
-
-  private static io.grpc.MethodDescriptor<com.google.ads.googleads.v1.services.GetAdGroupCriterionLabelRequest,
-      com.google.ads.googleads.v1.resources.AdGroupCriterionLabel> getGetAdGroupCriterionLabelMethodHelper() {
     io.grpc.MethodDescriptor<com.google.ads.googleads.v1.services.GetAdGroupCriterionLabelRequest, com.google.ads.googleads.v1.resources.AdGroupCriterionLabel> getGetAdGroupCriterionLabelMethod;
     if ((getGetAdGroupCriterionLabelMethod = AdGroupCriterionLabelServiceGrpc.getGetAdGroupCriterionLabelMethod) == null) {
       synchronized (AdGroupCriterionLabelServiceGrpc.class) {
         if ((getGetAdGroupCriterionLabelMethod = AdGroupCriterionLabelServiceGrpc.getGetAdGroupCriterionLabelMethod) == null) {
-          AdGroupCriterionLabelServiceGrpc.getGetAdGroupCriterionLabelMethod = getGetAdGroupCriterionLabelMethod = 
+          AdGroupCriterionLabelServiceGrpc.getGetAdGroupCriterionLabelMethod = getGetAdGroupCriterionLabelMethod =
               io.grpc.MethodDescriptor.<com.google.ads.googleads.v1.services.GetAdGroupCriterionLabelRequest, com.google.ads.googleads.v1.resources.AdGroupCriterionLabel>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "google.ads.googleads.v1.services.AdGroupCriterionLabelService", "GetAdGroupCriterionLabel"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetAdGroupCriterionLabel"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v1.services.GetAdGroupCriterionLabelRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v1.resources.AdGroupCriterionLabel.getDefaultInstance()))
-                  .setSchemaDescriptor(new AdGroupCriterionLabelServiceMethodDescriptorSupplier("GetAdGroupCriterionLabel"))
-                  .build();
-          }
+              .setSchemaDescriptor(new AdGroupCriterionLabelServiceMethodDescriptorSupplier("GetAdGroupCriterionLabel"))
+              .build();
         }
-     }
-     return getGetAdGroupCriterionLabelMethod;
+      }
+    }
+    return getGetAdGroupCriterionLabelMethod;
   }
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  @java.lang.Deprecated // Use {@link #getMutateAdGroupCriterionLabelsMethod()} instead. 
-  public static final io.grpc.MethodDescriptor<com.google.ads.googleads.v1.services.MutateAdGroupCriterionLabelsRequest,
-      com.google.ads.googleads.v1.services.MutateAdGroupCriterionLabelsResponse> METHOD_MUTATE_AD_GROUP_CRITERION_LABELS = getMutateAdGroupCriterionLabelsMethodHelper();
 
   private static volatile io.grpc.MethodDescriptor<com.google.ads.googleads.v1.services.MutateAdGroupCriterionLabelsRequest,
       com.google.ads.googleads.v1.services.MutateAdGroupCriterionLabelsResponse> getMutateAdGroupCriterionLabelsMethod;
 
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "MutateAdGroupCriterionLabels",
+      requestType = com.google.ads.googleads.v1.services.MutateAdGroupCriterionLabelsRequest.class,
+      responseType = com.google.ads.googleads.v1.services.MutateAdGroupCriterionLabelsResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<com.google.ads.googleads.v1.services.MutateAdGroupCriterionLabelsRequest,
       com.google.ads.googleads.v1.services.MutateAdGroupCriterionLabelsResponse> getMutateAdGroupCriterionLabelsMethod() {
-    return getMutateAdGroupCriterionLabelsMethodHelper();
-  }
-
-  private static io.grpc.MethodDescriptor<com.google.ads.googleads.v1.services.MutateAdGroupCriterionLabelsRequest,
-      com.google.ads.googleads.v1.services.MutateAdGroupCriterionLabelsResponse> getMutateAdGroupCriterionLabelsMethodHelper() {
     io.grpc.MethodDescriptor<com.google.ads.googleads.v1.services.MutateAdGroupCriterionLabelsRequest, com.google.ads.googleads.v1.services.MutateAdGroupCriterionLabelsResponse> getMutateAdGroupCriterionLabelsMethod;
     if ((getMutateAdGroupCriterionLabelsMethod = AdGroupCriterionLabelServiceGrpc.getMutateAdGroupCriterionLabelsMethod) == null) {
       synchronized (AdGroupCriterionLabelServiceGrpc.class) {
         if ((getMutateAdGroupCriterionLabelsMethod = AdGroupCriterionLabelServiceGrpc.getMutateAdGroupCriterionLabelsMethod) == null) {
-          AdGroupCriterionLabelServiceGrpc.getMutateAdGroupCriterionLabelsMethod = getMutateAdGroupCriterionLabelsMethod = 
+          AdGroupCriterionLabelServiceGrpc.getMutateAdGroupCriterionLabelsMethod = getMutateAdGroupCriterionLabelsMethod =
               io.grpc.MethodDescriptor.<com.google.ads.googleads.v1.services.MutateAdGroupCriterionLabelsRequest, com.google.ads.googleads.v1.services.MutateAdGroupCriterionLabelsResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "google.ads.googleads.v1.services.AdGroupCriterionLabelService", "MutateAdGroupCriterionLabels"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "MutateAdGroupCriterionLabels"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v1.services.MutateAdGroupCriterionLabelsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v1.services.MutateAdGroupCriterionLabelsResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new AdGroupCriterionLabelServiceMethodDescriptorSupplier("MutateAdGroupCriterionLabels"))
-                  .build();
-          }
+              .setSchemaDescriptor(new AdGroupCriterionLabelServiceMethodDescriptorSupplier("MutateAdGroupCriterionLabels"))
+              .build();
         }
-     }
-     return getMutateAdGroupCriterionLabelsMethod;
+      }
+    }
+    return getMutateAdGroupCriterionLabelsMethod;
   }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static AdGroupCriterionLabelServiceStub newStub(io.grpc.Channel channel) {
-    return new AdGroupCriterionLabelServiceStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<AdGroupCriterionLabelServiceStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<AdGroupCriterionLabelServiceStub>() {
+        @java.lang.Override
+        public AdGroupCriterionLabelServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new AdGroupCriterionLabelServiceStub(channel, callOptions);
+        }
+      };
+    return AdGroupCriterionLabelServiceStub.newStub(factory, channel);
   }
 
   /**
@@ -117,7 +111,14 @@ public final class AdGroupCriterionLabelServiceGrpc {
    */
   public static AdGroupCriterionLabelServiceBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new AdGroupCriterionLabelServiceBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<AdGroupCriterionLabelServiceBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<AdGroupCriterionLabelServiceBlockingStub>() {
+        @java.lang.Override
+        public AdGroupCriterionLabelServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new AdGroupCriterionLabelServiceBlockingStub(channel, callOptions);
+        }
+      };
+    return AdGroupCriterionLabelServiceBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -125,7 +126,14 @@ public final class AdGroupCriterionLabelServiceGrpc {
    */
   public static AdGroupCriterionLabelServiceFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new AdGroupCriterionLabelServiceFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<AdGroupCriterionLabelServiceFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<AdGroupCriterionLabelServiceFutureStub>() {
+        @java.lang.Override
+        public AdGroupCriterionLabelServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new AdGroupCriterionLabelServiceFutureStub(channel, callOptions);
+        }
+      };
+    return AdGroupCriterionLabelServiceFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -142,7 +150,7 @@ public final class AdGroupCriterionLabelServiceGrpc {
      */
     public void getAdGroupCriterionLabel(com.google.ads.googleads.v1.services.GetAdGroupCriterionLabelRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v1.resources.AdGroupCriterionLabel> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetAdGroupCriterionLabelMethodHelper(), responseObserver);
+      asyncUnimplementedUnaryCall(getGetAdGroupCriterionLabelMethod(), responseObserver);
     }
 
     /**
@@ -153,20 +161,20 @@ public final class AdGroupCriterionLabelServiceGrpc {
      */
     public void mutateAdGroupCriterionLabels(com.google.ads.googleads.v1.services.MutateAdGroupCriterionLabelsRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v1.services.MutateAdGroupCriterionLabelsResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getMutateAdGroupCriterionLabelsMethodHelper(), responseObserver);
+      asyncUnimplementedUnaryCall(getMutateAdGroupCriterionLabelsMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
-            getGetAdGroupCriterionLabelMethodHelper(),
+            getGetAdGroupCriterionLabelMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 com.google.ads.googleads.v1.services.GetAdGroupCriterionLabelRequest,
                 com.google.ads.googleads.v1.resources.AdGroupCriterionLabel>(
                   this, METHODID_GET_AD_GROUP_CRITERION_LABEL)))
           .addMethod(
-            getMutateAdGroupCriterionLabelsMethodHelper(),
+            getMutateAdGroupCriterionLabelsMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 com.google.ads.googleads.v1.services.MutateAdGroupCriterionLabelsRequest,
@@ -181,19 +189,15 @@ public final class AdGroupCriterionLabelServiceGrpc {
    * Service to manage labels on ad group criteria.
    * </pre>
    */
-  public static final class AdGroupCriterionLabelServiceStub extends io.grpc.stub.AbstractStub<AdGroupCriterionLabelServiceStub> {
-    private AdGroupCriterionLabelServiceStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private AdGroupCriterionLabelServiceStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class AdGroupCriterionLabelServiceStub extends io.grpc.stub.AbstractAsyncStub<AdGroupCriterionLabelServiceStub> {
+    private AdGroupCriterionLabelServiceStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected AdGroupCriterionLabelServiceStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected AdGroupCriterionLabelServiceStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new AdGroupCriterionLabelServiceStub(channel, callOptions);
     }
 
@@ -205,7 +209,7 @@ public final class AdGroupCriterionLabelServiceGrpc {
     public void getAdGroupCriterionLabel(com.google.ads.googleads.v1.services.GetAdGroupCriterionLabelRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v1.resources.AdGroupCriterionLabel> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(getGetAdGroupCriterionLabelMethodHelper(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getGetAdGroupCriterionLabelMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -217,7 +221,7 @@ public final class AdGroupCriterionLabelServiceGrpc {
     public void mutateAdGroupCriterionLabels(com.google.ads.googleads.v1.services.MutateAdGroupCriterionLabelsRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v1.services.MutateAdGroupCriterionLabelsResponse> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(getMutateAdGroupCriterionLabelsMethodHelper(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getMutateAdGroupCriterionLabelsMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -226,19 +230,15 @@ public final class AdGroupCriterionLabelServiceGrpc {
    * Service to manage labels on ad group criteria.
    * </pre>
    */
-  public static final class AdGroupCriterionLabelServiceBlockingStub extends io.grpc.stub.AbstractStub<AdGroupCriterionLabelServiceBlockingStub> {
-    private AdGroupCriterionLabelServiceBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private AdGroupCriterionLabelServiceBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class AdGroupCriterionLabelServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<AdGroupCriterionLabelServiceBlockingStub> {
+    private AdGroupCriterionLabelServiceBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected AdGroupCriterionLabelServiceBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected AdGroupCriterionLabelServiceBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new AdGroupCriterionLabelServiceBlockingStub(channel, callOptions);
     }
 
@@ -249,7 +249,7 @@ public final class AdGroupCriterionLabelServiceGrpc {
      */
     public com.google.ads.googleads.v1.resources.AdGroupCriterionLabel getAdGroupCriterionLabel(com.google.ads.googleads.v1.services.GetAdGroupCriterionLabelRequest request) {
       return blockingUnaryCall(
-          getChannel(), getGetAdGroupCriterionLabelMethodHelper(), getCallOptions(), request);
+          getChannel(), getGetAdGroupCriterionLabelMethod(), getCallOptions(), request);
     }
 
     /**
@@ -260,7 +260,7 @@ public final class AdGroupCriterionLabelServiceGrpc {
      */
     public com.google.ads.googleads.v1.services.MutateAdGroupCriterionLabelsResponse mutateAdGroupCriterionLabels(com.google.ads.googleads.v1.services.MutateAdGroupCriterionLabelsRequest request) {
       return blockingUnaryCall(
-          getChannel(), getMutateAdGroupCriterionLabelsMethodHelper(), getCallOptions(), request);
+          getChannel(), getMutateAdGroupCriterionLabelsMethod(), getCallOptions(), request);
     }
   }
 
@@ -269,19 +269,15 @@ public final class AdGroupCriterionLabelServiceGrpc {
    * Service to manage labels on ad group criteria.
    * </pre>
    */
-  public static final class AdGroupCriterionLabelServiceFutureStub extends io.grpc.stub.AbstractStub<AdGroupCriterionLabelServiceFutureStub> {
-    private AdGroupCriterionLabelServiceFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private AdGroupCriterionLabelServiceFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class AdGroupCriterionLabelServiceFutureStub extends io.grpc.stub.AbstractFutureStub<AdGroupCriterionLabelServiceFutureStub> {
+    private AdGroupCriterionLabelServiceFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected AdGroupCriterionLabelServiceFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected AdGroupCriterionLabelServiceFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new AdGroupCriterionLabelServiceFutureStub(channel, callOptions);
     }
 
@@ -293,7 +289,7 @@ public final class AdGroupCriterionLabelServiceGrpc {
     public com.google.common.util.concurrent.ListenableFuture<com.google.ads.googleads.v1.resources.AdGroupCriterionLabel> getAdGroupCriterionLabel(
         com.google.ads.googleads.v1.services.GetAdGroupCriterionLabelRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(getGetAdGroupCriterionLabelMethodHelper(), getCallOptions()), request);
+          getChannel().newCall(getGetAdGroupCriterionLabelMethod(), getCallOptions()), request);
     }
 
     /**
@@ -305,7 +301,7 @@ public final class AdGroupCriterionLabelServiceGrpc {
     public com.google.common.util.concurrent.ListenableFuture<com.google.ads.googleads.v1.services.MutateAdGroupCriterionLabelsResponse> mutateAdGroupCriterionLabels(
         com.google.ads.googleads.v1.services.MutateAdGroupCriterionLabelsRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(getMutateAdGroupCriterionLabelsMethodHelper(), getCallOptions()), request);
+          getChannel().newCall(getMutateAdGroupCriterionLabelsMethod(), getCallOptions()), request);
     }
   }
 
@@ -398,8 +394,8 @@ public final class AdGroupCriterionLabelServiceGrpc {
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new AdGroupCriterionLabelServiceFileDescriptorSupplier())
-              .addMethod(getGetAdGroupCriterionLabelMethodHelper())
-              .addMethod(getMutateAdGroupCriterionLabelsMethodHelper())
+              .addMethod(getGetAdGroupCriterionLabelMethod())
+              .addMethod(getMutateAdGroupCriterionLabelsMethod())
               .build();
         }
       }

@@ -10,7 +10,7 @@ package com.google.ads.googleads.v4.services;
  *
  * Protobuf type {@code google.ads.googleads.v4.services.ListPlannableProductsRequest}
  */
-public  final class ListPlannableProductsRequest extends
+public final class ListPlannableProductsRequest extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.services.ListPlannableProductsRequest)
     ListPlannableProductsRequestOrBuilder {
@@ -108,6 +108,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue plannable_location_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
    * @return Whether the plannableLocationId field is set.
    */
+  @java.lang.Override
   public boolean hasPlannableLocationId() {
     return plannableLocationId_ != null;
   }
@@ -120,6 +121,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue plannable_location_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
    * @return The plannableLocationId.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getPlannableLocationId() {
     return plannableLocationId_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : plannableLocationId_;
   }
@@ -131,6 +133,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue plannable_location_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getPlannableLocationIdOrBuilder() {
     return getPlannableLocationId();
   }

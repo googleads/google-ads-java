@@ -1,5 +1,5 @@
 /*
- * Copyright 2019 Google LLC
+ * Copyright 2020 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -21,7 +21,6 @@ import com.google.ads.googleads.v1.services.stub.SharedSetServiceStubSettings;
 import com.google.api.core.BetaApi;
 import com.google.api.gax.core.BackgroundResource;
 import com.google.api.gax.rpc.UnaryCallable;
-import com.google.api.pathtemplate.PathTemplate;
 import java.io.IOException;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
@@ -37,8 +36,8 @@ import javax.annotation.Generated;
  * <pre>
  * <code>
  * try (SharedSetServiceClient sharedSetServiceClient = SharedSetServiceClient.create()) {
- *   String formattedResourceName = SharedSetServiceClient.formatSharedSetName("[CUSTOMER]", "[SHARED_SET]");
- *   SharedSet response = sharedSetServiceClient.getSharedSet(formattedResourceName);
+ *   SharedSetName resourceName = SharedSetName.of("[CUSTOMER]", "[SHARED_SET]");
+ *   SharedSet response = sharedSetServiceClient.getSharedSet(resourceName);
  * }
  * </code>
  * </pre>
@@ -100,42 +99,6 @@ public class SharedSetServiceClient implements BackgroundResource {
   private final SharedSetServiceSettings settings;
   private final SharedSetServiceStub stub;
 
-  private static final PathTemplate SHARED_SET_PATH_TEMPLATE =
-      PathTemplate.createWithoutUrlEncoding("customers/{customer}/sharedSets/{shared_set}");
-
-  /**
-   * Formats a string containing the fully-qualified path to represent a shared_set resource.
-   *
-   * @deprecated Use the {@link SharedSetName} class instead.
-   */
-  @Deprecated
-  public static final String formatSharedSetName(String customer, String sharedSet) {
-    return SHARED_SET_PATH_TEMPLATE.instantiate(
-        "customer", customer,
-        "shared_set", sharedSet);
-  }
-
-  /**
-   * Parses the customer from the given fully-qualified path which represents a shared_set resource.
-   *
-   * @deprecated Use the {@link SharedSetName} class instead.
-   */
-  @Deprecated
-  public static final String parseCustomerFromSharedSetName(String sharedSetName) {
-    return SHARED_SET_PATH_TEMPLATE.parse(sharedSetName).get("customer");
-  }
-
-  /**
-   * Parses the shared_set from the given fully-qualified path which represents a shared_set
-   * resource.
-   *
-   * @deprecated Use the {@link SharedSetName} class instead.
-   */
-  @Deprecated
-  public static final String parseSharedSetFromSharedSetName(String sharedSetName) {
-    return SHARED_SET_PATH_TEMPLATE.parse(sharedSetName).get("shared_set");
-  }
-
   /** Constructs an instance of SharedSetServiceClient with default settings. */
   public static final SharedSetServiceClient create() throws IOException {
     return create(SharedSetServiceSettings.newBuilder().build());
@@ -192,16 +155,39 @@ public class SharedSetServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (SharedSetServiceClient sharedSetServiceClient = SharedSetServiceClient.create()) {
-   *   String formattedResourceName = SharedSetServiceClient.formatSharedSetName("[CUSTOMER]", "[SHARED_SET]");
-   *   SharedSet response = sharedSetServiceClient.getSharedSet(formattedResourceName);
+   *   SharedSetName resourceName = SharedSetName.of("[CUSTOMER]", "[SHARED_SET]");
+   *   SharedSet response = sharedSetServiceClient.getSharedSet(resourceName);
    * }
    * </code></pre>
    *
-   * @param resourceName The resource name of the shared set to fetch.
+   * @param resourceName Required. The resource name of the shared set to fetch.
+   * @throws com.google.api.gax.rpc.ApiException if the remote call fails
+   */
+  public final SharedSet getSharedSet(SharedSetName resourceName) {
+    GetSharedSetRequest request =
+        GetSharedSetRequest.newBuilder()
+            .setResourceName(resourceName == null ? null : resourceName.toString())
+            .build();
+    return getSharedSet(request);
+  }
+
+  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  /**
+   * Returns the requested shared set in full detail.
+   *
+   * <p>Sample code:
+   *
+   * <pre><code>
+   * try (SharedSetServiceClient sharedSetServiceClient = SharedSetServiceClient.create()) {
+   *   SharedSetName resourceName = SharedSetName.of("[CUSTOMER]", "[SHARED_SET]");
+   *   SharedSet response = sharedSetServiceClient.getSharedSet(resourceName.toString());
+   * }
+   * </code></pre>
+   *
+   * @param resourceName Required. The resource name of the shared set to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final SharedSet getSharedSet(String resourceName) {
-    SHARED_SET_PATH_TEMPLATE.validate(resourceName, "getSharedSet");
     GetSharedSetRequest request =
         GetSharedSetRequest.newBuilder().setResourceName(resourceName).build();
     return getSharedSet(request);
@@ -215,9 +201,9 @@ public class SharedSetServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (SharedSetServiceClient sharedSetServiceClient = SharedSetServiceClient.create()) {
-   *   String formattedResourceName = SharedSetServiceClient.formatSharedSetName("[CUSTOMER]", "[SHARED_SET]");
+   *   SharedSetName resourceName = SharedSetName.of("[CUSTOMER]", "[SHARED_SET]");
    *   GetSharedSetRequest request = GetSharedSetRequest.newBuilder()
-   *     .setResourceName(formattedResourceName)
+   *     .setResourceName(resourceName.toString())
    *     .build();
    *   SharedSet response = sharedSetServiceClient.getSharedSet(request);
    * }
@@ -238,9 +224,9 @@ public class SharedSetServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (SharedSetServiceClient sharedSetServiceClient = SharedSetServiceClient.create()) {
-   *   String formattedResourceName = SharedSetServiceClient.formatSharedSetName("[CUSTOMER]", "[SHARED_SET]");
+   *   SharedSetName resourceName = SharedSetName.of("[CUSTOMER]", "[SHARED_SET]");
    *   GetSharedSetRequest request = GetSharedSetRequest.newBuilder()
-   *     .setResourceName(formattedResourceName)
+   *     .setResourceName(resourceName.toString())
    *     .build();
    *   ApiFuture&lt;SharedSet&gt; future = sharedSetServiceClient.getSharedSetCallable().futureCall(request);
    *   // Do something
@@ -262,58 +248,16 @@ public class SharedSetServiceClient implements BackgroundResource {
    * try (SharedSetServiceClient sharedSetServiceClient = SharedSetServiceClient.create()) {
    *   String customerId = "";
    *   List&lt;SharedSetOperation&gt; operations = new ArrayList&lt;&gt;();
-   *   boolean partialFailure = false;
-   *   boolean validateOnly = false;
-   *   MutateSharedSetsResponse response = sharedSetServiceClient.mutateSharedSets(customerId, operations, partialFailure, validateOnly);
-   * }
-   * </code></pre>
-   *
-   * @param customerId The ID of the customer whose shared sets are being modified.
-   * @param operations The list of operations to perform on individual shared sets.
-   * @param partialFailure If true, successful operations will be carried out and invalid operations
-   *     will return errors. If false, all operations will be carried out in one transaction if and
-   *     only if they are all valid. Default is false.
-   * @param validateOnly If true, the request is validated but not executed. Only errors are
-   *     returned, not results.
-   * @throws com.google.api.gax.rpc.ApiException if the remote call fails
-   */
-  public final MutateSharedSetsResponse mutateSharedSets(
-      String customerId,
-      List<SharedSetOperation> operations,
-      boolean partialFailure,
-      boolean validateOnly) {
-
-    MutateSharedSetsRequest request =
-        MutateSharedSetsRequest.newBuilder()
-            .setCustomerId(customerId)
-            .addAllOperations(operations)
-            .setPartialFailure(partialFailure)
-            .setValidateOnly(validateOnly)
-            .build();
-    return mutateSharedSets(request);
-  }
-
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
-  /**
-   * Creates, updates, or removes shared sets. Operation statuses are returned.
-   *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (SharedSetServiceClient sharedSetServiceClient = SharedSetServiceClient.create()) {
-   *   String customerId = "";
-   *   List&lt;SharedSetOperation&gt; operations = new ArrayList&lt;&gt;();
    *   MutateSharedSetsResponse response = sharedSetServiceClient.mutateSharedSets(customerId, operations);
    * }
    * </code></pre>
    *
-   * @param customerId The ID of the customer whose shared sets are being modified.
-   * @param operations The list of operations to perform on individual shared sets.
+   * @param customerId Required. The ID of the customer whose shared sets are being modified.
+   * @param operations Required. The list of operations to perform on individual shared sets.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final MutateSharedSetsResponse mutateSharedSets(
       String customerId, List<SharedSetOperation> operations) {
-
     MutateSharedSetsRequest request =
         MutateSharedSetsRequest.newBuilder()
             .setCustomerId(customerId)

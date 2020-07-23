@@ -21,7 +21,6 @@ import com.google.ads.googleads.v4.services.stub.AdGroupAdAssetViewServiceStubSe
 import com.google.api.core.BetaApi;
 import com.google.api.gax.core.BackgroundResource;
 import com.google.api.gax.rpc.UnaryCallable;
-import com.google.api.pathtemplate.PathTemplate;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 import javax.annotation.Generated;
@@ -36,8 +35,8 @@ import javax.annotation.Generated;
  * <pre>
  * <code>
  * try (AdGroupAdAssetViewServiceClient adGroupAdAssetViewServiceClient = AdGroupAdAssetViewServiceClient.create()) {
- *   String formattedResourceName = AdGroupAdAssetViewServiceClient.formatAdGroupAdAssetViewName("[CUSTOMER]", "[AD_GROUP_AD_ASSET_VIEW]");
- *   AdGroupAdAssetView response = adGroupAdAssetViewServiceClient.getAdGroupAdAssetView(formattedResourceName);
+ *   AdGroupAdAssetViewName resourceName = AdGroupAdAssetViewName.of("[CUSTOMER]", "[AD_GROUP_AD_ASSET_VIEW]");
+ *   AdGroupAdAssetView response = adGroupAdAssetViewServiceClient.getAdGroupAdAssetView(resourceName);
  * }
  * </code>
  * </pre>
@@ -99,50 +98,6 @@ public class AdGroupAdAssetViewServiceClient implements BackgroundResource {
   private final AdGroupAdAssetViewServiceSettings settings;
   private final AdGroupAdAssetViewServiceStub stub;
 
-  private static final PathTemplate AD_GROUP_AD_ASSET_VIEW_PATH_TEMPLATE =
-      PathTemplate.createWithoutUrlEncoding(
-          "customers/{customer}/adGroupAdAssetViews/{ad_group_ad_asset_view}");
-
-  /**
-   * Formats a string containing the fully-qualified path to represent a ad_group_ad_asset_view
-   * resource.
-   *
-   * @deprecated Use the {@link AdGroupAdAssetViewName} class instead.
-   */
-  @Deprecated
-  public static final String formatAdGroupAdAssetViewName(
-      String customer, String adGroupAdAssetView) {
-    return AD_GROUP_AD_ASSET_VIEW_PATH_TEMPLATE.instantiate(
-        "customer", customer,
-        "ad_group_ad_asset_view", adGroupAdAssetView);
-  }
-
-  /**
-   * Parses the customer from the given fully-qualified path which represents a
-   * ad_group_ad_asset_view resource.
-   *
-   * @deprecated Use the {@link AdGroupAdAssetViewName} class instead.
-   */
-  @Deprecated
-  public static final String parseCustomerFromAdGroupAdAssetViewName(
-      String adGroupAdAssetViewName) {
-    return AD_GROUP_AD_ASSET_VIEW_PATH_TEMPLATE.parse(adGroupAdAssetViewName).get("customer");
-  }
-
-  /**
-   * Parses the ad_group_ad_asset_view from the given fully-qualified path which represents a
-   * ad_group_ad_asset_view resource.
-   *
-   * @deprecated Use the {@link AdGroupAdAssetViewName} class instead.
-   */
-  @Deprecated
-  public static final String parseAdGroupAdAssetViewFromAdGroupAdAssetViewName(
-      String adGroupAdAssetViewName) {
-    return AD_GROUP_AD_ASSET_VIEW_PATH_TEMPLATE
-        .parse(adGroupAdAssetViewName)
-        .get("ad_group_ad_asset_view");
-  }
-
   /** Constructs an instance of AdGroupAdAssetViewServiceClient with default settings. */
   public static final AdGroupAdAssetViewServiceClient create() throws IOException {
     return create(AdGroupAdAssetViewServiceSettings.newBuilder().build());
@@ -201,8 +156,32 @@ public class AdGroupAdAssetViewServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (AdGroupAdAssetViewServiceClient adGroupAdAssetViewServiceClient = AdGroupAdAssetViewServiceClient.create()) {
-   *   String formattedResourceName = AdGroupAdAssetViewServiceClient.formatAdGroupAdAssetViewName("[CUSTOMER]", "[AD_GROUP_AD_ASSET_VIEW]");
-   *   AdGroupAdAssetView response = adGroupAdAssetViewServiceClient.getAdGroupAdAssetView(formattedResourceName);
+   *   AdGroupAdAssetViewName resourceName = AdGroupAdAssetViewName.of("[CUSTOMER]", "[AD_GROUP_AD_ASSET_VIEW]");
+   *   AdGroupAdAssetView response = adGroupAdAssetViewServiceClient.getAdGroupAdAssetView(resourceName);
+   * }
+   * </code></pre>
+   *
+   * @param resourceName Required. The resource name of the ad group ad asset view to fetch.
+   * @throws com.google.api.gax.rpc.ApiException if the remote call fails
+   */
+  public final AdGroupAdAssetView getAdGroupAdAssetView(AdGroupAdAssetViewName resourceName) {
+    GetAdGroupAdAssetViewRequest request =
+        GetAdGroupAdAssetViewRequest.newBuilder()
+            .setResourceName(resourceName == null ? null : resourceName.toString())
+            .build();
+    return getAdGroupAdAssetView(request);
+  }
+
+  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  /**
+   * Returns the requested ad group ad asset view in full detail.
+   *
+   * <p>Sample code:
+   *
+   * <pre><code>
+   * try (AdGroupAdAssetViewServiceClient adGroupAdAssetViewServiceClient = AdGroupAdAssetViewServiceClient.create()) {
+   *   AdGroupAdAssetViewName resourceName = AdGroupAdAssetViewName.of("[CUSTOMER]", "[AD_GROUP_AD_ASSET_VIEW]");
+   *   AdGroupAdAssetView response = adGroupAdAssetViewServiceClient.getAdGroupAdAssetView(resourceName.toString());
    * }
    * </code></pre>
    *
@@ -210,7 +189,6 @@ public class AdGroupAdAssetViewServiceClient implements BackgroundResource {
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final AdGroupAdAssetView getAdGroupAdAssetView(String resourceName) {
-    AD_GROUP_AD_ASSET_VIEW_PATH_TEMPLATE.validate(resourceName, "getAdGroupAdAssetView");
     GetAdGroupAdAssetViewRequest request =
         GetAdGroupAdAssetViewRequest.newBuilder().setResourceName(resourceName).build();
     return getAdGroupAdAssetView(request);
@@ -224,9 +202,9 @@ public class AdGroupAdAssetViewServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (AdGroupAdAssetViewServiceClient adGroupAdAssetViewServiceClient = AdGroupAdAssetViewServiceClient.create()) {
-   *   String formattedResourceName = AdGroupAdAssetViewServiceClient.formatAdGroupAdAssetViewName("[CUSTOMER]", "[AD_GROUP_AD_ASSET_VIEW]");
+   *   AdGroupAdAssetViewName resourceName = AdGroupAdAssetViewName.of("[CUSTOMER]", "[AD_GROUP_AD_ASSET_VIEW]");
    *   GetAdGroupAdAssetViewRequest request = GetAdGroupAdAssetViewRequest.newBuilder()
-   *     .setResourceName(formattedResourceName)
+   *     .setResourceName(resourceName.toString())
    *     .build();
    *   AdGroupAdAssetView response = adGroupAdAssetViewServiceClient.getAdGroupAdAssetView(request);
    * }
@@ -247,9 +225,9 @@ public class AdGroupAdAssetViewServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (AdGroupAdAssetViewServiceClient adGroupAdAssetViewServiceClient = AdGroupAdAssetViewServiceClient.create()) {
-   *   String formattedResourceName = AdGroupAdAssetViewServiceClient.formatAdGroupAdAssetViewName("[CUSTOMER]", "[AD_GROUP_AD_ASSET_VIEW]");
+   *   AdGroupAdAssetViewName resourceName = AdGroupAdAssetViewName.of("[CUSTOMER]", "[AD_GROUP_AD_ASSET_VIEW]");
    *   GetAdGroupAdAssetViewRequest request = GetAdGroupAdAssetViewRequest.newBuilder()
-   *     .setResourceName(formattedResourceName)
+   *     .setResourceName(resourceName.toString())
    *     .build();
    *   ApiFuture&lt;AdGroupAdAssetView&gt; future = adGroupAdAssetViewServiceClient.getAdGroupAdAssetViewCallable().futureCall(request);
    *   // Do something

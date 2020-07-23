@@ -10,7 +10,7 @@ package com.google.ads.googleads.v4.common;
  *
  * Protobuf type {@code google.ads.googleads.v4.common.LocationGroupInfo}
  */
-public  final class LocationGroupInfo extends
+public final class LocationGroupInfo extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.common.LocationGroupInfo)
     LocationGroupInfoOrBuilder {
@@ -142,6 +142,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue feed = 1;</code>
    * @return Whether the feed field is set.
    */
+  @java.lang.Override
   public boolean hasFeed() {
     return feed_ != null;
   }
@@ -154,6 +155,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue feed = 1;</code>
    * @return The feed.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getFeed() {
     return feed_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : feed_;
   }
@@ -165,6 +167,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue feed = 1;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getFeedOrBuilder() {
     return getFeed();
   }
@@ -179,6 +182,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.StringValue geo_target_constants = 2;</code>
    */
+  @java.lang.Override
   public java.util.List<com.google.protobuf.StringValue> getGeoTargetConstantsList() {
     return geoTargetConstants_;
   }
@@ -190,6 +194,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.StringValue geo_target_constants = 2;</code>
    */
+  @java.lang.Override
   public java.util.List<? extends com.google.protobuf.StringValueOrBuilder> 
       getGeoTargetConstantsOrBuilderList() {
     return geoTargetConstants_;
@@ -202,6 +207,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.StringValue geo_target_constants = 2;</code>
    */
+  @java.lang.Override
   public int getGeoTargetConstantsCount() {
     return geoTargetConstants_.size();
   }
@@ -213,6 +219,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.StringValue geo_target_constants = 2;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getGeoTargetConstants(int index) {
     return geoTargetConstants_.get(index);
   }
@@ -224,6 +231,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.StringValue geo_target_constants = 2;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getGeoTargetConstantsOrBuilder(
       int index) {
     return geoTargetConstants_.get(index);
@@ -240,6 +248,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int64Value radius = 3;</code>
    * @return Whether the radius field is set.
    */
+  @java.lang.Override
   public boolean hasRadius() {
     return radius_ != null;
   }
@@ -252,6 +261,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int64Value radius = 3;</code>
    * @return The radius.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getRadius() {
     return radius_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : radius_;
   }
@@ -263,6 +273,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int64Value radius = 3;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getRadiusOrBuilder() {
     return getRadius();
   }
@@ -278,7 +289,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.LocationGroupRadiusUnitsEnum.LocationGroupRadiusUnits radius_units = 4;</code>
    * @return The enum numeric value on the wire for radiusUnits.
    */
-  public int getRadiusUnitsValue() {
+  @java.lang.Override public int getRadiusUnitsValue() {
     return radiusUnits_;
   }
   /**
@@ -290,7 +301,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.LocationGroupRadiusUnitsEnum.LocationGroupRadiusUnits radius_units = 4;</code>
    * @return The radiusUnits.
    */
-  public com.google.ads.googleads.v4.enums.LocationGroupRadiusUnitsEnum.LocationGroupRadiusUnits getRadiusUnits() {
+  @java.lang.Override public com.google.ads.googleads.v4.enums.LocationGroupRadiusUnitsEnum.LocationGroupRadiusUnits getRadiusUnits() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v4.enums.LocationGroupRadiusUnitsEnum.LocationGroupRadiusUnits result = com.google.ads.googleads.v4.enums.LocationGroupRadiusUnitsEnum.LocationGroupRadiusUnits.valueOf(radiusUnits_);
     return result == null ? com.google.ads.googleads.v4.enums.LocationGroupRadiusUnitsEnum.LocationGroupRadiusUnits.UNRECOGNIZED : result;
@@ -1386,7 +1397,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.LocationGroupRadiusUnitsEnum.LocationGroupRadiusUnits radius_units = 4;</code>
      * @return The enum numeric value on the wire for radiusUnits.
      */
-    public int getRadiusUnitsValue() {
+    @java.lang.Override public int getRadiusUnitsValue() {
       return radiusUnits_;
     }
     /**
@@ -1400,6 +1411,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setRadiusUnitsValue(int value) {
+      
       radiusUnits_ = value;
       onChanged();
       return this;
@@ -1413,6 +1425,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.LocationGroupRadiusUnitsEnum.LocationGroupRadiusUnits radius_units = 4;</code>
      * @return The radiusUnits.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.enums.LocationGroupRadiusUnitsEnum.LocationGroupRadiusUnits getRadiusUnits() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v4.enums.LocationGroupRadiusUnitsEnum.LocationGroupRadiusUnits result = com.google.ads.googleads.v4.enums.LocationGroupRadiusUnitsEnum.LocationGroupRadiusUnits.valueOf(radiusUnits_);

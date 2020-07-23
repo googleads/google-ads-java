@@ -10,7 +10,7 @@ package com.google.ads.googleads.v2.common;
  *
  * Protobuf type {@code google.ads.googleads.v2.common.ClickLocation}
  */
-public  final class ClickLocation extends
+public final class ClickLocation extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v2.common.ClickLocation)
     ClickLocationOrBuilder {
@@ -20,6 +20,13 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private ClickLocation() {
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new ClickLocation();
   }
 
   @java.lang.Override
@@ -35,7 +42,6 @@ private static final long serialVersionUID = 0L;
     if (extensionRegistry == null) {
       throw new java.lang.NullPointerException();
     }
-    int mutable_bitField0_ = 0;
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
         com.google.protobuf.UnknownFieldSet.newBuilder();
     try {
@@ -151,7 +157,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue city = 1;</code>
+   * @return Whether the city field is set.
    */
+  @java.lang.Override
   public boolean hasCity() {
     return city_ != null;
   }
@@ -161,7 +169,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue city = 1;</code>
+   * @return The city.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getCity() {
     return city_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : city_;
   }
@@ -172,6 +182,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue city = 1;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getCityOrBuilder() {
     return getCity();
   }
@@ -184,7 +195,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue country = 2;</code>
+   * @return Whether the country field is set.
    */
+  @java.lang.Override
   public boolean hasCountry() {
     return country_ != null;
   }
@@ -194,7 +207,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue country = 2;</code>
+   * @return The country.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getCountry() {
     return country_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : country_;
   }
@@ -205,6 +220,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue country = 2;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getCountryOrBuilder() {
     return getCountry();
   }
@@ -217,7 +233,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue metro = 3;</code>
+   * @return Whether the metro field is set.
    */
+  @java.lang.Override
   public boolean hasMetro() {
     return metro_ != null;
   }
@@ -227,7 +245,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue metro = 3;</code>
+   * @return The metro.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getMetro() {
     return metro_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : metro_;
   }
@@ -238,6 +258,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue metro = 3;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getMetroOrBuilder() {
     return getMetro();
   }
@@ -250,7 +271,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue most_specific = 4;</code>
+   * @return Whether the mostSpecific field is set.
    */
+  @java.lang.Override
   public boolean hasMostSpecific() {
     return mostSpecific_ != null;
   }
@@ -260,7 +283,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue most_specific = 4;</code>
+   * @return The mostSpecific.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getMostSpecific() {
     return mostSpecific_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : mostSpecific_;
   }
@@ -271,6 +296,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue most_specific = 4;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getMostSpecificOrBuilder() {
     return getMostSpecific();
   }
@@ -283,7 +309,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue region = 5;</code>
+   * @return Whether the region field is set.
    */
+  @java.lang.Override
   public boolean hasRegion() {
     return region_ != null;
   }
@@ -293,7 +321,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue region = 5;</code>
+   * @return The region.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getRegion() {
     return region_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : region_;
   }
@@ -304,6 +334,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue region = 5;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getRegionOrBuilder() {
     return getRegion();
   }
@@ -756,6 +787,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue city = 1;</code>
+     * @return Whether the city field is set.
      */
     public boolean hasCity() {
       return cityBuilder_ != null || city_ != null;
@@ -766,6 +798,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue city = 1;</code>
+     * @return The city.
      */
     public com.google.protobuf.StringValue getCity() {
       if (cityBuilder_ == null) {
@@ -909,6 +942,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue country = 2;</code>
+     * @return Whether the country field is set.
      */
     public boolean hasCountry() {
       return countryBuilder_ != null || country_ != null;
@@ -919,6 +953,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue country = 2;</code>
+     * @return The country.
      */
     public com.google.protobuf.StringValue getCountry() {
       if (countryBuilder_ == null) {
@@ -1062,6 +1097,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue metro = 3;</code>
+     * @return Whether the metro field is set.
      */
     public boolean hasMetro() {
       return metroBuilder_ != null || metro_ != null;
@@ -1072,6 +1108,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue metro = 3;</code>
+     * @return The metro.
      */
     public com.google.protobuf.StringValue getMetro() {
       if (metroBuilder_ == null) {
@@ -1215,6 +1252,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue most_specific = 4;</code>
+     * @return Whether the mostSpecific field is set.
      */
     public boolean hasMostSpecific() {
       return mostSpecificBuilder_ != null || mostSpecific_ != null;
@@ -1225,6 +1263,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue most_specific = 4;</code>
+     * @return The mostSpecific.
      */
     public com.google.protobuf.StringValue getMostSpecific() {
       if (mostSpecificBuilder_ == null) {
@@ -1368,6 +1407,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue region = 5;</code>
+     * @return Whether the region field is set.
      */
     public boolean hasRegion() {
       return regionBuilder_ != null || region_ != null;
@@ -1378,6 +1418,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue region = 5;</code>
+     * @return The region.
      */
     public com.google.protobuf.StringValue getRegion() {
       if (regionBuilder_ == null) {

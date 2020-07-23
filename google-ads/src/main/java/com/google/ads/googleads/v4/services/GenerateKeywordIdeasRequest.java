@@ -10,7 +10,7 @@ package com.google.ads.googleads.v4.services;
  *
  * Protobuf type {@code google.ads.googleads.v4.services.GenerateKeywordIdeasRequest}
  */
-public  final class GenerateKeywordIdeasRequest extends
+public final class GenerateKeywordIdeasRequest extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.services.GenerateKeywordIdeasRequest)
     GenerateKeywordIdeasRequestOrBuilder {
@@ -253,6 +253,7 @@ private static final long serialVersionUID = 0L;
    * <code>string customer_id = 1;</code>
    * @return The customerId.
    */
+  @java.lang.Override
   public java.lang.String getCustomerId() {
     java.lang.Object ref = customerId_;
     if (ref instanceof java.lang.String) {
@@ -273,6 +274,7 @@ private static final long serialVersionUID = 0L;
    * <code>string customer_id = 1;</code>
    * @return The bytes for customerId.
    */
+  @java.lang.Override
   public com.google.protobuf.ByteString
       getCustomerIdBytes() {
     java.lang.Object ref = customerId_;
@@ -298,6 +300,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue language = 7 [(.google.api.field_behavior) = REQUIRED];</code>
    * @return Whether the language field is set.
    */
+  @java.lang.Override
   public boolean hasLanguage() {
     return language_ != null;
   }
@@ -310,6 +313,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue language = 7 [(.google.api.field_behavior) = REQUIRED];</code>
    * @return The language.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getLanguage() {
     return language_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : language_;
   }
@@ -321,6 +325,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue language = 7 [(.google.api.field_behavior) = REQUIRED];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getLanguageOrBuilder() {
     return getLanguage();
   }
@@ -335,6 +340,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.StringValue geo_target_constants = 8;</code>
    */
+  @java.lang.Override
   public java.util.List<com.google.protobuf.StringValue> getGeoTargetConstantsList() {
     return geoTargetConstants_;
   }
@@ -346,6 +352,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.StringValue geo_target_constants = 8;</code>
    */
+  @java.lang.Override
   public java.util.List<? extends com.google.protobuf.StringValueOrBuilder> 
       getGeoTargetConstantsOrBuilderList() {
     return geoTargetConstants_;
@@ -358,6 +365,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.StringValue geo_target_constants = 8;</code>
    */
+  @java.lang.Override
   public int getGeoTargetConstantsCount() {
     return geoTargetConstants_.size();
   }
@@ -369,6 +377,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.StringValue geo_target_constants = 8;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getGeoTargetConstants(int index) {
     return geoTargetConstants_.get(index);
   }
@@ -380,6 +389,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.StringValue geo_target_constants = 8;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getGeoTargetConstantsOrBuilder(
       int index) {
     return geoTargetConstants_.get(index);
@@ -396,6 +406,7 @@ private static final long serialVersionUID = 0L;
    * <code>bool include_adult_keywords = 10;</code>
    * @return The includeAdultKeywords.
    */
+  @java.lang.Override
   public boolean getIncludeAdultKeywords() {
     return includeAdultKeywords_;
   }
@@ -413,6 +424,7 @@ private static final long serialVersionUID = 0L;
    * <code>string page_token = 12;</code>
    * @return The pageToken.
    */
+  @java.lang.Override
   public java.lang.String getPageToken() {
     java.lang.Object ref = pageToken_;
     if (ref instanceof java.lang.String) {
@@ -436,6 +448,7 @@ private static final long serialVersionUID = 0L;
    * <code>string page_token = 12;</code>
    * @return The bytes for pageToken.
    */
+  @java.lang.Override
   public com.google.protobuf.ByteString
       getPageTokenBytes() {
     java.lang.Object ref = pageToken_;
@@ -466,6 +479,7 @@ private static final long serialVersionUID = 0L;
    * <code>int32 page_size = 13;</code>
    * @return The pageSize.
    */
+  @java.lang.Override
   public int getPageSize() {
     return pageSize_;
   }
@@ -480,7 +494,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.KeywordPlanNetworkEnum.KeywordPlanNetwork keyword_plan_network = 9;</code>
    * @return The enum numeric value on the wire for keywordPlanNetwork.
    */
-  public int getKeywordPlanNetworkValue() {
+  @java.lang.Override public int getKeywordPlanNetworkValue() {
     return keywordPlanNetwork_;
   }
   /**
@@ -491,7 +505,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.KeywordPlanNetworkEnum.KeywordPlanNetwork keyword_plan_network = 9;</code>
    * @return The keywordPlanNetwork.
    */
-  public com.google.ads.googleads.v4.enums.KeywordPlanNetworkEnum.KeywordPlanNetwork getKeywordPlanNetwork() {
+  @java.lang.Override public com.google.ads.googleads.v4.enums.KeywordPlanNetworkEnum.KeywordPlanNetwork getKeywordPlanNetwork() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v4.enums.KeywordPlanNetworkEnum.KeywordPlanNetwork result = com.google.ads.googleads.v4.enums.KeywordPlanNetworkEnum.KeywordPlanNetwork.valueOf(keywordPlanNetwork_);
     return result == null ? com.google.ads.googleads.v4.enums.KeywordPlanNetworkEnum.KeywordPlanNetwork.UNRECOGNIZED : result;
@@ -507,6 +521,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.services.KeywordAndUrlSeed keyword_and_url_seed = 2;</code>
    * @return Whether the keywordAndUrlSeed field is set.
    */
+  @java.lang.Override
   public boolean hasKeywordAndUrlSeed() {
     return seedCase_ == 2;
   }
@@ -519,6 +534,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.services.KeywordAndUrlSeed keyword_and_url_seed = 2;</code>
    * @return The keywordAndUrlSeed.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.services.KeywordAndUrlSeed getKeywordAndUrlSeed() {
     if (seedCase_ == 2) {
        return (com.google.ads.googleads.v4.services.KeywordAndUrlSeed) seed_;
@@ -533,6 +549,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v4.services.KeywordAndUrlSeed keyword_and_url_seed = 2;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.services.KeywordAndUrlSeedOrBuilder getKeywordAndUrlSeedOrBuilder() {
     if (seedCase_ == 2) {
        return (com.google.ads.googleads.v4.services.KeywordAndUrlSeed) seed_;
@@ -549,6 +566,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.services.KeywordSeed keyword_seed = 3;</code>
    * @return Whether the keywordSeed field is set.
    */
+  @java.lang.Override
   public boolean hasKeywordSeed() {
     return seedCase_ == 3;
   }
@@ -560,6 +578,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.services.KeywordSeed keyword_seed = 3;</code>
    * @return The keywordSeed.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.services.KeywordSeed getKeywordSeed() {
     if (seedCase_ == 3) {
        return (com.google.ads.googleads.v4.services.KeywordSeed) seed_;
@@ -573,6 +592,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v4.services.KeywordSeed keyword_seed = 3;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.services.KeywordSeedOrBuilder getKeywordSeedOrBuilder() {
     if (seedCase_ == 3) {
        return (com.google.ads.googleads.v4.services.KeywordSeed) seed_;
@@ -589,6 +609,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.services.UrlSeed url_seed = 5;</code>
    * @return Whether the urlSeed field is set.
    */
+  @java.lang.Override
   public boolean hasUrlSeed() {
     return seedCase_ == 5;
   }
@@ -600,6 +621,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.services.UrlSeed url_seed = 5;</code>
    * @return The urlSeed.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.services.UrlSeed getUrlSeed() {
     if (seedCase_ == 5) {
        return (com.google.ads.googleads.v4.services.UrlSeed) seed_;
@@ -613,6 +635,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v4.services.UrlSeed url_seed = 5;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.services.UrlSeedOrBuilder getUrlSeedOrBuilder() {
     if (seedCase_ == 5) {
        return (com.google.ads.googleads.v4.services.UrlSeed) seed_;
@@ -629,6 +652,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.services.SiteSeed site_seed = 11;</code>
    * @return Whether the siteSeed field is set.
    */
+  @java.lang.Override
   public boolean hasSiteSeed() {
     return seedCase_ == 11;
   }
@@ -640,6 +664,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.services.SiteSeed site_seed = 11;</code>
    * @return The siteSeed.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.services.SiteSeed getSiteSeed() {
     if (seedCase_ == 11) {
        return (com.google.ads.googleads.v4.services.SiteSeed) seed_;
@@ -653,6 +678,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v4.services.SiteSeed site_seed = 11;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.services.SiteSeedOrBuilder getSiteSeedOrBuilder() {
     if (seedCase_ == 11) {
        return (com.google.ads.googleads.v4.services.SiteSeed) seed_;
@@ -1857,6 +1883,7 @@ private static final long serialVersionUID = 0L;
      * <code>bool include_adult_keywords = 10;</code>
      * @return The includeAdultKeywords.
      */
+    @java.lang.Override
     public boolean getIncludeAdultKeywords() {
       return includeAdultKeywords_;
     }
@@ -2018,6 +2045,7 @@ private static final long serialVersionUID = 0L;
      * <code>int32 page_size = 13;</code>
      * @return The pageSize.
      */
+    @java.lang.Override
     public int getPageSize() {
       return pageSize_;
     }
@@ -2072,7 +2100,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.KeywordPlanNetworkEnum.KeywordPlanNetwork keyword_plan_network = 9;</code>
      * @return The enum numeric value on the wire for keywordPlanNetwork.
      */
-    public int getKeywordPlanNetworkValue() {
+    @java.lang.Override public int getKeywordPlanNetworkValue() {
       return keywordPlanNetwork_;
     }
     /**
@@ -2085,6 +2113,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setKeywordPlanNetworkValue(int value) {
+      
       keywordPlanNetwork_ = value;
       onChanged();
       return this;
@@ -2097,6 +2126,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.KeywordPlanNetworkEnum.KeywordPlanNetwork keyword_plan_network = 9;</code>
      * @return The keywordPlanNetwork.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.enums.KeywordPlanNetworkEnum.KeywordPlanNetwork getKeywordPlanNetwork() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v4.enums.KeywordPlanNetworkEnum.KeywordPlanNetwork result = com.google.ads.googleads.v4.enums.KeywordPlanNetworkEnum.KeywordPlanNetwork.valueOf(keywordPlanNetwork_);
@@ -2146,6 +2176,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.services.KeywordAndUrlSeed keyword_and_url_seed = 2;</code>
      * @return Whether the keywordAndUrlSeed field is set.
      */
+    @java.lang.Override
     public boolean hasKeywordAndUrlSeed() {
       return seedCase_ == 2;
     }
@@ -2158,6 +2189,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.services.KeywordAndUrlSeed keyword_and_url_seed = 2;</code>
      * @return The keywordAndUrlSeed.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.services.KeywordAndUrlSeed getKeywordAndUrlSeed() {
       if (keywordAndUrlSeedBuilder_ == null) {
         if (seedCase_ == 2) {
@@ -2281,6 +2313,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v4.services.KeywordAndUrlSeed keyword_and_url_seed = 2;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.services.KeywordAndUrlSeedOrBuilder getKeywordAndUrlSeedOrBuilder() {
       if ((seedCase_ == 2) && (keywordAndUrlSeedBuilder_ != null)) {
         return keywordAndUrlSeedBuilder_.getMessageOrBuilder();
@@ -2328,6 +2361,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.services.KeywordSeed keyword_seed = 3;</code>
      * @return Whether the keywordSeed field is set.
      */
+    @java.lang.Override
     public boolean hasKeywordSeed() {
       return seedCase_ == 3;
     }
@@ -2339,6 +2373,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.services.KeywordSeed keyword_seed = 3;</code>
      * @return The keywordSeed.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.services.KeywordSeed getKeywordSeed() {
       if (keywordSeedBuilder_ == null) {
         if (seedCase_ == 3) {
@@ -2456,6 +2491,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v4.services.KeywordSeed keyword_seed = 3;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.services.KeywordSeedOrBuilder getKeywordSeedOrBuilder() {
       if ((seedCase_ == 3) && (keywordSeedBuilder_ != null)) {
         return keywordSeedBuilder_.getMessageOrBuilder();
@@ -2502,6 +2538,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.services.UrlSeed url_seed = 5;</code>
      * @return Whether the urlSeed field is set.
      */
+    @java.lang.Override
     public boolean hasUrlSeed() {
       return seedCase_ == 5;
     }
@@ -2513,6 +2550,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.services.UrlSeed url_seed = 5;</code>
      * @return The urlSeed.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.services.UrlSeed getUrlSeed() {
       if (urlSeedBuilder_ == null) {
         if (seedCase_ == 5) {
@@ -2630,6 +2668,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v4.services.UrlSeed url_seed = 5;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.services.UrlSeedOrBuilder getUrlSeedOrBuilder() {
       if ((seedCase_ == 5) && (urlSeedBuilder_ != null)) {
         return urlSeedBuilder_.getMessageOrBuilder();
@@ -2676,6 +2715,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.services.SiteSeed site_seed = 11;</code>
      * @return Whether the siteSeed field is set.
      */
+    @java.lang.Override
     public boolean hasSiteSeed() {
       return seedCase_ == 11;
     }
@@ -2687,6 +2727,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.services.SiteSeed site_seed = 11;</code>
      * @return The siteSeed.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.services.SiteSeed getSiteSeed() {
       if (siteSeedBuilder_ == null) {
         if (seedCase_ == 11) {
@@ -2804,6 +2845,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v4.services.SiteSeed site_seed = 11;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.services.SiteSeedOrBuilder getSiteSeedOrBuilder() {
       if ((seedCase_ == 11) && (siteSeedBuilder_ != null)) {
         return siteSeedBuilder_.getMessageOrBuilder();

@@ -14,7 +14,7 @@ package com.google.ads.googleads.v3.services;
  *
  * Protobuf type {@code google.ads.googleads.v3.services.OnTargetAudienceMetrics}
  */
-public  final class OnTargetAudienceMetrics extends
+public final class OnTargetAudienceMetrics extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v3.services.OnTargetAudienceMetrics)
     OnTargetAudienceMetricsOrBuilder {
@@ -24,6 +24,13 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private OnTargetAudienceMetrics() {
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new OnTargetAudienceMetrics();
   }
 
   @java.lang.Override
@@ -39,7 +46,6 @@ private static final long serialVersionUID = 0L;
     if (extensionRegistry == null) {
       throw new java.lang.NullPointerException();
     }
-    int mutable_bitField0_ = 0;
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
         com.google.protobuf.UnknownFieldSet.newBuilder();
     try {
@@ -116,7 +122,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Int64Value youtube_audience_size = 1;</code>
+   * @return Whether the youtubeAudienceSize field is set.
    */
+  @java.lang.Override
   public boolean hasYoutubeAudienceSize() {
     return youtubeAudienceSize_ != null;
   }
@@ -126,7 +134,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Int64Value youtube_audience_size = 1;</code>
+   * @return The youtubeAudienceSize.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getYoutubeAudienceSize() {
     return youtubeAudienceSize_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : youtubeAudienceSize_;
   }
@@ -137,6 +147,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int64Value youtube_audience_size = 1;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getYoutubeAudienceSizeOrBuilder() {
     return getYoutubeAudienceSize();
   }
@@ -149,7 +160,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Int64Value census_audience_size = 2;</code>
+   * @return Whether the censusAudienceSize field is set.
    */
+  @java.lang.Override
   public boolean hasCensusAudienceSize() {
     return censusAudienceSize_ != null;
   }
@@ -159,7 +172,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Int64Value census_audience_size = 2;</code>
+   * @return The censusAudienceSize.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getCensusAudienceSize() {
     return censusAudienceSize_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : censusAudienceSize_;
   }
@@ -170,6 +185,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int64Value census_audience_size = 2;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getCensusAudienceSizeOrBuilder() {
     return getCensusAudienceSize();
   }
@@ -536,6 +552,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value youtube_audience_size = 1;</code>
+     * @return Whether the youtubeAudienceSize field is set.
      */
     public boolean hasYoutubeAudienceSize() {
       return youtubeAudienceSizeBuilder_ != null || youtubeAudienceSize_ != null;
@@ -546,6 +563,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value youtube_audience_size = 1;</code>
+     * @return The youtubeAudienceSize.
      */
     public com.google.protobuf.Int64Value getYoutubeAudienceSize() {
       if (youtubeAudienceSizeBuilder_ == null) {
@@ -689,6 +707,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value census_audience_size = 2;</code>
+     * @return Whether the censusAudienceSize field is set.
      */
     public boolean hasCensusAudienceSize() {
       return censusAudienceSizeBuilder_ != null || censusAudienceSize_ != null;
@@ -699,6 +718,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value census_audience_size = 2;</code>
+     * @return The censusAudienceSize.
      */
     public com.google.protobuf.Int64Value getCensusAudienceSize() {
       if (censusAudienceSizeBuilder_ == null) {

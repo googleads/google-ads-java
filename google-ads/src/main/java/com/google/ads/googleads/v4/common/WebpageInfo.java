@@ -10,7 +10,7 @@ package com.google.ads.googleads.v4.common;
  *
  * Protobuf type {@code google.ads.googleads.v4.common.WebpageInfo}
  */
-public  final class WebpageInfo extends
+public final class WebpageInfo extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.common.WebpageInfo)
     WebpageInfoOrBuilder {
@@ -125,6 +125,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue criterion_name = 1;</code>
    * @return Whether the criterionName field is set.
    */
+  @java.lang.Override
   public boolean hasCriterionName() {
     return criterionName_ != null;
   }
@@ -140,6 +141,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue criterion_name = 1;</code>
    * @return The criterionName.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getCriterionName() {
     return criterionName_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : criterionName_;
   }
@@ -154,6 +156,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue criterion_name = 1;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getCriterionNameOrBuilder() {
     return getCriterionName();
   }
@@ -171,6 +174,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.common.WebpageConditionInfo conditions = 2;</code>
    */
+  @java.lang.Override
   public java.util.List<com.google.ads.googleads.v4.common.WebpageConditionInfo> getConditionsList() {
     return conditions_;
   }
@@ -185,6 +189,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.common.WebpageConditionInfo conditions = 2;</code>
    */
+  @java.lang.Override
   public java.util.List<? extends com.google.ads.googleads.v4.common.WebpageConditionInfoOrBuilder> 
       getConditionsOrBuilderList() {
     return conditions_;
@@ -200,6 +205,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.common.WebpageConditionInfo conditions = 2;</code>
    */
+  @java.lang.Override
   public int getConditionsCount() {
     return conditions_.size();
   }
@@ -214,6 +220,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.common.WebpageConditionInfo conditions = 2;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.WebpageConditionInfo getConditions(int index) {
     return conditions_.get(index);
   }
@@ -228,6 +235,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.common.WebpageConditionInfo conditions = 2;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.WebpageConditionInfoOrBuilder getConditionsOrBuilder(
       int index) {
     return conditions_.get(index);

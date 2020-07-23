@@ -11,7 +11,7 @@ package com.google.ads.googleads.v4.common;
  *
  * Protobuf type {@code google.ads.googleads.v4.common.PercentCpc}
  */
-public  final class PercentCpc extends
+public final class PercentCpc extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.common.PercentCpc)
     PercentCpcOrBuilder {
@@ -124,6 +124,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int64Value cpc_bid_ceiling_micros = 1;</code>
    * @return Whether the cpcBidCeilingMicros field is set.
    */
+  @java.lang.Override
   public boolean hasCpcBidCeilingMicros() {
     return cpcBidCeilingMicros_ != null;
   }
@@ -138,6 +139,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int64Value cpc_bid_ceiling_micros = 1;</code>
    * @return The cpcBidCeilingMicros.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getCpcBidCeilingMicros() {
     return cpcBidCeilingMicros_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : cpcBidCeilingMicros_;
   }
@@ -151,6 +153,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int64Value cpc_bid_ceiling_micros = 1;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getCpcBidCeilingMicrosOrBuilder() {
     return getCpcBidCeilingMicros();
   }
@@ -168,6 +171,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.BoolValue enhanced_cpc_enabled = 2;</code>
    * @return Whether the enhancedCpcEnabled field is set.
    */
+  @java.lang.Override
   public boolean hasEnhancedCpcEnabled() {
     return enhancedCpcEnabled_ != null;
   }
@@ -182,6 +186,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.BoolValue enhanced_cpc_enabled = 2;</code>
    * @return The enhancedCpcEnabled.
    */
+  @java.lang.Override
   public com.google.protobuf.BoolValue getEnhancedCpcEnabled() {
     return enhancedCpcEnabled_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : enhancedCpcEnabled_;
   }
@@ -195,6 +200,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.BoolValue enhanced_cpc_enabled = 2;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.BoolValueOrBuilder getEnhancedCpcEnabledOrBuilder() {
     return getEnhancedCpcEnabled();
   }

@@ -11,7 +11,7 @@ package com.google.ads.googleads.v4.common;
  *
  * Protobuf type {@code google.ads.googleads.v4.common.UserListRuleInfo}
  */
-public  final class UserListRuleInfo extends
+public final class UserListRuleInfo extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.common.UserListRuleInfo)
     UserListRuleInfoOrBuilder {
@@ -121,7 +121,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.UserListRuleTypeEnum.UserListRuleType rule_type = 1;</code>
    * @return The enum numeric value on the wire for ruleType.
    */
-  public int getRuleTypeValue() {
+  @java.lang.Override public int getRuleTypeValue() {
     return ruleType_;
   }
   /**
@@ -137,7 +137,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.UserListRuleTypeEnum.UserListRuleType rule_type = 1;</code>
    * @return The ruleType.
    */
-  public com.google.ads.googleads.v4.enums.UserListRuleTypeEnum.UserListRuleType getRuleType() {
+  @java.lang.Override public com.google.ads.googleads.v4.enums.UserListRuleTypeEnum.UserListRuleType getRuleType() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v4.enums.UserListRuleTypeEnum.UserListRuleType result = com.google.ads.googleads.v4.enums.UserListRuleTypeEnum.UserListRuleType.valueOf(ruleType_);
     return result == null ? com.google.ads.googleads.v4.enums.UserListRuleTypeEnum.UserListRuleType.UNRECOGNIZED : result;
@@ -153,6 +153,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.common.UserListRuleItemGroupInfo rule_item_groups = 2;</code>
    */
+  @java.lang.Override
   public java.util.List<com.google.ads.googleads.v4.common.UserListRuleItemGroupInfo> getRuleItemGroupsList() {
     return ruleItemGroups_;
   }
@@ -164,6 +165,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.common.UserListRuleItemGroupInfo rule_item_groups = 2;</code>
    */
+  @java.lang.Override
   public java.util.List<? extends com.google.ads.googleads.v4.common.UserListRuleItemGroupInfoOrBuilder> 
       getRuleItemGroupsOrBuilderList() {
     return ruleItemGroups_;
@@ -176,6 +178,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.common.UserListRuleItemGroupInfo rule_item_groups = 2;</code>
    */
+  @java.lang.Override
   public int getRuleItemGroupsCount() {
     return ruleItemGroups_.size();
   }
@@ -187,6 +190,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.common.UserListRuleItemGroupInfo rule_item_groups = 2;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.UserListRuleItemGroupInfo getRuleItemGroups(int index) {
     return ruleItemGroups_.get(index);
   }
@@ -198,6 +202,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.common.UserListRuleItemGroupInfo rule_item_groups = 2;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.UserListRuleItemGroupInfoOrBuilder getRuleItemGroupsOrBuilder(
       int index) {
     return ruleItemGroups_.get(index);
@@ -580,7 +585,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.UserListRuleTypeEnum.UserListRuleType rule_type = 1;</code>
      * @return The enum numeric value on the wire for ruleType.
      */
-    public int getRuleTypeValue() {
+    @java.lang.Override public int getRuleTypeValue() {
       return ruleType_;
     }
     /**
@@ -598,6 +603,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setRuleTypeValue(int value) {
+      
       ruleType_ = value;
       onChanged();
       return this;
@@ -615,6 +621,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.UserListRuleTypeEnum.UserListRuleType rule_type = 1;</code>
      * @return The ruleType.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.enums.UserListRuleTypeEnum.UserListRuleType getRuleType() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v4.enums.UserListRuleTypeEnum.UserListRuleType result = com.google.ads.googleads.v4.enums.UserListRuleTypeEnum.UserListRuleType.valueOf(ruleType_);

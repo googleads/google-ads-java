@@ -11,7 +11,7 @@ package com.google.ads.googleads.v4.common;
  *
  * Protobuf type {@code google.ads.googleads.v4.common.CustomAffinityInfo}
  */
-public  final class CustomAffinityInfo extends
+public final class CustomAffinityInfo extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.common.CustomAffinityInfo)
     CustomAffinityInfoOrBuilder {
@@ -108,6 +108,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue custom_affinity = 1;</code>
    * @return Whether the customAffinity field is set.
    */
+  @java.lang.Override
   public boolean hasCustomAffinity() {
     return customAffinity_ != null;
   }
@@ -119,6 +120,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue custom_affinity = 1;</code>
    * @return The customAffinity.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getCustomAffinity() {
     return customAffinity_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : customAffinity_;
   }
@@ -129,6 +131,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue custom_affinity = 1;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getCustomAffinityOrBuilder() {
     return getCustomAffinity();
   }

@@ -1,5 +1,5 @@
 /*
- * Copyright 2019 Google LLC
+ * Copyright 2020 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -21,7 +21,6 @@ import com.google.ads.googleads.v3.services.stub.KeywordPlanKeywordServiceStubSe
 import com.google.api.core.BetaApi;
 import com.google.api.gax.core.BackgroundResource;
 import com.google.api.gax.rpc.UnaryCallable;
-import com.google.api.pathtemplate.PathTemplate;
 import java.io.IOException;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
@@ -37,8 +36,8 @@ import javax.annotation.Generated;
  * <pre>
  * <code>
  * try (KeywordPlanKeywordServiceClient keywordPlanKeywordServiceClient = KeywordPlanKeywordServiceClient.create()) {
- *   String formattedResourceName = KeywordPlanKeywordServiceClient.formatKeywordPlanKeywordName("[CUSTOMER]", "[KEYWORD_PLAN_KEYWORD]");
- *   KeywordPlanKeyword response = keywordPlanKeywordServiceClient.getKeywordPlanKeyword(formattedResourceName);
+ *   KeywordPlanKeywordName resourceName = KeywordPlanKeywordName.of("[CUSTOMER]", "[KEYWORD_PLAN_KEYWORD]");
+ *   KeywordPlanKeyword response = keywordPlanKeywordServiceClient.getKeywordPlanKeyword(resourceName);
  * }
  * </code>
  * </pre>
@@ -100,50 +99,6 @@ public class KeywordPlanKeywordServiceClient implements BackgroundResource {
   private final KeywordPlanKeywordServiceSettings settings;
   private final KeywordPlanKeywordServiceStub stub;
 
-  private static final PathTemplate KEYWORD_PLAN_KEYWORD_PATH_TEMPLATE =
-      PathTemplate.createWithoutUrlEncoding(
-          "customers/{customer}/keywordPlanKeywords/{keyword_plan_keyword}");
-
-  /**
-   * Formats a string containing the fully-qualified path to represent a keyword_plan_keyword
-   * resource.
-   *
-   * @deprecated Use the {@link KeywordPlanKeywordName} class instead.
-   */
-  @Deprecated
-  public static final String formatKeywordPlanKeywordName(
-      String customer, String keywordPlanKeyword) {
-    return KEYWORD_PLAN_KEYWORD_PATH_TEMPLATE.instantiate(
-        "customer", customer,
-        "keyword_plan_keyword", keywordPlanKeyword);
-  }
-
-  /**
-   * Parses the customer from the given fully-qualified path which represents a keyword_plan_keyword
-   * resource.
-   *
-   * @deprecated Use the {@link KeywordPlanKeywordName} class instead.
-   */
-  @Deprecated
-  public static final String parseCustomerFromKeywordPlanKeywordName(
-      String keywordPlanKeywordName) {
-    return KEYWORD_PLAN_KEYWORD_PATH_TEMPLATE.parse(keywordPlanKeywordName).get("customer");
-  }
-
-  /**
-   * Parses the keyword_plan_keyword from the given fully-qualified path which represents a
-   * keyword_plan_keyword resource.
-   *
-   * @deprecated Use the {@link KeywordPlanKeywordName} class instead.
-   */
-  @Deprecated
-  public static final String parseKeywordPlanKeywordFromKeywordPlanKeywordName(
-      String keywordPlanKeywordName) {
-    return KEYWORD_PLAN_KEYWORD_PATH_TEMPLATE
-        .parse(keywordPlanKeywordName)
-        .get("keyword_plan_keyword");
-  }
-
   /** Constructs an instance of KeywordPlanKeywordServiceClient with default settings. */
   public static final KeywordPlanKeywordServiceClient create() throws IOException {
     return create(KeywordPlanKeywordServiceSettings.newBuilder().build());
@@ -202,8 +157,32 @@ public class KeywordPlanKeywordServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (KeywordPlanKeywordServiceClient keywordPlanKeywordServiceClient = KeywordPlanKeywordServiceClient.create()) {
-   *   String formattedResourceName = KeywordPlanKeywordServiceClient.formatKeywordPlanKeywordName("[CUSTOMER]", "[KEYWORD_PLAN_KEYWORD]");
-   *   KeywordPlanKeyword response = keywordPlanKeywordServiceClient.getKeywordPlanKeyword(formattedResourceName);
+   *   KeywordPlanKeywordName resourceName = KeywordPlanKeywordName.of("[CUSTOMER]", "[KEYWORD_PLAN_KEYWORD]");
+   *   KeywordPlanKeyword response = keywordPlanKeywordServiceClient.getKeywordPlanKeyword(resourceName);
+   * }
+   * </code></pre>
+   *
+   * @param resourceName Required. The resource name of the ad group keyword to fetch.
+   * @throws com.google.api.gax.rpc.ApiException if the remote call fails
+   */
+  public final KeywordPlanKeyword getKeywordPlanKeyword(KeywordPlanKeywordName resourceName) {
+    GetKeywordPlanKeywordRequest request =
+        GetKeywordPlanKeywordRequest.newBuilder()
+            .setResourceName(resourceName == null ? null : resourceName.toString())
+            .build();
+    return getKeywordPlanKeyword(request);
+  }
+
+  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  /**
+   * Returns the requested Keyword Plan keyword in full detail.
+   *
+   * <p>Sample code:
+   *
+   * <pre><code>
+   * try (KeywordPlanKeywordServiceClient keywordPlanKeywordServiceClient = KeywordPlanKeywordServiceClient.create()) {
+   *   KeywordPlanKeywordName resourceName = KeywordPlanKeywordName.of("[CUSTOMER]", "[KEYWORD_PLAN_KEYWORD]");
+   *   KeywordPlanKeyword response = keywordPlanKeywordServiceClient.getKeywordPlanKeyword(resourceName.toString());
    * }
    * </code></pre>
    *
@@ -211,7 +190,6 @@ public class KeywordPlanKeywordServiceClient implements BackgroundResource {
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final KeywordPlanKeyword getKeywordPlanKeyword(String resourceName) {
-    KEYWORD_PLAN_KEYWORD_PATH_TEMPLATE.validate(resourceName, "getKeywordPlanKeyword");
     GetKeywordPlanKeywordRequest request =
         GetKeywordPlanKeywordRequest.newBuilder().setResourceName(resourceName).build();
     return getKeywordPlanKeyword(request);
@@ -225,9 +203,9 @@ public class KeywordPlanKeywordServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (KeywordPlanKeywordServiceClient keywordPlanKeywordServiceClient = KeywordPlanKeywordServiceClient.create()) {
-   *   String formattedResourceName = KeywordPlanKeywordServiceClient.formatKeywordPlanKeywordName("[CUSTOMER]", "[KEYWORD_PLAN_KEYWORD]");
+   *   KeywordPlanKeywordName resourceName = KeywordPlanKeywordName.of("[CUSTOMER]", "[KEYWORD_PLAN_KEYWORD]");
    *   GetKeywordPlanKeywordRequest request = GetKeywordPlanKeywordRequest.newBuilder()
-   *     .setResourceName(formattedResourceName)
+   *     .setResourceName(resourceName.toString())
    *     .build();
    *   KeywordPlanKeyword response = keywordPlanKeywordServiceClient.getKeywordPlanKeyword(request);
    * }
@@ -248,9 +226,9 @@ public class KeywordPlanKeywordServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (KeywordPlanKeywordServiceClient keywordPlanKeywordServiceClient = KeywordPlanKeywordServiceClient.create()) {
-   *   String formattedResourceName = KeywordPlanKeywordServiceClient.formatKeywordPlanKeywordName("[CUSTOMER]", "[KEYWORD_PLAN_KEYWORD]");
+   *   KeywordPlanKeywordName resourceName = KeywordPlanKeywordName.of("[CUSTOMER]", "[KEYWORD_PLAN_KEYWORD]");
    *   GetKeywordPlanKeywordRequest request = GetKeywordPlanKeywordRequest.newBuilder()
-   *     .setResourceName(formattedResourceName)
+   *     .setResourceName(resourceName.toString())
    *     .build();
    *   ApiFuture&lt;KeywordPlanKeyword&gt; future = keywordPlanKeywordServiceClient.getKeywordPlanKeywordCallable().futureCall(request);
    *   // Do something
@@ -261,49 +239,6 @@ public class KeywordPlanKeywordServiceClient implements BackgroundResource {
   public final UnaryCallable<GetKeywordPlanKeywordRequest, KeywordPlanKeyword>
       getKeywordPlanKeywordCallable() {
     return stub.getKeywordPlanKeywordCallable();
-  }
-
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
-  /**
-   * Creates, updates, or removes Keyword Plan keywords. Operation statuses are returned.
-   *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (KeywordPlanKeywordServiceClient keywordPlanKeywordServiceClient = KeywordPlanKeywordServiceClient.create()) {
-   *   String customerId = "";
-   *   List&lt;KeywordPlanKeywordOperation&gt; operations = new ArrayList&lt;&gt;();
-   *   boolean partialFailure = false;
-   *   boolean validateOnly = false;
-   *   MutateKeywordPlanKeywordsResponse response = keywordPlanKeywordServiceClient.mutateKeywordPlanKeywords(customerId, operations, partialFailure, validateOnly);
-   * }
-   * </code></pre>
-   *
-   * @param customerId Required. The ID of the customer whose Keyword Plan keywords are being
-   *     modified.
-   * @param operations Required. The list of operations to perform on individual Keyword Plan
-   *     keywords.
-   * @param partialFailure If true, successful operations will be carried out and invalid operations
-   *     will return errors. If false, all operations will be carried out in one transaction if and
-   *     only if they are all valid. Default is false.
-   * @param validateOnly If true, the request is validated but not executed. Only errors are
-   *     returned, not results.
-   * @throws com.google.api.gax.rpc.ApiException if the remote call fails
-   */
-  public final MutateKeywordPlanKeywordsResponse mutateKeywordPlanKeywords(
-      String customerId,
-      List<KeywordPlanKeywordOperation> operations,
-      boolean partialFailure,
-      boolean validateOnly) {
-
-    MutateKeywordPlanKeywordsRequest request =
-        MutateKeywordPlanKeywordsRequest.newBuilder()
-            .setCustomerId(customerId)
-            .addAllOperations(operations)
-            .setPartialFailure(partialFailure)
-            .setValidateOnly(validateOnly)
-            .build();
-    return mutateKeywordPlanKeywords(request);
   }
 
   // AUTO-GENERATED DOCUMENTATION AND METHOD
@@ -328,7 +263,6 @@ public class KeywordPlanKeywordServiceClient implements BackgroundResource {
    */
   public final MutateKeywordPlanKeywordsResponse mutateKeywordPlanKeywords(
       String customerId, List<KeywordPlanKeywordOperation> operations) {
-
     MutateKeywordPlanKeywordsRequest request =
         MutateKeywordPlanKeywordsRequest.newBuilder()
             .setCustomerId(customerId)

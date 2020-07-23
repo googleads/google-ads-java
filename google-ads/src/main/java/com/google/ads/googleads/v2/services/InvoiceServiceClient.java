@@ -1,5 +1,5 @@
 /*
- * Copyright 2019 Google LLC
+ * Copyright 2020 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -164,7 +164,7 @@ public class InvoiceServiceClient implements BackgroundResource {
    * }
    * </code></pre>
    *
-   * @param customerId The ID of the customer to fetch invoices for.
+   * @param customerId Required. The ID of the customer to fetch invoices for.
    * @param billingSetup Required. The billing setup resource name of the requested invoices.
    *     <p>`customers/{customer_id}/billingSetups/{billing_setup_id}`
    * @param issueYear Required. The issue year to retrieve invoices, in yyyy format. Only invoices
@@ -177,7 +177,6 @@ public class InvoiceServiceClient implements BackgroundResource {
       String billingSetup,
       String issueYear,
       MonthOfYearEnum.MonthOfYear issueMonth) {
-
     ListInvoicesRequest request =
         ListInvoicesRequest.newBuilder()
             .setCustomerId(customerId)

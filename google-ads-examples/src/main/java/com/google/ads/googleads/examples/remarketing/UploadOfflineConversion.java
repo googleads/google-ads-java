@@ -24,6 +24,7 @@ import com.google.ads.googleads.v4.errors.GoogleAdsException;
 import com.google.ads.googleads.v4.services.ClickConversion;
 import com.google.ads.googleads.v4.services.ClickConversionResult;
 import com.google.ads.googleads.v4.services.ConversionUploadServiceClient;
+import com.google.ads.googleads.v4.services.UploadClickConversionsRequest;
 import com.google.ads.googleads.v4.services.UploadClickConversionsResponse;
 import com.google.common.collect.ImmutableList;
 import com.google.protobuf.DoubleValue;
@@ -143,12 +144,12 @@ public class UploadOfflineConversion {
       // Uploads the click conversion. Partial failure should always be set to true.
       UploadClickConversionsResponse response =
           conversionUploadServiceClient.uploadClickConversions(
-              Long.toString(customerId),
-              ImmutableList.of(clickConversion),
-              // Enables partial failure (must be true).
-              true,
-              // Disables validate only.
-              false);
+              UploadClickConversionsRequest.newBuilder()
+                  .setCustomerId(Long.toString(customerId))
+                  .addConversions(clickConversion)
+                  // Enables partial failure (must be true).
+                  .setPartialFailure(true)
+                  .build());
 
       // Prints any partial errors returned.
       if (response.hasPartialFailureError()) {

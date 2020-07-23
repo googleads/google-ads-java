@@ -10,7 +10,7 @@ package com.google.ads.googleads.v1.resources;
  *
  * Protobuf type {@code google.ads.googleads.v1.resources.MediaVideo}
  */
-public  final class MediaVideo extends
+public final class MediaVideo extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v1.resources.MediaVideo)
     MediaVideoOrBuilder {
@@ -20,6 +20,13 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private MediaVideo() {
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new MediaVideo();
   }
 
   @java.lang.Override
@@ -35,7 +42,6 @@ private static final long serialVersionUID = 0L;
     if (extensionRegistry == null) {
       throw new java.lang.NullPointerException();
     }
-    int mutable_bitField0_ = 0;
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
         com.google.protobuf.UnknownFieldSet.newBuilder();
     try {
@@ -134,31 +140,36 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.Int64Value adDurationMillis_;
   /**
    * <pre>
-   * The duration of the Video in milliseconds.
+   * Output only. The duration of the Video in milliseconds.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value ad_duration_millis = 1;</code>
+   * <code>.google.protobuf.Int64Value ad_duration_millis = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the adDurationMillis field is set.
    */
+  @java.lang.Override
   public boolean hasAdDurationMillis() {
     return adDurationMillis_ != null;
   }
   /**
    * <pre>
-   * The duration of the Video in milliseconds.
+   * Output only. The duration of the Video in milliseconds.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value ad_duration_millis = 1;</code>
+   * <code>.google.protobuf.Int64Value ad_duration_millis = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The adDurationMillis.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getAdDurationMillis() {
     return adDurationMillis_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : adDurationMillis_;
   }
   /**
    * <pre>
-   * The duration of the Video in milliseconds.
+   * Output only. The duration of the Video in milliseconds.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value ad_duration_millis = 1;</code>
+   * <code>.google.protobuf.Int64Value ad_duration_millis = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getAdDurationMillisOrBuilder() {
     return getAdDurationMillis();
   }
@@ -167,31 +178,36 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.StringValue youtubeVideoId_;
   /**
    * <pre>
-   * The YouTube video ID (as seen in YouTube URLs).
+   * Immutable. The YouTube video ID (as seen in YouTube URLs).
    * </pre>
    *
-   * <code>.google.protobuf.StringValue youtube_video_id = 2;</code>
+   * <code>.google.protobuf.StringValue youtube_video_id = 2 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return Whether the youtubeVideoId field is set.
    */
+  @java.lang.Override
   public boolean hasYoutubeVideoId() {
     return youtubeVideoId_ != null;
   }
   /**
    * <pre>
-   * The YouTube video ID (as seen in YouTube URLs).
+   * Immutable. The YouTube video ID (as seen in YouTube URLs).
    * </pre>
    *
-   * <code>.google.protobuf.StringValue youtube_video_id = 2;</code>
+   * <code>.google.protobuf.StringValue youtube_video_id = 2 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The youtubeVideoId.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getYoutubeVideoId() {
     return youtubeVideoId_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : youtubeVideoId_;
   }
   /**
    * <pre>
-   * The YouTube video ID (as seen in YouTube URLs).
+   * Immutable. The YouTube video ID (as seen in YouTube URLs).
    * </pre>
    *
-   * <code>.google.protobuf.StringValue youtube_video_id = 2;</code>
+   * <code>.google.protobuf.StringValue youtube_video_id = 2 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getYoutubeVideoIdOrBuilder() {
     return getYoutubeVideoId();
   }
@@ -200,37 +216,42 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.StringValue advertisingIdCode_;
   /**
    * <pre>
-   * The Advertising Digital Identification code for this video, as defined by
+   * Output only. The Advertising Digital Identification code for this video, as defined by
    * the American Association of Advertising Agencies, used mainly for
    * television commercials.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue advertising_id_code = 3;</code>
+   * <code>.google.protobuf.StringValue advertising_id_code = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the advertisingIdCode field is set.
    */
+  @java.lang.Override
   public boolean hasAdvertisingIdCode() {
     return advertisingIdCode_ != null;
   }
   /**
    * <pre>
-   * The Advertising Digital Identification code for this video, as defined by
+   * Output only. The Advertising Digital Identification code for this video, as defined by
    * the American Association of Advertising Agencies, used mainly for
    * television commercials.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue advertising_id_code = 3;</code>
+   * <code>.google.protobuf.StringValue advertising_id_code = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The advertisingIdCode.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getAdvertisingIdCode() {
     return advertisingIdCode_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : advertisingIdCode_;
   }
   /**
    * <pre>
-   * The Advertising Digital Identification code for this video, as defined by
+   * Output only. The Advertising Digital Identification code for this video, as defined by
    * the American Association of Advertising Agencies, used mainly for
    * television commercials.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue advertising_id_code = 3;</code>
+   * <code>.google.protobuf.StringValue advertising_id_code = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getAdvertisingIdCodeOrBuilder() {
     return getAdvertisingIdCode();
   }
@@ -239,34 +260,39 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.StringValue isciCode_;
   /**
    * <pre>
-   * The Industry Standard Commercial Identifier code for this video, used
+   * Output only. The Industry Standard Commercial Identifier code for this video, used
    * mainly for television commercials.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue isci_code = 4;</code>
+   * <code>.google.protobuf.StringValue isci_code = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the isciCode field is set.
    */
+  @java.lang.Override
   public boolean hasIsciCode() {
     return isciCode_ != null;
   }
   /**
    * <pre>
-   * The Industry Standard Commercial Identifier code for this video, used
+   * Output only. The Industry Standard Commercial Identifier code for this video, used
    * mainly for television commercials.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue isci_code = 4;</code>
+   * <code>.google.protobuf.StringValue isci_code = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The isciCode.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getIsciCode() {
     return isciCode_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : isciCode_;
   }
   /**
    * <pre>
-   * The Industry Standard Commercial Identifier code for this video, used
+   * Output only. The Industry Standard Commercial Identifier code for this video, used
    * mainly for television commercials.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue isci_code = 4;</code>
+   * <code>.google.protobuf.StringValue isci_code = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getIsciCodeOrBuilder() {
     return getIsciCode();
   }
@@ -685,20 +711,22 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> adDurationMillisBuilder_;
     /**
      * <pre>
-     * The duration of the Video in milliseconds.
+     * Output only. The duration of the Video in milliseconds.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value ad_duration_millis = 1;</code>
+     * <code>.google.protobuf.Int64Value ad_duration_millis = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the adDurationMillis field is set.
      */
     public boolean hasAdDurationMillis() {
       return adDurationMillisBuilder_ != null || adDurationMillis_ != null;
     }
     /**
      * <pre>
-     * The duration of the Video in milliseconds.
+     * Output only. The duration of the Video in milliseconds.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value ad_duration_millis = 1;</code>
+     * <code>.google.protobuf.Int64Value ad_duration_millis = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The adDurationMillis.
      */
     public com.google.protobuf.Int64Value getAdDurationMillis() {
       if (adDurationMillisBuilder_ == null) {
@@ -709,10 +737,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The duration of the Video in milliseconds.
+     * Output only. The duration of the Video in milliseconds.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value ad_duration_millis = 1;</code>
+     * <code>.google.protobuf.Int64Value ad_duration_millis = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setAdDurationMillis(com.google.protobuf.Int64Value value) {
       if (adDurationMillisBuilder_ == null) {
@@ -729,10 +757,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The duration of the Video in milliseconds.
+     * Output only. The duration of the Video in milliseconds.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value ad_duration_millis = 1;</code>
+     * <code>.google.protobuf.Int64Value ad_duration_millis = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setAdDurationMillis(
         com.google.protobuf.Int64Value.Builder builderForValue) {
@@ -747,10 +775,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The duration of the Video in milliseconds.
+     * Output only. The duration of the Video in milliseconds.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value ad_duration_millis = 1;</code>
+     * <code>.google.protobuf.Int64Value ad_duration_millis = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder mergeAdDurationMillis(com.google.protobuf.Int64Value value) {
       if (adDurationMillisBuilder_ == null) {
@@ -769,10 +797,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The duration of the Video in milliseconds.
+     * Output only. The duration of the Video in milliseconds.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value ad_duration_millis = 1;</code>
+     * <code>.google.protobuf.Int64Value ad_duration_millis = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearAdDurationMillis() {
       if (adDurationMillisBuilder_ == null) {
@@ -787,10 +815,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The duration of the Video in milliseconds.
+     * Output only. The duration of the Video in milliseconds.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value ad_duration_millis = 1;</code>
+     * <code>.google.protobuf.Int64Value ad_duration_millis = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int64Value.Builder getAdDurationMillisBuilder() {
       
@@ -799,10 +827,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The duration of the Video in milliseconds.
+     * Output only. The duration of the Video in milliseconds.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value ad_duration_millis = 1;</code>
+     * <code>.google.protobuf.Int64Value ad_duration_millis = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int64ValueOrBuilder getAdDurationMillisOrBuilder() {
       if (adDurationMillisBuilder_ != null) {
@@ -814,10 +842,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The duration of the Video in milliseconds.
+     * Output only. The duration of the Video in milliseconds.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value ad_duration_millis = 1;</code>
+     * <code>.google.protobuf.Int64Value ad_duration_millis = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
@@ -838,20 +866,22 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> youtubeVideoIdBuilder_;
     /**
      * <pre>
-     * The YouTube video ID (as seen in YouTube URLs).
+     * Immutable. The YouTube video ID (as seen in YouTube URLs).
      * </pre>
      *
-     * <code>.google.protobuf.StringValue youtube_video_id = 2;</code>
+     * <code>.google.protobuf.StringValue youtube_video_id = 2 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * @return Whether the youtubeVideoId field is set.
      */
     public boolean hasYoutubeVideoId() {
       return youtubeVideoIdBuilder_ != null || youtubeVideoId_ != null;
     }
     /**
      * <pre>
-     * The YouTube video ID (as seen in YouTube URLs).
+     * Immutable. The YouTube video ID (as seen in YouTube URLs).
      * </pre>
      *
-     * <code>.google.protobuf.StringValue youtube_video_id = 2;</code>
+     * <code>.google.protobuf.StringValue youtube_video_id = 2 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * @return The youtubeVideoId.
      */
     public com.google.protobuf.StringValue getYoutubeVideoId() {
       if (youtubeVideoIdBuilder_ == null) {
@@ -862,10 +892,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The YouTube video ID (as seen in YouTube URLs).
+     * Immutable. The YouTube video ID (as seen in YouTube URLs).
      * </pre>
      *
-     * <code>.google.protobuf.StringValue youtube_video_id = 2;</code>
+     * <code>.google.protobuf.StringValue youtube_video_id = 2 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder setYoutubeVideoId(com.google.protobuf.StringValue value) {
       if (youtubeVideoIdBuilder_ == null) {
@@ -882,10 +912,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The YouTube video ID (as seen in YouTube URLs).
+     * Immutable. The YouTube video ID (as seen in YouTube URLs).
      * </pre>
      *
-     * <code>.google.protobuf.StringValue youtube_video_id = 2;</code>
+     * <code>.google.protobuf.StringValue youtube_video_id = 2 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder setYoutubeVideoId(
         com.google.protobuf.StringValue.Builder builderForValue) {
@@ -900,10 +930,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The YouTube video ID (as seen in YouTube URLs).
+     * Immutable. The YouTube video ID (as seen in YouTube URLs).
      * </pre>
      *
-     * <code>.google.protobuf.StringValue youtube_video_id = 2;</code>
+     * <code>.google.protobuf.StringValue youtube_video_id = 2 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder mergeYoutubeVideoId(com.google.protobuf.StringValue value) {
       if (youtubeVideoIdBuilder_ == null) {
@@ -922,10 +952,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The YouTube video ID (as seen in YouTube URLs).
+     * Immutable. The YouTube video ID (as seen in YouTube URLs).
      * </pre>
      *
-     * <code>.google.protobuf.StringValue youtube_video_id = 2;</code>
+     * <code>.google.protobuf.StringValue youtube_video_id = 2 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder clearYoutubeVideoId() {
       if (youtubeVideoIdBuilder_ == null) {
@@ -940,10 +970,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The YouTube video ID (as seen in YouTube URLs).
+     * Immutable. The YouTube video ID (as seen in YouTube URLs).
      * </pre>
      *
-     * <code>.google.protobuf.StringValue youtube_video_id = 2;</code>
+     * <code>.google.protobuf.StringValue youtube_video_id = 2 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public com.google.protobuf.StringValue.Builder getYoutubeVideoIdBuilder() {
       
@@ -952,10 +982,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The YouTube video ID (as seen in YouTube URLs).
+     * Immutable. The YouTube video ID (as seen in YouTube URLs).
      * </pre>
      *
-     * <code>.google.protobuf.StringValue youtube_video_id = 2;</code>
+     * <code>.google.protobuf.StringValue youtube_video_id = 2 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public com.google.protobuf.StringValueOrBuilder getYoutubeVideoIdOrBuilder() {
       if (youtubeVideoIdBuilder_ != null) {
@@ -967,10 +997,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The YouTube video ID (as seen in YouTube URLs).
+     * Immutable. The YouTube video ID (as seen in YouTube URLs).
      * </pre>
      *
-     * <code>.google.protobuf.StringValue youtube_video_id = 2;</code>
+     * <code>.google.protobuf.StringValue youtube_video_id = 2 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
@@ -991,24 +1021,26 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> advertisingIdCodeBuilder_;
     /**
      * <pre>
-     * The Advertising Digital Identification code for this video, as defined by
+     * Output only. The Advertising Digital Identification code for this video, as defined by
      * the American Association of Advertising Agencies, used mainly for
      * television commercials.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue advertising_id_code = 3;</code>
+     * <code>.google.protobuf.StringValue advertising_id_code = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the advertisingIdCode field is set.
      */
     public boolean hasAdvertisingIdCode() {
       return advertisingIdCodeBuilder_ != null || advertisingIdCode_ != null;
     }
     /**
      * <pre>
-     * The Advertising Digital Identification code for this video, as defined by
+     * Output only. The Advertising Digital Identification code for this video, as defined by
      * the American Association of Advertising Agencies, used mainly for
      * television commercials.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue advertising_id_code = 3;</code>
+     * <code>.google.protobuf.StringValue advertising_id_code = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The advertisingIdCode.
      */
     public com.google.protobuf.StringValue getAdvertisingIdCode() {
       if (advertisingIdCodeBuilder_ == null) {
@@ -1019,12 +1051,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The Advertising Digital Identification code for this video, as defined by
+     * Output only. The Advertising Digital Identification code for this video, as defined by
      * the American Association of Advertising Agencies, used mainly for
      * television commercials.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue advertising_id_code = 3;</code>
+     * <code>.google.protobuf.StringValue advertising_id_code = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setAdvertisingIdCode(com.google.protobuf.StringValue value) {
       if (advertisingIdCodeBuilder_ == null) {
@@ -1041,12 +1073,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The Advertising Digital Identification code for this video, as defined by
+     * Output only. The Advertising Digital Identification code for this video, as defined by
      * the American Association of Advertising Agencies, used mainly for
      * television commercials.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue advertising_id_code = 3;</code>
+     * <code>.google.protobuf.StringValue advertising_id_code = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setAdvertisingIdCode(
         com.google.protobuf.StringValue.Builder builderForValue) {
@@ -1061,12 +1093,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The Advertising Digital Identification code for this video, as defined by
+     * Output only. The Advertising Digital Identification code for this video, as defined by
      * the American Association of Advertising Agencies, used mainly for
      * television commercials.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue advertising_id_code = 3;</code>
+     * <code>.google.protobuf.StringValue advertising_id_code = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder mergeAdvertisingIdCode(com.google.protobuf.StringValue value) {
       if (advertisingIdCodeBuilder_ == null) {
@@ -1085,12 +1117,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The Advertising Digital Identification code for this video, as defined by
+     * Output only. The Advertising Digital Identification code for this video, as defined by
      * the American Association of Advertising Agencies, used mainly for
      * television commercials.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue advertising_id_code = 3;</code>
+     * <code>.google.protobuf.StringValue advertising_id_code = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearAdvertisingIdCode() {
       if (advertisingIdCodeBuilder_ == null) {
@@ -1105,12 +1137,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The Advertising Digital Identification code for this video, as defined by
+     * Output only. The Advertising Digital Identification code for this video, as defined by
      * the American Association of Advertising Agencies, used mainly for
      * television commercials.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue advertising_id_code = 3;</code>
+     * <code>.google.protobuf.StringValue advertising_id_code = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValue.Builder getAdvertisingIdCodeBuilder() {
       
@@ -1119,12 +1151,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The Advertising Digital Identification code for this video, as defined by
+     * Output only. The Advertising Digital Identification code for this video, as defined by
      * the American Association of Advertising Agencies, used mainly for
      * television commercials.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue advertising_id_code = 3;</code>
+     * <code>.google.protobuf.StringValue advertising_id_code = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValueOrBuilder getAdvertisingIdCodeOrBuilder() {
       if (advertisingIdCodeBuilder_ != null) {
@@ -1136,12 +1168,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The Advertising Digital Identification code for this video, as defined by
+     * Output only. The Advertising Digital Identification code for this video, as defined by
      * the American Association of Advertising Agencies, used mainly for
      * television commercials.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue advertising_id_code = 3;</code>
+     * <code>.google.protobuf.StringValue advertising_id_code = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
@@ -1162,22 +1194,24 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> isciCodeBuilder_;
     /**
      * <pre>
-     * The Industry Standard Commercial Identifier code for this video, used
+     * Output only. The Industry Standard Commercial Identifier code for this video, used
      * mainly for television commercials.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue isci_code = 4;</code>
+     * <code>.google.protobuf.StringValue isci_code = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the isciCode field is set.
      */
     public boolean hasIsciCode() {
       return isciCodeBuilder_ != null || isciCode_ != null;
     }
     /**
      * <pre>
-     * The Industry Standard Commercial Identifier code for this video, used
+     * Output only. The Industry Standard Commercial Identifier code for this video, used
      * mainly for television commercials.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue isci_code = 4;</code>
+     * <code>.google.protobuf.StringValue isci_code = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The isciCode.
      */
     public com.google.protobuf.StringValue getIsciCode() {
       if (isciCodeBuilder_ == null) {
@@ -1188,11 +1222,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The Industry Standard Commercial Identifier code for this video, used
+     * Output only. The Industry Standard Commercial Identifier code for this video, used
      * mainly for television commercials.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue isci_code = 4;</code>
+     * <code>.google.protobuf.StringValue isci_code = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setIsciCode(com.google.protobuf.StringValue value) {
       if (isciCodeBuilder_ == null) {
@@ -1209,11 +1243,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The Industry Standard Commercial Identifier code for this video, used
+     * Output only. The Industry Standard Commercial Identifier code for this video, used
      * mainly for television commercials.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue isci_code = 4;</code>
+     * <code>.google.protobuf.StringValue isci_code = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setIsciCode(
         com.google.protobuf.StringValue.Builder builderForValue) {
@@ -1228,11 +1262,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The Industry Standard Commercial Identifier code for this video, used
+     * Output only. The Industry Standard Commercial Identifier code for this video, used
      * mainly for television commercials.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue isci_code = 4;</code>
+     * <code>.google.protobuf.StringValue isci_code = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder mergeIsciCode(com.google.protobuf.StringValue value) {
       if (isciCodeBuilder_ == null) {
@@ -1251,11 +1285,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The Industry Standard Commercial Identifier code for this video, used
+     * Output only. The Industry Standard Commercial Identifier code for this video, used
      * mainly for television commercials.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue isci_code = 4;</code>
+     * <code>.google.protobuf.StringValue isci_code = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearIsciCode() {
       if (isciCodeBuilder_ == null) {
@@ -1270,11 +1304,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The Industry Standard Commercial Identifier code for this video, used
+     * Output only. The Industry Standard Commercial Identifier code for this video, used
      * mainly for television commercials.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue isci_code = 4;</code>
+     * <code>.google.protobuf.StringValue isci_code = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValue.Builder getIsciCodeBuilder() {
       
@@ -1283,11 +1317,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The Industry Standard Commercial Identifier code for this video, used
+     * Output only. The Industry Standard Commercial Identifier code for this video, used
      * mainly for television commercials.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue isci_code = 4;</code>
+     * <code>.google.protobuf.StringValue isci_code = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValueOrBuilder getIsciCodeOrBuilder() {
       if (isciCodeBuilder_ != null) {
@@ -1299,11 +1333,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The Industry Standard Commercial Identifier code for this video, used
+     * Output only. The Industry Standard Commercial Identifier code for this video, used
      * mainly for television commercials.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue isci_code = 4;</code>
+     * <code>.google.protobuf.StringValue isci_code = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 

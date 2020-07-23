@@ -18,6 +18,7 @@ public interface UserListRuleInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v1.enums.UserListRuleTypeEnum.UserListRuleType rule_type = 1;</code>
+   * @return The enum numeric value on the wire for ruleType.
    */
   int getRuleTypeValue();
   /**
@@ -31,6 +32,7 @@ public interface UserListRuleInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v1.enums.UserListRuleTypeEnum.UserListRuleType rule_type = 1;</code>
+   * @return The ruleType.
    */
   com.google.ads.googleads.v1.enums.UserListRuleTypeEnum.UserListRuleType getRuleType();
 

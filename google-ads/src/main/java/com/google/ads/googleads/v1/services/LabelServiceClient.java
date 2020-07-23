@@ -1,5 +1,5 @@
 /*
- * Copyright 2019 Google LLC
+ * Copyright 2020 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -21,7 +21,6 @@ import com.google.ads.googleads.v1.services.stub.LabelServiceStubSettings;
 import com.google.api.core.BetaApi;
 import com.google.api.gax.core.BackgroundResource;
 import com.google.api.gax.rpc.UnaryCallable;
-import com.google.api.pathtemplate.PathTemplate;
 import java.io.IOException;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
@@ -37,8 +36,8 @@ import javax.annotation.Generated;
  * <pre>
  * <code>
  * try (LabelServiceClient labelServiceClient = LabelServiceClient.create()) {
- *   String formattedResourceName = LabelServiceClient.formatLabelName("[CUSTOMER]", "[LABEL]");
- *   Label response = labelServiceClient.getLabel(formattedResourceName);
+ *   LabelName resourceName = LabelName.of("[CUSTOMER]", "[LABEL]");
+ *   Label response = labelServiceClient.getLabel(resourceName);
  * }
  * </code>
  * </pre>
@@ -99,41 +98,6 @@ public class LabelServiceClient implements BackgroundResource {
   private final LabelServiceSettings settings;
   private final LabelServiceStub stub;
 
-  private static final PathTemplate LABEL_PATH_TEMPLATE =
-      PathTemplate.createWithoutUrlEncoding("customers/{customer}/labels/{label}");
-
-  /**
-   * Formats a string containing the fully-qualified path to represent a label resource.
-   *
-   * @deprecated Use the {@link LabelName} class instead.
-   */
-  @Deprecated
-  public static final String formatLabelName(String customer, String label) {
-    return LABEL_PATH_TEMPLATE.instantiate(
-        "customer", customer,
-        "label", label);
-  }
-
-  /**
-   * Parses the customer from the given fully-qualified path which represents a label resource.
-   *
-   * @deprecated Use the {@link LabelName} class instead.
-   */
-  @Deprecated
-  public static final String parseCustomerFromLabelName(String labelName) {
-    return LABEL_PATH_TEMPLATE.parse(labelName).get("customer");
-  }
-
-  /**
-   * Parses the label from the given fully-qualified path which represents a label resource.
-   *
-   * @deprecated Use the {@link LabelName} class instead.
-   */
-  @Deprecated
-  public static final String parseLabelFromLabelName(String labelName) {
-    return LABEL_PATH_TEMPLATE.parse(labelName).get("label");
-  }
-
   /** Constructs an instance of LabelServiceClient with default settings. */
   public static final LabelServiceClient create() throws IOException {
     return create(LabelServiceSettings.newBuilder().build());
@@ -189,16 +153,39 @@ public class LabelServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (LabelServiceClient labelServiceClient = LabelServiceClient.create()) {
-   *   String formattedResourceName = LabelServiceClient.formatLabelName("[CUSTOMER]", "[LABEL]");
-   *   Label response = labelServiceClient.getLabel(formattedResourceName);
+   *   LabelName resourceName = LabelName.of("[CUSTOMER]", "[LABEL]");
+   *   Label response = labelServiceClient.getLabel(resourceName);
    * }
    * </code></pre>
    *
-   * @param resourceName The resource name of the label to fetch.
+   * @param resourceName Required. The resource name of the label to fetch.
+   * @throws com.google.api.gax.rpc.ApiException if the remote call fails
+   */
+  public final Label getLabel(LabelName resourceName) {
+    GetLabelRequest request =
+        GetLabelRequest.newBuilder()
+            .setResourceName(resourceName == null ? null : resourceName.toString())
+            .build();
+    return getLabel(request);
+  }
+
+  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  /**
+   * Returns the requested label in full detail.
+   *
+   * <p>Sample code:
+   *
+   * <pre><code>
+   * try (LabelServiceClient labelServiceClient = LabelServiceClient.create()) {
+   *   LabelName resourceName = LabelName.of("[CUSTOMER]", "[LABEL]");
+   *   Label response = labelServiceClient.getLabel(resourceName.toString());
+   * }
+   * </code></pre>
+   *
+   * @param resourceName Required. The resource name of the label to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final Label getLabel(String resourceName) {
-    LABEL_PATH_TEMPLATE.validate(resourceName, "getLabel");
     GetLabelRequest request = GetLabelRequest.newBuilder().setResourceName(resourceName).build();
     return getLabel(request);
   }
@@ -211,9 +198,9 @@ public class LabelServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (LabelServiceClient labelServiceClient = LabelServiceClient.create()) {
-   *   String formattedResourceName = LabelServiceClient.formatLabelName("[CUSTOMER]", "[LABEL]");
+   *   LabelName resourceName = LabelName.of("[CUSTOMER]", "[LABEL]");
    *   GetLabelRequest request = GetLabelRequest.newBuilder()
-   *     .setResourceName(formattedResourceName)
+   *     .setResourceName(resourceName.toString())
    *     .build();
    *   Label response = labelServiceClient.getLabel(request);
    * }
@@ -234,9 +221,9 @@ public class LabelServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (LabelServiceClient labelServiceClient = LabelServiceClient.create()) {
-   *   String formattedResourceName = LabelServiceClient.formatLabelName("[CUSTOMER]", "[LABEL]");
+   *   LabelName resourceName = LabelName.of("[CUSTOMER]", "[LABEL]");
    *   GetLabelRequest request = GetLabelRequest.newBuilder()
-   *     .setResourceName(formattedResourceName)
+   *     .setResourceName(resourceName.toString())
    *     .build();
    *   ApiFuture&lt;Label&gt; future = labelServiceClient.getLabelCallable().futureCall(request);
    *   // Do something
@@ -258,58 +245,16 @@ public class LabelServiceClient implements BackgroundResource {
    * try (LabelServiceClient labelServiceClient = LabelServiceClient.create()) {
    *   String customerId = "";
    *   List&lt;LabelOperation&gt; operations = new ArrayList&lt;&gt;();
-   *   boolean partialFailure = false;
-   *   boolean validateOnly = false;
-   *   MutateLabelsResponse response = labelServiceClient.mutateLabels(customerId, operations, partialFailure, validateOnly);
-   * }
-   * </code></pre>
-   *
-   * @param customerId ID of the customer whose labels are being modified.
-   * @param operations The list of operations to perform on labels.
-   * @param partialFailure If true, successful operations will be carried out and invalid operations
-   *     will return errors. If false, all operations will be carried out in one transaction if and
-   *     only if they are all valid. Default is false.
-   * @param validateOnly If true, the request is validated but not executed. Only errors are
-   *     returned, not results.
-   * @throws com.google.api.gax.rpc.ApiException if the remote call fails
-   */
-  public final MutateLabelsResponse mutateLabels(
-      String customerId,
-      List<LabelOperation> operations,
-      boolean partialFailure,
-      boolean validateOnly) {
-
-    MutateLabelsRequest request =
-        MutateLabelsRequest.newBuilder()
-            .setCustomerId(customerId)
-            .addAllOperations(operations)
-            .setPartialFailure(partialFailure)
-            .setValidateOnly(validateOnly)
-            .build();
-    return mutateLabels(request);
-  }
-
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
-  /**
-   * Creates, updates, or removes labels. Operation statuses are returned.
-   *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (LabelServiceClient labelServiceClient = LabelServiceClient.create()) {
-   *   String customerId = "";
-   *   List&lt;LabelOperation&gt; operations = new ArrayList&lt;&gt;();
    *   MutateLabelsResponse response = labelServiceClient.mutateLabels(customerId, operations);
    * }
    * </code></pre>
    *
-   * @param customerId ID of the customer whose labels are being modified.
-   * @param operations The list of operations to perform on labels.
+   * @param customerId Required. ID of the customer whose labels are being modified.
+   * @param operations Required. The list of operations to perform on labels.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final MutateLabelsResponse mutateLabels(
       String customerId, List<LabelOperation> operations) {
-
     MutateLabelsRequest request =
         MutateLabelsRequest.newBuilder()
             .setCustomerId(customerId)

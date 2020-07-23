@@ -10,7 +10,7 @@ package com.google.ads.googleads.v1.services;
  *
  * Protobuf type {@code google.ads.googleads.v1.services.MutateMerchantCenterLinkRequest}
  */
-public  final class MutateMerchantCenterLinkRequest extends
+public final class MutateMerchantCenterLinkRequest extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v1.services.MutateMerchantCenterLinkRequest)
     MutateMerchantCenterLinkRequestOrBuilder {
@@ -21,6 +21,13 @@ private static final long serialVersionUID = 0L;
   }
   private MutateMerchantCenterLinkRequest() {
     customerId_ = "";
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new MutateMerchantCenterLinkRequest();
   }
 
   @java.lang.Override
@@ -36,7 +43,6 @@ private static final long serialVersionUID = 0L;
     if (extensionRegistry == null) {
       throw new java.lang.NullPointerException();
     }
-    int mutable_bitField0_ = 0;
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
         com.google.protobuf.UnknownFieldSet.newBuilder();
     try {
@@ -102,11 +108,13 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object customerId_;
   /**
    * <pre>
-   * The ID of the customer being modified.
+   * Required. The ID of the customer being modified.
    * </pre>
    *
-   * <code>string customer_id = 1;</code>
+   * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+   * @return The customerId.
    */
+  @java.lang.Override
   public java.lang.String getCustomerId() {
     java.lang.Object ref = customerId_;
     if (ref instanceof java.lang.String) {
@@ -121,11 +129,13 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The ID of the customer being modified.
+   * Required. The ID of the customer being modified.
    * </pre>
    *
-   * <code>string customer_id = 1;</code>
+   * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+   * @return The bytes for customerId.
    */
+  @java.lang.Override
   public com.google.protobuf.ByteString
       getCustomerIdBytes() {
     java.lang.Object ref = customerId_;
@@ -144,31 +154,36 @@ private static final long serialVersionUID = 0L;
   private com.google.ads.googleads.v1.services.MerchantCenterLinkOperation operation_;
   /**
    * <pre>
-   * The operation to perform on the link
+   * Required. The operation to perform on the link
    * </pre>
    *
-   * <code>.google.ads.googleads.v1.services.MerchantCenterLinkOperation operation = 2;</code>
+   * <code>.google.ads.googleads.v1.services.MerchantCenterLinkOperation operation = 2 [(.google.api.field_behavior) = REQUIRED];</code>
+   * @return Whether the operation field is set.
    */
+  @java.lang.Override
   public boolean hasOperation() {
     return operation_ != null;
   }
   /**
    * <pre>
-   * The operation to perform on the link
+   * Required. The operation to perform on the link
    * </pre>
    *
-   * <code>.google.ads.googleads.v1.services.MerchantCenterLinkOperation operation = 2;</code>
+   * <code>.google.ads.googleads.v1.services.MerchantCenterLinkOperation operation = 2 [(.google.api.field_behavior) = REQUIRED];</code>
+   * @return The operation.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.services.MerchantCenterLinkOperation getOperation() {
     return operation_ == null ? com.google.ads.googleads.v1.services.MerchantCenterLinkOperation.getDefaultInstance() : operation_;
   }
   /**
    * <pre>
-   * The operation to perform on the link
+   * Required. The operation to perform on the link
    * </pre>
    *
-   * <code>.google.ads.googleads.v1.services.MerchantCenterLinkOperation operation = 2;</code>
+   * <code>.google.ads.googleads.v1.services.MerchantCenterLinkOperation operation = 2 [(.google.api.field_behavior) = REQUIRED];</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.services.MerchantCenterLinkOperationOrBuilder getOperationOrBuilder() {
     return getOperation();
   }
@@ -512,10 +527,11 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object customerId_ = "";
     /**
      * <pre>
-     * The ID of the customer being modified.
+     * Required. The ID of the customer being modified.
      * </pre>
      *
-     * <code>string customer_id = 1;</code>
+     * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+     * @return The customerId.
      */
     public java.lang.String getCustomerId() {
       java.lang.Object ref = customerId_;
@@ -531,10 +547,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the customer being modified.
+     * Required. The ID of the customer being modified.
      * </pre>
      *
-     * <code>string customer_id = 1;</code>
+     * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+     * @return The bytes for customerId.
      */
     public com.google.protobuf.ByteString
         getCustomerIdBytes() {
@@ -551,10 +568,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the customer being modified.
+     * Required. The ID of the customer being modified.
      * </pre>
      *
-     * <code>string customer_id = 1;</code>
+     * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+     * @param value The customerId to set.
+     * @return This builder for chaining.
      */
     public Builder setCustomerId(
         java.lang.String value) {
@@ -568,10 +587,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the customer being modified.
+     * Required. The ID of the customer being modified.
      * </pre>
      *
-     * <code>string customer_id = 1;</code>
+     * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+     * @return This builder for chaining.
      */
     public Builder clearCustomerId() {
       
@@ -581,10 +601,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the customer being modified.
+     * Required. The ID of the customer being modified.
      * </pre>
      *
-     * <code>string customer_id = 1;</code>
+     * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+     * @param value The bytes for customerId to set.
+     * @return This builder for chaining.
      */
     public Builder setCustomerIdBytes(
         com.google.protobuf.ByteString value) {
@@ -603,20 +625,22 @@ private static final long serialVersionUID = 0L;
         com.google.ads.googleads.v1.services.MerchantCenterLinkOperation, com.google.ads.googleads.v1.services.MerchantCenterLinkOperation.Builder, com.google.ads.googleads.v1.services.MerchantCenterLinkOperationOrBuilder> operationBuilder_;
     /**
      * <pre>
-     * The operation to perform on the link
+     * Required. The operation to perform on the link
      * </pre>
      *
-     * <code>.google.ads.googleads.v1.services.MerchantCenterLinkOperation operation = 2;</code>
+     * <code>.google.ads.googleads.v1.services.MerchantCenterLinkOperation operation = 2 [(.google.api.field_behavior) = REQUIRED];</code>
+     * @return Whether the operation field is set.
      */
     public boolean hasOperation() {
       return operationBuilder_ != null || operation_ != null;
     }
     /**
      * <pre>
-     * The operation to perform on the link
+     * Required. The operation to perform on the link
      * </pre>
      *
-     * <code>.google.ads.googleads.v1.services.MerchantCenterLinkOperation operation = 2;</code>
+     * <code>.google.ads.googleads.v1.services.MerchantCenterLinkOperation operation = 2 [(.google.api.field_behavior) = REQUIRED];</code>
+     * @return The operation.
      */
     public com.google.ads.googleads.v1.services.MerchantCenterLinkOperation getOperation() {
       if (operationBuilder_ == null) {
@@ -627,10 +651,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The operation to perform on the link
+     * Required. The operation to perform on the link
      * </pre>
      *
-     * <code>.google.ads.googleads.v1.services.MerchantCenterLinkOperation operation = 2;</code>
+     * <code>.google.ads.googleads.v1.services.MerchantCenterLinkOperation operation = 2 [(.google.api.field_behavior) = REQUIRED];</code>
      */
     public Builder setOperation(com.google.ads.googleads.v1.services.MerchantCenterLinkOperation value) {
       if (operationBuilder_ == null) {
@@ -647,10 +671,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The operation to perform on the link
+     * Required. The operation to perform on the link
      * </pre>
      *
-     * <code>.google.ads.googleads.v1.services.MerchantCenterLinkOperation operation = 2;</code>
+     * <code>.google.ads.googleads.v1.services.MerchantCenterLinkOperation operation = 2 [(.google.api.field_behavior) = REQUIRED];</code>
      */
     public Builder setOperation(
         com.google.ads.googleads.v1.services.MerchantCenterLinkOperation.Builder builderForValue) {
@@ -665,10 +689,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The operation to perform on the link
+     * Required. The operation to perform on the link
      * </pre>
      *
-     * <code>.google.ads.googleads.v1.services.MerchantCenterLinkOperation operation = 2;</code>
+     * <code>.google.ads.googleads.v1.services.MerchantCenterLinkOperation operation = 2 [(.google.api.field_behavior) = REQUIRED];</code>
      */
     public Builder mergeOperation(com.google.ads.googleads.v1.services.MerchantCenterLinkOperation value) {
       if (operationBuilder_ == null) {
@@ -687,10 +711,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The operation to perform on the link
+     * Required. The operation to perform on the link
      * </pre>
      *
-     * <code>.google.ads.googleads.v1.services.MerchantCenterLinkOperation operation = 2;</code>
+     * <code>.google.ads.googleads.v1.services.MerchantCenterLinkOperation operation = 2 [(.google.api.field_behavior) = REQUIRED];</code>
      */
     public Builder clearOperation() {
       if (operationBuilder_ == null) {
@@ -705,10 +729,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The operation to perform on the link
+     * Required. The operation to perform on the link
      * </pre>
      *
-     * <code>.google.ads.googleads.v1.services.MerchantCenterLinkOperation operation = 2;</code>
+     * <code>.google.ads.googleads.v1.services.MerchantCenterLinkOperation operation = 2 [(.google.api.field_behavior) = REQUIRED];</code>
      */
     public com.google.ads.googleads.v1.services.MerchantCenterLinkOperation.Builder getOperationBuilder() {
       
@@ -717,10 +741,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The operation to perform on the link
+     * Required. The operation to perform on the link
      * </pre>
      *
-     * <code>.google.ads.googleads.v1.services.MerchantCenterLinkOperation operation = 2;</code>
+     * <code>.google.ads.googleads.v1.services.MerchantCenterLinkOperation operation = 2 [(.google.api.field_behavior) = REQUIRED];</code>
      */
     public com.google.ads.googleads.v1.services.MerchantCenterLinkOperationOrBuilder getOperationOrBuilder() {
       if (operationBuilder_ != null) {
@@ -732,10 +756,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The operation to perform on the link
+     * Required. The operation to perform on the link
      * </pre>
      *
-     * <code>.google.ads.googleads.v1.services.MerchantCenterLinkOperation operation = 2;</code>
+     * <code>.google.ads.googleads.v1.services.MerchantCenterLinkOperation operation = 2 [(.google.api.field_behavior) = REQUIRED];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v1.services.MerchantCenterLinkOperation, com.google.ads.googleads.v1.services.MerchantCenterLinkOperation.Builder, com.google.ads.googleads.v1.services.MerchantCenterLinkOperationOrBuilder> 

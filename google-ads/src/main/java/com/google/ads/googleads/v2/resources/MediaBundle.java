@@ -10,7 +10,7 @@ package com.google.ads.googleads.v2.resources;
  *
  * Protobuf type {@code google.ads.googleads.v2.resources.MediaBundle}
  */
-public  final class MediaBundle extends
+public final class MediaBundle extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v2.resources.MediaBundle)
     MediaBundleOrBuilder {
@@ -20,6 +20,13 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private MediaBundle() {
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new MediaBundle();
   }
 
   @java.lang.Override
@@ -35,7 +42,6 @@ private static final long serialVersionUID = 0L;
     if (extensionRegistry == null) {
       throw new java.lang.NullPointerException();
     }
-    int mutable_bitField0_ = 0;
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
         com.google.protobuf.UnknownFieldSet.newBuilder();
     try {
@@ -95,31 +101,36 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.BytesValue data_;
   /**
    * <pre>
-   * Raw zipped data.
+   * Immutable. Raw zipped data.
    * </pre>
    *
-   * <code>.google.protobuf.BytesValue data = 1;</code>
+   * <code>.google.protobuf.BytesValue data = 1 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return Whether the data field is set.
    */
+  @java.lang.Override
   public boolean hasData() {
     return data_ != null;
   }
   /**
    * <pre>
-   * Raw zipped data.
+   * Immutable. Raw zipped data.
    * </pre>
    *
-   * <code>.google.protobuf.BytesValue data = 1;</code>
+   * <code>.google.protobuf.BytesValue data = 1 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The data.
    */
+  @java.lang.Override
   public com.google.protobuf.BytesValue getData() {
     return data_ == null ? com.google.protobuf.BytesValue.getDefaultInstance() : data_;
   }
   /**
    * <pre>
-   * Raw zipped data.
+   * Immutable. Raw zipped data.
    * </pre>
    *
-   * <code>.google.protobuf.BytesValue data = 1;</code>
+   * <code>.google.protobuf.BytesValue data = 1 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.BytesValueOrBuilder getDataOrBuilder() {
     return getData();
   }
@@ -448,20 +459,22 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.BytesValue, com.google.protobuf.BytesValue.Builder, com.google.protobuf.BytesValueOrBuilder> dataBuilder_;
     /**
      * <pre>
-     * Raw zipped data.
+     * Immutable. Raw zipped data.
      * </pre>
      *
-     * <code>.google.protobuf.BytesValue data = 1;</code>
+     * <code>.google.protobuf.BytesValue data = 1 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * @return Whether the data field is set.
      */
     public boolean hasData() {
       return dataBuilder_ != null || data_ != null;
     }
     /**
      * <pre>
-     * Raw zipped data.
+     * Immutable. Raw zipped data.
      * </pre>
      *
-     * <code>.google.protobuf.BytesValue data = 1;</code>
+     * <code>.google.protobuf.BytesValue data = 1 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * @return The data.
      */
     public com.google.protobuf.BytesValue getData() {
       if (dataBuilder_ == null) {
@@ -472,10 +485,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Raw zipped data.
+     * Immutable. Raw zipped data.
      * </pre>
      *
-     * <code>.google.protobuf.BytesValue data = 1;</code>
+     * <code>.google.protobuf.BytesValue data = 1 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder setData(com.google.protobuf.BytesValue value) {
       if (dataBuilder_ == null) {
@@ -492,10 +505,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Raw zipped data.
+     * Immutable. Raw zipped data.
      * </pre>
      *
-     * <code>.google.protobuf.BytesValue data = 1;</code>
+     * <code>.google.protobuf.BytesValue data = 1 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder setData(
         com.google.protobuf.BytesValue.Builder builderForValue) {
@@ -510,10 +523,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Raw zipped data.
+     * Immutable. Raw zipped data.
      * </pre>
      *
-     * <code>.google.protobuf.BytesValue data = 1;</code>
+     * <code>.google.protobuf.BytesValue data = 1 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder mergeData(com.google.protobuf.BytesValue value) {
       if (dataBuilder_ == null) {
@@ -532,10 +545,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Raw zipped data.
+     * Immutable. Raw zipped data.
      * </pre>
      *
-     * <code>.google.protobuf.BytesValue data = 1;</code>
+     * <code>.google.protobuf.BytesValue data = 1 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder clearData() {
       if (dataBuilder_ == null) {
@@ -550,10 +563,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Raw zipped data.
+     * Immutable. Raw zipped data.
      * </pre>
      *
-     * <code>.google.protobuf.BytesValue data = 1;</code>
+     * <code>.google.protobuf.BytesValue data = 1 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public com.google.protobuf.BytesValue.Builder getDataBuilder() {
       
@@ -562,10 +575,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Raw zipped data.
+     * Immutable. Raw zipped data.
      * </pre>
      *
-     * <code>.google.protobuf.BytesValue data = 1;</code>
+     * <code>.google.protobuf.BytesValue data = 1 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public com.google.protobuf.BytesValueOrBuilder getDataOrBuilder() {
       if (dataBuilder_ != null) {
@@ -577,10 +590,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Raw zipped data.
+     * Immutable. Raw zipped data.
      * </pre>
      *
-     * <code>.google.protobuf.BytesValue data = 1;</code>
+     * <code>.google.protobuf.BytesValue data = 1 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.BytesValue, com.google.protobuf.BytesValue.Builder, com.google.protobuf.BytesValueOrBuilder> 

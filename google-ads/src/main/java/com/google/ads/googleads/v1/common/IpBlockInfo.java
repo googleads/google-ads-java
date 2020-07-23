@@ -14,7 +14,7 @@ package com.google.ads.googleads.v1.common;
  *
  * Protobuf type {@code google.ads.googleads.v1.common.IpBlockInfo}
  */
-public  final class IpBlockInfo extends
+public final class IpBlockInfo extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v1.common.IpBlockInfo)
     IpBlockInfoOrBuilder {
@@ -24,6 +24,13 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private IpBlockInfo() {
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new IpBlockInfo();
   }
 
   @java.lang.Override
@@ -39,7 +46,6 @@ private static final long serialVersionUID = 0L;
     if (extensionRegistry == null) {
       throw new java.lang.NullPointerException();
     }
-    int mutable_bitField0_ = 0;
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
         com.google.protobuf.UnknownFieldSet.newBuilder();
     try {
@@ -103,7 +109,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue ip_address = 1;</code>
+   * @return Whether the ipAddress field is set.
    */
+  @java.lang.Override
   public boolean hasIpAddress() {
     return ipAddress_ != null;
   }
@@ -113,7 +121,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue ip_address = 1;</code>
+   * @return The ipAddress.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getIpAddress() {
     return ipAddress_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : ipAddress_;
   }
@@ -124,6 +134,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue ip_address = 1;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getIpAddressOrBuilder() {
     return getIpAddress();
   }
@@ -460,6 +471,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue ip_address = 1;</code>
+     * @return Whether the ipAddress field is set.
      */
     public boolean hasIpAddress() {
       return ipAddressBuilder_ != null || ipAddress_ != null;
@@ -470,6 +482,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue ip_address = 1;</code>
+     * @return The ipAddress.
      */
     public com.google.protobuf.StringValue getIpAddress() {
       if (ipAddressBuilder_ == null) {

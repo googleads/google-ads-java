@@ -21,7 +21,7 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.10.0)",
+    value = "by gRPC proto compiler",
     comments = "Source: google/ads/googleads/v3/services/campaign_feed_service.proto")
 public final class CampaignFeedServiceGrpc {
 
@@ -30,86 +30,80 @@ public final class CampaignFeedServiceGrpc {
   public static final String SERVICE_NAME = "google.ads.googleads.v3.services.CampaignFeedService";
 
   // Static method descriptors that strictly reflect the proto.
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  @java.lang.Deprecated // Use {@link #getGetCampaignFeedMethod()} instead. 
-  public static final io.grpc.MethodDescriptor<com.google.ads.googleads.v3.services.GetCampaignFeedRequest,
-      com.google.ads.googleads.v3.resources.CampaignFeed> METHOD_GET_CAMPAIGN_FEED = getGetCampaignFeedMethodHelper();
-
   private static volatile io.grpc.MethodDescriptor<com.google.ads.googleads.v3.services.GetCampaignFeedRequest,
       com.google.ads.googleads.v3.resources.CampaignFeed> getGetCampaignFeedMethod;
 
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetCampaignFeed",
+      requestType = com.google.ads.googleads.v3.services.GetCampaignFeedRequest.class,
+      responseType = com.google.ads.googleads.v3.resources.CampaignFeed.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<com.google.ads.googleads.v3.services.GetCampaignFeedRequest,
       com.google.ads.googleads.v3.resources.CampaignFeed> getGetCampaignFeedMethod() {
-    return getGetCampaignFeedMethodHelper();
-  }
-
-  private static io.grpc.MethodDescriptor<com.google.ads.googleads.v3.services.GetCampaignFeedRequest,
-      com.google.ads.googleads.v3.resources.CampaignFeed> getGetCampaignFeedMethodHelper() {
     io.grpc.MethodDescriptor<com.google.ads.googleads.v3.services.GetCampaignFeedRequest, com.google.ads.googleads.v3.resources.CampaignFeed> getGetCampaignFeedMethod;
     if ((getGetCampaignFeedMethod = CampaignFeedServiceGrpc.getGetCampaignFeedMethod) == null) {
       synchronized (CampaignFeedServiceGrpc.class) {
         if ((getGetCampaignFeedMethod = CampaignFeedServiceGrpc.getGetCampaignFeedMethod) == null) {
-          CampaignFeedServiceGrpc.getGetCampaignFeedMethod = getGetCampaignFeedMethod = 
+          CampaignFeedServiceGrpc.getGetCampaignFeedMethod = getGetCampaignFeedMethod =
               io.grpc.MethodDescriptor.<com.google.ads.googleads.v3.services.GetCampaignFeedRequest, com.google.ads.googleads.v3.resources.CampaignFeed>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "google.ads.googleads.v3.services.CampaignFeedService", "GetCampaignFeed"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetCampaignFeed"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v3.services.GetCampaignFeedRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v3.resources.CampaignFeed.getDefaultInstance()))
-                  .setSchemaDescriptor(new CampaignFeedServiceMethodDescriptorSupplier("GetCampaignFeed"))
-                  .build();
-          }
+              .setSchemaDescriptor(new CampaignFeedServiceMethodDescriptorSupplier("GetCampaignFeed"))
+              .build();
         }
-     }
-     return getGetCampaignFeedMethod;
+      }
+    }
+    return getGetCampaignFeedMethod;
   }
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  @java.lang.Deprecated // Use {@link #getMutateCampaignFeedsMethod()} instead. 
-  public static final io.grpc.MethodDescriptor<com.google.ads.googleads.v3.services.MutateCampaignFeedsRequest,
-      com.google.ads.googleads.v3.services.MutateCampaignFeedsResponse> METHOD_MUTATE_CAMPAIGN_FEEDS = getMutateCampaignFeedsMethodHelper();
 
   private static volatile io.grpc.MethodDescriptor<com.google.ads.googleads.v3.services.MutateCampaignFeedsRequest,
       com.google.ads.googleads.v3.services.MutateCampaignFeedsResponse> getMutateCampaignFeedsMethod;
 
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "MutateCampaignFeeds",
+      requestType = com.google.ads.googleads.v3.services.MutateCampaignFeedsRequest.class,
+      responseType = com.google.ads.googleads.v3.services.MutateCampaignFeedsResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<com.google.ads.googleads.v3.services.MutateCampaignFeedsRequest,
       com.google.ads.googleads.v3.services.MutateCampaignFeedsResponse> getMutateCampaignFeedsMethod() {
-    return getMutateCampaignFeedsMethodHelper();
-  }
-
-  private static io.grpc.MethodDescriptor<com.google.ads.googleads.v3.services.MutateCampaignFeedsRequest,
-      com.google.ads.googleads.v3.services.MutateCampaignFeedsResponse> getMutateCampaignFeedsMethodHelper() {
     io.grpc.MethodDescriptor<com.google.ads.googleads.v3.services.MutateCampaignFeedsRequest, com.google.ads.googleads.v3.services.MutateCampaignFeedsResponse> getMutateCampaignFeedsMethod;
     if ((getMutateCampaignFeedsMethod = CampaignFeedServiceGrpc.getMutateCampaignFeedsMethod) == null) {
       synchronized (CampaignFeedServiceGrpc.class) {
         if ((getMutateCampaignFeedsMethod = CampaignFeedServiceGrpc.getMutateCampaignFeedsMethod) == null) {
-          CampaignFeedServiceGrpc.getMutateCampaignFeedsMethod = getMutateCampaignFeedsMethod = 
+          CampaignFeedServiceGrpc.getMutateCampaignFeedsMethod = getMutateCampaignFeedsMethod =
               io.grpc.MethodDescriptor.<com.google.ads.googleads.v3.services.MutateCampaignFeedsRequest, com.google.ads.googleads.v3.services.MutateCampaignFeedsResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "google.ads.googleads.v3.services.CampaignFeedService", "MutateCampaignFeeds"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "MutateCampaignFeeds"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v3.services.MutateCampaignFeedsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v3.services.MutateCampaignFeedsResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new CampaignFeedServiceMethodDescriptorSupplier("MutateCampaignFeeds"))
-                  .build();
-          }
+              .setSchemaDescriptor(new CampaignFeedServiceMethodDescriptorSupplier("MutateCampaignFeeds"))
+              .build();
         }
-     }
-     return getMutateCampaignFeedsMethod;
+      }
+    }
+    return getMutateCampaignFeedsMethod;
   }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static CampaignFeedServiceStub newStub(io.grpc.Channel channel) {
-    return new CampaignFeedServiceStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<CampaignFeedServiceStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<CampaignFeedServiceStub>() {
+        @java.lang.Override
+        public CampaignFeedServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new CampaignFeedServiceStub(channel, callOptions);
+        }
+      };
+    return CampaignFeedServiceStub.newStub(factory, channel);
   }
 
   /**
@@ -117,7 +111,14 @@ public final class CampaignFeedServiceGrpc {
    */
   public static CampaignFeedServiceBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new CampaignFeedServiceBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<CampaignFeedServiceBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<CampaignFeedServiceBlockingStub>() {
+        @java.lang.Override
+        public CampaignFeedServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new CampaignFeedServiceBlockingStub(channel, callOptions);
+        }
+      };
+    return CampaignFeedServiceBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -125,7 +126,14 @@ public final class CampaignFeedServiceGrpc {
    */
   public static CampaignFeedServiceFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new CampaignFeedServiceFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<CampaignFeedServiceFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<CampaignFeedServiceFutureStub>() {
+        @java.lang.Override
+        public CampaignFeedServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new CampaignFeedServiceFutureStub(channel, callOptions);
+        }
+      };
+    return CampaignFeedServiceFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -142,7 +150,7 @@ public final class CampaignFeedServiceGrpc {
      */
     public void getCampaignFeed(com.google.ads.googleads.v3.services.GetCampaignFeedRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v3.resources.CampaignFeed> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetCampaignFeedMethodHelper(), responseObserver);
+      asyncUnimplementedUnaryCall(getGetCampaignFeedMethod(), responseObserver);
     }
 
     /**
@@ -153,20 +161,20 @@ public final class CampaignFeedServiceGrpc {
      */
     public void mutateCampaignFeeds(com.google.ads.googleads.v3.services.MutateCampaignFeedsRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v3.services.MutateCampaignFeedsResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getMutateCampaignFeedsMethodHelper(), responseObserver);
+      asyncUnimplementedUnaryCall(getMutateCampaignFeedsMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
-            getGetCampaignFeedMethodHelper(),
+            getGetCampaignFeedMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 com.google.ads.googleads.v3.services.GetCampaignFeedRequest,
                 com.google.ads.googleads.v3.resources.CampaignFeed>(
                   this, METHODID_GET_CAMPAIGN_FEED)))
           .addMethod(
-            getMutateCampaignFeedsMethodHelper(),
+            getMutateCampaignFeedsMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 com.google.ads.googleads.v3.services.MutateCampaignFeedsRequest,
@@ -181,19 +189,15 @@ public final class CampaignFeedServiceGrpc {
    * Service to manage campaign feeds.
    * </pre>
    */
-  public static final class CampaignFeedServiceStub extends io.grpc.stub.AbstractStub<CampaignFeedServiceStub> {
-    private CampaignFeedServiceStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private CampaignFeedServiceStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class CampaignFeedServiceStub extends io.grpc.stub.AbstractAsyncStub<CampaignFeedServiceStub> {
+    private CampaignFeedServiceStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected CampaignFeedServiceStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected CampaignFeedServiceStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new CampaignFeedServiceStub(channel, callOptions);
     }
 
@@ -205,7 +209,7 @@ public final class CampaignFeedServiceGrpc {
     public void getCampaignFeed(com.google.ads.googleads.v3.services.GetCampaignFeedRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v3.resources.CampaignFeed> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(getGetCampaignFeedMethodHelper(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getGetCampaignFeedMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -217,7 +221,7 @@ public final class CampaignFeedServiceGrpc {
     public void mutateCampaignFeeds(com.google.ads.googleads.v3.services.MutateCampaignFeedsRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v3.services.MutateCampaignFeedsResponse> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(getMutateCampaignFeedsMethodHelper(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getMutateCampaignFeedsMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -226,19 +230,15 @@ public final class CampaignFeedServiceGrpc {
    * Service to manage campaign feeds.
    * </pre>
    */
-  public static final class CampaignFeedServiceBlockingStub extends io.grpc.stub.AbstractStub<CampaignFeedServiceBlockingStub> {
-    private CampaignFeedServiceBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private CampaignFeedServiceBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class CampaignFeedServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<CampaignFeedServiceBlockingStub> {
+    private CampaignFeedServiceBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected CampaignFeedServiceBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected CampaignFeedServiceBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new CampaignFeedServiceBlockingStub(channel, callOptions);
     }
 
@@ -249,7 +249,7 @@ public final class CampaignFeedServiceGrpc {
      */
     public com.google.ads.googleads.v3.resources.CampaignFeed getCampaignFeed(com.google.ads.googleads.v3.services.GetCampaignFeedRequest request) {
       return blockingUnaryCall(
-          getChannel(), getGetCampaignFeedMethodHelper(), getCallOptions(), request);
+          getChannel(), getGetCampaignFeedMethod(), getCallOptions(), request);
     }
 
     /**
@@ -260,7 +260,7 @@ public final class CampaignFeedServiceGrpc {
      */
     public com.google.ads.googleads.v3.services.MutateCampaignFeedsResponse mutateCampaignFeeds(com.google.ads.googleads.v3.services.MutateCampaignFeedsRequest request) {
       return blockingUnaryCall(
-          getChannel(), getMutateCampaignFeedsMethodHelper(), getCallOptions(), request);
+          getChannel(), getMutateCampaignFeedsMethod(), getCallOptions(), request);
     }
   }
 
@@ -269,19 +269,15 @@ public final class CampaignFeedServiceGrpc {
    * Service to manage campaign feeds.
    * </pre>
    */
-  public static final class CampaignFeedServiceFutureStub extends io.grpc.stub.AbstractStub<CampaignFeedServiceFutureStub> {
-    private CampaignFeedServiceFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private CampaignFeedServiceFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class CampaignFeedServiceFutureStub extends io.grpc.stub.AbstractFutureStub<CampaignFeedServiceFutureStub> {
+    private CampaignFeedServiceFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected CampaignFeedServiceFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected CampaignFeedServiceFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new CampaignFeedServiceFutureStub(channel, callOptions);
     }
 
@@ -293,7 +289,7 @@ public final class CampaignFeedServiceGrpc {
     public com.google.common.util.concurrent.ListenableFuture<com.google.ads.googleads.v3.resources.CampaignFeed> getCampaignFeed(
         com.google.ads.googleads.v3.services.GetCampaignFeedRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(getGetCampaignFeedMethodHelper(), getCallOptions()), request);
+          getChannel().newCall(getGetCampaignFeedMethod(), getCallOptions()), request);
     }
 
     /**
@@ -305,7 +301,7 @@ public final class CampaignFeedServiceGrpc {
     public com.google.common.util.concurrent.ListenableFuture<com.google.ads.googleads.v3.services.MutateCampaignFeedsResponse> mutateCampaignFeeds(
         com.google.ads.googleads.v3.services.MutateCampaignFeedsRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(getMutateCampaignFeedsMethodHelper(), getCallOptions()), request);
+          getChannel().newCall(getMutateCampaignFeedsMethod(), getCallOptions()), request);
     }
   }
 
@@ -398,8 +394,8 @@ public final class CampaignFeedServiceGrpc {
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new CampaignFeedServiceFileDescriptorSupplier())
-              .addMethod(getGetCampaignFeedMethodHelper())
-              .addMethod(getMutateCampaignFeedsMethodHelper())
+              .addMethod(getGetCampaignFeedMethod())
+              .addMethod(getMutateCampaignFeedsMethod())
               .build();
         }
       }

@@ -15,6 +15,7 @@ public interface BillingSetupOrBuilder extends
    * </pre>
    *
    * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * @return The resourceName.
    */
   java.lang.String getResourceName();
   /**
@@ -25,6 +26,7 @@ public interface BillingSetupOrBuilder extends
    * </pre>
    *
    * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * @return The bytes for resourceName.
    */
   com.google.protobuf.ByteString
       getResourceNameBytes();
@@ -35,6 +37,7 @@ public interface BillingSetupOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the id field is set.
    */
   boolean hasId();
   /**
@@ -43,6 +46,7 @@ public interface BillingSetupOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The id.
    */
   com.google.protobuf.Int64Value getId();
   /**
@@ -60,6 +64,7 @@ public interface BillingSetupOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.BillingSetupStatusEnum.BillingSetupStatus status = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The enum numeric value on the wire for status.
    */
   int getStatusValue();
   /**
@@ -68,6 +73,7 @@ public interface BillingSetupOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.BillingSetupStatusEnum.BillingSetupStatus status = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The status.
    */
   com.google.ads.googleads.v3.enums.BillingSetupStatusEnum.BillingSetupStatus getStatus();
 
@@ -83,6 +89,7 @@ public interface BillingSetupOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue payments_account = 11 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * @return Whether the paymentsAccount field is set.
    */
   boolean hasPaymentsAccount();
   /**
@@ -97,6 +104,7 @@ public interface BillingSetupOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue payments_account = 11 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * @return The paymentsAccount.
    */
   com.google.protobuf.StringValue getPaymentsAccount();
   /**
@@ -124,6 +132,7 @@ public interface BillingSetupOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.BillingSetup.PaymentsAccountInfo payments_account_info = 12 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return Whether the paymentsAccountInfo field is set.
    */
   boolean hasPaymentsAccountInfo();
   /**
@@ -136,6 +145,7 @@ public interface BillingSetupOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.BillingSetup.PaymentsAccountInfo payments_account_info = 12 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The paymentsAccountInfo.
    */
   com.google.ads.googleads.v3.resources.BillingSetup.PaymentsAccountInfo getPaymentsAccountInfo();
   /**
@@ -158,6 +168,7 @@ public interface BillingSetupOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue start_date_time = 9 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return Whether the startDateTime field is set.
    */
   boolean hasStartDateTime();
   /**
@@ -167,6 +178,7 @@ public interface BillingSetupOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue start_date_time = 9 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The startDateTime.
    */
   com.google.protobuf.StringValue getStartDateTime();
   /**
@@ -185,6 +197,7 @@ public interface BillingSetupOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.TimeTypeEnum.TimeType start_time_type = 10 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The enum numeric value on the wire for startTimeType.
    */
   int getStartTimeTypeValue();
   /**
@@ -193,6 +206,7 @@ public interface BillingSetupOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.TimeTypeEnum.TimeType start_time_type = 10 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The startTimeType.
    */
   com.google.ads.googleads.v3.enums.TimeTypeEnum.TimeType getStartTimeType();
 
@@ -202,6 +216,7 @@ public interface BillingSetupOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue end_date_time = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the endDateTime field is set.
    */
   boolean hasEndDateTime();
   /**
@@ -210,6 +225,7 @@ public interface BillingSetupOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue end_date_time = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The endDateTime.
    */
   com.google.protobuf.StringValue getEndDateTime();
   /**
@@ -227,6 +243,7 @@ public interface BillingSetupOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.TimeTypeEnum.TimeType end_time_type = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The enum numeric value on the wire for endTimeType.
    */
   int getEndTimeTypeValue();
   /**
@@ -235,6 +252,7 @@ public interface BillingSetupOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.TimeTypeEnum.TimeType end_time_type = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The endTimeType.
    */
   com.google.ads.googleads.v3.enums.TimeTypeEnum.TimeType getEndTimeType();
 

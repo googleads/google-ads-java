@@ -1,5 +1,5 @@
 /*
- * Copyright 2019 Google LLC
+ * Copyright 2020 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -21,7 +21,6 @@ import com.google.ads.googleads.v3.services.stub.CustomerExtensionSettingService
 import com.google.api.core.BetaApi;
 import com.google.api.gax.core.BackgroundResource;
 import com.google.api.gax.rpc.UnaryCallable;
-import com.google.api.pathtemplate.PathTemplate;
 import java.io.IOException;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
@@ -37,8 +36,8 @@ import javax.annotation.Generated;
  * <pre>
  * <code>
  * try (CustomerExtensionSettingServiceClient customerExtensionSettingServiceClient = CustomerExtensionSettingServiceClient.create()) {
- *   String formattedResourceName = CustomerExtensionSettingServiceClient.formatCustomerExtensionSettingName("[CUSTOMER]", "[CUSTOMER_EXTENSION_SETTING]");
- *   CustomerExtensionSetting response = customerExtensionSettingServiceClient.getCustomerExtensionSetting(formattedResourceName);
+ *   CustomerExtensionSettingName resourceName = CustomerExtensionSettingName.of("[CUSTOMER]", "[CUSTOMER_EXTENSION_SETTING]");
+ *   CustomerExtensionSetting response = customerExtensionSettingServiceClient.getCustomerExtensionSetting(resourceName);
  * }
  * </code>
  * </pre>
@@ -99,52 +98,6 @@ import javax.annotation.Generated;
 public class CustomerExtensionSettingServiceClient implements BackgroundResource {
   private final CustomerExtensionSettingServiceSettings settings;
   private final CustomerExtensionSettingServiceStub stub;
-
-  private static final PathTemplate CUSTOMER_EXTENSION_SETTING_PATH_TEMPLATE =
-      PathTemplate.createWithoutUrlEncoding(
-          "customers/{customer}/customerExtensionSettings/{customer_extension_setting}");
-
-  /**
-   * Formats a string containing the fully-qualified path to represent a customer_extension_setting
-   * resource.
-   *
-   * @deprecated Use the {@link CustomerExtensionSettingName} class instead.
-   */
-  @Deprecated
-  public static final String formatCustomerExtensionSettingName(
-      String customer, String customerExtensionSetting) {
-    return CUSTOMER_EXTENSION_SETTING_PATH_TEMPLATE.instantiate(
-        "customer", customer,
-        "customer_extension_setting", customerExtensionSetting);
-  }
-
-  /**
-   * Parses the customer from the given fully-qualified path which represents a
-   * customer_extension_setting resource.
-   *
-   * @deprecated Use the {@link CustomerExtensionSettingName} class instead.
-   */
-  @Deprecated
-  public static final String parseCustomerFromCustomerExtensionSettingName(
-      String customerExtensionSettingName) {
-    return CUSTOMER_EXTENSION_SETTING_PATH_TEMPLATE
-        .parse(customerExtensionSettingName)
-        .get("customer");
-  }
-
-  /**
-   * Parses the customer_extension_setting from the given fully-qualified path which represents a
-   * customer_extension_setting resource.
-   *
-   * @deprecated Use the {@link CustomerExtensionSettingName} class instead.
-   */
-  @Deprecated
-  public static final String parseCustomerExtensionSettingFromCustomerExtensionSettingName(
-      String customerExtensionSettingName) {
-    return CUSTOMER_EXTENSION_SETTING_PATH_TEMPLATE
-        .parse(customerExtensionSettingName)
-        .get("customer_extension_setting");
-  }
 
   /** Constructs an instance of CustomerExtensionSettingServiceClient with default settings. */
   public static final CustomerExtensionSettingServiceClient create() throws IOException {
@@ -207,8 +160,33 @@ public class CustomerExtensionSettingServiceClient implements BackgroundResource
    *
    * <pre><code>
    * try (CustomerExtensionSettingServiceClient customerExtensionSettingServiceClient = CustomerExtensionSettingServiceClient.create()) {
-   *   String formattedResourceName = CustomerExtensionSettingServiceClient.formatCustomerExtensionSettingName("[CUSTOMER]", "[CUSTOMER_EXTENSION_SETTING]");
-   *   CustomerExtensionSetting response = customerExtensionSettingServiceClient.getCustomerExtensionSetting(formattedResourceName);
+   *   CustomerExtensionSettingName resourceName = CustomerExtensionSettingName.of("[CUSTOMER]", "[CUSTOMER_EXTENSION_SETTING]");
+   *   CustomerExtensionSetting response = customerExtensionSettingServiceClient.getCustomerExtensionSetting(resourceName);
+   * }
+   * </code></pre>
+   *
+   * @param resourceName Required. The resource name of the customer extension setting to fetch.
+   * @throws com.google.api.gax.rpc.ApiException if the remote call fails
+   */
+  public final CustomerExtensionSetting getCustomerExtensionSetting(
+      CustomerExtensionSettingName resourceName) {
+    GetCustomerExtensionSettingRequest request =
+        GetCustomerExtensionSettingRequest.newBuilder()
+            .setResourceName(resourceName == null ? null : resourceName.toString())
+            .build();
+    return getCustomerExtensionSetting(request);
+  }
+
+  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  /**
+   * Returns the requested customer extension setting in full detail.
+   *
+   * <p>Sample code:
+   *
+   * <pre><code>
+   * try (CustomerExtensionSettingServiceClient customerExtensionSettingServiceClient = CustomerExtensionSettingServiceClient.create()) {
+   *   CustomerExtensionSettingName resourceName = CustomerExtensionSettingName.of("[CUSTOMER]", "[CUSTOMER_EXTENSION_SETTING]");
+   *   CustomerExtensionSetting response = customerExtensionSettingServiceClient.getCustomerExtensionSetting(resourceName.toString());
    * }
    * </code></pre>
    *
@@ -216,7 +194,6 @@ public class CustomerExtensionSettingServiceClient implements BackgroundResource
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final CustomerExtensionSetting getCustomerExtensionSetting(String resourceName) {
-    CUSTOMER_EXTENSION_SETTING_PATH_TEMPLATE.validate(resourceName, "getCustomerExtensionSetting");
     GetCustomerExtensionSettingRequest request =
         GetCustomerExtensionSettingRequest.newBuilder().setResourceName(resourceName).build();
     return getCustomerExtensionSetting(request);
@@ -230,9 +207,9 @@ public class CustomerExtensionSettingServiceClient implements BackgroundResource
    *
    * <pre><code>
    * try (CustomerExtensionSettingServiceClient customerExtensionSettingServiceClient = CustomerExtensionSettingServiceClient.create()) {
-   *   String formattedResourceName = CustomerExtensionSettingServiceClient.formatCustomerExtensionSettingName("[CUSTOMER]", "[CUSTOMER_EXTENSION_SETTING]");
+   *   CustomerExtensionSettingName resourceName = CustomerExtensionSettingName.of("[CUSTOMER]", "[CUSTOMER_EXTENSION_SETTING]");
    *   GetCustomerExtensionSettingRequest request = GetCustomerExtensionSettingRequest.newBuilder()
-   *     .setResourceName(formattedResourceName)
+   *     .setResourceName(resourceName.toString())
    *     .build();
    *   CustomerExtensionSetting response = customerExtensionSettingServiceClient.getCustomerExtensionSetting(request);
    * }
@@ -254,9 +231,9 @@ public class CustomerExtensionSettingServiceClient implements BackgroundResource
    *
    * <pre><code>
    * try (CustomerExtensionSettingServiceClient customerExtensionSettingServiceClient = CustomerExtensionSettingServiceClient.create()) {
-   *   String formattedResourceName = CustomerExtensionSettingServiceClient.formatCustomerExtensionSettingName("[CUSTOMER]", "[CUSTOMER_EXTENSION_SETTING]");
+   *   CustomerExtensionSettingName resourceName = CustomerExtensionSettingName.of("[CUSTOMER]", "[CUSTOMER_EXTENSION_SETTING]");
    *   GetCustomerExtensionSettingRequest request = GetCustomerExtensionSettingRequest.newBuilder()
-   *     .setResourceName(formattedResourceName)
+   *     .setResourceName(resourceName.toString())
    *     .build();
    *   ApiFuture&lt;CustomerExtensionSetting&gt; future = customerExtensionSettingServiceClient.getCustomerExtensionSettingCallable().futureCall(request);
    *   // Do something
@@ -267,49 +244,6 @@ public class CustomerExtensionSettingServiceClient implements BackgroundResource
   public final UnaryCallable<GetCustomerExtensionSettingRequest, CustomerExtensionSetting>
       getCustomerExtensionSettingCallable() {
     return stub.getCustomerExtensionSettingCallable();
-  }
-
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
-  /**
-   * Creates, updates, or removes customer extension settings. Operation statuses are returned.
-   *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (CustomerExtensionSettingServiceClient customerExtensionSettingServiceClient = CustomerExtensionSettingServiceClient.create()) {
-   *   String customerId = "";
-   *   List&lt;CustomerExtensionSettingOperation&gt; operations = new ArrayList&lt;&gt;();
-   *   boolean partialFailure = false;
-   *   boolean validateOnly = false;
-   *   MutateCustomerExtensionSettingsResponse response = customerExtensionSettingServiceClient.mutateCustomerExtensionSettings(customerId, operations, partialFailure, validateOnly);
-   * }
-   * </code></pre>
-   *
-   * @param customerId Required. The ID of the customer whose customer extension settings are being
-   *     modified.
-   * @param operations Required. The list of operations to perform on individual customer extension
-   *     settings.
-   * @param partialFailure If true, successful operations will be carried out and invalid operations
-   *     will return errors. If false, all operations will be carried out in one transaction if and
-   *     only if they are all valid. Default is false.
-   * @param validateOnly If true, the request is validated but not executed. Only errors are
-   *     returned, not results.
-   * @throws com.google.api.gax.rpc.ApiException if the remote call fails
-   */
-  public final MutateCustomerExtensionSettingsResponse mutateCustomerExtensionSettings(
-      String customerId,
-      List<CustomerExtensionSettingOperation> operations,
-      boolean partialFailure,
-      boolean validateOnly) {
-
-    MutateCustomerExtensionSettingsRequest request =
-        MutateCustomerExtensionSettingsRequest.newBuilder()
-            .setCustomerId(customerId)
-            .addAllOperations(operations)
-            .setPartialFailure(partialFailure)
-            .setValidateOnly(validateOnly)
-            .build();
-    return mutateCustomerExtensionSettings(request);
   }
 
   // AUTO-GENERATED DOCUMENTATION AND METHOD
@@ -334,7 +268,6 @@ public class CustomerExtensionSettingServiceClient implements BackgroundResource
    */
   public final MutateCustomerExtensionSettingsResponse mutateCustomerExtensionSettings(
       String customerId, List<CustomerExtensionSettingOperation> operations) {
-
     MutateCustomerExtensionSettingsRequest request =
         MutateCustomerExtensionSettingsRequest.newBuilder()
             .setCustomerId(customerId)

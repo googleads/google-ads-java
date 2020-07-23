@@ -1,5 +1,5 @@
 /*
- * Copyright 2019 Google LLC
+ * Copyright 2020 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -21,7 +21,6 @@ import com.google.ads.googleads.v2.services.stub.CampaignLabelServiceStubSetting
 import com.google.api.core.BetaApi;
 import com.google.api.gax.core.BackgroundResource;
 import com.google.api.gax.rpc.UnaryCallable;
-import com.google.api.pathtemplate.PathTemplate;
 import java.io.IOException;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
@@ -37,8 +36,8 @@ import javax.annotation.Generated;
  * <pre>
  * <code>
  * try (CampaignLabelServiceClient campaignLabelServiceClient = CampaignLabelServiceClient.create()) {
- *   String formattedResourceName = CampaignLabelServiceClient.formatCampaignLabelName("[CUSTOMER]", "[CAMPAIGN_LABEL]");
- *   CampaignLabel response = campaignLabelServiceClient.getCampaignLabel(formattedResourceName);
+ *   CampaignLabelName resourceName = CampaignLabelName.of("[CUSTOMER]", "[CAMPAIGN_LABEL]");
+ *   CampaignLabel response = campaignLabelServiceClient.getCampaignLabel(resourceName);
  * }
  * </code>
  * </pre>
@@ -100,43 +99,6 @@ public class CampaignLabelServiceClient implements BackgroundResource {
   private final CampaignLabelServiceSettings settings;
   private final CampaignLabelServiceStub stub;
 
-  private static final PathTemplate CAMPAIGN_LABEL_PATH_TEMPLATE =
-      PathTemplate.createWithoutUrlEncoding("customers/{customer}/campaignLabels/{campaign_label}");
-
-  /**
-   * Formats a string containing the fully-qualified path to represent a campaign_label resource.
-   *
-   * @deprecated Use the {@link CampaignLabelName} class instead.
-   */
-  @Deprecated
-  public static final String formatCampaignLabelName(String customer, String campaignLabel) {
-    return CAMPAIGN_LABEL_PATH_TEMPLATE.instantiate(
-        "customer", customer,
-        "campaign_label", campaignLabel);
-  }
-
-  /**
-   * Parses the customer from the given fully-qualified path which represents a campaign_label
-   * resource.
-   *
-   * @deprecated Use the {@link CampaignLabelName} class instead.
-   */
-  @Deprecated
-  public static final String parseCustomerFromCampaignLabelName(String campaignLabelName) {
-    return CAMPAIGN_LABEL_PATH_TEMPLATE.parse(campaignLabelName).get("customer");
-  }
-
-  /**
-   * Parses the campaign_label from the given fully-qualified path which represents a campaign_label
-   * resource.
-   *
-   * @deprecated Use the {@link CampaignLabelName} class instead.
-   */
-  @Deprecated
-  public static final String parseCampaignLabelFromCampaignLabelName(String campaignLabelName) {
-    return CAMPAIGN_LABEL_PATH_TEMPLATE.parse(campaignLabelName).get("campaign_label");
-  }
-
   /** Constructs an instance of CampaignLabelServiceClient with default settings. */
   public static final CampaignLabelServiceClient create() throws IOException {
     return create(CampaignLabelServiceSettings.newBuilder().build());
@@ -193,16 +155,39 @@ public class CampaignLabelServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (CampaignLabelServiceClient campaignLabelServiceClient = CampaignLabelServiceClient.create()) {
-   *   String formattedResourceName = CampaignLabelServiceClient.formatCampaignLabelName("[CUSTOMER]", "[CAMPAIGN_LABEL]");
-   *   CampaignLabel response = campaignLabelServiceClient.getCampaignLabel(formattedResourceName);
+   *   CampaignLabelName resourceName = CampaignLabelName.of("[CUSTOMER]", "[CAMPAIGN_LABEL]");
+   *   CampaignLabel response = campaignLabelServiceClient.getCampaignLabel(resourceName);
    * }
    * </code></pre>
    *
-   * @param resourceName The resource name of the campaign-label relationship to fetch.
+   * @param resourceName Required. The resource name of the campaign-label relationship to fetch.
+   * @throws com.google.api.gax.rpc.ApiException if the remote call fails
+   */
+  public final CampaignLabel getCampaignLabel(CampaignLabelName resourceName) {
+    GetCampaignLabelRequest request =
+        GetCampaignLabelRequest.newBuilder()
+            .setResourceName(resourceName == null ? null : resourceName.toString())
+            .build();
+    return getCampaignLabel(request);
+  }
+
+  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  /**
+   * Returns the requested campaign-label relationship in full detail.
+   *
+   * <p>Sample code:
+   *
+   * <pre><code>
+   * try (CampaignLabelServiceClient campaignLabelServiceClient = CampaignLabelServiceClient.create()) {
+   *   CampaignLabelName resourceName = CampaignLabelName.of("[CUSTOMER]", "[CAMPAIGN_LABEL]");
+   *   CampaignLabel response = campaignLabelServiceClient.getCampaignLabel(resourceName.toString());
+   * }
+   * </code></pre>
+   *
+   * @param resourceName Required. The resource name of the campaign-label relationship to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final CampaignLabel getCampaignLabel(String resourceName) {
-    CAMPAIGN_LABEL_PATH_TEMPLATE.validate(resourceName, "getCampaignLabel");
     GetCampaignLabelRequest request =
         GetCampaignLabelRequest.newBuilder().setResourceName(resourceName).build();
     return getCampaignLabel(request);
@@ -216,9 +201,9 @@ public class CampaignLabelServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (CampaignLabelServiceClient campaignLabelServiceClient = CampaignLabelServiceClient.create()) {
-   *   String formattedResourceName = CampaignLabelServiceClient.formatCampaignLabelName("[CUSTOMER]", "[CAMPAIGN_LABEL]");
+   *   CampaignLabelName resourceName = CampaignLabelName.of("[CUSTOMER]", "[CAMPAIGN_LABEL]");
    *   GetCampaignLabelRequest request = GetCampaignLabelRequest.newBuilder()
-   *     .setResourceName(formattedResourceName)
+   *     .setResourceName(resourceName.toString())
    *     .build();
    *   CampaignLabel response = campaignLabelServiceClient.getCampaignLabel(request);
    * }
@@ -239,9 +224,9 @@ public class CampaignLabelServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (CampaignLabelServiceClient campaignLabelServiceClient = CampaignLabelServiceClient.create()) {
-   *   String formattedResourceName = CampaignLabelServiceClient.formatCampaignLabelName("[CUSTOMER]", "[CAMPAIGN_LABEL]");
+   *   CampaignLabelName resourceName = CampaignLabelName.of("[CUSTOMER]", "[CAMPAIGN_LABEL]");
    *   GetCampaignLabelRequest request = GetCampaignLabelRequest.newBuilder()
-   *     .setResourceName(formattedResourceName)
+   *     .setResourceName(resourceName.toString())
    *     .build();
    *   ApiFuture&lt;CampaignLabel&gt; future = campaignLabelServiceClient.getCampaignLabelCallable().futureCall(request);
    *   // Do something
@@ -263,58 +248,17 @@ public class CampaignLabelServiceClient implements BackgroundResource {
    * try (CampaignLabelServiceClient campaignLabelServiceClient = CampaignLabelServiceClient.create()) {
    *   String customerId = "";
    *   List&lt;CampaignLabelOperation&gt; operations = new ArrayList&lt;&gt;();
-   *   boolean partialFailure = false;
-   *   boolean validateOnly = false;
-   *   MutateCampaignLabelsResponse response = campaignLabelServiceClient.mutateCampaignLabels(customerId, operations, partialFailure, validateOnly);
-   * }
-   * </code></pre>
-   *
-   * @param customerId ID of the customer whose campaign-label relationships are being modified.
-   * @param operations The list of operations to perform on campaign-label relationships.
-   * @param partialFailure If true, successful operations will be carried out and invalid operations
-   *     will return errors. If false, all operations will be carried out in one transaction if and
-   *     only if they are all valid. Default is false.
-   * @param validateOnly If true, the request is validated but not executed. Only errors are
-   *     returned, not results.
-   * @throws com.google.api.gax.rpc.ApiException if the remote call fails
-   */
-  public final MutateCampaignLabelsResponse mutateCampaignLabels(
-      String customerId,
-      List<CampaignLabelOperation> operations,
-      boolean partialFailure,
-      boolean validateOnly) {
-
-    MutateCampaignLabelsRequest request =
-        MutateCampaignLabelsRequest.newBuilder()
-            .setCustomerId(customerId)
-            .addAllOperations(operations)
-            .setPartialFailure(partialFailure)
-            .setValidateOnly(validateOnly)
-            .build();
-    return mutateCampaignLabels(request);
-  }
-
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
-  /**
-   * Creates and removes campaign-label relationships. Operation statuses are returned.
-   *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (CampaignLabelServiceClient campaignLabelServiceClient = CampaignLabelServiceClient.create()) {
-   *   String customerId = "";
-   *   List&lt;CampaignLabelOperation&gt; operations = new ArrayList&lt;&gt;();
    *   MutateCampaignLabelsResponse response = campaignLabelServiceClient.mutateCampaignLabels(customerId, operations);
    * }
    * </code></pre>
    *
-   * @param customerId ID of the customer whose campaign-label relationships are being modified.
-   * @param operations The list of operations to perform on campaign-label relationships.
+   * @param customerId Required. ID of the customer whose campaign-label relationships are being
+   *     modified.
+   * @param operations Required. The list of operations to perform on campaign-label relationships.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final MutateCampaignLabelsResponse mutateCampaignLabels(
       String customerId, List<CampaignLabelOperation> operations) {
-
     MutateCampaignLabelsRequest request =
         MutateCampaignLabelsRequest.newBuilder()
             .setCustomerId(customerId)

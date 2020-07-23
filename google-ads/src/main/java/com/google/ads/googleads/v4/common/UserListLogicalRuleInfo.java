@@ -11,7 +11,7 @@ package com.google.ads.googleads.v4.common;
  *
  * Protobuf type {@code google.ads.googleads.v4.common.UserListLogicalRuleInfo}
  */
-public  final class UserListLogicalRuleInfo extends
+public final class UserListLogicalRuleInfo extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.common.UserListLogicalRuleInfo)
     UserListLogicalRuleInfoOrBuilder {
@@ -116,7 +116,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.UserListLogicalRuleOperatorEnum.UserListLogicalRuleOperator operator = 1;</code>
    * @return The enum numeric value on the wire for operator.
    */
-  public int getOperatorValue() {
+  @java.lang.Override public int getOperatorValue() {
     return operator_;
   }
   /**
@@ -127,7 +127,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.UserListLogicalRuleOperatorEnum.UserListLogicalRuleOperator operator = 1;</code>
    * @return The operator.
    */
-  public com.google.ads.googleads.v4.enums.UserListLogicalRuleOperatorEnum.UserListLogicalRuleOperator getOperator() {
+  @java.lang.Override public com.google.ads.googleads.v4.enums.UserListLogicalRuleOperatorEnum.UserListLogicalRuleOperator getOperator() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v4.enums.UserListLogicalRuleOperatorEnum.UserListLogicalRuleOperator result = com.google.ads.googleads.v4.enums.UserListLogicalRuleOperatorEnum.UserListLogicalRuleOperator.valueOf(operator_);
     return result == null ? com.google.ads.googleads.v4.enums.UserListLogicalRuleOperatorEnum.UserListLogicalRuleOperator.UNRECOGNIZED : result;
@@ -142,6 +142,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.common.LogicalUserListOperandInfo rule_operands = 2;</code>
    */
+  @java.lang.Override
   public java.util.List<com.google.ads.googleads.v4.common.LogicalUserListOperandInfo> getRuleOperandsList() {
     return ruleOperands_;
   }
@@ -152,6 +153,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.common.LogicalUserListOperandInfo rule_operands = 2;</code>
    */
+  @java.lang.Override
   public java.util.List<? extends com.google.ads.googleads.v4.common.LogicalUserListOperandInfoOrBuilder> 
       getRuleOperandsOrBuilderList() {
     return ruleOperands_;
@@ -163,6 +165,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.common.LogicalUserListOperandInfo rule_operands = 2;</code>
    */
+  @java.lang.Override
   public int getRuleOperandsCount() {
     return ruleOperands_.size();
   }
@@ -173,6 +176,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.common.LogicalUserListOperandInfo rule_operands = 2;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.LogicalUserListOperandInfo getRuleOperands(int index) {
     return ruleOperands_.get(index);
   }
@@ -183,6 +187,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.common.LogicalUserListOperandInfo rule_operands = 2;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.LogicalUserListOperandInfoOrBuilder getRuleOperandsOrBuilder(
       int index) {
     return ruleOperands_.get(index);
@@ -560,7 +565,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.UserListLogicalRuleOperatorEnum.UserListLogicalRuleOperator operator = 1;</code>
      * @return The enum numeric value on the wire for operator.
      */
-    public int getOperatorValue() {
+    @java.lang.Override public int getOperatorValue() {
       return operator_;
     }
     /**
@@ -573,6 +578,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setOperatorValue(int value) {
+      
       operator_ = value;
       onChanged();
       return this;
@@ -585,6 +591,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.UserListLogicalRuleOperatorEnum.UserListLogicalRuleOperator operator = 1;</code>
      * @return The operator.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.enums.UserListLogicalRuleOperatorEnum.UserListLogicalRuleOperator getOperator() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v4.enums.UserListLogicalRuleOperatorEnum.UserListLogicalRuleOperator result = com.google.ads.googleads.v4.enums.UserListLogicalRuleOperatorEnum.UserListLogicalRuleOperator.valueOf(operator_);

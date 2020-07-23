@@ -12,7 +12,7 @@ package com.google.ads.googleads.v2.common;
  *
  * Protobuf type {@code google.ads.googleads.v2.common.PageOnePromoted}
  */
-public  final class PageOnePromoted extends
+public final class PageOnePromoted extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v2.common.PageOnePromoted)
     PageOnePromotedOrBuilder {
@@ -23,6 +23,13 @@ private static final long serialVersionUID = 0L;
   }
   private PageOnePromoted() {
     strategyGoal_ = 0;
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new PageOnePromoted();
   }
 
   @java.lang.Override
@@ -38,7 +45,6 @@ private static final long serialVersionUID = 0L;
     if (extensionRegistry == null) {
       throw new java.lang.NullPointerException();
     }
-    int mutable_bitField0_ = 0;
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
         com.google.protobuf.UnknownFieldSet.newBuilder();
     try {
@@ -161,8 +167,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.enums.PageOnePromotedStrategyGoalEnum.PageOnePromotedStrategyGoal strategy_goal = 1;</code>
+   * @return The enum numeric value on the wire for strategyGoal.
    */
-  public int getStrategyGoalValue() {
+  @java.lang.Override public int getStrategyGoalValue() {
     return strategyGoal_;
   }
   /**
@@ -172,8 +179,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.enums.PageOnePromotedStrategyGoalEnum.PageOnePromotedStrategyGoal strategy_goal = 1;</code>
+   * @return The strategyGoal.
    */
-  public com.google.ads.googleads.v2.enums.PageOnePromotedStrategyGoalEnum.PageOnePromotedStrategyGoal getStrategyGoal() {
+  @java.lang.Override public com.google.ads.googleads.v2.enums.PageOnePromotedStrategyGoalEnum.PageOnePromotedStrategyGoal getStrategyGoal() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v2.enums.PageOnePromotedStrategyGoalEnum.PageOnePromotedStrategyGoal result = com.google.ads.googleads.v2.enums.PageOnePromotedStrategyGoalEnum.PageOnePromotedStrategyGoal.valueOf(strategyGoal_);
     return result == null ? com.google.ads.googleads.v2.enums.PageOnePromotedStrategyGoalEnum.PageOnePromotedStrategyGoal.UNRECOGNIZED : result;
@@ -188,7 +196,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Int64Value cpc_bid_ceiling_micros = 2;</code>
+   * @return Whether the cpcBidCeilingMicros field is set.
    */
+  @java.lang.Override
   public boolean hasCpcBidCeilingMicros() {
     return cpcBidCeilingMicros_ != null;
   }
@@ -199,7 +209,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Int64Value cpc_bid_ceiling_micros = 2;</code>
+   * @return The cpcBidCeilingMicros.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getCpcBidCeilingMicros() {
     return cpcBidCeilingMicros_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : cpcBidCeilingMicros_;
   }
@@ -211,6 +223,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int64Value cpc_bid_ceiling_micros = 2;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getCpcBidCeilingMicrosOrBuilder() {
     return getCpcBidCeilingMicros();
   }
@@ -224,7 +237,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue bid_modifier = 3;</code>
+   * @return Whether the bidModifier field is set.
    */
+  @java.lang.Override
   public boolean hasBidModifier() {
     return bidModifier_ != null;
   }
@@ -235,7 +250,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue bid_modifier = 3;</code>
+   * @return The bidModifier.
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValue getBidModifier() {
     return bidModifier_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : bidModifier_;
   }
@@ -247,6 +264,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.DoubleValue bid_modifier = 3;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValueOrBuilder getBidModifierOrBuilder() {
     return getBidModifier();
   }
@@ -263,7 +281,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.BoolValue only_raise_cpc_bids = 4;</code>
+   * @return Whether the onlyRaiseCpcBids field is set.
    */
+  @java.lang.Override
   public boolean hasOnlyRaiseCpcBids() {
     return onlyRaiseCpcBids_ != null;
   }
@@ -277,7 +297,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.BoolValue only_raise_cpc_bids = 4;</code>
+   * @return The onlyRaiseCpcBids.
    */
+  @java.lang.Override
   public com.google.protobuf.BoolValue getOnlyRaiseCpcBids() {
     return onlyRaiseCpcBids_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : onlyRaiseCpcBids_;
   }
@@ -292,6 +314,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.BoolValue only_raise_cpc_bids = 4;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.BoolValueOrBuilder getOnlyRaiseCpcBidsOrBuilder() {
     return getOnlyRaiseCpcBids();
   }
@@ -305,7 +328,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.BoolValue raise_cpc_bid_when_budget_constrained = 5;</code>
+   * @return Whether the raiseCpcBidWhenBudgetConstrained field is set.
    */
+  @java.lang.Override
   public boolean hasRaiseCpcBidWhenBudgetConstrained() {
     return raiseCpcBidWhenBudgetConstrained_ != null;
   }
@@ -316,7 +341,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.BoolValue raise_cpc_bid_when_budget_constrained = 5;</code>
+   * @return The raiseCpcBidWhenBudgetConstrained.
    */
+  @java.lang.Override
   public com.google.protobuf.BoolValue getRaiseCpcBidWhenBudgetConstrained() {
     return raiseCpcBidWhenBudgetConstrained_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : raiseCpcBidWhenBudgetConstrained_;
   }
@@ -328,6 +355,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.BoolValue raise_cpc_bid_when_budget_constrained = 5;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.BoolValueOrBuilder getRaiseCpcBidWhenBudgetConstrainedOrBuilder() {
     return getRaiseCpcBidWhenBudgetConstrained();
   }
@@ -341,7 +369,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.BoolValue raise_cpc_bid_when_quality_score_is_low = 6;</code>
+   * @return Whether the raiseCpcBidWhenQualityScoreIsLow field is set.
    */
+  @java.lang.Override
   public boolean hasRaiseCpcBidWhenQualityScoreIsLow() {
     return raiseCpcBidWhenQualityScoreIsLow_ != null;
   }
@@ -352,7 +382,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.BoolValue raise_cpc_bid_when_quality_score_is_low = 6;</code>
+   * @return The raiseCpcBidWhenQualityScoreIsLow.
    */
+  @java.lang.Override
   public com.google.protobuf.BoolValue getRaiseCpcBidWhenQualityScoreIsLow() {
     return raiseCpcBidWhenQualityScoreIsLow_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : raiseCpcBidWhenQualityScoreIsLow_;
   }
@@ -364,6 +396,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.BoolValue raise_cpc_bid_when_quality_score_is_low = 6;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.BoolValueOrBuilder getRaiseCpcBidWhenQualityScoreIsLowOrBuilder() {
     return getRaiseCpcBidWhenQualityScoreIsLow();
   }
@@ -833,8 +866,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.enums.PageOnePromotedStrategyGoalEnum.PageOnePromotedStrategyGoal strategy_goal = 1;</code>
+     * @return The enum numeric value on the wire for strategyGoal.
      */
-    public int getStrategyGoalValue() {
+    @java.lang.Override public int getStrategyGoalValue() {
       return strategyGoal_;
     }
     /**
@@ -844,8 +878,11 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.enums.PageOnePromotedStrategyGoalEnum.PageOnePromotedStrategyGoal strategy_goal = 1;</code>
+     * @param value The enum numeric value on the wire for strategyGoal to set.
+     * @return This builder for chaining.
      */
     public Builder setStrategyGoalValue(int value) {
+      
       strategyGoal_ = value;
       onChanged();
       return this;
@@ -857,7 +894,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.enums.PageOnePromotedStrategyGoalEnum.PageOnePromotedStrategyGoal strategy_goal = 1;</code>
+     * @return The strategyGoal.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v2.enums.PageOnePromotedStrategyGoalEnum.PageOnePromotedStrategyGoal getStrategyGoal() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v2.enums.PageOnePromotedStrategyGoalEnum.PageOnePromotedStrategyGoal result = com.google.ads.googleads.v2.enums.PageOnePromotedStrategyGoalEnum.PageOnePromotedStrategyGoal.valueOf(strategyGoal_);
@@ -870,6 +909,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.enums.PageOnePromotedStrategyGoalEnum.PageOnePromotedStrategyGoal strategy_goal = 1;</code>
+     * @param value The strategyGoal to set.
+     * @return This builder for chaining.
      */
     public Builder setStrategyGoal(com.google.ads.googleads.v2.enums.PageOnePromotedStrategyGoalEnum.PageOnePromotedStrategyGoal value) {
       if (value == null) {
@@ -887,6 +928,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.enums.PageOnePromotedStrategyGoalEnum.PageOnePromotedStrategyGoal strategy_goal = 1;</code>
+     * @return This builder for chaining.
      */
     public Builder clearStrategyGoal() {
       
@@ -905,6 +947,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value cpc_bid_ceiling_micros = 2;</code>
+     * @return Whether the cpcBidCeilingMicros field is set.
      */
     public boolean hasCpcBidCeilingMicros() {
       return cpcBidCeilingMicrosBuilder_ != null || cpcBidCeilingMicros_ != null;
@@ -916,6 +959,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value cpc_bid_ceiling_micros = 2;</code>
+     * @return The cpcBidCeilingMicros.
      */
     public com.google.protobuf.Int64Value getCpcBidCeilingMicros() {
       if (cpcBidCeilingMicrosBuilder_ == null) {
@@ -1067,6 +1111,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue bid_modifier = 3;</code>
+     * @return Whether the bidModifier field is set.
      */
     public boolean hasBidModifier() {
       return bidModifierBuilder_ != null || bidModifier_ != null;
@@ -1078,6 +1123,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue bid_modifier = 3;</code>
+     * @return The bidModifier.
      */
     public com.google.protobuf.DoubleValue getBidModifier() {
       if (bidModifierBuilder_ == null) {
@@ -1232,6 +1278,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.BoolValue only_raise_cpc_bids = 4;</code>
+     * @return Whether the onlyRaiseCpcBids field is set.
      */
     public boolean hasOnlyRaiseCpcBids() {
       return onlyRaiseCpcBidsBuilder_ != null || onlyRaiseCpcBids_ != null;
@@ -1246,6 +1293,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.BoolValue only_raise_cpc_bids = 4;</code>
+     * @return The onlyRaiseCpcBids.
      */
     public com.google.protobuf.BoolValue getOnlyRaiseCpcBids() {
       if (onlyRaiseCpcBidsBuilder_ == null) {
@@ -1418,6 +1466,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.BoolValue raise_cpc_bid_when_budget_constrained = 5;</code>
+     * @return Whether the raiseCpcBidWhenBudgetConstrained field is set.
      */
     public boolean hasRaiseCpcBidWhenBudgetConstrained() {
       return raiseCpcBidWhenBudgetConstrainedBuilder_ != null || raiseCpcBidWhenBudgetConstrained_ != null;
@@ -1429,6 +1478,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.BoolValue raise_cpc_bid_when_budget_constrained = 5;</code>
+     * @return The raiseCpcBidWhenBudgetConstrained.
      */
     public com.google.protobuf.BoolValue getRaiseCpcBidWhenBudgetConstrained() {
       if (raiseCpcBidWhenBudgetConstrainedBuilder_ == null) {
@@ -1580,6 +1630,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.BoolValue raise_cpc_bid_when_quality_score_is_low = 6;</code>
+     * @return Whether the raiseCpcBidWhenQualityScoreIsLow field is set.
      */
     public boolean hasRaiseCpcBidWhenQualityScoreIsLow() {
       return raiseCpcBidWhenQualityScoreIsLowBuilder_ != null || raiseCpcBidWhenQualityScoreIsLow_ != null;
@@ -1591,6 +1642,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.BoolValue raise_cpc_bid_when_quality_score_is_low = 6;</code>
+     * @return The raiseCpcBidWhenQualityScoreIsLow.
      */
     public com.google.protobuf.BoolValue getRaiseCpcBidWhenQualityScoreIsLow() {
       if (raiseCpcBidWhenQualityScoreIsLowBuilder_ == null) {

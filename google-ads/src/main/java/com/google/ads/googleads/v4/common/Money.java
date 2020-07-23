@@ -10,7 +10,7 @@ package com.google.ads.googleads.v4.common;
  *
  * Protobuf type {@code google.ads.googleads.v4.common.Money}
  */
-public  final class Money extends
+public final class Money extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.common.Money)
     MoneyOrBuilder {
@@ -120,6 +120,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue currency_code = 1;</code>
    * @return Whether the currencyCode field is set.
    */
+  @java.lang.Override
   public boolean hasCurrencyCode() {
     return currencyCode_ != null;
   }
@@ -131,6 +132,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue currency_code = 1;</code>
    * @return The currencyCode.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getCurrencyCode() {
     return currencyCode_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : currencyCode_;
   }
@@ -141,6 +143,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue currency_code = 1;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getCurrencyCodeOrBuilder() {
     return getCurrencyCode();
   }
@@ -155,6 +158,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int64Value amount_micros = 2;</code>
    * @return Whether the amountMicros field is set.
    */
+  @java.lang.Override
   public boolean hasAmountMicros() {
     return amountMicros_ != null;
   }
@@ -166,6 +170,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int64Value amount_micros = 2;</code>
    * @return The amountMicros.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getAmountMicros() {
     return amountMicros_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : amountMicros_;
   }
@@ -176,6 +181,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int64Value amount_micros = 2;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getAmountMicrosOrBuilder() {
     return getAmountMicros();
   }

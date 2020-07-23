@@ -13,6 +13,7 @@ public interface MoneyOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue currency_code = 1;</code>
+   * @return Whether the currencyCode field is set.
    */
   boolean hasCurrencyCode();
   /**
@@ -21,6 +22,7 @@ public interface MoneyOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue currency_code = 1;</code>
+   * @return The currencyCode.
    */
   com.google.protobuf.StringValue getCurrencyCode();
   /**
@@ -38,6 +40,7 @@ public interface MoneyOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value amount_micros = 2;</code>
+   * @return Whether the amountMicros field is set.
    */
   boolean hasAmountMicros();
   /**
@@ -46,6 +49,7 @@ public interface MoneyOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value amount_micros = 2;</code>
+   * @return The amountMicros.
    */
   com.google.protobuf.Int64Value getAmountMicros();
   /**

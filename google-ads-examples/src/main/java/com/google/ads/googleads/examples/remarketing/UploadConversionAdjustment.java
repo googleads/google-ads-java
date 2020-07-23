@@ -26,6 +26,7 @@ import com.google.ads.googleads.v4.services.ConversionAdjustmentResult;
 import com.google.ads.googleads.v4.services.ConversionAdjustmentUploadServiceClient;
 import com.google.ads.googleads.v4.services.GclidDateTimePair;
 import com.google.ads.googleads.v4.services.RestatementValue;
+import com.google.ads.googleads.v4.services.UploadConversionAdjustmentsRequest;
 import com.google.ads.googleads.v4.services.UploadConversionAdjustmentsResponse;
 import com.google.ads.googleads.v4.utils.ResourceNames;
 import com.google.common.collect.ImmutableList;
@@ -197,12 +198,12 @@ public class UploadConversionAdjustment {
       // Uploads the click conversion. Partial failure should always be set to true.
       UploadConversionAdjustmentsResponse response =
           conversionUploadServiceClient.uploadConversionAdjustments(
-              Long.toString(customerId),
-              ImmutableList.of(conversionAdjustment),
-              // Enables partial failure (must be true).
-              true,
-              // Disables validate only.
-              false);
+              UploadConversionAdjustmentsRequest.newBuilder()
+                  .setCustomerId(Long.toString(customerId))
+                  .addConversionAdjustments(conversionAdjustment)
+                  // Enables partial failure (must be true).
+                  .setPartialFailure(true)
+                  .build());
 
       // Prints any partial errors returned.
       if (response.hasPartialFailureError()) {

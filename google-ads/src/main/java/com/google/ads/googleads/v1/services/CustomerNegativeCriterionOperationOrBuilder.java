@@ -13,6 +13,7 @@ public interface CustomerNegativeCriterionOperationOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.CustomerNegativeCriterion create = 1;</code>
+   * @return Whether the create field is set.
    */
   boolean hasCreate();
   /**
@@ -21,6 +22,7 @@ public interface CustomerNegativeCriterionOperationOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.CustomerNegativeCriterion create = 1;</code>
+   * @return The create.
    */
   com.google.ads.googleads.v1.resources.CustomerNegativeCriterion getCreate();
   /**
@@ -40,6 +42,7 @@ public interface CustomerNegativeCriterionOperationOrBuilder extends
    * </pre>
    *
    * <code>string remove = 2;</code>
+   * @return The remove.
    */
   java.lang.String getRemove();
   /**
@@ -50,6 +53,7 @@ public interface CustomerNegativeCriterionOperationOrBuilder extends
    * </pre>
    *
    * <code>string remove = 2;</code>
+   * @return The bytes for remove.
    */
   com.google.protobuf.ByteString
       getRemoveBytes();

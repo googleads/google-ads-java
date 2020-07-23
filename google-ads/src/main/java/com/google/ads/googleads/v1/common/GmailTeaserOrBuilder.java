@@ -13,6 +13,7 @@ public interface GmailTeaserOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue headline = 1;</code>
+   * @return Whether the headline field is set.
    */
   boolean hasHeadline();
   /**
@@ -21,6 +22,7 @@ public interface GmailTeaserOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue headline = 1;</code>
+   * @return The headline.
    */
   com.google.protobuf.StringValue getHeadline();
   /**
@@ -38,6 +40,7 @@ public interface GmailTeaserOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue description = 2;</code>
+   * @return Whether the description field is set.
    */
   boolean hasDescription();
   /**
@@ -46,6 +49,7 @@ public interface GmailTeaserOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue description = 2;</code>
+   * @return The description.
    */
   com.google.protobuf.StringValue getDescription();
   /**
@@ -63,6 +67,7 @@ public interface GmailTeaserOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue business_name = 3;</code>
+   * @return Whether the businessName field is set.
    */
   boolean hasBusinessName();
   /**
@@ -71,6 +76,7 @@ public interface GmailTeaserOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue business_name = 3;</code>
+   * @return The businessName.
    */
   com.google.protobuf.StringValue getBusinessName();
   /**
@@ -90,6 +96,7 @@ public interface GmailTeaserOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue logo_image = 4;</code>
+   * @return Whether the logoImage field is set.
    */
   boolean hasLogoImage();
   /**
@@ -100,6 +107,7 @@ public interface GmailTeaserOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue logo_image = 4;</code>
+   * @return The logoImage.
    */
   com.google.protobuf.StringValue getLogoImage();
   /**

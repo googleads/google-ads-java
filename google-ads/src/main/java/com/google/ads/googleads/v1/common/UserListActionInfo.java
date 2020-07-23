@@ -10,7 +10,7 @@ package com.google.ads.googleads.v1.common;
  *
  * Protobuf type {@code google.ads.googleads.v1.common.UserListActionInfo}
  */
-public  final class UserListActionInfo extends
+public final class UserListActionInfo extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v1.common.UserListActionInfo)
     UserListActionInfoOrBuilder {
@@ -20,6 +20,13 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private UserListActionInfo() {
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new UserListActionInfo();
   }
 
   @java.lang.Override
@@ -35,7 +42,6 @@ private static final long serialVersionUID = 0L;
     if (extensionRegistry == null) {
       throw new java.lang.NullPointerException();
     }
-    int mutable_bitField0_ = 0;
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
         com.google.protobuf.UnknownFieldSet.newBuilder();
     try {
@@ -109,7 +115,8 @@ private static final long serialVersionUID = 0L;
   private int userListActionCase_ = 0;
   private java.lang.Object userListAction_;
   public enum UserListActionCase
-      implements com.google.protobuf.Internal.EnumLite {
+      implements com.google.protobuf.Internal.EnumLite,
+          com.google.protobuf.AbstractMessage.InternalOneOfEnum {
     CONVERSION_ACTION(1),
     REMARKETING_ACTION(2),
     USERLISTACTION_NOT_SET(0);
@@ -118,6 +125,8 @@ private static final long serialVersionUID = 0L;
       this.value = value;
     }
     /**
+     * @param value The number of the enum to look for.
+     * @return The enum associated with the given number.
      * @deprecated Use {@link #forNumber(int)} instead.
      */
     @java.lang.Deprecated
@@ -151,7 +160,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue conversion_action = 1;</code>
+   * @return Whether the conversionAction field is set.
    */
+  @java.lang.Override
   public boolean hasConversionAction() {
     return userListActionCase_ == 1;
   }
@@ -161,7 +172,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue conversion_action = 1;</code>
+   * @return The conversionAction.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getConversionAction() {
     if (userListActionCase_ == 1) {
        return (com.google.protobuf.StringValue) userListAction_;
@@ -175,6 +188,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue conversion_action = 1;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getConversionActionOrBuilder() {
     if (userListActionCase_ == 1) {
        return (com.google.protobuf.StringValue) userListAction_;
@@ -189,7 +203,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue remarketing_action = 2;</code>
+   * @return Whether the remarketingAction field is set.
    */
+  @java.lang.Override
   public boolean hasRemarketingAction() {
     return userListActionCase_ == 2;
   }
@@ -199,7 +215,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue remarketing_action = 2;</code>
+   * @return The remarketingAction.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getRemarketingAction() {
     if (userListActionCase_ == 2) {
        return (com.google.protobuf.StringValue) userListAction_;
@@ -213,6 +231,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue remarketing_action = 2;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getRemarketingActionOrBuilder() {
     if (userListActionCase_ == 2) {
        return (com.google.protobuf.StringValue) userListAction_;
@@ -601,7 +620,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue conversion_action = 1;</code>
+     * @return Whether the conversionAction field is set.
      */
+    @java.lang.Override
     public boolean hasConversionAction() {
       return userListActionCase_ == 1;
     }
@@ -611,7 +632,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue conversion_action = 1;</code>
+     * @return The conversionAction.
      */
+    @java.lang.Override
     public com.google.protobuf.StringValue getConversionAction() {
       if (conversionActionBuilder_ == null) {
         if (userListActionCase_ == 1) {
@@ -729,6 +752,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.protobuf.StringValue conversion_action = 1;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.StringValueOrBuilder getConversionActionOrBuilder() {
       if ((userListActionCase_ == 1) && (conversionActionBuilder_ != null)) {
         return conversionActionBuilder_.getMessageOrBuilder();
@@ -773,7 +797,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue remarketing_action = 2;</code>
+     * @return Whether the remarketingAction field is set.
      */
+    @java.lang.Override
     public boolean hasRemarketingAction() {
       return userListActionCase_ == 2;
     }
@@ -783,7 +809,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue remarketing_action = 2;</code>
+     * @return The remarketingAction.
      */
+    @java.lang.Override
     public com.google.protobuf.StringValue getRemarketingAction() {
       if (remarketingActionBuilder_ == null) {
         if (userListActionCase_ == 2) {
@@ -901,6 +929,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.protobuf.StringValue remarketing_action = 2;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.StringValueOrBuilder getRemarketingActionOrBuilder() {
       if ((userListActionCase_ == 2) && (remarketingActionBuilder_ != null)) {
         return remarketingActionBuilder_.getMessageOrBuilder();

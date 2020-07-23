@@ -13,6 +13,7 @@ public interface BidModifierSimulationPointOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue bid_modifier = 1;</code>
+   * @return Whether the bidModifier field is set.
    */
   boolean hasBidModifier();
   /**
@@ -21,6 +22,7 @@ public interface BidModifierSimulationPointOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue bid_modifier = 1;</code>
+   * @return The bidModifier.
    */
   com.google.protobuf.DoubleValue getBidModifier();
   /**
@@ -39,6 +41,7 @@ public interface BidModifierSimulationPointOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue biddable_conversions = 2;</code>
+   * @return Whether the biddableConversions field is set.
    */
   boolean hasBiddableConversions();
   /**
@@ -48,6 +51,7 @@ public interface BidModifierSimulationPointOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue biddable_conversions = 2;</code>
+   * @return The biddableConversions.
    */
   com.google.protobuf.DoubleValue getBiddableConversions();
   /**
@@ -67,6 +71,7 @@ public interface BidModifierSimulationPointOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue biddable_conversions_value = 3;</code>
+   * @return Whether the biddableConversionsValue field is set.
    */
   boolean hasBiddableConversionsValue();
   /**
@@ -76,6 +81,7 @@ public interface BidModifierSimulationPointOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue biddable_conversions_value = 3;</code>
+   * @return The biddableConversionsValue.
    */
   com.google.protobuf.DoubleValue getBiddableConversionsValue();
   /**
@@ -94,6 +100,7 @@ public interface BidModifierSimulationPointOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value clicks = 4;</code>
+   * @return Whether the clicks field is set.
    */
   boolean hasClicks();
   /**
@@ -102,6 +109,7 @@ public interface BidModifierSimulationPointOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value clicks = 4;</code>
+   * @return The clicks.
    */
   com.google.protobuf.Int64Value getClicks();
   /**
@@ -119,6 +127,7 @@ public interface BidModifierSimulationPointOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value cost_micros = 5;</code>
+   * @return Whether the costMicros field is set.
    */
   boolean hasCostMicros();
   /**
@@ -127,6 +136,7 @@ public interface BidModifierSimulationPointOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value cost_micros = 5;</code>
+   * @return The costMicros.
    */
   com.google.protobuf.Int64Value getCostMicros();
   /**
@@ -144,6 +154,7 @@ public interface BidModifierSimulationPointOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value impressions = 6;</code>
+   * @return Whether the impressions field is set.
    */
   boolean hasImpressions();
   /**
@@ -152,6 +163,7 @@ public interface BidModifierSimulationPointOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value impressions = 6;</code>
+   * @return The impressions.
    */
   com.google.protobuf.Int64Value getImpressions();
   /**
@@ -170,6 +182,7 @@ public interface BidModifierSimulationPointOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value top_slot_impressions = 7;</code>
+   * @return Whether the topSlotImpressions field is set.
    */
   boolean hasTopSlotImpressions();
   /**
@@ -179,6 +192,7 @@ public interface BidModifierSimulationPointOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value top_slot_impressions = 7;</code>
+   * @return The topSlotImpressions.
    */
   com.google.protobuf.Int64Value getTopSlotImpressions();
   /**
@@ -198,6 +212,7 @@ public interface BidModifierSimulationPointOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue parent_biddable_conversions = 8;</code>
+   * @return Whether the parentBiddableConversions field is set.
    */
   boolean hasParentBiddableConversions();
   /**
@@ -207,6 +222,7 @@ public interface BidModifierSimulationPointOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue parent_biddable_conversions = 8;</code>
+   * @return The parentBiddableConversions.
    */
   com.google.protobuf.DoubleValue getParentBiddableConversions();
   /**
@@ -226,6 +242,7 @@ public interface BidModifierSimulationPointOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue parent_biddable_conversions_value = 9;</code>
+   * @return Whether the parentBiddableConversionsValue field is set.
    */
   boolean hasParentBiddableConversionsValue();
   /**
@@ -235,6 +252,7 @@ public interface BidModifierSimulationPointOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue parent_biddable_conversions_value = 9;</code>
+   * @return The parentBiddableConversionsValue.
    */
   com.google.protobuf.DoubleValue getParentBiddableConversionsValue();
   /**
@@ -253,6 +271,7 @@ public interface BidModifierSimulationPointOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value parent_clicks = 10;</code>
+   * @return Whether the parentClicks field is set.
    */
   boolean hasParentClicks();
   /**
@@ -261,6 +280,7 @@ public interface BidModifierSimulationPointOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value parent_clicks = 10;</code>
+   * @return The parentClicks.
    */
   com.google.protobuf.Int64Value getParentClicks();
   /**
@@ -278,6 +298,7 @@ public interface BidModifierSimulationPointOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value parent_cost_micros = 11;</code>
+   * @return Whether the parentCostMicros field is set.
    */
   boolean hasParentCostMicros();
   /**
@@ -286,6 +307,7 @@ public interface BidModifierSimulationPointOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value parent_cost_micros = 11;</code>
+   * @return The parentCostMicros.
    */
   com.google.protobuf.Int64Value getParentCostMicros();
   /**
@@ -303,6 +325,7 @@ public interface BidModifierSimulationPointOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value parent_impressions = 12;</code>
+   * @return Whether the parentImpressions field is set.
    */
   boolean hasParentImpressions();
   /**
@@ -311,6 +334,7 @@ public interface BidModifierSimulationPointOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value parent_impressions = 12;</code>
+   * @return The parentImpressions.
    */
   com.google.protobuf.Int64Value getParentImpressions();
   /**
@@ -329,6 +353,7 @@ public interface BidModifierSimulationPointOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value parent_top_slot_impressions = 13;</code>
+   * @return Whether the parentTopSlotImpressions field is set.
    */
   boolean hasParentTopSlotImpressions();
   /**
@@ -338,6 +363,7 @@ public interface BidModifierSimulationPointOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value parent_top_slot_impressions = 13;</code>
+   * @return The parentTopSlotImpressions.
    */
   com.google.protobuf.Int64Value getParentTopSlotImpressions();
   /**

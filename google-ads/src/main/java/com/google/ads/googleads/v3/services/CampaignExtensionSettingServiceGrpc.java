@@ -21,7 +21,7 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.10.0)",
+    value = "by gRPC proto compiler",
     comments = "Source: google/ads/googleads/v3/services/campaign_extension_setting_service.proto")
 public final class CampaignExtensionSettingServiceGrpc {
 
@@ -30,86 +30,80 @@ public final class CampaignExtensionSettingServiceGrpc {
   public static final String SERVICE_NAME = "google.ads.googleads.v3.services.CampaignExtensionSettingService";
 
   // Static method descriptors that strictly reflect the proto.
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  @java.lang.Deprecated // Use {@link #getGetCampaignExtensionSettingMethod()} instead. 
-  public static final io.grpc.MethodDescriptor<com.google.ads.googleads.v3.services.GetCampaignExtensionSettingRequest,
-      com.google.ads.googleads.v3.resources.CampaignExtensionSetting> METHOD_GET_CAMPAIGN_EXTENSION_SETTING = getGetCampaignExtensionSettingMethodHelper();
-
   private static volatile io.grpc.MethodDescriptor<com.google.ads.googleads.v3.services.GetCampaignExtensionSettingRequest,
       com.google.ads.googleads.v3.resources.CampaignExtensionSetting> getGetCampaignExtensionSettingMethod;
 
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetCampaignExtensionSetting",
+      requestType = com.google.ads.googleads.v3.services.GetCampaignExtensionSettingRequest.class,
+      responseType = com.google.ads.googleads.v3.resources.CampaignExtensionSetting.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<com.google.ads.googleads.v3.services.GetCampaignExtensionSettingRequest,
       com.google.ads.googleads.v3.resources.CampaignExtensionSetting> getGetCampaignExtensionSettingMethod() {
-    return getGetCampaignExtensionSettingMethodHelper();
-  }
-
-  private static io.grpc.MethodDescriptor<com.google.ads.googleads.v3.services.GetCampaignExtensionSettingRequest,
-      com.google.ads.googleads.v3.resources.CampaignExtensionSetting> getGetCampaignExtensionSettingMethodHelper() {
     io.grpc.MethodDescriptor<com.google.ads.googleads.v3.services.GetCampaignExtensionSettingRequest, com.google.ads.googleads.v3.resources.CampaignExtensionSetting> getGetCampaignExtensionSettingMethod;
     if ((getGetCampaignExtensionSettingMethod = CampaignExtensionSettingServiceGrpc.getGetCampaignExtensionSettingMethod) == null) {
       synchronized (CampaignExtensionSettingServiceGrpc.class) {
         if ((getGetCampaignExtensionSettingMethod = CampaignExtensionSettingServiceGrpc.getGetCampaignExtensionSettingMethod) == null) {
-          CampaignExtensionSettingServiceGrpc.getGetCampaignExtensionSettingMethod = getGetCampaignExtensionSettingMethod = 
+          CampaignExtensionSettingServiceGrpc.getGetCampaignExtensionSettingMethod = getGetCampaignExtensionSettingMethod =
               io.grpc.MethodDescriptor.<com.google.ads.googleads.v3.services.GetCampaignExtensionSettingRequest, com.google.ads.googleads.v3.resources.CampaignExtensionSetting>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "google.ads.googleads.v3.services.CampaignExtensionSettingService", "GetCampaignExtensionSetting"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetCampaignExtensionSetting"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v3.services.GetCampaignExtensionSettingRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v3.resources.CampaignExtensionSetting.getDefaultInstance()))
-                  .setSchemaDescriptor(new CampaignExtensionSettingServiceMethodDescriptorSupplier("GetCampaignExtensionSetting"))
-                  .build();
-          }
+              .setSchemaDescriptor(new CampaignExtensionSettingServiceMethodDescriptorSupplier("GetCampaignExtensionSetting"))
+              .build();
         }
-     }
-     return getGetCampaignExtensionSettingMethod;
+      }
+    }
+    return getGetCampaignExtensionSettingMethod;
   }
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  @java.lang.Deprecated // Use {@link #getMutateCampaignExtensionSettingsMethod()} instead. 
-  public static final io.grpc.MethodDescriptor<com.google.ads.googleads.v3.services.MutateCampaignExtensionSettingsRequest,
-      com.google.ads.googleads.v3.services.MutateCampaignExtensionSettingsResponse> METHOD_MUTATE_CAMPAIGN_EXTENSION_SETTINGS = getMutateCampaignExtensionSettingsMethodHelper();
 
   private static volatile io.grpc.MethodDescriptor<com.google.ads.googleads.v3.services.MutateCampaignExtensionSettingsRequest,
       com.google.ads.googleads.v3.services.MutateCampaignExtensionSettingsResponse> getMutateCampaignExtensionSettingsMethod;
 
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "MutateCampaignExtensionSettings",
+      requestType = com.google.ads.googleads.v3.services.MutateCampaignExtensionSettingsRequest.class,
+      responseType = com.google.ads.googleads.v3.services.MutateCampaignExtensionSettingsResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<com.google.ads.googleads.v3.services.MutateCampaignExtensionSettingsRequest,
       com.google.ads.googleads.v3.services.MutateCampaignExtensionSettingsResponse> getMutateCampaignExtensionSettingsMethod() {
-    return getMutateCampaignExtensionSettingsMethodHelper();
-  }
-
-  private static io.grpc.MethodDescriptor<com.google.ads.googleads.v3.services.MutateCampaignExtensionSettingsRequest,
-      com.google.ads.googleads.v3.services.MutateCampaignExtensionSettingsResponse> getMutateCampaignExtensionSettingsMethodHelper() {
     io.grpc.MethodDescriptor<com.google.ads.googleads.v3.services.MutateCampaignExtensionSettingsRequest, com.google.ads.googleads.v3.services.MutateCampaignExtensionSettingsResponse> getMutateCampaignExtensionSettingsMethod;
     if ((getMutateCampaignExtensionSettingsMethod = CampaignExtensionSettingServiceGrpc.getMutateCampaignExtensionSettingsMethod) == null) {
       synchronized (CampaignExtensionSettingServiceGrpc.class) {
         if ((getMutateCampaignExtensionSettingsMethod = CampaignExtensionSettingServiceGrpc.getMutateCampaignExtensionSettingsMethod) == null) {
-          CampaignExtensionSettingServiceGrpc.getMutateCampaignExtensionSettingsMethod = getMutateCampaignExtensionSettingsMethod = 
+          CampaignExtensionSettingServiceGrpc.getMutateCampaignExtensionSettingsMethod = getMutateCampaignExtensionSettingsMethod =
               io.grpc.MethodDescriptor.<com.google.ads.googleads.v3.services.MutateCampaignExtensionSettingsRequest, com.google.ads.googleads.v3.services.MutateCampaignExtensionSettingsResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "google.ads.googleads.v3.services.CampaignExtensionSettingService", "MutateCampaignExtensionSettings"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "MutateCampaignExtensionSettings"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v3.services.MutateCampaignExtensionSettingsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v3.services.MutateCampaignExtensionSettingsResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new CampaignExtensionSettingServiceMethodDescriptorSupplier("MutateCampaignExtensionSettings"))
-                  .build();
-          }
+              .setSchemaDescriptor(new CampaignExtensionSettingServiceMethodDescriptorSupplier("MutateCampaignExtensionSettings"))
+              .build();
         }
-     }
-     return getMutateCampaignExtensionSettingsMethod;
+      }
+    }
+    return getMutateCampaignExtensionSettingsMethod;
   }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static CampaignExtensionSettingServiceStub newStub(io.grpc.Channel channel) {
-    return new CampaignExtensionSettingServiceStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<CampaignExtensionSettingServiceStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<CampaignExtensionSettingServiceStub>() {
+        @java.lang.Override
+        public CampaignExtensionSettingServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new CampaignExtensionSettingServiceStub(channel, callOptions);
+        }
+      };
+    return CampaignExtensionSettingServiceStub.newStub(factory, channel);
   }
 
   /**
@@ -117,7 +111,14 @@ public final class CampaignExtensionSettingServiceGrpc {
    */
   public static CampaignExtensionSettingServiceBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new CampaignExtensionSettingServiceBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<CampaignExtensionSettingServiceBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<CampaignExtensionSettingServiceBlockingStub>() {
+        @java.lang.Override
+        public CampaignExtensionSettingServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new CampaignExtensionSettingServiceBlockingStub(channel, callOptions);
+        }
+      };
+    return CampaignExtensionSettingServiceBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -125,7 +126,14 @@ public final class CampaignExtensionSettingServiceGrpc {
    */
   public static CampaignExtensionSettingServiceFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new CampaignExtensionSettingServiceFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<CampaignExtensionSettingServiceFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<CampaignExtensionSettingServiceFutureStub>() {
+        @java.lang.Override
+        public CampaignExtensionSettingServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new CampaignExtensionSettingServiceFutureStub(channel, callOptions);
+        }
+      };
+    return CampaignExtensionSettingServiceFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -142,7 +150,7 @@ public final class CampaignExtensionSettingServiceGrpc {
      */
     public void getCampaignExtensionSetting(com.google.ads.googleads.v3.services.GetCampaignExtensionSettingRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v3.resources.CampaignExtensionSetting> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetCampaignExtensionSettingMethodHelper(), responseObserver);
+      asyncUnimplementedUnaryCall(getGetCampaignExtensionSettingMethod(), responseObserver);
     }
 
     /**
@@ -153,20 +161,20 @@ public final class CampaignExtensionSettingServiceGrpc {
      */
     public void mutateCampaignExtensionSettings(com.google.ads.googleads.v3.services.MutateCampaignExtensionSettingsRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v3.services.MutateCampaignExtensionSettingsResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getMutateCampaignExtensionSettingsMethodHelper(), responseObserver);
+      asyncUnimplementedUnaryCall(getMutateCampaignExtensionSettingsMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
-            getGetCampaignExtensionSettingMethodHelper(),
+            getGetCampaignExtensionSettingMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 com.google.ads.googleads.v3.services.GetCampaignExtensionSettingRequest,
                 com.google.ads.googleads.v3.resources.CampaignExtensionSetting>(
                   this, METHODID_GET_CAMPAIGN_EXTENSION_SETTING)))
           .addMethod(
-            getMutateCampaignExtensionSettingsMethodHelper(),
+            getMutateCampaignExtensionSettingsMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 com.google.ads.googleads.v3.services.MutateCampaignExtensionSettingsRequest,
@@ -181,19 +189,15 @@ public final class CampaignExtensionSettingServiceGrpc {
    * Service to manage campaign extension settings.
    * </pre>
    */
-  public static final class CampaignExtensionSettingServiceStub extends io.grpc.stub.AbstractStub<CampaignExtensionSettingServiceStub> {
-    private CampaignExtensionSettingServiceStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private CampaignExtensionSettingServiceStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class CampaignExtensionSettingServiceStub extends io.grpc.stub.AbstractAsyncStub<CampaignExtensionSettingServiceStub> {
+    private CampaignExtensionSettingServiceStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected CampaignExtensionSettingServiceStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected CampaignExtensionSettingServiceStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new CampaignExtensionSettingServiceStub(channel, callOptions);
     }
 
@@ -205,7 +209,7 @@ public final class CampaignExtensionSettingServiceGrpc {
     public void getCampaignExtensionSetting(com.google.ads.googleads.v3.services.GetCampaignExtensionSettingRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v3.resources.CampaignExtensionSetting> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(getGetCampaignExtensionSettingMethodHelper(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getGetCampaignExtensionSettingMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -217,7 +221,7 @@ public final class CampaignExtensionSettingServiceGrpc {
     public void mutateCampaignExtensionSettings(com.google.ads.googleads.v3.services.MutateCampaignExtensionSettingsRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v3.services.MutateCampaignExtensionSettingsResponse> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(getMutateCampaignExtensionSettingsMethodHelper(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getMutateCampaignExtensionSettingsMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -226,19 +230,15 @@ public final class CampaignExtensionSettingServiceGrpc {
    * Service to manage campaign extension settings.
    * </pre>
    */
-  public static final class CampaignExtensionSettingServiceBlockingStub extends io.grpc.stub.AbstractStub<CampaignExtensionSettingServiceBlockingStub> {
-    private CampaignExtensionSettingServiceBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private CampaignExtensionSettingServiceBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class CampaignExtensionSettingServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<CampaignExtensionSettingServiceBlockingStub> {
+    private CampaignExtensionSettingServiceBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected CampaignExtensionSettingServiceBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected CampaignExtensionSettingServiceBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new CampaignExtensionSettingServiceBlockingStub(channel, callOptions);
     }
 
@@ -249,7 +249,7 @@ public final class CampaignExtensionSettingServiceGrpc {
      */
     public com.google.ads.googleads.v3.resources.CampaignExtensionSetting getCampaignExtensionSetting(com.google.ads.googleads.v3.services.GetCampaignExtensionSettingRequest request) {
       return blockingUnaryCall(
-          getChannel(), getGetCampaignExtensionSettingMethodHelper(), getCallOptions(), request);
+          getChannel(), getGetCampaignExtensionSettingMethod(), getCallOptions(), request);
     }
 
     /**
@@ -260,7 +260,7 @@ public final class CampaignExtensionSettingServiceGrpc {
      */
     public com.google.ads.googleads.v3.services.MutateCampaignExtensionSettingsResponse mutateCampaignExtensionSettings(com.google.ads.googleads.v3.services.MutateCampaignExtensionSettingsRequest request) {
       return blockingUnaryCall(
-          getChannel(), getMutateCampaignExtensionSettingsMethodHelper(), getCallOptions(), request);
+          getChannel(), getMutateCampaignExtensionSettingsMethod(), getCallOptions(), request);
     }
   }
 
@@ -269,19 +269,15 @@ public final class CampaignExtensionSettingServiceGrpc {
    * Service to manage campaign extension settings.
    * </pre>
    */
-  public static final class CampaignExtensionSettingServiceFutureStub extends io.grpc.stub.AbstractStub<CampaignExtensionSettingServiceFutureStub> {
-    private CampaignExtensionSettingServiceFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private CampaignExtensionSettingServiceFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class CampaignExtensionSettingServiceFutureStub extends io.grpc.stub.AbstractFutureStub<CampaignExtensionSettingServiceFutureStub> {
+    private CampaignExtensionSettingServiceFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected CampaignExtensionSettingServiceFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected CampaignExtensionSettingServiceFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new CampaignExtensionSettingServiceFutureStub(channel, callOptions);
     }
 
@@ -293,7 +289,7 @@ public final class CampaignExtensionSettingServiceGrpc {
     public com.google.common.util.concurrent.ListenableFuture<com.google.ads.googleads.v3.resources.CampaignExtensionSetting> getCampaignExtensionSetting(
         com.google.ads.googleads.v3.services.GetCampaignExtensionSettingRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(getGetCampaignExtensionSettingMethodHelper(), getCallOptions()), request);
+          getChannel().newCall(getGetCampaignExtensionSettingMethod(), getCallOptions()), request);
     }
 
     /**
@@ -305,7 +301,7 @@ public final class CampaignExtensionSettingServiceGrpc {
     public com.google.common.util.concurrent.ListenableFuture<com.google.ads.googleads.v3.services.MutateCampaignExtensionSettingsResponse> mutateCampaignExtensionSettings(
         com.google.ads.googleads.v3.services.MutateCampaignExtensionSettingsRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(getMutateCampaignExtensionSettingsMethodHelper(), getCallOptions()), request);
+          getChannel().newCall(getMutateCampaignExtensionSettingsMethod(), getCallOptions()), request);
     }
   }
 
@@ -398,8 +394,8 @@ public final class CampaignExtensionSettingServiceGrpc {
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new CampaignExtensionSettingServiceFileDescriptorSupplier())
-              .addMethod(getGetCampaignExtensionSettingMethodHelper())
-              .addMethod(getMutateCampaignExtensionSettingsMethodHelper())
+              .addMethod(getGetCampaignExtensionSettingMethod())
+              .addMethod(getMutateCampaignExtensionSettingsMethod())
               .build();
         }
       }

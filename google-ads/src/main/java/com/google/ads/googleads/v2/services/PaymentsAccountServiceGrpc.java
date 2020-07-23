@@ -22,7 +22,7 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.10.0)",
+    value = "by gRPC proto compiler",
     comments = "Source: google/ads/googleads/v2/services/payments_account_service.proto")
 public final class PaymentsAccountServiceGrpc {
 
@@ -31,49 +31,49 @@ public final class PaymentsAccountServiceGrpc {
   public static final String SERVICE_NAME = "google.ads.googleads.v2.services.PaymentsAccountService";
 
   // Static method descriptors that strictly reflect the proto.
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  @java.lang.Deprecated // Use {@link #getListPaymentsAccountsMethod()} instead. 
-  public static final io.grpc.MethodDescriptor<com.google.ads.googleads.v2.services.ListPaymentsAccountsRequest,
-      com.google.ads.googleads.v2.services.ListPaymentsAccountsResponse> METHOD_LIST_PAYMENTS_ACCOUNTS = getListPaymentsAccountsMethodHelper();
-
   private static volatile io.grpc.MethodDescriptor<com.google.ads.googleads.v2.services.ListPaymentsAccountsRequest,
       com.google.ads.googleads.v2.services.ListPaymentsAccountsResponse> getListPaymentsAccountsMethod;
 
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ListPaymentsAccounts",
+      requestType = com.google.ads.googleads.v2.services.ListPaymentsAccountsRequest.class,
+      responseType = com.google.ads.googleads.v2.services.ListPaymentsAccountsResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<com.google.ads.googleads.v2.services.ListPaymentsAccountsRequest,
       com.google.ads.googleads.v2.services.ListPaymentsAccountsResponse> getListPaymentsAccountsMethod() {
-    return getListPaymentsAccountsMethodHelper();
-  }
-
-  private static io.grpc.MethodDescriptor<com.google.ads.googleads.v2.services.ListPaymentsAccountsRequest,
-      com.google.ads.googleads.v2.services.ListPaymentsAccountsResponse> getListPaymentsAccountsMethodHelper() {
     io.grpc.MethodDescriptor<com.google.ads.googleads.v2.services.ListPaymentsAccountsRequest, com.google.ads.googleads.v2.services.ListPaymentsAccountsResponse> getListPaymentsAccountsMethod;
     if ((getListPaymentsAccountsMethod = PaymentsAccountServiceGrpc.getListPaymentsAccountsMethod) == null) {
       synchronized (PaymentsAccountServiceGrpc.class) {
         if ((getListPaymentsAccountsMethod = PaymentsAccountServiceGrpc.getListPaymentsAccountsMethod) == null) {
-          PaymentsAccountServiceGrpc.getListPaymentsAccountsMethod = getListPaymentsAccountsMethod = 
+          PaymentsAccountServiceGrpc.getListPaymentsAccountsMethod = getListPaymentsAccountsMethod =
               io.grpc.MethodDescriptor.<com.google.ads.googleads.v2.services.ListPaymentsAccountsRequest, com.google.ads.googleads.v2.services.ListPaymentsAccountsResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "google.ads.googleads.v2.services.PaymentsAccountService", "ListPaymentsAccounts"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListPaymentsAccounts"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v2.services.ListPaymentsAccountsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v2.services.ListPaymentsAccountsResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new PaymentsAccountServiceMethodDescriptorSupplier("ListPaymentsAccounts"))
-                  .build();
-          }
+              .setSchemaDescriptor(new PaymentsAccountServiceMethodDescriptorSupplier("ListPaymentsAccounts"))
+              .build();
         }
-     }
-     return getListPaymentsAccountsMethod;
+      }
+    }
+    return getListPaymentsAccountsMethod;
   }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static PaymentsAccountServiceStub newStub(io.grpc.Channel channel) {
-    return new PaymentsAccountServiceStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<PaymentsAccountServiceStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<PaymentsAccountServiceStub>() {
+        @java.lang.Override
+        public PaymentsAccountServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new PaymentsAccountServiceStub(channel, callOptions);
+        }
+      };
+    return PaymentsAccountServiceStub.newStub(factory, channel);
   }
 
   /**
@@ -81,7 +81,14 @@ public final class PaymentsAccountServiceGrpc {
    */
   public static PaymentsAccountServiceBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new PaymentsAccountServiceBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<PaymentsAccountServiceBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<PaymentsAccountServiceBlockingStub>() {
+        @java.lang.Override
+        public PaymentsAccountServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new PaymentsAccountServiceBlockingStub(channel, callOptions);
+        }
+      };
+    return PaymentsAccountServiceBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -89,7 +96,14 @@ public final class PaymentsAccountServiceGrpc {
    */
   public static PaymentsAccountServiceFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new PaymentsAccountServiceFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<PaymentsAccountServiceFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<PaymentsAccountServiceFutureStub>() {
+        @java.lang.Override
+        public PaymentsAccountServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new PaymentsAccountServiceFutureStub(channel, callOptions);
+        }
+      };
+    return PaymentsAccountServiceFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -109,13 +123,13 @@ public final class PaymentsAccountServiceGrpc {
      */
     public void listPaymentsAccounts(com.google.ads.googleads.v2.services.ListPaymentsAccountsRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v2.services.ListPaymentsAccountsResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getListPaymentsAccountsMethodHelper(), responseObserver);
+      asyncUnimplementedUnaryCall(getListPaymentsAccountsMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
-            getListPaymentsAccountsMethodHelper(),
+            getListPaymentsAccountsMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 com.google.ads.googleads.v2.services.ListPaymentsAccountsRequest,
@@ -131,19 +145,15 @@ public final class PaymentsAccountServiceGrpc {
    * billing.
    * </pre>
    */
-  public static final class PaymentsAccountServiceStub extends io.grpc.stub.AbstractStub<PaymentsAccountServiceStub> {
-    private PaymentsAccountServiceStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private PaymentsAccountServiceStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class PaymentsAccountServiceStub extends io.grpc.stub.AbstractAsyncStub<PaymentsAccountServiceStub> {
+    private PaymentsAccountServiceStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected PaymentsAccountServiceStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected PaymentsAccountServiceStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new PaymentsAccountServiceStub(channel, callOptions);
     }
 
@@ -157,7 +167,7 @@ public final class PaymentsAccountServiceGrpc {
     public void listPaymentsAccounts(com.google.ads.googleads.v2.services.ListPaymentsAccountsRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v2.services.ListPaymentsAccountsResponse> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(getListPaymentsAccountsMethodHelper(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getListPaymentsAccountsMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -167,19 +177,15 @@ public final class PaymentsAccountServiceGrpc {
    * billing.
    * </pre>
    */
-  public static final class PaymentsAccountServiceBlockingStub extends io.grpc.stub.AbstractStub<PaymentsAccountServiceBlockingStub> {
-    private PaymentsAccountServiceBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private PaymentsAccountServiceBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class PaymentsAccountServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<PaymentsAccountServiceBlockingStub> {
+    private PaymentsAccountServiceBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected PaymentsAccountServiceBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected PaymentsAccountServiceBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new PaymentsAccountServiceBlockingStub(channel, callOptions);
     }
 
@@ -192,7 +198,7 @@ public final class PaymentsAccountServiceGrpc {
      */
     public com.google.ads.googleads.v2.services.ListPaymentsAccountsResponse listPaymentsAccounts(com.google.ads.googleads.v2.services.ListPaymentsAccountsRequest request) {
       return blockingUnaryCall(
-          getChannel(), getListPaymentsAccountsMethodHelper(), getCallOptions(), request);
+          getChannel(), getListPaymentsAccountsMethod(), getCallOptions(), request);
     }
   }
 
@@ -202,19 +208,15 @@ public final class PaymentsAccountServiceGrpc {
    * billing.
    * </pre>
    */
-  public static final class PaymentsAccountServiceFutureStub extends io.grpc.stub.AbstractStub<PaymentsAccountServiceFutureStub> {
-    private PaymentsAccountServiceFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private PaymentsAccountServiceFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class PaymentsAccountServiceFutureStub extends io.grpc.stub.AbstractFutureStub<PaymentsAccountServiceFutureStub> {
+    private PaymentsAccountServiceFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected PaymentsAccountServiceFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected PaymentsAccountServiceFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new PaymentsAccountServiceFutureStub(channel, callOptions);
     }
 
@@ -228,7 +230,7 @@ public final class PaymentsAccountServiceGrpc {
     public com.google.common.util.concurrent.ListenableFuture<com.google.ads.googleads.v2.services.ListPaymentsAccountsResponse> listPaymentsAccounts(
         com.google.ads.googleads.v2.services.ListPaymentsAccountsRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(getListPaymentsAccountsMethodHelper(), getCallOptions()), request);
+          getChannel().newCall(getListPaymentsAccountsMethod(), getCallOptions()), request);
     }
   }
 
@@ -316,7 +318,7 @@ public final class PaymentsAccountServiceGrpc {
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new PaymentsAccountServiceFileDescriptorSupplier())
-              .addMethod(getListPaymentsAccountsMethodHelper())
+              .addMethod(getListPaymentsAccountsMethod())
               .build();
         }
       }

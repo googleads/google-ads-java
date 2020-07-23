@@ -33,40 +33,37 @@ public final class PaidOrganicSearchTermViewServiceProto {
       "google.ads.googleads.v1.services\032Egoogle" +
       "/ads/googleads/v1/resources/paid_organic" +
       "_search_term_view.proto\032\034google/api/anno" +
-      "tations.proto\032\027google/api/client.proto\"<" +
-      "\n#GetPaidOrganicSearchTermViewRequest\022\025\n" +
-      "\rresource_name\030\001 \001(\t2\253\002\n PaidOrganicSear" +
-      "chTermViewService\022\351\001\n\034GetPaidOrganicSear" +
+      "tations.proto\032\027google/api/client.proto\032\037" +
+      "google/api/field_behavior.proto\032\031google/" +
+      "api/resource.proto\"x\n#GetPaidOrganicSear" +
+      "chTermViewRequest\022Q\n\rresource_name\030\001 \001(\t" +
+      "B:\340A\002\372A4\n2googleads.googleapis.com/PaidO" +
+      "rganicSearchTermView2\273\002\n PaidOrganicSear" +
+      "chTermViewService\022\371\001\n\034GetPaidOrganicSear" +
       "chTermView\022E.google.ads.googleads.v1.ser" +
       "vices.GetPaidOrganicSearchTermViewReques" +
       "t\032<.google.ads.googleads.v1.resources.Pa" +
-      "idOrganicSearchTermView\"D\202\323\344\223\002>\022</v1/{re" +
+      "idOrganicSearchTermView\"T\202\323\344\223\002>\022</v1/{re" +
       "source_name=customers/*/paidOrganicSearc" +
-      "hTermViews/*}\032\033\312A\030googleads.googleapis.c" +
-      "omB\214\002\n$com.google.ads.googleads.v1.servi" +
-      "cesB%PaidOrganicSearchTermViewServicePro" +
-      "toP\001ZHgoogle.golang.org/genproto/googlea" +
-      "pis/ads/googleads/v1/services;services\242\002" +
-      "\003GAA\252\002 Google.Ads.GoogleAds.V1.Services\312" +
-      "\002 Google\\Ads\\GoogleAds\\V1\\Services\352\002$Goo" +
-      "gle::Ads::GoogleAds::V1::Servicesb\006proto" +
-      "3"
+      "hTermViews/*}\332A\rresource_name\032\033\312A\030google" +
+      "ads.googleapis.comB\214\002\n$com.google.ads.go" +
+      "ogleads.v1.servicesB%PaidOrganicSearchTe" +
+      "rmViewServiceProtoP\001ZHgoogle.golang.org/" +
+      "genproto/googleapis/ads/googleads/v1/ser" +
+      "vices;services\242\002\003GAA\252\002 Google.Ads.Google" +
+      "Ads.V1.Services\312\002 Google\\Ads\\GoogleAds\\V" +
+      "1\\Services\352\002$Google::Ads::GoogleAds::V1:" +
+      ":Servicesb\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.ads.googleads.v1.resources.PaidOrganicSearchTermViewProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
           com.google.api.ClientProto.getDescriptor(),
-        }, assigner);
+          com.google.api.FieldBehaviorProto.getDescriptor(),
+          com.google.api.ResourceProto.getDescriptor(),
+        });
     internal_static_google_ads_googleads_v1_services_GetPaidOrganicSearchTermViewRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_google_ads_googleads_v1_services_GetPaidOrganicSearchTermViewRequest_fieldAccessorTable = new
@@ -76,12 +73,17 @@ public final class PaidOrganicSearchTermViewServiceProto {
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.ClientProto.defaultHost);
+    registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);
     registry.add(com.google.api.AnnotationsProto.http);
+    registry.add(com.google.api.ClientProto.methodSignature);
+    registry.add(com.google.api.ResourceProto.resourceReference);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.ads.googleads.v1.resources.PaidOrganicSearchTermViewProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
     com.google.api.ClientProto.getDescriptor();
+    com.google.api.FieldBehaviorProto.getDescriptor();
+    com.google.api.ResourceProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

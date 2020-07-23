@@ -13,6 +13,7 @@ public interface GenerateProductMixIdeasRequestOrBuilder extends
    * </pre>
    *
    * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+   * @return The customerId.
    */
   java.lang.String getCustomerId();
   /**
@@ -21,6 +22,7 @@ public interface GenerateProductMixIdeasRequestOrBuilder extends
    * </pre>
    *
    * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+   * @return The bytes for customerId.
    */
   com.google.protobuf.ByteString
       getCustomerIdBytes();
@@ -32,6 +34,7 @@ public interface GenerateProductMixIdeasRequestOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue plannable_location_id = 2 [(.google.api.field_behavior) = REQUIRED];</code>
+   * @return Whether the plannableLocationId field is set.
    */
   boolean hasPlannableLocationId();
   /**
@@ -41,6 +44,7 @@ public interface GenerateProductMixIdeasRequestOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue plannable_location_id = 2 [(.google.api.field_behavior) = REQUIRED];</code>
+   * @return The plannableLocationId.
    */
   com.google.protobuf.StringValue getPlannableLocationId();
   /**
@@ -60,6 +64,7 @@ public interface GenerateProductMixIdeasRequestOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue currency_code = 3 [(.google.api.field_behavior) = REQUIRED];</code>
+   * @return Whether the currencyCode field is set.
    */
   boolean hasCurrencyCode();
   /**
@@ -69,6 +74,7 @@ public interface GenerateProductMixIdeasRequestOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue currency_code = 3 [(.google.api.field_behavior) = REQUIRED];</code>
+   * @return The currencyCode.
    */
   com.google.protobuf.StringValue getCurrencyCode();
   /**
@@ -88,6 +94,7 @@ public interface GenerateProductMixIdeasRequestOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value budget_micros = 4 [(.google.api.field_behavior) = REQUIRED];</code>
+   * @return Whether the budgetMicros field is set.
    */
   boolean hasBudgetMicros();
   /**
@@ -97,6 +104,7 @@ public interface GenerateProductMixIdeasRequestOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value budget_micros = 4 [(.google.api.field_behavior) = REQUIRED];</code>
+   * @return The budgetMicros.
    */
   com.google.protobuf.Int64Value getBudgetMicros();
   /**
@@ -117,6 +125,7 @@ public interface GenerateProductMixIdeasRequestOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.services.Preferences preferences = 5;</code>
+   * @return Whether the preferences field is set.
    */
   boolean hasPreferences();
   /**
@@ -127,6 +136,7 @@ public interface GenerateProductMixIdeasRequestOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.services.Preferences preferences = 5;</code>
+   * @return The preferences.
    */
   com.google.ads.googleads.v3.services.Preferences getPreferences();
   /**

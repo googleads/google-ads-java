@@ -34,59 +34,72 @@ public final class FeedItemTargetProto {
       "ommon/criteria.proto\032;google/ads/googlea" +
       "ds/v1/enums/feed_item_target_device.prot" +
       "o\0329google/ads/googleads/v1/enums/feed_it" +
-      "em_target_type.proto\032\036google/protobuf/wr" +
-      "appers.proto\032\034google/api/annotations.pro" +
-      "to\"\215\005\n\016FeedItemTarget\022\025\n\rresource_name\030\001" +
-      " \001(\t\022/\n\tfeed_item\030\002 \001(\0132\034.google.protobu" +
-      "f.StringValue\022g\n\025feed_item_target_type\030\003" +
-      " \001(\0162H.google.ads.googleads.v1.enums.Fee" +
-      "dItemTargetTypeEnum.FeedItemTargetType\0228" +
-      "\n\023feed_item_target_id\030\006 \001(\0132\033.google.pro" +
-      "tobuf.Int64Value\0220\n\010campaign\030\004 \001(\0132\034.goo" +
-      "gle.protobuf.StringValueH\000\0220\n\010ad_group\030\005" +
-      " \001(\0132\034.google.protobuf.StringValueH\000\022>\n\007" +
-      "keyword\030\007 \001(\0132+.google.ads.googleads.v1." +
-      "common.KeywordInfoH\000\022;\n\023geo_target_const" +
-      "ant\030\010 \001(\0132\034.google.protobuf.StringValueH" +
-      "\000\022^\n\006device\030\t \001(\0162L.google.ads.googleads" +
-      ".v1.enums.FeedItemTargetDeviceEnum.FeedI" +
-      "temTargetDeviceH\000\022E\n\013ad_schedule\030\n \001(\0132." +
-      ".google.ads.googleads.v1.common.AdSchedu" +
-      "leInfoH\000B\010\n\006targetB\200\002\n%com.google.ads.go" +
-      "ogleads.v1.resourcesB\023FeedItemTargetProt" +
-      "oP\001ZJgoogle.golang.org/genproto/googleap" +
-      "is/ads/googleads/v1/resources;resources\242" +
-      "\002\003GAA\252\002!Google.Ads.GoogleAds.V1.Resource" +
-      "s\312\002!Google\\Ads\\GoogleAds\\V1\\Resources\352\002%" +
-      "Google::Ads::GoogleAds::V1::Resourcesb\006p" +
-      "roto3"
+      "em_target_type.proto\032\037google/api/field_b" +
+      "ehavior.proto\032\031google/api/resource.proto" +
+      "\032\036google/protobuf/wrappers.proto\032\034google" +
+      "/api/annotations.proto\"\362\007\n\016FeedItemTarge" +
+      "t\022F\n\rresource_name\030\001 \001(\tB/\340A\005\372A)\n\'google" +
+      "ads.googleapis.com/FeedItemTarget\022Z\n\tfee" +
+      "d_item\030\002 \001(\0132\034.google.protobuf.StringVal" +
+      "ueB)\340A\005\372A#\n!googleads.googleapis.com/Fee" +
+      "dItem\022l\n\025feed_item_target_type\030\003 \001(\0162H.g" +
+      "oogle.ads.googleads.v1.enums.FeedItemTar" +
+      "getTypeEnum.FeedItemTargetTypeB\003\340A\003\022=\n\023f" +
+      "eed_item_target_id\030\006 \001(\0132\033.google.protob" +
+      "uf.Int64ValueB\003\340A\003\022[\n\010campaign\030\004 \001(\0132\034.g" +
+      "oogle.protobuf.StringValueB)\340A\005\372A#\n!goog" +
+      "leads.googleapis.com/CampaignH\000\022Z\n\010ad_gr" +
+      "oup\030\005 \001(\0132\034.google.protobuf.StringValueB" +
+      "(\340A\005\372A\"\n googleads.googleapis.com/AdGrou" +
+      "pH\000\022C\n\007keyword\030\007 \001(\0132+.google.ads.google" +
+      "ads.v1.common.KeywordInfoB\003\340A\005H\000\022o\n\023geo_" +
+      "target_constant\030\010 \001(\0132\034.google.protobuf." +
+      "StringValueB2\340A\005\372A,\n*googleads.googleapi" +
+      "s.com/GeoTargetConstantH\000\022c\n\006device\030\t \001(" +
+      "\0162L.google.ads.googleads.v1.enums.FeedIt" +
+      "emTargetDeviceEnum.FeedItemTargetDeviceB" +
+      "\003\340A\005H\000\022J\n\013ad_schedule\030\n \001(\0132..google.ads" +
+      ".googleads.v1.common.AdScheduleInfoB\003\340A\005" +
+      "H\000:e\352Ab\n\'googleads.googleapis.com/FeedIt" +
+      "emTarget\0227customers/{customer}/feedItemT" +
+      "argets/{feed_item_target}B\010\n\006targetB\200\002\n%" +
+      "com.google.ads.googleads.v1.resourcesB\023F" +
+      "eedItemTargetProtoP\001ZJgoogle.golang.org/" +
+      "genproto/googleapis/ads/googleads/v1/res" +
+      "ources;resources\242\002\003GAA\252\002!Google.Ads.Goog" +
+      "leAds.V1.Resources\312\002!Google\\Ads\\GoogleAd" +
+      "s\\V1\\Resources\352\002%Google::Ads::GoogleAds:" +
+      ":V1::Resourcesb\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.ads.googleads.v1.common.CriteriaProto.getDescriptor(),
           com.google.ads.googleads.v1.enums.FeedItemTargetDeviceProto.getDescriptor(),
           com.google.ads.googleads.v1.enums.FeedItemTargetTypeProto.getDescriptor(),
+          com.google.api.FieldBehaviorProto.getDescriptor(),
+          com.google.api.ResourceProto.getDescriptor(),
           com.google.protobuf.WrappersProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
-        }, assigner);
+        });
     internal_static_google_ads_googleads_v1_resources_FeedItemTarget_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_google_ads_googleads_v1_resources_FeedItemTarget_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v1_resources_FeedItemTarget_descriptor,
         new java.lang.String[] { "ResourceName", "FeedItem", "FeedItemTargetType", "FeedItemTargetId", "Campaign", "AdGroup", "Keyword", "GeoTargetConstant", "Device", "AdSchedule", "Target", });
+    com.google.protobuf.ExtensionRegistry registry =
+        com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);
+    registry.add(com.google.api.ResourceProto.resource);
+    registry.add(com.google.api.ResourceProto.resourceReference);
+    com.google.protobuf.Descriptors.FileDescriptor
+        .internalUpdateFileDescriptor(descriptor, registry);
     com.google.ads.googleads.v1.common.CriteriaProto.getDescriptor();
     com.google.ads.googleads.v1.enums.FeedItemTargetDeviceProto.getDescriptor();
     com.google.ads.googleads.v1.enums.FeedItemTargetTypeProto.getDescriptor();
+    com.google.api.FieldBehaviorProto.getDescriptor();
+    com.google.api.ResourceProto.getDescriptor();
     com.google.protobuf.WrappersProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
   }

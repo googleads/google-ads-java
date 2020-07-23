@@ -15,6 +15,7 @@ public interface CustomerManagerLinkOrBuilder extends
    * </pre>
    *
    * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * @return The resourceName.
    */
   java.lang.String getResourceName();
   /**
@@ -25,6 +26,7 @@ public interface CustomerManagerLinkOrBuilder extends
    * </pre>
    *
    * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * @return The bytes for resourceName.
    */
   com.google.protobuf.ByteString
       getResourceNameBytes();
@@ -35,6 +37,7 @@ public interface CustomerManagerLinkOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue manager_customer = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the managerCustomer field is set.
    */
   boolean hasManagerCustomer();
   /**
@@ -43,6 +46,7 @@ public interface CustomerManagerLinkOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue manager_customer = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The managerCustomer.
    */
   com.google.protobuf.StringValue getManagerCustomer();
   /**
@@ -60,6 +64,7 @@ public interface CustomerManagerLinkOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value manager_link_id = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the managerLinkId field is set.
    */
   boolean hasManagerLinkId();
   /**
@@ -68,6 +73,7 @@ public interface CustomerManagerLinkOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value manager_link_id = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The managerLinkId.
    */
   com.google.protobuf.Int64Value getManagerLinkId();
   /**
@@ -85,6 +91,7 @@ public interface CustomerManagerLinkOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.ManagerLinkStatusEnum.ManagerLinkStatus status = 5;</code>
+   * @return The enum numeric value on the wire for status.
    */
   int getStatusValue();
   /**
@@ -93,6 +100,7 @@ public interface CustomerManagerLinkOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.ManagerLinkStatusEnum.ManagerLinkStatus status = 5;</code>
+   * @return The status.
    */
   com.google.ads.googleads.v3.enums.ManagerLinkStatusEnum.ManagerLinkStatus getStatus();
 }

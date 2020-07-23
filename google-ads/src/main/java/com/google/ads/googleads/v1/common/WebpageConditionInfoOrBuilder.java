@@ -13,6 +13,7 @@ public interface WebpageConditionInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v1.enums.WebpageConditionOperandEnum.WebpageConditionOperand operand = 1;</code>
+   * @return The enum numeric value on the wire for operand.
    */
   int getOperandValue();
   /**
@@ -21,6 +22,7 @@ public interface WebpageConditionInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v1.enums.WebpageConditionOperandEnum.WebpageConditionOperand operand = 1;</code>
+   * @return The operand.
    */
   com.google.ads.googleads.v1.enums.WebpageConditionOperandEnum.WebpageConditionOperand getOperand();
 
@@ -30,6 +32,7 @@ public interface WebpageConditionInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v1.enums.WebpageConditionOperatorEnum.WebpageConditionOperator operator = 2;</code>
+   * @return The enum numeric value on the wire for operator.
    */
   int getOperatorValue();
   /**
@@ -38,6 +41,7 @@ public interface WebpageConditionInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v1.enums.WebpageConditionOperatorEnum.WebpageConditionOperator operator = 2;</code>
+   * @return The operator.
    */
   com.google.ads.googleads.v1.enums.WebpageConditionOperatorEnum.WebpageConditionOperator getOperator();
 
@@ -47,6 +51,7 @@ public interface WebpageConditionInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue argument = 3;</code>
+   * @return Whether the argument field is set.
    */
   boolean hasArgument();
   /**
@@ -55,6 +60,7 @@ public interface WebpageConditionInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue argument = 3;</code>
+   * @return The argument.
    */
   com.google.protobuf.StringValue getArgument();
   /**

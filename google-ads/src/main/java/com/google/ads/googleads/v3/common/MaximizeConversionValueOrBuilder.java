@@ -17,6 +17,7 @@ public interface MaximizeConversionValueOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue target_roas = 1;</code>
+   * @return Whether the targetRoas field is set.
    */
   boolean hasTargetRoas();
   /**
@@ -29,6 +30,7 @@ public interface MaximizeConversionValueOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue target_roas = 1;</code>
+   * @return The targetRoas.
    */
   com.google.protobuf.DoubleValue getTargetRoas();
   /**

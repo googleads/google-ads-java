@@ -9,18 +9,20 @@ public interface EndCampaignExperimentRequestOrBuilder extends
 
   /**
    * <pre>
-   * The resource name of the campaign experiment to end.
+   * Required. The resource name of the campaign experiment to end.
    * </pre>
    *
-   * <code>string campaign_experiment = 1;</code>
+   * <code>string campaign_experiment = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+   * @return The campaignExperiment.
    */
   java.lang.String getCampaignExperiment();
   /**
    * <pre>
-   * The resource name of the campaign experiment to end.
+   * Required. The resource name of the campaign experiment to end.
    * </pre>
    *
-   * <code>string campaign_experiment = 1;</code>
+   * <code>string campaign_experiment = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+   * @return The bytes for campaignExperiment.
    */
   com.google.protobuf.ByteString
       getCampaignExperimentBytes();

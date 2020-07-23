@@ -20,6 +20,7 @@ public interface RuleBasedUserListInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v1.enums.UserListPrepopulationStatusEnum.UserListPrepopulationStatus prepopulation_status = 1;</code>
+   * @return The enum numeric value on the wire for prepopulationStatus.
    */
   int getPrepopulationStatusValue();
   /**
@@ -35,6 +36,7 @@ public interface RuleBasedUserListInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v1.enums.UserListPrepopulationStatusEnum.UserListPrepopulationStatus prepopulation_status = 1;</code>
+   * @return The prepopulationStatus.
    */
   com.google.ads.googleads.v1.enums.UserListPrepopulationStatusEnum.UserListPrepopulationStatus getPrepopulationStatus();
 
@@ -46,6 +48,7 @@ public interface RuleBasedUserListInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v1.common.CombinedRuleUserListInfo combined_rule_user_list = 2;</code>
+   * @return Whether the combinedRuleUserList field is set.
    */
   boolean hasCombinedRuleUserList();
   /**
@@ -56,6 +59,7 @@ public interface RuleBasedUserListInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v1.common.CombinedRuleUserListInfo combined_rule_user_list = 2;</code>
+   * @return The combinedRuleUserList.
    */
   com.google.ads.googleads.v1.common.CombinedRuleUserListInfo getCombinedRuleUserList();
   /**
@@ -79,6 +83,7 @@ public interface RuleBasedUserListInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v1.common.DateSpecificRuleUserListInfo date_specific_rule_user_list = 3;</code>
+   * @return Whether the dateSpecificRuleUserList field is set.
    */
   boolean hasDateSpecificRuleUserList();
   /**
@@ -91,6 +96,7 @@ public interface RuleBasedUserListInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v1.common.DateSpecificRuleUserListInfo date_specific_rule_user_list = 3;</code>
+   * @return The dateSpecificRuleUserList.
    */
   com.google.ads.googleads.v1.common.DateSpecificRuleUserListInfo getDateSpecificRuleUserList();
   /**
@@ -113,6 +119,7 @@ public interface RuleBasedUserListInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v1.common.ExpressionRuleUserListInfo expression_rule_user_list = 4;</code>
+   * @return Whether the expressionRuleUserList field is set.
    */
   boolean hasExpressionRuleUserList();
   /**
@@ -122,6 +129,7 @@ public interface RuleBasedUserListInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v1.common.ExpressionRuleUserListInfo expression_rule_user_list = 4;</code>
+   * @return The expressionRuleUserList.
    */
   com.google.ads.googleads.v1.common.ExpressionRuleUserListInfo getExpressionRuleUserList();
   /**

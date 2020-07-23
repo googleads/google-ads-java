@@ -33,36 +33,33 @@ public final class GenderViewServiceProto {
       "ds.v2.services\0323google/ads/googleads/v2/" +
       "resources/gender_view.proto\032\034google/api/" +
       "annotations.proto\032\027google/api/client.pro" +
-      "to\"-\n\024GetGenderViewRequest\022\025\n\rresource_n" +
-      "ame\030\001 \001(\t2\340\001\n\021GenderViewService\022\255\001\n\rGetG" +
-      "enderView\0226.google.ads.googleads.v2.serv" +
-      "ices.GetGenderViewRequest\032-.google.ads.g" +
-      "oogleads.v2.resources.GenderView\"5\202\323\344\223\002/" +
-      "\022-/v2/{resource_name=customers/*/genderV" +
-      "iews/*}\032\033\312A\030googleads.googleapis.comB\375\001\n" +
-      "$com.google.ads.googleads.v2.servicesB\026G" +
-      "enderViewServiceProtoP\001ZHgoogle.golang.o" +
-      "rg/genproto/googleapis/ads/googleads/v2/" +
-      "services;services\242\002\003GAA\252\002 Google.Ads.Goo" +
-      "gleAds.V2.Services\312\002 Google\\Ads\\GoogleAd" +
-      "s\\V2\\Services\352\002$Google::Ads::GoogleAds::" +
-      "V2::Servicesb\006proto3"
+      "to\032\037google/api/field_behavior.proto\032\031goo" +
+      "gle/api/resource.proto\"Z\n\024GetGenderViewR" +
+      "equest\022B\n\rresource_name\030\001 \001(\tB+\340A\002\372A%\n#g" +
+      "oogleads.googleapis.com/GenderView2\360\001\n\021G" +
+      "enderViewService\022\275\001\n\rGetGenderView\0226.goo" +
+      "gle.ads.googleads.v2.services.GetGenderV" +
+      "iewRequest\032-.google.ads.googleads.v2.res" +
+      "ources.GenderView\"E\202\323\344\223\002/\022-/v2/{resource" +
+      "_name=customers/*/genderViews/*}\332A\rresou" +
+      "rce_name\032\033\312A\030googleads.googleapis.comB\375\001" +
+      "\n$com.google.ads.googleads.v2.servicesB\026" +
+      "GenderViewServiceProtoP\001ZHgoogle.golang." +
+      "org/genproto/googleapis/ads/googleads/v2" +
+      "/services;services\242\002\003GAA\252\002 Google.Ads.Go" +
+      "ogleAds.V2.Services\312\002 Google\\Ads\\GoogleA" +
+      "ds\\V2\\Services\352\002$Google::Ads::GoogleAds:" +
+      ":V2::Servicesb\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.ads.googleads.v2.resources.GenderViewProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
           com.google.api.ClientProto.getDescriptor(),
-        }, assigner);
+          com.google.api.FieldBehaviorProto.getDescriptor(),
+          com.google.api.ResourceProto.getDescriptor(),
+        });
     internal_static_google_ads_googleads_v2_services_GetGenderViewRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_google_ads_googleads_v2_services_GetGenderViewRequest_fieldAccessorTable = new
@@ -72,12 +69,17 @@ public final class GenderViewServiceProto {
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.ClientProto.defaultHost);
+    registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);
     registry.add(com.google.api.AnnotationsProto.http);
+    registry.add(com.google.api.ClientProto.methodSignature);
+    registry.add(com.google.api.ResourceProto.resourceReference);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.ads.googleads.v2.resources.GenderViewProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
     com.google.api.ClientProto.getDescriptor();
+    com.google.api.FieldBehaviorProto.getDescriptor();
+    com.google.api.ResourceProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

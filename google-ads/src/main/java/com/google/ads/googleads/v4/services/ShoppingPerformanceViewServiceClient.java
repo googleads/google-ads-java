@@ -21,7 +21,6 @@ import com.google.ads.googleads.v4.services.stub.ShoppingPerformanceViewServiceS
 import com.google.api.core.BetaApi;
 import com.google.api.gax.core.BackgroundResource;
 import com.google.api.gax.rpc.UnaryCallable;
-import com.google.api.pathtemplate.PathTemplate;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 import javax.annotation.Generated;
@@ -36,8 +35,8 @@ import javax.annotation.Generated;
  * <pre>
  * <code>
  * try (ShoppingPerformanceViewServiceClient shoppingPerformanceViewServiceClient = ShoppingPerformanceViewServiceClient.create()) {
- *   String formattedResourceName = ShoppingPerformanceViewServiceClient.formatShoppingPerformanceViewName("[CUSTOMER]");
- *   ShoppingPerformanceView response = shoppingPerformanceViewServiceClient.getShoppingPerformanceView(formattedResourceName);
+ *   ShoppingPerformanceViewName resourceName = ShoppingPerformanceViewName.of("[CUSTOMER]");
+ *   ShoppingPerformanceView response = shoppingPerformanceViewServiceClient.getShoppingPerformanceView(resourceName);
  * }
  * </code>
  * </pre>
@@ -99,34 +98,6 @@ public class ShoppingPerformanceViewServiceClient implements BackgroundResource 
   private final ShoppingPerformanceViewServiceSettings settings;
   private final ShoppingPerformanceViewServiceStub stub;
 
-  private static final PathTemplate SHOPPING_PERFORMANCE_VIEW_PATH_TEMPLATE =
-      PathTemplate.createWithoutUrlEncoding("customers/{customer}/shoppingPerformanceView");
-
-  /**
-   * Formats a string containing the fully-qualified path to represent a shopping_performance_view
-   * resource.
-   *
-   * @deprecated Use the {@link ShoppingPerformanceViewName} class instead.
-   */
-  @Deprecated
-  public static final String formatShoppingPerformanceViewName(String customer) {
-    return SHOPPING_PERFORMANCE_VIEW_PATH_TEMPLATE.instantiate("customer", customer);
-  }
-
-  /**
-   * Parses the customer from the given fully-qualified path which represents a
-   * shopping_performance_view resource.
-   *
-   * @deprecated Use the {@link ShoppingPerformanceViewName} class instead.
-   */
-  @Deprecated
-  public static final String parseCustomerFromShoppingPerformanceViewName(
-      String shoppingPerformanceViewName) {
-    return SHOPPING_PERFORMANCE_VIEW_PATH_TEMPLATE
-        .parse(shoppingPerformanceViewName)
-        .get("customer");
-  }
-
   /** Constructs an instance of ShoppingPerformanceViewServiceClient with default settings. */
   public static final ShoppingPerformanceViewServiceClient create() throws IOException {
     return create(ShoppingPerformanceViewServiceSettings.newBuilder().build());
@@ -187,8 +158,33 @@ public class ShoppingPerformanceViewServiceClient implements BackgroundResource 
    *
    * <pre><code>
    * try (ShoppingPerformanceViewServiceClient shoppingPerformanceViewServiceClient = ShoppingPerformanceViewServiceClient.create()) {
-   *   String formattedResourceName = ShoppingPerformanceViewServiceClient.formatShoppingPerformanceViewName("[CUSTOMER]");
-   *   ShoppingPerformanceView response = shoppingPerformanceViewServiceClient.getShoppingPerformanceView(formattedResourceName);
+   *   ShoppingPerformanceViewName resourceName = ShoppingPerformanceViewName.of("[CUSTOMER]");
+   *   ShoppingPerformanceView response = shoppingPerformanceViewServiceClient.getShoppingPerformanceView(resourceName);
+   * }
+   * </code></pre>
+   *
+   * @param resourceName Required. The resource name of the Shopping performance view to fetch.
+   * @throws com.google.api.gax.rpc.ApiException if the remote call fails
+   */
+  public final ShoppingPerformanceView getShoppingPerformanceView(
+      ShoppingPerformanceViewName resourceName) {
+    GetShoppingPerformanceViewRequest request =
+        GetShoppingPerformanceViewRequest.newBuilder()
+            .setResourceName(resourceName == null ? null : resourceName.toString())
+            .build();
+    return getShoppingPerformanceView(request);
+  }
+
+  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  /**
+   * Returns the requested Shopping performance view in full detail.
+   *
+   * <p>Sample code:
+   *
+   * <pre><code>
+   * try (ShoppingPerformanceViewServiceClient shoppingPerformanceViewServiceClient = ShoppingPerformanceViewServiceClient.create()) {
+   *   ShoppingPerformanceViewName resourceName = ShoppingPerformanceViewName.of("[CUSTOMER]");
+   *   ShoppingPerformanceView response = shoppingPerformanceViewServiceClient.getShoppingPerformanceView(resourceName.toString());
    * }
    * </code></pre>
    *
@@ -196,7 +192,6 @@ public class ShoppingPerformanceViewServiceClient implements BackgroundResource 
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final ShoppingPerformanceView getShoppingPerformanceView(String resourceName) {
-    SHOPPING_PERFORMANCE_VIEW_PATH_TEMPLATE.validate(resourceName, "getShoppingPerformanceView");
     GetShoppingPerformanceViewRequest request =
         GetShoppingPerformanceViewRequest.newBuilder().setResourceName(resourceName).build();
     return getShoppingPerformanceView(request);
@@ -210,9 +205,9 @@ public class ShoppingPerformanceViewServiceClient implements BackgroundResource 
    *
    * <pre><code>
    * try (ShoppingPerformanceViewServiceClient shoppingPerformanceViewServiceClient = ShoppingPerformanceViewServiceClient.create()) {
-   *   String formattedResourceName = ShoppingPerformanceViewServiceClient.formatShoppingPerformanceViewName("[CUSTOMER]");
+   *   ShoppingPerformanceViewName resourceName = ShoppingPerformanceViewName.of("[CUSTOMER]");
    *   GetShoppingPerformanceViewRequest request = GetShoppingPerformanceViewRequest.newBuilder()
-   *     .setResourceName(formattedResourceName)
+   *     .setResourceName(resourceName.toString())
    *     .build();
    *   ShoppingPerformanceView response = shoppingPerformanceViewServiceClient.getShoppingPerformanceView(request);
    * }
@@ -234,9 +229,9 @@ public class ShoppingPerformanceViewServiceClient implements BackgroundResource 
    *
    * <pre><code>
    * try (ShoppingPerformanceViewServiceClient shoppingPerformanceViewServiceClient = ShoppingPerformanceViewServiceClient.create()) {
-   *   String formattedResourceName = ShoppingPerformanceViewServiceClient.formatShoppingPerformanceViewName("[CUSTOMER]");
+   *   ShoppingPerformanceViewName resourceName = ShoppingPerformanceViewName.of("[CUSTOMER]");
    *   GetShoppingPerformanceViewRequest request = GetShoppingPerformanceViewRequest.newBuilder()
-   *     .setResourceName(formattedResourceName)
+   *     .setResourceName(resourceName.toString())
    *     .build();
    *   ApiFuture&lt;ShoppingPerformanceView&gt; future = shoppingPerformanceViewServiceClient.getShoppingPerformanceViewCallable().futureCall(request);
    *   // Do something

@@ -10,7 +10,7 @@ package com.google.ads.googleads.v3.resources;
  *
  * Protobuf type {@code google.ads.googleads.v3.resources.AdGroupAdPolicySummary}
  */
-public  final class AdGroupAdPolicySummary extends
+public final class AdGroupAdPolicySummary extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v3.resources.AdGroupAdPolicySummary)
     AdGroupAdPolicySummaryOrBuilder {
@@ -23,6 +23,13 @@ private static final long serialVersionUID = 0L;
     policyTopicEntries_ = java.util.Collections.emptyList();
     reviewStatus_ = 0;
     approvalStatus_ = 0;
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new AdGroupAdPolicySummary();
   }
 
   @java.lang.Override
@@ -105,7 +112,6 @@ private static final long serialVersionUID = 0L;
             com.google.ads.googleads.v3.resources.AdGroupAdPolicySummary.class, com.google.ads.googleads.v3.resources.AdGroupAdPolicySummary.Builder.class);
   }
 
-  private int bitField0_;
   public static final int POLICY_TOPIC_ENTRIES_FIELD_NUMBER = 1;
   private java.util.List<com.google.ads.googleads.v3.common.PolicyTopicEntry> policyTopicEntries_;
   /**
@@ -115,6 +121,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v3.common.PolicyTopicEntry policy_topic_entries = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public java.util.List<com.google.ads.googleads.v3.common.PolicyTopicEntry> getPolicyTopicEntriesList() {
     return policyTopicEntries_;
   }
@@ -125,6 +132,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v3.common.PolicyTopicEntry policy_topic_entries = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public java.util.List<? extends com.google.ads.googleads.v3.common.PolicyTopicEntryOrBuilder> 
       getPolicyTopicEntriesOrBuilderList() {
     return policyTopicEntries_;
@@ -136,6 +144,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v3.common.PolicyTopicEntry policy_topic_entries = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public int getPolicyTopicEntriesCount() {
     return policyTopicEntries_.size();
   }
@@ -146,6 +155,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v3.common.PolicyTopicEntry policy_topic_entries = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.common.PolicyTopicEntry getPolicyTopicEntries(int index) {
     return policyTopicEntries_.get(index);
   }
@@ -156,6 +166,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v3.common.PolicyTopicEntry policy_topic_entries = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.common.PolicyTopicEntryOrBuilder getPolicyTopicEntriesOrBuilder(
       int index) {
     return policyTopicEntries_.get(index);
@@ -169,8 +180,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.PolicyReviewStatusEnum.PolicyReviewStatus review_status = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The enum numeric value on the wire for reviewStatus.
    */
-  public int getReviewStatusValue() {
+  @java.lang.Override public int getReviewStatusValue() {
     return reviewStatus_;
   }
   /**
@@ -179,8 +191,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.PolicyReviewStatusEnum.PolicyReviewStatus review_status = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The reviewStatus.
    */
-  public com.google.ads.googleads.v3.enums.PolicyReviewStatusEnum.PolicyReviewStatus getReviewStatus() {
+  @java.lang.Override public com.google.ads.googleads.v3.enums.PolicyReviewStatusEnum.PolicyReviewStatus getReviewStatus() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v3.enums.PolicyReviewStatusEnum.PolicyReviewStatus result = com.google.ads.googleads.v3.enums.PolicyReviewStatusEnum.PolicyReviewStatus.valueOf(reviewStatus_);
     return result == null ? com.google.ads.googleads.v3.enums.PolicyReviewStatusEnum.PolicyReviewStatus.UNRECOGNIZED : result;
@@ -195,8 +208,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.PolicyApprovalStatusEnum.PolicyApprovalStatus approval_status = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The enum numeric value on the wire for approvalStatus.
    */
-  public int getApprovalStatusValue() {
+  @java.lang.Override public int getApprovalStatusValue() {
     return approvalStatus_;
   }
   /**
@@ -206,8 +220,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.PolicyApprovalStatusEnum.PolicyApprovalStatus approval_status = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The approvalStatus.
    */
-  public com.google.ads.googleads.v3.enums.PolicyApprovalStatusEnum.PolicyApprovalStatus getApprovalStatus() {
+  @java.lang.Override public com.google.ads.googleads.v3.enums.PolicyApprovalStatusEnum.PolicyApprovalStatus getApprovalStatus() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v3.enums.PolicyApprovalStatusEnum.PolicyApprovalStatus result = com.google.ads.googleads.v3.enums.PolicyApprovalStatusEnum.PolicyApprovalStatus.valueOf(approvalStatus_);
     return result == null ? com.google.ads.googleads.v3.enums.PolicyApprovalStatusEnum.PolicyApprovalStatus.UNRECOGNIZED : result;
@@ -470,7 +485,6 @@ private static final long serialVersionUID = 0L;
     public com.google.ads.googleads.v3.resources.AdGroupAdPolicySummary buildPartial() {
       com.google.ads.googleads.v3.resources.AdGroupAdPolicySummary result = new com.google.ads.googleads.v3.resources.AdGroupAdPolicySummary(this);
       int from_bitField0_ = bitField0_;
-      int to_bitField0_ = 0;
       if (policyTopicEntriesBuilder_ == null) {
         if (((bitField0_ & 0x00000001) != 0)) {
           policyTopicEntries_ = java.util.Collections.unmodifiableList(policyTopicEntries_);
@@ -482,7 +496,6 @@ private static final long serialVersionUID = 0L;
       }
       result.reviewStatus_ = reviewStatus_;
       result.approvalStatus_ = approvalStatus_;
-      result.bitField0_ = to_bitField0_;
       onBuilt();
       return result;
     }
@@ -912,8 +925,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.PolicyReviewStatusEnum.PolicyReviewStatus review_status = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The enum numeric value on the wire for reviewStatus.
      */
-    public int getReviewStatusValue() {
+    @java.lang.Override public int getReviewStatusValue() {
       return reviewStatus_;
     }
     /**
@@ -922,8 +936,11 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.PolicyReviewStatusEnum.PolicyReviewStatus review_status = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @param value The enum numeric value on the wire for reviewStatus to set.
+     * @return This builder for chaining.
      */
     public Builder setReviewStatusValue(int value) {
+      
       reviewStatus_ = value;
       onChanged();
       return this;
@@ -934,7 +951,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.PolicyReviewStatusEnum.PolicyReviewStatus review_status = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The reviewStatus.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.enums.PolicyReviewStatusEnum.PolicyReviewStatus getReviewStatus() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v3.enums.PolicyReviewStatusEnum.PolicyReviewStatus result = com.google.ads.googleads.v3.enums.PolicyReviewStatusEnum.PolicyReviewStatus.valueOf(reviewStatus_);
@@ -946,6 +965,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.PolicyReviewStatusEnum.PolicyReviewStatus review_status = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @param value The reviewStatus to set.
+     * @return This builder for chaining.
      */
     public Builder setReviewStatus(com.google.ads.googleads.v3.enums.PolicyReviewStatusEnum.PolicyReviewStatus value) {
       if (value == null) {
@@ -962,6 +983,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.PolicyReviewStatusEnum.PolicyReviewStatus review_status = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return This builder for chaining.
      */
     public Builder clearReviewStatus() {
       
@@ -978,8 +1000,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.PolicyApprovalStatusEnum.PolicyApprovalStatus approval_status = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The enum numeric value on the wire for approvalStatus.
      */
-    public int getApprovalStatusValue() {
+    @java.lang.Override public int getApprovalStatusValue() {
       return approvalStatus_;
     }
     /**
@@ -989,8 +1012,11 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.PolicyApprovalStatusEnum.PolicyApprovalStatus approval_status = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @param value The enum numeric value on the wire for approvalStatus to set.
+     * @return This builder for chaining.
      */
     public Builder setApprovalStatusValue(int value) {
+      
       approvalStatus_ = value;
       onChanged();
       return this;
@@ -1002,7 +1028,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.PolicyApprovalStatusEnum.PolicyApprovalStatus approval_status = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The approvalStatus.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.enums.PolicyApprovalStatusEnum.PolicyApprovalStatus getApprovalStatus() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v3.enums.PolicyApprovalStatusEnum.PolicyApprovalStatus result = com.google.ads.googleads.v3.enums.PolicyApprovalStatusEnum.PolicyApprovalStatus.valueOf(approvalStatus_);
@@ -1015,6 +1043,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.PolicyApprovalStatusEnum.PolicyApprovalStatus approval_status = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @param value The approvalStatus to set.
+     * @return This builder for chaining.
      */
     public Builder setApprovalStatus(com.google.ads.googleads.v3.enums.PolicyApprovalStatusEnum.PolicyApprovalStatus value) {
       if (value == null) {
@@ -1032,6 +1062,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.PolicyApprovalStatusEnum.PolicyApprovalStatus approval_status = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return This builder for chaining.
      */
     public Builder clearApprovalStatus() {
       

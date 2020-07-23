@@ -22,7 +22,7 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.10.0)",
+    value = "by gRPC proto compiler",
     comments = "Source: google/ads/googleads/v4/services/user_data_service.proto")
 public final class UserDataServiceGrpc {
 
@@ -31,49 +31,49 @@ public final class UserDataServiceGrpc {
   public static final String SERVICE_NAME = "google.ads.googleads.v4.services.UserDataService";
 
   // Static method descriptors that strictly reflect the proto.
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  @java.lang.Deprecated // Use {@link #getUploadUserDataMethod()} instead. 
-  public static final io.grpc.MethodDescriptor<com.google.ads.googleads.v4.services.UploadUserDataRequest,
-      com.google.ads.googleads.v4.services.UploadUserDataResponse> METHOD_UPLOAD_USER_DATA = getUploadUserDataMethodHelper();
-
   private static volatile io.grpc.MethodDescriptor<com.google.ads.googleads.v4.services.UploadUserDataRequest,
       com.google.ads.googleads.v4.services.UploadUserDataResponse> getUploadUserDataMethod;
 
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "UploadUserData",
+      requestType = com.google.ads.googleads.v4.services.UploadUserDataRequest.class,
+      responseType = com.google.ads.googleads.v4.services.UploadUserDataResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<com.google.ads.googleads.v4.services.UploadUserDataRequest,
       com.google.ads.googleads.v4.services.UploadUserDataResponse> getUploadUserDataMethod() {
-    return getUploadUserDataMethodHelper();
-  }
-
-  private static io.grpc.MethodDescriptor<com.google.ads.googleads.v4.services.UploadUserDataRequest,
-      com.google.ads.googleads.v4.services.UploadUserDataResponse> getUploadUserDataMethodHelper() {
     io.grpc.MethodDescriptor<com.google.ads.googleads.v4.services.UploadUserDataRequest, com.google.ads.googleads.v4.services.UploadUserDataResponse> getUploadUserDataMethod;
     if ((getUploadUserDataMethod = UserDataServiceGrpc.getUploadUserDataMethod) == null) {
       synchronized (UserDataServiceGrpc.class) {
         if ((getUploadUserDataMethod = UserDataServiceGrpc.getUploadUserDataMethod) == null) {
-          UserDataServiceGrpc.getUploadUserDataMethod = getUploadUserDataMethod = 
+          UserDataServiceGrpc.getUploadUserDataMethod = getUploadUserDataMethod =
               io.grpc.MethodDescriptor.<com.google.ads.googleads.v4.services.UploadUserDataRequest, com.google.ads.googleads.v4.services.UploadUserDataResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "google.ads.googleads.v4.services.UserDataService", "UploadUserData"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UploadUserData"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v4.services.UploadUserDataRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v4.services.UploadUserDataResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new UserDataServiceMethodDescriptorSupplier("UploadUserData"))
-                  .build();
-          }
+              .setSchemaDescriptor(new UserDataServiceMethodDescriptorSupplier("UploadUserData"))
+              .build();
         }
-     }
-     return getUploadUserDataMethod;
+      }
+    }
+    return getUploadUserDataMethod;
   }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static UserDataServiceStub newStub(io.grpc.Channel channel) {
-    return new UserDataServiceStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<UserDataServiceStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<UserDataServiceStub>() {
+        @java.lang.Override
+        public UserDataServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new UserDataServiceStub(channel, callOptions);
+        }
+      };
+    return UserDataServiceStub.newStub(factory, channel);
   }
 
   /**
@@ -81,7 +81,14 @@ public final class UserDataServiceGrpc {
    */
   public static UserDataServiceBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new UserDataServiceBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<UserDataServiceBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<UserDataServiceBlockingStub>() {
+        @java.lang.Override
+        public UserDataServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new UserDataServiceBlockingStub(channel, callOptions);
+        }
+      };
+    return UserDataServiceBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -89,7 +96,14 @@ public final class UserDataServiceGrpc {
    */
   public static UserDataServiceFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new UserDataServiceFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<UserDataServiceFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<UserDataServiceFutureStub>() {
+        @java.lang.Override
+        public UserDataServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new UserDataServiceFutureStub(channel, callOptions);
+        }
+      };
+    return UserDataServiceFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -107,13 +121,13 @@ public final class UserDataServiceGrpc {
      */
     public void uploadUserData(com.google.ads.googleads.v4.services.UploadUserDataRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v4.services.UploadUserDataResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getUploadUserDataMethodHelper(), responseObserver);
+      asyncUnimplementedUnaryCall(getUploadUserDataMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
-            getUploadUserDataMethodHelper(),
+            getUploadUserDataMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 com.google.ads.googleads.v4.services.UploadUserDataRequest,
@@ -129,19 +143,15 @@ public final class UserDataServiceGrpc {
    * Accessible to whitelisted customers only.
    * </pre>
    */
-  public static final class UserDataServiceStub extends io.grpc.stub.AbstractStub<UserDataServiceStub> {
-    private UserDataServiceStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private UserDataServiceStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class UserDataServiceStub extends io.grpc.stub.AbstractAsyncStub<UserDataServiceStub> {
+    private UserDataServiceStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected UserDataServiceStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected UserDataServiceStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new UserDataServiceStub(channel, callOptions);
     }
 
@@ -153,7 +163,7 @@ public final class UserDataServiceGrpc {
     public void uploadUserData(com.google.ads.googleads.v4.services.UploadUserDataRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v4.services.UploadUserDataResponse> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(getUploadUserDataMethodHelper(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getUploadUserDataMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -163,19 +173,15 @@ public final class UserDataServiceGrpc {
    * Accessible to whitelisted customers only.
    * </pre>
    */
-  public static final class UserDataServiceBlockingStub extends io.grpc.stub.AbstractStub<UserDataServiceBlockingStub> {
-    private UserDataServiceBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private UserDataServiceBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class UserDataServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<UserDataServiceBlockingStub> {
+    private UserDataServiceBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected UserDataServiceBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected UserDataServiceBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new UserDataServiceBlockingStub(channel, callOptions);
     }
 
@@ -186,7 +192,7 @@ public final class UserDataServiceGrpc {
      */
     public com.google.ads.googleads.v4.services.UploadUserDataResponse uploadUserData(com.google.ads.googleads.v4.services.UploadUserDataRequest request) {
       return blockingUnaryCall(
-          getChannel(), getUploadUserDataMethodHelper(), getCallOptions(), request);
+          getChannel(), getUploadUserDataMethod(), getCallOptions(), request);
     }
   }
 
@@ -196,19 +202,15 @@ public final class UserDataServiceGrpc {
    * Accessible to whitelisted customers only.
    * </pre>
    */
-  public static final class UserDataServiceFutureStub extends io.grpc.stub.AbstractStub<UserDataServiceFutureStub> {
-    private UserDataServiceFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private UserDataServiceFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class UserDataServiceFutureStub extends io.grpc.stub.AbstractFutureStub<UserDataServiceFutureStub> {
+    private UserDataServiceFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected UserDataServiceFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected UserDataServiceFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new UserDataServiceFutureStub(channel, callOptions);
     }
 
@@ -220,7 +222,7 @@ public final class UserDataServiceGrpc {
     public com.google.common.util.concurrent.ListenableFuture<com.google.ads.googleads.v4.services.UploadUserDataResponse> uploadUserData(
         com.google.ads.googleads.v4.services.UploadUserDataRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(getUploadUserDataMethodHelper(), getCallOptions()), request);
+          getChannel().newCall(getUploadUserDataMethod(), getCallOptions()), request);
     }
   }
 
@@ -308,7 +310,7 @@ public final class UserDataServiceGrpc {
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new UserDataServiceFileDescriptorSupplier())
-              .addMethod(getUploadUserDataMethodHelper())
+              .addMethod(getUploadUserDataMethod())
               .build();
         }
       }

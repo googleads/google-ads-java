@@ -10,7 +10,7 @@ package com.google.ads.googleads.v1.common;
  *
  * Protobuf type {@code google.ads.googleads.v1.common.CpvBidSimulationPoint}
  */
-public  final class CpvBidSimulationPoint extends
+public final class CpvBidSimulationPoint extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v1.common.CpvBidSimulationPoint)
     CpvBidSimulationPointOrBuilder {
@@ -20,6 +20,13 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private CpvBidSimulationPoint() {
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new CpvBidSimulationPoint();
   }
 
   @java.lang.Override
@@ -35,7 +42,6 @@ private static final long serialVersionUID = 0L;
     if (extensionRegistry == null) {
       throw new java.lang.NullPointerException();
     }
-    int mutable_bitField0_ = 0;
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
         com.google.protobuf.UnknownFieldSet.newBuilder();
     try {
@@ -125,7 +131,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Int64Value cpv_bid_micros = 1;</code>
+   * @return Whether the cpvBidMicros field is set.
    */
+  @java.lang.Override
   public boolean hasCpvBidMicros() {
     return cpvBidMicros_ != null;
   }
@@ -135,7 +143,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Int64Value cpv_bid_micros = 1;</code>
+   * @return The cpvBidMicros.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getCpvBidMicros() {
     return cpvBidMicros_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : cpvBidMicros_;
   }
@@ -146,6 +156,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int64Value cpv_bid_micros = 1;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getCpvBidMicrosOrBuilder() {
     return getCpvBidMicros();
   }
@@ -158,7 +169,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Int64Value cost_micros = 2;</code>
+   * @return Whether the costMicros field is set.
    */
+  @java.lang.Override
   public boolean hasCostMicros() {
     return costMicros_ != null;
   }
@@ -168,7 +181,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Int64Value cost_micros = 2;</code>
+   * @return The costMicros.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getCostMicros() {
     return costMicros_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : costMicros_;
   }
@@ -179,6 +194,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int64Value cost_micros = 2;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getCostMicrosOrBuilder() {
     return getCostMicros();
   }
@@ -191,7 +207,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Int64Value impressions = 3;</code>
+   * @return Whether the impressions field is set.
    */
+  @java.lang.Override
   public boolean hasImpressions() {
     return impressions_ != null;
   }
@@ -201,7 +219,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Int64Value impressions = 3;</code>
+   * @return The impressions.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getImpressions() {
     return impressions_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : impressions_;
   }
@@ -212,6 +232,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int64Value impressions = 3;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getImpressionsOrBuilder() {
     return getImpressions();
   }
@@ -604,6 +625,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value cpv_bid_micros = 1;</code>
+     * @return Whether the cpvBidMicros field is set.
      */
     public boolean hasCpvBidMicros() {
       return cpvBidMicrosBuilder_ != null || cpvBidMicros_ != null;
@@ -614,6 +636,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value cpv_bid_micros = 1;</code>
+     * @return The cpvBidMicros.
      */
     public com.google.protobuf.Int64Value getCpvBidMicros() {
       if (cpvBidMicrosBuilder_ == null) {
@@ -757,6 +780,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value cost_micros = 2;</code>
+     * @return Whether the costMicros field is set.
      */
     public boolean hasCostMicros() {
       return costMicrosBuilder_ != null || costMicros_ != null;
@@ -767,6 +791,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value cost_micros = 2;</code>
+     * @return The costMicros.
      */
     public com.google.protobuf.Int64Value getCostMicros() {
       if (costMicrosBuilder_ == null) {
@@ -910,6 +935,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value impressions = 3;</code>
+     * @return Whether the impressions field is set.
      */
     public boolean hasImpressions() {
       return impressionsBuilder_ != null || impressions_ != null;
@@ -920,6 +946,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value impressions = 3;</code>
+     * @return The impressions.
      */
     public com.google.protobuf.Int64Value getImpressions() {
       if (impressionsBuilder_ == null) {

@@ -9,263 +9,275 @@ public interface GoogleAdsFieldOrBuilder extends
 
   /**
    * <pre>
-   * The resource name of the artifact.
+   * Output only. The resource name of the artifact.
    * Artifact resource names have the form:
    * `googleAdsFields/{name}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The resourceName.
    */
   java.lang.String getResourceName();
   /**
    * <pre>
-   * The resource name of the artifact.
+   * Output only. The resource name of the artifact.
    * Artifact resource names have the form:
    * `googleAdsFields/{name}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The bytes for resourceName.
    */
   com.google.protobuf.ByteString
       getResourceNameBytes();
 
   /**
    * <pre>
-   * The name of the artifact.
+   * Output only. The name of the artifact.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue name = 2;</code>
+   * <code>.google.protobuf.StringValue name = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the name field is set.
    */
   boolean hasName();
   /**
    * <pre>
-   * The name of the artifact.
+   * Output only. The name of the artifact.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue name = 2;</code>
+   * <code>.google.protobuf.StringValue name = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The name.
    */
   com.google.protobuf.StringValue getName();
   /**
    * <pre>
-   * The name of the artifact.
+   * Output only. The name of the artifact.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue name = 2;</code>
+   * <code>.google.protobuf.StringValue name = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.protobuf.StringValueOrBuilder getNameOrBuilder();
 
   /**
    * <pre>
-   * The category of the artifact.
+   * Output only. The category of the artifact.
    * </pre>
    *
-   * <code>.google.ads.googleads.v1.enums.GoogleAdsFieldCategoryEnum.GoogleAdsFieldCategory category = 3;</code>
+   * <code>.google.ads.googleads.v1.enums.GoogleAdsFieldCategoryEnum.GoogleAdsFieldCategory category = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The enum numeric value on the wire for category.
    */
   int getCategoryValue();
   /**
    * <pre>
-   * The category of the artifact.
+   * Output only. The category of the artifact.
    * </pre>
    *
-   * <code>.google.ads.googleads.v1.enums.GoogleAdsFieldCategoryEnum.GoogleAdsFieldCategory category = 3;</code>
+   * <code>.google.ads.googleads.v1.enums.GoogleAdsFieldCategoryEnum.GoogleAdsFieldCategory category = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The category.
    */
   com.google.ads.googleads.v1.enums.GoogleAdsFieldCategoryEnum.GoogleAdsFieldCategory getCategory();
 
   /**
    * <pre>
-   * Whether the artifact can be used in a SELECT clause in search
+   * Output only. Whether the artifact can be used in a SELECT clause in search
    * queries.
    * </pre>
    *
-   * <code>.google.protobuf.BoolValue selectable = 4;</code>
+   * <code>.google.protobuf.BoolValue selectable = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the selectable field is set.
    */
   boolean hasSelectable();
   /**
    * <pre>
-   * Whether the artifact can be used in a SELECT clause in search
+   * Output only. Whether the artifact can be used in a SELECT clause in search
    * queries.
    * </pre>
    *
-   * <code>.google.protobuf.BoolValue selectable = 4;</code>
+   * <code>.google.protobuf.BoolValue selectable = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The selectable.
    */
   com.google.protobuf.BoolValue getSelectable();
   /**
    * <pre>
-   * Whether the artifact can be used in a SELECT clause in search
+   * Output only. Whether the artifact can be used in a SELECT clause in search
    * queries.
    * </pre>
    *
-   * <code>.google.protobuf.BoolValue selectable = 4;</code>
+   * <code>.google.protobuf.BoolValue selectable = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.protobuf.BoolValueOrBuilder getSelectableOrBuilder();
 
   /**
    * <pre>
-   * Whether the artifact can be used in a WHERE clause in search
+   * Output only. Whether the artifact can be used in a WHERE clause in search
    * queries.
    * </pre>
    *
-   * <code>.google.protobuf.BoolValue filterable = 5;</code>
+   * <code>.google.protobuf.BoolValue filterable = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the filterable field is set.
    */
   boolean hasFilterable();
   /**
    * <pre>
-   * Whether the artifact can be used in a WHERE clause in search
+   * Output only. Whether the artifact can be used in a WHERE clause in search
    * queries.
    * </pre>
    *
-   * <code>.google.protobuf.BoolValue filterable = 5;</code>
+   * <code>.google.protobuf.BoolValue filterable = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The filterable.
    */
   com.google.protobuf.BoolValue getFilterable();
   /**
    * <pre>
-   * Whether the artifact can be used in a WHERE clause in search
+   * Output only. Whether the artifact can be used in a WHERE clause in search
    * queries.
    * </pre>
    *
-   * <code>.google.protobuf.BoolValue filterable = 5;</code>
+   * <code>.google.protobuf.BoolValue filterable = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.protobuf.BoolValueOrBuilder getFilterableOrBuilder();
 
   /**
    * <pre>
-   * Whether the artifact can be used in a ORDER BY clause in search
+   * Output only. Whether the artifact can be used in a ORDER BY clause in search
    * queries.
    * </pre>
    *
-   * <code>.google.protobuf.BoolValue sortable = 6;</code>
+   * <code>.google.protobuf.BoolValue sortable = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the sortable field is set.
    */
   boolean hasSortable();
   /**
    * <pre>
-   * Whether the artifact can be used in a ORDER BY clause in search
+   * Output only. Whether the artifact can be used in a ORDER BY clause in search
    * queries.
    * </pre>
    *
-   * <code>.google.protobuf.BoolValue sortable = 6;</code>
+   * <code>.google.protobuf.BoolValue sortable = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The sortable.
    */
   com.google.protobuf.BoolValue getSortable();
   /**
    * <pre>
-   * Whether the artifact can be used in a ORDER BY clause in search
+   * Output only. Whether the artifact can be used in a ORDER BY clause in search
    * queries.
    * </pre>
    *
-   * <code>.google.protobuf.BoolValue sortable = 6;</code>
+   * <code>.google.protobuf.BoolValue sortable = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.protobuf.BoolValueOrBuilder getSortableOrBuilder();
 
   /**
    * <pre>
-   * The names of all resources, segments, and metrics that are selectable with
+   * Output only. The names of all resources, segments, and metrics that are selectable with
    * the described artifact.
    * </pre>
    *
-   * <code>repeated .google.protobuf.StringValue selectable_with = 7;</code>
+   * <code>repeated .google.protobuf.StringValue selectable_with = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   java.util.List<com.google.protobuf.StringValue> 
       getSelectableWithList();
   /**
    * <pre>
-   * The names of all resources, segments, and metrics that are selectable with
+   * Output only. The names of all resources, segments, and metrics that are selectable with
    * the described artifact.
    * </pre>
    *
-   * <code>repeated .google.protobuf.StringValue selectable_with = 7;</code>
+   * <code>repeated .google.protobuf.StringValue selectable_with = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.protobuf.StringValue getSelectableWith(int index);
   /**
    * <pre>
-   * The names of all resources, segments, and metrics that are selectable with
+   * Output only. The names of all resources, segments, and metrics that are selectable with
    * the described artifact.
    * </pre>
    *
-   * <code>repeated .google.protobuf.StringValue selectable_with = 7;</code>
+   * <code>repeated .google.protobuf.StringValue selectable_with = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   int getSelectableWithCount();
   /**
    * <pre>
-   * The names of all resources, segments, and metrics that are selectable with
+   * Output only. The names of all resources, segments, and metrics that are selectable with
    * the described artifact.
    * </pre>
    *
-   * <code>repeated .google.protobuf.StringValue selectable_with = 7;</code>
+   * <code>repeated .google.protobuf.StringValue selectable_with = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   java.util.List<? extends com.google.protobuf.StringValueOrBuilder> 
       getSelectableWithOrBuilderList();
   /**
    * <pre>
-   * The names of all resources, segments, and metrics that are selectable with
+   * Output only. The names of all resources, segments, and metrics that are selectable with
    * the described artifact.
    * </pre>
    *
-   * <code>repeated .google.protobuf.StringValue selectable_with = 7;</code>
+   * <code>repeated .google.protobuf.StringValue selectable_with = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.protobuf.StringValueOrBuilder getSelectableWithOrBuilder(
       int index);
 
   /**
    * <pre>
-   * The names of all resources that are selectable with the described
+   * Output only. The names of all resources that are selectable with the described
    * artifact. Fields from these resources do not segment metrics when included
    * in search queries.
    * This field is only set for artifacts whose category is RESOURCE.
    * </pre>
    *
-   * <code>repeated .google.protobuf.StringValue attribute_resources = 8;</code>
+   * <code>repeated .google.protobuf.StringValue attribute_resources = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   java.util.List<com.google.protobuf.StringValue> 
       getAttributeResourcesList();
   /**
    * <pre>
-   * The names of all resources that are selectable with the described
+   * Output only. The names of all resources that are selectable with the described
    * artifact. Fields from these resources do not segment metrics when included
    * in search queries.
    * This field is only set for artifacts whose category is RESOURCE.
    * </pre>
    *
-   * <code>repeated .google.protobuf.StringValue attribute_resources = 8;</code>
+   * <code>repeated .google.protobuf.StringValue attribute_resources = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.protobuf.StringValue getAttributeResources(int index);
   /**
    * <pre>
-   * The names of all resources that are selectable with the described
+   * Output only. The names of all resources that are selectable with the described
    * artifact. Fields from these resources do not segment metrics when included
    * in search queries.
    * This field is only set for artifacts whose category is RESOURCE.
    * </pre>
    *
-   * <code>repeated .google.protobuf.StringValue attribute_resources = 8;</code>
+   * <code>repeated .google.protobuf.StringValue attribute_resources = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   int getAttributeResourcesCount();
   /**
    * <pre>
-   * The names of all resources that are selectable with the described
+   * Output only. The names of all resources that are selectable with the described
    * artifact. Fields from these resources do not segment metrics when included
    * in search queries.
    * This field is only set for artifacts whose category is RESOURCE.
    * </pre>
    *
-   * <code>repeated .google.protobuf.StringValue attribute_resources = 8;</code>
+   * <code>repeated .google.protobuf.StringValue attribute_resources = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   java.util.List<? extends com.google.protobuf.StringValueOrBuilder> 
       getAttributeResourcesOrBuilderList();
   /**
    * <pre>
-   * The names of all resources that are selectable with the described
+   * Output only. The names of all resources that are selectable with the described
    * artifact. Fields from these resources do not segment metrics when included
    * in search queries.
    * This field is only set for artifacts whose category is RESOURCE.
    * </pre>
    *
-   * <code>repeated .google.protobuf.StringValue attribute_resources = 8;</code>
+   * <code>repeated .google.protobuf.StringValue attribute_resources = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.protobuf.StringValueOrBuilder getAttributeResourcesOrBuilder(
       int index);
 
   /**
    * <pre>
-   * At and beyond version V1 this field lists the names of all metrics that are
+   * Output only. At and beyond version V1 this field lists the names of all metrics that are
    * selectable with the described artifact when it is used in the FROM clause.
    * It is only set for artifacts whose category is RESOURCE.
    * Before version V1 this field lists the names of all metrics that are
@@ -273,13 +285,13 @@ public interface GoogleAdsFieldOrBuilder extends
    * category is either RESOURCE or SEGMENT
    * </pre>
    *
-   * <code>repeated .google.protobuf.StringValue metrics = 9;</code>
+   * <code>repeated .google.protobuf.StringValue metrics = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   java.util.List<com.google.protobuf.StringValue> 
       getMetricsList();
   /**
    * <pre>
-   * At and beyond version V1 this field lists the names of all metrics that are
+   * Output only. At and beyond version V1 this field lists the names of all metrics that are
    * selectable with the described artifact when it is used in the FROM clause.
    * It is only set for artifacts whose category is RESOURCE.
    * Before version V1 this field lists the names of all metrics that are
@@ -287,12 +299,12 @@ public interface GoogleAdsFieldOrBuilder extends
    * category is either RESOURCE or SEGMENT
    * </pre>
    *
-   * <code>repeated .google.protobuf.StringValue metrics = 9;</code>
+   * <code>repeated .google.protobuf.StringValue metrics = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.protobuf.StringValue getMetrics(int index);
   /**
    * <pre>
-   * At and beyond version V1 this field lists the names of all metrics that are
+   * Output only. At and beyond version V1 this field lists the names of all metrics that are
    * selectable with the described artifact when it is used in the FROM clause.
    * It is only set for artifacts whose category is RESOURCE.
    * Before version V1 this field lists the names of all metrics that are
@@ -300,12 +312,12 @@ public interface GoogleAdsFieldOrBuilder extends
    * category is either RESOURCE or SEGMENT
    * </pre>
    *
-   * <code>repeated .google.protobuf.StringValue metrics = 9;</code>
+   * <code>repeated .google.protobuf.StringValue metrics = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   int getMetricsCount();
   /**
    * <pre>
-   * At and beyond version V1 this field lists the names of all metrics that are
+   * Output only. At and beyond version V1 this field lists the names of all metrics that are
    * selectable with the described artifact when it is used in the FROM clause.
    * It is only set for artifacts whose category is RESOURCE.
    * Before version V1 this field lists the names of all metrics that are
@@ -313,13 +325,13 @@ public interface GoogleAdsFieldOrBuilder extends
    * category is either RESOURCE or SEGMENT
    * </pre>
    *
-   * <code>repeated .google.protobuf.StringValue metrics = 9;</code>
+   * <code>repeated .google.protobuf.StringValue metrics = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   java.util.List<? extends com.google.protobuf.StringValueOrBuilder> 
       getMetricsOrBuilderList();
   /**
    * <pre>
-   * At and beyond version V1 this field lists the names of all metrics that are
+   * Output only. At and beyond version V1 this field lists the names of all metrics that are
    * selectable with the described artifact when it is used in the FROM clause.
    * It is only set for artifacts whose category is RESOURCE.
    * Before version V1 this field lists the names of all metrics that are
@@ -327,14 +339,14 @@ public interface GoogleAdsFieldOrBuilder extends
    * category is either RESOURCE or SEGMENT
    * </pre>
    *
-   * <code>repeated .google.protobuf.StringValue metrics = 9;</code>
+   * <code>repeated .google.protobuf.StringValue metrics = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.protobuf.StringValueOrBuilder getMetricsOrBuilder(
       int index);
 
   /**
    * <pre>
-   * At and beyond version V1 this field lists the names of all artifacts,
+   * Output only. At and beyond version V1 this field lists the names of all artifacts,
    * whether a segment or another resource, that segment metrics when included
    * in search queries and when the described artifact is used in the FROM
    * clause. It is only set for artifacts whose category is RESOURCE.
@@ -344,13 +356,13 @@ public interface GoogleAdsFieldOrBuilder extends
    * METRIC.
    * </pre>
    *
-   * <code>repeated .google.protobuf.StringValue segments = 10;</code>
+   * <code>repeated .google.protobuf.StringValue segments = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   java.util.List<com.google.protobuf.StringValue> 
       getSegmentsList();
   /**
    * <pre>
-   * At and beyond version V1 this field lists the names of all artifacts,
+   * Output only. At and beyond version V1 this field lists the names of all artifacts,
    * whether a segment or another resource, that segment metrics when included
    * in search queries and when the described artifact is used in the FROM
    * clause. It is only set for artifacts whose category is RESOURCE.
@@ -360,12 +372,12 @@ public interface GoogleAdsFieldOrBuilder extends
    * METRIC.
    * </pre>
    *
-   * <code>repeated .google.protobuf.StringValue segments = 10;</code>
+   * <code>repeated .google.protobuf.StringValue segments = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.protobuf.StringValue getSegments(int index);
   /**
    * <pre>
-   * At and beyond version V1 this field lists the names of all artifacts,
+   * Output only. At and beyond version V1 this field lists the names of all artifacts,
    * whether a segment or another resource, that segment metrics when included
    * in search queries and when the described artifact is used in the FROM
    * clause. It is only set for artifacts whose category is RESOURCE.
@@ -375,12 +387,12 @@ public interface GoogleAdsFieldOrBuilder extends
    * METRIC.
    * </pre>
    *
-   * <code>repeated .google.protobuf.StringValue segments = 10;</code>
+   * <code>repeated .google.protobuf.StringValue segments = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   int getSegmentsCount();
   /**
    * <pre>
-   * At and beyond version V1 this field lists the names of all artifacts,
+   * Output only. At and beyond version V1 this field lists the names of all artifacts,
    * whether a segment or another resource, that segment metrics when included
    * in search queries and when the described artifact is used in the FROM
    * clause. It is only set for artifacts whose category is RESOURCE.
@@ -390,13 +402,13 @@ public interface GoogleAdsFieldOrBuilder extends
    * METRIC.
    * </pre>
    *
-   * <code>repeated .google.protobuf.StringValue segments = 10;</code>
+   * <code>repeated .google.protobuf.StringValue segments = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   java.util.List<? extends com.google.protobuf.StringValueOrBuilder> 
       getSegmentsOrBuilderList();
   /**
    * <pre>
-   * At and beyond version V1 this field lists the names of all artifacts,
+   * Output only. At and beyond version V1 this field lists the names of all artifacts,
    * whether a segment or another resource, that segment metrics when included
    * in search queries and when the described artifact is used in the FROM
    * clause. It is only set for artifacts whose category is RESOURCE.
@@ -406,126 +418,132 @@ public interface GoogleAdsFieldOrBuilder extends
    * METRIC.
    * </pre>
    *
-   * <code>repeated .google.protobuf.StringValue segments = 10;</code>
+   * <code>repeated .google.protobuf.StringValue segments = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.protobuf.StringValueOrBuilder getSegmentsOrBuilder(
       int index);
 
   /**
    * <pre>
-   * Values the artifact can assume if it is a field of type ENUM.
+   * Output only. Values the artifact can assume if it is a field of type ENUM.
    * This field is only set for artifacts of category SEGMENT or ATTRIBUTE.
    * </pre>
    *
-   * <code>repeated .google.protobuf.StringValue enum_values = 11;</code>
+   * <code>repeated .google.protobuf.StringValue enum_values = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   java.util.List<com.google.protobuf.StringValue> 
       getEnumValuesList();
   /**
    * <pre>
-   * Values the artifact can assume if it is a field of type ENUM.
+   * Output only. Values the artifact can assume if it is a field of type ENUM.
    * This field is only set for artifacts of category SEGMENT or ATTRIBUTE.
    * </pre>
    *
-   * <code>repeated .google.protobuf.StringValue enum_values = 11;</code>
+   * <code>repeated .google.protobuf.StringValue enum_values = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.protobuf.StringValue getEnumValues(int index);
   /**
    * <pre>
-   * Values the artifact can assume if it is a field of type ENUM.
+   * Output only. Values the artifact can assume if it is a field of type ENUM.
    * This field is only set for artifacts of category SEGMENT or ATTRIBUTE.
    * </pre>
    *
-   * <code>repeated .google.protobuf.StringValue enum_values = 11;</code>
+   * <code>repeated .google.protobuf.StringValue enum_values = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   int getEnumValuesCount();
   /**
    * <pre>
-   * Values the artifact can assume if it is a field of type ENUM.
+   * Output only. Values the artifact can assume if it is a field of type ENUM.
    * This field is only set for artifacts of category SEGMENT or ATTRIBUTE.
    * </pre>
    *
-   * <code>repeated .google.protobuf.StringValue enum_values = 11;</code>
+   * <code>repeated .google.protobuf.StringValue enum_values = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   java.util.List<? extends com.google.protobuf.StringValueOrBuilder> 
       getEnumValuesOrBuilderList();
   /**
    * <pre>
-   * Values the artifact can assume if it is a field of type ENUM.
+   * Output only. Values the artifact can assume if it is a field of type ENUM.
    * This field is only set for artifacts of category SEGMENT or ATTRIBUTE.
    * </pre>
    *
-   * <code>repeated .google.protobuf.StringValue enum_values = 11;</code>
+   * <code>repeated .google.protobuf.StringValue enum_values = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.protobuf.StringValueOrBuilder getEnumValuesOrBuilder(
       int index);
 
   /**
    * <pre>
-   * This field determines the operators that can be used with the artifact
+   * Output only. This field determines the operators that can be used with the artifact
    * in WHERE clauses.
    * </pre>
    *
-   * <code>.google.ads.googleads.v1.enums.GoogleAdsFieldDataTypeEnum.GoogleAdsFieldDataType data_type = 12;</code>
+   * <code>.google.ads.googleads.v1.enums.GoogleAdsFieldDataTypeEnum.GoogleAdsFieldDataType data_type = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The enum numeric value on the wire for dataType.
    */
   int getDataTypeValue();
   /**
    * <pre>
-   * This field determines the operators that can be used with the artifact
+   * Output only. This field determines the operators that can be used with the artifact
    * in WHERE clauses.
    * </pre>
    *
-   * <code>.google.ads.googleads.v1.enums.GoogleAdsFieldDataTypeEnum.GoogleAdsFieldDataType data_type = 12;</code>
+   * <code>.google.ads.googleads.v1.enums.GoogleAdsFieldDataTypeEnum.GoogleAdsFieldDataType data_type = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The dataType.
    */
   com.google.ads.googleads.v1.enums.GoogleAdsFieldDataTypeEnum.GoogleAdsFieldDataType getDataType();
 
   /**
    * <pre>
-   * The URL of proto describing the artifact's data type.
+   * Output only. The URL of proto describing the artifact's data type.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue type_url = 13;</code>
+   * <code>.google.protobuf.StringValue type_url = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the typeUrl field is set.
    */
   boolean hasTypeUrl();
   /**
    * <pre>
-   * The URL of proto describing the artifact's data type.
+   * Output only. The URL of proto describing the artifact's data type.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue type_url = 13;</code>
+   * <code>.google.protobuf.StringValue type_url = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The typeUrl.
    */
   com.google.protobuf.StringValue getTypeUrl();
   /**
    * <pre>
-   * The URL of proto describing the artifact's data type.
+   * Output only. The URL of proto describing the artifact's data type.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue type_url = 13;</code>
+   * <code>.google.protobuf.StringValue type_url = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.protobuf.StringValueOrBuilder getTypeUrlOrBuilder();
 
   /**
    * <pre>
-   * Whether the field artifact is repeated.
+   * Output only. Whether the field artifact is repeated.
    * </pre>
    *
-   * <code>.google.protobuf.BoolValue is_repeated = 14;</code>
+   * <code>.google.protobuf.BoolValue is_repeated = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the isRepeated field is set.
    */
   boolean hasIsRepeated();
   /**
    * <pre>
-   * Whether the field artifact is repeated.
+   * Output only. Whether the field artifact is repeated.
    * </pre>
    *
-   * <code>.google.protobuf.BoolValue is_repeated = 14;</code>
+   * <code>.google.protobuf.BoolValue is_repeated = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The isRepeated.
    */
   com.google.protobuf.BoolValue getIsRepeated();
   /**
    * <pre>
-   * Whether the field artifact is repeated.
+   * Output only. Whether the field artifact is repeated.
    * </pre>
    *
-   * <code>.google.protobuf.BoolValue is_repeated = 14;</code>
+   * <code>.google.protobuf.BoolValue is_repeated = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.protobuf.BoolValueOrBuilder getIsRepeatedOrBuilder();
 }

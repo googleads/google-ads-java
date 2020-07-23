@@ -10,7 +10,7 @@ package com.google.ads.googleads.v4.services;
  *
  * Protobuf type {@code google.ads.googleads.v4.services.OfflineUserDataJobOperation}
  */
-public  final class OfflineUserDataJobOperation extends
+public final class OfflineUserDataJobOperation extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.services.OfflineUserDataJobOperation)
     OfflineUserDataJobOperationOrBuilder {
@@ -170,6 +170,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.common.UserData create = 1;</code>
    * @return Whether the create field is set.
    */
+  @java.lang.Override
   public boolean hasCreate() {
     return operationCase_ == 1;
   }
@@ -182,6 +183,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.common.UserData create = 1;</code>
    * @return The create.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.UserData getCreate() {
     if (operationCase_ == 1) {
        return (com.google.ads.googleads.v4.common.UserData) operation_;
@@ -196,6 +198,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v4.common.UserData create = 1;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.UserDataOrBuilder getCreateOrBuilder() {
     if (operationCase_ == 1) {
        return (com.google.ads.googleads.v4.common.UserData) operation_;
@@ -213,6 +216,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.common.UserData remove = 2;</code>
    * @return Whether the remove field is set.
    */
+  @java.lang.Override
   public boolean hasRemove() {
     return operationCase_ == 2;
   }
@@ -225,6 +229,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.common.UserData remove = 2;</code>
    * @return The remove.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.UserData getRemove() {
     if (operationCase_ == 2) {
        return (com.google.ads.googleads.v4.common.UserData) operation_;
@@ -239,6 +244,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v4.common.UserData remove = 2;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.UserDataOrBuilder getRemoveOrBuilder() {
     if (operationCase_ == 2) {
        return (com.google.ads.googleads.v4.common.UserData) operation_;
@@ -256,6 +262,7 @@ private static final long serialVersionUID = 0L;
    * <code>bool remove_all = 3;</code>
    * @return The removeAll.
    */
+  @java.lang.Override
   public boolean getRemoveAll() {
     if (operationCase_ == 3) {
       return (java.lang.Boolean) operation_;
@@ -672,6 +679,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.common.UserData create = 1;</code>
      * @return Whether the create field is set.
      */
+    @java.lang.Override
     public boolean hasCreate() {
       return operationCase_ == 1;
     }
@@ -684,6 +692,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.common.UserData create = 1;</code>
      * @return The create.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.common.UserData getCreate() {
       if (createBuilder_ == null) {
         if (operationCase_ == 1) {
@@ -807,6 +816,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v4.common.UserData create = 1;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.common.UserDataOrBuilder getCreateOrBuilder() {
       if ((operationCase_ == 1) && (createBuilder_ != null)) {
         return createBuilder_.getMessageOrBuilder();
@@ -855,6 +865,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.common.UserData remove = 2;</code>
      * @return Whether the remove field is set.
      */
+    @java.lang.Override
     public boolean hasRemove() {
       return operationCase_ == 2;
     }
@@ -867,6 +878,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.common.UserData remove = 2;</code>
      * @return The remove.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.common.UserData getRemove() {
       if (removeBuilder_ == null) {
         if (operationCase_ == 2) {
@@ -990,6 +1002,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v4.common.UserData remove = 2;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.common.UserDataOrBuilder getRemoveOrBuilder() {
       if ((operationCase_ == 2) && (removeBuilder_ != null)) {
         return removeBuilder_.getMessageOrBuilder();

@@ -21,7 +21,6 @@ import com.google.ads.googleads.v4.services.stub.ExpandedLandingPageViewServiceS
 import com.google.api.core.BetaApi;
 import com.google.api.gax.core.BackgroundResource;
 import com.google.api.gax.rpc.UnaryCallable;
-import com.google.api.pathtemplate.PathTemplate;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 import javax.annotation.Generated;
@@ -36,8 +35,8 @@ import javax.annotation.Generated;
  * <pre>
  * <code>
  * try (ExpandedLandingPageViewServiceClient expandedLandingPageViewServiceClient = ExpandedLandingPageViewServiceClient.create()) {
- *   String formattedResourceName = ExpandedLandingPageViewServiceClient.formatExpandedLandingPageViewName("[CUSTOMER]", "[EXPANDED_LANDING_PAGE_VIEW]");
- *   ExpandedLandingPageView response = expandedLandingPageViewServiceClient.getExpandedLandingPageView(formattedResourceName);
+ *   ExpandedLandingPageViewName resourceName = ExpandedLandingPageViewName.of("[CUSTOMER]", "[EXPANDED_LANDING_PAGE_VIEW]");
+ *   ExpandedLandingPageView response = expandedLandingPageViewServiceClient.getExpandedLandingPageView(resourceName);
  * }
  * </code>
  * </pre>
@@ -99,52 +98,6 @@ public class ExpandedLandingPageViewServiceClient implements BackgroundResource 
   private final ExpandedLandingPageViewServiceSettings settings;
   private final ExpandedLandingPageViewServiceStub stub;
 
-  private static final PathTemplate EXPANDED_LANDING_PAGE_VIEW_PATH_TEMPLATE =
-      PathTemplate.createWithoutUrlEncoding(
-          "customers/{customer}/expandedLandingPageViews/{expanded_landing_page_view}");
-
-  /**
-   * Formats a string containing the fully-qualified path to represent a expanded_landing_page_view
-   * resource.
-   *
-   * @deprecated Use the {@link ExpandedLandingPageViewName} class instead.
-   */
-  @Deprecated
-  public static final String formatExpandedLandingPageViewName(
-      String customer, String expandedLandingPageView) {
-    return EXPANDED_LANDING_PAGE_VIEW_PATH_TEMPLATE.instantiate(
-        "customer", customer,
-        "expanded_landing_page_view", expandedLandingPageView);
-  }
-
-  /**
-   * Parses the customer from the given fully-qualified path which represents a
-   * expanded_landing_page_view resource.
-   *
-   * @deprecated Use the {@link ExpandedLandingPageViewName} class instead.
-   */
-  @Deprecated
-  public static final String parseCustomerFromExpandedLandingPageViewName(
-      String expandedLandingPageViewName) {
-    return EXPANDED_LANDING_PAGE_VIEW_PATH_TEMPLATE
-        .parse(expandedLandingPageViewName)
-        .get("customer");
-  }
-
-  /**
-   * Parses the expanded_landing_page_view from the given fully-qualified path which represents a
-   * expanded_landing_page_view resource.
-   *
-   * @deprecated Use the {@link ExpandedLandingPageViewName} class instead.
-   */
-  @Deprecated
-  public static final String parseExpandedLandingPageViewFromExpandedLandingPageViewName(
-      String expandedLandingPageViewName) {
-    return EXPANDED_LANDING_PAGE_VIEW_PATH_TEMPLATE
-        .parse(expandedLandingPageViewName)
-        .get("expanded_landing_page_view");
-  }
-
   /** Constructs an instance of ExpandedLandingPageViewServiceClient with default settings. */
   public static final ExpandedLandingPageViewServiceClient create() throws IOException {
     return create(ExpandedLandingPageViewServiceSettings.newBuilder().build());
@@ -205,8 +158,33 @@ public class ExpandedLandingPageViewServiceClient implements BackgroundResource 
    *
    * <pre><code>
    * try (ExpandedLandingPageViewServiceClient expandedLandingPageViewServiceClient = ExpandedLandingPageViewServiceClient.create()) {
-   *   String formattedResourceName = ExpandedLandingPageViewServiceClient.formatExpandedLandingPageViewName("[CUSTOMER]", "[EXPANDED_LANDING_PAGE_VIEW]");
-   *   ExpandedLandingPageView response = expandedLandingPageViewServiceClient.getExpandedLandingPageView(formattedResourceName);
+   *   ExpandedLandingPageViewName resourceName = ExpandedLandingPageViewName.of("[CUSTOMER]", "[EXPANDED_LANDING_PAGE_VIEW]");
+   *   ExpandedLandingPageView response = expandedLandingPageViewServiceClient.getExpandedLandingPageView(resourceName);
+   * }
+   * </code></pre>
+   *
+   * @param resourceName Required. The resource name of the expanded landing page view to fetch.
+   * @throws com.google.api.gax.rpc.ApiException if the remote call fails
+   */
+  public final ExpandedLandingPageView getExpandedLandingPageView(
+      ExpandedLandingPageViewName resourceName) {
+    GetExpandedLandingPageViewRequest request =
+        GetExpandedLandingPageViewRequest.newBuilder()
+            .setResourceName(resourceName == null ? null : resourceName.toString())
+            .build();
+    return getExpandedLandingPageView(request);
+  }
+
+  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  /**
+   * Returns the requested expanded landing page view in full detail.
+   *
+   * <p>Sample code:
+   *
+   * <pre><code>
+   * try (ExpandedLandingPageViewServiceClient expandedLandingPageViewServiceClient = ExpandedLandingPageViewServiceClient.create()) {
+   *   ExpandedLandingPageViewName resourceName = ExpandedLandingPageViewName.of("[CUSTOMER]", "[EXPANDED_LANDING_PAGE_VIEW]");
+   *   ExpandedLandingPageView response = expandedLandingPageViewServiceClient.getExpandedLandingPageView(resourceName.toString());
    * }
    * </code></pre>
    *
@@ -214,7 +192,6 @@ public class ExpandedLandingPageViewServiceClient implements BackgroundResource 
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final ExpandedLandingPageView getExpandedLandingPageView(String resourceName) {
-    EXPANDED_LANDING_PAGE_VIEW_PATH_TEMPLATE.validate(resourceName, "getExpandedLandingPageView");
     GetExpandedLandingPageViewRequest request =
         GetExpandedLandingPageViewRequest.newBuilder().setResourceName(resourceName).build();
     return getExpandedLandingPageView(request);
@@ -228,9 +205,9 @@ public class ExpandedLandingPageViewServiceClient implements BackgroundResource 
    *
    * <pre><code>
    * try (ExpandedLandingPageViewServiceClient expandedLandingPageViewServiceClient = ExpandedLandingPageViewServiceClient.create()) {
-   *   String formattedResourceName = ExpandedLandingPageViewServiceClient.formatExpandedLandingPageViewName("[CUSTOMER]", "[EXPANDED_LANDING_PAGE_VIEW]");
+   *   ExpandedLandingPageViewName resourceName = ExpandedLandingPageViewName.of("[CUSTOMER]", "[EXPANDED_LANDING_PAGE_VIEW]");
    *   GetExpandedLandingPageViewRequest request = GetExpandedLandingPageViewRequest.newBuilder()
-   *     .setResourceName(formattedResourceName)
+   *     .setResourceName(resourceName.toString())
    *     .build();
    *   ExpandedLandingPageView response = expandedLandingPageViewServiceClient.getExpandedLandingPageView(request);
    * }
@@ -252,9 +229,9 @@ public class ExpandedLandingPageViewServiceClient implements BackgroundResource 
    *
    * <pre><code>
    * try (ExpandedLandingPageViewServiceClient expandedLandingPageViewServiceClient = ExpandedLandingPageViewServiceClient.create()) {
-   *   String formattedResourceName = ExpandedLandingPageViewServiceClient.formatExpandedLandingPageViewName("[CUSTOMER]", "[EXPANDED_LANDING_PAGE_VIEW]");
+   *   ExpandedLandingPageViewName resourceName = ExpandedLandingPageViewName.of("[CUSTOMER]", "[EXPANDED_LANDING_PAGE_VIEW]");
    *   GetExpandedLandingPageViewRequest request = GetExpandedLandingPageViewRequest.newBuilder()
-   *     .setResourceName(formattedResourceName)
+   *     .setResourceName(resourceName.toString())
    *     .build();
    *   ApiFuture&lt;ExpandedLandingPageView&gt; future = expandedLandingPageViewServiceClient.getExpandedLandingPageViewCallable().futureCall(request);
    *   // Do something

@@ -21,7 +21,7 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.10.0)",
+    value = "by gRPC proto compiler",
     comments = "Source: google/ads/googleads/v2/services/carrier_constant_service.proto")
 public final class CarrierConstantServiceGrpc {
 
@@ -30,49 +30,49 @@ public final class CarrierConstantServiceGrpc {
   public static final String SERVICE_NAME = "google.ads.googleads.v2.services.CarrierConstantService";
 
   // Static method descriptors that strictly reflect the proto.
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  @java.lang.Deprecated // Use {@link #getGetCarrierConstantMethod()} instead. 
-  public static final io.grpc.MethodDescriptor<com.google.ads.googleads.v2.services.GetCarrierConstantRequest,
-      com.google.ads.googleads.v2.resources.CarrierConstant> METHOD_GET_CARRIER_CONSTANT = getGetCarrierConstantMethodHelper();
-
   private static volatile io.grpc.MethodDescriptor<com.google.ads.googleads.v2.services.GetCarrierConstantRequest,
       com.google.ads.googleads.v2.resources.CarrierConstant> getGetCarrierConstantMethod;
 
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetCarrierConstant",
+      requestType = com.google.ads.googleads.v2.services.GetCarrierConstantRequest.class,
+      responseType = com.google.ads.googleads.v2.resources.CarrierConstant.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<com.google.ads.googleads.v2.services.GetCarrierConstantRequest,
       com.google.ads.googleads.v2.resources.CarrierConstant> getGetCarrierConstantMethod() {
-    return getGetCarrierConstantMethodHelper();
-  }
-
-  private static io.grpc.MethodDescriptor<com.google.ads.googleads.v2.services.GetCarrierConstantRequest,
-      com.google.ads.googleads.v2.resources.CarrierConstant> getGetCarrierConstantMethodHelper() {
     io.grpc.MethodDescriptor<com.google.ads.googleads.v2.services.GetCarrierConstantRequest, com.google.ads.googleads.v2.resources.CarrierConstant> getGetCarrierConstantMethod;
     if ((getGetCarrierConstantMethod = CarrierConstantServiceGrpc.getGetCarrierConstantMethod) == null) {
       synchronized (CarrierConstantServiceGrpc.class) {
         if ((getGetCarrierConstantMethod = CarrierConstantServiceGrpc.getGetCarrierConstantMethod) == null) {
-          CarrierConstantServiceGrpc.getGetCarrierConstantMethod = getGetCarrierConstantMethod = 
+          CarrierConstantServiceGrpc.getGetCarrierConstantMethod = getGetCarrierConstantMethod =
               io.grpc.MethodDescriptor.<com.google.ads.googleads.v2.services.GetCarrierConstantRequest, com.google.ads.googleads.v2.resources.CarrierConstant>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "google.ads.googleads.v2.services.CarrierConstantService", "GetCarrierConstant"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetCarrierConstant"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v2.services.GetCarrierConstantRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v2.resources.CarrierConstant.getDefaultInstance()))
-                  .setSchemaDescriptor(new CarrierConstantServiceMethodDescriptorSupplier("GetCarrierConstant"))
-                  .build();
-          }
+              .setSchemaDescriptor(new CarrierConstantServiceMethodDescriptorSupplier("GetCarrierConstant"))
+              .build();
         }
-     }
-     return getGetCarrierConstantMethod;
+      }
+    }
+    return getGetCarrierConstantMethod;
   }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static CarrierConstantServiceStub newStub(io.grpc.Channel channel) {
-    return new CarrierConstantServiceStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<CarrierConstantServiceStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<CarrierConstantServiceStub>() {
+        @java.lang.Override
+        public CarrierConstantServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new CarrierConstantServiceStub(channel, callOptions);
+        }
+      };
+    return CarrierConstantServiceStub.newStub(factory, channel);
   }
 
   /**
@@ -80,7 +80,14 @@ public final class CarrierConstantServiceGrpc {
    */
   public static CarrierConstantServiceBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new CarrierConstantServiceBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<CarrierConstantServiceBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<CarrierConstantServiceBlockingStub>() {
+        @java.lang.Override
+        public CarrierConstantServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new CarrierConstantServiceBlockingStub(channel, callOptions);
+        }
+      };
+    return CarrierConstantServiceBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -88,7 +95,14 @@ public final class CarrierConstantServiceGrpc {
    */
   public static CarrierConstantServiceFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new CarrierConstantServiceFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<CarrierConstantServiceFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<CarrierConstantServiceFutureStub>() {
+        @java.lang.Override
+        public CarrierConstantServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new CarrierConstantServiceFutureStub(channel, callOptions);
+        }
+      };
+    return CarrierConstantServiceFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -105,13 +119,13 @@ public final class CarrierConstantServiceGrpc {
      */
     public void getCarrierConstant(com.google.ads.googleads.v2.services.GetCarrierConstantRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v2.resources.CarrierConstant> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetCarrierConstantMethodHelper(), responseObserver);
+      asyncUnimplementedUnaryCall(getGetCarrierConstantMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
-            getGetCarrierConstantMethodHelper(),
+            getGetCarrierConstantMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 com.google.ads.googleads.v2.services.GetCarrierConstantRequest,
@@ -126,19 +140,15 @@ public final class CarrierConstantServiceGrpc {
    * Service to fetch carrier constants.
    * </pre>
    */
-  public static final class CarrierConstantServiceStub extends io.grpc.stub.AbstractStub<CarrierConstantServiceStub> {
-    private CarrierConstantServiceStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private CarrierConstantServiceStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class CarrierConstantServiceStub extends io.grpc.stub.AbstractAsyncStub<CarrierConstantServiceStub> {
+    private CarrierConstantServiceStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected CarrierConstantServiceStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected CarrierConstantServiceStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new CarrierConstantServiceStub(channel, callOptions);
     }
 
@@ -150,7 +160,7 @@ public final class CarrierConstantServiceGrpc {
     public void getCarrierConstant(com.google.ads.googleads.v2.services.GetCarrierConstantRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v2.resources.CarrierConstant> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(getGetCarrierConstantMethodHelper(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getGetCarrierConstantMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -159,19 +169,15 @@ public final class CarrierConstantServiceGrpc {
    * Service to fetch carrier constants.
    * </pre>
    */
-  public static final class CarrierConstantServiceBlockingStub extends io.grpc.stub.AbstractStub<CarrierConstantServiceBlockingStub> {
-    private CarrierConstantServiceBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private CarrierConstantServiceBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class CarrierConstantServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<CarrierConstantServiceBlockingStub> {
+    private CarrierConstantServiceBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected CarrierConstantServiceBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected CarrierConstantServiceBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new CarrierConstantServiceBlockingStub(channel, callOptions);
     }
 
@@ -182,7 +188,7 @@ public final class CarrierConstantServiceGrpc {
      */
     public com.google.ads.googleads.v2.resources.CarrierConstant getCarrierConstant(com.google.ads.googleads.v2.services.GetCarrierConstantRequest request) {
       return blockingUnaryCall(
-          getChannel(), getGetCarrierConstantMethodHelper(), getCallOptions(), request);
+          getChannel(), getGetCarrierConstantMethod(), getCallOptions(), request);
     }
   }
 
@@ -191,19 +197,15 @@ public final class CarrierConstantServiceGrpc {
    * Service to fetch carrier constants.
    * </pre>
    */
-  public static final class CarrierConstantServiceFutureStub extends io.grpc.stub.AbstractStub<CarrierConstantServiceFutureStub> {
-    private CarrierConstantServiceFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private CarrierConstantServiceFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class CarrierConstantServiceFutureStub extends io.grpc.stub.AbstractFutureStub<CarrierConstantServiceFutureStub> {
+    private CarrierConstantServiceFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected CarrierConstantServiceFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected CarrierConstantServiceFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new CarrierConstantServiceFutureStub(channel, callOptions);
     }
 
@@ -215,7 +217,7 @@ public final class CarrierConstantServiceGrpc {
     public com.google.common.util.concurrent.ListenableFuture<com.google.ads.googleads.v2.resources.CarrierConstant> getCarrierConstant(
         com.google.ads.googleads.v2.services.GetCarrierConstantRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(getGetCarrierConstantMethodHelper(), getCallOptions()), request);
+          getChannel().newCall(getGetCarrierConstantMethod(), getCallOptions()), request);
     }
   }
 
@@ -303,7 +305,7 @@ public final class CarrierConstantServiceGrpc {
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new CarrierConstantServiceFileDescriptorSupplier())
-              .addMethod(getGetCarrierConstantMethodHelper())
+              .addMethod(getGetCarrierConstantMethod())
               .build();
         }
       }

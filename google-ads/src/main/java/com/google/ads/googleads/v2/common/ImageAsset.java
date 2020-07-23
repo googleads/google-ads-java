@@ -10,7 +10,7 @@ package com.google.ads.googleads.v2.common;
  *
  * Protobuf type {@code google.ads.googleads.v2.common.ImageAsset}
  */
-public  final class ImageAsset extends
+public final class ImageAsset extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v2.common.ImageAsset)
     ImageAssetOrBuilder {
@@ -21,6 +21,13 @@ private static final long serialVersionUID = 0L;
   }
   private ImageAsset() {
     mimeType_ = 0;
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new ImageAsset();
   }
 
   @java.lang.Override
@@ -36,7 +43,6 @@ private static final long serialVersionUID = 0L;
     if (extensionRegistry == null) {
       throw new java.lang.NullPointerException();
     }
-    int mutable_bitField0_ = 0;
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
         com.google.protobuf.UnknownFieldSet.newBuilder();
     try {
@@ -132,7 +138,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.BytesValue data = 1;</code>
+   * @return Whether the data field is set.
    */
+  @java.lang.Override
   public boolean hasData() {
     return data_ != null;
   }
@@ -142,7 +150,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.BytesValue data = 1;</code>
+   * @return The data.
    */
+  @java.lang.Override
   public com.google.protobuf.BytesValue getData() {
     return data_ == null ? com.google.protobuf.BytesValue.getDefaultInstance() : data_;
   }
@@ -153,6 +163,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.BytesValue data = 1;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.BytesValueOrBuilder getDataOrBuilder() {
     return getData();
   }
@@ -165,7 +176,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Int64Value file_size = 2;</code>
+   * @return Whether the fileSize field is set.
    */
+  @java.lang.Override
   public boolean hasFileSize() {
     return fileSize_ != null;
   }
@@ -175,7 +188,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Int64Value file_size = 2;</code>
+   * @return The fileSize.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getFileSize() {
     return fileSize_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : fileSize_;
   }
@@ -186,6 +201,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int64Value file_size = 2;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getFileSizeOrBuilder() {
     return getFileSize();
   }
@@ -198,8 +214,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.enums.MimeTypeEnum.MimeType mime_type = 3;</code>
+   * @return The enum numeric value on the wire for mimeType.
    */
-  public int getMimeTypeValue() {
+  @java.lang.Override public int getMimeTypeValue() {
     return mimeType_;
   }
   /**
@@ -208,8 +225,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.enums.MimeTypeEnum.MimeType mime_type = 3;</code>
+   * @return The mimeType.
    */
-  public com.google.ads.googleads.v2.enums.MimeTypeEnum.MimeType getMimeType() {
+  @java.lang.Override public com.google.ads.googleads.v2.enums.MimeTypeEnum.MimeType getMimeType() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v2.enums.MimeTypeEnum.MimeType result = com.google.ads.googleads.v2.enums.MimeTypeEnum.MimeType.valueOf(mimeType_);
     return result == null ? com.google.ads.googleads.v2.enums.MimeTypeEnum.MimeType.UNRECOGNIZED : result;
@@ -223,7 +241,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.common.ImageDimension full_size = 4;</code>
+   * @return Whether the fullSize field is set.
    */
+  @java.lang.Override
   public boolean hasFullSize() {
     return fullSize_ != null;
   }
@@ -233,7 +253,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.common.ImageDimension full_size = 4;</code>
+   * @return The fullSize.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.common.ImageDimension getFullSize() {
     return fullSize_ == null ? com.google.ads.googleads.v2.common.ImageDimension.getDefaultInstance() : fullSize_;
   }
@@ -244,6 +266,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v2.common.ImageDimension full_size = 4;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.common.ImageDimensionOrBuilder getFullSizeOrBuilder() {
     return getFullSize();
   }
@@ -652,6 +675,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.BytesValue data = 1;</code>
+     * @return Whether the data field is set.
      */
     public boolean hasData() {
       return dataBuilder_ != null || data_ != null;
@@ -662,6 +686,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.BytesValue data = 1;</code>
+     * @return The data.
      */
     public com.google.protobuf.BytesValue getData() {
       if (dataBuilder_ == null) {
@@ -805,6 +830,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value file_size = 2;</code>
+     * @return Whether the fileSize field is set.
      */
     public boolean hasFileSize() {
       return fileSizeBuilder_ != null || fileSize_ != null;
@@ -815,6 +841,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value file_size = 2;</code>
+     * @return The fileSize.
      */
     public com.google.protobuf.Int64Value getFileSize() {
       if (fileSizeBuilder_ == null) {
@@ -956,8 +983,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.enums.MimeTypeEnum.MimeType mime_type = 3;</code>
+     * @return The enum numeric value on the wire for mimeType.
      */
-    public int getMimeTypeValue() {
+    @java.lang.Override public int getMimeTypeValue() {
       return mimeType_;
     }
     /**
@@ -966,8 +994,11 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.enums.MimeTypeEnum.MimeType mime_type = 3;</code>
+     * @param value The enum numeric value on the wire for mimeType to set.
+     * @return This builder for chaining.
      */
     public Builder setMimeTypeValue(int value) {
+      
       mimeType_ = value;
       onChanged();
       return this;
@@ -978,7 +1009,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.enums.MimeTypeEnum.MimeType mime_type = 3;</code>
+     * @return The mimeType.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v2.enums.MimeTypeEnum.MimeType getMimeType() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v2.enums.MimeTypeEnum.MimeType result = com.google.ads.googleads.v2.enums.MimeTypeEnum.MimeType.valueOf(mimeType_);
@@ -990,6 +1023,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.enums.MimeTypeEnum.MimeType mime_type = 3;</code>
+     * @param value The mimeType to set.
+     * @return This builder for chaining.
      */
     public Builder setMimeType(com.google.ads.googleads.v2.enums.MimeTypeEnum.MimeType value) {
       if (value == null) {
@@ -1006,6 +1041,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.enums.MimeTypeEnum.MimeType mime_type = 3;</code>
+     * @return This builder for chaining.
      */
     public Builder clearMimeType() {
       
@@ -1023,6 +1059,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.common.ImageDimension full_size = 4;</code>
+     * @return Whether the fullSize field is set.
      */
     public boolean hasFullSize() {
       return fullSizeBuilder_ != null || fullSize_ != null;
@@ -1033,6 +1070,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.common.ImageDimension full_size = 4;</code>
+     * @return The fullSize.
      */
     public com.google.ads.googleads.v2.common.ImageDimension getFullSize() {
       if (fullSizeBuilder_ == null) {

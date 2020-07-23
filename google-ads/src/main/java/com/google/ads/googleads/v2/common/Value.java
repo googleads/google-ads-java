@@ -10,7 +10,7 @@ package com.google.ads.googleads.v2.common;
  *
  * Protobuf type {@code google.ads.googleads.v2.common.Value}
  */
-public  final class Value extends
+public final class Value extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v2.common.Value)
     ValueOrBuilder {
@@ -20,6 +20,13 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private Value() {
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new Value();
   }
 
   @java.lang.Override
@@ -35,7 +42,6 @@ private static final long serialVersionUID = 0L;
     if (extensionRegistry == null) {
       throw new java.lang.NullPointerException();
     }
-    int mutable_bitField0_ = 0;
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
         com.google.protobuf.UnknownFieldSet.newBuilder();
     try {
@@ -107,7 +113,8 @@ private static final long serialVersionUID = 0L;
   private int valueCase_ = 0;
   private java.lang.Object value_;
   public enum ValueCase
-      implements com.google.protobuf.Internal.EnumLite {
+      implements com.google.protobuf.Internal.EnumLite,
+          com.google.protobuf.AbstractMessage.InternalOneOfEnum {
     BOOLEAN_VALUE(1),
     INT64_VALUE(2),
     FLOAT_VALUE(3),
@@ -119,6 +126,8 @@ private static final long serialVersionUID = 0L;
       this.value = value;
     }
     /**
+     * @param value The number of the enum to look for.
+     * @return The enum associated with the given number.
      * @deprecated Use {@link #forNumber(int)} instead.
      */
     @java.lang.Deprecated
@@ -155,7 +164,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>bool boolean_value = 1;</code>
+   * @return The booleanValue.
    */
+  @java.lang.Override
   public boolean getBooleanValue() {
     if (valueCase_ == 1) {
       return (java.lang.Boolean) value_;
@@ -170,7 +181,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>int64 int64_value = 2;</code>
+   * @return The int64Value.
    */
+  @java.lang.Override
   public long getInt64Value() {
     if (valueCase_ == 2) {
       return (java.lang.Long) value_;
@@ -185,7 +198,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>float float_value = 3;</code>
+   * @return The floatValue.
    */
+  @java.lang.Override
   public float getFloatValue() {
     if (valueCase_ == 3) {
       return (java.lang.Float) value_;
@@ -200,7 +215,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>double double_value = 4;</code>
+   * @return The doubleValue.
    */
+  @java.lang.Override
   public double getDoubleValue() {
     if (valueCase_ == 4) {
       return (java.lang.Double) value_;
@@ -215,6 +232,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string string_value = 5;</code>
+   * @return The stringValue.
    */
   public java.lang.String getStringValue() {
     java.lang.Object ref = "";
@@ -239,6 +257,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string string_value = 5;</code>
+   * @return The bytes for stringValue.
    */
   public com.google.protobuf.ByteString
       getStringValueBytes() {
@@ -711,6 +730,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>bool boolean_value = 1;</code>
+     * @return The booleanValue.
      */
     public boolean getBooleanValue() {
       if (valueCase_ == 1) {
@@ -724,6 +744,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>bool boolean_value = 1;</code>
+     * @param value The booleanValue to set.
+     * @return This builder for chaining.
      */
     public Builder setBooleanValue(boolean value) {
       valueCase_ = 1;
@@ -737,6 +759,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>bool boolean_value = 1;</code>
+     * @return This builder for chaining.
      */
     public Builder clearBooleanValue() {
       if (valueCase_ == 1) {
@@ -753,6 +776,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>int64 int64_value = 2;</code>
+     * @return The int64Value.
      */
     public long getInt64Value() {
       if (valueCase_ == 2) {
@@ -766,6 +790,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>int64 int64_value = 2;</code>
+     * @param value The int64Value to set.
+     * @return This builder for chaining.
      */
     public Builder setInt64Value(long value) {
       valueCase_ = 2;
@@ -779,6 +805,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>int64 int64_value = 2;</code>
+     * @return This builder for chaining.
      */
     public Builder clearInt64Value() {
       if (valueCase_ == 2) {
@@ -795,6 +822,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>float float_value = 3;</code>
+     * @return The floatValue.
      */
     public float getFloatValue() {
       if (valueCase_ == 3) {
@@ -808,6 +836,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>float float_value = 3;</code>
+     * @param value The floatValue to set.
+     * @return This builder for chaining.
      */
     public Builder setFloatValue(float value) {
       valueCase_ = 3;
@@ -821,6 +851,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>float float_value = 3;</code>
+     * @return This builder for chaining.
      */
     public Builder clearFloatValue() {
       if (valueCase_ == 3) {
@@ -837,6 +868,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>double double_value = 4;</code>
+     * @return The doubleValue.
      */
     public double getDoubleValue() {
       if (valueCase_ == 4) {
@@ -850,6 +882,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>double double_value = 4;</code>
+     * @param value The doubleValue to set.
+     * @return This builder for chaining.
      */
     public Builder setDoubleValue(double value) {
       valueCase_ = 4;
@@ -863,6 +897,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>double double_value = 4;</code>
+     * @return This builder for chaining.
      */
     public Builder clearDoubleValue() {
       if (valueCase_ == 4) {
@@ -879,7 +914,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string string_value = 5;</code>
+     * @return The stringValue.
      */
+    @java.lang.Override
     public java.lang.String getStringValue() {
       java.lang.Object ref = "";
       if (valueCase_ == 5) {
@@ -903,7 +940,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string string_value = 5;</code>
+     * @return The bytes for stringValue.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getStringValueBytes() {
       java.lang.Object ref = "";
@@ -928,6 +967,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string string_value = 5;</code>
+     * @param value The stringValue to set.
+     * @return This builder for chaining.
      */
     public Builder setStringValue(
         java.lang.String value) {
@@ -945,6 +986,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string string_value = 5;</code>
+     * @return This builder for chaining.
      */
     public Builder clearStringValue() {
       if (valueCase_ == 5) {
@@ -960,6 +1002,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string string_value = 5;</code>
+     * @param value The bytes for stringValue to set.
+     * @return This builder for chaining.
      */
     public Builder setStringValueBytes(
         com.google.protobuf.ByteString value) {

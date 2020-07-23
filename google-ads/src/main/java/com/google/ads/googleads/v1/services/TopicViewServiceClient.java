@@ -1,5 +1,5 @@
 /*
- * Copyright 2019 Google LLC
+ * Copyright 2020 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -21,7 +21,6 @@ import com.google.ads.googleads.v1.services.stub.TopicViewServiceStubSettings;
 import com.google.api.core.BetaApi;
 import com.google.api.gax.core.BackgroundResource;
 import com.google.api.gax.rpc.UnaryCallable;
-import com.google.api.pathtemplate.PathTemplate;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 import javax.annotation.Generated;
@@ -36,8 +35,8 @@ import javax.annotation.Generated;
  * <pre>
  * <code>
  * try (TopicViewServiceClient topicViewServiceClient = TopicViewServiceClient.create()) {
- *   String formattedResourceName = TopicViewServiceClient.formatTopicViewName("[CUSTOMER]", "[TOPIC_VIEW]");
- *   TopicView response = topicViewServiceClient.getTopicView(formattedResourceName);
+ *   TopicViewName resourceName = TopicViewName.of("[CUSTOMER]", "[TOPIC_VIEW]");
+ *   TopicView response = topicViewServiceClient.getTopicView(resourceName);
  * }
  * </code>
  * </pre>
@@ -99,42 +98,6 @@ public class TopicViewServiceClient implements BackgroundResource {
   private final TopicViewServiceSettings settings;
   private final TopicViewServiceStub stub;
 
-  private static final PathTemplate TOPIC_VIEW_PATH_TEMPLATE =
-      PathTemplate.createWithoutUrlEncoding("customers/{customer}/topicViews/{topic_view}");
-
-  /**
-   * Formats a string containing the fully-qualified path to represent a topic_view resource.
-   *
-   * @deprecated Use the {@link TopicViewName} class instead.
-   */
-  @Deprecated
-  public static final String formatTopicViewName(String customer, String topicView) {
-    return TOPIC_VIEW_PATH_TEMPLATE.instantiate(
-        "customer", customer,
-        "topic_view", topicView);
-  }
-
-  /**
-   * Parses the customer from the given fully-qualified path which represents a topic_view resource.
-   *
-   * @deprecated Use the {@link TopicViewName} class instead.
-   */
-  @Deprecated
-  public static final String parseCustomerFromTopicViewName(String topicViewName) {
-    return TOPIC_VIEW_PATH_TEMPLATE.parse(topicViewName).get("customer");
-  }
-
-  /**
-   * Parses the topic_view from the given fully-qualified path which represents a topic_view
-   * resource.
-   *
-   * @deprecated Use the {@link TopicViewName} class instead.
-   */
-  @Deprecated
-  public static final String parseTopicViewFromTopicViewName(String topicViewName) {
-    return TOPIC_VIEW_PATH_TEMPLATE.parse(topicViewName).get("topic_view");
-  }
-
   /** Constructs an instance of TopicViewServiceClient with default settings. */
   public static final TopicViewServiceClient create() throws IOException {
     return create(TopicViewServiceSettings.newBuilder().build());
@@ -191,16 +154,39 @@ public class TopicViewServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (TopicViewServiceClient topicViewServiceClient = TopicViewServiceClient.create()) {
-   *   String formattedResourceName = TopicViewServiceClient.formatTopicViewName("[CUSTOMER]", "[TOPIC_VIEW]");
-   *   TopicView response = topicViewServiceClient.getTopicView(formattedResourceName);
+   *   TopicViewName resourceName = TopicViewName.of("[CUSTOMER]", "[TOPIC_VIEW]");
+   *   TopicView response = topicViewServiceClient.getTopicView(resourceName);
    * }
    * </code></pre>
    *
-   * @param resourceName The resource name of the topic view to fetch.
+   * @param resourceName Required. The resource name of the topic view to fetch.
+   * @throws com.google.api.gax.rpc.ApiException if the remote call fails
+   */
+  public final TopicView getTopicView(TopicViewName resourceName) {
+    GetTopicViewRequest request =
+        GetTopicViewRequest.newBuilder()
+            .setResourceName(resourceName == null ? null : resourceName.toString())
+            .build();
+    return getTopicView(request);
+  }
+
+  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  /**
+   * Returns the requested topic view in full detail.
+   *
+   * <p>Sample code:
+   *
+   * <pre><code>
+   * try (TopicViewServiceClient topicViewServiceClient = TopicViewServiceClient.create()) {
+   *   TopicViewName resourceName = TopicViewName.of("[CUSTOMER]", "[TOPIC_VIEW]");
+   *   TopicView response = topicViewServiceClient.getTopicView(resourceName.toString());
+   * }
+   * </code></pre>
+   *
+   * @param resourceName Required. The resource name of the topic view to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final TopicView getTopicView(String resourceName) {
-    TOPIC_VIEW_PATH_TEMPLATE.validate(resourceName, "getTopicView");
     GetTopicViewRequest request =
         GetTopicViewRequest.newBuilder().setResourceName(resourceName).build();
     return getTopicView(request);
@@ -214,9 +200,9 @@ public class TopicViewServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (TopicViewServiceClient topicViewServiceClient = TopicViewServiceClient.create()) {
-   *   String formattedResourceName = TopicViewServiceClient.formatTopicViewName("[CUSTOMER]", "[TOPIC_VIEW]");
+   *   TopicViewName resourceName = TopicViewName.of("[CUSTOMER]", "[TOPIC_VIEW]");
    *   GetTopicViewRequest request = GetTopicViewRequest.newBuilder()
-   *     .setResourceName(formattedResourceName)
+   *     .setResourceName(resourceName.toString())
    *     .build();
    *   TopicView response = topicViewServiceClient.getTopicView(request);
    * }
@@ -237,9 +223,9 @@ public class TopicViewServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (TopicViewServiceClient topicViewServiceClient = TopicViewServiceClient.create()) {
-   *   String formattedResourceName = TopicViewServiceClient.formatTopicViewName("[CUSTOMER]", "[TOPIC_VIEW]");
+   *   TopicViewName resourceName = TopicViewName.of("[CUSTOMER]", "[TOPIC_VIEW]");
    *   GetTopicViewRequest request = GetTopicViewRequest.newBuilder()
-   *     .setResourceName(formattedResourceName)
+   *     .setResourceName(resourceName.toString())
    *     .build();
    *   ApiFuture&lt;TopicView&gt; future = topicViewServiceClient.getTopicViewCallable().futureCall(request);
    *   // Do something

@@ -21,7 +21,6 @@ import com.google.ads.googleads.v4.services.stub.CustomerClientServiceStubSettin
 import com.google.api.core.BetaApi;
 import com.google.api.gax.core.BackgroundResource;
 import com.google.api.gax.rpc.UnaryCallable;
-import com.google.api.pathtemplate.PathTemplate;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 import javax.annotation.Generated;
@@ -36,8 +35,8 @@ import javax.annotation.Generated;
  * <pre>
  * <code>
  * try (CustomerClientServiceClient customerClientServiceClient = CustomerClientServiceClient.create()) {
- *   String formattedResourceName = CustomerClientServiceClient.formatCustomerClientName("[CUSTOMER]", "[CUSTOMER_CLIENT]");
- *   CustomerClient response = customerClientServiceClient.getCustomerClient(formattedResourceName);
+ *   CustomerClientName resourceName = CustomerClientName.of("[CUSTOMER]", "[CUSTOMER_CLIENT]");
+ *   CustomerClient response = customerClientServiceClient.getCustomerClient(resourceName);
  * }
  * </code>
  * </pre>
@@ -99,44 +98,6 @@ public class CustomerClientServiceClient implements BackgroundResource {
   private final CustomerClientServiceSettings settings;
   private final CustomerClientServiceStub stub;
 
-  private static final PathTemplate CUSTOMER_CLIENT_PATH_TEMPLATE =
-      PathTemplate.createWithoutUrlEncoding(
-          "customers/{customer}/customerClients/{customer_client}");
-
-  /**
-   * Formats a string containing the fully-qualified path to represent a customer_client resource.
-   *
-   * @deprecated Use the {@link CustomerClientName} class instead.
-   */
-  @Deprecated
-  public static final String formatCustomerClientName(String customer, String customerClient) {
-    return CUSTOMER_CLIENT_PATH_TEMPLATE.instantiate(
-        "customer", customer,
-        "customer_client", customerClient);
-  }
-
-  /**
-   * Parses the customer from the given fully-qualified path which represents a customer_client
-   * resource.
-   *
-   * @deprecated Use the {@link CustomerClientName} class instead.
-   */
-  @Deprecated
-  public static final String parseCustomerFromCustomerClientName(String customerClientName) {
-    return CUSTOMER_CLIENT_PATH_TEMPLATE.parse(customerClientName).get("customer");
-  }
-
-  /**
-   * Parses the customer_client from the given fully-qualified path which represents a
-   * customer_client resource.
-   *
-   * @deprecated Use the {@link CustomerClientName} class instead.
-   */
-  @Deprecated
-  public static final String parseCustomerClientFromCustomerClientName(String customerClientName) {
-    return CUSTOMER_CLIENT_PATH_TEMPLATE.parse(customerClientName).get("customer_client");
-  }
-
   /** Constructs an instance of CustomerClientServiceClient with default settings. */
   public static final CustomerClientServiceClient create() throws IOException {
     return create(CustomerClientServiceSettings.newBuilder().build());
@@ -193,8 +154,32 @@ public class CustomerClientServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (CustomerClientServiceClient customerClientServiceClient = CustomerClientServiceClient.create()) {
-   *   String formattedResourceName = CustomerClientServiceClient.formatCustomerClientName("[CUSTOMER]", "[CUSTOMER_CLIENT]");
-   *   CustomerClient response = customerClientServiceClient.getCustomerClient(formattedResourceName);
+   *   CustomerClientName resourceName = CustomerClientName.of("[CUSTOMER]", "[CUSTOMER_CLIENT]");
+   *   CustomerClient response = customerClientServiceClient.getCustomerClient(resourceName);
+   * }
+   * </code></pre>
+   *
+   * @param resourceName Required. The resource name of the client to fetch.
+   * @throws com.google.api.gax.rpc.ApiException if the remote call fails
+   */
+  public final CustomerClient getCustomerClient(CustomerClientName resourceName) {
+    GetCustomerClientRequest request =
+        GetCustomerClientRequest.newBuilder()
+            .setResourceName(resourceName == null ? null : resourceName.toString())
+            .build();
+    return getCustomerClient(request);
+  }
+
+  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  /**
+   * Returns the requested client in full detail.
+   *
+   * <p>Sample code:
+   *
+   * <pre><code>
+   * try (CustomerClientServiceClient customerClientServiceClient = CustomerClientServiceClient.create()) {
+   *   CustomerClientName resourceName = CustomerClientName.of("[CUSTOMER]", "[CUSTOMER_CLIENT]");
+   *   CustomerClient response = customerClientServiceClient.getCustomerClient(resourceName.toString());
    * }
    * </code></pre>
    *
@@ -202,7 +187,6 @@ public class CustomerClientServiceClient implements BackgroundResource {
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final CustomerClient getCustomerClient(String resourceName) {
-    CUSTOMER_CLIENT_PATH_TEMPLATE.validate(resourceName, "getCustomerClient");
     GetCustomerClientRequest request =
         GetCustomerClientRequest.newBuilder().setResourceName(resourceName).build();
     return getCustomerClient(request);
@@ -216,9 +200,9 @@ public class CustomerClientServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (CustomerClientServiceClient customerClientServiceClient = CustomerClientServiceClient.create()) {
-   *   String formattedResourceName = CustomerClientServiceClient.formatCustomerClientName("[CUSTOMER]", "[CUSTOMER_CLIENT]");
+   *   CustomerClientName resourceName = CustomerClientName.of("[CUSTOMER]", "[CUSTOMER_CLIENT]");
    *   GetCustomerClientRequest request = GetCustomerClientRequest.newBuilder()
-   *     .setResourceName(formattedResourceName)
+   *     .setResourceName(resourceName.toString())
    *     .build();
    *   CustomerClient response = customerClientServiceClient.getCustomerClient(request);
    * }
@@ -239,9 +223,9 @@ public class CustomerClientServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (CustomerClientServiceClient customerClientServiceClient = CustomerClientServiceClient.create()) {
-   *   String formattedResourceName = CustomerClientServiceClient.formatCustomerClientName("[CUSTOMER]", "[CUSTOMER_CLIENT]");
+   *   CustomerClientName resourceName = CustomerClientName.of("[CUSTOMER]", "[CUSTOMER_CLIENT]");
    *   GetCustomerClientRequest request = GetCustomerClientRequest.newBuilder()
-   *     .setResourceName(formattedResourceName)
+   *     .setResourceName(resourceName.toString())
    *     .build();
    *   ApiFuture&lt;CustomerClient&gt; future = customerClientServiceClient.getCustomerClientCallable().futureCall(request);
    *   // Do something

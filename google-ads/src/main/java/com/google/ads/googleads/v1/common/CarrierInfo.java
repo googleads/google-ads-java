@@ -10,7 +10,7 @@ package com.google.ads.googleads.v1.common;
  *
  * Protobuf type {@code google.ads.googleads.v1.common.CarrierInfo}
  */
-public  final class CarrierInfo extends
+public final class CarrierInfo extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v1.common.CarrierInfo)
     CarrierInfoOrBuilder {
@@ -20,6 +20,13 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private CarrierInfo() {
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new CarrierInfo();
   }
 
   @java.lang.Override
@@ -35,7 +42,6 @@ private static final long serialVersionUID = 0L;
     if (extensionRegistry == null) {
       throw new java.lang.NullPointerException();
     }
-    int mutable_bitField0_ = 0;
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
         com.google.protobuf.UnknownFieldSet.newBuilder();
     try {
@@ -99,7 +105,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue carrier_constant = 1;</code>
+   * @return Whether the carrierConstant field is set.
    */
+  @java.lang.Override
   public boolean hasCarrierConstant() {
     return carrierConstant_ != null;
   }
@@ -109,7 +117,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue carrier_constant = 1;</code>
+   * @return The carrierConstant.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getCarrierConstant() {
     return carrierConstant_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : carrierConstant_;
   }
@@ -120,6 +130,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue carrier_constant = 1;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getCarrierConstantOrBuilder() {
     return getCarrierConstant();
   }
@@ -452,6 +463,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue carrier_constant = 1;</code>
+     * @return Whether the carrierConstant field is set.
      */
     public boolean hasCarrierConstant() {
       return carrierConstantBuilder_ != null || carrierConstant_ != null;
@@ -462,6 +474,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue carrier_constant = 1;</code>
+     * @return The carrierConstant.
      */
     public com.google.protobuf.StringValue getCarrierConstant() {
       if (carrierConstantBuilder_ == null) {

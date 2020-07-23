@@ -21,7 +21,7 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.10.0)",
+    value = "by gRPC proto compiler",
     comments = "Source: google/ads/googleads/v1/services/remarketing_action_service.proto")
 public final class RemarketingActionServiceGrpc {
 
@@ -30,86 +30,80 @@ public final class RemarketingActionServiceGrpc {
   public static final String SERVICE_NAME = "google.ads.googleads.v1.services.RemarketingActionService";
 
   // Static method descriptors that strictly reflect the proto.
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  @java.lang.Deprecated // Use {@link #getGetRemarketingActionMethod()} instead. 
-  public static final io.grpc.MethodDescriptor<com.google.ads.googleads.v1.services.GetRemarketingActionRequest,
-      com.google.ads.googleads.v1.resources.RemarketingAction> METHOD_GET_REMARKETING_ACTION = getGetRemarketingActionMethodHelper();
-
   private static volatile io.grpc.MethodDescriptor<com.google.ads.googleads.v1.services.GetRemarketingActionRequest,
       com.google.ads.googleads.v1.resources.RemarketingAction> getGetRemarketingActionMethod;
 
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetRemarketingAction",
+      requestType = com.google.ads.googleads.v1.services.GetRemarketingActionRequest.class,
+      responseType = com.google.ads.googleads.v1.resources.RemarketingAction.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<com.google.ads.googleads.v1.services.GetRemarketingActionRequest,
       com.google.ads.googleads.v1.resources.RemarketingAction> getGetRemarketingActionMethod() {
-    return getGetRemarketingActionMethodHelper();
-  }
-
-  private static io.grpc.MethodDescriptor<com.google.ads.googleads.v1.services.GetRemarketingActionRequest,
-      com.google.ads.googleads.v1.resources.RemarketingAction> getGetRemarketingActionMethodHelper() {
     io.grpc.MethodDescriptor<com.google.ads.googleads.v1.services.GetRemarketingActionRequest, com.google.ads.googleads.v1.resources.RemarketingAction> getGetRemarketingActionMethod;
     if ((getGetRemarketingActionMethod = RemarketingActionServiceGrpc.getGetRemarketingActionMethod) == null) {
       synchronized (RemarketingActionServiceGrpc.class) {
         if ((getGetRemarketingActionMethod = RemarketingActionServiceGrpc.getGetRemarketingActionMethod) == null) {
-          RemarketingActionServiceGrpc.getGetRemarketingActionMethod = getGetRemarketingActionMethod = 
+          RemarketingActionServiceGrpc.getGetRemarketingActionMethod = getGetRemarketingActionMethod =
               io.grpc.MethodDescriptor.<com.google.ads.googleads.v1.services.GetRemarketingActionRequest, com.google.ads.googleads.v1.resources.RemarketingAction>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "google.ads.googleads.v1.services.RemarketingActionService", "GetRemarketingAction"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetRemarketingAction"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v1.services.GetRemarketingActionRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v1.resources.RemarketingAction.getDefaultInstance()))
-                  .setSchemaDescriptor(new RemarketingActionServiceMethodDescriptorSupplier("GetRemarketingAction"))
-                  .build();
-          }
+              .setSchemaDescriptor(new RemarketingActionServiceMethodDescriptorSupplier("GetRemarketingAction"))
+              .build();
         }
-     }
-     return getGetRemarketingActionMethod;
+      }
+    }
+    return getGetRemarketingActionMethod;
   }
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  @java.lang.Deprecated // Use {@link #getMutateRemarketingActionsMethod()} instead. 
-  public static final io.grpc.MethodDescriptor<com.google.ads.googleads.v1.services.MutateRemarketingActionsRequest,
-      com.google.ads.googleads.v1.services.MutateRemarketingActionsResponse> METHOD_MUTATE_REMARKETING_ACTIONS = getMutateRemarketingActionsMethodHelper();
 
   private static volatile io.grpc.MethodDescriptor<com.google.ads.googleads.v1.services.MutateRemarketingActionsRequest,
       com.google.ads.googleads.v1.services.MutateRemarketingActionsResponse> getMutateRemarketingActionsMethod;
 
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "MutateRemarketingActions",
+      requestType = com.google.ads.googleads.v1.services.MutateRemarketingActionsRequest.class,
+      responseType = com.google.ads.googleads.v1.services.MutateRemarketingActionsResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<com.google.ads.googleads.v1.services.MutateRemarketingActionsRequest,
       com.google.ads.googleads.v1.services.MutateRemarketingActionsResponse> getMutateRemarketingActionsMethod() {
-    return getMutateRemarketingActionsMethodHelper();
-  }
-
-  private static io.grpc.MethodDescriptor<com.google.ads.googleads.v1.services.MutateRemarketingActionsRequest,
-      com.google.ads.googleads.v1.services.MutateRemarketingActionsResponse> getMutateRemarketingActionsMethodHelper() {
     io.grpc.MethodDescriptor<com.google.ads.googleads.v1.services.MutateRemarketingActionsRequest, com.google.ads.googleads.v1.services.MutateRemarketingActionsResponse> getMutateRemarketingActionsMethod;
     if ((getMutateRemarketingActionsMethod = RemarketingActionServiceGrpc.getMutateRemarketingActionsMethod) == null) {
       synchronized (RemarketingActionServiceGrpc.class) {
         if ((getMutateRemarketingActionsMethod = RemarketingActionServiceGrpc.getMutateRemarketingActionsMethod) == null) {
-          RemarketingActionServiceGrpc.getMutateRemarketingActionsMethod = getMutateRemarketingActionsMethod = 
+          RemarketingActionServiceGrpc.getMutateRemarketingActionsMethod = getMutateRemarketingActionsMethod =
               io.grpc.MethodDescriptor.<com.google.ads.googleads.v1.services.MutateRemarketingActionsRequest, com.google.ads.googleads.v1.services.MutateRemarketingActionsResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "google.ads.googleads.v1.services.RemarketingActionService", "MutateRemarketingActions"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "MutateRemarketingActions"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v1.services.MutateRemarketingActionsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v1.services.MutateRemarketingActionsResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new RemarketingActionServiceMethodDescriptorSupplier("MutateRemarketingActions"))
-                  .build();
-          }
+              .setSchemaDescriptor(new RemarketingActionServiceMethodDescriptorSupplier("MutateRemarketingActions"))
+              .build();
         }
-     }
-     return getMutateRemarketingActionsMethod;
+      }
+    }
+    return getMutateRemarketingActionsMethod;
   }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static RemarketingActionServiceStub newStub(io.grpc.Channel channel) {
-    return new RemarketingActionServiceStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<RemarketingActionServiceStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<RemarketingActionServiceStub>() {
+        @java.lang.Override
+        public RemarketingActionServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new RemarketingActionServiceStub(channel, callOptions);
+        }
+      };
+    return RemarketingActionServiceStub.newStub(factory, channel);
   }
 
   /**
@@ -117,7 +111,14 @@ public final class RemarketingActionServiceGrpc {
    */
   public static RemarketingActionServiceBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new RemarketingActionServiceBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<RemarketingActionServiceBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<RemarketingActionServiceBlockingStub>() {
+        @java.lang.Override
+        public RemarketingActionServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new RemarketingActionServiceBlockingStub(channel, callOptions);
+        }
+      };
+    return RemarketingActionServiceBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -125,7 +126,14 @@ public final class RemarketingActionServiceGrpc {
    */
   public static RemarketingActionServiceFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new RemarketingActionServiceFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<RemarketingActionServiceFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<RemarketingActionServiceFutureStub>() {
+        @java.lang.Override
+        public RemarketingActionServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new RemarketingActionServiceFutureStub(channel, callOptions);
+        }
+      };
+    return RemarketingActionServiceFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -142,7 +150,7 @@ public final class RemarketingActionServiceGrpc {
      */
     public void getRemarketingAction(com.google.ads.googleads.v1.services.GetRemarketingActionRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v1.resources.RemarketingAction> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetRemarketingActionMethodHelper(), responseObserver);
+      asyncUnimplementedUnaryCall(getGetRemarketingActionMethod(), responseObserver);
     }
 
     /**
@@ -152,20 +160,20 @@ public final class RemarketingActionServiceGrpc {
      */
     public void mutateRemarketingActions(com.google.ads.googleads.v1.services.MutateRemarketingActionsRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v1.services.MutateRemarketingActionsResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getMutateRemarketingActionsMethodHelper(), responseObserver);
+      asyncUnimplementedUnaryCall(getMutateRemarketingActionsMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
-            getGetRemarketingActionMethodHelper(),
+            getGetRemarketingActionMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 com.google.ads.googleads.v1.services.GetRemarketingActionRequest,
                 com.google.ads.googleads.v1.resources.RemarketingAction>(
                   this, METHODID_GET_REMARKETING_ACTION)))
           .addMethod(
-            getMutateRemarketingActionsMethodHelper(),
+            getMutateRemarketingActionsMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 com.google.ads.googleads.v1.services.MutateRemarketingActionsRequest,
@@ -180,19 +188,15 @@ public final class RemarketingActionServiceGrpc {
    * Service to manage remarketing actions.
    * </pre>
    */
-  public static final class RemarketingActionServiceStub extends io.grpc.stub.AbstractStub<RemarketingActionServiceStub> {
-    private RemarketingActionServiceStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private RemarketingActionServiceStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class RemarketingActionServiceStub extends io.grpc.stub.AbstractAsyncStub<RemarketingActionServiceStub> {
+    private RemarketingActionServiceStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected RemarketingActionServiceStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected RemarketingActionServiceStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new RemarketingActionServiceStub(channel, callOptions);
     }
 
@@ -204,7 +208,7 @@ public final class RemarketingActionServiceGrpc {
     public void getRemarketingAction(com.google.ads.googleads.v1.services.GetRemarketingActionRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v1.resources.RemarketingAction> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(getGetRemarketingActionMethodHelper(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getGetRemarketingActionMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -215,7 +219,7 @@ public final class RemarketingActionServiceGrpc {
     public void mutateRemarketingActions(com.google.ads.googleads.v1.services.MutateRemarketingActionsRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v1.services.MutateRemarketingActionsResponse> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(getMutateRemarketingActionsMethodHelper(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getMutateRemarketingActionsMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -224,19 +228,15 @@ public final class RemarketingActionServiceGrpc {
    * Service to manage remarketing actions.
    * </pre>
    */
-  public static final class RemarketingActionServiceBlockingStub extends io.grpc.stub.AbstractStub<RemarketingActionServiceBlockingStub> {
-    private RemarketingActionServiceBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private RemarketingActionServiceBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class RemarketingActionServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<RemarketingActionServiceBlockingStub> {
+    private RemarketingActionServiceBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected RemarketingActionServiceBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected RemarketingActionServiceBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new RemarketingActionServiceBlockingStub(channel, callOptions);
     }
 
@@ -247,7 +247,7 @@ public final class RemarketingActionServiceGrpc {
      */
     public com.google.ads.googleads.v1.resources.RemarketingAction getRemarketingAction(com.google.ads.googleads.v1.services.GetRemarketingActionRequest request) {
       return blockingUnaryCall(
-          getChannel(), getGetRemarketingActionMethodHelper(), getCallOptions(), request);
+          getChannel(), getGetRemarketingActionMethod(), getCallOptions(), request);
     }
 
     /**
@@ -257,7 +257,7 @@ public final class RemarketingActionServiceGrpc {
      */
     public com.google.ads.googleads.v1.services.MutateRemarketingActionsResponse mutateRemarketingActions(com.google.ads.googleads.v1.services.MutateRemarketingActionsRequest request) {
       return blockingUnaryCall(
-          getChannel(), getMutateRemarketingActionsMethodHelper(), getCallOptions(), request);
+          getChannel(), getMutateRemarketingActionsMethod(), getCallOptions(), request);
     }
   }
 
@@ -266,19 +266,15 @@ public final class RemarketingActionServiceGrpc {
    * Service to manage remarketing actions.
    * </pre>
    */
-  public static final class RemarketingActionServiceFutureStub extends io.grpc.stub.AbstractStub<RemarketingActionServiceFutureStub> {
-    private RemarketingActionServiceFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private RemarketingActionServiceFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class RemarketingActionServiceFutureStub extends io.grpc.stub.AbstractFutureStub<RemarketingActionServiceFutureStub> {
+    private RemarketingActionServiceFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected RemarketingActionServiceFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected RemarketingActionServiceFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new RemarketingActionServiceFutureStub(channel, callOptions);
     }
 
@@ -290,7 +286,7 @@ public final class RemarketingActionServiceGrpc {
     public com.google.common.util.concurrent.ListenableFuture<com.google.ads.googleads.v1.resources.RemarketingAction> getRemarketingAction(
         com.google.ads.googleads.v1.services.GetRemarketingActionRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(getGetRemarketingActionMethodHelper(), getCallOptions()), request);
+          getChannel().newCall(getGetRemarketingActionMethod(), getCallOptions()), request);
     }
 
     /**
@@ -301,7 +297,7 @@ public final class RemarketingActionServiceGrpc {
     public com.google.common.util.concurrent.ListenableFuture<com.google.ads.googleads.v1.services.MutateRemarketingActionsResponse> mutateRemarketingActions(
         com.google.ads.googleads.v1.services.MutateRemarketingActionsRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(getMutateRemarketingActionsMethodHelper(), getCallOptions()), request);
+          getChannel().newCall(getMutateRemarketingActionsMethod(), getCallOptions()), request);
     }
   }
 
@@ -394,8 +390,8 @@ public final class RemarketingActionServiceGrpc {
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new RemarketingActionServiceFileDescriptorSupplier())
-              .addMethod(getGetRemarketingActionMethodHelper())
-              .addMethod(getMutateRemarketingActionsMethodHelper())
+              .addMethod(getGetRemarketingActionMethod())
+              .addMethod(getMutateRemarketingActionsMethod())
               .build();
         }
       }

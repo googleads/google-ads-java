@@ -1,5 +1,5 @@
 /*
- * Copyright 2019 Google LLC
+ * Copyright 2020 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -21,7 +21,6 @@ import com.google.ads.googleads.v1.services.stub.FeedPlaceholderViewServiceStubS
 import com.google.api.core.BetaApi;
 import com.google.api.gax.core.BackgroundResource;
 import com.google.api.gax.rpc.UnaryCallable;
-import com.google.api.pathtemplate.PathTemplate;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 import javax.annotation.Generated;
@@ -36,8 +35,8 @@ import javax.annotation.Generated;
  * <pre>
  * <code>
  * try (FeedPlaceholderViewServiceClient feedPlaceholderViewServiceClient = FeedPlaceholderViewServiceClient.create()) {
- *   String formattedResourceName = FeedPlaceholderViewServiceClient.formatFeedPlaceholderViewName("[CUSTOMER]", "[FEED_PLACEHOLDER_VIEW]");
- *   FeedPlaceholderView response = feedPlaceholderViewServiceClient.getFeedPlaceholderView(formattedResourceName);
+ *   FeedPlaceholderViewName resourceName = FeedPlaceholderViewName.of("[CUSTOMER]", "[FEED_PLACEHOLDER_VIEW]");
+ *   FeedPlaceholderView response = feedPlaceholderViewServiceClient.getFeedPlaceholderView(resourceName);
  * }
  * </code>
  * </pre>
@@ -99,50 +98,6 @@ public class FeedPlaceholderViewServiceClient implements BackgroundResource {
   private final FeedPlaceholderViewServiceSettings settings;
   private final FeedPlaceholderViewServiceStub stub;
 
-  private static final PathTemplate FEED_PLACEHOLDER_VIEW_PATH_TEMPLATE =
-      PathTemplate.createWithoutUrlEncoding(
-          "customers/{customer}/feedPlaceholderViews/{feed_placeholder_view}");
-
-  /**
-   * Formats a string containing the fully-qualified path to represent a feed_placeholder_view
-   * resource.
-   *
-   * @deprecated Use the {@link FeedPlaceholderViewName} class instead.
-   */
-  @Deprecated
-  public static final String formatFeedPlaceholderViewName(
-      String customer, String feedPlaceholderView) {
-    return FEED_PLACEHOLDER_VIEW_PATH_TEMPLATE.instantiate(
-        "customer", customer,
-        "feed_placeholder_view", feedPlaceholderView);
-  }
-
-  /**
-   * Parses the customer from the given fully-qualified path which represents a
-   * feed_placeholder_view resource.
-   *
-   * @deprecated Use the {@link FeedPlaceholderViewName} class instead.
-   */
-  @Deprecated
-  public static final String parseCustomerFromFeedPlaceholderViewName(
-      String feedPlaceholderViewName) {
-    return FEED_PLACEHOLDER_VIEW_PATH_TEMPLATE.parse(feedPlaceholderViewName).get("customer");
-  }
-
-  /**
-   * Parses the feed_placeholder_view from the given fully-qualified path which represents a
-   * feed_placeholder_view resource.
-   *
-   * @deprecated Use the {@link FeedPlaceholderViewName} class instead.
-   */
-  @Deprecated
-  public static final String parseFeedPlaceholderViewFromFeedPlaceholderViewName(
-      String feedPlaceholderViewName) {
-    return FEED_PLACEHOLDER_VIEW_PATH_TEMPLATE
-        .parse(feedPlaceholderViewName)
-        .get("feed_placeholder_view");
-  }
-
   /** Constructs an instance of FeedPlaceholderViewServiceClient with default settings. */
   public static final FeedPlaceholderViewServiceClient create() throws IOException {
     return create(FeedPlaceholderViewServiceSettings.newBuilder().build());
@@ -201,16 +156,39 @@ public class FeedPlaceholderViewServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (FeedPlaceholderViewServiceClient feedPlaceholderViewServiceClient = FeedPlaceholderViewServiceClient.create()) {
-   *   String formattedResourceName = FeedPlaceholderViewServiceClient.formatFeedPlaceholderViewName("[CUSTOMER]", "[FEED_PLACEHOLDER_VIEW]");
-   *   FeedPlaceholderView response = feedPlaceholderViewServiceClient.getFeedPlaceholderView(formattedResourceName);
+   *   FeedPlaceholderViewName resourceName = FeedPlaceholderViewName.of("[CUSTOMER]", "[FEED_PLACEHOLDER_VIEW]");
+   *   FeedPlaceholderView response = feedPlaceholderViewServiceClient.getFeedPlaceholderView(resourceName);
    * }
    * </code></pre>
    *
-   * @param resourceName The resource name of the feed placeholder view to fetch.
+   * @param resourceName Required. The resource name of the feed placeholder view to fetch.
+   * @throws com.google.api.gax.rpc.ApiException if the remote call fails
+   */
+  public final FeedPlaceholderView getFeedPlaceholderView(FeedPlaceholderViewName resourceName) {
+    GetFeedPlaceholderViewRequest request =
+        GetFeedPlaceholderViewRequest.newBuilder()
+            .setResourceName(resourceName == null ? null : resourceName.toString())
+            .build();
+    return getFeedPlaceholderView(request);
+  }
+
+  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  /**
+   * Returns the requested feed placeholder view in full detail.
+   *
+   * <p>Sample code:
+   *
+   * <pre><code>
+   * try (FeedPlaceholderViewServiceClient feedPlaceholderViewServiceClient = FeedPlaceholderViewServiceClient.create()) {
+   *   FeedPlaceholderViewName resourceName = FeedPlaceholderViewName.of("[CUSTOMER]", "[FEED_PLACEHOLDER_VIEW]");
+   *   FeedPlaceholderView response = feedPlaceholderViewServiceClient.getFeedPlaceholderView(resourceName.toString());
+   * }
+   * </code></pre>
+   *
+   * @param resourceName Required. The resource name of the feed placeholder view to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final FeedPlaceholderView getFeedPlaceholderView(String resourceName) {
-    FEED_PLACEHOLDER_VIEW_PATH_TEMPLATE.validate(resourceName, "getFeedPlaceholderView");
     GetFeedPlaceholderViewRequest request =
         GetFeedPlaceholderViewRequest.newBuilder().setResourceName(resourceName).build();
     return getFeedPlaceholderView(request);
@@ -224,9 +202,9 @@ public class FeedPlaceholderViewServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (FeedPlaceholderViewServiceClient feedPlaceholderViewServiceClient = FeedPlaceholderViewServiceClient.create()) {
-   *   String formattedResourceName = FeedPlaceholderViewServiceClient.formatFeedPlaceholderViewName("[CUSTOMER]", "[FEED_PLACEHOLDER_VIEW]");
+   *   FeedPlaceholderViewName resourceName = FeedPlaceholderViewName.of("[CUSTOMER]", "[FEED_PLACEHOLDER_VIEW]");
    *   GetFeedPlaceholderViewRequest request = GetFeedPlaceholderViewRequest.newBuilder()
-   *     .setResourceName(formattedResourceName)
+   *     .setResourceName(resourceName.toString())
    *     .build();
    *   FeedPlaceholderView response = feedPlaceholderViewServiceClient.getFeedPlaceholderView(request);
    * }
@@ -247,9 +225,9 @@ public class FeedPlaceholderViewServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (FeedPlaceholderViewServiceClient feedPlaceholderViewServiceClient = FeedPlaceholderViewServiceClient.create()) {
-   *   String formattedResourceName = FeedPlaceholderViewServiceClient.formatFeedPlaceholderViewName("[CUSTOMER]", "[FEED_PLACEHOLDER_VIEW]");
+   *   FeedPlaceholderViewName resourceName = FeedPlaceholderViewName.of("[CUSTOMER]", "[FEED_PLACEHOLDER_VIEW]");
    *   GetFeedPlaceholderViewRequest request = GetFeedPlaceholderViewRequest.newBuilder()
-   *     .setResourceName(formattedResourceName)
+   *     .setResourceName(resourceName.toString())
    *     .build();
    *   ApiFuture&lt;FeedPlaceholderView&gt; future = feedPlaceholderViewServiceClient.getFeedPlaceholderViewCallable().futureCall(request);
    *   // Do something

@@ -14,6 +14,7 @@ public interface SitelinkFeedItemOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue link_text = 1;</code>
+   * @return Whether the linkText field is set.
    */
   boolean hasLinkText();
   /**
@@ -23,6 +24,7 @@ public interface SitelinkFeedItemOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue link_text = 1;</code>
+   * @return The linkText.
    */
   com.google.protobuf.StringValue getLinkText();
   /**
@@ -43,6 +45,7 @@ public interface SitelinkFeedItemOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue line1 = 2;</code>
+   * @return Whether the line1 field is set.
    */
   boolean hasLine1();
   /**
@@ -53,6 +56,7 @@ public interface SitelinkFeedItemOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue line1 = 2;</code>
+   * @return The line1.
    */
   com.google.protobuf.StringValue getLine1();
   /**
@@ -74,6 +78,7 @@ public interface SitelinkFeedItemOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue line2 = 3;</code>
+   * @return Whether the line2 field is set.
    */
   boolean hasLine2();
   /**
@@ -84,6 +89,7 @@ public interface SitelinkFeedItemOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue line2 = 3;</code>
+   * @return The line2.
    */
   com.google.protobuf.StringValue getLine2();
   /**
@@ -191,6 +197,7 @@ public interface SitelinkFeedItemOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue tracking_url_template = 6;</code>
+   * @return Whether the trackingUrlTemplate field is set.
    */
   boolean hasTrackingUrlTemplate();
   /**
@@ -199,6 +206,7 @@ public interface SitelinkFeedItemOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue tracking_url_template = 6;</code>
+   * @return The trackingUrlTemplate.
    */
   com.google.protobuf.StringValue getTrackingUrlTemplate();
   /**
@@ -266,6 +274,7 @@ public interface SitelinkFeedItemOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue final_url_suffix = 8;</code>
+   * @return Whether the finalUrlSuffix field is set.
    */
   boolean hasFinalUrlSuffix();
   /**
@@ -275,6 +284,7 @@ public interface SitelinkFeedItemOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue final_url_suffix = 8;</code>
+   * @return The finalUrlSuffix.
    */
   com.google.protobuf.StringValue getFinalUrlSuffix();
   /**

@@ -10,7 +10,7 @@ package com.google.ads.googleads.v4.errors;
  *
  * Protobuf type {@code google.ads.googleads.v4.errors.CustomerFeedErrorEnum}
  */
-public  final class CustomerFeedErrorEnum extends
+public final class CustomerFeedErrorEnum extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.errors.CustomerFeedErrorEnum)
     CustomerFeedErrorEnumOrBuilder {
@@ -295,6 +295,10 @@ private static final long serialVersionUID = 0L;
 
     public final com.google.protobuf.Descriptors.EnumValueDescriptor
         getValueDescriptor() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalStateException(
+            "Can't get the descriptor of an unrecognized enum value.");
+      }
       return getDescriptor().getValues().get(ordinal());
     }
     public final com.google.protobuf.Descriptors.EnumDescriptor

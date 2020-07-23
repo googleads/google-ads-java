@@ -15,6 +15,7 @@ public interface DynamicSearchAdsSearchTermViewOrBuilder extends
    * </pre>
    *
    * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The resourceName.
    */
   java.lang.String getResourceName();
   /**
@@ -25,6 +26,7 @@ public interface DynamicSearchAdsSearchTermViewOrBuilder extends
    * </pre>
    *
    * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The bytes for resourceName.
    */
   com.google.protobuf.ByteString
       getResourceNameBytes();
@@ -36,6 +38,7 @@ public interface DynamicSearchAdsSearchTermViewOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue search_term = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the searchTerm field is set.
    */
   boolean hasSearchTerm();
   /**
@@ -45,6 +48,7 @@ public interface DynamicSearchAdsSearchTermViewOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue search_term = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The searchTerm.
    */
   com.google.protobuf.StringValue getSearchTerm();
   /**
@@ -64,6 +68,7 @@ public interface DynamicSearchAdsSearchTermViewOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue headline = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the headline field is set.
    */
   boolean hasHeadline();
   /**
@@ -73,6 +78,7 @@ public interface DynamicSearchAdsSearchTermViewOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue headline = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The headline.
    */
   com.google.protobuf.StringValue getHeadline();
   /**
@@ -92,6 +98,7 @@ public interface DynamicSearchAdsSearchTermViewOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue landing_page = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the landingPage field is set.
    */
   boolean hasLandingPage();
   /**
@@ -101,6 +108,7 @@ public interface DynamicSearchAdsSearchTermViewOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue landing_page = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The landingPage.
    */
   com.google.protobuf.StringValue getLandingPage();
   /**
@@ -120,6 +128,7 @@ public interface DynamicSearchAdsSearchTermViewOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue page_url = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the pageUrl field is set.
    */
   boolean hasPageUrl();
   /**
@@ -129,6 +138,7 @@ public interface DynamicSearchAdsSearchTermViewOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue page_url = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The pageUrl.
    */
   com.google.protobuf.StringValue getPageUrl();
   /**
@@ -148,6 +158,7 @@ public interface DynamicSearchAdsSearchTermViewOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.BoolValue has_negative_keyword = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the hasNegativeKeyword field is set.
    */
   boolean hasHasNegativeKeyword();
   /**
@@ -157,6 +168,7 @@ public interface DynamicSearchAdsSearchTermViewOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.BoolValue has_negative_keyword = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The hasNegativeKeyword.
    */
   com.google.protobuf.BoolValue getHasNegativeKeyword();
   /**
@@ -176,6 +188,7 @@ public interface DynamicSearchAdsSearchTermViewOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.BoolValue has_matching_keyword = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the hasMatchingKeyword field is set.
    */
   boolean hasHasMatchingKeyword();
   /**
@@ -185,6 +198,7 @@ public interface DynamicSearchAdsSearchTermViewOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.BoolValue has_matching_keyword = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The hasMatchingKeyword.
    */
   com.google.protobuf.BoolValue getHasMatchingKeyword();
   /**
@@ -204,6 +218,7 @@ public interface DynamicSearchAdsSearchTermViewOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.BoolValue has_negative_url = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the hasNegativeUrl field is set.
    */
   boolean hasHasNegativeUrl();
   /**
@@ -213,6 +228,7 @@ public interface DynamicSearchAdsSearchTermViewOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.BoolValue has_negative_url = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The hasNegativeUrl.
    */
   com.google.protobuf.BoolValue getHasNegativeUrl();
   /**

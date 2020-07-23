@@ -53,69 +53,66 @@ public final class CustomerExtensionSettingServiceProto {
       "gle.ads.googleads.v1.services\032Bgoogle/ad" +
       "s/googleads/v1/resources/customer_extens" +
       "ion_setting.proto\032\034google/api/annotation" +
-      "s.proto\032 google/protobuf/field_mask.prot" +
-      "o\032\036google/protobuf/wrappers.proto\032\027googl" +
-      "e/rpc/status.proto\032\027google/api/client.pr" +
-      "oto\";\n\"GetCustomerExtensionSettingReques" +
-      "t\022\025\n\rresource_name\030\001 \001(\t\"\306\001\n&MutateCusto" +
-      "merExtensionSettingsRequest\022\023\n\013customer_" +
-      "id\030\001 \001(\t\022W\n\noperations\030\002 \003(\0132C.google.ad" +
-      "s.googleads.v1.services.CustomerExtensio" +
-      "nSettingOperation\022\027\n\017partial_failure\030\003 \001" +
-      "(\010\022\025\n\rvalidate_only\030\004 \001(\010\"\221\002\n!CustomerEx" +
-      "tensionSettingOperation\022/\n\013update_mask\030\004" +
-      " \001(\0132\032.google.protobuf.FieldMask\022M\n\006crea" +
-      "te\030\001 \001(\0132;.google.ads.googleads.v1.resou" +
-      "rces.CustomerExtensionSettingH\000\022M\n\006updat" +
-      "e\030\002 \001(\0132;.google.ads.googleads.v1.resour" +
-      "ces.CustomerExtensionSettingH\000\022\020\n\006remove" +
-      "\030\003 \001(\tH\000B\013\n\toperation\"\265\001\n\'MutateCustomer" +
-      "ExtensionSettingsResponse\0221\n\025partial_fai" +
-      "lure_error\030\003 \001(\0132\022.google.rpc.Status\022W\n\007" +
-      "results\030\002 \003(\0132F.google.ads.googleads.v1." +
-      "services.MutateCustomerExtensionSettingR" +
-      "esult\"=\n$MutateCustomerExtensionSettingR" +
-      "esult\022\025\n\rresource_name\030\001 \001(\t2\252\004\n\037Custome" +
-      "rExtensionSettingService\022\345\001\n\033GetCustomer" +
-      "ExtensionSetting\022D.google.ads.googleads." +
-      "v1.services.GetCustomerExtensionSettingR" +
-      "equest\032;.google.ads.googleads.v1.resourc" +
-      "es.CustomerExtensionSetting\"C\202\323\344\223\002=\022;/v1" +
-      "/{resource_name=customers/*/customerExte" +
-      "nsionSettings/*}\022\201\002\n\037MutateCustomerExten" +
-      "sionSettings\022H.google.ads.googleads.v1.s" +
-      "ervices.MutateCustomerExtensionSettingsR" +
-      "equest\032I.google.ads.googleads.v1.service" +
-      "s.MutateCustomerExtensionSettingsRespons" +
-      "e\"I\202\323\344\223\002C\">/v1/customers/{customer_id=*}" +
-      "/customerExtensionSettings:mutate:\001*\032\033\312A" +
-      "\030googleads.googleapis.comB\213\002\n$com.google" +
-      ".ads.googleads.v1.servicesB$CustomerExte" +
-      "nsionSettingServiceProtoP\001ZHgoogle.golan" +
-      "g.org/genproto/googleapis/ads/googleads/" +
-      "v1/services;services\242\002\003GAA\252\002 Google.Ads." +
-      "GoogleAds.V1.Services\312\002 Google\\Ads\\Googl" +
-      "eAds\\V1\\Services\352\002$Google::Ads::GoogleAd" +
-      "s::V1::Servicesb\006proto3"
+      "s.proto\032\027google/api/client.proto\032\037google" +
+      "/api/field_behavior.proto\032\031google/api/re" +
+      "source.proto\032 google/protobuf/field_mask" +
+      ".proto\032\027google/rpc/status.proto\"v\n\"GetCu" +
+      "stomerExtensionSettingRequest\022P\n\rresourc" +
+      "e_name\030\001 \001(\tB9\340A\002\372A3\n1googleads.googleap" +
+      "is.com/CustomerExtensionSetting\"\320\001\n&Muta" +
+      "teCustomerExtensionSettingsRequest\022\030\n\013cu" +
+      "stomer_id\030\001 \001(\tB\003\340A\002\022\\\n\noperations\030\002 \003(\013" +
+      "2C.google.ads.googleads.v1.services.Cust" +
+      "omerExtensionSettingOperationB\003\340A\002\022\027\n\017pa" +
+      "rtial_failure\030\003 \001(\010\022\025\n\rvalidate_only\030\004 \001" +
+      "(\010\"\221\002\n!CustomerExtensionSettingOperation" +
+      "\022/\n\013update_mask\030\004 \001(\0132\032.google.protobuf." +
+      "FieldMask\022M\n\006create\030\001 \001(\0132;.google.ads.g" +
+      "oogleads.v1.resources.CustomerExtensionS" +
+      "ettingH\000\022M\n\006update\030\002 \001(\0132;.google.ads.go" +
+      "ogleads.v1.resources.CustomerExtensionSe" +
+      "ttingH\000\022\020\n\006remove\030\003 \001(\tH\000B\013\n\toperation\"\265" +
+      "\001\n\'MutateCustomerExtensionSettingsRespon" +
+      "se\0221\n\025partial_failure_error\030\003 \001(\0132\022.goog" +
+      "le.rpc.Status\022W\n\007results\030\002 \003(\0132F.google." +
+      "ads.googleads.v1.services.MutateCustomer" +
+      "ExtensionSettingResult\"=\n$MutateCustomer" +
+      "ExtensionSettingResult\022\025\n\rresource_name\030" +
+      "\001 \001(\t2\323\004\n\037CustomerExtensionSettingServic" +
+      "e\022\365\001\n\033GetCustomerExtensionSetting\022D.goog" +
+      "le.ads.googleads.v1.services.GetCustomer" +
+      "ExtensionSettingRequest\032;.google.ads.goo" +
+      "gleads.v1.resources.CustomerExtensionSet" +
+      "ting\"S\202\323\344\223\002=\022;/v1/{resource_name=custome" +
+      "rs/*/customerExtensionSettings/*}\332A\rreso" +
+      "urce_name\022\232\002\n\037MutateCustomerExtensionSet" +
+      "tings\022H.google.ads.googleads.v1.services" +
+      ".MutateCustomerExtensionSettingsRequest\032" +
+      "I.google.ads.googleads.v1.services.Mutat" +
+      "eCustomerExtensionSettingsResponse\"b\202\323\344\223" +
+      "\002C\">/v1/customers/{customer_id=*}/custom" +
+      "erExtensionSettings:mutate:\001*\332A\026customer" +
+      "_id,operations\032\033\312A\030googleads.googleapis." +
+      "comB\213\002\n$com.google.ads.googleads.v1.serv" +
+      "icesB$CustomerExtensionSettingServicePro" +
+      "toP\001ZHgoogle.golang.org/genproto/googlea" +
+      "pis/ads/googleads/v1/services;services\242\002" +
+      "\003GAA\252\002 Google.Ads.GoogleAds.V1.Services\312" +
+      "\002 Google\\Ads\\GoogleAds\\V1\\Services\352\002$Goo" +
+      "gle::Ads::GoogleAds::V1::Servicesb\006proto" +
+      "3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.ads.googleads.v1.resources.CustomerExtensionSettingProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
-          com.google.protobuf.FieldMaskProto.getDescriptor(),
-          com.google.protobuf.WrappersProto.getDescriptor(),
-          com.google.rpc.StatusProto.getDescriptor(),
           com.google.api.ClientProto.getDescriptor(),
-        }, assigner);
+          com.google.api.FieldBehaviorProto.getDescriptor(),
+          com.google.api.ResourceProto.getDescriptor(),
+          com.google.protobuf.FieldMaskProto.getDescriptor(),
+          com.google.rpc.StatusProto.getDescriptor(),
+        });
     internal_static_google_ads_googleads_v1_services_GetCustomerExtensionSettingRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_google_ads_googleads_v1_services_GetCustomerExtensionSettingRequest_fieldAccessorTable = new
@@ -149,15 +146,19 @@ public final class CustomerExtensionSettingServiceProto {
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.ClientProto.defaultHost);
+    registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);
     registry.add(com.google.api.AnnotationsProto.http);
+    registry.add(com.google.api.ClientProto.methodSignature);
+    registry.add(com.google.api.ResourceProto.resourceReference);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.ads.googleads.v1.resources.CustomerExtensionSettingProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
-    com.google.protobuf.FieldMaskProto.getDescriptor();
-    com.google.protobuf.WrappersProto.getDescriptor();
-    com.google.rpc.StatusProto.getDescriptor();
     com.google.api.ClientProto.getDescriptor();
+    com.google.api.FieldBehaviorProto.getDescriptor();
+    com.google.api.ResourceProto.getDescriptor();
+    com.google.protobuf.FieldMaskProto.getDescriptor();
+    com.google.rpc.StatusProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

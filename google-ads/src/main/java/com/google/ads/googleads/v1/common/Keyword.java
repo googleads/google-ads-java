@@ -10,7 +10,7 @@ package com.google.ads.googleads.v1.common;
  *
  * Protobuf type {@code google.ads.googleads.v1.common.Keyword}
  */
-public  final class Keyword extends
+public final class Keyword extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v1.common.Keyword)
     KeywordOrBuilder {
@@ -20,6 +20,13 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private Keyword() {
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new Keyword();
   }
 
   @java.lang.Override
@@ -35,7 +42,6 @@ private static final long serialVersionUID = 0L;
     if (extensionRegistry == null) {
       throw new java.lang.NullPointerException();
     }
-    int mutable_bitField0_ = 0;
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
         com.google.protobuf.UnknownFieldSet.newBuilder();
     try {
@@ -112,7 +118,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue ad_group_criterion = 1;</code>
+   * @return Whether the adGroupCriterion field is set.
    */
+  @java.lang.Override
   public boolean hasAdGroupCriterion() {
     return adGroupCriterion_ != null;
   }
@@ -122,7 +130,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue ad_group_criterion = 1;</code>
+   * @return The adGroupCriterion.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getAdGroupCriterion() {
     return adGroupCriterion_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : adGroupCriterion_;
   }
@@ -133,6 +143,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue ad_group_criterion = 1;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getAdGroupCriterionOrBuilder() {
     return getAdGroupCriterion();
   }
@@ -145,7 +156,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.common.KeywordInfo info = 2;</code>
+   * @return Whether the info field is set.
    */
+  @java.lang.Override
   public boolean hasInfo() {
     return info_ != null;
   }
@@ -155,7 +168,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.common.KeywordInfo info = 2;</code>
+   * @return The info.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.common.KeywordInfo getInfo() {
     return info_ == null ? com.google.ads.googleads.v1.common.KeywordInfo.getDefaultInstance() : info_;
   }
@@ -166,6 +181,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v1.common.KeywordInfo info = 2;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.common.KeywordInfoOrBuilder getInfoOrBuilder() {
     return getInfo();
   }
@@ -528,6 +544,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue ad_group_criterion = 1;</code>
+     * @return Whether the adGroupCriterion field is set.
      */
     public boolean hasAdGroupCriterion() {
       return adGroupCriterionBuilder_ != null || adGroupCriterion_ != null;
@@ -538,6 +555,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue ad_group_criterion = 1;</code>
+     * @return The adGroupCriterion.
      */
     public com.google.protobuf.StringValue getAdGroupCriterion() {
       if (adGroupCriterionBuilder_ == null) {
@@ -681,6 +699,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.common.KeywordInfo info = 2;</code>
+     * @return Whether the info field is set.
      */
     public boolean hasInfo() {
       return infoBuilder_ != null || info_ != null;
@@ -691,6 +710,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.common.KeywordInfo info = 2;</code>
+     * @return The info.
      */
     public com.google.ads.googleads.v1.common.KeywordInfo getInfo() {
       if (infoBuilder_ == null) {

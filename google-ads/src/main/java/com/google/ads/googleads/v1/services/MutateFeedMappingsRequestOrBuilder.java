@@ -9,62 +9,64 @@ public interface MutateFeedMappingsRequestOrBuilder extends
 
   /**
    * <pre>
-   * The ID of the customer whose feed mappings are being modified.
+   * Required. The ID of the customer whose feed mappings are being modified.
    * </pre>
    *
-   * <code>string customer_id = 1;</code>
+   * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+   * @return The customerId.
    */
   java.lang.String getCustomerId();
   /**
    * <pre>
-   * The ID of the customer whose feed mappings are being modified.
+   * Required. The ID of the customer whose feed mappings are being modified.
    * </pre>
    *
-   * <code>string customer_id = 1;</code>
+   * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+   * @return The bytes for customerId.
    */
   com.google.protobuf.ByteString
       getCustomerIdBytes();
 
   /**
    * <pre>
-   * The list of operations to perform on individual feed mappings.
+   * Required. The list of operations to perform on individual feed mappings.
    * </pre>
    *
-   * <code>repeated .google.ads.googleads.v1.services.FeedMappingOperation operations = 2;</code>
+   * <code>repeated .google.ads.googleads.v1.services.FeedMappingOperation operations = 2 [(.google.api.field_behavior) = REQUIRED];</code>
    */
   java.util.List<com.google.ads.googleads.v1.services.FeedMappingOperation> 
       getOperationsList();
   /**
    * <pre>
-   * The list of operations to perform on individual feed mappings.
+   * Required. The list of operations to perform on individual feed mappings.
    * </pre>
    *
-   * <code>repeated .google.ads.googleads.v1.services.FeedMappingOperation operations = 2;</code>
+   * <code>repeated .google.ads.googleads.v1.services.FeedMappingOperation operations = 2 [(.google.api.field_behavior) = REQUIRED];</code>
    */
   com.google.ads.googleads.v1.services.FeedMappingOperation getOperations(int index);
   /**
    * <pre>
-   * The list of operations to perform on individual feed mappings.
+   * Required. The list of operations to perform on individual feed mappings.
    * </pre>
    *
-   * <code>repeated .google.ads.googleads.v1.services.FeedMappingOperation operations = 2;</code>
+   * <code>repeated .google.ads.googleads.v1.services.FeedMappingOperation operations = 2 [(.google.api.field_behavior) = REQUIRED];</code>
    */
   int getOperationsCount();
   /**
    * <pre>
-   * The list of operations to perform on individual feed mappings.
+   * Required. The list of operations to perform on individual feed mappings.
    * </pre>
    *
-   * <code>repeated .google.ads.googleads.v1.services.FeedMappingOperation operations = 2;</code>
+   * <code>repeated .google.ads.googleads.v1.services.FeedMappingOperation operations = 2 [(.google.api.field_behavior) = REQUIRED];</code>
    */
   java.util.List<? extends com.google.ads.googleads.v1.services.FeedMappingOperationOrBuilder> 
       getOperationsOrBuilderList();
   /**
    * <pre>
-   * The list of operations to perform on individual feed mappings.
+   * Required. The list of operations to perform on individual feed mappings.
    * </pre>
    *
-   * <code>repeated .google.ads.googleads.v1.services.FeedMappingOperation operations = 2;</code>
+   * <code>repeated .google.ads.googleads.v1.services.FeedMappingOperation operations = 2 [(.google.api.field_behavior) = REQUIRED];</code>
    */
   com.google.ads.googleads.v1.services.FeedMappingOperationOrBuilder getOperationsOrBuilder(
       int index);
@@ -78,6 +80,7 @@ public interface MutateFeedMappingsRequestOrBuilder extends
    * </pre>
    *
    * <code>bool partial_failure = 3;</code>
+   * @return The partialFailure.
    */
   boolean getPartialFailure();
 
@@ -88,6 +91,7 @@ public interface MutateFeedMappingsRequestOrBuilder extends
    * </pre>
    *
    * <code>bool validate_only = 4;</code>
+   * @return The validateOnly.
    */
   boolean getValidateOnly();
 }

@@ -10,7 +10,7 @@ package com.google.ads.googleads.v4.common;
  *
  * Protobuf type {@code google.ads.googleads.v4.common.ImageDimension}
  */
-public  final class ImageDimension extends
+public final class ImageDimension extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.common.ImageDimension)
     ImageDimensionOrBuilder {
@@ -133,6 +133,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int64Value height_pixels = 1;</code>
    * @return Whether the heightPixels field is set.
    */
+  @java.lang.Override
   public boolean hasHeightPixels() {
     return heightPixels_ != null;
   }
@@ -144,6 +145,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int64Value height_pixels = 1;</code>
    * @return The heightPixels.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getHeightPixels() {
     return heightPixels_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : heightPixels_;
   }
@@ -154,6 +156,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int64Value height_pixels = 1;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getHeightPixelsOrBuilder() {
     return getHeightPixels();
   }
@@ -168,6 +171,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int64Value width_pixels = 2;</code>
    * @return Whether the widthPixels field is set.
    */
+  @java.lang.Override
   public boolean hasWidthPixels() {
     return widthPixels_ != null;
   }
@@ -179,6 +183,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int64Value width_pixels = 2;</code>
    * @return The widthPixels.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getWidthPixels() {
     return widthPixels_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : widthPixels_;
   }
@@ -189,6 +194,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int64Value width_pixels = 2;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getWidthPixelsOrBuilder() {
     return getWidthPixels();
   }
@@ -203,6 +209,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue url = 3;</code>
    * @return Whether the url field is set.
    */
+  @java.lang.Override
   public boolean hasUrl() {
     return url_ != null;
   }
@@ -214,6 +221,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue url = 3;</code>
    * @return The url.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getUrl() {
     return url_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : url_;
   }
@@ -224,6 +232,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue url = 3;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getUrlOrBuilder() {
     return getUrl();
   }

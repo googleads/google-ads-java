@@ -10,7 +10,7 @@ package com.google.ads.googleads.v1.common;
  *
  * Protobuf type {@code google.ads.googleads.v1.common.Money}
  */
-public  final class Money extends
+public final class Money extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v1.common.Money)
     MoneyOrBuilder {
@@ -20,6 +20,13 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private Money() {
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new Money();
   }
 
   @java.lang.Override
@@ -35,7 +42,6 @@ private static final long serialVersionUID = 0L;
     if (extensionRegistry == null) {
       throw new java.lang.NullPointerException();
     }
-    int mutable_bitField0_ = 0;
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
         com.google.protobuf.UnknownFieldSet.newBuilder();
     try {
@@ -112,7 +118,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue currency_code = 1;</code>
+   * @return Whether the currencyCode field is set.
    */
+  @java.lang.Override
   public boolean hasCurrencyCode() {
     return currencyCode_ != null;
   }
@@ -122,7 +130,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue currency_code = 1;</code>
+   * @return The currencyCode.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getCurrencyCode() {
     return currencyCode_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : currencyCode_;
   }
@@ -133,6 +143,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue currency_code = 1;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getCurrencyCodeOrBuilder() {
     return getCurrencyCode();
   }
@@ -145,7 +156,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Int64Value amount_micros = 2;</code>
+   * @return Whether the amountMicros field is set.
    */
+  @java.lang.Override
   public boolean hasAmountMicros() {
     return amountMicros_ != null;
   }
@@ -155,7 +168,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Int64Value amount_micros = 2;</code>
+   * @return The amountMicros.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getAmountMicros() {
     return amountMicros_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : amountMicros_;
   }
@@ -166,6 +181,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int64Value amount_micros = 2;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getAmountMicrosOrBuilder() {
     return getAmountMicros();
   }
@@ -528,6 +544,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue currency_code = 1;</code>
+     * @return Whether the currencyCode field is set.
      */
     public boolean hasCurrencyCode() {
       return currencyCodeBuilder_ != null || currencyCode_ != null;
@@ -538,6 +555,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue currency_code = 1;</code>
+     * @return The currencyCode.
      */
     public com.google.protobuf.StringValue getCurrencyCode() {
       if (currencyCodeBuilder_ == null) {
@@ -681,6 +699,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value amount_micros = 2;</code>
+     * @return Whether the amountMicros field is set.
      */
     public boolean hasAmountMicros() {
       return amountMicrosBuilder_ != null || amountMicros_ != null;
@@ -691,6 +710,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value amount_micros = 2;</code>
+     * @return The amountMicros.
      */
     public com.google.protobuf.Int64Value getAmountMicros() {
       if (amountMicrosBuilder_ == null) {

@@ -10,7 +10,7 @@ package com.google.ads.googleads.v4.services;
  *
  * Protobuf type {@code google.ads.googleads.v4.services.CustomerOperation}
  */
-public  final class CustomerOperation extends
+public final class CustomerOperation extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.services.CustomerOperation)
     CustomerOperationOrBuilder {
@@ -120,6 +120,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.resources.Customer update = 1;</code>
    * @return Whether the update field is set.
    */
+  @java.lang.Override
   public boolean hasUpdate() {
     return update_ != null;
   }
@@ -131,6 +132,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.resources.Customer update = 1;</code>
    * @return The update.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.resources.Customer getUpdate() {
     return update_ == null ? com.google.ads.googleads.v4.resources.Customer.getDefaultInstance() : update_;
   }
@@ -141,6 +143,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v4.resources.Customer update = 1;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.resources.CustomerOrBuilder getUpdateOrBuilder() {
     return getUpdate();
   }
@@ -155,6 +158,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.FieldMask update_mask = 2;</code>
    * @return Whether the updateMask field is set.
    */
+  @java.lang.Override
   public boolean hasUpdateMask() {
     return updateMask_ != null;
   }
@@ -166,6 +170,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.FieldMask update_mask = 2;</code>
    * @return The updateMask.
    */
+  @java.lang.Override
   public com.google.protobuf.FieldMask getUpdateMask() {
     return updateMask_ == null ? com.google.protobuf.FieldMask.getDefaultInstance() : updateMask_;
   }
@@ -176,6 +181,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.FieldMask update_mask = 2;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.FieldMaskOrBuilder getUpdateMaskOrBuilder() {
     return getUpdateMask();
   }

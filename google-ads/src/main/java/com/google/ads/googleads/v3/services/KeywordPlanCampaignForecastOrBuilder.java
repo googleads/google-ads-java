@@ -14,6 +14,7 @@ public interface KeywordPlanCampaignForecastOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue keyword_plan_campaign = 1;</code>
+   * @return Whether the keywordPlanCampaign field is set.
    */
   boolean hasKeywordPlanCampaign();
   /**
@@ -23,6 +24,7 @@ public interface KeywordPlanCampaignForecastOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue keyword_plan_campaign = 1;</code>
+   * @return The keywordPlanCampaign.
    */
   com.google.protobuf.StringValue getKeywordPlanCampaign();
   /**
@@ -41,6 +43,7 @@ public interface KeywordPlanCampaignForecastOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.services.ForecastMetrics campaign_forecast = 2;</code>
+   * @return Whether the campaignForecast field is set.
    */
   boolean hasCampaignForecast();
   /**
@@ -49,6 +52,7 @@ public interface KeywordPlanCampaignForecastOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.services.ForecastMetrics campaign_forecast = 2;</code>
+   * @return The campaignForecast.
    */
   com.google.ads.googleads.v3.services.ForecastMetrics getCampaignForecast();
   /**

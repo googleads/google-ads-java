@@ -10,7 +10,7 @@ package com.google.ads.googleads.v4.services;
  *
  * Protobuf type {@code google.ads.googleads.v4.services.KeywordPlanMaxCpcBidForecast}
  */
-public  final class KeywordPlanMaxCpcBidForecast extends
+public final class KeywordPlanMaxCpcBidForecast extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.services.KeywordPlanMaxCpcBidForecast)
     KeywordPlanMaxCpcBidForecastOrBuilder {
@@ -120,6 +120,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int64Value max_cpc_bid_micros = 1;</code>
    * @return Whether the maxCpcBidMicros field is set.
    */
+  @java.lang.Override
   public boolean hasMaxCpcBidMicros() {
     return maxCpcBidMicros_ != null;
   }
@@ -131,6 +132,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int64Value max_cpc_bid_micros = 1;</code>
    * @return The maxCpcBidMicros.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getMaxCpcBidMicros() {
     return maxCpcBidMicros_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxCpcBidMicros_;
   }
@@ -141,6 +143,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int64Value max_cpc_bid_micros = 1;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getMaxCpcBidMicrosOrBuilder() {
     return getMaxCpcBidMicros();
   }
@@ -155,6 +158,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.services.ForecastMetrics max_cpc_bid_forecast = 2;</code>
    * @return Whether the maxCpcBidForecast field is set.
    */
+  @java.lang.Override
   public boolean hasMaxCpcBidForecast() {
     return maxCpcBidForecast_ != null;
   }
@@ -166,6 +170,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.services.ForecastMetrics max_cpc_bid_forecast = 2;</code>
    * @return The maxCpcBidForecast.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.services.ForecastMetrics getMaxCpcBidForecast() {
     return maxCpcBidForecast_ == null ? com.google.ads.googleads.v4.services.ForecastMetrics.getDefaultInstance() : maxCpcBidForecast_;
   }
@@ -176,6 +181,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v4.services.ForecastMetrics max_cpc_bid_forecast = 2;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.services.ForecastMetricsOrBuilder getMaxCpcBidForecastOrBuilder() {
     return getMaxCpcBidForecast();
   }

@@ -15,6 +15,7 @@ public interface AdParameterOrBuilder extends
    * </pre>
    *
    * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * @return The resourceName.
    */
   java.lang.String getResourceName();
   /**
@@ -25,6 +26,7 @@ public interface AdParameterOrBuilder extends
    * </pre>
    *
    * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * @return The bytes for resourceName.
    */
   com.google.protobuf.ByteString
       getResourceNameBytes();
@@ -35,6 +37,7 @@ public interface AdParameterOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue ad_group_criterion = 2 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * @return Whether the adGroupCriterion field is set.
    */
   boolean hasAdGroupCriterion();
   /**
@@ -43,6 +46,7 @@ public interface AdParameterOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue ad_group_criterion = 2 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * @return The adGroupCriterion.
    */
   com.google.protobuf.StringValue getAdGroupCriterion();
   /**
@@ -60,6 +64,7 @@ public interface AdParameterOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value parameter_index = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return Whether the parameterIndex field is set.
    */
   boolean hasParameterIndex();
   /**
@@ -68,6 +73,7 @@ public interface AdParameterOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value parameter_index = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The parameterIndex.
    */
   com.google.protobuf.Int64Value getParameterIndex();
   /**
@@ -97,6 +103,7 @@ public interface AdParameterOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue insertion_text = 4;</code>
+   * @return Whether the insertionText field is set.
    */
   boolean hasInsertionText();
   /**
@@ -117,6 +124,7 @@ public interface AdParameterOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue insertion_text = 4;</code>
+   * @return The insertionText.
    */
   com.google.protobuf.StringValue getInsertionText();
   /**

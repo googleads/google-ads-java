@@ -59,64 +59,58 @@ public final class KeywordPlanIdeaServiceProto {
       "ds/v1/common/keyword_plan_common.proto\0328" +
       "google/ads/googleads/v1/enums/keyword_pl" +
       "an_network.proto\032\034google/api/annotations" +
-      ".proto\032\036google/protobuf/wrappers.proto\032\027" +
-      "google/api/client.proto\"\351\003\n\033GenerateKeyw" +
-      "ordIdeasRequest\022\023\n\013customer_id\030\001 \001(\t\022.\n\010" +
-      "language\030\007 \001(\0132\034.google.protobuf.StringV" +
-      "alue\022:\n\024geo_target_constants\030\010 \003(\0132\034.goo" +
-      "gle.protobuf.StringValue\022f\n\024keyword_plan" +
-      "_network\030\t \001(\0162H.google.ads.googleads.v1" +
-      ".enums.KeywordPlanNetworkEnum.KeywordPla" +
-      "nNetwork\022S\n\024keyword_and_url_seed\030\002 \001(\01323" +
-      ".google.ads.googleads.v1.services.Keywor" +
-      "dAndUrlSeedH\000\022E\n\014keyword_seed\030\003 \001(\0132-.go" +
-      "ogle.ads.googleads.v1.services.KeywordSe" +
-      "edH\000\022=\n\010url_seed\030\005 \001(\0132).google.ads.goog" +
-      "leads.v1.services.UrlSeedH\000B\006\n\004seed\"n\n\021K" +
-      "eywordAndUrlSeed\022)\n\003url\030\001 \001(\0132\034.google.p" +
-      "rotobuf.StringValue\022.\n\010keywords\030\002 \003(\0132\034." +
-      "google.protobuf.StringValue\"=\n\013KeywordSe" +
-      "ed\022.\n\010keywords\030\001 \003(\0132\034.google.protobuf.S" +
-      "tringValue\"4\n\007UrlSeed\022)\n\003url\030\001 \001(\0132\034.goo" +
-      "gle.protobuf.StringValue\"k\n\033GenerateKeyw" +
-      "ordIdeaResponse\022L\n\007results\030\001 \003(\0132;.googl" +
-      "e.ads.googleads.v1.services.GenerateKeyw" +
-      "ordIdeaResult\"\243\001\n\031GenerateKeywordIdeaRes" +
-      "ult\022*\n\004text\030\002 \001(\0132\034.google.protobuf.Stri" +
-      "ngValue\022Z\n\024keyword_idea_metrics\030\003 \001(\0132<." +
-      "google.ads.googleads.v1.common.KeywordPl" +
-      "anHistoricalMetrics2\213\002\n\026KeywordPlanIdeaS" +
-      "ervice\022\323\001\n\024GenerateKeywordIdeas\022=.google" +
-      ".ads.googleads.v1.services.GenerateKeywo" +
-      "rdIdeasRequest\032=.google.ads.googleads.v1" +
-      ".services.GenerateKeywordIdeaResponse\"=\202" +
-      "\323\344\223\0027\"2/v1/customers/{customer_id=*}:gen" +
-      "erateKeywordIdeas:\001*\032\033\312A\030googleads.googl" +
-      "eapis.comB\202\002\n$com.google.ads.googleads.v" +
-      "1.servicesB\033KeywordPlanIdeaServiceProtoP" +
-      "\001ZHgoogle.golang.org/genproto/googleapis" +
-      "/ads/googleads/v1/services;services\242\002\003GA" +
-      "A\252\002 Google.Ads.GoogleAds.V1.Services\312\002 G" +
-      "oogle\\Ads\\GoogleAds\\V1\\Services\352\002$Google" +
-      "::Ads::GoogleAds::V1::Servicesb\006proto3"
+      ".proto\032\037google/api/field_behavior.proto\032" +
+      "\036google/protobuf/wrappers.proto\032\027google/" +
+      "api/client.proto\"\356\003\n\033GenerateKeywordIdea" +
+      "sRequest\022\023\n\013customer_id\030\001 \001(\t\0223\n\010languag" +
+      "e\030\007 \001(\0132\034.google.protobuf.StringValueB\003\340" +
+      "A\002\022:\n\024geo_target_constants\030\010 \003(\0132\034.googl" +
+      "e.protobuf.StringValue\022f\n\024keyword_plan_n" +
+      "etwork\030\t \001(\0162H.google.ads.googleads.v1.e" +
+      "nums.KeywordPlanNetworkEnum.KeywordPlanN" +
+      "etwork\022S\n\024keyword_and_url_seed\030\002 \001(\01323.g" +
+      "oogle.ads.googleads.v1.services.KeywordA" +
+      "ndUrlSeedH\000\022E\n\014keyword_seed\030\003 \001(\0132-.goog" +
+      "le.ads.googleads.v1.services.KeywordSeed" +
+      "H\000\022=\n\010url_seed\030\005 \001(\0132).google.ads.google" +
+      "ads.v1.services.UrlSeedH\000B\006\n\004seed\"n\n\021Key" +
+      "wordAndUrlSeed\022)\n\003url\030\001 \001(\0132\034.google.pro" +
+      "tobuf.StringValue\022.\n\010keywords\030\002 \003(\0132\034.go" +
+      "ogle.protobuf.StringValue\"=\n\013KeywordSeed" +
+      "\022.\n\010keywords\030\001 \003(\0132\034.google.protobuf.Str" +
+      "ingValue\"4\n\007UrlSeed\022)\n\003url\030\001 \001(\0132\034.googl" +
+      "e.protobuf.StringValue\"k\n\033GenerateKeywor" +
+      "dIdeaResponse\022L\n\007results\030\001 \003(\0132;.google." +
+      "ads.googleads.v1.services.GenerateKeywor" +
+      "dIdeaResult\"\243\001\n\031GenerateKeywordIdeaResul" +
+      "t\022*\n\004text\030\002 \001(\0132\034.google.protobuf.String" +
+      "Value\022Z\n\024keyword_idea_metrics\030\003 \001(\0132<.go" +
+      "ogle.ads.googleads.v1.common.KeywordPlan" +
+      "HistoricalMetrics2\213\002\n\026KeywordPlanIdeaSer" +
+      "vice\022\323\001\n\024GenerateKeywordIdeas\022=.google.a" +
+      "ds.googleads.v1.services.GenerateKeyword" +
+      "IdeasRequest\032=.google.ads.googleads.v1.s" +
+      "ervices.GenerateKeywordIdeaResponse\"=\202\323\344" +
+      "\223\0027\"2/v1/customers/{customer_id=*}:gener" +
+      "ateKeywordIdeas:\001*\032\033\312A\030googleads.googlea" +
+      "pis.comB\202\002\n$com.google.ads.googleads.v1." +
+      "servicesB\033KeywordPlanIdeaServiceProtoP\001Z" +
+      "Hgoogle.golang.org/genproto/googleapis/a" +
+      "ds/googleads/v1/services;services\242\002\003GAA\252" +
+      "\002 Google.Ads.GoogleAds.V1.Services\312\002 Goo" +
+      "gle\\Ads\\GoogleAds\\V1\\Services\352\002$Google::" +
+      "Ads::GoogleAds::V1::Servicesb\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.ads.googleads.v1.common.KeywordPlanCommonProto.getDescriptor(),
           com.google.ads.googleads.v1.enums.KeywordPlanNetworkProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
+          com.google.api.FieldBehaviorProto.getDescriptor(),
           com.google.protobuf.WrappersProto.getDescriptor(),
           com.google.api.ClientProto.getDescriptor(),
-        }, assigner);
+        });
     internal_static_google_ads_googleads_v1_services_GenerateKeywordIdeasRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_google_ads_googleads_v1_services_GenerateKeywordIdeasRequest_fieldAccessorTable = new
@@ -156,12 +150,14 @@ public final class KeywordPlanIdeaServiceProto {
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.ClientProto.defaultHost);
+    registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);
     registry.add(com.google.api.AnnotationsProto.http);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.ads.googleads.v1.common.KeywordPlanCommonProto.getDescriptor();
     com.google.ads.googleads.v1.enums.KeywordPlanNetworkProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
+    com.google.api.FieldBehaviorProto.getDescriptor();
     com.google.protobuf.WrappersProto.getDescriptor();
     com.google.api.ClientProto.getDescriptor();
   }

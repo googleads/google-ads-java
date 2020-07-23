@@ -10,7 +10,7 @@ package com.google.ads.googleads.v4.services;
  *
  * Protobuf type {@code google.ads.googleads.v4.services.Forecast}
  */
-public  final class Forecast extends
+public final class Forecast extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.services.Forecast)
     ForecastOrBuilder {
@@ -148,6 +148,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int64Value on_target_reach = 1;</code>
    * @return Whether the onTargetReach field is set.
    */
+  @java.lang.Override
   public boolean hasOnTargetReach() {
     return onTargetReach_ != null;
   }
@@ -161,6 +162,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int64Value on_target_reach = 1;</code>
    * @return The onTargetReach.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getOnTargetReach() {
     return onTargetReach_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : onTargetReach_;
   }
@@ -173,6 +175,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int64Value on_target_reach = 1;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getOnTargetReachOrBuilder() {
     return getOnTargetReach();
   }
@@ -189,6 +192,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int64Value total_reach = 2;</code>
    * @return Whether the totalReach field is set.
    */
+  @java.lang.Override
   public boolean hasTotalReach() {
     return totalReach_ != null;
   }
@@ -202,6 +206,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int64Value total_reach = 2;</code>
    * @return The totalReach.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getTotalReach() {
     return totalReach_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : totalReach_;
   }
@@ -214,6 +219,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int64Value total_reach = 2;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getTotalReachOrBuilder() {
     return getTotalReach();
   }
@@ -228,6 +234,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int64Value on_target_impressions = 3;</code>
    * @return Whether the onTargetImpressions field is set.
    */
+  @java.lang.Override
   public boolean hasOnTargetImpressions() {
     return onTargetImpressions_ != null;
   }
@@ -239,6 +246,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int64Value on_target_impressions = 3;</code>
    * @return The onTargetImpressions.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getOnTargetImpressions() {
     return onTargetImpressions_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : onTargetImpressions_;
   }
@@ -249,6 +257,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int64Value on_target_impressions = 3;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getOnTargetImpressionsOrBuilder() {
     return getOnTargetImpressions();
   }
@@ -265,6 +274,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int64Value total_impressions = 4;</code>
    * @return Whether the totalImpressions field is set.
    */
+  @java.lang.Override
   public boolean hasTotalImpressions() {
     return totalImpressions_ != null;
   }
@@ -278,6 +288,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int64Value total_impressions = 4;</code>
    * @return The totalImpressions.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getTotalImpressions() {
     return totalImpressions_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : totalImpressions_;
   }
@@ -290,6 +301,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int64Value total_impressions = 4;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getTotalImpressionsOrBuilder() {
     return getTotalImpressions();
   }

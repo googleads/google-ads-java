@@ -17,6 +17,7 @@ public interface WebpageInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue criterion_name = 1;</code>
+   * @return Whether the criterionName field is set.
    */
   boolean hasCriterionName();
   /**
@@ -29,6 +30,7 @@ public interface WebpageInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue criterion_name = 1;</code>
+   * @return The criterionName.
    */
   com.google.protobuf.StringValue getCriterionName();
   /**

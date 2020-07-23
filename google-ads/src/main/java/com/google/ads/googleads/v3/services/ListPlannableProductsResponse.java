@@ -10,7 +10,7 @@ package com.google.ads.googleads.v3.services;
  *
  * Protobuf type {@code google.ads.googleads.v3.services.ListPlannableProductsResponse}
  */
-public  final class ListPlannableProductsResponse extends
+public final class ListPlannableProductsResponse extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v3.services.ListPlannableProductsResponse)
     ListPlannableProductsResponseOrBuilder {
@@ -21,6 +21,13 @@ private static final long serialVersionUID = 0L;
   }
   private ListPlannableProductsResponse() {
     productMetadata_ = java.util.Collections.emptyList();
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new ListPlannableProductsResponse();
   }
 
   @java.lang.Override
@@ -100,6 +107,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v3.services.ProductMetadata product_metadata = 1;</code>
    */
+  @java.lang.Override
   public java.util.List<com.google.ads.googleads.v3.services.ProductMetadata> getProductMetadataList() {
     return productMetadata_;
   }
@@ -110,6 +118,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v3.services.ProductMetadata product_metadata = 1;</code>
    */
+  @java.lang.Override
   public java.util.List<? extends com.google.ads.googleads.v3.services.ProductMetadataOrBuilder> 
       getProductMetadataOrBuilderList() {
     return productMetadata_;
@@ -121,6 +130,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v3.services.ProductMetadata product_metadata = 1;</code>
    */
+  @java.lang.Override
   public int getProductMetadataCount() {
     return productMetadata_.size();
   }
@@ -131,6 +141,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v3.services.ProductMetadata product_metadata = 1;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.services.ProductMetadata getProductMetadata(int index) {
     return productMetadata_.get(index);
   }
@@ -141,6 +152,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v3.services.ProductMetadata product_metadata = 1;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.services.ProductMetadataOrBuilder getProductMetadataOrBuilder(
       int index) {
     return productMetadata_.get(index);

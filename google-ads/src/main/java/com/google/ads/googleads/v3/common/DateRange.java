@@ -10,7 +10,7 @@ package com.google.ads.googleads.v3.common;
  *
  * Protobuf type {@code google.ads.googleads.v3.common.DateRange}
  */
-public  final class DateRange extends
+public final class DateRange extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v3.common.DateRange)
     DateRangeOrBuilder {
@@ -20,6 +20,13 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private DateRange() {
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new DateRange();
   }
 
   @java.lang.Override
@@ -35,7 +42,6 @@ private static final long serialVersionUID = 0L;
     if (extensionRegistry == null) {
       throw new java.lang.NullPointerException();
     }
-    int mutable_bitField0_ = 0;
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
         com.google.protobuf.UnknownFieldSet.newBuilder();
     try {
@@ -112,7 +118,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue start_date = 1;</code>
+   * @return Whether the startDate field is set.
    */
+  @java.lang.Override
   public boolean hasStartDate() {
     return startDate_ != null;
   }
@@ -122,7 +130,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue start_date = 1;</code>
+   * @return The startDate.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getStartDate() {
     return startDate_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : startDate_;
   }
@@ -133,6 +143,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue start_date = 1;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getStartDateOrBuilder() {
     return getStartDate();
   }
@@ -145,7 +156,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue end_date = 2;</code>
+   * @return Whether the endDate field is set.
    */
+  @java.lang.Override
   public boolean hasEndDate() {
     return endDate_ != null;
   }
@@ -155,7 +168,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue end_date = 2;</code>
+   * @return The endDate.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getEndDate() {
     return endDate_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : endDate_;
   }
@@ -166,6 +181,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue end_date = 2;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getEndDateOrBuilder() {
     return getEndDate();
   }
@@ -528,6 +544,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue start_date = 1;</code>
+     * @return Whether the startDate field is set.
      */
     public boolean hasStartDate() {
       return startDateBuilder_ != null || startDate_ != null;
@@ -538,6 +555,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue start_date = 1;</code>
+     * @return The startDate.
      */
     public com.google.protobuf.StringValue getStartDate() {
       if (startDateBuilder_ == null) {
@@ -681,6 +699,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue end_date = 2;</code>
+     * @return Whether the endDate field is set.
      */
     public boolean hasEndDate() {
       return endDateBuilder_ != null || endDate_ != null;
@@ -691,6 +710,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue end_date = 2;</code>
+     * @return The endDate.
      */
     public com.google.protobuf.StringValue getEndDate() {
       if (endDateBuilder_ == null) {

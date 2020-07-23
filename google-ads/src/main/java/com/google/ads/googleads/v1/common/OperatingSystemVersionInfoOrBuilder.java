@@ -13,6 +13,7 @@ public interface OperatingSystemVersionInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue operating_system_version_constant = 1;</code>
+   * @return Whether the operatingSystemVersionConstant field is set.
    */
   boolean hasOperatingSystemVersionConstant();
   /**
@@ -21,6 +22,7 @@ public interface OperatingSystemVersionInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue operating_system_version_constant = 1;</code>
+   * @return The operatingSystemVersionConstant.
    */
   com.google.protobuf.StringValue getOperatingSystemVersionConstant();
   /**

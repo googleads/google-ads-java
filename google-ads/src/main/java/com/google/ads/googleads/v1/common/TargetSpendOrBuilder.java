@@ -16,6 +16,7 @@ public interface TargetSpendOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value target_spend_micros = 1;</code>
+   * @return Whether the targetSpendMicros field is set.
    */
   boolean hasTargetSpendMicros();
   /**
@@ -27,6 +28,7 @@ public interface TargetSpendOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value target_spend_micros = 1;</code>
+   * @return The targetSpendMicros.
    */
   com.google.protobuf.Int64Value getTargetSpendMicros();
   /**
@@ -48,6 +50,7 @@ public interface TargetSpendOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value cpc_bid_ceiling_micros = 2;</code>
+   * @return Whether the cpcBidCeilingMicros field is set.
    */
   boolean hasCpcBidCeilingMicros();
   /**
@@ -57,6 +60,7 @@ public interface TargetSpendOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value cpc_bid_ceiling_micros = 2;</code>
+   * @return The cpcBidCeilingMicros.
    */
   com.google.protobuf.Int64Value getCpcBidCeilingMicros();
   /**

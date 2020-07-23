@@ -12,7 +12,7 @@ package com.google.ads.googleads.v2.resources;
  *
  * Protobuf type {@code google.ads.googleads.v2.resources.OperatingSystemVersionConstant}
  */
-public  final class OperatingSystemVersionConstant extends
+public final class OperatingSystemVersionConstant extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v2.resources.OperatingSystemVersionConstant)
     OperatingSystemVersionConstantOrBuilder {
@@ -24,6 +24,13 @@ private static final long serialVersionUID = 0L;
   private OperatingSystemVersionConstant() {
     resourceName_ = "";
     operatorType_ = 0;
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new OperatingSystemVersionConstant();
   }
 
   @java.lang.Override
@@ -39,7 +46,6 @@ private static final long serialVersionUID = 0L;
     if (extensionRegistry == null) {
       throw new java.lang.NullPointerException();
     }
-    int mutable_bitField0_ = 0;
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
         com.google.protobuf.UnknownFieldSet.newBuilder();
     try {
@@ -150,13 +156,15 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object resourceName_;
   /**
    * <pre>
-   * The resource name of the operating system version constant.
+   * Output only. The resource name of the operating system version constant.
    * Operating system version constant resource names have the form:
    * `operatingSystemVersionConstants/{criterion_id}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The resourceName.
    */
+  @java.lang.Override
   public java.lang.String getResourceName() {
     java.lang.Object ref = resourceName_;
     if (ref instanceof java.lang.String) {
@@ -171,13 +179,15 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The resource name of the operating system version constant.
+   * Output only. The resource name of the operating system version constant.
    * Operating system version constant resource names have the form:
    * `operatingSystemVersionConstants/{criterion_id}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The bytes for resourceName.
    */
+  @java.lang.Override
   public com.google.protobuf.ByteString
       getResourceNameBytes() {
     java.lang.Object ref = resourceName_;
@@ -196,31 +206,36 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.Int64Value id_;
   /**
    * <pre>
-   * The ID of the operating system version.
+   * Output only. The ID of the operating system version.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value id = 2;</code>
+   * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the id field is set.
    */
+  @java.lang.Override
   public boolean hasId() {
     return id_ != null;
   }
   /**
    * <pre>
-   * The ID of the operating system version.
+   * Output only. The ID of the operating system version.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value id = 2;</code>
+   * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The id.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getId() {
     return id_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : id_;
   }
   /**
    * <pre>
-   * The ID of the operating system version.
+   * Output only. The ID of the operating system version.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value id = 2;</code>
+   * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getIdOrBuilder() {
     return getId();
   }
@@ -229,31 +244,36 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.StringValue name_;
   /**
    * <pre>
-   * Name of the operating system.
+   * Output only. Name of the operating system.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue name = 3;</code>
+   * <code>.google.protobuf.StringValue name = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the name field is set.
    */
+  @java.lang.Override
   public boolean hasName() {
     return name_ != null;
   }
   /**
    * <pre>
-   * Name of the operating system.
+   * Output only. Name of the operating system.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue name = 3;</code>
+   * <code>.google.protobuf.StringValue name = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The name.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getName() {
     return name_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : name_;
   }
   /**
    * <pre>
-   * Name of the operating system.
+   * Output only. Name of the operating system.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue name = 3;</code>
+   * <code>.google.protobuf.StringValue name = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getNameOrBuilder() {
     return getName();
   }
@@ -262,31 +282,36 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.Int32Value osMajorVersion_;
   /**
    * <pre>
-   * The OS Major Version number.
+   * Output only. The OS Major Version number.
    * </pre>
    *
-   * <code>.google.protobuf.Int32Value os_major_version = 4;</code>
+   * <code>.google.protobuf.Int32Value os_major_version = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the osMajorVersion field is set.
    */
+  @java.lang.Override
   public boolean hasOsMajorVersion() {
     return osMajorVersion_ != null;
   }
   /**
    * <pre>
-   * The OS Major Version number.
+   * Output only. The OS Major Version number.
    * </pre>
    *
-   * <code>.google.protobuf.Int32Value os_major_version = 4;</code>
+   * <code>.google.protobuf.Int32Value os_major_version = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The osMajorVersion.
    */
+  @java.lang.Override
   public com.google.protobuf.Int32Value getOsMajorVersion() {
     return osMajorVersion_ == null ? com.google.protobuf.Int32Value.getDefaultInstance() : osMajorVersion_;
   }
   /**
    * <pre>
-   * The OS Major Version number.
+   * Output only. The OS Major Version number.
    * </pre>
    *
-   * <code>.google.protobuf.Int32Value os_major_version = 4;</code>
+   * <code>.google.protobuf.Int32Value os_major_version = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int32ValueOrBuilder getOsMajorVersionOrBuilder() {
     return getOsMajorVersion();
   }
@@ -295,31 +320,36 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.Int32Value osMinorVersion_;
   /**
    * <pre>
-   * The OS Minor Version number.
+   * Output only. The OS Minor Version number.
    * </pre>
    *
-   * <code>.google.protobuf.Int32Value os_minor_version = 5;</code>
+   * <code>.google.protobuf.Int32Value os_minor_version = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the osMinorVersion field is set.
    */
+  @java.lang.Override
   public boolean hasOsMinorVersion() {
     return osMinorVersion_ != null;
   }
   /**
    * <pre>
-   * The OS Minor Version number.
+   * Output only. The OS Minor Version number.
    * </pre>
    *
-   * <code>.google.protobuf.Int32Value os_minor_version = 5;</code>
+   * <code>.google.protobuf.Int32Value os_minor_version = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The osMinorVersion.
    */
+  @java.lang.Override
   public com.google.protobuf.Int32Value getOsMinorVersion() {
     return osMinorVersion_ == null ? com.google.protobuf.Int32Value.getDefaultInstance() : osMinorVersion_;
   }
   /**
    * <pre>
-   * The OS Minor Version number.
+   * Output only. The OS Minor Version number.
    * </pre>
    *
-   * <code>.google.protobuf.Int32Value os_minor_version = 5;</code>
+   * <code>.google.protobuf.Int32Value os_minor_version = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int32ValueOrBuilder getOsMinorVersionOrBuilder() {
     return getOsMinorVersion();
   }
@@ -328,24 +358,26 @@ private static final long serialVersionUID = 0L;
   private int operatorType_;
   /**
    * <pre>
-   * Determines whether this constant represents a single version or a range of
+   * Output only. Determines whether this constant represents a single version or a range of
    * versions.
    * </pre>
    *
-   * <code>.google.ads.googleads.v2.enums.OperatingSystemVersionOperatorTypeEnum.OperatingSystemVersionOperatorType operator_type = 6;</code>
+   * <code>.google.ads.googleads.v2.enums.OperatingSystemVersionOperatorTypeEnum.OperatingSystemVersionOperatorType operator_type = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The enum numeric value on the wire for operatorType.
    */
-  public int getOperatorTypeValue() {
+  @java.lang.Override public int getOperatorTypeValue() {
     return operatorType_;
   }
   /**
    * <pre>
-   * Determines whether this constant represents a single version or a range of
+   * Output only. Determines whether this constant represents a single version or a range of
    * versions.
    * </pre>
    *
-   * <code>.google.ads.googleads.v2.enums.OperatingSystemVersionOperatorTypeEnum.OperatingSystemVersionOperatorType operator_type = 6;</code>
+   * <code>.google.ads.googleads.v2.enums.OperatingSystemVersionOperatorTypeEnum.OperatingSystemVersionOperatorType operator_type = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The operatorType.
    */
-  public com.google.ads.googleads.v2.enums.OperatingSystemVersionOperatorTypeEnum.OperatingSystemVersionOperatorType getOperatorType() {
+  @java.lang.Override public com.google.ads.googleads.v2.enums.OperatingSystemVersionOperatorTypeEnum.OperatingSystemVersionOperatorType getOperatorType() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v2.enums.OperatingSystemVersionOperatorTypeEnum.OperatingSystemVersionOperatorType result = com.google.ads.googleads.v2.enums.OperatingSystemVersionOperatorTypeEnum.OperatingSystemVersionOperatorType.valueOf(operatorType_);
     return result == null ? com.google.ads.googleads.v2.enums.OperatingSystemVersionOperatorTypeEnum.OperatingSystemVersionOperatorType.UNRECOGNIZED : result;
@@ -798,12 +830,13 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object resourceName_ = "";
     /**
      * <pre>
-     * The resource name of the operating system version constant.
+     * Output only. The resource name of the operating system version constant.
      * Operating system version constant resource names have the form:
      * `operatingSystemVersionConstants/{criterion_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @return The resourceName.
      */
     public java.lang.String getResourceName() {
       java.lang.Object ref = resourceName_;
@@ -819,12 +852,13 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the operating system version constant.
+     * Output only. The resource name of the operating system version constant.
      * Operating system version constant resource names have the form:
      * `operatingSystemVersionConstants/{criterion_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @return The bytes for resourceName.
      */
     public com.google.protobuf.ByteString
         getResourceNameBytes() {
@@ -841,12 +875,14 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the operating system version constant.
+     * Output only. The resource name of the operating system version constant.
      * Operating system version constant resource names have the form:
      * `operatingSystemVersionConstants/{criterion_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @param value The resourceName to set.
+     * @return This builder for chaining.
      */
     public Builder setResourceName(
         java.lang.String value) {
@@ -860,12 +896,13 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the operating system version constant.
+     * Output only. The resource name of the operating system version constant.
      * Operating system version constant resource names have the form:
      * `operatingSystemVersionConstants/{criterion_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @return This builder for chaining.
      */
     public Builder clearResourceName() {
       
@@ -875,12 +912,14 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the operating system version constant.
+     * Output only. The resource name of the operating system version constant.
      * Operating system version constant resource names have the form:
      * `operatingSystemVersionConstants/{criterion_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @param value The bytes for resourceName to set.
+     * @return This builder for chaining.
      */
     public Builder setResourceNameBytes(
         com.google.protobuf.ByteString value) {
@@ -899,20 +938,22 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> idBuilder_;
     /**
      * <pre>
-     * The ID of the operating system version.
+     * Output only. The ID of the operating system version.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 2;</code>
+     * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the id field is set.
      */
     public boolean hasId() {
       return idBuilder_ != null || id_ != null;
     }
     /**
      * <pre>
-     * The ID of the operating system version.
+     * Output only. The ID of the operating system version.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 2;</code>
+     * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The id.
      */
     public com.google.protobuf.Int64Value getId() {
       if (idBuilder_ == null) {
@@ -923,10 +964,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the operating system version.
+     * Output only. The ID of the operating system version.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 2;</code>
+     * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setId(com.google.protobuf.Int64Value value) {
       if (idBuilder_ == null) {
@@ -943,10 +984,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the operating system version.
+     * Output only. The ID of the operating system version.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 2;</code>
+     * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setId(
         com.google.protobuf.Int64Value.Builder builderForValue) {
@@ -961,10 +1002,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the operating system version.
+     * Output only. The ID of the operating system version.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 2;</code>
+     * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder mergeId(com.google.protobuf.Int64Value value) {
       if (idBuilder_ == null) {
@@ -983,10 +1024,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the operating system version.
+     * Output only. The ID of the operating system version.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 2;</code>
+     * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearId() {
       if (idBuilder_ == null) {
@@ -1001,10 +1042,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the operating system version.
+     * Output only. The ID of the operating system version.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 2;</code>
+     * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int64Value.Builder getIdBuilder() {
       
@@ -1013,10 +1054,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the operating system version.
+     * Output only. The ID of the operating system version.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 2;</code>
+     * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int64ValueOrBuilder getIdOrBuilder() {
       if (idBuilder_ != null) {
@@ -1028,10 +1069,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the operating system version.
+     * Output only. The ID of the operating system version.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 2;</code>
+     * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
@@ -1052,20 +1093,22 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> nameBuilder_;
     /**
      * <pre>
-     * Name of the operating system.
+     * Output only. Name of the operating system.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue name = 3;</code>
+     * <code>.google.protobuf.StringValue name = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the name field is set.
      */
     public boolean hasName() {
       return nameBuilder_ != null || name_ != null;
     }
     /**
      * <pre>
-     * Name of the operating system.
+     * Output only. Name of the operating system.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue name = 3;</code>
+     * <code>.google.protobuf.StringValue name = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The name.
      */
     public com.google.protobuf.StringValue getName() {
       if (nameBuilder_ == null) {
@@ -1076,10 +1119,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Name of the operating system.
+     * Output only. Name of the operating system.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue name = 3;</code>
+     * <code>.google.protobuf.StringValue name = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setName(com.google.protobuf.StringValue value) {
       if (nameBuilder_ == null) {
@@ -1096,10 +1139,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Name of the operating system.
+     * Output only. Name of the operating system.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue name = 3;</code>
+     * <code>.google.protobuf.StringValue name = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setName(
         com.google.protobuf.StringValue.Builder builderForValue) {
@@ -1114,10 +1157,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Name of the operating system.
+     * Output only. Name of the operating system.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue name = 3;</code>
+     * <code>.google.protobuf.StringValue name = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder mergeName(com.google.protobuf.StringValue value) {
       if (nameBuilder_ == null) {
@@ -1136,10 +1179,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Name of the operating system.
+     * Output only. Name of the operating system.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue name = 3;</code>
+     * <code>.google.protobuf.StringValue name = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearName() {
       if (nameBuilder_ == null) {
@@ -1154,10 +1197,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Name of the operating system.
+     * Output only. Name of the operating system.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue name = 3;</code>
+     * <code>.google.protobuf.StringValue name = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValue.Builder getNameBuilder() {
       
@@ -1166,10 +1209,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Name of the operating system.
+     * Output only. Name of the operating system.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue name = 3;</code>
+     * <code>.google.protobuf.StringValue name = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValueOrBuilder getNameOrBuilder() {
       if (nameBuilder_ != null) {
@@ -1181,10 +1224,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Name of the operating system.
+     * Output only. Name of the operating system.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue name = 3;</code>
+     * <code>.google.protobuf.StringValue name = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
@@ -1205,20 +1248,22 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.Int32Value, com.google.protobuf.Int32Value.Builder, com.google.protobuf.Int32ValueOrBuilder> osMajorVersionBuilder_;
     /**
      * <pre>
-     * The OS Major Version number.
+     * Output only. The OS Major Version number.
      * </pre>
      *
-     * <code>.google.protobuf.Int32Value os_major_version = 4;</code>
+     * <code>.google.protobuf.Int32Value os_major_version = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the osMajorVersion field is set.
      */
     public boolean hasOsMajorVersion() {
       return osMajorVersionBuilder_ != null || osMajorVersion_ != null;
     }
     /**
      * <pre>
-     * The OS Major Version number.
+     * Output only. The OS Major Version number.
      * </pre>
      *
-     * <code>.google.protobuf.Int32Value os_major_version = 4;</code>
+     * <code>.google.protobuf.Int32Value os_major_version = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The osMajorVersion.
      */
     public com.google.protobuf.Int32Value getOsMajorVersion() {
       if (osMajorVersionBuilder_ == null) {
@@ -1229,10 +1274,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The OS Major Version number.
+     * Output only. The OS Major Version number.
      * </pre>
      *
-     * <code>.google.protobuf.Int32Value os_major_version = 4;</code>
+     * <code>.google.protobuf.Int32Value os_major_version = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setOsMajorVersion(com.google.protobuf.Int32Value value) {
       if (osMajorVersionBuilder_ == null) {
@@ -1249,10 +1294,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The OS Major Version number.
+     * Output only. The OS Major Version number.
      * </pre>
      *
-     * <code>.google.protobuf.Int32Value os_major_version = 4;</code>
+     * <code>.google.protobuf.Int32Value os_major_version = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setOsMajorVersion(
         com.google.protobuf.Int32Value.Builder builderForValue) {
@@ -1267,10 +1312,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The OS Major Version number.
+     * Output only. The OS Major Version number.
      * </pre>
      *
-     * <code>.google.protobuf.Int32Value os_major_version = 4;</code>
+     * <code>.google.protobuf.Int32Value os_major_version = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder mergeOsMajorVersion(com.google.protobuf.Int32Value value) {
       if (osMajorVersionBuilder_ == null) {
@@ -1289,10 +1334,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The OS Major Version number.
+     * Output only. The OS Major Version number.
      * </pre>
      *
-     * <code>.google.protobuf.Int32Value os_major_version = 4;</code>
+     * <code>.google.protobuf.Int32Value os_major_version = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearOsMajorVersion() {
       if (osMajorVersionBuilder_ == null) {
@@ -1307,10 +1352,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The OS Major Version number.
+     * Output only. The OS Major Version number.
      * </pre>
      *
-     * <code>.google.protobuf.Int32Value os_major_version = 4;</code>
+     * <code>.google.protobuf.Int32Value os_major_version = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int32Value.Builder getOsMajorVersionBuilder() {
       
@@ -1319,10 +1364,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The OS Major Version number.
+     * Output only. The OS Major Version number.
      * </pre>
      *
-     * <code>.google.protobuf.Int32Value os_major_version = 4;</code>
+     * <code>.google.protobuf.Int32Value os_major_version = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int32ValueOrBuilder getOsMajorVersionOrBuilder() {
       if (osMajorVersionBuilder_ != null) {
@@ -1334,10 +1379,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The OS Major Version number.
+     * Output only. The OS Major Version number.
      * </pre>
      *
-     * <code>.google.protobuf.Int32Value os_major_version = 4;</code>
+     * <code>.google.protobuf.Int32Value os_major_version = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Int32Value, com.google.protobuf.Int32Value.Builder, com.google.protobuf.Int32ValueOrBuilder> 
@@ -1358,20 +1403,22 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.Int32Value, com.google.protobuf.Int32Value.Builder, com.google.protobuf.Int32ValueOrBuilder> osMinorVersionBuilder_;
     /**
      * <pre>
-     * The OS Minor Version number.
+     * Output only. The OS Minor Version number.
      * </pre>
      *
-     * <code>.google.protobuf.Int32Value os_minor_version = 5;</code>
+     * <code>.google.protobuf.Int32Value os_minor_version = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the osMinorVersion field is set.
      */
     public boolean hasOsMinorVersion() {
       return osMinorVersionBuilder_ != null || osMinorVersion_ != null;
     }
     /**
      * <pre>
-     * The OS Minor Version number.
+     * Output only. The OS Minor Version number.
      * </pre>
      *
-     * <code>.google.protobuf.Int32Value os_minor_version = 5;</code>
+     * <code>.google.protobuf.Int32Value os_minor_version = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The osMinorVersion.
      */
     public com.google.protobuf.Int32Value getOsMinorVersion() {
       if (osMinorVersionBuilder_ == null) {
@@ -1382,10 +1429,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The OS Minor Version number.
+     * Output only. The OS Minor Version number.
      * </pre>
      *
-     * <code>.google.protobuf.Int32Value os_minor_version = 5;</code>
+     * <code>.google.protobuf.Int32Value os_minor_version = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setOsMinorVersion(com.google.protobuf.Int32Value value) {
       if (osMinorVersionBuilder_ == null) {
@@ -1402,10 +1449,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The OS Minor Version number.
+     * Output only. The OS Minor Version number.
      * </pre>
      *
-     * <code>.google.protobuf.Int32Value os_minor_version = 5;</code>
+     * <code>.google.protobuf.Int32Value os_minor_version = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setOsMinorVersion(
         com.google.protobuf.Int32Value.Builder builderForValue) {
@@ -1420,10 +1467,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The OS Minor Version number.
+     * Output only. The OS Minor Version number.
      * </pre>
      *
-     * <code>.google.protobuf.Int32Value os_minor_version = 5;</code>
+     * <code>.google.protobuf.Int32Value os_minor_version = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder mergeOsMinorVersion(com.google.protobuf.Int32Value value) {
       if (osMinorVersionBuilder_ == null) {
@@ -1442,10 +1489,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The OS Minor Version number.
+     * Output only. The OS Minor Version number.
      * </pre>
      *
-     * <code>.google.protobuf.Int32Value os_minor_version = 5;</code>
+     * <code>.google.protobuf.Int32Value os_minor_version = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearOsMinorVersion() {
       if (osMinorVersionBuilder_ == null) {
@@ -1460,10 +1507,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The OS Minor Version number.
+     * Output only. The OS Minor Version number.
      * </pre>
      *
-     * <code>.google.protobuf.Int32Value os_minor_version = 5;</code>
+     * <code>.google.protobuf.Int32Value os_minor_version = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int32Value.Builder getOsMinorVersionBuilder() {
       
@@ -1472,10 +1519,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The OS Minor Version number.
+     * Output only. The OS Minor Version number.
      * </pre>
      *
-     * <code>.google.protobuf.Int32Value os_minor_version = 5;</code>
+     * <code>.google.protobuf.Int32Value os_minor_version = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int32ValueOrBuilder getOsMinorVersionOrBuilder() {
       if (osMinorVersionBuilder_ != null) {
@@ -1487,10 +1534,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The OS Minor Version number.
+     * Output only. The OS Minor Version number.
      * </pre>
      *
-     * <code>.google.protobuf.Int32Value os_minor_version = 5;</code>
+     * <code>.google.protobuf.Int32Value os_minor_version = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Int32Value, com.google.protobuf.Int32Value.Builder, com.google.protobuf.Int32ValueOrBuilder> 
@@ -1509,36 +1556,42 @@ private static final long serialVersionUID = 0L;
     private int operatorType_ = 0;
     /**
      * <pre>
-     * Determines whether this constant represents a single version or a range of
+     * Output only. Determines whether this constant represents a single version or a range of
      * versions.
      * </pre>
      *
-     * <code>.google.ads.googleads.v2.enums.OperatingSystemVersionOperatorTypeEnum.OperatingSystemVersionOperatorType operator_type = 6;</code>
+     * <code>.google.ads.googleads.v2.enums.OperatingSystemVersionOperatorTypeEnum.OperatingSystemVersionOperatorType operator_type = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The enum numeric value on the wire for operatorType.
      */
-    public int getOperatorTypeValue() {
+    @java.lang.Override public int getOperatorTypeValue() {
       return operatorType_;
     }
     /**
      * <pre>
-     * Determines whether this constant represents a single version or a range of
+     * Output only. Determines whether this constant represents a single version or a range of
      * versions.
      * </pre>
      *
-     * <code>.google.ads.googleads.v2.enums.OperatingSystemVersionOperatorTypeEnum.OperatingSystemVersionOperatorType operator_type = 6;</code>
+     * <code>.google.ads.googleads.v2.enums.OperatingSystemVersionOperatorTypeEnum.OperatingSystemVersionOperatorType operator_type = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @param value The enum numeric value on the wire for operatorType to set.
+     * @return This builder for chaining.
      */
     public Builder setOperatorTypeValue(int value) {
+      
       operatorType_ = value;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Determines whether this constant represents a single version or a range of
+     * Output only. Determines whether this constant represents a single version or a range of
      * versions.
      * </pre>
      *
-     * <code>.google.ads.googleads.v2.enums.OperatingSystemVersionOperatorTypeEnum.OperatingSystemVersionOperatorType operator_type = 6;</code>
+     * <code>.google.ads.googleads.v2.enums.OperatingSystemVersionOperatorTypeEnum.OperatingSystemVersionOperatorType operator_type = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The operatorType.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v2.enums.OperatingSystemVersionOperatorTypeEnum.OperatingSystemVersionOperatorType getOperatorType() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v2.enums.OperatingSystemVersionOperatorTypeEnum.OperatingSystemVersionOperatorType result = com.google.ads.googleads.v2.enums.OperatingSystemVersionOperatorTypeEnum.OperatingSystemVersionOperatorType.valueOf(operatorType_);
@@ -1546,11 +1599,13 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Determines whether this constant represents a single version or a range of
+     * Output only. Determines whether this constant represents a single version or a range of
      * versions.
      * </pre>
      *
-     * <code>.google.ads.googleads.v2.enums.OperatingSystemVersionOperatorTypeEnum.OperatingSystemVersionOperatorType operator_type = 6;</code>
+     * <code>.google.ads.googleads.v2.enums.OperatingSystemVersionOperatorTypeEnum.OperatingSystemVersionOperatorType operator_type = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @param value The operatorType to set.
+     * @return This builder for chaining.
      */
     public Builder setOperatorType(com.google.ads.googleads.v2.enums.OperatingSystemVersionOperatorTypeEnum.OperatingSystemVersionOperatorType value) {
       if (value == null) {
@@ -1563,11 +1618,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Determines whether this constant represents a single version or a range of
+     * Output only. Determines whether this constant represents a single version or a range of
      * versions.
      * </pre>
      *
-     * <code>.google.ads.googleads.v2.enums.OperatingSystemVersionOperatorTypeEnum.OperatingSystemVersionOperatorType operator_type = 6;</code>
+     * <code>.google.ads.googleads.v2.enums.OperatingSystemVersionOperatorTypeEnum.OperatingSystemVersionOperatorType operator_type = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return This builder for chaining.
      */
     public Builder clearOperatorType() {
       

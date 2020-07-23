@@ -10,7 +10,7 @@ package com.google.ads.googleads.v4.common;
  *
  * Protobuf type {@code google.ads.googleads.v4.common.YouTubeChannelInfo}
  */
-public  final class YouTubeChannelInfo extends
+public final class YouTubeChannelInfo extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.common.YouTubeChannelInfo)
     YouTubeChannelInfoOrBuilder {
@@ -107,6 +107,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue channel_id = 1;</code>
    * @return Whether the channelId field is set.
    */
+  @java.lang.Override
   public boolean hasChannelId() {
     return channelId_ != null;
   }
@@ -118,6 +119,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue channel_id = 1;</code>
    * @return The channelId.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getChannelId() {
     return channelId_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : channelId_;
   }
@@ -128,6 +130,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue channel_id = 1;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getChannelIdOrBuilder() {
     return getChannelId();
   }

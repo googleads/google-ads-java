@@ -21,7 +21,8 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
  * A proposal is a request to create a new budget or make changes to an
  * existing one.
  * Reads for account-level budgets managed by these proposals will be
- * supported in a future version.  Please use BudgetOrderService until then:
+ * supported in a future version. Until then, please use the
+ * BudgetOrderService from the AdWords API. Learn more at
  * https://developers.google.com/adwords/api/docs/guides/budget-order
  * Mutates:
  * The CREATE operation creates a new proposal.
@@ -30,7 +31,7 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.10.0)",
+    value = "by gRPC proto compiler",
     comments = "Source: google/ads/googleads/v1/services/account_budget_proposal_service.proto")
 public final class AccountBudgetProposalServiceGrpc {
 
@@ -39,86 +40,80 @@ public final class AccountBudgetProposalServiceGrpc {
   public static final String SERVICE_NAME = "google.ads.googleads.v1.services.AccountBudgetProposalService";
 
   // Static method descriptors that strictly reflect the proto.
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  @java.lang.Deprecated // Use {@link #getGetAccountBudgetProposalMethod()} instead. 
-  public static final io.grpc.MethodDescriptor<com.google.ads.googleads.v1.services.GetAccountBudgetProposalRequest,
-      com.google.ads.googleads.v1.resources.AccountBudgetProposal> METHOD_GET_ACCOUNT_BUDGET_PROPOSAL = getGetAccountBudgetProposalMethodHelper();
-
   private static volatile io.grpc.MethodDescriptor<com.google.ads.googleads.v1.services.GetAccountBudgetProposalRequest,
       com.google.ads.googleads.v1.resources.AccountBudgetProposal> getGetAccountBudgetProposalMethod;
 
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetAccountBudgetProposal",
+      requestType = com.google.ads.googleads.v1.services.GetAccountBudgetProposalRequest.class,
+      responseType = com.google.ads.googleads.v1.resources.AccountBudgetProposal.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<com.google.ads.googleads.v1.services.GetAccountBudgetProposalRequest,
       com.google.ads.googleads.v1.resources.AccountBudgetProposal> getGetAccountBudgetProposalMethod() {
-    return getGetAccountBudgetProposalMethodHelper();
-  }
-
-  private static io.grpc.MethodDescriptor<com.google.ads.googleads.v1.services.GetAccountBudgetProposalRequest,
-      com.google.ads.googleads.v1.resources.AccountBudgetProposal> getGetAccountBudgetProposalMethodHelper() {
     io.grpc.MethodDescriptor<com.google.ads.googleads.v1.services.GetAccountBudgetProposalRequest, com.google.ads.googleads.v1.resources.AccountBudgetProposal> getGetAccountBudgetProposalMethod;
     if ((getGetAccountBudgetProposalMethod = AccountBudgetProposalServiceGrpc.getGetAccountBudgetProposalMethod) == null) {
       synchronized (AccountBudgetProposalServiceGrpc.class) {
         if ((getGetAccountBudgetProposalMethod = AccountBudgetProposalServiceGrpc.getGetAccountBudgetProposalMethod) == null) {
-          AccountBudgetProposalServiceGrpc.getGetAccountBudgetProposalMethod = getGetAccountBudgetProposalMethod = 
+          AccountBudgetProposalServiceGrpc.getGetAccountBudgetProposalMethod = getGetAccountBudgetProposalMethod =
               io.grpc.MethodDescriptor.<com.google.ads.googleads.v1.services.GetAccountBudgetProposalRequest, com.google.ads.googleads.v1.resources.AccountBudgetProposal>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "google.ads.googleads.v1.services.AccountBudgetProposalService", "GetAccountBudgetProposal"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetAccountBudgetProposal"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v1.services.GetAccountBudgetProposalRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v1.resources.AccountBudgetProposal.getDefaultInstance()))
-                  .setSchemaDescriptor(new AccountBudgetProposalServiceMethodDescriptorSupplier("GetAccountBudgetProposal"))
-                  .build();
-          }
+              .setSchemaDescriptor(new AccountBudgetProposalServiceMethodDescriptorSupplier("GetAccountBudgetProposal"))
+              .build();
         }
-     }
-     return getGetAccountBudgetProposalMethod;
+      }
+    }
+    return getGetAccountBudgetProposalMethod;
   }
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  @java.lang.Deprecated // Use {@link #getMutateAccountBudgetProposalMethod()} instead. 
-  public static final io.grpc.MethodDescriptor<com.google.ads.googleads.v1.services.MutateAccountBudgetProposalRequest,
-      com.google.ads.googleads.v1.services.MutateAccountBudgetProposalResponse> METHOD_MUTATE_ACCOUNT_BUDGET_PROPOSAL = getMutateAccountBudgetProposalMethodHelper();
 
   private static volatile io.grpc.MethodDescriptor<com.google.ads.googleads.v1.services.MutateAccountBudgetProposalRequest,
       com.google.ads.googleads.v1.services.MutateAccountBudgetProposalResponse> getMutateAccountBudgetProposalMethod;
 
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "MutateAccountBudgetProposal",
+      requestType = com.google.ads.googleads.v1.services.MutateAccountBudgetProposalRequest.class,
+      responseType = com.google.ads.googleads.v1.services.MutateAccountBudgetProposalResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<com.google.ads.googleads.v1.services.MutateAccountBudgetProposalRequest,
       com.google.ads.googleads.v1.services.MutateAccountBudgetProposalResponse> getMutateAccountBudgetProposalMethod() {
-    return getMutateAccountBudgetProposalMethodHelper();
-  }
-
-  private static io.grpc.MethodDescriptor<com.google.ads.googleads.v1.services.MutateAccountBudgetProposalRequest,
-      com.google.ads.googleads.v1.services.MutateAccountBudgetProposalResponse> getMutateAccountBudgetProposalMethodHelper() {
     io.grpc.MethodDescriptor<com.google.ads.googleads.v1.services.MutateAccountBudgetProposalRequest, com.google.ads.googleads.v1.services.MutateAccountBudgetProposalResponse> getMutateAccountBudgetProposalMethod;
     if ((getMutateAccountBudgetProposalMethod = AccountBudgetProposalServiceGrpc.getMutateAccountBudgetProposalMethod) == null) {
       synchronized (AccountBudgetProposalServiceGrpc.class) {
         if ((getMutateAccountBudgetProposalMethod = AccountBudgetProposalServiceGrpc.getMutateAccountBudgetProposalMethod) == null) {
-          AccountBudgetProposalServiceGrpc.getMutateAccountBudgetProposalMethod = getMutateAccountBudgetProposalMethod = 
+          AccountBudgetProposalServiceGrpc.getMutateAccountBudgetProposalMethod = getMutateAccountBudgetProposalMethod =
               io.grpc.MethodDescriptor.<com.google.ads.googleads.v1.services.MutateAccountBudgetProposalRequest, com.google.ads.googleads.v1.services.MutateAccountBudgetProposalResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "google.ads.googleads.v1.services.AccountBudgetProposalService", "MutateAccountBudgetProposal"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "MutateAccountBudgetProposal"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v1.services.MutateAccountBudgetProposalRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v1.services.MutateAccountBudgetProposalResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new AccountBudgetProposalServiceMethodDescriptorSupplier("MutateAccountBudgetProposal"))
-                  .build();
-          }
+              .setSchemaDescriptor(new AccountBudgetProposalServiceMethodDescriptorSupplier("MutateAccountBudgetProposal"))
+              .build();
         }
-     }
-     return getMutateAccountBudgetProposalMethod;
+      }
+    }
+    return getMutateAccountBudgetProposalMethod;
   }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static AccountBudgetProposalServiceStub newStub(io.grpc.Channel channel) {
-    return new AccountBudgetProposalServiceStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<AccountBudgetProposalServiceStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<AccountBudgetProposalServiceStub>() {
+        @java.lang.Override
+        public AccountBudgetProposalServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new AccountBudgetProposalServiceStub(channel, callOptions);
+        }
+      };
+    return AccountBudgetProposalServiceStub.newStub(factory, channel);
   }
 
   /**
@@ -126,7 +121,14 @@ public final class AccountBudgetProposalServiceGrpc {
    */
   public static AccountBudgetProposalServiceBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new AccountBudgetProposalServiceBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<AccountBudgetProposalServiceBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<AccountBudgetProposalServiceBlockingStub>() {
+        @java.lang.Override
+        public AccountBudgetProposalServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new AccountBudgetProposalServiceBlockingStub(channel, callOptions);
+        }
+      };
+    return AccountBudgetProposalServiceBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -134,7 +136,14 @@ public final class AccountBudgetProposalServiceGrpc {
    */
   public static AccountBudgetProposalServiceFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new AccountBudgetProposalServiceFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<AccountBudgetProposalServiceFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<AccountBudgetProposalServiceFutureStub>() {
+        @java.lang.Override
+        public AccountBudgetProposalServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new AccountBudgetProposalServiceFutureStub(channel, callOptions);
+        }
+      };
+    return AccountBudgetProposalServiceFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -143,7 +152,8 @@ public final class AccountBudgetProposalServiceGrpc {
    * A proposal is a request to create a new budget or make changes to an
    * existing one.
    * Reads for account-level budgets managed by these proposals will be
-   * supported in a future version.  Please use BudgetOrderService until then:
+   * supported in a future version. Until then, please use the
+   * BudgetOrderService from the AdWords API. Learn more at
    * https://developers.google.com/adwords/api/docs/guides/budget-order
    * Mutates:
    * The CREATE operation creates a new proposal.
@@ -160,7 +170,7 @@ public final class AccountBudgetProposalServiceGrpc {
      */
     public void getAccountBudgetProposal(com.google.ads.googleads.v1.services.GetAccountBudgetProposalRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v1.resources.AccountBudgetProposal> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetAccountBudgetProposalMethodHelper(), responseObserver);
+      asyncUnimplementedUnaryCall(getGetAccountBudgetProposalMethod(), responseObserver);
     }
 
     /**
@@ -171,20 +181,20 @@ public final class AccountBudgetProposalServiceGrpc {
      */
     public void mutateAccountBudgetProposal(com.google.ads.googleads.v1.services.MutateAccountBudgetProposalRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v1.services.MutateAccountBudgetProposalResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getMutateAccountBudgetProposalMethodHelper(), responseObserver);
+      asyncUnimplementedUnaryCall(getMutateAccountBudgetProposalMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
-            getGetAccountBudgetProposalMethodHelper(),
+            getGetAccountBudgetProposalMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 com.google.ads.googleads.v1.services.GetAccountBudgetProposalRequest,
                 com.google.ads.googleads.v1.resources.AccountBudgetProposal>(
                   this, METHODID_GET_ACCOUNT_BUDGET_PROPOSAL)))
           .addMethod(
-            getMutateAccountBudgetProposalMethodHelper(),
+            getMutateAccountBudgetProposalMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 com.google.ads.googleads.v1.services.MutateAccountBudgetProposalRequest,
@@ -200,7 +210,8 @@ public final class AccountBudgetProposalServiceGrpc {
    * A proposal is a request to create a new budget or make changes to an
    * existing one.
    * Reads for account-level budgets managed by these proposals will be
-   * supported in a future version.  Please use BudgetOrderService until then:
+   * supported in a future version. Until then, please use the
+   * BudgetOrderService from the AdWords API. Learn more at
    * https://developers.google.com/adwords/api/docs/guides/budget-order
    * Mutates:
    * The CREATE operation creates a new proposal.
@@ -208,19 +219,15 @@ public final class AccountBudgetProposalServiceGrpc {
    * The REMOVE operation cancels a pending proposal.
    * </pre>
    */
-  public static final class AccountBudgetProposalServiceStub extends io.grpc.stub.AbstractStub<AccountBudgetProposalServiceStub> {
-    private AccountBudgetProposalServiceStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private AccountBudgetProposalServiceStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class AccountBudgetProposalServiceStub extends io.grpc.stub.AbstractAsyncStub<AccountBudgetProposalServiceStub> {
+    private AccountBudgetProposalServiceStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected AccountBudgetProposalServiceStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected AccountBudgetProposalServiceStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new AccountBudgetProposalServiceStub(channel, callOptions);
     }
 
@@ -232,7 +239,7 @@ public final class AccountBudgetProposalServiceGrpc {
     public void getAccountBudgetProposal(com.google.ads.googleads.v1.services.GetAccountBudgetProposalRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v1.resources.AccountBudgetProposal> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(getGetAccountBudgetProposalMethodHelper(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getGetAccountBudgetProposalMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -244,7 +251,7 @@ public final class AccountBudgetProposalServiceGrpc {
     public void mutateAccountBudgetProposal(com.google.ads.googleads.v1.services.MutateAccountBudgetProposalRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v1.services.MutateAccountBudgetProposalResponse> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(getMutateAccountBudgetProposalMethodHelper(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getMutateAccountBudgetProposalMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -254,7 +261,8 @@ public final class AccountBudgetProposalServiceGrpc {
    * A proposal is a request to create a new budget or make changes to an
    * existing one.
    * Reads for account-level budgets managed by these proposals will be
-   * supported in a future version.  Please use BudgetOrderService until then:
+   * supported in a future version. Until then, please use the
+   * BudgetOrderService from the AdWords API. Learn more at
    * https://developers.google.com/adwords/api/docs/guides/budget-order
    * Mutates:
    * The CREATE operation creates a new proposal.
@@ -262,19 +270,15 @@ public final class AccountBudgetProposalServiceGrpc {
    * The REMOVE operation cancels a pending proposal.
    * </pre>
    */
-  public static final class AccountBudgetProposalServiceBlockingStub extends io.grpc.stub.AbstractStub<AccountBudgetProposalServiceBlockingStub> {
-    private AccountBudgetProposalServiceBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private AccountBudgetProposalServiceBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class AccountBudgetProposalServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<AccountBudgetProposalServiceBlockingStub> {
+    private AccountBudgetProposalServiceBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected AccountBudgetProposalServiceBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected AccountBudgetProposalServiceBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new AccountBudgetProposalServiceBlockingStub(channel, callOptions);
     }
 
@@ -285,7 +289,7 @@ public final class AccountBudgetProposalServiceGrpc {
      */
     public com.google.ads.googleads.v1.resources.AccountBudgetProposal getAccountBudgetProposal(com.google.ads.googleads.v1.services.GetAccountBudgetProposalRequest request) {
       return blockingUnaryCall(
-          getChannel(), getGetAccountBudgetProposalMethodHelper(), getCallOptions(), request);
+          getChannel(), getGetAccountBudgetProposalMethod(), getCallOptions(), request);
     }
 
     /**
@@ -296,7 +300,7 @@ public final class AccountBudgetProposalServiceGrpc {
      */
     public com.google.ads.googleads.v1.services.MutateAccountBudgetProposalResponse mutateAccountBudgetProposal(com.google.ads.googleads.v1.services.MutateAccountBudgetProposalRequest request) {
       return blockingUnaryCall(
-          getChannel(), getMutateAccountBudgetProposalMethodHelper(), getCallOptions(), request);
+          getChannel(), getMutateAccountBudgetProposalMethod(), getCallOptions(), request);
     }
   }
 
@@ -306,7 +310,8 @@ public final class AccountBudgetProposalServiceGrpc {
    * A proposal is a request to create a new budget or make changes to an
    * existing one.
    * Reads for account-level budgets managed by these proposals will be
-   * supported in a future version.  Please use BudgetOrderService until then:
+   * supported in a future version. Until then, please use the
+   * BudgetOrderService from the AdWords API. Learn more at
    * https://developers.google.com/adwords/api/docs/guides/budget-order
    * Mutates:
    * The CREATE operation creates a new proposal.
@@ -314,19 +319,15 @@ public final class AccountBudgetProposalServiceGrpc {
    * The REMOVE operation cancels a pending proposal.
    * </pre>
    */
-  public static final class AccountBudgetProposalServiceFutureStub extends io.grpc.stub.AbstractStub<AccountBudgetProposalServiceFutureStub> {
-    private AccountBudgetProposalServiceFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private AccountBudgetProposalServiceFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class AccountBudgetProposalServiceFutureStub extends io.grpc.stub.AbstractFutureStub<AccountBudgetProposalServiceFutureStub> {
+    private AccountBudgetProposalServiceFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected AccountBudgetProposalServiceFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected AccountBudgetProposalServiceFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new AccountBudgetProposalServiceFutureStub(channel, callOptions);
     }
 
@@ -338,7 +339,7 @@ public final class AccountBudgetProposalServiceGrpc {
     public com.google.common.util.concurrent.ListenableFuture<com.google.ads.googleads.v1.resources.AccountBudgetProposal> getAccountBudgetProposal(
         com.google.ads.googleads.v1.services.GetAccountBudgetProposalRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(getGetAccountBudgetProposalMethodHelper(), getCallOptions()), request);
+          getChannel().newCall(getGetAccountBudgetProposalMethod(), getCallOptions()), request);
     }
 
     /**
@@ -350,7 +351,7 @@ public final class AccountBudgetProposalServiceGrpc {
     public com.google.common.util.concurrent.ListenableFuture<com.google.ads.googleads.v1.services.MutateAccountBudgetProposalResponse> mutateAccountBudgetProposal(
         com.google.ads.googleads.v1.services.MutateAccountBudgetProposalRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(getMutateAccountBudgetProposalMethodHelper(), getCallOptions()), request);
+          getChannel().newCall(getMutateAccountBudgetProposalMethod(), getCallOptions()), request);
     }
   }
 
@@ -443,8 +444,8 @@ public final class AccountBudgetProposalServiceGrpc {
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new AccountBudgetProposalServiceFileDescriptorSupplier())
-              .addMethod(getGetAccountBudgetProposalMethodHelper())
-              .addMethod(getMutateAccountBudgetProposalMethodHelper())
+              .addMethod(getGetAccountBudgetProposalMethod())
+              .addMethod(getMutateAccountBudgetProposalMethod())
               .build();
         }
       }

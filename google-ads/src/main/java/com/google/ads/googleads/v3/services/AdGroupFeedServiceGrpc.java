@@ -21,7 +21,7 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.10.0)",
+    value = "by gRPC proto compiler",
     comments = "Source: google/ads/googleads/v3/services/ad_group_feed_service.proto")
 public final class AdGroupFeedServiceGrpc {
 
@@ -30,86 +30,80 @@ public final class AdGroupFeedServiceGrpc {
   public static final String SERVICE_NAME = "google.ads.googleads.v3.services.AdGroupFeedService";
 
   // Static method descriptors that strictly reflect the proto.
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  @java.lang.Deprecated // Use {@link #getGetAdGroupFeedMethod()} instead. 
-  public static final io.grpc.MethodDescriptor<com.google.ads.googleads.v3.services.GetAdGroupFeedRequest,
-      com.google.ads.googleads.v3.resources.AdGroupFeed> METHOD_GET_AD_GROUP_FEED = getGetAdGroupFeedMethodHelper();
-
   private static volatile io.grpc.MethodDescriptor<com.google.ads.googleads.v3.services.GetAdGroupFeedRequest,
       com.google.ads.googleads.v3.resources.AdGroupFeed> getGetAdGroupFeedMethod;
 
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetAdGroupFeed",
+      requestType = com.google.ads.googleads.v3.services.GetAdGroupFeedRequest.class,
+      responseType = com.google.ads.googleads.v3.resources.AdGroupFeed.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<com.google.ads.googleads.v3.services.GetAdGroupFeedRequest,
       com.google.ads.googleads.v3.resources.AdGroupFeed> getGetAdGroupFeedMethod() {
-    return getGetAdGroupFeedMethodHelper();
-  }
-
-  private static io.grpc.MethodDescriptor<com.google.ads.googleads.v3.services.GetAdGroupFeedRequest,
-      com.google.ads.googleads.v3.resources.AdGroupFeed> getGetAdGroupFeedMethodHelper() {
     io.grpc.MethodDescriptor<com.google.ads.googleads.v3.services.GetAdGroupFeedRequest, com.google.ads.googleads.v3.resources.AdGroupFeed> getGetAdGroupFeedMethod;
     if ((getGetAdGroupFeedMethod = AdGroupFeedServiceGrpc.getGetAdGroupFeedMethod) == null) {
       synchronized (AdGroupFeedServiceGrpc.class) {
         if ((getGetAdGroupFeedMethod = AdGroupFeedServiceGrpc.getGetAdGroupFeedMethod) == null) {
-          AdGroupFeedServiceGrpc.getGetAdGroupFeedMethod = getGetAdGroupFeedMethod = 
+          AdGroupFeedServiceGrpc.getGetAdGroupFeedMethod = getGetAdGroupFeedMethod =
               io.grpc.MethodDescriptor.<com.google.ads.googleads.v3.services.GetAdGroupFeedRequest, com.google.ads.googleads.v3.resources.AdGroupFeed>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "google.ads.googleads.v3.services.AdGroupFeedService", "GetAdGroupFeed"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetAdGroupFeed"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v3.services.GetAdGroupFeedRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v3.resources.AdGroupFeed.getDefaultInstance()))
-                  .setSchemaDescriptor(new AdGroupFeedServiceMethodDescriptorSupplier("GetAdGroupFeed"))
-                  .build();
-          }
+              .setSchemaDescriptor(new AdGroupFeedServiceMethodDescriptorSupplier("GetAdGroupFeed"))
+              .build();
         }
-     }
-     return getGetAdGroupFeedMethod;
+      }
+    }
+    return getGetAdGroupFeedMethod;
   }
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  @java.lang.Deprecated // Use {@link #getMutateAdGroupFeedsMethod()} instead. 
-  public static final io.grpc.MethodDescriptor<com.google.ads.googleads.v3.services.MutateAdGroupFeedsRequest,
-      com.google.ads.googleads.v3.services.MutateAdGroupFeedsResponse> METHOD_MUTATE_AD_GROUP_FEEDS = getMutateAdGroupFeedsMethodHelper();
 
   private static volatile io.grpc.MethodDescriptor<com.google.ads.googleads.v3.services.MutateAdGroupFeedsRequest,
       com.google.ads.googleads.v3.services.MutateAdGroupFeedsResponse> getMutateAdGroupFeedsMethod;
 
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "MutateAdGroupFeeds",
+      requestType = com.google.ads.googleads.v3.services.MutateAdGroupFeedsRequest.class,
+      responseType = com.google.ads.googleads.v3.services.MutateAdGroupFeedsResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<com.google.ads.googleads.v3.services.MutateAdGroupFeedsRequest,
       com.google.ads.googleads.v3.services.MutateAdGroupFeedsResponse> getMutateAdGroupFeedsMethod() {
-    return getMutateAdGroupFeedsMethodHelper();
-  }
-
-  private static io.grpc.MethodDescriptor<com.google.ads.googleads.v3.services.MutateAdGroupFeedsRequest,
-      com.google.ads.googleads.v3.services.MutateAdGroupFeedsResponse> getMutateAdGroupFeedsMethodHelper() {
     io.grpc.MethodDescriptor<com.google.ads.googleads.v3.services.MutateAdGroupFeedsRequest, com.google.ads.googleads.v3.services.MutateAdGroupFeedsResponse> getMutateAdGroupFeedsMethod;
     if ((getMutateAdGroupFeedsMethod = AdGroupFeedServiceGrpc.getMutateAdGroupFeedsMethod) == null) {
       synchronized (AdGroupFeedServiceGrpc.class) {
         if ((getMutateAdGroupFeedsMethod = AdGroupFeedServiceGrpc.getMutateAdGroupFeedsMethod) == null) {
-          AdGroupFeedServiceGrpc.getMutateAdGroupFeedsMethod = getMutateAdGroupFeedsMethod = 
+          AdGroupFeedServiceGrpc.getMutateAdGroupFeedsMethod = getMutateAdGroupFeedsMethod =
               io.grpc.MethodDescriptor.<com.google.ads.googleads.v3.services.MutateAdGroupFeedsRequest, com.google.ads.googleads.v3.services.MutateAdGroupFeedsResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "google.ads.googleads.v3.services.AdGroupFeedService", "MutateAdGroupFeeds"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "MutateAdGroupFeeds"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v3.services.MutateAdGroupFeedsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v3.services.MutateAdGroupFeedsResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new AdGroupFeedServiceMethodDescriptorSupplier("MutateAdGroupFeeds"))
-                  .build();
-          }
+              .setSchemaDescriptor(new AdGroupFeedServiceMethodDescriptorSupplier("MutateAdGroupFeeds"))
+              .build();
         }
-     }
-     return getMutateAdGroupFeedsMethod;
+      }
+    }
+    return getMutateAdGroupFeedsMethod;
   }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static AdGroupFeedServiceStub newStub(io.grpc.Channel channel) {
-    return new AdGroupFeedServiceStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<AdGroupFeedServiceStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<AdGroupFeedServiceStub>() {
+        @java.lang.Override
+        public AdGroupFeedServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new AdGroupFeedServiceStub(channel, callOptions);
+        }
+      };
+    return AdGroupFeedServiceStub.newStub(factory, channel);
   }
 
   /**
@@ -117,7 +111,14 @@ public final class AdGroupFeedServiceGrpc {
    */
   public static AdGroupFeedServiceBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new AdGroupFeedServiceBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<AdGroupFeedServiceBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<AdGroupFeedServiceBlockingStub>() {
+        @java.lang.Override
+        public AdGroupFeedServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new AdGroupFeedServiceBlockingStub(channel, callOptions);
+        }
+      };
+    return AdGroupFeedServiceBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -125,7 +126,14 @@ public final class AdGroupFeedServiceGrpc {
    */
   public static AdGroupFeedServiceFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new AdGroupFeedServiceFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<AdGroupFeedServiceFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<AdGroupFeedServiceFutureStub>() {
+        @java.lang.Override
+        public AdGroupFeedServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new AdGroupFeedServiceFutureStub(channel, callOptions);
+        }
+      };
+    return AdGroupFeedServiceFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -142,7 +150,7 @@ public final class AdGroupFeedServiceGrpc {
      */
     public void getAdGroupFeed(com.google.ads.googleads.v3.services.GetAdGroupFeedRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v3.resources.AdGroupFeed> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetAdGroupFeedMethodHelper(), responseObserver);
+      asyncUnimplementedUnaryCall(getGetAdGroupFeedMethod(), responseObserver);
     }
 
     /**
@@ -153,20 +161,20 @@ public final class AdGroupFeedServiceGrpc {
      */
     public void mutateAdGroupFeeds(com.google.ads.googleads.v3.services.MutateAdGroupFeedsRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v3.services.MutateAdGroupFeedsResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getMutateAdGroupFeedsMethodHelper(), responseObserver);
+      asyncUnimplementedUnaryCall(getMutateAdGroupFeedsMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
-            getGetAdGroupFeedMethodHelper(),
+            getGetAdGroupFeedMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 com.google.ads.googleads.v3.services.GetAdGroupFeedRequest,
                 com.google.ads.googleads.v3.resources.AdGroupFeed>(
                   this, METHODID_GET_AD_GROUP_FEED)))
           .addMethod(
-            getMutateAdGroupFeedsMethodHelper(),
+            getMutateAdGroupFeedsMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 com.google.ads.googleads.v3.services.MutateAdGroupFeedsRequest,
@@ -181,19 +189,15 @@ public final class AdGroupFeedServiceGrpc {
    * Service to manage ad group feeds.
    * </pre>
    */
-  public static final class AdGroupFeedServiceStub extends io.grpc.stub.AbstractStub<AdGroupFeedServiceStub> {
-    private AdGroupFeedServiceStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private AdGroupFeedServiceStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class AdGroupFeedServiceStub extends io.grpc.stub.AbstractAsyncStub<AdGroupFeedServiceStub> {
+    private AdGroupFeedServiceStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected AdGroupFeedServiceStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected AdGroupFeedServiceStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new AdGroupFeedServiceStub(channel, callOptions);
     }
 
@@ -205,7 +209,7 @@ public final class AdGroupFeedServiceGrpc {
     public void getAdGroupFeed(com.google.ads.googleads.v3.services.GetAdGroupFeedRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v3.resources.AdGroupFeed> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(getGetAdGroupFeedMethodHelper(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getGetAdGroupFeedMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -217,7 +221,7 @@ public final class AdGroupFeedServiceGrpc {
     public void mutateAdGroupFeeds(com.google.ads.googleads.v3.services.MutateAdGroupFeedsRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v3.services.MutateAdGroupFeedsResponse> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(getMutateAdGroupFeedsMethodHelper(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getMutateAdGroupFeedsMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -226,19 +230,15 @@ public final class AdGroupFeedServiceGrpc {
    * Service to manage ad group feeds.
    * </pre>
    */
-  public static final class AdGroupFeedServiceBlockingStub extends io.grpc.stub.AbstractStub<AdGroupFeedServiceBlockingStub> {
-    private AdGroupFeedServiceBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private AdGroupFeedServiceBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class AdGroupFeedServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<AdGroupFeedServiceBlockingStub> {
+    private AdGroupFeedServiceBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected AdGroupFeedServiceBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected AdGroupFeedServiceBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new AdGroupFeedServiceBlockingStub(channel, callOptions);
     }
 
@@ -249,7 +249,7 @@ public final class AdGroupFeedServiceGrpc {
      */
     public com.google.ads.googleads.v3.resources.AdGroupFeed getAdGroupFeed(com.google.ads.googleads.v3.services.GetAdGroupFeedRequest request) {
       return blockingUnaryCall(
-          getChannel(), getGetAdGroupFeedMethodHelper(), getCallOptions(), request);
+          getChannel(), getGetAdGroupFeedMethod(), getCallOptions(), request);
     }
 
     /**
@@ -260,7 +260,7 @@ public final class AdGroupFeedServiceGrpc {
      */
     public com.google.ads.googleads.v3.services.MutateAdGroupFeedsResponse mutateAdGroupFeeds(com.google.ads.googleads.v3.services.MutateAdGroupFeedsRequest request) {
       return blockingUnaryCall(
-          getChannel(), getMutateAdGroupFeedsMethodHelper(), getCallOptions(), request);
+          getChannel(), getMutateAdGroupFeedsMethod(), getCallOptions(), request);
     }
   }
 
@@ -269,19 +269,15 @@ public final class AdGroupFeedServiceGrpc {
    * Service to manage ad group feeds.
    * </pre>
    */
-  public static final class AdGroupFeedServiceFutureStub extends io.grpc.stub.AbstractStub<AdGroupFeedServiceFutureStub> {
-    private AdGroupFeedServiceFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private AdGroupFeedServiceFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class AdGroupFeedServiceFutureStub extends io.grpc.stub.AbstractFutureStub<AdGroupFeedServiceFutureStub> {
+    private AdGroupFeedServiceFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected AdGroupFeedServiceFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected AdGroupFeedServiceFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new AdGroupFeedServiceFutureStub(channel, callOptions);
     }
 
@@ -293,7 +289,7 @@ public final class AdGroupFeedServiceGrpc {
     public com.google.common.util.concurrent.ListenableFuture<com.google.ads.googleads.v3.resources.AdGroupFeed> getAdGroupFeed(
         com.google.ads.googleads.v3.services.GetAdGroupFeedRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(getGetAdGroupFeedMethodHelper(), getCallOptions()), request);
+          getChannel().newCall(getGetAdGroupFeedMethod(), getCallOptions()), request);
     }
 
     /**
@@ -305,7 +301,7 @@ public final class AdGroupFeedServiceGrpc {
     public com.google.common.util.concurrent.ListenableFuture<com.google.ads.googleads.v3.services.MutateAdGroupFeedsResponse> mutateAdGroupFeeds(
         com.google.ads.googleads.v3.services.MutateAdGroupFeedsRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(getMutateAdGroupFeedsMethodHelper(), getCallOptions()), request);
+          getChannel().newCall(getMutateAdGroupFeedsMethod(), getCallOptions()), request);
     }
   }
 
@@ -398,8 +394,8 @@ public final class AdGroupFeedServiceGrpc {
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new AdGroupFeedServiceFileDescriptorSupplier())
-              .addMethod(getGetAdGroupFeedMethodHelper())
-              .addMethod(getMutateAdGroupFeedsMethodHelper())
+              .addMethod(getGetAdGroupFeedMethod())
+              .addMethod(getMutateAdGroupFeedsMethod())
               .build();
         }
       }

@@ -13,6 +13,7 @@ public interface CallOnlyAdInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue country_code = 1;</code>
+   * @return Whether the countryCode field is set.
    */
   boolean hasCountryCode();
   /**
@@ -21,6 +22,7 @@ public interface CallOnlyAdInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue country_code = 1;</code>
+   * @return The countryCode.
    */
   com.google.protobuf.StringValue getCountryCode();
   /**
@@ -38,6 +40,7 @@ public interface CallOnlyAdInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue phone_number = 2;</code>
+   * @return Whether the phoneNumber field is set.
    */
   boolean hasPhoneNumber();
   /**
@@ -46,6 +49,7 @@ public interface CallOnlyAdInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue phone_number = 2;</code>
+   * @return The phoneNumber.
    */
   com.google.protobuf.StringValue getPhoneNumber();
   /**
@@ -63,6 +67,7 @@ public interface CallOnlyAdInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue business_name = 3;</code>
+   * @return Whether the businessName field is set.
    */
   boolean hasBusinessName();
   /**
@@ -71,6 +76,7 @@ public interface CallOnlyAdInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue business_name = 3;</code>
+   * @return The businessName.
    */
   com.google.protobuf.StringValue getBusinessName();
   /**
@@ -88,6 +94,7 @@ public interface CallOnlyAdInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue headline1 = 11;</code>
+   * @return Whether the headline1 field is set.
    */
   boolean hasHeadline1();
   /**
@@ -96,6 +103,7 @@ public interface CallOnlyAdInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue headline1 = 11;</code>
+   * @return The headline1.
    */
   com.google.protobuf.StringValue getHeadline1();
   /**
@@ -113,6 +121,7 @@ public interface CallOnlyAdInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue headline2 = 12;</code>
+   * @return Whether the headline2 field is set.
    */
   boolean hasHeadline2();
   /**
@@ -121,6 +130,7 @@ public interface CallOnlyAdInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue headline2 = 12;</code>
+   * @return The headline2.
    */
   com.google.protobuf.StringValue getHeadline2();
   /**
@@ -138,6 +148,7 @@ public interface CallOnlyAdInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue description1 = 4;</code>
+   * @return Whether the description1 field is set.
    */
   boolean hasDescription1();
   /**
@@ -146,6 +157,7 @@ public interface CallOnlyAdInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue description1 = 4;</code>
+   * @return The description1.
    */
   com.google.protobuf.StringValue getDescription1();
   /**
@@ -163,6 +175,7 @@ public interface CallOnlyAdInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue description2 = 5;</code>
+   * @return Whether the description2 field is set.
    */
   boolean hasDescription2();
   /**
@@ -171,6 +184,7 @@ public interface CallOnlyAdInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue description2 = 5;</code>
+   * @return The description2.
    */
   com.google.protobuf.StringValue getDescription2();
   /**
@@ -189,6 +203,7 @@ public interface CallOnlyAdInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.BoolValue call_tracked = 6;</code>
+   * @return Whether the callTracked field is set.
    */
   boolean hasCallTracked();
   /**
@@ -198,6 +213,7 @@ public interface CallOnlyAdInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.BoolValue call_tracked = 6;</code>
+   * @return The callTracked.
    */
   com.google.protobuf.BoolValue getCallTracked();
   /**
@@ -219,6 +235,7 @@ public interface CallOnlyAdInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.BoolValue disable_call_conversion = 7;</code>
+   * @return Whether the disableCallConversion field is set.
    */
   boolean hasDisableCallConversion();
   /**
@@ -230,6 +247,7 @@ public interface CallOnlyAdInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.BoolValue disable_call_conversion = 7;</code>
+   * @return The disableCallConversion.
    */
   com.google.protobuf.BoolValue getDisableCallConversion();
   /**
@@ -250,6 +268,7 @@ public interface CallOnlyAdInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue phone_number_verification_url = 8;</code>
+   * @return Whether the phoneNumberVerificationUrl field is set.
    */
   boolean hasPhoneNumberVerificationUrl();
   /**
@@ -258,6 +277,7 @@ public interface CallOnlyAdInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue phone_number_verification_url = 8;</code>
+   * @return The phoneNumberVerificationUrl.
    */
   com.google.protobuf.StringValue getPhoneNumberVerificationUrl();
   /**
@@ -277,6 +297,7 @@ public interface CallOnlyAdInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue conversion_action = 9;</code>
+   * @return Whether the conversionAction field is set.
    */
   boolean hasConversionAction();
   /**
@@ -287,6 +308,7 @@ public interface CallOnlyAdInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue conversion_action = 9;</code>
+   * @return The conversionAction.
    */
   com.google.protobuf.StringValue getConversionAction();
   /**
@@ -307,6 +329,7 @@ public interface CallOnlyAdInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v1.enums.CallConversionReportingStateEnum.CallConversionReportingState conversion_reporting_state = 10;</code>
+   * @return The enum numeric value on the wire for conversionReportingState.
    */
   int getConversionReportingStateValue();
   /**
@@ -316,6 +339,7 @@ public interface CallOnlyAdInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v1.enums.CallConversionReportingStateEnum.CallConversionReportingState conversion_reporting_state = 10;</code>
+   * @return The conversionReportingState.
    */
   com.google.ads.googleads.v1.enums.CallConversionReportingStateEnum.CallConversionReportingState getConversionReportingState();
 }

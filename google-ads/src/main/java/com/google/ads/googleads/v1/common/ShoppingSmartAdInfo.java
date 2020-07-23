@@ -10,7 +10,7 @@ package com.google.ads.googleads.v1.common;
  *
  * Protobuf type {@code google.ads.googleads.v1.common.ShoppingSmartAdInfo}
  */
-public  final class ShoppingSmartAdInfo extends
+public final class ShoppingSmartAdInfo extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v1.common.ShoppingSmartAdInfo)
     ShoppingSmartAdInfoOrBuilder {
@@ -20,6 +20,13 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private ShoppingSmartAdInfo() {
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new ShoppingSmartAdInfo();
   }
 
   @java.lang.Override

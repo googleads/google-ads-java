@@ -10,7 +10,7 @@ package com.google.ads.googleads.v4.services;
  *
  * Protobuf type {@code google.ads.googleads.v4.services.KeywordPlanAdGroupForecast}
  */
-public  final class KeywordPlanAdGroupForecast extends
+public final class KeywordPlanAdGroupForecast extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.services.KeywordPlanAdGroupForecast)
     KeywordPlanAdGroupForecastOrBuilder {
@@ -121,6 +121,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue keyword_plan_ad_group = 1;</code>
    * @return Whether the keywordPlanAdGroup field is set.
    */
+  @java.lang.Override
   public boolean hasKeywordPlanAdGroup() {
     return keywordPlanAdGroup_ != null;
   }
@@ -133,6 +134,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue keyword_plan_ad_group = 1;</code>
    * @return The keywordPlanAdGroup.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getKeywordPlanAdGroup() {
     return keywordPlanAdGroup_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : keywordPlanAdGroup_;
   }
@@ -144,6 +146,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue keyword_plan_ad_group = 1;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getKeywordPlanAdGroupOrBuilder() {
     return getKeywordPlanAdGroup();
   }
@@ -158,6 +161,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.services.ForecastMetrics ad_group_forecast = 2;</code>
    * @return Whether the adGroupForecast field is set.
    */
+  @java.lang.Override
   public boolean hasAdGroupForecast() {
     return adGroupForecast_ != null;
   }
@@ -169,6 +173,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.services.ForecastMetrics ad_group_forecast = 2;</code>
    * @return The adGroupForecast.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.services.ForecastMetrics getAdGroupForecast() {
     return adGroupForecast_ == null ? com.google.ads.googleads.v4.services.ForecastMetrics.getDefaultInstance() : adGroupForecast_;
   }
@@ -179,6 +184,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v4.services.ForecastMetrics ad_group_forecast = 2;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.services.ForecastMetricsOrBuilder getAdGroupForecastOrBuilder() {
     return getAdGroupForecast();
   }

@@ -21,7 +21,6 @@ import com.google.ads.googleads.v4.services.stub.LanguageConstantServiceStubSett
 import com.google.api.core.BetaApi;
 import com.google.api.gax.core.BackgroundResource;
 import com.google.api.gax.rpc.UnaryCallable;
-import com.google.api.pathtemplate.PathTemplate;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 import javax.annotation.Generated;
@@ -36,8 +35,8 @@ import javax.annotation.Generated;
  * <pre>
  * <code>
  * try (LanguageConstantServiceClient languageConstantServiceClient = LanguageConstantServiceClient.create()) {
- *   String formattedResourceName = LanguageConstantServiceClient.formatLanguageConstantName("[LANGUAGE_CONSTANT]");
- *   LanguageConstant response = languageConstantServiceClient.getLanguageConstant(formattedResourceName);
+ *   LanguageConstantName resourceName = LanguageConstantName.of("[LANGUAGE_CONSTANT]");
+ *   LanguageConstant response = languageConstantServiceClient.getLanguageConstant(resourceName);
  * }
  * </code>
  * </pre>
@@ -99,31 +98,6 @@ public class LanguageConstantServiceClient implements BackgroundResource {
   private final LanguageConstantServiceSettings settings;
   private final LanguageConstantServiceStub stub;
 
-  private static final PathTemplate LANGUAGE_CONSTANT_PATH_TEMPLATE =
-      PathTemplate.createWithoutUrlEncoding("languageConstants/{language_constant}");
-
-  /**
-   * Formats a string containing the fully-qualified path to represent a language_constant resource.
-   *
-   * @deprecated Use the {@link LanguageConstantName} class instead.
-   */
-  @Deprecated
-  public static final String formatLanguageConstantName(String languageConstant) {
-    return LANGUAGE_CONSTANT_PATH_TEMPLATE.instantiate("language_constant", languageConstant);
-  }
-
-  /**
-   * Parses the language_constant from the given fully-qualified path which represents a
-   * language_constant resource.
-   *
-   * @deprecated Use the {@link LanguageConstantName} class instead.
-   */
-  @Deprecated
-  public static final String parseLanguageConstantFromLanguageConstantName(
-      String languageConstantName) {
-    return LANGUAGE_CONSTANT_PATH_TEMPLATE.parse(languageConstantName).get("language_constant");
-  }
-
   /** Constructs an instance of LanguageConstantServiceClient with default settings. */
   public static final LanguageConstantServiceClient create() throws IOException {
     return create(LanguageConstantServiceSettings.newBuilder().build());
@@ -181,8 +155,32 @@ public class LanguageConstantServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (LanguageConstantServiceClient languageConstantServiceClient = LanguageConstantServiceClient.create()) {
-   *   String formattedResourceName = LanguageConstantServiceClient.formatLanguageConstantName("[LANGUAGE_CONSTANT]");
-   *   LanguageConstant response = languageConstantServiceClient.getLanguageConstant(formattedResourceName);
+   *   LanguageConstantName resourceName = LanguageConstantName.of("[LANGUAGE_CONSTANT]");
+   *   LanguageConstant response = languageConstantServiceClient.getLanguageConstant(resourceName);
+   * }
+   * </code></pre>
+   *
+   * @param resourceName Required. Resource name of the language constant to fetch.
+   * @throws com.google.api.gax.rpc.ApiException if the remote call fails
+   */
+  public final LanguageConstant getLanguageConstant(LanguageConstantName resourceName) {
+    GetLanguageConstantRequest request =
+        GetLanguageConstantRequest.newBuilder()
+            .setResourceName(resourceName == null ? null : resourceName.toString())
+            .build();
+    return getLanguageConstant(request);
+  }
+
+  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  /**
+   * Returns the requested language constant.
+   *
+   * <p>Sample code:
+   *
+   * <pre><code>
+   * try (LanguageConstantServiceClient languageConstantServiceClient = LanguageConstantServiceClient.create()) {
+   *   LanguageConstantName resourceName = LanguageConstantName.of("[LANGUAGE_CONSTANT]");
+   *   LanguageConstant response = languageConstantServiceClient.getLanguageConstant(resourceName.toString());
    * }
    * </code></pre>
    *
@@ -190,7 +188,6 @@ public class LanguageConstantServiceClient implements BackgroundResource {
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final LanguageConstant getLanguageConstant(String resourceName) {
-    LANGUAGE_CONSTANT_PATH_TEMPLATE.validate(resourceName, "getLanguageConstant");
     GetLanguageConstantRequest request =
         GetLanguageConstantRequest.newBuilder().setResourceName(resourceName).build();
     return getLanguageConstant(request);
@@ -204,9 +201,9 @@ public class LanguageConstantServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (LanguageConstantServiceClient languageConstantServiceClient = LanguageConstantServiceClient.create()) {
-   *   String formattedResourceName = LanguageConstantServiceClient.formatLanguageConstantName("[LANGUAGE_CONSTANT]");
+   *   LanguageConstantName resourceName = LanguageConstantName.of("[LANGUAGE_CONSTANT]");
    *   GetLanguageConstantRequest request = GetLanguageConstantRequest.newBuilder()
-   *     .setResourceName(formattedResourceName)
+   *     .setResourceName(resourceName.toString())
    *     .build();
    *   LanguageConstant response = languageConstantServiceClient.getLanguageConstant(request);
    * }
@@ -227,9 +224,9 @@ public class LanguageConstantServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (LanguageConstantServiceClient languageConstantServiceClient = LanguageConstantServiceClient.create()) {
-   *   String formattedResourceName = LanguageConstantServiceClient.formatLanguageConstantName("[LANGUAGE_CONSTANT]");
+   *   LanguageConstantName resourceName = LanguageConstantName.of("[LANGUAGE_CONSTANT]");
    *   GetLanguageConstantRequest request = GetLanguageConstantRequest.newBuilder()
-   *     .setResourceName(formattedResourceName)
+   *     .setResourceName(resourceName.toString())
    *     .build();
    *   ApiFuture&lt;LanguageConstant&gt; future = languageConstantServiceClient.getLanguageConstantCallable().futureCall(request);
    *   // Do something

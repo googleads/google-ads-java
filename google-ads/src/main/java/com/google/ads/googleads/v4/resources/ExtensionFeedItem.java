@@ -10,7 +10,7 @@ package com.google.ads.googleads.v4.resources;
  *
  * Protobuf type {@code google.ads.googleads.v4.resources.ExtensionFeedItem}
  */
-public  final class ExtensionFeedItem extends
+public final class ExtensionFeedItem extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.resources.ExtensionFeedItem)
     ExtensionFeedItemOrBuilder {
@@ -485,6 +485,7 @@ private static final long serialVersionUID = 0L;
    * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return The resourceName.
    */
+  @java.lang.Override
   public java.lang.String getResourceName() {
     java.lang.Object ref = resourceName_;
     if (ref instanceof java.lang.String) {
@@ -507,6 +508,7 @@ private static final long serialVersionUID = 0L;
    * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return The bytes for resourceName.
    */
+  @java.lang.Override
   public com.google.protobuf.ByteString
       getResourceNameBytes() {
     java.lang.Object ref = resourceName_;
@@ -531,6 +533,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int64Value id = 24 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the id field is set.
    */
+  @java.lang.Override
   public boolean hasId() {
     return id_ != null;
   }
@@ -542,6 +545,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int64Value id = 24 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The id.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getId() {
     return id_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : id_;
   }
@@ -552,6 +556,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int64Value id = 24 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getIdOrBuilder() {
     return getId();
   }
@@ -567,7 +572,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.ExtensionTypeEnum.ExtensionType extension_type = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The enum numeric value on the wire for extensionType.
    */
-  public int getExtensionTypeValue() {
+  @java.lang.Override public int getExtensionTypeValue() {
     return extensionType_;
   }
   /**
@@ -579,7 +584,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.ExtensionTypeEnum.ExtensionType extension_type = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The extensionType.
    */
-  public com.google.ads.googleads.v4.enums.ExtensionTypeEnum.ExtensionType getExtensionType() {
+  @java.lang.Override public com.google.ads.googleads.v4.enums.ExtensionTypeEnum.ExtensionType getExtensionType() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v4.enums.ExtensionTypeEnum.ExtensionType result = com.google.ads.googleads.v4.enums.ExtensionTypeEnum.ExtensionType.valueOf(extensionType_);
     return result == null ? com.google.ads.googleads.v4.enums.ExtensionTypeEnum.ExtensionType.UNRECOGNIZED : result;
@@ -598,6 +603,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue start_date_time = 5;</code>
    * @return Whether the startDateTime field is set.
    */
+  @java.lang.Override
   public boolean hasStartDateTime() {
     return startDateTime_ != null;
   }
@@ -612,6 +618,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue start_date_time = 5;</code>
    * @return The startDateTime.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getStartDateTime() {
     return startDateTime_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : startDateTime_;
   }
@@ -625,6 +632,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue start_date_time = 5;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getStartDateTimeOrBuilder() {
     return getStartDateTime();
   }
@@ -642,6 +650,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue end_date_time = 6;</code>
    * @return Whether the endDateTime field is set.
    */
+  @java.lang.Override
   public boolean hasEndDateTime() {
     return endDateTime_ != null;
   }
@@ -656,6 +665,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue end_date_time = 6;</code>
    * @return The endDateTime.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getEndDateTime() {
     return endDateTime_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : endDateTime_;
   }
@@ -669,6 +679,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue end_date_time = 6;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getEndDateTimeOrBuilder() {
     return getEndDateTime();
   }
@@ -684,6 +695,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.common.AdScheduleInfo ad_schedules = 16;</code>
    */
+  @java.lang.Override
   public java.util.List<com.google.ads.googleads.v4.common.AdScheduleInfo> getAdSchedulesList() {
     return adSchedules_;
   }
@@ -696,6 +708,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.common.AdScheduleInfo ad_schedules = 16;</code>
    */
+  @java.lang.Override
   public java.util.List<? extends com.google.ads.googleads.v4.common.AdScheduleInfoOrBuilder> 
       getAdSchedulesOrBuilderList() {
     return adSchedules_;
@@ -709,6 +722,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.common.AdScheduleInfo ad_schedules = 16;</code>
    */
+  @java.lang.Override
   public int getAdSchedulesCount() {
     return adSchedules_.size();
   }
@@ -721,6 +735,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.common.AdScheduleInfo ad_schedules = 16;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.AdScheduleInfo getAdSchedules(int index) {
     return adSchedules_.get(index);
   }
@@ -733,6 +748,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.common.AdScheduleInfo ad_schedules = 16;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.AdScheduleInfoOrBuilder getAdSchedulesOrBuilder(
       int index) {
     return adSchedules_.get(index);
@@ -748,7 +764,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.FeedItemTargetDeviceEnum.FeedItemTargetDevice device = 17;</code>
    * @return The enum numeric value on the wire for device.
    */
-  public int getDeviceValue() {
+  @java.lang.Override public int getDeviceValue() {
     return device_;
   }
   /**
@@ -759,7 +775,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.FeedItemTargetDeviceEnum.FeedItemTargetDevice device = 17;</code>
    * @return The device.
    */
-  public com.google.ads.googleads.v4.enums.FeedItemTargetDeviceEnum.FeedItemTargetDevice getDevice() {
+  @java.lang.Override public com.google.ads.googleads.v4.enums.FeedItemTargetDeviceEnum.FeedItemTargetDevice getDevice() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v4.enums.FeedItemTargetDeviceEnum.FeedItemTargetDevice result = com.google.ads.googleads.v4.enums.FeedItemTargetDeviceEnum.FeedItemTargetDevice.valueOf(device_);
     return result == null ? com.google.ads.googleads.v4.enums.FeedItemTargetDeviceEnum.FeedItemTargetDevice.UNRECOGNIZED : result;
@@ -775,6 +791,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue targeted_geo_target_constant = 20 [(.google.api.resource_reference) = { ... }</code>
    * @return Whether the targetedGeoTargetConstant field is set.
    */
+  @java.lang.Override
   public boolean hasTargetedGeoTargetConstant() {
     return targetedGeoTargetConstant_ != null;
   }
@@ -786,6 +803,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue targeted_geo_target_constant = 20 [(.google.api.resource_reference) = { ... }</code>
    * @return The targetedGeoTargetConstant.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getTargetedGeoTargetConstant() {
     return targetedGeoTargetConstant_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : targetedGeoTargetConstant_;
   }
@@ -796,6 +814,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue targeted_geo_target_constant = 20 [(.google.api.resource_reference) = { ... }</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getTargetedGeoTargetConstantOrBuilder() {
     return getTargetedGeoTargetConstant();
   }
@@ -810,6 +829,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.common.KeywordInfo targeted_keyword = 22;</code>
    * @return Whether the targetedKeyword field is set.
    */
+  @java.lang.Override
   public boolean hasTargetedKeyword() {
     return targetedKeyword_ != null;
   }
@@ -821,6 +841,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.common.KeywordInfo targeted_keyword = 22;</code>
    * @return The targetedKeyword.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.KeywordInfo getTargetedKeyword() {
     return targetedKeyword_ == null ? com.google.ads.googleads.v4.common.KeywordInfo.getDefaultInstance() : targetedKeyword_;
   }
@@ -831,6 +852,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v4.common.KeywordInfo targeted_keyword = 22;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.KeywordInfoOrBuilder getTargetedKeywordOrBuilder() {
     return getTargetedKeyword();
   }
@@ -846,7 +868,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.FeedItemStatusEnum.FeedItemStatus status = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The enum numeric value on the wire for status.
    */
-  public int getStatusValue() {
+  @java.lang.Override public int getStatusValue() {
     return status_;
   }
   /**
@@ -858,7 +880,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.FeedItemStatusEnum.FeedItemStatus status = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The status.
    */
-  public com.google.ads.googleads.v4.enums.FeedItemStatusEnum.FeedItemStatus getStatus() {
+  @java.lang.Override public com.google.ads.googleads.v4.enums.FeedItemStatusEnum.FeedItemStatus getStatus() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v4.enums.FeedItemStatusEnum.FeedItemStatus result = com.google.ads.googleads.v4.enums.FeedItemStatusEnum.FeedItemStatus.valueOf(status_);
     return result == null ? com.google.ads.googleads.v4.enums.FeedItemStatusEnum.FeedItemStatus.UNRECOGNIZED : result;
@@ -873,6 +895,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.common.SitelinkFeedItem sitelink_feed_item = 2;</code>
    * @return Whether the sitelinkFeedItem field is set.
    */
+  @java.lang.Override
   public boolean hasSitelinkFeedItem() {
     return extensionCase_ == 2;
   }
@@ -884,6 +907,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.common.SitelinkFeedItem sitelink_feed_item = 2;</code>
    * @return The sitelinkFeedItem.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.SitelinkFeedItem getSitelinkFeedItem() {
     if (extensionCase_ == 2) {
        return (com.google.ads.googleads.v4.common.SitelinkFeedItem) extension_;
@@ -897,6 +921,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v4.common.SitelinkFeedItem sitelink_feed_item = 2;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.SitelinkFeedItemOrBuilder getSitelinkFeedItemOrBuilder() {
     if (extensionCase_ == 2) {
        return (com.google.ads.googleads.v4.common.SitelinkFeedItem) extension_;
@@ -913,6 +938,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.common.StructuredSnippetFeedItem structured_snippet_feed_item = 3;</code>
    * @return Whether the structuredSnippetFeedItem field is set.
    */
+  @java.lang.Override
   public boolean hasStructuredSnippetFeedItem() {
     return extensionCase_ == 3;
   }
@@ -924,6 +950,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.common.StructuredSnippetFeedItem structured_snippet_feed_item = 3;</code>
    * @return The structuredSnippetFeedItem.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.StructuredSnippetFeedItem getStructuredSnippetFeedItem() {
     if (extensionCase_ == 3) {
        return (com.google.ads.googleads.v4.common.StructuredSnippetFeedItem) extension_;
@@ -937,6 +964,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v4.common.StructuredSnippetFeedItem structured_snippet_feed_item = 3;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.StructuredSnippetFeedItemOrBuilder getStructuredSnippetFeedItemOrBuilder() {
     if (extensionCase_ == 3) {
        return (com.google.ads.googleads.v4.common.StructuredSnippetFeedItem) extension_;
@@ -953,6 +981,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.common.AppFeedItem app_feed_item = 7;</code>
    * @return Whether the appFeedItem field is set.
    */
+  @java.lang.Override
   public boolean hasAppFeedItem() {
     return extensionCase_ == 7;
   }
@@ -964,6 +993,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.common.AppFeedItem app_feed_item = 7;</code>
    * @return The appFeedItem.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.AppFeedItem getAppFeedItem() {
     if (extensionCase_ == 7) {
        return (com.google.ads.googleads.v4.common.AppFeedItem) extension_;
@@ -977,6 +1007,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v4.common.AppFeedItem app_feed_item = 7;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.AppFeedItemOrBuilder getAppFeedItemOrBuilder() {
     if (extensionCase_ == 7) {
        return (com.google.ads.googleads.v4.common.AppFeedItem) extension_;
@@ -993,6 +1024,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.common.CallFeedItem call_feed_item = 8;</code>
    * @return Whether the callFeedItem field is set.
    */
+  @java.lang.Override
   public boolean hasCallFeedItem() {
     return extensionCase_ == 8;
   }
@@ -1004,6 +1036,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.common.CallFeedItem call_feed_item = 8;</code>
    * @return The callFeedItem.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.CallFeedItem getCallFeedItem() {
     if (extensionCase_ == 8) {
        return (com.google.ads.googleads.v4.common.CallFeedItem) extension_;
@@ -1017,6 +1050,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v4.common.CallFeedItem call_feed_item = 8;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.CallFeedItemOrBuilder getCallFeedItemOrBuilder() {
     if (extensionCase_ == 8) {
        return (com.google.ads.googleads.v4.common.CallFeedItem) extension_;
@@ -1033,6 +1067,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.common.CalloutFeedItem callout_feed_item = 9;</code>
    * @return Whether the calloutFeedItem field is set.
    */
+  @java.lang.Override
   public boolean hasCalloutFeedItem() {
     return extensionCase_ == 9;
   }
@@ -1044,6 +1079,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.common.CalloutFeedItem callout_feed_item = 9;</code>
    * @return The calloutFeedItem.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.CalloutFeedItem getCalloutFeedItem() {
     if (extensionCase_ == 9) {
        return (com.google.ads.googleads.v4.common.CalloutFeedItem) extension_;
@@ -1057,6 +1093,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v4.common.CalloutFeedItem callout_feed_item = 9;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.CalloutFeedItemOrBuilder getCalloutFeedItemOrBuilder() {
     if (extensionCase_ == 9) {
        return (com.google.ads.googleads.v4.common.CalloutFeedItem) extension_;
@@ -1073,6 +1110,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.common.TextMessageFeedItem text_message_feed_item = 10;</code>
    * @return Whether the textMessageFeedItem field is set.
    */
+  @java.lang.Override
   public boolean hasTextMessageFeedItem() {
     return extensionCase_ == 10;
   }
@@ -1084,6 +1122,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.common.TextMessageFeedItem text_message_feed_item = 10;</code>
    * @return The textMessageFeedItem.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.TextMessageFeedItem getTextMessageFeedItem() {
     if (extensionCase_ == 10) {
        return (com.google.ads.googleads.v4.common.TextMessageFeedItem) extension_;
@@ -1097,6 +1136,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v4.common.TextMessageFeedItem text_message_feed_item = 10;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.TextMessageFeedItemOrBuilder getTextMessageFeedItemOrBuilder() {
     if (extensionCase_ == 10) {
        return (com.google.ads.googleads.v4.common.TextMessageFeedItem) extension_;
@@ -1113,6 +1153,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.common.PriceFeedItem price_feed_item = 11;</code>
    * @return Whether the priceFeedItem field is set.
    */
+  @java.lang.Override
   public boolean hasPriceFeedItem() {
     return extensionCase_ == 11;
   }
@@ -1124,6 +1165,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.common.PriceFeedItem price_feed_item = 11;</code>
    * @return The priceFeedItem.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.PriceFeedItem getPriceFeedItem() {
     if (extensionCase_ == 11) {
        return (com.google.ads.googleads.v4.common.PriceFeedItem) extension_;
@@ -1137,6 +1179,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v4.common.PriceFeedItem price_feed_item = 11;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.PriceFeedItemOrBuilder getPriceFeedItemOrBuilder() {
     if (extensionCase_ == 11) {
        return (com.google.ads.googleads.v4.common.PriceFeedItem) extension_;
@@ -1153,6 +1196,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.common.PromotionFeedItem promotion_feed_item = 12;</code>
    * @return Whether the promotionFeedItem field is set.
    */
+  @java.lang.Override
   public boolean hasPromotionFeedItem() {
     return extensionCase_ == 12;
   }
@@ -1164,6 +1208,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.common.PromotionFeedItem promotion_feed_item = 12;</code>
    * @return The promotionFeedItem.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.PromotionFeedItem getPromotionFeedItem() {
     if (extensionCase_ == 12) {
        return (com.google.ads.googleads.v4.common.PromotionFeedItem) extension_;
@@ -1177,6 +1222,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v4.common.PromotionFeedItem promotion_feed_item = 12;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.PromotionFeedItemOrBuilder getPromotionFeedItemOrBuilder() {
     if (extensionCase_ == 12) {
        return (com.google.ads.googleads.v4.common.PromotionFeedItem) extension_;
@@ -1194,6 +1240,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.common.LocationFeedItem location_feed_item = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the locationFeedItem field is set.
    */
+  @java.lang.Override
   public boolean hasLocationFeedItem() {
     return extensionCase_ == 14;
   }
@@ -1206,6 +1253,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.common.LocationFeedItem location_feed_item = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The locationFeedItem.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.LocationFeedItem getLocationFeedItem() {
     if (extensionCase_ == 14) {
        return (com.google.ads.googleads.v4.common.LocationFeedItem) extension_;
@@ -1220,6 +1268,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v4.common.LocationFeedItem location_feed_item = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.LocationFeedItemOrBuilder getLocationFeedItemOrBuilder() {
     if (extensionCase_ == 14) {
        return (com.google.ads.googleads.v4.common.LocationFeedItem) extension_;
@@ -1238,6 +1287,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.common.AffiliateLocationFeedItem affiliate_location_feed_item = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the affiliateLocationFeedItem field is set.
    */
+  @java.lang.Override
   public boolean hasAffiliateLocationFeedItem() {
     return extensionCase_ == 15;
   }
@@ -1251,6 +1301,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.common.AffiliateLocationFeedItem affiliate_location_feed_item = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The affiliateLocationFeedItem.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.AffiliateLocationFeedItem getAffiliateLocationFeedItem() {
     if (extensionCase_ == 15) {
        return (com.google.ads.googleads.v4.common.AffiliateLocationFeedItem) extension_;
@@ -1266,6 +1317,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v4.common.AffiliateLocationFeedItem affiliate_location_feed_item = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.AffiliateLocationFeedItemOrBuilder getAffiliateLocationFeedItemOrBuilder() {
     if (extensionCase_ == 15) {
        return (com.google.ads.googleads.v4.common.AffiliateLocationFeedItem) extension_;
@@ -1282,6 +1334,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.common.HotelCalloutFeedItem hotel_callout_feed_item = 23;</code>
    * @return Whether the hotelCalloutFeedItem field is set.
    */
+  @java.lang.Override
   public boolean hasHotelCalloutFeedItem() {
     return extensionCase_ == 23;
   }
@@ -1293,6 +1346,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.common.HotelCalloutFeedItem hotel_callout_feed_item = 23;</code>
    * @return The hotelCalloutFeedItem.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.HotelCalloutFeedItem getHotelCalloutFeedItem() {
     if (extensionCase_ == 23) {
        return (com.google.ads.googleads.v4.common.HotelCalloutFeedItem) extension_;
@@ -1306,6 +1360,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v4.common.HotelCalloutFeedItem hotel_callout_feed_item = 23;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.HotelCalloutFeedItemOrBuilder getHotelCalloutFeedItemOrBuilder() {
     if (extensionCase_ == 23) {
        return (com.google.ads.googleads.v4.common.HotelCalloutFeedItem) extension_;
@@ -1322,6 +1377,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue targeted_campaign = 18 [(.google.api.resource_reference) = { ... }</code>
    * @return Whether the targetedCampaign field is set.
    */
+  @java.lang.Override
   public boolean hasTargetedCampaign() {
     return servingResourceTargetingCase_ == 18;
   }
@@ -1333,6 +1389,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue targeted_campaign = 18 [(.google.api.resource_reference) = { ... }</code>
    * @return The targetedCampaign.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getTargetedCampaign() {
     if (servingResourceTargetingCase_ == 18) {
        return (com.google.protobuf.StringValue) servingResourceTargeting_;
@@ -1346,6 +1403,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue targeted_campaign = 18 [(.google.api.resource_reference) = { ... }</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getTargetedCampaignOrBuilder() {
     if (servingResourceTargetingCase_ == 18) {
        return (com.google.protobuf.StringValue) servingResourceTargeting_;
@@ -1362,6 +1420,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue targeted_ad_group = 19 [(.google.api.resource_reference) = { ... }</code>
    * @return Whether the targetedAdGroup field is set.
    */
+  @java.lang.Override
   public boolean hasTargetedAdGroup() {
     return servingResourceTargetingCase_ == 19;
   }
@@ -1373,6 +1432,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue targeted_ad_group = 19 [(.google.api.resource_reference) = { ... }</code>
    * @return The targetedAdGroup.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getTargetedAdGroup() {
     if (servingResourceTargetingCase_ == 19) {
        return (com.google.protobuf.StringValue) servingResourceTargeting_;
@@ -1386,6 +1446,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue targeted_ad_group = 19 [(.google.api.resource_reference) = { ... }</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getTargetedAdGroupOrBuilder() {
     if (servingResourceTargetingCase_ == 19) {
        return (com.google.protobuf.StringValue) servingResourceTargeting_;
@@ -2627,7 +2688,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.ExtensionTypeEnum.ExtensionType extension_type = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The enum numeric value on the wire for extensionType.
      */
-    public int getExtensionTypeValue() {
+    @java.lang.Override public int getExtensionTypeValue() {
       return extensionType_;
     }
     /**
@@ -2641,6 +2702,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setExtensionTypeValue(int value) {
+      
       extensionType_ = value;
       onChanged();
       return this;
@@ -2654,6 +2716,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.ExtensionTypeEnum.ExtensionType extension_type = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The extensionType.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.enums.ExtensionTypeEnum.ExtensionType getExtensionType() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v4.enums.ExtensionTypeEnum.ExtensionType result = com.google.ads.googleads.v4.enums.ExtensionTypeEnum.ExtensionType.valueOf(extensionType_);
@@ -3415,7 +3478,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.FeedItemTargetDeviceEnum.FeedItemTargetDevice device = 17;</code>
      * @return The enum numeric value on the wire for device.
      */
-    public int getDeviceValue() {
+    @java.lang.Override public int getDeviceValue() {
       return device_;
     }
     /**
@@ -3428,6 +3491,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setDeviceValue(int value) {
+      
       device_ = value;
       onChanged();
       return this;
@@ -3440,6 +3504,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.FeedItemTargetDeviceEnum.FeedItemTargetDevice device = 17;</code>
      * @return The device.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.enums.FeedItemTargetDeviceEnum.FeedItemTargetDevice getDevice() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v4.enums.FeedItemTargetDeviceEnum.FeedItemTargetDevice result = com.google.ads.googleads.v4.enums.FeedItemTargetDeviceEnum.FeedItemTargetDevice.valueOf(device_);
@@ -3798,7 +3863,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.FeedItemStatusEnum.FeedItemStatus status = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The enum numeric value on the wire for status.
      */
-    public int getStatusValue() {
+    @java.lang.Override public int getStatusValue() {
       return status_;
     }
     /**
@@ -3812,6 +3877,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setStatusValue(int value) {
+      
       status_ = value;
       onChanged();
       return this;
@@ -3825,6 +3891,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.FeedItemStatusEnum.FeedItemStatus status = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The status.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.enums.FeedItemStatusEnum.FeedItemStatus getStatus() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v4.enums.FeedItemStatusEnum.FeedItemStatus result = com.google.ads.googleads.v4.enums.FeedItemStatusEnum.FeedItemStatus.valueOf(status_);
@@ -3875,6 +3942,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.common.SitelinkFeedItem sitelink_feed_item = 2;</code>
      * @return Whether the sitelinkFeedItem field is set.
      */
+    @java.lang.Override
     public boolean hasSitelinkFeedItem() {
       return extensionCase_ == 2;
     }
@@ -3886,6 +3954,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.common.SitelinkFeedItem sitelink_feed_item = 2;</code>
      * @return The sitelinkFeedItem.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.common.SitelinkFeedItem getSitelinkFeedItem() {
       if (sitelinkFeedItemBuilder_ == null) {
         if (extensionCase_ == 2) {
@@ -4003,6 +4072,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v4.common.SitelinkFeedItem sitelink_feed_item = 2;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.common.SitelinkFeedItemOrBuilder getSitelinkFeedItemOrBuilder() {
       if ((extensionCase_ == 2) && (sitelinkFeedItemBuilder_ != null)) {
         return sitelinkFeedItemBuilder_.getMessageOrBuilder();
@@ -4049,6 +4119,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.common.StructuredSnippetFeedItem structured_snippet_feed_item = 3;</code>
      * @return Whether the structuredSnippetFeedItem field is set.
      */
+    @java.lang.Override
     public boolean hasStructuredSnippetFeedItem() {
       return extensionCase_ == 3;
     }
@@ -4060,6 +4131,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.common.StructuredSnippetFeedItem structured_snippet_feed_item = 3;</code>
      * @return The structuredSnippetFeedItem.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.common.StructuredSnippetFeedItem getStructuredSnippetFeedItem() {
       if (structuredSnippetFeedItemBuilder_ == null) {
         if (extensionCase_ == 3) {
@@ -4177,6 +4249,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v4.common.StructuredSnippetFeedItem structured_snippet_feed_item = 3;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.common.StructuredSnippetFeedItemOrBuilder getStructuredSnippetFeedItemOrBuilder() {
       if ((extensionCase_ == 3) && (structuredSnippetFeedItemBuilder_ != null)) {
         return structuredSnippetFeedItemBuilder_.getMessageOrBuilder();
@@ -4223,6 +4296,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.common.AppFeedItem app_feed_item = 7;</code>
      * @return Whether the appFeedItem field is set.
      */
+    @java.lang.Override
     public boolean hasAppFeedItem() {
       return extensionCase_ == 7;
     }
@@ -4234,6 +4308,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.common.AppFeedItem app_feed_item = 7;</code>
      * @return The appFeedItem.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.common.AppFeedItem getAppFeedItem() {
       if (appFeedItemBuilder_ == null) {
         if (extensionCase_ == 7) {
@@ -4351,6 +4426,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v4.common.AppFeedItem app_feed_item = 7;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.common.AppFeedItemOrBuilder getAppFeedItemOrBuilder() {
       if ((extensionCase_ == 7) && (appFeedItemBuilder_ != null)) {
         return appFeedItemBuilder_.getMessageOrBuilder();
@@ -4397,6 +4473,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.common.CallFeedItem call_feed_item = 8;</code>
      * @return Whether the callFeedItem field is set.
      */
+    @java.lang.Override
     public boolean hasCallFeedItem() {
       return extensionCase_ == 8;
     }
@@ -4408,6 +4485,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.common.CallFeedItem call_feed_item = 8;</code>
      * @return The callFeedItem.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.common.CallFeedItem getCallFeedItem() {
       if (callFeedItemBuilder_ == null) {
         if (extensionCase_ == 8) {
@@ -4525,6 +4603,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v4.common.CallFeedItem call_feed_item = 8;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.common.CallFeedItemOrBuilder getCallFeedItemOrBuilder() {
       if ((extensionCase_ == 8) && (callFeedItemBuilder_ != null)) {
         return callFeedItemBuilder_.getMessageOrBuilder();
@@ -4571,6 +4650,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.common.CalloutFeedItem callout_feed_item = 9;</code>
      * @return Whether the calloutFeedItem field is set.
      */
+    @java.lang.Override
     public boolean hasCalloutFeedItem() {
       return extensionCase_ == 9;
     }
@@ -4582,6 +4662,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.common.CalloutFeedItem callout_feed_item = 9;</code>
      * @return The calloutFeedItem.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.common.CalloutFeedItem getCalloutFeedItem() {
       if (calloutFeedItemBuilder_ == null) {
         if (extensionCase_ == 9) {
@@ -4699,6 +4780,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v4.common.CalloutFeedItem callout_feed_item = 9;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.common.CalloutFeedItemOrBuilder getCalloutFeedItemOrBuilder() {
       if ((extensionCase_ == 9) && (calloutFeedItemBuilder_ != null)) {
         return calloutFeedItemBuilder_.getMessageOrBuilder();
@@ -4745,6 +4827,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.common.TextMessageFeedItem text_message_feed_item = 10;</code>
      * @return Whether the textMessageFeedItem field is set.
      */
+    @java.lang.Override
     public boolean hasTextMessageFeedItem() {
       return extensionCase_ == 10;
     }
@@ -4756,6 +4839,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.common.TextMessageFeedItem text_message_feed_item = 10;</code>
      * @return The textMessageFeedItem.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.common.TextMessageFeedItem getTextMessageFeedItem() {
       if (textMessageFeedItemBuilder_ == null) {
         if (extensionCase_ == 10) {
@@ -4873,6 +4957,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v4.common.TextMessageFeedItem text_message_feed_item = 10;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.common.TextMessageFeedItemOrBuilder getTextMessageFeedItemOrBuilder() {
       if ((extensionCase_ == 10) && (textMessageFeedItemBuilder_ != null)) {
         return textMessageFeedItemBuilder_.getMessageOrBuilder();
@@ -4919,6 +5004,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.common.PriceFeedItem price_feed_item = 11;</code>
      * @return Whether the priceFeedItem field is set.
      */
+    @java.lang.Override
     public boolean hasPriceFeedItem() {
       return extensionCase_ == 11;
     }
@@ -4930,6 +5016,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.common.PriceFeedItem price_feed_item = 11;</code>
      * @return The priceFeedItem.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.common.PriceFeedItem getPriceFeedItem() {
       if (priceFeedItemBuilder_ == null) {
         if (extensionCase_ == 11) {
@@ -5047,6 +5134,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v4.common.PriceFeedItem price_feed_item = 11;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.common.PriceFeedItemOrBuilder getPriceFeedItemOrBuilder() {
       if ((extensionCase_ == 11) && (priceFeedItemBuilder_ != null)) {
         return priceFeedItemBuilder_.getMessageOrBuilder();
@@ -5093,6 +5181,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.common.PromotionFeedItem promotion_feed_item = 12;</code>
      * @return Whether the promotionFeedItem field is set.
      */
+    @java.lang.Override
     public boolean hasPromotionFeedItem() {
       return extensionCase_ == 12;
     }
@@ -5104,6 +5193,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.common.PromotionFeedItem promotion_feed_item = 12;</code>
      * @return The promotionFeedItem.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.common.PromotionFeedItem getPromotionFeedItem() {
       if (promotionFeedItemBuilder_ == null) {
         if (extensionCase_ == 12) {
@@ -5221,6 +5311,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v4.common.PromotionFeedItem promotion_feed_item = 12;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.common.PromotionFeedItemOrBuilder getPromotionFeedItemOrBuilder() {
       if ((extensionCase_ == 12) && (promotionFeedItemBuilder_ != null)) {
         return promotionFeedItemBuilder_.getMessageOrBuilder();
@@ -5268,6 +5359,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.common.LocationFeedItem location_feed_item = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the locationFeedItem field is set.
      */
+    @java.lang.Override
     public boolean hasLocationFeedItem() {
       return extensionCase_ == 14;
     }
@@ -5280,6 +5372,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.common.LocationFeedItem location_feed_item = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The locationFeedItem.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.common.LocationFeedItem getLocationFeedItem() {
       if (locationFeedItemBuilder_ == null) {
         if (extensionCase_ == 14) {
@@ -5403,6 +5496,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v4.common.LocationFeedItem location_feed_item = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.common.LocationFeedItemOrBuilder getLocationFeedItemOrBuilder() {
       if ((extensionCase_ == 14) && (locationFeedItemBuilder_ != null)) {
         return locationFeedItemBuilder_.getMessageOrBuilder();
@@ -5452,6 +5546,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.common.AffiliateLocationFeedItem affiliate_location_feed_item = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the affiliateLocationFeedItem field is set.
      */
+    @java.lang.Override
     public boolean hasAffiliateLocationFeedItem() {
       return extensionCase_ == 15;
     }
@@ -5465,6 +5560,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.common.AffiliateLocationFeedItem affiliate_location_feed_item = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The affiliateLocationFeedItem.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.common.AffiliateLocationFeedItem getAffiliateLocationFeedItem() {
       if (affiliateLocationFeedItemBuilder_ == null) {
         if (extensionCase_ == 15) {
@@ -5594,6 +5690,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v4.common.AffiliateLocationFeedItem affiliate_location_feed_item = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.common.AffiliateLocationFeedItemOrBuilder getAffiliateLocationFeedItemOrBuilder() {
       if ((extensionCase_ == 15) && (affiliateLocationFeedItemBuilder_ != null)) {
         return affiliateLocationFeedItemBuilder_.getMessageOrBuilder();
@@ -5642,6 +5739,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.common.HotelCalloutFeedItem hotel_callout_feed_item = 23;</code>
      * @return Whether the hotelCalloutFeedItem field is set.
      */
+    @java.lang.Override
     public boolean hasHotelCalloutFeedItem() {
       return extensionCase_ == 23;
     }
@@ -5653,6 +5751,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.common.HotelCalloutFeedItem hotel_callout_feed_item = 23;</code>
      * @return The hotelCalloutFeedItem.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.common.HotelCalloutFeedItem getHotelCalloutFeedItem() {
       if (hotelCalloutFeedItemBuilder_ == null) {
         if (extensionCase_ == 23) {
@@ -5770,6 +5869,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v4.common.HotelCalloutFeedItem hotel_callout_feed_item = 23;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.common.HotelCalloutFeedItemOrBuilder getHotelCalloutFeedItemOrBuilder() {
       if ((extensionCase_ == 23) && (hotelCalloutFeedItemBuilder_ != null)) {
         return hotelCalloutFeedItemBuilder_.getMessageOrBuilder();
@@ -5816,6 +5916,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.StringValue targeted_campaign = 18 [(.google.api.resource_reference) = { ... }</code>
      * @return Whether the targetedCampaign field is set.
      */
+    @java.lang.Override
     public boolean hasTargetedCampaign() {
       return servingResourceTargetingCase_ == 18;
     }
@@ -5827,6 +5928,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.StringValue targeted_campaign = 18 [(.google.api.resource_reference) = { ... }</code>
      * @return The targetedCampaign.
      */
+    @java.lang.Override
     public com.google.protobuf.StringValue getTargetedCampaign() {
       if (targetedCampaignBuilder_ == null) {
         if (servingResourceTargetingCase_ == 18) {
@@ -5944,6 +6046,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.protobuf.StringValue targeted_campaign = 18 [(.google.api.resource_reference) = { ... }</code>
      */
+    @java.lang.Override
     public com.google.protobuf.StringValueOrBuilder getTargetedCampaignOrBuilder() {
       if ((servingResourceTargetingCase_ == 18) && (targetedCampaignBuilder_ != null)) {
         return targetedCampaignBuilder_.getMessageOrBuilder();
@@ -5990,6 +6093,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.StringValue targeted_ad_group = 19 [(.google.api.resource_reference) = { ... }</code>
      * @return Whether the targetedAdGroup field is set.
      */
+    @java.lang.Override
     public boolean hasTargetedAdGroup() {
       return servingResourceTargetingCase_ == 19;
     }
@@ -6001,6 +6105,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.StringValue targeted_ad_group = 19 [(.google.api.resource_reference) = { ... }</code>
      * @return The targetedAdGroup.
      */
+    @java.lang.Override
     public com.google.protobuf.StringValue getTargetedAdGroup() {
       if (targetedAdGroupBuilder_ == null) {
         if (servingResourceTargetingCase_ == 19) {
@@ -6118,6 +6223,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.protobuf.StringValue targeted_ad_group = 19 [(.google.api.resource_reference) = { ... }</code>
      */
+    @java.lang.Override
     public com.google.protobuf.StringValueOrBuilder getTargetedAdGroupOrBuilder() {
       if ((servingResourceTargetingCase_ == 19) && (targetedAdGroupBuilder_ != null)) {
         return targetedAdGroupBuilder_.getMessageOrBuilder();

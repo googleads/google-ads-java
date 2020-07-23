@@ -13,6 +13,7 @@ public interface CustomAffinityInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue custom_affinity = 1;</code>
+   * @return Whether the customAffinity field is set.
    */
   boolean hasCustomAffinity();
   /**
@@ -21,6 +22,7 @@ public interface CustomAffinityInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue custom_affinity = 1;</code>
+   * @return The customAffinity.
    */
   com.google.protobuf.StringValue getCustomAffinity();
   /**

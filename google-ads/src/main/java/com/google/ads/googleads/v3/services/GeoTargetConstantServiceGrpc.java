@@ -21,7 +21,7 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.10.0)",
+    value = "by gRPC proto compiler",
     comments = "Source: google/ads/googleads/v3/services/geo_target_constant_service.proto")
 public final class GeoTargetConstantServiceGrpc {
 
@@ -30,86 +30,80 @@ public final class GeoTargetConstantServiceGrpc {
   public static final String SERVICE_NAME = "google.ads.googleads.v3.services.GeoTargetConstantService";
 
   // Static method descriptors that strictly reflect the proto.
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  @java.lang.Deprecated // Use {@link #getGetGeoTargetConstantMethod()} instead. 
-  public static final io.grpc.MethodDescriptor<com.google.ads.googleads.v3.services.GetGeoTargetConstantRequest,
-      com.google.ads.googleads.v3.resources.GeoTargetConstant> METHOD_GET_GEO_TARGET_CONSTANT = getGetGeoTargetConstantMethodHelper();
-
   private static volatile io.grpc.MethodDescriptor<com.google.ads.googleads.v3.services.GetGeoTargetConstantRequest,
       com.google.ads.googleads.v3.resources.GeoTargetConstant> getGetGeoTargetConstantMethod;
 
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetGeoTargetConstant",
+      requestType = com.google.ads.googleads.v3.services.GetGeoTargetConstantRequest.class,
+      responseType = com.google.ads.googleads.v3.resources.GeoTargetConstant.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<com.google.ads.googleads.v3.services.GetGeoTargetConstantRequest,
       com.google.ads.googleads.v3.resources.GeoTargetConstant> getGetGeoTargetConstantMethod() {
-    return getGetGeoTargetConstantMethodHelper();
-  }
-
-  private static io.grpc.MethodDescriptor<com.google.ads.googleads.v3.services.GetGeoTargetConstantRequest,
-      com.google.ads.googleads.v3.resources.GeoTargetConstant> getGetGeoTargetConstantMethodHelper() {
     io.grpc.MethodDescriptor<com.google.ads.googleads.v3.services.GetGeoTargetConstantRequest, com.google.ads.googleads.v3.resources.GeoTargetConstant> getGetGeoTargetConstantMethod;
     if ((getGetGeoTargetConstantMethod = GeoTargetConstantServiceGrpc.getGetGeoTargetConstantMethod) == null) {
       synchronized (GeoTargetConstantServiceGrpc.class) {
         if ((getGetGeoTargetConstantMethod = GeoTargetConstantServiceGrpc.getGetGeoTargetConstantMethod) == null) {
-          GeoTargetConstantServiceGrpc.getGetGeoTargetConstantMethod = getGetGeoTargetConstantMethod = 
+          GeoTargetConstantServiceGrpc.getGetGeoTargetConstantMethod = getGetGeoTargetConstantMethod =
               io.grpc.MethodDescriptor.<com.google.ads.googleads.v3.services.GetGeoTargetConstantRequest, com.google.ads.googleads.v3.resources.GeoTargetConstant>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "google.ads.googleads.v3.services.GeoTargetConstantService", "GetGeoTargetConstant"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetGeoTargetConstant"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v3.services.GetGeoTargetConstantRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v3.resources.GeoTargetConstant.getDefaultInstance()))
-                  .setSchemaDescriptor(new GeoTargetConstantServiceMethodDescriptorSupplier("GetGeoTargetConstant"))
-                  .build();
-          }
+              .setSchemaDescriptor(new GeoTargetConstantServiceMethodDescriptorSupplier("GetGeoTargetConstant"))
+              .build();
         }
-     }
-     return getGetGeoTargetConstantMethod;
+      }
+    }
+    return getGetGeoTargetConstantMethod;
   }
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  @java.lang.Deprecated // Use {@link #getSuggestGeoTargetConstantsMethod()} instead. 
-  public static final io.grpc.MethodDescriptor<com.google.ads.googleads.v3.services.SuggestGeoTargetConstantsRequest,
-      com.google.ads.googleads.v3.services.SuggestGeoTargetConstantsResponse> METHOD_SUGGEST_GEO_TARGET_CONSTANTS = getSuggestGeoTargetConstantsMethodHelper();
 
   private static volatile io.grpc.MethodDescriptor<com.google.ads.googleads.v3.services.SuggestGeoTargetConstantsRequest,
       com.google.ads.googleads.v3.services.SuggestGeoTargetConstantsResponse> getSuggestGeoTargetConstantsMethod;
 
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "SuggestGeoTargetConstants",
+      requestType = com.google.ads.googleads.v3.services.SuggestGeoTargetConstantsRequest.class,
+      responseType = com.google.ads.googleads.v3.services.SuggestGeoTargetConstantsResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<com.google.ads.googleads.v3.services.SuggestGeoTargetConstantsRequest,
       com.google.ads.googleads.v3.services.SuggestGeoTargetConstantsResponse> getSuggestGeoTargetConstantsMethod() {
-    return getSuggestGeoTargetConstantsMethodHelper();
-  }
-
-  private static io.grpc.MethodDescriptor<com.google.ads.googleads.v3.services.SuggestGeoTargetConstantsRequest,
-      com.google.ads.googleads.v3.services.SuggestGeoTargetConstantsResponse> getSuggestGeoTargetConstantsMethodHelper() {
     io.grpc.MethodDescriptor<com.google.ads.googleads.v3.services.SuggestGeoTargetConstantsRequest, com.google.ads.googleads.v3.services.SuggestGeoTargetConstantsResponse> getSuggestGeoTargetConstantsMethod;
     if ((getSuggestGeoTargetConstantsMethod = GeoTargetConstantServiceGrpc.getSuggestGeoTargetConstantsMethod) == null) {
       synchronized (GeoTargetConstantServiceGrpc.class) {
         if ((getSuggestGeoTargetConstantsMethod = GeoTargetConstantServiceGrpc.getSuggestGeoTargetConstantsMethod) == null) {
-          GeoTargetConstantServiceGrpc.getSuggestGeoTargetConstantsMethod = getSuggestGeoTargetConstantsMethod = 
+          GeoTargetConstantServiceGrpc.getSuggestGeoTargetConstantsMethod = getSuggestGeoTargetConstantsMethod =
               io.grpc.MethodDescriptor.<com.google.ads.googleads.v3.services.SuggestGeoTargetConstantsRequest, com.google.ads.googleads.v3.services.SuggestGeoTargetConstantsResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "google.ads.googleads.v3.services.GeoTargetConstantService", "SuggestGeoTargetConstants"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "SuggestGeoTargetConstants"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v3.services.SuggestGeoTargetConstantsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v3.services.SuggestGeoTargetConstantsResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new GeoTargetConstantServiceMethodDescriptorSupplier("SuggestGeoTargetConstants"))
-                  .build();
-          }
+              .setSchemaDescriptor(new GeoTargetConstantServiceMethodDescriptorSupplier("SuggestGeoTargetConstants"))
+              .build();
         }
-     }
-     return getSuggestGeoTargetConstantsMethod;
+      }
+    }
+    return getSuggestGeoTargetConstantsMethod;
   }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static GeoTargetConstantServiceStub newStub(io.grpc.Channel channel) {
-    return new GeoTargetConstantServiceStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<GeoTargetConstantServiceStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<GeoTargetConstantServiceStub>() {
+        @java.lang.Override
+        public GeoTargetConstantServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new GeoTargetConstantServiceStub(channel, callOptions);
+        }
+      };
+    return GeoTargetConstantServiceStub.newStub(factory, channel);
   }
 
   /**
@@ -117,7 +111,14 @@ public final class GeoTargetConstantServiceGrpc {
    */
   public static GeoTargetConstantServiceBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new GeoTargetConstantServiceBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<GeoTargetConstantServiceBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<GeoTargetConstantServiceBlockingStub>() {
+        @java.lang.Override
+        public GeoTargetConstantServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new GeoTargetConstantServiceBlockingStub(channel, callOptions);
+        }
+      };
+    return GeoTargetConstantServiceBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -125,7 +126,14 @@ public final class GeoTargetConstantServiceGrpc {
    */
   public static GeoTargetConstantServiceFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new GeoTargetConstantServiceFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<GeoTargetConstantServiceFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<GeoTargetConstantServiceFutureStub>() {
+        @java.lang.Override
+        public GeoTargetConstantServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new GeoTargetConstantServiceFutureStub(channel, callOptions);
+        }
+      };
+    return GeoTargetConstantServiceFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -142,7 +150,7 @@ public final class GeoTargetConstantServiceGrpc {
      */
     public void getGeoTargetConstant(com.google.ads.googleads.v3.services.GetGeoTargetConstantRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v3.resources.GeoTargetConstant> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetGeoTargetConstantMethodHelper(), responseObserver);
+      asyncUnimplementedUnaryCall(getGetGeoTargetConstantMethod(), responseObserver);
     }
 
     /**
@@ -152,20 +160,20 @@ public final class GeoTargetConstantServiceGrpc {
      */
     public void suggestGeoTargetConstants(com.google.ads.googleads.v3.services.SuggestGeoTargetConstantsRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v3.services.SuggestGeoTargetConstantsResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getSuggestGeoTargetConstantsMethodHelper(), responseObserver);
+      asyncUnimplementedUnaryCall(getSuggestGeoTargetConstantsMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
-            getGetGeoTargetConstantMethodHelper(),
+            getGetGeoTargetConstantMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 com.google.ads.googleads.v3.services.GetGeoTargetConstantRequest,
                 com.google.ads.googleads.v3.resources.GeoTargetConstant>(
                   this, METHODID_GET_GEO_TARGET_CONSTANT)))
           .addMethod(
-            getSuggestGeoTargetConstantsMethodHelper(),
+            getSuggestGeoTargetConstantsMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 com.google.ads.googleads.v3.services.SuggestGeoTargetConstantsRequest,
@@ -180,19 +188,15 @@ public final class GeoTargetConstantServiceGrpc {
    * Service to fetch geo target constants.
    * </pre>
    */
-  public static final class GeoTargetConstantServiceStub extends io.grpc.stub.AbstractStub<GeoTargetConstantServiceStub> {
-    private GeoTargetConstantServiceStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private GeoTargetConstantServiceStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class GeoTargetConstantServiceStub extends io.grpc.stub.AbstractAsyncStub<GeoTargetConstantServiceStub> {
+    private GeoTargetConstantServiceStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected GeoTargetConstantServiceStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected GeoTargetConstantServiceStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new GeoTargetConstantServiceStub(channel, callOptions);
     }
 
@@ -204,7 +208,7 @@ public final class GeoTargetConstantServiceGrpc {
     public void getGeoTargetConstant(com.google.ads.googleads.v3.services.GetGeoTargetConstantRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v3.resources.GeoTargetConstant> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(getGetGeoTargetConstantMethodHelper(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getGetGeoTargetConstantMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -215,7 +219,7 @@ public final class GeoTargetConstantServiceGrpc {
     public void suggestGeoTargetConstants(com.google.ads.googleads.v3.services.SuggestGeoTargetConstantsRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v3.services.SuggestGeoTargetConstantsResponse> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(getSuggestGeoTargetConstantsMethodHelper(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getSuggestGeoTargetConstantsMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -224,19 +228,15 @@ public final class GeoTargetConstantServiceGrpc {
    * Service to fetch geo target constants.
    * </pre>
    */
-  public static final class GeoTargetConstantServiceBlockingStub extends io.grpc.stub.AbstractStub<GeoTargetConstantServiceBlockingStub> {
-    private GeoTargetConstantServiceBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private GeoTargetConstantServiceBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class GeoTargetConstantServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<GeoTargetConstantServiceBlockingStub> {
+    private GeoTargetConstantServiceBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected GeoTargetConstantServiceBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected GeoTargetConstantServiceBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new GeoTargetConstantServiceBlockingStub(channel, callOptions);
     }
 
@@ -247,7 +247,7 @@ public final class GeoTargetConstantServiceGrpc {
      */
     public com.google.ads.googleads.v3.resources.GeoTargetConstant getGeoTargetConstant(com.google.ads.googleads.v3.services.GetGeoTargetConstantRequest request) {
       return blockingUnaryCall(
-          getChannel(), getGetGeoTargetConstantMethodHelper(), getCallOptions(), request);
+          getChannel(), getGetGeoTargetConstantMethod(), getCallOptions(), request);
     }
 
     /**
@@ -257,7 +257,7 @@ public final class GeoTargetConstantServiceGrpc {
      */
     public com.google.ads.googleads.v3.services.SuggestGeoTargetConstantsResponse suggestGeoTargetConstants(com.google.ads.googleads.v3.services.SuggestGeoTargetConstantsRequest request) {
       return blockingUnaryCall(
-          getChannel(), getSuggestGeoTargetConstantsMethodHelper(), getCallOptions(), request);
+          getChannel(), getSuggestGeoTargetConstantsMethod(), getCallOptions(), request);
     }
   }
 
@@ -266,19 +266,15 @@ public final class GeoTargetConstantServiceGrpc {
    * Service to fetch geo target constants.
    * </pre>
    */
-  public static final class GeoTargetConstantServiceFutureStub extends io.grpc.stub.AbstractStub<GeoTargetConstantServiceFutureStub> {
-    private GeoTargetConstantServiceFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private GeoTargetConstantServiceFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class GeoTargetConstantServiceFutureStub extends io.grpc.stub.AbstractFutureStub<GeoTargetConstantServiceFutureStub> {
+    private GeoTargetConstantServiceFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected GeoTargetConstantServiceFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected GeoTargetConstantServiceFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new GeoTargetConstantServiceFutureStub(channel, callOptions);
     }
 
@@ -290,7 +286,7 @@ public final class GeoTargetConstantServiceGrpc {
     public com.google.common.util.concurrent.ListenableFuture<com.google.ads.googleads.v3.resources.GeoTargetConstant> getGeoTargetConstant(
         com.google.ads.googleads.v3.services.GetGeoTargetConstantRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(getGetGeoTargetConstantMethodHelper(), getCallOptions()), request);
+          getChannel().newCall(getGetGeoTargetConstantMethod(), getCallOptions()), request);
     }
 
     /**
@@ -301,7 +297,7 @@ public final class GeoTargetConstantServiceGrpc {
     public com.google.common.util.concurrent.ListenableFuture<com.google.ads.googleads.v3.services.SuggestGeoTargetConstantsResponse> suggestGeoTargetConstants(
         com.google.ads.googleads.v3.services.SuggestGeoTargetConstantsRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(getSuggestGeoTargetConstantsMethodHelper(), getCallOptions()), request);
+          getChannel().newCall(getSuggestGeoTargetConstantsMethod(), getCallOptions()), request);
     }
   }
 
@@ -394,8 +390,8 @@ public final class GeoTargetConstantServiceGrpc {
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new GeoTargetConstantServiceFileDescriptorSupplier())
-              .addMethod(getGetGeoTargetConstantMethodHelper())
-              .addMethod(getSuggestGeoTargetConstantsMethodHelper())
+              .addMethod(getGetGeoTargetConstantMethod())
+              .addMethod(getSuggestGeoTargetConstantsMethod())
               .build();
         }
       }

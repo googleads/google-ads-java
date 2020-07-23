@@ -21,7 +21,7 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.10.0)",
+    value = "by gRPC proto compiler",
     comments = "Source: google/ads/googleads/v1/services/geographic_view_service.proto")
 public final class GeographicViewServiceGrpc {
 
@@ -30,49 +30,49 @@ public final class GeographicViewServiceGrpc {
   public static final String SERVICE_NAME = "google.ads.googleads.v1.services.GeographicViewService";
 
   // Static method descriptors that strictly reflect the proto.
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  @java.lang.Deprecated // Use {@link #getGetGeographicViewMethod()} instead. 
-  public static final io.grpc.MethodDescriptor<com.google.ads.googleads.v1.services.GetGeographicViewRequest,
-      com.google.ads.googleads.v1.resources.GeographicView> METHOD_GET_GEOGRAPHIC_VIEW = getGetGeographicViewMethodHelper();
-
   private static volatile io.grpc.MethodDescriptor<com.google.ads.googleads.v1.services.GetGeographicViewRequest,
       com.google.ads.googleads.v1.resources.GeographicView> getGetGeographicViewMethod;
 
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetGeographicView",
+      requestType = com.google.ads.googleads.v1.services.GetGeographicViewRequest.class,
+      responseType = com.google.ads.googleads.v1.resources.GeographicView.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<com.google.ads.googleads.v1.services.GetGeographicViewRequest,
       com.google.ads.googleads.v1.resources.GeographicView> getGetGeographicViewMethod() {
-    return getGetGeographicViewMethodHelper();
-  }
-
-  private static io.grpc.MethodDescriptor<com.google.ads.googleads.v1.services.GetGeographicViewRequest,
-      com.google.ads.googleads.v1.resources.GeographicView> getGetGeographicViewMethodHelper() {
     io.grpc.MethodDescriptor<com.google.ads.googleads.v1.services.GetGeographicViewRequest, com.google.ads.googleads.v1.resources.GeographicView> getGetGeographicViewMethod;
     if ((getGetGeographicViewMethod = GeographicViewServiceGrpc.getGetGeographicViewMethod) == null) {
       synchronized (GeographicViewServiceGrpc.class) {
         if ((getGetGeographicViewMethod = GeographicViewServiceGrpc.getGetGeographicViewMethod) == null) {
-          GeographicViewServiceGrpc.getGetGeographicViewMethod = getGetGeographicViewMethod = 
+          GeographicViewServiceGrpc.getGetGeographicViewMethod = getGetGeographicViewMethod =
               io.grpc.MethodDescriptor.<com.google.ads.googleads.v1.services.GetGeographicViewRequest, com.google.ads.googleads.v1.resources.GeographicView>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "google.ads.googleads.v1.services.GeographicViewService", "GetGeographicView"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetGeographicView"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v1.services.GetGeographicViewRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v1.resources.GeographicView.getDefaultInstance()))
-                  .setSchemaDescriptor(new GeographicViewServiceMethodDescriptorSupplier("GetGeographicView"))
-                  .build();
-          }
+              .setSchemaDescriptor(new GeographicViewServiceMethodDescriptorSupplier("GetGeographicView"))
+              .build();
         }
-     }
-     return getGetGeographicViewMethod;
+      }
+    }
+    return getGetGeographicViewMethod;
   }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static GeographicViewServiceStub newStub(io.grpc.Channel channel) {
-    return new GeographicViewServiceStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<GeographicViewServiceStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<GeographicViewServiceStub>() {
+        @java.lang.Override
+        public GeographicViewServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new GeographicViewServiceStub(channel, callOptions);
+        }
+      };
+    return GeographicViewServiceStub.newStub(factory, channel);
   }
 
   /**
@@ -80,7 +80,14 @@ public final class GeographicViewServiceGrpc {
    */
   public static GeographicViewServiceBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new GeographicViewServiceBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<GeographicViewServiceBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<GeographicViewServiceBlockingStub>() {
+        @java.lang.Override
+        public GeographicViewServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new GeographicViewServiceBlockingStub(channel, callOptions);
+        }
+      };
+    return GeographicViewServiceBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -88,7 +95,14 @@ public final class GeographicViewServiceGrpc {
    */
   public static GeographicViewServiceFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new GeographicViewServiceFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<GeographicViewServiceFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<GeographicViewServiceFutureStub>() {
+        @java.lang.Override
+        public GeographicViewServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new GeographicViewServiceFutureStub(channel, callOptions);
+        }
+      };
+    return GeographicViewServiceFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -105,13 +119,13 @@ public final class GeographicViewServiceGrpc {
      */
     public void getGeographicView(com.google.ads.googleads.v1.services.GetGeographicViewRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v1.resources.GeographicView> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetGeographicViewMethodHelper(), responseObserver);
+      asyncUnimplementedUnaryCall(getGetGeographicViewMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
-            getGetGeographicViewMethodHelper(),
+            getGetGeographicViewMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 com.google.ads.googleads.v1.services.GetGeographicViewRequest,
@@ -126,19 +140,15 @@ public final class GeographicViewServiceGrpc {
    * Service to manage geographic views.
    * </pre>
    */
-  public static final class GeographicViewServiceStub extends io.grpc.stub.AbstractStub<GeographicViewServiceStub> {
-    private GeographicViewServiceStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private GeographicViewServiceStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class GeographicViewServiceStub extends io.grpc.stub.AbstractAsyncStub<GeographicViewServiceStub> {
+    private GeographicViewServiceStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected GeographicViewServiceStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected GeographicViewServiceStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new GeographicViewServiceStub(channel, callOptions);
     }
 
@@ -150,7 +160,7 @@ public final class GeographicViewServiceGrpc {
     public void getGeographicView(com.google.ads.googleads.v1.services.GetGeographicViewRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v1.resources.GeographicView> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(getGetGeographicViewMethodHelper(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getGetGeographicViewMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -159,19 +169,15 @@ public final class GeographicViewServiceGrpc {
    * Service to manage geographic views.
    * </pre>
    */
-  public static final class GeographicViewServiceBlockingStub extends io.grpc.stub.AbstractStub<GeographicViewServiceBlockingStub> {
-    private GeographicViewServiceBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private GeographicViewServiceBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class GeographicViewServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<GeographicViewServiceBlockingStub> {
+    private GeographicViewServiceBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected GeographicViewServiceBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected GeographicViewServiceBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new GeographicViewServiceBlockingStub(channel, callOptions);
     }
 
@@ -182,7 +188,7 @@ public final class GeographicViewServiceGrpc {
      */
     public com.google.ads.googleads.v1.resources.GeographicView getGeographicView(com.google.ads.googleads.v1.services.GetGeographicViewRequest request) {
       return blockingUnaryCall(
-          getChannel(), getGetGeographicViewMethodHelper(), getCallOptions(), request);
+          getChannel(), getGetGeographicViewMethod(), getCallOptions(), request);
     }
   }
 
@@ -191,19 +197,15 @@ public final class GeographicViewServiceGrpc {
    * Service to manage geographic views.
    * </pre>
    */
-  public static final class GeographicViewServiceFutureStub extends io.grpc.stub.AbstractStub<GeographicViewServiceFutureStub> {
-    private GeographicViewServiceFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private GeographicViewServiceFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class GeographicViewServiceFutureStub extends io.grpc.stub.AbstractFutureStub<GeographicViewServiceFutureStub> {
+    private GeographicViewServiceFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected GeographicViewServiceFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected GeographicViewServiceFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new GeographicViewServiceFutureStub(channel, callOptions);
     }
 
@@ -215,7 +217,7 @@ public final class GeographicViewServiceGrpc {
     public com.google.common.util.concurrent.ListenableFuture<com.google.ads.googleads.v1.resources.GeographicView> getGeographicView(
         com.google.ads.googleads.v1.services.GetGeographicViewRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(getGetGeographicViewMethodHelper(), getCallOptions()), request);
+          getChannel().newCall(getGetGeographicViewMethod(), getCallOptions()), request);
     }
   }
 
@@ -303,7 +305,7 @@ public final class GeographicViewServiceGrpc {
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new GeographicViewServiceFileDescriptorSupplier())
-              .addMethod(getGetGeographicViewMethodHelper())
+              .addMethod(getGetGeographicViewMethod())
               .build();
         }
       }

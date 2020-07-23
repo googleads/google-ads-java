@@ -9,75 +9,81 @@ public interface UploadCallConversionsRequestOrBuilder extends
 
   /**
    * <pre>
-   * The ID of the customer performing the upload.
+   * Required. The ID of the customer performing the upload.
    * </pre>
    *
-   * <code>string customer_id = 1;</code>
+   * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+   * @return The customerId.
    */
   java.lang.String getCustomerId();
   /**
    * <pre>
-   * The ID of the customer performing the upload.
+   * Required. The ID of the customer performing the upload.
    * </pre>
    *
-   * <code>string customer_id = 1;</code>
+   * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+   * @return The bytes for customerId.
    */
   com.google.protobuf.ByteString
       getCustomerIdBytes();
 
   /**
    * <pre>
-   * The conversions that are being uploaded.
+   * Required. The conversions that are being uploaded.
    * </pre>
    *
-   * <code>repeated .google.ads.googleads.v1.services.CallConversion conversions = 2;</code>
+   * <code>repeated .google.ads.googleads.v1.services.CallConversion conversions = 2 [(.google.api.field_behavior) = REQUIRED];</code>
    */
   java.util.List<com.google.ads.googleads.v1.services.CallConversion> 
       getConversionsList();
   /**
    * <pre>
-   * The conversions that are being uploaded.
+   * Required. The conversions that are being uploaded.
    * </pre>
    *
-   * <code>repeated .google.ads.googleads.v1.services.CallConversion conversions = 2;</code>
+   * <code>repeated .google.ads.googleads.v1.services.CallConversion conversions = 2 [(.google.api.field_behavior) = REQUIRED];</code>
    */
   com.google.ads.googleads.v1.services.CallConversion getConversions(int index);
   /**
    * <pre>
-   * The conversions that are being uploaded.
+   * Required. The conversions that are being uploaded.
    * </pre>
    *
-   * <code>repeated .google.ads.googleads.v1.services.CallConversion conversions = 2;</code>
+   * <code>repeated .google.ads.googleads.v1.services.CallConversion conversions = 2 [(.google.api.field_behavior) = REQUIRED];</code>
    */
   int getConversionsCount();
   /**
    * <pre>
-   * The conversions that are being uploaded.
+   * Required. The conversions that are being uploaded.
    * </pre>
    *
-   * <code>repeated .google.ads.googleads.v1.services.CallConversion conversions = 2;</code>
+   * <code>repeated .google.ads.googleads.v1.services.CallConversion conversions = 2 [(.google.api.field_behavior) = REQUIRED];</code>
    */
   java.util.List<? extends com.google.ads.googleads.v1.services.CallConversionOrBuilder> 
       getConversionsOrBuilderList();
   /**
    * <pre>
-   * The conversions that are being uploaded.
+   * Required. The conversions that are being uploaded.
    * </pre>
    *
-   * <code>repeated .google.ads.googleads.v1.services.CallConversion conversions = 2;</code>
+   * <code>repeated .google.ads.googleads.v1.services.CallConversion conversions = 2 [(.google.api.field_behavior) = REQUIRED];</code>
    */
   com.google.ads.googleads.v1.services.CallConversionOrBuilder getConversionsOrBuilder(
       int index);
 
   /**
    * <pre>
-   * If true, successful operations will be carried out and invalid
+   * Required. If true, successful operations will be carried out and invalid
    * operations will return errors. If false, all operations will be carried
    * out in one transaction if and only if they are all valid.
    * This should always be set to true.
+   * See
+   * https://developers.google.com/google-ads/api/docs/best-practices/partial-failures
+   * for more information about partial failure.
    * </pre>
    *
-   * <code>bool partial_failure = 3;</code>
+   * <code>bool partial_failure = 3 [(.google.api.field_behavior) = REQUIRED];</code>
+   * @return The partialFailure.
    */
   boolean getPartialFailure();
 
@@ -88,6 +94,7 @@ public interface UploadCallConversionsRequestOrBuilder extends
    * </pre>
    *
    * <code>bool validate_only = 4;</code>
+   * @return The validateOnly.
    */
   boolean getValidateOnly();
 }

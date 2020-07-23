@@ -33,62 +33,74 @@ public final class AdGroupBidModifierProto {
       "leads.v2.resources\032-google/ads/googleads" +
       "/v2/common/criteria.proto\0327google/ads/go" +
       "ogleads/v2/enums/bid_modifier_source.pro" +
-      "to\032\036google/protobuf/wrappers.proto\032\034goog" +
-      "le/api/annotations.proto\"\354\006\n\022AdGroupBidM" +
-      "odifier\022\025\n\rresource_name\030\001 \001(\t\022.\n\010ad_gro" +
-      "up\030\002 \001(\0132\034.google.protobuf.StringValue\0221" +
-      "\n\014criterion_id\030\003 \001(\0132\033.google.protobuf.I" +
-      "nt64Value\0222\n\014bid_modifier\030\004 \001(\0132\034.google" +
-      ".protobuf.DoubleValue\0223\n\rbase_ad_group\030\t" +
-      " \001(\0132\034.google.protobuf.StringValue\022c\n\023bi" +
-      "d_modifier_source\030\n \001(\0162F.google.ads.goo" +
-      "gleads.v2.enums.BidModifierSourceEnum.Bi" +
-      "dModifierSource\022_\n\031hotel_date_selection_" +
-      "type\030\005 \001(\0132:.google.ads.googleads.v2.com" +
-      "mon.HotelDateSelectionTypeInfoH\000\022e\n\034hote" +
-      "l_advance_booking_window\030\006 \001(\0132=.google." +
-      "ads.googleads.v2.common.HotelAdvanceBook" +
-      "ingWindowInfoH\000\022U\n\024hotel_length_of_stay\030" +
-      "\007 \001(\01325.google.ads.googleads.v2.common.H" +
-      "otelLengthOfStayInfoH\000\022Q\n\022hotel_check_in" +
-      "_day\030\010 \001(\01323.google.ads.googleads.v2.com" +
-      "mon.HotelCheckInDayInfoH\000\022<\n\006device\030\013 \001(" +
-      "\0132*.google.ads.googleads.v2.common.Devic" +
-      "eInfoH\000\022Q\n\021preferred_content\030\014 \001(\01324.goo" +
-      "gle.ads.googleads.v2.common.PreferredCon" +
-      "tentInfoH\000B\013\n\tcriterionB\204\002\n%com.google.a" +
-      "ds.googleads.v2.resourcesB\027AdGroupBidMod" +
-      "ifierProtoP\001ZJgoogle.golang.org/genproto" +
-      "/googleapis/ads/googleads/v2/resources;r" +
-      "esources\242\002\003GAA\252\002!Google.Ads.GoogleAds.V2" +
-      ".Resources\312\002!Google\\Ads\\GoogleAds\\V2\\Res" +
-      "ources\352\002%Google::Ads::GoogleAds::V2::Res" +
-      "ourcesb\006proto3"
+      "to\032\037google/api/field_behavior.proto\032\031goo" +
+      "gle/api/resource.proto\032\036google/protobuf/" +
+      "wrappers.proto\032\034google/api/annotations.p" +
+      "roto\"\221\t\n\022AdGroupBidModifier\022J\n\rresource_" +
+      "name\030\001 \001(\tB3\340A\005\372A-\n+googleads.googleapis" +
+      ".com/AdGroupBidModifier\022X\n\010ad_group\030\002 \001(" +
+      "\0132\034.google.protobuf.StringValueB(\340A\005\372A\"\n" +
+      " googleads.googleapis.com/AdGroup\0226\n\014cri" +
+      "terion_id\030\003 \001(\0132\033.google.protobuf.Int64V" +
+      "alueB\003\340A\003\0222\n\014bid_modifier\030\004 \001(\0132\034.google" +
+      ".protobuf.DoubleValue\022]\n\rbase_ad_group\030\t" +
+      " \001(\0132\034.google.protobuf.StringValueB(\340A\003\372" +
+      "A\"\n googleads.googleapis.com/AdGroup\022h\n\023" +
+      "bid_modifier_source\030\n \001(\0162F.google.ads.g" +
+      "oogleads.v2.enums.BidModifierSourceEnum." +
+      "BidModifierSourceB\003\340A\003\022d\n\031hotel_date_sel" +
+      "ection_type\030\005 \001(\0132:.google.ads.googleads" +
+      ".v2.common.HotelDateSelectionTypeInfoB\003\340" +
+      "A\005H\000\022j\n\034hotel_advance_booking_window\030\006 \001" +
+      "(\0132=.google.ads.googleads.v2.common.Hote" +
+      "lAdvanceBookingWindowInfoB\003\340A\005H\000\022Z\n\024hote" +
+      "l_length_of_stay\030\007 \001(\01325.google.ads.goog" +
+      "leads.v2.common.HotelLengthOfStayInfoB\003\340" +
+      "A\005H\000\022V\n\022hotel_check_in_day\030\010 \001(\01323.googl" +
+      "e.ads.googleads.v2.common.HotelCheckInDa" +
+      "yInfoB\003\340A\005H\000\022A\n\006device\030\013 \001(\0132*.google.ad" +
+      "s.googleads.v2.common.DeviceInfoB\003\340A\005H\000\022" +
+      "V\n\021preferred_content\030\014 \001(\01324.google.ads." +
+      "googleads.v2.common.PreferredContentInfo" +
+      "B\003\340A\005H\000:r\352Ao\n+googleads.googleapis.com/A" +
+      "dGroupBidModifier\022@customers/{customer}/" +
+      "adGroupBidModifiers/{ad_group_bid_modifi" +
+      "er}B\013\n\tcriterionB\204\002\n%com.google.ads.goog" +
+      "leads.v2.resourcesB\027AdGroupBidModifierPr" +
+      "otoP\001ZJgoogle.golang.org/genproto/google" +
+      "apis/ads/googleads/v2/resources;resource" +
+      "s\242\002\003GAA\252\002!Google.Ads.GoogleAds.V2.Resour" +
+      "ces\312\002!Google\\Ads\\GoogleAds\\V2\\Resources\352" +
+      "\002%Google::Ads::GoogleAds::V2::Resourcesb" +
+      "\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.ads.googleads.v2.common.CriteriaProto.getDescriptor(),
           com.google.ads.googleads.v2.enums.BidModifierSourceProto.getDescriptor(),
+          com.google.api.FieldBehaviorProto.getDescriptor(),
+          com.google.api.ResourceProto.getDescriptor(),
           com.google.protobuf.WrappersProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
-        }, assigner);
+        });
     internal_static_google_ads_googleads_v2_resources_AdGroupBidModifier_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_google_ads_googleads_v2_resources_AdGroupBidModifier_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v2_resources_AdGroupBidModifier_descriptor,
         new java.lang.String[] { "ResourceName", "AdGroup", "CriterionId", "BidModifier", "BaseAdGroup", "BidModifierSource", "HotelDateSelectionType", "HotelAdvanceBookingWindow", "HotelLengthOfStay", "HotelCheckInDay", "Device", "PreferredContent", "Criterion", });
+    com.google.protobuf.ExtensionRegistry registry =
+        com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);
+    registry.add(com.google.api.ResourceProto.resource);
+    registry.add(com.google.api.ResourceProto.resourceReference);
+    com.google.protobuf.Descriptors.FileDescriptor
+        .internalUpdateFileDescriptor(descriptor, registry);
     com.google.ads.googleads.v2.common.CriteriaProto.getDescriptor();
     com.google.ads.googleads.v2.enums.BidModifierSourceProto.getDescriptor();
+    com.google.api.FieldBehaviorProto.getDescriptor();
+    com.google.api.ResourceProto.getDescriptor();
     com.google.protobuf.WrappersProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
   }

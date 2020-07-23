@@ -10,7 +10,7 @@ package com.google.ads.googleads.v2.services;
  *
  * Protobuf type {@code google.ads.googleads.v2.services.ListPlannableProductsRequest}
  */
-public  final class ListPlannableProductsRequest extends
+public final class ListPlannableProductsRequest extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v2.services.ListPlannableProductsRequest)
     ListPlannableProductsRequestOrBuilder {
@@ -20,6 +20,13 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private ListPlannableProductsRequest() {
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new ListPlannableProductsRequest();
   }
 
   @java.lang.Override
@@ -35,7 +42,6 @@ private static final long serialVersionUID = 0L;
     if (extensionRegistry == null) {
       throw new java.lang.NullPointerException();
     }
-    int mutable_bitField0_ = 0;
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
         com.google.protobuf.UnknownFieldSet.newBuilder();
     try {
@@ -95,34 +101,39 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.StringValue plannableLocationId_;
   /**
    * <pre>
-   * The ID of the selected location for planning. To list the available
+   * Required. The ID of the selected location for planning. To list the available
    * plannable location ids use ListPlannableLocations.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue plannable_location_id = 1;</code>
+   * <code>.google.protobuf.StringValue plannable_location_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+   * @return Whether the plannableLocationId field is set.
    */
+  @java.lang.Override
   public boolean hasPlannableLocationId() {
     return plannableLocationId_ != null;
   }
   /**
    * <pre>
-   * The ID of the selected location for planning. To list the available
+   * Required. The ID of the selected location for planning. To list the available
    * plannable location ids use ListPlannableLocations.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue plannable_location_id = 1;</code>
+   * <code>.google.protobuf.StringValue plannable_location_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+   * @return The plannableLocationId.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getPlannableLocationId() {
     return plannableLocationId_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : plannableLocationId_;
   }
   /**
    * <pre>
-   * The ID of the selected location for planning. To list the available
+   * Required. The ID of the selected location for planning. To list the available
    * plannable location ids use ListPlannableLocations.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue plannable_location_id = 1;</code>
+   * <code>.google.protobuf.StringValue plannable_location_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getPlannableLocationIdOrBuilder() {
     return getPlannableLocationId();
   }
@@ -451,22 +462,24 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> plannableLocationIdBuilder_;
     /**
      * <pre>
-     * The ID of the selected location for planning. To list the available
+     * Required. The ID of the selected location for planning. To list the available
      * plannable location ids use ListPlannableLocations.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue plannable_location_id = 1;</code>
+     * <code>.google.protobuf.StringValue plannable_location_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+     * @return Whether the plannableLocationId field is set.
      */
     public boolean hasPlannableLocationId() {
       return plannableLocationIdBuilder_ != null || plannableLocationId_ != null;
     }
     /**
      * <pre>
-     * The ID of the selected location for planning. To list the available
+     * Required. The ID of the selected location for planning. To list the available
      * plannable location ids use ListPlannableLocations.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue plannable_location_id = 1;</code>
+     * <code>.google.protobuf.StringValue plannable_location_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+     * @return The plannableLocationId.
      */
     public com.google.protobuf.StringValue getPlannableLocationId() {
       if (plannableLocationIdBuilder_ == null) {
@@ -477,11 +490,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the selected location for planning. To list the available
+     * Required. The ID of the selected location for planning. To list the available
      * plannable location ids use ListPlannableLocations.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue plannable_location_id = 1;</code>
+     * <code>.google.protobuf.StringValue plannable_location_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
      */
     public Builder setPlannableLocationId(com.google.protobuf.StringValue value) {
       if (plannableLocationIdBuilder_ == null) {
@@ -498,11 +511,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the selected location for planning. To list the available
+     * Required. The ID of the selected location for planning. To list the available
      * plannable location ids use ListPlannableLocations.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue plannable_location_id = 1;</code>
+     * <code>.google.protobuf.StringValue plannable_location_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
      */
     public Builder setPlannableLocationId(
         com.google.protobuf.StringValue.Builder builderForValue) {
@@ -517,11 +530,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the selected location for planning. To list the available
+     * Required. The ID of the selected location for planning. To list the available
      * plannable location ids use ListPlannableLocations.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue plannable_location_id = 1;</code>
+     * <code>.google.protobuf.StringValue plannable_location_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
      */
     public Builder mergePlannableLocationId(com.google.protobuf.StringValue value) {
       if (plannableLocationIdBuilder_ == null) {
@@ -540,11 +553,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the selected location for planning. To list the available
+     * Required. The ID of the selected location for planning. To list the available
      * plannable location ids use ListPlannableLocations.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue plannable_location_id = 1;</code>
+     * <code>.google.protobuf.StringValue plannable_location_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
      */
     public Builder clearPlannableLocationId() {
       if (plannableLocationIdBuilder_ == null) {
@@ -559,11 +572,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the selected location for planning. To list the available
+     * Required. The ID of the selected location for planning. To list the available
      * plannable location ids use ListPlannableLocations.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue plannable_location_id = 1;</code>
+     * <code>.google.protobuf.StringValue plannable_location_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
      */
     public com.google.protobuf.StringValue.Builder getPlannableLocationIdBuilder() {
       
@@ -572,11 +585,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the selected location for planning. To list the available
+     * Required. The ID of the selected location for planning. To list the available
      * plannable location ids use ListPlannableLocations.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue plannable_location_id = 1;</code>
+     * <code>.google.protobuf.StringValue plannable_location_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
      */
     public com.google.protobuf.StringValueOrBuilder getPlannableLocationIdOrBuilder() {
       if (plannableLocationIdBuilder_ != null) {
@@ -588,11 +601,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the selected location for planning. To list the available
+     * Required. The ID of the selected location for planning. To list the available
      * plannable location ids use ListPlannableLocations.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue plannable_location_id = 1;</code>
+     * <code>.google.protobuf.StringValue plannable_location_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 

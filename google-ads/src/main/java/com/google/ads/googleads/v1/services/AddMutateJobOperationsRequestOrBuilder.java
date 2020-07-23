@@ -9,18 +9,20 @@ public interface AddMutateJobOperationsRequestOrBuilder extends
 
   /**
    * <pre>
-   * The resource name of the MutateJob.
+   * Required. The resource name of the MutateJob.
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = { ... }</code>
+   * @return The resourceName.
    */
   java.lang.String getResourceName();
   /**
    * <pre>
-   * The resource name of the MutateJob.
+   * Required. The resource name of the MutateJob.
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = { ... }</code>
+   * @return The bytes for resourceName.
    */
   com.google.protobuf.ByteString
       getResourceNameBytes();
@@ -35,6 +37,7 @@ public interface AddMutateJobOperationsRequestOrBuilder extends
    * </pre>
    *
    * <code>string sequence_token = 2;</code>
+   * @return The sequenceToken.
    */
   java.lang.String getSequenceToken();
   /**
@@ -47,13 +50,14 @@ public interface AddMutateJobOperationsRequestOrBuilder extends
    * </pre>
    *
    * <code>string sequence_token = 2;</code>
+   * @return The bytes for sequenceToken.
    */
   com.google.protobuf.ByteString
       getSequenceTokenBytes();
 
   /**
    * <pre>
-   * The list of mutates being added.
+   * Required. The list of mutates being added.
    * Operations can use negative integers as temp ids to signify dependencies
    * between entities created in this MutateJob. For example, a customer with
    * id = 1234 can create a campaign and an ad group in that same campaign by
@@ -63,13 +67,13 @@ public interface AddMutateJobOperationsRequestOrBuilder extends
    * "customers/1234/campaigns/-1".
    * </pre>
    *
-   * <code>repeated .google.ads.googleads.v1.services.MutateOperation mutate_operations = 3;</code>
+   * <code>repeated .google.ads.googleads.v1.services.MutateOperation mutate_operations = 3 [(.google.api.field_behavior) = REQUIRED];</code>
    */
   java.util.List<com.google.ads.googleads.v1.services.MutateOperation> 
       getMutateOperationsList();
   /**
    * <pre>
-   * The list of mutates being added.
+   * Required. The list of mutates being added.
    * Operations can use negative integers as temp ids to signify dependencies
    * between entities created in this MutateJob. For example, a customer with
    * id = 1234 can create a campaign and an ad group in that same campaign by
@@ -79,12 +83,12 @@ public interface AddMutateJobOperationsRequestOrBuilder extends
    * "customers/1234/campaigns/-1".
    * </pre>
    *
-   * <code>repeated .google.ads.googleads.v1.services.MutateOperation mutate_operations = 3;</code>
+   * <code>repeated .google.ads.googleads.v1.services.MutateOperation mutate_operations = 3 [(.google.api.field_behavior) = REQUIRED];</code>
    */
   com.google.ads.googleads.v1.services.MutateOperation getMutateOperations(int index);
   /**
    * <pre>
-   * The list of mutates being added.
+   * Required. The list of mutates being added.
    * Operations can use negative integers as temp ids to signify dependencies
    * between entities created in this MutateJob. For example, a customer with
    * id = 1234 can create a campaign and an ad group in that same campaign by
@@ -94,12 +98,12 @@ public interface AddMutateJobOperationsRequestOrBuilder extends
    * "customers/1234/campaigns/-1".
    * </pre>
    *
-   * <code>repeated .google.ads.googleads.v1.services.MutateOperation mutate_operations = 3;</code>
+   * <code>repeated .google.ads.googleads.v1.services.MutateOperation mutate_operations = 3 [(.google.api.field_behavior) = REQUIRED];</code>
    */
   int getMutateOperationsCount();
   /**
    * <pre>
-   * The list of mutates being added.
+   * Required. The list of mutates being added.
    * Operations can use negative integers as temp ids to signify dependencies
    * between entities created in this MutateJob. For example, a customer with
    * id = 1234 can create a campaign and an ad group in that same campaign by
@@ -109,13 +113,13 @@ public interface AddMutateJobOperationsRequestOrBuilder extends
    * "customers/1234/campaigns/-1".
    * </pre>
    *
-   * <code>repeated .google.ads.googleads.v1.services.MutateOperation mutate_operations = 3;</code>
+   * <code>repeated .google.ads.googleads.v1.services.MutateOperation mutate_operations = 3 [(.google.api.field_behavior) = REQUIRED];</code>
    */
   java.util.List<? extends com.google.ads.googleads.v1.services.MutateOperationOrBuilder> 
       getMutateOperationsOrBuilderList();
   /**
    * <pre>
-   * The list of mutates being added.
+   * Required. The list of mutates being added.
    * Operations can use negative integers as temp ids to signify dependencies
    * between entities created in this MutateJob. For example, a customer with
    * id = 1234 can create a campaign and an ad group in that same campaign by
@@ -125,7 +129,7 @@ public interface AddMutateJobOperationsRequestOrBuilder extends
    * "customers/1234/campaigns/-1".
    * </pre>
    *
-   * <code>repeated .google.ads.googleads.v1.services.MutateOperation mutate_operations = 3;</code>
+   * <code>repeated .google.ads.googleads.v1.services.MutateOperation mutate_operations = 3 [(.google.api.field_behavior) = REQUIRED];</code>
    */
   com.google.ads.googleads.v1.services.MutateOperationOrBuilder getMutateOperationsOrBuilder(
       int index);

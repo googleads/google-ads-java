@@ -13,6 +13,7 @@ public interface PromoteCampaignExperimentRequestOrBuilder extends
    * </pre>
    *
    * <code>string campaign_experiment = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+   * @return The campaignExperiment.
    */
   java.lang.String getCampaignExperiment();
   /**
@@ -21,6 +22,7 @@ public interface PromoteCampaignExperimentRequestOrBuilder extends
    * </pre>
    *
    * <code>string campaign_experiment = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+   * @return The bytes for campaignExperiment.
    */
   com.google.protobuf.ByteString
       getCampaignExperimentBytes();

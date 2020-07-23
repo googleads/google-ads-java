@@ -10,7 +10,7 @@ package com.google.ads.googleads.v3.services;
  *
  * Protobuf type {@code google.ads.googleads.v3.services.DismissRecommendationRequest}
  */
-public  final class DismissRecommendationRequest extends
+public final class DismissRecommendationRequest extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v3.services.DismissRecommendationRequest)
     DismissRecommendationRequestOrBuilder {
@@ -22,6 +22,13 @@ private static final long serialVersionUID = 0L;
   private DismissRecommendationRequest() {
     customerId_ = "";
     operations_ = java.util.Collections.emptyList();
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new DismissRecommendationRequest();
   }
 
   @java.lang.Override
@@ -60,9 +67,9 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 26: {
-            if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
               operations_ = new java.util.ArrayList<com.google.ads.googleads.v3.services.DismissRecommendationRequest.DismissRecommendationOperation>();
-              mutable_bitField0_ |= 0x00000002;
+              mutable_bitField0_ |= 0x00000001;
             }
             operations_.add(
                 input.readMessage(com.google.ads.googleads.v3.services.DismissRecommendationRequest.DismissRecommendationOperation.parser(), extensionRegistry));
@@ -83,7 +90,7 @@ private static final long serialVersionUID = 0L;
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
     } finally {
-      if (((mutable_bitField0_ & 0x00000002) != 0)) {
+      if (((mutable_bitField0_ & 0x00000001) != 0)) {
         operations_ = java.util.Collections.unmodifiableList(operations_);
       }
       this.unknownFields = unknownFields.build();
@@ -113,6 +120,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string resource_name = 1;</code>
+     * @return The resourceName.
      */
     java.lang.String getResourceName();
     /**
@@ -121,6 +129,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string resource_name = 1;</code>
+     * @return The bytes for resourceName.
      */
     com.google.protobuf.ByteString
         getResourceNameBytes();
@@ -132,7 +141,7 @@ private static final long serialVersionUID = 0L;
    *
    * Protobuf type {@code google.ads.googleads.v3.services.DismissRecommendationRequest.DismissRecommendationOperation}
    */
-  public  static final class DismissRecommendationOperation extends
+  public static final class DismissRecommendationOperation extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:google.ads.googleads.v3.services.DismissRecommendationRequest.DismissRecommendationOperation)
       DismissRecommendationOperationOrBuilder {
@@ -143,6 +152,13 @@ private static final long serialVersionUID = 0L;
     }
     private DismissRecommendationOperation() {
       resourceName_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DismissRecommendationOperation();
     }
 
     @java.lang.Override
@@ -158,7 +174,6 @@ private static final long serialVersionUID = 0L;
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -215,7 +230,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string resource_name = 1;</code>
+     * @return The resourceName.
      */
+    @java.lang.Override
     public java.lang.String getResourceName() {
       java.lang.Object ref = resourceName_;
       if (ref instanceof java.lang.String) {
@@ -234,7 +251,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string resource_name = 1;</code>
+     * @return The bytes for resourceName.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getResourceNameBytes() {
       java.lang.Object ref = resourceName_;
@@ -562,6 +581,7 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>string resource_name = 1;</code>
+       * @return The resourceName.
        */
       public java.lang.String getResourceName() {
         java.lang.Object ref = resourceName_;
@@ -581,6 +601,7 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>string resource_name = 1;</code>
+       * @return The bytes for resourceName.
        */
       public com.google.protobuf.ByteString
           getResourceNameBytes() {
@@ -601,6 +622,8 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>string resource_name = 1;</code>
+       * @param value The resourceName to set.
+       * @return This builder for chaining.
        */
       public Builder setResourceName(
           java.lang.String value) {
@@ -618,6 +641,7 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>string resource_name = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearResourceName() {
         
@@ -631,6 +655,8 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>string resource_name = 1;</code>
+       * @param value The bytes for resourceName to set.
+       * @return This builder for chaining.
        */
       public Builder setResourceNameBytes(
           com.google.protobuf.ByteString value) {
@@ -696,7 +722,6 @@ private static final long serialVersionUID = 0L;
 
   }
 
-  private int bitField0_;
   public static final int CUSTOMER_ID_FIELD_NUMBER = 1;
   private volatile java.lang.Object customerId_;
   /**
@@ -705,7 +730,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+   * @return The customerId.
    */
+  @java.lang.Override
   public java.lang.String getCustomerId() {
     java.lang.Object ref = customerId_;
     if (ref instanceof java.lang.String) {
@@ -724,7 +751,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+   * @return The bytes for customerId.
    */
+  @java.lang.Override
   public com.google.protobuf.ByteString
       getCustomerIdBytes() {
     java.lang.Object ref = customerId_;
@@ -750,6 +779,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v3.services.DismissRecommendationRequest.DismissRecommendationOperation operations = 3 [(.google.api.field_behavior) = REQUIRED];</code>
    */
+  @java.lang.Override
   public java.util.List<com.google.ads.googleads.v3.services.DismissRecommendationRequest.DismissRecommendationOperation> getOperationsList() {
     return operations_;
   }
@@ -762,6 +792,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v3.services.DismissRecommendationRequest.DismissRecommendationOperation operations = 3 [(.google.api.field_behavior) = REQUIRED];</code>
    */
+  @java.lang.Override
   public java.util.List<? extends com.google.ads.googleads.v3.services.DismissRecommendationRequest.DismissRecommendationOperationOrBuilder> 
       getOperationsOrBuilderList() {
     return operations_;
@@ -775,6 +806,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v3.services.DismissRecommendationRequest.DismissRecommendationOperation operations = 3 [(.google.api.field_behavior) = REQUIRED];</code>
    */
+  @java.lang.Override
   public int getOperationsCount() {
     return operations_.size();
   }
@@ -787,6 +819,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v3.services.DismissRecommendationRequest.DismissRecommendationOperation operations = 3 [(.google.api.field_behavior) = REQUIRED];</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.services.DismissRecommendationRequest.DismissRecommendationOperation getOperations(int index) {
     return operations_.get(index);
   }
@@ -799,6 +832,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v3.services.DismissRecommendationRequest.DismissRecommendationOperation operations = 3 [(.google.api.field_behavior) = REQUIRED];</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.services.DismissRecommendationRequest.DismissRecommendationOperationOrBuilder getOperationsOrBuilder(
       int index) {
     return operations_.get(index);
@@ -815,7 +849,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>bool partial_failure = 2;</code>
+   * @return The partialFailure.
    */
+  @java.lang.Override
   public boolean getPartialFailure() {
     return partialFailure_;
   }
@@ -1046,7 +1082,7 @@ private static final long serialVersionUID = 0L;
 
       if (operationsBuilder_ == null) {
         operations_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000001);
       } else {
         operationsBuilder_.clear();
       }
@@ -1079,19 +1115,17 @@ private static final long serialVersionUID = 0L;
     public com.google.ads.googleads.v3.services.DismissRecommendationRequest buildPartial() {
       com.google.ads.googleads.v3.services.DismissRecommendationRequest result = new com.google.ads.googleads.v3.services.DismissRecommendationRequest(this);
       int from_bitField0_ = bitField0_;
-      int to_bitField0_ = 0;
       result.customerId_ = customerId_;
       if (operationsBuilder_ == null) {
-        if (((bitField0_ & 0x00000002) != 0)) {
+        if (((bitField0_ & 0x00000001) != 0)) {
           operations_ = java.util.Collections.unmodifiableList(operations_);
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000001);
         }
         result.operations_ = operations_;
       } else {
         result.operations_ = operationsBuilder_.build();
       }
       result.partialFailure_ = partialFailure_;
-      result.bitField0_ = to_bitField0_;
       onBuilt();
       return result;
     }
@@ -1148,7 +1182,7 @@ private static final long serialVersionUID = 0L;
         if (!other.operations_.isEmpty()) {
           if (operations_.isEmpty()) {
             operations_ = other.operations_;
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000001);
           } else {
             ensureOperationsIsMutable();
             operations_.addAll(other.operations_);
@@ -1161,7 +1195,7 @@ private static final long serialVersionUID = 0L;
             operationsBuilder_.dispose();
             operationsBuilder_ = null;
             operations_ = other.operations_;
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000001);
             operationsBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getOperationsFieldBuilder() : null;
@@ -1210,6 +1244,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+     * @return The customerId.
      */
     public java.lang.String getCustomerId() {
       java.lang.Object ref = customerId_;
@@ -1229,6 +1264,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+     * @return The bytes for customerId.
      */
     public com.google.protobuf.ByteString
         getCustomerIdBytes() {
@@ -1249,6 +1285,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+     * @param value The customerId to set.
+     * @return This builder for chaining.
      */
     public Builder setCustomerId(
         java.lang.String value) {
@@ -1266,6 +1304,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+     * @return This builder for chaining.
      */
     public Builder clearCustomerId() {
       
@@ -1279,6 +1318,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+     * @param value The bytes for customerId to set.
+     * @return This builder for chaining.
      */
     public Builder setCustomerIdBytes(
         com.google.protobuf.ByteString value) {
@@ -1295,9 +1336,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.google.ads.googleads.v3.services.DismissRecommendationRequest.DismissRecommendationOperation> operations_ =
       java.util.Collections.emptyList();
     private void ensureOperationsIsMutable() {
-      if (!((bitField0_ & 0x00000002) != 0)) {
+      if (!((bitField0_ & 0x00000001) != 0)) {
         operations_ = new java.util.ArrayList<com.google.ads.googleads.v3.services.DismissRecommendationRequest.DismissRecommendationOperation>(operations_);
-        bitField0_ |= 0x00000002;
+        bitField0_ |= 0x00000001;
        }
     }
 
@@ -1513,7 +1554,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearOperations() {
       if (operationsBuilder_ == null) {
         operations_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
       } else {
         operationsBuilder_.clear();
@@ -1632,7 +1673,7 @@ private static final long serialVersionUID = 0L;
         operationsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.google.ads.googleads.v3.services.DismissRecommendationRequest.DismissRecommendationOperation, com.google.ads.googleads.v3.services.DismissRecommendationRequest.DismissRecommendationOperation.Builder, com.google.ads.googleads.v3.services.DismissRecommendationRequest.DismissRecommendationOperationOrBuilder>(
                 operations_,
-                ((bitField0_ & 0x00000002) != 0),
+                ((bitField0_ & 0x00000001) != 0),
                 getParentForChildren(),
                 isClean());
         operations_ = null;
@@ -1650,7 +1691,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>bool partial_failure = 2;</code>
+     * @return The partialFailure.
      */
+    @java.lang.Override
     public boolean getPartialFailure() {
       return partialFailure_;
     }
@@ -1663,6 +1706,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>bool partial_failure = 2;</code>
+     * @param value The partialFailure to set.
+     * @return This builder for chaining.
      */
     public Builder setPartialFailure(boolean value) {
       
@@ -1679,6 +1724,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>bool partial_failure = 2;</code>
+     * @return This builder for chaining.
      */
     public Builder clearPartialFailure() {
       

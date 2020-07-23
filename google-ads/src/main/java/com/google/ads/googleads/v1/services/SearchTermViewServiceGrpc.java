@@ -21,7 +21,7 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.10.0)",
+    value = "by gRPC proto compiler",
     comments = "Source: google/ads/googleads/v1/services/search_term_view_service.proto")
 public final class SearchTermViewServiceGrpc {
 
@@ -30,49 +30,49 @@ public final class SearchTermViewServiceGrpc {
   public static final String SERVICE_NAME = "google.ads.googleads.v1.services.SearchTermViewService";
 
   // Static method descriptors that strictly reflect the proto.
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  @java.lang.Deprecated // Use {@link #getGetSearchTermViewMethod()} instead. 
-  public static final io.grpc.MethodDescriptor<com.google.ads.googleads.v1.services.GetSearchTermViewRequest,
-      com.google.ads.googleads.v1.resources.SearchTermView> METHOD_GET_SEARCH_TERM_VIEW = getGetSearchTermViewMethodHelper();
-
   private static volatile io.grpc.MethodDescriptor<com.google.ads.googleads.v1.services.GetSearchTermViewRequest,
       com.google.ads.googleads.v1.resources.SearchTermView> getGetSearchTermViewMethod;
 
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetSearchTermView",
+      requestType = com.google.ads.googleads.v1.services.GetSearchTermViewRequest.class,
+      responseType = com.google.ads.googleads.v1.resources.SearchTermView.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<com.google.ads.googleads.v1.services.GetSearchTermViewRequest,
       com.google.ads.googleads.v1.resources.SearchTermView> getGetSearchTermViewMethod() {
-    return getGetSearchTermViewMethodHelper();
-  }
-
-  private static io.grpc.MethodDescriptor<com.google.ads.googleads.v1.services.GetSearchTermViewRequest,
-      com.google.ads.googleads.v1.resources.SearchTermView> getGetSearchTermViewMethodHelper() {
     io.grpc.MethodDescriptor<com.google.ads.googleads.v1.services.GetSearchTermViewRequest, com.google.ads.googleads.v1.resources.SearchTermView> getGetSearchTermViewMethod;
     if ((getGetSearchTermViewMethod = SearchTermViewServiceGrpc.getGetSearchTermViewMethod) == null) {
       synchronized (SearchTermViewServiceGrpc.class) {
         if ((getGetSearchTermViewMethod = SearchTermViewServiceGrpc.getGetSearchTermViewMethod) == null) {
-          SearchTermViewServiceGrpc.getGetSearchTermViewMethod = getGetSearchTermViewMethod = 
+          SearchTermViewServiceGrpc.getGetSearchTermViewMethod = getGetSearchTermViewMethod =
               io.grpc.MethodDescriptor.<com.google.ads.googleads.v1.services.GetSearchTermViewRequest, com.google.ads.googleads.v1.resources.SearchTermView>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "google.ads.googleads.v1.services.SearchTermViewService", "GetSearchTermView"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetSearchTermView"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v1.services.GetSearchTermViewRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v1.resources.SearchTermView.getDefaultInstance()))
-                  .setSchemaDescriptor(new SearchTermViewServiceMethodDescriptorSupplier("GetSearchTermView"))
-                  .build();
-          }
+              .setSchemaDescriptor(new SearchTermViewServiceMethodDescriptorSupplier("GetSearchTermView"))
+              .build();
         }
-     }
-     return getGetSearchTermViewMethod;
+      }
+    }
+    return getGetSearchTermViewMethod;
   }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static SearchTermViewServiceStub newStub(io.grpc.Channel channel) {
-    return new SearchTermViewServiceStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<SearchTermViewServiceStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<SearchTermViewServiceStub>() {
+        @java.lang.Override
+        public SearchTermViewServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new SearchTermViewServiceStub(channel, callOptions);
+        }
+      };
+    return SearchTermViewServiceStub.newStub(factory, channel);
   }
 
   /**
@@ -80,7 +80,14 @@ public final class SearchTermViewServiceGrpc {
    */
   public static SearchTermViewServiceBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new SearchTermViewServiceBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<SearchTermViewServiceBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<SearchTermViewServiceBlockingStub>() {
+        @java.lang.Override
+        public SearchTermViewServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new SearchTermViewServiceBlockingStub(channel, callOptions);
+        }
+      };
+    return SearchTermViewServiceBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -88,7 +95,14 @@ public final class SearchTermViewServiceGrpc {
    */
   public static SearchTermViewServiceFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new SearchTermViewServiceFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<SearchTermViewServiceFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<SearchTermViewServiceFutureStub>() {
+        @java.lang.Override
+        public SearchTermViewServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new SearchTermViewServiceFutureStub(channel, callOptions);
+        }
+      };
+    return SearchTermViewServiceFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -105,13 +119,13 @@ public final class SearchTermViewServiceGrpc {
      */
     public void getSearchTermView(com.google.ads.googleads.v1.services.GetSearchTermViewRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v1.resources.SearchTermView> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetSearchTermViewMethodHelper(), responseObserver);
+      asyncUnimplementedUnaryCall(getGetSearchTermViewMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
-            getGetSearchTermViewMethodHelper(),
+            getGetSearchTermViewMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 com.google.ads.googleads.v1.services.GetSearchTermViewRequest,
@@ -126,19 +140,15 @@ public final class SearchTermViewServiceGrpc {
    * Service to manage search term views.
    * </pre>
    */
-  public static final class SearchTermViewServiceStub extends io.grpc.stub.AbstractStub<SearchTermViewServiceStub> {
-    private SearchTermViewServiceStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private SearchTermViewServiceStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class SearchTermViewServiceStub extends io.grpc.stub.AbstractAsyncStub<SearchTermViewServiceStub> {
+    private SearchTermViewServiceStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected SearchTermViewServiceStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected SearchTermViewServiceStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new SearchTermViewServiceStub(channel, callOptions);
     }
 
@@ -150,7 +160,7 @@ public final class SearchTermViewServiceGrpc {
     public void getSearchTermView(com.google.ads.googleads.v1.services.GetSearchTermViewRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v1.resources.SearchTermView> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(getGetSearchTermViewMethodHelper(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getGetSearchTermViewMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -159,19 +169,15 @@ public final class SearchTermViewServiceGrpc {
    * Service to manage search term views.
    * </pre>
    */
-  public static final class SearchTermViewServiceBlockingStub extends io.grpc.stub.AbstractStub<SearchTermViewServiceBlockingStub> {
-    private SearchTermViewServiceBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private SearchTermViewServiceBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class SearchTermViewServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<SearchTermViewServiceBlockingStub> {
+    private SearchTermViewServiceBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected SearchTermViewServiceBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected SearchTermViewServiceBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new SearchTermViewServiceBlockingStub(channel, callOptions);
     }
 
@@ -182,7 +188,7 @@ public final class SearchTermViewServiceGrpc {
      */
     public com.google.ads.googleads.v1.resources.SearchTermView getSearchTermView(com.google.ads.googleads.v1.services.GetSearchTermViewRequest request) {
       return blockingUnaryCall(
-          getChannel(), getGetSearchTermViewMethodHelper(), getCallOptions(), request);
+          getChannel(), getGetSearchTermViewMethod(), getCallOptions(), request);
     }
   }
 
@@ -191,19 +197,15 @@ public final class SearchTermViewServiceGrpc {
    * Service to manage search term views.
    * </pre>
    */
-  public static final class SearchTermViewServiceFutureStub extends io.grpc.stub.AbstractStub<SearchTermViewServiceFutureStub> {
-    private SearchTermViewServiceFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private SearchTermViewServiceFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class SearchTermViewServiceFutureStub extends io.grpc.stub.AbstractFutureStub<SearchTermViewServiceFutureStub> {
+    private SearchTermViewServiceFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected SearchTermViewServiceFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected SearchTermViewServiceFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new SearchTermViewServiceFutureStub(channel, callOptions);
     }
 
@@ -215,7 +217,7 @@ public final class SearchTermViewServiceGrpc {
     public com.google.common.util.concurrent.ListenableFuture<com.google.ads.googleads.v1.resources.SearchTermView> getSearchTermView(
         com.google.ads.googleads.v1.services.GetSearchTermViewRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(getGetSearchTermViewMethodHelper(), getCallOptions()), request);
+          getChannel().newCall(getGetSearchTermViewMethod(), getCallOptions()), request);
     }
   }
 
@@ -303,7 +305,7 @@ public final class SearchTermViewServiceGrpc {
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new SearchTermViewServiceFileDescriptorSupplier())
-              .addMethod(getGetSearchTermViewMethodHelper())
+              .addMethod(getGetSearchTermViewMethod())
               .build();
         }
       }

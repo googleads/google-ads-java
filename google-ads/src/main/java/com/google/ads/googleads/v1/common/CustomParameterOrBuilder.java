@@ -13,6 +13,7 @@ public interface CustomParameterOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue key = 1;</code>
+   * @return Whether the key field is set.
    */
   boolean hasKey();
   /**
@@ -21,6 +22,7 @@ public interface CustomParameterOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue key = 1;</code>
+   * @return The key.
    */
   com.google.protobuf.StringValue getKey();
   /**
@@ -38,6 +40,7 @@ public interface CustomParameterOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue value = 2;</code>
+   * @return Whether the value field is set.
    */
   boolean hasValue();
   /**
@@ -46,6 +49,7 @@ public interface CustomParameterOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue value = 2;</code>
+   * @return The value.
    */
   com.google.protobuf.StringValue getValue();
   /**

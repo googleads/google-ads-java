@@ -22,7 +22,7 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.10.0)",
+    value = "by gRPC proto compiler",
     comments = "Source: google/ads/googleads/v4/services/account_budget_service.proto")
 public final class AccountBudgetServiceGrpc {
 
@@ -31,49 +31,49 @@ public final class AccountBudgetServiceGrpc {
   public static final String SERVICE_NAME = "google.ads.googleads.v4.services.AccountBudgetService";
 
   // Static method descriptors that strictly reflect the proto.
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  @java.lang.Deprecated // Use {@link #getGetAccountBudgetMethod()} instead. 
-  public static final io.grpc.MethodDescriptor<com.google.ads.googleads.v4.services.GetAccountBudgetRequest,
-      com.google.ads.googleads.v4.resources.AccountBudget> METHOD_GET_ACCOUNT_BUDGET = getGetAccountBudgetMethodHelper();
-
   private static volatile io.grpc.MethodDescriptor<com.google.ads.googleads.v4.services.GetAccountBudgetRequest,
       com.google.ads.googleads.v4.resources.AccountBudget> getGetAccountBudgetMethod;
 
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetAccountBudget",
+      requestType = com.google.ads.googleads.v4.services.GetAccountBudgetRequest.class,
+      responseType = com.google.ads.googleads.v4.resources.AccountBudget.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<com.google.ads.googleads.v4.services.GetAccountBudgetRequest,
       com.google.ads.googleads.v4.resources.AccountBudget> getGetAccountBudgetMethod() {
-    return getGetAccountBudgetMethodHelper();
-  }
-
-  private static io.grpc.MethodDescriptor<com.google.ads.googleads.v4.services.GetAccountBudgetRequest,
-      com.google.ads.googleads.v4.resources.AccountBudget> getGetAccountBudgetMethodHelper() {
     io.grpc.MethodDescriptor<com.google.ads.googleads.v4.services.GetAccountBudgetRequest, com.google.ads.googleads.v4.resources.AccountBudget> getGetAccountBudgetMethod;
     if ((getGetAccountBudgetMethod = AccountBudgetServiceGrpc.getGetAccountBudgetMethod) == null) {
       synchronized (AccountBudgetServiceGrpc.class) {
         if ((getGetAccountBudgetMethod = AccountBudgetServiceGrpc.getGetAccountBudgetMethod) == null) {
-          AccountBudgetServiceGrpc.getGetAccountBudgetMethod = getGetAccountBudgetMethod = 
+          AccountBudgetServiceGrpc.getGetAccountBudgetMethod = getGetAccountBudgetMethod =
               io.grpc.MethodDescriptor.<com.google.ads.googleads.v4.services.GetAccountBudgetRequest, com.google.ads.googleads.v4.resources.AccountBudget>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "google.ads.googleads.v4.services.AccountBudgetService", "GetAccountBudget"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetAccountBudget"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v4.services.GetAccountBudgetRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v4.resources.AccountBudget.getDefaultInstance()))
-                  .setSchemaDescriptor(new AccountBudgetServiceMethodDescriptorSupplier("GetAccountBudget"))
-                  .build();
-          }
+              .setSchemaDescriptor(new AccountBudgetServiceMethodDescriptorSupplier("GetAccountBudget"))
+              .build();
         }
-     }
-     return getGetAccountBudgetMethod;
+      }
+    }
+    return getGetAccountBudgetMethod;
   }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static AccountBudgetServiceStub newStub(io.grpc.Channel channel) {
-    return new AccountBudgetServiceStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<AccountBudgetServiceStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<AccountBudgetServiceStub>() {
+        @java.lang.Override
+        public AccountBudgetServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new AccountBudgetServiceStub(channel, callOptions);
+        }
+      };
+    return AccountBudgetServiceStub.newStub(factory, channel);
   }
 
   /**
@@ -81,7 +81,14 @@ public final class AccountBudgetServiceGrpc {
    */
   public static AccountBudgetServiceBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new AccountBudgetServiceBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<AccountBudgetServiceBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<AccountBudgetServiceBlockingStub>() {
+        @java.lang.Override
+        public AccountBudgetServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new AccountBudgetServiceBlockingStub(channel, callOptions);
+        }
+      };
+    return AccountBudgetServiceBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -89,7 +96,14 @@ public final class AccountBudgetServiceGrpc {
    */
   public static AccountBudgetServiceFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new AccountBudgetServiceFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<AccountBudgetServiceFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<AccountBudgetServiceFutureStub>() {
+        @java.lang.Override
+        public AccountBudgetServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new AccountBudgetServiceFutureStub(channel, callOptions);
+        }
+      };
+    return AccountBudgetServiceFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -107,13 +121,13 @@ public final class AccountBudgetServiceGrpc {
      */
     public void getAccountBudget(com.google.ads.googleads.v4.services.GetAccountBudgetRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v4.resources.AccountBudget> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetAccountBudgetMethodHelper(), responseObserver);
+      asyncUnimplementedUnaryCall(getGetAccountBudgetMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
-            getGetAccountBudgetMethodHelper(),
+            getGetAccountBudgetMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 com.google.ads.googleads.v4.services.GetAccountBudgetRequest,
@@ -129,19 +143,15 @@ public final class AccountBudgetServiceGrpc {
    * Account-level budgets are mutated by creating proposal resources.
    * </pre>
    */
-  public static final class AccountBudgetServiceStub extends io.grpc.stub.AbstractStub<AccountBudgetServiceStub> {
-    private AccountBudgetServiceStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private AccountBudgetServiceStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class AccountBudgetServiceStub extends io.grpc.stub.AbstractAsyncStub<AccountBudgetServiceStub> {
+    private AccountBudgetServiceStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected AccountBudgetServiceStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected AccountBudgetServiceStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new AccountBudgetServiceStub(channel, callOptions);
     }
 
@@ -153,7 +163,7 @@ public final class AccountBudgetServiceGrpc {
     public void getAccountBudget(com.google.ads.googleads.v4.services.GetAccountBudgetRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v4.resources.AccountBudget> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(getGetAccountBudgetMethodHelper(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getGetAccountBudgetMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -163,19 +173,15 @@ public final class AccountBudgetServiceGrpc {
    * Account-level budgets are mutated by creating proposal resources.
    * </pre>
    */
-  public static final class AccountBudgetServiceBlockingStub extends io.grpc.stub.AbstractStub<AccountBudgetServiceBlockingStub> {
-    private AccountBudgetServiceBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private AccountBudgetServiceBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class AccountBudgetServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<AccountBudgetServiceBlockingStub> {
+    private AccountBudgetServiceBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected AccountBudgetServiceBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected AccountBudgetServiceBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new AccountBudgetServiceBlockingStub(channel, callOptions);
     }
 
@@ -186,7 +192,7 @@ public final class AccountBudgetServiceGrpc {
      */
     public com.google.ads.googleads.v4.resources.AccountBudget getAccountBudget(com.google.ads.googleads.v4.services.GetAccountBudgetRequest request) {
       return blockingUnaryCall(
-          getChannel(), getGetAccountBudgetMethodHelper(), getCallOptions(), request);
+          getChannel(), getGetAccountBudgetMethod(), getCallOptions(), request);
     }
   }
 
@@ -196,19 +202,15 @@ public final class AccountBudgetServiceGrpc {
    * Account-level budgets are mutated by creating proposal resources.
    * </pre>
    */
-  public static final class AccountBudgetServiceFutureStub extends io.grpc.stub.AbstractStub<AccountBudgetServiceFutureStub> {
-    private AccountBudgetServiceFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private AccountBudgetServiceFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class AccountBudgetServiceFutureStub extends io.grpc.stub.AbstractFutureStub<AccountBudgetServiceFutureStub> {
+    private AccountBudgetServiceFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected AccountBudgetServiceFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected AccountBudgetServiceFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new AccountBudgetServiceFutureStub(channel, callOptions);
     }
 
@@ -220,7 +222,7 @@ public final class AccountBudgetServiceGrpc {
     public com.google.common.util.concurrent.ListenableFuture<com.google.ads.googleads.v4.resources.AccountBudget> getAccountBudget(
         com.google.ads.googleads.v4.services.GetAccountBudgetRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(getGetAccountBudgetMethodHelper(), getCallOptions()), request);
+          getChannel().newCall(getGetAccountBudgetMethod(), getCallOptions()), request);
     }
   }
 
@@ -308,7 +310,7 @@ public final class AccountBudgetServiceGrpc {
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new AccountBudgetServiceFileDescriptorSupplier())
-              .addMethod(getGetAccountBudgetMethodHelper())
+              .addMethod(getGetAccountBudgetMethod())
               .build();
         }
       }

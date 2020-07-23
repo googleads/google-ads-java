@@ -10,7 +10,7 @@ package com.google.ads.googleads.v4.common;
  *
  * Protobuf type {@code google.ads.googleads.v4.common.TextAdInfo}
  */
-public  final class TextAdInfo extends
+public final class TextAdInfo extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.common.TextAdInfo)
     TextAdInfoOrBuilder {
@@ -133,6 +133,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue headline = 1;</code>
    * @return Whether the headline field is set.
    */
+  @java.lang.Override
   public boolean hasHeadline() {
     return headline_ != null;
   }
@@ -144,6 +145,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue headline = 1;</code>
    * @return The headline.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getHeadline() {
     return headline_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : headline_;
   }
@@ -154,6 +156,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue headline = 1;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getHeadlineOrBuilder() {
     return getHeadline();
   }
@@ -168,6 +171,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue description1 = 2;</code>
    * @return Whether the description1 field is set.
    */
+  @java.lang.Override
   public boolean hasDescription1() {
     return description1_ != null;
   }
@@ -179,6 +183,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue description1 = 2;</code>
    * @return The description1.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getDescription1() {
     return description1_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : description1_;
   }
@@ -189,6 +194,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue description1 = 2;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getDescription1OrBuilder() {
     return getDescription1();
   }
@@ -203,6 +209,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue description2 = 3;</code>
    * @return Whether the description2 field is set.
    */
+  @java.lang.Override
   public boolean hasDescription2() {
     return description2_ != null;
   }
@@ -214,6 +221,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue description2 = 3;</code>
    * @return The description2.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getDescription2() {
     return description2_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : description2_;
   }
@@ -224,6 +232,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue description2 = 3;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getDescription2OrBuilder() {
     return getDescription2();
   }

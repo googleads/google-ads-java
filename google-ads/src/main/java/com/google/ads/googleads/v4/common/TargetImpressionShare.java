@@ -12,7 +12,7 @@ package com.google.ads.googleads.v4.common;
  *
  * Protobuf type {@code google.ads.googleads.v4.common.TargetImpressionShare}
  */
-public  final class TargetImpressionShare extends
+public final class TargetImpressionShare extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.common.TargetImpressionShare)
     TargetImpressionShareOrBuilder {
@@ -129,7 +129,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.TargetImpressionShareLocationEnum.TargetImpressionShareLocation location = 1;</code>
    * @return The enum numeric value on the wire for location.
    */
-  public int getLocationValue() {
+  @java.lang.Override public int getLocationValue() {
     return location_;
   }
   /**
@@ -140,7 +140,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.TargetImpressionShareLocationEnum.TargetImpressionShareLocation location = 1;</code>
    * @return The location.
    */
-  public com.google.ads.googleads.v4.enums.TargetImpressionShareLocationEnum.TargetImpressionShareLocation getLocation() {
+  @java.lang.Override public com.google.ads.googleads.v4.enums.TargetImpressionShareLocationEnum.TargetImpressionShareLocation getLocation() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v4.enums.TargetImpressionShareLocationEnum.TargetImpressionShareLocation result = com.google.ads.googleads.v4.enums.TargetImpressionShareLocationEnum.TargetImpressionShareLocation.valueOf(location_);
     return result == null ? com.google.ads.googleads.v4.enums.TargetImpressionShareLocationEnum.TargetImpressionShareLocation.UNRECOGNIZED : result;
@@ -157,6 +157,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int64Value location_fraction_micros = 2;</code>
    * @return Whether the locationFractionMicros field is set.
    */
+  @java.lang.Override
   public boolean hasLocationFractionMicros() {
     return locationFractionMicros_ != null;
   }
@@ -169,6 +170,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int64Value location_fraction_micros = 2;</code>
    * @return The locationFractionMicros.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getLocationFractionMicros() {
     return locationFractionMicros_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : locationFractionMicros_;
   }
@@ -180,6 +182,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int64Value location_fraction_micros = 2;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getLocationFractionMicrosOrBuilder() {
     return getLocationFractionMicros();
   }
@@ -196,6 +199,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int64Value cpc_bid_ceiling_micros = 3;</code>
    * @return Whether the cpcBidCeilingMicros field is set.
    */
+  @java.lang.Override
   public boolean hasCpcBidCeilingMicros() {
     return cpcBidCeilingMicros_ != null;
   }
@@ -209,6 +213,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int64Value cpc_bid_ceiling_micros = 3;</code>
    * @return The cpcBidCeilingMicros.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getCpcBidCeilingMicros() {
     return cpcBidCeilingMicros_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : cpcBidCeilingMicros_;
   }
@@ -221,6 +226,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int64Value cpc_bid_ceiling_micros = 3;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getCpcBidCeilingMicrosOrBuilder() {
     return getCpcBidCeilingMicros();
   }
@@ -601,7 +607,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.TargetImpressionShareLocationEnum.TargetImpressionShareLocation location = 1;</code>
      * @return The enum numeric value on the wire for location.
      */
-    public int getLocationValue() {
+    @java.lang.Override public int getLocationValue() {
       return location_;
     }
     /**
@@ -614,6 +620,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setLocationValue(int value) {
+      
       location_ = value;
       onChanged();
       return this;
@@ -626,6 +633,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.TargetImpressionShareLocationEnum.TargetImpressionShareLocation location = 1;</code>
      * @return The location.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.enums.TargetImpressionShareLocationEnum.TargetImpressionShareLocation getLocation() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v4.enums.TargetImpressionShareLocationEnum.TargetImpressionShareLocation result = com.google.ads.googleads.v4.enums.TargetImpressionShareLocationEnum.TargetImpressionShareLocation.valueOf(location_);

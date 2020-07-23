@@ -6,13 +6,13 @@ package com.google.ads.googleads.v1.services;
 /**
  * <pre>
  * A single operation to create an asset. Supported asset types are
- * YoutubeVideoAsset, MediaBundleAsset and ImageAsset. TextAsset should be
- * created with Ad inline.
+ * YoutubeVideoAsset, MediaBundleAsset, ImageAsset, and LeadFormAsset. TextAsset
+ * should be created with Ad inline.
  * </pre>
  *
  * Protobuf type {@code google.ads.googleads.v1.services.AssetOperation}
  */
-public  final class AssetOperation extends
+public final class AssetOperation extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v1.services.AssetOperation)
     AssetOperationOrBuilder {
@@ -22,6 +22,13 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private AssetOperation() {
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new AssetOperation();
   }
 
   @java.lang.Override
@@ -37,7 +44,6 @@ private static final long serialVersionUID = 0L;
     if (extensionRegistry == null) {
       throw new java.lang.NullPointerException();
     }
-    int mutable_bitField0_ = 0;
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
         com.google.protobuf.UnknownFieldSet.newBuilder();
     try {
@@ -97,7 +103,8 @@ private static final long serialVersionUID = 0L;
   private int operationCase_ = 0;
   private java.lang.Object operation_;
   public enum OperationCase
-      implements com.google.protobuf.Internal.EnumLite {
+      implements com.google.protobuf.Internal.EnumLite,
+          com.google.protobuf.AbstractMessage.InternalOneOfEnum {
     CREATE(1),
     OPERATION_NOT_SET(0);
     private final int value;
@@ -105,6 +112,8 @@ private static final long serialVersionUID = 0L;
       this.value = value;
     }
     /**
+     * @param value The number of the enum to look for.
+     * @return The enum associated with the given number.
      * @deprecated Use {@link #forNumber(int)} instead.
      */
     @java.lang.Deprecated
@@ -137,7 +146,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.Asset create = 1;</code>
+   * @return Whether the create field is set.
    */
+  @java.lang.Override
   public boolean hasCreate() {
     return operationCase_ == 1;
   }
@@ -147,7 +158,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.Asset create = 1;</code>
+   * @return The create.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.resources.Asset getCreate() {
     if (operationCase_ == 1) {
        return (com.google.ads.googleads.v1.resources.Asset) operation_;
@@ -161,6 +174,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v1.resources.Asset create = 1;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.resources.AssetOrBuilder getCreateOrBuilder() {
     if (operationCase_ == 1) {
        return (com.google.ads.googleads.v1.resources.Asset) operation_;
@@ -339,8 +353,8 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * A single operation to create an asset. Supported asset types are
-   * YoutubeVideoAsset, MediaBundleAsset and ImageAsset. TextAsset should be
-   * created with Ad inline.
+   * YoutubeVideoAsset, MediaBundleAsset, ImageAsset, and LeadFormAsset. TextAsset
+   * should be created with Ad inline.
    * </pre>
    *
    * Protobuf type {@code google.ads.googleads.v1.services.AssetOperation}
@@ -525,7 +539,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.resources.Asset create = 1;</code>
+     * @return Whether the create field is set.
      */
+    @java.lang.Override
     public boolean hasCreate() {
       return operationCase_ == 1;
     }
@@ -535,7 +551,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.resources.Asset create = 1;</code>
+     * @return The create.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v1.resources.Asset getCreate() {
       if (createBuilder_ == null) {
         if (operationCase_ == 1) {
@@ -653,6 +671,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v1.resources.Asset create = 1;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v1.resources.AssetOrBuilder getCreateOrBuilder() {
       if ((operationCase_ == 1) && (createBuilder_ != null)) {
         return createBuilder_.getMessageOrBuilder();

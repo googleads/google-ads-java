@@ -1,5 +1,5 @@
 /*
- * Copyright 2019 Google LLC
+ * Copyright 2020 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -21,7 +21,6 @@ import com.google.ads.googleads.v3.services.stub.SearchTermViewServiceStubSettin
 import com.google.api.core.BetaApi;
 import com.google.api.gax.core.BackgroundResource;
 import com.google.api.gax.rpc.UnaryCallable;
-import com.google.api.pathtemplate.PathTemplate;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 import javax.annotation.Generated;
@@ -36,8 +35,8 @@ import javax.annotation.Generated;
  * <pre>
  * <code>
  * try (SearchTermViewServiceClient searchTermViewServiceClient = SearchTermViewServiceClient.create()) {
- *   String formattedResourceName = SearchTermViewServiceClient.formatSearchTermViewName("[CUSTOMER]", "[SEARCH_TERM_VIEW]");
- *   SearchTermView response = searchTermViewServiceClient.getSearchTermView(formattedResourceName);
+ *   SearchTermViewName resourceName = SearchTermViewName.of("[CUSTOMER]", "[SEARCH_TERM_VIEW]");
+ *   SearchTermView response = searchTermViewServiceClient.getSearchTermView(resourceName);
  * }
  * </code>
  * </pre>
@@ -99,44 +98,6 @@ public class SearchTermViewServiceClient implements BackgroundResource {
   private final SearchTermViewServiceSettings settings;
   private final SearchTermViewServiceStub stub;
 
-  private static final PathTemplate SEARCH_TERM_VIEW_PATH_TEMPLATE =
-      PathTemplate.createWithoutUrlEncoding(
-          "customers/{customer}/searchTermViews/{search_term_view}");
-
-  /**
-   * Formats a string containing the fully-qualified path to represent a search_term_view resource.
-   *
-   * @deprecated Use the {@link SearchTermViewName} class instead.
-   */
-  @Deprecated
-  public static final String formatSearchTermViewName(String customer, String searchTermView) {
-    return SEARCH_TERM_VIEW_PATH_TEMPLATE.instantiate(
-        "customer", customer,
-        "search_term_view", searchTermView);
-  }
-
-  /**
-   * Parses the customer from the given fully-qualified path which represents a search_term_view
-   * resource.
-   *
-   * @deprecated Use the {@link SearchTermViewName} class instead.
-   */
-  @Deprecated
-  public static final String parseCustomerFromSearchTermViewName(String searchTermViewName) {
-    return SEARCH_TERM_VIEW_PATH_TEMPLATE.parse(searchTermViewName).get("customer");
-  }
-
-  /**
-   * Parses the search_term_view from the given fully-qualified path which represents a
-   * search_term_view resource.
-   *
-   * @deprecated Use the {@link SearchTermViewName} class instead.
-   */
-  @Deprecated
-  public static final String parseSearchTermViewFromSearchTermViewName(String searchTermViewName) {
-    return SEARCH_TERM_VIEW_PATH_TEMPLATE.parse(searchTermViewName).get("search_term_view");
-  }
-
   /** Constructs an instance of SearchTermViewServiceClient with default settings. */
   public static final SearchTermViewServiceClient create() throws IOException {
     return create(SearchTermViewServiceSettings.newBuilder().build());
@@ -193,8 +154,32 @@ public class SearchTermViewServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (SearchTermViewServiceClient searchTermViewServiceClient = SearchTermViewServiceClient.create()) {
-   *   String formattedResourceName = SearchTermViewServiceClient.formatSearchTermViewName("[CUSTOMER]", "[SEARCH_TERM_VIEW]");
-   *   SearchTermView response = searchTermViewServiceClient.getSearchTermView(formattedResourceName);
+   *   SearchTermViewName resourceName = SearchTermViewName.of("[CUSTOMER]", "[SEARCH_TERM_VIEW]");
+   *   SearchTermView response = searchTermViewServiceClient.getSearchTermView(resourceName);
+   * }
+   * </code></pre>
+   *
+   * @param resourceName Required. The resource name of the search term view to fetch.
+   * @throws com.google.api.gax.rpc.ApiException if the remote call fails
+   */
+  public final SearchTermView getSearchTermView(SearchTermViewName resourceName) {
+    GetSearchTermViewRequest request =
+        GetSearchTermViewRequest.newBuilder()
+            .setResourceName(resourceName == null ? null : resourceName.toString())
+            .build();
+    return getSearchTermView(request);
+  }
+
+  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  /**
+   * Returns the attributes of the requested search term view.
+   *
+   * <p>Sample code:
+   *
+   * <pre><code>
+   * try (SearchTermViewServiceClient searchTermViewServiceClient = SearchTermViewServiceClient.create()) {
+   *   SearchTermViewName resourceName = SearchTermViewName.of("[CUSTOMER]", "[SEARCH_TERM_VIEW]");
+   *   SearchTermView response = searchTermViewServiceClient.getSearchTermView(resourceName.toString());
    * }
    * </code></pre>
    *
@@ -202,7 +187,6 @@ public class SearchTermViewServiceClient implements BackgroundResource {
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final SearchTermView getSearchTermView(String resourceName) {
-    SEARCH_TERM_VIEW_PATH_TEMPLATE.validate(resourceName, "getSearchTermView");
     GetSearchTermViewRequest request =
         GetSearchTermViewRequest.newBuilder().setResourceName(resourceName).build();
     return getSearchTermView(request);
@@ -216,9 +200,9 @@ public class SearchTermViewServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (SearchTermViewServiceClient searchTermViewServiceClient = SearchTermViewServiceClient.create()) {
-   *   String formattedResourceName = SearchTermViewServiceClient.formatSearchTermViewName("[CUSTOMER]", "[SEARCH_TERM_VIEW]");
+   *   SearchTermViewName resourceName = SearchTermViewName.of("[CUSTOMER]", "[SEARCH_TERM_VIEW]");
    *   GetSearchTermViewRequest request = GetSearchTermViewRequest.newBuilder()
-   *     .setResourceName(formattedResourceName)
+   *     .setResourceName(resourceName.toString())
    *     .build();
    *   SearchTermView response = searchTermViewServiceClient.getSearchTermView(request);
    * }
@@ -239,9 +223,9 @@ public class SearchTermViewServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (SearchTermViewServiceClient searchTermViewServiceClient = SearchTermViewServiceClient.create()) {
-   *   String formattedResourceName = SearchTermViewServiceClient.formatSearchTermViewName("[CUSTOMER]", "[SEARCH_TERM_VIEW]");
+   *   SearchTermViewName resourceName = SearchTermViewName.of("[CUSTOMER]", "[SEARCH_TERM_VIEW]");
    *   GetSearchTermViewRequest request = GetSearchTermViewRequest.newBuilder()
-   *     .setResourceName(formattedResourceName)
+   *     .setResourceName(resourceName.toString())
    *     .build();
    *   ApiFuture&lt;SearchTermView&gt; future = searchTermViewServiceClient.getSearchTermViewCallable().futureCall(request);
    *   // Do something

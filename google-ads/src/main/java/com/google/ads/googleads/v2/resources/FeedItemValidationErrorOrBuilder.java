@@ -9,130 +9,136 @@ public interface FeedItemValidationErrorOrBuilder extends
 
   /**
    * <pre>
-   * Error code indicating what validation error was triggered. The description
+   * Output only. Error code indicating what validation error was triggered. The description
    * of the error can be found in the 'description' field.
    * </pre>
    *
-   * <code>.google.ads.googleads.v2.errors.FeedItemValidationErrorEnum.FeedItemValidationError validation_error = 1;</code>
+   * <code>.google.ads.googleads.v2.errors.FeedItemValidationErrorEnum.FeedItemValidationError validation_error = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The enum numeric value on the wire for validationError.
    */
   int getValidationErrorValue();
   /**
    * <pre>
-   * Error code indicating what validation error was triggered. The description
+   * Output only. Error code indicating what validation error was triggered. The description
    * of the error can be found in the 'description' field.
    * </pre>
    *
-   * <code>.google.ads.googleads.v2.errors.FeedItemValidationErrorEnum.FeedItemValidationError validation_error = 1;</code>
+   * <code>.google.ads.googleads.v2.errors.FeedItemValidationErrorEnum.FeedItemValidationError validation_error = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The validationError.
    */
   com.google.ads.googleads.v2.errors.FeedItemValidationErrorEnum.FeedItemValidationError getValidationError();
 
   /**
    * <pre>
-   * The description of the validation error.
+   * Output only. The description of the validation error.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue description = 2;</code>
+   * <code>.google.protobuf.StringValue description = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the description field is set.
    */
   boolean hasDescription();
   /**
    * <pre>
-   * The description of the validation error.
+   * Output only. The description of the validation error.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue description = 2;</code>
+   * <code>.google.protobuf.StringValue description = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The description.
    */
   com.google.protobuf.StringValue getDescription();
   /**
    * <pre>
-   * The description of the validation error.
+   * Output only. The description of the validation error.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue description = 2;</code>
+   * <code>.google.protobuf.StringValue description = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.protobuf.StringValueOrBuilder getDescriptionOrBuilder();
 
   /**
    * <pre>
-   * Set of feed attributes in the feed item flagged during validation. If
+   * Output only. Set of feed attributes in the feed item flagged during validation. If
    * empty, no specific feed attributes can be associated with the error
    * (e.g. error across the entire feed item).
    * </pre>
    *
-   * <code>repeated .google.protobuf.Int64Value feed_attribute_ids = 3;</code>
+   * <code>repeated .google.protobuf.Int64Value feed_attribute_ids = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   java.util.List<com.google.protobuf.Int64Value> 
       getFeedAttributeIdsList();
   /**
    * <pre>
-   * Set of feed attributes in the feed item flagged during validation. If
+   * Output only. Set of feed attributes in the feed item flagged during validation. If
    * empty, no specific feed attributes can be associated with the error
    * (e.g. error across the entire feed item).
    * </pre>
    *
-   * <code>repeated .google.protobuf.Int64Value feed_attribute_ids = 3;</code>
+   * <code>repeated .google.protobuf.Int64Value feed_attribute_ids = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.protobuf.Int64Value getFeedAttributeIds(int index);
   /**
    * <pre>
-   * Set of feed attributes in the feed item flagged during validation. If
+   * Output only. Set of feed attributes in the feed item flagged during validation. If
    * empty, no specific feed attributes can be associated with the error
    * (e.g. error across the entire feed item).
    * </pre>
    *
-   * <code>repeated .google.protobuf.Int64Value feed_attribute_ids = 3;</code>
+   * <code>repeated .google.protobuf.Int64Value feed_attribute_ids = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   int getFeedAttributeIdsCount();
   /**
    * <pre>
-   * Set of feed attributes in the feed item flagged during validation. If
+   * Output only. Set of feed attributes in the feed item flagged during validation. If
    * empty, no specific feed attributes can be associated with the error
    * (e.g. error across the entire feed item).
    * </pre>
    *
-   * <code>repeated .google.protobuf.Int64Value feed_attribute_ids = 3;</code>
+   * <code>repeated .google.protobuf.Int64Value feed_attribute_ids = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   java.util.List<? extends com.google.protobuf.Int64ValueOrBuilder> 
       getFeedAttributeIdsOrBuilderList();
   /**
    * <pre>
-   * Set of feed attributes in the feed item flagged during validation. If
+   * Output only. Set of feed attributes in the feed item flagged during validation. If
    * empty, no specific feed attributes can be associated with the error
    * (e.g. error across the entire feed item).
    * </pre>
    *
-   * <code>repeated .google.protobuf.Int64Value feed_attribute_ids = 3;</code>
+   * <code>repeated .google.protobuf.Int64Value feed_attribute_ids = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.protobuf.Int64ValueOrBuilder getFeedAttributeIdsOrBuilder(
       int index);
 
   /**
    * <pre>
-   * Any extra information related to this error which is not captured by
+   * Output only. Any extra information related to this error which is not captured by
    * validation_error and feed_attribute_id (e.g. placeholder field IDs when
    * feed_attribute_id is not mapped). Note that extra_info is not localized.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue extra_info = 5;</code>
+   * <code>.google.protobuf.StringValue extra_info = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the extraInfo field is set.
    */
   boolean hasExtraInfo();
   /**
    * <pre>
-   * Any extra information related to this error which is not captured by
+   * Output only. Any extra information related to this error which is not captured by
    * validation_error and feed_attribute_id (e.g. placeholder field IDs when
    * feed_attribute_id is not mapped). Note that extra_info is not localized.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue extra_info = 5;</code>
+   * <code>.google.protobuf.StringValue extra_info = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The extraInfo.
    */
   com.google.protobuf.StringValue getExtraInfo();
   /**
    * <pre>
-   * Any extra information related to this error which is not captured by
+   * Output only. Any extra information related to this error which is not captured by
    * validation_error and feed_attribute_id (e.g. placeholder field IDs when
    * feed_attribute_id is not mapped). Note that extra_info is not localized.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue extra_info = 5;</code>
+   * <code>.google.protobuf.StringValue extra_info = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.protobuf.StringValueOrBuilder getExtraInfoOrBuilder();
 }

@@ -9,22 +9,24 @@ public interface ProductGroupViewOrBuilder extends
 
   /**
    * <pre>
-   * The resource name of the product group view.
+   * Output only. The resource name of the product group view.
    * Product group view resource names have the form:
    * `customers/{customer_id}/productGroupViews/{ad_group_id}~{criterion_id}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The resourceName.
    */
   java.lang.String getResourceName();
   /**
    * <pre>
-   * The resource name of the product group view.
+   * Output only. The resource name of the product group view.
    * Product group view resource names have the form:
    * `customers/{customer_id}/productGroupViews/{ad_group_id}~{criterion_id}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The bytes for resourceName.
    */
   com.google.protobuf.ByteString
       getResourceNameBytes();

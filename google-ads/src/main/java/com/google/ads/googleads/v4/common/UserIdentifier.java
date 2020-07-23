@@ -10,7 +10,7 @@ package com.google.ads.googleads.v4.common;
  *
  * Protobuf type {@code google.ads.googleads.v4.common.UserIdentifier}
  */
-public  final class UserIdentifier extends
+public final class UserIdentifier extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.common.UserIdentifier)
     UserIdentifierOrBuilder {
@@ -210,6 +210,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue hashed_email = 1;</code>
    * @return Whether the hashedEmail field is set.
    */
+  @java.lang.Override
   public boolean hasHashedEmail() {
     return identifierCase_ == 1;
   }
@@ -221,6 +222,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue hashed_email = 1;</code>
    * @return The hashedEmail.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getHashedEmail() {
     if (identifierCase_ == 1) {
        return (com.google.protobuf.StringValue) identifier_;
@@ -234,6 +236,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue hashed_email = 1;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getHashedEmailOrBuilder() {
     if (identifierCase_ == 1) {
        return (com.google.protobuf.StringValue) identifier_;
@@ -251,6 +254,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue hashed_phone_number = 2;</code>
    * @return Whether the hashedPhoneNumber field is set.
    */
+  @java.lang.Override
   public boolean hasHashedPhoneNumber() {
     return identifierCase_ == 2;
   }
@@ -263,6 +267,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue hashed_phone_number = 2;</code>
    * @return The hashedPhoneNumber.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getHashedPhoneNumber() {
     if (identifierCase_ == 2) {
        return (com.google.protobuf.StringValue) identifier_;
@@ -277,6 +282,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue hashed_phone_number = 2;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getHashedPhoneNumberOrBuilder() {
     if (identifierCase_ == 2) {
        return (com.google.protobuf.StringValue) identifier_;
@@ -293,6 +299,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue mobile_id = 3;</code>
    * @return Whether the mobileId field is set.
    */
+  @java.lang.Override
   public boolean hasMobileId() {
     return identifierCase_ == 3;
   }
@@ -304,6 +311,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue mobile_id = 3;</code>
    * @return The mobileId.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getMobileId() {
     if (identifierCase_ == 3) {
        return (com.google.protobuf.StringValue) identifier_;
@@ -317,6 +325,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue mobile_id = 3;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getMobileIdOrBuilder() {
     if (identifierCase_ == 3) {
        return (com.google.protobuf.StringValue) identifier_;
@@ -334,6 +343,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue third_party_user_id = 4;</code>
    * @return Whether the thirdPartyUserId field is set.
    */
+  @java.lang.Override
   public boolean hasThirdPartyUserId() {
     return identifierCase_ == 4;
   }
@@ -346,6 +356,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue third_party_user_id = 4;</code>
    * @return The thirdPartyUserId.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getThirdPartyUserId() {
     if (identifierCase_ == 4) {
        return (com.google.protobuf.StringValue) identifier_;
@@ -360,6 +371,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue third_party_user_id = 4;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getThirdPartyUserIdOrBuilder() {
     if (identifierCase_ == 4) {
        return (com.google.protobuf.StringValue) identifier_;
@@ -376,6 +388,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.common.OfflineUserAddressInfo address_info = 5;</code>
    * @return Whether the addressInfo field is set.
    */
+  @java.lang.Override
   public boolean hasAddressInfo() {
     return identifierCase_ == 5;
   }
@@ -387,6 +400,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.common.OfflineUserAddressInfo address_info = 5;</code>
    * @return The addressInfo.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.OfflineUserAddressInfo getAddressInfo() {
     if (identifierCase_ == 5) {
        return (com.google.ads.googleads.v4.common.OfflineUserAddressInfo) identifier_;
@@ -400,6 +414,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v4.common.OfflineUserAddressInfo address_info = 5;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.OfflineUserAddressInfoOrBuilder getAddressInfoOrBuilder() {
     if (identifierCase_ == 5) {
        return (com.google.ads.googleads.v4.common.OfflineUserAddressInfo) identifier_;
@@ -868,6 +883,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.StringValue hashed_email = 1;</code>
      * @return Whether the hashedEmail field is set.
      */
+    @java.lang.Override
     public boolean hasHashedEmail() {
       return identifierCase_ == 1;
     }
@@ -879,6 +895,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.StringValue hashed_email = 1;</code>
      * @return The hashedEmail.
      */
+    @java.lang.Override
     public com.google.protobuf.StringValue getHashedEmail() {
       if (hashedEmailBuilder_ == null) {
         if (identifierCase_ == 1) {
@@ -996,6 +1013,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.protobuf.StringValue hashed_email = 1;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.StringValueOrBuilder getHashedEmailOrBuilder() {
       if ((identifierCase_ == 1) && (hashedEmailBuilder_ != null)) {
         return hashedEmailBuilder_.getMessageOrBuilder();
@@ -1043,6 +1061,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.StringValue hashed_phone_number = 2;</code>
      * @return Whether the hashedPhoneNumber field is set.
      */
+    @java.lang.Override
     public boolean hasHashedPhoneNumber() {
       return identifierCase_ == 2;
     }
@@ -1055,6 +1074,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.StringValue hashed_phone_number = 2;</code>
      * @return The hashedPhoneNumber.
      */
+    @java.lang.Override
     public com.google.protobuf.StringValue getHashedPhoneNumber() {
       if (hashedPhoneNumberBuilder_ == null) {
         if (identifierCase_ == 2) {
@@ -1178,6 +1198,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.protobuf.StringValue hashed_phone_number = 2;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.StringValueOrBuilder getHashedPhoneNumberOrBuilder() {
       if ((identifierCase_ == 2) && (hashedPhoneNumberBuilder_ != null)) {
         return hashedPhoneNumberBuilder_.getMessageOrBuilder();
@@ -1225,6 +1246,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.StringValue mobile_id = 3;</code>
      * @return Whether the mobileId field is set.
      */
+    @java.lang.Override
     public boolean hasMobileId() {
       return identifierCase_ == 3;
     }
@@ -1236,6 +1258,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.StringValue mobile_id = 3;</code>
      * @return The mobileId.
      */
+    @java.lang.Override
     public com.google.protobuf.StringValue getMobileId() {
       if (mobileIdBuilder_ == null) {
         if (identifierCase_ == 3) {
@@ -1353,6 +1376,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.protobuf.StringValue mobile_id = 3;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.StringValueOrBuilder getMobileIdOrBuilder() {
       if ((identifierCase_ == 3) && (mobileIdBuilder_ != null)) {
         return mobileIdBuilder_.getMessageOrBuilder();
@@ -1400,6 +1424,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.StringValue third_party_user_id = 4;</code>
      * @return Whether the thirdPartyUserId field is set.
      */
+    @java.lang.Override
     public boolean hasThirdPartyUserId() {
       return identifierCase_ == 4;
     }
@@ -1412,6 +1437,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.StringValue third_party_user_id = 4;</code>
      * @return The thirdPartyUserId.
      */
+    @java.lang.Override
     public com.google.protobuf.StringValue getThirdPartyUserId() {
       if (thirdPartyUserIdBuilder_ == null) {
         if (identifierCase_ == 4) {
@@ -1535,6 +1561,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.protobuf.StringValue third_party_user_id = 4;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.StringValueOrBuilder getThirdPartyUserIdOrBuilder() {
       if ((identifierCase_ == 4) && (thirdPartyUserIdBuilder_ != null)) {
         return thirdPartyUserIdBuilder_.getMessageOrBuilder();
@@ -1582,6 +1609,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.common.OfflineUserAddressInfo address_info = 5;</code>
      * @return Whether the addressInfo field is set.
      */
+    @java.lang.Override
     public boolean hasAddressInfo() {
       return identifierCase_ == 5;
     }
@@ -1593,6 +1621,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.common.OfflineUserAddressInfo address_info = 5;</code>
      * @return The addressInfo.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.common.OfflineUserAddressInfo getAddressInfo() {
       if (addressInfoBuilder_ == null) {
         if (identifierCase_ == 5) {
@@ -1710,6 +1739,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v4.common.OfflineUserAddressInfo address_info = 5;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.common.OfflineUserAddressInfoOrBuilder getAddressInfoOrBuilder() {
       if ((identifierCase_ == 5) && (addressInfoBuilder_ != null)) {
         return addressInfoBuilder_.getMessageOrBuilder();

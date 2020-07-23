@@ -10,7 +10,7 @@ package com.google.ads.googleads.v4.common;
  *
  * Protobuf type {@code google.ads.googleads.v4.common.HotelDateSelectionTypeInfo}
  */
-public  final class HotelDateSelectionTypeInfo extends
+public final class HotelDateSelectionTypeInfo extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.common.HotelDateSelectionTypeInfo)
     HotelDateSelectionTypeInfoOrBuilder {
@@ -101,7 +101,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.HotelDateSelectionTypeEnum.HotelDateSelectionType type = 1;</code>
    * @return The enum numeric value on the wire for type.
    */
-  public int getTypeValue() {
+  @java.lang.Override public int getTypeValue() {
     return type_;
   }
   /**
@@ -112,7 +112,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.HotelDateSelectionTypeEnum.HotelDateSelectionType type = 1;</code>
    * @return The type.
    */
-  public com.google.ads.googleads.v4.enums.HotelDateSelectionTypeEnum.HotelDateSelectionType getType() {
+  @java.lang.Override public com.google.ads.googleads.v4.enums.HotelDateSelectionTypeEnum.HotelDateSelectionType getType() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v4.enums.HotelDateSelectionTypeEnum.HotelDateSelectionType result = com.google.ads.googleads.v4.enums.HotelDateSelectionTypeEnum.HotelDateSelectionType.valueOf(type_);
     return result == null ? com.google.ads.googleads.v4.enums.HotelDateSelectionTypeEnum.HotelDateSelectionType.UNRECOGNIZED : result;
@@ -432,7 +432,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.HotelDateSelectionTypeEnum.HotelDateSelectionType type = 1;</code>
      * @return The enum numeric value on the wire for type.
      */
-    public int getTypeValue() {
+    @java.lang.Override public int getTypeValue() {
       return type_;
     }
     /**
@@ -445,6 +445,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setTypeValue(int value) {
+      
       type_ = value;
       onChanged();
       return this;
@@ -457,6 +458,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.HotelDateSelectionTypeEnum.HotelDateSelectionType type = 1;</code>
      * @return The type.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.enums.HotelDateSelectionTypeEnum.HotelDateSelectionType getType() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v4.enums.HotelDateSelectionTypeEnum.HotelDateSelectionType result = com.google.ads.googleads.v4.enums.HotelDateSelectionTypeEnum.HotelDateSelectionType.valueOf(type_);

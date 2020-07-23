@@ -21,7 +21,6 @@ import com.google.ads.googleads.v4.services.stub.ThirdPartyAppAnalyticsLinkServi
 import com.google.api.core.BetaApi;
 import com.google.api.gax.core.BackgroundResource;
 import com.google.api.gax.rpc.UnaryCallable;
-import com.google.api.pathtemplate.PathTemplate;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 import javax.annotation.Generated;
@@ -37,8 +36,8 @@ import javax.annotation.Generated;
  * <pre>
  * <code>
  * try (ThirdPartyAppAnalyticsLinkServiceClient thirdPartyAppAnalyticsLinkServiceClient = ThirdPartyAppAnalyticsLinkServiceClient.create()) {
- *   String formattedResourceName = ThirdPartyAppAnalyticsLinkServiceClient.formatThirdPartyAppAnalyticsLinkName("[CUSTOMER]", "[THIRD_PARTY_APP_ANALYTICS_LINK]");
- *   ThirdPartyAppAnalyticsLink response = thirdPartyAppAnalyticsLinkServiceClient.getThirdPartyAppAnalyticsLink(formattedResourceName);
+ *   GetThirdPartyAppAnalyticsLinkRequest request = GetThirdPartyAppAnalyticsLinkRequest.newBuilder().build();
+ *   ThirdPartyAppAnalyticsLink response = thirdPartyAppAnalyticsLinkServiceClient.getThirdPartyAppAnalyticsLink(request);
  * }
  * </code>
  * </pre>
@@ -99,52 +98,6 @@ import javax.annotation.Generated;
 public class ThirdPartyAppAnalyticsLinkServiceClient implements BackgroundResource {
   private final ThirdPartyAppAnalyticsLinkServiceSettings settings;
   private final ThirdPartyAppAnalyticsLinkServiceStub stub;
-
-  private static final PathTemplate THIRD_PARTY_APP_ANALYTICS_LINK_PATH_TEMPLATE =
-      PathTemplate.createWithoutUrlEncoding(
-          "customers/{customer}/thirdPartyAppAnalyticsLinks/{third_party_app_analytics_link}");
-
-  /**
-   * Formats a string containing the fully-qualified path to represent a
-   * third_party_app_analytics_link resource.
-   *
-   * @deprecated Use the {@link ThirdPartyAppAnalyticsLinkName} class instead.
-   */
-  @Deprecated
-  public static final String formatThirdPartyAppAnalyticsLinkName(
-      String customer, String thirdPartyAppAnalyticsLink) {
-    return THIRD_PARTY_APP_ANALYTICS_LINK_PATH_TEMPLATE.instantiate(
-        "customer", customer,
-        "third_party_app_analytics_link", thirdPartyAppAnalyticsLink);
-  }
-
-  /**
-   * Parses the customer from the given fully-qualified path which represents a
-   * third_party_app_analytics_link resource.
-   *
-   * @deprecated Use the {@link ThirdPartyAppAnalyticsLinkName} class instead.
-   */
-  @Deprecated
-  public static final String parseCustomerFromThirdPartyAppAnalyticsLinkName(
-      String thirdPartyAppAnalyticsLinkName) {
-    return THIRD_PARTY_APP_ANALYTICS_LINK_PATH_TEMPLATE
-        .parse(thirdPartyAppAnalyticsLinkName)
-        .get("customer");
-  }
-
-  /**
-   * Parses the third_party_app_analytics_link from the given fully-qualified path which represents
-   * a third_party_app_analytics_link resource.
-   *
-   * @deprecated Use the {@link ThirdPartyAppAnalyticsLinkName} class instead.
-   */
-  @Deprecated
-  public static final String parseThirdPartyAppAnalyticsLinkFromThirdPartyAppAnalyticsLinkName(
-      String thirdPartyAppAnalyticsLinkName) {
-    return THIRD_PARTY_APP_ANALYTICS_LINK_PATH_TEMPLATE
-        .parse(thirdPartyAppAnalyticsLinkName)
-        .get("third_party_app_analytics_link");
-  }
 
   /** Constructs an instance of ThirdPartyAppAnalyticsLinkServiceClient with default settings. */
   public static final ThirdPartyAppAnalyticsLinkServiceClient create() throws IOException {
@@ -207,34 +160,7 @@ public class ThirdPartyAppAnalyticsLinkServiceClient implements BackgroundResour
    *
    * <pre><code>
    * try (ThirdPartyAppAnalyticsLinkServiceClient thirdPartyAppAnalyticsLinkServiceClient = ThirdPartyAppAnalyticsLinkServiceClient.create()) {
-   *   String formattedResourceName = ThirdPartyAppAnalyticsLinkServiceClient.formatThirdPartyAppAnalyticsLinkName("[CUSTOMER]", "[THIRD_PARTY_APP_ANALYTICS_LINK]");
-   *   ThirdPartyAppAnalyticsLink response = thirdPartyAppAnalyticsLinkServiceClient.getThirdPartyAppAnalyticsLink(formattedResourceName);
-   * }
-   * </code></pre>
-   *
-   * @param resourceName Resource name of the third party app analytics link.
-   * @throws com.google.api.gax.rpc.ApiException if the remote call fails
-   */
-  public final ThirdPartyAppAnalyticsLink getThirdPartyAppAnalyticsLink(String resourceName) {
-    THIRD_PARTY_APP_ANALYTICS_LINK_PATH_TEMPLATE.validate(
-        resourceName, "getThirdPartyAppAnalyticsLink");
-    GetThirdPartyAppAnalyticsLinkRequest request =
-        GetThirdPartyAppAnalyticsLinkRequest.newBuilder().setResourceName(resourceName).build();
-    return getThirdPartyAppAnalyticsLink(request);
-  }
-
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
-  /**
-   * Returns the third party app analytics link in full detail.
-   *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (ThirdPartyAppAnalyticsLinkServiceClient thirdPartyAppAnalyticsLinkServiceClient = ThirdPartyAppAnalyticsLinkServiceClient.create()) {
-   *   String formattedResourceName = ThirdPartyAppAnalyticsLinkServiceClient.formatThirdPartyAppAnalyticsLinkName("[CUSTOMER]", "[THIRD_PARTY_APP_ANALYTICS_LINK]");
-   *   GetThirdPartyAppAnalyticsLinkRequest request = GetThirdPartyAppAnalyticsLinkRequest.newBuilder()
-   *     .setResourceName(formattedResourceName)
-   *     .build();
+   *   GetThirdPartyAppAnalyticsLinkRequest request = GetThirdPartyAppAnalyticsLinkRequest.newBuilder().build();
    *   ThirdPartyAppAnalyticsLink response = thirdPartyAppAnalyticsLinkServiceClient.getThirdPartyAppAnalyticsLink(request);
    * }
    * </code></pre>
@@ -255,10 +181,7 @@ public class ThirdPartyAppAnalyticsLinkServiceClient implements BackgroundResour
    *
    * <pre><code>
    * try (ThirdPartyAppAnalyticsLinkServiceClient thirdPartyAppAnalyticsLinkServiceClient = ThirdPartyAppAnalyticsLinkServiceClient.create()) {
-   *   String formattedResourceName = ThirdPartyAppAnalyticsLinkServiceClient.formatThirdPartyAppAnalyticsLinkName("[CUSTOMER]", "[THIRD_PARTY_APP_ANALYTICS_LINK]");
-   *   GetThirdPartyAppAnalyticsLinkRequest request = GetThirdPartyAppAnalyticsLinkRequest.newBuilder()
-   *     .setResourceName(formattedResourceName)
-   *     .build();
+   *   GetThirdPartyAppAnalyticsLinkRequest request = GetThirdPartyAppAnalyticsLinkRequest.newBuilder().build();
    *   ApiFuture&lt;ThirdPartyAppAnalyticsLink&gt; future = thirdPartyAppAnalyticsLinkServiceClient.getThirdPartyAppAnalyticsLinkCallable().futureCall(request);
    *   // Do something
    *   ThirdPartyAppAnalyticsLink response = future.get();

@@ -9,44 +9,48 @@ public interface MutateAccountBudgetProposalRequestOrBuilder extends
 
   /**
    * <pre>
-   * The ID of the customer.
+   * Required. The ID of the customer.
    * </pre>
    *
-   * <code>string customer_id = 1;</code>
+   * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+   * @return The customerId.
    */
   java.lang.String getCustomerId();
   /**
    * <pre>
-   * The ID of the customer.
+   * Required. The ID of the customer.
    * </pre>
    *
-   * <code>string customer_id = 1;</code>
+   * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+   * @return The bytes for customerId.
    */
   com.google.protobuf.ByteString
       getCustomerIdBytes();
 
   /**
    * <pre>
-   * The operation to perform on an individual account-level budget proposal.
+   * Required. The operation to perform on an individual account-level budget proposal.
    * </pre>
    *
-   * <code>.google.ads.googleads.v1.services.AccountBudgetProposalOperation operation = 2;</code>
+   * <code>.google.ads.googleads.v1.services.AccountBudgetProposalOperation operation = 2 [(.google.api.field_behavior) = REQUIRED];</code>
+   * @return Whether the operation field is set.
    */
   boolean hasOperation();
   /**
    * <pre>
-   * The operation to perform on an individual account-level budget proposal.
+   * Required. The operation to perform on an individual account-level budget proposal.
    * </pre>
    *
-   * <code>.google.ads.googleads.v1.services.AccountBudgetProposalOperation operation = 2;</code>
+   * <code>.google.ads.googleads.v1.services.AccountBudgetProposalOperation operation = 2 [(.google.api.field_behavior) = REQUIRED];</code>
+   * @return The operation.
    */
   com.google.ads.googleads.v1.services.AccountBudgetProposalOperation getOperation();
   /**
    * <pre>
-   * The operation to perform on an individual account-level budget proposal.
+   * Required. The operation to perform on an individual account-level budget proposal.
    * </pre>
    *
-   * <code>.google.ads.googleads.v1.services.AccountBudgetProposalOperation operation = 2;</code>
+   * <code>.google.ads.googleads.v1.services.AccountBudgetProposalOperation operation = 2 [(.google.api.field_behavior) = REQUIRED];</code>
    */
   com.google.ads.googleads.v1.services.AccountBudgetProposalOperationOrBuilder getOperationOrBuilder();
 
@@ -57,6 +61,7 @@ public interface MutateAccountBudgetProposalRequestOrBuilder extends
    * </pre>
    *
    * <code>bool validate_only = 3;</code>
+   * @return The validateOnly.
    */
   boolean getValidateOnly();
 }

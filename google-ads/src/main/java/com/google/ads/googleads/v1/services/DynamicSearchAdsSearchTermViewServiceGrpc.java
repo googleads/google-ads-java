@@ -21,7 +21,7 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.10.0)",
+    value = "by gRPC proto compiler",
     comments = "Source: google/ads/googleads/v1/services/dynamic_search_ads_search_term_view_service.proto")
 public final class DynamicSearchAdsSearchTermViewServiceGrpc {
 
@@ -30,49 +30,49 @@ public final class DynamicSearchAdsSearchTermViewServiceGrpc {
   public static final String SERVICE_NAME = "google.ads.googleads.v1.services.DynamicSearchAdsSearchTermViewService";
 
   // Static method descriptors that strictly reflect the proto.
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  @java.lang.Deprecated // Use {@link #getGetDynamicSearchAdsSearchTermViewMethod()} instead. 
-  public static final io.grpc.MethodDescriptor<com.google.ads.googleads.v1.services.GetDynamicSearchAdsSearchTermViewRequest,
-      com.google.ads.googleads.v1.resources.DynamicSearchAdsSearchTermView> METHOD_GET_DYNAMIC_SEARCH_ADS_SEARCH_TERM_VIEW = getGetDynamicSearchAdsSearchTermViewMethodHelper();
-
   private static volatile io.grpc.MethodDescriptor<com.google.ads.googleads.v1.services.GetDynamicSearchAdsSearchTermViewRequest,
       com.google.ads.googleads.v1.resources.DynamicSearchAdsSearchTermView> getGetDynamicSearchAdsSearchTermViewMethod;
 
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetDynamicSearchAdsSearchTermView",
+      requestType = com.google.ads.googleads.v1.services.GetDynamicSearchAdsSearchTermViewRequest.class,
+      responseType = com.google.ads.googleads.v1.resources.DynamicSearchAdsSearchTermView.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<com.google.ads.googleads.v1.services.GetDynamicSearchAdsSearchTermViewRequest,
       com.google.ads.googleads.v1.resources.DynamicSearchAdsSearchTermView> getGetDynamicSearchAdsSearchTermViewMethod() {
-    return getGetDynamicSearchAdsSearchTermViewMethodHelper();
-  }
-
-  private static io.grpc.MethodDescriptor<com.google.ads.googleads.v1.services.GetDynamicSearchAdsSearchTermViewRequest,
-      com.google.ads.googleads.v1.resources.DynamicSearchAdsSearchTermView> getGetDynamicSearchAdsSearchTermViewMethodHelper() {
     io.grpc.MethodDescriptor<com.google.ads.googleads.v1.services.GetDynamicSearchAdsSearchTermViewRequest, com.google.ads.googleads.v1.resources.DynamicSearchAdsSearchTermView> getGetDynamicSearchAdsSearchTermViewMethod;
     if ((getGetDynamicSearchAdsSearchTermViewMethod = DynamicSearchAdsSearchTermViewServiceGrpc.getGetDynamicSearchAdsSearchTermViewMethod) == null) {
       synchronized (DynamicSearchAdsSearchTermViewServiceGrpc.class) {
         if ((getGetDynamicSearchAdsSearchTermViewMethod = DynamicSearchAdsSearchTermViewServiceGrpc.getGetDynamicSearchAdsSearchTermViewMethod) == null) {
-          DynamicSearchAdsSearchTermViewServiceGrpc.getGetDynamicSearchAdsSearchTermViewMethod = getGetDynamicSearchAdsSearchTermViewMethod = 
+          DynamicSearchAdsSearchTermViewServiceGrpc.getGetDynamicSearchAdsSearchTermViewMethod = getGetDynamicSearchAdsSearchTermViewMethod =
               io.grpc.MethodDescriptor.<com.google.ads.googleads.v1.services.GetDynamicSearchAdsSearchTermViewRequest, com.google.ads.googleads.v1.resources.DynamicSearchAdsSearchTermView>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "google.ads.googleads.v1.services.DynamicSearchAdsSearchTermViewService", "GetDynamicSearchAdsSearchTermView"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetDynamicSearchAdsSearchTermView"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v1.services.GetDynamicSearchAdsSearchTermViewRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v1.resources.DynamicSearchAdsSearchTermView.getDefaultInstance()))
-                  .setSchemaDescriptor(new DynamicSearchAdsSearchTermViewServiceMethodDescriptorSupplier("GetDynamicSearchAdsSearchTermView"))
-                  .build();
-          }
+              .setSchemaDescriptor(new DynamicSearchAdsSearchTermViewServiceMethodDescriptorSupplier("GetDynamicSearchAdsSearchTermView"))
+              .build();
         }
-     }
-     return getGetDynamicSearchAdsSearchTermViewMethod;
+      }
+    }
+    return getGetDynamicSearchAdsSearchTermViewMethod;
   }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static DynamicSearchAdsSearchTermViewServiceStub newStub(io.grpc.Channel channel) {
-    return new DynamicSearchAdsSearchTermViewServiceStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<DynamicSearchAdsSearchTermViewServiceStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<DynamicSearchAdsSearchTermViewServiceStub>() {
+        @java.lang.Override
+        public DynamicSearchAdsSearchTermViewServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new DynamicSearchAdsSearchTermViewServiceStub(channel, callOptions);
+        }
+      };
+    return DynamicSearchAdsSearchTermViewServiceStub.newStub(factory, channel);
   }
 
   /**
@@ -80,7 +80,14 @@ public final class DynamicSearchAdsSearchTermViewServiceGrpc {
    */
   public static DynamicSearchAdsSearchTermViewServiceBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new DynamicSearchAdsSearchTermViewServiceBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<DynamicSearchAdsSearchTermViewServiceBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<DynamicSearchAdsSearchTermViewServiceBlockingStub>() {
+        @java.lang.Override
+        public DynamicSearchAdsSearchTermViewServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new DynamicSearchAdsSearchTermViewServiceBlockingStub(channel, callOptions);
+        }
+      };
+    return DynamicSearchAdsSearchTermViewServiceBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -88,7 +95,14 @@ public final class DynamicSearchAdsSearchTermViewServiceGrpc {
    */
   public static DynamicSearchAdsSearchTermViewServiceFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new DynamicSearchAdsSearchTermViewServiceFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<DynamicSearchAdsSearchTermViewServiceFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<DynamicSearchAdsSearchTermViewServiceFutureStub>() {
+        @java.lang.Override
+        public DynamicSearchAdsSearchTermViewServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new DynamicSearchAdsSearchTermViewServiceFutureStub(channel, callOptions);
+        }
+      };
+    return DynamicSearchAdsSearchTermViewServiceFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -105,13 +119,13 @@ public final class DynamicSearchAdsSearchTermViewServiceGrpc {
      */
     public void getDynamicSearchAdsSearchTermView(com.google.ads.googleads.v1.services.GetDynamicSearchAdsSearchTermViewRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v1.resources.DynamicSearchAdsSearchTermView> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetDynamicSearchAdsSearchTermViewMethodHelper(), responseObserver);
+      asyncUnimplementedUnaryCall(getGetDynamicSearchAdsSearchTermViewMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
-            getGetDynamicSearchAdsSearchTermViewMethodHelper(),
+            getGetDynamicSearchAdsSearchTermViewMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 com.google.ads.googleads.v1.services.GetDynamicSearchAdsSearchTermViewRequest,
@@ -126,19 +140,15 @@ public final class DynamicSearchAdsSearchTermViewServiceGrpc {
    * Service to fetch dynamic search ads views.
    * </pre>
    */
-  public static final class DynamicSearchAdsSearchTermViewServiceStub extends io.grpc.stub.AbstractStub<DynamicSearchAdsSearchTermViewServiceStub> {
-    private DynamicSearchAdsSearchTermViewServiceStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private DynamicSearchAdsSearchTermViewServiceStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class DynamicSearchAdsSearchTermViewServiceStub extends io.grpc.stub.AbstractAsyncStub<DynamicSearchAdsSearchTermViewServiceStub> {
+    private DynamicSearchAdsSearchTermViewServiceStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected DynamicSearchAdsSearchTermViewServiceStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected DynamicSearchAdsSearchTermViewServiceStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new DynamicSearchAdsSearchTermViewServiceStub(channel, callOptions);
     }
 
@@ -150,7 +160,7 @@ public final class DynamicSearchAdsSearchTermViewServiceGrpc {
     public void getDynamicSearchAdsSearchTermView(com.google.ads.googleads.v1.services.GetDynamicSearchAdsSearchTermViewRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v1.resources.DynamicSearchAdsSearchTermView> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(getGetDynamicSearchAdsSearchTermViewMethodHelper(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getGetDynamicSearchAdsSearchTermViewMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -159,19 +169,15 @@ public final class DynamicSearchAdsSearchTermViewServiceGrpc {
    * Service to fetch dynamic search ads views.
    * </pre>
    */
-  public static final class DynamicSearchAdsSearchTermViewServiceBlockingStub extends io.grpc.stub.AbstractStub<DynamicSearchAdsSearchTermViewServiceBlockingStub> {
-    private DynamicSearchAdsSearchTermViewServiceBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private DynamicSearchAdsSearchTermViewServiceBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class DynamicSearchAdsSearchTermViewServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<DynamicSearchAdsSearchTermViewServiceBlockingStub> {
+    private DynamicSearchAdsSearchTermViewServiceBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected DynamicSearchAdsSearchTermViewServiceBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected DynamicSearchAdsSearchTermViewServiceBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new DynamicSearchAdsSearchTermViewServiceBlockingStub(channel, callOptions);
     }
 
@@ -182,7 +188,7 @@ public final class DynamicSearchAdsSearchTermViewServiceGrpc {
      */
     public com.google.ads.googleads.v1.resources.DynamicSearchAdsSearchTermView getDynamicSearchAdsSearchTermView(com.google.ads.googleads.v1.services.GetDynamicSearchAdsSearchTermViewRequest request) {
       return blockingUnaryCall(
-          getChannel(), getGetDynamicSearchAdsSearchTermViewMethodHelper(), getCallOptions(), request);
+          getChannel(), getGetDynamicSearchAdsSearchTermViewMethod(), getCallOptions(), request);
     }
   }
 
@@ -191,19 +197,15 @@ public final class DynamicSearchAdsSearchTermViewServiceGrpc {
    * Service to fetch dynamic search ads views.
    * </pre>
    */
-  public static final class DynamicSearchAdsSearchTermViewServiceFutureStub extends io.grpc.stub.AbstractStub<DynamicSearchAdsSearchTermViewServiceFutureStub> {
-    private DynamicSearchAdsSearchTermViewServiceFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private DynamicSearchAdsSearchTermViewServiceFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class DynamicSearchAdsSearchTermViewServiceFutureStub extends io.grpc.stub.AbstractFutureStub<DynamicSearchAdsSearchTermViewServiceFutureStub> {
+    private DynamicSearchAdsSearchTermViewServiceFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected DynamicSearchAdsSearchTermViewServiceFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected DynamicSearchAdsSearchTermViewServiceFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new DynamicSearchAdsSearchTermViewServiceFutureStub(channel, callOptions);
     }
 
@@ -215,7 +217,7 @@ public final class DynamicSearchAdsSearchTermViewServiceGrpc {
     public com.google.common.util.concurrent.ListenableFuture<com.google.ads.googleads.v1.resources.DynamicSearchAdsSearchTermView> getDynamicSearchAdsSearchTermView(
         com.google.ads.googleads.v1.services.GetDynamicSearchAdsSearchTermViewRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(getGetDynamicSearchAdsSearchTermViewMethodHelper(), getCallOptions()), request);
+          getChannel().newCall(getGetDynamicSearchAdsSearchTermViewMethod(), getCallOptions()), request);
     }
   }
 
@@ -303,7 +305,7 @@ public final class DynamicSearchAdsSearchTermViewServiceGrpc {
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new DynamicSearchAdsSearchTermViewServiceFileDescriptorSupplier())
-              .addMethod(getGetDynamicSearchAdsSearchTermViewMethodHelper())
+              .addMethod(getGetDynamicSearchAdsSearchTermViewMethod())
               .build();
         }
       }

@@ -12,7 +12,7 @@ package com.google.ads.googleads.v4.common;
  *
  * Protobuf type {@code google.ads.googleads.v4.common.DisplayCallToAction}
  */
-public  final class DisplayCallToAction extends
+public final class DisplayCallToAction extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.common.DisplayCallToAction)
     DisplayCallToActionOrBuilder {
@@ -135,6 +135,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue text = 1;</code>
    * @return Whether the text field is set.
    */
+  @java.lang.Override
   public boolean hasText() {
     return text_ != null;
   }
@@ -146,6 +147,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue text = 1;</code>
    * @return The text.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getText() {
     return text_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : text_;
   }
@@ -156,6 +158,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue text = 1;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getTextOrBuilder() {
     return getText();
   }
@@ -171,6 +174,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue text_color = 2;</code>
    * @return Whether the textColor field is set.
    */
+  @java.lang.Override
   public boolean hasTextColor() {
     return textColor_ != null;
   }
@@ -183,6 +187,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue text_color = 2;</code>
    * @return The textColor.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getTextColor() {
     return textColor_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : textColor_;
   }
@@ -194,6 +199,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue text_color = 2;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getTextColorOrBuilder() {
     return getTextColor();
   }
@@ -209,6 +215,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue url_collection_id = 3;</code>
    * @return Whether the urlCollectionId field is set.
    */
+  @java.lang.Override
   public boolean hasUrlCollectionId() {
     return urlCollectionId_ != null;
   }
@@ -221,6 +228,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue url_collection_id = 3;</code>
    * @return The urlCollectionId.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getUrlCollectionId() {
     return urlCollectionId_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : urlCollectionId_;
   }
@@ -232,6 +240,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue url_collection_id = 3;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getUrlCollectionIdOrBuilder() {
     return getUrlCollectionId();
   }

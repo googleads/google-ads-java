@@ -1,5 +1,5 @@
 /*
- * Copyright 2019 Google LLC
+ * Copyright 2020 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -21,7 +21,6 @@ import com.google.ads.googleads.v3.services.stub.FeedItemTargetServiceStubSettin
 import com.google.api.core.BetaApi;
 import com.google.api.gax.core.BackgroundResource;
 import com.google.api.gax.rpc.UnaryCallable;
-import com.google.api.pathtemplate.PathTemplate;
 import java.io.IOException;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
@@ -37,8 +36,8 @@ import javax.annotation.Generated;
  * <pre>
  * <code>
  * try (FeedItemTargetServiceClient feedItemTargetServiceClient = FeedItemTargetServiceClient.create()) {
- *   String formattedResourceName = FeedItemTargetServiceClient.formatFeedItemTargetName("[CUSTOMER]", "[FEED_ITEM_TARGET]");
- *   FeedItemTarget response = feedItemTargetServiceClient.getFeedItemTarget(formattedResourceName);
+ *   FeedItemTargetName resourceName = FeedItemTargetName.of("[CUSTOMER]", "[FEED_ITEM_TARGET]");
+ *   FeedItemTarget response = feedItemTargetServiceClient.getFeedItemTarget(resourceName);
  * }
  * </code>
  * </pre>
@@ -100,44 +99,6 @@ public class FeedItemTargetServiceClient implements BackgroundResource {
   private final FeedItemTargetServiceSettings settings;
   private final FeedItemTargetServiceStub stub;
 
-  private static final PathTemplate FEED_ITEM_TARGET_PATH_TEMPLATE =
-      PathTemplate.createWithoutUrlEncoding(
-          "customers/{customer}/feedItemTargets/{feed_item_target}");
-
-  /**
-   * Formats a string containing the fully-qualified path to represent a feed_item_target resource.
-   *
-   * @deprecated Use the {@link FeedItemTargetName} class instead.
-   */
-  @Deprecated
-  public static final String formatFeedItemTargetName(String customer, String feedItemTarget) {
-    return FEED_ITEM_TARGET_PATH_TEMPLATE.instantiate(
-        "customer", customer,
-        "feed_item_target", feedItemTarget);
-  }
-
-  /**
-   * Parses the customer from the given fully-qualified path which represents a feed_item_target
-   * resource.
-   *
-   * @deprecated Use the {@link FeedItemTargetName} class instead.
-   */
-  @Deprecated
-  public static final String parseCustomerFromFeedItemTargetName(String feedItemTargetName) {
-    return FEED_ITEM_TARGET_PATH_TEMPLATE.parse(feedItemTargetName).get("customer");
-  }
-
-  /**
-   * Parses the feed_item_target from the given fully-qualified path which represents a
-   * feed_item_target resource.
-   *
-   * @deprecated Use the {@link FeedItemTargetName} class instead.
-   */
-  @Deprecated
-  public static final String parseFeedItemTargetFromFeedItemTargetName(String feedItemTargetName) {
-    return FEED_ITEM_TARGET_PATH_TEMPLATE.parse(feedItemTargetName).get("feed_item_target");
-  }
-
   /** Constructs an instance of FeedItemTargetServiceClient with default settings. */
   public static final FeedItemTargetServiceClient create() throws IOException {
     return create(FeedItemTargetServiceSettings.newBuilder().build());
@@ -194,8 +155,32 @@ public class FeedItemTargetServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (FeedItemTargetServiceClient feedItemTargetServiceClient = FeedItemTargetServiceClient.create()) {
-   *   String formattedResourceName = FeedItemTargetServiceClient.formatFeedItemTargetName("[CUSTOMER]", "[FEED_ITEM_TARGET]");
-   *   FeedItemTarget response = feedItemTargetServiceClient.getFeedItemTarget(formattedResourceName);
+   *   FeedItemTargetName resourceName = FeedItemTargetName.of("[CUSTOMER]", "[FEED_ITEM_TARGET]");
+   *   FeedItemTarget response = feedItemTargetServiceClient.getFeedItemTarget(resourceName);
+   * }
+   * </code></pre>
+   *
+   * @param resourceName Required. The resource name of the feed item targets to fetch.
+   * @throws com.google.api.gax.rpc.ApiException if the remote call fails
+   */
+  public final FeedItemTarget getFeedItemTarget(FeedItemTargetName resourceName) {
+    GetFeedItemTargetRequest request =
+        GetFeedItemTargetRequest.newBuilder()
+            .setResourceName(resourceName == null ? null : resourceName.toString())
+            .build();
+    return getFeedItemTarget(request);
+  }
+
+  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  /**
+   * Returns the requested feed item targets in full detail.
+   *
+   * <p>Sample code:
+   *
+   * <pre><code>
+   * try (FeedItemTargetServiceClient feedItemTargetServiceClient = FeedItemTargetServiceClient.create()) {
+   *   FeedItemTargetName resourceName = FeedItemTargetName.of("[CUSTOMER]", "[FEED_ITEM_TARGET]");
+   *   FeedItemTarget response = feedItemTargetServiceClient.getFeedItemTarget(resourceName.toString());
    * }
    * </code></pre>
    *
@@ -203,7 +188,6 @@ public class FeedItemTargetServiceClient implements BackgroundResource {
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final FeedItemTarget getFeedItemTarget(String resourceName) {
-    FEED_ITEM_TARGET_PATH_TEMPLATE.validate(resourceName, "getFeedItemTarget");
     GetFeedItemTargetRequest request =
         GetFeedItemTargetRequest.newBuilder().setResourceName(resourceName).build();
     return getFeedItemTarget(request);
@@ -217,9 +201,9 @@ public class FeedItemTargetServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (FeedItemTargetServiceClient feedItemTargetServiceClient = FeedItemTargetServiceClient.create()) {
-   *   String formattedResourceName = FeedItemTargetServiceClient.formatFeedItemTargetName("[CUSTOMER]", "[FEED_ITEM_TARGET]");
+   *   FeedItemTargetName resourceName = FeedItemTargetName.of("[CUSTOMER]", "[FEED_ITEM_TARGET]");
    *   GetFeedItemTargetRequest request = GetFeedItemTargetRequest.newBuilder()
-   *     .setResourceName(formattedResourceName)
+   *     .setResourceName(resourceName.toString())
    *     .build();
    *   FeedItemTarget response = feedItemTargetServiceClient.getFeedItemTarget(request);
    * }
@@ -240,9 +224,9 @@ public class FeedItemTargetServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (FeedItemTargetServiceClient feedItemTargetServiceClient = FeedItemTargetServiceClient.create()) {
-   *   String formattedResourceName = FeedItemTargetServiceClient.formatFeedItemTargetName("[CUSTOMER]", "[FEED_ITEM_TARGET]");
+   *   FeedItemTargetName resourceName = FeedItemTargetName.of("[CUSTOMER]", "[FEED_ITEM_TARGET]");
    *   GetFeedItemTargetRequest request = GetFeedItemTargetRequest.newBuilder()
-   *     .setResourceName(formattedResourceName)
+   *     .setResourceName(resourceName.toString())
    *     .build();
    *   ApiFuture&lt;FeedItemTarget&gt; future = feedItemTargetServiceClient.getFeedItemTargetCallable().futureCall(request);
    *   // Do something
@@ -274,7 +258,6 @@ public class FeedItemTargetServiceClient implements BackgroundResource {
    */
   public final MutateFeedItemTargetsResponse mutateFeedItemTargets(
       String customerId, List<FeedItemTargetOperation> operations) {
-
     MutateFeedItemTargetsRequest request =
         MutateFeedItemTargetsRequest.newBuilder()
             .setCustomerId(customerId)

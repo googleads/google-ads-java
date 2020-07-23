@@ -12,7 +12,7 @@ package com.google.ads.googleads.v3.resources;
  *
  * Protobuf type {@code google.ads.googleads.v3.resources.Invoice}
  */
-public  final class Invoice extends
+public final class Invoice extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v3.resources.Invoice)
     InvoiceOrBuilder {
@@ -26,6 +26,13 @@ private static final long serialVersionUID = 0L;
     type_ = 0;
     replacedInvoices_ = java.util.Collections.emptyList();
     accountBudgetSummaries_ = java.util.Collections.emptyList();
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new Invoice();
   }
 
   @java.lang.Override
@@ -234,9 +241,9 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 130: {
-            if (!((mutable_bitField0_ & 0x00008000) != 0)) {
+            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
               replacedInvoices_ = new java.util.ArrayList<com.google.protobuf.StringValue>();
-              mutable_bitField0_ |= 0x00008000;
+              mutable_bitField0_ |= 0x00000001;
             }
             replacedInvoices_.add(
                 input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry));
@@ -256,9 +263,9 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 146: {
-            if (!((mutable_bitField0_ & 0x00020000) != 0)) {
+            if (!((mutable_bitField0_ & 0x00000002) != 0)) {
               accountBudgetSummaries_ = new java.util.ArrayList<com.google.ads.googleads.v3.resources.Invoice.AccountBudgetSummary>();
-              mutable_bitField0_ |= 0x00020000;
+              mutable_bitField0_ |= 0x00000002;
             }
             accountBudgetSummaries_.add(
                 input.readMessage(com.google.ads.googleads.v3.resources.Invoice.AccountBudgetSummary.parser(), extensionRegistry));
@@ -279,10 +286,10 @@ private static final long serialVersionUID = 0L;
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
     } finally {
-      if (((mutable_bitField0_ & 0x00008000) != 0)) {
+      if (((mutable_bitField0_ & 0x00000001) != 0)) {
         replacedInvoices_ = java.util.Collections.unmodifiableList(replacedInvoices_);
       }
-      if (((mutable_bitField0_ & 0x00020000) != 0)) {
+      if (((mutable_bitField0_ & 0x00000002) != 0)) {
         accountBudgetSummaries_ = java.util.Collections.unmodifiableList(accountBudgetSummaries_);
       }
       this.unknownFields = unknownFields.build();
@@ -316,6 +323,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue customer = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the customer field is set.
      */
     boolean hasCustomer();
     /**
@@ -328,6 +336,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue customer = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The customer.
      */
     com.google.protobuf.StringValue getCustomer();
     /**
@@ -350,6 +359,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue customer_descriptive_name = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the customerDescriptiveName field is set.
      */
     boolean hasCustomerDescriptiveName();
     /**
@@ -359,6 +369,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue customer_descriptive_name = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The customerDescriptiveName.
      */
     com.google.protobuf.StringValue getCustomerDescriptiveName();
     /**
@@ -380,6 +391,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue account_budget = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the accountBudget field is set.
      */
     boolean hasAccountBudget();
     /**
@@ -391,6 +403,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue account_budget = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The accountBudget.
      */
     com.google.protobuf.StringValue getAccountBudget();
     /**
@@ -412,6 +425,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue account_budget_name = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the accountBudgetName field is set.
      */
     boolean hasAccountBudgetName();
     /**
@@ -421,6 +435,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue account_budget_name = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The accountBudgetName.
      */
     com.google.protobuf.StringValue getAccountBudgetName();
     /**
@@ -440,6 +455,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue purchase_order_number = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the purchaseOrderNumber field is set.
      */
     boolean hasPurchaseOrderNumber();
     /**
@@ -449,6 +465,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue purchase_order_number = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The purchaseOrderNumber.
      */
     com.google.protobuf.StringValue getPurchaseOrderNumber();
     /**
@@ -468,6 +485,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value subtotal_amount_micros = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the subtotalAmountMicros field is set.
      */
     boolean hasSubtotalAmountMicros();
     /**
@@ -477,6 +495,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value subtotal_amount_micros = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The subtotalAmountMicros.
      */
     com.google.protobuf.Int64Value getSubtotalAmountMicros();
     /**
@@ -496,6 +515,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value tax_amount_micros = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the taxAmountMicros field is set.
      */
     boolean hasTaxAmountMicros();
     /**
@@ -505,6 +525,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value tax_amount_micros = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The taxAmountMicros.
      */
     com.google.protobuf.Int64Value getTaxAmountMicros();
     /**
@@ -525,6 +546,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value total_amount_micros = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the totalAmountMicros field is set.
      */
     boolean hasTotalAmountMicros();
     /**
@@ -535,6 +557,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value total_amount_micros = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The totalAmountMicros.
      */
     com.google.protobuf.Int64Value getTotalAmountMicros();
     /**
@@ -556,6 +579,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.common.DateRange billable_activity_date_range = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the billableActivityDateRange field is set.
      */
     boolean hasBillableActivityDateRange();
     /**
@@ -566,6 +590,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.common.DateRange billable_activity_date_range = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The billableActivityDateRange.
      */
     com.google.ads.googleads.v3.common.DateRange getBillableActivityDateRange();
     /**
@@ -586,7 +611,7 @@ private static final long serialVersionUID = 0L;
    *
    * Protobuf type {@code google.ads.googleads.v3.resources.Invoice.AccountBudgetSummary}
    */
-  public  static final class AccountBudgetSummary extends
+  public static final class AccountBudgetSummary extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:google.ads.googleads.v3.resources.Invoice.AccountBudgetSummary)
       AccountBudgetSummaryOrBuilder {
@@ -596,6 +621,13 @@ private static final long serialVersionUID = 0L;
       super(builder);
     }
     private AccountBudgetSummary() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new AccountBudgetSummary();
     }
 
     @java.lang.Override
@@ -611,7 +643,6 @@ private static final long serialVersionUID = 0L;
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -783,7 +814,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue customer = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the customer field is set.
      */
+    @java.lang.Override
     public boolean hasCustomer() {
       return customer_ != null;
     }
@@ -797,7 +830,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue customer = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The customer.
      */
+    @java.lang.Override
     public com.google.protobuf.StringValue getCustomer() {
       return customer_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : customer_;
     }
@@ -812,6 +847,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.protobuf.StringValue customer = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
+    @java.lang.Override
     public com.google.protobuf.StringValueOrBuilder getCustomerOrBuilder() {
       return getCustomer();
     }
@@ -825,7 +861,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue customer_descriptive_name = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the customerDescriptiveName field is set.
      */
+    @java.lang.Override
     public boolean hasCustomerDescriptiveName() {
       return customerDescriptiveName_ != null;
     }
@@ -836,7 +874,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue customer_descriptive_name = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The customerDescriptiveName.
      */
+    @java.lang.Override
     public com.google.protobuf.StringValue getCustomerDescriptiveName() {
       return customerDescriptiveName_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : customerDescriptiveName_;
     }
@@ -848,6 +888,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.protobuf.StringValue customer_descriptive_name = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
+    @java.lang.Override
     public com.google.protobuf.StringValueOrBuilder getCustomerDescriptiveNameOrBuilder() {
       return getCustomerDescriptiveName();
     }
@@ -863,7 +904,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue account_budget = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the accountBudget field is set.
      */
+    @java.lang.Override
     public boolean hasAccountBudget() {
       return accountBudget_ != null;
     }
@@ -876,7 +919,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue account_budget = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The accountBudget.
      */
+    @java.lang.Override
     public com.google.protobuf.StringValue getAccountBudget() {
       return accountBudget_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : accountBudget_;
     }
@@ -890,6 +935,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.protobuf.StringValue account_budget = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
+    @java.lang.Override
     public com.google.protobuf.StringValueOrBuilder getAccountBudgetOrBuilder() {
       return getAccountBudget();
     }
@@ -903,7 +949,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue account_budget_name = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the accountBudgetName field is set.
      */
+    @java.lang.Override
     public boolean hasAccountBudgetName() {
       return accountBudgetName_ != null;
     }
@@ -914,7 +962,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue account_budget_name = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The accountBudgetName.
      */
+    @java.lang.Override
     public com.google.protobuf.StringValue getAccountBudgetName() {
       return accountBudgetName_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : accountBudgetName_;
     }
@@ -926,6 +976,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.protobuf.StringValue account_budget_name = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
+    @java.lang.Override
     public com.google.protobuf.StringValueOrBuilder getAccountBudgetNameOrBuilder() {
       return getAccountBudgetName();
     }
@@ -939,7 +990,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue purchase_order_number = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the purchaseOrderNumber field is set.
      */
+    @java.lang.Override
     public boolean hasPurchaseOrderNumber() {
       return purchaseOrderNumber_ != null;
     }
@@ -950,7 +1003,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue purchase_order_number = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The purchaseOrderNumber.
      */
+    @java.lang.Override
     public com.google.protobuf.StringValue getPurchaseOrderNumber() {
       return purchaseOrderNumber_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : purchaseOrderNumber_;
     }
@@ -962,6 +1017,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.protobuf.StringValue purchase_order_number = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
+    @java.lang.Override
     public com.google.protobuf.StringValueOrBuilder getPurchaseOrderNumberOrBuilder() {
       return getPurchaseOrderNumber();
     }
@@ -975,7 +1031,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value subtotal_amount_micros = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the subtotalAmountMicros field is set.
      */
+    @java.lang.Override
     public boolean hasSubtotalAmountMicros() {
       return subtotalAmountMicros_ != null;
     }
@@ -986,7 +1044,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value subtotal_amount_micros = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The subtotalAmountMicros.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getSubtotalAmountMicros() {
       return subtotalAmountMicros_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : subtotalAmountMicros_;
     }
@@ -998,6 +1058,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.protobuf.Int64Value subtotal_amount_micros = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getSubtotalAmountMicrosOrBuilder() {
       return getSubtotalAmountMicros();
     }
@@ -1011,7 +1072,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value tax_amount_micros = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the taxAmountMicros field is set.
      */
+    @java.lang.Override
     public boolean hasTaxAmountMicros() {
       return taxAmountMicros_ != null;
     }
@@ -1022,7 +1085,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value tax_amount_micros = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The taxAmountMicros.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getTaxAmountMicros() {
       return taxAmountMicros_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : taxAmountMicros_;
     }
@@ -1034,6 +1099,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.protobuf.Int64Value tax_amount_micros = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getTaxAmountMicrosOrBuilder() {
       return getTaxAmountMicros();
     }
@@ -1048,7 +1114,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value total_amount_micros = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the totalAmountMicros field is set.
      */
+    @java.lang.Override
     public boolean hasTotalAmountMicros() {
       return totalAmountMicros_ != null;
     }
@@ -1060,7 +1128,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value total_amount_micros = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The totalAmountMicros.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getTotalAmountMicros() {
       return totalAmountMicros_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : totalAmountMicros_;
     }
@@ -1073,6 +1143,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.protobuf.Int64Value total_amount_micros = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getTotalAmountMicrosOrBuilder() {
       return getTotalAmountMicros();
     }
@@ -1087,7 +1158,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.common.DateRange billable_activity_date_range = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the billableActivityDateRange field is set.
      */
+    @java.lang.Override
     public boolean hasBillableActivityDateRange() {
       return billableActivityDateRange_ != null;
     }
@@ -1099,7 +1172,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.common.DateRange billable_activity_date_range = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The billableActivityDateRange.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.common.DateRange getBillableActivityDateRange() {
       return billableActivityDateRange_ == null ? com.google.ads.googleads.v3.common.DateRange.getDefaultInstance() : billableActivityDateRange_;
     }
@@ -1112,6 +1187,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v3.common.DateRange billable_activity_date_range = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.common.DateRangeOrBuilder getBillableActivityDateRangeOrBuilder() {
       return getBillableActivityDateRange();
     }
@@ -1688,6 +1764,7 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>.google.protobuf.StringValue customer = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @return Whether the customer field is set.
        */
       public boolean hasCustomer() {
         return customerBuilder_ != null || customer_ != null;
@@ -1702,6 +1779,7 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>.google.protobuf.StringValue customer = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @return The customer.
        */
       public com.google.protobuf.StringValue getCustomer() {
         if (customerBuilder_ == null) {
@@ -1874,6 +1952,7 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>.google.protobuf.StringValue customer_descriptive_name = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @return Whether the customerDescriptiveName field is set.
        */
       public boolean hasCustomerDescriptiveName() {
         return customerDescriptiveNameBuilder_ != null || customerDescriptiveName_ != null;
@@ -1885,6 +1964,7 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>.google.protobuf.StringValue customer_descriptive_name = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @return The customerDescriptiveName.
        */
       public com.google.protobuf.StringValue getCustomerDescriptiveName() {
         if (customerDescriptiveNameBuilder_ == null) {
@@ -2038,6 +2118,7 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>.google.protobuf.StringValue account_budget = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @return Whether the accountBudget field is set.
        */
       public boolean hasAccountBudget() {
         return accountBudgetBuilder_ != null || accountBudget_ != null;
@@ -2051,6 +2132,7 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>.google.protobuf.StringValue account_budget = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @return The accountBudget.
        */
       public com.google.protobuf.StringValue getAccountBudget() {
         if (accountBudgetBuilder_ == null) {
@@ -2216,6 +2298,7 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>.google.protobuf.StringValue account_budget_name = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @return Whether the accountBudgetName field is set.
        */
       public boolean hasAccountBudgetName() {
         return accountBudgetNameBuilder_ != null || accountBudgetName_ != null;
@@ -2227,6 +2310,7 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>.google.protobuf.StringValue account_budget_name = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @return The accountBudgetName.
        */
       public com.google.protobuf.StringValue getAccountBudgetName() {
         if (accountBudgetNameBuilder_ == null) {
@@ -2378,6 +2462,7 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>.google.protobuf.StringValue purchase_order_number = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @return Whether the purchaseOrderNumber field is set.
        */
       public boolean hasPurchaseOrderNumber() {
         return purchaseOrderNumberBuilder_ != null || purchaseOrderNumber_ != null;
@@ -2389,6 +2474,7 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>.google.protobuf.StringValue purchase_order_number = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @return The purchaseOrderNumber.
        */
       public com.google.protobuf.StringValue getPurchaseOrderNumber() {
         if (purchaseOrderNumberBuilder_ == null) {
@@ -2540,6 +2626,7 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>.google.protobuf.Int64Value subtotal_amount_micros = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @return Whether the subtotalAmountMicros field is set.
        */
       public boolean hasSubtotalAmountMicros() {
         return subtotalAmountMicrosBuilder_ != null || subtotalAmountMicros_ != null;
@@ -2551,6 +2638,7 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>.google.protobuf.Int64Value subtotal_amount_micros = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @return The subtotalAmountMicros.
        */
       public com.google.protobuf.Int64Value getSubtotalAmountMicros() {
         if (subtotalAmountMicrosBuilder_ == null) {
@@ -2702,6 +2790,7 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>.google.protobuf.Int64Value tax_amount_micros = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @return Whether the taxAmountMicros field is set.
        */
       public boolean hasTaxAmountMicros() {
         return taxAmountMicrosBuilder_ != null || taxAmountMicros_ != null;
@@ -2713,6 +2802,7 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>.google.protobuf.Int64Value tax_amount_micros = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @return The taxAmountMicros.
        */
       public com.google.protobuf.Int64Value getTaxAmountMicros() {
         if (taxAmountMicrosBuilder_ == null) {
@@ -2865,6 +2955,7 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>.google.protobuf.Int64Value total_amount_micros = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @return Whether the totalAmountMicros field is set.
        */
       public boolean hasTotalAmountMicros() {
         return totalAmountMicrosBuilder_ != null || totalAmountMicros_ != null;
@@ -2877,6 +2968,7 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>.google.protobuf.Int64Value total_amount_micros = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @return The totalAmountMicros.
        */
       public com.google.protobuf.Int64Value getTotalAmountMicros() {
         if (totalAmountMicrosBuilder_ == null) {
@@ -3036,6 +3128,7 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>.google.ads.googleads.v3.common.DateRange billable_activity_date_range = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @return Whether the billableActivityDateRange field is set.
        */
       public boolean hasBillableActivityDateRange() {
         return billableActivityDateRangeBuilder_ != null || billableActivityDateRange_ != null;
@@ -3048,6 +3141,7 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>.google.ads.googleads.v3.common.DateRange billable_activity_date_range = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @return The billableActivityDateRange.
        */
       public com.google.ads.googleads.v3.common.DateRange getBillableActivityDateRange() {
         if (billableActivityDateRangeBuilder_ == null) {
@@ -3248,7 +3342,6 @@ private static final long serialVersionUID = 0L;
 
   }
 
-  private int bitField0_;
   public static final int RESOURCE_NAME_FIELD_NUMBER = 1;
   private volatile java.lang.Object resourceName_;
   /**
@@ -3260,7 +3353,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The resourceName.
    */
+  @java.lang.Override
   public java.lang.String getResourceName() {
     java.lang.Object ref = resourceName_;
     if (ref instanceof java.lang.String) {
@@ -3282,7 +3377,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The bytes for resourceName.
    */
+  @java.lang.Override
   public com.google.protobuf.ByteString
       getResourceNameBytes() {
     java.lang.Object ref = resourceName_;
@@ -3305,7 +3402,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the id field is set.
    */
+  @java.lang.Override
   public boolean hasId() {
     return id_ != null;
   }
@@ -3315,7 +3414,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The id.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getId() {
     return id_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : id_;
   }
@@ -3326,6 +3427,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getIdOrBuilder() {
     return getId();
   }
@@ -3338,8 +3440,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.InvoiceTypeEnum.InvoiceType type = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The enum numeric value on the wire for type.
    */
-  public int getTypeValue() {
+  @java.lang.Override public int getTypeValue() {
     return type_;
   }
   /**
@@ -3348,8 +3451,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.InvoiceTypeEnum.InvoiceType type = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The type.
    */
-  public com.google.ads.googleads.v3.enums.InvoiceTypeEnum.InvoiceType getType() {
+  @java.lang.Override public com.google.ads.googleads.v3.enums.InvoiceTypeEnum.InvoiceType getType() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v3.enums.InvoiceTypeEnum.InvoiceType result = com.google.ads.googleads.v3.enums.InvoiceTypeEnum.InvoiceType.valueOf(type_);
     return result == null ? com.google.ads.googleads.v3.enums.InvoiceTypeEnum.InvoiceType.UNRECOGNIZED : result;
@@ -3364,7 +3468,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue billing_setup = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the billingSetup field is set.
    */
+  @java.lang.Override
   public boolean hasBillingSetup() {
     return billingSetup_ != null;
   }
@@ -3375,7 +3481,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue billing_setup = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The billingSetup.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getBillingSetup() {
     return billingSetup_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : billingSetup_;
   }
@@ -3387,6 +3495,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue billing_setup = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getBillingSetupOrBuilder() {
     return getBillingSetup();
   }
@@ -3401,7 +3510,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue payments_account_id = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the paymentsAccountId field is set.
    */
+  @java.lang.Override
   public boolean hasPaymentsAccountId() {
     return paymentsAccountId_ != null;
   }
@@ -3413,7 +3524,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue payments_account_id = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The paymentsAccountId.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getPaymentsAccountId() {
     return paymentsAccountId_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : paymentsAccountId_;
   }
@@ -3426,6 +3539,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue payments_account_id = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getPaymentsAccountIdOrBuilder() {
     return getPaymentsAccountId();
   }
@@ -3440,7 +3554,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue payments_profile_id = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the paymentsProfileId field is set.
    */
+  @java.lang.Override
   public boolean hasPaymentsProfileId() {
     return paymentsProfileId_ != null;
   }
@@ -3452,7 +3568,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue payments_profile_id = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The paymentsProfileId.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getPaymentsProfileId() {
     return paymentsProfileId_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : paymentsProfileId_;
   }
@@ -3465,6 +3583,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue payments_profile_id = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getPaymentsProfileIdOrBuilder() {
     return getPaymentsProfileId();
   }
@@ -3478,7 +3597,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue issue_date = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the issueDate field is set.
    */
+  @java.lang.Override
   public boolean hasIssueDate() {
     return issueDate_ != null;
   }
@@ -3489,7 +3610,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue issue_date = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The issueDate.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getIssueDate() {
     return issueDate_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : issueDate_;
   }
@@ -3501,6 +3624,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue issue_date = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getIssueDateOrBuilder() {
     return getIssueDate();
   }
@@ -3513,7 +3637,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue due_date = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the dueDate field is set.
    */
+  @java.lang.Override
   public boolean hasDueDate() {
     return dueDate_ != null;
   }
@@ -3523,7 +3649,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue due_date = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The dueDate.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getDueDate() {
     return dueDate_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : dueDate_;
   }
@@ -3534,6 +3662,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue due_date = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getDueDateOrBuilder() {
     return getDueDate();
   }
@@ -3546,7 +3675,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.DateRange service_date_range = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the serviceDateRange field is set.
    */
+  @java.lang.Override
   public boolean hasServiceDateRange() {
     return serviceDateRange_ != null;
   }
@@ -3556,7 +3687,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.DateRange service_date_range = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The serviceDateRange.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.common.DateRange getServiceDateRange() {
     return serviceDateRange_ == null ? com.google.ads.googleads.v3.common.DateRange.getDefaultInstance() : serviceDateRange_;
   }
@@ -3567,6 +3700,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v3.common.DateRange service_date_range = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.common.DateRangeOrBuilder getServiceDateRangeOrBuilder() {
     return getServiceDateRange();
   }
@@ -3580,7 +3714,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue currency_code = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the currencyCode field is set.
    */
+  @java.lang.Override
   public boolean hasCurrencyCode() {
     return currencyCode_ != null;
   }
@@ -3591,7 +3727,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue currency_code = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The currencyCode.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getCurrencyCode() {
     return currencyCode_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : currencyCode_;
   }
@@ -3603,6 +3741,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue currency_code = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getCurrencyCodeOrBuilder() {
     return getCurrencyCode();
   }
@@ -3616,7 +3755,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Int64Value invoice_level_adjustments_micros = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the invoiceLevelAdjustmentsMicros field is set.
    */
+  @java.lang.Override
   public boolean hasInvoiceLevelAdjustmentsMicros() {
     return invoiceLevelAdjustmentsMicros_ != null;
   }
@@ -3627,7 +3768,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Int64Value invoice_level_adjustments_micros = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The invoiceLevelAdjustmentsMicros.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getInvoiceLevelAdjustmentsMicros() {
     return invoiceLevelAdjustmentsMicros_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : invoiceLevelAdjustmentsMicros_;
   }
@@ -3639,6 +3782,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int64Value invoice_level_adjustments_micros = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getInvoiceLevelAdjustmentsMicrosOrBuilder() {
     return getInvoiceLevelAdjustmentsMicros();
   }
@@ -3652,7 +3796,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Int64Value subtotal_amount_micros = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the subtotalAmountMicros field is set.
    */
+  @java.lang.Override
   public boolean hasSubtotalAmountMicros() {
     return subtotalAmountMicros_ != null;
   }
@@ -3663,7 +3809,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Int64Value subtotal_amount_micros = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The subtotalAmountMicros.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getSubtotalAmountMicros() {
     return subtotalAmountMicros_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : subtotalAmountMicros_;
   }
@@ -3675,6 +3823,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int64Value subtotal_amount_micros = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getSubtotalAmountMicrosOrBuilder() {
     return getSubtotalAmountMicros();
   }
@@ -3689,7 +3838,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Int64Value tax_amount_micros = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the taxAmountMicros field is set.
    */
+  @java.lang.Override
   public boolean hasTaxAmountMicros() {
     return taxAmountMicros_ != null;
   }
@@ -3701,7 +3852,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Int64Value tax_amount_micros = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The taxAmountMicros.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getTaxAmountMicros() {
     return taxAmountMicros_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : taxAmountMicros_;
   }
@@ -3714,6 +3867,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int64Value tax_amount_micros = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getTaxAmountMicrosOrBuilder() {
     return getTaxAmountMicros();
   }
@@ -3727,7 +3881,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Int64Value total_amount_micros = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the totalAmountMicros field is set.
    */
+  @java.lang.Override
   public boolean hasTotalAmountMicros() {
     return totalAmountMicros_ != null;
   }
@@ -3738,7 +3894,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Int64Value total_amount_micros = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The totalAmountMicros.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getTotalAmountMicros() {
     return totalAmountMicros_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : totalAmountMicros_;
   }
@@ -3750,6 +3908,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int64Value total_amount_micros = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getTotalAmountMicrosOrBuilder() {
     return getTotalAmountMicros();
   }
@@ -3766,7 +3925,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue corrected_invoice = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the correctedInvoice field is set.
    */
+  @java.lang.Override
   public boolean hasCorrectedInvoice() {
     return correctedInvoice_ != null;
   }
@@ -3780,7 +3941,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue corrected_invoice = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The correctedInvoice.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getCorrectedInvoice() {
     return correctedInvoice_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : correctedInvoice_;
   }
@@ -3795,6 +3958,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue corrected_invoice = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getCorrectedInvoiceOrBuilder() {
     return getCorrectedInvoice();
   }
@@ -3814,6 +3978,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.StringValue replaced_invoices = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public java.util.List<com.google.protobuf.StringValue> getReplacedInvoicesList() {
     return replacedInvoices_;
   }
@@ -3830,6 +3995,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.StringValue replaced_invoices = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public java.util.List<? extends com.google.protobuf.StringValueOrBuilder> 
       getReplacedInvoicesOrBuilderList() {
     return replacedInvoices_;
@@ -3847,6 +4013,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.StringValue replaced_invoices = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public int getReplacedInvoicesCount() {
     return replacedInvoices_.size();
   }
@@ -3863,6 +4030,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.StringValue replaced_invoices = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getReplacedInvoices(int index) {
     return replacedInvoices_.get(index);
   }
@@ -3879,6 +4047,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.StringValue replaced_invoices = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getReplacedInvoicesOrBuilder(
       int index) {
     return replacedInvoices_.get(index);
@@ -3893,7 +4062,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue pdf_url = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the pdfUrl field is set.
    */
+  @java.lang.Override
   public boolean hasPdfUrl() {
     return pdfUrl_ != null;
   }
@@ -3904,7 +4075,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue pdf_url = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The pdfUrl.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getPdfUrl() {
     return pdfUrl_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : pdfUrl_;
   }
@@ -3916,6 +4089,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue pdf_url = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getPdfUrlOrBuilder() {
     return getPdfUrl();
   }
@@ -3930,6 +4104,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v3.resources.Invoice.AccountBudgetSummary account_budget_summaries = 18 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public java.util.List<com.google.ads.googleads.v3.resources.Invoice.AccountBudgetSummary> getAccountBudgetSummariesList() {
     return accountBudgetSummaries_;
   }
@@ -3941,6 +4116,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v3.resources.Invoice.AccountBudgetSummary account_budget_summaries = 18 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public java.util.List<? extends com.google.ads.googleads.v3.resources.Invoice.AccountBudgetSummaryOrBuilder> 
       getAccountBudgetSummariesOrBuilderList() {
     return accountBudgetSummaries_;
@@ -3953,6 +4129,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v3.resources.Invoice.AccountBudgetSummary account_budget_summaries = 18 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public int getAccountBudgetSummariesCount() {
     return accountBudgetSummaries_.size();
   }
@@ -3964,6 +4141,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v3.resources.Invoice.AccountBudgetSummary account_budget_summaries = 18 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.resources.Invoice.AccountBudgetSummary getAccountBudgetSummaries(int index) {
     return accountBudgetSummaries_.get(index);
   }
@@ -3975,6 +4153,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v3.resources.Invoice.AccountBudgetSummary account_budget_summaries = 18 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.resources.Invoice.AccountBudgetSummaryOrBuilder getAccountBudgetSummariesOrBuilder(
       int index) {
     return accountBudgetSummaries_.get(index);
@@ -4524,7 +4703,7 @@ private static final long serialVersionUID = 0L;
       }
       if (replacedInvoicesBuilder_ == null) {
         replacedInvoices_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00008000);
+        bitField0_ = (bitField0_ & ~0x00000001);
       } else {
         replacedInvoicesBuilder_.clear();
       }
@@ -4536,7 +4715,7 @@ private static final long serialVersionUID = 0L;
       }
       if (accountBudgetSummariesBuilder_ == null) {
         accountBudgetSummaries_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00020000);
+        bitField0_ = (bitField0_ & ~0x00000002);
       } else {
         accountBudgetSummariesBuilder_.clear();
       }
@@ -4567,7 +4746,6 @@ private static final long serialVersionUID = 0L;
     public com.google.ads.googleads.v3.resources.Invoice buildPartial() {
       com.google.ads.googleads.v3.resources.Invoice result = new com.google.ads.googleads.v3.resources.Invoice(this);
       int from_bitField0_ = bitField0_;
-      int to_bitField0_ = 0;
       result.resourceName_ = resourceName_;
       if (idBuilder_ == null) {
         result.id_ = id_;
@@ -4636,9 +4814,9 @@ private static final long serialVersionUID = 0L;
         result.correctedInvoice_ = correctedInvoiceBuilder_.build();
       }
       if (replacedInvoicesBuilder_ == null) {
-        if (((bitField0_ & 0x00008000) != 0)) {
+        if (((bitField0_ & 0x00000001) != 0)) {
           replacedInvoices_ = java.util.Collections.unmodifiableList(replacedInvoices_);
-          bitField0_ = (bitField0_ & ~0x00008000);
+          bitField0_ = (bitField0_ & ~0x00000001);
         }
         result.replacedInvoices_ = replacedInvoices_;
       } else {
@@ -4650,15 +4828,14 @@ private static final long serialVersionUID = 0L;
         result.pdfUrl_ = pdfUrlBuilder_.build();
       }
       if (accountBudgetSummariesBuilder_ == null) {
-        if (((bitField0_ & 0x00020000) != 0)) {
+        if (((bitField0_ & 0x00000002) != 0)) {
           accountBudgetSummaries_ = java.util.Collections.unmodifiableList(accountBudgetSummaries_);
-          bitField0_ = (bitField0_ & ~0x00020000);
+          bitField0_ = (bitField0_ & ~0x00000002);
         }
         result.accountBudgetSummaries_ = accountBudgetSummaries_;
       } else {
         result.accountBudgetSummaries_ = accountBudgetSummariesBuilder_.build();
       }
-      result.bitField0_ = to_bitField0_;
       onBuilt();
       return result;
     }
@@ -4757,7 +4934,7 @@ private static final long serialVersionUID = 0L;
         if (!other.replacedInvoices_.isEmpty()) {
           if (replacedInvoices_.isEmpty()) {
             replacedInvoices_ = other.replacedInvoices_;
-            bitField0_ = (bitField0_ & ~0x00008000);
+            bitField0_ = (bitField0_ & ~0x00000001);
           } else {
             ensureReplacedInvoicesIsMutable();
             replacedInvoices_.addAll(other.replacedInvoices_);
@@ -4770,7 +4947,7 @@ private static final long serialVersionUID = 0L;
             replacedInvoicesBuilder_.dispose();
             replacedInvoicesBuilder_ = null;
             replacedInvoices_ = other.replacedInvoices_;
-            bitField0_ = (bitField0_ & ~0x00008000);
+            bitField0_ = (bitField0_ & ~0x00000001);
             replacedInvoicesBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getReplacedInvoicesFieldBuilder() : null;
@@ -4786,7 +4963,7 @@ private static final long serialVersionUID = 0L;
         if (!other.accountBudgetSummaries_.isEmpty()) {
           if (accountBudgetSummaries_.isEmpty()) {
             accountBudgetSummaries_ = other.accountBudgetSummaries_;
-            bitField0_ = (bitField0_ & ~0x00020000);
+            bitField0_ = (bitField0_ & ~0x00000002);
           } else {
             ensureAccountBudgetSummariesIsMutable();
             accountBudgetSummaries_.addAll(other.accountBudgetSummaries_);
@@ -4799,7 +4976,7 @@ private static final long serialVersionUID = 0L;
             accountBudgetSummariesBuilder_.dispose();
             accountBudgetSummariesBuilder_ = null;
             accountBudgetSummaries_ = other.accountBudgetSummaries_;
-            bitField0_ = (bitField0_ & ~0x00020000);
+            bitField0_ = (bitField0_ & ~0x00000002);
             accountBudgetSummariesBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getAccountBudgetSummariesFieldBuilder() : null;
@@ -4848,6 +5025,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @return The resourceName.
      */
     public java.lang.String getResourceName() {
       java.lang.Object ref = resourceName_;
@@ -4870,6 +5048,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @return The bytes for resourceName.
      */
     public com.google.protobuf.ByteString
         getResourceNameBytes() {
@@ -4893,6 +5072,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @param value The resourceName to set.
+     * @return This builder for chaining.
      */
     public Builder setResourceName(
         java.lang.String value) {
@@ -4913,6 +5094,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @return This builder for chaining.
      */
     public Builder clearResourceName() {
       
@@ -4929,6 +5111,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @param value The bytes for resourceName to set.
+     * @return This builder for chaining.
      */
     public Builder setResourceNameBytes(
         com.google.protobuf.ByteString value) {
@@ -4951,6 +5135,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the id field is set.
      */
     public boolean hasId() {
       return idBuilder_ != null || id_ != null;
@@ -4961,6 +5146,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The id.
      */
     public com.google.protobuf.StringValue getId() {
       if (idBuilder_ == null) {
@@ -5102,8 +5288,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.InvoiceTypeEnum.InvoiceType type = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The enum numeric value on the wire for type.
      */
-    public int getTypeValue() {
+    @java.lang.Override public int getTypeValue() {
       return type_;
     }
     /**
@@ -5112,8 +5299,11 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.InvoiceTypeEnum.InvoiceType type = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @param value The enum numeric value on the wire for type to set.
+     * @return This builder for chaining.
      */
     public Builder setTypeValue(int value) {
+      
       type_ = value;
       onChanged();
       return this;
@@ -5124,7 +5314,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.InvoiceTypeEnum.InvoiceType type = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The type.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.enums.InvoiceTypeEnum.InvoiceType getType() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v3.enums.InvoiceTypeEnum.InvoiceType result = com.google.ads.googleads.v3.enums.InvoiceTypeEnum.InvoiceType.valueOf(type_);
@@ -5136,6 +5328,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.InvoiceTypeEnum.InvoiceType type = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @param value The type to set.
+     * @return This builder for chaining.
      */
     public Builder setType(com.google.ads.googleads.v3.enums.InvoiceTypeEnum.InvoiceType value) {
       if (value == null) {
@@ -5152,6 +5346,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.InvoiceTypeEnum.InvoiceType type = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return This builder for chaining.
      */
     public Builder clearType() {
       
@@ -5170,6 +5365,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue billing_setup = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the billingSetup field is set.
      */
     public boolean hasBillingSetup() {
       return billingSetupBuilder_ != null || billingSetup_ != null;
@@ -5181,6 +5377,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue billing_setup = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The billingSetup.
      */
     public com.google.protobuf.StringValue getBillingSetup() {
       if (billingSetupBuilder_ == null) {
@@ -5333,6 +5530,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue payments_account_id = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the paymentsAccountId field is set.
      */
     public boolean hasPaymentsAccountId() {
       return paymentsAccountIdBuilder_ != null || paymentsAccountId_ != null;
@@ -5345,6 +5543,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue payments_account_id = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The paymentsAccountId.
      */
     public com.google.protobuf.StringValue getPaymentsAccountId() {
       if (paymentsAccountIdBuilder_ == null) {
@@ -5504,6 +5703,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue payments_profile_id = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the paymentsProfileId field is set.
      */
     public boolean hasPaymentsProfileId() {
       return paymentsProfileIdBuilder_ != null || paymentsProfileId_ != null;
@@ -5516,6 +5716,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue payments_profile_id = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The paymentsProfileId.
      */
     public com.google.protobuf.StringValue getPaymentsProfileId() {
       if (paymentsProfileIdBuilder_ == null) {
@@ -5674,6 +5875,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue issue_date = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the issueDate field is set.
      */
     public boolean hasIssueDate() {
       return issueDateBuilder_ != null || issueDate_ != null;
@@ -5685,6 +5887,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue issue_date = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The issueDate.
      */
     public com.google.protobuf.StringValue getIssueDate() {
       if (issueDateBuilder_ == null) {
@@ -5835,6 +6038,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue due_date = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the dueDate field is set.
      */
     public boolean hasDueDate() {
       return dueDateBuilder_ != null || dueDate_ != null;
@@ -5845,6 +6049,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue due_date = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The dueDate.
      */
     public com.google.protobuf.StringValue getDueDate() {
       if (dueDateBuilder_ == null) {
@@ -5988,6 +6193,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.common.DateRange service_date_range = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the serviceDateRange field is set.
      */
     public boolean hasServiceDateRange() {
       return serviceDateRangeBuilder_ != null || serviceDateRange_ != null;
@@ -5998,6 +6204,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.common.DateRange service_date_range = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The serviceDateRange.
      */
     public com.google.ads.googleads.v3.common.DateRange getServiceDateRange() {
       if (serviceDateRangeBuilder_ == null) {
@@ -6142,6 +6349,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue currency_code = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the currencyCode field is set.
      */
     public boolean hasCurrencyCode() {
       return currencyCodeBuilder_ != null || currencyCode_ != null;
@@ -6153,6 +6361,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue currency_code = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The currencyCode.
      */
     public com.google.protobuf.StringValue getCurrencyCode() {
       if (currencyCodeBuilder_ == null) {
@@ -6304,6 +6513,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value invoice_level_adjustments_micros = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the invoiceLevelAdjustmentsMicros field is set.
      */
     public boolean hasInvoiceLevelAdjustmentsMicros() {
       return invoiceLevelAdjustmentsMicrosBuilder_ != null || invoiceLevelAdjustmentsMicros_ != null;
@@ -6315,6 +6525,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value invoice_level_adjustments_micros = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The invoiceLevelAdjustmentsMicros.
      */
     public com.google.protobuf.Int64Value getInvoiceLevelAdjustmentsMicros() {
       if (invoiceLevelAdjustmentsMicrosBuilder_ == null) {
@@ -6466,6 +6677,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value subtotal_amount_micros = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the subtotalAmountMicros field is set.
      */
     public boolean hasSubtotalAmountMicros() {
       return subtotalAmountMicrosBuilder_ != null || subtotalAmountMicros_ != null;
@@ -6477,6 +6689,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value subtotal_amount_micros = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The subtotalAmountMicros.
      */
     public com.google.protobuf.Int64Value getSubtotalAmountMicros() {
       if (subtotalAmountMicrosBuilder_ == null) {
@@ -6629,6 +6842,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value tax_amount_micros = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the taxAmountMicros field is set.
      */
     public boolean hasTaxAmountMicros() {
       return taxAmountMicrosBuilder_ != null || taxAmountMicros_ != null;
@@ -6641,6 +6855,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value tax_amount_micros = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The taxAmountMicros.
      */
     public com.google.protobuf.Int64Value getTaxAmountMicros() {
       if (taxAmountMicrosBuilder_ == null) {
@@ -6799,6 +7014,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value total_amount_micros = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the totalAmountMicros field is set.
      */
     public boolean hasTotalAmountMicros() {
       return totalAmountMicrosBuilder_ != null || totalAmountMicros_ != null;
@@ -6810,6 +7026,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value total_amount_micros = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The totalAmountMicros.
      */
     public com.google.protobuf.Int64Value getTotalAmountMicros() {
       if (totalAmountMicrosBuilder_ == null) {
@@ -6964,6 +7181,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue corrected_invoice = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the correctedInvoice field is set.
      */
     public boolean hasCorrectedInvoice() {
       return correctedInvoiceBuilder_ != null || correctedInvoice_ != null;
@@ -6978,6 +7196,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue corrected_invoice = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The correctedInvoice.
      */
     public com.google.protobuf.StringValue getCorrectedInvoice() {
       if (correctedInvoiceBuilder_ == null) {
@@ -7143,9 +7362,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.google.protobuf.StringValue> replacedInvoices_ =
       java.util.Collections.emptyList();
     private void ensureReplacedInvoicesIsMutable() {
-      if (!((bitField0_ & 0x00008000) != 0)) {
+      if (!((bitField0_ & 0x00000001) != 0)) {
         replacedInvoices_ = new java.util.ArrayList<com.google.protobuf.StringValue>(replacedInvoices_);
-        bitField0_ |= 0x00008000;
+        bitField0_ |= 0x00000001;
        }
     }
 
@@ -7405,7 +7624,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearReplacedInvoices() {
       if (replacedInvoicesBuilder_ == null) {
         replacedInvoices_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00008000);
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
       } else {
         replacedInvoicesBuilder_.clear();
@@ -7552,7 +7771,7 @@ private static final long serialVersionUID = 0L;
         replacedInvoicesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
                 replacedInvoices_,
-                ((bitField0_ & 0x00008000) != 0),
+                ((bitField0_ & 0x00000001) != 0),
                 getParentForChildren(),
                 isClean());
         replacedInvoices_ = null;
@@ -7570,6 +7789,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue pdf_url = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the pdfUrl field is set.
      */
     public boolean hasPdfUrl() {
       return pdfUrlBuilder_ != null || pdfUrl_ != null;
@@ -7581,6 +7801,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue pdf_url = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The pdfUrl.
      */
     public com.google.protobuf.StringValue getPdfUrl() {
       if (pdfUrlBuilder_ == null) {
@@ -7725,9 +7946,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.google.ads.googleads.v3.resources.Invoice.AccountBudgetSummary> accountBudgetSummaries_ =
       java.util.Collections.emptyList();
     private void ensureAccountBudgetSummariesIsMutable() {
-      if (!((bitField0_ & 0x00020000) != 0)) {
+      if (!((bitField0_ & 0x00000002) != 0)) {
         accountBudgetSummaries_ = new java.util.ArrayList<com.google.ads.googleads.v3.resources.Invoice.AccountBudgetSummary>(accountBudgetSummaries_);
-        bitField0_ |= 0x00020000;
+        bitField0_ |= 0x00000002;
        }
     }
 
@@ -7932,7 +8153,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearAccountBudgetSummaries() {
       if (accountBudgetSummariesBuilder_ == null) {
         accountBudgetSummaries_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00020000);
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
       } else {
         accountBudgetSummariesBuilder_.clear();
@@ -8044,7 +8265,7 @@ private static final long serialVersionUID = 0L;
         accountBudgetSummariesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.google.ads.googleads.v3.resources.Invoice.AccountBudgetSummary, com.google.ads.googleads.v3.resources.Invoice.AccountBudgetSummary.Builder, com.google.ads.googleads.v3.resources.Invoice.AccountBudgetSummaryOrBuilder>(
                 accountBudgetSummaries_,
-                ((bitField0_ & 0x00020000) != 0),
+                ((bitField0_ & 0x00000002) != 0),
                 getParentForChildren(),
                 isClean());
         accountBudgetSummaries_ = null;

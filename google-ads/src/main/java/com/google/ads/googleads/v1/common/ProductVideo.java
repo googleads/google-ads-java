@@ -10,7 +10,7 @@ package com.google.ads.googleads.v1.common;
  *
  * Protobuf type {@code google.ads.googleads.v1.common.ProductVideo}
  */
-public  final class ProductVideo extends
+public final class ProductVideo extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v1.common.ProductVideo)
     ProductVideoOrBuilder {
@@ -20,6 +20,13 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private ProductVideo() {
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new ProductVideo();
   }
 
   @java.lang.Override
@@ -35,7 +42,6 @@ private static final long serialVersionUID = 0L;
     if (extensionRegistry == null) {
       throw new java.lang.NullPointerException();
     }
-    int mutable_bitField0_ = 0;
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
         com.google.protobuf.UnknownFieldSet.newBuilder();
     try {
@@ -99,7 +105,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue product_video = 1;</code>
+   * @return Whether the productVideo field is set.
    */
+  @java.lang.Override
   public boolean hasProductVideo() {
     return productVideo_ != null;
   }
@@ -109,7 +117,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue product_video = 1;</code>
+   * @return The productVideo.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getProductVideo() {
     return productVideo_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : productVideo_;
   }
@@ -120,6 +130,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue product_video = 1;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getProductVideoOrBuilder() {
     return getProductVideo();
   }
@@ -452,6 +463,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue product_video = 1;</code>
+     * @return Whether the productVideo field is set.
      */
     public boolean hasProductVideo() {
       return productVideoBuilder_ != null || productVideo_ != null;
@@ -462,6 +474,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue product_video = 1;</code>
+     * @return The productVideo.
      */
     public com.google.protobuf.StringValue getProductVideo() {
       if (productVideoBuilder_ == null) {

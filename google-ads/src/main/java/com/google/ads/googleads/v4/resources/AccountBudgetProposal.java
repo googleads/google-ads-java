@@ -16,7 +16,7 @@ package com.google.ads.googleads.v4.resources;
  *
  * Protobuf type {@code google.ads.googleads.v4.resources.AccountBudgetProposal}
  */
-public  final class AccountBudgetProposal extends
+public final class AccountBudgetProposal extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.resources.AccountBudgetProposal)
     AccountBudgetProposalOrBuilder {
@@ -545,6 +545,7 @@ private static final long serialVersionUID = 0L;
    * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return The resourceName.
    */
+  @java.lang.Override
   public java.lang.String getResourceName() {
     java.lang.Object ref = resourceName_;
     if (ref instanceof java.lang.String) {
@@ -567,6 +568,7 @@ private static final long serialVersionUID = 0L;
    * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return The bytes for resourceName.
    */
+  @java.lang.Override
   public com.google.protobuf.ByteString
       getResourceNameBytes() {
     java.lang.Object ref = resourceName_;
@@ -591,6 +593,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int64Value id = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the id field is set.
    */
+  @java.lang.Override
   public boolean hasId() {
     return id_ != null;
   }
@@ -602,6 +605,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int64Value id = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The id.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getId() {
     return id_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : id_;
   }
@@ -612,6 +616,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int64Value id = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getIdOrBuilder() {
     return getId();
   }
@@ -626,6 +631,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue billing_setup = 2 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return Whether the billingSetup field is set.
    */
+  @java.lang.Override
   public boolean hasBillingSetup() {
     return billingSetup_ != null;
   }
@@ -637,6 +643,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue billing_setup = 2 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return The billingSetup.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getBillingSetup() {
     return billingSetup_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : billingSetup_;
   }
@@ -647,6 +654,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue billing_setup = 2 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getBillingSetupOrBuilder() {
     return getBillingSetup();
   }
@@ -662,6 +670,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue account_budget = 3 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return Whether the accountBudget field is set.
    */
+  @java.lang.Override
   public boolean hasAccountBudget() {
     return accountBudget_ != null;
   }
@@ -674,6 +683,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue account_budget = 3 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return The accountBudget.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getAccountBudget() {
     return accountBudget_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : accountBudget_;
   }
@@ -685,6 +695,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue account_budget = 3 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getAccountBudgetOrBuilder() {
     return getAccountBudget();
   }
@@ -700,7 +711,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.AccountBudgetProposalTypeEnum.AccountBudgetProposalType proposal_type = 4 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return The enum numeric value on the wire for proposalType.
    */
-  public int getProposalTypeValue() {
+  @java.lang.Override public int getProposalTypeValue() {
     return proposalType_;
   }
   /**
@@ -712,7 +723,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.AccountBudgetProposalTypeEnum.AccountBudgetProposalType proposal_type = 4 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return The proposalType.
    */
-  public com.google.ads.googleads.v4.enums.AccountBudgetProposalTypeEnum.AccountBudgetProposalType getProposalType() {
+  @java.lang.Override public com.google.ads.googleads.v4.enums.AccountBudgetProposalTypeEnum.AccountBudgetProposalType getProposalType() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v4.enums.AccountBudgetProposalTypeEnum.AccountBudgetProposalType result = com.google.ads.googleads.v4.enums.AccountBudgetProposalTypeEnum.AccountBudgetProposalType.valueOf(proposalType_);
     return result == null ? com.google.ads.googleads.v4.enums.AccountBudgetProposalTypeEnum.AccountBudgetProposalType.UNRECOGNIZED : result;
@@ -729,7 +740,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.AccountBudgetProposalStatusEnum.AccountBudgetProposalStatus status = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The enum numeric value on the wire for status.
    */
-  public int getStatusValue() {
+  @java.lang.Override public int getStatusValue() {
     return status_;
   }
   /**
@@ -741,7 +752,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.AccountBudgetProposalStatusEnum.AccountBudgetProposalStatus status = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The status.
    */
-  public com.google.ads.googleads.v4.enums.AccountBudgetProposalStatusEnum.AccountBudgetProposalStatus getStatus() {
+  @java.lang.Override public com.google.ads.googleads.v4.enums.AccountBudgetProposalStatusEnum.AccountBudgetProposalStatus getStatus() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v4.enums.AccountBudgetProposalStatusEnum.AccountBudgetProposalStatus result = com.google.ads.googleads.v4.enums.AccountBudgetProposalStatusEnum.AccountBudgetProposalStatus.valueOf(status_);
     return result == null ? com.google.ads.googleads.v4.enums.AccountBudgetProposalStatusEnum.AccountBudgetProposalStatus.UNRECOGNIZED : result;
@@ -757,6 +768,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue proposed_name = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return Whether the proposedName field is set.
    */
+  @java.lang.Override
   public boolean hasProposedName() {
     return proposedName_ != null;
   }
@@ -768,6 +780,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue proposed_name = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return The proposedName.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getProposedName() {
     return proposedName_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : proposedName_;
   }
@@ -778,6 +791,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue proposed_name = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getProposedNameOrBuilder() {
     return getProposedName();
   }
@@ -792,6 +806,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue approved_start_date_time = 20 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the approvedStartDateTime field is set.
    */
+  @java.lang.Override
   public boolean hasApprovedStartDateTime() {
     return approvedStartDateTime_ != null;
   }
@@ -803,6 +818,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue approved_start_date_time = 20 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The approvedStartDateTime.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getApprovedStartDateTime() {
     return approvedStartDateTime_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : approvedStartDateTime_;
   }
@@ -813,6 +829,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue approved_start_date_time = 20 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getApprovedStartDateTimeOrBuilder() {
     return getApprovedStartDateTime();
   }
@@ -828,6 +845,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue proposed_purchase_order_number = 12 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return Whether the proposedPurchaseOrderNumber field is set.
    */
+  @java.lang.Override
   public boolean hasProposedPurchaseOrderNumber() {
     return proposedPurchaseOrderNumber_ != null;
   }
@@ -840,6 +858,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue proposed_purchase_order_number = 12 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return The proposedPurchaseOrderNumber.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getProposedPurchaseOrderNumber() {
     return proposedPurchaseOrderNumber_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : proposedPurchaseOrderNumber_;
   }
@@ -851,6 +870,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue proposed_purchase_order_number = 12 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getProposedPurchaseOrderNumberOrBuilder() {
     return getProposedPurchaseOrderNumber();
   }
@@ -865,6 +885,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue proposed_notes = 13 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return Whether the proposedNotes field is set.
    */
+  @java.lang.Override
   public boolean hasProposedNotes() {
     return proposedNotes_ != null;
   }
@@ -876,6 +897,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue proposed_notes = 13 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return The proposedNotes.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getProposedNotes() {
     return proposedNotes_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : proposedNotes_;
   }
@@ -886,6 +908,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue proposed_notes = 13 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getProposedNotesOrBuilder() {
     return getProposedNotes();
   }
@@ -901,6 +924,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue creation_date_time = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the creationDateTime field is set.
    */
+  @java.lang.Override
   public boolean hasCreationDateTime() {
     return creationDateTime_ != null;
   }
@@ -913,6 +937,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue creation_date_time = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The creationDateTime.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getCreationDateTime() {
     return creationDateTime_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : creationDateTime_;
   }
@@ -924,6 +949,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue creation_date_time = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getCreationDateTimeOrBuilder() {
     return getCreationDateTime();
   }
@@ -938,6 +964,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue approval_date_time = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the approvalDateTime field is set.
    */
+  @java.lang.Override
   public boolean hasApprovalDateTime() {
     return approvalDateTime_ != null;
   }
@@ -949,6 +976,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue approval_date_time = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The approvalDateTime.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getApprovalDateTime() {
     return approvalDateTime_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : approvalDateTime_;
   }
@@ -959,6 +987,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue approval_date_time = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getApprovalDateTimeOrBuilder() {
     return getApprovalDateTime();
   }
@@ -972,6 +1001,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue proposed_start_date_time = 18 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return Whether the proposedStartDateTime field is set.
    */
+  @java.lang.Override
   public boolean hasProposedStartDateTime() {
     return proposedStartTimeCase_ == 18;
   }
@@ -983,6 +1013,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue proposed_start_date_time = 18 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return The proposedStartDateTime.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getProposedStartDateTime() {
     if (proposedStartTimeCase_ == 18) {
        return (com.google.protobuf.StringValue) proposedStartTime_;
@@ -996,6 +1027,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue proposed_start_date_time = 18 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getProposedStartDateTimeOrBuilder() {
     if (proposedStartTimeCase_ == 18) {
        return (com.google.protobuf.StringValue) proposedStartTime_;
@@ -1045,6 +1077,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue proposed_end_date_time = 19 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return Whether the proposedEndDateTime field is set.
    */
+  @java.lang.Override
   public boolean hasProposedEndDateTime() {
     return proposedEndTimeCase_ == 19;
   }
@@ -1056,6 +1089,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue proposed_end_date_time = 19 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return The proposedEndDateTime.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getProposedEndDateTime() {
     if (proposedEndTimeCase_ == 19) {
        return (com.google.protobuf.StringValue) proposedEndTime_;
@@ -1069,6 +1103,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue proposed_end_date_time = 19 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getProposedEndDateTimeOrBuilder() {
     if (proposedEndTimeCase_ == 19) {
        return (com.google.protobuf.StringValue) proposedEndTime_;
@@ -1118,6 +1153,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue approved_end_date_time = 21 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the approvedEndDateTime field is set.
    */
+  @java.lang.Override
   public boolean hasApprovedEndDateTime() {
     return approvedEndTimeCase_ == 21;
   }
@@ -1129,6 +1165,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue approved_end_date_time = 21 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The approvedEndDateTime.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getApprovedEndDateTime() {
     if (approvedEndTimeCase_ == 21) {
        return (com.google.protobuf.StringValue) approvedEndTime_;
@@ -1142,6 +1179,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue approved_end_date_time = 21 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getApprovedEndDateTimeOrBuilder() {
     if (approvedEndTimeCase_ == 21) {
        return (com.google.protobuf.StringValue) approvedEndTime_;
@@ -1192,6 +1230,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int64Value proposed_spending_limit_micros = 10 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return Whether the proposedSpendingLimitMicros field is set.
    */
+  @java.lang.Override
   public boolean hasProposedSpendingLimitMicros() {
     return proposedSpendingLimitCase_ == 10;
   }
@@ -1204,6 +1243,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int64Value proposed_spending_limit_micros = 10 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return The proposedSpendingLimitMicros.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getProposedSpendingLimitMicros() {
     if (proposedSpendingLimitCase_ == 10) {
        return (com.google.protobuf.Int64Value) proposedSpendingLimit_;
@@ -1218,6 +1258,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int64Value proposed_spending_limit_micros = 10 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getProposedSpendingLimitMicrosOrBuilder() {
     if (proposedSpendingLimitCase_ == 10) {
        return (com.google.protobuf.Int64Value) proposedSpendingLimit_;
@@ -1268,6 +1309,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int64Value approved_spending_limit_micros = 23 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the approvedSpendingLimitMicros field is set.
    */
+  @java.lang.Override
   public boolean hasApprovedSpendingLimitMicros() {
     return approvedSpendingLimitCase_ == 23;
   }
@@ -1280,6 +1322,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int64Value approved_spending_limit_micros = 23 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The approvedSpendingLimitMicros.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getApprovedSpendingLimitMicros() {
     if (approvedSpendingLimitCase_ == 23) {
        return (com.google.protobuf.Int64Value) approvedSpendingLimit_;
@@ -1294,6 +1337,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int64Value approved_spending_limit_micros = 23 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getApprovedSpendingLimitMicrosOrBuilder() {
     if (approvedSpendingLimitCase_ == 23) {
        return (com.google.protobuf.Int64Value) approvedSpendingLimit_;
@@ -2938,7 +2982,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.AccountBudgetProposalTypeEnum.AccountBudgetProposalType proposal_type = 4 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return The enum numeric value on the wire for proposalType.
      */
-    public int getProposalTypeValue() {
+    @java.lang.Override public int getProposalTypeValue() {
       return proposalType_;
     }
     /**
@@ -2952,6 +2996,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setProposalTypeValue(int value) {
+      
       proposalType_ = value;
       onChanged();
       return this;
@@ -2965,6 +3010,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.AccountBudgetProposalTypeEnum.AccountBudgetProposalType proposal_type = 4 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return The proposalType.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.enums.AccountBudgetProposalTypeEnum.AccountBudgetProposalType getProposalType() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v4.enums.AccountBudgetProposalTypeEnum.AccountBudgetProposalType result = com.google.ads.googleads.v4.enums.AccountBudgetProposalTypeEnum.AccountBudgetProposalType.valueOf(proposalType_);
@@ -3015,7 +3061,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.AccountBudgetProposalStatusEnum.AccountBudgetProposalStatus status = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The enum numeric value on the wire for status.
      */
-    public int getStatusValue() {
+    @java.lang.Override public int getStatusValue() {
       return status_;
     }
     /**
@@ -3029,6 +3075,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setStatusValue(int value) {
+      
       status_ = value;
       onChanged();
       return this;
@@ -3042,6 +3089,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.AccountBudgetProposalStatusEnum.AccountBudgetProposalStatus status = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The status.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.enums.AccountBudgetProposalStatusEnum.AccountBudgetProposalStatus getStatus() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v4.enums.AccountBudgetProposalStatusEnum.AccountBudgetProposalStatus result = com.google.ads.googleads.v4.enums.AccountBudgetProposalStatusEnum.AccountBudgetProposalStatus.valueOf(status_);
@@ -4040,6 +4088,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.StringValue proposed_start_date_time = 18 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return Whether the proposedStartDateTime field is set.
      */
+    @java.lang.Override
     public boolean hasProposedStartDateTime() {
       return proposedStartTimeCase_ == 18;
     }
@@ -4051,6 +4100,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.StringValue proposed_start_date_time = 18 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return The proposedStartDateTime.
      */
+    @java.lang.Override
     public com.google.protobuf.StringValue getProposedStartDateTime() {
       if (proposedStartDateTimeBuilder_ == null) {
         if (proposedStartTimeCase_ == 18) {
@@ -4168,6 +4218,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.protobuf.StringValue proposed_start_date_time = 18 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
+    @java.lang.Override
     public com.google.protobuf.StringValueOrBuilder getProposedStartDateTimeOrBuilder() {
       if ((proposedStartTimeCase_ == 18) && (proposedStartDateTimeBuilder_ != null)) {
         return proposedStartDateTimeBuilder_.getMessageOrBuilder();
@@ -4212,6 +4263,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.TimeTypeEnum.TimeType proposed_start_time_type = 7 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return The enum numeric value on the wire for proposedStartTimeType.
      */
+    @java.lang.Override
     public int getProposedStartTimeTypeValue() {
       if (proposedStartTimeCase_ == 7) {
         return ((java.lang.Integer) proposedStartTime_).intValue();
@@ -4241,6 +4293,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.TimeTypeEnum.TimeType proposed_start_time_type = 7 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return The proposedStartTimeType.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.enums.TimeTypeEnum.TimeType getProposedStartTimeType() {
       if (proposedStartTimeCase_ == 7) {
         @SuppressWarnings("deprecation")
@@ -4295,6 +4348,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.StringValue proposed_end_date_time = 19 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return Whether the proposedEndDateTime field is set.
      */
+    @java.lang.Override
     public boolean hasProposedEndDateTime() {
       return proposedEndTimeCase_ == 19;
     }
@@ -4306,6 +4360,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.StringValue proposed_end_date_time = 19 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return The proposedEndDateTime.
      */
+    @java.lang.Override
     public com.google.protobuf.StringValue getProposedEndDateTime() {
       if (proposedEndDateTimeBuilder_ == null) {
         if (proposedEndTimeCase_ == 19) {
@@ -4423,6 +4478,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.protobuf.StringValue proposed_end_date_time = 19 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
+    @java.lang.Override
     public com.google.protobuf.StringValueOrBuilder getProposedEndDateTimeOrBuilder() {
       if ((proposedEndTimeCase_ == 19) && (proposedEndDateTimeBuilder_ != null)) {
         return proposedEndDateTimeBuilder_.getMessageOrBuilder();
@@ -4467,6 +4523,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.TimeTypeEnum.TimeType proposed_end_time_type = 9 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return The enum numeric value on the wire for proposedEndTimeType.
      */
+    @java.lang.Override
     public int getProposedEndTimeTypeValue() {
       if (proposedEndTimeCase_ == 9) {
         return ((java.lang.Integer) proposedEndTime_).intValue();
@@ -4496,6 +4553,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.TimeTypeEnum.TimeType proposed_end_time_type = 9 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return The proposedEndTimeType.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.enums.TimeTypeEnum.TimeType getProposedEndTimeType() {
       if (proposedEndTimeCase_ == 9) {
         @SuppressWarnings("deprecation")
@@ -4550,6 +4608,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.StringValue approved_end_date_time = 21 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the approvedEndDateTime field is set.
      */
+    @java.lang.Override
     public boolean hasApprovedEndDateTime() {
       return approvedEndTimeCase_ == 21;
     }
@@ -4561,6 +4620,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.StringValue approved_end_date_time = 21 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The approvedEndDateTime.
      */
+    @java.lang.Override
     public com.google.protobuf.StringValue getApprovedEndDateTime() {
       if (approvedEndDateTimeBuilder_ == null) {
         if (approvedEndTimeCase_ == 21) {
@@ -4678,6 +4738,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.protobuf.StringValue approved_end_date_time = 21 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
+    @java.lang.Override
     public com.google.protobuf.StringValueOrBuilder getApprovedEndDateTimeOrBuilder() {
       if ((approvedEndTimeCase_ == 21) && (approvedEndDateTimeBuilder_ != null)) {
         return approvedEndDateTimeBuilder_.getMessageOrBuilder();
@@ -4722,6 +4783,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.TimeTypeEnum.TimeType approved_end_time_type = 22 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The enum numeric value on the wire for approvedEndTimeType.
      */
+    @java.lang.Override
     public int getApprovedEndTimeTypeValue() {
       if (approvedEndTimeCase_ == 22) {
         return ((java.lang.Integer) approvedEndTime_).intValue();
@@ -4751,6 +4813,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.TimeTypeEnum.TimeType approved_end_time_type = 22 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The approvedEndTimeType.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.enums.TimeTypeEnum.TimeType getApprovedEndTimeType() {
       if (approvedEndTimeCase_ == 22) {
         @SuppressWarnings("deprecation")
@@ -4806,6 +4869,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.Int64Value proposed_spending_limit_micros = 10 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return Whether the proposedSpendingLimitMicros field is set.
      */
+    @java.lang.Override
     public boolean hasProposedSpendingLimitMicros() {
       return proposedSpendingLimitCase_ == 10;
     }
@@ -4818,6 +4882,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.Int64Value proposed_spending_limit_micros = 10 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return The proposedSpendingLimitMicros.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getProposedSpendingLimitMicros() {
       if (proposedSpendingLimitMicrosBuilder_ == null) {
         if (proposedSpendingLimitCase_ == 10) {
@@ -4941,6 +5006,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.protobuf.Int64Value proposed_spending_limit_micros = 10 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getProposedSpendingLimitMicrosOrBuilder() {
       if ((proposedSpendingLimitCase_ == 10) && (proposedSpendingLimitMicrosBuilder_ != null)) {
         return proposedSpendingLimitMicrosBuilder_.getMessageOrBuilder();
@@ -4986,6 +5052,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.SpendingLimitTypeEnum.SpendingLimitType proposed_spending_limit_type = 11 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return The enum numeric value on the wire for proposedSpendingLimitType.
      */
+    @java.lang.Override
     public int getProposedSpendingLimitTypeValue() {
       if (proposedSpendingLimitCase_ == 11) {
         return ((java.lang.Integer) proposedSpendingLimit_).intValue();
@@ -5015,6 +5082,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.SpendingLimitTypeEnum.SpendingLimitType proposed_spending_limit_type = 11 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return The proposedSpendingLimitType.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.enums.SpendingLimitTypeEnum.SpendingLimitType getProposedSpendingLimitType() {
       if (proposedSpendingLimitCase_ == 11) {
         @SuppressWarnings("deprecation")
@@ -5070,6 +5138,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.Int64Value approved_spending_limit_micros = 23 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the approvedSpendingLimitMicros field is set.
      */
+    @java.lang.Override
     public boolean hasApprovedSpendingLimitMicros() {
       return approvedSpendingLimitCase_ == 23;
     }
@@ -5082,6 +5151,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.Int64Value approved_spending_limit_micros = 23 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The approvedSpendingLimitMicros.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getApprovedSpendingLimitMicros() {
       if (approvedSpendingLimitMicrosBuilder_ == null) {
         if (approvedSpendingLimitCase_ == 23) {
@@ -5205,6 +5275,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.protobuf.Int64Value approved_spending_limit_micros = 23 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getApprovedSpendingLimitMicrosOrBuilder() {
       if ((approvedSpendingLimitCase_ == 23) && (approvedSpendingLimitMicrosBuilder_ != null)) {
         return approvedSpendingLimitMicrosBuilder_.getMessageOrBuilder();
@@ -5250,6 +5321,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.SpendingLimitTypeEnum.SpendingLimitType approved_spending_limit_type = 24 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The enum numeric value on the wire for approvedSpendingLimitType.
      */
+    @java.lang.Override
     public int getApprovedSpendingLimitTypeValue() {
       if (approvedSpendingLimitCase_ == 24) {
         return ((java.lang.Integer) approvedSpendingLimit_).intValue();
@@ -5279,6 +5351,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.SpendingLimitTypeEnum.SpendingLimitType approved_spending_limit_type = 24 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The approvedSpendingLimitType.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.enums.SpendingLimitTypeEnum.SpendingLimitType getApprovedSpendingLimitType() {
       if (approvedSpendingLimitCase_ == 24) {
         @SuppressWarnings("deprecation")

@@ -9,43 +9,47 @@ public interface FeedAttributeOperationOrBuilder extends
 
   /**
    * <pre>
-   * Type of list operation to perform.
+   * Output only. Type of list operation to perform.
    * </pre>
    *
-   * <code>.google.ads.googleads.v1.resources.FeedAttributeOperation.Operator operator = 1;</code>
+   * <code>.google.ads.googleads.v1.resources.FeedAttributeOperation.Operator operator = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The enum numeric value on the wire for operator.
    */
   int getOperatorValue();
   /**
    * <pre>
-   * Type of list operation to perform.
+   * Output only. Type of list operation to perform.
    * </pre>
    *
-   * <code>.google.ads.googleads.v1.resources.FeedAttributeOperation.Operator operator = 1;</code>
+   * <code>.google.ads.googleads.v1.resources.FeedAttributeOperation.Operator operator = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The operator.
    */
   com.google.ads.googleads.v1.resources.FeedAttributeOperation.Operator getOperator();
 
   /**
    * <pre>
-   * The feed attribute being added to the list.
+   * Output only. The feed attribute being added to the list.
    * </pre>
    *
-   * <code>.google.ads.googleads.v1.resources.FeedAttribute value = 2;</code>
+   * <code>.google.ads.googleads.v1.resources.FeedAttribute value = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the value field is set.
    */
   boolean hasValue();
   /**
    * <pre>
-   * The feed attribute being added to the list.
+   * Output only. The feed attribute being added to the list.
    * </pre>
    *
-   * <code>.google.ads.googleads.v1.resources.FeedAttribute value = 2;</code>
+   * <code>.google.ads.googleads.v1.resources.FeedAttribute value = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The value.
    */
   com.google.ads.googleads.v1.resources.FeedAttribute getValue();
   /**
    * <pre>
-   * The feed attribute being added to the list.
+   * Output only. The feed attribute being added to the list.
    * </pre>
    *
-   * <code>.google.ads.googleads.v1.resources.FeedAttribute value = 2;</code>
+   * <code>.google.ads.googleads.v1.resources.FeedAttribute value = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.ads.googleads.v1.resources.FeedAttributeOrBuilder getValueOrBuilder();
 }

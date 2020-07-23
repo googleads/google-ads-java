@@ -10,7 +10,7 @@ package com.google.ads.googleads.v1.resources;
  *
  * Protobuf type {@code google.ads.googleads.v1.resources.MobileDeviceConstant}
  */
-public  final class MobileDeviceConstant extends
+public final class MobileDeviceConstant extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v1.resources.MobileDeviceConstant)
     MobileDeviceConstantOrBuilder {
@@ -22,6 +22,13 @@ private static final long serialVersionUID = 0L;
   private MobileDeviceConstant() {
     resourceName_ = "";
     type_ = 0;
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new MobileDeviceConstant();
   }
 
   @java.lang.Override
@@ -37,7 +44,6 @@ private static final long serialVersionUID = 0L;
     if (extensionRegistry == null) {
       throw new java.lang.NullPointerException();
     }
-    int mutable_bitField0_ = 0;
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
         com.google.protobuf.UnknownFieldSet.newBuilder();
     try {
@@ -148,13 +154,15 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object resourceName_;
   /**
    * <pre>
-   * The resource name of the mobile device constant.
+   * Output only. The resource name of the mobile device constant.
    * Mobile device constant resource names have the form:
    * `mobileDeviceConstants/{criterion_id}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The resourceName.
    */
+  @java.lang.Override
   public java.lang.String getResourceName() {
     java.lang.Object ref = resourceName_;
     if (ref instanceof java.lang.String) {
@@ -169,13 +177,15 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The resource name of the mobile device constant.
+   * Output only. The resource name of the mobile device constant.
    * Mobile device constant resource names have the form:
    * `mobileDeviceConstants/{criterion_id}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The bytes for resourceName.
    */
+  @java.lang.Override
   public com.google.protobuf.ByteString
       getResourceNameBytes() {
     java.lang.Object ref = resourceName_;
@@ -194,31 +204,36 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.Int64Value id_;
   /**
    * <pre>
-   * The ID of the mobile device constant.
+   * Output only. The ID of the mobile device constant.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value id = 2;</code>
+   * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the id field is set.
    */
+  @java.lang.Override
   public boolean hasId() {
     return id_ != null;
   }
   /**
    * <pre>
-   * The ID of the mobile device constant.
+   * Output only. The ID of the mobile device constant.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value id = 2;</code>
+   * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The id.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getId() {
     return id_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : id_;
   }
   /**
    * <pre>
-   * The ID of the mobile device constant.
+   * Output only. The ID of the mobile device constant.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value id = 2;</code>
+   * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getIdOrBuilder() {
     return getId();
   }
@@ -227,31 +242,36 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.StringValue name_;
   /**
    * <pre>
-   * The name of the mobile device.
+   * Output only. The name of the mobile device.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue name = 3;</code>
+   * <code>.google.protobuf.StringValue name = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the name field is set.
    */
+  @java.lang.Override
   public boolean hasName() {
     return name_ != null;
   }
   /**
    * <pre>
-   * The name of the mobile device.
+   * Output only. The name of the mobile device.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue name = 3;</code>
+   * <code>.google.protobuf.StringValue name = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The name.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getName() {
     return name_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : name_;
   }
   /**
    * <pre>
-   * The name of the mobile device.
+   * Output only. The name of the mobile device.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue name = 3;</code>
+   * <code>.google.protobuf.StringValue name = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getNameOrBuilder() {
     return getName();
   }
@@ -260,31 +280,36 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.StringValue manufacturerName_;
   /**
    * <pre>
-   * The manufacturer of the mobile device.
+   * Output only. The manufacturer of the mobile device.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue manufacturer_name = 4;</code>
+   * <code>.google.protobuf.StringValue manufacturer_name = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the manufacturerName field is set.
    */
+  @java.lang.Override
   public boolean hasManufacturerName() {
     return manufacturerName_ != null;
   }
   /**
    * <pre>
-   * The manufacturer of the mobile device.
+   * Output only. The manufacturer of the mobile device.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue manufacturer_name = 4;</code>
+   * <code>.google.protobuf.StringValue manufacturer_name = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The manufacturerName.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getManufacturerName() {
     return manufacturerName_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : manufacturerName_;
   }
   /**
    * <pre>
-   * The manufacturer of the mobile device.
+   * Output only. The manufacturer of the mobile device.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue manufacturer_name = 4;</code>
+   * <code>.google.protobuf.StringValue manufacturer_name = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getManufacturerNameOrBuilder() {
     return getManufacturerName();
   }
@@ -293,31 +318,36 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.StringValue operatingSystemName_;
   /**
    * <pre>
-   * The operating system of the mobile device.
+   * Output only. The operating system of the mobile device.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue operating_system_name = 5;</code>
+   * <code>.google.protobuf.StringValue operating_system_name = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the operatingSystemName field is set.
    */
+  @java.lang.Override
   public boolean hasOperatingSystemName() {
     return operatingSystemName_ != null;
   }
   /**
    * <pre>
-   * The operating system of the mobile device.
+   * Output only. The operating system of the mobile device.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue operating_system_name = 5;</code>
+   * <code>.google.protobuf.StringValue operating_system_name = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The operatingSystemName.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getOperatingSystemName() {
     return operatingSystemName_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : operatingSystemName_;
   }
   /**
    * <pre>
-   * The operating system of the mobile device.
+   * Output only. The operating system of the mobile device.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue operating_system_name = 5;</code>
+   * <code>.google.protobuf.StringValue operating_system_name = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getOperatingSystemNameOrBuilder() {
     return getOperatingSystemName();
   }
@@ -326,22 +356,24 @@ private static final long serialVersionUID = 0L;
   private int type_;
   /**
    * <pre>
-   * The type of mobile device.
+   * Output only. The type of mobile device.
    * </pre>
    *
-   * <code>.google.ads.googleads.v1.enums.MobileDeviceTypeEnum.MobileDeviceType type = 6;</code>
+   * <code>.google.ads.googleads.v1.enums.MobileDeviceTypeEnum.MobileDeviceType type = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The enum numeric value on the wire for type.
    */
-  public int getTypeValue() {
+  @java.lang.Override public int getTypeValue() {
     return type_;
   }
   /**
    * <pre>
-   * The type of mobile device.
+   * Output only. The type of mobile device.
    * </pre>
    *
-   * <code>.google.ads.googleads.v1.enums.MobileDeviceTypeEnum.MobileDeviceType type = 6;</code>
+   * <code>.google.ads.googleads.v1.enums.MobileDeviceTypeEnum.MobileDeviceType type = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The type.
    */
-  public com.google.ads.googleads.v1.enums.MobileDeviceTypeEnum.MobileDeviceType getType() {
+  @java.lang.Override public com.google.ads.googleads.v1.enums.MobileDeviceTypeEnum.MobileDeviceType getType() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v1.enums.MobileDeviceTypeEnum.MobileDeviceType result = com.google.ads.googleads.v1.enums.MobileDeviceTypeEnum.MobileDeviceType.valueOf(type_);
     return result == null ? com.google.ads.googleads.v1.enums.MobileDeviceTypeEnum.MobileDeviceType.UNRECOGNIZED : result;
@@ -792,12 +824,13 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object resourceName_ = "";
     /**
      * <pre>
-     * The resource name of the mobile device constant.
+     * Output only. The resource name of the mobile device constant.
      * Mobile device constant resource names have the form:
      * `mobileDeviceConstants/{criterion_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @return The resourceName.
      */
     public java.lang.String getResourceName() {
       java.lang.Object ref = resourceName_;
@@ -813,12 +846,13 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the mobile device constant.
+     * Output only. The resource name of the mobile device constant.
      * Mobile device constant resource names have the form:
      * `mobileDeviceConstants/{criterion_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @return The bytes for resourceName.
      */
     public com.google.protobuf.ByteString
         getResourceNameBytes() {
@@ -835,12 +869,14 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the mobile device constant.
+     * Output only. The resource name of the mobile device constant.
      * Mobile device constant resource names have the form:
      * `mobileDeviceConstants/{criterion_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @param value The resourceName to set.
+     * @return This builder for chaining.
      */
     public Builder setResourceName(
         java.lang.String value) {
@@ -854,12 +890,13 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the mobile device constant.
+     * Output only. The resource name of the mobile device constant.
      * Mobile device constant resource names have the form:
      * `mobileDeviceConstants/{criterion_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @return This builder for chaining.
      */
     public Builder clearResourceName() {
       
@@ -869,12 +906,14 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the mobile device constant.
+     * Output only. The resource name of the mobile device constant.
      * Mobile device constant resource names have the form:
      * `mobileDeviceConstants/{criterion_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @param value The bytes for resourceName to set.
+     * @return This builder for chaining.
      */
     public Builder setResourceNameBytes(
         com.google.protobuf.ByteString value) {
@@ -893,20 +932,22 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> idBuilder_;
     /**
      * <pre>
-     * The ID of the mobile device constant.
+     * Output only. The ID of the mobile device constant.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 2;</code>
+     * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the id field is set.
      */
     public boolean hasId() {
       return idBuilder_ != null || id_ != null;
     }
     /**
      * <pre>
-     * The ID of the mobile device constant.
+     * Output only. The ID of the mobile device constant.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 2;</code>
+     * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The id.
      */
     public com.google.protobuf.Int64Value getId() {
       if (idBuilder_ == null) {
@@ -917,10 +958,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the mobile device constant.
+     * Output only. The ID of the mobile device constant.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 2;</code>
+     * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setId(com.google.protobuf.Int64Value value) {
       if (idBuilder_ == null) {
@@ -937,10 +978,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the mobile device constant.
+     * Output only. The ID of the mobile device constant.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 2;</code>
+     * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setId(
         com.google.protobuf.Int64Value.Builder builderForValue) {
@@ -955,10 +996,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the mobile device constant.
+     * Output only. The ID of the mobile device constant.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 2;</code>
+     * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder mergeId(com.google.protobuf.Int64Value value) {
       if (idBuilder_ == null) {
@@ -977,10 +1018,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the mobile device constant.
+     * Output only. The ID of the mobile device constant.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 2;</code>
+     * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearId() {
       if (idBuilder_ == null) {
@@ -995,10 +1036,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the mobile device constant.
+     * Output only. The ID of the mobile device constant.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 2;</code>
+     * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int64Value.Builder getIdBuilder() {
       
@@ -1007,10 +1048,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the mobile device constant.
+     * Output only. The ID of the mobile device constant.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 2;</code>
+     * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int64ValueOrBuilder getIdOrBuilder() {
       if (idBuilder_ != null) {
@@ -1022,10 +1063,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the mobile device constant.
+     * Output only. The ID of the mobile device constant.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 2;</code>
+     * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
@@ -1046,20 +1087,22 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> nameBuilder_;
     /**
      * <pre>
-     * The name of the mobile device.
+     * Output only. The name of the mobile device.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue name = 3;</code>
+     * <code>.google.protobuf.StringValue name = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the name field is set.
      */
     public boolean hasName() {
       return nameBuilder_ != null || name_ != null;
     }
     /**
      * <pre>
-     * The name of the mobile device.
+     * Output only. The name of the mobile device.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue name = 3;</code>
+     * <code>.google.protobuf.StringValue name = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The name.
      */
     public com.google.protobuf.StringValue getName() {
       if (nameBuilder_ == null) {
@@ -1070,10 +1113,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The name of the mobile device.
+     * Output only. The name of the mobile device.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue name = 3;</code>
+     * <code>.google.protobuf.StringValue name = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setName(com.google.protobuf.StringValue value) {
       if (nameBuilder_ == null) {
@@ -1090,10 +1133,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The name of the mobile device.
+     * Output only. The name of the mobile device.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue name = 3;</code>
+     * <code>.google.protobuf.StringValue name = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setName(
         com.google.protobuf.StringValue.Builder builderForValue) {
@@ -1108,10 +1151,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The name of the mobile device.
+     * Output only. The name of the mobile device.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue name = 3;</code>
+     * <code>.google.protobuf.StringValue name = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder mergeName(com.google.protobuf.StringValue value) {
       if (nameBuilder_ == null) {
@@ -1130,10 +1173,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The name of the mobile device.
+     * Output only. The name of the mobile device.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue name = 3;</code>
+     * <code>.google.protobuf.StringValue name = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearName() {
       if (nameBuilder_ == null) {
@@ -1148,10 +1191,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The name of the mobile device.
+     * Output only. The name of the mobile device.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue name = 3;</code>
+     * <code>.google.protobuf.StringValue name = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValue.Builder getNameBuilder() {
       
@@ -1160,10 +1203,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The name of the mobile device.
+     * Output only. The name of the mobile device.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue name = 3;</code>
+     * <code>.google.protobuf.StringValue name = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValueOrBuilder getNameOrBuilder() {
       if (nameBuilder_ != null) {
@@ -1175,10 +1218,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The name of the mobile device.
+     * Output only. The name of the mobile device.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue name = 3;</code>
+     * <code>.google.protobuf.StringValue name = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
@@ -1199,20 +1242,22 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> manufacturerNameBuilder_;
     /**
      * <pre>
-     * The manufacturer of the mobile device.
+     * Output only. The manufacturer of the mobile device.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue manufacturer_name = 4;</code>
+     * <code>.google.protobuf.StringValue manufacturer_name = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the manufacturerName field is set.
      */
     public boolean hasManufacturerName() {
       return manufacturerNameBuilder_ != null || manufacturerName_ != null;
     }
     /**
      * <pre>
-     * The manufacturer of the mobile device.
+     * Output only. The manufacturer of the mobile device.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue manufacturer_name = 4;</code>
+     * <code>.google.protobuf.StringValue manufacturer_name = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The manufacturerName.
      */
     public com.google.protobuf.StringValue getManufacturerName() {
       if (manufacturerNameBuilder_ == null) {
@@ -1223,10 +1268,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The manufacturer of the mobile device.
+     * Output only. The manufacturer of the mobile device.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue manufacturer_name = 4;</code>
+     * <code>.google.protobuf.StringValue manufacturer_name = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setManufacturerName(com.google.protobuf.StringValue value) {
       if (manufacturerNameBuilder_ == null) {
@@ -1243,10 +1288,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The manufacturer of the mobile device.
+     * Output only. The manufacturer of the mobile device.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue manufacturer_name = 4;</code>
+     * <code>.google.protobuf.StringValue manufacturer_name = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setManufacturerName(
         com.google.protobuf.StringValue.Builder builderForValue) {
@@ -1261,10 +1306,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The manufacturer of the mobile device.
+     * Output only. The manufacturer of the mobile device.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue manufacturer_name = 4;</code>
+     * <code>.google.protobuf.StringValue manufacturer_name = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder mergeManufacturerName(com.google.protobuf.StringValue value) {
       if (manufacturerNameBuilder_ == null) {
@@ -1283,10 +1328,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The manufacturer of the mobile device.
+     * Output only. The manufacturer of the mobile device.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue manufacturer_name = 4;</code>
+     * <code>.google.protobuf.StringValue manufacturer_name = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearManufacturerName() {
       if (manufacturerNameBuilder_ == null) {
@@ -1301,10 +1346,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The manufacturer of the mobile device.
+     * Output only. The manufacturer of the mobile device.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue manufacturer_name = 4;</code>
+     * <code>.google.protobuf.StringValue manufacturer_name = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValue.Builder getManufacturerNameBuilder() {
       
@@ -1313,10 +1358,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The manufacturer of the mobile device.
+     * Output only. The manufacturer of the mobile device.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue manufacturer_name = 4;</code>
+     * <code>.google.protobuf.StringValue manufacturer_name = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValueOrBuilder getManufacturerNameOrBuilder() {
       if (manufacturerNameBuilder_ != null) {
@@ -1328,10 +1373,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The manufacturer of the mobile device.
+     * Output only. The manufacturer of the mobile device.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue manufacturer_name = 4;</code>
+     * <code>.google.protobuf.StringValue manufacturer_name = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
@@ -1352,20 +1397,22 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> operatingSystemNameBuilder_;
     /**
      * <pre>
-     * The operating system of the mobile device.
+     * Output only. The operating system of the mobile device.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue operating_system_name = 5;</code>
+     * <code>.google.protobuf.StringValue operating_system_name = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the operatingSystemName field is set.
      */
     public boolean hasOperatingSystemName() {
       return operatingSystemNameBuilder_ != null || operatingSystemName_ != null;
     }
     /**
      * <pre>
-     * The operating system of the mobile device.
+     * Output only. The operating system of the mobile device.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue operating_system_name = 5;</code>
+     * <code>.google.protobuf.StringValue operating_system_name = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The operatingSystemName.
      */
     public com.google.protobuf.StringValue getOperatingSystemName() {
       if (operatingSystemNameBuilder_ == null) {
@@ -1376,10 +1423,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The operating system of the mobile device.
+     * Output only. The operating system of the mobile device.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue operating_system_name = 5;</code>
+     * <code>.google.protobuf.StringValue operating_system_name = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setOperatingSystemName(com.google.protobuf.StringValue value) {
       if (operatingSystemNameBuilder_ == null) {
@@ -1396,10 +1443,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The operating system of the mobile device.
+     * Output only. The operating system of the mobile device.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue operating_system_name = 5;</code>
+     * <code>.google.protobuf.StringValue operating_system_name = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setOperatingSystemName(
         com.google.protobuf.StringValue.Builder builderForValue) {
@@ -1414,10 +1461,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The operating system of the mobile device.
+     * Output only. The operating system of the mobile device.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue operating_system_name = 5;</code>
+     * <code>.google.protobuf.StringValue operating_system_name = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder mergeOperatingSystemName(com.google.protobuf.StringValue value) {
       if (operatingSystemNameBuilder_ == null) {
@@ -1436,10 +1483,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The operating system of the mobile device.
+     * Output only. The operating system of the mobile device.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue operating_system_name = 5;</code>
+     * <code>.google.protobuf.StringValue operating_system_name = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearOperatingSystemName() {
       if (operatingSystemNameBuilder_ == null) {
@@ -1454,10 +1501,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The operating system of the mobile device.
+     * Output only. The operating system of the mobile device.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue operating_system_name = 5;</code>
+     * <code>.google.protobuf.StringValue operating_system_name = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValue.Builder getOperatingSystemNameBuilder() {
       
@@ -1466,10 +1513,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The operating system of the mobile device.
+     * Output only. The operating system of the mobile device.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue operating_system_name = 5;</code>
+     * <code>.google.protobuf.StringValue operating_system_name = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValueOrBuilder getOperatingSystemNameOrBuilder() {
       if (operatingSystemNameBuilder_ != null) {
@@ -1481,10 +1528,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The operating system of the mobile device.
+     * Output only. The operating system of the mobile device.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue operating_system_name = 5;</code>
+     * <code>.google.protobuf.StringValue operating_system_name = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
@@ -1503,33 +1550,39 @@ private static final long serialVersionUID = 0L;
     private int type_ = 0;
     /**
      * <pre>
-     * The type of mobile device.
+     * Output only. The type of mobile device.
      * </pre>
      *
-     * <code>.google.ads.googleads.v1.enums.MobileDeviceTypeEnum.MobileDeviceType type = 6;</code>
+     * <code>.google.ads.googleads.v1.enums.MobileDeviceTypeEnum.MobileDeviceType type = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The enum numeric value on the wire for type.
      */
-    public int getTypeValue() {
+    @java.lang.Override public int getTypeValue() {
       return type_;
     }
     /**
      * <pre>
-     * The type of mobile device.
+     * Output only. The type of mobile device.
      * </pre>
      *
-     * <code>.google.ads.googleads.v1.enums.MobileDeviceTypeEnum.MobileDeviceType type = 6;</code>
+     * <code>.google.ads.googleads.v1.enums.MobileDeviceTypeEnum.MobileDeviceType type = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @param value The enum numeric value on the wire for type to set.
+     * @return This builder for chaining.
      */
     public Builder setTypeValue(int value) {
+      
       type_ = value;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * The type of mobile device.
+     * Output only. The type of mobile device.
      * </pre>
      *
-     * <code>.google.ads.googleads.v1.enums.MobileDeviceTypeEnum.MobileDeviceType type = 6;</code>
+     * <code>.google.ads.googleads.v1.enums.MobileDeviceTypeEnum.MobileDeviceType type = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The type.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v1.enums.MobileDeviceTypeEnum.MobileDeviceType getType() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v1.enums.MobileDeviceTypeEnum.MobileDeviceType result = com.google.ads.googleads.v1.enums.MobileDeviceTypeEnum.MobileDeviceType.valueOf(type_);
@@ -1537,10 +1590,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The type of mobile device.
+     * Output only. The type of mobile device.
      * </pre>
      *
-     * <code>.google.ads.googleads.v1.enums.MobileDeviceTypeEnum.MobileDeviceType type = 6;</code>
+     * <code>.google.ads.googleads.v1.enums.MobileDeviceTypeEnum.MobileDeviceType type = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @param value The type to set.
+     * @return This builder for chaining.
      */
     public Builder setType(com.google.ads.googleads.v1.enums.MobileDeviceTypeEnum.MobileDeviceType value) {
       if (value == null) {
@@ -1553,10 +1608,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The type of mobile device.
+     * Output only. The type of mobile device.
      * </pre>
      *
-     * <code>.google.ads.googleads.v1.enums.MobileDeviceTypeEnum.MobileDeviceType type = 6;</code>
+     * <code>.google.ads.googleads.v1.enums.MobileDeviceTypeEnum.MobileDeviceType type = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return This builder for chaining.
      */
     public Builder clearType() {
       

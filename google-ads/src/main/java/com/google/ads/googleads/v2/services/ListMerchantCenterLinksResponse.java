@@ -10,7 +10,7 @@ package com.google.ads.googleads.v2.services;
  *
  * Protobuf type {@code google.ads.googleads.v2.services.ListMerchantCenterLinksResponse}
  */
-public  final class ListMerchantCenterLinksResponse extends
+public final class ListMerchantCenterLinksResponse extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v2.services.ListMerchantCenterLinksResponse)
     ListMerchantCenterLinksResponseOrBuilder {
@@ -21,6 +21,13 @@ private static final long serialVersionUID = 0L;
   }
   private ListMerchantCenterLinksResponse() {
     merchantCenterLinks_ = java.util.Collections.emptyList();
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new ListMerchantCenterLinksResponse();
   }
 
   @java.lang.Override
@@ -100,6 +107,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v2.resources.MerchantCenterLink merchant_center_links = 1;</code>
    */
+  @java.lang.Override
   public java.util.List<com.google.ads.googleads.v2.resources.MerchantCenterLink> getMerchantCenterLinksList() {
     return merchantCenterLinks_;
   }
@@ -110,6 +118,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v2.resources.MerchantCenterLink merchant_center_links = 1;</code>
    */
+  @java.lang.Override
   public java.util.List<? extends com.google.ads.googleads.v2.resources.MerchantCenterLinkOrBuilder> 
       getMerchantCenterLinksOrBuilderList() {
     return merchantCenterLinks_;
@@ -121,6 +130,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v2.resources.MerchantCenterLink merchant_center_links = 1;</code>
    */
+  @java.lang.Override
   public int getMerchantCenterLinksCount() {
     return merchantCenterLinks_.size();
   }
@@ -131,6 +141,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v2.resources.MerchantCenterLink merchant_center_links = 1;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.resources.MerchantCenterLink getMerchantCenterLinks(int index) {
     return merchantCenterLinks_.get(index);
   }
@@ -141,6 +152,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v2.resources.MerchantCenterLink merchant_center_links = 1;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.resources.MerchantCenterLinkOrBuilder getMerchantCenterLinksOrBuilder(
       int index) {
     return merchantCenterLinks_.get(index);

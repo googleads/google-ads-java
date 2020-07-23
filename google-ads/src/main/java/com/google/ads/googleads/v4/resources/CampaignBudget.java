@@ -10,7 +10,7 @@ package com.google.ads.googleads.v4.resources;
  *
  * Protobuf type {@code google.ads.googleads.v4.resources.CampaignBudget}
  */
-public  final class CampaignBudget extends
+public final class CampaignBudget extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.resources.CampaignBudget)
     CampaignBudgetOrBuilder {
@@ -287,6 +287,7 @@ private static final long serialVersionUID = 0L;
    * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return The resourceName.
    */
+  @java.lang.Override
   public java.lang.String getResourceName() {
     java.lang.Object ref = resourceName_;
     if (ref instanceof java.lang.String) {
@@ -309,6 +310,7 @@ private static final long serialVersionUID = 0L;
    * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return The bytes for resourceName.
    */
+  @java.lang.Override
   public com.google.protobuf.ByteString
       getResourceNameBytes() {
     java.lang.Object ref = resourceName_;
@@ -337,6 +339,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the id field is set.
    */
+  @java.lang.Override
   public boolean hasId() {
     return id_ != null;
   }
@@ -352,6 +355,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The id.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getId() {
     return id_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : id_;
   }
@@ -366,6 +370,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getIdOrBuilder() {
     return getId();
   }
@@ -386,6 +391,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue name = 4;</code>
    * @return Whether the name field is set.
    */
+  @java.lang.Override
   public boolean hasName() {
     return name_ != null;
   }
@@ -403,6 +409,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue name = 4;</code>
    * @return The name.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getName() {
     return name_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : name_;
   }
@@ -419,6 +426,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue name = 4;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getNameOrBuilder() {
     return getName();
   }
@@ -435,6 +443,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int64Value amount_micros = 5;</code>
    * @return Whether the amountMicros field is set.
    */
+  @java.lang.Override
   public boolean hasAmountMicros() {
     return amountMicros_ != null;
   }
@@ -448,6 +457,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int64Value amount_micros = 5;</code>
    * @return The amountMicros.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getAmountMicros() {
     return amountMicros_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : amountMicros_;
   }
@@ -460,6 +470,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int64Value amount_micros = 5;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getAmountMicrosOrBuilder() {
     return getAmountMicros();
   }
@@ -476,6 +487,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int64Value total_amount_micros = 10;</code>
    * @return Whether the totalAmountMicros field is set.
    */
+  @java.lang.Override
   public boolean hasTotalAmountMicros() {
     return totalAmountMicros_ != null;
   }
@@ -489,6 +501,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int64Value total_amount_micros = 10;</code>
    * @return The totalAmountMicros.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getTotalAmountMicros() {
     return totalAmountMicros_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : totalAmountMicros_;
   }
@@ -501,6 +514,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int64Value total_amount_micros = 10;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getTotalAmountMicrosOrBuilder() {
     return getTotalAmountMicros();
   }
@@ -515,7 +529,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.BudgetStatusEnum.BudgetStatus status = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The enum numeric value on the wire for status.
    */
-  public int getStatusValue() {
+  @java.lang.Override public int getStatusValue() {
     return status_;
   }
   /**
@@ -526,7 +540,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.BudgetStatusEnum.BudgetStatus status = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The status.
    */
-  public com.google.ads.googleads.v4.enums.BudgetStatusEnum.BudgetStatus getStatus() {
+  @java.lang.Override public com.google.ads.googleads.v4.enums.BudgetStatusEnum.BudgetStatus getStatus() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v4.enums.BudgetStatusEnum.BudgetStatus result = com.google.ads.googleads.v4.enums.BudgetStatusEnum.BudgetStatus.valueOf(status_);
     return result == null ? com.google.ads.googleads.v4.enums.BudgetStatusEnum.BudgetStatus.UNRECOGNIZED : result;
@@ -544,7 +558,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.BudgetDeliveryMethodEnum.BudgetDeliveryMethod delivery_method = 7;</code>
    * @return The enum numeric value on the wire for deliveryMethod.
    */
-  public int getDeliveryMethodValue() {
+  @java.lang.Override public int getDeliveryMethodValue() {
     return deliveryMethod_;
   }
   /**
@@ -557,7 +571,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.BudgetDeliveryMethodEnum.BudgetDeliveryMethod delivery_method = 7;</code>
    * @return The deliveryMethod.
    */
-  public com.google.ads.googleads.v4.enums.BudgetDeliveryMethodEnum.BudgetDeliveryMethod getDeliveryMethod() {
+  @java.lang.Override public com.google.ads.googleads.v4.enums.BudgetDeliveryMethodEnum.BudgetDeliveryMethod getDeliveryMethod() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v4.enums.BudgetDeliveryMethodEnum.BudgetDeliveryMethod result = com.google.ads.googleads.v4.enums.BudgetDeliveryMethodEnum.BudgetDeliveryMethod.valueOf(deliveryMethod_);
     return result == null ? com.google.ads.googleads.v4.enums.BudgetDeliveryMethodEnum.BudgetDeliveryMethod.UNRECOGNIZED : result;
@@ -583,6 +597,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.BoolValue explicitly_shared = 8;</code>
    * @return Whether the explicitlyShared field is set.
    */
+  @java.lang.Override
   public boolean hasExplicitlyShared() {
     return explicitlyShared_ != null;
   }
@@ -604,6 +619,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.BoolValue explicitly_shared = 8;</code>
    * @return The explicitlyShared.
    */
+  @java.lang.Override
   public com.google.protobuf.BoolValue getExplicitlyShared() {
     return explicitlyShared_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : explicitlyShared_;
   }
@@ -624,6 +640,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.BoolValue explicitly_shared = 8;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.BoolValueOrBuilder getExplicitlySharedOrBuilder() {
     return getExplicitlyShared();
   }
@@ -639,6 +656,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int64Value reference_count = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the referenceCount field is set.
    */
+  @java.lang.Override
   public boolean hasReferenceCount() {
     return referenceCount_ != null;
   }
@@ -651,6 +669,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int64Value reference_count = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The referenceCount.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getReferenceCount() {
     return referenceCount_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : referenceCount_;
   }
@@ -662,6 +681,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int64Value reference_count = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getReferenceCountOrBuilder() {
     return getReferenceCount();
   }
@@ -677,6 +697,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.BoolValue has_recommended_budget = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the hasRecommendedBudget field is set.
    */
+  @java.lang.Override
   public boolean hasHasRecommendedBudget() {
     return hasRecommendedBudget_ != null;
   }
@@ -689,6 +710,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.BoolValue has_recommended_budget = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The hasRecommendedBudget.
    */
+  @java.lang.Override
   public com.google.protobuf.BoolValue getHasRecommendedBudget() {
     return hasRecommendedBudget_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : hasRecommendedBudget_;
   }
@@ -700,6 +722,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.BoolValue has_recommended_budget = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.BoolValueOrBuilder getHasRecommendedBudgetOrBuilder() {
     return getHasRecommendedBudget();
   }
@@ -718,6 +741,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int64Value recommended_budget_amount_micros = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the recommendedBudgetAmountMicros field is set.
    */
+  @java.lang.Override
   public boolean hasRecommendedBudgetAmountMicros() {
     return recommendedBudgetAmountMicros_ != null;
   }
@@ -733,6 +757,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int64Value recommended_budget_amount_micros = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The recommendedBudgetAmountMicros.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getRecommendedBudgetAmountMicros() {
     return recommendedBudgetAmountMicros_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : recommendedBudgetAmountMicros_;
   }
@@ -747,6 +772,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int64Value recommended_budget_amount_micros = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getRecommendedBudgetAmountMicrosOrBuilder() {
     return getRecommendedBudgetAmountMicros();
   }
@@ -761,7 +787,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.BudgetPeriodEnum.BudgetPeriod period = 13 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return The enum numeric value on the wire for period.
    */
-  public int getPeriodValue() {
+  @java.lang.Override public int getPeriodValue() {
     return period_;
   }
   /**
@@ -772,7 +798,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.BudgetPeriodEnum.BudgetPeriod period = 13 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return The period.
    */
-  public com.google.ads.googleads.v4.enums.BudgetPeriodEnum.BudgetPeriod getPeriod() {
+  @java.lang.Override public com.google.ads.googleads.v4.enums.BudgetPeriodEnum.BudgetPeriod getPeriod() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v4.enums.BudgetPeriodEnum.BudgetPeriod result = com.google.ads.googleads.v4.enums.BudgetPeriodEnum.BudgetPeriod.valueOf(period_);
     return result == null ? com.google.ads.googleads.v4.enums.BudgetPeriodEnum.BudgetPeriod.UNRECOGNIZED : result;
@@ -789,6 +815,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int64Value recommended_budget_estimated_change_weekly_clicks = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the recommendedBudgetEstimatedChangeWeeklyClicks field is set.
    */
+  @java.lang.Override
   public boolean hasRecommendedBudgetEstimatedChangeWeeklyClicks() {
     return recommendedBudgetEstimatedChangeWeeklyClicks_ != null;
   }
@@ -801,6 +828,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int64Value recommended_budget_estimated_change_weekly_clicks = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The recommendedBudgetEstimatedChangeWeeklyClicks.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getRecommendedBudgetEstimatedChangeWeeklyClicks() {
     return recommendedBudgetEstimatedChangeWeeklyClicks_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : recommendedBudgetEstimatedChangeWeeklyClicks_;
   }
@@ -812,6 +840,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int64Value recommended_budget_estimated_change_weekly_clicks = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getRecommendedBudgetEstimatedChangeWeeklyClicksOrBuilder() {
     return getRecommendedBudgetEstimatedChangeWeeklyClicks();
   }
@@ -828,6 +857,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int64Value recommended_budget_estimated_change_weekly_cost_micros = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the recommendedBudgetEstimatedChangeWeeklyCostMicros field is set.
    */
+  @java.lang.Override
   public boolean hasRecommendedBudgetEstimatedChangeWeeklyCostMicros() {
     return recommendedBudgetEstimatedChangeWeeklyCostMicros_ != null;
   }
@@ -841,6 +871,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int64Value recommended_budget_estimated_change_weekly_cost_micros = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The recommendedBudgetEstimatedChangeWeeklyCostMicros.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getRecommendedBudgetEstimatedChangeWeeklyCostMicros() {
     return recommendedBudgetEstimatedChangeWeeklyCostMicros_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : recommendedBudgetEstimatedChangeWeeklyCostMicros_;
   }
@@ -853,6 +884,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int64Value recommended_budget_estimated_change_weekly_cost_micros = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getRecommendedBudgetEstimatedChangeWeeklyCostMicrosOrBuilder() {
     return getRecommendedBudgetEstimatedChangeWeeklyCostMicros();
   }
@@ -869,6 +901,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int64Value recommended_budget_estimated_change_weekly_interactions = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the recommendedBudgetEstimatedChangeWeeklyInteractions field is set.
    */
+  @java.lang.Override
   public boolean hasRecommendedBudgetEstimatedChangeWeeklyInteractions() {
     return recommendedBudgetEstimatedChangeWeeklyInteractions_ != null;
   }
@@ -882,6 +915,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int64Value recommended_budget_estimated_change_weekly_interactions = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The recommendedBudgetEstimatedChangeWeeklyInteractions.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getRecommendedBudgetEstimatedChangeWeeklyInteractions() {
     return recommendedBudgetEstimatedChangeWeeklyInteractions_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : recommendedBudgetEstimatedChangeWeeklyInteractions_;
   }
@@ -894,6 +928,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int64Value recommended_budget_estimated_change_weekly_interactions = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getRecommendedBudgetEstimatedChangeWeeklyInteractionsOrBuilder() {
     return getRecommendedBudgetEstimatedChangeWeeklyInteractions();
   }
@@ -909,6 +944,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int64Value recommended_budget_estimated_change_weekly_views = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the recommendedBudgetEstimatedChangeWeeklyViews field is set.
    */
+  @java.lang.Override
   public boolean hasRecommendedBudgetEstimatedChangeWeeklyViews() {
     return recommendedBudgetEstimatedChangeWeeklyViews_ != null;
   }
@@ -921,6 +957,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int64Value recommended_budget_estimated_change_weekly_views = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The recommendedBudgetEstimatedChangeWeeklyViews.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getRecommendedBudgetEstimatedChangeWeeklyViews() {
     return recommendedBudgetEstimatedChangeWeeklyViews_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : recommendedBudgetEstimatedChangeWeeklyViews_;
   }
@@ -932,6 +969,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int64Value recommended_budget_estimated_change_weekly_views = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getRecommendedBudgetEstimatedChangeWeeklyViewsOrBuilder() {
     return getRecommendedBudgetEstimatedChangeWeeklyViews();
   }
@@ -946,7 +984,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.BudgetTypeEnum.BudgetType type = 18 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return The enum numeric value on the wire for type.
    */
-  public int getTypeValue() {
+  @java.lang.Override public int getTypeValue() {
     return type_;
   }
   /**
@@ -957,7 +995,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.BudgetTypeEnum.BudgetType type = 18 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return The type.
    */
-  public com.google.ads.googleads.v4.enums.BudgetTypeEnum.BudgetType getType() {
+  @java.lang.Override public com.google.ads.googleads.v4.enums.BudgetTypeEnum.BudgetType getType() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v4.enums.BudgetTypeEnum.BudgetType result = com.google.ads.googleads.v4.enums.BudgetTypeEnum.BudgetType.valueOf(type_);
     return result == null ? com.google.ads.googleads.v4.enums.BudgetTypeEnum.BudgetType.UNRECOGNIZED : result;
@@ -2554,7 +2592,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.BudgetStatusEnum.BudgetStatus status = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The enum numeric value on the wire for status.
      */
-    public int getStatusValue() {
+    @java.lang.Override public int getStatusValue() {
       return status_;
     }
     /**
@@ -2567,6 +2605,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setStatusValue(int value) {
+      
       status_ = value;
       onChanged();
       return this;
@@ -2579,6 +2618,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.BudgetStatusEnum.BudgetStatus status = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The status.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.enums.BudgetStatusEnum.BudgetStatus getStatus() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v4.enums.BudgetStatusEnum.BudgetStatus result = com.google.ads.googleads.v4.enums.BudgetStatusEnum.BudgetStatus.valueOf(status_);
@@ -2628,7 +2668,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.BudgetDeliveryMethodEnum.BudgetDeliveryMethod delivery_method = 7;</code>
      * @return The enum numeric value on the wire for deliveryMethod.
      */
-    public int getDeliveryMethodValue() {
+    @java.lang.Override public int getDeliveryMethodValue() {
       return deliveryMethod_;
     }
     /**
@@ -2643,6 +2683,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setDeliveryMethodValue(int value) {
+      
       deliveryMethod_ = value;
       onChanged();
       return this;
@@ -2657,6 +2698,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.BudgetDeliveryMethodEnum.BudgetDeliveryMethod delivery_method = 7;</code>
      * @return The deliveryMethod.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.enums.BudgetDeliveryMethodEnum.BudgetDeliveryMethod getDeliveryMethod() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v4.enums.BudgetDeliveryMethodEnum.BudgetDeliveryMethod result = com.google.ads.googleads.v4.enums.BudgetDeliveryMethodEnum.BudgetDeliveryMethod.valueOf(deliveryMethod_);
@@ -3472,7 +3514,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.BudgetPeriodEnum.BudgetPeriod period = 13 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return The enum numeric value on the wire for period.
      */
-    public int getPeriodValue() {
+    @java.lang.Override public int getPeriodValue() {
       return period_;
     }
     /**
@@ -3485,6 +3527,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setPeriodValue(int value) {
+      
       period_ = value;
       onChanged();
       return this;
@@ -3497,6 +3540,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.BudgetPeriodEnum.BudgetPeriod period = 13 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return The period.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.enums.BudgetPeriodEnum.BudgetPeriod getPeriod() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v4.enums.BudgetPeriodEnum.BudgetPeriod result = com.google.ads.googleads.v4.enums.BudgetPeriodEnum.BudgetPeriod.valueOf(period_);
@@ -4218,7 +4262,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.BudgetTypeEnum.BudgetType type = 18 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return The enum numeric value on the wire for type.
      */
-    public int getTypeValue() {
+    @java.lang.Override public int getTypeValue() {
       return type_;
     }
     /**
@@ -4231,6 +4275,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setTypeValue(int value) {
+      
       type_ = value;
       onChanged();
       return this;
@@ -4243,6 +4288,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.BudgetTypeEnum.BudgetType type = 18 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return The type.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.enums.BudgetTypeEnum.BudgetType getType() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v4.enums.BudgetTypeEnum.BudgetType result = com.google.ads.googleads.v4.enums.BudgetTypeEnum.BudgetType.valueOf(type_);

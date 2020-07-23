@@ -30,43 +30,54 @@ public final class DynamicSearchAdsSearchTermViewProto {
     java.lang.String[] descriptorData = {
       "\nKgoogle/ads/googleads/v1/resources/dyna" +
       "mic_search_ads_search_term_view.proto\022!g" +
-      "oogle.ads.googleads.v1.resources\032\036google" +
-      "/protobuf/wrappers.proto\032\034google/api/ann" +
-      "otations.proto\"\376\001\n\036DynamicSearchAdsSearc" +
-      "hTermView\022\025\n\rresource_name\030\001 \001(\t\0221\n\013sear" +
-      "ch_term\030\002 \001(\0132\034.google.protobuf.StringVa" +
-      "lue\022.\n\010headline\030\003 \001(\0132\034.google.protobuf." +
-      "StringValue\0222\n\014landing_page\030\004 \001(\0132\034.goog" +
-      "le.protobuf.StringValue\022.\n\010page_url\030\005 \001(" +
-      "\0132\034.google.protobuf.StringValueB\220\002\n%com." +
-      "google.ads.googleads.v1.resourcesB#Dynam" +
-      "icSearchAdsSearchTermViewProtoP\001ZJgoogle" +
-      ".golang.org/genproto/googleapis/ads/goog" +
-      "leads/v1/resources;resources\242\002\003GAA\252\002!Goo" +
-      "gle.Ads.GoogleAds.V1.Resources\312\002!Google\\" +
-      "Ads\\GoogleAds\\V1\\Resources\352\002%Google::Ads" +
-      "::GoogleAds::V1::Resourcesb\006proto3"
+      "oogle.ads.googleads.v1.resources\032\037google" +
+      "/api/field_behavior.proto\032\031google/api/re" +
+      "source.proto\032\036google/protobuf/wrappers.p" +
+      "roto\032\034google/api/annotations.proto\"\357\003\n\036D" +
+      "ynamicSearchAdsSearchTermView\022V\n\rresourc" +
+      "e_name\030\001 \001(\tB?\340A\003\372A9\n7googleads.googleap" +
+      "is.com/DynamicSearchAdsSearchTermView\0226\n" +
+      "\013search_term\030\002 \001(\0132\034.google.protobuf.Str" +
+      "ingValueB\003\340A\003\0223\n\010headline\030\003 \001(\0132\034.google" +
+      ".protobuf.StringValueB\003\340A\003\0227\n\014landing_pa" +
+      "ge\030\004 \001(\0132\034.google.protobuf.StringValueB\003" +
+      "\340A\003\0223\n\010page_url\030\005 \001(\0132\034.google.protobuf." +
+      "StringValueB\003\340A\003:\231\001\352A\225\001\n7googleads.googl" +
+      "eapis.com/DynamicSearchAdsSearchTermView" +
+      "\022Zcustomers/{customer}/dynamicSearchAdsS" +
+      "earchTermViews/{dynamic_search_ads_searc" +
+      "h_term_view}B\220\002\n%com.google.ads.googlead" +
+      "s.v1.resourcesB#DynamicSearchAdsSearchTe" +
+      "rmViewProtoP\001ZJgoogle.golang.org/genprot" +
+      "o/googleapis/ads/googleads/v1/resources;" +
+      "resources\242\002\003GAA\252\002!Google.Ads.GoogleAds.V" +
+      "1.Resources\312\002!Google\\Ads\\GoogleAds\\V1\\Re" +
+      "sources\352\002%Google::Ads::GoogleAds::V1::Re" +
+      "sourcesb\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          com.google.api.FieldBehaviorProto.getDescriptor(),
+          com.google.api.ResourceProto.getDescriptor(),
           com.google.protobuf.WrappersProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
-        }, assigner);
+        });
     internal_static_google_ads_googleads_v1_resources_DynamicSearchAdsSearchTermView_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_google_ads_googleads_v1_resources_DynamicSearchAdsSearchTermView_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v1_resources_DynamicSearchAdsSearchTermView_descriptor,
         new java.lang.String[] { "ResourceName", "SearchTerm", "Headline", "LandingPage", "PageUrl", });
+    com.google.protobuf.ExtensionRegistry registry =
+        com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);
+    registry.add(com.google.api.ResourceProto.resource);
+    registry.add(com.google.api.ResourceProto.resourceReference);
+    com.google.protobuf.Descriptors.FileDescriptor
+        .internalUpdateFileDescriptor(descriptor, registry);
+    com.google.api.FieldBehaviorProto.getDescriptor();
+    com.google.api.ResourceProto.getDescriptor();
     com.google.protobuf.WrappersProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
   }

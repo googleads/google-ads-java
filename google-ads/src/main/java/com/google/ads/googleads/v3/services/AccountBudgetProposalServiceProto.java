@@ -95,15 +95,7 @@ public final class AccountBudgetProposalServiceProto {
       "\\GoogleAds\\V3\\Services\352\002$Google::Ads::Go" +
       "ogleAds::V3::Servicesb\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.ads.googleads.v3.resources.AccountBudgetProposalProto.getDescriptor(),
@@ -112,7 +104,7 @@ public final class AccountBudgetProposalServiceProto {
           com.google.api.FieldBehaviorProto.getDescriptor(),
           com.google.api.ResourceProto.getDescriptor(),
           com.google.protobuf.FieldMaskProto.getDescriptor(),
-        }, assigner);
+        });
     internal_static_google_ads_googleads_v3_services_GetAccountBudgetProposalRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_google_ads_googleads_v3_services_GetAccountBudgetProposalRequest_fieldAccessorTable = new

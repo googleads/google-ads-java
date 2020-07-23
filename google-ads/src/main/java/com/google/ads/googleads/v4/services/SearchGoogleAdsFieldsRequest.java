@@ -10,7 +10,7 @@ package com.google.ads.googleads.v4.services;
  *
  * Protobuf type {@code google.ads.googleads.v4.services.SearchGoogleAdsFieldsRequest}
  */
-public  final class SearchGoogleAdsFieldsRequest extends
+public final class SearchGoogleAdsFieldsRequest extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.services.SearchGoogleAdsFieldsRequest)
     SearchGoogleAdsFieldsRequestOrBuilder {
@@ -113,6 +113,7 @@ private static final long serialVersionUID = 0L;
    * <code>string query = 1 [(.google.api.field_behavior) = REQUIRED];</code>
    * @return The query.
    */
+  @java.lang.Override
   public java.lang.String getQuery() {
     java.lang.Object ref = query_;
     if (ref instanceof java.lang.String) {
@@ -133,6 +134,7 @@ private static final long serialVersionUID = 0L;
    * <code>string query = 1 [(.google.api.field_behavior) = REQUIRED];</code>
    * @return The bytes for query.
    */
+  @java.lang.Override
   public com.google.protobuf.ByteString
       getQueryBytes() {
     java.lang.Object ref = query_;
@@ -159,6 +161,7 @@ private static final long serialVersionUID = 0L;
    * <code>string page_token = 2;</code>
    * @return The pageToken.
    */
+  @java.lang.Override
   public java.lang.String getPageToken() {
     java.lang.Object ref = pageToken_;
     if (ref instanceof java.lang.String) {
@@ -181,6 +184,7 @@ private static final long serialVersionUID = 0L;
    * <code>string page_token = 2;</code>
    * @return The bytes for pageToken.
    */
+  @java.lang.Override
   public com.google.protobuf.ByteString
       getPageTokenBytes() {
     java.lang.Object ref = pageToken_;
@@ -207,6 +211,7 @@ private static final long serialVersionUID = 0L;
    * <code>int32 page_size = 3;</code>
    * @return The pageSize.
    */
+  @java.lang.Override
   public int getPageSize() {
     return pageSize_;
   }
@@ -764,6 +769,7 @@ private static final long serialVersionUID = 0L;
      * <code>int32 page_size = 3;</code>
      * @return The pageSize.
      */
+    @java.lang.Override
     public int getPageSize() {
       return pageSize_;
     }

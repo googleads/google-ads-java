@@ -10,7 +10,7 @@ package com.google.ads.googleads.v3.services;
  *
  * Protobuf type {@code google.ads.googleads.v3.services.MoveManagerLinkRequest}
  */
-public  final class MoveManagerLinkRequest extends
+public final class MoveManagerLinkRequest extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v3.services.MoveManagerLinkRequest)
     MoveManagerLinkRequestOrBuilder {
@@ -26,6 +26,13 @@ private static final long serialVersionUID = 0L;
   }
 
   @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new MoveManagerLinkRequest();
+  }
+
+  @java.lang.Override
   public final com.google.protobuf.UnknownFieldSet
   getUnknownFields() {
     return this.unknownFields;
@@ -38,7 +45,6 @@ private static final long serialVersionUID = 0L;
     if (extensionRegistry == null) {
       throw new java.lang.NullPointerException();
     }
-    int mutable_bitField0_ = 0;
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
         com.google.protobuf.UnknownFieldSet.newBuilder();
     try {
@@ -107,7 +113,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+   * @return The customerId.
    */
+  @java.lang.Override
   public java.lang.String getCustomerId() {
     java.lang.Object ref = customerId_;
     if (ref instanceof java.lang.String) {
@@ -126,7 +134,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+   * @return The bytes for customerId.
    */
+  @java.lang.Override
   public com.google.protobuf.ByteString
       getCustomerIdBytes() {
     java.lang.Object ref = customerId_;
@@ -151,7 +161,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string previous_customer_manager_link = 2 [(.google.api.field_behavior) = REQUIRED];</code>
+   * @return The previousCustomerManagerLink.
    */
+  @java.lang.Override
   public java.lang.String getPreviousCustomerManagerLink() {
     java.lang.Object ref = previousCustomerManagerLink_;
     if (ref instanceof java.lang.String) {
@@ -172,7 +184,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string previous_customer_manager_link = 2 [(.google.api.field_behavior) = REQUIRED];</code>
+   * @return The bytes for previousCustomerManagerLink.
    */
+  @java.lang.Override
   public com.google.protobuf.ByteString
       getPreviousCustomerManagerLinkBytes() {
     java.lang.Object ref = previousCustomerManagerLink_;
@@ -196,7 +210,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string new_manager = 3 [(.google.api.field_behavior) = REQUIRED];</code>
+   * @return The newManager.
    */
+  @java.lang.Override
   public java.lang.String getNewManager() {
     java.lang.Object ref = newManager_;
     if (ref instanceof java.lang.String) {
@@ -216,7 +232,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string new_manager = 3 [(.google.api.field_behavior) = REQUIRED];</code>
+   * @return The bytes for newManager.
    */
+  @java.lang.Override
   public com.google.protobuf.ByteString
       getNewManagerBytes() {
     java.lang.Object ref = newManager_;
@@ -578,6 +596,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+     * @return The customerId.
      */
     public java.lang.String getCustomerId() {
       java.lang.Object ref = customerId_;
@@ -597,6 +616,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+     * @return The bytes for customerId.
      */
     public com.google.protobuf.ByteString
         getCustomerIdBytes() {
@@ -617,6 +637,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+     * @param value The customerId to set.
+     * @return This builder for chaining.
      */
     public Builder setCustomerId(
         java.lang.String value) {
@@ -634,6 +656,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+     * @return This builder for chaining.
      */
     public Builder clearCustomerId() {
       
@@ -647,6 +670,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+     * @param value The bytes for customerId to set.
+     * @return This builder for chaining.
      */
     public Builder setCustomerIdBytes(
         com.google.protobuf.ByteString value) {
@@ -669,6 +694,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string previous_customer_manager_link = 2 [(.google.api.field_behavior) = REQUIRED];</code>
+     * @return The previousCustomerManagerLink.
      */
     public java.lang.String getPreviousCustomerManagerLink() {
       java.lang.Object ref = previousCustomerManagerLink_;
@@ -690,6 +716,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string previous_customer_manager_link = 2 [(.google.api.field_behavior) = REQUIRED];</code>
+     * @return The bytes for previousCustomerManagerLink.
      */
     public com.google.protobuf.ByteString
         getPreviousCustomerManagerLinkBytes() {
@@ -712,6 +739,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string previous_customer_manager_link = 2 [(.google.api.field_behavior) = REQUIRED];</code>
+     * @param value The previousCustomerManagerLink to set.
+     * @return This builder for chaining.
      */
     public Builder setPreviousCustomerManagerLink(
         java.lang.String value) {
@@ -731,6 +760,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string previous_customer_manager_link = 2 [(.google.api.field_behavior) = REQUIRED];</code>
+     * @return This builder for chaining.
      */
     public Builder clearPreviousCustomerManagerLink() {
       
@@ -746,6 +776,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string previous_customer_manager_link = 2 [(.google.api.field_behavior) = REQUIRED];</code>
+     * @param value The bytes for previousCustomerManagerLink to set.
+     * @return This builder for chaining.
      */
     public Builder setPreviousCustomerManagerLinkBytes(
         com.google.protobuf.ByteString value) {
@@ -767,6 +799,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string new_manager = 3 [(.google.api.field_behavior) = REQUIRED];</code>
+     * @return The newManager.
      */
     public java.lang.String getNewManager() {
       java.lang.Object ref = newManager_;
@@ -787,6 +820,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string new_manager = 3 [(.google.api.field_behavior) = REQUIRED];</code>
+     * @return The bytes for newManager.
      */
     public com.google.protobuf.ByteString
         getNewManagerBytes() {
@@ -808,6 +842,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string new_manager = 3 [(.google.api.field_behavior) = REQUIRED];</code>
+     * @param value The newManager to set.
+     * @return This builder for chaining.
      */
     public Builder setNewManager(
         java.lang.String value) {
@@ -826,6 +862,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string new_manager = 3 [(.google.api.field_behavior) = REQUIRED];</code>
+     * @return This builder for chaining.
      */
     public Builder clearNewManager() {
       
@@ -840,6 +877,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string new_manager = 3 [(.google.api.field_behavior) = REQUIRED];</code>
+     * @param value The bytes for newManager to set.
+     * @return This builder for chaining.
      */
     public Builder setNewManagerBytes(
         com.google.protobuf.ByteString value) {

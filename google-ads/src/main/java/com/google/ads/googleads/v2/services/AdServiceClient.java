@@ -1,5 +1,5 @@
 /*
- * Copyright 2019 Google LLC
+ * Copyright 2020 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -21,7 +21,6 @@ import com.google.ads.googleads.v2.services.stub.AdServiceStubSettings;
 import com.google.api.core.BetaApi;
 import com.google.api.gax.core.BackgroundResource;
 import com.google.api.gax.rpc.UnaryCallable;
-import com.google.api.pathtemplate.PathTemplate;
 import java.io.IOException;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
@@ -37,8 +36,8 @@ import javax.annotation.Generated;
  * <pre>
  * <code>
  * try (AdServiceClient adServiceClient = AdServiceClient.create()) {
- *   String formattedResourceName = AdServiceClient.formatAdName("[CUSTOMER]", "[AD]");
- *   Ad response = adServiceClient.getAd(formattedResourceName);
+ *   AdName resourceName = AdName.of("[CUSTOMER]", "[AD]");
+ *   Ad response = adServiceClient.getAd(resourceName);
  * }
  * </code>
  * </pre>
@@ -99,41 +98,6 @@ public class AdServiceClient implements BackgroundResource {
   private final AdServiceSettings settings;
   private final AdServiceStub stub;
 
-  private static final PathTemplate AD_PATH_TEMPLATE =
-      PathTemplate.createWithoutUrlEncoding("customers/{customer}/ads/{ad}");
-
-  /**
-   * Formats a string containing the fully-qualified path to represent a ad resource.
-   *
-   * @deprecated Use the {@link AdName} class instead.
-   */
-  @Deprecated
-  public static final String formatAdName(String customer, String ad) {
-    return AD_PATH_TEMPLATE.instantiate(
-        "customer", customer,
-        "ad", ad);
-  }
-
-  /**
-   * Parses the customer from the given fully-qualified path which represents a ad resource.
-   *
-   * @deprecated Use the {@link AdName} class instead.
-   */
-  @Deprecated
-  public static final String parseCustomerFromAdName(String adName) {
-    return AD_PATH_TEMPLATE.parse(adName).get("customer");
-  }
-
-  /**
-   * Parses the ad from the given fully-qualified path which represents a ad resource.
-   *
-   * @deprecated Use the {@link AdName} class instead.
-   */
-  @Deprecated
-  public static final String parseAdFromAdName(String adName) {
-    return AD_PATH_TEMPLATE.parse(adName).get("ad");
-  }
-
   /** Constructs an instance of AdServiceClient with default settings. */
   public static final AdServiceClient create() throws IOException {
     return create(AdServiceSettings.newBuilder().build());
@@ -188,16 +152,39 @@ public class AdServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (AdServiceClient adServiceClient = AdServiceClient.create()) {
-   *   String formattedResourceName = AdServiceClient.formatAdName("[CUSTOMER]", "[AD]");
-   *   Ad response = adServiceClient.getAd(formattedResourceName);
+   *   AdName resourceName = AdName.of("[CUSTOMER]", "[AD]");
+   *   Ad response = adServiceClient.getAd(resourceName);
    * }
    * </code></pre>
    *
-   * @param resourceName The resource name of the ad to fetch.
+   * @param resourceName Required. The resource name of the ad to fetch.
+   * @throws com.google.api.gax.rpc.ApiException if the remote call fails
+   */
+  public final Ad getAd(AdName resourceName) {
+    GetAdRequest request =
+        GetAdRequest.newBuilder()
+            .setResourceName(resourceName == null ? null : resourceName.toString())
+            .build();
+    return getAd(request);
+  }
+
+  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  /**
+   * Returns the requested ad in full detail.
+   *
+   * <p>Sample code:
+   *
+   * <pre><code>
+   * try (AdServiceClient adServiceClient = AdServiceClient.create()) {
+   *   AdName resourceName = AdName.of("[CUSTOMER]", "[AD]");
+   *   Ad response = adServiceClient.getAd(resourceName.toString());
+   * }
+   * </code></pre>
+   *
+   * @param resourceName Required. The resource name of the ad to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final Ad getAd(String resourceName) {
-    AD_PATH_TEMPLATE.validate(resourceName, "getAd");
     GetAdRequest request = GetAdRequest.newBuilder().setResourceName(resourceName).build();
     return getAd(request);
   }
@@ -210,9 +197,9 @@ public class AdServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (AdServiceClient adServiceClient = AdServiceClient.create()) {
-   *   String formattedResourceName = AdServiceClient.formatAdName("[CUSTOMER]", "[AD]");
+   *   AdName resourceName = AdName.of("[CUSTOMER]", "[AD]");
    *   GetAdRequest request = GetAdRequest.newBuilder()
-   *     .setResourceName(formattedResourceName)
+   *     .setResourceName(resourceName.toString())
    *     .build();
    *   Ad response = adServiceClient.getAd(request);
    * }
@@ -233,9 +220,9 @@ public class AdServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (AdServiceClient adServiceClient = AdServiceClient.create()) {
-   *   String formattedResourceName = AdServiceClient.formatAdName("[CUSTOMER]", "[AD]");
+   *   AdName resourceName = AdName.of("[CUSTOMER]", "[AD]");
    *   GetAdRequest request = GetAdRequest.newBuilder()
-   *     .setResourceName(formattedResourceName)
+   *     .setResourceName(resourceName.toString())
    *     .build();
    *   ApiFuture&lt;Ad&gt; future = adServiceClient.getAdCallable().futureCall(request);
    *   // Do something
@@ -261,12 +248,11 @@ public class AdServiceClient implements BackgroundResource {
    * }
    * </code></pre>
    *
-   * @param customerId The ID of the customer whose ads are being modified.
-   * @param operations The list of operations to perform on individual ads.
+   * @param customerId Required. The ID of the customer whose ads are being modified.
+   * @param operations Required. The list of operations to perform on individual ads.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final MutateAdsResponse mutateAds(String customerId, List<AdOperation> operations) {
-
     MutateAdsRequest request =
         MutateAdsRequest.newBuilder()
             .setCustomerId(customerId)

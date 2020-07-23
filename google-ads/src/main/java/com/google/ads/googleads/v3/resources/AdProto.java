@@ -42,7 +42,7 @@ public final class AdProto {
       ".proto\032\037google/api/field_behavior.proto\032" +
       "\031google/api/resource.proto\032\036google/proto" +
       "buf/wrappers.proto\032\034google/api/annotatio" +
-      "ns.proto\"\336\023\n\002Ad\022:\n\rresource_name\030% \001(\tB#" +
+      "ns.proto\"\362\023\n\002Ad\022:\n\rresource_name\030% \001(\tB#" +
       "\340A\005\372A\035\n\033googleads.googleapis.com/Ad\022,\n\002i" +
       "d\030\001 \001(\0132\033.google.protobuf.Int64ValueB\003\340A" +
       "\003\0220\n\nfinal_urls\030\002 \003(\0132\034.google.protobuf." +
@@ -67,61 +67,54 @@ public final class AdProto {
       "ystem_managed_resource_source\030\033 \001(\0162Z.go" +
       "ogle.ads.googleads.v3.enums.SystemManage" +
       "dResourceSourceEnum.SystemManagedResourc" +
-      "eSourceB\003\340A\003\022=\n\007text_ad\030\006 \001(\0132*.google.a" +
-      "ds.googleads.v3.common.TextAdInfoH\000\022N\n\020e" +
-      "xpanded_text_ad\030\007 \001(\01322.google.ads.googl" +
-      "eads.v3.common.ExpandedTextAdInfoH\000\022F\n\014c" +
-      "all_only_ad\030\r \001(\0132..google.ads.googleads" +
-      ".v3.common.CallOnlyAdInfoH\000\022a\n\032expanded_" +
-      "dynamic_search_ad\030\016 \001(\0132;.google.ads.goo" +
-      "gleads.v3.common.ExpandedDynamicSearchAd" +
-      "InfoH\000\022?\n\010hotel_ad\030\017 \001(\0132+.google.ads.go" +
-      "ogleads.v3.common.HotelAdInfoH\000\022P\n\021shopp" +
-      "ing_smart_ad\030\021 \001(\01323.google.ads.googlead" +
-      "s.v3.common.ShoppingSmartAdInfoH\000\022T\n\023sho" +
-      "pping_product_ad\030\022 \001(\01325.google.ads.goog" +
-      "leads.v3.common.ShoppingProductAdInfoH\000\022" +
-      "?\n\010gmail_ad\030\025 \001(\0132+.google.ads.googleads" +
-      ".v3.common.GmailAdInfoH\000\022?\n\010image_ad\030\026 \001" +
-      "(\0132+.google.ads.googleads.v3.common.Imag" +
-      "eAdInfoH\000\022?\n\010video_ad\030\030 \001(\0132+.google.ads" +
-      ".googleads.v3.common.VideoAdInfoH\000\022V\n\024re" +
-      "sponsive_search_ad\030\031 \001(\01326.google.ads.go" +
-      "ogleads.v3.common.ResponsiveSearchAdInfo" +
-      "H\000\022e\n\034legacy_responsive_display_ad\030\034 \001(\013" +
-      "2=.google.ads.googleads.v3.common.Legacy" +
-      "ResponsiveDisplayAdInfoH\000\022;\n\006app_ad\030\035 \001(" +
-      "\0132).google.ads.googleads.v3.common.AppAd" +
-      "InfoH\000\022\\\n\025legacy_app_install_ad\030\036 \001(\01326." +
-      "google.ads.googleads.v3.common.LegacyApp" +
-      "InstallAdInfoB\003\340A\005H\000\022X\n\025responsive_displ" +
-      "ay_ad\030\037 \001(\01327.google.ads.googleads.v3.co" +
-      "mmon.ResponsiveDisplayAdInfoH\000\022P\n\021displa" +
-      "y_upload_ad\030! \001(\01323.google.ads.googleads" +
-      ".v3.common.DisplayUploadAdInfoH\000\022P\n\021app_" +
-      "engagement_ad\030\" \001(\01323.google.ads.googlea" +
-      "ds.v3.common.AppEngagementAdInfoH\000\022i\n\036sh" +
-      "opping_comparison_listing_ad\030$ \001(\0132?.goo" +
-      "gle.ads.googleads.v3.common.ShoppingComp" +
-      "arisonListingAdInfoH\000:?\352A<\n\033googleads.go" +
-      "ogleapis.com/Ad\022\035customers/{customer}/ad" +
-      "s/{ad}B\t\n\007ad_dataB\364\001\n%com.google.ads.goo" +
-      "gleads.v3.resourcesB\007AdProtoP\001ZJgoogle.g" +
-      "olang.org/genproto/googleapis/ads/google" +
-      "ads/v3/resources;resources\242\002\003GAA\252\002!Googl" +
-      "e.Ads.GoogleAds.V3.Resources\312\002!Google\\Ad" +
-      "s\\GoogleAds\\V3\\Resources\352\002%Google::Ads::" +
-      "GoogleAds::V3::Resourcesb\006proto3"
+      "eSourceB\003\340A\003\022B\n\007text_ad\030\006 \001(\0132*.google.a" +
+      "ds.googleads.v3.common.TextAdInfoB\003\340A\005H\000" +
+      "\022N\n\020expanded_text_ad\030\007 \001(\01322.google.ads." +
+      "googleads.v3.common.ExpandedTextAdInfoH\000" +
+      "\022F\n\014call_only_ad\030\r \001(\0132..google.ads.goog" +
+      "leads.v3.common.CallOnlyAdInfoH\000\022f\n\032expa" +
+      "nded_dynamic_search_ad\030\016 \001(\0132;.google.ad" +
+      "s.googleads.v3.common.ExpandedDynamicSea" +
+      "rchAdInfoB\003\340A\005H\000\022?\n\010hotel_ad\030\017 \001(\0132+.goo" +
+      "gle.ads.googleads.v3.common.HotelAdInfoH" +
+      "\000\022P\n\021shopping_smart_ad\030\021 \001(\01323.google.ad" +
+      "s.googleads.v3.common.ShoppingSmartAdInf" +
+      "oH\000\022T\n\023shopping_product_ad\030\022 \001(\01325.googl" +
+      "e.ads.googleads.v3.common.ShoppingProduc" +
+      "tAdInfoH\000\022D\n\010gmail_ad\030\025 \001(\0132+.google.ads" +
+      ".googleads.v3.common.GmailAdInfoB\003\340A\005H\000\022" +
+      "D\n\010image_ad\030\026 \001(\0132+.google.ads.googleads" +
+      ".v3.common.ImageAdInfoB\003\340A\005H\000\022?\n\010video_a" +
+      "d\030\030 \001(\0132+.google.ads.googleads.v3.common" +
+      ".VideoAdInfoH\000\022V\n\024responsive_search_ad\030\031" +
+      " \001(\01326.google.ads.googleads.v3.common.Re" +
+      "sponsiveSearchAdInfoH\000\022e\n\034legacy_respons" +
+      "ive_display_ad\030\034 \001(\0132=.google.ads.google" +
+      "ads.v3.common.LegacyResponsiveDisplayAdI" +
+      "nfoH\000\022;\n\006app_ad\030\035 \001(\0132).google.ads.googl" +
+      "eads.v3.common.AppAdInfoH\000\022\\\n\025legacy_app" +
+      "_install_ad\030\036 \001(\01326.google.ads.googleads" +
+      ".v3.common.LegacyAppInstallAdInfoB\003\340A\005H\000" +
+      "\022X\n\025responsive_display_ad\030\037 \001(\01327.google" +
+      ".ads.googleads.v3.common.ResponsiveDispl" +
+      "ayAdInfoH\000\022P\n\021display_upload_ad\030! \001(\01323." +
+      "google.ads.googleads.v3.common.DisplayUp" +
+      "loadAdInfoH\000\022P\n\021app_engagement_ad\030\" \001(\0132" +
+      "3.google.ads.googleads.v3.common.AppEnga" +
+      "gementAdInfoH\000\022i\n\036shopping_comparison_li" +
+      "sting_ad\030$ \001(\0132?.google.ads.googleads.v3" +
+      ".common.ShoppingComparisonListingAdInfoH" +
+      "\000:?\352A<\n\033googleads.googleapis.com/Ad\022\035cus" +
+      "tomers/{customer}/ads/{ad}B\t\n\007ad_dataB\364\001" +
+      "\n%com.google.ads.googleads.v3.resourcesB" +
+      "\007AdProtoP\001ZJgoogle.golang.org/genproto/g" +
+      "oogleapis/ads/googleads/v3/resources;res" +
+      "ources\242\002\003GAA\252\002!Google.Ads.GoogleAds.V3.R" +
+      "esources\312\002!Google\\Ads\\GoogleAds\\V3\\Resou" +
+      "rces\352\002%Google::Ads::GoogleAds::V3::Resou" +
+      "rcesb\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.ads.googleads.v3.common.AdTypeInfosProto.getDescriptor(),
@@ -135,7 +128,7 @@ public final class AdProto {
           com.google.api.ResourceProto.getDescriptor(),
           com.google.protobuf.WrappersProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
-        }, assigner);
+        });
     internal_static_google_ads_googleads_v3_resources_Ad_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_google_ads_googleads_v3_resources_Ad_fieldAccessorTable = new

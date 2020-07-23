@@ -13,6 +13,7 @@ public interface ExpandedTextAdInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue headline_part1 = 1;</code>
+   * @return Whether the headlinePart1 field is set.
    */
   boolean hasHeadlinePart1();
   /**
@@ -21,6 +22,7 @@ public interface ExpandedTextAdInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue headline_part1 = 1;</code>
+   * @return The headlinePart1.
    */
   com.google.protobuf.StringValue getHeadlinePart1();
   /**
@@ -38,6 +40,7 @@ public interface ExpandedTextAdInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue headline_part2 = 2;</code>
+   * @return Whether the headlinePart2 field is set.
    */
   boolean hasHeadlinePart2();
   /**
@@ -46,6 +49,7 @@ public interface ExpandedTextAdInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue headline_part2 = 2;</code>
+   * @return The headlinePart2.
    */
   com.google.protobuf.StringValue getHeadlinePart2();
   /**
@@ -63,6 +67,7 @@ public interface ExpandedTextAdInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue headline_part3 = 6;</code>
+   * @return Whether the headlinePart3 field is set.
    */
   boolean hasHeadlinePart3();
   /**
@@ -71,6 +76,7 @@ public interface ExpandedTextAdInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue headline_part3 = 6;</code>
+   * @return The headlinePart3.
    */
   com.google.protobuf.StringValue getHeadlinePart3();
   /**
@@ -88,6 +94,7 @@ public interface ExpandedTextAdInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue description = 3;</code>
+   * @return Whether the description field is set.
    */
   boolean hasDescription();
   /**
@@ -96,6 +103,7 @@ public interface ExpandedTextAdInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue description = 3;</code>
+   * @return The description.
    */
   com.google.protobuf.StringValue getDescription();
   /**
@@ -113,6 +121,7 @@ public interface ExpandedTextAdInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue description2 = 7;</code>
+   * @return Whether the description2 field is set.
    */
   boolean hasDescription2();
   /**
@@ -121,6 +130,7 @@ public interface ExpandedTextAdInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue description2 = 7;</code>
+   * @return The description2.
    */
   com.google.protobuf.StringValue getDescription2();
   /**
@@ -138,6 +148,7 @@ public interface ExpandedTextAdInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue path1 = 4;</code>
+   * @return Whether the path1 field is set.
    */
   boolean hasPath1();
   /**
@@ -146,6 +157,7 @@ public interface ExpandedTextAdInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue path1 = 4;</code>
+   * @return The path1.
    */
   com.google.protobuf.StringValue getPath1();
   /**
@@ -163,6 +175,7 @@ public interface ExpandedTextAdInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue path2 = 5;</code>
+   * @return Whether the path2 field is set.
    */
   boolean hasPath2();
   /**
@@ -171,6 +184,7 @@ public interface ExpandedTextAdInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue path2 = 5;</code>
+   * @return The path2.
    */
   com.google.protobuf.StringValue getPath2();
   /**

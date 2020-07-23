@@ -10,7 +10,7 @@ package com.google.ads.googleads.v4.common;
  *
  * Protobuf type {@code google.ads.googleads.v4.common.ListingGroupInfo}
  */
-public  final class ListingGroupInfo extends
+public final class ListingGroupInfo extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.common.ListingGroupInfo)
     ListingGroupInfoOrBuilder {
@@ -127,7 +127,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.ListingGroupTypeEnum.ListingGroupType type = 1;</code>
    * @return The enum numeric value on the wire for type.
    */
-  public int getTypeValue() {
+  @java.lang.Override public int getTypeValue() {
     return type_;
   }
   /**
@@ -138,7 +138,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.ListingGroupTypeEnum.ListingGroupType type = 1;</code>
    * @return The type.
    */
-  public com.google.ads.googleads.v4.enums.ListingGroupTypeEnum.ListingGroupType getType() {
+  @java.lang.Override public com.google.ads.googleads.v4.enums.ListingGroupTypeEnum.ListingGroupType getType() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v4.enums.ListingGroupTypeEnum.ListingGroupType result = com.google.ads.googleads.v4.enums.ListingGroupTypeEnum.ListingGroupType.valueOf(type_);
     return result == null ? com.google.ads.googleads.v4.enums.ListingGroupTypeEnum.ListingGroupType.UNRECOGNIZED : result;
@@ -155,6 +155,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.common.ListingDimensionInfo case_value = 2;</code>
    * @return Whether the caseValue field is set.
    */
+  @java.lang.Override
   public boolean hasCaseValue() {
     return caseValue_ != null;
   }
@@ -167,6 +168,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.common.ListingDimensionInfo case_value = 2;</code>
    * @return The caseValue.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.ListingDimensionInfo getCaseValue() {
     return caseValue_ == null ? com.google.ads.googleads.v4.common.ListingDimensionInfo.getDefaultInstance() : caseValue_;
   }
@@ -178,6 +180,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v4.common.ListingDimensionInfo case_value = 2;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.ListingDimensionInfoOrBuilder getCaseValueOrBuilder() {
     return getCaseValue();
   }
@@ -193,6 +196,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue parent_ad_group_criterion = 3;</code>
    * @return Whether the parentAdGroupCriterion field is set.
    */
+  @java.lang.Override
   public boolean hasParentAdGroupCriterion() {
     return parentAdGroupCriterion_ != null;
   }
@@ -205,6 +209,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue parent_ad_group_criterion = 3;</code>
    * @return The parentAdGroupCriterion.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getParentAdGroupCriterion() {
     return parentAdGroupCriterion_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : parentAdGroupCriterion_;
   }
@@ -216,6 +221,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue parent_ad_group_criterion = 3;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getParentAdGroupCriterionOrBuilder() {
     return getParentAdGroupCriterion();
   }
@@ -594,7 +600,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.ListingGroupTypeEnum.ListingGroupType type = 1;</code>
      * @return The enum numeric value on the wire for type.
      */
-    public int getTypeValue() {
+    @java.lang.Override public int getTypeValue() {
       return type_;
     }
     /**
@@ -607,6 +613,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setTypeValue(int value) {
+      
       type_ = value;
       onChanged();
       return this;
@@ -619,6 +626,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.ListingGroupTypeEnum.ListingGroupType type = 1;</code>
      * @return The type.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.enums.ListingGroupTypeEnum.ListingGroupType getType() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v4.enums.ListingGroupTypeEnum.ListingGroupType result = com.google.ads.googleads.v4.enums.ListingGroupTypeEnum.ListingGroupType.valueOf(type_);

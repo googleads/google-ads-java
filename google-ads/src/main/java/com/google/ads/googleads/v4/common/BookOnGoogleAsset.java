@@ -12,7 +12,7 @@ package com.google.ads.googleads.v4.common;
  *
  * Protobuf type {@code google.ads.googleads.v4.common.BookOnGoogleAsset}
  */
-public  final class BookOnGoogleAsset extends
+public final class BookOnGoogleAsset extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.common.BookOnGoogleAsset)
     BookOnGoogleAssetOrBuilder {

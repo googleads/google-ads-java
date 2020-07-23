@@ -14,6 +14,7 @@ public interface KeywordPlanKeywordForecastOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue keyword_plan_ad_group_keyword = 1;</code>
+   * @return Whether the keywordPlanAdGroupKeyword field is set.
    */
   boolean hasKeywordPlanAdGroupKeyword();
   /**
@@ -23,6 +24,7 @@ public interface KeywordPlanKeywordForecastOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue keyword_plan_ad_group_keyword = 1;</code>
+   * @return The keywordPlanAdGroupKeyword.
    */
   com.google.protobuf.StringValue getKeywordPlanAdGroupKeyword();
   /**
@@ -41,6 +43,7 @@ public interface KeywordPlanKeywordForecastOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.services.ForecastMetrics keyword_forecast = 2;</code>
+   * @return Whether the keywordForecast field is set.
    */
   boolean hasKeywordForecast();
   /**
@@ -49,6 +52,7 @@ public interface KeywordPlanKeywordForecastOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.services.ForecastMetrics keyword_forecast = 2;</code>
+   * @return The keywordForecast.
    */
   com.google.ads.googleads.v2.services.ForecastMetrics getKeywordForecast();
   /**

@@ -11,7 +11,7 @@ package com.google.ads.googleads.v4.resources;
  *
  * Protobuf type {@code google.ads.googleads.v4.resources.ConversionTrackingSetting}
  */
-public  final class ConversionTrackingSetting extends
+public final class ConversionTrackingSetting extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.resources.ConversionTrackingSetting)
     ConversionTrackingSettingOrBuilder {
@@ -123,6 +123,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int64Value conversion_tracking_id = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the conversionTrackingId field is set.
    */
+  @java.lang.Override
   public boolean hasConversionTrackingId() {
     return conversionTrackingId_ != null;
   }
@@ -136,6 +137,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int64Value conversion_tracking_id = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The conversionTrackingId.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getConversionTrackingId() {
     return conversionTrackingId_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : conversionTrackingId_;
   }
@@ -148,6 +150,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int64Value conversion_tracking_id = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getConversionTrackingIdOrBuilder() {
     return getConversionTrackingId();
   }
@@ -165,6 +168,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int64Value cross_account_conversion_tracking_id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the crossAccountConversionTrackingId field is set.
    */
+  @java.lang.Override
   public boolean hasCrossAccountConversionTrackingId() {
     return crossAccountConversionTrackingId_ != null;
   }
@@ -179,6 +183,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int64Value cross_account_conversion_tracking_id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The crossAccountConversionTrackingId.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getCrossAccountConversionTrackingId() {
     return crossAccountConversionTrackingId_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : crossAccountConversionTrackingId_;
   }
@@ -192,6 +197,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int64Value cross_account_conversion_tracking_id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getCrossAccountConversionTrackingIdOrBuilder() {
     return getCrossAccountConversionTrackingId();
   }

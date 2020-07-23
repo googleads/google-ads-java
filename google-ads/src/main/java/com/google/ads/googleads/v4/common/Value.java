@@ -10,7 +10,7 @@ package com.google.ads.googleads.v4.common;
  *
  * Protobuf type {@code google.ads.googleads.v4.common.Value}
  */
-public  final class Value extends
+public final class Value extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.common.Value)
     ValueOrBuilder {
@@ -166,6 +166,7 @@ private static final long serialVersionUID = 0L;
    * <code>bool boolean_value = 1;</code>
    * @return The booleanValue.
    */
+  @java.lang.Override
   public boolean getBooleanValue() {
     if (valueCase_ == 1) {
       return (java.lang.Boolean) value_;
@@ -182,6 +183,7 @@ private static final long serialVersionUID = 0L;
    * <code>int64 int64_value = 2;</code>
    * @return The int64Value.
    */
+  @java.lang.Override
   public long getInt64Value() {
     if (valueCase_ == 2) {
       return (java.lang.Long) value_;
@@ -198,6 +200,7 @@ private static final long serialVersionUID = 0L;
    * <code>float float_value = 3;</code>
    * @return The floatValue.
    */
+  @java.lang.Override
   public float getFloatValue() {
     if (valueCase_ == 3) {
       return (java.lang.Float) value_;
@@ -214,6 +217,7 @@ private static final long serialVersionUID = 0L;
    * <code>double double_value = 4;</code>
    * @return The doubleValue.
    */
+  @java.lang.Override
   public double getDoubleValue() {
     if (valueCase_ == 4) {
       return (java.lang.Double) value_;
@@ -912,6 +916,7 @@ private static final long serialVersionUID = 0L;
      * <code>string string_value = 5;</code>
      * @return The stringValue.
      */
+    @java.lang.Override
     public java.lang.String getStringValue() {
       java.lang.Object ref = "";
       if (valueCase_ == 5) {
@@ -937,6 +942,7 @@ private static final long serialVersionUID = 0L;
      * <code>string string_value = 5;</code>
      * @return The bytes for stringValue.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getStringValueBytes() {
       java.lang.Object ref = "";

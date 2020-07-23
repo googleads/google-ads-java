@@ -15,6 +15,7 @@ public interface CustomInterestOrBuilder extends
    * </pre>
    *
    * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * @return The resourceName.
    */
   java.lang.String getResourceName();
   /**
@@ -25,6 +26,7 @@ public interface CustomInterestOrBuilder extends
    * </pre>
    *
    * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * @return The bytes for resourceName.
    */
   com.google.protobuf.ByteString
       getResourceNameBytes();
@@ -35,6 +37,7 @@ public interface CustomInterestOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the id field is set.
    */
   boolean hasId();
   /**
@@ -43,6 +46,7 @@ public interface CustomInterestOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The id.
    */
   com.google.protobuf.Int64Value getId();
   /**
@@ -61,6 +65,7 @@ public interface CustomInterestOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.CustomInterestStatusEnum.CustomInterestStatus status = 3;</code>
+   * @return The enum numeric value on the wire for status.
    */
   int getStatusValue();
   /**
@@ -70,6 +75,7 @@ public interface CustomInterestOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.CustomInterestStatusEnum.CustomInterestStatus status = 3;</code>
+   * @return The status.
    */
   com.google.ads.googleads.v3.enums.CustomInterestStatusEnum.CustomInterestStatus getStatus();
 
@@ -81,6 +87,7 @@ public interface CustomInterestOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue name = 4;</code>
+   * @return Whether the name field is set.
    */
   boolean hasName();
   /**
@@ -91,6 +98,7 @@ public interface CustomInterestOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue name = 4;</code>
+   * @return The name.
    */
   com.google.protobuf.StringValue getName();
   /**
@@ -111,6 +119,7 @@ public interface CustomInterestOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.CustomInterestTypeEnum.CustomInterestType type = 5;</code>
+   * @return The enum numeric value on the wire for type.
    */
   int getTypeValue();
   /**
@@ -120,6 +129,7 @@ public interface CustomInterestOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.CustomInterestTypeEnum.CustomInterestType type = 5;</code>
+   * @return The type.
    */
   com.google.ads.googleads.v3.enums.CustomInterestTypeEnum.CustomInterestType getType();
 
@@ -129,6 +139,7 @@ public interface CustomInterestOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue description = 6;</code>
+   * @return Whether the description field is set.
    */
   boolean hasDescription();
   /**
@@ -137,6 +148,7 @@ public interface CustomInterestOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue description = 6;</code>
+   * @return The description.
    */
   com.google.protobuf.StringValue getDescription();
   /**

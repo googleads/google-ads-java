@@ -1,5 +1,5 @@
 /*
- * Copyright 2019 Google LLC
+ * Copyright 2020 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -21,7 +21,6 @@ import com.google.ads.googleads.v2.services.stub.CampaignBidModifierServiceStubS
 import com.google.api.core.BetaApi;
 import com.google.api.gax.core.BackgroundResource;
 import com.google.api.gax.rpc.UnaryCallable;
-import com.google.api.pathtemplate.PathTemplate;
 import java.io.IOException;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
@@ -37,8 +36,8 @@ import javax.annotation.Generated;
  * <pre>
  * <code>
  * try (CampaignBidModifierServiceClient campaignBidModifierServiceClient = CampaignBidModifierServiceClient.create()) {
- *   String formattedResourceName = CampaignBidModifierServiceClient.formatCampaignBidModifierName("[CUSTOMER]", "[CAMPAIGN_BID_MODIFIER]");
- *   CampaignBidModifier response = campaignBidModifierServiceClient.getCampaignBidModifier(formattedResourceName);
+ *   CampaignBidModifierName resourceName = CampaignBidModifierName.of("[CUSTOMER]", "[CAMPAIGN_BID_MODIFIER]");
+ *   CampaignBidModifier response = campaignBidModifierServiceClient.getCampaignBidModifier(resourceName);
  * }
  * </code>
  * </pre>
@@ -100,50 +99,6 @@ public class CampaignBidModifierServiceClient implements BackgroundResource {
   private final CampaignBidModifierServiceSettings settings;
   private final CampaignBidModifierServiceStub stub;
 
-  private static final PathTemplate CAMPAIGN_BID_MODIFIER_PATH_TEMPLATE =
-      PathTemplate.createWithoutUrlEncoding(
-          "customers/{customer}/campaignBidModifiers/{campaign_bid_modifier}");
-
-  /**
-   * Formats a string containing the fully-qualified path to represent a campaign_bid_modifier
-   * resource.
-   *
-   * @deprecated Use the {@link CampaignBidModifierName} class instead.
-   */
-  @Deprecated
-  public static final String formatCampaignBidModifierName(
-      String customer, String campaignBidModifier) {
-    return CAMPAIGN_BID_MODIFIER_PATH_TEMPLATE.instantiate(
-        "customer", customer,
-        "campaign_bid_modifier", campaignBidModifier);
-  }
-
-  /**
-   * Parses the customer from the given fully-qualified path which represents a
-   * campaign_bid_modifier resource.
-   *
-   * @deprecated Use the {@link CampaignBidModifierName} class instead.
-   */
-  @Deprecated
-  public static final String parseCustomerFromCampaignBidModifierName(
-      String campaignBidModifierName) {
-    return CAMPAIGN_BID_MODIFIER_PATH_TEMPLATE.parse(campaignBidModifierName).get("customer");
-  }
-
-  /**
-   * Parses the campaign_bid_modifier from the given fully-qualified path which represents a
-   * campaign_bid_modifier resource.
-   *
-   * @deprecated Use the {@link CampaignBidModifierName} class instead.
-   */
-  @Deprecated
-  public static final String parseCampaignBidModifierFromCampaignBidModifierName(
-      String campaignBidModifierName) {
-    return CAMPAIGN_BID_MODIFIER_PATH_TEMPLATE
-        .parse(campaignBidModifierName)
-        .get("campaign_bid_modifier");
-  }
-
   /** Constructs an instance of CampaignBidModifierServiceClient with default settings. */
   public static final CampaignBidModifierServiceClient create() throws IOException {
     return create(CampaignBidModifierServiceSettings.newBuilder().build());
@@ -202,16 +157,39 @@ public class CampaignBidModifierServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (CampaignBidModifierServiceClient campaignBidModifierServiceClient = CampaignBidModifierServiceClient.create()) {
-   *   String formattedResourceName = CampaignBidModifierServiceClient.formatCampaignBidModifierName("[CUSTOMER]", "[CAMPAIGN_BID_MODIFIER]");
-   *   CampaignBidModifier response = campaignBidModifierServiceClient.getCampaignBidModifier(formattedResourceName);
+   *   CampaignBidModifierName resourceName = CampaignBidModifierName.of("[CUSTOMER]", "[CAMPAIGN_BID_MODIFIER]");
+   *   CampaignBidModifier response = campaignBidModifierServiceClient.getCampaignBidModifier(resourceName);
    * }
    * </code></pre>
    *
-   * @param resourceName The resource name of the campaign bid modifier to fetch.
+   * @param resourceName Required. The resource name of the campaign bid modifier to fetch.
+   * @throws com.google.api.gax.rpc.ApiException if the remote call fails
+   */
+  public final CampaignBidModifier getCampaignBidModifier(CampaignBidModifierName resourceName) {
+    GetCampaignBidModifierRequest request =
+        GetCampaignBidModifierRequest.newBuilder()
+            .setResourceName(resourceName == null ? null : resourceName.toString())
+            .build();
+    return getCampaignBidModifier(request);
+  }
+
+  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  /**
+   * Returns the requested campaign bid modifier in full detail.
+   *
+   * <p>Sample code:
+   *
+   * <pre><code>
+   * try (CampaignBidModifierServiceClient campaignBidModifierServiceClient = CampaignBidModifierServiceClient.create()) {
+   *   CampaignBidModifierName resourceName = CampaignBidModifierName.of("[CUSTOMER]", "[CAMPAIGN_BID_MODIFIER]");
+   *   CampaignBidModifier response = campaignBidModifierServiceClient.getCampaignBidModifier(resourceName.toString());
+   * }
+   * </code></pre>
+   *
+   * @param resourceName Required. The resource name of the campaign bid modifier to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final CampaignBidModifier getCampaignBidModifier(String resourceName) {
-    CAMPAIGN_BID_MODIFIER_PATH_TEMPLATE.validate(resourceName, "getCampaignBidModifier");
     GetCampaignBidModifierRequest request =
         GetCampaignBidModifierRequest.newBuilder().setResourceName(resourceName).build();
     return getCampaignBidModifier(request);
@@ -225,9 +203,9 @@ public class CampaignBidModifierServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (CampaignBidModifierServiceClient campaignBidModifierServiceClient = CampaignBidModifierServiceClient.create()) {
-   *   String formattedResourceName = CampaignBidModifierServiceClient.formatCampaignBidModifierName("[CUSTOMER]", "[CAMPAIGN_BID_MODIFIER]");
+   *   CampaignBidModifierName resourceName = CampaignBidModifierName.of("[CUSTOMER]", "[CAMPAIGN_BID_MODIFIER]");
    *   GetCampaignBidModifierRequest request = GetCampaignBidModifierRequest.newBuilder()
-   *     .setResourceName(formattedResourceName)
+   *     .setResourceName(resourceName.toString())
    *     .build();
    *   CampaignBidModifier response = campaignBidModifierServiceClient.getCampaignBidModifier(request);
    * }
@@ -248,9 +226,9 @@ public class CampaignBidModifierServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (CampaignBidModifierServiceClient campaignBidModifierServiceClient = CampaignBidModifierServiceClient.create()) {
-   *   String formattedResourceName = CampaignBidModifierServiceClient.formatCampaignBidModifierName("[CUSTOMER]", "[CAMPAIGN_BID_MODIFIER]");
+   *   CampaignBidModifierName resourceName = CampaignBidModifierName.of("[CUSTOMER]", "[CAMPAIGN_BID_MODIFIER]");
    *   GetCampaignBidModifierRequest request = GetCampaignBidModifierRequest.newBuilder()
-   *     .setResourceName(formattedResourceName)
+   *     .setResourceName(resourceName.toString())
    *     .build();
    *   ApiFuture&lt;CampaignBidModifier&gt; future = campaignBidModifierServiceClient.getCampaignBidModifierCallable().futureCall(request);
    *   // Do something
@@ -273,58 +251,17 @@ public class CampaignBidModifierServiceClient implements BackgroundResource {
    * try (CampaignBidModifierServiceClient campaignBidModifierServiceClient = CampaignBidModifierServiceClient.create()) {
    *   String customerId = "";
    *   List&lt;CampaignBidModifierOperation&gt; operations = new ArrayList&lt;&gt;();
-   *   boolean partialFailure = false;
-   *   boolean validateOnly = false;
-   *   MutateCampaignBidModifiersResponse response = campaignBidModifierServiceClient.mutateCampaignBidModifiers(customerId, operations, partialFailure, validateOnly);
-   * }
-   * </code></pre>
-   *
-   * @param customerId ID of the customer whose campaign bid modifiers are being modified.
-   * @param operations The list of operations to perform on individual campaign bid modifiers.
-   * @param partialFailure If true, successful operations will be carried out and invalid operations
-   *     will return errors. If false, all operations will be carried out in one transaction if and
-   *     only if they are all valid. Default is false.
-   * @param validateOnly If true, the request is validated but not executed. Only errors are
-   *     returned, not results.
-   * @throws com.google.api.gax.rpc.ApiException if the remote call fails
-   */
-  public final MutateCampaignBidModifiersResponse mutateCampaignBidModifiers(
-      String customerId,
-      List<CampaignBidModifierOperation> operations,
-      boolean partialFailure,
-      boolean validateOnly) {
-
-    MutateCampaignBidModifiersRequest request =
-        MutateCampaignBidModifiersRequest.newBuilder()
-            .setCustomerId(customerId)
-            .addAllOperations(operations)
-            .setPartialFailure(partialFailure)
-            .setValidateOnly(validateOnly)
-            .build();
-    return mutateCampaignBidModifiers(request);
-  }
-
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
-  /**
-   * Creates, updates, or removes campaign bid modifiers. Operation statuses are returned.
-   *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (CampaignBidModifierServiceClient campaignBidModifierServiceClient = CampaignBidModifierServiceClient.create()) {
-   *   String customerId = "";
-   *   List&lt;CampaignBidModifierOperation&gt; operations = new ArrayList&lt;&gt;();
    *   MutateCampaignBidModifiersResponse response = campaignBidModifierServiceClient.mutateCampaignBidModifiers(customerId, operations);
    * }
    * </code></pre>
    *
-   * @param customerId ID of the customer whose campaign bid modifiers are being modified.
-   * @param operations The list of operations to perform on individual campaign bid modifiers.
+   * @param customerId Required. ID of the customer whose campaign bid modifiers are being modified.
+   * @param operations Required. The list of operations to perform on individual campaign bid
+   *     modifiers.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final MutateCampaignBidModifiersResponse mutateCampaignBidModifiers(
       String customerId, List<CampaignBidModifierOperation> operations) {
-
     MutateCampaignBidModifiersRequest request =
         MutateCampaignBidModifiersRequest.newBuilder()
             .setCustomerId(customerId)

@@ -53,61 +53,59 @@ public final class AdGroupCriterionLabelServiceProto {
       "e.ads.googleads.v2.services\032@google/ads/" +
       "googleads/v2/resources/ad_group_criterio" +
       "n_label.proto\032\034google/api/annotations.pr" +
-      "oto\032\027google/rpc/status.proto\032\027google/api" +
-      "/client.proto\"8\n\037GetAdGroupCriterionLabe" +
-      "lRequest\022\025\n\rresource_name\030\001 \001(\t\"\300\001\n#Muta" +
-      "teAdGroupCriterionLabelsRequest\022\023\n\013custo" +
-      "mer_id\030\001 \001(\t\022T\n\noperations\030\002 \003(\0132@.googl" +
-      "e.ads.googleads.v2.services.AdGroupCrite" +
-      "rionLabelOperation\022\027\n\017partial_failure\030\003 " +
-      "\001(\010\022\025\n\rvalidate_only\030\004 \001(\010\"\213\001\n\036AdGroupCr" +
-      "iterionLabelOperation\022J\n\006create\030\001 \001(\01328." +
-      "google.ads.googleads.v2.resources.AdGrou" +
-      "pCriterionLabelH\000\022\020\n\006remove\030\002 \001(\tH\000B\013\n\to" +
-      "peration\"\257\001\n$MutateAdGroupCriterionLabel" +
-      "sResponse\0221\n\025partial_failure_error\030\003 \001(\013" +
-      "2\022.google.rpc.Status\022T\n\007results\030\002 \003(\0132C." +
-      "google.ads.googleads.v2.services.MutateA" +
-      "dGroupCriterionLabelResult\":\n!MutateAdGr" +
-      "oupCriterionLabelResult\022\025\n\rresource_name" +
-      "\030\001 \001(\t2\217\004\n\034AdGroupCriterionLabelService\022" +
-      "\331\001\n\030GetAdGroupCriterionLabel\022A.google.ad" +
-      "s.googleads.v2.services.GetAdGroupCriter" +
-      "ionLabelRequest\0328.google.ads.googleads.v" +
-      "2.resources.AdGroupCriterionLabel\"@\202\323\344\223\002" +
-      ":\0228/v2/{resource_name=customers/*/adGrou" +
-      "pCriterionLabels/*}\022\365\001\n\034MutateAdGroupCri" +
-      "terionLabels\022E.google.ads.googleads.v2.s" +
-      "ervices.MutateAdGroupCriterionLabelsRequ" +
-      "est\032F.google.ads.googleads.v2.services.M" +
-      "utateAdGroupCriterionLabelsResponse\"F\202\323\344" +
-      "\223\002@\";/v2/customers/{customer_id=*}/adGro" +
-      "upCriterionLabels:mutate:\001*\032\033\312A\030googlead" +
-      "s.googleapis.comB\210\002\n$com.google.ads.goog" +
-      "leads.v2.servicesB!AdGroupCriterionLabel" +
-      "ServiceProtoP\001ZHgoogle.golang.org/genpro" +
-      "to/googleapis/ads/googleads/v2/services;" +
-      "services\242\002\003GAA\252\002 Google.Ads.GoogleAds.V2" +
-      ".Services\312\002 Google\\Ads\\GoogleAds\\V2\\Serv" +
-      "ices\352\002$Google::Ads::GoogleAds::V2::Servi" +
-      "cesb\006proto3"
+      "oto\032\027google/api/client.proto\032\037google/api" +
+      "/field_behavior.proto\032\031google/api/resour" +
+      "ce.proto\032\027google/rpc/status.proto\"p\n\037Get" +
+      "AdGroupCriterionLabelRequest\022M\n\rresource" +
+      "_name\030\001 \001(\tB6\340A\002\372A0\n.googleads.googleapi" +
+      "s.com/AdGroupCriterionLabel\"\312\001\n#MutateAd" +
+      "GroupCriterionLabelsRequest\022\030\n\013customer_" +
+      "id\030\001 \001(\tB\003\340A\002\022Y\n\noperations\030\002 \003(\0132@.goog" +
+      "le.ads.googleads.v2.services.AdGroupCrit" +
+      "erionLabelOperationB\003\340A\002\022\027\n\017partial_fail" +
+      "ure\030\003 \001(\010\022\025\n\rvalidate_only\030\004 \001(\010\"\213\001\n\036AdG" +
+      "roupCriterionLabelOperation\022J\n\006create\030\001 " +
+      "\001(\01328.google.ads.googleads.v2.resources." +
+      "AdGroupCriterionLabelH\000\022\020\n\006remove\030\002 \001(\tH" +
+      "\000B\013\n\toperation\"\257\001\n$MutateAdGroupCriterio" +
+      "nLabelsResponse\0221\n\025partial_failure_error" +
+      "\030\003 \001(\0132\022.google.rpc.Status\022T\n\007results\030\002 " +
+      "\003(\0132C.google.ads.googleads.v2.services.M" +
+      "utateAdGroupCriterionLabelResult\":\n!Muta" +
+      "teAdGroupCriterionLabelResult\022\025\n\rresourc" +
+      "e_name\030\001 \001(\t2\270\004\n\034AdGroupCriterionLabelSe" +
+      "rvice\022\351\001\n\030GetAdGroupCriterionLabel\022A.goo" +
+      "gle.ads.googleads.v2.services.GetAdGroup" +
+      "CriterionLabelRequest\0328.google.ads.googl" +
+      "eads.v2.resources.AdGroupCriterionLabel\"" +
+      "P\202\323\344\223\002:\0228/v2/{resource_name=customers/*/" +
+      "adGroupCriterionLabels/*}\332A\rresource_nam" +
+      "e\022\216\002\n\034MutateAdGroupCriterionLabels\022E.goo" +
+      "gle.ads.googleads.v2.services.MutateAdGr" +
+      "oupCriterionLabelsRequest\032F.google.ads.g" +
+      "oogleads.v2.services.MutateAdGroupCriter" +
+      "ionLabelsResponse\"_\202\323\344\223\002@\";/v2/customers" +
+      "/{customer_id=*}/adGroupCriterionLabels:" +
+      "mutate:\001*\332A\026customer_id,operations\032\033\312A\030g" +
+      "oogleads.googleapis.comB\210\002\n$com.google.a" +
+      "ds.googleads.v2.servicesB!AdGroupCriteri" +
+      "onLabelServiceProtoP\001ZHgoogle.golang.org" +
+      "/genproto/googleapis/ads/googleads/v2/se" +
+      "rvices;services\242\002\003GAA\252\002 Google.Ads.Googl" +
+      "eAds.V2.Services\312\002 Google\\Ads\\GoogleAds\\" +
+      "V2\\Services\352\002$Google::Ads::GoogleAds::V2" +
+      "::Servicesb\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.ads.googleads.v2.resources.AdGroupCriterionLabelProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
-          com.google.rpc.StatusProto.getDescriptor(),
           com.google.api.ClientProto.getDescriptor(),
-        }, assigner);
+          com.google.api.FieldBehaviorProto.getDescriptor(),
+          com.google.api.ResourceProto.getDescriptor(),
+          com.google.rpc.StatusProto.getDescriptor(),
+        });
     internal_static_google_ads_googleads_v2_services_GetAdGroupCriterionLabelRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_google_ads_googleads_v2_services_GetAdGroupCriterionLabelRequest_fieldAccessorTable = new
@@ -141,13 +139,18 @@ public final class AdGroupCriterionLabelServiceProto {
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.ClientProto.defaultHost);
+    registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);
     registry.add(com.google.api.AnnotationsProto.http);
+    registry.add(com.google.api.ClientProto.methodSignature);
+    registry.add(com.google.api.ResourceProto.resourceReference);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.ads.googleads.v2.resources.AdGroupCriterionLabelProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
-    com.google.rpc.StatusProto.getDescriptor();
     com.google.api.ClientProto.getDescriptor();
+    com.google.api.FieldBehaviorProto.getDescriptor();
+    com.google.api.ResourceProto.getDescriptor();
+    com.google.rpc.StatusProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

@@ -13,7 +13,7 @@ package com.google.ads.googleads.v4.resources;
  *
  * Protobuf type {@code google.ads.googleads.v4.resources.OfflineUserDataJob}
  */
-public  final class OfflineUserDataJob extends
+public final class OfflineUserDataJob extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.resources.OfflineUserDataJob)
     OfflineUserDataJobOrBuilder {
@@ -222,6 +222,7 @@ private static final long serialVersionUID = 0L;
    * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return The resourceName.
    */
+  @java.lang.Override
   public java.lang.String getResourceName() {
     java.lang.Object ref = resourceName_;
     if (ref instanceof java.lang.String) {
@@ -244,6 +245,7 @@ private static final long serialVersionUID = 0L;
    * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return The bytes for resourceName.
    */
+  @java.lang.Override
   public com.google.protobuf.ByteString
       getResourceNameBytes() {
     java.lang.Object ref = resourceName_;
@@ -268,6 +270,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the id field is set.
    */
+  @java.lang.Override
   public boolean hasId() {
     return id_ != null;
   }
@@ -279,6 +282,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The id.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getId() {
     return id_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : id_;
   }
@@ -289,6 +293,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getIdOrBuilder() {
     return getId();
   }
@@ -303,6 +308,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int64Value external_id = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return Whether the externalId field is set.
    */
+  @java.lang.Override
   public boolean hasExternalId() {
     return externalId_ != null;
   }
@@ -314,6 +320,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int64Value external_id = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return The externalId.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getExternalId() {
     return externalId_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : externalId_;
   }
@@ -324,6 +331,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int64Value external_id = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getExternalIdOrBuilder() {
     return getExternalId();
   }
@@ -338,7 +346,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.OfflineUserDataJobTypeEnum.OfflineUserDataJobType type = 4 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return The enum numeric value on the wire for type.
    */
-  public int getTypeValue() {
+  @java.lang.Override public int getTypeValue() {
     return type_;
   }
   /**
@@ -349,7 +357,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.OfflineUserDataJobTypeEnum.OfflineUserDataJobType type = 4 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return The type.
    */
-  public com.google.ads.googleads.v4.enums.OfflineUserDataJobTypeEnum.OfflineUserDataJobType getType() {
+  @java.lang.Override public com.google.ads.googleads.v4.enums.OfflineUserDataJobTypeEnum.OfflineUserDataJobType getType() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v4.enums.OfflineUserDataJobTypeEnum.OfflineUserDataJobType result = com.google.ads.googleads.v4.enums.OfflineUserDataJobTypeEnum.OfflineUserDataJobType.valueOf(type_);
     return result == null ? com.google.ads.googleads.v4.enums.OfflineUserDataJobTypeEnum.OfflineUserDataJobType.UNRECOGNIZED : result;
@@ -365,7 +373,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.OfflineUserDataJobStatusEnum.OfflineUserDataJobStatus status = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The enum numeric value on the wire for status.
    */
-  public int getStatusValue() {
+  @java.lang.Override public int getStatusValue() {
     return status_;
   }
   /**
@@ -376,7 +384,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.OfflineUserDataJobStatusEnum.OfflineUserDataJobStatus status = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The status.
    */
-  public com.google.ads.googleads.v4.enums.OfflineUserDataJobStatusEnum.OfflineUserDataJobStatus getStatus() {
+  @java.lang.Override public com.google.ads.googleads.v4.enums.OfflineUserDataJobStatusEnum.OfflineUserDataJobStatus getStatus() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v4.enums.OfflineUserDataJobStatusEnum.OfflineUserDataJobStatus result = com.google.ads.googleads.v4.enums.OfflineUserDataJobStatusEnum.OfflineUserDataJobStatus.valueOf(status_);
     return result == null ? com.google.ads.googleads.v4.enums.OfflineUserDataJobStatusEnum.OfflineUserDataJobStatus.UNRECOGNIZED : result;
@@ -392,7 +400,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.OfflineUserDataJobFailureReasonEnum.OfflineUserDataJobFailureReason failure_reason = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The enum numeric value on the wire for failureReason.
    */
-  public int getFailureReasonValue() {
+  @java.lang.Override public int getFailureReasonValue() {
     return failureReason_;
   }
   /**
@@ -403,7 +411,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.OfflineUserDataJobFailureReasonEnum.OfflineUserDataJobFailureReason failure_reason = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The failureReason.
    */
-  public com.google.ads.googleads.v4.enums.OfflineUserDataJobFailureReasonEnum.OfflineUserDataJobFailureReason getFailureReason() {
+  @java.lang.Override public com.google.ads.googleads.v4.enums.OfflineUserDataJobFailureReasonEnum.OfflineUserDataJobFailureReason getFailureReason() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v4.enums.OfflineUserDataJobFailureReasonEnum.OfflineUserDataJobFailureReason result = com.google.ads.googleads.v4.enums.OfflineUserDataJobFailureReasonEnum.OfflineUserDataJobFailureReason.valueOf(failureReason_);
     return result == null ? com.google.ads.googleads.v4.enums.OfflineUserDataJobFailureReasonEnum.OfflineUserDataJobFailureReason.UNRECOGNIZED : result;
@@ -418,6 +426,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.common.CustomerMatchUserListMetadata customer_match_user_list_metadata = 7 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return Whether the customerMatchUserListMetadata field is set.
    */
+  @java.lang.Override
   public boolean hasCustomerMatchUserListMetadata() {
     return metadataCase_ == 7;
   }
@@ -429,6 +438,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.common.CustomerMatchUserListMetadata customer_match_user_list_metadata = 7 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return The customerMatchUserListMetadata.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.CustomerMatchUserListMetadata getCustomerMatchUserListMetadata() {
     if (metadataCase_ == 7) {
        return (com.google.ads.googleads.v4.common.CustomerMatchUserListMetadata) metadata_;
@@ -442,6 +452,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v4.common.CustomerMatchUserListMetadata customer_match_user_list_metadata = 7 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.CustomerMatchUserListMetadataOrBuilder getCustomerMatchUserListMetadataOrBuilder() {
     if (metadataCase_ == 7) {
        return (com.google.ads.googleads.v4.common.CustomerMatchUserListMetadata) metadata_;
@@ -458,6 +469,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.common.StoreSalesMetadata store_sales_metadata = 8 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return Whether the storeSalesMetadata field is set.
    */
+  @java.lang.Override
   public boolean hasStoreSalesMetadata() {
     return metadataCase_ == 8;
   }
@@ -469,6 +481,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.common.StoreSalesMetadata store_sales_metadata = 8 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return The storeSalesMetadata.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.StoreSalesMetadata getStoreSalesMetadata() {
     if (metadataCase_ == 8) {
        return (com.google.ads.googleads.v4.common.StoreSalesMetadata) metadata_;
@@ -482,6 +495,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v4.common.StoreSalesMetadata store_sales_metadata = 8 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.StoreSalesMetadataOrBuilder getStoreSalesMetadataOrBuilder() {
     if (metadataCase_ == 8) {
        return (com.google.ads.googleads.v4.common.StoreSalesMetadata) metadata_;
@@ -1415,7 +1429,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.OfflineUserDataJobTypeEnum.OfflineUserDataJobType type = 4 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return The enum numeric value on the wire for type.
      */
-    public int getTypeValue() {
+    @java.lang.Override public int getTypeValue() {
       return type_;
     }
     /**
@@ -1428,6 +1442,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setTypeValue(int value) {
+      
       type_ = value;
       onChanged();
       return this;
@@ -1440,6 +1455,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.OfflineUserDataJobTypeEnum.OfflineUserDataJobType type = 4 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return The type.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.enums.OfflineUserDataJobTypeEnum.OfflineUserDataJobType getType() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v4.enums.OfflineUserDataJobTypeEnum.OfflineUserDataJobType result = com.google.ads.googleads.v4.enums.OfflineUserDataJobTypeEnum.OfflineUserDataJobType.valueOf(type_);
@@ -1487,7 +1503,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.OfflineUserDataJobStatusEnum.OfflineUserDataJobStatus status = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The enum numeric value on the wire for status.
      */
-    public int getStatusValue() {
+    @java.lang.Override public int getStatusValue() {
       return status_;
     }
     /**
@@ -1500,6 +1516,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setStatusValue(int value) {
+      
       status_ = value;
       onChanged();
       return this;
@@ -1512,6 +1529,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.OfflineUserDataJobStatusEnum.OfflineUserDataJobStatus status = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The status.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.enums.OfflineUserDataJobStatusEnum.OfflineUserDataJobStatus getStatus() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v4.enums.OfflineUserDataJobStatusEnum.OfflineUserDataJobStatus result = com.google.ads.googleads.v4.enums.OfflineUserDataJobStatusEnum.OfflineUserDataJobStatus.valueOf(status_);
@@ -1559,7 +1577,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.OfflineUserDataJobFailureReasonEnum.OfflineUserDataJobFailureReason failure_reason = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The enum numeric value on the wire for failureReason.
      */
-    public int getFailureReasonValue() {
+    @java.lang.Override public int getFailureReasonValue() {
       return failureReason_;
     }
     /**
@@ -1572,6 +1590,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setFailureReasonValue(int value) {
+      
       failureReason_ = value;
       onChanged();
       return this;
@@ -1584,6 +1603,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.OfflineUserDataJobFailureReasonEnum.OfflineUserDataJobFailureReason failure_reason = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The failureReason.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.enums.OfflineUserDataJobFailureReasonEnum.OfflineUserDataJobFailureReason getFailureReason() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v4.enums.OfflineUserDataJobFailureReasonEnum.OfflineUserDataJobFailureReason result = com.google.ads.googleads.v4.enums.OfflineUserDataJobFailureReasonEnum.OfflineUserDataJobFailureReason.valueOf(failureReason_);
@@ -1632,6 +1652,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.common.CustomerMatchUserListMetadata customer_match_user_list_metadata = 7 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return Whether the customerMatchUserListMetadata field is set.
      */
+    @java.lang.Override
     public boolean hasCustomerMatchUserListMetadata() {
       return metadataCase_ == 7;
     }
@@ -1643,6 +1664,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.common.CustomerMatchUserListMetadata customer_match_user_list_metadata = 7 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return The customerMatchUserListMetadata.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.common.CustomerMatchUserListMetadata getCustomerMatchUserListMetadata() {
       if (customerMatchUserListMetadataBuilder_ == null) {
         if (metadataCase_ == 7) {
@@ -1760,6 +1782,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v4.common.CustomerMatchUserListMetadata customer_match_user_list_metadata = 7 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.common.CustomerMatchUserListMetadataOrBuilder getCustomerMatchUserListMetadataOrBuilder() {
       if ((metadataCase_ == 7) && (customerMatchUserListMetadataBuilder_ != null)) {
         return customerMatchUserListMetadataBuilder_.getMessageOrBuilder();
@@ -1806,6 +1829,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.common.StoreSalesMetadata store_sales_metadata = 8 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return Whether the storeSalesMetadata field is set.
      */
+    @java.lang.Override
     public boolean hasStoreSalesMetadata() {
       return metadataCase_ == 8;
     }
@@ -1817,6 +1841,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.common.StoreSalesMetadata store_sales_metadata = 8 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return The storeSalesMetadata.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.common.StoreSalesMetadata getStoreSalesMetadata() {
       if (storeSalesMetadataBuilder_ == null) {
         if (metadataCase_ == 8) {
@@ -1934,6 +1959,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v4.common.StoreSalesMetadata store_sales_metadata = 8 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.common.StoreSalesMetadataOrBuilder getStoreSalesMetadataOrBuilder() {
       if ((metadataCase_ == 8) && (storeSalesMetadataBuilder_ != null)) {
         return storeSalesMetadataBuilder_.getMessageOrBuilder();

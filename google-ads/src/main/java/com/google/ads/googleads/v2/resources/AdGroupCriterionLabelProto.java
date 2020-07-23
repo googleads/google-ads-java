@@ -30,40 +30,52 @@ public final class AdGroupCriterionLabelProto {
     java.lang.String[] descriptorData = {
       "\n@google/ads/googleads/v2/resources/ad_g" +
       "roup_criterion_label.proto\022!google.ads.g" +
-      "oogleads.v2.resources\032\036google/protobuf/w" +
-      "rappers.proto\032\034google/api/annotations.pr" +
-      "oto\"\225\001\n\025AdGroupCriterionLabel\022\025\n\rresourc" +
-      "e_name\030\001 \001(\t\0228\n\022ad_group_criterion\030\002 \001(\013" +
-      "2\034.google.protobuf.StringValue\022+\n\005label\030" +
-      "\003 \001(\0132\034.google.protobuf.StringValueB\207\002\n%" +
-      "com.google.ads.googleads.v2.resourcesB\032A" +
-      "dGroupCriterionLabelProtoP\001ZJgoogle.gola" +
-      "ng.org/genproto/googleapis/ads/googleads" +
-      "/v2/resources;resources\242\002\003GAA\252\002!Google.A" +
-      "ds.GoogleAds.V2.Resources\312\002!Google\\Ads\\G" +
-      "oogleAds\\V2\\Resources\352\002%Google::Ads::Goo" +
-      "gleAds::V2::Resourcesb\006proto3"
+      "oogleads.v2.resources\032\037google/api/field_" +
+      "behavior.proto\032\031google/api/resource.prot" +
+      "o\032\036google/protobuf/wrappers.proto\032\034googl" +
+      "e/api/annotations.proto\"\245\003\n\025AdGroupCrite" +
+      "rionLabel\022M\n\rresource_name\030\001 \001(\tB6\340A\005\372A0" +
+      "\n.googleads.googleapis.com/AdGroupCriter" +
+      "ionLabel\022k\n\022ad_group_criterion\030\002 \001(\0132\034.g" +
+      "oogle.protobuf.StringValueB1\340A\005\372A+\n)goog" +
+      "leads.googleapis.com/AdGroupCriterion\022S\n" +
+      "\005label\030\003 \001(\0132\034.google.protobuf.StringVal" +
+      "ueB&\340A\005\372A \n\036googleads.googleapis.com/Lab" +
+      "el:{\352Ax\n.googleads.googleapis.com/AdGrou" +
+      "pCriterionLabel\022Fcustomers/{customer}/ad" +
+      "GroupCriterionLabels/{ad_group_criterion" +
+      "_label}B\207\002\n%com.google.ads.googleads.v2." +
+      "resourcesB\032AdGroupCriterionLabelProtoP\001Z" +
+      "Jgoogle.golang.org/genproto/googleapis/a" +
+      "ds/googleads/v2/resources;resources\242\002\003GA" +
+      "A\252\002!Google.Ads.GoogleAds.V2.Resources\312\002!" +
+      "Google\\Ads\\GoogleAds\\V2\\Resources\352\002%Goog" +
+      "le::Ads::GoogleAds::V2::Resourcesb\006proto" +
+      "3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          com.google.api.FieldBehaviorProto.getDescriptor(),
+          com.google.api.ResourceProto.getDescriptor(),
           com.google.protobuf.WrappersProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
-        }, assigner);
+        });
     internal_static_google_ads_googleads_v2_resources_AdGroupCriterionLabel_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_google_ads_googleads_v2_resources_AdGroupCriterionLabel_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v2_resources_AdGroupCriterionLabel_descriptor,
         new java.lang.String[] { "ResourceName", "AdGroupCriterion", "Label", });
+    com.google.protobuf.ExtensionRegistry registry =
+        com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);
+    registry.add(com.google.api.ResourceProto.resource);
+    registry.add(com.google.api.ResourceProto.resourceReference);
+    com.google.protobuf.Descriptors.FileDescriptor
+        .internalUpdateFileDescriptor(descriptor, registry);
+    com.google.api.FieldBehaviorProto.getDescriptor();
+    com.google.api.ResourceProto.getDescriptor();
     com.google.protobuf.WrappersProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
   }

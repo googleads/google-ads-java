@@ -12,7 +12,7 @@ package com.google.ads.googleads.v4.common;
  *
  * Protobuf type {@code google.ads.googleads.v4.common.VideoTrueViewInStreamAdInfo}
  */
-public  final class VideoTrueViewInStreamAdInfo extends
+public final class VideoTrueViewInStreamAdInfo extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.common.VideoTrueViewInStreamAdInfo)
     VideoTrueViewInStreamAdInfoOrBuilder {
@@ -137,6 +137,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue action_button_label = 1;</code>
    * @return Whether the actionButtonLabel field is set.
    */
+  @java.lang.Override
   public boolean hasActionButtonLabel() {
     return actionButtonLabel_ != null;
   }
@@ -150,6 +151,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue action_button_label = 1;</code>
    * @return The actionButtonLabel.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getActionButtonLabel() {
     return actionButtonLabel_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : actionButtonLabel_;
   }
@@ -162,6 +164,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue action_button_label = 1;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getActionButtonLabelOrBuilder() {
     return getActionButtonLabel();
   }
@@ -177,6 +180,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue action_headline = 2;</code>
    * @return Whether the actionHeadline field is set.
    */
+  @java.lang.Override
   public boolean hasActionHeadline() {
     return actionHeadline_ != null;
   }
@@ -189,6 +193,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue action_headline = 2;</code>
    * @return The actionHeadline.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getActionHeadline() {
     return actionHeadline_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : actionHeadline_;
   }
@@ -200,6 +205,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue action_headline = 2;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getActionHeadlineOrBuilder() {
     return getActionHeadline();
   }
@@ -214,6 +220,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue companion_banner = 3;</code>
    * @return Whether the companionBanner field is set.
    */
+  @java.lang.Override
   public boolean hasCompanionBanner() {
     return companionBanner_ != null;
   }
@@ -225,6 +232,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue companion_banner = 3;</code>
    * @return The companionBanner.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getCompanionBanner() {
     return companionBanner_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : companionBanner_;
   }
@@ -235,6 +243,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue companion_banner = 3;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getCompanionBannerOrBuilder() {
     return getCompanionBanner();
   }

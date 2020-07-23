@@ -11,7 +11,7 @@ package com.google.ads.googleads.v3.common;
  *
  * Protobuf type {@code google.ads.googleads.v3.common.Commission}
  */
-public  final class Commission extends
+public final class Commission extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v3.common.Commission)
     CommissionOrBuilder {
@@ -21,6 +21,13 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private Commission() {
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new Commission();
   }
 
   @java.lang.Override
@@ -36,7 +43,6 @@ private static final long serialVersionUID = 0L;
     if (extensionRegistry == null) {
       throw new java.lang.NullPointerException();
     }
-    int mutable_bitField0_ = 0;
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
         com.google.protobuf.UnknownFieldSet.newBuilder();
     try {
@@ -103,7 +109,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Int64Value commission_rate_micros = 1;</code>
+   * @return Whether the commissionRateMicros field is set.
    */
+  @java.lang.Override
   public boolean hasCommissionRateMicros() {
     return commissionRateMicros_ != null;
   }
@@ -116,7 +124,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Int64Value commission_rate_micros = 1;</code>
+   * @return The commissionRateMicros.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getCommissionRateMicros() {
     return commissionRateMicros_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : commissionRateMicros_;
   }
@@ -130,6 +140,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int64Value commission_rate_micros = 1;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getCommissionRateMicrosOrBuilder() {
     return getCommissionRateMicros();
   }
@@ -466,6 +477,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value commission_rate_micros = 1;</code>
+     * @return Whether the commissionRateMicros field is set.
      */
     public boolean hasCommissionRateMicros() {
       return commissionRateMicrosBuilder_ != null || commissionRateMicros_ != null;
@@ -479,6 +491,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value commission_rate_micros = 1;</code>
+     * @return The commissionRateMicros.
      */
     public com.google.protobuf.Int64Value getCommissionRateMicros() {
       if (commissionRateMicrosBuilder_ == null) {

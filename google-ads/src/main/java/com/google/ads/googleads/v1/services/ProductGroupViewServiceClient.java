@@ -1,5 +1,5 @@
 /*
- * Copyright 2019 Google LLC
+ * Copyright 2020 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -21,7 +21,6 @@ import com.google.ads.googleads.v1.services.stub.ProductGroupViewServiceStubSett
 import com.google.api.core.BetaApi;
 import com.google.api.gax.core.BackgroundResource;
 import com.google.api.gax.rpc.UnaryCallable;
-import com.google.api.pathtemplate.PathTemplate;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 import javax.annotation.Generated;
@@ -36,8 +35,8 @@ import javax.annotation.Generated;
  * <pre>
  * <code>
  * try (ProductGroupViewServiceClient productGroupViewServiceClient = ProductGroupViewServiceClient.create()) {
- *   String formattedResourceName = ProductGroupViewServiceClient.formatProductGroupViewName("[CUSTOMER]", "[PRODUCT_GROUP_VIEW]");
- *   ProductGroupView response = productGroupViewServiceClient.getProductGroupView(formattedResourceName);
+ *   ProductGroupViewName resourceName = ProductGroupViewName.of("[CUSTOMER]", "[PRODUCT_GROUP_VIEW]");
+ *   ProductGroupView response = productGroupViewServiceClient.getProductGroupView(resourceName);
  * }
  * </code>
  * </pre>
@@ -99,46 +98,6 @@ public class ProductGroupViewServiceClient implements BackgroundResource {
   private final ProductGroupViewServiceSettings settings;
   private final ProductGroupViewServiceStub stub;
 
-  private static final PathTemplate PRODUCT_GROUP_VIEW_PATH_TEMPLATE =
-      PathTemplate.createWithoutUrlEncoding(
-          "customers/{customer}/productGroupViews/{product_group_view}");
-
-  /**
-   * Formats a string containing the fully-qualified path to represent a product_group_view
-   * resource.
-   *
-   * @deprecated Use the {@link ProductGroupViewName} class instead.
-   */
-  @Deprecated
-  public static final String formatProductGroupViewName(String customer, String productGroupView) {
-    return PRODUCT_GROUP_VIEW_PATH_TEMPLATE.instantiate(
-        "customer", customer,
-        "product_group_view", productGroupView);
-  }
-
-  /**
-   * Parses the customer from the given fully-qualified path which represents a product_group_view
-   * resource.
-   *
-   * @deprecated Use the {@link ProductGroupViewName} class instead.
-   */
-  @Deprecated
-  public static final String parseCustomerFromProductGroupViewName(String productGroupViewName) {
-    return PRODUCT_GROUP_VIEW_PATH_TEMPLATE.parse(productGroupViewName).get("customer");
-  }
-
-  /**
-   * Parses the product_group_view from the given fully-qualified path which represents a
-   * product_group_view resource.
-   *
-   * @deprecated Use the {@link ProductGroupViewName} class instead.
-   */
-  @Deprecated
-  public static final String parseProductGroupViewFromProductGroupViewName(
-      String productGroupViewName) {
-    return PRODUCT_GROUP_VIEW_PATH_TEMPLATE.parse(productGroupViewName).get("product_group_view");
-  }
-
   /** Constructs an instance of ProductGroupViewServiceClient with default settings. */
   public static final ProductGroupViewServiceClient create() throws IOException {
     return create(ProductGroupViewServiceSettings.newBuilder().build());
@@ -196,16 +155,39 @@ public class ProductGroupViewServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (ProductGroupViewServiceClient productGroupViewServiceClient = ProductGroupViewServiceClient.create()) {
-   *   String formattedResourceName = ProductGroupViewServiceClient.formatProductGroupViewName("[CUSTOMER]", "[PRODUCT_GROUP_VIEW]");
-   *   ProductGroupView response = productGroupViewServiceClient.getProductGroupView(formattedResourceName);
+   *   ProductGroupViewName resourceName = ProductGroupViewName.of("[CUSTOMER]", "[PRODUCT_GROUP_VIEW]");
+   *   ProductGroupView response = productGroupViewServiceClient.getProductGroupView(resourceName);
    * }
    * </code></pre>
    *
-   * @param resourceName The resource name of the product group view to fetch.
+   * @param resourceName Required. The resource name of the product group view to fetch.
+   * @throws com.google.api.gax.rpc.ApiException if the remote call fails
+   */
+  public final ProductGroupView getProductGroupView(ProductGroupViewName resourceName) {
+    GetProductGroupViewRequest request =
+        GetProductGroupViewRequest.newBuilder()
+            .setResourceName(resourceName == null ? null : resourceName.toString())
+            .build();
+    return getProductGroupView(request);
+  }
+
+  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  /**
+   * Returns the requested product group view in full detail.
+   *
+   * <p>Sample code:
+   *
+   * <pre><code>
+   * try (ProductGroupViewServiceClient productGroupViewServiceClient = ProductGroupViewServiceClient.create()) {
+   *   ProductGroupViewName resourceName = ProductGroupViewName.of("[CUSTOMER]", "[PRODUCT_GROUP_VIEW]");
+   *   ProductGroupView response = productGroupViewServiceClient.getProductGroupView(resourceName.toString());
+   * }
+   * </code></pre>
+   *
+   * @param resourceName Required. The resource name of the product group view to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final ProductGroupView getProductGroupView(String resourceName) {
-    PRODUCT_GROUP_VIEW_PATH_TEMPLATE.validate(resourceName, "getProductGroupView");
     GetProductGroupViewRequest request =
         GetProductGroupViewRequest.newBuilder().setResourceName(resourceName).build();
     return getProductGroupView(request);
@@ -219,9 +201,9 @@ public class ProductGroupViewServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (ProductGroupViewServiceClient productGroupViewServiceClient = ProductGroupViewServiceClient.create()) {
-   *   String formattedResourceName = ProductGroupViewServiceClient.formatProductGroupViewName("[CUSTOMER]", "[PRODUCT_GROUP_VIEW]");
+   *   ProductGroupViewName resourceName = ProductGroupViewName.of("[CUSTOMER]", "[PRODUCT_GROUP_VIEW]");
    *   GetProductGroupViewRequest request = GetProductGroupViewRequest.newBuilder()
-   *     .setResourceName(formattedResourceName)
+   *     .setResourceName(resourceName.toString())
    *     .build();
    *   ProductGroupView response = productGroupViewServiceClient.getProductGroupView(request);
    * }
@@ -242,9 +224,9 @@ public class ProductGroupViewServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (ProductGroupViewServiceClient productGroupViewServiceClient = ProductGroupViewServiceClient.create()) {
-   *   String formattedResourceName = ProductGroupViewServiceClient.formatProductGroupViewName("[CUSTOMER]", "[PRODUCT_GROUP_VIEW]");
+   *   ProductGroupViewName resourceName = ProductGroupViewName.of("[CUSTOMER]", "[PRODUCT_GROUP_VIEW]");
    *   GetProductGroupViewRequest request = GetProductGroupViewRequest.newBuilder()
-   *     .setResourceName(formattedResourceName)
+   *     .setResourceName(resourceName.toString())
    *     .build();
    *   ApiFuture&lt;ProductGroupView&gt; future = productGroupViewServiceClient.getProductGroupViewCallable().futureCall(request);
    *   // Do something

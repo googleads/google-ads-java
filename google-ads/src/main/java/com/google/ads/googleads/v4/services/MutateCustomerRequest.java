@@ -10,7 +10,7 @@ package com.google.ads.googleads.v4.services;
  *
  * Protobuf type {@code google.ads.googleads.v4.services.MutateCustomerRequest}
  */
-public  final class MutateCustomerRequest extends
+public final class MutateCustomerRequest extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.services.MutateCustomerRequest)
     MutateCustomerRequestOrBuilder {
@@ -119,6 +119,7 @@ private static final long serialVersionUID = 0L;
    * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
    * @return The customerId.
    */
+  @java.lang.Override
   public java.lang.String getCustomerId() {
     java.lang.Object ref = customerId_;
     if (ref instanceof java.lang.String) {
@@ -139,6 +140,7 @@ private static final long serialVersionUID = 0L;
    * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
    * @return The bytes for customerId.
    */
+  @java.lang.Override
   public com.google.protobuf.ByteString
       getCustomerIdBytes() {
     java.lang.Object ref = customerId_;
@@ -163,6 +165,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.services.CustomerOperation operation = 4 [(.google.api.field_behavior) = REQUIRED];</code>
    * @return Whether the operation field is set.
    */
+  @java.lang.Override
   public boolean hasOperation() {
     return operation_ != null;
   }
@@ -174,6 +177,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.services.CustomerOperation operation = 4 [(.google.api.field_behavior) = REQUIRED];</code>
    * @return The operation.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.services.CustomerOperation getOperation() {
     return operation_ == null ? com.google.ads.googleads.v4.services.CustomerOperation.getDefaultInstance() : operation_;
   }
@@ -184,6 +188,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v4.services.CustomerOperation operation = 4 [(.google.api.field_behavior) = REQUIRED];</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.services.CustomerOperationOrBuilder getOperationOrBuilder() {
     return getOperation();
   }
@@ -199,6 +204,7 @@ private static final long serialVersionUID = 0L;
    * <code>bool validate_only = 5;</code>
    * @return The validateOnly.
    */
+  @java.lang.Override
   public boolean getValidateOnly() {
     return validateOnly_;
   }
@@ -818,6 +824,7 @@ private static final long serialVersionUID = 0L;
      * <code>bool validate_only = 5;</code>
      * @return The validateOnly.
      */
+    @java.lang.Override
     public boolean getValidateOnly() {
       return validateOnly_;
     }

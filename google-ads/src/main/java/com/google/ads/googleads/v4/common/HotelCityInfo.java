@@ -10,7 +10,7 @@ package com.google.ads.googleads.v4.common;
  *
  * Protobuf type {@code google.ads.googleads.v4.common.HotelCityInfo}
  */
-public  final class HotelCityInfo extends
+public final class HotelCityInfo extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.common.HotelCityInfo)
     HotelCityInfoOrBuilder {
@@ -107,6 +107,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue city_criterion = 1;</code>
    * @return Whether the cityCriterion field is set.
    */
+  @java.lang.Override
   public boolean hasCityCriterion() {
     return cityCriterion_ != null;
   }
@@ -118,6 +119,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue city_criterion = 1;</code>
    * @return The cityCriterion.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getCityCriterion() {
     return cityCriterion_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : cityCriterion_;
   }
@@ -128,6 +130,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue city_criterion = 1;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getCityCriterionOrBuilder() {
     return getCityCriterion();
   }

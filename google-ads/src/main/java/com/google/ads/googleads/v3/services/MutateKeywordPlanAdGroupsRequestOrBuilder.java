@@ -13,6 +13,7 @@ public interface MutateKeywordPlanAdGroupsRequestOrBuilder extends
    * </pre>
    *
    * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+   * @return The customerId.
    */
   java.lang.String getCustomerId();
   /**
@@ -21,6 +22,7 @@ public interface MutateKeywordPlanAdGroupsRequestOrBuilder extends
    * </pre>
    *
    * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+   * @return The bytes for customerId.
    */
   com.google.protobuf.ByteString
       getCustomerIdBytes();
@@ -78,6 +80,7 @@ public interface MutateKeywordPlanAdGroupsRequestOrBuilder extends
    * </pre>
    *
    * <code>bool partial_failure = 3;</code>
+   * @return The partialFailure.
    */
   boolean getPartialFailure();
 
@@ -88,6 +91,7 @@ public interface MutateKeywordPlanAdGroupsRequestOrBuilder extends
    * </pre>
    *
    * <code>bool validate_only = 4;</code>
+   * @return The validateOnly.
    */
   boolean getValidateOnly();
 }

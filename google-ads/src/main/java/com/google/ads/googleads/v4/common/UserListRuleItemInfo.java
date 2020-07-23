@@ -10,7 +10,7 @@ package com.google.ads.googleads.v4.common;
  *
  * Protobuf type {@code google.ads.googleads.v4.common.UserListRuleItemInfo}
  */
-public  final class UserListRuleItemInfo extends
+public final class UserListRuleItemInfo extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.common.UserListRuleItemInfo)
     UserListRuleItemInfoOrBuilder {
@@ -199,6 +199,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue name = 1;</code>
    * @return Whether the name field is set.
    */
+  @java.lang.Override
   public boolean hasName() {
     return name_ != null;
   }
@@ -217,6 +218,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue name = 1;</code>
    * @return The name.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getName() {
     return name_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : name_;
   }
@@ -234,6 +236,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue name = 1;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getNameOrBuilder() {
     return getName();
   }
@@ -247,6 +250,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.common.UserListNumberRuleItemInfo number_rule_item = 2;</code>
    * @return Whether the numberRuleItem field is set.
    */
+  @java.lang.Override
   public boolean hasNumberRuleItem() {
     return ruleItemCase_ == 2;
   }
@@ -258,6 +262,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.common.UserListNumberRuleItemInfo number_rule_item = 2;</code>
    * @return The numberRuleItem.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.UserListNumberRuleItemInfo getNumberRuleItem() {
     if (ruleItemCase_ == 2) {
        return (com.google.ads.googleads.v4.common.UserListNumberRuleItemInfo) ruleItem_;
@@ -271,6 +276,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v4.common.UserListNumberRuleItemInfo number_rule_item = 2;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.UserListNumberRuleItemInfoOrBuilder getNumberRuleItemOrBuilder() {
     if (ruleItemCase_ == 2) {
        return (com.google.ads.googleads.v4.common.UserListNumberRuleItemInfo) ruleItem_;
@@ -287,6 +293,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.common.UserListStringRuleItemInfo string_rule_item = 3;</code>
    * @return Whether the stringRuleItem field is set.
    */
+  @java.lang.Override
   public boolean hasStringRuleItem() {
     return ruleItemCase_ == 3;
   }
@@ -298,6 +305,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.common.UserListStringRuleItemInfo string_rule_item = 3;</code>
    * @return The stringRuleItem.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.UserListStringRuleItemInfo getStringRuleItem() {
     if (ruleItemCase_ == 3) {
        return (com.google.ads.googleads.v4.common.UserListStringRuleItemInfo) ruleItem_;
@@ -311,6 +319,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v4.common.UserListStringRuleItemInfo string_rule_item = 3;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.UserListStringRuleItemInfoOrBuilder getStringRuleItemOrBuilder() {
     if (ruleItemCase_ == 3) {
        return (com.google.ads.googleads.v4.common.UserListStringRuleItemInfo) ruleItem_;
@@ -327,6 +336,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.common.UserListDateRuleItemInfo date_rule_item = 4;</code>
    * @return Whether the dateRuleItem field is set.
    */
+  @java.lang.Override
   public boolean hasDateRuleItem() {
     return ruleItemCase_ == 4;
   }
@@ -338,6 +348,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.common.UserListDateRuleItemInfo date_rule_item = 4;</code>
    * @return The dateRuleItem.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.UserListDateRuleItemInfo getDateRuleItem() {
     if (ruleItemCase_ == 4) {
        return (com.google.ads.googleads.v4.common.UserListDateRuleItemInfo) ruleItem_;
@@ -351,6 +362,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v4.common.UserListDateRuleItemInfo date_rule_item = 4;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.UserListDateRuleItemInfoOrBuilder getDateRuleItemOrBuilder() {
     if (ruleItemCase_ == 4) {
        return (com.google.ads.googleads.v4.common.UserListDateRuleItemInfo) ruleItem_;
@@ -1015,6 +1027,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.common.UserListNumberRuleItemInfo number_rule_item = 2;</code>
      * @return Whether the numberRuleItem field is set.
      */
+    @java.lang.Override
     public boolean hasNumberRuleItem() {
       return ruleItemCase_ == 2;
     }
@@ -1026,6 +1039,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.common.UserListNumberRuleItemInfo number_rule_item = 2;</code>
      * @return The numberRuleItem.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.common.UserListNumberRuleItemInfo getNumberRuleItem() {
       if (numberRuleItemBuilder_ == null) {
         if (ruleItemCase_ == 2) {
@@ -1143,6 +1157,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v4.common.UserListNumberRuleItemInfo number_rule_item = 2;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.common.UserListNumberRuleItemInfoOrBuilder getNumberRuleItemOrBuilder() {
       if ((ruleItemCase_ == 2) && (numberRuleItemBuilder_ != null)) {
         return numberRuleItemBuilder_.getMessageOrBuilder();
@@ -1189,6 +1204,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.common.UserListStringRuleItemInfo string_rule_item = 3;</code>
      * @return Whether the stringRuleItem field is set.
      */
+    @java.lang.Override
     public boolean hasStringRuleItem() {
       return ruleItemCase_ == 3;
     }
@@ -1200,6 +1216,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.common.UserListStringRuleItemInfo string_rule_item = 3;</code>
      * @return The stringRuleItem.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.common.UserListStringRuleItemInfo getStringRuleItem() {
       if (stringRuleItemBuilder_ == null) {
         if (ruleItemCase_ == 3) {
@@ -1317,6 +1334,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v4.common.UserListStringRuleItemInfo string_rule_item = 3;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.common.UserListStringRuleItemInfoOrBuilder getStringRuleItemOrBuilder() {
       if ((ruleItemCase_ == 3) && (stringRuleItemBuilder_ != null)) {
         return stringRuleItemBuilder_.getMessageOrBuilder();
@@ -1363,6 +1381,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.common.UserListDateRuleItemInfo date_rule_item = 4;</code>
      * @return Whether the dateRuleItem field is set.
      */
+    @java.lang.Override
     public boolean hasDateRuleItem() {
       return ruleItemCase_ == 4;
     }
@@ -1374,6 +1393,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.common.UserListDateRuleItemInfo date_rule_item = 4;</code>
      * @return The dateRuleItem.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.common.UserListDateRuleItemInfo getDateRuleItem() {
       if (dateRuleItemBuilder_ == null) {
         if (ruleItemCase_ == 4) {
@@ -1491,6 +1511,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v4.common.UserListDateRuleItemInfo date_rule_item = 4;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.common.UserListDateRuleItemInfoOrBuilder getDateRuleItemOrBuilder() {
       if ((ruleItemCase_ == 4) && (dateRuleItemBuilder_ != null)) {
         return dateRuleItemBuilder_.getMessageOrBuilder();

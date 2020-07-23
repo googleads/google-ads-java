@@ -10,7 +10,7 @@ package com.google.ads.googleads.v3.services;
  *
  * Protobuf type {@code google.ads.googleads.v3.services.CampaignDuration}
  */
-public  final class CampaignDuration extends
+public final class CampaignDuration extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v3.services.CampaignDuration)
     CampaignDurationOrBuilder {
@@ -20,6 +20,13 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private CampaignDuration() {
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new CampaignDuration();
   }
 
   @java.lang.Override
@@ -35,7 +42,6 @@ private static final long serialVersionUID = 0L;
     if (extensionRegistry == null) {
       throw new java.lang.NullPointerException();
     }
-    int mutable_bitField0_ = 0;
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
         com.google.protobuf.UnknownFieldSet.newBuilder();
     try {
@@ -99,7 +105,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Int32Value duration_in_days = 1;</code>
+   * @return Whether the durationInDays field is set.
    */
+  @java.lang.Override
   public boolean hasDurationInDays() {
     return durationInDays_ != null;
   }
@@ -109,7 +117,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Int32Value duration_in_days = 1;</code>
+   * @return The durationInDays.
    */
+  @java.lang.Override
   public com.google.protobuf.Int32Value getDurationInDays() {
     return durationInDays_ == null ? com.google.protobuf.Int32Value.getDefaultInstance() : durationInDays_;
   }
@@ -120,6 +130,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int32Value duration_in_days = 1;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int32ValueOrBuilder getDurationInDaysOrBuilder() {
     return getDurationInDays();
   }
@@ -452,6 +463,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int32Value duration_in_days = 1;</code>
+     * @return Whether the durationInDays field is set.
      */
     public boolean hasDurationInDays() {
       return durationInDaysBuilder_ != null || durationInDays_ != null;
@@ -462,6 +474,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int32Value duration_in_days = 1;</code>
+     * @return The durationInDays.
      */
     public com.google.protobuf.Int32Value getDurationInDays() {
       if (durationInDaysBuilder_ == null) {

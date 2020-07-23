@@ -10,7 +10,7 @@ package com.google.ads.googleads.v3.errors;
  *
  * Protobuf type {@code google.ads.googleads.v3.errors.ErrorCode}
  */
-public  final class ErrorCode extends
+public final class ErrorCode extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v3.errors.ErrorCode)
     ErrorCodeOrBuilder {
@@ -20,6 +20,13 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private ErrorCode() {
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new ErrorCode();
   }
 
   @java.lang.Override
@@ -35,10 +42,6 @@ private static final long serialVersionUID = 0L;
     if (extensionRegistry == null) {
       throw new java.lang.NullPointerException();
     }
-    int mutable_bitField0_ = 0;
-    int mutable_bitField1_ = 0;
-    int mutable_bitField2_ = 0;
-    int mutable_bitField3_ = 0;
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
         com.google.protobuf.UnknownFieldSet.newBuilder();
     try {
@@ -750,7 +753,8 @@ private static final long serialVersionUID = 0L;
   private int errorCodeCase_ = 0;
   private java.lang.Object errorCode_;
   public enum ErrorCodeCase
-      implements com.google.protobuf.Internal.EnumLite {
+      implements com.google.protobuf.Internal.EnumLite,
+          com.google.protobuf.AbstractMessage.InternalOneOfEnum {
     REQUEST_ERROR(1),
     BIDDING_STRATEGY_ERROR(2),
     URL_FIELD_ERROR(3),
@@ -868,6 +872,8 @@ private static final long serialVersionUID = 0L;
       this.value = value;
     }
     /**
+     * @param value The number of the enum to look for.
+     * @return The enum associated with the given number.
      * @deprecated Use {@link #forNumber(int)} instead.
      */
     @java.lang.Deprecated
@@ -1010,6 +1016,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.RequestErrorEnum.RequestError request_error = 1;</code>
+   * @return The enum numeric value on the wire for requestError.
    */
   public int getRequestErrorValue() {
     if (errorCodeCase_ == 1) {
@@ -1023,6 +1030,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.RequestErrorEnum.RequestError request_error = 1;</code>
+   * @return The requestError.
    */
   public com.google.ads.googleads.v3.errors.RequestErrorEnum.RequestError getRequestError() {
     if (errorCodeCase_ == 1) {
@@ -1041,6 +1049,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.BiddingStrategyErrorEnum.BiddingStrategyError bidding_strategy_error = 2;</code>
+   * @return The enum numeric value on the wire for biddingStrategyError.
    */
   public int getBiddingStrategyErrorValue() {
     if (errorCodeCase_ == 2) {
@@ -1054,6 +1063,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.BiddingStrategyErrorEnum.BiddingStrategyError bidding_strategy_error = 2;</code>
+   * @return The biddingStrategyError.
    */
   public com.google.ads.googleads.v3.errors.BiddingStrategyErrorEnum.BiddingStrategyError getBiddingStrategyError() {
     if (errorCodeCase_ == 2) {
@@ -1072,6 +1082,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.UrlFieldErrorEnum.UrlFieldError url_field_error = 3;</code>
+   * @return The enum numeric value on the wire for urlFieldError.
    */
   public int getUrlFieldErrorValue() {
     if (errorCodeCase_ == 3) {
@@ -1085,6 +1096,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.UrlFieldErrorEnum.UrlFieldError url_field_error = 3;</code>
+   * @return The urlFieldError.
    */
   public com.google.ads.googleads.v3.errors.UrlFieldErrorEnum.UrlFieldError getUrlFieldError() {
     if (errorCodeCase_ == 3) {
@@ -1103,6 +1115,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.ListOperationErrorEnum.ListOperationError list_operation_error = 4;</code>
+   * @return The enum numeric value on the wire for listOperationError.
    */
   public int getListOperationErrorValue() {
     if (errorCodeCase_ == 4) {
@@ -1116,6 +1129,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.ListOperationErrorEnum.ListOperationError list_operation_error = 4;</code>
+   * @return The listOperationError.
    */
   public com.google.ads.googleads.v3.errors.ListOperationErrorEnum.ListOperationError getListOperationError() {
     if (errorCodeCase_ == 4) {
@@ -1134,6 +1148,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.QueryErrorEnum.QueryError query_error = 5;</code>
+   * @return The enum numeric value on the wire for queryError.
    */
   public int getQueryErrorValue() {
     if (errorCodeCase_ == 5) {
@@ -1147,6 +1162,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.QueryErrorEnum.QueryError query_error = 5;</code>
+   * @return The queryError.
    */
   public com.google.ads.googleads.v3.errors.QueryErrorEnum.QueryError getQueryError() {
     if (errorCodeCase_ == 5) {
@@ -1165,6 +1181,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.MutateErrorEnum.MutateError mutate_error = 7;</code>
+   * @return The enum numeric value on the wire for mutateError.
    */
   public int getMutateErrorValue() {
     if (errorCodeCase_ == 7) {
@@ -1178,6 +1195,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.MutateErrorEnum.MutateError mutate_error = 7;</code>
+   * @return The mutateError.
    */
   public com.google.ads.googleads.v3.errors.MutateErrorEnum.MutateError getMutateError() {
     if (errorCodeCase_ == 7) {
@@ -1196,6 +1214,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.FieldMaskErrorEnum.FieldMaskError field_mask_error = 8;</code>
+   * @return The enum numeric value on the wire for fieldMaskError.
    */
   public int getFieldMaskErrorValue() {
     if (errorCodeCase_ == 8) {
@@ -1209,6 +1228,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.FieldMaskErrorEnum.FieldMaskError field_mask_error = 8;</code>
+   * @return The fieldMaskError.
    */
   public com.google.ads.googleads.v3.errors.FieldMaskErrorEnum.FieldMaskError getFieldMaskError() {
     if (errorCodeCase_ == 8) {
@@ -1227,6 +1247,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.AuthorizationErrorEnum.AuthorizationError authorization_error = 9;</code>
+   * @return The enum numeric value on the wire for authorizationError.
    */
   public int getAuthorizationErrorValue() {
     if (errorCodeCase_ == 9) {
@@ -1240,6 +1261,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.AuthorizationErrorEnum.AuthorizationError authorization_error = 9;</code>
+   * @return The authorizationError.
    */
   public com.google.ads.googleads.v3.errors.AuthorizationErrorEnum.AuthorizationError getAuthorizationError() {
     if (errorCodeCase_ == 9) {
@@ -1258,6 +1280,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.InternalErrorEnum.InternalError internal_error = 10;</code>
+   * @return The enum numeric value on the wire for internalError.
    */
   public int getInternalErrorValue() {
     if (errorCodeCase_ == 10) {
@@ -1271,6 +1294,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.InternalErrorEnum.InternalError internal_error = 10;</code>
+   * @return The internalError.
    */
   public com.google.ads.googleads.v3.errors.InternalErrorEnum.InternalError getInternalError() {
     if (errorCodeCase_ == 10) {
@@ -1289,6 +1313,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.QuotaErrorEnum.QuotaError quota_error = 11;</code>
+   * @return The enum numeric value on the wire for quotaError.
    */
   public int getQuotaErrorValue() {
     if (errorCodeCase_ == 11) {
@@ -1302,6 +1327,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.QuotaErrorEnum.QuotaError quota_error = 11;</code>
+   * @return The quotaError.
    */
   public com.google.ads.googleads.v3.errors.QuotaErrorEnum.QuotaError getQuotaError() {
     if (errorCodeCase_ == 11) {
@@ -1320,6 +1346,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.AdErrorEnum.AdError ad_error = 12;</code>
+   * @return The enum numeric value on the wire for adError.
    */
   public int getAdErrorValue() {
     if (errorCodeCase_ == 12) {
@@ -1333,6 +1360,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.AdErrorEnum.AdError ad_error = 12;</code>
+   * @return The adError.
    */
   public com.google.ads.googleads.v3.errors.AdErrorEnum.AdError getAdError() {
     if (errorCodeCase_ == 12) {
@@ -1351,6 +1379,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.AdGroupErrorEnum.AdGroupError ad_group_error = 13;</code>
+   * @return The enum numeric value on the wire for adGroupError.
    */
   public int getAdGroupErrorValue() {
     if (errorCodeCase_ == 13) {
@@ -1364,6 +1393,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.AdGroupErrorEnum.AdGroupError ad_group_error = 13;</code>
+   * @return The adGroupError.
    */
   public com.google.ads.googleads.v3.errors.AdGroupErrorEnum.AdGroupError getAdGroupError() {
     if (errorCodeCase_ == 13) {
@@ -1382,6 +1412,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.CampaignBudgetErrorEnum.CampaignBudgetError campaign_budget_error = 14;</code>
+   * @return The enum numeric value on the wire for campaignBudgetError.
    */
   public int getCampaignBudgetErrorValue() {
     if (errorCodeCase_ == 14) {
@@ -1395,6 +1426,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.CampaignBudgetErrorEnum.CampaignBudgetError campaign_budget_error = 14;</code>
+   * @return The campaignBudgetError.
    */
   public com.google.ads.googleads.v3.errors.CampaignBudgetErrorEnum.CampaignBudgetError getCampaignBudgetError() {
     if (errorCodeCase_ == 14) {
@@ -1413,6 +1445,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.CampaignErrorEnum.CampaignError campaign_error = 15;</code>
+   * @return The enum numeric value on the wire for campaignError.
    */
   public int getCampaignErrorValue() {
     if (errorCodeCase_ == 15) {
@@ -1426,6 +1459,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.CampaignErrorEnum.CampaignError campaign_error = 15;</code>
+   * @return The campaignError.
    */
   public com.google.ads.googleads.v3.errors.CampaignErrorEnum.CampaignError getCampaignError() {
     if (errorCodeCase_ == 15) {
@@ -1444,6 +1478,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.AuthenticationErrorEnum.AuthenticationError authentication_error = 17;</code>
+   * @return The enum numeric value on the wire for authenticationError.
    */
   public int getAuthenticationErrorValue() {
     if (errorCodeCase_ == 17) {
@@ -1457,6 +1492,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.AuthenticationErrorEnum.AuthenticationError authentication_error = 17;</code>
+   * @return The authenticationError.
    */
   public com.google.ads.googleads.v3.errors.AuthenticationErrorEnum.AuthenticationError getAuthenticationError() {
     if (errorCodeCase_ == 17) {
@@ -1475,6 +1511,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.AdGroupCriterionErrorEnum.AdGroupCriterionError ad_group_criterion_error = 18;</code>
+   * @return The enum numeric value on the wire for adGroupCriterionError.
    */
   public int getAdGroupCriterionErrorValue() {
     if (errorCodeCase_ == 18) {
@@ -1488,6 +1525,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.AdGroupCriterionErrorEnum.AdGroupCriterionError ad_group_criterion_error = 18;</code>
+   * @return The adGroupCriterionError.
    */
   public com.google.ads.googleads.v3.errors.AdGroupCriterionErrorEnum.AdGroupCriterionError getAdGroupCriterionError() {
     if (errorCodeCase_ == 18) {
@@ -1506,6 +1544,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.AdCustomizerErrorEnum.AdCustomizerError ad_customizer_error = 19;</code>
+   * @return The enum numeric value on the wire for adCustomizerError.
    */
   public int getAdCustomizerErrorValue() {
     if (errorCodeCase_ == 19) {
@@ -1519,6 +1558,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.AdCustomizerErrorEnum.AdCustomizerError ad_customizer_error = 19;</code>
+   * @return The adCustomizerError.
    */
   public com.google.ads.googleads.v3.errors.AdCustomizerErrorEnum.AdCustomizerError getAdCustomizerError() {
     if (errorCodeCase_ == 19) {
@@ -1537,6 +1577,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.AdGroupAdErrorEnum.AdGroupAdError ad_group_ad_error = 21;</code>
+   * @return The enum numeric value on the wire for adGroupAdError.
    */
   public int getAdGroupAdErrorValue() {
     if (errorCodeCase_ == 21) {
@@ -1550,6 +1591,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.AdGroupAdErrorEnum.AdGroupAdError ad_group_ad_error = 21;</code>
+   * @return The adGroupAdError.
    */
   public com.google.ads.googleads.v3.errors.AdGroupAdErrorEnum.AdGroupAdError getAdGroupAdError() {
     if (errorCodeCase_ == 21) {
@@ -1568,6 +1610,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.AdSharingErrorEnum.AdSharingError ad_sharing_error = 24;</code>
+   * @return The enum numeric value on the wire for adSharingError.
    */
   public int getAdSharingErrorValue() {
     if (errorCodeCase_ == 24) {
@@ -1581,6 +1624,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.AdSharingErrorEnum.AdSharingError ad_sharing_error = 24;</code>
+   * @return The adSharingError.
    */
   public com.google.ads.googleads.v3.errors.AdSharingErrorEnum.AdSharingError getAdSharingError() {
     if (errorCodeCase_ == 24) {
@@ -1599,6 +1643,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.AdxErrorEnum.AdxError adx_error = 25;</code>
+   * @return The enum numeric value on the wire for adxError.
    */
   public int getAdxErrorValue() {
     if (errorCodeCase_ == 25) {
@@ -1612,6 +1657,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.AdxErrorEnum.AdxError adx_error = 25;</code>
+   * @return The adxError.
    */
   public com.google.ads.googleads.v3.errors.AdxErrorEnum.AdxError getAdxError() {
     if (errorCodeCase_ == 25) {
@@ -1630,6 +1676,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.AssetErrorEnum.AssetError asset_error = 107;</code>
+   * @return The enum numeric value on the wire for assetError.
    */
   public int getAssetErrorValue() {
     if (errorCodeCase_ == 107) {
@@ -1643,6 +1690,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.AssetErrorEnum.AssetError asset_error = 107;</code>
+   * @return The assetError.
    */
   public com.google.ads.googleads.v3.errors.AssetErrorEnum.AssetError getAssetError() {
     if (errorCodeCase_ == 107) {
@@ -1661,6 +1709,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.BiddingErrorEnum.BiddingError bidding_error = 26;</code>
+   * @return The enum numeric value on the wire for biddingError.
    */
   public int getBiddingErrorValue() {
     if (errorCodeCase_ == 26) {
@@ -1674,6 +1723,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.BiddingErrorEnum.BiddingError bidding_error = 26;</code>
+   * @return The biddingError.
    */
   public com.google.ads.googleads.v3.errors.BiddingErrorEnum.BiddingError getBiddingError() {
     if (errorCodeCase_ == 26) {
@@ -1692,6 +1742,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.CampaignCriterionErrorEnum.CampaignCriterionError campaign_criterion_error = 29;</code>
+   * @return The enum numeric value on the wire for campaignCriterionError.
    */
   public int getCampaignCriterionErrorValue() {
     if (errorCodeCase_ == 29) {
@@ -1705,6 +1756,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.CampaignCriterionErrorEnum.CampaignCriterionError campaign_criterion_error = 29;</code>
+   * @return The campaignCriterionError.
    */
   public com.google.ads.googleads.v3.errors.CampaignCriterionErrorEnum.CampaignCriterionError getCampaignCriterionError() {
     if (errorCodeCase_ == 29) {
@@ -1723,6 +1775,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.CollectionSizeErrorEnum.CollectionSizeError collection_size_error = 31;</code>
+   * @return The enum numeric value on the wire for collectionSizeError.
    */
   public int getCollectionSizeErrorValue() {
     if (errorCodeCase_ == 31) {
@@ -1736,6 +1789,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.CollectionSizeErrorEnum.CollectionSizeError collection_size_error = 31;</code>
+   * @return The collectionSizeError.
    */
   public com.google.ads.googleads.v3.errors.CollectionSizeErrorEnum.CollectionSizeError getCollectionSizeError() {
     if (errorCodeCase_ == 31) {
@@ -1754,6 +1808,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.CountryCodeErrorEnum.CountryCodeError country_code_error = 109;</code>
+   * @return The enum numeric value on the wire for countryCodeError.
    */
   public int getCountryCodeErrorValue() {
     if (errorCodeCase_ == 109) {
@@ -1767,6 +1822,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.CountryCodeErrorEnum.CountryCodeError country_code_error = 109;</code>
+   * @return The countryCodeError.
    */
   public com.google.ads.googleads.v3.errors.CountryCodeErrorEnum.CountryCodeError getCountryCodeError() {
     if (errorCodeCase_ == 109) {
@@ -1785,6 +1841,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.CriterionErrorEnum.CriterionError criterion_error = 32;</code>
+   * @return The enum numeric value on the wire for criterionError.
    */
   public int getCriterionErrorValue() {
     if (errorCodeCase_ == 32) {
@@ -1798,6 +1855,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.CriterionErrorEnum.CriterionError criterion_error = 32;</code>
+   * @return The criterionError.
    */
   public com.google.ads.googleads.v3.errors.CriterionErrorEnum.CriterionError getCriterionError() {
     if (errorCodeCase_ == 32) {
@@ -1816,6 +1874,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.CustomerErrorEnum.CustomerError customer_error = 90;</code>
+   * @return The enum numeric value on the wire for customerError.
    */
   public int getCustomerErrorValue() {
     if (errorCodeCase_ == 90) {
@@ -1829,6 +1888,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.CustomerErrorEnum.CustomerError customer_error = 90;</code>
+   * @return The customerError.
    */
   public com.google.ads.googleads.v3.errors.CustomerErrorEnum.CustomerError getCustomerError() {
     if (errorCodeCase_ == 90) {
@@ -1847,6 +1907,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.DateErrorEnum.DateError date_error = 33;</code>
+   * @return The enum numeric value on the wire for dateError.
    */
   public int getDateErrorValue() {
     if (errorCodeCase_ == 33) {
@@ -1860,6 +1921,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.DateErrorEnum.DateError date_error = 33;</code>
+   * @return The dateError.
    */
   public com.google.ads.googleads.v3.errors.DateErrorEnum.DateError getDateError() {
     if (errorCodeCase_ == 33) {
@@ -1878,6 +1940,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.DateRangeErrorEnum.DateRangeError date_range_error = 34;</code>
+   * @return The enum numeric value on the wire for dateRangeError.
    */
   public int getDateRangeErrorValue() {
     if (errorCodeCase_ == 34) {
@@ -1891,6 +1954,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.DateRangeErrorEnum.DateRangeError date_range_error = 34;</code>
+   * @return The dateRangeError.
    */
   public com.google.ads.googleads.v3.errors.DateRangeErrorEnum.DateRangeError getDateRangeError() {
     if (errorCodeCase_ == 34) {
@@ -1909,6 +1973,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.DistinctErrorEnum.DistinctError distinct_error = 35;</code>
+   * @return The enum numeric value on the wire for distinctError.
    */
   public int getDistinctErrorValue() {
     if (errorCodeCase_ == 35) {
@@ -1922,6 +1987,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.DistinctErrorEnum.DistinctError distinct_error = 35;</code>
+   * @return The distinctError.
    */
   public com.google.ads.googleads.v3.errors.DistinctErrorEnum.DistinctError getDistinctError() {
     if (errorCodeCase_ == 35) {
@@ -1940,6 +2006,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.FeedAttributeReferenceErrorEnum.FeedAttributeReferenceError feed_attribute_reference_error = 36;</code>
+   * @return The enum numeric value on the wire for feedAttributeReferenceError.
    */
   public int getFeedAttributeReferenceErrorValue() {
     if (errorCodeCase_ == 36) {
@@ -1953,6 +2020,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.FeedAttributeReferenceErrorEnum.FeedAttributeReferenceError feed_attribute_reference_error = 36;</code>
+   * @return The feedAttributeReferenceError.
    */
   public com.google.ads.googleads.v3.errors.FeedAttributeReferenceErrorEnum.FeedAttributeReferenceError getFeedAttributeReferenceError() {
     if (errorCodeCase_ == 36) {
@@ -1971,6 +2039,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.FunctionErrorEnum.FunctionError function_error = 37;</code>
+   * @return The enum numeric value on the wire for functionError.
    */
   public int getFunctionErrorValue() {
     if (errorCodeCase_ == 37) {
@@ -1984,6 +2053,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.FunctionErrorEnum.FunctionError function_error = 37;</code>
+   * @return The functionError.
    */
   public com.google.ads.googleads.v3.errors.FunctionErrorEnum.FunctionError getFunctionError() {
     if (errorCodeCase_ == 37) {
@@ -2002,6 +2072,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.FunctionParsingErrorEnum.FunctionParsingError function_parsing_error = 38;</code>
+   * @return The enum numeric value on the wire for functionParsingError.
    */
   public int getFunctionParsingErrorValue() {
     if (errorCodeCase_ == 38) {
@@ -2015,6 +2086,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.FunctionParsingErrorEnum.FunctionParsingError function_parsing_error = 38;</code>
+   * @return The functionParsingError.
    */
   public com.google.ads.googleads.v3.errors.FunctionParsingErrorEnum.FunctionParsingError getFunctionParsingError() {
     if (errorCodeCase_ == 38) {
@@ -2033,6 +2105,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.IdErrorEnum.IdError id_error = 39;</code>
+   * @return The enum numeric value on the wire for idError.
    */
   public int getIdErrorValue() {
     if (errorCodeCase_ == 39) {
@@ -2046,6 +2119,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.IdErrorEnum.IdError id_error = 39;</code>
+   * @return The idError.
    */
   public com.google.ads.googleads.v3.errors.IdErrorEnum.IdError getIdError() {
     if (errorCodeCase_ == 39) {
@@ -2064,6 +2138,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.ImageErrorEnum.ImageError image_error = 40;</code>
+   * @return The enum numeric value on the wire for imageError.
    */
   public int getImageErrorValue() {
     if (errorCodeCase_ == 40) {
@@ -2077,6 +2152,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.ImageErrorEnum.ImageError image_error = 40;</code>
+   * @return The imageError.
    */
   public com.google.ads.googleads.v3.errors.ImageErrorEnum.ImageError getImageError() {
     if (errorCodeCase_ == 40) {
@@ -2095,6 +2171,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.LanguageCodeErrorEnum.LanguageCodeError language_code_error = 110;</code>
+   * @return The enum numeric value on the wire for languageCodeError.
    */
   public int getLanguageCodeErrorValue() {
     if (errorCodeCase_ == 110) {
@@ -2108,6 +2185,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.LanguageCodeErrorEnum.LanguageCodeError language_code_error = 110;</code>
+   * @return The languageCodeError.
    */
   public com.google.ads.googleads.v3.errors.LanguageCodeErrorEnum.LanguageCodeError getLanguageCodeError() {
     if (errorCodeCase_ == 110) {
@@ -2126,6 +2204,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.MediaBundleErrorEnum.MediaBundleError media_bundle_error = 42;</code>
+   * @return The enum numeric value on the wire for mediaBundleError.
    */
   public int getMediaBundleErrorValue() {
     if (errorCodeCase_ == 42) {
@@ -2139,6 +2218,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.MediaBundleErrorEnum.MediaBundleError media_bundle_error = 42;</code>
+   * @return The mediaBundleError.
    */
   public com.google.ads.googleads.v3.errors.MediaBundleErrorEnum.MediaBundleError getMediaBundleError() {
     if (errorCodeCase_ == 42) {
@@ -2157,6 +2237,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.MediaUploadErrorEnum.MediaUploadError media_upload_error = 116;</code>
+   * @return The enum numeric value on the wire for mediaUploadError.
    */
   public int getMediaUploadErrorValue() {
     if (errorCodeCase_ == 116) {
@@ -2170,6 +2251,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.MediaUploadErrorEnum.MediaUploadError media_upload_error = 116;</code>
+   * @return The mediaUploadError.
    */
   public com.google.ads.googleads.v3.errors.MediaUploadErrorEnum.MediaUploadError getMediaUploadError() {
     if (errorCodeCase_ == 116) {
@@ -2188,6 +2270,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.MediaFileErrorEnum.MediaFileError media_file_error = 86;</code>
+   * @return The enum numeric value on the wire for mediaFileError.
    */
   public int getMediaFileErrorValue() {
     if (errorCodeCase_ == 86) {
@@ -2201,6 +2284,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.MediaFileErrorEnum.MediaFileError media_file_error = 86;</code>
+   * @return The mediaFileError.
    */
   public com.google.ads.googleads.v3.errors.MediaFileErrorEnum.MediaFileError getMediaFileError() {
     if (errorCodeCase_ == 86) {
@@ -2219,6 +2303,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.MultiplierErrorEnum.MultiplierError multiplier_error = 44;</code>
+   * @return The enum numeric value on the wire for multiplierError.
    */
   public int getMultiplierErrorValue() {
     if (errorCodeCase_ == 44) {
@@ -2232,6 +2317,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.MultiplierErrorEnum.MultiplierError multiplier_error = 44;</code>
+   * @return The multiplierError.
    */
   public com.google.ads.googleads.v3.errors.MultiplierErrorEnum.MultiplierError getMultiplierError() {
     if (errorCodeCase_ == 44) {
@@ -2250,6 +2336,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.NewResourceCreationErrorEnum.NewResourceCreationError new_resource_creation_error = 45;</code>
+   * @return The enum numeric value on the wire for newResourceCreationError.
    */
   public int getNewResourceCreationErrorValue() {
     if (errorCodeCase_ == 45) {
@@ -2263,6 +2350,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.NewResourceCreationErrorEnum.NewResourceCreationError new_resource_creation_error = 45;</code>
+   * @return The newResourceCreationError.
    */
   public com.google.ads.googleads.v3.errors.NewResourceCreationErrorEnum.NewResourceCreationError getNewResourceCreationError() {
     if (errorCodeCase_ == 45) {
@@ -2281,6 +2369,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.NotEmptyErrorEnum.NotEmptyError not_empty_error = 46;</code>
+   * @return The enum numeric value on the wire for notEmptyError.
    */
   public int getNotEmptyErrorValue() {
     if (errorCodeCase_ == 46) {
@@ -2294,6 +2383,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.NotEmptyErrorEnum.NotEmptyError not_empty_error = 46;</code>
+   * @return The notEmptyError.
    */
   public com.google.ads.googleads.v3.errors.NotEmptyErrorEnum.NotEmptyError getNotEmptyError() {
     if (errorCodeCase_ == 46) {
@@ -2312,6 +2402,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.NullErrorEnum.NullError null_error = 47;</code>
+   * @return The enum numeric value on the wire for nullError.
    */
   public int getNullErrorValue() {
     if (errorCodeCase_ == 47) {
@@ -2325,6 +2416,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.NullErrorEnum.NullError null_error = 47;</code>
+   * @return The nullError.
    */
   public com.google.ads.googleads.v3.errors.NullErrorEnum.NullError getNullError() {
     if (errorCodeCase_ == 47) {
@@ -2343,6 +2435,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.OperatorErrorEnum.OperatorError operator_error = 48;</code>
+   * @return The enum numeric value on the wire for operatorError.
    */
   public int getOperatorErrorValue() {
     if (errorCodeCase_ == 48) {
@@ -2356,6 +2449,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.OperatorErrorEnum.OperatorError operator_error = 48;</code>
+   * @return The operatorError.
    */
   public com.google.ads.googleads.v3.errors.OperatorErrorEnum.OperatorError getOperatorError() {
     if (errorCodeCase_ == 48) {
@@ -2374,6 +2468,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.RangeErrorEnum.RangeError range_error = 49;</code>
+   * @return The enum numeric value on the wire for rangeError.
    */
   public int getRangeErrorValue() {
     if (errorCodeCase_ == 49) {
@@ -2387,6 +2482,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.RangeErrorEnum.RangeError range_error = 49;</code>
+   * @return The rangeError.
    */
   public com.google.ads.googleads.v3.errors.RangeErrorEnum.RangeError getRangeError() {
     if (errorCodeCase_ == 49) {
@@ -2405,6 +2501,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.RecommendationErrorEnum.RecommendationError recommendation_error = 58;</code>
+   * @return The enum numeric value on the wire for recommendationError.
    */
   public int getRecommendationErrorValue() {
     if (errorCodeCase_ == 58) {
@@ -2418,6 +2515,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.RecommendationErrorEnum.RecommendationError recommendation_error = 58;</code>
+   * @return The recommendationError.
    */
   public com.google.ads.googleads.v3.errors.RecommendationErrorEnum.RecommendationError getRecommendationError() {
     if (errorCodeCase_ == 58) {
@@ -2436,6 +2534,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.RegionCodeErrorEnum.RegionCodeError region_code_error = 51;</code>
+   * @return The enum numeric value on the wire for regionCodeError.
    */
   public int getRegionCodeErrorValue() {
     if (errorCodeCase_ == 51) {
@@ -2449,6 +2548,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.RegionCodeErrorEnum.RegionCodeError region_code_error = 51;</code>
+   * @return The regionCodeError.
    */
   public com.google.ads.googleads.v3.errors.RegionCodeErrorEnum.RegionCodeError getRegionCodeError() {
     if (errorCodeCase_ == 51) {
@@ -2467,6 +2567,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.SettingErrorEnum.SettingError setting_error = 52;</code>
+   * @return The enum numeric value on the wire for settingError.
    */
   public int getSettingErrorValue() {
     if (errorCodeCase_ == 52) {
@@ -2480,6 +2581,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.SettingErrorEnum.SettingError setting_error = 52;</code>
+   * @return The settingError.
    */
   public com.google.ads.googleads.v3.errors.SettingErrorEnum.SettingError getSettingError() {
     if (errorCodeCase_ == 52) {
@@ -2498,6 +2600,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.StringFormatErrorEnum.StringFormatError string_format_error = 53;</code>
+   * @return The enum numeric value on the wire for stringFormatError.
    */
   public int getStringFormatErrorValue() {
     if (errorCodeCase_ == 53) {
@@ -2511,6 +2614,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.StringFormatErrorEnum.StringFormatError string_format_error = 53;</code>
+   * @return The stringFormatError.
    */
   public com.google.ads.googleads.v3.errors.StringFormatErrorEnum.StringFormatError getStringFormatError() {
     if (errorCodeCase_ == 53) {
@@ -2529,6 +2633,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.StringLengthErrorEnum.StringLengthError string_length_error = 54;</code>
+   * @return The enum numeric value on the wire for stringLengthError.
    */
   public int getStringLengthErrorValue() {
     if (errorCodeCase_ == 54) {
@@ -2542,6 +2647,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.StringLengthErrorEnum.StringLengthError string_length_error = 54;</code>
+   * @return The stringLengthError.
    */
   public com.google.ads.googleads.v3.errors.StringLengthErrorEnum.StringLengthError getStringLengthError() {
     if (errorCodeCase_ == 54) {
@@ -2560,6 +2666,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.OperationAccessDeniedErrorEnum.OperationAccessDeniedError operation_access_denied_error = 55;</code>
+   * @return The enum numeric value on the wire for operationAccessDeniedError.
    */
   public int getOperationAccessDeniedErrorValue() {
     if (errorCodeCase_ == 55) {
@@ -2573,6 +2680,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.OperationAccessDeniedErrorEnum.OperationAccessDeniedError operation_access_denied_error = 55;</code>
+   * @return The operationAccessDeniedError.
    */
   public com.google.ads.googleads.v3.errors.OperationAccessDeniedErrorEnum.OperationAccessDeniedError getOperationAccessDeniedError() {
     if (errorCodeCase_ == 55) {
@@ -2591,6 +2699,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.ResourceAccessDeniedErrorEnum.ResourceAccessDeniedError resource_access_denied_error = 56;</code>
+   * @return The enum numeric value on the wire for resourceAccessDeniedError.
    */
   public int getResourceAccessDeniedErrorValue() {
     if (errorCodeCase_ == 56) {
@@ -2604,6 +2713,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.ResourceAccessDeniedErrorEnum.ResourceAccessDeniedError resource_access_denied_error = 56;</code>
+   * @return The resourceAccessDeniedError.
    */
   public com.google.ads.googleads.v3.errors.ResourceAccessDeniedErrorEnum.ResourceAccessDeniedError getResourceAccessDeniedError() {
     if (errorCodeCase_ == 56) {
@@ -2622,6 +2732,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.ResourceCountLimitExceededErrorEnum.ResourceCountLimitExceededError resource_count_limit_exceeded_error = 57;</code>
+   * @return The enum numeric value on the wire for resourceCountLimitExceededError.
    */
   public int getResourceCountLimitExceededErrorValue() {
     if (errorCodeCase_ == 57) {
@@ -2635,6 +2746,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.ResourceCountLimitExceededErrorEnum.ResourceCountLimitExceededError resource_count_limit_exceeded_error = 57;</code>
+   * @return The resourceCountLimitExceededError.
    */
   public com.google.ads.googleads.v3.errors.ResourceCountLimitExceededErrorEnum.ResourceCountLimitExceededError getResourceCountLimitExceededError() {
     if (errorCodeCase_ == 57) {
@@ -2653,6 +2765,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.YoutubeVideoRegistrationErrorEnum.YoutubeVideoRegistrationError youtube_video_registration_error = 117;</code>
+   * @return The enum numeric value on the wire for youtubeVideoRegistrationError.
    */
   public int getYoutubeVideoRegistrationErrorValue() {
     if (errorCodeCase_ == 117) {
@@ -2666,6 +2779,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.YoutubeVideoRegistrationErrorEnum.YoutubeVideoRegistrationError youtube_video_registration_error = 117;</code>
+   * @return The youtubeVideoRegistrationError.
    */
   public com.google.ads.googleads.v3.errors.YoutubeVideoRegistrationErrorEnum.YoutubeVideoRegistrationError getYoutubeVideoRegistrationError() {
     if (errorCodeCase_ == 117) {
@@ -2684,6 +2798,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.AdGroupBidModifierErrorEnum.AdGroupBidModifierError ad_group_bid_modifier_error = 59;</code>
+   * @return The enum numeric value on the wire for adGroupBidModifierError.
    */
   public int getAdGroupBidModifierErrorValue() {
     if (errorCodeCase_ == 59) {
@@ -2697,6 +2812,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.AdGroupBidModifierErrorEnum.AdGroupBidModifierError ad_group_bid_modifier_error = 59;</code>
+   * @return The adGroupBidModifierError.
    */
   public com.google.ads.googleads.v3.errors.AdGroupBidModifierErrorEnum.AdGroupBidModifierError getAdGroupBidModifierError() {
     if (errorCodeCase_ == 59) {
@@ -2715,6 +2831,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.ContextErrorEnum.ContextError context_error = 60;</code>
+   * @return The enum numeric value on the wire for contextError.
    */
   public int getContextErrorValue() {
     if (errorCodeCase_ == 60) {
@@ -2728,6 +2845,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.ContextErrorEnum.ContextError context_error = 60;</code>
+   * @return The contextError.
    */
   public com.google.ads.googleads.v3.errors.ContextErrorEnum.ContextError getContextError() {
     if (errorCodeCase_ == 60) {
@@ -2746,6 +2864,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.FieldErrorEnum.FieldError field_error = 61;</code>
+   * @return The enum numeric value on the wire for fieldError.
    */
   public int getFieldErrorValue() {
     if (errorCodeCase_ == 61) {
@@ -2759,6 +2878,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.FieldErrorEnum.FieldError field_error = 61;</code>
+   * @return The fieldError.
    */
   public com.google.ads.googleads.v3.errors.FieldErrorEnum.FieldError getFieldError() {
     if (errorCodeCase_ == 61) {
@@ -2777,6 +2897,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.SharedSetErrorEnum.SharedSetError shared_set_error = 62;</code>
+   * @return The enum numeric value on the wire for sharedSetError.
    */
   public int getSharedSetErrorValue() {
     if (errorCodeCase_ == 62) {
@@ -2790,6 +2911,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.SharedSetErrorEnum.SharedSetError shared_set_error = 62;</code>
+   * @return The sharedSetError.
    */
   public com.google.ads.googleads.v3.errors.SharedSetErrorEnum.SharedSetError getSharedSetError() {
     if (errorCodeCase_ == 62) {
@@ -2808,6 +2930,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.SharedCriterionErrorEnum.SharedCriterionError shared_criterion_error = 63;</code>
+   * @return The enum numeric value on the wire for sharedCriterionError.
    */
   public int getSharedCriterionErrorValue() {
     if (errorCodeCase_ == 63) {
@@ -2821,6 +2944,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.SharedCriterionErrorEnum.SharedCriterionError shared_criterion_error = 63;</code>
+   * @return The sharedCriterionError.
    */
   public com.google.ads.googleads.v3.errors.SharedCriterionErrorEnum.SharedCriterionError getSharedCriterionError() {
     if (errorCodeCase_ == 63) {
@@ -2839,6 +2963,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.CampaignSharedSetErrorEnum.CampaignSharedSetError campaign_shared_set_error = 64;</code>
+   * @return The enum numeric value on the wire for campaignSharedSetError.
    */
   public int getCampaignSharedSetErrorValue() {
     if (errorCodeCase_ == 64) {
@@ -2852,6 +2977,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.CampaignSharedSetErrorEnum.CampaignSharedSetError campaign_shared_set_error = 64;</code>
+   * @return The campaignSharedSetError.
    */
   public com.google.ads.googleads.v3.errors.CampaignSharedSetErrorEnum.CampaignSharedSetError getCampaignSharedSetError() {
     if (errorCodeCase_ == 64) {
@@ -2870,6 +2996,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.ConversionActionErrorEnum.ConversionActionError conversion_action_error = 65;</code>
+   * @return The enum numeric value on the wire for conversionActionError.
    */
   public int getConversionActionErrorValue() {
     if (errorCodeCase_ == 65) {
@@ -2883,6 +3010,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.ConversionActionErrorEnum.ConversionActionError conversion_action_error = 65;</code>
+   * @return The conversionActionError.
    */
   public com.google.ads.googleads.v3.errors.ConversionActionErrorEnum.ConversionActionError getConversionActionError() {
     if (errorCodeCase_ == 65) {
@@ -2901,6 +3029,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.ConversionAdjustmentUploadErrorEnum.ConversionAdjustmentUploadError conversion_adjustment_upload_error = 115;</code>
+   * @return The enum numeric value on the wire for conversionAdjustmentUploadError.
    */
   public int getConversionAdjustmentUploadErrorValue() {
     if (errorCodeCase_ == 115) {
@@ -2914,6 +3043,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.ConversionAdjustmentUploadErrorEnum.ConversionAdjustmentUploadError conversion_adjustment_upload_error = 115;</code>
+   * @return The conversionAdjustmentUploadError.
    */
   public com.google.ads.googleads.v3.errors.ConversionAdjustmentUploadErrorEnum.ConversionAdjustmentUploadError getConversionAdjustmentUploadError() {
     if (errorCodeCase_ == 115) {
@@ -2932,6 +3062,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.ConversionUploadErrorEnum.ConversionUploadError conversion_upload_error = 111;</code>
+   * @return The enum numeric value on the wire for conversionUploadError.
    */
   public int getConversionUploadErrorValue() {
     if (errorCodeCase_ == 111) {
@@ -2945,6 +3076,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.ConversionUploadErrorEnum.ConversionUploadError conversion_upload_error = 111;</code>
+   * @return The conversionUploadError.
    */
   public com.google.ads.googleads.v3.errors.ConversionUploadErrorEnum.ConversionUploadError getConversionUploadError() {
     if (errorCodeCase_ == 111) {
@@ -2963,6 +3095,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.HeaderErrorEnum.HeaderError header_error = 66;</code>
+   * @return The enum numeric value on the wire for headerError.
    */
   public int getHeaderErrorValue() {
     if (errorCodeCase_ == 66) {
@@ -2976,6 +3109,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.HeaderErrorEnum.HeaderError header_error = 66;</code>
+   * @return The headerError.
    */
   public com.google.ads.googleads.v3.errors.HeaderErrorEnum.HeaderError getHeaderError() {
     if (errorCodeCase_ == 66) {
@@ -2994,6 +3128,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.DatabaseErrorEnum.DatabaseError database_error = 67;</code>
+   * @return The enum numeric value on the wire for databaseError.
    */
   public int getDatabaseErrorValue() {
     if (errorCodeCase_ == 67) {
@@ -3007,6 +3142,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.DatabaseErrorEnum.DatabaseError database_error = 67;</code>
+   * @return The databaseError.
    */
   public com.google.ads.googleads.v3.errors.DatabaseErrorEnum.DatabaseError getDatabaseError() {
     if (errorCodeCase_ == 67) {
@@ -3025,6 +3161,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.PolicyFindingErrorEnum.PolicyFindingError policy_finding_error = 68;</code>
+   * @return The enum numeric value on the wire for policyFindingError.
    */
   public int getPolicyFindingErrorValue() {
     if (errorCodeCase_ == 68) {
@@ -3038,6 +3175,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.PolicyFindingErrorEnum.PolicyFindingError policy_finding_error = 68;</code>
+   * @return The policyFindingError.
    */
   public com.google.ads.googleads.v3.errors.PolicyFindingErrorEnum.PolicyFindingError getPolicyFindingError() {
     if (errorCodeCase_ == 68) {
@@ -3056,6 +3194,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.EnumErrorEnum.EnumError enum_error = 70;</code>
+   * @return The enum numeric value on the wire for enumError.
    */
   public int getEnumErrorValue() {
     if (errorCodeCase_ == 70) {
@@ -3069,6 +3208,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.EnumErrorEnum.EnumError enum_error = 70;</code>
+   * @return The enumError.
    */
   public com.google.ads.googleads.v3.errors.EnumErrorEnum.EnumError getEnumError() {
     if (errorCodeCase_ == 70) {
@@ -3087,6 +3227,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.KeywordPlanErrorEnum.KeywordPlanError keyword_plan_error = 71;</code>
+   * @return The enum numeric value on the wire for keywordPlanError.
    */
   public int getKeywordPlanErrorValue() {
     if (errorCodeCase_ == 71) {
@@ -3100,6 +3241,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.KeywordPlanErrorEnum.KeywordPlanError keyword_plan_error = 71;</code>
+   * @return The keywordPlanError.
    */
   public com.google.ads.googleads.v3.errors.KeywordPlanErrorEnum.KeywordPlanError getKeywordPlanError() {
     if (errorCodeCase_ == 71) {
@@ -3118,6 +3260,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.KeywordPlanCampaignErrorEnum.KeywordPlanCampaignError keyword_plan_campaign_error = 72;</code>
+   * @return The enum numeric value on the wire for keywordPlanCampaignError.
    */
   public int getKeywordPlanCampaignErrorValue() {
     if (errorCodeCase_ == 72) {
@@ -3131,6 +3274,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.KeywordPlanCampaignErrorEnum.KeywordPlanCampaignError keyword_plan_campaign_error = 72;</code>
+   * @return The keywordPlanCampaignError.
    */
   public com.google.ads.googleads.v3.errors.KeywordPlanCampaignErrorEnum.KeywordPlanCampaignError getKeywordPlanCampaignError() {
     if (errorCodeCase_ == 72) {
@@ -3149,6 +3293,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.KeywordPlanNegativeKeywordErrorEnum.KeywordPlanNegativeKeywordError keyword_plan_negative_keyword_error = 73;</code>
+   * @return The enum numeric value on the wire for keywordPlanNegativeKeywordError.
    */
   public int getKeywordPlanNegativeKeywordErrorValue() {
     if (errorCodeCase_ == 73) {
@@ -3162,6 +3307,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.KeywordPlanNegativeKeywordErrorEnum.KeywordPlanNegativeKeywordError keyword_plan_negative_keyword_error = 73;</code>
+   * @return The keywordPlanNegativeKeywordError.
    */
   public com.google.ads.googleads.v3.errors.KeywordPlanNegativeKeywordErrorEnum.KeywordPlanNegativeKeywordError getKeywordPlanNegativeKeywordError() {
     if (errorCodeCase_ == 73) {
@@ -3180,6 +3326,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.KeywordPlanAdGroupErrorEnum.KeywordPlanAdGroupError keyword_plan_ad_group_error = 74;</code>
+   * @return The enum numeric value on the wire for keywordPlanAdGroupError.
    */
   public int getKeywordPlanAdGroupErrorValue() {
     if (errorCodeCase_ == 74) {
@@ -3193,6 +3340,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.KeywordPlanAdGroupErrorEnum.KeywordPlanAdGroupError keyword_plan_ad_group_error = 74;</code>
+   * @return The keywordPlanAdGroupError.
    */
   public com.google.ads.googleads.v3.errors.KeywordPlanAdGroupErrorEnum.KeywordPlanAdGroupError getKeywordPlanAdGroupError() {
     if (errorCodeCase_ == 74) {
@@ -3211,6 +3359,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.KeywordPlanKeywordErrorEnum.KeywordPlanKeywordError keyword_plan_keyword_error = 75;</code>
+   * @return The enum numeric value on the wire for keywordPlanKeywordError.
    */
   public int getKeywordPlanKeywordErrorValue() {
     if (errorCodeCase_ == 75) {
@@ -3224,6 +3373,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.KeywordPlanKeywordErrorEnum.KeywordPlanKeywordError keyword_plan_keyword_error = 75;</code>
+   * @return The keywordPlanKeywordError.
    */
   public com.google.ads.googleads.v3.errors.KeywordPlanKeywordErrorEnum.KeywordPlanKeywordError getKeywordPlanKeywordError() {
     if (errorCodeCase_ == 75) {
@@ -3242,6 +3392,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.KeywordPlanIdeaErrorEnum.KeywordPlanIdeaError keyword_plan_idea_error = 76;</code>
+   * @return The enum numeric value on the wire for keywordPlanIdeaError.
    */
   public int getKeywordPlanIdeaErrorValue() {
     if (errorCodeCase_ == 76) {
@@ -3255,6 +3406,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.KeywordPlanIdeaErrorEnum.KeywordPlanIdeaError keyword_plan_idea_error = 76;</code>
+   * @return The keywordPlanIdeaError.
    */
   public com.google.ads.googleads.v3.errors.KeywordPlanIdeaErrorEnum.KeywordPlanIdeaError getKeywordPlanIdeaError() {
     if (errorCodeCase_ == 76) {
@@ -3273,6 +3425,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.AccountBudgetProposalErrorEnum.AccountBudgetProposalError account_budget_proposal_error = 77;</code>
+   * @return The enum numeric value on the wire for accountBudgetProposalError.
    */
   public int getAccountBudgetProposalErrorValue() {
     if (errorCodeCase_ == 77) {
@@ -3286,6 +3439,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.AccountBudgetProposalErrorEnum.AccountBudgetProposalError account_budget_proposal_error = 77;</code>
+   * @return The accountBudgetProposalError.
    */
   public com.google.ads.googleads.v3.errors.AccountBudgetProposalErrorEnum.AccountBudgetProposalError getAccountBudgetProposalError() {
     if (errorCodeCase_ == 77) {
@@ -3304,6 +3458,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.UserListErrorEnum.UserListError user_list_error = 78;</code>
+   * @return The enum numeric value on the wire for userListError.
    */
   public int getUserListErrorValue() {
     if (errorCodeCase_ == 78) {
@@ -3317,6 +3472,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.UserListErrorEnum.UserListError user_list_error = 78;</code>
+   * @return The userListError.
    */
   public com.google.ads.googleads.v3.errors.UserListErrorEnum.UserListError getUserListError() {
     if (errorCodeCase_ == 78) {
@@ -3335,6 +3491,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.ChangeStatusErrorEnum.ChangeStatusError change_status_error = 79;</code>
+   * @return The enum numeric value on the wire for changeStatusError.
    */
   public int getChangeStatusErrorValue() {
     if (errorCodeCase_ == 79) {
@@ -3348,6 +3505,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.ChangeStatusErrorEnum.ChangeStatusError change_status_error = 79;</code>
+   * @return The changeStatusError.
    */
   public com.google.ads.googleads.v3.errors.ChangeStatusErrorEnum.ChangeStatusError getChangeStatusError() {
     if (errorCodeCase_ == 79) {
@@ -3366,6 +3524,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.FeedErrorEnum.FeedError feed_error = 80;</code>
+   * @return The enum numeric value on the wire for feedError.
    */
   public int getFeedErrorValue() {
     if (errorCodeCase_ == 80) {
@@ -3379,6 +3538,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.FeedErrorEnum.FeedError feed_error = 80;</code>
+   * @return The feedError.
    */
   public com.google.ads.googleads.v3.errors.FeedErrorEnum.FeedError getFeedError() {
     if (errorCodeCase_ == 80) {
@@ -3397,6 +3557,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.GeoTargetConstantSuggestionErrorEnum.GeoTargetConstantSuggestionError geo_target_constant_suggestion_error = 81;</code>
+   * @return The enum numeric value on the wire for geoTargetConstantSuggestionError.
    */
   public int getGeoTargetConstantSuggestionErrorValue() {
     if (errorCodeCase_ == 81) {
@@ -3410,6 +3571,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.GeoTargetConstantSuggestionErrorEnum.GeoTargetConstantSuggestionError geo_target_constant_suggestion_error = 81;</code>
+   * @return The geoTargetConstantSuggestionError.
    */
   public com.google.ads.googleads.v3.errors.GeoTargetConstantSuggestionErrorEnum.GeoTargetConstantSuggestionError getGeoTargetConstantSuggestionError() {
     if (errorCodeCase_ == 81) {
@@ -3428,6 +3590,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.CampaignDraftErrorEnum.CampaignDraftError campaign_draft_error = 82;</code>
+   * @return The enum numeric value on the wire for campaignDraftError.
    */
   public int getCampaignDraftErrorValue() {
     if (errorCodeCase_ == 82) {
@@ -3441,6 +3604,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.CampaignDraftErrorEnum.CampaignDraftError campaign_draft_error = 82;</code>
+   * @return The campaignDraftError.
    */
   public com.google.ads.googleads.v3.errors.CampaignDraftErrorEnum.CampaignDraftError getCampaignDraftError() {
     if (errorCodeCase_ == 82) {
@@ -3459,6 +3623,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.FeedItemErrorEnum.FeedItemError feed_item_error = 83;</code>
+   * @return The enum numeric value on the wire for feedItemError.
    */
   public int getFeedItemErrorValue() {
     if (errorCodeCase_ == 83) {
@@ -3472,6 +3637,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.FeedItemErrorEnum.FeedItemError feed_item_error = 83;</code>
+   * @return The feedItemError.
    */
   public com.google.ads.googleads.v3.errors.FeedItemErrorEnum.FeedItemError getFeedItemError() {
     if (errorCodeCase_ == 83) {
@@ -3490,6 +3656,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.LabelErrorEnum.LabelError label_error = 84;</code>
+   * @return The enum numeric value on the wire for labelError.
    */
   public int getLabelErrorValue() {
     if (errorCodeCase_ == 84) {
@@ -3503,6 +3670,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.LabelErrorEnum.LabelError label_error = 84;</code>
+   * @return The labelError.
    */
   public com.google.ads.googleads.v3.errors.LabelErrorEnum.LabelError getLabelError() {
     if (errorCodeCase_ == 84) {
@@ -3521,6 +3689,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.BillingSetupErrorEnum.BillingSetupError billing_setup_error = 87;</code>
+   * @return The enum numeric value on the wire for billingSetupError.
    */
   public int getBillingSetupErrorValue() {
     if (errorCodeCase_ == 87) {
@@ -3534,6 +3703,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.BillingSetupErrorEnum.BillingSetupError billing_setup_error = 87;</code>
+   * @return The billingSetupError.
    */
   public com.google.ads.googleads.v3.errors.BillingSetupErrorEnum.BillingSetupError getBillingSetupError() {
     if (errorCodeCase_ == 87) {
@@ -3552,6 +3722,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.CustomerClientLinkErrorEnum.CustomerClientLinkError customer_client_link_error = 88;</code>
+   * @return The enum numeric value on the wire for customerClientLinkError.
    */
   public int getCustomerClientLinkErrorValue() {
     if (errorCodeCase_ == 88) {
@@ -3565,6 +3736,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.CustomerClientLinkErrorEnum.CustomerClientLinkError customer_client_link_error = 88;</code>
+   * @return The customerClientLinkError.
    */
   public com.google.ads.googleads.v3.errors.CustomerClientLinkErrorEnum.CustomerClientLinkError getCustomerClientLinkError() {
     if (errorCodeCase_ == 88) {
@@ -3583,6 +3755,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.CustomerManagerLinkErrorEnum.CustomerManagerLinkError customer_manager_link_error = 91;</code>
+   * @return The enum numeric value on the wire for customerManagerLinkError.
    */
   public int getCustomerManagerLinkErrorValue() {
     if (errorCodeCase_ == 91) {
@@ -3596,6 +3769,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.CustomerManagerLinkErrorEnum.CustomerManagerLinkError customer_manager_link_error = 91;</code>
+   * @return The customerManagerLinkError.
    */
   public com.google.ads.googleads.v3.errors.CustomerManagerLinkErrorEnum.CustomerManagerLinkError getCustomerManagerLinkError() {
     if (errorCodeCase_ == 91) {
@@ -3614,6 +3788,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.FeedMappingErrorEnum.FeedMappingError feed_mapping_error = 92;</code>
+   * @return The enum numeric value on the wire for feedMappingError.
    */
   public int getFeedMappingErrorValue() {
     if (errorCodeCase_ == 92) {
@@ -3627,6 +3802,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.FeedMappingErrorEnum.FeedMappingError feed_mapping_error = 92;</code>
+   * @return The feedMappingError.
    */
   public com.google.ads.googleads.v3.errors.FeedMappingErrorEnum.FeedMappingError getFeedMappingError() {
     if (errorCodeCase_ == 92) {
@@ -3645,6 +3821,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.CustomerFeedErrorEnum.CustomerFeedError customer_feed_error = 93;</code>
+   * @return The enum numeric value on the wire for customerFeedError.
    */
   public int getCustomerFeedErrorValue() {
     if (errorCodeCase_ == 93) {
@@ -3658,6 +3835,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.CustomerFeedErrorEnum.CustomerFeedError customer_feed_error = 93;</code>
+   * @return The customerFeedError.
    */
   public com.google.ads.googleads.v3.errors.CustomerFeedErrorEnum.CustomerFeedError getCustomerFeedError() {
     if (errorCodeCase_ == 93) {
@@ -3676,6 +3854,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.AdGroupFeedErrorEnum.AdGroupFeedError ad_group_feed_error = 94;</code>
+   * @return The enum numeric value on the wire for adGroupFeedError.
    */
   public int getAdGroupFeedErrorValue() {
     if (errorCodeCase_ == 94) {
@@ -3689,6 +3868,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.AdGroupFeedErrorEnum.AdGroupFeedError ad_group_feed_error = 94;</code>
+   * @return The adGroupFeedError.
    */
   public com.google.ads.googleads.v3.errors.AdGroupFeedErrorEnum.AdGroupFeedError getAdGroupFeedError() {
     if (errorCodeCase_ == 94) {
@@ -3707,6 +3887,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.CampaignFeedErrorEnum.CampaignFeedError campaign_feed_error = 96;</code>
+   * @return The enum numeric value on the wire for campaignFeedError.
    */
   public int getCampaignFeedErrorValue() {
     if (errorCodeCase_ == 96) {
@@ -3720,6 +3901,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.CampaignFeedErrorEnum.CampaignFeedError campaign_feed_error = 96;</code>
+   * @return The campaignFeedError.
    */
   public com.google.ads.googleads.v3.errors.CampaignFeedErrorEnum.CampaignFeedError getCampaignFeedError() {
     if (errorCodeCase_ == 96) {
@@ -3738,6 +3920,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.CustomInterestErrorEnum.CustomInterestError custom_interest_error = 97;</code>
+   * @return The enum numeric value on the wire for customInterestError.
    */
   public int getCustomInterestErrorValue() {
     if (errorCodeCase_ == 97) {
@@ -3751,6 +3934,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.CustomInterestErrorEnum.CustomInterestError custom_interest_error = 97;</code>
+   * @return The customInterestError.
    */
   public com.google.ads.googleads.v3.errors.CustomInterestErrorEnum.CustomInterestError getCustomInterestError() {
     if (errorCodeCase_ == 97) {
@@ -3769,6 +3953,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.CampaignExperimentErrorEnum.CampaignExperimentError campaign_experiment_error = 98;</code>
+   * @return The enum numeric value on the wire for campaignExperimentError.
    */
   public int getCampaignExperimentErrorValue() {
     if (errorCodeCase_ == 98) {
@@ -3782,6 +3967,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.CampaignExperimentErrorEnum.CampaignExperimentError campaign_experiment_error = 98;</code>
+   * @return The campaignExperimentError.
    */
   public com.google.ads.googleads.v3.errors.CampaignExperimentErrorEnum.CampaignExperimentError getCampaignExperimentError() {
     if (errorCodeCase_ == 98) {
@@ -3800,6 +3986,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.ExtensionFeedItemErrorEnum.ExtensionFeedItemError extension_feed_item_error = 100;</code>
+   * @return The enum numeric value on the wire for extensionFeedItemError.
    */
   public int getExtensionFeedItemErrorValue() {
     if (errorCodeCase_ == 100) {
@@ -3813,6 +4000,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.ExtensionFeedItemErrorEnum.ExtensionFeedItemError extension_feed_item_error = 100;</code>
+   * @return The extensionFeedItemError.
    */
   public com.google.ads.googleads.v3.errors.ExtensionFeedItemErrorEnum.ExtensionFeedItemError getExtensionFeedItemError() {
     if (errorCodeCase_ == 100) {
@@ -3831,6 +4019,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.AdParameterErrorEnum.AdParameterError ad_parameter_error = 101;</code>
+   * @return The enum numeric value on the wire for adParameterError.
    */
   public int getAdParameterErrorValue() {
     if (errorCodeCase_ == 101) {
@@ -3844,6 +4033,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.AdParameterErrorEnum.AdParameterError ad_parameter_error = 101;</code>
+   * @return The adParameterError.
    */
   public com.google.ads.googleads.v3.errors.AdParameterErrorEnum.AdParameterError getAdParameterError() {
     if (errorCodeCase_ == 101) {
@@ -3862,6 +4052,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.FeedItemValidationErrorEnum.FeedItemValidationError feed_item_validation_error = 102;</code>
+   * @return The enum numeric value on the wire for feedItemValidationError.
    */
   public int getFeedItemValidationErrorValue() {
     if (errorCodeCase_ == 102) {
@@ -3875,6 +4066,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.FeedItemValidationErrorEnum.FeedItemValidationError feed_item_validation_error = 102;</code>
+   * @return The feedItemValidationError.
    */
   public com.google.ads.googleads.v3.errors.FeedItemValidationErrorEnum.FeedItemValidationError getFeedItemValidationError() {
     if (errorCodeCase_ == 102) {
@@ -3893,6 +4085,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.ExtensionSettingErrorEnum.ExtensionSettingError extension_setting_error = 103;</code>
+   * @return The enum numeric value on the wire for extensionSettingError.
    */
   public int getExtensionSettingErrorValue() {
     if (errorCodeCase_ == 103) {
@@ -3906,6 +4099,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.ExtensionSettingErrorEnum.ExtensionSettingError extension_setting_error = 103;</code>
+   * @return The extensionSettingError.
    */
   public com.google.ads.googleads.v3.errors.ExtensionSettingErrorEnum.ExtensionSettingError getExtensionSettingError() {
     if (errorCodeCase_ == 103) {
@@ -3924,6 +4118,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.FeedItemTargetErrorEnum.FeedItemTargetError feed_item_target_error = 104;</code>
+   * @return The enum numeric value on the wire for feedItemTargetError.
    */
   public int getFeedItemTargetErrorValue() {
     if (errorCodeCase_ == 104) {
@@ -3937,6 +4132,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.FeedItemTargetErrorEnum.FeedItemTargetError feed_item_target_error = 104;</code>
+   * @return The feedItemTargetError.
    */
   public com.google.ads.googleads.v3.errors.FeedItemTargetErrorEnum.FeedItemTargetError getFeedItemTargetError() {
     if (errorCodeCase_ == 104) {
@@ -3955,6 +4151,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.PolicyViolationErrorEnum.PolicyViolationError policy_violation_error = 105;</code>
+   * @return The enum numeric value on the wire for policyViolationError.
    */
   public int getPolicyViolationErrorValue() {
     if (errorCodeCase_ == 105) {
@@ -3968,6 +4165,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.PolicyViolationErrorEnum.PolicyViolationError policy_violation_error = 105;</code>
+   * @return The policyViolationError.
    */
   public com.google.ads.googleads.v3.errors.PolicyViolationErrorEnum.PolicyViolationError getPolicyViolationError() {
     if (errorCodeCase_ == 105) {
@@ -3986,6 +4184,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.MutateJobErrorEnum.MutateJobError mutate_job_error = 108;</code>
+   * @return The enum numeric value on the wire for mutateJobError.
    */
   public int getMutateJobErrorValue() {
     if (errorCodeCase_ == 108) {
@@ -3999,6 +4198,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.MutateJobErrorEnum.MutateJobError mutate_job_error = 108;</code>
+   * @return The mutateJobError.
    */
   public com.google.ads.googleads.v3.errors.MutateJobErrorEnum.MutateJobError getMutateJobError() {
     if (errorCodeCase_ == 108) {
@@ -4017,6 +4217,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.PartialFailureErrorEnum.PartialFailureError partial_failure_error = 112;</code>
+   * @return The enum numeric value on the wire for partialFailureError.
    */
   public int getPartialFailureErrorValue() {
     if (errorCodeCase_ == 112) {
@@ -4030,6 +4231,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.PartialFailureErrorEnum.PartialFailureError partial_failure_error = 112;</code>
+   * @return The partialFailureError.
    */
   public com.google.ads.googleads.v3.errors.PartialFailureErrorEnum.PartialFailureError getPartialFailureError() {
     if (errorCodeCase_ == 112) {
@@ -4048,6 +4250,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.PolicyValidationParameterErrorEnum.PolicyValidationParameterError policy_validation_parameter_error = 114;</code>
+   * @return The enum numeric value on the wire for policyValidationParameterError.
    */
   public int getPolicyValidationParameterErrorValue() {
     if (errorCodeCase_ == 114) {
@@ -4061,6 +4264,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.PolicyValidationParameterErrorEnum.PolicyValidationParameterError policy_validation_parameter_error = 114;</code>
+   * @return The policyValidationParameterError.
    */
   public com.google.ads.googleads.v3.errors.PolicyValidationParameterErrorEnum.PolicyValidationParameterError getPolicyValidationParameterError() {
     if (errorCodeCase_ == 114) {
@@ -4079,6 +4283,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.SizeLimitErrorEnum.SizeLimitError size_limit_error = 118;</code>
+   * @return The enum numeric value on the wire for sizeLimitError.
    */
   public int getSizeLimitErrorValue() {
     if (errorCodeCase_ == 118) {
@@ -4092,6 +4297,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.SizeLimitErrorEnum.SizeLimitError size_limit_error = 118;</code>
+   * @return The sizeLimitError.
    */
   public com.google.ads.googleads.v3.errors.SizeLimitErrorEnum.SizeLimitError getSizeLimitError() {
     if (errorCodeCase_ == 118) {
@@ -4110,6 +4316,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.OfflineUserDataJobErrorEnum.OfflineUserDataJobError offline_user_data_job_error = 119;</code>
+   * @return The enum numeric value on the wire for offlineUserDataJobError.
    */
   public int getOfflineUserDataJobErrorValue() {
     if (errorCodeCase_ == 119) {
@@ -4123,6 +4330,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.OfflineUserDataJobErrorEnum.OfflineUserDataJobError offline_user_data_job_error = 119;</code>
+   * @return The offlineUserDataJobError.
    */
   public com.google.ads.googleads.v3.errors.OfflineUserDataJobErrorEnum.OfflineUserDataJobError getOfflineUserDataJobError() {
     if (errorCodeCase_ == 119) {
@@ -4141,6 +4349,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.NotWhitelistedErrorEnum.NotWhitelistedError not_whitelisted_error = 120;</code>
+   * @return The enum numeric value on the wire for notWhitelistedError.
    */
   public int getNotWhitelistedErrorValue() {
     if (errorCodeCase_ == 120) {
@@ -4154,6 +4363,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.NotWhitelistedErrorEnum.NotWhitelistedError not_whitelisted_error = 120;</code>
+   * @return The notWhitelistedError.
    */
   public com.google.ads.googleads.v3.errors.NotWhitelistedErrorEnum.NotWhitelistedError getNotWhitelistedError() {
     if (errorCodeCase_ == 120) {
@@ -4172,6 +4382,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.ManagerLinkErrorEnum.ManagerLinkError manager_link_error = 121;</code>
+   * @return The enum numeric value on the wire for managerLinkError.
    */
   public int getManagerLinkErrorValue() {
     if (errorCodeCase_ == 121) {
@@ -4185,6 +4396,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.ManagerLinkErrorEnum.ManagerLinkError manager_link_error = 121;</code>
+   * @return The managerLinkError.
    */
   public com.google.ads.googleads.v3.errors.ManagerLinkErrorEnum.ManagerLinkError getManagerLinkError() {
     if (errorCodeCase_ == 121) {
@@ -4203,6 +4415,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.CurrencyCodeErrorEnum.CurrencyCodeError currency_code_error = 122;</code>
+   * @return The enum numeric value on the wire for currencyCodeError.
    */
   public int getCurrencyCodeErrorValue() {
     if (errorCodeCase_ == 122) {
@@ -4216,6 +4429,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.CurrencyCodeErrorEnum.CurrencyCodeError currency_code_error = 122;</code>
+   * @return The currencyCodeError.
    */
   public com.google.ads.googleads.v3.errors.CurrencyCodeErrorEnum.CurrencyCodeError getCurrencyCodeError() {
     if (errorCodeCase_ == 122) {
@@ -4234,6 +4448,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.AccessInvitationErrorEnum.AccessInvitationError access_invitation_error = 124;</code>
+   * @return The enum numeric value on the wire for accessInvitationError.
    */
   public int getAccessInvitationErrorValue() {
     if (errorCodeCase_ == 124) {
@@ -4247,6 +4462,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.AccessInvitationErrorEnum.AccessInvitationError access_invitation_error = 124;</code>
+   * @return The accessInvitationError.
    */
   public com.google.ads.googleads.v3.errors.AccessInvitationErrorEnum.AccessInvitationError getAccessInvitationError() {
     if (errorCodeCase_ == 124) {
@@ -4265,6 +4481,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.ReachPlanErrorEnum.ReachPlanError reach_plan_error = 125;</code>
+   * @return The enum numeric value on the wire for reachPlanError.
    */
   public int getReachPlanErrorValue() {
     if (errorCodeCase_ == 125) {
@@ -4278,6 +4495,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.ReachPlanErrorEnum.ReachPlanError reach_plan_error = 125;</code>
+   * @return The reachPlanError.
    */
   public com.google.ads.googleads.v3.errors.ReachPlanErrorEnum.ReachPlanError getReachPlanError() {
     if (errorCodeCase_ == 125) {
@@ -4296,6 +4514,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.InvoiceErrorEnum.InvoiceError invoice_error = 126;</code>
+   * @return The enum numeric value on the wire for invoiceError.
    */
   public int getInvoiceErrorValue() {
     if (errorCodeCase_ == 126) {
@@ -4309,6 +4528,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.InvoiceErrorEnum.InvoiceError invoice_error = 126;</code>
+   * @return The invoiceError.
    */
   public com.google.ads.googleads.v3.errors.InvoiceErrorEnum.InvoiceError getInvoiceError() {
     if (errorCodeCase_ == 126) {
@@ -4327,6 +4547,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.PaymentsAccountErrorEnum.PaymentsAccountError payments_account_error = 127;</code>
+   * @return The enum numeric value on the wire for paymentsAccountError.
    */
   public int getPaymentsAccountErrorValue() {
     if (errorCodeCase_ == 127) {
@@ -4340,6 +4561,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.PaymentsAccountErrorEnum.PaymentsAccountError payments_account_error = 127;</code>
+   * @return The paymentsAccountError.
    */
   public com.google.ads.googleads.v3.errors.PaymentsAccountErrorEnum.PaymentsAccountError getPaymentsAccountError() {
     if (errorCodeCase_ == 127) {
@@ -4358,6 +4580,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.TimeZoneErrorEnum.TimeZoneError time_zone_error = 128;</code>
+   * @return The enum numeric value on the wire for timeZoneError.
    */
   public int getTimeZoneErrorValue() {
     if (errorCodeCase_ == 128) {
@@ -4371,6 +4594,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.TimeZoneErrorEnum.TimeZoneError time_zone_error = 128;</code>
+   * @return The timeZoneError.
    */
   public com.google.ads.googleads.v3.errors.TimeZoneErrorEnum.TimeZoneError getTimeZoneError() {
     if (errorCodeCase_ == 128) {
@@ -4389,6 +4613,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.AssetLinkErrorEnum.AssetLinkError asset_link_error = 129;</code>
+   * @return The enum numeric value on the wire for assetLinkError.
    */
   public int getAssetLinkErrorValue() {
     if (errorCodeCase_ == 129) {
@@ -4402,6 +4627,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.AssetLinkErrorEnum.AssetLinkError asset_link_error = 129;</code>
+   * @return The assetLinkError.
    */
   public com.google.ads.googleads.v3.errors.AssetLinkErrorEnum.AssetLinkError getAssetLinkError() {
     if (errorCodeCase_ == 129) {
@@ -4420,6 +4646,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.UserDataErrorEnum.UserDataError user_data_error = 130;</code>
+   * @return The enum numeric value on the wire for userDataError.
    */
   public int getUserDataErrorValue() {
     if (errorCodeCase_ == 130) {
@@ -4433,6 +4660,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.UserDataErrorEnum.UserDataError user_data_error = 130;</code>
+   * @return The userDataError.
    */
   public com.google.ads.googleads.v3.errors.UserDataErrorEnum.UserDataError getUserDataError() {
     if (errorCodeCase_ == 130) {
@@ -7213,7 +7441,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.RequestErrorEnum.RequestError request_error = 1;</code>
+     * @return The enum numeric value on the wire for requestError.
      */
+    @java.lang.Override
     public int getRequestErrorValue() {
       if (errorCodeCase_ == 1) {
         return ((java.lang.Integer) errorCode_).intValue();
@@ -7226,6 +7456,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.RequestErrorEnum.RequestError request_error = 1;</code>
+     * @param value The enum numeric value on the wire for requestError to set.
+     * @return This builder for chaining.
      */
     public Builder setRequestErrorValue(int value) {
       errorCodeCase_ = 1;
@@ -7239,7 +7471,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.RequestErrorEnum.RequestError request_error = 1;</code>
+     * @return The requestError.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.errors.RequestErrorEnum.RequestError getRequestError() {
       if (errorCodeCase_ == 1) {
         @SuppressWarnings("deprecation")
@@ -7255,6 +7489,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.RequestErrorEnum.RequestError request_error = 1;</code>
+     * @param value The requestError to set.
+     * @return This builder for chaining.
      */
     public Builder setRequestError(com.google.ads.googleads.v3.errors.RequestErrorEnum.RequestError value) {
       if (value == null) {
@@ -7271,6 +7507,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.RequestErrorEnum.RequestError request_error = 1;</code>
+     * @return This builder for chaining.
      */
     public Builder clearRequestError() {
       if (errorCodeCase_ == 1) {
@@ -7287,7 +7524,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.BiddingStrategyErrorEnum.BiddingStrategyError bidding_strategy_error = 2;</code>
+     * @return The enum numeric value on the wire for biddingStrategyError.
      */
+    @java.lang.Override
     public int getBiddingStrategyErrorValue() {
       if (errorCodeCase_ == 2) {
         return ((java.lang.Integer) errorCode_).intValue();
@@ -7300,6 +7539,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.BiddingStrategyErrorEnum.BiddingStrategyError bidding_strategy_error = 2;</code>
+     * @param value The enum numeric value on the wire for biddingStrategyError to set.
+     * @return This builder for chaining.
      */
     public Builder setBiddingStrategyErrorValue(int value) {
       errorCodeCase_ = 2;
@@ -7313,7 +7554,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.BiddingStrategyErrorEnum.BiddingStrategyError bidding_strategy_error = 2;</code>
+     * @return The biddingStrategyError.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.errors.BiddingStrategyErrorEnum.BiddingStrategyError getBiddingStrategyError() {
       if (errorCodeCase_ == 2) {
         @SuppressWarnings("deprecation")
@@ -7329,6 +7572,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.BiddingStrategyErrorEnum.BiddingStrategyError bidding_strategy_error = 2;</code>
+     * @param value The biddingStrategyError to set.
+     * @return This builder for chaining.
      */
     public Builder setBiddingStrategyError(com.google.ads.googleads.v3.errors.BiddingStrategyErrorEnum.BiddingStrategyError value) {
       if (value == null) {
@@ -7345,6 +7590,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.BiddingStrategyErrorEnum.BiddingStrategyError bidding_strategy_error = 2;</code>
+     * @return This builder for chaining.
      */
     public Builder clearBiddingStrategyError() {
       if (errorCodeCase_ == 2) {
@@ -7361,7 +7607,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.UrlFieldErrorEnum.UrlFieldError url_field_error = 3;</code>
+     * @return The enum numeric value on the wire for urlFieldError.
      */
+    @java.lang.Override
     public int getUrlFieldErrorValue() {
       if (errorCodeCase_ == 3) {
         return ((java.lang.Integer) errorCode_).intValue();
@@ -7374,6 +7622,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.UrlFieldErrorEnum.UrlFieldError url_field_error = 3;</code>
+     * @param value The enum numeric value on the wire for urlFieldError to set.
+     * @return This builder for chaining.
      */
     public Builder setUrlFieldErrorValue(int value) {
       errorCodeCase_ = 3;
@@ -7387,7 +7637,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.UrlFieldErrorEnum.UrlFieldError url_field_error = 3;</code>
+     * @return The urlFieldError.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.errors.UrlFieldErrorEnum.UrlFieldError getUrlFieldError() {
       if (errorCodeCase_ == 3) {
         @SuppressWarnings("deprecation")
@@ -7403,6 +7655,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.UrlFieldErrorEnum.UrlFieldError url_field_error = 3;</code>
+     * @param value The urlFieldError to set.
+     * @return This builder for chaining.
      */
     public Builder setUrlFieldError(com.google.ads.googleads.v3.errors.UrlFieldErrorEnum.UrlFieldError value) {
       if (value == null) {
@@ -7419,6 +7673,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.UrlFieldErrorEnum.UrlFieldError url_field_error = 3;</code>
+     * @return This builder for chaining.
      */
     public Builder clearUrlFieldError() {
       if (errorCodeCase_ == 3) {
@@ -7435,7 +7690,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.ListOperationErrorEnum.ListOperationError list_operation_error = 4;</code>
+     * @return The enum numeric value on the wire for listOperationError.
      */
+    @java.lang.Override
     public int getListOperationErrorValue() {
       if (errorCodeCase_ == 4) {
         return ((java.lang.Integer) errorCode_).intValue();
@@ -7448,6 +7705,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.ListOperationErrorEnum.ListOperationError list_operation_error = 4;</code>
+     * @param value The enum numeric value on the wire for listOperationError to set.
+     * @return This builder for chaining.
      */
     public Builder setListOperationErrorValue(int value) {
       errorCodeCase_ = 4;
@@ -7461,7 +7720,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.ListOperationErrorEnum.ListOperationError list_operation_error = 4;</code>
+     * @return The listOperationError.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.errors.ListOperationErrorEnum.ListOperationError getListOperationError() {
       if (errorCodeCase_ == 4) {
         @SuppressWarnings("deprecation")
@@ -7477,6 +7738,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.ListOperationErrorEnum.ListOperationError list_operation_error = 4;</code>
+     * @param value The listOperationError to set.
+     * @return This builder for chaining.
      */
     public Builder setListOperationError(com.google.ads.googleads.v3.errors.ListOperationErrorEnum.ListOperationError value) {
       if (value == null) {
@@ -7493,6 +7756,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.ListOperationErrorEnum.ListOperationError list_operation_error = 4;</code>
+     * @return This builder for chaining.
      */
     public Builder clearListOperationError() {
       if (errorCodeCase_ == 4) {
@@ -7509,7 +7773,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.QueryErrorEnum.QueryError query_error = 5;</code>
+     * @return The enum numeric value on the wire for queryError.
      */
+    @java.lang.Override
     public int getQueryErrorValue() {
       if (errorCodeCase_ == 5) {
         return ((java.lang.Integer) errorCode_).intValue();
@@ -7522,6 +7788,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.QueryErrorEnum.QueryError query_error = 5;</code>
+     * @param value The enum numeric value on the wire for queryError to set.
+     * @return This builder for chaining.
      */
     public Builder setQueryErrorValue(int value) {
       errorCodeCase_ = 5;
@@ -7535,7 +7803,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.QueryErrorEnum.QueryError query_error = 5;</code>
+     * @return The queryError.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.errors.QueryErrorEnum.QueryError getQueryError() {
       if (errorCodeCase_ == 5) {
         @SuppressWarnings("deprecation")
@@ -7551,6 +7821,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.QueryErrorEnum.QueryError query_error = 5;</code>
+     * @param value The queryError to set.
+     * @return This builder for chaining.
      */
     public Builder setQueryError(com.google.ads.googleads.v3.errors.QueryErrorEnum.QueryError value) {
       if (value == null) {
@@ -7567,6 +7839,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.QueryErrorEnum.QueryError query_error = 5;</code>
+     * @return This builder for chaining.
      */
     public Builder clearQueryError() {
       if (errorCodeCase_ == 5) {
@@ -7583,7 +7856,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.MutateErrorEnum.MutateError mutate_error = 7;</code>
+     * @return The enum numeric value on the wire for mutateError.
      */
+    @java.lang.Override
     public int getMutateErrorValue() {
       if (errorCodeCase_ == 7) {
         return ((java.lang.Integer) errorCode_).intValue();
@@ -7596,6 +7871,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.MutateErrorEnum.MutateError mutate_error = 7;</code>
+     * @param value The enum numeric value on the wire for mutateError to set.
+     * @return This builder for chaining.
      */
     public Builder setMutateErrorValue(int value) {
       errorCodeCase_ = 7;
@@ -7609,7 +7886,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.MutateErrorEnum.MutateError mutate_error = 7;</code>
+     * @return The mutateError.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.errors.MutateErrorEnum.MutateError getMutateError() {
       if (errorCodeCase_ == 7) {
         @SuppressWarnings("deprecation")
@@ -7625,6 +7904,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.MutateErrorEnum.MutateError mutate_error = 7;</code>
+     * @param value The mutateError to set.
+     * @return This builder for chaining.
      */
     public Builder setMutateError(com.google.ads.googleads.v3.errors.MutateErrorEnum.MutateError value) {
       if (value == null) {
@@ -7641,6 +7922,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.MutateErrorEnum.MutateError mutate_error = 7;</code>
+     * @return This builder for chaining.
      */
     public Builder clearMutateError() {
       if (errorCodeCase_ == 7) {
@@ -7657,7 +7939,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.FieldMaskErrorEnum.FieldMaskError field_mask_error = 8;</code>
+     * @return The enum numeric value on the wire for fieldMaskError.
      */
+    @java.lang.Override
     public int getFieldMaskErrorValue() {
       if (errorCodeCase_ == 8) {
         return ((java.lang.Integer) errorCode_).intValue();
@@ -7670,6 +7954,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.FieldMaskErrorEnum.FieldMaskError field_mask_error = 8;</code>
+     * @param value The enum numeric value on the wire for fieldMaskError to set.
+     * @return This builder for chaining.
      */
     public Builder setFieldMaskErrorValue(int value) {
       errorCodeCase_ = 8;
@@ -7683,7 +7969,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.FieldMaskErrorEnum.FieldMaskError field_mask_error = 8;</code>
+     * @return The fieldMaskError.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.errors.FieldMaskErrorEnum.FieldMaskError getFieldMaskError() {
       if (errorCodeCase_ == 8) {
         @SuppressWarnings("deprecation")
@@ -7699,6 +7987,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.FieldMaskErrorEnum.FieldMaskError field_mask_error = 8;</code>
+     * @param value The fieldMaskError to set.
+     * @return This builder for chaining.
      */
     public Builder setFieldMaskError(com.google.ads.googleads.v3.errors.FieldMaskErrorEnum.FieldMaskError value) {
       if (value == null) {
@@ -7715,6 +8005,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.FieldMaskErrorEnum.FieldMaskError field_mask_error = 8;</code>
+     * @return This builder for chaining.
      */
     public Builder clearFieldMaskError() {
       if (errorCodeCase_ == 8) {
@@ -7731,7 +8022,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.AuthorizationErrorEnum.AuthorizationError authorization_error = 9;</code>
+     * @return The enum numeric value on the wire for authorizationError.
      */
+    @java.lang.Override
     public int getAuthorizationErrorValue() {
       if (errorCodeCase_ == 9) {
         return ((java.lang.Integer) errorCode_).intValue();
@@ -7744,6 +8037,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.AuthorizationErrorEnum.AuthorizationError authorization_error = 9;</code>
+     * @param value The enum numeric value on the wire for authorizationError to set.
+     * @return This builder for chaining.
      */
     public Builder setAuthorizationErrorValue(int value) {
       errorCodeCase_ = 9;
@@ -7757,7 +8052,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.AuthorizationErrorEnum.AuthorizationError authorization_error = 9;</code>
+     * @return The authorizationError.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.errors.AuthorizationErrorEnum.AuthorizationError getAuthorizationError() {
       if (errorCodeCase_ == 9) {
         @SuppressWarnings("deprecation")
@@ -7773,6 +8070,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.AuthorizationErrorEnum.AuthorizationError authorization_error = 9;</code>
+     * @param value The authorizationError to set.
+     * @return This builder for chaining.
      */
     public Builder setAuthorizationError(com.google.ads.googleads.v3.errors.AuthorizationErrorEnum.AuthorizationError value) {
       if (value == null) {
@@ -7789,6 +8088,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.AuthorizationErrorEnum.AuthorizationError authorization_error = 9;</code>
+     * @return This builder for chaining.
      */
     public Builder clearAuthorizationError() {
       if (errorCodeCase_ == 9) {
@@ -7805,7 +8105,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.InternalErrorEnum.InternalError internal_error = 10;</code>
+     * @return The enum numeric value on the wire for internalError.
      */
+    @java.lang.Override
     public int getInternalErrorValue() {
       if (errorCodeCase_ == 10) {
         return ((java.lang.Integer) errorCode_).intValue();
@@ -7818,6 +8120,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.InternalErrorEnum.InternalError internal_error = 10;</code>
+     * @param value The enum numeric value on the wire for internalError to set.
+     * @return This builder for chaining.
      */
     public Builder setInternalErrorValue(int value) {
       errorCodeCase_ = 10;
@@ -7831,7 +8135,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.InternalErrorEnum.InternalError internal_error = 10;</code>
+     * @return The internalError.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.errors.InternalErrorEnum.InternalError getInternalError() {
       if (errorCodeCase_ == 10) {
         @SuppressWarnings("deprecation")
@@ -7847,6 +8153,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.InternalErrorEnum.InternalError internal_error = 10;</code>
+     * @param value The internalError to set.
+     * @return This builder for chaining.
      */
     public Builder setInternalError(com.google.ads.googleads.v3.errors.InternalErrorEnum.InternalError value) {
       if (value == null) {
@@ -7863,6 +8171,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.InternalErrorEnum.InternalError internal_error = 10;</code>
+     * @return This builder for chaining.
      */
     public Builder clearInternalError() {
       if (errorCodeCase_ == 10) {
@@ -7879,7 +8188,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.QuotaErrorEnum.QuotaError quota_error = 11;</code>
+     * @return The enum numeric value on the wire for quotaError.
      */
+    @java.lang.Override
     public int getQuotaErrorValue() {
       if (errorCodeCase_ == 11) {
         return ((java.lang.Integer) errorCode_).intValue();
@@ -7892,6 +8203,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.QuotaErrorEnum.QuotaError quota_error = 11;</code>
+     * @param value The enum numeric value on the wire for quotaError to set.
+     * @return This builder for chaining.
      */
     public Builder setQuotaErrorValue(int value) {
       errorCodeCase_ = 11;
@@ -7905,7 +8218,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.QuotaErrorEnum.QuotaError quota_error = 11;</code>
+     * @return The quotaError.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.errors.QuotaErrorEnum.QuotaError getQuotaError() {
       if (errorCodeCase_ == 11) {
         @SuppressWarnings("deprecation")
@@ -7921,6 +8236,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.QuotaErrorEnum.QuotaError quota_error = 11;</code>
+     * @param value The quotaError to set.
+     * @return This builder for chaining.
      */
     public Builder setQuotaError(com.google.ads.googleads.v3.errors.QuotaErrorEnum.QuotaError value) {
       if (value == null) {
@@ -7937,6 +8254,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.QuotaErrorEnum.QuotaError quota_error = 11;</code>
+     * @return This builder for chaining.
      */
     public Builder clearQuotaError() {
       if (errorCodeCase_ == 11) {
@@ -7953,7 +8271,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.AdErrorEnum.AdError ad_error = 12;</code>
+     * @return The enum numeric value on the wire for adError.
      */
+    @java.lang.Override
     public int getAdErrorValue() {
       if (errorCodeCase_ == 12) {
         return ((java.lang.Integer) errorCode_).intValue();
@@ -7966,6 +8286,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.AdErrorEnum.AdError ad_error = 12;</code>
+     * @param value The enum numeric value on the wire for adError to set.
+     * @return This builder for chaining.
      */
     public Builder setAdErrorValue(int value) {
       errorCodeCase_ = 12;
@@ -7979,7 +8301,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.AdErrorEnum.AdError ad_error = 12;</code>
+     * @return The adError.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.errors.AdErrorEnum.AdError getAdError() {
       if (errorCodeCase_ == 12) {
         @SuppressWarnings("deprecation")
@@ -7995,6 +8319,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.AdErrorEnum.AdError ad_error = 12;</code>
+     * @param value The adError to set.
+     * @return This builder for chaining.
      */
     public Builder setAdError(com.google.ads.googleads.v3.errors.AdErrorEnum.AdError value) {
       if (value == null) {
@@ -8011,6 +8337,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.AdErrorEnum.AdError ad_error = 12;</code>
+     * @return This builder for chaining.
      */
     public Builder clearAdError() {
       if (errorCodeCase_ == 12) {
@@ -8027,7 +8354,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.AdGroupErrorEnum.AdGroupError ad_group_error = 13;</code>
+     * @return The enum numeric value on the wire for adGroupError.
      */
+    @java.lang.Override
     public int getAdGroupErrorValue() {
       if (errorCodeCase_ == 13) {
         return ((java.lang.Integer) errorCode_).intValue();
@@ -8040,6 +8369,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.AdGroupErrorEnum.AdGroupError ad_group_error = 13;</code>
+     * @param value The enum numeric value on the wire for adGroupError to set.
+     * @return This builder for chaining.
      */
     public Builder setAdGroupErrorValue(int value) {
       errorCodeCase_ = 13;
@@ -8053,7 +8384,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.AdGroupErrorEnum.AdGroupError ad_group_error = 13;</code>
+     * @return The adGroupError.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.errors.AdGroupErrorEnum.AdGroupError getAdGroupError() {
       if (errorCodeCase_ == 13) {
         @SuppressWarnings("deprecation")
@@ -8069,6 +8402,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.AdGroupErrorEnum.AdGroupError ad_group_error = 13;</code>
+     * @param value The adGroupError to set.
+     * @return This builder for chaining.
      */
     public Builder setAdGroupError(com.google.ads.googleads.v3.errors.AdGroupErrorEnum.AdGroupError value) {
       if (value == null) {
@@ -8085,6 +8420,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.AdGroupErrorEnum.AdGroupError ad_group_error = 13;</code>
+     * @return This builder for chaining.
      */
     public Builder clearAdGroupError() {
       if (errorCodeCase_ == 13) {
@@ -8101,7 +8437,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.CampaignBudgetErrorEnum.CampaignBudgetError campaign_budget_error = 14;</code>
+     * @return The enum numeric value on the wire for campaignBudgetError.
      */
+    @java.lang.Override
     public int getCampaignBudgetErrorValue() {
       if (errorCodeCase_ == 14) {
         return ((java.lang.Integer) errorCode_).intValue();
@@ -8114,6 +8452,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.CampaignBudgetErrorEnum.CampaignBudgetError campaign_budget_error = 14;</code>
+     * @param value The enum numeric value on the wire for campaignBudgetError to set.
+     * @return This builder for chaining.
      */
     public Builder setCampaignBudgetErrorValue(int value) {
       errorCodeCase_ = 14;
@@ -8127,7 +8467,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.CampaignBudgetErrorEnum.CampaignBudgetError campaign_budget_error = 14;</code>
+     * @return The campaignBudgetError.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.errors.CampaignBudgetErrorEnum.CampaignBudgetError getCampaignBudgetError() {
       if (errorCodeCase_ == 14) {
         @SuppressWarnings("deprecation")
@@ -8143,6 +8485,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.CampaignBudgetErrorEnum.CampaignBudgetError campaign_budget_error = 14;</code>
+     * @param value The campaignBudgetError to set.
+     * @return This builder for chaining.
      */
     public Builder setCampaignBudgetError(com.google.ads.googleads.v3.errors.CampaignBudgetErrorEnum.CampaignBudgetError value) {
       if (value == null) {
@@ -8159,6 +8503,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.CampaignBudgetErrorEnum.CampaignBudgetError campaign_budget_error = 14;</code>
+     * @return This builder for chaining.
      */
     public Builder clearCampaignBudgetError() {
       if (errorCodeCase_ == 14) {
@@ -8175,7 +8520,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.CampaignErrorEnum.CampaignError campaign_error = 15;</code>
+     * @return The enum numeric value on the wire for campaignError.
      */
+    @java.lang.Override
     public int getCampaignErrorValue() {
       if (errorCodeCase_ == 15) {
         return ((java.lang.Integer) errorCode_).intValue();
@@ -8188,6 +8535,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.CampaignErrorEnum.CampaignError campaign_error = 15;</code>
+     * @param value The enum numeric value on the wire for campaignError to set.
+     * @return This builder for chaining.
      */
     public Builder setCampaignErrorValue(int value) {
       errorCodeCase_ = 15;
@@ -8201,7 +8550,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.CampaignErrorEnum.CampaignError campaign_error = 15;</code>
+     * @return The campaignError.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.errors.CampaignErrorEnum.CampaignError getCampaignError() {
       if (errorCodeCase_ == 15) {
         @SuppressWarnings("deprecation")
@@ -8217,6 +8568,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.CampaignErrorEnum.CampaignError campaign_error = 15;</code>
+     * @param value The campaignError to set.
+     * @return This builder for chaining.
      */
     public Builder setCampaignError(com.google.ads.googleads.v3.errors.CampaignErrorEnum.CampaignError value) {
       if (value == null) {
@@ -8233,6 +8586,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.CampaignErrorEnum.CampaignError campaign_error = 15;</code>
+     * @return This builder for chaining.
      */
     public Builder clearCampaignError() {
       if (errorCodeCase_ == 15) {
@@ -8249,7 +8603,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.AuthenticationErrorEnum.AuthenticationError authentication_error = 17;</code>
+     * @return The enum numeric value on the wire for authenticationError.
      */
+    @java.lang.Override
     public int getAuthenticationErrorValue() {
       if (errorCodeCase_ == 17) {
         return ((java.lang.Integer) errorCode_).intValue();
@@ -8262,6 +8618,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.AuthenticationErrorEnum.AuthenticationError authentication_error = 17;</code>
+     * @param value The enum numeric value on the wire for authenticationError to set.
+     * @return This builder for chaining.
      */
     public Builder setAuthenticationErrorValue(int value) {
       errorCodeCase_ = 17;
@@ -8275,7 +8633,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.AuthenticationErrorEnum.AuthenticationError authentication_error = 17;</code>
+     * @return The authenticationError.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.errors.AuthenticationErrorEnum.AuthenticationError getAuthenticationError() {
       if (errorCodeCase_ == 17) {
         @SuppressWarnings("deprecation")
@@ -8291,6 +8651,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.AuthenticationErrorEnum.AuthenticationError authentication_error = 17;</code>
+     * @param value The authenticationError to set.
+     * @return This builder for chaining.
      */
     public Builder setAuthenticationError(com.google.ads.googleads.v3.errors.AuthenticationErrorEnum.AuthenticationError value) {
       if (value == null) {
@@ -8307,6 +8669,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.AuthenticationErrorEnum.AuthenticationError authentication_error = 17;</code>
+     * @return This builder for chaining.
      */
     public Builder clearAuthenticationError() {
       if (errorCodeCase_ == 17) {
@@ -8323,7 +8686,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.AdGroupCriterionErrorEnum.AdGroupCriterionError ad_group_criterion_error = 18;</code>
+     * @return The enum numeric value on the wire for adGroupCriterionError.
      */
+    @java.lang.Override
     public int getAdGroupCriterionErrorValue() {
       if (errorCodeCase_ == 18) {
         return ((java.lang.Integer) errorCode_).intValue();
@@ -8336,6 +8701,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.AdGroupCriterionErrorEnum.AdGroupCriterionError ad_group_criterion_error = 18;</code>
+     * @param value The enum numeric value on the wire for adGroupCriterionError to set.
+     * @return This builder for chaining.
      */
     public Builder setAdGroupCriterionErrorValue(int value) {
       errorCodeCase_ = 18;
@@ -8349,7 +8716,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.AdGroupCriterionErrorEnum.AdGroupCriterionError ad_group_criterion_error = 18;</code>
+     * @return The adGroupCriterionError.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.errors.AdGroupCriterionErrorEnum.AdGroupCriterionError getAdGroupCriterionError() {
       if (errorCodeCase_ == 18) {
         @SuppressWarnings("deprecation")
@@ -8365,6 +8734,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.AdGroupCriterionErrorEnum.AdGroupCriterionError ad_group_criterion_error = 18;</code>
+     * @param value The adGroupCriterionError to set.
+     * @return This builder for chaining.
      */
     public Builder setAdGroupCriterionError(com.google.ads.googleads.v3.errors.AdGroupCriterionErrorEnum.AdGroupCriterionError value) {
       if (value == null) {
@@ -8381,6 +8752,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.AdGroupCriterionErrorEnum.AdGroupCriterionError ad_group_criterion_error = 18;</code>
+     * @return This builder for chaining.
      */
     public Builder clearAdGroupCriterionError() {
       if (errorCodeCase_ == 18) {
@@ -8397,7 +8769,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.AdCustomizerErrorEnum.AdCustomizerError ad_customizer_error = 19;</code>
+     * @return The enum numeric value on the wire for adCustomizerError.
      */
+    @java.lang.Override
     public int getAdCustomizerErrorValue() {
       if (errorCodeCase_ == 19) {
         return ((java.lang.Integer) errorCode_).intValue();
@@ -8410,6 +8784,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.AdCustomizerErrorEnum.AdCustomizerError ad_customizer_error = 19;</code>
+     * @param value The enum numeric value on the wire for adCustomizerError to set.
+     * @return This builder for chaining.
      */
     public Builder setAdCustomizerErrorValue(int value) {
       errorCodeCase_ = 19;
@@ -8423,7 +8799,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.AdCustomizerErrorEnum.AdCustomizerError ad_customizer_error = 19;</code>
+     * @return The adCustomizerError.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.errors.AdCustomizerErrorEnum.AdCustomizerError getAdCustomizerError() {
       if (errorCodeCase_ == 19) {
         @SuppressWarnings("deprecation")
@@ -8439,6 +8817,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.AdCustomizerErrorEnum.AdCustomizerError ad_customizer_error = 19;</code>
+     * @param value The adCustomizerError to set.
+     * @return This builder for chaining.
      */
     public Builder setAdCustomizerError(com.google.ads.googleads.v3.errors.AdCustomizerErrorEnum.AdCustomizerError value) {
       if (value == null) {
@@ -8455,6 +8835,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.AdCustomizerErrorEnum.AdCustomizerError ad_customizer_error = 19;</code>
+     * @return This builder for chaining.
      */
     public Builder clearAdCustomizerError() {
       if (errorCodeCase_ == 19) {
@@ -8471,7 +8852,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.AdGroupAdErrorEnum.AdGroupAdError ad_group_ad_error = 21;</code>
+     * @return The enum numeric value on the wire for adGroupAdError.
      */
+    @java.lang.Override
     public int getAdGroupAdErrorValue() {
       if (errorCodeCase_ == 21) {
         return ((java.lang.Integer) errorCode_).intValue();
@@ -8484,6 +8867,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.AdGroupAdErrorEnum.AdGroupAdError ad_group_ad_error = 21;</code>
+     * @param value The enum numeric value on the wire for adGroupAdError to set.
+     * @return This builder for chaining.
      */
     public Builder setAdGroupAdErrorValue(int value) {
       errorCodeCase_ = 21;
@@ -8497,7 +8882,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.AdGroupAdErrorEnum.AdGroupAdError ad_group_ad_error = 21;</code>
+     * @return The adGroupAdError.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.errors.AdGroupAdErrorEnum.AdGroupAdError getAdGroupAdError() {
       if (errorCodeCase_ == 21) {
         @SuppressWarnings("deprecation")
@@ -8513,6 +8900,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.AdGroupAdErrorEnum.AdGroupAdError ad_group_ad_error = 21;</code>
+     * @param value The adGroupAdError to set.
+     * @return This builder for chaining.
      */
     public Builder setAdGroupAdError(com.google.ads.googleads.v3.errors.AdGroupAdErrorEnum.AdGroupAdError value) {
       if (value == null) {
@@ -8529,6 +8918,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.AdGroupAdErrorEnum.AdGroupAdError ad_group_ad_error = 21;</code>
+     * @return This builder for chaining.
      */
     public Builder clearAdGroupAdError() {
       if (errorCodeCase_ == 21) {
@@ -8545,7 +8935,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.AdSharingErrorEnum.AdSharingError ad_sharing_error = 24;</code>
+     * @return The enum numeric value on the wire for adSharingError.
      */
+    @java.lang.Override
     public int getAdSharingErrorValue() {
       if (errorCodeCase_ == 24) {
         return ((java.lang.Integer) errorCode_).intValue();
@@ -8558,6 +8950,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.AdSharingErrorEnum.AdSharingError ad_sharing_error = 24;</code>
+     * @param value The enum numeric value on the wire for adSharingError to set.
+     * @return This builder for chaining.
      */
     public Builder setAdSharingErrorValue(int value) {
       errorCodeCase_ = 24;
@@ -8571,7 +8965,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.AdSharingErrorEnum.AdSharingError ad_sharing_error = 24;</code>
+     * @return The adSharingError.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.errors.AdSharingErrorEnum.AdSharingError getAdSharingError() {
       if (errorCodeCase_ == 24) {
         @SuppressWarnings("deprecation")
@@ -8587,6 +8983,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.AdSharingErrorEnum.AdSharingError ad_sharing_error = 24;</code>
+     * @param value The adSharingError to set.
+     * @return This builder for chaining.
      */
     public Builder setAdSharingError(com.google.ads.googleads.v3.errors.AdSharingErrorEnum.AdSharingError value) {
       if (value == null) {
@@ -8603,6 +9001,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.AdSharingErrorEnum.AdSharingError ad_sharing_error = 24;</code>
+     * @return This builder for chaining.
      */
     public Builder clearAdSharingError() {
       if (errorCodeCase_ == 24) {
@@ -8619,7 +9018,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.AdxErrorEnum.AdxError adx_error = 25;</code>
+     * @return The enum numeric value on the wire for adxError.
      */
+    @java.lang.Override
     public int getAdxErrorValue() {
       if (errorCodeCase_ == 25) {
         return ((java.lang.Integer) errorCode_).intValue();
@@ -8632,6 +9033,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.AdxErrorEnum.AdxError adx_error = 25;</code>
+     * @param value The enum numeric value on the wire for adxError to set.
+     * @return This builder for chaining.
      */
     public Builder setAdxErrorValue(int value) {
       errorCodeCase_ = 25;
@@ -8645,7 +9048,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.AdxErrorEnum.AdxError adx_error = 25;</code>
+     * @return The adxError.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.errors.AdxErrorEnum.AdxError getAdxError() {
       if (errorCodeCase_ == 25) {
         @SuppressWarnings("deprecation")
@@ -8661,6 +9066,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.AdxErrorEnum.AdxError adx_error = 25;</code>
+     * @param value The adxError to set.
+     * @return This builder for chaining.
      */
     public Builder setAdxError(com.google.ads.googleads.v3.errors.AdxErrorEnum.AdxError value) {
       if (value == null) {
@@ -8677,6 +9084,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.AdxErrorEnum.AdxError adx_error = 25;</code>
+     * @return This builder for chaining.
      */
     public Builder clearAdxError() {
       if (errorCodeCase_ == 25) {
@@ -8693,7 +9101,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.AssetErrorEnum.AssetError asset_error = 107;</code>
+     * @return The enum numeric value on the wire for assetError.
      */
+    @java.lang.Override
     public int getAssetErrorValue() {
       if (errorCodeCase_ == 107) {
         return ((java.lang.Integer) errorCode_).intValue();
@@ -8706,6 +9116,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.AssetErrorEnum.AssetError asset_error = 107;</code>
+     * @param value The enum numeric value on the wire for assetError to set.
+     * @return This builder for chaining.
      */
     public Builder setAssetErrorValue(int value) {
       errorCodeCase_ = 107;
@@ -8719,7 +9131,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.AssetErrorEnum.AssetError asset_error = 107;</code>
+     * @return The assetError.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.errors.AssetErrorEnum.AssetError getAssetError() {
       if (errorCodeCase_ == 107) {
         @SuppressWarnings("deprecation")
@@ -8735,6 +9149,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.AssetErrorEnum.AssetError asset_error = 107;</code>
+     * @param value The assetError to set.
+     * @return This builder for chaining.
      */
     public Builder setAssetError(com.google.ads.googleads.v3.errors.AssetErrorEnum.AssetError value) {
       if (value == null) {
@@ -8751,6 +9167,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.AssetErrorEnum.AssetError asset_error = 107;</code>
+     * @return This builder for chaining.
      */
     public Builder clearAssetError() {
       if (errorCodeCase_ == 107) {
@@ -8767,7 +9184,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.BiddingErrorEnum.BiddingError bidding_error = 26;</code>
+     * @return The enum numeric value on the wire for biddingError.
      */
+    @java.lang.Override
     public int getBiddingErrorValue() {
       if (errorCodeCase_ == 26) {
         return ((java.lang.Integer) errorCode_).intValue();
@@ -8780,6 +9199,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.BiddingErrorEnum.BiddingError bidding_error = 26;</code>
+     * @param value The enum numeric value on the wire for biddingError to set.
+     * @return This builder for chaining.
      */
     public Builder setBiddingErrorValue(int value) {
       errorCodeCase_ = 26;
@@ -8793,7 +9214,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.BiddingErrorEnum.BiddingError bidding_error = 26;</code>
+     * @return The biddingError.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.errors.BiddingErrorEnum.BiddingError getBiddingError() {
       if (errorCodeCase_ == 26) {
         @SuppressWarnings("deprecation")
@@ -8809,6 +9232,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.BiddingErrorEnum.BiddingError bidding_error = 26;</code>
+     * @param value The biddingError to set.
+     * @return This builder for chaining.
      */
     public Builder setBiddingError(com.google.ads.googleads.v3.errors.BiddingErrorEnum.BiddingError value) {
       if (value == null) {
@@ -8825,6 +9250,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.BiddingErrorEnum.BiddingError bidding_error = 26;</code>
+     * @return This builder for chaining.
      */
     public Builder clearBiddingError() {
       if (errorCodeCase_ == 26) {
@@ -8841,7 +9267,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.CampaignCriterionErrorEnum.CampaignCriterionError campaign_criterion_error = 29;</code>
+     * @return The enum numeric value on the wire for campaignCriterionError.
      */
+    @java.lang.Override
     public int getCampaignCriterionErrorValue() {
       if (errorCodeCase_ == 29) {
         return ((java.lang.Integer) errorCode_).intValue();
@@ -8854,6 +9282,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.CampaignCriterionErrorEnum.CampaignCriterionError campaign_criterion_error = 29;</code>
+     * @param value The enum numeric value on the wire for campaignCriterionError to set.
+     * @return This builder for chaining.
      */
     public Builder setCampaignCriterionErrorValue(int value) {
       errorCodeCase_ = 29;
@@ -8867,7 +9297,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.CampaignCriterionErrorEnum.CampaignCriterionError campaign_criterion_error = 29;</code>
+     * @return The campaignCriterionError.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.errors.CampaignCriterionErrorEnum.CampaignCriterionError getCampaignCriterionError() {
       if (errorCodeCase_ == 29) {
         @SuppressWarnings("deprecation")
@@ -8883,6 +9315,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.CampaignCriterionErrorEnum.CampaignCriterionError campaign_criterion_error = 29;</code>
+     * @param value The campaignCriterionError to set.
+     * @return This builder for chaining.
      */
     public Builder setCampaignCriterionError(com.google.ads.googleads.v3.errors.CampaignCriterionErrorEnum.CampaignCriterionError value) {
       if (value == null) {
@@ -8899,6 +9333,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.CampaignCriterionErrorEnum.CampaignCriterionError campaign_criterion_error = 29;</code>
+     * @return This builder for chaining.
      */
     public Builder clearCampaignCriterionError() {
       if (errorCodeCase_ == 29) {
@@ -8915,7 +9350,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.CollectionSizeErrorEnum.CollectionSizeError collection_size_error = 31;</code>
+     * @return The enum numeric value on the wire for collectionSizeError.
      */
+    @java.lang.Override
     public int getCollectionSizeErrorValue() {
       if (errorCodeCase_ == 31) {
         return ((java.lang.Integer) errorCode_).intValue();
@@ -8928,6 +9365,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.CollectionSizeErrorEnum.CollectionSizeError collection_size_error = 31;</code>
+     * @param value The enum numeric value on the wire for collectionSizeError to set.
+     * @return This builder for chaining.
      */
     public Builder setCollectionSizeErrorValue(int value) {
       errorCodeCase_ = 31;
@@ -8941,7 +9380,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.CollectionSizeErrorEnum.CollectionSizeError collection_size_error = 31;</code>
+     * @return The collectionSizeError.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.errors.CollectionSizeErrorEnum.CollectionSizeError getCollectionSizeError() {
       if (errorCodeCase_ == 31) {
         @SuppressWarnings("deprecation")
@@ -8957,6 +9398,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.CollectionSizeErrorEnum.CollectionSizeError collection_size_error = 31;</code>
+     * @param value The collectionSizeError to set.
+     * @return This builder for chaining.
      */
     public Builder setCollectionSizeError(com.google.ads.googleads.v3.errors.CollectionSizeErrorEnum.CollectionSizeError value) {
       if (value == null) {
@@ -8973,6 +9416,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.CollectionSizeErrorEnum.CollectionSizeError collection_size_error = 31;</code>
+     * @return This builder for chaining.
      */
     public Builder clearCollectionSizeError() {
       if (errorCodeCase_ == 31) {
@@ -8989,7 +9433,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.CountryCodeErrorEnum.CountryCodeError country_code_error = 109;</code>
+     * @return The enum numeric value on the wire for countryCodeError.
      */
+    @java.lang.Override
     public int getCountryCodeErrorValue() {
       if (errorCodeCase_ == 109) {
         return ((java.lang.Integer) errorCode_).intValue();
@@ -9002,6 +9448,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.CountryCodeErrorEnum.CountryCodeError country_code_error = 109;</code>
+     * @param value The enum numeric value on the wire for countryCodeError to set.
+     * @return This builder for chaining.
      */
     public Builder setCountryCodeErrorValue(int value) {
       errorCodeCase_ = 109;
@@ -9015,7 +9463,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.CountryCodeErrorEnum.CountryCodeError country_code_error = 109;</code>
+     * @return The countryCodeError.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.errors.CountryCodeErrorEnum.CountryCodeError getCountryCodeError() {
       if (errorCodeCase_ == 109) {
         @SuppressWarnings("deprecation")
@@ -9031,6 +9481,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.CountryCodeErrorEnum.CountryCodeError country_code_error = 109;</code>
+     * @param value The countryCodeError to set.
+     * @return This builder for chaining.
      */
     public Builder setCountryCodeError(com.google.ads.googleads.v3.errors.CountryCodeErrorEnum.CountryCodeError value) {
       if (value == null) {
@@ -9047,6 +9499,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.CountryCodeErrorEnum.CountryCodeError country_code_error = 109;</code>
+     * @return This builder for chaining.
      */
     public Builder clearCountryCodeError() {
       if (errorCodeCase_ == 109) {
@@ -9063,7 +9516,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.CriterionErrorEnum.CriterionError criterion_error = 32;</code>
+     * @return The enum numeric value on the wire for criterionError.
      */
+    @java.lang.Override
     public int getCriterionErrorValue() {
       if (errorCodeCase_ == 32) {
         return ((java.lang.Integer) errorCode_).intValue();
@@ -9076,6 +9531,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.CriterionErrorEnum.CriterionError criterion_error = 32;</code>
+     * @param value The enum numeric value on the wire for criterionError to set.
+     * @return This builder for chaining.
      */
     public Builder setCriterionErrorValue(int value) {
       errorCodeCase_ = 32;
@@ -9089,7 +9546,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.CriterionErrorEnum.CriterionError criterion_error = 32;</code>
+     * @return The criterionError.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.errors.CriterionErrorEnum.CriterionError getCriterionError() {
       if (errorCodeCase_ == 32) {
         @SuppressWarnings("deprecation")
@@ -9105,6 +9564,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.CriterionErrorEnum.CriterionError criterion_error = 32;</code>
+     * @param value The criterionError to set.
+     * @return This builder for chaining.
      */
     public Builder setCriterionError(com.google.ads.googleads.v3.errors.CriterionErrorEnum.CriterionError value) {
       if (value == null) {
@@ -9121,6 +9582,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.CriterionErrorEnum.CriterionError criterion_error = 32;</code>
+     * @return This builder for chaining.
      */
     public Builder clearCriterionError() {
       if (errorCodeCase_ == 32) {
@@ -9137,7 +9599,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.CustomerErrorEnum.CustomerError customer_error = 90;</code>
+     * @return The enum numeric value on the wire for customerError.
      */
+    @java.lang.Override
     public int getCustomerErrorValue() {
       if (errorCodeCase_ == 90) {
         return ((java.lang.Integer) errorCode_).intValue();
@@ -9150,6 +9614,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.CustomerErrorEnum.CustomerError customer_error = 90;</code>
+     * @param value The enum numeric value on the wire for customerError to set.
+     * @return This builder for chaining.
      */
     public Builder setCustomerErrorValue(int value) {
       errorCodeCase_ = 90;
@@ -9163,7 +9629,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.CustomerErrorEnum.CustomerError customer_error = 90;</code>
+     * @return The customerError.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.errors.CustomerErrorEnum.CustomerError getCustomerError() {
       if (errorCodeCase_ == 90) {
         @SuppressWarnings("deprecation")
@@ -9179,6 +9647,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.CustomerErrorEnum.CustomerError customer_error = 90;</code>
+     * @param value The customerError to set.
+     * @return This builder for chaining.
      */
     public Builder setCustomerError(com.google.ads.googleads.v3.errors.CustomerErrorEnum.CustomerError value) {
       if (value == null) {
@@ -9195,6 +9665,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.CustomerErrorEnum.CustomerError customer_error = 90;</code>
+     * @return This builder for chaining.
      */
     public Builder clearCustomerError() {
       if (errorCodeCase_ == 90) {
@@ -9211,7 +9682,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.DateErrorEnum.DateError date_error = 33;</code>
+     * @return The enum numeric value on the wire for dateError.
      */
+    @java.lang.Override
     public int getDateErrorValue() {
       if (errorCodeCase_ == 33) {
         return ((java.lang.Integer) errorCode_).intValue();
@@ -9224,6 +9697,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.DateErrorEnum.DateError date_error = 33;</code>
+     * @param value The enum numeric value on the wire for dateError to set.
+     * @return This builder for chaining.
      */
     public Builder setDateErrorValue(int value) {
       errorCodeCase_ = 33;
@@ -9237,7 +9712,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.DateErrorEnum.DateError date_error = 33;</code>
+     * @return The dateError.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.errors.DateErrorEnum.DateError getDateError() {
       if (errorCodeCase_ == 33) {
         @SuppressWarnings("deprecation")
@@ -9253,6 +9730,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.DateErrorEnum.DateError date_error = 33;</code>
+     * @param value The dateError to set.
+     * @return This builder for chaining.
      */
     public Builder setDateError(com.google.ads.googleads.v3.errors.DateErrorEnum.DateError value) {
       if (value == null) {
@@ -9269,6 +9748,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.DateErrorEnum.DateError date_error = 33;</code>
+     * @return This builder for chaining.
      */
     public Builder clearDateError() {
       if (errorCodeCase_ == 33) {
@@ -9285,7 +9765,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.DateRangeErrorEnum.DateRangeError date_range_error = 34;</code>
+     * @return The enum numeric value on the wire for dateRangeError.
      */
+    @java.lang.Override
     public int getDateRangeErrorValue() {
       if (errorCodeCase_ == 34) {
         return ((java.lang.Integer) errorCode_).intValue();
@@ -9298,6 +9780,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.DateRangeErrorEnum.DateRangeError date_range_error = 34;</code>
+     * @param value The enum numeric value on the wire for dateRangeError to set.
+     * @return This builder for chaining.
      */
     public Builder setDateRangeErrorValue(int value) {
       errorCodeCase_ = 34;
@@ -9311,7 +9795,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.DateRangeErrorEnum.DateRangeError date_range_error = 34;</code>
+     * @return The dateRangeError.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.errors.DateRangeErrorEnum.DateRangeError getDateRangeError() {
       if (errorCodeCase_ == 34) {
         @SuppressWarnings("deprecation")
@@ -9327,6 +9813,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.DateRangeErrorEnum.DateRangeError date_range_error = 34;</code>
+     * @param value The dateRangeError to set.
+     * @return This builder for chaining.
      */
     public Builder setDateRangeError(com.google.ads.googleads.v3.errors.DateRangeErrorEnum.DateRangeError value) {
       if (value == null) {
@@ -9343,6 +9831,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.DateRangeErrorEnum.DateRangeError date_range_error = 34;</code>
+     * @return This builder for chaining.
      */
     public Builder clearDateRangeError() {
       if (errorCodeCase_ == 34) {
@@ -9359,7 +9848,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.DistinctErrorEnum.DistinctError distinct_error = 35;</code>
+     * @return The enum numeric value on the wire for distinctError.
      */
+    @java.lang.Override
     public int getDistinctErrorValue() {
       if (errorCodeCase_ == 35) {
         return ((java.lang.Integer) errorCode_).intValue();
@@ -9372,6 +9863,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.DistinctErrorEnum.DistinctError distinct_error = 35;</code>
+     * @param value The enum numeric value on the wire for distinctError to set.
+     * @return This builder for chaining.
      */
     public Builder setDistinctErrorValue(int value) {
       errorCodeCase_ = 35;
@@ -9385,7 +9878,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.DistinctErrorEnum.DistinctError distinct_error = 35;</code>
+     * @return The distinctError.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.errors.DistinctErrorEnum.DistinctError getDistinctError() {
       if (errorCodeCase_ == 35) {
         @SuppressWarnings("deprecation")
@@ -9401,6 +9896,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.DistinctErrorEnum.DistinctError distinct_error = 35;</code>
+     * @param value The distinctError to set.
+     * @return This builder for chaining.
      */
     public Builder setDistinctError(com.google.ads.googleads.v3.errors.DistinctErrorEnum.DistinctError value) {
       if (value == null) {
@@ -9417,6 +9914,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.DistinctErrorEnum.DistinctError distinct_error = 35;</code>
+     * @return This builder for chaining.
      */
     public Builder clearDistinctError() {
       if (errorCodeCase_ == 35) {
@@ -9433,7 +9931,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.FeedAttributeReferenceErrorEnum.FeedAttributeReferenceError feed_attribute_reference_error = 36;</code>
+     * @return The enum numeric value on the wire for feedAttributeReferenceError.
      */
+    @java.lang.Override
     public int getFeedAttributeReferenceErrorValue() {
       if (errorCodeCase_ == 36) {
         return ((java.lang.Integer) errorCode_).intValue();
@@ -9446,6 +9946,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.FeedAttributeReferenceErrorEnum.FeedAttributeReferenceError feed_attribute_reference_error = 36;</code>
+     * @param value The enum numeric value on the wire for feedAttributeReferenceError to set.
+     * @return This builder for chaining.
      */
     public Builder setFeedAttributeReferenceErrorValue(int value) {
       errorCodeCase_ = 36;
@@ -9459,7 +9961,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.FeedAttributeReferenceErrorEnum.FeedAttributeReferenceError feed_attribute_reference_error = 36;</code>
+     * @return The feedAttributeReferenceError.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.errors.FeedAttributeReferenceErrorEnum.FeedAttributeReferenceError getFeedAttributeReferenceError() {
       if (errorCodeCase_ == 36) {
         @SuppressWarnings("deprecation")
@@ -9475,6 +9979,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.FeedAttributeReferenceErrorEnum.FeedAttributeReferenceError feed_attribute_reference_error = 36;</code>
+     * @param value The feedAttributeReferenceError to set.
+     * @return This builder for chaining.
      */
     public Builder setFeedAttributeReferenceError(com.google.ads.googleads.v3.errors.FeedAttributeReferenceErrorEnum.FeedAttributeReferenceError value) {
       if (value == null) {
@@ -9491,6 +9997,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.FeedAttributeReferenceErrorEnum.FeedAttributeReferenceError feed_attribute_reference_error = 36;</code>
+     * @return This builder for chaining.
      */
     public Builder clearFeedAttributeReferenceError() {
       if (errorCodeCase_ == 36) {
@@ -9507,7 +10014,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.FunctionErrorEnum.FunctionError function_error = 37;</code>
+     * @return The enum numeric value on the wire for functionError.
      */
+    @java.lang.Override
     public int getFunctionErrorValue() {
       if (errorCodeCase_ == 37) {
         return ((java.lang.Integer) errorCode_).intValue();
@@ -9520,6 +10029,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.FunctionErrorEnum.FunctionError function_error = 37;</code>
+     * @param value The enum numeric value on the wire for functionError to set.
+     * @return This builder for chaining.
      */
     public Builder setFunctionErrorValue(int value) {
       errorCodeCase_ = 37;
@@ -9533,7 +10044,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.FunctionErrorEnum.FunctionError function_error = 37;</code>
+     * @return The functionError.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.errors.FunctionErrorEnum.FunctionError getFunctionError() {
       if (errorCodeCase_ == 37) {
         @SuppressWarnings("deprecation")
@@ -9549,6 +10062,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.FunctionErrorEnum.FunctionError function_error = 37;</code>
+     * @param value The functionError to set.
+     * @return This builder for chaining.
      */
     public Builder setFunctionError(com.google.ads.googleads.v3.errors.FunctionErrorEnum.FunctionError value) {
       if (value == null) {
@@ -9565,6 +10080,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.FunctionErrorEnum.FunctionError function_error = 37;</code>
+     * @return This builder for chaining.
      */
     public Builder clearFunctionError() {
       if (errorCodeCase_ == 37) {
@@ -9581,7 +10097,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.FunctionParsingErrorEnum.FunctionParsingError function_parsing_error = 38;</code>
+     * @return The enum numeric value on the wire for functionParsingError.
      */
+    @java.lang.Override
     public int getFunctionParsingErrorValue() {
       if (errorCodeCase_ == 38) {
         return ((java.lang.Integer) errorCode_).intValue();
@@ -9594,6 +10112,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.FunctionParsingErrorEnum.FunctionParsingError function_parsing_error = 38;</code>
+     * @param value The enum numeric value on the wire for functionParsingError to set.
+     * @return This builder for chaining.
      */
     public Builder setFunctionParsingErrorValue(int value) {
       errorCodeCase_ = 38;
@@ -9607,7 +10127,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.FunctionParsingErrorEnum.FunctionParsingError function_parsing_error = 38;</code>
+     * @return The functionParsingError.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.errors.FunctionParsingErrorEnum.FunctionParsingError getFunctionParsingError() {
       if (errorCodeCase_ == 38) {
         @SuppressWarnings("deprecation")
@@ -9623,6 +10145,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.FunctionParsingErrorEnum.FunctionParsingError function_parsing_error = 38;</code>
+     * @param value The functionParsingError to set.
+     * @return This builder for chaining.
      */
     public Builder setFunctionParsingError(com.google.ads.googleads.v3.errors.FunctionParsingErrorEnum.FunctionParsingError value) {
       if (value == null) {
@@ -9639,6 +10163,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.FunctionParsingErrorEnum.FunctionParsingError function_parsing_error = 38;</code>
+     * @return This builder for chaining.
      */
     public Builder clearFunctionParsingError() {
       if (errorCodeCase_ == 38) {
@@ -9655,7 +10180,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.IdErrorEnum.IdError id_error = 39;</code>
+     * @return The enum numeric value on the wire for idError.
      */
+    @java.lang.Override
     public int getIdErrorValue() {
       if (errorCodeCase_ == 39) {
         return ((java.lang.Integer) errorCode_).intValue();
@@ -9668,6 +10195,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.IdErrorEnum.IdError id_error = 39;</code>
+     * @param value The enum numeric value on the wire for idError to set.
+     * @return This builder for chaining.
      */
     public Builder setIdErrorValue(int value) {
       errorCodeCase_ = 39;
@@ -9681,7 +10210,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.IdErrorEnum.IdError id_error = 39;</code>
+     * @return The idError.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.errors.IdErrorEnum.IdError getIdError() {
       if (errorCodeCase_ == 39) {
         @SuppressWarnings("deprecation")
@@ -9697,6 +10228,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.IdErrorEnum.IdError id_error = 39;</code>
+     * @param value The idError to set.
+     * @return This builder for chaining.
      */
     public Builder setIdError(com.google.ads.googleads.v3.errors.IdErrorEnum.IdError value) {
       if (value == null) {
@@ -9713,6 +10246,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.IdErrorEnum.IdError id_error = 39;</code>
+     * @return This builder for chaining.
      */
     public Builder clearIdError() {
       if (errorCodeCase_ == 39) {
@@ -9729,7 +10263,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.ImageErrorEnum.ImageError image_error = 40;</code>
+     * @return The enum numeric value on the wire for imageError.
      */
+    @java.lang.Override
     public int getImageErrorValue() {
       if (errorCodeCase_ == 40) {
         return ((java.lang.Integer) errorCode_).intValue();
@@ -9742,6 +10278,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.ImageErrorEnum.ImageError image_error = 40;</code>
+     * @param value The enum numeric value on the wire for imageError to set.
+     * @return This builder for chaining.
      */
     public Builder setImageErrorValue(int value) {
       errorCodeCase_ = 40;
@@ -9755,7 +10293,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.ImageErrorEnum.ImageError image_error = 40;</code>
+     * @return The imageError.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.errors.ImageErrorEnum.ImageError getImageError() {
       if (errorCodeCase_ == 40) {
         @SuppressWarnings("deprecation")
@@ -9771,6 +10311,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.ImageErrorEnum.ImageError image_error = 40;</code>
+     * @param value The imageError to set.
+     * @return This builder for chaining.
      */
     public Builder setImageError(com.google.ads.googleads.v3.errors.ImageErrorEnum.ImageError value) {
       if (value == null) {
@@ -9787,6 +10329,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.ImageErrorEnum.ImageError image_error = 40;</code>
+     * @return This builder for chaining.
      */
     public Builder clearImageError() {
       if (errorCodeCase_ == 40) {
@@ -9803,7 +10346,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.LanguageCodeErrorEnum.LanguageCodeError language_code_error = 110;</code>
+     * @return The enum numeric value on the wire for languageCodeError.
      */
+    @java.lang.Override
     public int getLanguageCodeErrorValue() {
       if (errorCodeCase_ == 110) {
         return ((java.lang.Integer) errorCode_).intValue();
@@ -9816,6 +10361,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.LanguageCodeErrorEnum.LanguageCodeError language_code_error = 110;</code>
+     * @param value The enum numeric value on the wire for languageCodeError to set.
+     * @return This builder for chaining.
      */
     public Builder setLanguageCodeErrorValue(int value) {
       errorCodeCase_ = 110;
@@ -9829,7 +10376,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.LanguageCodeErrorEnum.LanguageCodeError language_code_error = 110;</code>
+     * @return The languageCodeError.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.errors.LanguageCodeErrorEnum.LanguageCodeError getLanguageCodeError() {
       if (errorCodeCase_ == 110) {
         @SuppressWarnings("deprecation")
@@ -9845,6 +10394,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.LanguageCodeErrorEnum.LanguageCodeError language_code_error = 110;</code>
+     * @param value The languageCodeError to set.
+     * @return This builder for chaining.
      */
     public Builder setLanguageCodeError(com.google.ads.googleads.v3.errors.LanguageCodeErrorEnum.LanguageCodeError value) {
       if (value == null) {
@@ -9861,6 +10412,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.LanguageCodeErrorEnum.LanguageCodeError language_code_error = 110;</code>
+     * @return This builder for chaining.
      */
     public Builder clearLanguageCodeError() {
       if (errorCodeCase_ == 110) {
@@ -9877,7 +10429,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.MediaBundleErrorEnum.MediaBundleError media_bundle_error = 42;</code>
+     * @return The enum numeric value on the wire for mediaBundleError.
      */
+    @java.lang.Override
     public int getMediaBundleErrorValue() {
       if (errorCodeCase_ == 42) {
         return ((java.lang.Integer) errorCode_).intValue();
@@ -9890,6 +10444,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.MediaBundleErrorEnum.MediaBundleError media_bundle_error = 42;</code>
+     * @param value The enum numeric value on the wire for mediaBundleError to set.
+     * @return This builder for chaining.
      */
     public Builder setMediaBundleErrorValue(int value) {
       errorCodeCase_ = 42;
@@ -9903,7 +10459,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.MediaBundleErrorEnum.MediaBundleError media_bundle_error = 42;</code>
+     * @return The mediaBundleError.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.errors.MediaBundleErrorEnum.MediaBundleError getMediaBundleError() {
       if (errorCodeCase_ == 42) {
         @SuppressWarnings("deprecation")
@@ -9919,6 +10477,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.MediaBundleErrorEnum.MediaBundleError media_bundle_error = 42;</code>
+     * @param value The mediaBundleError to set.
+     * @return This builder for chaining.
      */
     public Builder setMediaBundleError(com.google.ads.googleads.v3.errors.MediaBundleErrorEnum.MediaBundleError value) {
       if (value == null) {
@@ -9935,6 +10495,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.MediaBundleErrorEnum.MediaBundleError media_bundle_error = 42;</code>
+     * @return This builder for chaining.
      */
     public Builder clearMediaBundleError() {
       if (errorCodeCase_ == 42) {
@@ -9951,7 +10512,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.MediaUploadErrorEnum.MediaUploadError media_upload_error = 116;</code>
+     * @return The enum numeric value on the wire for mediaUploadError.
      */
+    @java.lang.Override
     public int getMediaUploadErrorValue() {
       if (errorCodeCase_ == 116) {
         return ((java.lang.Integer) errorCode_).intValue();
@@ -9964,6 +10527,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.MediaUploadErrorEnum.MediaUploadError media_upload_error = 116;</code>
+     * @param value The enum numeric value on the wire for mediaUploadError to set.
+     * @return This builder for chaining.
      */
     public Builder setMediaUploadErrorValue(int value) {
       errorCodeCase_ = 116;
@@ -9977,7 +10542,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.MediaUploadErrorEnum.MediaUploadError media_upload_error = 116;</code>
+     * @return The mediaUploadError.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.errors.MediaUploadErrorEnum.MediaUploadError getMediaUploadError() {
       if (errorCodeCase_ == 116) {
         @SuppressWarnings("deprecation")
@@ -9993,6 +10560,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.MediaUploadErrorEnum.MediaUploadError media_upload_error = 116;</code>
+     * @param value The mediaUploadError to set.
+     * @return This builder for chaining.
      */
     public Builder setMediaUploadError(com.google.ads.googleads.v3.errors.MediaUploadErrorEnum.MediaUploadError value) {
       if (value == null) {
@@ -10009,6 +10578,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.MediaUploadErrorEnum.MediaUploadError media_upload_error = 116;</code>
+     * @return This builder for chaining.
      */
     public Builder clearMediaUploadError() {
       if (errorCodeCase_ == 116) {
@@ -10025,7 +10595,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.MediaFileErrorEnum.MediaFileError media_file_error = 86;</code>
+     * @return The enum numeric value on the wire for mediaFileError.
      */
+    @java.lang.Override
     public int getMediaFileErrorValue() {
       if (errorCodeCase_ == 86) {
         return ((java.lang.Integer) errorCode_).intValue();
@@ -10038,6 +10610,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.MediaFileErrorEnum.MediaFileError media_file_error = 86;</code>
+     * @param value The enum numeric value on the wire for mediaFileError to set.
+     * @return This builder for chaining.
      */
     public Builder setMediaFileErrorValue(int value) {
       errorCodeCase_ = 86;
@@ -10051,7 +10625,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.MediaFileErrorEnum.MediaFileError media_file_error = 86;</code>
+     * @return The mediaFileError.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.errors.MediaFileErrorEnum.MediaFileError getMediaFileError() {
       if (errorCodeCase_ == 86) {
         @SuppressWarnings("deprecation")
@@ -10067,6 +10643,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.MediaFileErrorEnum.MediaFileError media_file_error = 86;</code>
+     * @param value The mediaFileError to set.
+     * @return This builder for chaining.
      */
     public Builder setMediaFileError(com.google.ads.googleads.v3.errors.MediaFileErrorEnum.MediaFileError value) {
       if (value == null) {
@@ -10083,6 +10661,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.MediaFileErrorEnum.MediaFileError media_file_error = 86;</code>
+     * @return This builder for chaining.
      */
     public Builder clearMediaFileError() {
       if (errorCodeCase_ == 86) {
@@ -10099,7 +10678,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.MultiplierErrorEnum.MultiplierError multiplier_error = 44;</code>
+     * @return The enum numeric value on the wire for multiplierError.
      */
+    @java.lang.Override
     public int getMultiplierErrorValue() {
       if (errorCodeCase_ == 44) {
         return ((java.lang.Integer) errorCode_).intValue();
@@ -10112,6 +10693,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.MultiplierErrorEnum.MultiplierError multiplier_error = 44;</code>
+     * @param value The enum numeric value on the wire for multiplierError to set.
+     * @return This builder for chaining.
      */
     public Builder setMultiplierErrorValue(int value) {
       errorCodeCase_ = 44;
@@ -10125,7 +10708,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.MultiplierErrorEnum.MultiplierError multiplier_error = 44;</code>
+     * @return The multiplierError.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.errors.MultiplierErrorEnum.MultiplierError getMultiplierError() {
       if (errorCodeCase_ == 44) {
         @SuppressWarnings("deprecation")
@@ -10141,6 +10726,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.MultiplierErrorEnum.MultiplierError multiplier_error = 44;</code>
+     * @param value The multiplierError to set.
+     * @return This builder for chaining.
      */
     public Builder setMultiplierError(com.google.ads.googleads.v3.errors.MultiplierErrorEnum.MultiplierError value) {
       if (value == null) {
@@ -10157,6 +10744,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.MultiplierErrorEnum.MultiplierError multiplier_error = 44;</code>
+     * @return This builder for chaining.
      */
     public Builder clearMultiplierError() {
       if (errorCodeCase_ == 44) {
@@ -10173,7 +10761,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.NewResourceCreationErrorEnum.NewResourceCreationError new_resource_creation_error = 45;</code>
+     * @return The enum numeric value on the wire for newResourceCreationError.
      */
+    @java.lang.Override
     public int getNewResourceCreationErrorValue() {
       if (errorCodeCase_ == 45) {
         return ((java.lang.Integer) errorCode_).intValue();
@@ -10186,6 +10776,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.NewResourceCreationErrorEnum.NewResourceCreationError new_resource_creation_error = 45;</code>
+     * @param value The enum numeric value on the wire for newResourceCreationError to set.
+     * @return This builder for chaining.
      */
     public Builder setNewResourceCreationErrorValue(int value) {
       errorCodeCase_ = 45;
@@ -10199,7 +10791,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.NewResourceCreationErrorEnum.NewResourceCreationError new_resource_creation_error = 45;</code>
+     * @return The newResourceCreationError.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.errors.NewResourceCreationErrorEnum.NewResourceCreationError getNewResourceCreationError() {
       if (errorCodeCase_ == 45) {
         @SuppressWarnings("deprecation")
@@ -10215,6 +10809,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.NewResourceCreationErrorEnum.NewResourceCreationError new_resource_creation_error = 45;</code>
+     * @param value The newResourceCreationError to set.
+     * @return This builder for chaining.
      */
     public Builder setNewResourceCreationError(com.google.ads.googleads.v3.errors.NewResourceCreationErrorEnum.NewResourceCreationError value) {
       if (value == null) {
@@ -10231,6 +10827,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.NewResourceCreationErrorEnum.NewResourceCreationError new_resource_creation_error = 45;</code>
+     * @return This builder for chaining.
      */
     public Builder clearNewResourceCreationError() {
       if (errorCodeCase_ == 45) {
@@ -10247,7 +10844,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.NotEmptyErrorEnum.NotEmptyError not_empty_error = 46;</code>
+     * @return The enum numeric value on the wire for notEmptyError.
      */
+    @java.lang.Override
     public int getNotEmptyErrorValue() {
       if (errorCodeCase_ == 46) {
         return ((java.lang.Integer) errorCode_).intValue();
@@ -10260,6 +10859,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.NotEmptyErrorEnum.NotEmptyError not_empty_error = 46;</code>
+     * @param value The enum numeric value on the wire for notEmptyError to set.
+     * @return This builder for chaining.
      */
     public Builder setNotEmptyErrorValue(int value) {
       errorCodeCase_ = 46;
@@ -10273,7 +10874,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.NotEmptyErrorEnum.NotEmptyError not_empty_error = 46;</code>
+     * @return The notEmptyError.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.errors.NotEmptyErrorEnum.NotEmptyError getNotEmptyError() {
       if (errorCodeCase_ == 46) {
         @SuppressWarnings("deprecation")
@@ -10289,6 +10892,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.NotEmptyErrorEnum.NotEmptyError not_empty_error = 46;</code>
+     * @param value The notEmptyError to set.
+     * @return This builder for chaining.
      */
     public Builder setNotEmptyError(com.google.ads.googleads.v3.errors.NotEmptyErrorEnum.NotEmptyError value) {
       if (value == null) {
@@ -10305,6 +10910,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.NotEmptyErrorEnum.NotEmptyError not_empty_error = 46;</code>
+     * @return This builder for chaining.
      */
     public Builder clearNotEmptyError() {
       if (errorCodeCase_ == 46) {
@@ -10321,7 +10927,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.NullErrorEnum.NullError null_error = 47;</code>
+     * @return The enum numeric value on the wire for nullError.
      */
+    @java.lang.Override
     public int getNullErrorValue() {
       if (errorCodeCase_ == 47) {
         return ((java.lang.Integer) errorCode_).intValue();
@@ -10334,6 +10942,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.NullErrorEnum.NullError null_error = 47;</code>
+     * @param value The enum numeric value on the wire for nullError to set.
+     * @return This builder for chaining.
      */
     public Builder setNullErrorValue(int value) {
       errorCodeCase_ = 47;
@@ -10347,7 +10957,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.NullErrorEnum.NullError null_error = 47;</code>
+     * @return The nullError.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.errors.NullErrorEnum.NullError getNullError() {
       if (errorCodeCase_ == 47) {
         @SuppressWarnings("deprecation")
@@ -10363,6 +10975,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.NullErrorEnum.NullError null_error = 47;</code>
+     * @param value The nullError to set.
+     * @return This builder for chaining.
      */
     public Builder setNullError(com.google.ads.googleads.v3.errors.NullErrorEnum.NullError value) {
       if (value == null) {
@@ -10379,6 +10993,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.NullErrorEnum.NullError null_error = 47;</code>
+     * @return This builder for chaining.
      */
     public Builder clearNullError() {
       if (errorCodeCase_ == 47) {
@@ -10395,7 +11010,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.OperatorErrorEnum.OperatorError operator_error = 48;</code>
+     * @return The enum numeric value on the wire for operatorError.
      */
+    @java.lang.Override
     public int getOperatorErrorValue() {
       if (errorCodeCase_ == 48) {
         return ((java.lang.Integer) errorCode_).intValue();
@@ -10408,6 +11025,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.OperatorErrorEnum.OperatorError operator_error = 48;</code>
+     * @param value The enum numeric value on the wire for operatorError to set.
+     * @return This builder for chaining.
      */
     public Builder setOperatorErrorValue(int value) {
       errorCodeCase_ = 48;
@@ -10421,7 +11040,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.OperatorErrorEnum.OperatorError operator_error = 48;</code>
+     * @return The operatorError.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.errors.OperatorErrorEnum.OperatorError getOperatorError() {
       if (errorCodeCase_ == 48) {
         @SuppressWarnings("deprecation")
@@ -10437,6 +11058,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.OperatorErrorEnum.OperatorError operator_error = 48;</code>
+     * @param value The operatorError to set.
+     * @return This builder for chaining.
      */
     public Builder setOperatorError(com.google.ads.googleads.v3.errors.OperatorErrorEnum.OperatorError value) {
       if (value == null) {
@@ -10453,6 +11076,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.OperatorErrorEnum.OperatorError operator_error = 48;</code>
+     * @return This builder for chaining.
      */
     public Builder clearOperatorError() {
       if (errorCodeCase_ == 48) {
@@ -10469,7 +11093,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.RangeErrorEnum.RangeError range_error = 49;</code>
+     * @return The enum numeric value on the wire for rangeError.
      */
+    @java.lang.Override
     public int getRangeErrorValue() {
       if (errorCodeCase_ == 49) {
         return ((java.lang.Integer) errorCode_).intValue();
@@ -10482,6 +11108,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.RangeErrorEnum.RangeError range_error = 49;</code>
+     * @param value The enum numeric value on the wire for rangeError to set.
+     * @return This builder for chaining.
      */
     public Builder setRangeErrorValue(int value) {
       errorCodeCase_ = 49;
@@ -10495,7 +11123,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.RangeErrorEnum.RangeError range_error = 49;</code>
+     * @return The rangeError.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.errors.RangeErrorEnum.RangeError getRangeError() {
       if (errorCodeCase_ == 49) {
         @SuppressWarnings("deprecation")
@@ -10511,6 +11141,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.RangeErrorEnum.RangeError range_error = 49;</code>
+     * @param value The rangeError to set.
+     * @return This builder for chaining.
      */
     public Builder setRangeError(com.google.ads.googleads.v3.errors.RangeErrorEnum.RangeError value) {
       if (value == null) {
@@ -10527,6 +11159,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.RangeErrorEnum.RangeError range_error = 49;</code>
+     * @return This builder for chaining.
      */
     public Builder clearRangeError() {
       if (errorCodeCase_ == 49) {
@@ -10543,7 +11176,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.RecommendationErrorEnum.RecommendationError recommendation_error = 58;</code>
+     * @return The enum numeric value on the wire for recommendationError.
      */
+    @java.lang.Override
     public int getRecommendationErrorValue() {
       if (errorCodeCase_ == 58) {
         return ((java.lang.Integer) errorCode_).intValue();
@@ -10556,6 +11191,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.RecommendationErrorEnum.RecommendationError recommendation_error = 58;</code>
+     * @param value The enum numeric value on the wire for recommendationError to set.
+     * @return This builder for chaining.
      */
     public Builder setRecommendationErrorValue(int value) {
       errorCodeCase_ = 58;
@@ -10569,7 +11206,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.RecommendationErrorEnum.RecommendationError recommendation_error = 58;</code>
+     * @return The recommendationError.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.errors.RecommendationErrorEnum.RecommendationError getRecommendationError() {
       if (errorCodeCase_ == 58) {
         @SuppressWarnings("deprecation")
@@ -10585,6 +11224,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.RecommendationErrorEnum.RecommendationError recommendation_error = 58;</code>
+     * @param value The recommendationError to set.
+     * @return This builder for chaining.
      */
     public Builder setRecommendationError(com.google.ads.googleads.v3.errors.RecommendationErrorEnum.RecommendationError value) {
       if (value == null) {
@@ -10601,6 +11242,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.RecommendationErrorEnum.RecommendationError recommendation_error = 58;</code>
+     * @return This builder for chaining.
      */
     public Builder clearRecommendationError() {
       if (errorCodeCase_ == 58) {
@@ -10617,7 +11259,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.RegionCodeErrorEnum.RegionCodeError region_code_error = 51;</code>
+     * @return The enum numeric value on the wire for regionCodeError.
      */
+    @java.lang.Override
     public int getRegionCodeErrorValue() {
       if (errorCodeCase_ == 51) {
         return ((java.lang.Integer) errorCode_).intValue();
@@ -10630,6 +11274,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.RegionCodeErrorEnum.RegionCodeError region_code_error = 51;</code>
+     * @param value The enum numeric value on the wire for regionCodeError to set.
+     * @return This builder for chaining.
      */
     public Builder setRegionCodeErrorValue(int value) {
       errorCodeCase_ = 51;
@@ -10643,7 +11289,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.RegionCodeErrorEnum.RegionCodeError region_code_error = 51;</code>
+     * @return The regionCodeError.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.errors.RegionCodeErrorEnum.RegionCodeError getRegionCodeError() {
       if (errorCodeCase_ == 51) {
         @SuppressWarnings("deprecation")
@@ -10659,6 +11307,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.RegionCodeErrorEnum.RegionCodeError region_code_error = 51;</code>
+     * @param value The regionCodeError to set.
+     * @return This builder for chaining.
      */
     public Builder setRegionCodeError(com.google.ads.googleads.v3.errors.RegionCodeErrorEnum.RegionCodeError value) {
       if (value == null) {
@@ -10675,6 +11325,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.RegionCodeErrorEnum.RegionCodeError region_code_error = 51;</code>
+     * @return This builder for chaining.
      */
     public Builder clearRegionCodeError() {
       if (errorCodeCase_ == 51) {
@@ -10691,7 +11342,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.SettingErrorEnum.SettingError setting_error = 52;</code>
+     * @return The enum numeric value on the wire for settingError.
      */
+    @java.lang.Override
     public int getSettingErrorValue() {
       if (errorCodeCase_ == 52) {
         return ((java.lang.Integer) errorCode_).intValue();
@@ -10704,6 +11357,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.SettingErrorEnum.SettingError setting_error = 52;</code>
+     * @param value The enum numeric value on the wire for settingError to set.
+     * @return This builder for chaining.
      */
     public Builder setSettingErrorValue(int value) {
       errorCodeCase_ = 52;
@@ -10717,7 +11372,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.SettingErrorEnum.SettingError setting_error = 52;</code>
+     * @return The settingError.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.errors.SettingErrorEnum.SettingError getSettingError() {
       if (errorCodeCase_ == 52) {
         @SuppressWarnings("deprecation")
@@ -10733,6 +11390,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.SettingErrorEnum.SettingError setting_error = 52;</code>
+     * @param value The settingError to set.
+     * @return This builder for chaining.
      */
     public Builder setSettingError(com.google.ads.googleads.v3.errors.SettingErrorEnum.SettingError value) {
       if (value == null) {
@@ -10749,6 +11408,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.SettingErrorEnum.SettingError setting_error = 52;</code>
+     * @return This builder for chaining.
      */
     public Builder clearSettingError() {
       if (errorCodeCase_ == 52) {
@@ -10765,7 +11425,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.StringFormatErrorEnum.StringFormatError string_format_error = 53;</code>
+     * @return The enum numeric value on the wire for stringFormatError.
      */
+    @java.lang.Override
     public int getStringFormatErrorValue() {
       if (errorCodeCase_ == 53) {
         return ((java.lang.Integer) errorCode_).intValue();
@@ -10778,6 +11440,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.StringFormatErrorEnum.StringFormatError string_format_error = 53;</code>
+     * @param value The enum numeric value on the wire for stringFormatError to set.
+     * @return This builder for chaining.
      */
     public Builder setStringFormatErrorValue(int value) {
       errorCodeCase_ = 53;
@@ -10791,7 +11455,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.StringFormatErrorEnum.StringFormatError string_format_error = 53;</code>
+     * @return The stringFormatError.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.errors.StringFormatErrorEnum.StringFormatError getStringFormatError() {
       if (errorCodeCase_ == 53) {
         @SuppressWarnings("deprecation")
@@ -10807,6 +11473,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.StringFormatErrorEnum.StringFormatError string_format_error = 53;</code>
+     * @param value The stringFormatError to set.
+     * @return This builder for chaining.
      */
     public Builder setStringFormatError(com.google.ads.googleads.v3.errors.StringFormatErrorEnum.StringFormatError value) {
       if (value == null) {
@@ -10823,6 +11491,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.StringFormatErrorEnum.StringFormatError string_format_error = 53;</code>
+     * @return This builder for chaining.
      */
     public Builder clearStringFormatError() {
       if (errorCodeCase_ == 53) {
@@ -10839,7 +11508,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.StringLengthErrorEnum.StringLengthError string_length_error = 54;</code>
+     * @return The enum numeric value on the wire for stringLengthError.
      */
+    @java.lang.Override
     public int getStringLengthErrorValue() {
       if (errorCodeCase_ == 54) {
         return ((java.lang.Integer) errorCode_).intValue();
@@ -10852,6 +11523,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.StringLengthErrorEnum.StringLengthError string_length_error = 54;</code>
+     * @param value The enum numeric value on the wire for stringLengthError to set.
+     * @return This builder for chaining.
      */
     public Builder setStringLengthErrorValue(int value) {
       errorCodeCase_ = 54;
@@ -10865,7 +11538,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.StringLengthErrorEnum.StringLengthError string_length_error = 54;</code>
+     * @return The stringLengthError.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.errors.StringLengthErrorEnum.StringLengthError getStringLengthError() {
       if (errorCodeCase_ == 54) {
         @SuppressWarnings("deprecation")
@@ -10881,6 +11556,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.StringLengthErrorEnum.StringLengthError string_length_error = 54;</code>
+     * @param value The stringLengthError to set.
+     * @return This builder for chaining.
      */
     public Builder setStringLengthError(com.google.ads.googleads.v3.errors.StringLengthErrorEnum.StringLengthError value) {
       if (value == null) {
@@ -10897,6 +11574,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.StringLengthErrorEnum.StringLengthError string_length_error = 54;</code>
+     * @return This builder for chaining.
      */
     public Builder clearStringLengthError() {
       if (errorCodeCase_ == 54) {
@@ -10913,7 +11591,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.OperationAccessDeniedErrorEnum.OperationAccessDeniedError operation_access_denied_error = 55;</code>
+     * @return The enum numeric value on the wire for operationAccessDeniedError.
      */
+    @java.lang.Override
     public int getOperationAccessDeniedErrorValue() {
       if (errorCodeCase_ == 55) {
         return ((java.lang.Integer) errorCode_).intValue();
@@ -10926,6 +11606,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.OperationAccessDeniedErrorEnum.OperationAccessDeniedError operation_access_denied_error = 55;</code>
+     * @param value The enum numeric value on the wire for operationAccessDeniedError to set.
+     * @return This builder for chaining.
      */
     public Builder setOperationAccessDeniedErrorValue(int value) {
       errorCodeCase_ = 55;
@@ -10939,7 +11621,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.OperationAccessDeniedErrorEnum.OperationAccessDeniedError operation_access_denied_error = 55;</code>
+     * @return The operationAccessDeniedError.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.errors.OperationAccessDeniedErrorEnum.OperationAccessDeniedError getOperationAccessDeniedError() {
       if (errorCodeCase_ == 55) {
         @SuppressWarnings("deprecation")
@@ -10955,6 +11639,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.OperationAccessDeniedErrorEnum.OperationAccessDeniedError operation_access_denied_error = 55;</code>
+     * @param value The operationAccessDeniedError to set.
+     * @return This builder for chaining.
      */
     public Builder setOperationAccessDeniedError(com.google.ads.googleads.v3.errors.OperationAccessDeniedErrorEnum.OperationAccessDeniedError value) {
       if (value == null) {
@@ -10971,6 +11657,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.OperationAccessDeniedErrorEnum.OperationAccessDeniedError operation_access_denied_error = 55;</code>
+     * @return This builder for chaining.
      */
     public Builder clearOperationAccessDeniedError() {
       if (errorCodeCase_ == 55) {
@@ -10987,7 +11674,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.ResourceAccessDeniedErrorEnum.ResourceAccessDeniedError resource_access_denied_error = 56;</code>
+     * @return The enum numeric value on the wire for resourceAccessDeniedError.
      */
+    @java.lang.Override
     public int getResourceAccessDeniedErrorValue() {
       if (errorCodeCase_ == 56) {
         return ((java.lang.Integer) errorCode_).intValue();
@@ -11000,6 +11689,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.ResourceAccessDeniedErrorEnum.ResourceAccessDeniedError resource_access_denied_error = 56;</code>
+     * @param value The enum numeric value on the wire for resourceAccessDeniedError to set.
+     * @return This builder for chaining.
      */
     public Builder setResourceAccessDeniedErrorValue(int value) {
       errorCodeCase_ = 56;
@@ -11013,7 +11704,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.ResourceAccessDeniedErrorEnum.ResourceAccessDeniedError resource_access_denied_error = 56;</code>
+     * @return The resourceAccessDeniedError.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.errors.ResourceAccessDeniedErrorEnum.ResourceAccessDeniedError getResourceAccessDeniedError() {
       if (errorCodeCase_ == 56) {
         @SuppressWarnings("deprecation")
@@ -11029,6 +11722,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.ResourceAccessDeniedErrorEnum.ResourceAccessDeniedError resource_access_denied_error = 56;</code>
+     * @param value The resourceAccessDeniedError to set.
+     * @return This builder for chaining.
      */
     public Builder setResourceAccessDeniedError(com.google.ads.googleads.v3.errors.ResourceAccessDeniedErrorEnum.ResourceAccessDeniedError value) {
       if (value == null) {
@@ -11045,6 +11740,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.ResourceAccessDeniedErrorEnum.ResourceAccessDeniedError resource_access_denied_error = 56;</code>
+     * @return This builder for chaining.
      */
     public Builder clearResourceAccessDeniedError() {
       if (errorCodeCase_ == 56) {
@@ -11061,7 +11757,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.ResourceCountLimitExceededErrorEnum.ResourceCountLimitExceededError resource_count_limit_exceeded_error = 57;</code>
+     * @return The enum numeric value on the wire for resourceCountLimitExceededError.
      */
+    @java.lang.Override
     public int getResourceCountLimitExceededErrorValue() {
       if (errorCodeCase_ == 57) {
         return ((java.lang.Integer) errorCode_).intValue();
@@ -11074,6 +11772,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.ResourceCountLimitExceededErrorEnum.ResourceCountLimitExceededError resource_count_limit_exceeded_error = 57;</code>
+     * @param value The enum numeric value on the wire for resourceCountLimitExceededError to set.
+     * @return This builder for chaining.
      */
     public Builder setResourceCountLimitExceededErrorValue(int value) {
       errorCodeCase_ = 57;
@@ -11087,7 +11787,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.ResourceCountLimitExceededErrorEnum.ResourceCountLimitExceededError resource_count_limit_exceeded_error = 57;</code>
+     * @return The resourceCountLimitExceededError.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.errors.ResourceCountLimitExceededErrorEnum.ResourceCountLimitExceededError getResourceCountLimitExceededError() {
       if (errorCodeCase_ == 57) {
         @SuppressWarnings("deprecation")
@@ -11103,6 +11805,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.ResourceCountLimitExceededErrorEnum.ResourceCountLimitExceededError resource_count_limit_exceeded_error = 57;</code>
+     * @param value The resourceCountLimitExceededError to set.
+     * @return This builder for chaining.
      */
     public Builder setResourceCountLimitExceededError(com.google.ads.googleads.v3.errors.ResourceCountLimitExceededErrorEnum.ResourceCountLimitExceededError value) {
       if (value == null) {
@@ -11119,6 +11823,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.ResourceCountLimitExceededErrorEnum.ResourceCountLimitExceededError resource_count_limit_exceeded_error = 57;</code>
+     * @return This builder for chaining.
      */
     public Builder clearResourceCountLimitExceededError() {
       if (errorCodeCase_ == 57) {
@@ -11135,7 +11840,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.YoutubeVideoRegistrationErrorEnum.YoutubeVideoRegistrationError youtube_video_registration_error = 117;</code>
+     * @return The enum numeric value on the wire for youtubeVideoRegistrationError.
      */
+    @java.lang.Override
     public int getYoutubeVideoRegistrationErrorValue() {
       if (errorCodeCase_ == 117) {
         return ((java.lang.Integer) errorCode_).intValue();
@@ -11148,6 +11855,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.YoutubeVideoRegistrationErrorEnum.YoutubeVideoRegistrationError youtube_video_registration_error = 117;</code>
+     * @param value The enum numeric value on the wire for youtubeVideoRegistrationError to set.
+     * @return This builder for chaining.
      */
     public Builder setYoutubeVideoRegistrationErrorValue(int value) {
       errorCodeCase_ = 117;
@@ -11161,7 +11870,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.YoutubeVideoRegistrationErrorEnum.YoutubeVideoRegistrationError youtube_video_registration_error = 117;</code>
+     * @return The youtubeVideoRegistrationError.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.errors.YoutubeVideoRegistrationErrorEnum.YoutubeVideoRegistrationError getYoutubeVideoRegistrationError() {
       if (errorCodeCase_ == 117) {
         @SuppressWarnings("deprecation")
@@ -11177,6 +11888,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.YoutubeVideoRegistrationErrorEnum.YoutubeVideoRegistrationError youtube_video_registration_error = 117;</code>
+     * @param value The youtubeVideoRegistrationError to set.
+     * @return This builder for chaining.
      */
     public Builder setYoutubeVideoRegistrationError(com.google.ads.googleads.v3.errors.YoutubeVideoRegistrationErrorEnum.YoutubeVideoRegistrationError value) {
       if (value == null) {
@@ -11193,6 +11906,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.YoutubeVideoRegistrationErrorEnum.YoutubeVideoRegistrationError youtube_video_registration_error = 117;</code>
+     * @return This builder for chaining.
      */
     public Builder clearYoutubeVideoRegistrationError() {
       if (errorCodeCase_ == 117) {
@@ -11209,7 +11923,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.AdGroupBidModifierErrorEnum.AdGroupBidModifierError ad_group_bid_modifier_error = 59;</code>
+     * @return The enum numeric value on the wire for adGroupBidModifierError.
      */
+    @java.lang.Override
     public int getAdGroupBidModifierErrorValue() {
       if (errorCodeCase_ == 59) {
         return ((java.lang.Integer) errorCode_).intValue();
@@ -11222,6 +11938,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.AdGroupBidModifierErrorEnum.AdGroupBidModifierError ad_group_bid_modifier_error = 59;</code>
+     * @param value The enum numeric value on the wire for adGroupBidModifierError to set.
+     * @return This builder for chaining.
      */
     public Builder setAdGroupBidModifierErrorValue(int value) {
       errorCodeCase_ = 59;
@@ -11235,7 +11953,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.AdGroupBidModifierErrorEnum.AdGroupBidModifierError ad_group_bid_modifier_error = 59;</code>
+     * @return The adGroupBidModifierError.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.errors.AdGroupBidModifierErrorEnum.AdGroupBidModifierError getAdGroupBidModifierError() {
       if (errorCodeCase_ == 59) {
         @SuppressWarnings("deprecation")
@@ -11251,6 +11971,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.AdGroupBidModifierErrorEnum.AdGroupBidModifierError ad_group_bid_modifier_error = 59;</code>
+     * @param value The adGroupBidModifierError to set.
+     * @return This builder for chaining.
      */
     public Builder setAdGroupBidModifierError(com.google.ads.googleads.v3.errors.AdGroupBidModifierErrorEnum.AdGroupBidModifierError value) {
       if (value == null) {
@@ -11267,6 +11989,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.AdGroupBidModifierErrorEnum.AdGroupBidModifierError ad_group_bid_modifier_error = 59;</code>
+     * @return This builder for chaining.
      */
     public Builder clearAdGroupBidModifierError() {
       if (errorCodeCase_ == 59) {
@@ -11283,7 +12006,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.ContextErrorEnum.ContextError context_error = 60;</code>
+     * @return The enum numeric value on the wire for contextError.
      */
+    @java.lang.Override
     public int getContextErrorValue() {
       if (errorCodeCase_ == 60) {
         return ((java.lang.Integer) errorCode_).intValue();
@@ -11296,6 +12021,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.ContextErrorEnum.ContextError context_error = 60;</code>
+     * @param value The enum numeric value on the wire for contextError to set.
+     * @return This builder for chaining.
      */
     public Builder setContextErrorValue(int value) {
       errorCodeCase_ = 60;
@@ -11309,7 +12036,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.ContextErrorEnum.ContextError context_error = 60;</code>
+     * @return The contextError.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.errors.ContextErrorEnum.ContextError getContextError() {
       if (errorCodeCase_ == 60) {
         @SuppressWarnings("deprecation")
@@ -11325,6 +12054,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.ContextErrorEnum.ContextError context_error = 60;</code>
+     * @param value The contextError to set.
+     * @return This builder for chaining.
      */
     public Builder setContextError(com.google.ads.googleads.v3.errors.ContextErrorEnum.ContextError value) {
       if (value == null) {
@@ -11341,6 +12072,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.ContextErrorEnum.ContextError context_error = 60;</code>
+     * @return This builder for chaining.
      */
     public Builder clearContextError() {
       if (errorCodeCase_ == 60) {
@@ -11357,7 +12089,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.FieldErrorEnum.FieldError field_error = 61;</code>
+     * @return The enum numeric value on the wire for fieldError.
      */
+    @java.lang.Override
     public int getFieldErrorValue() {
       if (errorCodeCase_ == 61) {
         return ((java.lang.Integer) errorCode_).intValue();
@@ -11370,6 +12104,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.FieldErrorEnum.FieldError field_error = 61;</code>
+     * @param value The enum numeric value on the wire for fieldError to set.
+     * @return This builder for chaining.
      */
     public Builder setFieldErrorValue(int value) {
       errorCodeCase_ = 61;
@@ -11383,7 +12119,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.FieldErrorEnum.FieldError field_error = 61;</code>
+     * @return The fieldError.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.errors.FieldErrorEnum.FieldError getFieldError() {
       if (errorCodeCase_ == 61) {
         @SuppressWarnings("deprecation")
@@ -11399,6 +12137,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.FieldErrorEnum.FieldError field_error = 61;</code>
+     * @param value The fieldError to set.
+     * @return This builder for chaining.
      */
     public Builder setFieldError(com.google.ads.googleads.v3.errors.FieldErrorEnum.FieldError value) {
       if (value == null) {
@@ -11415,6 +12155,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.FieldErrorEnum.FieldError field_error = 61;</code>
+     * @return This builder for chaining.
      */
     public Builder clearFieldError() {
       if (errorCodeCase_ == 61) {
@@ -11431,7 +12172,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.SharedSetErrorEnum.SharedSetError shared_set_error = 62;</code>
+     * @return The enum numeric value on the wire for sharedSetError.
      */
+    @java.lang.Override
     public int getSharedSetErrorValue() {
       if (errorCodeCase_ == 62) {
         return ((java.lang.Integer) errorCode_).intValue();
@@ -11444,6 +12187,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.SharedSetErrorEnum.SharedSetError shared_set_error = 62;</code>
+     * @param value The enum numeric value on the wire for sharedSetError to set.
+     * @return This builder for chaining.
      */
     public Builder setSharedSetErrorValue(int value) {
       errorCodeCase_ = 62;
@@ -11457,7 +12202,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.SharedSetErrorEnum.SharedSetError shared_set_error = 62;</code>
+     * @return The sharedSetError.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.errors.SharedSetErrorEnum.SharedSetError getSharedSetError() {
       if (errorCodeCase_ == 62) {
         @SuppressWarnings("deprecation")
@@ -11473,6 +12220,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.SharedSetErrorEnum.SharedSetError shared_set_error = 62;</code>
+     * @param value The sharedSetError to set.
+     * @return This builder for chaining.
      */
     public Builder setSharedSetError(com.google.ads.googleads.v3.errors.SharedSetErrorEnum.SharedSetError value) {
       if (value == null) {
@@ -11489,6 +12238,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.SharedSetErrorEnum.SharedSetError shared_set_error = 62;</code>
+     * @return This builder for chaining.
      */
     public Builder clearSharedSetError() {
       if (errorCodeCase_ == 62) {
@@ -11505,7 +12255,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.SharedCriterionErrorEnum.SharedCriterionError shared_criterion_error = 63;</code>
+     * @return The enum numeric value on the wire for sharedCriterionError.
      */
+    @java.lang.Override
     public int getSharedCriterionErrorValue() {
       if (errorCodeCase_ == 63) {
         return ((java.lang.Integer) errorCode_).intValue();
@@ -11518,6 +12270,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.SharedCriterionErrorEnum.SharedCriterionError shared_criterion_error = 63;</code>
+     * @param value The enum numeric value on the wire for sharedCriterionError to set.
+     * @return This builder for chaining.
      */
     public Builder setSharedCriterionErrorValue(int value) {
       errorCodeCase_ = 63;
@@ -11531,7 +12285,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.SharedCriterionErrorEnum.SharedCriterionError shared_criterion_error = 63;</code>
+     * @return The sharedCriterionError.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.errors.SharedCriterionErrorEnum.SharedCriterionError getSharedCriterionError() {
       if (errorCodeCase_ == 63) {
         @SuppressWarnings("deprecation")
@@ -11547,6 +12303,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.SharedCriterionErrorEnum.SharedCriterionError shared_criterion_error = 63;</code>
+     * @param value The sharedCriterionError to set.
+     * @return This builder for chaining.
      */
     public Builder setSharedCriterionError(com.google.ads.googleads.v3.errors.SharedCriterionErrorEnum.SharedCriterionError value) {
       if (value == null) {
@@ -11563,6 +12321,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.SharedCriterionErrorEnum.SharedCriterionError shared_criterion_error = 63;</code>
+     * @return This builder for chaining.
      */
     public Builder clearSharedCriterionError() {
       if (errorCodeCase_ == 63) {
@@ -11579,7 +12338,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.CampaignSharedSetErrorEnum.CampaignSharedSetError campaign_shared_set_error = 64;</code>
+     * @return The enum numeric value on the wire for campaignSharedSetError.
      */
+    @java.lang.Override
     public int getCampaignSharedSetErrorValue() {
       if (errorCodeCase_ == 64) {
         return ((java.lang.Integer) errorCode_).intValue();
@@ -11592,6 +12353,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.CampaignSharedSetErrorEnum.CampaignSharedSetError campaign_shared_set_error = 64;</code>
+     * @param value The enum numeric value on the wire for campaignSharedSetError to set.
+     * @return This builder for chaining.
      */
     public Builder setCampaignSharedSetErrorValue(int value) {
       errorCodeCase_ = 64;
@@ -11605,7 +12368,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.CampaignSharedSetErrorEnum.CampaignSharedSetError campaign_shared_set_error = 64;</code>
+     * @return The campaignSharedSetError.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.errors.CampaignSharedSetErrorEnum.CampaignSharedSetError getCampaignSharedSetError() {
       if (errorCodeCase_ == 64) {
         @SuppressWarnings("deprecation")
@@ -11621,6 +12386,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.CampaignSharedSetErrorEnum.CampaignSharedSetError campaign_shared_set_error = 64;</code>
+     * @param value The campaignSharedSetError to set.
+     * @return This builder for chaining.
      */
     public Builder setCampaignSharedSetError(com.google.ads.googleads.v3.errors.CampaignSharedSetErrorEnum.CampaignSharedSetError value) {
       if (value == null) {
@@ -11637,6 +12404,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.CampaignSharedSetErrorEnum.CampaignSharedSetError campaign_shared_set_error = 64;</code>
+     * @return This builder for chaining.
      */
     public Builder clearCampaignSharedSetError() {
       if (errorCodeCase_ == 64) {
@@ -11653,7 +12421,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.ConversionActionErrorEnum.ConversionActionError conversion_action_error = 65;</code>
+     * @return The enum numeric value on the wire for conversionActionError.
      */
+    @java.lang.Override
     public int getConversionActionErrorValue() {
       if (errorCodeCase_ == 65) {
         return ((java.lang.Integer) errorCode_).intValue();
@@ -11666,6 +12436,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.ConversionActionErrorEnum.ConversionActionError conversion_action_error = 65;</code>
+     * @param value The enum numeric value on the wire for conversionActionError to set.
+     * @return This builder for chaining.
      */
     public Builder setConversionActionErrorValue(int value) {
       errorCodeCase_ = 65;
@@ -11679,7 +12451,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.ConversionActionErrorEnum.ConversionActionError conversion_action_error = 65;</code>
+     * @return The conversionActionError.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.errors.ConversionActionErrorEnum.ConversionActionError getConversionActionError() {
       if (errorCodeCase_ == 65) {
         @SuppressWarnings("deprecation")
@@ -11695,6 +12469,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.ConversionActionErrorEnum.ConversionActionError conversion_action_error = 65;</code>
+     * @param value The conversionActionError to set.
+     * @return This builder for chaining.
      */
     public Builder setConversionActionError(com.google.ads.googleads.v3.errors.ConversionActionErrorEnum.ConversionActionError value) {
       if (value == null) {
@@ -11711,6 +12487,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.ConversionActionErrorEnum.ConversionActionError conversion_action_error = 65;</code>
+     * @return This builder for chaining.
      */
     public Builder clearConversionActionError() {
       if (errorCodeCase_ == 65) {
@@ -11727,7 +12504,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.ConversionAdjustmentUploadErrorEnum.ConversionAdjustmentUploadError conversion_adjustment_upload_error = 115;</code>
+     * @return The enum numeric value on the wire for conversionAdjustmentUploadError.
      */
+    @java.lang.Override
     public int getConversionAdjustmentUploadErrorValue() {
       if (errorCodeCase_ == 115) {
         return ((java.lang.Integer) errorCode_).intValue();
@@ -11740,6 +12519,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.ConversionAdjustmentUploadErrorEnum.ConversionAdjustmentUploadError conversion_adjustment_upload_error = 115;</code>
+     * @param value The enum numeric value on the wire for conversionAdjustmentUploadError to set.
+     * @return This builder for chaining.
      */
     public Builder setConversionAdjustmentUploadErrorValue(int value) {
       errorCodeCase_ = 115;
@@ -11753,7 +12534,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.ConversionAdjustmentUploadErrorEnum.ConversionAdjustmentUploadError conversion_adjustment_upload_error = 115;</code>
+     * @return The conversionAdjustmentUploadError.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.errors.ConversionAdjustmentUploadErrorEnum.ConversionAdjustmentUploadError getConversionAdjustmentUploadError() {
       if (errorCodeCase_ == 115) {
         @SuppressWarnings("deprecation")
@@ -11769,6 +12552,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.ConversionAdjustmentUploadErrorEnum.ConversionAdjustmentUploadError conversion_adjustment_upload_error = 115;</code>
+     * @param value The conversionAdjustmentUploadError to set.
+     * @return This builder for chaining.
      */
     public Builder setConversionAdjustmentUploadError(com.google.ads.googleads.v3.errors.ConversionAdjustmentUploadErrorEnum.ConversionAdjustmentUploadError value) {
       if (value == null) {
@@ -11785,6 +12570,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.ConversionAdjustmentUploadErrorEnum.ConversionAdjustmentUploadError conversion_adjustment_upload_error = 115;</code>
+     * @return This builder for chaining.
      */
     public Builder clearConversionAdjustmentUploadError() {
       if (errorCodeCase_ == 115) {
@@ -11801,7 +12587,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.ConversionUploadErrorEnum.ConversionUploadError conversion_upload_error = 111;</code>
+     * @return The enum numeric value on the wire for conversionUploadError.
      */
+    @java.lang.Override
     public int getConversionUploadErrorValue() {
       if (errorCodeCase_ == 111) {
         return ((java.lang.Integer) errorCode_).intValue();
@@ -11814,6 +12602,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.ConversionUploadErrorEnum.ConversionUploadError conversion_upload_error = 111;</code>
+     * @param value The enum numeric value on the wire for conversionUploadError to set.
+     * @return This builder for chaining.
      */
     public Builder setConversionUploadErrorValue(int value) {
       errorCodeCase_ = 111;
@@ -11827,7 +12617,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.ConversionUploadErrorEnum.ConversionUploadError conversion_upload_error = 111;</code>
+     * @return The conversionUploadError.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.errors.ConversionUploadErrorEnum.ConversionUploadError getConversionUploadError() {
       if (errorCodeCase_ == 111) {
         @SuppressWarnings("deprecation")
@@ -11843,6 +12635,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.ConversionUploadErrorEnum.ConversionUploadError conversion_upload_error = 111;</code>
+     * @param value The conversionUploadError to set.
+     * @return This builder for chaining.
      */
     public Builder setConversionUploadError(com.google.ads.googleads.v3.errors.ConversionUploadErrorEnum.ConversionUploadError value) {
       if (value == null) {
@@ -11859,6 +12653,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.ConversionUploadErrorEnum.ConversionUploadError conversion_upload_error = 111;</code>
+     * @return This builder for chaining.
      */
     public Builder clearConversionUploadError() {
       if (errorCodeCase_ == 111) {
@@ -11875,7 +12670,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.HeaderErrorEnum.HeaderError header_error = 66;</code>
+     * @return The enum numeric value on the wire for headerError.
      */
+    @java.lang.Override
     public int getHeaderErrorValue() {
       if (errorCodeCase_ == 66) {
         return ((java.lang.Integer) errorCode_).intValue();
@@ -11888,6 +12685,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.HeaderErrorEnum.HeaderError header_error = 66;</code>
+     * @param value The enum numeric value on the wire for headerError to set.
+     * @return This builder for chaining.
      */
     public Builder setHeaderErrorValue(int value) {
       errorCodeCase_ = 66;
@@ -11901,7 +12700,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.HeaderErrorEnum.HeaderError header_error = 66;</code>
+     * @return The headerError.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.errors.HeaderErrorEnum.HeaderError getHeaderError() {
       if (errorCodeCase_ == 66) {
         @SuppressWarnings("deprecation")
@@ -11917,6 +12718,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.HeaderErrorEnum.HeaderError header_error = 66;</code>
+     * @param value The headerError to set.
+     * @return This builder for chaining.
      */
     public Builder setHeaderError(com.google.ads.googleads.v3.errors.HeaderErrorEnum.HeaderError value) {
       if (value == null) {
@@ -11933,6 +12736,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.HeaderErrorEnum.HeaderError header_error = 66;</code>
+     * @return This builder for chaining.
      */
     public Builder clearHeaderError() {
       if (errorCodeCase_ == 66) {
@@ -11949,7 +12753,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.DatabaseErrorEnum.DatabaseError database_error = 67;</code>
+     * @return The enum numeric value on the wire for databaseError.
      */
+    @java.lang.Override
     public int getDatabaseErrorValue() {
       if (errorCodeCase_ == 67) {
         return ((java.lang.Integer) errorCode_).intValue();
@@ -11962,6 +12768,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.DatabaseErrorEnum.DatabaseError database_error = 67;</code>
+     * @param value The enum numeric value on the wire for databaseError to set.
+     * @return This builder for chaining.
      */
     public Builder setDatabaseErrorValue(int value) {
       errorCodeCase_ = 67;
@@ -11975,7 +12783,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.DatabaseErrorEnum.DatabaseError database_error = 67;</code>
+     * @return The databaseError.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.errors.DatabaseErrorEnum.DatabaseError getDatabaseError() {
       if (errorCodeCase_ == 67) {
         @SuppressWarnings("deprecation")
@@ -11991,6 +12801,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.DatabaseErrorEnum.DatabaseError database_error = 67;</code>
+     * @param value The databaseError to set.
+     * @return This builder for chaining.
      */
     public Builder setDatabaseError(com.google.ads.googleads.v3.errors.DatabaseErrorEnum.DatabaseError value) {
       if (value == null) {
@@ -12007,6 +12819,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.DatabaseErrorEnum.DatabaseError database_error = 67;</code>
+     * @return This builder for chaining.
      */
     public Builder clearDatabaseError() {
       if (errorCodeCase_ == 67) {
@@ -12023,7 +12836,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.PolicyFindingErrorEnum.PolicyFindingError policy_finding_error = 68;</code>
+     * @return The enum numeric value on the wire for policyFindingError.
      */
+    @java.lang.Override
     public int getPolicyFindingErrorValue() {
       if (errorCodeCase_ == 68) {
         return ((java.lang.Integer) errorCode_).intValue();
@@ -12036,6 +12851,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.PolicyFindingErrorEnum.PolicyFindingError policy_finding_error = 68;</code>
+     * @param value The enum numeric value on the wire for policyFindingError to set.
+     * @return This builder for chaining.
      */
     public Builder setPolicyFindingErrorValue(int value) {
       errorCodeCase_ = 68;
@@ -12049,7 +12866,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.PolicyFindingErrorEnum.PolicyFindingError policy_finding_error = 68;</code>
+     * @return The policyFindingError.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.errors.PolicyFindingErrorEnum.PolicyFindingError getPolicyFindingError() {
       if (errorCodeCase_ == 68) {
         @SuppressWarnings("deprecation")
@@ -12065,6 +12884,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.PolicyFindingErrorEnum.PolicyFindingError policy_finding_error = 68;</code>
+     * @param value The policyFindingError to set.
+     * @return This builder for chaining.
      */
     public Builder setPolicyFindingError(com.google.ads.googleads.v3.errors.PolicyFindingErrorEnum.PolicyFindingError value) {
       if (value == null) {
@@ -12081,6 +12902,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.PolicyFindingErrorEnum.PolicyFindingError policy_finding_error = 68;</code>
+     * @return This builder for chaining.
      */
     public Builder clearPolicyFindingError() {
       if (errorCodeCase_ == 68) {
@@ -12097,7 +12919,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.EnumErrorEnum.EnumError enum_error = 70;</code>
+     * @return The enum numeric value on the wire for enumError.
      */
+    @java.lang.Override
     public int getEnumErrorValue() {
       if (errorCodeCase_ == 70) {
         return ((java.lang.Integer) errorCode_).intValue();
@@ -12110,6 +12934,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.EnumErrorEnum.EnumError enum_error = 70;</code>
+     * @param value The enum numeric value on the wire for enumError to set.
+     * @return This builder for chaining.
      */
     public Builder setEnumErrorValue(int value) {
       errorCodeCase_ = 70;
@@ -12123,7 +12949,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.EnumErrorEnum.EnumError enum_error = 70;</code>
+     * @return The enumError.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.errors.EnumErrorEnum.EnumError getEnumError() {
       if (errorCodeCase_ == 70) {
         @SuppressWarnings("deprecation")
@@ -12139,6 +12967,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.EnumErrorEnum.EnumError enum_error = 70;</code>
+     * @param value The enumError to set.
+     * @return This builder for chaining.
      */
     public Builder setEnumError(com.google.ads.googleads.v3.errors.EnumErrorEnum.EnumError value) {
       if (value == null) {
@@ -12155,6 +12985,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.EnumErrorEnum.EnumError enum_error = 70;</code>
+     * @return This builder for chaining.
      */
     public Builder clearEnumError() {
       if (errorCodeCase_ == 70) {
@@ -12171,7 +13002,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.KeywordPlanErrorEnum.KeywordPlanError keyword_plan_error = 71;</code>
+     * @return The enum numeric value on the wire for keywordPlanError.
      */
+    @java.lang.Override
     public int getKeywordPlanErrorValue() {
       if (errorCodeCase_ == 71) {
         return ((java.lang.Integer) errorCode_).intValue();
@@ -12184,6 +13017,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.KeywordPlanErrorEnum.KeywordPlanError keyword_plan_error = 71;</code>
+     * @param value The enum numeric value on the wire for keywordPlanError to set.
+     * @return This builder for chaining.
      */
     public Builder setKeywordPlanErrorValue(int value) {
       errorCodeCase_ = 71;
@@ -12197,7 +13032,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.KeywordPlanErrorEnum.KeywordPlanError keyword_plan_error = 71;</code>
+     * @return The keywordPlanError.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.errors.KeywordPlanErrorEnum.KeywordPlanError getKeywordPlanError() {
       if (errorCodeCase_ == 71) {
         @SuppressWarnings("deprecation")
@@ -12213,6 +13050,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.KeywordPlanErrorEnum.KeywordPlanError keyword_plan_error = 71;</code>
+     * @param value The keywordPlanError to set.
+     * @return This builder for chaining.
      */
     public Builder setKeywordPlanError(com.google.ads.googleads.v3.errors.KeywordPlanErrorEnum.KeywordPlanError value) {
       if (value == null) {
@@ -12229,6 +13068,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.KeywordPlanErrorEnum.KeywordPlanError keyword_plan_error = 71;</code>
+     * @return This builder for chaining.
      */
     public Builder clearKeywordPlanError() {
       if (errorCodeCase_ == 71) {
@@ -12245,7 +13085,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.KeywordPlanCampaignErrorEnum.KeywordPlanCampaignError keyword_plan_campaign_error = 72;</code>
+     * @return The enum numeric value on the wire for keywordPlanCampaignError.
      */
+    @java.lang.Override
     public int getKeywordPlanCampaignErrorValue() {
       if (errorCodeCase_ == 72) {
         return ((java.lang.Integer) errorCode_).intValue();
@@ -12258,6 +13100,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.KeywordPlanCampaignErrorEnum.KeywordPlanCampaignError keyword_plan_campaign_error = 72;</code>
+     * @param value The enum numeric value on the wire for keywordPlanCampaignError to set.
+     * @return This builder for chaining.
      */
     public Builder setKeywordPlanCampaignErrorValue(int value) {
       errorCodeCase_ = 72;
@@ -12271,7 +13115,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.KeywordPlanCampaignErrorEnum.KeywordPlanCampaignError keyword_plan_campaign_error = 72;</code>
+     * @return The keywordPlanCampaignError.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.errors.KeywordPlanCampaignErrorEnum.KeywordPlanCampaignError getKeywordPlanCampaignError() {
       if (errorCodeCase_ == 72) {
         @SuppressWarnings("deprecation")
@@ -12287,6 +13133,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.KeywordPlanCampaignErrorEnum.KeywordPlanCampaignError keyword_plan_campaign_error = 72;</code>
+     * @param value The keywordPlanCampaignError to set.
+     * @return This builder for chaining.
      */
     public Builder setKeywordPlanCampaignError(com.google.ads.googleads.v3.errors.KeywordPlanCampaignErrorEnum.KeywordPlanCampaignError value) {
       if (value == null) {
@@ -12303,6 +13151,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.KeywordPlanCampaignErrorEnum.KeywordPlanCampaignError keyword_plan_campaign_error = 72;</code>
+     * @return This builder for chaining.
      */
     public Builder clearKeywordPlanCampaignError() {
       if (errorCodeCase_ == 72) {
@@ -12319,7 +13168,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.KeywordPlanNegativeKeywordErrorEnum.KeywordPlanNegativeKeywordError keyword_plan_negative_keyword_error = 73;</code>
+     * @return The enum numeric value on the wire for keywordPlanNegativeKeywordError.
      */
+    @java.lang.Override
     public int getKeywordPlanNegativeKeywordErrorValue() {
       if (errorCodeCase_ == 73) {
         return ((java.lang.Integer) errorCode_).intValue();
@@ -12332,6 +13183,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.KeywordPlanNegativeKeywordErrorEnum.KeywordPlanNegativeKeywordError keyword_plan_negative_keyword_error = 73;</code>
+     * @param value The enum numeric value on the wire for keywordPlanNegativeKeywordError to set.
+     * @return This builder for chaining.
      */
     public Builder setKeywordPlanNegativeKeywordErrorValue(int value) {
       errorCodeCase_ = 73;
@@ -12345,7 +13198,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.KeywordPlanNegativeKeywordErrorEnum.KeywordPlanNegativeKeywordError keyword_plan_negative_keyword_error = 73;</code>
+     * @return The keywordPlanNegativeKeywordError.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.errors.KeywordPlanNegativeKeywordErrorEnum.KeywordPlanNegativeKeywordError getKeywordPlanNegativeKeywordError() {
       if (errorCodeCase_ == 73) {
         @SuppressWarnings("deprecation")
@@ -12361,6 +13216,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.KeywordPlanNegativeKeywordErrorEnum.KeywordPlanNegativeKeywordError keyword_plan_negative_keyword_error = 73;</code>
+     * @param value The keywordPlanNegativeKeywordError to set.
+     * @return This builder for chaining.
      */
     public Builder setKeywordPlanNegativeKeywordError(com.google.ads.googleads.v3.errors.KeywordPlanNegativeKeywordErrorEnum.KeywordPlanNegativeKeywordError value) {
       if (value == null) {
@@ -12377,6 +13234,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.KeywordPlanNegativeKeywordErrorEnum.KeywordPlanNegativeKeywordError keyword_plan_negative_keyword_error = 73;</code>
+     * @return This builder for chaining.
      */
     public Builder clearKeywordPlanNegativeKeywordError() {
       if (errorCodeCase_ == 73) {
@@ -12393,7 +13251,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.KeywordPlanAdGroupErrorEnum.KeywordPlanAdGroupError keyword_plan_ad_group_error = 74;</code>
+     * @return The enum numeric value on the wire for keywordPlanAdGroupError.
      */
+    @java.lang.Override
     public int getKeywordPlanAdGroupErrorValue() {
       if (errorCodeCase_ == 74) {
         return ((java.lang.Integer) errorCode_).intValue();
@@ -12406,6 +13266,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.KeywordPlanAdGroupErrorEnum.KeywordPlanAdGroupError keyword_plan_ad_group_error = 74;</code>
+     * @param value The enum numeric value on the wire for keywordPlanAdGroupError to set.
+     * @return This builder for chaining.
      */
     public Builder setKeywordPlanAdGroupErrorValue(int value) {
       errorCodeCase_ = 74;
@@ -12419,7 +13281,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.KeywordPlanAdGroupErrorEnum.KeywordPlanAdGroupError keyword_plan_ad_group_error = 74;</code>
+     * @return The keywordPlanAdGroupError.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.errors.KeywordPlanAdGroupErrorEnum.KeywordPlanAdGroupError getKeywordPlanAdGroupError() {
       if (errorCodeCase_ == 74) {
         @SuppressWarnings("deprecation")
@@ -12435,6 +13299,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.KeywordPlanAdGroupErrorEnum.KeywordPlanAdGroupError keyword_plan_ad_group_error = 74;</code>
+     * @param value The keywordPlanAdGroupError to set.
+     * @return This builder for chaining.
      */
     public Builder setKeywordPlanAdGroupError(com.google.ads.googleads.v3.errors.KeywordPlanAdGroupErrorEnum.KeywordPlanAdGroupError value) {
       if (value == null) {
@@ -12451,6 +13317,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.KeywordPlanAdGroupErrorEnum.KeywordPlanAdGroupError keyword_plan_ad_group_error = 74;</code>
+     * @return This builder for chaining.
      */
     public Builder clearKeywordPlanAdGroupError() {
       if (errorCodeCase_ == 74) {
@@ -12467,7 +13334,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.KeywordPlanKeywordErrorEnum.KeywordPlanKeywordError keyword_plan_keyword_error = 75;</code>
+     * @return The enum numeric value on the wire for keywordPlanKeywordError.
      */
+    @java.lang.Override
     public int getKeywordPlanKeywordErrorValue() {
       if (errorCodeCase_ == 75) {
         return ((java.lang.Integer) errorCode_).intValue();
@@ -12480,6 +13349,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.KeywordPlanKeywordErrorEnum.KeywordPlanKeywordError keyword_plan_keyword_error = 75;</code>
+     * @param value The enum numeric value on the wire for keywordPlanKeywordError to set.
+     * @return This builder for chaining.
      */
     public Builder setKeywordPlanKeywordErrorValue(int value) {
       errorCodeCase_ = 75;
@@ -12493,7 +13364,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.KeywordPlanKeywordErrorEnum.KeywordPlanKeywordError keyword_plan_keyword_error = 75;</code>
+     * @return The keywordPlanKeywordError.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.errors.KeywordPlanKeywordErrorEnum.KeywordPlanKeywordError getKeywordPlanKeywordError() {
       if (errorCodeCase_ == 75) {
         @SuppressWarnings("deprecation")
@@ -12509,6 +13382,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.KeywordPlanKeywordErrorEnum.KeywordPlanKeywordError keyword_plan_keyword_error = 75;</code>
+     * @param value The keywordPlanKeywordError to set.
+     * @return This builder for chaining.
      */
     public Builder setKeywordPlanKeywordError(com.google.ads.googleads.v3.errors.KeywordPlanKeywordErrorEnum.KeywordPlanKeywordError value) {
       if (value == null) {
@@ -12525,6 +13400,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.KeywordPlanKeywordErrorEnum.KeywordPlanKeywordError keyword_plan_keyword_error = 75;</code>
+     * @return This builder for chaining.
      */
     public Builder clearKeywordPlanKeywordError() {
       if (errorCodeCase_ == 75) {
@@ -12541,7 +13417,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.KeywordPlanIdeaErrorEnum.KeywordPlanIdeaError keyword_plan_idea_error = 76;</code>
+     * @return The enum numeric value on the wire for keywordPlanIdeaError.
      */
+    @java.lang.Override
     public int getKeywordPlanIdeaErrorValue() {
       if (errorCodeCase_ == 76) {
         return ((java.lang.Integer) errorCode_).intValue();
@@ -12554,6 +13432,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.KeywordPlanIdeaErrorEnum.KeywordPlanIdeaError keyword_plan_idea_error = 76;</code>
+     * @param value The enum numeric value on the wire for keywordPlanIdeaError to set.
+     * @return This builder for chaining.
      */
     public Builder setKeywordPlanIdeaErrorValue(int value) {
       errorCodeCase_ = 76;
@@ -12567,7 +13447,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.KeywordPlanIdeaErrorEnum.KeywordPlanIdeaError keyword_plan_idea_error = 76;</code>
+     * @return The keywordPlanIdeaError.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.errors.KeywordPlanIdeaErrorEnum.KeywordPlanIdeaError getKeywordPlanIdeaError() {
       if (errorCodeCase_ == 76) {
         @SuppressWarnings("deprecation")
@@ -12583,6 +13465,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.KeywordPlanIdeaErrorEnum.KeywordPlanIdeaError keyword_plan_idea_error = 76;</code>
+     * @param value The keywordPlanIdeaError to set.
+     * @return This builder for chaining.
      */
     public Builder setKeywordPlanIdeaError(com.google.ads.googleads.v3.errors.KeywordPlanIdeaErrorEnum.KeywordPlanIdeaError value) {
       if (value == null) {
@@ -12599,6 +13483,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.KeywordPlanIdeaErrorEnum.KeywordPlanIdeaError keyword_plan_idea_error = 76;</code>
+     * @return This builder for chaining.
      */
     public Builder clearKeywordPlanIdeaError() {
       if (errorCodeCase_ == 76) {
@@ -12615,7 +13500,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.AccountBudgetProposalErrorEnum.AccountBudgetProposalError account_budget_proposal_error = 77;</code>
+     * @return The enum numeric value on the wire for accountBudgetProposalError.
      */
+    @java.lang.Override
     public int getAccountBudgetProposalErrorValue() {
       if (errorCodeCase_ == 77) {
         return ((java.lang.Integer) errorCode_).intValue();
@@ -12628,6 +13515,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.AccountBudgetProposalErrorEnum.AccountBudgetProposalError account_budget_proposal_error = 77;</code>
+     * @param value The enum numeric value on the wire for accountBudgetProposalError to set.
+     * @return This builder for chaining.
      */
     public Builder setAccountBudgetProposalErrorValue(int value) {
       errorCodeCase_ = 77;
@@ -12641,7 +13530,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.AccountBudgetProposalErrorEnum.AccountBudgetProposalError account_budget_proposal_error = 77;</code>
+     * @return The accountBudgetProposalError.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.errors.AccountBudgetProposalErrorEnum.AccountBudgetProposalError getAccountBudgetProposalError() {
       if (errorCodeCase_ == 77) {
         @SuppressWarnings("deprecation")
@@ -12657,6 +13548,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.AccountBudgetProposalErrorEnum.AccountBudgetProposalError account_budget_proposal_error = 77;</code>
+     * @param value The accountBudgetProposalError to set.
+     * @return This builder for chaining.
      */
     public Builder setAccountBudgetProposalError(com.google.ads.googleads.v3.errors.AccountBudgetProposalErrorEnum.AccountBudgetProposalError value) {
       if (value == null) {
@@ -12673,6 +13566,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.AccountBudgetProposalErrorEnum.AccountBudgetProposalError account_budget_proposal_error = 77;</code>
+     * @return This builder for chaining.
      */
     public Builder clearAccountBudgetProposalError() {
       if (errorCodeCase_ == 77) {
@@ -12689,7 +13583,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.UserListErrorEnum.UserListError user_list_error = 78;</code>
+     * @return The enum numeric value on the wire for userListError.
      */
+    @java.lang.Override
     public int getUserListErrorValue() {
       if (errorCodeCase_ == 78) {
         return ((java.lang.Integer) errorCode_).intValue();
@@ -12702,6 +13598,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.UserListErrorEnum.UserListError user_list_error = 78;</code>
+     * @param value The enum numeric value on the wire for userListError to set.
+     * @return This builder for chaining.
      */
     public Builder setUserListErrorValue(int value) {
       errorCodeCase_ = 78;
@@ -12715,7 +13613,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.UserListErrorEnum.UserListError user_list_error = 78;</code>
+     * @return The userListError.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.errors.UserListErrorEnum.UserListError getUserListError() {
       if (errorCodeCase_ == 78) {
         @SuppressWarnings("deprecation")
@@ -12731,6 +13631,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.UserListErrorEnum.UserListError user_list_error = 78;</code>
+     * @param value The userListError to set.
+     * @return This builder for chaining.
      */
     public Builder setUserListError(com.google.ads.googleads.v3.errors.UserListErrorEnum.UserListError value) {
       if (value == null) {
@@ -12747,6 +13649,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.UserListErrorEnum.UserListError user_list_error = 78;</code>
+     * @return This builder for chaining.
      */
     public Builder clearUserListError() {
       if (errorCodeCase_ == 78) {
@@ -12763,7 +13666,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.ChangeStatusErrorEnum.ChangeStatusError change_status_error = 79;</code>
+     * @return The enum numeric value on the wire for changeStatusError.
      */
+    @java.lang.Override
     public int getChangeStatusErrorValue() {
       if (errorCodeCase_ == 79) {
         return ((java.lang.Integer) errorCode_).intValue();
@@ -12776,6 +13681,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.ChangeStatusErrorEnum.ChangeStatusError change_status_error = 79;</code>
+     * @param value The enum numeric value on the wire for changeStatusError to set.
+     * @return This builder for chaining.
      */
     public Builder setChangeStatusErrorValue(int value) {
       errorCodeCase_ = 79;
@@ -12789,7 +13696,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.ChangeStatusErrorEnum.ChangeStatusError change_status_error = 79;</code>
+     * @return The changeStatusError.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.errors.ChangeStatusErrorEnum.ChangeStatusError getChangeStatusError() {
       if (errorCodeCase_ == 79) {
         @SuppressWarnings("deprecation")
@@ -12805,6 +13714,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.ChangeStatusErrorEnum.ChangeStatusError change_status_error = 79;</code>
+     * @param value The changeStatusError to set.
+     * @return This builder for chaining.
      */
     public Builder setChangeStatusError(com.google.ads.googleads.v3.errors.ChangeStatusErrorEnum.ChangeStatusError value) {
       if (value == null) {
@@ -12821,6 +13732,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.ChangeStatusErrorEnum.ChangeStatusError change_status_error = 79;</code>
+     * @return This builder for chaining.
      */
     public Builder clearChangeStatusError() {
       if (errorCodeCase_ == 79) {
@@ -12837,7 +13749,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.FeedErrorEnum.FeedError feed_error = 80;</code>
+     * @return The enum numeric value on the wire for feedError.
      */
+    @java.lang.Override
     public int getFeedErrorValue() {
       if (errorCodeCase_ == 80) {
         return ((java.lang.Integer) errorCode_).intValue();
@@ -12850,6 +13764,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.FeedErrorEnum.FeedError feed_error = 80;</code>
+     * @param value The enum numeric value on the wire for feedError to set.
+     * @return This builder for chaining.
      */
     public Builder setFeedErrorValue(int value) {
       errorCodeCase_ = 80;
@@ -12863,7 +13779,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.FeedErrorEnum.FeedError feed_error = 80;</code>
+     * @return The feedError.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.errors.FeedErrorEnum.FeedError getFeedError() {
       if (errorCodeCase_ == 80) {
         @SuppressWarnings("deprecation")
@@ -12879,6 +13797,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.FeedErrorEnum.FeedError feed_error = 80;</code>
+     * @param value The feedError to set.
+     * @return This builder for chaining.
      */
     public Builder setFeedError(com.google.ads.googleads.v3.errors.FeedErrorEnum.FeedError value) {
       if (value == null) {
@@ -12895,6 +13815,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.FeedErrorEnum.FeedError feed_error = 80;</code>
+     * @return This builder for chaining.
      */
     public Builder clearFeedError() {
       if (errorCodeCase_ == 80) {
@@ -12911,7 +13832,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.GeoTargetConstantSuggestionErrorEnum.GeoTargetConstantSuggestionError geo_target_constant_suggestion_error = 81;</code>
+     * @return The enum numeric value on the wire for geoTargetConstantSuggestionError.
      */
+    @java.lang.Override
     public int getGeoTargetConstantSuggestionErrorValue() {
       if (errorCodeCase_ == 81) {
         return ((java.lang.Integer) errorCode_).intValue();
@@ -12924,6 +13847,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.GeoTargetConstantSuggestionErrorEnum.GeoTargetConstantSuggestionError geo_target_constant_suggestion_error = 81;</code>
+     * @param value The enum numeric value on the wire for geoTargetConstantSuggestionError to set.
+     * @return This builder for chaining.
      */
     public Builder setGeoTargetConstantSuggestionErrorValue(int value) {
       errorCodeCase_ = 81;
@@ -12937,7 +13862,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.GeoTargetConstantSuggestionErrorEnum.GeoTargetConstantSuggestionError geo_target_constant_suggestion_error = 81;</code>
+     * @return The geoTargetConstantSuggestionError.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.errors.GeoTargetConstantSuggestionErrorEnum.GeoTargetConstantSuggestionError getGeoTargetConstantSuggestionError() {
       if (errorCodeCase_ == 81) {
         @SuppressWarnings("deprecation")
@@ -12953,6 +13880,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.GeoTargetConstantSuggestionErrorEnum.GeoTargetConstantSuggestionError geo_target_constant_suggestion_error = 81;</code>
+     * @param value The geoTargetConstantSuggestionError to set.
+     * @return This builder for chaining.
      */
     public Builder setGeoTargetConstantSuggestionError(com.google.ads.googleads.v3.errors.GeoTargetConstantSuggestionErrorEnum.GeoTargetConstantSuggestionError value) {
       if (value == null) {
@@ -12969,6 +13898,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.GeoTargetConstantSuggestionErrorEnum.GeoTargetConstantSuggestionError geo_target_constant_suggestion_error = 81;</code>
+     * @return This builder for chaining.
      */
     public Builder clearGeoTargetConstantSuggestionError() {
       if (errorCodeCase_ == 81) {
@@ -12985,7 +13915,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.CampaignDraftErrorEnum.CampaignDraftError campaign_draft_error = 82;</code>
+     * @return The enum numeric value on the wire for campaignDraftError.
      */
+    @java.lang.Override
     public int getCampaignDraftErrorValue() {
       if (errorCodeCase_ == 82) {
         return ((java.lang.Integer) errorCode_).intValue();
@@ -12998,6 +13930,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.CampaignDraftErrorEnum.CampaignDraftError campaign_draft_error = 82;</code>
+     * @param value The enum numeric value on the wire for campaignDraftError to set.
+     * @return This builder for chaining.
      */
     public Builder setCampaignDraftErrorValue(int value) {
       errorCodeCase_ = 82;
@@ -13011,7 +13945,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.CampaignDraftErrorEnum.CampaignDraftError campaign_draft_error = 82;</code>
+     * @return The campaignDraftError.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.errors.CampaignDraftErrorEnum.CampaignDraftError getCampaignDraftError() {
       if (errorCodeCase_ == 82) {
         @SuppressWarnings("deprecation")
@@ -13027,6 +13963,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.CampaignDraftErrorEnum.CampaignDraftError campaign_draft_error = 82;</code>
+     * @param value The campaignDraftError to set.
+     * @return This builder for chaining.
      */
     public Builder setCampaignDraftError(com.google.ads.googleads.v3.errors.CampaignDraftErrorEnum.CampaignDraftError value) {
       if (value == null) {
@@ -13043,6 +13981,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.CampaignDraftErrorEnum.CampaignDraftError campaign_draft_error = 82;</code>
+     * @return This builder for chaining.
      */
     public Builder clearCampaignDraftError() {
       if (errorCodeCase_ == 82) {
@@ -13059,7 +13998,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.FeedItemErrorEnum.FeedItemError feed_item_error = 83;</code>
+     * @return The enum numeric value on the wire for feedItemError.
      */
+    @java.lang.Override
     public int getFeedItemErrorValue() {
       if (errorCodeCase_ == 83) {
         return ((java.lang.Integer) errorCode_).intValue();
@@ -13072,6 +14013,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.FeedItemErrorEnum.FeedItemError feed_item_error = 83;</code>
+     * @param value The enum numeric value on the wire for feedItemError to set.
+     * @return This builder for chaining.
      */
     public Builder setFeedItemErrorValue(int value) {
       errorCodeCase_ = 83;
@@ -13085,7 +14028,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.FeedItemErrorEnum.FeedItemError feed_item_error = 83;</code>
+     * @return The feedItemError.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.errors.FeedItemErrorEnum.FeedItemError getFeedItemError() {
       if (errorCodeCase_ == 83) {
         @SuppressWarnings("deprecation")
@@ -13101,6 +14046,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.FeedItemErrorEnum.FeedItemError feed_item_error = 83;</code>
+     * @param value The feedItemError to set.
+     * @return This builder for chaining.
      */
     public Builder setFeedItemError(com.google.ads.googleads.v3.errors.FeedItemErrorEnum.FeedItemError value) {
       if (value == null) {
@@ -13117,6 +14064,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.FeedItemErrorEnum.FeedItemError feed_item_error = 83;</code>
+     * @return This builder for chaining.
      */
     public Builder clearFeedItemError() {
       if (errorCodeCase_ == 83) {
@@ -13133,7 +14081,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.LabelErrorEnum.LabelError label_error = 84;</code>
+     * @return The enum numeric value on the wire for labelError.
      */
+    @java.lang.Override
     public int getLabelErrorValue() {
       if (errorCodeCase_ == 84) {
         return ((java.lang.Integer) errorCode_).intValue();
@@ -13146,6 +14096,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.LabelErrorEnum.LabelError label_error = 84;</code>
+     * @param value The enum numeric value on the wire for labelError to set.
+     * @return This builder for chaining.
      */
     public Builder setLabelErrorValue(int value) {
       errorCodeCase_ = 84;
@@ -13159,7 +14111,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.LabelErrorEnum.LabelError label_error = 84;</code>
+     * @return The labelError.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.errors.LabelErrorEnum.LabelError getLabelError() {
       if (errorCodeCase_ == 84) {
         @SuppressWarnings("deprecation")
@@ -13175,6 +14129,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.LabelErrorEnum.LabelError label_error = 84;</code>
+     * @param value The labelError to set.
+     * @return This builder for chaining.
      */
     public Builder setLabelError(com.google.ads.googleads.v3.errors.LabelErrorEnum.LabelError value) {
       if (value == null) {
@@ -13191,6 +14147,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.LabelErrorEnum.LabelError label_error = 84;</code>
+     * @return This builder for chaining.
      */
     public Builder clearLabelError() {
       if (errorCodeCase_ == 84) {
@@ -13207,7 +14164,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.BillingSetupErrorEnum.BillingSetupError billing_setup_error = 87;</code>
+     * @return The enum numeric value on the wire for billingSetupError.
      */
+    @java.lang.Override
     public int getBillingSetupErrorValue() {
       if (errorCodeCase_ == 87) {
         return ((java.lang.Integer) errorCode_).intValue();
@@ -13220,6 +14179,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.BillingSetupErrorEnum.BillingSetupError billing_setup_error = 87;</code>
+     * @param value The enum numeric value on the wire for billingSetupError to set.
+     * @return This builder for chaining.
      */
     public Builder setBillingSetupErrorValue(int value) {
       errorCodeCase_ = 87;
@@ -13233,7 +14194,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.BillingSetupErrorEnum.BillingSetupError billing_setup_error = 87;</code>
+     * @return The billingSetupError.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.errors.BillingSetupErrorEnum.BillingSetupError getBillingSetupError() {
       if (errorCodeCase_ == 87) {
         @SuppressWarnings("deprecation")
@@ -13249,6 +14212,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.BillingSetupErrorEnum.BillingSetupError billing_setup_error = 87;</code>
+     * @param value The billingSetupError to set.
+     * @return This builder for chaining.
      */
     public Builder setBillingSetupError(com.google.ads.googleads.v3.errors.BillingSetupErrorEnum.BillingSetupError value) {
       if (value == null) {
@@ -13265,6 +14230,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.BillingSetupErrorEnum.BillingSetupError billing_setup_error = 87;</code>
+     * @return This builder for chaining.
      */
     public Builder clearBillingSetupError() {
       if (errorCodeCase_ == 87) {
@@ -13281,7 +14247,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.CustomerClientLinkErrorEnum.CustomerClientLinkError customer_client_link_error = 88;</code>
+     * @return The enum numeric value on the wire for customerClientLinkError.
      */
+    @java.lang.Override
     public int getCustomerClientLinkErrorValue() {
       if (errorCodeCase_ == 88) {
         return ((java.lang.Integer) errorCode_).intValue();
@@ -13294,6 +14262,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.CustomerClientLinkErrorEnum.CustomerClientLinkError customer_client_link_error = 88;</code>
+     * @param value The enum numeric value on the wire for customerClientLinkError to set.
+     * @return This builder for chaining.
      */
     public Builder setCustomerClientLinkErrorValue(int value) {
       errorCodeCase_ = 88;
@@ -13307,7 +14277,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.CustomerClientLinkErrorEnum.CustomerClientLinkError customer_client_link_error = 88;</code>
+     * @return The customerClientLinkError.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.errors.CustomerClientLinkErrorEnum.CustomerClientLinkError getCustomerClientLinkError() {
       if (errorCodeCase_ == 88) {
         @SuppressWarnings("deprecation")
@@ -13323,6 +14295,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.CustomerClientLinkErrorEnum.CustomerClientLinkError customer_client_link_error = 88;</code>
+     * @param value The customerClientLinkError to set.
+     * @return This builder for chaining.
      */
     public Builder setCustomerClientLinkError(com.google.ads.googleads.v3.errors.CustomerClientLinkErrorEnum.CustomerClientLinkError value) {
       if (value == null) {
@@ -13339,6 +14313,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.CustomerClientLinkErrorEnum.CustomerClientLinkError customer_client_link_error = 88;</code>
+     * @return This builder for chaining.
      */
     public Builder clearCustomerClientLinkError() {
       if (errorCodeCase_ == 88) {
@@ -13355,7 +14330,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.CustomerManagerLinkErrorEnum.CustomerManagerLinkError customer_manager_link_error = 91;</code>
+     * @return The enum numeric value on the wire for customerManagerLinkError.
      */
+    @java.lang.Override
     public int getCustomerManagerLinkErrorValue() {
       if (errorCodeCase_ == 91) {
         return ((java.lang.Integer) errorCode_).intValue();
@@ -13368,6 +14345,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.CustomerManagerLinkErrorEnum.CustomerManagerLinkError customer_manager_link_error = 91;</code>
+     * @param value The enum numeric value on the wire for customerManagerLinkError to set.
+     * @return This builder for chaining.
      */
     public Builder setCustomerManagerLinkErrorValue(int value) {
       errorCodeCase_ = 91;
@@ -13381,7 +14360,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.CustomerManagerLinkErrorEnum.CustomerManagerLinkError customer_manager_link_error = 91;</code>
+     * @return The customerManagerLinkError.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.errors.CustomerManagerLinkErrorEnum.CustomerManagerLinkError getCustomerManagerLinkError() {
       if (errorCodeCase_ == 91) {
         @SuppressWarnings("deprecation")
@@ -13397,6 +14378,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.CustomerManagerLinkErrorEnum.CustomerManagerLinkError customer_manager_link_error = 91;</code>
+     * @param value The customerManagerLinkError to set.
+     * @return This builder for chaining.
      */
     public Builder setCustomerManagerLinkError(com.google.ads.googleads.v3.errors.CustomerManagerLinkErrorEnum.CustomerManagerLinkError value) {
       if (value == null) {
@@ -13413,6 +14396,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.CustomerManagerLinkErrorEnum.CustomerManagerLinkError customer_manager_link_error = 91;</code>
+     * @return This builder for chaining.
      */
     public Builder clearCustomerManagerLinkError() {
       if (errorCodeCase_ == 91) {
@@ -13429,7 +14413,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.FeedMappingErrorEnum.FeedMappingError feed_mapping_error = 92;</code>
+     * @return The enum numeric value on the wire for feedMappingError.
      */
+    @java.lang.Override
     public int getFeedMappingErrorValue() {
       if (errorCodeCase_ == 92) {
         return ((java.lang.Integer) errorCode_).intValue();
@@ -13442,6 +14428,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.FeedMappingErrorEnum.FeedMappingError feed_mapping_error = 92;</code>
+     * @param value The enum numeric value on the wire for feedMappingError to set.
+     * @return This builder for chaining.
      */
     public Builder setFeedMappingErrorValue(int value) {
       errorCodeCase_ = 92;
@@ -13455,7 +14443,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.FeedMappingErrorEnum.FeedMappingError feed_mapping_error = 92;</code>
+     * @return The feedMappingError.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.errors.FeedMappingErrorEnum.FeedMappingError getFeedMappingError() {
       if (errorCodeCase_ == 92) {
         @SuppressWarnings("deprecation")
@@ -13471,6 +14461,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.FeedMappingErrorEnum.FeedMappingError feed_mapping_error = 92;</code>
+     * @param value The feedMappingError to set.
+     * @return This builder for chaining.
      */
     public Builder setFeedMappingError(com.google.ads.googleads.v3.errors.FeedMappingErrorEnum.FeedMappingError value) {
       if (value == null) {
@@ -13487,6 +14479,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.FeedMappingErrorEnum.FeedMappingError feed_mapping_error = 92;</code>
+     * @return This builder for chaining.
      */
     public Builder clearFeedMappingError() {
       if (errorCodeCase_ == 92) {
@@ -13503,7 +14496,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.CustomerFeedErrorEnum.CustomerFeedError customer_feed_error = 93;</code>
+     * @return The enum numeric value on the wire for customerFeedError.
      */
+    @java.lang.Override
     public int getCustomerFeedErrorValue() {
       if (errorCodeCase_ == 93) {
         return ((java.lang.Integer) errorCode_).intValue();
@@ -13516,6 +14511,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.CustomerFeedErrorEnum.CustomerFeedError customer_feed_error = 93;</code>
+     * @param value The enum numeric value on the wire for customerFeedError to set.
+     * @return This builder for chaining.
      */
     public Builder setCustomerFeedErrorValue(int value) {
       errorCodeCase_ = 93;
@@ -13529,7 +14526,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.CustomerFeedErrorEnum.CustomerFeedError customer_feed_error = 93;</code>
+     * @return The customerFeedError.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.errors.CustomerFeedErrorEnum.CustomerFeedError getCustomerFeedError() {
       if (errorCodeCase_ == 93) {
         @SuppressWarnings("deprecation")
@@ -13545,6 +14544,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.CustomerFeedErrorEnum.CustomerFeedError customer_feed_error = 93;</code>
+     * @param value The customerFeedError to set.
+     * @return This builder for chaining.
      */
     public Builder setCustomerFeedError(com.google.ads.googleads.v3.errors.CustomerFeedErrorEnum.CustomerFeedError value) {
       if (value == null) {
@@ -13561,6 +14562,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.CustomerFeedErrorEnum.CustomerFeedError customer_feed_error = 93;</code>
+     * @return This builder for chaining.
      */
     public Builder clearCustomerFeedError() {
       if (errorCodeCase_ == 93) {
@@ -13577,7 +14579,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.AdGroupFeedErrorEnum.AdGroupFeedError ad_group_feed_error = 94;</code>
+     * @return The enum numeric value on the wire for adGroupFeedError.
      */
+    @java.lang.Override
     public int getAdGroupFeedErrorValue() {
       if (errorCodeCase_ == 94) {
         return ((java.lang.Integer) errorCode_).intValue();
@@ -13590,6 +14594,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.AdGroupFeedErrorEnum.AdGroupFeedError ad_group_feed_error = 94;</code>
+     * @param value The enum numeric value on the wire for adGroupFeedError to set.
+     * @return This builder for chaining.
      */
     public Builder setAdGroupFeedErrorValue(int value) {
       errorCodeCase_ = 94;
@@ -13603,7 +14609,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.AdGroupFeedErrorEnum.AdGroupFeedError ad_group_feed_error = 94;</code>
+     * @return The adGroupFeedError.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.errors.AdGroupFeedErrorEnum.AdGroupFeedError getAdGroupFeedError() {
       if (errorCodeCase_ == 94) {
         @SuppressWarnings("deprecation")
@@ -13619,6 +14627,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.AdGroupFeedErrorEnum.AdGroupFeedError ad_group_feed_error = 94;</code>
+     * @param value The adGroupFeedError to set.
+     * @return This builder for chaining.
      */
     public Builder setAdGroupFeedError(com.google.ads.googleads.v3.errors.AdGroupFeedErrorEnum.AdGroupFeedError value) {
       if (value == null) {
@@ -13635,6 +14645,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.AdGroupFeedErrorEnum.AdGroupFeedError ad_group_feed_error = 94;</code>
+     * @return This builder for chaining.
      */
     public Builder clearAdGroupFeedError() {
       if (errorCodeCase_ == 94) {
@@ -13651,7 +14662,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.CampaignFeedErrorEnum.CampaignFeedError campaign_feed_error = 96;</code>
+     * @return The enum numeric value on the wire for campaignFeedError.
      */
+    @java.lang.Override
     public int getCampaignFeedErrorValue() {
       if (errorCodeCase_ == 96) {
         return ((java.lang.Integer) errorCode_).intValue();
@@ -13664,6 +14677,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.CampaignFeedErrorEnum.CampaignFeedError campaign_feed_error = 96;</code>
+     * @param value The enum numeric value on the wire for campaignFeedError to set.
+     * @return This builder for chaining.
      */
     public Builder setCampaignFeedErrorValue(int value) {
       errorCodeCase_ = 96;
@@ -13677,7 +14692,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.CampaignFeedErrorEnum.CampaignFeedError campaign_feed_error = 96;</code>
+     * @return The campaignFeedError.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.errors.CampaignFeedErrorEnum.CampaignFeedError getCampaignFeedError() {
       if (errorCodeCase_ == 96) {
         @SuppressWarnings("deprecation")
@@ -13693,6 +14710,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.CampaignFeedErrorEnum.CampaignFeedError campaign_feed_error = 96;</code>
+     * @param value The campaignFeedError to set.
+     * @return This builder for chaining.
      */
     public Builder setCampaignFeedError(com.google.ads.googleads.v3.errors.CampaignFeedErrorEnum.CampaignFeedError value) {
       if (value == null) {
@@ -13709,6 +14728,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.CampaignFeedErrorEnum.CampaignFeedError campaign_feed_error = 96;</code>
+     * @return This builder for chaining.
      */
     public Builder clearCampaignFeedError() {
       if (errorCodeCase_ == 96) {
@@ -13725,7 +14745,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.CustomInterestErrorEnum.CustomInterestError custom_interest_error = 97;</code>
+     * @return The enum numeric value on the wire for customInterestError.
      */
+    @java.lang.Override
     public int getCustomInterestErrorValue() {
       if (errorCodeCase_ == 97) {
         return ((java.lang.Integer) errorCode_).intValue();
@@ -13738,6 +14760,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.CustomInterestErrorEnum.CustomInterestError custom_interest_error = 97;</code>
+     * @param value The enum numeric value on the wire for customInterestError to set.
+     * @return This builder for chaining.
      */
     public Builder setCustomInterestErrorValue(int value) {
       errorCodeCase_ = 97;
@@ -13751,7 +14775,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.CustomInterestErrorEnum.CustomInterestError custom_interest_error = 97;</code>
+     * @return The customInterestError.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.errors.CustomInterestErrorEnum.CustomInterestError getCustomInterestError() {
       if (errorCodeCase_ == 97) {
         @SuppressWarnings("deprecation")
@@ -13767,6 +14793,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.CustomInterestErrorEnum.CustomInterestError custom_interest_error = 97;</code>
+     * @param value The customInterestError to set.
+     * @return This builder for chaining.
      */
     public Builder setCustomInterestError(com.google.ads.googleads.v3.errors.CustomInterestErrorEnum.CustomInterestError value) {
       if (value == null) {
@@ -13783,6 +14811,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.CustomInterestErrorEnum.CustomInterestError custom_interest_error = 97;</code>
+     * @return This builder for chaining.
      */
     public Builder clearCustomInterestError() {
       if (errorCodeCase_ == 97) {
@@ -13799,7 +14828,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.CampaignExperimentErrorEnum.CampaignExperimentError campaign_experiment_error = 98;</code>
+     * @return The enum numeric value on the wire for campaignExperimentError.
      */
+    @java.lang.Override
     public int getCampaignExperimentErrorValue() {
       if (errorCodeCase_ == 98) {
         return ((java.lang.Integer) errorCode_).intValue();
@@ -13812,6 +14843,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.CampaignExperimentErrorEnum.CampaignExperimentError campaign_experiment_error = 98;</code>
+     * @param value The enum numeric value on the wire for campaignExperimentError to set.
+     * @return This builder for chaining.
      */
     public Builder setCampaignExperimentErrorValue(int value) {
       errorCodeCase_ = 98;
@@ -13825,7 +14858,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.CampaignExperimentErrorEnum.CampaignExperimentError campaign_experiment_error = 98;</code>
+     * @return The campaignExperimentError.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.errors.CampaignExperimentErrorEnum.CampaignExperimentError getCampaignExperimentError() {
       if (errorCodeCase_ == 98) {
         @SuppressWarnings("deprecation")
@@ -13841,6 +14876,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.CampaignExperimentErrorEnum.CampaignExperimentError campaign_experiment_error = 98;</code>
+     * @param value The campaignExperimentError to set.
+     * @return This builder for chaining.
      */
     public Builder setCampaignExperimentError(com.google.ads.googleads.v3.errors.CampaignExperimentErrorEnum.CampaignExperimentError value) {
       if (value == null) {
@@ -13857,6 +14894,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.CampaignExperimentErrorEnum.CampaignExperimentError campaign_experiment_error = 98;</code>
+     * @return This builder for chaining.
      */
     public Builder clearCampaignExperimentError() {
       if (errorCodeCase_ == 98) {
@@ -13873,7 +14911,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.ExtensionFeedItemErrorEnum.ExtensionFeedItemError extension_feed_item_error = 100;</code>
+     * @return The enum numeric value on the wire for extensionFeedItemError.
      */
+    @java.lang.Override
     public int getExtensionFeedItemErrorValue() {
       if (errorCodeCase_ == 100) {
         return ((java.lang.Integer) errorCode_).intValue();
@@ -13886,6 +14926,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.ExtensionFeedItemErrorEnum.ExtensionFeedItemError extension_feed_item_error = 100;</code>
+     * @param value The enum numeric value on the wire for extensionFeedItemError to set.
+     * @return This builder for chaining.
      */
     public Builder setExtensionFeedItemErrorValue(int value) {
       errorCodeCase_ = 100;
@@ -13899,7 +14941,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.ExtensionFeedItemErrorEnum.ExtensionFeedItemError extension_feed_item_error = 100;</code>
+     * @return The extensionFeedItemError.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.errors.ExtensionFeedItemErrorEnum.ExtensionFeedItemError getExtensionFeedItemError() {
       if (errorCodeCase_ == 100) {
         @SuppressWarnings("deprecation")
@@ -13915,6 +14959,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.ExtensionFeedItemErrorEnum.ExtensionFeedItemError extension_feed_item_error = 100;</code>
+     * @param value The extensionFeedItemError to set.
+     * @return This builder for chaining.
      */
     public Builder setExtensionFeedItemError(com.google.ads.googleads.v3.errors.ExtensionFeedItemErrorEnum.ExtensionFeedItemError value) {
       if (value == null) {
@@ -13931,6 +14977,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.ExtensionFeedItemErrorEnum.ExtensionFeedItemError extension_feed_item_error = 100;</code>
+     * @return This builder for chaining.
      */
     public Builder clearExtensionFeedItemError() {
       if (errorCodeCase_ == 100) {
@@ -13947,7 +14994,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.AdParameterErrorEnum.AdParameterError ad_parameter_error = 101;</code>
+     * @return The enum numeric value on the wire for adParameterError.
      */
+    @java.lang.Override
     public int getAdParameterErrorValue() {
       if (errorCodeCase_ == 101) {
         return ((java.lang.Integer) errorCode_).intValue();
@@ -13960,6 +15009,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.AdParameterErrorEnum.AdParameterError ad_parameter_error = 101;</code>
+     * @param value The enum numeric value on the wire for adParameterError to set.
+     * @return This builder for chaining.
      */
     public Builder setAdParameterErrorValue(int value) {
       errorCodeCase_ = 101;
@@ -13973,7 +15024,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.AdParameterErrorEnum.AdParameterError ad_parameter_error = 101;</code>
+     * @return The adParameterError.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.errors.AdParameterErrorEnum.AdParameterError getAdParameterError() {
       if (errorCodeCase_ == 101) {
         @SuppressWarnings("deprecation")
@@ -13989,6 +15042,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.AdParameterErrorEnum.AdParameterError ad_parameter_error = 101;</code>
+     * @param value The adParameterError to set.
+     * @return This builder for chaining.
      */
     public Builder setAdParameterError(com.google.ads.googleads.v3.errors.AdParameterErrorEnum.AdParameterError value) {
       if (value == null) {
@@ -14005,6 +15060,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.AdParameterErrorEnum.AdParameterError ad_parameter_error = 101;</code>
+     * @return This builder for chaining.
      */
     public Builder clearAdParameterError() {
       if (errorCodeCase_ == 101) {
@@ -14021,7 +15077,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.FeedItemValidationErrorEnum.FeedItemValidationError feed_item_validation_error = 102;</code>
+     * @return The enum numeric value on the wire for feedItemValidationError.
      */
+    @java.lang.Override
     public int getFeedItemValidationErrorValue() {
       if (errorCodeCase_ == 102) {
         return ((java.lang.Integer) errorCode_).intValue();
@@ -14034,6 +15092,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.FeedItemValidationErrorEnum.FeedItemValidationError feed_item_validation_error = 102;</code>
+     * @param value The enum numeric value on the wire for feedItemValidationError to set.
+     * @return This builder for chaining.
      */
     public Builder setFeedItemValidationErrorValue(int value) {
       errorCodeCase_ = 102;
@@ -14047,7 +15107,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.FeedItemValidationErrorEnum.FeedItemValidationError feed_item_validation_error = 102;</code>
+     * @return The feedItemValidationError.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.errors.FeedItemValidationErrorEnum.FeedItemValidationError getFeedItemValidationError() {
       if (errorCodeCase_ == 102) {
         @SuppressWarnings("deprecation")
@@ -14063,6 +15125,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.FeedItemValidationErrorEnum.FeedItemValidationError feed_item_validation_error = 102;</code>
+     * @param value The feedItemValidationError to set.
+     * @return This builder for chaining.
      */
     public Builder setFeedItemValidationError(com.google.ads.googleads.v3.errors.FeedItemValidationErrorEnum.FeedItemValidationError value) {
       if (value == null) {
@@ -14079,6 +15143,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.FeedItemValidationErrorEnum.FeedItemValidationError feed_item_validation_error = 102;</code>
+     * @return This builder for chaining.
      */
     public Builder clearFeedItemValidationError() {
       if (errorCodeCase_ == 102) {
@@ -14095,7 +15160,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.ExtensionSettingErrorEnum.ExtensionSettingError extension_setting_error = 103;</code>
+     * @return The enum numeric value on the wire for extensionSettingError.
      */
+    @java.lang.Override
     public int getExtensionSettingErrorValue() {
       if (errorCodeCase_ == 103) {
         return ((java.lang.Integer) errorCode_).intValue();
@@ -14108,6 +15175,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.ExtensionSettingErrorEnum.ExtensionSettingError extension_setting_error = 103;</code>
+     * @param value The enum numeric value on the wire for extensionSettingError to set.
+     * @return This builder for chaining.
      */
     public Builder setExtensionSettingErrorValue(int value) {
       errorCodeCase_ = 103;
@@ -14121,7 +15190,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.ExtensionSettingErrorEnum.ExtensionSettingError extension_setting_error = 103;</code>
+     * @return The extensionSettingError.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.errors.ExtensionSettingErrorEnum.ExtensionSettingError getExtensionSettingError() {
       if (errorCodeCase_ == 103) {
         @SuppressWarnings("deprecation")
@@ -14137,6 +15208,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.ExtensionSettingErrorEnum.ExtensionSettingError extension_setting_error = 103;</code>
+     * @param value The extensionSettingError to set.
+     * @return This builder for chaining.
      */
     public Builder setExtensionSettingError(com.google.ads.googleads.v3.errors.ExtensionSettingErrorEnum.ExtensionSettingError value) {
       if (value == null) {
@@ -14153,6 +15226,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.ExtensionSettingErrorEnum.ExtensionSettingError extension_setting_error = 103;</code>
+     * @return This builder for chaining.
      */
     public Builder clearExtensionSettingError() {
       if (errorCodeCase_ == 103) {
@@ -14169,7 +15243,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.FeedItemTargetErrorEnum.FeedItemTargetError feed_item_target_error = 104;</code>
+     * @return The enum numeric value on the wire for feedItemTargetError.
      */
+    @java.lang.Override
     public int getFeedItemTargetErrorValue() {
       if (errorCodeCase_ == 104) {
         return ((java.lang.Integer) errorCode_).intValue();
@@ -14182,6 +15258,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.FeedItemTargetErrorEnum.FeedItemTargetError feed_item_target_error = 104;</code>
+     * @param value The enum numeric value on the wire for feedItemTargetError to set.
+     * @return This builder for chaining.
      */
     public Builder setFeedItemTargetErrorValue(int value) {
       errorCodeCase_ = 104;
@@ -14195,7 +15273,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.FeedItemTargetErrorEnum.FeedItemTargetError feed_item_target_error = 104;</code>
+     * @return The feedItemTargetError.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.errors.FeedItemTargetErrorEnum.FeedItemTargetError getFeedItemTargetError() {
       if (errorCodeCase_ == 104) {
         @SuppressWarnings("deprecation")
@@ -14211,6 +15291,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.FeedItemTargetErrorEnum.FeedItemTargetError feed_item_target_error = 104;</code>
+     * @param value The feedItemTargetError to set.
+     * @return This builder for chaining.
      */
     public Builder setFeedItemTargetError(com.google.ads.googleads.v3.errors.FeedItemTargetErrorEnum.FeedItemTargetError value) {
       if (value == null) {
@@ -14227,6 +15309,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.FeedItemTargetErrorEnum.FeedItemTargetError feed_item_target_error = 104;</code>
+     * @return This builder for chaining.
      */
     public Builder clearFeedItemTargetError() {
       if (errorCodeCase_ == 104) {
@@ -14243,7 +15326,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.PolicyViolationErrorEnum.PolicyViolationError policy_violation_error = 105;</code>
+     * @return The enum numeric value on the wire for policyViolationError.
      */
+    @java.lang.Override
     public int getPolicyViolationErrorValue() {
       if (errorCodeCase_ == 105) {
         return ((java.lang.Integer) errorCode_).intValue();
@@ -14256,6 +15341,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.PolicyViolationErrorEnum.PolicyViolationError policy_violation_error = 105;</code>
+     * @param value The enum numeric value on the wire for policyViolationError to set.
+     * @return This builder for chaining.
      */
     public Builder setPolicyViolationErrorValue(int value) {
       errorCodeCase_ = 105;
@@ -14269,7 +15356,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.PolicyViolationErrorEnum.PolicyViolationError policy_violation_error = 105;</code>
+     * @return The policyViolationError.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.errors.PolicyViolationErrorEnum.PolicyViolationError getPolicyViolationError() {
       if (errorCodeCase_ == 105) {
         @SuppressWarnings("deprecation")
@@ -14285,6 +15374,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.PolicyViolationErrorEnum.PolicyViolationError policy_violation_error = 105;</code>
+     * @param value The policyViolationError to set.
+     * @return This builder for chaining.
      */
     public Builder setPolicyViolationError(com.google.ads.googleads.v3.errors.PolicyViolationErrorEnum.PolicyViolationError value) {
       if (value == null) {
@@ -14301,6 +15392,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.PolicyViolationErrorEnum.PolicyViolationError policy_violation_error = 105;</code>
+     * @return This builder for chaining.
      */
     public Builder clearPolicyViolationError() {
       if (errorCodeCase_ == 105) {
@@ -14317,7 +15409,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.MutateJobErrorEnum.MutateJobError mutate_job_error = 108;</code>
+     * @return The enum numeric value on the wire for mutateJobError.
      */
+    @java.lang.Override
     public int getMutateJobErrorValue() {
       if (errorCodeCase_ == 108) {
         return ((java.lang.Integer) errorCode_).intValue();
@@ -14330,6 +15424,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.MutateJobErrorEnum.MutateJobError mutate_job_error = 108;</code>
+     * @param value The enum numeric value on the wire for mutateJobError to set.
+     * @return This builder for chaining.
      */
     public Builder setMutateJobErrorValue(int value) {
       errorCodeCase_ = 108;
@@ -14343,7 +15439,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.MutateJobErrorEnum.MutateJobError mutate_job_error = 108;</code>
+     * @return The mutateJobError.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.errors.MutateJobErrorEnum.MutateJobError getMutateJobError() {
       if (errorCodeCase_ == 108) {
         @SuppressWarnings("deprecation")
@@ -14359,6 +15457,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.MutateJobErrorEnum.MutateJobError mutate_job_error = 108;</code>
+     * @param value The mutateJobError to set.
+     * @return This builder for chaining.
      */
     public Builder setMutateJobError(com.google.ads.googleads.v3.errors.MutateJobErrorEnum.MutateJobError value) {
       if (value == null) {
@@ -14375,6 +15475,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.MutateJobErrorEnum.MutateJobError mutate_job_error = 108;</code>
+     * @return This builder for chaining.
      */
     public Builder clearMutateJobError() {
       if (errorCodeCase_ == 108) {
@@ -14391,7 +15492,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.PartialFailureErrorEnum.PartialFailureError partial_failure_error = 112;</code>
+     * @return The enum numeric value on the wire for partialFailureError.
      */
+    @java.lang.Override
     public int getPartialFailureErrorValue() {
       if (errorCodeCase_ == 112) {
         return ((java.lang.Integer) errorCode_).intValue();
@@ -14404,6 +15507,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.PartialFailureErrorEnum.PartialFailureError partial_failure_error = 112;</code>
+     * @param value The enum numeric value on the wire for partialFailureError to set.
+     * @return This builder for chaining.
      */
     public Builder setPartialFailureErrorValue(int value) {
       errorCodeCase_ = 112;
@@ -14417,7 +15522,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.PartialFailureErrorEnum.PartialFailureError partial_failure_error = 112;</code>
+     * @return The partialFailureError.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.errors.PartialFailureErrorEnum.PartialFailureError getPartialFailureError() {
       if (errorCodeCase_ == 112) {
         @SuppressWarnings("deprecation")
@@ -14433,6 +15540,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.PartialFailureErrorEnum.PartialFailureError partial_failure_error = 112;</code>
+     * @param value The partialFailureError to set.
+     * @return This builder for chaining.
      */
     public Builder setPartialFailureError(com.google.ads.googleads.v3.errors.PartialFailureErrorEnum.PartialFailureError value) {
       if (value == null) {
@@ -14449,6 +15558,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.PartialFailureErrorEnum.PartialFailureError partial_failure_error = 112;</code>
+     * @return This builder for chaining.
      */
     public Builder clearPartialFailureError() {
       if (errorCodeCase_ == 112) {
@@ -14465,7 +15575,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.PolicyValidationParameterErrorEnum.PolicyValidationParameterError policy_validation_parameter_error = 114;</code>
+     * @return The enum numeric value on the wire for policyValidationParameterError.
      */
+    @java.lang.Override
     public int getPolicyValidationParameterErrorValue() {
       if (errorCodeCase_ == 114) {
         return ((java.lang.Integer) errorCode_).intValue();
@@ -14478,6 +15590,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.PolicyValidationParameterErrorEnum.PolicyValidationParameterError policy_validation_parameter_error = 114;</code>
+     * @param value The enum numeric value on the wire for policyValidationParameterError to set.
+     * @return This builder for chaining.
      */
     public Builder setPolicyValidationParameterErrorValue(int value) {
       errorCodeCase_ = 114;
@@ -14491,7 +15605,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.PolicyValidationParameterErrorEnum.PolicyValidationParameterError policy_validation_parameter_error = 114;</code>
+     * @return The policyValidationParameterError.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.errors.PolicyValidationParameterErrorEnum.PolicyValidationParameterError getPolicyValidationParameterError() {
       if (errorCodeCase_ == 114) {
         @SuppressWarnings("deprecation")
@@ -14507,6 +15623,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.PolicyValidationParameterErrorEnum.PolicyValidationParameterError policy_validation_parameter_error = 114;</code>
+     * @param value The policyValidationParameterError to set.
+     * @return This builder for chaining.
      */
     public Builder setPolicyValidationParameterError(com.google.ads.googleads.v3.errors.PolicyValidationParameterErrorEnum.PolicyValidationParameterError value) {
       if (value == null) {
@@ -14523,6 +15641,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.PolicyValidationParameterErrorEnum.PolicyValidationParameterError policy_validation_parameter_error = 114;</code>
+     * @return This builder for chaining.
      */
     public Builder clearPolicyValidationParameterError() {
       if (errorCodeCase_ == 114) {
@@ -14539,7 +15658,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.SizeLimitErrorEnum.SizeLimitError size_limit_error = 118;</code>
+     * @return The enum numeric value on the wire for sizeLimitError.
      */
+    @java.lang.Override
     public int getSizeLimitErrorValue() {
       if (errorCodeCase_ == 118) {
         return ((java.lang.Integer) errorCode_).intValue();
@@ -14552,6 +15673,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.SizeLimitErrorEnum.SizeLimitError size_limit_error = 118;</code>
+     * @param value The enum numeric value on the wire for sizeLimitError to set.
+     * @return This builder for chaining.
      */
     public Builder setSizeLimitErrorValue(int value) {
       errorCodeCase_ = 118;
@@ -14565,7 +15688,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.SizeLimitErrorEnum.SizeLimitError size_limit_error = 118;</code>
+     * @return The sizeLimitError.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.errors.SizeLimitErrorEnum.SizeLimitError getSizeLimitError() {
       if (errorCodeCase_ == 118) {
         @SuppressWarnings("deprecation")
@@ -14581,6 +15706,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.SizeLimitErrorEnum.SizeLimitError size_limit_error = 118;</code>
+     * @param value The sizeLimitError to set.
+     * @return This builder for chaining.
      */
     public Builder setSizeLimitError(com.google.ads.googleads.v3.errors.SizeLimitErrorEnum.SizeLimitError value) {
       if (value == null) {
@@ -14597,6 +15724,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.SizeLimitErrorEnum.SizeLimitError size_limit_error = 118;</code>
+     * @return This builder for chaining.
      */
     public Builder clearSizeLimitError() {
       if (errorCodeCase_ == 118) {
@@ -14613,7 +15741,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.OfflineUserDataJobErrorEnum.OfflineUserDataJobError offline_user_data_job_error = 119;</code>
+     * @return The enum numeric value on the wire for offlineUserDataJobError.
      */
+    @java.lang.Override
     public int getOfflineUserDataJobErrorValue() {
       if (errorCodeCase_ == 119) {
         return ((java.lang.Integer) errorCode_).intValue();
@@ -14626,6 +15756,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.OfflineUserDataJobErrorEnum.OfflineUserDataJobError offline_user_data_job_error = 119;</code>
+     * @param value The enum numeric value on the wire for offlineUserDataJobError to set.
+     * @return This builder for chaining.
      */
     public Builder setOfflineUserDataJobErrorValue(int value) {
       errorCodeCase_ = 119;
@@ -14639,7 +15771,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.OfflineUserDataJobErrorEnum.OfflineUserDataJobError offline_user_data_job_error = 119;</code>
+     * @return The offlineUserDataJobError.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.errors.OfflineUserDataJobErrorEnum.OfflineUserDataJobError getOfflineUserDataJobError() {
       if (errorCodeCase_ == 119) {
         @SuppressWarnings("deprecation")
@@ -14655,6 +15789,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.OfflineUserDataJobErrorEnum.OfflineUserDataJobError offline_user_data_job_error = 119;</code>
+     * @param value The offlineUserDataJobError to set.
+     * @return This builder for chaining.
      */
     public Builder setOfflineUserDataJobError(com.google.ads.googleads.v3.errors.OfflineUserDataJobErrorEnum.OfflineUserDataJobError value) {
       if (value == null) {
@@ -14671,6 +15807,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.OfflineUserDataJobErrorEnum.OfflineUserDataJobError offline_user_data_job_error = 119;</code>
+     * @return This builder for chaining.
      */
     public Builder clearOfflineUserDataJobError() {
       if (errorCodeCase_ == 119) {
@@ -14687,7 +15824,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.NotWhitelistedErrorEnum.NotWhitelistedError not_whitelisted_error = 120;</code>
+     * @return The enum numeric value on the wire for notWhitelistedError.
      */
+    @java.lang.Override
     public int getNotWhitelistedErrorValue() {
       if (errorCodeCase_ == 120) {
         return ((java.lang.Integer) errorCode_).intValue();
@@ -14700,6 +15839,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.NotWhitelistedErrorEnum.NotWhitelistedError not_whitelisted_error = 120;</code>
+     * @param value The enum numeric value on the wire for notWhitelistedError to set.
+     * @return This builder for chaining.
      */
     public Builder setNotWhitelistedErrorValue(int value) {
       errorCodeCase_ = 120;
@@ -14713,7 +15854,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.NotWhitelistedErrorEnum.NotWhitelistedError not_whitelisted_error = 120;</code>
+     * @return The notWhitelistedError.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.errors.NotWhitelistedErrorEnum.NotWhitelistedError getNotWhitelistedError() {
       if (errorCodeCase_ == 120) {
         @SuppressWarnings("deprecation")
@@ -14729,6 +15872,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.NotWhitelistedErrorEnum.NotWhitelistedError not_whitelisted_error = 120;</code>
+     * @param value The notWhitelistedError to set.
+     * @return This builder for chaining.
      */
     public Builder setNotWhitelistedError(com.google.ads.googleads.v3.errors.NotWhitelistedErrorEnum.NotWhitelistedError value) {
       if (value == null) {
@@ -14745,6 +15890,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.NotWhitelistedErrorEnum.NotWhitelistedError not_whitelisted_error = 120;</code>
+     * @return This builder for chaining.
      */
     public Builder clearNotWhitelistedError() {
       if (errorCodeCase_ == 120) {
@@ -14761,7 +15907,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.ManagerLinkErrorEnum.ManagerLinkError manager_link_error = 121;</code>
+     * @return The enum numeric value on the wire for managerLinkError.
      */
+    @java.lang.Override
     public int getManagerLinkErrorValue() {
       if (errorCodeCase_ == 121) {
         return ((java.lang.Integer) errorCode_).intValue();
@@ -14774,6 +15922,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.ManagerLinkErrorEnum.ManagerLinkError manager_link_error = 121;</code>
+     * @param value The enum numeric value on the wire for managerLinkError to set.
+     * @return This builder for chaining.
      */
     public Builder setManagerLinkErrorValue(int value) {
       errorCodeCase_ = 121;
@@ -14787,7 +15937,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.ManagerLinkErrorEnum.ManagerLinkError manager_link_error = 121;</code>
+     * @return The managerLinkError.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.errors.ManagerLinkErrorEnum.ManagerLinkError getManagerLinkError() {
       if (errorCodeCase_ == 121) {
         @SuppressWarnings("deprecation")
@@ -14803,6 +15955,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.ManagerLinkErrorEnum.ManagerLinkError manager_link_error = 121;</code>
+     * @param value The managerLinkError to set.
+     * @return This builder for chaining.
      */
     public Builder setManagerLinkError(com.google.ads.googleads.v3.errors.ManagerLinkErrorEnum.ManagerLinkError value) {
       if (value == null) {
@@ -14819,6 +15973,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.ManagerLinkErrorEnum.ManagerLinkError manager_link_error = 121;</code>
+     * @return This builder for chaining.
      */
     public Builder clearManagerLinkError() {
       if (errorCodeCase_ == 121) {
@@ -14835,7 +15990,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.CurrencyCodeErrorEnum.CurrencyCodeError currency_code_error = 122;</code>
+     * @return The enum numeric value on the wire for currencyCodeError.
      */
+    @java.lang.Override
     public int getCurrencyCodeErrorValue() {
       if (errorCodeCase_ == 122) {
         return ((java.lang.Integer) errorCode_).intValue();
@@ -14848,6 +16005,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.CurrencyCodeErrorEnum.CurrencyCodeError currency_code_error = 122;</code>
+     * @param value The enum numeric value on the wire for currencyCodeError to set.
+     * @return This builder for chaining.
      */
     public Builder setCurrencyCodeErrorValue(int value) {
       errorCodeCase_ = 122;
@@ -14861,7 +16020,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.CurrencyCodeErrorEnum.CurrencyCodeError currency_code_error = 122;</code>
+     * @return The currencyCodeError.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.errors.CurrencyCodeErrorEnum.CurrencyCodeError getCurrencyCodeError() {
       if (errorCodeCase_ == 122) {
         @SuppressWarnings("deprecation")
@@ -14877,6 +16038,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.CurrencyCodeErrorEnum.CurrencyCodeError currency_code_error = 122;</code>
+     * @param value The currencyCodeError to set.
+     * @return This builder for chaining.
      */
     public Builder setCurrencyCodeError(com.google.ads.googleads.v3.errors.CurrencyCodeErrorEnum.CurrencyCodeError value) {
       if (value == null) {
@@ -14893,6 +16056,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.CurrencyCodeErrorEnum.CurrencyCodeError currency_code_error = 122;</code>
+     * @return This builder for chaining.
      */
     public Builder clearCurrencyCodeError() {
       if (errorCodeCase_ == 122) {
@@ -14909,7 +16073,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.AccessInvitationErrorEnum.AccessInvitationError access_invitation_error = 124;</code>
+     * @return The enum numeric value on the wire for accessInvitationError.
      */
+    @java.lang.Override
     public int getAccessInvitationErrorValue() {
       if (errorCodeCase_ == 124) {
         return ((java.lang.Integer) errorCode_).intValue();
@@ -14922,6 +16088,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.AccessInvitationErrorEnum.AccessInvitationError access_invitation_error = 124;</code>
+     * @param value The enum numeric value on the wire for accessInvitationError to set.
+     * @return This builder for chaining.
      */
     public Builder setAccessInvitationErrorValue(int value) {
       errorCodeCase_ = 124;
@@ -14935,7 +16103,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.AccessInvitationErrorEnum.AccessInvitationError access_invitation_error = 124;</code>
+     * @return The accessInvitationError.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.errors.AccessInvitationErrorEnum.AccessInvitationError getAccessInvitationError() {
       if (errorCodeCase_ == 124) {
         @SuppressWarnings("deprecation")
@@ -14951,6 +16121,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.AccessInvitationErrorEnum.AccessInvitationError access_invitation_error = 124;</code>
+     * @param value The accessInvitationError to set.
+     * @return This builder for chaining.
      */
     public Builder setAccessInvitationError(com.google.ads.googleads.v3.errors.AccessInvitationErrorEnum.AccessInvitationError value) {
       if (value == null) {
@@ -14967,6 +16139,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.AccessInvitationErrorEnum.AccessInvitationError access_invitation_error = 124;</code>
+     * @return This builder for chaining.
      */
     public Builder clearAccessInvitationError() {
       if (errorCodeCase_ == 124) {
@@ -14983,7 +16156,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.ReachPlanErrorEnum.ReachPlanError reach_plan_error = 125;</code>
+     * @return The enum numeric value on the wire for reachPlanError.
      */
+    @java.lang.Override
     public int getReachPlanErrorValue() {
       if (errorCodeCase_ == 125) {
         return ((java.lang.Integer) errorCode_).intValue();
@@ -14996,6 +16171,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.ReachPlanErrorEnum.ReachPlanError reach_plan_error = 125;</code>
+     * @param value The enum numeric value on the wire for reachPlanError to set.
+     * @return This builder for chaining.
      */
     public Builder setReachPlanErrorValue(int value) {
       errorCodeCase_ = 125;
@@ -15009,7 +16186,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.ReachPlanErrorEnum.ReachPlanError reach_plan_error = 125;</code>
+     * @return The reachPlanError.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.errors.ReachPlanErrorEnum.ReachPlanError getReachPlanError() {
       if (errorCodeCase_ == 125) {
         @SuppressWarnings("deprecation")
@@ -15025,6 +16204,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.ReachPlanErrorEnum.ReachPlanError reach_plan_error = 125;</code>
+     * @param value The reachPlanError to set.
+     * @return This builder for chaining.
      */
     public Builder setReachPlanError(com.google.ads.googleads.v3.errors.ReachPlanErrorEnum.ReachPlanError value) {
       if (value == null) {
@@ -15041,6 +16222,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.ReachPlanErrorEnum.ReachPlanError reach_plan_error = 125;</code>
+     * @return This builder for chaining.
      */
     public Builder clearReachPlanError() {
       if (errorCodeCase_ == 125) {
@@ -15057,7 +16239,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.InvoiceErrorEnum.InvoiceError invoice_error = 126;</code>
+     * @return The enum numeric value on the wire for invoiceError.
      */
+    @java.lang.Override
     public int getInvoiceErrorValue() {
       if (errorCodeCase_ == 126) {
         return ((java.lang.Integer) errorCode_).intValue();
@@ -15070,6 +16254,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.InvoiceErrorEnum.InvoiceError invoice_error = 126;</code>
+     * @param value The enum numeric value on the wire for invoiceError to set.
+     * @return This builder for chaining.
      */
     public Builder setInvoiceErrorValue(int value) {
       errorCodeCase_ = 126;
@@ -15083,7 +16269,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.InvoiceErrorEnum.InvoiceError invoice_error = 126;</code>
+     * @return The invoiceError.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.errors.InvoiceErrorEnum.InvoiceError getInvoiceError() {
       if (errorCodeCase_ == 126) {
         @SuppressWarnings("deprecation")
@@ -15099,6 +16287,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.InvoiceErrorEnum.InvoiceError invoice_error = 126;</code>
+     * @param value The invoiceError to set.
+     * @return This builder for chaining.
      */
     public Builder setInvoiceError(com.google.ads.googleads.v3.errors.InvoiceErrorEnum.InvoiceError value) {
       if (value == null) {
@@ -15115,6 +16305,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.InvoiceErrorEnum.InvoiceError invoice_error = 126;</code>
+     * @return This builder for chaining.
      */
     public Builder clearInvoiceError() {
       if (errorCodeCase_ == 126) {
@@ -15131,7 +16322,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.PaymentsAccountErrorEnum.PaymentsAccountError payments_account_error = 127;</code>
+     * @return The enum numeric value on the wire for paymentsAccountError.
      */
+    @java.lang.Override
     public int getPaymentsAccountErrorValue() {
       if (errorCodeCase_ == 127) {
         return ((java.lang.Integer) errorCode_).intValue();
@@ -15144,6 +16337,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.PaymentsAccountErrorEnum.PaymentsAccountError payments_account_error = 127;</code>
+     * @param value The enum numeric value on the wire for paymentsAccountError to set.
+     * @return This builder for chaining.
      */
     public Builder setPaymentsAccountErrorValue(int value) {
       errorCodeCase_ = 127;
@@ -15157,7 +16352,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.PaymentsAccountErrorEnum.PaymentsAccountError payments_account_error = 127;</code>
+     * @return The paymentsAccountError.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.errors.PaymentsAccountErrorEnum.PaymentsAccountError getPaymentsAccountError() {
       if (errorCodeCase_ == 127) {
         @SuppressWarnings("deprecation")
@@ -15173,6 +16370,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.PaymentsAccountErrorEnum.PaymentsAccountError payments_account_error = 127;</code>
+     * @param value The paymentsAccountError to set.
+     * @return This builder for chaining.
      */
     public Builder setPaymentsAccountError(com.google.ads.googleads.v3.errors.PaymentsAccountErrorEnum.PaymentsAccountError value) {
       if (value == null) {
@@ -15189,6 +16388,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.PaymentsAccountErrorEnum.PaymentsAccountError payments_account_error = 127;</code>
+     * @return This builder for chaining.
      */
     public Builder clearPaymentsAccountError() {
       if (errorCodeCase_ == 127) {
@@ -15205,7 +16405,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.TimeZoneErrorEnum.TimeZoneError time_zone_error = 128;</code>
+     * @return The enum numeric value on the wire for timeZoneError.
      */
+    @java.lang.Override
     public int getTimeZoneErrorValue() {
       if (errorCodeCase_ == 128) {
         return ((java.lang.Integer) errorCode_).intValue();
@@ -15218,6 +16420,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.TimeZoneErrorEnum.TimeZoneError time_zone_error = 128;</code>
+     * @param value The enum numeric value on the wire for timeZoneError to set.
+     * @return This builder for chaining.
      */
     public Builder setTimeZoneErrorValue(int value) {
       errorCodeCase_ = 128;
@@ -15231,7 +16435,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.TimeZoneErrorEnum.TimeZoneError time_zone_error = 128;</code>
+     * @return The timeZoneError.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.errors.TimeZoneErrorEnum.TimeZoneError getTimeZoneError() {
       if (errorCodeCase_ == 128) {
         @SuppressWarnings("deprecation")
@@ -15247,6 +16453,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.TimeZoneErrorEnum.TimeZoneError time_zone_error = 128;</code>
+     * @param value The timeZoneError to set.
+     * @return This builder for chaining.
      */
     public Builder setTimeZoneError(com.google.ads.googleads.v3.errors.TimeZoneErrorEnum.TimeZoneError value) {
       if (value == null) {
@@ -15263,6 +16471,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.TimeZoneErrorEnum.TimeZoneError time_zone_error = 128;</code>
+     * @return This builder for chaining.
      */
     public Builder clearTimeZoneError() {
       if (errorCodeCase_ == 128) {
@@ -15279,7 +16488,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.AssetLinkErrorEnum.AssetLinkError asset_link_error = 129;</code>
+     * @return The enum numeric value on the wire for assetLinkError.
      */
+    @java.lang.Override
     public int getAssetLinkErrorValue() {
       if (errorCodeCase_ == 129) {
         return ((java.lang.Integer) errorCode_).intValue();
@@ -15292,6 +16503,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.AssetLinkErrorEnum.AssetLinkError asset_link_error = 129;</code>
+     * @param value The enum numeric value on the wire for assetLinkError to set.
+     * @return This builder for chaining.
      */
     public Builder setAssetLinkErrorValue(int value) {
       errorCodeCase_ = 129;
@@ -15305,7 +16518,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.AssetLinkErrorEnum.AssetLinkError asset_link_error = 129;</code>
+     * @return The assetLinkError.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.errors.AssetLinkErrorEnum.AssetLinkError getAssetLinkError() {
       if (errorCodeCase_ == 129) {
         @SuppressWarnings("deprecation")
@@ -15321,6 +16536,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.AssetLinkErrorEnum.AssetLinkError asset_link_error = 129;</code>
+     * @param value The assetLinkError to set.
+     * @return This builder for chaining.
      */
     public Builder setAssetLinkError(com.google.ads.googleads.v3.errors.AssetLinkErrorEnum.AssetLinkError value) {
       if (value == null) {
@@ -15337,6 +16554,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.AssetLinkErrorEnum.AssetLinkError asset_link_error = 129;</code>
+     * @return This builder for chaining.
      */
     public Builder clearAssetLinkError() {
       if (errorCodeCase_ == 129) {
@@ -15353,7 +16571,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.UserDataErrorEnum.UserDataError user_data_error = 130;</code>
+     * @return The enum numeric value on the wire for userDataError.
      */
+    @java.lang.Override
     public int getUserDataErrorValue() {
       if (errorCodeCase_ == 130) {
         return ((java.lang.Integer) errorCode_).intValue();
@@ -15366,6 +16586,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.UserDataErrorEnum.UserDataError user_data_error = 130;</code>
+     * @param value The enum numeric value on the wire for userDataError to set.
+     * @return This builder for chaining.
      */
     public Builder setUserDataErrorValue(int value) {
       errorCodeCase_ = 130;
@@ -15379,7 +16601,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.UserDataErrorEnum.UserDataError user_data_error = 130;</code>
+     * @return The userDataError.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.errors.UserDataErrorEnum.UserDataError getUserDataError() {
       if (errorCodeCase_ == 130) {
         @SuppressWarnings("deprecation")
@@ -15395,6 +16619,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.UserDataErrorEnum.UserDataError user_data_error = 130;</code>
+     * @param value The userDataError to set.
+     * @return This builder for chaining.
      */
     public Builder setUserDataError(com.google.ads.googleads.v3.errors.UserDataErrorEnum.UserDataError value) {
       if (value == null) {
@@ -15411,6 +16637,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.UserDataErrorEnum.UserDataError user_data_error = 130;</code>
+     * @return This builder for chaining.
      */
     public Builder clearUserDataError() {
       if (errorCodeCase_ == 130) {

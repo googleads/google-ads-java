@@ -60,6 +60,7 @@ public interface DismissRecommendationResponseOrBuilder extends
    * </pre>
    *
    * <code>.google.rpc.Status partial_failure_error = 2;</code>
+   * @return Whether the partialFailureError field is set.
    */
   boolean hasPartialFailureError();
   /**
@@ -71,6 +72,7 @@ public interface DismissRecommendationResponseOrBuilder extends
    * </pre>
    *
    * <code>.google.rpc.Status partial_failure_error = 2;</code>
+   * @return The partialFailureError.
    */
   com.google.rpc.Status getPartialFailureError();
   /**

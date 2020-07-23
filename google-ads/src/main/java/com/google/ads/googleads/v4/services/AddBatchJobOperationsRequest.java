@@ -10,7 +10,7 @@ package com.google.ads.googleads.v4.services;
  *
  * Protobuf type {@code google.ads.googleads.v4.services.AddBatchJobOperationsRequest}
  */
-public  final class AddBatchJobOperationsRequest extends
+public final class AddBatchJobOperationsRequest extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.services.AddBatchJobOperationsRequest)
     AddBatchJobOperationsRequestOrBuilder {
@@ -122,6 +122,7 @@ private static final long serialVersionUID = 0L;
    * <code>string resource_name = 1 [(.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = { ... }</code>
    * @return The resourceName.
    */
+  @java.lang.Override
   public java.lang.String getResourceName() {
     java.lang.Object ref = resourceName_;
     if (ref instanceof java.lang.String) {
@@ -142,6 +143,7 @@ private static final long serialVersionUID = 0L;
    * <code>string resource_name = 1 [(.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = { ... }</code>
    * @return The bytes for resourceName.
    */
+  @java.lang.Override
   public com.google.protobuf.ByteString
       getResourceNameBytes() {
     java.lang.Object ref = resourceName_;
@@ -170,6 +172,7 @@ private static final long serialVersionUID = 0L;
    * <code>string sequence_token = 2;</code>
    * @return The sequenceToken.
    */
+  @java.lang.Override
   public java.lang.String getSequenceToken() {
     java.lang.Object ref = sequenceToken_;
     if (ref instanceof java.lang.String) {
@@ -194,6 +197,7 @@ private static final long serialVersionUID = 0L;
    * <code>string sequence_token = 2;</code>
    * @return The bytes for sequenceToken.
    */
+  @java.lang.Override
   public com.google.protobuf.ByteString
       getSequenceTokenBytes() {
     java.lang.Object ref = sequenceToken_;
@@ -224,6 +228,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.services.MutateOperation mutate_operations = 3 [(.google.api.field_behavior) = REQUIRED];</code>
    */
+  @java.lang.Override
   public java.util.List<com.google.ads.googleads.v4.services.MutateOperation> getMutateOperationsList() {
     return mutateOperations_;
   }
@@ -241,6 +246,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.services.MutateOperation mutate_operations = 3 [(.google.api.field_behavior) = REQUIRED];</code>
    */
+  @java.lang.Override
   public java.util.List<? extends com.google.ads.googleads.v4.services.MutateOperationOrBuilder> 
       getMutateOperationsOrBuilderList() {
     return mutateOperations_;
@@ -259,6 +265,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.services.MutateOperation mutate_operations = 3 [(.google.api.field_behavior) = REQUIRED];</code>
    */
+  @java.lang.Override
   public int getMutateOperationsCount() {
     return mutateOperations_.size();
   }
@@ -276,6 +283,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.services.MutateOperation mutate_operations = 3 [(.google.api.field_behavior) = REQUIRED];</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.services.MutateOperation getMutateOperations(int index) {
     return mutateOperations_.get(index);
   }
@@ -293,6 +301,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.services.MutateOperation mutate_operations = 3 [(.google.api.field_behavior) = REQUIRED];</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.services.MutateOperationOrBuilder getMutateOperationsOrBuilder(
       int index) {
     return mutateOperations_.get(index);

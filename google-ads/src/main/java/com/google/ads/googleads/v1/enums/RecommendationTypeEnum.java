@@ -10,7 +10,7 @@ package com.google.ads.googleads.v1.enums;
  *
  * Protobuf type {@code google.ads.googleads.v1.enums.RecommendationTypeEnum}
  */
-public  final class RecommendationTypeEnum extends
+public final class RecommendationTypeEnum extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v1.enums.RecommendationTypeEnum)
     RecommendationTypeEnumOrBuilder {
@@ -20,6 +20,13 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private RecommendationTypeEnum() {
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new RecommendationTypeEnum();
   }
 
   @java.lang.Override
@@ -104,7 +111,10 @@ private static final long serialVersionUID = 0L;
     UNKNOWN(1),
     /**
      * <pre>
-     * Budget recommendation for budget constrained campaigns.
+     * Budget recommendation for campaigns that are currently budget-constrained
+     * (as opposed to the FORECASTING_CAMPAIGN_BUDGET recommendation, which
+     * applies to campaigns that are expected to become budget-constrained in
+     * the future).
      * </pre>
      *
      * <code>CAMPAIGN_BUDGET = 2;</code>
@@ -241,7 +251,10 @@ private static final long serialVersionUID = 0L;
     public static final int UNKNOWN_VALUE = 1;
     /**
      * <pre>
-     * Budget recommendation for budget constrained campaigns.
+     * Budget recommendation for campaigns that are currently budget-constrained
+     * (as opposed to the FORECASTING_CAMPAIGN_BUDGET recommendation, which
+     * applies to campaigns that are expected to become budget-constrained in
+     * the future).
      * </pre>
      *
      * <code>CAMPAIGN_BUDGET = 2;</code>
@@ -368,6 +381,8 @@ private static final long serialVersionUID = 0L;
     }
 
     /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
      * @deprecated Use {@link #forNumber(int)} instead.
      */
     @java.lang.Deprecated
@@ -375,6 +390,10 @@ private static final long serialVersionUID = 0L;
       return forNumber(value);
     }
 
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
     public static RecommendationType forNumber(int value) {
       switch (value) {
         case 0: return UNSPECIFIED;
@@ -411,6 +430,10 @@ private static final long serialVersionUID = 0L;
 
     public final com.google.protobuf.Descriptors.EnumValueDescriptor
         getValueDescriptor() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalStateException(
+            "Can't get the descriptor of an unrecognized enum value.");
+      }
       return getDescriptor().getValues().get(ordinal());
     }
     public final com.google.protobuf.Descriptors.EnumDescriptor

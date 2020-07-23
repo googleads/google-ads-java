@@ -13,6 +13,7 @@ public interface MoveManagerLinkRequestOrBuilder extends
    * </pre>
    *
    * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+   * @return The customerId.
    */
   java.lang.String getCustomerId();
   /**
@@ -21,6 +22,7 @@ public interface MoveManagerLinkRequestOrBuilder extends
    * </pre>
    *
    * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+   * @return The bytes for customerId.
    */
   com.google.protobuf.ByteString
       getCustomerIdBytes();
@@ -33,6 +35,7 @@ public interface MoveManagerLinkRequestOrBuilder extends
    * </pre>
    *
    * <code>string previous_customer_manager_link = 2 [(.google.api.field_behavior) = REQUIRED];</code>
+   * @return The previousCustomerManagerLink.
    */
   java.lang.String getPreviousCustomerManagerLink();
   /**
@@ -43,6 +46,7 @@ public interface MoveManagerLinkRequestOrBuilder extends
    * </pre>
    *
    * <code>string previous_customer_manager_link = 2 [(.google.api.field_behavior) = REQUIRED];</code>
+   * @return The bytes for previousCustomerManagerLink.
    */
   com.google.protobuf.ByteString
       getPreviousCustomerManagerLinkBytes();
@@ -54,6 +58,7 @@ public interface MoveManagerLinkRequestOrBuilder extends
    * </pre>
    *
    * <code>string new_manager = 3 [(.google.api.field_behavior) = REQUIRED];</code>
+   * @return The newManager.
    */
   java.lang.String getNewManager();
   /**
@@ -63,6 +68,7 @@ public interface MoveManagerLinkRequestOrBuilder extends
    * </pre>
    *
    * <code>string new_manager = 3 [(.google.api.field_behavior) = REQUIRED];</code>
+   * @return The bytes for newManager.
    */
   com.google.protobuf.ByteString
       getNewManagerBytes();

@@ -10,7 +10,7 @@ package com.google.ads.googleads.v4.resources;
  *
  * Protobuf type {@code google.ads.googleads.v4.resources.DetailPlacementView}
  */
-public  final class DetailPlacementView extends
+public final class DetailPlacementView extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.resources.DetailPlacementView)
     DetailPlacementViewOrBuilder {
@@ -162,6 +162,7 @@ private static final long serialVersionUID = 0L;
    * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return The resourceName.
    */
+  @java.lang.Override
   public java.lang.String getResourceName() {
     java.lang.Object ref = resourceName_;
     if (ref instanceof java.lang.String) {
@@ -184,6 +185,7 @@ private static final long serialVersionUID = 0L;
    * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return The bytes for resourceName.
    */
+  @java.lang.Override
   public com.google.protobuf.ByteString
       getResourceNameBytes() {
     java.lang.Object ref = resourceName_;
@@ -209,6 +211,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue placement = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the placement field is set.
    */
+  @java.lang.Override
   public boolean hasPlacement() {
     return placement_ != null;
   }
@@ -221,6 +224,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue placement = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The placement.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getPlacement() {
     return placement_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : placement_;
   }
@@ -232,6 +236,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue placement = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getPlacementOrBuilder() {
     return getPlacement();
   }
@@ -247,6 +252,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue display_name = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the displayName field is set.
    */
+  @java.lang.Override
   public boolean hasDisplayName() {
     return displayName_ != null;
   }
@@ -259,6 +265,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue display_name = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The displayName.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getDisplayName() {
     return displayName_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : displayName_;
   }
@@ -270,6 +277,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue display_name = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getDisplayNameOrBuilder() {
     return getDisplayName();
   }
@@ -285,6 +293,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue group_placement_target_url = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the groupPlacementTargetUrl field is set.
    */
+  @java.lang.Override
   public boolean hasGroupPlacementTargetUrl() {
     return groupPlacementTargetUrl_ != null;
   }
@@ -297,6 +306,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue group_placement_target_url = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The groupPlacementTargetUrl.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getGroupPlacementTargetUrl() {
     return groupPlacementTargetUrl_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : groupPlacementTargetUrl_;
   }
@@ -308,6 +318,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue group_placement_target_url = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getGroupPlacementTargetUrlOrBuilder() {
     return getGroupPlacementTargetUrl();
   }
@@ -323,6 +334,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue target_url = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the targetUrl field is set.
    */
+  @java.lang.Override
   public boolean hasTargetUrl() {
     return targetUrl_ != null;
   }
@@ -335,6 +347,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue target_url = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The targetUrl.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getTargetUrl() {
     return targetUrl_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : targetUrl_;
   }
@@ -346,6 +359,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue target_url = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getTargetUrlOrBuilder() {
     return getTargetUrl();
   }
@@ -360,7 +374,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.PlacementTypeEnum.PlacementType placement_type = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The enum numeric value on the wire for placementType.
    */
-  public int getPlacementTypeValue() {
+  @java.lang.Override public int getPlacementTypeValue() {
     return placementType_;
   }
   /**
@@ -371,7 +385,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.PlacementTypeEnum.PlacementType placement_type = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The placementType.
    */
-  public com.google.ads.googleads.v4.enums.PlacementTypeEnum.PlacementType getPlacementType() {
+  @java.lang.Override public com.google.ads.googleads.v4.enums.PlacementTypeEnum.PlacementType getPlacementType() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v4.enums.PlacementTypeEnum.PlacementType result = com.google.ads.googleads.v4.enums.PlacementTypeEnum.PlacementType.valueOf(placementType_);
     return result == null ? com.google.ads.googleads.v4.enums.PlacementTypeEnum.PlacementType.UNRECOGNIZED : result;
@@ -1590,7 +1604,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.PlacementTypeEnum.PlacementType placement_type = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The enum numeric value on the wire for placementType.
      */
-    public int getPlacementTypeValue() {
+    @java.lang.Override public int getPlacementTypeValue() {
       return placementType_;
     }
     /**
@@ -1603,6 +1617,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setPlacementTypeValue(int value) {
+      
       placementType_ = value;
       onChanged();
       return this;
@@ -1615,6 +1630,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.PlacementTypeEnum.PlacementType placement_type = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The placementType.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.enums.PlacementTypeEnum.PlacementType getPlacementType() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v4.enums.PlacementTypeEnum.PlacementType result = com.google.ads.googleads.v4.enums.PlacementTypeEnum.PlacementType.valueOf(placementType_);

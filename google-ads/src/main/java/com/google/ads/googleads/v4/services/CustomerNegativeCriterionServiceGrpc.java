@@ -21,7 +21,7 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.10.0)",
+    value = "by gRPC proto compiler",
     comments = "Source: google/ads/googleads/v4/services/customer_negative_criterion_service.proto")
 public final class CustomerNegativeCriterionServiceGrpc {
 
@@ -30,86 +30,80 @@ public final class CustomerNegativeCriterionServiceGrpc {
   public static final String SERVICE_NAME = "google.ads.googleads.v4.services.CustomerNegativeCriterionService";
 
   // Static method descriptors that strictly reflect the proto.
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  @java.lang.Deprecated // Use {@link #getGetCustomerNegativeCriterionMethod()} instead. 
-  public static final io.grpc.MethodDescriptor<com.google.ads.googleads.v4.services.GetCustomerNegativeCriterionRequest,
-      com.google.ads.googleads.v4.resources.CustomerNegativeCriterion> METHOD_GET_CUSTOMER_NEGATIVE_CRITERION = getGetCustomerNegativeCriterionMethodHelper();
-
   private static volatile io.grpc.MethodDescriptor<com.google.ads.googleads.v4.services.GetCustomerNegativeCriterionRequest,
       com.google.ads.googleads.v4.resources.CustomerNegativeCriterion> getGetCustomerNegativeCriterionMethod;
 
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetCustomerNegativeCriterion",
+      requestType = com.google.ads.googleads.v4.services.GetCustomerNegativeCriterionRequest.class,
+      responseType = com.google.ads.googleads.v4.resources.CustomerNegativeCriterion.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<com.google.ads.googleads.v4.services.GetCustomerNegativeCriterionRequest,
       com.google.ads.googleads.v4.resources.CustomerNegativeCriterion> getGetCustomerNegativeCriterionMethod() {
-    return getGetCustomerNegativeCriterionMethodHelper();
-  }
-
-  private static io.grpc.MethodDescriptor<com.google.ads.googleads.v4.services.GetCustomerNegativeCriterionRequest,
-      com.google.ads.googleads.v4.resources.CustomerNegativeCriterion> getGetCustomerNegativeCriterionMethodHelper() {
     io.grpc.MethodDescriptor<com.google.ads.googleads.v4.services.GetCustomerNegativeCriterionRequest, com.google.ads.googleads.v4.resources.CustomerNegativeCriterion> getGetCustomerNegativeCriterionMethod;
     if ((getGetCustomerNegativeCriterionMethod = CustomerNegativeCriterionServiceGrpc.getGetCustomerNegativeCriterionMethod) == null) {
       synchronized (CustomerNegativeCriterionServiceGrpc.class) {
         if ((getGetCustomerNegativeCriterionMethod = CustomerNegativeCriterionServiceGrpc.getGetCustomerNegativeCriterionMethod) == null) {
-          CustomerNegativeCriterionServiceGrpc.getGetCustomerNegativeCriterionMethod = getGetCustomerNegativeCriterionMethod = 
+          CustomerNegativeCriterionServiceGrpc.getGetCustomerNegativeCriterionMethod = getGetCustomerNegativeCriterionMethod =
               io.grpc.MethodDescriptor.<com.google.ads.googleads.v4.services.GetCustomerNegativeCriterionRequest, com.google.ads.googleads.v4.resources.CustomerNegativeCriterion>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "google.ads.googleads.v4.services.CustomerNegativeCriterionService", "GetCustomerNegativeCriterion"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetCustomerNegativeCriterion"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v4.services.GetCustomerNegativeCriterionRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v4.resources.CustomerNegativeCriterion.getDefaultInstance()))
-                  .setSchemaDescriptor(new CustomerNegativeCriterionServiceMethodDescriptorSupplier("GetCustomerNegativeCriterion"))
-                  .build();
-          }
+              .setSchemaDescriptor(new CustomerNegativeCriterionServiceMethodDescriptorSupplier("GetCustomerNegativeCriterion"))
+              .build();
         }
-     }
-     return getGetCustomerNegativeCriterionMethod;
+      }
+    }
+    return getGetCustomerNegativeCriterionMethod;
   }
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  @java.lang.Deprecated // Use {@link #getMutateCustomerNegativeCriteriaMethod()} instead. 
-  public static final io.grpc.MethodDescriptor<com.google.ads.googleads.v4.services.MutateCustomerNegativeCriteriaRequest,
-      com.google.ads.googleads.v4.services.MutateCustomerNegativeCriteriaResponse> METHOD_MUTATE_CUSTOMER_NEGATIVE_CRITERIA = getMutateCustomerNegativeCriteriaMethodHelper();
 
   private static volatile io.grpc.MethodDescriptor<com.google.ads.googleads.v4.services.MutateCustomerNegativeCriteriaRequest,
       com.google.ads.googleads.v4.services.MutateCustomerNegativeCriteriaResponse> getMutateCustomerNegativeCriteriaMethod;
 
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "MutateCustomerNegativeCriteria",
+      requestType = com.google.ads.googleads.v4.services.MutateCustomerNegativeCriteriaRequest.class,
+      responseType = com.google.ads.googleads.v4.services.MutateCustomerNegativeCriteriaResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<com.google.ads.googleads.v4.services.MutateCustomerNegativeCriteriaRequest,
       com.google.ads.googleads.v4.services.MutateCustomerNegativeCriteriaResponse> getMutateCustomerNegativeCriteriaMethod() {
-    return getMutateCustomerNegativeCriteriaMethodHelper();
-  }
-
-  private static io.grpc.MethodDescriptor<com.google.ads.googleads.v4.services.MutateCustomerNegativeCriteriaRequest,
-      com.google.ads.googleads.v4.services.MutateCustomerNegativeCriteriaResponse> getMutateCustomerNegativeCriteriaMethodHelper() {
     io.grpc.MethodDescriptor<com.google.ads.googleads.v4.services.MutateCustomerNegativeCriteriaRequest, com.google.ads.googleads.v4.services.MutateCustomerNegativeCriteriaResponse> getMutateCustomerNegativeCriteriaMethod;
     if ((getMutateCustomerNegativeCriteriaMethod = CustomerNegativeCriterionServiceGrpc.getMutateCustomerNegativeCriteriaMethod) == null) {
       synchronized (CustomerNegativeCriterionServiceGrpc.class) {
         if ((getMutateCustomerNegativeCriteriaMethod = CustomerNegativeCriterionServiceGrpc.getMutateCustomerNegativeCriteriaMethod) == null) {
-          CustomerNegativeCriterionServiceGrpc.getMutateCustomerNegativeCriteriaMethod = getMutateCustomerNegativeCriteriaMethod = 
+          CustomerNegativeCriterionServiceGrpc.getMutateCustomerNegativeCriteriaMethod = getMutateCustomerNegativeCriteriaMethod =
               io.grpc.MethodDescriptor.<com.google.ads.googleads.v4.services.MutateCustomerNegativeCriteriaRequest, com.google.ads.googleads.v4.services.MutateCustomerNegativeCriteriaResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "google.ads.googleads.v4.services.CustomerNegativeCriterionService", "MutateCustomerNegativeCriteria"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "MutateCustomerNegativeCriteria"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v4.services.MutateCustomerNegativeCriteriaRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v4.services.MutateCustomerNegativeCriteriaResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new CustomerNegativeCriterionServiceMethodDescriptorSupplier("MutateCustomerNegativeCriteria"))
-                  .build();
-          }
+              .setSchemaDescriptor(new CustomerNegativeCriterionServiceMethodDescriptorSupplier("MutateCustomerNegativeCriteria"))
+              .build();
         }
-     }
-     return getMutateCustomerNegativeCriteriaMethod;
+      }
+    }
+    return getMutateCustomerNegativeCriteriaMethod;
   }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static CustomerNegativeCriterionServiceStub newStub(io.grpc.Channel channel) {
-    return new CustomerNegativeCriterionServiceStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<CustomerNegativeCriterionServiceStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<CustomerNegativeCriterionServiceStub>() {
+        @java.lang.Override
+        public CustomerNegativeCriterionServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new CustomerNegativeCriterionServiceStub(channel, callOptions);
+        }
+      };
+    return CustomerNegativeCriterionServiceStub.newStub(factory, channel);
   }
 
   /**
@@ -117,7 +111,14 @@ public final class CustomerNegativeCriterionServiceGrpc {
    */
   public static CustomerNegativeCriterionServiceBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new CustomerNegativeCriterionServiceBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<CustomerNegativeCriterionServiceBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<CustomerNegativeCriterionServiceBlockingStub>() {
+        @java.lang.Override
+        public CustomerNegativeCriterionServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new CustomerNegativeCriterionServiceBlockingStub(channel, callOptions);
+        }
+      };
+    return CustomerNegativeCriterionServiceBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -125,7 +126,14 @@ public final class CustomerNegativeCriterionServiceGrpc {
    */
   public static CustomerNegativeCriterionServiceFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new CustomerNegativeCriterionServiceFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<CustomerNegativeCriterionServiceFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<CustomerNegativeCriterionServiceFutureStub>() {
+        @java.lang.Override
+        public CustomerNegativeCriterionServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new CustomerNegativeCriterionServiceFutureStub(channel, callOptions);
+        }
+      };
+    return CustomerNegativeCriterionServiceFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -142,7 +150,7 @@ public final class CustomerNegativeCriterionServiceGrpc {
      */
     public void getCustomerNegativeCriterion(com.google.ads.googleads.v4.services.GetCustomerNegativeCriterionRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v4.resources.CustomerNegativeCriterion> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetCustomerNegativeCriterionMethodHelper(), responseObserver);
+      asyncUnimplementedUnaryCall(getGetCustomerNegativeCriterionMethod(), responseObserver);
     }
 
     /**
@@ -152,20 +160,20 @@ public final class CustomerNegativeCriterionServiceGrpc {
      */
     public void mutateCustomerNegativeCriteria(com.google.ads.googleads.v4.services.MutateCustomerNegativeCriteriaRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v4.services.MutateCustomerNegativeCriteriaResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getMutateCustomerNegativeCriteriaMethodHelper(), responseObserver);
+      asyncUnimplementedUnaryCall(getMutateCustomerNegativeCriteriaMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
-            getGetCustomerNegativeCriterionMethodHelper(),
+            getGetCustomerNegativeCriterionMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 com.google.ads.googleads.v4.services.GetCustomerNegativeCriterionRequest,
                 com.google.ads.googleads.v4.resources.CustomerNegativeCriterion>(
                   this, METHODID_GET_CUSTOMER_NEGATIVE_CRITERION)))
           .addMethod(
-            getMutateCustomerNegativeCriteriaMethodHelper(),
+            getMutateCustomerNegativeCriteriaMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 com.google.ads.googleads.v4.services.MutateCustomerNegativeCriteriaRequest,
@@ -180,19 +188,15 @@ public final class CustomerNegativeCriterionServiceGrpc {
    * Service to manage customer negative criteria.
    * </pre>
    */
-  public static final class CustomerNegativeCriterionServiceStub extends io.grpc.stub.AbstractStub<CustomerNegativeCriterionServiceStub> {
-    private CustomerNegativeCriterionServiceStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private CustomerNegativeCriterionServiceStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class CustomerNegativeCriterionServiceStub extends io.grpc.stub.AbstractAsyncStub<CustomerNegativeCriterionServiceStub> {
+    private CustomerNegativeCriterionServiceStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected CustomerNegativeCriterionServiceStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected CustomerNegativeCriterionServiceStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new CustomerNegativeCriterionServiceStub(channel, callOptions);
     }
 
@@ -204,7 +208,7 @@ public final class CustomerNegativeCriterionServiceGrpc {
     public void getCustomerNegativeCriterion(com.google.ads.googleads.v4.services.GetCustomerNegativeCriterionRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v4.resources.CustomerNegativeCriterion> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(getGetCustomerNegativeCriterionMethodHelper(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getGetCustomerNegativeCriterionMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -215,7 +219,7 @@ public final class CustomerNegativeCriterionServiceGrpc {
     public void mutateCustomerNegativeCriteria(com.google.ads.googleads.v4.services.MutateCustomerNegativeCriteriaRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v4.services.MutateCustomerNegativeCriteriaResponse> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(getMutateCustomerNegativeCriteriaMethodHelper(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getMutateCustomerNegativeCriteriaMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -224,19 +228,15 @@ public final class CustomerNegativeCriterionServiceGrpc {
    * Service to manage customer negative criteria.
    * </pre>
    */
-  public static final class CustomerNegativeCriterionServiceBlockingStub extends io.grpc.stub.AbstractStub<CustomerNegativeCriterionServiceBlockingStub> {
-    private CustomerNegativeCriterionServiceBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private CustomerNegativeCriterionServiceBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class CustomerNegativeCriterionServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<CustomerNegativeCriterionServiceBlockingStub> {
+    private CustomerNegativeCriterionServiceBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected CustomerNegativeCriterionServiceBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected CustomerNegativeCriterionServiceBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new CustomerNegativeCriterionServiceBlockingStub(channel, callOptions);
     }
 
@@ -247,7 +247,7 @@ public final class CustomerNegativeCriterionServiceGrpc {
      */
     public com.google.ads.googleads.v4.resources.CustomerNegativeCriterion getCustomerNegativeCriterion(com.google.ads.googleads.v4.services.GetCustomerNegativeCriterionRequest request) {
       return blockingUnaryCall(
-          getChannel(), getGetCustomerNegativeCriterionMethodHelper(), getCallOptions(), request);
+          getChannel(), getGetCustomerNegativeCriterionMethod(), getCallOptions(), request);
     }
 
     /**
@@ -257,7 +257,7 @@ public final class CustomerNegativeCriterionServiceGrpc {
      */
     public com.google.ads.googleads.v4.services.MutateCustomerNegativeCriteriaResponse mutateCustomerNegativeCriteria(com.google.ads.googleads.v4.services.MutateCustomerNegativeCriteriaRequest request) {
       return blockingUnaryCall(
-          getChannel(), getMutateCustomerNegativeCriteriaMethodHelper(), getCallOptions(), request);
+          getChannel(), getMutateCustomerNegativeCriteriaMethod(), getCallOptions(), request);
     }
   }
 
@@ -266,19 +266,15 @@ public final class CustomerNegativeCriterionServiceGrpc {
    * Service to manage customer negative criteria.
    * </pre>
    */
-  public static final class CustomerNegativeCriterionServiceFutureStub extends io.grpc.stub.AbstractStub<CustomerNegativeCriterionServiceFutureStub> {
-    private CustomerNegativeCriterionServiceFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private CustomerNegativeCriterionServiceFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class CustomerNegativeCriterionServiceFutureStub extends io.grpc.stub.AbstractFutureStub<CustomerNegativeCriterionServiceFutureStub> {
+    private CustomerNegativeCriterionServiceFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected CustomerNegativeCriterionServiceFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected CustomerNegativeCriterionServiceFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new CustomerNegativeCriterionServiceFutureStub(channel, callOptions);
     }
 
@@ -290,7 +286,7 @@ public final class CustomerNegativeCriterionServiceGrpc {
     public com.google.common.util.concurrent.ListenableFuture<com.google.ads.googleads.v4.resources.CustomerNegativeCriterion> getCustomerNegativeCriterion(
         com.google.ads.googleads.v4.services.GetCustomerNegativeCriterionRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(getGetCustomerNegativeCriterionMethodHelper(), getCallOptions()), request);
+          getChannel().newCall(getGetCustomerNegativeCriterionMethod(), getCallOptions()), request);
     }
 
     /**
@@ -301,7 +297,7 @@ public final class CustomerNegativeCriterionServiceGrpc {
     public com.google.common.util.concurrent.ListenableFuture<com.google.ads.googleads.v4.services.MutateCustomerNegativeCriteriaResponse> mutateCustomerNegativeCriteria(
         com.google.ads.googleads.v4.services.MutateCustomerNegativeCriteriaRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(getMutateCustomerNegativeCriteriaMethodHelper(), getCallOptions()), request);
+          getChannel().newCall(getMutateCustomerNegativeCriteriaMethod(), getCallOptions()), request);
     }
   }
 
@@ -394,8 +390,8 @@ public final class CustomerNegativeCriterionServiceGrpc {
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new CustomerNegativeCriterionServiceFileDescriptorSupplier())
-              .addMethod(getGetCustomerNegativeCriterionMethodHelper())
-              .addMethod(getMutateCustomerNegativeCriteriaMethodHelper())
+              .addMethod(getGetCustomerNegativeCriterionMethod())
+              .addMethod(getMutateCustomerNegativeCriteriaMethod())
               .build();
         }
       }

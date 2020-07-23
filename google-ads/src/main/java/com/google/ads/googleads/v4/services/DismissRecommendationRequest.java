@@ -10,7 +10,7 @@ package com.google.ads.googleads.v4.services;
  *
  * Protobuf type {@code google.ads.googleads.v4.services.DismissRecommendationRequest}
  */
-public  final class DismissRecommendationRequest extends
+public final class DismissRecommendationRequest extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.services.DismissRecommendationRequest)
     DismissRecommendationRequestOrBuilder {
@@ -141,7 +141,7 @@ private static final long serialVersionUID = 0L;
    *
    * Protobuf type {@code google.ads.googleads.v4.services.DismissRecommendationRequest.DismissRecommendationOperation}
    */
-  public  static final class DismissRecommendationOperation extends
+  public static final class DismissRecommendationOperation extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.services.DismissRecommendationRequest.DismissRecommendationOperation)
       DismissRecommendationOperationOrBuilder {
@@ -232,6 +232,7 @@ private static final long serialVersionUID = 0L;
      * <code>string resource_name = 1;</code>
      * @return The resourceName.
      */
+    @java.lang.Override
     public java.lang.String getResourceName() {
       java.lang.Object ref = resourceName_;
       if (ref instanceof java.lang.String) {
@@ -252,6 +253,7 @@ private static final long serialVersionUID = 0L;
      * <code>string resource_name = 1;</code>
      * @return The bytes for resourceName.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getResourceNameBytes() {
       java.lang.Object ref = resourceName_;
@@ -730,6 +732,7 @@ private static final long serialVersionUID = 0L;
    * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
    * @return The customerId.
    */
+  @java.lang.Override
   public java.lang.String getCustomerId() {
     java.lang.Object ref = customerId_;
     if (ref instanceof java.lang.String) {
@@ -750,6 +753,7 @@ private static final long serialVersionUID = 0L;
    * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
    * @return The bytes for customerId.
    */
+  @java.lang.Override
   public com.google.protobuf.ByteString
       getCustomerIdBytes() {
     java.lang.Object ref = customerId_;
@@ -775,6 +779,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.services.DismissRecommendationRequest.DismissRecommendationOperation operations = 3 [(.google.api.field_behavior) = REQUIRED];</code>
    */
+  @java.lang.Override
   public java.util.List<com.google.ads.googleads.v4.services.DismissRecommendationRequest.DismissRecommendationOperation> getOperationsList() {
     return operations_;
   }
@@ -787,6 +792,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.services.DismissRecommendationRequest.DismissRecommendationOperation operations = 3 [(.google.api.field_behavior) = REQUIRED];</code>
    */
+  @java.lang.Override
   public java.util.List<? extends com.google.ads.googleads.v4.services.DismissRecommendationRequest.DismissRecommendationOperationOrBuilder> 
       getOperationsOrBuilderList() {
     return operations_;
@@ -800,6 +806,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.services.DismissRecommendationRequest.DismissRecommendationOperation operations = 3 [(.google.api.field_behavior) = REQUIRED];</code>
    */
+  @java.lang.Override
   public int getOperationsCount() {
     return operations_.size();
   }
@@ -812,6 +819,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.services.DismissRecommendationRequest.DismissRecommendationOperation operations = 3 [(.google.api.field_behavior) = REQUIRED];</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.services.DismissRecommendationRequest.DismissRecommendationOperation getOperations(int index) {
     return operations_.get(index);
   }
@@ -824,6 +832,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.services.DismissRecommendationRequest.DismissRecommendationOperation operations = 3 [(.google.api.field_behavior) = REQUIRED];</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.services.DismissRecommendationRequest.DismissRecommendationOperationOrBuilder getOperationsOrBuilder(
       int index) {
     return operations_.get(index);
@@ -842,6 +851,7 @@ private static final long serialVersionUID = 0L;
    * <code>bool partial_failure = 2;</code>
    * @return The partialFailure.
    */
+  @java.lang.Override
   public boolean getPartialFailure() {
     return partialFailure_;
   }
@@ -1683,6 +1693,7 @@ private static final long serialVersionUID = 0L;
      * <code>bool partial_failure = 2;</code>
      * @return The partialFailure.
      */
+    @java.lang.Override
     public boolean getPartialFailure() {
       return partialFailure_;
     }

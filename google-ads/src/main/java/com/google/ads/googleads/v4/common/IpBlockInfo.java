@@ -14,7 +14,7 @@ package com.google.ads.googleads.v4.common;
  *
  * Protobuf type {@code google.ads.googleads.v4.common.IpBlockInfo}
  */
-public  final class IpBlockInfo extends
+public final class IpBlockInfo extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.common.IpBlockInfo)
     IpBlockInfoOrBuilder {
@@ -111,6 +111,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue ip_address = 1;</code>
    * @return Whether the ipAddress field is set.
    */
+  @java.lang.Override
   public boolean hasIpAddress() {
     return ipAddress_ != null;
   }
@@ -122,6 +123,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue ip_address = 1;</code>
    * @return The ipAddress.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getIpAddress() {
     return ipAddress_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : ipAddress_;
   }
@@ -132,6 +134,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue ip_address = 1;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getIpAddressOrBuilder() {
     return getIpAddress();
   }

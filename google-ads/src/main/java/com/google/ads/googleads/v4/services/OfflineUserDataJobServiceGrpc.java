@@ -21,7 +21,7 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.10.0)",
+    value = "by gRPC proto compiler",
     comments = "Source: google/ads/googleads/v4/services/offline_user_data_job_service.proto")
 public final class OfflineUserDataJobServiceGrpc {
 
@@ -30,160 +30,142 @@ public final class OfflineUserDataJobServiceGrpc {
   public static final String SERVICE_NAME = "google.ads.googleads.v4.services.OfflineUserDataJobService";
 
   // Static method descriptors that strictly reflect the proto.
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  @java.lang.Deprecated // Use {@link #getCreateOfflineUserDataJobMethod()} instead. 
-  public static final io.grpc.MethodDescriptor<com.google.ads.googleads.v4.services.CreateOfflineUserDataJobRequest,
-      com.google.ads.googleads.v4.services.CreateOfflineUserDataJobResponse> METHOD_CREATE_OFFLINE_USER_DATA_JOB = getCreateOfflineUserDataJobMethodHelper();
-
   private static volatile io.grpc.MethodDescriptor<com.google.ads.googleads.v4.services.CreateOfflineUserDataJobRequest,
       com.google.ads.googleads.v4.services.CreateOfflineUserDataJobResponse> getCreateOfflineUserDataJobMethod;
 
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "CreateOfflineUserDataJob",
+      requestType = com.google.ads.googleads.v4.services.CreateOfflineUserDataJobRequest.class,
+      responseType = com.google.ads.googleads.v4.services.CreateOfflineUserDataJobResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<com.google.ads.googleads.v4.services.CreateOfflineUserDataJobRequest,
       com.google.ads.googleads.v4.services.CreateOfflineUserDataJobResponse> getCreateOfflineUserDataJobMethod() {
-    return getCreateOfflineUserDataJobMethodHelper();
-  }
-
-  private static io.grpc.MethodDescriptor<com.google.ads.googleads.v4.services.CreateOfflineUserDataJobRequest,
-      com.google.ads.googleads.v4.services.CreateOfflineUserDataJobResponse> getCreateOfflineUserDataJobMethodHelper() {
     io.grpc.MethodDescriptor<com.google.ads.googleads.v4.services.CreateOfflineUserDataJobRequest, com.google.ads.googleads.v4.services.CreateOfflineUserDataJobResponse> getCreateOfflineUserDataJobMethod;
     if ((getCreateOfflineUserDataJobMethod = OfflineUserDataJobServiceGrpc.getCreateOfflineUserDataJobMethod) == null) {
       synchronized (OfflineUserDataJobServiceGrpc.class) {
         if ((getCreateOfflineUserDataJobMethod = OfflineUserDataJobServiceGrpc.getCreateOfflineUserDataJobMethod) == null) {
-          OfflineUserDataJobServiceGrpc.getCreateOfflineUserDataJobMethod = getCreateOfflineUserDataJobMethod = 
+          OfflineUserDataJobServiceGrpc.getCreateOfflineUserDataJobMethod = getCreateOfflineUserDataJobMethod =
               io.grpc.MethodDescriptor.<com.google.ads.googleads.v4.services.CreateOfflineUserDataJobRequest, com.google.ads.googleads.v4.services.CreateOfflineUserDataJobResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "google.ads.googleads.v4.services.OfflineUserDataJobService", "CreateOfflineUserDataJob"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreateOfflineUserDataJob"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v4.services.CreateOfflineUserDataJobRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v4.services.CreateOfflineUserDataJobResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new OfflineUserDataJobServiceMethodDescriptorSupplier("CreateOfflineUserDataJob"))
-                  .build();
-          }
+              .setSchemaDescriptor(new OfflineUserDataJobServiceMethodDescriptorSupplier("CreateOfflineUserDataJob"))
+              .build();
         }
-     }
-     return getCreateOfflineUserDataJobMethod;
+      }
+    }
+    return getCreateOfflineUserDataJobMethod;
   }
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  @java.lang.Deprecated // Use {@link #getGetOfflineUserDataJobMethod()} instead. 
-  public static final io.grpc.MethodDescriptor<com.google.ads.googleads.v4.services.GetOfflineUserDataJobRequest,
-      com.google.ads.googleads.v4.resources.OfflineUserDataJob> METHOD_GET_OFFLINE_USER_DATA_JOB = getGetOfflineUserDataJobMethodHelper();
 
   private static volatile io.grpc.MethodDescriptor<com.google.ads.googleads.v4.services.GetOfflineUserDataJobRequest,
       com.google.ads.googleads.v4.resources.OfflineUserDataJob> getGetOfflineUserDataJobMethod;
 
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetOfflineUserDataJob",
+      requestType = com.google.ads.googleads.v4.services.GetOfflineUserDataJobRequest.class,
+      responseType = com.google.ads.googleads.v4.resources.OfflineUserDataJob.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<com.google.ads.googleads.v4.services.GetOfflineUserDataJobRequest,
       com.google.ads.googleads.v4.resources.OfflineUserDataJob> getGetOfflineUserDataJobMethod() {
-    return getGetOfflineUserDataJobMethodHelper();
-  }
-
-  private static io.grpc.MethodDescriptor<com.google.ads.googleads.v4.services.GetOfflineUserDataJobRequest,
-      com.google.ads.googleads.v4.resources.OfflineUserDataJob> getGetOfflineUserDataJobMethodHelper() {
     io.grpc.MethodDescriptor<com.google.ads.googleads.v4.services.GetOfflineUserDataJobRequest, com.google.ads.googleads.v4.resources.OfflineUserDataJob> getGetOfflineUserDataJobMethod;
     if ((getGetOfflineUserDataJobMethod = OfflineUserDataJobServiceGrpc.getGetOfflineUserDataJobMethod) == null) {
       synchronized (OfflineUserDataJobServiceGrpc.class) {
         if ((getGetOfflineUserDataJobMethod = OfflineUserDataJobServiceGrpc.getGetOfflineUserDataJobMethod) == null) {
-          OfflineUserDataJobServiceGrpc.getGetOfflineUserDataJobMethod = getGetOfflineUserDataJobMethod = 
+          OfflineUserDataJobServiceGrpc.getGetOfflineUserDataJobMethod = getGetOfflineUserDataJobMethod =
               io.grpc.MethodDescriptor.<com.google.ads.googleads.v4.services.GetOfflineUserDataJobRequest, com.google.ads.googleads.v4.resources.OfflineUserDataJob>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "google.ads.googleads.v4.services.OfflineUserDataJobService", "GetOfflineUserDataJob"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetOfflineUserDataJob"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v4.services.GetOfflineUserDataJobRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v4.resources.OfflineUserDataJob.getDefaultInstance()))
-                  .setSchemaDescriptor(new OfflineUserDataJobServiceMethodDescriptorSupplier("GetOfflineUserDataJob"))
-                  .build();
-          }
+              .setSchemaDescriptor(new OfflineUserDataJobServiceMethodDescriptorSupplier("GetOfflineUserDataJob"))
+              .build();
         }
-     }
-     return getGetOfflineUserDataJobMethod;
+      }
+    }
+    return getGetOfflineUserDataJobMethod;
   }
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  @java.lang.Deprecated // Use {@link #getAddOfflineUserDataJobOperationsMethod()} instead. 
-  public static final io.grpc.MethodDescriptor<com.google.ads.googleads.v4.services.AddOfflineUserDataJobOperationsRequest,
-      com.google.ads.googleads.v4.services.AddOfflineUserDataJobOperationsResponse> METHOD_ADD_OFFLINE_USER_DATA_JOB_OPERATIONS = getAddOfflineUserDataJobOperationsMethodHelper();
 
   private static volatile io.grpc.MethodDescriptor<com.google.ads.googleads.v4.services.AddOfflineUserDataJobOperationsRequest,
       com.google.ads.googleads.v4.services.AddOfflineUserDataJobOperationsResponse> getAddOfflineUserDataJobOperationsMethod;
 
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "AddOfflineUserDataJobOperations",
+      requestType = com.google.ads.googleads.v4.services.AddOfflineUserDataJobOperationsRequest.class,
+      responseType = com.google.ads.googleads.v4.services.AddOfflineUserDataJobOperationsResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<com.google.ads.googleads.v4.services.AddOfflineUserDataJobOperationsRequest,
       com.google.ads.googleads.v4.services.AddOfflineUserDataJobOperationsResponse> getAddOfflineUserDataJobOperationsMethod() {
-    return getAddOfflineUserDataJobOperationsMethodHelper();
-  }
-
-  private static io.grpc.MethodDescriptor<com.google.ads.googleads.v4.services.AddOfflineUserDataJobOperationsRequest,
-      com.google.ads.googleads.v4.services.AddOfflineUserDataJobOperationsResponse> getAddOfflineUserDataJobOperationsMethodHelper() {
     io.grpc.MethodDescriptor<com.google.ads.googleads.v4.services.AddOfflineUserDataJobOperationsRequest, com.google.ads.googleads.v4.services.AddOfflineUserDataJobOperationsResponse> getAddOfflineUserDataJobOperationsMethod;
     if ((getAddOfflineUserDataJobOperationsMethod = OfflineUserDataJobServiceGrpc.getAddOfflineUserDataJobOperationsMethod) == null) {
       synchronized (OfflineUserDataJobServiceGrpc.class) {
         if ((getAddOfflineUserDataJobOperationsMethod = OfflineUserDataJobServiceGrpc.getAddOfflineUserDataJobOperationsMethod) == null) {
-          OfflineUserDataJobServiceGrpc.getAddOfflineUserDataJobOperationsMethod = getAddOfflineUserDataJobOperationsMethod = 
+          OfflineUserDataJobServiceGrpc.getAddOfflineUserDataJobOperationsMethod = getAddOfflineUserDataJobOperationsMethod =
               io.grpc.MethodDescriptor.<com.google.ads.googleads.v4.services.AddOfflineUserDataJobOperationsRequest, com.google.ads.googleads.v4.services.AddOfflineUserDataJobOperationsResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "google.ads.googleads.v4.services.OfflineUserDataJobService", "AddOfflineUserDataJobOperations"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "AddOfflineUserDataJobOperations"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v4.services.AddOfflineUserDataJobOperationsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v4.services.AddOfflineUserDataJobOperationsResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new OfflineUserDataJobServiceMethodDescriptorSupplier("AddOfflineUserDataJobOperations"))
-                  .build();
-          }
+              .setSchemaDescriptor(new OfflineUserDataJobServiceMethodDescriptorSupplier("AddOfflineUserDataJobOperations"))
+              .build();
         }
-     }
-     return getAddOfflineUserDataJobOperationsMethod;
+      }
+    }
+    return getAddOfflineUserDataJobOperationsMethod;
   }
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  @java.lang.Deprecated // Use {@link #getRunOfflineUserDataJobMethod()} instead. 
-  public static final io.grpc.MethodDescriptor<com.google.ads.googleads.v4.services.RunOfflineUserDataJobRequest,
-      com.google.longrunning.Operation> METHOD_RUN_OFFLINE_USER_DATA_JOB = getRunOfflineUserDataJobMethodHelper();
 
   private static volatile io.grpc.MethodDescriptor<com.google.ads.googleads.v4.services.RunOfflineUserDataJobRequest,
       com.google.longrunning.Operation> getRunOfflineUserDataJobMethod;
 
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "RunOfflineUserDataJob",
+      requestType = com.google.ads.googleads.v4.services.RunOfflineUserDataJobRequest.class,
+      responseType = com.google.longrunning.Operation.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<com.google.ads.googleads.v4.services.RunOfflineUserDataJobRequest,
       com.google.longrunning.Operation> getRunOfflineUserDataJobMethod() {
-    return getRunOfflineUserDataJobMethodHelper();
-  }
-
-  private static io.grpc.MethodDescriptor<com.google.ads.googleads.v4.services.RunOfflineUserDataJobRequest,
-      com.google.longrunning.Operation> getRunOfflineUserDataJobMethodHelper() {
     io.grpc.MethodDescriptor<com.google.ads.googleads.v4.services.RunOfflineUserDataJobRequest, com.google.longrunning.Operation> getRunOfflineUserDataJobMethod;
     if ((getRunOfflineUserDataJobMethod = OfflineUserDataJobServiceGrpc.getRunOfflineUserDataJobMethod) == null) {
       synchronized (OfflineUserDataJobServiceGrpc.class) {
         if ((getRunOfflineUserDataJobMethod = OfflineUserDataJobServiceGrpc.getRunOfflineUserDataJobMethod) == null) {
-          OfflineUserDataJobServiceGrpc.getRunOfflineUserDataJobMethod = getRunOfflineUserDataJobMethod = 
+          OfflineUserDataJobServiceGrpc.getRunOfflineUserDataJobMethod = getRunOfflineUserDataJobMethod =
               io.grpc.MethodDescriptor.<com.google.ads.googleads.v4.services.RunOfflineUserDataJobRequest, com.google.longrunning.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "google.ads.googleads.v4.services.OfflineUserDataJobService", "RunOfflineUserDataJob"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "RunOfflineUserDataJob"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v4.services.RunOfflineUserDataJobRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.longrunning.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new OfflineUserDataJobServiceMethodDescriptorSupplier("RunOfflineUserDataJob"))
-                  .build();
-          }
+              .setSchemaDescriptor(new OfflineUserDataJobServiceMethodDescriptorSupplier("RunOfflineUserDataJob"))
+              .build();
         }
-     }
-     return getRunOfflineUserDataJobMethod;
+      }
+    }
+    return getRunOfflineUserDataJobMethod;
   }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static OfflineUserDataJobServiceStub newStub(io.grpc.Channel channel) {
-    return new OfflineUserDataJobServiceStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<OfflineUserDataJobServiceStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<OfflineUserDataJobServiceStub>() {
+        @java.lang.Override
+        public OfflineUserDataJobServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new OfflineUserDataJobServiceStub(channel, callOptions);
+        }
+      };
+    return OfflineUserDataJobServiceStub.newStub(factory, channel);
   }
 
   /**
@@ -191,7 +173,14 @@ public final class OfflineUserDataJobServiceGrpc {
    */
   public static OfflineUserDataJobServiceBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new OfflineUserDataJobServiceBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<OfflineUserDataJobServiceBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<OfflineUserDataJobServiceBlockingStub>() {
+        @java.lang.Override
+        public OfflineUserDataJobServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new OfflineUserDataJobServiceBlockingStub(channel, callOptions);
+        }
+      };
+    return OfflineUserDataJobServiceBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -199,7 +188,14 @@ public final class OfflineUserDataJobServiceGrpc {
    */
   public static OfflineUserDataJobServiceFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new OfflineUserDataJobServiceFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<OfflineUserDataJobServiceFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<OfflineUserDataJobServiceFutureStub>() {
+        @java.lang.Override
+        public OfflineUserDataJobServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new OfflineUserDataJobServiceFutureStub(channel, callOptions);
+        }
+      };
+    return OfflineUserDataJobServiceFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -216,7 +212,7 @@ public final class OfflineUserDataJobServiceGrpc {
      */
     public void createOfflineUserDataJob(com.google.ads.googleads.v4.services.CreateOfflineUserDataJobRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v4.services.CreateOfflineUserDataJobResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getCreateOfflineUserDataJobMethodHelper(), responseObserver);
+      asyncUnimplementedUnaryCall(getCreateOfflineUserDataJobMethod(), responseObserver);
     }
 
     /**
@@ -226,7 +222,7 @@ public final class OfflineUserDataJobServiceGrpc {
      */
     public void getOfflineUserDataJob(com.google.ads.googleads.v4.services.GetOfflineUserDataJobRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v4.resources.OfflineUserDataJob> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetOfflineUserDataJobMethodHelper(), responseObserver);
+      asyncUnimplementedUnaryCall(getGetOfflineUserDataJobMethod(), responseObserver);
     }
 
     /**
@@ -236,7 +232,7 @@ public final class OfflineUserDataJobServiceGrpc {
      */
     public void addOfflineUserDataJobOperations(com.google.ads.googleads.v4.services.AddOfflineUserDataJobOperationsRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v4.services.AddOfflineUserDataJobOperationsResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getAddOfflineUserDataJobOperationsMethodHelper(), responseObserver);
+      asyncUnimplementedUnaryCall(getAddOfflineUserDataJobOperationsMethod(), responseObserver);
     }
 
     /**
@@ -248,34 +244,34 @@ public final class OfflineUserDataJobServiceGrpc {
      */
     public void runOfflineUserDataJob(com.google.ads.googleads.v4.services.RunOfflineUserDataJobRequest request,
         io.grpc.stub.StreamObserver<com.google.longrunning.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getRunOfflineUserDataJobMethodHelper(), responseObserver);
+      asyncUnimplementedUnaryCall(getRunOfflineUserDataJobMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
-            getCreateOfflineUserDataJobMethodHelper(),
+            getCreateOfflineUserDataJobMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 com.google.ads.googleads.v4.services.CreateOfflineUserDataJobRequest,
                 com.google.ads.googleads.v4.services.CreateOfflineUserDataJobResponse>(
                   this, METHODID_CREATE_OFFLINE_USER_DATA_JOB)))
           .addMethod(
-            getGetOfflineUserDataJobMethodHelper(),
+            getGetOfflineUserDataJobMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 com.google.ads.googleads.v4.services.GetOfflineUserDataJobRequest,
                 com.google.ads.googleads.v4.resources.OfflineUserDataJob>(
                   this, METHODID_GET_OFFLINE_USER_DATA_JOB)))
           .addMethod(
-            getAddOfflineUserDataJobOperationsMethodHelper(),
+            getAddOfflineUserDataJobOperationsMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 com.google.ads.googleads.v4.services.AddOfflineUserDataJobOperationsRequest,
                 com.google.ads.googleads.v4.services.AddOfflineUserDataJobOperationsResponse>(
                   this, METHODID_ADD_OFFLINE_USER_DATA_JOB_OPERATIONS)))
           .addMethod(
-            getRunOfflineUserDataJobMethodHelper(),
+            getRunOfflineUserDataJobMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 com.google.ads.googleads.v4.services.RunOfflineUserDataJobRequest,
@@ -290,19 +286,15 @@ public final class OfflineUserDataJobServiceGrpc {
    * Service to manage offline user data jobs.
    * </pre>
    */
-  public static final class OfflineUserDataJobServiceStub extends io.grpc.stub.AbstractStub<OfflineUserDataJobServiceStub> {
-    private OfflineUserDataJobServiceStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private OfflineUserDataJobServiceStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class OfflineUserDataJobServiceStub extends io.grpc.stub.AbstractAsyncStub<OfflineUserDataJobServiceStub> {
+    private OfflineUserDataJobServiceStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected OfflineUserDataJobServiceStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected OfflineUserDataJobServiceStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new OfflineUserDataJobServiceStub(channel, callOptions);
     }
 
@@ -314,7 +306,7 @@ public final class OfflineUserDataJobServiceGrpc {
     public void createOfflineUserDataJob(com.google.ads.googleads.v4.services.CreateOfflineUserDataJobRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v4.services.CreateOfflineUserDataJobResponse> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(getCreateOfflineUserDataJobMethodHelper(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getCreateOfflineUserDataJobMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -325,7 +317,7 @@ public final class OfflineUserDataJobServiceGrpc {
     public void getOfflineUserDataJob(com.google.ads.googleads.v4.services.GetOfflineUserDataJobRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v4.resources.OfflineUserDataJob> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(getGetOfflineUserDataJobMethodHelper(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getGetOfflineUserDataJobMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -336,7 +328,7 @@ public final class OfflineUserDataJobServiceGrpc {
     public void addOfflineUserDataJobOperations(com.google.ads.googleads.v4.services.AddOfflineUserDataJobOperationsRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v4.services.AddOfflineUserDataJobOperationsResponse> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(getAddOfflineUserDataJobOperationsMethodHelper(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getAddOfflineUserDataJobOperationsMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -349,7 +341,7 @@ public final class OfflineUserDataJobServiceGrpc {
     public void runOfflineUserDataJob(com.google.ads.googleads.v4.services.RunOfflineUserDataJobRequest request,
         io.grpc.stub.StreamObserver<com.google.longrunning.Operation> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(getRunOfflineUserDataJobMethodHelper(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getRunOfflineUserDataJobMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -358,19 +350,15 @@ public final class OfflineUserDataJobServiceGrpc {
    * Service to manage offline user data jobs.
    * </pre>
    */
-  public static final class OfflineUserDataJobServiceBlockingStub extends io.grpc.stub.AbstractStub<OfflineUserDataJobServiceBlockingStub> {
-    private OfflineUserDataJobServiceBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private OfflineUserDataJobServiceBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class OfflineUserDataJobServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<OfflineUserDataJobServiceBlockingStub> {
+    private OfflineUserDataJobServiceBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected OfflineUserDataJobServiceBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected OfflineUserDataJobServiceBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new OfflineUserDataJobServiceBlockingStub(channel, callOptions);
     }
 
@@ -381,7 +369,7 @@ public final class OfflineUserDataJobServiceGrpc {
      */
     public com.google.ads.googleads.v4.services.CreateOfflineUserDataJobResponse createOfflineUserDataJob(com.google.ads.googleads.v4.services.CreateOfflineUserDataJobRequest request) {
       return blockingUnaryCall(
-          getChannel(), getCreateOfflineUserDataJobMethodHelper(), getCallOptions(), request);
+          getChannel(), getCreateOfflineUserDataJobMethod(), getCallOptions(), request);
     }
 
     /**
@@ -391,7 +379,7 @@ public final class OfflineUserDataJobServiceGrpc {
      */
     public com.google.ads.googleads.v4.resources.OfflineUserDataJob getOfflineUserDataJob(com.google.ads.googleads.v4.services.GetOfflineUserDataJobRequest request) {
       return blockingUnaryCall(
-          getChannel(), getGetOfflineUserDataJobMethodHelper(), getCallOptions(), request);
+          getChannel(), getGetOfflineUserDataJobMethod(), getCallOptions(), request);
     }
 
     /**
@@ -401,7 +389,7 @@ public final class OfflineUserDataJobServiceGrpc {
      */
     public com.google.ads.googleads.v4.services.AddOfflineUserDataJobOperationsResponse addOfflineUserDataJobOperations(com.google.ads.googleads.v4.services.AddOfflineUserDataJobOperationsRequest request) {
       return blockingUnaryCall(
-          getChannel(), getAddOfflineUserDataJobOperationsMethodHelper(), getCallOptions(), request);
+          getChannel(), getAddOfflineUserDataJobOperationsMethod(), getCallOptions(), request);
     }
 
     /**
@@ -413,7 +401,7 @@ public final class OfflineUserDataJobServiceGrpc {
      */
     public com.google.longrunning.Operation runOfflineUserDataJob(com.google.ads.googleads.v4.services.RunOfflineUserDataJobRequest request) {
       return blockingUnaryCall(
-          getChannel(), getRunOfflineUserDataJobMethodHelper(), getCallOptions(), request);
+          getChannel(), getRunOfflineUserDataJobMethod(), getCallOptions(), request);
     }
   }
 
@@ -422,19 +410,15 @@ public final class OfflineUserDataJobServiceGrpc {
    * Service to manage offline user data jobs.
    * </pre>
    */
-  public static final class OfflineUserDataJobServiceFutureStub extends io.grpc.stub.AbstractStub<OfflineUserDataJobServiceFutureStub> {
-    private OfflineUserDataJobServiceFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private OfflineUserDataJobServiceFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class OfflineUserDataJobServiceFutureStub extends io.grpc.stub.AbstractFutureStub<OfflineUserDataJobServiceFutureStub> {
+    private OfflineUserDataJobServiceFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected OfflineUserDataJobServiceFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected OfflineUserDataJobServiceFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new OfflineUserDataJobServiceFutureStub(channel, callOptions);
     }
 
@@ -446,7 +430,7 @@ public final class OfflineUserDataJobServiceGrpc {
     public com.google.common.util.concurrent.ListenableFuture<com.google.ads.googleads.v4.services.CreateOfflineUserDataJobResponse> createOfflineUserDataJob(
         com.google.ads.googleads.v4.services.CreateOfflineUserDataJobRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(getCreateOfflineUserDataJobMethodHelper(), getCallOptions()), request);
+          getChannel().newCall(getCreateOfflineUserDataJobMethod(), getCallOptions()), request);
     }
 
     /**
@@ -457,7 +441,7 @@ public final class OfflineUserDataJobServiceGrpc {
     public com.google.common.util.concurrent.ListenableFuture<com.google.ads.googleads.v4.resources.OfflineUserDataJob> getOfflineUserDataJob(
         com.google.ads.googleads.v4.services.GetOfflineUserDataJobRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(getGetOfflineUserDataJobMethodHelper(), getCallOptions()), request);
+          getChannel().newCall(getGetOfflineUserDataJobMethod(), getCallOptions()), request);
     }
 
     /**
@@ -468,7 +452,7 @@ public final class OfflineUserDataJobServiceGrpc {
     public com.google.common.util.concurrent.ListenableFuture<com.google.ads.googleads.v4.services.AddOfflineUserDataJobOperationsResponse> addOfflineUserDataJobOperations(
         com.google.ads.googleads.v4.services.AddOfflineUserDataJobOperationsRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(getAddOfflineUserDataJobOperationsMethodHelper(), getCallOptions()), request);
+          getChannel().newCall(getAddOfflineUserDataJobOperationsMethod(), getCallOptions()), request);
     }
 
     /**
@@ -481,7 +465,7 @@ public final class OfflineUserDataJobServiceGrpc {
     public com.google.common.util.concurrent.ListenableFuture<com.google.longrunning.Operation> runOfflineUserDataJob(
         com.google.ads.googleads.v4.services.RunOfflineUserDataJobRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(getRunOfflineUserDataJobMethodHelper(), getCallOptions()), request);
+          getChannel().newCall(getRunOfflineUserDataJobMethod(), getCallOptions()), request);
     }
   }
 
@@ -584,10 +568,10 @@ public final class OfflineUserDataJobServiceGrpc {
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new OfflineUserDataJobServiceFileDescriptorSupplier())
-              .addMethod(getCreateOfflineUserDataJobMethodHelper())
-              .addMethod(getGetOfflineUserDataJobMethodHelper())
-              .addMethod(getAddOfflineUserDataJobOperationsMethodHelper())
-              .addMethod(getRunOfflineUserDataJobMethodHelper())
+              .addMethod(getCreateOfflineUserDataJobMethod())
+              .addMethod(getGetOfflineUserDataJobMethod())
+              .addMethod(getAddOfflineUserDataJobOperationsMethod())
+              .addMethod(getRunOfflineUserDataJobMethod())
               .build();
         }
       }

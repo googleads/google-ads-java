@@ -21,7 +21,7 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.10.0)",
+    value = "by gRPC proto compiler",
     comments = "Source: google/ads/googleads/v1/services/mobile_app_category_constant_service.proto")
 public final class MobileAppCategoryConstantServiceGrpc {
 
@@ -30,49 +30,49 @@ public final class MobileAppCategoryConstantServiceGrpc {
   public static final String SERVICE_NAME = "google.ads.googleads.v1.services.MobileAppCategoryConstantService";
 
   // Static method descriptors that strictly reflect the proto.
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  @java.lang.Deprecated // Use {@link #getGetMobileAppCategoryConstantMethod()} instead. 
-  public static final io.grpc.MethodDescriptor<com.google.ads.googleads.v1.services.GetMobileAppCategoryConstantRequest,
-      com.google.ads.googleads.v1.resources.MobileAppCategoryConstant> METHOD_GET_MOBILE_APP_CATEGORY_CONSTANT = getGetMobileAppCategoryConstantMethodHelper();
-
   private static volatile io.grpc.MethodDescriptor<com.google.ads.googleads.v1.services.GetMobileAppCategoryConstantRequest,
       com.google.ads.googleads.v1.resources.MobileAppCategoryConstant> getGetMobileAppCategoryConstantMethod;
 
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetMobileAppCategoryConstant",
+      requestType = com.google.ads.googleads.v1.services.GetMobileAppCategoryConstantRequest.class,
+      responseType = com.google.ads.googleads.v1.resources.MobileAppCategoryConstant.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<com.google.ads.googleads.v1.services.GetMobileAppCategoryConstantRequest,
       com.google.ads.googleads.v1.resources.MobileAppCategoryConstant> getGetMobileAppCategoryConstantMethod() {
-    return getGetMobileAppCategoryConstantMethodHelper();
-  }
-
-  private static io.grpc.MethodDescriptor<com.google.ads.googleads.v1.services.GetMobileAppCategoryConstantRequest,
-      com.google.ads.googleads.v1.resources.MobileAppCategoryConstant> getGetMobileAppCategoryConstantMethodHelper() {
     io.grpc.MethodDescriptor<com.google.ads.googleads.v1.services.GetMobileAppCategoryConstantRequest, com.google.ads.googleads.v1.resources.MobileAppCategoryConstant> getGetMobileAppCategoryConstantMethod;
     if ((getGetMobileAppCategoryConstantMethod = MobileAppCategoryConstantServiceGrpc.getGetMobileAppCategoryConstantMethod) == null) {
       synchronized (MobileAppCategoryConstantServiceGrpc.class) {
         if ((getGetMobileAppCategoryConstantMethod = MobileAppCategoryConstantServiceGrpc.getGetMobileAppCategoryConstantMethod) == null) {
-          MobileAppCategoryConstantServiceGrpc.getGetMobileAppCategoryConstantMethod = getGetMobileAppCategoryConstantMethod = 
+          MobileAppCategoryConstantServiceGrpc.getGetMobileAppCategoryConstantMethod = getGetMobileAppCategoryConstantMethod =
               io.grpc.MethodDescriptor.<com.google.ads.googleads.v1.services.GetMobileAppCategoryConstantRequest, com.google.ads.googleads.v1.resources.MobileAppCategoryConstant>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "google.ads.googleads.v1.services.MobileAppCategoryConstantService", "GetMobileAppCategoryConstant"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetMobileAppCategoryConstant"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v1.services.GetMobileAppCategoryConstantRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v1.resources.MobileAppCategoryConstant.getDefaultInstance()))
-                  .setSchemaDescriptor(new MobileAppCategoryConstantServiceMethodDescriptorSupplier("GetMobileAppCategoryConstant"))
-                  .build();
-          }
+              .setSchemaDescriptor(new MobileAppCategoryConstantServiceMethodDescriptorSupplier("GetMobileAppCategoryConstant"))
+              .build();
         }
-     }
-     return getGetMobileAppCategoryConstantMethod;
+      }
+    }
+    return getGetMobileAppCategoryConstantMethod;
   }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static MobileAppCategoryConstantServiceStub newStub(io.grpc.Channel channel) {
-    return new MobileAppCategoryConstantServiceStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<MobileAppCategoryConstantServiceStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<MobileAppCategoryConstantServiceStub>() {
+        @java.lang.Override
+        public MobileAppCategoryConstantServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new MobileAppCategoryConstantServiceStub(channel, callOptions);
+        }
+      };
+    return MobileAppCategoryConstantServiceStub.newStub(factory, channel);
   }
 
   /**
@@ -80,7 +80,14 @@ public final class MobileAppCategoryConstantServiceGrpc {
    */
   public static MobileAppCategoryConstantServiceBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new MobileAppCategoryConstantServiceBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<MobileAppCategoryConstantServiceBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<MobileAppCategoryConstantServiceBlockingStub>() {
+        @java.lang.Override
+        public MobileAppCategoryConstantServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new MobileAppCategoryConstantServiceBlockingStub(channel, callOptions);
+        }
+      };
+    return MobileAppCategoryConstantServiceBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -88,7 +95,14 @@ public final class MobileAppCategoryConstantServiceGrpc {
    */
   public static MobileAppCategoryConstantServiceFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new MobileAppCategoryConstantServiceFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<MobileAppCategoryConstantServiceFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<MobileAppCategoryConstantServiceFutureStub>() {
+        @java.lang.Override
+        public MobileAppCategoryConstantServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new MobileAppCategoryConstantServiceFutureStub(channel, callOptions);
+        }
+      };
+    return MobileAppCategoryConstantServiceFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -105,13 +119,13 @@ public final class MobileAppCategoryConstantServiceGrpc {
      */
     public void getMobileAppCategoryConstant(com.google.ads.googleads.v1.services.GetMobileAppCategoryConstantRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v1.resources.MobileAppCategoryConstant> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetMobileAppCategoryConstantMethodHelper(), responseObserver);
+      asyncUnimplementedUnaryCall(getGetMobileAppCategoryConstantMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
-            getGetMobileAppCategoryConstantMethodHelper(),
+            getGetMobileAppCategoryConstantMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 com.google.ads.googleads.v1.services.GetMobileAppCategoryConstantRequest,
@@ -126,19 +140,15 @@ public final class MobileAppCategoryConstantServiceGrpc {
    * Service to fetch mobile app category constants.
    * </pre>
    */
-  public static final class MobileAppCategoryConstantServiceStub extends io.grpc.stub.AbstractStub<MobileAppCategoryConstantServiceStub> {
-    private MobileAppCategoryConstantServiceStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private MobileAppCategoryConstantServiceStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class MobileAppCategoryConstantServiceStub extends io.grpc.stub.AbstractAsyncStub<MobileAppCategoryConstantServiceStub> {
+    private MobileAppCategoryConstantServiceStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected MobileAppCategoryConstantServiceStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected MobileAppCategoryConstantServiceStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new MobileAppCategoryConstantServiceStub(channel, callOptions);
     }
 
@@ -150,7 +160,7 @@ public final class MobileAppCategoryConstantServiceGrpc {
     public void getMobileAppCategoryConstant(com.google.ads.googleads.v1.services.GetMobileAppCategoryConstantRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v1.resources.MobileAppCategoryConstant> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(getGetMobileAppCategoryConstantMethodHelper(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getGetMobileAppCategoryConstantMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -159,19 +169,15 @@ public final class MobileAppCategoryConstantServiceGrpc {
    * Service to fetch mobile app category constants.
    * </pre>
    */
-  public static final class MobileAppCategoryConstantServiceBlockingStub extends io.grpc.stub.AbstractStub<MobileAppCategoryConstantServiceBlockingStub> {
-    private MobileAppCategoryConstantServiceBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private MobileAppCategoryConstantServiceBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class MobileAppCategoryConstantServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<MobileAppCategoryConstantServiceBlockingStub> {
+    private MobileAppCategoryConstantServiceBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected MobileAppCategoryConstantServiceBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected MobileAppCategoryConstantServiceBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new MobileAppCategoryConstantServiceBlockingStub(channel, callOptions);
     }
 
@@ -182,7 +188,7 @@ public final class MobileAppCategoryConstantServiceGrpc {
      */
     public com.google.ads.googleads.v1.resources.MobileAppCategoryConstant getMobileAppCategoryConstant(com.google.ads.googleads.v1.services.GetMobileAppCategoryConstantRequest request) {
       return blockingUnaryCall(
-          getChannel(), getGetMobileAppCategoryConstantMethodHelper(), getCallOptions(), request);
+          getChannel(), getGetMobileAppCategoryConstantMethod(), getCallOptions(), request);
     }
   }
 
@@ -191,19 +197,15 @@ public final class MobileAppCategoryConstantServiceGrpc {
    * Service to fetch mobile app category constants.
    * </pre>
    */
-  public static final class MobileAppCategoryConstantServiceFutureStub extends io.grpc.stub.AbstractStub<MobileAppCategoryConstantServiceFutureStub> {
-    private MobileAppCategoryConstantServiceFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private MobileAppCategoryConstantServiceFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class MobileAppCategoryConstantServiceFutureStub extends io.grpc.stub.AbstractFutureStub<MobileAppCategoryConstantServiceFutureStub> {
+    private MobileAppCategoryConstantServiceFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected MobileAppCategoryConstantServiceFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected MobileAppCategoryConstantServiceFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new MobileAppCategoryConstantServiceFutureStub(channel, callOptions);
     }
 
@@ -215,7 +217,7 @@ public final class MobileAppCategoryConstantServiceGrpc {
     public com.google.common.util.concurrent.ListenableFuture<com.google.ads.googleads.v1.resources.MobileAppCategoryConstant> getMobileAppCategoryConstant(
         com.google.ads.googleads.v1.services.GetMobileAppCategoryConstantRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(getGetMobileAppCategoryConstantMethodHelper(), getCallOptions()), request);
+          getChannel().newCall(getGetMobileAppCategoryConstantMethod(), getCallOptions()), request);
     }
   }
 
@@ -303,7 +305,7 @@ public final class MobileAppCategoryConstantServiceGrpc {
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new MobileAppCategoryConstantServiceFileDescriptorSupplier())
-              .addMethod(getGetMobileAppCategoryConstantMethodHelper())
+              .addMethod(getGetMobileAppCategoryConstantMethod())
               .build();
         }
       }

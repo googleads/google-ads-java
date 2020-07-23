@@ -10,7 +10,7 @@ package com.google.ads.googleads.v4.common;
  *
  * Protobuf type {@code google.ads.googleads.v4.common.HotelAdInfo}
  */
-public  final class HotelAdInfo extends
+public final class HotelAdInfo extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.common.HotelAdInfo)
     HotelAdInfoOrBuilder {

@@ -13,6 +13,7 @@ public interface SearchGoogleAdsFieldsRequestOrBuilder extends
    * </pre>
    *
    * <code>string query = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+   * @return The query.
    */
   java.lang.String getQuery();
   /**
@@ -21,6 +22,7 @@ public interface SearchGoogleAdsFieldsRequestOrBuilder extends
    * </pre>
    *
    * <code>string query = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+   * @return The bytes for query.
    */
   com.google.protobuf.ByteString
       getQueryBytes();
@@ -33,6 +35,7 @@ public interface SearchGoogleAdsFieldsRequestOrBuilder extends
    * </pre>
    *
    * <code>string page_token = 2;</code>
+   * @return The pageToken.
    */
   java.lang.String getPageToken();
   /**
@@ -43,6 +46,7 @@ public interface SearchGoogleAdsFieldsRequestOrBuilder extends
    * </pre>
    *
    * <code>string page_token = 2;</code>
+   * @return The bytes for pageToken.
    */
   com.google.protobuf.ByteString
       getPageTokenBytes();
@@ -55,6 +59,7 @@ public interface SearchGoogleAdsFieldsRequestOrBuilder extends
    * </pre>
    *
    * <code>int32 page_size = 3;</code>
+   * @return The pageSize.
    */
   int getPageSize();
 }

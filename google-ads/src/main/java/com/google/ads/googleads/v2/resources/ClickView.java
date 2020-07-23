@@ -8,11 +8,14 @@ package com.google.ads.googleads.v2.resources;
  * A click view with metrics aggregated at each click level, including both
  * valid and invalid clicks. For non-Search campaigns, metrics.clicks
  * represents the number of valid and invalid interactions.
+ * Queries including ClickView must have a filter limiting the results to one
+ * day and can be requested for dates back to 90 days before the time of the
+ * request.
  * </pre>
  *
  * Protobuf type {@code google.ads.googleads.v2.resources.ClickView}
  */
-public  final class ClickView extends
+public final class ClickView extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v2.resources.ClickView)
     ClickViewOrBuilder {
@@ -23,6 +26,13 @@ private static final long serialVersionUID = 0L;
   }
   private ClickView() {
     resourceName_ = "";
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new ClickView();
   }
 
   @java.lang.Override
@@ -38,7 +48,6 @@ private static final long serialVersionUID = 0L;
     if (extensionRegistry == null) {
       throw new java.lang.NullPointerException();
     }
-    int mutable_bitField0_ = 0;
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
         com.google.protobuf.UnknownFieldSet.newBuilder();
     try {
@@ -156,13 +165,15 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object resourceName_;
   /**
    * <pre>
-   * The resource name of the click view.
+   * Output only. The resource name of the click view.
    * Click view resource names have the form:
    * `customers/{customer_id}/clickViews/{date (yyyy-MM-dd)}~{gclid}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The resourceName.
    */
+  @java.lang.Override
   public java.lang.String getResourceName() {
     java.lang.Object ref = resourceName_;
     if (ref instanceof java.lang.String) {
@@ -177,13 +188,15 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The resource name of the click view.
+   * Output only. The resource name of the click view.
    * Click view resource names have the form:
    * `customers/{customer_id}/clickViews/{date (yyyy-MM-dd)}~{gclid}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The bytes for resourceName.
    */
+  @java.lang.Override
   public com.google.protobuf.ByteString
       getResourceNameBytes() {
     java.lang.Object ref = resourceName_;
@@ -202,31 +215,36 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.StringValue gclid_;
   /**
    * <pre>
-   * The Google Click ID.
+   * Output only. The Google Click ID.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue gclid = 2;</code>
+   * <code>.google.protobuf.StringValue gclid = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the gclid field is set.
    */
+  @java.lang.Override
   public boolean hasGclid() {
     return gclid_ != null;
   }
   /**
    * <pre>
-   * The Google Click ID.
+   * Output only. The Google Click ID.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue gclid = 2;</code>
+   * <code>.google.protobuf.StringValue gclid = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The gclid.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getGclid() {
     return gclid_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : gclid_;
   }
   /**
    * <pre>
-   * The Google Click ID.
+   * Output only. The Google Click ID.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue gclid = 2;</code>
+   * <code>.google.protobuf.StringValue gclid = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getGclidOrBuilder() {
     return getGclid();
   }
@@ -235,34 +253,39 @@ private static final long serialVersionUID = 0L;
   private com.google.ads.googleads.v2.common.ClickLocation areaOfInterest_;
   /**
    * <pre>
-   * The location criteria matching the area of interest associated with the
+   * Output only. The location criteria matching the area of interest associated with the
    * impression.
    * </pre>
    *
-   * <code>.google.ads.googleads.v2.common.ClickLocation area_of_interest = 3;</code>
+   * <code>.google.ads.googleads.v2.common.ClickLocation area_of_interest = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the areaOfInterest field is set.
    */
+  @java.lang.Override
   public boolean hasAreaOfInterest() {
     return areaOfInterest_ != null;
   }
   /**
    * <pre>
-   * The location criteria matching the area of interest associated with the
+   * Output only. The location criteria matching the area of interest associated with the
    * impression.
    * </pre>
    *
-   * <code>.google.ads.googleads.v2.common.ClickLocation area_of_interest = 3;</code>
+   * <code>.google.ads.googleads.v2.common.ClickLocation area_of_interest = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The areaOfInterest.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.common.ClickLocation getAreaOfInterest() {
     return areaOfInterest_ == null ? com.google.ads.googleads.v2.common.ClickLocation.getDefaultInstance() : areaOfInterest_;
   }
   /**
    * <pre>
-   * The location criteria matching the area of interest associated with the
+   * Output only. The location criteria matching the area of interest associated with the
    * impression.
    * </pre>
    *
-   * <code>.google.ads.googleads.v2.common.ClickLocation area_of_interest = 3;</code>
+   * <code>.google.ads.googleads.v2.common.ClickLocation area_of_interest = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.common.ClickLocationOrBuilder getAreaOfInterestOrBuilder() {
     return getAreaOfInterest();
   }
@@ -271,34 +294,39 @@ private static final long serialVersionUID = 0L;
   private com.google.ads.googleads.v2.common.ClickLocation locationOfPresence_;
   /**
    * <pre>
-   * The location criteria matching the location of presence associated with the
+   * Output only. The location criteria matching the location of presence associated with the
    * impression.
    * </pre>
    *
-   * <code>.google.ads.googleads.v2.common.ClickLocation location_of_presence = 4;</code>
+   * <code>.google.ads.googleads.v2.common.ClickLocation location_of_presence = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the locationOfPresence field is set.
    */
+  @java.lang.Override
   public boolean hasLocationOfPresence() {
     return locationOfPresence_ != null;
   }
   /**
    * <pre>
-   * The location criteria matching the location of presence associated with the
+   * Output only. The location criteria matching the location of presence associated with the
    * impression.
    * </pre>
    *
-   * <code>.google.ads.googleads.v2.common.ClickLocation location_of_presence = 4;</code>
+   * <code>.google.ads.googleads.v2.common.ClickLocation location_of_presence = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The locationOfPresence.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.common.ClickLocation getLocationOfPresence() {
     return locationOfPresence_ == null ? com.google.ads.googleads.v2.common.ClickLocation.getDefaultInstance() : locationOfPresence_;
   }
   /**
    * <pre>
-   * The location criteria matching the location of presence associated with the
+   * Output only. The location criteria matching the location of presence associated with the
    * impression.
    * </pre>
    *
-   * <code>.google.ads.googleads.v2.common.ClickLocation location_of_presence = 4;</code>
+   * <code>.google.ads.googleads.v2.common.ClickLocation location_of_presence = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.common.ClickLocationOrBuilder getLocationOfPresenceOrBuilder() {
     return getLocationOfPresence();
   }
@@ -307,31 +335,36 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.Int64Value pageNumber_;
   /**
    * <pre>
-   * Page number in search results where the ad was shown.
+   * Output only. Page number in search results where the ad was shown.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value page_number = 5;</code>
+   * <code>.google.protobuf.Int64Value page_number = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the pageNumber field is set.
    */
+  @java.lang.Override
   public boolean hasPageNumber() {
     return pageNumber_ != null;
   }
   /**
    * <pre>
-   * Page number in search results where the ad was shown.
+   * Output only. Page number in search results where the ad was shown.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value page_number = 5;</code>
+   * <code>.google.protobuf.Int64Value page_number = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The pageNumber.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getPageNumber() {
     return pageNumber_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : pageNumber_;
   }
   /**
    * <pre>
-   * Page number in search results where the ad was shown.
+   * Output only. Page number in search results where the ad was shown.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value page_number = 5;</code>
+   * <code>.google.protobuf.Int64Value page_number = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getPageNumberOrBuilder() {
     return getPageNumber();
   }
@@ -340,31 +373,36 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.StringValue adGroupAd_;
   /**
    * <pre>
-   * The associated ad.
+   * Output only. The associated ad.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue ad_group_ad = 7;</code>
+   * <code>.google.protobuf.StringValue ad_group_ad = 7 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return Whether the adGroupAd field is set.
    */
+  @java.lang.Override
   public boolean hasAdGroupAd() {
     return adGroupAd_ != null;
   }
   /**
    * <pre>
-   * The associated ad.
+   * Output only. The associated ad.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue ad_group_ad = 7;</code>
+   * <code>.google.protobuf.StringValue ad_group_ad = 7 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The adGroupAd.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getAdGroupAd() {
     return adGroupAd_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : adGroupAd_;
   }
   /**
    * <pre>
-   * The associated ad.
+   * Output only. The associated ad.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue ad_group_ad = 7;</code>
+   * <code>.google.protobuf.StringValue ad_group_ad = 7 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getAdGroupAdOrBuilder() {
     return getAdGroupAd();
   }
@@ -608,6 +646,9 @@ private static final long serialVersionUID = 0L;
    * A click view with metrics aggregated at each click level, including both
    * valid and invalid clicks. For non-Search campaigns, metrics.clicks
    * represents the number of valid and invalid interactions.
+   * Queries including ClickView must have a filter limiting the results to one
+   * day and can be requested for dates back to 90 days before the time of the
+   * request.
    * </pre>
    *
    * Protobuf type {@code google.ads.googleads.v2.resources.ClickView}
@@ -830,12 +871,13 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object resourceName_ = "";
     /**
      * <pre>
-     * The resource name of the click view.
+     * Output only. The resource name of the click view.
      * Click view resource names have the form:
      * `customers/{customer_id}/clickViews/{date (yyyy-MM-dd)}~{gclid}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @return The resourceName.
      */
     public java.lang.String getResourceName() {
       java.lang.Object ref = resourceName_;
@@ -851,12 +893,13 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the click view.
+     * Output only. The resource name of the click view.
      * Click view resource names have the form:
      * `customers/{customer_id}/clickViews/{date (yyyy-MM-dd)}~{gclid}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @return The bytes for resourceName.
      */
     public com.google.protobuf.ByteString
         getResourceNameBytes() {
@@ -873,12 +916,14 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the click view.
+     * Output only. The resource name of the click view.
      * Click view resource names have the form:
      * `customers/{customer_id}/clickViews/{date (yyyy-MM-dd)}~{gclid}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @param value The resourceName to set.
+     * @return This builder for chaining.
      */
     public Builder setResourceName(
         java.lang.String value) {
@@ -892,12 +937,13 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the click view.
+     * Output only. The resource name of the click view.
      * Click view resource names have the form:
      * `customers/{customer_id}/clickViews/{date (yyyy-MM-dd)}~{gclid}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @return This builder for chaining.
      */
     public Builder clearResourceName() {
       
@@ -907,12 +953,14 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the click view.
+     * Output only. The resource name of the click view.
      * Click view resource names have the form:
      * `customers/{customer_id}/clickViews/{date (yyyy-MM-dd)}~{gclid}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @param value The bytes for resourceName to set.
+     * @return This builder for chaining.
      */
     public Builder setResourceNameBytes(
         com.google.protobuf.ByteString value) {
@@ -931,20 +979,22 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> gclidBuilder_;
     /**
      * <pre>
-     * The Google Click ID.
+     * Output only. The Google Click ID.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue gclid = 2;</code>
+     * <code>.google.protobuf.StringValue gclid = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the gclid field is set.
      */
     public boolean hasGclid() {
       return gclidBuilder_ != null || gclid_ != null;
     }
     /**
      * <pre>
-     * The Google Click ID.
+     * Output only. The Google Click ID.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue gclid = 2;</code>
+     * <code>.google.protobuf.StringValue gclid = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The gclid.
      */
     public com.google.protobuf.StringValue getGclid() {
       if (gclidBuilder_ == null) {
@@ -955,10 +1005,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The Google Click ID.
+     * Output only. The Google Click ID.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue gclid = 2;</code>
+     * <code>.google.protobuf.StringValue gclid = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setGclid(com.google.protobuf.StringValue value) {
       if (gclidBuilder_ == null) {
@@ -975,10 +1025,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The Google Click ID.
+     * Output only. The Google Click ID.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue gclid = 2;</code>
+     * <code>.google.protobuf.StringValue gclid = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setGclid(
         com.google.protobuf.StringValue.Builder builderForValue) {
@@ -993,10 +1043,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The Google Click ID.
+     * Output only. The Google Click ID.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue gclid = 2;</code>
+     * <code>.google.protobuf.StringValue gclid = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder mergeGclid(com.google.protobuf.StringValue value) {
       if (gclidBuilder_ == null) {
@@ -1015,10 +1065,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The Google Click ID.
+     * Output only. The Google Click ID.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue gclid = 2;</code>
+     * <code>.google.protobuf.StringValue gclid = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearGclid() {
       if (gclidBuilder_ == null) {
@@ -1033,10 +1083,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The Google Click ID.
+     * Output only. The Google Click ID.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue gclid = 2;</code>
+     * <code>.google.protobuf.StringValue gclid = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValue.Builder getGclidBuilder() {
       
@@ -1045,10 +1095,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The Google Click ID.
+     * Output only. The Google Click ID.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue gclid = 2;</code>
+     * <code>.google.protobuf.StringValue gclid = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValueOrBuilder getGclidOrBuilder() {
       if (gclidBuilder_ != null) {
@@ -1060,10 +1110,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The Google Click ID.
+     * Output only. The Google Click ID.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue gclid = 2;</code>
+     * <code>.google.protobuf.StringValue gclid = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
@@ -1084,22 +1134,24 @@ private static final long serialVersionUID = 0L;
         com.google.ads.googleads.v2.common.ClickLocation, com.google.ads.googleads.v2.common.ClickLocation.Builder, com.google.ads.googleads.v2.common.ClickLocationOrBuilder> areaOfInterestBuilder_;
     /**
      * <pre>
-     * The location criteria matching the area of interest associated with the
+     * Output only. The location criteria matching the area of interest associated with the
      * impression.
      * </pre>
      *
-     * <code>.google.ads.googleads.v2.common.ClickLocation area_of_interest = 3;</code>
+     * <code>.google.ads.googleads.v2.common.ClickLocation area_of_interest = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the areaOfInterest field is set.
      */
     public boolean hasAreaOfInterest() {
       return areaOfInterestBuilder_ != null || areaOfInterest_ != null;
     }
     /**
      * <pre>
-     * The location criteria matching the area of interest associated with the
+     * Output only. The location criteria matching the area of interest associated with the
      * impression.
      * </pre>
      *
-     * <code>.google.ads.googleads.v2.common.ClickLocation area_of_interest = 3;</code>
+     * <code>.google.ads.googleads.v2.common.ClickLocation area_of_interest = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The areaOfInterest.
      */
     public com.google.ads.googleads.v2.common.ClickLocation getAreaOfInterest() {
       if (areaOfInterestBuilder_ == null) {
@@ -1110,11 +1162,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The location criteria matching the area of interest associated with the
+     * Output only. The location criteria matching the area of interest associated with the
      * impression.
      * </pre>
      *
-     * <code>.google.ads.googleads.v2.common.ClickLocation area_of_interest = 3;</code>
+     * <code>.google.ads.googleads.v2.common.ClickLocation area_of_interest = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setAreaOfInterest(com.google.ads.googleads.v2.common.ClickLocation value) {
       if (areaOfInterestBuilder_ == null) {
@@ -1131,11 +1183,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The location criteria matching the area of interest associated with the
+     * Output only. The location criteria matching the area of interest associated with the
      * impression.
      * </pre>
      *
-     * <code>.google.ads.googleads.v2.common.ClickLocation area_of_interest = 3;</code>
+     * <code>.google.ads.googleads.v2.common.ClickLocation area_of_interest = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setAreaOfInterest(
         com.google.ads.googleads.v2.common.ClickLocation.Builder builderForValue) {
@@ -1150,11 +1202,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The location criteria matching the area of interest associated with the
+     * Output only. The location criteria matching the area of interest associated with the
      * impression.
      * </pre>
      *
-     * <code>.google.ads.googleads.v2.common.ClickLocation area_of_interest = 3;</code>
+     * <code>.google.ads.googleads.v2.common.ClickLocation area_of_interest = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder mergeAreaOfInterest(com.google.ads.googleads.v2.common.ClickLocation value) {
       if (areaOfInterestBuilder_ == null) {
@@ -1173,11 +1225,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The location criteria matching the area of interest associated with the
+     * Output only. The location criteria matching the area of interest associated with the
      * impression.
      * </pre>
      *
-     * <code>.google.ads.googleads.v2.common.ClickLocation area_of_interest = 3;</code>
+     * <code>.google.ads.googleads.v2.common.ClickLocation area_of_interest = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearAreaOfInterest() {
       if (areaOfInterestBuilder_ == null) {
@@ -1192,11 +1244,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The location criteria matching the area of interest associated with the
+     * Output only. The location criteria matching the area of interest associated with the
      * impression.
      * </pre>
      *
-     * <code>.google.ads.googleads.v2.common.ClickLocation area_of_interest = 3;</code>
+     * <code>.google.ads.googleads.v2.common.ClickLocation area_of_interest = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.ads.googleads.v2.common.ClickLocation.Builder getAreaOfInterestBuilder() {
       
@@ -1205,11 +1257,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The location criteria matching the area of interest associated with the
+     * Output only. The location criteria matching the area of interest associated with the
      * impression.
      * </pre>
      *
-     * <code>.google.ads.googleads.v2.common.ClickLocation area_of_interest = 3;</code>
+     * <code>.google.ads.googleads.v2.common.ClickLocation area_of_interest = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.ads.googleads.v2.common.ClickLocationOrBuilder getAreaOfInterestOrBuilder() {
       if (areaOfInterestBuilder_ != null) {
@@ -1221,11 +1273,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The location criteria matching the area of interest associated with the
+     * Output only. The location criteria matching the area of interest associated with the
      * impression.
      * </pre>
      *
-     * <code>.google.ads.googleads.v2.common.ClickLocation area_of_interest = 3;</code>
+     * <code>.google.ads.googleads.v2.common.ClickLocation area_of_interest = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v2.common.ClickLocation, com.google.ads.googleads.v2.common.ClickLocation.Builder, com.google.ads.googleads.v2.common.ClickLocationOrBuilder> 
@@ -1246,22 +1298,24 @@ private static final long serialVersionUID = 0L;
         com.google.ads.googleads.v2.common.ClickLocation, com.google.ads.googleads.v2.common.ClickLocation.Builder, com.google.ads.googleads.v2.common.ClickLocationOrBuilder> locationOfPresenceBuilder_;
     /**
      * <pre>
-     * The location criteria matching the location of presence associated with the
+     * Output only. The location criteria matching the location of presence associated with the
      * impression.
      * </pre>
      *
-     * <code>.google.ads.googleads.v2.common.ClickLocation location_of_presence = 4;</code>
+     * <code>.google.ads.googleads.v2.common.ClickLocation location_of_presence = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the locationOfPresence field is set.
      */
     public boolean hasLocationOfPresence() {
       return locationOfPresenceBuilder_ != null || locationOfPresence_ != null;
     }
     /**
      * <pre>
-     * The location criteria matching the location of presence associated with the
+     * Output only. The location criteria matching the location of presence associated with the
      * impression.
      * </pre>
      *
-     * <code>.google.ads.googleads.v2.common.ClickLocation location_of_presence = 4;</code>
+     * <code>.google.ads.googleads.v2.common.ClickLocation location_of_presence = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The locationOfPresence.
      */
     public com.google.ads.googleads.v2.common.ClickLocation getLocationOfPresence() {
       if (locationOfPresenceBuilder_ == null) {
@@ -1272,11 +1326,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The location criteria matching the location of presence associated with the
+     * Output only. The location criteria matching the location of presence associated with the
      * impression.
      * </pre>
      *
-     * <code>.google.ads.googleads.v2.common.ClickLocation location_of_presence = 4;</code>
+     * <code>.google.ads.googleads.v2.common.ClickLocation location_of_presence = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setLocationOfPresence(com.google.ads.googleads.v2.common.ClickLocation value) {
       if (locationOfPresenceBuilder_ == null) {
@@ -1293,11 +1347,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The location criteria matching the location of presence associated with the
+     * Output only. The location criteria matching the location of presence associated with the
      * impression.
      * </pre>
      *
-     * <code>.google.ads.googleads.v2.common.ClickLocation location_of_presence = 4;</code>
+     * <code>.google.ads.googleads.v2.common.ClickLocation location_of_presence = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setLocationOfPresence(
         com.google.ads.googleads.v2.common.ClickLocation.Builder builderForValue) {
@@ -1312,11 +1366,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The location criteria matching the location of presence associated with the
+     * Output only. The location criteria matching the location of presence associated with the
      * impression.
      * </pre>
      *
-     * <code>.google.ads.googleads.v2.common.ClickLocation location_of_presence = 4;</code>
+     * <code>.google.ads.googleads.v2.common.ClickLocation location_of_presence = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder mergeLocationOfPresence(com.google.ads.googleads.v2.common.ClickLocation value) {
       if (locationOfPresenceBuilder_ == null) {
@@ -1335,11 +1389,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The location criteria matching the location of presence associated with the
+     * Output only. The location criteria matching the location of presence associated with the
      * impression.
      * </pre>
      *
-     * <code>.google.ads.googleads.v2.common.ClickLocation location_of_presence = 4;</code>
+     * <code>.google.ads.googleads.v2.common.ClickLocation location_of_presence = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearLocationOfPresence() {
       if (locationOfPresenceBuilder_ == null) {
@@ -1354,11 +1408,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The location criteria matching the location of presence associated with the
+     * Output only. The location criteria matching the location of presence associated with the
      * impression.
      * </pre>
      *
-     * <code>.google.ads.googleads.v2.common.ClickLocation location_of_presence = 4;</code>
+     * <code>.google.ads.googleads.v2.common.ClickLocation location_of_presence = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.ads.googleads.v2.common.ClickLocation.Builder getLocationOfPresenceBuilder() {
       
@@ -1367,11 +1421,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The location criteria matching the location of presence associated with the
+     * Output only. The location criteria matching the location of presence associated with the
      * impression.
      * </pre>
      *
-     * <code>.google.ads.googleads.v2.common.ClickLocation location_of_presence = 4;</code>
+     * <code>.google.ads.googleads.v2.common.ClickLocation location_of_presence = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.ads.googleads.v2.common.ClickLocationOrBuilder getLocationOfPresenceOrBuilder() {
       if (locationOfPresenceBuilder_ != null) {
@@ -1383,11 +1437,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The location criteria matching the location of presence associated with the
+     * Output only. The location criteria matching the location of presence associated with the
      * impression.
      * </pre>
      *
-     * <code>.google.ads.googleads.v2.common.ClickLocation location_of_presence = 4;</code>
+     * <code>.google.ads.googleads.v2.common.ClickLocation location_of_presence = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v2.common.ClickLocation, com.google.ads.googleads.v2.common.ClickLocation.Builder, com.google.ads.googleads.v2.common.ClickLocationOrBuilder> 
@@ -1408,20 +1462,22 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> pageNumberBuilder_;
     /**
      * <pre>
-     * Page number in search results where the ad was shown.
+     * Output only. Page number in search results where the ad was shown.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value page_number = 5;</code>
+     * <code>.google.protobuf.Int64Value page_number = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the pageNumber field is set.
      */
     public boolean hasPageNumber() {
       return pageNumberBuilder_ != null || pageNumber_ != null;
     }
     /**
      * <pre>
-     * Page number in search results where the ad was shown.
+     * Output only. Page number in search results where the ad was shown.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value page_number = 5;</code>
+     * <code>.google.protobuf.Int64Value page_number = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The pageNumber.
      */
     public com.google.protobuf.Int64Value getPageNumber() {
       if (pageNumberBuilder_ == null) {
@@ -1432,10 +1488,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Page number in search results where the ad was shown.
+     * Output only. Page number in search results where the ad was shown.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value page_number = 5;</code>
+     * <code>.google.protobuf.Int64Value page_number = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setPageNumber(com.google.protobuf.Int64Value value) {
       if (pageNumberBuilder_ == null) {
@@ -1452,10 +1508,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Page number in search results where the ad was shown.
+     * Output only. Page number in search results where the ad was shown.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value page_number = 5;</code>
+     * <code>.google.protobuf.Int64Value page_number = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setPageNumber(
         com.google.protobuf.Int64Value.Builder builderForValue) {
@@ -1470,10 +1526,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Page number in search results where the ad was shown.
+     * Output only. Page number in search results where the ad was shown.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value page_number = 5;</code>
+     * <code>.google.protobuf.Int64Value page_number = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder mergePageNumber(com.google.protobuf.Int64Value value) {
       if (pageNumberBuilder_ == null) {
@@ -1492,10 +1548,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Page number in search results where the ad was shown.
+     * Output only. Page number in search results where the ad was shown.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value page_number = 5;</code>
+     * <code>.google.protobuf.Int64Value page_number = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearPageNumber() {
       if (pageNumberBuilder_ == null) {
@@ -1510,10 +1566,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Page number in search results where the ad was shown.
+     * Output only. Page number in search results where the ad was shown.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value page_number = 5;</code>
+     * <code>.google.protobuf.Int64Value page_number = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int64Value.Builder getPageNumberBuilder() {
       
@@ -1522,10 +1578,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Page number in search results where the ad was shown.
+     * Output only. Page number in search results where the ad was shown.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value page_number = 5;</code>
+     * <code>.google.protobuf.Int64Value page_number = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int64ValueOrBuilder getPageNumberOrBuilder() {
       if (pageNumberBuilder_ != null) {
@@ -1537,10 +1593,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Page number in search results where the ad was shown.
+     * Output only. Page number in search results where the ad was shown.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value page_number = 5;</code>
+     * <code>.google.protobuf.Int64Value page_number = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
@@ -1561,20 +1617,22 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> adGroupAdBuilder_;
     /**
      * <pre>
-     * The associated ad.
+     * Output only. The associated ad.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue ad_group_ad = 7;</code>
+     * <code>.google.protobuf.StringValue ad_group_ad = 7 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @return Whether the adGroupAd field is set.
      */
     public boolean hasAdGroupAd() {
       return adGroupAdBuilder_ != null || adGroupAd_ != null;
     }
     /**
      * <pre>
-     * The associated ad.
+     * Output only. The associated ad.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue ad_group_ad = 7;</code>
+     * <code>.google.protobuf.StringValue ad_group_ad = 7 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @return The adGroupAd.
      */
     public com.google.protobuf.StringValue getAdGroupAd() {
       if (adGroupAdBuilder_ == null) {
@@ -1585,10 +1643,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The associated ad.
+     * Output only. The associated ad.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue ad_group_ad = 7;</code>
+     * <code>.google.protobuf.StringValue ad_group_ad = 7 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder setAdGroupAd(com.google.protobuf.StringValue value) {
       if (adGroupAdBuilder_ == null) {
@@ -1605,10 +1663,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The associated ad.
+     * Output only. The associated ad.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue ad_group_ad = 7;</code>
+     * <code>.google.protobuf.StringValue ad_group_ad = 7 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder setAdGroupAd(
         com.google.protobuf.StringValue.Builder builderForValue) {
@@ -1623,10 +1681,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The associated ad.
+     * Output only. The associated ad.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue ad_group_ad = 7;</code>
+     * <code>.google.protobuf.StringValue ad_group_ad = 7 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder mergeAdGroupAd(com.google.protobuf.StringValue value) {
       if (adGroupAdBuilder_ == null) {
@@ -1645,10 +1703,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The associated ad.
+     * Output only. The associated ad.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue ad_group_ad = 7;</code>
+     * <code>.google.protobuf.StringValue ad_group_ad = 7 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder clearAdGroupAd() {
       if (adGroupAdBuilder_ == null) {
@@ -1663,10 +1721,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The associated ad.
+     * Output only. The associated ad.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue ad_group_ad = 7;</code>
+     * <code>.google.protobuf.StringValue ad_group_ad = 7 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public com.google.protobuf.StringValue.Builder getAdGroupAdBuilder() {
       
@@ -1675,10 +1733,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The associated ad.
+     * Output only. The associated ad.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue ad_group_ad = 7;</code>
+     * <code>.google.protobuf.StringValue ad_group_ad = 7 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public com.google.protobuf.StringValueOrBuilder getAdGroupAdOrBuilder() {
       if (adGroupAdBuilder_ != null) {
@@ -1690,10 +1748,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The associated ad.
+     * Output only. The associated ad.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue ad_group_ad = 7;</code>
+     * <code>.google.protobuf.StringValue ad_group_ad = 7 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 

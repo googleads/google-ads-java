@@ -21,7 +21,7 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.10.0)",
+    value = "by gRPC proto compiler",
     comments = "Source: google/ads/googleads/v2/services/bidding_strategy_service.proto")
 public final class BiddingStrategyServiceGrpc {
 
@@ -30,86 +30,80 @@ public final class BiddingStrategyServiceGrpc {
   public static final String SERVICE_NAME = "google.ads.googleads.v2.services.BiddingStrategyService";
 
   // Static method descriptors that strictly reflect the proto.
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  @java.lang.Deprecated // Use {@link #getGetBiddingStrategyMethod()} instead. 
-  public static final io.grpc.MethodDescriptor<com.google.ads.googleads.v2.services.GetBiddingStrategyRequest,
-      com.google.ads.googleads.v2.resources.BiddingStrategy> METHOD_GET_BIDDING_STRATEGY = getGetBiddingStrategyMethodHelper();
-
   private static volatile io.grpc.MethodDescriptor<com.google.ads.googleads.v2.services.GetBiddingStrategyRequest,
       com.google.ads.googleads.v2.resources.BiddingStrategy> getGetBiddingStrategyMethod;
 
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetBiddingStrategy",
+      requestType = com.google.ads.googleads.v2.services.GetBiddingStrategyRequest.class,
+      responseType = com.google.ads.googleads.v2.resources.BiddingStrategy.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<com.google.ads.googleads.v2.services.GetBiddingStrategyRequest,
       com.google.ads.googleads.v2.resources.BiddingStrategy> getGetBiddingStrategyMethod() {
-    return getGetBiddingStrategyMethodHelper();
-  }
-
-  private static io.grpc.MethodDescriptor<com.google.ads.googleads.v2.services.GetBiddingStrategyRequest,
-      com.google.ads.googleads.v2.resources.BiddingStrategy> getGetBiddingStrategyMethodHelper() {
     io.grpc.MethodDescriptor<com.google.ads.googleads.v2.services.GetBiddingStrategyRequest, com.google.ads.googleads.v2.resources.BiddingStrategy> getGetBiddingStrategyMethod;
     if ((getGetBiddingStrategyMethod = BiddingStrategyServiceGrpc.getGetBiddingStrategyMethod) == null) {
       synchronized (BiddingStrategyServiceGrpc.class) {
         if ((getGetBiddingStrategyMethod = BiddingStrategyServiceGrpc.getGetBiddingStrategyMethod) == null) {
-          BiddingStrategyServiceGrpc.getGetBiddingStrategyMethod = getGetBiddingStrategyMethod = 
+          BiddingStrategyServiceGrpc.getGetBiddingStrategyMethod = getGetBiddingStrategyMethod =
               io.grpc.MethodDescriptor.<com.google.ads.googleads.v2.services.GetBiddingStrategyRequest, com.google.ads.googleads.v2.resources.BiddingStrategy>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "google.ads.googleads.v2.services.BiddingStrategyService", "GetBiddingStrategy"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetBiddingStrategy"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v2.services.GetBiddingStrategyRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v2.resources.BiddingStrategy.getDefaultInstance()))
-                  .setSchemaDescriptor(new BiddingStrategyServiceMethodDescriptorSupplier("GetBiddingStrategy"))
-                  .build();
-          }
+              .setSchemaDescriptor(new BiddingStrategyServiceMethodDescriptorSupplier("GetBiddingStrategy"))
+              .build();
         }
-     }
-     return getGetBiddingStrategyMethod;
+      }
+    }
+    return getGetBiddingStrategyMethod;
   }
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  @java.lang.Deprecated // Use {@link #getMutateBiddingStrategiesMethod()} instead. 
-  public static final io.grpc.MethodDescriptor<com.google.ads.googleads.v2.services.MutateBiddingStrategiesRequest,
-      com.google.ads.googleads.v2.services.MutateBiddingStrategiesResponse> METHOD_MUTATE_BIDDING_STRATEGIES = getMutateBiddingStrategiesMethodHelper();
 
   private static volatile io.grpc.MethodDescriptor<com.google.ads.googleads.v2.services.MutateBiddingStrategiesRequest,
       com.google.ads.googleads.v2.services.MutateBiddingStrategiesResponse> getMutateBiddingStrategiesMethod;
 
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "MutateBiddingStrategies",
+      requestType = com.google.ads.googleads.v2.services.MutateBiddingStrategiesRequest.class,
+      responseType = com.google.ads.googleads.v2.services.MutateBiddingStrategiesResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<com.google.ads.googleads.v2.services.MutateBiddingStrategiesRequest,
       com.google.ads.googleads.v2.services.MutateBiddingStrategiesResponse> getMutateBiddingStrategiesMethod() {
-    return getMutateBiddingStrategiesMethodHelper();
-  }
-
-  private static io.grpc.MethodDescriptor<com.google.ads.googleads.v2.services.MutateBiddingStrategiesRequest,
-      com.google.ads.googleads.v2.services.MutateBiddingStrategiesResponse> getMutateBiddingStrategiesMethodHelper() {
     io.grpc.MethodDescriptor<com.google.ads.googleads.v2.services.MutateBiddingStrategiesRequest, com.google.ads.googleads.v2.services.MutateBiddingStrategiesResponse> getMutateBiddingStrategiesMethod;
     if ((getMutateBiddingStrategiesMethod = BiddingStrategyServiceGrpc.getMutateBiddingStrategiesMethod) == null) {
       synchronized (BiddingStrategyServiceGrpc.class) {
         if ((getMutateBiddingStrategiesMethod = BiddingStrategyServiceGrpc.getMutateBiddingStrategiesMethod) == null) {
-          BiddingStrategyServiceGrpc.getMutateBiddingStrategiesMethod = getMutateBiddingStrategiesMethod = 
+          BiddingStrategyServiceGrpc.getMutateBiddingStrategiesMethod = getMutateBiddingStrategiesMethod =
               io.grpc.MethodDescriptor.<com.google.ads.googleads.v2.services.MutateBiddingStrategiesRequest, com.google.ads.googleads.v2.services.MutateBiddingStrategiesResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "google.ads.googleads.v2.services.BiddingStrategyService", "MutateBiddingStrategies"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "MutateBiddingStrategies"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v2.services.MutateBiddingStrategiesRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v2.services.MutateBiddingStrategiesResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new BiddingStrategyServiceMethodDescriptorSupplier("MutateBiddingStrategies"))
-                  .build();
-          }
+              .setSchemaDescriptor(new BiddingStrategyServiceMethodDescriptorSupplier("MutateBiddingStrategies"))
+              .build();
         }
-     }
-     return getMutateBiddingStrategiesMethod;
+      }
+    }
+    return getMutateBiddingStrategiesMethod;
   }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static BiddingStrategyServiceStub newStub(io.grpc.Channel channel) {
-    return new BiddingStrategyServiceStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<BiddingStrategyServiceStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<BiddingStrategyServiceStub>() {
+        @java.lang.Override
+        public BiddingStrategyServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new BiddingStrategyServiceStub(channel, callOptions);
+        }
+      };
+    return BiddingStrategyServiceStub.newStub(factory, channel);
   }
 
   /**
@@ -117,7 +111,14 @@ public final class BiddingStrategyServiceGrpc {
    */
   public static BiddingStrategyServiceBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new BiddingStrategyServiceBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<BiddingStrategyServiceBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<BiddingStrategyServiceBlockingStub>() {
+        @java.lang.Override
+        public BiddingStrategyServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new BiddingStrategyServiceBlockingStub(channel, callOptions);
+        }
+      };
+    return BiddingStrategyServiceBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -125,7 +126,14 @@ public final class BiddingStrategyServiceGrpc {
    */
   public static BiddingStrategyServiceFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new BiddingStrategyServiceFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<BiddingStrategyServiceFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<BiddingStrategyServiceFutureStub>() {
+        @java.lang.Override
+        public BiddingStrategyServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new BiddingStrategyServiceFutureStub(channel, callOptions);
+        }
+      };
+    return BiddingStrategyServiceFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -142,7 +150,7 @@ public final class BiddingStrategyServiceGrpc {
      */
     public void getBiddingStrategy(com.google.ads.googleads.v2.services.GetBiddingStrategyRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v2.resources.BiddingStrategy> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetBiddingStrategyMethodHelper(), responseObserver);
+      asyncUnimplementedUnaryCall(getGetBiddingStrategyMethod(), responseObserver);
     }
 
     /**
@@ -153,20 +161,20 @@ public final class BiddingStrategyServiceGrpc {
      */
     public void mutateBiddingStrategies(com.google.ads.googleads.v2.services.MutateBiddingStrategiesRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v2.services.MutateBiddingStrategiesResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getMutateBiddingStrategiesMethodHelper(), responseObserver);
+      asyncUnimplementedUnaryCall(getMutateBiddingStrategiesMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
-            getGetBiddingStrategyMethodHelper(),
+            getGetBiddingStrategyMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 com.google.ads.googleads.v2.services.GetBiddingStrategyRequest,
                 com.google.ads.googleads.v2.resources.BiddingStrategy>(
                   this, METHODID_GET_BIDDING_STRATEGY)))
           .addMethod(
-            getMutateBiddingStrategiesMethodHelper(),
+            getMutateBiddingStrategiesMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 com.google.ads.googleads.v2.services.MutateBiddingStrategiesRequest,
@@ -181,19 +189,15 @@ public final class BiddingStrategyServiceGrpc {
    * Service to manage bidding strategies.
    * </pre>
    */
-  public static final class BiddingStrategyServiceStub extends io.grpc.stub.AbstractStub<BiddingStrategyServiceStub> {
-    private BiddingStrategyServiceStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private BiddingStrategyServiceStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class BiddingStrategyServiceStub extends io.grpc.stub.AbstractAsyncStub<BiddingStrategyServiceStub> {
+    private BiddingStrategyServiceStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected BiddingStrategyServiceStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected BiddingStrategyServiceStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new BiddingStrategyServiceStub(channel, callOptions);
     }
 
@@ -205,7 +209,7 @@ public final class BiddingStrategyServiceGrpc {
     public void getBiddingStrategy(com.google.ads.googleads.v2.services.GetBiddingStrategyRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v2.resources.BiddingStrategy> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(getGetBiddingStrategyMethodHelper(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getGetBiddingStrategyMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -217,7 +221,7 @@ public final class BiddingStrategyServiceGrpc {
     public void mutateBiddingStrategies(com.google.ads.googleads.v2.services.MutateBiddingStrategiesRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v2.services.MutateBiddingStrategiesResponse> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(getMutateBiddingStrategiesMethodHelper(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getMutateBiddingStrategiesMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -226,19 +230,15 @@ public final class BiddingStrategyServiceGrpc {
    * Service to manage bidding strategies.
    * </pre>
    */
-  public static final class BiddingStrategyServiceBlockingStub extends io.grpc.stub.AbstractStub<BiddingStrategyServiceBlockingStub> {
-    private BiddingStrategyServiceBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private BiddingStrategyServiceBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class BiddingStrategyServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<BiddingStrategyServiceBlockingStub> {
+    private BiddingStrategyServiceBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected BiddingStrategyServiceBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected BiddingStrategyServiceBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new BiddingStrategyServiceBlockingStub(channel, callOptions);
     }
 
@@ -249,7 +249,7 @@ public final class BiddingStrategyServiceGrpc {
      */
     public com.google.ads.googleads.v2.resources.BiddingStrategy getBiddingStrategy(com.google.ads.googleads.v2.services.GetBiddingStrategyRequest request) {
       return blockingUnaryCall(
-          getChannel(), getGetBiddingStrategyMethodHelper(), getCallOptions(), request);
+          getChannel(), getGetBiddingStrategyMethod(), getCallOptions(), request);
     }
 
     /**
@@ -260,7 +260,7 @@ public final class BiddingStrategyServiceGrpc {
      */
     public com.google.ads.googleads.v2.services.MutateBiddingStrategiesResponse mutateBiddingStrategies(com.google.ads.googleads.v2.services.MutateBiddingStrategiesRequest request) {
       return blockingUnaryCall(
-          getChannel(), getMutateBiddingStrategiesMethodHelper(), getCallOptions(), request);
+          getChannel(), getMutateBiddingStrategiesMethod(), getCallOptions(), request);
     }
   }
 
@@ -269,19 +269,15 @@ public final class BiddingStrategyServiceGrpc {
    * Service to manage bidding strategies.
    * </pre>
    */
-  public static final class BiddingStrategyServiceFutureStub extends io.grpc.stub.AbstractStub<BiddingStrategyServiceFutureStub> {
-    private BiddingStrategyServiceFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private BiddingStrategyServiceFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class BiddingStrategyServiceFutureStub extends io.grpc.stub.AbstractFutureStub<BiddingStrategyServiceFutureStub> {
+    private BiddingStrategyServiceFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected BiddingStrategyServiceFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected BiddingStrategyServiceFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new BiddingStrategyServiceFutureStub(channel, callOptions);
     }
 
@@ -293,7 +289,7 @@ public final class BiddingStrategyServiceGrpc {
     public com.google.common.util.concurrent.ListenableFuture<com.google.ads.googleads.v2.resources.BiddingStrategy> getBiddingStrategy(
         com.google.ads.googleads.v2.services.GetBiddingStrategyRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(getGetBiddingStrategyMethodHelper(), getCallOptions()), request);
+          getChannel().newCall(getGetBiddingStrategyMethod(), getCallOptions()), request);
     }
 
     /**
@@ -305,7 +301,7 @@ public final class BiddingStrategyServiceGrpc {
     public com.google.common.util.concurrent.ListenableFuture<com.google.ads.googleads.v2.services.MutateBiddingStrategiesResponse> mutateBiddingStrategies(
         com.google.ads.googleads.v2.services.MutateBiddingStrategiesRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(getMutateBiddingStrategiesMethodHelper(), getCallOptions()), request);
+          getChannel().newCall(getMutateBiddingStrategiesMethod(), getCallOptions()), request);
     }
   }
 
@@ -398,8 +394,8 @@ public final class BiddingStrategyServiceGrpc {
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new BiddingStrategyServiceFileDescriptorSupplier())
-              .addMethod(getGetBiddingStrategyMethodHelper())
-              .addMethod(getMutateBiddingStrategiesMethodHelper())
+              .addMethod(getGetBiddingStrategyMethod())
+              .addMethod(getMutateBiddingStrategiesMethod())
               .build();
         }
       }

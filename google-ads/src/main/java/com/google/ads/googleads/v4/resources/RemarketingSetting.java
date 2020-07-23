@@ -10,7 +10,7 @@ package com.google.ads.googleads.v4.resources;
  *
  * Protobuf type {@code google.ads.googleads.v4.resources.RemarketingSetting}
  */
-public  final class RemarketingSetting extends
+public final class RemarketingSetting extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.resources.RemarketingSetting)
     RemarketingSettingOrBuilder {
@@ -107,6 +107,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue google_global_site_tag = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the googleGlobalSiteTag field is set.
    */
+  @java.lang.Override
   public boolean hasGoogleGlobalSiteTag() {
     return googleGlobalSiteTag_ != null;
   }
@@ -118,6 +119,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue google_global_site_tag = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The googleGlobalSiteTag.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getGoogleGlobalSiteTag() {
     return googleGlobalSiteTag_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : googleGlobalSiteTag_;
   }
@@ -128,6 +130,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue google_global_site_tag = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getGoogleGlobalSiteTagOrBuilder() {
     return getGoogleGlobalSiteTag();
   }

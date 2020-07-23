@@ -10,7 +10,7 @@ package com.google.ads.googleads.v4.services;
  *
  * Protobuf type {@code google.ads.googleads.v4.services.KeywordPlanKeywordHistoricalMetrics}
  */
-public  final class KeywordPlanKeywordHistoricalMetrics extends
+public final class KeywordPlanKeywordHistoricalMetrics extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.services.KeywordPlanKeywordHistoricalMetrics)
     KeywordPlanKeywordHistoricalMetricsOrBuilder {
@@ -125,6 +125,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue search_query = 1;</code>
    * @return Whether the searchQuery field is set.
    */
+  @java.lang.Override
   public boolean hasSearchQuery() {
     return searchQuery_ != null;
   }
@@ -141,6 +142,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue search_query = 1;</code>
    * @return The searchQuery.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getSearchQuery() {
     return searchQuery_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : searchQuery_;
   }
@@ -156,6 +158,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue search_query = 1;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getSearchQueryOrBuilder() {
     return getSearchQuery();
   }
@@ -171,6 +174,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.common.KeywordPlanHistoricalMetrics keyword_metrics = 2;</code>
    * @return Whether the keywordMetrics field is set.
    */
+  @java.lang.Override
   public boolean hasKeywordMetrics() {
     return keywordMetrics_ != null;
   }
@@ -183,6 +187,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.common.KeywordPlanHistoricalMetrics keyword_metrics = 2;</code>
    * @return The keywordMetrics.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.KeywordPlanHistoricalMetrics getKeywordMetrics() {
     return keywordMetrics_ == null ? com.google.ads.googleads.v4.common.KeywordPlanHistoricalMetrics.getDefaultInstance() : keywordMetrics_;
   }
@@ -194,6 +199,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v4.common.KeywordPlanHistoricalMetrics keyword_metrics = 2;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.KeywordPlanHistoricalMetricsOrBuilder getKeywordMetricsOrBuilder() {
     return getKeywordMetrics();
   }

@@ -13,6 +13,7 @@ public interface RemarketingSettingOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue google_global_site_tag = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the googleGlobalSiteTag field is set.
    */
   boolean hasGoogleGlobalSiteTag();
   /**
@@ -21,6 +22,7 @@ public interface RemarketingSettingOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue google_global_site_tag = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The googleGlobalSiteTag.
    */
   com.google.protobuf.StringValue getGoogleGlobalSiteTag();
   /**

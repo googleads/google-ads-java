@@ -10,7 +10,7 @@ package com.google.ads.googleads.v1.services;
  *
  * Protobuf type {@code google.ads.googleads.v1.services.GoogleAdsRow}
  */
-public  final class GoogleAdsRow extends
+public final class GoogleAdsRow extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v1.services.GoogleAdsRow)
     GoogleAdsRowOrBuilder {
@@ -20,6 +20,13 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private GoogleAdsRow() {
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new GoogleAdsRow();
   }
 
   @java.lang.Override
@@ -35,9 +42,6 @@ private static final long serialVersionUID = 0L;
     if (extensionRegistry == null) {
       throw new java.lang.NullPointerException();
     }
-    int mutable_bitField0_ = 0;
-    int mutable_bitField1_ = 0;
-    int mutable_bitField2_ = 0;
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
         com.google.protobuf.UnknownFieldSet.newBuilder();
     try {
@@ -1323,7 +1327,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.AccountBudget account_budget = 42;</code>
+   * @return Whether the accountBudget field is set.
    */
+  @java.lang.Override
   public boolean hasAccountBudget() {
     return accountBudget_ != null;
   }
@@ -1333,7 +1339,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.AccountBudget account_budget = 42;</code>
+   * @return The accountBudget.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.resources.AccountBudget getAccountBudget() {
     return accountBudget_ == null ? com.google.ads.googleads.v1.resources.AccountBudget.getDefaultInstance() : accountBudget_;
   }
@@ -1344,6 +1352,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v1.resources.AccountBudget account_budget = 42;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.resources.AccountBudgetOrBuilder getAccountBudgetOrBuilder() {
     return getAccountBudget();
   }
@@ -1356,7 +1365,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.AccountBudgetProposal account_budget_proposal = 43;</code>
+   * @return Whether the accountBudgetProposal field is set.
    */
+  @java.lang.Override
   public boolean hasAccountBudgetProposal() {
     return accountBudgetProposal_ != null;
   }
@@ -1366,7 +1377,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.AccountBudgetProposal account_budget_proposal = 43;</code>
+   * @return The accountBudgetProposal.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.resources.AccountBudgetProposal getAccountBudgetProposal() {
     return accountBudgetProposal_ == null ? com.google.ads.googleads.v1.resources.AccountBudgetProposal.getDefaultInstance() : accountBudgetProposal_;
   }
@@ -1377,6 +1390,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v1.resources.AccountBudgetProposal account_budget_proposal = 43;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.resources.AccountBudgetProposalOrBuilder getAccountBudgetProposalOrBuilder() {
     return getAccountBudgetProposal();
   }
@@ -1389,7 +1403,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.AdGroup ad_group = 3;</code>
+   * @return Whether the adGroup field is set.
    */
+  @java.lang.Override
   public boolean hasAdGroup() {
     return adGroup_ != null;
   }
@@ -1399,7 +1415,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.AdGroup ad_group = 3;</code>
+   * @return The adGroup.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.resources.AdGroup getAdGroup() {
     return adGroup_ == null ? com.google.ads.googleads.v1.resources.AdGroup.getDefaultInstance() : adGroup_;
   }
@@ -1410,6 +1428,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v1.resources.AdGroup ad_group = 3;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.resources.AdGroupOrBuilder getAdGroupOrBuilder() {
     return getAdGroup();
   }
@@ -1422,7 +1441,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.AdGroupAd ad_group_ad = 16;</code>
+   * @return Whether the adGroupAd field is set.
    */
+  @java.lang.Override
   public boolean hasAdGroupAd() {
     return adGroupAd_ != null;
   }
@@ -1432,7 +1453,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.AdGroupAd ad_group_ad = 16;</code>
+   * @return The adGroupAd.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.resources.AdGroupAd getAdGroupAd() {
     return adGroupAd_ == null ? com.google.ads.googleads.v1.resources.AdGroupAd.getDefaultInstance() : adGroupAd_;
   }
@@ -1443,6 +1466,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v1.resources.AdGroupAd ad_group_ad = 16;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.resources.AdGroupAdOrBuilder getAdGroupAdOrBuilder() {
     return getAdGroupAd();
   }
@@ -1455,7 +1479,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.AdGroupAdLabel ad_group_ad_label = 120;</code>
+   * @return Whether the adGroupAdLabel field is set.
    */
+  @java.lang.Override
   public boolean hasAdGroupAdLabel() {
     return adGroupAdLabel_ != null;
   }
@@ -1465,7 +1491,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.AdGroupAdLabel ad_group_ad_label = 120;</code>
+   * @return The adGroupAdLabel.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.resources.AdGroupAdLabel getAdGroupAdLabel() {
     return adGroupAdLabel_ == null ? com.google.ads.googleads.v1.resources.AdGroupAdLabel.getDefaultInstance() : adGroupAdLabel_;
   }
@@ -1476,6 +1504,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v1.resources.AdGroupAdLabel ad_group_ad_label = 120;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.resources.AdGroupAdLabelOrBuilder getAdGroupAdLabelOrBuilder() {
     return getAdGroupAdLabel();
   }
@@ -1488,7 +1517,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.AdGroupAudienceView ad_group_audience_view = 57;</code>
+   * @return Whether the adGroupAudienceView field is set.
    */
+  @java.lang.Override
   public boolean hasAdGroupAudienceView() {
     return adGroupAudienceView_ != null;
   }
@@ -1498,7 +1529,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.AdGroupAudienceView ad_group_audience_view = 57;</code>
+   * @return The adGroupAudienceView.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.resources.AdGroupAudienceView getAdGroupAudienceView() {
     return adGroupAudienceView_ == null ? com.google.ads.googleads.v1.resources.AdGroupAudienceView.getDefaultInstance() : adGroupAudienceView_;
   }
@@ -1509,6 +1542,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v1.resources.AdGroupAudienceView ad_group_audience_view = 57;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.resources.AdGroupAudienceViewOrBuilder getAdGroupAudienceViewOrBuilder() {
     return getAdGroupAudienceView();
   }
@@ -1521,7 +1555,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.AdGroupBidModifier ad_group_bid_modifier = 24;</code>
+   * @return Whether the adGroupBidModifier field is set.
    */
+  @java.lang.Override
   public boolean hasAdGroupBidModifier() {
     return adGroupBidModifier_ != null;
   }
@@ -1531,7 +1567,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.AdGroupBidModifier ad_group_bid_modifier = 24;</code>
+   * @return The adGroupBidModifier.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.resources.AdGroupBidModifier getAdGroupBidModifier() {
     return adGroupBidModifier_ == null ? com.google.ads.googleads.v1.resources.AdGroupBidModifier.getDefaultInstance() : adGroupBidModifier_;
   }
@@ -1542,6 +1580,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v1.resources.AdGroupBidModifier ad_group_bid_modifier = 24;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.resources.AdGroupBidModifierOrBuilder getAdGroupBidModifierOrBuilder() {
     return getAdGroupBidModifier();
   }
@@ -1554,7 +1593,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.AdGroupCriterion ad_group_criterion = 17;</code>
+   * @return Whether the adGroupCriterion field is set.
    */
+  @java.lang.Override
   public boolean hasAdGroupCriterion() {
     return adGroupCriterion_ != null;
   }
@@ -1564,7 +1605,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.AdGroupCriterion ad_group_criterion = 17;</code>
+   * @return The adGroupCriterion.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.resources.AdGroupCriterion getAdGroupCriterion() {
     return adGroupCriterion_ == null ? com.google.ads.googleads.v1.resources.AdGroupCriterion.getDefaultInstance() : adGroupCriterion_;
   }
@@ -1575,6 +1618,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v1.resources.AdGroupCriterion ad_group_criterion = 17;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.resources.AdGroupCriterionOrBuilder getAdGroupCriterionOrBuilder() {
     return getAdGroupCriterion();
   }
@@ -1587,7 +1631,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.AdGroupCriterionLabel ad_group_criterion_label = 121;</code>
+   * @return Whether the adGroupCriterionLabel field is set.
    */
+  @java.lang.Override
   public boolean hasAdGroupCriterionLabel() {
     return adGroupCriterionLabel_ != null;
   }
@@ -1597,7 +1643,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.AdGroupCriterionLabel ad_group_criterion_label = 121;</code>
+   * @return The adGroupCriterionLabel.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.resources.AdGroupCriterionLabel getAdGroupCriterionLabel() {
     return adGroupCriterionLabel_ == null ? com.google.ads.googleads.v1.resources.AdGroupCriterionLabel.getDefaultInstance() : adGroupCriterionLabel_;
   }
@@ -1608,6 +1656,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v1.resources.AdGroupCriterionLabel ad_group_criterion_label = 121;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.resources.AdGroupCriterionLabelOrBuilder getAdGroupCriterionLabelOrBuilder() {
     return getAdGroupCriterionLabel();
   }
@@ -1620,7 +1669,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.AdGroupCriterionSimulation ad_group_criterion_simulation = 110;</code>
+   * @return Whether the adGroupCriterionSimulation field is set.
    */
+  @java.lang.Override
   public boolean hasAdGroupCriterionSimulation() {
     return adGroupCriterionSimulation_ != null;
   }
@@ -1630,7 +1681,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.AdGroupCriterionSimulation ad_group_criterion_simulation = 110;</code>
+   * @return The adGroupCriterionSimulation.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.resources.AdGroupCriterionSimulation getAdGroupCriterionSimulation() {
     return adGroupCriterionSimulation_ == null ? com.google.ads.googleads.v1.resources.AdGroupCriterionSimulation.getDefaultInstance() : adGroupCriterionSimulation_;
   }
@@ -1641,6 +1694,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v1.resources.AdGroupCriterionSimulation ad_group_criterion_simulation = 110;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.resources.AdGroupCriterionSimulationOrBuilder getAdGroupCriterionSimulationOrBuilder() {
     return getAdGroupCriterionSimulation();
   }
@@ -1653,7 +1707,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.AdGroupExtensionSetting ad_group_extension_setting = 112;</code>
+   * @return Whether the adGroupExtensionSetting field is set.
    */
+  @java.lang.Override
   public boolean hasAdGroupExtensionSetting() {
     return adGroupExtensionSetting_ != null;
   }
@@ -1663,7 +1719,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.AdGroupExtensionSetting ad_group_extension_setting = 112;</code>
+   * @return The adGroupExtensionSetting.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.resources.AdGroupExtensionSetting getAdGroupExtensionSetting() {
     return adGroupExtensionSetting_ == null ? com.google.ads.googleads.v1.resources.AdGroupExtensionSetting.getDefaultInstance() : adGroupExtensionSetting_;
   }
@@ -1674,6 +1732,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v1.resources.AdGroupExtensionSetting ad_group_extension_setting = 112;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.resources.AdGroupExtensionSettingOrBuilder getAdGroupExtensionSettingOrBuilder() {
     return getAdGroupExtensionSetting();
   }
@@ -1686,7 +1745,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.AdGroupFeed ad_group_feed = 67;</code>
+   * @return Whether the adGroupFeed field is set.
    */
+  @java.lang.Override
   public boolean hasAdGroupFeed() {
     return adGroupFeed_ != null;
   }
@@ -1696,7 +1757,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.AdGroupFeed ad_group_feed = 67;</code>
+   * @return The adGroupFeed.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.resources.AdGroupFeed getAdGroupFeed() {
     return adGroupFeed_ == null ? com.google.ads.googleads.v1.resources.AdGroupFeed.getDefaultInstance() : adGroupFeed_;
   }
@@ -1707,6 +1770,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v1.resources.AdGroupFeed ad_group_feed = 67;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.resources.AdGroupFeedOrBuilder getAdGroupFeedOrBuilder() {
     return getAdGroupFeed();
   }
@@ -1719,7 +1783,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.AdGroupLabel ad_group_label = 115;</code>
+   * @return Whether the adGroupLabel field is set.
    */
+  @java.lang.Override
   public boolean hasAdGroupLabel() {
     return adGroupLabel_ != null;
   }
@@ -1729,7 +1795,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.AdGroupLabel ad_group_label = 115;</code>
+   * @return The adGroupLabel.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.resources.AdGroupLabel getAdGroupLabel() {
     return adGroupLabel_ == null ? com.google.ads.googleads.v1.resources.AdGroupLabel.getDefaultInstance() : adGroupLabel_;
   }
@@ -1740,6 +1808,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v1.resources.AdGroupLabel ad_group_label = 115;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.resources.AdGroupLabelOrBuilder getAdGroupLabelOrBuilder() {
     return getAdGroupLabel();
   }
@@ -1752,7 +1821,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.AdGroupSimulation ad_group_simulation = 107;</code>
+   * @return Whether the adGroupSimulation field is set.
    */
+  @java.lang.Override
   public boolean hasAdGroupSimulation() {
     return adGroupSimulation_ != null;
   }
@@ -1762,7 +1833,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.AdGroupSimulation ad_group_simulation = 107;</code>
+   * @return The adGroupSimulation.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.resources.AdGroupSimulation getAdGroupSimulation() {
     return adGroupSimulation_ == null ? com.google.ads.googleads.v1.resources.AdGroupSimulation.getDefaultInstance() : adGroupSimulation_;
   }
@@ -1773,6 +1846,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v1.resources.AdGroupSimulation ad_group_simulation = 107;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.resources.AdGroupSimulationOrBuilder getAdGroupSimulationOrBuilder() {
     return getAdGroupSimulation();
   }
@@ -1785,7 +1859,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.AdParameter ad_parameter = 130;</code>
+   * @return Whether the adParameter field is set.
    */
+  @java.lang.Override
   public boolean hasAdParameter() {
     return adParameter_ != null;
   }
@@ -1795,7 +1871,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.AdParameter ad_parameter = 130;</code>
+   * @return The adParameter.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.resources.AdParameter getAdParameter() {
     return adParameter_ == null ? com.google.ads.googleads.v1.resources.AdParameter.getDefaultInstance() : adParameter_;
   }
@@ -1806,6 +1884,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v1.resources.AdParameter ad_parameter = 130;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.resources.AdParameterOrBuilder getAdParameterOrBuilder() {
     return getAdParameter();
   }
@@ -1818,7 +1897,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.AgeRangeView age_range_view = 48;</code>
+   * @return Whether the ageRangeView field is set.
    */
+  @java.lang.Override
   public boolean hasAgeRangeView() {
     return ageRangeView_ != null;
   }
@@ -1828,7 +1909,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.AgeRangeView age_range_view = 48;</code>
+   * @return The ageRangeView.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.resources.AgeRangeView getAgeRangeView() {
     return ageRangeView_ == null ? com.google.ads.googleads.v1.resources.AgeRangeView.getDefaultInstance() : ageRangeView_;
   }
@@ -1839,6 +1922,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v1.resources.AgeRangeView age_range_view = 48;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.resources.AgeRangeViewOrBuilder getAgeRangeViewOrBuilder() {
     return getAgeRangeView();
   }
@@ -1851,7 +1935,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.AdScheduleView ad_schedule_view = 89;</code>
+   * @return Whether the adScheduleView field is set.
    */
+  @java.lang.Override
   public boolean hasAdScheduleView() {
     return adScheduleView_ != null;
   }
@@ -1861,7 +1947,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.AdScheduleView ad_schedule_view = 89;</code>
+   * @return The adScheduleView.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.resources.AdScheduleView getAdScheduleView() {
     return adScheduleView_ == null ? com.google.ads.googleads.v1.resources.AdScheduleView.getDefaultInstance() : adScheduleView_;
   }
@@ -1872,6 +1960,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v1.resources.AdScheduleView ad_schedule_view = 89;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.resources.AdScheduleViewOrBuilder getAdScheduleViewOrBuilder() {
     return getAdScheduleView();
   }
@@ -1884,7 +1973,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.DomainCategory domain_category = 91;</code>
+   * @return Whether the domainCategory field is set.
    */
+  @java.lang.Override
   public boolean hasDomainCategory() {
     return domainCategory_ != null;
   }
@@ -1894,7 +1985,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.DomainCategory domain_category = 91;</code>
+   * @return The domainCategory.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.resources.DomainCategory getDomainCategory() {
     return domainCategory_ == null ? com.google.ads.googleads.v1.resources.DomainCategory.getDefaultInstance() : domainCategory_;
   }
@@ -1905,6 +1998,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v1.resources.DomainCategory domain_category = 91;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.resources.DomainCategoryOrBuilder getDomainCategoryOrBuilder() {
     return getDomainCategory();
   }
@@ -1917,7 +2011,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.Asset asset = 105;</code>
+   * @return Whether the asset field is set.
    */
+  @java.lang.Override
   public boolean hasAsset() {
     return asset_ != null;
   }
@@ -1927,7 +2023,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.Asset asset = 105;</code>
+   * @return The asset.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.resources.Asset getAsset() {
     return asset_ == null ? com.google.ads.googleads.v1.resources.Asset.getDefaultInstance() : asset_;
   }
@@ -1938,6 +2036,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v1.resources.Asset asset = 105;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.resources.AssetOrBuilder getAssetOrBuilder() {
     return getAsset();
   }
@@ -1950,7 +2049,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.BiddingStrategy bidding_strategy = 18;</code>
+   * @return Whether the biddingStrategy field is set.
    */
+  @java.lang.Override
   public boolean hasBiddingStrategy() {
     return biddingStrategy_ != null;
   }
@@ -1960,7 +2061,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.BiddingStrategy bidding_strategy = 18;</code>
+   * @return The biddingStrategy.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.resources.BiddingStrategy getBiddingStrategy() {
     return biddingStrategy_ == null ? com.google.ads.googleads.v1.resources.BiddingStrategy.getDefaultInstance() : biddingStrategy_;
   }
@@ -1971,6 +2074,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v1.resources.BiddingStrategy bidding_strategy = 18;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.resources.BiddingStrategyOrBuilder getBiddingStrategyOrBuilder() {
     return getBiddingStrategy();
   }
@@ -1983,7 +2087,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.BillingSetup billing_setup = 41;</code>
+   * @return Whether the billingSetup field is set.
    */
+  @java.lang.Override
   public boolean hasBillingSetup() {
     return billingSetup_ != null;
   }
@@ -1993,7 +2099,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.BillingSetup billing_setup = 41;</code>
+   * @return The billingSetup.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.resources.BillingSetup getBillingSetup() {
     return billingSetup_ == null ? com.google.ads.googleads.v1.resources.BillingSetup.getDefaultInstance() : billingSetup_;
   }
@@ -2004,6 +2112,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v1.resources.BillingSetup billing_setup = 41;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.resources.BillingSetupOrBuilder getBillingSetupOrBuilder() {
     return getBillingSetup();
   }
@@ -2016,7 +2125,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.CampaignBudget campaign_budget = 19;</code>
+   * @return Whether the campaignBudget field is set.
    */
+  @java.lang.Override
   public boolean hasCampaignBudget() {
     return campaignBudget_ != null;
   }
@@ -2026,7 +2137,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.CampaignBudget campaign_budget = 19;</code>
+   * @return The campaignBudget.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.resources.CampaignBudget getCampaignBudget() {
     return campaignBudget_ == null ? com.google.ads.googleads.v1.resources.CampaignBudget.getDefaultInstance() : campaignBudget_;
   }
@@ -2037,6 +2150,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v1.resources.CampaignBudget campaign_budget = 19;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.resources.CampaignBudgetOrBuilder getCampaignBudgetOrBuilder() {
     return getCampaignBudget();
   }
@@ -2049,7 +2163,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.Campaign campaign = 2;</code>
+   * @return Whether the campaign field is set.
    */
+  @java.lang.Override
   public boolean hasCampaign() {
     return campaign_ != null;
   }
@@ -2059,7 +2175,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.Campaign campaign = 2;</code>
+   * @return The campaign.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.resources.Campaign getCampaign() {
     return campaign_ == null ? com.google.ads.googleads.v1.resources.Campaign.getDefaultInstance() : campaign_;
   }
@@ -2070,6 +2188,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v1.resources.Campaign campaign = 2;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.resources.CampaignOrBuilder getCampaignOrBuilder() {
     return getCampaign();
   }
@@ -2082,7 +2201,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.CampaignAudienceView campaign_audience_view = 69;</code>
+   * @return Whether the campaignAudienceView field is set.
    */
+  @java.lang.Override
   public boolean hasCampaignAudienceView() {
     return campaignAudienceView_ != null;
   }
@@ -2092,7 +2213,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.CampaignAudienceView campaign_audience_view = 69;</code>
+   * @return The campaignAudienceView.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.resources.CampaignAudienceView getCampaignAudienceView() {
     return campaignAudienceView_ == null ? com.google.ads.googleads.v1.resources.CampaignAudienceView.getDefaultInstance() : campaignAudienceView_;
   }
@@ -2103,6 +2226,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v1.resources.CampaignAudienceView campaign_audience_view = 69;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.resources.CampaignAudienceViewOrBuilder getCampaignAudienceViewOrBuilder() {
     return getCampaignAudienceView();
   }
@@ -2115,7 +2239,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.CampaignBidModifier campaign_bid_modifier = 26;</code>
+   * @return Whether the campaignBidModifier field is set.
    */
+  @java.lang.Override
   public boolean hasCampaignBidModifier() {
     return campaignBidModifier_ != null;
   }
@@ -2125,7 +2251,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.CampaignBidModifier campaign_bid_modifier = 26;</code>
+   * @return The campaignBidModifier.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.resources.CampaignBidModifier getCampaignBidModifier() {
     return campaignBidModifier_ == null ? com.google.ads.googleads.v1.resources.CampaignBidModifier.getDefaultInstance() : campaignBidModifier_;
   }
@@ -2136,6 +2264,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v1.resources.CampaignBidModifier campaign_bid_modifier = 26;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.resources.CampaignBidModifierOrBuilder getCampaignBidModifierOrBuilder() {
     return getCampaignBidModifier();
   }
@@ -2148,7 +2277,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.CampaignCriterion campaign_criterion = 20;</code>
+   * @return Whether the campaignCriterion field is set.
    */
+  @java.lang.Override
   public boolean hasCampaignCriterion() {
     return campaignCriterion_ != null;
   }
@@ -2158,7 +2289,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.CampaignCriterion campaign_criterion = 20;</code>
+   * @return The campaignCriterion.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.resources.CampaignCriterion getCampaignCriterion() {
     return campaignCriterion_ == null ? com.google.ads.googleads.v1.resources.CampaignCriterion.getDefaultInstance() : campaignCriterion_;
   }
@@ -2169,6 +2302,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v1.resources.CampaignCriterion campaign_criterion = 20;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.resources.CampaignCriterionOrBuilder getCampaignCriterionOrBuilder() {
     return getCampaignCriterion();
   }
@@ -2181,7 +2315,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.CampaignCriterionSimulation campaign_criterion_simulation = 111;</code>
+   * @return Whether the campaignCriterionSimulation field is set.
    */
+  @java.lang.Override
   public boolean hasCampaignCriterionSimulation() {
     return campaignCriterionSimulation_ != null;
   }
@@ -2191,7 +2327,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.CampaignCriterionSimulation campaign_criterion_simulation = 111;</code>
+   * @return The campaignCriterionSimulation.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.resources.CampaignCriterionSimulation getCampaignCriterionSimulation() {
     return campaignCriterionSimulation_ == null ? com.google.ads.googleads.v1.resources.CampaignCriterionSimulation.getDefaultInstance() : campaignCriterionSimulation_;
   }
@@ -2202,6 +2340,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v1.resources.CampaignCriterionSimulation campaign_criterion_simulation = 111;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.resources.CampaignCriterionSimulationOrBuilder getCampaignCriterionSimulationOrBuilder() {
     return getCampaignCriterionSimulation();
   }
@@ -2214,7 +2353,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.CampaignDraft campaign_draft = 49;</code>
+   * @return Whether the campaignDraft field is set.
    */
+  @java.lang.Override
   public boolean hasCampaignDraft() {
     return campaignDraft_ != null;
   }
@@ -2224,7 +2365,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.CampaignDraft campaign_draft = 49;</code>
+   * @return The campaignDraft.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.resources.CampaignDraft getCampaignDraft() {
     return campaignDraft_ == null ? com.google.ads.googleads.v1.resources.CampaignDraft.getDefaultInstance() : campaignDraft_;
   }
@@ -2235,6 +2378,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v1.resources.CampaignDraft campaign_draft = 49;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.resources.CampaignDraftOrBuilder getCampaignDraftOrBuilder() {
     return getCampaignDraft();
   }
@@ -2247,7 +2391,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.CampaignExperiment campaign_experiment = 84;</code>
+   * @return Whether the campaignExperiment field is set.
    */
+  @java.lang.Override
   public boolean hasCampaignExperiment() {
     return campaignExperiment_ != null;
   }
@@ -2257,7 +2403,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.CampaignExperiment campaign_experiment = 84;</code>
+   * @return The campaignExperiment.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.resources.CampaignExperiment getCampaignExperiment() {
     return campaignExperiment_ == null ? com.google.ads.googleads.v1.resources.CampaignExperiment.getDefaultInstance() : campaignExperiment_;
   }
@@ -2268,6 +2416,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v1.resources.CampaignExperiment campaign_experiment = 84;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.resources.CampaignExperimentOrBuilder getCampaignExperimentOrBuilder() {
     return getCampaignExperiment();
   }
@@ -2280,7 +2429,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.CampaignExtensionSetting campaign_extension_setting = 113;</code>
+   * @return Whether the campaignExtensionSetting field is set.
    */
+  @java.lang.Override
   public boolean hasCampaignExtensionSetting() {
     return campaignExtensionSetting_ != null;
   }
@@ -2290,7 +2441,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.CampaignExtensionSetting campaign_extension_setting = 113;</code>
+   * @return The campaignExtensionSetting.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.resources.CampaignExtensionSetting getCampaignExtensionSetting() {
     return campaignExtensionSetting_ == null ? com.google.ads.googleads.v1.resources.CampaignExtensionSetting.getDefaultInstance() : campaignExtensionSetting_;
   }
@@ -2301,6 +2454,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v1.resources.CampaignExtensionSetting campaign_extension_setting = 113;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.resources.CampaignExtensionSettingOrBuilder getCampaignExtensionSettingOrBuilder() {
     return getCampaignExtensionSetting();
   }
@@ -2313,7 +2467,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.CampaignFeed campaign_feed = 63;</code>
+   * @return Whether the campaignFeed field is set.
    */
+  @java.lang.Override
   public boolean hasCampaignFeed() {
     return campaignFeed_ != null;
   }
@@ -2323,7 +2479,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.CampaignFeed campaign_feed = 63;</code>
+   * @return The campaignFeed.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.resources.CampaignFeed getCampaignFeed() {
     return campaignFeed_ == null ? com.google.ads.googleads.v1.resources.CampaignFeed.getDefaultInstance() : campaignFeed_;
   }
@@ -2334,6 +2492,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v1.resources.CampaignFeed campaign_feed = 63;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.resources.CampaignFeedOrBuilder getCampaignFeedOrBuilder() {
     return getCampaignFeed();
   }
@@ -2346,7 +2505,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.CampaignLabel campaign_label = 108;</code>
+   * @return Whether the campaignLabel field is set.
    */
+  @java.lang.Override
   public boolean hasCampaignLabel() {
     return campaignLabel_ != null;
   }
@@ -2356,7 +2517,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.CampaignLabel campaign_label = 108;</code>
+   * @return The campaignLabel.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.resources.CampaignLabel getCampaignLabel() {
     return campaignLabel_ == null ? com.google.ads.googleads.v1.resources.CampaignLabel.getDefaultInstance() : campaignLabel_;
   }
@@ -2367,6 +2530,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v1.resources.CampaignLabel campaign_label = 108;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.resources.CampaignLabelOrBuilder getCampaignLabelOrBuilder() {
     return getCampaignLabel();
   }
@@ -2379,7 +2543,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.CampaignSharedSet campaign_shared_set = 30;</code>
+   * @return Whether the campaignSharedSet field is set.
    */
+  @java.lang.Override
   public boolean hasCampaignSharedSet() {
     return campaignSharedSet_ != null;
   }
@@ -2389,7 +2555,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.CampaignSharedSet campaign_shared_set = 30;</code>
+   * @return The campaignSharedSet.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.resources.CampaignSharedSet getCampaignSharedSet() {
     return campaignSharedSet_ == null ? com.google.ads.googleads.v1.resources.CampaignSharedSet.getDefaultInstance() : campaignSharedSet_;
   }
@@ -2400,6 +2568,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v1.resources.CampaignSharedSet campaign_shared_set = 30;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.resources.CampaignSharedSetOrBuilder getCampaignSharedSetOrBuilder() {
     return getCampaignSharedSet();
   }
@@ -2412,7 +2581,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.CarrierConstant carrier_constant = 66;</code>
+   * @return Whether the carrierConstant field is set.
    */
+  @java.lang.Override
   public boolean hasCarrierConstant() {
     return carrierConstant_ != null;
   }
@@ -2422,7 +2593,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.CarrierConstant carrier_constant = 66;</code>
+   * @return The carrierConstant.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.resources.CarrierConstant getCarrierConstant() {
     return carrierConstant_ == null ? com.google.ads.googleads.v1.resources.CarrierConstant.getDefaultInstance() : carrierConstant_;
   }
@@ -2433,6 +2606,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v1.resources.CarrierConstant carrier_constant = 66;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.resources.CarrierConstantOrBuilder getCarrierConstantOrBuilder() {
     return getCarrierConstant();
   }
@@ -2445,7 +2619,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.ChangeStatus change_status = 37;</code>
+   * @return Whether the changeStatus field is set.
    */
+  @java.lang.Override
   public boolean hasChangeStatus() {
     return changeStatus_ != null;
   }
@@ -2455,7 +2631,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.ChangeStatus change_status = 37;</code>
+   * @return The changeStatus.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.resources.ChangeStatus getChangeStatus() {
     return changeStatus_ == null ? com.google.ads.googleads.v1.resources.ChangeStatus.getDefaultInstance() : changeStatus_;
   }
@@ -2466,6 +2644,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v1.resources.ChangeStatus change_status = 37;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.resources.ChangeStatusOrBuilder getChangeStatusOrBuilder() {
     return getChangeStatus();
   }
@@ -2478,7 +2657,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.ConversionAction conversion_action = 103;</code>
+   * @return Whether the conversionAction field is set.
    */
+  @java.lang.Override
   public boolean hasConversionAction() {
     return conversionAction_ != null;
   }
@@ -2488,7 +2669,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.ConversionAction conversion_action = 103;</code>
+   * @return The conversionAction.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.resources.ConversionAction getConversionAction() {
     return conversionAction_ == null ? com.google.ads.googleads.v1.resources.ConversionAction.getDefaultInstance() : conversionAction_;
   }
@@ -2499,6 +2682,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v1.resources.ConversionAction conversion_action = 103;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.resources.ConversionActionOrBuilder getConversionActionOrBuilder() {
     return getConversionAction();
   }
@@ -2511,7 +2695,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.ClickView click_view = 122;</code>
+   * @return Whether the clickView field is set.
    */
+  @java.lang.Override
   public boolean hasClickView() {
     return clickView_ != null;
   }
@@ -2521,7 +2707,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.ClickView click_view = 122;</code>
+   * @return The clickView.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.resources.ClickView getClickView() {
     return clickView_ == null ? com.google.ads.googleads.v1.resources.ClickView.getDefaultInstance() : clickView_;
   }
@@ -2532,6 +2720,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v1.resources.ClickView click_view = 122;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.resources.ClickViewOrBuilder getClickViewOrBuilder() {
     return getClickView();
   }
@@ -2544,7 +2733,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.CustomInterest custom_interest = 104;</code>
+   * @return Whether the customInterest field is set.
    */
+  @java.lang.Override
   public boolean hasCustomInterest() {
     return customInterest_ != null;
   }
@@ -2554,7 +2745,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.CustomInterest custom_interest = 104;</code>
+   * @return The customInterest.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.resources.CustomInterest getCustomInterest() {
     return customInterest_ == null ? com.google.ads.googleads.v1.resources.CustomInterest.getDefaultInstance() : customInterest_;
   }
@@ -2565,6 +2758,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v1.resources.CustomInterest custom_interest = 104;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.resources.CustomInterestOrBuilder getCustomInterestOrBuilder() {
     return getCustomInterest();
   }
@@ -2577,7 +2771,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.Customer customer = 1;</code>
+   * @return Whether the customer field is set.
    */
+  @java.lang.Override
   public boolean hasCustomer() {
     return customer_ != null;
   }
@@ -2587,7 +2783,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.Customer customer = 1;</code>
+   * @return The customer.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.resources.Customer getCustomer() {
     return customer_ == null ? com.google.ads.googleads.v1.resources.Customer.getDefaultInstance() : customer_;
   }
@@ -2598,6 +2796,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v1.resources.Customer customer = 1;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.resources.CustomerOrBuilder getCustomerOrBuilder() {
     return getCustomer();
   }
@@ -2610,7 +2809,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.CustomerManagerLink customer_manager_link = 61;</code>
+   * @return Whether the customerManagerLink field is set.
    */
+  @java.lang.Override
   public boolean hasCustomerManagerLink() {
     return customerManagerLink_ != null;
   }
@@ -2620,7 +2821,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.CustomerManagerLink customer_manager_link = 61;</code>
+   * @return The customerManagerLink.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.resources.CustomerManagerLink getCustomerManagerLink() {
     return customerManagerLink_ == null ? com.google.ads.googleads.v1.resources.CustomerManagerLink.getDefaultInstance() : customerManagerLink_;
   }
@@ -2631,6 +2834,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v1.resources.CustomerManagerLink customer_manager_link = 61;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.resources.CustomerManagerLinkOrBuilder getCustomerManagerLinkOrBuilder() {
     return getCustomerManagerLink();
   }
@@ -2643,7 +2847,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.CustomerClientLink customer_client_link = 62;</code>
+   * @return Whether the customerClientLink field is set.
    */
+  @java.lang.Override
   public boolean hasCustomerClientLink() {
     return customerClientLink_ != null;
   }
@@ -2653,7 +2859,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.CustomerClientLink customer_client_link = 62;</code>
+   * @return The customerClientLink.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.resources.CustomerClientLink getCustomerClientLink() {
     return customerClientLink_ == null ? com.google.ads.googleads.v1.resources.CustomerClientLink.getDefaultInstance() : customerClientLink_;
   }
@@ -2664,6 +2872,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v1.resources.CustomerClientLink customer_client_link = 62;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.resources.CustomerClientLinkOrBuilder getCustomerClientLinkOrBuilder() {
     return getCustomerClientLink();
   }
@@ -2676,7 +2885,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.CustomerClient customer_client = 70;</code>
+   * @return Whether the customerClient field is set.
    */
+  @java.lang.Override
   public boolean hasCustomerClient() {
     return customerClient_ != null;
   }
@@ -2686,7 +2897,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.CustomerClient customer_client = 70;</code>
+   * @return The customerClient.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.resources.CustomerClient getCustomerClient() {
     return customerClient_ == null ? com.google.ads.googleads.v1.resources.CustomerClient.getDefaultInstance() : customerClient_;
   }
@@ -2697,6 +2910,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v1.resources.CustomerClient customer_client = 70;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.resources.CustomerClientOrBuilder getCustomerClientOrBuilder() {
     return getCustomerClient();
   }
@@ -2709,7 +2923,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.CustomerExtensionSetting customer_extension_setting = 114;</code>
+   * @return Whether the customerExtensionSetting field is set.
    */
+  @java.lang.Override
   public boolean hasCustomerExtensionSetting() {
     return customerExtensionSetting_ != null;
   }
@@ -2719,7 +2935,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.CustomerExtensionSetting customer_extension_setting = 114;</code>
+   * @return The customerExtensionSetting.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.resources.CustomerExtensionSetting getCustomerExtensionSetting() {
     return customerExtensionSetting_ == null ? com.google.ads.googleads.v1.resources.CustomerExtensionSetting.getDefaultInstance() : customerExtensionSetting_;
   }
@@ -2730,6 +2948,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v1.resources.CustomerExtensionSetting customer_extension_setting = 114;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.resources.CustomerExtensionSettingOrBuilder getCustomerExtensionSettingOrBuilder() {
     return getCustomerExtensionSetting();
   }
@@ -2742,7 +2961,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.CustomerFeed customer_feed = 64;</code>
+   * @return Whether the customerFeed field is set.
    */
+  @java.lang.Override
   public boolean hasCustomerFeed() {
     return customerFeed_ != null;
   }
@@ -2752,7 +2973,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.CustomerFeed customer_feed = 64;</code>
+   * @return The customerFeed.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.resources.CustomerFeed getCustomerFeed() {
     return customerFeed_ == null ? com.google.ads.googleads.v1.resources.CustomerFeed.getDefaultInstance() : customerFeed_;
   }
@@ -2763,6 +2986,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v1.resources.CustomerFeed customer_feed = 64;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.resources.CustomerFeedOrBuilder getCustomerFeedOrBuilder() {
     return getCustomerFeed();
   }
@@ -2775,7 +2999,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.CustomerLabel customer_label = 124;</code>
+   * @return Whether the customerLabel field is set.
    */
+  @java.lang.Override
   public boolean hasCustomerLabel() {
     return customerLabel_ != null;
   }
@@ -2785,7 +3011,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.CustomerLabel customer_label = 124;</code>
+   * @return The customerLabel.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.resources.CustomerLabel getCustomerLabel() {
     return customerLabel_ == null ? com.google.ads.googleads.v1.resources.CustomerLabel.getDefaultInstance() : customerLabel_;
   }
@@ -2796,6 +3024,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v1.resources.CustomerLabel customer_label = 124;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.resources.CustomerLabelOrBuilder getCustomerLabelOrBuilder() {
     return getCustomerLabel();
   }
@@ -2808,7 +3037,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.CustomerNegativeCriterion customer_negative_criterion = 88;</code>
+   * @return Whether the customerNegativeCriterion field is set.
    */
+  @java.lang.Override
   public boolean hasCustomerNegativeCriterion() {
     return customerNegativeCriterion_ != null;
   }
@@ -2818,7 +3049,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.CustomerNegativeCriterion customer_negative_criterion = 88;</code>
+   * @return The customerNegativeCriterion.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.resources.CustomerNegativeCriterion getCustomerNegativeCriterion() {
     return customerNegativeCriterion_ == null ? com.google.ads.googleads.v1.resources.CustomerNegativeCriterion.getDefaultInstance() : customerNegativeCriterion_;
   }
@@ -2829,6 +3062,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v1.resources.CustomerNegativeCriterion customer_negative_criterion = 88;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.resources.CustomerNegativeCriterionOrBuilder getCustomerNegativeCriterionOrBuilder() {
     return getCustomerNegativeCriterion();
   }
@@ -2841,7 +3075,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.DetailPlacementView detail_placement_view = 118;</code>
+   * @return Whether the detailPlacementView field is set.
    */
+  @java.lang.Override
   public boolean hasDetailPlacementView() {
     return detailPlacementView_ != null;
   }
@@ -2851,7 +3087,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.DetailPlacementView detail_placement_view = 118;</code>
+   * @return The detailPlacementView.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.resources.DetailPlacementView getDetailPlacementView() {
     return detailPlacementView_ == null ? com.google.ads.googleads.v1.resources.DetailPlacementView.getDefaultInstance() : detailPlacementView_;
   }
@@ -2862,6 +3100,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v1.resources.DetailPlacementView detail_placement_view = 118;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.resources.DetailPlacementViewOrBuilder getDetailPlacementViewOrBuilder() {
     return getDetailPlacementView();
   }
@@ -2874,7 +3113,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.DisplayKeywordView display_keyword_view = 47;</code>
+   * @return Whether the displayKeywordView field is set.
    */
+  @java.lang.Override
   public boolean hasDisplayKeywordView() {
     return displayKeywordView_ != null;
   }
@@ -2884,7 +3125,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.DisplayKeywordView display_keyword_view = 47;</code>
+   * @return The displayKeywordView.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.resources.DisplayKeywordView getDisplayKeywordView() {
     return displayKeywordView_ == null ? com.google.ads.googleads.v1.resources.DisplayKeywordView.getDefaultInstance() : displayKeywordView_;
   }
@@ -2895,6 +3138,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v1.resources.DisplayKeywordView display_keyword_view = 47;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.resources.DisplayKeywordViewOrBuilder getDisplayKeywordViewOrBuilder() {
     return getDisplayKeywordView();
   }
@@ -2907,7 +3151,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.DynamicSearchAdsSearchTermView dynamic_search_ads_search_term_view = 106;</code>
+   * @return Whether the dynamicSearchAdsSearchTermView field is set.
    */
+  @java.lang.Override
   public boolean hasDynamicSearchAdsSearchTermView() {
     return dynamicSearchAdsSearchTermView_ != null;
   }
@@ -2917,7 +3163,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.DynamicSearchAdsSearchTermView dynamic_search_ads_search_term_view = 106;</code>
+   * @return The dynamicSearchAdsSearchTermView.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.resources.DynamicSearchAdsSearchTermView getDynamicSearchAdsSearchTermView() {
     return dynamicSearchAdsSearchTermView_ == null ? com.google.ads.googleads.v1.resources.DynamicSearchAdsSearchTermView.getDefaultInstance() : dynamicSearchAdsSearchTermView_;
   }
@@ -2928,6 +3176,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v1.resources.DynamicSearchAdsSearchTermView dynamic_search_ads_search_term_view = 106;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.resources.DynamicSearchAdsSearchTermViewOrBuilder getDynamicSearchAdsSearchTermViewOrBuilder() {
     return getDynamicSearchAdsSearchTermView();
   }
@@ -2940,7 +3189,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.ExpandedLandingPageView expanded_landing_page_view = 128;</code>
+   * @return Whether the expandedLandingPageView field is set.
    */
+  @java.lang.Override
   public boolean hasExpandedLandingPageView() {
     return expandedLandingPageView_ != null;
   }
@@ -2950,7 +3201,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.ExpandedLandingPageView expanded_landing_page_view = 128;</code>
+   * @return The expandedLandingPageView.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.resources.ExpandedLandingPageView getExpandedLandingPageView() {
     return expandedLandingPageView_ == null ? com.google.ads.googleads.v1.resources.ExpandedLandingPageView.getDefaultInstance() : expandedLandingPageView_;
   }
@@ -2961,6 +3214,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v1.resources.ExpandedLandingPageView expanded_landing_page_view = 128;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.resources.ExpandedLandingPageViewOrBuilder getExpandedLandingPageViewOrBuilder() {
     return getExpandedLandingPageView();
   }
@@ -2973,7 +3227,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.ExtensionFeedItem extension_feed_item = 85;</code>
+   * @return Whether the extensionFeedItem field is set.
    */
+  @java.lang.Override
   public boolean hasExtensionFeedItem() {
     return extensionFeedItem_ != null;
   }
@@ -2983,7 +3239,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.ExtensionFeedItem extension_feed_item = 85;</code>
+   * @return The extensionFeedItem.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.resources.ExtensionFeedItem getExtensionFeedItem() {
     return extensionFeedItem_ == null ? com.google.ads.googleads.v1.resources.ExtensionFeedItem.getDefaultInstance() : extensionFeedItem_;
   }
@@ -2994,6 +3252,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v1.resources.ExtensionFeedItem extension_feed_item = 85;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.resources.ExtensionFeedItemOrBuilder getExtensionFeedItemOrBuilder() {
     return getExtensionFeedItem();
   }
@@ -3006,7 +3265,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.Feed feed = 46;</code>
+   * @return Whether the feed field is set.
    */
+  @java.lang.Override
   public boolean hasFeed() {
     return feed_ != null;
   }
@@ -3016,7 +3277,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.Feed feed = 46;</code>
+   * @return The feed.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.resources.Feed getFeed() {
     return feed_ == null ? com.google.ads.googleads.v1.resources.Feed.getDefaultInstance() : feed_;
   }
@@ -3027,6 +3290,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v1.resources.Feed feed = 46;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.resources.FeedOrBuilder getFeedOrBuilder() {
     return getFeed();
   }
@@ -3039,7 +3303,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.FeedItem feed_item = 50;</code>
+   * @return Whether the feedItem field is set.
    */
+  @java.lang.Override
   public boolean hasFeedItem() {
     return feedItem_ != null;
   }
@@ -3049,7 +3315,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.FeedItem feed_item = 50;</code>
+   * @return The feedItem.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.resources.FeedItem getFeedItem() {
     return feedItem_ == null ? com.google.ads.googleads.v1.resources.FeedItem.getDefaultInstance() : feedItem_;
   }
@@ -3060,6 +3328,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v1.resources.FeedItem feed_item = 50;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.resources.FeedItemOrBuilder getFeedItemOrBuilder() {
     return getFeedItem();
   }
@@ -3072,7 +3341,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.FeedItemTarget feed_item_target = 116;</code>
+   * @return Whether the feedItemTarget field is set.
    */
+  @java.lang.Override
   public boolean hasFeedItemTarget() {
     return feedItemTarget_ != null;
   }
@@ -3082,7 +3353,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.FeedItemTarget feed_item_target = 116;</code>
+   * @return The feedItemTarget.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.resources.FeedItemTarget getFeedItemTarget() {
     return feedItemTarget_ == null ? com.google.ads.googleads.v1.resources.FeedItemTarget.getDefaultInstance() : feedItemTarget_;
   }
@@ -3093,6 +3366,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v1.resources.FeedItemTarget feed_item_target = 116;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.resources.FeedItemTargetOrBuilder getFeedItemTargetOrBuilder() {
     return getFeedItemTarget();
   }
@@ -3105,7 +3379,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.FeedMapping feed_mapping = 58;</code>
+   * @return Whether the feedMapping field is set.
    */
+  @java.lang.Override
   public boolean hasFeedMapping() {
     return feedMapping_ != null;
   }
@@ -3115,7 +3391,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.FeedMapping feed_mapping = 58;</code>
+   * @return The feedMapping.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.resources.FeedMapping getFeedMapping() {
     return feedMapping_ == null ? com.google.ads.googleads.v1.resources.FeedMapping.getDefaultInstance() : feedMapping_;
   }
@@ -3126,6 +3404,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v1.resources.FeedMapping feed_mapping = 58;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.resources.FeedMappingOrBuilder getFeedMappingOrBuilder() {
     return getFeedMapping();
   }
@@ -3138,7 +3417,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.FeedPlaceholderView feed_placeholder_view = 97;</code>
+   * @return Whether the feedPlaceholderView field is set.
    */
+  @java.lang.Override
   public boolean hasFeedPlaceholderView() {
     return feedPlaceholderView_ != null;
   }
@@ -3148,7 +3429,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.FeedPlaceholderView feed_placeholder_view = 97;</code>
+   * @return The feedPlaceholderView.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.resources.FeedPlaceholderView getFeedPlaceholderView() {
     return feedPlaceholderView_ == null ? com.google.ads.googleads.v1.resources.FeedPlaceholderView.getDefaultInstance() : feedPlaceholderView_;
   }
@@ -3159,6 +3442,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v1.resources.FeedPlaceholderView feed_placeholder_view = 97;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.resources.FeedPlaceholderViewOrBuilder getFeedPlaceholderViewOrBuilder() {
     return getFeedPlaceholderView();
   }
@@ -3171,7 +3455,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.GenderView gender_view = 40;</code>
+   * @return Whether the genderView field is set.
    */
+  @java.lang.Override
   public boolean hasGenderView() {
     return genderView_ != null;
   }
@@ -3181,7 +3467,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.GenderView gender_view = 40;</code>
+   * @return The genderView.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.resources.GenderView getGenderView() {
     return genderView_ == null ? com.google.ads.googleads.v1.resources.GenderView.getDefaultInstance() : genderView_;
   }
@@ -3192,6 +3480,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v1.resources.GenderView gender_view = 40;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.resources.GenderViewOrBuilder getGenderViewOrBuilder() {
     return getGenderView();
   }
@@ -3204,7 +3493,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.GeoTargetConstant geo_target_constant = 23;</code>
+   * @return Whether the geoTargetConstant field is set.
    */
+  @java.lang.Override
   public boolean hasGeoTargetConstant() {
     return geoTargetConstant_ != null;
   }
@@ -3214,7 +3505,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.GeoTargetConstant geo_target_constant = 23;</code>
+   * @return The geoTargetConstant.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.resources.GeoTargetConstant getGeoTargetConstant() {
     return geoTargetConstant_ == null ? com.google.ads.googleads.v1.resources.GeoTargetConstant.getDefaultInstance() : geoTargetConstant_;
   }
@@ -3225,6 +3518,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v1.resources.GeoTargetConstant geo_target_constant = 23;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.resources.GeoTargetConstantOrBuilder getGeoTargetConstantOrBuilder() {
     return getGeoTargetConstant();
   }
@@ -3237,7 +3531,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.GeographicView geographic_view = 125;</code>
+   * @return Whether the geographicView field is set.
    */
+  @java.lang.Override
   public boolean hasGeographicView() {
     return geographicView_ != null;
   }
@@ -3247,7 +3543,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.GeographicView geographic_view = 125;</code>
+   * @return The geographicView.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.resources.GeographicView getGeographicView() {
     return geographicView_ == null ? com.google.ads.googleads.v1.resources.GeographicView.getDefaultInstance() : geographicView_;
   }
@@ -3258,6 +3556,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v1.resources.GeographicView geographic_view = 125;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.resources.GeographicViewOrBuilder getGeographicViewOrBuilder() {
     return getGeographicView();
   }
@@ -3270,7 +3569,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.GroupPlacementView group_placement_view = 119;</code>
+   * @return Whether the groupPlacementView field is set.
    */
+  @java.lang.Override
   public boolean hasGroupPlacementView() {
     return groupPlacementView_ != null;
   }
@@ -3280,7 +3581,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.GroupPlacementView group_placement_view = 119;</code>
+   * @return The groupPlacementView.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.resources.GroupPlacementView getGroupPlacementView() {
     return groupPlacementView_ == null ? com.google.ads.googleads.v1.resources.GroupPlacementView.getDefaultInstance() : groupPlacementView_;
   }
@@ -3291,6 +3594,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v1.resources.GroupPlacementView group_placement_view = 119;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.resources.GroupPlacementViewOrBuilder getGroupPlacementViewOrBuilder() {
     return getGroupPlacementView();
   }
@@ -3303,7 +3607,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.HotelGroupView hotel_group_view = 51;</code>
+   * @return Whether the hotelGroupView field is set.
    */
+  @java.lang.Override
   public boolean hasHotelGroupView() {
     return hotelGroupView_ != null;
   }
@@ -3313,7 +3619,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.HotelGroupView hotel_group_view = 51;</code>
+   * @return The hotelGroupView.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.resources.HotelGroupView getHotelGroupView() {
     return hotelGroupView_ == null ? com.google.ads.googleads.v1.resources.HotelGroupView.getDefaultInstance() : hotelGroupView_;
   }
@@ -3324,6 +3632,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v1.resources.HotelGroupView hotel_group_view = 51;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.resources.HotelGroupViewOrBuilder getHotelGroupViewOrBuilder() {
     return getHotelGroupView();
   }
@@ -3336,7 +3645,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.HotelPerformanceView hotel_performance_view = 71;</code>
+   * @return Whether the hotelPerformanceView field is set.
    */
+  @java.lang.Override
   public boolean hasHotelPerformanceView() {
     return hotelPerformanceView_ != null;
   }
@@ -3346,7 +3657,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.HotelPerformanceView hotel_performance_view = 71;</code>
+   * @return The hotelPerformanceView.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.resources.HotelPerformanceView getHotelPerformanceView() {
     return hotelPerformanceView_ == null ? com.google.ads.googleads.v1.resources.HotelPerformanceView.getDefaultInstance() : hotelPerformanceView_;
   }
@@ -3357,6 +3670,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v1.resources.HotelPerformanceView hotel_performance_view = 71;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.resources.HotelPerformanceViewOrBuilder getHotelPerformanceViewOrBuilder() {
     return getHotelPerformanceView();
   }
@@ -3369,7 +3683,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.KeywordView keyword_view = 21;</code>
+   * @return Whether the keywordView field is set.
    */
+  @java.lang.Override
   public boolean hasKeywordView() {
     return keywordView_ != null;
   }
@@ -3379,7 +3695,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.KeywordView keyword_view = 21;</code>
+   * @return The keywordView.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.resources.KeywordView getKeywordView() {
     return keywordView_ == null ? com.google.ads.googleads.v1.resources.KeywordView.getDefaultInstance() : keywordView_;
   }
@@ -3390,6 +3708,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v1.resources.KeywordView keyword_view = 21;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.resources.KeywordViewOrBuilder getKeywordViewOrBuilder() {
     return getKeywordView();
   }
@@ -3402,7 +3721,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.KeywordPlan keyword_plan = 32;</code>
+   * @return Whether the keywordPlan field is set.
    */
+  @java.lang.Override
   public boolean hasKeywordPlan() {
     return keywordPlan_ != null;
   }
@@ -3412,7 +3733,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.KeywordPlan keyword_plan = 32;</code>
+   * @return The keywordPlan.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.resources.KeywordPlan getKeywordPlan() {
     return keywordPlan_ == null ? com.google.ads.googleads.v1.resources.KeywordPlan.getDefaultInstance() : keywordPlan_;
   }
@@ -3423,6 +3746,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v1.resources.KeywordPlan keyword_plan = 32;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.resources.KeywordPlanOrBuilder getKeywordPlanOrBuilder() {
     return getKeywordPlan();
   }
@@ -3435,7 +3759,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.KeywordPlanCampaign keyword_plan_campaign = 33;</code>
+   * @return Whether the keywordPlanCampaign field is set.
    */
+  @java.lang.Override
   public boolean hasKeywordPlanCampaign() {
     return keywordPlanCampaign_ != null;
   }
@@ -3445,7 +3771,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.KeywordPlanCampaign keyword_plan_campaign = 33;</code>
+   * @return The keywordPlanCampaign.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.resources.KeywordPlanCampaign getKeywordPlanCampaign() {
     return keywordPlanCampaign_ == null ? com.google.ads.googleads.v1.resources.KeywordPlanCampaign.getDefaultInstance() : keywordPlanCampaign_;
   }
@@ -3456,6 +3784,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v1.resources.KeywordPlanCampaign keyword_plan_campaign = 33;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.resources.KeywordPlanCampaignOrBuilder getKeywordPlanCampaignOrBuilder() {
     return getKeywordPlanCampaign();
   }
@@ -3468,7 +3797,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.KeywordPlanNegativeKeyword keyword_plan_negative_keyword = 34;</code>
+   * @return Whether the keywordPlanNegativeKeyword field is set.
    */
+  @java.lang.Override
   public boolean hasKeywordPlanNegativeKeyword() {
     return keywordPlanNegativeKeyword_ != null;
   }
@@ -3478,7 +3809,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.KeywordPlanNegativeKeyword keyword_plan_negative_keyword = 34;</code>
+   * @return The keywordPlanNegativeKeyword.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.resources.KeywordPlanNegativeKeyword getKeywordPlanNegativeKeyword() {
     return keywordPlanNegativeKeyword_ == null ? com.google.ads.googleads.v1.resources.KeywordPlanNegativeKeyword.getDefaultInstance() : keywordPlanNegativeKeyword_;
   }
@@ -3489,6 +3822,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v1.resources.KeywordPlanNegativeKeyword keyword_plan_negative_keyword = 34;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.resources.KeywordPlanNegativeKeywordOrBuilder getKeywordPlanNegativeKeywordOrBuilder() {
     return getKeywordPlanNegativeKeyword();
   }
@@ -3501,7 +3835,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.KeywordPlanAdGroup keyword_plan_ad_group = 35;</code>
+   * @return Whether the keywordPlanAdGroup field is set.
    */
+  @java.lang.Override
   public boolean hasKeywordPlanAdGroup() {
     return keywordPlanAdGroup_ != null;
   }
@@ -3511,7 +3847,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.KeywordPlanAdGroup keyword_plan_ad_group = 35;</code>
+   * @return The keywordPlanAdGroup.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.resources.KeywordPlanAdGroup getKeywordPlanAdGroup() {
     return keywordPlanAdGroup_ == null ? com.google.ads.googleads.v1.resources.KeywordPlanAdGroup.getDefaultInstance() : keywordPlanAdGroup_;
   }
@@ -3522,6 +3860,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v1.resources.KeywordPlanAdGroup keyword_plan_ad_group = 35;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.resources.KeywordPlanAdGroupOrBuilder getKeywordPlanAdGroupOrBuilder() {
     return getKeywordPlanAdGroup();
   }
@@ -3534,7 +3873,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.KeywordPlanKeyword keyword_plan_keyword = 36;</code>
+   * @return Whether the keywordPlanKeyword field is set.
    */
+  @java.lang.Override
   public boolean hasKeywordPlanKeyword() {
     return keywordPlanKeyword_ != null;
   }
@@ -3544,7 +3885,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.KeywordPlanKeyword keyword_plan_keyword = 36;</code>
+   * @return The keywordPlanKeyword.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.resources.KeywordPlanKeyword getKeywordPlanKeyword() {
     return keywordPlanKeyword_ == null ? com.google.ads.googleads.v1.resources.KeywordPlanKeyword.getDefaultInstance() : keywordPlanKeyword_;
   }
@@ -3555,6 +3898,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v1.resources.KeywordPlanKeyword keyword_plan_keyword = 36;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.resources.KeywordPlanKeywordOrBuilder getKeywordPlanKeywordOrBuilder() {
     return getKeywordPlanKeyword();
   }
@@ -3567,7 +3911,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.Label label = 52;</code>
+   * @return Whether the label field is set.
    */
+  @java.lang.Override
   public boolean hasLabel() {
     return label_ != null;
   }
@@ -3577,7 +3923,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.Label label = 52;</code>
+   * @return The label.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.resources.Label getLabel() {
     return label_ == null ? com.google.ads.googleads.v1.resources.Label.getDefaultInstance() : label_;
   }
@@ -3588,6 +3936,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v1.resources.Label label = 52;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.resources.LabelOrBuilder getLabelOrBuilder() {
     return getLabel();
   }
@@ -3600,7 +3949,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.LandingPageView landing_page_view = 126;</code>
+   * @return Whether the landingPageView field is set.
    */
+  @java.lang.Override
   public boolean hasLandingPageView() {
     return landingPageView_ != null;
   }
@@ -3610,7 +3961,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.LandingPageView landing_page_view = 126;</code>
+   * @return The landingPageView.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.resources.LandingPageView getLandingPageView() {
     return landingPageView_ == null ? com.google.ads.googleads.v1.resources.LandingPageView.getDefaultInstance() : landingPageView_;
   }
@@ -3621,6 +3974,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v1.resources.LandingPageView landing_page_view = 126;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.resources.LandingPageViewOrBuilder getLandingPageViewOrBuilder() {
     return getLandingPageView();
   }
@@ -3633,7 +3987,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.LanguageConstant language_constant = 55;</code>
+   * @return Whether the languageConstant field is set.
    */
+  @java.lang.Override
   public boolean hasLanguageConstant() {
     return languageConstant_ != null;
   }
@@ -3643,7 +3999,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.LanguageConstant language_constant = 55;</code>
+   * @return The languageConstant.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.resources.LanguageConstant getLanguageConstant() {
     return languageConstant_ == null ? com.google.ads.googleads.v1.resources.LanguageConstant.getDefaultInstance() : languageConstant_;
   }
@@ -3654,6 +4012,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v1.resources.LanguageConstant language_constant = 55;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.resources.LanguageConstantOrBuilder getLanguageConstantOrBuilder() {
     return getLanguageConstant();
   }
@@ -3666,7 +4025,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.LocationView location_view = 123;</code>
+   * @return Whether the locationView field is set.
    */
+  @java.lang.Override
   public boolean hasLocationView() {
     return locationView_ != null;
   }
@@ -3676,7 +4037,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.LocationView location_view = 123;</code>
+   * @return The locationView.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.resources.LocationView getLocationView() {
     return locationView_ == null ? com.google.ads.googleads.v1.resources.LocationView.getDefaultInstance() : locationView_;
   }
@@ -3687,6 +4050,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v1.resources.LocationView location_view = 123;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.resources.LocationViewOrBuilder getLocationViewOrBuilder() {
     return getLocationView();
   }
@@ -3699,7 +4063,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.ManagedPlacementView managed_placement_view = 53;</code>
+   * @return Whether the managedPlacementView field is set.
    */
+  @java.lang.Override
   public boolean hasManagedPlacementView() {
     return managedPlacementView_ != null;
   }
@@ -3709,7 +4075,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.ManagedPlacementView managed_placement_view = 53;</code>
+   * @return The managedPlacementView.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.resources.ManagedPlacementView getManagedPlacementView() {
     return managedPlacementView_ == null ? com.google.ads.googleads.v1.resources.ManagedPlacementView.getDefaultInstance() : managedPlacementView_;
   }
@@ -3720,6 +4088,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v1.resources.ManagedPlacementView managed_placement_view = 53;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.resources.ManagedPlacementViewOrBuilder getManagedPlacementViewOrBuilder() {
     return getManagedPlacementView();
   }
@@ -3732,7 +4101,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.MediaFile media_file = 90;</code>
+   * @return Whether the mediaFile field is set.
    */
+  @java.lang.Override
   public boolean hasMediaFile() {
     return mediaFile_ != null;
   }
@@ -3742,7 +4113,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.MediaFile media_file = 90;</code>
+   * @return The mediaFile.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.resources.MediaFile getMediaFile() {
     return mediaFile_ == null ? com.google.ads.googleads.v1.resources.MediaFile.getDefaultInstance() : mediaFile_;
   }
@@ -3753,6 +4126,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v1.resources.MediaFile media_file = 90;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.resources.MediaFileOrBuilder getMediaFileOrBuilder() {
     return getMediaFile();
   }
@@ -3765,7 +4139,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.MobileAppCategoryConstant mobile_app_category_constant = 87;</code>
+   * @return Whether the mobileAppCategoryConstant field is set.
    */
+  @java.lang.Override
   public boolean hasMobileAppCategoryConstant() {
     return mobileAppCategoryConstant_ != null;
   }
@@ -3775,7 +4151,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.MobileAppCategoryConstant mobile_app_category_constant = 87;</code>
+   * @return The mobileAppCategoryConstant.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.resources.MobileAppCategoryConstant getMobileAppCategoryConstant() {
     return mobileAppCategoryConstant_ == null ? com.google.ads.googleads.v1.resources.MobileAppCategoryConstant.getDefaultInstance() : mobileAppCategoryConstant_;
   }
@@ -3786,6 +4164,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v1.resources.MobileAppCategoryConstant mobile_app_category_constant = 87;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.resources.MobileAppCategoryConstantOrBuilder getMobileAppCategoryConstantOrBuilder() {
     return getMobileAppCategoryConstant();
   }
@@ -3798,7 +4177,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.MobileDeviceConstant mobile_device_constant = 98;</code>
+   * @return Whether the mobileDeviceConstant field is set.
    */
+  @java.lang.Override
   public boolean hasMobileDeviceConstant() {
     return mobileDeviceConstant_ != null;
   }
@@ -3808,7 +4189,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.MobileDeviceConstant mobile_device_constant = 98;</code>
+   * @return The mobileDeviceConstant.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.resources.MobileDeviceConstant getMobileDeviceConstant() {
     return mobileDeviceConstant_ == null ? com.google.ads.googleads.v1.resources.MobileDeviceConstant.getDefaultInstance() : mobileDeviceConstant_;
   }
@@ -3819,6 +4202,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v1.resources.MobileDeviceConstant mobile_device_constant = 98;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.resources.MobileDeviceConstantOrBuilder getMobileDeviceConstantOrBuilder() {
     return getMobileDeviceConstant();
   }
@@ -3831,7 +4215,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.MutateJob mutate_job = 127;</code>
+   * @return Whether the mutateJob field is set.
    */
+  @java.lang.Override
   public boolean hasMutateJob() {
     return mutateJob_ != null;
   }
@@ -3841,7 +4227,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.MutateJob mutate_job = 127;</code>
+   * @return The mutateJob.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.resources.MutateJob getMutateJob() {
     return mutateJob_ == null ? com.google.ads.googleads.v1.resources.MutateJob.getDefaultInstance() : mutateJob_;
   }
@@ -3852,6 +4240,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v1.resources.MutateJob mutate_job = 127;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.resources.MutateJobOrBuilder getMutateJobOrBuilder() {
     return getMutateJob();
   }
@@ -3864,7 +4253,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.OperatingSystemVersionConstant operating_system_version_constant = 86;</code>
+   * @return Whether the operatingSystemVersionConstant field is set.
    */
+  @java.lang.Override
   public boolean hasOperatingSystemVersionConstant() {
     return operatingSystemVersionConstant_ != null;
   }
@@ -3874,7 +4265,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.OperatingSystemVersionConstant operating_system_version_constant = 86;</code>
+   * @return The operatingSystemVersionConstant.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.resources.OperatingSystemVersionConstant getOperatingSystemVersionConstant() {
     return operatingSystemVersionConstant_ == null ? com.google.ads.googleads.v1.resources.OperatingSystemVersionConstant.getDefaultInstance() : operatingSystemVersionConstant_;
   }
@@ -3885,6 +4278,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v1.resources.OperatingSystemVersionConstant operating_system_version_constant = 86;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.resources.OperatingSystemVersionConstantOrBuilder getOperatingSystemVersionConstantOrBuilder() {
     return getOperatingSystemVersionConstant();
   }
@@ -3897,7 +4291,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.PaidOrganicSearchTermView paid_organic_search_term_view = 129;</code>
+   * @return Whether the paidOrganicSearchTermView field is set.
    */
+  @java.lang.Override
   public boolean hasPaidOrganicSearchTermView() {
     return paidOrganicSearchTermView_ != null;
   }
@@ -3907,7 +4303,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.PaidOrganicSearchTermView paid_organic_search_term_view = 129;</code>
+   * @return The paidOrganicSearchTermView.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.resources.PaidOrganicSearchTermView getPaidOrganicSearchTermView() {
     return paidOrganicSearchTermView_ == null ? com.google.ads.googleads.v1.resources.PaidOrganicSearchTermView.getDefaultInstance() : paidOrganicSearchTermView_;
   }
@@ -3918,6 +4316,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v1.resources.PaidOrganicSearchTermView paid_organic_search_term_view = 129;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.resources.PaidOrganicSearchTermViewOrBuilder getPaidOrganicSearchTermViewOrBuilder() {
     return getPaidOrganicSearchTermView();
   }
@@ -3930,7 +4329,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.ParentalStatusView parental_status_view = 45;</code>
+   * @return Whether the parentalStatusView field is set.
    */
+  @java.lang.Override
   public boolean hasParentalStatusView() {
     return parentalStatusView_ != null;
   }
@@ -3940,7 +4341,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.ParentalStatusView parental_status_view = 45;</code>
+   * @return The parentalStatusView.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.resources.ParentalStatusView getParentalStatusView() {
     return parentalStatusView_ == null ? com.google.ads.googleads.v1.resources.ParentalStatusView.getDefaultInstance() : parentalStatusView_;
   }
@@ -3951,6 +4354,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v1.resources.ParentalStatusView parental_status_view = 45;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.resources.ParentalStatusViewOrBuilder getParentalStatusViewOrBuilder() {
     return getParentalStatusView();
   }
@@ -3963,7 +4367,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.ProductBiddingCategoryConstant product_bidding_category_constant = 109;</code>
+   * @return Whether the productBiddingCategoryConstant field is set.
    */
+  @java.lang.Override
   public boolean hasProductBiddingCategoryConstant() {
     return productBiddingCategoryConstant_ != null;
   }
@@ -3973,7 +4379,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.ProductBiddingCategoryConstant product_bidding_category_constant = 109;</code>
+   * @return The productBiddingCategoryConstant.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.resources.ProductBiddingCategoryConstant getProductBiddingCategoryConstant() {
     return productBiddingCategoryConstant_ == null ? com.google.ads.googleads.v1.resources.ProductBiddingCategoryConstant.getDefaultInstance() : productBiddingCategoryConstant_;
   }
@@ -3984,6 +4392,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v1.resources.ProductBiddingCategoryConstant product_bidding_category_constant = 109;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.resources.ProductBiddingCategoryConstantOrBuilder getProductBiddingCategoryConstantOrBuilder() {
     return getProductBiddingCategoryConstant();
   }
@@ -3996,7 +4405,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.ProductGroupView product_group_view = 54;</code>
+   * @return Whether the productGroupView field is set.
    */
+  @java.lang.Override
   public boolean hasProductGroupView() {
     return productGroupView_ != null;
   }
@@ -4006,7 +4417,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.ProductGroupView product_group_view = 54;</code>
+   * @return The productGroupView.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.resources.ProductGroupView getProductGroupView() {
     return productGroupView_ == null ? com.google.ads.googleads.v1.resources.ProductGroupView.getDefaultInstance() : productGroupView_;
   }
@@ -4017,6 +4430,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v1.resources.ProductGroupView product_group_view = 54;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.resources.ProductGroupViewOrBuilder getProductGroupViewOrBuilder() {
     return getProductGroupView();
   }
@@ -4029,7 +4443,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.Recommendation recommendation = 22;</code>
+   * @return Whether the recommendation field is set.
    */
+  @java.lang.Override
   public boolean hasRecommendation() {
     return recommendation_ != null;
   }
@@ -4039,7 +4455,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.Recommendation recommendation = 22;</code>
+   * @return The recommendation.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.resources.Recommendation getRecommendation() {
     return recommendation_ == null ? com.google.ads.googleads.v1.resources.Recommendation.getDefaultInstance() : recommendation_;
   }
@@ -4050,6 +4468,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v1.resources.Recommendation recommendation = 22;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.resources.RecommendationOrBuilder getRecommendationOrBuilder() {
     return getRecommendation();
   }
@@ -4062,7 +4481,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.SearchTermView search_term_view = 68;</code>
+   * @return Whether the searchTermView field is set.
    */
+  @java.lang.Override
   public boolean hasSearchTermView() {
     return searchTermView_ != null;
   }
@@ -4072,7 +4493,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.SearchTermView search_term_view = 68;</code>
+   * @return The searchTermView.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.resources.SearchTermView getSearchTermView() {
     return searchTermView_ == null ? com.google.ads.googleads.v1.resources.SearchTermView.getDefaultInstance() : searchTermView_;
   }
@@ -4083,6 +4506,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v1.resources.SearchTermView search_term_view = 68;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.resources.SearchTermViewOrBuilder getSearchTermViewOrBuilder() {
     return getSearchTermView();
   }
@@ -4095,7 +4519,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.SharedCriterion shared_criterion = 29;</code>
+   * @return Whether the sharedCriterion field is set.
    */
+  @java.lang.Override
   public boolean hasSharedCriterion() {
     return sharedCriterion_ != null;
   }
@@ -4105,7 +4531,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.SharedCriterion shared_criterion = 29;</code>
+   * @return The sharedCriterion.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.resources.SharedCriterion getSharedCriterion() {
     return sharedCriterion_ == null ? com.google.ads.googleads.v1.resources.SharedCriterion.getDefaultInstance() : sharedCriterion_;
   }
@@ -4116,6 +4544,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v1.resources.SharedCriterion shared_criterion = 29;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.resources.SharedCriterionOrBuilder getSharedCriterionOrBuilder() {
     return getSharedCriterion();
   }
@@ -4128,7 +4557,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.SharedSet shared_set = 27;</code>
+   * @return Whether the sharedSet field is set.
    */
+  @java.lang.Override
   public boolean hasSharedSet() {
     return sharedSet_ != null;
   }
@@ -4138,7 +4569,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.SharedSet shared_set = 27;</code>
+   * @return The sharedSet.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.resources.SharedSet getSharedSet() {
     return sharedSet_ == null ? com.google.ads.googleads.v1.resources.SharedSet.getDefaultInstance() : sharedSet_;
   }
@@ -4149,6 +4582,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v1.resources.SharedSet shared_set = 27;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.resources.SharedSetOrBuilder getSharedSetOrBuilder() {
     return getSharedSet();
   }
@@ -4161,7 +4595,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.ShoppingPerformanceView shopping_performance_view = 117;</code>
+   * @return Whether the shoppingPerformanceView field is set.
    */
+  @java.lang.Override
   public boolean hasShoppingPerformanceView() {
     return shoppingPerformanceView_ != null;
   }
@@ -4171,7 +4607,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.ShoppingPerformanceView shopping_performance_view = 117;</code>
+   * @return The shoppingPerformanceView.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.resources.ShoppingPerformanceView getShoppingPerformanceView() {
     return shoppingPerformanceView_ == null ? com.google.ads.googleads.v1.resources.ShoppingPerformanceView.getDefaultInstance() : shoppingPerformanceView_;
   }
@@ -4182,6 +4620,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v1.resources.ShoppingPerformanceView shopping_performance_view = 117;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.resources.ShoppingPerformanceViewOrBuilder getShoppingPerformanceViewOrBuilder() {
     return getShoppingPerformanceView();
   }
@@ -4194,7 +4633,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.TopicView topic_view = 44;</code>
+   * @return Whether the topicView field is set.
    */
+  @java.lang.Override
   public boolean hasTopicView() {
     return topicView_ != null;
   }
@@ -4204,7 +4645,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.TopicView topic_view = 44;</code>
+   * @return The topicView.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.resources.TopicView getTopicView() {
     return topicView_ == null ? com.google.ads.googleads.v1.resources.TopicView.getDefaultInstance() : topicView_;
   }
@@ -4215,6 +4658,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v1.resources.TopicView topic_view = 44;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.resources.TopicViewOrBuilder getTopicViewOrBuilder() {
     return getTopicView();
   }
@@ -4227,7 +4671,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.UserInterest user_interest = 59;</code>
+   * @return Whether the userInterest field is set.
    */
+  @java.lang.Override
   public boolean hasUserInterest() {
     return userInterest_ != null;
   }
@@ -4237,7 +4683,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.UserInterest user_interest = 59;</code>
+   * @return The userInterest.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.resources.UserInterest getUserInterest() {
     return userInterest_ == null ? com.google.ads.googleads.v1.resources.UserInterest.getDefaultInstance() : userInterest_;
   }
@@ -4248,6 +4696,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v1.resources.UserInterest user_interest = 59;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.resources.UserInterestOrBuilder getUserInterestOrBuilder() {
     return getUserInterest();
   }
@@ -4260,7 +4709,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.UserList user_list = 38;</code>
+   * @return Whether the userList field is set.
    */
+  @java.lang.Override
   public boolean hasUserList() {
     return userList_ != null;
   }
@@ -4270,7 +4721,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.UserList user_list = 38;</code>
+   * @return The userList.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.resources.UserList getUserList() {
     return userList_ == null ? com.google.ads.googleads.v1.resources.UserList.getDefaultInstance() : userList_;
   }
@@ -4281,6 +4734,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v1.resources.UserList user_list = 38;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.resources.UserListOrBuilder getUserListOrBuilder() {
     return getUserList();
   }
@@ -4293,7 +4747,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.RemarketingAction remarketing_action = 60;</code>
+   * @return Whether the remarketingAction field is set.
    */
+  @java.lang.Override
   public boolean hasRemarketingAction() {
     return remarketingAction_ != null;
   }
@@ -4303,7 +4759,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.RemarketingAction remarketing_action = 60;</code>
+   * @return The remarketingAction.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.resources.RemarketingAction getRemarketingAction() {
     return remarketingAction_ == null ? com.google.ads.googleads.v1.resources.RemarketingAction.getDefaultInstance() : remarketingAction_;
   }
@@ -4314,6 +4772,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v1.resources.RemarketingAction remarketing_action = 60;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.resources.RemarketingActionOrBuilder getRemarketingActionOrBuilder() {
     return getRemarketingAction();
   }
@@ -4326,7 +4785,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.TopicConstant topic_constant = 31;</code>
+   * @return Whether the topicConstant field is set.
    */
+  @java.lang.Override
   public boolean hasTopicConstant() {
     return topicConstant_ != null;
   }
@@ -4336,7 +4797,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.TopicConstant topic_constant = 31;</code>
+   * @return The topicConstant.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.resources.TopicConstant getTopicConstant() {
     return topicConstant_ == null ? com.google.ads.googleads.v1.resources.TopicConstant.getDefaultInstance() : topicConstant_;
   }
@@ -4347,6 +4810,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v1.resources.TopicConstant topic_constant = 31;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.resources.TopicConstantOrBuilder getTopicConstantOrBuilder() {
     return getTopicConstant();
   }
@@ -4359,7 +4823,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.Video video = 39;</code>
+   * @return Whether the video field is set.
    */
+  @java.lang.Override
   public boolean hasVideo() {
     return video_ != null;
   }
@@ -4369,7 +4835,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.Video video = 39;</code>
+   * @return The video.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.resources.Video getVideo() {
     return video_ == null ? com.google.ads.googleads.v1.resources.Video.getDefaultInstance() : video_;
   }
@@ -4380,6 +4848,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v1.resources.Video video = 39;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.resources.VideoOrBuilder getVideoOrBuilder() {
     return getVideo();
   }
@@ -4392,7 +4861,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.common.Metrics metrics = 4;</code>
+   * @return Whether the metrics field is set.
    */
+  @java.lang.Override
   public boolean hasMetrics() {
     return metrics_ != null;
   }
@@ -4402,7 +4873,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.common.Metrics metrics = 4;</code>
+   * @return The metrics.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.common.Metrics getMetrics() {
     return metrics_ == null ? com.google.ads.googleads.v1.common.Metrics.getDefaultInstance() : metrics_;
   }
@@ -4413,6 +4886,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v1.common.Metrics metrics = 4;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.common.MetricsOrBuilder getMetricsOrBuilder() {
     return getMetrics();
   }
@@ -4425,7 +4899,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.common.Segments segments = 102;</code>
+   * @return Whether the segments field is set.
    */
+  @java.lang.Override
   public boolean hasSegments() {
     return segments_ != null;
   }
@@ -4435,7 +4911,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.common.Segments segments = 102;</code>
+   * @return The segments.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.common.Segments getSegments() {
     return segments_ == null ? com.google.ads.googleads.v1.common.Segments.getDefaultInstance() : segments_;
   }
@@ -4446,6 +4924,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v1.common.Segments segments = 102;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.common.SegmentsOrBuilder getSegmentsOrBuilder() {
     return getSegments();
   }
@@ -7598,6 +8077,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.resources.AccountBudget account_budget = 42;</code>
+     * @return Whether the accountBudget field is set.
      */
     public boolean hasAccountBudget() {
       return accountBudgetBuilder_ != null || accountBudget_ != null;
@@ -7608,6 +8088,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.resources.AccountBudget account_budget = 42;</code>
+     * @return The accountBudget.
      */
     public com.google.ads.googleads.v1.resources.AccountBudget getAccountBudget() {
       if (accountBudgetBuilder_ == null) {
@@ -7751,6 +8232,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.resources.AccountBudgetProposal account_budget_proposal = 43;</code>
+     * @return Whether the accountBudgetProposal field is set.
      */
     public boolean hasAccountBudgetProposal() {
       return accountBudgetProposalBuilder_ != null || accountBudgetProposal_ != null;
@@ -7761,6 +8243,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.resources.AccountBudgetProposal account_budget_proposal = 43;</code>
+     * @return The accountBudgetProposal.
      */
     public com.google.ads.googleads.v1.resources.AccountBudgetProposal getAccountBudgetProposal() {
       if (accountBudgetProposalBuilder_ == null) {
@@ -7904,6 +8387,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.resources.AdGroup ad_group = 3;</code>
+     * @return Whether the adGroup field is set.
      */
     public boolean hasAdGroup() {
       return adGroupBuilder_ != null || adGroup_ != null;
@@ -7914,6 +8398,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.resources.AdGroup ad_group = 3;</code>
+     * @return The adGroup.
      */
     public com.google.ads.googleads.v1.resources.AdGroup getAdGroup() {
       if (adGroupBuilder_ == null) {
@@ -8057,6 +8542,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.resources.AdGroupAd ad_group_ad = 16;</code>
+     * @return Whether the adGroupAd field is set.
      */
     public boolean hasAdGroupAd() {
       return adGroupAdBuilder_ != null || adGroupAd_ != null;
@@ -8067,6 +8553,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.resources.AdGroupAd ad_group_ad = 16;</code>
+     * @return The adGroupAd.
      */
     public com.google.ads.googleads.v1.resources.AdGroupAd getAdGroupAd() {
       if (adGroupAdBuilder_ == null) {
@@ -8210,6 +8697,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.resources.AdGroupAdLabel ad_group_ad_label = 120;</code>
+     * @return Whether the adGroupAdLabel field is set.
      */
     public boolean hasAdGroupAdLabel() {
       return adGroupAdLabelBuilder_ != null || adGroupAdLabel_ != null;
@@ -8220,6 +8708,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.resources.AdGroupAdLabel ad_group_ad_label = 120;</code>
+     * @return The adGroupAdLabel.
      */
     public com.google.ads.googleads.v1.resources.AdGroupAdLabel getAdGroupAdLabel() {
       if (adGroupAdLabelBuilder_ == null) {
@@ -8363,6 +8852,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.resources.AdGroupAudienceView ad_group_audience_view = 57;</code>
+     * @return Whether the adGroupAudienceView field is set.
      */
     public boolean hasAdGroupAudienceView() {
       return adGroupAudienceViewBuilder_ != null || adGroupAudienceView_ != null;
@@ -8373,6 +8863,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.resources.AdGroupAudienceView ad_group_audience_view = 57;</code>
+     * @return The adGroupAudienceView.
      */
     public com.google.ads.googleads.v1.resources.AdGroupAudienceView getAdGroupAudienceView() {
       if (adGroupAudienceViewBuilder_ == null) {
@@ -8516,6 +9007,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.resources.AdGroupBidModifier ad_group_bid_modifier = 24;</code>
+     * @return Whether the adGroupBidModifier field is set.
      */
     public boolean hasAdGroupBidModifier() {
       return adGroupBidModifierBuilder_ != null || adGroupBidModifier_ != null;
@@ -8526,6 +9018,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.resources.AdGroupBidModifier ad_group_bid_modifier = 24;</code>
+     * @return The adGroupBidModifier.
      */
     public com.google.ads.googleads.v1.resources.AdGroupBidModifier getAdGroupBidModifier() {
       if (adGroupBidModifierBuilder_ == null) {
@@ -8669,6 +9162,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.resources.AdGroupCriterion ad_group_criterion = 17;</code>
+     * @return Whether the adGroupCriterion field is set.
      */
     public boolean hasAdGroupCriterion() {
       return adGroupCriterionBuilder_ != null || adGroupCriterion_ != null;
@@ -8679,6 +9173,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.resources.AdGroupCriterion ad_group_criterion = 17;</code>
+     * @return The adGroupCriterion.
      */
     public com.google.ads.googleads.v1.resources.AdGroupCriterion getAdGroupCriterion() {
       if (adGroupCriterionBuilder_ == null) {
@@ -8822,6 +9317,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.resources.AdGroupCriterionLabel ad_group_criterion_label = 121;</code>
+     * @return Whether the adGroupCriterionLabel field is set.
      */
     public boolean hasAdGroupCriterionLabel() {
       return adGroupCriterionLabelBuilder_ != null || adGroupCriterionLabel_ != null;
@@ -8832,6 +9328,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.resources.AdGroupCriterionLabel ad_group_criterion_label = 121;</code>
+     * @return The adGroupCriterionLabel.
      */
     public com.google.ads.googleads.v1.resources.AdGroupCriterionLabel getAdGroupCriterionLabel() {
       if (adGroupCriterionLabelBuilder_ == null) {
@@ -8975,6 +9472,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.resources.AdGroupCriterionSimulation ad_group_criterion_simulation = 110;</code>
+     * @return Whether the adGroupCriterionSimulation field is set.
      */
     public boolean hasAdGroupCriterionSimulation() {
       return adGroupCriterionSimulationBuilder_ != null || adGroupCriterionSimulation_ != null;
@@ -8985,6 +9483,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.resources.AdGroupCriterionSimulation ad_group_criterion_simulation = 110;</code>
+     * @return The adGroupCriterionSimulation.
      */
     public com.google.ads.googleads.v1.resources.AdGroupCriterionSimulation getAdGroupCriterionSimulation() {
       if (adGroupCriterionSimulationBuilder_ == null) {
@@ -9128,6 +9627,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.resources.AdGroupExtensionSetting ad_group_extension_setting = 112;</code>
+     * @return Whether the adGroupExtensionSetting field is set.
      */
     public boolean hasAdGroupExtensionSetting() {
       return adGroupExtensionSettingBuilder_ != null || adGroupExtensionSetting_ != null;
@@ -9138,6 +9638,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.resources.AdGroupExtensionSetting ad_group_extension_setting = 112;</code>
+     * @return The adGroupExtensionSetting.
      */
     public com.google.ads.googleads.v1.resources.AdGroupExtensionSetting getAdGroupExtensionSetting() {
       if (adGroupExtensionSettingBuilder_ == null) {
@@ -9281,6 +9782,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.resources.AdGroupFeed ad_group_feed = 67;</code>
+     * @return Whether the adGroupFeed field is set.
      */
     public boolean hasAdGroupFeed() {
       return adGroupFeedBuilder_ != null || adGroupFeed_ != null;
@@ -9291,6 +9793,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.resources.AdGroupFeed ad_group_feed = 67;</code>
+     * @return The adGroupFeed.
      */
     public com.google.ads.googleads.v1.resources.AdGroupFeed getAdGroupFeed() {
       if (adGroupFeedBuilder_ == null) {
@@ -9434,6 +9937,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.resources.AdGroupLabel ad_group_label = 115;</code>
+     * @return Whether the adGroupLabel field is set.
      */
     public boolean hasAdGroupLabel() {
       return adGroupLabelBuilder_ != null || adGroupLabel_ != null;
@@ -9444,6 +9948,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.resources.AdGroupLabel ad_group_label = 115;</code>
+     * @return The adGroupLabel.
      */
     public com.google.ads.googleads.v1.resources.AdGroupLabel getAdGroupLabel() {
       if (adGroupLabelBuilder_ == null) {
@@ -9587,6 +10092,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.resources.AdGroupSimulation ad_group_simulation = 107;</code>
+     * @return Whether the adGroupSimulation field is set.
      */
     public boolean hasAdGroupSimulation() {
       return adGroupSimulationBuilder_ != null || adGroupSimulation_ != null;
@@ -9597,6 +10103,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.resources.AdGroupSimulation ad_group_simulation = 107;</code>
+     * @return The adGroupSimulation.
      */
     public com.google.ads.googleads.v1.resources.AdGroupSimulation getAdGroupSimulation() {
       if (adGroupSimulationBuilder_ == null) {
@@ -9740,6 +10247,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.resources.AdParameter ad_parameter = 130;</code>
+     * @return Whether the adParameter field is set.
      */
     public boolean hasAdParameter() {
       return adParameterBuilder_ != null || adParameter_ != null;
@@ -9750,6 +10258,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.resources.AdParameter ad_parameter = 130;</code>
+     * @return The adParameter.
      */
     public com.google.ads.googleads.v1.resources.AdParameter getAdParameter() {
       if (adParameterBuilder_ == null) {
@@ -9893,6 +10402,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.resources.AgeRangeView age_range_view = 48;</code>
+     * @return Whether the ageRangeView field is set.
      */
     public boolean hasAgeRangeView() {
       return ageRangeViewBuilder_ != null || ageRangeView_ != null;
@@ -9903,6 +10413,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.resources.AgeRangeView age_range_view = 48;</code>
+     * @return The ageRangeView.
      */
     public com.google.ads.googleads.v1.resources.AgeRangeView getAgeRangeView() {
       if (ageRangeViewBuilder_ == null) {
@@ -10046,6 +10557,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.resources.AdScheduleView ad_schedule_view = 89;</code>
+     * @return Whether the adScheduleView field is set.
      */
     public boolean hasAdScheduleView() {
       return adScheduleViewBuilder_ != null || adScheduleView_ != null;
@@ -10056,6 +10568,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.resources.AdScheduleView ad_schedule_view = 89;</code>
+     * @return The adScheduleView.
      */
     public com.google.ads.googleads.v1.resources.AdScheduleView getAdScheduleView() {
       if (adScheduleViewBuilder_ == null) {
@@ -10199,6 +10712,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.resources.DomainCategory domain_category = 91;</code>
+     * @return Whether the domainCategory field is set.
      */
     public boolean hasDomainCategory() {
       return domainCategoryBuilder_ != null || domainCategory_ != null;
@@ -10209,6 +10723,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.resources.DomainCategory domain_category = 91;</code>
+     * @return The domainCategory.
      */
     public com.google.ads.googleads.v1.resources.DomainCategory getDomainCategory() {
       if (domainCategoryBuilder_ == null) {
@@ -10352,6 +10867,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.resources.Asset asset = 105;</code>
+     * @return Whether the asset field is set.
      */
     public boolean hasAsset() {
       return assetBuilder_ != null || asset_ != null;
@@ -10362,6 +10878,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.resources.Asset asset = 105;</code>
+     * @return The asset.
      */
     public com.google.ads.googleads.v1.resources.Asset getAsset() {
       if (assetBuilder_ == null) {
@@ -10505,6 +11022,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.resources.BiddingStrategy bidding_strategy = 18;</code>
+     * @return Whether the biddingStrategy field is set.
      */
     public boolean hasBiddingStrategy() {
       return biddingStrategyBuilder_ != null || biddingStrategy_ != null;
@@ -10515,6 +11033,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.resources.BiddingStrategy bidding_strategy = 18;</code>
+     * @return The biddingStrategy.
      */
     public com.google.ads.googleads.v1.resources.BiddingStrategy getBiddingStrategy() {
       if (biddingStrategyBuilder_ == null) {
@@ -10658,6 +11177,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.resources.BillingSetup billing_setup = 41;</code>
+     * @return Whether the billingSetup field is set.
      */
     public boolean hasBillingSetup() {
       return billingSetupBuilder_ != null || billingSetup_ != null;
@@ -10668,6 +11188,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.resources.BillingSetup billing_setup = 41;</code>
+     * @return The billingSetup.
      */
     public com.google.ads.googleads.v1.resources.BillingSetup getBillingSetup() {
       if (billingSetupBuilder_ == null) {
@@ -10811,6 +11332,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.resources.CampaignBudget campaign_budget = 19;</code>
+     * @return Whether the campaignBudget field is set.
      */
     public boolean hasCampaignBudget() {
       return campaignBudgetBuilder_ != null || campaignBudget_ != null;
@@ -10821,6 +11343,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.resources.CampaignBudget campaign_budget = 19;</code>
+     * @return The campaignBudget.
      */
     public com.google.ads.googleads.v1.resources.CampaignBudget getCampaignBudget() {
       if (campaignBudgetBuilder_ == null) {
@@ -10964,6 +11487,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.resources.Campaign campaign = 2;</code>
+     * @return Whether the campaign field is set.
      */
     public boolean hasCampaign() {
       return campaignBuilder_ != null || campaign_ != null;
@@ -10974,6 +11498,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.resources.Campaign campaign = 2;</code>
+     * @return The campaign.
      */
     public com.google.ads.googleads.v1.resources.Campaign getCampaign() {
       if (campaignBuilder_ == null) {
@@ -11117,6 +11642,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.resources.CampaignAudienceView campaign_audience_view = 69;</code>
+     * @return Whether the campaignAudienceView field is set.
      */
     public boolean hasCampaignAudienceView() {
       return campaignAudienceViewBuilder_ != null || campaignAudienceView_ != null;
@@ -11127,6 +11653,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.resources.CampaignAudienceView campaign_audience_view = 69;</code>
+     * @return The campaignAudienceView.
      */
     public com.google.ads.googleads.v1.resources.CampaignAudienceView getCampaignAudienceView() {
       if (campaignAudienceViewBuilder_ == null) {
@@ -11270,6 +11797,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.resources.CampaignBidModifier campaign_bid_modifier = 26;</code>
+     * @return Whether the campaignBidModifier field is set.
      */
     public boolean hasCampaignBidModifier() {
       return campaignBidModifierBuilder_ != null || campaignBidModifier_ != null;
@@ -11280,6 +11808,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.resources.CampaignBidModifier campaign_bid_modifier = 26;</code>
+     * @return The campaignBidModifier.
      */
     public com.google.ads.googleads.v1.resources.CampaignBidModifier getCampaignBidModifier() {
       if (campaignBidModifierBuilder_ == null) {
@@ -11423,6 +11952,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.resources.CampaignCriterion campaign_criterion = 20;</code>
+     * @return Whether the campaignCriterion field is set.
      */
     public boolean hasCampaignCriterion() {
       return campaignCriterionBuilder_ != null || campaignCriterion_ != null;
@@ -11433,6 +11963,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.resources.CampaignCriterion campaign_criterion = 20;</code>
+     * @return The campaignCriterion.
      */
     public com.google.ads.googleads.v1.resources.CampaignCriterion getCampaignCriterion() {
       if (campaignCriterionBuilder_ == null) {
@@ -11576,6 +12107,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.resources.CampaignCriterionSimulation campaign_criterion_simulation = 111;</code>
+     * @return Whether the campaignCriterionSimulation field is set.
      */
     public boolean hasCampaignCriterionSimulation() {
       return campaignCriterionSimulationBuilder_ != null || campaignCriterionSimulation_ != null;
@@ -11586,6 +12118,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.resources.CampaignCriterionSimulation campaign_criterion_simulation = 111;</code>
+     * @return The campaignCriterionSimulation.
      */
     public com.google.ads.googleads.v1.resources.CampaignCriterionSimulation getCampaignCriterionSimulation() {
       if (campaignCriterionSimulationBuilder_ == null) {
@@ -11729,6 +12262,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.resources.CampaignDraft campaign_draft = 49;</code>
+     * @return Whether the campaignDraft field is set.
      */
     public boolean hasCampaignDraft() {
       return campaignDraftBuilder_ != null || campaignDraft_ != null;
@@ -11739,6 +12273,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.resources.CampaignDraft campaign_draft = 49;</code>
+     * @return The campaignDraft.
      */
     public com.google.ads.googleads.v1.resources.CampaignDraft getCampaignDraft() {
       if (campaignDraftBuilder_ == null) {
@@ -11882,6 +12417,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.resources.CampaignExperiment campaign_experiment = 84;</code>
+     * @return Whether the campaignExperiment field is set.
      */
     public boolean hasCampaignExperiment() {
       return campaignExperimentBuilder_ != null || campaignExperiment_ != null;
@@ -11892,6 +12428,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.resources.CampaignExperiment campaign_experiment = 84;</code>
+     * @return The campaignExperiment.
      */
     public com.google.ads.googleads.v1.resources.CampaignExperiment getCampaignExperiment() {
       if (campaignExperimentBuilder_ == null) {
@@ -12035,6 +12572,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.resources.CampaignExtensionSetting campaign_extension_setting = 113;</code>
+     * @return Whether the campaignExtensionSetting field is set.
      */
     public boolean hasCampaignExtensionSetting() {
       return campaignExtensionSettingBuilder_ != null || campaignExtensionSetting_ != null;
@@ -12045,6 +12583,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.resources.CampaignExtensionSetting campaign_extension_setting = 113;</code>
+     * @return The campaignExtensionSetting.
      */
     public com.google.ads.googleads.v1.resources.CampaignExtensionSetting getCampaignExtensionSetting() {
       if (campaignExtensionSettingBuilder_ == null) {
@@ -12188,6 +12727,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.resources.CampaignFeed campaign_feed = 63;</code>
+     * @return Whether the campaignFeed field is set.
      */
     public boolean hasCampaignFeed() {
       return campaignFeedBuilder_ != null || campaignFeed_ != null;
@@ -12198,6 +12738,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.resources.CampaignFeed campaign_feed = 63;</code>
+     * @return The campaignFeed.
      */
     public com.google.ads.googleads.v1.resources.CampaignFeed getCampaignFeed() {
       if (campaignFeedBuilder_ == null) {
@@ -12341,6 +12882,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.resources.CampaignLabel campaign_label = 108;</code>
+     * @return Whether the campaignLabel field is set.
      */
     public boolean hasCampaignLabel() {
       return campaignLabelBuilder_ != null || campaignLabel_ != null;
@@ -12351,6 +12893,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.resources.CampaignLabel campaign_label = 108;</code>
+     * @return The campaignLabel.
      */
     public com.google.ads.googleads.v1.resources.CampaignLabel getCampaignLabel() {
       if (campaignLabelBuilder_ == null) {
@@ -12494,6 +13037,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.resources.CampaignSharedSet campaign_shared_set = 30;</code>
+     * @return Whether the campaignSharedSet field is set.
      */
     public boolean hasCampaignSharedSet() {
       return campaignSharedSetBuilder_ != null || campaignSharedSet_ != null;
@@ -12504,6 +13048,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.resources.CampaignSharedSet campaign_shared_set = 30;</code>
+     * @return The campaignSharedSet.
      */
     public com.google.ads.googleads.v1.resources.CampaignSharedSet getCampaignSharedSet() {
       if (campaignSharedSetBuilder_ == null) {
@@ -12647,6 +13192,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.resources.CarrierConstant carrier_constant = 66;</code>
+     * @return Whether the carrierConstant field is set.
      */
     public boolean hasCarrierConstant() {
       return carrierConstantBuilder_ != null || carrierConstant_ != null;
@@ -12657,6 +13203,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.resources.CarrierConstant carrier_constant = 66;</code>
+     * @return The carrierConstant.
      */
     public com.google.ads.googleads.v1.resources.CarrierConstant getCarrierConstant() {
       if (carrierConstantBuilder_ == null) {
@@ -12800,6 +13347,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.resources.ChangeStatus change_status = 37;</code>
+     * @return Whether the changeStatus field is set.
      */
     public boolean hasChangeStatus() {
       return changeStatusBuilder_ != null || changeStatus_ != null;
@@ -12810,6 +13358,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.resources.ChangeStatus change_status = 37;</code>
+     * @return The changeStatus.
      */
     public com.google.ads.googleads.v1.resources.ChangeStatus getChangeStatus() {
       if (changeStatusBuilder_ == null) {
@@ -12953,6 +13502,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.resources.ConversionAction conversion_action = 103;</code>
+     * @return Whether the conversionAction field is set.
      */
     public boolean hasConversionAction() {
       return conversionActionBuilder_ != null || conversionAction_ != null;
@@ -12963,6 +13513,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.resources.ConversionAction conversion_action = 103;</code>
+     * @return The conversionAction.
      */
     public com.google.ads.googleads.v1.resources.ConversionAction getConversionAction() {
       if (conversionActionBuilder_ == null) {
@@ -13106,6 +13657,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.resources.ClickView click_view = 122;</code>
+     * @return Whether the clickView field is set.
      */
     public boolean hasClickView() {
       return clickViewBuilder_ != null || clickView_ != null;
@@ -13116,6 +13668,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.resources.ClickView click_view = 122;</code>
+     * @return The clickView.
      */
     public com.google.ads.googleads.v1.resources.ClickView getClickView() {
       if (clickViewBuilder_ == null) {
@@ -13259,6 +13812,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.resources.CustomInterest custom_interest = 104;</code>
+     * @return Whether the customInterest field is set.
      */
     public boolean hasCustomInterest() {
       return customInterestBuilder_ != null || customInterest_ != null;
@@ -13269,6 +13823,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.resources.CustomInterest custom_interest = 104;</code>
+     * @return The customInterest.
      */
     public com.google.ads.googleads.v1.resources.CustomInterest getCustomInterest() {
       if (customInterestBuilder_ == null) {
@@ -13412,6 +13967,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.resources.Customer customer = 1;</code>
+     * @return Whether the customer field is set.
      */
     public boolean hasCustomer() {
       return customerBuilder_ != null || customer_ != null;
@@ -13422,6 +13978,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.resources.Customer customer = 1;</code>
+     * @return The customer.
      */
     public com.google.ads.googleads.v1.resources.Customer getCustomer() {
       if (customerBuilder_ == null) {
@@ -13565,6 +14122,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.resources.CustomerManagerLink customer_manager_link = 61;</code>
+     * @return Whether the customerManagerLink field is set.
      */
     public boolean hasCustomerManagerLink() {
       return customerManagerLinkBuilder_ != null || customerManagerLink_ != null;
@@ -13575,6 +14133,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.resources.CustomerManagerLink customer_manager_link = 61;</code>
+     * @return The customerManagerLink.
      */
     public com.google.ads.googleads.v1.resources.CustomerManagerLink getCustomerManagerLink() {
       if (customerManagerLinkBuilder_ == null) {
@@ -13718,6 +14277,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.resources.CustomerClientLink customer_client_link = 62;</code>
+     * @return Whether the customerClientLink field is set.
      */
     public boolean hasCustomerClientLink() {
       return customerClientLinkBuilder_ != null || customerClientLink_ != null;
@@ -13728,6 +14288,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.resources.CustomerClientLink customer_client_link = 62;</code>
+     * @return The customerClientLink.
      */
     public com.google.ads.googleads.v1.resources.CustomerClientLink getCustomerClientLink() {
       if (customerClientLinkBuilder_ == null) {
@@ -13871,6 +14432,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.resources.CustomerClient customer_client = 70;</code>
+     * @return Whether the customerClient field is set.
      */
     public boolean hasCustomerClient() {
       return customerClientBuilder_ != null || customerClient_ != null;
@@ -13881,6 +14443,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.resources.CustomerClient customer_client = 70;</code>
+     * @return The customerClient.
      */
     public com.google.ads.googleads.v1.resources.CustomerClient getCustomerClient() {
       if (customerClientBuilder_ == null) {
@@ -14024,6 +14587,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.resources.CustomerExtensionSetting customer_extension_setting = 114;</code>
+     * @return Whether the customerExtensionSetting field is set.
      */
     public boolean hasCustomerExtensionSetting() {
       return customerExtensionSettingBuilder_ != null || customerExtensionSetting_ != null;
@@ -14034,6 +14598,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.resources.CustomerExtensionSetting customer_extension_setting = 114;</code>
+     * @return The customerExtensionSetting.
      */
     public com.google.ads.googleads.v1.resources.CustomerExtensionSetting getCustomerExtensionSetting() {
       if (customerExtensionSettingBuilder_ == null) {
@@ -14177,6 +14742,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.resources.CustomerFeed customer_feed = 64;</code>
+     * @return Whether the customerFeed field is set.
      */
     public boolean hasCustomerFeed() {
       return customerFeedBuilder_ != null || customerFeed_ != null;
@@ -14187,6 +14753,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.resources.CustomerFeed customer_feed = 64;</code>
+     * @return The customerFeed.
      */
     public com.google.ads.googleads.v1.resources.CustomerFeed getCustomerFeed() {
       if (customerFeedBuilder_ == null) {
@@ -14330,6 +14897,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.resources.CustomerLabel customer_label = 124;</code>
+     * @return Whether the customerLabel field is set.
      */
     public boolean hasCustomerLabel() {
       return customerLabelBuilder_ != null || customerLabel_ != null;
@@ -14340,6 +14908,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.resources.CustomerLabel customer_label = 124;</code>
+     * @return The customerLabel.
      */
     public com.google.ads.googleads.v1.resources.CustomerLabel getCustomerLabel() {
       if (customerLabelBuilder_ == null) {
@@ -14483,6 +15052,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.resources.CustomerNegativeCriterion customer_negative_criterion = 88;</code>
+     * @return Whether the customerNegativeCriterion field is set.
      */
     public boolean hasCustomerNegativeCriterion() {
       return customerNegativeCriterionBuilder_ != null || customerNegativeCriterion_ != null;
@@ -14493,6 +15063,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.resources.CustomerNegativeCriterion customer_negative_criterion = 88;</code>
+     * @return The customerNegativeCriterion.
      */
     public com.google.ads.googleads.v1.resources.CustomerNegativeCriterion getCustomerNegativeCriterion() {
       if (customerNegativeCriterionBuilder_ == null) {
@@ -14636,6 +15207,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.resources.DetailPlacementView detail_placement_view = 118;</code>
+     * @return Whether the detailPlacementView field is set.
      */
     public boolean hasDetailPlacementView() {
       return detailPlacementViewBuilder_ != null || detailPlacementView_ != null;
@@ -14646,6 +15218,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.resources.DetailPlacementView detail_placement_view = 118;</code>
+     * @return The detailPlacementView.
      */
     public com.google.ads.googleads.v1.resources.DetailPlacementView getDetailPlacementView() {
       if (detailPlacementViewBuilder_ == null) {
@@ -14789,6 +15362,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.resources.DisplayKeywordView display_keyword_view = 47;</code>
+     * @return Whether the displayKeywordView field is set.
      */
     public boolean hasDisplayKeywordView() {
       return displayKeywordViewBuilder_ != null || displayKeywordView_ != null;
@@ -14799,6 +15373,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.resources.DisplayKeywordView display_keyword_view = 47;</code>
+     * @return The displayKeywordView.
      */
     public com.google.ads.googleads.v1.resources.DisplayKeywordView getDisplayKeywordView() {
       if (displayKeywordViewBuilder_ == null) {
@@ -14942,6 +15517,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.resources.DynamicSearchAdsSearchTermView dynamic_search_ads_search_term_view = 106;</code>
+     * @return Whether the dynamicSearchAdsSearchTermView field is set.
      */
     public boolean hasDynamicSearchAdsSearchTermView() {
       return dynamicSearchAdsSearchTermViewBuilder_ != null || dynamicSearchAdsSearchTermView_ != null;
@@ -14952,6 +15528,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.resources.DynamicSearchAdsSearchTermView dynamic_search_ads_search_term_view = 106;</code>
+     * @return The dynamicSearchAdsSearchTermView.
      */
     public com.google.ads.googleads.v1.resources.DynamicSearchAdsSearchTermView getDynamicSearchAdsSearchTermView() {
       if (dynamicSearchAdsSearchTermViewBuilder_ == null) {
@@ -15095,6 +15672,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.resources.ExpandedLandingPageView expanded_landing_page_view = 128;</code>
+     * @return Whether the expandedLandingPageView field is set.
      */
     public boolean hasExpandedLandingPageView() {
       return expandedLandingPageViewBuilder_ != null || expandedLandingPageView_ != null;
@@ -15105,6 +15683,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.resources.ExpandedLandingPageView expanded_landing_page_view = 128;</code>
+     * @return The expandedLandingPageView.
      */
     public com.google.ads.googleads.v1.resources.ExpandedLandingPageView getExpandedLandingPageView() {
       if (expandedLandingPageViewBuilder_ == null) {
@@ -15248,6 +15827,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.resources.ExtensionFeedItem extension_feed_item = 85;</code>
+     * @return Whether the extensionFeedItem field is set.
      */
     public boolean hasExtensionFeedItem() {
       return extensionFeedItemBuilder_ != null || extensionFeedItem_ != null;
@@ -15258,6 +15838,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.resources.ExtensionFeedItem extension_feed_item = 85;</code>
+     * @return The extensionFeedItem.
      */
     public com.google.ads.googleads.v1.resources.ExtensionFeedItem getExtensionFeedItem() {
       if (extensionFeedItemBuilder_ == null) {
@@ -15401,6 +15982,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.resources.Feed feed = 46;</code>
+     * @return Whether the feed field is set.
      */
     public boolean hasFeed() {
       return feedBuilder_ != null || feed_ != null;
@@ -15411,6 +15993,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.resources.Feed feed = 46;</code>
+     * @return The feed.
      */
     public com.google.ads.googleads.v1.resources.Feed getFeed() {
       if (feedBuilder_ == null) {
@@ -15554,6 +16137,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.resources.FeedItem feed_item = 50;</code>
+     * @return Whether the feedItem field is set.
      */
     public boolean hasFeedItem() {
       return feedItemBuilder_ != null || feedItem_ != null;
@@ -15564,6 +16148,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.resources.FeedItem feed_item = 50;</code>
+     * @return The feedItem.
      */
     public com.google.ads.googleads.v1.resources.FeedItem getFeedItem() {
       if (feedItemBuilder_ == null) {
@@ -15707,6 +16292,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.resources.FeedItemTarget feed_item_target = 116;</code>
+     * @return Whether the feedItemTarget field is set.
      */
     public boolean hasFeedItemTarget() {
       return feedItemTargetBuilder_ != null || feedItemTarget_ != null;
@@ -15717,6 +16303,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.resources.FeedItemTarget feed_item_target = 116;</code>
+     * @return The feedItemTarget.
      */
     public com.google.ads.googleads.v1.resources.FeedItemTarget getFeedItemTarget() {
       if (feedItemTargetBuilder_ == null) {
@@ -15860,6 +16447,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.resources.FeedMapping feed_mapping = 58;</code>
+     * @return Whether the feedMapping field is set.
      */
     public boolean hasFeedMapping() {
       return feedMappingBuilder_ != null || feedMapping_ != null;
@@ -15870,6 +16458,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.resources.FeedMapping feed_mapping = 58;</code>
+     * @return The feedMapping.
      */
     public com.google.ads.googleads.v1.resources.FeedMapping getFeedMapping() {
       if (feedMappingBuilder_ == null) {
@@ -16013,6 +16602,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.resources.FeedPlaceholderView feed_placeholder_view = 97;</code>
+     * @return Whether the feedPlaceholderView field is set.
      */
     public boolean hasFeedPlaceholderView() {
       return feedPlaceholderViewBuilder_ != null || feedPlaceholderView_ != null;
@@ -16023,6 +16613,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.resources.FeedPlaceholderView feed_placeholder_view = 97;</code>
+     * @return The feedPlaceholderView.
      */
     public com.google.ads.googleads.v1.resources.FeedPlaceholderView getFeedPlaceholderView() {
       if (feedPlaceholderViewBuilder_ == null) {
@@ -16166,6 +16757,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.resources.GenderView gender_view = 40;</code>
+     * @return Whether the genderView field is set.
      */
     public boolean hasGenderView() {
       return genderViewBuilder_ != null || genderView_ != null;
@@ -16176,6 +16768,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.resources.GenderView gender_view = 40;</code>
+     * @return The genderView.
      */
     public com.google.ads.googleads.v1.resources.GenderView getGenderView() {
       if (genderViewBuilder_ == null) {
@@ -16319,6 +16912,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.resources.GeoTargetConstant geo_target_constant = 23;</code>
+     * @return Whether the geoTargetConstant field is set.
      */
     public boolean hasGeoTargetConstant() {
       return geoTargetConstantBuilder_ != null || geoTargetConstant_ != null;
@@ -16329,6 +16923,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.resources.GeoTargetConstant geo_target_constant = 23;</code>
+     * @return The geoTargetConstant.
      */
     public com.google.ads.googleads.v1.resources.GeoTargetConstant getGeoTargetConstant() {
       if (geoTargetConstantBuilder_ == null) {
@@ -16472,6 +17067,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.resources.GeographicView geographic_view = 125;</code>
+     * @return Whether the geographicView field is set.
      */
     public boolean hasGeographicView() {
       return geographicViewBuilder_ != null || geographicView_ != null;
@@ -16482,6 +17078,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.resources.GeographicView geographic_view = 125;</code>
+     * @return The geographicView.
      */
     public com.google.ads.googleads.v1.resources.GeographicView getGeographicView() {
       if (geographicViewBuilder_ == null) {
@@ -16625,6 +17222,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.resources.GroupPlacementView group_placement_view = 119;</code>
+     * @return Whether the groupPlacementView field is set.
      */
     public boolean hasGroupPlacementView() {
       return groupPlacementViewBuilder_ != null || groupPlacementView_ != null;
@@ -16635,6 +17233,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.resources.GroupPlacementView group_placement_view = 119;</code>
+     * @return The groupPlacementView.
      */
     public com.google.ads.googleads.v1.resources.GroupPlacementView getGroupPlacementView() {
       if (groupPlacementViewBuilder_ == null) {
@@ -16778,6 +17377,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.resources.HotelGroupView hotel_group_view = 51;</code>
+     * @return Whether the hotelGroupView field is set.
      */
     public boolean hasHotelGroupView() {
       return hotelGroupViewBuilder_ != null || hotelGroupView_ != null;
@@ -16788,6 +17388,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.resources.HotelGroupView hotel_group_view = 51;</code>
+     * @return The hotelGroupView.
      */
     public com.google.ads.googleads.v1.resources.HotelGroupView getHotelGroupView() {
       if (hotelGroupViewBuilder_ == null) {
@@ -16931,6 +17532,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.resources.HotelPerformanceView hotel_performance_view = 71;</code>
+     * @return Whether the hotelPerformanceView field is set.
      */
     public boolean hasHotelPerformanceView() {
       return hotelPerformanceViewBuilder_ != null || hotelPerformanceView_ != null;
@@ -16941,6 +17543,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.resources.HotelPerformanceView hotel_performance_view = 71;</code>
+     * @return The hotelPerformanceView.
      */
     public com.google.ads.googleads.v1.resources.HotelPerformanceView getHotelPerformanceView() {
       if (hotelPerformanceViewBuilder_ == null) {
@@ -17084,6 +17687,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.resources.KeywordView keyword_view = 21;</code>
+     * @return Whether the keywordView field is set.
      */
     public boolean hasKeywordView() {
       return keywordViewBuilder_ != null || keywordView_ != null;
@@ -17094,6 +17698,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.resources.KeywordView keyword_view = 21;</code>
+     * @return The keywordView.
      */
     public com.google.ads.googleads.v1.resources.KeywordView getKeywordView() {
       if (keywordViewBuilder_ == null) {
@@ -17237,6 +17842,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.resources.KeywordPlan keyword_plan = 32;</code>
+     * @return Whether the keywordPlan field is set.
      */
     public boolean hasKeywordPlan() {
       return keywordPlanBuilder_ != null || keywordPlan_ != null;
@@ -17247,6 +17853,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.resources.KeywordPlan keyword_plan = 32;</code>
+     * @return The keywordPlan.
      */
     public com.google.ads.googleads.v1.resources.KeywordPlan getKeywordPlan() {
       if (keywordPlanBuilder_ == null) {
@@ -17390,6 +17997,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.resources.KeywordPlanCampaign keyword_plan_campaign = 33;</code>
+     * @return Whether the keywordPlanCampaign field is set.
      */
     public boolean hasKeywordPlanCampaign() {
       return keywordPlanCampaignBuilder_ != null || keywordPlanCampaign_ != null;
@@ -17400,6 +18008,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.resources.KeywordPlanCampaign keyword_plan_campaign = 33;</code>
+     * @return The keywordPlanCampaign.
      */
     public com.google.ads.googleads.v1.resources.KeywordPlanCampaign getKeywordPlanCampaign() {
       if (keywordPlanCampaignBuilder_ == null) {
@@ -17543,6 +18152,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.resources.KeywordPlanNegativeKeyword keyword_plan_negative_keyword = 34;</code>
+     * @return Whether the keywordPlanNegativeKeyword field is set.
      */
     public boolean hasKeywordPlanNegativeKeyword() {
       return keywordPlanNegativeKeywordBuilder_ != null || keywordPlanNegativeKeyword_ != null;
@@ -17553,6 +18163,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.resources.KeywordPlanNegativeKeyword keyword_plan_negative_keyword = 34;</code>
+     * @return The keywordPlanNegativeKeyword.
      */
     public com.google.ads.googleads.v1.resources.KeywordPlanNegativeKeyword getKeywordPlanNegativeKeyword() {
       if (keywordPlanNegativeKeywordBuilder_ == null) {
@@ -17696,6 +18307,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.resources.KeywordPlanAdGroup keyword_plan_ad_group = 35;</code>
+     * @return Whether the keywordPlanAdGroup field is set.
      */
     public boolean hasKeywordPlanAdGroup() {
       return keywordPlanAdGroupBuilder_ != null || keywordPlanAdGroup_ != null;
@@ -17706,6 +18318,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.resources.KeywordPlanAdGroup keyword_plan_ad_group = 35;</code>
+     * @return The keywordPlanAdGroup.
      */
     public com.google.ads.googleads.v1.resources.KeywordPlanAdGroup getKeywordPlanAdGroup() {
       if (keywordPlanAdGroupBuilder_ == null) {
@@ -17849,6 +18462,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.resources.KeywordPlanKeyword keyword_plan_keyword = 36;</code>
+     * @return Whether the keywordPlanKeyword field is set.
      */
     public boolean hasKeywordPlanKeyword() {
       return keywordPlanKeywordBuilder_ != null || keywordPlanKeyword_ != null;
@@ -17859,6 +18473,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.resources.KeywordPlanKeyword keyword_plan_keyword = 36;</code>
+     * @return The keywordPlanKeyword.
      */
     public com.google.ads.googleads.v1.resources.KeywordPlanKeyword getKeywordPlanKeyword() {
       if (keywordPlanKeywordBuilder_ == null) {
@@ -18002,6 +18617,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.resources.Label label = 52;</code>
+     * @return Whether the label field is set.
      */
     public boolean hasLabel() {
       return labelBuilder_ != null || label_ != null;
@@ -18012,6 +18628,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.resources.Label label = 52;</code>
+     * @return The label.
      */
     public com.google.ads.googleads.v1.resources.Label getLabel() {
       if (labelBuilder_ == null) {
@@ -18155,6 +18772,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.resources.LandingPageView landing_page_view = 126;</code>
+     * @return Whether the landingPageView field is set.
      */
     public boolean hasLandingPageView() {
       return landingPageViewBuilder_ != null || landingPageView_ != null;
@@ -18165,6 +18783,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.resources.LandingPageView landing_page_view = 126;</code>
+     * @return The landingPageView.
      */
     public com.google.ads.googleads.v1.resources.LandingPageView getLandingPageView() {
       if (landingPageViewBuilder_ == null) {
@@ -18308,6 +18927,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.resources.LanguageConstant language_constant = 55;</code>
+     * @return Whether the languageConstant field is set.
      */
     public boolean hasLanguageConstant() {
       return languageConstantBuilder_ != null || languageConstant_ != null;
@@ -18318,6 +18938,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.resources.LanguageConstant language_constant = 55;</code>
+     * @return The languageConstant.
      */
     public com.google.ads.googleads.v1.resources.LanguageConstant getLanguageConstant() {
       if (languageConstantBuilder_ == null) {
@@ -18461,6 +19082,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.resources.LocationView location_view = 123;</code>
+     * @return Whether the locationView field is set.
      */
     public boolean hasLocationView() {
       return locationViewBuilder_ != null || locationView_ != null;
@@ -18471,6 +19093,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.resources.LocationView location_view = 123;</code>
+     * @return The locationView.
      */
     public com.google.ads.googleads.v1.resources.LocationView getLocationView() {
       if (locationViewBuilder_ == null) {
@@ -18614,6 +19237,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.resources.ManagedPlacementView managed_placement_view = 53;</code>
+     * @return Whether the managedPlacementView field is set.
      */
     public boolean hasManagedPlacementView() {
       return managedPlacementViewBuilder_ != null || managedPlacementView_ != null;
@@ -18624,6 +19248,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.resources.ManagedPlacementView managed_placement_view = 53;</code>
+     * @return The managedPlacementView.
      */
     public com.google.ads.googleads.v1.resources.ManagedPlacementView getManagedPlacementView() {
       if (managedPlacementViewBuilder_ == null) {
@@ -18767,6 +19392,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.resources.MediaFile media_file = 90;</code>
+     * @return Whether the mediaFile field is set.
      */
     public boolean hasMediaFile() {
       return mediaFileBuilder_ != null || mediaFile_ != null;
@@ -18777,6 +19403,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.resources.MediaFile media_file = 90;</code>
+     * @return The mediaFile.
      */
     public com.google.ads.googleads.v1.resources.MediaFile getMediaFile() {
       if (mediaFileBuilder_ == null) {
@@ -18920,6 +19547,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.resources.MobileAppCategoryConstant mobile_app_category_constant = 87;</code>
+     * @return Whether the mobileAppCategoryConstant field is set.
      */
     public boolean hasMobileAppCategoryConstant() {
       return mobileAppCategoryConstantBuilder_ != null || mobileAppCategoryConstant_ != null;
@@ -18930,6 +19558,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.resources.MobileAppCategoryConstant mobile_app_category_constant = 87;</code>
+     * @return The mobileAppCategoryConstant.
      */
     public com.google.ads.googleads.v1.resources.MobileAppCategoryConstant getMobileAppCategoryConstant() {
       if (mobileAppCategoryConstantBuilder_ == null) {
@@ -19073,6 +19702,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.resources.MobileDeviceConstant mobile_device_constant = 98;</code>
+     * @return Whether the mobileDeviceConstant field is set.
      */
     public boolean hasMobileDeviceConstant() {
       return mobileDeviceConstantBuilder_ != null || mobileDeviceConstant_ != null;
@@ -19083,6 +19713,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.resources.MobileDeviceConstant mobile_device_constant = 98;</code>
+     * @return The mobileDeviceConstant.
      */
     public com.google.ads.googleads.v1.resources.MobileDeviceConstant getMobileDeviceConstant() {
       if (mobileDeviceConstantBuilder_ == null) {
@@ -19226,6 +19857,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.resources.MutateJob mutate_job = 127;</code>
+     * @return Whether the mutateJob field is set.
      */
     public boolean hasMutateJob() {
       return mutateJobBuilder_ != null || mutateJob_ != null;
@@ -19236,6 +19868,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.resources.MutateJob mutate_job = 127;</code>
+     * @return The mutateJob.
      */
     public com.google.ads.googleads.v1.resources.MutateJob getMutateJob() {
       if (mutateJobBuilder_ == null) {
@@ -19379,6 +20012,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.resources.OperatingSystemVersionConstant operating_system_version_constant = 86;</code>
+     * @return Whether the operatingSystemVersionConstant field is set.
      */
     public boolean hasOperatingSystemVersionConstant() {
       return operatingSystemVersionConstantBuilder_ != null || operatingSystemVersionConstant_ != null;
@@ -19389,6 +20023,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.resources.OperatingSystemVersionConstant operating_system_version_constant = 86;</code>
+     * @return The operatingSystemVersionConstant.
      */
     public com.google.ads.googleads.v1.resources.OperatingSystemVersionConstant getOperatingSystemVersionConstant() {
       if (operatingSystemVersionConstantBuilder_ == null) {
@@ -19532,6 +20167,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.resources.PaidOrganicSearchTermView paid_organic_search_term_view = 129;</code>
+     * @return Whether the paidOrganicSearchTermView field is set.
      */
     public boolean hasPaidOrganicSearchTermView() {
       return paidOrganicSearchTermViewBuilder_ != null || paidOrganicSearchTermView_ != null;
@@ -19542,6 +20178,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.resources.PaidOrganicSearchTermView paid_organic_search_term_view = 129;</code>
+     * @return The paidOrganicSearchTermView.
      */
     public com.google.ads.googleads.v1.resources.PaidOrganicSearchTermView getPaidOrganicSearchTermView() {
       if (paidOrganicSearchTermViewBuilder_ == null) {
@@ -19685,6 +20322,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.resources.ParentalStatusView parental_status_view = 45;</code>
+     * @return Whether the parentalStatusView field is set.
      */
     public boolean hasParentalStatusView() {
       return parentalStatusViewBuilder_ != null || parentalStatusView_ != null;
@@ -19695,6 +20333,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.resources.ParentalStatusView parental_status_view = 45;</code>
+     * @return The parentalStatusView.
      */
     public com.google.ads.googleads.v1.resources.ParentalStatusView getParentalStatusView() {
       if (parentalStatusViewBuilder_ == null) {
@@ -19838,6 +20477,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.resources.ProductBiddingCategoryConstant product_bidding_category_constant = 109;</code>
+     * @return Whether the productBiddingCategoryConstant field is set.
      */
     public boolean hasProductBiddingCategoryConstant() {
       return productBiddingCategoryConstantBuilder_ != null || productBiddingCategoryConstant_ != null;
@@ -19848,6 +20488,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.resources.ProductBiddingCategoryConstant product_bidding_category_constant = 109;</code>
+     * @return The productBiddingCategoryConstant.
      */
     public com.google.ads.googleads.v1.resources.ProductBiddingCategoryConstant getProductBiddingCategoryConstant() {
       if (productBiddingCategoryConstantBuilder_ == null) {
@@ -19991,6 +20632,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.resources.ProductGroupView product_group_view = 54;</code>
+     * @return Whether the productGroupView field is set.
      */
     public boolean hasProductGroupView() {
       return productGroupViewBuilder_ != null || productGroupView_ != null;
@@ -20001,6 +20643,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.resources.ProductGroupView product_group_view = 54;</code>
+     * @return The productGroupView.
      */
     public com.google.ads.googleads.v1.resources.ProductGroupView getProductGroupView() {
       if (productGroupViewBuilder_ == null) {
@@ -20144,6 +20787,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.resources.Recommendation recommendation = 22;</code>
+     * @return Whether the recommendation field is set.
      */
     public boolean hasRecommendation() {
       return recommendationBuilder_ != null || recommendation_ != null;
@@ -20154,6 +20798,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.resources.Recommendation recommendation = 22;</code>
+     * @return The recommendation.
      */
     public com.google.ads.googleads.v1.resources.Recommendation getRecommendation() {
       if (recommendationBuilder_ == null) {
@@ -20297,6 +20942,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.resources.SearchTermView search_term_view = 68;</code>
+     * @return Whether the searchTermView field is set.
      */
     public boolean hasSearchTermView() {
       return searchTermViewBuilder_ != null || searchTermView_ != null;
@@ -20307,6 +20953,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.resources.SearchTermView search_term_view = 68;</code>
+     * @return The searchTermView.
      */
     public com.google.ads.googleads.v1.resources.SearchTermView getSearchTermView() {
       if (searchTermViewBuilder_ == null) {
@@ -20450,6 +21097,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.resources.SharedCriterion shared_criterion = 29;</code>
+     * @return Whether the sharedCriterion field is set.
      */
     public boolean hasSharedCriterion() {
       return sharedCriterionBuilder_ != null || sharedCriterion_ != null;
@@ -20460,6 +21108,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.resources.SharedCriterion shared_criterion = 29;</code>
+     * @return The sharedCriterion.
      */
     public com.google.ads.googleads.v1.resources.SharedCriterion getSharedCriterion() {
       if (sharedCriterionBuilder_ == null) {
@@ -20603,6 +21252,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.resources.SharedSet shared_set = 27;</code>
+     * @return Whether the sharedSet field is set.
      */
     public boolean hasSharedSet() {
       return sharedSetBuilder_ != null || sharedSet_ != null;
@@ -20613,6 +21263,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.resources.SharedSet shared_set = 27;</code>
+     * @return The sharedSet.
      */
     public com.google.ads.googleads.v1.resources.SharedSet getSharedSet() {
       if (sharedSetBuilder_ == null) {
@@ -20756,6 +21407,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.resources.ShoppingPerformanceView shopping_performance_view = 117;</code>
+     * @return Whether the shoppingPerformanceView field is set.
      */
     public boolean hasShoppingPerformanceView() {
       return shoppingPerformanceViewBuilder_ != null || shoppingPerformanceView_ != null;
@@ -20766,6 +21418,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.resources.ShoppingPerformanceView shopping_performance_view = 117;</code>
+     * @return The shoppingPerformanceView.
      */
     public com.google.ads.googleads.v1.resources.ShoppingPerformanceView getShoppingPerformanceView() {
       if (shoppingPerformanceViewBuilder_ == null) {
@@ -20909,6 +21562,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.resources.TopicView topic_view = 44;</code>
+     * @return Whether the topicView field is set.
      */
     public boolean hasTopicView() {
       return topicViewBuilder_ != null || topicView_ != null;
@@ -20919,6 +21573,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.resources.TopicView topic_view = 44;</code>
+     * @return The topicView.
      */
     public com.google.ads.googleads.v1.resources.TopicView getTopicView() {
       if (topicViewBuilder_ == null) {
@@ -21062,6 +21717,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.resources.UserInterest user_interest = 59;</code>
+     * @return Whether the userInterest field is set.
      */
     public boolean hasUserInterest() {
       return userInterestBuilder_ != null || userInterest_ != null;
@@ -21072,6 +21728,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.resources.UserInterest user_interest = 59;</code>
+     * @return The userInterest.
      */
     public com.google.ads.googleads.v1.resources.UserInterest getUserInterest() {
       if (userInterestBuilder_ == null) {
@@ -21215,6 +21872,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.resources.UserList user_list = 38;</code>
+     * @return Whether the userList field is set.
      */
     public boolean hasUserList() {
       return userListBuilder_ != null || userList_ != null;
@@ -21225,6 +21883,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.resources.UserList user_list = 38;</code>
+     * @return The userList.
      */
     public com.google.ads.googleads.v1.resources.UserList getUserList() {
       if (userListBuilder_ == null) {
@@ -21368,6 +22027,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.resources.RemarketingAction remarketing_action = 60;</code>
+     * @return Whether the remarketingAction field is set.
      */
     public boolean hasRemarketingAction() {
       return remarketingActionBuilder_ != null || remarketingAction_ != null;
@@ -21378,6 +22038,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.resources.RemarketingAction remarketing_action = 60;</code>
+     * @return The remarketingAction.
      */
     public com.google.ads.googleads.v1.resources.RemarketingAction getRemarketingAction() {
       if (remarketingActionBuilder_ == null) {
@@ -21521,6 +22182,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.resources.TopicConstant topic_constant = 31;</code>
+     * @return Whether the topicConstant field is set.
      */
     public boolean hasTopicConstant() {
       return topicConstantBuilder_ != null || topicConstant_ != null;
@@ -21531,6 +22193,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.resources.TopicConstant topic_constant = 31;</code>
+     * @return The topicConstant.
      */
     public com.google.ads.googleads.v1.resources.TopicConstant getTopicConstant() {
       if (topicConstantBuilder_ == null) {
@@ -21674,6 +22337,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.resources.Video video = 39;</code>
+     * @return Whether the video field is set.
      */
     public boolean hasVideo() {
       return videoBuilder_ != null || video_ != null;
@@ -21684,6 +22348,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.resources.Video video = 39;</code>
+     * @return The video.
      */
     public com.google.ads.googleads.v1.resources.Video getVideo() {
       if (videoBuilder_ == null) {
@@ -21827,6 +22492,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.common.Metrics metrics = 4;</code>
+     * @return Whether the metrics field is set.
      */
     public boolean hasMetrics() {
       return metricsBuilder_ != null || metrics_ != null;
@@ -21837,6 +22503,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.common.Metrics metrics = 4;</code>
+     * @return The metrics.
      */
     public com.google.ads.googleads.v1.common.Metrics getMetrics() {
       if (metricsBuilder_ == null) {
@@ -21980,6 +22647,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.common.Segments segments = 102;</code>
+     * @return Whether the segments field is set.
      */
     public boolean hasSegments() {
       return segmentsBuilder_ != null || segments_ != null;
@@ -21990,6 +22658,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.common.Segments segments = 102;</code>
+     * @return The segments.
      */
     public com.google.ads.googleads.v1.common.Segments getSegments() {
       if (segmentsBuilder_ == null) {

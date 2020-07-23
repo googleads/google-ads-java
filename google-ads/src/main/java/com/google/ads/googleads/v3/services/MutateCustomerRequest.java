@@ -10,7 +10,7 @@ package com.google.ads.googleads.v3.services;
  *
  * Protobuf type {@code google.ads.googleads.v3.services.MutateCustomerRequest}
  */
-public  final class MutateCustomerRequest extends
+public final class MutateCustomerRequest extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v3.services.MutateCustomerRequest)
     MutateCustomerRequestOrBuilder {
@@ -21,6 +21,13 @@ private static final long serialVersionUID = 0L;
   }
   private MutateCustomerRequest() {
     customerId_ = "";
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new MutateCustomerRequest();
   }
 
   @java.lang.Override
@@ -36,7 +43,6 @@ private static final long serialVersionUID = 0L;
     if (extensionRegistry == null) {
       throw new java.lang.NullPointerException();
     }
-    int mutable_bitField0_ = 0;
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
         com.google.protobuf.UnknownFieldSet.newBuilder();
     try {
@@ -111,7 +117,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+   * @return The customerId.
    */
+  @java.lang.Override
   public java.lang.String getCustomerId() {
     java.lang.Object ref = customerId_;
     if (ref instanceof java.lang.String) {
@@ -130,7 +138,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+   * @return The bytes for customerId.
    */
+  @java.lang.Override
   public com.google.protobuf.ByteString
       getCustomerIdBytes() {
     java.lang.Object ref = customerId_;
@@ -153,7 +163,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.services.CustomerOperation operation = 4 [(.google.api.field_behavior) = REQUIRED];</code>
+   * @return Whether the operation field is set.
    */
+  @java.lang.Override
   public boolean hasOperation() {
     return operation_ != null;
   }
@@ -163,7 +175,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.services.CustomerOperation operation = 4 [(.google.api.field_behavior) = REQUIRED];</code>
+   * @return The operation.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.services.CustomerOperation getOperation() {
     return operation_ == null ? com.google.ads.googleads.v3.services.CustomerOperation.getDefaultInstance() : operation_;
   }
@@ -174,6 +188,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v3.services.CustomerOperation operation = 4 [(.google.api.field_behavior) = REQUIRED];</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.services.CustomerOperationOrBuilder getOperationOrBuilder() {
     return getOperation();
   }
@@ -187,7 +202,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>bool validate_only = 5;</code>
+   * @return The validateOnly.
    */
+  @java.lang.Override
   public boolean getValidateOnly() {
     return validateOnly_;
   }
@@ -553,6 +570,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+     * @return The customerId.
      */
     public java.lang.String getCustomerId() {
       java.lang.Object ref = customerId_;
@@ -572,6 +590,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+     * @return The bytes for customerId.
      */
     public com.google.protobuf.ByteString
         getCustomerIdBytes() {
@@ -592,6 +611,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+     * @param value The customerId to set.
+     * @return This builder for chaining.
      */
     public Builder setCustomerId(
         java.lang.String value) {
@@ -609,6 +630,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+     * @return This builder for chaining.
      */
     public Builder clearCustomerId() {
       
@@ -622,6 +644,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+     * @param value The bytes for customerId to set.
+     * @return This builder for chaining.
      */
     public Builder setCustomerIdBytes(
         com.google.protobuf.ByteString value) {
@@ -644,6 +668,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.services.CustomerOperation operation = 4 [(.google.api.field_behavior) = REQUIRED];</code>
+     * @return Whether the operation field is set.
      */
     public boolean hasOperation() {
       return operationBuilder_ != null || operation_ != null;
@@ -654,6 +679,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.services.CustomerOperation operation = 4 [(.google.api.field_behavior) = REQUIRED];</code>
+     * @return The operation.
      */
     public com.google.ads.googleads.v3.services.CustomerOperation getOperation() {
       if (operationBuilder_ == null) {
@@ -796,7 +822,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>bool validate_only = 5;</code>
+     * @return The validateOnly.
      */
+    @java.lang.Override
     public boolean getValidateOnly() {
       return validateOnly_;
     }
@@ -807,6 +835,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>bool validate_only = 5;</code>
+     * @param value The validateOnly to set.
+     * @return This builder for chaining.
      */
     public Builder setValidateOnly(boolean value) {
       
@@ -821,6 +851,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>bool validate_only = 5;</code>
+     * @return This builder for chaining.
      */
     public Builder clearValidateOnly() {
       

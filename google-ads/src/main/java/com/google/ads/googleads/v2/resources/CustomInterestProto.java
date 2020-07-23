@@ -39,49 +39,48 @@ public final class CustomInterestProto {
       "ums/custom_interest_member_type.proto\032:g" +
       "oogle/ads/googleads/v2/enums/custom_inte" +
       "rest_status.proto\0328google/ads/googleads/" +
-      "v2/enums/custom_interest_type.proto\032\036goo" +
-      "gle/protobuf/wrappers.proto\032\034google/api/" +
-      "annotations.proto\"\257\003\n\016CustomInterest\022\025\n\r" +
-      "resource_name\030\001 \001(\t\022\'\n\002id\030\002 \001(\0132\033.google" +
-      ".protobuf.Int64Value\022\\\n\006status\030\003 \001(\0162L.g" +
-      "oogle.ads.googleads.v2.enums.CustomInter" +
-      "estStatusEnum.CustomInterestStatus\022*\n\004na" +
-      "me\030\004 \001(\0132\034.google.protobuf.StringValue\022V" +
-      "\n\004type\030\005 \001(\0162H.google.ads.googleads.v2.e" +
-      "nums.CustomInterestTypeEnum.CustomIntere" +
-      "stType\0221\n\013description\030\006 \001(\0132\034.google.pro" +
-      "tobuf.StringValue\022H\n\007members\030\007 \003(\01327.goo" +
-      "gle.ads.googleads.v2.resources.CustomInt" +
-      "erestMember\"\262\001\n\024CustomInterestMember\022i\n\013" +
-      "member_type\030\001 \001(\0162T.google.ads.googleads" +
-      ".v2.enums.CustomInterestMemberTypeEnum.C" +
-      "ustomInterestMemberType\022/\n\tparameter\030\002 \001" +
-      "(\0132\034.google.protobuf.StringValueB\200\002\n%com" +
-      ".google.ads.googleads.v2.resourcesB\023Cust" +
-      "omInterestProtoP\001ZJgoogle.golang.org/gen" +
-      "proto/googleapis/ads/googleads/v2/resour" +
-      "ces;resources\242\002\003GAA\252\002!Google.Ads.GoogleA" +
-      "ds.V2.Resources\312\002!Google\\Ads\\GoogleAds\\V" +
-      "2\\Resources\352\002%Google::Ads::GoogleAds::V2" +
-      "::Resourcesb\006proto3"
+      "v2/enums/custom_interest_type.proto\032\037goo" +
+      "gle/api/field_behavior.proto\032\031google/api" +
+      "/resource.proto\032\036google/protobuf/wrapper" +
+      "s.proto\032\034google/api/annotations.proto\"\313\004" +
+      "\n\016CustomInterest\022F\n\rresource_name\030\001 \001(\tB" +
+      "/\340A\005\372A)\n\'googleads.googleapis.com/Custom" +
+      "Interest\022,\n\002id\030\002 \001(\0132\033.google.protobuf.I" +
+      "nt64ValueB\003\340A\003\022\\\n\006status\030\003 \001(\0162L.google." +
+      "ads.googleads.v2.enums.CustomInterestSta" +
+      "tusEnum.CustomInterestStatus\022*\n\004name\030\004 \001" +
+      "(\0132\034.google.protobuf.StringValue\022V\n\004type" +
+      "\030\005 \001(\0162H.google.ads.googleads.v2.enums.C" +
+      "ustomInterestTypeEnum.CustomInterestType" +
+      "\0221\n\013description\030\006 \001(\0132\034.google.protobuf." +
+      "StringValue\022H\n\007members\030\007 \003(\01327.google.ad" +
+      "s.googleads.v2.resources.CustomInterestM" +
+      "ember:d\352Aa\n\'googleads.googleapis.com/Cus" +
+      "tomInterest\0226customers/{customer}/custom" +
+      "Interests/{custom_interest}\"\262\001\n\024CustomIn" +
+      "terestMember\022i\n\013member_type\030\001 \001(\0162T.goog" +
+      "le.ads.googleads.v2.enums.CustomInterest" +
+      "MemberTypeEnum.CustomInterestMemberType\022" +
+      "/\n\tparameter\030\002 \001(\0132\034.google.protobuf.Str" +
+      "ingValueB\200\002\n%com.google.ads.googleads.v2" +
+      ".resourcesB\023CustomInterestProtoP\001ZJgoogl" +
+      "e.golang.org/genproto/googleapis/ads/goo" +
+      "gleads/v2/resources;resources\242\002\003GAA\252\002!Go" +
+      "ogle.Ads.GoogleAds.V2.Resources\312\002!Google" +
+      "\\Ads\\GoogleAds\\V2\\Resources\352\002%Google::Ad" +
+      "s::GoogleAds::V2::Resourcesb\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.ads.googleads.v2.enums.CustomInterestMemberTypeProto.getDescriptor(),
           com.google.ads.googleads.v2.enums.CustomInterestStatusProto.getDescriptor(),
           com.google.ads.googleads.v2.enums.CustomInterestTypeProto.getDescriptor(),
+          com.google.api.FieldBehaviorProto.getDescriptor(),
+          com.google.api.ResourceProto.getDescriptor(),
           com.google.protobuf.WrappersProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
-        }, assigner);
+        });
     internal_static_google_ads_googleads_v2_resources_CustomInterest_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_google_ads_googleads_v2_resources_CustomInterest_fieldAccessorTable = new
@@ -94,9 +93,18 @@ public final class CustomInterestProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v2_resources_CustomInterestMember_descriptor,
         new java.lang.String[] { "MemberType", "Parameter", });
+    com.google.protobuf.ExtensionRegistry registry =
+        com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);
+    registry.add(com.google.api.ResourceProto.resource);
+    registry.add(com.google.api.ResourceProto.resourceReference);
+    com.google.protobuf.Descriptors.FileDescriptor
+        .internalUpdateFileDescriptor(descriptor, registry);
     com.google.ads.googleads.v2.enums.CustomInterestMemberTypeProto.getDescriptor();
     com.google.ads.googleads.v2.enums.CustomInterestStatusProto.getDescriptor();
     com.google.ads.googleads.v2.enums.CustomInterestTypeProto.getDescriptor();
+    com.google.api.FieldBehaviorProto.getDescriptor();
+    com.google.api.ResourceProto.getDescriptor();
     com.google.protobuf.WrappersProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
   }

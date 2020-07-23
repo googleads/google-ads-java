@@ -9,18 +9,20 @@ public interface GenerateProductMixIdeasRequestOrBuilder extends
 
   /**
    * <pre>
-   * The ID of the customer.
+   * Required. The ID of the customer.
    * </pre>
    *
-   * <code>string customer_id = 1;</code>
+   * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+   * @return The customerId.
    */
   java.lang.String getCustomerId();
   /**
    * <pre>
-   * The ID of the customer.
+   * Required. The ID of the customer.
    * </pre>
    *
-   * <code>string customer_id = 1;</code>
+   * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+   * @return The bytes for customerId.
    */
   com.google.protobuf.ByteString
       getCustomerIdBytes();
@@ -31,7 +33,8 @@ public interface GenerateProductMixIdeasRequestOrBuilder extends
    * ListPlannableLocations.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue plannable_location_id = 2;</code>
+   * <code>.google.protobuf.StringValue plannable_location_id = 2 [(.google.api.field_behavior) = REQUIRED];</code>
+   * @return Whether the plannableLocationId field is set.
    */
   boolean hasPlannableLocationId();
   /**
@@ -40,7 +43,8 @@ public interface GenerateProductMixIdeasRequestOrBuilder extends
    * ListPlannableLocations.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue plannable_location_id = 2;</code>
+   * <code>.google.protobuf.StringValue plannable_location_id = 2 [(.google.api.field_behavior) = REQUIRED];</code>
+   * @return The plannableLocationId.
    */
   com.google.protobuf.StringValue getPlannableLocationId();
   /**
@@ -49,7 +53,7 @@ public interface GenerateProductMixIdeasRequestOrBuilder extends
    * ListPlannableLocations.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue plannable_location_id = 2;</code>
+   * <code>.google.protobuf.StringValue plannable_location_id = 2 [(.google.api.field_behavior) = REQUIRED];</code>
    */
   com.google.protobuf.StringValueOrBuilder getPlannableLocationIdOrBuilder();
 
@@ -59,7 +63,8 @@ public interface GenerateProductMixIdeasRequestOrBuilder extends
    * Three-character ISO 4217 currency code.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue currency_code = 3;</code>
+   * <code>.google.protobuf.StringValue currency_code = 3 [(.google.api.field_behavior) = REQUIRED];</code>
+   * @return Whether the currencyCode field is set.
    */
   boolean hasCurrencyCode();
   /**
@@ -68,7 +73,8 @@ public interface GenerateProductMixIdeasRequestOrBuilder extends
    * Three-character ISO 4217 currency code.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue currency_code = 3;</code>
+   * <code>.google.protobuf.StringValue currency_code = 3 [(.google.api.field_behavior) = REQUIRED];</code>
+   * @return The currencyCode.
    */
   com.google.protobuf.StringValue getCurrencyCode();
   /**
@@ -77,7 +83,7 @@ public interface GenerateProductMixIdeasRequestOrBuilder extends
    * Three-character ISO 4217 currency code.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue currency_code = 3;</code>
+   * <code>.google.protobuf.StringValue currency_code = 3 [(.google.api.field_behavior) = REQUIRED];</code>
    */
   com.google.protobuf.StringValueOrBuilder getCurrencyCodeOrBuilder();
 
@@ -87,7 +93,8 @@ public interface GenerateProductMixIdeasRequestOrBuilder extends
    * Amount in micros. One million is equivalent to one unit.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value budget_micros = 4;</code>
+   * <code>.google.protobuf.Int64Value budget_micros = 4 [(.google.api.field_behavior) = REQUIRED];</code>
+   * @return Whether the budgetMicros field is set.
    */
   boolean hasBudgetMicros();
   /**
@@ -96,7 +103,8 @@ public interface GenerateProductMixIdeasRequestOrBuilder extends
    * Amount in micros. One million is equivalent to one unit.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value budget_micros = 4;</code>
+   * <code>.google.protobuf.Int64Value budget_micros = 4 [(.google.api.field_behavior) = REQUIRED];</code>
+   * @return The budgetMicros.
    */
   com.google.protobuf.Int64Value getBudgetMicros();
   /**
@@ -105,7 +113,7 @@ public interface GenerateProductMixIdeasRequestOrBuilder extends
    * Amount in micros. One million is equivalent to one unit.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value budget_micros = 4;</code>
+   * <code>.google.protobuf.Int64Value budget_micros = 4 [(.google.api.field_behavior) = REQUIRED];</code>
    */
   com.google.protobuf.Int64ValueOrBuilder getBudgetMicrosOrBuilder();
 
@@ -117,6 +125,7 @@ public interface GenerateProductMixIdeasRequestOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.services.Preferences preferences = 5;</code>
+   * @return Whether the preferences field is set.
    */
   boolean hasPreferences();
   /**
@@ -127,6 +136,7 @@ public interface GenerateProductMixIdeasRequestOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.services.Preferences preferences = 5;</code>
+   * @return The preferences.
    */
   com.google.ads.googleads.v2.services.Preferences getPreferences();
   /**

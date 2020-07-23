@@ -10,7 +10,7 @@ package com.google.ads.googleads.v4.common;
  *
  * Protobuf type {@code google.ads.googleads.v4.common.HotelCheckInDayInfo}
  */
-public  final class HotelCheckInDayInfo extends
+public final class HotelCheckInDayInfo extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.common.HotelCheckInDayInfo)
     HotelCheckInDayInfoOrBuilder {
@@ -101,7 +101,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.DayOfWeekEnum.DayOfWeek day_of_week = 1;</code>
    * @return The enum numeric value on the wire for dayOfWeek.
    */
-  public int getDayOfWeekValue() {
+  @java.lang.Override public int getDayOfWeekValue() {
     return dayOfWeek_;
   }
   /**
@@ -112,7 +112,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.DayOfWeekEnum.DayOfWeek day_of_week = 1;</code>
    * @return The dayOfWeek.
    */
-  public com.google.ads.googleads.v4.enums.DayOfWeekEnum.DayOfWeek getDayOfWeek() {
+  @java.lang.Override public com.google.ads.googleads.v4.enums.DayOfWeekEnum.DayOfWeek getDayOfWeek() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v4.enums.DayOfWeekEnum.DayOfWeek result = com.google.ads.googleads.v4.enums.DayOfWeekEnum.DayOfWeek.valueOf(dayOfWeek_);
     return result == null ? com.google.ads.googleads.v4.enums.DayOfWeekEnum.DayOfWeek.UNRECOGNIZED : result;
@@ -432,7 +432,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.DayOfWeekEnum.DayOfWeek day_of_week = 1;</code>
      * @return The enum numeric value on the wire for dayOfWeek.
      */
-    public int getDayOfWeekValue() {
+    @java.lang.Override public int getDayOfWeekValue() {
       return dayOfWeek_;
     }
     /**
@@ -445,6 +445,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setDayOfWeekValue(int value) {
+      
       dayOfWeek_ = value;
       onChanged();
       return this;
@@ -457,6 +458,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.DayOfWeekEnum.DayOfWeek day_of_week = 1;</code>
      * @return The dayOfWeek.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.enums.DayOfWeekEnum.DayOfWeek getDayOfWeek() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v4.enums.DayOfWeekEnum.DayOfWeek result = com.google.ads.googleads.v4.enums.DayOfWeekEnum.DayOfWeek.valueOf(dayOfWeek_);

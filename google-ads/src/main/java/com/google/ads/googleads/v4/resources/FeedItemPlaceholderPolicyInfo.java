@@ -11,7 +11,7 @@ package com.google.ads.googleads.v4.resources;
  *
  * Protobuf type {@code google.ads.googleads.v4.resources.FeedItemPlaceholderPolicyInfo}
  */
-public  final class FeedItemPlaceholderPolicyInfo extends
+public final class FeedItemPlaceholderPolicyInfo extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.resources.FeedItemPlaceholderPolicyInfo)
     FeedItemPlaceholderPolicyInfoOrBuilder {
@@ -197,7 +197,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.PlaceholderTypeEnum.PlaceholderType placeholder_type_enum = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The enum numeric value on the wire for placeholderTypeEnum.
    */
-  public int getPlaceholderTypeEnumValue() {
+  @java.lang.Override public int getPlaceholderTypeEnumValue() {
     return placeholderTypeEnum_;
   }
   /**
@@ -208,7 +208,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.PlaceholderTypeEnum.PlaceholderType placeholder_type_enum = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The placeholderTypeEnum.
    */
-  public com.google.ads.googleads.v4.enums.PlaceholderTypeEnum.PlaceholderType getPlaceholderTypeEnum() {
+  @java.lang.Override public com.google.ads.googleads.v4.enums.PlaceholderTypeEnum.PlaceholderType getPlaceholderTypeEnum() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v4.enums.PlaceholderTypeEnum.PlaceholderType result = com.google.ads.googleads.v4.enums.PlaceholderTypeEnum.PlaceholderType.valueOf(placeholderTypeEnum_);
     return result == null ? com.google.ads.googleads.v4.enums.PlaceholderTypeEnum.PlaceholderType.UNRECOGNIZED : result;
@@ -224,6 +224,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue feed_mapping_resource_name = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the feedMappingResourceName field is set.
    */
+  @java.lang.Override
   public boolean hasFeedMappingResourceName() {
     return feedMappingResourceName_ != null;
   }
@@ -235,6 +236,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue feed_mapping_resource_name = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The feedMappingResourceName.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getFeedMappingResourceName() {
     return feedMappingResourceName_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : feedMappingResourceName_;
   }
@@ -245,6 +247,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue feed_mapping_resource_name = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getFeedMappingResourceNameOrBuilder() {
     return getFeedMappingResourceName();
   }
@@ -259,7 +262,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.PolicyReviewStatusEnum.PolicyReviewStatus review_status = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The enum numeric value on the wire for reviewStatus.
    */
-  public int getReviewStatusValue() {
+  @java.lang.Override public int getReviewStatusValue() {
     return reviewStatus_;
   }
   /**
@@ -270,7 +273,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.PolicyReviewStatusEnum.PolicyReviewStatus review_status = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The reviewStatus.
    */
-  public com.google.ads.googleads.v4.enums.PolicyReviewStatusEnum.PolicyReviewStatus getReviewStatus() {
+  @java.lang.Override public com.google.ads.googleads.v4.enums.PolicyReviewStatusEnum.PolicyReviewStatus getReviewStatus() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v4.enums.PolicyReviewStatusEnum.PolicyReviewStatus result = com.google.ads.googleads.v4.enums.PolicyReviewStatusEnum.PolicyReviewStatus.valueOf(reviewStatus_);
     return result == null ? com.google.ads.googleads.v4.enums.PolicyReviewStatusEnum.PolicyReviewStatus.UNRECOGNIZED : result;
@@ -287,7 +290,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.PolicyApprovalStatusEnum.PolicyApprovalStatus approval_status = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The enum numeric value on the wire for approvalStatus.
    */
-  public int getApprovalStatusValue() {
+  @java.lang.Override public int getApprovalStatusValue() {
     return approvalStatus_;
   }
   /**
@@ -299,7 +302,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.PolicyApprovalStatusEnum.PolicyApprovalStatus approval_status = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The approvalStatus.
    */
-  public com.google.ads.googleads.v4.enums.PolicyApprovalStatusEnum.PolicyApprovalStatus getApprovalStatus() {
+  @java.lang.Override public com.google.ads.googleads.v4.enums.PolicyApprovalStatusEnum.PolicyApprovalStatus getApprovalStatus() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v4.enums.PolicyApprovalStatusEnum.PolicyApprovalStatus result = com.google.ads.googleads.v4.enums.PolicyApprovalStatusEnum.PolicyApprovalStatus.valueOf(approvalStatus_);
     return result == null ? com.google.ads.googleads.v4.enums.PolicyApprovalStatusEnum.PolicyApprovalStatus.UNRECOGNIZED : result;
@@ -314,6 +317,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.common.PolicyTopicEntry policy_topic_entries = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public java.util.List<com.google.ads.googleads.v4.common.PolicyTopicEntry> getPolicyTopicEntriesList() {
     return policyTopicEntries_;
   }
@@ -324,6 +328,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.common.PolicyTopicEntry policy_topic_entries = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public java.util.List<? extends com.google.ads.googleads.v4.common.PolicyTopicEntryOrBuilder> 
       getPolicyTopicEntriesOrBuilderList() {
     return policyTopicEntries_;
@@ -335,6 +340,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.common.PolicyTopicEntry policy_topic_entries = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public int getPolicyTopicEntriesCount() {
     return policyTopicEntries_.size();
   }
@@ -345,6 +351,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.common.PolicyTopicEntry policy_topic_entries = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.PolicyTopicEntry getPolicyTopicEntries(int index) {
     return policyTopicEntries_.get(index);
   }
@@ -355,6 +362,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.common.PolicyTopicEntry policy_topic_entries = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.PolicyTopicEntryOrBuilder getPolicyTopicEntriesOrBuilder(
       int index) {
     return policyTopicEntries_.get(index);
@@ -370,7 +378,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.FeedItemValidationStatusEnum.FeedItemValidationStatus validation_status = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The enum numeric value on the wire for validationStatus.
    */
-  public int getValidationStatusValue() {
+  @java.lang.Override public int getValidationStatusValue() {
     return validationStatus_;
   }
   /**
@@ -381,7 +389,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.FeedItemValidationStatusEnum.FeedItemValidationStatus validation_status = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The validationStatus.
    */
-  public com.google.ads.googleads.v4.enums.FeedItemValidationStatusEnum.FeedItemValidationStatus getValidationStatus() {
+  @java.lang.Override public com.google.ads.googleads.v4.enums.FeedItemValidationStatusEnum.FeedItemValidationStatus getValidationStatus() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v4.enums.FeedItemValidationStatusEnum.FeedItemValidationStatus result = com.google.ads.googleads.v4.enums.FeedItemValidationStatusEnum.FeedItemValidationStatus.valueOf(validationStatus_);
     return result == null ? com.google.ads.googleads.v4.enums.FeedItemValidationStatusEnum.FeedItemValidationStatus.UNRECOGNIZED : result;
@@ -396,6 +404,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.resources.FeedItemValidationError validation_errors = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public java.util.List<com.google.ads.googleads.v4.resources.FeedItemValidationError> getValidationErrorsList() {
     return validationErrors_;
   }
@@ -406,6 +415,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.resources.FeedItemValidationError validation_errors = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public java.util.List<? extends com.google.ads.googleads.v4.resources.FeedItemValidationErrorOrBuilder> 
       getValidationErrorsOrBuilderList() {
     return validationErrors_;
@@ -417,6 +427,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.resources.FeedItemValidationError validation_errors = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public int getValidationErrorsCount() {
     return validationErrors_.size();
   }
@@ -427,6 +438,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.resources.FeedItemValidationError validation_errors = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.resources.FeedItemValidationError getValidationErrors(int index) {
     return validationErrors_.get(index);
   }
@@ -437,6 +449,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.resources.FeedItemValidationError validation_errors = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.resources.FeedItemValidationErrorOrBuilder getValidationErrorsOrBuilder(
       int index) {
     return validationErrors_.get(index);
@@ -452,7 +465,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.FeedItemQualityApprovalStatusEnum.FeedItemQualityApprovalStatus quality_approval_status = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The enum numeric value on the wire for qualityApprovalStatus.
    */
-  public int getQualityApprovalStatusValue() {
+  @java.lang.Override public int getQualityApprovalStatusValue() {
     return qualityApprovalStatus_;
   }
   /**
@@ -463,7 +476,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.FeedItemQualityApprovalStatusEnum.FeedItemQualityApprovalStatus quality_approval_status = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The qualityApprovalStatus.
    */
-  public com.google.ads.googleads.v4.enums.FeedItemQualityApprovalStatusEnum.FeedItemQualityApprovalStatus getQualityApprovalStatus() {
+  @java.lang.Override public com.google.ads.googleads.v4.enums.FeedItemQualityApprovalStatusEnum.FeedItemQualityApprovalStatus getQualityApprovalStatus() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v4.enums.FeedItemQualityApprovalStatusEnum.FeedItemQualityApprovalStatus result = com.google.ads.googleads.v4.enums.FeedItemQualityApprovalStatusEnum.FeedItemQualityApprovalStatus.valueOf(qualityApprovalStatus_);
     return result == null ? com.google.ads.googleads.v4.enums.FeedItemQualityApprovalStatusEnum.FeedItemQualityApprovalStatus.UNRECOGNIZED : result;
@@ -489,6 +502,7 @@ private static final long serialVersionUID = 0L;
    * <code>repeated .google.ads.googleads.v4.enums.FeedItemQualityDisapprovalReasonEnum.FeedItemQualityDisapprovalReason quality_disapproval_reasons = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return A list containing the qualityDisapprovalReasons.
    */
+  @java.lang.Override
   public java.util.List<com.google.ads.googleads.v4.enums.FeedItemQualityDisapprovalReasonEnum.FeedItemQualityDisapprovalReason> getQualityDisapprovalReasonsList() {
     return new com.google.protobuf.Internal.ListAdapter<
         java.lang.Integer, com.google.ads.googleads.v4.enums.FeedItemQualityDisapprovalReasonEnum.FeedItemQualityDisapprovalReason>(qualityDisapprovalReasons_, qualityDisapprovalReasons_converter_);
@@ -501,6 +515,7 @@ private static final long serialVersionUID = 0L;
    * <code>repeated .google.ads.googleads.v4.enums.FeedItemQualityDisapprovalReasonEnum.FeedItemQualityDisapprovalReason quality_disapproval_reasons = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The count of qualityDisapprovalReasons.
    */
+  @java.lang.Override
   public int getQualityDisapprovalReasonsCount() {
     return qualityDisapprovalReasons_.size();
   }
@@ -513,6 +528,7 @@ private static final long serialVersionUID = 0L;
    * @param index The index of the element to return.
    * @return The qualityDisapprovalReasons at the given index.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.enums.FeedItemQualityDisapprovalReasonEnum.FeedItemQualityDisapprovalReason getQualityDisapprovalReasons(int index) {
     return qualityDisapprovalReasons_converter_.convert(qualityDisapprovalReasons_.get(index));
   }
@@ -524,6 +540,7 @@ private static final long serialVersionUID = 0L;
    * <code>repeated .google.ads.googleads.v4.enums.FeedItemQualityDisapprovalReasonEnum.FeedItemQualityDisapprovalReason quality_disapproval_reasons = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return A list containing the enum numeric values on the wire for qualityDisapprovalReasons.
    */
+  @java.lang.Override
   public java.util.List<java.lang.Integer>
   getQualityDisapprovalReasonsValueList() {
     return qualityDisapprovalReasons_;
@@ -537,6 +554,7 @@ private static final long serialVersionUID = 0L;
    * @param index The index of the value to return.
    * @return The enum numeric value on the wire of qualityDisapprovalReasons at the given index.
    */
+  @java.lang.Override
   public int getQualityDisapprovalReasonsValue(int index) {
     return qualityDisapprovalReasons_.get(index);
   }
@@ -1105,7 +1123,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.PlaceholderTypeEnum.PlaceholderType placeholder_type_enum = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The enum numeric value on the wire for placeholderTypeEnum.
      */
-    public int getPlaceholderTypeEnumValue() {
+    @java.lang.Override public int getPlaceholderTypeEnumValue() {
       return placeholderTypeEnum_;
     }
     /**
@@ -1118,6 +1136,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setPlaceholderTypeEnumValue(int value) {
+      
       placeholderTypeEnum_ = value;
       onChanged();
       return this;
@@ -1130,6 +1149,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.PlaceholderTypeEnum.PlaceholderType placeholder_type_enum = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The placeholderTypeEnum.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.enums.PlaceholderTypeEnum.PlaceholderType getPlaceholderTypeEnum() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v4.enums.PlaceholderTypeEnum.PlaceholderType result = com.google.ads.googleads.v4.enums.PlaceholderTypeEnum.PlaceholderType.valueOf(placeholderTypeEnum_);
@@ -1332,7 +1352,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.PolicyReviewStatusEnum.PolicyReviewStatus review_status = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The enum numeric value on the wire for reviewStatus.
      */
-    public int getReviewStatusValue() {
+    @java.lang.Override public int getReviewStatusValue() {
       return reviewStatus_;
     }
     /**
@@ -1345,6 +1365,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setReviewStatusValue(int value) {
+      
       reviewStatus_ = value;
       onChanged();
       return this;
@@ -1357,6 +1378,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.PolicyReviewStatusEnum.PolicyReviewStatus review_status = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The reviewStatus.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.enums.PolicyReviewStatusEnum.PolicyReviewStatus getReviewStatus() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v4.enums.PolicyReviewStatusEnum.PolicyReviewStatus result = com.google.ads.googleads.v4.enums.PolicyReviewStatusEnum.PolicyReviewStatus.valueOf(reviewStatus_);
@@ -1405,7 +1427,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.PolicyApprovalStatusEnum.PolicyApprovalStatus approval_status = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The enum numeric value on the wire for approvalStatus.
      */
-    public int getApprovalStatusValue() {
+    @java.lang.Override public int getApprovalStatusValue() {
       return approvalStatus_;
     }
     /**
@@ -1419,6 +1441,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setApprovalStatusValue(int value) {
+      
       approvalStatus_ = value;
       onChanged();
       return this;
@@ -1432,6 +1455,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.PolicyApprovalStatusEnum.PolicyApprovalStatus approval_status = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The approvalStatus.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.enums.PolicyApprovalStatusEnum.PolicyApprovalStatus getApprovalStatus() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v4.enums.PolicyApprovalStatusEnum.PolicyApprovalStatus result = com.google.ads.googleads.v4.enums.PolicyApprovalStatusEnum.PolicyApprovalStatus.valueOf(approvalStatus_);
@@ -1793,7 +1817,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.FeedItemValidationStatusEnum.FeedItemValidationStatus validation_status = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The enum numeric value on the wire for validationStatus.
      */
-    public int getValidationStatusValue() {
+    @java.lang.Override public int getValidationStatusValue() {
       return validationStatus_;
     }
     /**
@@ -1806,6 +1830,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setValidationStatusValue(int value) {
+      
       validationStatus_ = value;
       onChanged();
       return this;
@@ -1818,6 +1843,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.FeedItemValidationStatusEnum.FeedItemValidationStatus validation_status = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The validationStatus.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.enums.FeedItemValidationStatusEnum.FeedItemValidationStatus getValidationStatus() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v4.enums.FeedItemValidationStatusEnum.FeedItemValidationStatus result = com.google.ads.googleads.v4.enums.FeedItemValidationStatusEnum.FeedItemValidationStatus.valueOf(validationStatus_);
@@ -2177,7 +2203,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.FeedItemQualityApprovalStatusEnum.FeedItemQualityApprovalStatus quality_approval_status = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The enum numeric value on the wire for qualityApprovalStatus.
      */
-    public int getQualityApprovalStatusValue() {
+    @java.lang.Override public int getQualityApprovalStatusValue() {
       return qualityApprovalStatus_;
     }
     /**
@@ -2190,6 +2216,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setQualityApprovalStatusValue(int value) {
+      
       qualityApprovalStatus_ = value;
       onChanged();
       return this;
@@ -2202,6 +2229,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.FeedItemQualityApprovalStatusEnum.FeedItemQualityApprovalStatus quality_approval_status = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The qualityApprovalStatus.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.enums.FeedItemQualityApprovalStatusEnum.FeedItemQualityApprovalStatus getQualityApprovalStatus() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v4.enums.FeedItemQualityApprovalStatusEnum.FeedItemQualityApprovalStatus result = com.google.ads.googleads.v4.enums.FeedItemQualityApprovalStatusEnum.FeedItemQualityApprovalStatus.valueOf(qualityApprovalStatus_);

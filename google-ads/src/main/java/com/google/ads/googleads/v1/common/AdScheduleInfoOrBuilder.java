@@ -15,6 +15,7 @@ public interface AdScheduleInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v1.enums.MinuteOfHourEnum.MinuteOfHour start_minute = 1;</code>
+   * @return The enum numeric value on the wire for startMinute.
    */
   int getStartMinuteValue();
   /**
@@ -25,6 +26,7 @@ public interface AdScheduleInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v1.enums.MinuteOfHourEnum.MinuteOfHour start_minute = 1;</code>
+   * @return The startMinute.
    */
   com.google.ads.googleads.v1.enums.MinuteOfHourEnum.MinuteOfHour getStartMinute();
 
@@ -37,6 +39,7 @@ public interface AdScheduleInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v1.enums.MinuteOfHourEnum.MinuteOfHour end_minute = 2;</code>
+   * @return The enum numeric value on the wire for endMinute.
    */
   int getEndMinuteValue();
   /**
@@ -48,6 +51,7 @@ public interface AdScheduleInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v1.enums.MinuteOfHourEnum.MinuteOfHour end_minute = 2;</code>
+   * @return The endMinute.
    */
   com.google.ads.googleads.v1.enums.MinuteOfHourEnum.MinuteOfHour getEndMinute();
 
@@ -60,6 +64,7 @@ public interface AdScheduleInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int32Value start_hour = 3;</code>
+   * @return Whether the startHour field is set.
    */
   boolean hasStartHour();
   /**
@@ -71,6 +76,7 @@ public interface AdScheduleInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int32Value start_hour = 3;</code>
+   * @return The startHour.
    */
   com.google.protobuf.Int32Value getStartHour();
   /**
@@ -94,6 +100,7 @@ public interface AdScheduleInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int32Value end_hour = 4;</code>
+   * @return Whether the endHour field is set.
    */
   boolean hasEndHour();
   /**
@@ -105,6 +112,7 @@ public interface AdScheduleInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int32Value end_hour = 4;</code>
+   * @return The endHour.
    */
   com.google.protobuf.Int32Value getEndHour();
   /**
@@ -127,6 +135,7 @@ public interface AdScheduleInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v1.enums.DayOfWeekEnum.DayOfWeek day_of_week = 5;</code>
+   * @return The enum numeric value on the wire for dayOfWeek.
    */
   int getDayOfWeekValue();
   /**
@@ -137,6 +146,7 @@ public interface AdScheduleInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v1.enums.DayOfWeekEnum.DayOfWeek day_of_week = 5;</code>
+   * @return The dayOfWeek.
    */
   com.google.ads.googleads.v1.enums.DayOfWeekEnum.DayOfWeek getDayOfWeek();
 }

@@ -12,7 +12,7 @@ package com.google.ads.googleads.v4.errors;
  *
  * Protobuf type {@code google.ads.googleads.v4.errors.PolicyFindingDetails}
  */
-public  final class PolicyFindingDetails extends
+public final class PolicyFindingDetails extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.errors.PolicyFindingDetails)
     PolicyFindingDetailsOrBuilder {
@@ -111,6 +111,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.common.PolicyTopicEntry policy_topic_entries = 1;</code>
    */
+  @java.lang.Override
   public java.util.List<com.google.ads.googleads.v4.common.PolicyTopicEntry> getPolicyTopicEntriesList() {
     return policyTopicEntries_;
   }
@@ -123,6 +124,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.common.PolicyTopicEntry policy_topic_entries = 1;</code>
    */
+  @java.lang.Override
   public java.util.List<? extends com.google.ads.googleads.v4.common.PolicyTopicEntryOrBuilder> 
       getPolicyTopicEntriesOrBuilderList() {
     return policyTopicEntries_;
@@ -136,6 +138,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.common.PolicyTopicEntry policy_topic_entries = 1;</code>
    */
+  @java.lang.Override
   public int getPolicyTopicEntriesCount() {
     return policyTopicEntries_.size();
   }
@@ -148,6 +151,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.common.PolicyTopicEntry policy_topic_entries = 1;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.PolicyTopicEntry getPolicyTopicEntries(int index) {
     return policyTopicEntries_.get(index);
   }
@@ -160,6 +164,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.common.PolicyTopicEntry policy_topic_entries = 1;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.PolicyTopicEntryOrBuilder getPolicyTopicEntriesOrBuilder(
       int index) {
     return policyTopicEntries_.get(index);

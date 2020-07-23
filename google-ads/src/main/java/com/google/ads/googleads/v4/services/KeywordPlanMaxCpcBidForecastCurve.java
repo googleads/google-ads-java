@@ -10,7 +10,7 @@ package com.google.ads.googleads.v4.services;
  *
  * Protobuf type {@code google.ads.googleads.v4.services.KeywordPlanMaxCpcBidForecastCurve}
  */
-public  final class KeywordPlanMaxCpcBidForecastCurve extends
+public final class KeywordPlanMaxCpcBidForecastCurve extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.services.KeywordPlanMaxCpcBidForecastCurve)
     KeywordPlanMaxCpcBidForecastCurveOrBuilder {
@@ -107,6 +107,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.services.KeywordPlanMaxCpcBidForecast max_cpc_bid_forecasts = 1;</code>
    */
+  @java.lang.Override
   public java.util.List<com.google.ads.googleads.v4.services.KeywordPlanMaxCpcBidForecast> getMaxCpcBidForecastsList() {
     return maxCpcBidForecasts_;
   }
@@ -117,6 +118,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.services.KeywordPlanMaxCpcBidForecast max_cpc_bid_forecasts = 1;</code>
    */
+  @java.lang.Override
   public java.util.List<? extends com.google.ads.googleads.v4.services.KeywordPlanMaxCpcBidForecastOrBuilder> 
       getMaxCpcBidForecastsOrBuilderList() {
     return maxCpcBidForecasts_;
@@ -128,6 +130,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.services.KeywordPlanMaxCpcBidForecast max_cpc_bid_forecasts = 1;</code>
    */
+  @java.lang.Override
   public int getMaxCpcBidForecastsCount() {
     return maxCpcBidForecasts_.size();
   }
@@ -138,6 +141,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.services.KeywordPlanMaxCpcBidForecast max_cpc_bid_forecasts = 1;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.services.KeywordPlanMaxCpcBidForecast getMaxCpcBidForecasts(int index) {
     return maxCpcBidForecasts_.get(index);
   }
@@ -148,6 +152,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.services.KeywordPlanMaxCpcBidForecast max_cpc_bid_forecasts = 1;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.services.KeywordPlanMaxCpcBidForecastOrBuilder getMaxCpcBidForecastsOrBuilder(
       int index) {
     return maxCpcBidForecasts_.get(index);

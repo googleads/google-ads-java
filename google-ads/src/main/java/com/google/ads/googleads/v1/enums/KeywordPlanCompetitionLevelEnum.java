@@ -14,7 +14,7 @@ package com.google.ads.googleads.v1.enums;
  *
  * Protobuf type {@code google.ads.googleads.v1.enums.KeywordPlanCompetitionLevelEnum}
  */
-public  final class KeywordPlanCompetitionLevelEnum extends
+public final class KeywordPlanCompetitionLevelEnum extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v1.enums.KeywordPlanCompetitionLevelEnum)
     KeywordPlanCompetitionLevelEnumOrBuilder {
@@ -24,6 +24,13 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private KeywordPlanCompetitionLevelEnum() {
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new KeywordPlanCompetitionLevelEnum();
   }
 
   @java.lang.Override
@@ -108,7 +115,7 @@ private static final long serialVersionUID = 0L;
     UNKNOWN(1),
     /**
      * <pre>
-     * Low competition.
+     * Low competition. The Competition Index range for this is [0, 33].
      * </pre>
      *
      * <code>LOW = 2;</code>
@@ -116,7 +123,7 @@ private static final long serialVersionUID = 0L;
     LOW(2),
     /**
      * <pre>
-     * Medium competition.
+     * Medium competition. The Competition Index range for this is [34, 66].
      * </pre>
      *
      * <code>MEDIUM = 3;</code>
@@ -124,7 +131,7 @@ private static final long serialVersionUID = 0L;
     MEDIUM(3),
     /**
      * <pre>
-     * High competition.
+     * High competition. The Competition Index range for this is [67, 100].
      * </pre>
      *
      * <code>HIGH = 4;</code>
@@ -151,7 +158,7 @@ private static final long serialVersionUID = 0L;
     public static final int UNKNOWN_VALUE = 1;
     /**
      * <pre>
-     * Low competition.
+     * Low competition. The Competition Index range for this is [0, 33].
      * </pre>
      *
      * <code>LOW = 2;</code>
@@ -159,7 +166,7 @@ private static final long serialVersionUID = 0L;
     public static final int LOW_VALUE = 2;
     /**
      * <pre>
-     * Medium competition.
+     * Medium competition. The Competition Index range for this is [34, 66].
      * </pre>
      *
      * <code>MEDIUM = 3;</code>
@@ -167,7 +174,7 @@ private static final long serialVersionUID = 0L;
     public static final int MEDIUM_VALUE = 3;
     /**
      * <pre>
-     * High competition.
+     * High competition. The Competition Index range for this is [67, 100].
      * </pre>
      *
      * <code>HIGH = 4;</code>
@@ -184,6 +191,8 @@ private static final long serialVersionUID = 0L;
     }
 
     /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
      * @deprecated Use {@link #forNumber(int)} instead.
      */
     @java.lang.Deprecated
@@ -191,6 +200,10 @@ private static final long serialVersionUID = 0L;
       return forNumber(value);
     }
 
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
     public static KeywordPlanCompetitionLevel forNumber(int value) {
       switch (value) {
         case 0: return UNSPECIFIED;
@@ -216,6 +229,10 @@ private static final long serialVersionUID = 0L;
 
     public final com.google.protobuf.Descriptors.EnumValueDescriptor
         getValueDescriptor() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalStateException(
+            "Can't get the descriptor of an unrecognized enum value.");
+      }
       return getDescriptor().getValues().get(ordinal());
     }
     public final com.google.protobuf.Descriptors.EnumDescriptor

@@ -5,14 +5,14 @@ package com.google.ads.googleads.v1.common;
 
 /**
  * <pre>
- * Settings for the
- * &lt;a href="https://support.google.com/google-ads/answer/7365594"&gt;
- * targeting related features&lt;/a&gt;, at Campaign and AdGroup level.
+ * Settings for the targeting-related features, at the campaign and ad group
+ * levels. For more details about the targeting setting, visit
+ * https://support.google.com/google-ads/answer/7365594
  * </pre>
  *
  * Protobuf type {@code google.ads.googleads.v1.common.TargetingSetting}
  */
-public  final class TargetingSetting extends
+public final class TargetingSetting extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v1.common.TargetingSetting)
     TargetingSettingOrBuilder {
@@ -23,6 +23,13 @@ private static final long serialVersionUID = 0L;
   }
   private TargetingSetting() {
     targetRestrictions_ = java.util.Collections.emptyList();
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new TargetingSetting();
   }
 
   @java.lang.Override
@@ -103,6 +110,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v1.common.TargetRestriction target_restrictions = 1;</code>
    */
+  @java.lang.Override
   public java.util.List<com.google.ads.googleads.v1.common.TargetRestriction> getTargetRestrictionsList() {
     return targetRestrictions_;
   }
@@ -114,6 +122,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v1.common.TargetRestriction target_restrictions = 1;</code>
    */
+  @java.lang.Override
   public java.util.List<? extends com.google.ads.googleads.v1.common.TargetRestrictionOrBuilder> 
       getTargetRestrictionsOrBuilderList() {
     return targetRestrictions_;
@@ -126,6 +135,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v1.common.TargetRestriction target_restrictions = 1;</code>
    */
+  @java.lang.Override
   public int getTargetRestrictionsCount() {
     return targetRestrictions_.size();
   }
@@ -137,6 +147,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v1.common.TargetRestriction target_restrictions = 1;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.common.TargetRestriction getTargetRestrictions(int index) {
     return targetRestrictions_.get(index);
   }
@@ -148,6 +159,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v1.common.TargetRestriction target_restrictions = 1;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.common.TargetRestrictionOrBuilder getTargetRestrictionsOrBuilder(
       int index) {
     return targetRestrictions_.get(index);
@@ -312,9 +324,9 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Settings for the
-   * &lt;a href="https://support.google.com/google-ads/answer/7365594"&gt;
-   * targeting related features&lt;/a&gt;, at Campaign and AdGroup level.
+   * Settings for the targeting-related features, at the campaign and ad group
+   * levels. For more details about the targeting setting, visit
+   * https://support.google.com/google-ads/answer/7365594
    * </pre>
    *
    * Protobuf type {@code google.ads.googleads.v1.common.TargetingSetting}

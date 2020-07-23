@@ -43,17 +43,9 @@ import javax.annotation.Generated;
  * <pre>
  * <code>
  * try (KeywordPlanIdeaServiceClient keywordPlanIdeaServiceClient = KeywordPlanIdeaServiceClient.create()) {
- *   String customerId = "";
  *   StringValue language = StringValue.newBuilder().build();
- *   List&lt;StringValue&gt; geoTargetConstants = new ArrayList&lt;&gt;();
- *   boolean includeAdultKeywords = false;
- *   KeywordPlanNetworkEnum.KeywordPlanNetwork keywordPlanNetwork = KeywordPlanNetworkEnum.KeywordPlanNetwork.UNSPECIFIED;
  *   GenerateKeywordIdeasRequest request = GenerateKeywordIdeasRequest.newBuilder()
- *     .setCustomerId(customerId)
  *     .setLanguage(language)
- *     .addAllGeoTargetConstants(geoTargetConstants)
- *     .setIncludeAdultKeywords(includeAdultKeywords)
- *     .setKeywordPlanNetwork(keywordPlanNetwork)
  *     .build();
  *   ApiFuture&lt;GenerateKeywordIdeasPagedResponse&gt; future = keywordPlanIdeaServiceClient.generateKeywordIdeasPagedCallable().futureCall(request);
  *   // Do something
@@ -178,17 +170,9 @@ public class KeywordPlanIdeaServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (KeywordPlanIdeaServiceClient keywordPlanIdeaServiceClient = KeywordPlanIdeaServiceClient.create()) {
-   *   String customerId = "";
    *   StringValue language = StringValue.newBuilder().build();
-   *   List&lt;StringValue&gt; geoTargetConstants = new ArrayList&lt;&gt;();
-   *   boolean includeAdultKeywords = false;
-   *   KeywordPlanNetworkEnum.KeywordPlanNetwork keywordPlanNetwork = KeywordPlanNetworkEnum.KeywordPlanNetwork.UNSPECIFIED;
    *   GenerateKeywordIdeasRequest request = GenerateKeywordIdeasRequest.newBuilder()
-   *     .setCustomerId(customerId)
    *     .setLanguage(language)
-   *     .addAllGeoTargetConstants(geoTargetConstants)
-   *     .setIncludeAdultKeywords(includeAdultKeywords)
-   *     .setKeywordPlanNetwork(keywordPlanNetwork)
    *     .build();
    *   for (GenerateKeywordIdeaResult element : keywordPlanIdeaServiceClient.generateKeywordIdeas(request).iterateAll()) {
    *     // doThingsWith(element);
@@ -212,17 +196,9 @@ public class KeywordPlanIdeaServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (KeywordPlanIdeaServiceClient keywordPlanIdeaServiceClient = KeywordPlanIdeaServiceClient.create()) {
-   *   String customerId = "";
    *   StringValue language = StringValue.newBuilder().build();
-   *   List&lt;StringValue&gt; geoTargetConstants = new ArrayList&lt;&gt;();
-   *   boolean includeAdultKeywords = false;
-   *   KeywordPlanNetworkEnum.KeywordPlanNetwork keywordPlanNetwork = KeywordPlanNetworkEnum.KeywordPlanNetwork.UNSPECIFIED;
    *   GenerateKeywordIdeasRequest request = GenerateKeywordIdeasRequest.newBuilder()
-   *     .setCustomerId(customerId)
    *     .setLanguage(language)
-   *     .addAllGeoTargetConstants(geoTargetConstants)
-   *     .setIncludeAdultKeywords(includeAdultKeywords)
-   *     .setKeywordPlanNetwork(keywordPlanNetwork)
    *     .build();
    *   ApiFuture&lt;GenerateKeywordIdeasPagedResponse&gt; future = keywordPlanIdeaServiceClient.generateKeywordIdeasPagedCallable().futureCall(request);
    *   // Do something
@@ -245,17 +221,9 @@ public class KeywordPlanIdeaServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (KeywordPlanIdeaServiceClient keywordPlanIdeaServiceClient = KeywordPlanIdeaServiceClient.create()) {
-   *   String customerId = "";
    *   StringValue language = StringValue.newBuilder().build();
-   *   List&lt;StringValue&gt; geoTargetConstants = new ArrayList&lt;&gt;();
-   *   boolean includeAdultKeywords = false;
-   *   KeywordPlanNetworkEnum.KeywordPlanNetwork keywordPlanNetwork = KeywordPlanNetworkEnum.KeywordPlanNetwork.UNSPECIFIED;
    *   GenerateKeywordIdeasRequest request = GenerateKeywordIdeasRequest.newBuilder()
-   *     .setCustomerId(customerId)
    *     .setLanguage(language)
-   *     .addAllGeoTargetConstants(geoTargetConstants)
-   *     .setIncludeAdultKeywords(includeAdultKeywords)
-   *     .setKeywordPlanNetwork(keywordPlanNetwork)
    *     .build();
    *   while (true) {
    *     GenerateKeywordIdeaResponse response = keywordPlanIdeaServiceClient.generateKeywordIdeasCallable().call(request);

@@ -15,6 +15,7 @@ public interface DomainCategoryOrBuilder extends
    * </pre>
    *
    * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The resourceName.
    */
   java.lang.String getResourceName();
   /**
@@ -25,6 +26,7 @@ public interface DomainCategoryOrBuilder extends
    * </pre>
    *
    * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The bytes for resourceName.
    */
   com.google.protobuf.ByteString
       getResourceNameBytes();
@@ -35,6 +37,7 @@ public interface DomainCategoryOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue campaign = 2 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return Whether the campaign field is set.
    */
   boolean hasCampaign();
   /**
@@ -43,6 +46,7 @@ public interface DomainCategoryOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue campaign = 2 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The campaign.
    */
   com.google.protobuf.StringValue getCampaign();
   /**
@@ -61,6 +65,7 @@ public interface DomainCategoryOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue category = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the category field is set.
    */
   boolean hasCategory();
   /**
@@ -70,6 +75,7 @@ public interface DomainCategoryOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue category = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The category.
    */
   com.google.protobuf.StringValue getCategory();
   /**
@@ -92,6 +98,7 @@ public interface DomainCategoryOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue language_code = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the languageCode field is set.
    */
   boolean hasLanguageCode();
   /**
@@ -104,6 +111,7 @@ public interface DomainCategoryOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue language_code = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The languageCode.
    */
   com.google.protobuf.StringValue getLanguageCode();
   /**
@@ -126,6 +134,7 @@ public interface DomainCategoryOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue domain = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the domain field is set.
    */
   boolean hasDomain();
   /**
@@ -135,6 +144,7 @@ public interface DomainCategoryOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue domain = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The domain.
    */
   com.google.protobuf.StringValue getDomain();
   /**
@@ -153,6 +163,7 @@ public interface DomainCategoryOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue coverage_fraction = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the coverageFraction field is set.
    */
   boolean hasCoverageFraction();
   /**
@@ -161,6 +172,7 @@ public interface DomainCategoryOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue coverage_fraction = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The coverageFraction.
    */
   com.google.protobuf.DoubleValue getCoverageFraction();
   /**
@@ -179,6 +191,7 @@ public interface DomainCategoryOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value category_rank = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the categoryRank field is set.
    */
   boolean hasCategoryRank();
   /**
@@ -188,6 +201,7 @@ public interface DomainCategoryOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value category_rank = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The categoryRank.
    */
   com.google.protobuf.Int64Value getCategoryRank();
   /**
@@ -206,6 +220,7 @@ public interface DomainCategoryOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.BoolValue has_children = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the hasChildren field is set.
    */
   boolean hasHasChildren();
   /**
@@ -214,6 +229,7 @@ public interface DomainCategoryOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.BoolValue has_children = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The hasChildren.
    */
   com.google.protobuf.BoolValue getHasChildren();
   /**
@@ -231,6 +247,7 @@ public interface DomainCategoryOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value recommended_cpc_bid_micros = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the recommendedCpcBidMicros field is set.
    */
   boolean hasRecommendedCpcBidMicros();
   /**
@@ -239,6 +256,7 @@ public interface DomainCategoryOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value recommended_cpc_bid_micros = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The recommendedCpcBidMicros.
    */
   com.google.protobuf.Int64Value getRecommendedCpcBidMicros();
   /**

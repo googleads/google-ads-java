@@ -9,18 +9,20 @@ public interface CreateMutateJobRequestOrBuilder extends
 
   /**
    * <pre>
-   * The ID of the customer for which to create a mutate job.
+   * Required. The ID of the customer for which to create a mutate job.
    * </pre>
    *
-   * <code>string customer_id = 1;</code>
+   * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+   * @return The customerId.
    */
   java.lang.String getCustomerId();
   /**
    * <pre>
-   * The ID of the customer for which to create a mutate job.
+   * Required. The ID of the customer for which to create a mutate job.
    * </pre>
    *
-   * <code>string customer_id = 1;</code>
+   * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+   * @return The bytes for customerId.
    */
   com.google.protobuf.ByteString
       getCustomerIdBytes();

@@ -21,7 +21,7 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.10.0)",
+    value = "by gRPC proto compiler",
     comments = "Source: google/ads/googleads/v4/services/recommendation_service.proto")
 public final class RecommendationServiceGrpc {
 
@@ -30,123 +30,111 @@ public final class RecommendationServiceGrpc {
   public static final String SERVICE_NAME = "google.ads.googleads.v4.services.RecommendationService";
 
   // Static method descriptors that strictly reflect the proto.
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  @java.lang.Deprecated // Use {@link #getGetRecommendationMethod()} instead. 
-  public static final io.grpc.MethodDescriptor<com.google.ads.googleads.v4.services.GetRecommendationRequest,
-      com.google.ads.googleads.v4.resources.Recommendation> METHOD_GET_RECOMMENDATION = getGetRecommendationMethodHelper();
-
   private static volatile io.grpc.MethodDescriptor<com.google.ads.googleads.v4.services.GetRecommendationRequest,
       com.google.ads.googleads.v4.resources.Recommendation> getGetRecommendationMethod;
 
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetRecommendation",
+      requestType = com.google.ads.googleads.v4.services.GetRecommendationRequest.class,
+      responseType = com.google.ads.googleads.v4.resources.Recommendation.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<com.google.ads.googleads.v4.services.GetRecommendationRequest,
       com.google.ads.googleads.v4.resources.Recommendation> getGetRecommendationMethod() {
-    return getGetRecommendationMethodHelper();
-  }
-
-  private static io.grpc.MethodDescriptor<com.google.ads.googleads.v4.services.GetRecommendationRequest,
-      com.google.ads.googleads.v4.resources.Recommendation> getGetRecommendationMethodHelper() {
     io.grpc.MethodDescriptor<com.google.ads.googleads.v4.services.GetRecommendationRequest, com.google.ads.googleads.v4.resources.Recommendation> getGetRecommendationMethod;
     if ((getGetRecommendationMethod = RecommendationServiceGrpc.getGetRecommendationMethod) == null) {
       synchronized (RecommendationServiceGrpc.class) {
         if ((getGetRecommendationMethod = RecommendationServiceGrpc.getGetRecommendationMethod) == null) {
-          RecommendationServiceGrpc.getGetRecommendationMethod = getGetRecommendationMethod = 
+          RecommendationServiceGrpc.getGetRecommendationMethod = getGetRecommendationMethod =
               io.grpc.MethodDescriptor.<com.google.ads.googleads.v4.services.GetRecommendationRequest, com.google.ads.googleads.v4.resources.Recommendation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "google.ads.googleads.v4.services.RecommendationService", "GetRecommendation"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetRecommendation"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v4.services.GetRecommendationRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v4.resources.Recommendation.getDefaultInstance()))
-                  .setSchemaDescriptor(new RecommendationServiceMethodDescriptorSupplier("GetRecommendation"))
-                  .build();
-          }
+              .setSchemaDescriptor(new RecommendationServiceMethodDescriptorSupplier("GetRecommendation"))
+              .build();
         }
-     }
-     return getGetRecommendationMethod;
+      }
+    }
+    return getGetRecommendationMethod;
   }
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  @java.lang.Deprecated // Use {@link #getApplyRecommendationMethod()} instead. 
-  public static final io.grpc.MethodDescriptor<com.google.ads.googleads.v4.services.ApplyRecommendationRequest,
-      com.google.ads.googleads.v4.services.ApplyRecommendationResponse> METHOD_APPLY_RECOMMENDATION = getApplyRecommendationMethodHelper();
 
   private static volatile io.grpc.MethodDescriptor<com.google.ads.googleads.v4.services.ApplyRecommendationRequest,
       com.google.ads.googleads.v4.services.ApplyRecommendationResponse> getApplyRecommendationMethod;
 
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ApplyRecommendation",
+      requestType = com.google.ads.googleads.v4.services.ApplyRecommendationRequest.class,
+      responseType = com.google.ads.googleads.v4.services.ApplyRecommendationResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<com.google.ads.googleads.v4.services.ApplyRecommendationRequest,
       com.google.ads.googleads.v4.services.ApplyRecommendationResponse> getApplyRecommendationMethod() {
-    return getApplyRecommendationMethodHelper();
-  }
-
-  private static io.grpc.MethodDescriptor<com.google.ads.googleads.v4.services.ApplyRecommendationRequest,
-      com.google.ads.googleads.v4.services.ApplyRecommendationResponse> getApplyRecommendationMethodHelper() {
     io.grpc.MethodDescriptor<com.google.ads.googleads.v4.services.ApplyRecommendationRequest, com.google.ads.googleads.v4.services.ApplyRecommendationResponse> getApplyRecommendationMethod;
     if ((getApplyRecommendationMethod = RecommendationServiceGrpc.getApplyRecommendationMethod) == null) {
       synchronized (RecommendationServiceGrpc.class) {
         if ((getApplyRecommendationMethod = RecommendationServiceGrpc.getApplyRecommendationMethod) == null) {
-          RecommendationServiceGrpc.getApplyRecommendationMethod = getApplyRecommendationMethod = 
+          RecommendationServiceGrpc.getApplyRecommendationMethod = getApplyRecommendationMethod =
               io.grpc.MethodDescriptor.<com.google.ads.googleads.v4.services.ApplyRecommendationRequest, com.google.ads.googleads.v4.services.ApplyRecommendationResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "google.ads.googleads.v4.services.RecommendationService", "ApplyRecommendation"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ApplyRecommendation"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v4.services.ApplyRecommendationRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v4.services.ApplyRecommendationResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new RecommendationServiceMethodDescriptorSupplier("ApplyRecommendation"))
-                  .build();
-          }
+              .setSchemaDescriptor(new RecommendationServiceMethodDescriptorSupplier("ApplyRecommendation"))
+              .build();
         }
-     }
-     return getApplyRecommendationMethod;
+      }
+    }
+    return getApplyRecommendationMethod;
   }
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  @java.lang.Deprecated // Use {@link #getDismissRecommendationMethod()} instead. 
-  public static final io.grpc.MethodDescriptor<com.google.ads.googleads.v4.services.DismissRecommendationRequest,
-      com.google.ads.googleads.v4.services.DismissRecommendationResponse> METHOD_DISMISS_RECOMMENDATION = getDismissRecommendationMethodHelper();
 
   private static volatile io.grpc.MethodDescriptor<com.google.ads.googleads.v4.services.DismissRecommendationRequest,
       com.google.ads.googleads.v4.services.DismissRecommendationResponse> getDismissRecommendationMethod;
 
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "DismissRecommendation",
+      requestType = com.google.ads.googleads.v4.services.DismissRecommendationRequest.class,
+      responseType = com.google.ads.googleads.v4.services.DismissRecommendationResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<com.google.ads.googleads.v4.services.DismissRecommendationRequest,
       com.google.ads.googleads.v4.services.DismissRecommendationResponse> getDismissRecommendationMethod() {
-    return getDismissRecommendationMethodHelper();
-  }
-
-  private static io.grpc.MethodDescriptor<com.google.ads.googleads.v4.services.DismissRecommendationRequest,
-      com.google.ads.googleads.v4.services.DismissRecommendationResponse> getDismissRecommendationMethodHelper() {
     io.grpc.MethodDescriptor<com.google.ads.googleads.v4.services.DismissRecommendationRequest, com.google.ads.googleads.v4.services.DismissRecommendationResponse> getDismissRecommendationMethod;
     if ((getDismissRecommendationMethod = RecommendationServiceGrpc.getDismissRecommendationMethod) == null) {
       synchronized (RecommendationServiceGrpc.class) {
         if ((getDismissRecommendationMethod = RecommendationServiceGrpc.getDismissRecommendationMethod) == null) {
-          RecommendationServiceGrpc.getDismissRecommendationMethod = getDismissRecommendationMethod = 
+          RecommendationServiceGrpc.getDismissRecommendationMethod = getDismissRecommendationMethod =
               io.grpc.MethodDescriptor.<com.google.ads.googleads.v4.services.DismissRecommendationRequest, com.google.ads.googleads.v4.services.DismissRecommendationResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "google.ads.googleads.v4.services.RecommendationService", "DismissRecommendation"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DismissRecommendation"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v4.services.DismissRecommendationRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v4.services.DismissRecommendationResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new RecommendationServiceMethodDescriptorSupplier("DismissRecommendation"))
-                  .build();
-          }
+              .setSchemaDescriptor(new RecommendationServiceMethodDescriptorSupplier("DismissRecommendation"))
+              .build();
         }
-     }
-     return getDismissRecommendationMethod;
+      }
+    }
+    return getDismissRecommendationMethod;
   }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static RecommendationServiceStub newStub(io.grpc.Channel channel) {
-    return new RecommendationServiceStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<RecommendationServiceStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<RecommendationServiceStub>() {
+        @java.lang.Override
+        public RecommendationServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new RecommendationServiceStub(channel, callOptions);
+        }
+      };
+    return RecommendationServiceStub.newStub(factory, channel);
   }
 
   /**
@@ -154,7 +142,14 @@ public final class RecommendationServiceGrpc {
    */
   public static RecommendationServiceBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new RecommendationServiceBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<RecommendationServiceBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<RecommendationServiceBlockingStub>() {
+        @java.lang.Override
+        public RecommendationServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new RecommendationServiceBlockingStub(channel, callOptions);
+        }
+      };
+    return RecommendationServiceBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -162,7 +157,14 @@ public final class RecommendationServiceGrpc {
    */
   public static RecommendationServiceFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new RecommendationServiceFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<RecommendationServiceFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<RecommendationServiceFutureStub>() {
+        @java.lang.Override
+        public RecommendationServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new RecommendationServiceFutureStub(channel, callOptions);
+        }
+      };
+    return RecommendationServiceFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -179,7 +181,7 @@ public final class RecommendationServiceGrpc {
      */
     public void getRecommendation(com.google.ads.googleads.v4.services.GetRecommendationRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v4.resources.Recommendation> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetRecommendationMethodHelper(), responseObserver);
+      asyncUnimplementedUnaryCall(getGetRecommendationMethod(), responseObserver);
     }
 
     /**
@@ -189,7 +191,7 @@ public final class RecommendationServiceGrpc {
      */
     public void applyRecommendation(com.google.ads.googleads.v4.services.ApplyRecommendationRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v4.services.ApplyRecommendationResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getApplyRecommendationMethodHelper(), responseObserver);
+      asyncUnimplementedUnaryCall(getApplyRecommendationMethod(), responseObserver);
     }
 
     /**
@@ -199,27 +201,27 @@ public final class RecommendationServiceGrpc {
      */
     public void dismissRecommendation(com.google.ads.googleads.v4.services.DismissRecommendationRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v4.services.DismissRecommendationResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getDismissRecommendationMethodHelper(), responseObserver);
+      asyncUnimplementedUnaryCall(getDismissRecommendationMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
-            getGetRecommendationMethodHelper(),
+            getGetRecommendationMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 com.google.ads.googleads.v4.services.GetRecommendationRequest,
                 com.google.ads.googleads.v4.resources.Recommendation>(
                   this, METHODID_GET_RECOMMENDATION)))
           .addMethod(
-            getApplyRecommendationMethodHelper(),
+            getApplyRecommendationMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 com.google.ads.googleads.v4.services.ApplyRecommendationRequest,
                 com.google.ads.googleads.v4.services.ApplyRecommendationResponse>(
                   this, METHODID_APPLY_RECOMMENDATION)))
           .addMethod(
-            getDismissRecommendationMethodHelper(),
+            getDismissRecommendationMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 com.google.ads.googleads.v4.services.DismissRecommendationRequest,
@@ -234,19 +236,15 @@ public final class RecommendationServiceGrpc {
    * Service to manage recommendations.
    * </pre>
    */
-  public static final class RecommendationServiceStub extends io.grpc.stub.AbstractStub<RecommendationServiceStub> {
-    private RecommendationServiceStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private RecommendationServiceStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class RecommendationServiceStub extends io.grpc.stub.AbstractAsyncStub<RecommendationServiceStub> {
+    private RecommendationServiceStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected RecommendationServiceStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected RecommendationServiceStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new RecommendationServiceStub(channel, callOptions);
     }
 
@@ -258,7 +256,7 @@ public final class RecommendationServiceGrpc {
     public void getRecommendation(com.google.ads.googleads.v4.services.GetRecommendationRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v4.resources.Recommendation> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(getGetRecommendationMethodHelper(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getGetRecommendationMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -269,7 +267,7 @@ public final class RecommendationServiceGrpc {
     public void applyRecommendation(com.google.ads.googleads.v4.services.ApplyRecommendationRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v4.services.ApplyRecommendationResponse> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(getApplyRecommendationMethodHelper(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getApplyRecommendationMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -280,7 +278,7 @@ public final class RecommendationServiceGrpc {
     public void dismissRecommendation(com.google.ads.googleads.v4.services.DismissRecommendationRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v4.services.DismissRecommendationResponse> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(getDismissRecommendationMethodHelper(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getDismissRecommendationMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -289,19 +287,15 @@ public final class RecommendationServiceGrpc {
    * Service to manage recommendations.
    * </pre>
    */
-  public static final class RecommendationServiceBlockingStub extends io.grpc.stub.AbstractStub<RecommendationServiceBlockingStub> {
-    private RecommendationServiceBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private RecommendationServiceBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class RecommendationServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<RecommendationServiceBlockingStub> {
+    private RecommendationServiceBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected RecommendationServiceBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected RecommendationServiceBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new RecommendationServiceBlockingStub(channel, callOptions);
     }
 
@@ -312,7 +306,7 @@ public final class RecommendationServiceGrpc {
      */
     public com.google.ads.googleads.v4.resources.Recommendation getRecommendation(com.google.ads.googleads.v4.services.GetRecommendationRequest request) {
       return blockingUnaryCall(
-          getChannel(), getGetRecommendationMethodHelper(), getCallOptions(), request);
+          getChannel(), getGetRecommendationMethod(), getCallOptions(), request);
     }
 
     /**
@@ -322,7 +316,7 @@ public final class RecommendationServiceGrpc {
      */
     public com.google.ads.googleads.v4.services.ApplyRecommendationResponse applyRecommendation(com.google.ads.googleads.v4.services.ApplyRecommendationRequest request) {
       return blockingUnaryCall(
-          getChannel(), getApplyRecommendationMethodHelper(), getCallOptions(), request);
+          getChannel(), getApplyRecommendationMethod(), getCallOptions(), request);
     }
 
     /**
@@ -332,7 +326,7 @@ public final class RecommendationServiceGrpc {
      */
     public com.google.ads.googleads.v4.services.DismissRecommendationResponse dismissRecommendation(com.google.ads.googleads.v4.services.DismissRecommendationRequest request) {
       return blockingUnaryCall(
-          getChannel(), getDismissRecommendationMethodHelper(), getCallOptions(), request);
+          getChannel(), getDismissRecommendationMethod(), getCallOptions(), request);
     }
   }
 
@@ -341,19 +335,15 @@ public final class RecommendationServiceGrpc {
    * Service to manage recommendations.
    * </pre>
    */
-  public static final class RecommendationServiceFutureStub extends io.grpc.stub.AbstractStub<RecommendationServiceFutureStub> {
-    private RecommendationServiceFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private RecommendationServiceFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class RecommendationServiceFutureStub extends io.grpc.stub.AbstractFutureStub<RecommendationServiceFutureStub> {
+    private RecommendationServiceFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected RecommendationServiceFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected RecommendationServiceFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new RecommendationServiceFutureStub(channel, callOptions);
     }
 
@@ -365,7 +355,7 @@ public final class RecommendationServiceGrpc {
     public com.google.common.util.concurrent.ListenableFuture<com.google.ads.googleads.v4.resources.Recommendation> getRecommendation(
         com.google.ads.googleads.v4.services.GetRecommendationRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(getGetRecommendationMethodHelper(), getCallOptions()), request);
+          getChannel().newCall(getGetRecommendationMethod(), getCallOptions()), request);
     }
 
     /**
@@ -376,7 +366,7 @@ public final class RecommendationServiceGrpc {
     public com.google.common.util.concurrent.ListenableFuture<com.google.ads.googleads.v4.services.ApplyRecommendationResponse> applyRecommendation(
         com.google.ads.googleads.v4.services.ApplyRecommendationRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(getApplyRecommendationMethodHelper(), getCallOptions()), request);
+          getChannel().newCall(getApplyRecommendationMethod(), getCallOptions()), request);
     }
 
     /**
@@ -387,7 +377,7 @@ public final class RecommendationServiceGrpc {
     public com.google.common.util.concurrent.ListenableFuture<com.google.ads.googleads.v4.services.DismissRecommendationResponse> dismissRecommendation(
         com.google.ads.googleads.v4.services.DismissRecommendationRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(getDismissRecommendationMethodHelper(), getCallOptions()), request);
+          getChannel().newCall(getDismissRecommendationMethod(), getCallOptions()), request);
     }
   }
 
@@ -485,9 +475,9 @@ public final class RecommendationServiceGrpc {
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new RecommendationServiceFileDescriptorSupplier())
-              .addMethod(getGetRecommendationMethodHelper())
-              .addMethod(getApplyRecommendationMethodHelper())
-              .addMethod(getDismissRecommendationMethodHelper())
+              .addMethod(getGetRecommendationMethod())
+              .addMethod(getApplyRecommendationMethod())
+              .addMethod(getDismissRecommendationMethod())
               .build();
         }
       }

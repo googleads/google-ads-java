@@ -13,6 +13,7 @@ public interface OperandOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v1.common.Operand.ConstantOperand constant_operand = 1;</code>
+   * @return Whether the constantOperand field is set.
    */
   boolean hasConstantOperand();
   /**
@@ -21,6 +22,7 @@ public interface OperandOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v1.common.Operand.ConstantOperand constant_operand = 1;</code>
+   * @return The constantOperand.
    */
   com.google.ads.googleads.v1.common.Operand.ConstantOperand getConstantOperand();
   /**
@@ -38,6 +40,7 @@ public interface OperandOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v1.common.Operand.FeedAttributeOperand feed_attribute_operand = 2;</code>
+   * @return Whether the feedAttributeOperand field is set.
    */
   boolean hasFeedAttributeOperand();
   /**
@@ -46,6 +49,7 @@ public interface OperandOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v1.common.Operand.FeedAttributeOperand feed_attribute_operand = 2;</code>
+   * @return The feedAttributeOperand.
    */
   com.google.ads.googleads.v1.common.Operand.FeedAttributeOperand getFeedAttributeOperand();
   /**
@@ -64,6 +68,7 @@ public interface OperandOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v1.common.Operand.FunctionOperand function_operand = 3;</code>
+   * @return Whether the functionOperand field is set.
    */
   boolean hasFunctionOperand();
   /**
@@ -73,6 +78,7 @@ public interface OperandOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v1.common.Operand.FunctionOperand function_operand = 3;</code>
+   * @return The functionOperand.
    */
   com.google.ads.googleads.v1.common.Operand.FunctionOperand getFunctionOperand();
   /**
@@ -91,6 +97,7 @@ public interface OperandOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v1.common.Operand.RequestContextOperand request_context_operand = 4;</code>
+   * @return Whether the requestContextOperand field is set.
    */
   boolean hasRequestContextOperand();
   /**
@@ -99,6 +106,7 @@ public interface OperandOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v1.common.Operand.RequestContextOperand request_context_operand = 4;</code>
+   * @return The requestContextOperand.
    */
   com.google.ads.googleads.v1.common.Operand.RequestContextOperand getRequestContextOperand();
   /**

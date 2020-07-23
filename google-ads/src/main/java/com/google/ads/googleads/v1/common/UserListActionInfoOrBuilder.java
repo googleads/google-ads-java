@@ -13,6 +13,7 @@ public interface UserListActionInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue conversion_action = 1;</code>
+   * @return Whether the conversionAction field is set.
    */
   boolean hasConversionAction();
   /**
@@ -21,6 +22,7 @@ public interface UserListActionInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue conversion_action = 1;</code>
+   * @return The conversionAction.
    */
   com.google.protobuf.StringValue getConversionAction();
   /**
@@ -38,6 +40,7 @@ public interface UserListActionInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue remarketing_action = 2;</code>
+   * @return Whether the remarketingAction field is set.
    */
   boolean hasRemarketingAction();
   /**
@@ -46,6 +49,7 @@ public interface UserListActionInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue remarketing_action = 2;</code>
+   * @return The remarketingAction.
    */
   com.google.protobuf.StringValue getRemarketingAction();
   /**

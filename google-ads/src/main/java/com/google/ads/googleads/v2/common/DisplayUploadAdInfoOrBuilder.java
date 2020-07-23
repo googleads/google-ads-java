@@ -13,6 +13,7 @@ public interface DisplayUploadAdInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.enums.DisplayUploadProductTypeEnum.DisplayUploadProductType display_upload_product_type = 1;</code>
+   * @return The enum numeric value on the wire for displayUploadProductType.
    */
   int getDisplayUploadProductTypeValue();
   /**
@@ -21,6 +22,7 @@ public interface DisplayUploadAdInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.enums.DisplayUploadProductTypeEnum.DisplayUploadProductType display_upload_product_type = 1;</code>
+   * @return The displayUploadProductType.
    */
   com.google.ads.googleads.v2.enums.DisplayUploadProductTypeEnum.DisplayUploadProductType getDisplayUploadProductType();
 
@@ -36,6 +38,7 @@ public interface DisplayUploadAdInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.common.AdMediaBundleAsset media_bundle = 2;</code>
+   * @return Whether the mediaBundle field is set.
    */
   boolean hasMediaBundle();
   /**
@@ -50,6 +53,7 @@ public interface DisplayUploadAdInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.common.AdMediaBundleAsset media_bundle = 2;</code>
+   * @return The mediaBundle.
    */
   com.google.ads.googleads.v2.common.AdMediaBundleAsset getMediaBundle();
   /**

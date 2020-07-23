@@ -10,7 +10,7 @@ package com.google.ads.googleads.v3.services;
  *
  * Protobuf type {@code google.ads.googleads.v3.services.SearchGoogleAdsStreamResponse}
  */
-public  final class SearchGoogleAdsStreamResponse extends
+public final class SearchGoogleAdsStreamResponse extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v3.services.SearchGoogleAdsStreamResponse)
     SearchGoogleAdsStreamResponseOrBuilder {
@@ -21,6 +21,13 @@ private static final long serialVersionUID = 0L;
   }
   private SearchGoogleAdsStreamResponse() {
     results_ = java.util.Collections.emptyList();
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new SearchGoogleAdsStreamResponse();
   }
 
   @java.lang.Override
@@ -117,7 +124,6 @@ private static final long serialVersionUID = 0L;
             com.google.ads.googleads.v3.services.SearchGoogleAdsStreamResponse.class, com.google.ads.googleads.v3.services.SearchGoogleAdsStreamResponse.Builder.class);
   }
 
-  private int bitField0_;
   public static final int RESULTS_FIELD_NUMBER = 1;
   private java.util.List<com.google.ads.googleads.v3.services.GoogleAdsRow> results_;
   /**
@@ -127,6 +133,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v3.services.GoogleAdsRow results = 1;</code>
    */
+  @java.lang.Override
   public java.util.List<com.google.ads.googleads.v3.services.GoogleAdsRow> getResultsList() {
     return results_;
   }
@@ -137,6 +144,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v3.services.GoogleAdsRow results = 1;</code>
    */
+  @java.lang.Override
   public java.util.List<? extends com.google.ads.googleads.v3.services.GoogleAdsRowOrBuilder> 
       getResultsOrBuilderList() {
     return results_;
@@ -148,6 +156,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v3.services.GoogleAdsRow results = 1;</code>
    */
+  @java.lang.Override
   public int getResultsCount() {
     return results_.size();
   }
@@ -158,6 +167,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v3.services.GoogleAdsRow results = 1;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.services.GoogleAdsRow getResults(int index) {
     return results_.get(index);
   }
@@ -168,6 +178,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v3.services.GoogleAdsRow results = 1;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.services.GoogleAdsRowOrBuilder getResultsOrBuilder(
       int index) {
     return results_.get(index);
@@ -181,7 +192,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.FieldMask field_mask = 2;</code>
+   * @return Whether the fieldMask field is set.
    */
+  @java.lang.Override
   public boolean hasFieldMask() {
     return fieldMask_ != null;
   }
@@ -191,7 +204,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.FieldMask field_mask = 2;</code>
+   * @return The fieldMask.
    */
+  @java.lang.Override
   public com.google.protobuf.FieldMask getFieldMask() {
     return fieldMask_ == null ? com.google.protobuf.FieldMask.getDefaultInstance() : fieldMask_;
   }
@@ -202,6 +217,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.FieldMask field_mask = 2;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.FieldMaskOrBuilder getFieldMaskOrBuilder() {
     return getFieldMask();
   }
@@ -216,7 +232,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.services.GoogleAdsRow summary_row = 3;</code>
+   * @return Whether the summaryRow field is set.
    */
+  @java.lang.Override
   public boolean hasSummaryRow() {
     return summaryRow_ != null;
   }
@@ -228,7 +246,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.services.GoogleAdsRow summary_row = 3;</code>
+   * @return The summaryRow.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.services.GoogleAdsRow getSummaryRow() {
     return summaryRow_ == null ? com.google.ads.googleads.v3.services.GoogleAdsRow.getDefaultInstance() : summaryRow_;
   }
@@ -241,6 +261,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v3.services.GoogleAdsRow summary_row = 3;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.services.GoogleAdsRowOrBuilder getSummaryRowOrBuilder() {
     return getSummaryRow();
   }
@@ -522,7 +543,6 @@ private static final long serialVersionUID = 0L;
     public com.google.ads.googleads.v3.services.SearchGoogleAdsStreamResponse buildPartial() {
       com.google.ads.googleads.v3.services.SearchGoogleAdsStreamResponse result = new com.google.ads.googleads.v3.services.SearchGoogleAdsStreamResponse(this);
       int from_bitField0_ = bitField0_;
-      int to_bitField0_ = 0;
       if (resultsBuilder_ == null) {
         if (((bitField0_ & 0x00000001) != 0)) {
           results_ = java.util.Collections.unmodifiableList(results_);
@@ -542,7 +562,6 @@ private static final long serialVersionUID = 0L;
       } else {
         result.summaryRow_ = summaryRowBuilder_.build();
       }
-      result.bitField0_ = to_bitField0_;
       onBuilt();
       return result;
     }
@@ -974,6 +993,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.FieldMask field_mask = 2;</code>
+     * @return Whether the fieldMask field is set.
      */
     public boolean hasFieldMask() {
       return fieldMaskBuilder_ != null || fieldMask_ != null;
@@ -984,6 +1004,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.FieldMask field_mask = 2;</code>
+     * @return The fieldMask.
      */
     public com.google.protobuf.FieldMask getFieldMask() {
       if (fieldMaskBuilder_ == null) {
@@ -1129,6 +1150,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.services.GoogleAdsRow summary_row = 3;</code>
+     * @return Whether the summaryRow field is set.
      */
     public boolean hasSummaryRow() {
       return summaryRowBuilder_ != null || summaryRow_ != null;
@@ -1141,6 +1163,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.services.GoogleAdsRow summary_row = 3;</code>
+     * @return The summaryRow.
      */
     public com.google.ads.googleads.v3.services.GoogleAdsRow getSummaryRow() {
       if (summaryRowBuilder_ == null) {

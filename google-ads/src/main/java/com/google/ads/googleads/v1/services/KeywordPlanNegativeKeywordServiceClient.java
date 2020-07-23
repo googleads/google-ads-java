@@ -1,5 +1,5 @@
 /*
- * Copyright 2019 Google LLC
+ * Copyright 2020 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -21,7 +21,6 @@ import com.google.ads.googleads.v1.services.stub.KeywordPlanNegativeKeywordServi
 import com.google.api.core.BetaApi;
 import com.google.api.gax.core.BackgroundResource;
 import com.google.api.gax.rpc.UnaryCallable;
-import com.google.api.pathtemplate.PathTemplate;
 import java.io.IOException;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
@@ -37,8 +36,8 @@ import javax.annotation.Generated;
  * <pre>
  * <code>
  * try (KeywordPlanNegativeKeywordServiceClient keywordPlanNegativeKeywordServiceClient = KeywordPlanNegativeKeywordServiceClient.create()) {
- *   String formattedResourceName = KeywordPlanNegativeKeywordServiceClient.formatKeywordPlanNegativeKeywordName("[CUSTOMER]", "[KEYWORD_PLAN_NEGATIVE_KEYWORD]");
- *   KeywordPlanNegativeKeyword response = keywordPlanNegativeKeywordServiceClient.getKeywordPlanNegativeKeyword(formattedResourceName);
+ *   KeywordPlanNegativeKeywordName resourceName = KeywordPlanNegativeKeywordName.of("[CUSTOMER]", "[KEYWORD_PLAN_NEGATIVE_KEYWORD]");
+ *   KeywordPlanNegativeKeyword response = keywordPlanNegativeKeywordServiceClient.getKeywordPlanNegativeKeyword(resourceName);
  * }
  * </code>
  * </pre>
@@ -99,52 +98,6 @@ import javax.annotation.Generated;
 public class KeywordPlanNegativeKeywordServiceClient implements BackgroundResource {
   private final KeywordPlanNegativeKeywordServiceSettings settings;
   private final KeywordPlanNegativeKeywordServiceStub stub;
-
-  private static final PathTemplate KEYWORD_PLAN_NEGATIVE_KEYWORD_PATH_TEMPLATE =
-      PathTemplate.createWithoutUrlEncoding(
-          "customers/{customer}/keywordPlanNegativeKeywords/{keyword_plan_negative_keyword}");
-
-  /**
-   * Formats a string containing the fully-qualified path to represent a
-   * keyword_plan_negative_keyword resource.
-   *
-   * @deprecated Use the {@link KeywordPlanNegativeKeywordName} class instead.
-   */
-  @Deprecated
-  public static final String formatKeywordPlanNegativeKeywordName(
-      String customer, String keywordPlanNegativeKeyword) {
-    return KEYWORD_PLAN_NEGATIVE_KEYWORD_PATH_TEMPLATE.instantiate(
-        "customer", customer,
-        "keyword_plan_negative_keyword", keywordPlanNegativeKeyword);
-  }
-
-  /**
-   * Parses the customer from the given fully-qualified path which represents a
-   * keyword_plan_negative_keyword resource.
-   *
-   * @deprecated Use the {@link KeywordPlanNegativeKeywordName} class instead.
-   */
-  @Deprecated
-  public static final String parseCustomerFromKeywordPlanNegativeKeywordName(
-      String keywordPlanNegativeKeywordName) {
-    return KEYWORD_PLAN_NEGATIVE_KEYWORD_PATH_TEMPLATE
-        .parse(keywordPlanNegativeKeywordName)
-        .get("customer");
-  }
-
-  /**
-   * Parses the keyword_plan_negative_keyword from the given fully-qualified path which represents a
-   * keyword_plan_negative_keyword resource.
-   *
-   * @deprecated Use the {@link KeywordPlanNegativeKeywordName} class instead.
-   */
-  @Deprecated
-  public static final String parseKeywordPlanNegativeKeywordFromKeywordPlanNegativeKeywordName(
-      String keywordPlanNegativeKeywordName) {
-    return KEYWORD_PLAN_NEGATIVE_KEYWORD_PATH_TEMPLATE
-        .parse(keywordPlanNegativeKeywordName)
-        .get("keyword_plan_negative_keyword");
-  }
 
   /** Constructs an instance of KeywordPlanNegativeKeywordServiceClient with default settings. */
   public static final KeywordPlanNegativeKeywordServiceClient create() throws IOException {
@@ -207,17 +160,40 @@ public class KeywordPlanNegativeKeywordServiceClient implements BackgroundResour
    *
    * <pre><code>
    * try (KeywordPlanNegativeKeywordServiceClient keywordPlanNegativeKeywordServiceClient = KeywordPlanNegativeKeywordServiceClient.create()) {
-   *   String formattedResourceName = KeywordPlanNegativeKeywordServiceClient.formatKeywordPlanNegativeKeywordName("[CUSTOMER]", "[KEYWORD_PLAN_NEGATIVE_KEYWORD]");
-   *   KeywordPlanNegativeKeyword response = keywordPlanNegativeKeywordServiceClient.getKeywordPlanNegativeKeyword(formattedResourceName);
+   *   KeywordPlanNegativeKeywordName resourceName = KeywordPlanNegativeKeywordName.of("[CUSTOMER]", "[KEYWORD_PLAN_NEGATIVE_KEYWORD]");
+   *   KeywordPlanNegativeKeyword response = keywordPlanNegativeKeywordServiceClient.getKeywordPlanNegativeKeyword(resourceName);
    * }
    * </code></pre>
    *
-   * @param resourceName The resource name of the plan to fetch.
+   * @param resourceName Required. The resource name of the plan to fetch.
+   * @throws com.google.api.gax.rpc.ApiException if the remote call fails
+   */
+  public final KeywordPlanNegativeKeyword getKeywordPlanNegativeKeyword(
+      KeywordPlanNegativeKeywordName resourceName) {
+    GetKeywordPlanNegativeKeywordRequest request =
+        GetKeywordPlanNegativeKeywordRequest.newBuilder()
+            .setResourceName(resourceName == null ? null : resourceName.toString())
+            .build();
+    return getKeywordPlanNegativeKeyword(request);
+  }
+
+  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  /**
+   * Returns the requested plan in full detail.
+   *
+   * <p>Sample code:
+   *
+   * <pre><code>
+   * try (KeywordPlanNegativeKeywordServiceClient keywordPlanNegativeKeywordServiceClient = KeywordPlanNegativeKeywordServiceClient.create()) {
+   *   KeywordPlanNegativeKeywordName resourceName = KeywordPlanNegativeKeywordName.of("[CUSTOMER]", "[KEYWORD_PLAN_NEGATIVE_KEYWORD]");
+   *   KeywordPlanNegativeKeyword response = keywordPlanNegativeKeywordServiceClient.getKeywordPlanNegativeKeyword(resourceName.toString());
+   * }
+   * </code></pre>
+   *
+   * @param resourceName Required. The resource name of the plan to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final KeywordPlanNegativeKeyword getKeywordPlanNegativeKeyword(String resourceName) {
-    KEYWORD_PLAN_NEGATIVE_KEYWORD_PATH_TEMPLATE.validate(
-        resourceName, "getKeywordPlanNegativeKeyword");
     GetKeywordPlanNegativeKeywordRequest request =
         GetKeywordPlanNegativeKeywordRequest.newBuilder().setResourceName(resourceName).build();
     return getKeywordPlanNegativeKeyword(request);
@@ -231,9 +207,9 @@ public class KeywordPlanNegativeKeywordServiceClient implements BackgroundResour
    *
    * <pre><code>
    * try (KeywordPlanNegativeKeywordServiceClient keywordPlanNegativeKeywordServiceClient = KeywordPlanNegativeKeywordServiceClient.create()) {
-   *   String formattedResourceName = KeywordPlanNegativeKeywordServiceClient.formatKeywordPlanNegativeKeywordName("[CUSTOMER]", "[KEYWORD_PLAN_NEGATIVE_KEYWORD]");
+   *   KeywordPlanNegativeKeywordName resourceName = KeywordPlanNegativeKeywordName.of("[CUSTOMER]", "[KEYWORD_PLAN_NEGATIVE_KEYWORD]");
    *   GetKeywordPlanNegativeKeywordRequest request = GetKeywordPlanNegativeKeywordRequest.newBuilder()
-   *     .setResourceName(formattedResourceName)
+   *     .setResourceName(resourceName.toString())
    *     .build();
    *   KeywordPlanNegativeKeyword response = keywordPlanNegativeKeywordServiceClient.getKeywordPlanNegativeKeyword(request);
    * }
@@ -255,9 +231,9 @@ public class KeywordPlanNegativeKeywordServiceClient implements BackgroundResour
    *
    * <pre><code>
    * try (KeywordPlanNegativeKeywordServiceClient keywordPlanNegativeKeywordServiceClient = KeywordPlanNegativeKeywordServiceClient.create()) {
-   *   String formattedResourceName = KeywordPlanNegativeKeywordServiceClient.formatKeywordPlanNegativeKeywordName("[CUSTOMER]", "[KEYWORD_PLAN_NEGATIVE_KEYWORD]");
+   *   KeywordPlanNegativeKeywordName resourceName = KeywordPlanNegativeKeywordName.of("[CUSTOMER]", "[KEYWORD_PLAN_NEGATIVE_KEYWORD]");
    *   GetKeywordPlanNegativeKeywordRequest request = GetKeywordPlanNegativeKeywordRequest.newBuilder()
-   *     .setResourceName(formattedResourceName)
+   *     .setResourceName(resourceName.toString())
    *     .build();
    *   ApiFuture&lt;KeywordPlanNegativeKeyword&gt; future = keywordPlanNegativeKeywordServiceClient.getKeywordPlanNegativeKeywordCallable().futureCall(request);
    *   // Do something
@@ -280,60 +256,17 @@ public class KeywordPlanNegativeKeywordServiceClient implements BackgroundResour
    * try (KeywordPlanNegativeKeywordServiceClient keywordPlanNegativeKeywordServiceClient = KeywordPlanNegativeKeywordServiceClient.create()) {
    *   String customerId = "";
    *   List&lt;KeywordPlanNegativeKeywordOperation&gt; operations = new ArrayList&lt;&gt;();
-   *   boolean partialFailure = false;
-   *   boolean validateOnly = false;
-   *   MutateKeywordPlanNegativeKeywordsResponse response = keywordPlanNegativeKeywordServiceClient.mutateKeywordPlanNegativeKeywords(customerId, operations, partialFailure, validateOnly);
-   * }
-   * </code></pre>
-   *
-   * @param customerId The ID of the customer whose negative keywords are being modified.
-   * @param operations The list of operations to perform on individual Keyword Plan negative
-   *     keywords.
-   * @param partialFailure If true, successful operations will be carried out and invalid operations
-   *     will return errors. If false, all operations will be carried out in one transaction if and
-   *     only if they are all valid. Default is false.
-   * @param validateOnly If true, the request is validated but not executed. Only errors are
-   *     returned, not results.
-   * @throws com.google.api.gax.rpc.ApiException if the remote call fails
-   */
-  public final MutateKeywordPlanNegativeKeywordsResponse mutateKeywordPlanNegativeKeywords(
-      String customerId,
-      List<KeywordPlanNegativeKeywordOperation> operations,
-      boolean partialFailure,
-      boolean validateOnly) {
-
-    MutateKeywordPlanNegativeKeywordsRequest request =
-        MutateKeywordPlanNegativeKeywordsRequest.newBuilder()
-            .setCustomerId(customerId)
-            .addAllOperations(operations)
-            .setPartialFailure(partialFailure)
-            .setValidateOnly(validateOnly)
-            .build();
-    return mutateKeywordPlanNegativeKeywords(request);
-  }
-
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
-  /**
-   * Creates, updates, or removes Keyword Plan negative keywords. Operation statuses are returned.
-   *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (KeywordPlanNegativeKeywordServiceClient keywordPlanNegativeKeywordServiceClient = KeywordPlanNegativeKeywordServiceClient.create()) {
-   *   String customerId = "";
-   *   List&lt;KeywordPlanNegativeKeywordOperation&gt; operations = new ArrayList&lt;&gt;();
    *   MutateKeywordPlanNegativeKeywordsResponse response = keywordPlanNegativeKeywordServiceClient.mutateKeywordPlanNegativeKeywords(customerId, operations);
    * }
    * </code></pre>
    *
-   * @param customerId The ID of the customer whose negative keywords are being modified.
-   * @param operations The list of operations to perform on individual Keyword Plan negative
-   *     keywords.
+   * @param customerId Required. The ID of the customer whose negative keywords are being modified.
+   * @param operations Required. The list of operations to perform on individual Keyword Plan
+   *     negative keywords.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final MutateKeywordPlanNegativeKeywordsResponse mutateKeywordPlanNegativeKeywords(
       String customerId, List<KeywordPlanNegativeKeywordOperation> operations) {
-
     MutateKeywordPlanNegativeKeywordsRequest request =
         MutateKeywordPlanNegativeKeywordsRequest.newBuilder()
             .setCustomerId(customerId)

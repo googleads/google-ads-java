@@ -13,6 +13,7 @@ public interface SearchGoogleAdsRequestOrBuilder extends
    * </pre>
    *
    * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+   * @return The customerId.
    */
   java.lang.String getCustomerId();
   /**
@@ -21,6 +22,7 @@ public interface SearchGoogleAdsRequestOrBuilder extends
    * </pre>
    *
    * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+   * @return The bytes for customerId.
    */
   com.google.protobuf.ByteString
       getCustomerIdBytes();
@@ -31,6 +33,7 @@ public interface SearchGoogleAdsRequestOrBuilder extends
    * </pre>
    *
    * <code>string query = 2 [(.google.api.field_behavior) = REQUIRED];</code>
+   * @return The query.
    */
   java.lang.String getQuery();
   /**
@@ -39,6 +42,7 @@ public interface SearchGoogleAdsRequestOrBuilder extends
    * </pre>
    *
    * <code>string query = 2 [(.google.api.field_behavior) = REQUIRED];</code>
+   * @return The bytes for query.
    */
   com.google.protobuf.ByteString
       getQueryBytes();
@@ -52,6 +56,7 @@ public interface SearchGoogleAdsRequestOrBuilder extends
    * </pre>
    *
    * <code>string page_token = 3;</code>
+   * @return The pageToken.
    */
   java.lang.String getPageToken();
   /**
@@ -63,6 +68,7 @@ public interface SearchGoogleAdsRequestOrBuilder extends
    * </pre>
    *
    * <code>string page_token = 3;</code>
+   * @return The bytes for pageToken.
    */
   com.google.protobuf.ByteString
       getPageTokenBytes();
@@ -75,6 +81,7 @@ public interface SearchGoogleAdsRequestOrBuilder extends
    * </pre>
    *
    * <code>int32 page_size = 4;</code>
+   * @return The pageSize.
    */
   int getPageSize();
 
@@ -84,6 +91,7 @@ public interface SearchGoogleAdsRequestOrBuilder extends
    * </pre>
    *
    * <code>bool validate_only = 5;</code>
+   * @return The validateOnly.
    */
   boolean getValidateOnly();
 
@@ -95,6 +103,7 @@ public interface SearchGoogleAdsRequestOrBuilder extends
    * </pre>
    *
    * <code>bool return_total_results_count = 7;</code>
+   * @return The returnTotalResultsCount.
    */
   boolean getReturnTotalResultsCount();
 
@@ -106,6 +115,7 @@ public interface SearchGoogleAdsRequestOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.SummaryRowSettingEnum.SummaryRowSetting summary_row_setting = 8;</code>
+   * @return The enum numeric value on the wire for summaryRowSetting.
    */
   int getSummaryRowSettingValue();
   /**
@@ -116,6 +126,7 @@ public interface SearchGoogleAdsRequestOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.SummaryRowSettingEnum.SummaryRowSetting summary_row_setting = 8;</code>
+   * @return The summaryRowSetting.
    */
   com.google.ads.googleads.v3.enums.SummaryRowSettingEnum.SummaryRowSetting getSummaryRowSetting();
 }

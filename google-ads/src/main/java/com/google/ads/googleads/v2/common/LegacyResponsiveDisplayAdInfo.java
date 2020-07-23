@@ -11,7 +11,7 @@ package com.google.ads.googleads.v2.common;
  *
  * Protobuf type {@code google.ads.googleads.v2.common.LegacyResponsiveDisplayAdInfo}
  */
-public  final class LegacyResponsiveDisplayAdInfo extends
+public final class LegacyResponsiveDisplayAdInfo extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v2.common.LegacyResponsiveDisplayAdInfo)
     LegacyResponsiveDisplayAdInfoOrBuilder {
@@ -22,6 +22,13 @@ private static final long serialVersionUID = 0L;
   }
   private LegacyResponsiveDisplayAdInfo() {
     formatSetting_ = 0;
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new LegacyResponsiveDisplayAdInfo();
   }
 
   @java.lang.Override
@@ -37,7 +44,6 @@ private static final long serialVersionUID = 0L;
     if (extensionRegistry == null) {
       throw new java.lang.NullPointerException();
     }
-    int mutable_bitField0_ = 0;
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
         com.google.protobuf.UnknownFieldSet.newBuilder();
     try {
@@ -276,7 +282,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue short_headline = 1;</code>
+   * @return Whether the shortHeadline field is set.
    */
+  @java.lang.Override
   public boolean hasShortHeadline() {
     return shortHeadline_ != null;
   }
@@ -286,7 +294,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue short_headline = 1;</code>
+   * @return The shortHeadline.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getShortHeadline() {
     return shortHeadline_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : shortHeadline_;
   }
@@ -297,6 +307,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue short_headline = 1;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getShortHeadlineOrBuilder() {
     return getShortHeadline();
   }
@@ -309,7 +320,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue long_headline = 2;</code>
+   * @return Whether the longHeadline field is set.
    */
+  @java.lang.Override
   public boolean hasLongHeadline() {
     return longHeadline_ != null;
   }
@@ -319,7 +332,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue long_headline = 2;</code>
+   * @return The longHeadline.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getLongHeadline() {
     return longHeadline_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : longHeadline_;
   }
@@ -330,6 +345,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue long_headline = 2;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getLongHeadlineOrBuilder() {
     return getLongHeadline();
   }
@@ -342,7 +358,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue description = 3;</code>
+   * @return Whether the description field is set.
    */
+  @java.lang.Override
   public boolean hasDescription() {
     return description_ != null;
   }
@@ -352,7 +370,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue description = 3;</code>
+   * @return The description.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getDescription() {
     return description_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : description_;
   }
@@ -363,6 +383,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue description = 3;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getDescriptionOrBuilder() {
     return getDescription();
   }
@@ -375,7 +396,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue business_name = 4;</code>
+   * @return Whether the businessName field is set.
    */
+  @java.lang.Override
   public boolean hasBusinessName() {
     return businessName_ != null;
   }
@@ -385,7 +408,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue business_name = 4;</code>
+   * @return The businessName.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getBusinessName() {
     return businessName_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : businessName_;
   }
@@ -396,6 +421,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue business_name = 4;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getBusinessNameOrBuilder() {
     return getBusinessName();
   }
@@ -412,7 +438,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.BoolValue allow_flexible_color = 5;</code>
+   * @return Whether the allowFlexibleColor field is set.
    */
+  @java.lang.Override
   public boolean hasAllowFlexibleColor() {
     return allowFlexibleColor_ != null;
   }
@@ -426,7 +454,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.BoolValue allow_flexible_color = 5;</code>
+   * @return The allowFlexibleColor.
    */
+  @java.lang.Override
   public com.google.protobuf.BoolValue getAllowFlexibleColor() {
     return allowFlexibleColor_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : allowFlexibleColor_;
   }
@@ -441,6 +471,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.BoolValue allow_flexible_color = 5;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.BoolValueOrBuilder getAllowFlexibleColorOrBuilder() {
     return getAllowFlexibleColor();
   }
@@ -455,7 +486,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue accent_color = 6;</code>
+   * @return Whether the accentColor field is set.
    */
+  @java.lang.Override
   public boolean hasAccentColor() {
     return accentColor_ != null;
   }
@@ -467,7 +500,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue accent_color = 6;</code>
+   * @return The accentColor.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getAccentColor() {
     return accentColor_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : accentColor_;
   }
@@ -480,6 +515,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue accent_color = 6;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getAccentColorOrBuilder() {
     return getAccentColor();
   }
@@ -494,7 +530,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue main_color = 7;</code>
+   * @return Whether the mainColor field is set.
    */
+  @java.lang.Override
   public boolean hasMainColor() {
     return mainColor_ != null;
   }
@@ -506,7 +544,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue main_color = 7;</code>
+   * @return The mainColor.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getMainColor() {
     return mainColor_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : mainColor_;
   }
@@ -519,6 +559,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue main_color = 7;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getMainColorOrBuilder() {
     return getMainColor();
   }
@@ -531,7 +572,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue call_to_action_text = 8;</code>
+   * @return Whether the callToActionText field is set.
    */
+  @java.lang.Override
   public boolean hasCallToActionText() {
     return callToActionText_ != null;
   }
@@ -541,7 +584,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue call_to_action_text = 8;</code>
+   * @return The callToActionText.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getCallToActionText() {
     return callToActionText_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : callToActionText_;
   }
@@ -552,6 +597,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue call_to_action_text = 8;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getCallToActionTextOrBuilder() {
     return getCallToActionText();
   }
@@ -564,7 +610,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue logo_image = 9;</code>
+   * @return Whether the logoImage field is set.
    */
+  @java.lang.Override
   public boolean hasLogoImage() {
     return logoImage_ != null;
   }
@@ -574,7 +622,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue logo_image = 9;</code>
+   * @return The logoImage.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getLogoImage() {
     return logoImage_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : logoImage_;
   }
@@ -585,6 +635,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue logo_image = 9;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getLogoImageOrBuilder() {
     return getLogoImage();
   }
@@ -597,7 +648,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue square_logo_image = 10;</code>
+   * @return Whether the squareLogoImage field is set.
    */
+  @java.lang.Override
   public boolean hasSquareLogoImage() {
     return squareLogoImage_ != null;
   }
@@ -607,7 +660,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue square_logo_image = 10;</code>
+   * @return The squareLogoImage.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getSquareLogoImage() {
     return squareLogoImage_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : squareLogoImage_;
   }
@@ -618,6 +673,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue square_logo_image = 10;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getSquareLogoImageOrBuilder() {
     return getSquareLogoImage();
   }
@@ -630,7 +686,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue marketing_image = 11;</code>
+   * @return Whether the marketingImage field is set.
    */
+  @java.lang.Override
   public boolean hasMarketingImage() {
     return marketingImage_ != null;
   }
@@ -640,7 +698,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue marketing_image = 11;</code>
+   * @return The marketingImage.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getMarketingImage() {
     return marketingImage_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : marketingImage_;
   }
@@ -651,6 +711,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue marketing_image = 11;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getMarketingImageOrBuilder() {
     return getMarketingImage();
   }
@@ -663,7 +724,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue square_marketing_image = 12;</code>
+   * @return Whether the squareMarketingImage field is set.
    */
+  @java.lang.Override
   public boolean hasSquareMarketingImage() {
     return squareMarketingImage_ != null;
   }
@@ -673,7 +736,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue square_marketing_image = 12;</code>
+   * @return The squareMarketingImage.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getSquareMarketingImage() {
     return squareMarketingImage_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : squareMarketingImage_;
   }
@@ -684,6 +749,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue square_marketing_image = 12;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getSquareMarketingImageOrBuilder() {
     return getSquareMarketingImage();
   }
@@ -696,8 +762,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.enums.DisplayAdFormatSettingEnum.DisplayAdFormatSetting format_setting = 13;</code>
+   * @return The enum numeric value on the wire for formatSetting.
    */
-  public int getFormatSettingValue() {
+  @java.lang.Override public int getFormatSettingValue() {
     return formatSetting_;
   }
   /**
@@ -706,8 +773,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.enums.DisplayAdFormatSettingEnum.DisplayAdFormatSetting format_setting = 13;</code>
+   * @return The formatSetting.
    */
-  public com.google.ads.googleads.v2.enums.DisplayAdFormatSettingEnum.DisplayAdFormatSetting getFormatSetting() {
+  @java.lang.Override public com.google.ads.googleads.v2.enums.DisplayAdFormatSettingEnum.DisplayAdFormatSetting getFormatSetting() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v2.enums.DisplayAdFormatSettingEnum.DisplayAdFormatSetting result = com.google.ads.googleads.v2.enums.DisplayAdFormatSettingEnum.DisplayAdFormatSetting.valueOf(formatSetting_);
     return result == null ? com.google.ads.googleads.v2.enums.DisplayAdFormatSettingEnum.DisplayAdFormatSetting.UNRECOGNIZED : result;
@@ -721,7 +789,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue price_prefix = 14;</code>
+   * @return Whether the pricePrefix field is set.
    */
+  @java.lang.Override
   public boolean hasPricePrefix() {
     return pricePrefix_ != null;
   }
@@ -731,7 +801,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue price_prefix = 14;</code>
+   * @return The pricePrefix.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getPricePrefix() {
     return pricePrefix_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : pricePrefix_;
   }
@@ -742,6 +814,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue price_prefix = 14;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getPricePrefixOrBuilder() {
     return getPricePrefix();
   }
@@ -755,7 +828,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue promo_text = 15;</code>
+   * @return Whether the promoText field is set.
    */
+  @java.lang.Override
   public boolean hasPromoText() {
     return promoText_ != null;
   }
@@ -766,7 +841,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue promo_text = 15;</code>
+   * @return The promoText.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getPromoText() {
     return promoText_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : promoText_;
   }
@@ -778,6 +855,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue promo_text = 15;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getPromoTextOrBuilder() {
     return getPromoText();
   }
@@ -1517,6 +1595,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue short_headline = 1;</code>
+     * @return Whether the shortHeadline field is set.
      */
     public boolean hasShortHeadline() {
       return shortHeadlineBuilder_ != null || shortHeadline_ != null;
@@ -1527,6 +1606,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue short_headline = 1;</code>
+     * @return The shortHeadline.
      */
     public com.google.protobuf.StringValue getShortHeadline() {
       if (shortHeadlineBuilder_ == null) {
@@ -1670,6 +1750,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue long_headline = 2;</code>
+     * @return Whether the longHeadline field is set.
      */
     public boolean hasLongHeadline() {
       return longHeadlineBuilder_ != null || longHeadline_ != null;
@@ -1680,6 +1761,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue long_headline = 2;</code>
+     * @return The longHeadline.
      */
     public com.google.protobuf.StringValue getLongHeadline() {
       if (longHeadlineBuilder_ == null) {
@@ -1823,6 +1905,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue description = 3;</code>
+     * @return Whether the description field is set.
      */
     public boolean hasDescription() {
       return descriptionBuilder_ != null || description_ != null;
@@ -1833,6 +1916,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue description = 3;</code>
+     * @return The description.
      */
     public com.google.protobuf.StringValue getDescription() {
       if (descriptionBuilder_ == null) {
@@ -1976,6 +2060,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue business_name = 4;</code>
+     * @return Whether the businessName field is set.
      */
     public boolean hasBusinessName() {
       return businessNameBuilder_ != null || businessName_ != null;
@@ -1986,6 +2071,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue business_name = 4;</code>
+     * @return The businessName.
      */
     public com.google.protobuf.StringValue getBusinessName() {
       if (businessNameBuilder_ == null) {
@@ -2133,6 +2219,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.BoolValue allow_flexible_color = 5;</code>
+     * @return Whether the allowFlexibleColor field is set.
      */
     public boolean hasAllowFlexibleColor() {
       return allowFlexibleColorBuilder_ != null || allowFlexibleColor_ != null;
@@ -2147,6 +2234,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.BoolValue allow_flexible_color = 5;</code>
+     * @return The allowFlexibleColor.
      */
     public com.google.protobuf.BoolValue getAllowFlexibleColor() {
       if (allowFlexibleColorBuilder_ == null) {
@@ -2320,6 +2408,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue accent_color = 6;</code>
+     * @return Whether the accentColor field is set.
      */
     public boolean hasAccentColor() {
       return accentColorBuilder_ != null || accentColor_ != null;
@@ -2332,6 +2421,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue accent_color = 6;</code>
+     * @return The accentColor.
      */
     public com.google.protobuf.StringValue getAccentColor() {
       if (accentColorBuilder_ == null) {
@@ -2491,6 +2581,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue main_color = 7;</code>
+     * @return Whether the mainColor field is set.
      */
     public boolean hasMainColor() {
       return mainColorBuilder_ != null || mainColor_ != null;
@@ -2503,6 +2594,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue main_color = 7;</code>
+     * @return The mainColor.
      */
     public com.google.protobuf.StringValue getMainColor() {
       if (mainColorBuilder_ == null) {
@@ -2660,6 +2752,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue call_to_action_text = 8;</code>
+     * @return Whether the callToActionText field is set.
      */
     public boolean hasCallToActionText() {
       return callToActionTextBuilder_ != null || callToActionText_ != null;
@@ -2670,6 +2763,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue call_to_action_text = 8;</code>
+     * @return The callToActionText.
      */
     public com.google.protobuf.StringValue getCallToActionText() {
       if (callToActionTextBuilder_ == null) {
@@ -2813,6 +2907,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue logo_image = 9;</code>
+     * @return Whether the logoImage field is set.
      */
     public boolean hasLogoImage() {
       return logoImageBuilder_ != null || logoImage_ != null;
@@ -2823,6 +2918,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue logo_image = 9;</code>
+     * @return The logoImage.
      */
     public com.google.protobuf.StringValue getLogoImage() {
       if (logoImageBuilder_ == null) {
@@ -2966,6 +3062,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue square_logo_image = 10;</code>
+     * @return Whether the squareLogoImage field is set.
      */
     public boolean hasSquareLogoImage() {
       return squareLogoImageBuilder_ != null || squareLogoImage_ != null;
@@ -2976,6 +3073,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue square_logo_image = 10;</code>
+     * @return The squareLogoImage.
      */
     public com.google.protobuf.StringValue getSquareLogoImage() {
       if (squareLogoImageBuilder_ == null) {
@@ -3119,6 +3217,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue marketing_image = 11;</code>
+     * @return Whether the marketingImage field is set.
      */
     public boolean hasMarketingImage() {
       return marketingImageBuilder_ != null || marketingImage_ != null;
@@ -3129,6 +3228,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue marketing_image = 11;</code>
+     * @return The marketingImage.
      */
     public com.google.protobuf.StringValue getMarketingImage() {
       if (marketingImageBuilder_ == null) {
@@ -3272,6 +3372,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue square_marketing_image = 12;</code>
+     * @return Whether the squareMarketingImage field is set.
      */
     public boolean hasSquareMarketingImage() {
       return squareMarketingImageBuilder_ != null || squareMarketingImage_ != null;
@@ -3282,6 +3383,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue square_marketing_image = 12;</code>
+     * @return The squareMarketingImage.
      */
     public com.google.protobuf.StringValue getSquareMarketingImage() {
       if (squareMarketingImageBuilder_ == null) {
@@ -3423,8 +3525,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.enums.DisplayAdFormatSettingEnum.DisplayAdFormatSetting format_setting = 13;</code>
+     * @return The enum numeric value on the wire for formatSetting.
      */
-    public int getFormatSettingValue() {
+    @java.lang.Override public int getFormatSettingValue() {
       return formatSetting_;
     }
     /**
@@ -3433,8 +3536,11 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.enums.DisplayAdFormatSettingEnum.DisplayAdFormatSetting format_setting = 13;</code>
+     * @param value The enum numeric value on the wire for formatSetting to set.
+     * @return This builder for chaining.
      */
     public Builder setFormatSettingValue(int value) {
+      
       formatSetting_ = value;
       onChanged();
       return this;
@@ -3445,7 +3551,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.enums.DisplayAdFormatSettingEnum.DisplayAdFormatSetting format_setting = 13;</code>
+     * @return The formatSetting.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v2.enums.DisplayAdFormatSettingEnum.DisplayAdFormatSetting getFormatSetting() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v2.enums.DisplayAdFormatSettingEnum.DisplayAdFormatSetting result = com.google.ads.googleads.v2.enums.DisplayAdFormatSettingEnum.DisplayAdFormatSetting.valueOf(formatSetting_);
@@ -3457,6 +3565,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.enums.DisplayAdFormatSettingEnum.DisplayAdFormatSetting format_setting = 13;</code>
+     * @param value The formatSetting to set.
+     * @return This builder for chaining.
      */
     public Builder setFormatSetting(com.google.ads.googleads.v2.enums.DisplayAdFormatSettingEnum.DisplayAdFormatSetting value) {
       if (value == null) {
@@ -3473,6 +3583,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.enums.DisplayAdFormatSettingEnum.DisplayAdFormatSetting format_setting = 13;</code>
+     * @return This builder for chaining.
      */
     public Builder clearFormatSetting() {
       
@@ -3490,6 +3601,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue price_prefix = 14;</code>
+     * @return Whether the pricePrefix field is set.
      */
     public boolean hasPricePrefix() {
       return pricePrefixBuilder_ != null || pricePrefix_ != null;
@@ -3500,6 +3612,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue price_prefix = 14;</code>
+     * @return The pricePrefix.
      */
     public com.google.protobuf.StringValue getPricePrefix() {
       if (pricePrefixBuilder_ == null) {
@@ -3644,6 +3757,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue promo_text = 15;</code>
+     * @return Whether the promoText field is set.
      */
     public boolean hasPromoText() {
       return promoTextBuilder_ != null || promoText_ != null;
@@ -3655,6 +3769,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue promo_text = 15;</code>
+     * @return The promoText.
      */
     public com.google.protobuf.StringValue getPromoText() {
       if (promoTextBuilder_ == null) {

@@ -1,5 +1,5 @@
 /*
- * Copyright 2019 Google LLC
+ * Copyright 2020 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -15,15 +15,12 @@
  */
 package com.google.ads.googleads.v1.services;
 
-import com.google.ads.googleads.v1.enums.KeywordPlanNetworkEnum;
 import com.google.ads.googleads.v1.services.stub.KeywordPlanIdeaServiceStub;
 import com.google.ads.googleads.v1.services.stub.KeywordPlanIdeaServiceStubSettings;
 import com.google.api.core.BetaApi;
 import com.google.api.gax.core.BackgroundResource;
 import com.google.api.gax.rpc.UnaryCallable;
-import com.google.protobuf.StringValue;
 import java.io.IOException;
-import java.util.List;
 import java.util.concurrent.TimeUnit;
 import javax.annotation.Generated;
 
@@ -37,11 +34,11 @@ import javax.annotation.Generated;
  * <pre>
  * <code>
  * try (KeywordPlanIdeaServiceClient keywordPlanIdeaServiceClient = KeywordPlanIdeaServiceClient.create()) {
- *   String customerId = "";
  *   StringValue language = StringValue.newBuilder().build();
- *   List&lt;StringValue&gt; geoTargetConstants = new ArrayList&lt;&gt;();
- *   KeywordPlanNetworkEnum.KeywordPlanNetwork keywordPlanNetwork = KeywordPlanNetworkEnum.KeywordPlanNetwork.UNSPECIFIED;
- *   GenerateKeywordIdeaResponse response = keywordPlanIdeaServiceClient.generateKeywordIdeas(customerId, language, geoTargetConstants, keywordPlanNetwork);
+ *   GenerateKeywordIdeasRequest request = GenerateKeywordIdeasRequest.newBuilder()
+ *     .setLanguage(language)
+ *     .build();
+ *   GenerateKeywordIdeaResponse response = keywordPlanIdeaServiceClient.generateKeywordIdeas(request);
  * }
  * </code>
  * </pre>
@@ -160,53 +157,9 @@ public class KeywordPlanIdeaServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (KeywordPlanIdeaServiceClient keywordPlanIdeaServiceClient = KeywordPlanIdeaServiceClient.create()) {
-   *   String customerId = "";
    *   StringValue language = StringValue.newBuilder().build();
-   *   List&lt;StringValue&gt; geoTargetConstants = new ArrayList&lt;&gt;();
-   *   KeywordPlanNetworkEnum.KeywordPlanNetwork keywordPlanNetwork = KeywordPlanNetworkEnum.KeywordPlanNetwork.UNSPECIFIED;
-   *   GenerateKeywordIdeaResponse response = keywordPlanIdeaServiceClient.generateKeywordIdeas(customerId, language, geoTargetConstants, keywordPlanNetwork);
-   * }
-   * </code></pre>
-   *
-   * @param customerId The ID of the customer with the recommendation.
-   * @param language The resource name of the language to target. Required
-   * @param geoTargetConstants The resource names of the location to target. Max 10
-   * @param keywordPlanNetwork Targeting network.
-   * @throws com.google.api.gax.rpc.ApiException if the remote call fails
-   */
-  public final GenerateKeywordIdeaResponse generateKeywordIdeas(
-      String customerId,
-      StringValue language,
-      List<StringValue> geoTargetConstants,
-      KeywordPlanNetworkEnum.KeywordPlanNetwork keywordPlanNetwork) {
-
-    GenerateKeywordIdeasRequest request =
-        GenerateKeywordIdeasRequest.newBuilder()
-            .setCustomerId(customerId)
-            .setLanguage(language)
-            .addAllGeoTargetConstants(geoTargetConstants)
-            .setKeywordPlanNetwork(keywordPlanNetwork)
-            .build();
-    return generateKeywordIdeas(request);
-  }
-
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
-  /**
-   * Returns a list of keyword ideas.
-   *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (KeywordPlanIdeaServiceClient keywordPlanIdeaServiceClient = KeywordPlanIdeaServiceClient.create()) {
-   *   String customerId = "";
-   *   StringValue language = StringValue.newBuilder().build();
-   *   List&lt;StringValue&gt; geoTargetConstants = new ArrayList&lt;&gt;();
-   *   KeywordPlanNetworkEnum.KeywordPlanNetwork keywordPlanNetwork = KeywordPlanNetworkEnum.KeywordPlanNetwork.UNSPECIFIED;
    *   GenerateKeywordIdeasRequest request = GenerateKeywordIdeasRequest.newBuilder()
-   *     .setCustomerId(customerId)
    *     .setLanguage(language)
-   *     .addAllGeoTargetConstants(geoTargetConstants)
-   *     .setKeywordPlanNetwork(keywordPlanNetwork)
    *     .build();
    *   GenerateKeywordIdeaResponse response = keywordPlanIdeaServiceClient.generateKeywordIdeas(request);
    * }
@@ -228,15 +181,9 @@ public class KeywordPlanIdeaServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (KeywordPlanIdeaServiceClient keywordPlanIdeaServiceClient = KeywordPlanIdeaServiceClient.create()) {
-   *   String customerId = "";
    *   StringValue language = StringValue.newBuilder().build();
-   *   List&lt;StringValue&gt; geoTargetConstants = new ArrayList&lt;&gt;();
-   *   KeywordPlanNetworkEnum.KeywordPlanNetwork keywordPlanNetwork = KeywordPlanNetworkEnum.KeywordPlanNetwork.UNSPECIFIED;
    *   GenerateKeywordIdeasRequest request = GenerateKeywordIdeasRequest.newBuilder()
-   *     .setCustomerId(customerId)
    *     .setLanguage(language)
-   *     .addAllGeoTargetConstants(geoTargetConstants)
-   *     .setKeywordPlanNetwork(keywordPlanNetwork)
    *     .build();
    *   ApiFuture&lt;GenerateKeywordIdeaResponse&gt; future = keywordPlanIdeaServiceClient.generateKeywordIdeasCallable().futureCall(request);
    *   // Do something

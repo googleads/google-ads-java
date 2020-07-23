@@ -13,6 +13,7 @@ public interface ImageDimensionOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value height_pixels = 1;</code>
+   * @return Whether the heightPixels field is set.
    */
   boolean hasHeightPixels();
   /**
@@ -21,6 +22,7 @@ public interface ImageDimensionOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value height_pixels = 1;</code>
+   * @return The heightPixels.
    */
   com.google.protobuf.Int64Value getHeightPixels();
   /**
@@ -38,6 +40,7 @@ public interface ImageDimensionOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value width_pixels = 2;</code>
+   * @return Whether the widthPixels field is set.
    */
   boolean hasWidthPixels();
   /**
@@ -46,6 +49,7 @@ public interface ImageDimensionOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value width_pixels = 2;</code>
+   * @return The widthPixels.
    */
   com.google.protobuf.Int64Value getWidthPixels();
   /**
@@ -63,6 +67,7 @@ public interface ImageDimensionOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue url = 3;</code>
+   * @return Whether the url field is set.
    */
   boolean hasUrl();
   /**
@@ -71,6 +76,7 @@ public interface ImageDimensionOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue url = 3;</code>
+   * @return The url.
    */
   com.google.protobuf.StringValue getUrl();
   /**

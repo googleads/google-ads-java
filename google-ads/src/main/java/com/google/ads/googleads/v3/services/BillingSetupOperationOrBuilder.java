@@ -14,6 +14,7 @@ public interface BillingSetupOperationOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.BillingSetup create = 2;</code>
+   * @return Whether the create field is set.
    */
   boolean hasCreate();
   /**
@@ -23,6 +24,7 @@ public interface BillingSetupOperationOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.BillingSetup create = 2;</code>
+   * @return The create.
    */
   com.google.ads.googleads.v3.resources.BillingSetup getCreate();
   /**
@@ -44,6 +46,7 @@ public interface BillingSetupOperationOrBuilder extends
    * </pre>
    *
    * <code>string remove = 1;</code>
+   * @return The remove.
    */
   java.lang.String getRemove();
   /**
@@ -55,6 +58,7 @@ public interface BillingSetupOperationOrBuilder extends
    * </pre>
    *
    * <code>string remove = 1;</code>
+   * @return The bytes for remove.
    */
   com.google.protobuf.ByteString
       getRemoveBytes();

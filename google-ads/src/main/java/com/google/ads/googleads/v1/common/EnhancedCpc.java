@@ -12,7 +12,7 @@ package com.google.ads.googleads.v1.common;
  *
  * Protobuf type {@code google.ads.googleads.v1.common.EnhancedCpc}
  */
-public  final class EnhancedCpc extends
+public final class EnhancedCpc extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v1.common.EnhancedCpc)
     EnhancedCpcOrBuilder {
@@ -22,6 +22,13 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private EnhancedCpc() {
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new EnhancedCpc();
   }
 
   @java.lang.Override

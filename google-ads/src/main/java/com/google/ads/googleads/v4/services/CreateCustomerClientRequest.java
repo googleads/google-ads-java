@@ -10,7 +10,7 @@ package com.google.ads.googleads.v4.services;
  *
  * Protobuf type {@code google.ads.googleads.v4.services.CreateCustomerClientRequest}
  */
-public  final class CreateCustomerClientRequest extends
+public final class CreateCustomerClientRequest extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.services.CreateCustomerClientRequest)
     CreateCustomerClientRequestOrBuilder {
@@ -134,6 +134,7 @@ private static final long serialVersionUID = 0L;
    * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
    * @return The customerId.
    */
+  @java.lang.Override
   public java.lang.String getCustomerId() {
     java.lang.Object ref = customerId_;
     if (ref instanceof java.lang.String) {
@@ -154,6 +155,7 @@ private static final long serialVersionUID = 0L;
    * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
    * @return The bytes for customerId.
    */
+  @java.lang.Override
   public com.google.protobuf.ByteString
       getCustomerIdBytes() {
     java.lang.Object ref = customerId_;
@@ -179,6 +181,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.resources.Customer customer_client = 2 [(.google.api.field_behavior) = REQUIRED];</code>
    * @return Whether the customerClient field is set.
    */
+  @java.lang.Override
   public boolean hasCustomerClient() {
     return customerClient_ != null;
   }
@@ -191,6 +194,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.resources.Customer customer_client = 2 [(.google.api.field_behavior) = REQUIRED];</code>
    * @return The customerClient.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.resources.Customer getCustomerClient() {
     return customerClient_ == null ? com.google.ads.googleads.v4.resources.Customer.getDefaultInstance() : customerClient_;
   }
@@ -202,6 +206,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v4.resources.Customer customer_client = 2 [(.google.api.field_behavior) = REQUIRED];</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.resources.CustomerOrBuilder getCustomerClientOrBuilder() {
     return getCustomerClient();
   }
@@ -217,6 +222,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue email_address = 3;</code>
    * @return Whether the emailAddress field is set.
    */
+  @java.lang.Override
   public boolean hasEmailAddress() {
     return emailAddress_ != null;
   }
@@ -229,6 +235,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue email_address = 3;</code>
    * @return The emailAddress.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getEmailAddress() {
     return emailAddress_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : emailAddress_;
   }
@@ -240,6 +247,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue email_address = 3;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getEmailAddressOrBuilder() {
     return getEmailAddress();
   }
@@ -255,7 +263,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.AccessRoleEnum.AccessRole access_role = 4;</code>
    * @return The enum numeric value on the wire for accessRole.
    */
-  public int getAccessRoleValue() {
+  @java.lang.Override public int getAccessRoleValue() {
     return accessRole_;
   }
   /**
@@ -267,7 +275,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.AccessRoleEnum.AccessRole access_role = 4;</code>
    * @return The accessRole.
    */
-  public com.google.ads.googleads.v4.enums.AccessRoleEnum.AccessRole getAccessRole() {
+  @java.lang.Override public com.google.ads.googleads.v4.enums.AccessRoleEnum.AccessRole getAccessRole() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v4.enums.AccessRoleEnum.AccessRole result = com.google.ads.googleads.v4.enums.AccessRoleEnum.AccessRole.valueOf(accessRole_);
     return result == null ? com.google.ads.googleads.v4.enums.AccessRoleEnum.AccessRole.UNRECOGNIZED : result;
@@ -1089,7 +1097,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.AccessRoleEnum.AccessRole access_role = 4;</code>
      * @return The enum numeric value on the wire for accessRole.
      */
-    public int getAccessRoleValue() {
+    @java.lang.Override public int getAccessRoleValue() {
       return accessRole_;
     }
     /**
@@ -1103,6 +1111,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setAccessRoleValue(int value) {
+      
       accessRole_ = value;
       onChanged();
       return this;
@@ -1116,6 +1125,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.AccessRoleEnum.AccessRole access_role = 4;</code>
      * @return The accessRole.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.enums.AccessRoleEnum.AccessRole getAccessRole() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v4.enums.AccessRoleEnum.AccessRole result = com.google.ads.googleads.v4.enums.AccessRoleEnum.AccessRole.valueOf(accessRole_);

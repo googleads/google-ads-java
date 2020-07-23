@@ -11,7 +11,7 @@ package com.google.ads.googleads.v4.common;
  *
  * Protobuf type {@code google.ads.googleads.v4.common.FrequencyCapKey}
  */
-public  final class FrequencyCapKey extends
+public final class FrequencyCapKey extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.common.FrequencyCapKey)
     FrequencyCapKeyOrBuilder {
@@ -130,7 +130,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.FrequencyCapLevelEnum.FrequencyCapLevel level = 1;</code>
    * @return The enum numeric value on the wire for level.
    */
-  public int getLevelValue() {
+  @java.lang.Override public int getLevelValue() {
     return level_;
   }
   /**
@@ -142,7 +142,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.FrequencyCapLevelEnum.FrequencyCapLevel level = 1;</code>
    * @return The level.
    */
-  public com.google.ads.googleads.v4.enums.FrequencyCapLevelEnum.FrequencyCapLevel getLevel() {
+  @java.lang.Override public com.google.ads.googleads.v4.enums.FrequencyCapLevelEnum.FrequencyCapLevel getLevel() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v4.enums.FrequencyCapLevelEnum.FrequencyCapLevel result = com.google.ads.googleads.v4.enums.FrequencyCapLevelEnum.FrequencyCapLevel.valueOf(level_);
     return result == null ? com.google.ads.googleads.v4.enums.FrequencyCapLevelEnum.FrequencyCapLevel.UNRECOGNIZED : result;
@@ -158,7 +158,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.FrequencyCapEventTypeEnum.FrequencyCapEventType event_type = 3;</code>
    * @return The enum numeric value on the wire for eventType.
    */
-  public int getEventTypeValue() {
+  @java.lang.Override public int getEventTypeValue() {
     return eventType_;
   }
   /**
@@ -169,7 +169,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.FrequencyCapEventTypeEnum.FrequencyCapEventType event_type = 3;</code>
    * @return The eventType.
    */
-  public com.google.ads.googleads.v4.enums.FrequencyCapEventTypeEnum.FrequencyCapEventType getEventType() {
+  @java.lang.Override public com.google.ads.googleads.v4.enums.FrequencyCapEventTypeEnum.FrequencyCapEventType getEventType() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v4.enums.FrequencyCapEventTypeEnum.FrequencyCapEventType result = com.google.ads.googleads.v4.enums.FrequencyCapEventTypeEnum.FrequencyCapEventType.valueOf(eventType_);
     return result == null ? com.google.ads.googleads.v4.enums.FrequencyCapEventTypeEnum.FrequencyCapEventType.UNRECOGNIZED : result;
@@ -185,7 +185,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.FrequencyCapTimeUnitEnum.FrequencyCapTimeUnit time_unit = 2;</code>
    * @return The enum numeric value on the wire for timeUnit.
    */
-  public int getTimeUnitValue() {
+  @java.lang.Override public int getTimeUnitValue() {
     return timeUnit_;
   }
   /**
@@ -196,7 +196,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.FrequencyCapTimeUnitEnum.FrequencyCapTimeUnit time_unit = 2;</code>
    * @return The timeUnit.
    */
-  public com.google.ads.googleads.v4.enums.FrequencyCapTimeUnitEnum.FrequencyCapTimeUnit getTimeUnit() {
+  @java.lang.Override public com.google.ads.googleads.v4.enums.FrequencyCapTimeUnitEnum.FrequencyCapTimeUnit getTimeUnit() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v4.enums.FrequencyCapTimeUnitEnum.FrequencyCapTimeUnit result = com.google.ads.googleads.v4.enums.FrequencyCapTimeUnitEnum.FrequencyCapTimeUnit.valueOf(timeUnit_);
     return result == null ? com.google.ads.googleads.v4.enums.FrequencyCapTimeUnitEnum.FrequencyCapTimeUnit.UNRECOGNIZED : result;
@@ -212,6 +212,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int32Value time_length = 4;</code>
    * @return Whether the timeLength field is set.
    */
+  @java.lang.Override
   public boolean hasTimeLength() {
     return timeLength_ != null;
   }
@@ -223,6 +224,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int32Value time_length = 4;</code>
    * @return The timeLength.
    */
+  @java.lang.Override
   public com.google.protobuf.Int32Value getTimeLength() {
     return timeLength_ == null ? com.google.protobuf.Int32Value.getDefaultInstance() : timeLength_;
   }
@@ -233,6 +235,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int32Value time_length = 4;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int32ValueOrBuilder getTimeLengthOrBuilder() {
     return getTimeLength();
   }
@@ -615,7 +618,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.FrequencyCapLevelEnum.FrequencyCapLevel level = 1;</code>
      * @return The enum numeric value on the wire for level.
      */
-    public int getLevelValue() {
+    @java.lang.Override public int getLevelValue() {
       return level_;
     }
     /**
@@ -629,6 +632,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setLevelValue(int value) {
+      
       level_ = value;
       onChanged();
       return this;
@@ -642,6 +646,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.FrequencyCapLevelEnum.FrequencyCapLevel level = 1;</code>
      * @return The level.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.enums.FrequencyCapLevelEnum.FrequencyCapLevel getLevel() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v4.enums.FrequencyCapLevelEnum.FrequencyCapLevel result = com.google.ads.googleads.v4.enums.FrequencyCapLevelEnum.FrequencyCapLevel.valueOf(level_);
@@ -691,7 +696,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.FrequencyCapEventTypeEnum.FrequencyCapEventType event_type = 3;</code>
      * @return The enum numeric value on the wire for eventType.
      */
-    public int getEventTypeValue() {
+    @java.lang.Override public int getEventTypeValue() {
       return eventType_;
     }
     /**
@@ -704,6 +709,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setEventTypeValue(int value) {
+      
       eventType_ = value;
       onChanged();
       return this;
@@ -716,6 +722,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.FrequencyCapEventTypeEnum.FrequencyCapEventType event_type = 3;</code>
      * @return The eventType.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.enums.FrequencyCapEventTypeEnum.FrequencyCapEventType getEventType() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v4.enums.FrequencyCapEventTypeEnum.FrequencyCapEventType result = com.google.ads.googleads.v4.enums.FrequencyCapEventTypeEnum.FrequencyCapEventType.valueOf(eventType_);
@@ -763,7 +770,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.FrequencyCapTimeUnitEnum.FrequencyCapTimeUnit time_unit = 2;</code>
      * @return The enum numeric value on the wire for timeUnit.
      */
-    public int getTimeUnitValue() {
+    @java.lang.Override public int getTimeUnitValue() {
       return timeUnit_;
     }
     /**
@@ -776,6 +783,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setTimeUnitValue(int value) {
+      
       timeUnit_ = value;
       onChanged();
       return this;
@@ -788,6 +796,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.FrequencyCapTimeUnitEnum.FrequencyCapTimeUnit time_unit = 2;</code>
      * @return The timeUnit.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.enums.FrequencyCapTimeUnitEnum.FrequencyCapTimeUnit getTimeUnit() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v4.enums.FrequencyCapTimeUnitEnum.FrequencyCapTimeUnit result = com.google.ads.googleads.v4.enums.FrequencyCapTimeUnitEnum.FrequencyCapTimeUnit.valueOf(timeUnit_);

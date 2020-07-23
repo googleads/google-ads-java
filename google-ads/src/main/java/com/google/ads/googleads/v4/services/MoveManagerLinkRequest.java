@@ -10,7 +10,7 @@ package com.google.ads.googleads.v4.services;
  *
  * Protobuf type {@code google.ads.googleads.v4.services.MoveManagerLinkRequest}
  */
-public  final class MoveManagerLinkRequest extends
+public final class MoveManagerLinkRequest extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.services.MoveManagerLinkRequest)
     MoveManagerLinkRequestOrBuilder {
@@ -115,6 +115,7 @@ private static final long serialVersionUID = 0L;
    * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
    * @return The customerId.
    */
+  @java.lang.Override
   public java.lang.String getCustomerId() {
     java.lang.Object ref = customerId_;
     if (ref instanceof java.lang.String) {
@@ -135,6 +136,7 @@ private static final long serialVersionUID = 0L;
    * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
    * @return The bytes for customerId.
    */
+  @java.lang.Override
   public com.google.protobuf.ByteString
       getCustomerIdBytes() {
     java.lang.Object ref = customerId_;
@@ -161,6 +163,7 @@ private static final long serialVersionUID = 0L;
    * <code>string previous_customer_manager_link = 2 [(.google.api.field_behavior) = REQUIRED];</code>
    * @return The previousCustomerManagerLink.
    */
+  @java.lang.Override
   public java.lang.String getPreviousCustomerManagerLink() {
     java.lang.Object ref = previousCustomerManagerLink_;
     if (ref instanceof java.lang.String) {
@@ -183,6 +186,7 @@ private static final long serialVersionUID = 0L;
    * <code>string previous_customer_manager_link = 2 [(.google.api.field_behavior) = REQUIRED];</code>
    * @return The bytes for previousCustomerManagerLink.
    */
+  @java.lang.Override
   public com.google.protobuf.ByteString
       getPreviousCustomerManagerLinkBytes() {
     java.lang.Object ref = previousCustomerManagerLink_;
@@ -208,6 +212,7 @@ private static final long serialVersionUID = 0L;
    * <code>string new_manager = 3 [(.google.api.field_behavior) = REQUIRED];</code>
    * @return The newManager.
    */
+  @java.lang.Override
   public java.lang.String getNewManager() {
     java.lang.Object ref = newManager_;
     if (ref instanceof java.lang.String) {
@@ -229,6 +234,7 @@ private static final long serialVersionUID = 0L;
    * <code>string new_manager = 3 [(.google.api.field_behavior) = REQUIRED];</code>
    * @return The bytes for newManager.
    */
+  @java.lang.Override
   public com.google.protobuf.ByteString
       getNewManagerBytes() {
     java.lang.Object ref = newManager_;

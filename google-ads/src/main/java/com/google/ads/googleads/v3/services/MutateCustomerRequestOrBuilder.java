@@ -13,6 +13,7 @@ public interface MutateCustomerRequestOrBuilder extends
    * </pre>
    *
    * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+   * @return The customerId.
    */
   java.lang.String getCustomerId();
   /**
@@ -21,6 +22,7 @@ public interface MutateCustomerRequestOrBuilder extends
    * </pre>
    *
    * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+   * @return The bytes for customerId.
    */
   com.google.protobuf.ByteString
       getCustomerIdBytes();
@@ -31,6 +33,7 @@ public interface MutateCustomerRequestOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.services.CustomerOperation operation = 4 [(.google.api.field_behavior) = REQUIRED];</code>
+   * @return Whether the operation field is set.
    */
   boolean hasOperation();
   /**
@@ -39,6 +42,7 @@ public interface MutateCustomerRequestOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.services.CustomerOperation operation = 4 [(.google.api.field_behavior) = REQUIRED];</code>
+   * @return The operation.
    */
   com.google.ads.googleads.v3.services.CustomerOperation getOperation();
   /**
@@ -57,6 +61,7 @@ public interface MutateCustomerRequestOrBuilder extends
    * </pre>
    *
    * <code>bool validate_only = 5;</code>
+   * @return The validateOnly.
    */
   boolean getValidateOnly();
 }

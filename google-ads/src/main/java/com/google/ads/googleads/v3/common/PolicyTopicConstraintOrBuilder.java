@@ -13,6 +13,7 @@ public interface PolicyTopicConstraintOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.PolicyTopicConstraint.CountryConstraintList country_constraint_list = 1;</code>
+   * @return Whether the countryConstraintList field is set.
    */
   boolean hasCountryConstraintList();
   /**
@@ -21,6 +22,7 @@ public interface PolicyTopicConstraintOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.PolicyTopicConstraint.CountryConstraintList country_constraint_list = 1;</code>
+   * @return The countryConstraintList.
    */
   com.google.ads.googleads.v3.common.PolicyTopicConstraint.CountryConstraintList getCountryConstraintList();
   /**
@@ -38,6 +40,7 @@ public interface PolicyTopicConstraintOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.PolicyTopicConstraint.ResellerConstraint reseller_constraint = 2;</code>
+   * @return Whether the resellerConstraint field is set.
    */
   boolean hasResellerConstraint();
   /**
@@ -46,6 +49,7 @@ public interface PolicyTopicConstraintOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.PolicyTopicConstraint.ResellerConstraint reseller_constraint = 2;</code>
+   * @return The resellerConstraint.
    */
   com.google.ads.googleads.v3.common.PolicyTopicConstraint.ResellerConstraint getResellerConstraint();
   /**
@@ -63,6 +67,7 @@ public interface PolicyTopicConstraintOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.PolicyTopicConstraint.CountryConstraintList certificate_missing_in_country_list = 3;</code>
+   * @return Whether the certificateMissingInCountryList field is set.
    */
   boolean hasCertificateMissingInCountryList();
   /**
@@ -71,6 +76,7 @@ public interface PolicyTopicConstraintOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.PolicyTopicConstraint.CountryConstraintList certificate_missing_in_country_list = 3;</code>
+   * @return The certificateMissingInCountryList.
    */
   com.google.ads.googleads.v3.common.PolicyTopicConstraint.CountryConstraintList getCertificateMissingInCountryList();
   /**
@@ -89,6 +95,7 @@ public interface PolicyTopicConstraintOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.PolicyTopicConstraint.CountryConstraintList certificate_domain_mismatch_in_country_list = 4;</code>
+   * @return Whether the certificateDomainMismatchInCountryList field is set.
    */
   boolean hasCertificateDomainMismatchInCountryList();
   /**
@@ -98,6 +105,7 @@ public interface PolicyTopicConstraintOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.PolicyTopicConstraint.CountryConstraintList certificate_domain_mismatch_in_country_list = 4;</code>
+   * @return The certificateDomainMismatchInCountryList.
    */
   com.google.ads.googleads.v3.common.PolicyTopicConstraint.CountryConstraintList getCertificateDomainMismatchInCountryList();
   /**

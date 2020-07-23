@@ -21,7 +21,7 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.10.0)",
+    value = "by gRPC proto compiler",
     comments = "Source: google/ads/googleads/v4/services/customer_extension_setting_service.proto")
 public final class CustomerExtensionSettingServiceGrpc {
 
@@ -30,86 +30,80 @@ public final class CustomerExtensionSettingServiceGrpc {
   public static final String SERVICE_NAME = "google.ads.googleads.v4.services.CustomerExtensionSettingService";
 
   // Static method descriptors that strictly reflect the proto.
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  @java.lang.Deprecated // Use {@link #getGetCustomerExtensionSettingMethod()} instead. 
-  public static final io.grpc.MethodDescriptor<com.google.ads.googleads.v4.services.GetCustomerExtensionSettingRequest,
-      com.google.ads.googleads.v4.resources.CustomerExtensionSetting> METHOD_GET_CUSTOMER_EXTENSION_SETTING = getGetCustomerExtensionSettingMethodHelper();
-
   private static volatile io.grpc.MethodDescriptor<com.google.ads.googleads.v4.services.GetCustomerExtensionSettingRequest,
       com.google.ads.googleads.v4.resources.CustomerExtensionSetting> getGetCustomerExtensionSettingMethod;
 
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetCustomerExtensionSetting",
+      requestType = com.google.ads.googleads.v4.services.GetCustomerExtensionSettingRequest.class,
+      responseType = com.google.ads.googleads.v4.resources.CustomerExtensionSetting.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<com.google.ads.googleads.v4.services.GetCustomerExtensionSettingRequest,
       com.google.ads.googleads.v4.resources.CustomerExtensionSetting> getGetCustomerExtensionSettingMethod() {
-    return getGetCustomerExtensionSettingMethodHelper();
-  }
-
-  private static io.grpc.MethodDescriptor<com.google.ads.googleads.v4.services.GetCustomerExtensionSettingRequest,
-      com.google.ads.googleads.v4.resources.CustomerExtensionSetting> getGetCustomerExtensionSettingMethodHelper() {
     io.grpc.MethodDescriptor<com.google.ads.googleads.v4.services.GetCustomerExtensionSettingRequest, com.google.ads.googleads.v4.resources.CustomerExtensionSetting> getGetCustomerExtensionSettingMethod;
     if ((getGetCustomerExtensionSettingMethod = CustomerExtensionSettingServiceGrpc.getGetCustomerExtensionSettingMethod) == null) {
       synchronized (CustomerExtensionSettingServiceGrpc.class) {
         if ((getGetCustomerExtensionSettingMethod = CustomerExtensionSettingServiceGrpc.getGetCustomerExtensionSettingMethod) == null) {
-          CustomerExtensionSettingServiceGrpc.getGetCustomerExtensionSettingMethod = getGetCustomerExtensionSettingMethod = 
+          CustomerExtensionSettingServiceGrpc.getGetCustomerExtensionSettingMethod = getGetCustomerExtensionSettingMethod =
               io.grpc.MethodDescriptor.<com.google.ads.googleads.v4.services.GetCustomerExtensionSettingRequest, com.google.ads.googleads.v4.resources.CustomerExtensionSetting>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "google.ads.googleads.v4.services.CustomerExtensionSettingService", "GetCustomerExtensionSetting"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetCustomerExtensionSetting"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v4.services.GetCustomerExtensionSettingRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v4.resources.CustomerExtensionSetting.getDefaultInstance()))
-                  .setSchemaDescriptor(new CustomerExtensionSettingServiceMethodDescriptorSupplier("GetCustomerExtensionSetting"))
-                  .build();
-          }
+              .setSchemaDescriptor(new CustomerExtensionSettingServiceMethodDescriptorSupplier("GetCustomerExtensionSetting"))
+              .build();
         }
-     }
-     return getGetCustomerExtensionSettingMethod;
+      }
+    }
+    return getGetCustomerExtensionSettingMethod;
   }
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  @java.lang.Deprecated // Use {@link #getMutateCustomerExtensionSettingsMethod()} instead. 
-  public static final io.grpc.MethodDescriptor<com.google.ads.googleads.v4.services.MutateCustomerExtensionSettingsRequest,
-      com.google.ads.googleads.v4.services.MutateCustomerExtensionSettingsResponse> METHOD_MUTATE_CUSTOMER_EXTENSION_SETTINGS = getMutateCustomerExtensionSettingsMethodHelper();
 
   private static volatile io.grpc.MethodDescriptor<com.google.ads.googleads.v4.services.MutateCustomerExtensionSettingsRequest,
       com.google.ads.googleads.v4.services.MutateCustomerExtensionSettingsResponse> getMutateCustomerExtensionSettingsMethod;
 
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "MutateCustomerExtensionSettings",
+      requestType = com.google.ads.googleads.v4.services.MutateCustomerExtensionSettingsRequest.class,
+      responseType = com.google.ads.googleads.v4.services.MutateCustomerExtensionSettingsResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<com.google.ads.googleads.v4.services.MutateCustomerExtensionSettingsRequest,
       com.google.ads.googleads.v4.services.MutateCustomerExtensionSettingsResponse> getMutateCustomerExtensionSettingsMethod() {
-    return getMutateCustomerExtensionSettingsMethodHelper();
-  }
-
-  private static io.grpc.MethodDescriptor<com.google.ads.googleads.v4.services.MutateCustomerExtensionSettingsRequest,
-      com.google.ads.googleads.v4.services.MutateCustomerExtensionSettingsResponse> getMutateCustomerExtensionSettingsMethodHelper() {
     io.grpc.MethodDescriptor<com.google.ads.googleads.v4.services.MutateCustomerExtensionSettingsRequest, com.google.ads.googleads.v4.services.MutateCustomerExtensionSettingsResponse> getMutateCustomerExtensionSettingsMethod;
     if ((getMutateCustomerExtensionSettingsMethod = CustomerExtensionSettingServiceGrpc.getMutateCustomerExtensionSettingsMethod) == null) {
       synchronized (CustomerExtensionSettingServiceGrpc.class) {
         if ((getMutateCustomerExtensionSettingsMethod = CustomerExtensionSettingServiceGrpc.getMutateCustomerExtensionSettingsMethod) == null) {
-          CustomerExtensionSettingServiceGrpc.getMutateCustomerExtensionSettingsMethod = getMutateCustomerExtensionSettingsMethod = 
+          CustomerExtensionSettingServiceGrpc.getMutateCustomerExtensionSettingsMethod = getMutateCustomerExtensionSettingsMethod =
               io.grpc.MethodDescriptor.<com.google.ads.googleads.v4.services.MutateCustomerExtensionSettingsRequest, com.google.ads.googleads.v4.services.MutateCustomerExtensionSettingsResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "google.ads.googleads.v4.services.CustomerExtensionSettingService", "MutateCustomerExtensionSettings"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "MutateCustomerExtensionSettings"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v4.services.MutateCustomerExtensionSettingsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v4.services.MutateCustomerExtensionSettingsResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new CustomerExtensionSettingServiceMethodDescriptorSupplier("MutateCustomerExtensionSettings"))
-                  .build();
-          }
+              .setSchemaDescriptor(new CustomerExtensionSettingServiceMethodDescriptorSupplier("MutateCustomerExtensionSettings"))
+              .build();
         }
-     }
-     return getMutateCustomerExtensionSettingsMethod;
+      }
+    }
+    return getMutateCustomerExtensionSettingsMethod;
   }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static CustomerExtensionSettingServiceStub newStub(io.grpc.Channel channel) {
-    return new CustomerExtensionSettingServiceStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<CustomerExtensionSettingServiceStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<CustomerExtensionSettingServiceStub>() {
+        @java.lang.Override
+        public CustomerExtensionSettingServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new CustomerExtensionSettingServiceStub(channel, callOptions);
+        }
+      };
+    return CustomerExtensionSettingServiceStub.newStub(factory, channel);
   }
 
   /**
@@ -117,7 +111,14 @@ public final class CustomerExtensionSettingServiceGrpc {
    */
   public static CustomerExtensionSettingServiceBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new CustomerExtensionSettingServiceBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<CustomerExtensionSettingServiceBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<CustomerExtensionSettingServiceBlockingStub>() {
+        @java.lang.Override
+        public CustomerExtensionSettingServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new CustomerExtensionSettingServiceBlockingStub(channel, callOptions);
+        }
+      };
+    return CustomerExtensionSettingServiceBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -125,7 +126,14 @@ public final class CustomerExtensionSettingServiceGrpc {
    */
   public static CustomerExtensionSettingServiceFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new CustomerExtensionSettingServiceFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<CustomerExtensionSettingServiceFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<CustomerExtensionSettingServiceFutureStub>() {
+        @java.lang.Override
+        public CustomerExtensionSettingServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new CustomerExtensionSettingServiceFutureStub(channel, callOptions);
+        }
+      };
+    return CustomerExtensionSettingServiceFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -142,7 +150,7 @@ public final class CustomerExtensionSettingServiceGrpc {
      */
     public void getCustomerExtensionSetting(com.google.ads.googleads.v4.services.GetCustomerExtensionSettingRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v4.resources.CustomerExtensionSetting> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetCustomerExtensionSettingMethodHelper(), responseObserver);
+      asyncUnimplementedUnaryCall(getGetCustomerExtensionSettingMethod(), responseObserver);
     }
 
     /**
@@ -153,20 +161,20 @@ public final class CustomerExtensionSettingServiceGrpc {
      */
     public void mutateCustomerExtensionSettings(com.google.ads.googleads.v4.services.MutateCustomerExtensionSettingsRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v4.services.MutateCustomerExtensionSettingsResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getMutateCustomerExtensionSettingsMethodHelper(), responseObserver);
+      asyncUnimplementedUnaryCall(getMutateCustomerExtensionSettingsMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
-            getGetCustomerExtensionSettingMethodHelper(),
+            getGetCustomerExtensionSettingMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 com.google.ads.googleads.v4.services.GetCustomerExtensionSettingRequest,
                 com.google.ads.googleads.v4.resources.CustomerExtensionSetting>(
                   this, METHODID_GET_CUSTOMER_EXTENSION_SETTING)))
           .addMethod(
-            getMutateCustomerExtensionSettingsMethodHelper(),
+            getMutateCustomerExtensionSettingsMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 com.google.ads.googleads.v4.services.MutateCustomerExtensionSettingsRequest,
@@ -181,19 +189,15 @@ public final class CustomerExtensionSettingServiceGrpc {
    * Service to manage customer extension settings.
    * </pre>
    */
-  public static final class CustomerExtensionSettingServiceStub extends io.grpc.stub.AbstractStub<CustomerExtensionSettingServiceStub> {
-    private CustomerExtensionSettingServiceStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private CustomerExtensionSettingServiceStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class CustomerExtensionSettingServiceStub extends io.grpc.stub.AbstractAsyncStub<CustomerExtensionSettingServiceStub> {
+    private CustomerExtensionSettingServiceStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected CustomerExtensionSettingServiceStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected CustomerExtensionSettingServiceStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new CustomerExtensionSettingServiceStub(channel, callOptions);
     }
 
@@ -205,7 +209,7 @@ public final class CustomerExtensionSettingServiceGrpc {
     public void getCustomerExtensionSetting(com.google.ads.googleads.v4.services.GetCustomerExtensionSettingRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v4.resources.CustomerExtensionSetting> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(getGetCustomerExtensionSettingMethodHelper(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getGetCustomerExtensionSettingMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -217,7 +221,7 @@ public final class CustomerExtensionSettingServiceGrpc {
     public void mutateCustomerExtensionSettings(com.google.ads.googleads.v4.services.MutateCustomerExtensionSettingsRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v4.services.MutateCustomerExtensionSettingsResponse> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(getMutateCustomerExtensionSettingsMethodHelper(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getMutateCustomerExtensionSettingsMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -226,19 +230,15 @@ public final class CustomerExtensionSettingServiceGrpc {
    * Service to manage customer extension settings.
    * </pre>
    */
-  public static final class CustomerExtensionSettingServiceBlockingStub extends io.grpc.stub.AbstractStub<CustomerExtensionSettingServiceBlockingStub> {
-    private CustomerExtensionSettingServiceBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private CustomerExtensionSettingServiceBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class CustomerExtensionSettingServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<CustomerExtensionSettingServiceBlockingStub> {
+    private CustomerExtensionSettingServiceBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected CustomerExtensionSettingServiceBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected CustomerExtensionSettingServiceBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new CustomerExtensionSettingServiceBlockingStub(channel, callOptions);
     }
 
@@ -249,7 +249,7 @@ public final class CustomerExtensionSettingServiceGrpc {
      */
     public com.google.ads.googleads.v4.resources.CustomerExtensionSetting getCustomerExtensionSetting(com.google.ads.googleads.v4.services.GetCustomerExtensionSettingRequest request) {
       return blockingUnaryCall(
-          getChannel(), getGetCustomerExtensionSettingMethodHelper(), getCallOptions(), request);
+          getChannel(), getGetCustomerExtensionSettingMethod(), getCallOptions(), request);
     }
 
     /**
@@ -260,7 +260,7 @@ public final class CustomerExtensionSettingServiceGrpc {
      */
     public com.google.ads.googleads.v4.services.MutateCustomerExtensionSettingsResponse mutateCustomerExtensionSettings(com.google.ads.googleads.v4.services.MutateCustomerExtensionSettingsRequest request) {
       return blockingUnaryCall(
-          getChannel(), getMutateCustomerExtensionSettingsMethodHelper(), getCallOptions(), request);
+          getChannel(), getMutateCustomerExtensionSettingsMethod(), getCallOptions(), request);
     }
   }
 
@@ -269,19 +269,15 @@ public final class CustomerExtensionSettingServiceGrpc {
    * Service to manage customer extension settings.
    * </pre>
    */
-  public static final class CustomerExtensionSettingServiceFutureStub extends io.grpc.stub.AbstractStub<CustomerExtensionSettingServiceFutureStub> {
-    private CustomerExtensionSettingServiceFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private CustomerExtensionSettingServiceFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class CustomerExtensionSettingServiceFutureStub extends io.grpc.stub.AbstractFutureStub<CustomerExtensionSettingServiceFutureStub> {
+    private CustomerExtensionSettingServiceFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected CustomerExtensionSettingServiceFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected CustomerExtensionSettingServiceFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new CustomerExtensionSettingServiceFutureStub(channel, callOptions);
     }
 
@@ -293,7 +289,7 @@ public final class CustomerExtensionSettingServiceGrpc {
     public com.google.common.util.concurrent.ListenableFuture<com.google.ads.googleads.v4.resources.CustomerExtensionSetting> getCustomerExtensionSetting(
         com.google.ads.googleads.v4.services.GetCustomerExtensionSettingRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(getGetCustomerExtensionSettingMethodHelper(), getCallOptions()), request);
+          getChannel().newCall(getGetCustomerExtensionSettingMethod(), getCallOptions()), request);
     }
 
     /**
@@ -305,7 +301,7 @@ public final class CustomerExtensionSettingServiceGrpc {
     public com.google.common.util.concurrent.ListenableFuture<com.google.ads.googleads.v4.services.MutateCustomerExtensionSettingsResponse> mutateCustomerExtensionSettings(
         com.google.ads.googleads.v4.services.MutateCustomerExtensionSettingsRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(getMutateCustomerExtensionSettingsMethodHelper(), getCallOptions()), request);
+          getChannel().newCall(getMutateCustomerExtensionSettingsMethod(), getCallOptions()), request);
     }
   }
 
@@ -398,8 +394,8 @@ public final class CustomerExtensionSettingServiceGrpc {
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new CustomerExtensionSettingServiceFileDescriptorSupplier())
-              .addMethod(getGetCustomerExtensionSettingMethodHelper())
-              .addMethod(getMutateCustomerExtensionSettingsMethodHelper())
+              .addMethod(getGetCustomerExtensionSettingMethod())
+              .addMethod(getMutateCustomerExtensionSettingsMethod())
               .build();
         }
       }

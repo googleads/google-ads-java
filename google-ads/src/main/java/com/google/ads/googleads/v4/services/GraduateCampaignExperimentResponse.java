@@ -10,7 +10,7 @@ package com.google.ads.googleads.v4.services;
  *
  * Protobuf type {@code google.ads.googleads.v4.services.GraduateCampaignExperimentResponse}
  */
-public  final class GraduateCampaignExperimentResponse extends
+public final class GraduateCampaignExperimentResponse extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.services.GraduateCampaignExperimentResponse)
     GraduateCampaignExperimentResponseOrBuilder {
@@ -102,6 +102,7 @@ private static final long serialVersionUID = 0L;
    * <code>string graduated_campaign = 1;</code>
    * @return The graduatedCampaign.
    */
+  @java.lang.Override
   public java.lang.String getGraduatedCampaign() {
     java.lang.Object ref = graduatedCampaign_;
     if (ref instanceof java.lang.String) {
@@ -123,6 +124,7 @@ private static final long serialVersionUID = 0L;
    * <code>string graduated_campaign = 1;</code>
    * @return The bytes for graduatedCampaign.
    */
+  @java.lang.Override
   public com.google.protobuf.ByteString
       getGraduatedCampaignBytes() {
     java.lang.Object ref = graduatedCampaign_;

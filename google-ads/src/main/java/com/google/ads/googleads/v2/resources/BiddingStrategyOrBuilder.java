@@ -9,48 +9,52 @@ public interface BiddingStrategyOrBuilder extends
 
   /**
    * <pre>
-   * The resource name of the bidding strategy.
+   * Immutable. The resource name of the bidding strategy.
    * Bidding strategy resource names have the form:
    * `customers/{customer_id}/biddingStrategies/{bidding_strategy_id}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * @return The resourceName.
    */
   java.lang.String getResourceName();
   /**
    * <pre>
-   * The resource name of the bidding strategy.
+   * Immutable. The resource name of the bidding strategy.
    * Bidding strategy resource names have the form:
    * `customers/{customer_id}/biddingStrategies/{bidding_strategy_id}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * @return The bytes for resourceName.
    */
   com.google.protobuf.ByteString
       getResourceNameBytes();
 
   /**
    * <pre>
-   * The ID of the bidding strategy.
+   * Output only. The ID of the bidding strategy.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value id = 3;</code>
+   * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the id field is set.
    */
   boolean hasId();
   /**
    * <pre>
-   * The ID of the bidding strategy.
+   * Output only. The ID of the bidding strategy.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value id = 3;</code>
+   * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The id.
    */
   com.google.protobuf.Int64Value getId();
   /**
    * <pre>
-   * The ID of the bidding strategy.
+   * Output only. The ID of the bidding strategy.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value id = 3;</code>
+   * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.protobuf.Int64ValueOrBuilder getIdOrBuilder();
 
@@ -63,6 +67,7 @@ public interface BiddingStrategyOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue name = 4;</code>
+   * @return Whether the name field is set.
    */
   boolean hasName();
   /**
@@ -74,6 +79,7 @@ public interface BiddingStrategyOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue name = 4;</code>
+   * @return The name.
    */
   com.google.protobuf.StringValue getName();
   /**
@@ -90,97 +96,105 @@ public interface BiddingStrategyOrBuilder extends
 
   /**
    * <pre>
-   * The status of the bidding strategy.
+   * Output only. The status of the bidding strategy.
    * This field is read-only.
    * </pre>
    *
-   * <code>.google.ads.googleads.v2.enums.BiddingStrategyStatusEnum.BiddingStrategyStatus status = 15;</code>
+   * <code>.google.ads.googleads.v2.enums.BiddingStrategyStatusEnum.BiddingStrategyStatus status = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The enum numeric value on the wire for status.
    */
   int getStatusValue();
   /**
    * <pre>
-   * The status of the bidding strategy.
+   * Output only. The status of the bidding strategy.
    * This field is read-only.
    * </pre>
    *
-   * <code>.google.ads.googleads.v2.enums.BiddingStrategyStatusEnum.BiddingStrategyStatus status = 15;</code>
+   * <code>.google.ads.googleads.v2.enums.BiddingStrategyStatusEnum.BiddingStrategyStatus status = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The status.
    */
   com.google.ads.googleads.v2.enums.BiddingStrategyStatusEnum.BiddingStrategyStatus getStatus();
 
   /**
    * <pre>
-   * The type of the bidding strategy.
+   * Output only. The type of the bidding strategy.
    * Create a bidding strategy by setting the bidding scheme.
    * This field is read-only.
    * </pre>
    *
-   * <code>.google.ads.googleads.v2.enums.BiddingStrategyTypeEnum.BiddingStrategyType type = 5;</code>
+   * <code>.google.ads.googleads.v2.enums.BiddingStrategyTypeEnum.BiddingStrategyType type = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The enum numeric value on the wire for type.
    */
   int getTypeValue();
   /**
    * <pre>
-   * The type of the bidding strategy.
+   * Output only. The type of the bidding strategy.
    * Create a bidding strategy by setting the bidding scheme.
    * This field is read-only.
    * </pre>
    *
-   * <code>.google.ads.googleads.v2.enums.BiddingStrategyTypeEnum.BiddingStrategyType type = 5;</code>
+   * <code>.google.ads.googleads.v2.enums.BiddingStrategyTypeEnum.BiddingStrategyType type = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The type.
    */
   com.google.ads.googleads.v2.enums.BiddingStrategyTypeEnum.BiddingStrategyType getType();
 
   /**
    * <pre>
-   * The number of campaigns attached to this bidding strategy.
+   * Output only. The number of campaigns attached to this bidding strategy.
    * This field is read-only.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value campaign_count = 13;</code>
+   * <code>.google.protobuf.Int64Value campaign_count = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the campaignCount field is set.
    */
   boolean hasCampaignCount();
   /**
    * <pre>
-   * The number of campaigns attached to this bidding strategy.
+   * Output only. The number of campaigns attached to this bidding strategy.
    * This field is read-only.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value campaign_count = 13;</code>
+   * <code>.google.protobuf.Int64Value campaign_count = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The campaignCount.
    */
   com.google.protobuf.Int64Value getCampaignCount();
   /**
    * <pre>
-   * The number of campaigns attached to this bidding strategy.
+   * Output only. The number of campaigns attached to this bidding strategy.
    * This field is read-only.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value campaign_count = 13;</code>
+   * <code>.google.protobuf.Int64Value campaign_count = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.protobuf.Int64ValueOrBuilder getCampaignCountOrBuilder();
 
   /**
    * <pre>
-   * The number of non-removed campaigns attached to this bidding strategy.
+   * Output only. The number of non-removed campaigns attached to this bidding strategy.
    * This field is read-only.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value non_removed_campaign_count = 14;</code>
+   * <code>.google.protobuf.Int64Value non_removed_campaign_count = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the nonRemovedCampaignCount field is set.
    */
   boolean hasNonRemovedCampaignCount();
   /**
    * <pre>
-   * The number of non-removed campaigns attached to this bidding strategy.
+   * Output only. The number of non-removed campaigns attached to this bidding strategy.
    * This field is read-only.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value non_removed_campaign_count = 14;</code>
+   * <code>.google.protobuf.Int64Value non_removed_campaign_count = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The nonRemovedCampaignCount.
    */
   com.google.protobuf.Int64Value getNonRemovedCampaignCount();
   /**
    * <pre>
-   * The number of non-removed campaigns attached to this bidding strategy.
+   * Output only. The number of non-removed campaigns attached to this bidding strategy.
    * This field is read-only.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value non_removed_campaign_count = 14;</code>
+   * <code>.google.protobuf.Int64Value non_removed_campaign_count = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.protobuf.Int64ValueOrBuilder getNonRemovedCampaignCountOrBuilder();
 
@@ -192,6 +206,7 @@ public interface BiddingStrategyOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.common.EnhancedCpc enhanced_cpc = 7;</code>
+   * @return Whether the enhancedCpc field is set.
    */
   boolean hasEnhancedCpc();
   /**
@@ -202,6 +217,7 @@ public interface BiddingStrategyOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.common.EnhancedCpc enhanced_cpc = 7;</code>
+   * @return The enhancedCpc.
    */
   com.google.ads.googleads.v2.common.EnhancedCpc getEnhancedCpc();
   /**
@@ -226,6 +242,7 @@ public interface BiddingStrategyOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.common.PageOnePromoted page_one_promoted = 8;</code>
+   * @return Whether the pageOnePromoted field is set.
    */
   boolean hasPageOnePromoted();
   /**
@@ -239,6 +256,7 @@ public interface BiddingStrategyOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.common.PageOnePromoted page_one_promoted = 8;</code>
+   * @return The pageOnePromoted.
    */
   com.google.ads.googleads.v2.common.PageOnePromoted getPageOnePromoted();
   /**
@@ -262,6 +280,7 @@ public interface BiddingStrategyOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.common.TargetCpa target_cpa = 9;</code>
+   * @return Whether the targetCpa field is set.
    */
   boolean hasTargetCpa();
   /**
@@ -271,6 +290,7 @@ public interface BiddingStrategyOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.common.TargetCpa target_cpa = 9;</code>
+   * @return The targetCpa.
    */
   com.google.ads.googleads.v2.common.TargetCpa getTargetCpa();
   /**
@@ -290,6 +310,7 @@ public interface BiddingStrategyOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.common.TargetImpressionShare target_impression_share = 48;</code>
+   * @return Whether the targetImpressionShare field is set.
    */
   boolean hasTargetImpressionShare();
   /**
@@ -299,6 +320,7 @@ public interface BiddingStrategyOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.common.TargetImpressionShare target_impression_share = 48;</code>
+   * @return The targetImpressionShare.
    */
   com.google.ads.googleads.v2.common.TargetImpressionShare getTargetImpressionShare();
   /**
@@ -322,6 +344,7 @@ public interface BiddingStrategyOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.common.TargetOutrankShare target_outrank_share = 10;</code>
+   * @return Whether the targetOutrankShare field is set.
    */
   boolean hasTargetOutrankShare();
   /**
@@ -335,6 +358,7 @@ public interface BiddingStrategyOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.common.TargetOutrankShare target_outrank_share = 10;</code>
+   * @return The targetOutrankShare.
    */
   com.google.ads.googleads.v2.common.TargetOutrankShare getTargetOutrankShare();
   /**
@@ -358,6 +382,7 @@ public interface BiddingStrategyOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.common.TargetRoas target_roas = 11;</code>
+   * @return Whether the targetRoas field is set.
    */
   boolean hasTargetRoas();
   /**
@@ -367,6 +392,7 @@ public interface BiddingStrategyOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.common.TargetRoas target_roas = 11;</code>
+   * @return The targetRoas.
    */
   com.google.ads.googleads.v2.common.TargetRoas getTargetRoas();
   /**
@@ -386,6 +412,7 @@ public interface BiddingStrategyOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.common.TargetSpend target_spend = 12;</code>
+   * @return Whether the targetSpend field is set.
    */
   boolean hasTargetSpend();
   /**
@@ -395,6 +422,7 @@ public interface BiddingStrategyOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.common.TargetSpend target_spend = 12;</code>
+   * @return The targetSpend.
    */
   com.google.ads.googleads.v2.common.TargetSpend getTargetSpend();
   /**

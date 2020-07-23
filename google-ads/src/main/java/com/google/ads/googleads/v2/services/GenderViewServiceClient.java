@@ -1,5 +1,5 @@
 /*
- * Copyright 2019 Google LLC
+ * Copyright 2020 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -21,7 +21,6 @@ import com.google.ads.googleads.v2.services.stub.GenderViewServiceStubSettings;
 import com.google.api.core.BetaApi;
 import com.google.api.gax.core.BackgroundResource;
 import com.google.api.gax.rpc.UnaryCallable;
-import com.google.api.pathtemplate.PathTemplate;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 import javax.annotation.Generated;
@@ -36,8 +35,8 @@ import javax.annotation.Generated;
  * <pre>
  * <code>
  * try (GenderViewServiceClient genderViewServiceClient = GenderViewServiceClient.create()) {
- *   String formattedResourceName = GenderViewServiceClient.formatGenderViewName("[CUSTOMER]", "[GENDER_VIEW]");
- *   GenderView response = genderViewServiceClient.getGenderView(formattedResourceName);
+ *   GenderViewName resourceName = GenderViewName.of("[CUSTOMER]", "[GENDER_VIEW]");
+ *   GenderView response = genderViewServiceClient.getGenderView(resourceName);
  * }
  * </code>
  * </pre>
@@ -99,43 +98,6 @@ public class GenderViewServiceClient implements BackgroundResource {
   private final GenderViewServiceSettings settings;
   private final GenderViewServiceStub stub;
 
-  private static final PathTemplate GENDER_VIEW_PATH_TEMPLATE =
-      PathTemplate.createWithoutUrlEncoding("customers/{customer}/genderViews/{gender_view}");
-
-  /**
-   * Formats a string containing the fully-qualified path to represent a gender_view resource.
-   *
-   * @deprecated Use the {@link GenderViewName} class instead.
-   */
-  @Deprecated
-  public static final String formatGenderViewName(String customer, String genderView) {
-    return GENDER_VIEW_PATH_TEMPLATE.instantiate(
-        "customer", customer,
-        "gender_view", genderView);
-  }
-
-  /**
-   * Parses the customer from the given fully-qualified path which represents a gender_view
-   * resource.
-   *
-   * @deprecated Use the {@link GenderViewName} class instead.
-   */
-  @Deprecated
-  public static final String parseCustomerFromGenderViewName(String genderViewName) {
-    return GENDER_VIEW_PATH_TEMPLATE.parse(genderViewName).get("customer");
-  }
-
-  /**
-   * Parses the gender_view from the given fully-qualified path which represents a gender_view
-   * resource.
-   *
-   * @deprecated Use the {@link GenderViewName} class instead.
-   */
-  @Deprecated
-  public static final String parseGenderViewFromGenderViewName(String genderViewName) {
-    return GENDER_VIEW_PATH_TEMPLATE.parse(genderViewName).get("gender_view");
-  }
-
   /** Constructs an instance of GenderViewServiceClient with default settings. */
   public static final GenderViewServiceClient create() throws IOException {
     return create(GenderViewServiceSettings.newBuilder().build());
@@ -192,16 +154,39 @@ public class GenderViewServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (GenderViewServiceClient genderViewServiceClient = GenderViewServiceClient.create()) {
-   *   String formattedResourceName = GenderViewServiceClient.formatGenderViewName("[CUSTOMER]", "[GENDER_VIEW]");
-   *   GenderView response = genderViewServiceClient.getGenderView(formattedResourceName);
+   *   GenderViewName resourceName = GenderViewName.of("[CUSTOMER]", "[GENDER_VIEW]");
+   *   GenderView response = genderViewServiceClient.getGenderView(resourceName);
    * }
    * </code></pre>
    *
-   * @param resourceName The resource name of the gender view to fetch.
+   * @param resourceName Required. The resource name of the gender view to fetch.
+   * @throws com.google.api.gax.rpc.ApiException if the remote call fails
+   */
+  public final GenderView getGenderView(GenderViewName resourceName) {
+    GetGenderViewRequest request =
+        GetGenderViewRequest.newBuilder()
+            .setResourceName(resourceName == null ? null : resourceName.toString())
+            .build();
+    return getGenderView(request);
+  }
+
+  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  /**
+   * Returns the requested gender view in full detail.
+   *
+   * <p>Sample code:
+   *
+   * <pre><code>
+   * try (GenderViewServiceClient genderViewServiceClient = GenderViewServiceClient.create()) {
+   *   GenderViewName resourceName = GenderViewName.of("[CUSTOMER]", "[GENDER_VIEW]");
+   *   GenderView response = genderViewServiceClient.getGenderView(resourceName.toString());
+   * }
+   * </code></pre>
+   *
+   * @param resourceName Required. The resource name of the gender view to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final GenderView getGenderView(String resourceName) {
-    GENDER_VIEW_PATH_TEMPLATE.validate(resourceName, "getGenderView");
     GetGenderViewRequest request =
         GetGenderViewRequest.newBuilder().setResourceName(resourceName).build();
     return getGenderView(request);
@@ -215,9 +200,9 @@ public class GenderViewServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (GenderViewServiceClient genderViewServiceClient = GenderViewServiceClient.create()) {
-   *   String formattedResourceName = GenderViewServiceClient.formatGenderViewName("[CUSTOMER]", "[GENDER_VIEW]");
+   *   GenderViewName resourceName = GenderViewName.of("[CUSTOMER]", "[GENDER_VIEW]");
    *   GetGenderViewRequest request = GetGenderViewRequest.newBuilder()
-   *     .setResourceName(formattedResourceName)
+   *     .setResourceName(resourceName.toString())
    *     .build();
    *   GenderView response = genderViewServiceClient.getGenderView(request);
    * }
@@ -238,9 +223,9 @@ public class GenderViewServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (GenderViewServiceClient genderViewServiceClient = GenderViewServiceClient.create()) {
-   *   String formattedResourceName = GenderViewServiceClient.formatGenderViewName("[CUSTOMER]", "[GENDER_VIEW]");
+   *   GenderViewName resourceName = GenderViewName.of("[CUSTOMER]", "[GENDER_VIEW]");
    *   GetGenderViewRequest request = GetGenderViewRequest.newBuilder()
-   *     .setResourceName(formattedResourceName)
+   *     .setResourceName(resourceName.toString())
    *     .build();
    *   ApiFuture&lt;GenderView&gt; future = genderViewServiceClient.getGenderViewCallable().futureCall(request);
    *   // Do something

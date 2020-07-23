@@ -13,9 +13,13 @@ public interface UploadConversionAdjustmentsResponseOrBuilder extends
    * failure mode. Returned when all errors occur inside the adjustments. If any
    * errors occur outside the adjustments (e.g. auth errors), we return an RPC
    * level error.
+   * See
+   * https://developers.google.com/google-ads/api/docs/best-practices/partial-failures
+   * for more information about partial failure.
    * </pre>
    *
    * <code>.google.rpc.Status partial_failure_error = 1;</code>
+   * @return Whether the partialFailureError field is set.
    */
   boolean hasPartialFailureError();
   /**
@@ -24,9 +28,13 @@ public interface UploadConversionAdjustmentsResponseOrBuilder extends
    * failure mode. Returned when all errors occur inside the adjustments. If any
    * errors occur outside the adjustments (e.g. auth errors), we return an RPC
    * level error.
+   * See
+   * https://developers.google.com/google-ads/api/docs/best-practices/partial-failures
+   * for more information about partial failure.
    * </pre>
    *
    * <code>.google.rpc.Status partial_failure_error = 1;</code>
+   * @return The partialFailureError.
    */
   com.google.rpc.Status getPartialFailureError();
   /**
@@ -35,6 +43,9 @@ public interface UploadConversionAdjustmentsResponseOrBuilder extends
    * failure mode. Returned when all errors occur inside the adjustments. If any
    * errors occur outside the adjustments (e.g. auth errors), we return an RPC
    * level error.
+   * See
+   * https://developers.google.com/google-ads/api/docs/best-practices/partial-failures
+   * for more information about partial failure.
    * </pre>
    *
    * <code>.google.rpc.Status partial_failure_error = 1;</code>

@@ -13,6 +13,7 @@ public interface KeywordInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue text = 1;</code>
+   * @return Whether the text field is set.
    */
   boolean hasText();
   /**
@@ -21,6 +22,7 @@ public interface KeywordInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue text = 1;</code>
+   * @return The text.
    */
   com.google.protobuf.StringValue getText();
   /**
@@ -38,6 +40,7 @@ public interface KeywordInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.enums.KeywordMatchTypeEnum.KeywordMatchType match_type = 2;</code>
+   * @return The enum numeric value on the wire for matchType.
    */
   int getMatchTypeValue();
   /**
@@ -46,6 +49,7 @@ public interface KeywordInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.enums.KeywordMatchTypeEnum.KeywordMatchType match_type = 2;</code>
+   * @return The matchType.
    */
   com.google.ads.googleads.v2.enums.KeywordMatchTypeEnum.KeywordMatchType getMatchType();
 }

@@ -10,7 +10,7 @@ package com.google.ads.googleads.v4.resources;
  *
  * Protobuf type {@code google.ads.googleads.v4.resources.CampaignBidModifier}
  */
-public  final class CampaignBidModifier extends
+public final class CampaignBidModifier extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.resources.CampaignBidModifier)
     CampaignBidModifierOrBuilder {
@@ -195,6 +195,7 @@ private static final long serialVersionUID = 0L;
    * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return The resourceName.
    */
+  @java.lang.Override
   public java.lang.String getResourceName() {
     java.lang.Object ref = resourceName_;
     if (ref instanceof java.lang.String) {
@@ -217,6 +218,7 @@ private static final long serialVersionUID = 0L;
    * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return The bytes for resourceName.
    */
+  @java.lang.Override
   public com.google.protobuf.ByteString
       getResourceNameBytes() {
     java.lang.Object ref = resourceName_;
@@ -241,6 +243,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue campaign = 2 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return Whether the campaign field is set.
    */
+  @java.lang.Override
   public boolean hasCampaign() {
     return campaign_ != null;
   }
@@ -252,6 +255,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue campaign = 2 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return The campaign.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getCampaign() {
     return campaign_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : campaign_;
   }
@@ -262,6 +266,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue campaign = 2 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getCampaignOrBuilder() {
     return getCampaign();
   }
@@ -277,6 +282,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int64Value criterion_id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the criterionId field is set.
    */
+  @java.lang.Override
   public boolean hasCriterionId() {
     return criterionId_ != null;
   }
@@ -289,6 +295,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int64Value criterion_id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The criterionId.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getCriterionId() {
     return criterionId_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : criterionId_;
   }
@@ -300,6 +307,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int64Value criterion_id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getCriterionIdOrBuilder() {
     return getCriterionId();
   }
@@ -314,6 +322,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.DoubleValue bid_modifier = 4;</code>
    * @return Whether the bidModifier field is set.
    */
+  @java.lang.Override
   public boolean hasBidModifier() {
     return bidModifier_ != null;
   }
@@ -325,6 +334,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.DoubleValue bid_modifier = 4;</code>
    * @return The bidModifier.
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValue getBidModifier() {
     return bidModifier_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : bidModifier_;
   }
@@ -335,6 +345,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.DoubleValue bid_modifier = 4;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValueOrBuilder getBidModifierOrBuilder() {
     return getBidModifier();
   }
@@ -348,6 +359,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.common.InteractionTypeInfo interaction_type = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return Whether the interactionType field is set.
    */
+  @java.lang.Override
   public boolean hasInteractionType() {
     return criterionCase_ == 5;
   }
@@ -359,6 +371,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.common.InteractionTypeInfo interaction_type = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return The interactionType.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.InteractionTypeInfo getInteractionType() {
     if (criterionCase_ == 5) {
        return (com.google.ads.googleads.v4.common.InteractionTypeInfo) criterion_;
@@ -372,6 +385,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v4.common.InteractionTypeInfo interaction_type = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.InteractionTypeInfoOrBuilder getInteractionTypeOrBuilder() {
     if (criterionCase_ == 5) {
        return (com.google.ads.googleads.v4.common.InteractionTypeInfo) criterion_;
@@ -1423,6 +1437,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.common.InteractionTypeInfo interaction_type = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return Whether the interactionType field is set.
      */
+    @java.lang.Override
     public boolean hasInteractionType() {
       return criterionCase_ == 5;
     }
@@ -1434,6 +1449,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.common.InteractionTypeInfo interaction_type = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return The interactionType.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.common.InteractionTypeInfo getInteractionType() {
       if (interactionTypeBuilder_ == null) {
         if (criterionCase_ == 5) {
@@ -1551,6 +1567,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v4.common.InteractionTypeInfo interaction_type = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.common.InteractionTypeInfoOrBuilder getInteractionTypeOrBuilder() {
       if ((criterionCase_ == 5) && (interactionTypeBuilder_ != null)) {
         return interactionTypeBuilder_.getMessageOrBuilder();

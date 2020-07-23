@@ -21,7 +21,6 @@ import com.google.ads.googleads.v4.services.stub.AccountLinkServiceStubSettings;
 import com.google.api.core.BetaApi;
 import com.google.api.gax.core.BackgroundResource;
 import com.google.api.gax.rpc.UnaryCallable;
-import com.google.api.pathtemplate.PathTemplate;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 import javax.annotation.Generated;
@@ -37,8 +36,8 @@ import javax.annotation.Generated;
  * <pre>
  * <code>
  * try (AccountLinkServiceClient accountLinkServiceClient = AccountLinkServiceClient.create()) {
- *   String formattedResourceName = AccountLinkServiceClient.formatAccountLinkName("[CUSTOMER]", "[ACCOUNT_LINK]");
- *   AccountLink response = accountLinkServiceClient.getAccountLink(formattedResourceName);
+ *   AccountLinkName resourceName = AccountLinkName.of("[CUSTOMER]", "[ACCOUNT_LINK]");
+ *   AccountLink response = accountLinkServiceClient.getAccountLink(resourceName);
  * }
  * </code>
  * </pre>
@@ -100,43 +99,6 @@ public class AccountLinkServiceClient implements BackgroundResource {
   private final AccountLinkServiceSettings settings;
   private final AccountLinkServiceStub stub;
 
-  private static final PathTemplate ACCOUNT_LINK_PATH_TEMPLATE =
-      PathTemplate.createWithoutUrlEncoding("customers/{customer}/accountLinks/{account_link}");
-
-  /**
-   * Formats a string containing the fully-qualified path to represent a account_link resource.
-   *
-   * @deprecated Use the {@link AccountLinkName} class instead.
-   */
-  @Deprecated
-  public static final String formatAccountLinkName(String customer, String accountLink) {
-    return ACCOUNT_LINK_PATH_TEMPLATE.instantiate(
-        "customer", customer,
-        "account_link", accountLink);
-  }
-
-  /**
-   * Parses the customer from the given fully-qualified path which represents a account_link
-   * resource.
-   *
-   * @deprecated Use the {@link AccountLinkName} class instead.
-   */
-  @Deprecated
-  public static final String parseCustomerFromAccountLinkName(String accountLinkName) {
-    return ACCOUNT_LINK_PATH_TEMPLATE.parse(accountLinkName).get("customer");
-  }
-
-  /**
-   * Parses the account_link from the given fully-qualified path which represents a account_link
-   * resource.
-   *
-   * @deprecated Use the {@link AccountLinkName} class instead.
-   */
-  @Deprecated
-  public static final String parseAccountLinkFromAccountLinkName(String accountLinkName) {
-    return ACCOUNT_LINK_PATH_TEMPLATE.parse(accountLinkName).get("account_link");
-  }
-
   /** Constructs an instance of AccountLinkServiceClient with default settings. */
   public static final AccountLinkServiceClient create() throws IOException {
     return create(AccountLinkServiceSettings.newBuilder().build());
@@ -193,8 +155,32 @@ public class AccountLinkServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (AccountLinkServiceClient accountLinkServiceClient = AccountLinkServiceClient.create()) {
-   *   String formattedResourceName = AccountLinkServiceClient.formatAccountLinkName("[CUSTOMER]", "[ACCOUNT_LINK]");
-   *   AccountLink response = accountLinkServiceClient.getAccountLink(formattedResourceName);
+   *   AccountLinkName resourceName = AccountLinkName.of("[CUSTOMER]", "[ACCOUNT_LINK]");
+   *   AccountLink response = accountLinkServiceClient.getAccountLink(resourceName);
+   * }
+   * </code></pre>
+   *
+   * @param resourceName Required. Resource name of the account link.
+   * @throws com.google.api.gax.rpc.ApiException if the remote call fails
+   */
+  public final AccountLink getAccountLink(AccountLinkName resourceName) {
+    GetAccountLinkRequest request =
+        GetAccountLinkRequest.newBuilder()
+            .setResourceName(resourceName == null ? null : resourceName.toString())
+            .build();
+    return getAccountLink(request);
+  }
+
+  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  /**
+   * Returns the account link in full detail.
+   *
+   * <p>Sample code:
+   *
+   * <pre><code>
+   * try (AccountLinkServiceClient accountLinkServiceClient = AccountLinkServiceClient.create()) {
+   *   AccountLinkName resourceName = AccountLinkName.of("[CUSTOMER]", "[ACCOUNT_LINK]");
+   *   AccountLink response = accountLinkServiceClient.getAccountLink(resourceName.toString());
    * }
    * </code></pre>
    *
@@ -202,7 +188,6 @@ public class AccountLinkServiceClient implements BackgroundResource {
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final AccountLink getAccountLink(String resourceName) {
-    ACCOUNT_LINK_PATH_TEMPLATE.validate(resourceName, "getAccountLink");
     GetAccountLinkRequest request =
         GetAccountLinkRequest.newBuilder().setResourceName(resourceName).build();
     return getAccountLink(request);
@@ -216,9 +201,9 @@ public class AccountLinkServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (AccountLinkServiceClient accountLinkServiceClient = AccountLinkServiceClient.create()) {
-   *   String formattedResourceName = AccountLinkServiceClient.formatAccountLinkName("[CUSTOMER]", "[ACCOUNT_LINK]");
+   *   AccountLinkName resourceName = AccountLinkName.of("[CUSTOMER]", "[ACCOUNT_LINK]");
    *   GetAccountLinkRequest request = GetAccountLinkRequest.newBuilder()
-   *     .setResourceName(formattedResourceName)
+   *     .setResourceName(resourceName.toString())
    *     .build();
    *   AccountLink response = accountLinkServiceClient.getAccountLink(request);
    * }
@@ -239,9 +224,9 @@ public class AccountLinkServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (AccountLinkServiceClient accountLinkServiceClient = AccountLinkServiceClient.create()) {
-   *   String formattedResourceName = AccountLinkServiceClient.formatAccountLinkName("[CUSTOMER]", "[ACCOUNT_LINK]");
+   *   AccountLinkName resourceName = AccountLinkName.of("[CUSTOMER]", "[ACCOUNT_LINK]");
    *   GetAccountLinkRequest request = GetAccountLinkRequest.newBuilder()
-   *     .setResourceName(formattedResourceName)
+   *     .setResourceName(resourceName.toString())
    *     .build();
    *   ApiFuture&lt;AccountLink&gt; future = accountLinkServiceClient.getAccountLinkCallable().futureCall(request);
    *   // Do something
@@ -251,46 +236,6 @@ public class AccountLinkServiceClient implements BackgroundResource {
    */
   public final UnaryCallable<GetAccountLinkRequest, AccountLink> getAccountLinkCallable() {
     return stub.getAccountLinkCallable();
-  }
-
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
-  /**
-   * Creates or removes an account link.
-   *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (AccountLinkServiceClient accountLinkServiceClient = AccountLinkServiceClient.create()) {
-   *   String customerId = "";
-   *   AccountLinkOperation operation = AccountLinkOperation.newBuilder().build();
-   *   boolean partialFailure = false;
-   *   boolean validateOnly = false;
-   *   MutateAccountLinkResponse response = accountLinkServiceClient.mutateAccountLink(customerId, operation, partialFailure, validateOnly);
-   * }
-   * </code></pre>
-   *
-   * @param customerId Required. The ID of the customer being modified.
-   * @param operation Required. The operation to perform on the link.
-   * @param partialFailure If true, successful operations will be carried out and invalid operations
-   *     will return errors. If false, all operations will be carried out in one transaction if and
-   *     only if they are all valid. Default is false.
-   * @param validateOnly If true, the request is validated but not executed. Only errors are
-   *     returned, not results.
-   * @throws com.google.api.gax.rpc.ApiException if the remote call fails
-   */
-  public final MutateAccountLinkResponse mutateAccountLink(
-      String customerId,
-      AccountLinkOperation operation,
-      boolean partialFailure,
-      boolean validateOnly) {
-    MutateAccountLinkRequest request =
-        MutateAccountLinkRequest.newBuilder()
-            .setCustomerId(customerId)
-            .setOperation(operation)
-            .setPartialFailure(partialFailure)
-            .setValidateOnly(validateOnly)
-            .build();
-    return mutateAccountLink(request);
   }
 
   // AUTO-GENERATED DOCUMENTATION AND METHOD

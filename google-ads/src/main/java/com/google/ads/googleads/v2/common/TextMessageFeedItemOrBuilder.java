@@ -14,6 +14,7 @@ public interface TextMessageFeedItemOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue business_name = 1;</code>
+   * @return Whether the businessName field is set.
    */
   boolean hasBusinessName();
   /**
@@ -23,6 +24,7 @@ public interface TextMessageFeedItemOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue business_name = 1;</code>
+   * @return The businessName.
    */
   com.google.protobuf.StringValue getBusinessName();
   /**
@@ -42,6 +44,7 @@ public interface TextMessageFeedItemOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue country_code = 2;</code>
+   * @return Whether the countryCode field is set.
    */
   boolean hasCountryCode();
   /**
@@ -51,6 +54,7 @@ public interface TextMessageFeedItemOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue country_code = 2;</code>
+   * @return The countryCode.
    */
   com.google.protobuf.StringValue getCountryCode();
   /**
@@ -69,6 +73,7 @@ public interface TextMessageFeedItemOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue phone_number = 3;</code>
+   * @return Whether the phoneNumber field is set.
    */
   boolean hasPhoneNumber();
   /**
@@ -77,6 +82,7 @@ public interface TextMessageFeedItemOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue phone_number = 3;</code>
+   * @return The phoneNumber.
    */
   com.google.protobuf.StringValue getPhoneNumber();
   /**
@@ -95,6 +101,7 @@ public interface TextMessageFeedItemOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue text = 4;</code>
+   * @return Whether the text field is set.
    */
   boolean hasText();
   /**
@@ -104,6 +111,7 @@ public interface TextMessageFeedItemOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue text = 4;</code>
+   * @return The text.
    */
   com.google.protobuf.StringValue getText();
   /**
@@ -122,6 +130,7 @@ public interface TextMessageFeedItemOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue extension_text = 5;</code>
+   * @return Whether the extensionText field is set.
    */
   boolean hasExtensionText();
   /**
@@ -130,6 +139,7 @@ public interface TextMessageFeedItemOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue extension_text = 5;</code>
+   * @return The extensionText.
    */
   com.google.protobuf.StringValue getExtensionText();
   /**

@@ -9,48 +9,52 @@ public interface CustomerOrBuilder extends
 
   /**
    * <pre>
-   * The resource name of the customer.
+   * Immutable. The resource name of the customer.
    * Customer resource names have the form:
    * `customers/{customer_id}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * @return The resourceName.
    */
   java.lang.String getResourceName();
   /**
    * <pre>
-   * The resource name of the customer.
+   * Immutable. The resource name of the customer.
    * Customer resource names have the form:
    * `customers/{customer_id}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * @return The bytes for resourceName.
    */
   com.google.protobuf.ByteString
       getResourceNameBytes();
 
   /**
    * <pre>
-   * The ID of the customer.
+   * Output only. The ID of the customer.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value id = 3;</code>
+   * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the id field is set.
    */
   boolean hasId();
   /**
    * <pre>
-   * The ID of the customer.
+   * Output only. The ID of the customer.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value id = 3;</code>
+   * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The id.
    */
   com.google.protobuf.Int64Value getId();
   /**
    * <pre>
-   * The ID of the customer.
+   * Output only. The ID of the customer.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value id = 3;</code>
+   * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.protobuf.Int64ValueOrBuilder getIdOrBuilder();
 
@@ -60,6 +64,7 @@ public interface CustomerOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue descriptive_name = 4;</code>
+   * @return Whether the descriptiveName field is set.
    */
   boolean hasDescriptiveName();
   /**
@@ -68,6 +73,7 @@ public interface CustomerOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue descriptive_name = 4;</code>
+   * @return The descriptiveName.
    */
   com.google.protobuf.StringValue getDescriptiveName();
   /**
@@ -81,57 +87,61 @@ public interface CustomerOrBuilder extends
 
   /**
    * <pre>
-   * The currency in which the account operates.
+   * Immutable. The currency in which the account operates.
    * A subset of the currency codes from the ISO 4217 standard is
    * supported.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue currency_code = 5;</code>
+   * <code>.google.protobuf.StringValue currency_code = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return Whether the currencyCode field is set.
    */
   boolean hasCurrencyCode();
   /**
    * <pre>
-   * The currency in which the account operates.
+   * Immutable. The currency in which the account operates.
    * A subset of the currency codes from the ISO 4217 standard is
    * supported.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue currency_code = 5;</code>
+   * <code>.google.protobuf.StringValue currency_code = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The currencyCode.
    */
   com.google.protobuf.StringValue getCurrencyCode();
   /**
    * <pre>
-   * The currency in which the account operates.
+   * Immutable. The currency in which the account operates.
    * A subset of the currency codes from the ISO 4217 standard is
    * supported.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue currency_code = 5;</code>
+   * <code>.google.protobuf.StringValue currency_code = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   com.google.protobuf.StringValueOrBuilder getCurrencyCodeOrBuilder();
 
   /**
    * <pre>
-   * The local timezone ID of the customer.
+   * Immutable. The local timezone ID of the customer.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue time_zone = 6;</code>
+   * <code>.google.protobuf.StringValue time_zone = 6 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return Whether the timeZone field is set.
    */
   boolean hasTimeZone();
   /**
    * <pre>
-   * The local timezone ID of the customer.
+   * Immutable. The local timezone ID of the customer.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue time_zone = 6;</code>
+   * <code>.google.protobuf.StringValue time_zone = 6 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The timeZone.
    */
   com.google.protobuf.StringValue getTimeZone();
   /**
    * <pre>
-   * The local timezone ID of the customer.
+   * Immutable. The local timezone ID of the customer.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue time_zone = 6;</code>
+   * <code>.google.protobuf.StringValue time_zone = 6 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   com.google.protobuf.StringValueOrBuilder getTimeZoneOrBuilder();
 
@@ -141,6 +151,7 @@ public interface CustomerOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue tracking_url_template = 7;</code>
+   * @return Whether the trackingUrlTemplate field is set.
    */
   boolean hasTrackingUrlTemplate();
   /**
@@ -149,6 +160,7 @@ public interface CustomerOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue tracking_url_template = 7;</code>
+   * @return The trackingUrlTemplate.
    */
   com.google.protobuf.StringValue getTrackingUrlTemplate();
   /**
@@ -166,6 +178,7 @@ public interface CustomerOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue final_url_suffix = 11;</code>
+   * @return Whether the finalUrlSuffix field is set.
    */
   boolean hasFinalUrlSuffix();
   /**
@@ -174,6 +187,7 @@ public interface CustomerOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue final_url_suffix = 11;</code>
+   * @return The finalUrlSuffix.
    */
   com.google.protobuf.StringValue getFinalUrlSuffix();
   /**
@@ -191,6 +205,7 @@ public interface CustomerOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.BoolValue auto_tagging_enabled = 8;</code>
+   * @return Whether the autoTaggingEnabled field is set.
    */
   boolean hasAutoTaggingEnabled();
   /**
@@ -199,6 +214,7 @@ public interface CustomerOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.BoolValue auto_tagging_enabled = 8;</code>
+   * @return The autoTaggingEnabled.
    */
   com.google.protobuf.BoolValue getAutoTaggingEnabled();
   /**
@@ -212,82 +228,88 @@ public interface CustomerOrBuilder extends
 
   /**
    * <pre>
-   * Whether the Customer has a Partners program badge. If the Customer is not
+   * Output only. Whether the Customer has a Partners program badge. If the Customer is not
    * associated with the Partners program, this will be false. For more
    * information, see https://support.google.com/partners/answer/3125774.
    * </pre>
    *
-   * <code>.google.protobuf.BoolValue has_partners_badge = 9;</code>
+   * <code>.google.protobuf.BoolValue has_partners_badge = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the hasPartnersBadge field is set.
    */
   boolean hasHasPartnersBadge();
   /**
    * <pre>
-   * Whether the Customer has a Partners program badge. If the Customer is not
+   * Output only. Whether the Customer has a Partners program badge. If the Customer is not
    * associated with the Partners program, this will be false. For more
    * information, see https://support.google.com/partners/answer/3125774.
    * </pre>
    *
-   * <code>.google.protobuf.BoolValue has_partners_badge = 9;</code>
+   * <code>.google.protobuf.BoolValue has_partners_badge = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The hasPartnersBadge.
    */
   com.google.protobuf.BoolValue getHasPartnersBadge();
   /**
    * <pre>
-   * Whether the Customer has a Partners program badge. If the Customer is not
+   * Output only. Whether the Customer has a Partners program badge. If the Customer is not
    * associated with the Partners program, this will be false. For more
    * information, see https://support.google.com/partners/answer/3125774.
    * </pre>
    *
-   * <code>.google.protobuf.BoolValue has_partners_badge = 9;</code>
+   * <code>.google.protobuf.BoolValue has_partners_badge = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.protobuf.BoolValueOrBuilder getHasPartnersBadgeOrBuilder();
 
   /**
    * <pre>
-   * Whether the customer is a manager.
+   * Output only. Whether the customer is a manager.
    * </pre>
    *
-   * <code>.google.protobuf.BoolValue manager = 12;</code>
+   * <code>.google.protobuf.BoolValue manager = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the manager field is set.
    */
   boolean hasManager();
   /**
    * <pre>
-   * Whether the customer is a manager.
+   * Output only. Whether the customer is a manager.
    * </pre>
    *
-   * <code>.google.protobuf.BoolValue manager = 12;</code>
+   * <code>.google.protobuf.BoolValue manager = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The manager.
    */
   com.google.protobuf.BoolValue getManager();
   /**
    * <pre>
-   * Whether the customer is a manager.
+   * Output only. Whether the customer is a manager.
    * </pre>
    *
-   * <code>.google.protobuf.BoolValue manager = 12;</code>
+   * <code>.google.protobuf.BoolValue manager = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.protobuf.BoolValueOrBuilder getManagerOrBuilder();
 
   /**
    * <pre>
-   * Whether the customer is a test account.
+   * Output only. Whether the customer is a test account.
    * </pre>
    *
-   * <code>.google.protobuf.BoolValue test_account = 13;</code>
+   * <code>.google.protobuf.BoolValue test_account = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the testAccount field is set.
    */
   boolean hasTestAccount();
   /**
    * <pre>
-   * Whether the customer is a test account.
+   * Output only. Whether the customer is a test account.
    * </pre>
    *
-   * <code>.google.protobuf.BoolValue test_account = 13;</code>
+   * <code>.google.protobuf.BoolValue test_account = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The testAccount.
    */
   com.google.protobuf.BoolValue getTestAccount();
   /**
    * <pre>
-   * Whether the customer is a test account.
+   * Output only. Whether the customer is a test account.
    * </pre>
    *
-   * <code>.google.protobuf.BoolValue test_account = 13;</code>
+   * <code>.google.protobuf.BoolValue test_account = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.protobuf.BoolValueOrBuilder getTestAccountOrBuilder();
 
@@ -297,6 +319,7 @@ public interface CustomerOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.resources.CallReportingSetting call_reporting_setting = 10;</code>
+   * @return Whether the callReportingSetting field is set.
    */
   boolean hasCallReportingSetting();
   /**
@@ -305,6 +328,7 @@ public interface CustomerOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.resources.CallReportingSetting call_reporting_setting = 10;</code>
+   * @return The callReportingSetting.
    */
   com.google.ads.googleads.v2.resources.CallReportingSetting getCallReportingSetting();
   /**
@@ -318,98 +342,109 @@ public interface CustomerOrBuilder extends
 
   /**
    * <pre>
-   * Conversion tracking setting for a customer.
+   * Output only. Conversion tracking setting for a customer.
    * </pre>
    *
-   * <code>.google.ads.googleads.v2.resources.ConversionTrackingSetting conversion_tracking_setting = 14;</code>
+   * <code>.google.ads.googleads.v2.resources.ConversionTrackingSetting conversion_tracking_setting = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the conversionTrackingSetting field is set.
    */
   boolean hasConversionTrackingSetting();
   /**
    * <pre>
-   * Conversion tracking setting for a customer.
+   * Output only. Conversion tracking setting for a customer.
    * </pre>
    *
-   * <code>.google.ads.googleads.v2.resources.ConversionTrackingSetting conversion_tracking_setting = 14;</code>
+   * <code>.google.ads.googleads.v2.resources.ConversionTrackingSetting conversion_tracking_setting = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The conversionTrackingSetting.
    */
   com.google.ads.googleads.v2.resources.ConversionTrackingSetting getConversionTrackingSetting();
   /**
    * <pre>
-   * Conversion tracking setting for a customer.
+   * Output only. Conversion tracking setting for a customer.
    * </pre>
    *
-   * <code>.google.ads.googleads.v2.resources.ConversionTrackingSetting conversion_tracking_setting = 14;</code>
+   * <code>.google.ads.googleads.v2.resources.ConversionTrackingSetting conversion_tracking_setting = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.ads.googleads.v2.resources.ConversionTrackingSettingOrBuilder getConversionTrackingSettingOrBuilder();
 
   /**
    * <pre>
-   * Remarketing setting for a customer.
+   * Output only. Remarketing setting for a customer.
    * </pre>
    *
-   * <code>.google.ads.googleads.v2.resources.RemarketingSetting remarketing_setting = 15;</code>
+   * <code>.google.ads.googleads.v2.resources.RemarketingSetting remarketing_setting = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the remarketingSetting field is set.
    */
   boolean hasRemarketingSetting();
   /**
    * <pre>
-   * Remarketing setting for a customer.
+   * Output only. Remarketing setting for a customer.
    * </pre>
    *
-   * <code>.google.ads.googleads.v2.resources.RemarketingSetting remarketing_setting = 15;</code>
+   * <code>.google.ads.googleads.v2.resources.RemarketingSetting remarketing_setting = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The remarketingSetting.
    */
   com.google.ads.googleads.v2.resources.RemarketingSetting getRemarketingSetting();
   /**
    * <pre>
-   * Remarketing setting for a customer.
+   * Output only. Remarketing setting for a customer.
    * </pre>
    *
-   * <code>.google.ads.googleads.v2.resources.RemarketingSetting remarketing_setting = 15;</code>
+   * <code>.google.ads.googleads.v2.resources.RemarketingSetting remarketing_setting = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.ads.googleads.v2.resources.RemarketingSettingOrBuilder getRemarketingSettingOrBuilder();
 
   /**
    * <pre>
-   * Reasons why the customer is not eligible to use PaymentMode.CONVERSIONS. If
+   * Output only. Reasons why the customer is not eligible to use PaymentMode.CONVERSIONS. If
    * the list is empty, the customer is eligible. This field is read-only.
    * </pre>
    *
-   * <code>repeated .google.ads.googleads.v2.enums.CustomerPayPerConversionEligibilityFailureReasonEnum.CustomerPayPerConversionEligibilityFailureReason pay_per_conversion_eligibility_failure_reasons = 16;</code>
+   * <code>repeated .google.ads.googleads.v2.enums.CustomerPayPerConversionEligibilityFailureReasonEnum.CustomerPayPerConversionEligibilityFailureReason pay_per_conversion_eligibility_failure_reasons = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return A list containing the payPerConversionEligibilityFailureReasons.
    */
   java.util.List<com.google.ads.googleads.v2.enums.CustomerPayPerConversionEligibilityFailureReasonEnum.CustomerPayPerConversionEligibilityFailureReason> getPayPerConversionEligibilityFailureReasonsList();
   /**
    * <pre>
-   * Reasons why the customer is not eligible to use PaymentMode.CONVERSIONS. If
+   * Output only. Reasons why the customer is not eligible to use PaymentMode.CONVERSIONS. If
    * the list is empty, the customer is eligible. This field is read-only.
    * </pre>
    *
-   * <code>repeated .google.ads.googleads.v2.enums.CustomerPayPerConversionEligibilityFailureReasonEnum.CustomerPayPerConversionEligibilityFailureReason pay_per_conversion_eligibility_failure_reasons = 16;</code>
+   * <code>repeated .google.ads.googleads.v2.enums.CustomerPayPerConversionEligibilityFailureReasonEnum.CustomerPayPerConversionEligibilityFailureReason pay_per_conversion_eligibility_failure_reasons = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The count of payPerConversionEligibilityFailureReasons.
    */
   int getPayPerConversionEligibilityFailureReasonsCount();
   /**
    * <pre>
-   * Reasons why the customer is not eligible to use PaymentMode.CONVERSIONS. If
+   * Output only. Reasons why the customer is not eligible to use PaymentMode.CONVERSIONS. If
    * the list is empty, the customer is eligible. This field is read-only.
    * </pre>
    *
-   * <code>repeated .google.ads.googleads.v2.enums.CustomerPayPerConversionEligibilityFailureReasonEnum.CustomerPayPerConversionEligibilityFailureReason pay_per_conversion_eligibility_failure_reasons = 16;</code>
+   * <code>repeated .google.ads.googleads.v2.enums.CustomerPayPerConversionEligibilityFailureReasonEnum.CustomerPayPerConversionEligibilityFailureReason pay_per_conversion_eligibility_failure_reasons = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @param index The index of the element to return.
+   * @return The payPerConversionEligibilityFailureReasons at the given index.
    */
   com.google.ads.googleads.v2.enums.CustomerPayPerConversionEligibilityFailureReasonEnum.CustomerPayPerConversionEligibilityFailureReason getPayPerConversionEligibilityFailureReasons(int index);
   /**
    * <pre>
-   * Reasons why the customer is not eligible to use PaymentMode.CONVERSIONS. If
+   * Output only. Reasons why the customer is not eligible to use PaymentMode.CONVERSIONS. If
    * the list is empty, the customer is eligible. This field is read-only.
    * </pre>
    *
-   * <code>repeated .google.ads.googleads.v2.enums.CustomerPayPerConversionEligibilityFailureReasonEnum.CustomerPayPerConversionEligibilityFailureReason pay_per_conversion_eligibility_failure_reasons = 16;</code>
+   * <code>repeated .google.ads.googleads.v2.enums.CustomerPayPerConversionEligibilityFailureReasonEnum.CustomerPayPerConversionEligibilityFailureReason pay_per_conversion_eligibility_failure_reasons = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return A list containing the enum numeric values on the wire for payPerConversionEligibilityFailureReasons.
    */
   java.util.List<java.lang.Integer>
   getPayPerConversionEligibilityFailureReasonsValueList();
   /**
    * <pre>
-   * Reasons why the customer is not eligible to use PaymentMode.CONVERSIONS. If
+   * Output only. Reasons why the customer is not eligible to use PaymentMode.CONVERSIONS. If
    * the list is empty, the customer is eligible. This field is read-only.
    * </pre>
    *
-   * <code>repeated .google.ads.googleads.v2.enums.CustomerPayPerConversionEligibilityFailureReasonEnum.CustomerPayPerConversionEligibilityFailureReason pay_per_conversion_eligibility_failure_reasons = 16;</code>
+   * <code>repeated .google.ads.googleads.v2.enums.CustomerPayPerConversionEligibilityFailureReasonEnum.CustomerPayPerConversionEligibilityFailureReason pay_per_conversion_eligibility_failure_reasons = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @param index The index of the value to return.
+   * @return The enum numeric value on the wire of payPerConversionEligibilityFailureReasons at the given index.
    */
   int getPayPerConversionEligibilityFailureReasonsValue(int index);
 }

@@ -10,7 +10,7 @@ package com.google.ads.googleads.v1.services;
  *
  * Protobuf type {@code google.ads.googleads.v1.services.SearchGoogleAdsRequest}
  */
-public  final class SearchGoogleAdsRequest extends
+public final class SearchGoogleAdsRequest extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v1.services.SearchGoogleAdsRequest)
     SearchGoogleAdsRequestOrBuilder {
@@ -26,6 +26,13 @@ private static final long serialVersionUID = 0L;
   }
 
   @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new SearchGoogleAdsRequest();
+  }
+
+  @java.lang.Override
   public final com.google.protobuf.UnknownFieldSet
   getUnknownFields() {
     return this.unknownFields;
@@ -38,7 +45,6 @@ private static final long serialVersionUID = 0L;
     if (extensionRegistry == null) {
       throw new java.lang.NullPointerException();
     }
-    int mutable_bitField0_ = 0;
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
         com.google.protobuf.UnknownFieldSet.newBuilder();
     try {
@@ -113,11 +119,13 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object customerId_;
   /**
    * <pre>
-   * The ID of the customer being queried.
+   * Required. The ID of the customer being queried.
    * </pre>
    *
-   * <code>string customer_id = 1;</code>
+   * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+   * @return The customerId.
    */
+  @java.lang.Override
   public java.lang.String getCustomerId() {
     java.lang.Object ref = customerId_;
     if (ref instanceof java.lang.String) {
@@ -132,11 +140,13 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The ID of the customer being queried.
+   * Required. The ID of the customer being queried.
    * </pre>
    *
-   * <code>string customer_id = 1;</code>
+   * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+   * @return The bytes for customerId.
    */
+  @java.lang.Override
   public com.google.protobuf.ByteString
       getCustomerIdBytes() {
     java.lang.Object ref = customerId_;
@@ -155,11 +165,13 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object query_;
   /**
    * <pre>
-   * The query string.
+   * Required. The query string.
    * </pre>
    *
-   * <code>string query = 2;</code>
+   * <code>string query = 2 [(.google.api.field_behavior) = REQUIRED];</code>
+   * @return The query.
    */
+  @java.lang.Override
   public java.lang.String getQuery() {
     java.lang.Object ref = query_;
     if (ref instanceof java.lang.String) {
@@ -174,11 +186,13 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The query string.
+   * Required. The query string.
    * </pre>
    *
-   * <code>string query = 2;</code>
+   * <code>string query = 2 [(.google.api.field_behavior) = REQUIRED];</code>
+   * @return The bytes for query.
    */
+  @java.lang.Override
   public com.google.protobuf.ByteString
       getQueryBytes() {
     java.lang.Object ref = query_;
@@ -204,7 +218,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string page_token = 3;</code>
+   * @return The pageToken.
    */
+  @java.lang.Override
   public java.lang.String getPageToken() {
     java.lang.Object ref = pageToken_;
     if (ref instanceof java.lang.String) {
@@ -226,7 +242,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string page_token = 3;</code>
+   * @return The bytes for pageToken.
    */
+  @java.lang.Override
   public com.google.protobuf.ByteString
       getPageTokenBytes() {
     java.lang.Object ref = pageToken_;
@@ -251,7 +269,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>int32 page_size = 4;</code>
+   * @return The pageSize.
    */
+  @java.lang.Override
   public int getPageSize() {
     return pageSize_;
   }
@@ -264,7 +284,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>bool validate_only = 5;</code>
+   * @return The validateOnly.
    */
+  @java.lang.Override
   public boolean getValidateOnly() {
     return validateOnly_;
   }
@@ -647,10 +669,11 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object customerId_ = "";
     /**
      * <pre>
-     * The ID of the customer being queried.
+     * Required. The ID of the customer being queried.
      * </pre>
      *
-     * <code>string customer_id = 1;</code>
+     * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+     * @return The customerId.
      */
     public java.lang.String getCustomerId() {
       java.lang.Object ref = customerId_;
@@ -666,10 +689,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the customer being queried.
+     * Required. The ID of the customer being queried.
      * </pre>
      *
-     * <code>string customer_id = 1;</code>
+     * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+     * @return The bytes for customerId.
      */
     public com.google.protobuf.ByteString
         getCustomerIdBytes() {
@@ -686,10 +710,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the customer being queried.
+     * Required. The ID of the customer being queried.
      * </pre>
      *
-     * <code>string customer_id = 1;</code>
+     * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+     * @param value The customerId to set.
+     * @return This builder for chaining.
      */
     public Builder setCustomerId(
         java.lang.String value) {
@@ -703,10 +729,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the customer being queried.
+     * Required. The ID of the customer being queried.
      * </pre>
      *
-     * <code>string customer_id = 1;</code>
+     * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+     * @return This builder for chaining.
      */
     public Builder clearCustomerId() {
       
@@ -716,10 +743,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the customer being queried.
+     * Required. The ID of the customer being queried.
      * </pre>
      *
-     * <code>string customer_id = 1;</code>
+     * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+     * @param value The bytes for customerId to set.
+     * @return This builder for chaining.
      */
     public Builder setCustomerIdBytes(
         com.google.protobuf.ByteString value) {
@@ -736,10 +765,11 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object query_ = "";
     /**
      * <pre>
-     * The query string.
+     * Required. The query string.
      * </pre>
      *
-     * <code>string query = 2;</code>
+     * <code>string query = 2 [(.google.api.field_behavior) = REQUIRED];</code>
+     * @return The query.
      */
     public java.lang.String getQuery() {
       java.lang.Object ref = query_;
@@ -755,10 +785,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The query string.
+     * Required. The query string.
      * </pre>
      *
-     * <code>string query = 2;</code>
+     * <code>string query = 2 [(.google.api.field_behavior) = REQUIRED];</code>
+     * @return The bytes for query.
      */
     public com.google.protobuf.ByteString
         getQueryBytes() {
@@ -775,10 +806,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The query string.
+     * Required. The query string.
      * </pre>
      *
-     * <code>string query = 2;</code>
+     * <code>string query = 2 [(.google.api.field_behavior) = REQUIRED];</code>
+     * @param value The query to set.
+     * @return This builder for chaining.
      */
     public Builder setQuery(
         java.lang.String value) {
@@ -792,10 +825,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The query string.
+     * Required. The query string.
      * </pre>
      *
-     * <code>string query = 2;</code>
+     * <code>string query = 2 [(.google.api.field_behavior) = REQUIRED];</code>
+     * @return This builder for chaining.
      */
     public Builder clearQuery() {
       
@@ -805,10 +839,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The query string.
+     * Required. The query string.
      * </pre>
      *
-     * <code>string query = 2;</code>
+     * <code>string query = 2 [(.google.api.field_behavior) = REQUIRED];</code>
+     * @param value The bytes for query to set.
+     * @return This builder for chaining.
      */
     public Builder setQueryBytes(
         com.google.protobuf.ByteString value) {
@@ -832,6 +868,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string page_token = 3;</code>
+     * @return The pageToken.
      */
     public java.lang.String getPageToken() {
       java.lang.Object ref = pageToken_;
@@ -854,6 +891,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string page_token = 3;</code>
+     * @return The bytes for pageToken.
      */
     public com.google.protobuf.ByteString
         getPageTokenBytes() {
@@ -877,6 +915,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string page_token = 3;</code>
+     * @param value The pageToken to set.
+     * @return This builder for chaining.
      */
     public Builder setPageToken(
         java.lang.String value) {
@@ -897,6 +937,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string page_token = 3;</code>
+     * @return This builder for chaining.
      */
     public Builder clearPageToken() {
       
@@ -913,6 +954,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string page_token = 3;</code>
+     * @param value The bytes for pageToken to set.
+     * @return This builder for chaining.
      */
     public Builder setPageTokenBytes(
         com.google.protobuf.ByteString value) {
@@ -935,7 +978,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>int32 page_size = 4;</code>
+     * @return The pageSize.
      */
+    @java.lang.Override
     public int getPageSize() {
       return pageSize_;
     }
@@ -947,6 +992,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>int32 page_size = 4;</code>
+     * @param value The pageSize to set.
+     * @return This builder for chaining.
      */
     public Builder setPageSize(int value) {
       
@@ -962,6 +1009,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>int32 page_size = 4;</code>
+     * @return This builder for chaining.
      */
     public Builder clearPageSize() {
       
@@ -977,7 +1025,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>bool validate_only = 5;</code>
+     * @return The validateOnly.
      */
+    @java.lang.Override
     public boolean getValidateOnly() {
       return validateOnly_;
     }
@@ -987,6 +1037,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>bool validate_only = 5;</code>
+     * @param value The validateOnly to set.
+     * @return This builder for chaining.
      */
     public Builder setValidateOnly(boolean value) {
       
@@ -1000,6 +1052,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>bool validate_only = 5;</code>
+     * @return This builder for chaining.
      */
     public Builder clearValidateOnly() {
       

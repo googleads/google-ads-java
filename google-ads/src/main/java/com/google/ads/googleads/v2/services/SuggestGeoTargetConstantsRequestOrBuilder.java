@@ -15,6 +15,7 @@ public interface SuggestGeoTargetConstantsRequestOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue locale = 3;</code>
+   * @return Whether the locale field is set.
    */
   boolean hasLocale();
   /**
@@ -25,6 +26,7 @@ public interface SuggestGeoTargetConstantsRequestOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue locale = 3;</code>
+   * @return The locale.
    */
   com.google.protobuf.StringValue getLocale();
   /**
@@ -44,6 +46,7 @@ public interface SuggestGeoTargetConstantsRequestOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue country_code = 5;</code>
+   * @return Whether the countryCode field is set.
    */
   boolean hasCountryCode();
   /**
@@ -52,6 +55,7 @@ public interface SuggestGeoTargetConstantsRequestOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue country_code = 5;</code>
+   * @return The countryCode.
    */
   com.google.protobuf.StringValue getCountryCode();
   /**
@@ -69,6 +73,7 @@ public interface SuggestGeoTargetConstantsRequestOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.services.SuggestGeoTargetConstantsRequest.LocationNames location_names = 1;</code>
+   * @return Whether the locationNames field is set.
    */
   boolean hasLocationNames();
   /**
@@ -77,6 +82,7 @@ public interface SuggestGeoTargetConstantsRequestOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.services.SuggestGeoTargetConstantsRequest.LocationNames location_names = 1;</code>
+   * @return The locationNames.
    */
   com.google.ads.googleads.v2.services.SuggestGeoTargetConstantsRequest.LocationNames getLocationNames();
   /**
@@ -94,6 +100,7 @@ public interface SuggestGeoTargetConstantsRequestOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.services.SuggestGeoTargetConstantsRequest.GeoTargets geo_targets = 2;</code>
+   * @return Whether the geoTargets field is set.
    */
   boolean hasGeoTargets();
   /**
@@ -102,6 +109,7 @@ public interface SuggestGeoTargetConstantsRequestOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.services.SuggestGeoTargetConstantsRequest.GeoTargets geo_targets = 2;</code>
+   * @return The geoTargets.
    */
   com.google.ads.googleads.v2.services.SuggestGeoTargetConstantsRequest.GeoTargets getGeoTargets();
   /**

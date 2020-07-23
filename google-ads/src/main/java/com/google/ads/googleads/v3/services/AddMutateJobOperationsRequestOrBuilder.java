@@ -13,6 +13,7 @@ public interface AddMutateJobOperationsRequestOrBuilder extends
    * </pre>
    *
    * <code>string resource_name = 1 [(.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = { ... }</code>
+   * @return The resourceName.
    */
   java.lang.String getResourceName();
   /**
@@ -21,6 +22,7 @@ public interface AddMutateJobOperationsRequestOrBuilder extends
    * </pre>
    *
    * <code>string resource_name = 1 [(.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = { ... }</code>
+   * @return The bytes for resourceName.
    */
   com.google.protobuf.ByteString
       getResourceNameBytes();
@@ -35,6 +37,7 @@ public interface AddMutateJobOperationsRequestOrBuilder extends
    * </pre>
    *
    * <code>string sequence_token = 2;</code>
+   * @return The sequenceToken.
    */
   java.lang.String getSequenceToken();
   /**
@@ -47,6 +50,7 @@ public interface AddMutateJobOperationsRequestOrBuilder extends
    * </pre>
    *
    * <code>string sequence_token = 2;</code>
+   * @return The bytes for sequenceToken.
    */
   com.google.protobuf.ByteString
       getSequenceTokenBytes();

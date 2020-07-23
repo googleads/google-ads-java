@@ -10,7 +10,7 @@ package com.google.ads.googleads.v2.resources;
  *
  * Protobuf type {@code google.ads.googleads.v2.resources.CampaignBudget}
  */
-public  final class CampaignBudget extends
+public final class CampaignBudget extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v2.resources.CampaignBudget)
     CampaignBudgetOrBuilder {
@@ -28,6 +28,13 @@ private static final long serialVersionUID = 0L;
   }
 
   @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new CampaignBudget();
+  }
+
+  @java.lang.Override
   public final com.google.protobuf.UnknownFieldSet
   getUnknownFields() {
     return this.unknownFields;
@@ -40,7 +47,6 @@ private static final long serialVersionUID = 0L;
     if (extensionRegistry == null) {
       throw new java.lang.NullPointerException();
     }
-    int mutable_bitField0_ = 0;
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
         com.google.protobuf.UnknownFieldSet.newBuilder();
     try {
@@ -273,13 +279,15 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object resourceName_;
   /**
    * <pre>
-   * The resource name of the campaign budget.
+   * Immutable. The resource name of the campaign budget.
    * Campaign budget resource names have the form:
    * `customers/{customer_id}/campaignBudgets/{budget_id}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * @return The resourceName.
    */
+  @java.lang.Override
   public java.lang.String getResourceName() {
     java.lang.Object ref = resourceName_;
     if (ref instanceof java.lang.String) {
@@ -294,13 +302,15 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The resource name of the campaign budget.
+   * Immutable. The resource name of the campaign budget.
    * Campaign budget resource names have the form:
    * `customers/{customer_id}/campaignBudgets/{budget_id}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * @return The bytes for resourceName.
    */
+  @java.lang.Override
   public com.google.protobuf.ByteString
       getResourceNameBytes() {
     java.lang.Object ref = resourceName_;
@@ -319,43 +329,48 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.Int64Value id_;
   /**
    * <pre>
-   * The ID of the campaign budget.
+   * Output only. The ID of the campaign budget.
    * A campaign budget is created using the CampaignBudgetService create
    * operation and is assigned a budget ID. A budget ID can be shared across
    * different campaigns; the system will then allocate the campaign budget
    * among different campaigns to get optimum results.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value id = 3;</code>
+   * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the id field is set.
    */
+  @java.lang.Override
   public boolean hasId() {
     return id_ != null;
   }
   /**
    * <pre>
-   * The ID of the campaign budget.
+   * Output only. The ID of the campaign budget.
    * A campaign budget is created using the CampaignBudgetService create
    * operation and is assigned a budget ID. A budget ID can be shared across
    * different campaigns; the system will then allocate the campaign budget
    * among different campaigns to get optimum results.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value id = 3;</code>
+   * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The id.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getId() {
     return id_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : id_;
   }
   /**
    * <pre>
-   * The ID of the campaign budget.
+   * Output only. The ID of the campaign budget.
    * A campaign budget is created using the CampaignBudgetService create
    * operation and is assigned a budget ID. A budget ID can be shared across
    * different campaigns; the system will then allocate the campaign budget
    * among different campaigns to get optimum results.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value id = 3;</code>
+   * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getIdOrBuilder() {
     return getId();
   }
@@ -374,7 +389,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue name = 4;</code>
+   * @return Whether the name field is set.
    */
+  @java.lang.Override
   public boolean hasName() {
     return name_ != null;
   }
@@ -390,7 +407,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue name = 4;</code>
+   * @return The name.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getName() {
     return name_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : name_;
   }
@@ -407,6 +426,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue name = 4;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getNameOrBuilder() {
     return getName();
   }
@@ -421,7 +441,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Int64Value amount_micros = 5;</code>
+   * @return Whether the amountMicros field is set.
    */
+  @java.lang.Override
   public boolean hasAmountMicros() {
     return amountMicros_ != null;
   }
@@ -433,7 +455,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Int64Value amount_micros = 5;</code>
+   * @return The amountMicros.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getAmountMicros() {
     return amountMicros_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : amountMicros_;
   }
@@ -446,6 +470,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int64Value amount_micros = 5;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getAmountMicrosOrBuilder() {
     return getAmountMicros();
   }
@@ -460,7 +485,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Int64Value total_amount_micros = 10;</code>
+   * @return Whether the totalAmountMicros field is set.
    */
+  @java.lang.Override
   public boolean hasTotalAmountMicros() {
     return totalAmountMicros_ != null;
   }
@@ -472,7 +499,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Int64Value total_amount_micros = 10;</code>
+   * @return The totalAmountMicros.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getTotalAmountMicros() {
     return totalAmountMicros_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : totalAmountMicros_;
   }
@@ -485,6 +514,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int64Value total_amount_micros = 10;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getTotalAmountMicrosOrBuilder() {
     return getTotalAmountMicros();
   }
@@ -493,22 +523,24 @@ private static final long serialVersionUID = 0L;
   private int status_;
   /**
    * <pre>
-   * The status of this campaign budget. This field is read-only.
+   * Output only. The status of this campaign budget. This field is read-only.
    * </pre>
    *
-   * <code>.google.ads.googleads.v2.enums.BudgetStatusEnum.BudgetStatus status = 6;</code>
+   * <code>.google.ads.googleads.v2.enums.BudgetStatusEnum.BudgetStatus status = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The enum numeric value on the wire for status.
    */
-  public int getStatusValue() {
+  @java.lang.Override public int getStatusValue() {
     return status_;
   }
   /**
    * <pre>
-   * The status of this campaign budget. This field is read-only.
+   * Output only. The status of this campaign budget. This field is read-only.
    * </pre>
    *
-   * <code>.google.ads.googleads.v2.enums.BudgetStatusEnum.BudgetStatus status = 6;</code>
+   * <code>.google.ads.googleads.v2.enums.BudgetStatusEnum.BudgetStatus status = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The status.
    */
-  public com.google.ads.googleads.v2.enums.BudgetStatusEnum.BudgetStatus getStatus() {
+  @java.lang.Override public com.google.ads.googleads.v2.enums.BudgetStatusEnum.BudgetStatus getStatus() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v2.enums.BudgetStatusEnum.BudgetStatus result = com.google.ads.googleads.v2.enums.BudgetStatusEnum.BudgetStatus.valueOf(status_);
     return result == null ? com.google.ads.googleads.v2.enums.BudgetStatusEnum.BudgetStatus.UNRECOGNIZED : result;
@@ -524,8 +556,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.enums.BudgetDeliveryMethodEnum.BudgetDeliveryMethod delivery_method = 7;</code>
+   * @return The enum numeric value on the wire for deliveryMethod.
    */
-  public int getDeliveryMethodValue() {
+  @java.lang.Override public int getDeliveryMethodValue() {
     return deliveryMethod_;
   }
   /**
@@ -536,8 +569,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.enums.BudgetDeliveryMethodEnum.BudgetDeliveryMethod delivery_method = 7;</code>
+   * @return The deliveryMethod.
    */
-  public com.google.ads.googleads.v2.enums.BudgetDeliveryMethodEnum.BudgetDeliveryMethod getDeliveryMethod() {
+  @java.lang.Override public com.google.ads.googleads.v2.enums.BudgetDeliveryMethodEnum.BudgetDeliveryMethod getDeliveryMethod() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v2.enums.BudgetDeliveryMethodEnum.BudgetDeliveryMethod result = com.google.ads.googleads.v2.enums.BudgetDeliveryMethodEnum.BudgetDeliveryMethod.valueOf(deliveryMethod_);
     return result == null ? com.google.ads.googleads.v2.enums.BudgetDeliveryMethodEnum.BudgetDeliveryMethod.UNRECOGNIZED : result;
@@ -561,7 +595,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.BoolValue explicitly_shared = 8;</code>
+   * @return Whether the explicitlyShared field is set.
    */
+  @java.lang.Override
   public boolean hasExplicitlyShared() {
     return explicitlyShared_ != null;
   }
@@ -581,7 +617,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.BoolValue explicitly_shared = 8;</code>
+   * @return The explicitlyShared.
    */
+  @java.lang.Override
   public com.google.protobuf.BoolValue getExplicitlyShared() {
     return explicitlyShared_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : explicitlyShared_;
   }
@@ -602,6 +640,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.BoolValue explicitly_shared = 8;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.BoolValueOrBuilder getExplicitlySharedOrBuilder() {
     return getExplicitlyShared();
   }
@@ -610,34 +649,39 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.Int64Value referenceCount_;
   /**
    * <pre>
-   * The number of campaigns actively using the budget.
+   * Output only. The number of campaigns actively using the budget.
    * This field is read-only.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value reference_count = 9;</code>
+   * <code>.google.protobuf.Int64Value reference_count = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the referenceCount field is set.
    */
+  @java.lang.Override
   public boolean hasReferenceCount() {
     return referenceCount_ != null;
   }
   /**
    * <pre>
-   * The number of campaigns actively using the budget.
+   * Output only. The number of campaigns actively using the budget.
    * This field is read-only.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value reference_count = 9;</code>
+   * <code>.google.protobuf.Int64Value reference_count = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The referenceCount.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getReferenceCount() {
     return referenceCount_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : referenceCount_;
   }
   /**
    * <pre>
-   * The number of campaigns actively using the budget.
+   * Output only. The number of campaigns actively using the budget.
    * This field is read-only.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value reference_count = 9;</code>
+   * <code>.google.protobuf.Int64Value reference_count = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getReferenceCountOrBuilder() {
     return getReferenceCount();
   }
@@ -646,34 +690,39 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.BoolValue hasRecommendedBudget_;
   /**
    * <pre>
-   * Indicates whether there is a recommended budget for this campaign budget.
+   * Output only. Indicates whether there is a recommended budget for this campaign budget.
    * This field is read-only.
    * </pre>
    *
-   * <code>.google.protobuf.BoolValue has_recommended_budget = 11;</code>
+   * <code>.google.protobuf.BoolValue has_recommended_budget = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the hasRecommendedBudget field is set.
    */
+  @java.lang.Override
   public boolean hasHasRecommendedBudget() {
     return hasRecommendedBudget_ != null;
   }
   /**
    * <pre>
-   * Indicates whether there is a recommended budget for this campaign budget.
+   * Output only. Indicates whether there is a recommended budget for this campaign budget.
    * This field is read-only.
    * </pre>
    *
-   * <code>.google.protobuf.BoolValue has_recommended_budget = 11;</code>
+   * <code>.google.protobuf.BoolValue has_recommended_budget = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The hasRecommendedBudget.
    */
+  @java.lang.Override
   public com.google.protobuf.BoolValue getHasRecommendedBudget() {
     return hasRecommendedBudget_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : hasRecommendedBudget_;
   }
   /**
    * <pre>
-   * Indicates whether there is a recommended budget for this campaign budget.
+   * Output only. Indicates whether there is a recommended budget for this campaign budget.
    * This field is read-only.
    * </pre>
    *
-   * <code>.google.protobuf.BoolValue has_recommended_budget = 11;</code>
+   * <code>.google.protobuf.BoolValue has_recommended_budget = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.BoolValueOrBuilder getHasRecommendedBudgetOrBuilder() {
     return getHasRecommendedBudget();
   }
@@ -682,43 +731,48 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.Int64Value recommendedBudgetAmountMicros_;
   /**
    * <pre>
-   * The recommended budget amount. If no recommendation is available, this will
+   * Output only. The recommended budget amount. If no recommendation is available, this will
    * be set to the budget amount.
    * Amount is specified in micros, where one million is equivalent to one
    * currency unit.
    * This field is read-only.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value recommended_budget_amount_micros = 12;</code>
+   * <code>.google.protobuf.Int64Value recommended_budget_amount_micros = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the recommendedBudgetAmountMicros field is set.
    */
+  @java.lang.Override
   public boolean hasRecommendedBudgetAmountMicros() {
     return recommendedBudgetAmountMicros_ != null;
   }
   /**
    * <pre>
-   * The recommended budget amount. If no recommendation is available, this will
+   * Output only. The recommended budget amount. If no recommendation is available, this will
    * be set to the budget amount.
    * Amount is specified in micros, where one million is equivalent to one
    * currency unit.
    * This field is read-only.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value recommended_budget_amount_micros = 12;</code>
+   * <code>.google.protobuf.Int64Value recommended_budget_amount_micros = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The recommendedBudgetAmountMicros.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getRecommendedBudgetAmountMicros() {
     return recommendedBudgetAmountMicros_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : recommendedBudgetAmountMicros_;
   }
   /**
    * <pre>
-   * The recommended budget amount. If no recommendation is available, this will
+   * Output only. The recommended budget amount. If no recommendation is available, this will
    * be set to the budget amount.
    * Amount is specified in micros, where one million is equivalent to one
    * currency unit.
    * This field is read-only.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value recommended_budget_amount_micros = 12;</code>
+   * <code>.google.protobuf.Int64Value recommended_budget_amount_micros = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getRecommendedBudgetAmountMicrosOrBuilder() {
     return getRecommendedBudgetAmountMicros();
   }
@@ -727,22 +781,24 @@ private static final long serialVersionUID = 0L;
   private int period_;
   /**
    * <pre>
-   * Period over which to spend the budget. Defaults to DAILY if not specified.
+   * Immutable. Period over which to spend the budget. Defaults to DAILY if not specified.
    * </pre>
    *
-   * <code>.google.ads.googleads.v2.enums.BudgetPeriodEnum.BudgetPeriod period = 13;</code>
+   * <code>.google.ads.googleads.v2.enums.BudgetPeriodEnum.BudgetPeriod period = 13 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The enum numeric value on the wire for period.
    */
-  public int getPeriodValue() {
+  @java.lang.Override public int getPeriodValue() {
     return period_;
   }
   /**
    * <pre>
-   * Period over which to spend the budget. Defaults to DAILY if not specified.
+   * Immutable. Period over which to spend the budget. Defaults to DAILY if not specified.
    * </pre>
    *
-   * <code>.google.ads.googleads.v2.enums.BudgetPeriodEnum.BudgetPeriod period = 13;</code>
+   * <code>.google.ads.googleads.v2.enums.BudgetPeriodEnum.BudgetPeriod period = 13 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The period.
    */
-  public com.google.ads.googleads.v2.enums.BudgetPeriodEnum.BudgetPeriod getPeriod() {
+  @java.lang.Override public com.google.ads.googleads.v2.enums.BudgetPeriodEnum.BudgetPeriod getPeriod() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v2.enums.BudgetPeriodEnum.BudgetPeriod result = com.google.ads.googleads.v2.enums.BudgetPeriodEnum.BudgetPeriod.valueOf(period_);
     return result == null ? com.google.ads.googleads.v2.enums.BudgetPeriodEnum.BudgetPeriod.UNRECOGNIZED : result;
@@ -752,34 +808,39 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.Int64Value recommendedBudgetEstimatedChangeWeeklyClicks_;
   /**
    * <pre>
-   * The estimated change in weekly clicks if the recommended budget is applied.
+   * Output only. The estimated change in weekly clicks if the recommended budget is applied.
    * This field is read-only.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value recommended_budget_estimated_change_weekly_clicks = 14;</code>
+   * <code>.google.protobuf.Int64Value recommended_budget_estimated_change_weekly_clicks = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the recommendedBudgetEstimatedChangeWeeklyClicks field is set.
    */
+  @java.lang.Override
   public boolean hasRecommendedBudgetEstimatedChangeWeeklyClicks() {
     return recommendedBudgetEstimatedChangeWeeklyClicks_ != null;
   }
   /**
    * <pre>
-   * The estimated change in weekly clicks if the recommended budget is applied.
+   * Output only. The estimated change in weekly clicks if the recommended budget is applied.
    * This field is read-only.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value recommended_budget_estimated_change_weekly_clicks = 14;</code>
+   * <code>.google.protobuf.Int64Value recommended_budget_estimated_change_weekly_clicks = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The recommendedBudgetEstimatedChangeWeeklyClicks.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getRecommendedBudgetEstimatedChangeWeeklyClicks() {
     return recommendedBudgetEstimatedChangeWeeklyClicks_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : recommendedBudgetEstimatedChangeWeeklyClicks_;
   }
   /**
    * <pre>
-   * The estimated change in weekly clicks if the recommended budget is applied.
+   * Output only. The estimated change in weekly clicks if the recommended budget is applied.
    * This field is read-only.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value recommended_budget_estimated_change_weekly_clicks = 14;</code>
+   * <code>.google.protobuf.Int64Value recommended_budget_estimated_change_weekly_clicks = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getRecommendedBudgetEstimatedChangeWeeklyClicksOrBuilder() {
     return getRecommendedBudgetEstimatedChangeWeeklyClicks();
   }
@@ -788,37 +849,42 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.Int64Value recommendedBudgetEstimatedChangeWeeklyCostMicros_;
   /**
    * <pre>
-   * The estimated change in weekly cost in micros if the recommended budget is
+   * Output only. The estimated change in weekly cost in micros if the recommended budget is
    * applied. One million is equivalent to one currency unit.
    * This field is read-only.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value recommended_budget_estimated_change_weekly_cost_micros = 15;</code>
+   * <code>.google.protobuf.Int64Value recommended_budget_estimated_change_weekly_cost_micros = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the recommendedBudgetEstimatedChangeWeeklyCostMicros field is set.
    */
+  @java.lang.Override
   public boolean hasRecommendedBudgetEstimatedChangeWeeklyCostMicros() {
     return recommendedBudgetEstimatedChangeWeeklyCostMicros_ != null;
   }
   /**
    * <pre>
-   * The estimated change in weekly cost in micros if the recommended budget is
+   * Output only. The estimated change in weekly cost in micros if the recommended budget is
    * applied. One million is equivalent to one currency unit.
    * This field is read-only.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value recommended_budget_estimated_change_weekly_cost_micros = 15;</code>
+   * <code>.google.protobuf.Int64Value recommended_budget_estimated_change_weekly_cost_micros = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The recommendedBudgetEstimatedChangeWeeklyCostMicros.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getRecommendedBudgetEstimatedChangeWeeklyCostMicros() {
     return recommendedBudgetEstimatedChangeWeeklyCostMicros_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : recommendedBudgetEstimatedChangeWeeklyCostMicros_;
   }
   /**
    * <pre>
-   * The estimated change in weekly cost in micros if the recommended budget is
+   * Output only. The estimated change in weekly cost in micros if the recommended budget is
    * applied. One million is equivalent to one currency unit.
    * This field is read-only.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value recommended_budget_estimated_change_weekly_cost_micros = 15;</code>
+   * <code>.google.protobuf.Int64Value recommended_budget_estimated_change_weekly_cost_micros = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getRecommendedBudgetEstimatedChangeWeeklyCostMicrosOrBuilder() {
     return getRecommendedBudgetEstimatedChangeWeeklyCostMicros();
   }
@@ -827,37 +893,42 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.Int64Value recommendedBudgetEstimatedChangeWeeklyInteractions_;
   /**
    * <pre>
-   * The estimated change in weekly interactions if the recommended budget is
+   * Output only. The estimated change in weekly interactions if the recommended budget is
    * applied.
    * This field is read-only.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value recommended_budget_estimated_change_weekly_interactions = 16;</code>
+   * <code>.google.protobuf.Int64Value recommended_budget_estimated_change_weekly_interactions = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the recommendedBudgetEstimatedChangeWeeklyInteractions field is set.
    */
+  @java.lang.Override
   public boolean hasRecommendedBudgetEstimatedChangeWeeklyInteractions() {
     return recommendedBudgetEstimatedChangeWeeklyInteractions_ != null;
   }
   /**
    * <pre>
-   * The estimated change in weekly interactions if the recommended budget is
+   * Output only. The estimated change in weekly interactions if the recommended budget is
    * applied.
    * This field is read-only.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value recommended_budget_estimated_change_weekly_interactions = 16;</code>
+   * <code>.google.protobuf.Int64Value recommended_budget_estimated_change_weekly_interactions = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The recommendedBudgetEstimatedChangeWeeklyInteractions.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getRecommendedBudgetEstimatedChangeWeeklyInteractions() {
     return recommendedBudgetEstimatedChangeWeeklyInteractions_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : recommendedBudgetEstimatedChangeWeeklyInteractions_;
   }
   /**
    * <pre>
-   * The estimated change in weekly interactions if the recommended budget is
+   * Output only. The estimated change in weekly interactions if the recommended budget is
    * applied.
    * This field is read-only.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value recommended_budget_estimated_change_weekly_interactions = 16;</code>
+   * <code>.google.protobuf.Int64Value recommended_budget_estimated_change_weekly_interactions = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getRecommendedBudgetEstimatedChangeWeeklyInteractionsOrBuilder() {
     return getRecommendedBudgetEstimatedChangeWeeklyInteractions();
   }
@@ -866,34 +937,39 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.Int64Value recommendedBudgetEstimatedChangeWeeklyViews_;
   /**
    * <pre>
-   * The estimated change in weekly views if the recommended budget is applied.
+   * Output only. The estimated change in weekly views if the recommended budget is applied.
    * This field is read-only.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value recommended_budget_estimated_change_weekly_views = 17;</code>
+   * <code>.google.protobuf.Int64Value recommended_budget_estimated_change_weekly_views = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the recommendedBudgetEstimatedChangeWeeklyViews field is set.
    */
+  @java.lang.Override
   public boolean hasRecommendedBudgetEstimatedChangeWeeklyViews() {
     return recommendedBudgetEstimatedChangeWeeklyViews_ != null;
   }
   /**
    * <pre>
-   * The estimated change in weekly views if the recommended budget is applied.
+   * Output only. The estimated change in weekly views if the recommended budget is applied.
    * This field is read-only.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value recommended_budget_estimated_change_weekly_views = 17;</code>
+   * <code>.google.protobuf.Int64Value recommended_budget_estimated_change_weekly_views = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The recommendedBudgetEstimatedChangeWeeklyViews.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getRecommendedBudgetEstimatedChangeWeeklyViews() {
     return recommendedBudgetEstimatedChangeWeeklyViews_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : recommendedBudgetEstimatedChangeWeeklyViews_;
   }
   /**
    * <pre>
-   * The estimated change in weekly views if the recommended budget is applied.
+   * Output only. The estimated change in weekly views if the recommended budget is applied.
    * This field is read-only.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value recommended_budget_estimated_change_weekly_views = 17;</code>
+   * <code>.google.protobuf.Int64Value recommended_budget_estimated_change_weekly_views = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getRecommendedBudgetEstimatedChangeWeeklyViewsOrBuilder() {
     return getRecommendedBudgetEstimatedChangeWeeklyViews();
   }
@@ -902,22 +978,24 @@ private static final long serialVersionUID = 0L;
   private int type_;
   /**
    * <pre>
-   * The type of the campaign budget.
+   * Immutable. The type of the campaign budget.
    * </pre>
    *
-   * <code>.google.ads.googleads.v2.enums.BudgetTypeEnum.BudgetType type = 18;</code>
+   * <code>.google.ads.googleads.v2.enums.BudgetTypeEnum.BudgetType type = 18 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The enum numeric value on the wire for type.
    */
-  public int getTypeValue() {
+  @java.lang.Override public int getTypeValue() {
     return type_;
   }
   /**
    * <pre>
-   * The type of the campaign budget.
+   * Immutable. The type of the campaign budget.
    * </pre>
    *
-   * <code>.google.ads.googleads.v2.enums.BudgetTypeEnum.BudgetType type = 18;</code>
+   * <code>.google.ads.googleads.v2.enums.BudgetTypeEnum.BudgetType type = 18 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The type.
    */
-  public com.google.ads.googleads.v2.enums.BudgetTypeEnum.BudgetType getType() {
+  @java.lang.Override public com.google.ads.googleads.v2.enums.BudgetTypeEnum.BudgetType getType() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v2.enums.BudgetTypeEnum.BudgetType result = com.google.ads.googleads.v2.enums.BudgetTypeEnum.BudgetType.valueOf(type_);
     return result == null ? com.google.ads.googleads.v2.enums.BudgetTypeEnum.BudgetType.UNRECOGNIZED : result;
@@ -1656,12 +1734,13 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object resourceName_ = "";
     /**
      * <pre>
-     * The resource name of the campaign budget.
+     * Immutable. The resource name of the campaign budget.
      * Campaign budget resource names have the form:
      * `customers/{customer_id}/campaignBudgets/{budget_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * @return The resourceName.
      */
     public java.lang.String getResourceName() {
       java.lang.Object ref = resourceName_;
@@ -1677,12 +1756,13 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the campaign budget.
+     * Immutable. The resource name of the campaign budget.
      * Campaign budget resource names have the form:
      * `customers/{customer_id}/campaignBudgets/{budget_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * @return The bytes for resourceName.
      */
     public com.google.protobuf.ByteString
         getResourceNameBytes() {
@@ -1699,12 +1779,14 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the campaign budget.
+     * Immutable. The resource name of the campaign budget.
      * Campaign budget resource names have the form:
      * `customers/{customer_id}/campaignBudgets/{budget_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * @param value The resourceName to set.
+     * @return This builder for chaining.
      */
     public Builder setResourceName(
         java.lang.String value) {
@@ -1718,12 +1800,13 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the campaign budget.
+     * Immutable. The resource name of the campaign budget.
      * Campaign budget resource names have the form:
      * `customers/{customer_id}/campaignBudgets/{budget_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * @return This builder for chaining.
      */
     public Builder clearResourceName() {
       
@@ -1733,12 +1816,14 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the campaign budget.
+     * Immutable. The resource name of the campaign budget.
      * Campaign budget resource names have the form:
      * `customers/{customer_id}/campaignBudgets/{budget_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * @param value The bytes for resourceName to set.
+     * @return This builder for chaining.
      */
     public Builder setResourceNameBytes(
         com.google.protobuf.ByteString value) {
@@ -1757,28 +1842,30 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> idBuilder_;
     /**
      * <pre>
-     * The ID of the campaign budget.
+     * Output only. The ID of the campaign budget.
      * A campaign budget is created using the CampaignBudgetService create
      * operation and is assigned a budget ID. A budget ID can be shared across
      * different campaigns; the system will then allocate the campaign budget
      * among different campaigns to get optimum results.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 3;</code>
+     * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the id field is set.
      */
     public boolean hasId() {
       return idBuilder_ != null || id_ != null;
     }
     /**
      * <pre>
-     * The ID of the campaign budget.
+     * Output only. The ID of the campaign budget.
      * A campaign budget is created using the CampaignBudgetService create
      * operation and is assigned a budget ID. A budget ID can be shared across
      * different campaigns; the system will then allocate the campaign budget
      * among different campaigns to get optimum results.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 3;</code>
+     * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The id.
      */
     public com.google.protobuf.Int64Value getId() {
       if (idBuilder_ == null) {
@@ -1789,14 +1876,14 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the campaign budget.
+     * Output only. The ID of the campaign budget.
      * A campaign budget is created using the CampaignBudgetService create
      * operation and is assigned a budget ID. A budget ID can be shared across
      * different campaigns; the system will then allocate the campaign budget
      * among different campaigns to get optimum results.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 3;</code>
+     * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setId(com.google.protobuf.Int64Value value) {
       if (idBuilder_ == null) {
@@ -1813,14 +1900,14 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the campaign budget.
+     * Output only. The ID of the campaign budget.
      * A campaign budget is created using the CampaignBudgetService create
      * operation and is assigned a budget ID. A budget ID can be shared across
      * different campaigns; the system will then allocate the campaign budget
      * among different campaigns to get optimum results.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 3;</code>
+     * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setId(
         com.google.protobuf.Int64Value.Builder builderForValue) {
@@ -1835,14 +1922,14 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the campaign budget.
+     * Output only. The ID of the campaign budget.
      * A campaign budget is created using the CampaignBudgetService create
      * operation and is assigned a budget ID. A budget ID can be shared across
      * different campaigns; the system will then allocate the campaign budget
      * among different campaigns to get optimum results.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 3;</code>
+     * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder mergeId(com.google.protobuf.Int64Value value) {
       if (idBuilder_ == null) {
@@ -1861,14 +1948,14 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the campaign budget.
+     * Output only. The ID of the campaign budget.
      * A campaign budget is created using the CampaignBudgetService create
      * operation and is assigned a budget ID. A budget ID can be shared across
      * different campaigns; the system will then allocate the campaign budget
      * among different campaigns to get optimum results.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 3;</code>
+     * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearId() {
       if (idBuilder_ == null) {
@@ -1883,14 +1970,14 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the campaign budget.
+     * Output only. The ID of the campaign budget.
      * A campaign budget is created using the CampaignBudgetService create
      * operation and is assigned a budget ID. A budget ID can be shared across
      * different campaigns; the system will then allocate the campaign budget
      * among different campaigns to get optimum results.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 3;</code>
+     * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int64Value.Builder getIdBuilder() {
       
@@ -1899,14 +1986,14 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the campaign budget.
+     * Output only. The ID of the campaign budget.
      * A campaign budget is created using the CampaignBudgetService create
      * operation and is assigned a budget ID. A budget ID can be shared across
      * different campaigns; the system will then allocate the campaign budget
      * among different campaigns to get optimum results.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 3;</code>
+     * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int64ValueOrBuilder getIdOrBuilder() {
       if (idBuilder_ != null) {
@@ -1918,14 +2005,14 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the campaign budget.
+     * Output only. The ID of the campaign budget.
      * A campaign budget is created using the CampaignBudgetService create
      * operation and is assigned a budget ID. A budget ID can be shared across
      * different campaigns; the system will then allocate the campaign budget
      * among different campaigns to get optimum results.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 3;</code>
+     * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
@@ -1956,6 +2043,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue name = 4;</code>
+     * @return Whether the name field is set.
      */
     public boolean hasName() {
       return nameBuilder_ != null || name_ != null;
@@ -1972,6 +2060,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue name = 4;</code>
+     * @return The name.
      */
     public com.google.protobuf.StringValue getName() {
       if (nameBuilder_ == null) {
@@ -2159,6 +2248,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value amount_micros = 5;</code>
+     * @return Whether the amountMicros field is set.
      */
     public boolean hasAmountMicros() {
       return amountMicrosBuilder_ != null || amountMicros_ != null;
@@ -2171,6 +2261,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value amount_micros = 5;</code>
+     * @return The amountMicros.
      */
     public com.google.protobuf.Int64Value getAmountMicros() {
       if (amountMicrosBuilder_ == null) {
@@ -2330,6 +2421,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value total_amount_micros = 10;</code>
+     * @return Whether the totalAmountMicros field is set.
      */
     public boolean hasTotalAmountMicros() {
       return totalAmountMicrosBuilder_ != null || totalAmountMicros_ != null;
@@ -2342,6 +2434,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value total_amount_micros = 10;</code>
+     * @return The totalAmountMicros.
      */
     public com.google.protobuf.Int64Value getTotalAmountMicros() {
       if (totalAmountMicrosBuilder_ == null) {
@@ -2493,33 +2586,39 @@ private static final long serialVersionUID = 0L;
     private int status_ = 0;
     /**
      * <pre>
-     * The status of this campaign budget. This field is read-only.
+     * Output only. The status of this campaign budget. This field is read-only.
      * </pre>
      *
-     * <code>.google.ads.googleads.v2.enums.BudgetStatusEnum.BudgetStatus status = 6;</code>
+     * <code>.google.ads.googleads.v2.enums.BudgetStatusEnum.BudgetStatus status = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The enum numeric value on the wire for status.
      */
-    public int getStatusValue() {
+    @java.lang.Override public int getStatusValue() {
       return status_;
     }
     /**
      * <pre>
-     * The status of this campaign budget. This field is read-only.
+     * Output only. The status of this campaign budget. This field is read-only.
      * </pre>
      *
-     * <code>.google.ads.googleads.v2.enums.BudgetStatusEnum.BudgetStatus status = 6;</code>
+     * <code>.google.ads.googleads.v2.enums.BudgetStatusEnum.BudgetStatus status = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @param value The enum numeric value on the wire for status to set.
+     * @return This builder for chaining.
      */
     public Builder setStatusValue(int value) {
+      
       status_ = value;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * The status of this campaign budget. This field is read-only.
+     * Output only. The status of this campaign budget. This field is read-only.
      * </pre>
      *
-     * <code>.google.ads.googleads.v2.enums.BudgetStatusEnum.BudgetStatus status = 6;</code>
+     * <code>.google.ads.googleads.v2.enums.BudgetStatusEnum.BudgetStatus status = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The status.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v2.enums.BudgetStatusEnum.BudgetStatus getStatus() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v2.enums.BudgetStatusEnum.BudgetStatus result = com.google.ads.googleads.v2.enums.BudgetStatusEnum.BudgetStatus.valueOf(status_);
@@ -2527,10 +2626,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The status of this campaign budget. This field is read-only.
+     * Output only. The status of this campaign budget. This field is read-only.
      * </pre>
      *
-     * <code>.google.ads.googleads.v2.enums.BudgetStatusEnum.BudgetStatus status = 6;</code>
+     * <code>.google.ads.googleads.v2.enums.BudgetStatusEnum.BudgetStatus status = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @param value The status to set.
+     * @return This builder for chaining.
      */
     public Builder setStatus(com.google.ads.googleads.v2.enums.BudgetStatusEnum.BudgetStatus value) {
       if (value == null) {
@@ -2543,10 +2644,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The status of this campaign budget. This field is read-only.
+     * Output only. The status of this campaign budget. This field is read-only.
      * </pre>
      *
-     * <code>.google.ads.googleads.v2.enums.BudgetStatusEnum.BudgetStatus status = 6;</code>
+     * <code>.google.ads.googleads.v2.enums.BudgetStatusEnum.BudgetStatus status = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return This builder for chaining.
      */
     public Builder clearStatus() {
       
@@ -2564,8 +2666,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.enums.BudgetDeliveryMethodEnum.BudgetDeliveryMethod delivery_method = 7;</code>
+     * @return The enum numeric value on the wire for deliveryMethod.
      */
-    public int getDeliveryMethodValue() {
+    @java.lang.Override public int getDeliveryMethodValue() {
       return deliveryMethod_;
     }
     /**
@@ -2576,8 +2679,11 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.enums.BudgetDeliveryMethodEnum.BudgetDeliveryMethod delivery_method = 7;</code>
+     * @param value The enum numeric value on the wire for deliveryMethod to set.
+     * @return This builder for chaining.
      */
     public Builder setDeliveryMethodValue(int value) {
+      
       deliveryMethod_ = value;
       onChanged();
       return this;
@@ -2590,7 +2696,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.enums.BudgetDeliveryMethodEnum.BudgetDeliveryMethod delivery_method = 7;</code>
+     * @return The deliveryMethod.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v2.enums.BudgetDeliveryMethodEnum.BudgetDeliveryMethod getDeliveryMethod() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v2.enums.BudgetDeliveryMethodEnum.BudgetDeliveryMethod result = com.google.ads.googleads.v2.enums.BudgetDeliveryMethodEnum.BudgetDeliveryMethod.valueOf(deliveryMethod_);
@@ -2604,6 +2712,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.enums.BudgetDeliveryMethodEnum.BudgetDeliveryMethod delivery_method = 7;</code>
+     * @param value The deliveryMethod to set.
+     * @return This builder for chaining.
      */
     public Builder setDeliveryMethod(com.google.ads.googleads.v2.enums.BudgetDeliveryMethodEnum.BudgetDeliveryMethod value) {
       if (value == null) {
@@ -2622,6 +2732,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.enums.BudgetDeliveryMethodEnum.BudgetDeliveryMethod delivery_method = 7;</code>
+     * @return This builder for chaining.
      */
     public Builder clearDeliveryMethod() {
       
@@ -2649,6 +2760,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.BoolValue explicitly_shared = 8;</code>
+     * @return Whether the explicitlyShared field is set.
      */
     public boolean hasExplicitlyShared() {
       return explicitlySharedBuilder_ != null || explicitlyShared_ != null;
@@ -2669,6 +2781,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.BoolValue explicitly_shared = 8;</code>
+     * @return The explicitlyShared.
      */
     public com.google.protobuf.BoolValue getExplicitlyShared() {
       if (explicitlySharedBuilder_ == null) {
@@ -2878,22 +2991,24 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> referenceCountBuilder_;
     /**
      * <pre>
-     * The number of campaigns actively using the budget.
+     * Output only. The number of campaigns actively using the budget.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value reference_count = 9;</code>
+     * <code>.google.protobuf.Int64Value reference_count = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the referenceCount field is set.
      */
     public boolean hasReferenceCount() {
       return referenceCountBuilder_ != null || referenceCount_ != null;
     }
     /**
      * <pre>
-     * The number of campaigns actively using the budget.
+     * Output only. The number of campaigns actively using the budget.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value reference_count = 9;</code>
+     * <code>.google.protobuf.Int64Value reference_count = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The referenceCount.
      */
     public com.google.protobuf.Int64Value getReferenceCount() {
       if (referenceCountBuilder_ == null) {
@@ -2904,11 +3019,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The number of campaigns actively using the budget.
+     * Output only. The number of campaigns actively using the budget.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value reference_count = 9;</code>
+     * <code>.google.protobuf.Int64Value reference_count = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setReferenceCount(com.google.protobuf.Int64Value value) {
       if (referenceCountBuilder_ == null) {
@@ -2925,11 +3040,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The number of campaigns actively using the budget.
+     * Output only. The number of campaigns actively using the budget.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value reference_count = 9;</code>
+     * <code>.google.protobuf.Int64Value reference_count = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setReferenceCount(
         com.google.protobuf.Int64Value.Builder builderForValue) {
@@ -2944,11 +3059,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The number of campaigns actively using the budget.
+     * Output only. The number of campaigns actively using the budget.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value reference_count = 9;</code>
+     * <code>.google.protobuf.Int64Value reference_count = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder mergeReferenceCount(com.google.protobuf.Int64Value value) {
       if (referenceCountBuilder_ == null) {
@@ -2967,11 +3082,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The number of campaigns actively using the budget.
+     * Output only. The number of campaigns actively using the budget.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value reference_count = 9;</code>
+     * <code>.google.protobuf.Int64Value reference_count = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearReferenceCount() {
       if (referenceCountBuilder_ == null) {
@@ -2986,11 +3101,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The number of campaigns actively using the budget.
+     * Output only. The number of campaigns actively using the budget.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value reference_count = 9;</code>
+     * <code>.google.protobuf.Int64Value reference_count = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int64Value.Builder getReferenceCountBuilder() {
       
@@ -2999,11 +3114,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The number of campaigns actively using the budget.
+     * Output only. The number of campaigns actively using the budget.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value reference_count = 9;</code>
+     * <code>.google.protobuf.Int64Value reference_count = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int64ValueOrBuilder getReferenceCountOrBuilder() {
       if (referenceCountBuilder_ != null) {
@@ -3015,11 +3130,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The number of campaigns actively using the budget.
+     * Output only. The number of campaigns actively using the budget.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value reference_count = 9;</code>
+     * <code>.google.protobuf.Int64Value reference_count = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
@@ -3040,22 +3155,24 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> hasRecommendedBudgetBuilder_;
     /**
      * <pre>
-     * Indicates whether there is a recommended budget for this campaign budget.
+     * Output only. Indicates whether there is a recommended budget for this campaign budget.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.BoolValue has_recommended_budget = 11;</code>
+     * <code>.google.protobuf.BoolValue has_recommended_budget = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the hasRecommendedBudget field is set.
      */
     public boolean hasHasRecommendedBudget() {
       return hasRecommendedBudgetBuilder_ != null || hasRecommendedBudget_ != null;
     }
     /**
      * <pre>
-     * Indicates whether there is a recommended budget for this campaign budget.
+     * Output only. Indicates whether there is a recommended budget for this campaign budget.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.BoolValue has_recommended_budget = 11;</code>
+     * <code>.google.protobuf.BoolValue has_recommended_budget = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The hasRecommendedBudget.
      */
     public com.google.protobuf.BoolValue getHasRecommendedBudget() {
       if (hasRecommendedBudgetBuilder_ == null) {
@@ -3066,11 +3183,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Indicates whether there is a recommended budget for this campaign budget.
+     * Output only. Indicates whether there is a recommended budget for this campaign budget.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.BoolValue has_recommended_budget = 11;</code>
+     * <code>.google.protobuf.BoolValue has_recommended_budget = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setHasRecommendedBudget(com.google.protobuf.BoolValue value) {
       if (hasRecommendedBudgetBuilder_ == null) {
@@ -3087,11 +3204,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Indicates whether there is a recommended budget for this campaign budget.
+     * Output only. Indicates whether there is a recommended budget for this campaign budget.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.BoolValue has_recommended_budget = 11;</code>
+     * <code>.google.protobuf.BoolValue has_recommended_budget = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setHasRecommendedBudget(
         com.google.protobuf.BoolValue.Builder builderForValue) {
@@ -3106,11 +3223,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Indicates whether there is a recommended budget for this campaign budget.
+     * Output only. Indicates whether there is a recommended budget for this campaign budget.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.BoolValue has_recommended_budget = 11;</code>
+     * <code>.google.protobuf.BoolValue has_recommended_budget = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder mergeHasRecommendedBudget(com.google.protobuf.BoolValue value) {
       if (hasRecommendedBudgetBuilder_ == null) {
@@ -3129,11 +3246,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Indicates whether there is a recommended budget for this campaign budget.
+     * Output only. Indicates whether there is a recommended budget for this campaign budget.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.BoolValue has_recommended_budget = 11;</code>
+     * <code>.google.protobuf.BoolValue has_recommended_budget = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearHasRecommendedBudget() {
       if (hasRecommendedBudgetBuilder_ == null) {
@@ -3148,11 +3265,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Indicates whether there is a recommended budget for this campaign budget.
+     * Output only. Indicates whether there is a recommended budget for this campaign budget.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.BoolValue has_recommended_budget = 11;</code>
+     * <code>.google.protobuf.BoolValue has_recommended_budget = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.BoolValue.Builder getHasRecommendedBudgetBuilder() {
       
@@ -3161,11 +3278,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Indicates whether there is a recommended budget for this campaign budget.
+     * Output only. Indicates whether there is a recommended budget for this campaign budget.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.BoolValue has_recommended_budget = 11;</code>
+     * <code>.google.protobuf.BoolValue has_recommended_budget = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.BoolValueOrBuilder getHasRecommendedBudgetOrBuilder() {
       if (hasRecommendedBudgetBuilder_ != null) {
@@ -3177,11 +3294,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Indicates whether there is a recommended budget for this campaign budget.
+     * Output only. Indicates whether there is a recommended budget for this campaign budget.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.BoolValue has_recommended_budget = 11;</code>
+     * <code>.google.protobuf.BoolValue has_recommended_budget = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
@@ -3202,28 +3319,30 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> recommendedBudgetAmountMicrosBuilder_;
     /**
      * <pre>
-     * The recommended budget amount. If no recommendation is available, this will
+     * Output only. The recommended budget amount. If no recommendation is available, this will
      * be set to the budget amount.
      * Amount is specified in micros, where one million is equivalent to one
      * currency unit.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value recommended_budget_amount_micros = 12;</code>
+     * <code>.google.protobuf.Int64Value recommended_budget_amount_micros = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the recommendedBudgetAmountMicros field is set.
      */
     public boolean hasRecommendedBudgetAmountMicros() {
       return recommendedBudgetAmountMicrosBuilder_ != null || recommendedBudgetAmountMicros_ != null;
     }
     /**
      * <pre>
-     * The recommended budget amount. If no recommendation is available, this will
+     * Output only. The recommended budget amount. If no recommendation is available, this will
      * be set to the budget amount.
      * Amount is specified in micros, where one million is equivalent to one
      * currency unit.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value recommended_budget_amount_micros = 12;</code>
+     * <code>.google.protobuf.Int64Value recommended_budget_amount_micros = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The recommendedBudgetAmountMicros.
      */
     public com.google.protobuf.Int64Value getRecommendedBudgetAmountMicros() {
       if (recommendedBudgetAmountMicrosBuilder_ == null) {
@@ -3234,14 +3353,14 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The recommended budget amount. If no recommendation is available, this will
+     * Output only. The recommended budget amount. If no recommendation is available, this will
      * be set to the budget amount.
      * Amount is specified in micros, where one million is equivalent to one
      * currency unit.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value recommended_budget_amount_micros = 12;</code>
+     * <code>.google.protobuf.Int64Value recommended_budget_amount_micros = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setRecommendedBudgetAmountMicros(com.google.protobuf.Int64Value value) {
       if (recommendedBudgetAmountMicrosBuilder_ == null) {
@@ -3258,14 +3377,14 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The recommended budget amount. If no recommendation is available, this will
+     * Output only. The recommended budget amount. If no recommendation is available, this will
      * be set to the budget amount.
      * Amount is specified in micros, where one million is equivalent to one
      * currency unit.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value recommended_budget_amount_micros = 12;</code>
+     * <code>.google.protobuf.Int64Value recommended_budget_amount_micros = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setRecommendedBudgetAmountMicros(
         com.google.protobuf.Int64Value.Builder builderForValue) {
@@ -3280,14 +3399,14 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The recommended budget amount. If no recommendation is available, this will
+     * Output only. The recommended budget amount. If no recommendation is available, this will
      * be set to the budget amount.
      * Amount is specified in micros, where one million is equivalent to one
      * currency unit.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value recommended_budget_amount_micros = 12;</code>
+     * <code>.google.protobuf.Int64Value recommended_budget_amount_micros = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder mergeRecommendedBudgetAmountMicros(com.google.protobuf.Int64Value value) {
       if (recommendedBudgetAmountMicrosBuilder_ == null) {
@@ -3306,14 +3425,14 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The recommended budget amount. If no recommendation is available, this will
+     * Output only. The recommended budget amount. If no recommendation is available, this will
      * be set to the budget amount.
      * Amount is specified in micros, where one million is equivalent to one
      * currency unit.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value recommended_budget_amount_micros = 12;</code>
+     * <code>.google.protobuf.Int64Value recommended_budget_amount_micros = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearRecommendedBudgetAmountMicros() {
       if (recommendedBudgetAmountMicrosBuilder_ == null) {
@@ -3328,14 +3447,14 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The recommended budget amount. If no recommendation is available, this will
+     * Output only. The recommended budget amount. If no recommendation is available, this will
      * be set to the budget amount.
      * Amount is specified in micros, where one million is equivalent to one
      * currency unit.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value recommended_budget_amount_micros = 12;</code>
+     * <code>.google.protobuf.Int64Value recommended_budget_amount_micros = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int64Value.Builder getRecommendedBudgetAmountMicrosBuilder() {
       
@@ -3344,14 +3463,14 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The recommended budget amount. If no recommendation is available, this will
+     * Output only. The recommended budget amount. If no recommendation is available, this will
      * be set to the budget amount.
      * Amount is specified in micros, where one million is equivalent to one
      * currency unit.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value recommended_budget_amount_micros = 12;</code>
+     * <code>.google.protobuf.Int64Value recommended_budget_amount_micros = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int64ValueOrBuilder getRecommendedBudgetAmountMicrosOrBuilder() {
       if (recommendedBudgetAmountMicrosBuilder_ != null) {
@@ -3363,14 +3482,14 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The recommended budget amount. If no recommendation is available, this will
+     * Output only. The recommended budget amount. If no recommendation is available, this will
      * be set to the budget amount.
      * Amount is specified in micros, where one million is equivalent to one
      * currency unit.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value recommended_budget_amount_micros = 12;</code>
+     * <code>.google.protobuf.Int64Value recommended_budget_amount_micros = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
@@ -3389,33 +3508,39 @@ private static final long serialVersionUID = 0L;
     private int period_ = 0;
     /**
      * <pre>
-     * Period over which to spend the budget. Defaults to DAILY if not specified.
+     * Immutable. Period over which to spend the budget. Defaults to DAILY if not specified.
      * </pre>
      *
-     * <code>.google.ads.googleads.v2.enums.BudgetPeriodEnum.BudgetPeriod period = 13;</code>
+     * <code>.google.ads.googleads.v2.enums.BudgetPeriodEnum.BudgetPeriod period = 13 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * @return The enum numeric value on the wire for period.
      */
-    public int getPeriodValue() {
+    @java.lang.Override public int getPeriodValue() {
       return period_;
     }
     /**
      * <pre>
-     * Period over which to spend the budget. Defaults to DAILY if not specified.
+     * Immutable. Period over which to spend the budget. Defaults to DAILY if not specified.
      * </pre>
      *
-     * <code>.google.ads.googleads.v2.enums.BudgetPeriodEnum.BudgetPeriod period = 13;</code>
+     * <code>.google.ads.googleads.v2.enums.BudgetPeriodEnum.BudgetPeriod period = 13 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * @param value The enum numeric value on the wire for period to set.
+     * @return This builder for chaining.
      */
     public Builder setPeriodValue(int value) {
+      
       period_ = value;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Period over which to spend the budget. Defaults to DAILY if not specified.
+     * Immutable. Period over which to spend the budget. Defaults to DAILY if not specified.
      * </pre>
      *
-     * <code>.google.ads.googleads.v2.enums.BudgetPeriodEnum.BudgetPeriod period = 13;</code>
+     * <code>.google.ads.googleads.v2.enums.BudgetPeriodEnum.BudgetPeriod period = 13 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * @return The period.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v2.enums.BudgetPeriodEnum.BudgetPeriod getPeriod() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v2.enums.BudgetPeriodEnum.BudgetPeriod result = com.google.ads.googleads.v2.enums.BudgetPeriodEnum.BudgetPeriod.valueOf(period_);
@@ -3423,10 +3548,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Period over which to spend the budget. Defaults to DAILY if not specified.
+     * Immutable. Period over which to spend the budget. Defaults to DAILY if not specified.
      * </pre>
      *
-     * <code>.google.ads.googleads.v2.enums.BudgetPeriodEnum.BudgetPeriod period = 13;</code>
+     * <code>.google.ads.googleads.v2.enums.BudgetPeriodEnum.BudgetPeriod period = 13 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * @param value The period to set.
+     * @return This builder for chaining.
      */
     public Builder setPeriod(com.google.ads.googleads.v2.enums.BudgetPeriodEnum.BudgetPeriod value) {
       if (value == null) {
@@ -3439,10 +3566,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Period over which to spend the budget. Defaults to DAILY if not specified.
+     * Immutable. Period over which to spend the budget. Defaults to DAILY if not specified.
      * </pre>
      *
-     * <code>.google.ads.googleads.v2.enums.BudgetPeriodEnum.BudgetPeriod period = 13;</code>
+     * <code>.google.ads.googleads.v2.enums.BudgetPeriodEnum.BudgetPeriod period = 13 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * @return This builder for chaining.
      */
     public Builder clearPeriod() {
       
@@ -3456,22 +3584,24 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> recommendedBudgetEstimatedChangeWeeklyClicksBuilder_;
     /**
      * <pre>
-     * The estimated change in weekly clicks if the recommended budget is applied.
+     * Output only. The estimated change in weekly clicks if the recommended budget is applied.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value recommended_budget_estimated_change_weekly_clicks = 14;</code>
+     * <code>.google.protobuf.Int64Value recommended_budget_estimated_change_weekly_clicks = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the recommendedBudgetEstimatedChangeWeeklyClicks field is set.
      */
     public boolean hasRecommendedBudgetEstimatedChangeWeeklyClicks() {
       return recommendedBudgetEstimatedChangeWeeklyClicksBuilder_ != null || recommendedBudgetEstimatedChangeWeeklyClicks_ != null;
     }
     /**
      * <pre>
-     * The estimated change in weekly clicks if the recommended budget is applied.
+     * Output only. The estimated change in weekly clicks if the recommended budget is applied.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value recommended_budget_estimated_change_weekly_clicks = 14;</code>
+     * <code>.google.protobuf.Int64Value recommended_budget_estimated_change_weekly_clicks = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The recommendedBudgetEstimatedChangeWeeklyClicks.
      */
     public com.google.protobuf.Int64Value getRecommendedBudgetEstimatedChangeWeeklyClicks() {
       if (recommendedBudgetEstimatedChangeWeeklyClicksBuilder_ == null) {
@@ -3482,11 +3612,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The estimated change in weekly clicks if the recommended budget is applied.
+     * Output only. The estimated change in weekly clicks if the recommended budget is applied.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value recommended_budget_estimated_change_weekly_clicks = 14;</code>
+     * <code>.google.protobuf.Int64Value recommended_budget_estimated_change_weekly_clicks = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setRecommendedBudgetEstimatedChangeWeeklyClicks(com.google.protobuf.Int64Value value) {
       if (recommendedBudgetEstimatedChangeWeeklyClicksBuilder_ == null) {
@@ -3503,11 +3633,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The estimated change in weekly clicks if the recommended budget is applied.
+     * Output only. The estimated change in weekly clicks if the recommended budget is applied.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value recommended_budget_estimated_change_weekly_clicks = 14;</code>
+     * <code>.google.protobuf.Int64Value recommended_budget_estimated_change_weekly_clicks = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setRecommendedBudgetEstimatedChangeWeeklyClicks(
         com.google.protobuf.Int64Value.Builder builderForValue) {
@@ -3522,11 +3652,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The estimated change in weekly clicks if the recommended budget is applied.
+     * Output only. The estimated change in weekly clicks if the recommended budget is applied.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value recommended_budget_estimated_change_weekly_clicks = 14;</code>
+     * <code>.google.protobuf.Int64Value recommended_budget_estimated_change_weekly_clicks = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder mergeRecommendedBudgetEstimatedChangeWeeklyClicks(com.google.protobuf.Int64Value value) {
       if (recommendedBudgetEstimatedChangeWeeklyClicksBuilder_ == null) {
@@ -3545,11 +3675,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The estimated change in weekly clicks if the recommended budget is applied.
+     * Output only. The estimated change in weekly clicks if the recommended budget is applied.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value recommended_budget_estimated_change_weekly_clicks = 14;</code>
+     * <code>.google.protobuf.Int64Value recommended_budget_estimated_change_weekly_clicks = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearRecommendedBudgetEstimatedChangeWeeklyClicks() {
       if (recommendedBudgetEstimatedChangeWeeklyClicksBuilder_ == null) {
@@ -3564,11 +3694,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The estimated change in weekly clicks if the recommended budget is applied.
+     * Output only. The estimated change in weekly clicks if the recommended budget is applied.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value recommended_budget_estimated_change_weekly_clicks = 14;</code>
+     * <code>.google.protobuf.Int64Value recommended_budget_estimated_change_weekly_clicks = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int64Value.Builder getRecommendedBudgetEstimatedChangeWeeklyClicksBuilder() {
       
@@ -3577,11 +3707,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The estimated change in weekly clicks if the recommended budget is applied.
+     * Output only. The estimated change in weekly clicks if the recommended budget is applied.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value recommended_budget_estimated_change_weekly_clicks = 14;</code>
+     * <code>.google.protobuf.Int64Value recommended_budget_estimated_change_weekly_clicks = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int64ValueOrBuilder getRecommendedBudgetEstimatedChangeWeeklyClicksOrBuilder() {
       if (recommendedBudgetEstimatedChangeWeeklyClicksBuilder_ != null) {
@@ -3593,11 +3723,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The estimated change in weekly clicks if the recommended budget is applied.
+     * Output only. The estimated change in weekly clicks if the recommended budget is applied.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value recommended_budget_estimated_change_weekly_clicks = 14;</code>
+     * <code>.google.protobuf.Int64Value recommended_budget_estimated_change_weekly_clicks = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
@@ -3618,24 +3748,26 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> recommendedBudgetEstimatedChangeWeeklyCostMicrosBuilder_;
     /**
      * <pre>
-     * The estimated change in weekly cost in micros if the recommended budget is
+     * Output only. The estimated change in weekly cost in micros if the recommended budget is
      * applied. One million is equivalent to one currency unit.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value recommended_budget_estimated_change_weekly_cost_micros = 15;</code>
+     * <code>.google.protobuf.Int64Value recommended_budget_estimated_change_weekly_cost_micros = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the recommendedBudgetEstimatedChangeWeeklyCostMicros field is set.
      */
     public boolean hasRecommendedBudgetEstimatedChangeWeeklyCostMicros() {
       return recommendedBudgetEstimatedChangeWeeklyCostMicrosBuilder_ != null || recommendedBudgetEstimatedChangeWeeklyCostMicros_ != null;
     }
     /**
      * <pre>
-     * The estimated change in weekly cost in micros if the recommended budget is
+     * Output only. The estimated change in weekly cost in micros if the recommended budget is
      * applied. One million is equivalent to one currency unit.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value recommended_budget_estimated_change_weekly_cost_micros = 15;</code>
+     * <code>.google.protobuf.Int64Value recommended_budget_estimated_change_weekly_cost_micros = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The recommendedBudgetEstimatedChangeWeeklyCostMicros.
      */
     public com.google.protobuf.Int64Value getRecommendedBudgetEstimatedChangeWeeklyCostMicros() {
       if (recommendedBudgetEstimatedChangeWeeklyCostMicrosBuilder_ == null) {
@@ -3646,12 +3778,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The estimated change in weekly cost in micros if the recommended budget is
+     * Output only. The estimated change in weekly cost in micros if the recommended budget is
      * applied. One million is equivalent to one currency unit.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value recommended_budget_estimated_change_weekly_cost_micros = 15;</code>
+     * <code>.google.protobuf.Int64Value recommended_budget_estimated_change_weekly_cost_micros = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setRecommendedBudgetEstimatedChangeWeeklyCostMicros(com.google.protobuf.Int64Value value) {
       if (recommendedBudgetEstimatedChangeWeeklyCostMicrosBuilder_ == null) {
@@ -3668,12 +3800,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The estimated change in weekly cost in micros if the recommended budget is
+     * Output only. The estimated change in weekly cost in micros if the recommended budget is
      * applied. One million is equivalent to one currency unit.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value recommended_budget_estimated_change_weekly_cost_micros = 15;</code>
+     * <code>.google.protobuf.Int64Value recommended_budget_estimated_change_weekly_cost_micros = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setRecommendedBudgetEstimatedChangeWeeklyCostMicros(
         com.google.protobuf.Int64Value.Builder builderForValue) {
@@ -3688,12 +3820,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The estimated change in weekly cost in micros if the recommended budget is
+     * Output only. The estimated change in weekly cost in micros if the recommended budget is
      * applied. One million is equivalent to one currency unit.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value recommended_budget_estimated_change_weekly_cost_micros = 15;</code>
+     * <code>.google.protobuf.Int64Value recommended_budget_estimated_change_weekly_cost_micros = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder mergeRecommendedBudgetEstimatedChangeWeeklyCostMicros(com.google.protobuf.Int64Value value) {
       if (recommendedBudgetEstimatedChangeWeeklyCostMicrosBuilder_ == null) {
@@ -3712,12 +3844,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The estimated change in weekly cost in micros if the recommended budget is
+     * Output only. The estimated change in weekly cost in micros if the recommended budget is
      * applied. One million is equivalent to one currency unit.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value recommended_budget_estimated_change_weekly_cost_micros = 15;</code>
+     * <code>.google.protobuf.Int64Value recommended_budget_estimated_change_weekly_cost_micros = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearRecommendedBudgetEstimatedChangeWeeklyCostMicros() {
       if (recommendedBudgetEstimatedChangeWeeklyCostMicrosBuilder_ == null) {
@@ -3732,12 +3864,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The estimated change in weekly cost in micros if the recommended budget is
+     * Output only. The estimated change in weekly cost in micros if the recommended budget is
      * applied. One million is equivalent to one currency unit.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value recommended_budget_estimated_change_weekly_cost_micros = 15;</code>
+     * <code>.google.protobuf.Int64Value recommended_budget_estimated_change_weekly_cost_micros = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int64Value.Builder getRecommendedBudgetEstimatedChangeWeeklyCostMicrosBuilder() {
       
@@ -3746,12 +3878,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The estimated change in weekly cost in micros if the recommended budget is
+     * Output only. The estimated change in weekly cost in micros if the recommended budget is
      * applied. One million is equivalent to one currency unit.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value recommended_budget_estimated_change_weekly_cost_micros = 15;</code>
+     * <code>.google.protobuf.Int64Value recommended_budget_estimated_change_weekly_cost_micros = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int64ValueOrBuilder getRecommendedBudgetEstimatedChangeWeeklyCostMicrosOrBuilder() {
       if (recommendedBudgetEstimatedChangeWeeklyCostMicrosBuilder_ != null) {
@@ -3763,12 +3895,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The estimated change in weekly cost in micros if the recommended budget is
+     * Output only. The estimated change in weekly cost in micros if the recommended budget is
      * applied. One million is equivalent to one currency unit.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value recommended_budget_estimated_change_weekly_cost_micros = 15;</code>
+     * <code>.google.protobuf.Int64Value recommended_budget_estimated_change_weekly_cost_micros = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
@@ -3789,24 +3921,26 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> recommendedBudgetEstimatedChangeWeeklyInteractionsBuilder_;
     /**
      * <pre>
-     * The estimated change in weekly interactions if the recommended budget is
+     * Output only. The estimated change in weekly interactions if the recommended budget is
      * applied.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value recommended_budget_estimated_change_weekly_interactions = 16;</code>
+     * <code>.google.protobuf.Int64Value recommended_budget_estimated_change_weekly_interactions = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the recommendedBudgetEstimatedChangeWeeklyInteractions field is set.
      */
     public boolean hasRecommendedBudgetEstimatedChangeWeeklyInteractions() {
       return recommendedBudgetEstimatedChangeWeeklyInteractionsBuilder_ != null || recommendedBudgetEstimatedChangeWeeklyInteractions_ != null;
     }
     /**
      * <pre>
-     * The estimated change in weekly interactions if the recommended budget is
+     * Output only. The estimated change in weekly interactions if the recommended budget is
      * applied.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value recommended_budget_estimated_change_weekly_interactions = 16;</code>
+     * <code>.google.protobuf.Int64Value recommended_budget_estimated_change_weekly_interactions = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The recommendedBudgetEstimatedChangeWeeklyInteractions.
      */
     public com.google.protobuf.Int64Value getRecommendedBudgetEstimatedChangeWeeklyInteractions() {
       if (recommendedBudgetEstimatedChangeWeeklyInteractionsBuilder_ == null) {
@@ -3817,12 +3951,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The estimated change in weekly interactions if the recommended budget is
+     * Output only. The estimated change in weekly interactions if the recommended budget is
      * applied.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value recommended_budget_estimated_change_weekly_interactions = 16;</code>
+     * <code>.google.protobuf.Int64Value recommended_budget_estimated_change_weekly_interactions = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setRecommendedBudgetEstimatedChangeWeeklyInteractions(com.google.protobuf.Int64Value value) {
       if (recommendedBudgetEstimatedChangeWeeklyInteractionsBuilder_ == null) {
@@ -3839,12 +3973,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The estimated change in weekly interactions if the recommended budget is
+     * Output only. The estimated change in weekly interactions if the recommended budget is
      * applied.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value recommended_budget_estimated_change_weekly_interactions = 16;</code>
+     * <code>.google.protobuf.Int64Value recommended_budget_estimated_change_weekly_interactions = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setRecommendedBudgetEstimatedChangeWeeklyInteractions(
         com.google.protobuf.Int64Value.Builder builderForValue) {
@@ -3859,12 +3993,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The estimated change in weekly interactions if the recommended budget is
+     * Output only. The estimated change in weekly interactions if the recommended budget is
      * applied.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value recommended_budget_estimated_change_weekly_interactions = 16;</code>
+     * <code>.google.protobuf.Int64Value recommended_budget_estimated_change_weekly_interactions = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder mergeRecommendedBudgetEstimatedChangeWeeklyInteractions(com.google.protobuf.Int64Value value) {
       if (recommendedBudgetEstimatedChangeWeeklyInteractionsBuilder_ == null) {
@@ -3883,12 +4017,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The estimated change in weekly interactions if the recommended budget is
+     * Output only. The estimated change in weekly interactions if the recommended budget is
      * applied.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value recommended_budget_estimated_change_weekly_interactions = 16;</code>
+     * <code>.google.protobuf.Int64Value recommended_budget_estimated_change_weekly_interactions = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearRecommendedBudgetEstimatedChangeWeeklyInteractions() {
       if (recommendedBudgetEstimatedChangeWeeklyInteractionsBuilder_ == null) {
@@ -3903,12 +4037,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The estimated change in weekly interactions if the recommended budget is
+     * Output only. The estimated change in weekly interactions if the recommended budget is
      * applied.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value recommended_budget_estimated_change_weekly_interactions = 16;</code>
+     * <code>.google.protobuf.Int64Value recommended_budget_estimated_change_weekly_interactions = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int64Value.Builder getRecommendedBudgetEstimatedChangeWeeklyInteractionsBuilder() {
       
@@ -3917,12 +4051,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The estimated change in weekly interactions if the recommended budget is
+     * Output only. The estimated change in weekly interactions if the recommended budget is
      * applied.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value recommended_budget_estimated_change_weekly_interactions = 16;</code>
+     * <code>.google.protobuf.Int64Value recommended_budget_estimated_change_weekly_interactions = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int64ValueOrBuilder getRecommendedBudgetEstimatedChangeWeeklyInteractionsOrBuilder() {
       if (recommendedBudgetEstimatedChangeWeeklyInteractionsBuilder_ != null) {
@@ -3934,12 +4068,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The estimated change in weekly interactions if the recommended budget is
+     * Output only. The estimated change in weekly interactions if the recommended budget is
      * applied.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value recommended_budget_estimated_change_weekly_interactions = 16;</code>
+     * <code>.google.protobuf.Int64Value recommended_budget_estimated_change_weekly_interactions = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
@@ -3960,22 +4094,24 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> recommendedBudgetEstimatedChangeWeeklyViewsBuilder_;
     /**
      * <pre>
-     * The estimated change in weekly views if the recommended budget is applied.
+     * Output only. The estimated change in weekly views if the recommended budget is applied.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value recommended_budget_estimated_change_weekly_views = 17;</code>
+     * <code>.google.protobuf.Int64Value recommended_budget_estimated_change_weekly_views = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the recommendedBudgetEstimatedChangeWeeklyViews field is set.
      */
     public boolean hasRecommendedBudgetEstimatedChangeWeeklyViews() {
       return recommendedBudgetEstimatedChangeWeeklyViewsBuilder_ != null || recommendedBudgetEstimatedChangeWeeklyViews_ != null;
     }
     /**
      * <pre>
-     * The estimated change in weekly views if the recommended budget is applied.
+     * Output only. The estimated change in weekly views if the recommended budget is applied.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value recommended_budget_estimated_change_weekly_views = 17;</code>
+     * <code>.google.protobuf.Int64Value recommended_budget_estimated_change_weekly_views = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The recommendedBudgetEstimatedChangeWeeklyViews.
      */
     public com.google.protobuf.Int64Value getRecommendedBudgetEstimatedChangeWeeklyViews() {
       if (recommendedBudgetEstimatedChangeWeeklyViewsBuilder_ == null) {
@@ -3986,11 +4122,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The estimated change in weekly views if the recommended budget is applied.
+     * Output only. The estimated change in weekly views if the recommended budget is applied.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value recommended_budget_estimated_change_weekly_views = 17;</code>
+     * <code>.google.protobuf.Int64Value recommended_budget_estimated_change_weekly_views = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setRecommendedBudgetEstimatedChangeWeeklyViews(com.google.protobuf.Int64Value value) {
       if (recommendedBudgetEstimatedChangeWeeklyViewsBuilder_ == null) {
@@ -4007,11 +4143,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The estimated change in weekly views if the recommended budget is applied.
+     * Output only. The estimated change in weekly views if the recommended budget is applied.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value recommended_budget_estimated_change_weekly_views = 17;</code>
+     * <code>.google.protobuf.Int64Value recommended_budget_estimated_change_weekly_views = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setRecommendedBudgetEstimatedChangeWeeklyViews(
         com.google.protobuf.Int64Value.Builder builderForValue) {
@@ -4026,11 +4162,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The estimated change in weekly views if the recommended budget is applied.
+     * Output only. The estimated change in weekly views if the recommended budget is applied.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value recommended_budget_estimated_change_weekly_views = 17;</code>
+     * <code>.google.protobuf.Int64Value recommended_budget_estimated_change_weekly_views = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder mergeRecommendedBudgetEstimatedChangeWeeklyViews(com.google.protobuf.Int64Value value) {
       if (recommendedBudgetEstimatedChangeWeeklyViewsBuilder_ == null) {
@@ -4049,11 +4185,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The estimated change in weekly views if the recommended budget is applied.
+     * Output only. The estimated change in weekly views if the recommended budget is applied.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value recommended_budget_estimated_change_weekly_views = 17;</code>
+     * <code>.google.protobuf.Int64Value recommended_budget_estimated_change_weekly_views = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearRecommendedBudgetEstimatedChangeWeeklyViews() {
       if (recommendedBudgetEstimatedChangeWeeklyViewsBuilder_ == null) {
@@ -4068,11 +4204,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The estimated change in weekly views if the recommended budget is applied.
+     * Output only. The estimated change in weekly views if the recommended budget is applied.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value recommended_budget_estimated_change_weekly_views = 17;</code>
+     * <code>.google.protobuf.Int64Value recommended_budget_estimated_change_weekly_views = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int64Value.Builder getRecommendedBudgetEstimatedChangeWeeklyViewsBuilder() {
       
@@ -4081,11 +4217,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The estimated change in weekly views if the recommended budget is applied.
+     * Output only. The estimated change in weekly views if the recommended budget is applied.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value recommended_budget_estimated_change_weekly_views = 17;</code>
+     * <code>.google.protobuf.Int64Value recommended_budget_estimated_change_weekly_views = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int64ValueOrBuilder getRecommendedBudgetEstimatedChangeWeeklyViewsOrBuilder() {
       if (recommendedBudgetEstimatedChangeWeeklyViewsBuilder_ != null) {
@@ -4097,11 +4233,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The estimated change in weekly views if the recommended budget is applied.
+     * Output only. The estimated change in weekly views if the recommended budget is applied.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value recommended_budget_estimated_change_weekly_views = 17;</code>
+     * <code>.google.protobuf.Int64Value recommended_budget_estimated_change_weekly_views = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
@@ -4120,33 +4256,39 @@ private static final long serialVersionUID = 0L;
     private int type_ = 0;
     /**
      * <pre>
-     * The type of the campaign budget.
+     * Immutable. The type of the campaign budget.
      * </pre>
      *
-     * <code>.google.ads.googleads.v2.enums.BudgetTypeEnum.BudgetType type = 18;</code>
+     * <code>.google.ads.googleads.v2.enums.BudgetTypeEnum.BudgetType type = 18 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * @return The enum numeric value on the wire for type.
      */
-    public int getTypeValue() {
+    @java.lang.Override public int getTypeValue() {
       return type_;
     }
     /**
      * <pre>
-     * The type of the campaign budget.
+     * Immutable. The type of the campaign budget.
      * </pre>
      *
-     * <code>.google.ads.googleads.v2.enums.BudgetTypeEnum.BudgetType type = 18;</code>
+     * <code>.google.ads.googleads.v2.enums.BudgetTypeEnum.BudgetType type = 18 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * @param value The enum numeric value on the wire for type to set.
+     * @return This builder for chaining.
      */
     public Builder setTypeValue(int value) {
+      
       type_ = value;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * The type of the campaign budget.
+     * Immutable. The type of the campaign budget.
      * </pre>
      *
-     * <code>.google.ads.googleads.v2.enums.BudgetTypeEnum.BudgetType type = 18;</code>
+     * <code>.google.ads.googleads.v2.enums.BudgetTypeEnum.BudgetType type = 18 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * @return The type.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v2.enums.BudgetTypeEnum.BudgetType getType() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v2.enums.BudgetTypeEnum.BudgetType result = com.google.ads.googleads.v2.enums.BudgetTypeEnum.BudgetType.valueOf(type_);
@@ -4154,10 +4296,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The type of the campaign budget.
+     * Immutable. The type of the campaign budget.
      * </pre>
      *
-     * <code>.google.ads.googleads.v2.enums.BudgetTypeEnum.BudgetType type = 18;</code>
+     * <code>.google.ads.googleads.v2.enums.BudgetTypeEnum.BudgetType type = 18 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * @param value The type to set.
+     * @return This builder for chaining.
      */
     public Builder setType(com.google.ads.googleads.v2.enums.BudgetTypeEnum.BudgetType value) {
       if (value == null) {
@@ -4170,10 +4314,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The type of the campaign budget.
+     * Immutable. The type of the campaign budget.
      * </pre>
      *
-     * <code>.google.ads.googleads.v2.enums.BudgetTypeEnum.BudgetType type = 18;</code>
+     * <code>.google.ads.googleads.v2.enums.BudgetTypeEnum.BudgetType type = 18 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * @return This builder for chaining.
      */
     public Builder clearType() {
       

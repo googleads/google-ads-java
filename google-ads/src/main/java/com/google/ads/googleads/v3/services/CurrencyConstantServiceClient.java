@@ -1,5 +1,5 @@
 /*
- * Copyright 2019 Google LLC
+ * Copyright 2020 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -21,7 +21,6 @@ import com.google.ads.googleads.v3.services.stub.CurrencyConstantServiceStubSett
 import com.google.api.core.BetaApi;
 import com.google.api.gax.core.BackgroundResource;
 import com.google.api.gax.rpc.UnaryCallable;
-import com.google.api.pathtemplate.PathTemplate;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 import javax.annotation.Generated;
@@ -36,8 +35,8 @@ import javax.annotation.Generated;
  * <pre>
  * <code>
  * try (CurrencyConstantServiceClient currencyConstantServiceClient = CurrencyConstantServiceClient.create()) {
- *   String formattedResourceName = CurrencyConstantServiceClient.formatCurrencyConstantName("[CURRENCY_CONSTANT]");
- *   CurrencyConstant response = currencyConstantServiceClient.getCurrencyConstant(formattedResourceName);
+ *   CurrencyConstantName resourceName = CurrencyConstantName.of("[CURRENCY_CONSTANT]");
+ *   CurrencyConstant response = currencyConstantServiceClient.getCurrencyConstant(resourceName);
  * }
  * </code>
  * </pre>
@@ -99,31 +98,6 @@ public class CurrencyConstantServiceClient implements BackgroundResource {
   private final CurrencyConstantServiceSettings settings;
   private final CurrencyConstantServiceStub stub;
 
-  private static final PathTemplate CURRENCY_CONSTANT_PATH_TEMPLATE =
-      PathTemplate.createWithoutUrlEncoding("currencyConstants/{currency_constant}");
-
-  /**
-   * Formats a string containing the fully-qualified path to represent a currency_constant resource.
-   *
-   * @deprecated Use the {@link CurrencyConstantName} class instead.
-   */
-  @Deprecated
-  public static final String formatCurrencyConstantName(String currencyConstant) {
-    return CURRENCY_CONSTANT_PATH_TEMPLATE.instantiate("currency_constant", currencyConstant);
-  }
-
-  /**
-   * Parses the currency_constant from the given fully-qualified path which represents a
-   * currency_constant resource.
-   *
-   * @deprecated Use the {@link CurrencyConstantName} class instead.
-   */
-  @Deprecated
-  public static final String parseCurrencyConstantFromCurrencyConstantName(
-      String currencyConstantName) {
-    return CURRENCY_CONSTANT_PATH_TEMPLATE.parse(currencyConstantName).get("currency_constant");
-  }
-
   /** Constructs an instance of CurrencyConstantServiceClient with default settings. */
   public static final CurrencyConstantServiceClient create() throws IOException {
     return create(CurrencyConstantServiceSettings.newBuilder().build());
@@ -181,8 +155,32 @@ public class CurrencyConstantServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (CurrencyConstantServiceClient currencyConstantServiceClient = CurrencyConstantServiceClient.create()) {
-   *   String formattedResourceName = CurrencyConstantServiceClient.formatCurrencyConstantName("[CURRENCY_CONSTANT]");
-   *   CurrencyConstant response = currencyConstantServiceClient.getCurrencyConstant(formattedResourceName);
+   *   CurrencyConstantName resourceName = CurrencyConstantName.of("[CURRENCY_CONSTANT]");
+   *   CurrencyConstant response = currencyConstantServiceClient.getCurrencyConstant(resourceName);
+   * }
+   * </code></pre>
+   *
+   * @param resourceName Required. Resource name of the currency constant to fetch.
+   * @throws com.google.api.gax.rpc.ApiException if the remote call fails
+   */
+  public final CurrencyConstant getCurrencyConstant(CurrencyConstantName resourceName) {
+    GetCurrencyConstantRequest request =
+        GetCurrencyConstantRequest.newBuilder()
+            .setResourceName(resourceName == null ? null : resourceName.toString())
+            .build();
+    return getCurrencyConstant(request);
+  }
+
+  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  /**
+   * Returns the requested currency constant.
+   *
+   * <p>Sample code:
+   *
+   * <pre><code>
+   * try (CurrencyConstantServiceClient currencyConstantServiceClient = CurrencyConstantServiceClient.create()) {
+   *   CurrencyConstantName resourceName = CurrencyConstantName.of("[CURRENCY_CONSTANT]");
+   *   CurrencyConstant response = currencyConstantServiceClient.getCurrencyConstant(resourceName.toString());
    * }
    * </code></pre>
    *
@@ -190,7 +188,6 @@ public class CurrencyConstantServiceClient implements BackgroundResource {
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final CurrencyConstant getCurrencyConstant(String resourceName) {
-    CURRENCY_CONSTANT_PATH_TEMPLATE.validate(resourceName, "getCurrencyConstant");
     GetCurrencyConstantRequest request =
         GetCurrencyConstantRequest.newBuilder().setResourceName(resourceName).build();
     return getCurrencyConstant(request);
@@ -204,9 +201,9 @@ public class CurrencyConstantServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (CurrencyConstantServiceClient currencyConstantServiceClient = CurrencyConstantServiceClient.create()) {
-   *   String formattedResourceName = CurrencyConstantServiceClient.formatCurrencyConstantName("[CURRENCY_CONSTANT]");
+   *   CurrencyConstantName resourceName = CurrencyConstantName.of("[CURRENCY_CONSTANT]");
    *   GetCurrencyConstantRequest request = GetCurrencyConstantRequest.newBuilder()
-   *     .setResourceName(formattedResourceName)
+   *     .setResourceName(resourceName.toString())
    *     .build();
    *   CurrencyConstant response = currencyConstantServiceClient.getCurrencyConstant(request);
    * }
@@ -227,9 +224,9 @@ public class CurrencyConstantServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (CurrencyConstantServiceClient currencyConstantServiceClient = CurrencyConstantServiceClient.create()) {
-   *   String formattedResourceName = CurrencyConstantServiceClient.formatCurrencyConstantName("[CURRENCY_CONSTANT]");
+   *   CurrencyConstantName resourceName = CurrencyConstantName.of("[CURRENCY_CONSTANT]");
    *   GetCurrencyConstantRequest request = GetCurrencyConstantRequest.newBuilder()
-   *     .setResourceName(formattedResourceName)
+   *     .setResourceName(resourceName.toString())
    *     .build();
    *   ApiFuture&lt;CurrencyConstant&gt; future = currencyConstantServiceClient.getCurrencyConstantCallable().futureCall(request);
    *   // Do something

@@ -10,7 +10,7 @@ package com.google.ads.googleads.v1.common;
  *
  * Protobuf type {@code google.ads.googleads.v1.common.VideoAdInfo}
  */
-public  final class VideoAdInfo extends
+public final class VideoAdInfo extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v1.common.VideoAdInfo)
     VideoAdInfoOrBuilder {
@@ -20,6 +20,13 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private VideoAdInfo() {
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new VideoAdInfo();
   }
 
   @java.lang.Override
@@ -35,7 +42,6 @@ private static final long serialVersionUID = 0L;
     if (extensionRegistry == null) {
       throw new java.lang.NullPointerException();
     }
-    int mutable_bitField0_ = 0;
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
         com.google.protobuf.UnknownFieldSet.newBuilder();
     try {
@@ -150,7 +156,8 @@ private static final long serialVersionUID = 0L;
   private int formatCase_ = 0;
   private java.lang.Object format_;
   public enum FormatCase
-      implements com.google.protobuf.Internal.EnumLite {
+      implements com.google.protobuf.Internal.EnumLite,
+          com.google.protobuf.AbstractMessage.InternalOneOfEnum {
     IN_STREAM(2),
     BUMPER(3),
     OUT_STREAM(4),
@@ -161,6 +168,8 @@ private static final long serialVersionUID = 0L;
       this.value = value;
     }
     /**
+     * @param value The number of the enum to look for.
+     * @return The enum associated with the given number.
      * @deprecated Use {@link #forNumber(int)} instead.
      */
     @java.lang.Deprecated
@@ -197,7 +206,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue media_file = 1;</code>
+   * @return Whether the mediaFile field is set.
    */
+  @java.lang.Override
   public boolean hasMediaFile() {
     return mediaFile_ != null;
   }
@@ -207,7 +218,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue media_file = 1;</code>
+   * @return The mediaFile.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getMediaFile() {
     return mediaFile_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : mediaFile_;
   }
@@ -218,6 +231,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue media_file = 1;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getMediaFileOrBuilder() {
     return getMediaFile();
   }
@@ -229,7 +243,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.common.VideoTrueViewInStreamAdInfo in_stream = 2;</code>
+   * @return Whether the inStream field is set.
    */
+  @java.lang.Override
   public boolean hasInStream() {
     return formatCase_ == 2;
   }
@@ -239,7 +255,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.common.VideoTrueViewInStreamAdInfo in_stream = 2;</code>
+   * @return The inStream.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.common.VideoTrueViewInStreamAdInfo getInStream() {
     if (formatCase_ == 2) {
        return (com.google.ads.googleads.v1.common.VideoTrueViewInStreamAdInfo) format_;
@@ -253,6 +271,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v1.common.VideoTrueViewInStreamAdInfo in_stream = 2;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.common.VideoTrueViewInStreamAdInfoOrBuilder getInStreamOrBuilder() {
     if (formatCase_ == 2) {
        return (com.google.ads.googleads.v1.common.VideoTrueViewInStreamAdInfo) format_;
@@ -267,7 +286,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.common.VideoBumperInStreamAdInfo bumper = 3;</code>
+   * @return Whether the bumper field is set.
    */
+  @java.lang.Override
   public boolean hasBumper() {
     return formatCase_ == 3;
   }
@@ -277,7 +298,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.common.VideoBumperInStreamAdInfo bumper = 3;</code>
+   * @return The bumper.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.common.VideoBumperInStreamAdInfo getBumper() {
     if (formatCase_ == 3) {
        return (com.google.ads.googleads.v1.common.VideoBumperInStreamAdInfo) format_;
@@ -291,6 +314,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v1.common.VideoBumperInStreamAdInfo bumper = 3;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.common.VideoBumperInStreamAdInfoOrBuilder getBumperOrBuilder() {
     if (formatCase_ == 3) {
        return (com.google.ads.googleads.v1.common.VideoBumperInStreamAdInfo) format_;
@@ -305,7 +329,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.common.VideoOutstreamAdInfo out_stream = 4;</code>
+   * @return Whether the outStream field is set.
    */
+  @java.lang.Override
   public boolean hasOutStream() {
     return formatCase_ == 4;
   }
@@ -315,7 +341,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.common.VideoOutstreamAdInfo out_stream = 4;</code>
+   * @return The outStream.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.common.VideoOutstreamAdInfo getOutStream() {
     if (formatCase_ == 4) {
        return (com.google.ads.googleads.v1.common.VideoOutstreamAdInfo) format_;
@@ -329,6 +357,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v1.common.VideoOutstreamAdInfo out_stream = 4;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.common.VideoOutstreamAdInfoOrBuilder getOutStreamOrBuilder() {
     if (formatCase_ == 4) {
        return (com.google.ads.googleads.v1.common.VideoOutstreamAdInfo) format_;
@@ -343,7 +372,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.common.VideoNonSkippableInStreamAdInfo non_skippable = 5;</code>
+   * @return Whether the nonSkippable field is set.
    */
+  @java.lang.Override
   public boolean hasNonSkippable() {
     return formatCase_ == 5;
   }
@@ -353,7 +384,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.common.VideoNonSkippableInStreamAdInfo non_skippable = 5;</code>
+   * @return The nonSkippable.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.common.VideoNonSkippableInStreamAdInfo getNonSkippable() {
     if (formatCase_ == 5) {
        return (com.google.ads.googleads.v1.common.VideoNonSkippableInStreamAdInfo) format_;
@@ -367,6 +400,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v1.common.VideoNonSkippableInStreamAdInfo non_skippable = 5;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.common.VideoNonSkippableInStreamAdInfoOrBuilder getNonSkippableOrBuilder() {
     if (formatCase_ == 5) {
        return (com.google.ads.googleads.v1.common.VideoNonSkippableInStreamAdInfo) format_;
@@ -838,6 +872,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue media_file = 1;</code>
+     * @return Whether the mediaFile field is set.
      */
     public boolean hasMediaFile() {
       return mediaFileBuilder_ != null || mediaFile_ != null;
@@ -848,6 +883,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue media_file = 1;</code>
+     * @return The mediaFile.
      */
     public com.google.protobuf.StringValue getMediaFile() {
       if (mediaFileBuilder_ == null) {
@@ -990,7 +1026,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.common.VideoTrueViewInStreamAdInfo in_stream = 2;</code>
+     * @return Whether the inStream field is set.
      */
+    @java.lang.Override
     public boolean hasInStream() {
       return formatCase_ == 2;
     }
@@ -1000,7 +1038,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.common.VideoTrueViewInStreamAdInfo in_stream = 2;</code>
+     * @return The inStream.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v1.common.VideoTrueViewInStreamAdInfo getInStream() {
       if (inStreamBuilder_ == null) {
         if (formatCase_ == 2) {
@@ -1118,6 +1158,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v1.common.VideoTrueViewInStreamAdInfo in_stream = 2;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v1.common.VideoTrueViewInStreamAdInfoOrBuilder getInStreamOrBuilder() {
       if ((formatCase_ == 2) && (inStreamBuilder_ != null)) {
         return inStreamBuilder_.getMessageOrBuilder();
@@ -1162,7 +1203,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.common.VideoBumperInStreamAdInfo bumper = 3;</code>
+     * @return Whether the bumper field is set.
      */
+    @java.lang.Override
     public boolean hasBumper() {
       return formatCase_ == 3;
     }
@@ -1172,7 +1215,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.common.VideoBumperInStreamAdInfo bumper = 3;</code>
+     * @return The bumper.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v1.common.VideoBumperInStreamAdInfo getBumper() {
       if (bumperBuilder_ == null) {
         if (formatCase_ == 3) {
@@ -1290,6 +1335,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v1.common.VideoBumperInStreamAdInfo bumper = 3;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v1.common.VideoBumperInStreamAdInfoOrBuilder getBumperOrBuilder() {
       if ((formatCase_ == 3) && (bumperBuilder_ != null)) {
         return bumperBuilder_.getMessageOrBuilder();
@@ -1334,7 +1380,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.common.VideoOutstreamAdInfo out_stream = 4;</code>
+     * @return Whether the outStream field is set.
      */
+    @java.lang.Override
     public boolean hasOutStream() {
       return formatCase_ == 4;
     }
@@ -1344,7 +1392,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.common.VideoOutstreamAdInfo out_stream = 4;</code>
+     * @return The outStream.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v1.common.VideoOutstreamAdInfo getOutStream() {
       if (outStreamBuilder_ == null) {
         if (formatCase_ == 4) {
@@ -1462,6 +1512,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v1.common.VideoOutstreamAdInfo out_stream = 4;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v1.common.VideoOutstreamAdInfoOrBuilder getOutStreamOrBuilder() {
       if ((formatCase_ == 4) && (outStreamBuilder_ != null)) {
         return outStreamBuilder_.getMessageOrBuilder();
@@ -1506,7 +1557,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.common.VideoNonSkippableInStreamAdInfo non_skippable = 5;</code>
+     * @return Whether the nonSkippable field is set.
      */
+    @java.lang.Override
     public boolean hasNonSkippable() {
       return formatCase_ == 5;
     }
@@ -1516,7 +1569,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.common.VideoNonSkippableInStreamAdInfo non_skippable = 5;</code>
+     * @return The nonSkippable.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v1.common.VideoNonSkippableInStreamAdInfo getNonSkippable() {
       if (nonSkippableBuilder_ == null) {
         if (formatCase_ == 5) {
@@ -1634,6 +1689,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v1.common.VideoNonSkippableInStreamAdInfo non_skippable = 5;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v1.common.VideoNonSkippableInStreamAdInfoOrBuilder getNonSkippableOrBuilder() {
       if ((formatCase_ == 5) && (nonSkippableBuilder_ != null)) {
         return nonSkippableBuilder_.getMessageOrBuilder();

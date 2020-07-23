@@ -13,7 +13,7 @@ package com.google.ads.googleads.v3.common;
  *
  * Protobuf type {@code google.ads.googleads.v3.common.KeywordPlanHistoricalMetrics}
  */
-public  final class KeywordPlanHistoricalMetrics extends
+public final class KeywordPlanHistoricalMetrics extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v3.common.KeywordPlanHistoricalMetrics)
     KeywordPlanHistoricalMetricsOrBuilder {
@@ -24,6 +24,13 @@ private static final long serialVersionUID = 0L;
   }
   private KeywordPlanHistoricalMetrics() {
     competition_ = 0;
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new KeywordPlanHistoricalMetrics();
   }
 
   @java.lang.Override
@@ -39,7 +46,6 @@ private static final long serialVersionUID = 0L;
     if (extensionRegistry == null) {
       throw new java.lang.NullPointerException();
     }
-    int mutable_bitField0_ = 0;
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
         com.google.protobuf.UnknownFieldSet.newBuilder();
     try {
@@ -110,7 +116,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Int64Value avg_monthly_searches = 1;</code>
+   * @return Whether the avgMonthlySearches field is set.
    */
+  @java.lang.Override
   public boolean hasAvgMonthlySearches() {
     return avgMonthlySearches_ != null;
   }
@@ -121,7 +129,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Int64Value avg_monthly_searches = 1;</code>
+   * @return The avgMonthlySearches.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getAvgMonthlySearches() {
     return avgMonthlySearches_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : avgMonthlySearches_;
   }
@@ -133,6 +143,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int64Value avg_monthly_searches = 1;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getAvgMonthlySearchesOrBuilder() {
     return getAvgMonthlySearches();
   }
@@ -145,8 +156,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.KeywordPlanCompetitionLevelEnum.KeywordPlanCompetitionLevel competition = 2;</code>
+   * @return The enum numeric value on the wire for competition.
    */
-  public int getCompetitionValue() {
+  @java.lang.Override public int getCompetitionValue() {
     return competition_;
   }
   /**
@@ -155,8 +167,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.KeywordPlanCompetitionLevelEnum.KeywordPlanCompetitionLevel competition = 2;</code>
+   * @return The competition.
    */
-  public com.google.ads.googleads.v3.enums.KeywordPlanCompetitionLevelEnum.KeywordPlanCompetitionLevel getCompetition() {
+  @java.lang.Override public com.google.ads.googleads.v3.enums.KeywordPlanCompetitionLevelEnum.KeywordPlanCompetitionLevel getCompetition() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v3.enums.KeywordPlanCompetitionLevelEnum.KeywordPlanCompetitionLevel result = com.google.ads.googleads.v3.enums.KeywordPlanCompetitionLevelEnum.KeywordPlanCompetitionLevel.valueOf(competition_);
     return result == null ? com.google.ads.googleads.v3.enums.KeywordPlanCompetitionLevelEnum.KeywordPlanCompetitionLevel.UNRECOGNIZED : result;
@@ -510,6 +523,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value avg_monthly_searches = 1;</code>
+     * @return Whether the avgMonthlySearches field is set.
      */
     public boolean hasAvgMonthlySearches() {
       return avgMonthlySearchesBuilder_ != null || avgMonthlySearches_ != null;
@@ -521,6 +535,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value avg_monthly_searches = 1;</code>
+     * @return The avgMonthlySearches.
      */
     public com.google.protobuf.Int64Value getAvgMonthlySearches() {
       if (avgMonthlySearchesBuilder_ == null) {
@@ -669,8 +684,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.KeywordPlanCompetitionLevelEnum.KeywordPlanCompetitionLevel competition = 2;</code>
+     * @return The enum numeric value on the wire for competition.
      */
-    public int getCompetitionValue() {
+    @java.lang.Override public int getCompetitionValue() {
       return competition_;
     }
     /**
@@ -679,8 +695,11 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.KeywordPlanCompetitionLevelEnum.KeywordPlanCompetitionLevel competition = 2;</code>
+     * @param value The enum numeric value on the wire for competition to set.
+     * @return This builder for chaining.
      */
     public Builder setCompetitionValue(int value) {
+      
       competition_ = value;
       onChanged();
       return this;
@@ -691,7 +710,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.KeywordPlanCompetitionLevelEnum.KeywordPlanCompetitionLevel competition = 2;</code>
+     * @return The competition.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.enums.KeywordPlanCompetitionLevelEnum.KeywordPlanCompetitionLevel getCompetition() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v3.enums.KeywordPlanCompetitionLevelEnum.KeywordPlanCompetitionLevel result = com.google.ads.googleads.v3.enums.KeywordPlanCompetitionLevelEnum.KeywordPlanCompetitionLevel.valueOf(competition_);
@@ -703,6 +724,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.KeywordPlanCompetitionLevelEnum.KeywordPlanCompetitionLevel competition = 2;</code>
+     * @param value The competition to set.
+     * @return This builder for chaining.
      */
     public Builder setCompetition(com.google.ads.googleads.v3.enums.KeywordPlanCompetitionLevelEnum.KeywordPlanCompetitionLevel value) {
       if (value == null) {
@@ -719,6 +742,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.KeywordPlanCompetitionLevelEnum.KeywordPlanCompetitionLevel competition = 2;</code>
+     * @return This builder for chaining.
      */
     public Builder clearCompetition() {
       

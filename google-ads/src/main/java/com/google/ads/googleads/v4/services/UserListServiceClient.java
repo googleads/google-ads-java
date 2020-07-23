@@ -21,7 +21,6 @@ import com.google.ads.googleads.v4.services.stub.UserListServiceStubSettings;
 import com.google.api.core.BetaApi;
 import com.google.api.gax.core.BackgroundResource;
 import com.google.api.gax.rpc.UnaryCallable;
-import com.google.api.pathtemplate.PathTemplate;
 import java.io.IOException;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
@@ -37,8 +36,8 @@ import javax.annotation.Generated;
  * <pre>
  * <code>
  * try (UserListServiceClient userListServiceClient = UserListServiceClient.create()) {
- *   String formattedResourceName = UserListServiceClient.formatUserListName("[CUSTOMER]", "[USER_LIST]");
- *   UserList response = userListServiceClient.getUserList(formattedResourceName);
+ *   UserListName resourceName = UserListName.of("[CUSTOMER]", "[USER_LIST]");
+ *   UserList response = userListServiceClient.getUserList(resourceName);
  * }
  * </code>
  * </pre>
@@ -100,41 +99,6 @@ public class UserListServiceClient implements BackgroundResource {
   private final UserListServiceSettings settings;
   private final UserListServiceStub stub;
 
-  private static final PathTemplate USER_LIST_PATH_TEMPLATE =
-      PathTemplate.createWithoutUrlEncoding("customers/{customer}/userLists/{user_list}");
-
-  /**
-   * Formats a string containing the fully-qualified path to represent a user_list resource.
-   *
-   * @deprecated Use the {@link UserListName} class instead.
-   */
-  @Deprecated
-  public static final String formatUserListName(String customer, String userList) {
-    return USER_LIST_PATH_TEMPLATE.instantiate(
-        "customer", customer,
-        "user_list", userList);
-  }
-
-  /**
-   * Parses the customer from the given fully-qualified path which represents a user_list resource.
-   *
-   * @deprecated Use the {@link UserListName} class instead.
-   */
-  @Deprecated
-  public static final String parseCustomerFromUserListName(String userListName) {
-    return USER_LIST_PATH_TEMPLATE.parse(userListName).get("customer");
-  }
-
-  /**
-   * Parses the user_list from the given fully-qualified path which represents a user_list resource.
-   *
-   * @deprecated Use the {@link UserListName} class instead.
-   */
-  @Deprecated
-  public static final String parseUserListFromUserListName(String userListName) {
-    return USER_LIST_PATH_TEMPLATE.parse(userListName).get("user_list");
-  }
-
   /** Constructs an instance of UserListServiceClient with default settings. */
   public static final UserListServiceClient create() throws IOException {
     return create(UserListServiceSettings.newBuilder().build());
@@ -191,8 +155,32 @@ public class UserListServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (UserListServiceClient userListServiceClient = UserListServiceClient.create()) {
-   *   String formattedResourceName = UserListServiceClient.formatUserListName("[CUSTOMER]", "[USER_LIST]");
-   *   UserList response = userListServiceClient.getUserList(formattedResourceName);
+   *   UserListName resourceName = UserListName.of("[CUSTOMER]", "[USER_LIST]");
+   *   UserList response = userListServiceClient.getUserList(resourceName);
+   * }
+   * </code></pre>
+   *
+   * @param resourceName Required. The resource name of the user list to fetch.
+   * @throws com.google.api.gax.rpc.ApiException if the remote call fails
+   */
+  public final UserList getUserList(UserListName resourceName) {
+    GetUserListRequest request =
+        GetUserListRequest.newBuilder()
+            .setResourceName(resourceName == null ? null : resourceName.toString())
+            .build();
+    return getUserList(request);
+  }
+
+  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  /**
+   * Returns the requested user list.
+   *
+   * <p>Sample code:
+   *
+   * <pre><code>
+   * try (UserListServiceClient userListServiceClient = UserListServiceClient.create()) {
+   *   UserListName resourceName = UserListName.of("[CUSTOMER]", "[USER_LIST]");
+   *   UserList response = userListServiceClient.getUserList(resourceName.toString());
    * }
    * </code></pre>
    *
@@ -200,7 +188,6 @@ public class UserListServiceClient implements BackgroundResource {
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final UserList getUserList(String resourceName) {
-    USER_LIST_PATH_TEMPLATE.validate(resourceName, "getUserList");
     GetUserListRequest request =
         GetUserListRequest.newBuilder().setResourceName(resourceName).build();
     return getUserList(request);
@@ -214,9 +201,9 @@ public class UserListServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (UserListServiceClient userListServiceClient = UserListServiceClient.create()) {
-   *   String formattedResourceName = UserListServiceClient.formatUserListName("[CUSTOMER]", "[USER_LIST]");
+   *   UserListName resourceName = UserListName.of("[CUSTOMER]", "[USER_LIST]");
    *   GetUserListRequest request = GetUserListRequest.newBuilder()
-   *     .setResourceName(formattedResourceName)
+   *     .setResourceName(resourceName.toString())
    *     .build();
    *   UserList response = userListServiceClient.getUserList(request);
    * }
@@ -237,9 +224,9 @@ public class UserListServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (UserListServiceClient userListServiceClient = UserListServiceClient.create()) {
-   *   String formattedResourceName = UserListServiceClient.formatUserListName("[CUSTOMER]", "[USER_LIST]");
+   *   UserListName resourceName = UserListName.of("[CUSTOMER]", "[USER_LIST]");
    *   GetUserListRequest request = GetUserListRequest.newBuilder()
-   *     .setResourceName(formattedResourceName)
+   *     .setResourceName(resourceName.toString())
    *     .build();
    *   ApiFuture&lt;UserList&gt; future = userListServiceClient.getUserListCallable().futureCall(request);
    *   // Do something
@@ -249,46 +236,6 @@ public class UserListServiceClient implements BackgroundResource {
    */
   public final UnaryCallable<GetUserListRequest, UserList> getUserListCallable() {
     return stub.getUserListCallable();
-  }
-
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
-  /**
-   * Creates or updates user lists. Operation statuses are returned.
-   *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (UserListServiceClient userListServiceClient = UserListServiceClient.create()) {
-   *   String customerId = "";
-   *   List&lt;UserListOperation&gt; operations = new ArrayList&lt;&gt;();
-   *   boolean partialFailure = false;
-   *   boolean validateOnly = false;
-   *   MutateUserListsResponse response = userListServiceClient.mutateUserLists(customerId, operations, partialFailure, validateOnly);
-   * }
-   * </code></pre>
-   *
-   * @param customerId Required. The ID of the customer whose user lists are being modified.
-   * @param operations Required. The list of operations to perform on individual user lists.
-   * @param partialFailure If true, successful operations will be carried out and invalid operations
-   *     will return errors. If false, all operations will be carried out in one transaction if and
-   *     only if they are all valid. Default is false.
-   * @param validateOnly If true, the request is validated but not executed. Only errors are
-   *     returned, not results.
-   * @throws com.google.api.gax.rpc.ApiException if the remote call fails
-   */
-  public final MutateUserListsResponse mutateUserLists(
-      String customerId,
-      List<UserListOperation> operations,
-      boolean partialFailure,
-      boolean validateOnly) {
-    MutateUserListsRequest request =
-        MutateUserListsRequest.newBuilder()
-            .setCustomerId(customerId)
-            .addAllOperations(operations)
-            .setPartialFailure(partialFailure)
-            .setValidateOnly(validateOnly)
-            .build();
-    return mutateUserLists(request);
   }
 
   // AUTO-GENERATED DOCUMENTATION AND METHOD

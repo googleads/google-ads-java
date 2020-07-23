@@ -10,7 +10,7 @@ package com.google.ads.googleads.v2.resources;
  *
  * Protobuf type {@code google.ads.googleads.v2.resources.DetailPlacementView}
  */
-public  final class DetailPlacementView extends
+public final class DetailPlacementView extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v2.resources.DetailPlacementView)
     DetailPlacementViewOrBuilder {
@@ -22,6 +22,13 @@ private static final long serialVersionUID = 0L;
   private DetailPlacementView() {
     resourceName_ = "";
     placementType_ = 0;
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new DetailPlacementView();
   }
 
   @java.lang.Override
@@ -37,7 +44,6 @@ private static final long serialVersionUID = 0L;
     if (extensionRegistry == null) {
       throw new java.lang.NullPointerException();
     }
-    int mutable_bitField0_ = 0;
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
         com.google.protobuf.UnknownFieldSet.newBuilder();
     try {
@@ -148,13 +154,15 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object resourceName_;
   /**
    * <pre>
-   * The resource name of the detail placement view.
+   * Output only. The resource name of the detail placement view.
    * Detail placement view resource names have the form:
    * `customers/{customer_id}/detailPlacementViews/{ad_group_id}~{base64_placement}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The resourceName.
    */
+  @java.lang.Override
   public java.lang.String getResourceName() {
     java.lang.Object ref = resourceName_;
     if (ref instanceof java.lang.String) {
@@ -169,13 +177,15 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The resource name of the detail placement view.
+   * Output only. The resource name of the detail placement view.
    * Detail placement view resource names have the form:
    * `customers/{customer_id}/detailPlacementViews/{ad_group_id}~{base64_placement}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The bytes for resourceName.
    */
+  @java.lang.Override
   public com.google.protobuf.ByteString
       getResourceNameBytes() {
     java.lang.Object ref = resourceName_;
@@ -194,34 +204,39 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.StringValue placement_;
   /**
    * <pre>
-   * The automatic placement string at detail level, e. g. website URL, mobile
+   * Output only. The automatic placement string at detail level, e. g. website URL, mobile
    * application ID, or a YouTube video ID.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue placement = 2;</code>
+   * <code>.google.protobuf.StringValue placement = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the placement field is set.
    */
+  @java.lang.Override
   public boolean hasPlacement() {
     return placement_ != null;
   }
   /**
    * <pre>
-   * The automatic placement string at detail level, e. g. website URL, mobile
+   * Output only. The automatic placement string at detail level, e. g. website URL, mobile
    * application ID, or a YouTube video ID.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue placement = 2;</code>
+   * <code>.google.protobuf.StringValue placement = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The placement.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getPlacement() {
     return placement_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : placement_;
   }
   /**
    * <pre>
-   * The automatic placement string at detail level, e. g. website URL, mobile
+   * Output only. The automatic placement string at detail level, e. g. website URL, mobile
    * application ID, or a YouTube video ID.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue placement = 2;</code>
+   * <code>.google.protobuf.StringValue placement = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getPlacementOrBuilder() {
     return getPlacement();
   }
@@ -230,34 +245,39 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.StringValue displayName_;
   /**
    * <pre>
-   * The display name is URL name for websites, YouTube video name for YouTube
+   * Output only. The display name is URL name for websites, YouTube video name for YouTube
    * videos, and translated mobile app name for mobile apps.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue display_name = 3;</code>
+   * <code>.google.protobuf.StringValue display_name = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the displayName field is set.
    */
+  @java.lang.Override
   public boolean hasDisplayName() {
     return displayName_ != null;
   }
   /**
    * <pre>
-   * The display name is URL name for websites, YouTube video name for YouTube
+   * Output only. The display name is URL name for websites, YouTube video name for YouTube
    * videos, and translated mobile app name for mobile apps.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue display_name = 3;</code>
+   * <code>.google.protobuf.StringValue display_name = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The displayName.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getDisplayName() {
     return displayName_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : displayName_;
   }
   /**
    * <pre>
-   * The display name is URL name for websites, YouTube video name for YouTube
+   * Output only. The display name is URL name for websites, YouTube video name for YouTube
    * videos, and translated mobile app name for mobile apps.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue display_name = 3;</code>
+   * <code>.google.protobuf.StringValue display_name = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getDisplayNameOrBuilder() {
     return getDisplayName();
   }
@@ -266,34 +286,39 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.StringValue groupPlacementTargetUrl_;
   /**
    * <pre>
-   * URL of the group placement, e.g. domain, link to the mobile application in
+   * Output only. URL of the group placement, e.g. domain, link to the mobile application in
    * app store, or a YouTube channel URL.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue group_placement_target_url = 4;</code>
+   * <code>.google.protobuf.StringValue group_placement_target_url = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the groupPlacementTargetUrl field is set.
    */
+  @java.lang.Override
   public boolean hasGroupPlacementTargetUrl() {
     return groupPlacementTargetUrl_ != null;
   }
   /**
    * <pre>
-   * URL of the group placement, e.g. domain, link to the mobile application in
+   * Output only. URL of the group placement, e.g. domain, link to the mobile application in
    * app store, or a YouTube channel URL.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue group_placement_target_url = 4;</code>
+   * <code>.google.protobuf.StringValue group_placement_target_url = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The groupPlacementTargetUrl.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getGroupPlacementTargetUrl() {
     return groupPlacementTargetUrl_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : groupPlacementTargetUrl_;
   }
   /**
    * <pre>
-   * URL of the group placement, e.g. domain, link to the mobile application in
+   * Output only. URL of the group placement, e.g. domain, link to the mobile application in
    * app store, or a YouTube channel URL.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue group_placement_target_url = 4;</code>
+   * <code>.google.protobuf.StringValue group_placement_target_url = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getGroupPlacementTargetUrlOrBuilder() {
     return getGroupPlacementTargetUrl();
   }
@@ -302,34 +327,39 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.StringValue targetUrl_;
   /**
    * <pre>
-   * URL of the placement, e.g. website, link to the mobile application in app
+   * Output only. URL of the placement, e.g. website, link to the mobile application in app
    * store, or a YouTube video URL.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue target_url = 5;</code>
+   * <code>.google.protobuf.StringValue target_url = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the targetUrl field is set.
    */
+  @java.lang.Override
   public boolean hasTargetUrl() {
     return targetUrl_ != null;
   }
   /**
    * <pre>
-   * URL of the placement, e.g. website, link to the mobile application in app
+   * Output only. URL of the placement, e.g. website, link to the mobile application in app
    * store, or a YouTube video URL.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue target_url = 5;</code>
+   * <code>.google.protobuf.StringValue target_url = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The targetUrl.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getTargetUrl() {
     return targetUrl_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : targetUrl_;
   }
   /**
    * <pre>
-   * URL of the placement, e.g. website, link to the mobile application in app
+   * Output only. URL of the placement, e.g. website, link to the mobile application in app
    * store, or a YouTube video URL.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue target_url = 5;</code>
+   * <code>.google.protobuf.StringValue target_url = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getTargetUrlOrBuilder() {
     return getTargetUrl();
   }
@@ -338,22 +368,24 @@ private static final long serialVersionUID = 0L;
   private int placementType_;
   /**
    * <pre>
-   * Type of the placement, e.g. Website, YouTube Video, and Mobile Application.
+   * Output only. Type of the placement, e.g. Website, YouTube Video, and Mobile Application.
    * </pre>
    *
-   * <code>.google.ads.googleads.v2.enums.PlacementTypeEnum.PlacementType placement_type = 6;</code>
+   * <code>.google.ads.googleads.v2.enums.PlacementTypeEnum.PlacementType placement_type = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The enum numeric value on the wire for placementType.
    */
-  public int getPlacementTypeValue() {
+  @java.lang.Override public int getPlacementTypeValue() {
     return placementType_;
   }
   /**
    * <pre>
-   * Type of the placement, e.g. Website, YouTube Video, and Mobile Application.
+   * Output only. Type of the placement, e.g. Website, YouTube Video, and Mobile Application.
    * </pre>
    *
-   * <code>.google.ads.googleads.v2.enums.PlacementTypeEnum.PlacementType placement_type = 6;</code>
+   * <code>.google.ads.googleads.v2.enums.PlacementTypeEnum.PlacementType placement_type = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The placementType.
    */
-  public com.google.ads.googleads.v2.enums.PlacementTypeEnum.PlacementType getPlacementType() {
+  @java.lang.Override public com.google.ads.googleads.v2.enums.PlacementTypeEnum.PlacementType getPlacementType() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v2.enums.PlacementTypeEnum.PlacementType result = com.google.ads.googleads.v2.enums.PlacementTypeEnum.PlacementType.valueOf(placementType_);
     return result == null ? com.google.ads.googleads.v2.enums.PlacementTypeEnum.PlacementType.UNRECOGNIZED : result;
@@ -804,12 +836,13 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object resourceName_ = "";
     /**
      * <pre>
-     * The resource name of the detail placement view.
+     * Output only. The resource name of the detail placement view.
      * Detail placement view resource names have the form:
      * `customers/{customer_id}/detailPlacementViews/{ad_group_id}~{base64_placement}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @return The resourceName.
      */
     public java.lang.String getResourceName() {
       java.lang.Object ref = resourceName_;
@@ -825,12 +858,13 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the detail placement view.
+     * Output only. The resource name of the detail placement view.
      * Detail placement view resource names have the form:
      * `customers/{customer_id}/detailPlacementViews/{ad_group_id}~{base64_placement}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @return The bytes for resourceName.
      */
     public com.google.protobuf.ByteString
         getResourceNameBytes() {
@@ -847,12 +881,14 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the detail placement view.
+     * Output only. The resource name of the detail placement view.
      * Detail placement view resource names have the form:
      * `customers/{customer_id}/detailPlacementViews/{ad_group_id}~{base64_placement}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @param value The resourceName to set.
+     * @return This builder for chaining.
      */
     public Builder setResourceName(
         java.lang.String value) {
@@ -866,12 +902,13 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the detail placement view.
+     * Output only. The resource name of the detail placement view.
      * Detail placement view resource names have the form:
      * `customers/{customer_id}/detailPlacementViews/{ad_group_id}~{base64_placement}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @return This builder for chaining.
      */
     public Builder clearResourceName() {
       
@@ -881,12 +918,14 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the detail placement view.
+     * Output only. The resource name of the detail placement view.
      * Detail placement view resource names have the form:
      * `customers/{customer_id}/detailPlacementViews/{ad_group_id}~{base64_placement}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @param value The bytes for resourceName to set.
+     * @return This builder for chaining.
      */
     public Builder setResourceNameBytes(
         com.google.protobuf.ByteString value) {
@@ -905,22 +944,24 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> placementBuilder_;
     /**
      * <pre>
-     * The automatic placement string at detail level, e. g. website URL, mobile
+     * Output only. The automatic placement string at detail level, e. g. website URL, mobile
      * application ID, or a YouTube video ID.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue placement = 2;</code>
+     * <code>.google.protobuf.StringValue placement = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the placement field is set.
      */
     public boolean hasPlacement() {
       return placementBuilder_ != null || placement_ != null;
     }
     /**
      * <pre>
-     * The automatic placement string at detail level, e. g. website URL, mobile
+     * Output only. The automatic placement string at detail level, e. g. website URL, mobile
      * application ID, or a YouTube video ID.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue placement = 2;</code>
+     * <code>.google.protobuf.StringValue placement = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The placement.
      */
     public com.google.protobuf.StringValue getPlacement() {
       if (placementBuilder_ == null) {
@@ -931,11 +972,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The automatic placement string at detail level, e. g. website URL, mobile
+     * Output only. The automatic placement string at detail level, e. g. website URL, mobile
      * application ID, or a YouTube video ID.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue placement = 2;</code>
+     * <code>.google.protobuf.StringValue placement = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setPlacement(com.google.protobuf.StringValue value) {
       if (placementBuilder_ == null) {
@@ -952,11 +993,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The automatic placement string at detail level, e. g. website URL, mobile
+     * Output only. The automatic placement string at detail level, e. g. website URL, mobile
      * application ID, or a YouTube video ID.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue placement = 2;</code>
+     * <code>.google.protobuf.StringValue placement = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setPlacement(
         com.google.protobuf.StringValue.Builder builderForValue) {
@@ -971,11 +1012,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The automatic placement string at detail level, e. g. website URL, mobile
+     * Output only. The automatic placement string at detail level, e. g. website URL, mobile
      * application ID, or a YouTube video ID.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue placement = 2;</code>
+     * <code>.google.protobuf.StringValue placement = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder mergePlacement(com.google.protobuf.StringValue value) {
       if (placementBuilder_ == null) {
@@ -994,11 +1035,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The automatic placement string at detail level, e. g. website URL, mobile
+     * Output only. The automatic placement string at detail level, e. g. website URL, mobile
      * application ID, or a YouTube video ID.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue placement = 2;</code>
+     * <code>.google.protobuf.StringValue placement = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearPlacement() {
       if (placementBuilder_ == null) {
@@ -1013,11 +1054,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The automatic placement string at detail level, e. g. website URL, mobile
+     * Output only. The automatic placement string at detail level, e. g. website URL, mobile
      * application ID, or a YouTube video ID.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue placement = 2;</code>
+     * <code>.google.protobuf.StringValue placement = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValue.Builder getPlacementBuilder() {
       
@@ -1026,11 +1067,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The automatic placement string at detail level, e. g. website URL, mobile
+     * Output only. The automatic placement string at detail level, e. g. website URL, mobile
      * application ID, or a YouTube video ID.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue placement = 2;</code>
+     * <code>.google.protobuf.StringValue placement = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValueOrBuilder getPlacementOrBuilder() {
       if (placementBuilder_ != null) {
@@ -1042,11 +1083,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The automatic placement string at detail level, e. g. website URL, mobile
+     * Output only. The automatic placement string at detail level, e. g. website URL, mobile
      * application ID, or a YouTube video ID.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue placement = 2;</code>
+     * <code>.google.protobuf.StringValue placement = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
@@ -1067,22 +1108,24 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> displayNameBuilder_;
     /**
      * <pre>
-     * The display name is URL name for websites, YouTube video name for YouTube
+     * Output only. The display name is URL name for websites, YouTube video name for YouTube
      * videos, and translated mobile app name for mobile apps.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue display_name = 3;</code>
+     * <code>.google.protobuf.StringValue display_name = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the displayName field is set.
      */
     public boolean hasDisplayName() {
       return displayNameBuilder_ != null || displayName_ != null;
     }
     /**
      * <pre>
-     * The display name is URL name for websites, YouTube video name for YouTube
+     * Output only. The display name is URL name for websites, YouTube video name for YouTube
      * videos, and translated mobile app name for mobile apps.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue display_name = 3;</code>
+     * <code>.google.protobuf.StringValue display_name = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The displayName.
      */
     public com.google.protobuf.StringValue getDisplayName() {
       if (displayNameBuilder_ == null) {
@@ -1093,11 +1136,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The display name is URL name for websites, YouTube video name for YouTube
+     * Output only. The display name is URL name for websites, YouTube video name for YouTube
      * videos, and translated mobile app name for mobile apps.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue display_name = 3;</code>
+     * <code>.google.protobuf.StringValue display_name = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setDisplayName(com.google.protobuf.StringValue value) {
       if (displayNameBuilder_ == null) {
@@ -1114,11 +1157,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The display name is URL name for websites, YouTube video name for YouTube
+     * Output only. The display name is URL name for websites, YouTube video name for YouTube
      * videos, and translated mobile app name for mobile apps.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue display_name = 3;</code>
+     * <code>.google.protobuf.StringValue display_name = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setDisplayName(
         com.google.protobuf.StringValue.Builder builderForValue) {
@@ -1133,11 +1176,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The display name is URL name for websites, YouTube video name for YouTube
+     * Output only. The display name is URL name for websites, YouTube video name for YouTube
      * videos, and translated mobile app name for mobile apps.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue display_name = 3;</code>
+     * <code>.google.protobuf.StringValue display_name = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder mergeDisplayName(com.google.protobuf.StringValue value) {
       if (displayNameBuilder_ == null) {
@@ -1156,11 +1199,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The display name is URL name for websites, YouTube video name for YouTube
+     * Output only. The display name is URL name for websites, YouTube video name for YouTube
      * videos, and translated mobile app name for mobile apps.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue display_name = 3;</code>
+     * <code>.google.protobuf.StringValue display_name = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearDisplayName() {
       if (displayNameBuilder_ == null) {
@@ -1175,11 +1218,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The display name is URL name for websites, YouTube video name for YouTube
+     * Output only. The display name is URL name for websites, YouTube video name for YouTube
      * videos, and translated mobile app name for mobile apps.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue display_name = 3;</code>
+     * <code>.google.protobuf.StringValue display_name = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValue.Builder getDisplayNameBuilder() {
       
@@ -1188,11 +1231,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The display name is URL name for websites, YouTube video name for YouTube
+     * Output only. The display name is URL name for websites, YouTube video name for YouTube
      * videos, and translated mobile app name for mobile apps.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue display_name = 3;</code>
+     * <code>.google.protobuf.StringValue display_name = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValueOrBuilder getDisplayNameOrBuilder() {
       if (displayNameBuilder_ != null) {
@@ -1204,11 +1247,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The display name is URL name for websites, YouTube video name for YouTube
+     * Output only. The display name is URL name for websites, YouTube video name for YouTube
      * videos, and translated mobile app name for mobile apps.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue display_name = 3;</code>
+     * <code>.google.protobuf.StringValue display_name = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
@@ -1229,22 +1272,24 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> groupPlacementTargetUrlBuilder_;
     /**
      * <pre>
-     * URL of the group placement, e.g. domain, link to the mobile application in
+     * Output only. URL of the group placement, e.g. domain, link to the mobile application in
      * app store, or a YouTube channel URL.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue group_placement_target_url = 4;</code>
+     * <code>.google.protobuf.StringValue group_placement_target_url = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the groupPlacementTargetUrl field is set.
      */
     public boolean hasGroupPlacementTargetUrl() {
       return groupPlacementTargetUrlBuilder_ != null || groupPlacementTargetUrl_ != null;
     }
     /**
      * <pre>
-     * URL of the group placement, e.g. domain, link to the mobile application in
+     * Output only. URL of the group placement, e.g. domain, link to the mobile application in
      * app store, or a YouTube channel URL.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue group_placement_target_url = 4;</code>
+     * <code>.google.protobuf.StringValue group_placement_target_url = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The groupPlacementTargetUrl.
      */
     public com.google.protobuf.StringValue getGroupPlacementTargetUrl() {
       if (groupPlacementTargetUrlBuilder_ == null) {
@@ -1255,11 +1300,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * URL of the group placement, e.g. domain, link to the mobile application in
+     * Output only. URL of the group placement, e.g. domain, link to the mobile application in
      * app store, or a YouTube channel URL.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue group_placement_target_url = 4;</code>
+     * <code>.google.protobuf.StringValue group_placement_target_url = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setGroupPlacementTargetUrl(com.google.protobuf.StringValue value) {
       if (groupPlacementTargetUrlBuilder_ == null) {
@@ -1276,11 +1321,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * URL of the group placement, e.g. domain, link to the mobile application in
+     * Output only. URL of the group placement, e.g. domain, link to the mobile application in
      * app store, or a YouTube channel URL.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue group_placement_target_url = 4;</code>
+     * <code>.google.protobuf.StringValue group_placement_target_url = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setGroupPlacementTargetUrl(
         com.google.protobuf.StringValue.Builder builderForValue) {
@@ -1295,11 +1340,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * URL of the group placement, e.g. domain, link to the mobile application in
+     * Output only. URL of the group placement, e.g. domain, link to the mobile application in
      * app store, or a YouTube channel URL.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue group_placement_target_url = 4;</code>
+     * <code>.google.protobuf.StringValue group_placement_target_url = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder mergeGroupPlacementTargetUrl(com.google.protobuf.StringValue value) {
       if (groupPlacementTargetUrlBuilder_ == null) {
@@ -1318,11 +1363,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * URL of the group placement, e.g. domain, link to the mobile application in
+     * Output only. URL of the group placement, e.g. domain, link to the mobile application in
      * app store, or a YouTube channel URL.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue group_placement_target_url = 4;</code>
+     * <code>.google.protobuf.StringValue group_placement_target_url = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearGroupPlacementTargetUrl() {
       if (groupPlacementTargetUrlBuilder_ == null) {
@@ -1337,11 +1382,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * URL of the group placement, e.g. domain, link to the mobile application in
+     * Output only. URL of the group placement, e.g. domain, link to the mobile application in
      * app store, or a YouTube channel URL.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue group_placement_target_url = 4;</code>
+     * <code>.google.protobuf.StringValue group_placement_target_url = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValue.Builder getGroupPlacementTargetUrlBuilder() {
       
@@ -1350,11 +1395,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * URL of the group placement, e.g. domain, link to the mobile application in
+     * Output only. URL of the group placement, e.g. domain, link to the mobile application in
      * app store, or a YouTube channel URL.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue group_placement_target_url = 4;</code>
+     * <code>.google.protobuf.StringValue group_placement_target_url = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValueOrBuilder getGroupPlacementTargetUrlOrBuilder() {
       if (groupPlacementTargetUrlBuilder_ != null) {
@@ -1366,11 +1411,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * URL of the group placement, e.g. domain, link to the mobile application in
+     * Output only. URL of the group placement, e.g. domain, link to the mobile application in
      * app store, or a YouTube channel URL.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue group_placement_target_url = 4;</code>
+     * <code>.google.protobuf.StringValue group_placement_target_url = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
@@ -1391,22 +1436,24 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> targetUrlBuilder_;
     /**
      * <pre>
-     * URL of the placement, e.g. website, link to the mobile application in app
+     * Output only. URL of the placement, e.g. website, link to the mobile application in app
      * store, or a YouTube video URL.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue target_url = 5;</code>
+     * <code>.google.protobuf.StringValue target_url = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the targetUrl field is set.
      */
     public boolean hasTargetUrl() {
       return targetUrlBuilder_ != null || targetUrl_ != null;
     }
     /**
      * <pre>
-     * URL of the placement, e.g. website, link to the mobile application in app
+     * Output only. URL of the placement, e.g. website, link to the mobile application in app
      * store, or a YouTube video URL.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue target_url = 5;</code>
+     * <code>.google.protobuf.StringValue target_url = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The targetUrl.
      */
     public com.google.protobuf.StringValue getTargetUrl() {
       if (targetUrlBuilder_ == null) {
@@ -1417,11 +1464,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * URL of the placement, e.g. website, link to the mobile application in app
+     * Output only. URL of the placement, e.g. website, link to the mobile application in app
      * store, or a YouTube video URL.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue target_url = 5;</code>
+     * <code>.google.protobuf.StringValue target_url = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setTargetUrl(com.google.protobuf.StringValue value) {
       if (targetUrlBuilder_ == null) {
@@ -1438,11 +1485,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * URL of the placement, e.g. website, link to the mobile application in app
+     * Output only. URL of the placement, e.g. website, link to the mobile application in app
      * store, or a YouTube video URL.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue target_url = 5;</code>
+     * <code>.google.protobuf.StringValue target_url = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setTargetUrl(
         com.google.protobuf.StringValue.Builder builderForValue) {
@@ -1457,11 +1504,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * URL of the placement, e.g. website, link to the mobile application in app
+     * Output only. URL of the placement, e.g. website, link to the mobile application in app
      * store, or a YouTube video URL.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue target_url = 5;</code>
+     * <code>.google.protobuf.StringValue target_url = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder mergeTargetUrl(com.google.protobuf.StringValue value) {
       if (targetUrlBuilder_ == null) {
@@ -1480,11 +1527,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * URL of the placement, e.g. website, link to the mobile application in app
+     * Output only. URL of the placement, e.g. website, link to the mobile application in app
      * store, or a YouTube video URL.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue target_url = 5;</code>
+     * <code>.google.protobuf.StringValue target_url = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearTargetUrl() {
       if (targetUrlBuilder_ == null) {
@@ -1499,11 +1546,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * URL of the placement, e.g. website, link to the mobile application in app
+     * Output only. URL of the placement, e.g. website, link to the mobile application in app
      * store, or a YouTube video URL.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue target_url = 5;</code>
+     * <code>.google.protobuf.StringValue target_url = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValue.Builder getTargetUrlBuilder() {
       
@@ -1512,11 +1559,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * URL of the placement, e.g. website, link to the mobile application in app
+     * Output only. URL of the placement, e.g. website, link to the mobile application in app
      * store, or a YouTube video URL.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue target_url = 5;</code>
+     * <code>.google.protobuf.StringValue target_url = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValueOrBuilder getTargetUrlOrBuilder() {
       if (targetUrlBuilder_ != null) {
@@ -1528,11 +1575,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * URL of the placement, e.g. website, link to the mobile application in app
+     * Output only. URL of the placement, e.g. website, link to the mobile application in app
      * store, or a YouTube video URL.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue target_url = 5;</code>
+     * <code>.google.protobuf.StringValue target_url = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
@@ -1551,33 +1598,39 @@ private static final long serialVersionUID = 0L;
     private int placementType_ = 0;
     /**
      * <pre>
-     * Type of the placement, e.g. Website, YouTube Video, and Mobile Application.
+     * Output only. Type of the placement, e.g. Website, YouTube Video, and Mobile Application.
      * </pre>
      *
-     * <code>.google.ads.googleads.v2.enums.PlacementTypeEnum.PlacementType placement_type = 6;</code>
+     * <code>.google.ads.googleads.v2.enums.PlacementTypeEnum.PlacementType placement_type = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The enum numeric value on the wire for placementType.
      */
-    public int getPlacementTypeValue() {
+    @java.lang.Override public int getPlacementTypeValue() {
       return placementType_;
     }
     /**
      * <pre>
-     * Type of the placement, e.g. Website, YouTube Video, and Mobile Application.
+     * Output only. Type of the placement, e.g. Website, YouTube Video, and Mobile Application.
      * </pre>
      *
-     * <code>.google.ads.googleads.v2.enums.PlacementTypeEnum.PlacementType placement_type = 6;</code>
+     * <code>.google.ads.googleads.v2.enums.PlacementTypeEnum.PlacementType placement_type = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @param value The enum numeric value on the wire for placementType to set.
+     * @return This builder for chaining.
      */
     public Builder setPlacementTypeValue(int value) {
+      
       placementType_ = value;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Type of the placement, e.g. Website, YouTube Video, and Mobile Application.
+     * Output only. Type of the placement, e.g. Website, YouTube Video, and Mobile Application.
      * </pre>
      *
-     * <code>.google.ads.googleads.v2.enums.PlacementTypeEnum.PlacementType placement_type = 6;</code>
+     * <code>.google.ads.googleads.v2.enums.PlacementTypeEnum.PlacementType placement_type = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The placementType.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v2.enums.PlacementTypeEnum.PlacementType getPlacementType() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v2.enums.PlacementTypeEnum.PlacementType result = com.google.ads.googleads.v2.enums.PlacementTypeEnum.PlacementType.valueOf(placementType_);
@@ -1585,10 +1638,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Type of the placement, e.g. Website, YouTube Video, and Mobile Application.
+     * Output only. Type of the placement, e.g. Website, YouTube Video, and Mobile Application.
      * </pre>
      *
-     * <code>.google.ads.googleads.v2.enums.PlacementTypeEnum.PlacementType placement_type = 6;</code>
+     * <code>.google.ads.googleads.v2.enums.PlacementTypeEnum.PlacementType placement_type = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @param value The placementType to set.
+     * @return This builder for chaining.
      */
     public Builder setPlacementType(com.google.ads.googleads.v2.enums.PlacementTypeEnum.PlacementType value) {
       if (value == null) {
@@ -1601,10 +1656,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Type of the placement, e.g. Website, YouTube Video, and Mobile Application.
+     * Output only. Type of the placement, e.g. Website, YouTube Video, and Mobile Application.
      * </pre>
      *
-     * <code>.google.ads.googleads.v2.enums.PlacementTypeEnum.PlacementType placement_type = 6;</code>
+     * <code>.google.ads.googleads.v2.enums.PlacementTypeEnum.PlacementType placement_type = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return This builder for chaining.
      */
     public Builder clearPlacementType() {
       

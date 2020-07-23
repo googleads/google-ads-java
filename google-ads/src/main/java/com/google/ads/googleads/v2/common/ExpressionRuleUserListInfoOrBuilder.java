@@ -17,6 +17,7 @@ public interface ExpressionRuleUserListInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.common.UserListRuleInfo rule = 1;</code>
+   * @return Whether the rule field is set.
    */
   boolean hasRule();
   /**
@@ -29,6 +30,7 @@ public interface ExpressionRuleUserListInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.common.UserListRuleInfo rule = 1;</code>
+   * @return The rule.
    */
   com.google.ads.googleads.v2.common.UserListRuleInfo getRule();
   /**

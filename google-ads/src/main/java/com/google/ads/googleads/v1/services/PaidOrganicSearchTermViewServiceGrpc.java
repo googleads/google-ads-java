@@ -21,7 +21,7 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.10.0)",
+    value = "by gRPC proto compiler",
     comments = "Source: google/ads/googleads/v1/services/paid_organic_search_term_view_service.proto")
 public final class PaidOrganicSearchTermViewServiceGrpc {
 
@@ -30,49 +30,49 @@ public final class PaidOrganicSearchTermViewServiceGrpc {
   public static final String SERVICE_NAME = "google.ads.googleads.v1.services.PaidOrganicSearchTermViewService";
 
   // Static method descriptors that strictly reflect the proto.
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  @java.lang.Deprecated // Use {@link #getGetPaidOrganicSearchTermViewMethod()} instead. 
-  public static final io.grpc.MethodDescriptor<com.google.ads.googleads.v1.services.GetPaidOrganicSearchTermViewRequest,
-      com.google.ads.googleads.v1.resources.PaidOrganicSearchTermView> METHOD_GET_PAID_ORGANIC_SEARCH_TERM_VIEW = getGetPaidOrganicSearchTermViewMethodHelper();
-
   private static volatile io.grpc.MethodDescriptor<com.google.ads.googleads.v1.services.GetPaidOrganicSearchTermViewRequest,
       com.google.ads.googleads.v1.resources.PaidOrganicSearchTermView> getGetPaidOrganicSearchTermViewMethod;
 
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetPaidOrganicSearchTermView",
+      requestType = com.google.ads.googleads.v1.services.GetPaidOrganicSearchTermViewRequest.class,
+      responseType = com.google.ads.googleads.v1.resources.PaidOrganicSearchTermView.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<com.google.ads.googleads.v1.services.GetPaidOrganicSearchTermViewRequest,
       com.google.ads.googleads.v1.resources.PaidOrganicSearchTermView> getGetPaidOrganicSearchTermViewMethod() {
-    return getGetPaidOrganicSearchTermViewMethodHelper();
-  }
-
-  private static io.grpc.MethodDescriptor<com.google.ads.googleads.v1.services.GetPaidOrganicSearchTermViewRequest,
-      com.google.ads.googleads.v1.resources.PaidOrganicSearchTermView> getGetPaidOrganicSearchTermViewMethodHelper() {
     io.grpc.MethodDescriptor<com.google.ads.googleads.v1.services.GetPaidOrganicSearchTermViewRequest, com.google.ads.googleads.v1.resources.PaidOrganicSearchTermView> getGetPaidOrganicSearchTermViewMethod;
     if ((getGetPaidOrganicSearchTermViewMethod = PaidOrganicSearchTermViewServiceGrpc.getGetPaidOrganicSearchTermViewMethod) == null) {
       synchronized (PaidOrganicSearchTermViewServiceGrpc.class) {
         if ((getGetPaidOrganicSearchTermViewMethod = PaidOrganicSearchTermViewServiceGrpc.getGetPaidOrganicSearchTermViewMethod) == null) {
-          PaidOrganicSearchTermViewServiceGrpc.getGetPaidOrganicSearchTermViewMethod = getGetPaidOrganicSearchTermViewMethod = 
+          PaidOrganicSearchTermViewServiceGrpc.getGetPaidOrganicSearchTermViewMethod = getGetPaidOrganicSearchTermViewMethod =
               io.grpc.MethodDescriptor.<com.google.ads.googleads.v1.services.GetPaidOrganicSearchTermViewRequest, com.google.ads.googleads.v1.resources.PaidOrganicSearchTermView>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "google.ads.googleads.v1.services.PaidOrganicSearchTermViewService", "GetPaidOrganicSearchTermView"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetPaidOrganicSearchTermView"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v1.services.GetPaidOrganicSearchTermViewRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v1.resources.PaidOrganicSearchTermView.getDefaultInstance()))
-                  .setSchemaDescriptor(new PaidOrganicSearchTermViewServiceMethodDescriptorSupplier("GetPaidOrganicSearchTermView"))
-                  .build();
-          }
+              .setSchemaDescriptor(new PaidOrganicSearchTermViewServiceMethodDescriptorSupplier("GetPaidOrganicSearchTermView"))
+              .build();
         }
-     }
-     return getGetPaidOrganicSearchTermViewMethod;
+      }
+    }
+    return getGetPaidOrganicSearchTermViewMethod;
   }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static PaidOrganicSearchTermViewServiceStub newStub(io.grpc.Channel channel) {
-    return new PaidOrganicSearchTermViewServiceStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<PaidOrganicSearchTermViewServiceStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<PaidOrganicSearchTermViewServiceStub>() {
+        @java.lang.Override
+        public PaidOrganicSearchTermViewServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new PaidOrganicSearchTermViewServiceStub(channel, callOptions);
+        }
+      };
+    return PaidOrganicSearchTermViewServiceStub.newStub(factory, channel);
   }
 
   /**
@@ -80,7 +80,14 @@ public final class PaidOrganicSearchTermViewServiceGrpc {
    */
   public static PaidOrganicSearchTermViewServiceBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new PaidOrganicSearchTermViewServiceBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<PaidOrganicSearchTermViewServiceBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<PaidOrganicSearchTermViewServiceBlockingStub>() {
+        @java.lang.Override
+        public PaidOrganicSearchTermViewServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new PaidOrganicSearchTermViewServiceBlockingStub(channel, callOptions);
+        }
+      };
+    return PaidOrganicSearchTermViewServiceBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -88,7 +95,14 @@ public final class PaidOrganicSearchTermViewServiceGrpc {
    */
   public static PaidOrganicSearchTermViewServiceFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new PaidOrganicSearchTermViewServiceFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<PaidOrganicSearchTermViewServiceFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<PaidOrganicSearchTermViewServiceFutureStub>() {
+        @java.lang.Override
+        public PaidOrganicSearchTermViewServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new PaidOrganicSearchTermViewServiceFutureStub(channel, callOptions);
+        }
+      };
+    return PaidOrganicSearchTermViewServiceFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -105,13 +119,13 @@ public final class PaidOrganicSearchTermViewServiceGrpc {
      */
     public void getPaidOrganicSearchTermView(com.google.ads.googleads.v1.services.GetPaidOrganicSearchTermViewRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v1.resources.PaidOrganicSearchTermView> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetPaidOrganicSearchTermViewMethodHelper(), responseObserver);
+      asyncUnimplementedUnaryCall(getGetPaidOrganicSearchTermViewMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
-            getGetPaidOrganicSearchTermViewMethodHelper(),
+            getGetPaidOrganicSearchTermViewMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 com.google.ads.googleads.v1.services.GetPaidOrganicSearchTermViewRequest,
@@ -126,19 +140,15 @@ public final class PaidOrganicSearchTermViewServiceGrpc {
    * Service to fetch paid organic search term views.
    * </pre>
    */
-  public static final class PaidOrganicSearchTermViewServiceStub extends io.grpc.stub.AbstractStub<PaidOrganicSearchTermViewServiceStub> {
-    private PaidOrganicSearchTermViewServiceStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private PaidOrganicSearchTermViewServiceStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class PaidOrganicSearchTermViewServiceStub extends io.grpc.stub.AbstractAsyncStub<PaidOrganicSearchTermViewServiceStub> {
+    private PaidOrganicSearchTermViewServiceStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected PaidOrganicSearchTermViewServiceStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected PaidOrganicSearchTermViewServiceStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new PaidOrganicSearchTermViewServiceStub(channel, callOptions);
     }
 
@@ -150,7 +160,7 @@ public final class PaidOrganicSearchTermViewServiceGrpc {
     public void getPaidOrganicSearchTermView(com.google.ads.googleads.v1.services.GetPaidOrganicSearchTermViewRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v1.resources.PaidOrganicSearchTermView> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(getGetPaidOrganicSearchTermViewMethodHelper(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getGetPaidOrganicSearchTermViewMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -159,19 +169,15 @@ public final class PaidOrganicSearchTermViewServiceGrpc {
    * Service to fetch paid organic search term views.
    * </pre>
    */
-  public static final class PaidOrganicSearchTermViewServiceBlockingStub extends io.grpc.stub.AbstractStub<PaidOrganicSearchTermViewServiceBlockingStub> {
-    private PaidOrganicSearchTermViewServiceBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private PaidOrganicSearchTermViewServiceBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class PaidOrganicSearchTermViewServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<PaidOrganicSearchTermViewServiceBlockingStub> {
+    private PaidOrganicSearchTermViewServiceBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected PaidOrganicSearchTermViewServiceBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected PaidOrganicSearchTermViewServiceBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new PaidOrganicSearchTermViewServiceBlockingStub(channel, callOptions);
     }
 
@@ -182,7 +188,7 @@ public final class PaidOrganicSearchTermViewServiceGrpc {
      */
     public com.google.ads.googleads.v1.resources.PaidOrganicSearchTermView getPaidOrganicSearchTermView(com.google.ads.googleads.v1.services.GetPaidOrganicSearchTermViewRequest request) {
       return blockingUnaryCall(
-          getChannel(), getGetPaidOrganicSearchTermViewMethodHelper(), getCallOptions(), request);
+          getChannel(), getGetPaidOrganicSearchTermViewMethod(), getCallOptions(), request);
     }
   }
 
@@ -191,19 +197,15 @@ public final class PaidOrganicSearchTermViewServiceGrpc {
    * Service to fetch paid organic search term views.
    * </pre>
    */
-  public static final class PaidOrganicSearchTermViewServiceFutureStub extends io.grpc.stub.AbstractStub<PaidOrganicSearchTermViewServiceFutureStub> {
-    private PaidOrganicSearchTermViewServiceFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private PaidOrganicSearchTermViewServiceFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class PaidOrganicSearchTermViewServiceFutureStub extends io.grpc.stub.AbstractFutureStub<PaidOrganicSearchTermViewServiceFutureStub> {
+    private PaidOrganicSearchTermViewServiceFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected PaidOrganicSearchTermViewServiceFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected PaidOrganicSearchTermViewServiceFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new PaidOrganicSearchTermViewServiceFutureStub(channel, callOptions);
     }
 
@@ -215,7 +217,7 @@ public final class PaidOrganicSearchTermViewServiceGrpc {
     public com.google.common.util.concurrent.ListenableFuture<com.google.ads.googleads.v1.resources.PaidOrganicSearchTermView> getPaidOrganicSearchTermView(
         com.google.ads.googleads.v1.services.GetPaidOrganicSearchTermViewRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(getGetPaidOrganicSearchTermViewMethodHelper(), getCallOptions()), request);
+          getChannel().newCall(getGetPaidOrganicSearchTermViewMethod(), getCallOptions()), request);
     }
   }
 
@@ -303,7 +305,7 @@ public final class PaidOrganicSearchTermViewServiceGrpc {
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new PaidOrganicSearchTermViewServiceFileDescriptorSupplier())
-              .addMethod(getGetPaidOrganicSearchTermViewMethodHelper())
+              .addMethod(getGetPaidOrganicSearchTermViewMethod())
               .build();
         }
       }

@@ -21,7 +21,7 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.10.0)",
+    value = "by gRPC proto compiler",
     comments = "Source: google/ads/googleads/v1/services/hotel_group_view_service.proto")
 public final class HotelGroupViewServiceGrpc {
 
@@ -30,49 +30,49 @@ public final class HotelGroupViewServiceGrpc {
   public static final String SERVICE_NAME = "google.ads.googleads.v1.services.HotelGroupViewService";
 
   // Static method descriptors that strictly reflect the proto.
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  @java.lang.Deprecated // Use {@link #getGetHotelGroupViewMethod()} instead. 
-  public static final io.grpc.MethodDescriptor<com.google.ads.googleads.v1.services.GetHotelGroupViewRequest,
-      com.google.ads.googleads.v1.resources.HotelGroupView> METHOD_GET_HOTEL_GROUP_VIEW = getGetHotelGroupViewMethodHelper();
-
   private static volatile io.grpc.MethodDescriptor<com.google.ads.googleads.v1.services.GetHotelGroupViewRequest,
       com.google.ads.googleads.v1.resources.HotelGroupView> getGetHotelGroupViewMethod;
 
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetHotelGroupView",
+      requestType = com.google.ads.googleads.v1.services.GetHotelGroupViewRequest.class,
+      responseType = com.google.ads.googleads.v1.resources.HotelGroupView.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<com.google.ads.googleads.v1.services.GetHotelGroupViewRequest,
       com.google.ads.googleads.v1.resources.HotelGroupView> getGetHotelGroupViewMethod() {
-    return getGetHotelGroupViewMethodHelper();
-  }
-
-  private static io.grpc.MethodDescriptor<com.google.ads.googleads.v1.services.GetHotelGroupViewRequest,
-      com.google.ads.googleads.v1.resources.HotelGroupView> getGetHotelGroupViewMethodHelper() {
     io.grpc.MethodDescriptor<com.google.ads.googleads.v1.services.GetHotelGroupViewRequest, com.google.ads.googleads.v1.resources.HotelGroupView> getGetHotelGroupViewMethod;
     if ((getGetHotelGroupViewMethod = HotelGroupViewServiceGrpc.getGetHotelGroupViewMethod) == null) {
       synchronized (HotelGroupViewServiceGrpc.class) {
         if ((getGetHotelGroupViewMethod = HotelGroupViewServiceGrpc.getGetHotelGroupViewMethod) == null) {
-          HotelGroupViewServiceGrpc.getGetHotelGroupViewMethod = getGetHotelGroupViewMethod = 
+          HotelGroupViewServiceGrpc.getGetHotelGroupViewMethod = getGetHotelGroupViewMethod =
               io.grpc.MethodDescriptor.<com.google.ads.googleads.v1.services.GetHotelGroupViewRequest, com.google.ads.googleads.v1.resources.HotelGroupView>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "google.ads.googleads.v1.services.HotelGroupViewService", "GetHotelGroupView"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetHotelGroupView"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v1.services.GetHotelGroupViewRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v1.resources.HotelGroupView.getDefaultInstance()))
-                  .setSchemaDescriptor(new HotelGroupViewServiceMethodDescriptorSupplier("GetHotelGroupView"))
-                  .build();
-          }
+              .setSchemaDescriptor(new HotelGroupViewServiceMethodDescriptorSupplier("GetHotelGroupView"))
+              .build();
         }
-     }
-     return getGetHotelGroupViewMethod;
+      }
+    }
+    return getGetHotelGroupViewMethod;
   }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static HotelGroupViewServiceStub newStub(io.grpc.Channel channel) {
-    return new HotelGroupViewServiceStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<HotelGroupViewServiceStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<HotelGroupViewServiceStub>() {
+        @java.lang.Override
+        public HotelGroupViewServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new HotelGroupViewServiceStub(channel, callOptions);
+        }
+      };
+    return HotelGroupViewServiceStub.newStub(factory, channel);
   }
 
   /**
@@ -80,7 +80,14 @@ public final class HotelGroupViewServiceGrpc {
    */
   public static HotelGroupViewServiceBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new HotelGroupViewServiceBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<HotelGroupViewServiceBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<HotelGroupViewServiceBlockingStub>() {
+        @java.lang.Override
+        public HotelGroupViewServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new HotelGroupViewServiceBlockingStub(channel, callOptions);
+        }
+      };
+    return HotelGroupViewServiceBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -88,7 +95,14 @@ public final class HotelGroupViewServiceGrpc {
    */
   public static HotelGroupViewServiceFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new HotelGroupViewServiceFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<HotelGroupViewServiceFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<HotelGroupViewServiceFutureStub>() {
+        @java.lang.Override
+        public HotelGroupViewServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new HotelGroupViewServiceFutureStub(channel, callOptions);
+        }
+      };
+    return HotelGroupViewServiceFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -105,13 +119,13 @@ public final class HotelGroupViewServiceGrpc {
      */
     public void getHotelGroupView(com.google.ads.googleads.v1.services.GetHotelGroupViewRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v1.resources.HotelGroupView> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetHotelGroupViewMethodHelper(), responseObserver);
+      asyncUnimplementedUnaryCall(getGetHotelGroupViewMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
-            getGetHotelGroupViewMethodHelper(),
+            getGetHotelGroupViewMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 com.google.ads.googleads.v1.services.GetHotelGroupViewRequest,
@@ -126,19 +140,15 @@ public final class HotelGroupViewServiceGrpc {
    * Service to manage Hotel Group Views.
    * </pre>
    */
-  public static final class HotelGroupViewServiceStub extends io.grpc.stub.AbstractStub<HotelGroupViewServiceStub> {
-    private HotelGroupViewServiceStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private HotelGroupViewServiceStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class HotelGroupViewServiceStub extends io.grpc.stub.AbstractAsyncStub<HotelGroupViewServiceStub> {
+    private HotelGroupViewServiceStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected HotelGroupViewServiceStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected HotelGroupViewServiceStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new HotelGroupViewServiceStub(channel, callOptions);
     }
 
@@ -150,7 +160,7 @@ public final class HotelGroupViewServiceGrpc {
     public void getHotelGroupView(com.google.ads.googleads.v1.services.GetHotelGroupViewRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v1.resources.HotelGroupView> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(getGetHotelGroupViewMethodHelper(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getGetHotelGroupViewMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -159,19 +169,15 @@ public final class HotelGroupViewServiceGrpc {
    * Service to manage Hotel Group Views.
    * </pre>
    */
-  public static final class HotelGroupViewServiceBlockingStub extends io.grpc.stub.AbstractStub<HotelGroupViewServiceBlockingStub> {
-    private HotelGroupViewServiceBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private HotelGroupViewServiceBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class HotelGroupViewServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<HotelGroupViewServiceBlockingStub> {
+    private HotelGroupViewServiceBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected HotelGroupViewServiceBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected HotelGroupViewServiceBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new HotelGroupViewServiceBlockingStub(channel, callOptions);
     }
 
@@ -182,7 +188,7 @@ public final class HotelGroupViewServiceGrpc {
      */
     public com.google.ads.googleads.v1.resources.HotelGroupView getHotelGroupView(com.google.ads.googleads.v1.services.GetHotelGroupViewRequest request) {
       return blockingUnaryCall(
-          getChannel(), getGetHotelGroupViewMethodHelper(), getCallOptions(), request);
+          getChannel(), getGetHotelGroupViewMethod(), getCallOptions(), request);
     }
   }
 
@@ -191,19 +197,15 @@ public final class HotelGroupViewServiceGrpc {
    * Service to manage Hotel Group Views.
    * </pre>
    */
-  public static final class HotelGroupViewServiceFutureStub extends io.grpc.stub.AbstractStub<HotelGroupViewServiceFutureStub> {
-    private HotelGroupViewServiceFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private HotelGroupViewServiceFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class HotelGroupViewServiceFutureStub extends io.grpc.stub.AbstractFutureStub<HotelGroupViewServiceFutureStub> {
+    private HotelGroupViewServiceFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected HotelGroupViewServiceFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected HotelGroupViewServiceFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new HotelGroupViewServiceFutureStub(channel, callOptions);
     }
 
@@ -215,7 +217,7 @@ public final class HotelGroupViewServiceGrpc {
     public com.google.common.util.concurrent.ListenableFuture<com.google.ads.googleads.v1.resources.HotelGroupView> getHotelGroupView(
         com.google.ads.googleads.v1.services.GetHotelGroupViewRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(getGetHotelGroupViewMethodHelper(), getCallOptions()), request);
+          getChannel().newCall(getGetHotelGroupViewMethod(), getCallOptions()), request);
     }
   }
 
@@ -303,7 +305,7 @@ public final class HotelGroupViewServiceGrpc {
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new HotelGroupViewServiceFileDescriptorSupplier())
-              .addMethod(getGetHotelGroupViewMethodHelper())
+              .addMethod(getGetHotelGroupViewMethod())
               .build();
         }
       }

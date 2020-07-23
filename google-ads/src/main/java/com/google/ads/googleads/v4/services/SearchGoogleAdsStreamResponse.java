@@ -10,7 +10,7 @@ package com.google.ads.googleads.v4.services;
  *
  * Protobuf type {@code google.ads.googleads.v4.services.SearchGoogleAdsStreamResponse}
  */
-public  final class SearchGoogleAdsStreamResponse extends
+public final class SearchGoogleAdsStreamResponse extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.services.SearchGoogleAdsStreamResponse)
     SearchGoogleAdsStreamResponseOrBuilder {
@@ -133,6 +133,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.services.GoogleAdsRow results = 1;</code>
    */
+  @java.lang.Override
   public java.util.List<com.google.ads.googleads.v4.services.GoogleAdsRow> getResultsList() {
     return results_;
   }
@@ -143,6 +144,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.services.GoogleAdsRow results = 1;</code>
    */
+  @java.lang.Override
   public java.util.List<? extends com.google.ads.googleads.v4.services.GoogleAdsRowOrBuilder> 
       getResultsOrBuilderList() {
     return results_;
@@ -154,6 +156,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.services.GoogleAdsRow results = 1;</code>
    */
+  @java.lang.Override
   public int getResultsCount() {
     return results_.size();
   }
@@ -164,6 +167,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.services.GoogleAdsRow results = 1;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.services.GoogleAdsRow getResults(int index) {
     return results_.get(index);
   }
@@ -174,6 +178,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.services.GoogleAdsRow results = 1;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.services.GoogleAdsRowOrBuilder getResultsOrBuilder(
       int index) {
     return results_.get(index);
@@ -189,6 +194,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.FieldMask field_mask = 2;</code>
    * @return Whether the fieldMask field is set.
    */
+  @java.lang.Override
   public boolean hasFieldMask() {
     return fieldMask_ != null;
   }
@@ -200,6 +206,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.FieldMask field_mask = 2;</code>
    * @return The fieldMask.
    */
+  @java.lang.Override
   public com.google.protobuf.FieldMask getFieldMask() {
     return fieldMask_ == null ? com.google.protobuf.FieldMask.getDefaultInstance() : fieldMask_;
   }
@@ -210,6 +217,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.FieldMask field_mask = 2;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.FieldMaskOrBuilder getFieldMaskOrBuilder() {
     return getFieldMask();
   }
@@ -226,6 +234,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.services.GoogleAdsRow summary_row = 3;</code>
    * @return Whether the summaryRow field is set.
    */
+  @java.lang.Override
   public boolean hasSummaryRow() {
     return summaryRow_ != null;
   }
@@ -239,6 +248,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.services.GoogleAdsRow summary_row = 3;</code>
    * @return The summaryRow.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.services.GoogleAdsRow getSummaryRow() {
     return summaryRow_ == null ? com.google.ads.googleads.v4.services.GoogleAdsRow.getDefaultInstance() : summaryRow_;
   }
@@ -251,6 +261,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v4.services.GoogleAdsRow summary_row = 3;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.services.GoogleAdsRowOrBuilder getSummaryRowOrBuilder() {
     return getSummaryRow();
   }

@@ -9,23 +9,28 @@ public interface KeywordPlanHistoricalMetricsOrBuilder extends
 
   /**
    * <pre>
-   * Average monthly searches for the past 12 months.
+   * Approximate number of monthly searches on this query averaged
+   * for the past 12 months.
    * </pre>
    *
    * <code>.google.protobuf.Int64Value avg_monthly_searches = 1;</code>
+   * @return Whether the avgMonthlySearches field is set.
    */
   boolean hasAvgMonthlySearches();
   /**
    * <pre>
-   * Average monthly searches for the past 12 months.
+   * Approximate number of monthly searches on this query averaged
+   * for the past 12 months.
    * </pre>
    *
    * <code>.google.protobuf.Int64Value avg_monthly_searches = 1;</code>
+   * @return The avgMonthlySearches.
    */
   com.google.protobuf.Int64Value getAvgMonthlySearches();
   /**
    * <pre>
-   * Average monthly searches for the past 12 months.
+   * Approximate number of monthly searches on this query averaged
+   * for the past 12 months.
    * </pre>
    *
    * <code>.google.protobuf.Int64Value avg_monthly_searches = 1;</code>
@@ -38,6 +43,7 @@ public interface KeywordPlanHistoricalMetricsOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v1.enums.KeywordPlanCompetitionLevelEnum.KeywordPlanCompetitionLevel competition = 2;</code>
+   * @return The enum numeric value on the wire for competition.
    */
   int getCompetitionValue();
   /**
@@ -46,6 +52,7 @@ public interface KeywordPlanHistoricalMetricsOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v1.enums.KeywordPlanCompetitionLevelEnum.KeywordPlanCompetitionLevel competition = 2;</code>
+   * @return The competition.
    */
   com.google.ads.googleads.v1.enums.KeywordPlanCompetitionLevelEnum.KeywordPlanCompetitionLevel getCompetition();
 }

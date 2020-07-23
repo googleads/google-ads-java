@@ -12,7 +12,7 @@ package com.google.ads.googleads.v4.resources;
  *
  * Protobuf type {@code google.ads.googleads.v4.resources.CustomerLabel}
  */
-public  final class CustomerLabel extends
+public final class CustomerLabel extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.resources.CustomerLabel)
     CustomerLabelOrBuilder {
@@ -131,6 +131,7 @@ private static final long serialVersionUID = 0L;
    * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return The resourceName.
    */
+  @java.lang.Override
   public java.lang.String getResourceName() {
     java.lang.Object ref = resourceName_;
     if (ref instanceof java.lang.String) {
@@ -153,6 +154,7 @@ private static final long serialVersionUID = 0L;
    * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return The bytes for resourceName.
    */
+  @java.lang.Override
   public com.google.protobuf.ByteString
       getResourceNameBytes() {
     java.lang.Object ref = resourceName_;
@@ -178,6 +180,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue customer = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the customer field is set.
    */
+  @java.lang.Override
   public boolean hasCustomer() {
     return customer_ != null;
   }
@@ -190,6 +193,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue customer = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The customer.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getCustomer() {
     return customer_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : customer_;
   }
@@ -201,6 +205,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue customer = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getCustomerOrBuilder() {
     return getCustomer();
   }
@@ -217,6 +222,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue label = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the label field is set.
    */
+  @java.lang.Override
   public boolean hasLabel() {
     return label_ != null;
   }
@@ -230,6 +236,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue label = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The label.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getLabel() {
     return label_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : label_;
   }
@@ -242,6 +249,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue label = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getLabelOrBuilder() {
     return getLabel();
   }

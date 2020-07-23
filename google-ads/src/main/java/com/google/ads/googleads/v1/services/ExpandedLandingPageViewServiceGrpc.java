@@ -21,7 +21,7 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.10.0)",
+    value = "by gRPC proto compiler",
     comments = "Source: google/ads/googleads/v1/services/expanded_landing_page_view_service.proto")
 public final class ExpandedLandingPageViewServiceGrpc {
 
@@ -30,49 +30,49 @@ public final class ExpandedLandingPageViewServiceGrpc {
   public static final String SERVICE_NAME = "google.ads.googleads.v1.services.ExpandedLandingPageViewService";
 
   // Static method descriptors that strictly reflect the proto.
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  @java.lang.Deprecated // Use {@link #getGetExpandedLandingPageViewMethod()} instead. 
-  public static final io.grpc.MethodDescriptor<com.google.ads.googleads.v1.services.GetExpandedLandingPageViewRequest,
-      com.google.ads.googleads.v1.resources.ExpandedLandingPageView> METHOD_GET_EXPANDED_LANDING_PAGE_VIEW = getGetExpandedLandingPageViewMethodHelper();
-
   private static volatile io.grpc.MethodDescriptor<com.google.ads.googleads.v1.services.GetExpandedLandingPageViewRequest,
       com.google.ads.googleads.v1.resources.ExpandedLandingPageView> getGetExpandedLandingPageViewMethod;
 
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetExpandedLandingPageView",
+      requestType = com.google.ads.googleads.v1.services.GetExpandedLandingPageViewRequest.class,
+      responseType = com.google.ads.googleads.v1.resources.ExpandedLandingPageView.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<com.google.ads.googleads.v1.services.GetExpandedLandingPageViewRequest,
       com.google.ads.googleads.v1.resources.ExpandedLandingPageView> getGetExpandedLandingPageViewMethod() {
-    return getGetExpandedLandingPageViewMethodHelper();
-  }
-
-  private static io.grpc.MethodDescriptor<com.google.ads.googleads.v1.services.GetExpandedLandingPageViewRequest,
-      com.google.ads.googleads.v1.resources.ExpandedLandingPageView> getGetExpandedLandingPageViewMethodHelper() {
     io.grpc.MethodDescriptor<com.google.ads.googleads.v1.services.GetExpandedLandingPageViewRequest, com.google.ads.googleads.v1.resources.ExpandedLandingPageView> getGetExpandedLandingPageViewMethod;
     if ((getGetExpandedLandingPageViewMethod = ExpandedLandingPageViewServiceGrpc.getGetExpandedLandingPageViewMethod) == null) {
       synchronized (ExpandedLandingPageViewServiceGrpc.class) {
         if ((getGetExpandedLandingPageViewMethod = ExpandedLandingPageViewServiceGrpc.getGetExpandedLandingPageViewMethod) == null) {
-          ExpandedLandingPageViewServiceGrpc.getGetExpandedLandingPageViewMethod = getGetExpandedLandingPageViewMethod = 
+          ExpandedLandingPageViewServiceGrpc.getGetExpandedLandingPageViewMethod = getGetExpandedLandingPageViewMethod =
               io.grpc.MethodDescriptor.<com.google.ads.googleads.v1.services.GetExpandedLandingPageViewRequest, com.google.ads.googleads.v1.resources.ExpandedLandingPageView>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "google.ads.googleads.v1.services.ExpandedLandingPageViewService", "GetExpandedLandingPageView"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetExpandedLandingPageView"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v1.services.GetExpandedLandingPageViewRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v1.resources.ExpandedLandingPageView.getDefaultInstance()))
-                  .setSchemaDescriptor(new ExpandedLandingPageViewServiceMethodDescriptorSupplier("GetExpandedLandingPageView"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ExpandedLandingPageViewServiceMethodDescriptorSupplier("GetExpandedLandingPageView"))
+              .build();
         }
-     }
-     return getGetExpandedLandingPageViewMethod;
+      }
+    }
+    return getGetExpandedLandingPageViewMethod;
   }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static ExpandedLandingPageViewServiceStub newStub(io.grpc.Channel channel) {
-    return new ExpandedLandingPageViewServiceStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<ExpandedLandingPageViewServiceStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<ExpandedLandingPageViewServiceStub>() {
+        @java.lang.Override
+        public ExpandedLandingPageViewServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new ExpandedLandingPageViewServiceStub(channel, callOptions);
+        }
+      };
+    return ExpandedLandingPageViewServiceStub.newStub(factory, channel);
   }
 
   /**
@@ -80,7 +80,14 @@ public final class ExpandedLandingPageViewServiceGrpc {
    */
   public static ExpandedLandingPageViewServiceBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new ExpandedLandingPageViewServiceBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<ExpandedLandingPageViewServiceBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<ExpandedLandingPageViewServiceBlockingStub>() {
+        @java.lang.Override
+        public ExpandedLandingPageViewServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new ExpandedLandingPageViewServiceBlockingStub(channel, callOptions);
+        }
+      };
+    return ExpandedLandingPageViewServiceBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -88,7 +95,14 @@ public final class ExpandedLandingPageViewServiceGrpc {
    */
   public static ExpandedLandingPageViewServiceFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new ExpandedLandingPageViewServiceFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<ExpandedLandingPageViewServiceFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<ExpandedLandingPageViewServiceFutureStub>() {
+        @java.lang.Override
+        public ExpandedLandingPageViewServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new ExpandedLandingPageViewServiceFutureStub(channel, callOptions);
+        }
+      };
+    return ExpandedLandingPageViewServiceFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -105,13 +119,13 @@ public final class ExpandedLandingPageViewServiceGrpc {
      */
     public void getExpandedLandingPageView(com.google.ads.googleads.v1.services.GetExpandedLandingPageViewRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v1.resources.ExpandedLandingPageView> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetExpandedLandingPageViewMethodHelper(), responseObserver);
+      asyncUnimplementedUnaryCall(getGetExpandedLandingPageViewMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
-            getGetExpandedLandingPageViewMethodHelper(),
+            getGetExpandedLandingPageViewMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 com.google.ads.googleads.v1.services.GetExpandedLandingPageViewRequest,
@@ -126,19 +140,15 @@ public final class ExpandedLandingPageViewServiceGrpc {
    * Service to fetch expanded landing page views.
    * </pre>
    */
-  public static final class ExpandedLandingPageViewServiceStub extends io.grpc.stub.AbstractStub<ExpandedLandingPageViewServiceStub> {
-    private ExpandedLandingPageViewServiceStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private ExpandedLandingPageViewServiceStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class ExpandedLandingPageViewServiceStub extends io.grpc.stub.AbstractAsyncStub<ExpandedLandingPageViewServiceStub> {
+    private ExpandedLandingPageViewServiceStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected ExpandedLandingPageViewServiceStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected ExpandedLandingPageViewServiceStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new ExpandedLandingPageViewServiceStub(channel, callOptions);
     }
 
@@ -150,7 +160,7 @@ public final class ExpandedLandingPageViewServiceGrpc {
     public void getExpandedLandingPageView(com.google.ads.googleads.v1.services.GetExpandedLandingPageViewRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v1.resources.ExpandedLandingPageView> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(getGetExpandedLandingPageViewMethodHelper(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getGetExpandedLandingPageViewMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -159,19 +169,15 @@ public final class ExpandedLandingPageViewServiceGrpc {
    * Service to fetch expanded landing page views.
    * </pre>
    */
-  public static final class ExpandedLandingPageViewServiceBlockingStub extends io.grpc.stub.AbstractStub<ExpandedLandingPageViewServiceBlockingStub> {
-    private ExpandedLandingPageViewServiceBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private ExpandedLandingPageViewServiceBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class ExpandedLandingPageViewServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<ExpandedLandingPageViewServiceBlockingStub> {
+    private ExpandedLandingPageViewServiceBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected ExpandedLandingPageViewServiceBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected ExpandedLandingPageViewServiceBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new ExpandedLandingPageViewServiceBlockingStub(channel, callOptions);
     }
 
@@ -182,7 +188,7 @@ public final class ExpandedLandingPageViewServiceGrpc {
      */
     public com.google.ads.googleads.v1.resources.ExpandedLandingPageView getExpandedLandingPageView(com.google.ads.googleads.v1.services.GetExpandedLandingPageViewRequest request) {
       return blockingUnaryCall(
-          getChannel(), getGetExpandedLandingPageViewMethodHelper(), getCallOptions(), request);
+          getChannel(), getGetExpandedLandingPageViewMethod(), getCallOptions(), request);
     }
   }
 
@@ -191,19 +197,15 @@ public final class ExpandedLandingPageViewServiceGrpc {
    * Service to fetch expanded landing page views.
    * </pre>
    */
-  public static final class ExpandedLandingPageViewServiceFutureStub extends io.grpc.stub.AbstractStub<ExpandedLandingPageViewServiceFutureStub> {
-    private ExpandedLandingPageViewServiceFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private ExpandedLandingPageViewServiceFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class ExpandedLandingPageViewServiceFutureStub extends io.grpc.stub.AbstractFutureStub<ExpandedLandingPageViewServiceFutureStub> {
+    private ExpandedLandingPageViewServiceFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected ExpandedLandingPageViewServiceFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected ExpandedLandingPageViewServiceFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new ExpandedLandingPageViewServiceFutureStub(channel, callOptions);
     }
 
@@ -215,7 +217,7 @@ public final class ExpandedLandingPageViewServiceGrpc {
     public com.google.common.util.concurrent.ListenableFuture<com.google.ads.googleads.v1.resources.ExpandedLandingPageView> getExpandedLandingPageView(
         com.google.ads.googleads.v1.services.GetExpandedLandingPageViewRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(getGetExpandedLandingPageViewMethodHelper(), getCallOptions()), request);
+          getChannel().newCall(getGetExpandedLandingPageViewMethod(), getCallOptions()), request);
     }
   }
 
@@ -303,7 +305,7 @@ public final class ExpandedLandingPageViewServiceGrpc {
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new ExpandedLandingPageViewServiceFileDescriptorSupplier())
-              .addMethod(getGetExpandedLandingPageViewMethodHelper())
+              .addMethod(getGetExpandedLandingPageViewMethod())
               .build();
         }
       }

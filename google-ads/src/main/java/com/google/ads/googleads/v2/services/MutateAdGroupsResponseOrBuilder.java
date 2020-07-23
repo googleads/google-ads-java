@@ -16,6 +16,7 @@ public interface MutateAdGroupsResponseOrBuilder extends
    * </pre>
    *
    * <code>.google.rpc.Status partial_failure_error = 3;</code>
+   * @return Whether the partialFailureError field is set.
    */
   boolean hasPartialFailureError();
   /**
@@ -27,6 +28,7 @@ public interface MutateAdGroupsResponseOrBuilder extends
    * </pre>
    *
    * <code>.google.rpc.Status partial_failure_error = 3;</code>
+   * @return The partialFailureError.
    */
   com.google.rpc.Status getPartialFailureError();
   /**

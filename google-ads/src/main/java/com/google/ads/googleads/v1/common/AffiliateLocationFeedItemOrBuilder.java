@@ -13,6 +13,7 @@ public interface AffiliateLocationFeedItemOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue business_name = 1;</code>
+   * @return Whether the businessName field is set.
    */
   boolean hasBusinessName();
   /**
@@ -21,6 +22,7 @@ public interface AffiliateLocationFeedItemOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue business_name = 1;</code>
+   * @return The businessName.
    */
   com.google.protobuf.StringValue getBusinessName();
   /**
@@ -38,6 +40,7 @@ public interface AffiliateLocationFeedItemOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue address_line_1 = 2;</code>
+   * @return Whether the addressLine1 field is set.
    */
   boolean hasAddressLine1();
   /**
@@ -46,6 +49,7 @@ public interface AffiliateLocationFeedItemOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue address_line_1 = 2;</code>
+   * @return The addressLine1.
    */
   com.google.protobuf.StringValue getAddressLine1();
   /**
@@ -63,6 +67,7 @@ public interface AffiliateLocationFeedItemOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue address_line_2 = 3;</code>
+   * @return Whether the addressLine2 field is set.
    */
   boolean hasAddressLine2();
   /**
@@ -71,6 +76,7 @@ public interface AffiliateLocationFeedItemOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue address_line_2 = 3;</code>
+   * @return The addressLine2.
    */
   com.google.protobuf.StringValue getAddressLine2();
   /**
@@ -88,6 +94,7 @@ public interface AffiliateLocationFeedItemOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue city = 4;</code>
+   * @return Whether the city field is set.
    */
   boolean hasCity();
   /**
@@ -96,6 +103,7 @@ public interface AffiliateLocationFeedItemOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue city = 4;</code>
+   * @return The city.
    */
   com.google.protobuf.StringValue getCity();
   /**
@@ -113,6 +121,7 @@ public interface AffiliateLocationFeedItemOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue province = 5;</code>
+   * @return Whether the province field is set.
    */
   boolean hasProvince();
   /**
@@ -121,6 +130,7 @@ public interface AffiliateLocationFeedItemOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue province = 5;</code>
+   * @return The province.
    */
   com.google.protobuf.StringValue getProvince();
   /**
@@ -138,6 +148,7 @@ public interface AffiliateLocationFeedItemOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue postal_code = 6;</code>
+   * @return Whether the postalCode field is set.
    */
   boolean hasPostalCode();
   /**
@@ -146,6 +157,7 @@ public interface AffiliateLocationFeedItemOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue postal_code = 6;</code>
+   * @return The postalCode.
    */
   com.google.protobuf.StringValue getPostalCode();
   /**
@@ -163,6 +175,7 @@ public interface AffiliateLocationFeedItemOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue country_code = 7;</code>
+   * @return Whether the countryCode field is set.
    */
   boolean hasCountryCode();
   /**
@@ -171,6 +184,7 @@ public interface AffiliateLocationFeedItemOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue country_code = 7;</code>
+   * @return The countryCode.
    */
   com.google.protobuf.StringValue getCountryCode();
   /**
@@ -188,6 +202,7 @@ public interface AffiliateLocationFeedItemOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue phone_number = 8;</code>
+   * @return Whether the phoneNumber field is set.
    */
   boolean hasPhoneNumber();
   /**
@@ -196,6 +211,7 @@ public interface AffiliateLocationFeedItemOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue phone_number = 8;</code>
+   * @return The phoneNumber.
    */
   com.google.protobuf.StringValue getPhoneNumber();
   /**
@@ -213,6 +229,7 @@ public interface AffiliateLocationFeedItemOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value chain_id = 9;</code>
+   * @return Whether the chainId field is set.
    */
   boolean hasChainId();
   /**
@@ -221,6 +238,7 @@ public interface AffiliateLocationFeedItemOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value chain_id = 9;</code>
+   * @return The chainId.
    */
   com.google.protobuf.Int64Value getChainId();
   /**
@@ -238,6 +256,7 @@ public interface AffiliateLocationFeedItemOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue chain_name = 10;</code>
+   * @return Whether the chainName field is set.
    */
   boolean hasChainName();
   /**
@@ -246,6 +265,7 @@ public interface AffiliateLocationFeedItemOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue chain_name = 10;</code>
+   * @return The chainName.
    */
   com.google.protobuf.StringValue getChainName();
   /**

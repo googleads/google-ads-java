@@ -9,92 +9,100 @@ public interface SearchTermViewOrBuilder extends
 
   /**
    * <pre>
-   * The resource name of the search term view.
+   * Output only. The resource name of the search term view.
    * Search term view resource names have the form:
    * `customers/{customer_id}/searchTermViews/{campaign_id}~{ad_group_id}~{URL-base64_search_term}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The resourceName.
    */
   java.lang.String getResourceName();
   /**
    * <pre>
-   * The resource name of the search term view.
+   * Output only. The resource name of the search term view.
    * Search term view resource names have the form:
    * `customers/{customer_id}/searchTermViews/{campaign_id}~{ad_group_id}~{URL-base64_search_term}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The bytes for resourceName.
    */
   com.google.protobuf.ByteString
       getResourceNameBytes();
 
   /**
    * <pre>
-   * The search term.
+   * Output only. The search term.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue search_term = 2;</code>
+   * <code>.google.protobuf.StringValue search_term = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the searchTerm field is set.
    */
   boolean hasSearchTerm();
   /**
    * <pre>
-   * The search term.
+   * Output only. The search term.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue search_term = 2;</code>
+   * <code>.google.protobuf.StringValue search_term = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The searchTerm.
    */
   com.google.protobuf.StringValue getSearchTerm();
   /**
    * <pre>
-   * The search term.
+   * Output only. The search term.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue search_term = 2;</code>
+   * <code>.google.protobuf.StringValue search_term = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.protobuf.StringValueOrBuilder getSearchTermOrBuilder();
 
   /**
    * <pre>
-   * The ad group the search term served in.
+   * Output only. The ad group the search term served in.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue ad_group = 3;</code>
+   * <code>.google.protobuf.StringValue ad_group = 3 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return Whether the adGroup field is set.
    */
   boolean hasAdGroup();
   /**
    * <pre>
-   * The ad group the search term served in.
+   * Output only. The ad group the search term served in.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue ad_group = 3;</code>
+   * <code>.google.protobuf.StringValue ad_group = 3 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The adGroup.
    */
   com.google.protobuf.StringValue getAdGroup();
   /**
    * <pre>
-   * The ad group the search term served in.
+   * Output only. The ad group the search term served in.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue ad_group = 3;</code>
+   * <code>.google.protobuf.StringValue ad_group = 3 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    */
   com.google.protobuf.StringValueOrBuilder getAdGroupOrBuilder();
 
   /**
    * <pre>
-   * Indicates whether the search term is currently one of your
+   * Output only. Indicates whether the search term is currently one of your
    * targeted or excluded keywords.
    * </pre>
    *
-   * <code>.google.ads.googleads.v2.enums.SearchTermTargetingStatusEnum.SearchTermTargetingStatus status = 4;</code>
+   * <code>.google.ads.googleads.v2.enums.SearchTermTargetingStatusEnum.SearchTermTargetingStatus status = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The enum numeric value on the wire for status.
    */
   int getStatusValue();
   /**
    * <pre>
-   * Indicates whether the search term is currently one of your
+   * Output only. Indicates whether the search term is currently one of your
    * targeted or excluded keywords.
    * </pre>
    *
-   * <code>.google.ads.googleads.v2.enums.SearchTermTargetingStatusEnum.SearchTermTargetingStatus status = 4;</code>
+   * <code>.google.ads.googleads.v2.enums.SearchTermTargetingStatusEnum.SearchTermTargetingStatus status = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The status.
    */
   com.google.ads.googleads.v2.enums.SearchTermTargetingStatusEnum.SearchTermTargetingStatus getStatus();
 }

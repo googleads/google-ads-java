@@ -10,7 +10,7 @@ package com.google.ads.googleads.v4.resources;
  *
  * Protobuf type {@code google.ads.googleads.v4.resources.UserInterest}
  */
-public  final class UserInterest extends
+public final class UserInterest extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.resources.UserInterest)
     UserInterestOrBuilder {
@@ -176,6 +176,7 @@ private static final long serialVersionUID = 0L;
    * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return The resourceName.
    */
+  @java.lang.Override
   public java.lang.String getResourceName() {
     java.lang.Object ref = resourceName_;
     if (ref instanceof java.lang.String) {
@@ -198,6 +199,7 @@ private static final long serialVersionUID = 0L;
    * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return The bytes for resourceName.
    */
+  @java.lang.Override
   public com.google.protobuf.ByteString
       getResourceNameBytes() {
     java.lang.Object ref = resourceName_;
@@ -222,7 +224,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.UserInterestTaxonomyTypeEnum.UserInterestTaxonomyType taxonomy_type = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The enum numeric value on the wire for taxonomyType.
    */
-  public int getTaxonomyTypeValue() {
+  @java.lang.Override public int getTaxonomyTypeValue() {
     return taxonomyType_;
   }
   /**
@@ -233,7 +235,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.UserInterestTaxonomyTypeEnum.UserInterestTaxonomyType taxonomy_type = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The taxonomyType.
    */
-  public com.google.ads.googleads.v4.enums.UserInterestTaxonomyTypeEnum.UserInterestTaxonomyType getTaxonomyType() {
+  @java.lang.Override public com.google.ads.googleads.v4.enums.UserInterestTaxonomyTypeEnum.UserInterestTaxonomyType getTaxonomyType() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v4.enums.UserInterestTaxonomyTypeEnum.UserInterestTaxonomyType result = com.google.ads.googleads.v4.enums.UserInterestTaxonomyTypeEnum.UserInterestTaxonomyType.valueOf(taxonomyType_);
     return result == null ? com.google.ads.googleads.v4.enums.UserInterestTaxonomyTypeEnum.UserInterestTaxonomyType.UNRECOGNIZED : result;
@@ -249,6 +251,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int64Value user_interest_id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the userInterestId field is set.
    */
+  @java.lang.Override
   public boolean hasUserInterestId() {
     return userInterestId_ != null;
   }
@@ -260,6 +263,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int64Value user_interest_id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The userInterestId.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getUserInterestId() {
     return userInterestId_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : userInterestId_;
   }
@@ -270,6 +274,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int64Value user_interest_id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getUserInterestIdOrBuilder() {
     return getUserInterestId();
   }
@@ -284,6 +289,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue name = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the name field is set.
    */
+  @java.lang.Override
   public boolean hasName() {
     return name_ != null;
   }
@@ -295,6 +301,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue name = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The name.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getName() {
     return name_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : name_;
   }
@@ -305,6 +312,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue name = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getNameOrBuilder() {
     return getName();
   }
@@ -319,6 +327,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue user_interest_parent = 5 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return Whether the userInterestParent field is set.
    */
+  @java.lang.Override
   public boolean hasUserInterestParent() {
     return userInterestParent_ != null;
   }
@@ -330,6 +339,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue user_interest_parent = 5 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return The userInterestParent.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getUserInterestParent() {
     return userInterestParent_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : userInterestParent_;
   }
@@ -340,6 +350,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue user_interest_parent = 5 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getUserInterestParentOrBuilder() {
     return getUserInterestParent();
   }
@@ -354,6 +365,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.BoolValue launched_to_all = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the launchedToAll field is set.
    */
+  @java.lang.Override
   public boolean hasLaunchedToAll() {
     return launchedToAll_ != null;
   }
@@ -365,6 +377,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.BoolValue launched_to_all = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The launchedToAll.
    */
+  @java.lang.Override
   public com.google.protobuf.BoolValue getLaunchedToAll() {
     return launchedToAll_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : launchedToAll_;
   }
@@ -375,6 +388,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.BoolValue launched_to_all = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.BoolValueOrBuilder getLaunchedToAllOrBuilder() {
     return getLaunchedToAll();
   }
@@ -388,6 +402,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.common.CriterionCategoryAvailability availabilities = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public java.util.List<com.google.ads.googleads.v4.common.CriterionCategoryAvailability> getAvailabilitiesList() {
     return availabilities_;
   }
@@ -398,6 +413,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.common.CriterionCategoryAvailability availabilities = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public java.util.List<? extends com.google.ads.googleads.v4.common.CriterionCategoryAvailabilityOrBuilder> 
       getAvailabilitiesOrBuilderList() {
     return availabilities_;
@@ -409,6 +425,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.common.CriterionCategoryAvailability availabilities = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public int getAvailabilitiesCount() {
     return availabilities_.size();
   }
@@ -419,6 +436,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.common.CriterionCategoryAvailability availabilities = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.CriterionCategoryAvailability getAvailabilities(int index) {
     return availabilities_.get(index);
   }
@@ -429,6 +447,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.common.CriterionCategoryAvailability availabilities = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.CriterionCategoryAvailabilityOrBuilder getAvailabilitiesOrBuilder(
       int index) {
     return availabilities_.get(index);
@@ -1048,7 +1067,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.UserInterestTaxonomyTypeEnum.UserInterestTaxonomyType taxonomy_type = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The enum numeric value on the wire for taxonomyType.
      */
-    public int getTaxonomyTypeValue() {
+    @java.lang.Override public int getTaxonomyTypeValue() {
       return taxonomyType_;
     }
     /**
@@ -1061,6 +1080,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setTaxonomyTypeValue(int value) {
+      
       taxonomyType_ = value;
       onChanged();
       return this;
@@ -1073,6 +1093,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.UserInterestTaxonomyTypeEnum.UserInterestTaxonomyType taxonomy_type = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The taxonomyType.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.enums.UserInterestTaxonomyTypeEnum.UserInterestTaxonomyType getTaxonomyType() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v4.enums.UserInterestTaxonomyTypeEnum.UserInterestTaxonomyType result = com.google.ads.googleads.v4.enums.UserInterestTaxonomyTypeEnum.UserInterestTaxonomyType.valueOf(taxonomyType_);

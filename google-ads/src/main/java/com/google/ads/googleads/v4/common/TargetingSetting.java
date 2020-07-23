@@ -12,7 +12,7 @@ package com.google.ads.googleads.v4.common;
  *
  * Protobuf type {@code google.ads.googleads.v4.common.TargetingSetting}
  */
-public  final class TargetingSetting extends
+public final class TargetingSetting extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.common.TargetingSetting)
     TargetingSettingOrBuilder {
@@ -123,6 +123,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.common.TargetRestriction target_restrictions = 1;</code>
    */
+  @java.lang.Override
   public java.util.List<com.google.ads.googleads.v4.common.TargetRestriction> getTargetRestrictionsList() {
     return targetRestrictions_;
   }
@@ -134,6 +135,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.common.TargetRestriction target_restrictions = 1;</code>
    */
+  @java.lang.Override
   public java.util.List<? extends com.google.ads.googleads.v4.common.TargetRestrictionOrBuilder> 
       getTargetRestrictionsOrBuilderList() {
     return targetRestrictions_;
@@ -146,6 +148,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.common.TargetRestriction target_restrictions = 1;</code>
    */
+  @java.lang.Override
   public int getTargetRestrictionsCount() {
     return targetRestrictions_.size();
   }
@@ -157,6 +160,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.common.TargetRestriction target_restrictions = 1;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.TargetRestriction getTargetRestrictions(int index) {
     return targetRestrictions_.get(index);
   }
@@ -168,6 +172,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.common.TargetRestriction target_restrictions = 1;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.TargetRestrictionOrBuilder getTargetRestrictionsOrBuilder(
       int index) {
     return targetRestrictions_.get(index);
@@ -184,6 +189,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.common.TargetRestrictionOperation target_restriction_operations = 2;</code>
    */
+  @java.lang.Override
   public java.util.List<com.google.ads.googleads.v4.common.TargetRestrictionOperation> getTargetRestrictionOperationsList() {
     return targetRestrictionOperations_;
   }
@@ -196,6 +202,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.common.TargetRestrictionOperation target_restriction_operations = 2;</code>
    */
+  @java.lang.Override
   public java.util.List<? extends com.google.ads.googleads.v4.common.TargetRestrictionOperationOrBuilder> 
       getTargetRestrictionOperationsOrBuilderList() {
     return targetRestrictionOperations_;
@@ -209,6 +216,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.common.TargetRestrictionOperation target_restriction_operations = 2;</code>
    */
+  @java.lang.Override
   public int getTargetRestrictionOperationsCount() {
     return targetRestrictionOperations_.size();
   }
@@ -221,6 +229,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.common.TargetRestrictionOperation target_restriction_operations = 2;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.TargetRestrictionOperation getTargetRestrictionOperations(int index) {
     return targetRestrictionOperations_.get(index);
   }
@@ -233,6 +242,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.common.TargetRestrictionOperation target_restriction_operations = 2;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.TargetRestrictionOperationOrBuilder getTargetRestrictionOperationsOrBuilder(
       int index) {
     return targetRestrictionOperations_.get(index);

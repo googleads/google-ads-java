@@ -69,6 +69,22 @@ import javax.annotation.Generated;
 @BetaApi
 public class OfflineUserDataJobServiceSettings
     extends ClientSettings<OfflineUserDataJobServiceSettings> {
+  /** Returns the object with the settings used for calls to runOfflineUserDataJob. */
+  public UnaryCallSettings<RunOfflineUserDataJobRequest, Operation>
+      runOfflineUserDataJobSettings() {
+    return ((OfflineUserDataJobServiceStubSettings) getStubSettings())
+        .runOfflineUserDataJobSettings();
+  }
+
+  /** Returns the object with the settings used for calls to runOfflineUserDataJob. */
+  @BetaApi(
+      "The surface for long-running operations is not stable yet and may change in the future.")
+  public OperationCallSettings<RunOfflineUserDataJobRequest, Empty, Empty>
+      runOfflineUserDataJobOperationSettings() {
+    return ((OfflineUserDataJobServiceStubSettings) getStubSettings())
+        .runOfflineUserDataJobOperationSettings();
+  }
+
   /** Returns the object with the settings used for calls to createOfflineUserDataJob. */
   public UnaryCallSettings<CreateOfflineUserDataJobRequest, CreateOfflineUserDataJobResponse>
       createOfflineUserDataJobSettings() {
@@ -89,22 +105,6 @@ public class OfflineUserDataJobServiceSettings
       addOfflineUserDataJobOperationsSettings() {
     return ((OfflineUserDataJobServiceStubSettings) getStubSettings())
         .addOfflineUserDataJobOperationsSettings();
-  }
-
-  /** Returns the object with the settings used for calls to runOfflineUserDataJob. */
-  public UnaryCallSettings<RunOfflineUserDataJobRequest, Operation>
-      runOfflineUserDataJobSettings() {
-    return ((OfflineUserDataJobServiceStubSettings) getStubSettings())
-        .runOfflineUserDataJobSettings();
-  }
-
-  /** Returns the object with the settings used for calls to runOfflineUserDataJob. */
-  @BetaApi(
-      "The surface for long-running operations is not stable yet and may change in the future.")
-  public OperationCallSettings<RunOfflineUserDataJobRequest, Empty, Empty>
-      runOfflineUserDataJobOperationSettings() {
-    return ((OfflineUserDataJobServiceStubSettings) getStubSettings())
-        .runOfflineUserDataJobOperationSettings();
   }
 
   public static final OfflineUserDataJobServiceSettings create(
@@ -205,6 +205,20 @@ public class OfflineUserDataJobServiceSettings
       return this;
     }
 
+    /** Returns the builder for the settings used for calls to runOfflineUserDataJob. */
+    public UnaryCallSettings.Builder<RunOfflineUserDataJobRequest, Operation>
+        runOfflineUserDataJobSettings() {
+      return getStubSettingsBuilder().runOfflineUserDataJobSettings();
+    }
+
+    /** Returns the builder for the settings used for calls to runOfflineUserDataJob. */
+    @BetaApi(
+        "The surface for long-running operations is not stable yet and may change in the future.")
+    public OperationCallSettings.Builder<RunOfflineUserDataJobRequest, Empty, Empty>
+        runOfflineUserDataJobOperationSettings() {
+      return getStubSettingsBuilder().runOfflineUserDataJobOperationSettings();
+    }
+
     /** Returns the builder for the settings used for calls to createOfflineUserDataJob. */
     public UnaryCallSettings.Builder<
             CreateOfflineUserDataJobRequest, CreateOfflineUserDataJobResponse>
@@ -223,20 +237,6 @@ public class OfflineUserDataJobServiceSettings
             AddOfflineUserDataJobOperationsRequest, AddOfflineUserDataJobOperationsResponse>
         addOfflineUserDataJobOperationsSettings() {
       return getStubSettingsBuilder().addOfflineUserDataJobOperationsSettings();
-    }
-
-    /** Returns the builder for the settings used for calls to runOfflineUserDataJob. */
-    public UnaryCallSettings.Builder<RunOfflineUserDataJobRequest, Operation>
-        runOfflineUserDataJobSettings() {
-      return getStubSettingsBuilder().runOfflineUserDataJobSettings();
-    }
-
-    /** Returns the builder for the settings used for calls to runOfflineUserDataJob. */
-    @BetaApi(
-        "The surface for long-running operations is not stable yet and may change in the future.")
-    public OperationCallSettings.Builder<RunOfflineUserDataJobRequest, Empty, Empty>
-        runOfflineUserDataJobOperationSettings() {
-      return getStubSettingsBuilder().runOfflineUserDataJobOperationSettings();
     }
 
     @Override

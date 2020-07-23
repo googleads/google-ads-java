@@ -10,7 +10,7 @@ package com.google.ads.googleads.v2.resources;
  *
  * Protobuf type {@code google.ads.googleads.v2.resources.CustomInterest}
  */
-public  final class CustomInterest extends
+public final class CustomInterest extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v2.resources.CustomInterest)
     CustomInterestOrBuilder {
@@ -24,6 +24,13 @@ private static final long serialVersionUID = 0L;
     status_ = 0;
     type_ = 0;
     members_ = java.util.Collections.emptyList();
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new CustomInterest();
   }
 
   @java.lang.Override
@@ -108,9 +115,9 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 58: {
-            if (!((mutable_bitField0_ & 0x00000040) != 0)) {
+            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
               members_ = new java.util.ArrayList<com.google.ads.googleads.v2.resources.CustomInterestMember>();
-              mutable_bitField0_ |= 0x00000040;
+              mutable_bitField0_ |= 0x00000001;
             }
             members_.add(
                 input.readMessage(com.google.ads.googleads.v2.resources.CustomInterestMember.parser(), extensionRegistry));
@@ -131,7 +138,7 @@ private static final long serialVersionUID = 0L;
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
     } finally {
-      if (((mutable_bitField0_ & 0x00000040) != 0)) {
+      if (((mutable_bitField0_ & 0x00000001) != 0)) {
         members_ = java.util.Collections.unmodifiableList(members_);
       }
       this.unknownFields = unknownFields.build();
@@ -151,18 +158,19 @@ private static final long serialVersionUID = 0L;
             com.google.ads.googleads.v2.resources.CustomInterest.class, com.google.ads.googleads.v2.resources.CustomInterest.Builder.class);
   }
 
-  private int bitField0_;
   public static final int RESOURCE_NAME_FIELD_NUMBER = 1;
   private volatile java.lang.Object resourceName_;
   /**
    * <pre>
-   * The resource name of the custom interest.
+   * Immutable. The resource name of the custom interest.
    * Custom interest resource names have the form:
    * `customers/{customer_id}/customInterests/{custom_interest_id}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * @return The resourceName.
    */
+  @java.lang.Override
   public java.lang.String getResourceName() {
     java.lang.Object ref = resourceName_;
     if (ref instanceof java.lang.String) {
@@ -177,13 +185,15 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The resource name of the custom interest.
+   * Immutable. The resource name of the custom interest.
    * Custom interest resource names have the form:
    * `customers/{customer_id}/customInterests/{custom_interest_id}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * @return The bytes for resourceName.
    */
+  @java.lang.Override
   public com.google.protobuf.ByteString
       getResourceNameBytes() {
     java.lang.Object ref = resourceName_;
@@ -202,31 +212,36 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.Int64Value id_;
   /**
    * <pre>
-   * Id of the custom interest.
+   * Output only. Id of the custom interest.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value id = 2;</code>
+   * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the id field is set.
    */
+  @java.lang.Override
   public boolean hasId() {
     return id_ != null;
   }
   /**
    * <pre>
-   * Id of the custom interest.
+   * Output only. Id of the custom interest.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value id = 2;</code>
+   * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The id.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getId() {
     return id_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : id_;
   }
   /**
    * <pre>
-   * Id of the custom interest.
+   * Output only. Id of the custom interest.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value id = 2;</code>
+   * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getIdOrBuilder() {
     return getId();
   }
@@ -240,8 +255,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.enums.CustomInterestStatusEnum.CustomInterestStatus status = 3;</code>
+   * @return The enum numeric value on the wire for status.
    */
-  public int getStatusValue() {
+  @java.lang.Override public int getStatusValue() {
     return status_;
   }
   /**
@@ -251,8 +267,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.enums.CustomInterestStatusEnum.CustomInterestStatus status = 3;</code>
+   * @return The status.
    */
-  public com.google.ads.googleads.v2.enums.CustomInterestStatusEnum.CustomInterestStatus getStatus() {
+  @java.lang.Override public com.google.ads.googleads.v2.enums.CustomInterestStatusEnum.CustomInterestStatus getStatus() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v2.enums.CustomInterestStatusEnum.CustomInterestStatus result = com.google.ads.googleads.v2.enums.CustomInterestStatusEnum.CustomInterestStatus.valueOf(status_);
     return result == null ? com.google.ads.googleads.v2.enums.CustomInterestStatusEnum.CustomInterestStatus.UNRECOGNIZED : result;
@@ -268,7 +285,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue name = 4;</code>
+   * @return Whether the name field is set.
    */
+  @java.lang.Override
   public boolean hasName() {
     return name_ != null;
   }
@@ -280,7 +299,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue name = 4;</code>
+   * @return The name.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getName() {
     return name_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : name_;
   }
@@ -293,6 +314,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue name = 4;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getNameOrBuilder() {
     return getName();
   }
@@ -306,8 +328,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.enums.CustomInterestTypeEnum.CustomInterestType type = 5;</code>
+   * @return The enum numeric value on the wire for type.
    */
-  public int getTypeValue() {
+  @java.lang.Override public int getTypeValue() {
     return type_;
   }
   /**
@@ -317,8 +340,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.enums.CustomInterestTypeEnum.CustomInterestType type = 5;</code>
+   * @return The type.
    */
-  public com.google.ads.googleads.v2.enums.CustomInterestTypeEnum.CustomInterestType getType() {
+  @java.lang.Override public com.google.ads.googleads.v2.enums.CustomInterestTypeEnum.CustomInterestType getType() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v2.enums.CustomInterestTypeEnum.CustomInterestType result = com.google.ads.googleads.v2.enums.CustomInterestTypeEnum.CustomInterestType.valueOf(type_);
     return result == null ? com.google.ads.googleads.v2.enums.CustomInterestTypeEnum.CustomInterestType.UNRECOGNIZED : result;
@@ -332,7 +356,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue description = 6;</code>
+   * @return Whether the description field is set.
    */
+  @java.lang.Override
   public boolean hasDescription() {
     return description_ != null;
   }
@@ -342,7 +368,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue description = 6;</code>
+   * @return The description.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getDescription() {
     return description_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : description_;
   }
@@ -353,6 +381,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue description = 6;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getDescriptionOrBuilder() {
     return getDescription();
   }
@@ -368,6 +397,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v2.resources.CustomInterestMember members = 7;</code>
    */
+  @java.lang.Override
   public java.util.List<com.google.ads.googleads.v2.resources.CustomInterestMember> getMembersList() {
     return members_;
   }
@@ -380,6 +410,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v2.resources.CustomInterestMember members = 7;</code>
    */
+  @java.lang.Override
   public java.util.List<? extends com.google.ads.googleads.v2.resources.CustomInterestMemberOrBuilder> 
       getMembersOrBuilderList() {
     return members_;
@@ -393,6 +424,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v2.resources.CustomInterestMember members = 7;</code>
    */
+  @java.lang.Override
   public int getMembersCount() {
     return members_.size();
   }
@@ -405,6 +437,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v2.resources.CustomInterestMember members = 7;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.resources.CustomInterestMember getMembers(int index) {
     return members_.get(index);
   }
@@ -417,6 +450,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v2.resources.CustomInterestMember members = 7;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.resources.CustomInterestMemberOrBuilder getMembersOrBuilder(
       int index) {
     return members_.get(index);
@@ -726,7 +760,7 @@ private static final long serialVersionUID = 0L;
       }
       if (membersBuilder_ == null) {
         members_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000040);
+        bitField0_ = (bitField0_ & ~0x00000001);
       } else {
         membersBuilder_.clear();
       }
@@ -757,7 +791,6 @@ private static final long serialVersionUID = 0L;
     public com.google.ads.googleads.v2.resources.CustomInterest buildPartial() {
       com.google.ads.googleads.v2.resources.CustomInterest result = new com.google.ads.googleads.v2.resources.CustomInterest(this);
       int from_bitField0_ = bitField0_;
-      int to_bitField0_ = 0;
       result.resourceName_ = resourceName_;
       if (idBuilder_ == null) {
         result.id_ = id_;
@@ -777,15 +810,14 @@ private static final long serialVersionUID = 0L;
         result.description_ = descriptionBuilder_.build();
       }
       if (membersBuilder_ == null) {
-        if (((bitField0_ & 0x00000040) != 0)) {
+        if (((bitField0_ & 0x00000001) != 0)) {
           members_ = java.util.Collections.unmodifiableList(members_);
-          bitField0_ = (bitField0_ & ~0x00000040);
+          bitField0_ = (bitField0_ & ~0x00000001);
         }
         result.members_ = members_;
       } else {
         result.members_ = membersBuilder_.build();
       }
-      result.bitField0_ = to_bitField0_;
       onBuilt();
       return result;
     }
@@ -857,7 +889,7 @@ private static final long serialVersionUID = 0L;
         if (!other.members_.isEmpty()) {
           if (members_.isEmpty()) {
             members_ = other.members_;
-            bitField0_ = (bitField0_ & ~0x00000040);
+            bitField0_ = (bitField0_ & ~0x00000001);
           } else {
             ensureMembersIsMutable();
             members_.addAll(other.members_);
@@ -870,7 +902,7 @@ private static final long serialVersionUID = 0L;
             membersBuilder_.dispose();
             membersBuilder_ = null;
             members_ = other.members_;
-            bitField0_ = (bitField0_ & ~0x00000040);
+            bitField0_ = (bitField0_ & ~0x00000001);
             membersBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getMembersFieldBuilder() : null;
@@ -912,12 +944,13 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object resourceName_ = "";
     /**
      * <pre>
-     * The resource name of the custom interest.
+     * Immutable. The resource name of the custom interest.
      * Custom interest resource names have the form:
      * `customers/{customer_id}/customInterests/{custom_interest_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * @return The resourceName.
      */
     public java.lang.String getResourceName() {
       java.lang.Object ref = resourceName_;
@@ -933,12 +966,13 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the custom interest.
+     * Immutable. The resource name of the custom interest.
      * Custom interest resource names have the form:
      * `customers/{customer_id}/customInterests/{custom_interest_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * @return The bytes for resourceName.
      */
     public com.google.protobuf.ByteString
         getResourceNameBytes() {
@@ -955,12 +989,14 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the custom interest.
+     * Immutable. The resource name of the custom interest.
      * Custom interest resource names have the form:
      * `customers/{customer_id}/customInterests/{custom_interest_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * @param value The resourceName to set.
+     * @return This builder for chaining.
      */
     public Builder setResourceName(
         java.lang.String value) {
@@ -974,12 +1010,13 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the custom interest.
+     * Immutable. The resource name of the custom interest.
      * Custom interest resource names have the form:
      * `customers/{customer_id}/customInterests/{custom_interest_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * @return This builder for chaining.
      */
     public Builder clearResourceName() {
       
@@ -989,12 +1026,14 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the custom interest.
+     * Immutable. The resource name of the custom interest.
      * Custom interest resource names have the form:
      * `customers/{customer_id}/customInterests/{custom_interest_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * @param value The bytes for resourceName to set.
+     * @return This builder for chaining.
      */
     public Builder setResourceNameBytes(
         com.google.protobuf.ByteString value) {
@@ -1013,20 +1052,22 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> idBuilder_;
     /**
      * <pre>
-     * Id of the custom interest.
+     * Output only. Id of the custom interest.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 2;</code>
+     * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the id field is set.
      */
     public boolean hasId() {
       return idBuilder_ != null || id_ != null;
     }
     /**
      * <pre>
-     * Id of the custom interest.
+     * Output only. Id of the custom interest.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 2;</code>
+     * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The id.
      */
     public com.google.protobuf.Int64Value getId() {
       if (idBuilder_ == null) {
@@ -1037,10 +1078,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Id of the custom interest.
+     * Output only. Id of the custom interest.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 2;</code>
+     * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setId(com.google.protobuf.Int64Value value) {
       if (idBuilder_ == null) {
@@ -1057,10 +1098,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Id of the custom interest.
+     * Output only. Id of the custom interest.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 2;</code>
+     * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setId(
         com.google.protobuf.Int64Value.Builder builderForValue) {
@@ -1075,10 +1116,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Id of the custom interest.
+     * Output only. Id of the custom interest.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 2;</code>
+     * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder mergeId(com.google.protobuf.Int64Value value) {
       if (idBuilder_ == null) {
@@ -1097,10 +1138,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Id of the custom interest.
+     * Output only. Id of the custom interest.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 2;</code>
+     * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearId() {
       if (idBuilder_ == null) {
@@ -1115,10 +1156,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Id of the custom interest.
+     * Output only. Id of the custom interest.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 2;</code>
+     * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int64Value.Builder getIdBuilder() {
       
@@ -1127,10 +1168,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Id of the custom interest.
+     * Output only. Id of the custom interest.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 2;</code>
+     * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int64ValueOrBuilder getIdOrBuilder() {
       if (idBuilder_ != null) {
@@ -1142,10 +1183,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Id of the custom interest.
+     * Output only. Id of the custom interest.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 2;</code>
+     * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
@@ -1169,8 +1210,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.enums.CustomInterestStatusEnum.CustomInterestStatus status = 3;</code>
+     * @return The enum numeric value on the wire for status.
      */
-    public int getStatusValue() {
+    @java.lang.Override public int getStatusValue() {
       return status_;
     }
     /**
@@ -1180,8 +1222,11 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.enums.CustomInterestStatusEnum.CustomInterestStatus status = 3;</code>
+     * @param value The enum numeric value on the wire for status to set.
+     * @return This builder for chaining.
      */
     public Builder setStatusValue(int value) {
+      
       status_ = value;
       onChanged();
       return this;
@@ -1193,7 +1238,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.enums.CustomInterestStatusEnum.CustomInterestStatus status = 3;</code>
+     * @return The status.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v2.enums.CustomInterestStatusEnum.CustomInterestStatus getStatus() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v2.enums.CustomInterestStatusEnum.CustomInterestStatus result = com.google.ads.googleads.v2.enums.CustomInterestStatusEnum.CustomInterestStatus.valueOf(status_);
@@ -1206,6 +1253,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.enums.CustomInterestStatusEnum.CustomInterestStatus status = 3;</code>
+     * @param value The status to set.
+     * @return This builder for chaining.
      */
     public Builder setStatus(com.google.ads.googleads.v2.enums.CustomInterestStatusEnum.CustomInterestStatus value) {
       if (value == null) {
@@ -1223,6 +1272,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.enums.CustomInterestStatusEnum.CustomInterestStatus status = 3;</code>
+     * @return This builder for chaining.
      */
     public Builder clearStatus() {
       
@@ -1242,6 +1292,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue name = 4;</code>
+     * @return Whether the name field is set.
      */
     public boolean hasName() {
       return nameBuilder_ != null || name_ != null;
@@ -1254,6 +1305,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue name = 4;</code>
+     * @return The name.
      */
     public com.google.protobuf.StringValue getName() {
       if (nameBuilder_ == null) {
@@ -1410,8 +1462,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.enums.CustomInterestTypeEnum.CustomInterestType type = 5;</code>
+     * @return The enum numeric value on the wire for type.
      */
-    public int getTypeValue() {
+    @java.lang.Override public int getTypeValue() {
       return type_;
     }
     /**
@@ -1421,8 +1474,11 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.enums.CustomInterestTypeEnum.CustomInterestType type = 5;</code>
+     * @param value The enum numeric value on the wire for type to set.
+     * @return This builder for chaining.
      */
     public Builder setTypeValue(int value) {
+      
       type_ = value;
       onChanged();
       return this;
@@ -1434,7 +1490,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.enums.CustomInterestTypeEnum.CustomInterestType type = 5;</code>
+     * @return The type.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v2.enums.CustomInterestTypeEnum.CustomInterestType getType() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v2.enums.CustomInterestTypeEnum.CustomInterestType result = com.google.ads.googleads.v2.enums.CustomInterestTypeEnum.CustomInterestType.valueOf(type_);
@@ -1447,6 +1505,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.enums.CustomInterestTypeEnum.CustomInterestType type = 5;</code>
+     * @param value The type to set.
+     * @return This builder for chaining.
      */
     public Builder setType(com.google.ads.googleads.v2.enums.CustomInterestTypeEnum.CustomInterestType value) {
       if (value == null) {
@@ -1464,6 +1524,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.enums.CustomInterestTypeEnum.CustomInterestType type = 5;</code>
+     * @return This builder for chaining.
      */
     public Builder clearType() {
       
@@ -1481,6 +1542,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue description = 6;</code>
+     * @return Whether the description field is set.
      */
     public boolean hasDescription() {
       return descriptionBuilder_ != null || description_ != null;
@@ -1491,6 +1553,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue description = 6;</code>
+     * @return The description.
      */
     public com.google.protobuf.StringValue getDescription() {
       if (descriptionBuilder_ == null) {
@@ -1628,9 +1691,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.google.ads.googleads.v2.resources.CustomInterestMember> members_ =
       java.util.Collections.emptyList();
     private void ensureMembersIsMutable() {
-      if (!((bitField0_ & 0x00000040) != 0)) {
+      if (!((bitField0_ & 0x00000001) != 0)) {
         members_ = new java.util.ArrayList<com.google.ads.googleads.v2.resources.CustomInterestMember>(members_);
-        bitField0_ |= 0x00000040;
+        bitField0_ |= 0x00000001;
        }
     }
 
@@ -1846,7 +1909,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearMembers() {
       if (membersBuilder_ == null) {
         members_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000040);
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
       } else {
         membersBuilder_.clear();
@@ -1965,7 +2028,7 @@ private static final long serialVersionUID = 0L;
         membersBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.google.ads.googleads.v2.resources.CustomInterestMember, com.google.ads.googleads.v2.resources.CustomInterestMember.Builder, com.google.ads.googleads.v2.resources.CustomInterestMemberOrBuilder>(
                 members_,
-                ((bitField0_ & 0x00000040) != 0),
+                ((bitField0_ & 0x00000001) != 0),
                 getParentForChildren(),
                 isClean());
         members_ = null;

@@ -13,6 +13,7 @@ public interface PriceOfferOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue header = 1;</code>
+   * @return Whether the header field is set.
    */
   boolean hasHeader();
   /**
@@ -21,6 +22,7 @@ public interface PriceOfferOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue header = 1;</code>
+   * @return The header.
    */
   com.google.protobuf.StringValue getHeader();
   /**
@@ -38,6 +40,7 @@ public interface PriceOfferOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue description = 2;</code>
+   * @return Whether the description field is set.
    */
   boolean hasDescription();
   /**
@@ -46,6 +49,7 @@ public interface PriceOfferOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue description = 2;</code>
+   * @return The description.
    */
   com.google.protobuf.StringValue getDescription();
   /**
@@ -63,6 +67,7 @@ public interface PriceOfferOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.common.Money price = 3;</code>
+   * @return Whether the price field is set.
    */
   boolean hasPrice();
   /**
@@ -71,6 +76,7 @@ public interface PriceOfferOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.common.Money price = 3;</code>
+   * @return The price.
    */
   com.google.ads.googleads.v2.common.Money getPrice();
   /**
@@ -88,6 +94,7 @@ public interface PriceOfferOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.enums.PriceExtensionPriceUnitEnum.PriceExtensionPriceUnit unit = 4;</code>
+   * @return The enum numeric value on the wire for unit.
    */
   int getUnitValue();
   /**
@@ -96,6 +103,7 @@ public interface PriceOfferOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.enums.PriceExtensionPriceUnitEnum.PriceExtensionPriceUnit unit = 4;</code>
+   * @return The unit.
    */
   com.google.ads.googleads.v2.enums.PriceExtensionPriceUnitEnum.PriceExtensionPriceUnit getUnit();
 

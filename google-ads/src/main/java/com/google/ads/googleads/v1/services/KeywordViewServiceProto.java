@@ -33,36 +33,33 @@ public final class KeywordViewServiceProto {
       "ads.v1.services\0324google/ads/googleads/v1" +
       "/resources/keyword_view.proto\032\034google/ap" +
       "i/annotations.proto\032\027google/api/client.p" +
-      "roto\".\n\025GetKeywordViewRequest\022\025\n\rresourc" +
-      "e_name\030\001 \001(\t2\345\001\n\022KeywordViewService\022\261\001\n\016" +
-      "GetKeywordView\0227.google.ads.googleads.v1" +
-      ".services.GetKeywordViewRequest\032..google" +
-      ".ads.googleads.v1.resources.KeywordView\"" +
-      "6\202\323\344\223\0020\022./v1/{resource_name=customers/*/" +
-      "keywordViews/*}\032\033\312A\030googleads.googleapis" +
-      ".comB\376\001\n$com.google.ads.googleads.v1.ser" +
-      "vicesB\027KeywordViewServiceProtoP\001ZHgoogle" +
-      ".golang.org/genproto/googleapis/ads/goog" +
-      "leads/v1/services;services\242\002\003GAA\252\002 Googl" +
-      "e.Ads.GoogleAds.V1.Services\312\002 Google\\Ads" +
-      "\\GoogleAds\\V1\\Services\352\002$Google::Ads::Go" +
-      "ogleAds::V1::Servicesb\006proto3"
+      "roto\032\037google/api/field_behavior.proto\032\031g" +
+      "oogle/api/resource.proto\"\\\n\025GetKeywordVi" +
+      "ewRequest\022C\n\rresource_name\030\001 \001(\tB,\340A\002\372A&" +
+      "\n$googleads.googleapis.com/KeywordView2\365" +
+      "\001\n\022KeywordViewService\022\301\001\n\016GetKeywordView" +
+      "\0227.google.ads.googleads.v1.services.GetK" +
+      "eywordViewRequest\032..google.ads.googleads" +
+      ".v1.resources.KeywordView\"F\202\323\344\223\0020\022./v1/{" +
+      "resource_name=customers/*/keywordViews/*" +
+      "}\332A\rresource_name\032\033\312A\030googleads.googleap" +
+      "is.comB\376\001\n$com.google.ads.googleads.v1.s" +
+      "ervicesB\027KeywordViewServiceProtoP\001ZHgoog" +
+      "le.golang.org/genproto/googleapis/ads/go" +
+      "ogleads/v1/services;services\242\002\003GAA\252\002 Goo" +
+      "gle.Ads.GoogleAds.V1.Services\312\002 Google\\A" +
+      "ds\\GoogleAds\\V1\\Services\352\002$Google::Ads::" +
+      "GoogleAds::V1::Servicesb\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.ads.googleads.v1.resources.KeywordViewProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
           com.google.api.ClientProto.getDescriptor(),
-        }, assigner);
+          com.google.api.FieldBehaviorProto.getDescriptor(),
+          com.google.api.ResourceProto.getDescriptor(),
+        });
     internal_static_google_ads_googleads_v1_services_GetKeywordViewRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_google_ads_googleads_v1_services_GetKeywordViewRequest_fieldAccessorTable = new
@@ -72,12 +69,17 @@ public final class KeywordViewServiceProto {
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.ClientProto.defaultHost);
+    registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);
     registry.add(com.google.api.AnnotationsProto.http);
+    registry.add(com.google.api.ClientProto.methodSignature);
+    registry.add(com.google.api.ResourceProto.resourceReference);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.ads.googleads.v1.resources.KeywordViewProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
     com.google.api.ClientProto.getDescriptor();
+    com.google.api.FieldBehaviorProto.getDescriptor();
+    com.google.api.ResourceProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

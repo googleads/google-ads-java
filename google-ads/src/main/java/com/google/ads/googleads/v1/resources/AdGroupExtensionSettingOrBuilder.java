@@ -9,74 +9,80 @@ public interface AdGroupExtensionSettingOrBuilder extends
 
   /**
    * <pre>
-   * The resource name of the ad group extension setting.
+   * Immutable. The resource name of the ad group extension setting.
    * AdGroupExtensionSetting resource names have the form:
    * `customers/{customer_id}/adGroupExtensionSettings/{ad_group_id}~{extension_type}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * @return The resourceName.
    */
   java.lang.String getResourceName();
   /**
    * <pre>
-   * The resource name of the ad group extension setting.
+   * Immutable. The resource name of the ad group extension setting.
    * AdGroupExtensionSetting resource names have the form:
    * `customers/{customer_id}/adGroupExtensionSettings/{ad_group_id}~{extension_type}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * @return The bytes for resourceName.
    */
   com.google.protobuf.ByteString
       getResourceNameBytes();
 
   /**
    * <pre>
-   * The extension type of the ad group extension setting.
+   * Immutable. The extension type of the ad group extension setting.
    * </pre>
    *
-   * <code>.google.ads.googleads.v1.enums.ExtensionTypeEnum.ExtensionType extension_type = 2;</code>
+   * <code>.google.ads.googleads.v1.enums.ExtensionTypeEnum.ExtensionType extension_type = 2 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The enum numeric value on the wire for extensionType.
    */
   int getExtensionTypeValue();
   /**
    * <pre>
-   * The extension type of the ad group extension setting.
+   * Immutable. The extension type of the ad group extension setting.
    * </pre>
    *
-   * <code>.google.ads.googleads.v1.enums.ExtensionTypeEnum.ExtensionType extension_type = 2;</code>
+   * <code>.google.ads.googleads.v1.enums.ExtensionTypeEnum.ExtensionType extension_type = 2 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The extensionType.
    */
   com.google.ads.googleads.v1.enums.ExtensionTypeEnum.ExtensionType getExtensionType();
 
   /**
    * <pre>
-   * The resource name of the ad group. The linked extension feed items will
+   * Immutable. The resource name of the ad group. The linked extension feed items will
    * serve under this ad group.
    * AdGroup resource names have the form:
    * `customers/{customer_id}/adGroups/{ad_group_id}`
    * </pre>
    *
-   * <code>.google.protobuf.StringValue ad_group = 3;</code>
+   * <code>.google.protobuf.StringValue ad_group = 3 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * @return Whether the adGroup field is set.
    */
   boolean hasAdGroup();
   /**
    * <pre>
-   * The resource name of the ad group. The linked extension feed items will
+   * Immutable. The resource name of the ad group. The linked extension feed items will
    * serve under this ad group.
    * AdGroup resource names have the form:
    * `customers/{customer_id}/adGroups/{ad_group_id}`
    * </pre>
    *
-   * <code>.google.protobuf.StringValue ad_group = 3;</code>
+   * <code>.google.protobuf.StringValue ad_group = 3 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * @return The adGroup.
    */
   com.google.protobuf.StringValue getAdGroup();
   /**
    * <pre>
-   * The resource name of the ad group. The linked extension feed items will
+   * Immutable. The resource name of the ad group. The linked extension feed items will
    * serve under this ad group.
    * AdGroup resource names have the form:
    * `customers/{customer_id}/adGroups/{ad_group_id}`
    * </pre>
    *
-   * <code>.google.protobuf.StringValue ad_group = 3;</code>
+   * <code>.google.protobuf.StringValue ad_group = 3 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    */
   com.google.protobuf.StringValueOrBuilder getAdGroupOrBuilder();
 
@@ -87,7 +93,7 @@ public interface AdGroupExtensionSettingOrBuilder extends
    * `customers/{customer_id}/extensionFeedItems/{feed_item_id}`
    * </pre>
    *
-   * <code>repeated .google.protobuf.StringValue extension_feed_items = 4;</code>
+   * <code>repeated .google.protobuf.StringValue extension_feed_items = 4 [(.google.api.resource_reference) = { ... }</code>
    */
   java.util.List<com.google.protobuf.StringValue> 
       getExtensionFeedItemsList();
@@ -98,7 +104,7 @@ public interface AdGroupExtensionSettingOrBuilder extends
    * `customers/{customer_id}/extensionFeedItems/{feed_item_id}`
    * </pre>
    *
-   * <code>repeated .google.protobuf.StringValue extension_feed_items = 4;</code>
+   * <code>repeated .google.protobuf.StringValue extension_feed_items = 4 [(.google.api.resource_reference) = { ... }</code>
    */
   com.google.protobuf.StringValue getExtensionFeedItems(int index);
   /**
@@ -108,7 +114,7 @@ public interface AdGroupExtensionSettingOrBuilder extends
    * `customers/{customer_id}/extensionFeedItems/{feed_item_id}`
    * </pre>
    *
-   * <code>repeated .google.protobuf.StringValue extension_feed_items = 4;</code>
+   * <code>repeated .google.protobuf.StringValue extension_feed_items = 4 [(.google.api.resource_reference) = { ... }</code>
    */
   int getExtensionFeedItemsCount();
   /**
@@ -118,7 +124,7 @@ public interface AdGroupExtensionSettingOrBuilder extends
    * `customers/{customer_id}/extensionFeedItems/{feed_item_id}`
    * </pre>
    *
-   * <code>repeated .google.protobuf.StringValue extension_feed_items = 4;</code>
+   * <code>repeated .google.protobuf.StringValue extension_feed_items = 4 [(.google.api.resource_reference) = { ... }</code>
    */
   java.util.List<? extends com.google.protobuf.StringValueOrBuilder> 
       getExtensionFeedItemsOrBuilderList();
@@ -129,7 +135,7 @@ public interface AdGroupExtensionSettingOrBuilder extends
    * `customers/{customer_id}/extensionFeedItems/{feed_item_id}`
    * </pre>
    *
-   * <code>repeated .google.protobuf.StringValue extension_feed_items = 4;</code>
+   * <code>repeated .google.protobuf.StringValue extension_feed_items = 4 [(.google.api.resource_reference) = { ... }</code>
    */
   com.google.protobuf.StringValueOrBuilder getExtensionFeedItemsOrBuilder(
       int index);
@@ -140,6 +146,7 @@ public interface AdGroupExtensionSettingOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v1.enums.ExtensionSettingDeviceEnum.ExtensionSettingDevice device = 5;</code>
+   * @return The enum numeric value on the wire for device.
    */
   int getDeviceValue();
   /**
@@ -148,6 +155,7 @@ public interface AdGroupExtensionSettingOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v1.enums.ExtensionSettingDeviceEnum.ExtensionSettingDevice device = 5;</code>
+   * @return The device.
    */
   com.google.ads.googleads.v1.enums.ExtensionSettingDeviceEnum.ExtensionSettingDevice getDevice();
 }

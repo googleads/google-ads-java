@@ -16,6 +16,7 @@ public interface StoreSalesMetadataOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue loyalty_fraction = 1;</code>
+   * @return Whether the loyaltyFraction field is set.
    */
   boolean hasLoyaltyFraction();
   /**
@@ -27,6 +28,7 @@ public interface StoreSalesMetadataOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue loyalty_fraction = 1;</code>
+   * @return The loyaltyFraction.
    */
   com.google.protobuf.DoubleValue getLoyaltyFraction();
   /**
@@ -51,6 +53,7 @@ public interface StoreSalesMetadataOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue transaction_upload_fraction = 2;</code>
+   * @return Whether the transactionUploadFraction field is set.
    */
   boolean hasTransactionUploadFraction();
   /**
@@ -63,6 +66,7 @@ public interface StoreSalesMetadataOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue transaction_upload_fraction = 2;</code>
+   * @return The transactionUploadFraction.
    */
   com.google.protobuf.DoubleValue getTransactionUploadFraction();
   /**
@@ -82,29 +86,31 @@ public interface StoreSalesMetadataOrBuilder extends
    * <pre>
    * Name of the store sales custom variable key. A predefined key that
    * can be applied to the transaction and then later used for custom
-   * segementation in reporting.
+   * segmentation in reporting.
    * Accessible to whitelisted customers only.
    * </pre>
    *
    * <code>.google.protobuf.StringValue custom_key = 4;</code>
+   * @return Whether the customKey field is set.
    */
   boolean hasCustomKey();
   /**
    * <pre>
    * Name of the store sales custom variable key. A predefined key that
    * can be applied to the transaction and then later used for custom
-   * segementation in reporting.
+   * segmentation in reporting.
    * Accessible to whitelisted customers only.
    * </pre>
    *
    * <code>.google.protobuf.StringValue custom_key = 4;</code>
+   * @return The customKey.
    */
   com.google.protobuf.StringValue getCustomKey();
   /**
    * <pre>
    * Name of the store sales custom variable key. A predefined key that
    * can be applied to the transaction and then later used for custom
-   * segementation in reporting.
+   * segmentation in reporting.
    * Accessible to whitelisted customers only.
    * </pre>
    *
@@ -118,6 +124,7 @@ public interface StoreSalesMetadataOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.StoreSalesThirdPartyMetadata third_party_metadata = 3;</code>
+   * @return Whether the thirdPartyMetadata field is set.
    */
   boolean hasThirdPartyMetadata();
   /**
@@ -126,6 +133,7 @@ public interface StoreSalesMetadataOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.StoreSalesThirdPartyMetadata third_party_metadata = 3;</code>
+   * @return The thirdPartyMetadata.
    */
   com.google.ads.googleads.v3.common.StoreSalesThirdPartyMetadata getThirdPartyMetadata();
   /**

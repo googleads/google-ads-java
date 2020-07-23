@@ -10,7 +10,7 @@ package com.google.ads.googleads.v2.common;
  *
  * Protobuf type {@code google.ads.googleads.v2.common.StructuredSnippetFeedItem}
  */
-public  final class StructuredSnippetFeedItem extends
+public final class StructuredSnippetFeedItem extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v2.common.StructuredSnippetFeedItem)
     StructuredSnippetFeedItemOrBuilder {
@@ -21,6 +21,13 @@ private static final long serialVersionUID = 0L;
   }
   private StructuredSnippetFeedItem() {
     values_ = java.util.Collections.emptyList();
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new StructuredSnippetFeedItem();
   }
 
   @java.lang.Override
@@ -61,9 +68,9 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 18: {
-            if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
               values_ = new java.util.ArrayList<com.google.protobuf.StringValue>();
-              mutable_bitField0_ |= 0x00000002;
+              mutable_bitField0_ |= 0x00000001;
             }
             values_.add(
                 input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry));
@@ -84,7 +91,7 @@ private static final long serialVersionUID = 0L;
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
     } finally {
-      if (((mutable_bitField0_ & 0x00000002) != 0)) {
+      if (((mutable_bitField0_ & 0x00000001) != 0)) {
         values_ = java.util.Collections.unmodifiableList(values_);
       }
       this.unknownFields = unknownFields.build();
@@ -104,7 +111,6 @@ private static final long serialVersionUID = 0L;
             com.google.ads.googleads.v2.common.StructuredSnippetFeedItem.class, com.google.ads.googleads.v2.common.StructuredSnippetFeedItem.Builder.class);
   }
 
-  private int bitField0_;
   public static final int HEADER_FIELD_NUMBER = 1;
   private com.google.protobuf.StringValue header_;
   /**
@@ -114,7 +120,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue header = 1;</code>
+   * @return Whether the header field is set.
    */
+  @java.lang.Override
   public boolean hasHeader() {
     return header_ != null;
   }
@@ -125,7 +133,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue header = 1;</code>
+   * @return The header.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getHeader() {
     return header_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : header_;
   }
@@ -137,6 +147,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue header = 1;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getHeaderOrBuilder() {
     return getHeader();
   }
@@ -151,6 +162,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.StringValue values = 2;</code>
    */
+  @java.lang.Override
   public java.util.List<com.google.protobuf.StringValue> getValuesList() {
     return values_;
   }
@@ -162,6 +174,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.StringValue values = 2;</code>
    */
+  @java.lang.Override
   public java.util.List<? extends com.google.protobuf.StringValueOrBuilder> 
       getValuesOrBuilderList() {
     return values_;
@@ -174,6 +187,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.StringValue values = 2;</code>
    */
+  @java.lang.Override
   public int getValuesCount() {
     return values_.size();
   }
@@ -185,6 +199,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.StringValue values = 2;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getValues(int index) {
     return values_.get(index);
   }
@@ -196,6 +211,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.StringValue values = 2;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getValuesOrBuilder(
       int index) {
     return values_.get(index);
@@ -425,7 +441,7 @@ private static final long serialVersionUID = 0L;
       }
       if (valuesBuilder_ == null) {
         values_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000001);
       } else {
         valuesBuilder_.clear();
       }
@@ -456,22 +472,20 @@ private static final long serialVersionUID = 0L;
     public com.google.ads.googleads.v2.common.StructuredSnippetFeedItem buildPartial() {
       com.google.ads.googleads.v2.common.StructuredSnippetFeedItem result = new com.google.ads.googleads.v2.common.StructuredSnippetFeedItem(this);
       int from_bitField0_ = bitField0_;
-      int to_bitField0_ = 0;
       if (headerBuilder_ == null) {
         result.header_ = header_;
       } else {
         result.header_ = headerBuilder_.build();
       }
       if (valuesBuilder_ == null) {
-        if (((bitField0_ & 0x00000002) != 0)) {
+        if (((bitField0_ & 0x00000001) != 0)) {
           values_ = java.util.Collections.unmodifiableList(values_);
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000001);
         }
         result.values_ = values_;
       } else {
         result.values_ = valuesBuilder_.build();
       }
-      result.bitField0_ = to_bitField0_;
       onBuilt();
       return result;
     }
@@ -527,7 +541,7 @@ private static final long serialVersionUID = 0L;
         if (!other.values_.isEmpty()) {
           if (values_.isEmpty()) {
             values_ = other.values_;
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000001);
           } else {
             ensureValuesIsMutable();
             values_.addAll(other.values_);
@@ -540,7 +554,7 @@ private static final long serialVersionUID = 0L;
             valuesBuilder_.dispose();
             valuesBuilder_ = null;
             values_ = other.values_;
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000001);
             valuesBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getValuesFieldBuilder() : null;
@@ -589,6 +603,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue header = 1;</code>
+     * @return Whether the header field is set.
      */
     public boolean hasHeader() {
       return headerBuilder_ != null || header_ != null;
@@ -600,6 +615,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue header = 1;</code>
+     * @return The header.
      */
     public com.google.protobuf.StringValue getHeader() {
       if (headerBuilder_ == null) {
@@ -744,9 +760,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.google.protobuf.StringValue> values_ =
       java.util.Collections.emptyList();
     private void ensureValuesIsMutable() {
-      if (!((bitField0_ & 0x00000002) != 0)) {
+      if (!((bitField0_ & 0x00000001) != 0)) {
         values_ = new java.util.ArrayList<com.google.protobuf.StringValue>(values_);
-        bitField0_ |= 0x00000002;
+        bitField0_ |= 0x00000001;
        }
     }
 
@@ -951,7 +967,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearValues() {
       if (valuesBuilder_ == null) {
         values_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
       } else {
         valuesBuilder_.clear();
@@ -1063,7 +1079,7 @@ private static final long serialVersionUID = 0L;
         valuesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
                 values_,
-                ((bitField0_ & 0x00000002) != 0),
+                ((bitField0_ & 0x00000001) != 0),
                 getParentForChildren(),
                 isClean());
         values_ = null;

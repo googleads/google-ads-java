@@ -34,39 +34,37 @@ public final class ProductBiddingCategoryConstantServiceProto {
       "ogle/ads/googleads/v1/resources/product_" +
       "bidding_category_constant.proto\032\034google/" +
       "api/annotations.proto\032\027google/api/client" +
-      ".proto\"A\n(GetProductBiddingCategoryConst" +
-      "antRequest\022\025\n\rresource_name\030\001 \001(\t2\270\002\n%Pr" +
-      "oductBiddingCategoryConstantService\022\361\001\n!" +
-      "GetProductBiddingCategoryConstant\022J.goog" +
-      "le.ads.googleads.v1.services.GetProductB" +
-      "iddingCategoryConstantRequest\032A.google.a" +
-      "ds.googleads.v1.resources.ProductBidding" +
-      "CategoryConstant\"=\202\323\344\223\0027\0225/v1/{resource_" +
-      "name=productBiddingCategoryConstants/*}\032" +
-      "\033\312A\030googleads.googleapis.comB\221\002\n$com.goo" +
-      "gle.ads.googleads.v1.servicesB*ProductBi" +
-      "ddingCategoryConstantServiceProtoP\001ZHgoo" +
-      "gle.golang.org/genproto/googleapis/ads/g" +
-      "oogleads/v1/services;services\242\002\003GAA\252\002 Go" +
-      "ogle.Ads.GoogleAds.V1.Services\312\002 Google\\" +
-      "Ads\\GoogleAds\\V1\\Services\352\002$Google::Ads:" +
-      ":GoogleAds::V1::Servicesb\006proto3"
+      ".proto\032\037google/api/field_behavior.proto\032" +
+      "\031google/api/resource.proto\"\202\001\n(GetProduc" +
+      "tBiddingCategoryConstantRequest\022V\n\rresou" +
+      "rce_name\030\001 \001(\tB?\340A\002\372A9\n7googleads.google" +
+      "apis.com/ProductBiddingCategoryConstant2" +
+      "\310\002\n%ProductBiddingCategoryConstantServic" +
+      "e\022\201\002\n!GetProductBiddingCategoryConstant\022" +
+      "J.google.ads.googleads.v1.services.GetPr" +
+      "oductBiddingCategoryConstantRequest\032A.go" +
+      "ogle.ads.googleads.v1.resources.ProductB" +
+      "iddingCategoryConstant\"M\202\323\344\223\0027\0225/v1/{res" +
+      "ource_name=productBiddingCategoryConstan" +
+      "ts/*}\332A\rresource_name\032\033\312A\030googleads.goog" +
+      "leapis.comB\221\002\n$com.google.ads.googleads." +
+      "v1.servicesB*ProductBiddingCategoryConst" +
+      "antServiceProtoP\001ZHgoogle.golang.org/gen" +
+      "proto/googleapis/ads/googleads/v1/servic" +
+      "es;services\242\002\003GAA\252\002 Google.Ads.GoogleAds" +
+      ".V1.Services\312\002 Google\\Ads\\GoogleAds\\V1\\S" +
+      "ervices\352\002$Google::Ads::GoogleAds::V1::Se" +
+      "rvicesb\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.ads.googleads.v1.resources.ProductBiddingCategoryConstantProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
           com.google.api.ClientProto.getDescriptor(),
-        }, assigner);
+          com.google.api.FieldBehaviorProto.getDescriptor(),
+          com.google.api.ResourceProto.getDescriptor(),
+        });
     internal_static_google_ads_googleads_v1_services_GetProductBiddingCategoryConstantRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_google_ads_googleads_v1_services_GetProductBiddingCategoryConstantRequest_fieldAccessorTable = new
@@ -76,12 +74,17 @@ public final class ProductBiddingCategoryConstantServiceProto {
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.ClientProto.defaultHost);
+    registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);
     registry.add(com.google.api.AnnotationsProto.http);
+    registry.add(com.google.api.ClientProto.methodSignature);
+    registry.add(com.google.api.ResourceProto.resourceReference);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.ads.googleads.v1.resources.ProductBiddingCategoryConstantProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
     com.google.api.ClientProto.getDescriptor();
+    com.google.api.FieldBehaviorProto.getDescriptor();
+    com.google.api.ResourceProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

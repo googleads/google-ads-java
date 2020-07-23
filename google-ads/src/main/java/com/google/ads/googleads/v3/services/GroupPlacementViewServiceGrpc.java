@@ -21,7 +21,7 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.10.0)",
+    value = "by gRPC proto compiler",
     comments = "Source: google/ads/googleads/v3/services/group_placement_view_service.proto")
 public final class GroupPlacementViewServiceGrpc {
 
@@ -30,49 +30,49 @@ public final class GroupPlacementViewServiceGrpc {
   public static final String SERVICE_NAME = "google.ads.googleads.v3.services.GroupPlacementViewService";
 
   // Static method descriptors that strictly reflect the proto.
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  @java.lang.Deprecated // Use {@link #getGetGroupPlacementViewMethod()} instead. 
-  public static final io.grpc.MethodDescriptor<com.google.ads.googleads.v3.services.GetGroupPlacementViewRequest,
-      com.google.ads.googleads.v3.resources.GroupPlacementView> METHOD_GET_GROUP_PLACEMENT_VIEW = getGetGroupPlacementViewMethodHelper();
-
   private static volatile io.grpc.MethodDescriptor<com.google.ads.googleads.v3.services.GetGroupPlacementViewRequest,
       com.google.ads.googleads.v3.resources.GroupPlacementView> getGetGroupPlacementViewMethod;
 
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetGroupPlacementView",
+      requestType = com.google.ads.googleads.v3.services.GetGroupPlacementViewRequest.class,
+      responseType = com.google.ads.googleads.v3.resources.GroupPlacementView.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<com.google.ads.googleads.v3.services.GetGroupPlacementViewRequest,
       com.google.ads.googleads.v3.resources.GroupPlacementView> getGetGroupPlacementViewMethod() {
-    return getGetGroupPlacementViewMethodHelper();
-  }
-
-  private static io.grpc.MethodDescriptor<com.google.ads.googleads.v3.services.GetGroupPlacementViewRequest,
-      com.google.ads.googleads.v3.resources.GroupPlacementView> getGetGroupPlacementViewMethodHelper() {
     io.grpc.MethodDescriptor<com.google.ads.googleads.v3.services.GetGroupPlacementViewRequest, com.google.ads.googleads.v3.resources.GroupPlacementView> getGetGroupPlacementViewMethod;
     if ((getGetGroupPlacementViewMethod = GroupPlacementViewServiceGrpc.getGetGroupPlacementViewMethod) == null) {
       synchronized (GroupPlacementViewServiceGrpc.class) {
         if ((getGetGroupPlacementViewMethod = GroupPlacementViewServiceGrpc.getGetGroupPlacementViewMethod) == null) {
-          GroupPlacementViewServiceGrpc.getGetGroupPlacementViewMethod = getGetGroupPlacementViewMethod = 
+          GroupPlacementViewServiceGrpc.getGetGroupPlacementViewMethod = getGetGroupPlacementViewMethod =
               io.grpc.MethodDescriptor.<com.google.ads.googleads.v3.services.GetGroupPlacementViewRequest, com.google.ads.googleads.v3.resources.GroupPlacementView>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "google.ads.googleads.v3.services.GroupPlacementViewService", "GetGroupPlacementView"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetGroupPlacementView"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v3.services.GetGroupPlacementViewRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v3.resources.GroupPlacementView.getDefaultInstance()))
-                  .setSchemaDescriptor(new GroupPlacementViewServiceMethodDescriptorSupplier("GetGroupPlacementView"))
-                  .build();
-          }
+              .setSchemaDescriptor(new GroupPlacementViewServiceMethodDescriptorSupplier("GetGroupPlacementView"))
+              .build();
         }
-     }
-     return getGetGroupPlacementViewMethod;
+      }
+    }
+    return getGetGroupPlacementViewMethod;
   }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static GroupPlacementViewServiceStub newStub(io.grpc.Channel channel) {
-    return new GroupPlacementViewServiceStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<GroupPlacementViewServiceStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<GroupPlacementViewServiceStub>() {
+        @java.lang.Override
+        public GroupPlacementViewServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new GroupPlacementViewServiceStub(channel, callOptions);
+        }
+      };
+    return GroupPlacementViewServiceStub.newStub(factory, channel);
   }
 
   /**
@@ -80,7 +80,14 @@ public final class GroupPlacementViewServiceGrpc {
    */
   public static GroupPlacementViewServiceBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new GroupPlacementViewServiceBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<GroupPlacementViewServiceBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<GroupPlacementViewServiceBlockingStub>() {
+        @java.lang.Override
+        public GroupPlacementViewServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new GroupPlacementViewServiceBlockingStub(channel, callOptions);
+        }
+      };
+    return GroupPlacementViewServiceBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -88,7 +95,14 @@ public final class GroupPlacementViewServiceGrpc {
    */
   public static GroupPlacementViewServiceFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new GroupPlacementViewServiceFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<GroupPlacementViewServiceFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<GroupPlacementViewServiceFutureStub>() {
+        @java.lang.Override
+        public GroupPlacementViewServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new GroupPlacementViewServiceFutureStub(channel, callOptions);
+        }
+      };
+    return GroupPlacementViewServiceFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -105,13 +119,13 @@ public final class GroupPlacementViewServiceGrpc {
      */
     public void getGroupPlacementView(com.google.ads.googleads.v3.services.GetGroupPlacementViewRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v3.resources.GroupPlacementView> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetGroupPlacementViewMethodHelper(), responseObserver);
+      asyncUnimplementedUnaryCall(getGetGroupPlacementViewMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
-            getGetGroupPlacementViewMethodHelper(),
+            getGetGroupPlacementViewMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 com.google.ads.googleads.v3.services.GetGroupPlacementViewRequest,
@@ -126,19 +140,15 @@ public final class GroupPlacementViewServiceGrpc {
    * Service to fetch Group Placement views.
    * </pre>
    */
-  public static final class GroupPlacementViewServiceStub extends io.grpc.stub.AbstractStub<GroupPlacementViewServiceStub> {
-    private GroupPlacementViewServiceStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private GroupPlacementViewServiceStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class GroupPlacementViewServiceStub extends io.grpc.stub.AbstractAsyncStub<GroupPlacementViewServiceStub> {
+    private GroupPlacementViewServiceStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected GroupPlacementViewServiceStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected GroupPlacementViewServiceStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new GroupPlacementViewServiceStub(channel, callOptions);
     }
 
@@ -150,7 +160,7 @@ public final class GroupPlacementViewServiceGrpc {
     public void getGroupPlacementView(com.google.ads.googleads.v3.services.GetGroupPlacementViewRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v3.resources.GroupPlacementView> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(getGetGroupPlacementViewMethodHelper(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getGetGroupPlacementViewMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -159,19 +169,15 @@ public final class GroupPlacementViewServiceGrpc {
    * Service to fetch Group Placement views.
    * </pre>
    */
-  public static final class GroupPlacementViewServiceBlockingStub extends io.grpc.stub.AbstractStub<GroupPlacementViewServiceBlockingStub> {
-    private GroupPlacementViewServiceBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private GroupPlacementViewServiceBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class GroupPlacementViewServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<GroupPlacementViewServiceBlockingStub> {
+    private GroupPlacementViewServiceBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected GroupPlacementViewServiceBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected GroupPlacementViewServiceBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new GroupPlacementViewServiceBlockingStub(channel, callOptions);
     }
 
@@ -182,7 +188,7 @@ public final class GroupPlacementViewServiceGrpc {
      */
     public com.google.ads.googleads.v3.resources.GroupPlacementView getGroupPlacementView(com.google.ads.googleads.v3.services.GetGroupPlacementViewRequest request) {
       return blockingUnaryCall(
-          getChannel(), getGetGroupPlacementViewMethodHelper(), getCallOptions(), request);
+          getChannel(), getGetGroupPlacementViewMethod(), getCallOptions(), request);
     }
   }
 
@@ -191,19 +197,15 @@ public final class GroupPlacementViewServiceGrpc {
    * Service to fetch Group Placement views.
    * </pre>
    */
-  public static final class GroupPlacementViewServiceFutureStub extends io.grpc.stub.AbstractStub<GroupPlacementViewServiceFutureStub> {
-    private GroupPlacementViewServiceFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private GroupPlacementViewServiceFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class GroupPlacementViewServiceFutureStub extends io.grpc.stub.AbstractFutureStub<GroupPlacementViewServiceFutureStub> {
+    private GroupPlacementViewServiceFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected GroupPlacementViewServiceFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected GroupPlacementViewServiceFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new GroupPlacementViewServiceFutureStub(channel, callOptions);
     }
 
@@ -215,7 +217,7 @@ public final class GroupPlacementViewServiceGrpc {
     public com.google.common.util.concurrent.ListenableFuture<com.google.ads.googleads.v3.resources.GroupPlacementView> getGroupPlacementView(
         com.google.ads.googleads.v3.services.GetGroupPlacementViewRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(getGetGroupPlacementViewMethodHelper(), getCallOptions()), request);
+          getChannel().newCall(getGetGroupPlacementViewMethod(), getCallOptions()), request);
     }
   }
 
@@ -303,7 +305,7 @@ public final class GroupPlacementViewServiceGrpc {
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new GroupPlacementViewServiceFileDescriptorSupplier())
-              .addMethod(getGetGroupPlacementViewMethodHelper())
+              .addMethod(getGetGroupPlacementViewMethod())
               .build();
         }
       }

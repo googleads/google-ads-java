@@ -10,7 +10,7 @@ package com.google.ads.googleads.v4.common;
  *
  * Protobuf type {@code google.ads.googleads.v4.common.CarrierInfo}
  */
-public  final class CarrierInfo extends
+public final class CarrierInfo extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.common.CarrierInfo)
     CarrierInfoOrBuilder {
@@ -107,6 +107,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue carrier_constant = 1;</code>
    * @return Whether the carrierConstant field is set.
    */
+  @java.lang.Override
   public boolean hasCarrierConstant() {
     return carrierConstant_ != null;
   }
@@ -118,6 +119,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue carrier_constant = 1;</code>
    * @return The carrierConstant.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getCarrierConstant() {
     return carrierConstant_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : carrierConstant_;
   }
@@ -128,6 +130,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue carrier_constant = 1;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getCarrierConstantOrBuilder() {
     return getCarrierConstant();
   }

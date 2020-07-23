@@ -518,15 +518,7 @@ public final class ErrorsProto {
       "oogleAds\\V1\\Errors\352\002\"Google::Ads::Google" +
       "Ads::V1::Errorsb\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.ads.googleads.v1.common.PolicyProto.getDescriptor(),
@@ -635,7 +627,7 @@ public final class ErrorsProto {
           com.google.ads.googleads.v1.errors.YoutubeVideoRegistrationErrorProto.getDescriptor(),
           com.google.protobuf.WrappersProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
-        }, assigner);
+        });
     internal_static_google_ads_googleads_v1_errors_GoogleAdsFailure_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_google_ads_googleads_v1_errors_GoogleAdsFailure_fieldAccessorTable = new

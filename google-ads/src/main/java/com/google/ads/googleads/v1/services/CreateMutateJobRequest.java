@@ -10,7 +10,7 @@ package com.google.ads.googleads.v1.services;
  *
  * Protobuf type {@code google.ads.googleads.v1.services.CreateMutateJobRequest}
  */
-public  final class CreateMutateJobRequest extends
+public final class CreateMutateJobRequest extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v1.services.CreateMutateJobRequest)
     CreateMutateJobRequestOrBuilder {
@@ -21,6 +21,13 @@ private static final long serialVersionUID = 0L;
   }
   private CreateMutateJobRequest() {
     customerId_ = "";
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new CreateMutateJobRequest();
   }
 
   @java.lang.Override
@@ -36,7 +43,6 @@ private static final long serialVersionUID = 0L;
     if (extensionRegistry == null) {
       throw new java.lang.NullPointerException();
     }
-    int mutable_bitField0_ = 0;
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
         com.google.protobuf.UnknownFieldSet.newBuilder();
     try {
@@ -89,11 +95,13 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object customerId_;
   /**
    * <pre>
-   * The ID of the customer for which to create a mutate job.
+   * Required. The ID of the customer for which to create a mutate job.
    * </pre>
    *
-   * <code>string customer_id = 1;</code>
+   * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+   * @return The customerId.
    */
+  @java.lang.Override
   public java.lang.String getCustomerId() {
     java.lang.Object ref = customerId_;
     if (ref instanceof java.lang.String) {
@@ -108,11 +116,13 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The ID of the customer for which to create a mutate job.
+   * Required. The ID of the customer for which to create a mutate job.
    * </pre>
    *
-   * <code>string customer_id = 1;</code>
+   * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+   * @return The bytes for customerId.
    */
+  @java.lang.Override
   public com.google.protobuf.ByteString
       getCustomerIdBytes() {
     java.lang.Object ref = customerId_;
@@ -436,10 +446,11 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object customerId_ = "";
     /**
      * <pre>
-     * The ID of the customer for which to create a mutate job.
+     * Required. The ID of the customer for which to create a mutate job.
      * </pre>
      *
-     * <code>string customer_id = 1;</code>
+     * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+     * @return The customerId.
      */
     public java.lang.String getCustomerId() {
       java.lang.Object ref = customerId_;
@@ -455,10 +466,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the customer for which to create a mutate job.
+     * Required. The ID of the customer for which to create a mutate job.
      * </pre>
      *
-     * <code>string customer_id = 1;</code>
+     * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+     * @return The bytes for customerId.
      */
     public com.google.protobuf.ByteString
         getCustomerIdBytes() {
@@ -475,10 +487,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the customer for which to create a mutate job.
+     * Required. The ID of the customer for which to create a mutate job.
      * </pre>
      *
-     * <code>string customer_id = 1;</code>
+     * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+     * @param value The customerId to set.
+     * @return This builder for chaining.
      */
     public Builder setCustomerId(
         java.lang.String value) {
@@ -492,10 +506,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the customer for which to create a mutate job.
+     * Required. The ID of the customer for which to create a mutate job.
      * </pre>
      *
-     * <code>string customer_id = 1;</code>
+     * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+     * @return This builder for chaining.
      */
     public Builder clearCustomerId() {
       
@@ -505,10 +520,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the customer for which to create a mutate job.
+     * Required. The ID of the customer for which to create a mutate job.
      * </pre>
      *
-     * <code>string customer_id = 1;</code>
+     * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+     * @param value The bytes for customerId to set.
+     * @return This builder for chaining.
      */
     public Builder setCustomerIdBytes(
         com.google.protobuf.ByteString value) {

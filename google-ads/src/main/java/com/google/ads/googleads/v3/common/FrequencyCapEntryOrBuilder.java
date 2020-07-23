@@ -14,6 +14,7 @@ public interface FrequencyCapEntryOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.FrequencyCapKey key = 1;</code>
+   * @return Whether the key field is set.
    */
   boolean hasKey();
   /**
@@ -23,6 +24,7 @@ public interface FrequencyCapEntryOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.FrequencyCapKey key = 1;</code>
+   * @return The key.
    */
   com.google.ads.googleads.v3.common.FrequencyCapKey getKey();
   /**
@@ -41,6 +43,7 @@ public interface FrequencyCapEntryOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int32Value cap = 2;</code>
+   * @return Whether the cap field is set.
    */
   boolean hasCap();
   /**
@@ -49,6 +52,7 @@ public interface FrequencyCapEntryOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int32Value cap = 2;</code>
+   * @return The cap.
    */
   com.google.protobuf.Int32Value getCap();
   /**

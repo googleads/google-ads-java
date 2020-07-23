@@ -10,7 +10,7 @@ package com.google.ads.googleads.v4.services;
  *
  * Protobuf type {@code google.ads.googleads.v4.services.ReachForecast}
  */
-public  final class ReachForecast extends
+public final class ReachForecast extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.services.ReachForecast)
     ReachForecastOrBuilder {
@@ -134,6 +134,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int64Value cost_micros = 1;</code>
    * @return Whether the costMicros field is set.
    */
+  @java.lang.Override
   public boolean hasCostMicros() {
     return costMicros_ != null;
   }
@@ -145,6 +146,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int64Value cost_micros = 1;</code>
    * @return The costMicros.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getCostMicros() {
     return costMicros_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : costMicros_;
   }
@@ -155,6 +157,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int64Value cost_micros = 1;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getCostMicrosOrBuilder() {
     return getCostMicros();
   }
@@ -169,6 +172,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.services.Forecast forecast = 2;</code>
    * @return Whether the forecast field is set.
    */
+  @java.lang.Override
   public boolean hasForecast() {
     return forecast_ != null;
   }
@@ -180,6 +184,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.services.Forecast forecast = 2;</code>
    * @return The forecast.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.services.Forecast getForecast() {
     return forecast_ == null ? com.google.ads.googleads.v4.services.Forecast.getDefaultInstance() : forecast_;
   }
@@ -190,6 +195,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v4.services.Forecast forecast = 2;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.services.ForecastOrBuilder getForecastOrBuilder() {
     return getForecast();
   }
@@ -204,6 +210,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.services.ProductAllocation forecasted_product_allocations = 3;</code>
    */
+  @java.lang.Override
   public java.util.List<com.google.ads.googleads.v4.services.ProductAllocation> getForecastedProductAllocationsList() {
     return forecastedProductAllocations_;
   }
@@ -215,6 +222,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.services.ProductAllocation forecasted_product_allocations = 3;</code>
    */
+  @java.lang.Override
   public java.util.List<? extends com.google.ads.googleads.v4.services.ProductAllocationOrBuilder> 
       getForecastedProductAllocationsOrBuilderList() {
     return forecastedProductAllocations_;
@@ -227,6 +235,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.services.ProductAllocation forecasted_product_allocations = 3;</code>
    */
+  @java.lang.Override
   public int getForecastedProductAllocationsCount() {
     return forecastedProductAllocations_.size();
   }
@@ -238,6 +247,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.services.ProductAllocation forecasted_product_allocations = 3;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.services.ProductAllocation getForecastedProductAllocations(int index) {
     return forecastedProductAllocations_.get(index);
   }
@@ -249,6 +259,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.services.ProductAllocation forecasted_product_allocations = 3;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.services.ProductAllocationOrBuilder getForecastedProductAllocationsOrBuilder(
       int index) {
     return forecastedProductAllocations_.get(index);

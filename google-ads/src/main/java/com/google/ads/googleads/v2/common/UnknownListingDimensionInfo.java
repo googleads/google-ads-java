@@ -10,7 +10,7 @@ package com.google.ads.googleads.v2.common;
  *
  * Protobuf type {@code google.ads.googleads.v2.common.UnknownListingDimensionInfo}
  */
-public  final class UnknownListingDimensionInfo extends
+public final class UnknownListingDimensionInfo extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v2.common.UnknownListingDimensionInfo)
     UnknownListingDimensionInfoOrBuilder {
@@ -20,6 +20,13 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private UnknownListingDimensionInfo() {
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new UnknownListingDimensionInfo();
   }
 
   @java.lang.Override

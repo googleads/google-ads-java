@@ -12,7 +12,7 @@ package com.google.ads.googleads.v4.errors;
  *
  * Protobuf type {@code google.ads.googleads.v4.errors.PolicyViolationDetails}
  */
-public  final class PolicyViolationDetails extends
+public final class PolicyViolationDetails extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.errors.PolicyViolationDetails)
     PolicyViolationDetailsOrBuilder {
@@ -128,6 +128,7 @@ private static final long serialVersionUID = 0L;
    * <code>string external_policy_description = 2;</code>
    * @return The externalPolicyDescription.
    */
+  @java.lang.Override
   public java.lang.String getExternalPolicyDescription() {
     java.lang.Object ref = externalPolicyDescription_;
     if (ref instanceof java.lang.String) {
@@ -148,6 +149,7 @@ private static final long serialVersionUID = 0L;
    * <code>string external_policy_description = 2;</code>
    * @return The bytes for externalPolicyDescription.
    */
+  @java.lang.Override
   public com.google.protobuf.ByteString
       getExternalPolicyDescriptionBytes() {
     java.lang.Object ref = externalPolicyDescription_;
@@ -173,6 +175,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.common.PolicyViolationKey key = 4;</code>
    * @return Whether the key field is set.
    */
+  @java.lang.Override
   public boolean hasKey() {
     return key_ != null;
   }
@@ -185,6 +188,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.common.PolicyViolationKey key = 4;</code>
    * @return The key.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.PolicyViolationKey getKey() {
     return key_ == null ? com.google.ads.googleads.v4.common.PolicyViolationKey.getDefaultInstance() : key_;
   }
@@ -196,6 +200,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v4.common.PolicyViolationKey key = 4;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.PolicyViolationKeyOrBuilder getKeyOrBuilder() {
     return getKey();
   }
@@ -210,6 +215,7 @@ private static final long serialVersionUID = 0L;
    * <code>string external_policy_name = 5;</code>
    * @return The externalPolicyName.
    */
+  @java.lang.Override
   public java.lang.String getExternalPolicyName() {
     java.lang.Object ref = externalPolicyName_;
     if (ref instanceof java.lang.String) {
@@ -230,6 +236,7 @@ private static final long serialVersionUID = 0L;
    * <code>string external_policy_name = 5;</code>
    * @return The bytes for externalPolicyName.
    */
+  @java.lang.Override
   public com.google.protobuf.ByteString
       getExternalPolicyNameBytes() {
     java.lang.Object ref = externalPolicyName_;
@@ -254,6 +261,7 @@ private static final long serialVersionUID = 0L;
    * <code>bool is_exemptible = 6;</code>
    * @return The isExemptible.
    */
+  @java.lang.Override
   public boolean getIsExemptible() {
     return isExemptible_;
   }
@@ -996,6 +1004,7 @@ private static final long serialVersionUID = 0L;
      * <code>bool is_exemptible = 6;</code>
      * @return The isExemptible.
      */
+    @java.lang.Override
     public boolean getIsExemptible() {
       return isExemptible_;
     }

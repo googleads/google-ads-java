@@ -11,7 +11,7 @@ package com.google.ads.googleads.v1.resources;
  *
  * Protobuf type {@code google.ads.googleads.v1.resources.ConversionTrackingSetting}
  */
-public  final class ConversionTrackingSetting extends
+public final class ConversionTrackingSetting extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v1.resources.ConversionTrackingSetting)
     ConversionTrackingSettingOrBuilder {
@@ -21,6 +21,13 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private ConversionTrackingSetting() {
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new ConversionTrackingSetting();
   }
 
   @java.lang.Override
@@ -36,7 +43,6 @@ private static final long serialVersionUID = 0L;
     if (extensionRegistry == null) {
       throw new java.lang.NullPointerException();
     }
-    int mutable_bitField0_ = 0;
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
         com.google.protobuf.UnknownFieldSet.newBuilder();
     try {
@@ -109,37 +115,42 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.Int64Value conversionTrackingId_;
   /**
    * <pre>
-   * The conversion tracking id used for this account. This id is automatically
+   * Output only. The conversion tracking id used for this account. This id is automatically
    * assigned after any conversion tracking feature is used. If the customer
    * doesn't use conversion tracking, this is 0. This field is read-only.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value conversion_tracking_id = 1;</code>
+   * <code>.google.protobuf.Int64Value conversion_tracking_id = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the conversionTrackingId field is set.
    */
+  @java.lang.Override
   public boolean hasConversionTrackingId() {
     return conversionTrackingId_ != null;
   }
   /**
    * <pre>
-   * The conversion tracking id used for this account. This id is automatically
+   * Output only. The conversion tracking id used for this account. This id is automatically
    * assigned after any conversion tracking feature is used. If the customer
    * doesn't use conversion tracking, this is 0. This field is read-only.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value conversion_tracking_id = 1;</code>
+   * <code>.google.protobuf.Int64Value conversion_tracking_id = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The conversionTrackingId.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getConversionTrackingId() {
     return conversionTrackingId_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : conversionTrackingId_;
   }
   /**
    * <pre>
-   * The conversion tracking id used for this account. This id is automatically
+   * Output only. The conversion tracking id used for this account. This id is automatically
    * assigned after any conversion tracking feature is used. If the customer
    * doesn't use conversion tracking, this is 0. This field is read-only.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value conversion_tracking_id = 1;</code>
+   * <code>.google.protobuf.Int64Value conversion_tracking_id = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getConversionTrackingIdOrBuilder() {
     return getConversionTrackingId();
   }
@@ -148,40 +159,45 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.Int64Value crossAccountConversionTrackingId_;
   /**
    * <pre>
-   * The conversion tracking id of the customer's manager. This is set when the
+   * Output only. The conversion tracking id of the customer's manager. This is set when the
    * customer is opted into cross account conversion tracking, and it overrides
    * conversion_tracking_id. This field can only be managed through the Google
    * Ads UI. This field is read-only.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value cross_account_conversion_tracking_id = 2;</code>
+   * <code>.google.protobuf.Int64Value cross_account_conversion_tracking_id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the crossAccountConversionTrackingId field is set.
    */
+  @java.lang.Override
   public boolean hasCrossAccountConversionTrackingId() {
     return crossAccountConversionTrackingId_ != null;
   }
   /**
    * <pre>
-   * The conversion tracking id of the customer's manager. This is set when the
+   * Output only. The conversion tracking id of the customer's manager. This is set when the
    * customer is opted into cross account conversion tracking, and it overrides
    * conversion_tracking_id. This field can only be managed through the Google
    * Ads UI. This field is read-only.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value cross_account_conversion_tracking_id = 2;</code>
+   * <code>.google.protobuf.Int64Value cross_account_conversion_tracking_id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The crossAccountConversionTrackingId.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getCrossAccountConversionTrackingId() {
     return crossAccountConversionTrackingId_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : crossAccountConversionTrackingId_;
   }
   /**
    * <pre>
-   * The conversion tracking id of the customer's manager. This is set when the
+   * Output only. The conversion tracking id of the customer's manager. This is set when the
    * customer is opted into cross account conversion tracking, and it overrides
    * conversion_tracking_id. This field can only be managed through the Google
    * Ads UI. This field is read-only.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value cross_account_conversion_tracking_id = 2;</code>
+   * <code>.google.protobuf.Int64Value cross_account_conversion_tracking_id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getCrossAccountConversionTrackingIdOrBuilder() {
     return getCrossAccountConversionTrackingId();
   }
@@ -541,24 +557,26 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> conversionTrackingIdBuilder_;
     /**
      * <pre>
-     * The conversion tracking id used for this account. This id is automatically
+     * Output only. The conversion tracking id used for this account. This id is automatically
      * assigned after any conversion tracking feature is used. If the customer
      * doesn't use conversion tracking, this is 0. This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value conversion_tracking_id = 1;</code>
+     * <code>.google.protobuf.Int64Value conversion_tracking_id = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the conversionTrackingId field is set.
      */
     public boolean hasConversionTrackingId() {
       return conversionTrackingIdBuilder_ != null || conversionTrackingId_ != null;
     }
     /**
      * <pre>
-     * The conversion tracking id used for this account. This id is automatically
+     * Output only. The conversion tracking id used for this account. This id is automatically
      * assigned after any conversion tracking feature is used. If the customer
      * doesn't use conversion tracking, this is 0. This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value conversion_tracking_id = 1;</code>
+     * <code>.google.protobuf.Int64Value conversion_tracking_id = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The conversionTrackingId.
      */
     public com.google.protobuf.Int64Value getConversionTrackingId() {
       if (conversionTrackingIdBuilder_ == null) {
@@ -569,12 +587,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The conversion tracking id used for this account. This id is automatically
+     * Output only. The conversion tracking id used for this account. This id is automatically
      * assigned after any conversion tracking feature is used. If the customer
      * doesn't use conversion tracking, this is 0. This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value conversion_tracking_id = 1;</code>
+     * <code>.google.protobuf.Int64Value conversion_tracking_id = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setConversionTrackingId(com.google.protobuf.Int64Value value) {
       if (conversionTrackingIdBuilder_ == null) {
@@ -591,12 +609,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The conversion tracking id used for this account. This id is automatically
+     * Output only. The conversion tracking id used for this account. This id is automatically
      * assigned after any conversion tracking feature is used. If the customer
      * doesn't use conversion tracking, this is 0. This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value conversion_tracking_id = 1;</code>
+     * <code>.google.protobuf.Int64Value conversion_tracking_id = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setConversionTrackingId(
         com.google.protobuf.Int64Value.Builder builderForValue) {
@@ -611,12 +629,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The conversion tracking id used for this account. This id is automatically
+     * Output only. The conversion tracking id used for this account. This id is automatically
      * assigned after any conversion tracking feature is used. If the customer
      * doesn't use conversion tracking, this is 0. This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value conversion_tracking_id = 1;</code>
+     * <code>.google.protobuf.Int64Value conversion_tracking_id = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder mergeConversionTrackingId(com.google.protobuf.Int64Value value) {
       if (conversionTrackingIdBuilder_ == null) {
@@ -635,12 +653,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The conversion tracking id used for this account. This id is automatically
+     * Output only. The conversion tracking id used for this account. This id is automatically
      * assigned after any conversion tracking feature is used. If the customer
      * doesn't use conversion tracking, this is 0. This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value conversion_tracking_id = 1;</code>
+     * <code>.google.protobuf.Int64Value conversion_tracking_id = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearConversionTrackingId() {
       if (conversionTrackingIdBuilder_ == null) {
@@ -655,12 +673,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The conversion tracking id used for this account. This id is automatically
+     * Output only. The conversion tracking id used for this account. This id is automatically
      * assigned after any conversion tracking feature is used. If the customer
      * doesn't use conversion tracking, this is 0. This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value conversion_tracking_id = 1;</code>
+     * <code>.google.protobuf.Int64Value conversion_tracking_id = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int64Value.Builder getConversionTrackingIdBuilder() {
       
@@ -669,12 +687,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The conversion tracking id used for this account. This id is automatically
+     * Output only. The conversion tracking id used for this account. This id is automatically
      * assigned after any conversion tracking feature is used. If the customer
      * doesn't use conversion tracking, this is 0. This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value conversion_tracking_id = 1;</code>
+     * <code>.google.protobuf.Int64Value conversion_tracking_id = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int64ValueOrBuilder getConversionTrackingIdOrBuilder() {
       if (conversionTrackingIdBuilder_ != null) {
@@ -686,12 +704,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The conversion tracking id used for this account. This id is automatically
+     * Output only. The conversion tracking id used for this account. This id is automatically
      * assigned after any conversion tracking feature is used. If the customer
      * doesn't use conversion tracking, this is 0. This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value conversion_tracking_id = 1;</code>
+     * <code>.google.protobuf.Int64Value conversion_tracking_id = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
@@ -712,26 +730,28 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> crossAccountConversionTrackingIdBuilder_;
     /**
      * <pre>
-     * The conversion tracking id of the customer's manager. This is set when the
+     * Output only. The conversion tracking id of the customer's manager. This is set when the
      * customer is opted into cross account conversion tracking, and it overrides
      * conversion_tracking_id. This field can only be managed through the Google
      * Ads UI. This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value cross_account_conversion_tracking_id = 2;</code>
+     * <code>.google.protobuf.Int64Value cross_account_conversion_tracking_id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the crossAccountConversionTrackingId field is set.
      */
     public boolean hasCrossAccountConversionTrackingId() {
       return crossAccountConversionTrackingIdBuilder_ != null || crossAccountConversionTrackingId_ != null;
     }
     /**
      * <pre>
-     * The conversion tracking id of the customer's manager. This is set when the
+     * Output only. The conversion tracking id of the customer's manager. This is set when the
      * customer is opted into cross account conversion tracking, and it overrides
      * conversion_tracking_id. This field can only be managed through the Google
      * Ads UI. This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value cross_account_conversion_tracking_id = 2;</code>
+     * <code>.google.protobuf.Int64Value cross_account_conversion_tracking_id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The crossAccountConversionTrackingId.
      */
     public com.google.protobuf.Int64Value getCrossAccountConversionTrackingId() {
       if (crossAccountConversionTrackingIdBuilder_ == null) {
@@ -742,13 +762,13 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The conversion tracking id of the customer's manager. This is set when the
+     * Output only. The conversion tracking id of the customer's manager. This is set when the
      * customer is opted into cross account conversion tracking, and it overrides
      * conversion_tracking_id. This field can only be managed through the Google
      * Ads UI. This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value cross_account_conversion_tracking_id = 2;</code>
+     * <code>.google.protobuf.Int64Value cross_account_conversion_tracking_id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setCrossAccountConversionTrackingId(com.google.protobuf.Int64Value value) {
       if (crossAccountConversionTrackingIdBuilder_ == null) {
@@ -765,13 +785,13 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The conversion tracking id of the customer's manager. This is set when the
+     * Output only. The conversion tracking id of the customer's manager. This is set when the
      * customer is opted into cross account conversion tracking, and it overrides
      * conversion_tracking_id. This field can only be managed through the Google
      * Ads UI. This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value cross_account_conversion_tracking_id = 2;</code>
+     * <code>.google.protobuf.Int64Value cross_account_conversion_tracking_id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setCrossAccountConversionTrackingId(
         com.google.protobuf.Int64Value.Builder builderForValue) {
@@ -786,13 +806,13 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The conversion tracking id of the customer's manager. This is set when the
+     * Output only. The conversion tracking id of the customer's manager. This is set when the
      * customer is opted into cross account conversion tracking, and it overrides
      * conversion_tracking_id. This field can only be managed through the Google
      * Ads UI. This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value cross_account_conversion_tracking_id = 2;</code>
+     * <code>.google.protobuf.Int64Value cross_account_conversion_tracking_id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder mergeCrossAccountConversionTrackingId(com.google.protobuf.Int64Value value) {
       if (crossAccountConversionTrackingIdBuilder_ == null) {
@@ -811,13 +831,13 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The conversion tracking id of the customer's manager. This is set when the
+     * Output only. The conversion tracking id of the customer's manager. This is set when the
      * customer is opted into cross account conversion tracking, and it overrides
      * conversion_tracking_id. This field can only be managed through the Google
      * Ads UI. This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value cross_account_conversion_tracking_id = 2;</code>
+     * <code>.google.protobuf.Int64Value cross_account_conversion_tracking_id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearCrossAccountConversionTrackingId() {
       if (crossAccountConversionTrackingIdBuilder_ == null) {
@@ -832,13 +852,13 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The conversion tracking id of the customer's manager. This is set when the
+     * Output only. The conversion tracking id of the customer's manager. This is set when the
      * customer is opted into cross account conversion tracking, and it overrides
      * conversion_tracking_id. This field can only be managed through the Google
      * Ads UI. This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value cross_account_conversion_tracking_id = 2;</code>
+     * <code>.google.protobuf.Int64Value cross_account_conversion_tracking_id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int64Value.Builder getCrossAccountConversionTrackingIdBuilder() {
       
@@ -847,13 +867,13 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The conversion tracking id of the customer's manager. This is set when the
+     * Output only. The conversion tracking id of the customer's manager. This is set when the
      * customer is opted into cross account conversion tracking, and it overrides
      * conversion_tracking_id. This field can only be managed through the Google
      * Ads UI. This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value cross_account_conversion_tracking_id = 2;</code>
+     * <code>.google.protobuf.Int64Value cross_account_conversion_tracking_id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int64ValueOrBuilder getCrossAccountConversionTrackingIdOrBuilder() {
       if (crossAccountConversionTrackingIdBuilder_ != null) {
@@ -865,13 +885,13 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The conversion tracking id of the customer's manager. This is set when the
+     * Output only. The conversion tracking id of the customer's manager. This is set when the
      * customer is opted into cross account conversion tracking, and it overrides
      * conversion_tracking_id. This field can only be managed through the Google
      * Ads UI. This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value cross_account_conversion_tracking_id = 2;</code>
+     * <code>.google.protobuf.Int64Value cross_account_conversion_tracking_id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 

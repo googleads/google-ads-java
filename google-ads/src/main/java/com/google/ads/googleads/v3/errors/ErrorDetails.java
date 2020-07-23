@@ -10,7 +10,7 @@ package com.google.ads.googleads.v3.errors;
  *
  * Protobuf type {@code google.ads.googleads.v3.errors.ErrorDetails}
  */
-public  final class ErrorDetails extends
+public final class ErrorDetails extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v3.errors.ErrorDetails)
     ErrorDetailsOrBuilder {
@@ -21,6 +21,13 @@ private static final long serialVersionUID = 0L;
   }
   private ErrorDetails() {
     unpublishedErrorCode_ = "";
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new ErrorDetails();
   }
 
   @java.lang.Override
@@ -36,7 +43,6 @@ private static final long serialVersionUID = 0L;
     if (extensionRegistry == null) {
       throw new java.lang.NullPointerException();
     }
-    int mutable_bitField0_ = 0;
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
         com.google.protobuf.UnknownFieldSet.newBuilder();
     try {
@@ -116,11 +122,13 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * The error code that should have been returned, but wasn't. This is used
-   * when the error code is InternalError.ERROR_CODE_NOT_PUBLISHED.
+   * when the error code is not published in the client specified version.
    * </pre>
    *
    * <code>string unpublished_error_code = 1;</code>
+   * @return The unpublishedErrorCode.
    */
+  @java.lang.Override
   public java.lang.String getUnpublishedErrorCode() {
     java.lang.Object ref = unpublishedErrorCode_;
     if (ref instanceof java.lang.String) {
@@ -136,11 +144,13 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * The error code that should have been returned, but wasn't. This is used
-   * when the error code is InternalError.ERROR_CODE_NOT_PUBLISHED.
+   * when the error code is not published in the client specified version.
    * </pre>
    *
    * <code>string unpublished_error_code = 1;</code>
+   * @return The bytes for unpublishedErrorCode.
    */
+  @java.lang.Override
   public com.google.protobuf.ByteString
       getUnpublishedErrorCodeBytes() {
     java.lang.Object ref = unpublishedErrorCode_;
@@ -163,7 +173,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.PolicyViolationDetails policy_violation_details = 2;</code>
+   * @return Whether the policyViolationDetails field is set.
    */
+  @java.lang.Override
   public boolean hasPolicyViolationDetails() {
     return policyViolationDetails_ != null;
   }
@@ -173,7 +185,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.PolicyViolationDetails policy_violation_details = 2;</code>
+   * @return The policyViolationDetails.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.errors.PolicyViolationDetails getPolicyViolationDetails() {
     return policyViolationDetails_ == null ? com.google.ads.googleads.v3.errors.PolicyViolationDetails.getDefaultInstance() : policyViolationDetails_;
   }
@@ -184,6 +198,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v3.errors.PolicyViolationDetails policy_violation_details = 2;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.errors.PolicyViolationDetailsOrBuilder getPolicyViolationDetailsOrBuilder() {
     return getPolicyViolationDetails();
   }
@@ -196,7 +211,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.PolicyFindingDetails policy_finding_details = 3;</code>
+   * @return Whether the policyFindingDetails field is set.
    */
+  @java.lang.Override
   public boolean hasPolicyFindingDetails() {
     return policyFindingDetails_ != null;
   }
@@ -206,7 +223,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.PolicyFindingDetails policy_finding_details = 3;</code>
+   * @return The policyFindingDetails.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.errors.PolicyFindingDetails getPolicyFindingDetails() {
     return policyFindingDetails_ == null ? com.google.ads.googleads.v3.errors.PolicyFindingDetails.getDefaultInstance() : policyFindingDetails_;
   }
@@ -217,6 +236,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v3.errors.PolicyFindingDetails policy_finding_details = 3;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.errors.PolicyFindingDetailsOrBuilder getPolicyFindingDetailsOrBuilder() {
     return getPolicyFindingDetails();
   }
@@ -591,10 +611,11 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The error code that should have been returned, but wasn't. This is used
-     * when the error code is InternalError.ERROR_CODE_NOT_PUBLISHED.
+     * when the error code is not published in the client specified version.
      * </pre>
      *
      * <code>string unpublished_error_code = 1;</code>
+     * @return The unpublishedErrorCode.
      */
     public java.lang.String getUnpublishedErrorCode() {
       java.lang.Object ref = unpublishedErrorCode_;
@@ -611,10 +632,11 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The error code that should have been returned, but wasn't. This is used
-     * when the error code is InternalError.ERROR_CODE_NOT_PUBLISHED.
+     * when the error code is not published in the client specified version.
      * </pre>
      *
      * <code>string unpublished_error_code = 1;</code>
+     * @return The bytes for unpublishedErrorCode.
      */
     public com.google.protobuf.ByteString
         getUnpublishedErrorCodeBytes() {
@@ -632,10 +654,12 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The error code that should have been returned, but wasn't. This is used
-     * when the error code is InternalError.ERROR_CODE_NOT_PUBLISHED.
+     * when the error code is not published in the client specified version.
      * </pre>
      *
      * <code>string unpublished_error_code = 1;</code>
+     * @param value The unpublishedErrorCode to set.
+     * @return This builder for chaining.
      */
     public Builder setUnpublishedErrorCode(
         java.lang.String value) {
@@ -650,10 +674,11 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The error code that should have been returned, but wasn't. This is used
-     * when the error code is InternalError.ERROR_CODE_NOT_PUBLISHED.
+     * when the error code is not published in the client specified version.
      * </pre>
      *
      * <code>string unpublished_error_code = 1;</code>
+     * @return This builder for chaining.
      */
     public Builder clearUnpublishedErrorCode() {
       
@@ -664,10 +689,12 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The error code that should have been returned, but wasn't. This is used
-     * when the error code is InternalError.ERROR_CODE_NOT_PUBLISHED.
+     * when the error code is not published in the client specified version.
      * </pre>
      *
      * <code>string unpublished_error_code = 1;</code>
+     * @param value The bytes for unpublishedErrorCode to set.
+     * @return This builder for chaining.
      */
     public Builder setUnpublishedErrorCodeBytes(
         com.google.protobuf.ByteString value) {
@@ -690,6 +717,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.PolicyViolationDetails policy_violation_details = 2;</code>
+     * @return Whether the policyViolationDetails field is set.
      */
     public boolean hasPolicyViolationDetails() {
       return policyViolationDetailsBuilder_ != null || policyViolationDetails_ != null;
@@ -700,6 +728,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.PolicyViolationDetails policy_violation_details = 2;</code>
+     * @return The policyViolationDetails.
      */
     public com.google.ads.googleads.v3.errors.PolicyViolationDetails getPolicyViolationDetails() {
       if (policyViolationDetailsBuilder_ == null) {
@@ -843,6 +872,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.PolicyFindingDetails policy_finding_details = 3;</code>
+     * @return Whether the policyFindingDetails field is set.
      */
     public boolean hasPolicyFindingDetails() {
       return policyFindingDetailsBuilder_ != null || policyFindingDetails_ != null;
@@ -853,6 +883,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.PolicyFindingDetails policy_finding_details = 3;</code>
+     * @return The policyFindingDetails.
      */
     public com.google.ads.googleads.v3.errors.PolicyFindingDetails getPolicyFindingDetails() {
       if (policyFindingDetailsBuilder_ == null) {

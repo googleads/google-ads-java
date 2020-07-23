@@ -21,7 +21,7 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.10.0)",
+    value = "by gRPC proto compiler",
     comments = "Source: google/ads/googleads/v3/services/click_view_service.proto")
 public final class ClickViewServiceGrpc {
 
@@ -30,49 +30,49 @@ public final class ClickViewServiceGrpc {
   public static final String SERVICE_NAME = "google.ads.googleads.v3.services.ClickViewService";
 
   // Static method descriptors that strictly reflect the proto.
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  @java.lang.Deprecated // Use {@link #getGetClickViewMethod()} instead. 
-  public static final io.grpc.MethodDescriptor<com.google.ads.googleads.v3.services.GetClickViewRequest,
-      com.google.ads.googleads.v3.resources.ClickView> METHOD_GET_CLICK_VIEW = getGetClickViewMethodHelper();
-
   private static volatile io.grpc.MethodDescriptor<com.google.ads.googleads.v3.services.GetClickViewRequest,
       com.google.ads.googleads.v3.resources.ClickView> getGetClickViewMethod;
 
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetClickView",
+      requestType = com.google.ads.googleads.v3.services.GetClickViewRequest.class,
+      responseType = com.google.ads.googleads.v3.resources.ClickView.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<com.google.ads.googleads.v3.services.GetClickViewRequest,
       com.google.ads.googleads.v3.resources.ClickView> getGetClickViewMethod() {
-    return getGetClickViewMethodHelper();
-  }
-
-  private static io.grpc.MethodDescriptor<com.google.ads.googleads.v3.services.GetClickViewRequest,
-      com.google.ads.googleads.v3.resources.ClickView> getGetClickViewMethodHelper() {
     io.grpc.MethodDescriptor<com.google.ads.googleads.v3.services.GetClickViewRequest, com.google.ads.googleads.v3.resources.ClickView> getGetClickViewMethod;
     if ((getGetClickViewMethod = ClickViewServiceGrpc.getGetClickViewMethod) == null) {
       synchronized (ClickViewServiceGrpc.class) {
         if ((getGetClickViewMethod = ClickViewServiceGrpc.getGetClickViewMethod) == null) {
-          ClickViewServiceGrpc.getGetClickViewMethod = getGetClickViewMethod = 
+          ClickViewServiceGrpc.getGetClickViewMethod = getGetClickViewMethod =
               io.grpc.MethodDescriptor.<com.google.ads.googleads.v3.services.GetClickViewRequest, com.google.ads.googleads.v3.resources.ClickView>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "google.ads.googleads.v3.services.ClickViewService", "GetClickView"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetClickView"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v3.services.GetClickViewRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v3.resources.ClickView.getDefaultInstance()))
-                  .setSchemaDescriptor(new ClickViewServiceMethodDescriptorSupplier("GetClickView"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ClickViewServiceMethodDescriptorSupplier("GetClickView"))
+              .build();
         }
-     }
-     return getGetClickViewMethod;
+      }
+    }
+    return getGetClickViewMethod;
   }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static ClickViewServiceStub newStub(io.grpc.Channel channel) {
-    return new ClickViewServiceStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<ClickViewServiceStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<ClickViewServiceStub>() {
+        @java.lang.Override
+        public ClickViewServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new ClickViewServiceStub(channel, callOptions);
+        }
+      };
+    return ClickViewServiceStub.newStub(factory, channel);
   }
 
   /**
@@ -80,7 +80,14 @@ public final class ClickViewServiceGrpc {
    */
   public static ClickViewServiceBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new ClickViewServiceBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<ClickViewServiceBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<ClickViewServiceBlockingStub>() {
+        @java.lang.Override
+        public ClickViewServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new ClickViewServiceBlockingStub(channel, callOptions);
+        }
+      };
+    return ClickViewServiceBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -88,7 +95,14 @@ public final class ClickViewServiceGrpc {
    */
   public static ClickViewServiceFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new ClickViewServiceFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<ClickViewServiceFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<ClickViewServiceFutureStub>() {
+        @java.lang.Override
+        public ClickViewServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new ClickViewServiceFutureStub(channel, callOptions);
+        }
+      };
+    return ClickViewServiceFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -105,13 +119,13 @@ public final class ClickViewServiceGrpc {
      */
     public void getClickView(com.google.ads.googleads.v3.services.GetClickViewRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v3.resources.ClickView> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetClickViewMethodHelper(), responseObserver);
+      asyncUnimplementedUnaryCall(getGetClickViewMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
-            getGetClickViewMethodHelper(),
+            getGetClickViewMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 com.google.ads.googleads.v3.services.GetClickViewRequest,
@@ -126,19 +140,15 @@ public final class ClickViewServiceGrpc {
    * Service to fetch click views.
    * </pre>
    */
-  public static final class ClickViewServiceStub extends io.grpc.stub.AbstractStub<ClickViewServiceStub> {
-    private ClickViewServiceStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private ClickViewServiceStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class ClickViewServiceStub extends io.grpc.stub.AbstractAsyncStub<ClickViewServiceStub> {
+    private ClickViewServiceStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected ClickViewServiceStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected ClickViewServiceStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new ClickViewServiceStub(channel, callOptions);
     }
 
@@ -150,7 +160,7 @@ public final class ClickViewServiceGrpc {
     public void getClickView(com.google.ads.googleads.v3.services.GetClickViewRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v3.resources.ClickView> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(getGetClickViewMethodHelper(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getGetClickViewMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -159,19 +169,15 @@ public final class ClickViewServiceGrpc {
    * Service to fetch click views.
    * </pre>
    */
-  public static final class ClickViewServiceBlockingStub extends io.grpc.stub.AbstractStub<ClickViewServiceBlockingStub> {
-    private ClickViewServiceBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private ClickViewServiceBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class ClickViewServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<ClickViewServiceBlockingStub> {
+    private ClickViewServiceBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected ClickViewServiceBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected ClickViewServiceBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new ClickViewServiceBlockingStub(channel, callOptions);
     }
 
@@ -182,7 +188,7 @@ public final class ClickViewServiceGrpc {
      */
     public com.google.ads.googleads.v3.resources.ClickView getClickView(com.google.ads.googleads.v3.services.GetClickViewRequest request) {
       return blockingUnaryCall(
-          getChannel(), getGetClickViewMethodHelper(), getCallOptions(), request);
+          getChannel(), getGetClickViewMethod(), getCallOptions(), request);
     }
   }
 
@@ -191,19 +197,15 @@ public final class ClickViewServiceGrpc {
    * Service to fetch click views.
    * </pre>
    */
-  public static final class ClickViewServiceFutureStub extends io.grpc.stub.AbstractStub<ClickViewServiceFutureStub> {
-    private ClickViewServiceFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private ClickViewServiceFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class ClickViewServiceFutureStub extends io.grpc.stub.AbstractFutureStub<ClickViewServiceFutureStub> {
+    private ClickViewServiceFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected ClickViewServiceFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected ClickViewServiceFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new ClickViewServiceFutureStub(channel, callOptions);
     }
 
@@ -215,7 +217,7 @@ public final class ClickViewServiceGrpc {
     public com.google.common.util.concurrent.ListenableFuture<com.google.ads.googleads.v3.resources.ClickView> getClickView(
         com.google.ads.googleads.v3.services.GetClickViewRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(getGetClickViewMethodHelper(), getCallOptions()), request);
+          getChannel().newCall(getGetClickViewMethod(), getCallOptions()), request);
     }
   }
 
@@ -303,7 +305,7 @@ public final class ClickViewServiceGrpc {
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new ClickViewServiceFileDescriptorSupplier())
-              .addMethod(getGetClickViewMethodHelper())
+              .addMethod(getGetClickViewMethod())
               .build();
         }
       }

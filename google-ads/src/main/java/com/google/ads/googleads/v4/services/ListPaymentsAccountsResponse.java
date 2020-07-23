@@ -10,7 +10,7 @@ package com.google.ads.googleads.v4.services;
  *
  * Protobuf type {@code google.ads.googleads.v4.services.ListPaymentsAccountsResponse}
  */
-public  final class ListPaymentsAccountsResponse extends
+public final class ListPaymentsAccountsResponse extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.services.ListPaymentsAccountsResponse)
     ListPaymentsAccountsResponseOrBuilder {
@@ -107,6 +107,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.resources.PaymentsAccount payments_accounts = 1;</code>
    */
+  @java.lang.Override
   public java.util.List<com.google.ads.googleads.v4.resources.PaymentsAccount> getPaymentsAccountsList() {
     return paymentsAccounts_;
   }
@@ -117,6 +118,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.resources.PaymentsAccount payments_accounts = 1;</code>
    */
+  @java.lang.Override
   public java.util.List<? extends com.google.ads.googleads.v4.resources.PaymentsAccountOrBuilder> 
       getPaymentsAccountsOrBuilderList() {
     return paymentsAccounts_;
@@ -128,6 +130,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.resources.PaymentsAccount payments_accounts = 1;</code>
    */
+  @java.lang.Override
   public int getPaymentsAccountsCount() {
     return paymentsAccounts_.size();
   }
@@ -138,6 +141,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.resources.PaymentsAccount payments_accounts = 1;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.resources.PaymentsAccount getPaymentsAccounts(int index) {
     return paymentsAccounts_.get(index);
   }
@@ -148,6 +152,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.resources.PaymentsAccount payments_accounts = 1;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.resources.PaymentsAccountOrBuilder getPaymentsAccountsOrBuilder(
       int index) {
     return paymentsAccounts_.get(index);

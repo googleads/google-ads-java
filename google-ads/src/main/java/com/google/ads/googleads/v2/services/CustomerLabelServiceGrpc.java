@@ -21,7 +21,7 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.10.0)",
+    value = "by gRPC proto compiler",
     comments = "Source: google/ads/googleads/v2/services/customer_label_service.proto")
 public final class CustomerLabelServiceGrpc {
 
@@ -30,86 +30,80 @@ public final class CustomerLabelServiceGrpc {
   public static final String SERVICE_NAME = "google.ads.googleads.v2.services.CustomerLabelService";
 
   // Static method descriptors that strictly reflect the proto.
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  @java.lang.Deprecated // Use {@link #getGetCustomerLabelMethod()} instead. 
-  public static final io.grpc.MethodDescriptor<com.google.ads.googleads.v2.services.GetCustomerLabelRequest,
-      com.google.ads.googleads.v2.resources.CustomerLabel> METHOD_GET_CUSTOMER_LABEL = getGetCustomerLabelMethodHelper();
-
   private static volatile io.grpc.MethodDescriptor<com.google.ads.googleads.v2.services.GetCustomerLabelRequest,
       com.google.ads.googleads.v2.resources.CustomerLabel> getGetCustomerLabelMethod;
 
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetCustomerLabel",
+      requestType = com.google.ads.googleads.v2.services.GetCustomerLabelRequest.class,
+      responseType = com.google.ads.googleads.v2.resources.CustomerLabel.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<com.google.ads.googleads.v2.services.GetCustomerLabelRequest,
       com.google.ads.googleads.v2.resources.CustomerLabel> getGetCustomerLabelMethod() {
-    return getGetCustomerLabelMethodHelper();
-  }
-
-  private static io.grpc.MethodDescriptor<com.google.ads.googleads.v2.services.GetCustomerLabelRequest,
-      com.google.ads.googleads.v2.resources.CustomerLabel> getGetCustomerLabelMethodHelper() {
     io.grpc.MethodDescriptor<com.google.ads.googleads.v2.services.GetCustomerLabelRequest, com.google.ads.googleads.v2.resources.CustomerLabel> getGetCustomerLabelMethod;
     if ((getGetCustomerLabelMethod = CustomerLabelServiceGrpc.getGetCustomerLabelMethod) == null) {
       synchronized (CustomerLabelServiceGrpc.class) {
         if ((getGetCustomerLabelMethod = CustomerLabelServiceGrpc.getGetCustomerLabelMethod) == null) {
-          CustomerLabelServiceGrpc.getGetCustomerLabelMethod = getGetCustomerLabelMethod = 
+          CustomerLabelServiceGrpc.getGetCustomerLabelMethod = getGetCustomerLabelMethod =
               io.grpc.MethodDescriptor.<com.google.ads.googleads.v2.services.GetCustomerLabelRequest, com.google.ads.googleads.v2.resources.CustomerLabel>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "google.ads.googleads.v2.services.CustomerLabelService", "GetCustomerLabel"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetCustomerLabel"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v2.services.GetCustomerLabelRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v2.resources.CustomerLabel.getDefaultInstance()))
-                  .setSchemaDescriptor(new CustomerLabelServiceMethodDescriptorSupplier("GetCustomerLabel"))
-                  .build();
-          }
+              .setSchemaDescriptor(new CustomerLabelServiceMethodDescriptorSupplier("GetCustomerLabel"))
+              .build();
         }
-     }
-     return getGetCustomerLabelMethod;
+      }
+    }
+    return getGetCustomerLabelMethod;
   }
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  @java.lang.Deprecated // Use {@link #getMutateCustomerLabelsMethod()} instead. 
-  public static final io.grpc.MethodDescriptor<com.google.ads.googleads.v2.services.MutateCustomerLabelsRequest,
-      com.google.ads.googleads.v2.services.MutateCustomerLabelsResponse> METHOD_MUTATE_CUSTOMER_LABELS = getMutateCustomerLabelsMethodHelper();
 
   private static volatile io.grpc.MethodDescriptor<com.google.ads.googleads.v2.services.MutateCustomerLabelsRequest,
       com.google.ads.googleads.v2.services.MutateCustomerLabelsResponse> getMutateCustomerLabelsMethod;
 
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "MutateCustomerLabels",
+      requestType = com.google.ads.googleads.v2.services.MutateCustomerLabelsRequest.class,
+      responseType = com.google.ads.googleads.v2.services.MutateCustomerLabelsResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<com.google.ads.googleads.v2.services.MutateCustomerLabelsRequest,
       com.google.ads.googleads.v2.services.MutateCustomerLabelsResponse> getMutateCustomerLabelsMethod() {
-    return getMutateCustomerLabelsMethodHelper();
-  }
-
-  private static io.grpc.MethodDescriptor<com.google.ads.googleads.v2.services.MutateCustomerLabelsRequest,
-      com.google.ads.googleads.v2.services.MutateCustomerLabelsResponse> getMutateCustomerLabelsMethodHelper() {
     io.grpc.MethodDescriptor<com.google.ads.googleads.v2.services.MutateCustomerLabelsRequest, com.google.ads.googleads.v2.services.MutateCustomerLabelsResponse> getMutateCustomerLabelsMethod;
     if ((getMutateCustomerLabelsMethod = CustomerLabelServiceGrpc.getMutateCustomerLabelsMethod) == null) {
       synchronized (CustomerLabelServiceGrpc.class) {
         if ((getMutateCustomerLabelsMethod = CustomerLabelServiceGrpc.getMutateCustomerLabelsMethod) == null) {
-          CustomerLabelServiceGrpc.getMutateCustomerLabelsMethod = getMutateCustomerLabelsMethod = 
+          CustomerLabelServiceGrpc.getMutateCustomerLabelsMethod = getMutateCustomerLabelsMethod =
               io.grpc.MethodDescriptor.<com.google.ads.googleads.v2.services.MutateCustomerLabelsRequest, com.google.ads.googleads.v2.services.MutateCustomerLabelsResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "google.ads.googleads.v2.services.CustomerLabelService", "MutateCustomerLabels"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "MutateCustomerLabels"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v2.services.MutateCustomerLabelsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v2.services.MutateCustomerLabelsResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new CustomerLabelServiceMethodDescriptorSupplier("MutateCustomerLabels"))
-                  .build();
-          }
+              .setSchemaDescriptor(new CustomerLabelServiceMethodDescriptorSupplier("MutateCustomerLabels"))
+              .build();
         }
-     }
-     return getMutateCustomerLabelsMethod;
+      }
+    }
+    return getMutateCustomerLabelsMethod;
   }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static CustomerLabelServiceStub newStub(io.grpc.Channel channel) {
-    return new CustomerLabelServiceStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<CustomerLabelServiceStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<CustomerLabelServiceStub>() {
+        @java.lang.Override
+        public CustomerLabelServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new CustomerLabelServiceStub(channel, callOptions);
+        }
+      };
+    return CustomerLabelServiceStub.newStub(factory, channel);
   }
 
   /**
@@ -117,7 +111,14 @@ public final class CustomerLabelServiceGrpc {
    */
   public static CustomerLabelServiceBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new CustomerLabelServiceBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<CustomerLabelServiceBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<CustomerLabelServiceBlockingStub>() {
+        @java.lang.Override
+        public CustomerLabelServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new CustomerLabelServiceBlockingStub(channel, callOptions);
+        }
+      };
+    return CustomerLabelServiceBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -125,7 +126,14 @@ public final class CustomerLabelServiceGrpc {
    */
   public static CustomerLabelServiceFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new CustomerLabelServiceFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<CustomerLabelServiceFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<CustomerLabelServiceFutureStub>() {
+        @java.lang.Override
+        public CustomerLabelServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new CustomerLabelServiceFutureStub(channel, callOptions);
+        }
+      };
+    return CustomerLabelServiceFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -142,7 +150,7 @@ public final class CustomerLabelServiceGrpc {
      */
     public void getCustomerLabel(com.google.ads.googleads.v2.services.GetCustomerLabelRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v2.resources.CustomerLabel> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetCustomerLabelMethodHelper(), responseObserver);
+      asyncUnimplementedUnaryCall(getGetCustomerLabelMethod(), responseObserver);
     }
 
     /**
@@ -153,20 +161,20 @@ public final class CustomerLabelServiceGrpc {
      */
     public void mutateCustomerLabels(com.google.ads.googleads.v2.services.MutateCustomerLabelsRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v2.services.MutateCustomerLabelsResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getMutateCustomerLabelsMethodHelper(), responseObserver);
+      asyncUnimplementedUnaryCall(getMutateCustomerLabelsMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
-            getGetCustomerLabelMethodHelper(),
+            getGetCustomerLabelMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 com.google.ads.googleads.v2.services.GetCustomerLabelRequest,
                 com.google.ads.googleads.v2.resources.CustomerLabel>(
                   this, METHODID_GET_CUSTOMER_LABEL)))
           .addMethod(
-            getMutateCustomerLabelsMethodHelper(),
+            getMutateCustomerLabelsMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 com.google.ads.googleads.v2.services.MutateCustomerLabelsRequest,
@@ -181,19 +189,15 @@ public final class CustomerLabelServiceGrpc {
    * Service to manage labels on customers.
    * </pre>
    */
-  public static final class CustomerLabelServiceStub extends io.grpc.stub.AbstractStub<CustomerLabelServiceStub> {
-    private CustomerLabelServiceStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private CustomerLabelServiceStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class CustomerLabelServiceStub extends io.grpc.stub.AbstractAsyncStub<CustomerLabelServiceStub> {
+    private CustomerLabelServiceStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected CustomerLabelServiceStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected CustomerLabelServiceStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new CustomerLabelServiceStub(channel, callOptions);
     }
 
@@ -205,7 +209,7 @@ public final class CustomerLabelServiceGrpc {
     public void getCustomerLabel(com.google.ads.googleads.v2.services.GetCustomerLabelRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v2.resources.CustomerLabel> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(getGetCustomerLabelMethodHelper(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getGetCustomerLabelMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -217,7 +221,7 @@ public final class CustomerLabelServiceGrpc {
     public void mutateCustomerLabels(com.google.ads.googleads.v2.services.MutateCustomerLabelsRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v2.services.MutateCustomerLabelsResponse> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(getMutateCustomerLabelsMethodHelper(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getMutateCustomerLabelsMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -226,19 +230,15 @@ public final class CustomerLabelServiceGrpc {
    * Service to manage labels on customers.
    * </pre>
    */
-  public static final class CustomerLabelServiceBlockingStub extends io.grpc.stub.AbstractStub<CustomerLabelServiceBlockingStub> {
-    private CustomerLabelServiceBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private CustomerLabelServiceBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class CustomerLabelServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<CustomerLabelServiceBlockingStub> {
+    private CustomerLabelServiceBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected CustomerLabelServiceBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected CustomerLabelServiceBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new CustomerLabelServiceBlockingStub(channel, callOptions);
     }
 
@@ -249,7 +249,7 @@ public final class CustomerLabelServiceGrpc {
      */
     public com.google.ads.googleads.v2.resources.CustomerLabel getCustomerLabel(com.google.ads.googleads.v2.services.GetCustomerLabelRequest request) {
       return blockingUnaryCall(
-          getChannel(), getGetCustomerLabelMethodHelper(), getCallOptions(), request);
+          getChannel(), getGetCustomerLabelMethod(), getCallOptions(), request);
     }
 
     /**
@@ -260,7 +260,7 @@ public final class CustomerLabelServiceGrpc {
      */
     public com.google.ads.googleads.v2.services.MutateCustomerLabelsResponse mutateCustomerLabels(com.google.ads.googleads.v2.services.MutateCustomerLabelsRequest request) {
       return blockingUnaryCall(
-          getChannel(), getMutateCustomerLabelsMethodHelper(), getCallOptions(), request);
+          getChannel(), getMutateCustomerLabelsMethod(), getCallOptions(), request);
     }
   }
 
@@ -269,19 +269,15 @@ public final class CustomerLabelServiceGrpc {
    * Service to manage labels on customers.
    * </pre>
    */
-  public static final class CustomerLabelServiceFutureStub extends io.grpc.stub.AbstractStub<CustomerLabelServiceFutureStub> {
-    private CustomerLabelServiceFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private CustomerLabelServiceFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class CustomerLabelServiceFutureStub extends io.grpc.stub.AbstractFutureStub<CustomerLabelServiceFutureStub> {
+    private CustomerLabelServiceFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected CustomerLabelServiceFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected CustomerLabelServiceFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new CustomerLabelServiceFutureStub(channel, callOptions);
     }
 
@@ -293,7 +289,7 @@ public final class CustomerLabelServiceGrpc {
     public com.google.common.util.concurrent.ListenableFuture<com.google.ads.googleads.v2.resources.CustomerLabel> getCustomerLabel(
         com.google.ads.googleads.v2.services.GetCustomerLabelRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(getGetCustomerLabelMethodHelper(), getCallOptions()), request);
+          getChannel().newCall(getGetCustomerLabelMethod(), getCallOptions()), request);
     }
 
     /**
@@ -305,7 +301,7 @@ public final class CustomerLabelServiceGrpc {
     public com.google.common.util.concurrent.ListenableFuture<com.google.ads.googleads.v2.services.MutateCustomerLabelsResponse> mutateCustomerLabels(
         com.google.ads.googleads.v2.services.MutateCustomerLabelsRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(getMutateCustomerLabelsMethodHelper(), getCallOptions()), request);
+          getChannel().newCall(getMutateCustomerLabelsMethod(), getCallOptions()), request);
     }
   }
 
@@ -398,8 +394,8 @@ public final class CustomerLabelServiceGrpc {
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new CustomerLabelServiceFileDescriptorSupplier())
-              .addMethod(getGetCustomerLabelMethodHelper())
-              .addMethod(getMutateCustomerLabelsMethodHelper())
+              .addMethod(getGetCustomerLabelMethod())
+              .addMethod(getMutateCustomerLabelsMethod())
               .build();
         }
       }

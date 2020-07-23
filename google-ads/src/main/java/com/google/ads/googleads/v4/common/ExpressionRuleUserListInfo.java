@@ -10,7 +10,7 @@ package com.google.ads.googleads.v4.common;
  *
  * Protobuf type {@code google.ads.googleads.v4.common.ExpressionRuleUserListInfo}
  */
-public  final class ExpressionRuleUserListInfo extends
+public final class ExpressionRuleUserListInfo extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.common.ExpressionRuleUserListInfo)
     ExpressionRuleUserListInfoOrBuilder {
@@ -111,6 +111,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.common.UserListRuleInfo rule = 1;</code>
    * @return Whether the rule field is set.
    */
+  @java.lang.Override
   public boolean hasRule() {
     return rule_ != null;
   }
@@ -126,6 +127,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.common.UserListRuleInfo rule = 1;</code>
    * @return The rule.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.UserListRuleInfo getRule() {
     return rule_ == null ? com.google.ads.googleads.v4.common.UserListRuleInfo.getDefaultInstance() : rule_;
   }
@@ -140,6 +142,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v4.common.UserListRuleInfo rule = 1;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.UserListRuleInfoOrBuilder getRuleOrBuilder() {
     return getRule();
   }

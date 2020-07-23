@@ -13,6 +13,7 @@ public interface ManualCpcOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.BoolValue enhanced_cpc_enabled = 1;</code>
+   * @return Whether the enhancedCpcEnabled field is set.
    */
   boolean hasEnhancedCpcEnabled();
   /**
@@ -21,6 +22,7 @@ public interface ManualCpcOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.BoolValue enhanced_cpc_enabled = 1;</code>
+   * @return The enhancedCpcEnabled.
    */
   com.google.protobuf.BoolValue getEnhancedCpcEnabled();
   /**

@@ -9,18 +9,20 @@ public interface GetUserInterestRequestOrBuilder extends
 
   /**
    * <pre>
-   * Resource name of the UserInterest to fetch.
+   * Required. Resource name of the UserInterest to fetch.
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = { ... }</code>
+   * @return The resourceName.
    */
   java.lang.String getResourceName();
   /**
    * <pre>
-   * Resource name of the UserInterest to fetch.
+   * Required. Resource name of the UserInterest to fetch.
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = { ... }</code>
+   * @return The bytes for resourceName.
    */
   com.google.protobuf.ByteString
       getResourceNameBytes();

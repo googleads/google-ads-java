@@ -10,7 +10,7 @@ package com.google.ads.googleads.v3.resources;
  *
  * Protobuf type {@code google.ads.googleads.v3.resources.PaymentsAccount}
  */
-public  final class PaymentsAccount extends
+public final class PaymentsAccount extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v3.resources.PaymentsAccount)
     PaymentsAccountOrBuilder {
@@ -21,6 +21,13 @@ private static final long serialVersionUID = 0L;
   }
   private PaymentsAccount() {
     resourceName_ = "";
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new PaymentsAccount();
   }
 
   @java.lang.Override
@@ -36,7 +43,6 @@ private static final long serialVersionUID = 0L;
     if (extensionRegistry == null) {
       throw new java.lang.NullPointerException();
     }
-    int mutable_bitField0_ = 0;
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
         com.google.protobuf.UnknownFieldSet.newBuilder();
     try {
@@ -173,7 +179,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The resourceName.
    */
+  @java.lang.Override
   public java.lang.String getResourceName() {
     java.lang.Object ref = resourceName_;
     if (ref instanceof java.lang.String) {
@@ -194,7 +202,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The bytes for resourceName.
    */
+  @java.lang.Override
   public com.google.protobuf.ByteString
       getResourceNameBytes() {
     java.lang.Object ref = resourceName_;
@@ -217,7 +227,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue payments_account_id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the paymentsAccountId field is set.
    */
+  @java.lang.Override
   public boolean hasPaymentsAccountId() {
     return paymentsAccountId_ != null;
   }
@@ -227,7 +239,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue payments_account_id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The paymentsAccountId.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getPaymentsAccountId() {
     return paymentsAccountId_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : paymentsAccountId_;
   }
@@ -238,6 +252,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue payments_account_id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getPaymentsAccountIdOrBuilder() {
     return getPaymentsAccountId();
   }
@@ -250,7 +265,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue name = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the name field is set.
    */
+  @java.lang.Override
   public boolean hasName() {
     return name_ != null;
   }
@@ -260,7 +277,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue name = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The name.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getName() {
     return name_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : name_;
   }
@@ -271,6 +290,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue name = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getNameOrBuilder() {
     return getName();
   }
@@ -285,7 +305,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue currency_code = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the currencyCode field is set.
    */
+  @java.lang.Override
   public boolean hasCurrencyCode() {
     return currencyCode_ != null;
   }
@@ -297,7 +319,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue currency_code = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The currencyCode.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getCurrencyCode() {
     return currencyCode_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : currencyCode_;
   }
@@ -310,6 +334,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue currency_code = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getCurrencyCodeOrBuilder() {
     return getCurrencyCode();
   }
@@ -323,7 +348,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue payments_profile_id = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the paymentsProfileId field is set.
    */
+  @java.lang.Override
   public boolean hasPaymentsProfileId() {
     return paymentsProfileId_ != null;
   }
@@ -334,7 +361,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue payments_profile_id = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The paymentsProfileId.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getPaymentsProfileId() {
     return paymentsProfileId_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : paymentsProfileId_;
   }
@@ -346,6 +375,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue payments_profile_id = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getPaymentsProfileIdOrBuilder() {
     return getPaymentsProfileId();
   }
@@ -359,7 +389,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue secondary_payments_profile_id = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the secondaryPaymentsProfileId field is set.
    */
+  @java.lang.Override
   public boolean hasSecondaryPaymentsProfileId() {
     return secondaryPaymentsProfileId_ != null;
   }
@@ -370,7 +402,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue secondary_payments_profile_id = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The secondaryPaymentsProfileId.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getSecondaryPaymentsProfileId() {
     return secondaryPaymentsProfileId_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : secondaryPaymentsProfileId_;
   }
@@ -382,6 +416,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue secondary_payments_profile_id = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getSecondaryPaymentsProfileIdOrBuilder() {
     return getSecondaryPaymentsProfileId();
   }
@@ -394,7 +429,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue paying_manager_customer = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the payingManagerCustomer field is set.
    */
+  @java.lang.Override
   public boolean hasPayingManagerCustomer() {
     return payingManagerCustomer_ != null;
   }
@@ -404,7 +441,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue paying_manager_customer = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The payingManagerCustomer.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getPayingManagerCustomer() {
     return payingManagerCustomer_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : payingManagerCustomer_;
   }
@@ -415,6 +454,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue paying_manager_customer = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getPayingManagerCustomerOrBuilder() {
     return getPayingManagerCustomer();
   }
@@ -914,6 +954,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @return The resourceName.
      */
     public java.lang.String getResourceName() {
       java.lang.Object ref = resourceName_;
@@ -935,6 +976,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @return The bytes for resourceName.
      */
     public com.google.protobuf.ByteString
         getResourceNameBytes() {
@@ -957,6 +999,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @param value The resourceName to set.
+     * @return This builder for chaining.
      */
     public Builder setResourceName(
         java.lang.String value) {
@@ -976,6 +1020,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @return This builder for chaining.
      */
     public Builder clearResourceName() {
       
@@ -991,6 +1036,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @param value The bytes for resourceName to set.
+     * @return This builder for chaining.
      */
     public Builder setResourceNameBytes(
         com.google.protobuf.ByteString value) {
@@ -1013,6 +1060,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue payments_account_id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the paymentsAccountId field is set.
      */
     public boolean hasPaymentsAccountId() {
       return paymentsAccountIdBuilder_ != null || paymentsAccountId_ != null;
@@ -1023,6 +1071,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue payments_account_id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The paymentsAccountId.
      */
     public com.google.protobuf.StringValue getPaymentsAccountId() {
       if (paymentsAccountIdBuilder_ == null) {
@@ -1166,6 +1215,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue name = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the name field is set.
      */
     public boolean hasName() {
       return nameBuilder_ != null || name_ != null;
@@ -1176,6 +1226,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue name = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The name.
      */
     public com.google.protobuf.StringValue getName() {
       if (nameBuilder_ == null) {
@@ -1321,6 +1372,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue currency_code = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the currencyCode field is set.
      */
     public boolean hasCurrencyCode() {
       return currencyCodeBuilder_ != null || currencyCode_ != null;
@@ -1333,6 +1385,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue currency_code = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The currencyCode.
      */
     public com.google.protobuf.StringValue getCurrencyCode() {
       if (currencyCodeBuilder_ == null) {
@@ -1491,6 +1544,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue payments_profile_id = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the paymentsProfileId field is set.
      */
     public boolean hasPaymentsProfileId() {
       return paymentsProfileIdBuilder_ != null || paymentsProfileId_ != null;
@@ -1502,6 +1556,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue payments_profile_id = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The paymentsProfileId.
      */
     public com.google.protobuf.StringValue getPaymentsProfileId() {
       if (paymentsProfileIdBuilder_ == null) {
@@ -1653,6 +1708,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue secondary_payments_profile_id = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the secondaryPaymentsProfileId field is set.
      */
     public boolean hasSecondaryPaymentsProfileId() {
       return secondaryPaymentsProfileIdBuilder_ != null || secondaryPaymentsProfileId_ != null;
@@ -1664,6 +1720,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue secondary_payments_profile_id = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The secondaryPaymentsProfileId.
      */
     public com.google.protobuf.StringValue getSecondaryPaymentsProfileId() {
       if (secondaryPaymentsProfileIdBuilder_ == null) {
@@ -1814,6 +1871,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue paying_manager_customer = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the payingManagerCustomer field is set.
      */
     public boolean hasPayingManagerCustomer() {
       return payingManagerCustomerBuilder_ != null || payingManagerCustomer_ != null;
@@ -1824,6 +1882,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue paying_manager_customer = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The payingManagerCustomer.
      */
     public com.google.protobuf.StringValue getPayingManagerCustomer() {
       if (payingManagerCustomerBuilder_ == null) {

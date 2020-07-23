@@ -10,7 +10,7 @@ package com.google.ads.googleads.v4.resources;
  *
  * Protobuf type {@code google.ads.googleads.v4.resources.AdGroupAd}
  */
-public  final class AdGroupAd extends
+public final class AdGroupAd extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.resources.AdGroupAd)
     AdGroupAdOrBuilder {
@@ -156,6 +156,7 @@ private static final long serialVersionUID = 0L;
    * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return The resourceName.
    */
+  @java.lang.Override
   public java.lang.String getResourceName() {
     java.lang.Object ref = resourceName_;
     if (ref instanceof java.lang.String) {
@@ -178,6 +179,7 @@ private static final long serialVersionUID = 0L;
    * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return The bytes for resourceName.
    */
+  @java.lang.Override
   public com.google.protobuf.ByteString
       getResourceNameBytes() {
     java.lang.Object ref = resourceName_;
@@ -202,7 +204,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.AdGroupAdStatusEnum.AdGroupAdStatus status = 3;</code>
    * @return The enum numeric value on the wire for status.
    */
-  public int getStatusValue() {
+  @java.lang.Override public int getStatusValue() {
     return status_;
   }
   /**
@@ -213,7 +215,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.AdGroupAdStatusEnum.AdGroupAdStatus status = 3;</code>
    * @return The status.
    */
-  public com.google.ads.googleads.v4.enums.AdGroupAdStatusEnum.AdGroupAdStatus getStatus() {
+  @java.lang.Override public com.google.ads.googleads.v4.enums.AdGroupAdStatusEnum.AdGroupAdStatus getStatus() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v4.enums.AdGroupAdStatusEnum.AdGroupAdStatus result = com.google.ads.googleads.v4.enums.AdGroupAdStatusEnum.AdGroupAdStatus.valueOf(status_);
     return result == null ? com.google.ads.googleads.v4.enums.AdGroupAdStatusEnum.AdGroupAdStatus.UNRECOGNIZED : result;
@@ -229,6 +231,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue ad_group = 4 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return Whether the adGroup field is set.
    */
+  @java.lang.Override
   public boolean hasAdGroup() {
     return adGroup_ != null;
   }
@@ -240,6 +243,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue ad_group = 4 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return The adGroup.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getAdGroup() {
     return adGroup_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : adGroup_;
   }
@@ -250,6 +254,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue ad_group = 4 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getAdGroupOrBuilder() {
     return getAdGroup();
   }
@@ -264,6 +269,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.resources.Ad ad = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return Whether the ad field is set.
    */
+  @java.lang.Override
   public boolean hasAd() {
     return ad_ != null;
   }
@@ -275,6 +281,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.resources.Ad ad = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return The ad.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.resources.Ad getAd() {
     return ad_ == null ? com.google.ads.googleads.v4.resources.Ad.getDefaultInstance() : ad_;
   }
@@ -285,6 +292,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v4.resources.Ad ad = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.resources.AdOrBuilder getAdOrBuilder() {
     return getAd();
   }
@@ -299,6 +307,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.resources.AdGroupAdPolicySummary policy_summary = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the policySummary field is set.
    */
+  @java.lang.Override
   public boolean hasPolicySummary() {
     return policySummary_ != null;
   }
@@ -310,6 +319,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.resources.AdGroupAdPolicySummary policy_summary = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The policySummary.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.resources.AdGroupAdPolicySummary getPolicySummary() {
     return policySummary_ == null ? com.google.ads.googleads.v4.resources.AdGroupAdPolicySummary.getDefaultInstance() : policySummary_;
   }
@@ -320,6 +330,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v4.resources.AdGroupAdPolicySummary policy_summary = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.resources.AdGroupAdPolicySummaryOrBuilder getPolicySummaryOrBuilder() {
     return getPolicySummary();
   }
@@ -334,7 +345,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.AdStrengthEnum.AdStrength ad_strength = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The enum numeric value on the wire for adStrength.
    */
-  public int getAdStrengthValue() {
+  @java.lang.Override public int getAdStrengthValue() {
     return adStrength_;
   }
   /**
@@ -345,7 +356,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.AdStrengthEnum.AdStrength ad_strength = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The adStrength.
    */
-  public com.google.ads.googleads.v4.enums.AdStrengthEnum.AdStrength getAdStrength() {
+  @java.lang.Override public com.google.ads.googleads.v4.enums.AdStrengthEnum.AdStrength getAdStrength() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v4.enums.AdStrengthEnum.AdStrength result = com.google.ads.googleads.v4.enums.AdStrengthEnum.AdStrength.valueOf(adStrength_);
     return result == null ? com.google.ads.googleads.v4.enums.AdStrengthEnum.AdStrength.UNRECOGNIZED : result;
@@ -894,7 +905,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.AdGroupAdStatusEnum.AdGroupAdStatus status = 3;</code>
      * @return The enum numeric value on the wire for status.
      */
-    public int getStatusValue() {
+    @java.lang.Override public int getStatusValue() {
       return status_;
     }
     /**
@@ -907,6 +918,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setStatusValue(int value) {
+      
       status_ = value;
       onChanged();
       return this;
@@ -919,6 +931,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.AdGroupAdStatusEnum.AdGroupAdStatus status = 3;</code>
      * @return The status.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.enums.AdGroupAdStatusEnum.AdGroupAdStatus getStatus() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v4.enums.AdGroupAdStatusEnum.AdGroupAdStatus result = com.google.ads.googleads.v4.enums.AdGroupAdStatusEnum.AdGroupAdStatus.valueOf(status_);
@@ -1431,7 +1444,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.AdStrengthEnum.AdStrength ad_strength = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The enum numeric value on the wire for adStrength.
      */
-    public int getAdStrengthValue() {
+    @java.lang.Override public int getAdStrengthValue() {
       return adStrength_;
     }
     /**
@@ -1444,6 +1457,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setAdStrengthValue(int value) {
+      
       adStrength_ = value;
       onChanged();
       return this;
@@ -1456,6 +1470,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.AdStrengthEnum.AdStrength ad_strength = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The adStrength.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.enums.AdStrengthEnum.AdStrength getAdStrength() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v4.enums.AdStrengthEnum.AdStrength result = com.google.ads.googleads.v4.enums.AdStrengthEnum.AdStrength.valueOf(adStrength_);

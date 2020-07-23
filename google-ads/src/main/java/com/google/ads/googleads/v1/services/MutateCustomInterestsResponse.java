@@ -10,7 +10,7 @@ package com.google.ads.googleads.v1.services;
  *
  * Protobuf type {@code google.ads.googleads.v1.services.MutateCustomInterestsResponse}
  */
-public  final class MutateCustomInterestsResponse extends
+public final class MutateCustomInterestsResponse extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v1.services.MutateCustomInterestsResponse)
     MutateCustomInterestsResponseOrBuilder {
@@ -21,6 +21,13 @@ private static final long serialVersionUID = 0L;
   }
   private MutateCustomInterestsResponse() {
     results_ = java.util.Collections.emptyList();
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new MutateCustomInterestsResponse();
   }
 
   @java.lang.Override
@@ -100,6 +107,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v1.services.MutateCustomInterestResult results = 2;</code>
    */
+  @java.lang.Override
   public java.util.List<com.google.ads.googleads.v1.services.MutateCustomInterestResult> getResultsList() {
     return results_;
   }
@@ -110,6 +118,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v1.services.MutateCustomInterestResult results = 2;</code>
    */
+  @java.lang.Override
   public java.util.List<? extends com.google.ads.googleads.v1.services.MutateCustomInterestResultOrBuilder> 
       getResultsOrBuilderList() {
     return results_;
@@ -121,6 +130,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v1.services.MutateCustomInterestResult results = 2;</code>
    */
+  @java.lang.Override
   public int getResultsCount() {
     return results_.size();
   }
@@ -131,6 +141,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v1.services.MutateCustomInterestResult results = 2;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.services.MutateCustomInterestResult getResults(int index) {
     return results_.get(index);
   }
@@ -141,6 +152,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v1.services.MutateCustomInterestResult results = 2;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.services.MutateCustomInterestResultOrBuilder getResultsOrBuilder(
       int index) {
     return results_.get(index);

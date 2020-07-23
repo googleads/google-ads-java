@@ -21,7 +21,7 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.10.0)",
+    value = "by gRPC proto compiler",
     comments = "Source: google/ads/googleads/v1/services/managed_placement_view_service.proto")
 public final class ManagedPlacementViewServiceGrpc {
 
@@ -30,49 +30,49 @@ public final class ManagedPlacementViewServiceGrpc {
   public static final String SERVICE_NAME = "google.ads.googleads.v1.services.ManagedPlacementViewService";
 
   // Static method descriptors that strictly reflect the proto.
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  @java.lang.Deprecated // Use {@link #getGetManagedPlacementViewMethod()} instead. 
-  public static final io.grpc.MethodDescriptor<com.google.ads.googleads.v1.services.GetManagedPlacementViewRequest,
-      com.google.ads.googleads.v1.resources.ManagedPlacementView> METHOD_GET_MANAGED_PLACEMENT_VIEW = getGetManagedPlacementViewMethodHelper();
-
   private static volatile io.grpc.MethodDescriptor<com.google.ads.googleads.v1.services.GetManagedPlacementViewRequest,
       com.google.ads.googleads.v1.resources.ManagedPlacementView> getGetManagedPlacementViewMethod;
 
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetManagedPlacementView",
+      requestType = com.google.ads.googleads.v1.services.GetManagedPlacementViewRequest.class,
+      responseType = com.google.ads.googleads.v1.resources.ManagedPlacementView.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<com.google.ads.googleads.v1.services.GetManagedPlacementViewRequest,
       com.google.ads.googleads.v1.resources.ManagedPlacementView> getGetManagedPlacementViewMethod() {
-    return getGetManagedPlacementViewMethodHelper();
-  }
-
-  private static io.grpc.MethodDescriptor<com.google.ads.googleads.v1.services.GetManagedPlacementViewRequest,
-      com.google.ads.googleads.v1.resources.ManagedPlacementView> getGetManagedPlacementViewMethodHelper() {
     io.grpc.MethodDescriptor<com.google.ads.googleads.v1.services.GetManagedPlacementViewRequest, com.google.ads.googleads.v1.resources.ManagedPlacementView> getGetManagedPlacementViewMethod;
     if ((getGetManagedPlacementViewMethod = ManagedPlacementViewServiceGrpc.getGetManagedPlacementViewMethod) == null) {
       synchronized (ManagedPlacementViewServiceGrpc.class) {
         if ((getGetManagedPlacementViewMethod = ManagedPlacementViewServiceGrpc.getGetManagedPlacementViewMethod) == null) {
-          ManagedPlacementViewServiceGrpc.getGetManagedPlacementViewMethod = getGetManagedPlacementViewMethod = 
+          ManagedPlacementViewServiceGrpc.getGetManagedPlacementViewMethod = getGetManagedPlacementViewMethod =
               io.grpc.MethodDescriptor.<com.google.ads.googleads.v1.services.GetManagedPlacementViewRequest, com.google.ads.googleads.v1.resources.ManagedPlacementView>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "google.ads.googleads.v1.services.ManagedPlacementViewService", "GetManagedPlacementView"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetManagedPlacementView"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v1.services.GetManagedPlacementViewRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v1.resources.ManagedPlacementView.getDefaultInstance()))
-                  .setSchemaDescriptor(new ManagedPlacementViewServiceMethodDescriptorSupplier("GetManagedPlacementView"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ManagedPlacementViewServiceMethodDescriptorSupplier("GetManagedPlacementView"))
+              .build();
         }
-     }
-     return getGetManagedPlacementViewMethod;
+      }
+    }
+    return getGetManagedPlacementViewMethod;
   }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static ManagedPlacementViewServiceStub newStub(io.grpc.Channel channel) {
-    return new ManagedPlacementViewServiceStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<ManagedPlacementViewServiceStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<ManagedPlacementViewServiceStub>() {
+        @java.lang.Override
+        public ManagedPlacementViewServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new ManagedPlacementViewServiceStub(channel, callOptions);
+        }
+      };
+    return ManagedPlacementViewServiceStub.newStub(factory, channel);
   }
 
   /**
@@ -80,7 +80,14 @@ public final class ManagedPlacementViewServiceGrpc {
    */
   public static ManagedPlacementViewServiceBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new ManagedPlacementViewServiceBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<ManagedPlacementViewServiceBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<ManagedPlacementViewServiceBlockingStub>() {
+        @java.lang.Override
+        public ManagedPlacementViewServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new ManagedPlacementViewServiceBlockingStub(channel, callOptions);
+        }
+      };
+    return ManagedPlacementViewServiceBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -88,7 +95,14 @@ public final class ManagedPlacementViewServiceGrpc {
    */
   public static ManagedPlacementViewServiceFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new ManagedPlacementViewServiceFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<ManagedPlacementViewServiceFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<ManagedPlacementViewServiceFutureStub>() {
+        @java.lang.Override
+        public ManagedPlacementViewServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new ManagedPlacementViewServiceFutureStub(channel, callOptions);
+        }
+      };
+    return ManagedPlacementViewServiceFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -105,13 +119,13 @@ public final class ManagedPlacementViewServiceGrpc {
      */
     public void getManagedPlacementView(com.google.ads.googleads.v1.services.GetManagedPlacementViewRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v1.resources.ManagedPlacementView> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetManagedPlacementViewMethodHelper(), responseObserver);
+      asyncUnimplementedUnaryCall(getGetManagedPlacementViewMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
-            getGetManagedPlacementViewMethodHelper(),
+            getGetManagedPlacementViewMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 com.google.ads.googleads.v1.services.GetManagedPlacementViewRequest,
@@ -126,19 +140,15 @@ public final class ManagedPlacementViewServiceGrpc {
    * Service to manage Managed Placement views.
    * </pre>
    */
-  public static final class ManagedPlacementViewServiceStub extends io.grpc.stub.AbstractStub<ManagedPlacementViewServiceStub> {
-    private ManagedPlacementViewServiceStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private ManagedPlacementViewServiceStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class ManagedPlacementViewServiceStub extends io.grpc.stub.AbstractAsyncStub<ManagedPlacementViewServiceStub> {
+    private ManagedPlacementViewServiceStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected ManagedPlacementViewServiceStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected ManagedPlacementViewServiceStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new ManagedPlacementViewServiceStub(channel, callOptions);
     }
 
@@ -150,7 +160,7 @@ public final class ManagedPlacementViewServiceGrpc {
     public void getManagedPlacementView(com.google.ads.googleads.v1.services.GetManagedPlacementViewRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v1.resources.ManagedPlacementView> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(getGetManagedPlacementViewMethodHelper(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getGetManagedPlacementViewMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -159,19 +169,15 @@ public final class ManagedPlacementViewServiceGrpc {
    * Service to manage Managed Placement views.
    * </pre>
    */
-  public static final class ManagedPlacementViewServiceBlockingStub extends io.grpc.stub.AbstractStub<ManagedPlacementViewServiceBlockingStub> {
-    private ManagedPlacementViewServiceBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private ManagedPlacementViewServiceBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class ManagedPlacementViewServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<ManagedPlacementViewServiceBlockingStub> {
+    private ManagedPlacementViewServiceBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected ManagedPlacementViewServiceBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected ManagedPlacementViewServiceBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new ManagedPlacementViewServiceBlockingStub(channel, callOptions);
     }
 
@@ -182,7 +188,7 @@ public final class ManagedPlacementViewServiceGrpc {
      */
     public com.google.ads.googleads.v1.resources.ManagedPlacementView getManagedPlacementView(com.google.ads.googleads.v1.services.GetManagedPlacementViewRequest request) {
       return blockingUnaryCall(
-          getChannel(), getGetManagedPlacementViewMethodHelper(), getCallOptions(), request);
+          getChannel(), getGetManagedPlacementViewMethod(), getCallOptions(), request);
     }
   }
 
@@ -191,19 +197,15 @@ public final class ManagedPlacementViewServiceGrpc {
    * Service to manage Managed Placement views.
    * </pre>
    */
-  public static final class ManagedPlacementViewServiceFutureStub extends io.grpc.stub.AbstractStub<ManagedPlacementViewServiceFutureStub> {
-    private ManagedPlacementViewServiceFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private ManagedPlacementViewServiceFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class ManagedPlacementViewServiceFutureStub extends io.grpc.stub.AbstractFutureStub<ManagedPlacementViewServiceFutureStub> {
+    private ManagedPlacementViewServiceFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected ManagedPlacementViewServiceFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected ManagedPlacementViewServiceFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new ManagedPlacementViewServiceFutureStub(channel, callOptions);
     }
 
@@ -215,7 +217,7 @@ public final class ManagedPlacementViewServiceGrpc {
     public com.google.common.util.concurrent.ListenableFuture<com.google.ads.googleads.v1.resources.ManagedPlacementView> getManagedPlacementView(
         com.google.ads.googleads.v1.services.GetManagedPlacementViewRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(getGetManagedPlacementViewMethodHelper(), getCallOptions()), request);
+          getChannel().newCall(getGetManagedPlacementViewMethod(), getCallOptions()), request);
     }
   }
 
@@ -303,7 +305,7 @@ public final class ManagedPlacementViewServiceGrpc {
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new ManagedPlacementViewServiceFileDescriptorSupplier())
-              .addMethod(getGetManagedPlacementViewMethodHelper())
+              .addMethod(getGetManagedPlacementViewMethod())
               .build();
         }
       }

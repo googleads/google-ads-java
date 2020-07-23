@@ -28,6 +28,7 @@ import com.google.ads.googleads.v4.resources.Ad;
 import com.google.ads.googleads.v4.resources.AdGroupAd;
 import com.google.ads.googleads.v4.services.AdGroupAdOperation;
 import com.google.ads.googleads.v4.services.AdGroupAdServiceClient;
+import com.google.ads.googleads.v4.services.MutateAdGroupAdsRequest;
 import com.google.ads.googleads.v4.services.MutateAdGroupAdsResponse;
 import com.google.ads.googleads.v4.utils.ResourceNames;
 import com.google.common.collect.ImmutableList;
@@ -133,8 +134,11 @@ public class ValidateTextAd {
       // Issues the mutate request setting validateOnly=true.
       MutateAdGroupAdsResponse response =
           adGroupAdServiceClient.mutateAdGroupAds(
-              Long.toString(customerId), ImmutableList.of(operation), false, true);
-
+              MutateAdGroupAdsRequest.newBuilder()
+                  .setCustomerId(Long.toString(customerId))
+                  .addOperations(operation)
+                  .setValidateOnly(true)
+                  .build());
       // Since validation is ON, result will be null.
       System.out.println("Expanded text ad validated successfully.");
     } catch (GoogleAdsException e) {

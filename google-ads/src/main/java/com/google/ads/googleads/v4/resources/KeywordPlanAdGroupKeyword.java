@@ -11,7 +11,7 @@ package com.google.ads.googleads.v4.resources;
  *
  * Protobuf type {@code google.ads.googleads.v4.resources.KeywordPlanAdGroupKeyword}
  */
-public  final class KeywordPlanAdGroupKeyword extends
+public final class KeywordPlanAdGroupKeyword extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.resources.KeywordPlanAdGroupKeyword)
     KeywordPlanAdGroupKeywordOrBuilder {
@@ -176,6 +176,7 @@ private static final long serialVersionUID = 0L;
    * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return The resourceName.
    */
+  @java.lang.Override
   public java.lang.String getResourceName() {
     java.lang.Object ref = resourceName_;
     if (ref instanceof java.lang.String) {
@@ -198,6 +199,7 @@ private static final long serialVersionUID = 0L;
    * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return The bytes for resourceName.
    */
+  @java.lang.Override
   public com.google.protobuf.ByteString
       getResourceNameBytes() {
     java.lang.Object ref = resourceName_;
@@ -222,6 +224,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue keyword_plan_ad_group = 2 [(.google.api.resource_reference) = { ... }</code>
    * @return Whether the keywordPlanAdGroup field is set.
    */
+  @java.lang.Override
   public boolean hasKeywordPlanAdGroup() {
     return keywordPlanAdGroup_ != null;
   }
@@ -233,6 +236,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue keyword_plan_ad_group = 2 [(.google.api.resource_reference) = { ... }</code>
    * @return The keywordPlanAdGroup.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getKeywordPlanAdGroup() {
     return keywordPlanAdGroup_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : keywordPlanAdGroup_;
   }
@@ -243,6 +247,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue keyword_plan_ad_group = 2 [(.google.api.resource_reference) = { ... }</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getKeywordPlanAdGroupOrBuilder() {
     return getKeywordPlanAdGroup();
   }
@@ -257,6 +262,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the id field is set.
    */
+  @java.lang.Override
   public boolean hasId() {
     return id_ != null;
   }
@@ -268,6 +274,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The id.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getId() {
     return id_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : id_;
   }
@@ -278,6 +285,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getIdOrBuilder() {
     return getId();
   }
@@ -292,6 +300,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue text = 4;</code>
    * @return Whether the text field is set.
    */
+  @java.lang.Override
   public boolean hasText() {
     return text_ != null;
   }
@@ -303,6 +312,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue text = 4;</code>
    * @return The text.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getText() {
     return text_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : text_;
   }
@@ -313,6 +323,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue text = 4;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getTextOrBuilder() {
     return getText();
   }
@@ -327,7 +338,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.KeywordMatchTypeEnum.KeywordMatchType match_type = 5;</code>
    * @return The enum numeric value on the wire for matchType.
    */
-  public int getMatchTypeValue() {
+  @java.lang.Override public int getMatchTypeValue() {
     return matchType_;
   }
   /**
@@ -338,7 +349,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.KeywordMatchTypeEnum.KeywordMatchType match_type = 5;</code>
    * @return The matchType.
    */
-  public com.google.ads.googleads.v4.enums.KeywordMatchTypeEnum.KeywordMatchType getMatchType() {
+  @java.lang.Override public com.google.ads.googleads.v4.enums.KeywordMatchTypeEnum.KeywordMatchType getMatchType() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v4.enums.KeywordMatchTypeEnum.KeywordMatchType result = com.google.ads.googleads.v4.enums.KeywordMatchTypeEnum.KeywordMatchType.valueOf(matchType_);
     return result == null ? com.google.ads.googleads.v4.enums.KeywordMatchTypeEnum.KeywordMatchType.UNRECOGNIZED : result;
@@ -358,6 +369,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int64Value cpc_bid_micros = 6;</code>
    * @return Whether the cpcBidMicros field is set.
    */
+  @java.lang.Override
   public boolean hasCpcBidMicros() {
     return cpcBidMicros_ != null;
   }
@@ -373,6 +385,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int64Value cpc_bid_micros = 6;</code>
    * @return The cpcBidMicros.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getCpcBidMicros() {
     return cpcBidMicros_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : cpcBidMicros_;
   }
@@ -387,6 +400,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int64Value cpc_bid_micros = 6;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getCpcBidMicrosOrBuilder() {
     return getCpcBidMicros();
   }
@@ -401,6 +415,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.BoolValue negative = 7 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return Whether the negative field is set.
    */
+  @java.lang.Override
   public boolean hasNegative() {
     return negative_ != null;
   }
@@ -412,6 +427,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.BoolValue negative = 7 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return The negative.
    */
+  @java.lang.Override
   public com.google.protobuf.BoolValue getNegative() {
     return negative_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : negative_;
   }
@@ -422,6 +438,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.BoolValue negative = 7 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.BoolValueOrBuilder getNegativeOrBuilder() {
     return getNegative();
   }
@@ -1479,7 +1496,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.KeywordMatchTypeEnum.KeywordMatchType match_type = 5;</code>
      * @return The enum numeric value on the wire for matchType.
      */
-    public int getMatchTypeValue() {
+    @java.lang.Override public int getMatchTypeValue() {
       return matchType_;
     }
     /**
@@ -1492,6 +1509,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setMatchTypeValue(int value) {
+      
       matchType_ = value;
       onChanged();
       return this;
@@ -1504,6 +1522,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.KeywordMatchTypeEnum.KeywordMatchType match_type = 5;</code>
      * @return The matchType.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.enums.KeywordMatchTypeEnum.KeywordMatchType getMatchType() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v4.enums.KeywordMatchTypeEnum.KeywordMatchType result = com.google.ads.googleads.v4.enums.KeywordMatchTypeEnum.KeywordMatchType.valueOf(matchType_);

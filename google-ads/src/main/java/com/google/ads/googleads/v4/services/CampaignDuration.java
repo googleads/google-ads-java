@@ -10,7 +10,7 @@ package com.google.ads.googleads.v4.services;
  *
  * Protobuf type {@code google.ads.googleads.v4.services.CampaignDuration}
  */
-public  final class CampaignDuration extends
+public final class CampaignDuration extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.services.CampaignDuration)
     CampaignDurationOrBuilder {
@@ -107,6 +107,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int32Value duration_in_days = 1;</code>
    * @return Whether the durationInDays field is set.
    */
+  @java.lang.Override
   public boolean hasDurationInDays() {
     return durationInDays_ != null;
   }
@@ -118,6 +119,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int32Value duration_in_days = 1;</code>
    * @return The durationInDays.
    */
+  @java.lang.Override
   public com.google.protobuf.Int32Value getDurationInDays() {
     return durationInDays_ == null ? com.google.protobuf.Int32Value.getDefaultInstance() : durationInDays_;
   }
@@ -128,6 +130,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int32Value duration_in_days = 1;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int32ValueOrBuilder getDurationInDaysOrBuilder() {
     return getDurationInDays();
   }

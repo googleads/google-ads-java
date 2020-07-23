@@ -9,65 +9,71 @@ public interface GeographicViewOrBuilder extends
 
   /**
    * <pre>
-   * The resource name of the geographic view.
+   * Output only. The resource name of the geographic view.
    * Geographic view resource names have the form:
    * `customers/{customer_id}/geographicViews/{country_criterion_id}~{location_type}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The resourceName.
    */
   java.lang.String getResourceName();
   /**
    * <pre>
-   * The resource name of the geographic view.
+   * Output only. The resource name of the geographic view.
    * Geographic view resource names have the form:
    * `customers/{customer_id}/geographicViews/{country_criterion_id}~{location_type}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The bytes for resourceName.
    */
   com.google.protobuf.ByteString
       getResourceNameBytes();
 
   /**
    * <pre>
-   * CriterionId for the geo target for a country.
+   * Output only. CriterionId for the geo target for a country.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue country_geo_target_constant = 2;</code>
+   * <code>.google.protobuf.StringValue country_geo_target_constant = 2 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return Whether the countryGeoTargetConstant field is set.
    */
   boolean hasCountryGeoTargetConstant();
   /**
    * <pre>
-   * CriterionId for the geo target for a country.
+   * Output only. CriterionId for the geo target for a country.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue country_geo_target_constant = 2;</code>
+   * <code>.google.protobuf.StringValue country_geo_target_constant = 2 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The countryGeoTargetConstant.
    */
   com.google.protobuf.StringValue getCountryGeoTargetConstant();
   /**
    * <pre>
-   * CriterionId for the geo target for a country.
+   * Output only. CriterionId for the geo target for a country.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue country_geo_target_constant = 2;</code>
+   * <code>.google.protobuf.StringValue country_geo_target_constant = 2 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    */
   com.google.protobuf.StringValueOrBuilder getCountryGeoTargetConstantOrBuilder();
 
   /**
    * <pre>
-   * Type of the geo targeting of the campaign.
+   * Output only. Type of the geo targeting of the campaign.
    * </pre>
    *
-   * <code>.google.ads.googleads.v1.enums.GeoTargetingTypeEnum.GeoTargetingType location_type = 3;</code>
+   * <code>.google.ads.googleads.v1.enums.GeoTargetingTypeEnum.GeoTargetingType location_type = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The enum numeric value on the wire for locationType.
    */
   int getLocationTypeValue();
   /**
    * <pre>
-   * Type of the geo targeting of the campaign.
+   * Output only. Type of the geo targeting of the campaign.
    * </pre>
    *
-   * <code>.google.ads.googleads.v1.enums.GeoTargetingTypeEnum.GeoTargetingType location_type = 3;</code>
+   * <code>.google.ads.googleads.v1.enums.GeoTargetingTypeEnum.GeoTargetingType location_type = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The locationType.
    */
   com.google.ads.googleads.v1.enums.GeoTargetingTypeEnum.GeoTargetingType getLocationType();
 }

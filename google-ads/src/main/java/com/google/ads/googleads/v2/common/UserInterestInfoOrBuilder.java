@@ -13,6 +13,7 @@ public interface UserInterestInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue user_interest_category = 1;</code>
+   * @return Whether the userInterestCategory field is set.
    */
   boolean hasUserInterestCategory();
   /**
@@ -21,6 +22,7 @@ public interface UserInterestInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue user_interest_category = 1;</code>
+   * @return The userInterestCategory.
    */
   com.google.protobuf.StringValue getUserInterestCategory();
   /**

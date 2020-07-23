@@ -10,7 +10,7 @@ package com.google.ads.googleads.v2.services;
  *
  * Protobuf type {@code google.ads.googleads.v2.services.Preferences}
  */
-public  final class Preferences extends
+public final class Preferences extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v2.services.Preferences)
     PreferencesOrBuilder {
@@ -21,6 +21,13 @@ private static final long serialVersionUID = 0L;
   }
   private Preferences() {
     adLength_ = 0;
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new Preferences();
   }
 
   @java.lang.Override
@@ -36,7 +43,6 @@ private static final long serialVersionUID = 0L;
     if (extensionRegistry == null) {
       throw new java.lang.NullPointerException();
     }
-    int mutable_bitField0_ = 0;
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
         com.google.protobuf.UnknownFieldSet.newBuilder();
     try {
@@ -146,7 +152,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.BoolValue is_skippable = 1;</code>
+   * @return Whether the isSkippable field is set.
    */
+  @java.lang.Override
   public boolean hasIsSkippable() {
     return isSkippable_ != null;
   }
@@ -157,7 +165,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.BoolValue is_skippable = 1;</code>
+   * @return The isSkippable.
    */
+  @java.lang.Override
   public com.google.protobuf.BoolValue getIsSkippable() {
     return isSkippable_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : isSkippable_;
   }
@@ -169,6 +179,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.BoolValue is_skippable = 1;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.BoolValueOrBuilder getIsSkippableOrBuilder() {
     return getIsSkippable();
   }
@@ -182,7 +193,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.BoolValue starts_with_sound = 2;</code>
+   * @return Whether the startsWithSound field is set.
    */
+  @java.lang.Override
   public boolean hasStartsWithSound() {
     return startsWithSound_ != null;
   }
@@ -193,7 +206,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.BoolValue starts_with_sound = 2;</code>
+   * @return The startsWithSound.
    */
+  @java.lang.Override
   public com.google.protobuf.BoolValue getStartsWithSound() {
     return startsWithSound_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : startsWithSound_;
   }
@@ -205,6 +220,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.BoolValue starts_with_sound = 2;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.BoolValueOrBuilder getStartsWithSoundOrBuilder() {
     return getStartsWithSound();
   }
@@ -218,8 +234,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.enums.ReachPlanAdLengthEnum.ReachPlanAdLength ad_length = 3;</code>
+   * @return The enum numeric value on the wire for adLength.
    */
-  public int getAdLengthValue() {
+  @java.lang.Override public int getAdLengthValue() {
     return adLength_;
   }
   /**
@@ -229,8 +246,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.enums.ReachPlanAdLengthEnum.ReachPlanAdLength ad_length = 3;</code>
+   * @return The adLength.
    */
-  public com.google.ads.googleads.v2.enums.ReachPlanAdLengthEnum.ReachPlanAdLength getAdLength() {
+  @java.lang.Override public com.google.ads.googleads.v2.enums.ReachPlanAdLengthEnum.ReachPlanAdLength getAdLength() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v2.enums.ReachPlanAdLengthEnum.ReachPlanAdLength result = com.google.ads.googleads.v2.enums.ReachPlanAdLengthEnum.ReachPlanAdLength.valueOf(adLength_);
     return result == null ? com.google.ads.googleads.v2.enums.ReachPlanAdLengthEnum.ReachPlanAdLength.UNRECOGNIZED : result;
@@ -245,7 +263,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.BoolValue top_content_only = 4;</code>
+   * @return Whether the topContentOnly field is set.
    */
+  @java.lang.Override
   public boolean hasTopContentOnly() {
     return topContentOnly_ != null;
   }
@@ -256,7 +276,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.BoolValue top_content_only = 4;</code>
+   * @return The topContentOnly.
    */
+  @java.lang.Override
   public com.google.protobuf.BoolValue getTopContentOnly() {
     return topContentOnly_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : topContentOnly_;
   }
@@ -268,6 +290,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.BoolValue top_content_only = 4;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.BoolValueOrBuilder getTopContentOnlyOrBuilder() {
     return getTopContentOnly();
   }
@@ -282,7 +305,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.BoolValue has_guaranteed_price = 5;</code>
+   * @return Whether the hasGuaranteedPrice field is set.
    */
+  @java.lang.Override
   public boolean hasHasGuaranteedPrice() {
     return hasGuaranteedPrice_ != null;
   }
@@ -294,7 +319,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.BoolValue has_guaranteed_price = 5;</code>
+   * @return The hasGuaranteedPrice.
    */
+  @java.lang.Override
   public com.google.protobuf.BoolValue getHasGuaranteedPrice() {
     return hasGuaranteedPrice_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : hasGuaranteedPrice_;
   }
@@ -307,6 +334,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.BoolValue has_guaranteed_price = 5;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.BoolValueOrBuilder getHasGuaranteedPriceOrBuilder() {
     return getHasGuaranteedPrice();
   }
@@ -746,6 +774,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.BoolValue is_skippable = 1;</code>
+     * @return Whether the isSkippable field is set.
      */
     public boolean hasIsSkippable() {
       return isSkippableBuilder_ != null || isSkippable_ != null;
@@ -757,6 +786,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.BoolValue is_skippable = 1;</code>
+     * @return The isSkippable.
      */
     public com.google.protobuf.BoolValue getIsSkippable() {
       if (isSkippableBuilder_ == null) {
@@ -908,6 +938,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.BoolValue starts_with_sound = 2;</code>
+     * @return Whether the startsWithSound field is set.
      */
     public boolean hasStartsWithSound() {
       return startsWithSoundBuilder_ != null || startsWithSound_ != null;
@@ -919,6 +950,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.BoolValue starts_with_sound = 2;</code>
+     * @return The startsWithSound.
      */
     public com.google.protobuf.BoolValue getStartsWithSound() {
       if (startsWithSoundBuilder_ == null) {
@@ -1068,8 +1100,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.enums.ReachPlanAdLengthEnum.ReachPlanAdLength ad_length = 3;</code>
+     * @return The enum numeric value on the wire for adLength.
      */
-    public int getAdLengthValue() {
+    @java.lang.Override public int getAdLengthValue() {
       return adLength_;
     }
     /**
@@ -1079,8 +1112,11 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.enums.ReachPlanAdLengthEnum.ReachPlanAdLength ad_length = 3;</code>
+     * @param value The enum numeric value on the wire for adLength to set.
+     * @return This builder for chaining.
      */
     public Builder setAdLengthValue(int value) {
+      
       adLength_ = value;
       onChanged();
       return this;
@@ -1092,7 +1128,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.enums.ReachPlanAdLengthEnum.ReachPlanAdLength ad_length = 3;</code>
+     * @return The adLength.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v2.enums.ReachPlanAdLengthEnum.ReachPlanAdLength getAdLength() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v2.enums.ReachPlanAdLengthEnum.ReachPlanAdLength result = com.google.ads.googleads.v2.enums.ReachPlanAdLengthEnum.ReachPlanAdLength.valueOf(adLength_);
@@ -1105,6 +1143,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.enums.ReachPlanAdLengthEnum.ReachPlanAdLength ad_length = 3;</code>
+     * @param value The adLength to set.
+     * @return This builder for chaining.
      */
     public Builder setAdLength(com.google.ads.googleads.v2.enums.ReachPlanAdLengthEnum.ReachPlanAdLength value) {
       if (value == null) {
@@ -1122,6 +1162,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.enums.ReachPlanAdLengthEnum.ReachPlanAdLength ad_length = 3;</code>
+     * @return This builder for chaining.
      */
     public Builder clearAdLength() {
       
@@ -1140,6 +1181,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.BoolValue top_content_only = 4;</code>
+     * @return Whether the topContentOnly field is set.
      */
     public boolean hasTopContentOnly() {
       return topContentOnlyBuilder_ != null || topContentOnly_ != null;
@@ -1151,6 +1193,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.BoolValue top_content_only = 4;</code>
+     * @return The topContentOnly.
      */
     public com.google.protobuf.BoolValue getTopContentOnly() {
       if (topContentOnlyBuilder_ == null) {
@@ -1303,6 +1346,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.BoolValue has_guaranteed_price = 5;</code>
+     * @return Whether the hasGuaranteedPrice field is set.
      */
     public boolean hasHasGuaranteedPrice() {
       return hasGuaranteedPriceBuilder_ != null || hasGuaranteedPrice_ != null;
@@ -1315,6 +1359,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.BoolValue has_guaranteed_price = 5;</code>
+     * @return The hasGuaranteedPrice.
      */
     public com.google.protobuf.BoolValue getHasGuaranteedPrice() {
       if (hasGuaranteedPriceBuilder_ == null) {

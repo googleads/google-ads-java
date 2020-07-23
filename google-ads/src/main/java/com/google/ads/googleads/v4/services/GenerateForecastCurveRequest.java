@@ -10,7 +10,7 @@ package com.google.ads.googleads.v4.services;
  *
  * Protobuf type {@code google.ads.googleads.v4.services.GenerateForecastCurveRequest}
  */
-public  final class GenerateForecastCurveRequest extends
+public final class GenerateForecastCurveRequest extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.services.GenerateForecastCurveRequest)
     GenerateForecastCurveRequestOrBuilder {
@@ -101,6 +101,7 @@ private static final long serialVersionUID = 0L;
    * <code>string keyword_plan = 1 [(.google.api.field_behavior) = REQUIRED];</code>
    * @return The keywordPlan.
    */
+  @java.lang.Override
   public java.lang.String getKeywordPlan() {
     java.lang.Object ref = keywordPlan_;
     if (ref instanceof java.lang.String) {
@@ -121,6 +122,7 @@ private static final long serialVersionUID = 0L;
    * <code>string keyword_plan = 1 [(.google.api.field_behavior) = REQUIRED];</code>
    * @return The bytes for keywordPlan.
    */
+  @java.lang.Override
   public com.google.protobuf.ByteString
       getKeywordPlanBytes() {
     java.lang.Object ref = keywordPlan_;

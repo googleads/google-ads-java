@@ -16,6 +16,7 @@ public interface GenerateKeywordIdeaResultOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue text = 2;</code>
+   * @return Whether the text field is set.
    */
   boolean hasText();
   /**
@@ -27,6 +28,7 @@ public interface GenerateKeywordIdeaResultOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue text = 2;</code>
+   * @return The text.
    */
   com.google.protobuf.StringValue getText();
   /**
@@ -47,6 +49,7 @@ public interface GenerateKeywordIdeaResultOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.KeywordPlanHistoricalMetrics keyword_idea_metrics = 3;</code>
+   * @return Whether the keywordIdeaMetrics field is set.
    */
   boolean hasKeywordIdeaMetrics();
   /**
@@ -55,6 +58,7 @@ public interface GenerateKeywordIdeaResultOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.KeywordPlanHistoricalMetrics keyword_idea_metrics = 3;</code>
+   * @return The keywordIdeaMetrics.
    */
   com.google.ads.googleads.v3.common.KeywordPlanHistoricalMetrics getKeywordIdeaMetrics();
   /**

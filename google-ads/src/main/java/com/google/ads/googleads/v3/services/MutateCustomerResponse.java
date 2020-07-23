@@ -10,7 +10,7 @@ package com.google.ads.googleads.v3.services;
  *
  * Protobuf type {@code google.ads.googleads.v3.services.MutateCustomerResponse}
  */
-public  final class MutateCustomerResponse extends
+public final class MutateCustomerResponse extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v3.services.MutateCustomerResponse)
     MutateCustomerResponseOrBuilder {
@@ -20,6 +20,13 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private MutateCustomerResponse() {
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new MutateCustomerResponse();
   }
 
   @java.lang.Override
@@ -35,7 +42,6 @@ private static final long serialVersionUID = 0L;
     if (extensionRegistry == null) {
       throw new java.lang.NullPointerException();
     }
-    int mutable_bitField0_ = 0;
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
         com.google.protobuf.UnknownFieldSet.newBuilder();
     try {
@@ -99,7 +105,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.services.MutateCustomerResult result = 2;</code>
+   * @return Whether the result field is set.
    */
+  @java.lang.Override
   public boolean hasResult() {
     return result_ != null;
   }
@@ -109,7 +117,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.services.MutateCustomerResult result = 2;</code>
+   * @return The result.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.services.MutateCustomerResult getResult() {
     return result_ == null ? com.google.ads.googleads.v3.services.MutateCustomerResult.getDefaultInstance() : result_;
   }
@@ -120,6 +130,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v3.services.MutateCustomerResult result = 2;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.services.MutateCustomerResultOrBuilder getResultOrBuilder() {
     return getResult();
   }
@@ -452,6 +463,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.services.MutateCustomerResult result = 2;</code>
+     * @return Whether the result field is set.
      */
     public boolean hasResult() {
       return resultBuilder_ != null || result_ != null;
@@ -462,6 +474,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.services.MutateCustomerResult result = 2;</code>
+     * @return The result.
      */
     public com.google.ads.googleads.v3.services.MutateCustomerResult getResult() {
       if (resultBuilder_ == null) {

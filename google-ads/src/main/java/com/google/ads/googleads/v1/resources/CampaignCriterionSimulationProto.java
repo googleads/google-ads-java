@@ -34,57 +34,68 @@ public final class CampaignCriterionSimulationProto {
       "oogleads/v1/common/simulation.proto\032Bgoo" +
       "gle/ads/googleads/v1/enums/simulation_mo" +
       "dification_method.proto\0323google/ads/goog" +
-      "leads/v1/enums/simulation_type.proto\032\036go" +
-      "ogle/protobuf/wrappers.proto\032\034google/api" +
-      "/annotations.proto\"\267\004\n\033CampaignCriterion" +
-      "Simulation\022\025\n\rresource_name\030\001 \001(\t\0220\n\013cam" +
-      "paign_id\030\002 \001(\0132\033.google.protobuf.Int64Va" +
-      "lue\0221\n\014criterion_id\030\003 \001(\0132\033.google.proto" +
-      "buf.Int64Value\022N\n\004type\030\004 \001(\0162@.google.ad" +
-      "s.googleads.v1.enums.SimulationTypeEnum." +
-      "SimulationType\022y\n\023modification_method\030\005 " +
-      "\001(\0162\\.google.ads.googleads.v1.enums.Simu" +
-      "lationModificationMethodEnum.SimulationM" +
-      "odificationMethod\0220\n\nstart_date\030\006 \001(\0132\034." +
-      "google.protobuf.StringValue\022.\n\010end_date\030" +
-      "\007 \001(\0132\034.google.protobuf.StringValue\022a\n\027b" +
-      "id_modifier_point_list\030\010 \001(\0132>.google.ad" +
-      "s.googleads.v1.common.BidModifierSimulat" +
-      "ionPointListH\000B\014\n\npoint_listB\215\002\n%com.goo" +
-      "gle.ads.googleads.v1.resourcesB Campaign" +
-      "CriterionSimulationProtoP\001ZJgoogle.golan" +
-      "g.org/genproto/googleapis/ads/googleads/" +
-      "v1/resources;resources\242\002\003GAA\252\002!Google.Ad" +
-      "s.GoogleAds.V1.Resources\312\002!Google\\Ads\\Go" +
-      "ogleAds\\V1\\Resources\352\002%Google::Ads::Goog" +
-      "leAds::V1::Resourcesb\006proto3"
+      "leads/v1/enums/simulation_type.proto\032\037go" +
+      "ogle/api/field_behavior.proto\032\031google/ap" +
+      "i/resource.proto\032\036google/protobuf/wrappe" +
+      "rs.proto\032\034google/api/annotations.proto\"\250" +
+      "\006\n\033CampaignCriterionSimulation\022S\n\rresour" +
+      "ce_name\030\001 \001(\tB<\340A\003\372A6\n4googleads.googlea" +
+      "pis.com/CampaignCriterionSimulation\0225\n\013c" +
+      "ampaign_id\030\002 \001(\0132\033.google.protobuf.Int64" +
+      "ValueB\003\340A\003\0226\n\014criterion_id\030\003 \001(\0132\033.googl" +
+      "e.protobuf.Int64ValueB\003\340A\003\022S\n\004type\030\004 \001(\016" +
+      "2@.google.ads.googleads.v1.enums.Simulat" +
+      "ionTypeEnum.SimulationTypeB\003\340A\003\022~\n\023modif" +
+      "ication_method\030\005 \001(\0162\\.google.ads.google" +
+      "ads.v1.enums.SimulationModificationMetho" +
+      "dEnum.SimulationModificationMethodB\003\340A\003\022" +
+      "5\n\nstart_date\030\006 \001(\0132\034.google.protobuf.St" +
+      "ringValueB\003\340A\003\0223\n\010end_date\030\007 \001(\0132\034.googl" +
+      "e.protobuf.StringValueB\003\340A\003\022f\n\027bid_modif" +
+      "ier_point_list\030\010 \001(\0132>.google.ads.google" +
+      "ads.v1.common.BidModifierSimulationPoint" +
+      "ListB\003\340A\003H\000:\215\001\352A\211\001\n4googleads.googleapis" +
+      ".com/CampaignCriterionSimulation\022Qcustom" +
+      "ers/{customer}/campaignCriterionSimulati" +
+      "ons/{campaign_criterion_simulation}B\014\n\np" +
+      "oint_listB\215\002\n%com.google.ads.googleads.v" +
+      "1.resourcesB CampaignCriterionSimulation" +
+      "ProtoP\001ZJgoogle.golang.org/genproto/goog" +
+      "leapis/ads/googleads/v1/resources;resour" +
+      "ces\242\002\003GAA\252\002!Google.Ads.GoogleAds.V1.Reso" +
+      "urces\312\002!Google\\Ads\\GoogleAds\\V1\\Resource" +
+      "s\352\002%Google::Ads::GoogleAds::V1::Resource" +
+      "sb\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.ads.googleads.v1.common.SimulationProto.getDescriptor(),
           com.google.ads.googleads.v1.enums.SimulationModificationMethodProto.getDescriptor(),
           com.google.ads.googleads.v1.enums.SimulationTypeProto.getDescriptor(),
+          com.google.api.FieldBehaviorProto.getDescriptor(),
+          com.google.api.ResourceProto.getDescriptor(),
           com.google.protobuf.WrappersProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
-        }, assigner);
+        });
     internal_static_google_ads_googleads_v1_resources_CampaignCriterionSimulation_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_google_ads_googleads_v1_resources_CampaignCriterionSimulation_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v1_resources_CampaignCriterionSimulation_descriptor,
         new java.lang.String[] { "ResourceName", "CampaignId", "CriterionId", "Type", "ModificationMethod", "StartDate", "EndDate", "BidModifierPointList", "PointList", });
+    com.google.protobuf.ExtensionRegistry registry =
+        com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);
+    registry.add(com.google.api.ResourceProto.resource);
+    registry.add(com.google.api.ResourceProto.resourceReference);
+    com.google.protobuf.Descriptors.FileDescriptor
+        .internalUpdateFileDescriptor(descriptor, registry);
     com.google.ads.googleads.v1.common.SimulationProto.getDescriptor();
     com.google.ads.googleads.v1.enums.SimulationModificationMethodProto.getDescriptor();
     com.google.ads.googleads.v1.enums.SimulationTypeProto.getDescriptor();
+    com.google.api.FieldBehaviorProto.getDescriptor();
+    com.google.api.ResourceProto.getDescriptor();
     com.google.protobuf.WrappersProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
   }

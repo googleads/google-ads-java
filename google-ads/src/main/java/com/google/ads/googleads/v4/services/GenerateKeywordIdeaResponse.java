@@ -10,7 +10,7 @@ package com.google.ads.googleads.v4.services;
  *
  * Protobuf type {@code google.ads.googleads.v4.services.GenerateKeywordIdeaResponse}
  */
-public  final class GenerateKeywordIdeaResponse extends
+public final class GenerateKeywordIdeaResponse extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.services.GenerateKeywordIdeaResponse)
     GenerateKeywordIdeaResponseOrBuilder {
@@ -119,6 +119,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.services.GenerateKeywordIdeaResult results = 1;</code>
    */
+  @java.lang.Override
   public java.util.List<com.google.ads.googleads.v4.services.GenerateKeywordIdeaResult> getResultsList() {
     return results_;
   }
@@ -129,6 +130,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.services.GenerateKeywordIdeaResult results = 1;</code>
    */
+  @java.lang.Override
   public java.util.List<? extends com.google.ads.googleads.v4.services.GenerateKeywordIdeaResultOrBuilder> 
       getResultsOrBuilderList() {
     return results_;
@@ -140,6 +142,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.services.GenerateKeywordIdeaResult results = 1;</code>
    */
+  @java.lang.Override
   public int getResultsCount() {
     return results_.size();
   }
@@ -150,6 +153,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.services.GenerateKeywordIdeaResult results = 1;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.services.GenerateKeywordIdeaResult getResults(int index) {
     return results_.get(index);
   }
@@ -160,6 +164,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.services.GenerateKeywordIdeaResult results = 1;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.services.GenerateKeywordIdeaResultOrBuilder getResultsOrBuilder(
       int index) {
     return results_.get(index);
@@ -178,6 +183,7 @@ private static final long serialVersionUID = 0L;
    * <code>string next_page_token = 2;</code>
    * @return The nextPageToken.
    */
+  @java.lang.Override
   public java.lang.String getNextPageToken() {
     java.lang.Object ref = nextPageToken_;
     if (ref instanceof java.lang.String) {
@@ -201,6 +207,7 @@ private static final long serialVersionUID = 0L;
    * <code>string next_page_token = 2;</code>
    * @return The bytes for nextPageToken.
    */
+  @java.lang.Override
   public com.google.protobuf.ByteString
       getNextPageTokenBytes() {
     java.lang.Object ref = nextPageToken_;
@@ -225,6 +232,7 @@ private static final long serialVersionUID = 0L;
    * <code>int64 total_size = 3;</code>
    * @return The totalSize.
    */
+  @java.lang.Override
   public long getTotalSize() {
     return totalSize_;
   }
@@ -1042,6 +1050,7 @@ private static final long serialVersionUID = 0L;
      * <code>int64 total_size = 3;</code>
      * @return The totalSize.
      */
+    @java.lang.Override
     public long getTotalSize() {
       return totalSize_;
     }

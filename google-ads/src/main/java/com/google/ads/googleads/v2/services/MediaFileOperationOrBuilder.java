@@ -13,6 +13,7 @@ public interface MediaFileOperationOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.resources.MediaFile create = 1;</code>
+   * @return Whether the create field is set.
    */
   boolean hasCreate();
   /**
@@ -21,6 +22,7 @@ public interface MediaFileOperationOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.resources.MediaFile create = 1;</code>
+   * @return The create.
    */
   com.google.ads.googleads.v2.resources.MediaFile getCreate();
   /**

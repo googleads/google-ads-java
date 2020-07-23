@@ -13,6 +13,7 @@ public interface MutateCampaignBidModifierResultOrBuilder extends
    * </pre>
    *
    * <code>string resource_name = 1;</code>
+   * @return The resourceName.
    */
   java.lang.String getResourceName();
   /**
@@ -21,6 +22,7 @@ public interface MutateCampaignBidModifierResultOrBuilder extends
    * </pre>
    *
    * <code>string resource_name = 1;</code>
+   * @return The bytes for resourceName.
    */
   com.google.protobuf.ByteString
       getResourceNameBytes();

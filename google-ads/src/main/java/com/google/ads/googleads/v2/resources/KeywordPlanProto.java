@@ -38,43 +38,42 @@ public final class KeywordPlanProto {
       "resources\032*google/ads/googleads/v2/commo" +
       "n/dates.proto\032Bgoogle/ads/googleads/v2/e" +
       "nums/keyword_plan_forecast_interval.prot" +
-      "o\032\036google/protobuf/wrappers.proto\032\034googl" +
-      "e/api/annotations.proto\"\320\001\n\013KeywordPlan\022" +
-      "\025\n\rresource_name\030\001 \001(\t\022\'\n\002id\030\002 \001(\0132\033.goo" +
-      "gle.protobuf.Int64Value\022*\n\004name\030\003 \001(\0132\034." +
-      "google.protobuf.StringValue\022U\n\017forecast_" +
-      "period\030\004 \001(\0132<.google.ads.googleads.v2.r" +
-      "esources.KeywordPlanForecastPeriod\"\335\001\n\031K" +
-      "eywordPlanForecastPeriod\022s\n\rdate_interva" +
-      "l\030\001 \001(\0162Z.google.ads.googleads.v2.enums." +
-      "KeywordPlanForecastIntervalEnum.KeywordP" +
-      "lanForecastIntervalH\000\022?\n\ndate_range\030\002 \001(" +
-      "\0132).google.ads.googleads.v2.common.DateR" +
-      "angeH\000B\n\n\010intervalB\375\001\n%com.google.ads.go" +
-      "ogleads.v2.resourcesB\020KeywordPlanProtoP\001" +
-      "ZJgoogle.golang.org/genproto/googleapis/" +
-      "ads/googleads/v2/resources;resources\242\002\003G" +
-      "AA\252\002!Google.Ads.GoogleAds.V2.Resources\312\002" +
-      "!Google\\Ads\\GoogleAds\\V2\\Resources\352\002%Goo" +
-      "gle::Ads::GoogleAds::V2::Resourcesb\006prot" +
-      "o3"
+      "o\032\037google/api/field_behavior.proto\032\031goog" +
+      "le/api/resource.proto\032\036google/protobuf/w" +
+      "rappers.proto\032\034google/api/annotations.pr" +
+      "oto\"\340\002\n\013KeywordPlan\022C\n\rresource_name\030\001 \001" +
+      "(\tB,\340A\005\372A&\n$googleads.googleapis.com/Key" +
+      "wordPlan\022,\n\002id\030\002 \001(\0132\033.google.protobuf.I" +
+      "nt64ValueB\003\340A\003\022*\n\004name\030\003 \001(\0132\034.google.pr" +
+      "otobuf.StringValue\022U\n\017forecast_period\030\004 " +
+      "\001(\0132<.google.ads.googleads.v2.resources." +
+      "KeywordPlanForecastPeriod:[\352AX\n$googlead" +
+      "s.googleapis.com/KeywordPlan\0220customers/" +
+      "{customer}/keywordPlans/{keyword_plan}\"\335" +
+      "\001\n\031KeywordPlanForecastPeriod\022s\n\rdate_int" +
+      "erval\030\001 \001(\0162Z.google.ads.googleads.v2.en" +
+      "ums.KeywordPlanForecastIntervalEnum.Keyw" +
+      "ordPlanForecastIntervalH\000\022?\n\ndate_range\030" +
+      "\002 \001(\0132).google.ads.googleads.v2.common.D" +
+      "ateRangeH\000B\n\n\010intervalB\375\001\n%com.google.ad" +
+      "s.googleads.v2.resourcesB\020KeywordPlanPro" +
+      "toP\001ZJgoogle.golang.org/genproto/googlea" +
+      "pis/ads/googleads/v2/resources;resources" +
+      "\242\002\003GAA\252\002!Google.Ads.GoogleAds.V2.Resourc" +
+      "es\312\002!Google\\Ads\\GoogleAds\\V2\\Resources\352\002" +
+      "%Google::Ads::GoogleAds::V2::Resourcesb\006" +
+      "proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.ads.googleads.v2.common.DatesProto.getDescriptor(),
           com.google.ads.googleads.v2.enums.KeywordPlanForecastIntervalProto.getDescriptor(),
+          com.google.api.FieldBehaviorProto.getDescriptor(),
+          com.google.api.ResourceProto.getDescriptor(),
           com.google.protobuf.WrappersProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
-        }, assigner);
+        });
     internal_static_google_ads_googleads_v2_resources_KeywordPlan_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_google_ads_googleads_v2_resources_KeywordPlan_fieldAccessorTable = new
@@ -87,8 +86,17 @@ public final class KeywordPlanProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v2_resources_KeywordPlanForecastPeriod_descriptor,
         new java.lang.String[] { "DateInterval", "DateRange", "Interval", });
+    com.google.protobuf.ExtensionRegistry registry =
+        com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);
+    registry.add(com.google.api.ResourceProto.resource);
+    registry.add(com.google.api.ResourceProto.resourceReference);
+    com.google.protobuf.Descriptors.FileDescriptor
+        .internalUpdateFileDescriptor(descriptor, registry);
     com.google.ads.googleads.v2.common.DatesProto.getDescriptor();
     com.google.ads.googleads.v2.enums.KeywordPlanForecastIntervalProto.getDescriptor();
+    com.google.api.FieldBehaviorProto.getDescriptor();
+    com.google.api.ResourceProto.getDescriptor();
     com.google.protobuf.WrappersProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
   }

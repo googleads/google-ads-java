@@ -11,7 +11,7 @@ package com.google.ads.googleads.v4.common;
  *
  * Protobuf type {@code google.ads.googleads.v4.common.GmailTeaser}
  */
-public  final class GmailTeaser extends
+public final class GmailTeaser extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.common.GmailTeaser)
     GmailTeaserOrBuilder {
@@ -147,6 +147,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue headline = 1;</code>
    * @return Whether the headline field is set.
    */
+  @java.lang.Override
   public boolean hasHeadline() {
     return headline_ != null;
   }
@@ -158,6 +159,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue headline = 1;</code>
    * @return The headline.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getHeadline() {
     return headline_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : headline_;
   }
@@ -168,6 +170,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue headline = 1;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getHeadlineOrBuilder() {
     return getHeadline();
   }
@@ -182,6 +185,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue description = 2;</code>
    * @return Whether the description field is set.
    */
+  @java.lang.Override
   public boolean hasDescription() {
     return description_ != null;
   }
@@ -193,6 +197,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue description = 2;</code>
    * @return The description.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getDescription() {
     return description_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : description_;
   }
@@ -203,6 +208,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue description = 2;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getDescriptionOrBuilder() {
     return getDescription();
   }
@@ -217,6 +223,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue business_name = 3;</code>
    * @return Whether the businessName field is set.
    */
+  @java.lang.Override
   public boolean hasBusinessName() {
     return businessName_ != null;
   }
@@ -228,6 +235,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue business_name = 3;</code>
    * @return The businessName.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getBusinessName() {
     return businessName_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : businessName_;
   }
@@ -238,6 +246,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue business_name = 3;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getBusinessNameOrBuilder() {
     return getBusinessName();
   }
@@ -254,6 +263,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue logo_image = 4;</code>
    * @return Whether the logoImage field is set.
    */
+  @java.lang.Override
   public boolean hasLogoImage() {
     return logoImage_ != null;
   }
@@ -267,6 +277,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue logo_image = 4;</code>
    * @return The logoImage.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getLogoImage() {
     return logoImage_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : logoImage_;
   }
@@ -279,6 +290,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue logo_image = 4;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getLogoImageOrBuilder() {
     return getLogoImage();
   }

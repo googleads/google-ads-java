@@ -1,5 +1,5 @@
 /*
- * Copyright 2019 Google LLC
+ * Copyright 2020 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -21,7 +21,6 @@ import com.google.ads.googleads.v3.services.stub.PaidOrganicSearchTermViewServic
 import com.google.api.core.BetaApi;
 import com.google.api.gax.core.BackgroundResource;
 import com.google.api.gax.rpc.UnaryCallable;
-import com.google.api.pathtemplate.PathTemplate;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 import javax.annotation.Generated;
@@ -36,8 +35,8 @@ import javax.annotation.Generated;
  * <pre>
  * <code>
  * try (PaidOrganicSearchTermViewServiceClient paidOrganicSearchTermViewServiceClient = PaidOrganicSearchTermViewServiceClient.create()) {
- *   String formattedResourceName = PaidOrganicSearchTermViewServiceClient.formatPaidOrganicSearchTermViewName("[CUSTOMER]", "[PAID_ORGANIC_SEARCH_TERM_VIEW]");
- *   PaidOrganicSearchTermView response = paidOrganicSearchTermViewServiceClient.getPaidOrganicSearchTermView(formattedResourceName);
+ *   PaidOrganicSearchTermViewName resourceName = PaidOrganicSearchTermViewName.of("[CUSTOMER]", "[PAID_ORGANIC_SEARCH_TERM_VIEW]");
+ *   PaidOrganicSearchTermView response = paidOrganicSearchTermViewServiceClient.getPaidOrganicSearchTermView(resourceName);
  * }
  * </code>
  * </pre>
@@ -98,52 +97,6 @@ import javax.annotation.Generated;
 public class PaidOrganicSearchTermViewServiceClient implements BackgroundResource {
   private final PaidOrganicSearchTermViewServiceSettings settings;
   private final PaidOrganicSearchTermViewServiceStub stub;
-
-  private static final PathTemplate PAID_ORGANIC_SEARCH_TERM_VIEW_PATH_TEMPLATE =
-      PathTemplate.createWithoutUrlEncoding(
-          "customers/{customer}/paidOrganicSearchTermViews/{paid_organic_search_term_view}");
-
-  /**
-   * Formats a string containing the fully-qualified path to represent a
-   * paid_organic_search_term_view resource.
-   *
-   * @deprecated Use the {@link PaidOrganicSearchTermViewName} class instead.
-   */
-  @Deprecated
-  public static final String formatPaidOrganicSearchTermViewName(
-      String customer, String paidOrganicSearchTermView) {
-    return PAID_ORGANIC_SEARCH_TERM_VIEW_PATH_TEMPLATE.instantiate(
-        "customer", customer,
-        "paid_organic_search_term_view", paidOrganicSearchTermView);
-  }
-
-  /**
-   * Parses the customer from the given fully-qualified path which represents a
-   * paid_organic_search_term_view resource.
-   *
-   * @deprecated Use the {@link PaidOrganicSearchTermViewName} class instead.
-   */
-  @Deprecated
-  public static final String parseCustomerFromPaidOrganicSearchTermViewName(
-      String paidOrganicSearchTermViewName) {
-    return PAID_ORGANIC_SEARCH_TERM_VIEW_PATH_TEMPLATE
-        .parse(paidOrganicSearchTermViewName)
-        .get("customer");
-  }
-
-  /**
-   * Parses the paid_organic_search_term_view from the given fully-qualified path which represents a
-   * paid_organic_search_term_view resource.
-   *
-   * @deprecated Use the {@link PaidOrganicSearchTermViewName} class instead.
-   */
-  @Deprecated
-  public static final String parsePaidOrganicSearchTermViewFromPaidOrganicSearchTermViewName(
-      String paidOrganicSearchTermViewName) {
-    return PAID_ORGANIC_SEARCH_TERM_VIEW_PATH_TEMPLATE
-        .parse(paidOrganicSearchTermViewName)
-        .get("paid_organic_search_term_view");
-  }
 
   /** Constructs an instance of PaidOrganicSearchTermViewServiceClient with default settings. */
   public static final PaidOrganicSearchTermViewServiceClient create() throws IOException {
@@ -206,8 +159,33 @@ public class PaidOrganicSearchTermViewServiceClient implements BackgroundResourc
    *
    * <pre><code>
    * try (PaidOrganicSearchTermViewServiceClient paidOrganicSearchTermViewServiceClient = PaidOrganicSearchTermViewServiceClient.create()) {
-   *   String formattedResourceName = PaidOrganicSearchTermViewServiceClient.formatPaidOrganicSearchTermViewName("[CUSTOMER]", "[PAID_ORGANIC_SEARCH_TERM_VIEW]");
-   *   PaidOrganicSearchTermView response = paidOrganicSearchTermViewServiceClient.getPaidOrganicSearchTermView(formattedResourceName);
+   *   PaidOrganicSearchTermViewName resourceName = PaidOrganicSearchTermViewName.of("[CUSTOMER]", "[PAID_ORGANIC_SEARCH_TERM_VIEW]");
+   *   PaidOrganicSearchTermView response = paidOrganicSearchTermViewServiceClient.getPaidOrganicSearchTermView(resourceName);
+   * }
+   * </code></pre>
+   *
+   * @param resourceName Required. The resource name of the paid organic search term view to fetch.
+   * @throws com.google.api.gax.rpc.ApiException if the remote call fails
+   */
+  public final PaidOrganicSearchTermView getPaidOrganicSearchTermView(
+      PaidOrganicSearchTermViewName resourceName) {
+    GetPaidOrganicSearchTermViewRequest request =
+        GetPaidOrganicSearchTermViewRequest.newBuilder()
+            .setResourceName(resourceName == null ? null : resourceName.toString())
+            .build();
+    return getPaidOrganicSearchTermView(request);
+  }
+
+  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  /**
+   * Returns the requested paid organic search term view in full detail.
+   *
+   * <p>Sample code:
+   *
+   * <pre><code>
+   * try (PaidOrganicSearchTermViewServiceClient paidOrganicSearchTermViewServiceClient = PaidOrganicSearchTermViewServiceClient.create()) {
+   *   PaidOrganicSearchTermViewName resourceName = PaidOrganicSearchTermViewName.of("[CUSTOMER]", "[PAID_ORGANIC_SEARCH_TERM_VIEW]");
+   *   PaidOrganicSearchTermView response = paidOrganicSearchTermViewServiceClient.getPaidOrganicSearchTermView(resourceName.toString());
    * }
    * </code></pre>
    *
@@ -215,8 +193,6 @@ public class PaidOrganicSearchTermViewServiceClient implements BackgroundResourc
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final PaidOrganicSearchTermView getPaidOrganicSearchTermView(String resourceName) {
-    PAID_ORGANIC_SEARCH_TERM_VIEW_PATH_TEMPLATE.validate(
-        resourceName, "getPaidOrganicSearchTermView");
     GetPaidOrganicSearchTermViewRequest request =
         GetPaidOrganicSearchTermViewRequest.newBuilder().setResourceName(resourceName).build();
     return getPaidOrganicSearchTermView(request);
@@ -230,9 +206,9 @@ public class PaidOrganicSearchTermViewServiceClient implements BackgroundResourc
    *
    * <pre><code>
    * try (PaidOrganicSearchTermViewServiceClient paidOrganicSearchTermViewServiceClient = PaidOrganicSearchTermViewServiceClient.create()) {
-   *   String formattedResourceName = PaidOrganicSearchTermViewServiceClient.formatPaidOrganicSearchTermViewName("[CUSTOMER]", "[PAID_ORGANIC_SEARCH_TERM_VIEW]");
+   *   PaidOrganicSearchTermViewName resourceName = PaidOrganicSearchTermViewName.of("[CUSTOMER]", "[PAID_ORGANIC_SEARCH_TERM_VIEW]");
    *   GetPaidOrganicSearchTermViewRequest request = GetPaidOrganicSearchTermViewRequest.newBuilder()
-   *     .setResourceName(formattedResourceName)
+   *     .setResourceName(resourceName.toString())
    *     .build();
    *   PaidOrganicSearchTermView response = paidOrganicSearchTermViewServiceClient.getPaidOrganicSearchTermView(request);
    * }
@@ -254,9 +230,9 @@ public class PaidOrganicSearchTermViewServiceClient implements BackgroundResourc
    *
    * <pre><code>
    * try (PaidOrganicSearchTermViewServiceClient paidOrganicSearchTermViewServiceClient = PaidOrganicSearchTermViewServiceClient.create()) {
-   *   String formattedResourceName = PaidOrganicSearchTermViewServiceClient.formatPaidOrganicSearchTermViewName("[CUSTOMER]", "[PAID_ORGANIC_SEARCH_TERM_VIEW]");
+   *   PaidOrganicSearchTermViewName resourceName = PaidOrganicSearchTermViewName.of("[CUSTOMER]", "[PAID_ORGANIC_SEARCH_TERM_VIEW]");
    *   GetPaidOrganicSearchTermViewRequest request = GetPaidOrganicSearchTermViewRequest.newBuilder()
-   *     .setResourceName(formattedResourceName)
+   *     .setResourceName(resourceName.toString())
    *     .build();
    *   ApiFuture&lt;PaidOrganicSearchTermView&gt; future = paidOrganicSearchTermViewServiceClient.getPaidOrganicSearchTermViewCallable().futureCall(request);
    *   // Do something

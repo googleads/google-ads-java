@@ -13,6 +13,7 @@ public interface CreateCampaignExperimentMetadataOrBuilder extends
    * </pre>
    *
    * <code>string campaign_experiment = 1;</code>
+   * @return The campaignExperiment.
    */
   java.lang.String getCampaignExperiment();
   /**
@@ -21,6 +22,7 @@ public interface CreateCampaignExperimentMetadataOrBuilder extends
    * </pre>
    *
    * <code>string campaign_experiment = 1;</code>
+   * @return The bytes for campaignExperiment.
    */
   com.google.protobuf.ByteString
       getCampaignExperimentBytes();

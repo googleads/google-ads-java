@@ -15,6 +15,7 @@ public interface PlannableTargetingOrBuilder extends
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v3.enums.ReachPlanAgeRangeEnum.ReachPlanAgeRange age_ranges = 1;</code>
+   * @return A list containing the ageRanges.
    */
   java.util.List<com.google.ads.googleads.v3.enums.ReachPlanAgeRangeEnum.ReachPlanAgeRange> getAgeRangesList();
   /**
@@ -25,6 +26,7 @@ public interface PlannableTargetingOrBuilder extends
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v3.enums.ReachPlanAgeRangeEnum.ReachPlanAgeRange age_ranges = 1;</code>
+   * @return The count of ageRanges.
    */
   int getAgeRangesCount();
   /**
@@ -35,6 +37,8 @@ public interface PlannableTargetingOrBuilder extends
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v3.enums.ReachPlanAgeRangeEnum.ReachPlanAgeRange age_ranges = 1;</code>
+   * @param index The index of the element to return.
+   * @return The ageRanges at the given index.
    */
   com.google.ads.googleads.v3.enums.ReachPlanAgeRangeEnum.ReachPlanAgeRange getAgeRanges(int index);
   /**
@@ -45,6 +49,7 @@ public interface PlannableTargetingOrBuilder extends
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v3.enums.ReachPlanAgeRangeEnum.ReachPlanAgeRange age_ranges = 1;</code>
+   * @return A list containing the enum numeric values on the wire for ageRanges.
    */
   java.util.List<java.lang.Integer>
   getAgeRangesValueList();
@@ -56,6 +61,8 @@ public interface PlannableTargetingOrBuilder extends
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v3.enums.ReachPlanAgeRangeEnum.ReachPlanAgeRange age_ranges = 1;</code>
+   * @param index The index of the value to return.
+   * @return The enum numeric value on the wire of ageRanges at the given index.
    */
   int getAgeRangesValue(int index);
 
@@ -153,6 +160,7 @@ public interface PlannableTargetingOrBuilder extends
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v3.enums.ReachPlanNetworkEnum.ReachPlanNetwork networks = 4;</code>
+   * @return A list containing the networks.
    */
   java.util.List<com.google.ads.googleads.v3.enums.ReachPlanNetworkEnum.ReachPlanNetwork> getNetworksList();
   /**
@@ -161,6 +169,7 @@ public interface PlannableTargetingOrBuilder extends
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v3.enums.ReachPlanNetworkEnum.ReachPlanNetwork networks = 4;</code>
+   * @return The count of networks.
    */
   int getNetworksCount();
   /**
@@ -169,6 +178,8 @@ public interface PlannableTargetingOrBuilder extends
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v3.enums.ReachPlanNetworkEnum.ReachPlanNetwork networks = 4;</code>
+   * @param index The index of the element to return.
+   * @return The networks at the given index.
    */
   com.google.ads.googleads.v3.enums.ReachPlanNetworkEnum.ReachPlanNetwork getNetworks(int index);
   /**
@@ -177,6 +188,7 @@ public interface PlannableTargetingOrBuilder extends
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v3.enums.ReachPlanNetworkEnum.ReachPlanNetwork networks = 4;</code>
+   * @return A list containing the enum numeric values on the wire for networks.
    */
   java.util.List<java.lang.Integer>
   getNetworksValueList();
@@ -186,6 +198,8 @@ public interface PlannableTargetingOrBuilder extends
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v3.enums.ReachPlanNetworkEnum.ReachPlanNetwork networks = 4;</code>
+   * @param index The index of the value to return.
+   * @return The enum numeric value on the wire of networks at the given index.
    */
   int getNetworksValue(int index);
 }

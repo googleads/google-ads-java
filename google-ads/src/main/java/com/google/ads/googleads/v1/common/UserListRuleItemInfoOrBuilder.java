@@ -20,6 +20,7 @@ public interface UserListRuleItemInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue name = 1;</code>
+   * @return Whether the name field is set.
    */
   boolean hasName();
   /**
@@ -35,6 +36,7 @@ public interface UserListRuleItemInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue name = 1;</code>
+   * @return The name.
    */
   com.google.protobuf.StringValue getName();
   /**
@@ -55,23 +57,25 @@ public interface UserListRuleItemInfoOrBuilder extends
 
   /**
    * <pre>
-   * An atomic rule fragment composed of a number operation.
+   * An atomic rule item composed of a number operation.
    * </pre>
    *
    * <code>.google.ads.googleads.v1.common.UserListNumberRuleItemInfo number_rule_item = 2;</code>
+   * @return Whether the numberRuleItem field is set.
    */
   boolean hasNumberRuleItem();
   /**
    * <pre>
-   * An atomic rule fragment composed of a number operation.
+   * An atomic rule item composed of a number operation.
    * </pre>
    *
    * <code>.google.ads.googleads.v1.common.UserListNumberRuleItemInfo number_rule_item = 2;</code>
+   * @return The numberRuleItem.
    */
   com.google.ads.googleads.v1.common.UserListNumberRuleItemInfo getNumberRuleItem();
   /**
    * <pre>
-   * An atomic rule fragment composed of a number operation.
+   * An atomic rule item composed of a number operation.
    * </pre>
    *
    * <code>.google.ads.googleads.v1.common.UserListNumberRuleItemInfo number_rule_item = 2;</code>
@@ -80,23 +84,25 @@ public interface UserListRuleItemInfoOrBuilder extends
 
   /**
    * <pre>
-   * An atomic rule fragment composed of a string operation.
+   * An atomic rule item composed of a string operation.
    * </pre>
    *
    * <code>.google.ads.googleads.v1.common.UserListStringRuleItemInfo string_rule_item = 3;</code>
+   * @return Whether the stringRuleItem field is set.
    */
   boolean hasStringRuleItem();
   /**
    * <pre>
-   * An atomic rule fragment composed of a string operation.
+   * An atomic rule item composed of a string operation.
    * </pre>
    *
    * <code>.google.ads.googleads.v1.common.UserListStringRuleItemInfo string_rule_item = 3;</code>
+   * @return The stringRuleItem.
    */
   com.google.ads.googleads.v1.common.UserListStringRuleItemInfo getStringRuleItem();
   /**
    * <pre>
-   * An atomic rule fragment composed of a string operation.
+   * An atomic rule item composed of a string operation.
    * </pre>
    *
    * <code>.google.ads.googleads.v1.common.UserListStringRuleItemInfo string_rule_item = 3;</code>
@@ -105,23 +111,25 @@ public interface UserListRuleItemInfoOrBuilder extends
 
   /**
    * <pre>
-   * An atomic rule fragment composed of a date operation.
+   * An atomic rule item composed of a date operation.
    * </pre>
    *
    * <code>.google.ads.googleads.v1.common.UserListDateRuleItemInfo date_rule_item = 4;</code>
+   * @return Whether the dateRuleItem field is set.
    */
   boolean hasDateRuleItem();
   /**
    * <pre>
-   * An atomic rule fragment composed of a date operation.
+   * An atomic rule item composed of a date operation.
    * </pre>
    *
    * <code>.google.ads.googleads.v1.common.UserListDateRuleItemInfo date_rule_item = 4;</code>
+   * @return The dateRuleItem.
    */
   com.google.ads.googleads.v1.common.UserListDateRuleItemInfo getDateRuleItem();
   /**
    * <pre>
-   * An atomic rule fragment composed of a date operation.
+   * An atomic rule item composed of a date operation.
    * </pre>
    *
    * <code>.google.ads.googleads.v1.common.UserListDateRuleItemInfo date_rule_item = 4;</code>

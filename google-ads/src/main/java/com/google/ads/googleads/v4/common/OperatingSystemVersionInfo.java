@@ -10,7 +10,7 @@ package com.google.ads.googleads.v4.common;
  *
  * Protobuf type {@code google.ads.googleads.v4.common.OperatingSystemVersionInfo}
  */
-public  final class OperatingSystemVersionInfo extends
+public final class OperatingSystemVersionInfo extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.common.OperatingSystemVersionInfo)
     OperatingSystemVersionInfoOrBuilder {
@@ -107,6 +107,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue operating_system_version_constant = 1;</code>
    * @return Whether the operatingSystemVersionConstant field is set.
    */
+  @java.lang.Override
   public boolean hasOperatingSystemVersionConstant() {
     return operatingSystemVersionConstant_ != null;
   }
@@ -118,6 +119,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue operating_system_version_constant = 1;</code>
    * @return The operatingSystemVersionConstant.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getOperatingSystemVersionConstant() {
     return operatingSystemVersionConstant_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : operatingSystemVersionConstant_;
   }
@@ -128,6 +130,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue operating_system_version_constant = 1;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getOperatingSystemVersionConstantOrBuilder() {
     return getOperatingSystemVersionConstant();
   }

@@ -10,7 +10,7 @@ package com.google.ads.googleads.v4.services;
  *
  * Protobuf type {@code google.ads.googleads.v4.services.DismissRecommendationResponse}
  */
-public  final class DismissRecommendationResponse extends
+public final class DismissRecommendationResponse extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.services.DismissRecommendationResponse)
     DismissRecommendationResponseOrBuilder {
@@ -142,7 +142,7 @@ private static final long serialVersionUID = 0L;
    *
    * Protobuf type {@code google.ads.googleads.v4.services.DismissRecommendationResponse.DismissRecommendationResult}
    */
-  public  static final class DismissRecommendationResult extends
+  public static final class DismissRecommendationResult extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.services.DismissRecommendationResponse.DismissRecommendationResult)
       DismissRecommendationResultOrBuilder {
@@ -233,6 +233,7 @@ private static final long serialVersionUID = 0L;
      * <code>string resource_name = 1;</code>
      * @return The resourceName.
      */
+    @java.lang.Override
     public java.lang.String getResourceName() {
       java.lang.Object ref = resourceName_;
       if (ref instanceof java.lang.String) {
@@ -253,6 +254,7 @@ private static final long serialVersionUID = 0L;
      * <code>string resource_name = 1;</code>
      * @return The bytes for resourceName.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getResourceNameBytes() {
       java.lang.Object ref = resourceName_;
@@ -730,6 +732,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.services.DismissRecommendationResponse.DismissRecommendationResult results = 1;</code>
    */
+  @java.lang.Override
   public java.util.List<com.google.ads.googleads.v4.services.DismissRecommendationResponse.DismissRecommendationResult> getResultsList() {
     return results_;
   }
@@ -740,6 +743,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.services.DismissRecommendationResponse.DismissRecommendationResult results = 1;</code>
    */
+  @java.lang.Override
   public java.util.List<? extends com.google.ads.googleads.v4.services.DismissRecommendationResponse.DismissRecommendationResultOrBuilder> 
       getResultsOrBuilderList() {
     return results_;
@@ -751,6 +755,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.services.DismissRecommendationResponse.DismissRecommendationResult results = 1;</code>
    */
+  @java.lang.Override
   public int getResultsCount() {
     return results_.size();
   }
@@ -761,6 +766,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.services.DismissRecommendationResponse.DismissRecommendationResult results = 1;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.services.DismissRecommendationResponse.DismissRecommendationResult getResults(int index) {
     return results_.get(index);
   }
@@ -771,6 +777,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.services.DismissRecommendationResponse.DismissRecommendationResult results = 1;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.services.DismissRecommendationResponse.DismissRecommendationResultOrBuilder getResultsOrBuilder(
       int index) {
     return results_.get(index);
@@ -789,6 +796,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.rpc.Status partial_failure_error = 2;</code>
    * @return Whether the partialFailureError field is set.
    */
+  @java.lang.Override
   public boolean hasPartialFailureError() {
     return partialFailureError_ != null;
   }
@@ -803,6 +811,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.rpc.Status partial_failure_error = 2;</code>
    * @return The partialFailureError.
    */
+  @java.lang.Override
   public com.google.rpc.Status getPartialFailureError() {
     return partialFailureError_ == null ? com.google.rpc.Status.getDefaultInstance() : partialFailureError_;
   }
@@ -816,6 +825,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.rpc.Status partial_failure_error = 2;</code>
    */
+  @java.lang.Override
   public com.google.rpc.StatusOrBuilder getPartialFailureErrorOrBuilder() {
     return getPartialFailureError();
   }

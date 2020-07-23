@@ -13,6 +13,7 @@ public interface CustomInterestMemberOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.enums.CustomInterestMemberTypeEnum.CustomInterestMemberType member_type = 1;</code>
+   * @return The enum numeric value on the wire for memberType.
    */
   int getMemberTypeValue();
   /**
@@ -21,6 +22,7 @@ public interface CustomInterestMemberOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.enums.CustomInterestMemberTypeEnum.CustomInterestMemberType member_type = 1;</code>
+   * @return The memberType.
    */
   com.google.ads.googleads.v2.enums.CustomInterestMemberTypeEnum.CustomInterestMemberType getMemberType();
 
@@ -31,6 +33,7 @@ public interface CustomInterestMemberOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue parameter = 2;</code>
+   * @return Whether the parameter field is set.
    */
   boolean hasParameter();
   /**
@@ -40,6 +43,7 @@ public interface CustomInterestMemberOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue parameter = 2;</code>
+   * @return The parameter.
    */
   com.google.protobuf.StringValue getParameter();
   /**

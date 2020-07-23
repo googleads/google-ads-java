@@ -11,7 +11,7 @@ package com.google.ads.googleads.v4.services;
  *
  * Protobuf type {@code google.ads.googleads.v4.services.AddOfflineUserDataJobOperationsRequest}
  */
-public  final class AddOfflineUserDataJobOperationsRequest extends
+public final class AddOfflineUserDataJobOperationsRequest extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.services.AddOfflineUserDataJobOperationsRequest)
     AddOfflineUserDataJobOperationsRequestOrBuilder {
@@ -129,6 +129,7 @@ private static final long serialVersionUID = 0L;
    * <code>string resource_name = 1 [(.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = { ... }</code>
    * @return The resourceName.
    */
+  @java.lang.Override
   public java.lang.String getResourceName() {
     java.lang.Object ref = resourceName_;
     if (ref instanceof java.lang.String) {
@@ -149,6 +150,7 @@ private static final long serialVersionUID = 0L;
    * <code>string resource_name = 1 [(.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = { ... }</code>
    * @return The bytes for resourceName.
    */
+  @java.lang.Override
   public com.google.protobuf.ByteString
       getResourceNameBytes() {
     java.lang.Object ref = resourceName_;
@@ -173,6 +175,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.BoolValue enable_partial_failure = 2;</code>
    * @return Whether the enablePartialFailure field is set.
    */
+  @java.lang.Override
   public boolean hasEnablePartialFailure() {
     return enablePartialFailure_ != null;
   }
@@ -184,6 +187,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.BoolValue enable_partial_failure = 2;</code>
    * @return The enablePartialFailure.
    */
+  @java.lang.Override
   public com.google.protobuf.BoolValue getEnablePartialFailure() {
     return enablePartialFailure_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : enablePartialFailure_;
   }
@@ -194,6 +198,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.BoolValue enable_partial_failure = 2;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.BoolValueOrBuilder getEnablePartialFailureOrBuilder() {
     return getEnablePartialFailure();
   }
@@ -207,6 +212,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.services.OfflineUserDataJobOperation operations = 3 [(.google.api.field_behavior) = REQUIRED];</code>
    */
+  @java.lang.Override
   public java.util.List<com.google.ads.googleads.v4.services.OfflineUserDataJobOperation> getOperationsList() {
     return operations_;
   }
@@ -217,6 +223,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.services.OfflineUserDataJobOperation operations = 3 [(.google.api.field_behavior) = REQUIRED];</code>
    */
+  @java.lang.Override
   public java.util.List<? extends com.google.ads.googleads.v4.services.OfflineUserDataJobOperationOrBuilder> 
       getOperationsOrBuilderList() {
     return operations_;
@@ -228,6 +235,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.services.OfflineUserDataJobOperation operations = 3 [(.google.api.field_behavior) = REQUIRED];</code>
    */
+  @java.lang.Override
   public int getOperationsCount() {
     return operations_.size();
   }
@@ -238,6 +246,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.services.OfflineUserDataJobOperation operations = 3 [(.google.api.field_behavior) = REQUIRED];</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.services.OfflineUserDataJobOperation getOperations(int index) {
     return operations_.get(index);
   }
@@ -248,6 +257,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.services.OfflineUserDataJobOperation operations = 3 [(.google.api.field_behavior) = REQUIRED];</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.services.OfflineUserDataJobOperationOrBuilder getOperationsOrBuilder(
       int index) {
     return operations_.get(index);

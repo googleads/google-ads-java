@@ -21,7 +21,7 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.10.0)",
+    value = "by gRPC proto compiler",
     comments = "Source: google/ads/googleads/v2/services/conversion_action_service.proto")
 public final class ConversionActionServiceGrpc {
 
@@ -30,86 +30,80 @@ public final class ConversionActionServiceGrpc {
   public static final String SERVICE_NAME = "google.ads.googleads.v2.services.ConversionActionService";
 
   // Static method descriptors that strictly reflect the proto.
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  @java.lang.Deprecated // Use {@link #getGetConversionActionMethod()} instead. 
-  public static final io.grpc.MethodDescriptor<com.google.ads.googleads.v2.services.GetConversionActionRequest,
-      com.google.ads.googleads.v2.resources.ConversionAction> METHOD_GET_CONVERSION_ACTION = getGetConversionActionMethodHelper();
-
   private static volatile io.grpc.MethodDescriptor<com.google.ads.googleads.v2.services.GetConversionActionRequest,
       com.google.ads.googleads.v2.resources.ConversionAction> getGetConversionActionMethod;
 
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetConversionAction",
+      requestType = com.google.ads.googleads.v2.services.GetConversionActionRequest.class,
+      responseType = com.google.ads.googleads.v2.resources.ConversionAction.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<com.google.ads.googleads.v2.services.GetConversionActionRequest,
       com.google.ads.googleads.v2.resources.ConversionAction> getGetConversionActionMethod() {
-    return getGetConversionActionMethodHelper();
-  }
-
-  private static io.grpc.MethodDescriptor<com.google.ads.googleads.v2.services.GetConversionActionRequest,
-      com.google.ads.googleads.v2.resources.ConversionAction> getGetConversionActionMethodHelper() {
     io.grpc.MethodDescriptor<com.google.ads.googleads.v2.services.GetConversionActionRequest, com.google.ads.googleads.v2.resources.ConversionAction> getGetConversionActionMethod;
     if ((getGetConversionActionMethod = ConversionActionServiceGrpc.getGetConversionActionMethod) == null) {
       synchronized (ConversionActionServiceGrpc.class) {
         if ((getGetConversionActionMethod = ConversionActionServiceGrpc.getGetConversionActionMethod) == null) {
-          ConversionActionServiceGrpc.getGetConversionActionMethod = getGetConversionActionMethod = 
+          ConversionActionServiceGrpc.getGetConversionActionMethod = getGetConversionActionMethod =
               io.grpc.MethodDescriptor.<com.google.ads.googleads.v2.services.GetConversionActionRequest, com.google.ads.googleads.v2.resources.ConversionAction>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "google.ads.googleads.v2.services.ConversionActionService", "GetConversionAction"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetConversionAction"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v2.services.GetConversionActionRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v2.resources.ConversionAction.getDefaultInstance()))
-                  .setSchemaDescriptor(new ConversionActionServiceMethodDescriptorSupplier("GetConversionAction"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ConversionActionServiceMethodDescriptorSupplier("GetConversionAction"))
+              .build();
         }
-     }
-     return getGetConversionActionMethod;
+      }
+    }
+    return getGetConversionActionMethod;
   }
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  @java.lang.Deprecated // Use {@link #getMutateConversionActionsMethod()} instead. 
-  public static final io.grpc.MethodDescriptor<com.google.ads.googleads.v2.services.MutateConversionActionsRequest,
-      com.google.ads.googleads.v2.services.MutateConversionActionsResponse> METHOD_MUTATE_CONVERSION_ACTIONS = getMutateConversionActionsMethodHelper();
 
   private static volatile io.grpc.MethodDescriptor<com.google.ads.googleads.v2.services.MutateConversionActionsRequest,
       com.google.ads.googleads.v2.services.MutateConversionActionsResponse> getMutateConversionActionsMethod;
 
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "MutateConversionActions",
+      requestType = com.google.ads.googleads.v2.services.MutateConversionActionsRequest.class,
+      responseType = com.google.ads.googleads.v2.services.MutateConversionActionsResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<com.google.ads.googleads.v2.services.MutateConversionActionsRequest,
       com.google.ads.googleads.v2.services.MutateConversionActionsResponse> getMutateConversionActionsMethod() {
-    return getMutateConversionActionsMethodHelper();
-  }
-
-  private static io.grpc.MethodDescriptor<com.google.ads.googleads.v2.services.MutateConversionActionsRequest,
-      com.google.ads.googleads.v2.services.MutateConversionActionsResponse> getMutateConversionActionsMethodHelper() {
     io.grpc.MethodDescriptor<com.google.ads.googleads.v2.services.MutateConversionActionsRequest, com.google.ads.googleads.v2.services.MutateConversionActionsResponse> getMutateConversionActionsMethod;
     if ((getMutateConversionActionsMethod = ConversionActionServiceGrpc.getMutateConversionActionsMethod) == null) {
       synchronized (ConversionActionServiceGrpc.class) {
         if ((getMutateConversionActionsMethod = ConversionActionServiceGrpc.getMutateConversionActionsMethod) == null) {
-          ConversionActionServiceGrpc.getMutateConversionActionsMethod = getMutateConversionActionsMethod = 
+          ConversionActionServiceGrpc.getMutateConversionActionsMethod = getMutateConversionActionsMethod =
               io.grpc.MethodDescriptor.<com.google.ads.googleads.v2.services.MutateConversionActionsRequest, com.google.ads.googleads.v2.services.MutateConversionActionsResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "google.ads.googleads.v2.services.ConversionActionService", "MutateConversionActions"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "MutateConversionActions"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v2.services.MutateConversionActionsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v2.services.MutateConversionActionsResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new ConversionActionServiceMethodDescriptorSupplier("MutateConversionActions"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ConversionActionServiceMethodDescriptorSupplier("MutateConversionActions"))
+              .build();
         }
-     }
-     return getMutateConversionActionsMethod;
+      }
+    }
+    return getMutateConversionActionsMethod;
   }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static ConversionActionServiceStub newStub(io.grpc.Channel channel) {
-    return new ConversionActionServiceStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<ConversionActionServiceStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<ConversionActionServiceStub>() {
+        @java.lang.Override
+        public ConversionActionServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new ConversionActionServiceStub(channel, callOptions);
+        }
+      };
+    return ConversionActionServiceStub.newStub(factory, channel);
   }
 
   /**
@@ -117,7 +111,14 @@ public final class ConversionActionServiceGrpc {
    */
   public static ConversionActionServiceBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new ConversionActionServiceBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<ConversionActionServiceBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<ConversionActionServiceBlockingStub>() {
+        @java.lang.Override
+        public ConversionActionServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new ConversionActionServiceBlockingStub(channel, callOptions);
+        }
+      };
+    return ConversionActionServiceBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -125,7 +126,14 @@ public final class ConversionActionServiceGrpc {
    */
   public static ConversionActionServiceFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new ConversionActionServiceFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<ConversionActionServiceFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<ConversionActionServiceFutureStub>() {
+        @java.lang.Override
+        public ConversionActionServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new ConversionActionServiceFutureStub(channel, callOptions);
+        }
+      };
+    return ConversionActionServiceFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -142,7 +150,7 @@ public final class ConversionActionServiceGrpc {
      */
     public void getConversionAction(com.google.ads.googleads.v2.services.GetConversionActionRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v2.resources.ConversionAction> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetConversionActionMethodHelper(), responseObserver);
+      asyncUnimplementedUnaryCall(getGetConversionActionMethod(), responseObserver);
     }
 
     /**
@@ -153,20 +161,20 @@ public final class ConversionActionServiceGrpc {
      */
     public void mutateConversionActions(com.google.ads.googleads.v2.services.MutateConversionActionsRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v2.services.MutateConversionActionsResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getMutateConversionActionsMethodHelper(), responseObserver);
+      asyncUnimplementedUnaryCall(getMutateConversionActionsMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
-            getGetConversionActionMethodHelper(),
+            getGetConversionActionMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 com.google.ads.googleads.v2.services.GetConversionActionRequest,
                 com.google.ads.googleads.v2.resources.ConversionAction>(
                   this, METHODID_GET_CONVERSION_ACTION)))
           .addMethod(
-            getMutateConversionActionsMethodHelper(),
+            getMutateConversionActionsMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 com.google.ads.googleads.v2.services.MutateConversionActionsRequest,
@@ -181,19 +189,15 @@ public final class ConversionActionServiceGrpc {
    * Service to manage conversion actions.
    * </pre>
    */
-  public static final class ConversionActionServiceStub extends io.grpc.stub.AbstractStub<ConversionActionServiceStub> {
-    private ConversionActionServiceStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private ConversionActionServiceStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class ConversionActionServiceStub extends io.grpc.stub.AbstractAsyncStub<ConversionActionServiceStub> {
+    private ConversionActionServiceStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected ConversionActionServiceStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected ConversionActionServiceStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new ConversionActionServiceStub(channel, callOptions);
     }
 
@@ -205,7 +209,7 @@ public final class ConversionActionServiceGrpc {
     public void getConversionAction(com.google.ads.googleads.v2.services.GetConversionActionRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v2.resources.ConversionAction> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(getGetConversionActionMethodHelper(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getGetConversionActionMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -217,7 +221,7 @@ public final class ConversionActionServiceGrpc {
     public void mutateConversionActions(com.google.ads.googleads.v2.services.MutateConversionActionsRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v2.services.MutateConversionActionsResponse> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(getMutateConversionActionsMethodHelper(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getMutateConversionActionsMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -226,19 +230,15 @@ public final class ConversionActionServiceGrpc {
    * Service to manage conversion actions.
    * </pre>
    */
-  public static final class ConversionActionServiceBlockingStub extends io.grpc.stub.AbstractStub<ConversionActionServiceBlockingStub> {
-    private ConversionActionServiceBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private ConversionActionServiceBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class ConversionActionServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<ConversionActionServiceBlockingStub> {
+    private ConversionActionServiceBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected ConversionActionServiceBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected ConversionActionServiceBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new ConversionActionServiceBlockingStub(channel, callOptions);
     }
 
@@ -249,7 +249,7 @@ public final class ConversionActionServiceGrpc {
      */
     public com.google.ads.googleads.v2.resources.ConversionAction getConversionAction(com.google.ads.googleads.v2.services.GetConversionActionRequest request) {
       return blockingUnaryCall(
-          getChannel(), getGetConversionActionMethodHelper(), getCallOptions(), request);
+          getChannel(), getGetConversionActionMethod(), getCallOptions(), request);
     }
 
     /**
@@ -260,7 +260,7 @@ public final class ConversionActionServiceGrpc {
      */
     public com.google.ads.googleads.v2.services.MutateConversionActionsResponse mutateConversionActions(com.google.ads.googleads.v2.services.MutateConversionActionsRequest request) {
       return blockingUnaryCall(
-          getChannel(), getMutateConversionActionsMethodHelper(), getCallOptions(), request);
+          getChannel(), getMutateConversionActionsMethod(), getCallOptions(), request);
     }
   }
 
@@ -269,19 +269,15 @@ public final class ConversionActionServiceGrpc {
    * Service to manage conversion actions.
    * </pre>
    */
-  public static final class ConversionActionServiceFutureStub extends io.grpc.stub.AbstractStub<ConversionActionServiceFutureStub> {
-    private ConversionActionServiceFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private ConversionActionServiceFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class ConversionActionServiceFutureStub extends io.grpc.stub.AbstractFutureStub<ConversionActionServiceFutureStub> {
+    private ConversionActionServiceFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected ConversionActionServiceFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected ConversionActionServiceFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new ConversionActionServiceFutureStub(channel, callOptions);
     }
 
@@ -293,7 +289,7 @@ public final class ConversionActionServiceGrpc {
     public com.google.common.util.concurrent.ListenableFuture<com.google.ads.googleads.v2.resources.ConversionAction> getConversionAction(
         com.google.ads.googleads.v2.services.GetConversionActionRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(getGetConversionActionMethodHelper(), getCallOptions()), request);
+          getChannel().newCall(getGetConversionActionMethod(), getCallOptions()), request);
     }
 
     /**
@@ -305,7 +301,7 @@ public final class ConversionActionServiceGrpc {
     public com.google.common.util.concurrent.ListenableFuture<com.google.ads.googleads.v2.services.MutateConversionActionsResponse> mutateConversionActions(
         com.google.ads.googleads.v2.services.MutateConversionActionsRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(getMutateConversionActionsMethodHelper(), getCallOptions()), request);
+          getChannel().newCall(getMutateConversionActionsMethod(), getCallOptions()), request);
     }
   }
 
@@ -398,8 +394,8 @@ public final class ConversionActionServiceGrpc {
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new ConversionActionServiceFileDescriptorSupplier())
-              .addMethod(getGetConversionActionMethodHelper())
-              .addMethod(getMutateConversionActionsMethodHelper())
+              .addMethod(getGetConversionActionMethod())
+              .addMethod(getMutateConversionActionsMethod())
               .build();
         }
       }

@@ -10,7 +10,7 @@ package com.google.ads.googleads.v4.common;
  *
  * Protobuf type {@code google.ads.googleads.v4.common.StoreAttribute}
  */
-public  final class StoreAttribute extends
+public final class StoreAttribute extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.common.StoreAttribute)
     StoreAttributeOrBuilder {
@@ -108,6 +108,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue store_code = 1;</code>
    * @return Whether the storeCode field is set.
    */
+  @java.lang.Override
   public boolean hasStoreCode() {
     return storeCode_ != null;
   }
@@ -120,6 +121,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue store_code = 1;</code>
    * @return The storeCode.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getStoreCode() {
     return storeCode_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : storeCode_;
   }
@@ -131,6 +133,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue store_code = 1;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getStoreCodeOrBuilder() {
     return getStoreCode();
   }

@@ -10,7 +10,7 @@ package com.google.ads.googleads.v4.common;
  *
  * Protobuf type {@code google.ads.googleads.v4.common.GmailAdInfo}
  */
-public  final class GmailAdInfo extends
+public final class GmailAdInfo extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.common.GmailAdInfo)
     GmailAdInfoOrBuilder {
@@ -199,6 +199,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.common.GmailTeaser teaser = 1;</code>
    * @return Whether the teaser field is set.
    */
+  @java.lang.Override
   public boolean hasTeaser() {
     return teaser_ != null;
   }
@@ -210,6 +211,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.common.GmailTeaser teaser = 1;</code>
    * @return The teaser.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.GmailTeaser getTeaser() {
     return teaser_ == null ? com.google.ads.googleads.v4.common.GmailTeaser.getDefaultInstance() : teaser_;
   }
@@ -220,6 +222,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v4.common.GmailTeaser teaser = 1;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.GmailTeaserOrBuilder getTeaserOrBuilder() {
     return getTeaser();
   }
@@ -236,6 +239,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue header_image = 2;</code>
    * @return Whether the headerImage field is set.
    */
+  @java.lang.Override
   public boolean hasHeaderImage() {
     return headerImage_ != null;
   }
@@ -249,6 +253,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue header_image = 2;</code>
    * @return The headerImage.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getHeaderImage() {
     return headerImage_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : headerImage_;
   }
@@ -261,6 +266,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue header_image = 2;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getHeaderImageOrBuilder() {
     return getHeaderImage();
   }
@@ -278,6 +284,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue marketing_image = 3;</code>
    * @return Whether the marketingImage field is set.
    */
+  @java.lang.Override
   public boolean hasMarketingImage() {
     return marketingImage_ != null;
   }
@@ -292,6 +299,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue marketing_image = 3;</code>
    * @return The marketingImage.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getMarketingImage() {
     return marketingImage_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : marketingImage_;
   }
@@ -305,6 +313,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue marketing_image = 3;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getMarketingImageOrBuilder() {
     return getMarketingImage();
   }
@@ -319,6 +328,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue marketing_image_headline = 4;</code>
    * @return Whether the marketingImageHeadline field is set.
    */
+  @java.lang.Override
   public boolean hasMarketingImageHeadline() {
     return marketingImageHeadline_ != null;
   }
@@ -330,6 +340,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue marketing_image_headline = 4;</code>
    * @return The marketingImageHeadline.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getMarketingImageHeadline() {
     return marketingImageHeadline_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : marketingImageHeadline_;
   }
@@ -340,6 +351,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue marketing_image_headline = 4;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getMarketingImageHeadlineOrBuilder() {
     return getMarketingImageHeadline();
   }
@@ -354,6 +366,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue marketing_image_description = 5;</code>
    * @return Whether the marketingImageDescription field is set.
    */
+  @java.lang.Override
   public boolean hasMarketingImageDescription() {
     return marketingImageDescription_ != null;
   }
@@ -365,6 +378,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue marketing_image_description = 5;</code>
    * @return The marketingImageDescription.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getMarketingImageDescription() {
     return marketingImageDescription_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : marketingImageDescription_;
   }
@@ -375,6 +389,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue marketing_image_description = 5;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getMarketingImageDescriptionOrBuilder() {
     return getMarketingImageDescription();
   }
@@ -389,6 +404,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.common.DisplayCallToAction marketing_image_display_call_to_action = 6;</code>
    * @return Whether the marketingImageDisplayCallToAction field is set.
    */
+  @java.lang.Override
   public boolean hasMarketingImageDisplayCallToAction() {
     return marketingImageDisplayCallToAction_ != null;
   }
@@ -400,6 +416,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.common.DisplayCallToAction marketing_image_display_call_to_action = 6;</code>
    * @return The marketingImageDisplayCallToAction.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.DisplayCallToAction getMarketingImageDisplayCallToAction() {
     return marketingImageDisplayCallToAction_ == null ? com.google.ads.googleads.v4.common.DisplayCallToAction.getDefaultInstance() : marketingImageDisplayCallToAction_;
   }
@@ -410,6 +427,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v4.common.DisplayCallToAction marketing_image_display_call_to_action = 6;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.DisplayCallToActionOrBuilder getMarketingImageDisplayCallToActionOrBuilder() {
     return getMarketingImageDisplayCallToAction();
   }
@@ -423,6 +441,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.common.ProductImage product_images = 7;</code>
    */
+  @java.lang.Override
   public java.util.List<com.google.ads.googleads.v4.common.ProductImage> getProductImagesList() {
     return productImages_;
   }
@@ -433,6 +452,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.common.ProductImage product_images = 7;</code>
    */
+  @java.lang.Override
   public java.util.List<? extends com.google.ads.googleads.v4.common.ProductImageOrBuilder> 
       getProductImagesOrBuilderList() {
     return productImages_;
@@ -444,6 +464,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.common.ProductImage product_images = 7;</code>
    */
+  @java.lang.Override
   public int getProductImagesCount() {
     return productImages_.size();
   }
@@ -454,6 +475,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.common.ProductImage product_images = 7;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.ProductImage getProductImages(int index) {
     return productImages_.get(index);
   }
@@ -464,6 +486,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.common.ProductImage product_images = 7;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.ProductImageOrBuilder getProductImagesOrBuilder(
       int index) {
     return productImages_.get(index);
@@ -479,6 +502,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.common.ProductVideo product_videos = 8;</code>
    */
+  @java.lang.Override
   public java.util.List<com.google.ads.googleads.v4.common.ProductVideo> getProductVideosList() {
     return productVideos_;
   }
@@ -490,6 +514,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.common.ProductVideo product_videos = 8;</code>
    */
+  @java.lang.Override
   public java.util.List<? extends com.google.ads.googleads.v4.common.ProductVideoOrBuilder> 
       getProductVideosOrBuilderList() {
     return productVideos_;
@@ -502,6 +527,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.common.ProductVideo product_videos = 8;</code>
    */
+  @java.lang.Override
   public int getProductVideosCount() {
     return productVideos_.size();
   }
@@ -513,6 +539,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.common.ProductVideo product_videos = 8;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.ProductVideo getProductVideos(int index) {
     return productVideos_.get(index);
   }
@@ -524,6 +551,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.common.ProductVideo product_videos = 8;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.ProductVideoOrBuilder getProductVideosOrBuilder(
       int index) {
     return productVideos_.get(index);

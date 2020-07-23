@@ -23,10 +23,8 @@ import com.google.api.gax.core.BackgroundResource;
 import com.google.api.gax.longrunning.OperationFuture;
 import com.google.api.gax.rpc.OperationCallable;
 import com.google.api.gax.rpc.UnaryCallable;
-import com.google.api.pathtemplate.PathTemplate;
 import com.google.longrunning.Operation;
 import com.google.longrunning.OperationsClient;
-import com.google.protobuf.BoolValue;
 import com.google.protobuf.Empty;
 import java.io.IOException;
 import java.util.List;
@@ -108,50 +106,6 @@ public class OfflineUserDataJobServiceClient implements BackgroundResource {
   private final OfflineUserDataJobServiceStub stub;
   private final OperationsClient operationsClient;
 
-  private static final PathTemplate OFFLINE_USER_DATA_JOB_PATH_TEMPLATE =
-      PathTemplate.createWithoutUrlEncoding(
-          "customers/{customer}/offlineUserDataJobs/{offline_user_data_job}");
-
-  /**
-   * Formats a string containing the fully-qualified path to represent a offline_user_data_job
-   * resource.
-   *
-   * @deprecated Use the {@link OfflineUserDataJobName} class instead.
-   */
-  @Deprecated
-  public static final String formatOfflineUserDataJobName(
-      String customer, String offlineUserDataJob) {
-    return OFFLINE_USER_DATA_JOB_PATH_TEMPLATE.instantiate(
-        "customer", customer,
-        "offline_user_data_job", offlineUserDataJob);
-  }
-
-  /**
-   * Parses the customer from the given fully-qualified path which represents a
-   * offline_user_data_job resource.
-   *
-   * @deprecated Use the {@link OfflineUserDataJobName} class instead.
-   */
-  @Deprecated
-  public static final String parseCustomerFromOfflineUserDataJobName(
-      String offlineUserDataJobName) {
-    return OFFLINE_USER_DATA_JOB_PATH_TEMPLATE.parse(offlineUserDataJobName).get("customer");
-  }
-
-  /**
-   * Parses the offline_user_data_job from the given fully-qualified path which represents a
-   * offline_user_data_job resource.
-   *
-   * @deprecated Use the {@link OfflineUserDataJobName} class instead.
-   */
-  @Deprecated
-  public static final String parseOfflineUserDataJobFromOfflineUserDataJobName(
-      String offlineUserDataJobName) {
-    return OFFLINE_USER_DATA_JOB_PATH_TEMPLATE
-        .parse(offlineUserDataJobName)
-        .get("offline_user_data_job");
-  }
-
   /** Constructs an instance of OfflineUserDataJobServiceClient with default settings. */
   public static final OfflineUserDataJobServiceClient create() throws IOException {
     return create(OfflineUserDataJobServiceSettings.newBuilder().build());
@@ -212,6 +166,145 @@ public class OfflineUserDataJobServiceClient implements BackgroundResource {
       "The surface for long-running operations is not stable yet and may change in the future.")
   public final OperationsClient getOperationsClient() {
     return operationsClient;
+  }
+
+  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  /**
+   * Runs the offline user data job.
+   *
+   * <p>When finished, the long running operation will contain the processing result or failure
+   * information, if any.
+   *
+   * <p>Sample code:
+   *
+   * <pre><code>
+   * try (OfflineUserDataJobServiceClient offlineUserDataJobServiceClient = OfflineUserDataJobServiceClient.create()) {
+   *   OfflineUserDataJobName resourceName = OfflineUserDataJobName.of("[CUSTOMER]", "[OFFLINE_USER_DATA_JOB]");
+   *   offlineUserDataJobServiceClient.runOfflineUserDataJobAsync(resourceName).get();
+   * }
+   * </code></pre>
+   *
+   * @param resourceName Required. The resource name of the OfflineUserDataJob to run.
+   * @throws com.google.api.gax.rpc.ApiException if the remote call fails
+   */
+  @BetaApi(
+      "The surface for long-running operations is not stable yet and may change in the future.")
+  public final OperationFuture<Empty, Empty> runOfflineUserDataJobAsync(
+      OfflineUserDataJobName resourceName) {
+    RunOfflineUserDataJobRequest request =
+        RunOfflineUserDataJobRequest.newBuilder()
+            .setResourceName(resourceName == null ? null : resourceName.toString())
+            .build();
+    return runOfflineUserDataJobAsync(request);
+  }
+
+  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  /**
+   * Runs the offline user data job.
+   *
+   * <p>When finished, the long running operation will contain the processing result or failure
+   * information, if any.
+   *
+   * <p>Sample code:
+   *
+   * <pre><code>
+   * try (OfflineUserDataJobServiceClient offlineUserDataJobServiceClient = OfflineUserDataJobServiceClient.create()) {
+   *   OfflineUserDataJobName resourceName = OfflineUserDataJobName.of("[CUSTOMER]", "[OFFLINE_USER_DATA_JOB]");
+   *   offlineUserDataJobServiceClient.runOfflineUserDataJobAsync(resourceName.toString()).get();
+   * }
+   * </code></pre>
+   *
+   * @param resourceName Required. The resource name of the OfflineUserDataJob to run.
+   * @throws com.google.api.gax.rpc.ApiException if the remote call fails
+   */
+  @BetaApi(
+      "The surface for long-running operations is not stable yet and may change in the future.")
+  public final OperationFuture<Empty, Empty> runOfflineUserDataJobAsync(String resourceName) {
+    RunOfflineUserDataJobRequest request =
+        RunOfflineUserDataJobRequest.newBuilder().setResourceName(resourceName).build();
+    return runOfflineUserDataJobAsync(request);
+  }
+
+  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  /**
+   * Runs the offline user data job.
+   *
+   * <p>When finished, the long running operation will contain the processing result or failure
+   * information, if any.
+   *
+   * <p>Sample code:
+   *
+   * <pre><code>
+   * try (OfflineUserDataJobServiceClient offlineUserDataJobServiceClient = OfflineUserDataJobServiceClient.create()) {
+   *   OfflineUserDataJobName resourceName = OfflineUserDataJobName.of("[CUSTOMER]", "[OFFLINE_USER_DATA_JOB]");
+   *   RunOfflineUserDataJobRequest request = RunOfflineUserDataJobRequest.newBuilder()
+   *     .setResourceName(resourceName.toString())
+   *     .build();
+   *   offlineUserDataJobServiceClient.runOfflineUserDataJobAsync(request).get();
+   * }
+   * </code></pre>
+   *
+   * @param request The request object containing all of the parameters for the API call.
+   * @throws com.google.api.gax.rpc.ApiException if the remote call fails
+   */
+  @BetaApi(
+      "The surface for long-running operations is not stable yet and may change in the future.")
+  public final OperationFuture<Empty, Empty> runOfflineUserDataJobAsync(
+      RunOfflineUserDataJobRequest request) {
+    return runOfflineUserDataJobOperationCallable().futureCall(request);
+  }
+
+  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  /**
+   * Runs the offline user data job.
+   *
+   * <p>When finished, the long running operation will contain the processing result or failure
+   * information, if any.
+   *
+   * <p>Sample code:
+   *
+   * <pre><code>
+   * try (OfflineUserDataJobServiceClient offlineUserDataJobServiceClient = OfflineUserDataJobServiceClient.create()) {
+   *   OfflineUserDataJobName resourceName = OfflineUserDataJobName.of("[CUSTOMER]", "[OFFLINE_USER_DATA_JOB]");
+   *   RunOfflineUserDataJobRequest request = RunOfflineUserDataJobRequest.newBuilder()
+   *     .setResourceName(resourceName.toString())
+   *     .build();
+   *   OperationFuture&lt;Empty, Empty&gt; future = offlineUserDataJobServiceClient.runOfflineUserDataJobOperationCallable().futureCall(request);
+   *   // Do something
+   *   future.get();
+   * }
+   * </code></pre>
+   */
+  @BetaApi("The surface for use by generated code is not stable yet and may change in the future.")
+  public final OperationCallable<RunOfflineUserDataJobRequest, Empty, Empty>
+      runOfflineUserDataJobOperationCallable() {
+    return stub.runOfflineUserDataJobOperationCallable();
+  }
+
+  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  /**
+   * Runs the offline user data job.
+   *
+   * <p>When finished, the long running operation will contain the processing result or failure
+   * information, if any.
+   *
+   * <p>Sample code:
+   *
+   * <pre><code>
+   * try (OfflineUserDataJobServiceClient offlineUserDataJobServiceClient = OfflineUserDataJobServiceClient.create()) {
+   *   OfflineUserDataJobName resourceName = OfflineUserDataJobName.of("[CUSTOMER]", "[OFFLINE_USER_DATA_JOB]");
+   *   RunOfflineUserDataJobRequest request = RunOfflineUserDataJobRequest.newBuilder()
+   *     .setResourceName(resourceName.toString())
+   *     .build();
+   *   ApiFuture&lt;Operation&gt; future = offlineUserDataJobServiceClient.runOfflineUserDataJobCallable().futureCall(request);
+   *   // Do something
+   *   future.get();
+   * }
+   * </code></pre>
+   */
+  public final UnaryCallable<RunOfflineUserDataJobRequest, Operation>
+      runOfflineUserDataJobCallable() {
+    return stub.runOfflineUserDataJobCallable();
   }
 
   // AUTO-GENERATED DOCUMENTATION AND METHOD
@@ -299,8 +392,32 @@ public class OfflineUserDataJobServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (OfflineUserDataJobServiceClient offlineUserDataJobServiceClient = OfflineUserDataJobServiceClient.create()) {
-   *   String formattedResourceName = OfflineUserDataJobServiceClient.formatOfflineUserDataJobName("[CUSTOMER]", "[OFFLINE_USER_DATA_JOB]");
-   *   OfflineUserDataJob response = offlineUserDataJobServiceClient.getOfflineUserDataJob(formattedResourceName);
+   *   OfflineUserDataJobName resourceName = OfflineUserDataJobName.of("[CUSTOMER]", "[OFFLINE_USER_DATA_JOB]");
+   *   OfflineUserDataJob response = offlineUserDataJobServiceClient.getOfflineUserDataJob(resourceName);
+   * }
+   * </code></pre>
+   *
+   * @param resourceName Required. The resource name of the OfflineUserDataJob to get.
+   * @throws com.google.api.gax.rpc.ApiException if the remote call fails
+   */
+  public final OfflineUserDataJob getOfflineUserDataJob(OfflineUserDataJobName resourceName) {
+    GetOfflineUserDataJobRequest request =
+        GetOfflineUserDataJobRequest.newBuilder()
+            .setResourceName(resourceName == null ? null : resourceName.toString())
+            .build();
+    return getOfflineUserDataJob(request);
+  }
+
+  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  /**
+   * Returns the offline user data job.
+   *
+   * <p>Sample code:
+   *
+   * <pre><code>
+   * try (OfflineUserDataJobServiceClient offlineUserDataJobServiceClient = OfflineUserDataJobServiceClient.create()) {
+   *   OfflineUserDataJobName resourceName = OfflineUserDataJobName.of("[CUSTOMER]", "[OFFLINE_USER_DATA_JOB]");
+   *   OfflineUserDataJob response = offlineUserDataJobServiceClient.getOfflineUserDataJob(resourceName.toString());
    * }
    * </code></pre>
    *
@@ -308,7 +425,6 @@ public class OfflineUserDataJobServiceClient implements BackgroundResource {
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final OfflineUserDataJob getOfflineUserDataJob(String resourceName) {
-    OFFLINE_USER_DATA_JOB_PATH_TEMPLATE.validate(resourceName, "getOfflineUserDataJob");
     GetOfflineUserDataJobRequest request =
         GetOfflineUserDataJobRequest.newBuilder().setResourceName(resourceName).build();
     return getOfflineUserDataJob(request);
@@ -322,9 +438,9 @@ public class OfflineUserDataJobServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (OfflineUserDataJobServiceClient offlineUserDataJobServiceClient = OfflineUserDataJobServiceClient.create()) {
-   *   String formattedResourceName = OfflineUserDataJobServiceClient.formatOfflineUserDataJobName("[CUSTOMER]", "[OFFLINE_USER_DATA_JOB]");
+   *   OfflineUserDataJobName resourceName = OfflineUserDataJobName.of("[CUSTOMER]", "[OFFLINE_USER_DATA_JOB]");
    *   GetOfflineUserDataJobRequest request = GetOfflineUserDataJobRequest.newBuilder()
-   *     .setResourceName(formattedResourceName)
+   *     .setResourceName(resourceName.toString())
    *     .build();
    *   OfflineUserDataJob response = offlineUserDataJobServiceClient.getOfflineUserDataJob(request);
    * }
@@ -345,9 +461,9 @@ public class OfflineUserDataJobServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (OfflineUserDataJobServiceClient offlineUserDataJobServiceClient = OfflineUserDataJobServiceClient.create()) {
-   *   String formattedResourceName = OfflineUserDataJobServiceClient.formatOfflineUserDataJobName("[CUSTOMER]", "[OFFLINE_USER_DATA_JOB]");
+   *   OfflineUserDataJobName resourceName = OfflineUserDataJobName.of("[CUSTOMER]", "[OFFLINE_USER_DATA_JOB]");
    *   GetOfflineUserDataJobRequest request = GetOfflineUserDataJobRequest.newBuilder()
-   *     .setResourceName(formattedResourceName)
+   *     .setResourceName(resourceName.toString())
    *     .build();
    *   ApiFuture&lt;OfflineUserDataJob&gt; future = offlineUserDataJobServiceClient.getOfflineUserDataJobCallable().futureCall(request);
    *   // Do something
@@ -368,27 +484,21 @@ public class OfflineUserDataJobServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (OfflineUserDataJobServiceClient offlineUserDataJobServiceClient = OfflineUserDataJobServiceClient.create()) {
-   *   String formattedResourceName = OfflineUserDataJobServiceClient.formatOfflineUserDataJobName("[CUSTOMER]", "[OFFLINE_USER_DATA_JOB]");
-   *   BoolValue enablePartialFailure = BoolValue.newBuilder().build();
+   *   OfflineUserDataJobName resourceName = OfflineUserDataJobName.of("[CUSTOMER]", "[OFFLINE_USER_DATA_JOB]");
    *   List&lt;OfflineUserDataJobOperation&gt; operations = new ArrayList&lt;&gt;();
-   *   AddOfflineUserDataJobOperationsResponse response = offlineUserDataJobServiceClient.addOfflineUserDataJobOperations(formattedResourceName, enablePartialFailure, operations);
+   *   AddOfflineUserDataJobOperationsResponse response = offlineUserDataJobServiceClient.addOfflineUserDataJobOperations(resourceName, operations);
    * }
    * </code></pre>
    *
    * @param resourceName Required. The resource name of the OfflineUserDataJob.
-   * @param enablePartialFailure True to enable partial failure for the offline user data job.
    * @param operations Required. The list of operations to be done.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final AddOfflineUserDataJobOperationsResponse addOfflineUserDataJobOperations(
-      String resourceName,
-      BoolValue enablePartialFailure,
-      List<OfflineUserDataJobOperation> operations) {
-    OFFLINE_USER_DATA_JOB_PATH_TEMPLATE.validate(resourceName, "addOfflineUserDataJobOperations");
+      OfflineUserDataJobName resourceName, List<OfflineUserDataJobOperation> operations) {
     AddOfflineUserDataJobOperationsRequest request =
         AddOfflineUserDataJobOperationsRequest.newBuilder()
-            .setResourceName(resourceName)
-            .setEnablePartialFailure(enablePartialFailure)
+            .setResourceName(resourceName == null ? null : resourceName.toString())
             .addAllOperations(operations)
             .build();
     return addOfflineUserDataJobOperations(request);
@@ -402,12 +512,38 @@ public class OfflineUserDataJobServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (OfflineUserDataJobServiceClient offlineUserDataJobServiceClient = OfflineUserDataJobServiceClient.create()) {
-   *   String formattedResourceName = OfflineUserDataJobServiceClient.formatOfflineUserDataJobName("[CUSTOMER]", "[OFFLINE_USER_DATA_JOB]");
-   *   BoolValue enablePartialFailure = BoolValue.newBuilder().build();
+   *   OfflineUserDataJobName resourceName = OfflineUserDataJobName.of("[CUSTOMER]", "[OFFLINE_USER_DATA_JOB]");
+   *   List&lt;OfflineUserDataJobOperation&gt; operations = new ArrayList&lt;&gt;();
+   *   AddOfflineUserDataJobOperationsResponse response = offlineUserDataJobServiceClient.addOfflineUserDataJobOperations(resourceName.toString(), operations);
+   * }
+   * </code></pre>
+   *
+   * @param resourceName Required. The resource name of the OfflineUserDataJob.
+   * @param operations Required. The list of operations to be done.
+   * @throws com.google.api.gax.rpc.ApiException if the remote call fails
+   */
+  public final AddOfflineUserDataJobOperationsResponse addOfflineUserDataJobOperations(
+      String resourceName, List<OfflineUserDataJobOperation> operations) {
+    AddOfflineUserDataJobOperationsRequest request =
+        AddOfflineUserDataJobOperationsRequest.newBuilder()
+            .setResourceName(resourceName)
+            .addAllOperations(operations)
+            .build();
+    return addOfflineUserDataJobOperations(request);
+  }
+
+  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  /**
+   * Adds operations to the offline user data job.
+   *
+   * <p>Sample code:
+   *
+   * <pre><code>
+   * try (OfflineUserDataJobServiceClient offlineUserDataJobServiceClient = OfflineUserDataJobServiceClient.create()) {
+   *   OfflineUserDataJobName resourceName = OfflineUserDataJobName.of("[CUSTOMER]", "[OFFLINE_USER_DATA_JOB]");
    *   List&lt;OfflineUserDataJobOperation&gt; operations = new ArrayList&lt;&gt;();
    *   AddOfflineUserDataJobOperationsRequest request = AddOfflineUserDataJobOperationsRequest.newBuilder()
-   *     .setResourceName(formattedResourceName)
-   *     .setEnablePartialFailure(enablePartialFailure)
+   *     .setResourceName(resourceName.toString())
    *     .addAllOperations(operations)
    *     .build();
    *   AddOfflineUserDataJobOperationsResponse response = offlineUserDataJobServiceClient.addOfflineUserDataJobOperations(request);
@@ -430,12 +566,10 @@ public class OfflineUserDataJobServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (OfflineUserDataJobServiceClient offlineUserDataJobServiceClient = OfflineUserDataJobServiceClient.create()) {
-   *   String formattedResourceName = OfflineUserDataJobServiceClient.formatOfflineUserDataJobName("[CUSTOMER]", "[OFFLINE_USER_DATA_JOB]");
-   *   BoolValue enablePartialFailure = BoolValue.newBuilder().build();
+   *   OfflineUserDataJobName resourceName = OfflineUserDataJobName.of("[CUSTOMER]", "[OFFLINE_USER_DATA_JOB]");
    *   List&lt;OfflineUserDataJobOperation&gt; operations = new ArrayList&lt;&gt;();
    *   AddOfflineUserDataJobOperationsRequest request = AddOfflineUserDataJobOperationsRequest.newBuilder()
-   *     .setResourceName(formattedResourceName)
-   *     .setEnablePartialFailure(enablePartialFailure)
+   *     .setResourceName(resourceName.toString())
    *     .addAllOperations(operations)
    *     .build();
    *   ApiFuture&lt;AddOfflineUserDataJobOperationsResponse&gt; future = offlineUserDataJobServiceClient.addOfflineUserDataJobOperationsCallable().futureCall(request);
@@ -448,116 +582,6 @@ public class OfflineUserDataJobServiceClient implements BackgroundResource {
           AddOfflineUserDataJobOperationsRequest, AddOfflineUserDataJobOperationsResponse>
       addOfflineUserDataJobOperationsCallable() {
     return stub.addOfflineUserDataJobOperationsCallable();
-  }
-
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
-  /**
-   * Runs the offline user data job.
-   *
-   * <p>When finished, the long running operation will contain the processing result or failure
-   * information, if any.
-   *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (OfflineUserDataJobServiceClient offlineUserDataJobServiceClient = OfflineUserDataJobServiceClient.create()) {
-   *   String formattedResourceName = OfflineUserDataJobServiceClient.formatOfflineUserDataJobName("[CUSTOMER]", "[OFFLINE_USER_DATA_JOB]");
-   *   offlineUserDataJobServiceClient.runOfflineUserDataJobAsync(formattedResourceName).get();
-   * }
-   * </code></pre>
-   *
-   * @param resourceName Required. The resource name of the OfflineUserDataJob to run.
-   * @throws com.google.api.gax.rpc.ApiException if the remote call fails
-   */
-  @BetaApi(
-      "The surface for long-running operations is not stable yet and may change in the future.")
-  public final OperationFuture<Empty, Empty> runOfflineUserDataJobAsync(String resourceName) {
-    OFFLINE_USER_DATA_JOB_PATH_TEMPLATE.validate(resourceName, "runOfflineUserDataJob");
-    RunOfflineUserDataJobRequest request =
-        RunOfflineUserDataJobRequest.newBuilder().setResourceName(resourceName).build();
-    return runOfflineUserDataJobAsync(request);
-  }
-
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
-  /**
-   * Runs the offline user data job.
-   *
-   * <p>When finished, the long running operation will contain the processing result or failure
-   * information, if any.
-   *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (OfflineUserDataJobServiceClient offlineUserDataJobServiceClient = OfflineUserDataJobServiceClient.create()) {
-   *   String formattedResourceName = OfflineUserDataJobServiceClient.formatOfflineUserDataJobName("[CUSTOMER]", "[OFFLINE_USER_DATA_JOB]");
-   *   RunOfflineUserDataJobRequest request = RunOfflineUserDataJobRequest.newBuilder()
-   *     .setResourceName(formattedResourceName)
-   *     .build();
-   *   offlineUserDataJobServiceClient.runOfflineUserDataJobAsync(request).get();
-   * }
-   * </code></pre>
-   *
-   * @param request The request object containing all of the parameters for the API call.
-   * @throws com.google.api.gax.rpc.ApiException if the remote call fails
-   */
-  @BetaApi(
-      "The surface for long-running operations is not stable yet and may change in the future.")
-  public final OperationFuture<Empty, Empty> runOfflineUserDataJobAsync(
-      RunOfflineUserDataJobRequest request) {
-    return runOfflineUserDataJobOperationCallable().futureCall(request);
-  }
-
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
-  /**
-   * Runs the offline user data job.
-   *
-   * <p>When finished, the long running operation will contain the processing result or failure
-   * information, if any.
-   *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (OfflineUserDataJobServiceClient offlineUserDataJobServiceClient = OfflineUserDataJobServiceClient.create()) {
-   *   String formattedResourceName = OfflineUserDataJobServiceClient.formatOfflineUserDataJobName("[CUSTOMER]", "[OFFLINE_USER_DATA_JOB]");
-   *   RunOfflineUserDataJobRequest request = RunOfflineUserDataJobRequest.newBuilder()
-   *     .setResourceName(formattedResourceName)
-   *     .build();
-   *   OperationFuture&lt;Empty, Empty&gt; future = offlineUserDataJobServiceClient.runOfflineUserDataJobOperationCallable().futureCall(request);
-   *   // Do something
-   *   future.get();
-   * }
-   * </code></pre>
-   */
-  @BetaApi("The surface for use by generated code is not stable yet and may change in the future.")
-  public final OperationCallable<RunOfflineUserDataJobRequest, Empty, Empty>
-      runOfflineUserDataJobOperationCallable() {
-    return stub.runOfflineUserDataJobOperationCallable();
-  }
-
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
-  /**
-   * Runs the offline user data job.
-   *
-   * <p>When finished, the long running operation will contain the processing result or failure
-   * information, if any.
-   *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (OfflineUserDataJobServiceClient offlineUserDataJobServiceClient = OfflineUserDataJobServiceClient.create()) {
-   *   String formattedResourceName = OfflineUserDataJobServiceClient.formatOfflineUserDataJobName("[CUSTOMER]", "[OFFLINE_USER_DATA_JOB]");
-   *   RunOfflineUserDataJobRequest request = RunOfflineUserDataJobRequest.newBuilder()
-   *     .setResourceName(formattedResourceName)
-   *     .build();
-   *   ApiFuture&lt;Operation&gt; future = offlineUserDataJobServiceClient.runOfflineUserDataJobCallable().futureCall(request);
-   *   // Do something
-   *   future.get();
-   * }
-   * </code></pre>
-   */
-  public final UnaryCallable<RunOfflineUserDataJobRequest, Operation>
-      runOfflineUserDataJobCallable() {
-    return stub.runOfflineUserDataJobCallable();
   }
 
   @Override

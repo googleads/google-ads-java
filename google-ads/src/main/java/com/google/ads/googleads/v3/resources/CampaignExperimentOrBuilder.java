@@ -15,6 +15,7 @@ public interface CampaignExperimentOrBuilder extends
    * </pre>
    *
    * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * @return The resourceName.
    */
   java.lang.String getResourceName();
   /**
@@ -25,6 +26,7 @@ public interface CampaignExperimentOrBuilder extends
    * </pre>
    *
    * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * @return The bytes for resourceName.
    */
   com.google.protobuf.ByteString
       getResourceNameBytes();
@@ -36,6 +38,7 @@ public interface CampaignExperimentOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the id field is set.
    */
   boolean hasId();
   /**
@@ -45,6 +48,7 @@ public interface CampaignExperimentOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The id.
    */
   com.google.protobuf.Int64Value getId();
   /**
@@ -63,6 +67,7 @@ public interface CampaignExperimentOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue campaign_draft = 3 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * @return Whether the campaignDraft field is set.
    */
   boolean hasCampaignDraft();
   /**
@@ -71,6 +76,7 @@ public interface CampaignExperimentOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue campaign_draft = 3 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * @return The campaignDraft.
    */
   com.google.protobuf.StringValue getCampaignDraft();
   /**
@@ -93,6 +99,7 @@ public interface CampaignExperimentOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue name = 4;</code>
+   * @return Whether the name field is set.
    */
   boolean hasName();
   /**
@@ -106,6 +113,7 @@ public interface CampaignExperimentOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue name = 4;</code>
+   * @return The name.
    */
   com.google.protobuf.StringValue getName();
   /**
@@ -128,6 +136,7 @@ public interface CampaignExperimentOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue description = 5;</code>
+   * @return Whether the description field is set.
    */
   boolean hasDescription();
   /**
@@ -136,6 +145,7 @@ public interface CampaignExperimentOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue description = 5;</code>
+   * @return The description.
    */
   com.google.protobuf.StringValue getDescription();
   /**
@@ -155,6 +165,7 @@ public interface CampaignExperimentOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value traffic_split_percent = 6 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return Whether the trafficSplitPercent field is set.
    */
   boolean hasTrafficSplitPercent();
   /**
@@ -165,6 +176,7 @@ public interface CampaignExperimentOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value traffic_split_percent = 6 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The trafficSplitPercent.
    */
   com.google.protobuf.Int64Value getTrafficSplitPercent();
   /**
@@ -184,6 +196,7 @@ public interface CampaignExperimentOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.CampaignExperimentTrafficSplitTypeEnum.CampaignExperimentTrafficSplitType traffic_split_type = 7 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The enum numeric value on the wire for trafficSplitType.
    */
   int getTrafficSplitTypeValue();
   /**
@@ -192,6 +205,7 @@ public interface CampaignExperimentOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.CampaignExperimentTrafficSplitTypeEnum.CampaignExperimentTrafficSplitType traffic_split_type = 7 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The trafficSplitType.
    */
   com.google.ads.googleads.v3.enums.CampaignExperimentTrafficSplitTypeEnum.CampaignExperimentTrafficSplitType getTrafficSplitType();
 
@@ -201,6 +215,7 @@ public interface CampaignExperimentOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue experiment_campaign = 8 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return Whether the experimentCampaign field is set.
    */
   boolean hasExperimentCampaign();
   /**
@@ -209,6 +224,7 @@ public interface CampaignExperimentOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue experiment_campaign = 8 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The experimentCampaign.
    */
   com.google.protobuf.StringValue getExperimentCampaign();
   /**
@@ -226,6 +242,7 @@ public interface CampaignExperimentOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.CampaignExperimentStatusEnum.CampaignExperimentStatus status = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The enum numeric value on the wire for status.
    */
   int getStatusValue();
   /**
@@ -234,6 +251,7 @@ public interface CampaignExperimentOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.CampaignExperimentStatusEnum.CampaignExperimentStatus status = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The status.
    */
   com.google.ads.googleads.v3.enums.CampaignExperimentStatusEnum.CampaignExperimentStatus getStatus();
 
@@ -245,6 +263,7 @@ public interface CampaignExperimentOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue long_running_operation = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the longRunningOperation field is set.
    */
   boolean hasLongRunningOperation();
   /**
@@ -255,6 +274,7 @@ public interface CampaignExperimentOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue long_running_operation = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The longRunningOperation.
    */
   com.google.protobuf.StringValue getLongRunningOperation();
   /**
@@ -279,6 +299,7 @@ public interface CampaignExperimentOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue start_date = 11;</code>
+   * @return Whether the startDate field is set.
    */
   boolean hasStartDate();
   /**
@@ -292,6 +313,7 @@ public interface CampaignExperimentOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue start_date = 11;</code>
+   * @return The startDate.
    */
   com.google.protobuf.StringValue getStartDate();
   /**
@@ -318,6 +340,7 @@ public interface CampaignExperimentOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue end_date = 12;</code>
+   * @return Whether the endDate field is set.
    */
   boolean hasEndDate();
   /**
@@ -330,6 +353,7 @@ public interface CampaignExperimentOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue end_date = 12;</code>
+   * @return The endDate.
    */
   com.google.protobuf.StringValue getEndDate();
   /**

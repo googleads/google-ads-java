@@ -28,7 +28,6 @@ import com.google.api.gax.paging.AbstractPage;
 import com.google.api.gax.paging.AbstractPagedListResponse;
 import com.google.api.gax.rpc.PageContext;
 import com.google.api.gax.rpc.UnaryCallable;
-import com.google.api.pathtemplate.PathTemplate;
 import com.google.common.util.concurrent.MoreExecutors;
 import java.io.IOException;
 import java.util.List;
@@ -45,8 +44,8 @@ import javax.annotation.Generated;
  * <pre>
  * <code>
  * try (GoogleAdsFieldServiceClient googleAdsFieldServiceClient = GoogleAdsFieldServiceClient.create()) {
- *   String formattedResourceName = GoogleAdsFieldServiceClient.formatGoogleAdsFieldName("[GOOGLE_ADS_FIELD]");
- *   GoogleAdsField response = googleAdsFieldServiceClient.getGoogleAdsField(formattedResourceName);
+ *   GoogleAdsFieldName resourceName = GoogleAdsFieldName.of("[GOOGLE_ADS_FIELD]");
+ *   GoogleAdsField response = googleAdsFieldServiceClient.getGoogleAdsField(resourceName);
  * }
  * </code>
  * </pre>
@@ -108,30 +107,6 @@ public class GoogleAdsFieldServiceClient implements BackgroundResource {
   private final GoogleAdsFieldServiceSettings settings;
   private final GoogleAdsFieldServiceStub stub;
 
-  private static final PathTemplate GOOGLE_ADS_FIELD_PATH_TEMPLATE =
-      PathTemplate.createWithoutUrlEncoding("googleAdsFields/{google_ads_field}");
-
-  /**
-   * Formats a string containing the fully-qualified path to represent a google_ads_field resource.
-   *
-   * @deprecated Use the {@link GoogleAdsFieldName} class instead.
-   */
-  @Deprecated
-  public static final String formatGoogleAdsFieldName(String googleAdsField) {
-    return GOOGLE_ADS_FIELD_PATH_TEMPLATE.instantiate("google_ads_field", googleAdsField);
-  }
-
-  /**
-   * Parses the google_ads_field from the given fully-qualified path which represents a
-   * google_ads_field resource.
-   *
-   * @deprecated Use the {@link GoogleAdsFieldName} class instead.
-   */
-  @Deprecated
-  public static final String parseGoogleAdsFieldFromGoogleAdsFieldName(String googleAdsFieldName) {
-    return GOOGLE_ADS_FIELD_PATH_TEMPLATE.parse(googleAdsFieldName).get("google_ads_field");
-  }
-
   /** Constructs an instance of GoogleAdsFieldServiceClient with default settings. */
   public static final GoogleAdsFieldServiceClient create() throws IOException {
     return create(GoogleAdsFieldServiceSettings.newBuilder().build());
@@ -188,8 +163,32 @@ public class GoogleAdsFieldServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (GoogleAdsFieldServiceClient googleAdsFieldServiceClient = GoogleAdsFieldServiceClient.create()) {
-   *   String formattedResourceName = GoogleAdsFieldServiceClient.formatGoogleAdsFieldName("[GOOGLE_ADS_FIELD]");
-   *   GoogleAdsField response = googleAdsFieldServiceClient.getGoogleAdsField(formattedResourceName);
+   *   GoogleAdsFieldName resourceName = GoogleAdsFieldName.of("[GOOGLE_ADS_FIELD]");
+   *   GoogleAdsField response = googleAdsFieldServiceClient.getGoogleAdsField(resourceName);
+   * }
+   * </code></pre>
+   *
+   * @param resourceName Required. The resource name of the field to get.
+   * @throws com.google.api.gax.rpc.ApiException if the remote call fails
+   */
+  public final GoogleAdsField getGoogleAdsField(GoogleAdsFieldName resourceName) {
+    GetGoogleAdsFieldRequest request =
+        GetGoogleAdsFieldRequest.newBuilder()
+            .setResourceName(resourceName == null ? null : resourceName.toString())
+            .build();
+    return getGoogleAdsField(request);
+  }
+
+  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  /**
+   * Returns just the requested field.
+   *
+   * <p>Sample code:
+   *
+   * <pre><code>
+   * try (GoogleAdsFieldServiceClient googleAdsFieldServiceClient = GoogleAdsFieldServiceClient.create()) {
+   *   GoogleAdsFieldName resourceName = GoogleAdsFieldName.of("[GOOGLE_ADS_FIELD]");
+   *   GoogleAdsField response = googleAdsFieldServiceClient.getGoogleAdsField(resourceName.toString());
    * }
    * </code></pre>
    *
@@ -197,7 +196,6 @@ public class GoogleAdsFieldServiceClient implements BackgroundResource {
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final GoogleAdsField getGoogleAdsField(String resourceName) {
-    GOOGLE_ADS_FIELD_PATH_TEMPLATE.validate(resourceName, "getGoogleAdsField");
     GetGoogleAdsFieldRequest request =
         GetGoogleAdsFieldRequest.newBuilder().setResourceName(resourceName).build();
     return getGoogleAdsField(request);
@@ -211,9 +209,9 @@ public class GoogleAdsFieldServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (GoogleAdsFieldServiceClient googleAdsFieldServiceClient = GoogleAdsFieldServiceClient.create()) {
-   *   String formattedResourceName = GoogleAdsFieldServiceClient.formatGoogleAdsFieldName("[GOOGLE_ADS_FIELD]");
+   *   GoogleAdsFieldName resourceName = GoogleAdsFieldName.of("[GOOGLE_ADS_FIELD]");
    *   GetGoogleAdsFieldRequest request = GetGoogleAdsFieldRequest.newBuilder()
-   *     .setResourceName(formattedResourceName)
+   *     .setResourceName(resourceName.toString())
    *     .build();
    *   GoogleAdsField response = googleAdsFieldServiceClient.getGoogleAdsField(request);
    * }
@@ -234,9 +232,9 @@ public class GoogleAdsFieldServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (GoogleAdsFieldServiceClient googleAdsFieldServiceClient = GoogleAdsFieldServiceClient.create()) {
-   *   String formattedResourceName = GoogleAdsFieldServiceClient.formatGoogleAdsFieldName("[GOOGLE_ADS_FIELD]");
+   *   GoogleAdsFieldName resourceName = GoogleAdsFieldName.of("[GOOGLE_ADS_FIELD]");
    *   GetGoogleAdsFieldRequest request = GetGoogleAdsFieldRequest.newBuilder()
-   *     .setResourceName(formattedResourceName)
+   *     .setResourceName(resourceName.toString())
    *     .build();
    *   ApiFuture&lt;GoogleAdsField&gt; future = googleAdsFieldServiceClient.getGoogleAdsFieldCallable().futureCall(request);
    *   // Do something

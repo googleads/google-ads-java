@@ -18,6 +18,7 @@ public interface CriterionCategoryChannelAvailabilityOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v1.enums.CriterionCategoryChannelAvailabilityModeEnum.CriterionCategoryChannelAvailabilityMode availability_mode = 1;</code>
+   * @return The enum numeric value on the wire for availabilityMode.
    */
   int getAvailabilityModeValue();
   /**
@@ -31,6 +32,7 @@ public interface CriterionCategoryChannelAvailabilityOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v1.enums.CriterionCategoryChannelAvailabilityModeEnum.CriterionCategoryChannelAvailabilityMode availability_mode = 1;</code>
+   * @return The availabilityMode.
    */
   com.google.ads.googleads.v1.enums.CriterionCategoryChannelAvailabilityModeEnum.CriterionCategoryChannelAvailabilityMode getAvailabilityMode();
 
@@ -40,6 +42,7 @@ public interface CriterionCategoryChannelAvailabilityOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v1.enums.AdvertisingChannelTypeEnum.AdvertisingChannelType advertising_channel_type = 2;</code>
+   * @return The enum numeric value on the wire for advertisingChannelType.
    */
   int getAdvertisingChannelTypeValue();
   /**
@@ -48,6 +51,7 @@ public interface CriterionCategoryChannelAvailabilityOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v1.enums.AdvertisingChannelTypeEnum.AdvertisingChannelType advertising_channel_type = 2;</code>
+   * @return The advertisingChannelType.
    */
   com.google.ads.googleads.v1.enums.AdvertisingChannelTypeEnum.AdvertisingChannelType getAdvertisingChannelType();
 
@@ -57,6 +61,7 @@ public interface CriterionCategoryChannelAvailabilityOrBuilder extends
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v1.enums.AdvertisingChannelSubTypeEnum.AdvertisingChannelSubType advertising_channel_sub_type = 3;</code>
+   * @return A list containing the advertisingChannelSubType.
    */
   java.util.List<com.google.ads.googleads.v1.enums.AdvertisingChannelSubTypeEnum.AdvertisingChannelSubType> getAdvertisingChannelSubTypeList();
   /**
@@ -65,6 +70,7 @@ public interface CriterionCategoryChannelAvailabilityOrBuilder extends
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v1.enums.AdvertisingChannelSubTypeEnum.AdvertisingChannelSubType advertising_channel_sub_type = 3;</code>
+   * @return The count of advertisingChannelSubType.
    */
   int getAdvertisingChannelSubTypeCount();
   /**
@@ -73,6 +79,8 @@ public interface CriterionCategoryChannelAvailabilityOrBuilder extends
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v1.enums.AdvertisingChannelSubTypeEnum.AdvertisingChannelSubType advertising_channel_sub_type = 3;</code>
+   * @param index The index of the element to return.
+   * @return The advertisingChannelSubType at the given index.
    */
   com.google.ads.googleads.v1.enums.AdvertisingChannelSubTypeEnum.AdvertisingChannelSubType getAdvertisingChannelSubType(int index);
   /**
@@ -81,6 +89,7 @@ public interface CriterionCategoryChannelAvailabilityOrBuilder extends
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v1.enums.AdvertisingChannelSubTypeEnum.AdvertisingChannelSubType advertising_channel_sub_type = 3;</code>
+   * @return A list containing the enum numeric values on the wire for advertisingChannelSubType.
    */
   java.util.List<java.lang.Integer>
   getAdvertisingChannelSubTypeValueList();
@@ -90,6 +99,8 @@ public interface CriterionCategoryChannelAvailabilityOrBuilder extends
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v1.enums.AdvertisingChannelSubTypeEnum.AdvertisingChannelSubType advertising_channel_sub_type = 3;</code>
+   * @param index The index of the value to return.
+   * @return The enum numeric value on the wire of advertisingChannelSubType at the given index.
    */
   int getAdvertisingChannelSubTypeValue(int index);
 
@@ -102,6 +113,7 @@ public interface CriterionCategoryChannelAvailabilityOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.BoolValue include_default_channel_sub_type = 4;</code>
+   * @return Whether the includeDefaultChannelSubType field is set.
    */
   boolean hasIncludeDefaultChannelSubType();
   /**
@@ -113,6 +125,7 @@ public interface CriterionCategoryChannelAvailabilityOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.BoolValue include_default_channel_sub_type = 4;</code>
+   * @return The includeDefaultChannelSubType.
    */
   com.google.protobuf.BoolValue getIncludeDefaultChannelSubType();
   /**

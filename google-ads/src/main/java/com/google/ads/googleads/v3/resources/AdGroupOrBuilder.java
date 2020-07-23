@@ -15,6 +15,7 @@ public interface AdGroupOrBuilder extends
    * </pre>
    *
    * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * @return The resourceName.
    */
   java.lang.String getResourceName();
   /**
@@ -25,6 +26,7 @@ public interface AdGroupOrBuilder extends
    * </pre>
    *
    * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * @return The bytes for resourceName.
    */
   com.google.protobuf.ByteString
       getResourceNameBytes();
@@ -35,6 +37,7 @@ public interface AdGroupOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the id field is set.
    */
   boolean hasId();
   /**
@@ -43,6 +46,7 @@ public interface AdGroupOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The id.
    */
   com.google.protobuf.Int64Value getId();
   /**
@@ -65,6 +69,7 @@ public interface AdGroupOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue name = 4;</code>
+   * @return Whether the name field is set.
    */
   boolean hasName();
   /**
@@ -78,6 +83,7 @@ public interface AdGroupOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue name = 4;</code>
+   * @return The name.
    */
   com.google.protobuf.StringValue getName();
   /**
@@ -100,6 +106,7 @@ public interface AdGroupOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.AdGroupStatusEnum.AdGroupStatus status = 5;</code>
+   * @return The enum numeric value on the wire for status.
    */
   int getStatusValue();
   /**
@@ -108,6 +115,7 @@ public interface AdGroupOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.AdGroupStatusEnum.AdGroupStatus status = 5;</code>
+   * @return The status.
    */
   com.google.ads.googleads.v3.enums.AdGroupStatusEnum.AdGroupStatus getStatus();
 
@@ -117,6 +125,7 @@ public interface AdGroupOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.AdGroupTypeEnum.AdGroupType type = 12 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The enum numeric value on the wire for type.
    */
   int getTypeValue();
   /**
@@ -125,6 +134,7 @@ public interface AdGroupOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.AdGroupTypeEnum.AdGroupType type = 12 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The type.
    */
   com.google.ads.googleads.v3.enums.AdGroupTypeEnum.AdGroupType getType();
 
@@ -134,6 +144,7 @@ public interface AdGroupOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.AdGroupAdRotationModeEnum.AdGroupAdRotationMode ad_rotation_mode = 22;</code>
+   * @return The enum numeric value on the wire for adRotationMode.
    */
   int getAdRotationModeValue();
   /**
@@ -142,6 +153,7 @@ public interface AdGroupOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.AdGroupAdRotationModeEnum.AdGroupAdRotationMode ad_rotation_mode = 22;</code>
+   * @return The adRotationMode.
    */
   com.google.ads.googleads.v3.enums.AdGroupAdRotationModeEnum.AdGroupAdRotationMode getAdRotationMode();
 
@@ -155,6 +167,7 @@ public interface AdGroupOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue base_ad_group = 18 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return Whether the baseAdGroup field is set.
    */
   boolean hasBaseAdGroup();
   /**
@@ -167,6 +180,7 @@ public interface AdGroupOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue base_ad_group = 18 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The baseAdGroup.
    */
   com.google.protobuf.StringValue getBaseAdGroup();
   /**
@@ -188,6 +202,7 @@ public interface AdGroupOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue tracking_url_template = 13;</code>
+   * @return Whether the trackingUrlTemplate field is set.
    */
   boolean hasTrackingUrlTemplate();
   /**
@@ -196,6 +211,7 @@ public interface AdGroupOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue tracking_url_template = 13;</code>
+   * @return The trackingUrlTemplate.
    */
   com.google.protobuf.StringValue getTrackingUrlTemplate();
   /**
@@ -262,6 +278,7 @@ public interface AdGroupOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue campaign = 10 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * @return Whether the campaign field is set.
    */
   boolean hasCampaign();
   /**
@@ -270,6 +287,7 @@ public interface AdGroupOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue campaign = 10 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * @return The campaign.
    */
   com.google.protobuf.StringValue getCampaign();
   /**
@@ -287,6 +305,7 @@ public interface AdGroupOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value cpc_bid_micros = 14;</code>
+   * @return Whether the cpcBidMicros field is set.
    */
   boolean hasCpcBidMicros();
   /**
@@ -295,6 +314,7 @@ public interface AdGroupOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value cpc_bid_micros = 14;</code>
+   * @return The cpcBidMicros.
    */
   com.google.protobuf.Int64Value getCpcBidMicros();
   /**
@@ -312,6 +332,7 @@ public interface AdGroupOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value cpm_bid_micros = 15;</code>
+   * @return Whether the cpmBidMicros field is set.
    */
   boolean hasCpmBidMicros();
   /**
@@ -320,6 +341,7 @@ public interface AdGroupOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value cpm_bid_micros = 15;</code>
+   * @return The cpmBidMicros.
    */
   com.google.protobuf.Int64Value getCpmBidMicros();
   /**
@@ -337,6 +359,7 @@ public interface AdGroupOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value target_cpa_micros = 27;</code>
+   * @return Whether the targetCpaMicros field is set.
    */
   boolean hasTargetCpaMicros();
   /**
@@ -345,6 +368,7 @@ public interface AdGroupOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value target_cpa_micros = 27;</code>
+   * @return The targetCpaMicros.
    */
   com.google.protobuf.Int64Value getTargetCpaMicros();
   /**
@@ -362,6 +386,7 @@ public interface AdGroupOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value cpv_bid_micros = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the cpvBidMicros field is set.
    */
   boolean hasCpvBidMicros();
   /**
@@ -370,6 +395,7 @@ public interface AdGroupOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value cpv_bid_micros = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The cpvBidMicros.
    */
   com.google.protobuf.Int64Value getCpvBidMicros();
   /**
@@ -388,6 +414,7 @@ public interface AdGroupOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value target_cpm_micros = 26;</code>
+   * @return Whether the targetCpmMicros field is set.
    */
   boolean hasTargetCpmMicros();
   /**
@@ -397,6 +424,7 @@ public interface AdGroupOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value target_cpm_micros = 26;</code>
+   * @return The targetCpmMicros.
    */
   com.google.protobuf.Int64Value getTargetCpmMicros();
   /**
@@ -418,6 +446,7 @@ public interface AdGroupOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue target_roas = 30;</code>
+   * @return Whether the targetRoas field is set.
    */
   boolean hasTargetRoas();
   /**
@@ -429,6 +458,7 @@ public interface AdGroupOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue target_roas = 30;</code>
+   * @return The targetRoas.
    */
   com.google.protobuf.DoubleValue getTargetRoas();
   /**
@@ -451,6 +481,7 @@ public interface AdGroupOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value percent_cpc_bid_micros = 20;</code>
+   * @return Whether the percentCpcBidMicros field is set.
    */
   boolean hasPercentCpcBidMicros();
   /**
@@ -461,6 +492,7 @@ public interface AdGroupOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value percent_cpc_bid_micros = 20;</code>
+   * @return The percentCpcBidMicros.
    */
   com.google.protobuf.Int64Value getPercentCpcBidMicros();
   /**
@@ -480,6 +512,7 @@ public interface AdGroupOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.ExplorerAutoOptimizerSetting explorer_auto_optimizer_setting = 21;</code>
+   * @return Whether the explorerAutoOptimizerSetting field is set.
    */
   boolean hasExplorerAutoOptimizerSetting();
   /**
@@ -488,6 +521,7 @@ public interface AdGroupOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.ExplorerAutoOptimizerSetting explorer_auto_optimizer_setting = 21;</code>
+   * @return The explorerAutoOptimizerSetting.
    */
   com.google.ads.googleads.v3.common.ExplorerAutoOptimizerSetting getExplorerAutoOptimizerSetting();
   /**
@@ -507,6 +541,7 @@ public interface AdGroupOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.TargetingDimensionEnum.TargetingDimension display_custom_bid_dimension = 23;</code>
+   * @return The enum numeric value on the wire for displayCustomBidDimension.
    */
   int getDisplayCustomBidDimensionValue();
   /**
@@ -517,6 +552,7 @@ public interface AdGroupOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.TargetingDimensionEnum.TargetingDimension display_custom_bid_dimension = 23;</code>
+   * @return The displayCustomBidDimension.
    */
   com.google.ads.googleads.v3.enums.TargetingDimensionEnum.TargetingDimension getDisplayCustomBidDimension();
 
@@ -526,6 +562,7 @@ public interface AdGroupOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue final_url_suffix = 24;</code>
+   * @return Whether the finalUrlSuffix field is set.
    */
   boolean hasFinalUrlSuffix();
   /**
@@ -534,6 +571,7 @@ public interface AdGroupOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue final_url_suffix = 24;</code>
+   * @return The finalUrlSuffix.
    */
   com.google.protobuf.StringValue getFinalUrlSuffix();
   /**
@@ -551,6 +589,7 @@ public interface AdGroupOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.TargetingSetting targeting_setting = 25;</code>
+   * @return Whether the targetingSetting field is set.
    */
   boolean hasTargetingSetting();
   /**
@@ -559,6 +598,7 @@ public interface AdGroupOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.TargetingSetting targeting_setting = 25;</code>
+   * @return The targetingSetting.
    */
   com.google.ads.googleads.v3.common.TargetingSetting getTargetingSetting();
   /**
@@ -577,6 +617,7 @@ public interface AdGroupOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value effective_target_cpa_micros = 28 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the effectiveTargetCpaMicros field is set.
    */
   boolean hasEffectiveTargetCpaMicros();
   /**
@@ -586,6 +627,7 @@ public interface AdGroupOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value effective_target_cpa_micros = 28 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The effectiveTargetCpaMicros.
    */
   com.google.protobuf.Int64Value getEffectiveTargetCpaMicros();
   /**
@@ -605,6 +647,7 @@ public interface AdGroupOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.BiddingSourceEnum.BiddingSource effective_target_cpa_source = 29 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The enum numeric value on the wire for effectiveTargetCpaSource.
    */
   int getEffectiveTargetCpaSourceValue();
   /**
@@ -614,6 +657,7 @@ public interface AdGroupOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.BiddingSourceEnum.BiddingSource effective_target_cpa_source = 29 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The effectiveTargetCpaSource.
    */
   com.google.ads.googleads.v3.enums.BiddingSourceEnum.BiddingSource getEffectiveTargetCpaSource();
 
@@ -624,6 +668,7 @@ public interface AdGroupOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue effective_target_roas = 31 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the effectiveTargetRoas field is set.
    */
   boolean hasEffectiveTargetRoas();
   /**
@@ -633,6 +678,7 @@ public interface AdGroupOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue effective_target_roas = 31 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The effectiveTargetRoas.
    */
   com.google.protobuf.DoubleValue getEffectiveTargetRoas();
   /**
@@ -652,6 +698,7 @@ public interface AdGroupOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.BiddingSourceEnum.BiddingSource effective_target_roas_source = 32 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The enum numeric value on the wire for effectiveTargetRoasSource.
    */
   int getEffectiveTargetRoasSourceValue();
   /**
@@ -661,6 +708,7 @@ public interface AdGroupOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.BiddingSourceEnum.BiddingSource effective_target_roas_source = 32 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The effectiveTargetRoasSource.
    */
   com.google.ads.googleads.v3.enums.BiddingSourceEnum.BiddingSource getEffectiveTargetRoasSource();
 

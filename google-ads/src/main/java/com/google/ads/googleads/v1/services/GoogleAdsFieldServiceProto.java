@@ -43,48 +43,45 @@ public final class GoogleAdsFieldServiceProto {
       "ogleads.v1.services\0328google/ads/googlead" +
       "s/v1/resources/google_ads_field.proto\032\034g" +
       "oogle/api/annotations.proto\032\027google/api/" +
-      "client.proto\"1\n\030GetGoogleAdsFieldRequest" +
-      "\022\025\n\rresource_name\030\001 \001(\t\"T\n\034SearchGoogleA" +
-      "dsFieldsRequest\022\r\n\005query\030\001 \001(\t\022\022\n\npage_t" +
-      "oken\030\002 \001(\t\022\021\n\tpage_size\030\003 \001(\005\"\231\001\n\035Search" +
-      "GoogleAdsFieldsResponse\022B\n\007results\030\001 \003(\013" +
-      "21.google.ads.googleads.v1.resources.Goo" +
-      "gleAdsField\022\027\n\017next_page_token\030\002 \001(\t\022\033\n\023" +
-      "total_results_count\030\003 \001(\0032\252\003\n\025GoogleAdsF" +
-      "ieldService\022\261\001\n\021GetGoogleAdsField\022:.goog" +
-      "le.ads.googleads.v1.services.GetGoogleAd" +
-      "sFieldRequest\0321.google.ads.googleads.v1." +
-      "resources.GoogleAdsField\"-\202\323\344\223\002\'\022%/v1/{r" +
-      "esource_name=googleAdsFields/*}\022\277\001\n\025Sear" +
-      "chGoogleAdsFields\022>.google.ads.googleads" +
-      ".v1.services.SearchGoogleAdsFieldsReques" +
-      "t\032?.google.ads.googleads.v1.services.Sea" +
-      "rchGoogleAdsFieldsResponse\"%\202\323\344\223\002\037\"\032/v1/" +
-      "googleAdsFields:search:\001*\032\033\312A\030googleads." +
-      "googleapis.comB\201\002\n$com.google.ads.google" +
-      "ads.v1.servicesB\032GoogleAdsFieldServicePr" +
-      "otoP\001ZHgoogle.golang.org/genproto/google" +
-      "apis/ads/googleads/v1/services;services\242" +
-      "\002\003GAA\252\002 Google.Ads.GoogleAds.V1.Services" +
-      "\312\002 Google\\Ads\\GoogleAds\\V1\\Services\352\002$Go" +
-      "ogle::Ads::GoogleAds::V1::Servicesb\006prot" +
-      "o3"
+      "client.proto\032\037google/api/field_behavior." +
+      "proto\032\031google/api/resource.proto\"b\n\030GetG" +
+      "oogleAdsFieldRequest\022F\n\rresource_name\030\001 " +
+      "\001(\tB/\340A\002\372A)\n\'googleads.googleapis.com/Go" +
+      "ogleAdsField\"Y\n\034SearchGoogleAdsFieldsReq" +
+      "uest\022\022\n\005query\030\001 \001(\tB\003\340A\002\022\022\n\npage_token\030\002" +
+      " \001(\t\022\021\n\tpage_size\030\003 \001(\005\"\231\001\n\035SearchGoogle" +
+      "AdsFieldsResponse\022B\n\007results\030\001 \003(\01321.goo" +
+      "gle.ads.googleads.v1.resources.GoogleAds" +
+      "Field\022\027\n\017next_page_token\030\002 \001(\t\022\033\n\023total_" +
+      "results_count\030\003 \001(\0032\302\003\n\025GoogleAdsFieldSe" +
+      "rvice\022\301\001\n\021GetGoogleAdsField\022:.google.ads" +
+      ".googleads.v1.services.GetGoogleAdsField" +
+      "Request\0321.google.ads.googleads.v1.resour" +
+      "ces.GoogleAdsField\"=\202\323\344\223\002\'\022%/v1/{resourc" +
+      "e_name=googleAdsFields/*}\332A\rresource_nam" +
+      "e\022\307\001\n\025SearchGoogleAdsFields\022>.google.ads" +
+      ".googleads.v1.services.SearchGoogleAdsFi" +
+      "eldsRequest\032?.google.ads.googleads.v1.se" +
+      "rvices.SearchGoogleAdsFieldsResponse\"-\202\323" +
+      "\344\223\002\037\"\032/v1/googleAdsFields:search:\001*\332A\005qu" +
+      "ery\032\033\312A\030googleads.googleapis.comB\201\002\n$com" +
+      ".google.ads.googleads.v1.servicesB\032Googl" +
+      "eAdsFieldServiceProtoP\001ZHgoogle.golang.o" +
+      "rg/genproto/googleapis/ads/googleads/v1/" +
+      "services;services\242\002\003GAA\252\002 Google.Ads.Goo" +
+      "gleAds.V1.Services\312\002 Google\\Ads\\GoogleAd" +
+      "s\\V1\\Services\352\002$Google::Ads::GoogleAds::" +
+      "V1::Servicesb\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.ads.googleads.v1.resources.GoogleAdsFieldProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
           com.google.api.ClientProto.getDescriptor(),
-        }, assigner);
+          com.google.api.FieldBehaviorProto.getDescriptor(),
+          com.google.api.ResourceProto.getDescriptor(),
+        });
     internal_static_google_ads_googleads_v1_services_GetGoogleAdsFieldRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_google_ads_googleads_v1_services_GetGoogleAdsFieldRequest_fieldAccessorTable = new
@@ -106,12 +103,17 @@ public final class GoogleAdsFieldServiceProto {
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.ClientProto.defaultHost);
+    registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);
     registry.add(com.google.api.AnnotationsProto.http);
+    registry.add(com.google.api.ClientProto.methodSignature);
+    registry.add(com.google.api.ResourceProto.resourceReference);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.ads.googleads.v1.resources.GoogleAdsFieldProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
     com.google.api.ClientProto.getDescriptor();
+    com.google.api.FieldBehaviorProto.getDescriptor();
+    com.google.api.ResourceProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

@@ -10,7 +10,7 @@ package com.google.ads.googleads.v1.services;
  *
  * Protobuf type {@code google.ads.googleads.v1.services.ListMutateJobResultsRequest}
  */
-public  final class ListMutateJobResultsRequest extends
+public final class ListMutateJobResultsRequest extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v1.services.ListMutateJobResultsRequest)
     ListMutateJobResultsRequestOrBuilder {
@@ -22,6 +22,13 @@ private static final long serialVersionUID = 0L;
   private ListMutateJobResultsRequest() {
     resourceName_ = "";
     pageToken_ = "";
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new ListMutateJobResultsRequest();
   }
 
   @java.lang.Override
@@ -37,7 +44,6 @@ private static final long serialVersionUID = 0L;
     if (extensionRegistry == null) {
       throw new java.lang.NullPointerException();
     }
-    int mutable_bitField0_ = 0;
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
         com.google.protobuf.UnknownFieldSet.newBuilder();
     try {
@@ -101,11 +107,13 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object resourceName_;
   /**
    * <pre>
-   * The resource name of the MutateJob whose results are being listed.
+   * Required. The resource name of the MutateJob whose results are being listed.
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = { ... }</code>
+   * @return The resourceName.
    */
+  @java.lang.Override
   public java.lang.String getResourceName() {
     java.lang.Object ref = resourceName_;
     if (ref instanceof java.lang.String) {
@@ -120,11 +128,13 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The resource name of the MutateJob whose results are being listed.
+   * Required. The resource name of the MutateJob whose results are being listed.
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = { ... }</code>
+   * @return The bytes for resourceName.
    */
+  @java.lang.Override
   public com.google.protobuf.ByteString
       getResourceNameBytes() {
     java.lang.Object ref = resourceName_;
@@ -150,7 +160,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string page_token = 2;</code>
+   * @return The pageToken.
    */
+  @java.lang.Override
   public java.lang.String getPageToken() {
     java.lang.Object ref = pageToken_;
     if (ref instanceof java.lang.String) {
@@ -172,7 +184,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string page_token = 2;</code>
+   * @return The bytes for pageToken.
    */
+  @java.lang.Override
   public com.google.protobuf.ByteString
       getPageTokenBytes() {
     java.lang.Object ref = pageToken_;
@@ -197,7 +211,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>int32 page_size = 3;</code>
+   * @return The pageSize.
    */
+  @java.lang.Override
   public int getPageSize() {
     return pageSize_;
   }
@@ -545,10 +561,11 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object resourceName_ = "";
     /**
      * <pre>
-     * The resource name of the MutateJob whose results are being listed.
+     * Required. The resource name of the MutateJob whose results are being listed.
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = { ... }</code>
+     * @return The resourceName.
      */
     public java.lang.String getResourceName() {
       java.lang.Object ref = resourceName_;
@@ -564,10 +581,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the MutateJob whose results are being listed.
+     * Required. The resource name of the MutateJob whose results are being listed.
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = { ... }</code>
+     * @return The bytes for resourceName.
      */
     public com.google.protobuf.ByteString
         getResourceNameBytes() {
@@ -584,10 +602,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the MutateJob whose results are being listed.
+     * Required. The resource name of the MutateJob whose results are being listed.
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = { ... }</code>
+     * @param value The resourceName to set.
+     * @return This builder for chaining.
      */
     public Builder setResourceName(
         java.lang.String value) {
@@ -601,10 +621,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the MutateJob whose results are being listed.
+     * Required. The resource name of the MutateJob whose results are being listed.
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = { ... }</code>
+     * @return This builder for chaining.
      */
     public Builder clearResourceName() {
       
@@ -614,10 +635,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the MutateJob whose results are being listed.
+     * Required. The resource name of the MutateJob whose results are being listed.
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = { ... }</code>
+     * @param value The bytes for resourceName to set.
+     * @return This builder for chaining.
      */
     public Builder setResourceNameBytes(
         com.google.protobuf.ByteString value) {
@@ -641,6 +664,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string page_token = 2;</code>
+     * @return The pageToken.
      */
     public java.lang.String getPageToken() {
       java.lang.Object ref = pageToken_;
@@ -663,6 +687,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string page_token = 2;</code>
+     * @return The bytes for pageToken.
      */
     public com.google.protobuf.ByteString
         getPageTokenBytes() {
@@ -686,6 +711,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string page_token = 2;</code>
+     * @param value The pageToken to set.
+     * @return This builder for chaining.
      */
     public Builder setPageToken(
         java.lang.String value) {
@@ -706,6 +733,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string page_token = 2;</code>
+     * @return This builder for chaining.
      */
     public Builder clearPageToken() {
       
@@ -722,6 +750,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string page_token = 2;</code>
+     * @param value The bytes for pageToken to set.
+     * @return This builder for chaining.
      */
     public Builder setPageTokenBytes(
         com.google.protobuf.ByteString value) {
@@ -744,7 +774,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>int32 page_size = 3;</code>
+     * @return The pageSize.
      */
+    @java.lang.Override
     public int getPageSize() {
       return pageSize_;
     }
@@ -756,6 +788,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>int32 page_size = 3;</code>
+     * @param value The pageSize to set.
+     * @return This builder for chaining.
      */
     public Builder setPageSize(int value) {
       
@@ -771,6 +805,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>int32 page_size = 3;</code>
+     * @return This builder for chaining.
      */
     public Builder clearPageSize() {
       

@@ -10,7 +10,7 @@ package com.google.ads.googleads.v4.common;
  *
  * Protobuf type {@code google.ads.googleads.v4.common.LogicalUserListInfo}
  */
-public  final class LogicalUserListInfo extends
+public final class LogicalUserListInfo extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.common.LogicalUserListInfo)
     LogicalUserListInfoOrBuilder {
@@ -110,6 +110,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.common.UserListLogicalRuleInfo rules = 1;</code>
    */
+  @java.lang.Override
   public java.util.List<com.google.ads.googleads.v4.common.UserListLogicalRuleInfo> getRulesList() {
     return rules_;
   }
@@ -123,6 +124,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.common.UserListLogicalRuleInfo rules = 1;</code>
    */
+  @java.lang.Override
   public java.util.List<? extends com.google.ads.googleads.v4.common.UserListLogicalRuleInfoOrBuilder> 
       getRulesOrBuilderList() {
     return rules_;
@@ -137,6 +139,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.common.UserListLogicalRuleInfo rules = 1;</code>
    */
+  @java.lang.Override
   public int getRulesCount() {
     return rules_.size();
   }
@@ -150,6 +153,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.common.UserListLogicalRuleInfo rules = 1;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.UserListLogicalRuleInfo getRules(int index) {
     return rules_.get(index);
   }
@@ -163,6 +167,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.common.UserListLogicalRuleInfo rules = 1;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.UserListLogicalRuleInfoOrBuilder getRulesOrBuilder(
       int index) {
     return rules_.get(index);

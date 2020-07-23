@@ -13,7 +13,7 @@ package com.google.ads.googleads.v4.resources;
  *
  * Protobuf type {@code google.ads.googleads.v4.resources.DomainCategory}
  */
-public  final class DomainCategory extends
+public final class DomainCategory extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.resources.DomainCategory)
     DomainCategoryOrBuilder {
@@ -210,6 +210,7 @@ private static final long serialVersionUID = 0L;
    * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return The resourceName.
    */
+  @java.lang.Override
   public java.lang.String getResourceName() {
     java.lang.Object ref = resourceName_;
     if (ref instanceof java.lang.String) {
@@ -232,6 +233,7 @@ private static final long serialVersionUID = 0L;
    * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return The bytes for resourceName.
    */
+  @java.lang.Override
   public com.google.protobuf.ByteString
       getResourceNameBytes() {
     java.lang.Object ref = resourceName_;
@@ -256,6 +258,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue campaign = 2 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return Whether the campaign field is set.
    */
+  @java.lang.Override
   public boolean hasCampaign() {
     return campaign_ != null;
   }
@@ -267,6 +270,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue campaign = 2 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return The campaign.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getCampaign() {
     return campaign_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : campaign_;
   }
@@ -277,6 +281,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue campaign = 2 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getCampaignOrBuilder() {
     return getCampaign();
   }
@@ -292,6 +297,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue category = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the category field is set.
    */
+  @java.lang.Override
   public boolean hasCategory() {
     return category_ != null;
   }
@@ -304,6 +310,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue category = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The category.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getCategory() {
     return category_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : category_;
   }
@@ -315,6 +322,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue category = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getCategoryOrBuilder() {
     return getCategory();
   }
@@ -333,6 +341,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue language_code = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the languageCode field is set.
    */
+  @java.lang.Override
   public boolean hasLanguageCode() {
     return languageCode_ != null;
   }
@@ -348,6 +357,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue language_code = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The languageCode.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getLanguageCode() {
     return languageCode_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : languageCode_;
   }
@@ -362,6 +372,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue language_code = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getLanguageCodeOrBuilder() {
     return getLanguageCode();
   }
@@ -377,6 +388,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue domain = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the domain field is set.
    */
+  @java.lang.Override
   public boolean hasDomain() {
     return domain_ != null;
   }
@@ -389,6 +401,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue domain = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The domain.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getDomain() {
     return domain_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : domain_;
   }
@@ -400,6 +413,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue domain = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getDomainOrBuilder() {
     return getDomain();
   }
@@ -414,6 +428,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.DoubleValue coverage_fraction = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the coverageFraction field is set.
    */
+  @java.lang.Override
   public boolean hasCoverageFraction() {
     return coverageFraction_ != null;
   }
@@ -425,6 +440,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.DoubleValue coverage_fraction = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The coverageFraction.
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValue getCoverageFraction() {
     return coverageFraction_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : coverageFraction_;
   }
@@ -435,6 +451,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.DoubleValue coverage_fraction = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValueOrBuilder getCoverageFractionOrBuilder() {
     return getCoverageFraction();
   }
@@ -450,6 +467,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int64Value category_rank = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the categoryRank field is set.
    */
+  @java.lang.Override
   public boolean hasCategoryRank() {
     return categoryRank_ != null;
   }
@@ -462,6 +480,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int64Value category_rank = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The categoryRank.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getCategoryRank() {
     return categoryRank_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : categoryRank_;
   }
@@ -473,6 +492,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int64Value category_rank = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getCategoryRankOrBuilder() {
     return getCategoryRank();
   }
@@ -487,6 +507,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.BoolValue has_children = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the hasChildren field is set.
    */
+  @java.lang.Override
   public boolean hasHasChildren() {
     return hasChildren_ != null;
   }
@@ -498,6 +519,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.BoolValue has_children = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The hasChildren.
    */
+  @java.lang.Override
   public com.google.protobuf.BoolValue getHasChildren() {
     return hasChildren_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : hasChildren_;
   }
@@ -508,6 +530,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.BoolValue has_children = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.BoolValueOrBuilder getHasChildrenOrBuilder() {
     return getHasChildren();
   }
@@ -522,6 +545,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int64Value recommended_cpc_bid_micros = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the recommendedCpcBidMicros field is set.
    */
+  @java.lang.Override
   public boolean hasRecommendedCpcBidMicros() {
     return recommendedCpcBidMicros_ != null;
   }
@@ -533,6 +557,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int64Value recommended_cpc_bid_micros = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The recommendedCpcBidMicros.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getRecommendedCpcBidMicros() {
     return recommendedCpcBidMicros_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : recommendedCpcBidMicros_;
   }
@@ -543,6 +568,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int64Value recommended_cpc_bid_micros = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getRecommendedCpcBidMicrosOrBuilder() {
     return getRecommendedCpcBidMicros();
   }

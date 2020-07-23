@@ -16,6 +16,7 @@ public interface GeoTargetConstantSuggestionOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue locale = 1;</code>
+   * @return Whether the locale field is set.
    */
   boolean hasLocale();
   /**
@@ -27,6 +28,7 @@ public interface GeoTargetConstantSuggestionOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue locale = 1;</code>
+   * @return The locale.
    */
   com.google.protobuf.StringValue getLocale();
   /**
@@ -48,6 +50,7 @@ public interface GeoTargetConstantSuggestionOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value reach = 2;</code>
+   * @return Whether the reach field is set.
    */
   boolean hasReach();
   /**
@@ -57,6 +60,7 @@ public interface GeoTargetConstantSuggestionOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value reach = 2;</code>
+   * @return The reach.
    */
   com.google.protobuf.Int64Value getReach();
   /**
@@ -76,6 +80,7 @@ public interface GeoTargetConstantSuggestionOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue search_term = 3;</code>
+   * @return Whether the searchTerm field is set.
    */
   boolean hasSearchTerm();
   /**
@@ -85,6 +90,7 @@ public interface GeoTargetConstantSuggestionOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue search_term = 3;</code>
+   * @return The searchTerm.
    */
   com.google.protobuf.StringValue getSearchTerm();
   /**
@@ -103,6 +109,7 @@ public interface GeoTargetConstantSuggestionOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.GeoTargetConstant geo_target_constant = 4;</code>
+   * @return Whether the geoTargetConstant field is set.
    */
   boolean hasGeoTargetConstant();
   /**
@@ -111,6 +118,7 @@ public interface GeoTargetConstantSuggestionOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.GeoTargetConstant geo_target_constant = 4;</code>
+   * @return The geoTargetConstant.
    */
   com.google.ads.googleads.v1.resources.GeoTargetConstant getGeoTargetConstant();
   /**

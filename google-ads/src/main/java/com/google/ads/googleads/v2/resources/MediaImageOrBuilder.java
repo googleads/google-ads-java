@@ -9,26 +9,28 @@ public interface MediaImageOrBuilder extends
 
   /**
    * <pre>
-   * Raw image data.
+   * Immutable. Raw image data.
    * </pre>
    *
-   * <code>.google.protobuf.BytesValue data = 1;</code>
+   * <code>.google.protobuf.BytesValue data = 1 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return Whether the data field is set.
    */
   boolean hasData();
   /**
    * <pre>
-   * Raw image data.
+   * Immutable. Raw image data.
    * </pre>
    *
-   * <code>.google.protobuf.BytesValue data = 1;</code>
+   * <code>.google.protobuf.BytesValue data = 1 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The data.
    */
   com.google.protobuf.BytesValue getData();
   /**
    * <pre>
-   * Raw image data.
+   * Immutable. Raw image data.
    * </pre>
    *
-   * <code>.google.protobuf.BytesValue data = 1;</code>
+   * <code>.google.protobuf.BytesValue data = 1 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   com.google.protobuf.BytesValueOrBuilder getDataOrBuilder();
 }

@@ -16,6 +16,7 @@ public interface CriterionCategoryLocaleAvailabilityOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v1.enums.CriterionCategoryLocaleAvailabilityModeEnum.CriterionCategoryLocaleAvailabilityMode availability_mode = 1;</code>
+   * @return The enum numeric value on the wire for availabilityMode.
    */
   int getAvailabilityModeValue();
   /**
@@ -27,6 +28,7 @@ public interface CriterionCategoryLocaleAvailabilityOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v1.enums.CriterionCategoryLocaleAvailabilityModeEnum.CriterionCategoryLocaleAvailabilityMode availability_mode = 1;</code>
+   * @return The availabilityMode.
    */
   com.google.ads.googleads.v1.enums.CriterionCategoryLocaleAvailabilityModeEnum.CriterionCategoryLocaleAvailabilityMode getAvailabilityMode();
 
@@ -36,6 +38,7 @@ public interface CriterionCategoryLocaleAvailabilityOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue country_code = 2;</code>
+   * @return Whether the countryCode field is set.
    */
   boolean hasCountryCode();
   /**
@@ -44,6 +47,7 @@ public interface CriterionCategoryLocaleAvailabilityOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue country_code = 2;</code>
+   * @return The countryCode.
    */
   com.google.protobuf.StringValue getCountryCode();
   /**
@@ -61,6 +65,7 @@ public interface CriterionCategoryLocaleAvailabilityOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue language_code = 3;</code>
+   * @return Whether the languageCode field is set.
    */
   boolean hasLanguageCode();
   /**
@@ -69,6 +74,7 @@ public interface CriterionCategoryLocaleAvailabilityOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue language_code = 3;</code>
+   * @return The languageCode.
    */
   com.google.protobuf.StringValue getLanguageCode();
   /**

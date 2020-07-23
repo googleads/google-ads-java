@@ -21,7 +21,7 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.10.0)",
+    value = "by gRPC proto compiler",
     comments = "Source: google/ads/googleads/v4/services/ad_group_simulation_service.proto")
 public final class AdGroupSimulationServiceGrpc {
 
@@ -30,49 +30,49 @@ public final class AdGroupSimulationServiceGrpc {
   public static final String SERVICE_NAME = "google.ads.googleads.v4.services.AdGroupSimulationService";
 
   // Static method descriptors that strictly reflect the proto.
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  @java.lang.Deprecated // Use {@link #getGetAdGroupSimulationMethod()} instead. 
-  public static final io.grpc.MethodDescriptor<com.google.ads.googleads.v4.services.GetAdGroupSimulationRequest,
-      com.google.ads.googleads.v4.resources.AdGroupSimulation> METHOD_GET_AD_GROUP_SIMULATION = getGetAdGroupSimulationMethodHelper();
-
   private static volatile io.grpc.MethodDescriptor<com.google.ads.googleads.v4.services.GetAdGroupSimulationRequest,
       com.google.ads.googleads.v4.resources.AdGroupSimulation> getGetAdGroupSimulationMethod;
 
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetAdGroupSimulation",
+      requestType = com.google.ads.googleads.v4.services.GetAdGroupSimulationRequest.class,
+      responseType = com.google.ads.googleads.v4.resources.AdGroupSimulation.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<com.google.ads.googleads.v4.services.GetAdGroupSimulationRequest,
       com.google.ads.googleads.v4.resources.AdGroupSimulation> getGetAdGroupSimulationMethod() {
-    return getGetAdGroupSimulationMethodHelper();
-  }
-
-  private static io.grpc.MethodDescriptor<com.google.ads.googleads.v4.services.GetAdGroupSimulationRequest,
-      com.google.ads.googleads.v4.resources.AdGroupSimulation> getGetAdGroupSimulationMethodHelper() {
     io.grpc.MethodDescriptor<com.google.ads.googleads.v4.services.GetAdGroupSimulationRequest, com.google.ads.googleads.v4.resources.AdGroupSimulation> getGetAdGroupSimulationMethod;
     if ((getGetAdGroupSimulationMethod = AdGroupSimulationServiceGrpc.getGetAdGroupSimulationMethod) == null) {
       synchronized (AdGroupSimulationServiceGrpc.class) {
         if ((getGetAdGroupSimulationMethod = AdGroupSimulationServiceGrpc.getGetAdGroupSimulationMethod) == null) {
-          AdGroupSimulationServiceGrpc.getGetAdGroupSimulationMethod = getGetAdGroupSimulationMethod = 
+          AdGroupSimulationServiceGrpc.getGetAdGroupSimulationMethod = getGetAdGroupSimulationMethod =
               io.grpc.MethodDescriptor.<com.google.ads.googleads.v4.services.GetAdGroupSimulationRequest, com.google.ads.googleads.v4.resources.AdGroupSimulation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "google.ads.googleads.v4.services.AdGroupSimulationService", "GetAdGroupSimulation"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetAdGroupSimulation"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v4.services.GetAdGroupSimulationRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v4.resources.AdGroupSimulation.getDefaultInstance()))
-                  .setSchemaDescriptor(new AdGroupSimulationServiceMethodDescriptorSupplier("GetAdGroupSimulation"))
-                  .build();
-          }
+              .setSchemaDescriptor(new AdGroupSimulationServiceMethodDescriptorSupplier("GetAdGroupSimulation"))
+              .build();
         }
-     }
-     return getGetAdGroupSimulationMethod;
+      }
+    }
+    return getGetAdGroupSimulationMethod;
   }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static AdGroupSimulationServiceStub newStub(io.grpc.Channel channel) {
-    return new AdGroupSimulationServiceStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<AdGroupSimulationServiceStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<AdGroupSimulationServiceStub>() {
+        @java.lang.Override
+        public AdGroupSimulationServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new AdGroupSimulationServiceStub(channel, callOptions);
+        }
+      };
+    return AdGroupSimulationServiceStub.newStub(factory, channel);
   }
 
   /**
@@ -80,7 +80,14 @@ public final class AdGroupSimulationServiceGrpc {
    */
   public static AdGroupSimulationServiceBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new AdGroupSimulationServiceBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<AdGroupSimulationServiceBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<AdGroupSimulationServiceBlockingStub>() {
+        @java.lang.Override
+        public AdGroupSimulationServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new AdGroupSimulationServiceBlockingStub(channel, callOptions);
+        }
+      };
+    return AdGroupSimulationServiceBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -88,7 +95,14 @@ public final class AdGroupSimulationServiceGrpc {
    */
   public static AdGroupSimulationServiceFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new AdGroupSimulationServiceFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<AdGroupSimulationServiceFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<AdGroupSimulationServiceFutureStub>() {
+        @java.lang.Override
+        public AdGroupSimulationServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new AdGroupSimulationServiceFutureStub(channel, callOptions);
+        }
+      };
+    return AdGroupSimulationServiceFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -105,13 +119,13 @@ public final class AdGroupSimulationServiceGrpc {
      */
     public void getAdGroupSimulation(com.google.ads.googleads.v4.services.GetAdGroupSimulationRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v4.resources.AdGroupSimulation> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetAdGroupSimulationMethodHelper(), responseObserver);
+      asyncUnimplementedUnaryCall(getGetAdGroupSimulationMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
-            getGetAdGroupSimulationMethodHelper(),
+            getGetAdGroupSimulationMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 com.google.ads.googleads.v4.services.GetAdGroupSimulationRequest,
@@ -126,19 +140,15 @@ public final class AdGroupSimulationServiceGrpc {
    * Service to fetch ad group simulations.
    * </pre>
    */
-  public static final class AdGroupSimulationServiceStub extends io.grpc.stub.AbstractStub<AdGroupSimulationServiceStub> {
-    private AdGroupSimulationServiceStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private AdGroupSimulationServiceStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class AdGroupSimulationServiceStub extends io.grpc.stub.AbstractAsyncStub<AdGroupSimulationServiceStub> {
+    private AdGroupSimulationServiceStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected AdGroupSimulationServiceStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected AdGroupSimulationServiceStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new AdGroupSimulationServiceStub(channel, callOptions);
     }
 
@@ -150,7 +160,7 @@ public final class AdGroupSimulationServiceGrpc {
     public void getAdGroupSimulation(com.google.ads.googleads.v4.services.GetAdGroupSimulationRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v4.resources.AdGroupSimulation> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(getGetAdGroupSimulationMethodHelper(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getGetAdGroupSimulationMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -159,19 +169,15 @@ public final class AdGroupSimulationServiceGrpc {
    * Service to fetch ad group simulations.
    * </pre>
    */
-  public static final class AdGroupSimulationServiceBlockingStub extends io.grpc.stub.AbstractStub<AdGroupSimulationServiceBlockingStub> {
-    private AdGroupSimulationServiceBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private AdGroupSimulationServiceBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class AdGroupSimulationServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<AdGroupSimulationServiceBlockingStub> {
+    private AdGroupSimulationServiceBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected AdGroupSimulationServiceBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected AdGroupSimulationServiceBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new AdGroupSimulationServiceBlockingStub(channel, callOptions);
     }
 
@@ -182,7 +188,7 @@ public final class AdGroupSimulationServiceGrpc {
      */
     public com.google.ads.googleads.v4.resources.AdGroupSimulation getAdGroupSimulation(com.google.ads.googleads.v4.services.GetAdGroupSimulationRequest request) {
       return blockingUnaryCall(
-          getChannel(), getGetAdGroupSimulationMethodHelper(), getCallOptions(), request);
+          getChannel(), getGetAdGroupSimulationMethod(), getCallOptions(), request);
     }
   }
 
@@ -191,19 +197,15 @@ public final class AdGroupSimulationServiceGrpc {
    * Service to fetch ad group simulations.
    * </pre>
    */
-  public static final class AdGroupSimulationServiceFutureStub extends io.grpc.stub.AbstractStub<AdGroupSimulationServiceFutureStub> {
-    private AdGroupSimulationServiceFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private AdGroupSimulationServiceFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class AdGroupSimulationServiceFutureStub extends io.grpc.stub.AbstractFutureStub<AdGroupSimulationServiceFutureStub> {
+    private AdGroupSimulationServiceFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected AdGroupSimulationServiceFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected AdGroupSimulationServiceFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new AdGroupSimulationServiceFutureStub(channel, callOptions);
     }
 
@@ -215,7 +217,7 @@ public final class AdGroupSimulationServiceGrpc {
     public com.google.common.util.concurrent.ListenableFuture<com.google.ads.googleads.v4.resources.AdGroupSimulation> getAdGroupSimulation(
         com.google.ads.googleads.v4.services.GetAdGroupSimulationRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(getGetAdGroupSimulationMethodHelper(), getCallOptions()), request);
+          getChannel().newCall(getGetAdGroupSimulationMethod(), getCallOptions()), request);
     }
   }
 
@@ -303,7 +305,7 @@ public final class AdGroupSimulationServiceGrpc {
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new AdGroupSimulationServiceFileDescriptorSupplier())
-              .addMethod(getGetAdGroupSimulationMethodHelper())
+              .addMethod(getGetAdGroupSimulationMethod())
               .build();
         }
       }

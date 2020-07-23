@@ -21,7 +21,7 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.10.0)",
+    value = "by gRPC proto compiler",
     comments = "Source: google/ads/googleads/v3/services/feed_item_service.proto")
 public final class FeedItemServiceGrpc {
 
@@ -30,86 +30,80 @@ public final class FeedItemServiceGrpc {
   public static final String SERVICE_NAME = "google.ads.googleads.v3.services.FeedItemService";
 
   // Static method descriptors that strictly reflect the proto.
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  @java.lang.Deprecated // Use {@link #getGetFeedItemMethod()} instead. 
-  public static final io.grpc.MethodDescriptor<com.google.ads.googleads.v3.services.GetFeedItemRequest,
-      com.google.ads.googleads.v3.resources.FeedItem> METHOD_GET_FEED_ITEM = getGetFeedItemMethodHelper();
-
   private static volatile io.grpc.MethodDescriptor<com.google.ads.googleads.v3.services.GetFeedItemRequest,
       com.google.ads.googleads.v3.resources.FeedItem> getGetFeedItemMethod;
 
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetFeedItem",
+      requestType = com.google.ads.googleads.v3.services.GetFeedItemRequest.class,
+      responseType = com.google.ads.googleads.v3.resources.FeedItem.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<com.google.ads.googleads.v3.services.GetFeedItemRequest,
       com.google.ads.googleads.v3.resources.FeedItem> getGetFeedItemMethod() {
-    return getGetFeedItemMethodHelper();
-  }
-
-  private static io.grpc.MethodDescriptor<com.google.ads.googleads.v3.services.GetFeedItemRequest,
-      com.google.ads.googleads.v3.resources.FeedItem> getGetFeedItemMethodHelper() {
     io.grpc.MethodDescriptor<com.google.ads.googleads.v3.services.GetFeedItemRequest, com.google.ads.googleads.v3.resources.FeedItem> getGetFeedItemMethod;
     if ((getGetFeedItemMethod = FeedItemServiceGrpc.getGetFeedItemMethod) == null) {
       synchronized (FeedItemServiceGrpc.class) {
         if ((getGetFeedItemMethod = FeedItemServiceGrpc.getGetFeedItemMethod) == null) {
-          FeedItemServiceGrpc.getGetFeedItemMethod = getGetFeedItemMethod = 
+          FeedItemServiceGrpc.getGetFeedItemMethod = getGetFeedItemMethod =
               io.grpc.MethodDescriptor.<com.google.ads.googleads.v3.services.GetFeedItemRequest, com.google.ads.googleads.v3.resources.FeedItem>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "google.ads.googleads.v3.services.FeedItemService", "GetFeedItem"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetFeedItem"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v3.services.GetFeedItemRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v3.resources.FeedItem.getDefaultInstance()))
-                  .setSchemaDescriptor(new FeedItemServiceMethodDescriptorSupplier("GetFeedItem"))
-                  .build();
-          }
+              .setSchemaDescriptor(new FeedItemServiceMethodDescriptorSupplier("GetFeedItem"))
+              .build();
         }
-     }
-     return getGetFeedItemMethod;
+      }
+    }
+    return getGetFeedItemMethod;
   }
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  @java.lang.Deprecated // Use {@link #getMutateFeedItemsMethod()} instead. 
-  public static final io.grpc.MethodDescriptor<com.google.ads.googleads.v3.services.MutateFeedItemsRequest,
-      com.google.ads.googleads.v3.services.MutateFeedItemsResponse> METHOD_MUTATE_FEED_ITEMS = getMutateFeedItemsMethodHelper();
 
   private static volatile io.grpc.MethodDescriptor<com.google.ads.googleads.v3.services.MutateFeedItemsRequest,
       com.google.ads.googleads.v3.services.MutateFeedItemsResponse> getMutateFeedItemsMethod;
 
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "MutateFeedItems",
+      requestType = com.google.ads.googleads.v3.services.MutateFeedItemsRequest.class,
+      responseType = com.google.ads.googleads.v3.services.MutateFeedItemsResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<com.google.ads.googleads.v3.services.MutateFeedItemsRequest,
       com.google.ads.googleads.v3.services.MutateFeedItemsResponse> getMutateFeedItemsMethod() {
-    return getMutateFeedItemsMethodHelper();
-  }
-
-  private static io.grpc.MethodDescriptor<com.google.ads.googleads.v3.services.MutateFeedItemsRequest,
-      com.google.ads.googleads.v3.services.MutateFeedItemsResponse> getMutateFeedItemsMethodHelper() {
     io.grpc.MethodDescriptor<com.google.ads.googleads.v3.services.MutateFeedItemsRequest, com.google.ads.googleads.v3.services.MutateFeedItemsResponse> getMutateFeedItemsMethod;
     if ((getMutateFeedItemsMethod = FeedItemServiceGrpc.getMutateFeedItemsMethod) == null) {
       synchronized (FeedItemServiceGrpc.class) {
         if ((getMutateFeedItemsMethod = FeedItemServiceGrpc.getMutateFeedItemsMethod) == null) {
-          FeedItemServiceGrpc.getMutateFeedItemsMethod = getMutateFeedItemsMethod = 
+          FeedItemServiceGrpc.getMutateFeedItemsMethod = getMutateFeedItemsMethod =
               io.grpc.MethodDescriptor.<com.google.ads.googleads.v3.services.MutateFeedItemsRequest, com.google.ads.googleads.v3.services.MutateFeedItemsResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "google.ads.googleads.v3.services.FeedItemService", "MutateFeedItems"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "MutateFeedItems"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v3.services.MutateFeedItemsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v3.services.MutateFeedItemsResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new FeedItemServiceMethodDescriptorSupplier("MutateFeedItems"))
-                  .build();
-          }
+              .setSchemaDescriptor(new FeedItemServiceMethodDescriptorSupplier("MutateFeedItems"))
+              .build();
         }
-     }
-     return getMutateFeedItemsMethod;
+      }
+    }
+    return getMutateFeedItemsMethod;
   }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static FeedItemServiceStub newStub(io.grpc.Channel channel) {
-    return new FeedItemServiceStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<FeedItemServiceStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<FeedItemServiceStub>() {
+        @java.lang.Override
+        public FeedItemServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new FeedItemServiceStub(channel, callOptions);
+        }
+      };
+    return FeedItemServiceStub.newStub(factory, channel);
   }
 
   /**
@@ -117,7 +111,14 @@ public final class FeedItemServiceGrpc {
    */
   public static FeedItemServiceBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new FeedItemServiceBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<FeedItemServiceBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<FeedItemServiceBlockingStub>() {
+        @java.lang.Override
+        public FeedItemServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new FeedItemServiceBlockingStub(channel, callOptions);
+        }
+      };
+    return FeedItemServiceBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -125,7 +126,14 @@ public final class FeedItemServiceGrpc {
    */
   public static FeedItemServiceFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new FeedItemServiceFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<FeedItemServiceFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<FeedItemServiceFutureStub>() {
+        @java.lang.Override
+        public FeedItemServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new FeedItemServiceFutureStub(channel, callOptions);
+        }
+      };
+    return FeedItemServiceFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -142,7 +150,7 @@ public final class FeedItemServiceGrpc {
      */
     public void getFeedItem(com.google.ads.googleads.v3.services.GetFeedItemRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v3.resources.FeedItem> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetFeedItemMethodHelper(), responseObserver);
+      asyncUnimplementedUnaryCall(getGetFeedItemMethod(), responseObserver);
     }
 
     /**
@@ -153,20 +161,20 @@ public final class FeedItemServiceGrpc {
      */
     public void mutateFeedItems(com.google.ads.googleads.v3.services.MutateFeedItemsRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v3.services.MutateFeedItemsResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getMutateFeedItemsMethodHelper(), responseObserver);
+      asyncUnimplementedUnaryCall(getMutateFeedItemsMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
-            getGetFeedItemMethodHelper(),
+            getGetFeedItemMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 com.google.ads.googleads.v3.services.GetFeedItemRequest,
                 com.google.ads.googleads.v3.resources.FeedItem>(
                   this, METHODID_GET_FEED_ITEM)))
           .addMethod(
-            getMutateFeedItemsMethodHelper(),
+            getMutateFeedItemsMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 com.google.ads.googleads.v3.services.MutateFeedItemsRequest,
@@ -181,19 +189,15 @@ public final class FeedItemServiceGrpc {
    * Service to manage feed items.
    * </pre>
    */
-  public static final class FeedItemServiceStub extends io.grpc.stub.AbstractStub<FeedItemServiceStub> {
-    private FeedItemServiceStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private FeedItemServiceStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class FeedItemServiceStub extends io.grpc.stub.AbstractAsyncStub<FeedItemServiceStub> {
+    private FeedItemServiceStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected FeedItemServiceStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected FeedItemServiceStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new FeedItemServiceStub(channel, callOptions);
     }
 
@@ -205,7 +209,7 @@ public final class FeedItemServiceGrpc {
     public void getFeedItem(com.google.ads.googleads.v3.services.GetFeedItemRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v3.resources.FeedItem> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(getGetFeedItemMethodHelper(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getGetFeedItemMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -217,7 +221,7 @@ public final class FeedItemServiceGrpc {
     public void mutateFeedItems(com.google.ads.googleads.v3.services.MutateFeedItemsRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v3.services.MutateFeedItemsResponse> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(getMutateFeedItemsMethodHelper(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getMutateFeedItemsMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -226,19 +230,15 @@ public final class FeedItemServiceGrpc {
    * Service to manage feed items.
    * </pre>
    */
-  public static final class FeedItemServiceBlockingStub extends io.grpc.stub.AbstractStub<FeedItemServiceBlockingStub> {
-    private FeedItemServiceBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private FeedItemServiceBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class FeedItemServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<FeedItemServiceBlockingStub> {
+    private FeedItemServiceBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected FeedItemServiceBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected FeedItemServiceBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new FeedItemServiceBlockingStub(channel, callOptions);
     }
 
@@ -249,7 +249,7 @@ public final class FeedItemServiceGrpc {
      */
     public com.google.ads.googleads.v3.resources.FeedItem getFeedItem(com.google.ads.googleads.v3.services.GetFeedItemRequest request) {
       return blockingUnaryCall(
-          getChannel(), getGetFeedItemMethodHelper(), getCallOptions(), request);
+          getChannel(), getGetFeedItemMethod(), getCallOptions(), request);
     }
 
     /**
@@ -260,7 +260,7 @@ public final class FeedItemServiceGrpc {
      */
     public com.google.ads.googleads.v3.services.MutateFeedItemsResponse mutateFeedItems(com.google.ads.googleads.v3.services.MutateFeedItemsRequest request) {
       return blockingUnaryCall(
-          getChannel(), getMutateFeedItemsMethodHelper(), getCallOptions(), request);
+          getChannel(), getMutateFeedItemsMethod(), getCallOptions(), request);
     }
   }
 
@@ -269,19 +269,15 @@ public final class FeedItemServiceGrpc {
    * Service to manage feed items.
    * </pre>
    */
-  public static final class FeedItemServiceFutureStub extends io.grpc.stub.AbstractStub<FeedItemServiceFutureStub> {
-    private FeedItemServiceFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private FeedItemServiceFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class FeedItemServiceFutureStub extends io.grpc.stub.AbstractFutureStub<FeedItemServiceFutureStub> {
+    private FeedItemServiceFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected FeedItemServiceFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected FeedItemServiceFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new FeedItemServiceFutureStub(channel, callOptions);
     }
 
@@ -293,7 +289,7 @@ public final class FeedItemServiceGrpc {
     public com.google.common.util.concurrent.ListenableFuture<com.google.ads.googleads.v3.resources.FeedItem> getFeedItem(
         com.google.ads.googleads.v3.services.GetFeedItemRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(getGetFeedItemMethodHelper(), getCallOptions()), request);
+          getChannel().newCall(getGetFeedItemMethod(), getCallOptions()), request);
     }
 
     /**
@@ -305,7 +301,7 @@ public final class FeedItemServiceGrpc {
     public com.google.common.util.concurrent.ListenableFuture<com.google.ads.googleads.v3.services.MutateFeedItemsResponse> mutateFeedItems(
         com.google.ads.googleads.v3.services.MutateFeedItemsRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(getMutateFeedItemsMethodHelper(), getCallOptions()), request);
+          getChannel().newCall(getMutateFeedItemsMethod(), getCallOptions()), request);
     }
   }
 
@@ -398,8 +394,8 @@ public final class FeedItemServiceGrpc {
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new FeedItemServiceFileDescriptorSupplier())
-              .addMethod(getGetFeedItemMethodHelper())
-              .addMethod(getMutateFeedItemsMethodHelper())
+              .addMethod(getGetFeedItemMethod())
+              .addMethod(getMutateFeedItemsMethod())
               .build();
         }
       }

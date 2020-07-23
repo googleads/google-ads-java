@@ -13,6 +13,7 @@ public interface HotelCheckInDayInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.enums.DayOfWeekEnum.DayOfWeek day_of_week = 1;</code>
+   * @return The enum numeric value on the wire for dayOfWeek.
    */
   int getDayOfWeekValue();
   /**
@@ -21,6 +22,7 @@ public interface HotelCheckInDayInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.enums.DayOfWeekEnum.DayOfWeek day_of_week = 1;</code>
+   * @return The dayOfWeek.
    */
   com.google.ads.googleads.v2.enums.DayOfWeekEnum.DayOfWeek getDayOfWeek();
 }

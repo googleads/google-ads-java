@@ -22,7 +22,7 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.10.0)",
+    value = "by gRPC proto compiler",
     comments = "Source: google/ads/googleads/v4/services/account_link_service.proto")
 public final class AccountLinkServiceGrpc {
 
@@ -31,86 +31,80 @@ public final class AccountLinkServiceGrpc {
   public static final String SERVICE_NAME = "google.ads.googleads.v4.services.AccountLinkService";
 
   // Static method descriptors that strictly reflect the proto.
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  @java.lang.Deprecated // Use {@link #getGetAccountLinkMethod()} instead. 
-  public static final io.grpc.MethodDescriptor<com.google.ads.googleads.v4.services.GetAccountLinkRequest,
-      com.google.ads.googleads.v4.resources.AccountLink> METHOD_GET_ACCOUNT_LINK = getGetAccountLinkMethodHelper();
-
   private static volatile io.grpc.MethodDescriptor<com.google.ads.googleads.v4.services.GetAccountLinkRequest,
       com.google.ads.googleads.v4.resources.AccountLink> getGetAccountLinkMethod;
 
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetAccountLink",
+      requestType = com.google.ads.googleads.v4.services.GetAccountLinkRequest.class,
+      responseType = com.google.ads.googleads.v4.resources.AccountLink.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<com.google.ads.googleads.v4.services.GetAccountLinkRequest,
       com.google.ads.googleads.v4.resources.AccountLink> getGetAccountLinkMethod() {
-    return getGetAccountLinkMethodHelper();
-  }
-
-  private static io.grpc.MethodDescriptor<com.google.ads.googleads.v4.services.GetAccountLinkRequest,
-      com.google.ads.googleads.v4.resources.AccountLink> getGetAccountLinkMethodHelper() {
     io.grpc.MethodDescriptor<com.google.ads.googleads.v4.services.GetAccountLinkRequest, com.google.ads.googleads.v4.resources.AccountLink> getGetAccountLinkMethod;
     if ((getGetAccountLinkMethod = AccountLinkServiceGrpc.getGetAccountLinkMethod) == null) {
       synchronized (AccountLinkServiceGrpc.class) {
         if ((getGetAccountLinkMethod = AccountLinkServiceGrpc.getGetAccountLinkMethod) == null) {
-          AccountLinkServiceGrpc.getGetAccountLinkMethod = getGetAccountLinkMethod = 
+          AccountLinkServiceGrpc.getGetAccountLinkMethod = getGetAccountLinkMethod =
               io.grpc.MethodDescriptor.<com.google.ads.googleads.v4.services.GetAccountLinkRequest, com.google.ads.googleads.v4.resources.AccountLink>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "google.ads.googleads.v4.services.AccountLinkService", "GetAccountLink"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetAccountLink"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v4.services.GetAccountLinkRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v4.resources.AccountLink.getDefaultInstance()))
-                  .setSchemaDescriptor(new AccountLinkServiceMethodDescriptorSupplier("GetAccountLink"))
-                  .build();
-          }
+              .setSchemaDescriptor(new AccountLinkServiceMethodDescriptorSupplier("GetAccountLink"))
+              .build();
         }
-     }
-     return getGetAccountLinkMethod;
+      }
+    }
+    return getGetAccountLinkMethod;
   }
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  @java.lang.Deprecated // Use {@link #getMutateAccountLinkMethod()} instead. 
-  public static final io.grpc.MethodDescriptor<com.google.ads.googleads.v4.services.MutateAccountLinkRequest,
-      com.google.ads.googleads.v4.services.MutateAccountLinkResponse> METHOD_MUTATE_ACCOUNT_LINK = getMutateAccountLinkMethodHelper();
 
   private static volatile io.grpc.MethodDescriptor<com.google.ads.googleads.v4.services.MutateAccountLinkRequest,
       com.google.ads.googleads.v4.services.MutateAccountLinkResponse> getMutateAccountLinkMethod;
 
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "MutateAccountLink",
+      requestType = com.google.ads.googleads.v4.services.MutateAccountLinkRequest.class,
+      responseType = com.google.ads.googleads.v4.services.MutateAccountLinkResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<com.google.ads.googleads.v4.services.MutateAccountLinkRequest,
       com.google.ads.googleads.v4.services.MutateAccountLinkResponse> getMutateAccountLinkMethod() {
-    return getMutateAccountLinkMethodHelper();
-  }
-
-  private static io.grpc.MethodDescriptor<com.google.ads.googleads.v4.services.MutateAccountLinkRequest,
-      com.google.ads.googleads.v4.services.MutateAccountLinkResponse> getMutateAccountLinkMethodHelper() {
     io.grpc.MethodDescriptor<com.google.ads.googleads.v4.services.MutateAccountLinkRequest, com.google.ads.googleads.v4.services.MutateAccountLinkResponse> getMutateAccountLinkMethod;
     if ((getMutateAccountLinkMethod = AccountLinkServiceGrpc.getMutateAccountLinkMethod) == null) {
       synchronized (AccountLinkServiceGrpc.class) {
         if ((getMutateAccountLinkMethod = AccountLinkServiceGrpc.getMutateAccountLinkMethod) == null) {
-          AccountLinkServiceGrpc.getMutateAccountLinkMethod = getMutateAccountLinkMethod = 
+          AccountLinkServiceGrpc.getMutateAccountLinkMethod = getMutateAccountLinkMethod =
               io.grpc.MethodDescriptor.<com.google.ads.googleads.v4.services.MutateAccountLinkRequest, com.google.ads.googleads.v4.services.MutateAccountLinkResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "google.ads.googleads.v4.services.AccountLinkService", "MutateAccountLink"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "MutateAccountLink"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v4.services.MutateAccountLinkRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v4.services.MutateAccountLinkResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new AccountLinkServiceMethodDescriptorSupplier("MutateAccountLink"))
-                  .build();
-          }
+              .setSchemaDescriptor(new AccountLinkServiceMethodDescriptorSupplier("MutateAccountLink"))
+              .build();
         }
-     }
-     return getMutateAccountLinkMethod;
+      }
+    }
+    return getMutateAccountLinkMethod;
   }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static AccountLinkServiceStub newStub(io.grpc.Channel channel) {
-    return new AccountLinkServiceStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<AccountLinkServiceStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<AccountLinkServiceStub>() {
+        @java.lang.Override
+        public AccountLinkServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new AccountLinkServiceStub(channel, callOptions);
+        }
+      };
+    return AccountLinkServiceStub.newStub(factory, channel);
   }
 
   /**
@@ -118,7 +112,14 @@ public final class AccountLinkServiceGrpc {
    */
   public static AccountLinkServiceBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new AccountLinkServiceBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<AccountLinkServiceBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<AccountLinkServiceBlockingStub>() {
+        @java.lang.Override
+        public AccountLinkServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new AccountLinkServiceBlockingStub(channel, callOptions);
+        }
+      };
+    return AccountLinkServiceBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -126,7 +127,14 @@ public final class AccountLinkServiceGrpc {
    */
   public static AccountLinkServiceFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new AccountLinkServiceFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<AccountLinkServiceFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<AccountLinkServiceFutureStub>() {
+        @java.lang.Override
+        public AccountLinkServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new AccountLinkServiceFutureStub(channel, callOptions);
+        }
+      };
+    return AccountLinkServiceFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -144,7 +152,7 @@ public final class AccountLinkServiceGrpc {
      */
     public void getAccountLink(com.google.ads.googleads.v4.services.GetAccountLinkRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v4.resources.AccountLink> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetAccountLinkMethodHelper(), responseObserver);
+      asyncUnimplementedUnaryCall(getGetAccountLinkMethod(), responseObserver);
     }
 
     /**
@@ -154,20 +162,20 @@ public final class AccountLinkServiceGrpc {
      */
     public void mutateAccountLink(com.google.ads.googleads.v4.services.MutateAccountLinkRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v4.services.MutateAccountLinkResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getMutateAccountLinkMethodHelper(), responseObserver);
+      asyncUnimplementedUnaryCall(getMutateAccountLinkMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
-            getGetAccountLinkMethodHelper(),
+            getGetAccountLinkMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 com.google.ads.googleads.v4.services.GetAccountLinkRequest,
                 com.google.ads.googleads.v4.resources.AccountLink>(
                   this, METHODID_GET_ACCOUNT_LINK)))
           .addMethod(
-            getMutateAccountLinkMethodHelper(),
+            getMutateAccountLinkMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 com.google.ads.googleads.v4.services.MutateAccountLinkRequest,
@@ -183,19 +191,15 @@ public final class AccountLinkServiceGrpc {
    * accounts.
    * </pre>
    */
-  public static final class AccountLinkServiceStub extends io.grpc.stub.AbstractStub<AccountLinkServiceStub> {
-    private AccountLinkServiceStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private AccountLinkServiceStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class AccountLinkServiceStub extends io.grpc.stub.AbstractAsyncStub<AccountLinkServiceStub> {
+    private AccountLinkServiceStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected AccountLinkServiceStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected AccountLinkServiceStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new AccountLinkServiceStub(channel, callOptions);
     }
 
@@ -207,7 +211,7 @@ public final class AccountLinkServiceGrpc {
     public void getAccountLink(com.google.ads.googleads.v4.services.GetAccountLinkRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v4.resources.AccountLink> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(getGetAccountLinkMethodHelper(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getGetAccountLinkMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -218,7 +222,7 @@ public final class AccountLinkServiceGrpc {
     public void mutateAccountLink(com.google.ads.googleads.v4.services.MutateAccountLinkRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v4.services.MutateAccountLinkResponse> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(getMutateAccountLinkMethodHelper(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getMutateAccountLinkMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -228,19 +232,15 @@ public final class AccountLinkServiceGrpc {
    * accounts.
    * </pre>
    */
-  public static final class AccountLinkServiceBlockingStub extends io.grpc.stub.AbstractStub<AccountLinkServiceBlockingStub> {
-    private AccountLinkServiceBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private AccountLinkServiceBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class AccountLinkServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<AccountLinkServiceBlockingStub> {
+    private AccountLinkServiceBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected AccountLinkServiceBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected AccountLinkServiceBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new AccountLinkServiceBlockingStub(channel, callOptions);
     }
 
@@ -251,7 +251,7 @@ public final class AccountLinkServiceGrpc {
      */
     public com.google.ads.googleads.v4.resources.AccountLink getAccountLink(com.google.ads.googleads.v4.services.GetAccountLinkRequest request) {
       return blockingUnaryCall(
-          getChannel(), getGetAccountLinkMethodHelper(), getCallOptions(), request);
+          getChannel(), getGetAccountLinkMethod(), getCallOptions(), request);
     }
 
     /**
@@ -261,7 +261,7 @@ public final class AccountLinkServiceGrpc {
      */
     public com.google.ads.googleads.v4.services.MutateAccountLinkResponse mutateAccountLink(com.google.ads.googleads.v4.services.MutateAccountLinkRequest request) {
       return blockingUnaryCall(
-          getChannel(), getMutateAccountLinkMethodHelper(), getCallOptions(), request);
+          getChannel(), getMutateAccountLinkMethod(), getCallOptions(), request);
     }
   }
 
@@ -271,19 +271,15 @@ public final class AccountLinkServiceGrpc {
    * accounts.
    * </pre>
    */
-  public static final class AccountLinkServiceFutureStub extends io.grpc.stub.AbstractStub<AccountLinkServiceFutureStub> {
-    private AccountLinkServiceFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private AccountLinkServiceFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class AccountLinkServiceFutureStub extends io.grpc.stub.AbstractFutureStub<AccountLinkServiceFutureStub> {
+    private AccountLinkServiceFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected AccountLinkServiceFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected AccountLinkServiceFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new AccountLinkServiceFutureStub(channel, callOptions);
     }
 
@@ -295,7 +291,7 @@ public final class AccountLinkServiceGrpc {
     public com.google.common.util.concurrent.ListenableFuture<com.google.ads.googleads.v4.resources.AccountLink> getAccountLink(
         com.google.ads.googleads.v4.services.GetAccountLinkRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(getGetAccountLinkMethodHelper(), getCallOptions()), request);
+          getChannel().newCall(getGetAccountLinkMethod(), getCallOptions()), request);
     }
 
     /**
@@ -306,7 +302,7 @@ public final class AccountLinkServiceGrpc {
     public com.google.common.util.concurrent.ListenableFuture<com.google.ads.googleads.v4.services.MutateAccountLinkResponse> mutateAccountLink(
         com.google.ads.googleads.v4.services.MutateAccountLinkRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(getMutateAccountLinkMethodHelper(), getCallOptions()), request);
+          getChannel().newCall(getMutateAccountLinkMethod(), getCallOptions()), request);
     }
   }
 
@@ -399,8 +395,8 @@ public final class AccountLinkServiceGrpc {
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new AccountLinkServiceFileDescriptorSupplier())
-              .addMethod(getGetAccountLinkMethodHelper())
-              .addMethod(getMutateAccountLinkMethodHelper())
+              .addMethod(getGetAccountLinkMethod())
+              .addMethod(getMutateAccountLinkMethod())
               .build();
         }
       }

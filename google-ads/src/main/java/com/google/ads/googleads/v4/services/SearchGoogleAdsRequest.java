@@ -10,7 +10,7 @@ package com.google.ads.googleads.v4.services;
  *
  * Protobuf type {@code google.ads.googleads.v4.services.SearchGoogleAdsRequest}
  */
-public  final class SearchGoogleAdsRequest extends
+public final class SearchGoogleAdsRequest extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.services.SearchGoogleAdsRequest)
     SearchGoogleAdsRequestOrBuilder {
@@ -137,6 +137,7 @@ private static final long serialVersionUID = 0L;
    * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
    * @return The customerId.
    */
+  @java.lang.Override
   public java.lang.String getCustomerId() {
     java.lang.Object ref = customerId_;
     if (ref instanceof java.lang.String) {
@@ -157,6 +158,7 @@ private static final long serialVersionUID = 0L;
    * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
    * @return The bytes for customerId.
    */
+  @java.lang.Override
   public com.google.protobuf.ByteString
       getCustomerIdBytes() {
     java.lang.Object ref = customerId_;
@@ -181,6 +183,7 @@ private static final long serialVersionUID = 0L;
    * <code>string query = 2 [(.google.api.field_behavior) = REQUIRED];</code>
    * @return The query.
    */
+  @java.lang.Override
   public java.lang.String getQuery() {
     java.lang.Object ref = query_;
     if (ref instanceof java.lang.String) {
@@ -201,6 +204,7 @@ private static final long serialVersionUID = 0L;
    * <code>string query = 2 [(.google.api.field_behavior) = REQUIRED];</code>
    * @return The bytes for query.
    */
+  @java.lang.Override
   public com.google.protobuf.ByteString
       getQueryBytes() {
     java.lang.Object ref = query_;
@@ -228,6 +232,7 @@ private static final long serialVersionUID = 0L;
    * <code>string page_token = 3;</code>
    * @return The pageToken.
    */
+  @java.lang.Override
   public java.lang.String getPageToken() {
     java.lang.Object ref = pageToken_;
     if (ref instanceof java.lang.String) {
@@ -251,6 +256,7 @@ private static final long serialVersionUID = 0L;
    * <code>string page_token = 3;</code>
    * @return The bytes for pageToken.
    */
+  @java.lang.Override
   public com.google.protobuf.ByteString
       getPageTokenBytes() {
     java.lang.Object ref = pageToken_;
@@ -277,6 +283,7 @@ private static final long serialVersionUID = 0L;
    * <code>int32 page_size = 4;</code>
    * @return The pageSize.
    */
+  @java.lang.Override
   public int getPageSize() {
     return pageSize_;
   }
@@ -291,6 +298,7 @@ private static final long serialVersionUID = 0L;
    * <code>bool validate_only = 5;</code>
    * @return The validateOnly.
    */
+  @java.lang.Override
   public boolean getValidateOnly() {
     return validateOnly_;
   }
@@ -307,6 +315,7 @@ private static final long serialVersionUID = 0L;
    * <code>bool return_total_results_count = 7;</code>
    * @return The returnTotalResultsCount.
    */
+  @java.lang.Override
   public boolean getReturnTotalResultsCount() {
     return returnTotalResultsCount_;
   }
@@ -323,7 +332,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.SummaryRowSettingEnum.SummaryRowSetting summary_row_setting = 8;</code>
    * @return The enum numeric value on the wire for summaryRowSetting.
    */
-  public int getSummaryRowSettingValue() {
+  @java.lang.Override public int getSummaryRowSettingValue() {
     return summaryRowSetting_;
   }
   /**
@@ -336,7 +345,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.SummaryRowSettingEnum.SummaryRowSetting summary_row_setting = 8;</code>
    * @return The summaryRowSetting.
    */
-  public com.google.ads.googleads.v4.enums.SummaryRowSettingEnum.SummaryRowSetting getSummaryRowSetting() {
+  @java.lang.Override public com.google.ads.googleads.v4.enums.SummaryRowSettingEnum.SummaryRowSetting getSummaryRowSetting() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v4.enums.SummaryRowSettingEnum.SummaryRowSetting result = com.google.ads.googleads.v4.enums.SummaryRowSettingEnum.SummaryRowSetting.valueOf(summaryRowSetting_);
     return result == null ? com.google.ads.googleads.v4.enums.SummaryRowSettingEnum.SummaryRowSetting.UNRECOGNIZED : result;
@@ -1065,6 +1074,7 @@ private static final long serialVersionUID = 0L;
      * <code>int32 page_size = 4;</code>
      * @return The pageSize.
      */
+    @java.lang.Override
     public int getPageSize() {
       return pageSize_;
     }
@@ -1111,6 +1121,7 @@ private static final long serialVersionUID = 0L;
      * <code>bool validate_only = 5;</code>
      * @return The validateOnly.
      */
+    @java.lang.Override
     public boolean getValidateOnly() {
       return validateOnly_;
     }
@@ -1155,6 +1166,7 @@ private static final long serialVersionUID = 0L;
      * <code>bool return_total_results_count = 7;</code>
      * @return The returnTotalResultsCount.
      */
+    @java.lang.Override
     public boolean getReturnTotalResultsCount() {
       return returnTotalResultsCount_;
     }
@@ -1203,7 +1215,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.SummaryRowSettingEnum.SummaryRowSetting summary_row_setting = 8;</code>
      * @return The enum numeric value on the wire for summaryRowSetting.
      */
-    public int getSummaryRowSettingValue() {
+    @java.lang.Override public int getSummaryRowSettingValue() {
       return summaryRowSetting_;
     }
     /**
@@ -1218,6 +1230,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setSummaryRowSettingValue(int value) {
+      
       summaryRowSetting_ = value;
       onChanged();
       return this;
@@ -1232,6 +1245,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.SummaryRowSettingEnum.SummaryRowSetting summary_row_setting = 8;</code>
      * @return The summaryRowSetting.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.enums.SummaryRowSettingEnum.SummaryRowSetting getSummaryRowSetting() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v4.enums.SummaryRowSettingEnum.SummaryRowSetting result = com.google.ads.googleads.v4.enums.SummaryRowSettingEnum.SummaryRowSetting.valueOf(summaryRowSetting_);

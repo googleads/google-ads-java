@@ -10,7 +10,7 @@ package com.google.ads.googleads.v4.services;
  *
  * Protobuf type {@code google.ads.googleads.v4.services.GenerateReachForecastRequest}
  */
-public  final class GenerateReachForecastRequest extends
+public final class GenerateReachForecastRequest extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.services.GenerateReachForecastRequest)
     GenerateReachForecastRequestOrBuilder {
@@ -193,6 +193,7 @@ private static final long serialVersionUID = 0L;
    * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
    * @return The customerId.
    */
+  @java.lang.Override
   public java.lang.String getCustomerId() {
     java.lang.Object ref = customerId_;
     if (ref instanceof java.lang.String) {
@@ -213,6 +214,7 @@ private static final long serialVersionUID = 0L;
    * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
    * @return The bytes for customerId.
    */
+  @java.lang.Override
   public com.google.protobuf.ByteString
       getCustomerIdBytes() {
     java.lang.Object ref = customerId_;
@@ -238,6 +240,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue currency_code = 2;</code>
    * @return Whether the currencyCode field is set.
    */
+  @java.lang.Override
   public boolean hasCurrencyCode() {
     return currencyCode_ != null;
   }
@@ -250,6 +253,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue currency_code = 2;</code>
    * @return The currencyCode.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getCurrencyCode() {
     return currencyCode_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : currencyCode_;
   }
@@ -261,6 +265,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue currency_code = 2;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getCurrencyCodeOrBuilder() {
     return getCurrencyCode();
   }
@@ -275,6 +280,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.services.CampaignDuration campaign_duration = 3 [(.google.api.field_behavior) = REQUIRED];</code>
    * @return Whether the campaignDuration field is set.
    */
+  @java.lang.Override
   public boolean hasCampaignDuration() {
     return campaignDuration_ != null;
   }
@@ -286,6 +292,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.services.CampaignDuration campaign_duration = 3 [(.google.api.field_behavior) = REQUIRED];</code>
    * @return The campaignDuration.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.services.CampaignDuration getCampaignDuration() {
     return campaignDuration_ == null ? com.google.ads.googleads.v4.services.CampaignDuration.getDefaultInstance() : campaignDuration_;
   }
@@ -296,6 +303,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v4.services.CampaignDuration campaign_duration = 3 [(.google.api.field_behavior) = REQUIRED];</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.services.CampaignDurationOrBuilder getCampaignDurationOrBuilder() {
     return getCampaignDuration();
   }
@@ -316,6 +324,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int32Value cookie_frequency_cap = 4;</code>
    * @return Whether the cookieFrequencyCap field is set.
    */
+  @java.lang.Override
   public boolean hasCookieFrequencyCap() {
     return cookieFrequencyCap_ != null;
   }
@@ -333,6 +342,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int32Value cookie_frequency_cap = 4;</code>
    * @return The cookieFrequencyCap.
    */
+  @java.lang.Override
   public com.google.protobuf.Int32Value getCookieFrequencyCap() {
     return cookieFrequencyCap_ == null ? com.google.protobuf.Int32Value.getDefaultInstance() : cookieFrequencyCap_;
   }
@@ -349,6 +359,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int32Value cookie_frequency_cap = 4;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int32ValueOrBuilder getCookieFrequencyCapOrBuilder() {
     return getCookieFrequencyCap();
   }
@@ -368,6 +379,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.services.FrequencyCap cookie_frequency_cap_setting = 8;</code>
    * @return Whether the cookieFrequencyCapSetting field is set.
    */
+  @java.lang.Override
   public boolean hasCookieFrequencyCapSetting() {
     return cookieFrequencyCapSetting_ != null;
   }
@@ -384,6 +396,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.services.FrequencyCap cookie_frequency_cap_setting = 8;</code>
    * @return The cookieFrequencyCapSetting.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.services.FrequencyCap getCookieFrequencyCapSetting() {
     return cookieFrequencyCapSetting_ == null ? com.google.ads.googleads.v4.services.FrequencyCap.getDefaultInstance() : cookieFrequencyCapSetting_;
   }
@@ -399,6 +412,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v4.services.FrequencyCap cookie_frequency_cap_setting = 8;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.services.FrequencyCapOrBuilder getCookieFrequencyCapSettingOrBuilder() {
     return getCookieFrequencyCapSetting();
   }
@@ -416,6 +430,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int32Value min_effective_frequency = 5;</code>
    * @return Whether the minEffectiveFrequency field is set.
    */
+  @java.lang.Override
   public boolean hasMinEffectiveFrequency() {
     return minEffectiveFrequency_ != null;
   }
@@ -430,6 +445,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int32Value min_effective_frequency = 5;</code>
    * @return The minEffectiveFrequency.
    */
+  @java.lang.Override
   public com.google.protobuf.Int32Value getMinEffectiveFrequency() {
     return minEffectiveFrequency_ == null ? com.google.protobuf.Int32Value.getDefaultInstance() : minEffectiveFrequency_;
   }
@@ -443,6 +459,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int32Value min_effective_frequency = 5;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int32ValueOrBuilder getMinEffectiveFrequencyOrBuilder() {
     return getMinEffectiveFrequency();
   }
@@ -462,6 +479,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.services.Targeting targeting = 6;</code>
    * @return Whether the targeting field is set.
    */
+  @java.lang.Override
   public boolean hasTargeting() {
     return targeting_ != null;
   }
@@ -478,6 +496,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.services.Targeting targeting = 6;</code>
    * @return The targeting.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.services.Targeting getTargeting() {
     return targeting_ == null ? com.google.ads.googleads.v4.services.Targeting.getDefaultInstance() : targeting_;
   }
@@ -493,6 +512,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v4.services.Targeting targeting = 6;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.services.TargetingOrBuilder getTargetingOrBuilder() {
     return getTargeting();
   }
@@ -507,6 +527,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.services.PlannedProduct planned_products = 7 [(.google.api.field_behavior) = REQUIRED];</code>
    */
+  @java.lang.Override
   public java.util.List<com.google.ads.googleads.v4.services.PlannedProduct> getPlannedProductsList() {
     return plannedProducts_;
   }
@@ -518,6 +539,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.services.PlannedProduct planned_products = 7 [(.google.api.field_behavior) = REQUIRED];</code>
    */
+  @java.lang.Override
   public java.util.List<? extends com.google.ads.googleads.v4.services.PlannedProductOrBuilder> 
       getPlannedProductsOrBuilderList() {
     return plannedProducts_;
@@ -530,6 +552,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.services.PlannedProduct planned_products = 7 [(.google.api.field_behavior) = REQUIRED];</code>
    */
+  @java.lang.Override
   public int getPlannedProductsCount() {
     return plannedProducts_.size();
   }
@@ -541,6 +564,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.services.PlannedProduct planned_products = 7 [(.google.api.field_behavior) = REQUIRED];</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.services.PlannedProduct getPlannedProducts(int index) {
     return plannedProducts_.get(index);
   }
@@ -552,6 +576,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.services.PlannedProduct planned_products = 7 [(.google.api.field_behavior) = REQUIRED];</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.services.PlannedProductOrBuilder getPlannedProductsOrBuilder(
       int index) {
     return plannedProducts_.get(index);

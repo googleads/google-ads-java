@@ -10,7 +10,7 @@ package com.google.ads.googleads.v3.services;
  *
  * Protobuf type {@code google.ads.googleads.v3.services.KeywordPlanCampaignForecast}
  */
-public  final class KeywordPlanCampaignForecast extends
+public final class KeywordPlanCampaignForecast extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v3.services.KeywordPlanCampaignForecast)
     KeywordPlanCampaignForecastOrBuilder {
@@ -20,6 +20,13 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private KeywordPlanCampaignForecast() {
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new KeywordPlanCampaignForecast();
   }
 
   @java.lang.Override
@@ -35,7 +42,6 @@ private static final long serialVersionUID = 0L;
     if (extensionRegistry == null) {
       throw new java.lang.NullPointerException();
     }
-    int mutable_bitField0_ = 0;
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
         com.google.protobuf.UnknownFieldSet.newBuilder();
     try {
@@ -113,7 +119,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue keyword_plan_campaign = 1;</code>
+   * @return Whether the keywordPlanCampaign field is set.
    */
+  @java.lang.Override
   public boolean hasKeywordPlanCampaign() {
     return keywordPlanCampaign_ != null;
   }
@@ -124,7 +132,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue keyword_plan_campaign = 1;</code>
+   * @return The keywordPlanCampaign.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getKeywordPlanCampaign() {
     return keywordPlanCampaign_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : keywordPlanCampaign_;
   }
@@ -136,6 +146,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue keyword_plan_campaign = 1;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getKeywordPlanCampaignOrBuilder() {
     return getKeywordPlanCampaign();
   }
@@ -148,7 +159,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.services.ForecastMetrics campaign_forecast = 2;</code>
+   * @return Whether the campaignForecast field is set.
    */
+  @java.lang.Override
   public boolean hasCampaignForecast() {
     return campaignForecast_ != null;
   }
@@ -158,7 +171,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.services.ForecastMetrics campaign_forecast = 2;</code>
+   * @return The campaignForecast.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.services.ForecastMetrics getCampaignForecast() {
     return campaignForecast_ == null ? com.google.ads.googleads.v3.services.ForecastMetrics.getDefaultInstance() : campaignForecast_;
   }
@@ -169,6 +184,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v3.services.ForecastMetrics campaign_forecast = 2;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.services.ForecastMetricsOrBuilder getCampaignForecastOrBuilder() {
     return getCampaignForecast();
   }
@@ -532,6 +548,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue keyword_plan_campaign = 1;</code>
+     * @return Whether the keywordPlanCampaign field is set.
      */
     public boolean hasKeywordPlanCampaign() {
       return keywordPlanCampaignBuilder_ != null || keywordPlanCampaign_ != null;
@@ -543,6 +560,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue keyword_plan_campaign = 1;</code>
+     * @return The keywordPlanCampaign.
      */
     public com.google.protobuf.StringValue getKeywordPlanCampaign() {
       if (keywordPlanCampaignBuilder_ == null) {
@@ -693,6 +711,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.services.ForecastMetrics campaign_forecast = 2;</code>
+     * @return Whether the campaignForecast field is set.
      */
     public boolean hasCampaignForecast() {
       return campaignForecastBuilder_ != null || campaignForecast_ != null;
@@ -703,6 +722,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.services.ForecastMetrics campaign_forecast = 2;</code>
+     * @return The campaignForecast.
      */
     public com.google.ads.googleads.v3.services.ForecastMetrics getCampaignForecast() {
       if (campaignForecastBuilder_ == null) {

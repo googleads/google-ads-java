@@ -1,5 +1,5 @@
 /*
- * Copyright 2019 Google LLC
+ * Copyright 2020 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -21,7 +21,6 @@ import com.google.ads.googleads.v1.services.stub.AdGroupAudienceViewServiceStubS
 import com.google.api.core.BetaApi;
 import com.google.api.gax.core.BackgroundResource;
 import com.google.api.gax.rpc.UnaryCallable;
-import com.google.api.pathtemplate.PathTemplate;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 import javax.annotation.Generated;
@@ -36,8 +35,8 @@ import javax.annotation.Generated;
  * <pre>
  * <code>
  * try (AdGroupAudienceViewServiceClient adGroupAudienceViewServiceClient = AdGroupAudienceViewServiceClient.create()) {
- *   String formattedResourceName = AdGroupAudienceViewServiceClient.formatAdGroupAudienceViewName("[CUSTOMER]", "[AD_GROUP_AUDIENCE_VIEW]");
- *   AdGroupAudienceView response = adGroupAudienceViewServiceClient.getAdGroupAudienceView(formattedResourceName);
+ *   AdGroupAudienceViewName resourceName = AdGroupAudienceViewName.of("[CUSTOMER]", "[AD_GROUP_AUDIENCE_VIEW]");
+ *   AdGroupAudienceView response = adGroupAudienceViewServiceClient.getAdGroupAudienceView(resourceName);
  * }
  * </code>
  * </pre>
@@ -99,50 +98,6 @@ public class AdGroupAudienceViewServiceClient implements BackgroundResource {
   private final AdGroupAudienceViewServiceSettings settings;
   private final AdGroupAudienceViewServiceStub stub;
 
-  private static final PathTemplate AD_GROUP_AUDIENCE_VIEW_PATH_TEMPLATE =
-      PathTemplate.createWithoutUrlEncoding(
-          "customers/{customer}/adGroupAudienceViews/{ad_group_audience_view}");
-
-  /**
-   * Formats a string containing the fully-qualified path to represent a ad_group_audience_view
-   * resource.
-   *
-   * @deprecated Use the {@link AdGroupAudienceViewName} class instead.
-   */
-  @Deprecated
-  public static final String formatAdGroupAudienceViewName(
-      String customer, String adGroupAudienceView) {
-    return AD_GROUP_AUDIENCE_VIEW_PATH_TEMPLATE.instantiate(
-        "customer", customer,
-        "ad_group_audience_view", adGroupAudienceView);
-  }
-
-  /**
-   * Parses the customer from the given fully-qualified path which represents a
-   * ad_group_audience_view resource.
-   *
-   * @deprecated Use the {@link AdGroupAudienceViewName} class instead.
-   */
-  @Deprecated
-  public static final String parseCustomerFromAdGroupAudienceViewName(
-      String adGroupAudienceViewName) {
-    return AD_GROUP_AUDIENCE_VIEW_PATH_TEMPLATE.parse(adGroupAudienceViewName).get("customer");
-  }
-
-  /**
-   * Parses the ad_group_audience_view from the given fully-qualified path which represents a
-   * ad_group_audience_view resource.
-   *
-   * @deprecated Use the {@link AdGroupAudienceViewName} class instead.
-   */
-  @Deprecated
-  public static final String parseAdGroupAudienceViewFromAdGroupAudienceViewName(
-      String adGroupAudienceViewName) {
-    return AD_GROUP_AUDIENCE_VIEW_PATH_TEMPLATE
-        .parse(adGroupAudienceViewName)
-        .get("ad_group_audience_view");
-  }
-
   /** Constructs an instance of AdGroupAudienceViewServiceClient with default settings. */
   public static final AdGroupAudienceViewServiceClient create() throws IOException {
     return create(AdGroupAudienceViewServiceSettings.newBuilder().build());
@@ -201,16 +156,39 @@ public class AdGroupAudienceViewServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (AdGroupAudienceViewServiceClient adGroupAudienceViewServiceClient = AdGroupAudienceViewServiceClient.create()) {
-   *   String formattedResourceName = AdGroupAudienceViewServiceClient.formatAdGroupAudienceViewName("[CUSTOMER]", "[AD_GROUP_AUDIENCE_VIEW]");
-   *   AdGroupAudienceView response = adGroupAudienceViewServiceClient.getAdGroupAudienceView(formattedResourceName);
+   *   AdGroupAudienceViewName resourceName = AdGroupAudienceViewName.of("[CUSTOMER]", "[AD_GROUP_AUDIENCE_VIEW]");
+   *   AdGroupAudienceView response = adGroupAudienceViewServiceClient.getAdGroupAudienceView(resourceName);
    * }
    * </code></pre>
    *
-   * @param resourceName The resource name of the ad group audience view to fetch.
+   * @param resourceName Required. The resource name of the ad group audience view to fetch.
+   * @throws com.google.api.gax.rpc.ApiException if the remote call fails
+   */
+  public final AdGroupAudienceView getAdGroupAudienceView(AdGroupAudienceViewName resourceName) {
+    GetAdGroupAudienceViewRequest request =
+        GetAdGroupAudienceViewRequest.newBuilder()
+            .setResourceName(resourceName == null ? null : resourceName.toString())
+            .build();
+    return getAdGroupAudienceView(request);
+  }
+
+  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  /**
+   * Returns the requested ad group audience view in full detail.
+   *
+   * <p>Sample code:
+   *
+   * <pre><code>
+   * try (AdGroupAudienceViewServiceClient adGroupAudienceViewServiceClient = AdGroupAudienceViewServiceClient.create()) {
+   *   AdGroupAudienceViewName resourceName = AdGroupAudienceViewName.of("[CUSTOMER]", "[AD_GROUP_AUDIENCE_VIEW]");
+   *   AdGroupAudienceView response = adGroupAudienceViewServiceClient.getAdGroupAudienceView(resourceName.toString());
+   * }
+   * </code></pre>
+   *
+   * @param resourceName Required. The resource name of the ad group audience view to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final AdGroupAudienceView getAdGroupAudienceView(String resourceName) {
-    AD_GROUP_AUDIENCE_VIEW_PATH_TEMPLATE.validate(resourceName, "getAdGroupAudienceView");
     GetAdGroupAudienceViewRequest request =
         GetAdGroupAudienceViewRequest.newBuilder().setResourceName(resourceName).build();
     return getAdGroupAudienceView(request);
@@ -224,9 +202,9 @@ public class AdGroupAudienceViewServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (AdGroupAudienceViewServiceClient adGroupAudienceViewServiceClient = AdGroupAudienceViewServiceClient.create()) {
-   *   String formattedResourceName = AdGroupAudienceViewServiceClient.formatAdGroupAudienceViewName("[CUSTOMER]", "[AD_GROUP_AUDIENCE_VIEW]");
+   *   AdGroupAudienceViewName resourceName = AdGroupAudienceViewName.of("[CUSTOMER]", "[AD_GROUP_AUDIENCE_VIEW]");
    *   GetAdGroupAudienceViewRequest request = GetAdGroupAudienceViewRequest.newBuilder()
-   *     .setResourceName(formattedResourceName)
+   *     .setResourceName(resourceName.toString())
    *     .build();
    *   AdGroupAudienceView response = adGroupAudienceViewServiceClient.getAdGroupAudienceView(request);
    * }
@@ -247,9 +225,9 @@ public class AdGroupAudienceViewServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (AdGroupAudienceViewServiceClient adGroupAudienceViewServiceClient = AdGroupAudienceViewServiceClient.create()) {
-   *   String formattedResourceName = AdGroupAudienceViewServiceClient.formatAdGroupAudienceViewName("[CUSTOMER]", "[AD_GROUP_AUDIENCE_VIEW]");
+   *   AdGroupAudienceViewName resourceName = AdGroupAudienceViewName.of("[CUSTOMER]", "[AD_GROUP_AUDIENCE_VIEW]");
    *   GetAdGroupAudienceViewRequest request = GetAdGroupAudienceViewRequest.newBuilder()
-   *     .setResourceName(formattedResourceName)
+   *     .setResourceName(resourceName.toString())
    *     .build();
    *   ApiFuture&lt;AdGroupAudienceView&gt; future = adGroupAudienceViewServiceClient.getAdGroupAudienceViewCallable().futureCall(request);
    *   // Do something

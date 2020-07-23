@@ -13,6 +13,7 @@ public interface AssetOperationOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.Asset create = 1;</code>
+   * @return Whether the create field is set.
    */
   boolean hasCreate();
   /**
@@ -21,6 +22,7 @@ public interface AssetOperationOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.Asset create = 1;</code>
+   * @return The create.
    */
   com.google.ads.googleads.v3.resources.Asset getCreate();
   /**

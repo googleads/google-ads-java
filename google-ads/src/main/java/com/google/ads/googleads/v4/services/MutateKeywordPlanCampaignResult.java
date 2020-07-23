@@ -10,7 +10,7 @@ package com.google.ads.googleads.v4.services;
  *
  * Protobuf type {@code google.ads.googleads.v4.services.MutateKeywordPlanCampaignResult}
  */
-public  final class MutateKeywordPlanCampaignResult extends
+public final class MutateKeywordPlanCampaignResult extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.services.MutateKeywordPlanCampaignResult)
     MutateKeywordPlanCampaignResultOrBuilder {
@@ -101,6 +101,7 @@ private static final long serialVersionUID = 0L;
    * <code>string resource_name = 1;</code>
    * @return The resourceName.
    */
+  @java.lang.Override
   public java.lang.String getResourceName() {
     java.lang.Object ref = resourceName_;
     if (ref instanceof java.lang.String) {
@@ -121,6 +122,7 @@ private static final long serialVersionUID = 0L;
    * <code>string resource_name = 1;</code>
    * @return The bytes for resourceName.
    */
+  @java.lang.Override
   public com.google.protobuf.ByteString
       getResourceNameBytes() {
     java.lang.Object ref = resourceName_;

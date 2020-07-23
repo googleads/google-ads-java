@@ -13,6 +13,7 @@ public interface TargetImpressionShareOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.enums.TargetImpressionShareLocationEnum.TargetImpressionShareLocation location = 1;</code>
+   * @return The enum numeric value on the wire for location.
    */
   int getLocationValue();
   /**
@@ -21,6 +22,7 @@ public interface TargetImpressionShareOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.enums.TargetImpressionShareLocationEnum.TargetImpressionShareLocation location = 1;</code>
+   * @return The location.
    */
   com.google.ads.googleads.v2.enums.TargetImpressionShareLocationEnum.TargetImpressionShareLocation getLocation();
 
@@ -31,6 +33,7 @@ public interface TargetImpressionShareOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value location_fraction_micros = 2;</code>
+   * @return Whether the locationFractionMicros field is set.
    */
   boolean hasLocationFractionMicros();
   /**
@@ -40,6 +43,7 @@ public interface TargetImpressionShareOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value location_fraction_micros = 2;</code>
+   * @return The locationFractionMicros.
    */
   com.google.protobuf.Int64Value getLocationFractionMicros();
   /**
@@ -60,6 +64,7 @@ public interface TargetImpressionShareOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value cpc_bid_ceiling_micros = 3;</code>
+   * @return Whether the cpcBidCeilingMicros field is set.
    */
   boolean hasCpcBidCeilingMicros();
   /**
@@ -70,6 +75,7 @@ public interface TargetImpressionShareOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value cpc_bid_ceiling_micros = 3;</code>
+   * @return The cpcBidCeilingMicros.
    */
   com.google.protobuf.Int64Value getCpcBidCeilingMicros();
   /**

@@ -10,7 +10,7 @@ package com.google.ads.googleads.v1.services;
  *
  * Protobuf type {@code google.ads.googleads.v1.services.SearchGoogleAdsFieldsResponse}
  */
-public  final class SearchGoogleAdsFieldsResponse extends
+public final class SearchGoogleAdsFieldsResponse extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v1.services.SearchGoogleAdsFieldsResponse)
     SearchGoogleAdsFieldsResponseOrBuilder {
@@ -22,6 +22,13 @@ private static final long serialVersionUID = 0L;
   private SearchGoogleAdsFieldsResponse() {
     results_ = java.util.Collections.emptyList();
     nextPageToken_ = "";
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new SearchGoogleAdsFieldsResponse();
   }
 
   @java.lang.Override
@@ -103,7 +110,6 @@ private static final long serialVersionUID = 0L;
             com.google.ads.googleads.v1.services.SearchGoogleAdsFieldsResponse.class, com.google.ads.googleads.v1.services.SearchGoogleAdsFieldsResponse.Builder.class);
   }
 
-  private int bitField0_;
   public static final int RESULTS_FIELD_NUMBER = 1;
   private java.util.List<com.google.ads.googleads.v1.resources.GoogleAdsField> results_;
   /**
@@ -113,6 +119,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v1.resources.GoogleAdsField results = 1;</code>
    */
+  @java.lang.Override
   public java.util.List<com.google.ads.googleads.v1.resources.GoogleAdsField> getResultsList() {
     return results_;
   }
@@ -123,6 +130,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v1.resources.GoogleAdsField results = 1;</code>
    */
+  @java.lang.Override
   public java.util.List<? extends com.google.ads.googleads.v1.resources.GoogleAdsFieldOrBuilder> 
       getResultsOrBuilderList() {
     return results_;
@@ -134,6 +142,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v1.resources.GoogleAdsField results = 1;</code>
    */
+  @java.lang.Override
   public int getResultsCount() {
     return results_.size();
   }
@@ -144,6 +153,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v1.resources.GoogleAdsField results = 1;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.resources.GoogleAdsField getResults(int index) {
     return results_.get(index);
   }
@@ -154,6 +164,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v1.resources.GoogleAdsField results = 1;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.resources.GoogleAdsFieldOrBuilder getResultsOrBuilder(
       int index) {
     return results_.get(index);
@@ -169,7 +180,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string next_page_token = 2;</code>
+   * @return The nextPageToken.
    */
+  @java.lang.Override
   public java.lang.String getNextPageToken() {
     java.lang.Object ref = nextPageToken_;
     if (ref instanceof java.lang.String) {
@@ -190,7 +203,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string next_page_token = 2;</code>
+   * @return The bytes for nextPageToken.
    */
+  @java.lang.Override
   public com.google.protobuf.ByteString
       getNextPageTokenBytes() {
     java.lang.Object ref = nextPageToken_;
@@ -213,7 +228,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>int64 total_results_count = 3;</code>
+   * @return The totalResultsCount.
    */
+  @java.lang.Override
   public long getTotalResultsCount() {
     return totalResultsCount_;
   }
@@ -477,7 +494,6 @@ private static final long serialVersionUID = 0L;
     public com.google.ads.googleads.v1.services.SearchGoogleAdsFieldsResponse buildPartial() {
       com.google.ads.googleads.v1.services.SearchGoogleAdsFieldsResponse result = new com.google.ads.googleads.v1.services.SearchGoogleAdsFieldsResponse(this);
       int from_bitField0_ = bitField0_;
-      int to_bitField0_ = 0;
       if (resultsBuilder_ == null) {
         if (((bitField0_ & 0x00000001) != 0)) {
           results_ = java.util.Collections.unmodifiableList(results_);
@@ -489,7 +505,6 @@ private static final long serialVersionUID = 0L;
       }
       result.nextPageToken_ = nextPageToken_;
       result.totalResultsCount_ = totalResultsCount_;
-      result.bitField0_ = to_bitField0_;
       onBuilt();
       return result;
     }
@@ -922,6 +937,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The nextPageToken.
      */
     public java.lang.String getNextPageToken() {
       java.lang.Object ref = nextPageToken_;
@@ -943,6 +959,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The bytes for nextPageToken.
      */
     public com.google.protobuf.ByteString
         getNextPageTokenBytes() {
@@ -965,6 +982,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @param value The nextPageToken to set.
+     * @return This builder for chaining.
      */
     public Builder setNextPageToken(
         java.lang.String value) {
@@ -984,6 +1003,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return This builder for chaining.
      */
     public Builder clearNextPageToken() {
       
@@ -999,6 +1019,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @param value The bytes for nextPageToken to set.
+     * @return This builder for chaining.
      */
     public Builder setNextPageTokenBytes(
         com.google.protobuf.ByteString value) {
@@ -1019,7 +1041,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>int64 total_results_count = 3;</code>
+     * @return The totalResultsCount.
      */
+    @java.lang.Override
     public long getTotalResultsCount() {
       return totalResultsCount_;
     }
@@ -1029,6 +1053,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>int64 total_results_count = 3;</code>
+     * @param value The totalResultsCount to set.
+     * @return This builder for chaining.
      */
     public Builder setTotalResultsCount(long value) {
       
@@ -1042,6 +1068,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>int64 total_results_count = 3;</code>
+     * @return This builder for chaining.
      */
     public Builder clearTotalResultsCount() {
       

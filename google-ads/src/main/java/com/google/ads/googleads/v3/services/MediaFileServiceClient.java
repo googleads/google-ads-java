@@ -1,5 +1,5 @@
 /*
- * Copyright 2019 Google LLC
+ * Copyright 2020 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -21,7 +21,6 @@ import com.google.ads.googleads.v3.services.stub.MediaFileServiceStubSettings;
 import com.google.api.core.BetaApi;
 import com.google.api.gax.core.BackgroundResource;
 import com.google.api.gax.rpc.UnaryCallable;
-import com.google.api.pathtemplate.PathTemplate;
 import java.io.IOException;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
@@ -37,8 +36,8 @@ import javax.annotation.Generated;
  * <pre>
  * <code>
  * try (MediaFileServiceClient mediaFileServiceClient = MediaFileServiceClient.create()) {
- *   String formattedResourceName = MediaFileServiceClient.formatMediaFileName("[CUSTOMER]", "[MEDIA_FILE]");
- *   MediaFile response = mediaFileServiceClient.getMediaFile(formattedResourceName);
+ *   MediaFileName resourceName = MediaFileName.of("[CUSTOMER]", "[MEDIA_FILE]");
+ *   MediaFile response = mediaFileServiceClient.getMediaFile(resourceName);
  * }
  * </code>
  * </pre>
@@ -100,42 +99,6 @@ public class MediaFileServiceClient implements BackgroundResource {
   private final MediaFileServiceSettings settings;
   private final MediaFileServiceStub stub;
 
-  private static final PathTemplate MEDIA_FILE_PATH_TEMPLATE =
-      PathTemplate.createWithoutUrlEncoding("customers/{customer}/mediaFiles/{media_file}");
-
-  /**
-   * Formats a string containing the fully-qualified path to represent a media_file resource.
-   *
-   * @deprecated Use the {@link MediaFileName} class instead.
-   */
-  @Deprecated
-  public static final String formatMediaFileName(String customer, String mediaFile) {
-    return MEDIA_FILE_PATH_TEMPLATE.instantiate(
-        "customer", customer,
-        "media_file", mediaFile);
-  }
-
-  /**
-   * Parses the customer from the given fully-qualified path which represents a media_file resource.
-   *
-   * @deprecated Use the {@link MediaFileName} class instead.
-   */
-  @Deprecated
-  public static final String parseCustomerFromMediaFileName(String mediaFileName) {
-    return MEDIA_FILE_PATH_TEMPLATE.parse(mediaFileName).get("customer");
-  }
-
-  /**
-   * Parses the media_file from the given fully-qualified path which represents a media_file
-   * resource.
-   *
-   * @deprecated Use the {@link MediaFileName} class instead.
-   */
-  @Deprecated
-  public static final String parseMediaFileFromMediaFileName(String mediaFileName) {
-    return MEDIA_FILE_PATH_TEMPLATE.parse(mediaFileName).get("media_file");
-  }
-
   /** Constructs an instance of MediaFileServiceClient with default settings. */
   public static final MediaFileServiceClient create() throws IOException {
     return create(MediaFileServiceSettings.newBuilder().build());
@@ -192,8 +155,32 @@ public class MediaFileServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (MediaFileServiceClient mediaFileServiceClient = MediaFileServiceClient.create()) {
-   *   String formattedResourceName = MediaFileServiceClient.formatMediaFileName("[CUSTOMER]", "[MEDIA_FILE]");
-   *   MediaFile response = mediaFileServiceClient.getMediaFile(formattedResourceName);
+   *   MediaFileName resourceName = MediaFileName.of("[CUSTOMER]", "[MEDIA_FILE]");
+   *   MediaFile response = mediaFileServiceClient.getMediaFile(resourceName);
+   * }
+   * </code></pre>
+   *
+   * @param resourceName Required. The resource name of the media file to fetch.
+   * @throws com.google.api.gax.rpc.ApiException if the remote call fails
+   */
+  public final MediaFile getMediaFile(MediaFileName resourceName) {
+    GetMediaFileRequest request =
+        GetMediaFileRequest.newBuilder()
+            .setResourceName(resourceName == null ? null : resourceName.toString())
+            .build();
+    return getMediaFile(request);
+  }
+
+  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  /**
+   * Returns the requested media file in full detail.
+   *
+   * <p>Sample code:
+   *
+   * <pre><code>
+   * try (MediaFileServiceClient mediaFileServiceClient = MediaFileServiceClient.create()) {
+   *   MediaFileName resourceName = MediaFileName.of("[CUSTOMER]", "[MEDIA_FILE]");
+   *   MediaFile response = mediaFileServiceClient.getMediaFile(resourceName.toString());
    * }
    * </code></pre>
    *
@@ -201,7 +188,6 @@ public class MediaFileServiceClient implements BackgroundResource {
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final MediaFile getMediaFile(String resourceName) {
-    MEDIA_FILE_PATH_TEMPLATE.validate(resourceName, "getMediaFile");
     GetMediaFileRequest request =
         GetMediaFileRequest.newBuilder().setResourceName(resourceName).build();
     return getMediaFile(request);
@@ -215,9 +201,9 @@ public class MediaFileServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (MediaFileServiceClient mediaFileServiceClient = MediaFileServiceClient.create()) {
-   *   String formattedResourceName = MediaFileServiceClient.formatMediaFileName("[CUSTOMER]", "[MEDIA_FILE]");
+   *   MediaFileName resourceName = MediaFileName.of("[CUSTOMER]", "[MEDIA_FILE]");
    *   GetMediaFileRequest request = GetMediaFileRequest.newBuilder()
-   *     .setResourceName(formattedResourceName)
+   *     .setResourceName(resourceName.toString())
    *     .build();
    *   MediaFile response = mediaFileServiceClient.getMediaFile(request);
    * }
@@ -238,9 +224,9 @@ public class MediaFileServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (MediaFileServiceClient mediaFileServiceClient = MediaFileServiceClient.create()) {
-   *   String formattedResourceName = MediaFileServiceClient.formatMediaFileName("[CUSTOMER]", "[MEDIA_FILE]");
+   *   MediaFileName resourceName = MediaFileName.of("[CUSTOMER]", "[MEDIA_FILE]");
    *   GetMediaFileRequest request = GetMediaFileRequest.newBuilder()
-   *     .setResourceName(formattedResourceName)
+   *     .setResourceName(resourceName.toString())
    *     .build();
    *   ApiFuture&lt;MediaFile&gt; future = mediaFileServiceClient.getMediaFileCallable().futureCall(request);
    *   // Do something
@@ -250,47 +236,6 @@ public class MediaFileServiceClient implements BackgroundResource {
    */
   public final UnaryCallable<GetMediaFileRequest, MediaFile> getMediaFileCallable() {
     return stub.getMediaFileCallable();
-  }
-
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
-  /**
-   * Creates media files. Operation statuses are returned.
-   *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (MediaFileServiceClient mediaFileServiceClient = MediaFileServiceClient.create()) {
-   *   String customerId = "";
-   *   List&lt;MediaFileOperation&gt; operations = new ArrayList&lt;&gt;();
-   *   boolean partialFailure = false;
-   *   boolean validateOnly = false;
-   *   MutateMediaFilesResponse response = mediaFileServiceClient.mutateMediaFiles(customerId, operations, partialFailure, validateOnly);
-   * }
-   * </code></pre>
-   *
-   * @param customerId Required. The ID of the customer whose media files are being modified.
-   * @param operations Required. The list of operations to perform on individual media file.
-   * @param partialFailure If true, successful operations will be carried out and invalid operations
-   *     will return errors. If false, all operations will be carried out in one transaction if and
-   *     only if they are all valid. Default is false.
-   * @param validateOnly If true, the request is validated but not executed. Only errors are
-   *     returned, not results.
-   * @throws com.google.api.gax.rpc.ApiException if the remote call fails
-   */
-  public final MutateMediaFilesResponse mutateMediaFiles(
-      String customerId,
-      List<MediaFileOperation> operations,
-      boolean partialFailure,
-      boolean validateOnly) {
-
-    MutateMediaFilesRequest request =
-        MutateMediaFilesRequest.newBuilder()
-            .setCustomerId(customerId)
-            .addAllOperations(operations)
-            .setPartialFailure(partialFailure)
-            .setValidateOnly(validateOnly)
-            .build();
-    return mutateMediaFiles(request);
   }
 
   // AUTO-GENERATED DOCUMENTATION AND METHOD
@@ -313,7 +258,6 @@ public class MediaFileServiceClient implements BackgroundResource {
    */
   public final MutateMediaFilesResponse mutateMediaFiles(
       String customerId, List<MediaFileOperation> operations) {
-
     MutateMediaFilesRequest request =
         MutateMediaFilesRequest.newBuilder()
             .setCustomerId(customerId)

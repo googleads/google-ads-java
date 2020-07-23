@@ -8,12 +8,11 @@ package com.google.ads.googleads.v3.common;
  * An automated bidding strategy that sets bids so that a certain percentage of
  * search ads are shown at the top of the first page (or other targeted
  * location).
- * next tag = 4
  * </pre>
  *
  * Protobuf type {@code google.ads.googleads.v3.common.TargetImpressionShare}
  */
-public  final class TargetImpressionShare extends
+public final class TargetImpressionShare extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v3.common.TargetImpressionShare)
     TargetImpressionShareOrBuilder {
@@ -24,6 +23,13 @@ private static final long serialVersionUID = 0L;
   }
   private TargetImpressionShare() {
     location_ = 0;
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new TargetImpressionShare();
   }
 
   @java.lang.Override
@@ -39,7 +45,6 @@ private static final long serialVersionUID = 0L;
     if (extensionRegistry == null) {
       throw new java.lang.NullPointerException();
     }
-    int mutable_bitField0_ = 0;
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
         com.google.protobuf.UnknownFieldSet.newBuilder();
     try {
@@ -122,8 +127,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.TargetImpressionShareLocationEnum.TargetImpressionShareLocation location = 1;</code>
+   * @return The enum numeric value on the wire for location.
    */
-  public int getLocationValue() {
+  @java.lang.Override public int getLocationValue() {
     return location_;
   }
   /**
@@ -132,8 +138,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.TargetImpressionShareLocationEnum.TargetImpressionShareLocation location = 1;</code>
+   * @return The location.
    */
-  public com.google.ads.googleads.v3.enums.TargetImpressionShareLocationEnum.TargetImpressionShareLocation getLocation() {
+  @java.lang.Override public com.google.ads.googleads.v3.enums.TargetImpressionShareLocationEnum.TargetImpressionShareLocation getLocation() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v3.enums.TargetImpressionShareLocationEnum.TargetImpressionShareLocation result = com.google.ads.googleads.v3.enums.TargetImpressionShareLocationEnum.TargetImpressionShareLocation.valueOf(location_);
     return result == null ? com.google.ads.googleads.v3.enums.TargetImpressionShareLocationEnum.TargetImpressionShareLocation.UNRECOGNIZED : result;
@@ -148,7 +155,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Int64Value location_fraction_micros = 2;</code>
+   * @return Whether the locationFractionMicros field is set.
    */
+  @java.lang.Override
   public boolean hasLocationFractionMicros() {
     return locationFractionMicros_ != null;
   }
@@ -159,7 +168,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Int64Value location_fraction_micros = 2;</code>
+   * @return The locationFractionMicros.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getLocationFractionMicros() {
     return locationFractionMicros_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : locationFractionMicros_;
   }
@@ -171,6 +182,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int64Value location_fraction_micros = 2;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getLocationFractionMicrosOrBuilder() {
     return getLocationFractionMicros();
   }
@@ -185,7 +197,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Int64Value cpc_bid_ceiling_micros = 3;</code>
+   * @return Whether the cpcBidCeilingMicros field is set.
    */
+  @java.lang.Override
   public boolean hasCpcBidCeilingMicros() {
     return cpcBidCeilingMicros_ != null;
   }
@@ -197,7 +211,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Int64Value cpc_bid_ceiling_micros = 3;</code>
+   * @return The cpcBidCeilingMicros.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getCpcBidCeilingMicros() {
     return cpcBidCeilingMicros_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : cpcBidCeilingMicros_;
   }
@@ -210,6 +226,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int64Value cpc_bid_ceiling_micros = 3;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getCpcBidCeilingMicrosOrBuilder() {
     return getCpcBidCeilingMicros();
   }
@@ -405,7 +422,6 @@ private static final long serialVersionUID = 0L;
    * An automated bidding strategy that sets bids so that a certain percentage of
    * search ads are shown at the top of the first page (or other targeted
    * location).
-   * next tag = 4
    * </pre>
    *
    * Protobuf type {@code google.ads.googleads.v3.common.TargetImpressionShare}
@@ -589,8 +605,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.TargetImpressionShareLocationEnum.TargetImpressionShareLocation location = 1;</code>
+     * @return The enum numeric value on the wire for location.
      */
-    public int getLocationValue() {
+    @java.lang.Override public int getLocationValue() {
       return location_;
     }
     /**
@@ -599,8 +616,11 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.TargetImpressionShareLocationEnum.TargetImpressionShareLocation location = 1;</code>
+     * @param value The enum numeric value on the wire for location to set.
+     * @return This builder for chaining.
      */
     public Builder setLocationValue(int value) {
+      
       location_ = value;
       onChanged();
       return this;
@@ -611,7 +631,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.TargetImpressionShareLocationEnum.TargetImpressionShareLocation location = 1;</code>
+     * @return The location.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.enums.TargetImpressionShareLocationEnum.TargetImpressionShareLocation getLocation() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v3.enums.TargetImpressionShareLocationEnum.TargetImpressionShareLocation result = com.google.ads.googleads.v3.enums.TargetImpressionShareLocationEnum.TargetImpressionShareLocation.valueOf(location_);
@@ -623,6 +645,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.TargetImpressionShareLocationEnum.TargetImpressionShareLocation location = 1;</code>
+     * @param value The location to set.
+     * @return This builder for chaining.
      */
     public Builder setLocation(com.google.ads.googleads.v3.enums.TargetImpressionShareLocationEnum.TargetImpressionShareLocation value) {
       if (value == null) {
@@ -639,6 +663,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.TargetImpressionShareLocationEnum.TargetImpressionShareLocation location = 1;</code>
+     * @return This builder for chaining.
      */
     public Builder clearLocation() {
       
@@ -657,6 +682,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value location_fraction_micros = 2;</code>
+     * @return Whether the locationFractionMicros field is set.
      */
     public boolean hasLocationFractionMicros() {
       return locationFractionMicrosBuilder_ != null || locationFractionMicros_ != null;
@@ -668,6 +694,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value location_fraction_micros = 2;</code>
+     * @return The locationFractionMicros.
      */
     public com.google.protobuf.Int64Value getLocationFractionMicros() {
       if (locationFractionMicrosBuilder_ == null) {
@@ -820,6 +847,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value cpc_bid_ceiling_micros = 3;</code>
+     * @return Whether the cpcBidCeilingMicros field is set.
      */
     public boolean hasCpcBidCeilingMicros() {
       return cpcBidCeilingMicrosBuilder_ != null || cpcBidCeilingMicros_ != null;
@@ -832,6 +860,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value cpc_bid_ceiling_micros = 3;</code>
+     * @return The cpcBidCeilingMicros.
      */
     public com.google.protobuf.Int64Value getCpcBidCeilingMicros() {
       if (cpcBidCeilingMicrosBuilder_ == null) {

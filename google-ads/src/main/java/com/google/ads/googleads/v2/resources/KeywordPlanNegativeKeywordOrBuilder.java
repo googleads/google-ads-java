@@ -9,22 +9,24 @@ public interface KeywordPlanNegativeKeywordOrBuilder extends
 
   /**
    * <pre>
-   * The resource name of the Keyword Plan negative keyword.
+   * Immutable. The resource name of the Keyword Plan negative keyword.
    * KeywordPlanNegativeKeyword resource names have the form:
    * `customers/{customer_id}/keywordPlanNegativeKeywords/{kp_negative_keyword_id}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * @return The resourceName.
    */
   java.lang.String getResourceName();
   /**
    * <pre>
-   * The resource name of the Keyword Plan negative keyword.
+   * Immutable. The resource name of the Keyword Plan negative keyword.
    * KeywordPlanNegativeKeyword resource names have the form:
    * `customers/{customer_id}/keywordPlanNegativeKeywords/{kp_negative_keyword_id}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * @return The bytes for resourceName.
    */
   com.google.protobuf.ByteString
       getResourceNameBytes();
@@ -34,7 +36,8 @@ public interface KeywordPlanNegativeKeywordOrBuilder extends
    * The Keyword Plan campaign to which this negative keyword belongs.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue keyword_plan_campaign = 2;</code>
+   * <code>.google.protobuf.StringValue keyword_plan_campaign = 2 [(.google.api.resource_reference) = { ... }</code>
+   * @return Whether the keywordPlanCampaign field is set.
    */
   boolean hasKeywordPlanCampaign();
   /**
@@ -42,7 +45,8 @@ public interface KeywordPlanNegativeKeywordOrBuilder extends
    * The Keyword Plan campaign to which this negative keyword belongs.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue keyword_plan_campaign = 2;</code>
+   * <code>.google.protobuf.StringValue keyword_plan_campaign = 2 [(.google.api.resource_reference) = { ... }</code>
+   * @return The keywordPlanCampaign.
    */
   com.google.protobuf.StringValue getKeywordPlanCampaign();
   /**
@@ -50,32 +54,34 @@ public interface KeywordPlanNegativeKeywordOrBuilder extends
    * The Keyword Plan campaign to which this negative keyword belongs.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue keyword_plan_campaign = 2;</code>
+   * <code>.google.protobuf.StringValue keyword_plan_campaign = 2 [(.google.api.resource_reference) = { ... }</code>
    */
   com.google.protobuf.StringValueOrBuilder getKeywordPlanCampaignOrBuilder();
 
   /**
    * <pre>
-   * The ID of the Keyword Plan negative keyword.
+   * Output only. The ID of the Keyword Plan negative keyword.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value id = 3;</code>
+   * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the id field is set.
    */
   boolean hasId();
   /**
    * <pre>
-   * The ID of the Keyword Plan negative keyword.
+   * Output only. The ID of the Keyword Plan negative keyword.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value id = 3;</code>
+   * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The id.
    */
   com.google.protobuf.Int64Value getId();
   /**
    * <pre>
-   * The ID of the Keyword Plan negative keyword.
+   * Output only. The ID of the Keyword Plan negative keyword.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value id = 3;</code>
+   * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.protobuf.Int64ValueOrBuilder getIdOrBuilder();
 
@@ -85,6 +91,7 @@ public interface KeywordPlanNegativeKeywordOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue text = 4;</code>
+   * @return Whether the text field is set.
    */
   boolean hasText();
   /**
@@ -93,6 +100,7 @@ public interface KeywordPlanNegativeKeywordOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue text = 4;</code>
+   * @return The text.
    */
   com.google.protobuf.StringValue getText();
   /**
@@ -110,6 +118,7 @@ public interface KeywordPlanNegativeKeywordOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.enums.KeywordMatchTypeEnum.KeywordMatchType match_type = 5;</code>
+   * @return The enum numeric value on the wire for matchType.
    */
   int getMatchTypeValue();
   /**
@@ -118,6 +127,7 @@ public interface KeywordPlanNegativeKeywordOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.enums.KeywordMatchTypeEnum.KeywordMatchType match_type = 5;</code>
+   * @return The matchType.
    */
   com.google.ads.googleads.v2.enums.KeywordMatchTypeEnum.KeywordMatchType getMatchType();
 }

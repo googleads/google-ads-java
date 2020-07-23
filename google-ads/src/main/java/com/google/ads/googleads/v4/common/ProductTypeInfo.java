@@ -10,7 +10,7 @@ package com.google.ads.googleads.v4.common;
  *
  * Protobuf type {@code google.ads.googleads.v4.common.ProductTypeInfo}
  */
-public  final class ProductTypeInfo extends
+public final class ProductTypeInfo extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.common.ProductTypeInfo)
     ProductTypeInfoOrBuilder {
@@ -114,6 +114,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue value = 1;</code>
    * @return Whether the value field is set.
    */
+  @java.lang.Override
   public boolean hasValue() {
     return value_ != null;
   }
@@ -125,6 +126,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue value = 1;</code>
    * @return The value.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getValue() {
     return value_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : value_;
   }
@@ -135,6 +137,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue value = 1;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getValueOrBuilder() {
     return getValue();
   }
@@ -149,7 +152,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.ProductTypeLevelEnum.ProductTypeLevel level = 2;</code>
    * @return The enum numeric value on the wire for level.
    */
-  public int getLevelValue() {
+  @java.lang.Override public int getLevelValue() {
     return level_;
   }
   /**
@@ -160,7 +163,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.ProductTypeLevelEnum.ProductTypeLevel level = 2;</code>
    * @return The level.
    */
-  public com.google.ads.googleads.v4.enums.ProductTypeLevelEnum.ProductTypeLevel getLevel() {
+  @java.lang.Override public com.google.ads.googleads.v4.enums.ProductTypeLevelEnum.ProductTypeLevel getLevel() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v4.enums.ProductTypeLevelEnum.ProductTypeLevel result = com.google.ads.googleads.v4.enums.ProductTypeLevelEnum.ProductTypeLevel.valueOf(level_);
     return result == null ? com.google.ads.googleads.v4.enums.ProductTypeLevelEnum.ProductTypeLevel.UNRECOGNIZED : result;
@@ -665,7 +668,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.ProductTypeLevelEnum.ProductTypeLevel level = 2;</code>
      * @return The enum numeric value on the wire for level.
      */
-    public int getLevelValue() {
+    @java.lang.Override public int getLevelValue() {
       return level_;
     }
     /**
@@ -678,6 +681,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setLevelValue(int value) {
+      
       level_ = value;
       onChanged();
       return this;
@@ -690,6 +694,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.ProductTypeLevelEnum.ProductTypeLevel level = 2;</code>
      * @return The level.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.enums.ProductTypeLevelEnum.ProductTypeLevel getLevel() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v4.enums.ProductTypeLevelEnum.ProductTypeLevel result = com.google.ads.googleads.v4.enums.ProductTypeLevelEnum.ProductTypeLevel.valueOf(level_);

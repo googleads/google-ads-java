@@ -10,7 +10,7 @@ package com.google.ads.googleads.v4.services;
  *
  * Protobuf type {@code google.ads.googleads.v4.services.MutateBillingSetupResponse}
  */
-public  final class MutateBillingSetupResponse extends
+public final class MutateBillingSetupResponse extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.services.MutateBillingSetupResponse)
     MutateBillingSetupResponseOrBuilder {
@@ -107,6 +107,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.services.MutateBillingSetupResult result = 1;</code>
    * @return Whether the result field is set.
    */
+  @java.lang.Override
   public boolean hasResult() {
     return result_ != null;
   }
@@ -118,6 +119,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.services.MutateBillingSetupResult result = 1;</code>
    * @return The result.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.services.MutateBillingSetupResult getResult() {
     return result_ == null ? com.google.ads.googleads.v4.services.MutateBillingSetupResult.getDefaultInstance() : result_;
   }
@@ -128,6 +130,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v4.services.MutateBillingSetupResult result = 1;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.services.MutateBillingSetupResultOrBuilder getResultOrBuilder() {
     return getResult();
   }

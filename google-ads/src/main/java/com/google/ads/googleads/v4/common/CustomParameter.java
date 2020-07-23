@@ -11,7 +11,7 @@ package com.google.ads.googleads.v4.common;
  *
  * Protobuf type {@code google.ads.googleads.v4.common.CustomParameter}
  */
-public  final class CustomParameter extends
+public final class CustomParameter extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.common.CustomParameter)
     CustomParameterOrBuilder {
@@ -121,6 +121,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue key = 1;</code>
    * @return Whether the key field is set.
    */
+  @java.lang.Override
   public boolean hasKey() {
     return key_ != null;
   }
@@ -132,6 +133,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue key = 1;</code>
    * @return The key.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getKey() {
     return key_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : key_;
   }
@@ -142,6 +144,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue key = 1;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getKeyOrBuilder() {
     return getKey();
   }
@@ -156,6 +159,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue value = 2;</code>
    * @return Whether the value field is set.
    */
+  @java.lang.Override
   public boolean hasValue() {
     return value_ != null;
   }
@@ -167,6 +171,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue value = 2;</code>
    * @return The value.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getValue() {
     return value_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : value_;
   }
@@ -177,6 +182,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue value = 2;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getValueOrBuilder() {
     return getValue();
   }

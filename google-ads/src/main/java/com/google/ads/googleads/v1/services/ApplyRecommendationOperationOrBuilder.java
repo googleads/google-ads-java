@@ -13,6 +13,7 @@ public interface ApplyRecommendationOperationOrBuilder extends
    * </pre>
    *
    * <code>string resource_name = 1;</code>
+   * @return The resourceName.
    */
   java.lang.String getResourceName();
   /**
@@ -21,6 +22,7 @@ public interface ApplyRecommendationOperationOrBuilder extends
    * </pre>
    *
    * <code>string resource_name = 1;</code>
+   * @return The bytes for resourceName.
    */
   com.google.protobuf.ByteString
       getResourceNameBytes();
@@ -32,6 +34,7 @@ public interface ApplyRecommendationOperationOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v1.services.ApplyRecommendationOperation.CampaignBudgetParameters campaign_budget = 2;</code>
+   * @return Whether the campaignBudget field is set.
    */
   boolean hasCampaignBudget();
   /**
@@ -41,6 +44,7 @@ public interface ApplyRecommendationOperationOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v1.services.ApplyRecommendationOperation.CampaignBudgetParameters campaign_budget = 2;</code>
+   * @return The campaignBudget.
    */
   com.google.ads.googleads.v1.services.ApplyRecommendationOperation.CampaignBudgetParameters getCampaignBudget();
   /**
@@ -59,6 +63,7 @@ public interface ApplyRecommendationOperationOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v1.services.ApplyRecommendationOperation.TextAdParameters text_ad = 3;</code>
+   * @return Whether the textAd field is set.
    */
   boolean hasTextAd();
   /**
@@ -67,6 +72,7 @@ public interface ApplyRecommendationOperationOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v1.services.ApplyRecommendationOperation.TextAdParameters text_ad = 3;</code>
+   * @return The textAd.
    */
   com.google.ads.googleads.v1.services.ApplyRecommendationOperation.TextAdParameters getTextAd();
   /**
@@ -84,6 +90,7 @@ public interface ApplyRecommendationOperationOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v1.services.ApplyRecommendationOperation.KeywordParameters keyword = 4;</code>
+   * @return Whether the keyword field is set.
    */
   boolean hasKeyword();
   /**
@@ -92,6 +99,7 @@ public interface ApplyRecommendationOperationOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v1.services.ApplyRecommendationOperation.KeywordParameters keyword = 4;</code>
+   * @return The keyword.
    */
   com.google.ads.googleads.v1.services.ApplyRecommendationOperation.KeywordParameters getKeyword();
   /**
@@ -110,6 +118,7 @@ public interface ApplyRecommendationOperationOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v1.services.ApplyRecommendationOperation.TargetCpaOptInParameters target_cpa_opt_in = 5;</code>
+   * @return Whether the targetCpaOptIn field is set.
    */
   boolean hasTargetCpaOptIn();
   /**
@@ -119,6 +128,7 @@ public interface ApplyRecommendationOperationOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v1.services.ApplyRecommendationOperation.TargetCpaOptInParameters target_cpa_opt_in = 5;</code>
+   * @return The targetCpaOptIn.
    */
   com.google.ads.googleads.v1.services.ApplyRecommendationOperation.TargetCpaOptInParameters getTargetCpaOptIn();
   /**
@@ -137,6 +147,7 @@ public interface ApplyRecommendationOperationOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v1.services.ApplyRecommendationOperation.CalloutExtensionParameters callout_extension = 6;</code>
+   * @return Whether the calloutExtension field is set.
    */
   boolean hasCalloutExtension();
   /**
@@ -145,6 +156,7 @@ public interface ApplyRecommendationOperationOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v1.services.ApplyRecommendationOperation.CalloutExtensionParameters callout_extension = 6;</code>
+   * @return The calloutExtension.
    */
   com.google.ads.googleads.v1.services.ApplyRecommendationOperation.CalloutExtensionParameters getCalloutExtension();
   /**
@@ -162,6 +174,7 @@ public interface ApplyRecommendationOperationOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v1.services.ApplyRecommendationOperation.CallExtensionParameters call_extension = 7;</code>
+   * @return Whether the callExtension field is set.
    */
   boolean hasCallExtension();
   /**
@@ -170,6 +183,7 @@ public interface ApplyRecommendationOperationOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v1.services.ApplyRecommendationOperation.CallExtensionParameters call_extension = 7;</code>
+   * @return The callExtension.
    */
   com.google.ads.googleads.v1.services.ApplyRecommendationOperation.CallExtensionParameters getCallExtension();
   /**
@@ -187,6 +201,7 @@ public interface ApplyRecommendationOperationOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v1.services.ApplyRecommendationOperation.SitelinkExtensionParameters sitelink_extension = 8;</code>
+   * @return Whether the sitelinkExtension field is set.
    */
   boolean hasSitelinkExtension();
   /**
@@ -195,6 +210,7 @@ public interface ApplyRecommendationOperationOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v1.services.ApplyRecommendationOperation.SitelinkExtensionParameters sitelink_extension = 8;</code>
+   * @return The sitelinkExtension.
    */
   com.google.ads.googleads.v1.services.ApplyRecommendationOperation.SitelinkExtensionParameters getSitelinkExtension();
   /**
@@ -212,6 +228,7 @@ public interface ApplyRecommendationOperationOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v1.services.ApplyRecommendationOperation.MoveUnusedBudgetParameters move_unused_budget = 9;</code>
+   * @return Whether the moveUnusedBudget field is set.
    */
   boolean hasMoveUnusedBudget();
   /**
@@ -220,6 +237,7 @@ public interface ApplyRecommendationOperationOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v1.services.ApplyRecommendationOperation.MoveUnusedBudgetParameters move_unused_budget = 9;</code>
+   * @return The moveUnusedBudget.
    */
   com.google.ads.googleads.v1.services.ApplyRecommendationOperation.MoveUnusedBudgetParameters getMoveUnusedBudget();
   /**

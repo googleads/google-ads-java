@@ -10,7 +10,7 @@ package com.google.ads.googleads.v1.common;
  *
  * Protobuf type {@code google.ads.googleads.v1.common.AppPaymentModelInfo}
  */
-public  final class AppPaymentModelInfo extends
+public final class AppPaymentModelInfo extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v1.common.AppPaymentModelInfo)
     AppPaymentModelInfoOrBuilder {
@@ -21,6 +21,13 @@ private static final long serialVersionUID = 0L;
   }
   private AppPaymentModelInfo() {
     type_ = 0;
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new AppPaymentModelInfo();
   }
 
   @java.lang.Override
@@ -36,7 +43,6 @@ private static final long serialVersionUID = 0L;
     if (extensionRegistry == null) {
       throw new java.lang.NullPointerException();
     }
-    int mutable_bitField0_ = 0;
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
         com.google.protobuf.UnknownFieldSet.newBuilder();
     try {
@@ -93,8 +99,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.enums.AppPaymentModelTypeEnum.AppPaymentModelType type = 1;</code>
+   * @return The enum numeric value on the wire for type.
    */
-  public int getTypeValue() {
+  @java.lang.Override public int getTypeValue() {
     return type_;
   }
   /**
@@ -103,8 +110,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.enums.AppPaymentModelTypeEnum.AppPaymentModelType type = 1;</code>
+   * @return The type.
    */
-  public com.google.ads.googleads.v1.enums.AppPaymentModelTypeEnum.AppPaymentModelType getType() {
+  @java.lang.Override public com.google.ads.googleads.v1.enums.AppPaymentModelTypeEnum.AppPaymentModelType getType() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v1.enums.AppPaymentModelTypeEnum.AppPaymentModelType result = com.google.ads.googleads.v1.enums.AppPaymentModelTypeEnum.AppPaymentModelType.valueOf(type_);
     return result == null ? com.google.ads.googleads.v1.enums.AppPaymentModelTypeEnum.AppPaymentModelType.UNRECOGNIZED : result;
@@ -422,8 +430,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.enums.AppPaymentModelTypeEnum.AppPaymentModelType type = 1;</code>
+     * @return The enum numeric value on the wire for type.
      */
-    public int getTypeValue() {
+    @java.lang.Override public int getTypeValue() {
       return type_;
     }
     /**
@@ -432,8 +441,11 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.enums.AppPaymentModelTypeEnum.AppPaymentModelType type = 1;</code>
+     * @param value The enum numeric value on the wire for type to set.
+     * @return This builder for chaining.
      */
     public Builder setTypeValue(int value) {
+      
       type_ = value;
       onChanged();
       return this;
@@ -444,7 +456,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.enums.AppPaymentModelTypeEnum.AppPaymentModelType type = 1;</code>
+     * @return The type.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v1.enums.AppPaymentModelTypeEnum.AppPaymentModelType getType() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v1.enums.AppPaymentModelTypeEnum.AppPaymentModelType result = com.google.ads.googleads.v1.enums.AppPaymentModelTypeEnum.AppPaymentModelType.valueOf(type_);
@@ -456,6 +470,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.enums.AppPaymentModelTypeEnum.AppPaymentModelType type = 1;</code>
+     * @param value The type to set.
+     * @return This builder for chaining.
      */
     public Builder setType(com.google.ads.googleads.v1.enums.AppPaymentModelTypeEnum.AppPaymentModelType value) {
       if (value == null) {
@@ -472,6 +488,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.enums.AppPaymentModelTypeEnum.AppPaymentModelType type = 1;</code>
+     * @return This builder for chaining.
      */
     public Builder clearType() {
       

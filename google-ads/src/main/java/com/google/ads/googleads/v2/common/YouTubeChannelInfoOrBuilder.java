@@ -13,6 +13,7 @@ public interface YouTubeChannelInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue channel_id = 1;</code>
+   * @return Whether the channelId field is set.
    */
   boolean hasChannelId();
   /**
@@ -21,6 +22,7 @@ public interface YouTubeChannelInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue channel_id = 1;</code>
+   * @return The channelId.
    */
   com.google.protobuf.StringValue getChannelId();
   /**

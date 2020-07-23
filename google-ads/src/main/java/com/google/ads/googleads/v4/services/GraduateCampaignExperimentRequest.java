@@ -10,7 +10,7 @@ package com.google.ads.googleads.v4.services;
  *
  * Protobuf type {@code google.ads.googleads.v4.services.GraduateCampaignExperimentRequest}
  */
-public  final class GraduateCampaignExperimentRequest extends
+public final class GraduateCampaignExperimentRequest extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.services.GraduateCampaignExperimentRequest)
     GraduateCampaignExperimentRequestOrBuilder {
@@ -108,6 +108,7 @@ private static final long serialVersionUID = 0L;
    * <code>string campaign_experiment = 1 [(.google.api.field_behavior) = REQUIRED];</code>
    * @return The campaignExperiment.
    */
+  @java.lang.Override
   public java.lang.String getCampaignExperiment() {
     java.lang.Object ref = campaignExperiment_;
     if (ref instanceof java.lang.String) {
@@ -128,6 +129,7 @@ private static final long serialVersionUID = 0L;
    * <code>string campaign_experiment = 1 [(.google.api.field_behavior) = REQUIRED];</code>
    * @return The bytes for campaignExperiment.
    */
+  @java.lang.Override
   public com.google.protobuf.ByteString
       getCampaignExperimentBytes() {
     java.lang.Object ref = campaignExperiment_;
@@ -153,6 +155,7 @@ private static final long serialVersionUID = 0L;
    * <code>string campaign_budget = 2 [(.google.api.field_behavior) = REQUIRED];</code>
    * @return The campaignBudget.
    */
+  @java.lang.Override
   public java.lang.String getCampaignBudget() {
     java.lang.Object ref = campaignBudget_;
     if (ref instanceof java.lang.String) {
@@ -174,6 +177,7 @@ private static final long serialVersionUID = 0L;
    * <code>string campaign_budget = 2 [(.google.api.field_behavior) = REQUIRED];</code>
    * @return The bytes for campaignBudget.
    */
+  @java.lang.Override
   public com.google.protobuf.ByteString
       getCampaignBudgetBytes() {
     java.lang.Object ref = campaignBudget_;

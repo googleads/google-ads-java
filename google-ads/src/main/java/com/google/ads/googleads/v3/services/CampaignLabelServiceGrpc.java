@@ -21,7 +21,7 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.10.0)",
+    value = "by gRPC proto compiler",
     comments = "Source: google/ads/googleads/v3/services/campaign_label_service.proto")
 public final class CampaignLabelServiceGrpc {
 
@@ -30,86 +30,80 @@ public final class CampaignLabelServiceGrpc {
   public static final String SERVICE_NAME = "google.ads.googleads.v3.services.CampaignLabelService";
 
   // Static method descriptors that strictly reflect the proto.
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  @java.lang.Deprecated // Use {@link #getGetCampaignLabelMethod()} instead. 
-  public static final io.grpc.MethodDescriptor<com.google.ads.googleads.v3.services.GetCampaignLabelRequest,
-      com.google.ads.googleads.v3.resources.CampaignLabel> METHOD_GET_CAMPAIGN_LABEL = getGetCampaignLabelMethodHelper();
-
   private static volatile io.grpc.MethodDescriptor<com.google.ads.googleads.v3.services.GetCampaignLabelRequest,
       com.google.ads.googleads.v3.resources.CampaignLabel> getGetCampaignLabelMethod;
 
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetCampaignLabel",
+      requestType = com.google.ads.googleads.v3.services.GetCampaignLabelRequest.class,
+      responseType = com.google.ads.googleads.v3.resources.CampaignLabel.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<com.google.ads.googleads.v3.services.GetCampaignLabelRequest,
       com.google.ads.googleads.v3.resources.CampaignLabel> getGetCampaignLabelMethod() {
-    return getGetCampaignLabelMethodHelper();
-  }
-
-  private static io.grpc.MethodDescriptor<com.google.ads.googleads.v3.services.GetCampaignLabelRequest,
-      com.google.ads.googleads.v3.resources.CampaignLabel> getGetCampaignLabelMethodHelper() {
     io.grpc.MethodDescriptor<com.google.ads.googleads.v3.services.GetCampaignLabelRequest, com.google.ads.googleads.v3.resources.CampaignLabel> getGetCampaignLabelMethod;
     if ((getGetCampaignLabelMethod = CampaignLabelServiceGrpc.getGetCampaignLabelMethod) == null) {
       synchronized (CampaignLabelServiceGrpc.class) {
         if ((getGetCampaignLabelMethod = CampaignLabelServiceGrpc.getGetCampaignLabelMethod) == null) {
-          CampaignLabelServiceGrpc.getGetCampaignLabelMethod = getGetCampaignLabelMethod = 
+          CampaignLabelServiceGrpc.getGetCampaignLabelMethod = getGetCampaignLabelMethod =
               io.grpc.MethodDescriptor.<com.google.ads.googleads.v3.services.GetCampaignLabelRequest, com.google.ads.googleads.v3.resources.CampaignLabel>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "google.ads.googleads.v3.services.CampaignLabelService", "GetCampaignLabel"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetCampaignLabel"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v3.services.GetCampaignLabelRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v3.resources.CampaignLabel.getDefaultInstance()))
-                  .setSchemaDescriptor(new CampaignLabelServiceMethodDescriptorSupplier("GetCampaignLabel"))
-                  .build();
-          }
+              .setSchemaDescriptor(new CampaignLabelServiceMethodDescriptorSupplier("GetCampaignLabel"))
+              .build();
         }
-     }
-     return getGetCampaignLabelMethod;
+      }
+    }
+    return getGetCampaignLabelMethod;
   }
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  @java.lang.Deprecated // Use {@link #getMutateCampaignLabelsMethod()} instead. 
-  public static final io.grpc.MethodDescriptor<com.google.ads.googleads.v3.services.MutateCampaignLabelsRequest,
-      com.google.ads.googleads.v3.services.MutateCampaignLabelsResponse> METHOD_MUTATE_CAMPAIGN_LABELS = getMutateCampaignLabelsMethodHelper();
 
   private static volatile io.grpc.MethodDescriptor<com.google.ads.googleads.v3.services.MutateCampaignLabelsRequest,
       com.google.ads.googleads.v3.services.MutateCampaignLabelsResponse> getMutateCampaignLabelsMethod;
 
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "MutateCampaignLabels",
+      requestType = com.google.ads.googleads.v3.services.MutateCampaignLabelsRequest.class,
+      responseType = com.google.ads.googleads.v3.services.MutateCampaignLabelsResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<com.google.ads.googleads.v3.services.MutateCampaignLabelsRequest,
       com.google.ads.googleads.v3.services.MutateCampaignLabelsResponse> getMutateCampaignLabelsMethod() {
-    return getMutateCampaignLabelsMethodHelper();
-  }
-
-  private static io.grpc.MethodDescriptor<com.google.ads.googleads.v3.services.MutateCampaignLabelsRequest,
-      com.google.ads.googleads.v3.services.MutateCampaignLabelsResponse> getMutateCampaignLabelsMethodHelper() {
     io.grpc.MethodDescriptor<com.google.ads.googleads.v3.services.MutateCampaignLabelsRequest, com.google.ads.googleads.v3.services.MutateCampaignLabelsResponse> getMutateCampaignLabelsMethod;
     if ((getMutateCampaignLabelsMethod = CampaignLabelServiceGrpc.getMutateCampaignLabelsMethod) == null) {
       synchronized (CampaignLabelServiceGrpc.class) {
         if ((getMutateCampaignLabelsMethod = CampaignLabelServiceGrpc.getMutateCampaignLabelsMethod) == null) {
-          CampaignLabelServiceGrpc.getMutateCampaignLabelsMethod = getMutateCampaignLabelsMethod = 
+          CampaignLabelServiceGrpc.getMutateCampaignLabelsMethod = getMutateCampaignLabelsMethod =
               io.grpc.MethodDescriptor.<com.google.ads.googleads.v3.services.MutateCampaignLabelsRequest, com.google.ads.googleads.v3.services.MutateCampaignLabelsResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "google.ads.googleads.v3.services.CampaignLabelService", "MutateCampaignLabels"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "MutateCampaignLabels"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v3.services.MutateCampaignLabelsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v3.services.MutateCampaignLabelsResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new CampaignLabelServiceMethodDescriptorSupplier("MutateCampaignLabels"))
-                  .build();
-          }
+              .setSchemaDescriptor(new CampaignLabelServiceMethodDescriptorSupplier("MutateCampaignLabels"))
+              .build();
         }
-     }
-     return getMutateCampaignLabelsMethod;
+      }
+    }
+    return getMutateCampaignLabelsMethod;
   }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static CampaignLabelServiceStub newStub(io.grpc.Channel channel) {
-    return new CampaignLabelServiceStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<CampaignLabelServiceStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<CampaignLabelServiceStub>() {
+        @java.lang.Override
+        public CampaignLabelServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new CampaignLabelServiceStub(channel, callOptions);
+        }
+      };
+    return CampaignLabelServiceStub.newStub(factory, channel);
   }
 
   /**
@@ -117,7 +111,14 @@ public final class CampaignLabelServiceGrpc {
    */
   public static CampaignLabelServiceBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new CampaignLabelServiceBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<CampaignLabelServiceBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<CampaignLabelServiceBlockingStub>() {
+        @java.lang.Override
+        public CampaignLabelServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new CampaignLabelServiceBlockingStub(channel, callOptions);
+        }
+      };
+    return CampaignLabelServiceBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -125,7 +126,14 @@ public final class CampaignLabelServiceGrpc {
    */
   public static CampaignLabelServiceFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new CampaignLabelServiceFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<CampaignLabelServiceFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<CampaignLabelServiceFutureStub>() {
+        @java.lang.Override
+        public CampaignLabelServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new CampaignLabelServiceFutureStub(channel, callOptions);
+        }
+      };
+    return CampaignLabelServiceFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -142,7 +150,7 @@ public final class CampaignLabelServiceGrpc {
      */
     public void getCampaignLabel(com.google.ads.googleads.v3.services.GetCampaignLabelRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v3.resources.CampaignLabel> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetCampaignLabelMethodHelper(), responseObserver);
+      asyncUnimplementedUnaryCall(getGetCampaignLabelMethod(), responseObserver);
     }
 
     /**
@@ -153,20 +161,20 @@ public final class CampaignLabelServiceGrpc {
      */
     public void mutateCampaignLabels(com.google.ads.googleads.v3.services.MutateCampaignLabelsRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v3.services.MutateCampaignLabelsResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getMutateCampaignLabelsMethodHelper(), responseObserver);
+      asyncUnimplementedUnaryCall(getMutateCampaignLabelsMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
-            getGetCampaignLabelMethodHelper(),
+            getGetCampaignLabelMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 com.google.ads.googleads.v3.services.GetCampaignLabelRequest,
                 com.google.ads.googleads.v3.resources.CampaignLabel>(
                   this, METHODID_GET_CAMPAIGN_LABEL)))
           .addMethod(
-            getMutateCampaignLabelsMethodHelper(),
+            getMutateCampaignLabelsMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 com.google.ads.googleads.v3.services.MutateCampaignLabelsRequest,
@@ -181,19 +189,15 @@ public final class CampaignLabelServiceGrpc {
    * Service to manage labels on campaigns.
    * </pre>
    */
-  public static final class CampaignLabelServiceStub extends io.grpc.stub.AbstractStub<CampaignLabelServiceStub> {
-    private CampaignLabelServiceStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private CampaignLabelServiceStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class CampaignLabelServiceStub extends io.grpc.stub.AbstractAsyncStub<CampaignLabelServiceStub> {
+    private CampaignLabelServiceStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected CampaignLabelServiceStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected CampaignLabelServiceStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new CampaignLabelServiceStub(channel, callOptions);
     }
 
@@ -205,7 +209,7 @@ public final class CampaignLabelServiceGrpc {
     public void getCampaignLabel(com.google.ads.googleads.v3.services.GetCampaignLabelRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v3.resources.CampaignLabel> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(getGetCampaignLabelMethodHelper(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getGetCampaignLabelMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -217,7 +221,7 @@ public final class CampaignLabelServiceGrpc {
     public void mutateCampaignLabels(com.google.ads.googleads.v3.services.MutateCampaignLabelsRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v3.services.MutateCampaignLabelsResponse> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(getMutateCampaignLabelsMethodHelper(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getMutateCampaignLabelsMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -226,19 +230,15 @@ public final class CampaignLabelServiceGrpc {
    * Service to manage labels on campaigns.
    * </pre>
    */
-  public static final class CampaignLabelServiceBlockingStub extends io.grpc.stub.AbstractStub<CampaignLabelServiceBlockingStub> {
-    private CampaignLabelServiceBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private CampaignLabelServiceBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class CampaignLabelServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<CampaignLabelServiceBlockingStub> {
+    private CampaignLabelServiceBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected CampaignLabelServiceBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected CampaignLabelServiceBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new CampaignLabelServiceBlockingStub(channel, callOptions);
     }
 
@@ -249,7 +249,7 @@ public final class CampaignLabelServiceGrpc {
      */
     public com.google.ads.googleads.v3.resources.CampaignLabel getCampaignLabel(com.google.ads.googleads.v3.services.GetCampaignLabelRequest request) {
       return blockingUnaryCall(
-          getChannel(), getGetCampaignLabelMethodHelper(), getCallOptions(), request);
+          getChannel(), getGetCampaignLabelMethod(), getCallOptions(), request);
     }
 
     /**
@@ -260,7 +260,7 @@ public final class CampaignLabelServiceGrpc {
      */
     public com.google.ads.googleads.v3.services.MutateCampaignLabelsResponse mutateCampaignLabels(com.google.ads.googleads.v3.services.MutateCampaignLabelsRequest request) {
       return blockingUnaryCall(
-          getChannel(), getMutateCampaignLabelsMethodHelper(), getCallOptions(), request);
+          getChannel(), getMutateCampaignLabelsMethod(), getCallOptions(), request);
     }
   }
 
@@ -269,19 +269,15 @@ public final class CampaignLabelServiceGrpc {
    * Service to manage labels on campaigns.
    * </pre>
    */
-  public static final class CampaignLabelServiceFutureStub extends io.grpc.stub.AbstractStub<CampaignLabelServiceFutureStub> {
-    private CampaignLabelServiceFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private CampaignLabelServiceFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class CampaignLabelServiceFutureStub extends io.grpc.stub.AbstractFutureStub<CampaignLabelServiceFutureStub> {
+    private CampaignLabelServiceFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected CampaignLabelServiceFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected CampaignLabelServiceFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new CampaignLabelServiceFutureStub(channel, callOptions);
     }
 
@@ -293,7 +289,7 @@ public final class CampaignLabelServiceGrpc {
     public com.google.common.util.concurrent.ListenableFuture<com.google.ads.googleads.v3.resources.CampaignLabel> getCampaignLabel(
         com.google.ads.googleads.v3.services.GetCampaignLabelRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(getGetCampaignLabelMethodHelper(), getCallOptions()), request);
+          getChannel().newCall(getGetCampaignLabelMethod(), getCallOptions()), request);
     }
 
     /**
@@ -305,7 +301,7 @@ public final class CampaignLabelServiceGrpc {
     public com.google.common.util.concurrent.ListenableFuture<com.google.ads.googleads.v3.services.MutateCampaignLabelsResponse> mutateCampaignLabels(
         com.google.ads.googleads.v3.services.MutateCampaignLabelsRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(getMutateCampaignLabelsMethodHelper(), getCallOptions()), request);
+          getChannel().newCall(getMutateCampaignLabelsMethod(), getCallOptions()), request);
     }
   }
 
@@ -398,8 +394,8 @@ public final class CampaignLabelServiceGrpc {
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new CampaignLabelServiceFileDescriptorSupplier())
-              .addMethod(getGetCampaignLabelMethodHelper())
-              .addMethod(getMutateCampaignLabelsMethodHelper())
+              .addMethod(getGetCampaignLabelMethod())
+              .addMethod(getMutateCampaignLabelsMethod())
               .build();
         }
       }

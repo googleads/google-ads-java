@@ -33,38 +33,35 @@ public final class FeedPlaceholderViewServiceProto {
       "ds.googleads.v1.services\032=google/ads/goo" +
       "gleads/v1/resources/feed_placeholder_vie" +
       "w.proto\032\034google/api/annotations.proto\032\027g" +
-      "oogle/api/client.proto\"6\n\035GetFeedPlaceho" +
-      "lderViewRequest\022\025\n\rresource_name\030\001 \001(\t2\215" +
-      "\002\n\032FeedPlaceholderViewService\022\321\001\n\026GetFee" +
-      "dPlaceholderView\022?.google.ads.googleads." +
-      "v1.services.GetFeedPlaceholderViewReques" +
-      "t\0326.google.ads.googleads.v1.resources.Fe" +
-      "edPlaceholderView\">\202\323\344\223\0028\0226/v1/{resource" +
-      "_name=customers/*/feedPlaceholderViews/*" +
-      "}\032\033\312A\030googleads.googleapis.comB\206\002\n$com.g" +
-      "oogle.ads.googleads.v1.servicesB\037FeedPla" +
-      "ceholderViewServiceProtoP\001ZHgoogle.golan" +
-      "g.org/genproto/googleapis/ads/googleads/" +
-      "v1/services;services\242\002\003GAA\252\002 Google.Ads." +
-      "GoogleAds.V1.Services\312\002 Google\\Ads\\Googl" +
-      "eAds\\V1\\Services\352\002$Google::Ads::GoogleAd" +
-      "s::V1::Servicesb\006proto3"
+      "oogle/api/client.proto\032\037google/api/field" +
+      "_behavior.proto\032\031google/api/resource.pro" +
+      "to\"l\n\035GetFeedPlaceholderViewRequest\022K\n\rr" +
+      "esource_name\030\001 \001(\tB4\340A\002\372A.\n,googleads.go" +
+      "ogleapis.com/FeedPlaceholderView2\235\002\n\032Fee" +
+      "dPlaceholderViewService\022\341\001\n\026GetFeedPlace" +
+      "holderView\022?.google.ads.googleads.v1.ser" +
+      "vices.GetFeedPlaceholderViewRequest\0326.go" +
+      "ogle.ads.googleads.v1.resources.FeedPlac" +
+      "eholderView\"N\202\323\344\223\0028\0226/v1/{resource_name=" +
+      "customers/*/feedPlaceholderViews/*}\332A\rre" +
+      "source_name\032\033\312A\030googleads.googleapis.com" +
+      "B\206\002\n$com.google.ads.googleads.v1.service" +
+      "sB\037FeedPlaceholderViewServiceProtoP\001ZHgo" +
+      "ogle.golang.org/genproto/googleapis/ads/" +
+      "googleads/v1/services;services\242\002\003GAA\252\002 G" +
+      "oogle.Ads.GoogleAds.V1.Services\312\002 Google" +
+      "\\Ads\\GoogleAds\\V1\\Services\352\002$Google::Ads" +
+      "::GoogleAds::V1::Servicesb\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.ads.googleads.v1.resources.FeedPlaceholderViewProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
           com.google.api.ClientProto.getDescriptor(),
-        }, assigner);
+          com.google.api.FieldBehaviorProto.getDescriptor(),
+          com.google.api.ResourceProto.getDescriptor(),
+        });
     internal_static_google_ads_googleads_v1_services_GetFeedPlaceholderViewRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_google_ads_googleads_v1_services_GetFeedPlaceholderViewRequest_fieldAccessorTable = new
@@ -74,12 +71,17 @@ public final class FeedPlaceholderViewServiceProto {
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.ClientProto.defaultHost);
+    registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);
     registry.add(com.google.api.AnnotationsProto.http);
+    registry.add(com.google.api.ClientProto.methodSignature);
+    registry.add(com.google.api.ResourceProto.resourceReference);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.ads.googleads.v1.resources.FeedPlaceholderViewProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
     com.google.api.ClientProto.getDescriptor();
+    com.google.api.FieldBehaviorProto.getDescriptor();
+    com.google.api.ResourceProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

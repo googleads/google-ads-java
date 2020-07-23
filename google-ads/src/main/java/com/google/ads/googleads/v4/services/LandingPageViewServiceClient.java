@@ -21,7 +21,6 @@ import com.google.ads.googleads.v4.services.stub.LandingPageViewServiceStubSetti
 import com.google.api.core.BetaApi;
 import com.google.api.gax.core.BackgroundResource;
 import com.google.api.gax.rpc.UnaryCallable;
-import com.google.api.pathtemplate.PathTemplate;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 import javax.annotation.Generated;
@@ -36,8 +35,8 @@ import javax.annotation.Generated;
  * <pre>
  * <code>
  * try (LandingPageViewServiceClient landingPageViewServiceClient = LandingPageViewServiceClient.create()) {
- *   String formattedResourceName = LandingPageViewServiceClient.formatLandingPageViewName("[CUSTOMER]", "[LANDING_PAGE_VIEW]");
- *   LandingPageView response = landingPageViewServiceClient.getLandingPageView(formattedResourceName);
+ *   LandingPageViewName resourceName = LandingPageViewName.of("[CUSTOMER]", "[LANDING_PAGE_VIEW]");
+ *   LandingPageView response = landingPageViewServiceClient.getLandingPageView(resourceName);
  * }
  * </code>
  * </pre>
@@ -99,45 +98,6 @@ public class LandingPageViewServiceClient implements BackgroundResource {
   private final LandingPageViewServiceSettings settings;
   private final LandingPageViewServiceStub stub;
 
-  private static final PathTemplate LANDING_PAGE_VIEW_PATH_TEMPLATE =
-      PathTemplate.createWithoutUrlEncoding(
-          "customers/{customer}/landingPageViews/{landing_page_view}");
-
-  /**
-   * Formats a string containing the fully-qualified path to represent a landing_page_view resource.
-   *
-   * @deprecated Use the {@link LandingPageViewName} class instead.
-   */
-  @Deprecated
-  public static final String formatLandingPageViewName(String customer, String landingPageView) {
-    return LANDING_PAGE_VIEW_PATH_TEMPLATE.instantiate(
-        "customer", customer,
-        "landing_page_view", landingPageView);
-  }
-
-  /**
-   * Parses the customer from the given fully-qualified path which represents a landing_page_view
-   * resource.
-   *
-   * @deprecated Use the {@link LandingPageViewName} class instead.
-   */
-  @Deprecated
-  public static final String parseCustomerFromLandingPageViewName(String landingPageViewName) {
-    return LANDING_PAGE_VIEW_PATH_TEMPLATE.parse(landingPageViewName).get("customer");
-  }
-
-  /**
-   * Parses the landing_page_view from the given fully-qualified path which represents a
-   * landing_page_view resource.
-   *
-   * @deprecated Use the {@link LandingPageViewName} class instead.
-   */
-  @Deprecated
-  public static final String parseLandingPageViewFromLandingPageViewName(
-      String landingPageViewName) {
-    return LANDING_PAGE_VIEW_PATH_TEMPLATE.parse(landingPageViewName).get("landing_page_view");
-  }
-
   /** Constructs an instance of LandingPageViewServiceClient with default settings. */
   public static final LandingPageViewServiceClient create() throws IOException {
     return create(LandingPageViewServiceSettings.newBuilder().build());
@@ -195,8 +155,32 @@ public class LandingPageViewServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (LandingPageViewServiceClient landingPageViewServiceClient = LandingPageViewServiceClient.create()) {
-   *   String formattedResourceName = LandingPageViewServiceClient.formatLandingPageViewName("[CUSTOMER]", "[LANDING_PAGE_VIEW]");
-   *   LandingPageView response = landingPageViewServiceClient.getLandingPageView(formattedResourceName);
+   *   LandingPageViewName resourceName = LandingPageViewName.of("[CUSTOMER]", "[LANDING_PAGE_VIEW]");
+   *   LandingPageView response = landingPageViewServiceClient.getLandingPageView(resourceName);
+   * }
+   * </code></pre>
+   *
+   * @param resourceName Required. The resource name of the landing page view to fetch.
+   * @throws com.google.api.gax.rpc.ApiException if the remote call fails
+   */
+  public final LandingPageView getLandingPageView(LandingPageViewName resourceName) {
+    GetLandingPageViewRequest request =
+        GetLandingPageViewRequest.newBuilder()
+            .setResourceName(resourceName == null ? null : resourceName.toString())
+            .build();
+    return getLandingPageView(request);
+  }
+
+  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  /**
+   * Returns the requested landing page view in full detail.
+   *
+   * <p>Sample code:
+   *
+   * <pre><code>
+   * try (LandingPageViewServiceClient landingPageViewServiceClient = LandingPageViewServiceClient.create()) {
+   *   LandingPageViewName resourceName = LandingPageViewName.of("[CUSTOMER]", "[LANDING_PAGE_VIEW]");
+   *   LandingPageView response = landingPageViewServiceClient.getLandingPageView(resourceName.toString());
    * }
    * </code></pre>
    *
@@ -204,7 +188,6 @@ public class LandingPageViewServiceClient implements BackgroundResource {
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final LandingPageView getLandingPageView(String resourceName) {
-    LANDING_PAGE_VIEW_PATH_TEMPLATE.validate(resourceName, "getLandingPageView");
     GetLandingPageViewRequest request =
         GetLandingPageViewRequest.newBuilder().setResourceName(resourceName).build();
     return getLandingPageView(request);
@@ -218,9 +201,9 @@ public class LandingPageViewServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (LandingPageViewServiceClient landingPageViewServiceClient = LandingPageViewServiceClient.create()) {
-   *   String formattedResourceName = LandingPageViewServiceClient.formatLandingPageViewName("[CUSTOMER]", "[LANDING_PAGE_VIEW]");
+   *   LandingPageViewName resourceName = LandingPageViewName.of("[CUSTOMER]", "[LANDING_PAGE_VIEW]");
    *   GetLandingPageViewRequest request = GetLandingPageViewRequest.newBuilder()
-   *     .setResourceName(formattedResourceName)
+   *     .setResourceName(resourceName.toString())
    *     .build();
    *   LandingPageView response = landingPageViewServiceClient.getLandingPageView(request);
    * }
@@ -241,9 +224,9 @@ public class LandingPageViewServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (LandingPageViewServiceClient landingPageViewServiceClient = LandingPageViewServiceClient.create()) {
-   *   String formattedResourceName = LandingPageViewServiceClient.formatLandingPageViewName("[CUSTOMER]", "[LANDING_PAGE_VIEW]");
+   *   LandingPageViewName resourceName = LandingPageViewName.of("[CUSTOMER]", "[LANDING_PAGE_VIEW]");
    *   GetLandingPageViewRequest request = GetLandingPageViewRequest.newBuilder()
-   *     .setResourceName(formattedResourceName)
+   *     .setResourceName(resourceName.toString())
    *     .build();
    *   ApiFuture&lt;LandingPageView&gt; future = landingPageViewServiceClient.getLandingPageViewCallable().futureCall(request);
    *   // Do something

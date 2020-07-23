@@ -10,7 +10,7 @@ package com.google.ads.googleads.v3.common;
  *
  * Protobuf type {@code google.ads.googleads.v3.common.Operand}
  */
-public  final class Operand extends
+public final class Operand extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v3.common.Operand)
     OperandOrBuilder {
@@ -20,6 +20,13 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private Operand() {
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new Operand();
   }
 
   @java.lang.Override
@@ -35,7 +42,6 @@ private static final long serialVersionUID = 0L;
     if (extensionRegistry == null) {
       throw new java.lang.NullPointerException();
     }
-    int mutable_bitField0_ = 0;
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
         com.google.protobuf.UnknownFieldSet.newBuilder();
     try {
@@ -144,6 +150,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue string_value = 1;</code>
+     * @return Whether the stringValue field is set.
      */
     boolean hasStringValue();
     /**
@@ -152,6 +159,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue string_value = 1;</code>
+     * @return The stringValue.
      */
     com.google.protobuf.StringValue getStringValue();
     /**
@@ -169,6 +177,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value long_value = 2;</code>
+     * @return Whether the longValue field is set.
      */
     boolean hasLongValue();
     /**
@@ -177,6 +186,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value long_value = 2;</code>
+     * @return The longValue.
      */
     com.google.protobuf.Int64Value getLongValue();
     /**
@@ -194,6 +204,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.BoolValue boolean_value = 3;</code>
+     * @return Whether the booleanValue field is set.
      */
     boolean hasBooleanValue();
     /**
@@ -202,6 +213,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.BoolValue boolean_value = 3;</code>
+     * @return The booleanValue.
      */
     com.google.protobuf.BoolValue getBooleanValue();
     /**
@@ -219,6 +231,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue double_value = 4;</code>
+     * @return Whether the doubleValue field is set.
      */
     boolean hasDoubleValue();
     /**
@@ -227,6 +240,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue double_value = 4;</code>
+     * @return The doubleValue.
      */
     com.google.protobuf.DoubleValue getDoubleValue();
     /**
@@ -247,7 +261,7 @@ private static final long serialVersionUID = 0L;
    *
    * Protobuf type {@code google.ads.googleads.v3.common.Operand.ConstantOperand}
    */
-  public  static final class ConstantOperand extends
+  public static final class ConstantOperand extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:google.ads.googleads.v3.common.Operand.ConstantOperand)
       ConstantOperandOrBuilder {
@@ -257,6 +271,13 @@ private static final long serialVersionUID = 0L;
       super(builder);
     }
     private ConstantOperand() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ConstantOperand();
     }
 
     @java.lang.Override
@@ -272,7 +293,6 @@ private static final long serialVersionUID = 0L;
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -374,7 +394,8 @@ private static final long serialVersionUID = 0L;
     private int constantOperandValueCase_ = 0;
     private java.lang.Object constantOperandValue_;
     public enum ConstantOperandValueCase
-        implements com.google.protobuf.Internal.EnumLite {
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
       STRING_VALUE(1),
       LONG_VALUE(2),
       BOOLEAN_VALUE(3),
@@ -385,6 +406,8 @@ private static final long serialVersionUID = 0L;
         this.value = value;
       }
       /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -420,7 +443,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue string_value = 1;</code>
+     * @return Whether the stringValue field is set.
      */
+    @java.lang.Override
     public boolean hasStringValue() {
       return constantOperandValueCase_ == 1;
     }
@@ -430,7 +455,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue string_value = 1;</code>
+     * @return The stringValue.
      */
+    @java.lang.Override
     public com.google.protobuf.StringValue getStringValue() {
       if (constantOperandValueCase_ == 1) {
          return (com.google.protobuf.StringValue) constantOperandValue_;
@@ -444,6 +471,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.protobuf.StringValue string_value = 1;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.StringValueOrBuilder getStringValueOrBuilder() {
       if (constantOperandValueCase_ == 1) {
          return (com.google.protobuf.StringValue) constantOperandValue_;
@@ -458,7 +486,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value long_value = 2;</code>
+     * @return Whether the longValue field is set.
      */
+    @java.lang.Override
     public boolean hasLongValue() {
       return constantOperandValueCase_ == 2;
     }
@@ -468,7 +498,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value long_value = 2;</code>
+     * @return The longValue.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getLongValue() {
       if (constantOperandValueCase_ == 2) {
          return (com.google.protobuf.Int64Value) constantOperandValue_;
@@ -482,6 +514,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.protobuf.Int64Value long_value = 2;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getLongValueOrBuilder() {
       if (constantOperandValueCase_ == 2) {
          return (com.google.protobuf.Int64Value) constantOperandValue_;
@@ -496,7 +529,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.BoolValue boolean_value = 3;</code>
+     * @return Whether the booleanValue field is set.
      */
+    @java.lang.Override
     public boolean hasBooleanValue() {
       return constantOperandValueCase_ == 3;
     }
@@ -506,7 +541,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.BoolValue boolean_value = 3;</code>
+     * @return The booleanValue.
      */
+    @java.lang.Override
     public com.google.protobuf.BoolValue getBooleanValue() {
       if (constantOperandValueCase_ == 3) {
          return (com.google.protobuf.BoolValue) constantOperandValue_;
@@ -520,6 +557,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.protobuf.BoolValue boolean_value = 3;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.BoolValueOrBuilder getBooleanValueOrBuilder() {
       if (constantOperandValueCase_ == 3) {
          return (com.google.protobuf.BoolValue) constantOperandValue_;
@@ -534,7 +572,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue double_value = 4;</code>
+     * @return Whether the doubleValue field is set.
      */
+    @java.lang.Override
     public boolean hasDoubleValue() {
       return constantOperandValueCase_ == 4;
     }
@@ -544,7 +584,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue double_value = 4;</code>
+     * @return The doubleValue.
      */
+    @java.lang.Override
     public com.google.protobuf.DoubleValue getDoubleValue() {
       if (constantOperandValueCase_ == 4) {
          return (com.google.protobuf.DoubleValue) constantOperandValue_;
@@ -558,6 +600,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.protobuf.DoubleValue double_value = 4;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.DoubleValueOrBuilder getDoubleValueOrBuilder() {
       if (constantOperandValueCase_ == 4) {
          return (com.google.protobuf.DoubleValue) constantOperandValue_;
@@ -998,7 +1041,9 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>.google.protobuf.StringValue string_value = 1;</code>
+       * @return Whether the stringValue field is set.
        */
+      @java.lang.Override
       public boolean hasStringValue() {
         return constantOperandValueCase_ == 1;
       }
@@ -1008,7 +1053,9 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>.google.protobuf.StringValue string_value = 1;</code>
+       * @return The stringValue.
        */
+      @java.lang.Override
       public com.google.protobuf.StringValue getStringValue() {
         if (stringValueBuilder_ == null) {
           if (constantOperandValueCase_ == 1) {
@@ -1126,6 +1173,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>.google.protobuf.StringValue string_value = 1;</code>
        */
+      @java.lang.Override
       public com.google.protobuf.StringValueOrBuilder getStringValueOrBuilder() {
         if ((constantOperandValueCase_ == 1) && (stringValueBuilder_ != null)) {
           return stringValueBuilder_.getMessageOrBuilder();
@@ -1170,7 +1218,9 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>.google.protobuf.Int64Value long_value = 2;</code>
+       * @return Whether the longValue field is set.
        */
+      @java.lang.Override
       public boolean hasLongValue() {
         return constantOperandValueCase_ == 2;
       }
@@ -1180,7 +1230,9 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>.google.protobuf.Int64Value long_value = 2;</code>
+       * @return The longValue.
        */
+      @java.lang.Override
       public com.google.protobuf.Int64Value getLongValue() {
         if (longValueBuilder_ == null) {
           if (constantOperandValueCase_ == 2) {
@@ -1298,6 +1350,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>.google.protobuf.Int64Value long_value = 2;</code>
        */
+      @java.lang.Override
       public com.google.protobuf.Int64ValueOrBuilder getLongValueOrBuilder() {
         if ((constantOperandValueCase_ == 2) && (longValueBuilder_ != null)) {
           return longValueBuilder_.getMessageOrBuilder();
@@ -1342,7 +1395,9 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>.google.protobuf.BoolValue boolean_value = 3;</code>
+       * @return Whether the booleanValue field is set.
        */
+      @java.lang.Override
       public boolean hasBooleanValue() {
         return constantOperandValueCase_ == 3;
       }
@@ -1352,7 +1407,9 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>.google.protobuf.BoolValue boolean_value = 3;</code>
+       * @return The booleanValue.
        */
+      @java.lang.Override
       public com.google.protobuf.BoolValue getBooleanValue() {
         if (booleanValueBuilder_ == null) {
           if (constantOperandValueCase_ == 3) {
@@ -1470,6 +1527,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>.google.protobuf.BoolValue boolean_value = 3;</code>
        */
+      @java.lang.Override
       public com.google.protobuf.BoolValueOrBuilder getBooleanValueOrBuilder() {
         if ((constantOperandValueCase_ == 3) && (booleanValueBuilder_ != null)) {
           return booleanValueBuilder_.getMessageOrBuilder();
@@ -1514,7 +1572,9 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>.google.protobuf.DoubleValue double_value = 4;</code>
+       * @return Whether the doubleValue field is set.
        */
+      @java.lang.Override
       public boolean hasDoubleValue() {
         return constantOperandValueCase_ == 4;
       }
@@ -1524,7 +1584,9 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>.google.protobuf.DoubleValue double_value = 4;</code>
+       * @return The doubleValue.
        */
+      @java.lang.Override
       public com.google.protobuf.DoubleValue getDoubleValue() {
         if (doubleValueBuilder_ == null) {
           if (constantOperandValueCase_ == 4) {
@@ -1642,6 +1704,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>.google.protobuf.DoubleValue double_value = 4;</code>
        */
+      @java.lang.Override
       public com.google.protobuf.DoubleValueOrBuilder getDoubleValueOrBuilder() {
         if ((constantOperandValueCase_ == 4) && (doubleValueBuilder_ != null)) {
           return doubleValueBuilder_.getMessageOrBuilder();
@@ -1740,6 +1803,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value feed_id = 1;</code>
+     * @return Whether the feedId field is set.
      */
     boolean hasFeedId();
     /**
@@ -1748,6 +1812,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value feed_id = 1;</code>
+     * @return The feedId.
      */
     com.google.protobuf.Int64Value getFeedId();
     /**
@@ -1765,6 +1830,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value feed_attribute_id = 2;</code>
+     * @return Whether the feedAttributeId field is set.
      */
     boolean hasFeedAttributeId();
     /**
@@ -1773,6 +1839,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value feed_attribute_id = 2;</code>
+     * @return The feedAttributeId.
      */
     com.google.protobuf.Int64Value getFeedAttributeId();
     /**
@@ -1792,7 +1859,7 @@ private static final long serialVersionUID = 0L;
    *
    * Protobuf type {@code google.ads.googleads.v3.common.Operand.FeedAttributeOperand}
    */
-  public  static final class FeedAttributeOperand extends
+  public static final class FeedAttributeOperand extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:google.ads.googleads.v3.common.Operand.FeedAttributeOperand)
       FeedAttributeOperandOrBuilder {
@@ -1802,6 +1869,13 @@ private static final long serialVersionUID = 0L;
       super(builder);
     }
     private FeedAttributeOperand() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new FeedAttributeOperand();
     }
 
     @java.lang.Override
@@ -1817,7 +1891,6 @@ private static final long serialVersionUID = 0L;
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -1894,7 +1967,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value feed_id = 1;</code>
+     * @return Whether the feedId field is set.
      */
+    @java.lang.Override
     public boolean hasFeedId() {
       return feedId_ != null;
     }
@@ -1904,7 +1979,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value feed_id = 1;</code>
+     * @return The feedId.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getFeedId() {
       return feedId_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : feedId_;
     }
@@ -1915,6 +1992,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.protobuf.Int64Value feed_id = 1;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getFeedIdOrBuilder() {
       return getFeedId();
     }
@@ -1927,7 +2005,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value feed_attribute_id = 2;</code>
+     * @return Whether the feedAttributeId field is set.
      */
+    @java.lang.Override
     public boolean hasFeedAttributeId() {
       return feedAttributeId_ != null;
     }
@@ -1937,7 +2017,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value feed_attribute_id = 2;</code>
+     * @return The feedAttributeId.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getFeedAttributeId() {
       return feedAttributeId_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : feedAttributeId_;
     }
@@ -1948,6 +2030,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.protobuf.Int64Value feed_attribute_id = 2;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getFeedAttributeIdOrBuilder() {
       return getFeedAttributeId();
     }
@@ -2311,6 +2394,7 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>.google.protobuf.Int64Value feed_id = 1;</code>
+       * @return Whether the feedId field is set.
        */
       public boolean hasFeedId() {
         return feedIdBuilder_ != null || feedId_ != null;
@@ -2321,6 +2405,7 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>.google.protobuf.Int64Value feed_id = 1;</code>
+       * @return The feedId.
        */
       public com.google.protobuf.Int64Value getFeedId() {
         if (feedIdBuilder_ == null) {
@@ -2464,6 +2549,7 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>.google.protobuf.Int64Value feed_attribute_id = 2;</code>
+       * @return Whether the feedAttributeId field is set.
        */
       public boolean hasFeedAttributeId() {
         return feedAttributeIdBuilder_ != null || feedAttributeId_ != null;
@@ -2474,6 +2560,7 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>.google.protobuf.Int64Value feed_attribute_id = 2;</code>
+       * @return The feedAttributeId.
        */
       public com.google.protobuf.Int64Value getFeedAttributeId() {
         if (feedAttributeIdBuilder_ == null) {
@@ -2670,6 +2757,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.common.MatchingFunction matching_function = 1;</code>
+     * @return Whether the matchingFunction field is set.
      */
     boolean hasMatchingFunction();
     /**
@@ -2678,6 +2766,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.common.MatchingFunction matching_function = 1;</code>
+     * @return The matchingFunction.
      */
     com.google.ads.googleads.v3.common.MatchingFunction getMatchingFunction();
     /**
@@ -2697,7 +2786,7 @@ private static final long serialVersionUID = 0L;
    *
    * Protobuf type {@code google.ads.googleads.v3.common.Operand.FunctionOperand}
    */
-  public  static final class FunctionOperand extends
+  public static final class FunctionOperand extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:google.ads.googleads.v3.common.Operand.FunctionOperand)
       FunctionOperandOrBuilder {
@@ -2707,6 +2796,13 @@ private static final long serialVersionUID = 0L;
       super(builder);
     }
     private FunctionOperand() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new FunctionOperand();
     }
 
     @java.lang.Override
@@ -2722,7 +2818,6 @@ private static final long serialVersionUID = 0L;
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -2786,7 +2881,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.common.MatchingFunction matching_function = 1;</code>
+     * @return Whether the matchingFunction field is set.
      */
+    @java.lang.Override
     public boolean hasMatchingFunction() {
       return matchingFunction_ != null;
     }
@@ -2796,7 +2893,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.common.MatchingFunction matching_function = 1;</code>
+     * @return The matchingFunction.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.common.MatchingFunction getMatchingFunction() {
       return matchingFunction_ == null ? com.google.ads.googleads.v3.common.MatchingFunction.getDefaultInstance() : matchingFunction_;
     }
@@ -2807,6 +2906,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v3.common.MatchingFunction matching_function = 1;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.common.MatchingFunctionOrBuilder getMatchingFunctionOrBuilder() {
       return getMatchingFunction();
     }
@@ -3140,6 +3240,7 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>.google.ads.googleads.v3.common.MatchingFunction matching_function = 1;</code>
+       * @return Whether the matchingFunction field is set.
        */
       public boolean hasMatchingFunction() {
         return matchingFunctionBuilder_ != null || matchingFunction_ != null;
@@ -3150,6 +3251,7 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>.google.ads.googleads.v3.common.MatchingFunction matching_function = 1;</code>
+       * @return The matchingFunction.
        */
       public com.google.ads.googleads.v3.common.MatchingFunction getMatchingFunction() {
         if (matchingFunctionBuilder_ == null) {
@@ -3346,6 +3448,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.MatchingFunctionContextTypeEnum.MatchingFunctionContextType context_type = 1;</code>
+     * @return The enum numeric value on the wire for contextType.
      */
     int getContextTypeValue();
     /**
@@ -3354,6 +3457,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.MatchingFunctionContextTypeEnum.MatchingFunctionContextType context_type = 1;</code>
+     * @return The contextType.
      */
     com.google.ads.googleads.v3.enums.MatchingFunctionContextTypeEnum.MatchingFunctionContextType getContextType();
   }
@@ -3364,7 +3468,7 @@ private static final long serialVersionUID = 0L;
    *
    * Protobuf type {@code google.ads.googleads.v3.common.Operand.RequestContextOperand}
    */
-  public  static final class RequestContextOperand extends
+  public static final class RequestContextOperand extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:google.ads.googleads.v3.common.Operand.RequestContextOperand)
       RequestContextOperandOrBuilder {
@@ -3375,6 +3479,13 @@ private static final long serialVersionUID = 0L;
     }
     private RequestContextOperand() {
       contextType_ = 0;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new RequestContextOperand();
     }
 
     @java.lang.Override
@@ -3390,7 +3501,6 @@ private static final long serialVersionUID = 0L;
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -3447,8 +3557,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.MatchingFunctionContextTypeEnum.MatchingFunctionContextType context_type = 1;</code>
+     * @return The enum numeric value on the wire for contextType.
      */
-    public int getContextTypeValue() {
+    @java.lang.Override public int getContextTypeValue() {
       return contextType_;
     }
     /**
@@ -3457,8 +3568,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.MatchingFunctionContextTypeEnum.MatchingFunctionContextType context_type = 1;</code>
+     * @return The contextType.
      */
-    public com.google.ads.googleads.v3.enums.MatchingFunctionContextTypeEnum.MatchingFunctionContextType getContextType() {
+    @java.lang.Override public com.google.ads.googleads.v3.enums.MatchingFunctionContextTypeEnum.MatchingFunctionContextType getContextType() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v3.enums.MatchingFunctionContextTypeEnum.MatchingFunctionContextType result = com.google.ads.googleads.v3.enums.MatchingFunctionContextTypeEnum.MatchingFunctionContextType.valueOf(contextType_);
       return result == null ? com.google.ads.googleads.v3.enums.MatchingFunctionContextTypeEnum.MatchingFunctionContextType.UNRECOGNIZED : result;
@@ -3776,8 +3888,9 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>.google.ads.googleads.v3.enums.MatchingFunctionContextTypeEnum.MatchingFunctionContextType context_type = 1;</code>
+       * @return The enum numeric value on the wire for contextType.
        */
-      public int getContextTypeValue() {
+      @java.lang.Override public int getContextTypeValue() {
         return contextType_;
       }
       /**
@@ -3786,8 +3899,11 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>.google.ads.googleads.v3.enums.MatchingFunctionContextTypeEnum.MatchingFunctionContextType context_type = 1;</code>
+       * @param value The enum numeric value on the wire for contextType to set.
+       * @return This builder for chaining.
        */
       public Builder setContextTypeValue(int value) {
+        
         contextType_ = value;
         onChanged();
         return this;
@@ -3798,7 +3914,9 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>.google.ads.googleads.v3.enums.MatchingFunctionContextTypeEnum.MatchingFunctionContextType context_type = 1;</code>
+       * @return The contextType.
        */
+      @java.lang.Override
       public com.google.ads.googleads.v3.enums.MatchingFunctionContextTypeEnum.MatchingFunctionContextType getContextType() {
         @SuppressWarnings("deprecation")
         com.google.ads.googleads.v3.enums.MatchingFunctionContextTypeEnum.MatchingFunctionContextType result = com.google.ads.googleads.v3.enums.MatchingFunctionContextTypeEnum.MatchingFunctionContextType.valueOf(contextType_);
@@ -3810,6 +3928,8 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>.google.ads.googleads.v3.enums.MatchingFunctionContextTypeEnum.MatchingFunctionContextType context_type = 1;</code>
+       * @param value The contextType to set.
+       * @return This builder for chaining.
        */
       public Builder setContextType(com.google.ads.googleads.v3.enums.MatchingFunctionContextTypeEnum.MatchingFunctionContextType value) {
         if (value == null) {
@@ -3826,6 +3946,7 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>.google.ads.googleads.v3.enums.MatchingFunctionContextTypeEnum.MatchingFunctionContextType context_type = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearContextType() {
         
@@ -3889,7 +4010,8 @@ private static final long serialVersionUID = 0L;
   private int functionArgumentOperandCase_ = 0;
   private java.lang.Object functionArgumentOperand_;
   public enum FunctionArgumentOperandCase
-      implements com.google.protobuf.Internal.EnumLite {
+      implements com.google.protobuf.Internal.EnumLite,
+          com.google.protobuf.AbstractMessage.InternalOneOfEnum {
     CONSTANT_OPERAND(1),
     FEED_ATTRIBUTE_OPERAND(2),
     FUNCTION_OPERAND(3),
@@ -3900,6 +4022,8 @@ private static final long serialVersionUID = 0L;
       this.value = value;
     }
     /**
+     * @param value The number of the enum to look for.
+     * @return The enum associated with the given number.
      * @deprecated Use {@link #forNumber(int)} instead.
      */
     @java.lang.Deprecated
@@ -3935,7 +4059,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.Operand.ConstantOperand constant_operand = 1;</code>
+   * @return Whether the constantOperand field is set.
    */
+  @java.lang.Override
   public boolean hasConstantOperand() {
     return functionArgumentOperandCase_ == 1;
   }
@@ -3945,7 +4071,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.Operand.ConstantOperand constant_operand = 1;</code>
+   * @return The constantOperand.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.common.Operand.ConstantOperand getConstantOperand() {
     if (functionArgumentOperandCase_ == 1) {
        return (com.google.ads.googleads.v3.common.Operand.ConstantOperand) functionArgumentOperand_;
@@ -3959,6 +4087,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v3.common.Operand.ConstantOperand constant_operand = 1;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.common.Operand.ConstantOperandOrBuilder getConstantOperandOrBuilder() {
     if (functionArgumentOperandCase_ == 1) {
        return (com.google.ads.googleads.v3.common.Operand.ConstantOperand) functionArgumentOperand_;
@@ -3973,7 +4102,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.Operand.FeedAttributeOperand feed_attribute_operand = 2;</code>
+   * @return Whether the feedAttributeOperand field is set.
    */
+  @java.lang.Override
   public boolean hasFeedAttributeOperand() {
     return functionArgumentOperandCase_ == 2;
   }
@@ -3983,7 +4114,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.Operand.FeedAttributeOperand feed_attribute_operand = 2;</code>
+   * @return The feedAttributeOperand.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.common.Operand.FeedAttributeOperand getFeedAttributeOperand() {
     if (functionArgumentOperandCase_ == 2) {
        return (com.google.ads.googleads.v3.common.Operand.FeedAttributeOperand) functionArgumentOperand_;
@@ -3997,6 +4130,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v3.common.Operand.FeedAttributeOperand feed_attribute_operand = 2;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.common.Operand.FeedAttributeOperandOrBuilder getFeedAttributeOperandOrBuilder() {
     if (functionArgumentOperandCase_ == 2) {
        return (com.google.ads.googleads.v3.common.Operand.FeedAttributeOperand) functionArgumentOperand_;
@@ -4012,7 +4146,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.Operand.FunctionOperand function_operand = 3;</code>
+   * @return Whether the functionOperand field is set.
    */
+  @java.lang.Override
   public boolean hasFunctionOperand() {
     return functionArgumentOperandCase_ == 3;
   }
@@ -4023,7 +4159,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.Operand.FunctionOperand function_operand = 3;</code>
+   * @return The functionOperand.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.common.Operand.FunctionOperand getFunctionOperand() {
     if (functionArgumentOperandCase_ == 3) {
        return (com.google.ads.googleads.v3.common.Operand.FunctionOperand) functionArgumentOperand_;
@@ -4038,6 +4176,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v3.common.Operand.FunctionOperand function_operand = 3;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.common.Operand.FunctionOperandOrBuilder getFunctionOperandOrBuilder() {
     if (functionArgumentOperandCase_ == 3) {
        return (com.google.ads.googleads.v3.common.Operand.FunctionOperand) functionArgumentOperand_;
@@ -4052,7 +4191,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.Operand.RequestContextOperand request_context_operand = 4;</code>
+   * @return Whether the requestContextOperand field is set.
    */
+  @java.lang.Override
   public boolean hasRequestContextOperand() {
     return functionArgumentOperandCase_ == 4;
   }
@@ -4062,7 +4203,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.Operand.RequestContextOperand request_context_operand = 4;</code>
+   * @return The requestContextOperand.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.common.Operand.RequestContextOperand getRequestContextOperand() {
     if (functionArgumentOperandCase_ == 4) {
        return (com.google.ads.googleads.v3.common.Operand.RequestContextOperand) functionArgumentOperand_;
@@ -4076,6 +4219,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v3.common.Operand.RequestContextOperand request_context_operand = 4;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.common.Operand.RequestContextOperandOrBuilder getRequestContextOperandOrBuilder() {
     if (functionArgumentOperandCase_ == 4) {
        return (com.google.ads.googleads.v3.common.Operand.RequestContextOperand) functionArgumentOperand_;
@@ -4516,7 +4660,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.common.Operand.ConstantOperand constant_operand = 1;</code>
+     * @return Whether the constantOperand field is set.
      */
+    @java.lang.Override
     public boolean hasConstantOperand() {
       return functionArgumentOperandCase_ == 1;
     }
@@ -4526,7 +4672,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.common.Operand.ConstantOperand constant_operand = 1;</code>
+     * @return The constantOperand.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.common.Operand.ConstantOperand getConstantOperand() {
       if (constantOperandBuilder_ == null) {
         if (functionArgumentOperandCase_ == 1) {
@@ -4644,6 +4792,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v3.common.Operand.ConstantOperand constant_operand = 1;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.common.Operand.ConstantOperandOrBuilder getConstantOperandOrBuilder() {
       if ((functionArgumentOperandCase_ == 1) && (constantOperandBuilder_ != null)) {
         return constantOperandBuilder_.getMessageOrBuilder();
@@ -4688,7 +4837,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.common.Operand.FeedAttributeOperand feed_attribute_operand = 2;</code>
+     * @return Whether the feedAttributeOperand field is set.
      */
+    @java.lang.Override
     public boolean hasFeedAttributeOperand() {
       return functionArgumentOperandCase_ == 2;
     }
@@ -4698,7 +4849,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.common.Operand.FeedAttributeOperand feed_attribute_operand = 2;</code>
+     * @return The feedAttributeOperand.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.common.Operand.FeedAttributeOperand getFeedAttributeOperand() {
       if (feedAttributeOperandBuilder_ == null) {
         if (functionArgumentOperandCase_ == 2) {
@@ -4816,6 +4969,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v3.common.Operand.FeedAttributeOperand feed_attribute_operand = 2;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.common.Operand.FeedAttributeOperandOrBuilder getFeedAttributeOperandOrBuilder() {
       if ((functionArgumentOperandCase_ == 2) && (feedAttributeOperandBuilder_ != null)) {
         return feedAttributeOperandBuilder_.getMessageOrBuilder();
@@ -4861,7 +5015,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.common.Operand.FunctionOperand function_operand = 3;</code>
+     * @return Whether the functionOperand field is set.
      */
+    @java.lang.Override
     public boolean hasFunctionOperand() {
       return functionArgumentOperandCase_ == 3;
     }
@@ -4872,7 +5028,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.common.Operand.FunctionOperand function_operand = 3;</code>
+     * @return The functionOperand.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.common.Operand.FunctionOperand getFunctionOperand() {
       if (functionOperandBuilder_ == null) {
         if (functionArgumentOperandCase_ == 3) {
@@ -4996,6 +5154,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v3.common.Operand.FunctionOperand function_operand = 3;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.common.Operand.FunctionOperandOrBuilder getFunctionOperandOrBuilder() {
       if ((functionArgumentOperandCase_ == 3) && (functionOperandBuilder_ != null)) {
         return functionOperandBuilder_.getMessageOrBuilder();
@@ -5041,7 +5200,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.common.Operand.RequestContextOperand request_context_operand = 4;</code>
+     * @return Whether the requestContextOperand field is set.
      */
+    @java.lang.Override
     public boolean hasRequestContextOperand() {
       return functionArgumentOperandCase_ == 4;
     }
@@ -5051,7 +5212,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.common.Operand.RequestContextOperand request_context_operand = 4;</code>
+     * @return The requestContextOperand.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.common.Operand.RequestContextOperand getRequestContextOperand() {
       if (requestContextOperandBuilder_ == null) {
         if (functionArgumentOperandCase_ == 4) {
@@ -5169,6 +5332,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v3.common.Operand.RequestContextOperand request_context_operand = 4;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.common.Operand.RequestContextOperandOrBuilder getRequestContextOperandOrBuilder() {
       if ((functionArgumentOperandCase_ == 4) && (requestContextOperandBuilder_ != null)) {
         return requestContextOperandBuilder_.getMessageOrBuilder();

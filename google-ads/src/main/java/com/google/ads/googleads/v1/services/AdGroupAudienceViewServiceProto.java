@@ -33,38 +33,35 @@ public final class AdGroupAudienceViewServiceProto {
       "ads.googleads.v1.services\032>google/ads/go" +
       "ogleads/v1/resources/ad_group_audience_v" +
       "iew.proto\032\034google/api/annotations.proto\032" +
-      "\027google/api/client.proto\"6\n\035GetAdGroupAu" +
-      "dienceViewRequest\022\025\n\rresource_name\030\001 \001(\t" +
-      "2\215\002\n\032AdGroupAudienceViewService\022\321\001\n\026GetA" +
-      "dGroupAudienceView\022?.google.ads.googlead" +
-      "s.v1.services.GetAdGroupAudienceViewRequ" +
-      "est\0326.google.ads.googleads.v1.resources." +
-      "AdGroupAudienceView\">\202\323\344\223\0028\0226/v1/{resour" +
-      "ce_name=customers/*/adGroupAudienceViews" +
-      "/*}\032\033\312A\030googleads.googleapis.comB\206\002\n$com" +
-      ".google.ads.googleads.v1.servicesB\037AdGro" +
-      "upAudienceViewServiceProtoP\001ZHgoogle.gol" +
-      "ang.org/genproto/googleapis/ads/googlead" +
-      "s/v1/services;services\242\002\003GAA\252\002 Google.Ad" +
-      "s.GoogleAds.V1.Services\312\002 Google\\Ads\\Goo" +
-      "gleAds\\V1\\Services\352\002$Google::Ads::Google" +
-      "Ads::V1::Servicesb\006proto3"
+      "\027google/api/client.proto\032\037google/api/fie" +
+      "ld_behavior.proto\032\031google/api/resource.p" +
+      "roto\"l\n\035GetAdGroupAudienceViewRequest\022K\n" +
+      "\rresource_name\030\001 \001(\tB4\340A\002\372A.\n,googleads." +
+      "googleapis.com/AdGroupAudienceView2\235\002\n\032A" +
+      "dGroupAudienceViewService\022\341\001\n\026GetAdGroup" +
+      "AudienceView\022?.google.ads.googleads.v1.s" +
+      "ervices.GetAdGroupAudienceViewRequest\0326." +
+      "google.ads.googleads.v1.resources.AdGrou" +
+      "pAudienceView\"N\202\323\344\223\0028\0226/v1/{resource_nam" +
+      "e=customers/*/adGroupAudienceViews/*}\332A\r" +
+      "resource_name\032\033\312A\030googleads.googleapis.c" +
+      "omB\206\002\n$com.google.ads.googleads.v1.servi" +
+      "cesB\037AdGroupAudienceViewServiceProtoP\001ZH" +
+      "google.golang.org/genproto/googleapis/ad" +
+      "s/googleads/v1/services;services\242\002\003GAA\252\002" +
+      " Google.Ads.GoogleAds.V1.Services\312\002 Goog" +
+      "le\\Ads\\GoogleAds\\V1\\Services\352\002$Google::A" +
+      "ds::GoogleAds::V1::Servicesb\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.ads.googleads.v1.resources.AdGroupAudienceViewProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
           com.google.api.ClientProto.getDescriptor(),
-        }, assigner);
+          com.google.api.FieldBehaviorProto.getDescriptor(),
+          com.google.api.ResourceProto.getDescriptor(),
+        });
     internal_static_google_ads_googleads_v1_services_GetAdGroupAudienceViewRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_google_ads_googleads_v1_services_GetAdGroupAudienceViewRequest_fieldAccessorTable = new
@@ -74,12 +71,17 @@ public final class AdGroupAudienceViewServiceProto {
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.ClientProto.defaultHost);
+    registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);
     registry.add(com.google.api.AnnotationsProto.http);
+    registry.add(com.google.api.ClientProto.methodSignature);
+    registry.add(com.google.api.ResourceProto.resourceReference);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.ads.googleads.v1.resources.AdGroupAudienceViewProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
     com.google.api.ClientProto.getDescriptor();
+    com.google.api.FieldBehaviorProto.getDescriptor();
+    com.google.api.ResourceProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

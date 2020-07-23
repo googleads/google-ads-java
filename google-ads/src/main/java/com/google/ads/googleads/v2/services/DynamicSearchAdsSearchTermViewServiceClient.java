@@ -1,5 +1,5 @@
 /*
- * Copyright 2019 Google LLC
+ * Copyright 2020 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -21,7 +21,6 @@ import com.google.ads.googleads.v2.services.stub.DynamicSearchAdsSearchTermViewS
 import com.google.api.core.BetaApi;
 import com.google.api.gax.core.BackgroundResource;
 import com.google.api.gax.rpc.UnaryCallable;
-import com.google.api.pathtemplate.PathTemplate;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 import javax.annotation.Generated;
@@ -36,8 +35,8 @@ import javax.annotation.Generated;
  * <pre>
  * <code>
  * try (DynamicSearchAdsSearchTermViewServiceClient dynamicSearchAdsSearchTermViewServiceClient = DynamicSearchAdsSearchTermViewServiceClient.create()) {
- *   String formattedResourceName = DynamicSearchAdsSearchTermViewServiceClient.formatDynamicSearchAdsSearchTermViewName("[CUSTOMER]", "[DYNAMIC_SEARCH_ADS_SEARCH_TERM_VIEW]");
- *   DynamicSearchAdsSearchTermView response = dynamicSearchAdsSearchTermViewServiceClient.getDynamicSearchAdsSearchTermView(formattedResourceName);
+ *   DynamicSearchAdsSearchTermViewName resourceName = DynamicSearchAdsSearchTermViewName.of("[CUSTOMER]", "[DYNAMIC_SEARCH_ADS_SEARCH_TERM_VIEW]");
+ *   DynamicSearchAdsSearchTermView response = dynamicSearchAdsSearchTermViewServiceClient.getDynamicSearchAdsSearchTermView(resourceName);
  * }
  * </code>
  * </pre>
@@ -98,53 +97,6 @@ import javax.annotation.Generated;
 public class DynamicSearchAdsSearchTermViewServiceClient implements BackgroundResource {
   private final DynamicSearchAdsSearchTermViewServiceSettings settings;
   private final DynamicSearchAdsSearchTermViewServiceStub stub;
-
-  private static final PathTemplate DYNAMIC_SEARCH_ADS_SEARCH_TERM_VIEW_PATH_TEMPLATE =
-      PathTemplate.createWithoutUrlEncoding(
-          "customers/{customer}/dynamicSearchAdsSearchTermViews/{dynamic_search_ads_search_term_view}");
-
-  /**
-   * Formats a string containing the fully-qualified path to represent a
-   * dynamic_search_ads_search_term_view resource.
-   *
-   * @deprecated Use the {@link DynamicSearchAdsSearchTermViewName} class instead.
-   */
-  @Deprecated
-  public static final String formatDynamicSearchAdsSearchTermViewName(
-      String customer, String dynamicSearchAdsSearchTermView) {
-    return DYNAMIC_SEARCH_ADS_SEARCH_TERM_VIEW_PATH_TEMPLATE.instantiate(
-        "customer", customer,
-        "dynamic_search_ads_search_term_view", dynamicSearchAdsSearchTermView);
-  }
-
-  /**
-   * Parses the customer from the given fully-qualified path which represents a
-   * dynamic_search_ads_search_term_view resource.
-   *
-   * @deprecated Use the {@link DynamicSearchAdsSearchTermViewName} class instead.
-   */
-  @Deprecated
-  public static final String parseCustomerFromDynamicSearchAdsSearchTermViewName(
-      String dynamicSearchAdsSearchTermViewName) {
-    return DYNAMIC_SEARCH_ADS_SEARCH_TERM_VIEW_PATH_TEMPLATE
-        .parse(dynamicSearchAdsSearchTermViewName)
-        .get("customer");
-  }
-
-  /**
-   * Parses the dynamic_search_ads_search_term_view from the given fully-qualified path which
-   * represents a dynamic_search_ads_search_term_view resource.
-   *
-   * @deprecated Use the {@link DynamicSearchAdsSearchTermViewName} class instead.
-   */
-  @Deprecated
-  public static final String
-      parseDynamicSearchAdsSearchTermViewFromDynamicSearchAdsSearchTermViewName(
-          String dynamicSearchAdsSearchTermViewName) {
-    return DYNAMIC_SEARCH_ADS_SEARCH_TERM_VIEW_PATH_TEMPLATE
-        .parse(dynamicSearchAdsSearchTermViewName)
-        .get("dynamic_search_ads_search_term_view");
-  }
 
   /**
    * Constructs an instance of DynamicSearchAdsSearchTermViewServiceClient with default settings.
@@ -211,18 +163,43 @@ public class DynamicSearchAdsSearchTermViewServiceClient implements BackgroundRe
    *
    * <pre><code>
    * try (DynamicSearchAdsSearchTermViewServiceClient dynamicSearchAdsSearchTermViewServiceClient = DynamicSearchAdsSearchTermViewServiceClient.create()) {
-   *   String formattedResourceName = DynamicSearchAdsSearchTermViewServiceClient.formatDynamicSearchAdsSearchTermViewName("[CUSTOMER]", "[DYNAMIC_SEARCH_ADS_SEARCH_TERM_VIEW]");
-   *   DynamicSearchAdsSearchTermView response = dynamicSearchAdsSearchTermViewServiceClient.getDynamicSearchAdsSearchTermView(formattedResourceName);
+   *   DynamicSearchAdsSearchTermViewName resourceName = DynamicSearchAdsSearchTermViewName.of("[CUSTOMER]", "[DYNAMIC_SEARCH_ADS_SEARCH_TERM_VIEW]");
+   *   DynamicSearchAdsSearchTermView response = dynamicSearchAdsSearchTermViewServiceClient.getDynamicSearchAdsSearchTermView(resourceName);
    * }
    * </code></pre>
    *
-   * @param resourceName The resource name of the dynamic search ads search term view to fetch.
+   * @param resourceName Required. The resource name of the dynamic search ads search term view to
+   *     fetch.
+   * @throws com.google.api.gax.rpc.ApiException if the remote call fails
+   */
+  public final DynamicSearchAdsSearchTermView getDynamicSearchAdsSearchTermView(
+      DynamicSearchAdsSearchTermViewName resourceName) {
+    GetDynamicSearchAdsSearchTermViewRequest request =
+        GetDynamicSearchAdsSearchTermViewRequest.newBuilder()
+            .setResourceName(resourceName == null ? null : resourceName.toString())
+            .build();
+    return getDynamicSearchAdsSearchTermView(request);
+  }
+
+  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  /**
+   * Returns the requested dynamic search ads search term view in full detail.
+   *
+   * <p>Sample code:
+   *
+   * <pre><code>
+   * try (DynamicSearchAdsSearchTermViewServiceClient dynamicSearchAdsSearchTermViewServiceClient = DynamicSearchAdsSearchTermViewServiceClient.create()) {
+   *   DynamicSearchAdsSearchTermViewName resourceName = DynamicSearchAdsSearchTermViewName.of("[CUSTOMER]", "[DYNAMIC_SEARCH_ADS_SEARCH_TERM_VIEW]");
+   *   DynamicSearchAdsSearchTermView response = dynamicSearchAdsSearchTermViewServiceClient.getDynamicSearchAdsSearchTermView(resourceName.toString());
+   * }
+   * </code></pre>
+   *
+   * @param resourceName Required. The resource name of the dynamic search ads search term view to
+   *     fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final DynamicSearchAdsSearchTermView getDynamicSearchAdsSearchTermView(
       String resourceName) {
-    DYNAMIC_SEARCH_ADS_SEARCH_TERM_VIEW_PATH_TEMPLATE.validate(
-        resourceName, "getDynamicSearchAdsSearchTermView");
     GetDynamicSearchAdsSearchTermViewRequest request =
         GetDynamicSearchAdsSearchTermViewRequest.newBuilder().setResourceName(resourceName).build();
     return getDynamicSearchAdsSearchTermView(request);
@@ -236,9 +213,9 @@ public class DynamicSearchAdsSearchTermViewServiceClient implements BackgroundRe
    *
    * <pre><code>
    * try (DynamicSearchAdsSearchTermViewServiceClient dynamicSearchAdsSearchTermViewServiceClient = DynamicSearchAdsSearchTermViewServiceClient.create()) {
-   *   String formattedResourceName = DynamicSearchAdsSearchTermViewServiceClient.formatDynamicSearchAdsSearchTermViewName("[CUSTOMER]", "[DYNAMIC_SEARCH_ADS_SEARCH_TERM_VIEW]");
+   *   DynamicSearchAdsSearchTermViewName resourceName = DynamicSearchAdsSearchTermViewName.of("[CUSTOMER]", "[DYNAMIC_SEARCH_ADS_SEARCH_TERM_VIEW]");
    *   GetDynamicSearchAdsSearchTermViewRequest request = GetDynamicSearchAdsSearchTermViewRequest.newBuilder()
-   *     .setResourceName(formattedResourceName)
+   *     .setResourceName(resourceName.toString())
    *     .build();
    *   DynamicSearchAdsSearchTermView response = dynamicSearchAdsSearchTermViewServiceClient.getDynamicSearchAdsSearchTermView(request);
    * }
@@ -260,9 +237,9 @@ public class DynamicSearchAdsSearchTermViewServiceClient implements BackgroundRe
    *
    * <pre><code>
    * try (DynamicSearchAdsSearchTermViewServiceClient dynamicSearchAdsSearchTermViewServiceClient = DynamicSearchAdsSearchTermViewServiceClient.create()) {
-   *   String formattedResourceName = DynamicSearchAdsSearchTermViewServiceClient.formatDynamicSearchAdsSearchTermViewName("[CUSTOMER]", "[DYNAMIC_SEARCH_ADS_SEARCH_TERM_VIEW]");
+   *   DynamicSearchAdsSearchTermViewName resourceName = DynamicSearchAdsSearchTermViewName.of("[CUSTOMER]", "[DYNAMIC_SEARCH_ADS_SEARCH_TERM_VIEW]");
    *   GetDynamicSearchAdsSearchTermViewRequest request = GetDynamicSearchAdsSearchTermViewRequest.newBuilder()
-   *     .setResourceName(formattedResourceName)
+   *     .setResourceName(resourceName.toString())
    *     .build();
    *   ApiFuture&lt;DynamicSearchAdsSearchTermView&gt; future = dynamicSearchAdsSearchTermViewServiceClient.getDynamicSearchAdsSearchTermViewCallable().futureCall(request);
    *   // Do something

@@ -13,6 +13,7 @@ public interface LanguageInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue language_constant = 1;</code>
+   * @return Whether the languageConstant field is set.
    */
   boolean hasLanguageConstant();
   /**
@@ -21,6 +22,7 @@ public interface LanguageInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue language_constant = 1;</code>
+   * @return The languageConstant.
    */
   com.google.protobuf.StringValue getLanguageConstant();
   /**

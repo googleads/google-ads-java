@@ -10,7 +10,7 @@ package com.google.ads.googleads.v4.services;
  *
  * Protobuf type {@code google.ads.googleads.v4.services.AdOperation}
  */
-public  final class AdOperation extends
+public final class AdOperation extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.services.AdOperation)
     AdOperationOrBuilder {
@@ -160,6 +160,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.FieldMask update_mask = 2;</code>
    * @return Whether the updateMask field is set.
    */
+  @java.lang.Override
   public boolean hasUpdateMask() {
     return updateMask_ != null;
   }
@@ -171,6 +172,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.FieldMask update_mask = 2;</code>
    * @return The updateMask.
    */
+  @java.lang.Override
   public com.google.protobuf.FieldMask getUpdateMask() {
     return updateMask_ == null ? com.google.protobuf.FieldMask.getDefaultInstance() : updateMask_;
   }
@@ -181,6 +183,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.FieldMask update_mask = 2;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.FieldMaskOrBuilder getUpdateMaskOrBuilder() {
     return getUpdateMask();
   }
@@ -196,6 +199,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.resources.Ad update = 1;</code>
    * @return Whether the update field is set.
    */
+  @java.lang.Override
   public boolean hasUpdate() {
     return operationCase_ == 1;
   }
@@ -209,6 +213,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.resources.Ad update = 1;</code>
    * @return The update.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.resources.Ad getUpdate() {
     if (operationCase_ == 1) {
        return (com.google.ads.googleads.v4.resources.Ad) operation_;
@@ -224,6 +229,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v4.resources.Ad update = 1;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.resources.AdOrBuilder getUpdateOrBuilder() {
     if (operationCase_ == 1) {
        return (com.google.ads.googleads.v4.resources.Ad) operation_;
@@ -775,6 +781,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.resources.Ad update = 1;</code>
      * @return Whether the update field is set.
      */
+    @java.lang.Override
     public boolean hasUpdate() {
       return operationCase_ == 1;
     }
@@ -788,6 +795,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.resources.Ad update = 1;</code>
      * @return The update.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.resources.Ad getUpdate() {
       if (updateBuilder_ == null) {
         if (operationCase_ == 1) {
@@ -917,6 +925,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v4.resources.Ad update = 1;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.resources.AdOrBuilder getUpdateOrBuilder() {
       if ((operationCase_ == 1) && (updateBuilder_ != null)) {
         return updateBuilder_.getMessageOrBuilder();

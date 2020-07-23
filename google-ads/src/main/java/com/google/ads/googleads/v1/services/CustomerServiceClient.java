@@ -1,5 +1,5 @@
 /*
- * Copyright 2019 Google LLC
+ * Copyright 2020 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -21,7 +21,6 @@ import com.google.ads.googleads.v1.services.stub.CustomerServiceStubSettings;
 import com.google.api.core.BetaApi;
 import com.google.api.gax.core.BackgroundResource;
 import com.google.api.gax.rpc.UnaryCallable;
-import com.google.api.pathtemplate.PathTemplate;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 import javax.annotation.Generated;
@@ -36,8 +35,8 @@ import javax.annotation.Generated;
  * <pre>
  * <code>
  * try (CustomerServiceClient customerServiceClient = CustomerServiceClient.create()) {
- *   String formattedResourceName = CustomerServiceClient.formatCustomerName("[CUSTOMER]");
- *   Customer response = customerServiceClient.getCustomer(formattedResourceName);
+ *   CustomerName resourceName = CustomerName.of("[CUSTOMER]");
+ *   Customer response = customerServiceClient.getCustomer(resourceName);
  * }
  * </code>
  * </pre>
@@ -99,29 +98,6 @@ public class CustomerServiceClient implements BackgroundResource {
   private final CustomerServiceSettings settings;
   private final CustomerServiceStub stub;
 
-  private static final PathTemplate CUSTOMER_PATH_TEMPLATE =
-      PathTemplate.createWithoutUrlEncoding("customers/{customer}");
-
-  /**
-   * Formats a string containing the fully-qualified path to represent a customer resource.
-   *
-   * @deprecated Use the {@link CustomerName} class instead.
-   */
-  @Deprecated
-  public static final String formatCustomerName(String customer) {
-    return CUSTOMER_PATH_TEMPLATE.instantiate("customer", customer);
-  }
-
-  /**
-   * Parses the customer from the given fully-qualified path which represents a customer resource.
-   *
-   * @deprecated Use the {@link CustomerName} class instead.
-   */
-  @Deprecated
-  public static final String parseCustomerFromCustomerName(String customerName) {
-    return CUSTOMER_PATH_TEMPLATE.parse(customerName).get("customer");
-  }
-
   /** Constructs an instance of CustomerServiceClient with default settings. */
   public static final CustomerServiceClient create() throws IOException {
     return create(CustomerServiceSettings.newBuilder().build());
@@ -178,16 +154,39 @@ public class CustomerServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (CustomerServiceClient customerServiceClient = CustomerServiceClient.create()) {
-   *   String formattedResourceName = CustomerServiceClient.formatCustomerName("[CUSTOMER]");
-   *   Customer response = customerServiceClient.getCustomer(formattedResourceName);
+   *   CustomerName resourceName = CustomerName.of("[CUSTOMER]");
+   *   Customer response = customerServiceClient.getCustomer(resourceName);
    * }
    * </code></pre>
    *
-   * @param resourceName The resource name of the customer to fetch.
+   * @param resourceName Required. The resource name of the customer to fetch.
+   * @throws com.google.api.gax.rpc.ApiException if the remote call fails
+   */
+  public final Customer getCustomer(CustomerName resourceName) {
+    GetCustomerRequest request =
+        GetCustomerRequest.newBuilder()
+            .setResourceName(resourceName == null ? null : resourceName.toString())
+            .build();
+    return getCustomer(request);
+  }
+
+  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  /**
+   * Returns the requested customer in full detail.
+   *
+   * <p>Sample code:
+   *
+   * <pre><code>
+   * try (CustomerServiceClient customerServiceClient = CustomerServiceClient.create()) {
+   *   CustomerName resourceName = CustomerName.of("[CUSTOMER]");
+   *   Customer response = customerServiceClient.getCustomer(resourceName.toString());
+   * }
+   * </code></pre>
+   *
+   * @param resourceName Required. The resource name of the customer to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final Customer getCustomer(String resourceName) {
-    CUSTOMER_PATH_TEMPLATE.validate(resourceName, "getCustomer");
     GetCustomerRequest request =
         GetCustomerRequest.newBuilder().setResourceName(resourceName).build();
     return getCustomer(request);
@@ -201,9 +200,9 @@ public class CustomerServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (CustomerServiceClient customerServiceClient = CustomerServiceClient.create()) {
-   *   String formattedResourceName = CustomerServiceClient.formatCustomerName("[CUSTOMER]");
+   *   CustomerName resourceName = CustomerName.of("[CUSTOMER]");
    *   GetCustomerRequest request = GetCustomerRequest.newBuilder()
-   *     .setResourceName(formattedResourceName)
+   *     .setResourceName(resourceName.toString())
    *     .build();
    *   Customer response = customerServiceClient.getCustomer(request);
    * }
@@ -224,9 +223,9 @@ public class CustomerServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (CustomerServiceClient customerServiceClient = CustomerServiceClient.create()) {
-   *   String formattedResourceName = CustomerServiceClient.formatCustomerName("[CUSTOMER]");
+   *   CustomerName resourceName = CustomerName.of("[CUSTOMER]");
    *   GetCustomerRequest request = GetCustomerRequest.newBuilder()
-   *     .setResourceName(formattedResourceName)
+   *     .setResourceName(resourceName.toString())
    *     .build();
    *   ApiFuture&lt;Customer&gt; future = customerServiceClient.getCustomerCallable().futureCall(request);
    *   // Do something
@@ -248,50 +247,16 @@ public class CustomerServiceClient implements BackgroundResource {
    * try (CustomerServiceClient customerServiceClient = CustomerServiceClient.create()) {
    *   String customerId = "";
    *   CustomerOperation operation = CustomerOperation.newBuilder().build();
-   *   boolean validateOnly = false;
-   *   MutateCustomerResponse response = customerServiceClient.mutateCustomer(customerId, operation, validateOnly);
-   * }
-   * </code></pre>
-   *
-   * @param customerId The ID of the customer being modified.
-   * @param operation The operation to perform on the customer
-   * @param validateOnly If true, the request is validated but not executed. Only errors are
-   *     returned, not results.
-   * @throws com.google.api.gax.rpc.ApiException if the remote call fails
-   */
-  public final MutateCustomerResponse mutateCustomer(
-      String customerId, CustomerOperation operation, boolean validateOnly) {
-
-    MutateCustomerRequest request =
-        MutateCustomerRequest.newBuilder()
-            .setCustomerId(customerId)
-            .setOperation(operation)
-            .setValidateOnly(validateOnly)
-            .build();
-    return mutateCustomer(request);
-  }
-
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
-  /**
-   * Updates a customer. Operation statuses are returned.
-   *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (CustomerServiceClient customerServiceClient = CustomerServiceClient.create()) {
-   *   String customerId = "";
-   *   CustomerOperation operation = CustomerOperation.newBuilder().build();
    *   MutateCustomerResponse response = customerServiceClient.mutateCustomer(customerId, operation);
    * }
    * </code></pre>
    *
-   * @param customerId The ID of the customer being modified.
-   * @param operation The operation to perform on the customer
+   * @param customerId Required. The ID of the customer being modified.
+   * @param operation Required. The operation to perform on the customer
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final MutateCustomerResponse mutateCustomer(
       String customerId, CustomerOperation operation) {
-
     MutateCustomerRequest request =
         MutateCustomerRequest.newBuilder()
             .setCustomerId(customerId)
@@ -405,14 +370,13 @@ public class CustomerServiceClient implements BackgroundResource {
    * }
    * </code></pre>
    *
-   * @param customerId The ID of the Manager under whom client customer is being created.
-   * @param customerClient The new client customer to create. The resource name on this customer
-   *     will be ignored.
+   * @param customerId Required. The ID of the Manager under whom client customer is being created.
+   * @param customerClient Required. The new client customer to create. The resource name on this
+   *     customer will be ignored.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final CreateCustomerClientResponse createCustomerClient(
       String customerId, Customer customerClient) {
-
     CreateCustomerClientRequest request =
         CreateCustomerClientRequest.newBuilder()
             .setCustomerId(customerId)

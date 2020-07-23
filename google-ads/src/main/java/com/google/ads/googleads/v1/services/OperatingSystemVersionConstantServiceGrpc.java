@@ -21,7 +21,7 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.10.0)",
+    value = "by gRPC proto compiler",
     comments = "Source: google/ads/googleads/v1/services/operating_system_version_constant_service.proto")
 public final class OperatingSystemVersionConstantServiceGrpc {
 
@@ -30,49 +30,49 @@ public final class OperatingSystemVersionConstantServiceGrpc {
   public static final String SERVICE_NAME = "google.ads.googleads.v1.services.OperatingSystemVersionConstantService";
 
   // Static method descriptors that strictly reflect the proto.
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  @java.lang.Deprecated // Use {@link #getGetOperatingSystemVersionConstantMethod()} instead. 
-  public static final io.grpc.MethodDescriptor<com.google.ads.googleads.v1.services.GetOperatingSystemVersionConstantRequest,
-      com.google.ads.googleads.v1.resources.OperatingSystemVersionConstant> METHOD_GET_OPERATING_SYSTEM_VERSION_CONSTANT = getGetOperatingSystemVersionConstantMethodHelper();
-
   private static volatile io.grpc.MethodDescriptor<com.google.ads.googleads.v1.services.GetOperatingSystemVersionConstantRequest,
       com.google.ads.googleads.v1.resources.OperatingSystemVersionConstant> getGetOperatingSystemVersionConstantMethod;
 
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetOperatingSystemVersionConstant",
+      requestType = com.google.ads.googleads.v1.services.GetOperatingSystemVersionConstantRequest.class,
+      responseType = com.google.ads.googleads.v1.resources.OperatingSystemVersionConstant.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<com.google.ads.googleads.v1.services.GetOperatingSystemVersionConstantRequest,
       com.google.ads.googleads.v1.resources.OperatingSystemVersionConstant> getGetOperatingSystemVersionConstantMethod() {
-    return getGetOperatingSystemVersionConstantMethodHelper();
-  }
-
-  private static io.grpc.MethodDescriptor<com.google.ads.googleads.v1.services.GetOperatingSystemVersionConstantRequest,
-      com.google.ads.googleads.v1.resources.OperatingSystemVersionConstant> getGetOperatingSystemVersionConstantMethodHelper() {
     io.grpc.MethodDescriptor<com.google.ads.googleads.v1.services.GetOperatingSystemVersionConstantRequest, com.google.ads.googleads.v1.resources.OperatingSystemVersionConstant> getGetOperatingSystemVersionConstantMethod;
     if ((getGetOperatingSystemVersionConstantMethod = OperatingSystemVersionConstantServiceGrpc.getGetOperatingSystemVersionConstantMethod) == null) {
       synchronized (OperatingSystemVersionConstantServiceGrpc.class) {
         if ((getGetOperatingSystemVersionConstantMethod = OperatingSystemVersionConstantServiceGrpc.getGetOperatingSystemVersionConstantMethod) == null) {
-          OperatingSystemVersionConstantServiceGrpc.getGetOperatingSystemVersionConstantMethod = getGetOperatingSystemVersionConstantMethod = 
+          OperatingSystemVersionConstantServiceGrpc.getGetOperatingSystemVersionConstantMethod = getGetOperatingSystemVersionConstantMethod =
               io.grpc.MethodDescriptor.<com.google.ads.googleads.v1.services.GetOperatingSystemVersionConstantRequest, com.google.ads.googleads.v1.resources.OperatingSystemVersionConstant>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "google.ads.googleads.v1.services.OperatingSystemVersionConstantService", "GetOperatingSystemVersionConstant"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetOperatingSystemVersionConstant"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v1.services.GetOperatingSystemVersionConstantRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v1.resources.OperatingSystemVersionConstant.getDefaultInstance()))
-                  .setSchemaDescriptor(new OperatingSystemVersionConstantServiceMethodDescriptorSupplier("GetOperatingSystemVersionConstant"))
-                  .build();
-          }
+              .setSchemaDescriptor(new OperatingSystemVersionConstantServiceMethodDescriptorSupplier("GetOperatingSystemVersionConstant"))
+              .build();
         }
-     }
-     return getGetOperatingSystemVersionConstantMethod;
+      }
+    }
+    return getGetOperatingSystemVersionConstantMethod;
   }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static OperatingSystemVersionConstantServiceStub newStub(io.grpc.Channel channel) {
-    return new OperatingSystemVersionConstantServiceStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<OperatingSystemVersionConstantServiceStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<OperatingSystemVersionConstantServiceStub>() {
+        @java.lang.Override
+        public OperatingSystemVersionConstantServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new OperatingSystemVersionConstantServiceStub(channel, callOptions);
+        }
+      };
+    return OperatingSystemVersionConstantServiceStub.newStub(factory, channel);
   }
 
   /**
@@ -80,7 +80,14 @@ public final class OperatingSystemVersionConstantServiceGrpc {
    */
   public static OperatingSystemVersionConstantServiceBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new OperatingSystemVersionConstantServiceBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<OperatingSystemVersionConstantServiceBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<OperatingSystemVersionConstantServiceBlockingStub>() {
+        @java.lang.Override
+        public OperatingSystemVersionConstantServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new OperatingSystemVersionConstantServiceBlockingStub(channel, callOptions);
+        }
+      };
+    return OperatingSystemVersionConstantServiceBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -88,7 +95,14 @@ public final class OperatingSystemVersionConstantServiceGrpc {
    */
   public static OperatingSystemVersionConstantServiceFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new OperatingSystemVersionConstantServiceFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<OperatingSystemVersionConstantServiceFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<OperatingSystemVersionConstantServiceFutureStub>() {
+        @java.lang.Override
+        public OperatingSystemVersionConstantServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new OperatingSystemVersionConstantServiceFutureStub(channel, callOptions);
+        }
+      };
+    return OperatingSystemVersionConstantServiceFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -105,13 +119,13 @@ public final class OperatingSystemVersionConstantServiceGrpc {
      */
     public void getOperatingSystemVersionConstant(com.google.ads.googleads.v1.services.GetOperatingSystemVersionConstantRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v1.resources.OperatingSystemVersionConstant> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetOperatingSystemVersionConstantMethodHelper(), responseObserver);
+      asyncUnimplementedUnaryCall(getGetOperatingSystemVersionConstantMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
-            getGetOperatingSystemVersionConstantMethodHelper(),
+            getGetOperatingSystemVersionConstantMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 com.google.ads.googleads.v1.services.GetOperatingSystemVersionConstantRequest,
@@ -126,19 +140,15 @@ public final class OperatingSystemVersionConstantServiceGrpc {
    * Service to fetch Operating System Version constants.
    * </pre>
    */
-  public static final class OperatingSystemVersionConstantServiceStub extends io.grpc.stub.AbstractStub<OperatingSystemVersionConstantServiceStub> {
-    private OperatingSystemVersionConstantServiceStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private OperatingSystemVersionConstantServiceStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class OperatingSystemVersionConstantServiceStub extends io.grpc.stub.AbstractAsyncStub<OperatingSystemVersionConstantServiceStub> {
+    private OperatingSystemVersionConstantServiceStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected OperatingSystemVersionConstantServiceStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected OperatingSystemVersionConstantServiceStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new OperatingSystemVersionConstantServiceStub(channel, callOptions);
     }
 
@@ -150,7 +160,7 @@ public final class OperatingSystemVersionConstantServiceGrpc {
     public void getOperatingSystemVersionConstant(com.google.ads.googleads.v1.services.GetOperatingSystemVersionConstantRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v1.resources.OperatingSystemVersionConstant> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(getGetOperatingSystemVersionConstantMethodHelper(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getGetOperatingSystemVersionConstantMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -159,19 +169,15 @@ public final class OperatingSystemVersionConstantServiceGrpc {
    * Service to fetch Operating System Version constants.
    * </pre>
    */
-  public static final class OperatingSystemVersionConstantServiceBlockingStub extends io.grpc.stub.AbstractStub<OperatingSystemVersionConstantServiceBlockingStub> {
-    private OperatingSystemVersionConstantServiceBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private OperatingSystemVersionConstantServiceBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class OperatingSystemVersionConstantServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<OperatingSystemVersionConstantServiceBlockingStub> {
+    private OperatingSystemVersionConstantServiceBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected OperatingSystemVersionConstantServiceBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected OperatingSystemVersionConstantServiceBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new OperatingSystemVersionConstantServiceBlockingStub(channel, callOptions);
     }
 
@@ -182,7 +188,7 @@ public final class OperatingSystemVersionConstantServiceGrpc {
      */
     public com.google.ads.googleads.v1.resources.OperatingSystemVersionConstant getOperatingSystemVersionConstant(com.google.ads.googleads.v1.services.GetOperatingSystemVersionConstantRequest request) {
       return blockingUnaryCall(
-          getChannel(), getGetOperatingSystemVersionConstantMethodHelper(), getCallOptions(), request);
+          getChannel(), getGetOperatingSystemVersionConstantMethod(), getCallOptions(), request);
     }
   }
 
@@ -191,19 +197,15 @@ public final class OperatingSystemVersionConstantServiceGrpc {
    * Service to fetch Operating System Version constants.
    * </pre>
    */
-  public static final class OperatingSystemVersionConstantServiceFutureStub extends io.grpc.stub.AbstractStub<OperatingSystemVersionConstantServiceFutureStub> {
-    private OperatingSystemVersionConstantServiceFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private OperatingSystemVersionConstantServiceFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class OperatingSystemVersionConstantServiceFutureStub extends io.grpc.stub.AbstractFutureStub<OperatingSystemVersionConstantServiceFutureStub> {
+    private OperatingSystemVersionConstantServiceFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected OperatingSystemVersionConstantServiceFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected OperatingSystemVersionConstantServiceFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new OperatingSystemVersionConstantServiceFutureStub(channel, callOptions);
     }
 
@@ -215,7 +217,7 @@ public final class OperatingSystemVersionConstantServiceGrpc {
     public com.google.common.util.concurrent.ListenableFuture<com.google.ads.googleads.v1.resources.OperatingSystemVersionConstant> getOperatingSystemVersionConstant(
         com.google.ads.googleads.v1.services.GetOperatingSystemVersionConstantRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(getGetOperatingSystemVersionConstantMethodHelper(), getCallOptions()), request);
+          getChannel().newCall(getGetOperatingSystemVersionConstantMethod(), getCallOptions()), request);
     }
   }
 
@@ -303,7 +305,7 @@ public final class OperatingSystemVersionConstantServiceGrpc {
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new OperatingSystemVersionConstantServiceFileDescriptorSupplier())
-              .addMethod(getGetOperatingSystemVersionConstantMethodHelper())
+              .addMethod(getGetOperatingSystemVersionConstantMethod())
               .build();
         }
       }

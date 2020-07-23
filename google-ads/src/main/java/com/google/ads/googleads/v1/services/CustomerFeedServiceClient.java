@@ -1,5 +1,5 @@
 /*
- * Copyright 2019 Google LLC
+ * Copyright 2020 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -21,7 +21,6 @@ import com.google.ads.googleads.v1.services.stub.CustomerFeedServiceStubSettings
 import com.google.api.core.BetaApi;
 import com.google.api.gax.core.BackgroundResource;
 import com.google.api.gax.rpc.UnaryCallable;
-import com.google.api.pathtemplate.PathTemplate;
 import java.io.IOException;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
@@ -37,8 +36,8 @@ import javax.annotation.Generated;
  * <pre>
  * <code>
  * try (CustomerFeedServiceClient customerFeedServiceClient = CustomerFeedServiceClient.create()) {
- *   String formattedResourceName = CustomerFeedServiceClient.formatCustomerFeedName("[CUSTOMER]", "[CUSTOMER_FEED]");
- *   CustomerFeed response = customerFeedServiceClient.getCustomerFeed(formattedResourceName);
+ *   CustomerFeedName resourceName = CustomerFeedName.of("[CUSTOMER]", "[CUSTOMER_FEED]");
+ *   CustomerFeed response = customerFeedServiceClient.getCustomerFeed(resourceName);
  * }
  * </code>
  * </pre>
@@ -100,43 +99,6 @@ public class CustomerFeedServiceClient implements BackgroundResource {
   private final CustomerFeedServiceSettings settings;
   private final CustomerFeedServiceStub stub;
 
-  private static final PathTemplate CUSTOMER_FEED_PATH_TEMPLATE =
-      PathTemplate.createWithoutUrlEncoding("customers/{customer}/customerFeeds/{customer_feed}");
-
-  /**
-   * Formats a string containing the fully-qualified path to represent a customer_feed resource.
-   *
-   * @deprecated Use the {@link CustomerFeedName} class instead.
-   */
-  @Deprecated
-  public static final String formatCustomerFeedName(String customer, String customerFeed) {
-    return CUSTOMER_FEED_PATH_TEMPLATE.instantiate(
-        "customer", customer,
-        "customer_feed", customerFeed);
-  }
-
-  /**
-   * Parses the customer from the given fully-qualified path which represents a customer_feed
-   * resource.
-   *
-   * @deprecated Use the {@link CustomerFeedName} class instead.
-   */
-  @Deprecated
-  public static final String parseCustomerFromCustomerFeedName(String customerFeedName) {
-    return CUSTOMER_FEED_PATH_TEMPLATE.parse(customerFeedName).get("customer");
-  }
-
-  /**
-   * Parses the customer_feed from the given fully-qualified path which represents a customer_feed
-   * resource.
-   *
-   * @deprecated Use the {@link CustomerFeedName} class instead.
-   */
-  @Deprecated
-  public static final String parseCustomerFeedFromCustomerFeedName(String customerFeedName) {
-    return CUSTOMER_FEED_PATH_TEMPLATE.parse(customerFeedName).get("customer_feed");
-  }
-
   /** Constructs an instance of CustomerFeedServiceClient with default settings. */
   public static final CustomerFeedServiceClient create() throws IOException {
     return create(CustomerFeedServiceSettings.newBuilder().build());
@@ -193,16 +155,39 @@ public class CustomerFeedServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (CustomerFeedServiceClient customerFeedServiceClient = CustomerFeedServiceClient.create()) {
-   *   String formattedResourceName = CustomerFeedServiceClient.formatCustomerFeedName("[CUSTOMER]", "[CUSTOMER_FEED]");
-   *   CustomerFeed response = customerFeedServiceClient.getCustomerFeed(formattedResourceName);
+   *   CustomerFeedName resourceName = CustomerFeedName.of("[CUSTOMER]", "[CUSTOMER_FEED]");
+   *   CustomerFeed response = customerFeedServiceClient.getCustomerFeed(resourceName);
    * }
    * </code></pre>
    *
-   * @param resourceName The resource name of the customer feed to fetch.
+   * @param resourceName Required. The resource name of the customer feed to fetch.
+   * @throws com.google.api.gax.rpc.ApiException if the remote call fails
+   */
+  public final CustomerFeed getCustomerFeed(CustomerFeedName resourceName) {
+    GetCustomerFeedRequest request =
+        GetCustomerFeedRequest.newBuilder()
+            .setResourceName(resourceName == null ? null : resourceName.toString())
+            .build();
+    return getCustomerFeed(request);
+  }
+
+  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  /**
+   * Returns the requested customer feed in full detail.
+   *
+   * <p>Sample code:
+   *
+   * <pre><code>
+   * try (CustomerFeedServiceClient customerFeedServiceClient = CustomerFeedServiceClient.create()) {
+   *   CustomerFeedName resourceName = CustomerFeedName.of("[CUSTOMER]", "[CUSTOMER_FEED]");
+   *   CustomerFeed response = customerFeedServiceClient.getCustomerFeed(resourceName.toString());
+   * }
+   * </code></pre>
+   *
+   * @param resourceName Required. The resource name of the customer feed to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final CustomerFeed getCustomerFeed(String resourceName) {
-    CUSTOMER_FEED_PATH_TEMPLATE.validate(resourceName, "getCustomerFeed");
     GetCustomerFeedRequest request =
         GetCustomerFeedRequest.newBuilder().setResourceName(resourceName).build();
     return getCustomerFeed(request);
@@ -216,9 +201,9 @@ public class CustomerFeedServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (CustomerFeedServiceClient customerFeedServiceClient = CustomerFeedServiceClient.create()) {
-   *   String formattedResourceName = CustomerFeedServiceClient.formatCustomerFeedName("[CUSTOMER]", "[CUSTOMER_FEED]");
+   *   CustomerFeedName resourceName = CustomerFeedName.of("[CUSTOMER]", "[CUSTOMER_FEED]");
    *   GetCustomerFeedRequest request = GetCustomerFeedRequest.newBuilder()
-   *     .setResourceName(formattedResourceName)
+   *     .setResourceName(resourceName.toString())
    *     .build();
    *   CustomerFeed response = customerFeedServiceClient.getCustomerFeed(request);
    * }
@@ -239,9 +224,9 @@ public class CustomerFeedServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (CustomerFeedServiceClient customerFeedServiceClient = CustomerFeedServiceClient.create()) {
-   *   String formattedResourceName = CustomerFeedServiceClient.formatCustomerFeedName("[CUSTOMER]", "[CUSTOMER_FEED]");
+   *   CustomerFeedName resourceName = CustomerFeedName.of("[CUSTOMER]", "[CUSTOMER_FEED]");
    *   GetCustomerFeedRequest request = GetCustomerFeedRequest.newBuilder()
-   *     .setResourceName(formattedResourceName)
+   *     .setResourceName(resourceName.toString())
    *     .build();
    *   ApiFuture&lt;CustomerFeed&gt; future = customerFeedServiceClient.getCustomerFeedCallable().futureCall(request);
    *   // Do something
@@ -263,58 +248,16 @@ public class CustomerFeedServiceClient implements BackgroundResource {
    * try (CustomerFeedServiceClient customerFeedServiceClient = CustomerFeedServiceClient.create()) {
    *   String customerId = "";
    *   List&lt;CustomerFeedOperation&gt; operations = new ArrayList&lt;&gt;();
-   *   boolean partialFailure = false;
-   *   boolean validateOnly = false;
-   *   MutateCustomerFeedsResponse response = customerFeedServiceClient.mutateCustomerFeeds(customerId, operations, partialFailure, validateOnly);
-   * }
-   * </code></pre>
-   *
-   * @param customerId The ID of the customer whose customer feeds are being modified.
-   * @param operations The list of operations to perform on individual customer feeds.
-   * @param partialFailure If true, successful operations will be carried out and invalid operations
-   *     will return errors. If false, all operations will be carried out in one transaction if and
-   *     only if they are all valid. Default is false.
-   * @param validateOnly If true, the request is validated but not executed. Only errors are
-   *     returned, not results.
-   * @throws com.google.api.gax.rpc.ApiException if the remote call fails
-   */
-  public final MutateCustomerFeedsResponse mutateCustomerFeeds(
-      String customerId,
-      List<CustomerFeedOperation> operations,
-      boolean partialFailure,
-      boolean validateOnly) {
-
-    MutateCustomerFeedsRequest request =
-        MutateCustomerFeedsRequest.newBuilder()
-            .setCustomerId(customerId)
-            .addAllOperations(operations)
-            .setPartialFailure(partialFailure)
-            .setValidateOnly(validateOnly)
-            .build();
-    return mutateCustomerFeeds(request);
-  }
-
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
-  /**
-   * Creates, updates, or removes customer feeds. Operation statuses are returned.
-   *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (CustomerFeedServiceClient customerFeedServiceClient = CustomerFeedServiceClient.create()) {
-   *   String customerId = "";
-   *   List&lt;CustomerFeedOperation&gt; operations = new ArrayList&lt;&gt;();
    *   MutateCustomerFeedsResponse response = customerFeedServiceClient.mutateCustomerFeeds(customerId, operations);
    * }
    * </code></pre>
    *
-   * @param customerId The ID of the customer whose customer feeds are being modified.
-   * @param operations The list of operations to perform on individual customer feeds.
+   * @param customerId Required. The ID of the customer whose customer feeds are being modified.
+   * @param operations Required. The list of operations to perform on individual customer feeds.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final MutateCustomerFeedsResponse mutateCustomerFeeds(
       String customerId, List<CustomerFeedOperation> operations) {
-
     MutateCustomerFeedsRequest request =
         MutateCustomerFeedsRequest.newBuilder()
             .setCustomerId(customerId)

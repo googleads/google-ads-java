@@ -10,7 +10,7 @@ package com.google.ads.googleads.v4.common;
  *
  * Protobuf type {@code google.ads.googleads.v4.common.KeywordInfo}
  */
-public  final class KeywordInfo extends
+public final class KeywordInfo extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.common.KeywordInfo)
     KeywordInfoOrBuilder {
@@ -114,6 +114,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue text = 1;</code>
    * @return Whether the text field is set.
    */
+  @java.lang.Override
   public boolean hasText() {
     return text_ != null;
   }
@@ -125,6 +126,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue text = 1;</code>
    * @return The text.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getText() {
     return text_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : text_;
   }
@@ -135,6 +137,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue text = 1;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getTextOrBuilder() {
     return getText();
   }
@@ -149,7 +152,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.KeywordMatchTypeEnum.KeywordMatchType match_type = 2;</code>
    * @return The enum numeric value on the wire for matchType.
    */
-  public int getMatchTypeValue() {
+  @java.lang.Override public int getMatchTypeValue() {
     return matchType_;
   }
   /**
@@ -160,7 +163,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.KeywordMatchTypeEnum.KeywordMatchType match_type = 2;</code>
    * @return The matchType.
    */
-  public com.google.ads.googleads.v4.enums.KeywordMatchTypeEnum.KeywordMatchType getMatchType() {
+  @java.lang.Override public com.google.ads.googleads.v4.enums.KeywordMatchTypeEnum.KeywordMatchType getMatchType() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v4.enums.KeywordMatchTypeEnum.KeywordMatchType result = com.google.ads.googleads.v4.enums.KeywordMatchTypeEnum.KeywordMatchType.valueOf(matchType_);
     return result == null ? com.google.ads.googleads.v4.enums.KeywordMatchTypeEnum.KeywordMatchType.UNRECOGNIZED : result;
@@ -665,7 +668,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.KeywordMatchTypeEnum.KeywordMatchType match_type = 2;</code>
      * @return The enum numeric value on the wire for matchType.
      */
-    public int getMatchTypeValue() {
+    @java.lang.Override public int getMatchTypeValue() {
       return matchType_;
     }
     /**
@@ -678,6 +681,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setMatchTypeValue(int value) {
+      
       matchType_ = value;
       onChanged();
       return this;
@@ -690,6 +694,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.KeywordMatchTypeEnum.KeywordMatchType match_type = 2;</code>
      * @return The matchType.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.enums.KeywordMatchTypeEnum.KeywordMatchType getMatchType() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v4.enums.KeywordMatchTypeEnum.KeywordMatchType result = com.google.ads.googleads.v4.enums.KeywordMatchTypeEnum.KeywordMatchType.valueOf(matchType_);

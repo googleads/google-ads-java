@@ -21,7 +21,7 @@ import com.google.ads.googleads.lib.GoogleAdsClient;
 import com.google.ads.googleads.v4.errors.GoogleAdsError;
 import com.google.ads.googleads.v4.errors.GoogleAdsException;
 import com.google.ads.googleads.v4.resources.CustomerClient;
-import com.google.ads.googleads.v4.resources.CustomerName;
+import com.google.ads.googleads.v4.services.CustomerName;
 import com.google.ads.googleads.v4.services.CustomerServiceClient;
 import com.google.ads.googleads.v4.services.GoogleAdsRow;
 import com.google.ads.googleads.v4.services.GoogleAdsServiceClient;

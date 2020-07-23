@@ -10,7 +10,7 @@ package com.google.ads.googleads.v4.resources;
  *
  * Protobuf type {@code google.ads.googleads.v4.resources.AttributeFieldMapping}
  */
-public  final class AttributeFieldMapping extends
+public final class AttributeFieldMapping extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.resources.AttributeFieldMapping)
     AttributeFieldMappingOrBuilder {
@@ -325,6 +325,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int64Value feed_attribute_id = 1 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return Whether the feedAttributeId field is set.
    */
+  @java.lang.Override
   public boolean hasFeedAttributeId() {
     return feedAttributeId_ != null;
   }
@@ -336,6 +337,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int64Value feed_attribute_id = 1 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return The feedAttributeId.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getFeedAttributeId() {
     return feedAttributeId_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : feedAttributeId_;
   }
@@ -346,6 +348,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int64Value feed_attribute_id = 1 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getFeedAttributeIdOrBuilder() {
     return getFeedAttributeId();
   }
@@ -363,6 +366,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int64Value field_id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the fieldId field is set.
    */
+  @java.lang.Override
   public boolean hasFieldId() {
     return fieldId_ != null;
   }
@@ -377,6 +381,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int64Value field_id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The fieldId.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getFieldId() {
     return fieldId_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : fieldId_;
   }
@@ -390,6 +395,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int64Value field_id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getFieldIdOrBuilder() {
     return getFieldId();
   }
@@ -2275,6 +2281,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.SitelinkPlaceholderFieldEnum.SitelinkPlaceholderField sitelink_field = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return The enum numeric value on the wire for sitelinkField.
      */
+    @java.lang.Override
     public int getSitelinkFieldValue() {
       if (fieldCase_ == 3) {
         return ((java.lang.Integer) field_).intValue();
@@ -2304,6 +2311,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.SitelinkPlaceholderFieldEnum.SitelinkPlaceholderField sitelink_field = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return The sitelinkField.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.enums.SitelinkPlaceholderFieldEnum.SitelinkPlaceholderField getSitelinkField() {
       if (fieldCase_ == 3) {
         @SuppressWarnings("deprecation")
@@ -2356,6 +2364,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.CallPlaceholderFieldEnum.CallPlaceholderField call_field = 4 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return The enum numeric value on the wire for callField.
      */
+    @java.lang.Override
     public int getCallFieldValue() {
       if (fieldCase_ == 4) {
         return ((java.lang.Integer) field_).intValue();
@@ -2385,6 +2394,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.CallPlaceholderFieldEnum.CallPlaceholderField call_field = 4 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return The callField.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.enums.CallPlaceholderFieldEnum.CallPlaceholderField getCallField() {
       if (fieldCase_ == 4) {
         @SuppressWarnings("deprecation")
@@ -2437,6 +2447,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.AppPlaceholderFieldEnum.AppPlaceholderField app_field = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return The enum numeric value on the wire for appField.
      */
+    @java.lang.Override
     public int getAppFieldValue() {
       if (fieldCase_ == 5) {
         return ((java.lang.Integer) field_).intValue();
@@ -2466,6 +2477,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.AppPlaceholderFieldEnum.AppPlaceholderField app_field = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return The appField.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.enums.AppPlaceholderFieldEnum.AppPlaceholderField getAppField() {
       if (fieldCase_ == 5) {
         @SuppressWarnings("deprecation")
@@ -2518,6 +2530,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.LocationPlaceholderFieldEnum.LocationPlaceholderField location_field = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The enum numeric value on the wire for locationField.
      */
+    @java.lang.Override
     public int getLocationFieldValue() {
       if (fieldCase_ == 6) {
         return ((java.lang.Integer) field_).intValue();
@@ -2547,6 +2560,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.LocationPlaceholderFieldEnum.LocationPlaceholderField location_field = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The locationField.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.enums.LocationPlaceholderFieldEnum.LocationPlaceholderField getLocationField() {
       if (fieldCase_ == 6) {
         @SuppressWarnings("deprecation")
@@ -2599,6 +2613,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.AffiliateLocationPlaceholderFieldEnum.AffiliateLocationPlaceholderField affiliate_location_field = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The enum numeric value on the wire for affiliateLocationField.
      */
+    @java.lang.Override
     public int getAffiliateLocationFieldValue() {
       if (fieldCase_ == 7) {
         return ((java.lang.Integer) field_).intValue();
@@ -2628,6 +2643,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.AffiliateLocationPlaceholderFieldEnum.AffiliateLocationPlaceholderField affiliate_location_field = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The affiliateLocationField.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.enums.AffiliateLocationPlaceholderFieldEnum.AffiliateLocationPlaceholderField getAffiliateLocationField() {
       if (fieldCase_ == 7) {
         @SuppressWarnings("deprecation")
@@ -2680,6 +2696,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.CalloutPlaceholderFieldEnum.CalloutPlaceholderField callout_field = 8 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return The enum numeric value on the wire for calloutField.
      */
+    @java.lang.Override
     public int getCalloutFieldValue() {
       if (fieldCase_ == 8) {
         return ((java.lang.Integer) field_).intValue();
@@ -2709,6 +2726,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.CalloutPlaceholderFieldEnum.CalloutPlaceholderField callout_field = 8 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return The calloutField.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.enums.CalloutPlaceholderFieldEnum.CalloutPlaceholderField getCalloutField() {
       if (fieldCase_ == 8) {
         @SuppressWarnings("deprecation")
@@ -2761,6 +2779,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.StructuredSnippetPlaceholderFieldEnum.StructuredSnippetPlaceholderField structured_snippet_field = 9 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return The enum numeric value on the wire for structuredSnippetField.
      */
+    @java.lang.Override
     public int getStructuredSnippetFieldValue() {
       if (fieldCase_ == 9) {
         return ((java.lang.Integer) field_).intValue();
@@ -2790,6 +2809,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.StructuredSnippetPlaceholderFieldEnum.StructuredSnippetPlaceholderField structured_snippet_field = 9 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return The structuredSnippetField.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.enums.StructuredSnippetPlaceholderFieldEnum.StructuredSnippetPlaceholderField getStructuredSnippetField() {
       if (fieldCase_ == 9) {
         @SuppressWarnings("deprecation")
@@ -2842,6 +2862,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.MessagePlaceholderFieldEnum.MessagePlaceholderField message_field = 10 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return The enum numeric value on the wire for messageField.
      */
+    @java.lang.Override
     public int getMessageFieldValue() {
       if (fieldCase_ == 10) {
         return ((java.lang.Integer) field_).intValue();
@@ -2871,6 +2892,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.MessagePlaceholderFieldEnum.MessagePlaceholderField message_field = 10 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return The messageField.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.enums.MessagePlaceholderFieldEnum.MessagePlaceholderField getMessageField() {
       if (fieldCase_ == 10) {
         @SuppressWarnings("deprecation")
@@ -2923,6 +2945,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.PricePlaceholderFieldEnum.PricePlaceholderField price_field = 11 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return The enum numeric value on the wire for priceField.
      */
+    @java.lang.Override
     public int getPriceFieldValue() {
       if (fieldCase_ == 11) {
         return ((java.lang.Integer) field_).intValue();
@@ -2952,6 +2975,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.PricePlaceholderFieldEnum.PricePlaceholderField price_field = 11 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return The priceField.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.enums.PricePlaceholderFieldEnum.PricePlaceholderField getPriceField() {
       if (fieldCase_ == 11) {
         @SuppressWarnings("deprecation")
@@ -3004,6 +3028,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.PromotionPlaceholderFieldEnum.PromotionPlaceholderField promotion_field = 12 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return The enum numeric value on the wire for promotionField.
      */
+    @java.lang.Override
     public int getPromotionFieldValue() {
       if (fieldCase_ == 12) {
         return ((java.lang.Integer) field_).intValue();
@@ -3033,6 +3058,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.PromotionPlaceholderFieldEnum.PromotionPlaceholderField promotion_field = 12 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return The promotionField.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.enums.PromotionPlaceholderFieldEnum.PromotionPlaceholderField getPromotionField() {
       if (fieldCase_ == 12) {
         @SuppressWarnings("deprecation")
@@ -3085,6 +3111,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.AdCustomizerPlaceholderFieldEnum.AdCustomizerPlaceholderField ad_customizer_field = 13 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return The enum numeric value on the wire for adCustomizerField.
      */
+    @java.lang.Override
     public int getAdCustomizerFieldValue() {
       if (fieldCase_ == 13) {
         return ((java.lang.Integer) field_).intValue();
@@ -3114,6 +3141,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.AdCustomizerPlaceholderFieldEnum.AdCustomizerPlaceholderField ad_customizer_field = 13 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return The adCustomizerField.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.enums.AdCustomizerPlaceholderFieldEnum.AdCustomizerPlaceholderField getAdCustomizerField() {
       if (fieldCase_ == 13) {
         @SuppressWarnings("deprecation")
@@ -3166,6 +3194,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.DsaPageFeedCriterionFieldEnum.DsaPageFeedCriterionField dsa_page_feed_field = 14 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return The enum numeric value on the wire for dsaPageFeedField.
      */
+    @java.lang.Override
     public int getDsaPageFeedFieldValue() {
       if (fieldCase_ == 14) {
         return ((java.lang.Integer) field_).intValue();
@@ -3195,6 +3224,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.DsaPageFeedCriterionFieldEnum.DsaPageFeedCriterionField dsa_page_feed_field = 14 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return The dsaPageFeedField.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.enums.DsaPageFeedCriterionFieldEnum.DsaPageFeedCriterionField getDsaPageFeedField() {
       if (fieldCase_ == 14) {
         @SuppressWarnings("deprecation")
@@ -3247,6 +3277,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.LocationExtensionTargetingCriterionFieldEnum.LocationExtensionTargetingCriterionField location_extension_targeting_field = 15 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return The enum numeric value on the wire for locationExtensionTargetingField.
      */
+    @java.lang.Override
     public int getLocationExtensionTargetingFieldValue() {
       if (fieldCase_ == 15) {
         return ((java.lang.Integer) field_).intValue();
@@ -3276,6 +3307,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.LocationExtensionTargetingCriterionFieldEnum.LocationExtensionTargetingCriterionField location_extension_targeting_field = 15 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return The locationExtensionTargetingField.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.enums.LocationExtensionTargetingCriterionFieldEnum.LocationExtensionTargetingCriterionField getLocationExtensionTargetingField() {
       if (fieldCase_ == 15) {
         @SuppressWarnings("deprecation")
@@ -3328,6 +3360,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.EducationPlaceholderFieldEnum.EducationPlaceholderField education_field = 16 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return The enum numeric value on the wire for educationField.
      */
+    @java.lang.Override
     public int getEducationFieldValue() {
       if (fieldCase_ == 16) {
         return ((java.lang.Integer) field_).intValue();
@@ -3357,6 +3390,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.EducationPlaceholderFieldEnum.EducationPlaceholderField education_field = 16 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return The educationField.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.enums.EducationPlaceholderFieldEnum.EducationPlaceholderField getEducationField() {
       if (fieldCase_ == 16) {
         @SuppressWarnings("deprecation")
@@ -3409,6 +3443,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.FlightPlaceholderFieldEnum.FlightPlaceholderField flight_field = 17 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return The enum numeric value on the wire for flightField.
      */
+    @java.lang.Override
     public int getFlightFieldValue() {
       if (fieldCase_ == 17) {
         return ((java.lang.Integer) field_).intValue();
@@ -3438,6 +3473,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.FlightPlaceholderFieldEnum.FlightPlaceholderField flight_field = 17 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return The flightField.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.enums.FlightPlaceholderFieldEnum.FlightPlaceholderField getFlightField() {
       if (fieldCase_ == 17) {
         @SuppressWarnings("deprecation")
@@ -3490,6 +3526,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.CustomPlaceholderFieldEnum.CustomPlaceholderField custom_field = 18 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return The enum numeric value on the wire for customField.
      */
+    @java.lang.Override
     public int getCustomFieldValue() {
       if (fieldCase_ == 18) {
         return ((java.lang.Integer) field_).intValue();
@@ -3519,6 +3556,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.CustomPlaceholderFieldEnum.CustomPlaceholderField custom_field = 18 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return The customField.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.enums.CustomPlaceholderFieldEnum.CustomPlaceholderField getCustomField() {
       if (fieldCase_ == 18) {
         @SuppressWarnings("deprecation")
@@ -3571,6 +3609,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.HotelPlaceholderFieldEnum.HotelPlaceholderField hotel_field = 19 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return The enum numeric value on the wire for hotelField.
      */
+    @java.lang.Override
     public int getHotelFieldValue() {
       if (fieldCase_ == 19) {
         return ((java.lang.Integer) field_).intValue();
@@ -3600,6 +3639,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.HotelPlaceholderFieldEnum.HotelPlaceholderField hotel_field = 19 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return The hotelField.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.enums.HotelPlaceholderFieldEnum.HotelPlaceholderField getHotelField() {
       if (fieldCase_ == 19) {
         @SuppressWarnings("deprecation")
@@ -3652,6 +3692,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.RealEstatePlaceholderFieldEnum.RealEstatePlaceholderField real_estate_field = 20 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return The enum numeric value on the wire for realEstateField.
      */
+    @java.lang.Override
     public int getRealEstateFieldValue() {
       if (fieldCase_ == 20) {
         return ((java.lang.Integer) field_).intValue();
@@ -3681,6 +3722,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.RealEstatePlaceholderFieldEnum.RealEstatePlaceholderField real_estate_field = 20 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return The realEstateField.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.enums.RealEstatePlaceholderFieldEnum.RealEstatePlaceholderField getRealEstateField() {
       if (fieldCase_ == 20) {
         @SuppressWarnings("deprecation")
@@ -3733,6 +3775,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.TravelPlaceholderFieldEnum.TravelPlaceholderField travel_field = 21 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return The enum numeric value on the wire for travelField.
      */
+    @java.lang.Override
     public int getTravelFieldValue() {
       if (fieldCase_ == 21) {
         return ((java.lang.Integer) field_).intValue();
@@ -3762,6 +3805,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.TravelPlaceholderFieldEnum.TravelPlaceholderField travel_field = 21 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return The travelField.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.enums.TravelPlaceholderFieldEnum.TravelPlaceholderField getTravelField() {
       if (fieldCase_ == 21) {
         @SuppressWarnings("deprecation")
@@ -3814,6 +3858,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.LocalPlaceholderFieldEnum.LocalPlaceholderField local_field = 22 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return The enum numeric value on the wire for localField.
      */
+    @java.lang.Override
     public int getLocalFieldValue() {
       if (fieldCase_ == 22) {
         return ((java.lang.Integer) field_).intValue();
@@ -3843,6 +3888,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.LocalPlaceholderFieldEnum.LocalPlaceholderField local_field = 22 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return The localField.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.enums.LocalPlaceholderFieldEnum.LocalPlaceholderField getLocalField() {
       if (fieldCase_ == 22) {
         @SuppressWarnings("deprecation")
@@ -3895,6 +3941,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.JobPlaceholderFieldEnum.JobPlaceholderField job_field = 23 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return The enum numeric value on the wire for jobField.
      */
+    @java.lang.Override
     public int getJobFieldValue() {
       if (fieldCase_ == 23) {
         return ((java.lang.Integer) field_).intValue();
@@ -3924,6 +3971,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.JobPlaceholderFieldEnum.JobPlaceholderField job_field = 23 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return The jobField.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.enums.JobPlaceholderFieldEnum.JobPlaceholderField getJobField() {
       if (fieldCase_ == 23) {
         @SuppressWarnings("deprecation")

@@ -10,7 +10,7 @@ package com.google.ads.googleads.v4.services;
  *
  * Protobuf type {@code google.ads.googleads.v4.services.GenerateForecastMetricsResponse}
  */
-public  final class GenerateForecastMetricsResponse extends
+public final class GenerateForecastMetricsResponse extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.services.GenerateForecastMetricsResponse)
     GenerateForecastMetricsResponseOrBuilder {
@@ -134,6 +134,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.services.KeywordPlanCampaignForecast campaign_forecasts = 1;</code>
    */
+  @java.lang.Override
   public java.util.List<com.google.ads.googleads.v4.services.KeywordPlanCampaignForecast> getCampaignForecastsList() {
     return campaignForecasts_;
   }
@@ -145,6 +146,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.services.KeywordPlanCampaignForecast campaign_forecasts = 1;</code>
    */
+  @java.lang.Override
   public java.util.List<? extends com.google.ads.googleads.v4.services.KeywordPlanCampaignForecastOrBuilder> 
       getCampaignForecastsOrBuilderList() {
     return campaignForecasts_;
@@ -157,6 +159,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.services.KeywordPlanCampaignForecast campaign_forecasts = 1;</code>
    */
+  @java.lang.Override
   public int getCampaignForecastsCount() {
     return campaignForecasts_.size();
   }
@@ -168,6 +171,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.services.KeywordPlanCampaignForecast campaign_forecasts = 1;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.services.KeywordPlanCampaignForecast getCampaignForecasts(int index) {
     return campaignForecasts_.get(index);
   }
@@ -179,6 +183,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.services.KeywordPlanCampaignForecast campaign_forecasts = 1;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.services.KeywordPlanCampaignForecastOrBuilder getCampaignForecastsOrBuilder(
       int index) {
     return campaignForecasts_.get(index);
@@ -193,6 +198,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.services.KeywordPlanAdGroupForecast ad_group_forecasts = 2;</code>
    */
+  @java.lang.Override
   public java.util.List<com.google.ads.googleads.v4.services.KeywordPlanAdGroupForecast> getAdGroupForecastsList() {
     return adGroupForecasts_;
   }
@@ -203,6 +209,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.services.KeywordPlanAdGroupForecast ad_group_forecasts = 2;</code>
    */
+  @java.lang.Override
   public java.util.List<? extends com.google.ads.googleads.v4.services.KeywordPlanAdGroupForecastOrBuilder> 
       getAdGroupForecastsOrBuilderList() {
     return adGroupForecasts_;
@@ -214,6 +221,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.services.KeywordPlanAdGroupForecast ad_group_forecasts = 2;</code>
    */
+  @java.lang.Override
   public int getAdGroupForecastsCount() {
     return adGroupForecasts_.size();
   }
@@ -224,6 +232,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.services.KeywordPlanAdGroupForecast ad_group_forecasts = 2;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.services.KeywordPlanAdGroupForecast getAdGroupForecasts(int index) {
     return adGroupForecasts_.get(index);
   }
@@ -234,6 +243,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.services.KeywordPlanAdGroupForecast ad_group_forecasts = 2;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.services.KeywordPlanAdGroupForecastOrBuilder getAdGroupForecastsOrBuilder(
       int index) {
     return adGroupForecasts_.get(index);
@@ -248,6 +258,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.services.KeywordPlanKeywordForecast keyword_forecasts = 3;</code>
    */
+  @java.lang.Override
   public java.util.List<com.google.ads.googleads.v4.services.KeywordPlanKeywordForecast> getKeywordForecastsList() {
     return keywordForecasts_;
   }
@@ -258,6 +269,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.services.KeywordPlanKeywordForecast keyword_forecasts = 3;</code>
    */
+  @java.lang.Override
   public java.util.List<? extends com.google.ads.googleads.v4.services.KeywordPlanKeywordForecastOrBuilder> 
       getKeywordForecastsOrBuilderList() {
     return keywordForecasts_;
@@ -269,6 +281,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.services.KeywordPlanKeywordForecast keyword_forecasts = 3;</code>
    */
+  @java.lang.Override
   public int getKeywordForecastsCount() {
     return keywordForecasts_.size();
   }
@@ -279,6 +292,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.services.KeywordPlanKeywordForecast keyword_forecasts = 3;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.services.KeywordPlanKeywordForecast getKeywordForecasts(int index) {
     return keywordForecasts_.get(index);
   }
@@ -289,6 +303,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.services.KeywordPlanKeywordForecast keyword_forecasts = 3;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.services.KeywordPlanKeywordForecastOrBuilder getKeywordForecastsOrBuilder(
       int index) {
     return keywordForecasts_.get(index);

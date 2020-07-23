@@ -1,5 +1,5 @@
 /*
- * Copyright 2019 Google LLC
+ * Copyright 2020 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -21,7 +21,6 @@ import com.google.ads.googleads.v1.services.stub.FeedMappingServiceStubSettings;
 import com.google.api.core.BetaApi;
 import com.google.api.gax.core.BackgroundResource;
 import com.google.api.gax.rpc.UnaryCallable;
-import com.google.api.pathtemplate.PathTemplate;
 import java.io.IOException;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
@@ -37,8 +36,8 @@ import javax.annotation.Generated;
  * <pre>
  * <code>
  * try (FeedMappingServiceClient feedMappingServiceClient = FeedMappingServiceClient.create()) {
- *   String formattedResourceName = FeedMappingServiceClient.formatFeedMappingName("[CUSTOMER]", "[FEED_MAPPING]");
- *   FeedMapping response = feedMappingServiceClient.getFeedMapping(formattedResourceName);
+ *   FeedMappingName resourceName = FeedMappingName.of("[CUSTOMER]", "[FEED_MAPPING]");
+ *   FeedMapping response = feedMappingServiceClient.getFeedMapping(resourceName);
  * }
  * </code>
  * </pre>
@@ -100,43 +99,6 @@ public class FeedMappingServiceClient implements BackgroundResource {
   private final FeedMappingServiceSettings settings;
   private final FeedMappingServiceStub stub;
 
-  private static final PathTemplate FEED_MAPPING_PATH_TEMPLATE =
-      PathTemplate.createWithoutUrlEncoding("customers/{customer}/feedMappings/{feed_mapping}");
-
-  /**
-   * Formats a string containing the fully-qualified path to represent a feed_mapping resource.
-   *
-   * @deprecated Use the {@link FeedMappingName} class instead.
-   */
-  @Deprecated
-  public static final String formatFeedMappingName(String customer, String feedMapping) {
-    return FEED_MAPPING_PATH_TEMPLATE.instantiate(
-        "customer", customer,
-        "feed_mapping", feedMapping);
-  }
-
-  /**
-   * Parses the customer from the given fully-qualified path which represents a feed_mapping
-   * resource.
-   *
-   * @deprecated Use the {@link FeedMappingName} class instead.
-   */
-  @Deprecated
-  public static final String parseCustomerFromFeedMappingName(String feedMappingName) {
-    return FEED_MAPPING_PATH_TEMPLATE.parse(feedMappingName).get("customer");
-  }
-
-  /**
-   * Parses the feed_mapping from the given fully-qualified path which represents a feed_mapping
-   * resource.
-   *
-   * @deprecated Use the {@link FeedMappingName} class instead.
-   */
-  @Deprecated
-  public static final String parseFeedMappingFromFeedMappingName(String feedMappingName) {
-    return FEED_MAPPING_PATH_TEMPLATE.parse(feedMappingName).get("feed_mapping");
-  }
-
   /** Constructs an instance of FeedMappingServiceClient with default settings. */
   public static final FeedMappingServiceClient create() throws IOException {
     return create(FeedMappingServiceSettings.newBuilder().build());
@@ -193,16 +155,39 @@ public class FeedMappingServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (FeedMappingServiceClient feedMappingServiceClient = FeedMappingServiceClient.create()) {
-   *   String formattedResourceName = FeedMappingServiceClient.formatFeedMappingName("[CUSTOMER]", "[FEED_MAPPING]");
-   *   FeedMapping response = feedMappingServiceClient.getFeedMapping(formattedResourceName);
+   *   FeedMappingName resourceName = FeedMappingName.of("[CUSTOMER]", "[FEED_MAPPING]");
+   *   FeedMapping response = feedMappingServiceClient.getFeedMapping(resourceName);
    * }
    * </code></pre>
    *
-   * @param resourceName The resource name of the feed mapping to fetch.
+   * @param resourceName Required. The resource name of the feed mapping to fetch.
+   * @throws com.google.api.gax.rpc.ApiException if the remote call fails
+   */
+  public final FeedMapping getFeedMapping(FeedMappingName resourceName) {
+    GetFeedMappingRequest request =
+        GetFeedMappingRequest.newBuilder()
+            .setResourceName(resourceName == null ? null : resourceName.toString())
+            .build();
+    return getFeedMapping(request);
+  }
+
+  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  /**
+   * Returns the requested feed mapping in full detail.
+   *
+   * <p>Sample code:
+   *
+   * <pre><code>
+   * try (FeedMappingServiceClient feedMappingServiceClient = FeedMappingServiceClient.create()) {
+   *   FeedMappingName resourceName = FeedMappingName.of("[CUSTOMER]", "[FEED_MAPPING]");
+   *   FeedMapping response = feedMappingServiceClient.getFeedMapping(resourceName.toString());
+   * }
+   * </code></pre>
+   *
+   * @param resourceName Required. The resource name of the feed mapping to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final FeedMapping getFeedMapping(String resourceName) {
-    FEED_MAPPING_PATH_TEMPLATE.validate(resourceName, "getFeedMapping");
     GetFeedMappingRequest request =
         GetFeedMappingRequest.newBuilder().setResourceName(resourceName).build();
     return getFeedMapping(request);
@@ -216,9 +201,9 @@ public class FeedMappingServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (FeedMappingServiceClient feedMappingServiceClient = FeedMappingServiceClient.create()) {
-   *   String formattedResourceName = FeedMappingServiceClient.formatFeedMappingName("[CUSTOMER]", "[FEED_MAPPING]");
+   *   FeedMappingName resourceName = FeedMappingName.of("[CUSTOMER]", "[FEED_MAPPING]");
    *   GetFeedMappingRequest request = GetFeedMappingRequest.newBuilder()
-   *     .setResourceName(formattedResourceName)
+   *     .setResourceName(resourceName.toString())
    *     .build();
    *   FeedMapping response = feedMappingServiceClient.getFeedMapping(request);
    * }
@@ -239,9 +224,9 @@ public class FeedMappingServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (FeedMappingServiceClient feedMappingServiceClient = FeedMappingServiceClient.create()) {
-   *   String formattedResourceName = FeedMappingServiceClient.formatFeedMappingName("[CUSTOMER]", "[FEED_MAPPING]");
+   *   FeedMappingName resourceName = FeedMappingName.of("[CUSTOMER]", "[FEED_MAPPING]");
    *   GetFeedMappingRequest request = GetFeedMappingRequest.newBuilder()
-   *     .setResourceName(formattedResourceName)
+   *     .setResourceName(resourceName.toString())
    *     .build();
    *   ApiFuture&lt;FeedMapping&gt; future = feedMappingServiceClient.getFeedMappingCallable().futureCall(request);
    *   // Do something
@@ -263,58 +248,16 @@ public class FeedMappingServiceClient implements BackgroundResource {
    * try (FeedMappingServiceClient feedMappingServiceClient = FeedMappingServiceClient.create()) {
    *   String customerId = "";
    *   List&lt;FeedMappingOperation&gt; operations = new ArrayList&lt;&gt;();
-   *   boolean partialFailure = false;
-   *   boolean validateOnly = false;
-   *   MutateFeedMappingsResponse response = feedMappingServiceClient.mutateFeedMappings(customerId, operations, partialFailure, validateOnly);
-   * }
-   * </code></pre>
-   *
-   * @param customerId The ID of the customer whose feed mappings are being modified.
-   * @param operations The list of operations to perform on individual feed mappings.
-   * @param partialFailure If true, successful operations will be carried out and invalid operations
-   *     will return errors. If false, all operations will be carried out in one transaction if and
-   *     only if they are all valid. Default is false.
-   * @param validateOnly If true, the request is validated but not executed. Only errors are
-   *     returned, not results.
-   * @throws com.google.api.gax.rpc.ApiException if the remote call fails
-   */
-  public final MutateFeedMappingsResponse mutateFeedMappings(
-      String customerId,
-      List<FeedMappingOperation> operations,
-      boolean partialFailure,
-      boolean validateOnly) {
-
-    MutateFeedMappingsRequest request =
-        MutateFeedMappingsRequest.newBuilder()
-            .setCustomerId(customerId)
-            .addAllOperations(operations)
-            .setPartialFailure(partialFailure)
-            .setValidateOnly(validateOnly)
-            .build();
-    return mutateFeedMappings(request);
-  }
-
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
-  /**
-   * Creates or removes feed mappings. Operation statuses are returned.
-   *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (FeedMappingServiceClient feedMappingServiceClient = FeedMappingServiceClient.create()) {
-   *   String customerId = "";
-   *   List&lt;FeedMappingOperation&gt; operations = new ArrayList&lt;&gt;();
    *   MutateFeedMappingsResponse response = feedMappingServiceClient.mutateFeedMappings(customerId, operations);
    * }
    * </code></pre>
    *
-   * @param customerId The ID of the customer whose feed mappings are being modified.
-   * @param operations The list of operations to perform on individual feed mappings.
+   * @param customerId Required. The ID of the customer whose feed mappings are being modified.
+   * @param operations Required. The list of operations to perform on individual feed mappings.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final MutateFeedMappingsResponse mutateFeedMappings(
       String customerId, List<FeedMappingOperation> operations) {
-
     MutateFeedMappingsRequest request =
         MutateFeedMappingsRequest.newBuilder()
             .setCustomerId(customerId)

@@ -30,17 +30,23 @@ public final class PaymentsAccountProto {
     java.lang.String[] descriptorData = {
       "\n8google/ads/googleads/v1/resources/paym" +
       "ents_account.proto\022!google.ads.googleads" +
-      ".v1.resources\032\036google/protobuf/wrappers." +
-      "proto\032\034google/api/annotations.proto\"\304\002\n\017" +
-      "PaymentsAccount\022\025\n\rresource_name\030\001 \001(\t\0229" +
-      "\n\023payments_account_id\030\002 \001(\0132\034.google.pro" +
-      "tobuf.StringValue\022*\n\004name\030\003 \001(\0132\034.google" +
-      ".protobuf.StringValue\0223\n\rcurrency_code\030\004" +
-      " \001(\0132\034.google.protobuf.StringValue\0229\n\023pa" +
-      "yments_profile_id\030\005 \001(\0132\034.google.protobu" +
-      "f.StringValue\022C\n\035secondary_payments_prof" +
-      "ile_id\030\006 \001(\0132\034.google.protobuf.StringVal" +
-      "ueB\201\002\n%com.google.ads.googleads.v1.resou" +
+      ".v1.resources\032\037google/api/field_behavior" +
+      ".proto\032\031google/api/resource.proto\032\036googl" +
+      "e/protobuf/wrappers.proto\032\034google/api/an" +
+      "notations.proto\"\370\003\n\017PaymentsAccount\022G\n\rr" +
+      "esource_name\030\001 \001(\tB0\340A\003\372A*\n(googleads.go" +
+      "ogleapis.com/PaymentsAccount\022>\n\023payments" +
+      "_account_id\030\002 \001(\0132\034.google.protobuf.Stri" +
+      "ngValueB\003\340A\003\022/\n\004name\030\003 \001(\0132\034.google.prot" +
+      "obuf.StringValueB\003\340A\003\0228\n\rcurrency_code\030\004" +
+      " \001(\0132\034.google.protobuf.StringValueB\003\340A\003\022" +
+      ">\n\023payments_profile_id\030\005 \001(\0132\034.google.pr" +
+      "otobuf.StringValueB\003\340A\003\022H\n\035secondary_pay" +
+      "ments_profile_id\030\006 \001(\0132\034.google.protobuf" +
+      ".StringValueB\003\340A\003:g\352Ad\n(googleads.google" +
+      "apis.com/PaymentsAccount\0228customers/{cus" +
+      "tomer}/paymentsAccounts/{payments_accoun" +
+      "t}B\201\002\n%com.google.ads.googleads.v1.resou" +
       "rcesB\024PaymentsAccountProtoP\001ZJgoogle.gol" +
       "ang.org/genproto/googleapis/ads/googlead" +
       "s/v1/resources;resources\242\002\003GAA\252\002!Google." +
@@ -48,26 +54,29 @@ public final class PaymentsAccountProto {
       "GoogleAds\\V1\\Resources\352\002%Google::Ads::Go" +
       "ogleAds::V1::Resourcesb\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          com.google.api.FieldBehaviorProto.getDescriptor(),
+          com.google.api.ResourceProto.getDescriptor(),
           com.google.protobuf.WrappersProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
-        }, assigner);
+        });
     internal_static_google_ads_googleads_v1_resources_PaymentsAccount_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_google_ads_googleads_v1_resources_PaymentsAccount_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v1_resources_PaymentsAccount_descriptor,
         new java.lang.String[] { "ResourceName", "PaymentsAccountId", "Name", "CurrencyCode", "PaymentsProfileId", "SecondaryPaymentsProfileId", });
+    com.google.protobuf.ExtensionRegistry registry =
+        com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);
+    registry.add(com.google.api.ResourceProto.resource);
+    registry.add(com.google.api.ResourceProto.resourceReference);
+    com.google.protobuf.Descriptors.FileDescriptor
+        .internalUpdateFileDescriptor(descriptor, registry);
+    com.google.api.FieldBehaviorProto.getDescriptor();
+    com.google.api.ResourceProto.getDescriptor();
     com.google.protobuf.WrappersProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
   }

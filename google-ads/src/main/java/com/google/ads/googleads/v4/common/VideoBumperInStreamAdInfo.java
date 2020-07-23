@@ -11,7 +11,7 @@ package com.google.ads.googleads.v4.common;
  *
  * Protobuf type {@code google.ads.googleads.v4.common.VideoBumperInStreamAdInfo}
  */
-public  final class VideoBumperInStreamAdInfo extends
+public final class VideoBumperInStreamAdInfo extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.common.VideoBumperInStreamAdInfo)
     VideoBumperInStreamAdInfoOrBuilder {
@@ -108,6 +108,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue companion_banner = 1;</code>
    * @return Whether the companionBanner field is set.
    */
+  @java.lang.Override
   public boolean hasCompanionBanner() {
     return companionBanner_ != null;
   }
@@ -119,6 +120,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue companion_banner = 1;</code>
    * @return The companionBanner.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getCompanionBanner() {
     return companionBanner_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : companionBanner_;
   }
@@ -129,6 +131,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue companion_banner = 1;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getCompanionBannerOrBuilder() {
     return getCompanionBanner();
   }

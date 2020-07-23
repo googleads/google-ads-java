@@ -13,6 +13,7 @@ public interface UserDataOperationOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.UserData create = 1;</code>
+   * @return Whether the create field is set.
    */
   boolean hasCreate();
   /**
@@ -21,6 +22,7 @@ public interface UserDataOperationOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.UserData create = 1;</code>
+   * @return The create.
    */
   com.google.ads.googleads.v3.common.UserData getCreate();
   /**

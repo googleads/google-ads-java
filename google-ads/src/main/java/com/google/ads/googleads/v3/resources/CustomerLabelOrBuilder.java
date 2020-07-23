@@ -15,6 +15,7 @@ public interface CustomerLabelOrBuilder extends
    * </pre>
    *
    * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * @return The resourceName.
    */
   java.lang.String getResourceName();
   /**
@@ -25,6 +26,7 @@ public interface CustomerLabelOrBuilder extends
    * </pre>
    *
    * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * @return The bytes for resourceName.
    */
   com.google.protobuf.ByteString
       getResourceNameBytes();
@@ -36,6 +38,7 @@ public interface CustomerLabelOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue customer = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the customer field is set.
    */
   boolean hasCustomer();
   /**
@@ -45,6 +48,7 @@ public interface CustomerLabelOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue customer = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The customer.
    */
   com.google.protobuf.StringValue getCustomer();
   /**
@@ -65,6 +69,7 @@ public interface CustomerLabelOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue label = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the label field is set.
    */
   boolean hasLabel();
   /**
@@ -75,6 +80,7 @@ public interface CustomerLabelOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue label = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The label.
    */
   com.google.protobuf.StringValue getLabel();
   /**

@@ -13,6 +13,7 @@ public interface ProductTypeInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue value = 1;</code>
+   * @return Whether the value field is set.
    */
   boolean hasValue();
   /**
@@ -21,6 +22,7 @@ public interface ProductTypeInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue value = 1;</code>
+   * @return The value.
    */
   com.google.protobuf.StringValue getValue();
   /**
@@ -38,6 +40,7 @@ public interface ProductTypeInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.ProductTypeLevelEnum.ProductTypeLevel level = 2;</code>
+   * @return The enum numeric value on the wire for level.
    */
   int getLevelValue();
   /**
@@ -46,6 +49,7 @@ public interface ProductTypeInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.ProductTypeLevelEnum.ProductTypeLevel level = 2;</code>
+   * @return The level.
    */
   com.google.ads.googleads.v3.enums.ProductTypeLevelEnum.ProductTypeLevel getLevel();
 }

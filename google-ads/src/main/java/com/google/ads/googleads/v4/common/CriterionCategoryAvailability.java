@@ -10,7 +10,7 @@ package com.google.ads.googleads.v4.common;
  *
  * Protobuf type {@code google.ads.googleads.v4.common.CriterionCategoryAvailability}
  */
-public  final class CriterionCategoryAvailability extends
+public final class CriterionCategoryAvailability extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.common.CriterionCategoryAvailability)
     CriterionCategoryAvailabilityOrBuilder {
@@ -121,6 +121,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.common.CriterionCategoryChannelAvailability channel = 1;</code>
    * @return Whether the channel field is set.
    */
+  @java.lang.Override
   public boolean hasChannel() {
     return channel_ != null;
   }
@@ -132,6 +133,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.common.CriterionCategoryChannelAvailability channel = 1;</code>
    * @return The channel.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.CriterionCategoryChannelAvailability getChannel() {
     return channel_ == null ? com.google.ads.googleads.v4.common.CriterionCategoryChannelAvailability.getDefaultInstance() : channel_;
   }
@@ -142,6 +144,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v4.common.CriterionCategoryChannelAvailability channel = 1;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.CriterionCategoryChannelAvailabilityOrBuilder getChannelOrBuilder() {
     return getChannel();
   }
@@ -155,6 +158,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.common.CriterionCategoryLocaleAvailability locale = 2;</code>
    */
+  @java.lang.Override
   public java.util.List<com.google.ads.googleads.v4.common.CriterionCategoryLocaleAvailability> getLocaleList() {
     return locale_;
   }
@@ -165,6 +169,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.common.CriterionCategoryLocaleAvailability locale = 2;</code>
    */
+  @java.lang.Override
   public java.util.List<? extends com.google.ads.googleads.v4.common.CriterionCategoryLocaleAvailabilityOrBuilder> 
       getLocaleOrBuilderList() {
     return locale_;
@@ -176,6 +181,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.common.CriterionCategoryLocaleAvailability locale = 2;</code>
    */
+  @java.lang.Override
   public int getLocaleCount() {
     return locale_.size();
   }
@@ -186,6 +192,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.common.CriterionCategoryLocaleAvailability locale = 2;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.CriterionCategoryLocaleAvailability getLocale(int index) {
     return locale_.get(index);
   }
@@ -196,6 +203,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.common.CriterionCategoryLocaleAvailability locale = 2;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.CriterionCategoryLocaleAvailabilityOrBuilder getLocaleOrBuilder(
       int index) {
     return locale_.get(index);

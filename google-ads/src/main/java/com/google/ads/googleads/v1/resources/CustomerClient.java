@@ -12,7 +12,7 @@ package com.google.ads.googleads.v1.resources;
  *
  * Protobuf type {@code google.ads.googleads.v1.resources.CustomerClient}
  */
-public  final class CustomerClient extends
+public final class CustomerClient extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v1.resources.CustomerClient)
     CustomerClientOrBuilder {
@@ -23,6 +23,13 @@ private static final long serialVersionUID = 0L;
   }
   private CustomerClient() {
     resourceName_ = "";
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new CustomerClient();
   }
 
   @java.lang.Override
@@ -38,7 +45,6 @@ private static final long serialVersionUID = 0L;
     if (extensionRegistry == null) {
       throw new java.lang.NullPointerException();
     }
-    int mutable_bitField0_ = 0;
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
         com.google.protobuf.UnknownFieldSet.newBuilder();
     try {
@@ -130,13 +136,15 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object resourceName_;
   /**
    * <pre>
-   * The resource name of the customer client.
+   * Output only. The resource name of the customer client.
    * CustomerClient resource names have the form:
    * `customers/{customer_id}/customerClients/{client_customer_id}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The resourceName.
    */
+  @java.lang.Override
   public java.lang.String getResourceName() {
     java.lang.Object ref = resourceName_;
     if (ref instanceof java.lang.String) {
@@ -151,13 +159,15 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The resource name of the customer client.
+   * Output only. The resource name of the customer client.
    * CustomerClient resource names have the form:
    * `customers/{customer_id}/customerClients/{client_customer_id}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The bytes for resourceName.
    */
+  @java.lang.Override
   public com.google.protobuf.ByteString
       getResourceNameBytes() {
     java.lang.Object ref = resourceName_;
@@ -176,34 +186,39 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.StringValue clientCustomer_;
   /**
    * <pre>
-   * The resource name of the client-customer which is linked to
+   * Output only. The resource name of the client-customer which is linked to
    * the given customer. Read only.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue client_customer = 3;</code>
+   * <code>.google.protobuf.StringValue client_customer = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the clientCustomer field is set.
    */
+  @java.lang.Override
   public boolean hasClientCustomer() {
     return clientCustomer_ != null;
   }
   /**
    * <pre>
-   * The resource name of the client-customer which is linked to
+   * Output only. The resource name of the client-customer which is linked to
    * the given customer. Read only.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue client_customer = 3;</code>
+   * <code>.google.protobuf.StringValue client_customer = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The clientCustomer.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getClientCustomer() {
     return clientCustomer_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : clientCustomer_;
   }
   /**
    * <pre>
-   * The resource name of the client-customer which is linked to
+   * Output only. The resource name of the client-customer which is linked to
    * the given customer. Read only.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue client_customer = 3;</code>
+   * <code>.google.protobuf.StringValue client_customer = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getClientCustomerOrBuilder() {
     return getClientCustomer();
   }
@@ -212,40 +227,42 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.BoolValue hidden_;
   /**
    * <pre>
-   * Specifies whether this is a hidden account. Learn more about hidden
-   * accounts &lt;a
-   * href="https://support.google.com/google-ads/answer/7519830"&gt;here&lt;/a&gt;. Read
-   * only.
+   * Output only. Specifies whether this is a
+   * [hidden account](https://support.google.com/google-ads/answer/7519830).
+   * Read only.
    * </pre>
    *
-   * <code>.google.protobuf.BoolValue hidden = 4;</code>
+   * <code>.google.protobuf.BoolValue hidden = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the hidden field is set.
    */
+  @java.lang.Override
   public boolean hasHidden() {
     return hidden_ != null;
   }
   /**
    * <pre>
-   * Specifies whether this is a hidden account. Learn more about hidden
-   * accounts &lt;a
-   * href="https://support.google.com/google-ads/answer/7519830"&gt;here&lt;/a&gt;. Read
-   * only.
+   * Output only. Specifies whether this is a
+   * [hidden account](https://support.google.com/google-ads/answer/7519830).
+   * Read only.
    * </pre>
    *
-   * <code>.google.protobuf.BoolValue hidden = 4;</code>
+   * <code>.google.protobuf.BoolValue hidden = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The hidden.
    */
+  @java.lang.Override
   public com.google.protobuf.BoolValue getHidden() {
     return hidden_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : hidden_;
   }
   /**
    * <pre>
-   * Specifies whether this is a hidden account. Learn more about hidden
-   * accounts &lt;a
-   * href="https://support.google.com/google-ads/answer/7519830"&gt;here&lt;/a&gt;. Read
-   * only.
+   * Output only. Specifies whether this is a
+   * [hidden account](https://support.google.com/google-ads/answer/7519830).
+   * Read only.
    * </pre>
    *
-   * <code>.google.protobuf.BoolValue hidden = 4;</code>
+   * <code>.google.protobuf.BoolValue hidden = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.BoolValueOrBuilder getHiddenOrBuilder() {
     return getHidden();
   }
@@ -254,34 +271,39 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.Int64Value level_;
   /**
    * <pre>
-   * Distance between given customer and client. For self link, the level value
+   * Output only. Distance between given customer and client. For self link, the level value
    * will be 0. Read only.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value level = 5;</code>
+   * <code>.google.protobuf.Int64Value level = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the level field is set.
    */
+  @java.lang.Override
   public boolean hasLevel() {
     return level_ != null;
   }
   /**
    * <pre>
-   * Distance between given customer and client. For self link, the level value
+   * Output only. Distance between given customer and client. For self link, the level value
    * will be 0. Read only.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value level = 5;</code>
+   * <code>.google.protobuf.Int64Value level = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The level.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getLevel() {
     return level_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : level_;
   }
   /**
    * <pre>
-   * Distance between given customer and client. For self link, the level value
+   * Output only. Distance between given customer and client. For self link, the level value
    * will be 0. Read only.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value level = 5;</code>
+   * <code>.google.protobuf.Int64Value level = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getLevelOrBuilder() {
     return getLevel();
   }
@@ -687,12 +709,13 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object resourceName_ = "";
     /**
      * <pre>
-     * The resource name of the customer client.
+     * Output only. The resource name of the customer client.
      * CustomerClient resource names have the form:
      * `customers/{customer_id}/customerClients/{client_customer_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @return The resourceName.
      */
     public java.lang.String getResourceName() {
       java.lang.Object ref = resourceName_;
@@ -708,12 +731,13 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the customer client.
+     * Output only. The resource name of the customer client.
      * CustomerClient resource names have the form:
      * `customers/{customer_id}/customerClients/{client_customer_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @return The bytes for resourceName.
      */
     public com.google.protobuf.ByteString
         getResourceNameBytes() {
@@ -730,12 +754,14 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the customer client.
+     * Output only. The resource name of the customer client.
      * CustomerClient resource names have the form:
      * `customers/{customer_id}/customerClients/{client_customer_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @param value The resourceName to set.
+     * @return This builder for chaining.
      */
     public Builder setResourceName(
         java.lang.String value) {
@@ -749,12 +775,13 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the customer client.
+     * Output only. The resource name of the customer client.
      * CustomerClient resource names have the form:
      * `customers/{customer_id}/customerClients/{client_customer_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @return This builder for chaining.
      */
     public Builder clearResourceName() {
       
@@ -764,12 +791,14 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the customer client.
+     * Output only. The resource name of the customer client.
      * CustomerClient resource names have the form:
      * `customers/{customer_id}/customerClients/{client_customer_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @param value The bytes for resourceName to set.
+     * @return This builder for chaining.
      */
     public Builder setResourceNameBytes(
         com.google.protobuf.ByteString value) {
@@ -788,22 +817,24 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> clientCustomerBuilder_;
     /**
      * <pre>
-     * The resource name of the client-customer which is linked to
+     * Output only. The resource name of the client-customer which is linked to
      * the given customer. Read only.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue client_customer = 3;</code>
+     * <code>.google.protobuf.StringValue client_customer = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the clientCustomer field is set.
      */
     public boolean hasClientCustomer() {
       return clientCustomerBuilder_ != null || clientCustomer_ != null;
     }
     /**
      * <pre>
-     * The resource name of the client-customer which is linked to
+     * Output only. The resource name of the client-customer which is linked to
      * the given customer. Read only.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue client_customer = 3;</code>
+     * <code>.google.protobuf.StringValue client_customer = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The clientCustomer.
      */
     public com.google.protobuf.StringValue getClientCustomer() {
       if (clientCustomerBuilder_ == null) {
@@ -814,11 +845,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the client-customer which is linked to
+     * Output only. The resource name of the client-customer which is linked to
      * the given customer. Read only.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue client_customer = 3;</code>
+     * <code>.google.protobuf.StringValue client_customer = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setClientCustomer(com.google.protobuf.StringValue value) {
       if (clientCustomerBuilder_ == null) {
@@ -835,11 +866,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the client-customer which is linked to
+     * Output only. The resource name of the client-customer which is linked to
      * the given customer. Read only.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue client_customer = 3;</code>
+     * <code>.google.protobuf.StringValue client_customer = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setClientCustomer(
         com.google.protobuf.StringValue.Builder builderForValue) {
@@ -854,11 +885,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the client-customer which is linked to
+     * Output only. The resource name of the client-customer which is linked to
      * the given customer. Read only.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue client_customer = 3;</code>
+     * <code>.google.protobuf.StringValue client_customer = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder mergeClientCustomer(com.google.protobuf.StringValue value) {
       if (clientCustomerBuilder_ == null) {
@@ -877,11 +908,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the client-customer which is linked to
+     * Output only. The resource name of the client-customer which is linked to
      * the given customer. Read only.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue client_customer = 3;</code>
+     * <code>.google.protobuf.StringValue client_customer = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearClientCustomer() {
       if (clientCustomerBuilder_ == null) {
@@ -896,11 +927,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the client-customer which is linked to
+     * Output only. The resource name of the client-customer which is linked to
      * the given customer. Read only.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue client_customer = 3;</code>
+     * <code>.google.protobuf.StringValue client_customer = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValue.Builder getClientCustomerBuilder() {
       
@@ -909,11 +940,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the client-customer which is linked to
+     * Output only. The resource name of the client-customer which is linked to
      * the given customer. Read only.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue client_customer = 3;</code>
+     * <code>.google.protobuf.StringValue client_customer = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValueOrBuilder getClientCustomerOrBuilder() {
       if (clientCustomerBuilder_ != null) {
@@ -925,11 +956,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the client-customer which is linked to
+     * Output only. The resource name of the client-customer which is linked to
      * the given customer. Read only.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue client_customer = 3;</code>
+     * <code>.google.protobuf.StringValue client_customer = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
@@ -950,26 +981,26 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> hiddenBuilder_;
     /**
      * <pre>
-     * Specifies whether this is a hidden account. Learn more about hidden
-     * accounts &lt;a
-     * href="https://support.google.com/google-ads/answer/7519830"&gt;here&lt;/a&gt;. Read
-     * only.
+     * Output only. Specifies whether this is a
+     * [hidden account](https://support.google.com/google-ads/answer/7519830).
+     * Read only.
      * </pre>
      *
-     * <code>.google.protobuf.BoolValue hidden = 4;</code>
+     * <code>.google.protobuf.BoolValue hidden = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the hidden field is set.
      */
     public boolean hasHidden() {
       return hiddenBuilder_ != null || hidden_ != null;
     }
     /**
      * <pre>
-     * Specifies whether this is a hidden account. Learn more about hidden
-     * accounts &lt;a
-     * href="https://support.google.com/google-ads/answer/7519830"&gt;here&lt;/a&gt;. Read
-     * only.
+     * Output only. Specifies whether this is a
+     * [hidden account](https://support.google.com/google-ads/answer/7519830).
+     * Read only.
      * </pre>
      *
-     * <code>.google.protobuf.BoolValue hidden = 4;</code>
+     * <code>.google.protobuf.BoolValue hidden = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The hidden.
      */
     public com.google.protobuf.BoolValue getHidden() {
       if (hiddenBuilder_ == null) {
@@ -980,13 +1011,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Specifies whether this is a hidden account. Learn more about hidden
-     * accounts &lt;a
-     * href="https://support.google.com/google-ads/answer/7519830"&gt;here&lt;/a&gt;. Read
-     * only.
+     * Output only. Specifies whether this is a
+     * [hidden account](https://support.google.com/google-ads/answer/7519830).
+     * Read only.
      * </pre>
      *
-     * <code>.google.protobuf.BoolValue hidden = 4;</code>
+     * <code>.google.protobuf.BoolValue hidden = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setHidden(com.google.protobuf.BoolValue value) {
       if (hiddenBuilder_ == null) {
@@ -1003,13 +1033,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Specifies whether this is a hidden account. Learn more about hidden
-     * accounts &lt;a
-     * href="https://support.google.com/google-ads/answer/7519830"&gt;here&lt;/a&gt;. Read
-     * only.
+     * Output only. Specifies whether this is a
+     * [hidden account](https://support.google.com/google-ads/answer/7519830).
+     * Read only.
      * </pre>
      *
-     * <code>.google.protobuf.BoolValue hidden = 4;</code>
+     * <code>.google.protobuf.BoolValue hidden = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setHidden(
         com.google.protobuf.BoolValue.Builder builderForValue) {
@@ -1024,13 +1053,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Specifies whether this is a hidden account. Learn more about hidden
-     * accounts &lt;a
-     * href="https://support.google.com/google-ads/answer/7519830"&gt;here&lt;/a&gt;. Read
-     * only.
+     * Output only. Specifies whether this is a
+     * [hidden account](https://support.google.com/google-ads/answer/7519830).
+     * Read only.
      * </pre>
      *
-     * <code>.google.protobuf.BoolValue hidden = 4;</code>
+     * <code>.google.protobuf.BoolValue hidden = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder mergeHidden(com.google.protobuf.BoolValue value) {
       if (hiddenBuilder_ == null) {
@@ -1049,13 +1077,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Specifies whether this is a hidden account. Learn more about hidden
-     * accounts &lt;a
-     * href="https://support.google.com/google-ads/answer/7519830"&gt;here&lt;/a&gt;. Read
-     * only.
+     * Output only. Specifies whether this is a
+     * [hidden account](https://support.google.com/google-ads/answer/7519830).
+     * Read only.
      * </pre>
      *
-     * <code>.google.protobuf.BoolValue hidden = 4;</code>
+     * <code>.google.protobuf.BoolValue hidden = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearHidden() {
       if (hiddenBuilder_ == null) {
@@ -1070,13 +1097,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Specifies whether this is a hidden account. Learn more about hidden
-     * accounts &lt;a
-     * href="https://support.google.com/google-ads/answer/7519830"&gt;here&lt;/a&gt;. Read
-     * only.
+     * Output only. Specifies whether this is a
+     * [hidden account](https://support.google.com/google-ads/answer/7519830).
+     * Read only.
      * </pre>
      *
-     * <code>.google.protobuf.BoolValue hidden = 4;</code>
+     * <code>.google.protobuf.BoolValue hidden = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.BoolValue.Builder getHiddenBuilder() {
       
@@ -1085,13 +1111,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Specifies whether this is a hidden account. Learn more about hidden
-     * accounts &lt;a
-     * href="https://support.google.com/google-ads/answer/7519830"&gt;here&lt;/a&gt;. Read
-     * only.
+     * Output only. Specifies whether this is a
+     * [hidden account](https://support.google.com/google-ads/answer/7519830).
+     * Read only.
      * </pre>
      *
-     * <code>.google.protobuf.BoolValue hidden = 4;</code>
+     * <code>.google.protobuf.BoolValue hidden = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.BoolValueOrBuilder getHiddenOrBuilder() {
       if (hiddenBuilder_ != null) {
@@ -1103,13 +1128,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Specifies whether this is a hidden account. Learn more about hidden
-     * accounts &lt;a
-     * href="https://support.google.com/google-ads/answer/7519830"&gt;here&lt;/a&gt;. Read
-     * only.
+     * Output only. Specifies whether this is a
+     * [hidden account](https://support.google.com/google-ads/answer/7519830).
+     * Read only.
      * </pre>
      *
-     * <code>.google.protobuf.BoolValue hidden = 4;</code>
+     * <code>.google.protobuf.BoolValue hidden = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
@@ -1130,22 +1154,24 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> levelBuilder_;
     /**
      * <pre>
-     * Distance between given customer and client. For self link, the level value
+     * Output only. Distance between given customer and client. For self link, the level value
      * will be 0. Read only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value level = 5;</code>
+     * <code>.google.protobuf.Int64Value level = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the level field is set.
      */
     public boolean hasLevel() {
       return levelBuilder_ != null || level_ != null;
     }
     /**
      * <pre>
-     * Distance between given customer and client. For self link, the level value
+     * Output only. Distance between given customer and client. For self link, the level value
      * will be 0. Read only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value level = 5;</code>
+     * <code>.google.protobuf.Int64Value level = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The level.
      */
     public com.google.protobuf.Int64Value getLevel() {
       if (levelBuilder_ == null) {
@@ -1156,11 +1182,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Distance between given customer and client. For self link, the level value
+     * Output only. Distance between given customer and client. For self link, the level value
      * will be 0. Read only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value level = 5;</code>
+     * <code>.google.protobuf.Int64Value level = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setLevel(com.google.protobuf.Int64Value value) {
       if (levelBuilder_ == null) {
@@ -1177,11 +1203,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Distance between given customer and client. For self link, the level value
+     * Output only. Distance between given customer and client. For self link, the level value
      * will be 0. Read only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value level = 5;</code>
+     * <code>.google.protobuf.Int64Value level = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setLevel(
         com.google.protobuf.Int64Value.Builder builderForValue) {
@@ -1196,11 +1222,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Distance between given customer and client. For self link, the level value
+     * Output only. Distance between given customer and client. For self link, the level value
      * will be 0. Read only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value level = 5;</code>
+     * <code>.google.protobuf.Int64Value level = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder mergeLevel(com.google.protobuf.Int64Value value) {
       if (levelBuilder_ == null) {
@@ -1219,11 +1245,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Distance between given customer and client. For self link, the level value
+     * Output only. Distance between given customer and client. For self link, the level value
      * will be 0. Read only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value level = 5;</code>
+     * <code>.google.protobuf.Int64Value level = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearLevel() {
       if (levelBuilder_ == null) {
@@ -1238,11 +1264,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Distance between given customer and client. For self link, the level value
+     * Output only. Distance between given customer and client. For self link, the level value
      * will be 0. Read only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value level = 5;</code>
+     * <code>.google.protobuf.Int64Value level = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int64Value.Builder getLevelBuilder() {
       
@@ -1251,11 +1277,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Distance between given customer and client. For self link, the level value
+     * Output only. Distance between given customer and client. For self link, the level value
      * will be 0. Read only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value level = 5;</code>
+     * <code>.google.protobuf.Int64Value level = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int64ValueOrBuilder getLevelOrBuilder() {
       if (levelBuilder_ != null) {
@@ -1267,11 +1293,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Distance between given customer and client. For self link, the level value
+     * Output only. Distance between given customer and client. For self link, the level value
      * will be 0. Read only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value level = 5;</code>
+     * <code>.google.protobuf.Int64Value level = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 

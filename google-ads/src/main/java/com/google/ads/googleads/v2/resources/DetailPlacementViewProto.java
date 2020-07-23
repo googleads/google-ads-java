@@ -31,47 +31,57 @@ public final class DetailPlacementViewProto {
       "\n=google/ads/googleads/v2/resources/deta" +
       "il_placement_view.proto\022!google.ads.goog" +
       "leads.v2.resources\0322google/ads/googleads" +
-      "/v2/enums/placement_type.proto\032\036google/p" +
-      "rotobuf/wrappers.proto\032\034google/api/annot" +
-      "ations.proto\"\335\002\n\023DetailPlacementView\022\025\n\r" +
-      "resource_name\030\001 \001(\t\022/\n\tplacement\030\002 \001(\0132\034" +
-      ".google.protobuf.StringValue\0222\n\014display_" +
-      "name\030\003 \001(\0132\034.google.protobuf.StringValue" +
-      "\022@\n\032group_placement_target_url\030\004 \001(\0132\034.g" +
-      "oogle.protobuf.StringValue\0220\n\ntarget_url" +
-      "\030\005 \001(\0132\034.google.protobuf.StringValue\022V\n\016" +
-      "placement_type\030\006 \001(\0162>.google.ads.google" +
-      "ads.v2.enums.PlacementTypeEnum.Placement" +
-      "TypeB\205\002\n%com.google.ads.googleads.v2.res" +
-      "ourcesB\030DetailPlacementViewProtoP\001ZJgoog" +
-      "le.golang.org/genproto/googleapis/ads/go" +
-      "ogleads/v2/resources;resources\242\002\003GAA\252\002!G" +
-      "oogle.Ads.GoogleAds.V2.Resources\312\002!Googl" +
-      "e\\Ads\\GoogleAds\\V2\\Resources\352\002%Google::A" +
-      "ds::GoogleAds::V2::Resourcesb\006proto3"
+      "/v2/enums/placement_type.proto\032\037google/a" +
+      "pi/field_behavior.proto\032\031google/api/reso" +
+      "urce.proto\032\036google/protobuf/wrappers.pro" +
+      "to\032\034google/api/annotations.proto\"\242\004\n\023Det" +
+      "ailPlacementView\022K\n\rresource_name\030\001 \001(\tB" +
+      "4\340A\003\372A.\n,googleads.googleapis.com/Detail" +
+      "PlacementView\0224\n\tplacement\030\002 \001(\0132\034.googl" +
+      "e.protobuf.StringValueB\003\340A\003\0227\n\014display_n" +
+      "ame\030\003 \001(\0132\034.google.protobuf.StringValueB" +
+      "\003\340A\003\022E\n\032group_placement_target_url\030\004 \001(\013" +
+      "2\034.google.protobuf.StringValueB\003\340A\003\0225\n\nt" +
+      "arget_url\030\005 \001(\0132\034.google.protobuf.String" +
+      "ValueB\003\340A\003\022[\n\016placement_type\030\006 \001(\0162>.goo" +
+      "gle.ads.googleads.v2.enums.PlacementType" +
+      "Enum.PlacementTypeB\003\340A\003:t\352Aq\n,googleads." +
+      "googleapis.com/DetailPlacementView\022Acust" +
+      "omers/{customer}/detailPlacementViews/{d" +
+      "etail_placement_view}B\205\002\n%com.google.ads" +
+      ".googleads.v2.resourcesB\030DetailPlacement" +
+      "ViewProtoP\001ZJgoogle.golang.org/genproto/" +
+      "googleapis/ads/googleads/v2/resources;re" +
+      "sources\242\002\003GAA\252\002!Google.Ads.GoogleAds.V2." +
+      "Resources\312\002!Google\\Ads\\GoogleAds\\V2\\Reso" +
+      "urces\352\002%Google::Ads::GoogleAds::V2::Reso" +
+      "urcesb\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.ads.googleads.v2.enums.PlacementTypeProto.getDescriptor(),
+          com.google.api.FieldBehaviorProto.getDescriptor(),
+          com.google.api.ResourceProto.getDescriptor(),
           com.google.protobuf.WrappersProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
-        }, assigner);
+        });
     internal_static_google_ads_googleads_v2_resources_DetailPlacementView_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_google_ads_googleads_v2_resources_DetailPlacementView_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v2_resources_DetailPlacementView_descriptor,
         new java.lang.String[] { "ResourceName", "Placement", "DisplayName", "GroupPlacementTargetUrl", "TargetUrl", "PlacementType", });
+    com.google.protobuf.ExtensionRegistry registry =
+        com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);
+    registry.add(com.google.api.ResourceProto.resource);
+    registry.add(com.google.api.ResourceProto.resourceReference);
+    com.google.protobuf.Descriptors.FileDescriptor
+        .internalUpdateFileDescriptor(descriptor, registry);
     com.google.ads.googleads.v2.enums.PlacementTypeProto.getDescriptor();
+    com.google.api.FieldBehaviorProto.getDescriptor();
+    com.google.api.ResourceProto.getDescriptor();
     com.google.protobuf.WrappersProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
   }

@@ -12,7 +12,7 @@ package com.google.ads.googleads.v4.common;
  *
  * Protobuf type {@code google.ads.googleads.v4.common.MatchingFunction}
  */
-public  final class MatchingFunction extends
+public final class MatchingFunction extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.common.MatchingFunction)
     MatchingFunctionOrBuilder {
@@ -155,6 +155,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue function_string = 1;</code>
    * @return Whether the functionString field is set.
    */
+  @java.lang.Override
   public boolean hasFunctionString() {
     return functionString_ != null;
   }
@@ -178,6 +179,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue function_string = 1;</code>
    * @return The functionString.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getFunctionString() {
     return functionString_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : functionString_;
   }
@@ -200,6 +202,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue function_string = 1;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getFunctionStringOrBuilder() {
     return getFunctionString();
   }
@@ -214,7 +217,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.MatchingFunctionOperatorEnum.MatchingFunctionOperator operator = 4;</code>
    * @return The enum numeric value on the wire for operator.
    */
-  public int getOperatorValue() {
+  @java.lang.Override public int getOperatorValue() {
     return operator_;
   }
   /**
@@ -225,7 +228,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.MatchingFunctionOperatorEnum.MatchingFunctionOperator operator = 4;</code>
    * @return The operator.
    */
-  public com.google.ads.googleads.v4.enums.MatchingFunctionOperatorEnum.MatchingFunctionOperator getOperator() {
+  @java.lang.Override public com.google.ads.googleads.v4.enums.MatchingFunctionOperatorEnum.MatchingFunctionOperator getOperator() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v4.enums.MatchingFunctionOperatorEnum.MatchingFunctionOperator result = com.google.ads.googleads.v4.enums.MatchingFunctionOperatorEnum.MatchingFunctionOperator.valueOf(operator_);
     return result == null ? com.google.ads.googleads.v4.enums.MatchingFunctionOperatorEnum.MatchingFunctionOperator.UNRECOGNIZED : result;
@@ -241,6 +244,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.common.Operand left_operands = 2;</code>
    */
+  @java.lang.Override
   public java.util.List<com.google.ads.googleads.v4.common.Operand> getLeftOperandsList() {
     return leftOperands_;
   }
@@ -252,6 +256,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.common.Operand left_operands = 2;</code>
    */
+  @java.lang.Override
   public java.util.List<? extends com.google.ads.googleads.v4.common.OperandOrBuilder> 
       getLeftOperandsOrBuilderList() {
     return leftOperands_;
@@ -264,6 +269,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.common.Operand left_operands = 2;</code>
    */
+  @java.lang.Override
   public int getLeftOperandsCount() {
     return leftOperands_.size();
   }
@@ -275,6 +281,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.common.Operand left_operands = 2;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.Operand getLeftOperands(int index) {
     return leftOperands_.get(index);
   }
@@ -286,6 +293,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.common.Operand left_operands = 2;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.OperandOrBuilder getLeftOperandsOrBuilder(
       int index) {
     return leftOperands_.get(index);
@@ -300,6 +308,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.common.Operand right_operands = 3;</code>
    */
+  @java.lang.Override
   public java.util.List<com.google.ads.googleads.v4.common.Operand> getRightOperandsList() {
     return rightOperands_;
   }
@@ -310,6 +319,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.common.Operand right_operands = 3;</code>
    */
+  @java.lang.Override
   public java.util.List<? extends com.google.ads.googleads.v4.common.OperandOrBuilder> 
       getRightOperandsOrBuilderList() {
     return rightOperands_;
@@ -321,6 +331,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.common.Operand right_operands = 3;</code>
    */
+  @java.lang.Override
   public int getRightOperandsCount() {
     return rightOperands_.size();
   }
@@ -331,6 +342,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.common.Operand right_operands = 3;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.Operand getRightOperands(int index) {
     return rightOperands_.get(index);
   }
@@ -341,6 +353,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.common.Operand right_operands = 3;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.OperandOrBuilder getRightOperandsOrBuilder(
       int index) {
     return rightOperands_.get(index);
@@ -1067,7 +1080,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.MatchingFunctionOperatorEnum.MatchingFunctionOperator operator = 4;</code>
      * @return The enum numeric value on the wire for operator.
      */
-    public int getOperatorValue() {
+    @java.lang.Override public int getOperatorValue() {
       return operator_;
     }
     /**
@@ -1080,6 +1093,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setOperatorValue(int value) {
+      
       operator_ = value;
       onChanged();
       return this;
@@ -1092,6 +1106,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.MatchingFunctionOperatorEnum.MatchingFunctionOperator operator = 4;</code>
      * @return The operator.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.enums.MatchingFunctionOperatorEnum.MatchingFunctionOperator getOperator() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v4.enums.MatchingFunctionOperatorEnum.MatchingFunctionOperator result = com.google.ads.googleads.v4.enums.MatchingFunctionOperatorEnum.MatchingFunctionOperator.valueOf(operator_);

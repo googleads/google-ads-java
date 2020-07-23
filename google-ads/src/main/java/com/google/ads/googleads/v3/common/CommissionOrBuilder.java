@@ -16,6 +16,7 @@ public interface CommissionOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value commission_rate_micros = 1;</code>
+   * @return Whether the commissionRateMicros field is set.
    */
   boolean hasCommissionRateMicros();
   /**
@@ -27,6 +28,7 @@ public interface CommissionOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value commission_rate_micros = 1;</code>
+   * @return The commissionRateMicros.
    */
   com.google.protobuf.Int64Value getCommissionRateMicros();
   /**

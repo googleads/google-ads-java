@@ -21,7 +21,7 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.10.0)",
+    value = "by gRPC proto compiler",
     comments = "Source: google/ads/googleads/v3/services/ad_group_extension_setting_service.proto")
 public final class AdGroupExtensionSettingServiceGrpc {
 
@@ -30,86 +30,80 @@ public final class AdGroupExtensionSettingServiceGrpc {
   public static final String SERVICE_NAME = "google.ads.googleads.v3.services.AdGroupExtensionSettingService";
 
   // Static method descriptors that strictly reflect the proto.
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  @java.lang.Deprecated // Use {@link #getGetAdGroupExtensionSettingMethod()} instead. 
-  public static final io.grpc.MethodDescriptor<com.google.ads.googleads.v3.services.GetAdGroupExtensionSettingRequest,
-      com.google.ads.googleads.v3.resources.AdGroupExtensionSetting> METHOD_GET_AD_GROUP_EXTENSION_SETTING = getGetAdGroupExtensionSettingMethodHelper();
-
   private static volatile io.grpc.MethodDescriptor<com.google.ads.googleads.v3.services.GetAdGroupExtensionSettingRequest,
       com.google.ads.googleads.v3.resources.AdGroupExtensionSetting> getGetAdGroupExtensionSettingMethod;
 
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetAdGroupExtensionSetting",
+      requestType = com.google.ads.googleads.v3.services.GetAdGroupExtensionSettingRequest.class,
+      responseType = com.google.ads.googleads.v3.resources.AdGroupExtensionSetting.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<com.google.ads.googleads.v3.services.GetAdGroupExtensionSettingRequest,
       com.google.ads.googleads.v3.resources.AdGroupExtensionSetting> getGetAdGroupExtensionSettingMethod() {
-    return getGetAdGroupExtensionSettingMethodHelper();
-  }
-
-  private static io.grpc.MethodDescriptor<com.google.ads.googleads.v3.services.GetAdGroupExtensionSettingRequest,
-      com.google.ads.googleads.v3.resources.AdGroupExtensionSetting> getGetAdGroupExtensionSettingMethodHelper() {
     io.grpc.MethodDescriptor<com.google.ads.googleads.v3.services.GetAdGroupExtensionSettingRequest, com.google.ads.googleads.v3.resources.AdGroupExtensionSetting> getGetAdGroupExtensionSettingMethod;
     if ((getGetAdGroupExtensionSettingMethod = AdGroupExtensionSettingServiceGrpc.getGetAdGroupExtensionSettingMethod) == null) {
       synchronized (AdGroupExtensionSettingServiceGrpc.class) {
         if ((getGetAdGroupExtensionSettingMethod = AdGroupExtensionSettingServiceGrpc.getGetAdGroupExtensionSettingMethod) == null) {
-          AdGroupExtensionSettingServiceGrpc.getGetAdGroupExtensionSettingMethod = getGetAdGroupExtensionSettingMethod = 
+          AdGroupExtensionSettingServiceGrpc.getGetAdGroupExtensionSettingMethod = getGetAdGroupExtensionSettingMethod =
               io.grpc.MethodDescriptor.<com.google.ads.googleads.v3.services.GetAdGroupExtensionSettingRequest, com.google.ads.googleads.v3.resources.AdGroupExtensionSetting>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "google.ads.googleads.v3.services.AdGroupExtensionSettingService", "GetAdGroupExtensionSetting"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetAdGroupExtensionSetting"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v3.services.GetAdGroupExtensionSettingRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v3.resources.AdGroupExtensionSetting.getDefaultInstance()))
-                  .setSchemaDescriptor(new AdGroupExtensionSettingServiceMethodDescriptorSupplier("GetAdGroupExtensionSetting"))
-                  .build();
-          }
+              .setSchemaDescriptor(new AdGroupExtensionSettingServiceMethodDescriptorSupplier("GetAdGroupExtensionSetting"))
+              .build();
         }
-     }
-     return getGetAdGroupExtensionSettingMethod;
+      }
+    }
+    return getGetAdGroupExtensionSettingMethod;
   }
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  @java.lang.Deprecated // Use {@link #getMutateAdGroupExtensionSettingsMethod()} instead. 
-  public static final io.grpc.MethodDescriptor<com.google.ads.googleads.v3.services.MutateAdGroupExtensionSettingsRequest,
-      com.google.ads.googleads.v3.services.MutateAdGroupExtensionSettingsResponse> METHOD_MUTATE_AD_GROUP_EXTENSION_SETTINGS = getMutateAdGroupExtensionSettingsMethodHelper();
 
   private static volatile io.grpc.MethodDescriptor<com.google.ads.googleads.v3.services.MutateAdGroupExtensionSettingsRequest,
       com.google.ads.googleads.v3.services.MutateAdGroupExtensionSettingsResponse> getMutateAdGroupExtensionSettingsMethod;
 
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "MutateAdGroupExtensionSettings",
+      requestType = com.google.ads.googleads.v3.services.MutateAdGroupExtensionSettingsRequest.class,
+      responseType = com.google.ads.googleads.v3.services.MutateAdGroupExtensionSettingsResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<com.google.ads.googleads.v3.services.MutateAdGroupExtensionSettingsRequest,
       com.google.ads.googleads.v3.services.MutateAdGroupExtensionSettingsResponse> getMutateAdGroupExtensionSettingsMethod() {
-    return getMutateAdGroupExtensionSettingsMethodHelper();
-  }
-
-  private static io.grpc.MethodDescriptor<com.google.ads.googleads.v3.services.MutateAdGroupExtensionSettingsRequest,
-      com.google.ads.googleads.v3.services.MutateAdGroupExtensionSettingsResponse> getMutateAdGroupExtensionSettingsMethodHelper() {
     io.grpc.MethodDescriptor<com.google.ads.googleads.v3.services.MutateAdGroupExtensionSettingsRequest, com.google.ads.googleads.v3.services.MutateAdGroupExtensionSettingsResponse> getMutateAdGroupExtensionSettingsMethod;
     if ((getMutateAdGroupExtensionSettingsMethod = AdGroupExtensionSettingServiceGrpc.getMutateAdGroupExtensionSettingsMethod) == null) {
       synchronized (AdGroupExtensionSettingServiceGrpc.class) {
         if ((getMutateAdGroupExtensionSettingsMethod = AdGroupExtensionSettingServiceGrpc.getMutateAdGroupExtensionSettingsMethod) == null) {
-          AdGroupExtensionSettingServiceGrpc.getMutateAdGroupExtensionSettingsMethod = getMutateAdGroupExtensionSettingsMethod = 
+          AdGroupExtensionSettingServiceGrpc.getMutateAdGroupExtensionSettingsMethod = getMutateAdGroupExtensionSettingsMethod =
               io.grpc.MethodDescriptor.<com.google.ads.googleads.v3.services.MutateAdGroupExtensionSettingsRequest, com.google.ads.googleads.v3.services.MutateAdGroupExtensionSettingsResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "google.ads.googleads.v3.services.AdGroupExtensionSettingService", "MutateAdGroupExtensionSettings"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "MutateAdGroupExtensionSettings"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v3.services.MutateAdGroupExtensionSettingsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v3.services.MutateAdGroupExtensionSettingsResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new AdGroupExtensionSettingServiceMethodDescriptorSupplier("MutateAdGroupExtensionSettings"))
-                  .build();
-          }
+              .setSchemaDescriptor(new AdGroupExtensionSettingServiceMethodDescriptorSupplier("MutateAdGroupExtensionSettings"))
+              .build();
         }
-     }
-     return getMutateAdGroupExtensionSettingsMethod;
+      }
+    }
+    return getMutateAdGroupExtensionSettingsMethod;
   }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static AdGroupExtensionSettingServiceStub newStub(io.grpc.Channel channel) {
-    return new AdGroupExtensionSettingServiceStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<AdGroupExtensionSettingServiceStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<AdGroupExtensionSettingServiceStub>() {
+        @java.lang.Override
+        public AdGroupExtensionSettingServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new AdGroupExtensionSettingServiceStub(channel, callOptions);
+        }
+      };
+    return AdGroupExtensionSettingServiceStub.newStub(factory, channel);
   }
 
   /**
@@ -117,7 +111,14 @@ public final class AdGroupExtensionSettingServiceGrpc {
    */
   public static AdGroupExtensionSettingServiceBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new AdGroupExtensionSettingServiceBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<AdGroupExtensionSettingServiceBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<AdGroupExtensionSettingServiceBlockingStub>() {
+        @java.lang.Override
+        public AdGroupExtensionSettingServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new AdGroupExtensionSettingServiceBlockingStub(channel, callOptions);
+        }
+      };
+    return AdGroupExtensionSettingServiceBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -125,7 +126,14 @@ public final class AdGroupExtensionSettingServiceGrpc {
    */
   public static AdGroupExtensionSettingServiceFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new AdGroupExtensionSettingServiceFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<AdGroupExtensionSettingServiceFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<AdGroupExtensionSettingServiceFutureStub>() {
+        @java.lang.Override
+        public AdGroupExtensionSettingServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new AdGroupExtensionSettingServiceFutureStub(channel, callOptions);
+        }
+      };
+    return AdGroupExtensionSettingServiceFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -142,7 +150,7 @@ public final class AdGroupExtensionSettingServiceGrpc {
      */
     public void getAdGroupExtensionSetting(com.google.ads.googleads.v3.services.GetAdGroupExtensionSettingRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v3.resources.AdGroupExtensionSetting> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetAdGroupExtensionSettingMethodHelper(), responseObserver);
+      asyncUnimplementedUnaryCall(getGetAdGroupExtensionSettingMethod(), responseObserver);
     }
 
     /**
@@ -153,20 +161,20 @@ public final class AdGroupExtensionSettingServiceGrpc {
      */
     public void mutateAdGroupExtensionSettings(com.google.ads.googleads.v3.services.MutateAdGroupExtensionSettingsRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v3.services.MutateAdGroupExtensionSettingsResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getMutateAdGroupExtensionSettingsMethodHelper(), responseObserver);
+      asyncUnimplementedUnaryCall(getMutateAdGroupExtensionSettingsMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
-            getGetAdGroupExtensionSettingMethodHelper(),
+            getGetAdGroupExtensionSettingMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 com.google.ads.googleads.v3.services.GetAdGroupExtensionSettingRequest,
                 com.google.ads.googleads.v3.resources.AdGroupExtensionSetting>(
                   this, METHODID_GET_AD_GROUP_EXTENSION_SETTING)))
           .addMethod(
-            getMutateAdGroupExtensionSettingsMethodHelper(),
+            getMutateAdGroupExtensionSettingsMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 com.google.ads.googleads.v3.services.MutateAdGroupExtensionSettingsRequest,
@@ -181,19 +189,15 @@ public final class AdGroupExtensionSettingServiceGrpc {
    * Service to manage ad group extension settings.
    * </pre>
    */
-  public static final class AdGroupExtensionSettingServiceStub extends io.grpc.stub.AbstractStub<AdGroupExtensionSettingServiceStub> {
-    private AdGroupExtensionSettingServiceStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private AdGroupExtensionSettingServiceStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class AdGroupExtensionSettingServiceStub extends io.grpc.stub.AbstractAsyncStub<AdGroupExtensionSettingServiceStub> {
+    private AdGroupExtensionSettingServiceStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected AdGroupExtensionSettingServiceStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected AdGroupExtensionSettingServiceStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new AdGroupExtensionSettingServiceStub(channel, callOptions);
     }
 
@@ -205,7 +209,7 @@ public final class AdGroupExtensionSettingServiceGrpc {
     public void getAdGroupExtensionSetting(com.google.ads.googleads.v3.services.GetAdGroupExtensionSettingRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v3.resources.AdGroupExtensionSetting> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(getGetAdGroupExtensionSettingMethodHelper(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getGetAdGroupExtensionSettingMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -217,7 +221,7 @@ public final class AdGroupExtensionSettingServiceGrpc {
     public void mutateAdGroupExtensionSettings(com.google.ads.googleads.v3.services.MutateAdGroupExtensionSettingsRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v3.services.MutateAdGroupExtensionSettingsResponse> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(getMutateAdGroupExtensionSettingsMethodHelper(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getMutateAdGroupExtensionSettingsMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -226,19 +230,15 @@ public final class AdGroupExtensionSettingServiceGrpc {
    * Service to manage ad group extension settings.
    * </pre>
    */
-  public static final class AdGroupExtensionSettingServiceBlockingStub extends io.grpc.stub.AbstractStub<AdGroupExtensionSettingServiceBlockingStub> {
-    private AdGroupExtensionSettingServiceBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private AdGroupExtensionSettingServiceBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class AdGroupExtensionSettingServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<AdGroupExtensionSettingServiceBlockingStub> {
+    private AdGroupExtensionSettingServiceBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected AdGroupExtensionSettingServiceBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected AdGroupExtensionSettingServiceBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new AdGroupExtensionSettingServiceBlockingStub(channel, callOptions);
     }
 
@@ -249,7 +249,7 @@ public final class AdGroupExtensionSettingServiceGrpc {
      */
     public com.google.ads.googleads.v3.resources.AdGroupExtensionSetting getAdGroupExtensionSetting(com.google.ads.googleads.v3.services.GetAdGroupExtensionSettingRequest request) {
       return blockingUnaryCall(
-          getChannel(), getGetAdGroupExtensionSettingMethodHelper(), getCallOptions(), request);
+          getChannel(), getGetAdGroupExtensionSettingMethod(), getCallOptions(), request);
     }
 
     /**
@@ -260,7 +260,7 @@ public final class AdGroupExtensionSettingServiceGrpc {
      */
     public com.google.ads.googleads.v3.services.MutateAdGroupExtensionSettingsResponse mutateAdGroupExtensionSettings(com.google.ads.googleads.v3.services.MutateAdGroupExtensionSettingsRequest request) {
       return blockingUnaryCall(
-          getChannel(), getMutateAdGroupExtensionSettingsMethodHelper(), getCallOptions(), request);
+          getChannel(), getMutateAdGroupExtensionSettingsMethod(), getCallOptions(), request);
     }
   }
 
@@ -269,19 +269,15 @@ public final class AdGroupExtensionSettingServiceGrpc {
    * Service to manage ad group extension settings.
    * </pre>
    */
-  public static final class AdGroupExtensionSettingServiceFutureStub extends io.grpc.stub.AbstractStub<AdGroupExtensionSettingServiceFutureStub> {
-    private AdGroupExtensionSettingServiceFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private AdGroupExtensionSettingServiceFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class AdGroupExtensionSettingServiceFutureStub extends io.grpc.stub.AbstractFutureStub<AdGroupExtensionSettingServiceFutureStub> {
+    private AdGroupExtensionSettingServiceFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected AdGroupExtensionSettingServiceFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected AdGroupExtensionSettingServiceFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new AdGroupExtensionSettingServiceFutureStub(channel, callOptions);
     }
 
@@ -293,7 +289,7 @@ public final class AdGroupExtensionSettingServiceGrpc {
     public com.google.common.util.concurrent.ListenableFuture<com.google.ads.googleads.v3.resources.AdGroupExtensionSetting> getAdGroupExtensionSetting(
         com.google.ads.googleads.v3.services.GetAdGroupExtensionSettingRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(getGetAdGroupExtensionSettingMethodHelper(), getCallOptions()), request);
+          getChannel().newCall(getGetAdGroupExtensionSettingMethod(), getCallOptions()), request);
     }
 
     /**
@@ -305,7 +301,7 @@ public final class AdGroupExtensionSettingServiceGrpc {
     public com.google.common.util.concurrent.ListenableFuture<com.google.ads.googleads.v3.services.MutateAdGroupExtensionSettingsResponse> mutateAdGroupExtensionSettings(
         com.google.ads.googleads.v3.services.MutateAdGroupExtensionSettingsRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(getMutateAdGroupExtensionSettingsMethodHelper(), getCallOptions()), request);
+          getChannel().newCall(getMutateAdGroupExtensionSettingsMethod(), getCallOptions()), request);
     }
   }
 
@@ -398,8 +394,8 @@ public final class AdGroupExtensionSettingServiceGrpc {
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new AdGroupExtensionSettingServiceFileDescriptorSupplier())
-              .addMethod(getGetAdGroupExtensionSettingMethodHelper())
-              .addMethod(getMutateAdGroupExtensionSettingsMethodHelper())
+              .addMethod(getGetAdGroupExtensionSettingMethod())
+              .addMethod(getMutateAdGroupExtensionSettingsMethod())
               .build();
         }
       }

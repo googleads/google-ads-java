@@ -10,7 +10,7 @@ package com.google.ads.googleads.v4.services;
  *
  * Protobuf type {@code google.ads.googleads.v4.services.UploadUserDataResponse}
  */
-public  final class UploadUserDataResponse extends
+public final class UploadUserDataResponse extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.services.UploadUserDataResponse)
     UploadUserDataResponseOrBuilder {
@@ -121,6 +121,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue upload_date_time = 1;</code>
    * @return Whether the uploadDateTime field is set.
    */
+  @java.lang.Override
   public boolean hasUploadDateTime() {
     return uploadDateTime_ != null;
   }
@@ -133,6 +134,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue upload_date_time = 1;</code>
    * @return The uploadDateTime.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getUploadDateTime() {
     return uploadDateTime_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : uploadDateTime_;
   }
@@ -144,6 +146,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue upload_date_time = 1;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getUploadDateTimeOrBuilder() {
     return getUploadDateTime();
   }
@@ -158,6 +161,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int32Value received_operations_count = 2;</code>
    * @return Whether the receivedOperationsCount field is set.
    */
+  @java.lang.Override
   public boolean hasReceivedOperationsCount() {
     return receivedOperationsCount_ != null;
   }
@@ -169,6 +173,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int32Value received_operations_count = 2;</code>
    * @return The receivedOperationsCount.
    */
+  @java.lang.Override
   public com.google.protobuf.Int32Value getReceivedOperationsCount() {
     return receivedOperationsCount_ == null ? com.google.protobuf.Int32Value.getDefaultInstance() : receivedOperationsCount_;
   }
@@ -179,6 +184,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int32Value received_operations_count = 2;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int32ValueOrBuilder getReceivedOperationsCountOrBuilder() {
     return getReceivedOperationsCount();
   }

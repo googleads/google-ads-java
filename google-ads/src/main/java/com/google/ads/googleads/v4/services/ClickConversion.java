@@ -10,7 +10,7 @@ package com.google.ads.googleads.v4.services;
  *
  * Protobuf type {@code google.ads.googleads.v4.services.ClickConversion}
  */
-public  final class ClickConversion extends
+public final class ClickConversion extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.services.ClickConversion)
     ClickConversionOrBuilder {
@@ -185,6 +185,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue gclid = 1;</code>
    * @return Whether the gclid field is set.
    */
+  @java.lang.Override
   public boolean hasGclid() {
     return gclid_ != null;
   }
@@ -196,6 +197,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue gclid = 1;</code>
    * @return The gclid.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getGclid() {
     return gclid_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : gclid_;
   }
@@ -206,6 +208,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue gclid = 1;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getGclidOrBuilder() {
     return getGclid();
   }
@@ -223,6 +226,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue conversion_action = 2;</code>
    * @return Whether the conversionAction field is set.
    */
+  @java.lang.Override
   public boolean hasConversionAction() {
     return conversionAction_ != null;
   }
@@ -237,6 +241,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue conversion_action = 2;</code>
    * @return The conversionAction.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getConversionAction() {
     return conversionAction_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : conversionAction_;
   }
@@ -250,6 +255,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue conversion_action = 2;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getConversionActionOrBuilder() {
     return getConversionAction();
   }
@@ -266,6 +272,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue conversion_date_time = 3;</code>
    * @return Whether the conversionDateTime field is set.
    */
+  @java.lang.Override
   public boolean hasConversionDateTime() {
     return conversionDateTime_ != null;
   }
@@ -279,6 +286,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue conversion_date_time = 3;</code>
    * @return The conversionDateTime.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getConversionDateTime() {
     return conversionDateTime_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : conversionDateTime_;
   }
@@ -291,6 +299,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue conversion_date_time = 3;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getConversionDateTimeOrBuilder() {
     return getConversionDateTime();
   }
@@ -305,6 +314,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.DoubleValue conversion_value = 4;</code>
    * @return Whether the conversionValue field is set.
    */
+  @java.lang.Override
   public boolean hasConversionValue() {
     return conversionValue_ != null;
   }
@@ -316,6 +326,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.DoubleValue conversion_value = 4;</code>
    * @return The conversionValue.
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValue getConversionValue() {
     return conversionValue_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : conversionValue_;
   }
@@ -326,6 +337,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.DoubleValue conversion_value = 4;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValueOrBuilder getConversionValueOrBuilder() {
     return getConversionValue();
   }
@@ -341,6 +353,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue currency_code = 5;</code>
    * @return Whether the currencyCode field is set.
    */
+  @java.lang.Override
   public boolean hasCurrencyCode() {
     return currencyCode_ != null;
   }
@@ -353,6 +366,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue currency_code = 5;</code>
    * @return The currencyCode.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getCurrencyCode() {
     return currencyCode_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : currencyCode_;
   }
@@ -364,6 +378,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue currency_code = 5;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getCurrencyCodeOrBuilder() {
     return getCurrencyCode();
   }
@@ -379,6 +394,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue order_id = 6;</code>
    * @return Whether the orderId field is set.
    */
+  @java.lang.Override
   public boolean hasOrderId() {
     return orderId_ != null;
   }
@@ -391,6 +407,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue order_id = 6;</code>
    * @return The orderId.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getOrderId() {
     return orderId_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : orderId_;
   }
@@ -402,6 +419,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue order_id = 6;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getOrderIdOrBuilder() {
     return getOrderId();
   }
@@ -418,6 +436,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.services.ExternalAttributionData external_attribution_data = 7;</code>
    * @return Whether the externalAttributionData field is set.
    */
+  @java.lang.Override
   public boolean hasExternalAttributionData() {
     return externalAttributionData_ != null;
   }
@@ -431,6 +450,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.services.ExternalAttributionData external_attribution_data = 7;</code>
    * @return The externalAttributionData.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.services.ExternalAttributionData getExternalAttributionData() {
     return externalAttributionData_ == null ? com.google.ads.googleads.v4.services.ExternalAttributionData.getDefaultInstance() : externalAttributionData_;
   }
@@ -443,6 +463,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v4.services.ExternalAttributionData external_attribution_data = 7;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.services.ExternalAttributionDataOrBuilder getExternalAttributionDataOrBuilder() {
     return getExternalAttributionData();
   }

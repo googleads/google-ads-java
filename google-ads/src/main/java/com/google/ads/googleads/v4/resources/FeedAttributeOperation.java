@@ -10,7 +10,7 @@ package com.google.ads.googleads.v4.resources;
  *
  * Protobuf type {@code google.ads.googleads.v4.resources.FeedAttributeOperation}
  */
-public  final class FeedAttributeOperation extends
+public final class FeedAttributeOperation extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.resources.FeedAttributeOperation)
     FeedAttributeOperationOrBuilder {
@@ -211,6 +211,10 @@ private static final long serialVersionUID = 0L;
 
     public final com.google.protobuf.Descriptors.EnumValueDescriptor
         getValueDescriptor() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalStateException(
+            "Can't get the descriptor of an unrecognized enum value.");
+      }
       return getDescriptor().getValues().get(ordinal());
     }
     public final com.google.protobuf.Descriptors.EnumDescriptor
@@ -255,7 +259,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.resources.FeedAttributeOperation.Operator operator = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The enum numeric value on the wire for operator.
    */
-  public int getOperatorValue() {
+  @java.lang.Override public int getOperatorValue() {
     return operator_;
   }
   /**
@@ -266,7 +270,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.resources.FeedAttributeOperation.Operator operator = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The operator.
    */
-  public com.google.ads.googleads.v4.resources.FeedAttributeOperation.Operator getOperator() {
+  @java.lang.Override public com.google.ads.googleads.v4.resources.FeedAttributeOperation.Operator getOperator() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v4.resources.FeedAttributeOperation.Operator result = com.google.ads.googleads.v4.resources.FeedAttributeOperation.Operator.valueOf(operator_);
     return result == null ? com.google.ads.googleads.v4.resources.FeedAttributeOperation.Operator.UNRECOGNIZED : result;
@@ -282,6 +286,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.resources.FeedAttribute value = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the value field is set.
    */
+  @java.lang.Override
   public boolean hasValue() {
     return value_ != null;
   }
@@ -293,6 +298,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.resources.FeedAttribute value = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The value.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.resources.FeedAttribute getValue() {
     return value_ == null ? com.google.ads.googleads.v4.resources.FeedAttribute.getDefaultInstance() : value_;
   }
@@ -303,6 +309,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v4.resources.FeedAttribute value = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.resources.FeedAttributeOrBuilder getValueOrBuilder() {
     return getValue();
   }
@@ -651,7 +658,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.resources.FeedAttributeOperation.Operator operator = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The enum numeric value on the wire for operator.
      */
-    public int getOperatorValue() {
+    @java.lang.Override public int getOperatorValue() {
       return operator_;
     }
     /**
@@ -664,6 +671,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setOperatorValue(int value) {
+      
       operator_ = value;
       onChanged();
       return this;
@@ -676,6 +684,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.resources.FeedAttributeOperation.Operator operator = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The operator.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.resources.FeedAttributeOperation.Operator getOperator() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v4.resources.FeedAttributeOperation.Operator result = com.google.ads.googleads.v4.resources.FeedAttributeOperation.Operator.valueOf(operator_);

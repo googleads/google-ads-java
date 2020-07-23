@@ -11,7 +11,7 @@ package com.google.ads.googleads.v3.common;
  *
  * Protobuf type {@code google.ads.googleads.v3.common.SimilarUserListInfo}
  */
-public  final class SimilarUserListInfo extends
+public final class SimilarUserListInfo extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v3.common.SimilarUserListInfo)
     SimilarUserListInfoOrBuilder {
@@ -21,6 +21,13 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private SimilarUserListInfo() {
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new SimilarUserListInfo();
   }
 
   @java.lang.Override
@@ -36,7 +43,6 @@ private static final long serialVersionUID = 0L;
     if (extensionRegistry == null) {
       throw new java.lang.NullPointerException();
     }
-    int mutable_bitField0_ = 0;
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
         com.google.protobuf.UnknownFieldSet.newBuilder();
     try {
@@ -100,7 +106,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue seed_user_list = 1;</code>
+   * @return Whether the seedUserList field is set.
    */
+  @java.lang.Override
   public boolean hasSeedUserList() {
     return seedUserList_ != null;
   }
@@ -110,7 +118,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue seed_user_list = 1;</code>
+   * @return The seedUserList.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getSeedUserList() {
     return seedUserList_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : seedUserList_;
   }
@@ -121,6 +131,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue seed_user_list = 1;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getSeedUserListOrBuilder() {
     return getSeedUserList();
   }
@@ -454,6 +465,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue seed_user_list = 1;</code>
+     * @return Whether the seedUserList field is set.
      */
     public boolean hasSeedUserList() {
       return seedUserListBuilder_ != null || seedUserList_ != null;
@@ -464,6 +476,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue seed_user_list = 1;</code>
+     * @return The seedUserList.
      */
     public com.google.protobuf.StringValue getSeedUserList() {
       if (seedUserListBuilder_ == null) {

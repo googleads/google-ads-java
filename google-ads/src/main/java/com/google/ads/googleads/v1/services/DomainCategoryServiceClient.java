@@ -1,5 +1,5 @@
 /*
- * Copyright 2019 Google LLC
+ * Copyright 2020 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -21,7 +21,6 @@ import com.google.ads.googleads.v1.services.stub.DomainCategoryServiceStubSettin
 import com.google.api.core.BetaApi;
 import com.google.api.gax.core.BackgroundResource;
 import com.google.api.gax.rpc.UnaryCallable;
-import com.google.api.pathtemplate.PathTemplate;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 import javax.annotation.Generated;
@@ -36,8 +35,8 @@ import javax.annotation.Generated;
  * <pre>
  * <code>
  * try (DomainCategoryServiceClient domainCategoryServiceClient = DomainCategoryServiceClient.create()) {
- *   String formattedResourceName = DomainCategoryServiceClient.formatDomainCategoryName("[CUSTOMER]", "[DOMAIN_CATEGORY]");
- *   DomainCategory response = domainCategoryServiceClient.getDomainCategory(formattedResourceName);
+ *   DomainCategoryName resourceName = DomainCategoryName.of("[CUSTOMER]", "[DOMAIN_CATEGORY]");
+ *   DomainCategory response = domainCategoryServiceClient.getDomainCategory(resourceName);
  * }
  * </code>
  * </pre>
@@ -99,44 +98,6 @@ public class DomainCategoryServiceClient implements BackgroundResource {
   private final DomainCategoryServiceSettings settings;
   private final DomainCategoryServiceStub stub;
 
-  private static final PathTemplate DOMAIN_CATEGORY_PATH_TEMPLATE =
-      PathTemplate.createWithoutUrlEncoding(
-          "customers/{customer}/domainCategories/{domain_category}");
-
-  /**
-   * Formats a string containing the fully-qualified path to represent a domain_category resource.
-   *
-   * @deprecated Use the {@link DomainCategoryName} class instead.
-   */
-  @Deprecated
-  public static final String formatDomainCategoryName(String customer, String domainCategory) {
-    return DOMAIN_CATEGORY_PATH_TEMPLATE.instantiate(
-        "customer", customer,
-        "domain_category", domainCategory);
-  }
-
-  /**
-   * Parses the customer from the given fully-qualified path which represents a domain_category
-   * resource.
-   *
-   * @deprecated Use the {@link DomainCategoryName} class instead.
-   */
-  @Deprecated
-  public static final String parseCustomerFromDomainCategoryName(String domainCategoryName) {
-    return DOMAIN_CATEGORY_PATH_TEMPLATE.parse(domainCategoryName).get("customer");
-  }
-
-  /**
-   * Parses the domain_category from the given fully-qualified path which represents a
-   * domain_category resource.
-   *
-   * @deprecated Use the {@link DomainCategoryName} class instead.
-   */
-  @Deprecated
-  public static final String parseDomainCategoryFromDomainCategoryName(String domainCategoryName) {
-    return DOMAIN_CATEGORY_PATH_TEMPLATE.parse(domainCategoryName).get("domain_category");
-  }
-
   /** Constructs an instance of DomainCategoryServiceClient with default settings. */
   public static final DomainCategoryServiceClient create() throws IOException {
     return create(DomainCategoryServiceSettings.newBuilder().build());
@@ -193,16 +154,39 @@ public class DomainCategoryServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (DomainCategoryServiceClient domainCategoryServiceClient = DomainCategoryServiceClient.create()) {
-   *   String formattedResourceName = DomainCategoryServiceClient.formatDomainCategoryName("[CUSTOMER]", "[DOMAIN_CATEGORY]");
-   *   DomainCategory response = domainCategoryServiceClient.getDomainCategory(formattedResourceName);
+   *   DomainCategoryName resourceName = DomainCategoryName.of("[CUSTOMER]", "[DOMAIN_CATEGORY]");
+   *   DomainCategory response = domainCategoryServiceClient.getDomainCategory(resourceName);
    * }
    * </code></pre>
    *
-   * @param resourceName Resource name of the domain category to fetch.
+   * @param resourceName Required. Resource name of the domain category to fetch.
+   * @throws com.google.api.gax.rpc.ApiException if the remote call fails
+   */
+  public final DomainCategory getDomainCategory(DomainCategoryName resourceName) {
+    GetDomainCategoryRequest request =
+        GetDomainCategoryRequest.newBuilder()
+            .setResourceName(resourceName == null ? null : resourceName.toString())
+            .build();
+    return getDomainCategory(request);
+  }
+
+  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  /**
+   * Returns the requested domain category.
+   *
+   * <p>Sample code:
+   *
+   * <pre><code>
+   * try (DomainCategoryServiceClient domainCategoryServiceClient = DomainCategoryServiceClient.create()) {
+   *   DomainCategoryName resourceName = DomainCategoryName.of("[CUSTOMER]", "[DOMAIN_CATEGORY]");
+   *   DomainCategory response = domainCategoryServiceClient.getDomainCategory(resourceName.toString());
+   * }
+   * </code></pre>
+   *
+   * @param resourceName Required. Resource name of the domain category to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final DomainCategory getDomainCategory(String resourceName) {
-    DOMAIN_CATEGORY_PATH_TEMPLATE.validate(resourceName, "getDomainCategory");
     GetDomainCategoryRequest request =
         GetDomainCategoryRequest.newBuilder().setResourceName(resourceName).build();
     return getDomainCategory(request);
@@ -216,9 +200,9 @@ public class DomainCategoryServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (DomainCategoryServiceClient domainCategoryServiceClient = DomainCategoryServiceClient.create()) {
-   *   String formattedResourceName = DomainCategoryServiceClient.formatDomainCategoryName("[CUSTOMER]", "[DOMAIN_CATEGORY]");
+   *   DomainCategoryName resourceName = DomainCategoryName.of("[CUSTOMER]", "[DOMAIN_CATEGORY]");
    *   GetDomainCategoryRequest request = GetDomainCategoryRequest.newBuilder()
-   *     .setResourceName(formattedResourceName)
+   *     .setResourceName(resourceName.toString())
    *     .build();
    *   DomainCategory response = domainCategoryServiceClient.getDomainCategory(request);
    * }
@@ -239,9 +223,9 @@ public class DomainCategoryServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (DomainCategoryServiceClient domainCategoryServiceClient = DomainCategoryServiceClient.create()) {
-   *   String formattedResourceName = DomainCategoryServiceClient.formatDomainCategoryName("[CUSTOMER]", "[DOMAIN_CATEGORY]");
+   *   DomainCategoryName resourceName = DomainCategoryName.of("[CUSTOMER]", "[DOMAIN_CATEGORY]");
    *   GetDomainCategoryRequest request = GetDomainCategoryRequest.newBuilder()
-   *     .setResourceName(formattedResourceName)
+   *     .setResourceName(resourceName.toString())
    *     .build();
    *   ApiFuture&lt;DomainCategory&gt; future = domainCategoryServiceClient.getDomainCategoryCallable().futureCall(request);
    *   // Do something

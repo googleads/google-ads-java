@@ -11,7 +11,7 @@ package com.google.ads.googleads.v4.common;
  *
  * Protobuf type {@code google.ads.googleads.v4.common.TargetCpa}
  */
-public  final class TargetCpa extends
+public final class TargetCpa extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.common.TargetCpa)
     TargetCpaOrBuilder {
@@ -136,6 +136,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int64Value target_cpa_micros = 1;</code>
    * @return Whether the targetCpaMicros field is set.
    */
+  @java.lang.Override
   public boolean hasTargetCpaMicros() {
     return targetCpaMicros_ != null;
   }
@@ -149,6 +150,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int64Value target_cpa_micros = 1;</code>
    * @return The targetCpaMicros.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getTargetCpaMicros() {
     return targetCpaMicros_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : targetCpaMicros_;
   }
@@ -161,6 +163,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int64Value target_cpa_micros = 1;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getTargetCpaMicrosOrBuilder() {
     return getTargetCpaMicros();
   }
@@ -176,6 +179,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int64Value cpc_bid_ceiling_micros = 2;</code>
    * @return Whether the cpcBidCeilingMicros field is set.
    */
+  @java.lang.Override
   public boolean hasCpcBidCeilingMicros() {
     return cpcBidCeilingMicros_ != null;
   }
@@ -188,6 +192,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int64Value cpc_bid_ceiling_micros = 2;</code>
    * @return The cpcBidCeilingMicros.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getCpcBidCeilingMicros() {
     return cpcBidCeilingMicros_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : cpcBidCeilingMicros_;
   }
@@ -199,6 +204,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int64Value cpc_bid_ceiling_micros = 2;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getCpcBidCeilingMicrosOrBuilder() {
     return getCpcBidCeilingMicros();
   }
@@ -214,6 +220,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int64Value cpc_bid_floor_micros = 3;</code>
    * @return Whether the cpcBidFloorMicros field is set.
    */
+  @java.lang.Override
   public boolean hasCpcBidFloorMicros() {
     return cpcBidFloorMicros_ != null;
   }
@@ -226,6 +233,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int64Value cpc_bid_floor_micros = 3;</code>
    * @return The cpcBidFloorMicros.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getCpcBidFloorMicros() {
     return cpcBidFloorMicros_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : cpcBidFloorMicros_;
   }
@@ -237,6 +245,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int64Value cpc_bid_floor_micros = 3;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getCpcBidFloorMicrosOrBuilder() {
     return getCpcBidFloorMicros();
   }

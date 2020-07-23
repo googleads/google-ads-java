@@ -33,38 +33,35 @@ public final class HotelPerformanceViewServiceProto {
       "ads.googleads.v1.services\032>google/ads/go" +
       "ogleads/v1/resources/hotel_performance_v" +
       "iew.proto\032\034google/api/annotations.proto\032" +
-      "\027google/api/client.proto\"7\n\036GetHotelPerf" +
-      "ormanceViewRequest\022\025\n\rresource_name\030\001 \001(" +
-      "\t2\217\002\n\033HotelPerformanceViewService\022\322\001\n\027Ge" +
-      "tHotelPerformanceView\022@.google.ads.googl" +
-      "eads.v1.services.GetHotelPerformanceView" +
-      "Request\0327.google.ads.googleads.v1.resour" +
-      "ces.HotelPerformanceView\"<\202\323\344\223\0026\0224/v1/{r" +
-      "esource_name=customers/*/hotelPerformanc" +
-      "eView}\032\033\312A\030googleads.googleapis.comB\207\002\n$" +
-      "com.google.ads.googleads.v1.servicesB Ho" +
-      "telPerformanceViewServiceProtoP\001ZHgoogle" +
-      ".golang.org/genproto/googleapis/ads/goog" +
-      "leads/v1/services;services\242\002\003GAA\252\002 Googl" +
-      "e.Ads.GoogleAds.V1.Services\312\002 Google\\Ads" +
-      "\\GoogleAds\\V1\\Services\352\002$Google::Ads::Go" +
-      "ogleAds::V1::Servicesb\006proto3"
+      "\027google/api/client.proto\032\037google/api/fie" +
+      "ld_behavior.proto\032\031google/api/resource.p" +
+      "roto\"n\n\036GetHotelPerformanceViewRequest\022L" +
+      "\n\rresource_name\030\001 \001(\tB5\340A\002\372A/\n-googleads" +
+      ".googleapis.com/HotelPerformanceView2\237\002\n" +
+      "\033HotelPerformanceViewService\022\342\001\n\027GetHote" +
+      "lPerformanceView\022@.google.ads.googleads." +
+      "v1.services.GetHotelPerformanceViewReque" +
+      "st\0327.google.ads.googleads.v1.resources.H" +
+      "otelPerformanceView\"L\202\323\344\223\0026\0224/v1/{resour" +
+      "ce_name=customers/*/hotelPerformanceView" +
+      "}\332A\rresource_name\032\033\312A\030googleads.googleap" +
+      "is.comB\207\002\n$com.google.ads.googleads.v1.s" +
+      "ervicesB HotelPerformanceViewServiceProt" +
+      "oP\001ZHgoogle.golang.org/genproto/googleap" +
+      "is/ads/googleads/v1/services;services\242\002\003" +
+      "GAA\252\002 Google.Ads.GoogleAds.V1.Services\312\002" +
+      " Google\\Ads\\GoogleAds\\V1\\Services\352\002$Goog" +
+      "le::Ads::GoogleAds::V1::Servicesb\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.ads.googleads.v1.resources.HotelPerformanceViewProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
           com.google.api.ClientProto.getDescriptor(),
-        }, assigner);
+          com.google.api.FieldBehaviorProto.getDescriptor(),
+          com.google.api.ResourceProto.getDescriptor(),
+        });
     internal_static_google_ads_googleads_v1_services_GetHotelPerformanceViewRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_google_ads_googleads_v1_services_GetHotelPerformanceViewRequest_fieldAccessorTable = new
@@ -74,12 +71,17 @@ public final class HotelPerformanceViewServiceProto {
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.ClientProto.defaultHost);
+    registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);
     registry.add(com.google.api.AnnotationsProto.http);
+    registry.add(com.google.api.ClientProto.methodSignature);
+    registry.add(com.google.api.ResourceProto.resourceReference);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.ads.googleads.v1.resources.HotelPerformanceViewProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
     com.google.api.ClientProto.getDescriptor();
+    com.google.api.FieldBehaviorProto.getDescriptor();
+    com.google.api.ResourceProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

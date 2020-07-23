@@ -14,6 +14,7 @@ public interface ShoppingComparisonListingAdInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue headline = 1;</code>
+   * @return Whether the headline field is set.
    */
   boolean hasHeadline();
   /**
@@ -23,6 +24,7 @@ public interface ShoppingComparisonListingAdInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue headline = 1;</code>
+   * @return The headline.
    */
   com.google.protobuf.StringValue getHeadline();
   /**

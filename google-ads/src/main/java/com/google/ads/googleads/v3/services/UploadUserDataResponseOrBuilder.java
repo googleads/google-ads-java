@@ -14,6 +14,7 @@ public interface UploadUserDataResponseOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue upload_date_time = 1;</code>
+   * @return Whether the uploadDateTime field is set.
    */
   boolean hasUploadDateTime();
   /**
@@ -23,6 +24,7 @@ public interface UploadUserDataResponseOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue upload_date_time = 1;</code>
+   * @return The uploadDateTime.
    */
   com.google.protobuf.StringValue getUploadDateTime();
   /**
@@ -41,6 +43,7 @@ public interface UploadUserDataResponseOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int32Value received_operations_count = 2;</code>
+   * @return Whether the receivedOperationsCount field is set.
    */
   boolean hasReceivedOperationsCount();
   /**
@@ -49,6 +52,7 @@ public interface UploadUserDataResponseOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int32Value received_operations_count = 2;</code>
+   * @return The receivedOperationsCount.
    */
   com.google.protobuf.Int32Value getReceivedOperationsCount();
   /**

@@ -10,7 +10,7 @@ package com.google.ads.googleads.v4.common;
  *
  * Protobuf type {@code google.ads.googleads.v4.common.HotelStateInfo}
  */
-public  final class HotelStateInfo extends
+public final class HotelStateInfo extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.common.HotelStateInfo)
     HotelStateInfoOrBuilder {
@@ -107,6 +107,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue state_criterion = 1;</code>
    * @return Whether the stateCriterion field is set.
    */
+  @java.lang.Override
   public boolean hasStateCriterion() {
     return stateCriterion_ != null;
   }
@@ -118,6 +119,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue state_criterion = 1;</code>
    * @return The stateCriterion.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getStateCriterion() {
     return stateCriterion_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : stateCriterion_;
   }
@@ -128,6 +130,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue state_criterion = 1;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getStateCriterionOrBuilder() {
     return getStateCriterion();
   }

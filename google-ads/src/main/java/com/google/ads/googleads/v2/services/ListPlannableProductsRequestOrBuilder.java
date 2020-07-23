@@ -9,29 +9,31 @@ public interface ListPlannableProductsRequestOrBuilder extends
 
   /**
    * <pre>
-   * The ID of the selected location for planning. To list the available
+   * Required. The ID of the selected location for planning. To list the available
    * plannable location ids use ListPlannableLocations.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue plannable_location_id = 1;</code>
+   * <code>.google.protobuf.StringValue plannable_location_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+   * @return Whether the plannableLocationId field is set.
    */
   boolean hasPlannableLocationId();
   /**
    * <pre>
-   * The ID of the selected location for planning. To list the available
+   * Required. The ID of the selected location for planning. To list the available
    * plannable location ids use ListPlannableLocations.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue plannable_location_id = 1;</code>
+   * <code>.google.protobuf.StringValue plannable_location_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+   * @return The plannableLocationId.
    */
   com.google.protobuf.StringValue getPlannableLocationId();
   /**
    * <pre>
-   * The ID of the selected location for planning. To list the available
+   * Required. The ID of the selected location for planning. To list the available
    * plannable location ids use ListPlannableLocations.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue plannable_location_id = 1;</code>
+   * <code>.google.protobuf.StringValue plannable_location_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
    */
   com.google.protobuf.StringValueOrBuilder getPlannableLocationIdOrBuilder();
 }

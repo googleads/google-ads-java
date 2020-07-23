@@ -10,7 +10,7 @@ package com.google.ads.googleads.v4.common;
  *
  * Protobuf type {@code google.ads.googleads.v4.common.CpvBidSimulationPointList}
  */
-public  final class CpvBidSimulationPointList extends
+public final class CpvBidSimulationPointList extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.common.CpvBidSimulationPointList)
     CpvBidSimulationPointListOrBuilder {
@@ -107,6 +107,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.common.CpvBidSimulationPoint points = 1;</code>
    */
+  @java.lang.Override
   public java.util.List<com.google.ads.googleads.v4.common.CpvBidSimulationPoint> getPointsList() {
     return points_;
   }
@@ -117,6 +118,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.common.CpvBidSimulationPoint points = 1;</code>
    */
+  @java.lang.Override
   public java.util.List<? extends com.google.ads.googleads.v4.common.CpvBidSimulationPointOrBuilder> 
       getPointsOrBuilderList() {
     return points_;
@@ -128,6 +130,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.common.CpvBidSimulationPoint points = 1;</code>
    */
+  @java.lang.Override
   public int getPointsCount() {
     return points_.size();
   }
@@ -138,6 +141,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.common.CpvBidSimulationPoint points = 1;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.CpvBidSimulationPoint getPoints(int index) {
     return points_.get(index);
   }
@@ -148,6 +152,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.common.CpvBidSimulationPoint points = 1;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.CpvBidSimulationPointOrBuilder getPointsOrBuilder(
       int index) {
     return points_.get(index);

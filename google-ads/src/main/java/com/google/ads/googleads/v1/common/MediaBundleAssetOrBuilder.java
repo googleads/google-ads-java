@@ -16,6 +16,7 @@ public interface MediaBundleAssetOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.BytesValue data = 1;</code>
+   * @return Whether the data field is set.
    */
   boolean hasData();
   /**
@@ -27,6 +28,7 @@ public interface MediaBundleAssetOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.BytesValue data = 1;</code>
+   * @return The data.
    */
   com.google.protobuf.BytesValue getData();
   /**

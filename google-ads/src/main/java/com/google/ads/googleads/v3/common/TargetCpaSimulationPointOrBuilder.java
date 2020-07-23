@@ -13,6 +13,7 @@ public interface TargetCpaSimulationPointOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value target_cpa_micros = 1;</code>
+   * @return Whether the targetCpaMicros field is set.
    */
   boolean hasTargetCpaMicros();
   /**
@@ -21,6 +22,7 @@ public interface TargetCpaSimulationPointOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value target_cpa_micros = 1;</code>
+   * @return The targetCpaMicros.
    */
   com.google.protobuf.Int64Value getTargetCpaMicros();
   /**
@@ -38,6 +40,7 @@ public interface TargetCpaSimulationPointOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue biddable_conversions = 2;</code>
+   * @return Whether the biddableConversions field is set.
    */
   boolean hasBiddableConversions();
   /**
@@ -46,6 +49,7 @@ public interface TargetCpaSimulationPointOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue biddable_conversions = 2;</code>
+   * @return The biddableConversions.
    */
   com.google.protobuf.DoubleValue getBiddableConversions();
   /**
@@ -63,6 +67,7 @@ public interface TargetCpaSimulationPointOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue biddable_conversions_value = 3;</code>
+   * @return Whether the biddableConversionsValue field is set.
    */
   boolean hasBiddableConversionsValue();
   /**
@@ -71,6 +76,7 @@ public interface TargetCpaSimulationPointOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue biddable_conversions_value = 3;</code>
+   * @return The biddableConversionsValue.
    */
   com.google.protobuf.DoubleValue getBiddableConversionsValue();
   /**
@@ -88,6 +94,7 @@ public interface TargetCpaSimulationPointOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value clicks = 4;</code>
+   * @return Whether the clicks field is set.
    */
   boolean hasClicks();
   /**
@@ -96,6 +103,7 @@ public interface TargetCpaSimulationPointOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value clicks = 4;</code>
+   * @return The clicks.
    */
   com.google.protobuf.Int64Value getClicks();
   /**
@@ -113,6 +121,7 @@ public interface TargetCpaSimulationPointOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value cost_micros = 5;</code>
+   * @return Whether the costMicros field is set.
    */
   boolean hasCostMicros();
   /**
@@ -121,6 +130,7 @@ public interface TargetCpaSimulationPointOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value cost_micros = 5;</code>
+   * @return The costMicros.
    */
   com.google.protobuf.Int64Value getCostMicros();
   /**
@@ -138,6 +148,7 @@ public interface TargetCpaSimulationPointOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value impressions = 6;</code>
+   * @return Whether the impressions field is set.
    */
   boolean hasImpressions();
   /**
@@ -146,6 +157,7 @@ public interface TargetCpaSimulationPointOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value impressions = 6;</code>
+   * @return The impressions.
    */
   com.google.protobuf.Int64Value getImpressions();
   /**
@@ -164,6 +176,7 @@ public interface TargetCpaSimulationPointOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value top_slot_impressions = 7;</code>
+   * @return Whether the topSlotImpressions field is set.
    */
   boolean hasTopSlotImpressions();
   /**
@@ -173,6 +186,7 @@ public interface TargetCpaSimulationPointOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value top_slot_impressions = 7;</code>
+   * @return The topSlotImpressions.
    */
   com.google.protobuf.Int64Value getTopSlotImpressions();
   /**

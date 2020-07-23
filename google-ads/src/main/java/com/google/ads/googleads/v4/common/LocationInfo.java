@@ -10,7 +10,7 @@ package com.google.ads.googleads.v4.common;
  *
  * Protobuf type {@code google.ads.googleads.v4.common.LocationInfo}
  */
-public  final class LocationInfo extends
+public final class LocationInfo extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.common.LocationInfo)
     LocationInfoOrBuilder {
@@ -107,6 +107,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue geo_target_constant = 1;</code>
    * @return Whether the geoTargetConstant field is set.
    */
+  @java.lang.Override
   public boolean hasGeoTargetConstant() {
     return geoTargetConstant_ != null;
   }
@@ -118,6 +119,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue geo_target_constant = 1;</code>
    * @return The geoTargetConstant.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getGeoTargetConstant() {
     return geoTargetConstant_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : geoTargetConstant_;
   }
@@ -128,6 +130,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue geo_target_constant = 1;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getGeoTargetConstantOrBuilder() {
     return getGeoTargetConstant();
   }

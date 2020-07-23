@@ -10,7 +10,7 @@ package com.google.ads.googleads.v1.common;
  *
  * Protobuf type {@code google.ads.googleads.v1.common.UrlCollection}
  */
-public  final class UrlCollection extends
+public final class UrlCollection extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v1.common.UrlCollection)
     UrlCollectionOrBuilder {
@@ -22,6 +22,13 @@ private static final long serialVersionUID = 0L;
   private UrlCollection() {
     finalUrls_ = java.util.Collections.emptyList();
     finalMobileUrls_ = java.util.Collections.emptyList();
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new UrlCollection();
   }
 
   @java.lang.Override
@@ -62,18 +69,18 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 18: {
-            if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
               finalUrls_ = new java.util.ArrayList<com.google.protobuf.StringValue>();
-              mutable_bitField0_ |= 0x00000002;
+              mutable_bitField0_ |= 0x00000001;
             }
             finalUrls_.add(
                 input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry));
             break;
           }
           case 26: {
-            if (!((mutable_bitField0_ & 0x00000004) != 0)) {
+            if (!((mutable_bitField0_ & 0x00000002) != 0)) {
               finalMobileUrls_ = new java.util.ArrayList<com.google.protobuf.StringValue>();
-              mutable_bitField0_ |= 0x00000004;
+              mutable_bitField0_ |= 0x00000002;
             }
             finalMobileUrls_.add(
                 input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry));
@@ -107,10 +114,10 @@ private static final long serialVersionUID = 0L;
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
     } finally {
-      if (((mutable_bitField0_ & 0x00000002) != 0)) {
+      if (((mutable_bitField0_ & 0x00000001) != 0)) {
         finalUrls_ = java.util.Collections.unmodifiableList(finalUrls_);
       }
-      if (((mutable_bitField0_ & 0x00000004) != 0)) {
+      if (((mutable_bitField0_ & 0x00000002) != 0)) {
         finalMobileUrls_ = java.util.Collections.unmodifiableList(finalMobileUrls_);
       }
       this.unknownFields = unknownFields.build();
@@ -130,7 +137,6 @@ private static final long serialVersionUID = 0L;
             com.google.ads.googleads.v1.common.UrlCollection.class, com.google.ads.googleads.v1.common.UrlCollection.Builder.class);
   }
 
-  private int bitField0_;
   public static final int URL_COLLECTION_ID_FIELD_NUMBER = 1;
   private com.google.protobuf.StringValue urlCollectionId_;
   /**
@@ -139,7 +145,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue url_collection_id = 1;</code>
+   * @return Whether the urlCollectionId field is set.
    */
+  @java.lang.Override
   public boolean hasUrlCollectionId() {
     return urlCollectionId_ != null;
   }
@@ -149,7 +157,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue url_collection_id = 1;</code>
+   * @return The urlCollectionId.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getUrlCollectionId() {
     return urlCollectionId_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : urlCollectionId_;
   }
@@ -160,6 +170,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue url_collection_id = 1;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getUrlCollectionIdOrBuilder() {
     return getUrlCollectionId();
   }
@@ -173,6 +184,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.StringValue final_urls = 2;</code>
    */
+  @java.lang.Override
   public java.util.List<com.google.protobuf.StringValue> getFinalUrlsList() {
     return finalUrls_;
   }
@@ -183,6 +195,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.StringValue final_urls = 2;</code>
    */
+  @java.lang.Override
   public java.util.List<? extends com.google.protobuf.StringValueOrBuilder> 
       getFinalUrlsOrBuilderList() {
     return finalUrls_;
@@ -194,6 +207,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.StringValue final_urls = 2;</code>
    */
+  @java.lang.Override
   public int getFinalUrlsCount() {
     return finalUrls_.size();
   }
@@ -204,6 +218,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.StringValue final_urls = 2;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getFinalUrls(int index) {
     return finalUrls_.get(index);
   }
@@ -214,6 +229,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.StringValue final_urls = 2;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getFinalUrlsOrBuilder(
       int index) {
     return finalUrls_.get(index);
@@ -228,6 +244,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.StringValue final_mobile_urls = 3;</code>
    */
+  @java.lang.Override
   public java.util.List<com.google.protobuf.StringValue> getFinalMobileUrlsList() {
     return finalMobileUrls_;
   }
@@ -238,6 +255,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.StringValue final_mobile_urls = 3;</code>
    */
+  @java.lang.Override
   public java.util.List<? extends com.google.protobuf.StringValueOrBuilder> 
       getFinalMobileUrlsOrBuilderList() {
     return finalMobileUrls_;
@@ -249,6 +267,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.StringValue final_mobile_urls = 3;</code>
    */
+  @java.lang.Override
   public int getFinalMobileUrlsCount() {
     return finalMobileUrls_.size();
   }
@@ -259,6 +278,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.StringValue final_mobile_urls = 3;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getFinalMobileUrls(int index) {
     return finalMobileUrls_.get(index);
   }
@@ -269,6 +289,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.StringValue final_mobile_urls = 3;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getFinalMobileUrlsOrBuilder(
       int index) {
     return finalMobileUrls_.get(index);
@@ -282,7 +303,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue tracking_url_template = 4;</code>
+   * @return Whether the trackingUrlTemplate field is set.
    */
+  @java.lang.Override
   public boolean hasTrackingUrlTemplate() {
     return trackingUrlTemplate_ != null;
   }
@@ -292,7 +315,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue tracking_url_template = 4;</code>
+   * @return The trackingUrlTemplate.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getTrackingUrlTemplate() {
     return trackingUrlTemplate_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : trackingUrlTemplate_;
   }
@@ -303,6 +328,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue tracking_url_template = 4;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getTrackingUrlTemplateOrBuilder() {
     return getTrackingUrlTemplate();
   }
@@ -561,13 +587,13 @@ private static final long serialVersionUID = 0L;
       }
       if (finalUrlsBuilder_ == null) {
         finalUrls_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000001);
       } else {
         finalUrlsBuilder_.clear();
       }
       if (finalMobileUrlsBuilder_ == null) {
         finalMobileUrls_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000004);
+        bitField0_ = (bitField0_ & ~0x00000002);
       } else {
         finalMobileUrlsBuilder_.clear();
       }
@@ -604,25 +630,24 @@ private static final long serialVersionUID = 0L;
     public com.google.ads.googleads.v1.common.UrlCollection buildPartial() {
       com.google.ads.googleads.v1.common.UrlCollection result = new com.google.ads.googleads.v1.common.UrlCollection(this);
       int from_bitField0_ = bitField0_;
-      int to_bitField0_ = 0;
       if (urlCollectionIdBuilder_ == null) {
         result.urlCollectionId_ = urlCollectionId_;
       } else {
         result.urlCollectionId_ = urlCollectionIdBuilder_.build();
       }
       if (finalUrlsBuilder_ == null) {
-        if (((bitField0_ & 0x00000002) != 0)) {
+        if (((bitField0_ & 0x00000001) != 0)) {
           finalUrls_ = java.util.Collections.unmodifiableList(finalUrls_);
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000001);
         }
         result.finalUrls_ = finalUrls_;
       } else {
         result.finalUrls_ = finalUrlsBuilder_.build();
       }
       if (finalMobileUrlsBuilder_ == null) {
-        if (((bitField0_ & 0x00000004) != 0)) {
+        if (((bitField0_ & 0x00000002) != 0)) {
           finalMobileUrls_ = java.util.Collections.unmodifiableList(finalMobileUrls_);
-          bitField0_ = (bitField0_ & ~0x00000004);
+          bitField0_ = (bitField0_ & ~0x00000002);
         }
         result.finalMobileUrls_ = finalMobileUrls_;
       } else {
@@ -633,7 +658,6 @@ private static final long serialVersionUID = 0L;
       } else {
         result.trackingUrlTemplate_ = trackingUrlTemplateBuilder_.build();
       }
-      result.bitField0_ = to_bitField0_;
       onBuilt();
       return result;
     }
@@ -689,7 +713,7 @@ private static final long serialVersionUID = 0L;
         if (!other.finalUrls_.isEmpty()) {
           if (finalUrls_.isEmpty()) {
             finalUrls_ = other.finalUrls_;
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000001);
           } else {
             ensureFinalUrlsIsMutable();
             finalUrls_.addAll(other.finalUrls_);
@@ -702,7 +726,7 @@ private static final long serialVersionUID = 0L;
             finalUrlsBuilder_.dispose();
             finalUrlsBuilder_ = null;
             finalUrls_ = other.finalUrls_;
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000001);
             finalUrlsBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getFinalUrlsFieldBuilder() : null;
@@ -715,7 +739,7 @@ private static final long serialVersionUID = 0L;
         if (!other.finalMobileUrls_.isEmpty()) {
           if (finalMobileUrls_.isEmpty()) {
             finalMobileUrls_ = other.finalMobileUrls_;
-            bitField0_ = (bitField0_ & ~0x00000004);
+            bitField0_ = (bitField0_ & ~0x00000002);
           } else {
             ensureFinalMobileUrlsIsMutable();
             finalMobileUrls_.addAll(other.finalMobileUrls_);
@@ -728,7 +752,7 @@ private static final long serialVersionUID = 0L;
             finalMobileUrlsBuilder_.dispose();
             finalMobileUrlsBuilder_ = null;
             finalMobileUrls_ = other.finalMobileUrls_;
-            bitField0_ = (bitField0_ & ~0x00000004);
+            bitField0_ = (bitField0_ & ~0x00000002);
             finalMobileUrlsBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getFinalMobileUrlsFieldBuilder() : null;
@@ -779,6 +803,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue url_collection_id = 1;</code>
+     * @return Whether the urlCollectionId field is set.
      */
     public boolean hasUrlCollectionId() {
       return urlCollectionIdBuilder_ != null || urlCollectionId_ != null;
@@ -789,6 +814,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue url_collection_id = 1;</code>
+     * @return The urlCollectionId.
      */
     public com.google.protobuf.StringValue getUrlCollectionId() {
       if (urlCollectionIdBuilder_ == null) {
@@ -926,9 +952,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.google.protobuf.StringValue> finalUrls_ =
       java.util.Collections.emptyList();
     private void ensureFinalUrlsIsMutable() {
-      if (!((bitField0_ & 0x00000002) != 0)) {
+      if (!((bitField0_ & 0x00000001) != 0)) {
         finalUrls_ = new java.util.ArrayList<com.google.protobuf.StringValue>(finalUrls_);
-        bitField0_ |= 0x00000002;
+        bitField0_ |= 0x00000001;
        }
     }
 
@@ -1122,7 +1148,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearFinalUrls() {
       if (finalUrlsBuilder_ == null) {
         finalUrls_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
       } else {
         finalUrlsBuilder_.clear();
@@ -1227,7 +1253,7 @@ private static final long serialVersionUID = 0L;
         finalUrlsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
                 finalUrls_,
-                ((bitField0_ & 0x00000002) != 0),
+                ((bitField0_ & 0x00000001) != 0),
                 getParentForChildren(),
                 isClean());
         finalUrls_ = null;
@@ -1238,9 +1264,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.google.protobuf.StringValue> finalMobileUrls_ =
       java.util.Collections.emptyList();
     private void ensureFinalMobileUrlsIsMutable() {
-      if (!((bitField0_ & 0x00000004) != 0)) {
+      if (!((bitField0_ & 0x00000002) != 0)) {
         finalMobileUrls_ = new java.util.ArrayList<com.google.protobuf.StringValue>(finalMobileUrls_);
-        bitField0_ |= 0x00000004;
+        bitField0_ |= 0x00000002;
        }
     }
 
@@ -1434,7 +1460,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearFinalMobileUrls() {
       if (finalMobileUrlsBuilder_ == null) {
         finalMobileUrls_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000004);
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
       } else {
         finalMobileUrlsBuilder_.clear();
@@ -1539,7 +1565,7 @@ private static final long serialVersionUID = 0L;
         finalMobileUrlsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
                 finalMobileUrls_,
-                ((bitField0_ & 0x00000004) != 0),
+                ((bitField0_ & 0x00000002) != 0),
                 getParentForChildren(),
                 isClean());
         finalMobileUrls_ = null;
@@ -1556,6 +1582,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue tracking_url_template = 4;</code>
+     * @return Whether the trackingUrlTemplate field is set.
      */
     public boolean hasTrackingUrlTemplate() {
       return trackingUrlTemplateBuilder_ != null || trackingUrlTemplate_ != null;
@@ -1566,6 +1593,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue tracking_url_template = 4;</code>
+     * @return The trackingUrlTemplate.
      */
     public com.google.protobuf.StringValue getTrackingUrlTemplate() {
       if (trackingUrlTemplateBuilder_ == null) {

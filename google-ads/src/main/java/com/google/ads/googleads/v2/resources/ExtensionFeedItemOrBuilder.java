@@ -9,67 +9,73 @@ public interface ExtensionFeedItemOrBuilder extends
 
   /**
    * <pre>
-   * The resource name of the extension feed item.
+   * Immutable. The resource name of the extension feed item.
    * Extension feed item resource names have the form:
    * `customers/{customer_id}/extensionFeedItems/{feed_item_id}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * @return The resourceName.
    */
   java.lang.String getResourceName();
   /**
    * <pre>
-   * The resource name of the extension feed item.
+   * Immutable. The resource name of the extension feed item.
    * Extension feed item resource names have the form:
    * `customers/{customer_id}/extensionFeedItems/{feed_item_id}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * @return The bytes for resourceName.
    */
   com.google.protobuf.ByteString
       getResourceNameBytes();
 
   /**
    * <pre>
-   * The ID of this feed item. Read-only.
+   * Output only. The ID of this feed item. Read-only.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value id = 24;</code>
+   * <code>.google.protobuf.Int64Value id = 24 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the id field is set.
    */
   boolean hasId();
   /**
    * <pre>
-   * The ID of this feed item. Read-only.
+   * Output only. The ID of this feed item. Read-only.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value id = 24;</code>
+   * <code>.google.protobuf.Int64Value id = 24 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The id.
    */
   com.google.protobuf.Int64Value getId();
   /**
    * <pre>
-   * The ID of this feed item. Read-only.
+   * Output only. The ID of this feed item. Read-only.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value id = 24;</code>
+   * <code>.google.protobuf.Int64Value id = 24 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.protobuf.Int64ValueOrBuilder getIdOrBuilder();
 
   /**
    * <pre>
-   * The extension type of the extension feed item.
+   * Output only. The extension type of the extension feed item.
    * This field is read-only.
    * </pre>
    *
-   * <code>.google.ads.googleads.v2.enums.ExtensionTypeEnum.ExtensionType extension_type = 13;</code>
+   * <code>.google.ads.googleads.v2.enums.ExtensionTypeEnum.ExtensionType extension_type = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The enum numeric value on the wire for extensionType.
    */
   int getExtensionTypeValue();
   /**
    * <pre>
-   * The extension type of the extension feed item.
+   * Output only. The extension type of the extension feed item.
    * This field is read-only.
    * </pre>
    *
-   * <code>.google.ads.googleads.v2.enums.ExtensionTypeEnum.ExtensionType extension_type = 13;</code>
+   * <code>.google.ads.googleads.v2.enums.ExtensionTypeEnum.ExtensionType extension_type = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The extensionType.
    */
   com.google.ads.googleads.v2.enums.ExtensionTypeEnum.ExtensionType getExtensionType();
 
@@ -82,6 +88,7 @@ public interface ExtensionFeedItemOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue start_date_time = 5;</code>
+   * @return Whether the startDateTime field is set.
    */
   boolean hasStartDateTime();
   /**
@@ -93,6 +100,7 @@ public interface ExtensionFeedItemOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue start_date_time = 5;</code>
+   * @return The startDateTime.
    */
   com.google.protobuf.StringValue getStartDateTime();
   /**
@@ -116,6 +124,7 @@ public interface ExtensionFeedItemOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue end_date_time = 6;</code>
+   * @return Whether the endDateTime field is set.
    */
   boolean hasEndDateTime();
   /**
@@ -127,6 +136,7 @@ public interface ExtensionFeedItemOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue end_date_time = 6;</code>
+   * @return The endDateTime.
    */
   com.google.protobuf.StringValue getEndDateTime();
   /**
@@ -201,6 +211,7 @@ public interface ExtensionFeedItemOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.enums.FeedItemTargetDeviceEnum.FeedItemTargetDevice device = 17;</code>
+   * @return The enum numeric value on the wire for device.
    */
   int getDeviceValue();
   /**
@@ -209,6 +220,7 @@ public interface ExtensionFeedItemOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.enums.FeedItemTargetDeviceEnum.FeedItemTargetDevice device = 17;</code>
+   * @return The device.
    */
   com.google.ads.googleads.v2.enums.FeedItemTargetDeviceEnum.FeedItemTargetDevice getDevice();
 
@@ -217,7 +229,8 @@ public interface ExtensionFeedItemOrBuilder extends
    * The targeted geo target constant.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue targeted_geo_target_constant = 20;</code>
+   * <code>.google.protobuf.StringValue targeted_geo_target_constant = 20 [(.google.api.resource_reference) = { ... }</code>
+   * @return Whether the targetedGeoTargetConstant field is set.
    */
   boolean hasTargetedGeoTargetConstant();
   /**
@@ -225,7 +238,8 @@ public interface ExtensionFeedItemOrBuilder extends
    * The targeted geo target constant.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue targeted_geo_target_constant = 20;</code>
+   * <code>.google.protobuf.StringValue targeted_geo_target_constant = 20 [(.google.api.resource_reference) = { ... }</code>
+   * @return The targetedGeoTargetConstant.
    */
   com.google.protobuf.StringValue getTargetedGeoTargetConstant();
   /**
@@ -233,7 +247,7 @@ public interface ExtensionFeedItemOrBuilder extends
    * The targeted geo target constant.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue targeted_geo_target_constant = 20;</code>
+   * <code>.google.protobuf.StringValue targeted_geo_target_constant = 20 [(.google.api.resource_reference) = { ... }</code>
    */
   com.google.protobuf.StringValueOrBuilder getTargetedGeoTargetConstantOrBuilder();
 
@@ -243,6 +257,7 @@ public interface ExtensionFeedItemOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.common.KeywordInfo targeted_keyword = 22;</code>
+   * @return Whether the targetedKeyword field is set.
    */
   boolean hasTargetedKeyword();
   /**
@@ -251,6 +266,7 @@ public interface ExtensionFeedItemOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.common.KeywordInfo targeted_keyword = 22;</code>
+   * @return The targetedKeyword.
    */
   com.google.ads.googleads.v2.common.KeywordInfo getTargetedKeyword();
   /**
@@ -264,20 +280,22 @@ public interface ExtensionFeedItemOrBuilder extends
 
   /**
    * <pre>
-   * Status of the feed item.
+   * Output only. Status of the feed item.
    * This field is read-only.
    * </pre>
    *
-   * <code>.google.ads.googleads.v2.enums.FeedItemStatusEnum.FeedItemStatus status = 4;</code>
+   * <code>.google.ads.googleads.v2.enums.FeedItemStatusEnum.FeedItemStatus status = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The enum numeric value on the wire for status.
    */
   int getStatusValue();
   /**
    * <pre>
-   * Status of the feed item.
+   * Output only. Status of the feed item.
    * This field is read-only.
    * </pre>
    *
-   * <code>.google.ads.googleads.v2.enums.FeedItemStatusEnum.FeedItemStatus status = 4;</code>
+   * <code>.google.ads.googleads.v2.enums.FeedItemStatusEnum.FeedItemStatus status = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The status.
    */
   com.google.ads.googleads.v2.enums.FeedItemStatusEnum.FeedItemStatus getStatus();
 
@@ -287,6 +305,7 @@ public interface ExtensionFeedItemOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.common.SitelinkFeedItem sitelink_feed_item = 2;</code>
+   * @return Whether the sitelinkFeedItem field is set.
    */
   boolean hasSitelinkFeedItem();
   /**
@@ -295,6 +314,7 @@ public interface ExtensionFeedItemOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.common.SitelinkFeedItem sitelink_feed_item = 2;</code>
+   * @return The sitelinkFeedItem.
    */
   com.google.ads.googleads.v2.common.SitelinkFeedItem getSitelinkFeedItem();
   /**
@@ -312,6 +332,7 @@ public interface ExtensionFeedItemOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.common.StructuredSnippetFeedItem structured_snippet_feed_item = 3;</code>
+   * @return Whether the structuredSnippetFeedItem field is set.
    */
   boolean hasStructuredSnippetFeedItem();
   /**
@@ -320,6 +341,7 @@ public interface ExtensionFeedItemOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.common.StructuredSnippetFeedItem structured_snippet_feed_item = 3;</code>
+   * @return The structuredSnippetFeedItem.
    */
   com.google.ads.googleads.v2.common.StructuredSnippetFeedItem getStructuredSnippetFeedItem();
   /**
@@ -337,6 +359,7 @@ public interface ExtensionFeedItemOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.common.AppFeedItem app_feed_item = 7;</code>
+   * @return Whether the appFeedItem field is set.
    */
   boolean hasAppFeedItem();
   /**
@@ -345,6 +368,7 @@ public interface ExtensionFeedItemOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.common.AppFeedItem app_feed_item = 7;</code>
+   * @return The appFeedItem.
    */
   com.google.ads.googleads.v2.common.AppFeedItem getAppFeedItem();
   /**
@@ -362,6 +386,7 @@ public interface ExtensionFeedItemOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.common.CallFeedItem call_feed_item = 8;</code>
+   * @return Whether the callFeedItem field is set.
    */
   boolean hasCallFeedItem();
   /**
@@ -370,6 +395,7 @@ public interface ExtensionFeedItemOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.common.CallFeedItem call_feed_item = 8;</code>
+   * @return The callFeedItem.
    */
   com.google.ads.googleads.v2.common.CallFeedItem getCallFeedItem();
   /**
@@ -387,6 +413,7 @@ public interface ExtensionFeedItemOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.common.CalloutFeedItem callout_feed_item = 9;</code>
+   * @return Whether the calloutFeedItem field is set.
    */
   boolean hasCalloutFeedItem();
   /**
@@ -395,6 +422,7 @@ public interface ExtensionFeedItemOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.common.CalloutFeedItem callout_feed_item = 9;</code>
+   * @return The calloutFeedItem.
    */
   com.google.ads.googleads.v2.common.CalloutFeedItem getCalloutFeedItem();
   /**
@@ -412,6 +440,7 @@ public interface ExtensionFeedItemOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.common.TextMessageFeedItem text_message_feed_item = 10;</code>
+   * @return Whether the textMessageFeedItem field is set.
    */
   boolean hasTextMessageFeedItem();
   /**
@@ -420,6 +449,7 @@ public interface ExtensionFeedItemOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.common.TextMessageFeedItem text_message_feed_item = 10;</code>
+   * @return The textMessageFeedItem.
    */
   com.google.ads.googleads.v2.common.TextMessageFeedItem getTextMessageFeedItem();
   /**
@@ -437,6 +467,7 @@ public interface ExtensionFeedItemOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.common.PriceFeedItem price_feed_item = 11;</code>
+   * @return Whether the priceFeedItem field is set.
    */
   boolean hasPriceFeedItem();
   /**
@@ -445,6 +476,7 @@ public interface ExtensionFeedItemOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.common.PriceFeedItem price_feed_item = 11;</code>
+   * @return The priceFeedItem.
    */
   com.google.ads.googleads.v2.common.PriceFeedItem getPriceFeedItem();
   /**
@@ -462,6 +494,7 @@ public interface ExtensionFeedItemOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.common.PromotionFeedItem promotion_feed_item = 12;</code>
+   * @return Whether the promotionFeedItem field is set.
    */
   boolean hasPromotionFeedItem();
   /**
@@ -470,6 +503,7 @@ public interface ExtensionFeedItemOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.common.PromotionFeedItem promotion_feed_item = 12;</code>
+   * @return The promotionFeedItem.
    */
   com.google.ads.googleads.v2.common.PromotionFeedItem getPromotionFeedItem();
   /**
@@ -483,60 +517,64 @@ public interface ExtensionFeedItemOrBuilder extends
 
   /**
    * <pre>
-   * Location extension. Locations are synced from a GMB account into a feed.
+   * Output only. Location extension. Locations are synced from a GMB account into a feed.
    * This field is read-only.
    * </pre>
    *
-   * <code>.google.ads.googleads.v2.common.LocationFeedItem location_feed_item = 14;</code>
+   * <code>.google.ads.googleads.v2.common.LocationFeedItem location_feed_item = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the locationFeedItem field is set.
    */
   boolean hasLocationFeedItem();
   /**
    * <pre>
-   * Location extension. Locations are synced from a GMB account into a feed.
+   * Output only. Location extension. Locations are synced from a GMB account into a feed.
    * This field is read-only.
    * </pre>
    *
-   * <code>.google.ads.googleads.v2.common.LocationFeedItem location_feed_item = 14;</code>
+   * <code>.google.ads.googleads.v2.common.LocationFeedItem location_feed_item = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The locationFeedItem.
    */
   com.google.ads.googleads.v2.common.LocationFeedItem getLocationFeedItem();
   /**
    * <pre>
-   * Location extension. Locations are synced from a GMB account into a feed.
+   * Output only. Location extension. Locations are synced from a GMB account into a feed.
    * This field is read-only.
    * </pre>
    *
-   * <code>.google.ads.googleads.v2.common.LocationFeedItem location_feed_item = 14;</code>
+   * <code>.google.ads.googleads.v2.common.LocationFeedItem location_feed_item = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.ads.googleads.v2.common.LocationFeedItemOrBuilder getLocationFeedItemOrBuilder();
 
   /**
    * <pre>
-   * Affiliate location extension. Feed locations are populated by Google Ads
+   * Output only. Affiliate location extension. Feed locations are populated by Google Ads
    * based on a chain ID.
    * This field is read-only.
    * </pre>
    *
-   * <code>.google.ads.googleads.v2.common.AffiliateLocationFeedItem affiliate_location_feed_item = 15;</code>
+   * <code>.google.ads.googleads.v2.common.AffiliateLocationFeedItem affiliate_location_feed_item = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the affiliateLocationFeedItem field is set.
    */
   boolean hasAffiliateLocationFeedItem();
   /**
    * <pre>
-   * Affiliate location extension. Feed locations are populated by Google Ads
+   * Output only. Affiliate location extension. Feed locations are populated by Google Ads
    * based on a chain ID.
    * This field is read-only.
    * </pre>
    *
-   * <code>.google.ads.googleads.v2.common.AffiliateLocationFeedItem affiliate_location_feed_item = 15;</code>
+   * <code>.google.ads.googleads.v2.common.AffiliateLocationFeedItem affiliate_location_feed_item = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The affiliateLocationFeedItem.
    */
   com.google.ads.googleads.v2.common.AffiliateLocationFeedItem getAffiliateLocationFeedItem();
   /**
    * <pre>
-   * Affiliate location extension. Feed locations are populated by Google Ads
+   * Output only. Affiliate location extension. Feed locations are populated by Google Ads
    * based on a chain ID.
    * This field is read-only.
    * </pre>
    *
-   * <code>.google.ads.googleads.v2.common.AffiliateLocationFeedItem affiliate_location_feed_item = 15;</code>
+   * <code>.google.ads.googleads.v2.common.AffiliateLocationFeedItem affiliate_location_feed_item = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.ads.googleads.v2.common.AffiliateLocationFeedItemOrBuilder getAffiliateLocationFeedItemOrBuilder();
 
@@ -546,6 +584,7 @@ public interface ExtensionFeedItemOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.common.HotelCalloutFeedItem hotel_callout_feed_item = 23;</code>
+   * @return Whether the hotelCalloutFeedItem field is set.
    */
   boolean hasHotelCalloutFeedItem();
   /**
@@ -554,6 +593,7 @@ public interface ExtensionFeedItemOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.common.HotelCalloutFeedItem hotel_callout_feed_item = 23;</code>
+   * @return The hotelCalloutFeedItem.
    */
   com.google.ads.googleads.v2.common.HotelCalloutFeedItem getHotelCalloutFeedItem();
   /**
@@ -570,7 +610,8 @@ public interface ExtensionFeedItemOrBuilder extends
    * The targeted campaign.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue targeted_campaign = 18;</code>
+   * <code>.google.protobuf.StringValue targeted_campaign = 18 [(.google.api.resource_reference) = { ... }</code>
+   * @return Whether the targetedCampaign field is set.
    */
   boolean hasTargetedCampaign();
   /**
@@ -578,7 +619,8 @@ public interface ExtensionFeedItemOrBuilder extends
    * The targeted campaign.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue targeted_campaign = 18;</code>
+   * <code>.google.protobuf.StringValue targeted_campaign = 18 [(.google.api.resource_reference) = { ... }</code>
+   * @return The targetedCampaign.
    */
   com.google.protobuf.StringValue getTargetedCampaign();
   /**
@@ -586,7 +628,7 @@ public interface ExtensionFeedItemOrBuilder extends
    * The targeted campaign.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue targeted_campaign = 18;</code>
+   * <code>.google.protobuf.StringValue targeted_campaign = 18 [(.google.api.resource_reference) = { ... }</code>
    */
   com.google.protobuf.StringValueOrBuilder getTargetedCampaignOrBuilder();
 
@@ -595,7 +637,8 @@ public interface ExtensionFeedItemOrBuilder extends
    * The targeted ad group.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue targeted_ad_group = 19;</code>
+   * <code>.google.protobuf.StringValue targeted_ad_group = 19 [(.google.api.resource_reference) = { ... }</code>
+   * @return Whether the targetedAdGroup field is set.
    */
   boolean hasTargetedAdGroup();
   /**
@@ -603,7 +646,8 @@ public interface ExtensionFeedItemOrBuilder extends
    * The targeted ad group.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue targeted_ad_group = 19;</code>
+   * <code>.google.protobuf.StringValue targeted_ad_group = 19 [(.google.api.resource_reference) = { ... }</code>
+   * @return The targetedAdGroup.
    */
   com.google.protobuf.StringValue getTargetedAdGroup();
   /**
@@ -611,7 +655,7 @@ public interface ExtensionFeedItemOrBuilder extends
    * The targeted ad group.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue targeted_ad_group = 19;</code>
+   * <code>.google.protobuf.StringValue targeted_ad_group = 19 [(.google.api.resource_reference) = { ... }</code>
    */
   com.google.protobuf.StringValueOrBuilder getTargetedAdGroupOrBuilder();
 

@@ -10,7 +10,7 @@ package com.google.ads.googleads.v3.resources;
  *
  * Protobuf type {@code google.ads.googleads.v3.resources.DynamicSearchAdsSearchTermView}
  */
-public  final class DynamicSearchAdsSearchTermView extends
+public final class DynamicSearchAdsSearchTermView extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v3.resources.DynamicSearchAdsSearchTermView)
     DynamicSearchAdsSearchTermViewOrBuilder {
@@ -21,6 +21,13 @@ private static final long serialVersionUID = 0L;
   }
   private DynamicSearchAdsSearchTermView() {
     resourceName_ = "";
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new DynamicSearchAdsSearchTermView();
   }
 
   @java.lang.Override
@@ -36,7 +43,6 @@ private static final long serialVersionUID = 0L;
     if (extensionRegistry == null) {
       throw new java.lang.NullPointerException();
     }
-    int mutable_bitField0_ = 0;
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
         com.google.protobuf.UnknownFieldSet.newBuilder();
     try {
@@ -186,7 +192,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The resourceName.
    */
+  @java.lang.Override
   public java.lang.String getResourceName() {
     java.lang.Object ref = resourceName_;
     if (ref instanceof java.lang.String) {
@@ -207,7 +215,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The bytes for resourceName.
    */
+  @java.lang.Override
   public com.google.protobuf.ByteString
       getResourceNameBytes() {
     java.lang.Object ref = resourceName_;
@@ -231,7 +241,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue search_term = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the searchTerm field is set.
    */
+  @java.lang.Override
   public boolean hasSearchTerm() {
     return searchTerm_ != null;
   }
@@ -242,7 +254,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue search_term = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The searchTerm.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getSearchTerm() {
     return searchTerm_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : searchTerm_;
   }
@@ -254,6 +268,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue search_term = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getSearchTermOrBuilder() {
     return getSearchTerm();
   }
@@ -267,7 +282,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue headline = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the headline field is set.
    */
+  @java.lang.Override
   public boolean hasHeadline() {
     return headline_ != null;
   }
@@ -278,7 +295,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue headline = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The headline.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getHeadline() {
     return headline_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : headline_;
   }
@@ -290,6 +309,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue headline = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getHeadlineOrBuilder() {
     return getHeadline();
   }
@@ -303,7 +323,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue landing_page = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the landingPage field is set.
    */
+  @java.lang.Override
   public boolean hasLandingPage() {
     return landingPage_ != null;
   }
@@ -314,7 +336,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue landing_page = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The landingPage.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getLandingPage() {
     return landingPage_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : landingPage_;
   }
@@ -326,6 +350,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue landing_page = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getLandingPageOrBuilder() {
     return getLandingPage();
   }
@@ -339,7 +364,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue page_url = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the pageUrl field is set.
    */
+  @java.lang.Override
   public boolean hasPageUrl() {
     return pageUrl_ != null;
   }
@@ -350,7 +377,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue page_url = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The pageUrl.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getPageUrl() {
     return pageUrl_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : pageUrl_;
   }
@@ -362,6 +391,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue page_url = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getPageUrlOrBuilder() {
     return getPageUrl();
   }
@@ -375,7 +405,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.BoolValue has_negative_keyword = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the hasNegativeKeyword field is set.
    */
+  @java.lang.Override
   public boolean hasHasNegativeKeyword() {
     return hasNegativeKeyword_ != null;
   }
@@ -386,7 +418,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.BoolValue has_negative_keyword = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The hasNegativeKeyword.
    */
+  @java.lang.Override
   public com.google.protobuf.BoolValue getHasNegativeKeyword() {
     return hasNegativeKeyword_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : hasNegativeKeyword_;
   }
@@ -398,6 +432,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.BoolValue has_negative_keyword = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.BoolValueOrBuilder getHasNegativeKeywordOrBuilder() {
     return getHasNegativeKeyword();
   }
@@ -411,7 +446,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.BoolValue has_matching_keyword = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the hasMatchingKeyword field is set.
    */
+  @java.lang.Override
   public boolean hasHasMatchingKeyword() {
     return hasMatchingKeyword_ != null;
   }
@@ -422,7 +459,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.BoolValue has_matching_keyword = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The hasMatchingKeyword.
    */
+  @java.lang.Override
   public com.google.protobuf.BoolValue getHasMatchingKeyword() {
     return hasMatchingKeyword_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : hasMatchingKeyword_;
   }
@@ -434,6 +473,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.BoolValue has_matching_keyword = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.BoolValueOrBuilder getHasMatchingKeywordOrBuilder() {
     return getHasMatchingKeyword();
   }
@@ -447,7 +487,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.BoolValue has_negative_url = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the hasNegativeUrl field is set.
    */
+  @java.lang.Override
   public boolean hasHasNegativeUrl() {
     return hasNegativeUrl_ != null;
   }
@@ -458,7 +500,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.BoolValue has_negative_url = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The hasNegativeUrl.
    */
+  @java.lang.Override
   public com.google.protobuf.BoolValue getHasNegativeUrl() {
     return hasNegativeUrl_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : hasNegativeUrl_;
   }
@@ -470,6 +514,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.BoolValue has_negative_url = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.BoolValueOrBuilder getHasNegativeUrlOrBuilder() {
     return getHasNegativeUrl();
   }
@@ -999,6 +1044,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @return The resourceName.
      */
     public java.lang.String getResourceName() {
       java.lang.Object ref = resourceName_;
@@ -1020,6 +1066,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @return The bytes for resourceName.
      */
     public com.google.protobuf.ByteString
         getResourceNameBytes() {
@@ -1042,6 +1089,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @param value The resourceName to set.
+     * @return This builder for chaining.
      */
     public Builder setResourceName(
         java.lang.String value) {
@@ -1061,6 +1110,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @return This builder for chaining.
      */
     public Builder clearResourceName() {
       
@@ -1076,6 +1126,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @param value The bytes for resourceName to set.
+     * @return This builder for chaining.
      */
     public Builder setResourceNameBytes(
         com.google.protobuf.ByteString value) {
@@ -1099,6 +1151,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue search_term = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the searchTerm field is set.
      */
     public boolean hasSearchTerm() {
       return searchTermBuilder_ != null || searchTerm_ != null;
@@ -1110,6 +1163,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue search_term = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The searchTerm.
      */
     public com.google.protobuf.StringValue getSearchTerm() {
       if (searchTermBuilder_ == null) {
@@ -1261,6 +1315,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue headline = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the headline field is set.
      */
     public boolean hasHeadline() {
       return headlineBuilder_ != null || headline_ != null;
@@ -1272,6 +1327,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue headline = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The headline.
      */
     public com.google.protobuf.StringValue getHeadline() {
       if (headlineBuilder_ == null) {
@@ -1423,6 +1479,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue landing_page = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the landingPage field is set.
      */
     public boolean hasLandingPage() {
       return landingPageBuilder_ != null || landingPage_ != null;
@@ -1434,6 +1491,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue landing_page = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The landingPage.
      */
     public com.google.protobuf.StringValue getLandingPage() {
       if (landingPageBuilder_ == null) {
@@ -1585,6 +1643,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue page_url = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the pageUrl field is set.
      */
     public boolean hasPageUrl() {
       return pageUrlBuilder_ != null || pageUrl_ != null;
@@ -1596,6 +1655,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue page_url = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The pageUrl.
      */
     public com.google.protobuf.StringValue getPageUrl() {
       if (pageUrlBuilder_ == null) {
@@ -1747,6 +1807,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.BoolValue has_negative_keyword = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the hasNegativeKeyword field is set.
      */
     public boolean hasHasNegativeKeyword() {
       return hasNegativeKeywordBuilder_ != null || hasNegativeKeyword_ != null;
@@ -1758,6 +1819,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.BoolValue has_negative_keyword = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The hasNegativeKeyword.
      */
     public com.google.protobuf.BoolValue getHasNegativeKeyword() {
       if (hasNegativeKeywordBuilder_ == null) {
@@ -1909,6 +1971,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.BoolValue has_matching_keyword = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the hasMatchingKeyword field is set.
      */
     public boolean hasHasMatchingKeyword() {
       return hasMatchingKeywordBuilder_ != null || hasMatchingKeyword_ != null;
@@ -1920,6 +1983,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.BoolValue has_matching_keyword = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The hasMatchingKeyword.
      */
     public com.google.protobuf.BoolValue getHasMatchingKeyword() {
       if (hasMatchingKeywordBuilder_ == null) {
@@ -2071,6 +2135,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.BoolValue has_negative_url = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the hasNegativeUrl field is set.
      */
     public boolean hasHasNegativeUrl() {
       return hasNegativeUrlBuilder_ != null || hasNegativeUrl_ != null;
@@ -2082,6 +2147,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.BoolValue has_negative_url = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The hasNegativeUrl.
      */
     public com.google.protobuf.BoolValue getHasNegativeUrl() {
       if (hasNegativeUrlBuilder_ == null) {

@@ -10,7 +10,7 @@ package com.google.ads.googleads.v4.services;
  *
  * Protobuf type {@code google.ads.googleads.v4.services.ListAccessibleCustomersResponse}
  */
-public  final class ListAccessibleCustomersResponse extends
+public final class ListAccessibleCustomersResponse extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.services.ListAccessibleCustomersResponse)
     ListAccessibleCustomersResponseOrBuilder {
