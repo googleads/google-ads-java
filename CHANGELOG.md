@@ -1,3 +1,9 @@
+7.0.0 - 2020-07-23
+------------------
+- Generated library with a new build system. A side effect of that change is
+  that certain overloaded method signatures containing boolean flags for making
+  requests have been removed.
+
 6.0.0 - 2020-07-17
 ------------------
 - Added support for Google Ads API v4_0.
