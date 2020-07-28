@@ -31,7 +31,7 @@ import com.google.protobuf.StringValue;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
-/** Adds a geo target to a extension feed item for targeting. */
+/** Adds a geo target to an extension feed item for targeting. */
 public class AddGeoTarget {
 
   // A list of country codes can be referenced here:
