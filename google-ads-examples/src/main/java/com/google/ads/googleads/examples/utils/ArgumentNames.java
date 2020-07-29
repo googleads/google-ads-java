@@ -51,6 +51,7 @@ public final class ArgumentNames {
   public static final String FEED_ITEM_IDS = "--feedItemIds";
   public static final String FLIGHT_PLACEHOLDER_FIELD = "--flightPlaceholderField";
   public static final String GCLID = "--gclid";
+  public static final String GEO_TARGET_CONSTANT_ID = "--geoTargetConstantId";
   public static final String GMB_ACCESS_TOKEN = "--gmbAccessToken";
   public static final String GMB_EMAIL_ADDRESS = "--gmbEmailAddress";
   public static final String HOTEL_CENTER_ACCOUNT_ID = "--hotelCenterAccountId";
