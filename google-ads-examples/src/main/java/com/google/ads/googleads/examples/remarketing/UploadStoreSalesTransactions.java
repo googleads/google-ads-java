@@ -130,9 +130,6 @@ public class UploadStoreSalesTransactions {
       params.conversionActionId = Long.parseLong("INSERT_CONVERSION_ACTION_ID_HERE");
       // OPTIONAL (but recommended): Specify an external ID for the job.
       // params.externalId = Long.parseLong("INSERT_EXTERNAL_ID_HERE");
-      // OPTIONAL: If uploading data with custom key/values, also specify the following values:
-      params.customKey = Long.parseLong("INSERT_CUSTOM_KEY_HERE");
-      params.customValue = Long.parseLong("INSERT_CUSTOM_VALUE_HERE");
       // OPTIONAL: If uploading third party data, also specify the following values:
       // params.advertiserUploadDateTime = "INSERT_ADVERTISER_UPLOAD_DATE_TIME_HERE";
       // params.bridgeMapVersionId = "INSERT_BRIDGE_MAP_VERSION_ID_HERE";
@@ -250,6 +247,7 @@ public class UploadStoreSalesTransactions {
       long customerId,
       OfflineUserDataJobType offlineUserDataJobType,
       Long externalId,
+      String customKey,
       String advertiserUploadDateTime,
       String bridgeMapVersionId,
       Long partnerId) {
@@ -272,7 +270,10 @@ public class UploadStoreSalesTransactions {
             // Continuing the example above for loyalty fraction, a value of 1.0 here indicates that
             // you are uploading all 70 of the transactions that can be identified by an email
             // address or phone number.
-            .setTransactionUploadFraction(DoubleValue.of(1.0));
+            .setTransactionUploadFraction(DoubleValue.of(1.0))
+            // OPTIONAL: If uploading data with custom key/values, also specify the following value:
+            .setCustomKey(StringValue.of("INSERT_CUSTOM_KEY_HERE"))
+            ;
 
     if (OfflineUserDataJobType.STORE_SALES_UPLOAD_THIRD_PARTY == offlineUserDataJobType) {
       // Creates additional metadata required for uploading third party data.
@@ -416,7 +417,9 @@ public class UploadStoreSalesTransactions {
                     // Specifies the date and time of the transaction. This date and time will be
                     // interpreted by the API using the Google Ads customer's time zone.
                     // The date/time must be in the format "yyyy-MM-dd hh:mm:ss".
-                    .setTransactionDateTime(StringValue.of("2020-05-01 23:52:12")))
+                    .setTransactionDateTime(StringValue.of("2020-05-01 23:52:12"))
+                    // OPTIONAL: If uploading data with custom key/values, also specify the following value
+                    .setCustomValue(StringValue.of("INSERT_CUSTOM_VALUE_HERE")))
             .build();
 
     // Creates the second transaction for upload based on a physical address.
