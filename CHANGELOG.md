@@ -1,3 +1,8 @@
+8.0.0 - 2020-07-31
+------------------
+- Removed v1 from the library.
+- Added example demonstrating how to add a geo target to an extension feed item.
+
 7.0.0 - 2020-07-23
 ------------------
 - Generated library with a new build system. A side effect of that change is
