@@ -17,9 +17,9 @@ package com.google.ads.googleads.lib;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 
-import com.google.ads.googleads.v1.services.CustomerServiceClient;
-import com.google.ads.googleads.v1.services.ListAccessibleCustomersRequest;
-import com.google.ads.googleads.v1.services.ListAccessibleCustomersResponse;
+import com.google.ads.googleads.v4.services.CustomerServiceClient;
+import com.google.ads.googleads.v4.services.ListAccessibleCustomersRequest;
+import com.google.ads.googleads.v4.services.ListAccessibleCustomersResponse;
 import java.lang.reflect.Method;
 import java.lang.reflect.Modifier;
 import org.junit.Test;
