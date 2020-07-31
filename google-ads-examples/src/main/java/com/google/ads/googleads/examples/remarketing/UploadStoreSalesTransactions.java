@@ -87,18 +87,6 @@ public class UploadStoreSalesTransactions {
         required = true,
         description = "The ID of a store sales conversion action")
     private Long conversionActionId;
-    
-    @Parameter(
-        names = ArgumentNames.CUSTOM_KEY,
-        required = false,
-        description = "Only required if uploading data with custom key/values (variable/variable values)")
-    private Long customKey;
-    
-    @Parameter(
-        names = ArgumentNames.CUSTOM_VALUE,
-        required = false,
-        description = "Only required if uploading data with custom key/values (variable/variable values)")
-    private Long customValue;
 
     @Parameter(
         names = ArgumentNames.ADVERTISER_UPLOAD_DATE_TIME,
