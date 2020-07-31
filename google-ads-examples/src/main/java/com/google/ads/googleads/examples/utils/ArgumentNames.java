@@ -43,6 +43,8 @@ public final class ArgumentNames {
   public static final String CREATE_DEFAULT_LISTING_GROUP = "--createDefaultListingGroup";
   public static final String CRITERION_ID = "--criterionId";
   public static final String CUSTOMER_ID = "--customerId";
+  public static final String CUSTOM_KEY = "--customKey";
+  public static final String CUSTOM_VALUE = "--customValue";
   public static final String DRAFT_ID = "--draftId";
   public static final String EXPERIMENT_ID = "--experimentId";
   public static final String EXTERNAL_ID = "--externalId";

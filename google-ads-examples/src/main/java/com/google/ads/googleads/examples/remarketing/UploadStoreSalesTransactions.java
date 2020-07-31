@@ -87,6 +87,18 @@ public class UploadStoreSalesTransactions {
         required = true,
         description = "The ID of a store sales conversion action")
     private Long conversionActionId;
+    
+    @Parameter(
+        names = ArgumentNames.CUSTOM_KEY,
+        required = false,
+        description = "Only required if uploading data with custom key/values (variable/variable values)")
+    private Long customKey;
+    
+    @Parameter(
+        names = ArgumentNames.CUSTOM_VALUE,
+        required = false,
+        description = "Only required if uploading data with custom key/values (variable/variable values)")
+    private Long customValue;
 
     @Parameter(
         names = ArgumentNames.ADVERTISER_UPLOAD_DATE_TIME,
@@ -118,6 +130,9 @@ public class UploadStoreSalesTransactions {
       params.conversionActionId = Long.parseLong("INSERT_CONVERSION_ACTION_ID_HERE");
       // OPTIONAL (but recommended): Specify an external ID for the job.
       // params.externalId = Long.parseLong("INSERT_EXTERNAL_ID_HERE");
+      // OPTIONAL: If uploading data with custom key/values, also specify the following values:
+      params.customKey = Long.parseLong("INSERT_CUSTOM_KEY_HERE");
+      params.customValue = Long.parseLong("INSERT_CUSTOM_VALUE_HERE");
       // OPTIONAL: If uploading third party data, also specify the following values:
       // params.advertiserUploadDateTime = "INSERT_ADVERTISER_UPLOAD_DATE_TIME_HERE";
       // params.bridgeMapVersionId = "INSERT_BRIDGE_MAP_VERSION_ID_HERE";
