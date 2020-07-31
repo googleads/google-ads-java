@@ -71,7 +71,7 @@ public class VersionDescriptorLoaderTest {
     ImmutableSet<Version> actualVersions =
         VersionDescriptorLoader.forVersionList(ValidExample.class).getVersions();
     assertEquals(
-        ImmutableSet.of(new Version("v1", fakeTypeFactory, ValidExample.class)), actualVersions);
+        ImmutableSet.of(new Version("v4", fakeTypeFactory, ValidExample.class)), actualVersions);
   }
 
   /**
@@ -101,15 +101,15 @@ public class VersionDescriptorLoaderTest {
   }
 
   @VersionDescriptor(
-      versionName = "v1",
+      versionName = "v4",
       googleAdsExceptionFactory = FakeExceptionFactory.class,
-      catalogName = "v1")
+      catalogName = "v4")
   interface ServiceClient {}
 
   @VersionDescriptor(
-      versionName = "v1",
+      versionName = "v4",
       googleAdsExceptionFactory = FakeExceptionFactoryNoConstructor.class,
-      catalogName = "v1")
+      catalogName = "v4")
   interface ServiceClientNoExceptionConstructor {}
 
   static class FakeExceptionFactory extends BaseGoogleAdsException.Factory {

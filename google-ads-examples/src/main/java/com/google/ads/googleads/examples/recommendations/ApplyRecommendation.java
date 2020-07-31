@@ -107,7 +107,7 @@ public class ApplyRecommendation {
     // Each recommendation types has optional parameters to override the recommended values.
     // This is an example to override a recommended ad when a TextAdRecommendation is applied.
     // Please read
-    // https://developers.google.com/google-ads/api/reference/rpc/google.ads.googleads.v1.services#google.ads.googleads.v1.services.ApplyRecommendationOperation
+    // https://developers.google.com/google-ads/api/reference/rpc/google.ads.googleads.v4.services#google.ads.googleads.v4.services.ApplyRecommendationOperation
     // for details.
     // Note that additional import statements are needed for this example to work. And also, please
     // replace INSERT_AD_ID_HERE with a valid ad ID below.
