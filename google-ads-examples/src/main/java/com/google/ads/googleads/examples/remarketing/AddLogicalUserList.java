@@ -41,9 +41,9 @@ import java.util.List;
  * Creates a combination user list containing users that are present on any one of the provided user
  * lists.
  */
-public class AddUnionUserList {
+public class AddLogicalUserList {
 
-  private static class AddUnionUserListParams extends CodeSampleParams {
+  private static class AddLogicalUserListParams extends CodeSampleParams {
 
     @Parameter(names = ArgumentNames.CUSTOMER_ID, required = true)
     private Long customerId;
@@ -53,7 +53,7 @@ public class AddUnionUserList {
   }
 
   public static void main(String[] args) {
-    AddUnionUserListParams params = new AddUnionUserListParams();
+    AddLogicalUserListParams params = new AddLogicalUserListParams();
     if (!params.parseArguments(args)) {
 
       // Either pass the required parameters for this example on the command line, or insert them
@@ -78,7 +78,7 @@ public class AddUnionUserList {
     }
 
     try {
-      new AddUnionUserList().runExample(googleAdsClient, params.customerId, params.userListIds);
+      new AddLogicalUserList().runExample(googleAdsClient, params.customerId, params.userListIds);
     } catch (GoogleAdsException gae) {
       // GoogleAdsException is the base class for most exceptions thrown by an API request.
       // Instances of this exception have a message and a GoogleAdsFailure that contains a
