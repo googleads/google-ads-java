@@ -235,7 +235,6 @@ public class UploadStoreSalesTransactions {
       long customerId,
       OfflineUserDataJobType offlineUserDataJobType,
       Long externalId,
-      String customKey,
       String advertiserUploadDateTime,
       String bridgeMapVersionId,
       Long partnerId) {
@@ -260,7 +259,7 @@ public class UploadStoreSalesTransactions {
             // address or phone number.
             .setTransactionUploadFraction(DoubleValue.of(1.0))
             // OPTIONAL: If uploading data with custom key/values, also specify the following value:
-            .setCustomKey(StringValue.of("INSERT_CUSTOM_KEY_HERE"))
+            // .setCustomKey(StringValue.of("INSERT_CUSTOM_KEY_HERE"))
             ;
 
     if (OfflineUserDataJobType.STORE_SALES_UPLOAD_THIRD_PARTY == offlineUserDataJobType) {
@@ -407,7 +406,8 @@ public class UploadStoreSalesTransactions {
                     // The date/time must be in the format "yyyy-MM-dd hh:mm:ss".
                     .setTransactionDateTime(StringValue.of("2020-05-01 23:52:12"))
                     // OPTIONAL: If uploading data with custom key/values, also specify the following value
-                    .setCustomValue(StringValue.of("INSERT_CUSTOM_VALUE_HERE")))
+                    // .setCustomValue(StringValue.of("INSERT_CUSTOM_VALUE_HERE"))
+                )
             .build();
 
     // Creates the second transaction for upload based on a physical address.
@@ -434,7 +434,10 @@ public class UploadStoreSalesTransactions {
                     // Specifies the date and time of the transaction. This date and time will be
                     // interpreted by the API using the Google Ads customer's time zone.
                     // The date/time must be in the format "yyyy-MM-dd hh:mm:ss".
-                    .setTransactionDateTime(StringValue.of("2020-05-14 19:07:02")))
+                    .setTransactionDateTime(StringValue.of("2020-05-14 19:07:02"))
+                    // OPTIONAL: If uploading data with custom key/values, also specify the following value
+                    // .setCustomValue(StringValue.of("INSERT_CUSTOM_VALUE_HERE"))
+                )
             .build();
 
     // Creates the operations to add the two transactions.
