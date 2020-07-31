@@ -87,6 +87,12 @@ public class UploadStoreSalesTransactions {
         required = true,
         description = "The ID of a store sales conversion action")
     private Long conversionActionId;
+    
+    @Parameter(
+        names = ArgumentNames.CUSTOM_KEY,
+        required = false,
+        description = "Only required if uploading data with custom key/values")
+    private String customKey;
 
     @Parameter(
         names = ArgumentNames.ADVERTISER_UPLOAD_DATE_TIME,
@@ -118,6 +124,8 @@ public class UploadStoreSalesTransactions {
       params.conversionActionId = Long.parseLong("INSERT_CONVERSION_ACTION_ID_HERE");
       // OPTIONAL (but recommended): Specify an external ID for the job.
       // params.externalId = Long.parseLong("INSERT_EXTERNAL_ID_HERE");
+      // OPTIONAL: If uploading data with custom key/values, also specify the following value:
+      // params.customKey = "INSERT_CUSTOM_KEY_HERE";
       // OPTIONAL: If uploading third party data, also specify the following values:
       // params.advertiserUploadDateTime = "INSERT_ADVERTISER_UPLOAD_DATE_TIME_HERE";
       // params.bridgeMapVersionId = "INSERT_BRIDGE_MAP_VERSION_ID_HERE";
@@ -144,6 +152,7 @@ public class UploadStoreSalesTransactions {
               params.offlineUserDataJobType,
               params.externalId,
               params.conversionActionId,
+              params.customKey,
               params.advertiserUploadDateTime,
               params.bridgeMapVersionId,
               params.partnerId);
@@ -172,6 +181,8 @@ public class UploadStoreSalesTransactions {
    *     STORE_SALES_UPLOAD_THIRD_PARTY}. Otherwise, use {@code STORE_SALES_UPLOAD_FIRST_PARTY}.
    * @param externalId optional (but recommended) external ID for the offline user data job.
    * @param conversionActionId the ID of a store sales conversion action.
+   * @param customKey the custom key to segment transactions. Only required when uploading data
+   *     with custom key/values.
    * @param advertiserUploadDateTime date and time the advertiser uploaded data to the partner. Only
    *     required for third party uploads.
    * @param bridgeMapVersionId version of partner IDs to be used for uploads. Only required for
@@ -185,6 +196,7 @@ public class UploadStoreSalesTransactions {
       OfflineUserDataJobType offlineUserDataJobType,
       Long externalId,
       long conversionActionId,
+      String customKey,
       String advertiserUploadDateTime,
       String bridgeMapVersionId,
       Long partnerId)
@@ -200,6 +212,7 @@ public class UploadStoreSalesTransactions {
               customerId,
               offlineUserDataJobType,
               externalId,
+              customKey,
               advertiserUploadDateTime,
               bridgeMapVersionId,
               partnerId);
@@ -235,6 +248,7 @@ public class UploadStoreSalesTransactions {
       long customerId,
       OfflineUserDataJobType offlineUserDataJobType,
       Long externalId,
+      String customKey,
       String advertiserUploadDateTime,
       String bridgeMapVersionId,
       Long partnerId) {
@@ -257,10 +271,12 @@ public class UploadStoreSalesTransactions {
             // Continuing the example above for loyalty fraction, a value of 1.0 here indicates that
             // you are uploading all 70 of the transactions that can be identified by an email
             // address or phone number.
-            .setTransactionUploadFraction(DoubleValue.of(1.0))
-            // OPTIONAL: If uploading data with custom key/values, also specify the following value:
-            // .setCustomKey(StringValue.of("INSERT_CUSTOM_KEY_HERE"))
-            ;
+            .setTransactionUploadFraction(DoubleValue.of(1.0));
+    
+    // OPTIONAL: If uploading data with custom key/values, also specify the following value:
+    if (customKey != null && !customKey.isEmpty()) {
+        storeSalesMetadataBuilder.setCustomKey(StringValue.of(customKey));
+    }
 
     if (OfflineUserDataJobType.STORE_SALES_UPLOAD_THIRD_PARTY == offlineUserDataJobType) {
       // Creates additional metadata required for uploading third party data.
