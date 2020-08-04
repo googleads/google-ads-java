@@ -91,7 +91,9 @@ public class UploadStoreSalesTransactions {
     @Parameter(
         names = ArgumentNames.CUSTOM_KEY,
         required = false,
-        description = "Only required if uploading data with custom key and values")
+        description = "Only required after creating a custom key and custom values in the account."
+                + " Custom key and values are used to segment store sales conversions."
+                + " This measurement can be used to provide more advanced insights.")
     private String customKey;
 
     @Parameter(
