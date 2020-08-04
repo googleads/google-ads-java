@@ -92,7 +92,7 @@ public class UploadStoreSalesTransactions {
         names = ArgumentNames.CUSTOM_KEY,
         required = false,
         description = "Only required after creating a custom key and custom values in the account."
-                + " Custom key and values are used to segment store sales conversions."
+                + " Custom key and values are used to segment store sales' conversions."
                 + " This measurement can be used to provide more advanced insights.")
     private String customKey;
 
@@ -183,7 +183,8 @@ public class UploadStoreSalesTransactions {
    *     STORE_SALES_UPLOAD_THIRD_PARTY}. Otherwise, use {@code STORE_SALES_UPLOAD_FIRST_PARTY}.
    * @param externalId optional (but recommended) external ID for the offline user data job.
    * @param conversionActionId the ID of a store sales conversion action.
-   * @param customKey to segment transactions. Only required when uploading data with custom key and values.
+   * @param customKey to segment store sales' conversions. Only required after creating a 
+   *     custom key and custom values in the account.
    * @param advertiserUploadDateTime date and time the advertiser uploaded data to the partner. Only
    *     required for third party uploads.
    * @param bridgeMapVersionId version of partner IDs to be used for uploads. Only required for
