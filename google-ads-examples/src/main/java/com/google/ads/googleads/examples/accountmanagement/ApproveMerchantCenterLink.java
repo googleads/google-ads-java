@@ -12,12 +12,14 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-package com.google.ads.googleads.examples.shoppingads;
+package com.google.ads.googleads.examples.accountmanagement;
 
 import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
+import com.google.ads.googleads.lib.utils.FieldMasks;
+import com.google.ads.googleads.v4.enums.MerchantCenterLinkStatusEnum.MerchantCenterLinkStatus;
 import com.google.ads.googleads.v4.errors.GoogleAdsError;
 import com.google.ads.googleads.v4.errors.GoogleAdsException;
 import com.google.ads.googleads.v4.resources.MerchantCenterLink;
@@ -31,7 +33,7 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 
 /**
- * Demonstrates how to reject a Merchant Center link request.
+ * Demonstrates how to approve a Merchant Center link request.
  *
  * <p>Prerequisite: You need to have access to a Merchant Center account. You can find instructions
  * to create a Merchant Center account here: https://support.google.com/merchants/answer/188924.
@@ -39,9 +41,9 @@ import java.io.IOException;
  * <p>To run this example, you must use the Merchant Center UI or the Content API for Shopping to
  * send a link request between your Merchant Center and Google Ads accounts.
  */
-public class RejectMerchantCenterLink {
+public class ApproveMerchantCenterLink {
 
-  private static class RejectMerchantCenterLinkParams extends CodeSampleParams {
+  private static class ApproveMerchantCenterLinkParams extends CodeSampleParams {
 
     @Parameter(names = ArgumentNames.CUSTOMER_ID, required = true)
     private Long customerId;
@@ -51,7 +53,7 @@ public class RejectMerchantCenterLink {
   }
 
   public static void main(String[] args) {
-    RejectMerchantCenterLinkParams params = new RejectMerchantCenterLinkParams();
+    ApproveMerchantCenterLinkParams params = new ApproveMerchantCenterLinkParams();
     if (!params.parseArguments(args)) {
       // Either pass the required parameters for this example on the command line, or insert them
       // into the code here. See the parameter class definition above for descriptions.
@@ -72,7 +74,7 @@ public class RejectMerchantCenterLink {
     }
 
     try {
-      new RejectMerchantCenterLink()
+      new ApproveMerchantCenterLink()
           .runExample(googleAdsClient, params.customerId, params.merchantCenterAccountId);
     } catch (GoogleAdsException gae) {
       // GoogleAdsException is the base class for most exceptions thrown by an API request.
@@ -93,7 +95,7 @@ public class RejectMerchantCenterLink {
    * Runs the example.
    *
    * @param googleAdsClient the Google Ads API client.
-   * @param customerId the client customer ID of the Google Ads account to reject the link request.
+   * @param customerId the client customer ID of the Google Ads account to approve the link request.
    * @param merchantCenterAccountId the Merchant Center account ID for the account requesting to
    *     link.
    * @throws GoogleAdsException if an API request failed with one or more service errors.
@@ -101,8 +103,8 @@ public class RejectMerchantCenterLink {
   private void runExample(
       GoogleAdsClient googleAdsClient, long customerId, long merchantCenterAccountId) {
 
-    // Rejects a pending link request or unlinks an enabled link for a Google Ads account with
-    // customerId from a Merchant Center account with merchantCenterAccountId.
+    // Approves a pending link request for a Google Ads account with customerId from a Merchant
+    // Center account with merchantCenterAccountId.
     try (MerchantCenterLinkServiceClient merchantCenterLinkService =
         googleAdsClient.getLatestVersion().createMerchantCenterLinkServiceClient()) {
       ListMerchantCenterLinksResponse response =
@@ -120,45 +122,59 @@ public class RejectMerchantCenterLink {
             "Link '%s' has status '%s'.%n",
             merchantCenterLink.getResourceName(), merchantCenterLink.getStatus());
 
-        // Checks if there is a link for the Merchant Center account we are looking for.
-        if (merchantCenterAccountId == merchantCenterLink.getId().getValue()) {
-          // If the Merchant Center link is pending, reject it by removing the link.
-          // If the Merchant Center link is enabled, unlink Merchant Center from Google Ads by
-          // removing the link.
-          // In both cases, the remove action is the same.
-          removeMerchantCenterLink(merchantCenterLinkService, customerId, merchantCenterLink);
-          // There is only one MerchantCenterLink object for a given Google Ads account and Merchant
-          // Center account, so we can break early.
-          break;
+        // Checks if there is a link for the Merchant Center account we are looking for, then only
+        // approves the link if it is in a 'PENDING' state.
+        if (merchantCenterAccountId == merchantCenterLink.getId().getValue()
+            && merchantCenterLink.getStatus() == MerchantCenterLinkStatus.PENDING) {
+          // Updates the status of Merchant Center link to 'ENABLED' to approve the link.
+          updateMerchantCenterLinkStatus(
+              merchantCenterLinkService,
+              customerId,
+              merchantCenterLink,
+              MerchantCenterLinkStatus.ENABLED);
         }
       }
     }
   }
 
   /**
-   * Removes a Merchant Center link from a Google Ads client customer account.
+   * Updates the status of a Merchant Center link request for a given resource name.
    *
    * @param merchantCenterLinkServiceClient the MerchantCenterLinkService client.
-   * @param customerId the client customer ID of the Google Ads account that has the link request.
-   * @param merchantCenterLink the MerchantCenterLink object to remove.
+   * @param customerId the client customer ID of the Google Ads account to approve the link request.
+   * @param merchantCenterLink the MerchantCenterLink object to update.
+   * @param status the new status to set on the link.
    * @throws GoogleAdsException if an API request failed with one or more service errors.
    */
-  private void removeMerchantCenterLink(
+  private void updateMerchantCenterLinkStatus(
       MerchantCenterLinkServiceClient merchantCenterLinkServiceClient,
       long customerId,
-      MerchantCenterLink merchantCenterLink) {
-    // Creates a single remove operation, specifying the Merchant Center link resource name.
+      MerchantCenterLink merchantCenterLink,
+      MerchantCenterLinkStatus status) {
+    // Creates an updated MerchantCenterLink object derived from the original, but with the new
+    // status.
+    MerchantCenterLink updatedMerchantCenterLink =
+        merchantCenterLink.toBuilder().setStatus(status).build();
+
+    // Constructs an operation that will update the merchantCenterLink, using the FieldMasks compare
+    // utility to derive the update mask from the changes. This mask tells the Google Ads API which
+    // attributes of the merchantCenterLink to change. In this case we only want to change the
+    // MerchantCenterLinkStatus.
     MerchantCenterLinkOperation operation =
         MerchantCenterLinkOperation.newBuilder()
-            .setRemove(merchantCenterLink.getResourceName())
+            .setUpdate(updatedMerchantCenterLink)
+            .setUpdateMask(FieldMasks.compare(merchantCenterLink, updatedMerchantCenterLink))
             .build();
 
     // Sends the operation in a mutate request.
     MutateMerchantCenterLinkResponse response =
         merchantCenterLinkServiceClient.mutateMerchantCenterLink(
-            Long.toString(customerId), operation);
-    MutateMerchantCenterLinkResult result = response.getResult();
+            String.valueOf(customerId), operation);
+
+    // Prints the resource name of the updated object.
+    MutateMerchantCenterLinkResult merchantCenterLinkResult = response.getResult();
     System.out.printf(
-        "Removed Merchant Center link with resource name: '%s'.%n", result.getResourceName());
+        "Updated Merchant Center link with resource name: '%s'.%n",
+        merchantCenterLinkResult.getResourceName());
   }
 }
