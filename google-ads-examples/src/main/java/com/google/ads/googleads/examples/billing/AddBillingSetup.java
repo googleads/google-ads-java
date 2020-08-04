@@ -38,7 +38,7 @@ import java.io.IOException;
  * a customer. The new billing setup can either reuse an existing payments account, or create a new
  * payments account with a given payments profile. Billing setups are applicable for clients on
  * monthly invoicing only. See here for details about applying for monthly invoicing:
- * https://support.google.com/google-ads/answer/2375377 In the case of consolidated billing, a
+ * https://support.google.com/google-ads/answer/2375377. In the case of consolidated billing, a
  * payments account is linked to the manager account and is linked to a customer account via a
  * billing setup.
  */
@@ -206,7 +206,7 @@ public class AddBillingSetup {
       throws Exception {
     // The query to search existing approved billing setups in the end date time descending
     // order.
-    // See GetBillingSetup.cs for a more detailed example of requesting billing setup
+    // See GetBillingSetup.java for a more detailed example of requesting billing setup
     // information.
     String query =
         "SELECT billing_setup.end_date_time "
@@ -250,7 +250,7 @@ public class AddBillingSetup {
         billingSetupBuilder.setEndDateTime(
             StringValue.of(lastEndingDateTime.plusDays(2).toString("yyyy-MM-dd")));
       } else {
-        // Otherwise, the only acceptable start time is TimeType.Now.
+        // Otherwise, the only acceptable start time is DateTime.now().
         billingSetupBuilder.setStartDateTime(StringValue.of(DateTime.now().toString()));
 
         // Sets the new billing setup to end tomorrow.
