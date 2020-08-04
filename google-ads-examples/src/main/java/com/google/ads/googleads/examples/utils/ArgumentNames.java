@@ -70,6 +70,8 @@ public final class ArgumentNames {
   public static final String OFFLINE_USER_DATA_JOB_TYPE = "--offlineUserDataJobType";
   public static final String PAGE_URL = "--pageUrl";
   public static final String PARTNER_ID = "--partnerId";
+  public static final String PAYMENTS_ACCOUNT_ID_ID = "--paymentsAccountId";
+  public static final String PAYMENTS_PROFILE_ID = "--paymentsProfileId";
   public static final String RECOMMENDATION_ID = "--recommendationId";
   public static final String REPLACE_EXISTING_TREE = "--replaceExistingTree";
   public static final String RESTATEMENT_VALUE = "--restatementValue";
