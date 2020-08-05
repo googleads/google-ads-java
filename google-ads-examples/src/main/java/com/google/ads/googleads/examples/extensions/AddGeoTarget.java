@@ -50,7 +50,7 @@ public class AddGeoTarget {
         description =
             "The geo target constant ID to add to the extension feed item. A default value will be"
                 + " used if no value is provided.")
-    private Long geoTargetConstantId;
+    private Long geoTargetConstantId = GEO_TARGET_CONSTANT_ID;
   }
 
   public static void main(String[] args) {
@@ -63,7 +63,7 @@ public class AddGeoTarget {
       params.feedItemId = Long.parseLong("INSERT_FEED_ID_HERE");
 
       // Optional: Specify a geoTargetConstantId.
-      params.geoTargetConstantId = null;
+      params.geoTargetConstantId = GEO_TARGET_CONSTANT_ID;
     }
 
     GoogleAdsClient googleAdsClient;
@@ -108,10 +108,6 @@ public class AddGeoTarget {
    */
   private void runExample(
       GoogleAdsClient googleAdsClient, long customerId, long feedItemId, Long geoTargetConstantId) {
-    // Uses a default geoTargetConstantId value if none is provided.
-    geoTargetConstantId =
-        (geoTargetConstantId == null) ? GEO_TARGET_CONSTANT_ID : geoTargetConstantId;
-
     // Creates an extension feed item using the specified feed item ID and geo target constant
     // ID for targeting.
     ExtensionFeedItem extensionFeedItem =
