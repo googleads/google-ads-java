@@ -204,7 +204,7 @@ public class AddBillingSetup {
   private BillingSetup setBillingSetupDateTimes(
       GoogleAdsClient googleAdsClient, long customerId, BillingSetup billingSetup)
       throws Exception {
-    // The query to search existing approved billing setups in the end date time descending
+    // Defines a query to search existing approved billing setups in the end date time descending
     // order.
     // See GetBillingSetup.java for a more detailed example of requesting billing setup
     // information.
