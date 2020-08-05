@@ -125,7 +125,7 @@ public class ForecastReach {
   }
 
   /**
-   * Maps friendly names of plannable locations to location IDs usable with.
+   * Maps friendly names of plannable locations to location IDs usable with ReachPlanServiceClient.
    *
    * @param reachPlanServiceClient instance of Reach Plan Service client.
    */
@@ -216,7 +216,7 @@ public class ForecastReach {
             .build();
 
     // See the docs for defaults and valid ranges:
-    // https://developers.google.com/google-ads/api/reference/rpc/Google.Ads.GoogleAds.V4.services#Google.Ads.GoogleAds.V4.services.GenerateReachForecastRequest
+    // https://developers.google.com/google-ads/api/reference/rpc/v4/GenerateReachForecastRequest
     return GenerateReachForecastRequest.newBuilder()
         .setCustomerId(Long.toString(customerId))
         .setCurrencyCode(StringValue.of(currencyCode))
@@ -281,16 +281,16 @@ public class ForecastReach {
 
     // See listPlannableProducts on ReachPlanService to retrieve a list
     // of valid PlannableProductCode's for a given location:
-    // https://developers.google.com/google-ads/api/reference/rpc/Google.Ads.GoogleAds.V4.services#reachplanservice
+    // https://developers.google.com/google-ads/api/reference/rpc/v4/ReachPlanService
     productMix.add(
         PlannedProduct.newBuilder()
             .setPlannableProductCode(StringValue.of("TRUEVIEW_IN_STREAM"))
-            .setBudgetMicros(Int64Value.of((long) ((double) budgetMicros * bumperAllocation)))
+            .setBudgetMicros(Int64Value.of((long) (budgetMicros * bumperAllocation)))
             .build());
     productMix.add(
         PlannedProduct.newBuilder()
             .setPlannableProductCode(StringValue.of("BUMPER"))
-            .setBudgetMicros(Int64Value.of((long) ((double) budgetMicros * bumperAllocation)))
+            .setBudgetMicros(Int64Value.of((long) (budgetMicros * bumperAllocation)))
             .build());
 
     GenerateReachForecastRequest request =
@@ -301,7 +301,7 @@ public class ForecastReach {
 
   /**
    * Pulls a forecast for a product mix suggested based on preferences for whether the ad would have
-   * a guaranteed price, play with sound, would be skippable, would include top content, and a
+   * a guaranteed price, play with sound, would be skippable, would include top content, and have a
    * desired ad length.
    *
    * @param reachPlanServiceClient instance of Reach Plan Service client.
