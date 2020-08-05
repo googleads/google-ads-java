@@ -45,7 +45,11 @@ public class AddGeoTarget {
     @Parameter(names = ArgumentNames.FEED_ITEM_ID, required = true)
     private Long feedItemId;
 
-    @Parameter(names = ArgumentNames.GEO_TARGET_CONSTANT_ID)
+    @Parameter(
+        names = ArgumentNames.GEO_TARGET_CONSTANT_ID,
+        description =
+            "The geo target constant ID to add to the extension feed item. A default value will be"
+                + " used if no value is provided.")
     private Long geoTargetConstantId;
   }
 
