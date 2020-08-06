@@ -300,7 +300,7 @@ public class GoogleAdsClientTest {
             .setDeveloperToken(DEVELOPER_TOKEN)
             .setLoginCustomerId(LOGIN_CUSTOMER_ID)
             .build();
-    assertGoogleAdsClient(client, LOGIN_CUSTOMER_ID, false);
+    assertGoogleAdsClient(client, LOGIN_CUSTOMER_ID, true);
   }
 
   /**
