@@ -87,6 +87,14 @@ public class UploadStoreSalesTransactions {
         required = true,
         description = "The ID of a store sales conversion action")
     private Long conversionActionId;
+    
+    @Parameter(
+        names = ArgumentNames.CUSTOM_KEY,
+        required = false,
+        description = "Only required after creating a custom key and custom values in the account."
+                + " Custom key and values are used to segment store sales conversions."
+                + " This measurement can be used to provide more advanced insights.")
+    private String customKey;
 
     @Parameter(
         names = ArgumentNames.ADVERTISER_UPLOAD_DATE_TIME,
@@ -118,6 +126,8 @@ public class UploadStoreSalesTransactions {
       params.conversionActionId = Long.parseLong("INSERT_CONVERSION_ACTION_ID_HERE");
       // OPTIONAL (but recommended): Specify an external ID for the job.
       // params.externalId = Long.parseLong("INSERT_EXTERNAL_ID_HERE");
+      // OPTIONAL: If uploading data with custom key and values, also specify the following value:
+      // params.customKey = "INSERT_CUSTOM_KEY_HERE";
       // OPTIONAL: If uploading third party data, also specify the following values:
       // params.advertiserUploadDateTime = "INSERT_ADVERTISER_UPLOAD_DATE_TIME_HERE";
       // params.bridgeMapVersionId = "INSERT_BRIDGE_MAP_VERSION_ID_HERE";
@@ -144,6 +154,7 @@ public class UploadStoreSalesTransactions {
               params.offlineUserDataJobType,
               params.externalId,
               params.conversionActionId,
+              params.customKey,
               params.advertiserUploadDateTime,
               params.bridgeMapVersionId,
               params.partnerId);
@@ -172,6 +183,8 @@ public class UploadStoreSalesTransactions {
    *     STORE_SALES_UPLOAD_THIRD_PARTY}. Otherwise, use {@code STORE_SALES_UPLOAD_FIRST_PARTY}.
    * @param externalId optional (but recommended) external ID for the offline user data job.
    * @param conversionActionId the ID of a store sales conversion action.
+   * @param customKey to segment store sales conversions. Only required after creating a 
+   *     custom key and custom values in the account.
    * @param advertiserUploadDateTime date and time the advertiser uploaded data to the partner. Only
    *     required for third party uploads.
    * @param bridgeMapVersionId version of partner IDs to be used for uploads. Only required for
@@ -185,6 +198,7 @@ public class UploadStoreSalesTransactions {
       OfflineUserDataJobType offlineUserDataJobType,
       Long externalId,
       long conversionActionId,
+      String customKey,
       String advertiserUploadDateTime,
       String bridgeMapVersionId,
       Long partnerId)
@@ -200,6 +214,7 @@ public class UploadStoreSalesTransactions {
               customerId,
               offlineUserDataJobType,
               externalId,
+              customKey,
               advertiserUploadDateTime,
               bridgeMapVersionId,
               partnerId);
@@ -235,6 +250,7 @@ public class UploadStoreSalesTransactions {
       long customerId,
       OfflineUserDataJobType offlineUserDataJobType,
       Long externalId,
+      String customKey,
       String advertiserUploadDateTime,
       String bridgeMapVersionId,
       Long partnerId) {
@@ -258,6 +274,10 @@ public class UploadStoreSalesTransactions {
             // you are uploading all 70 of the transactions that can be identified by an email
             // address or phone number.
             .setTransactionUploadFraction(DoubleValue.of(1.0));
+    
+    if (customKey != null && !customKey.isEmpty()) {
+        storeSalesMetadataBuilder.setCustomKey(StringValue.of(customKey));
+    }
 
     if (OfflineUserDataJobType.STORE_SALES_UPLOAD_THIRD_PARTY == offlineUserDataJobType) {
       // Creates additional metadata required for uploading third party data.
@@ -401,7 +421,10 @@ public class UploadStoreSalesTransactions {
                     // Specifies the date and time of the transaction. This date and time will be
                     // interpreted by the API using the Google Ads customer's time zone.
                     // The date/time must be in the format "yyyy-MM-dd hh:mm:ss".
-                    .setTransactionDateTime(StringValue.of("2020-05-01 23:52:12")))
+                    .setTransactionDateTime(StringValue.of("2020-05-01 23:52:12"))
+                    // OPTIONAL: If uploading data with custom key and values, also specify the following value:
+                    // .setCustomValue(StringValue.of("INSERT_CUSTOM_VALUE_HERE"))
+                )
             .build();
 
     // Creates the second transaction for upload based on a physical address.
@@ -428,7 +451,10 @@ public class UploadStoreSalesTransactions {
                     // Specifies the date and time of the transaction. This date and time will be
                     // interpreted by the API using the Google Ads customer's time zone.
                     // The date/time must be in the format "yyyy-MM-dd hh:mm:ss".
-                    .setTransactionDateTime(StringValue.of("2020-05-14 19:07:02")))
+                    .setTransactionDateTime(StringValue.of("2020-05-14 19:07:02"))
+                    // OPTIONAL: If uploading data with custom key and values, also specify the following value:
+                    // .setCustomValue(StringValue.of("INSERT_CUSTOM_VALUE_HERE"))
+                )
             .build();
 
     // Creates the operations to add the two transactions.
