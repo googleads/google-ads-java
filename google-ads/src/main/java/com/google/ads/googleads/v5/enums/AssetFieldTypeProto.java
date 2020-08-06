@@ -30,18 +30,19 @@ public final class AssetFieldTypeProto {
     java.lang.String[] descriptorData = {
       "\n4google/ads/googleads/v5/enums/asset_fi" +
       "eld_type.proto\022\035google.ads.googleads.v5." +
-      "enums\032\034google/api/annotations.proto\"\265\001\n\022" +
-      "AssetFieldTypeEnum\"\236\001\n\016AssetFieldType\022\017\n" +
+      "enums\032\034google/api/annotations.proto\"\311\001\n\022" +
+      "AssetFieldTypeEnum\"\262\001\n\016AssetFieldType\022\017\n" +
       "\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\014\n\010HEADLINE\020" +
       "\002\022\017\n\013DESCRIPTION\020\003\022\025\n\021MANDATORY_AD_TEXT\020" +
       "\004\022\023\n\017MARKETING_IMAGE\020\005\022\020\n\014MEDIA_BUNDLE\020\006" +
-      "\022\021\n\rYOUTUBE_VIDEO\020\007B\350\001\n!com.google.ads.g" +
-      "oogleads.v5.enumsB\023AssetFieldTypeProtoP\001" +
-      "ZBgoogle.golang.org/genproto/googleapis/" +
-      "ads/googleads/v5/enums;enums\242\002\003GAA\252\002\035Goo" +
-      "gle.Ads.GoogleAds.V5.Enums\312\002\035Google\\Ads\\" +
-      "GoogleAds\\V5\\Enums\352\002!Google::Ads::Google" +
-      "Ads::V5::Enumsb\006proto3"
+      "\022\021\n\rYOUTUBE_VIDEO\020\007\022\022\n\016BOOK_ON_GOOGLE\020\010B" +
+      "\350\001\n!com.google.ads.googleads.v5.enumsB\023A" +
+      "ssetFieldTypeProtoP\001ZBgoogle.golang.org/" +
+      "genproto/googleapis/ads/googleads/v5/enu" +
+      "ms;enums\242\002\003GAA\252\002\035Google.Ads.GoogleAds.V5" +
+      ".Enums\312\002\035Google\\Ads\\GoogleAds\\V5\\Enums\352\002" +
+      "!Google::Ads::GoogleAds::V5::Enumsb\006prot" +
+      "o3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

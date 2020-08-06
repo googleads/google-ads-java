@@ -795,6 +795,33 @@ public interface AdOrBuilder extends
 
   /**
    * <pre>
+   * Details pertaining to a Video responsive ad.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v5.common.VideoResponsiveAdInfo video_responsive_ad = 39;</code>
+   * @return Whether the videoResponsiveAd field is set.
+   */
+  boolean hasVideoResponsiveAd();
+  /**
+   * <pre>
+   * Details pertaining to a Video responsive ad.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v5.common.VideoResponsiveAdInfo video_responsive_ad = 39;</code>
+   * @return The videoResponsiveAd.
+   */
+  com.google.ads.googleads.v5.common.VideoResponsiveAdInfo getVideoResponsiveAd();
+  /**
+   * <pre>
+   * Details pertaining to a Video responsive ad.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v5.common.VideoResponsiveAdInfo video_responsive_ad = 39;</code>
+   */
+  com.google.ads.googleads.v5.common.VideoResponsiveAdInfoOrBuilder getVideoResponsiveAdOrBuilder();
+
+  /**
+   * <pre>
    * Details pertaining to a responsive search ad.
    * </pre>
    *

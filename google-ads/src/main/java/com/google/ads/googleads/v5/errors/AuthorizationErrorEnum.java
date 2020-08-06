@@ -122,12 +122,12 @@ private static final long serialVersionUID = 0L;
     USER_PERMISSION_DENIED(2),
     /**
      * <pre>
-     * The developer token is not whitelisted.
+     * The developer token is not on the allow-list.Nc
      * </pre>
      *
-     * <code>DEVELOPER_TOKEN_NOT_WHITELISTED = 3;</code>
+     * <code>DEVELOPER_TOKEN_NOT_ON_ALLOWLIST = 13;</code>
      */
-    DEVELOPER_TOKEN_NOT_WHITELISTED(3),
+    DEVELOPER_TOKEN_NOT_ON_ALLOWLIST(13),
     /**
      * <pre>
      * The developer token is not allowed with the project sent in the request.
@@ -245,12 +245,12 @@ private static final long serialVersionUID = 0L;
     public static final int USER_PERMISSION_DENIED_VALUE = 2;
     /**
      * <pre>
-     * The developer token is not whitelisted.
+     * The developer token is not on the allow-list.Nc
      * </pre>
      *
-     * <code>DEVELOPER_TOKEN_NOT_WHITELISTED = 3;</code>
+     * <code>DEVELOPER_TOKEN_NOT_ON_ALLOWLIST = 13;</code>
      */
-    public static final int DEVELOPER_TOKEN_NOT_WHITELISTED_VALUE = 3;
+    public static final int DEVELOPER_TOKEN_NOT_ON_ALLOWLIST_VALUE = 13;
     /**
      * <pre>
      * The developer token is not allowed with the project sent in the request.
@@ -365,7 +365,7 @@ private static final long serialVersionUID = 0L;
         case 0: return UNSPECIFIED;
         case 1: return UNKNOWN;
         case 2: return USER_PERMISSION_DENIED;
-        case 3: return DEVELOPER_TOKEN_NOT_WHITELISTED;
+        case 13: return DEVELOPER_TOKEN_NOT_ON_ALLOWLIST;
         case 4: return DEVELOPER_TOKEN_PROHIBITED;
         case 5: return PROJECT_DISABLED;
         case 6: return AUTHORIZATION_ERROR;

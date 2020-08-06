@@ -189,6 +189,14 @@ private static final long serialVersionUID = 0L;
      * <code>CREATION_NOT_SUPPORTED = 10;</code>
      */
     CREATION_NOT_SUPPORTED(10),
+    /**
+     * <pre>
+     * Update of this conversion action isn't supported by Google Ads API.
+     * </pre>
+     *
+     * <code>UPDATE_NOT_SUPPORTED = 11;</code>
+     */
+    UPDATE_NOT_SUPPORTED(11),
     UNRECOGNIZED(-1),
     ;
 
@@ -288,6 +296,14 @@ private static final long serialVersionUID = 0L;
      * <code>CREATION_NOT_SUPPORTED = 10;</code>
      */
     public static final int CREATION_NOT_SUPPORTED_VALUE = 10;
+    /**
+     * <pre>
+     * Update of this conversion action isn't supported by Google Ads API.
+     * </pre>
+     *
+     * <code>UPDATE_NOT_SUPPORTED = 11;</code>
+     */
+    public static final int UPDATE_NOT_SUPPORTED_VALUE = 11;
 
 
     public final int getNumber() {
@@ -325,6 +341,7 @@ private static final long serialVersionUID = 0L;
         case 8: return DATA_DRIVEN_MODEL_STALE;
         case 9: return DATA_DRIVEN_MODEL_UNKNOWN;
         case 10: return CREATION_NOT_SUPPORTED;
+        case 11: return UPDATE_NOT_SUPPORTED;
         default: return null;
       }
     }

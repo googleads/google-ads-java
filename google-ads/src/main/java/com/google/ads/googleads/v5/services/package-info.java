@@ -368,6 +368,21 @@
  * </code>
  * </pre>
  *
+ * ========================== CampaignAssetServiceClient ==========================
+ *
+ * <p>Service Description: Service to manage campaign assets.
+ *
+ * <p>Sample for CampaignAssetServiceClient:
+ *
+ * <pre>
+ * <code>
+ * try (CampaignAssetServiceClient campaignAssetServiceClient = CampaignAssetServiceClient.create()) {
+ *   CampaignAssetName resourceName = CampaignAssetName.of("[CUSTOMER]", "[CAMPAIGN_ASSET]");
+ *   CampaignAsset response = campaignAssetServiceClient.getCampaignAsset(resourceName);
+ * }
+ * </code>
+ * </pre>
+ *
  * ================================ CampaignBidModifierServiceClient
  * ================================
  *
@@ -1727,8 +1742,8 @@
  *
  * ===================== UserDataServiceClient =====================
  *
- * <p>Service Description: Service to manage user data uploads. Accessible to whitelisted customers
- * only.
+ * <p>Service Description: Service to manage user data uploads. Accessible only to customers on the
+ * allow-list.
  *
  * <p>Sample for UserDataServiceClient:
  *

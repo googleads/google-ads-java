@@ -212,7 +212,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Data source of the list. Default value is FIRST_PARTY.
-   * Only whitelisted customers can create third-party sourced CRM lists.
+   * Only customers on the allow-list can create third-party sourced CRM lists.
    * </pre>
    *
    * <code>.google.ads.googleads.v5.enums.UserListCrmDataSourceTypeEnum.UserListCrmDataSourceType data_source_type = 3;</code>
@@ -224,7 +224,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Data source of the list. Default value is FIRST_PARTY.
-   * Only whitelisted customers can create third-party sourced CRM lists.
+   * Only customers on the allow-list can create third-party sourced CRM lists.
    * </pre>
    *
    * <code>.google.ads.googleads.v5.enums.UserListCrmDataSourceTypeEnum.UserListCrmDataSourceType data_source_type = 3;</code>
@@ -911,7 +911,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Data source of the list. Default value is FIRST_PARTY.
-     * Only whitelisted customers can create third-party sourced CRM lists.
+     * Only customers on the allow-list can create third-party sourced CRM lists.
      * </pre>
      *
      * <code>.google.ads.googleads.v5.enums.UserListCrmDataSourceTypeEnum.UserListCrmDataSourceType data_source_type = 3;</code>
@@ -923,7 +923,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Data source of the list. Default value is FIRST_PARTY.
-     * Only whitelisted customers can create third-party sourced CRM lists.
+     * Only customers on the allow-list can create third-party sourced CRM lists.
      * </pre>
      *
      * <code>.google.ads.googleads.v5.enums.UserListCrmDataSourceTypeEnum.UserListCrmDataSourceType data_source_type = 3;</code>
@@ -939,7 +939,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Data source of the list. Default value is FIRST_PARTY.
-     * Only whitelisted customers can create third-party sourced CRM lists.
+     * Only customers on the allow-list can create third-party sourced CRM lists.
      * </pre>
      *
      * <code>.google.ads.googleads.v5.enums.UserListCrmDataSourceTypeEnum.UserListCrmDataSourceType data_source_type = 3;</code>
@@ -954,7 +954,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Data source of the list. Default value is FIRST_PARTY.
-     * Only whitelisted customers can create third-party sourced CRM lists.
+     * Only customers on the allow-list can create third-party sourced CRM lists.
      * </pre>
      *
      * <code>.google.ads.googleads.v5.enums.UserListCrmDataSourceTypeEnum.UserListCrmDataSourceType data_source_type = 3;</code>
@@ -973,7 +973,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Data source of the list. Default value is FIRST_PARTY.
-     * Only whitelisted customers can create third-party sourced CRM lists.
+     * Only customers on the allow-list can create third-party sourced CRM lists.
      * </pre>
      *
      * <code>.google.ads.googleads.v5.enums.UserListCrmDataSourceTypeEnum.UserListCrmDataSourceType data_source_type = 3;</code>

@@ -335,12 +335,13 @@ private static final long serialVersionUID = 0L;
     INVALID_CALL_CONVERSION_TYPE_ID(28),
     /**
      * <pre>
-     * For a call extension, the customer is not whitelisted for call tracking.
+     * For a call extension, the customer is not on the allow-list for call
+     * tracking.
      * </pre>
      *
-     * <code>CUSTOMER_NOT_WHITELISTED_FOR_CALLTRACKING = 29;</code>
+     * <code>CUSTOMER_NOT_IN_ALLOWLIST_FOR_CALLTRACKING = 69;</code>
      */
-    CUSTOMER_NOT_WHITELISTED_FOR_CALLTRACKING(29),
+    CUSTOMER_NOT_IN_ALLOWLIST_FOR_CALLTRACKING(69),
     /**
      * <pre>
      * Call tracking is not supported for the given country for a call
@@ -376,7 +377,7 @@ private static final long serialVersionUID = 0L;
     HYPHENS_IN_REVIEW_EXTENSION_SNIPPET(33),
     /**
      * <pre>
-     * A blacklisted review source name or url was provided for a review
+     * A blocked review source name or url was provided for a review
      * extension.
      * </pre>
      *
@@ -642,6 +643,14 @@ private static final long serialVersionUID = 0L;
      * <code>EXTENSION_SETTING_UPDATE_IS_A_NOOP = 67;</code>
      */
     EXTENSION_SETTING_UPDATE_IS_A_NOOP(67),
+    /**
+     * <pre>
+     * The extension contains text which has been prohibited on policy grounds.
+     * </pre>
+     *
+     * <code>DISALLOWED_TEXT = 68;</code>
+     */
+    DISALLOWED_TEXT(68),
     UNRECOGNIZED(-1),
     ;
 
@@ -887,12 +896,13 @@ private static final long serialVersionUID = 0L;
     public static final int INVALID_CALL_CONVERSION_TYPE_ID_VALUE = 28;
     /**
      * <pre>
-     * For a call extension, the customer is not whitelisted for call tracking.
+     * For a call extension, the customer is not on the allow-list for call
+     * tracking.
      * </pre>
      *
-     * <code>CUSTOMER_NOT_WHITELISTED_FOR_CALLTRACKING = 29;</code>
+     * <code>CUSTOMER_NOT_IN_ALLOWLIST_FOR_CALLTRACKING = 69;</code>
      */
-    public static final int CUSTOMER_NOT_WHITELISTED_FOR_CALLTRACKING_VALUE = 29;
+    public static final int CUSTOMER_NOT_IN_ALLOWLIST_FOR_CALLTRACKING_VALUE = 69;
     /**
      * <pre>
      * Call tracking is not supported for the given country for a call
@@ -928,7 +938,7 @@ private static final long serialVersionUID = 0L;
     public static final int HYPHENS_IN_REVIEW_EXTENSION_SNIPPET_VALUE = 33;
     /**
      * <pre>
-     * A blacklisted review source name or url was provided for a review
+     * A blocked review source name or url was provided for a review
      * extension.
      * </pre>
      *
@@ -1194,6 +1204,14 @@ private static final long serialVersionUID = 0L;
      * <code>EXTENSION_SETTING_UPDATE_IS_A_NOOP = 67;</code>
      */
     public static final int EXTENSION_SETTING_UPDATE_IS_A_NOOP_VALUE = 67;
+    /**
+     * <pre>
+     * The extension contains text which has been prohibited on policy grounds.
+     * </pre>
+     *
+     * <code>DISALLOWED_TEXT = 68;</code>
+     */
+    public static final int DISALLOWED_TEXT_VALUE = 68;
 
 
     public final int getNumber() {
@@ -1249,7 +1267,7 @@ private static final long serialVersionUID = 0L;
         case 26: return VANITY_PHONE_NUMBER_NOT_ALLOWED;
         case 27: return INVALID_COUNTRY_CODE;
         case 28: return INVALID_CALL_CONVERSION_TYPE_ID;
-        case 29: return CUSTOMER_NOT_WHITELISTED_FOR_CALLTRACKING;
+        case 69: return CUSTOMER_NOT_IN_ALLOWLIST_FOR_CALLTRACKING;
         case 30: return CALLTRACKING_NOT_SUPPORTED_FOR_COUNTRY;
         case 31: return INVALID_APP_ID;
         case 32: return QUOTES_IN_REVIEW_EXTENSION_SNIPPET;
@@ -1286,6 +1304,7 @@ private static final long serialVersionUID = 0L;
         case 65: return UNSUPPORTED_LANGUAGE;
         case 66: return CUSTOMER_CONSENT_FOR_CALL_RECORDING_REQUIRED;
         case 67: return EXTENSION_SETTING_UPDATE_IS_A_NOOP;
+        case 68: return DISALLOWED_TEXT;
         default: return null;
       }
     }

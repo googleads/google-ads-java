@@ -1365,6 +1365,19 @@ private static final long serialVersionUID = 0L;
 
             break;
           }
+          case 1138: {
+            com.google.ads.googleads.v5.resources.CampaignAsset.Builder subBuilder = null;
+            if (campaignAsset_ != null) {
+              subBuilder = campaignAsset_.toBuilder();
+            }
+            campaignAsset_ = input.readMessage(com.google.ads.googleads.v5.resources.CampaignAsset.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(campaignAsset_);
+              campaignAsset_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
           case 1146: {
             com.google.ads.googleads.v5.resources.AccountLink.Builder subBuilder = null;
             if (accountLink_ != null) {
@@ -2409,6 +2422,44 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public com.google.ads.googleads.v5.resources.CampaignOrBuilder getCampaignOrBuilder() {
     return getCampaign();
+  }
+
+  public static final int CAMPAIGN_ASSET_FIELD_NUMBER = 142;
+  private com.google.ads.googleads.v5.resources.CampaignAsset campaignAsset_;
+  /**
+   * <pre>
+   * The campaign asset referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v5.resources.CampaignAsset campaign_asset = 142;</code>
+   * @return Whether the campaignAsset field is set.
+   */
+  @java.lang.Override
+  public boolean hasCampaignAsset() {
+    return campaignAsset_ != null;
+  }
+  /**
+   * <pre>
+   * The campaign asset referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v5.resources.CampaignAsset campaign_asset = 142;</code>
+   * @return The campaignAsset.
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v5.resources.CampaignAsset getCampaignAsset() {
+    return campaignAsset_ == null ? com.google.ads.googleads.v5.resources.CampaignAsset.getDefaultInstance() : campaignAsset_;
+  }
+  /**
+   * <pre>
+   * The campaign asset referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v5.resources.CampaignAsset campaign_asset = 142;</code>
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v5.resources.CampaignAssetOrBuilder getCampaignAssetOrBuilder() {
+    return getCampaignAsset();
   }
 
   public static final int CAMPAIGN_AUDIENCE_VIEW_FIELD_NUMBER = 69;
@@ -5654,6 +5705,9 @@ private static final long serialVersionUID = 0L;
     if (keywordPlanAdGroupKeyword_ != null) {
       output.writeMessage(141, getKeywordPlanAdGroupKeyword());
     }
+    if (campaignAsset_ != null) {
+      output.writeMessage(142, getCampaignAsset());
+    }
     if (accountLink_ != null) {
       output.writeMessage(143, getAccountLink());
     }
@@ -6073,6 +6127,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(141, getKeywordPlanAdGroupKeyword());
     }
+    if (campaignAsset_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(142, getCampaignAsset());
+    }
     if (accountLink_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(143, getAccountLink());
@@ -6225,6 +6283,11 @@ private static final long serialVersionUID = 0L;
     if (hasCampaign()) {
       if (!getCampaign()
           .equals(other.getCampaign())) return false;
+    }
+    if (hasCampaignAsset() != other.hasCampaignAsset()) return false;
+    if (hasCampaignAsset()) {
+      if (!getCampaignAsset()
+          .equals(other.getCampaignAsset())) return false;
     }
     if (hasCampaignAudienceView() != other.hasCampaignAudienceView()) return false;
     if (hasCampaignAudienceView()) {
@@ -6725,6 +6788,10 @@ private static final long serialVersionUID = 0L;
     if (hasCampaign()) {
       hash = (37 * hash) + CAMPAIGN_FIELD_NUMBER;
       hash = (53 * hash) + getCampaign().hashCode();
+    }
+    if (hasCampaignAsset()) {
+      hash = (37 * hash) + CAMPAIGN_ASSET_FIELD_NUMBER;
+      hash = (53 * hash) + getCampaignAsset().hashCode();
     }
     if (hasCampaignAudienceView()) {
       hash = (37 * hash) + CAMPAIGN_AUDIENCE_VIEW_FIELD_NUMBER;
@@ -7326,6 +7393,12 @@ private static final long serialVersionUID = 0L;
       } else {
         campaign_ = null;
         campaignBuilder_ = null;
+      }
+      if (campaignAssetBuilder_ == null) {
+        campaignAsset_ = null;
+      } else {
+        campaignAsset_ = null;
+        campaignAssetBuilder_ = null;
       }
       if (campaignAudienceViewBuilder_ == null) {
         campaignAudienceView_ = null;
@@ -7945,6 +8018,11 @@ private static final long serialVersionUID = 0L;
       } else {
         result.campaign_ = campaignBuilder_.build();
       }
+      if (campaignAssetBuilder_ == null) {
+        result.campaignAsset_ = campaignAsset_;
+      } else {
+        result.campaignAsset_ = campaignAssetBuilder_.build();
+      }
       if (campaignAudienceViewBuilder_ == null) {
         result.campaignAudienceView_ = campaignAudienceView_;
       } else {
@@ -8455,6 +8533,9 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasCampaign()) {
         mergeCampaign(other.getCampaign());
+      }
+      if (other.hasCampaignAsset()) {
+        mergeCampaignAsset(other.getCampaignAsset());
       }
       if (other.hasCampaignAudienceView()) {
         mergeCampaignAudienceView(other.getCampaignAudienceView());
@@ -12744,6 +12825,161 @@ private static final long serialVersionUID = 0L;
         campaign_ = null;
       }
       return campaignBuilder_;
+    }
+
+    private com.google.ads.googleads.v5.resources.CampaignAsset campaignAsset_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v5.resources.CampaignAsset, com.google.ads.googleads.v5.resources.CampaignAsset.Builder, com.google.ads.googleads.v5.resources.CampaignAssetOrBuilder> campaignAssetBuilder_;
+    /**
+     * <pre>
+     * The campaign asset referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v5.resources.CampaignAsset campaign_asset = 142;</code>
+     * @return Whether the campaignAsset field is set.
+     */
+    public boolean hasCampaignAsset() {
+      return campaignAssetBuilder_ != null || campaignAsset_ != null;
+    }
+    /**
+     * <pre>
+     * The campaign asset referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v5.resources.CampaignAsset campaign_asset = 142;</code>
+     * @return The campaignAsset.
+     */
+    public com.google.ads.googleads.v5.resources.CampaignAsset getCampaignAsset() {
+      if (campaignAssetBuilder_ == null) {
+        return campaignAsset_ == null ? com.google.ads.googleads.v5.resources.CampaignAsset.getDefaultInstance() : campaignAsset_;
+      } else {
+        return campaignAssetBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * The campaign asset referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v5.resources.CampaignAsset campaign_asset = 142;</code>
+     */
+    public Builder setCampaignAsset(com.google.ads.googleads.v5.resources.CampaignAsset value) {
+      if (campaignAssetBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        campaignAsset_ = value;
+        onChanged();
+      } else {
+        campaignAssetBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The campaign asset referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v5.resources.CampaignAsset campaign_asset = 142;</code>
+     */
+    public Builder setCampaignAsset(
+        com.google.ads.googleads.v5.resources.CampaignAsset.Builder builderForValue) {
+      if (campaignAssetBuilder_ == null) {
+        campaignAsset_ = builderForValue.build();
+        onChanged();
+      } else {
+        campaignAssetBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The campaign asset referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v5.resources.CampaignAsset campaign_asset = 142;</code>
+     */
+    public Builder mergeCampaignAsset(com.google.ads.googleads.v5.resources.CampaignAsset value) {
+      if (campaignAssetBuilder_ == null) {
+        if (campaignAsset_ != null) {
+          campaignAsset_ =
+            com.google.ads.googleads.v5.resources.CampaignAsset.newBuilder(campaignAsset_).mergeFrom(value).buildPartial();
+        } else {
+          campaignAsset_ = value;
+        }
+        onChanged();
+      } else {
+        campaignAssetBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The campaign asset referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v5.resources.CampaignAsset campaign_asset = 142;</code>
+     */
+    public Builder clearCampaignAsset() {
+      if (campaignAssetBuilder_ == null) {
+        campaignAsset_ = null;
+        onChanged();
+      } else {
+        campaignAsset_ = null;
+        campaignAssetBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The campaign asset referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v5.resources.CampaignAsset campaign_asset = 142;</code>
+     */
+    public com.google.ads.googleads.v5.resources.CampaignAsset.Builder getCampaignAssetBuilder() {
+      
+      onChanged();
+      return getCampaignAssetFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * The campaign asset referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v5.resources.CampaignAsset campaign_asset = 142;</code>
+     */
+    public com.google.ads.googleads.v5.resources.CampaignAssetOrBuilder getCampaignAssetOrBuilder() {
+      if (campaignAssetBuilder_ != null) {
+        return campaignAssetBuilder_.getMessageOrBuilder();
+      } else {
+        return campaignAsset_ == null ?
+            com.google.ads.googleads.v5.resources.CampaignAsset.getDefaultInstance() : campaignAsset_;
+      }
+    }
+    /**
+     * <pre>
+     * The campaign asset referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v5.resources.CampaignAsset campaign_asset = 142;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v5.resources.CampaignAsset, com.google.ads.googleads.v5.resources.CampaignAsset.Builder, com.google.ads.googleads.v5.resources.CampaignAssetOrBuilder> 
+        getCampaignAssetFieldBuilder() {
+      if (campaignAssetBuilder_ == null) {
+        campaignAssetBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.ads.googleads.v5.resources.CampaignAsset, com.google.ads.googleads.v5.resources.CampaignAsset.Builder, com.google.ads.googleads.v5.resources.CampaignAssetOrBuilder>(
+                getCampaignAsset(),
+                getParentForChildren(),
+                isClean());
+        campaignAsset_ = null;
+      }
+      return campaignAssetBuilder_;
     }
 
     private com.google.ads.googleads.v5.resources.CampaignAudienceView campaignAudienceView_;

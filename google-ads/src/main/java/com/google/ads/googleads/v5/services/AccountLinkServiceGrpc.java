@@ -62,6 +62,37 @@ public final class AccountLinkServiceGrpc {
     return getGetAccountLinkMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.google.ads.googleads.v5.services.CreateAccountLinkRequest,
+      com.google.ads.googleads.v5.services.CreateAccountLinkResponse> getCreateAccountLinkMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "CreateAccountLink",
+      requestType = com.google.ads.googleads.v5.services.CreateAccountLinkRequest.class,
+      responseType = com.google.ads.googleads.v5.services.CreateAccountLinkResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.google.ads.googleads.v5.services.CreateAccountLinkRequest,
+      com.google.ads.googleads.v5.services.CreateAccountLinkResponse> getCreateAccountLinkMethod() {
+    io.grpc.MethodDescriptor<com.google.ads.googleads.v5.services.CreateAccountLinkRequest, com.google.ads.googleads.v5.services.CreateAccountLinkResponse> getCreateAccountLinkMethod;
+    if ((getCreateAccountLinkMethod = AccountLinkServiceGrpc.getCreateAccountLinkMethod) == null) {
+      synchronized (AccountLinkServiceGrpc.class) {
+        if ((getCreateAccountLinkMethod = AccountLinkServiceGrpc.getCreateAccountLinkMethod) == null) {
+          AccountLinkServiceGrpc.getCreateAccountLinkMethod = getCreateAccountLinkMethod =
+              io.grpc.MethodDescriptor.<com.google.ads.googleads.v5.services.CreateAccountLinkRequest, com.google.ads.googleads.v5.services.CreateAccountLinkResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreateAccountLink"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.google.ads.googleads.v5.services.CreateAccountLinkRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.google.ads.googleads.v5.services.CreateAccountLinkResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new AccountLinkServiceMethodDescriptorSupplier("CreateAccountLink"))
+              .build();
+        }
+      }
+    }
+    return getCreateAccountLinkMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<com.google.ads.googleads.v5.services.MutateAccountLinkRequest,
       com.google.ads.googleads.v5.services.MutateAccountLinkResponse> getMutateAccountLinkMethod;
 
@@ -157,7 +188,20 @@ public final class AccountLinkServiceGrpc {
 
     /**
      * <pre>
+     * Creates an account link.
+     * </pre>
+     */
+    public void createAccountLink(com.google.ads.googleads.v5.services.CreateAccountLinkRequest request,
+        io.grpc.stub.StreamObserver<com.google.ads.googleads.v5.services.CreateAccountLinkResponse> responseObserver) {
+      asyncUnimplementedUnaryCall(getCreateAccountLinkMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
      * Creates or removes an account link.
+     * From V5, create is not supported through
+     * AccountLinkService.MutateAccountLink. Please use
+     * AccountLinkService.CreateAccountLink instead.
      * </pre>
      */
     public void mutateAccountLink(com.google.ads.googleads.v5.services.MutateAccountLinkRequest request,
@@ -174,6 +218,13 @@ public final class AccountLinkServiceGrpc {
                 com.google.ads.googleads.v5.services.GetAccountLinkRequest,
                 com.google.ads.googleads.v5.resources.AccountLink>(
                   this, METHODID_GET_ACCOUNT_LINK)))
+          .addMethod(
+            getCreateAccountLinkMethod(),
+            asyncUnaryCall(
+              new MethodHandlers<
+                com.google.ads.googleads.v5.services.CreateAccountLinkRequest,
+                com.google.ads.googleads.v5.services.CreateAccountLinkResponse>(
+                  this, METHODID_CREATE_ACCOUNT_LINK)))
           .addMethod(
             getMutateAccountLinkMethod(),
             asyncUnaryCall(
@@ -216,7 +267,21 @@ public final class AccountLinkServiceGrpc {
 
     /**
      * <pre>
+     * Creates an account link.
+     * </pre>
+     */
+    public void createAccountLink(com.google.ads.googleads.v5.services.CreateAccountLinkRequest request,
+        io.grpc.stub.StreamObserver<com.google.ads.googleads.v5.services.CreateAccountLinkResponse> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(getCreateAccountLinkMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
      * Creates or removes an account link.
+     * From V5, create is not supported through
+     * AccountLinkService.MutateAccountLink. Please use
+     * AccountLinkService.CreateAccountLink instead.
      * </pre>
      */
     public void mutateAccountLink(com.google.ads.googleads.v5.services.MutateAccountLinkRequest request,
@@ -256,7 +321,20 @@ public final class AccountLinkServiceGrpc {
 
     /**
      * <pre>
+     * Creates an account link.
+     * </pre>
+     */
+    public com.google.ads.googleads.v5.services.CreateAccountLinkResponse createAccountLink(com.google.ads.googleads.v5.services.CreateAccountLinkRequest request) {
+      return blockingUnaryCall(
+          getChannel(), getCreateAccountLinkMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
      * Creates or removes an account link.
+     * From V5, create is not supported through
+     * AccountLinkService.MutateAccountLink. Please use
+     * AccountLinkService.CreateAccountLink instead.
      * </pre>
      */
     public com.google.ads.googleads.v5.services.MutateAccountLinkResponse mutateAccountLink(com.google.ads.googleads.v5.services.MutateAccountLinkRequest request) {
@@ -296,7 +374,21 @@ public final class AccountLinkServiceGrpc {
 
     /**
      * <pre>
+     * Creates an account link.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.google.ads.googleads.v5.services.CreateAccountLinkResponse> createAccountLink(
+        com.google.ads.googleads.v5.services.CreateAccountLinkRequest request) {
+      return futureUnaryCall(
+          getChannel().newCall(getCreateAccountLinkMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
      * Creates or removes an account link.
+     * From V5, create is not supported through
+     * AccountLinkService.MutateAccountLink. Please use
+     * AccountLinkService.CreateAccountLink instead.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.google.ads.googleads.v5.services.MutateAccountLinkResponse> mutateAccountLink(
@@ -307,7 +399,8 @@ public final class AccountLinkServiceGrpc {
   }
 
   private static final int METHODID_GET_ACCOUNT_LINK = 0;
-  private static final int METHODID_MUTATE_ACCOUNT_LINK = 1;
+  private static final int METHODID_CREATE_ACCOUNT_LINK = 1;
+  private static final int METHODID_MUTATE_ACCOUNT_LINK = 2;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -329,6 +422,10 @@ public final class AccountLinkServiceGrpc {
         case METHODID_GET_ACCOUNT_LINK:
           serviceImpl.getAccountLink((com.google.ads.googleads.v5.services.GetAccountLinkRequest) request,
               (io.grpc.stub.StreamObserver<com.google.ads.googleads.v5.resources.AccountLink>) responseObserver);
+          break;
+        case METHODID_CREATE_ACCOUNT_LINK:
+          serviceImpl.createAccountLink((com.google.ads.googleads.v5.services.CreateAccountLinkRequest) request,
+              (io.grpc.stub.StreamObserver<com.google.ads.googleads.v5.services.CreateAccountLinkResponse>) responseObserver);
           break;
         case METHODID_MUTATE_ACCOUNT_LINK:
           serviceImpl.mutateAccountLink((com.google.ads.googleads.v5.services.MutateAccountLinkRequest) request,
@@ -396,6 +493,7 @@ public final class AccountLinkServiceGrpc {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new AccountLinkServiceFileDescriptorSupplier())
               .addMethod(getGetAccountLinkMethod())
+              .addMethod(getCreateAccountLinkMethod())
               .addMethod(getMutateAccountLinkMethod())
               .build();
         }

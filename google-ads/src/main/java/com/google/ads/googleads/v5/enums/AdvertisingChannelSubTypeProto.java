@@ -31,8 +31,8 @@ public final class AdvertisingChannelSubTypeProto {
       "\n@google/ads/googleads/v5/enums/advertis" +
       "ing_channel_sub_type.proto\022\035google.ads.g" +
       "oogleads.v5.enums\032\034google/api/annotation" +
-      "s.proto\"\251\003\n\035AdvertisingChannelSubTypeEnu" +
-      "m\"\207\003\n\031AdvertisingChannelSubType\022\017\n\013UNSPE" +
+      "s.proto\"\321\003\n\035AdvertisingChannelSubTypeEnu" +
+      "m\"\257\003\n\031AdvertisingChannelSubType\022\017\n\013UNSPE" +
       "CIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\025\n\021SEARCH_MOBILE_A" +
       "PP\020\002\022\026\n\022DISPLAY_MOBILE_APP\020\003\022\022\n\016SEARCH_E" +
       "XPRESS\020\004\022\023\n\017DISPLAY_EXPRESS\020\005\022\026\n\022SHOPPIN" +
@@ -41,7 +41,8 @@ public final class AdvertisingChannelSubTypeProto {
       "AM\020\t\022\020\n\014VIDEO_ACTION\020\n\022\027\n\023VIDEO_NON_SKIP" +
       "PABLE\020\013\022\020\n\014APP_CAMPAIGN\020\014\022\037\n\033APP_CAMPAIG" +
       "N_FOR_ENGAGEMENT\020\r\022\022\n\016LOCAL_CAMPAIGN\020\016\022#" +
-      "\n\037SHOPPING_COMPARISON_LISTING_ADS\020\017B\363\001\n!" +
+      "\n\037SHOPPING_COMPARISON_LISTING_ADS\020\017\022\022\n\016S" +
+      "MART_CAMPAIGN\020\020\022\022\n\016VIDEO_SEQUENCE\020\021B\363\001\n!" +
       "com.google.ads.googleads.v5.enumsB\036Adver" +
       "tisingChannelSubTypeProtoP\001ZBgoogle.gola" +
       "ng.org/genproto/googleapis/ads/googleads" +

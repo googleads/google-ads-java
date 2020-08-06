@@ -14,6 +14,11 @@ public final class AccountLinkErrorProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_google_ads_googleads_v5_errors_AccountLinkErrorEnum_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_google_ads_googleads_v5_errors_AccountLinkErrorEnum_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -25,20 +30,28 @@ public final class AccountLinkErrorProto {
     java.lang.String[] descriptorData = {
       "\n7google/ads/googleads/v5/errors/account" +
       "_link_error.proto\022\036google.ads.googleads." +
-      "v5.errors\032\034google/api/annotations.protoB" +
-      "\360\001\n\"com.google.ads.googleads.v5.errorsB\025" +
-      "AccountLinkErrorProtoP\001ZDgoogle.golang.o" +
-      "rg/genproto/googleapis/ads/googleads/v5/" +
-      "errors;errors\242\002\003GAA\252\002\036Google.Ads.GoogleA" +
-      "ds.V5.Errors\312\002\036Google\\Ads\\GoogleAds\\V5\\E" +
-      "rrors\352\002\"Google::Ads::GoogleAds::V5::Erro" +
-      "rsb\006proto3"
+      "v5.errors\032\034google/api/annotations.proto\"" +
+      "\\\n\024AccountLinkErrorEnum\"D\n\020AccountLinkEr" +
+      "ror\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\022\n\016INV" +
+      "ALID_STATUS\020\002B\360\001\n\"com.google.ads.googlea" +
+      "ds.v5.errorsB\025AccountLinkErrorProtoP\001ZDg" +
+      "oogle.golang.org/genproto/googleapis/ads" +
+      "/googleads/v5/errors;errors\242\002\003GAA\252\002\036Goog" +
+      "le.Ads.GoogleAds.V5.Errors\312\002\036Google\\Ads\\" +
+      "GoogleAds\\V5\\Errors\352\002\"Google::Ads::Googl" +
+      "eAds::V5::Errorsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.api.AnnotationsProto.getDescriptor(),
         });
+    internal_static_google_ads_googleads_v5_errors_AccountLinkErrorEnum_descriptor =
+      getDescriptor().getMessageTypes().get(0);
+    internal_static_google_ads_googleads_v5_errors_AccountLinkErrorEnum_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_google_ads_googleads_v5_errors_AccountLinkErrorEnum_descriptor,
+        new java.lang.String[] { });
     com.google.api.AnnotationsProto.getDescriptor();
   }
 

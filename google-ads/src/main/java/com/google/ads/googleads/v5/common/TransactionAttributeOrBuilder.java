@@ -127,7 +127,7 @@ public interface TransactionAttributeOrBuilder extends
   /**
    * <pre>
    * Transaction order id.
-   * Accessible to whitelisted customers only.
+   * Accessible only to customers on the allow-list.
    * </pre>
    *
    * <code>.google.protobuf.StringValue order_id = 5;</code>
@@ -137,7 +137,7 @@ public interface TransactionAttributeOrBuilder extends
   /**
    * <pre>
    * Transaction order id.
-   * Accessible to whitelisted customers only.
+   * Accessible only to customers on the allow-list.
    * </pre>
    *
    * <code>.google.protobuf.StringValue order_id = 5;</code>
@@ -147,7 +147,7 @@ public interface TransactionAttributeOrBuilder extends
   /**
    * <pre>
    * Transaction order id.
-   * Accessible to whitelisted customers only.
+   * Accessible only to customers on the allow-list.
    * </pre>
    *
    * <code>.google.protobuf.StringValue order_id = 5;</code>
@@ -157,7 +157,7 @@ public interface TransactionAttributeOrBuilder extends
   /**
    * <pre>
    * Store attributes of the transaction.
-   * Accessible to whitelisted customers only.
+   * Accessible only to customers on the allow-list.
    * </pre>
    *
    * <code>.google.ads.googleads.v5.common.StoreAttribute store_attribute = 6;</code>
@@ -167,7 +167,7 @@ public interface TransactionAttributeOrBuilder extends
   /**
    * <pre>
    * Store attributes of the transaction.
-   * Accessible to whitelisted customers only.
+   * Accessible only to customers on the allow-list.
    * </pre>
    *
    * <code>.google.ads.googleads.v5.common.StoreAttribute store_attribute = 6;</code>
@@ -177,7 +177,7 @@ public interface TransactionAttributeOrBuilder extends
   /**
    * <pre>
    * Store attributes of the transaction.
-   * Accessible to whitelisted customers only.
+   * Accessible only to customers on the allow-list.
    * </pre>
    *
    * <code>.google.ads.googleads.v5.common.StoreAttribute store_attribute = 6;</code>
@@ -187,7 +187,7 @@ public interface TransactionAttributeOrBuilder extends
   /**
    * <pre>
    * Value of the custom variable for each transaction.
-   * Accessible to whitelisted customers only.
+   * Accessible only to customers on the allow-list.
    * </pre>
    *
    * <code>.google.protobuf.StringValue custom_value = 7;</code>
@@ -197,7 +197,7 @@ public interface TransactionAttributeOrBuilder extends
   /**
    * <pre>
    * Value of the custom variable for each transaction.
-   * Accessible to whitelisted customers only.
+   * Accessible only to customers on the allow-list.
    * </pre>
    *
    * <code>.google.protobuf.StringValue custom_value = 7;</code>
@@ -207,7 +207,7 @@ public interface TransactionAttributeOrBuilder extends
   /**
    * <pre>
    * Value of the custom variable for each transaction.
-   * Accessible to whitelisted customers only.
+   * Accessible only to customers on the allow-list.
    * </pre>
    *
    * <code>.google.protobuf.StringValue custom_value = 7;</code>

@@ -30,16 +30,17 @@ public final class LinkedAccountTypeProto {
     java.lang.String[] descriptorData = {
       "\n7google/ads/googleads/v5/enums/linked_a" +
       "ccount_type.proto\022\035google.ads.googleads." +
-      "v5.enums\032\034google/api/annotations.proto\"i" +
-      "\n\025LinkedAccountTypeEnum\"P\n\021LinkedAccount" +
-      "Type\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\035\n\031TH" +
-      "IRD_PARTY_APP_ANALYTICS\020\002B\353\001\n!com.google" +
-      ".ads.googleads.v5.enumsB\026LinkedAccountTy" +
-      "peProtoP\001ZBgoogle.golang.org/genproto/go" +
-      "ogleapis/ads/googleads/v5/enums;enums\242\002\003" +
-      "GAA\252\002\035Google.Ads.GoogleAds.V5.Enums\312\002\035Go" +
-      "ogle\\Ads\\GoogleAds\\V5\\Enums\352\002!Google::Ad" +
-      "s::GoogleAds::V5::Enumsb\006proto3"
+      "v5.enums\032\034google/api/annotations.proto\"\213" +
+      "\001\n\025LinkedAccountTypeEnum\"r\n\021LinkedAccoun" +
+      "tType\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\035\n\031T" +
+      "HIRD_PARTY_APP_ANALYTICS\020\002\022\020\n\014DATA_PARTN" +
+      "ER\020\003\022\016\n\nGOOGLE_ADS\020\004B\353\001\n!com.google.ads." +
+      "googleads.v5.enumsB\026LinkedAccountTypePro" +
+      "toP\001ZBgoogle.golang.org/genproto/googlea" +
+      "pis/ads/googleads/v5/enums;enums\242\002\003GAA\252\002" +
+      "\035Google.Ads.GoogleAds.V5.Enums\312\002\035Google\\" +
+      "Ads\\GoogleAds\\V5\\Enums\352\002!Google::Ads::Go" +
+      "ogleAds::V5::Enumsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

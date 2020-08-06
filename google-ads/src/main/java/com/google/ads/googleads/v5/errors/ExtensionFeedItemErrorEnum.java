@@ -221,12 +221,13 @@ private static final long serialVersionUID = 0L;
     INVALID_CALL_CONVERSION_ACTION(14),
     /**
      * <pre>
-     * For a call extension, the customer is not whitelisted for call tracking.
+     * For a call extension, the customer is not on the allow-list for call
+     * tracking.
      * </pre>
      *
-     * <code>CUSTOMER_NOT_WHITELISTED_FOR_CALLTRACKING = 15;</code>
+     * <code>CUSTOMER_NOT_ON_ALLOWLIST_FOR_CALLTRACKING = 47;</code>
      */
-    CUSTOMER_NOT_WHITELISTED_FOR_CALLTRACKING(15),
+    CUSTOMER_NOT_ON_ALLOWLIST_FOR_CALLTRACKING(47),
     /**
      * <pre>
      * Call tracking is not supported for the given country for a call
@@ -272,7 +273,7 @@ private static final long serialVersionUID = 0L;
     HYPHENS_IN_REVIEW_EXTENSION_SNIPPET(20),
     /**
      * <pre>
-     * A blacklisted review source name or url was provided for a review
+     * A denylisted review source name or url was provided for a review
      * extension.
      * </pre>
      *
@@ -615,12 +616,13 @@ private static final long serialVersionUID = 0L;
     public static final int INVALID_CALL_CONVERSION_ACTION_VALUE = 14;
     /**
      * <pre>
-     * For a call extension, the customer is not whitelisted for call tracking.
+     * For a call extension, the customer is not on the allow-list for call
+     * tracking.
      * </pre>
      *
-     * <code>CUSTOMER_NOT_WHITELISTED_FOR_CALLTRACKING = 15;</code>
+     * <code>CUSTOMER_NOT_ON_ALLOWLIST_FOR_CALLTRACKING = 47;</code>
      */
-    public static final int CUSTOMER_NOT_WHITELISTED_FOR_CALLTRACKING_VALUE = 15;
+    public static final int CUSTOMER_NOT_ON_ALLOWLIST_FOR_CALLTRACKING_VALUE = 47;
     /**
      * <pre>
      * Call tracking is not supported for the given country for a call
@@ -666,7 +668,7 @@ private static final long serialVersionUID = 0L;
     public static final int HYPHENS_IN_REVIEW_EXTENSION_SNIPPET_VALUE = 20;
     /**
      * <pre>
-     * A blacklisted review source name or url was provided for a review
+     * A denylisted review source name or url was provided for a review
      * extension.
      * </pre>
      *
@@ -919,7 +921,7 @@ private static final long serialVersionUID = 0L;
         case 12: return INVALID_DOMESTIC_PHONE_NUMBER_FORMAT;
         case 13: return VANITY_PHONE_NUMBER_NOT_ALLOWED;
         case 14: return INVALID_CALL_CONVERSION_ACTION;
-        case 15: return CUSTOMER_NOT_WHITELISTED_FOR_CALLTRACKING;
+        case 47: return CUSTOMER_NOT_ON_ALLOWLIST_FOR_CALLTRACKING;
         case 16: return CALLTRACKING_NOT_SUPPORTED_FOR_COUNTRY;
         case 17: return CUSTOMER_CONSENT_FOR_CALL_RECORDING_REQUIRED;
         case 18: return INVALID_APP_ID;

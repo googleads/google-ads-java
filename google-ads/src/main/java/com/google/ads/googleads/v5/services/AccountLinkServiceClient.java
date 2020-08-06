@@ -240,6 +240,84 @@ public class AccountLinkServiceClient implements BackgroundResource {
 
   // AUTO-GENERATED DOCUMENTATION AND METHOD
   /**
+   * Creates an account link.
+   *
+   * <p>Sample code:
+   *
+   * <pre><code>
+   * try (AccountLinkServiceClient accountLinkServiceClient = AccountLinkServiceClient.create()) {
+   *   String customerId = "";
+   *   AccountLink accountLink = AccountLink.newBuilder().build();
+   *   CreateAccountLinkResponse response = accountLinkServiceClient.createAccountLink(customerId, accountLink);
+   * }
+   * </code></pre>
+   *
+   * @param customerId Required. The ID of the customer for which the account link is created.
+   * @param accountLink Required. The account link to be created.
+   * @throws com.google.api.gax.rpc.ApiException if the remote call fails
+   */
+  public final CreateAccountLinkResponse createAccountLink(
+      String customerId, AccountLink accountLink) {
+    CreateAccountLinkRequest request =
+        CreateAccountLinkRequest.newBuilder()
+            .setCustomerId(customerId)
+            .setAccountLink(accountLink)
+            .build();
+    return createAccountLink(request);
+  }
+
+  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  /**
+   * Creates an account link.
+   *
+   * <p>Sample code:
+   *
+   * <pre><code>
+   * try (AccountLinkServiceClient accountLinkServiceClient = AccountLinkServiceClient.create()) {
+   *   String customerId = "";
+   *   AccountLink accountLink = AccountLink.newBuilder().build();
+   *   CreateAccountLinkRequest request = CreateAccountLinkRequest.newBuilder()
+   *     .setCustomerId(customerId)
+   *     .setAccountLink(accountLink)
+   *     .build();
+   *   CreateAccountLinkResponse response = accountLinkServiceClient.createAccountLink(request);
+   * }
+   * </code></pre>
+   *
+   * @param request The request object containing all of the parameters for the API call.
+   * @throws com.google.api.gax.rpc.ApiException if the remote call fails
+   */
+  public final CreateAccountLinkResponse createAccountLink(CreateAccountLinkRequest request) {
+    return createAccountLinkCallable().call(request);
+  }
+
+  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  /**
+   * Creates an account link.
+   *
+   * <p>Sample code:
+   *
+   * <pre><code>
+   * try (AccountLinkServiceClient accountLinkServiceClient = AccountLinkServiceClient.create()) {
+   *   String customerId = "";
+   *   AccountLink accountLink = AccountLink.newBuilder().build();
+   *   CreateAccountLinkRequest request = CreateAccountLinkRequest.newBuilder()
+   *     .setCustomerId(customerId)
+   *     .setAccountLink(accountLink)
+   *     .build();
+   *   ApiFuture&lt;CreateAccountLinkResponse&gt; future = accountLinkServiceClient.createAccountLinkCallable().futureCall(request);
+   *   // Do something
+   *   CreateAccountLinkResponse response = future.get();
+   * }
+   * </code></pre>
+   */
+  public final UnaryCallable<CreateAccountLinkRequest, CreateAccountLinkResponse>
+      createAccountLinkCallable() {
+    return stub.createAccountLinkCallable();
+  }
+
+  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  /**
    * Creates or removes an account link. From V5, create is not supported through
    * AccountLinkService.MutateAccountLink. Please use AccountLinkService.CreateAccountLink instead.
    *

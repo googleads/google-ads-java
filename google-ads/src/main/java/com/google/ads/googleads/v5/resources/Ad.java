@@ -383,6 +383,20 @@ private static final long serialVersionUID = 0L;
             resourceName_ = s;
             break;
           }
+          case 314: {
+            com.google.ads.googleads.v5.common.VideoResponsiveAdInfo.Builder subBuilder = null;
+            if (adDataCase_ == 39) {
+              subBuilder = ((com.google.ads.googleads.v5.common.VideoResponsiveAdInfo) adData_).toBuilder();
+            }
+            adData_ =
+                input.readMessage(com.google.ads.googleads.v5.common.VideoResponsiveAdInfo.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.google.ads.googleads.v5.common.VideoResponsiveAdInfo) adData_);
+              adData_ = subBuilder.buildPartial();
+            }
+            adDataCase_ = 39;
+            break;
+          }
           case 320: {
             bitField0_ |= 0x00000001;
             id_ = input.readInt64();
@@ -498,6 +512,7 @@ private static final long serialVersionUID = 0L;
     GMAIL_AD(21),
     IMAGE_AD(22),
     VIDEO_AD(24),
+    VIDEO_RESPONSIVE_AD(39),
     RESPONSIVE_SEARCH_AD(25),
     LEGACY_RESPONSIVE_DISPLAY_AD(28),
     APP_AD(29),
@@ -534,6 +549,7 @@ private static final long serialVersionUID = 0L;
         case 21: return GMAIL_AD;
         case 22: return IMAGE_AD;
         case 24: return VIDEO_AD;
+        case 39: return VIDEO_RESPONSIVE_AD;
         case 25: return RESPONSIVE_SEARCH_AD;
         case 28: return LEGACY_RESPONSIVE_DISPLAY_AD;
         case 29: return APP_AD;
@@ -1754,6 +1770,49 @@ private static final long serialVersionUID = 0L;
     return com.google.ads.googleads.v5.common.VideoAdInfo.getDefaultInstance();
   }
 
+  public static final int VIDEO_RESPONSIVE_AD_FIELD_NUMBER = 39;
+  /**
+   * <pre>
+   * Details pertaining to a Video responsive ad.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v5.common.VideoResponsiveAdInfo video_responsive_ad = 39;</code>
+   * @return Whether the videoResponsiveAd field is set.
+   */
+  @java.lang.Override
+  public boolean hasVideoResponsiveAd() {
+    return adDataCase_ == 39;
+  }
+  /**
+   * <pre>
+   * Details pertaining to a Video responsive ad.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v5.common.VideoResponsiveAdInfo video_responsive_ad = 39;</code>
+   * @return The videoResponsiveAd.
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v5.common.VideoResponsiveAdInfo getVideoResponsiveAd() {
+    if (adDataCase_ == 39) {
+       return (com.google.ads.googleads.v5.common.VideoResponsiveAdInfo) adData_;
+    }
+    return com.google.ads.googleads.v5.common.VideoResponsiveAdInfo.getDefaultInstance();
+  }
+  /**
+   * <pre>
+   * Details pertaining to a Video responsive ad.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v5.common.VideoResponsiveAdInfo video_responsive_ad = 39;</code>
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v5.common.VideoResponsiveAdInfoOrBuilder getVideoResponsiveAdOrBuilder() {
+    if (adDataCase_ == 39) {
+       return (com.google.ads.googleads.v5.common.VideoResponsiveAdInfo) adData_;
+    }
+    return com.google.ads.googleads.v5.common.VideoResponsiveAdInfo.getDefaultInstance();
+  }
+
   public static final int RESPONSIVE_SEARCH_AD_FIELD_NUMBER = 25;
   /**
    * <pre>
@@ -2233,6 +2292,9 @@ private static final long serialVersionUID = 0L;
     if (!getResourceNameBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 37, resourceName_);
     }
+    if (adDataCase_ == 39) {
+      output.writeMessage(39, (com.google.ads.googleads.v5.common.VideoResponsiveAdInfo) adData_);
+    }
     if (((bitField0_ & 0x00000001) != 0)) {
       output.writeInt64(40, id_);
     }
@@ -2368,6 +2430,10 @@ private static final long serialVersionUID = 0L;
     }
     if (!getResourceNameBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(37, resourceName_);
+    }
+    if (adDataCase_ == 39) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(39, (com.google.ads.googleads.v5.common.VideoResponsiveAdInfo) adData_);
     }
     if (((bitField0_ & 0x00000001) != 0)) {
       size += com.google.protobuf.CodedOutputStream
@@ -2506,6 +2572,10 @@ private static final long serialVersionUID = 0L;
       case 24:
         if (!getVideoAd()
             .equals(other.getVideoAd())) return false;
+        break;
+      case 39:
+        if (!getVideoResponsiveAd()
+            .equals(other.getVideoResponsiveAd())) return false;
         break;
       case 25:
         if (!getResponsiveSearchAd()
@@ -2651,6 +2721,10 @@ private static final long serialVersionUID = 0L;
       case 24:
         hash = (37 * hash) + VIDEO_AD_FIELD_NUMBER;
         hash = (53 * hash) + getVideoAd().hashCode();
+        break;
+      case 39:
+        hash = (37 * hash) + VIDEO_RESPONSIVE_AD_FIELD_NUMBER;
+        hash = (53 * hash) + getVideoResponsiveAd().hashCode();
         break;
       case 25:
         hash = (37 * hash) + RESPONSIVE_SEARCH_AD_FIELD_NUMBER;
@@ -3038,6 +3112,13 @@ private static final long serialVersionUID = 0L;
           result.adData_ = videoAdBuilder_.build();
         }
       }
+      if (adDataCase_ == 39) {
+        if (videoResponsiveAdBuilder_ == null) {
+          result.adData_ = adData_;
+        } else {
+          result.adData_ = videoResponsiveAdBuilder_.build();
+        }
+      }
       if (adDataCase_ == 25) {
         if (responsiveSearchAdBuilder_ == null) {
           result.adData_ = adData_;
@@ -3327,6 +3408,10 @@ private static final long serialVersionUID = 0L;
         }
         case VIDEO_AD: {
           mergeVideoAd(other.getVideoAd());
+          break;
+        }
+        case VIDEO_RESPONSIVE_AD: {
+          mergeVideoResponsiveAd(other.getVideoResponsiveAd());
           break;
         }
         case RESPONSIVE_SEARCH_AD: {
@@ -7462,6 +7547,183 @@ private static final long serialVersionUID = 0L;
       adDataCase_ = 24;
       onChanged();;
       return videoAdBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v5.common.VideoResponsiveAdInfo, com.google.ads.googleads.v5.common.VideoResponsiveAdInfo.Builder, com.google.ads.googleads.v5.common.VideoResponsiveAdInfoOrBuilder> videoResponsiveAdBuilder_;
+    /**
+     * <pre>
+     * Details pertaining to a Video responsive ad.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v5.common.VideoResponsiveAdInfo video_responsive_ad = 39;</code>
+     * @return Whether the videoResponsiveAd field is set.
+     */
+    @java.lang.Override
+    public boolean hasVideoResponsiveAd() {
+      return adDataCase_ == 39;
+    }
+    /**
+     * <pre>
+     * Details pertaining to a Video responsive ad.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v5.common.VideoResponsiveAdInfo video_responsive_ad = 39;</code>
+     * @return The videoResponsiveAd.
+     */
+    @java.lang.Override
+    public com.google.ads.googleads.v5.common.VideoResponsiveAdInfo getVideoResponsiveAd() {
+      if (videoResponsiveAdBuilder_ == null) {
+        if (adDataCase_ == 39) {
+          return (com.google.ads.googleads.v5.common.VideoResponsiveAdInfo) adData_;
+        }
+        return com.google.ads.googleads.v5.common.VideoResponsiveAdInfo.getDefaultInstance();
+      } else {
+        if (adDataCase_ == 39) {
+          return videoResponsiveAdBuilder_.getMessage();
+        }
+        return com.google.ads.googleads.v5.common.VideoResponsiveAdInfo.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Details pertaining to a Video responsive ad.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v5.common.VideoResponsiveAdInfo video_responsive_ad = 39;</code>
+     */
+    public Builder setVideoResponsiveAd(com.google.ads.googleads.v5.common.VideoResponsiveAdInfo value) {
+      if (videoResponsiveAdBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        adData_ = value;
+        onChanged();
+      } else {
+        videoResponsiveAdBuilder_.setMessage(value);
+      }
+      adDataCase_ = 39;
+      return this;
+    }
+    /**
+     * <pre>
+     * Details pertaining to a Video responsive ad.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v5.common.VideoResponsiveAdInfo video_responsive_ad = 39;</code>
+     */
+    public Builder setVideoResponsiveAd(
+        com.google.ads.googleads.v5.common.VideoResponsiveAdInfo.Builder builderForValue) {
+      if (videoResponsiveAdBuilder_ == null) {
+        adData_ = builderForValue.build();
+        onChanged();
+      } else {
+        videoResponsiveAdBuilder_.setMessage(builderForValue.build());
+      }
+      adDataCase_ = 39;
+      return this;
+    }
+    /**
+     * <pre>
+     * Details pertaining to a Video responsive ad.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v5.common.VideoResponsiveAdInfo video_responsive_ad = 39;</code>
+     */
+    public Builder mergeVideoResponsiveAd(com.google.ads.googleads.v5.common.VideoResponsiveAdInfo value) {
+      if (videoResponsiveAdBuilder_ == null) {
+        if (adDataCase_ == 39 &&
+            adData_ != com.google.ads.googleads.v5.common.VideoResponsiveAdInfo.getDefaultInstance()) {
+          adData_ = com.google.ads.googleads.v5.common.VideoResponsiveAdInfo.newBuilder((com.google.ads.googleads.v5.common.VideoResponsiveAdInfo) adData_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          adData_ = value;
+        }
+        onChanged();
+      } else {
+        if (adDataCase_ == 39) {
+          videoResponsiveAdBuilder_.mergeFrom(value);
+        }
+        videoResponsiveAdBuilder_.setMessage(value);
+      }
+      adDataCase_ = 39;
+      return this;
+    }
+    /**
+     * <pre>
+     * Details pertaining to a Video responsive ad.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v5.common.VideoResponsiveAdInfo video_responsive_ad = 39;</code>
+     */
+    public Builder clearVideoResponsiveAd() {
+      if (videoResponsiveAdBuilder_ == null) {
+        if (adDataCase_ == 39) {
+          adDataCase_ = 0;
+          adData_ = null;
+          onChanged();
+        }
+      } else {
+        if (adDataCase_ == 39) {
+          adDataCase_ = 0;
+          adData_ = null;
+        }
+        videoResponsiveAdBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Details pertaining to a Video responsive ad.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v5.common.VideoResponsiveAdInfo video_responsive_ad = 39;</code>
+     */
+    public com.google.ads.googleads.v5.common.VideoResponsiveAdInfo.Builder getVideoResponsiveAdBuilder() {
+      return getVideoResponsiveAdFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Details pertaining to a Video responsive ad.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v5.common.VideoResponsiveAdInfo video_responsive_ad = 39;</code>
+     */
+    @java.lang.Override
+    public com.google.ads.googleads.v5.common.VideoResponsiveAdInfoOrBuilder getVideoResponsiveAdOrBuilder() {
+      if ((adDataCase_ == 39) && (videoResponsiveAdBuilder_ != null)) {
+        return videoResponsiveAdBuilder_.getMessageOrBuilder();
+      } else {
+        if (adDataCase_ == 39) {
+          return (com.google.ads.googleads.v5.common.VideoResponsiveAdInfo) adData_;
+        }
+        return com.google.ads.googleads.v5.common.VideoResponsiveAdInfo.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Details pertaining to a Video responsive ad.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v5.common.VideoResponsiveAdInfo video_responsive_ad = 39;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v5.common.VideoResponsiveAdInfo, com.google.ads.googleads.v5.common.VideoResponsiveAdInfo.Builder, com.google.ads.googleads.v5.common.VideoResponsiveAdInfoOrBuilder> 
+        getVideoResponsiveAdFieldBuilder() {
+      if (videoResponsiveAdBuilder_ == null) {
+        if (!(adDataCase_ == 39)) {
+          adData_ = com.google.ads.googleads.v5.common.VideoResponsiveAdInfo.getDefaultInstance();
+        }
+        videoResponsiveAdBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.ads.googleads.v5.common.VideoResponsiveAdInfo, com.google.ads.googleads.v5.common.VideoResponsiveAdInfo.Builder, com.google.ads.googleads.v5.common.VideoResponsiveAdInfoOrBuilder>(
+                (com.google.ads.googleads.v5.common.VideoResponsiveAdInfo) adData_,
+                getParentForChildren(),
+                isClean());
+        adData_ = null;
+      }
+      adDataCase_ = 39;
+      onChanged();;
+      return videoResponsiveAdBuilder_;
     }
 
     private com.google.protobuf.SingleFieldBuilderV3<

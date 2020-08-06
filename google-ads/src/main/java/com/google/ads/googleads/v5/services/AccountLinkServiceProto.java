@@ -20,6 +20,16 @@ public final class AccountLinkServiceProto {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_google_ads_googleads_v5_services_GetAccountLinkRequest_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_google_ads_googleads_v5_services_CreateAccountLinkRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_google_ads_googleads_v5_services_CreateAccountLinkRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_google_ads_googleads_v5_services_CreateAccountLinkResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_google_ads_googleads_v5_services_CreateAccountLinkResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
     internal_static_google_ads_googleads_v5_services_MutateAccountLinkRequest_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -56,36 +66,46 @@ public final class AccountLinkServiceProto {
       "roto\032\037google/api/field_behavior.proto\032\031g" +
       "oogle/api/resource.proto\"\\\n\025GetAccountLi" +
       "nkRequest\022C\n\rresource_name\030\001 \001(\tB,\340A\002\372A&" +
-      "\n$googleads.googleapis.com/AccountLink\"\264" +
-      "\001\n\030MutateAccountLinkRequest\022\030\n\013customer_" +
-      "id\030\001 \001(\tB\003\340A\002\022N\n\toperation\030\002 \001(\01326.googl" +
-      "e.ads.googleads.v5.services.AccountLinkO" +
-      "perationB\003\340A\002\022\027\n\017partial_failure\030\003 \001(\010\022\025" +
-      "\n\rvalidate_only\030\004 \001(\010\"5\n\024AccountLinkOper" +
-      "ation\022\020\n\006remove\030\003 \001(\tH\000B\013\n\toperation\"f\n\031" +
-      "MutateAccountLinkResponse\022I\n\006result\030\001 \001(" +
-      "\01329.google.ads.googleads.v5.services.Mut" +
-      "ateAccountLinkResult\"0\n\027MutateAccountLin" +
-      "kResult\022\025\n\rresource_name\030\001 \001(\t2\332\003\n\022Accou" +
-      "ntLinkService\022\301\001\n\016GetAccountLink\0227.googl" +
-      "e.ads.googleads.v5.services.GetAccountLi" +
-      "nkRequest\032..google.ads.googleads.v5.reso" +
-      "urces.AccountLink\"F\202\323\344\223\0020\022./v5/{resource" +
-      "_name=customers/*/accountLinks/*}\332A\rreso" +
-      "urce_name\022\342\001\n\021MutateAccountLink\022:.google" +
-      ".ads.googleads.v5.services.MutateAccount" +
-      "LinkRequest\032;.google.ads.googleads.v5.se" +
-      "rvices.MutateAccountLinkResponse\"T\202\323\344\223\0026" +
-      "\"1/v5/customers/{customer_id=*}/accountL" +
-      "inks:mutate:\001*\332A\025customer_id,operation\032\033" +
-      "\312A\030googleads.googleapis.comB\376\001\n$com.goog" +
-      "le.ads.googleads.v5.servicesB\027AccountLin" +
-      "kServiceProtoP\001ZHgoogle.golang.org/genpr" +
-      "oto/googleapis/ads/googleads/v5/services" +
-      ";services\242\002\003GAA\252\002 Google.Ads.GoogleAds.V" +
-      "5.Services\312\002 Google\\Ads\\GoogleAds\\V5\\Ser" +
-      "vices\352\002$Google::Ads::GoogleAds::V5::Serv" +
-      "icesb\006proto3"
+      "\n$googleads.googleapis.com/AccountLink\"\177" +
+      "\n\030CreateAccountLinkRequest\022\030\n\013customer_i" +
+      "d\030\001 \001(\tB\003\340A\002\022I\n\014account_link\030\002 \001(\0132..goo" +
+      "gle.ads.googleads.v5.resources.AccountLi" +
+      "nkB\003\340A\002\"2\n\031CreateAccountLinkResponse\022\025\n\r" +
+      "resource_name\030\001 \001(\t\"\264\001\n\030MutateAccountLin" +
+      "kRequest\022\030\n\013customer_id\030\001 \001(\tB\003\340A\002\022N\n\top" +
+      "eration\030\002 \001(\01326.google.ads.googleads.v5." +
+      "services.AccountLinkOperationB\003\340A\002\022\027\n\017pa" +
+      "rtial_failure\030\003 \001(\010\022\025\n\rvalidate_only\030\004 \001" +
+      "(\010\"5\n\024AccountLinkOperation\022\020\n\006remove\030\003 \001" +
+      "(\tH\000B\013\n\toperation\"f\n\031MutateAccountLinkRe" +
+      "sponse\022I\n\006result\030\001 \001(\01329.google.ads.goog" +
+      "leads.v5.services.MutateAccountLinkResul" +
+      "t\"0\n\027MutateAccountLinkResult\022\025\n\rresource" +
+      "_name\030\001 \001(\t2\302\005\n\022AccountLinkService\022\301\001\n\016G" +
+      "etAccountLink\0227.google.ads.googleads.v5." +
+      "services.GetAccountLinkRequest\032..google." +
+      "ads.googleads.v5.resources.AccountLink\"F" +
+      "\202\323\344\223\0020\022./v5/{resource_name=customers/*/a" +
+      "ccountLinks/*}\332A\rresource_name\022\345\001\n\021Creat" +
+      "eAccountLink\022:.google.ads.googleads.v5.s" +
+      "ervices.CreateAccountLinkRequest\032;.googl" +
+      "e.ads.googleads.v5.services.CreateAccoun" +
+      "tLinkResponse\"W\202\323\344\223\0026\"1/v5/customers/{cu" +
+      "stomer_id=*}/accountLinks:create:\001*\332A\030cu" +
+      "stomer_id,account_link\022\342\001\n\021MutateAccount" +
+      "Link\022:.google.ads.googleads.v5.services." +
+      "MutateAccountLinkRequest\032;.google.ads.go" +
+      "ogleads.v5.services.MutateAccountLinkRes" +
+      "ponse\"T\202\323\344\223\0026\"1/v5/customers/{customer_i" +
+      "d=*}/accountLinks:mutate:\001*\332A\025customer_i" +
+      "d,operation\032\033\312A\030googleads.googleapis.com" +
+      "B\376\001\n$com.google.ads.googleads.v5.service" +
+      "sB\027AccountLinkServiceProtoP\001ZHgoogle.gol" +
+      "ang.org/genproto/googleapis/ads/googlead" +
+      "s/v5/services;services\242\002\003GAA\252\002 Google.Ad" +
+      "s.GoogleAds.V5.Services\312\002 Google\\Ads\\Goo" +
+      "gleAds\\V5\\Services\352\002$Google::Ads::Google" +
+      "Ads::V5::Servicesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -102,26 +122,38 @@ public final class AccountLinkServiceProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v5_services_GetAccountLinkRequest_descriptor,
         new java.lang.String[] { "ResourceName", });
-    internal_static_google_ads_googleads_v5_services_MutateAccountLinkRequest_descriptor =
+    internal_static_google_ads_googleads_v5_services_CreateAccountLinkRequest_descriptor =
       getDescriptor().getMessageTypes().get(1);
+    internal_static_google_ads_googleads_v5_services_CreateAccountLinkRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_google_ads_googleads_v5_services_CreateAccountLinkRequest_descriptor,
+        new java.lang.String[] { "CustomerId", "AccountLink", });
+    internal_static_google_ads_googleads_v5_services_CreateAccountLinkResponse_descriptor =
+      getDescriptor().getMessageTypes().get(2);
+    internal_static_google_ads_googleads_v5_services_CreateAccountLinkResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_google_ads_googleads_v5_services_CreateAccountLinkResponse_descriptor,
+        new java.lang.String[] { "ResourceName", });
+    internal_static_google_ads_googleads_v5_services_MutateAccountLinkRequest_descriptor =
+      getDescriptor().getMessageTypes().get(3);
     internal_static_google_ads_googleads_v5_services_MutateAccountLinkRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v5_services_MutateAccountLinkRequest_descriptor,
         new java.lang.String[] { "CustomerId", "Operation", "PartialFailure", "ValidateOnly", });
     internal_static_google_ads_googleads_v5_services_AccountLinkOperation_descriptor =
-      getDescriptor().getMessageTypes().get(2);
+      getDescriptor().getMessageTypes().get(4);
     internal_static_google_ads_googleads_v5_services_AccountLinkOperation_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v5_services_AccountLinkOperation_descriptor,
         new java.lang.String[] { "Remove", "Operation", });
     internal_static_google_ads_googleads_v5_services_MutateAccountLinkResponse_descriptor =
-      getDescriptor().getMessageTypes().get(3);
+      getDescriptor().getMessageTypes().get(5);
     internal_static_google_ads_googleads_v5_services_MutateAccountLinkResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v5_services_MutateAccountLinkResponse_descriptor,
         new java.lang.String[] { "Result", });
     internal_static_google_ads_googleads_v5_services_MutateAccountLinkResult_descriptor =
-      getDescriptor().getMessageTypes().get(4);
+      getDescriptor().getMessageTypes().get(6);
     internal_static_google_ads_googleads_v5_services_MutateAccountLinkResult_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v5_services_MutateAccountLinkResult_descriptor,

@@ -17,6 +17,8 @@ package com.google.ads.googleads.v5.services.stub;
 
 import com.google.ads.googleads.v5.resources.ThirdPartyAppAnalyticsLink;
 import com.google.ads.googleads.v5.services.GetThirdPartyAppAnalyticsLinkRequest;
+import com.google.ads.googleads.v5.services.RegenerateShareableLinkIdRequest;
+import com.google.ads.googleads.v5.services.RegenerateShareableLinkIdResponse;
 import com.google.api.core.ApiFunction;
 import com.google.api.core.BetaApi;
 import com.google.api.gax.core.GaxProperties;
@@ -82,11 +84,20 @@ public class ThirdPartyAppAnalyticsLinkServiceStubSettings
 
   private final UnaryCallSettings<GetThirdPartyAppAnalyticsLinkRequest, ThirdPartyAppAnalyticsLink>
       getThirdPartyAppAnalyticsLinkSettings;
+  private final UnaryCallSettings<
+          RegenerateShareableLinkIdRequest, RegenerateShareableLinkIdResponse>
+      regenerateShareableLinkIdSettings;
 
   /** Returns the object with the settings used for calls to getThirdPartyAppAnalyticsLink. */
   public UnaryCallSettings<GetThirdPartyAppAnalyticsLinkRequest, ThirdPartyAppAnalyticsLink>
       getThirdPartyAppAnalyticsLinkSettings() {
     return getThirdPartyAppAnalyticsLinkSettings;
+  }
+
+  /** Returns the object with the settings used for calls to regenerateShareableLinkId. */
+  public UnaryCallSettings<RegenerateShareableLinkIdRequest, RegenerateShareableLinkIdResponse>
+      regenerateShareableLinkIdSettings() {
+    return regenerateShareableLinkIdSettings;
   }
 
   @BetaApi("A restructuring of stub classes is planned, so this may break in the future")
@@ -162,6 +173,7 @@ public class ThirdPartyAppAnalyticsLinkServiceStubSettings
 
     getThirdPartyAppAnalyticsLinkSettings =
         settingsBuilder.getThirdPartyAppAnalyticsLinkSettings().build();
+    regenerateShareableLinkIdSettings = settingsBuilder.regenerateShareableLinkIdSettings().build();
   }
 
   /** Builder for ThirdPartyAppAnalyticsLinkServiceStubSettings. */
@@ -172,6 +184,9 @@ public class ThirdPartyAppAnalyticsLinkServiceStubSettings
     private final UnaryCallSettings.Builder<
             GetThirdPartyAppAnalyticsLinkRequest, ThirdPartyAppAnalyticsLink>
         getThirdPartyAppAnalyticsLinkSettings;
+    private final UnaryCallSettings.Builder<
+            RegenerateShareableLinkIdRequest, RegenerateShareableLinkIdResponse>
+        regenerateShareableLinkIdSettings;
 
     private static final ImmutableMap<String, ImmutableSet<StatusCode.Code>>
         RETRYABLE_CODE_DEFINITIONS;
@@ -228,8 +243,11 @@ public class ThirdPartyAppAnalyticsLinkServiceStubSettings
 
       getThirdPartyAppAnalyticsLinkSettings = UnaryCallSettings.newUnaryCallSettingsBuilder();
 
+      regenerateShareableLinkIdSettings = UnaryCallSettings.newUnaryCallSettingsBuilder();
+
       unaryMethodSettingsBuilders =
-          ImmutableList.<UnaryCallSettings.Builder<?, ?>>of(getThirdPartyAppAnalyticsLinkSettings);
+          ImmutableList.<UnaryCallSettings.Builder<?, ?>>of(
+              getThirdPartyAppAnalyticsLinkSettings, regenerateShareableLinkIdSettings);
 
       initDefaults(this);
     }
@@ -250,6 +268,11 @@ public class ThirdPartyAppAnalyticsLinkServiceStubSettings
           .setRetryableCodes(RETRYABLE_CODE_DEFINITIONS.get("retry_policy_1_codes"))
           .setRetrySettings(RETRY_PARAM_DEFINITIONS.get("retry_policy_1_params"));
 
+      builder
+          .regenerateShareableLinkIdSettings()
+          .setRetryableCodes(RETRYABLE_CODE_DEFINITIONS.get("retry_policy_1_codes"))
+          .setRetrySettings(RETRY_PARAM_DEFINITIONS.get("retry_policy_1_params"));
+
       return builder;
     }
 
@@ -258,9 +281,11 @@ public class ThirdPartyAppAnalyticsLinkServiceStubSettings
 
       getThirdPartyAppAnalyticsLinkSettings =
           settings.getThirdPartyAppAnalyticsLinkSettings.toBuilder();
+      regenerateShareableLinkIdSettings = settings.regenerateShareableLinkIdSettings.toBuilder();
 
       unaryMethodSettingsBuilders =
-          ImmutableList.<UnaryCallSettings.Builder<?, ?>>of(getThirdPartyAppAnalyticsLinkSettings);
+          ImmutableList.<UnaryCallSettings.Builder<?, ?>>of(
+              getThirdPartyAppAnalyticsLinkSettings, regenerateShareableLinkIdSettings);
     }
 
     // NEXT_MAJOR_VER: remove 'throws Exception'
@@ -284,6 +309,13 @@ public class ThirdPartyAppAnalyticsLinkServiceStubSettings
             GetThirdPartyAppAnalyticsLinkRequest, ThirdPartyAppAnalyticsLink>
         getThirdPartyAppAnalyticsLinkSettings() {
       return getThirdPartyAppAnalyticsLinkSettings;
+    }
+
+    /** Returns the builder for the settings used for calls to regenerateShareableLinkId. */
+    public UnaryCallSettings.Builder<
+            RegenerateShareableLinkIdRequest, RegenerateShareableLinkIdResponse>
+        regenerateShareableLinkIdSettings() {
+      return regenerateShareableLinkIdSettings;
     }
 
     @Override

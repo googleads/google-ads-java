@@ -73,6 +73,22 @@ public class MockAccountLinkServiceImpl extends AccountLinkServiceImplBase {
   }
 
   @Override
+  public void createAccountLink(
+      CreateAccountLinkRequest request,
+      StreamObserver<CreateAccountLinkResponse> responseObserver) {
+    Object response = responses.remove();
+    if (response instanceof CreateAccountLinkResponse) {
+      requests.add(request);
+      responseObserver.onNext((CreateAccountLinkResponse) response);
+      responseObserver.onCompleted();
+    } else if (response instanceof Exception) {
+      responseObserver.onError((Exception) response);
+    } else {
+      responseObserver.onError(new IllegalArgumentException("Unrecognized response type"));
+    }
+  }
+
+  @Override
   public void mutateAccountLink(
       MutateAccountLinkRequest request,
       StreamObserver<MutateAccountLinkResponse> responseObserver) {

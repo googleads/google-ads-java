@@ -118,6 +118,22 @@ private static final long serialVersionUID = 0L;
      * <code>THIRD_PARTY_APP_ANALYTICS = 2;</code>
      */
     THIRD_PARTY_APP_ANALYTICS(2),
+    /**
+     * <pre>
+     * A link to Data partner.
+     * </pre>
+     *
+     * <code>DATA_PARTNER = 3;</code>
+     */
+    DATA_PARTNER(3),
+    /**
+     * <pre>
+     * A link to Google Ads.
+     * </pre>
+     *
+     * <code>GOOGLE_ADS = 4;</code>
+     */
+    GOOGLE_ADS(4),
     UNRECOGNIZED(-1),
     ;
 
@@ -145,6 +161,22 @@ private static final long serialVersionUID = 0L;
      * <code>THIRD_PARTY_APP_ANALYTICS = 2;</code>
      */
     public static final int THIRD_PARTY_APP_ANALYTICS_VALUE = 2;
+    /**
+     * <pre>
+     * A link to Data partner.
+     * </pre>
+     *
+     * <code>DATA_PARTNER = 3;</code>
+     */
+    public static final int DATA_PARTNER_VALUE = 3;
+    /**
+     * <pre>
+     * A link to Google Ads.
+     * </pre>
+     *
+     * <code>GOOGLE_ADS = 4;</code>
+     */
+    public static final int GOOGLE_ADS_VALUE = 4;
 
 
     public final int getNumber() {
@@ -174,6 +206,8 @@ private static final long serialVersionUID = 0L;
         case 0: return UNSPECIFIED;
         case 1: return UNKNOWN;
         case 2: return THIRD_PARTY_APP_ANALYTICS;
+        case 3: return DATA_PARTNER;
+        case 4: return GOOGLE_ADS;
         default: return null;
       }
     }

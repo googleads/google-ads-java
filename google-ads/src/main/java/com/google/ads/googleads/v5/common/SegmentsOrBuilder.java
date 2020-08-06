@@ -28,6 +28,33 @@ public interface SegmentsOrBuilder extends
 
   /**
    * <pre>
+   * Budget campaign association status.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v5.common.BudgetCampaignAssociationStatus budget_campaign_association_status = 134;</code>
+   * @return Whether the budgetCampaignAssociationStatus field is set.
+   */
+  boolean hasBudgetCampaignAssociationStatus();
+  /**
+   * <pre>
+   * Budget campaign association status.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v5.common.BudgetCampaignAssociationStatus budget_campaign_association_status = 134;</code>
+   * @return The budgetCampaignAssociationStatus.
+   */
+  com.google.ads.googleads.v5.common.BudgetCampaignAssociationStatus getBudgetCampaignAssociationStatus();
+  /**
+   * <pre>
+   * Budget campaign association status.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v5.common.BudgetCampaignAssociationStatus budget_campaign_association_status = 134;</code>
+   */
+  com.google.ads.googleads.v5.common.BudgetCampaignAssociationStatusOrBuilder getBudgetCampaignAssociationStatusOrBuilder();
+
+  /**
+   * <pre>
    * Click type.
    * </pre>
    *

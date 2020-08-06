@@ -34,7 +34,7 @@ public final class GeoTargetConstantProto {
       "5/enums/geo_target_constant_status.proto" +
       "\032\037google/api/field_behavior.proto\032\031googl" +
       "e/api/resource.proto\032\034google/api/annotat" +
-      "ions.proto\"\365\003\n\021GeoTargetConstant\022I\n\rreso" +
+      "ions.proto\"\304\004\n\021GeoTargetConstant\022I\n\rreso" +
       "urce_name\030\001 \001(\tB2\340A\003\372A,\n*googleads.googl" +
       "eapis.com/GeoTargetConstant\022\024\n\002id\030\n \001(\003B" +
       "\003\340A\003H\000\210\001\001\022\026\n\004name\030\013 \001(\tB\003\340A\003H\001\210\001\001\022\036\n\014cou" +
@@ -42,18 +42,20 @@ public final class GeoTargetConstantProto {
       "\030\r \001(\tB\003\340A\003H\003\210\001\001\022g\n\006status\030\007 \001(\0162R.googl" +
       "e.ads.googleads.v5.enums.GeoTargetConsta" +
       "ntStatusEnum.GeoTargetConstantStatusB\003\340A" +
-      "\003\022 \n\016canonical_name\030\016 \001(\tB\003\340A\003H\004\210\001\001:Y\352AV" +
-      "\n*googleads.googleapis.com/GeoTargetCons" +
-      "tant\022(geoTargetConstants/{geo_target_con" +
-      "stant}B\005\n\003_idB\007\n\005_nameB\017\n\r_country_codeB" +
-      "\016\n\014_target_typeB\021\n\017_canonical_nameB\203\002\n%c" +
-      "om.google.ads.googleads.v5.resourcesB\026Ge" +
-      "oTargetConstantProtoP\001ZJgoogle.golang.or" +
-      "g/genproto/googleapis/ads/googleads/v5/r" +
-      "esources;resources\242\002\003GAA\252\002!Google.Ads.Go" +
-      "ogleAds.V5.Resources\312\002!Google\\Ads\\Google" +
-      "Ads\\V5\\Resources\352\002%Google::Ads::GoogleAd" +
-      "s::V5::Resourcesb\006proto3"
+      "\003\022 \n\016canonical_name\030\016 \001(\tB\003\340A\003H\004\210\001\001\022M\n\021p" +
+      "arent_geo_target\030\t \001(\tB2\340A\003\372A,\n*googlead" +
+      "s.googleapis.com/GeoTargetConstant:Y\352AV\n" +
+      "*googleads.googleapis.com/GeoTargetConst" +
+      "ant\022(geoTargetConstants/{geo_target_cons" +
+      "tant}B\005\n\003_idB\007\n\005_nameB\017\n\r_country_codeB\016" +
+      "\n\014_target_typeB\021\n\017_canonical_nameB\203\002\n%co" +
+      "m.google.ads.googleads.v5.resourcesB\026Geo" +
+      "TargetConstantProtoP\001ZJgoogle.golang.org" +
+      "/genproto/googleapis/ads/googleads/v5/re" +
+      "sources;resources\242\002\003GAA\252\002!Google.Ads.Goo" +
+      "gleAds.V5.Resources\312\002!Google\\Ads\\GoogleA" +
+      "ds\\V5\\Resources\352\002%Google::Ads::GoogleAds" +
+      "::V5::Resourcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -68,7 +70,7 @@ public final class GeoTargetConstantProto {
     internal_static_google_ads_googleads_v5_resources_GeoTargetConstant_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v5_resources_GeoTargetConstant_descriptor,
-        new java.lang.String[] { "ResourceName", "Id", "Name", "CountryCode", "TargetType", "Status", "CanonicalName", "Id", "Name", "CountryCode", "TargetType", "CanonicalName", });
+        new java.lang.String[] { "ResourceName", "Id", "Name", "CountryCode", "TargetType", "Status", "CanonicalName", "ParentGeoTarget", "Id", "Name", "CountryCode", "TargetType", "CanonicalName", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);

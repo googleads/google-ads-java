@@ -62,6 +62,7 @@ public class BiddingStrategyServiceClientTest {
   private static MockAgeRangeViewService mockAgeRangeViewService;
   private static MockAssetService mockAssetService;
   private static MockBiddingStrategyService mockBiddingStrategyService;
+  private static MockCampaignAssetService mockCampaignAssetService;
   private static MockCampaignBidModifierService mockCampaignBidModifierService;
   private static MockCampaignBudgetService mockCampaignBudgetService;
   private static MockCampaignCriterionService mockCampaignCriterionService;
@@ -183,6 +184,7 @@ public class BiddingStrategyServiceClientTest {
     mockAgeRangeViewService = new MockAgeRangeViewService();
     mockAssetService = new MockAssetService();
     mockBiddingStrategyService = new MockBiddingStrategyService();
+    mockCampaignAssetService = new MockCampaignAssetService();
     mockCampaignBidModifierService = new MockCampaignBidModifierService();
     mockCampaignBudgetService = new MockCampaignBudgetService();
     mockCampaignCriterionService = new MockCampaignCriterionService();
@@ -299,6 +301,7 @@ public class BiddingStrategyServiceClientTest {
                 mockAgeRangeViewService,
                 mockAssetService,
                 mockBiddingStrategyService,
+                mockCampaignAssetService,
                 mockCampaignBidModifierService,
                 mockCampaignBudgetService,
                 mockCampaignCriterionService,
@@ -424,6 +427,7 @@ public class BiddingStrategyServiceClientTest {
     com.google.ads.googleads.v5.services.BiddingStrategyName name =
         com.google.ads.googleads.v5.services.BiddingStrategyName.of(
             "[CUSTOMER]", "[BIDDING_STRATEGY]");
+    String effectiveCurrencyCode = "effectiveCurrencyCode2004903107";
     long campaignCount = 1320441568L;
     long nonRemovedCampaignCount = 789221521L;
     BiddingStrategy expectedResponse =
@@ -431,6 +435,7 @@ public class BiddingStrategyServiceClientTest {
             .setResourceName(resourceName2.toString())
             .setId(id)
             .setName(name.toString())
+            .setEffectiveCurrencyCode(effectiveCurrencyCode)
             .setCampaignCount(campaignCount)
             .setNonRemovedCampaignCount(nonRemovedCampaignCount)
             .build();

@@ -62,6 +62,7 @@ public class ThirdPartyAppAnalyticsLinkServiceClientTest {
   private static MockAgeRangeViewService mockAgeRangeViewService;
   private static MockAssetService mockAssetService;
   private static MockBiddingStrategyService mockBiddingStrategyService;
+  private static MockCampaignAssetService mockCampaignAssetService;
   private static MockCampaignBidModifierService mockCampaignBidModifierService;
   private static MockCampaignBudgetService mockCampaignBudgetService;
   private static MockCampaignCriterionService mockCampaignCriterionService;
@@ -183,6 +184,7 @@ public class ThirdPartyAppAnalyticsLinkServiceClientTest {
     mockAgeRangeViewService = new MockAgeRangeViewService();
     mockAssetService = new MockAssetService();
     mockBiddingStrategyService = new MockBiddingStrategyService();
+    mockCampaignAssetService = new MockCampaignAssetService();
     mockCampaignBidModifierService = new MockCampaignBidModifierService();
     mockCampaignBudgetService = new MockCampaignBudgetService();
     mockCampaignCriterionService = new MockCampaignCriterionService();
@@ -299,6 +301,7 @@ public class ThirdPartyAppAnalyticsLinkServiceClientTest {
                 mockAgeRangeViewService,
                 mockAssetService,
                 mockBiddingStrategyService,
+                mockCampaignAssetService,
                 mockCampaignBidModifierService,
                 mockCampaignBudgetService,
                 mockCampaignCriterionService,
@@ -451,6 +454,47 @@ public class ThirdPartyAppAnalyticsLinkServiceClientTest {
           GetThirdPartyAppAnalyticsLinkRequest.newBuilder().build();
 
       client.getThirdPartyAppAnalyticsLink(request);
+      Assert.fail("No exception raised");
+    } catch (InvalidArgumentException e) {
+      // Expected exception
+    }
+  }
+
+  @Test
+  @SuppressWarnings("all")
+  public void regenerateShareableLinkIdTest() {
+    RegenerateShareableLinkIdResponse expectedResponse =
+        RegenerateShareableLinkIdResponse.newBuilder().build();
+    mockThirdPartyAppAnalyticsLinkService.addResponse(expectedResponse);
+
+    RegenerateShareableLinkIdRequest request =
+        RegenerateShareableLinkIdRequest.newBuilder().build();
+
+    RegenerateShareableLinkIdResponse actualResponse = client.regenerateShareableLinkId(request);
+    Assert.assertEquals(expectedResponse, actualResponse);
+
+    List<AbstractMessage> actualRequests = mockThirdPartyAppAnalyticsLinkService.getRequests();
+    Assert.assertEquals(1, actualRequests.size());
+    RegenerateShareableLinkIdRequest actualRequest =
+        (RegenerateShareableLinkIdRequest) actualRequests.get(0);
+
+    Assert.assertTrue(
+        channelProvider.isHeaderSent(
+            ApiClientHeaderProvider.getDefaultApiClientHeaderKey(),
+            GaxGrpcProperties.getDefaultApiClientHeaderPattern()));
+  }
+
+  @Test
+  @SuppressWarnings("all")
+  public void regenerateShareableLinkIdExceptionTest() throws Exception {
+    StatusRuntimeException exception = new StatusRuntimeException(Status.INVALID_ARGUMENT);
+    mockThirdPartyAppAnalyticsLinkService.addException(exception);
+
+    try {
+      RegenerateShareableLinkIdRequest request =
+          RegenerateShareableLinkIdRequest.newBuilder().build();
+
+      client.regenerateShareableLinkId(request);
       Assert.fail("No exception raised");
     } catch (InvalidArgumentException e) {
       // Expected exception

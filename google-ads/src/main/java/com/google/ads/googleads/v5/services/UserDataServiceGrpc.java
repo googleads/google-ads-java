@@ -18,7 +18,7 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 /**
  * <pre>
  * Service to manage user data uploads.
- * Accessible to whitelisted customers only.
+ * Accessible only to customers on the allow-list.
  * </pre>
  */
 @javax.annotation.Generated(
@@ -109,7 +109,7 @@ public final class UserDataServiceGrpc {
   /**
    * <pre>
    * Service to manage user data uploads.
-   * Accessible to whitelisted customers only.
+   * Accessible only to customers on the allow-list.
    * </pre>
    */
   public static abstract class UserDataServiceImplBase implements io.grpc.BindableService {
@@ -140,7 +140,7 @@ public final class UserDataServiceGrpc {
   /**
    * <pre>
    * Service to manage user data uploads.
-   * Accessible to whitelisted customers only.
+   * Accessible only to customers on the allow-list.
    * </pre>
    */
   public static final class UserDataServiceStub extends io.grpc.stub.AbstractAsyncStub<UserDataServiceStub> {
@@ -170,7 +170,7 @@ public final class UserDataServiceGrpc {
   /**
    * <pre>
    * Service to manage user data uploads.
-   * Accessible to whitelisted customers only.
+   * Accessible only to customers on the allow-list.
    * </pre>
    */
   public static final class UserDataServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<UserDataServiceBlockingStub> {
@@ -199,7 +199,7 @@ public final class UserDataServiceGrpc {
   /**
    * <pre>
    * Service to manage user data uploads.
-   * Accessible to whitelisted customers only.
+   * Accessible only to customers on the allow-list.
    * </pre>
    */
   public static final class UserDataServiceFutureStub extends io.grpc.stub.AbstractFutureStub<UserDataServiceFutureStub> {

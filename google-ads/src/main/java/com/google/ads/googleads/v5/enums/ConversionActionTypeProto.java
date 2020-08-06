@@ -31,7 +31,7 @@ public final class ConversionActionTypeProto {
       "\n:google/ads/googleads/v5/enums/conversi" +
       "on_action_type.proto\022\035google.ads.googlea" +
       "ds.v5.enums\032\034google/api/annotations.prot" +
-      "o\"\376\005\n\030ConversionActionTypeEnum\"\341\005\n\024Conve" +
+      "o\"\351\010\n\030ConversionActionTypeEnum\"\314\010\n\024Conve" +
       "rsionActionType\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKN" +
       "OWN\020\001\022\013\n\007AD_CALL\020\002\022\021\n\rCLICK_TO_CALL\020\003\022\030\n" +
       "\024GOOGLE_PLAY_DOWNLOAD\020\004\022\037\n\033GOOGLE_PLAY_I" +
@@ -50,13 +50,22 @@ public final class ConversionActionTypeProto {
       "_PARTY_APP_ANALYTICS_IOS_FIRST_OPEN\020\025\0221\n" +
       "-THIRD_PARTY_APP_ANALYTICS_IOS_IN_APP_PU" +
       "RCHASE\020\026\022(\n$THIRD_PARTY_APP_ANALYTICS_IO" +
-      "S_CUSTOM\020\027B\356\001\n!com.google.ads.googleads." +
-      "v5.enumsB\031ConversionActionTypeProtoP\001ZBg" +
-      "oogle.golang.org/genproto/googleapis/ads" +
-      "/googleads/v5/enums;enums\242\002\003GAA\252\002\035Google" +
-      ".Ads.GoogleAds.V5.Enums\312\002\035Google\\Ads\\Goo" +
-      "gleAds\\V5\\Enums\352\002!Google::Ads::GoogleAds" +
-      "::V5::Enumsb\006proto3"
+      "S_CUSTOM\020\027\022 \n\034ANDROID_APP_PRE_REGISTRATI" +
+      "ON\020\030\022#\n\037ANDROID_INSTALLS_ALL_OTHER_APPS\020" +
+      "\031\022\025\n\021FLOODLIGHT_ACTION\020\032\022\032\n\026FLOODLIGHT_T" +
+      "RANSACTION\020\033\022\021\n\rGOOGLE_HOSTED\020\034\022\024\n\020LEAD_" +
+      "FORM_SUBMIT\020\035\022\016\n\nSALESFORCE\020\036\022\022\n\016SEARCH_" +
+      "ADS_360\020\037\022$\n SMART_CAMPAIGN_AD_CLICKS_TO" +
+      "_CALL\020 \022%\n!SMART_CAMPAIGN_MAP_CLICKS_TO_" +
+      "CALL\020!\022!\n\035SMART_CAMPAIGN_MAP_DIRECTIONS\020" +
+      "\"\022 \n\034SMART_CAMPAIGN_TRACKED_CALLS\020#\022\020\n\014S" +
+      "TORE_VISITS\020$B\356\001\n!com.google.ads.googlea" +
+      "ds.v5.enumsB\031ConversionActionTypeProtoP\001" +
+      "ZBgoogle.golang.org/genproto/googleapis/" +
+      "ads/googleads/v5/enums;enums\242\002\003GAA\252\002\035Goo" +
+      "gle.Ads.GoogleAds.V5.Enums\312\002\035Google\\Ads\\" +
+      "GoogleAds\\V5\\Enums\352\002!Google::Ads::Google" +
+      "Ads::V5::Enumsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

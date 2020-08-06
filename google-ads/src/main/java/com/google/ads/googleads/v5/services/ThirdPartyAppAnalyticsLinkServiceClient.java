@@ -193,6 +193,49 @@ public class ThirdPartyAppAnalyticsLinkServiceClient implements BackgroundResour
     return stub.getThirdPartyAppAnalyticsLinkCallable();
   }
 
+  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  /**
+   * Regenerate ThirdPartyAppAnalyticsLink.shareable_link_id that should be provided to the third
+   * party when setting up app analytics.
+   *
+   * <p>Sample code:
+   *
+   * <pre><code>
+   * try (ThirdPartyAppAnalyticsLinkServiceClient thirdPartyAppAnalyticsLinkServiceClient = ThirdPartyAppAnalyticsLinkServiceClient.create()) {
+   *   RegenerateShareableLinkIdRequest request = RegenerateShareableLinkIdRequest.newBuilder().build();
+   *   RegenerateShareableLinkIdResponse response = thirdPartyAppAnalyticsLinkServiceClient.regenerateShareableLinkId(request);
+   * }
+   * </code></pre>
+   *
+   * @param request The request object containing all of the parameters for the API call.
+   * @throws com.google.api.gax.rpc.ApiException if the remote call fails
+   */
+  public final RegenerateShareableLinkIdResponse regenerateShareableLinkId(
+      RegenerateShareableLinkIdRequest request) {
+    return regenerateShareableLinkIdCallable().call(request);
+  }
+
+  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  /**
+   * Regenerate ThirdPartyAppAnalyticsLink.shareable_link_id that should be provided to the third
+   * party when setting up app analytics.
+   *
+   * <p>Sample code:
+   *
+   * <pre><code>
+   * try (ThirdPartyAppAnalyticsLinkServiceClient thirdPartyAppAnalyticsLinkServiceClient = ThirdPartyAppAnalyticsLinkServiceClient.create()) {
+   *   RegenerateShareableLinkIdRequest request = RegenerateShareableLinkIdRequest.newBuilder().build();
+   *   ApiFuture&lt;RegenerateShareableLinkIdResponse&gt; future = thirdPartyAppAnalyticsLinkServiceClient.regenerateShareableLinkIdCallable().futureCall(request);
+   *   // Do something
+   *   RegenerateShareableLinkIdResponse response = future.get();
+   * }
+   * </code></pre>
+   */
+  public final UnaryCallable<RegenerateShareableLinkIdRequest, RegenerateShareableLinkIdResponse>
+      regenerateShareableLinkIdCallable() {
+    return stub.regenerateShareableLinkIdCallable();
+  }
+
   @Override
   public final void close() {
     stub.close();

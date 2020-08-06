@@ -14,8 +14,8 @@
 
 package com.google.ads.googleads.v5.services;
 
-import com.google.ads.googleads.annotations.api.VersionDescriptor;
 import com.google.ads.googleads.lib.catalog.annotation.ServiceClientDescriptor;
+import com.google.ads.googleads.annotations.api.VersionDescriptor;
 import com.google.ads.googleads.v5.errors.GoogleAdsException;
 
 @VersionDescriptor(versionName = "v5",
@@ -93,6 +93,9 @@ public interface GoogleAdsVersion {
          
         @ServiceClientDescriptor(settingsClass = BillingSetupServiceSettings.class)
         BillingSetupServiceClient createBillingSetupServiceClient();
+         
+        @ServiceClientDescriptor(settingsClass = CampaignAssetServiceSettings.class)
+        CampaignAssetServiceClient createCampaignAssetServiceClient();
          
         @ServiceClientDescriptor(settingsClass = CampaignAudienceViewServiceSettings.class)
         CampaignAudienceViewServiceClient createCampaignAudienceViewServiceClient();

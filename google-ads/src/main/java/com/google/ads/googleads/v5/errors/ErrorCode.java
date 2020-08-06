@@ -712,6 +712,18 @@ private static final long serialVersionUID = 0L;
             errorCode_ = rawValue;
             break;
           }
+          case 1072: {
+            int rawValue = input.readEnum();
+            errorCodeCase_ = 134;
+            errorCode_ = rawValue;
+            break;
+          }
+          case 1080: {
+            int rawValue = input.readEnum();
+            errorCodeCase_ = 135;
+            errorCode_ = rawValue;
+            break;
+          }
           case 1096: {
             int rawValue = input.readEnum();
             errorCodeCase_ = 137;
@@ -866,6 +878,8 @@ private static final long serialVersionUID = 0L;
     ASSET_LINK_ERROR(129),
     USER_DATA_ERROR(130),
     BATCH_JOB_ERROR(131),
+    ACCOUNT_LINK_ERROR(134),
+    THIRD_PARTY_APP_ANALYTICS_LINK_ERROR(135),
     ERRORCODE_NOT_SET(0);
     private final int value;
     private ErrorCodeCase(int value) {
@@ -994,6 +1008,8 @@ private static final long serialVersionUID = 0L;
         case 129: return ASSET_LINK_ERROR;
         case 130: return USER_DATA_ERROR;
         case 131: return BATCH_JOB_ERROR;
+        case 134: return ACCOUNT_LINK_ERROR;
+        case 135: return THIRD_PARTY_APP_ANALYTICS_LINK_ERROR;
         case 0: return ERRORCODE_NOT_SET;
         default: return null;
       }
@@ -4672,6 +4688,72 @@ private static final long serialVersionUID = 0L;
     return com.google.ads.googleads.v5.errors.BatchJobErrorEnum.BatchJobError.UNSPECIFIED;
   }
 
+  public static final int ACCOUNT_LINK_ERROR_FIELD_NUMBER = 134;
+  /**
+   * <pre>
+   * The reasons for the account link status change error
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v5.errors.AccountLinkErrorEnum.AccountLinkError account_link_error = 134;</code>
+   * @return The enum numeric value on the wire for accountLinkError.
+   */
+  public int getAccountLinkErrorValue() {
+    if (errorCodeCase_ == 134) {
+      return (java.lang.Integer) errorCode_;
+    }
+    return 0;
+  }
+  /**
+   * <pre>
+   * The reasons for the account link status change error
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v5.errors.AccountLinkErrorEnum.AccountLinkError account_link_error = 134;</code>
+   * @return The accountLinkError.
+   */
+  public com.google.ads.googleads.v5.errors.AccountLinkErrorEnum.AccountLinkError getAccountLinkError() {
+    if (errorCodeCase_ == 134) {
+      @SuppressWarnings("deprecation")
+      com.google.ads.googleads.v5.errors.AccountLinkErrorEnum.AccountLinkError result = com.google.ads.googleads.v5.errors.AccountLinkErrorEnum.AccountLinkError.valueOf(
+          (java.lang.Integer) errorCode_);
+      return result == null ? com.google.ads.googleads.v5.errors.AccountLinkErrorEnum.AccountLinkError.UNRECOGNIZED : result;
+    }
+    return com.google.ads.googleads.v5.errors.AccountLinkErrorEnum.AccountLinkError.UNSPECIFIED;
+  }
+
+  public static final int THIRD_PARTY_APP_ANALYTICS_LINK_ERROR_FIELD_NUMBER = 135;
+  /**
+   * <pre>
+   * The reasons for the third party app analytics link mutate error
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v5.errors.ThirdPartyAppAnalyticsLinkErrorEnum.ThirdPartyAppAnalyticsLinkError third_party_app_analytics_link_error = 135;</code>
+   * @return The enum numeric value on the wire for thirdPartyAppAnalyticsLinkError.
+   */
+  public int getThirdPartyAppAnalyticsLinkErrorValue() {
+    if (errorCodeCase_ == 135) {
+      return (java.lang.Integer) errorCode_;
+    }
+    return 0;
+  }
+  /**
+   * <pre>
+   * The reasons for the third party app analytics link mutate error
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v5.errors.ThirdPartyAppAnalyticsLinkErrorEnum.ThirdPartyAppAnalyticsLinkError third_party_app_analytics_link_error = 135;</code>
+   * @return The thirdPartyAppAnalyticsLinkError.
+   */
+  public com.google.ads.googleads.v5.errors.ThirdPartyAppAnalyticsLinkErrorEnum.ThirdPartyAppAnalyticsLinkError getThirdPartyAppAnalyticsLinkError() {
+    if (errorCodeCase_ == 135) {
+      @SuppressWarnings("deprecation")
+      com.google.ads.googleads.v5.errors.ThirdPartyAppAnalyticsLinkErrorEnum.ThirdPartyAppAnalyticsLinkError result = com.google.ads.googleads.v5.errors.ThirdPartyAppAnalyticsLinkErrorEnum.ThirdPartyAppAnalyticsLinkError.valueOf(
+          (java.lang.Integer) errorCode_);
+      return result == null ? com.google.ads.googleads.v5.errors.ThirdPartyAppAnalyticsLinkErrorEnum.ThirdPartyAppAnalyticsLinkError.UNRECOGNIZED : result;
+    }
+    return com.google.ads.googleads.v5.errors.ThirdPartyAppAnalyticsLinkErrorEnum.ThirdPartyAppAnalyticsLinkError.UNSPECIFIED;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -5015,6 +5097,12 @@ private static final long serialVersionUID = 0L;
     }
     if (errorCodeCase_ == 133) {
       output.writeEnum(133, ((java.lang.Integer) errorCode_));
+    }
+    if (errorCodeCase_ == 134) {
+      output.writeEnum(134, ((java.lang.Integer) errorCode_));
+    }
+    if (errorCodeCase_ == 135) {
+      output.writeEnum(135, ((java.lang.Integer) errorCode_));
     }
     if (errorCodeCase_ == 137) {
       output.writeEnum(137, ((java.lang.Integer) errorCode_));
@@ -5467,6 +5555,14 @@ private static final long serialVersionUID = 0L;
     if (errorCodeCase_ == 133) {
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(133, ((java.lang.Integer) errorCode_));
+    }
+    if (errorCodeCase_ == 134) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(134, ((java.lang.Integer) errorCode_));
+    }
+    if (errorCodeCase_ == 135) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(135, ((java.lang.Integer) errorCode_));
     }
     if (errorCodeCase_ == 137) {
       size += com.google.protobuf.CodedOutputStream
@@ -5933,6 +6029,14 @@ private static final long serialVersionUID = 0L;
         if (getBatchJobErrorValue()
             != other.getBatchJobErrorValue()) return false;
         break;
+      case 134:
+        if (getAccountLinkErrorValue()
+            != other.getAccountLinkErrorValue()) return false;
+        break;
+      case 135:
+        if (getThirdPartyAppAnalyticsLinkErrorValue()
+            != other.getThirdPartyAppAnalyticsLinkErrorValue()) return false;
+        break;
       case 0:
       default:
     }
@@ -6391,6 +6495,14 @@ private static final long serialVersionUID = 0L;
       case 131:
         hash = (37 * hash) + BATCH_JOB_ERROR_FIELD_NUMBER;
         hash = (53 * hash) + getBatchJobErrorValue();
+        break;
+      case 134:
+        hash = (37 * hash) + ACCOUNT_LINK_ERROR_FIELD_NUMBER;
+        hash = (53 * hash) + getAccountLinkErrorValue();
+        break;
+      case 135:
+        hash = (37 * hash) + THIRD_PARTY_APP_ANALYTICS_LINK_ERROR_FIELD_NUMBER;
+        hash = (53 * hash) + getThirdPartyAppAnalyticsLinkErrorValue();
         break;
       case 0:
       default:
@@ -6893,6 +7005,12 @@ private static final long serialVersionUID = 0L;
       if (errorCodeCase_ == 131) {
         result.errorCode_ = errorCode_;
       }
+      if (errorCodeCase_ == 134) {
+        result.errorCode_ = errorCode_;
+      }
+      if (errorCodeCase_ == 135) {
+        result.errorCode_ = errorCode_;
+      }
       result.errorCodeCase_ = errorCodeCase_;
       onBuilt();
       return result;
@@ -7385,6 +7503,14 @@ private static final long serialVersionUID = 0L;
         }
         case BATCH_JOB_ERROR: {
           setBatchJobErrorValue(other.getBatchJobErrorValue());
+          break;
+        }
+        case ACCOUNT_LINK_ERROR: {
+          setAccountLinkErrorValue(other.getAccountLinkErrorValue());
+          break;
+        }
+        case THIRD_PARTY_APP_ANALYTICS_LINK_ERROR: {
+          setThirdPartyAppAnalyticsLinkErrorValue(other.getThirdPartyAppAnalyticsLinkErrorValue());
           break;
         }
         case ERRORCODE_NOT_SET: {
@@ -16641,6 +16767,172 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearBatchJobError() {
       if (errorCodeCase_ == 131) {
+        errorCodeCase_ = 0;
+        errorCode_ = null;
+        onChanged();
+      }
+      return this;
+    }
+
+    /**
+     * <pre>
+     * The reasons for the account link status change error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v5.errors.AccountLinkErrorEnum.AccountLinkError account_link_error = 134;</code>
+     * @return The enum numeric value on the wire for accountLinkError.
+     */
+    @java.lang.Override
+    public int getAccountLinkErrorValue() {
+      if (errorCodeCase_ == 134) {
+        return ((java.lang.Integer) errorCode_).intValue();
+      }
+      return 0;
+    }
+    /**
+     * <pre>
+     * The reasons for the account link status change error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v5.errors.AccountLinkErrorEnum.AccountLinkError account_link_error = 134;</code>
+     * @param value The enum numeric value on the wire for accountLinkError to set.
+     * @return This builder for chaining.
+     */
+    public Builder setAccountLinkErrorValue(int value) {
+      errorCodeCase_ = 134;
+      errorCode_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The reasons for the account link status change error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v5.errors.AccountLinkErrorEnum.AccountLinkError account_link_error = 134;</code>
+     * @return The accountLinkError.
+     */
+    @java.lang.Override
+    public com.google.ads.googleads.v5.errors.AccountLinkErrorEnum.AccountLinkError getAccountLinkError() {
+      if (errorCodeCase_ == 134) {
+        @SuppressWarnings("deprecation")
+        com.google.ads.googleads.v5.errors.AccountLinkErrorEnum.AccountLinkError result = com.google.ads.googleads.v5.errors.AccountLinkErrorEnum.AccountLinkError.valueOf(
+            (java.lang.Integer) errorCode_);
+        return result == null ? com.google.ads.googleads.v5.errors.AccountLinkErrorEnum.AccountLinkError.UNRECOGNIZED : result;
+      }
+      return com.google.ads.googleads.v5.errors.AccountLinkErrorEnum.AccountLinkError.UNSPECIFIED;
+    }
+    /**
+     * <pre>
+     * The reasons for the account link status change error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v5.errors.AccountLinkErrorEnum.AccountLinkError account_link_error = 134;</code>
+     * @param value The accountLinkError to set.
+     * @return This builder for chaining.
+     */
+    public Builder setAccountLinkError(com.google.ads.googleads.v5.errors.AccountLinkErrorEnum.AccountLinkError value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      errorCodeCase_ = 134;
+      errorCode_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The reasons for the account link status change error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v5.errors.AccountLinkErrorEnum.AccountLinkError account_link_error = 134;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearAccountLinkError() {
+      if (errorCodeCase_ == 134) {
+        errorCodeCase_ = 0;
+        errorCode_ = null;
+        onChanged();
+      }
+      return this;
+    }
+
+    /**
+     * <pre>
+     * The reasons for the third party app analytics link mutate error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v5.errors.ThirdPartyAppAnalyticsLinkErrorEnum.ThirdPartyAppAnalyticsLinkError third_party_app_analytics_link_error = 135;</code>
+     * @return The enum numeric value on the wire for thirdPartyAppAnalyticsLinkError.
+     */
+    @java.lang.Override
+    public int getThirdPartyAppAnalyticsLinkErrorValue() {
+      if (errorCodeCase_ == 135) {
+        return ((java.lang.Integer) errorCode_).intValue();
+      }
+      return 0;
+    }
+    /**
+     * <pre>
+     * The reasons for the third party app analytics link mutate error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v5.errors.ThirdPartyAppAnalyticsLinkErrorEnum.ThirdPartyAppAnalyticsLinkError third_party_app_analytics_link_error = 135;</code>
+     * @param value The enum numeric value on the wire for thirdPartyAppAnalyticsLinkError to set.
+     * @return This builder for chaining.
+     */
+    public Builder setThirdPartyAppAnalyticsLinkErrorValue(int value) {
+      errorCodeCase_ = 135;
+      errorCode_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The reasons for the third party app analytics link mutate error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v5.errors.ThirdPartyAppAnalyticsLinkErrorEnum.ThirdPartyAppAnalyticsLinkError third_party_app_analytics_link_error = 135;</code>
+     * @return The thirdPartyAppAnalyticsLinkError.
+     */
+    @java.lang.Override
+    public com.google.ads.googleads.v5.errors.ThirdPartyAppAnalyticsLinkErrorEnum.ThirdPartyAppAnalyticsLinkError getThirdPartyAppAnalyticsLinkError() {
+      if (errorCodeCase_ == 135) {
+        @SuppressWarnings("deprecation")
+        com.google.ads.googleads.v5.errors.ThirdPartyAppAnalyticsLinkErrorEnum.ThirdPartyAppAnalyticsLinkError result = com.google.ads.googleads.v5.errors.ThirdPartyAppAnalyticsLinkErrorEnum.ThirdPartyAppAnalyticsLinkError.valueOf(
+            (java.lang.Integer) errorCode_);
+        return result == null ? com.google.ads.googleads.v5.errors.ThirdPartyAppAnalyticsLinkErrorEnum.ThirdPartyAppAnalyticsLinkError.UNRECOGNIZED : result;
+      }
+      return com.google.ads.googleads.v5.errors.ThirdPartyAppAnalyticsLinkErrorEnum.ThirdPartyAppAnalyticsLinkError.UNSPECIFIED;
+    }
+    /**
+     * <pre>
+     * The reasons for the third party app analytics link mutate error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v5.errors.ThirdPartyAppAnalyticsLinkErrorEnum.ThirdPartyAppAnalyticsLinkError third_party_app_analytics_link_error = 135;</code>
+     * @param value The thirdPartyAppAnalyticsLinkError to set.
+     * @return This builder for chaining.
+     */
+    public Builder setThirdPartyAppAnalyticsLinkError(com.google.ads.googleads.v5.errors.ThirdPartyAppAnalyticsLinkErrorEnum.ThirdPartyAppAnalyticsLinkError value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      errorCodeCase_ = 135;
+      errorCode_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The reasons for the third party app analytics link mutate error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v5.errors.ThirdPartyAppAnalyticsLinkErrorEnum.ThirdPartyAppAnalyticsLinkError third_party_app_analytics_link_error = 135;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearThirdPartyAppAnalyticsLinkError() {
+      if (errorCodeCase_ == 135) {
         errorCodeCase_ = 0;
         errorCode_ = null;
         onChanged();

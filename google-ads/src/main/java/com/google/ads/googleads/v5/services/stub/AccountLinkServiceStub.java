@@ -16,6 +16,8 @@
 package com.google.ads.googleads.v5.services.stub;
 
 import com.google.ads.googleads.v5.resources.AccountLink;
+import com.google.ads.googleads.v5.services.CreateAccountLinkRequest;
+import com.google.ads.googleads.v5.services.CreateAccountLinkResponse;
 import com.google.ads.googleads.v5.services.GetAccountLinkRequest;
 import com.google.ads.googleads.v5.services.MutateAccountLinkRequest;
 import com.google.ads.googleads.v5.services.MutateAccountLinkResponse;
@@ -36,6 +38,11 @@ public abstract class AccountLinkServiceStub implements BackgroundResource {
 
   public UnaryCallable<GetAccountLinkRequest, AccountLink> getAccountLinkCallable() {
     throw new UnsupportedOperationException("Not implemented: getAccountLinkCallable()");
+  }
+
+  public UnaryCallable<CreateAccountLinkRequest, CreateAccountLinkResponse>
+      createAccountLinkCallable() {
+    throw new UnsupportedOperationException("Not implemented: createAccountLinkCallable()");
   }
 
   public UnaryCallable<MutateAccountLinkRequest, MutateAccountLinkResponse>

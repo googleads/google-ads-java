@@ -360,6 +360,33 @@ public interface MutateOperationResponseOrBuilder extends
 
   /**
    * <pre>
+   * The result for the campaign asset mutate.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v5.services.MutateCampaignAssetResult campaign_asset_result = 52;</code>
+   * @return Whether the campaignAssetResult field is set.
+   */
+  boolean hasCampaignAssetResult();
+  /**
+   * <pre>
+   * The result for the campaign asset mutate.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v5.services.MutateCampaignAssetResult campaign_asset_result = 52;</code>
+   * @return The campaignAssetResult.
+   */
+  com.google.ads.googleads.v5.services.MutateCampaignAssetResult getCampaignAssetResult();
+  /**
+   * <pre>
+   * The result for the campaign asset mutate.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v5.services.MutateCampaignAssetResult campaign_asset_result = 52;</code>
+   */
+  com.google.ads.googleads.v5.services.MutateCampaignAssetResultOrBuilder getCampaignAssetResultOrBuilder();
+
+  /**
+   * <pre>
    * The result for the campaign bid modifier mutate.
    * </pre>
    *

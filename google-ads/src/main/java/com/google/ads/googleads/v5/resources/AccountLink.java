@@ -101,6 +101,34 @@ private static final long serialVersionUID = 0L;
             linkedAccountCase_ = 5;
             break;
           }
+          case 50: {
+            com.google.ads.googleads.v5.resources.DataPartnerLinkIdentifier.Builder subBuilder = null;
+            if (linkedAccountCase_ == 6) {
+              subBuilder = ((com.google.ads.googleads.v5.resources.DataPartnerLinkIdentifier) linkedAccount_).toBuilder();
+            }
+            linkedAccount_ =
+                input.readMessage(com.google.ads.googleads.v5.resources.DataPartnerLinkIdentifier.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.google.ads.googleads.v5.resources.DataPartnerLinkIdentifier) linkedAccount_);
+              linkedAccount_ = subBuilder.buildPartial();
+            }
+            linkedAccountCase_ = 6;
+            break;
+          }
+          case 58: {
+            com.google.ads.googleads.v5.resources.GoogleAdsLinkIdentifier.Builder subBuilder = null;
+            if (linkedAccountCase_ == 7) {
+              subBuilder = ((com.google.ads.googleads.v5.resources.GoogleAdsLinkIdentifier) linkedAccount_).toBuilder();
+            }
+            linkedAccount_ =
+                input.readMessage(com.google.ads.googleads.v5.resources.GoogleAdsLinkIdentifier.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.google.ads.googleads.v5.resources.GoogleAdsLinkIdentifier) linkedAccount_);
+              linkedAccount_ = subBuilder.buildPartial();
+            }
+            linkedAccountCase_ = 7;
+            break;
+          }
           default: {
             if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -139,6 +167,8 @@ private static final long serialVersionUID = 0L;
       implements com.google.protobuf.Internal.EnumLite,
           com.google.protobuf.AbstractMessage.InternalOneOfEnum {
     THIRD_PARTY_APP_ANALYTICS(5),
+    DATA_PARTNER(6),
+    GOOGLE_ADS(7),
     LINKEDACCOUNT_NOT_SET(0);
     private final int value;
     private LinkedAccountCase(int value) {
@@ -157,6 +187,8 @@ private static final long serialVersionUID = 0L;
     public static LinkedAccountCase forNumber(int value) {
       switch (value) {
         case 5: return THIRD_PARTY_APP_ANALYTICS;
+        case 6: return DATA_PARTNER;
+        case 7: return GOOGLE_ADS;
         case 0: return LINKEDACCOUNT_NOT_SET;
         default: return null;
       }
@@ -360,6 +392,92 @@ private static final long serialVersionUID = 0L;
     return com.google.ads.googleads.v5.resources.ThirdPartyAppAnalyticsLinkIdentifier.getDefaultInstance();
   }
 
+  public static final int DATA_PARTNER_FIELD_NUMBER = 6;
+  /**
+   * <pre>
+   * Output only. Data partner link.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v5.resources.DataPartnerLinkIdentifier data_partner = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the dataPartner field is set.
+   */
+  @java.lang.Override
+  public boolean hasDataPartner() {
+    return linkedAccountCase_ == 6;
+  }
+  /**
+   * <pre>
+   * Output only. Data partner link.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v5.resources.DataPartnerLinkIdentifier data_partner = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The dataPartner.
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v5.resources.DataPartnerLinkIdentifier getDataPartner() {
+    if (linkedAccountCase_ == 6) {
+       return (com.google.ads.googleads.v5.resources.DataPartnerLinkIdentifier) linkedAccount_;
+    }
+    return com.google.ads.googleads.v5.resources.DataPartnerLinkIdentifier.getDefaultInstance();
+  }
+  /**
+   * <pre>
+   * Output only. Data partner link.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v5.resources.DataPartnerLinkIdentifier data_partner = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v5.resources.DataPartnerLinkIdentifierOrBuilder getDataPartnerOrBuilder() {
+    if (linkedAccountCase_ == 6) {
+       return (com.google.ads.googleads.v5.resources.DataPartnerLinkIdentifier) linkedAccount_;
+    }
+    return com.google.ads.googleads.v5.resources.DataPartnerLinkIdentifier.getDefaultInstance();
+  }
+
+  public static final int GOOGLE_ADS_FIELD_NUMBER = 7;
+  /**
+   * <pre>
+   * Output only. Google Ads link.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v5.resources.GoogleAdsLinkIdentifier google_ads = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the googleAds field is set.
+   */
+  @java.lang.Override
+  public boolean hasGoogleAds() {
+    return linkedAccountCase_ == 7;
+  }
+  /**
+   * <pre>
+   * Output only. Google Ads link.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v5.resources.GoogleAdsLinkIdentifier google_ads = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The googleAds.
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v5.resources.GoogleAdsLinkIdentifier getGoogleAds() {
+    if (linkedAccountCase_ == 7) {
+       return (com.google.ads.googleads.v5.resources.GoogleAdsLinkIdentifier) linkedAccount_;
+    }
+    return com.google.ads.googleads.v5.resources.GoogleAdsLinkIdentifier.getDefaultInstance();
+  }
+  /**
+   * <pre>
+   * Output only. Google Ads link.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v5.resources.GoogleAdsLinkIdentifier google_ads = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v5.resources.GoogleAdsLinkIdentifierOrBuilder getGoogleAdsOrBuilder() {
+    if (linkedAccountCase_ == 7) {
+       return (com.google.ads.googleads.v5.resources.GoogleAdsLinkIdentifier) linkedAccount_;
+    }
+    return com.google.ads.googleads.v5.resources.GoogleAdsLinkIdentifier.getDefaultInstance();
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -389,6 +507,12 @@ private static final long serialVersionUID = 0L;
     if (linkedAccountCase_ == 5) {
       output.writeMessage(5, (com.google.ads.googleads.v5.resources.ThirdPartyAppAnalyticsLinkIdentifier) linkedAccount_);
     }
+    if (linkedAccountCase_ == 6) {
+      output.writeMessage(6, (com.google.ads.googleads.v5.resources.DataPartnerLinkIdentifier) linkedAccount_);
+    }
+    if (linkedAccountCase_ == 7) {
+      output.writeMessage(7, (com.google.ads.googleads.v5.resources.GoogleAdsLinkIdentifier) linkedAccount_);
+    }
     unknownFields.writeTo(output);
   }
 
@@ -416,6 +540,14 @@ private static final long serialVersionUID = 0L;
     if (linkedAccountCase_ == 5) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(5, (com.google.ads.googleads.v5.resources.ThirdPartyAppAnalyticsLinkIdentifier) linkedAccount_);
+    }
+    if (linkedAccountCase_ == 6) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(6, (com.google.ads.googleads.v5.resources.DataPartnerLinkIdentifier) linkedAccount_);
+    }
+    if (linkedAccountCase_ == 7) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(7, (com.google.ads.googleads.v5.resources.GoogleAdsLinkIdentifier) linkedAccount_);
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -447,6 +579,14 @@ private static final long serialVersionUID = 0L;
         if (!getThirdPartyAppAnalytics()
             .equals(other.getThirdPartyAppAnalytics())) return false;
         break;
+      case 6:
+        if (!getDataPartner()
+            .equals(other.getDataPartner())) return false;
+        break;
+      case 7:
+        if (!getGoogleAds()
+            .equals(other.getGoogleAds())) return false;
+        break;
       case 0:
       default:
     }
@@ -475,6 +615,14 @@ private static final long serialVersionUID = 0L;
       case 5:
         hash = (37 * hash) + THIRD_PARTY_APP_ANALYTICS_FIELD_NUMBER;
         hash = (53 * hash) + getThirdPartyAppAnalytics().hashCode();
+        break;
+      case 6:
+        hash = (37 * hash) + DATA_PARTNER_FIELD_NUMBER;
+        hash = (53 * hash) + getDataPartner().hashCode();
+        break;
+      case 7:
+        hash = (37 * hash) + GOOGLE_ADS_FIELD_NUMBER;
+        hash = (53 * hash) + getGoogleAds().hashCode();
         break;
       case 0:
       default:
@@ -672,6 +820,20 @@ private static final long serialVersionUID = 0L;
           result.linkedAccount_ = thirdPartyAppAnalyticsBuilder_.build();
         }
       }
+      if (linkedAccountCase_ == 6) {
+        if (dataPartnerBuilder_ == null) {
+          result.linkedAccount_ = linkedAccount_;
+        } else {
+          result.linkedAccount_ = dataPartnerBuilder_.build();
+        }
+      }
+      if (linkedAccountCase_ == 7) {
+        if (googleAdsBuilder_ == null) {
+          result.linkedAccount_ = linkedAccount_;
+        } else {
+          result.linkedAccount_ = googleAdsBuilder_.build();
+        }
+      }
       result.linkedAccountCase_ = linkedAccountCase_;
       onBuilt();
       return result;
@@ -737,6 +899,14 @@ private static final long serialVersionUID = 0L;
       switch (other.getLinkedAccountCase()) {
         case THIRD_PARTY_APP_ANALYTICS: {
           mergeThirdPartyAppAnalytics(other.getThirdPartyAppAnalytics());
+          break;
+        }
+        case DATA_PARTNER: {
+          mergeDataPartner(other.getDataPartner());
+          break;
+        }
+        case GOOGLE_ADS: {
+          mergeGoogleAds(other.getGoogleAds());
           break;
         }
         case LINKEDACCOUNT_NOT_SET: {
@@ -1380,6 +1550,360 @@ private static final long serialVersionUID = 0L;
       linkedAccountCase_ = 5;
       onChanged();;
       return thirdPartyAppAnalyticsBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v5.resources.DataPartnerLinkIdentifier, com.google.ads.googleads.v5.resources.DataPartnerLinkIdentifier.Builder, com.google.ads.googleads.v5.resources.DataPartnerLinkIdentifierOrBuilder> dataPartnerBuilder_;
+    /**
+     * <pre>
+     * Output only. Data partner link.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v5.resources.DataPartnerLinkIdentifier data_partner = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the dataPartner field is set.
+     */
+    @java.lang.Override
+    public boolean hasDataPartner() {
+      return linkedAccountCase_ == 6;
+    }
+    /**
+     * <pre>
+     * Output only. Data partner link.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v5.resources.DataPartnerLinkIdentifier data_partner = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The dataPartner.
+     */
+    @java.lang.Override
+    public com.google.ads.googleads.v5.resources.DataPartnerLinkIdentifier getDataPartner() {
+      if (dataPartnerBuilder_ == null) {
+        if (linkedAccountCase_ == 6) {
+          return (com.google.ads.googleads.v5.resources.DataPartnerLinkIdentifier) linkedAccount_;
+        }
+        return com.google.ads.googleads.v5.resources.DataPartnerLinkIdentifier.getDefaultInstance();
+      } else {
+        if (linkedAccountCase_ == 6) {
+          return dataPartnerBuilder_.getMessage();
+        }
+        return com.google.ads.googleads.v5.resources.DataPartnerLinkIdentifier.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Output only. Data partner link.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v5.resources.DataPartnerLinkIdentifier data_partner = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    public Builder setDataPartner(com.google.ads.googleads.v5.resources.DataPartnerLinkIdentifier value) {
+      if (dataPartnerBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        linkedAccount_ = value;
+        onChanged();
+      } else {
+        dataPartnerBuilder_.setMessage(value);
+      }
+      linkedAccountCase_ = 6;
+      return this;
+    }
+    /**
+     * <pre>
+     * Output only. Data partner link.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v5.resources.DataPartnerLinkIdentifier data_partner = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    public Builder setDataPartner(
+        com.google.ads.googleads.v5.resources.DataPartnerLinkIdentifier.Builder builderForValue) {
+      if (dataPartnerBuilder_ == null) {
+        linkedAccount_ = builderForValue.build();
+        onChanged();
+      } else {
+        dataPartnerBuilder_.setMessage(builderForValue.build());
+      }
+      linkedAccountCase_ = 6;
+      return this;
+    }
+    /**
+     * <pre>
+     * Output only. Data partner link.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v5.resources.DataPartnerLinkIdentifier data_partner = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    public Builder mergeDataPartner(com.google.ads.googleads.v5.resources.DataPartnerLinkIdentifier value) {
+      if (dataPartnerBuilder_ == null) {
+        if (linkedAccountCase_ == 6 &&
+            linkedAccount_ != com.google.ads.googleads.v5.resources.DataPartnerLinkIdentifier.getDefaultInstance()) {
+          linkedAccount_ = com.google.ads.googleads.v5.resources.DataPartnerLinkIdentifier.newBuilder((com.google.ads.googleads.v5.resources.DataPartnerLinkIdentifier) linkedAccount_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          linkedAccount_ = value;
+        }
+        onChanged();
+      } else {
+        if (linkedAccountCase_ == 6) {
+          dataPartnerBuilder_.mergeFrom(value);
+        }
+        dataPartnerBuilder_.setMessage(value);
+      }
+      linkedAccountCase_ = 6;
+      return this;
+    }
+    /**
+     * <pre>
+     * Output only. Data partner link.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v5.resources.DataPartnerLinkIdentifier data_partner = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    public Builder clearDataPartner() {
+      if (dataPartnerBuilder_ == null) {
+        if (linkedAccountCase_ == 6) {
+          linkedAccountCase_ = 0;
+          linkedAccount_ = null;
+          onChanged();
+        }
+      } else {
+        if (linkedAccountCase_ == 6) {
+          linkedAccountCase_ = 0;
+          linkedAccount_ = null;
+        }
+        dataPartnerBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Output only. Data partner link.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v5.resources.DataPartnerLinkIdentifier data_partner = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    public com.google.ads.googleads.v5.resources.DataPartnerLinkIdentifier.Builder getDataPartnerBuilder() {
+      return getDataPartnerFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Output only. Data partner link.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v5.resources.DataPartnerLinkIdentifier data_partner = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    @java.lang.Override
+    public com.google.ads.googleads.v5.resources.DataPartnerLinkIdentifierOrBuilder getDataPartnerOrBuilder() {
+      if ((linkedAccountCase_ == 6) && (dataPartnerBuilder_ != null)) {
+        return dataPartnerBuilder_.getMessageOrBuilder();
+      } else {
+        if (linkedAccountCase_ == 6) {
+          return (com.google.ads.googleads.v5.resources.DataPartnerLinkIdentifier) linkedAccount_;
+        }
+        return com.google.ads.googleads.v5.resources.DataPartnerLinkIdentifier.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Output only. Data partner link.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v5.resources.DataPartnerLinkIdentifier data_partner = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v5.resources.DataPartnerLinkIdentifier, com.google.ads.googleads.v5.resources.DataPartnerLinkIdentifier.Builder, com.google.ads.googleads.v5.resources.DataPartnerLinkIdentifierOrBuilder> 
+        getDataPartnerFieldBuilder() {
+      if (dataPartnerBuilder_ == null) {
+        if (!(linkedAccountCase_ == 6)) {
+          linkedAccount_ = com.google.ads.googleads.v5.resources.DataPartnerLinkIdentifier.getDefaultInstance();
+        }
+        dataPartnerBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.ads.googleads.v5.resources.DataPartnerLinkIdentifier, com.google.ads.googleads.v5.resources.DataPartnerLinkIdentifier.Builder, com.google.ads.googleads.v5.resources.DataPartnerLinkIdentifierOrBuilder>(
+                (com.google.ads.googleads.v5.resources.DataPartnerLinkIdentifier) linkedAccount_,
+                getParentForChildren(),
+                isClean());
+        linkedAccount_ = null;
+      }
+      linkedAccountCase_ = 6;
+      onChanged();;
+      return dataPartnerBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v5.resources.GoogleAdsLinkIdentifier, com.google.ads.googleads.v5.resources.GoogleAdsLinkIdentifier.Builder, com.google.ads.googleads.v5.resources.GoogleAdsLinkIdentifierOrBuilder> googleAdsBuilder_;
+    /**
+     * <pre>
+     * Output only. Google Ads link.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v5.resources.GoogleAdsLinkIdentifier google_ads = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the googleAds field is set.
+     */
+    @java.lang.Override
+    public boolean hasGoogleAds() {
+      return linkedAccountCase_ == 7;
+    }
+    /**
+     * <pre>
+     * Output only. Google Ads link.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v5.resources.GoogleAdsLinkIdentifier google_ads = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The googleAds.
+     */
+    @java.lang.Override
+    public com.google.ads.googleads.v5.resources.GoogleAdsLinkIdentifier getGoogleAds() {
+      if (googleAdsBuilder_ == null) {
+        if (linkedAccountCase_ == 7) {
+          return (com.google.ads.googleads.v5.resources.GoogleAdsLinkIdentifier) linkedAccount_;
+        }
+        return com.google.ads.googleads.v5.resources.GoogleAdsLinkIdentifier.getDefaultInstance();
+      } else {
+        if (linkedAccountCase_ == 7) {
+          return googleAdsBuilder_.getMessage();
+        }
+        return com.google.ads.googleads.v5.resources.GoogleAdsLinkIdentifier.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Output only. Google Ads link.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v5.resources.GoogleAdsLinkIdentifier google_ads = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    public Builder setGoogleAds(com.google.ads.googleads.v5.resources.GoogleAdsLinkIdentifier value) {
+      if (googleAdsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        linkedAccount_ = value;
+        onChanged();
+      } else {
+        googleAdsBuilder_.setMessage(value);
+      }
+      linkedAccountCase_ = 7;
+      return this;
+    }
+    /**
+     * <pre>
+     * Output only. Google Ads link.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v5.resources.GoogleAdsLinkIdentifier google_ads = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    public Builder setGoogleAds(
+        com.google.ads.googleads.v5.resources.GoogleAdsLinkIdentifier.Builder builderForValue) {
+      if (googleAdsBuilder_ == null) {
+        linkedAccount_ = builderForValue.build();
+        onChanged();
+      } else {
+        googleAdsBuilder_.setMessage(builderForValue.build());
+      }
+      linkedAccountCase_ = 7;
+      return this;
+    }
+    /**
+     * <pre>
+     * Output only. Google Ads link.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v5.resources.GoogleAdsLinkIdentifier google_ads = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    public Builder mergeGoogleAds(com.google.ads.googleads.v5.resources.GoogleAdsLinkIdentifier value) {
+      if (googleAdsBuilder_ == null) {
+        if (linkedAccountCase_ == 7 &&
+            linkedAccount_ != com.google.ads.googleads.v5.resources.GoogleAdsLinkIdentifier.getDefaultInstance()) {
+          linkedAccount_ = com.google.ads.googleads.v5.resources.GoogleAdsLinkIdentifier.newBuilder((com.google.ads.googleads.v5.resources.GoogleAdsLinkIdentifier) linkedAccount_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          linkedAccount_ = value;
+        }
+        onChanged();
+      } else {
+        if (linkedAccountCase_ == 7) {
+          googleAdsBuilder_.mergeFrom(value);
+        }
+        googleAdsBuilder_.setMessage(value);
+      }
+      linkedAccountCase_ = 7;
+      return this;
+    }
+    /**
+     * <pre>
+     * Output only. Google Ads link.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v5.resources.GoogleAdsLinkIdentifier google_ads = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    public Builder clearGoogleAds() {
+      if (googleAdsBuilder_ == null) {
+        if (linkedAccountCase_ == 7) {
+          linkedAccountCase_ = 0;
+          linkedAccount_ = null;
+          onChanged();
+        }
+      } else {
+        if (linkedAccountCase_ == 7) {
+          linkedAccountCase_ = 0;
+          linkedAccount_ = null;
+        }
+        googleAdsBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Output only. Google Ads link.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v5.resources.GoogleAdsLinkIdentifier google_ads = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    public com.google.ads.googleads.v5.resources.GoogleAdsLinkIdentifier.Builder getGoogleAdsBuilder() {
+      return getGoogleAdsFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Output only. Google Ads link.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v5.resources.GoogleAdsLinkIdentifier google_ads = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    @java.lang.Override
+    public com.google.ads.googleads.v5.resources.GoogleAdsLinkIdentifierOrBuilder getGoogleAdsOrBuilder() {
+      if ((linkedAccountCase_ == 7) && (googleAdsBuilder_ != null)) {
+        return googleAdsBuilder_.getMessageOrBuilder();
+      } else {
+        if (linkedAccountCase_ == 7) {
+          return (com.google.ads.googleads.v5.resources.GoogleAdsLinkIdentifier) linkedAccount_;
+        }
+        return com.google.ads.googleads.v5.resources.GoogleAdsLinkIdentifier.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Output only. Google Ads link.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v5.resources.GoogleAdsLinkIdentifier google_ads = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v5.resources.GoogleAdsLinkIdentifier, com.google.ads.googleads.v5.resources.GoogleAdsLinkIdentifier.Builder, com.google.ads.googleads.v5.resources.GoogleAdsLinkIdentifierOrBuilder> 
+        getGoogleAdsFieldBuilder() {
+      if (googleAdsBuilder_ == null) {
+        if (!(linkedAccountCase_ == 7)) {
+          linkedAccount_ = com.google.ads.googleads.v5.resources.GoogleAdsLinkIdentifier.getDefaultInstance();
+        }
+        googleAdsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.ads.googleads.v5.resources.GoogleAdsLinkIdentifier, com.google.ads.googleads.v5.resources.GoogleAdsLinkIdentifier.Builder, com.google.ads.googleads.v5.resources.GoogleAdsLinkIdentifierOrBuilder>(
+                (com.google.ads.googleads.v5.resources.GoogleAdsLinkIdentifier) linkedAccount_,
+                getParentForChildren(),
+                isClean());
+        linkedAccount_ = null;
+      }
+      linkedAccountCase_ = 7;
+      onChanged();;
+      return googleAdsBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

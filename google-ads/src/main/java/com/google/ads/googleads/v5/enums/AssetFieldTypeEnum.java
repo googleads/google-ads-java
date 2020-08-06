@@ -157,6 +157,15 @@ private static final long serialVersionUID = 0L;
      * <code>YOUTUBE_VIDEO = 7;</code>
      */
     YOUTUBE_VIDEO(7),
+    /**
+     * <pre>
+     * The asset is linked to indicate that a hotels campaign is "Book on
+     * Google" enabled.
+     * </pre>
+     *
+     * <code>BOOK_ON_GOOGLE = 8;</code>
+     */
+    BOOK_ON_GOOGLE(8),
     UNRECOGNIZED(-1),
     ;
 
@@ -224,6 +233,15 @@ private static final long serialVersionUID = 0L;
      * <code>YOUTUBE_VIDEO = 7;</code>
      */
     public static final int YOUTUBE_VIDEO_VALUE = 7;
+    /**
+     * <pre>
+     * The asset is linked to indicate that a hotels campaign is "Book on
+     * Google" enabled.
+     * </pre>
+     *
+     * <code>BOOK_ON_GOOGLE = 8;</code>
+     */
+    public static final int BOOK_ON_GOOGLE_VALUE = 8;
 
 
     public final int getNumber() {
@@ -258,6 +276,7 @@ private static final long serialVersionUID = 0L;
         case 5: return MARKETING_IMAGE;
         case 6: return MEDIA_BUNDLE;
         case 7: return YOUTUBE_VIDEO;
+        case 8: return BOOK_ON_GOOGLE;
         default: return null;
       }
     }

@@ -682,6 +682,20 @@ private static final long serialVersionUID = 0L;
             operationCase_ = 51;
             break;
           }
+          case 418: {
+            com.google.ads.googleads.v5.services.CampaignAssetOperation.Builder subBuilder = null;
+            if (operationCase_ == 52) {
+              subBuilder = ((com.google.ads.googleads.v5.services.CampaignAssetOperation) operation_).toBuilder();
+            }
+            operation_ =
+                input.readMessage(com.google.ads.googleads.v5.services.CampaignAssetOperation.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.google.ads.googleads.v5.services.CampaignAssetOperation) operation_);
+              operation_ = subBuilder.buildPartial();
+            }
+            operationCase_ = 52;
+            break;
+          }
           default: {
             if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -732,6 +746,7 @@ private static final long serialVersionUID = 0L;
     AD_PARAMETER_OPERATION(22),
     ASSET_OPERATION(23),
     BIDDING_STRATEGY_OPERATION(6),
+    CAMPAIGN_ASSET_OPERATION(52),
     CAMPAIGN_BID_MODIFIER_OPERATION(7),
     CAMPAIGN_BUDGET_OPERATION(8),
     CAMPAIGN_CRITERION_OPERATION(13),
@@ -794,6 +809,7 @@ private static final long serialVersionUID = 0L;
         case 22: return AD_PARAMETER_OPERATION;
         case 23: return ASSET_OPERATION;
         case 6: return BIDDING_STRATEGY_OPERATION;
+        case 52: return CAMPAIGN_ASSET_OPERATION;
         case 7: return CAMPAIGN_BID_MODIFIER_OPERATION;
         case 8: return CAMPAIGN_BUDGET_OPERATION;
         case 13: return CAMPAIGN_CRITERION_OPERATION;
@@ -1398,6 +1414,49 @@ private static final long serialVersionUID = 0L;
        return (com.google.ads.googleads.v5.services.BiddingStrategyOperation) operation_;
     }
     return com.google.ads.googleads.v5.services.BiddingStrategyOperation.getDefaultInstance();
+  }
+
+  public static final int CAMPAIGN_ASSET_OPERATION_FIELD_NUMBER = 52;
+  /**
+   * <pre>
+   * A campaign asset mutate operation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v5.services.CampaignAssetOperation campaign_asset_operation = 52;</code>
+   * @return Whether the campaignAssetOperation field is set.
+   */
+  @java.lang.Override
+  public boolean hasCampaignAssetOperation() {
+    return operationCase_ == 52;
+  }
+  /**
+   * <pre>
+   * A campaign asset mutate operation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v5.services.CampaignAssetOperation campaign_asset_operation = 52;</code>
+   * @return The campaignAssetOperation.
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v5.services.CampaignAssetOperation getCampaignAssetOperation() {
+    if (operationCase_ == 52) {
+       return (com.google.ads.googleads.v5.services.CampaignAssetOperation) operation_;
+    }
+    return com.google.ads.googleads.v5.services.CampaignAssetOperation.getDefaultInstance();
+  }
+  /**
+   * <pre>
+   * A campaign asset mutate operation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v5.services.CampaignAssetOperation campaign_asset_operation = 52;</code>
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v5.services.CampaignAssetOperationOrBuilder getCampaignAssetOperationOrBuilder() {
+    if (operationCase_ == 52) {
+       return (com.google.ads.googleads.v5.services.CampaignAssetOperation) operation_;
+    }
+    return com.google.ads.googleads.v5.services.CampaignAssetOperation.getDefaultInstance();
   }
 
   public static final int CAMPAIGN_BID_MODIFIER_OPERATION_FIELD_NUMBER = 7;
@@ -2925,6 +2984,9 @@ private static final long serialVersionUID = 0L;
     if (operationCase_ == 51) {
       output.writeMessage(51, (com.google.ads.googleads.v5.services.KeywordPlanCampaignKeywordOperation) operation_);
     }
+    if (operationCase_ == 52) {
+      output.writeMessage(52, (com.google.ads.googleads.v5.services.CampaignAssetOperation) operation_);
+    }
     unknownFields.writeTo(output);
   }
 
@@ -3114,6 +3176,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(51, (com.google.ads.googleads.v5.services.KeywordPlanCampaignKeywordOperation) operation_);
     }
+    if (operationCase_ == 52) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(52, (com.google.ads.googleads.v5.services.CampaignAssetOperation) operation_);
+    }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
@@ -3182,6 +3248,10 @@ private static final long serialVersionUID = 0L;
       case 6:
         if (!getBiddingStrategyOperation()
             .equals(other.getBiddingStrategyOperation())) return false;
+        break;
+      case 52:
+        if (!getCampaignAssetOperation()
+            .equals(other.getCampaignAssetOperation())) return false;
         break;
       case 7:
         if (!getCampaignBidModifierOperation()
@@ -3377,6 +3447,10 @@ private static final long serialVersionUID = 0L;
       case 6:
         hash = (37 * hash) + BIDDING_STRATEGY_OPERATION_FIELD_NUMBER;
         hash = (53 * hash) + getBiddingStrategyOperation().hashCode();
+        break;
+      case 52:
+        hash = (37 * hash) + CAMPAIGN_ASSET_OPERATION_FIELD_NUMBER;
+        hash = (53 * hash) + getCampaignAssetOperation().hashCode();
         break;
       case 7:
         hash = (37 * hash) + CAMPAIGN_BID_MODIFIER_OPERATION_FIELD_NUMBER;
@@ -3765,6 +3839,13 @@ private static final long serialVersionUID = 0L;
           result.operation_ = biddingStrategyOperationBuilder_.build();
         }
       }
+      if (operationCase_ == 52) {
+        if (campaignAssetOperationBuilder_ == null) {
+          result.operation_ = operation_;
+        } else {
+          result.operation_ = campaignAssetOperationBuilder_.build();
+        }
+      }
       if (operationCase_ == 7) {
         if (campaignBidModifierOperationBuilder_ == null) {
           result.operation_ = operation_;
@@ -4089,6 +4170,10 @@ private static final long serialVersionUID = 0L;
         }
         case BIDDING_STRATEGY_OPERATION: {
           mergeBiddingStrategyOperation(other.getBiddingStrategyOperation());
+          break;
+        }
+        case CAMPAIGN_ASSET_OPERATION: {
+          mergeCampaignAssetOperation(other.getCampaignAssetOperation());
           break;
         }
         case CAMPAIGN_BID_MODIFIER_OPERATION: {
@@ -6566,6 +6651,183 @@ private static final long serialVersionUID = 0L;
       operationCase_ = 6;
       onChanged();;
       return biddingStrategyOperationBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v5.services.CampaignAssetOperation, com.google.ads.googleads.v5.services.CampaignAssetOperation.Builder, com.google.ads.googleads.v5.services.CampaignAssetOperationOrBuilder> campaignAssetOperationBuilder_;
+    /**
+     * <pre>
+     * A campaign asset mutate operation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v5.services.CampaignAssetOperation campaign_asset_operation = 52;</code>
+     * @return Whether the campaignAssetOperation field is set.
+     */
+    @java.lang.Override
+    public boolean hasCampaignAssetOperation() {
+      return operationCase_ == 52;
+    }
+    /**
+     * <pre>
+     * A campaign asset mutate operation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v5.services.CampaignAssetOperation campaign_asset_operation = 52;</code>
+     * @return The campaignAssetOperation.
+     */
+    @java.lang.Override
+    public com.google.ads.googleads.v5.services.CampaignAssetOperation getCampaignAssetOperation() {
+      if (campaignAssetOperationBuilder_ == null) {
+        if (operationCase_ == 52) {
+          return (com.google.ads.googleads.v5.services.CampaignAssetOperation) operation_;
+        }
+        return com.google.ads.googleads.v5.services.CampaignAssetOperation.getDefaultInstance();
+      } else {
+        if (operationCase_ == 52) {
+          return campaignAssetOperationBuilder_.getMessage();
+        }
+        return com.google.ads.googleads.v5.services.CampaignAssetOperation.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * A campaign asset mutate operation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v5.services.CampaignAssetOperation campaign_asset_operation = 52;</code>
+     */
+    public Builder setCampaignAssetOperation(com.google.ads.googleads.v5.services.CampaignAssetOperation value) {
+      if (campaignAssetOperationBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        operation_ = value;
+        onChanged();
+      } else {
+        campaignAssetOperationBuilder_.setMessage(value);
+      }
+      operationCase_ = 52;
+      return this;
+    }
+    /**
+     * <pre>
+     * A campaign asset mutate operation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v5.services.CampaignAssetOperation campaign_asset_operation = 52;</code>
+     */
+    public Builder setCampaignAssetOperation(
+        com.google.ads.googleads.v5.services.CampaignAssetOperation.Builder builderForValue) {
+      if (campaignAssetOperationBuilder_ == null) {
+        operation_ = builderForValue.build();
+        onChanged();
+      } else {
+        campaignAssetOperationBuilder_.setMessage(builderForValue.build());
+      }
+      operationCase_ = 52;
+      return this;
+    }
+    /**
+     * <pre>
+     * A campaign asset mutate operation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v5.services.CampaignAssetOperation campaign_asset_operation = 52;</code>
+     */
+    public Builder mergeCampaignAssetOperation(com.google.ads.googleads.v5.services.CampaignAssetOperation value) {
+      if (campaignAssetOperationBuilder_ == null) {
+        if (operationCase_ == 52 &&
+            operation_ != com.google.ads.googleads.v5.services.CampaignAssetOperation.getDefaultInstance()) {
+          operation_ = com.google.ads.googleads.v5.services.CampaignAssetOperation.newBuilder((com.google.ads.googleads.v5.services.CampaignAssetOperation) operation_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          operation_ = value;
+        }
+        onChanged();
+      } else {
+        if (operationCase_ == 52) {
+          campaignAssetOperationBuilder_.mergeFrom(value);
+        }
+        campaignAssetOperationBuilder_.setMessage(value);
+      }
+      operationCase_ = 52;
+      return this;
+    }
+    /**
+     * <pre>
+     * A campaign asset mutate operation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v5.services.CampaignAssetOperation campaign_asset_operation = 52;</code>
+     */
+    public Builder clearCampaignAssetOperation() {
+      if (campaignAssetOperationBuilder_ == null) {
+        if (operationCase_ == 52) {
+          operationCase_ = 0;
+          operation_ = null;
+          onChanged();
+        }
+      } else {
+        if (operationCase_ == 52) {
+          operationCase_ = 0;
+          operation_ = null;
+        }
+        campaignAssetOperationBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * A campaign asset mutate operation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v5.services.CampaignAssetOperation campaign_asset_operation = 52;</code>
+     */
+    public com.google.ads.googleads.v5.services.CampaignAssetOperation.Builder getCampaignAssetOperationBuilder() {
+      return getCampaignAssetOperationFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * A campaign asset mutate operation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v5.services.CampaignAssetOperation campaign_asset_operation = 52;</code>
+     */
+    @java.lang.Override
+    public com.google.ads.googleads.v5.services.CampaignAssetOperationOrBuilder getCampaignAssetOperationOrBuilder() {
+      if ((operationCase_ == 52) && (campaignAssetOperationBuilder_ != null)) {
+        return campaignAssetOperationBuilder_.getMessageOrBuilder();
+      } else {
+        if (operationCase_ == 52) {
+          return (com.google.ads.googleads.v5.services.CampaignAssetOperation) operation_;
+        }
+        return com.google.ads.googleads.v5.services.CampaignAssetOperation.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * A campaign asset mutate operation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v5.services.CampaignAssetOperation campaign_asset_operation = 52;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v5.services.CampaignAssetOperation, com.google.ads.googleads.v5.services.CampaignAssetOperation.Builder, com.google.ads.googleads.v5.services.CampaignAssetOperationOrBuilder> 
+        getCampaignAssetOperationFieldBuilder() {
+      if (campaignAssetOperationBuilder_ == null) {
+        if (!(operationCase_ == 52)) {
+          operation_ = com.google.ads.googleads.v5.services.CampaignAssetOperation.getDefaultInstance();
+        }
+        campaignAssetOperationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.ads.googleads.v5.services.CampaignAssetOperation, com.google.ads.googleads.v5.services.CampaignAssetOperation.Builder, com.google.ads.googleads.v5.services.CampaignAssetOperationOrBuilder>(
+                (com.google.ads.googleads.v5.services.CampaignAssetOperation) operation_,
+                getParentForChildren(),
+                isClean());
+        operation_ = null;
+      }
+      operationCase_ = 52;
+      onChanged();;
+      return campaignAssetOperationBuilder_;
     }
 
     private com.google.protobuf.SingleFieldBuilderV3<

@@ -73,6 +73,13 @@ public class ThirdPartyAppAnalyticsLinkServiceSettings
         .getThirdPartyAppAnalyticsLinkSettings();
   }
 
+  /** Returns the object with the settings used for calls to regenerateShareableLinkId. */
+  public UnaryCallSettings<RegenerateShareableLinkIdRequest, RegenerateShareableLinkIdResponse>
+      regenerateShareableLinkIdSettings() {
+    return ((ThirdPartyAppAnalyticsLinkServiceStubSettings) getStubSettings())
+        .regenerateShareableLinkIdSettings();
+  }
+
   public static final ThirdPartyAppAnalyticsLinkServiceSettings create(
       ThirdPartyAppAnalyticsLinkServiceStubSettings stub) throws IOException {
     return new ThirdPartyAppAnalyticsLinkServiceSettings.Builder(stub.toBuilder()).build();
@@ -176,6 +183,13 @@ public class ThirdPartyAppAnalyticsLinkServiceSettings
             GetThirdPartyAppAnalyticsLinkRequest, ThirdPartyAppAnalyticsLink>
         getThirdPartyAppAnalyticsLinkSettings() {
       return getStubSettingsBuilder().getThirdPartyAppAnalyticsLinkSettings();
+    }
+
+    /** Returns the builder for the settings used for calls to regenerateShareableLinkId. */
+    public UnaryCallSettings.Builder<
+            RegenerateShareableLinkIdRequest, RegenerateShareableLinkIdResponse>
+        regenerateShareableLinkIdSettings() {
+      return getStubSettingsBuilder().regenerateShareableLinkIdSettings();
     }
 
     @Override

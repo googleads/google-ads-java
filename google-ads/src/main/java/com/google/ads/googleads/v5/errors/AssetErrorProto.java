@@ -30,19 +30,19 @@ public final class AssetErrorProto {
     java.lang.String[] descriptorData = {
       "\n0google/ads/googleads/v5/errors/asset_e" +
       "rror.proto\022\036google.ads.googleads.v5.erro" +
-      "rs\032\034google/api/annotations.proto\"\322\001\n\016Ass" +
-      "etErrorEnum\"\277\001\n\nAssetError\022\017\n\013UNSPECIFIE" +
-      "D\020\000\022\013\n\007UNKNOWN\020\001\022+\n\'CUSTOMER_NOT_WHITELI" +
-      "STED_FOR_ASSET_TYPE\020\002\022\023\n\017DUPLICATE_ASSET" +
-      "\020\003\022\030\n\024DUPLICATE_ASSET_NAME\020\004\022\031\n\025ASSET_DA" +
-      "TA_IS_MISSING\020\005\022\034\n\030CANNOT_MODIFY_ASSET_N" +
-      "AME\020\006B\352\001\n\"com.google.ads.googleads.v5.er" +
-      "rorsB\017AssetErrorProtoP\001ZDgoogle.golang.o" +
-      "rg/genproto/googleapis/ads/googleads/v5/" +
-      "errors;errors\242\002\003GAA\252\002\036Google.Ads.GoogleA" +
-      "ds.V5.Errors\312\002\036Google\\Ads\\GoogleAds\\V5\\E" +
-      "rrors\352\002\"Google::Ads::GoogleAds::V5::Erro" +
-      "rsb\006proto3"
+      "rs\032\034google/api/annotations.proto\"\323\001\n\016Ass" +
+      "etErrorEnum\"\300\001\n\nAssetError\022\017\n\013UNSPECIFIE" +
+      "D\020\000\022\013\n\007UNKNOWN\020\001\022,\n(CUSTOMER_NOT_ON_ALLO" +
+      "WLIST_FOR_ASSET_TYPE\020\r\022\023\n\017DUPLICATE_ASSE" +
+      "T\020\003\022\030\n\024DUPLICATE_ASSET_NAME\020\004\022\031\n\025ASSET_D" +
+      "ATA_IS_MISSING\020\005\022\034\n\030CANNOT_MODIFY_ASSET_" +
+      "NAME\020\006B\352\001\n\"com.google.ads.googleads.v5.e" +
+      "rrorsB\017AssetErrorProtoP\001ZDgoogle.golang." +
+      "org/genproto/googleapis/ads/googleads/v5" +
+      "/errors;errors\242\002\003GAA\252\002\036Google.Ads.Google" +
+      "Ads.V5.Errors\312\002\036Google\\Ads\\GoogleAds\\V5\\" +
+      "Errors\352\002\"Google::Ads::GoogleAds::V5::Err" +
+      "orsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

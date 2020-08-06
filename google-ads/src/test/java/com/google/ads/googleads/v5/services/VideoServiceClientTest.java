@@ -61,6 +61,7 @@ public class VideoServiceClientTest {
   private static MockAgeRangeViewService mockAgeRangeViewService;
   private static MockAssetService mockAssetService;
   private static MockBiddingStrategyService mockBiddingStrategyService;
+  private static MockCampaignAssetService mockCampaignAssetService;
   private static MockCampaignBidModifierService mockCampaignBidModifierService;
   private static MockCampaignBudgetService mockCampaignBudgetService;
   private static MockCampaignCriterionService mockCampaignCriterionService;
@@ -182,6 +183,7 @@ public class VideoServiceClientTest {
     mockAgeRangeViewService = new MockAgeRangeViewService();
     mockAssetService = new MockAssetService();
     mockBiddingStrategyService = new MockBiddingStrategyService();
+    mockCampaignAssetService = new MockCampaignAssetService();
     mockCampaignBidModifierService = new MockCampaignBidModifierService();
     mockCampaignBudgetService = new MockCampaignBudgetService();
     mockCampaignCriterionService = new MockCampaignCriterionService();
@@ -298,6 +300,7 @@ public class VideoServiceClientTest {
                 mockAgeRangeViewService,
                 mockAssetService,
                 mockBiddingStrategyService,
+                mockCampaignAssetService,
                 mockCampaignBidModifierService,
                 mockCampaignBudgetService,
                 mockCampaignCriterionService,

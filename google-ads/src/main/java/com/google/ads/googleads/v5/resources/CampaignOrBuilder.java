@@ -682,7 +682,6 @@ public interface CampaignOrBuilder extends
   /**
    * <pre>
    * The date when campaign started.
-   * This field must not be used in WHERE clauses.
    * </pre>
    *
    * <code>string start_date = 63;</code>
@@ -692,7 +691,6 @@ public interface CampaignOrBuilder extends
   /**
    * <pre>
    * The date when campaign started.
-   * This field must not be used in WHERE clauses.
    * </pre>
    *
    * <code>string start_date = 63;</code>
@@ -702,7 +700,6 @@ public interface CampaignOrBuilder extends
   /**
    * <pre>
    * The date when campaign started.
-   * This field must not be used in WHERE clauses.
    * </pre>
    *
    * <code>string start_date = 63;</code>
@@ -714,7 +711,6 @@ public interface CampaignOrBuilder extends
   /**
    * <pre>
    * The date when campaign ended.
-   * This field must not be used in WHERE clauses.
    * </pre>
    *
    * <code>string end_date = 64;</code>
@@ -724,7 +720,6 @@ public interface CampaignOrBuilder extends
   /**
    * <pre>
    * The date when campaign ended.
-   * This field must not be used in WHERE clauses.
    * </pre>
    *
    * <code>string end_date = 64;</code>
@@ -734,7 +729,6 @@ public interface CampaignOrBuilder extends
   /**
    * <pre>
    * The date when campaign ended.
-   * This field must not be used in WHERE clauses.
    * </pre>
    *
    * <code>string end_date = 64;</code>

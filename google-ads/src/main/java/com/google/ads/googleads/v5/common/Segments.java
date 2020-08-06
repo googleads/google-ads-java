@@ -594,6 +594,19 @@ private static final long serialVersionUID = 0L;
             productMerchantId_ = input.readInt64();
             break;
           }
+          case 1074: {
+            com.google.ads.googleads.v5.common.BudgetCampaignAssociationStatus.Builder subBuilder = null;
+            if (budgetCampaignAssociationStatus_ != null) {
+              subBuilder = budgetCampaignAssociationStatus_.toBuilder();
+            }
+            budgetCampaignAssociationStatus_ = input.readMessage(com.google.ads.googleads.v5.common.BudgetCampaignAssociationStatus.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(budgetCampaignAssociationStatus_);
+              budgetCampaignAssociationStatus_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
           default: {
             if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -653,6 +666,44 @@ private static final long serialVersionUID = 0L;
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v5.enums.AdNetworkTypeEnum.AdNetworkType result = com.google.ads.googleads.v5.enums.AdNetworkTypeEnum.AdNetworkType.valueOf(adNetworkType_);
     return result == null ? com.google.ads.googleads.v5.enums.AdNetworkTypeEnum.AdNetworkType.UNRECOGNIZED : result;
+  }
+
+  public static final int BUDGET_CAMPAIGN_ASSOCIATION_STATUS_FIELD_NUMBER = 134;
+  private com.google.ads.googleads.v5.common.BudgetCampaignAssociationStatus budgetCampaignAssociationStatus_;
+  /**
+   * <pre>
+   * Budget campaign association status.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v5.common.BudgetCampaignAssociationStatus budget_campaign_association_status = 134;</code>
+   * @return Whether the budgetCampaignAssociationStatus field is set.
+   */
+  @java.lang.Override
+  public boolean hasBudgetCampaignAssociationStatus() {
+    return budgetCampaignAssociationStatus_ != null;
+  }
+  /**
+   * <pre>
+   * Budget campaign association status.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v5.common.BudgetCampaignAssociationStatus budget_campaign_association_status = 134;</code>
+   * @return The budgetCampaignAssociationStatus.
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v5.common.BudgetCampaignAssociationStatus getBudgetCampaignAssociationStatus() {
+    return budgetCampaignAssociationStatus_ == null ? com.google.ads.googleads.v5.common.BudgetCampaignAssociationStatus.getDefaultInstance() : budgetCampaignAssociationStatus_;
+  }
+  /**
+   * <pre>
+   * Budget campaign association status.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v5.common.BudgetCampaignAssociationStatus budget_campaign_association_status = 134;</code>
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v5.common.BudgetCampaignAssociationStatusOrBuilder getBudgetCampaignAssociationStatusOrBuilder() {
+    return getBudgetCampaignAssociationStatus();
   }
 
   public static final int CLICK_TYPE_FIELD_NUMBER = 26;
@@ -4467,6 +4518,9 @@ private static final long serialVersionUID = 0L;
     if (((bitField1_ & 0x00000800) != 0)) {
       output.writeInt64(133, productMerchantId_);
     }
+    if (budgetCampaignAssociationStatus_ != null) {
+      output.writeMessage(134, getBudgetCampaignAssociationStatus());
+    }
     unknownFields.writeTo(output);
   }
 
@@ -4742,6 +4796,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(133, productMerchantId_);
     }
+    if (budgetCampaignAssociationStatus_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(134, getBudgetCampaignAssociationStatus());
+    }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
@@ -4758,6 +4816,11 @@ private static final long serialVersionUID = 0L;
     com.google.ads.googleads.v5.common.Segments other = (com.google.ads.googleads.v5.common.Segments) obj;
 
     if (adNetworkType_ != other.adNetworkType_) return false;
+    if (hasBudgetCampaignAssociationStatus() != other.hasBudgetCampaignAssociationStatus()) return false;
+    if (hasBudgetCampaignAssociationStatus()) {
+      if (!getBudgetCampaignAssociationStatus()
+          .equals(other.getBudgetCampaignAssociationStatus())) return false;
+    }
     if (clickType_ != other.clickType_) return false;
     if (hasConversionAction() != other.hasConversionAction()) return false;
     if (hasConversionAction()) {
@@ -5076,6 +5139,10 @@ private static final long serialVersionUID = 0L;
     hash = (19 * hash) + getDescriptor().hashCode();
     hash = (37 * hash) + AD_NETWORK_TYPE_FIELD_NUMBER;
     hash = (53 * hash) + adNetworkType_;
+    if (hasBudgetCampaignAssociationStatus()) {
+      hash = (37 * hash) + BUDGET_CAMPAIGN_ASSOCIATION_STATUS_FIELD_NUMBER;
+      hash = (53 * hash) + getBudgetCampaignAssociationStatus().hashCode();
+    }
     hash = (37 * hash) + CLICK_TYPE_FIELD_NUMBER;
     hash = (53 * hash) + clickType_;
     if (hasConversionAction()) {
@@ -5488,6 +5555,12 @@ private static final long serialVersionUID = 0L;
       super.clear();
       adNetworkType_ = 0;
 
+      if (budgetCampaignAssociationStatusBuilder_ == null) {
+        budgetCampaignAssociationStatus_ = null;
+      } else {
+        budgetCampaignAssociationStatus_ = null;
+        budgetCampaignAssociationStatusBuilder_ = null;
+      }
       clickType_ = 0;
 
       conversionAction_ = "";
@@ -5681,6 +5754,11 @@ private static final long serialVersionUID = 0L;
       int to_bitField0_ = 0;
       int to_bitField1_ = 0;
       result.adNetworkType_ = adNetworkType_;
+      if (budgetCampaignAssociationStatusBuilder_ == null) {
+        result.budgetCampaignAssociationStatus_ = budgetCampaignAssociationStatus_;
+      } else {
+        result.budgetCampaignAssociationStatus_ = budgetCampaignAssociationStatusBuilder_.build();
+      }
       result.clickType_ = clickType_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         to_bitField0_ |= 0x00000001;
@@ -5983,6 +6061,9 @@ private static final long serialVersionUID = 0L;
       if (other == com.google.ads.googleads.v5.common.Segments.getDefaultInstance()) return this;
       if (other.adNetworkType_ != 0) {
         setAdNetworkTypeValue(other.getAdNetworkTypeValue());
+      }
+      if (other.hasBudgetCampaignAssociationStatus()) {
+        mergeBudgetCampaignAssociationStatus(other.getBudgetCampaignAssociationStatus());
       }
       if (other.clickType_ != 0) {
         setClickTypeValue(other.getClickTypeValue());
@@ -6410,6 +6491,161 @@ private static final long serialVersionUID = 0L;
       adNetworkType_ = 0;
       onChanged();
       return this;
+    }
+
+    private com.google.ads.googleads.v5.common.BudgetCampaignAssociationStatus budgetCampaignAssociationStatus_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v5.common.BudgetCampaignAssociationStatus, com.google.ads.googleads.v5.common.BudgetCampaignAssociationStatus.Builder, com.google.ads.googleads.v5.common.BudgetCampaignAssociationStatusOrBuilder> budgetCampaignAssociationStatusBuilder_;
+    /**
+     * <pre>
+     * Budget campaign association status.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v5.common.BudgetCampaignAssociationStatus budget_campaign_association_status = 134;</code>
+     * @return Whether the budgetCampaignAssociationStatus field is set.
+     */
+    public boolean hasBudgetCampaignAssociationStatus() {
+      return budgetCampaignAssociationStatusBuilder_ != null || budgetCampaignAssociationStatus_ != null;
+    }
+    /**
+     * <pre>
+     * Budget campaign association status.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v5.common.BudgetCampaignAssociationStatus budget_campaign_association_status = 134;</code>
+     * @return The budgetCampaignAssociationStatus.
+     */
+    public com.google.ads.googleads.v5.common.BudgetCampaignAssociationStatus getBudgetCampaignAssociationStatus() {
+      if (budgetCampaignAssociationStatusBuilder_ == null) {
+        return budgetCampaignAssociationStatus_ == null ? com.google.ads.googleads.v5.common.BudgetCampaignAssociationStatus.getDefaultInstance() : budgetCampaignAssociationStatus_;
+      } else {
+        return budgetCampaignAssociationStatusBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * Budget campaign association status.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v5.common.BudgetCampaignAssociationStatus budget_campaign_association_status = 134;</code>
+     */
+    public Builder setBudgetCampaignAssociationStatus(com.google.ads.googleads.v5.common.BudgetCampaignAssociationStatus value) {
+      if (budgetCampaignAssociationStatusBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        budgetCampaignAssociationStatus_ = value;
+        onChanged();
+      } else {
+        budgetCampaignAssociationStatusBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Budget campaign association status.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v5.common.BudgetCampaignAssociationStatus budget_campaign_association_status = 134;</code>
+     */
+    public Builder setBudgetCampaignAssociationStatus(
+        com.google.ads.googleads.v5.common.BudgetCampaignAssociationStatus.Builder builderForValue) {
+      if (budgetCampaignAssociationStatusBuilder_ == null) {
+        budgetCampaignAssociationStatus_ = builderForValue.build();
+        onChanged();
+      } else {
+        budgetCampaignAssociationStatusBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Budget campaign association status.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v5.common.BudgetCampaignAssociationStatus budget_campaign_association_status = 134;</code>
+     */
+    public Builder mergeBudgetCampaignAssociationStatus(com.google.ads.googleads.v5.common.BudgetCampaignAssociationStatus value) {
+      if (budgetCampaignAssociationStatusBuilder_ == null) {
+        if (budgetCampaignAssociationStatus_ != null) {
+          budgetCampaignAssociationStatus_ =
+            com.google.ads.googleads.v5.common.BudgetCampaignAssociationStatus.newBuilder(budgetCampaignAssociationStatus_).mergeFrom(value).buildPartial();
+        } else {
+          budgetCampaignAssociationStatus_ = value;
+        }
+        onChanged();
+      } else {
+        budgetCampaignAssociationStatusBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Budget campaign association status.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v5.common.BudgetCampaignAssociationStatus budget_campaign_association_status = 134;</code>
+     */
+    public Builder clearBudgetCampaignAssociationStatus() {
+      if (budgetCampaignAssociationStatusBuilder_ == null) {
+        budgetCampaignAssociationStatus_ = null;
+        onChanged();
+      } else {
+        budgetCampaignAssociationStatus_ = null;
+        budgetCampaignAssociationStatusBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Budget campaign association status.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v5.common.BudgetCampaignAssociationStatus budget_campaign_association_status = 134;</code>
+     */
+    public com.google.ads.googleads.v5.common.BudgetCampaignAssociationStatus.Builder getBudgetCampaignAssociationStatusBuilder() {
+      
+      onChanged();
+      return getBudgetCampaignAssociationStatusFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Budget campaign association status.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v5.common.BudgetCampaignAssociationStatus budget_campaign_association_status = 134;</code>
+     */
+    public com.google.ads.googleads.v5.common.BudgetCampaignAssociationStatusOrBuilder getBudgetCampaignAssociationStatusOrBuilder() {
+      if (budgetCampaignAssociationStatusBuilder_ != null) {
+        return budgetCampaignAssociationStatusBuilder_.getMessageOrBuilder();
+      } else {
+        return budgetCampaignAssociationStatus_ == null ?
+            com.google.ads.googleads.v5.common.BudgetCampaignAssociationStatus.getDefaultInstance() : budgetCampaignAssociationStatus_;
+      }
+    }
+    /**
+     * <pre>
+     * Budget campaign association status.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v5.common.BudgetCampaignAssociationStatus budget_campaign_association_status = 134;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v5.common.BudgetCampaignAssociationStatus, com.google.ads.googleads.v5.common.BudgetCampaignAssociationStatus.Builder, com.google.ads.googleads.v5.common.BudgetCampaignAssociationStatusOrBuilder> 
+        getBudgetCampaignAssociationStatusFieldBuilder() {
+      if (budgetCampaignAssociationStatusBuilder_ == null) {
+        budgetCampaignAssociationStatusBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.ads.googleads.v5.common.BudgetCampaignAssociationStatus, com.google.ads.googleads.v5.common.BudgetCampaignAssociationStatus.Builder, com.google.ads.googleads.v5.common.BudgetCampaignAssociationStatusOrBuilder>(
+                getBudgetCampaignAssociationStatus(),
+                getParentForChildren(),
+                isClean());
+        budgetCampaignAssociationStatus_ = null;
+      }
+      return budgetCampaignAssociationStatusBuilder_;
     }
 
     private int clickType_ = 0;

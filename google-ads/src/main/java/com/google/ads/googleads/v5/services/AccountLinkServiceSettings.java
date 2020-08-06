@@ -70,6 +70,12 @@ public class AccountLinkServiceSettings extends ClientSettings<AccountLinkServic
     return ((AccountLinkServiceStubSettings) getStubSettings()).getAccountLinkSettings();
   }
 
+  /** Returns the object with the settings used for calls to createAccountLink. */
+  public UnaryCallSettings<CreateAccountLinkRequest, CreateAccountLinkResponse>
+      createAccountLinkSettings() {
+    return ((AccountLinkServiceStubSettings) getStubSettings()).createAccountLinkSettings();
+  }
+
   /** Returns the object with the settings used for calls to mutateAccountLink. */
   public UnaryCallSettings<MutateAccountLinkRequest, MutateAccountLinkResponse>
       mutateAccountLinkSettings() {
@@ -176,6 +182,12 @@ public class AccountLinkServiceSettings extends ClientSettings<AccountLinkServic
     /** Returns the builder for the settings used for calls to getAccountLink. */
     public UnaryCallSettings.Builder<GetAccountLinkRequest, AccountLink> getAccountLinkSettings() {
       return getStubSettingsBuilder().getAccountLinkSettings();
+    }
+
+    /** Returns the builder for the settings used for calls to createAccountLink. */
+    public UnaryCallSettings.Builder<CreateAccountLinkRequest, CreateAccountLinkResponse>
+        createAccountLinkSettings() {
+      return getStubSettingsBuilder().createAccountLinkSettings();
     }
 
     /** Returns the builder for the settings used for calls to mutateAccountLink. */

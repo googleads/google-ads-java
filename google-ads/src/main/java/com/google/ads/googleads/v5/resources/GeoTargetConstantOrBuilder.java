@@ -187,4 +187,28 @@ public interface GeoTargetConstantOrBuilder extends
    */
   com.google.protobuf.ByteString
       getCanonicalNameBytes();
+
+  /**
+   * <pre>
+   * Output only. The resource name of the parent geo target constant.
+   * Geo target constant resource names have the form:
+   * `geoTargetConstants/{parent_geo_target_constant_id}`
+   * </pre>
+   *
+   * <code>string parent_geo_target = 9 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The parentGeoTarget.
+   */
+  java.lang.String getParentGeoTarget();
+  /**
+   * <pre>
+   * Output only. The resource name of the parent geo target constant.
+   * Geo target constant resource names have the form:
+   * `geoTargetConstants/{parent_geo_target_constant_id}`
+   * </pre>
+   *
+   * <code>string parent_geo_target = 9 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The bytes for parentGeoTarget.
+   */
+  com.google.protobuf.ByteString
+      getParentGeoTargetBytes();
 }

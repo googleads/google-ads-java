@@ -711,6 +711,33 @@ public interface GoogleAdsRowOrBuilder extends
 
   /**
    * <pre>
+   * The campaign asset referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v5.resources.CampaignAsset campaign_asset = 142;</code>
+   * @return Whether the campaignAsset field is set.
+   */
+  boolean hasCampaignAsset();
+  /**
+   * <pre>
+   * The campaign asset referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v5.resources.CampaignAsset campaign_asset = 142;</code>
+   * @return The campaignAsset.
+   */
+  com.google.ads.googleads.v5.resources.CampaignAsset getCampaignAsset();
+  /**
+   * <pre>
+   * The campaign asset referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v5.resources.CampaignAsset campaign_asset = 142;</code>
+   */
+  com.google.ads.googleads.v5.resources.CampaignAssetOrBuilder getCampaignAssetOrBuilder();
+
+  /**
+   * <pre>
    * The campaign audience view referenced in the query.
    * </pre>
    *

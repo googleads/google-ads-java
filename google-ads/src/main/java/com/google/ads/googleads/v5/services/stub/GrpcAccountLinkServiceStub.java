@@ -16,6 +16,8 @@
 package com.google.ads.googleads.v5.services.stub;
 
 import com.google.ads.googleads.v5.resources.AccountLink;
+import com.google.ads.googleads.v5.services.CreateAccountLinkRequest;
+import com.google.ads.googleads.v5.services.CreateAccountLinkResponse;
 import com.google.ads.googleads.v5.services.GetAccountLinkRequest;
 import com.google.ads.googleads.v5.services.MutateAccountLinkRequest;
 import com.google.ads.googleads.v5.services.MutateAccountLinkResponse;
@@ -55,6 +57,17 @@ public class GrpcAccountLinkServiceStub extends AccountLinkServiceStub {
                   ProtoUtils.marshaller(GetAccountLinkRequest.getDefaultInstance()))
               .setResponseMarshaller(ProtoUtils.marshaller(AccountLink.getDefaultInstance()))
               .build();
+  private static final MethodDescriptor<CreateAccountLinkRequest, CreateAccountLinkResponse>
+      createAccountLinkMethodDescriptor =
+          MethodDescriptor.<CreateAccountLinkRequest, CreateAccountLinkResponse>newBuilder()
+              .setType(MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(
+                  "google.ads.googleads.v5.services.AccountLinkService/CreateAccountLink")
+              .setRequestMarshaller(
+                  ProtoUtils.marshaller(CreateAccountLinkRequest.getDefaultInstance()))
+              .setResponseMarshaller(
+                  ProtoUtils.marshaller(CreateAccountLinkResponse.getDefaultInstance()))
+              .build();
   private static final MethodDescriptor<MutateAccountLinkRequest, MutateAccountLinkResponse>
       mutateAccountLinkMethodDescriptor =
           MethodDescriptor.<MutateAccountLinkRequest, MutateAccountLinkResponse>newBuilder()
@@ -70,6 +83,8 @@ public class GrpcAccountLinkServiceStub extends AccountLinkServiceStub {
   private final BackgroundResource backgroundResources;
 
   private final UnaryCallable<GetAccountLinkRequest, AccountLink> getAccountLinkCallable;
+  private final UnaryCallable<CreateAccountLinkRequest, CreateAccountLinkResponse>
+      createAccountLinkCallable;
   private final UnaryCallable<MutateAccountLinkRequest, MutateAccountLinkResponse>
       mutateAccountLinkCallable;
 
@@ -127,6 +142,20 @@ public class GrpcAccountLinkServiceStub extends AccountLinkServiceStub {
                   }
                 })
             .build();
+    GrpcCallSettings<CreateAccountLinkRequest, CreateAccountLinkResponse>
+        createAccountLinkTransportSettings =
+            GrpcCallSettings.<CreateAccountLinkRequest, CreateAccountLinkResponse>newBuilder()
+                .setMethodDescriptor(createAccountLinkMethodDescriptor)
+                .setParamsExtractor(
+                    new RequestParamsExtractor<CreateAccountLinkRequest>() {
+                      @Override
+                      public Map<String, String> extract(CreateAccountLinkRequest request) {
+                        ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
+                        params.put("customer_id", String.valueOf(request.getCustomerId()));
+                        return params.build();
+                      }
+                    })
+                .build();
     GrpcCallSettings<MutateAccountLinkRequest, MutateAccountLinkResponse>
         mutateAccountLinkTransportSettings =
             GrpcCallSettings.<MutateAccountLinkRequest, MutateAccountLinkResponse>newBuilder()
@@ -145,6 +174,11 @@ public class GrpcAccountLinkServiceStub extends AccountLinkServiceStub {
     this.getAccountLinkCallable =
         callableFactory.createUnaryCallable(
             getAccountLinkTransportSettings, settings.getAccountLinkSettings(), clientContext);
+    this.createAccountLinkCallable =
+        callableFactory.createUnaryCallable(
+            createAccountLinkTransportSettings,
+            settings.createAccountLinkSettings(),
+            clientContext);
     this.mutateAccountLinkCallable =
         callableFactory.createUnaryCallable(
             mutateAccountLinkTransportSettings,
@@ -156,6 +190,11 @@ public class GrpcAccountLinkServiceStub extends AccountLinkServiceStub {
 
   public UnaryCallable<GetAccountLinkRequest, AccountLink> getAccountLinkCallable() {
     return getAccountLinkCallable;
+  }
+
+  public UnaryCallable<CreateAccountLinkRequest, CreateAccountLinkResponse>
+      createAccountLinkCallable() {
+    return createAccountLinkCallable;
   }
 
   public UnaryCallable<MutateAccountLinkRequest, MutateAccountLinkResponse>

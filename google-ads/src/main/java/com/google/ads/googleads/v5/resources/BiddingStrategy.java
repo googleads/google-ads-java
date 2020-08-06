@@ -24,6 +24,7 @@ private static final long serialVersionUID = 0L;
     name_ = "";
     status_ = 0;
     type_ = 0;
+    effectiveCurrencyCode_ = "";
   }
 
   @java.lang.Override
@@ -143,13 +144,19 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 144: {
-            bitField0_ |= 0x00000004;
+            bitField0_ |= 0x00000008;
             campaignCount_ = input.readInt64();
             break;
           }
           case 152: {
-            bitField0_ |= 0x00000008;
+            bitField0_ |= 0x00000010;
             nonRemovedCampaignCount_ = input.readInt64();
+            break;
+          }
+          case 162: {
+            java.lang.String s = input.readStringRequireUtf8();
+            bitField0_ |= 0x00000004;
+            effectiveCurrencyCode_ = s;
             break;
           }
           case 386: {
@@ -450,6 +457,79 @@ private static final long serialVersionUID = 0L;
     return result == null ? com.google.ads.googleads.v5.enums.BiddingStrategyTypeEnum.BiddingStrategyType.UNRECOGNIZED : result;
   }
 
+  public static final int EFFECTIVE_CURRENCY_CODE_FIELD_NUMBER = 20;
+  private volatile java.lang.Object effectiveCurrencyCode_;
+  /**
+   * <pre>
+   * Output only. The currency used by the bidding strategy (ISO 4217 three-letter code).
+   * For bidding strategies in manager customers, this is the currency set by
+   * the advertiser when creating the strategy. For serving customers, this is
+   * the customer's currency_code.
+   * Bidding strategy metrics are reported in this currency.
+   * This field is read-only.
+   * </pre>
+   *
+   * <code>string effective_currency_code = 20 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the effectiveCurrencyCode field is set.
+   */
+  @java.lang.Override
+  public boolean hasEffectiveCurrencyCode() {
+    return ((bitField0_ & 0x00000004) != 0);
+  }
+  /**
+   * <pre>
+   * Output only. The currency used by the bidding strategy (ISO 4217 three-letter code).
+   * For bidding strategies in manager customers, this is the currency set by
+   * the advertiser when creating the strategy. For serving customers, this is
+   * the customer's currency_code.
+   * Bidding strategy metrics are reported in this currency.
+   * This field is read-only.
+   * </pre>
+   *
+   * <code>string effective_currency_code = 20 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The effectiveCurrencyCode.
+   */
+  @java.lang.Override
+  public java.lang.String getEffectiveCurrencyCode() {
+    java.lang.Object ref = effectiveCurrencyCode_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      effectiveCurrencyCode_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * Output only. The currency used by the bidding strategy (ISO 4217 three-letter code).
+   * For bidding strategies in manager customers, this is the currency set by
+   * the advertiser when creating the strategy. For serving customers, this is
+   * the customer's currency_code.
+   * Bidding strategy metrics are reported in this currency.
+   * This field is read-only.
+   * </pre>
+   *
+   * <code>string effective_currency_code = 20 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The bytes for effectiveCurrencyCode.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getEffectiveCurrencyCodeBytes() {
+    java.lang.Object ref = effectiveCurrencyCode_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      effectiveCurrencyCode_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
   public static final int CAMPAIGN_COUNT_FIELD_NUMBER = 18;
   private long campaignCount_;
   /**
@@ -463,7 +543,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasCampaignCount() {
-    return ((bitField0_ & 0x00000004) != 0);
+    return ((bitField0_ & 0x00000008) != 0);
   }
   /**
    * <pre>
@@ -492,7 +572,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasNonRemovedCampaignCount() {
-    return ((bitField0_ & 0x00000008) != 0);
+    return ((bitField0_ & 0x00000010) != 0);
   }
   /**
    * <pre>
@@ -782,11 +862,14 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x00000002) != 0)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 17, name_);
     }
-    if (((bitField0_ & 0x00000004) != 0)) {
+    if (((bitField0_ & 0x00000008) != 0)) {
       output.writeInt64(18, campaignCount_);
     }
-    if (((bitField0_ & 0x00000008) != 0)) {
+    if (((bitField0_ & 0x00000010) != 0)) {
       output.writeInt64(19, nonRemovedCampaignCount_);
+    }
+    if (((bitField0_ & 0x00000004) != 0)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 20, effectiveCurrencyCode_);
     }
     if (schemeCase_ == 48) {
       output.writeMessage(48, (com.google.ads.googleads.v5.common.TargetImpressionShare) scheme_);
@@ -834,13 +917,16 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x00000002) != 0)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(17, name_);
     }
-    if (((bitField0_ & 0x00000004) != 0)) {
+    if (((bitField0_ & 0x00000008) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(18, campaignCount_);
     }
-    if (((bitField0_ & 0x00000008) != 0)) {
+    if (((bitField0_ & 0x00000010) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(19, nonRemovedCampaignCount_);
+    }
+    if (((bitField0_ & 0x00000004) != 0)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(20, effectiveCurrencyCode_);
     }
     if (schemeCase_ == 48) {
       size += com.google.protobuf.CodedOutputStream
@@ -875,6 +961,11 @@ private static final long serialVersionUID = 0L;
     }
     if (status_ != other.status_) return false;
     if (type_ != other.type_) return false;
+    if (hasEffectiveCurrencyCode() != other.hasEffectiveCurrencyCode()) return false;
+    if (hasEffectiveCurrencyCode()) {
+      if (!getEffectiveCurrencyCode()
+          .equals(other.getEffectiveCurrencyCode())) return false;
+    }
     if (hasCampaignCount() != other.hasCampaignCount()) return false;
     if (hasCampaignCount()) {
       if (getCampaignCount()
@@ -936,6 +1027,10 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + status_;
     hash = (37 * hash) + TYPE_FIELD_NUMBER;
     hash = (53 * hash) + type_;
+    if (hasEffectiveCurrencyCode()) {
+      hash = (37 * hash) + EFFECTIVE_CURRENCY_CODE_FIELD_NUMBER;
+      hash = (53 * hash) + getEffectiveCurrencyCode().hashCode();
+    }
     if (hasCampaignCount()) {
       hash = (37 * hash) + CAMPAIGN_COUNT_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
@@ -1117,10 +1212,12 @@ private static final long serialVersionUID = 0L;
 
       type_ = 0;
 
-      campaignCount_ = 0L;
+      effectiveCurrencyCode_ = "";
       bitField0_ = (bitField0_ & ~0x00000004);
-      nonRemovedCampaignCount_ = 0L;
+      campaignCount_ = 0L;
       bitField0_ = (bitField0_ & ~0x00000008);
+      nonRemovedCampaignCount_ = 0L;
+      bitField0_ = (bitField0_ & ~0x00000010);
       schemeCase_ = 0;
       scheme_ = null;
       return this;
@@ -1163,12 +1260,16 @@ private static final long serialVersionUID = 0L;
       result.status_ = status_;
       result.type_ = type_;
       if (((from_bitField0_ & 0x00000004) != 0)) {
-        result.campaignCount_ = campaignCount_;
         to_bitField0_ |= 0x00000004;
       }
+      result.effectiveCurrencyCode_ = effectiveCurrencyCode_;
       if (((from_bitField0_ & 0x00000008) != 0)) {
-        result.nonRemovedCampaignCount_ = nonRemovedCampaignCount_;
+        result.campaignCount_ = campaignCount_;
         to_bitField0_ |= 0x00000008;
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.nonRemovedCampaignCount_ = nonRemovedCampaignCount_;
+        to_bitField0_ |= 0x00000010;
       }
       if (schemeCase_ == 7) {
         if (enhancedCpcBuilder_ == null) {
@@ -1272,6 +1373,11 @@ private static final long serialVersionUID = 0L;
       }
       if (other.type_ != 0) {
         setTypeValue(other.getTypeValue());
+      }
+      if (other.hasEffectiveCurrencyCode()) {
+        bitField0_ |= 0x00000004;
+        effectiveCurrencyCode_ = other.effectiveCurrencyCode_;
+        onChanged();
       }
       if (other.hasCampaignCount()) {
         setCampaignCount(other.getCampaignCount());
@@ -1798,6 +1904,143 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
+    private java.lang.Object effectiveCurrencyCode_ = "";
+    /**
+     * <pre>
+     * Output only. The currency used by the bidding strategy (ISO 4217 three-letter code).
+     * For bidding strategies in manager customers, this is the currency set by
+     * the advertiser when creating the strategy. For serving customers, this is
+     * the customer's currency_code.
+     * Bidding strategy metrics are reported in this currency.
+     * This field is read-only.
+     * </pre>
+     *
+     * <code>string effective_currency_code = 20 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the effectiveCurrencyCode field is set.
+     */
+    public boolean hasEffectiveCurrencyCode() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+    /**
+     * <pre>
+     * Output only. The currency used by the bidding strategy (ISO 4217 three-letter code).
+     * For bidding strategies in manager customers, this is the currency set by
+     * the advertiser when creating the strategy. For serving customers, this is
+     * the customer's currency_code.
+     * Bidding strategy metrics are reported in this currency.
+     * This field is read-only.
+     * </pre>
+     *
+     * <code>string effective_currency_code = 20 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The effectiveCurrencyCode.
+     */
+    public java.lang.String getEffectiveCurrencyCode() {
+      java.lang.Object ref = effectiveCurrencyCode_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        effectiveCurrencyCode_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * Output only. The currency used by the bidding strategy (ISO 4217 three-letter code).
+     * For bidding strategies in manager customers, this is the currency set by
+     * the advertiser when creating the strategy. For serving customers, this is
+     * the customer's currency_code.
+     * Bidding strategy metrics are reported in this currency.
+     * This field is read-only.
+     * </pre>
+     *
+     * <code>string effective_currency_code = 20 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The bytes for effectiveCurrencyCode.
+     */
+    public com.google.protobuf.ByteString
+        getEffectiveCurrencyCodeBytes() {
+      java.lang.Object ref = effectiveCurrencyCode_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        effectiveCurrencyCode_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * Output only. The currency used by the bidding strategy (ISO 4217 three-letter code).
+     * For bidding strategies in manager customers, this is the currency set by
+     * the advertiser when creating the strategy. For serving customers, this is
+     * the customer's currency_code.
+     * Bidding strategy metrics are reported in this currency.
+     * This field is read-only.
+     * </pre>
+     *
+     * <code>string effective_currency_code = 20 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @param value The effectiveCurrencyCode to set.
+     * @return This builder for chaining.
+     */
+    public Builder setEffectiveCurrencyCode(
+        java.lang.String value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000004;
+      effectiveCurrencyCode_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Output only. The currency used by the bidding strategy (ISO 4217 three-letter code).
+     * For bidding strategies in manager customers, this is the currency set by
+     * the advertiser when creating the strategy. For serving customers, this is
+     * the customer's currency_code.
+     * Bidding strategy metrics are reported in this currency.
+     * This field is read-only.
+     * </pre>
+     *
+     * <code>string effective_currency_code = 20 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearEffectiveCurrencyCode() {
+      bitField0_ = (bitField0_ & ~0x00000004);
+      effectiveCurrencyCode_ = getDefaultInstance().getEffectiveCurrencyCode();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Output only. The currency used by the bidding strategy (ISO 4217 three-letter code).
+     * For bidding strategies in manager customers, this is the currency set by
+     * the advertiser when creating the strategy. For serving customers, this is
+     * the customer's currency_code.
+     * Bidding strategy metrics are reported in this currency.
+     * This field is read-only.
+     * </pre>
+     *
+     * <code>string effective_currency_code = 20 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @param value The bytes for effectiveCurrencyCode to set.
+     * @return This builder for chaining.
+     */
+    public Builder setEffectiveCurrencyCodeBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      bitField0_ |= 0x00000004;
+      effectiveCurrencyCode_ = value;
+      onChanged();
+      return this;
+    }
+
     private long campaignCount_ ;
     /**
      * <pre>
@@ -1810,7 +2053,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasCampaignCount() {
-      return ((bitField0_ & 0x00000004) != 0);
+      return ((bitField0_ & 0x00000008) != 0);
     }
     /**
      * <pre>
@@ -1836,7 +2079,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setCampaignCount(long value) {
-      bitField0_ |= 0x00000004;
+      bitField0_ |= 0x00000008;
       campaignCount_ = value;
       onChanged();
       return this;
@@ -1851,7 +2094,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearCampaignCount() {
-      bitField0_ = (bitField0_ & ~0x00000004);
+      bitField0_ = (bitField0_ & ~0x00000008);
       campaignCount_ = 0L;
       onChanged();
       return this;
@@ -1869,7 +2112,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasNonRemovedCampaignCount() {
-      return ((bitField0_ & 0x00000008) != 0);
+      return ((bitField0_ & 0x00000010) != 0);
     }
     /**
      * <pre>
@@ -1895,7 +2138,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setNonRemovedCampaignCount(long value) {
-      bitField0_ |= 0x00000008;
+      bitField0_ |= 0x00000010;
       nonRemovedCampaignCount_ = value;
       onChanged();
       return this;
@@ -1910,7 +2153,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearNonRemovedCampaignCount() {
-      bitField0_ = (bitField0_ & ~0x00000008);
+      bitField0_ = (bitField0_ & ~0x00000010);
       nonRemovedCampaignCount_ = 0L;
       onChanged();
       return this;

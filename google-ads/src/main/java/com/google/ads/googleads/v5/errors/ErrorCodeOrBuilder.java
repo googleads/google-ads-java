@@ -2116,5 +2116,43 @@ public interface ErrorCodeOrBuilder extends
    */
   com.google.ads.googleads.v5.errors.BatchJobErrorEnum.BatchJobError getBatchJobError();
 
+  /**
+   * <pre>
+   * The reasons for the account link status change error
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v5.errors.AccountLinkErrorEnum.AccountLinkError account_link_error = 134;</code>
+   * @return The enum numeric value on the wire for accountLinkError.
+   */
+  int getAccountLinkErrorValue();
+  /**
+   * <pre>
+   * The reasons for the account link status change error
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v5.errors.AccountLinkErrorEnum.AccountLinkError account_link_error = 134;</code>
+   * @return The accountLinkError.
+   */
+  com.google.ads.googleads.v5.errors.AccountLinkErrorEnum.AccountLinkError getAccountLinkError();
+
+  /**
+   * <pre>
+   * The reasons for the third party app analytics link mutate error
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v5.errors.ThirdPartyAppAnalyticsLinkErrorEnum.ThirdPartyAppAnalyticsLinkError third_party_app_analytics_link_error = 135;</code>
+   * @return The enum numeric value on the wire for thirdPartyAppAnalyticsLinkError.
+   */
+  int getThirdPartyAppAnalyticsLinkErrorValue();
+  /**
+   * <pre>
+   * The reasons for the third party app analytics link mutate error
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v5.errors.ThirdPartyAppAnalyticsLinkErrorEnum.ThirdPartyAppAnalyticsLinkError third_party_app_analytics_link_error = 135;</code>
+   * @return The thirdPartyAppAnalyticsLinkError.
+   */
+  com.google.ads.googleads.v5.errors.ThirdPartyAppAnalyticsLinkErrorEnum.ThirdPartyAppAnalyticsLinkError getThirdPartyAppAnalyticsLinkError();
+
   public com.google.ads.googleads.v5.errors.ErrorCode.ErrorCodeCase getErrorCodeCase();
 }

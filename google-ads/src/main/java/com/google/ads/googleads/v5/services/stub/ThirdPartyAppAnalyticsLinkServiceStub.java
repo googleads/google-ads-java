@@ -17,6 +17,8 @@ package com.google.ads.googleads.v5.services.stub;
 
 import com.google.ads.googleads.v5.resources.ThirdPartyAppAnalyticsLink;
 import com.google.ads.googleads.v5.services.GetThirdPartyAppAnalyticsLinkRequest;
+import com.google.ads.googleads.v5.services.RegenerateShareableLinkIdRequest;
+import com.google.ads.googleads.v5.services.RegenerateShareableLinkIdResponse;
 import com.google.api.core.BetaApi;
 import com.google.api.gax.core.BackgroundResource;
 import com.google.api.gax.rpc.UnaryCallable;
@@ -36,6 +38,11 @@ public abstract class ThirdPartyAppAnalyticsLinkServiceStub implements Backgroun
       getThirdPartyAppAnalyticsLinkCallable() {
     throw new UnsupportedOperationException(
         "Not implemented: getThirdPartyAppAnalyticsLinkCallable()");
+  }
+
+  public UnaryCallable<RegenerateShareableLinkIdRequest, RegenerateShareableLinkIdResponse>
+      regenerateShareableLinkIdCallable() {
+    throw new UnsupportedOperationException("Not implemented: regenerateShareableLinkIdCallable()");
   }
 
   @Override

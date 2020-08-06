@@ -240,7 +240,7 @@ private static final long serialVersionUID = 0L;
    * Name of the store sales custom variable key. A predefined key that
    * can be applied to the transaction and then later used for custom
    * segmentation in reporting.
-   * Accessible to whitelisted customers only.
+   * Accessible only to customers on the allow-list.
    * </pre>
    *
    * <code>.google.protobuf.StringValue custom_key = 4;</code>
@@ -255,7 +255,7 @@ private static final long serialVersionUID = 0L;
    * Name of the store sales custom variable key. A predefined key that
    * can be applied to the transaction and then later used for custom
    * segmentation in reporting.
-   * Accessible to whitelisted customers only.
+   * Accessible only to customers on the allow-list.
    * </pre>
    *
    * <code>.google.protobuf.StringValue custom_key = 4;</code>
@@ -270,7 +270,7 @@ private static final long serialVersionUID = 0L;
    * Name of the store sales custom variable key. A predefined key that
    * can be applied to the transaction and then later used for custom
    * segmentation in reporting.
-   * Accessible to whitelisted customers only.
+   * Accessible only to customers on the allow-list.
    * </pre>
    *
    * <code>.google.protobuf.StringValue custom_key = 4;</code>
@@ -1108,7 +1108,7 @@ private static final long serialVersionUID = 0L;
      * Name of the store sales custom variable key. A predefined key that
      * can be applied to the transaction and then later used for custom
      * segmentation in reporting.
-     * Accessible to whitelisted customers only.
+     * Accessible only to customers on the allow-list.
      * </pre>
      *
      * <code>.google.protobuf.StringValue custom_key = 4;</code>
@@ -1122,7 +1122,7 @@ private static final long serialVersionUID = 0L;
      * Name of the store sales custom variable key. A predefined key that
      * can be applied to the transaction and then later used for custom
      * segmentation in reporting.
-     * Accessible to whitelisted customers only.
+     * Accessible only to customers on the allow-list.
      * </pre>
      *
      * <code>.google.protobuf.StringValue custom_key = 4;</code>
@@ -1140,7 +1140,7 @@ private static final long serialVersionUID = 0L;
      * Name of the store sales custom variable key. A predefined key that
      * can be applied to the transaction and then later used for custom
      * segmentation in reporting.
-     * Accessible to whitelisted customers only.
+     * Accessible only to customers on the allow-list.
      * </pre>
      *
      * <code>.google.protobuf.StringValue custom_key = 4;</code>
@@ -1163,7 +1163,7 @@ private static final long serialVersionUID = 0L;
      * Name of the store sales custom variable key. A predefined key that
      * can be applied to the transaction and then later used for custom
      * segmentation in reporting.
-     * Accessible to whitelisted customers only.
+     * Accessible only to customers on the allow-list.
      * </pre>
      *
      * <code>.google.protobuf.StringValue custom_key = 4;</code>
@@ -1184,7 +1184,7 @@ private static final long serialVersionUID = 0L;
      * Name of the store sales custom variable key. A predefined key that
      * can be applied to the transaction and then later used for custom
      * segmentation in reporting.
-     * Accessible to whitelisted customers only.
+     * Accessible only to customers on the allow-list.
      * </pre>
      *
      * <code>.google.protobuf.StringValue custom_key = 4;</code>
@@ -1209,7 +1209,7 @@ private static final long serialVersionUID = 0L;
      * Name of the store sales custom variable key. A predefined key that
      * can be applied to the transaction and then later used for custom
      * segmentation in reporting.
-     * Accessible to whitelisted customers only.
+     * Accessible only to customers on the allow-list.
      * </pre>
      *
      * <code>.google.protobuf.StringValue custom_key = 4;</code>
@@ -1230,7 +1230,7 @@ private static final long serialVersionUID = 0L;
      * Name of the store sales custom variable key. A predefined key that
      * can be applied to the transaction and then later used for custom
      * segmentation in reporting.
-     * Accessible to whitelisted customers only.
+     * Accessible only to customers on the allow-list.
      * </pre>
      *
      * <code>.google.protobuf.StringValue custom_key = 4;</code>
@@ -1245,7 +1245,7 @@ private static final long serialVersionUID = 0L;
      * Name of the store sales custom variable key. A predefined key that
      * can be applied to the transaction and then later used for custom
      * segmentation in reporting.
-     * Accessible to whitelisted customers only.
+     * Accessible only to customers on the allow-list.
      * </pre>
      *
      * <code>.google.protobuf.StringValue custom_key = 4;</code>
@@ -1263,7 +1263,7 @@ private static final long serialVersionUID = 0L;
      * Name of the store sales custom variable key. A predefined key that
      * can be applied to the transaction and then later used for custom
      * segmentation in reporting.
-     * Accessible to whitelisted customers only.
+     * Accessible only to customers on the allow-list.
      * </pre>
      *
      * <code>.google.protobuf.StringValue custom_key = 4;</code>

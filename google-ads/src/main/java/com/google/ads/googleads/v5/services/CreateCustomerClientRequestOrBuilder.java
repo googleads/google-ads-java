@@ -60,7 +60,7 @@ public interface CreateCustomerClientRequestOrBuilder extends
   /**
    * <pre>
    * Email address of the user who should be invited on the created client
-   * customer. Accessible to whitelisted customers only.
+   * customer. Accessible only to customers on the allow-list.
    * </pre>
    *
    * <code>.google.protobuf.StringValue email_address = 3;</code>
@@ -70,7 +70,7 @@ public interface CreateCustomerClientRequestOrBuilder extends
   /**
    * <pre>
    * Email address of the user who should be invited on the created client
-   * customer. Accessible to whitelisted customers only.
+   * customer. Accessible only to customers on the allow-list.
    * </pre>
    *
    * <code>.google.protobuf.StringValue email_address = 3;</code>
@@ -80,7 +80,7 @@ public interface CreateCustomerClientRequestOrBuilder extends
   /**
    * <pre>
    * Email address of the user who should be invited on the created client
-   * customer. Accessible to whitelisted customers only.
+   * customer. Accessible only to customers on the allow-list.
    * </pre>
    *
    * <code>.google.protobuf.StringValue email_address = 3;</code>
@@ -90,7 +90,7 @@ public interface CreateCustomerClientRequestOrBuilder extends
   /**
    * <pre>
    * The proposed role of user on the created client customer.
-   * Accessible to whitelisted customers only.
+   * Accessible only to customers on the allow-list.
    * </pre>
    *
    * <code>.google.ads.googleads.v5.enums.AccessRoleEnum.AccessRole access_role = 4;</code>
@@ -100,7 +100,7 @@ public interface CreateCustomerClientRequestOrBuilder extends
   /**
    * <pre>
    * The proposed role of user on the created client customer.
-   * Accessible to whitelisted customers only.
+   * Accessible only to customers on the allow-list.
    * </pre>
    *
    * <code>.google.ads.googleads.v5.enums.AccessRoleEnum.AccessRole access_role = 4;</code>

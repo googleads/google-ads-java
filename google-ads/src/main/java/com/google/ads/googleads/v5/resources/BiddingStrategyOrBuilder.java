@@ -134,6 +134,50 @@ public interface BiddingStrategyOrBuilder extends
 
   /**
    * <pre>
+   * Output only. The currency used by the bidding strategy (ISO 4217 three-letter code).
+   * For bidding strategies in manager customers, this is the currency set by
+   * the advertiser when creating the strategy. For serving customers, this is
+   * the customer's currency_code.
+   * Bidding strategy metrics are reported in this currency.
+   * This field is read-only.
+   * </pre>
+   *
+   * <code>string effective_currency_code = 20 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the effectiveCurrencyCode field is set.
+   */
+  boolean hasEffectiveCurrencyCode();
+  /**
+   * <pre>
+   * Output only. The currency used by the bidding strategy (ISO 4217 three-letter code).
+   * For bidding strategies in manager customers, this is the currency set by
+   * the advertiser when creating the strategy. For serving customers, this is
+   * the customer's currency_code.
+   * Bidding strategy metrics are reported in this currency.
+   * This field is read-only.
+   * </pre>
+   *
+   * <code>string effective_currency_code = 20 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The effectiveCurrencyCode.
+   */
+  java.lang.String getEffectiveCurrencyCode();
+  /**
+   * <pre>
+   * Output only. The currency used by the bidding strategy (ISO 4217 three-letter code).
+   * For bidding strategies in manager customers, this is the currency set by
+   * the advertiser when creating the strategy. For serving customers, this is
+   * the customer's currency_code.
+   * Bidding strategy metrics are reported in this currency.
+   * This field is read-only.
+   * </pre>
+   *
+   * <code>string effective_currency_code = 20 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The bytes for effectiveCurrencyCode.
+   */
+  com.google.protobuf.ByteString
+      getEffectiveCurrencyCodeBytes();
+
+  /**
+   * <pre>
    * Output only. The number of campaigns attached to this bidding strategy.
    * This field is read-only.
    * </pre>

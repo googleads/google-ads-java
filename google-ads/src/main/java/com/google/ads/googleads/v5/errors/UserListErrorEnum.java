@@ -292,13 +292,13 @@ private static final long serialVersionUID = 0L;
     USERLIST_NAME_IS_RESERVED_FOR_SYSTEM_LIST(32),
     /**
      * <pre>
-     * Advertiser needs to be whitelisted to use remarketing lists created from
-     * advertiser uploaded data (e.g., Customer Match lists).
+     * Advertiser needs to be on the allow-list to use remarketing lists created
+     * from advertiser uploaded data (e.g., Customer Match lists).
      * </pre>
      *
-     * <code>ADVERTISER_NOT_WHITELISTED_FOR_USING_UPLOADED_DATA = 33;</code>
+     * <code>ADVERTISER_NOT_ON_ALLOWLIST_FOR_USING_UPLOADED_DATA = 37;</code>
      */
-    ADVERTISER_NOT_WHITELISTED_FOR_USING_UPLOADED_DATA(33),
+    ADVERTISER_NOT_ON_ALLOWLIST_FOR_USING_UPLOADED_DATA(37),
     /**
      * <pre>
      * The provided rule_type is not supported for the user list.
@@ -526,13 +526,13 @@ private static final long serialVersionUID = 0L;
     public static final int USERLIST_NAME_IS_RESERVED_FOR_SYSTEM_LIST_VALUE = 32;
     /**
      * <pre>
-     * Advertiser needs to be whitelisted to use remarketing lists created from
-     * advertiser uploaded data (e.g., Customer Match lists).
+     * Advertiser needs to be on the allow-list to use remarketing lists created
+     * from advertiser uploaded data (e.g., Customer Match lists).
      * </pre>
      *
-     * <code>ADVERTISER_NOT_WHITELISTED_FOR_USING_UPLOADED_DATA = 33;</code>
+     * <code>ADVERTISER_NOT_ON_ALLOWLIST_FOR_USING_UPLOADED_DATA = 37;</code>
      */
-    public static final int ADVERTISER_NOT_WHITELISTED_FOR_USING_UPLOADED_DATA_VALUE = 33;
+    public static final int ADVERTISER_NOT_ON_ALLOWLIST_FOR_USING_UPLOADED_DATA_VALUE = 37;
     /**
      * <pre>
      * The provided rule_type is not supported for the user list.
@@ -608,7 +608,7 @@ private static final long serialVersionUID = 0L;
         case 30: return CANNOT_MODIFY_BILLABLE_RECORD_COUNT;
         case 31: return APP_ID_NOT_SET;
         case 32: return USERLIST_NAME_IS_RESERVED_FOR_SYSTEM_LIST;
-        case 33: return ADVERTISER_NOT_WHITELISTED_FOR_USING_UPLOADED_DATA;
+        case 37: return ADVERTISER_NOT_ON_ALLOWLIST_FOR_USING_UPLOADED_DATA;
         case 34: return RULE_TYPE_IS_NOT_SUPPORTED;
         case 35: return CAN_NOT_ADD_A_SIMILAR_USERLIST_AS_LOGICAL_LIST_OPERAND;
         case 36: return CAN_NOT_MIX_CRM_BASED_IN_LOGICAL_LIST_WITH_OTHER_LISTS;

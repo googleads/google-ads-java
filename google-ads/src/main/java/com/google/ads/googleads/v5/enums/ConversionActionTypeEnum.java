@@ -182,7 +182,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Store Sales conversion based on first-party or third-party merchant
      * data uploads.
-     * Only whitelisted customers can use store sales direct upload types.
+     * Only customers on the allowlist can use store sales direct upload types.
      * </pre>
      *
      * <code>STORE_SALES_DIRECT_UPLOAD = 10;</code>
@@ -193,7 +193,7 @@ private static final long serialVersionUID = 0L;
      * Store Sales conversion based on first-party or third-party merchant
      * data uploads and/or from in-store purchases using cards from payment
      * networks.
-     * Only whitelisted customers can use store sales types.
+     * Only customers on the allowlist can use store sales types.
      * </pre>
      *
      * <code>STORE_SALES = 11;</code>
@@ -297,6 +297,122 @@ private static final long serialVersionUID = 0L;
      * <code>THIRD_PARTY_APP_ANALYTICS_IOS_CUSTOM = 23;</code>
      */
     THIRD_PARTY_APP_ANALYTICS_IOS_CUSTOM(23),
+    /**
+     * <pre>
+     * Conversions that occur when a user pre-registers a mobile app from the
+     * Google Play Store. Read only.
+     * </pre>
+     *
+     * <code>ANDROID_APP_PRE_REGISTRATION = 24;</code>
+     */
+    ANDROID_APP_PRE_REGISTRATION(24),
+    /**
+     * <pre>
+     * Conversions that track all Google Play downloads which aren't tracked
+     * by an app-specific type. Read only.
+     * </pre>
+     *
+     * <code>ANDROID_INSTALLS_ALL_OTHER_APPS = 25;</code>
+     */
+    ANDROID_INSTALLS_ALL_OTHER_APPS(25),
+    /**
+     * <pre>
+     * Floodlight activity that counts the number of times that users have
+     * visited a particular webpage after seeing or clicking on one of
+     * an advertiser's ads. Read only.
+     * </pre>
+     *
+     * <code>FLOODLIGHT_ACTION = 26;</code>
+     */
+    FLOODLIGHT_ACTION(26),
+    /**
+     * <pre>
+     * Floodlight activity that tracks the number of sales made or the number
+     * of items purchased. Can also capture the total value of each sale.
+     * Read only.
+     * </pre>
+     *
+     * <code>FLOODLIGHT_TRANSACTION = 27;</code>
+     */
+    FLOODLIGHT_TRANSACTION(27),
+    /**
+     * <pre>
+     * Conversions that track local actions from Google's products and
+     * services after interacting with an ad. Read only.
+     * </pre>
+     *
+     * <code>GOOGLE_HOSTED = 28;</code>
+     */
+    GOOGLE_HOSTED(28),
+    /**
+     * <pre>
+     * Conversions reported when a user submits a lead form. Read only.
+     * </pre>
+     *
+     * <code>LEAD_FORM_SUBMIT = 29;</code>
+     */
+    LEAD_FORM_SUBMIT(29),
+    /**
+     * <pre>
+     * Conversions that come from Salesforce. Read only.
+     * </pre>
+     *
+     * <code>SALESFORCE = 30;</code>
+     */
+    SALESFORCE(30),
+    /**
+     * <pre>
+     * Conversions imported from Search Ads 360 Floodlight data. Read only.
+     * </pre>
+     *
+     * <code>SEARCH_ADS_360 = 31;</code>
+     */
+    SEARCH_ADS_360(31),
+    /**
+     * <pre>
+     * Call conversions that occur on Smart campaign Ads without call tracking
+     * setup, using Smart campaign custom criteria. Read only.
+     * </pre>
+     *
+     * <code>SMART_CAMPAIGN_AD_CLICKS_TO_CALL = 32;</code>
+     */
+    SMART_CAMPAIGN_AD_CLICKS_TO_CALL(32),
+    /**
+     * <pre>
+     * The user clicks on a call element within Google Maps. Smart campaign
+     * only. Read only.
+     * </pre>
+     *
+     * <code>SMART_CAMPAIGN_MAP_CLICKS_TO_CALL = 33;</code>
+     */
+    SMART_CAMPAIGN_MAP_CLICKS_TO_CALL(33),
+    /**
+     * <pre>
+     * The user requests directions to a business location within Google Maps.
+     * Smart campaign only. Read only.
+     * </pre>
+     *
+     * <code>SMART_CAMPAIGN_MAP_DIRECTIONS = 34;</code>
+     */
+    SMART_CAMPAIGN_MAP_DIRECTIONS(34),
+    /**
+     * <pre>
+     * Call conversions that occur on Smart campaign Ads with call tracking
+     * setup, using Smart campaign custom criteria. Read only.
+     * </pre>
+     *
+     * <code>SMART_CAMPAIGN_TRACKED_CALLS = 35;</code>
+     */
+    SMART_CAMPAIGN_TRACKED_CALLS(35),
+    /**
+     * <pre>
+     * Conversions that occur when a user visits an advertiser's retail store.
+     * Read only.
+     * </pre>
+     *
+     * <code>STORE_VISITS = 36;</code>
+     */
+    STORE_VISITS(36),
     UNRECOGNIZED(-1),
     ;
 
@@ -389,7 +505,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Store Sales conversion based on first-party or third-party merchant
      * data uploads.
-     * Only whitelisted customers can use store sales direct upload types.
+     * Only customers on the allowlist can use store sales direct upload types.
      * </pre>
      *
      * <code>STORE_SALES_DIRECT_UPLOAD = 10;</code>
@@ -400,7 +516,7 @@ private static final long serialVersionUID = 0L;
      * Store Sales conversion based on first-party or third-party merchant
      * data uploads and/or from in-store purchases using cards from payment
      * networks.
-     * Only whitelisted customers can use store sales types.
+     * Only customers on the allowlist can use store sales types.
      * </pre>
      *
      * <code>STORE_SALES = 11;</code>
@@ -504,6 +620,122 @@ private static final long serialVersionUID = 0L;
      * <code>THIRD_PARTY_APP_ANALYTICS_IOS_CUSTOM = 23;</code>
      */
     public static final int THIRD_PARTY_APP_ANALYTICS_IOS_CUSTOM_VALUE = 23;
+    /**
+     * <pre>
+     * Conversions that occur when a user pre-registers a mobile app from the
+     * Google Play Store. Read only.
+     * </pre>
+     *
+     * <code>ANDROID_APP_PRE_REGISTRATION = 24;</code>
+     */
+    public static final int ANDROID_APP_PRE_REGISTRATION_VALUE = 24;
+    /**
+     * <pre>
+     * Conversions that track all Google Play downloads which aren't tracked
+     * by an app-specific type. Read only.
+     * </pre>
+     *
+     * <code>ANDROID_INSTALLS_ALL_OTHER_APPS = 25;</code>
+     */
+    public static final int ANDROID_INSTALLS_ALL_OTHER_APPS_VALUE = 25;
+    /**
+     * <pre>
+     * Floodlight activity that counts the number of times that users have
+     * visited a particular webpage after seeing or clicking on one of
+     * an advertiser's ads. Read only.
+     * </pre>
+     *
+     * <code>FLOODLIGHT_ACTION = 26;</code>
+     */
+    public static final int FLOODLIGHT_ACTION_VALUE = 26;
+    /**
+     * <pre>
+     * Floodlight activity that tracks the number of sales made or the number
+     * of items purchased. Can also capture the total value of each sale.
+     * Read only.
+     * </pre>
+     *
+     * <code>FLOODLIGHT_TRANSACTION = 27;</code>
+     */
+    public static final int FLOODLIGHT_TRANSACTION_VALUE = 27;
+    /**
+     * <pre>
+     * Conversions that track local actions from Google's products and
+     * services after interacting with an ad. Read only.
+     * </pre>
+     *
+     * <code>GOOGLE_HOSTED = 28;</code>
+     */
+    public static final int GOOGLE_HOSTED_VALUE = 28;
+    /**
+     * <pre>
+     * Conversions reported when a user submits a lead form. Read only.
+     * </pre>
+     *
+     * <code>LEAD_FORM_SUBMIT = 29;</code>
+     */
+    public static final int LEAD_FORM_SUBMIT_VALUE = 29;
+    /**
+     * <pre>
+     * Conversions that come from Salesforce. Read only.
+     * </pre>
+     *
+     * <code>SALESFORCE = 30;</code>
+     */
+    public static final int SALESFORCE_VALUE = 30;
+    /**
+     * <pre>
+     * Conversions imported from Search Ads 360 Floodlight data. Read only.
+     * </pre>
+     *
+     * <code>SEARCH_ADS_360 = 31;</code>
+     */
+    public static final int SEARCH_ADS_360_VALUE = 31;
+    /**
+     * <pre>
+     * Call conversions that occur on Smart campaign Ads without call tracking
+     * setup, using Smart campaign custom criteria. Read only.
+     * </pre>
+     *
+     * <code>SMART_CAMPAIGN_AD_CLICKS_TO_CALL = 32;</code>
+     */
+    public static final int SMART_CAMPAIGN_AD_CLICKS_TO_CALL_VALUE = 32;
+    /**
+     * <pre>
+     * The user clicks on a call element within Google Maps. Smart campaign
+     * only. Read only.
+     * </pre>
+     *
+     * <code>SMART_CAMPAIGN_MAP_CLICKS_TO_CALL = 33;</code>
+     */
+    public static final int SMART_CAMPAIGN_MAP_CLICKS_TO_CALL_VALUE = 33;
+    /**
+     * <pre>
+     * The user requests directions to a business location within Google Maps.
+     * Smart campaign only. Read only.
+     * </pre>
+     *
+     * <code>SMART_CAMPAIGN_MAP_DIRECTIONS = 34;</code>
+     */
+    public static final int SMART_CAMPAIGN_MAP_DIRECTIONS_VALUE = 34;
+    /**
+     * <pre>
+     * Call conversions that occur on Smart campaign Ads with call tracking
+     * setup, using Smart campaign custom criteria. Read only.
+     * </pre>
+     *
+     * <code>SMART_CAMPAIGN_TRACKED_CALLS = 35;</code>
+     */
+    public static final int SMART_CAMPAIGN_TRACKED_CALLS_VALUE = 35;
+    /**
+     * <pre>
+     * Conversions that occur when a user visits an advertiser's retail store.
+     * Read only.
+     * </pre>
+     *
+     * <code>STORE_VISITS = 36;</code>
+     */
+    public static final int STORE_VISITS_VALUE = 36;
 
 
     public final int getNumber() {
@@ -554,6 +786,19 @@ private static final long serialVersionUID = 0L;
         case 21: return THIRD_PARTY_APP_ANALYTICS_IOS_FIRST_OPEN;
         case 22: return THIRD_PARTY_APP_ANALYTICS_IOS_IN_APP_PURCHASE;
         case 23: return THIRD_PARTY_APP_ANALYTICS_IOS_CUSTOM;
+        case 24: return ANDROID_APP_PRE_REGISTRATION;
+        case 25: return ANDROID_INSTALLS_ALL_OTHER_APPS;
+        case 26: return FLOODLIGHT_ACTION;
+        case 27: return FLOODLIGHT_TRANSACTION;
+        case 28: return GOOGLE_HOSTED;
+        case 29: return LEAD_FORM_SUBMIT;
+        case 30: return SALESFORCE;
+        case 31: return SEARCH_ADS_360;
+        case 32: return SMART_CAMPAIGN_AD_CLICKS_TO_CALL;
+        case 33: return SMART_CAMPAIGN_MAP_CLICKS_TO_CALL;
+        case 34: return SMART_CAMPAIGN_MAP_DIRECTIONS;
+        case 35: return SMART_CAMPAIGN_TRACKED_CALLS;
+        case 36: return STORE_VISITS;
         default: return null;
       }
     }

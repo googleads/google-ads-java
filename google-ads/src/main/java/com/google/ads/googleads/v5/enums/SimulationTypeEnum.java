@@ -111,7 +111,7 @@ private static final long serialVersionUID = 0L;
     UNKNOWN(1),
     /**
      * <pre>
-     * The simulation is for a cpc bid.
+     * The simulation is for a CPC bid.
      * </pre>
      *
      * <code>CPC_BID = 2;</code>
@@ -119,7 +119,7 @@ private static final long serialVersionUID = 0L;
     CPC_BID(2),
     /**
      * <pre>
-     * The simulation is for a cpv bid.
+     * The simulation is for a CPV bid.
      * </pre>
      *
      * <code>CPV_BID = 3;</code>
@@ -127,7 +127,7 @@ private static final long serialVersionUID = 0L;
     CPV_BID(3),
     /**
      * <pre>
-     * The simulation is for a cpa target.
+     * The simulation is for a CPA target.
      * </pre>
      *
      * <code>TARGET_CPA = 4;</code>
@@ -170,7 +170,7 @@ private static final long serialVersionUID = 0L;
     public static final int UNKNOWN_VALUE = 1;
     /**
      * <pre>
-     * The simulation is for a cpc bid.
+     * The simulation is for a CPC bid.
      * </pre>
      *
      * <code>CPC_BID = 2;</code>
@@ -178,7 +178,7 @@ private static final long serialVersionUID = 0L;
     public static final int CPC_BID_VALUE = 2;
     /**
      * <pre>
-     * The simulation is for a cpv bid.
+     * The simulation is for a CPV bid.
      * </pre>
      *
      * <code>CPV_BID = 3;</code>
@@ -186,7 +186,7 @@ private static final long serialVersionUID = 0L;
     public static final int CPV_BID_VALUE = 3;
     /**
      * <pre>
-     * The simulation is for a cpa target.
+     * The simulation is for a CPA target.
      * </pre>
      *
      * <code>TARGET_CPA = 4;</code>

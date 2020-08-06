@@ -85,6 +85,19 @@ private static final long serialVersionUID = 0L;
 
             break;
           }
+          case 34: {
+            com.google.ads.googleads.v5.errors.QuotaErrorDetails.Builder subBuilder = null;
+            if (quotaErrorDetails_ != null) {
+              subBuilder = quotaErrorDetails_.toBuilder();
+            }
+            quotaErrorDetails_ = input.readMessage(com.google.ads.googleads.v5.errors.QuotaErrorDetails.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(quotaErrorDetails_);
+              quotaErrorDetails_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
           default: {
             if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -241,6 +254,47 @@ private static final long serialVersionUID = 0L;
     return getPolicyFindingDetails();
   }
 
+  public static final int QUOTA_ERROR_DETAILS_FIELD_NUMBER = 4;
+  private com.google.ads.googleads.v5.errors.QuotaErrorDetails quotaErrorDetails_;
+  /**
+   * <pre>
+   * Details on the quota error, including the scope (account or developer), the
+   * rate bucket name and the retry delay.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v5.errors.QuotaErrorDetails quota_error_details = 4;</code>
+   * @return Whether the quotaErrorDetails field is set.
+   */
+  @java.lang.Override
+  public boolean hasQuotaErrorDetails() {
+    return quotaErrorDetails_ != null;
+  }
+  /**
+   * <pre>
+   * Details on the quota error, including the scope (account or developer), the
+   * rate bucket name and the retry delay.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v5.errors.QuotaErrorDetails quota_error_details = 4;</code>
+   * @return The quotaErrorDetails.
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v5.errors.QuotaErrorDetails getQuotaErrorDetails() {
+    return quotaErrorDetails_ == null ? com.google.ads.googleads.v5.errors.QuotaErrorDetails.getDefaultInstance() : quotaErrorDetails_;
+  }
+  /**
+   * <pre>
+   * Details on the quota error, including the scope (account or developer), the
+   * rate bucket name and the retry delay.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v5.errors.QuotaErrorDetails quota_error_details = 4;</code>
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v5.errors.QuotaErrorDetailsOrBuilder getQuotaErrorDetailsOrBuilder() {
+    return getQuotaErrorDetails();
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -264,6 +318,9 @@ private static final long serialVersionUID = 0L;
     if (policyFindingDetails_ != null) {
       output.writeMessage(3, getPolicyFindingDetails());
     }
+    if (quotaErrorDetails_ != null) {
+      output.writeMessage(4, getQuotaErrorDetails());
+    }
     unknownFields.writeTo(output);
   }
 
@@ -283,6 +340,10 @@ private static final long serialVersionUID = 0L;
     if (policyFindingDetails_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(3, getPolicyFindingDetails());
+    }
+    if (quotaErrorDetails_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(4, getQuotaErrorDetails());
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -311,6 +372,11 @@ private static final long serialVersionUID = 0L;
       if (!getPolicyFindingDetails()
           .equals(other.getPolicyFindingDetails())) return false;
     }
+    if (hasQuotaErrorDetails() != other.hasQuotaErrorDetails()) return false;
+    if (hasQuotaErrorDetails()) {
+      if (!getQuotaErrorDetails()
+          .equals(other.getQuotaErrorDetails())) return false;
+    }
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -331,6 +397,10 @@ private static final long serialVersionUID = 0L;
     if (hasPolicyFindingDetails()) {
       hash = (37 * hash) + POLICY_FINDING_DETAILS_FIELD_NUMBER;
       hash = (53 * hash) + getPolicyFindingDetails().hashCode();
+    }
+    if (hasQuotaErrorDetails()) {
+      hash = (37 * hash) + QUOTA_ERROR_DETAILS_FIELD_NUMBER;
+      hash = (53 * hash) + getQuotaErrorDetails().hashCode();
     }
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
@@ -483,6 +553,12 @@ private static final long serialVersionUID = 0L;
         policyFindingDetails_ = null;
         policyFindingDetailsBuilder_ = null;
       }
+      if (quotaErrorDetailsBuilder_ == null) {
+        quotaErrorDetails_ = null;
+      } else {
+        quotaErrorDetails_ = null;
+        quotaErrorDetailsBuilder_ = null;
+      }
       return this;
     }
 
@@ -519,6 +595,11 @@ private static final long serialVersionUID = 0L;
         result.policyFindingDetails_ = policyFindingDetails_;
       } else {
         result.policyFindingDetails_ = policyFindingDetailsBuilder_.build();
+      }
+      if (quotaErrorDetailsBuilder_ == null) {
+        result.quotaErrorDetails_ = quotaErrorDetails_;
+      } else {
+        result.quotaErrorDetails_ = quotaErrorDetailsBuilder_.build();
       }
       onBuilt();
       return result;
@@ -577,6 +658,9 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasPolicyFindingDetails()) {
         mergePolicyFindingDetails(other.getPolicyFindingDetails());
+      }
+      if (other.hasQuotaErrorDetails()) {
+        mergeQuotaErrorDetails(other.getQuotaErrorDetails());
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -1016,6 +1100,170 @@ private static final long serialVersionUID = 0L;
         policyFindingDetails_ = null;
       }
       return policyFindingDetailsBuilder_;
+    }
+
+    private com.google.ads.googleads.v5.errors.QuotaErrorDetails quotaErrorDetails_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v5.errors.QuotaErrorDetails, com.google.ads.googleads.v5.errors.QuotaErrorDetails.Builder, com.google.ads.googleads.v5.errors.QuotaErrorDetailsOrBuilder> quotaErrorDetailsBuilder_;
+    /**
+     * <pre>
+     * Details on the quota error, including the scope (account or developer), the
+     * rate bucket name and the retry delay.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v5.errors.QuotaErrorDetails quota_error_details = 4;</code>
+     * @return Whether the quotaErrorDetails field is set.
+     */
+    public boolean hasQuotaErrorDetails() {
+      return quotaErrorDetailsBuilder_ != null || quotaErrorDetails_ != null;
+    }
+    /**
+     * <pre>
+     * Details on the quota error, including the scope (account or developer), the
+     * rate bucket name and the retry delay.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v5.errors.QuotaErrorDetails quota_error_details = 4;</code>
+     * @return The quotaErrorDetails.
+     */
+    public com.google.ads.googleads.v5.errors.QuotaErrorDetails getQuotaErrorDetails() {
+      if (quotaErrorDetailsBuilder_ == null) {
+        return quotaErrorDetails_ == null ? com.google.ads.googleads.v5.errors.QuotaErrorDetails.getDefaultInstance() : quotaErrorDetails_;
+      } else {
+        return quotaErrorDetailsBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * Details on the quota error, including the scope (account or developer), the
+     * rate bucket name and the retry delay.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v5.errors.QuotaErrorDetails quota_error_details = 4;</code>
+     */
+    public Builder setQuotaErrorDetails(com.google.ads.googleads.v5.errors.QuotaErrorDetails value) {
+      if (quotaErrorDetailsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        quotaErrorDetails_ = value;
+        onChanged();
+      } else {
+        quotaErrorDetailsBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Details on the quota error, including the scope (account or developer), the
+     * rate bucket name and the retry delay.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v5.errors.QuotaErrorDetails quota_error_details = 4;</code>
+     */
+    public Builder setQuotaErrorDetails(
+        com.google.ads.googleads.v5.errors.QuotaErrorDetails.Builder builderForValue) {
+      if (quotaErrorDetailsBuilder_ == null) {
+        quotaErrorDetails_ = builderForValue.build();
+        onChanged();
+      } else {
+        quotaErrorDetailsBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Details on the quota error, including the scope (account or developer), the
+     * rate bucket name and the retry delay.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v5.errors.QuotaErrorDetails quota_error_details = 4;</code>
+     */
+    public Builder mergeQuotaErrorDetails(com.google.ads.googleads.v5.errors.QuotaErrorDetails value) {
+      if (quotaErrorDetailsBuilder_ == null) {
+        if (quotaErrorDetails_ != null) {
+          quotaErrorDetails_ =
+            com.google.ads.googleads.v5.errors.QuotaErrorDetails.newBuilder(quotaErrorDetails_).mergeFrom(value).buildPartial();
+        } else {
+          quotaErrorDetails_ = value;
+        }
+        onChanged();
+      } else {
+        quotaErrorDetailsBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Details on the quota error, including the scope (account or developer), the
+     * rate bucket name and the retry delay.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v5.errors.QuotaErrorDetails quota_error_details = 4;</code>
+     */
+    public Builder clearQuotaErrorDetails() {
+      if (quotaErrorDetailsBuilder_ == null) {
+        quotaErrorDetails_ = null;
+        onChanged();
+      } else {
+        quotaErrorDetails_ = null;
+        quotaErrorDetailsBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Details on the quota error, including the scope (account or developer), the
+     * rate bucket name and the retry delay.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v5.errors.QuotaErrorDetails quota_error_details = 4;</code>
+     */
+    public com.google.ads.googleads.v5.errors.QuotaErrorDetails.Builder getQuotaErrorDetailsBuilder() {
+      
+      onChanged();
+      return getQuotaErrorDetailsFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Details on the quota error, including the scope (account or developer), the
+     * rate bucket name and the retry delay.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v5.errors.QuotaErrorDetails quota_error_details = 4;</code>
+     */
+    public com.google.ads.googleads.v5.errors.QuotaErrorDetailsOrBuilder getQuotaErrorDetailsOrBuilder() {
+      if (quotaErrorDetailsBuilder_ != null) {
+        return quotaErrorDetailsBuilder_.getMessageOrBuilder();
+      } else {
+        return quotaErrorDetails_ == null ?
+            com.google.ads.googleads.v5.errors.QuotaErrorDetails.getDefaultInstance() : quotaErrorDetails_;
+      }
+    }
+    /**
+     * <pre>
+     * Details on the quota error, including the scope (account or developer), the
+     * rate bucket name and the retry delay.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v5.errors.QuotaErrorDetails quota_error_details = 4;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v5.errors.QuotaErrorDetails, com.google.ads.googleads.v5.errors.QuotaErrorDetails.Builder, com.google.ads.googleads.v5.errors.QuotaErrorDetailsOrBuilder> 
+        getQuotaErrorDetailsFieldBuilder() {
+      if (quotaErrorDetailsBuilder_ == null) {
+        quotaErrorDetailsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.ads.googleads.v5.errors.QuotaErrorDetails, com.google.ads.googleads.v5.errors.QuotaErrorDetails.Builder, com.google.ads.googleads.v5.errors.QuotaErrorDetailsOrBuilder>(
+                getQuotaErrorDetails(),
+                getParentForChildren(),
+                isClean());
+        quotaErrorDetails_ = null;
+      }
+      return quotaErrorDetailsBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

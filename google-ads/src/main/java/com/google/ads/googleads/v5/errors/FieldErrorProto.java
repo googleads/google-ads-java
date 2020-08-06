@@ -30,19 +30,19 @@ public final class FieldErrorProto {
     java.lang.String[] descriptorData = {
       "\n0google/ads/googleads/v5/errors/field_e" +
       "rror.proto\022\036google.ads.googleads.v5.erro" +
-      "rs\032\034google/api/annotations.proto\"\334\001\n\016Fie" +
-      "ldErrorEnum\"\311\001\n\nFieldError\022\017\n\013UNSPECIFIE" +
+      "rs\032\034google/api/annotations.proto\"\330\001\n\016Fie" +
+      "ldErrorEnum\"\305\001\n\nFieldError\022\017\n\013UNSPECIFIE" +
       "D\020\000\022\013\n\007UNKNOWN\020\001\022\014\n\010REQUIRED\020\002\022\023\n\017IMMUTA" +
       "BLE_FIELD\020\003\022\021\n\rINVALID_VALUE\020\004\022\027\n\023VALUE_" +
       "MUST_BE_UNSET\020\005\022\032\n\026REQUIRED_NONEMPTY_LIS" +
-      "T\020\006\022\033\n\027FIELD_CANNOT_BE_CLEARED\020\007\022\025\n\021BLAC" +
-      "KLISTED_VALUE\020\010B\352\001\n\"com.google.ads.googl" +
-      "eads.v5.errorsB\017FieldErrorProtoP\001ZDgoogl" +
-      "e.golang.org/genproto/googleapis/ads/goo" +
-      "gleads/v5/errors;errors\242\002\003GAA\252\002\036Google.A" +
-      "ds.GoogleAds.V5.Errors\312\002\036Google\\Ads\\Goog" +
-      "leAds\\V5\\Errors\352\002\"Google::Ads::GoogleAds" +
-      "::V5::Errorsb\006proto3"
+      "T\020\006\022\033\n\027FIELD_CANNOT_BE_CLEARED\020\007\022\021\n\rBLOC" +
+      "KED_VALUE\020\tB\352\001\n\"com.google.ads.googleads" +
+      ".v5.errorsB\017FieldErrorProtoP\001ZDgoogle.go" +
+      "lang.org/genproto/googleapis/ads/googlea" +
+      "ds/v5/errors;errors\242\002\003GAA\252\002\036Google.Ads.G" +
+      "oogleAds.V5.Errors\312\002\036Google\\Ads\\GoogleAd" +
+      "s\\V5\\Errors\352\002\"Google::Ads::GoogleAds::V5" +
+      "::Errorsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

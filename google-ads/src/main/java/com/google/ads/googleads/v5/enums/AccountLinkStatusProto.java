@@ -30,16 +30,17 @@ public final class AccountLinkStatusProto {
     java.lang.String[] descriptorData = {
       "\n7google/ads/googleads/v5/enums/account_" +
       "link_status.proto\022\035google.ads.googleads." +
-      "v5.enums\032\034google/api/annotations.proto\"d" +
-      "\n\025AccountLinkStatusEnum\"K\n\021AccountLinkSt" +
-      "atus\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\013\n\007EN" +
-      "ABLED\020\002\022\013\n\007REMOVED\020\003B\353\001\n!com.google.ads." +
-      "googleads.v5.enumsB\026AccountLinkStatusPro" +
-      "toP\001ZBgoogle.golang.org/genproto/googlea" +
-      "pis/ads/googleads/v5/enums;enums\242\002\003GAA\252\002" +
-      "\035Google.Ads.GoogleAds.V5.Enums\312\002\035Google\\" +
-      "Ads\\GoogleAds\\V5\\Enums\352\002!Google::Ads::Go" +
-      "ogleAds::V5::Enumsb\006proto3"
+      "v5.enums\032\034google/api/annotations.proto\"\211" +
+      "\001\n\025AccountLinkStatusEnum\"p\n\021AccountLinkS" +
+      "tatus\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\013\n\007E" +
+      "NABLED\020\002\022\013\n\007REMOVED\020\003\022\r\n\tREQUESTED\020\004\022\024\n\020" +
+      "PENDING_APPROVAL\020\005B\353\001\n!com.google.ads.go" +
+      "ogleads.v5.enumsB\026AccountLinkStatusProto" +
+      "P\001ZBgoogle.golang.org/genproto/googleapi" +
+      "s/ads/googleads/v5/enums;enums\242\002\003GAA\252\002\035G" +
+      "oogle.Ads.GoogleAds.V5.Enums\312\002\035Google\\Ad" +
+      "s\\GoogleAds\\V5\\Enums\352\002!Google::Ads::Goog" +
+      "leAds::V5::Enumsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

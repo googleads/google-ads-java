@@ -62,6 +62,37 @@ public final class ThirdPartyAppAnalyticsLinkServiceGrpc {
     return getGetThirdPartyAppAnalyticsLinkMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.google.ads.googleads.v5.services.RegenerateShareableLinkIdRequest,
+      com.google.ads.googleads.v5.services.RegenerateShareableLinkIdResponse> getRegenerateShareableLinkIdMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "RegenerateShareableLinkId",
+      requestType = com.google.ads.googleads.v5.services.RegenerateShareableLinkIdRequest.class,
+      responseType = com.google.ads.googleads.v5.services.RegenerateShareableLinkIdResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.google.ads.googleads.v5.services.RegenerateShareableLinkIdRequest,
+      com.google.ads.googleads.v5.services.RegenerateShareableLinkIdResponse> getRegenerateShareableLinkIdMethod() {
+    io.grpc.MethodDescriptor<com.google.ads.googleads.v5.services.RegenerateShareableLinkIdRequest, com.google.ads.googleads.v5.services.RegenerateShareableLinkIdResponse> getRegenerateShareableLinkIdMethod;
+    if ((getRegenerateShareableLinkIdMethod = ThirdPartyAppAnalyticsLinkServiceGrpc.getRegenerateShareableLinkIdMethod) == null) {
+      synchronized (ThirdPartyAppAnalyticsLinkServiceGrpc.class) {
+        if ((getRegenerateShareableLinkIdMethod = ThirdPartyAppAnalyticsLinkServiceGrpc.getRegenerateShareableLinkIdMethod) == null) {
+          ThirdPartyAppAnalyticsLinkServiceGrpc.getRegenerateShareableLinkIdMethod = getRegenerateShareableLinkIdMethod =
+              io.grpc.MethodDescriptor.<com.google.ads.googleads.v5.services.RegenerateShareableLinkIdRequest, com.google.ads.googleads.v5.services.RegenerateShareableLinkIdResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "RegenerateShareableLinkId"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.google.ads.googleads.v5.services.RegenerateShareableLinkIdRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.google.ads.googleads.v5.services.RegenerateShareableLinkIdResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new ThirdPartyAppAnalyticsLinkServiceMethodDescriptorSupplier("RegenerateShareableLinkId"))
+              .build();
+        }
+      }
+    }
+    return getRegenerateShareableLinkIdMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -124,6 +155,17 @@ public final class ThirdPartyAppAnalyticsLinkServiceGrpc {
       asyncUnimplementedUnaryCall(getGetThirdPartyAppAnalyticsLinkMethod(), responseObserver);
     }
 
+    /**
+     * <pre>
+     * Regenerate ThirdPartyAppAnalyticsLink.shareable_link_id that should be
+     * provided to the third party when setting up app analytics.
+     * </pre>
+     */
+    public void regenerateShareableLinkId(com.google.ads.googleads.v5.services.RegenerateShareableLinkIdRequest request,
+        io.grpc.stub.StreamObserver<com.google.ads.googleads.v5.services.RegenerateShareableLinkIdResponse> responseObserver) {
+      asyncUnimplementedUnaryCall(getRegenerateShareableLinkIdMethod(), responseObserver);
+    }
+
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
@@ -133,6 +175,13 @@ public final class ThirdPartyAppAnalyticsLinkServiceGrpc {
                 com.google.ads.googleads.v5.services.GetThirdPartyAppAnalyticsLinkRequest,
                 com.google.ads.googleads.v5.resources.ThirdPartyAppAnalyticsLink>(
                   this, METHODID_GET_THIRD_PARTY_APP_ANALYTICS_LINK)))
+          .addMethod(
+            getRegenerateShareableLinkIdMethod(),
+            asyncUnaryCall(
+              new MethodHandlers<
+                com.google.ads.googleads.v5.services.RegenerateShareableLinkIdRequest,
+                com.google.ads.googleads.v5.services.RegenerateShareableLinkIdResponse>(
+                  this, METHODID_REGENERATE_SHAREABLE_LINK_ID)))
           .build();
     }
   }
@@ -165,6 +214,18 @@ public final class ThirdPartyAppAnalyticsLinkServiceGrpc {
       asyncUnaryCall(
           getChannel().newCall(getGetThirdPartyAppAnalyticsLinkMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * Regenerate ThirdPartyAppAnalyticsLink.shareable_link_id that should be
+     * provided to the third party when setting up app analytics.
+     * </pre>
+     */
+    public void regenerateShareableLinkId(com.google.ads.googleads.v5.services.RegenerateShareableLinkIdRequest request,
+        io.grpc.stub.StreamObserver<com.google.ads.googleads.v5.services.RegenerateShareableLinkIdResponse> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(getRegenerateShareableLinkIdMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -193,6 +254,17 @@ public final class ThirdPartyAppAnalyticsLinkServiceGrpc {
     public com.google.ads.googleads.v5.resources.ThirdPartyAppAnalyticsLink getThirdPartyAppAnalyticsLink(com.google.ads.googleads.v5.services.GetThirdPartyAppAnalyticsLinkRequest request) {
       return blockingUnaryCall(
           getChannel(), getGetThirdPartyAppAnalyticsLinkMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Regenerate ThirdPartyAppAnalyticsLink.shareable_link_id that should be
+     * provided to the third party when setting up app analytics.
+     * </pre>
+     */
+    public com.google.ads.googleads.v5.services.RegenerateShareableLinkIdResponse regenerateShareableLinkId(com.google.ads.googleads.v5.services.RegenerateShareableLinkIdRequest request) {
+      return blockingUnaryCall(
+          getChannel(), getRegenerateShareableLinkIdMethod(), getCallOptions(), request);
     }
   }
 
@@ -224,9 +296,22 @@ public final class ThirdPartyAppAnalyticsLinkServiceGrpc {
       return futureUnaryCall(
           getChannel().newCall(getGetThirdPartyAppAnalyticsLinkMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * Regenerate ThirdPartyAppAnalyticsLink.shareable_link_id that should be
+     * provided to the third party when setting up app analytics.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.google.ads.googleads.v5.services.RegenerateShareableLinkIdResponse> regenerateShareableLinkId(
+        com.google.ads.googleads.v5.services.RegenerateShareableLinkIdRequest request) {
+      return futureUnaryCall(
+          getChannel().newCall(getRegenerateShareableLinkIdMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_GET_THIRD_PARTY_APP_ANALYTICS_LINK = 0;
+  private static final int METHODID_REGENERATE_SHAREABLE_LINK_ID = 1;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -248,6 +333,10 @@ public final class ThirdPartyAppAnalyticsLinkServiceGrpc {
         case METHODID_GET_THIRD_PARTY_APP_ANALYTICS_LINK:
           serviceImpl.getThirdPartyAppAnalyticsLink((com.google.ads.googleads.v5.services.GetThirdPartyAppAnalyticsLinkRequest) request,
               (io.grpc.stub.StreamObserver<com.google.ads.googleads.v5.resources.ThirdPartyAppAnalyticsLink>) responseObserver);
+          break;
+        case METHODID_REGENERATE_SHAREABLE_LINK_ID:
+          serviceImpl.regenerateShareableLinkId((com.google.ads.googleads.v5.services.RegenerateShareableLinkIdRequest) request,
+              (io.grpc.stub.StreamObserver<com.google.ads.googleads.v5.services.RegenerateShareableLinkIdResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -311,6 +400,7 @@ public final class ThirdPartyAppAnalyticsLinkServiceGrpc {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new ThirdPartyAppAnalyticsLinkServiceFileDescriptorSupplier())
               .addMethod(getGetThirdPartyAppAnalyticsLinkMethod())
+              .addMethod(getRegenerateShareableLinkIdMethod())
               .build();
         }
       }

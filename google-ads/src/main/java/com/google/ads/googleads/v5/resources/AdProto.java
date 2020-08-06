@@ -41,7 +41,7 @@ public final class AdProto {
       "ds/v5/enums/system_managed_entity_source" +
       ".proto\032\037google/api/field_behavior.proto\032" +
       "\031google/api/resource.proto\032\034google/api/a" +
-      "nnotations.proto\"\313\023\n\002Ad\022:\n\rresource_name" +
+      "nnotations.proto\"\241\024\n\002Ad\022:\n\rresource_name" +
       "\030% \001(\tB#\340A\005\372A\035\n\033googleads.googleapis.com" +
       "/Ad\022\024\n\002id\030( \001(\003B\003\340A\003H\001\210\001\001\022\022\n\nfinal_urls\030" +
       ") \003(\t\022C\n\016final_app_urls\030# \003(\0132+.google.a" +
@@ -80,37 +80,39 @@ public final class AdProto {
       "\022D\n\010image_ad\030\026 \001(\0132+.google.ads.googlead" +
       "s.v5.common.ImageAdInfoB\003\340A\005H\000\022?\n\010video_" +
       "ad\030\030 \001(\0132+.google.ads.googleads.v5.commo" +
-      "n.VideoAdInfoH\000\022V\n\024responsive_search_ad\030" +
-      "\031 \001(\01326.google.ads.googleads.v5.common.R" +
-      "esponsiveSearchAdInfoH\000\022e\n\034legacy_respon" +
-      "sive_display_ad\030\034 \001(\0132=.google.ads.googl" +
-      "eads.v5.common.LegacyResponsiveDisplayAd" +
-      "InfoH\000\022;\n\006app_ad\030\035 \001(\0132).google.ads.goog" +
-      "leads.v5.common.AppAdInfoH\000\022\\\n\025legacy_ap" +
-      "p_install_ad\030\036 \001(\01326.google.ads.googlead" +
-      "s.v5.common.LegacyAppInstallAdInfoB\003\340A\005H" +
-      "\000\022X\n\025responsive_display_ad\030\037 \001(\01327.googl" +
-      "e.ads.googleads.v5.common.ResponsiveDisp" +
-      "layAdInfoH\000\022?\n\010local_ad\030  \001(\0132+.google.a" +
-      "ds.googleads.v5.common.LocalAdInfoH\000\022P\n\021" +
-      "display_upload_ad\030! \001(\01323.google.ads.goo" +
-      "gleads.v5.common.DisplayUploadAdInfoH\000\022P" +
-      "\n\021app_engagement_ad\030\" \001(\01323.google.ads.g" +
-      "oogleads.v5.common.AppEngagementAdInfoH\000" +
-      "\022i\n\036shopping_comparison_listing_ad\030$ \001(\013" +
-      "2?.google.ads.googleads.v5.common.Shoppi" +
-      "ngComparisonListingAdInfoH\000:?\352A<\n\033google" +
-      "ads.googleapis.com/Ad\022\035customers/{custom" +
-      "er}/ads/{ad}B\t\n\007ad_dataB\005\n\003_idB\030\n\026_track" +
-      "ing_url_templateB\023\n\021_final_url_suffixB\016\n" +
-      "\014_display_urlB\026\n\024_added_by_google_adsB\007\n" +
-      "\005_nameB\364\001\n%com.google.ads.googleads.v5.r" +
-      "esourcesB\007AdProtoP\001ZJgoogle.golang.org/g" +
-      "enproto/googleapis/ads/googleads/v5/reso" +
-      "urces;resources\242\002\003GAA\252\002!Google.Ads.Googl" +
-      "eAds.V5.Resources\312\002!Google\\Ads\\GoogleAds" +
-      "\\V5\\Resources\352\002%Google::Ads::GoogleAds::" +
-      "V5::Resourcesb\006proto3"
+      "n.VideoAdInfoH\000\022T\n\023video_responsive_ad\030\'" +
+      " \001(\01325.google.ads.googleads.v5.common.Vi" +
+      "deoResponsiveAdInfoH\000\022V\n\024responsive_sear" +
+      "ch_ad\030\031 \001(\01326.google.ads.googleads.v5.co" +
+      "mmon.ResponsiveSearchAdInfoH\000\022e\n\034legacy_" +
+      "responsive_display_ad\030\034 \001(\0132=.google.ads" +
+      ".googleads.v5.common.LegacyResponsiveDis" +
+      "playAdInfoH\000\022;\n\006app_ad\030\035 \001(\0132).google.ad" +
+      "s.googleads.v5.common.AppAdInfoH\000\022\\\n\025leg" +
+      "acy_app_install_ad\030\036 \001(\01326.google.ads.go" +
+      "ogleads.v5.common.LegacyAppInstallAdInfo" +
+      "B\003\340A\005H\000\022X\n\025responsive_display_ad\030\037 \001(\01327" +
+      ".google.ads.googleads.v5.common.Responsi" +
+      "veDisplayAdInfoH\000\022?\n\010local_ad\030  \001(\0132+.go" +
+      "ogle.ads.googleads.v5.common.LocalAdInfo" +
+      "H\000\022P\n\021display_upload_ad\030! \001(\01323.google.a" +
+      "ds.googleads.v5.common.DisplayUploadAdIn" +
+      "foH\000\022P\n\021app_engagement_ad\030\" \001(\01323.google" +
+      ".ads.googleads.v5.common.AppEngagementAd" +
+      "InfoH\000\022i\n\036shopping_comparison_listing_ad" +
+      "\030$ \001(\0132?.google.ads.googleads.v5.common." +
+      "ShoppingComparisonListingAdInfoH\000:?\352A<\n\033" +
+      "googleads.googleapis.com/Ad\022\035customers/{" +
+      "customer}/ads/{ad}B\t\n\007ad_dataB\005\n\003_idB\030\n\026" +
+      "_tracking_url_templateB\023\n\021_final_url_suf" +
+      "fixB\016\n\014_display_urlB\026\n\024_added_by_google_" +
+      "adsB\007\n\005_nameB\364\001\n%com.google.ads.googlead" +
+      "s.v5.resourcesB\007AdProtoP\001ZJgoogle.golang" +
+      ".org/genproto/googleapis/ads/googleads/v" +
+      "5/resources;resources\242\002\003GAA\252\002!Google.Ads" +
+      ".GoogleAds.V5.Resources\312\002!Google\\Ads\\Goo" +
+      "gleAds\\V5\\Resources\352\002%Google::Ads::Googl" +
+      "eAds::V5::Resourcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -131,7 +133,7 @@ public final class AdProto {
     internal_static_google_ads_googleads_v5_resources_Ad_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v5_resources_Ad_descriptor,
-        new java.lang.String[] { "ResourceName", "Id", "FinalUrls", "FinalAppUrls", "FinalMobileUrls", "TrackingUrlTemplate", "FinalUrlSuffix", "UrlCustomParameters", "DisplayUrl", "Type", "AddedByGoogleAds", "DevicePreference", "UrlCollections", "Name", "SystemManagedResourceSource", "TextAd", "ExpandedTextAd", "CallOnlyAd", "ExpandedDynamicSearchAd", "HotelAd", "ShoppingSmartAd", "ShoppingProductAd", "GmailAd", "ImageAd", "VideoAd", "ResponsiveSearchAd", "LegacyResponsiveDisplayAd", "AppAd", "LegacyAppInstallAd", "ResponsiveDisplayAd", "LocalAd", "DisplayUploadAd", "AppEngagementAd", "ShoppingComparisonListingAd", "AdData", "Id", "TrackingUrlTemplate", "FinalUrlSuffix", "DisplayUrl", "AddedByGoogleAds", "Name", });
+        new java.lang.String[] { "ResourceName", "Id", "FinalUrls", "FinalAppUrls", "FinalMobileUrls", "TrackingUrlTemplate", "FinalUrlSuffix", "UrlCustomParameters", "DisplayUrl", "Type", "AddedByGoogleAds", "DevicePreference", "UrlCollections", "Name", "SystemManagedResourceSource", "TextAd", "ExpandedTextAd", "CallOnlyAd", "ExpandedDynamicSearchAd", "HotelAd", "ShoppingSmartAd", "ShoppingProductAd", "GmailAd", "ImageAd", "VideoAd", "VideoResponsiveAd", "ResponsiveSearchAd", "LegacyResponsiveDisplayAd", "AppAd", "LegacyAppInstallAd", "ResponsiveDisplayAd", "LocalAd", "DisplayUploadAd", "AppEngagementAd", "ShoppingComparisonListingAd", "AdData", "Id", "TrackingUrlTemplate", "FinalUrlSuffix", "DisplayUrl", "AddedByGoogleAds", "Name", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);

@@ -31,7 +31,7 @@ public final class ConversionActionErrorProto {
       "\n<google/ads/googleads/v5/errors/convers" +
       "ion_action_error.proto\022\036google.ads.googl" +
       "eads.v5.errors\032\034google/api/annotations.p" +
-      "roto\"\213\003\n\031ConversionActionErrorEnum\"\355\002\n\025C" +
+      "roto\"\245\003\n\031ConversionActionErrorEnum\"\207\003\n\025C" +
       "onversionActionError\022\017\n\013UNSPECIFIED\020\000\022\013\n" +
       "\007UNKNOWN\020\001\022\022\n\016DUPLICATE_NAME\020\002\022\024\n\020DUPLIC" +
       "ATE_APP_ID\020\003\0227\n3TWO_CONVERSION_ACTIONS_B" +
@@ -41,13 +41,14 @@ public final class ConversionActionErrorProto {
       "D\020\006\022\035\n\031DATA_DRIVEN_MODEL_EXPIRED\020\007\022\033\n\027DA" +
       "TA_DRIVEN_MODEL_STALE\020\010\022\035\n\031DATA_DRIVEN_M" +
       "ODEL_UNKNOWN\020\t\022\032\n\026CREATION_NOT_SUPPORTED" +
-      "\020\nB\365\001\n\"com.google.ads.googleads.v5.error" +
-      "sB\032ConversionActionErrorProtoP\001ZDgoogle." +
-      "golang.org/genproto/googleapis/ads/googl" +
-      "eads/v5/errors;errors\242\002\003GAA\252\002\036Google.Ads" +
-      ".GoogleAds.V5.Errors\312\002\036Google\\Ads\\Google" +
-      "Ads\\V5\\Errors\352\002\"Google::Ads::GoogleAds::" +
-      "V5::Errorsb\006proto3"
+      "\020\n\022\030\n\024UPDATE_NOT_SUPPORTED\020\013B\365\001\n\"com.goo" +
+      "gle.ads.googleads.v5.errorsB\032ConversionA" +
+      "ctionErrorProtoP\001ZDgoogle.golang.org/gen" +
+      "proto/googleapis/ads/googleads/v5/errors" +
+      ";errors\242\002\003GAA\252\002\036Google.Ads.GoogleAds.V5." +
+      "Errors\312\002\036Google\\Ads\\GoogleAds\\V5\\Errors\352" +
+      "\002\"Google::Ads::GoogleAds::V5::Errorsb\006pr" +
+      "oto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

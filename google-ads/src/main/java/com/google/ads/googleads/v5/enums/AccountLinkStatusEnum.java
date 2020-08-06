@@ -126,6 +126,24 @@ private static final long serialVersionUID = 0L;
      * <code>REMOVED = 3;</code>
      */
     REMOVED(3),
+    /**
+     * <pre>
+     * The link to the other account has been requested. A user on the other
+     * account may now approve the link by setting the status to ENABLED
+     * </pre>
+     *
+     * <code>REQUESTED = 4;</code>
+     */
+    REQUESTED(4),
+    /**
+     * <pre>
+     * This link has been requested by a user on the other account. It may be
+     * approved by a user on this account by setting the status to ENABLED
+     * </pre>
+     *
+     * <code>PENDING_APPROVAL = 5;</code>
+     */
+    PENDING_APPROVAL(5),
     UNRECOGNIZED(-1),
     ;
 
@@ -161,6 +179,24 @@ private static final long serialVersionUID = 0L;
      * <code>REMOVED = 3;</code>
      */
     public static final int REMOVED_VALUE = 3;
+    /**
+     * <pre>
+     * The link to the other account has been requested. A user on the other
+     * account may now approve the link by setting the status to ENABLED
+     * </pre>
+     *
+     * <code>REQUESTED = 4;</code>
+     */
+    public static final int REQUESTED_VALUE = 4;
+    /**
+     * <pre>
+     * This link has been requested by a user on the other account. It may be
+     * approved by a user on this account by setting the status to ENABLED
+     * </pre>
+     *
+     * <code>PENDING_APPROVAL = 5;</code>
+     */
+    public static final int PENDING_APPROVAL_VALUE = 5;
 
 
     public final int getNumber() {
@@ -191,6 +227,8 @@ private static final long serialVersionUID = 0L;
         case 1: return UNKNOWN;
         case 2: return ENABLED;
         case 3: return REMOVED;
+        case 4: return REQUESTED;
+        case 5: return PENDING_APPROVAL;
         default: return null;
       }
     }

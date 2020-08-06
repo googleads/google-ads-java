@@ -31,24 +31,24 @@ public final class AuthorizationErrorProto {
       "\n8google/ads/googleads/v5/errors/authori" +
       "zation_error.proto\022\036google.ads.googleads" +
       ".v5.errors\032\034google/api/annotations.proto" +
-      "\"\265\003\n\026AuthorizationErrorEnum\"\232\003\n\022Authoriz" +
+      "\"\266\003\n\026AuthorizationErrorEnum\"\233\003\n\022Authoriz" +
       "ationError\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001" +
-      "\022\032\n\026USER_PERMISSION_DENIED\020\002\022#\n\037DEVELOPE" +
-      "R_TOKEN_NOT_WHITELISTED\020\003\022\036\n\032DEVELOPER_T" +
-      "OKEN_PROHIBITED\020\004\022\024\n\020PROJECT_DISABLED\020\005\022" +
-      "\027\n\023AUTHORIZATION_ERROR\020\006\022\030\n\024ACTION_NOT_P" +
-      "ERMITTED\020\007\022\025\n\021INCOMPLETE_SIGNUP\020\010\022\030\n\024CUS" +
-      "TOMER_NOT_ENABLED\020\030\022\017\n\013MISSING_TOS\020\t\022 \n\034" +
-      "DEVELOPER_TOKEN_NOT_APPROVED\020\n\022=\n9INVALI" +
-      "D_LOGIN_CUSTOMER_ID_SERVING_CUSTOMER_ID_" +
-      "COMBINATION\020\013\022\031\n\025SERVICE_ACCESS_DENIED\020\014" +
-      "B\362\001\n\"com.google.ads.googleads.v5.errorsB" +
-      "\027AuthorizationErrorProtoP\001ZDgoogle.golan" +
-      "g.org/genproto/googleapis/ads/googleads/" +
-      "v5/errors;errors\242\002\003GAA\252\002\036Google.Ads.Goog" +
-      "leAds.V5.Errors\312\002\036Google\\Ads\\GoogleAds\\V" +
-      "5\\Errors\352\002\"Google::Ads::GoogleAds::V5::E" +
-      "rrorsb\006proto3"
+      "\022\032\n\026USER_PERMISSION_DENIED\020\002\022$\n DEVELOPE" +
+      "R_TOKEN_NOT_ON_ALLOWLIST\020\r\022\036\n\032DEVELOPER_" +
+      "TOKEN_PROHIBITED\020\004\022\024\n\020PROJECT_DISABLED\020\005" +
+      "\022\027\n\023AUTHORIZATION_ERROR\020\006\022\030\n\024ACTION_NOT_" +
+      "PERMITTED\020\007\022\025\n\021INCOMPLETE_SIGNUP\020\010\022\030\n\024CU" +
+      "STOMER_NOT_ENABLED\020\030\022\017\n\013MISSING_TOS\020\t\022 \n" +
+      "\034DEVELOPER_TOKEN_NOT_APPROVED\020\n\022=\n9INVAL" +
+      "ID_LOGIN_CUSTOMER_ID_SERVING_CUSTOMER_ID" +
+      "_COMBINATION\020\013\022\031\n\025SERVICE_ACCESS_DENIED\020" +
+      "\014B\362\001\n\"com.google.ads.googleads.v5.errors" +
+      "B\027AuthorizationErrorProtoP\001ZDgoogle.gola" +
+      "ng.org/genproto/googleapis/ads/googleads" +
+      "/v5/errors;errors\242\002\003GAA\252\002\036Google.Ads.Goo" +
+      "gleAds.V5.Errors\312\002\036Google\\Ads\\GoogleAds\\" +
+      "V5\\Errors\352\002\"Google::Ads::GoogleAds::V5::" +
+      "Errorsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

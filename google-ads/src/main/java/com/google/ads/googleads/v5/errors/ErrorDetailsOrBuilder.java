@@ -82,4 +82,34 @@ public interface ErrorDetailsOrBuilder extends
    * <code>.google.ads.googleads.v5.errors.PolicyFindingDetails policy_finding_details = 3;</code>
    */
   com.google.ads.googleads.v5.errors.PolicyFindingDetailsOrBuilder getPolicyFindingDetailsOrBuilder();
+
+  /**
+   * <pre>
+   * Details on the quota error, including the scope (account or developer), the
+   * rate bucket name and the retry delay.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v5.errors.QuotaErrorDetails quota_error_details = 4;</code>
+   * @return Whether the quotaErrorDetails field is set.
+   */
+  boolean hasQuotaErrorDetails();
+  /**
+   * <pre>
+   * Details on the quota error, including the scope (account or developer), the
+   * rate bucket name and the retry delay.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v5.errors.QuotaErrorDetails quota_error_details = 4;</code>
+   * @return The quotaErrorDetails.
+   */
+  com.google.ads.googleads.v5.errors.QuotaErrorDetails getQuotaErrorDetails();
+  /**
+   * <pre>
+   * Details on the quota error, including the scope (account or developer), the
+   * rate bucket name and the retry delay.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v5.errors.QuotaErrorDetails quota_error_details = 4;</code>
+   */
+  com.google.ads.googleads.v5.errors.QuotaErrorDetailsOrBuilder getQuotaErrorDetailsOrBuilder();
 }

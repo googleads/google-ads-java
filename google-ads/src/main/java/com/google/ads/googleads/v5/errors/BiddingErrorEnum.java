@@ -204,7 +204,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Pay per conversion is not available to all the customer, only few
-     * whitelisted customers can use this.
+     * customers on the allow-list can use this.
      * </pre>
      *
      * <code>PAY_PER_CONVERSION_NOT_AVAILABLE_FOR_CUSTOMER = 25;</code>
@@ -421,7 +421,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Pay per conversion is not available to all the customer, only few
-     * whitelisted customers can use this.
+     * customers on the allow-list can use this.
      * </pre>
      *
      * <code>PAY_PER_CONVERSION_NOT_AVAILABLE_FOR_CUSTOMER = 25;</code>

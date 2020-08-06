@@ -16,6 +16,8 @@
 package com.google.ads.googleads.v5.services.stub;
 
 import com.google.ads.googleads.v5.resources.AccountLink;
+import com.google.ads.googleads.v5.services.CreateAccountLinkRequest;
+import com.google.ads.googleads.v5.services.CreateAccountLinkResponse;
 import com.google.ads.googleads.v5.services.GetAccountLinkRequest;
 import com.google.ads.googleads.v5.services.MutateAccountLinkRequest;
 import com.google.ads.googleads.v5.services.MutateAccountLinkResponse;
@@ -82,12 +84,20 @@ public class AccountLinkServiceStubSettings extends StubSettings<AccountLinkServ
       ImmutableList.<String>builder().build();
 
   private final UnaryCallSettings<GetAccountLinkRequest, AccountLink> getAccountLinkSettings;
+  private final UnaryCallSettings<CreateAccountLinkRequest, CreateAccountLinkResponse>
+      createAccountLinkSettings;
   private final UnaryCallSettings<MutateAccountLinkRequest, MutateAccountLinkResponse>
       mutateAccountLinkSettings;
 
   /** Returns the object with the settings used for calls to getAccountLink. */
   public UnaryCallSettings<GetAccountLinkRequest, AccountLink> getAccountLinkSettings() {
     return getAccountLinkSettings;
+  }
+
+  /** Returns the object with the settings used for calls to createAccountLink. */
+  public UnaryCallSettings<CreateAccountLinkRequest, CreateAccountLinkResponse>
+      createAccountLinkSettings() {
+    return createAccountLinkSettings;
   }
 
   /** Returns the object with the settings used for calls to mutateAccountLink. */
@@ -166,6 +176,7 @@ public class AccountLinkServiceStubSettings extends StubSettings<AccountLinkServ
     super(settingsBuilder);
 
     getAccountLinkSettings = settingsBuilder.getAccountLinkSettings().build();
+    createAccountLinkSettings = settingsBuilder.createAccountLinkSettings().build();
     mutateAccountLinkSettings = settingsBuilder.mutateAccountLinkSettings().build();
   }
 
@@ -176,6 +187,8 @@ public class AccountLinkServiceStubSettings extends StubSettings<AccountLinkServ
 
     private final UnaryCallSettings.Builder<GetAccountLinkRequest, AccountLink>
         getAccountLinkSettings;
+    private final UnaryCallSettings.Builder<CreateAccountLinkRequest, CreateAccountLinkResponse>
+        createAccountLinkSettings;
     private final UnaryCallSettings.Builder<MutateAccountLinkRequest, MutateAccountLinkResponse>
         mutateAccountLinkSettings;
 
@@ -234,11 +247,13 @@ public class AccountLinkServiceStubSettings extends StubSettings<AccountLinkServ
 
       getAccountLinkSettings = UnaryCallSettings.newUnaryCallSettingsBuilder();
 
+      createAccountLinkSettings = UnaryCallSettings.newUnaryCallSettingsBuilder();
+
       mutateAccountLinkSettings = UnaryCallSettings.newUnaryCallSettingsBuilder();
 
       unaryMethodSettingsBuilders =
           ImmutableList.<UnaryCallSettings.Builder<?, ?>>of(
-              getAccountLinkSettings, mutateAccountLinkSettings);
+              getAccountLinkSettings, createAccountLinkSettings, mutateAccountLinkSettings);
 
       initDefaults(this);
     }
@@ -260,6 +275,11 @@ public class AccountLinkServiceStubSettings extends StubSettings<AccountLinkServ
           .setRetrySettings(RETRY_PARAM_DEFINITIONS.get("retry_policy_1_params"));
 
       builder
+          .createAccountLinkSettings()
+          .setRetryableCodes(RETRYABLE_CODE_DEFINITIONS.get("retry_policy_1_codes"))
+          .setRetrySettings(RETRY_PARAM_DEFINITIONS.get("retry_policy_1_params"));
+
+      builder
           .mutateAccountLinkSettings()
           .setRetryableCodes(RETRYABLE_CODE_DEFINITIONS.get("retry_policy_1_codes"))
           .setRetrySettings(RETRY_PARAM_DEFINITIONS.get("retry_policy_1_params"));
@@ -271,11 +291,12 @@ public class AccountLinkServiceStubSettings extends StubSettings<AccountLinkServ
       super(settings);
 
       getAccountLinkSettings = settings.getAccountLinkSettings.toBuilder();
+      createAccountLinkSettings = settings.createAccountLinkSettings.toBuilder();
       mutateAccountLinkSettings = settings.mutateAccountLinkSettings.toBuilder();
 
       unaryMethodSettingsBuilders =
           ImmutableList.<UnaryCallSettings.Builder<?, ?>>of(
-              getAccountLinkSettings, mutateAccountLinkSettings);
+              getAccountLinkSettings, createAccountLinkSettings, mutateAccountLinkSettings);
     }
 
     // NEXT_MAJOR_VER: remove 'throws Exception'
@@ -297,6 +318,12 @@ public class AccountLinkServiceStubSettings extends StubSettings<AccountLinkServ
     /** Returns the builder for the settings used for calls to getAccountLink. */
     public UnaryCallSettings.Builder<GetAccountLinkRequest, AccountLink> getAccountLinkSettings() {
       return getAccountLinkSettings;
+    }
+
+    /** Returns the builder for the settings used for calls to createAccountLink. */
+    public UnaryCallSettings.Builder<CreateAccountLinkRequest, CreateAccountLinkResponse>
+        createAccountLinkSettings() {
+      return createAccountLinkSettings;
     }
 
     /** Returns the builder for the settings used for calls to mutateAccountLink. */

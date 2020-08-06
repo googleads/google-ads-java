@@ -117,6 +117,31 @@ private static final long serialVersionUID = 0L;
      * <code>PINNING_UNSUPPORTED = 2;</code>
      */
     PINNING_UNSUPPORTED(2),
+    /**
+     * <pre>
+     * The given field type is not supported to be added directly via asset
+     * links.
+     * </pre>
+     *
+     * <code>UNSUPPORTED_FIELD_TYPE = 3;</code>
+     */
+    UNSUPPORTED_FIELD_TYPE(3),
+    /**
+     * <pre>
+     * The given asset's type and the specified field type are incompatible.
+     * </pre>
+     *
+     * <code>FIELD_TYPE_INCOMPATIBLE_WITH_ASSET_TYPE = 4;</code>
+     */
+    FIELD_TYPE_INCOMPATIBLE_WITH_ASSET_TYPE(4),
+    /**
+     * <pre>
+     * The specified field type is incompatible with the given campaign type.
+     * </pre>
+     *
+     * <code>FIELD_TYPE_INCOMPATIBLE_WITH_CAMPAIGN_TYPE = 5;</code>
+     */
+    FIELD_TYPE_INCOMPATIBLE_WITH_CAMPAIGN_TYPE(5),
     UNRECOGNIZED(-1),
     ;
 
@@ -144,6 +169,31 @@ private static final long serialVersionUID = 0L;
      * <code>PINNING_UNSUPPORTED = 2;</code>
      */
     public static final int PINNING_UNSUPPORTED_VALUE = 2;
+    /**
+     * <pre>
+     * The given field type is not supported to be added directly via asset
+     * links.
+     * </pre>
+     *
+     * <code>UNSUPPORTED_FIELD_TYPE = 3;</code>
+     */
+    public static final int UNSUPPORTED_FIELD_TYPE_VALUE = 3;
+    /**
+     * <pre>
+     * The given asset's type and the specified field type are incompatible.
+     * </pre>
+     *
+     * <code>FIELD_TYPE_INCOMPATIBLE_WITH_ASSET_TYPE = 4;</code>
+     */
+    public static final int FIELD_TYPE_INCOMPATIBLE_WITH_ASSET_TYPE_VALUE = 4;
+    /**
+     * <pre>
+     * The specified field type is incompatible with the given campaign type.
+     * </pre>
+     *
+     * <code>FIELD_TYPE_INCOMPATIBLE_WITH_CAMPAIGN_TYPE = 5;</code>
+     */
+    public static final int FIELD_TYPE_INCOMPATIBLE_WITH_CAMPAIGN_TYPE_VALUE = 5;
 
 
     public final int getNumber() {
@@ -173,6 +223,9 @@ private static final long serialVersionUID = 0L;
         case 0: return UNSPECIFIED;
         case 1: return UNKNOWN;
         case 2: return PINNING_UNSUPPORTED;
+        case 3: return UNSUPPORTED_FIELD_TYPE;
+        case 4: return FIELD_TYPE_INCOMPATIBLE_WITH_ASSET_TYPE;
+        case 5: return FIELD_TYPE_INCOMPATIBLE_WITH_CAMPAIGN_TYPE;
         default: return null;
       }
     }

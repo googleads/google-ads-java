@@ -191,12 +191,12 @@ private static final long serialVersionUID = 0L;
     CALLTRACKING_NOT_SUPPORTED_FOR_COUNTRY(11),
     /**
      * <pre>
-     * Customer is not whitelisted for call tracking.
+     * Customer is not on the allow-list for call tracking.
      * </pre>
      *
-     * <code>CUSTOMER_NOT_WHITELISTED_FOR_CALLTRACKING = 12;</code>
+     * <code>CUSTOMER_NOT_IN_ALLOWLIST_FOR_CALLTRACKING = 99;</code>
      */
-    CUSTOMER_NOT_WHITELISTED_FOR_CALLTRACKING(12),
+    CUSTOMER_NOT_IN_ALLOWLIST_FOR_CALLTRACKING(99),
     /**
      * <pre>
      * Country code is invalid.
@@ -1004,12 +1004,12 @@ private static final long serialVersionUID = 0L;
     public static final int CALLTRACKING_NOT_SUPPORTED_FOR_COUNTRY_VALUE = 11;
     /**
      * <pre>
-     * Customer is not whitelisted for call tracking.
+     * Customer is not on the allow-list for call tracking.
      * </pre>
      *
-     * <code>CUSTOMER_NOT_WHITELISTED_FOR_CALLTRACKING = 12;</code>
+     * <code>CUSTOMER_NOT_IN_ALLOWLIST_FOR_CALLTRACKING = 99;</code>
      */
-    public static final int CUSTOMER_NOT_WHITELISTED_FOR_CALLTRACKING_VALUE = 12;
+    public static final int CUSTOMER_NOT_IN_ALLOWLIST_FOR_CALLTRACKING_VALUE = 99;
     /**
      * <pre>
      * Country code is invalid.
@@ -1754,7 +1754,7 @@ private static final long serialVersionUID = 0L;
         case 9: return DISALLOWED_NUMBER_TYPE;
         case 10: return VALUE_OUT_OF_RANGE;
         case 11: return CALLTRACKING_NOT_SUPPORTED_FOR_COUNTRY;
-        case 12: return CUSTOMER_NOT_WHITELISTED_FOR_CALLTRACKING;
+        case 99: return CUSTOMER_NOT_IN_ALLOWLIST_FOR_CALLTRACKING;
         case 13: return INVALID_COUNTRY_CODE;
         case 14: return INVALID_APP_ID;
         case 15: return MISSING_ATTRIBUTES_FOR_FIELDS;

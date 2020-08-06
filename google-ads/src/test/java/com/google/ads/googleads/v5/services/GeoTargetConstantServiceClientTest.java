@@ -61,6 +61,7 @@ public class GeoTargetConstantServiceClientTest {
   private static MockAgeRangeViewService mockAgeRangeViewService;
   private static MockAssetService mockAssetService;
   private static MockBiddingStrategyService mockBiddingStrategyService;
+  private static MockCampaignAssetService mockCampaignAssetService;
   private static MockCampaignBidModifierService mockCampaignBidModifierService;
   private static MockCampaignBudgetService mockCampaignBudgetService;
   private static MockCampaignCriterionService mockCampaignCriterionService;
@@ -182,6 +183,7 @@ public class GeoTargetConstantServiceClientTest {
     mockAgeRangeViewService = new MockAgeRangeViewService();
     mockAssetService = new MockAssetService();
     mockBiddingStrategyService = new MockBiddingStrategyService();
+    mockCampaignAssetService = new MockCampaignAssetService();
     mockCampaignBidModifierService = new MockCampaignBidModifierService();
     mockCampaignBudgetService = new MockCampaignBudgetService();
     mockCampaignCriterionService = new MockCampaignCriterionService();
@@ -298,6 +300,7 @@ public class GeoTargetConstantServiceClientTest {
                 mockAgeRangeViewService,
                 mockAssetService,
                 mockBiddingStrategyService,
+                mockCampaignAssetService,
                 mockCampaignBidModifierService,
                 mockCampaignBudgetService,
                 mockCampaignCriterionService,
@@ -424,6 +427,8 @@ public class GeoTargetConstantServiceClientTest {
     String countryCode = "countryCode1481071862";
     String targetType = "targetType-2084558552";
     String canonicalName = "canonicalName1385400054";
+    com.google.ads.googleads.v5.services.GeoTargetConstantName parentGeoTarget =
+        com.google.ads.googleads.v5.services.GeoTargetConstantName.of("[GEO_TARGET_CONSTANT]");
     GeoTargetConstant expectedResponse =
         GeoTargetConstant.newBuilder()
             .setResourceName(resourceName2.toString())
@@ -432,6 +437,7 @@ public class GeoTargetConstantServiceClientTest {
             .setCountryCode(countryCode)
             .setTargetType(targetType)
             .setCanonicalName(canonicalName)
+            .setParentGeoTarget(parentGeoTarget.toString())
             .build();
     mockGeoTargetConstantService.addResponse(expectedResponse);
 

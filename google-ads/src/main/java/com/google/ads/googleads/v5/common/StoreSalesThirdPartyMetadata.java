@@ -6,8 +6,9 @@ package com.google.ads.googleads.v5.common;
 /**
  * <pre>
  * Metadata for a third party Store Sales.
- * This is a whitelisted only product. Please contact your Google business
- * development representative for details on the upload configuration.
+ * This product is only for customers on the allow-list. Please contact your
+ * Google business development representative for details on the upload
+ * configuration.
  * </pre>
  *
  * Protobuf type {@code google.ads.googleads.v5.common.StoreSalesThirdPartyMetadata}
@@ -668,8 +669,9 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Metadata for a third party Store Sales.
-   * This is a whitelisted only product. Please contact your Google business
-   * development representative for details on the upload configuration.
+   * This product is only for customers on the allow-list. Please contact your
+   * Google business development representative for details on the upload
+   * configuration.
    * </pre>
    *
    * Protobuf type {@code google.ads.googleads.v5.common.StoreSalesThirdPartyMetadata}

@@ -126,5 +126,59 @@ public interface AccountLinkOrBuilder extends
    */
   com.google.ads.googleads.v5.resources.ThirdPartyAppAnalyticsLinkIdentifierOrBuilder getThirdPartyAppAnalyticsOrBuilder();
 
+  /**
+   * <pre>
+   * Output only. Data partner link.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v5.resources.DataPartnerLinkIdentifier data_partner = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the dataPartner field is set.
+   */
+  boolean hasDataPartner();
+  /**
+   * <pre>
+   * Output only. Data partner link.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v5.resources.DataPartnerLinkIdentifier data_partner = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The dataPartner.
+   */
+  com.google.ads.googleads.v5.resources.DataPartnerLinkIdentifier getDataPartner();
+  /**
+   * <pre>
+   * Output only. Data partner link.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v5.resources.DataPartnerLinkIdentifier data_partner = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   */
+  com.google.ads.googleads.v5.resources.DataPartnerLinkIdentifierOrBuilder getDataPartnerOrBuilder();
+
+  /**
+   * <pre>
+   * Output only. Google Ads link.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v5.resources.GoogleAdsLinkIdentifier google_ads = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the googleAds field is set.
+   */
+  boolean hasGoogleAds();
+  /**
+   * <pre>
+   * Output only. Google Ads link.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v5.resources.GoogleAdsLinkIdentifier google_ads = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The googleAds.
+   */
+  com.google.ads.googleads.v5.resources.GoogleAdsLinkIdentifier getGoogleAds();
+  /**
+   * <pre>
+   * Output only. Google Ads link.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v5.resources.GoogleAdsLinkIdentifier google_ads = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   */
+  com.google.ads.googleads.v5.resources.GoogleAdsLinkIdentifierOrBuilder getGoogleAdsOrBuilder();
+
   public com.google.ads.googleads.v5.resources.AccountLink.LinkedAccountCase getLinkedAccountCase();
 }

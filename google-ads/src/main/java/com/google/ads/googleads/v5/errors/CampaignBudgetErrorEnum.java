@@ -136,7 +136,7 @@ private static final long serialVersionUID = 0L;
     CAMPAIGN_BUDGET_IN_USE(3),
     /**
      * <pre>
-     * Customer is not whitelisted for this campaign budget period.
+     * Customer is not on the allow-list for this campaign budget period.
      * </pre>
      *
      * <code>CAMPAIGN_BUDGET_PERIOD_NOT_AVAILABLE = 4;</code>
@@ -288,7 +288,7 @@ private static final long serialVersionUID = 0L;
     public static final int CAMPAIGN_BUDGET_IN_USE_VALUE = 3;
     /**
      * <pre>
-     * Customer is not whitelisted for this campaign budget period.
+     * Customer is not on the allow-list for this campaign budget period.
      * </pre>
      *
      * <code>CAMPAIGN_BUDGET_PERIOD_NOT_AVAILABLE = 4;</code>

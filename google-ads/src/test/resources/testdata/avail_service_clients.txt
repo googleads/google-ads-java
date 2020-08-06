@@ -23,6 +23,7 @@ public abstract com.google.ads.googleads.v5.services.BatchJobServiceClient com.g
 public abstract com.google.ads.googleads.v5.services.BiddingStrategyServiceClient com.google.ads.googleads.v5.services.GoogleAdsVersion.createBiddingStrategyServiceClient()
 public abstract com.google.ads.googleads.v5.services.BillingSetupServiceClient com.google.ads.googleads.v5.services.GoogleAdsVersion.createBillingSetupServiceClient()
 public abstract com.google.ads.googleads.v5.services.CampaignAudienceViewServiceClient com.google.ads.googleads.v5.services.GoogleAdsVersion.createCampaignAudienceViewServiceClient()
+public abstract com.google.ads.googleads.v5.services.CampaignAssetServiceClient com.google.ads.googleads.v5.services.GoogleAdsVersion.createCampaignAssetServiceClient()
 public abstract com.google.ads.googleads.v5.services.CampaignBidModifierServiceClient com.google.ads.googleads.v5.services.GoogleAdsVersion.createCampaignBidModifierServiceClient()
 public abstract com.google.ads.googleads.v5.services.CampaignBudgetServiceClient com.google.ads.googleads.v5.services.GoogleAdsVersion.createCampaignBudgetServiceClient()
 public abstract com.google.ads.googleads.v5.services.CampaignCriterionServiceClient com.google.ads.googleads.v5.services.GoogleAdsVersion.createCampaignCriterionServiceClient()

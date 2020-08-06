@@ -159,12 +159,12 @@ private static final long serialVersionUID = 0L;
     FIELD_CANNOT_BE_CLEARED(7),
     /**
      * <pre>
-     * The field's value is on a blacklist for this field.
+     * The field's value is on a deny-list for this field.
      * </pre>
      *
-     * <code>BLACKLISTED_VALUE = 8;</code>
+     * <code>BLOCKED_VALUE = 9;</code>
      */
-    BLACKLISTED_VALUE(8),
+    BLOCKED_VALUE(9),
     UNRECOGNIZED(-1),
     ;
 
@@ -234,12 +234,12 @@ private static final long serialVersionUID = 0L;
     public static final int FIELD_CANNOT_BE_CLEARED_VALUE = 7;
     /**
      * <pre>
-     * The field's value is on a blacklist for this field.
+     * The field's value is on a deny-list for this field.
      * </pre>
      *
-     * <code>BLACKLISTED_VALUE = 8;</code>
+     * <code>BLOCKED_VALUE = 9;</code>
      */
-    public static final int BLACKLISTED_VALUE_VALUE = 8;
+    public static final int BLOCKED_VALUE_VALUE = 9;
 
 
     public final int getNumber() {
@@ -274,7 +274,7 @@ private static final long serialVersionUID = 0L;
         case 5: return VALUE_MUST_BE_UNSET;
         case 6: return REQUIRED_NONEMPTY_LIST;
         case 7: return FIELD_CANNOT_BE_CLEARED;
-        case 8: return BLACKLISTED_VALUE;
+        case 9: return BLOCKED_VALUE;
         default: return null;
       }
     }

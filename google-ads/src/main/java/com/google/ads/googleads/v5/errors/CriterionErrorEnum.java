@@ -215,7 +215,7 @@ private static final long serialVersionUID = 0L;
     PLACEMENT_URL_HAS_MULTIPLE_SITES_IN_LINE(14),
     /**
      * <pre>
-     * Indicates the domain is blacklisted.
+     * Indicates the domain is blocked.
      * </pre>
      *
      * <code>PLACEMENT_IS_NOT_AVAILABLE_FOR_TARGETING_OR_EXCLUSION = 15;</code>
@@ -1154,7 +1154,7 @@ private static final long serialVersionUID = 0L;
     public static final int PLACEMENT_URL_HAS_MULTIPLE_SITES_IN_LINE_VALUE = 14;
     /**
      * <pre>
-     * Indicates the domain is blacklisted.
+     * Indicates the domain is blocked.
      * </pre>
      *
      * <code>PLACEMENT_IS_NOT_AVAILABLE_FOR_TARGETING_OR_EXCLUSION = 15;</code>

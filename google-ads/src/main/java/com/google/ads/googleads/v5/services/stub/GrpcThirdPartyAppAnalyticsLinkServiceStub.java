@@ -17,6 +17,8 @@ package com.google.ads.googleads.v5.services.stub;
 
 import com.google.ads.googleads.v5.resources.ThirdPartyAppAnalyticsLink;
 import com.google.ads.googleads.v5.services.GetThirdPartyAppAnalyticsLinkRequest;
+import com.google.ads.googleads.v5.services.RegenerateShareableLinkIdRequest;
+import com.google.ads.googleads.v5.services.RegenerateShareableLinkIdResponse;
 import com.google.api.core.BetaApi;
 import com.google.api.gax.core.BackgroundResource;
 import com.google.api.gax.core.BackgroundResourceAggregation;
@@ -57,11 +59,26 @@ public class GrpcThirdPartyAppAnalyticsLinkServiceStub
               .setResponseMarshaller(
                   ProtoUtils.marshaller(ThirdPartyAppAnalyticsLink.getDefaultInstance()))
               .build();
+  private static final MethodDescriptor<
+          RegenerateShareableLinkIdRequest, RegenerateShareableLinkIdResponse>
+      regenerateShareableLinkIdMethodDescriptor =
+          MethodDescriptor
+              .<RegenerateShareableLinkIdRequest, RegenerateShareableLinkIdResponse>newBuilder()
+              .setType(MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(
+                  "google.ads.googleads.v5.services.ThirdPartyAppAnalyticsLinkService/RegenerateShareableLinkId")
+              .setRequestMarshaller(
+                  ProtoUtils.marshaller(RegenerateShareableLinkIdRequest.getDefaultInstance()))
+              .setResponseMarshaller(
+                  ProtoUtils.marshaller(RegenerateShareableLinkIdResponse.getDefaultInstance()))
+              .build();
 
   private final BackgroundResource backgroundResources;
 
   private final UnaryCallable<GetThirdPartyAppAnalyticsLinkRequest, ThirdPartyAppAnalyticsLink>
       getThirdPartyAppAnalyticsLinkCallable;
+  private final UnaryCallable<RegenerateShareableLinkIdRequest, RegenerateShareableLinkIdResponse>
+      regenerateShareableLinkIdCallable;
 
   private final GrpcStubCallableFactory callableFactory;
 
@@ -123,11 +140,31 @@ public class GrpcThirdPartyAppAnalyticsLinkServiceStub
                       }
                     })
                 .build();
+    GrpcCallSettings<RegenerateShareableLinkIdRequest, RegenerateShareableLinkIdResponse>
+        regenerateShareableLinkIdTransportSettings =
+            GrpcCallSettings
+                .<RegenerateShareableLinkIdRequest, RegenerateShareableLinkIdResponse>newBuilder()
+                .setMethodDescriptor(regenerateShareableLinkIdMethodDescriptor)
+                .setParamsExtractor(
+                    new RequestParamsExtractor<RegenerateShareableLinkIdRequest>() {
+                      @Override
+                      public Map<String, String> extract(RegenerateShareableLinkIdRequest request) {
+                        ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
+                        params.put("resource_name", String.valueOf(request.getResourceName()));
+                        return params.build();
+                      }
+                    })
+                .build();
 
     this.getThirdPartyAppAnalyticsLinkCallable =
         callableFactory.createUnaryCallable(
             getThirdPartyAppAnalyticsLinkTransportSettings,
             settings.getThirdPartyAppAnalyticsLinkSettings(),
+            clientContext);
+    this.regenerateShareableLinkIdCallable =
+        callableFactory.createUnaryCallable(
+            regenerateShareableLinkIdTransportSettings,
+            settings.regenerateShareableLinkIdSettings(),
             clientContext);
 
     backgroundResources = new BackgroundResourceAggregation(clientContext.getBackgroundResources());
@@ -136,6 +173,11 @@ public class GrpcThirdPartyAppAnalyticsLinkServiceStub
   public UnaryCallable<GetThirdPartyAppAnalyticsLinkRequest, ThirdPartyAppAnalyticsLink>
       getThirdPartyAppAnalyticsLinkCallable() {
     return getThirdPartyAppAnalyticsLinkCallable;
+  }
+
+  public UnaryCallable<RegenerateShareableLinkIdRequest, RegenerateShareableLinkIdResponse>
+      regenerateShareableLinkIdCallable() {
+    return regenerateShareableLinkIdCallable;
   }
 
   @Override

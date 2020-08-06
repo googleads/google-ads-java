@@ -111,12 +111,12 @@ private static final long serialVersionUID = 0L;
     UNKNOWN(1),
     /**
      * <pre>
-     * The customer is not whitelisted for this asset type.
+     * The customer is not is not on the allow-list for this asset type.
      * </pre>
      *
-     * <code>CUSTOMER_NOT_WHITELISTED_FOR_ASSET_TYPE = 2;</code>
+     * <code>CUSTOMER_NOT_ON_ALLOWLIST_FOR_ASSET_TYPE = 13;</code>
      */
-    CUSTOMER_NOT_WHITELISTED_FOR_ASSET_TYPE(2),
+    CUSTOMER_NOT_ON_ALLOWLIST_FOR_ASSET_TYPE(13),
     /**
      * <pre>
      * Assets are duplicated across operations.
@@ -172,12 +172,12 @@ private static final long serialVersionUID = 0L;
     public static final int UNKNOWN_VALUE = 1;
     /**
      * <pre>
-     * The customer is not whitelisted for this asset type.
+     * The customer is not is not on the allow-list for this asset type.
      * </pre>
      *
-     * <code>CUSTOMER_NOT_WHITELISTED_FOR_ASSET_TYPE = 2;</code>
+     * <code>CUSTOMER_NOT_ON_ALLOWLIST_FOR_ASSET_TYPE = 13;</code>
      */
-    public static final int CUSTOMER_NOT_WHITELISTED_FOR_ASSET_TYPE_VALUE = 2;
+    public static final int CUSTOMER_NOT_ON_ALLOWLIST_FOR_ASSET_TYPE_VALUE = 13;
     /**
      * <pre>
      * Assets are duplicated across operations.
@@ -240,7 +240,7 @@ private static final long serialVersionUID = 0L;
       switch (value) {
         case 0: return UNSPECIFIED;
         case 1: return UNKNOWN;
-        case 2: return CUSTOMER_NOT_WHITELISTED_FOR_ASSET_TYPE;
+        case 13: return CUSTOMER_NOT_ON_ALLOWLIST_FOR_ASSET_TYPE;
         case 3: return DUPLICATE_ASSET;
         case 4: return DUPLICATE_ASSET_NAME;
         case 5: return ASSET_DATA_IS_MISSING;

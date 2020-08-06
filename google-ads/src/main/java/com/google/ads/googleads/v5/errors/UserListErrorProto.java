@@ -30,8 +30,8 @@ public final class UserListErrorProto {
     java.lang.String[] descriptorData = {
       "\n4google/ads/googleads/v5/errors/user_li" +
       "st_error.proto\022\036google.ads.googleads.v5." +
-      "errors\032\034google/api/annotations.proto\"\354\007\n" +
-      "\021UserListErrorEnum\"\326\007\n\rUserListError\022\017\n\013" +
+      "errors\032\034google/api/annotations.proto\"\355\007\n" +
+      "\021UserListErrorEnum\"\327\007\n\rUserListError\022\017\n\013" +
       "UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\0227\n3EXTERNAL_R" +
       "EMARKETING_USER_LIST_MUTATE_NOT_SUPPORTE" +
       "D\020\002\022\032\n\026CONCRETE_TYPE_REQUIRED\020\003\022\037\n\033CONVE" +
@@ -50,19 +50,19 @@ public final class UserListErrorProto {
       "IVE_USERLIST\020\034\022\037\n\033MAX_NUM_RULEBASED_USER" +
       "LISTS\020\035\022\'\n#CANNOT_MODIFY_BILLABLE_RECORD" +
       "_COUNT\020\036\022\022\n\016APP_ID_NOT_SET\020\037\022-\n)USERLIST" +
-      "_NAME_IS_RESERVED_FOR_SYSTEM_LIST\020 \0226\n2A" +
-      "DVERTISER_NOT_WHITELISTED_FOR_USING_UPLO" +
-      "ADED_DATA\020!\022\036\n\032RULE_TYPE_IS_NOT_SUPPORTE" +
-      "D\020\"\022:\n6CAN_NOT_ADD_A_SIMILAR_USERLIST_AS" +
-      "_LOGICAL_LIST_OPERAND\020#\022:\n6CAN_NOT_MIX_C" +
-      "RM_BASED_IN_LOGICAL_LIST_WITH_OTHER_LIST" +
-      "S\020$B\355\001\n\"com.google.ads.googleads.v5.erro" +
-      "rsB\022UserListErrorProtoP\001ZDgoogle.golang." +
-      "org/genproto/googleapis/ads/googleads/v5" +
-      "/errors;errors\242\002\003GAA\252\002\036Google.Ads.Google" +
-      "Ads.V5.Errors\312\002\036Google\\Ads\\GoogleAds\\V5\\" +
-      "Errors\352\002\"Google::Ads::GoogleAds::V5::Err" +
-      "orsb\006proto3"
+      "_NAME_IS_RESERVED_FOR_SYSTEM_LIST\020 \0227\n3A" +
+      "DVERTISER_NOT_ON_ALLOWLIST_FOR_USING_UPL" +
+      "OADED_DATA\020%\022\036\n\032RULE_TYPE_IS_NOT_SUPPORT" +
+      "ED\020\"\022:\n6CAN_NOT_ADD_A_SIMILAR_USERLIST_A" +
+      "S_LOGICAL_LIST_OPERAND\020#\022:\n6CAN_NOT_MIX_" +
+      "CRM_BASED_IN_LOGICAL_LIST_WITH_OTHER_LIS" +
+      "TS\020$B\355\001\n\"com.google.ads.googleads.v5.err" +
+      "orsB\022UserListErrorProtoP\001ZDgoogle.golang" +
+      ".org/genproto/googleapis/ads/googleads/v" +
+      "5/errors;errors\242\002\003GAA\252\002\036Google.Ads.Googl" +
+      "eAds.V5.Errors\312\002\036Google\\Ads\\GoogleAds\\V5" +
+      "\\Errors\352\002\"Google::Ads::GoogleAds::V5::Er" +
+      "rorsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

@@ -61,6 +61,7 @@ public class AccountLinkServiceClientTest {
   private static MockAgeRangeViewService mockAgeRangeViewService;
   private static MockAssetService mockAssetService;
   private static MockBiddingStrategyService mockBiddingStrategyService;
+  private static MockCampaignAssetService mockCampaignAssetService;
   private static MockCampaignBidModifierService mockCampaignBidModifierService;
   private static MockCampaignBudgetService mockCampaignBudgetService;
   private static MockCampaignCriterionService mockCampaignCriterionService;
@@ -182,6 +183,7 @@ public class AccountLinkServiceClientTest {
     mockAgeRangeViewService = new MockAgeRangeViewService();
     mockAssetService = new MockAssetService();
     mockBiddingStrategyService = new MockBiddingStrategyService();
+    mockCampaignAssetService = new MockCampaignAssetService();
     mockCampaignBidModifierService = new MockCampaignBidModifierService();
     mockCampaignBudgetService = new MockCampaignBudgetService();
     mockCampaignCriterionService = new MockCampaignCriterionService();
@@ -298,6 +300,7 @@ public class AccountLinkServiceClientTest {
                 mockAgeRangeViewService,
                 mockAssetService,
                 mockBiddingStrategyService,
+                mockCampaignAssetService,
                 mockCampaignBidModifierService,
                 mockCampaignBudgetService,
                 mockCampaignCriterionService,
@@ -448,6 +451,49 @@ public class AccountLinkServiceClientTest {
       AccountLinkName resourceName = AccountLinkName.of("[CUSTOMER]", "[ACCOUNT_LINK]");
 
       client.getAccountLink(resourceName);
+      Assert.fail("No exception raised");
+    } catch (InvalidArgumentException e) {
+      // Expected exception
+    }
+  }
+
+  @Test
+  @SuppressWarnings("all")
+  public void createAccountLinkTest() {
+    String resourceName = "resourceName979421212";
+    CreateAccountLinkResponse expectedResponse =
+        CreateAccountLinkResponse.newBuilder().setResourceName(resourceName).build();
+    mockAccountLinkService.addResponse(expectedResponse);
+
+    String customerId = "customerId-1772061412";
+    AccountLink accountLink = AccountLink.newBuilder().build();
+
+    CreateAccountLinkResponse actualResponse = client.createAccountLink(customerId, accountLink);
+    Assert.assertEquals(expectedResponse, actualResponse);
+
+    List<AbstractMessage> actualRequests = mockAccountLinkService.getRequests();
+    Assert.assertEquals(1, actualRequests.size());
+    CreateAccountLinkRequest actualRequest = (CreateAccountLinkRequest) actualRequests.get(0);
+
+    Assert.assertEquals(customerId, actualRequest.getCustomerId());
+    Assert.assertEquals(accountLink, actualRequest.getAccountLink());
+    Assert.assertTrue(
+        channelProvider.isHeaderSent(
+            ApiClientHeaderProvider.getDefaultApiClientHeaderKey(),
+            GaxGrpcProperties.getDefaultApiClientHeaderPattern()));
+  }
+
+  @Test
+  @SuppressWarnings("all")
+  public void createAccountLinkExceptionTest() throws Exception {
+    StatusRuntimeException exception = new StatusRuntimeException(Status.INVALID_ARGUMENT);
+    mockAccountLinkService.addException(exception);
+
+    try {
+      String customerId = "customerId-1772061412";
+      AccountLink accountLink = AccountLink.newBuilder().build();
+
+      client.createAccountLink(customerId, accountLink);
       Assert.fail("No exception raised");
     } catch (InvalidArgumentException e) {
       // Expected exception

@@ -2144,6 +2144,718 @@ private static final long serialVersionUID = 0L;
 
   }
 
+  public interface GeoTargetTypeSettingOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:google.ads.googleads.v5.resources.Campaign.GeoTargetTypeSetting)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * The setting used for positive geotargeting in this particular campaign.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v5.enums.PositiveGeoTargetTypeEnum.PositiveGeoTargetType positive_geo_target_type = 1;</code>
+     * @return The enum numeric value on the wire for positiveGeoTargetType.
+     */
+    int getPositiveGeoTargetTypeValue();
+    /**
+     * <pre>
+     * The setting used for positive geotargeting in this particular campaign.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v5.enums.PositiveGeoTargetTypeEnum.PositiveGeoTargetType positive_geo_target_type = 1;</code>
+     * @return The positiveGeoTargetType.
+     */
+    com.google.ads.googleads.v5.enums.PositiveGeoTargetTypeEnum.PositiveGeoTargetType getPositiveGeoTargetType();
+
+    /**
+     * <pre>
+     * The setting used for negative geotargeting in this particular campaign.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v5.enums.NegativeGeoTargetTypeEnum.NegativeGeoTargetType negative_geo_target_type = 2;</code>
+     * @return The enum numeric value on the wire for negativeGeoTargetType.
+     */
+    int getNegativeGeoTargetTypeValue();
+    /**
+     * <pre>
+     * The setting used for negative geotargeting in this particular campaign.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v5.enums.NegativeGeoTargetTypeEnum.NegativeGeoTargetType negative_geo_target_type = 2;</code>
+     * @return The negativeGeoTargetType.
+     */
+    com.google.ads.googleads.v5.enums.NegativeGeoTargetTypeEnum.NegativeGeoTargetType getNegativeGeoTargetType();
+  }
+  /**
+   * <pre>
+   * Represents a collection of settings related to ads geotargeting.
+   * </pre>
+   *
+   * Protobuf type {@code google.ads.googleads.v5.resources.Campaign.GeoTargetTypeSetting}
+   */
+  public static final class GeoTargetTypeSetting extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:google.ads.googleads.v5.resources.Campaign.GeoTargetTypeSetting)
+      GeoTargetTypeSettingOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use GeoTargetTypeSetting.newBuilder() to construct.
+    private GeoTargetTypeSetting(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private GeoTargetTypeSetting() {
+      positiveGeoTargetType_ = 0;
+      negativeGeoTargetType_ = 0;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GeoTargetTypeSetting();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private GeoTargetTypeSetting(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+              int rawValue = input.readEnum();
+
+              positiveGeoTargetType_ = rawValue;
+              break;
+            }
+            case 16: {
+              int rawValue = input.readEnum();
+
+              negativeGeoTargetType_ = rawValue;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.google.ads.googleads.v5.resources.CampaignProto.internal_static_google_ads_googleads_v5_resources_Campaign_GeoTargetTypeSetting_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.google.ads.googleads.v5.resources.CampaignProto.internal_static_google_ads_googleads_v5_resources_Campaign_GeoTargetTypeSetting_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.google.ads.googleads.v5.resources.Campaign.GeoTargetTypeSetting.class, com.google.ads.googleads.v5.resources.Campaign.GeoTargetTypeSetting.Builder.class);
+    }
+
+    public static final int POSITIVE_GEO_TARGET_TYPE_FIELD_NUMBER = 1;
+    private int positiveGeoTargetType_;
+    /**
+     * <pre>
+     * The setting used for positive geotargeting in this particular campaign.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v5.enums.PositiveGeoTargetTypeEnum.PositiveGeoTargetType positive_geo_target_type = 1;</code>
+     * @return The enum numeric value on the wire for positiveGeoTargetType.
+     */
+    @java.lang.Override public int getPositiveGeoTargetTypeValue() {
+      return positiveGeoTargetType_;
+    }
+    /**
+     * <pre>
+     * The setting used for positive geotargeting in this particular campaign.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v5.enums.PositiveGeoTargetTypeEnum.PositiveGeoTargetType positive_geo_target_type = 1;</code>
+     * @return The positiveGeoTargetType.
+     */
+    @java.lang.Override public com.google.ads.googleads.v5.enums.PositiveGeoTargetTypeEnum.PositiveGeoTargetType getPositiveGeoTargetType() {
+      @SuppressWarnings("deprecation")
+      com.google.ads.googleads.v5.enums.PositiveGeoTargetTypeEnum.PositiveGeoTargetType result = com.google.ads.googleads.v5.enums.PositiveGeoTargetTypeEnum.PositiveGeoTargetType.valueOf(positiveGeoTargetType_);
+      return result == null ? com.google.ads.googleads.v5.enums.PositiveGeoTargetTypeEnum.PositiveGeoTargetType.UNRECOGNIZED : result;
+    }
+
+    public static final int NEGATIVE_GEO_TARGET_TYPE_FIELD_NUMBER = 2;
+    private int negativeGeoTargetType_;
+    /**
+     * <pre>
+     * The setting used for negative geotargeting in this particular campaign.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v5.enums.NegativeGeoTargetTypeEnum.NegativeGeoTargetType negative_geo_target_type = 2;</code>
+     * @return The enum numeric value on the wire for negativeGeoTargetType.
+     */
+    @java.lang.Override public int getNegativeGeoTargetTypeValue() {
+      return negativeGeoTargetType_;
+    }
+    /**
+     * <pre>
+     * The setting used for negative geotargeting in this particular campaign.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v5.enums.NegativeGeoTargetTypeEnum.NegativeGeoTargetType negative_geo_target_type = 2;</code>
+     * @return The negativeGeoTargetType.
+     */
+    @java.lang.Override public com.google.ads.googleads.v5.enums.NegativeGeoTargetTypeEnum.NegativeGeoTargetType getNegativeGeoTargetType() {
+      @SuppressWarnings("deprecation")
+      com.google.ads.googleads.v5.enums.NegativeGeoTargetTypeEnum.NegativeGeoTargetType result = com.google.ads.googleads.v5.enums.NegativeGeoTargetTypeEnum.NegativeGeoTargetType.valueOf(negativeGeoTargetType_);
+      return result == null ? com.google.ads.googleads.v5.enums.NegativeGeoTargetTypeEnum.NegativeGeoTargetType.UNRECOGNIZED : result;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (positiveGeoTargetType_ != com.google.ads.googleads.v5.enums.PositiveGeoTargetTypeEnum.PositiveGeoTargetType.UNSPECIFIED.getNumber()) {
+        output.writeEnum(1, positiveGeoTargetType_);
+      }
+      if (negativeGeoTargetType_ != com.google.ads.googleads.v5.enums.NegativeGeoTargetTypeEnum.NegativeGeoTargetType.UNSPECIFIED.getNumber()) {
+        output.writeEnum(2, negativeGeoTargetType_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (positiveGeoTargetType_ != com.google.ads.googleads.v5.enums.PositiveGeoTargetTypeEnum.PositiveGeoTargetType.UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(1, positiveGeoTargetType_);
+      }
+      if (negativeGeoTargetType_ != com.google.ads.googleads.v5.enums.NegativeGeoTargetTypeEnum.NegativeGeoTargetType.UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(2, negativeGeoTargetType_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.google.ads.googleads.v5.resources.Campaign.GeoTargetTypeSetting)) {
+        return super.equals(obj);
+      }
+      com.google.ads.googleads.v5.resources.Campaign.GeoTargetTypeSetting other = (com.google.ads.googleads.v5.resources.Campaign.GeoTargetTypeSetting) obj;
+
+      if (positiveGeoTargetType_ != other.positiveGeoTargetType_) return false;
+      if (negativeGeoTargetType_ != other.negativeGeoTargetType_) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + POSITIVE_GEO_TARGET_TYPE_FIELD_NUMBER;
+      hash = (53 * hash) + positiveGeoTargetType_;
+      hash = (37 * hash) + NEGATIVE_GEO_TARGET_TYPE_FIELD_NUMBER;
+      hash = (53 * hash) + negativeGeoTargetType_;
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.google.ads.googleads.v5.resources.Campaign.GeoTargetTypeSetting parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.ads.googleads.v5.resources.Campaign.GeoTargetTypeSetting parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.ads.googleads.v5.resources.Campaign.GeoTargetTypeSetting parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.ads.googleads.v5.resources.Campaign.GeoTargetTypeSetting parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.ads.googleads.v5.resources.Campaign.GeoTargetTypeSetting parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.ads.googleads.v5.resources.Campaign.GeoTargetTypeSetting parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.ads.googleads.v5.resources.Campaign.GeoTargetTypeSetting parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.google.ads.googleads.v5.resources.Campaign.GeoTargetTypeSetting parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.google.ads.googleads.v5.resources.Campaign.GeoTargetTypeSetting parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.google.ads.googleads.v5.resources.Campaign.GeoTargetTypeSetting parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.google.ads.googleads.v5.resources.Campaign.GeoTargetTypeSetting parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.google.ads.googleads.v5.resources.Campaign.GeoTargetTypeSetting parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.google.ads.googleads.v5.resources.Campaign.GeoTargetTypeSetting prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Represents a collection of settings related to ads geotargeting.
+     * </pre>
+     *
+     * Protobuf type {@code google.ads.googleads.v5.resources.Campaign.GeoTargetTypeSetting}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:google.ads.googleads.v5.resources.Campaign.GeoTargetTypeSetting)
+        com.google.ads.googleads.v5.resources.Campaign.GeoTargetTypeSettingOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.google.ads.googleads.v5.resources.CampaignProto.internal_static_google_ads_googleads_v5_resources_Campaign_GeoTargetTypeSetting_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.google.ads.googleads.v5.resources.CampaignProto.internal_static_google_ads_googleads_v5_resources_Campaign_GeoTargetTypeSetting_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.google.ads.googleads.v5.resources.Campaign.GeoTargetTypeSetting.class, com.google.ads.googleads.v5.resources.Campaign.GeoTargetTypeSetting.Builder.class);
+      }
+
+      // Construct using com.google.ads.googleads.v5.resources.Campaign.GeoTargetTypeSetting.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        positiveGeoTargetType_ = 0;
+
+        negativeGeoTargetType_ = 0;
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.google.ads.googleads.v5.resources.CampaignProto.internal_static_google_ads_googleads_v5_resources_Campaign_GeoTargetTypeSetting_descriptor;
+      }
+
+      @java.lang.Override
+      public com.google.ads.googleads.v5.resources.Campaign.GeoTargetTypeSetting getDefaultInstanceForType() {
+        return com.google.ads.googleads.v5.resources.Campaign.GeoTargetTypeSetting.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.google.ads.googleads.v5.resources.Campaign.GeoTargetTypeSetting build() {
+        com.google.ads.googleads.v5.resources.Campaign.GeoTargetTypeSetting result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.google.ads.googleads.v5.resources.Campaign.GeoTargetTypeSetting buildPartial() {
+        com.google.ads.googleads.v5.resources.Campaign.GeoTargetTypeSetting result = new com.google.ads.googleads.v5.resources.Campaign.GeoTargetTypeSetting(this);
+        result.positiveGeoTargetType_ = positiveGeoTargetType_;
+        result.negativeGeoTargetType_ = negativeGeoTargetType_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.google.ads.googleads.v5.resources.Campaign.GeoTargetTypeSetting) {
+          return mergeFrom((com.google.ads.googleads.v5.resources.Campaign.GeoTargetTypeSetting)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.google.ads.googleads.v5.resources.Campaign.GeoTargetTypeSetting other) {
+        if (other == com.google.ads.googleads.v5.resources.Campaign.GeoTargetTypeSetting.getDefaultInstance()) return this;
+        if (other.positiveGeoTargetType_ != 0) {
+          setPositiveGeoTargetTypeValue(other.getPositiveGeoTargetTypeValue());
+        }
+        if (other.negativeGeoTargetType_ != 0) {
+          setNegativeGeoTargetTypeValue(other.getNegativeGeoTargetTypeValue());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.google.ads.googleads.v5.resources.Campaign.GeoTargetTypeSetting parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.google.ads.googleads.v5.resources.Campaign.GeoTargetTypeSetting) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private int positiveGeoTargetType_ = 0;
+      /**
+       * <pre>
+       * The setting used for positive geotargeting in this particular campaign.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v5.enums.PositiveGeoTargetTypeEnum.PositiveGeoTargetType positive_geo_target_type = 1;</code>
+       * @return The enum numeric value on the wire for positiveGeoTargetType.
+       */
+      @java.lang.Override public int getPositiveGeoTargetTypeValue() {
+        return positiveGeoTargetType_;
+      }
+      /**
+       * <pre>
+       * The setting used for positive geotargeting in this particular campaign.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v5.enums.PositiveGeoTargetTypeEnum.PositiveGeoTargetType positive_geo_target_type = 1;</code>
+       * @param value The enum numeric value on the wire for positiveGeoTargetType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPositiveGeoTargetTypeValue(int value) {
+        
+        positiveGeoTargetType_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The setting used for positive geotargeting in this particular campaign.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v5.enums.PositiveGeoTargetTypeEnum.PositiveGeoTargetType positive_geo_target_type = 1;</code>
+       * @return The positiveGeoTargetType.
+       */
+      @java.lang.Override
+      public com.google.ads.googleads.v5.enums.PositiveGeoTargetTypeEnum.PositiveGeoTargetType getPositiveGeoTargetType() {
+        @SuppressWarnings("deprecation")
+        com.google.ads.googleads.v5.enums.PositiveGeoTargetTypeEnum.PositiveGeoTargetType result = com.google.ads.googleads.v5.enums.PositiveGeoTargetTypeEnum.PositiveGeoTargetType.valueOf(positiveGeoTargetType_);
+        return result == null ? com.google.ads.googleads.v5.enums.PositiveGeoTargetTypeEnum.PositiveGeoTargetType.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * The setting used for positive geotargeting in this particular campaign.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v5.enums.PositiveGeoTargetTypeEnum.PositiveGeoTargetType positive_geo_target_type = 1;</code>
+       * @param value The positiveGeoTargetType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPositiveGeoTargetType(com.google.ads.googleads.v5.enums.PositiveGeoTargetTypeEnum.PositiveGeoTargetType value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        positiveGeoTargetType_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The setting used for positive geotargeting in this particular campaign.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v5.enums.PositiveGeoTargetTypeEnum.PositiveGeoTargetType positive_geo_target_type = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPositiveGeoTargetType() {
+        
+        positiveGeoTargetType_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int negativeGeoTargetType_ = 0;
+      /**
+       * <pre>
+       * The setting used for negative geotargeting in this particular campaign.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v5.enums.NegativeGeoTargetTypeEnum.NegativeGeoTargetType negative_geo_target_type = 2;</code>
+       * @return The enum numeric value on the wire for negativeGeoTargetType.
+       */
+      @java.lang.Override public int getNegativeGeoTargetTypeValue() {
+        return negativeGeoTargetType_;
+      }
+      /**
+       * <pre>
+       * The setting used for negative geotargeting in this particular campaign.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v5.enums.NegativeGeoTargetTypeEnum.NegativeGeoTargetType negative_geo_target_type = 2;</code>
+       * @param value The enum numeric value on the wire for negativeGeoTargetType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNegativeGeoTargetTypeValue(int value) {
+        
+        negativeGeoTargetType_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The setting used for negative geotargeting in this particular campaign.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v5.enums.NegativeGeoTargetTypeEnum.NegativeGeoTargetType negative_geo_target_type = 2;</code>
+       * @return The negativeGeoTargetType.
+       */
+      @java.lang.Override
+      public com.google.ads.googleads.v5.enums.NegativeGeoTargetTypeEnum.NegativeGeoTargetType getNegativeGeoTargetType() {
+        @SuppressWarnings("deprecation")
+        com.google.ads.googleads.v5.enums.NegativeGeoTargetTypeEnum.NegativeGeoTargetType result = com.google.ads.googleads.v5.enums.NegativeGeoTargetTypeEnum.NegativeGeoTargetType.valueOf(negativeGeoTargetType_);
+        return result == null ? com.google.ads.googleads.v5.enums.NegativeGeoTargetTypeEnum.NegativeGeoTargetType.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * The setting used for negative geotargeting in this particular campaign.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v5.enums.NegativeGeoTargetTypeEnum.NegativeGeoTargetType negative_geo_target_type = 2;</code>
+       * @param value The negativeGeoTargetType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNegativeGeoTargetType(com.google.ads.googleads.v5.enums.NegativeGeoTargetTypeEnum.NegativeGeoTargetType value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        negativeGeoTargetType_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The setting used for negative geotargeting in this particular campaign.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v5.enums.NegativeGeoTargetTypeEnum.NegativeGeoTargetType negative_geo_target_type = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearNegativeGeoTargetType() {
+        
+        negativeGeoTargetType_ = 0;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:google.ads.googleads.v5.resources.Campaign.GeoTargetTypeSetting)
+    }
+
+    // @@protoc_insertion_point(class_scope:google.ads.googleads.v5.resources.Campaign.GeoTargetTypeSetting)
+    private static final com.google.ads.googleads.v5.resources.Campaign.GeoTargetTypeSetting DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.google.ads.googleads.v5.resources.Campaign.GeoTargetTypeSetting();
+    }
+
+    public static com.google.ads.googleads.v5.resources.Campaign.GeoTargetTypeSetting getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<GeoTargetTypeSetting>
+        PARSER = new com.google.protobuf.AbstractParser<GeoTargetTypeSetting>() {
+      @java.lang.Override
+      public GeoTargetTypeSetting parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new GeoTargetTypeSetting(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<GeoTargetTypeSetting> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GeoTargetTypeSetting> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.ads.googleads.v5.resources.Campaign.GeoTargetTypeSetting getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface DynamicSearchAdsSettingOrBuilder extends
       // @@protoc_insertion_point(interface_extends:google.ads.googleads.v5.resources.Campaign.DynamicSearchAdsSetting)
       com.google.protobuf.MessageOrBuilder {
@@ -3459,6 +4171,821 @@ private static final long serialVersionUID = 0L;
 
   }
 
+  public interface OptimizationGoalSettingOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:google.ads.googleads.v5.resources.Campaign.OptimizationGoalSetting)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * The list of optimization goal types.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v5.enums.OptimizationGoalTypeEnum.OptimizationGoalType optimization_goal_types = 1;</code>
+     * @return A list containing the optimizationGoalTypes.
+     */
+    java.util.List<com.google.ads.googleads.v5.enums.OptimizationGoalTypeEnum.OptimizationGoalType> getOptimizationGoalTypesList();
+    /**
+     * <pre>
+     * The list of optimization goal types.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v5.enums.OptimizationGoalTypeEnum.OptimizationGoalType optimization_goal_types = 1;</code>
+     * @return The count of optimizationGoalTypes.
+     */
+    int getOptimizationGoalTypesCount();
+    /**
+     * <pre>
+     * The list of optimization goal types.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v5.enums.OptimizationGoalTypeEnum.OptimizationGoalType optimization_goal_types = 1;</code>
+     * @param index The index of the element to return.
+     * @return The optimizationGoalTypes at the given index.
+     */
+    com.google.ads.googleads.v5.enums.OptimizationGoalTypeEnum.OptimizationGoalType getOptimizationGoalTypes(int index);
+    /**
+     * <pre>
+     * The list of optimization goal types.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v5.enums.OptimizationGoalTypeEnum.OptimizationGoalType optimization_goal_types = 1;</code>
+     * @return A list containing the enum numeric values on the wire for optimizationGoalTypes.
+     */
+    java.util.List<java.lang.Integer>
+    getOptimizationGoalTypesValueList();
+    /**
+     * <pre>
+     * The list of optimization goal types.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v5.enums.OptimizationGoalTypeEnum.OptimizationGoalType optimization_goal_types = 1;</code>
+     * @param index The index of the value to return.
+     * @return The enum numeric value on the wire of optimizationGoalTypes at the given index.
+     */
+    int getOptimizationGoalTypesValue(int index);
+  }
+  /**
+   * <pre>
+   * Optimization goal setting for this campaign, which includes a set of
+   * optimization goal types.
+   * </pre>
+   *
+   * Protobuf type {@code google.ads.googleads.v5.resources.Campaign.OptimizationGoalSetting}
+   */
+  public static final class OptimizationGoalSetting extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:google.ads.googleads.v5.resources.Campaign.OptimizationGoalSetting)
+      OptimizationGoalSettingOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use OptimizationGoalSetting.newBuilder() to construct.
+    private OptimizationGoalSetting(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private OptimizationGoalSetting() {
+      optimizationGoalTypes_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new OptimizationGoalSetting();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private OptimizationGoalSetting(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+              int rawValue = input.readEnum();
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                optimizationGoalTypes_ = new java.util.ArrayList<java.lang.Integer>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              optimizationGoalTypes_.add(rawValue);
+              break;
+            }
+            case 10: {
+              int length = input.readRawVarint32();
+              int oldLimit = input.pushLimit(length);
+              while(input.getBytesUntilLimit() > 0) {
+                int rawValue = input.readEnum();
+                if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                  optimizationGoalTypes_ = new java.util.ArrayList<java.lang.Integer>();
+                  mutable_bitField0_ |= 0x00000001;
+                }
+                optimizationGoalTypes_.add(rawValue);
+              }
+              input.popLimit(oldLimit);
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          optimizationGoalTypes_ = java.util.Collections.unmodifiableList(optimizationGoalTypes_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.google.ads.googleads.v5.resources.CampaignProto.internal_static_google_ads_googleads_v5_resources_Campaign_OptimizationGoalSetting_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.google.ads.googleads.v5.resources.CampaignProto.internal_static_google_ads_googleads_v5_resources_Campaign_OptimizationGoalSetting_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.google.ads.googleads.v5.resources.Campaign.OptimizationGoalSetting.class, com.google.ads.googleads.v5.resources.Campaign.OptimizationGoalSetting.Builder.class);
+    }
+
+    public static final int OPTIMIZATION_GOAL_TYPES_FIELD_NUMBER = 1;
+    private java.util.List<java.lang.Integer> optimizationGoalTypes_;
+    private static final com.google.protobuf.Internal.ListAdapter.Converter<
+        java.lang.Integer, com.google.ads.googleads.v5.enums.OptimizationGoalTypeEnum.OptimizationGoalType> optimizationGoalTypes_converter_ =
+            new com.google.protobuf.Internal.ListAdapter.Converter<
+                java.lang.Integer, com.google.ads.googleads.v5.enums.OptimizationGoalTypeEnum.OptimizationGoalType>() {
+              public com.google.ads.googleads.v5.enums.OptimizationGoalTypeEnum.OptimizationGoalType convert(java.lang.Integer from) {
+                @SuppressWarnings("deprecation")
+                com.google.ads.googleads.v5.enums.OptimizationGoalTypeEnum.OptimizationGoalType result = com.google.ads.googleads.v5.enums.OptimizationGoalTypeEnum.OptimizationGoalType.valueOf(from);
+                return result == null ? com.google.ads.googleads.v5.enums.OptimizationGoalTypeEnum.OptimizationGoalType.UNRECOGNIZED : result;
+              }
+            };
+    /**
+     * <pre>
+     * The list of optimization goal types.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v5.enums.OptimizationGoalTypeEnum.OptimizationGoalType optimization_goal_types = 1;</code>
+     * @return A list containing the optimizationGoalTypes.
+     */
+    @java.lang.Override
+    public java.util.List<com.google.ads.googleads.v5.enums.OptimizationGoalTypeEnum.OptimizationGoalType> getOptimizationGoalTypesList() {
+      return new com.google.protobuf.Internal.ListAdapter<
+          java.lang.Integer, com.google.ads.googleads.v5.enums.OptimizationGoalTypeEnum.OptimizationGoalType>(optimizationGoalTypes_, optimizationGoalTypes_converter_);
+    }
+    /**
+     * <pre>
+     * The list of optimization goal types.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v5.enums.OptimizationGoalTypeEnum.OptimizationGoalType optimization_goal_types = 1;</code>
+     * @return The count of optimizationGoalTypes.
+     */
+    @java.lang.Override
+    public int getOptimizationGoalTypesCount() {
+      return optimizationGoalTypes_.size();
+    }
+    /**
+     * <pre>
+     * The list of optimization goal types.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v5.enums.OptimizationGoalTypeEnum.OptimizationGoalType optimization_goal_types = 1;</code>
+     * @param index The index of the element to return.
+     * @return The optimizationGoalTypes at the given index.
+     */
+    @java.lang.Override
+    public com.google.ads.googleads.v5.enums.OptimizationGoalTypeEnum.OptimizationGoalType getOptimizationGoalTypes(int index) {
+      return optimizationGoalTypes_converter_.convert(optimizationGoalTypes_.get(index));
+    }
+    /**
+     * <pre>
+     * The list of optimization goal types.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v5.enums.OptimizationGoalTypeEnum.OptimizationGoalType optimization_goal_types = 1;</code>
+     * @return A list containing the enum numeric values on the wire for optimizationGoalTypes.
+     */
+    @java.lang.Override
+    public java.util.List<java.lang.Integer>
+    getOptimizationGoalTypesValueList() {
+      return optimizationGoalTypes_;
+    }
+    /**
+     * <pre>
+     * The list of optimization goal types.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v5.enums.OptimizationGoalTypeEnum.OptimizationGoalType optimization_goal_types = 1;</code>
+     * @param index The index of the value to return.
+     * @return The enum numeric value on the wire of optimizationGoalTypes at the given index.
+     */
+    @java.lang.Override
+    public int getOptimizationGoalTypesValue(int index) {
+      return optimizationGoalTypes_.get(index);
+    }
+    private int optimizationGoalTypesMemoizedSerializedSize;
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (getOptimizationGoalTypesList().size() > 0) {
+        output.writeUInt32NoTag(10);
+        output.writeUInt32NoTag(optimizationGoalTypesMemoizedSerializedSize);
+      }
+      for (int i = 0; i < optimizationGoalTypes_.size(); i++) {
+        output.writeEnumNoTag(optimizationGoalTypes_.get(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      {
+        int dataSize = 0;
+        for (int i = 0; i < optimizationGoalTypes_.size(); i++) {
+          dataSize += com.google.protobuf.CodedOutputStream
+            .computeEnumSizeNoTag(optimizationGoalTypes_.get(i));
+        }
+        size += dataSize;
+        if (!getOptimizationGoalTypesList().isEmpty()) {  size += 1;
+          size += com.google.protobuf.CodedOutputStream
+            .computeUInt32SizeNoTag(dataSize);
+        }optimizationGoalTypesMemoizedSerializedSize = dataSize;
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.google.ads.googleads.v5.resources.Campaign.OptimizationGoalSetting)) {
+        return super.equals(obj);
+      }
+      com.google.ads.googleads.v5.resources.Campaign.OptimizationGoalSetting other = (com.google.ads.googleads.v5.resources.Campaign.OptimizationGoalSetting) obj;
+
+      if (!optimizationGoalTypes_.equals(other.optimizationGoalTypes_)) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getOptimizationGoalTypesCount() > 0) {
+        hash = (37 * hash) + OPTIMIZATION_GOAL_TYPES_FIELD_NUMBER;
+        hash = (53 * hash) + optimizationGoalTypes_.hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.google.ads.googleads.v5.resources.Campaign.OptimizationGoalSetting parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.ads.googleads.v5.resources.Campaign.OptimizationGoalSetting parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.ads.googleads.v5.resources.Campaign.OptimizationGoalSetting parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.ads.googleads.v5.resources.Campaign.OptimizationGoalSetting parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.ads.googleads.v5.resources.Campaign.OptimizationGoalSetting parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.ads.googleads.v5.resources.Campaign.OptimizationGoalSetting parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.ads.googleads.v5.resources.Campaign.OptimizationGoalSetting parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.google.ads.googleads.v5.resources.Campaign.OptimizationGoalSetting parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.google.ads.googleads.v5.resources.Campaign.OptimizationGoalSetting parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.google.ads.googleads.v5.resources.Campaign.OptimizationGoalSetting parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.google.ads.googleads.v5.resources.Campaign.OptimizationGoalSetting parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.google.ads.googleads.v5.resources.Campaign.OptimizationGoalSetting parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.google.ads.googleads.v5.resources.Campaign.OptimizationGoalSetting prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Optimization goal setting for this campaign, which includes a set of
+     * optimization goal types.
+     * </pre>
+     *
+     * Protobuf type {@code google.ads.googleads.v5.resources.Campaign.OptimizationGoalSetting}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:google.ads.googleads.v5.resources.Campaign.OptimizationGoalSetting)
+        com.google.ads.googleads.v5.resources.Campaign.OptimizationGoalSettingOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.google.ads.googleads.v5.resources.CampaignProto.internal_static_google_ads_googleads_v5_resources_Campaign_OptimizationGoalSetting_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.google.ads.googleads.v5.resources.CampaignProto.internal_static_google_ads_googleads_v5_resources_Campaign_OptimizationGoalSetting_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.google.ads.googleads.v5.resources.Campaign.OptimizationGoalSetting.class, com.google.ads.googleads.v5.resources.Campaign.OptimizationGoalSetting.Builder.class);
+      }
+
+      // Construct using com.google.ads.googleads.v5.resources.Campaign.OptimizationGoalSetting.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        optimizationGoalTypes_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.google.ads.googleads.v5.resources.CampaignProto.internal_static_google_ads_googleads_v5_resources_Campaign_OptimizationGoalSetting_descriptor;
+      }
+
+      @java.lang.Override
+      public com.google.ads.googleads.v5.resources.Campaign.OptimizationGoalSetting getDefaultInstanceForType() {
+        return com.google.ads.googleads.v5.resources.Campaign.OptimizationGoalSetting.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.google.ads.googleads.v5.resources.Campaign.OptimizationGoalSetting build() {
+        com.google.ads.googleads.v5.resources.Campaign.OptimizationGoalSetting result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.google.ads.googleads.v5.resources.Campaign.OptimizationGoalSetting buildPartial() {
+        com.google.ads.googleads.v5.resources.Campaign.OptimizationGoalSetting result = new com.google.ads.googleads.v5.resources.Campaign.OptimizationGoalSetting(this);
+        int from_bitField0_ = bitField0_;
+        if (((bitField0_ & 0x00000001) != 0)) {
+          optimizationGoalTypes_ = java.util.Collections.unmodifiableList(optimizationGoalTypes_);
+          bitField0_ = (bitField0_ & ~0x00000001);
+        }
+        result.optimizationGoalTypes_ = optimizationGoalTypes_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.google.ads.googleads.v5.resources.Campaign.OptimizationGoalSetting) {
+          return mergeFrom((com.google.ads.googleads.v5.resources.Campaign.OptimizationGoalSetting)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.google.ads.googleads.v5.resources.Campaign.OptimizationGoalSetting other) {
+        if (other == com.google.ads.googleads.v5.resources.Campaign.OptimizationGoalSetting.getDefaultInstance()) return this;
+        if (!other.optimizationGoalTypes_.isEmpty()) {
+          if (optimizationGoalTypes_.isEmpty()) {
+            optimizationGoalTypes_ = other.optimizationGoalTypes_;
+            bitField0_ = (bitField0_ & ~0x00000001);
+          } else {
+            ensureOptimizationGoalTypesIsMutable();
+            optimizationGoalTypes_.addAll(other.optimizationGoalTypes_);
+          }
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.google.ads.googleads.v5.resources.Campaign.OptimizationGoalSetting parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.google.ads.googleads.v5.resources.Campaign.OptimizationGoalSetting) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<java.lang.Integer> optimizationGoalTypes_ =
+        java.util.Collections.emptyList();
+      private void ensureOptimizationGoalTypesIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          optimizationGoalTypes_ = new java.util.ArrayList<java.lang.Integer>(optimizationGoalTypes_);
+          bitField0_ |= 0x00000001;
+        }
+      }
+      /**
+       * <pre>
+       * The list of optimization goal types.
+       * </pre>
+       *
+       * <code>repeated .google.ads.googleads.v5.enums.OptimizationGoalTypeEnum.OptimizationGoalType optimization_goal_types = 1;</code>
+       * @return A list containing the optimizationGoalTypes.
+       */
+      public java.util.List<com.google.ads.googleads.v5.enums.OptimizationGoalTypeEnum.OptimizationGoalType> getOptimizationGoalTypesList() {
+        return new com.google.protobuf.Internal.ListAdapter<
+            java.lang.Integer, com.google.ads.googleads.v5.enums.OptimizationGoalTypeEnum.OptimizationGoalType>(optimizationGoalTypes_, optimizationGoalTypes_converter_);
+      }
+      /**
+       * <pre>
+       * The list of optimization goal types.
+       * </pre>
+       *
+       * <code>repeated .google.ads.googleads.v5.enums.OptimizationGoalTypeEnum.OptimizationGoalType optimization_goal_types = 1;</code>
+       * @return The count of optimizationGoalTypes.
+       */
+      public int getOptimizationGoalTypesCount() {
+        return optimizationGoalTypes_.size();
+      }
+      /**
+       * <pre>
+       * The list of optimization goal types.
+       * </pre>
+       *
+       * <code>repeated .google.ads.googleads.v5.enums.OptimizationGoalTypeEnum.OptimizationGoalType optimization_goal_types = 1;</code>
+       * @param index The index of the element to return.
+       * @return The optimizationGoalTypes at the given index.
+       */
+      public com.google.ads.googleads.v5.enums.OptimizationGoalTypeEnum.OptimizationGoalType getOptimizationGoalTypes(int index) {
+        return optimizationGoalTypes_converter_.convert(optimizationGoalTypes_.get(index));
+      }
+      /**
+       * <pre>
+       * The list of optimization goal types.
+       * </pre>
+       *
+       * <code>repeated .google.ads.googleads.v5.enums.OptimizationGoalTypeEnum.OptimizationGoalType optimization_goal_types = 1;</code>
+       * @param index The index to set the value at.
+       * @param value The optimizationGoalTypes to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOptimizationGoalTypes(
+          int index, com.google.ads.googleads.v5.enums.OptimizationGoalTypeEnum.OptimizationGoalType value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureOptimizationGoalTypesIsMutable();
+        optimizationGoalTypes_.set(index, value.getNumber());
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The list of optimization goal types.
+       * </pre>
+       *
+       * <code>repeated .google.ads.googleads.v5.enums.OptimizationGoalTypeEnum.OptimizationGoalType optimization_goal_types = 1;</code>
+       * @param value The optimizationGoalTypes to add.
+       * @return This builder for chaining.
+       */
+      public Builder addOptimizationGoalTypes(com.google.ads.googleads.v5.enums.OptimizationGoalTypeEnum.OptimizationGoalType value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureOptimizationGoalTypesIsMutable();
+        optimizationGoalTypes_.add(value.getNumber());
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The list of optimization goal types.
+       * </pre>
+       *
+       * <code>repeated .google.ads.googleads.v5.enums.OptimizationGoalTypeEnum.OptimizationGoalType optimization_goal_types = 1;</code>
+       * @param values The optimizationGoalTypes to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllOptimizationGoalTypes(
+          java.lang.Iterable<? extends com.google.ads.googleads.v5.enums.OptimizationGoalTypeEnum.OptimizationGoalType> values) {
+        ensureOptimizationGoalTypesIsMutable();
+        for (com.google.ads.googleads.v5.enums.OptimizationGoalTypeEnum.OptimizationGoalType value : values) {
+          optimizationGoalTypes_.add(value.getNumber());
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The list of optimization goal types.
+       * </pre>
+       *
+       * <code>repeated .google.ads.googleads.v5.enums.OptimizationGoalTypeEnum.OptimizationGoalType optimization_goal_types = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOptimizationGoalTypes() {
+        optimizationGoalTypes_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The list of optimization goal types.
+       * </pre>
+       *
+       * <code>repeated .google.ads.googleads.v5.enums.OptimizationGoalTypeEnum.OptimizationGoalType optimization_goal_types = 1;</code>
+       * @return A list containing the enum numeric values on the wire for optimizationGoalTypes.
+       */
+      public java.util.List<java.lang.Integer>
+      getOptimizationGoalTypesValueList() {
+        return java.util.Collections.unmodifiableList(optimizationGoalTypes_);
+      }
+      /**
+       * <pre>
+       * The list of optimization goal types.
+       * </pre>
+       *
+       * <code>repeated .google.ads.googleads.v5.enums.OptimizationGoalTypeEnum.OptimizationGoalType optimization_goal_types = 1;</code>
+       * @param index The index of the value to return.
+       * @return The enum numeric value on the wire of optimizationGoalTypes at the given index.
+       */
+      public int getOptimizationGoalTypesValue(int index) {
+        return optimizationGoalTypes_.get(index);
+      }
+      /**
+       * <pre>
+       * The list of optimization goal types.
+       * </pre>
+       *
+       * <code>repeated .google.ads.googleads.v5.enums.OptimizationGoalTypeEnum.OptimizationGoalType optimization_goal_types = 1;</code>
+       * @param index The index of the value to return.
+       * @return The enum numeric value on the wire of optimizationGoalTypes at the given index.
+       * @return This builder for chaining.
+       */
+      public Builder setOptimizationGoalTypesValue(
+          int index, int value) {
+        ensureOptimizationGoalTypesIsMutable();
+        optimizationGoalTypes_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The list of optimization goal types.
+       * </pre>
+       *
+       * <code>repeated .google.ads.googleads.v5.enums.OptimizationGoalTypeEnum.OptimizationGoalType optimization_goal_types = 1;</code>
+       * @param value The enum numeric value on the wire for optimizationGoalTypes to add.
+       * @return This builder for chaining.
+       */
+      public Builder addOptimizationGoalTypesValue(int value) {
+        ensureOptimizationGoalTypesIsMutable();
+        optimizationGoalTypes_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The list of optimization goal types.
+       * </pre>
+       *
+       * <code>repeated .google.ads.googleads.v5.enums.OptimizationGoalTypeEnum.OptimizationGoalType optimization_goal_types = 1;</code>
+       * @param values The enum numeric values on the wire for optimizationGoalTypes to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllOptimizationGoalTypesValue(
+          java.lang.Iterable<java.lang.Integer> values) {
+        ensureOptimizationGoalTypesIsMutable();
+        for (int value : values) {
+          optimizationGoalTypes_.add(value);
+        }
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:google.ads.googleads.v5.resources.Campaign.OptimizationGoalSetting)
+    }
+
+    // @@protoc_insertion_point(class_scope:google.ads.googleads.v5.resources.Campaign.OptimizationGoalSetting)
+    private static final com.google.ads.googleads.v5.resources.Campaign.OptimizationGoalSetting DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.google.ads.googleads.v5.resources.Campaign.OptimizationGoalSetting();
+    }
+
+    public static com.google.ads.googleads.v5.resources.Campaign.OptimizationGoalSetting getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<OptimizationGoalSetting>
+        PARSER = new com.google.protobuf.AbstractParser<OptimizationGoalSetting>() {
+      @java.lang.Override
+      public OptimizationGoalSetting parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new OptimizationGoalSetting(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<OptimizationGoalSetting> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<OptimizationGoalSetting> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.ads.googleads.v5.resources.Campaign.OptimizationGoalSetting getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface ShoppingSettingOrBuilder extends
       // @@protoc_insertion_point(interface_extends:google.ads.googleads.v5.resources.Campaign.ShoppingSetting)
       com.google.protobuf.MessageOrBuilder {
@@ -4609,2106 +6136,6 @@ private static final long serialVersionUID = 0L;
 
   }
 
-  public interface LocalCampaignSettingOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:google.ads.googleads.v5.resources.Campaign.LocalCampaignSetting)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <pre>
-     * The location source type for this local campaign.
-     * </pre>
-     *
-     * <code>.google.ads.googleads.v5.enums.LocationSourceTypeEnum.LocationSourceType location_source_type = 1;</code>
-     * @return The enum numeric value on the wire for locationSourceType.
-     */
-    int getLocationSourceTypeValue();
-    /**
-     * <pre>
-     * The location source type for this local campaign.
-     * </pre>
-     *
-     * <code>.google.ads.googleads.v5.enums.LocationSourceTypeEnum.LocationSourceType location_source_type = 1;</code>
-     * @return The locationSourceType.
-     */
-    com.google.ads.googleads.v5.enums.LocationSourceTypeEnum.LocationSourceType getLocationSourceType();
-  }
-  /**
-   * <pre>
-   * Campaign setting for local campaigns.
-   * </pre>
-   *
-   * Protobuf type {@code google.ads.googleads.v5.resources.Campaign.LocalCampaignSetting}
-   */
-  public static final class LocalCampaignSetting extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:google.ads.googleads.v5.resources.Campaign.LocalCampaignSetting)
-      LocalCampaignSettingOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use LocalCampaignSetting.newBuilder() to construct.
-    private LocalCampaignSetting(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private LocalCampaignSetting() {
-      locationSourceType_ = 0;
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new LocalCampaignSetting();
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private LocalCampaignSetting(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 8: {
-              int rawValue = input.readEnum();
-
-              locationSourceType_ = rawValue;
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.google.ads.googleads.v5.resources.CampaignProto.internal_static_google_ads_googleads_v5_resources_Campaign_LocalCampaignSetting_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.google.ads.googleads.v5.resources.CampaignProto.internal_static_google_ads_googleads_v5_resources_Campaign_LocalCampaignSetting_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.google.ads.googleads.v5.resources.Campaign.LocalCampaignSetting.class, com.google.ads.googleads.v5.resources.Campaign.LocalCampaignSetting.Builder.class);
-    }
-
-    public static final int LOCATION_SOURCE_TYPE_FIELD_NUMBER = 1;
-    private int locationSourceType_;
-    /**
-     * <pre>
-     * The location source type for this local campaign.
-     * </pre>
-     *
-     * <code>.google.ads.googleads.v5.enums.LocationSourceTypeEnum.LocationSourceType location_source_type = 1;</code>
-     * @return The enum numeric value on the wire for locationSourceType.
-     */
-    @java.lang.Override public int getLocationSourceTypeValue() {
-      return locationSourceType_;
-    }
-    /**
-     * <pre>
-     * The location source type for this local campaign.
-     * </pre>
-     *
-     * <code>.google.ads.googleads.v5.enums.LocationSourceTypeEnum.LocationSourceType location_source_type = 1;</code>
-     * @return The locationSourceType.
-     */
-    @java.lang.Override public com.google.ads.googleads.v5.enums.LocationSourceTypeEnum.LocationSourceType getLocationSourceType() {
-      @SuppressWarnings("deprecation")
-      com.google.ads.googleads.v5.enums.LocationSourceTypeEnum.LocationSourceType result = com.google.ads.googleads.v5.enums.LocationSourceTypeEnum.LocationSourceType.valueOf(locationSourceType_);
-      return result == null ? com.google.ads.googleads.v5.enums.LocationSourceTypeEnum.LocationSourceType.UNRECOGNIZED : result;
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (locationSourceType_ != com.google.ads.googleads.v5.enums.LocationSourceTypeEnum.LocationSourceType.UNSPECIFIED.getNumber()) {
-        output.writeEnum(1, locationSourceType_);
-      }
-      unknownFields.writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (locationSourceType_ != com.google.ads.googleads.v5.enums.LocationSourceTypeEnum.LocationSourceType.UNSPECIFIED.getNumber()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(1, locationSourceType_);
-      }
-      size += unknownFields.getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.google.ads.googleads.v5.resources.Campaign.LocalCampaignSetting)) {
-        return super.equals(obj);
-      }
-      com.google.ads.googleads.v5.resources.Campaign.LocalCampaignSetting other = (com.google.ads.googleads.v5.resources.Campaign.LocalCampaignSetting) obj;
-
-      if (locationSourceType_ != other.locationSourceType_) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + LOCATION_SOURCE_TYPE_FIELD_NUMBER;
-      hash = (53 * hash) + locationSourceType_;
-      hash = (29 * hash) + unknownFields.hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static com.google.ads.googleads.v5.resources.Campaign.LocalCampaignSetting parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.google.ads.googleads.v5.resources.Campaign.LocalCampaignSetting parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.google.ads.googleads.v5.resources.Campaign.LocalCampaignSetting parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.google.ads.googleads.v5.resources.Campaign.LocalCampaignSetting parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.google.ads.googleads.v5.resources.Campaign.LocalCampaignSetting parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.google.ads.googleads.v5.resources.Campaign.LocalCampaignSetting parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.google.ads.googleads.v5.resources.Campaign.LocalCampaignSetting parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.google.ads.googleads.v5.resources.Campaign.LocalCampaignSetting parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static com.google.ads.googleads.v5.resources.Campaign.LocalCampaignSetting parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-    public static com.google.ads.googleads.v5.resources.Campaign.LocalCampaignSetting parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static com.google.ads.googleads.v5.resources.Campaign.LocalCampaignSetting parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.google.ads.googleads.v5.resources.Campaign.LocalCampaignSetting parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(com.google.ads.googleads.v5.resources.Campaign.LocalCampaignSetting prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * <pre>
-     * Campaign setting for local campaigns.
-     * </pre>
-     *
-     * Protobuf type {@code google.ads.googleads.v5.resources.Campaign.LocalCampaignSetting}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:google.ads.googleads.v5.resources.Campaign.LocalCampaignSetting)
-        com.google.ads.googleads.v5.resources.Campaign.LocalCampaignSettingOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.google.ads.googleads.v5.resources.CampaignProto.internal_static_google_ads_googleads_v5_resources_Campaign_LocalCampaignSetting_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.google.ads.googleads.v5.resources.CampaignProto.internal_static_google_ads_googleads_v5_resources_Campaign_LocalCampaignSetting_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.google.ads.googleads.v5.resources.Campaign.LocalCampaignSetting.class, com.google.ads.googleads.v5.resources.Campaign.LocalCampaignSetting.Builder.class);
-      }
-
-      // Construct using com.google.ads.googleads.v5.resources.Campaign.LocalCampaignSetting.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        locationSourceType_ = 0;
-
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.google.ads.googleads.v5.resources.CampaignProto.internal_static_google_ads_googleads_v5_resources_Campaign_LocalCampaignSetting_descriptor;
-      }
-
-      @java.lang.Override
-      public com.google.ads.googleads.v5.resources.Campaign.LocalCampaignSetting getDefaultInstanceForType() {
-        return com.google.ads.googleads.v5.resources.Campaign.LocalCampaignSetting.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.google.ads.googleads.v5.resources.Campaign.LocalCampaignSetting build() {
-        com.google.ads.googleads.v5.resources.Campaign.LocalCampaignSetting result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.google.ads.googleads.v5.resources.Campaign.LocalCampaignSetting buildPartial() {
-        com.google.ads.googleads.v5.resources.Campaign.LocalCampaignSetting result = new com.google.ads.googleads.v5.resources.Campaign.LocalCampaignSetting(this);
-        result.locationSourceType_ = locationSourceType_;
-        onBuilt();
-        return result;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.google.ads.googleads.v5.resources.Campaign.LocalCampaignSetting) {
-          return mergeFrom((com.google.ads.googleads.v5.resources.Campaign.LocalCampaignSetting)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.google.ads.googleads.v5.resources.Campaign.LocalCampaignSetting other) {
-        if (other == com.google.ads.googleads.v5.resources.Campaign.LocalCampaignSetting.getDefaultInstance()) return this;
-        if (other.locationSourceType_ != 0) {
-          setLocationSourceTypeValue(other.getLocationSourceTypeValue());
-        }
-        this.mergeUnknownFields(other.unknownFields);
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        com.google.ads.googleads.v5.resources.Campaign.LocalCampaignSetting parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.google.ads.googleads.v5.resources.Campaign.LocalCampaignSetting) e.getUnfinishedMessage();
-          throw e.unwrapIOException();
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-
-      private int locationSourceType_ = 0;
-      /**
-       * <pre>
-       * The location source type for this local campaign.
-       * </pre>
-       *
-       * <code>.google.ads.googleads.v5.enums.LocationSourceTypeEnum.LocationSourceType location_source_type = 1;</code>
-       * @return The enum numeric value on the wire for locationSourceType.
-       */
-      @java.lang.Override public int getLocationSourceTypeValue() {
-        return locationSourceType_;
-      }
-      /**
-       * <pre>
-       * The location source type for this local campaign.
-       * </pre>
-       *
-       * <code>.google.ads.googleads.v5.enums.LocationSourceTypeEnum.LocationSourceType location_source_type = 1;</code>
-       * @param value The enum numeric value on the wire for locationSourceType to set.
-       * @return This builder for chaining.
-       */
-      public Builder setLocationSourceTypeValue(int value) {
-        
-        locationSourceType_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * The location source type for this local campaign.
-       * </pre>
-       *
-       * <code>.google.ads.googleads.v5.enums.LocationSourceTypeEnum.LocationSourceType location_source_type = 1;</code>
-       * @return The locationSourceType.
-       */
-      @java.lang.Override
-      public com.google.ads.googleads.v5.enums.LocationSourceTypeEnum.LocationSourceType getLocationSourceType() {
-        @SuppressWarnings("deprecation")
-        com.google.ads.googleads.v5.enums.LocationSourceTypeEnum.LocationSourceType result = com.google.ads.googleads.v5.enums.LocationSourceTypeEnum.LocationSourceType.valueOf(locationSourceType_);
-        return result == null ? com.google.ads.googleads.v5.enums.LocationSourceTypeEnum.LocationSourceType.UNRECOGNIZED : result;
-      }
-      /**
-       * <pre>
-       * The location source type for this local campaign.
-       * </pre>
-       *
-       * <code>.google.ads.googleads.v5.enums.LocationSourceTypeEnum.LocationSourceType location_source_type = 1;</code>
-       * @param value The locationSourceType to set.
-       * @return This builder for chaining.
-       */
-      public Builder setLocationSourceType(com.google.ads.googleads.v5.enums.LocationSourceTypeEnum.LocationSourceType value) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        
-        locationSourceType_ = value.getNumber();
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * The location source type for this local campaign.
-       * </pre>
-       *
-       * <code>.google.ads.googleads.v5.enums.LocationSourceTypeEnum.LocationSourceType location_source_type = 1;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearLocationSourceType() {
-        
-        locationSourceType_ = 0;
-        onChanged();
-        return this;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:google.ads.googleads.v5.resources.Campaign.LocalCampaignSetting)
-    }
-
-    // @@protoc_insertion_point(class_scope:google.ads.googleads.v5.resources.Campaign.LocalCampaignSetting)
-    private static final com.google.ads.googleads.v5.resources.Campaign.LocalCampaignSetting DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new com.google.ads.googleads.v5.resources.Campaign.LocalCampaignSetting();
-    }
-
-    public static com.google.ads.googleads.v5.resources.Campaign.LocalCampaignSetting getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<LocalCampaignSetting>
-        PARSER = new com.google.protobuf.AbstractParser<LocalCampaignSetting>() {
-      @java.lang.Override
-      public LocalCampaignSetting parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new LocalCampaignSetting(input, extensionRegistry);
-      }
-    };
-
-    public static com.google.protobuf.Parser<LocalCampaignSetting> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<LocalCampaignSetting> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.ads.googleads.v5.resources.Campaign.LocalCampaignSetting getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
-  public interface SelectiveOptimizationOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:google.ads.googleads.v5.resources.Campaign.SelectiveOptimization)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <pre>
-     * The selected set of conversion actions for optimizing this campaign.
-     * </pre>
-     *
-     * <code>repeated string conversion_actions = 2 [(.google.api.resource_reference) = { ... }</code>
-     * @return A list containing the conversionActions.
-     */
-    java.util.List<java.lang.String>
-        getConversionActionsList();
-    /**
-     * <pre>
-     * The selected set of conversion actions for optimizing this campaign.
-     * </pre>
-     *
-     * <code>repeated string conversion_actions = 2 [(.google.api.resource_reference) = { ... }</code>
-     * @return The count of conversionActions.
-     */
-    int getConversionActionsCount();
-    /**
-     * <pre>
-     * The selected set of conversion actions for optimizing this campaign.
-     * </pre>
-     *
-     * <code>repeated string conversion_actions = 2 [(.google.api.resource_reference) = { ... }</code>
-     * @param index The index of the element to return.
-     * @return The conversionActions at the given index.
-     */
-    java.lang.String getConversionActions(int index);
-    /**
-     * <pre>
-     * The selected set of conversion actions for optimizing this campaign.
-     * </pre>
-     *
-     * <code>repeated string conversion_actions = 2 [(.google.api.resource_reference) = { ... }</code>
-     * @param index The index of the value to return.
-     * @return The bytes of the conversionActions at the given index.
-     */
-    com.google.protobuf.ByteString
-        getConversionActionsBytes(int index);
-  }
-  /**
-   * <pre>
-   * Selective optimization setting for this campaign, which includes a set of
-   * conversion actions to optimize this campaign towards.
-   * </pre>
-   *
-   * Protobuf type {@code google.ads.googleads.v5.resources.Campaign.SelectiveOptimization}
-   */
-  public static final class SelectiveOptimization extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:google.ads.googleads.v5.resources.Campaign.SelectiveOptimization)
-      SelectiveOptimizationOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use SelectiveOptimization.newBuilder() to construct.
-    private SelectiveOptimization(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private SelectiveOptimization() {
-      conversionActions_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new SelectiveOptimization();
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private SelectiveOptimization(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 18: {
-              java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                conversionActions_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              conversionActions_.add(s);
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        if (((mutable_bitField0_ & 0x00000001) != 0)) {
-          conversionActions_ = conversionActions_.getUnmodifiableView();
-        }
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.google.ads.googleads.v5.resources.CampaignProto.internal_static_google_ads_googleads_v5_resources_Campaign_SelectiveOptimization_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.google.ads.googleads.v5.resources.CampaignProto.internal_static_google_ads_googleads_v5_resources_Campaign_SelectiveOptimization_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.google.ads.googleads.v5.resources.Campaign.SelectiveOptimization.class, com.google.ads.googleads.v5.resources.Campaign.SelectiveOptimization.Builder.class);
-    }
-
-    public static final int CONVERSION_ACTIONS_FIELD_NUMBER = 2;
-    private com.google.protobuf.LazyStringList conversionActions_;
-    /**
-     * <pre>
-     * The selected set of conversion actions for optimizing this campaign.
-     * </pre>
-     *
-     * <code>repeated string conversion_actions = 2 [(.google.api.resource_reference) = { ... }</code>
-     * @return A list containing the conversionActions.
-     */
-    public com.google.protobuf.ProtocolStringList
-        getConversionActionsList() {
-      return conversionActions_;
-    }
-    /**
-     * <pre>
-     * The selected set of conversion actions for optimizing this campaign.
-     * </pre>
-     *
-     * <code>repeated string conversion_actions = 2 [(.google.api.resource_reference) = { ... }</code>
-     * @return The count of conversionActions.
-     */
-    public int getConversionActionsCount() {
-      return conversionActions_.size();
-    }
-    /**
-     * <pre>
-     * The selected set of conversion actions for optimizing this campaign.
-     * </pre>
-     *
-     * <code>repeated string conversion_actions = 2 [(.google.api.resource_reference) = { ... }</code>
-     * @param index The index of the element to return.
-     * @return The conversionActions at the given index.
-     */
-    public java.lang.String getConversionActions(int index) {
-      return conversionActions_.get(index);
-    }
-    /**
-     * <pre>
-     * The selected set of conversion actions for optimizing this campaign.
-     * </pre>
-     *
-     * <code>repeated string conversion_actions = 2 [(.google.api.resource_reference) = { ... }</code>
-     * @param index The index of the value to return.
-     * @return The bytes of the conversionActions at the given index.
-     */
-    public com.google.protobuf.ByteString
-        getConversionActionsBytes(int index) {
-      return conversionActions_.getByteString(index);
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      for (int i = 0; i < conversionActions_.size(); i++) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, conversionActions_.getRaw(i));
-      }
-      unknownFields.writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      {
-        int dataSize = 0;
-        for (int i = 0; i < conversionActions_.size(); i++) {
-          dataSize += computeStringSizeNoTag(conversionActions_.getRaw(i));
-        }
-        size += dataSize;
-        size += 1 * getConversionActionsList().size();
-      }
-      size += unknownFields.getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.google.ads.googleads.v5.resources.Campaign.SelectiveOptimization)) {
-        return super.equals(obj);
-      }
-      com.google.ads.googleads.v5.resources.Campaign.SelectiveOptimization other = (com.google.ads.googleads.v5.resources.Campaign.SelectiveOptimization) obj;
-
-      if (!getConversionActionsList()
-          .equals(other.getConversionActionsList())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      if (getConversionActionsCount() > 0) {
-        hash = (37 * hash) + CONVERSION_ACTIONS_FIELD_NUMBER;
-        hash = (53 * hash) + getConversionActionsList().hashCode();
-      }
-      hash = (29 * hash) + unknownFields.hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static com.google.ads.googleads.v5.resources.Campaign.SelectiveOptimization parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.google.ads.googleads.v5.resources.Campaign.SelectiveOptimization parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.google.ads.googleads.v5.resources.Campaign.SelectiveOptimization parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.google.ads.googleads.v5.resources.Campaign.SelectiveOptimization parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.google.ads.googleads.v5.resources.Campaign.SelectiveOptimization parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.google.ads.googleads.v5.resources.Campaign.SelectiveOptimization parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.google.ads.googleads.v5.resources.Campaign.SelectiveOptimization parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.google.ads.googleads.v5.resources.Campaign.SelectiveOptimization parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static com.google.ads.googleads.v5.resources.Campaign.SelectiveOptimization parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-    public static com.google.ads.googleads.v5.resources.Campaign.SelectiveOptimization parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static com.google.ads.googleads.v5.resources.Campaign.SelectiveOptimization parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.google.ads.googleads.v5.resources.Campaign.SelectiveOptimization parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(com.google.ads.googleads.v5.resources.Campaign.SelectiveOptimization prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * <pre>
-     * Selective optimization setting for this campaign, which includes a set of
-     * conversion actions to optimize this campaign towards.
-     * </pre>
-     *
-     * Protobuf type {@code google.ads.googleads.v5.resources.Campaign.SelectiveOptimization}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:google.ads.googleads.v5.resources.Campaign.SelectiveOptimization)
-        com.google.ads.googleads.v5.resources.Campaign.SelectiveOptimizationOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.google.ads.googleads.v5.resources.CampaignProto.internal_static_google_ads_googleads_v5_resources_Campaign_SelectiveOptimization_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.google.ads.googleads.v5.resources.CampaignProto.internal_static_google_ads_googleads_v5_resources_Campaign_SelectiveOptimization_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.google.ads.googleads.v5.resources.Campaign.SelectiveOptimization.class, com.google.ads.googleads.v5.resources.Campaign.SelectiveOptimization.Builder.class);
-      }
-
-      // Construct using com.google.ads.googleads.v5.resources.Campaign.SelectiveOptimization.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        conversionActions_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000001);
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.google.ads.googleads.v5.resources.CampaignProto.internal_static_google_ads_googleads_v5_resources_Campaign_SelectiveOptimization_descriptor;
-      }
-
-      @java.lang.Override
-      public com.google.ads.googleads.v5.resources.Campaign.SelectiveOptimization getDefaultInstanceForType() {
-        return com.google.ads.googleads.v5.resources.Campaign.SelectiveOptimization.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.google.ads.googleads.v5.resources.Campaign.SelectiveOptimization build() {
-        com.google.ads.googleads.v5.resources.Campaign.SelectiveOptimization result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.google.ads.googleads.v5.resources.Campaign.SelectiveOptimization buildPartial() {
-        com.google.ads.googleads.v5.resources.Campaign.SelectiveOptimization result = new com.google.ads.googleads.v5.resources.Campaign.SelectiveOptimization(this);
-        int from_bitField0_ = bitField0_;
-        if (((bitField0_ & 0x00000001) != 0)) {
-          conversionActions_ = conversionActions_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000001);
-        }
-        result.conversionActions_ = conversionActions_;
-        onBuilt();
-        return result;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.google.ads.googleads.v5.resources.Campaign.SelectiveOptimization) {
-          return mergeFrom((com.google.ads.googleads.v5.resources.Campaign.SelectiveOptimization)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.google.ads.googleads.v5.resources.Campaign.SelectiveOptimization other) {
-        if (other == com.google.ads.googleads.v5.resources.Campaign.SelectiveOptimization.getDefaultInstance()) return this;
-        if (!other.conversionActions_.isEmpty()) {
-          if (conversionActions_.isEmpty()) {
-            conversionActions_ = other.conversionActions_;
-            bitField0_ = (bitField0_ & ~0x00000001);
-          } else {
-            ensureConversionActionsIsMutable();
-            conversionActions_.addAll(other.conversionActions_);
-          }
-          onChanged();
-        }
-        this.mergeUnknownFields(other.unknownFields);
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        com.google.ads.googleads.v5.resources.Campaign.SelectiveOptimization parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.google.ads.googleads.v5.resources.Campaign.SelectiveOptimization) e.getUnfinishedMessage();
-          throw e.unwrapIOException();
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-      private int bitField0_;
-
-      private com.google.protobuf.LazyStringList conversionActions_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      private void ensureConversionActionsIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
-          conversionActions_ = new com.google.protobuf.LazyStringArrayList(conversionActions_);
-          bitField0_ |= 0x00000001;
-         }
-      }
-      /**
-       * <pre>
-       * The selected set of conversion actions for optimizing this campaign.
-       * </pre>
-       *
-       * <code>repeated string conversion_actions = 2 [(.google.api.resource_reference) = { ... }</code>
-       * @return A list containing the conversionActions.
-       */
-      public com.google.protobuf.ProtocolStringList
-          getConversionActionsList() {
-        return conversionActions_.getUnmodifiableView();
-      }
-      /**
-       * <pre>
-       * The selected set of conversion actions for optimizing this campaign.
-       * </pre>
-       *
-       * <code>repeated string conversion_actions = 2 [(.google.api.resource_reference) = { ... }</code>
-       * @return The count of conversionActions.
-       */
-      public int getConversionActionsCount() {
-        return conversionActions_.size();
-      }
-      /**
-       * <pre>
-       * The selected set of conversion actions for optimizing this campaign.
-       * </pre>
-       *
-       * <code>repeated string conversion_actions = 2 [(.google.api.resource_reference) = { ... }</code>
-       * @param index The index of the element to return.
-       * @return The conversionActions at the given index.
-       */
-      public java.lang.String getConversionActions(int index) {
-        return conversionActions_.get(index);
-      }
-      /**
-       * <pre>
-       * The selected set of conversion actions for optimizing this campaign.
-       * </pre>
-       *
-       * <code>repeated string conversion_actions = 2 [(.google.api.resource_reference) = { ... }</code>
-       * @param index The index of the value to return.
-       * @return The bytes of the conversionActions at the given index.
-       */
-      public com.google.protobuf.ByteString
-          getConversionActionsBytes(int index) {
-        return conversionActions_.getByteString(index);
-      }
-      /**
-       * <pre>
-       * The selected set of conversion actions for optimizing this campaign.
-       * </pre>
-       *
-       * <code>repeated string conversion_actions = 2 [(.google.api.resource_reference) = { ... }</code>
-       * @param index The index to set the value at.
-       * @param value The conversionActions to set.
-       * @return This builder for chaining.
-       */
-      public Builder setConversionActions(
-          int index, java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureConversionActionsIsMutable();
-        conversionActions_.set(index, value);
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * The selected set of conversion actions for optimizing this campaign.
-       * </pre>
-       *
-       * <code>repeated string conversion_actions = 2 [(.google.api.resource_reference) = { ... }</code>
-       * @param value The conversionActions to add.
-       * @return This builder for chaining.
-       */
-      public Builder addConversionActions(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureConversionActionsIsMutable();
-        conversionActions_.add(value);
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * The selected set of conversion actions for optimizing this campaign.
-       * </pre>
-       *
-       * <code>repeated string conversion_actions = 2 [(.google.api.resource_reference) = { ... }</code>
-       * @param values The conversionActions to add.
-       * @return This builder for chaining.
-       */
-      public Builder addAllConversionActions(
-          java.lang.Iterable<java.lang.String> values) {
-        ensureConversionActionsIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, conversionActions_);
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * The selected set of conversion actions for optimizing this campaign.
-       * </pre>
-       *
-       * <code>repeated string conversion_actions = 2 [(.google.api.resource_reference) = { ... }</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearConversionActions() {
-        conversionActions_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * The selected set of conversion actions for optimizing this campaign.
-       * </pre>
-       *
-       * <code>repeated string conversion_actions = 2 [(.google.api.resource_reference) = { ... }</code>
-       * @param value The bytes of the conversionActions to add.
-       * @return This builder for chaining.
-       */
-      public Builder addConversionActionsBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        ensureConversionActionsIsMutable();
-        conversionActions_.add(value);
-        onChanged();
-        return this;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:google.ads.googleads.v5.resources.Campaign.SelectiveOptimization)
-    }
-
-    // @@protoc_insertion_point(class_scope:google.ads.googleads.v5.resources.Campaign.SelectiveOptimization)
-    private static final com.google.ads.googleads.v5.resources.Campaign.SelectiveOptimization DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new com.google.ads.googleads.v5.resources.Campaign.SelectiveOptimization();
-    }
-
-    public static com.google.ads.googleads.v5.resources.Campaign.SelectiveOptimization getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<SelectiveOptimization>
-        PARSER = new com.google.protobuf.AbstractParser<SelectiveOptimization>() {
-      @java.lang.Override
-      public SelectiveOptimization parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new SelectiveOptimization(input, extensionRegistry);
-      }
-    };
-
-    public static com.google.protobuf.Parser<SelectiveOptimization> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<SelectiveOptimization> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.ads.googleads.v5.resources.Campaign.SelectiveOptimization getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
-  public interface OptimizationGoalSettingOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:google.ads.googleads.v5.resources.Campaign.OptimizationGoalSetting)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <pre>
-     * The list of optimization goal types.
-     * </pre>
-     *
-     * <code>repeated .google.ads.googleads.v5.enums.OptimizationGoalTypeEnum.OptimizationGoalType optimization_goal_types = 1;</code>
-     * @return A list containing the optimizationGoalTypes.
-     */
-    java.util.List<com.google.ads.googleads.v5.enums.OptimizationGoalTypeEnum.OptimizationGoalType> getOptimizationGoalTypesList();
-    /**
-     * <pre>
-     * The list of optimization goal types.
-     * </pre>
-     *
-     * <code>repeated .google.ads.googleads.v5.enums.OptimizationGoalTypeEnum.OptimizationGoalType optimization_goal_types = 1;</code>
-     * @return The count of optimizationGoalTypes.
-     */
-    int getOptimizationGoalTypesCount();
-    /**
-     * <pre>
-     * The list of optimization goal types.
-     * </pre>
-     *
-     * <code>repeated .google.ads.googleads.v5.enums.OptimizationGoalTypeEnum.OptimizationGoalType optimization_goal_types = 1;</code>
-     * @param index The index of the element to return.
-     * @return The optimizationGoalTypes at the given index.
-     */
-    com.google.ads.googleads.v5.enums.OptimizationGoalTypeEnum.OptimizationGoalType getOptimizationGoalTypes(int index);
-    /**
-     * <pre>
-     * The list of optimization goal types.
-     * </pre>
-     *
-     * <code>repeated .google.ads.googleads.v5.enums.OptimizationGoalTypeEnum.OptimizationGoalType optimization_goal_types = 1;</code>
-     * @return A list containing the enum numeric values on the wire for optimizationGoalTypes.
-     */
-    java.util.List<java.lang.Integer>
-    getOptimizationGoalTypesValueList();
-    /**
-     * <pre>
-     * The list of optimization goal types.
-     * </pre>
-     *
-     * <code>repeated .google.ads.googleads.v5.enums.OptimizationGoalTypeEnum.OptimizationGoalType optimization_goal_types = 1;</code>
-     * @param index The index of the value to return.
-     * @return The enum numeric value on the wire of optimizationGoalTypes at the given index.
-     */
-    int getOptimizationGoalTypesValue(int index);
-  }
-  /**
-   * <pre>
-   * Optimization goal setting for this campaign, which includes a set of
-   * optimization goal types.
-   * </pre>
-   *
-   * Protobuf type {@code google.ads.googleads.v5.resources.Campaign.OptimizationGoalSetting}
-   */
-  public static final class OptimizationGoalSetting extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:google.ads.googleads.v5.resources.Campaign.OptimizationGoalSetting)
-      OptimizationGoalSettingOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use OptimizationGoalSetting.newBuilder() to construct.
-    private OptimizationGoalSetting(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private OptimizationGoalSetting() {
-      optimizationGoalTypes_ = java.util.Collections.emptyList();
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new OptimizationGoalSetting();
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private OptimizationGoalSetting(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 8: {
-              int rawValue = input.readEnum();
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                optimizationGoalTypes_ = new java.util.ArrayList<java.lang.Integer>();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              optimizationGoalTypes_.add(rawValue);
-              break;
-            }
-            case 10: {
-              int length = input.readRawVarint32();
-              int oldLimit = input.pushLimit(length);
-              while(input.getBytesUntilLimit() > 0) {
-                int rawValue = input.readEnum();
-                if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                  optimizationGoalTypes_ = new java.util.ArrayList<java.lang.Integer>();
-                  mutable_bitField0_ |= 0x00000001;
-                }
-                optimizationGoalTypes_.add(rawValue);
-              }
-              input.popLimit(oldLimit);
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        if (((mutable_bitField0_ & 0x00000001) != 0)) {
-          optimizationGoalTypes_ = java.util.Collections.unmodifiableList(optimizationGoalTypes_);
-        }
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.google.ads.googleads.v5.resources.CampaignProto.internal_static_google_ads_googleads_v5_resources_Campaign_OptimizationGoalSetting_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.google.ads.googleads.v5.resources.CampaignProto.internal_static_google_ads_googleads_v5_resources_Campaign_OptimizationGoalSetting_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.google.ads.googleads.v5.resources.Campaign.OptimizationGoalSetting.class, com.google.ads.googleads.v5.resources.Campaign.OptimizationGoalSetting.Builder.class);
-    }
-
-    public static final int OPTIMIZATION_GOAL_TYPES_FIELD_NUMBER = 1;
-    private java.util.List<java.lang.Integer> optimizationGoalTypes_;
-    private static final com.google.protobuf.Internal.ListAdapter.Converter<
-        java.lang.Integer, com.google.ads.googleads.v5.enums.OptimizationGoalTypeEnum.OptimizationGoalType> optimizationGoalTypes_converter_ =
-            new com.google.protobuf.Internal.ListAdapter.Converter<
-                java.lang.Integer, com.google.ads.googleads.v5.enums.OptimizationGoalTypeEnum.OptimizationGoalType>() {
-              public com.google.ads.googleads.v5.enums.OptimizationGoalTypeEnum.OptimizationGoalType convert(java.lang.Integer from) {
-                @SuppressWarnings("deprecation")
-                com.google.ads.googleads.v5.enums.OptimizationGoalTypeEnum.OptimizationGoalType result = com.google.ads.googleads.v5.enums.OptimizationGoalTypeEnum.OptimizationGoalType.valueOf(from);
-                return result == null ? com.google.ads.googleads.v5.enums.OptimizationGoalTypeEnum.OptimizationGoalType.UNRECOGNIZED : result;
-              }
-            };
-    /**
-     * <pre>
-     * The list of optimization goal types.
-     * </pre>
-     *
-     * <code>repeated .google.ads.googleads.v5.enums.OptimizationGoalTypeEnum.OptimizationGoalType optimization_goal_types = 1;</code>
-     * @return A list containing the optimizationGoalTypes.
-     */
-    @java.lang.Override
-    public java.util.List<com.google.ads.googleads.v5.enums.OptimizationGoalTypeEnum.OptimizationGoalType> getOptimizationGoalTypesList() {
-      return new com.google.protobuf.Internal.ListAdapter<
-          java.lang.Integer, com.google.ads.googleads.v5.enums.OptimizationGoalTypeEnum.OptimizationGoalType>(optimizationGoalTypes_, optimizationGoalTypes_converter_);
-    }
-    /**
-     * <pre>
-     * The list of optimization goal types.
-     * </pre>
-     *
-     * <code>repeated .google.ads.googleads.v5.enums.OptimizationGoalTypeEnum.OptimizationGoalType optimization_goal_types = 1;</code>
-     * @return The count of optimizationGoalTypes.
-     */
-    @java.lang.Override
-    public int getOptimizationGoalTypesCount() {
-      return optimizationGoalTypes_.size();
-    }
-    /**
-     * <pre>
-     * The list of optimization goal types.
-     * </pre>
-     *
-     * <code>repeated .google.ads.googleads.v5.enums.OptimizationGoalTypeEnum.OptimizationGoalType optimization_goal_types = 1;</code>
-     * @param index The index of the element to return.
-     * @return The optimizationGoalTypes at the given index.
-     */
-    @java.lang.Override
-    public com.google.ads.googleads.v5.enums.OptimizationGoalTypeEnum.OptimizationGoalType getOptimizationGoalTypes(int index) {
-      return optimizationGoalTypes_converter_.convert(optimizationGoalTypes_.get(index));
-    }
-    /**
-     * <pre>
-     * The list of optimization goal types.
-     * </pre>
-     *
-     * <code>repeated .google.ads.googleads.v5.enums.OptimizationGoalTypeEnum.OptimizationGoalType optimization_goal_types = 1;</code>
-     * @return A list containing the enum numeric values on the wire for optimizationGoalTypes.
-     */
-    @java.lang.Override
-    public java.util.List<java.lang.Integer>
-    getOptimizationGoalTypesValueList() {
-      return optimizationGoalTypes_;
-    }
-    /**
-     * <pre>
-     * The list of optimization goal types.
-     * </pre>
-     *
-     * <code>repeated .google.ads.googleads.v5.enums.OptimizationGoalTypeEnum.OptimizationGoalType optimization_goal_types = 1;</code>
-     * @param index The index of the value to return.
-     * @return The enum numeric value on the wire of optimizationGoalTypes at the given index.
-     */
-    @java.lang.Override
-    public int getOptimizationGoalTypesValue(int index) {
-      return optimizationGoalTypes_.get(index);
-    }
-    private int optimizationGoalTypesMemoizedSerializedSize;
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      getSerializedSize();
-      if (getOptimizationGoalTypesList().size() > 0) {
-        output.writeUInt32NoTag(10);
-        output.writeUInt32NoTag(optimizationGoalTypesMemoizedSerializedSize);
-      }
-      for (int i = 0; i < optimizationGoalTypes_.size(); i++) {
-        output.writeEnumNoTag(optimizationGoalTypes_.get(i));
-      }
-      unknownFields.writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      {
-        int dataSize = 0;
-        for (int i = 0; i < optimizationGoalTypes_.size(); i++) {
-          dataSize += com.google.protobuf.CodedOutputStream
-            .computeEnumSizeNoTag(optimizationGoalTypes_.get(i));
-        }
-        size += dataSize;
-        if (!getOptimizationGoalTypesList().isEmpty()) {  size += 1;
-          size += com.google.protobuf.CodedOutputStream
-            .computeUInt32SizeNoTag(dataSize);
-        }optimizationGoalTypesMemoizedSerializedSize = dataSize;
-      }
-      size += unknownFields.getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.google.ads.googleads.v5.resources.Campaign.OptimizationGoalSetting)) {
-        return super.equals(obj);
-      }
-      com.google.ads.googleads.v5.resources.Campaign.OptimizationGoalSetting other = (com.google.ads.googleads.v5.resources.Campaign.OptimizationGoalSetting) obj;
-
-      if (!optimizationGoalTypes_.equals(other.optimizationGoalTypes_)) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      if (getOptimizationGoalTypesCount() > 0) {
-        hash = (37 * hash) + OPTIMIZATION_GOAL_TYPES_FIELD_NUMBER;
-        hash = (53 * hash) + optimizationGoalTypes_.hashCode();
-      }
-      hash = (29 * hash) + unknownFields.hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static com.google.ads.googleads.v5.resources.Campaign.OptimizationGoalSetting parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.google.ads.googleads.v5.resources.Campaign.OptimizationGoalSetting parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.google.ads.googleads.v5.resources.Campaign.OptimizationGoalSetting parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.google.ads.googleads.v5.resources.Campaign.OptimizationGoalSetting parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.google.ads.googleads.v5.resources.Campaign.OptimizationGoalSetting parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.google.ads.googleads.v5.resources.Campaign.OptimizationGoalSetting parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.google.ads.googleads.v5.resources.Campaign.OptimizationGoalSetting parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.google.ads.googleads.v5.resources.Campaign.OptimizationGoalSetting parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static com.google.ads.googleads.v5.resources.Campaign.OptimizationGoalSetting parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-    public static com.google.ads.googleads.v5.resources.Campaign.OptimizationGoalSetting parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static com.google.ads.googleads.v5.resources.Campaign.OptimizationGoalSetting parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.google.ads.googleads.v5.resources.Campaign.OptimizationGoalSetting parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(com.google.ads.googleads.v5.resources.Campaign.OptimizationGoalSetting prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * <pre>
-     * Optimization goal setting for this campaign, which includes a set of
-     * optimization goal types.
-     * </pre>
-     *
-     * Protobuf type {@code google.ads.googleads.v5.resources.Campaign.OptimizationGoalSetting}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:google.ads.googleads.v5.resources.Campaign.OptimizationGoalSetting)
-        com.google.ads.googleads.v5.resources.Campaign.OptimizationGoalSettingOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.google.ads.googleads.v5.resources.CampaignProto.internal_static_google_ads_googleads_v5_resources_Campaign_OptimizationGoalSetting_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.google.ads.googleads.v5.resources.CampaignProto.internal_static_google_ads_googleads_v5_resources_Campaign_OptimizationGoalSetting_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.google.ads.googleads.v5.resources.Campaign.OptimizationGoalSetting.class, com.google.ads.googleads.v5.resources.Campaign.OptimizationGoalSetting.Builder.class);
-      }
-
-      // Construct using com.google.ads.googleads.v5.resources.Campaign.OptimizationGoalSetting.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        optimizationGoalTypes_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000001);
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.google.ads.googleads.v5.resources.CampaignProto.internal_static_google_ads_googleads_v5_resources_Campaign_OptimizationGoalSetting_descriptor;
-      }
-
-      @java.lang.Override
-      public com.google.ads.googleads.v5.resources.Campaign.OptimizationGoalSetting getDefaultInstanceForType() {
-        return com.google.ads.googleads.v5.resources.Campaign.OptimizationGoalSetting.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.google.ads.googleads.v5.resources.Campaign.OptimizationGoalSetting build() {
-        com.google.ads.googleads.v5.resources.Campaign.OptimizationGoalSetting result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.google.ads.googleads.v5.resources.Campaign.OptimizationGoalSetting buildPartial() {
-        com.google.ads.googleads.v5.resources.Campaign.OptimizationGoalSetting result = new com.google.ads.googleads.v5.resources.Campaign.OptimizationGoalSetting(this);
-        int from_bitField0_ = bitField0_;
-        if (((bitField0_ & 0x00000001) != 0)) {
-          optimizationGoalTypes_ = java.util.Collections.unmodifiableList(optimizationGoalTypes_);
-          bitField0_ = (bitField0_ & ~0x00000001);
-        }
-        result.optimizationGoalTypes_ = optimizationGoalTypes_;
-        onBuilt();
-        return result;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.google.ads.googleads.v5.resources.Campaign.OptimizationGoalSetting) {
-          return mergeFrom((com.google.ads.googleads.v5.resources.Campaign.OptimizationGoalSetting)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.google.ads.googleads.v5.resources.Campaign.OptimizationGoalSetting other) {
-        if (other == com.google.ads.googleads.v5.resources.Campaign.OptimizationGoalSetting.getDefaultInstance()) return this;
-        if (!other.optimizationGoalTypes_.isEmpty()) {
-          if (optimizationGoalTypes_.isEmpty()) {
-            optimizationGoalTypes_ = other.optimizationGoalTypes_;
-            bitField0_ = (bitField0_ & ~0x00000001);
-          } else {
-            ensureOptimizationGoalTypesIsMutable();
-            optimizationGoalTypes_.addAll(other.optimizationGoalTypes_);
-          }
-          onChanged();
-        }
-        this.mergeUnknownFields(other.unknownFields);
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        com.google.ads.googleads.v5.resources.Campaign.OptimizationGoalSetting parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.google.ads.googleads.v5.resources.Campaign.OptimizationGoalSetting) e.getUnfinishedMessage();
-          throw e.unwrapIOException();
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-      private int bitField0_;
-
-      private java.util.List<java.lang.Integer> optimizationGoalTypes_ =
-        java.util.Collections.emptyList();
-      private void ensureOptimizationGoalTypesIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
-          optimizationGoalTypes_ = new java.util.ArrayList<java.lang.Integer>(optimizationGoalTypes_);
-          bitField0_ |= 0x00000001;
-        }
-      }
-      /**
-       * <pre>
-       * The list of optimization goal types.
-       * </pre>
-       *
-       * <code>repeated .google.ads.googleads.v5.enums.OptimizationGoalTypeEnum.OptimizationGoalType optimization_goal_types = 1;</code>
-       * @return A list containing the optimizationGoalTypes.
-       */
-      public java.util.List<com.google.ads.googleads.v5.enums.OptimizationGoalTypeEnum.OptimizationGoalType> getOptimizationGoalTypesList() {
-        return new com.google.protobuf.Internal.ListAdapter<
-            java.lang.Integer, com.google.ads.googleads.v5.enums.OptimizationGoalTypeEnum.OptimizationGoalType>(optimizationGoalTypes_, optimizationGoalTypes_converter_);
-      }
-      /**
-       * <pre>
-       * The list of optimization goal types.
-       * </pre>
-       *
-       * <code>repeated .google.ads.googleads.v5.enums.OptimizationGoalTypeEnum.OptimizationGoalType optimization_goal_types = 1;</code>
-       * @return The count of optimizationGoalTypes.
-       */
-      public int getOptimizationGoalTypesCount() {
-        return optimizationGoalTypes_.size();
-      }
-      /**
-       * <pre>
-       * The list of optimization goal types.
-       * </pre>
-       *
-       * <code>repeated .google.ads.googleads.v5.enums.OptimizationGoalTypeEnum.OptimizationGoalType optimization_goal_types = 1;</code>
-       * @param index The index of the element to return.
-       * @return The optimizationGoalTypes at the given index.
-       */
-      public com.google.ads.googleads.v5.enums.OptimizationGoalTypeEnum.OptimizationGoalType getOptimizationGoalTypes(int index) {
-        return optimizationGoalTypes_converter_.convert(optimizationGoalTypes_.get(index));
-      }
-      /**
-       * <pre>
-       * The list of optimization goal types.
-       * </pre>
-       *
-       * <code>repeated .google.ads.googleads.v5.enums.OptimizationGoalTypeEnum.OptimizationGoalType optimization_goal_types = 1;</code>
-       * @param index The index to set the value at.
-       * @param value The optimizationGoalTypes to set.
-       * @return This builder for chaining.
-       */
-      public Builder setOptimizationGoalTypes(
-          int index, com.google.ads.googleads.v5.enums.OptimizationGoalTypeEnum.OptimizationGoalType value) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        ensureOptimizationGoalTypesIsMutable();
-        optimizationGoalTypes_.set(index, value.getNumber());
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * The list of optimization goal types.
-       * </pre>
-       *
-       * <code>repeated .google.ads.googleads.v5.enums.OptimizationGoalTypeEnum.OptimizationGoalType optimization_goal_types = 1;</code>
-       * @param value The optimizationGoalTypes to add.
-       * @return This builder for chaining.
-       */
-      public Builder addOptimizationGoalTypes(com.google.ads.googleads.v5.enums.OptimizationGoalTypeEnum.OptimizationGoalType value) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        ensureOptimizationGoalTypesIsMutable();
-        optimizationGoalTypes_.add(value.getNumber());
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * The list of optimization goal types.
-       * </pre>
-       *
-       * <code>repeated .google.ads.googleads.v5.enums.OptimizationGoalTypeEnum.OptimizationGoalType optimization_goal_types = 1;</code>
-       * @param values The optimizationGoalTypes to add.
-       * @return This builder for chaining.
-       */
-      public Builder addAllOptimizationGoalTypes(
-          java.lang.Iterable<? extends com.google.ads.googleads.v5.enums.OptimizationGoalTypeEnum.OptimizationGoalType> values) {
-        ensureOptimizationGoalTypesIsMutable();
-        for (com.google.ads.googleads.v5.enums.OptimizationGoalTypeEnum.OptimizationGoalType value : values) {
-          optimizationGoalTypes_.add(value.getNumber());
-        }
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * The list of optimization goal types.
-       * </pre>
-       *
-       * <code>repeated .google.ads.googleads.v5.enums.OptimizationGoalTypeEnum.OptimizationGoalType optimization_goal_types = 1;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearOptimizationGoalTypes() {
-        optimizationGoalTypes_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * The list of optimization goal types.
-       * </pre>
-       *
-       * <code>repeated .google.ads.googleads.v5.enums.OptimizationGoalTypeEnum.OptimizationGoalType optimization_goal_types = 1;</code>
-       * @return A list containing the enum numeric values on the wire for optimizationGoalTypes.
-       */
-      public java.util.List<java.lang.Integer>
-      getOptimizationGoalTypesValueList() {
-        return java.util.Collections.unmodifiableList(optimizationGoalTypes_);
-      }
-      /**
-       * <pre>
-       * The list of optimization goal types.
-       * </pre>
-       *
-       * <code>repeated .google.ads.googleads.v5.enums.OptimizationGoalTypeEnum.OptimizationGoalType optimization_goal_types = 1;</code>
-       * @param index The index of the value to return.
-       * @return The enum numeric value on the wire of optimizationGoalTypes at the given index.
-       */
-      public int getOptimizationGoalTypesValue(int index) {
-        return optimizationGoalTypes_.get(index);
-      }
-      /**
-       * <pre>
-       * The list of optimization goal types.
-       * </pre>
-       *
-       * <code>repeated .google.ads.googleads.v5.enums.OptimizationGoalTypeEnum.OptimizationGoalType optimization_goal_types = 1;</code>
-       * @param index The index of the value to return.
-       * @return The enum numeric value on the wire of optimizationGoalTypes at the given index.
-       * @return This builder for chaining.
-       */
-      public Builder setOptimizationGoalTypesValue(
-          int index, int value) {
-        ensureOptimizationGoalTypesIsMutable();
-        optimizationGoalTypes_.set(index, value);
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * The list of optimization goal types.
-       * </pre>
-       *
-       * <code>repeated .google.ads.googleads.v5.enums.OptimizationGoalTypeEnum.OptimizationGoalType optimization_goal_types = 1;</code>
-       * @param value The enum numeric value on the wire for optimizationGoalTypes to add.
-       * @return This builder for chaining.
-       */
-      public Builder addOptimizationGoalTypesValue(int value) {
-        ensureOptimizationGoalTypesIsMutable();
-        optimizationGoalTypes_.add(value);
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * The list of optimization goal types.
-       * </pre>
-       *
-       * <code>repeated .google.ads.googleads.v5.enums.OptimizationGoalTypeEnum.OptimizationGoalType optimization_goal_types = 1;</code>
-       * @param values The enum numeric values on the wire for optimizationGoalTypes to add.
-       * @return This builder for chaining.
-       */
-      public Builder addAllOptimizationGoalTypesValue(
-          java.lang.Iterable<java.lang.Integer> values) {
-        ensureOptimizationGoalTypesIsMutable();
-        for (int value : values) {
-          optimizationGoalTypes_.add(value);
-        }
-        onChanged();
-        return this;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:google.ads.googleads.v5.resources.Campaign.OptimizationGoalSetting)
-    }
-
-    // @@protoc_insertion_point(class_scope:google.ads.googleads.v5.resources.Campaign.OptimizationGoalSetting)
-    private static final com.google.ads.googleads.v5.resources.Campaign.OptimizationGoalSetting DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new com.google.ads.googleads.v5.resources.Campaign.OptimizationGoalSetting();
-    }
-
-    public static com.google.ads.googleads.v5.resources.Campaign.OptimizationGoalSetting getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<OptimizationGoalSetting>
-        PARSER = new com.google.protobuf.AbstractParser<OptimizationGoalSetting>() {
-      @java.lang.Override
-      public OptimizationGoalSetting parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new OptimizationGoalSetting(input, extensionRegistry);
-      }
-    };
-
-    public static com.google.protobuf.Parser<OptimizationGoalSetting> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<OptimizationGoalSetting> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.ads.googleads.v5.resources.Campaign.OptimizationGoalSetting getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
   public interface TrackingSettingOrBuilder extends
       // @@protoc_insertion_point(interface_extends:google.ads.googleads.v5.resources.Campaign.TrackingSetting)
       com.google.protobuf.MessageOrBuilder {
@@ -7363,718 +6790,6 @@ private static final long serialVersionUID = 0L;
 
     @java.lang.Override
     public com.google.ads.googleads.v5.resources.Campaign.TrackingSetting getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
-  public interface GeoTargetTypeSettingOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:google.ads.googleads.v5.resources.Campaign.GeoTargetTypeSetting)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <pre>
-     * The setting used for positive geotargeting in this particular campaign.
-     * </pre>
-     *
-     * <code>.google.ads.googleads.v5.enums.PositiveGeoTargetTypeEnum.PositiveGeoTargetType positive_geo_target_type = 1;</code>
-     * @return The enum numeric value on the wire for positiveGeoTargetType.
-     */
-    int getPositiveGeoTargetTypeValue();
-    /**
-     * <pre>
-     * The setting used for positive geotargeting in this particular campaign.
-     * </pre>
-     *
-     * <code>.google.ads.googleads.v5.enums.PositiveGeoTargetTypeEnum.PositiveGeoTargetType positive_geo_target_type = 1;</code>
-     * @return The positiveGeoTargetType.
-     */
-    com.google.ads.googleads.v5.enums.PositiveGeoTargetTypeEnum.PositiveGeoTargetType getPositiveGeoTargetType();
-
-    /**
-     * <pre>
-     * The setting used for negative geotargeting in this particular campaign.
-     * </pre>
-     *
-     * <code>.google.ads.googleads.v5.enums.NegativeGeoTargetTypeEnum.NegativeGeoTargetType negative_geo_target_type = 2;</code>
-     * @return The enum numeric value on the wire for negativeGeoTargetType.
-     */
-    int getNegativeGeoTargetTypeValue();
-    /**
-     * <pre>
-     * The setting used for negative geotargeting in this particular campaign.
-     * </pre>
-     *
-     * <code>.google.ads.googleads.v5.enums.NegativeGeoTargetTypeEnum.NegativeGeoTargetType negative_geo_target_type = 2;</code>
-     * @return The negativeGeoTargetType.
-     */
-    com.google.ads.googleads.v5.enums.NegativeGeoTargetTypeEnum.NegativeGeoTargetType getNegativeGeoTargetType();
-  }
-  /**
-   * <pre>
-   * Represents a collection of settings related to ads geotargeting.
-   * </pre>
-   *
-   * Protobuf type {@code google.ads.googleads.v5.resources.Campaign.GeoTargetTypeSetting}
-   */
-  public static final class GeoTargetTypeSetting extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:google.ads.googleads.v5.resources.Campaign.GeoTargetTypeSetting)
-      GeoTargetTypeSettingOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use GeoTargetTypeSetting.newBuilder() to construct.
-    private GeoTargetTypeSetting(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private GeoTargetTypeSetting() {
-      positiveGeoTargetType_ = 0;
-      negativeGeoTargetType_ = 0;
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new GeoTargetTypeSetting();
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private GeoTargetTypeSetting(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 8: {
-              int rawValue = input.readEnum();
-
-              positiveGeoTargetType_ = rawValue;
-              break;
-            }
-            case 16: {
-              int rawValue = input.readEnum();
-
-              negativeGeoTargetType_ = rawValue;
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.google.ads.googleads.v5.resources.CampaignProto.internal_static_google_ads_googleads_v5_resources_Campaign_GeoTargetTypeSetting_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.google.ads.googleads.v5.resources.CampaignProto.internal_static_google_ads_googleads_v5_resources_Campaign_GeoTargetTypeSetting_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.google.ads.googleads.v5.resources.Campaign.GeoTargetTypeSetting.class, com.google.ads.googleads.v5.resources.Campaign.GeoTargetTypeSetting.Builder.class);
-    }
-
-    public static final int POSITIVE_GEO_TARGET_TYPE_FIELD_NUMBER = 1;
-    private int positiveGeoTargetType_;
-    /**
-     * <pre>
-     * The setting used for positive geotargeting in this particular campaign.
-     * </pre>
-     *
-     * <code>.google.ads.googleads.v5.enums.PositiveGeoTargetTypeEnum.PositiveGeoTargetType positive_geo_target_type = 1;</code>
-     * @return The enum numeric value on the wire for positiveGeoTargetType.
-     */
-    @java.lang.Override public int getPositiveGeoTargetTypeValue() {
-      return positiveGeoTargetType_;
-    }
-    /**
-     * <pre>
-     * The setting used for positive geotargeting in this particular campaign.
-     * </pre>
-     *
-     * <code>.google.ads.googleads.v5.enums.PositiveGeoTargetTypeEnum.PositiveGeoTargetType positive_geo_target_type = 1;</code>
-     * @return The positiveGeoTargetType.
-     */
-    @java.lang.Override public com.google.ads.googleads.v5.enums.PositiveGeoTargetTypeEnum.PositiveGeoTargetType getPositiveGeoTargetType() {
-      @SuppressWarnings("deprecation")
-      com.google.ads.googleads.v5.enums.PositiveGeoTargetTypeEnum.PositiveGeoTargetType result = com.google.ads.googleads.v5.enums.PositiveGeoTargetTypeEnum.PositiveGeoTargetType.valueOf(positiveGeoTargetType_);
-      return result == null ? com.google.ads.googleads.v5.enums.PositiveGeoTargetTypeEnum.PositiveGeoTargetType.UNRECOGNIZED : result;
-    }
-
-    public static final int NEGATIVE_GEO_TARGET_TYPE_FIELD_NUMBER = 2;
-    private int negativeGeoTargetType_;
-    /**
-     * <pre>
-     * The setting used for negative geotargeting in this particular campaign.
-     * </pre>
-     *
-     * <code>.google.ads.googleads.v5.enums.NegativeGeoTargetTypeEnum.NegativeGeoTargetType negative_geo_target_type = 2;</code>
-     * @return The enum numeric value on the wire for negativeGeoTargetType.
-     */
-    @java.lang.Override public int getNegativeGeoTargetTypeValue() {
-      return negativeGeoTargetType_;
-    }
-    /**
-     * <pre>
-     * The setting used for negative geotargeting in this particular campaign.
-     * </pre>
-     *
-     * <code>.google.ads.googleads.v5.enums.NegativeGeoTargetTypeEnum.NegativeGeoTargetType negative_geo_target_type = 2;</code>
-     * @return The negativeGeoTargetType.
-     */
-    @java.lang.Override public com.google.ads.googleads.v5.enums.NegativeGeoTargetTypeEnum.NegativeGeoTargetType getNegativeGeoTargetType() {
-      @SuppressWarnings("deprecation")
-      com.google.ads.googleads.v5.enums.NegativeGeoTargetTypeEnum.NegativeGeoTargetType result = com.google.ads.googleads.v5.enums.NegativeGeoTargetTypeEnum.NegativeGeoTargetType.valueOf(negativeGeoTargetType_);
-      return result == null ? com.google.ads.googleads.v5.enums.NegativeGeoTargetTypeEnum.NegativeGeoTargetType.UNRECOGNIZED : result;
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (positiveGeoTargetType_ != com.google.ads.googleads.v5.enums.PositiveGeoTargetTypeEnum.PositiveGeoTargetType.UNSPECIFIED.getNumber()) {
-        output.writeEnum(1, positiveGeoTargetType_);
-      }
-      if (negativeGeoTargetType_ != com.google.ads.googleads.v5.enums.NegativeGeoTargetTypeEnum.NegativeGeoTargetType.UNSPECIFIED.getNumber()) {
-        output.writeEnum(2, negativeGeoTargetType_);
-      }
-      unknownFields.writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (positiveGeoTargetType_ != com.google.ads.googleads.v5.enums.PositiveGeoTargetTypeEnum.PositiveGeoTargetType.UNSPECIFIED.getNumber()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(1, positiveGeoTargetType_);
-      }
-      if (negativeGeoTargetType_ != com.google.ads.googleads.v5.enums.NegativeGeoTargetTypeEnum.NegativeGeoTargetType.UNSPECIFIED.getNumber()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(2, negativeGeoTargetType_);
-      }
-      size += unknownFields.getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.google.ads.googleads.v5.resources.Campaign.GeoTargetTypeSetting)) {
-        return super.equals(obj);
-      }
-      com.google.ads.googleads.v5.resources.Campaign.GeoTargetTypeSetting other = (com.google.ads.googleads.v5.resources.Campaign.GeoTargetTypeSetting) obj;
-
-      if (positiveGeoTargetType_ != other.positiveGeoTargetType_) return false;
-      if (negativeGeoTargetType_ != other.negativeGeoTargetType_) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + POSITIVE_GEO_TARGET_TYPE_FIELD_NUMBER;
-      hash = (53 * hash) + positiveGeoTargetType_;
-      hash = (37 * hash) + NEGATIVE_GEO_TARGET_TYPE_FIELD_NUMBER;
-      hash = (53 * hash) + negativeGeoTargetType_;
-      hash = (29 * hash) + unknownFields.hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static com.google.ads.googleads.v5.resources.Campaign.GeoTargetTypeSetting parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.google.ads.googleads.v5.resources.Campaign.GeoTargetTypeSetting parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.google.ads.googleads.v5.resources.Campaign.GeoTargetTypeSetting parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.google.ads.googleads.v5.resources.Campaign.GeoTargetTypeSetting parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.google.ads.googleads.v5.resources.Campaign.GeoTargetTypeSetting parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.google.ads.googleads.v5.resources.Campaign.GeoTargetTypeSetting parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.google.ads.googleads.v5.resources.Campaign.GeoTargetTypeSetting parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.google.ads.googleads.v5.resources.Campaign.GeoTargetTypeSetting parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static com.google.ads.googleads.v5.resources.Campaign.GeoTargetTypeSetting parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-    public static com.google.ads.googleads.v5.resources.Campaign.GeoTargetTypeSetting parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static com.google.ads.googleads.v5.resources.Campaign.GeoTargetTypeSetting parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.google.ads.googleads.v5.resources.Campaign.GeoTargetTypeSetting parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(com.google.ads.googleads.v5.resources.Campaign.GeoTargetTypeSetting prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * <pre>
-     * Represents a collection of settings related to ads geotargeting.
-     * </pre>
-     *
-     * Protobuf type {@code google.ads.googleads.v5.resources.Campaign.GeoTargetTypeSetting}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:google.ads.googleads.v5.resources.Campaign.GeoTargetTypeSetting)
-        com.google.ads.googleads.v5.resources.Campaign.GeoTargetTypeSettingOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.google.ads.googleads.v5.resources.CampaignProto.internal_static_google_ads_googleads_v5_resources_Campaign_GeoTargetTypeSetting_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.google.ads.googleads.v5.resources.CampaignProto.internal_static_google_ads_googleads_v5_resources_Campaign_GeoTargetTypeSetting_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.google.ads.googleads.v5.resources.Campaign.GeoTargetTypeSetting.class, com.google.ads.googleads.v5.resources.Campaign.GeoTargetTypeSetting.Builder.class);
-      }
-
-      // Construct using com.google.ads.googleads.v5.resources.Campaign.GeoTargetTypeSetting.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        positiveGeoTargetType_ = 0;
-
-        negativeGeoTargetType_ = 0;
-
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.google.ads.googleads.v5.resources.CampaignProto.internal_static_google_ads_googleads_v5_resources_Campaign_GeoTargetTypeSetting_descriptor;
-      }
-
-      @java.lang.Override
-      public com.google.ads.googleads.v5.resources.Campaign.GeoTargetTypeSetting getDefaultInstanceForType() {
-        return com.google.ads.googleads.v5.resources.Campaign.GeoTargetTypeSetting.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.google.ads.googleads.v5.resources.Campaign.GeoTargetTypeSetting build() {
-        com.google.ads.googleads.v5.resources.Campaign.GeoTargetTypeSetting result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.google.ads.googleads.v5.resources.Campaign.GeoTargetTypeSetting buildPartial() {
-        com.google.ads.googleads.v5.resources.Campaign.GeoTargetTypeSetting result = new com.google.ads.googleads.v5.resources.Campaign.GeoTargetTypeSetting(this);
-        result.positiveGeoTargetType_ = positiveGeoTargetType_;
-        result.negativeGeoTargetType_ = negativeGeoTargetType_;
-        onBuilt();
-        return result;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.google.ads.googleads.v5.resources.Campaign.GeoTargetTypeSetting) {
-          return mergeFrom((com.google.ads.googleads.v5.resources.Campaign.GeoTargetTypeSetting)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.google.ads.googleads.v5.resources.Campaign.GeoTargetTypeSetting other) {
-        if (other == com.google.ads.googleads.v5.resources.Campaign.GeoTargetTypeSetting.getDefaultInstance()) return this;
-        if (other.positiveGeoTargetType_ != 0) {
-          setPositiveGeoTargetTypeValue(other.getPositiveGeoTargetTypeValue());
-        }
-        if (other.negativeGeoTargetType_ != 0) {
-          setNegativeGeoTargetTypeValue(other.getNegativeGeoTargetTypeValue());
-        }
-        this.mergeUnknownFields(other.unknownFields);
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        com.google.ads.googleads.v5.resources.Campaign.GeoTargetTypeSetting parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.google.ads.googleads.v5.resources.Campaign.GeoTargetTypeSetting) e.getUnfinishedMessage();
-          throw e.unwrapIOException();
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-
-      private int positiveGeoTargetType_ = 0;
-      /**
-       * <pre>
-       * The setting used for positive geotargeting in this particular campaign.
-       * </pre>
-       *
-       * <code>.google.ads.googleads.v5.enums.PositiveGeoTargetTypeEnum.PositiveGeoTargetType positive_geo_target_type = 1;</code>
-       * @return The enum numeric value on the wire for positiveGeoTargetType.
-       */
-      @java.lang.Override public int getPositiveGeoTargetTypeValue() {
-        return positiveGeoTargetType_;
-      }
-      /**
-       * <pre>
-       * The setting used for positive geotargeting in this particular campaign.
-       * </pre>
-       *
-       * <code>.google.ads.googleads.v5.enums.PositiveGeoTargetTypeEnum.PositiveGeoTargetType positive_geo_target_type = 1;</code>
-       * @param value The enum numeric value on the wire for positiveGeoTargetType to set.
-       * @return This builder for chaining.
-       */
-      public Builder setPositiveGeoTargetTypeValue(int value) {
-        
-        positiveGeoTargetType_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * The setting used for positive geotargeting in this particular campaign.
-       * </pre>
-       *
-       * <code>.google.ads.googleads.v5.enums.PositiveGeoTargetTypeEnum.PositiveGeoTargetType positive_geo_target_type = 1;</code>
-       * @return The positiveGeoTargetType.
-       */
-      @java.lang.Override
-      public com.google.ads.googleads.v5.enums.PositiveGeoTargetTypeEnum.PositiveGeoTargetType getPositiveGeoTargetType() {
-        @SuppressWarnings("deprecation")
-        com.google.ads.googleads.v5.enums.PositiveGeoTargetTypeEnum.PositiveGeoTargetType result = com.google.ads.googleads.v5.enums.PositiveGeoTargetTypeEnum.PositiveGeoTargetType.valueOf(positiveGeoTargetType_);
-        return result == null ? com.google.ads.googleads.v5.enums.PositiveGeoTargetTypeEnum.PositiveGeoTargetType.UNRECOGNIZED : result;
-      }
-      /**
-       * <pre>
-       * The setting used for positive geotargeting in this particular campaign.
-       * </pre>
-       *
-       * <code>.google.ads.googleads.v5.enums.PositiveGeoTargetTypeEnum.PositiveGeoTargetType positive_geo_target_type = 1;</code>
-       * @param value The positiveGeoTargetType to set.
-       * @return This builder for chaining.
-       */
-      public Builder setPositiveGeoTargetType(com.google.ads.googleads.v5.enums.PositiveGeoTargetTypeEnum.PositiveGeoTargetType value) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        
-        positiveGeoTargetType_ = value.getNumber();
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * The setting used for positive geotargeting in this particular campaign.
-       * </pre>
-       *
-       * <code>.google.ads.googleads.v5.enums.PositiveGeoTargetTypeEnum.PositiveGeoTargetType positive_geo_target_type = 1;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearPositiveGeoTargetType() {
-        
-        positiveGeoTargetType_ = 0;
-        onChanged();
-        return this;
-      }
-
-      private int negativeGeoTargetType_ = 0;
-      /**
-       * <pre>
-       * The setting used for negative geotargeting in this particular campaign.
-       * </pre>
-       *
-       * <code>.google.ads.googleads.v5.enums.NegativeGeoTargetTypeEnum.NegativeGeoTargetType negative_geo_target_type = 2;</code>
-       * @return The enum numeric value on the wire for negativeGeoTargetType.
-       */
-      @java.lang.Override public int getNegativeGeoTargetTypeValue() {
-        return negativeGeoTargetType_;
-      }
-      /**
-       * <pre>
-       * The setting used for negative geotargeting in this particular campaign.
-       * </pre>
-       *
-       * <code>.google.ads.googleads.v5.enums.NegativeGeoTargetTypeEnum.NegativeGeoTargetType negative_geo_target_type = 2;</code>
-       * @param value The enum numeric value on the wire for negativeGeoTargetType to set.
-       * @return This builder for chaining.
-       */
-      public Builder setNegativeGeoTargetTypeValue(int value) {
-        
-        negativeGeoTargetType_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * The setting used for negative geotargeting in this particular campaign.
-       * </pre>
-       *
-       * <code>.google.ads.googleads.v5.enums.NegativeGeoTargetTypeEnum.NegativeGeoTargetType negative_geo_target_type = 2;</code>
-       * @return The negativeGeoTargetType.
-       */
-      @java.lang.Override
-      public com.google.ads.googleads.v5.enums.NegativeGeoTargetTypeEnum.NegativeGeoTargetType getNegativeGeoTargetType() {
-        @SuppressWarnings("deprecation")
-        com.google.ads.googleads.v5.enums.NegativeGeoTargetTypeEnum.NegativeGeoTargetType result = com.google.ads.googleads.v5.enums.NegativeGeoTargetTypeEnum.NegativeGeoTargetType.valueOf(negativeGeoTargetType_);
-        return result == null ? com.google.ads.googleads.v5.enums.NegativeGeoTargetTypeEnum.NegativeGeoTargetType.UNRECOGNIZED : result;
-      }
-      /**
-       * <pre>
-       * The setting used for negative geotargeting in this particular campaign.
-       * </pre>
-       *
-       * <code>.google.ads.googleads.v5.enums.NegativeGeoTargetTypeEnum.NegativeGeoTargetType negative_geo_target_type = 2;</code>
-       * @param value The negativeGeoTargetType to set.
-       * @return This builder for chaining.
-       */
-      public Builder setNegativeGeoTargetType(com.google.ads.googleads.v5.enums.NegativeGeoTargetTypeEnum.NegativeGeoTargetType value) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        
-        negativeGeoTargetType_ = value.getNumber();
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * The setting used for negative geotargeting in this particular campaign.
-       * </pre>
-       *
-       * <code>.google.ads.googleads.v5.enums.NegativeGeoTargetTypeEnum.NegativeGeoTargetType negative_geo_target_type = 2;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearNegativeGeoTargetType() {
-        
-        negativeGeoTargetType_ = 0;
-        onChanged();
-        return this;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:google.ads.googleads.v5.resources.Campaign.GeoTargetTypeSetting)
-    }
-
-    // @@protoc_insertion_point(class_scope:google.ads.googleads.v5.resources.Campaign.GeoTargetTypeSetting)
-    private static final com.google.ads.googleads.v5.resources.Campaign.GeoTargetTypeSetting DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new com.google.ads.googleads.v5.resources.Campaign.GeoTargetTypeSetting();
-    }
-
-    public static com.google.ads.googleads.v5.resources.Campaign.GeoTargetTypeSetting getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<GeoTargetTypeSetting>
-        PARSER = new com.google.protobuf.AbstractParser<GeoTargetTypeSetting>() {
-      @java.lang.Override
-      public GeoTargetTypeSetting parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new GeoTargetTypeSetting(input, extensionRegistry);
-      }
-    };
-
-    public static com.google.protobuf.Parser<GeoTargetTypeSetting> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<GeoTargetTypeSetting> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.ads.googleads.v5.resources.Campaign.GeoTargetTypeSetting getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -9034,6 +7749,575 @@ private static final long serialVersionUID = 0L;
 
   }
 
+  public interface LocalCampaignSettingOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:google.ads.googleads.v5.resources.Campaign.LocalCampaignSetting)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * The location source type for this local campaign.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v5.enums.LocationSourceTypeEnum.LocationSourceType location_source_type = 1;</code>
+     * @return The enum numeric value on the wire for locationSourceType.
+     */
+    int getLocationSourceTypeValue();
+    /**
+     * <pre>
+     * The location source type for this local campaign.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v5.enums.LocationSourceTypeEnum.LocationSourceType location_source_type = 1;</code>
+     * @return The locationSourceType.
+     */
+    com.google.ads.googleads.v5.enums.LocationSourceTypeEnum.LocationSourceType getLocationSourceType();
+  }
+  /**
+   * <pre>
+   * Campaign setting for local campaigns.
+   * </pre>
+   *
+   * Protobuf type {@code google.ads.googleads.v5.resources.Campaign.LocalCampaignSetting}
+   */
+  public static final class LocalCampaignSetting extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:google.ads.googleads.v5.resources.Campaign.LocalCampaignSetting)
+      LocalCampaignSettingOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use LocalCampaignSetting.newBuilder() to construct.
+    private LocalCampaignSetting(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private LocalCampaignSetting() {
+      locationSourceType_ = 0;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new LocalCampaignSetting();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private LocalCampaignSetting(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+              int rawValue = input.readEnum();
+
+              locationSourceType_ = rawValue;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.google.ads.googleads.v5.resources.CampaignProto.internal_static_google_ads_googleads_v5_resources_Campaign_LocalCampaignSetting_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.google.ads.googleads.v5.resources.CampaignProto.internal_static_google_ads_googleads_v5_resources_Campaign_LocalCampaignSetting_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.google.ads.googleads.v5.resources.Campaign.LocalCampaignSetting.class, com.google.ads.googleads.v5.resources.Campaign.LocalCampaignSetting.Builder.class);
+    }
+
+    public static final int LOCATION_SOURCE_TYPE_FIELD_NUMBER = 1;
+    private int locationSourceType_;
+    /**
+     * <pre>
+     * The location source type for this local campaign.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v5.enums.LocationSourceTypeEnum.LocationSourceType location_source_type = 1;</code>
+     * @return The enum numeric value on the wire for locationSourceType.
+     */
+    @java.lang.Override public int getLocationSourceTypeValue() {
+      return locationSourceType_;
+    }
+    /**
+     * <pre>
+     * The location source type for this local campaign.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v5.enums.LocationSourceTypeEnum.LocationSourceType location_source_type = 1;</code>
+     * @return The locationSourceType.
+     */
+    @java.lang.Override public com.google.ads.googleads.v5.enums.LocationSourceTypeEnum.LocationSourceType getLocationSourceType() {
+      @SuppressWarnings("deprecation")
+      com.google.ads.googleads.v5.enums.LocationSourceTypeEnum.LocationSourceType result = com.google.ads.googleads.v5.enums.LocationSourceTypeEnum.LocationSourceType.valueOf(locationSourceType_);
+      return result == null ? com.google.ads.googleads.v5.enums.LocationSourceTypeEnum.LocationSourceType.UNRECOGNIZED : result;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (locationSourceType_ != com.google.ads.googleads.v5.enums.LocationSourceTypeEnum.LocationSourceType.UNSPECIFIED.getNumber()) {
+        output.writeEnum(1, locationSourceType_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (locationSourceType_ != com.google.ads.googleads.v5.enums.LocationSourceTypeEnum.LocationSourceType.UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(1, locationSourceType_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.google.ads.googleads.v5.resources.Campaign.LocalCampaignSetting)) {
+        return super.equals(obj);
+      }
+      com.google.ads.googleads.v5.resources.Campaign.LocalCampaignSetting other = (com.google.ads.googleads.v5.resources.Campaign.LocalCampaignSetting) obj;
+
+      if (locationSourceType_ != other.locationSourceType_) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + LOCATION_SOURCE_TYPE_FIELD_NUMBER;
+      hash = (53 * hash) + locationSourceType_;
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.google.ads.googleads.v5.resources.Campaign.LocalCampaignSetting parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.ads.googleads.v5.resources.Campaign.LocalCampaignSetting parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.ads.googleads.v5.resources.Campaign.LocalCampaignSetting parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.ads.googleads.v5.resources.Campaign.LocalCampaignSetting parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.ads.googleads.v5.resources.Campaign.LocalCampaignSetting parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.ads.googleads.v5.resources.Campaign.LocalCampaignSetting parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.ads.googleads.v5.resources.Campaign.LocalCampaignSetting parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.google.ads.googleads.v5.resources.Campaign.LocalCampaignSetting parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.google.ads.googleads.v5.resources.Campaign.LocalCampaignSetting parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.google.ads.googleads.v5.resources.Campaign.LocalCampaignSetting parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.google.ads.googleads.v5.resources.Campaign.LocalCampaignSetting parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.google.ads.googleads.v5.resources.Campaign.LocalCampaignSetting parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.google.ads.googleads.v5.resources.Campaign.LocalCampaignSetting prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Campaign setting for local campaigns.
+     * </pre>
+     *
+     * Protobuf type {@code google.ads.googleads.v5.resources.Campaign.LocalCampaignSetting}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:google.ads.googleads.v5.resources.Campaign.LocalCampaignSetting)
+        com.google.ads.googleads.v5.resources.Campaign.LocalCampaignSettingOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.google.ads.googleads.v5.resources.CampaignProto.internal_static_google_ads_googleads_v5_resources_Campaign_LocalCampaignSetting_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.google.ads.googleads.v5.resources.CampaignProto.internal_static_google_ads_googleads_v5_resources_Campaign_LocalCampaignSetting_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.google.ads.googleads.v5.resources.Campaign.LocalCampaignSetting.class, com.google.ads.googleads.v5.resources.Campaign.LocalCampaignSetting.Builder.class);
+      }
+
+      // Construct using com.google.ads.googleads.v5.resources.Campaign.LocalCampaignSetting.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        locationSourceType_ = 0;
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.google.ads.googleads.v5.resources.CampaignProto.internal_static_google_ads_googleads_v5_resources_Campaign_LocalCampaignSetting_descriptor;
+      }
+
+      @java.lang.Override
+      public com.google.ads.googleads.v5.resources.Campaign.LocalCampaignSetting getDefaultInstanceForType() {
+        return com.google.ads.googleads.v5.resources.Campaign.LocalCampaignSetting.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.google.ads.googleads.v5.resources.Campaign.LocalCampaignSetting build() {
+        com.google.ads.googleads.v5.resources.Campaign.LocalCampaignSetting result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.google.ads.googleads.v5.resources.Campaign.LocalCampaignSetting buildPartial() {
+        com.google.ads.googleads.v5.resources.Campaign.LocalCampaignSetting result = new com.google.ads.googleads.v5.resources.Campaign.LocalCampaignSetting(this);
+        result.locationSourceType_ = locationSourceType_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.google.ads.googleads.v5.resources.Campaign.LocalCampaignSetting) {
+          return mergeFrom((com.google.ads.googleads.v5.resources.Campaign.LocalCampaignSetting)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.google.ads.googleads.v5.resources.Campaign.LocalCampaignSetting other) {
+        if (other == com.google.ads.googleads.v5.resources.Campaign.LocalCampaignSetting.getDefaultInstance()) return this;
+        if (other.locationSourceType_ != 0) {
+          setLocationSourceTypeValue(other.getLocationSourceTypeValue());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.google.ads.googleads.v5.resources.Campaign.LocalCampaignSetting parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.google.ads.googleads.v5.resources.Campaign.LocalCampaignSetting) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private int locationSourceType_ = 0;
+      /**
+       * <pre>
+       * The location source type for this local campaign.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v5.enums.LocationSourceTypeEnum.LocationSourceType location_source_type = 1;</code>
+       * @return The enum numeric value on the wire for locationSourceType.
+       */
+      @java.lang.Override public int getLocationSourceTypeValue() {
+        return locationSourceType_;
+      }
+      /**
+       * <pre>
+       * The location source type for this local campaign.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v5.enums.LocationSourceTypeEnum.LocationSourceType location_source_type = 1;</code>
+       * @param value The enum numeric value on the wire for locationSourceType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLocationSourceTypeValue(int value) {
+        
+        locationSourceType_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The location source type for this local campaign.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v5.enums.LocationSourceTypeEnum.LocationSourceType location_source_type = 1;</code>
+       * @return The locationSourceType.
+       */
+      @java.lang.Override
+      public com.google.ads.googleads.v5.enums.LocationSourceTypeEnum.LocationSourceType getLocationSourceType() {
+        @SuppressWarnings("deprecation")
+        com.google.ads.googleads.v5.enums.LocationSourceTypeEnum.LocationSourceType result = com.google.ads.googleads.v5.enums.LocationSourceTypeEnum.LocationSourceType.valueOf(locationSourceType_);
+        return result == null ? com.google.ads.googleads.v5.enums.LocationSourceTypeEnum.LocationSourceType.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * The location source type for this local campaign.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v5.enums.LocationSourceTypeEnum.LocationSourceType location_source_type = 1;</code>
+       * @param value The locationSourceType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLocationSourceType(com.google.ads.googleads.v5.enums.LocationSourceTypeEnum.LocationSourceType value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        locationSourceType_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The location source type for this local campaign.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v5.enums.LocationSourceTypeEnum.LocationSourceType location_source_type = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearLocationSourceType() {
+        
+        locationSourceType_ = 0;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:google.ads.googleads.v5.resources.Campaign.LocalCampaignSetting)
+    }
+
+    // @@protoc_insertion_point(class_scope:google.ads.googleads.v5.resources.Campaign.LocalCampaignSetting)
+    private static final com.google.ads.googleads.v5.resources.Campaign.LocalCampaignSetting DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.google.ads.googleads.v5.resources.Campaign.LocalCampaignSetting();
+    }
+
+    public static com.google.ads.googleads.v5.resources.Campaign.LocalCampaignSetting getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<LocalCampaignSetting>
+        PARSER = new com.google.protobuf.AbstractParser<LocalCampaignSetting>() {
+      @java.lang.Override
+      public LocalCampaignSetting parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new LocalCampaignSetting(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<LocalCampaignSetting> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<LocalCampaignSetting> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.ads.googleads.v5.resources.Campaign.LocalCampaignSetting getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface VanityPharmaOrBuilder extends
       // @@protoc_insertion_point(interface_extends:google.ads.googleads.v5.resources.Campaign.VanityPharma)
       com.google.protobuf.MessageOrBuilder {
@@ -9750,6 +9034,722 @@ private static final long serialVersionUID = 0L;
 
     @java.lang.Override
     public com.google.ads.googleads.v5.resources.Campaign.VanityPharma getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface SelectiveOptimizationOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:google.ads.googleads.v5.resources.Campaign.SelectiveOptimization)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * The selected set of conversion actions for optimizing this campaign.
+     * </pre>
+     *
+     * <code>repeated string conversion_actions = 2 [(.google.api.resource_reference) = { ... }</code>
+     * @return A list containing the conversionActions.
+     */
+    java.util.List<java.lang.String>
+        getConversionActionsList();
+    /**
+     * <pre>
+     * The selected set of conversion actions for optimizing this campaign.
+     * </pre>
+     *
+     * <code>repeated string conversion_actions = 2 [(.google.api.resource_reference) = { ... }</code>
+     * @return The count of conversionActions.
+     */
+    int getConversionActionsCount();
+    /**
+     * <pre>
+     * The selected set of conversion actions for optimizing this campaign.
+     * </pre>
+     *
+     * <code>repeated string conversion_actions = 2 [(.google.api.resource_reference) = { ... }</code>
+     * @param index The index of the element to return.
+     * @return The conversionActions at the given index.
+     */
+    java.lang.String getConversionActions(int index);
+    /**
+     * <pre>
+     * The selected set of conversion actions for optimizing this campaign.
+     * </pre>
+     *
+     * <code>repeated string conversion_actions = 2 [(.google.api.resource_reference) = { ... }</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the conversionActions at the given index.
+     */
+    com.google.protobuf.ByteString
+        getConversionActionsBytes(int index);
+  }
+  /**
+   * <pre>
+   * Selective optimization setting for this campaign, which includes a set of
+   * conversion actions to optimize this campaign towards.
+   * </pre>
+   *
+   * Protobuf type {@code google.ads.googleads.v5.resources.Campaign.SelectiveOptimization}
+   */
+  public static final class SelectiveOptimization extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:google.ads.googleads.v5.resources.Campaign.SelectiveOptimization)
+      SelectiveOptimizationOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use SelectiveOptimization.newBuilder() to construct.
+    private SelectiveOptimization(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private SelectiveOptimization() {
+      conversionActions_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new SelectiveOptimization();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private SelectiveOptimization(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                conversionActions_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              conversionActions_.add(s);
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          conversionActions_ = conversionActions_.getUnmodifiableView();
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.google.ads.googleads.v5.resources.CampaignProto.internal_static_google_ads_googleads_v5_resources_Campaign_SelectiveOptimization_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.google.ads.googleads.v5.resources.CampaignProto.internal_static_google_ads_googleads_v5_resources_Campaign_SelectiveOptimization_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.google.ads.googleads.v5.resources.Campaign.SelectiveOptimization.class, com.google.ads.googleads.v5.resources.Campaign.SelectiveOptimization.Builder.class);
+    }
+
+    public static final int CONVERSION_ACTIONS_FIELD_NUMBER = 2;
+    private com.google.protobuf.LazyStringList conversionActions_;
+    /**
+     * <pre>
+     * The selected set of conversion actions for optimizing this campaign.
+     * </pre>
+     *
+     * <code>repeated string conversion_actions = 2 [(.google.api.resource_reference) = { ... }</code>
+     * @return A list containing the conversionActions.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getConversionActionsList() {
+      return conversionActions_;
+    }
+    /**
+     * <pre>
+     * The selected set of conversion actions for optimizing this campaign.
+     * </pre>
+     *
+     * <code>repeated string conversion_actions = 2 [(.google.api.resource_reference) = { ... }</code>
+     * @return The count of conversionActions.
+     */
+    public int getConversionActionsCount() {
+      return conversionActions_.size();
+    }
+    /**
+     * <pre>
+     * The selected set of conversion actions for optimizing this campaign.
+     * </pre>
+     *
+     * <code>repeated string conversion_actions = 2 [(.google.api.resource_reference) = { ... }</code>
+     * @param index The index of the element to return.
+     * @return The conversionActions at the given index.
+     */
+    public java.lang.String getConversionActions(int index) {
+      return conversionActions_.get(index);
+    }
+    /**
+     * <pre>
+     * The selected set of conversion actions for optimizing this campaign.
+     * </pre>
+     *
+     * <code>repeated string conversion_actions = 2 [(.google.api.resource_reference) = { ... }</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the conversionActions at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getConversionActionsBytes(int index) {
+      return conversionActions_.getByteString(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < conversionActions_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, conversionActions_.getRaw(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      {
+        int dataSize = 0;
+        for (int i = 0; i < conversionActions_.size(); i++) {
+          dataSize += computeStringSizeNoTag(conversionActions_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getConversionActionsList().size();
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.google.ads.googleads.v5.resources.Campaign.SelectiveOptimization)) {
+        return super.equals(obj);
+      }
+      com.google.ads.googleads.v5.resources.Campaign.SelectiveOptimization other = (com.google.ads.googleads.v5.resources.Campaign.SelectiveOptimization) obj;
+
+      if (!getConversionActionsList()
+          .equals(other.getConversionActionsList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getConversionActionsCount() > 0) {
+        hash = (37 * hash) + CONVERSION_ACTIONS_FIELD_NUMBER;
+        hash = (53 * hash) + getConversionActionsList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.google.ads.googleads.v5.resources.Campaign.SelectiveOptimization parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.ads.googleads.v5.resources.Campaign.SelectiveOptimization parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.ads.googleads.v5.resources.Campaign.SelectiveOptimization parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.ads.googleads.v5.resources.Campaign.SelectiveOptimization parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.ads.googleads.v5.resources.Campaign.SelectiveOptimization parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.ads.googleads.v5.resources.Campaign.SelectiveOptimization parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.ads.googleads.v5.resources.Campaign.SelectiveOptimization parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.google.ads.googleads.v5.resources.Campaign.SelectiveOptimization parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.google.ads.googleads.v5.resources.Campaign.SelectiveOptimization parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.google.ads.googleads.v5.resources.Campaign.SelectiveOptimization parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.google.ads.googleads.v5.resources.Campaign.SelectiveOptimization parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.google.ads.googleads.v5.resources.Campaign.SelectiveOptimization parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.google.ads.googleads.v5.resources.Campaign.SelectiveOptimization prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Selective optimization setting for this campaign, which includes a set of
+     * conversion actions to optimize this campaign towards.
+     * </pre>
+     *
+     * Protobuf type {@code google.ads.googleads.v5.resources.Campaign.SelectiveOptimization}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:google.ads.googleads.v5.resources.Campaign.SelectiveOptimization)
+        com.google.ads.googleads.v5.resources.Campaign.SelectiveOptimizationOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.google.ads.googleads.v5.resources.CampaignProto.internal_static_google_ads_googleads_v5_resources_Campaign_SelectiveOptimization_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.google.ads.googleads.v5.resources.CampaignProto.internal_static_google_ads_googleads_v5_resources_Campaign_SelectiveOptimization_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.google.ads.googleads.v5.resources.Campaign.SelectiveOptimization.class, com.google.ads.googleads.v5.resources.Campaign.SelectiveOptimization.Builder.class);
+      }
+
+      // Construct using com.google.ads.googleads.v5.resources.Campaign.SelectiveOptimization.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        conversionActions_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.google.ads.googleads.v5.resources.CampaignProto.internal_static_google_ads_googleads_v5_resources_Campaign_SelectiveOptimization_descriptor;
+      }
+
+      @java.lang.Override
+      public com.google.ads.googleads.v5.resources.Campaign.SelectiveOptimization getDefaultInstanceForType() {
+        return com.google.ads.googleads.v5.resources.Campaign.SelectiveOptimization.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.google.ads.googleads.v5.resources.Campaign.SelectiveOptimization build() {
+        com.google.ads.googleads.v5.resources.Campaign.SelectiveOptimization result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.google.ads.googleads.v5.resources.Campaign.SelectiveOptimization buildPartial() {
+        com.google.ads.googleads.v5.resources.Campaign.SelectiveOptimization result = new com.google.ads.googleads.v5.resources.Campaign.SelectiveOptimization(this);
+        int from_bitField0_ = bitField0_;
+        if (((bitField0_ & 0x00000001) != 0)) {
+          conversionActions_ = conversionActions_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        }
+        result.conversionActions_ = conversionActions_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.google.ads.googleads.v5.resources.Campaign.SelectiveOptimization) {
+          return mergeFrom((com.google.ads.googleads.v5.resources.Campaign.SelectiveOptimization)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.google.ads.googleads.v5.resources.Campaign.SelectiveOptimization other) {
+        if (other == com.google.ads.googleads.v5.resources.Campaign.SelectiveOptimization.getDefaultInstance()) return this;
+        if (!other.conversionActions_.isEmpty()) {
+          if (conversionActions_.isEmpty()) {
+            conversionActions_ = other.conversionActions_;
+            bitField0_ = (bitField0_ & ~0x00000001);
+          } else {
+            ensureConversionActionsIsMutable();
+            conversionActions_.addAll(other.conversionActions_);
+          }
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.google.ads.googleads.v5.resources.Campaign.SelectiveOptimization parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.google.ads.googleads.v5.resources.Campaign.SelectiveOptimization) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.LazyStringList conversionActions_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureConversionActionsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          conversionActions_ = new com.google.protobuf.LazyStringArrayList(conversionActions_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+      /**
+       * <pre>
+       * The selected set of conversion actions for optimizing this campaign.
+       * </pre>
+       *
+       * <code>repeated string conversion_actions = 2 [(.google.api.resource_reference) = { ... }</code>
+       * @return A list containing the conversionActions.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getConversionActionsList() {
+        return conversionActions_.getUnmodifiableView();
+      }
+      /**
+       * <pre>
+       * The selected set of conversion actions for optimizing this campaign.
+       * </pre>
+       *
+       * <code>repeated string conversion_actions = 2 [(.google.api.resource_reference) = { ... }</code>
+       * @return The count of conversionActions.
+       */
+      public int getConversionActionsCount() {
+        return conversionActions_.size();
+      }
+      /**
+       * <pre>
+       * The selected set of conversion actions for optimizing this campaign.
+       * </pre>
+       *
+       * <code>repeated string conversion_actions = 2 [(.google.api.resource_reference) = { ... }</code>
+       * @param index The index of the element to return.
+       * @return The conversionActions at the given index.
+       */
+      public java.lang.String getConversionActions(int index) {
+        return conversionActions_.get(index);
+      }
+      /**
+       * <pre>
+       * The selected set of conversion actions for optimizing this campaign.
+       * </pre>
+       *
+       * <code>repeated string conversion_actions = 2 [(.google.api.resource_reference) = { ... }</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the conversionActions at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getConversionActionsBytes(int index) {
+        return conversionActions_.getByteString(index);
+      }
+      /**
+       * <pre>
+       * The selected set of conversion actions for optimizing this campaign.
+       * </pre>
+       *
+       * <code>repeated string conversion_actions = 2 [(.google.api.resource_reference) = { ... }</code>
+       * @param index The index to set the value at.
+       * @param value The conversionActions to set.
+       * @return This builder for chaining.
+       */
+      public Builder setConversionActions(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureConversionActionsIsMutable();
+        conversionActions_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The selected set of conversion actions for optimizing this campaign.
+       * </pre>
+       *
+       * <code>repeated string conversion_actions = 2 [(.google.api.resource_reference) = { ... }</code>
+       * @param value The conversionActions to add.
+       * @return This builder for chaining.
+       */
+      public Builder addConversionActions(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureConversionActionsIsMutable();
+        conversionActions_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The selected set of conversion actions for optimizing this campaign.
+       * </pre>
+       *
+       * <code>repeated string conversion_actions = 2 [(.google.api.resource_reference) = { ... }</code>
+       * @param values The conversionActions to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllConversionActions(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureConversionActionsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, conversionActions_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The selected set of conversion actions for optimizing this campaign.
+       * </pre>
+       *
+       * <code>repeated string conversion_actions = 2 [(.google.api.resource_reference) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearConversionActions() {
+        conversionActions_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The selected set of conversion actions for optimizing this campaign.
+       * </pre>
+       *
+       * <code>repeated string conversion_actions = 2 [(.google.api.resource_reference) = { ... }</code>
+       * @param value The bytes of the conversionActions to add.
+       * @return This builder for chaining.
+       */
+      public Builder addConversionActionsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensureConversionActionsIsMutable();
+        conversionActions_.add(value);
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:google.ads.googleads.v5.resources.Campaign.SelectiveOptimization)
+    }
+
+    // @@protoc_insertion_point(class_scope:google.ads.googleads.v5.resources.Campaign.SelectiveOptimization)
+    private static final com.google.ads.googleads.v5.resources.Campaign.SelectiveOptimization DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.google.ads.googleads.v5.resources.Campaign.SelectiveOptimization();
+    }
+
+    public static com.google.ads.googleads.v5.resources.Campaign.SelectiveOptimization getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<SelectiveOptimization>
+        PARSER = new com.google.protobuf.AbstractParser<SelectiveOptimization>() {
+      @java.lang.Override
+      public SelectiveOptimization parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new SelectiveOptimization(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<SelectiveOptimization> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<SelectiveOptimization> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.ads.googleads.v5.resources.Campaign.SelectiveOptimization getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -10827,7 +10827,6 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * The date when campaign started.
-   * This field must not be used in WHERE clauses.
    * </pre>
    *
    * <code>string start_date = 63;</code>
@@ -10840,7 +10839,6 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * The date when campaign started.
-   * This field must not be used in WHERE clauses.
    * </pre>
    *
    * <code>string start_date = 63;</code>
@@ -10862,7 +10860,6 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * The date when campaign started.
-   * This field must not be used in WHERE clauses.
    * </pre>
    *
    * <code>string start_date = 63;</code>
@@ -10888,7 +10885,6 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * The date when campaign ended.
-   * This field must not be used in WHERE clauses.
    * </pre>
    *
    * <code>string end_date = 64;</code>
@@ -10901,7 +10897,6 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * The date when campaign ended.
-   * This field must not be used in WHERE clauses.
    * </pre>
    *
    * <code>string end_date = 64;</code>
@@ -10923,7 +10918,6 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * The date when campaign ended.
-   * This field must not be used in WHERE clauses.
    * </pre>
    *
    * <code>string end_date = 64;</code>
@@ -16606,7 +16600,6 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The date when campaign started.
-     * This field must not be used in WHERE clauses.
      * </pre>
      *
      * <code>string start_date = 63;</code>
@@ -16618,7 +16611,6 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The date when campaign started.
-     * This field must not be used in WHERE clauses.
      * </pre>
      *
      * <code>string start_date = 63;</code>
@@ -16639,7 +16631,6 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The date when campaign started.
-     * This field must not be used in WHERE clauses.
      * </pre>
      *
      * <code>string start_date = 63;</code>
@@ -16661,7 +16652,6 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The date when campaign started.
-     * This field must not be used in WHERE clauses.
      * </pre>
      *
      * <code>string start_date = 63;</code>
@@ -16681,7 +16671,6 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The date when campaign started.
-     * This field must not be used in WHERE clauses.
      * </pre>
      *
      * <code>string start_date = 63;</code>
@@ -16696,7 +16685,6 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The date when campaign started.
-     * This field must not be used in WHERE clauses.
      * </pre>
      *
      * <code>string start_date = 63;</code>
@@ -16719,7 +16707,6 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The date when campaign ended.
-     * This field must not be used in WHERE clauses.
      * </pre>
      *
      * <code>string end_date = 64;</code>
@@ -16731,7 +16718,6 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The date when campaign ended.
-     * This field must not be used in WHERE clauses.
      * </pre>
      *
      * <code>string end_date = 64;</code>
@@ -16752,7 +16738,6 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The date when campaign ended.
-     * This field must not be used in WHERE clauses.
      * </pre>
      *
      * <code>string end_date = 64;</code>
@@ -16774,7 +16759,6 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The date when campaign ended.
-     * This field must not be used in WHERE clauses.
      * </pre>
      *
      * <code>string end_date = 64;</code>
@@ -16794,7 +16778,6 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The date when campaign ended.
-     * This field must not be used in WHERE clauses.
      * </pre>
      *
      * <code>string end_date = 64;</code>
@@ -16809,7 +16792,6 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The date when campaign ended.
-     * This field must not be used in WHERE clauses.
      * </pre>
      *
      * <code>string end_date = 64;</code>

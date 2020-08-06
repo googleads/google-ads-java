@@ -188,6 +188,36 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
+     * Output only. The time when this batch job started running.
+     * Formatted as yyyy-mm-dd hh:mm:ss. Example: "2018-03-05 09:15:30"
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue start_date_time = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the startDateTime field is set.
+     */
+    boolean hasStartDateTime();
+    /**
+     * <pre>
+     * Output only. The time when this batch job started running.
+     * Formatted as yyyy-mm-dd hh:mm:ss. Example: "2018-03-05 09:15:30"
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue start_date_time = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The startDateTime.
+     */
+    com.google.protobuf.StringValue getStartDateTime();
+    /**
+     * <pre>
+     * Output only. The time when this batch job started running.
+     * Formatted as yyyy-mm-dd hh:mm:ss. Example: "2018-03-05 09:15:30"
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue start_date_time = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    com.google.protobuf.StringValueOrBuilder getStartDateTimeOrBuilder();
+
+    /**
+     * <pre>
      * Output only. The time when this batch job was completed.
      * Formatted as yyyy-MM-dd HH:mm:ss. Example: "2018-03-05 09:16:00"
      * </pre>
@@ -418,6 +448,19 @@ private static final long serialVersionUID = 0L;
 
               break;
             }
+            case 50: {
+              com.google.protobuf.StringValue.Builder subBuilder = null;
+              if (startDateTime_ != null) {
+                subBuilder = startDateTime_.toBuilder();
+              }
+              startDateTime_ = input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(startDateTime_);
+                startDateTime_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -489,6 +532,47 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.StringValueOrBuilder getCreationDateTimeOrBuilder() {
       return getCreationDateTime();
+    }
+
+    public static final int START_DATE_TIME_FIELD_NUMBER = 6;
+    private com.google.protobuf.StringValue startDateTime_;
+    /**
+     * <pre>
+     * Output only. The time when this batch job started running.
+     * Formatted as yyyy-mm-dd hh:mm:ss. Example: "2018-03-05 09:15:30"
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue start_date_time = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the startDateTime field is set.
+     */
+    @java.lang.Override
+    public boolean hasStartDateTime() {
+      return startDateTime_ != null;
+    }
+    /**
+     * <pre>
+     * Output only. The time when this batch job started running.
+     * Formatted as yyyy-mm-dd hh:mm:ss. Example: "2018-03-05 09:15:30"
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue start_date_time = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The startDateTime.
+     */
+    @java.lang.Override
+    public com.google.protobuf.StringValue getStartDateTime() {
+      return startDateTime_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : startDateTime_;
+    }
+    /**
+     * <pre>
+     * Output only. The time when this batch job started running.
+     * Formatted as yyyy-mm-dd hh:mm:ss. Example: "2018-03-05 09:15:30"
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue start_date_time = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.StringValueOrBuilder getStartDateTimeOrBuilder() {
+      return getStartDateTime();
     }
 
     public static final int COMPLETION_DATE_TIME_FIELD_NUMBER = 2;
@@ -681,6 +765,9 @@ private static final long serialVersionUID = 0L;
       if (executedOperationCount_ != null) {
         output.writeMessage(5, getExecutedOperationCount());
       }
+      if (startDateTime_ != null) {
+        output.writeMessage(6, getStartDateTime());
+      }
       unknownFields.writeTo(output);
     }
 
@@ -710,6 +797,10 @@ private static final long serialVersionUID = 0L;
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, getExecutedOperationCount());
       }
+      if (startDateTime_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(6, getStartDateTime());
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -729,6 +820,11 @@ private static final long serialVersionUID = 0L;
       if (hasCreationDateTime()) {
         if (!getCreationDateTime()
             .equals(other.getCreationDateTime())) return false;
+      }
+      if (hasStartDateTime() != other.hasStartDateTime()) return false;
+      if (hasStartDateTime()) {
+        if (!getStartDateTime()
+            .equals(other.getStartDateTime())) return false;
       }
       if (hasCompletionDateTime() != other.hasCompletionDateTime()) return false;
       if (hasCompletionDateTime()) {
@@ -764,6 +860,10 @@ private static final long serialVersionUID = 0L;
       if (hasCreationDateTime()) {
         hash = (37 * hash) + CREATION_DATE_TIME_FIELD_NUMBER;
         hash = (53 * hash) + getCreationDateTime().hashCode();
+      }
+      if (hasStartDateTime()) {
+        hash = (37 * hash) + START_DATE_TIME_FIELD_NUMBER;
+        hash = (53 * hash) + getStartDateTime().hashCode();
       }
       if (hasCompletionDateTime()) {
         hash = (37 * hash) + COMPLETION_DATE_TIME_FIELD_NUMBER;
@@ -925,6 +1025,12 @@ private static final long serialVersionUID = 0L;
           creationDateTime_ = null;
           creationDateTimeBuilder_ = null;
         }
+        if (startDateTimeBuilder_ == null) {
+          startDateTime_ = null;
+        } else {
+          startDateTime_ = null;
+          startDateTimeBuilder_ = null;
+        }
         if (completionDateTimeBuilder_ == null) {
           completionDateTime_ = null;
         } else {
@@ -979,6 +1085,11 @@ private static final long serialVersionUID = 0L;
           result.creationDateTime_ = creationDateTime_;
         } else {
           result.creationDateTime_ = creationDateTimeBuilder_.build();
+        }
+        if (startDateTimeBuilder_ == null) {
+          result.startDateTime_ = startDateTime_;
+        } else {
+          result.startDateTime_ = startDateTimeBuilder_.build();
         }
         if (completionDateTimeBuilder_ == null) {
           result.completionDateTime_ = completionDateTime_;
@@ -1050,6 +1161,9 @@ private static final long serialVersionUID = 0L;
         if (other == com.google.ads.googleads.v5.resources.BatchJob.BatchJobMetadata.getDefaultInstance()) return this;
         if (other.hasCreationDateTime()) {
           mergeCreationDateTime(other.getCreationDateTime());
+        }
+        if (other.hasStartDateTime()) {
+          mergeStartDateTime(other.getStartDateTime());
         }
         if (other.hasCompletionDateTime()) {
           mergeCompletionDateTime(other.getCompletionDateTime());
@@ -1254,6 +1368,170 @@ private static final long serialVersionUID = 0L;
           creationDateTime_ = null;
         }
         return creationDateTimeBuilder_;
+      }
+
+      private com.google.protobuf.StringValue startDateTime_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> startDateTimeBuilder_;
+      /**
+       * <pre>
+       * Output only. The time when this batch job started running.
+       * Formatted as yyyy-mm-dd hh:mm:ss. Example: "2018-03-05 09:15:30"
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue start_date_time = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @return Whether the startDateTime field is set.
+       */
+      public boolean hasStartDateTime() {
+        return startDateTimeBuilder_ != null || startDateTime_ != null;
+      }
+      /**
+       * <pre>
+       * Output only. The time when this batch job started running.
+       * Formatted as yyyy-mm-dd hh:mm:ss. Example: "2018-03-05 09:15:30"
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue start_date_time = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @return The startDateTime.
+       */
+      public com.google.protobuf.StringValue getStartDateTime() {
+        if (startDateTimeBuilder_ == null) {
+          return startDateTime_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : startDateTime_;
+        } else {
+          return startDateTimeBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Output only. The time when this batch job started running.
+       * Formatted as yyyy-mm-dd hh:mm:ss. Example: "2018-03-05 09:15:30"
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue start_date_time = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       */
+      public Builder setStartDateTime(com.google.protobuf.StringValue value) {
+        if (startDateTimeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          startDateTime_ = value;
+          onChanged();
+        } else {
+          startDateTimeBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Output only. The time when this batch job started running.
+       * Formatted as yyyy-mm-dd hh:mm:ss. Example: "2018-03-05 09:15:30"
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue start_date_time = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       */
+      public Builder setStartDateTime(
+          com.google.protobuf.StringValue.Builder builderForValue) {
+        if (startDateTimeBuilder_ == null) {
+          startDateTime_ = builderForValue.build();
+          onChanged();
+        } else {
+          startDateTimeBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Output only. The time when this batch job started running.
+       * Formatted as yyyy-mm-dd hh:mm:ss. Example: "2018-03-05 09:15:30"
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue start_date_time = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       */
+      public Builder mergeStartDateTime(com.google.protobuf.StringValue value) {
+        if (startDateTimeBuilder_ == null) {
+          if (startDateTime_ != null) {
+            startDateTime_ =
+              com.google.protobuf.StringValue.newBuilder(startDateTime_).mergeFrom(value).buildPartial();
+          } else {
+            startDateTime_ = value;
+          }
+          onChanged();
+        } else {
+          startDateTimeBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Output only. The time when this batch job started running.
+       * Formatted as yyyy-mm-dd hh:mm:ss. Example: "2018-03-05 09:15:30"
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue start_date_time = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       */
+      public Builder clearStartDateTime() {
+        if (startDateTimeBuilder_ == null) {
+          startDateTime_ = null;
+          onChanged();
+        } else {
+          startDateTime_ = null;
+          startDateTimeBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Output only. The time when this batch job started running.
+       * Formatted as yyyy-mm-dd hh:mm:ss. Example: "2018-03-05 09:15:30"
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue start_date_time = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       */
+      public com.google.protobuf.StringValue.Builder getStartDateTimeBuilder() {
+        
+        onChanged();
+        return getStartDateTimeFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Output only. The time when this batch job started running.
+       * Formatted as yyyy-mm-dd hh:mm:ss. Example: "2018-03-05 09:15:30"
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue start_date_time = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       */
+      public com.google.protobuf.StringValueOrBuilder getStartDateTimeOrBuilder() {
+        if (startDateTimeBuilder_ != null) {
+          return startDateTimeBuilder_.getMessageOrBuilder();
+        } else {
+          return startDateTime_ == null ?
+              com.google.protobuf.StringValue.getDefaultInstance() : startDateTime_;
+        }
+      }
+      /**
+       * <pre>
+       * Output only. The time when this batch job started running.
+       * Formatted as yyyy-mm-dd hh:mm:ss. Example: "2018-03-05 09:15:30"
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue start_date_time = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
+          getStartDateTimeFieldBuilder() {
+        if (startDateTimeBuilder_ == null) {
+          startDateTimeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
+                  getStartDateTime(),
+                  getParentForChildren(),
+                  isClean());
+          startDateTime_ = null;
+        }
+        return startDateTimeBuilder_;
       }
 
       private com.google.protobuf.StringValue completionDateTime_;

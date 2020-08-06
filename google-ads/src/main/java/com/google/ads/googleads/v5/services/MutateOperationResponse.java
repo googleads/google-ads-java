@@ -682,6 +682,20 @@ private static final long serialVersionUID = 0L;
             responseCase_ = 51;
             break;
           }
+          case 418: {
+            com.google.ads.googleads.v5.services.MutateCampaignAssetResult.Builder subBuilder = null;
+            if (responseCase_ == 52) {
+              subBuilder = ((com.google.ads.googleads.v5.services.MutateCampaignAssetResult) response_).toBuilder();
+            }
+            response_ =
+                input.readMessage(com.google.ads.googleads.v5.services.MutateCampaignAssetResult.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.google.ads.googleads.v5.services.MutateCampaignAssetResult) response_);
+              response_ = subBuilder.buildPartial();
+            }
+            responseCase_ = 52;
+            break;
+          }
           default: {
             if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -732,6 +746,7 @@ private static final long serialVersionUID = 0L;
     AD_RESULT(49),
     ASSET_RESULT(23),
     BIDDING_STRATEGY_RESULT(6),
+    CAMPAIGN_ASSET_RESULT(52),
     CAMPAIGN_BID_MODIFIER_RESULT(7),
     CAMPAIGN_BUDGET_RESULT(8),
     CAMPAIGN_CRITERION_RESULT(13),
@@ -794,6 +809,7 @@ private static final long serialVersionUID = 0L;
         case 49: return AD_RESULT;
         case 23: return ASSET_RESULT;
         case 6: return BIDDING_STRATEGY_RESULT;
+        case 52: return CAMPAIGN_ASSET_RESULT;
         case 7: return CAMPAIGN_BID_MODIFIER_RESULT;
         case 8: return CAMPAIGN_BUDGET_RESULT;
         case 13: return CAMPAIGN_CRITERION_RESULT;
@@ -1398,6 +1414,49 @@ private static final long serialVersionUID = 0L;
        return (com.google.ads.googleads.v5.services.MutateBiddingStrategyResult) response_;
     }
     return com.google.ads.googleads.v5.services.MutateBiddingStrategyResult.getDefaultInstance();
+  }
+
+  public static final int CAMPAIGN_ASSET_RESULT_FIELD_NUMBER = 52;
+  /**
+   * <pre>
+   * The result for the campaign asset mutate.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v5.services.MutateCampaignAssetResult campaign_asset_result = 52;</code>
+   * @return Whether the campaignAssetResult field is set.
+   */
+  @java.lang.Override
+  public boolean hasCampaignAssetResult() {
+    return responseCase_ == 52;
+  }
+  /**
+   * <pre>
+   * The result for the campaign asset mutate.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v5.services.MutateCampaignAssetResult campaign_asset_result = 52;</code>
+   * @return The campaignAssetResult.
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v5.services.MutateCampaignAssetResult getCampaignAssetResult() {
+    if (responseCase_ == 52) {
+       return (com.google.ads.googleads.v5.services.MutateCampaignAssetResult) response_;
+    }
+    return com.google.ads.googleads.v5.services.MutateCampaignAssetResult.getDefaultInstance();
+  }
+  /**
+   * <pre>
+   * The result for the campaign asset mutate.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v5.services.MutateCampaignAssetResult campaign_asset_result = 52;</code>
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v5.services.MutateCampaignAssetResultOrBuilder getCampaignAssetResultOrBuilder() {
+    if (responseCase_ == 52) {
+       return (com.google.ads.googleads.v5.services.MutateCampaignAssetResult) response_;
+    }
+    return com.google.ads.googleads.v5.services.MutateCampaignAssetResult.getDefaultInstance();
   }
 
   public static final int CAMPAIGN_BID_MODIFIER_RESULT_FIELD_NUMBER = 7;
@@ -2925,6 +2984,9 @@ private static final long serialVersionUID = 0L;
     if (responseCase_ == 51) {
       output.writeMessage(51, (com.google.ads.googleads.v5.services.MutateKeywordPlanCampaignKeywordResult) response_);
     }
+    if (responseCase_ == 52) {
+      output.writeMessage(52, (com.google.ads.googleads.v5.services.MutateCampaignAssetResult) response_);
+    }
     unknownFields.writeTo(output);
   }
 
@@ -3114,6 +3176,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(51, (com.google.ads.googleads.v5.services.MutateKeywordPlanCampaignKeywordResult) response_);
     }
+    if (responseCase_ == 52) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(52, (com.google.ads.googleads.v5.services.MutateCampaignAssetResult) response_);
+    }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
@@ -3182,6 +3248,10 @@ private static final long serialVersionUID = 0L;
       case 6:
         if (!getBiddingStrategyResult()
             .equals(other.getBiddingStrategyResult())) return false;
+        break;
+      case 52:
+        if (!getCampaignAssetResult()
+            .equals(other.getCampaignAssetResult())) return false;
         break;
       case 7:
         if (!getCampaignBidModifierResult()
@@ -3377,6 +3447,10 @@ private static final long serialVersionUID = 0L;
       case 6:
         hash = (37 * hash) + BIDDING_STRATEGY_RESULT_FIELD_NUMBER;
         hash = (53 * hash) + getBiddingStrategyResult().hashCode();
+        break;
+      case 52:
+        hash = (37 * hash) + CAMPAIGN_ASSET_RESULT_FIELD_NUMBER;
+        hash = (53 * hash) + getCampaignAssetResult().hashCode();
         break;
       case 7:
         hash = (37 * hash) + CAMPAIGN_BID_MODIFIER_RESULT_FIELD_NUMBER;
@@ -3765,6 +3839,13 @@ private static final long serialVersionUID = 0L;
           result.response_ = biddingStrategyResultBuilder_.build();
         }
       }
+      if (responseCase_ == 52) {
+        if (campaignAssetResultBuilder_ == null) {
+          result.response_ = response_;
+        } else {
+          result.response_ = campaignAssetResultBuilder_.build();
+        }
+      }
       if (responseCase_ == 7) {
         if (campaignBidModifierResultBuilder_ == null) {
           result.response_ = response_;
@@ -4089,6 +4170,10 @@ private static final long serialVersionUID = 0L;
         }
         case BIDDING_STRATEGY_RESULT: {
           mergeBiddingStrategyResult(other.getBiddingStrategyResult());
+          break;
+        }
+        case CAMPAIGN_ASSET_RESULT: {
+          mergeCampaignAssetResult(other.getCampaignAssetResult());
           break;
         }
         case CAMPAIGN_BID_MODIFIER_RESULT: {
@@ -6566,6 +6651,183 @@ private static final long serialVersionUID = 0L;
       responseCase_ = 6;
       onChanged();;
       return biddingStrategyResultBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v5.services.MutateCampaignAssetResult, com.google.ads.googleads.v5.services.MutateCampaignAssetResult.Builder, com.google.ads.googleads.v5.services.MutateCampaignAssetResultOrBuilder> campaignAssetResultBuilder_;
+    /**
+     * <pre>
+     * The result for the campaign asset mutate.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v5.services.MutateCampaignAssetResult campaign_asset_result = 52;</code>
+     * @return Whether the campaignAssetResult field is set.
+     */
+    @java.lang.Override
+    public boolean hasCampaignAssetResult() {
+      return responseCase_ == 52;
+    }
+    /**
+     * <pre>
+     * The result for the campaign asset mutate.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v5.services.MutateCampaignAssetResult campaign_asset_result = 52;</code>
+     * @return The campaignAssetResult.
+     */
+    @java.lang.Override
+    public com.google.ads.googleads.v5.services.MutateCampaignAssetResult getCampaignAssetResult() {
+      if (campaignAssetResultBuilder_ == null) {
+        if (responseCase_ == 52) {
+          return (com.google.ads.googleads.v5.services.MutateCampaignAssetResult) response_;
+        }
+        return com.google.ads.googleads.v5.services.MutateCampaignAssetResult.getDefaultInstance();
+      } else {
+        if (responseCase_ == 52) {
+          return campaignAssetResultBuilder_.getMessage();
+        }
+        return com.google.ads.googleads.v5.services.MutateCampaignAssetResult.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * The result for the campaign asset mutate.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v5.services.MutateCampaignAssetResult campaign_asset_result = 52;</code>
+     */
+    public Builder setCampaignAssetResult(com.google.ads.googleads.v5.services.MutateCampaignAssetResult value) {
+      if (campaignAssetResultBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        response_ = value;
+        onChanged();
+      } else {
+        campaignAssetResultBuilder_.setMessage(value);
+      }
+      responseCase_ = 52;
+      return this;
+    }
+    /**
+     * <pre>
+     * The result for the campaign asset mutate.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v5.services.MutateCampaignAssetResult campaign_asset_result = 52;</code>
+     */
+    public Builder setCampaignAssetResult(
+        com.google.ads.googleads.v5.services.MutateCampaignAssetResult.Builder builderForValue) {
+      if (campaignAssetResultBuilder_ == null) {
+        response_ = builderForValue.build();
+        onChanged();
+      } else {
+        campaignAssetResultBuilder_.setMessage(builderForValue.build());
+      }
+      responseCase_ = 52;
+      return this;
+    }
+    /**
+     * <pre>
+     * The result for the campaign asset mutate.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v5.services.MutateCampaignAssetResult campaign_asset_result = 52;</code>
+     */
+    public Builder mergeCampaignAssetResult(com.google.ads.googleads.v5.services.MutateCampaignAssetResult value) {
+      if (campaignAssetResultBuilder_ == null) {
+        if (responseCase_ == 52 &&
+            response_ != com.google.ads.googleads.v5.services.MutateCampaignAssetResult.getDefaultInstance()) {
+          response_ = com.google.ads.googleads.v5.services.MutateCampaignAssetResult.newBuilder((com.google.ads.googleads.v5.services.MutateCampaignAssetResult) response_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          response_ = value;
+        }
+        onChanged();
+      } else {
+        if (responseCase_ == 52) {
+          campaignAssetResultBuilder_.mergeFrom(value);
+        }
+        campaignAssetResultBuilder_.setMessage(value);
+      }
+      responseCase_ = 52;
+      return this;
+    }
+    /**
+     * <pre>
+     * The result for the campaign asset mutate.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v5.services.MutateCampaignAssetResult campaign_asset_result = 52;</code>
+     */
+    public Builder clearCampaignAssetResult() {
+      if (campaignAssetResultBuilder_ == null) {
+        if (responseCase_ == 52) {
+          responseCase_ = 0;
+          response_ = null;
+          onChanged();
+        }
+      } else {
+        if (responseCase_ == 52) {
+          responseCase_ = 0;
+          response_ = null;
+        }
+        campaignAssetResultBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * The result for the campaign asset mutate.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v5.services.MutateCampaignAssetResult campaign_asset_result = 52;</code>
+     */
+    public com.google.ads.googleads.v5.services.MutateCampaignAssetResult.Builder getCampaignAssetResultBuilder() {
+      return getCampaignAssetResultFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * The result for the campaign asset mutate.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v5.services.MutateCampaignAssetResult campaign_asset_result = 52;</code>
+     */
+    @java.lang.Override
+    public com.google.ads.googleads.v5.services.MutateCampaignAssetResultOrBuilder getCampaignAssetResultOrBuilder() {
+      if ((responseCase_ == 52) && (campaignAssetResultBuilder_ != null)) {
+        return campaignAssetResultBuilder_.getMessageOrBuilder();
+      } else {
+        if (responseCase_ == 52) {
+          return (com.google.ads.googleads.v5.services.MutateCampaignAssetResult) response_;
+        }
+        return com.google.ads.googleads.v5.services.MutateCampaignAssetResult.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * The result for the campaign asset mutate.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v5.services.MutateCampaignAssetResult campaign_asset_result = 52;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v5.services.MutateCampaignAssetResult, com.google.ads.googleads.v5.services.MutateCampaignAssetResult.Builder, com.google.ads.googleads.v5.services.MutateCampaignAssetResultOrBuilder> 
+        getCampaignAssetResultFieldBuilder() {
+      if (campaignAssetResultBuilder_ == null) {
+        if (!(responseCase_ == 52)) {
+          response_ = com.google.ads.googleads.v5.services.MutateCampaignAssetResult.getDefaultInstance();
+        }
+        campaignAssetResultBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.ads.googleads.v5.services.MutateCampaignAssetResult, com.google.ads.googleads.v5.services.MutateCampaignAssetResult.Builder, com.google.ads.googleads.v5.services.MutateCampaignAssetResultOrBuilder>(
+                (com.google.ads.googleads.v5.services.MutateCampaignAssetResult) response_,
+                getParentForChildren(),
+                isClean());
+        response_ = null;
+      }
+      responseCase_ = 52;
+      onChanged();;
+      return campaignAssetResultBuilder_;
     }
 
     private com.google.protobuf.SingleFieldBuilderV3<

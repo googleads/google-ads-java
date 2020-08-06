@@ -30,16 +30,19 @@ public final class AssetLinkErrorProto {
     java.lang.String[] descriptorData = {
       "\n5google/ads/googleads/v5/errors/asset_l" +
       "ink_error.proto\022\036google.ads.googleads.v5" +
-      ".errors\032\034google/api/annotations.proto\"]\n" +
-      "\022AssetLinkErrorEnum\"G\n\016AssetLinkError\022\017\n" +
-      "\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\027\n\023PINNING_U" +
-      "NSUPPORTED\020\002B\356\001\n\"com.google.ads.googlead" +
-      "s.v5.errorsB\023AssetLinkErrorProtoP\001ZDgoog" +
-      "le.golang.org/genproto/googleapis/ads/go" +
-      "ogleads/v5/errors;errors\242\002\003GAA\252\002\036Google." +
-      "Ads.GoogleAds.V5.Errors\312\002\036Google\\Ads\\Goo" +
-      "gleAds\\V5\\Errors\352\002\"Google::Ads::GoogleAd" +
-      "s::V5::Errorsb\006proto3"
+      ".errors\032\034google/api/annotations.proto\"\327\001" +
+      "\n\022AssetLinkErrorEnum\"\300\001\n\016AssetLinkError\022" +
+      "\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\027\n\023PINNING" +
+      "_UNSUPPORTED\020\002\022\032\n\026UNSUPPORTED_FIELD_TYPE" +
+      "\020\003\022+\n\'FIELD_TYPE_INCOMPATIBLE_WITH_ASSET" +
+      "_TYPE\020\004\022.\n*FIELD_TYPE_INCOMPATIBLE_WITH_" +
+      "CAMPAIGN_TYPE\020\005B\356\001\n\"com.google.ads.googl" +
+      "eads.v5.errorsB\023AssetLinkErrorProtoP\001ZDg" +
+      "oogle.golang.org/genproto/googleapis/ads" +
+      "/googleads/v5/errors;errors\242\002\003GAA\252\002\036Goog" +
+      "le.Ads.GoogleAds.V5.Errors\312\002\036Google\\Ads\\" +
+      "GoogleAds\\V5\\Errors\352\002\"Google::Ads::Googl" +
+      "eAds::V5::Errorsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

@@ -360,6 +360,33 @@ public interface MutateOperationOrBuilder extends
 
   /**
    * <pre>
+   * A campaign asset mutate operation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v5.services.CampaignAssetOperation campaign_asset_operation = 52;</code>
+   * @return Whether the campaignAssetOperation field is set.
+   */
+  boolean hasCampaignAssetOperation();
+  /**
+   * <pre>
+   * A campaign asset mutate operation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v5.services.CampaignAssetOperation campaign_asset_operation = 52;</code>
+   * @return The campaignAssetOperation.
+   */
+  com.google.ads.googleads.v5.services.CampaignAssetOperation getCampaignAssetOperation();
+  /**
+   * <pre>
+   * A campaign asset mutate operation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v5.services.CampaignAssetOperation campaign_asset_operation = 52;</code>
+   */
+  com.google.ads.googleads.v5.services.CampaignAssetOperationOrBuilder getCampaignAssetOperationOrBuilder();
+
+  /**
+   * <pre>
    * A campaign bid modifier mutate operation.
    * </pre>
    *

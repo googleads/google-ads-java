@@ -210,7 +210,8 @@ private static final long serialVersionUID = 0L;
     CANNOT_ADD_ADGROUP_OF_TYPE_DSA_TO_CAMPAIGN_WITHOUT_DSA_SETTING(14),
     /**
      * <pre>
-     * Promoted hotels ad groups are only available to whitelisted customers.
+     * Promoted hotels ad groups are only available to customers on the
+     * allow-list.
      * </pre>
      *
      * <code>PROMOTED_HOTEL_AD_GROUPS_NOT_AVAILABLE_FOR_CUSTOMER = 15;</code>
@@ -336,7 +337,8 @@ private static final long serialVersionUID = 0L;
     public static final int CANNOT_ADD_ADGROUP_OF_TYPE_DSA_TO_CAMPAIGN_WITHOUT_DSA_SETTING_VALUE = 14;
     /**
      * <pre>
-     * Promoted hotels ad groups are only available to whitelisted customers.
+     * Promoted hotels ad groups are only available to customers on the
+     * allow-list.
      * </pre>
      *
      * <code>PROMOTED_HOTEL_AD_GROUPS_NOT_AVAILABLE_FOR_CUSTOMER = 15;</code>

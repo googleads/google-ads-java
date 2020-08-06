@@ -127,12 +127,12 @@ private static final long serialVersionUID = 0L;
     INVALID_USER_LIST_TYPE(4),
     /**
      * <pre>
-     * Customer is not whitelisted for using user ID in upload data.
+     * Customer is not allowisted for using user ID in upload data.
      * </pre>
      *
-     * <code>NOT_WHITELISTED_FOR_USER_ID = 5;</code>
+     * <code>NOT_ON_ALLOWLIST_FOR_USER_ID = 33;</code>
      */
-    NOT_WHITELISTED_FOR_USER_ID(5),
+    NOT_ON_ALLOWLIST_FOR_USER_ID(33),
     /**
      * <pre>
      * Upload data is not compatible with the upload key type of the associated
@@ -168,20 +168,20 @@ private static final long serialVersionUID = 0L;
     TOO_MANY_USER_IDENTIFIERS(9),
     /**
      * <pre>
-     * Customer is not whitelisted for store sales direct data.
+     * Customer is not on the allow-list for store sales direct data.
      * </pre>
      *
-     * <code>NOT_WHITELISTED_FOR_STORE_SALES_DIRECT = 10;</code>
+     * <code>NOT_ON_ALLOWLIST_FOR_STORE_SALES_DIRECT = 31;</code>
      */
-    NOT_WHITELISTED_FOR_STORE_SALES_DIRECT(10),
+    NOT_ON_ALLOWLIST_FOR_STORE_SALES_DIRECT(31),
     /**
      * <pre>
-     * Customer is not whitelisted for unified store sales data.
+     * Customer is not on the allow-list for unified store sales data.
      * </pre>
      *
-     * <code>NOT_WHITELISTED_FOR_UNIFIED_STORE_SALES = 28;</code>
+     * <code>NOT_ON_ALLOWLIST_FOR_UNIFIED_STORE_SALES = 32;</code>
      */
-    NOT_WHITELISTED_FOR_UNIFIED_STORE_SALES(28),
+    NOT_ON_ALLOWLIST_FOR_UNIFIED_STORE_SALES(32),
     /**
      * <pre>
      * The partner ID in store sales direct metadata is invalid.
@@ -371,12 +371,12 @@ private static final long serialVersionUID = 0L;
     public static final int INVALID_USER_LIST_TYPE_VALUE = 4;
     /**
      * <pre>
-     * Customer is not whitelisted for using user ID in upload data.
+     * Customer is not allowisted for using user ID in upload data.
      * </pre>
      *
-     * <code>NOT_WHITELISTED_FOR_USER_ID = 5;</code>
+     * <code>NOT_ON_ALLOWLIST_FOR_USER_ID = 33;</code>
      */
-    public static final int NOT_WHITELISTED_FOR_USER_ID_VALUE = 5;
+    public static final int NOT_ON_ALLOWLIST_FOR_USER_ID_VALUE = 33;
     /**
      * <pre>
      * Upload data is not compatible with the upload key type of the associated
@@ -412,20 +412,20 @@ private static final long serialVersionUID = 0L;
     public static final int TOO_MANY_USER_IDENTIFIERS_VALUE = 9;
     /**
      * <pre>
-     * Customer is not whitelisted for store sales direct data.
+     * Customer is not on the allow-list for store sales direct data.
      * </pre>
      *
-     * <code>NOT_WHITELISTED_FOR_STORE_SALES_DIRECT = 10;</code>
+     * <code>NOT_ON_ALLOWLIST_FOR_STORE_SALES_DIRECT = 31;</code>
      */
-    public static final int NOT_WHITELISTED_FOR_STORE_SALES_DIRECT_VALUE = 10;
+    public static final int NOT_ON_ALLOWLIST_FOR_STORE_SALES_DIRECT_VALUE = 31;
     /**
      * <pre>
-     * Customer is not whitelisted for unified store sales data.
+     * Customer is not on the allow-list for unified store sales data.
      * </pre>
      *
-     * <code>NOT_WHITELISTED_FOR_UNIFIED_STORE_SALES = 28;</code>
+     * <code>NOT_ON_ALLOWLIST_FOR_UNIFIED_STORE_SALES = 32;</code>
      */
-    public static final int NOT_WHITELISTED_FOR_UNIFIED_STORE_SALES_VALUE = 28;
+    public static final int NOT_ON_ALLOWLIST_FOR_UNIFIED_STORE_SALES_VALUE = 32;
     /**
      * <pre>
      * The partner ID in store sales direct metadata is invalid.
@@ -608,13 +608,13 @@ private static final long serialVersionUID = 0L;
         case 1: return UNKNOWN;
         case 3: return INVALID_USER_LIST_ID;
         case 4: return INVALID_USER_LIST_TYPE;
-        case 5: return NOT_WHITELISTED_FOR_USER_ID;
+        case 33: return NOT_ON_ALLOWLIST_FOR_USER_ID;
         case 6: return INCOMPATIBLE_UPLOAD_KEY_TYPE;
         case 7: return MISSING_USER_IDENTIFIER;
         case 8: return INVALID_MOBILE_ID_FORMAT;
         case 9: return TOO_MANY_USER_IDENTIFIERS;
-        case 10: return NOT_WHITELISTED_FOR_STORE_SALES_DIRECT;
-        case 28: return NOT_WHITELISTED_FOR_UNIFIED_STORE_SALES;
+        case 31: return NOT_ON_ALLOWLIST_FOR_STORE_SALES_DIRECT;
+        case 32: return NOT_ON_ALLOWLIST_FOR_UNIFIED_STORE_SALES;
         case 11: return INVALID_PARTNER_ID;
         case 12: return INVALID_ENCODING;
         case 13: return INVALID_COUNTRY_CODE;

@@ -26,6 +26,7 @@ private static final long serialVersionUID = 0L;
     targetType_ = "";
     status_ = 0;
     canonicalName_ = "";
+    parentGeoTarget_ = "";
   }
 
   @java.lang.Override
@@ -69,6 +70,12 @@ private static final long serialVersionUID = 0L;
             int rawValue = input.readEnum();
 
             status_ = rawValue;
+            break;
+          }
+          case 74: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            parentGeoTarget_ = s;
             break;
           }
           case 80: {
@@ -472,6 +479,56 @@ private static final long serialVersionUID = 0L;
     }
   }
 
+  public static final int PARENT_GEO_TARGET_FIELD_NUMBER = 9;
+  private volatile java.lang.Object parentGeoTarget_;
+  /**
+   * <pre>
+   * Output only. The resource name of the parent geo target constant.
+   * Geo target constant resource names have the form:
+   * `geoTargetConstants/{parent_geo_target_constant_id}`
+   * </pre>
+   *
+   * <code>string parent_geo_target = 9 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The parentGeoTarget.
+   */
+  @java.lang.Override
+  public java.lang.String getParentGeoTarget() {
+    java.lang.Object ref = parentGeoTarget_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      parentGeoTarget_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * Output only. The resource name of the parent geo target constant.
+   * Geo target constant resource names have the form:
+   * `geoTargetConstants/{parent_geo_target_constant_id}`
+   * </pre>
+   *
+   * <code>string parent_geo_target = 9 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The bytes for parentGeoTarget.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getParentGeoTargetBytes() {
+    java.lang.Object ref = parentGeoTarget_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      parentGeoTarget_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -491,6 +548,9 @@ private static final long serialVersionUID = 0L;
     }
     if (status_ != com.google.ads.googleads.v5.enums.GeoTargetConstantStatusEnum.GeoTargetConstantStatus.UNSPECIFIED.getNumber()) {
       output.writeEnum(7, status_);
+    }
+    if (!getParentGeoTargetBytes().isEmpty()) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 9, parentGeoTarget_);
     }
     if (((bitField0_ & 0x00000001) != 0)) {
       output.writeInt64(10, id_);
@@ -522,6 +582,9 @@ private static final long serialVersionUID = 0L;
     if (status_ != com.google.ads.googleads.v5.enums.GeoTargetConstantStatusEnum.GeoTargetConstantStatus.UNSPECIFIED.getNumber()) {
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(7, status_);
+    }
+    if (!getParentGeoTargetBytes().isEmpty()) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, parentGeoTarget_);
     }
     if (((bitField0_ & 0x00000001) != 0)) {
       size += com.google.protobuf.CodedOutputStream
@@ -582,6 +645,8 @@ private static final long serialVersionUID = 0L;
       if (!getCanonicalName()
           .equals(other.getCanonicalName())) return false;
     }
+    if (!getParentGeoTarget()
+        .equals(other.getParentGeoTarget())) return false;
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -618,6 +683,8 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + CANONICAL_NAME_FIELD_NUMBER;
       hash = (53 * hash) + getCanonicalName().hashCode();
     }
+    hash = (37 * hash) + PARENT_GEO_TARGET_FIELD_NUMBER;
+    hash = (53 * hash) + getParentGeoTarget().hashCode();
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -769,6 +836,8 @@ private static final long serialVersionUID = 0L;
 
       canonicalName_ = "";
       bitField0_ = (bitField0_ & ~0x00000010);
+      parentGeoTarget_ = "";
+
       return this;
     }
 
@@ -819,6 +888,7 @@ private static final long serialVersionUID = 0L;
         to_bitField0_ |= 0x00000010;
       }
       result.canonicalName_ = canonicalName_;
+      result.parentGeoTarget_ = parentGeoTarget_;
       result.bitField0_ = to_bitField0_;
       onBuilt();
       return result;
@@ -896,6 +966,10 @@ private static final long serialVersionUID = 0L;
       if (other.hasCanonicalName()) {
         bitField0_ |= 0x00000010;
         canonicalName_ = other.canonicalName_;
+        onChanged();
+      }
+      if (!other.getParentGeoTarget().isEmpty()) {
+        parentGeoTarget_ = other.parentGeoTarget_;
         onChanged();
       }
       this.mergeUnknownFields(other.unknownFields);
@@ -1593,6 +1667,112 @@ private static final long serialVersionUID = 0L;
   checkByteStringIsUtf8(value);
       bitField0_ |= 0x00000010;
       canonicalName_ = value;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object parentGeoTarget_ = "";
+    /**
+     * <pre>
+     * Output only. The resource name of the parent geo target constant.
+     * Geo target constant resource names have the form:
+     * `geoTargetConstants/{parent_geo_target_constant_id}`
+     * </pre>
+     *
+     * <code>string parent_geo_target = 9 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @return The parentGeoTarget.
+     */
+    public java.lang.String getParentGeoTarget() {
+      java.lang.Object ref = parentGeoTarget_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        parentGeoTarget_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * Output only. The resource name of the parent geo target constant.
+     * Geo target constant resource names have the form:
+     * `geoTargetConstants/{parent_geo_target_constant_id}`
+     * </pre>
+     *
+     * <code>string parent_geo_target = 9 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @return The bytes for parentGeoTarget.
+     */
+    public com.google.protobuf.ByteString
+        getParentGeoTargetBytes() {
+      java.lang.Object ref = parentGeoTarget_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        parentGeoTarget_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * Output only. The resource name of the parent geo target constant.
+     * Geo target constant resource names have the form:
+     * `geoTargetConstants/{parent_geo_target_constant_id}`
+     * </pre>
+     *
+     * <code>string parent_geo_target = 9 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @param value The parentGeoTarget to set.
+     * @return This builder for chaining.
+     */
+    public Builder setParentGeoTarget(
+        java.lang.String value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
+      parentGeoTarget_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Output only. The resource name of the parent geo target constant.
+     * Geo target constant resource names have the form:
+     * `geoTargetConstants/{parent_geo_target_constant_id}`
+     * </pre>
+     *
+     * <code>string parent_geo_target = 9 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearParentGeoTarget() {
+      
+      parentGeoTarget_ = getDefaultInstance().getParentGeoTarget();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Output only. The resource name of the parent geo target constant.
+     * Geo target constant resource names have the form:
+     * `geoTargetConstants/{parent_geo_target_constant_id}`
+     * </pre>
+     *
+     * <code>string parent_geo_target = 9 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @param value The bytes for parentGeoTarget to set.
+     * @return This builder for chaining.
+     */
+    public Builder setParentGeoTargetBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
+      parentGeoTarget_ = value;
       onChanged();
       return this;
     }

@@ -225,6 +225,22 @@ private static final long serialVersionUID = 0L;
      * <code>SHOPPING_COMPARISON_LISTING_ADS = 15;</code>
      */
     SHOPPING_COMPARISON_LISTING_ADS(15),
+    /**
+     * <pre>
+     * Standard Smart campaigns.
+     * </pre>
+     *
+     * <code>SMART_CAMPAIGN = 16;</code>
+     */
+    SMART_CAMPAIGN(16),
+    /**
+     * <pre>
+     * Video campaigns with sequence video ads.
+     * </pre>
+     *
+     * <code>VIDEO_SEQUENCE = 17;</code>
+     */
+    VIDEO_SEQUENCE(17),
     UNRECOGNIZED(-1),
     ;
 
@@ -360,6 +376,22 @@ private static final long serialVersionUID = 0L;
      * <code>SHOPPING_COMPARISON_LISTING_ADS = 15;</code>
      */
     public static final int SHOPPING_COMPARISON_LISTING_ADS_VALUE = 15;
+    /**
+     * <pre>
+     * Standard Smart campaigns.
+     * </pre>
+     *
+     * <code>SMART_CAMPAIGN = 16;</code>
+     */
+    public static final int SMART_CAMPAIGN_VALUE = 16;
+    /**
+     * <pre>
+     * Video campaigns with sequence video ads.
+     * </pre>
+     *
+     * <code>VIDEO_SEQUENCE = 17;</code>
+     */
+    public static final int VIDEO_SEQUENCE_VALUE = 17;
 
 
     public final int getNumber() {
@@ -402,6 +434,8 @@ private static final long serialVersionUID = 0L;
         case 13: return APP_CAMPAIGN_FOR_ENGAGEMENT;
         case 14: return LOCAL_CAMPAIGN;
         case 15: return SHOPPING_COMPARISON_LISTING_ADS;
+        case 16: return SMART_CAMPAIGN;
+        case 17: return VIDEO_SEQUENCE;
         default: return null;
       }
     }
