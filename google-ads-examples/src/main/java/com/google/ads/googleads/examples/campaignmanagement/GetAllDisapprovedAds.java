@@ -100,9 +100,10 @@ public class GetAllDisapprovedAds {
         googleAdsClient.getLatestVersion().createGoogleAdsServiceClient()) {
       String searchQuery =
           String.format(
-              "SELECT ad_group_ad.ad.id, "
-                  + "ad_group_ad.ad.type, "
-                  + "ad_group_ad.policy_summary "
+              "SELECT ad_group_ad.ad.id,"
+                  + "ad_group_ad.ad.type,"
+                  + "ad_group_ad.policy_summary.approval_status,"
+                  + "ad_group_ad.policy_summary.policy_topic_entries "
                   + "FROM ad_group_ad "
                   + "WHERE campaign.id = %d",
               campaignId);
