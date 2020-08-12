@@ -112,7 +112,7 @@ public class ForecastReach {
   private void runExample(GoogleAdsClient googleAdsClient, long customerId) {
     String locationId = "2840"; // US
     String currencyCode = "USD";
-    long budgetMicros = 500_000_000_000L;
+    long budgetMicros = 5_000_000L;
 
     try (ReachPlanServiceClient reachPlanServiceClient =
         googleAdsClient.getLatestVersion().createReachPlanServiceClient()) {
@@ -233,20 +233,20 @@ public class ForecastReach {
    * @param reachPlanServiceClient instance of Reach Plan Service client.
    * @param request an already-populated reach curve request.
    */
-  private void pullReachCurve(
+  private void getReachCurve(
       ReachPlanServiceClient reachPlanServiceClient, GenerateReachForecastRequest request) {
     GenerateReachForecastResponse response = reachPlanServiceClient.generateReachForecast(request);
     System.out.println("Reach curve output:");
     System.out.println(
-        "Currency,\tCost Micros,\tOn-Target Reach,\tOn-Target Imprs,\tTotal Reach,\tTotal Imprs,"
-            + "\tProducts");
+        "Currency, Cost Micros, On-Target Reach, On-Target Imprs, Total Reach, Total Imprs,"
+            + " Products");
     for (ReachForecast point : response.getReachCurve().getReachForecastsList()) {
-      System.out.printf("%s,\t", request.getCurrencyCode());
-      System.out.printf("%s,\t", point.getCostMicros());
-      System.out.printf("%s,\t", point.getForecast().getOnTargetReach());
-      System.out.printf("%s,\t", point.getForecast().getOnTargetImpressions());
-      System.out.printf("%s,\t", point.getForecast().getTotalReach());
-      System.out.printf("%s,\t", point.getForecast().getTotalImpressions());
+      System.out.printf("%s,", request.getCurrencyCode());
+      System.out.printf("%s,", point.getCostMicros());
+      System.out.printf("%s,", point.getForecast().getOnTargetReach());
+      System.out.printf("%s,", point.getForecast().getOnTargetImpressions());
+      System.out.printf("%s,", point.getForecast().getTotalReach());
+      System.out.printf("%s,", point.getForecast().getTotalImpressions());
       System.out.print("\"[");
       for (ProductAllocation product : point.getForecastedProductAllocationsList()) {
         System.out.printf("Product: %s,", product.getPlannableProductCode());
@@ -296,7 +296,7 @@ public class ForecastReach {
     GenerateReachForecastRequest request =
         buildReachRequest(customerId, productMix, locationId, currencyCode);
 
-    pullReachCurve(reachPlanServiceClient, request);
+    getReachCurve(reachPlanServiceClient, request);
   }
 
   /**
@@ -352,6 +352,6 @@ public class ForecastReach {
     GenerateReachForecastRequest curveRequest =
         buildReachRequest(customerId, productMix, locationId, currencyCode);
 
-    pullReachCurve(reachPlanServiceClient, curveRequest);
+    getReachCurve(reachPlanServiceClient, curveRequest);
   }
 }
