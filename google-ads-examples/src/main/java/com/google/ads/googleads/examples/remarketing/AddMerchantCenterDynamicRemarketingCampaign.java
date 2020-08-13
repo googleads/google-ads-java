@@ -56,12 +56,7 @@ import com.google.ads.googleads.v5.services.MutateCampaignsResponse;
 import com.google.ads.googleads.v5.utils.ResourceNames;
 import com.google.common.collect.ImmutableList;
 import com.google.common.io.ByteStreams;
-import com.google.protobuf.BoolValue;
 import com.google.protobuf.ByteString;
-import com.google.protobuf.BytesValue;
-import com.google.protobuf.Int32Value;
-import com.google.protobuf.Int64Value;
-import com.google.protobuf.StringValue;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.net.URL;
@@ -268,27 +263,21 @@ public class AddMerchantCenterDynamicRemarketingCampaign {
     ResponsiveDisplayAdInfo responsiveDisplayAdInfo =
         ResponsiveDisplayAdInfo.newBuilder()
             .addMarketingImages(
-                AdImageAsset.newBuilder()
-                    .setAsset(StringValue.of(marketingImageResourceName))
-                    .build())
+                AdImageAsset.newBuilder().setAsset(marketingImageResourceName).build())
             .addSquareMarketingImages(
-                AdImageAsset.newBuilder()
-                    .setAsset(StringValue.of(squareMarketingImageResourceName))
-                    .build())
-            .addHeadlines(AdTextAsset.newBuilder().setText(StringValue.of("Travel")).build())
-            .setLongHeadline(
-                AdTextAsset.newBuilder().setText(StringValue.of("Travel the World")).build())
-            .addDescriptions(
-                AdTextAsset.newBuilder().setText(StringValue.of("Take to the air!")).build())
-            .setBusinessName(StringValue.of("Interplanetary Cruises"))
+                AdImageAsset.newBuilder().setAsset(squareMarketingImageResourceName).build())
+            .addHeadlines(AdTextAsset.newBuilder().setText("Travel").build())
+            .setLongHeadline(AdTextAsset.newBuilder().setText("Travel the World").build())
+            .addDescriptions(AdTextAsset.newBuilder().setText("Take to the air!").build())
+            .setBusinessName("Interplanetary Cruises")
             // Optional: Call to action text.
             // Valid texts: https://support.google.com/adwords/answer/7005917
-            .setCallToActionText(StringValue.of("Apply Now"))
+            .setCallToActionText("Apply Now")
             // Optional: Sets the ad colors.
-            .setMainColor(StringValue.of("#0000ff"))
-            .setAccentColor(StringValue.of("#ffff00"))
+            .setMainColor("#0000ff")
+            .setAccentColor("#ffff00")
             // Optional: Sets to false to strictly render the ad using the colors.
-            .setAllowFlexibleColor(BoolValue.of(false))
+            .setAllowFlexibleColor(false)
             // Optional: Sets the format setting that the ad will be served in.
             .setFormatSetting(DisplayAdFormatSetting.NON_NATIVE)
             // Optional: Creates a logo image and sets it to the ad.
@@ -315,8 +304,7 @@ public class AddMerchantCenterDynamicRemarketingCampaign {
             .build();
 
     // Creates the ad group ad.
-    AdGroupAd adGroupAd =
-        AdGroupAd.newBuilder().setAdGroup(adGroupResourceName).setAd(ad).build();
+    AdGroupAd adGroupAd = AdGroupAd.newBuilder().setAdGroup(adGroupResourceName).setAd(ad).build();
 
     // Creates the ad group ad operation.
     AdGroupAdOperation operation = AdGroupAdOperation.newBuilder().setCreate(adGroupAd).build();
@@ -353,10 +341,7 @@ public class AddMerchantCenterDynamicRemarketingCampaign {
         Asset.newBuilder()
             .setName(assetName)
             .setType(AssetType.IMAGE)
-            .setImageAsset(
-                ImageAsset.newBuilder()
-                    .setData(ByteString.copyFrom(imageData))
-                    .build())
+            .setImageAsset(ImageAsset.newBuilder().setData(ByteString.copyFrom(imageData)).build())
             .build();
 
     // Creates the asset operation.
@@ -393,8 +378,7 @@ public class AddMerchantCenterDynamicRemarketingCampaign {
     AdGroupCriterion adGroupCriterion =
         AdGroupCriterion.newBuilder()
             .setAdGroup(adGroupResourceName)
-            .setUserList(
-                UserListInfo.newBuilder().setUserList(userListResourceName).build())
+            .setUserList(UserListInfo.newBuilder().setUserList(userListResourceName).build())
             .build();
 
     // Creates the ad group criterion operation.

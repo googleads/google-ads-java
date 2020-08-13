@@ -27,7 +27,6 @@ import com.google.ads.googleads.v5.services.MutateAdResult;
 import com.google.ads.googleads.v5.services.MutateAdsResponse;
 import com.google.ads.googleads.v5.utils.ResourceNames;
 import com.google.common.collect.ImmutableList;
-import com.google.protobuf.StringValue;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
@@ -104,9 +103,9 @@ public class UpdateExpandedTextAd {
     // Sets the expanded text ad properties to update on the ad.
     adBuilder
         .getExpandedTextAdBuilder()
-        .setHeadlinePart1(StringValue.of("Cruise to Pluto #" + System.currentTimeMillis()))
-        .setHeadlinePart2(StringValue.of("Tickets on sale now"))
-        .setDescription(StringValue.of("Best space cruise ever."));
+        .setHeadlinePart1("Cruise to Pluto #" + System.currentTimeMillis())
+        .setHeadlinePart2("Tickets on sale now")
+        .setDescription("Best space cruise ever.");
 
     // Sets the update mask (the fields which will be modified) to be all the fields we set above.
     adOperation.setUpdateMask(FieldMasks.allSetFieldsOf(adBuilder.build()));

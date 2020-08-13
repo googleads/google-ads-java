@@ -32,7 +32,6 @@ import com.google.ads.googleads.v5.services.MutateAdGroupAdResult;
 import com.google.ads.googleads.v5.services.MutateAdGroupAdsResponse;
 import com.google.ads.googleads.v5.utils.ResourceNames;
 import com.google.common.collect.ImmutableList;
-import com.google.protobuf.StringValue;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
@@ -103,7 +102,7 @@ public class AddResponsiveSearchAd {
     // perform best will be used more often.
     AdTextAsset pinnedHeadline =
         AdTextAsset.newBuilder()
-            .setText(StringValue.of("Cruise to Mars #" + System.currentTimeMillis()))
+            .setText("Cruise to Mars #" + System.currentTimeMillis())
             .setPinnedField(ServedAssetFieldType.HEADLINE_1)
             .build();
 
@@ -115,8 +114,8 @@ public class AddResponsiveSearchAd {
             .addHeadlines(createAdTextAsset("Experience the Stars"))
             .addDescriptions(createAdTextAsset("Buy your tickets now"))
             .addDescriptions(createAdTextAsset("Visit the Red Planet"))
-            .setPath1(StringValue.of("all-inclusive"))
-            .setPath2(StringValue.of("deals"))
+            .setPath1("all-inclusive")
+            .setPath2("deals")
             .build();
 
     // Wraps the info in an Ad object.
@@ -158,6 +157,6 @@ public class AddResponsiveSearchAd {
    * @return AdTextAsset.
    */
   private AdTextAsset createAdTextAsset(String text) {
-    return AdTextAsset.newBuilder().setText(StringValue.of(text)).build();
+    return AdTextAsset.newBuilder().setText(text).build();
   }
 }

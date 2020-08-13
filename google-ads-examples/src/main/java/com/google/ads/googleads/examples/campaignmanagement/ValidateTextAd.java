@@ -31,7 +31,6 @@ import com.google.ads.googleads.v5.services.AdGroupAdServiceClient;
 import com.google.ads.googleads.v5.services.MutateAdGroupAdsRequest;
 import com.google.ads.googleads.v5.services.MutateAdGroupAdsResponse;
 import com.google.ads.googleads.v5.utils.ResourceNames;
-import com.google.protobuf.StringValue;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.List;
@@ -105,10 +104,10 @@ public class ValidateTextAd {
     // Creates the expanded text ad info.
     ExpandedTextAdInfo expandedTextAdInfo =
         ExpandedTextAdInfo.newBuilder()
-            .setDescription(StringValue.of("Luxury Cruise to Mars"))
-            .setHeadlinePart1(StringValue.of("Visit the Red Planet in style"))
+            .setDescription("Luxury Cruise to Mars")
+            .setHeadlinePart1("Visit the Red Planet in style")
             // Adds a headline that will trigger a policy violation to demonstrate error handling.
-            .setHeadlinePart2(StringValue.of("Low-gravity fun for everyone!!"))
+            .setHeadlinePart2("Low-gravity fun for everyone!!")
             .build();
 
     // Wraps the info in an Ad object.
@@ -169,7 +168,7 @@ public class ValidateTextAd {
             for (PolicyTopicEntry policyTopicEntry : policyTopicEntries) {
               System.out.printf(
                   "%d Policy topic entry with topic '%s' and type '%s' was found.%n",
-                  count, policyTopicEntry.getTopic().getValue(), policyTopicEntry.getType());
+                  count, policyTopicEntry.getTopic(), policyTopicEntry.getType());
             }
             count++;
           }

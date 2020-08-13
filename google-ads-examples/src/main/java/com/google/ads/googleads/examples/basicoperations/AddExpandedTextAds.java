@@ -29,7 +29,6 @@ import com.google.ads.googleads.v5.services.AdGroupAdServiceClient;
 import com.google.ads.googleads.v5.services.MutateAdGroupAdResult;
 import com.google.ads.googleads.v5.services.MutateAdGroupAdsResponse;
 import com.google.ads.googleads.v5.utils.ResourceNames;
-import com.google.protobuf.StringValue;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -108,9 +107,9 @@ public class AddExpandedTextAds {
       // Creates the expanded text ad info.
       ExpandedTextAdInfo expandedTextAdInfo =
           ExpandedTextAdInfo.newBuilder()
-              .setHeadlinePart1(StringValue.of(String.format("Cruise #%d to Mars", i)))
-              .setHeadlinePart2(StringValue.of("Best Space Cruise Line"))
-              .setDescription(StringValue.of("Buy your tickets now!"))
+              .setHeadlinePart1(String.format("Cruise #%d to Mars", i))
+              .setHeadlinePart2("Best Space Cruise Line")
+              .setDescription("Buy your tickets now!")
               .build();
 
       // Wraps the info in an Ad object.

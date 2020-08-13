@@ -55,8 +55,6 @@ import com.google.ads.googleads.v5.services.MutateAdGroupsResponse;
 import com.google.ads.googleads.v5.services.MutateCampaignBudgetsResponse;
 import com.google.ads.googleads.v5.services.MutateCampaignsResponse;
 import com.google.common.collect.ImmutableList;
-import com.google.protobuf.Int64Value;
-import com.google.protobuf.StringValue;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import org.joda.time.DateTime;
@@ -257,7 +255,7 @@ public class AddDynamicSearchAds {
                 Ad.newBuilder()
                     .setExpandedDynamicSearchAd(
                         ExpandedDynamicSearchAdInfo.newBuilder()
-                            .setDescription(StringValue.of("Buy tickets now!"))
+                            .setDescription("Buy tickets now!")
                             .build())
                     .build())
             .build();

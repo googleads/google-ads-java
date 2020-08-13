@@ -27,7 +27,6 @@ import com.google.ads.googleads.v5.services.GoogleAdsRow;
 import com.google.ads.googleads.v5.services.GoogleAdsServiceClient;
 import com.google.ads.googleads.v5.services.GoogleAdsServiceClient.SearchPagedResponse;
 import com.google.ads.googleads.v5.services.SearchGoogleAdsRequest;
-import com.google.protobuf.StringValue;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
@@ -121,9 +120,7 @@ public class GetTextAdRecommendations {
           ExpandedTextAdInfo eta = recommendedAd.getExpandedTextAd();
           System.out.printf(
               "\tHeadline 1 = '%s'%n" + "\tHeadline 2 = '%s'%n" + "\tDescription = '%s'%n",
-              eta.getHeadlinePart1().getValue(),
-              eta.getHeadlinePart2().getValue(),
-              eta.getDescription().getValue());
+              eta.getHeadlinePart1(), eta.getHeadlinePart2(), eta.getDescription());
         }
         if (recommendedAd.getDisplayUrl() != null) {
           System.out.printf("\tDisplay URL = '%s'%n", recommendedAd.getDisplayUrl());

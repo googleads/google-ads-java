@@ -59,9 +59,6 @@ import com.google.ads.googleads.v5.services.MutateCampaignCriterionResult;
 import com.google.ads.googleads.v5.services.MutateCampaignsResponse;
 import com.google.ads.googleads.v5.utils.ResourceNames;
 import com.google.common.collect.ImmutableList;
-import com.google.protobuf.BoolValue;
-import com.google.protobuf.Int64Value;
-import com.google.protobuf.StringValue;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -386,25 +383,21 @@ public class AddAppCampaign {
                         AppAdInfo.newBuilder()
                             .addAllHeadlines(
                                 ImmutableList.of(
+                                    AdTextAsset.newBuilder().setText("A cool puzzle game").build(),
                                     AdTextAsset.newBuilder()
-                                        .setText(StringValue.of("A cool puzzle game"))
-                                        .build(),
-                                    AdTextAsset.newBuilder()
-                                        .setText(StringValue.of("Remove connected blocks"))
+                                        .setText("Remove connected blocks")
                                         .build()))
                             .addAllDescriptions(
                                 ImmutableList.of(
+                                    AdTextAsset.newBuilder().setText("3 difficulty levels").build(),
                                     AdTextAsset.newBuilder()
-                                        .setText(StringValue.of("3 difficulty levels"))
-                                        .build(),
-                                    AdTextAsset.newBuilder()
-                                        .setText(StringValue.of("4 colorful fun skins"))
+                                        .setText("4 colorful fun skins")
                                         .build()))
                             // Optional: You can set up to 20 image assets for your campaign.
                             // .addAllImages(
                             //     ImmutableList.of(
                             //         AdImageAsset.newBuilder()
-                            //             .setAsset(StringValue.of("INSERT_AD_IMAGE_ASSET_ID"))
+                            //             .setAsset("INSERT_AD_IMAGE_ASSET_ID")
                             //             .build()))
                             .build())
                     .build())

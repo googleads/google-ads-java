@@ -31,7 +31,6 @@ import com.google.ads.googleads.v5.services.MutateAdGroupAdResult;
 import com.google.ads.googleads.v5.services.MutateAdGroupAdsResponse;
 import com.google.ads.googleads.v5.utils.ResourceNames;
 import com.google.common.collect.ImmutableList;
-import com.google.protobuf.StringValue;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
@@ -103,41 +102,32 @@ public class AddExpandedTextAdWithUpgradedUrls {
         Ad.newBuilder()
             .setExpandedTextAd(
                 ExpandedTextAdInfo.newBuilder()
-                    .setDescription(StringValue.of("Low-gravity fun for everyone!"))
-                    .setHeadlinePart1(StringValue.of("Luxury Cruise to Mars"))
-                    .setHeadlinePart2(StringValue.of("Visit the Red Planet in style."))
+                    .setDescription("Low-gravity fun for everyone!")
+                    .setHeadlinePart1("Luxury Cruise to Mars")
+                    .setHeadlinePart2("Visit the Red Planet in style.")
                     .build())
             // Specifies a tracking URL for 3rd party tracking provider. You may specify one at
             // customer, campaign, ad group, ad, criterion or feed item levels.
             .setTrackingUrlTemplate(
-                    "http://tracker.example.com/?season={_season}&promocode={_promocode}"
-                        + "&u={lpurl}")
+                "http://tracker.example.com/?season={_season}&promocode={_promocode}"
+                    + "&u={lpurl}")
             // Since your tracking URL has two custom parameters, provide their values too. This can
             // be provided at campaign, ad group, ad, criterion or feed item levels.
             .addAllUrlCustomParameters(
                 ImmutableList.of(
-                    CustomParameter.newBuilder()
-                        .setKey("season")
-                        .setValue("christmas")
-                        .build(),
-                    CustomParameter.newBuilder()
-                        .setKey("promocode")
-                        .setValue("NY123")
-                        .build()))
+                    CustomParameter.newBuilder().setKey("season").setValue("christmas").build(),
+                    CustomParameter.newBuilder().setKey("promocode").setValue("NY123").build()))
             // Specifies a list of final URLs. This field cannot be set if URL field is set. This
             // may be specified at ad, criterion and feed item levels.
-            .addAllFinalUrls(
-                ImmutableList.of(
-                    "http://www.example.com/cruise/space/",
-                    "http://www.example.com/locations/mars/"))
+            .addFinalUrls("http://www.example.com/cruise/space/")
+            .addFinalUrls("http://www.example.com/locations/mars/")
             // Specifies a list of final mobile URLs. This field cannot be set if URL field is
             // set, or finalUrls is unset. This may be specified at ad, criterion and feed item
             // levels.
             /*
-            .addAllFinalMobileUrls(Lists.newArrayList(
-                StringValue.of("http://mobile.example.com/cruise/space/"),
-                StringValue.of("http://mobile.example.com/locations/mars/")))
-             */
+             .addFinalMobileUrls("http://mobile.example.com/cruise/space/")
+             .addFinalMobileUrls("http://mobile.example.com/locations/mars/")
+            */
             .build();
 
     // Creates an ad group ad containing the ad.

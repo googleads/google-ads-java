@@ -40,8 +40,6 @@ import com.google.ads.googleads.v5.utils.ResourceNames;
 import com.google.common.collect.ImmutableList;
 import com.google.common.io.ByteStreams;
 import com.google.protobuf.ByteString;
-import com.google.protobuf.BytesValue;
-import com.google.protobuf.StringValue;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.net.URL;
@@ -133,10 +131,7 @@ public class AddGmailAd {
     MediaFile mediaFileLogo =
         MediaFile.newBuilder()
             .setType(MediaType.IMAGE)
-            .setImage(
-                MediaImage.newBuilder()
-                    .setData(ByteString.copyFrom(logoImageData))
-                    .build())
+            .setImage(MediaImage.newBuilder().setData(ByteString.copyFrom(logoImageData)).build())
             .setMimeType(MimeType.IMAGE_PNG)
             .build();
 
@@ -153,9 +148,7 @@ public class AddGmailAd {
         MediaFile.newBuilder()
             .setType(MediaType.IMAGE)
             .setImage(
-                MediaImage.newBuilder()
-                    .setData(ByteString.copyFrom(marketingImageData))
-                    .build())
+                MediaImage.newBuilder().setData(ByteString.copyFrom(marketingImageData)).build())
             .setMimeType(MimeType.IMAGE_JPEG)
             .build();
 
@@ -206,15 +199,15 @@ public class AddGmailAd {
             // Sets the teaser information.
             .setTeaser(
                 GmailTeaser.newBuilder()
-                    .setHeadline(StringValue.of("Dream"))
-                    .setDescription(StringValue.of("Create your own adventure"))
-                    .setBusinessName(StringValue.of("Interplanetary Ships"))
-                    .setLogoImage(StringValue.of(mediaFiles.get("logoResourceName")))
+                    .setHeadline("Dream")
+                    .setDescription("Create your own adventure")
+                    .setBusinessName("Interplanetary Ships")
+                    .setLogoImage(mediaFiles.get("logoResourceName"))
                     .build())
             // Sets the marketing image and other information.
-            .setMarketingImage(StringValue.of(mediaFiles.get("marketingImageResourceName")))
-            .setMarketingImageHeadline(StringValue.of("Travel"))
-            .setMarketingImageDescription(StringValue.of("Take to the skies!"))
+            .setMarketingImage(mediaFiles.get("marketingImageResourceName"))
+            .setMarketingImageHeadline("Travel")
+            .setMarketingImageDescription("Take to the skies!")
             .build();
 
     // Creates the ad.

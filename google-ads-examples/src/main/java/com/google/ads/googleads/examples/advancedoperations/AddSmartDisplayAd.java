@@ -55,9 +55,6 @@ import com.google.ads.googleads.v5.services.MutateCampaignsResponse;
 import com.google.common.collect.ImmutableList;
 import com.google.common.io.ByteStreams;
 import com.google.protobuf.ByteString;
-import com.google.protobuf.BytesValue;
-import com.google.protobuf.Int64Value;
-import com.google.protobuf.StringValue;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.net.URL;
@@ -224,8 +221,7 @@ public class AddSmartDisplayAd {
             // 'DISPLAY_SMART_CAMPAIGN'.
             .setAdvertisingChannelSubType(AdvertisingChannelSubType.DISPLAY_SMART_CAMPAIGN)
             // Smart Display campaign requires the TargetCpa bidding strategy.
-            .setTargetCpa(
-                TargetCpa.newBuilder().setTargetCpaMicros(5_000_000).build())
+            .setTargetCpa(TargetCpa.newBuilder().setTargetCpaMicros(5_000_000).build())
             .setCampaignBudget(budgetResourceName)
             // Optional: Sets the start and end dates for the campaign, beginning one day from
             // now and ending a month from now.
@@ -320,21 +316,19 @@ public class AddSmartDisplayAd {
     ResponsiveDisplayAdInfo responsiveDisplayAdInfo =
         ResponsiveDisplayAdInfo.newBuilder()
             // Sets some basic required information for the responsive display ad.
-            .addHeadlines(AdTextAsset.newBuilder().setText(StringValue.of("Travel")))
-            .setLongHeadline(AdTextAsset.newBuilder().setText(StringValue.of("Travel the World")))
-            .addDescriptions(AdTextAsset.newBuilder().setText(StringValue.of("Take to the air!")))
-            .setBusinessName(StringValue.of("Google"))
+            .addHeadlines(AdTextAsset.newBuilder().setText("Travel"))
+            .setLongHeadline(AdTextAsset.newBuilder().setText("Travel the World"))
+            .addDescriptions(AdTextAsset.newBuilder().setText("Take to the air!"))
+            .setBusinessName("Google")
             // Sets the marketing image and square marketing image to the previously created image
             // assets.
-            .addMarketingImages(
-                AdImageAsset.newBuilder().setAsset(StringValue.of(marketingImageAssetResourceName)))
+            .addMarketingImages(AdImageAsset.newBuilder().setAsset(marketingImageAssetResourceName))
             .addSquareMarketingImages(
-                AdImageAsset.newBuilder()
-                    .setAsset(StringValue.of(squareMarketingImageAssetResourceName)))
+                AdImageAsset.newBuilder().setAsset(squareMarketingImageAssetResourceName))
             // Optional: Sets call to action text, price prefix, and promotion text.
-            .setCallToActionText(StringValue.of("Shop Now"))
-            .setPricePrefix(StringValue.of("as low as"))
-            .setPromoText(StringValue.of("Free shipping!"))
+            .setCallToActionText("Shop Now")
+            .setPricePrefix("as low as")
+            .setPromoText("Free shipping!")
             .build();
 
     // Creates an ad group ad with the created responsive display ad info.
@@ -382,10 +376,7 @@ public class AddSmartDisplayAd {
         Asset.newBuilder()
             .setName(imageName)
             .setType(AssetType.IMAGE)
-            .setImageAsset(
-                ImageAsset.newBuilder()
-                    .setData(ByteString.copyFrom(assetBytes))
-                    .build())
+            .setImageAsset(ImageAsset.newBuilder().setData(ByteString.copyFrom(assetBytes)).build())
             .build();
 
     // Creates an asset operation.

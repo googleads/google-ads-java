@@ -75,7 +75,6 @@ import com.google.api.ads.common.lib.exception.OAuthException;
 import com.google.api.ads.common.lib.exception.ValidationException;
 import com.google.api.client.auth.oauth2.Credential;
 import com.google.common.collect.ImmutableList;
-import com.google.protobuf.StringValue;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
@@ -471,12 +470,11 @@ public class CreateCompleteCampaignBothApisPhase4 {
               .addFinalUrls("http://www.example.com/" + String.valueOf(i))
               .setExpandedTextAd(
                 ExpandedTextAdInfo.newBuilder()
-                  .setDescription(StringValue.of("Buy your tickets now!"))
-                  .setHeadlinePart1(
-                    StringValue.of("Cruise #" + i + " to Mars"))
-                  .setHeadlinePart2(StringValue.of("Best Space Cruise Line"))
-                  .setPath1(StringValue.of("path1"))
-                  .setPath2(StringValue.of("path2"))
+                  .setDescription("Buy your tickets now!")
+                  .setHeadlinePart1(                    "Cruise #" + i + " to Mars")
+                  .setHeadlinePart2("Best Space Cruise Line")
+                  .setPath1("path1")
+                  .setPath2("path2")
                   .build()))
           .build();
 
@@ -510,8 +508,8 @@ public class CreateCompleteCampaignBothApisPhase4 {
             + "and headline '%s - %s' was created in ad group with ID %s.%n",
           ad.getId(),
           newAdGroupAd.getStatus(),
-          expandedTextAdInfo.getHeadlinePart1().getValue(),
-          expandedTextAdInfo.getHeadlinePart2().getValue(),
+          expandedTextAdInfo.getHeadlinePart1(),
+          expandedTextAdInfo.getHeadlinePart2(),
           adGroup.getId());
       }
       return newAdGroupAds;

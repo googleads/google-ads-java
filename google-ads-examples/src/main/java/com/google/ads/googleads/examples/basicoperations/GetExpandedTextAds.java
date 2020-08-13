@@ -128,8 +128,8 @@ public class GetExpandedTextAds {
                 + "group with ID %d.%n",
             ad.getId(),
             googleAdsRow.getAdGroupAd().getStatus(),
-            expandedTextAdInfo.getHeadlinePart1().getValue(),
-            expandedTextAdInfo.getHeadlinePart2().getValue(),
+            expandedTextAdInfo.getHeadlinePart1(),
+            expandedTextAdInfo.getHeadlinePart2(),
             googleAdsRow.getAdGroup().getId());
       }
     }

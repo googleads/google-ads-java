@@ -138,12 +138,11 @@ public class GetAllDisapprovedAds {
         for (PolicyTopicEntry policyTopicEntry : policySummary.getPolicyTopicEntriesList()) {
           System.out.printf(
               "  topic: '%s', type: '%s'%n",
-              policyTopicEntry.getTopic().getValue(), policyTopicEntry.getType());
+              policyTopicEntry.getTopic(), policyTopicEntry.getType());
           for (PolicyTopicEvidence evidence : policyTopicEntry.getEvidencesList()) {
             TextList textList = evidence.getTextList();
             for (int i = 0; i < textList.getTextsCount(); i++) {
-              System.out.printf(
-                  "    evidence text[%d]: '%s'%n", i, textList.getTexts(i).getValue());
+              System.out.printf("    evidence text[%d]: '%s'%n", i, textList.getTexts(i));
             }
           }
         }

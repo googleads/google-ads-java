@@ -488,11 +488,9 @@ public class AddAdCustomizer {
     // Creates an expanded text ad using the feed attribute names as placeholders.
     ExpandedTextAdInfo expandedTextAdInfo =
         ExpandedTextAdInfo.newBuilder()
-            .setHeadlinePart1(
-                StringValue.of(String.format("Luxury cruise to {=%s.Name}", feedName)))
-            .setHeadlinePart2(StringValue.of(String.format("Only {=%s.Price}", feedName)))
-            .setDescription(
-                StringValue.of(String.format("Offer ends in {=countdown(%s.Date)}!", feedName)))
+            .setHeadlinePart1(String.format("Luxury cruise to {=%s.Name}", feedName))
+            .setHeadlinePart2(String.format("Only {=%s.Price}", feedName))
+            .setDescription(String.format("Offer ends in {=countdown(%s.Date)}!", feedName))
             .build();
 
     Ad ad =

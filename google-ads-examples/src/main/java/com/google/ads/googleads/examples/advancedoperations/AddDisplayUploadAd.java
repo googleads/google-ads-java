@@ -39,7 +39,6 @@ import com.google.ads.googleads.v5.utils.ResourceNames;
 import com.google.common.collect.ImmutableList;
 import com.google.common.io.ByteStreams;
 import com.google.protobuf.ByteString;
-import com.google.protobuf.StringValue;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.net.URL;
@@ -185,9 +184,7 @@ public class AddDisplayUploadAd {
                 DisplayUploadAdInfo.newBuilder()
                     .setDisplayUploadProductType(DisplayUploadProductType.HTML5_UPLOAD_AD)
                     .setMediaBundle(
-                        AdMediaBundleAsset.newBuilder()
-                            .setAsset(StringValue.of(adAssetResourceName))
-                            .build())
+                        AdMediaBundleAsset.newBuilder().setAsset(adAssetResourceName).build())
                     .build())
             .build();
 

@@ -55,7 +55,6 @@ import com.google.ads.googleads.v5.services.MutateOperation;
 import com.google.ads.googleads.v5.services.MutateOperationResponse.ResponseCase;
 import com.google.ads.googleads.v5.utils.ResourceNames;
 import com.google.api.gax.longrunning.OperationFuture;
-import com.google.protobuf.StringValue;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -505,10 +504,9 @@ public class AddCompleteCampaignsUsingBatchJob {
                       // Sets the expanded text ad info on an ad.
                       .setExpandedTextAd(
                           ExpandedTextAdInfo.newBuilder()
-                              .setHeadlinePart1(
-                                  StringValue.of("Cruise to Mars #" + System.currentTimeMillis()))
-                              .setHeadlinePart2(StringValue.of("Best Space Cruise Line"))
-                              .setDescription(StringValue.of("Buy your tickets now!"))
+                              .setHeadlinePart1("Cruise to Mars #" + System.currentTimeMillis())
+                              .setHeadlinePart2("Best Space Cruise Line")
+                              .setDescription("Buy your tickets now!")
                               .build())
                       .addFinalUrls("http://www.example.com")
                       .build())

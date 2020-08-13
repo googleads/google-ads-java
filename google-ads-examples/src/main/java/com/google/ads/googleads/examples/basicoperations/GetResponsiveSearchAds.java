@@ -162,7 +162,7 @@ public class GetResponsiveSearchAds {
     return adTextAssets.stream()
         .map(
             adTextAsset ->
-                adTextAsset.getText().getValue()
+                adTextAsset.getText()
                     + " pinned to "
                     + adTextAsset.getPinnedField().getValueDescriptor().getName())
         .collect(Collectors.joining(", "));
