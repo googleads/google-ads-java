@@ -1,0 +1,44 @@
+partial_failure_error {
+  code: 3
+  message: "A conversion for the supplied conversion action and conversion identifier pair could not be found., at conversion_adjustments[0]"
+  details {
+    type_url: "type.googleapis.com/google.ads.googleads.v3.errors.GoogleAdsFailure"
+    value: "\n\207\001\n\003\230\a\005\022bA conversion for the supplied conversion action and conversion identifier pair could not be found.\"\034\022\032\n\026conversion_adjustments\022\000"
+  }
+}
+results {
+}
+results {
+  gclid_date_time_pair {
+    gclid {
+      value: "Cj0KCQjwu8r4BRCzARIsAA21i_AyhPhMulBk8cyd0N3eMMAreV9jAlzVFO7j2fZlgelpappyvpgm-6saAkxEEALw_wcB"
+    }
+    conversion_date_time {
+      value: "2020-07-18 12:56:05-05:00"
+    }
+  }
+  conversion_action {
+    value: "customers/5737364678/conversionActions/450983984"
+  }
+  adjustment_date_time {
+    value: "2020-07-18 12:56:05-05:00"
+  }
+  adjustment_type: RESTATEMENT
+}
+results {
+  gclid_date_time_pair {
+    gclid {
+      value: "Cj0KCQjwu8r4BRCzARIsAA21i_AyhPhMulBk8cyd0N3eMMAreV9jAlzVFO7j2fZlgelpappyvpgm-6saAkxEEALw_wcB"
+    }
+    conversion_date_time {
+      value: "2020-07-18 12:56:58-05:00"
+    }
+  }
+  conversion_action {
+    value: "customers/5737364678/conversionActions/450983984"
+  }
+  adjustment_date_time {
+    value: "2020-07-18 12:56:58-05:00"
+  }
+  adjustment_type: RESTATEMENT
+}
