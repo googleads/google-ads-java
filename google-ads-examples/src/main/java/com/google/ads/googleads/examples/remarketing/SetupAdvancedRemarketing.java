@@ -18,25 +18,25 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.v4.common.ExpressionRuleUserListInfo;
-import com.google.ads.googleads.v4.common.RuleBasedUserListInfo;
-import com.google.ads.googleads.v4.common.UserListDateRuleItemInfo;
-import com.google.ads.googleads.v4.common.UserListNumberRuleItemInfo;
-import com.google.ads.googleads.v4.common.UserListRuleInfo;
-import com.google.ads.googleads.v4.common.UserListRuleItemGroupInfo;
-import com.google.ads.googleads.v4.common.UserListRuleItemInfo;
-import com.google.ads.googleads.v4.common.UserListStringRuleItemInfo;
-import com.google.ads.googleads.v4.enums.UserListDateRuleItemOperatorEnum.UserListDateRuleItemOperator;
-import com.google.ads.googleads.v4.enums.UserListMembershipStatusEnum.UserListMembershipStatus;
-import com.google.ads.googleads.v4.enums.UserListNumberRuleItemOperatorEnum.UserListNumberRuleItemOperator;
-import com.google.ads.googleads.v4.enums.UserListPrepopulationStatusEnum.UserListPrepopulationStatus;
-import com.google.ads.googleads.v4.enums.UserListStringRuleItemOperatorEnum.UserListStringRuleItemOperator;
-import com.google.ads.googleads.v4.errors.GoogleAdsError;
-import com.google.ads.googleads.v4.errors.GoogleAdsException;
-import com.google.ads.googleads.v4.resources.UserList;
-import com.google.ads.googleads.v4.services.MutateUserListsResponse;
-import com.google.ads.googleads.v4.services.UserListOperation;
-import com.google.ads.googleads.v4.services.UserListServiceClient;
+import com.google.ads.googleads.v5.common.ExpressionRuleUserListInfo;
+import com.google.ads.googleads.v5.common.RuleBasedUserListInfo;
+import com.google.ads.googleads.v5.common.UserListDateRuleItemInfo;
+import com.google.ads.googleads.v5.common.UserListNumberRuleItemInfo;
+import com.google.ads.googleads.v5.common.UserListRuleInfo;
+import com.google.ads.googleads.v5.common.UserListRuleItemGroupInfo;
+import com.google.ads.googleads.v5.common.UserListRuleItemInfo;
+import com.google.ads.googleads.v5.common.UserListStringRuleItemInfo;
+import com.google.ads.googleads.v5.enums.UserListDateRuleItemOperatorEnum.UserListDateRuleItemOperator;
+import com.google.ads.googleads.v5.enums.UserListMembershipStatusEnum.UserListMembershipStatus;
+import com.google.ads.googleads.v5.enums.UserListNumberRuleItemOperatorEnum.UserListNumberRuleItemOperator;
+import com.google.ads.googleads.v5.enums.UserListPrepopulationStatusEnum.UserListPrepopulationStatus;
+import com.google.ads.googleads.v5.enums.UserListStringRuleItemOperatorEnum.UserListStringRuleItemOperator;
+import com.google.ads.googleads.v5.errors.GoogleAdsError;
+import com.google.ads.googleads.v5.errors.GoogleAdsException;
+import com.google.ads.googleads.v5.resources.UserList;
+import com.google.ads.googleads.v5.services.MutateUserListsResponse;
+import com.google.ads.googleads.v5.services.UserListOperation;
+import com.google.ads.googleads.v5.services.UserListServiceClient;
 import com.google.common.collect.ImmutableList;
 import com.google.protobuf.DoubleValue;
 import com.google.protobuf.Int64Value;
@@ -65,16 +65,16 @@ public class SetupAdvancedRemarketing {
       params.customerId = Long.parseLong("INSERT_CUSTOMER_ID_HERE");
     }
 
-    GoogleAdsClient googleAdsClient;
+    GoogleAdsClient googleAdsClient = null;
     try {
       googleAdsClient = GoogleAdsClient.newBuilder().fromPropertiesFile().build();
     } catch (FileNotFoundException fnfe) {
       System.err.printf(
           "Failed to load GoogleAdsClient configuration from file. Exception: %s%n", fnfe);
-      return;
+      System.exit(1);
     } catch (IOException ioe) {
       System.err.printf("Failed to create GoogleAdsClient. Exception: %s%n", ioe);
-      return;
+      System.exit(1);
     }
 
     try {
@@ -91,6 +91,7 @@ public class SetupAdvancedRemarketing {
       for (GoogleAdsError googleAdsError : gae.getGoogleAdsFailure().getErrorsList()) {
         System.err.printf("  Error %d: %s%n", i++, googleAdsError);
       }
+      System.exit(1);
     }
   }
 

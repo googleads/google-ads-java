@@ -18,30 +18,28 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.v4.common.GmailAdInfo;
-import com.google.ads.googleads.v4.common.GmailTeaser;
-import com.google.ads.googleads.v4.enums.AdGroupAdStatusEnum.AdGroupAdStatus;
-import com.google.ads.googleads.v4.enums.MediaTypeEnum.MediaType;
-import com.google.ads.googleads.v4.enums.MimeTypeEnum.MimeType;
-import com.google.ads.googleads.v4.errors.GoogleAdsError;
-import com.google.ads.googleads.v4.errors.GoogleAdsException;
-import com.google.ads.googleads.v4.resources.Ad;
-import com.google.ads.googleads.v4.resources.AdGroupAd;
-import com.google.ads.googleads.v4.resources.MediaFile;
-import com.google.ads.googleads.v4.resources.MediaImage;
-import com.google.ads.googleads.v4.services.AdGroupAdOperation;
-import com.google.ads.googleads.v4.services.AdGroupAdServiceClient;
-import com.google.ads.googleads.v4.services.MediaFileOperation;
-import com.google.ads.googleads.v4.services.MediaFileServiceClient;
-import com.google.ads.googleads.v4.services.MutateAdGroupAdsResponse;
-import com.google.ads.googleads.v4.services.MutateMediaFileResult;
-import com.google.ads.googleads.v4.services.MutateMediaFilesResponse;
-import com.google.ads.googleads.v4.utils.ResourceNames;
+import com.google.ads.googleads.v5.common.GmailAdInfo;
+import com.google.ads.googleads.v5.common.GmailTeaser;
+import com.google.ads.googleads.v5.enums.AdGroupAdStatusEnum.AdGroupAdStatus;
+import com.google.ads.googleads.v5.enums.MediaTypeEnum.MediaType;
+import com.google.ads.googleads.v5.enums.MimeTypeEnum.MimeType;
+import com.google.ads.googleads.v5.errors.GoogleAdsError;
+import com.google.ads.googleads.v5.errors.GoogleAdsException;
+import com.google.ads.googleads.v5.resources.Ad;
+import com.google.ads.googleads.v5.resources.AdGroupAd;
+import com.google.ads.googleads.v5.resources.MediaFile;
+import com.google.ads.googleads.v5.resources.MediaImage;
+import com.google.ads.googleads.v5.services.AdGroupAdOperation;
+import com.google.ads.googleads.v5.services.AdGroupAdServiceClient;
+import com.google.ads.googleads.v5.services.MediaFileOperation;
+import com.google.ads.googleads.v5.services.MediaFileServiceClient;
+import com.google.ads.googleads.v5.services.MutateAdGroupAdsResponse;
+import com.google.ads.googleads.v5.services.MutateMediaFileResult;
+import com.google.ads.googleads.v5.services.MutateMediaFilesResponse;
+import com.google.ads.googleads.v5.utils.ResourceNames;
 import com.google.common.collect.ImmutableList;
 import com.google.common.io.ByteStreams;
 import com.google.protobuf.ByteString;
-import com.google.protobuf.BytesValue;
-import com.google.protobuf.StringValue;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.net.URL;
@@ -71,16 +69,16 @@ public class AddGmailAd {
       params.adGroupId = Long.parseLong("INSERT_AD_GROUP_ID_HERE");
     }
 
-    GoogleAdsClient googleAdsClient;
+    GoogleAdsClient googleAdsClient = null;
     try {
       googleAdsClient = GoogleAdsClient.newBuilder().fromPropertiesFile().build();
     } catch (FileNotFoundException fnfe) {
       System.err.printf(
           "Failed to load GoogleAdsClient configuration from file. Exception: %s%n", fnfe);
-      return;
+      System.exit(1);
     } catch (IOException ioe) {
       System.err.printf("Failed to create GoogleAdsClient. Exception: %s%n", ioe);
-      return;
+      System.exit(1);
     }
 
     try {
@@ -97,6 +95,7 @@ public class AddGmailAd {
       for (GoogleAdsError googleAdsError : gae.getGoogleAdsFailure().getErrorsList()) {
         System.err.printf("  Error %d: %s%n", i++, googleAdsError);
       }
+      System.exit(1);
     }
   }
 
@@ -133,10 +132,7 @@ public class AddGmailAd {
     MediaFile mediaFileLogo =
         MediaFile.newBuilder()
             .setType(MediaType.IMAGE)
-            .setImage(
-                MediaImage.newBuilder()
-                    .setData(BytesValue.of(ByteString.copyFrom(logoImageData)))
-                    .build())
+            .setImage(MediaImage.newBuilder().setData(ByteString.copyFrom(logoImageData)).build())
             .setMimeType(MimeType.IMAGE_PNG)
             .build();
 
@@ -153,9 +149,7 @@ public class AddGmailAd {
         MediaFile.newBuilder()
             .setType(MediaType.IMAGE)
             .setImage(
-                MediaImage.newBuilder()
-                    .setData(BytesValue.of(ByteString.copyFrom(marketingImageData)))
-                    .build())
+                MediaImage.newBuilder().setData(ByteString.copyFrom(marketingImageData)).build())
             .setMimeType(MimeType.IMAGE_JPEG)
             .build();
 
@@ -206,22 +200,22 @@ public class AddGmailAd {
             // Sets the teaser information.
             .setTeaser(
                 GmailTeaser.newBuilder()
-                    .setHeadline(StringValue.of("Dream"))
-                    .setDescription(StringValue.of("Create your own adventure"))
-                    .setBusinessName(StringValue.of("Interplanetary Ships"))
-                    .setLogoImage(StringValue.of(mediaFiles.get("logoResourceName")))
+                    .setHeadline("Dream")
+                    .setDescription("Create your own adventure")
+                    .setBusinessName("Interplanetary Ships")
+                    .setLogoImage(mediaFiles.get("logoResourceName"))
                     .build())
             // Sets the marketing image and other information.
-            .setMarketingImage(StringValue.of(mediaFiles.get("marketingImageResourceName")))
-            .setMarketingImageHeadline(StringValue.of("Travel"))
-            .setMarketingImageDescription(StringValue.of("Take to the skies!"))
+            .setMarketingImage(mediaFiles.get("marketingImageResourceName"))
+            .setMarketingImageHeadline("Travel")
+            .setMarketingImageDescription("Take to the skies!")
             .build();
 
     // Creates the ad.
     Ad ad =
         Ad.newBuilder()
-            .setName(StringValue.of("Gmail Ad #" + System.currentTimeMillis()))
-            .addFinalUrls(StringValue.of("http://www.example.com"))
+            .setName("Gmail Ad #" + System.currentTimeMillis())
+            .addFinalUrls("http://www.example.com")
             .setGmailAd(gmailAdInfo)
             .build();
 
@@ -233,7 +227,7 @@ public class AddGmailAd {
         AdGroupAd.newBuilder()
             .setAd(ad)
             .setStatus(AdGroupAdStatus.PAUSED)
-            .setAdGroup(StringValue.of(adGroupResourceName))
+            .setAdGroup(adGroupResourceName)
             .build();
 
     // Creates the operation.

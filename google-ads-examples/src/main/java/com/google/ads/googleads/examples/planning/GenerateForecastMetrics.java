@@ -18,13 +18,13 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.v4.errors.GoogleAdsError;
-import com.google.ads.googleads.v4.errors.GoogleAdsException;
-import com.google.ads.googleads.v4.services.ForecastMetrics;
-import com.google.ads.googleads.v4.services.GenerateForecastMetricsResponse;
-import com.google.ads.googleads.v4.services.KeywordPlanKeywordForecast;
-import com.google.ads.googleads.v4.services.KeywordPlanServiceClient;
-import com.google.ads.googleads.v4.utils.ResourceNames;
+import com.google.ads.googleads.v5.errors.GoogleAdsError;
+import com.google.ads.googleads.v5.errors.GoogleAdsException;
+import com.google.ads.googleads.v5.services.ForecastMetrics;
+import com.google.ads.googleads.v5.services.GenerateForecastMetricsResponse;
+import com.google.ads.googleads.v5.services.KeywordPlanKeywordForecast;
+import com.google.ads.googleads.v5.services.KeywordPlanServiceClient;
+import com.google.ads.googleads.v5.utils.ResourceNames;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
@@ -55,16 +55,16 @@ public class GenerateForecastMetrics {
 
       params.keywordPlanId = Long.valueOf("INSERT_KEYWORD_PLAN_ID");
     }
-    GoogleAdsClient googleAdsClient;
+    GoogleAdsClient googleAdsClient = null;
     try {
       googleAdsClient = GoogleAdsClient.newBuilder().fromPropertiesFile().build();
     } catch (FileNotFoundException fnfe) {
       System.err.printf(
           "Failed to load GoogleAdsClient configuration from file. Exception: %s%n", fnfe);
-      return;
+      System.exit(1);
     } catch (IOException ioe) {
       System.err.printf("Failed to create GoogleAdsClient. Exception: %s%n", ioe);
-      return;
+      System.exit(1);
     }
 
     try {
@@ -82,6 +82,7 @@ public class GenerateForecastMetrics {
       for (GoogleAdsError googleAdsError : gae.getGoogleAdsFailure().getErrorsList()) {
         System.err.printf("  Error %d: %s%n", i++, googleAdsError);
       }
+      System.exit(1);
     }
   }
 

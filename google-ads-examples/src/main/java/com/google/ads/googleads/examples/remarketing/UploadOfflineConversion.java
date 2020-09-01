@@ -18,16 +18,14 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.v4.utils.ResourceNames;
-import com.google.ads.googleads.v4.errors.GoogleAdsError;
-import com.google.ads.googleads.v4.errors.GoogleAdsException;
-import com.google.ads.googleads.v4.services.ClickConversion;
-import com.google.ads.googleads.v4.services.ClickConversionResult;
-import com.google.ads.googleads.v4.services.ConversionUploadServiceClient;
-import com.google.ads.googleads.v4.services.UploadClickConversionsRequest;
-import com.google.ads.googleads.v4.services.UploadClickConversionsResponse;
-import com.google.protobuf.DoubleValue;
-import com.google.protobuf.StringValue;
+import com.google.ads.googleads.v5.errors.GoogleAdsError;
+import com.google.ads.googleads.v5.errors.GoogleAdsException;
+import com.google.ads.googleads.v5.services.ClickConversion;
+import com.google.ads.googleads.v5.services.ClickConversionResult;
+import com.google.ads.googleads.v5.services.ConversionUploadServiceClient;
+import com.google.ads.googleads.v5.services.UploadClickConversionsRequest;
+import com.google.ads.googleads.v5.services.UploadClickConversionsResponse;
+import com.google.ads.googleads.v5.utils.ResourceNames;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
@@ -70,16 +68,16 @@ public class UploadOfflineConversion {
       params.conversionValue = Double.parseDouble("INSERT_CONVERSION_VALUE_HERE");
     }
 
-    GoogleAdsClient googleAdsClient;
+    GoogleAdsClient googleAdsClient = null;
     try {
       googleAdsClient = GoogleAdsClient.newBuilder().fromPropertiesFile().build();
     } catch (FileNotFoundException fnfe) {
       System.err.printf(
           "Failed to load GoogleAdsClient configuration from file. Exception: %s%n", fnfe);
-      return;
+      System.exit(1);
     } catch (IOException ioe) {
       System.err.printf("Failed to create GoogleAdsClient. Exception: %s%n", ioe);
-      return;
+      System.exit(1);
     }
 
     try {
@@ -103,6 +101,7 @@ public class UploadOfflineConversion {
       for (GoogleAdsError googleAdsError : gae.getGoogleAdsFailure().getErrorsList()) {
         System.err.printf("  Error %d: %s%n", i++, googleAdsError);
       }
+      System.exit(1);
     }
   }
 
@@ -130,11 +129,11 @@ public class UploadOfflineConversion {
     // Creates the click conversion.
     ClickConversion clickConversion =
         ClickConversion.newBuilder()
-            .setConversionAction(StringValue.of(conversionActionResourceName))
-            .setConversionDateTime(StringValue.of(conversionDateTime))
-            .setConversionValue(DoubleValue.of(conversionValue))
-            .setCurrencyCode(StringValue.of("USD"))
-            .setGclid(StringValue.of(gclid))
+            .setConversionAction(conversionActionResourceName)
+            .setConversionDateTime(conversionDateTime)
+            .setConversionValue(conversionValue)
+            .setCurrencyCode("USD")
+            .setGclid(gclid)
             .build();
 
     // Creates the conversion upload service client.
@@ -162,9 +161,7 @@ public class UploadOfflineConversion {
       if (result.hasGclid()) {
         System.out.printf(
             "Uploaded conversion that occurred at '%s' from Google Click ID '%s' to '%s'.%n",
-            result.getConversionDateTime().getValue(),
-            result.getGclid().getValue(),
-            result.getConversionAction().getValue());
+            result.getConversionDateTime(), result.getGclid(), result.getConversionAction());
       }
     }
   }

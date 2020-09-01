@@ -19,44 +19,44 @@ import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
 import com.google.ads.googleads.lib.utils.FieldMasks;
-import com.google.ads.googleads.v4.common.WebpageConditionInfo;
-import com.google.ads.googleads.v4.common.WebpageInfo;
-import com.google.ads.googleads.v4.enums.DsaPageFeedCriterionFieldEnum.DsaPageFeedCriterionField;
-import com.google.ads.googleads.v4.enums.FeedAttributeTypeEnum.FeedAttributeType;
-import com.google.ads.googleads.v4.enums.FeedMappingCriterionTypeEnum.FeedMappingCriterionType;
-import com.google.ads.googleads.v4.enums.WebpageConditionOperandEnum.WebpageConditionOperand;
-import com.google.ads.googleads.v4.errors.GoogleAdsError;
-import com.google.ads.googleads.v4.errors.GoogleAdsException;
-import com.google.ads.googleads.v4.resources.AdGroupCriterion;
-import com.google.ads.googleads.v4.resources.AttributeFieldMapping;
-import com.google.ads.googleads.v4.resources.Campaign;
-import com.google.ads.googleads.v4.resources.Campaign.DynamicSearchAdsSetting;
-import com.google.ads.googleads.v4.resources.Feed;
-import com.google.ads.googleads.v4.resources.FeedAttribute;
-import com.google.ads.googleads.v4.resources.FeedItem;
-import com.google.ads.googleads.v4.resources.FeedItemAttributeValue;
-import com.google.ads.googleads.v4.resources.FeedMapping;
-import com.google.ads.googleads.v4.services.AdGroupCriterionOperation;
-import com.google.ads.googleads.v4.services.AdGroupCriterionServiceClient;
-import com.google.ads.googleads.v4.services.CampaignOperation;
-import com.google.ads.googleads.v4.services.CampaignServiceClient;
-import com.google.ads.googleads.v4.services.FeedItemOperation;
-import com.google.ads.googleads.v4.services.FeedItemServiceClient;
-import com.google.ads.googleads.v4.services.FeedMappingOperation;
-import com.google.ads.googleads.v4.services.FeedMappingServiceClient;
-import com.google.ads.googleads.v4.services.FeedOperation;
-import com.google.ads.googleads.v4.services.FeedServiceClient;
-import com.google.ads.googleads.v4.services.GoogleAdsRow;
-import com.google.ads.googleads.v4.services.GoogleAdsServiceClient;
-import com.google.ads.googleads.v4.services.GoogleAdsServiceClient.SearchPagedResponse;
-import com.google.ads.googleads.v4.services.MutateAdGroupCriteriaResponse;
-import com.google.ads.googleads.v4.services.MutateCampaignsResponse;
-import com.google.ads.googleads.v4.services.MutateFeedItemResult;
-import com.google.ads.googleads.v4.services.MutateFeedItemsResponse;
-import com.google.ads.googleads.v4.services.MutateFeedMappingsResponse;
-import com.google.ads.googleads.v4.services.MutateFeedsResponse;
-import com.google.ads.googleads.v4.services.SearchGoogleAdsRequest;
-import com.google.ads.googleads.v4.utils.ResourceNames;
+import com.google.ads.googleads.v5.common.WebpageConditionInfo;
+import com.google.ads.googleads.v5.common.WebpageInfo;
+import com.google.ads.googleads.v5.enums.DsaPageFeedCriterionFieldEnum.DsaPageFeedCriterionField;
+import com.google.ads.googleads.v5.enums.FeedAttributeTypeEnum.FeedAttributeType;
+import com.google.ads.googleads.v5.enums.FeedMappingCriterionTypeEnum.FeedMappingCriterionType;
+import com.google.ads.googleads.v5.enums.WebpageConditionOperandEnum.WebpageConditionOperand;
+import com.google.ads.googleads.v5.errors.GoogleAdsError;
+import com.google.ads.googleads.v5.errors.GoogleAdsException;
+import com.google.ads.googleads.v5.resources.AdGroupCriterion;
+import com.google.ads.googleads.v5.resources.AttributeFieldMapping;
+import com.google.ads.googleads.v5.resources.Campaign;
+import com.google.ads.googleads.v5.resources.Campaign.DynamicSearchAdsSetting;
+import com.google.ads.googleads.v5.resources.Feed;
+import com.google.ads.googleads.v5.resources.FeedAttribute;
+import com.google.ads.googleads.v5.resources.FeedItem;
+import com.google.ads.googleads.v5.resources.FeedItemAttributeValue;
+import com.google.ads.googleads.v5.resources.FeedMapping;
+import com.google.ads.googleads.v5.services.AdGroupCriterionOperation;
+import com.google.ads.googleads.v5.services.AdGroupCriterionServiceClient;
+import com.google.ads.googleads.v5.services.CampaignOperation;
+import com.google.ads.googleads.v5.services.CampaignServiceClient;
+import com.google.ads.googleads.v5.services.FeedItemOperation;
+import com.google.ads.googleads.v5.services.FeedItemServiceClient;
+import com.google.ads.googleads.v5.services.FeedMappingOperation;
+import com.google.ads.googleads.v5.services.FeedMappingServiceClient;
+import com.google.ads.googleads.v5.services.FeedOperation;
+import com.google.ads.googleads.v5.services.FeedServiceClient;
+import com.google.ads.googleads.v5.services.GoogleAdsRow;
+import com.google.ads.googleads.v5.services.GoogleAdsServiceClient;
+import com.google.ads.googleads.v5.services.GoogleAdsServiceClient.SearchPagedResponse;
+import com.google.ads.googleads.v5.services.MutateAdGroupCriteriaResponse;
+import com.google.ads.googleads.v5.services.MutateCampaignsResponse;
+import com.google.ads.googleads.v5.services.MutateFeedItemResult;
+import com.google.ads.googleads.v5.services.MutateFeedItemsResponse;
+import com.google.ads.googleads.v5.services.MutateFeedMappingsResponse;
+import com.google.ads.googleads.v5.services.MutateFeedsResponse;
+import com.google.ads.googleads.v5.services.SearchGoogleAdsRequest;
+import com.google.ads.googleads.v5.utils.ResourceNames;
 import com.google.common.collect.ImmutableList;
 import com.google.protobuf.Int64Value;
 import com.google.protobuf.StringValue;
@@ -95,16 +95,16 @@ public class AddDynamicPageFeed {
       params.adGroupId = Long.parseLong("INSERT_AD_GROUP_ID_HERE");
     }
 
-    GoogleAdsClient googleAdsClient;
+    GoogleAdsClient googleAdsClient = null;
     try {
       googleAdsClient = GoogleAdsClient.newBuilder().fromPropertiesFile().build();
     } catch (FileNotFoundException fnfe) {
       System.err.printf(
           "Failed to load GoogleAdsClient configuration from file. Exception: %s%n", fnfe);
-      return;
+      System.exit(1);
     } catch (IOException ioe) {
       System.err.printf("Failed to create GoogleAdsClient. Exception: %s%n", ioe);
-      return;
+      System.exit(1);
     }
 
     try {
@@ -122,6 +122,7 @@ public class AddDynamicPageFeed {
       for (GoogleAdsError googleAdsError : gae.getGoogleAdsFailure().getErrorsList()) {
         System.err.printf("  Error %d: %s%n", i++, googleAdsError);
       }
+      System.exit(1);
     }
   }
 
@@ -373,7 +374,7 @@ public class AddDynamicPageFeed {
       GoogleAdsClient googleAdsClient, long customerId, String feedResourceName, long campaignId) {
     // Retrieves the existing dynamic search ads settings for the campaign.
     DynamicSearchAdsSetting dsaSetting = getDsaSetting(googleAdsClient, customerId, campaignId);
-    dsaSetting.toBuilder().addAllFeeds(ImmutableList.of(StringValue.of(feedResourceName))).build();
+    dsaSetting.toBuilder().addAllFeeds(ImmutableList.of(feedResourceName)).build();
 
     // Creates the campaign object to update.
     Campaign campaign =
@@ -480,22 +481,22 @@ public class AddDynamicPageFeed {
     WebpageConditionInfo webpageConditionInfo =
         WebpageConditionInfo.newBuilder()
             .setOperand(WebpageConditionOperand.CUSTOM_LABEL)
-            .setArgument(StringValue.of(dsaPageUrlLabel))
+            .setArgument(dsaPageUrlLabel)
             .build();
 
     // Creates the webpage info, or criterion for targeting webpages of an advertiser's website.
     WebpageInfo webpageInfo =
         WebpageInfo.newBuilder()
-            .setCriterionName(StringValue.of("Test Criterion"))
+            .setCriterionName("Test Criterion")
             .addAllConditions(ImmutableList.of(webpageConditionInfo))
             .build();
 
     // Creates the ad group criterion.
     AdGroupCriterion adGroupCriterion =
         AdGroupCriterion.newBuilder()
-            .setAdGroup(StringValue.of(adGroupResourceName))
+            .setAdGroup(adGroupResourceName)
             .setWebpage(webpageInfo)
-            .setCpcBidMicros(Int64Value.of(1_500_000))
+            .setCpcBidMicros(1_500_000)
             .build();
 
     // Creates the operation.

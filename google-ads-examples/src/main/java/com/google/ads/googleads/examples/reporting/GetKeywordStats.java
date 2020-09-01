@@ -18,16 +18,16 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.v4.common.Metrics;
-import com.google.ads.googleads.v4.errors.GoogleAdsError;
-import com.google.ads.googleads.v4.errors.GoogleAdsException;
-import com.google.ads.googleads.v4.resources.AdGroup;
-import com.google.ads.googleads.v4.resources.AdGroupCriterion;
-import com.google.ads.googleads.v4.resources.Campaign;
-import com.google.ads.googleads.v4.services.GoogleAdsRow;
-import com.google.ads.googleads.v4.services.GoogleAdsServiceClient;
-import com.google.ads.googleads.v4.services.SearchGoogleAdsStreamRequest;
-import com.google.ads.googleads.v4.services.SearchGoogleAdsStreamResponse;
+import com.google.ads.googleads.v5.common.Metrics;
+import com.google.ads.googleads.v5.errors.GoogleAdsError;
+import com.google.ads.googleads.v5.errors.GoogleAdsException;
+import com.google.ads.googleads.v5.resources.AdGroup;
+import com.google.ads.googleads.v5.resources.AdGroupCriterion;
+import com.google.ads.googleads.v5.resources.Campaign;
+import com.google.ads.googleads.v5.services.GoogleAdsRow;
+import com.google.ads.googleads.v5.services.GoogleAdsServiceClient;
+import com.google.ads.googleads.v5.services.SearchGoogleAdsStreamRequest;
+import com.google.ads.googleads.v5.services.SearchGoogleAdsStreamResponse;
 import com.google.api.gax.rpc.ServerStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -53,16 +53,16 @@ public class GetKeywordStats {
       params.customerId = Long.parseLong("INSERT_CUSTOMER_ID_HERE");
     }
 
-    GoogleAdsClient googleAdsClient;
+    GoogleAdsClient googleAdsClient = null;
     try {
       googleAdsClient = GoogleAdsClient.newBuilder().fromPropertiesFile().build();
     } catch (FileNotFoundException fnfe) {
       System.err.printf(
           "Failed to load GoogleAdsClient configuration from file. Exception: %s%n", fnfe);
-      return;
+      System.exit(1);
     } catch (IOException ioe) {
       System.err.printf("Failed to create GoogleAdsClient. Exception: %s%n", ioe);
-      return;
+      System.exit(1);
     }
 
     try {
@@ -79,6 +79,7 @@ public class GetKeywordStats {
       for (GoogleAdsError googleAdsError : gae.getGoogleAdsFailure().getErrorsList()) {
         System.err.printf("  Error %d: %s%n", i++, googleAdsError);
       }
+      System.exit(1);
     }
   }
 
@@ -144,16 +145,16 @@ public class GetKeywordStats {
                   + "%d click(s), "
                   + "and %d cost (in micros) "
                   + "during the last 7 days.%n",
-              adGroupCriterion.getKeyword().getText().getValue(),
+              adGroupCriterion.getKeyword().getText(),
               adGroupCriterion.getKeyword().getMatchType(),
-              adGroupCriterion.getCriterionId().getValue(),
-              adGroup.getName().getValue(),
-              adGroup.getId().getValue(),
-              campaign.getName().getValue(),
-              campaign.getId().getValue(),
-              metrics.getImpressions().getValue(),
-              metrics.getClicks().getValue(),
-              metrics.getCostMicros().getValue());
+              adGroupCriterion.getCriterionId(),
+              adGroup.getName(),
+              adGroup.getId(),
+              campaign.getName(),
+              campaign.getId(),
+              metrics.getImpressions(),
+              metrics.getClicks(),
+              metrics.getCostMicros());
         }
       }
     }

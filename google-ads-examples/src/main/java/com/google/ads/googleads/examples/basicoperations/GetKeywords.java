@@ -18,15 +18,15 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.v4.common.KeywordInfo;
-import com.google.ads.googleads.v4.errors.GoogleAdsError;
-import com.google.ads.googleads.v4.errors.GoogleAdsException;
-import com.google.ads.googleads.v4.resources.AdGroup;
-import com.google.ads.googleads.v4.resources.AdGroupCriterion;
-import com.google.ads.googleads.v4.services.GoogleAdsRow;
-import com.google.ads.googleads.v4.services.GoogleAdsServiceClient;
-import com.google.ads.googleads.v4.services.GoogleAdsServiceClient.SearchPagedResponse;
-import com.google.ads.googleads.v4.services.SearchGoogleAdsRequest;
+import com.google.ads.googleads.v5.common.KeywordInfo;
+import com.google.ads.googleads.v5.errors.GoogleAdsError;
+import com.google.ads.googleads.v5.errors.GoogleAdsException;
+import com.google.ads.googleads.v5.resources.AdGroup;
+import com.google.ads.googleads.v5.resources.AdGroupCriterion;
+import com.google.ads.googleads.v5.services.GoogleAdsRow;
+import com.google.ads.googleads.v5.services.GoogleAdsServiceClient;
+import com.google.ads.googleads.v5.services.GoogleAdsServiceClient.SearchPagedResponse;
+import com.google.ads.googleads.v5.services.SearchGoogleAdsRequest;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import javax.annotation.Nullable;
@@ -57,16 +57,16 @@ public class GetKeywords {
       params.adGroupId = null;
     }
 
-    GoogleAdsClient googleAdsClient;
+    GoogleAdsClient googleAdsClient = null;
     try {
       googleAdsClient = GoogleAdsClient.newBuilder().fromPropertiesFile().build();
     } catch (FileNotFoundException fnfe) {
       System.err.printf(
           "Failed to load GoogleAdsClient configuration from file. Exception: %s%n", fnfe);
-      return;
+      System.exit(1);
     } catch (IOException ioe) {
       System.err.printf("Failed to create GoogleAdsClient. Exception: %s%n", ioe);
-      return;
+      System.exit(1);
     }
 
     try {
@@ -83,6 +83,7 @@ public class GetKeywords {
       for (GoogleAdsError googleAdsError : gae.getGoogleAdsFailure().getErrorsList()) {
         System.err.printf("  Error %d: %s%n", i++, googleAdsError);
       }
+      System.exit(1);
     }
   }
 
@@ -130,11 +131,11 @@ public class GetKeywords {
         System.out.printf(
             "Keyword with text '%s', match type '%s', criteria type '%s', and ID %d "
                 + "was found in ad group with ID %d.%n",
-            keywordInfo.getText().getValue(),
+            keywordInfo.getText(),
             keywordInfo.getMatchType(),
             adGroupCriterion.getType(),
-            adGroupCriterion.getCriterionId().getValue(),
-            adGroup.getId().getValue());
+            adGroupCriterion.getCriterionId(),
+            adGroup.getId());
       }
     }
   }

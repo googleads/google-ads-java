@@ -18,29 +18,29 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.v4.common.CrmBasedUserListInfo;
-import com.google.ads.googleads.v4.common.CustomerMatchUserListMetadata;
-import com.google.ads.googleads.v4.common.OfflineUserAddressInfo;
-import com.google.ads.googleads.v4.common.UserData;
-import com.google.ads.googleads.v4.common.UserIdentifier;
-import com.google.ads.googleads.v4.enums.CustomerMatchUploadKeyTypeEnum.CustomerMatchUploadKeyType;
-import com.google.ads.googleads.v4.enums.OfflineUserDataJobTypeEnum.OfflineUserDataJobType;
-import com.google.ads.googleads.v4.errors.GoogleAdsError;
-import com.google.ads.googleads.v4.errors.GoogleAdsException;
-import com.google.ads.googleads.v4.resources.OfflineUserDataJob;
-import com.google.ads.googleads.v4.resources.UserList;
-import com.google.ads.googleads.v4.services.AddOfflineUserDataJobOperationsRequest;
-import com.google.ads.googleads.v4.services.AddOfflineUserDataJobOperationsResponse;
-import com.google.ads.googleads.v4.services.CreateOfflineUserDataJobResponse;
-import com.google.ads.googleads.v4.services.GoogleAdsRow;
-import com.google.ads.googleads.v4.services.GoogleAdsServiceClient;
-import com.google.ads.googleads.v4.services.MutateUserListsResponse;
-import com.google.ads.googleads.v4.services.OfflineUserDataJobOperation;
-import com.google.ads.googleads.v4.services.OfflineUserDataJobServiceClient;
-import com.google.ads.googleads.v4.services.SearchGoogleAdsStreamRequest;
-import com.google.ads.googleads.v4.services.SearchGoogleAdsStreamResponse;
-import com.google.ads.googleads.v4.services.UserListOperation;
-import com.google.ads.googleads.v4.services.UserListServiceClient;
+import com.google.ads.googleads.v5.common.CrmBasedUserListInfo;
+import com.google.ads.googleads.v5.common.CustomerMatchUserListMetadata;
+import com.google.ads.googleads.v5.common.OfflineUserAddressInfo;
+import com.google.ads.googleads.v5.common.UserData;
+import com.google.ads.googleads.v5.common.UserIdentifier;
+import com.google.ads.googleads.v5.enums.CustomerMatchUploadKeyTypeEnum.CustomerMatchUploadKeyType;
+import com.google.ads.googleads.v5.enums.OfflineUserDataJobTypeEnum.OfflineUserDataJobType;
+import com.google.ads.googleads.v5.errors.GoogleAdsError;
+import com.google.ads.googleads.v5.errors.GoogleAdsException;
+import com.google.ads.googleads.v5.resources.OfflineUserDataJob;
+import com.google.ads.googleads.v5.resources.UserList;
+import com.google.ads.googleads.v5.services.AddOfflineUserDataJobOperationsRequest;
+import com.google.ads.googleads.v5.services.AddOfflineUserDataJobOperationsResponse;
+import com.google.ads.googleads.v5.services.CreateOfflineUserDataJobResponse;
+import com.google.ads.googleads.v5.services.GoogleAdsRow;
+import com.google.ads.googleads.v5.services.GoogleAdsServiceClient;
+import com.google.ads.googleads.v5.services.MutateUserListsResponse;
+import com.google.ads.googleads.v5.services.OfflineUserDataJobOperation;
+import com.google.ads.googleads.v5.services.OfflineUserDataJobServiceClient;
+import com.google.ads.googleads.v5.services.SearchGoogleAdsStreamRequest;
+import com.google.ads.googleads.v5.services.SearchGoogleAdsStreamResponse;
+import com.google.ads.googleads.v5.services.UserListOperation;
+import com.google.ads.googleads.v5.services.UserListServiceClient;
 import com.google.api.gax.longrunning.OperationFuture;
 import com.google.api.gax.rpc.ServerStream;
 import com.google.common.collect.ImmutableList;
@@ -95,16 +95,16 @@ public class AddCustomerMatchUserList {
       params.customerId = Long.parseLong("INSERT_CUSTOMER_ID_HERE");
     }
 
-    GoogleAdsClient googleAdsClient;
+    GoogleAdsClient googleAdsClient = null;
     try {
       googleAdsClient = GoogleAdsClient.newBuilder().fromPropertiesFile().build();
     } catch (FileNotFoundException fnfe) {
       System.err.printf(
           "Failed to load GoogleAdsClient configuration from file. Exception: %s%n", fnfe);
-      return;
+      System.exit(1);
     } catch (IOException ioe) {
       System.err.printf("Failed to create GoogleAdsClient. Exception: %s%n", ioe);
-      return;
+      System.exit(1);
     }
 
     try {
@@ -121,6 +121,7 @@ public class AddCustomerMatchUserList {
       for (GoogleAdsError googleAdsError : gae.getGoogleAdsFailure().getErrorsList()) {
         System.err.printf("  Error %d: %s%n", i++, googleAdsError);
       }
+      System.exit(1);
     }
   }
 

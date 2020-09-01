@@ -19,17 +19,16 @@ import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
 import com.google.ads.googleads.lib.utils.FieldMasks;
-import com.google.ads.googleads.v4.enums.AdGroupCriterionStatusEnum.AdGroupCriterionStatus;
-import com.google.ads.googleads.v4.errors.GoogleAdsError;
-import com.google.ads.googleads.v4.errors.GoogleAdsException;
-import com.google.ads.googleads.v4.resources.AdGroupCriterion;
-import com.google.ads.googleads.v4.services.AdGroupCriterionOperation;
-import com.google.ads.googleads.v4.services.AdGroupCriterionServiceClient;
-import com.google.ads.googleads.v4.services.MutateAdGroupCriteriaResponse;
-import com.google.ads.googleads.v4.services.MutateAdGroupCriterionResult;
-import com.google.ads.googleads.v4.utils.ResourceNames;
+import com.google.ads.googleads.v5.enums.AdGroupCriterionStatusEnum.AdGroupCriterionStatus;
+import com.google.ads.googleads.v5.errors.GoogleAdsError;
+import com.google.ads.googleads.v5.errors.GoogleAdsException;
+import com.google.ads.googleads.v5.resources.AdGroupCriterion;
+import com.google.ads.googleads.v5.services.AdGroupCriterionOperation;
+import com.google.ads.googleads.v5.services.AdGroupCriterionServiceClient;
+import com.google.ads.googleads.v5.services.MutateAdGroupCriteriaResponse;
+import com.google.ads.googleads.v5.services.MutateAdGroupCriterionResult;
+import com.google.ads.googleads.v5.utils.ResourceNames;
 import com.google.common.collect.ImmutableList;
-import com.google.protobuf.StringValue;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
@@ -62,16 +61,16 @@ public class UpdateKeyword {
       params.criterionId = Long.parseLong("INSERT_CRITERION_ID_HERE");
     }
 
-    GoogleAdsClient googleAdsClient;
+    GoogleAdsClient googleAdsClient = null;
     try {
       googleAdsClient = GoogleAdsClient.newBuilder().fromPropertiesFile().build();
     } catch (FileNotFoundException fnfe) {
       System.err.printf(
           "Failed to load GoogleAdsClient configuration from file. Exception: %s%n", fnfe);
-      return;
+      System.exit(1);
     } catch (IOException ioe) {
       System.err.printf("Failed to create GoogleAdsClient. Exception: %s%n", ioe);
-      return;
+      System.exit(1);
     }
 
     try {
@@ -89,6 +88,7 @@ public class UpdateKeyword {
       for (GoogleAdsError googleAdsError : gae.getGoogleAdsFailure().getErrorsList()) {
         System.err.printf("  Error %d: %s%n", i++, googleAdsError);
       }
+      System.exit(1);
     }
   }
 
@@ -110,7 +110,7 @@ public class UpdateKeyword {
           AdGroupCriterion.newBuilder()
               .setResourceName(ResourceNames.adGroupCriterion(customerId, adGroupId, criterionId))
               .setStatus(AdGroupCriterionStatus.ENABLED)
-              .addFinalUrls(StringValue.of("https://www.example.com"))
+              .addFinalUrls("https://www.example.com")
               .build();
       // Constructs an operation that will update the ad group criterion, using the FieldMasks
       // utility to derive the update mask. This mask tells the Google Ads API which attributes of

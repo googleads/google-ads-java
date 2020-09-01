@@ -18,13 +18,11 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.v4.errors.GoogleAdsError;
-import com.google.ads.googleads.v4.errors.GoogleAdsException;
-import com.google.ads.googleads.v4.resources.Customer;
-import com.google.ads.googleads.v4.services.CreateCustomerClientResponse;
-import com.google.ads.googleads.v4.services.CustomerServiceClient;
-import com.google.protobuf.BoolValue;
-import com.google.protobuf.StringValue;
+import com.google.ads.googleads.v5.errors.GoogleAdsError;
+import com.google.ads.googleads.v5.errors.GoogleAdsException;
+import com.google.ads.googleads.v5.resources.Customer;
+import com.google.ads.googleads.v5.services.CreateCustomerClientResponse;
+import com.google.ads.googleads.v5.services.CustomerServiceClient;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.time.ZonedDateTime;
@@ -54,16 +52,16 @@ public class CreateCustomer {
       params.managerAccountId = Long.valueOf("INSERT_MANAGER_ID_HERE");
     }
 
-    GoogleAdsClient googleAdsClient;
+    GoogleAdsClient googleAdsClient = null;
     try {
       googleAdsClient = GoogleAdsClient.newBuilder().fromPropertiesFile().build();
     } catch (FileNotFoundException fnfe) {
       System.err.printf(
           "Failed to load GoogleAdsClient configuration from file. Exception: %s%n", fnfe);
-      return;
+      System.exit(1);
     } catch (IOException ioe) {
       System.err.printf("Failed to create GoogleAdsClient. Exception: %s%n", ioe);
-      return;
+      System.exit(1);
     }
 
     try {
@@ -80,6 +78,7 @@ public class CreateCustomer {
       for (GoogleAdsError googleAdsError : gae.getGoogleAdsFailure().getErrorsList()) {
         System.err.printf("  Error %d: %s%n", i++, googleAdsError);
       }
+      System.exit(1);
     }
   }
 
@@ -90,15 +89,13 @@ public class CreateCustomer {
     // Initializes a Customer object to be created.
     Customer customer =
         Customer.newBuilder()
-            .setDescriptiveName(
-                StringValue.of("Account created with CustomerService on '" + dateTime + "'"))
-            .setCurrencyCode(StringValue.of("USD"))
-            .setTimeZone(StringValue.of("America/New_York"))
+            .setDescriptiveName("Account created with CustomerService on '" + dateTime + "'")
+            .setCurrencyCode("USD")
+            .setTimeZone("America/New_York")
             // Optional: Sets additional attributes of the customer.
-            .setTrackingUrlTemplate(StringValue.of("{lpurl}?device={device}"))
-            .setFinalUrlSuffix(
-                StringValue.of("keyword={keyword}&matchtype={matchtype}&adgroupid={adgroupid}"))
-            .setHasPartnersBadge(BoolValue.of(false))
+            .setTrackingUrlTemplate("{lpurl}?device={device}")
+            .setFinalUrlSuffix("keyword={keyword}&matchtype={matchtype}&adgroupid={adgroupid}")
+            .setHasPartnersBadge(false)
             .build();
 
     // Sends the request to create the customer.

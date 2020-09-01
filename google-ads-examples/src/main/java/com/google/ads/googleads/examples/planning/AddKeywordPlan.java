@@ -18,35 +18,35 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.v4.enums.KeywordMatchTypeEnum.KeywordMatchType;
-import com.google.ads.googleads.v4.enums.KeywordPlanForecastIntervalEnum.KeywordPlanForecastInterval;
-import com.google.ads.googleads.v4.enums.KeywordPlanNetworkEnum.KeywordPlanNetwork;
-import com.google.ads.googleads.v4.errors.GoogleAdsError;
-import com.google.ads.googleads.v4.errors.GoogleAdsException;
-import com.google.ads.googleads.v4.resources.KeywordPlan;
-import com.google.ads.googleads.v4.resources.KeywordPlanAdGroup;
-import com.google.ads.googleads.v4.resources.KeywordPlanCampaign;
-import com.google.ads.googleads.v4.resources.KeywordPlanForecastPeriod;
-import com.google.ads.googleads.v4.resources.KeywordPlanGeoTarget;
-import com.google.ads.googleads.v4.resources.KeywordPlanAdGroupKeyword;
-import com.google.ads.googleads.v4.resources.KeywordPlanCampaignKeyword;
-import com.google.ads.googleads.v4.services.KeywordPlanAdGroupOperation;
-import com.google.ads.googleads.v4.services.KeywordPlanAdGroupServiceClient;
-import com.google.ads.googleads.v4.services.KeywordPlanCampaignOperation;
-import com.google.ads.googleads.v4.services.KeywordPlanCampaignServiceClient;
-import com.google.ads.googleads.v4.services.KeywordPlanAdGroupKeywordOperation;
-import com.google.ads.googleads.v4.services.KeywordPlanAdGroupKeywordServiceClient;
-import com.google.ads.googleads.v4.services.KeywordPlanCampaignKeywordOperation;
-import com.google.ads.googleads.v4.services.KeywordPlanCampaignKeywordServiceClient;
-import com.google.ads.googleads.v4.services.KeywordPlanOperation;
-import com.google.ads.googleads.v4.services.KeywordPlanServiceClient;
-import com.google.ads.googleads.v4.services.MutateKeywordPlanAdGroupsResponse;
-import com.google.ads.googleads.v4.services.MutateKeywordPlanCampaignsResponse;
-import com.google.ads.googleads.v4.services.MutateKeywordPlanAdGroupKeywordResult;
-import com.google.ads.googleads.v4.services.MutateKeywordPlanAdGroupKeywordsResponse;
-import com.google.ads.googleads.v4.services.MutateKeywordPlanCampaignKeywordsResponse;
-import com.google.ads.googleads.v4.services.MutateKeywordPlansResponse;
-import com.google.ads.googleads.v4.utils.ResourceNames;
+import com.google.ads.googleads.v5.enums.KeywordMatchTypeEnum.KeywordMatchType;
+import com.google.ads.googleads.v5.enums.KeywordPlanForecastIntervalEnum.KeywordPlanForecastInterval;
+import com.google.ads.googleads.v5.enums.KeywordPlanNetworkEnum.KeywordPlanNetwork;
+import com.google.ads.googleads.v5.errors.GoogleAdsError;
+import com.google.ads.googleads.v5.errors.GoogleAdsException;
+import com.google.ads.googleads.v5.resources.KeywordPlan;
+import com.google.ads.googleads.v5.resources.KeywordPlanAdGroup;
+import com.google.ads.googleads.v5.resources.KeywordPlanAdGroupKeyword;
+import com.google.ads.googleads.v5.resources.KeywordPlanCampaign;
+import com.google.ads.googleads.v5.resources.KeywordPlanCampaignKeyword;
+import com.google.ads.googleads.v5.resources.KeywordPlanForecastPeriod;
+import com.google.ads.googleads.v5.resources.KeywordPlanGeoTarget;
+import com.google.ads.googleads.v5.services.KeywordPlanAdGroupKeywordOperation;
+import com.google.ads.googleads.v5.services.KeywordPlanAdGroupKeywordServiceClient;
+import com.google.ads.googleads.v5.services.KeywordPlanAdGroupOperation;
+import com.google.ads.googleads.v5.services.KeywordPlanAdGroupServiceClient;
+import com.google.ads.googleads.v5.services.KeywordPlanCampaignKeywordOperation;
+import com.google.ads.googleads.v5.services.KeywordPlanCampaignKeywordServiceClient;
+import com.google.ads.googleads.v5.services.KeywordPlanCampaignOperation;
+import com.google.ads.googleads.v5.services.KeywordPlanCampaignServiceClient;
+import com.google.ads.googleads.v5.services.KeywordPlanOperation;
+import com.google.ads.googleads.v5.services.KeywordPlanServiceClient;
+import com.google.ads.googleads.v5.services.MutateKeywordPlanAdGroupKeywordResult;
+import com.google.ads.googleads.v5.services.MutateKeywordPlanAdGroupKeywordsResponse;
+import com.google.ads.googleads.v5.services.MutateKeywordPlanAdGroupsResponse;
+import com.google.ads.googleads.v5.services.MutateKeywordPlanCampaignKeywordsResponse;
+import com.google.ads.googleads.v5.services.MutateKeywordPlanCampaignsResponse;
+import com.google.ads.googleads.v5.services.MutateKeywordPlansResponse;
+import com.google.ads.googleads.v5.utils.ResourceNames;
 import com.google.protobuf.BoolValue;
 import com.google.protobuf.Int64Value;
 import com.google.protobuf.StringValue;
@@ -77,16 +77,16 @@ public class AddKeywordPlan {
       // Optional, specify the customer ID under which to create a new keyword plan.
       params.customerId = Long.valueOf("INSERT_CUSTOMER_ID");
     }
-    GoogleAdsClient googleAdsClient;
+    GoogleAdsClient googleAdsClient = null;
     try {
       googleAdsClient = GoogleAdsClient.newBuilder().fromPropertiesFile().build();
     } catch (FileNotFoundException fnfe) {
       System.err.printf(
           "Failed to load GoogleAdsClient configuration from file. Exception: %s%n", fnfe);
-      return;
+      System.exit(1);
     } catch (IOException ioe) {
       System.err.printf("Failed to create GoogleAdsClient. Exception: %s%n", ioe);
-      return;
+      System.exit(1);
     }
 
     try {
@@ -103,6 +103,7 @@ public class AddKeywordPlan {
       for (GoogleAdsError googleAdsError : gae.getGoogleAdsFailure().getErrorsList()) {
         System.err.printf("  Error %d: %s%n", i++, googleAdsError);
       }
+      System.exit(1);
     }
   }
 

@@ -18,18 +18,17 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.v4.common.ImageAsset;
-import com.google.ads.googleads.v4.enums.AssetTypeEnum.AssetType;
-import com.google.ads.googleads.v4.errors.GoogleAdsError;
-import com.google.ads.googleads.v4.errors.GoogleAdsException;
-import com.google.ads.googleads.v4.resources.Asset;
-import com.google.ads.googleads.v4.services.AssetOperation;
-import com.google.ads.googleads.v4.services.AssetServiceClient;
-import com.google.ads.googleads.v4.services.MutateAssetsResponse;
+import com.google.ads.googleads.v5.common.ImageAsset;
+import com.google.ads.googleads.v5.enums.AssetTypeEnum.AssetType;
+import com.google.ads.googleads.v5.errors.GoogleAdsError;
+import com.google.ads.googleads.v5.errors.GoogleAdsException;
+import com.google.ads.googleads.v5.resources.Asset;
+import com.google.ads.googleads.v5.services.AssetOperation;
+import com.google.ads.googleads.v5.services.AssetServiceClient;
+import com.google.ads.googleads.v5.services.MutateAssetsResponse;
 import com.google.common.collect.ImmutableList;
 import com.google.common.io.ByteStreams;
 import com.google.protobuf.ByteString;
-import com.google.protobuf.BytesValue;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.net.URL;
@@ -54,16 +53,16 @@ public class UploadImageAsset {
       params.customerId = Long.parseLong("INSERT_CUSTOMER_ID_HERE");
     }
 
-    GoogleAdsClient googleAdsClient;
+    GoogleAdsClient googleAdsClient = null;
     try {
       googleAdsClient = GoogleAdsClient.newBuilder().fromPropertiesFile().build();
     } catch (FileNotFoundException fnfe) {
       System.err.printf(
           "Failed to load GoogleAdsClient configuration from file. Exception: %s%n", fnfe);
-      return;
+      System.exit(1);
     } catch (IOException ioe) {
       System.err.printf("Failed to create GoogleAdsClient. Exception: %s%n", ioe);
-      return;
+      System.exit(1);
     }
 
     try {
@@ -80,6 +79,7 @@ public class UploadImageAsset {
       for (GoogleAdsError googleAdsError : gae.getGoogleAdsFailure().getErrorsList()) {
         System.err.printf("  Error %d: %s%n", i++, googleAdsError);
       }
+      System.exit(1);
     }
   }
 
@@ -94,8 +94,7 @@ public class UploadImageAsset {
     byte[] imageData = ByteStreams.toByteArray(new URL(IMAGE_URL).openStream());
 
     // Create the image asset.
-    ImageAsset imageAsset =
-        ImageAsset.newBuilder().setData(BytesValue.of(ByteString.copyFrom(imageData))).build();
+    ImageAsset imageAsset = ImageAsset.newBuilder().setData(ByteString.copyFrom(imageData)).build();
 
     // Creates an asset.
     Asset asset =

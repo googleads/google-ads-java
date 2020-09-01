@@ -75,7 +75,7 @@ public abstract class GoogleAdsClient extends AbstractGoogleAdsClient {
   public static Builder newBuilder() {
     AutoValue_GoogleAdsClient.Builder clientBuilder = new AutoValue_GoogleAdsClient.Builder();
     // Sets the default value for enableGeneratedCatalog.
-    clientBuilder.setEnableGeneratedCatalog(false);
+    clientBuilder.setEnableGeneratedCatalog(true);
     // Constructs the channel provider.
     InstantiatingGrpcChannelProvider transportChannelProvider =
         InstantiatingGrpcChannelProvider.newBuilder()
@@ -344,10 +344,12 @@ public abstract class GoogleAdsClient extends AbstractGoogleAdsClient {
       }
       setTransportChannelProvider(transportChannelProvider);
 
-      // By default, this library uses reflection to build the ApiCatalog. In order to reduce
-      // latency, users can set api.googleads.enableGeneratedCatalog=true in the ads.properties
-      // file, which will set the enableGeneratedCatalog parameter equal to true and generate an
-      // ApiCatalog without the use of reflection. This feature is still experimental.
+      // This library has historically used reflection to build the ApiCatalog. In order to reduce
+      // latency, the library now uses an ApiCatalog that is generated during compile time. This
+      // feature is still experimental. In order to restore the previous behavior and build an
+      // ApiCatalog at runtime with the use of reflection, users can set
+      // api.googleads.enableGeneratedCatalog=false in the ads.properties file, which will set the
+      // enableGeneratedCatalog parameter equal to false.
       GoogleAdsAllVersions versionsCatalog;
       if (getEnableGeneratedCatalog()) {
         versionsCatalog =

@@ -18,17 +18,16 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.v4.common.TagSnippet;
-import com.google.ads.googleads.v4.errors.GoogleAdsError;
-import com.google.ads.googleads.v4.errors.GoogleAdsException;
-import com.google.ads.googleads.v4.resources.RemarketingAction;
-import com.google.ads.googleads.v4.services.GoogleAdsRow;
-import com.google.ads.googleads.v4.services.GoogleAdsServiceClient;
-import com.google.ads.googleads.v4.services.GoogleAdsServiceClient.SearchPagedResponse;
-import com.google.ads.googleads.v4.services.MutateRemarketingActionsResponse;
-import com.google.ads.googleads.v4.services.RemarketingActionOperation;
-import com.google.ads.googleads.v4.services.RemarketingActionServiceClient;
-import com.google.protobuf.StringValue;
+import com.google.ads.googleads.v5.common.TagSnippet;
+import com.google.ads.googleads.v5.errors.GoogleAdsError;
+import com.google.ads.googleads.v5.errors.GoogleAdsException;
+import com.google.ads.googleads.v5.resources.RemarketingAction;
+import com.google.ads.googleads.v5.services.GoogleAdsRow;
+import com.google.ads.googleads.v5.services.GoogleAdsServiceClient;
+import com.google.ads.googleads.v5.services.GoogleAdsServiceClient.SearchPagedResponse;
+import com.google.ads.googleads.v5.services.MutateRemarketingActionsResponse;
+import com.google.ads.googleads.v5.services.RemarketingActionOperation;
+import com.google.ads.googleads.v5.services.RemarketingActionServiceClient;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Collections;
@@ -51,16 +50,16 @@ public class AddRemarketingAction {
       params.customerId = Long.parseLong("INSERT_CUSTOMER_ID_HERE");
     }
 
-    GoogleAdsClient googleAdsClient;
+    GoogleAdsClient googleAdsClient = null;
     try {
       googleAdsClient = GoogleAdsClient.newBuilder().fromPropertiesFile().build();
     } catch (FileNotFoundException fnfe) {
       System.err.printf(
           "Failed to load GoogleAdsClient configuration from file. Exception: %s%n", fnfe);
-      return;
+      System.exit(1);
     } catch (IOException ioe) {
       System.err.printf("Failed to create GoogleAdsClient. Exception: %s%n", ioe);
-      return;
+      System.exit(1);
     }
 
     try {
@@ -77,6 +76,7 @@ public class AddRemarketingAction {
       for (GoogleAdsError googleAdsError : gae.getGoogleAdsFailure().getErrorsList()) {
         System.err.printf("  Error %d: %s%n", i++, googleAdsError);
       }
+      System.exit(1);
     }
   }
 
@@ -92,7 +92,7 @@ public class AddRemarketingAction {
     // Creates a remarketing action with the specified name.
     RemarketingAction remarketingAction =
         RemarketingAction.newBuilder()
-            .setName(StringValue.of("Remarketing action #" + System.currentTimeMillis()))
+            .setName("Remarketing action #" + System.currentTimeMillis())
             .build();
 
     // Creates a remarketing action operation.
@@ -136,17 +136,14 @@ public class AddRemarketingAction {
       RemarketingAction newRemarketingAction = googleAdsRow.getRemarketingAction();
       System.out.printf(
           "Remarketing action has ID %d and name '%s'.%n%n",
-          newRemarketingAction.getId().getValue(), newRemarketingAction.getName().getValue());
+          newRemarketingAction.getId(), newRemarketingAction.getName());
       System.out.println("It has the following generated tag snippets:");
       for (TagSnippet tagSnippet : newRemarketingAction.getTagSnippetsList()) {
         System.out.printf(
             "Tag snippet with code type '%s' and code page format '%s' has the following global"
                 + " site tag:%n%s%n",
-            tagSnippet.getType(),
-            tagSnippet.getPageFormat(),
-            tagSnippet.getGlobalSiteTag().getValue());
-        System.out.printf(
-            "and the following event snippet:%n%s%n%n", tagSnippet.getEventSnippet().getValue());
+            tagSnippet.getType(), tagSnippet.getPageFormat(), tagSnippet.getGlobalSiteTag());
+        System.out.printf("and the following event snippet:%n%s%n%n", tagSnippet.getEventSnippet());
       }
     }
   }

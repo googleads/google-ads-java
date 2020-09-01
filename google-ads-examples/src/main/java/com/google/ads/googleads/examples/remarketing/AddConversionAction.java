@@ -18,21 +18,17 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.v4.enums.ConversionActionCategoryEnum.ConversionActionCategory;
-import com.google.ads.googleads.v4.enums.ConversionActionStatusEnum.ConversionActionStatus;
-import com.google.ads.googleads.v4.enums.ConversionActionTypeEnum.ConversionActionType;
-import com.google.ads.googleads.v4.errors.GoogleAdsError;
-import com.google.ads.googleads.v4.errors.GoogleAdsException;
-import com.google.ads.googleads.v4.resources.ConversionAction;
-import com.google.ads.googleads.v4.resources.ConversionAction.ValueSettings;
-import com.google.ads.googleads.v4.services.ConversionActionOperation;
-import com.google.ads.googleads.v4.services.ConversionActionServiceClient;
-import com.google.ads.googleads.v4.services.MutateConversionActionResult;
-import com.google.ads.googleads.v4.services.MutateConversionActionsResponse;
-import com.google.protobuf.BoolValue;
-import com.google.protobuf.DoubleValue;
-import com.google.protobuf.Int64Value;
-import com.google.protobuf.StringValue;
+import com.google.ads.googleads.v5.enums.ConversionActionCategoryEnum.ConversionActionCategory;
+import com.google.ads.googleads.v5.enums.ConversionActionStatusEnum.ConversionActionStatus;
+import com.google.ads.googleads.v5.enums.ConversionActionTypeEnum.ConversionActionType;
+import com.google.ads.googleads.v5.errors.GoogleAdsError;
+import com.google.ads.googleads.v5.errors.GoogleAdsException;
+import com.google.ads.googleads.v5.resources.ConversionAction;
+import com.google.ads.googleads.v5.resources.ConversionAction.ValueSettings;
+import com.google.ads.googleads.v5.services.ConversionActionOperation;
+import com.google.ads.googleads.v5.services.ConversionActionServiceClient;
+import com.google.ads.googleads.v5.services.MutateConversionActionResult;
+import com.google.ads.googleads.v5.services.MutateConversionActionsResponse;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Collections;
@@ -55,16 +51,16 @@ public class AddConversionAction {
       params.customerId = Long.parseLong("INSERT_CUSTOMER_ID_HERE");
     }
 
-    GoogleAdsClient googleAdsClient;
+    GoogleAdsClient googleAdsClient = null;
     try {
       googleAdsClient = GoogleAdsClient.newBuilder().fromPropertiesFile().build();
     } catch (FileNotFoundException fnfe) {
       System.err.printf(
           "Failed to load GoogleAdsClient configuration from file. Exception: %s%n", fnfe);
-      return;
+      System.exit(1);
     } catch (IOException ioe) {
       System.err.printf("Failed to create GoogleAdsClient. Exception: %s%n", ioe);
-      return;
+      System.exit(1);
     }
 
     try {
@@ -81,6 +77,7 @@ public class AddConversionAction {
       for (GoogleAdsError googleAdsError : gae.getGoogleAdsFailure().getErrorsList()) {
         System.err.printf("  Error %d: %s%n", i++, googleAdsError);
       }
+      System.exit(1);
     }
   }
 
@@ -96,16 +93,15 @@ public class AddConversionAction {
     // Creates a ConversionAction.
     ConversionAction conversionAction =
         ConversionAction.newBuilder()
-            .setName(
-                StringValue.of("Earth to Mars Cruises Conversion #" + System.currentTimeMillis()))
+            .setName("Earth to Mars Cruises Conversion #" + System.currentTimeMillis())
             .setCategory(ConversionActionCategory.DEFAULT)
             .setType(ConversionActionType.WEBPAGE)
             .setStatus(ConversionActionStatus.ENABLED)
-            .setViewThroughLookbackWindowDays(Int64Value.of(15L))
+            .setViewThroughLookbackWindowDays(15L)
             .setValueSettings(
                 ValueSettings.newBuilder()
-                    .setDefaultValue(DoubleValue.of(23.41))
-                    .setAlwaysUseDefaultValue(BoolValue.of(true))
+                    .setDefaultValue(23.41)
+                    .setAlwaysUseDefaultValue(true)
                     .build())
             .build();
 
