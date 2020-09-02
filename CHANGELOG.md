@@ -1,3 +1,8 @@
+9.0.0 - 2020-09-01
+------------------
+- Added support and examples for Google Ads API v5_0.
+- Switched internal catalog implementation default to use annotation processor.
+
 8.0.0 - 2020-07-31
 ------------------
 - Removed v1 from the library.

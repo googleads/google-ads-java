@@ -17,12 +17,12 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.v4.errors.GoogleAdsError;
-import com.google.ads.googleads.v4.errors.GoogleAdsException;
-import com.google.ads.googleads.v4.services.GoogleAdsRow;
-import com.google.ads.googleads.v4.services.GoogleAdsServiceClient;
-import com.google.ads.googleads.v4.services.GoogleAdsServiceClient.SearchPagedResponse;
-import com.google.ads.googleads.v4.services.SearchGoogleAdsRequest;
+import com.google.ads.googleads.v5.errors.GoogleAdsError;
+import com.google.ads.googleads.v5.errors.GoogleAdsException;
+import com.google.ads.googleads.v5.services.GoogleAdsRow;
+import com.google.ads.googleads.v5.services.GoogleAdsServiceClient;
+import com.google.ads.googleads.v5.services.GoogleAdsServiceClient.SearchPagedResponse;
+import com.google.ads.googleads.v5.services.SearchGoogleAdsRequest;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
@@ -45,16 +45,16 @@ public class GetAllImageAssets {
       params.customerId = Long.parseLong("ENTER_CUSTOMER_ID_HERE");
     }
 
-    GoogleAdsClient googleAdsClient;
+    GoogleAdsClient googleAdsClient = null;
     try {
       googleAdsClient = GoogleAdsClient.newBuilder().fromPropertiesFile().build();
     } catch (FileNotFoundException fnfe) {
       System.err.printf(
           "Failed to load GoogleAdsClient configuration from file. Exception: %s%n", fnfe);
-      return;
+      System.exit(1);
     } catch (IOException ioe) {
       System.err.printf("Failed to create GoogleAdsClient. Exception: %s%n", ioe);
-      return;
+      System.exit(1);
     }
 
     try {
@@ -71,6 +71,7 @@ public class GetAllImageAssets {
       for (GoogleAdsError googleAdsError : gae.getGoogleAdsFailure().getErrorsList()) {
         System.err.printf("  Error %d: %s%n", i++, googleAdsError);
       }
+      System.exit(1);
     }
   }
 
@@ -84,22 +85,20 @@ public class GetAllImageAssets {
   private static void runExample(GoogleAdsClient googleAdsClient, long customerId) {
     // Creates the search query.
     String searchQuery =
-        "SELECT "
-            + "asset.name, "
+        "SELECT asset.name, "
             + "asset.image_asset.file_size, "
             + "asset.image_asset.full_size.width_pixels, "
             + "asset.image_asset.full_size.height_pixels, "
             + "asset.image_asset.full_size.url "
-            + "FROM "
-            + "asset "
-            + "WHERE "
-            + "asset.type = 'IMAGE'";
+            + "FROM asset "
+            + "WHERE asset.type = 'IMAGE'";
 
     // Creates the request.
     SearchGoogleAdsRequest request =
         SearchGoogleAdsRequest.newBuilder()
             .setCustomerId(Long.toString(customerId))
             .setPageSize(PAGE_SIZE)
+            .setReturnTotalResultsCount(true)
             .setQuery(searchQuery)
             .build();
 
@@ -120,11 +119,11 @@ public class GetAllImageAssets {
         System.out.printf(
             "Image with name '%s', file size %d bytes, width %dpx, height %dpx, and url '%s' "
                 + "found.%n",
-            row.getAsset().getName().getValue(),
-            row.getAsset().getImageAsset().getFileSize().getValue(),
-            row.getAsset().getImageAsset().getFullSize().getWidthPixels().getValue(),
-            row.getAsset().getImageAsset().getFullSize().getHeightPixels().getValue(),
-            row.getAsset().getImageAsset().getFullSize().getUrl().getValue());
+            row.getAsset().getName(),
+            row.getAsset().getImageAsset().getFileSize(),
+            row.getAsset().getImageAsset().getFullSize().getWidthPixels(),
+            row.getAsset().getImageAsset().getFullSize().getHeightPixels(),
+            row.getAsset().getImageAsset().getFullSize().getUrl());
       }
     }
   }

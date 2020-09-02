@@ -18,21 +18,19 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.v4.common.ExpandedTextAdInfo;
-import com.google.ads.googleads.v4.common.PolicyTopicEntry;
-import com.google.ads.googleads.v4.enums.AdGroupAdStatusEnum.AdGroupAdStatus;
-import com.google.ads.googleads.v4.errors.GoogleAdsError;
-import com.google.ads.googleads.v4.errors.GoogleAdsException;
-import com.google.ads.googleads.v4.errors.PolicyFindingErrorEnum.PolicyFindingError;
-import com.google.ads.googleads.v4.resources.Ad;
-import com.google.ads.googleads.v4.resources.AdGroupAd;
-import com.google.ads.googleads.v4.services.AdGroupAdOperation;
-import com.google.ads.googleads.v4.services.AdGroupAdServiceClient;
-import com.google.ads.googleads.v4.services.MutateAdGroupAdsRequest;
-import com.google.ads.googleads.v4.services.MutateAdGroupAdsResponse;
-import com.google.ads.googleads.v4.utils.ResourceNames;
-import com.google.common.collect.ImmutableList;
-import com.google.protobuf.StringValue;
+import com.google.ads.googleads.v5.common.ExpandedTextAdInfo;
+import com.google.ads.googleads.v5.common.PolicyTopicEntry;
+import com.google.ads.googleads.v5.enums.AdGroupAdStatusEnum.AdGroupAdStatus;
+import com.google.ads.googleads.v5.errors.GoogleAdsError;
+import com.google.ads.googleads.v5.errors.GoogleAdsException;
+import com.google.ads.googleads.v5.errors.PolicyFindingErrorEnum.PolicyFindingError;
+import com.google.ads.googleads.v5.resources.Ad;
+import com.google.ads.googleads.v5.resources.AdGroupAd;
+import com.google.ads.googleads.v5.services.AdGroupAdOperation;
+import com.google.ads.googleads.v5.services.AdGroupAdServiceClient;
+import com.google.ads.googleads.v5.services.MutateAdGroupAdsRequest;
+import com.google.ads.googleads.v5.services.MutateAdGroupAdsResponse;
+import com.google.ads.googleads.v5.utils.ResourceNames;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.List;
@@ -63,16 +61,16 @@ public class ValidateTextAd {
       params.adGroupId = Long.parseLong("INSERT_AD_GROUP_ID_HERE");
     }
 
-    GoogleAdsClient googleAdsClient;
+    GoogleAdsClient googleAdsClient = null;
     try {
       googleAdsClient = GoogleAdsClient.newBuilder().fromPropertiesFile().build();
     } catch (FileNotFoundException fnfe) {
       System.err.printf(
           "Failed to load GoogleAdsClient configuration from file. Exception: %s%n", fnfe);
-      return;
+      System.exit(1);
     } catch (IOException ioe) {
       System.err.printf("Failed to create GoogleAdsClient. Exception: %s%n", ioe);
-      return;
+      System.exit(1);
     }
 
     try {
@@ -89,6 +87,7 @@ public class ValidateTextAd {
       for (GoogleAdsError googleAdsError : gae.getGoogleAdsFailure().getErrorsList()) {
         System.err.printf("  Error %d: %s%n", i++, googleAdsError);
       }
+      System.exit(1);
     }
   }
 
@@ -106,23 +105,23 @@ public class ValidateTextAd {
     // Creates the expanded text ad info.
     ExpandedTextAdInfo expandedTextAdInfo =
         ExpandedTextAdInfo.newBuilder()
-            .setDescription(StringValue.of("Luxury Cruise to Mars"))
-            .setHeadlinePart1(StringValue.of("Visit the Red Planet in style"))
+            .setDescription("Luxury Cruise to Mars")
+            .setHeadlinePart1("Visit the Red Planet in style")
             // Adds a headline that will trigger a policy violation to demonstrate error handling.
-            .setHeadlinePart2(StringValue.of("Low-gravity fun for everyone!!"))
+            .setHeadlinePart2("Low-gravity fun for everyone!!")
             .build();
 
     // Wraps the info in an Ad object.
     Ad ad =
         Ad.newBuilder()
             .setExpandedTextAd(expandedTextAdInfo)
-            .addFinalUrls(StringValue.of("http://www.example.com"))
+            .addFinalUrls("http://www.example.com")
             .build();
 
     // Builds the final ad group ad representation.
     AdGroupAd adGroupAd =
         AdGroupAd.newBuilder()
-            .setAdGroup(StringValue.of(adGroupResourceName))
+            .setAdGroup(adGroupResourceName)
             .setStatus(AdGroupAdStatus.PAUSED)
             .setAd(ad)
             .build();
@@ -135,6 +134,7 @@ public class ValidateTextAd {
       MutateAdGroupAdsResponse response =
           adGroupAdServiceClient.mutateAdGroupAds(
               MutateAdGroupAdsRequest.newBuilder()
+                  .setCustomerId(String.valueOf(customerId))
                   .setCustomerId(Long.toString(customerId))
                   .addOperations(operation)
                   .setValidateOnly(true)
@@ -169,7 +169,7 @@ public class ValidateTextAd {
             for (PolicyTopicEntry policyTopicEntry : policyTopicEntries) {
               System.out.printf(
                   "%d Policy topic entry with topic '%s' and type '%s' was found.%n",
-                  count, policyTopicEntry.getTopic().getValue(), policyTopicEntry.getType());
+                  count, policyTopicEntry.getTopic(), policyTopicEntry.getType());
             }
             count++;
           }
@@ -177,6 +177,7 @@ public class ValidateTextAd {
       }
     } catch (Exception e) {
       System.out.printf("Failure: Message '%s'.%n", e.getMessage());
+      System.exit(1);
     }
   }
 }

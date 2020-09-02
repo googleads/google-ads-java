@@ -18,24 +18,24 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.v4.common.MatchingFunction;
-import com.google.ads.googleads.v4.common.Operand;
-import com.google.ads.googleads.v4.common.Operand.ConstantOperand;
-import com.google.ads.googleads.v4.enums.FeedOriginEnum.FeedOrigin;
-import com.google.ads.googleads.v4.enums.MatchingFunctionOperatorEnum.MatchingFunctionOperator;
-import com.google.ads.googleads.v4.enums.PlaceholderTypeEnum.PlaceholderType;
-import com.google.ads.googleads.v4.errors.GoogleAdsError;
-import com.google.ads.googleads.v4.errors.GoogleAdsException;
-import com.google.ads.googleads.v4.resources.CustomerFeed;
-import com.google.ads.googleads.v4.resources.Feed;
-import com.google.ads.googleads.v4.resources.Feed.PlacesLocationFeedData;
-import com.google.ads.googleads.v4.resources.Feed.PlacesLocationFeedData.OAuthInfo;
-import com.google.ads.googleads.v4.services.CustomerFeedOperation;
-import com.google.ads.googleads.v4.services.CustomerFeedServiceClient;
-import com.google.ads.googleads.v4.services.FeedOperation;
-import com.google.ads.googleads.v4.services.FeedServiceClient;
-import com.google.ads.googleads.v4.services.MutateCustomerFeedsResponse;
-import com.google.ads.googleads.v4.services.MutateFeedsResponse;
+import com.google.ads.googleads.v5.common.MatchingFunction;
+import com.google.ads.googleads.v5.common.Operand;
+import com.google.ads.googleads.v5.common.Operand.ConstantOperand;
+import com.google.ads.googleads.v5.enums.FeedOriginEnum.FeedOrigin;
+import com.google.ads.googleads.v5.enums.MatchingFunctionOperatorEnum.MatchingFunctionOperator;
+import com.google.ads.googleads.v5.enums.PlaceholderTypeEnum.PlaceholderType;
+import com.google.ads.googleads.v5.errors.GoogleAdsError;
+import com.google.ads.googleads.v5.errors.GoogleAdsException;
+import com.google.ads.googleads.v5.resources.CustomerFeed;
+import com.google.ads.googleads.v5.resources.Feed;
+import com.google.ads.googleads.v5.resources.Feed.PlacesLocationFeedData;
+import com.google.ads.googleads.v5.resources.Feed.PlacesLocationFeedData.OAuthInfo;
+import com.google.ads.googleads.v5.services.CustomerFeedOperation;
+import com.google.ads.googleads.v5.services.CustomerFeedServiceClient;
+import com.google.ads.googleads.v5.services.FeedOperation;
+import com.google.ads.googleads.v5.services.FeedServiceClient;
+import com.google.ads.googleads.v5.services.MutateCustomerFeedsResponse;
+import com.google.ads.googleads.v5.services.MutateFeedsResponse;
 import com.google.common.collect.ImmutableList;
 import com.google.protobuf.BoolValue;
 import com.google.protobuf.StringValue;
@@ -82,16 +82,16 @@ public class AddGoogleMyBusinessLocationExtensions {
       params.gmbAccessToken = "INSERT_GMB_ACCESS_TOKEN_HERE";
     }
 
-    GoogleAdsClient googleAdsClient;
+    GoogleAdsClient googleAdsClient = null;
     try {
       googleAdsClient = GoogleAdsClient.newBuilder().fromPropertiesFile().build();
     } catch (FileNotFoundException fnfe) {
       System.err.printf(
           "Failed to load GoogleAdsClient configuration from file. Exception: %s%n", fnfe);
-      return;
+      System.exit(1);
     } catch (IOException ioe) {
       System.err.printf("Failed to create GoogleAdsClient. Exception: %s%n", ioe);
-      return;
+      System.exit(1);
     }
 
     try {
@@ -114,6 +114,7 @@ public class AddGoogleMyBusinessLocationExtensions {
       for (GoogleAdsError googleAdsError : gae.getGoogleAdsFailure().getErrorsList()) {
         System.err.printf("  Error %d: %s%n", i++, googleAdsError);
       }
+      System.exit(1);
     }
   }
 
@@ -123,7 +124,7 @@ public class AddGoogleMyBusinessLocationExtensions {
    * @param googleAdsClient the Google Ads API client.
    * @param customerId the client customer ID.
    * @param gmbEmailAddress email address associated with the GMB account.
-   * @param businessAccountIdentifier the account number of the GMB account.
+   * @param businessAccountIdentifier the account number of the GMB account (optional).
    * @param gmbAccessToken the access token created using the 'AdWords' scope and the client ID and
    *     client secret of with the Cloud project associated with the GMB account.
    * @throws GoogleAdsException if an API request failed with one or more service errors.
@@ -136,35 +137,41 @@ public class AddGoogleMyBusinessLocationExtensions {
       String businessAccountIdentifier,
       String gmbAccessToken)
       throws InterruptedException {
-    // Creates a feed that will sync to the Google My Business account specified by
-    // gmbEmailAddress. Do not add FeedAttributes to this object as Google Ads will add them
-    // automatically because this will be a system generated feed.
-    Feed gmbFeed =
+    // Creates a PlacesLocationFeedData object to identify the Google My Business account, specify
+    // location filters, and provide authorization for Google Ads to retrieve locations from the
+    // account on behalf of the user identified by gmbEmailAddress.
+    PlacesLocationFeedData.Builder placesLocationFeedData =
+        PlacesLocationFeedData.newBuilder()
+            .setEmailAddress(StringValue.of(gmbEmailAddress))
+            // Used to filter Google My Business listings by labels. If entries exist in
+            // label_filters, only listings that have at least one of the labels set are
+            // candidates to be synchronized into FeedItems. If no entries exist in
+            // label_filters, then all listings are candidates for syncing.
+            .addLabelFilters(StringValue.of("Stores in New York"))
+            // Sets the authentication info to be able to connect Google Ads to the GMB
+            // account.
+            .setOauthInfo(
+                OAuthInfo.newBuilder()
+                    .setHttpMethod(StringValue.of("GET"))
+                    .setHttpRequestUrl(StringValue.of(GOOGLE_ADS_SCOPE))
+                    .setHttpAuthorizationHeader(StringValue.of("Bearer " + gmbAccessToken))
+                    .build());
+
+    if (businessAccountIdentifier != null) {
+      placesLocationFeedData.setBusinessAccountId(StringValue.of(businessAccountIdentifier));
+    }
+
+    // Creates a feed that will sync to the Google My Business account. Do not add FeedAttributes to
+    // this object as Google Ads will add them automatically because this will be a system generated
+    // feed.
+    Feed.Builder gmbFeed =
         Feed.newBuilder()
             .setName(StringValue.of("Google My Business feed #" + System.currentTimeMillis()))
             // Configures the location feed populated from Google My Business Locations.
-            .setPlacesLocationFeedData(
-                PlacesLocationFeedData.newBuilder()
-                    .setEmailAddress(StringValue.of(gmbEmailAddress))
-                    .setBusinessAccountId(StringValue.of(businessAccountIdentifier))
-                    // Used to filter Google My Business listings by labels. If entries exist in
-                    // label_filters, only listings that have at least one of the labels set are
-                    // candidates to be synchronized into FeedItems. If no entries exist in
-                    // label_filters, then all listings are candidates for syncing.
-                    .addLabelFilters(StringValue.of("Stores in New York"))
-                    // Sets the authentication info to be able to connect Google Ads to the GMB
-                    // account.
-                    .setOauthInfo(
-                        OAuthInfo.newBuilder()
-                            .setHttpMethod(StringValue.of("GET"))
-                            .setHttpRequestUrl(StringValue.of(GOOGLE_ADS_SCOPE))
-                            .setHttpAuthorizationHeader(StringValue.of("Bearer " + gmbAccessToken))
-                            .build())
-                    .build())
+            .setPlacesLocationFeedData(placesLocationFeedData)
             // Since this feed's feed items will be managed by Google,
             // you must set its origin to GOOGLE.
-            .setOrigin(FeedOrigin.GOOGLE)
-            .build();
+            .setOrigin(FeedOrigin.GOOGLE);
 
     FeedOperation operation = FeedOperation.newBuilder().setCreate(gmbFeed).build();
 

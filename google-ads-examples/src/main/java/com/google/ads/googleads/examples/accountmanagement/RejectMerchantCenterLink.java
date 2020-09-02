@@ -18,15 +18,15 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.v4.errors.GoogleAdsError;
-import com.google.ads.googleads.v4.errors.GoogleAdsException;
-import com.google.ads.googleads.v4.resources.MerchantCenterLink;
-import com.google.ads.googleads.v4.services.ListMerchantCenterLinksRequest;
-import com.google.ads.googleads.v4.services.ListMerchantCenterLinksResponse;
-import com.google.ads.googleads.v4.services.MerchantCenterLinkOperation;
-import com.google.ads.googleads.v4.services.MerchantCenterLinkServiceClient;
-import com.google.ads.googleads.v4.services.MutateMerchantCenterLinkResponse;
-import com.google.ads.googleads.v4.services.MutateMerchantCenterLinkResult;
+import com.google.ads.googleads.v5.errors.GoogleAdsError;
+import com.google.ads.googleads.v5.errors.GoogleAdsException;
+import com.google.ads.googleads.v5.resources.MerchantCenterLink;
+import com.google.ads.googleads.v5.services.ListMerchantCenterLinksRequest;
+import com.google.ads.googleads.v5.services.ListMerchantCenterLinksResponse;
+import com.google.ads.googleads.v5.services.MerchantCenterLinkOperation;
+import com.google.ads.googleads.v5.services.MerchantCenterLinkServiceClient;
+import com.google.ads.googleads.v5.services.MutateMerchantCenterLinkResponse;
+import com.google.ads.googleads.v5.services.MutateMerchantCenterLinkResult;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
@@ -59,16 +59,16 @@ public class RejectMerchantCenterLink {
       params.merchantCenterAccountId = Long.parseLong("INSERT_MERCHANT_CENTER_ACCOUNT_ID_HERE");
     }
 
-    GoogleAdsClient googleAdsClient;
+    GoogleAdsClient googleAdsClient = null;
     try {
       googleAdsClient = GoogleAdsClient.newBuilder().fromPropertiesFile().build();
     } catch (FileNotFoundException fnfe) {
       System.err.printf(
           "Failed to load GoogleAdsClient configuration from file. Exception: %s%n", fnfe);
-      return;
+      System.exit(1);
     } catch (IOException ioe) {
       System.err.printf("Failed to create GoogleAdsClient. Exception: %s%n", ioe);
-      return;
+      System.exit(1);
     }
 
     try {
@@ -86,6 +86,7 @@ public class RejectMerchantCenterLink {
       for (GoogleAdsError googleAdsError : gae.getGoogleAdsFailure().getErrorsList()) {
         System.err.printf("  Error %d: %s%n", i++, googleAdsError);
       }
+      System.exit(1);
     }
   }
 
@@ -121,7 +122,7 @@ public class RejectMerchantCenterLink {
             merchantCenterLink.getResourceName(), merchantCenterLink.getStatus());
 
         // Checks if there is a link for the Merchant Center account we are looking for.
-        if (merchantCenterAccountId == merchantCenterLink.getId().getValue()) {
+        if (merchantCenterAccountId == merchantCenterLink.getId()) {
           // If the Merchant Center link is pending, reject it by removing the link.
           // If the Merchant Center link is enabled, unlink Merchant Center from Google Ads by
           // removing the link.

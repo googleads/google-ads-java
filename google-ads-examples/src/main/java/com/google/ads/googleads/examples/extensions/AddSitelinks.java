@@ -18,29 +18,28 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.v4.common.AdScheduleInfo;
-import com.google.ads.googleads.v4.common.KeywordInfo;
-import com.google.ads.googleads.v4.common.SitelinkFeedItem;
-import com.google.ads.googleads.v4.enums.DayOfWeekEnum.DayOfWeek;
-import com.google.ads.googleads.v4.enums.ExtensionTypeEnum.ExtensionType;
-import com.google.ads.googleads.v4.enums.FeedItemTargetDeviceEnum.FeedItemTargetDevice;
-import com.google.ads.googleads.v4.enums.KeywordMatchTypeEnum.KeywordMatchType;
-import com.google.ads.googleads.v4.enums.MinuteOfHourEnum.MinuteOfHour;
-import com.google.ads.googleads.v4.errors.GoogleAdsError;
-import com.google.ads.googleads.v4.errors.GoogleAdsException;
-import com.google.ads.googleads.v4.resources.CampaignExtensionSetting;
-import com.google.ads.googleads.v4.resources.ExtensionFeedItem;
-import com.google.ads.googleads.v4.services.CampaignExtensionSettingOperation;
-import com.google.ads.googleads.v4.services.CampaignExtensionSettingServiceClient;
-import com.google.ads.googleads.v4.services.ExtensionFeedItemOperation;
-import com.google.ads.googleads.v4.services.ExtensionFeedItemServiceClient;
-import com.google.ads.googleads.v4.services.MutateCampaignExtensionSettingResult;
-import com.google.ads.googleads.v4.services.MutateCampaignExtensionSettingsResponse;
-import com.google.ads.googleads.v4.services.MutateExtensionFeedItemResult;
-import com.google.ads.googleads.v4.services.MutateExtensionFeedItemsResponse;
-import com.google.ads.googleads.v4.utils.ResourceNames;
+import com.google.ads.googleads.v5.common.AdScheduleInfo;
+import com.google.ads.googleads.v5.common.KeywordInfo;
+import com.google.ads.googleads.v5.common.SitelinkFeedItem;
+import com.google.ads.googleads.v5.enums.DayOfWeekEnum.DayOfWeek;
+import com.google.ads.googleads.v5.enums.ExtensionTypeEnum.ExtensionType;
+import com.google.ads.googleads.v5.enums.FeedItemTargetDeviceEnum.FeedItemTargetDevice;
+import com.google.ads.googleads.v5.enums.KeywordMatchTypeEnum.KeywordMatchType;
+import com.google.ads.googleads.v5.enums.MinuteOfHourEnum.MinuteOfHour;
+import com.google.ads.googleads.v5.errors.GoogleAdsError;
+import com.google.ads.googleads.v5.errors.GoogleAdsException;
+import com.google.ads.googleads.v5.resources.CampaignExtensionSetting;
+import com.google.ads.googleads.v5.resources.ExtensionFeedItem;
+import com.google.ads.googleads.v5.services.CampaignExtensionSettingOperation;
+import com.google.ads.googleads.v5.services.CampaignExtensionSettingServiceClient;
+import com.google.ads.googleads.v5.services.ExtensionFeedItemOperation;
+import com.google.ads.googleads.v5.services.ExtensionFeedItemServiceClient;
+import com.google.ads.googleads.v5.services.MutateCampaignExtensionSettingResult;
+import com.google.ads.googleads.v5.services.MutateCampaignExtensionSettingsResponse;
+import com.google.ads.googleads.v5.services.MutateExtensionFeedItemResult;
+import com.google.ads.googleads.v5.services.MutateExtensionFeedItemsResponse;
+import com.google.ads.googleads.v5.utils.ResourceNames;
 import com.google.common.collect.ImmutableList;
-import com.google.protobuf.Int32Value;
 import com.google.protobuf.StringValue;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -70,16 +69,16 @@ public class AddSitelinks {
       params.campaignId = Long.parseLong("INSERT_CAMPAIGN_ID_HERE");
     }
 
-    GoogleAdsClient googleAdsClient;
+    GoogleAdsClient googleAdsClient = null;
     try {
       googleAdsClient = GoogleAdsClient.newBuilder().fromPropertiesFile().build();
     } catch (FileNotFoundException fnfe) {
       System.err.printf(
           "Failed to load GoogleAdsClient configuration from file. Exception: %s%n", fnfe);
-      return;
+      System.exit(1);
     } catch (IOException ioe) {
       System.err.printf("Failed to create GoogleAdsClient. Exception: %s%n", ioe);
-      return;
+      System.exit(1);
     }
 
     try {
@@ -96,6 +95,7 @@ public class AddSitelinks {
       for (GoogleAdsError googleAdsError : gae.getGoogleAdsFailure().getErrorsList()) {
         System.err.printf("  Error %d: %s%n", i++, googleAdsError);
       }
+      System.exit(1);
     }
   }
 
@@ -207,7 +207,7 @@ public class AddSitelinks {
             .setDevice(FeedItemTargetDevice.MOBILE)
             .setTargetedKeyword(
                 KeywordInfo.newBuilder()
-                    .setText(StringValue.of("free wifi"))
+                    .setText("free wifi")
                     .setMatchType(KeywordMatchType.BROAD)
                     .build())
             .build();
@@ -285,9 +285,9 @@ public class AddSitelinks {
       DayOfWeek day, int startHour, MinuteOfHour startMinute, int endHour, MinuteOfHour endMinute) {
     return AdScheduleInfo.newBuilder()
         .setDayOfWeek(day)
-        .setStartHour(Int32Value.of(startHour))
+        .setStartHour(startHour)
         .setStartMinute(startMinute)
-        .setEndHour(Int32Value.of(endHour))
+        .setEndHour(endHour)
         .setEndMinute(endMinute)
         .build();
   }

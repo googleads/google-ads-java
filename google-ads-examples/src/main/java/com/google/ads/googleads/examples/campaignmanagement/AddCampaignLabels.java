@@ -18,14 +18,14 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.v4.errors.GoogleAdsError;
-import com.google.ads.googleads.v4.errors.GoogleAdsException;
-import com.google.ads.googleads.v4.resources.CampaignLabel;
-import com.google.ads.googleads.v4.services.CampaignLabelOperation;
-import com.google.ads.googleads.v4.services.CampaignLabelServiceClient;
-import com.google.ads.googleads.v4.services.MutateCampaignLabelResult;
-import com.google.ads.googleads.v4.services.MutateCampaignLabelsResponse;
-import com.google.ads.googleads.v4.utils.ResourceNames;
+import com.google.ads.googleads.v5.errors.GoogleAdsError;
+import com.google.ads.googleads.v5.errors.GoogleAdsException;
+import com.google.ads.googleads.v5.resources.CampaignLabel;
+import com.google.ads.googleads.v5.services.CampaignLabelOperation;
+import com.google.ads.googleads.v5.services.CampaignLabelServiceClient;
+import com.google.ads.googleads.v5.services.MutateCampaignLabelResult;
+import com.google.ads.googleads.v5.services.MutateCampaignLabelsResponse;
+import com.google.ads.googleads.v5.utils.ResourceNames;
 import com.google.protobuf.StringValue;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -41,7 +41,7 @@ public class AddCampaignLabels {
     @Parameter(names = ArgumentNames.CUSTOMER_ID, required = true)
     private Long customerId;
 
-    @Parameter(names = ArgumentNames.CAMPAIGN_ID, required = true)
+    @Parameter(names = ArgumentNames.CAMPAIGN_IDS, required = true)
     private List<Long> campaignIds = new ArrayList<>();
 
     @Parameter(names = ArgumentNames.LABEL_ID, required = true)
@@ -61,16 +61,16 @@ public class AddCampaignLabels {
       params.labelId = Long.parseLong("INSERT_LABEL_ID_HERE");
     }
 
-    GoogleAdsClient googleAdsClient;
+    GoogleAdsClient googleAdsClient = null;
     try {
       googleAdsClient = GoogleAdsClient.newBuilder().fromPropertiesFile().build();
     } catch (FileNotFoundException fnfe) {
       System.err.printf(
           "Failed to load GoogleAdsClient configuration from file. Exception: %s%n", fnfe);
-      return;
+      System.exit(1);
     } catch (IOException ioe) {
       System.err.printf("Failed to create GoogleAdsClient. Exception: %s%n", ioe);
-      return;
+      System.exit(1);
     }
 
     try {
@@ -88,6 +88,7 @@ public class AddCampaignLabels {
       for (GoogleAdsError googleAdsError : gae.getGoogleAdsFailure().getErrorsList()) {
         System.err.printf("  Error %d: %s%n", i++, googleAdsError);
       }
+      System.exit(1);
     }
   }
 

@@ -18,18 +18,16 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.v4.enums.AdGroupStatusEnum.AdGroupStatus;
-import com.google.ads.googleads.v4.enums.AdGroupTypeEnum.AdGroupType;
-import com.google.ads.googleads.v4.errors.GoogleAdsError;
-import com.google.ads.googleads.v4.errors.GoogleAdsException;
-import com.google.ads.googleads.v4.resources.AdGroup;
-import com.google.ads.googleads.v4.services.AdGroupOperation;
-import com.google.ads.googleads.v4.services.AdGroupServiceClient;
-import com.google.ads.googleads.v4.services.MutateAdGroupResult;
-import com.google.ads.googleads.v4.services.MutateAdGroupsResponse;
-import com.google.ads.googleads.v4.utils.ResourceNames;
-import com.google.protobuf.Int64Value;
-import com.google.protobuf.StringValue;
+import com.google.ads.googleads.v5.enums.AdGroupStatusEnum.AdGroupStatus;
+import com.google.ads.googleads.v5.enums.AdGroupTypeEnum.AdGroupType;
+import com.google.ads.googleads.v5.errors.GoogleAdsError;
+import com.google.ads.googleads.v5.errors.GoogleAdsException;
+import com.google.ads.googleads.v5.resources.AdGroup;
+import com.google.ads.googleads.v5.services.AdGroupOperation;
+import com.google.ads.googleads.v5.services.AdGroupServiceClient;
+import com.google.ads.googleads.v5.services.MutateAdGroupResult;
+import com.google.ads.googleads.v5.services.MutateAdGroupsResponse;
+import com.google.ads.googleads.v5.utils.ResourceNames;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -57,16 +55,16 @@ public class AddAdGroups {
       params.campaignId = Long.parseLong("INSERT_CAMPAIGN_ID_HERE");
     }
 
-    GoogleAdsClient googleAdsClient;
+    GoogleAdsClient googleAdsClient = null;
     try {
       googleAdsClient = GoogleAdsClient.newBuilder().fromPropertiesFile().build();
     } catch (FileNotFoundException fnfe) {
       System.err.printf(
           "Failed to load GoogleAdsClient configuration from file. Exception: %s%n", fnfe);
-      return;
+      System.exit(1);
     } catch (IOException ioe) {
       System.err.printf("Failed to create GoogleAdsClient. Exception: %s%n", ioe);
-      return;
+      System.exit(1);
     }
 
     try {
@@ -83,6 +81,7 @@ public class AddAdGroups {
       for (GoogleAdsError googleAdsError : gae.getGoogleAdsFailure().getErrorsList()) {
         System.err.printf("  Error %d: %s%n", i++, googleAdsError);
       }
+      System.exit(1);
     }
   }
 
@@ -100,21 +99,21 @@ public class AddAdGroups {
     // Creates an ad group, setting an optional CPC value.
     AdGroup adGroup1 =
         AdGroup.newBuilder()
-            .setName(StringValue.of("Earth to Mars Cruises #" + System.currentTimeMillis()))
+            .setName("Earth to Mars Cruises #" + System.currentTimeMillis())
             .setStatus(AdGroupStatus.ENABLED)
-            .setCampaign(StringValue.of(campaignResourceName))
+            .setCampaign(campaignResourceName)
             .setType(AdGroupType.SEARCH_STANDARD)
-            .setCpcBidMicros(Int64Value.of(10_000_000L))
+            .setCpcBidMicros(10_000_000L)
             .build();
 
     // You may add as many additional ad groups as you need.
     AdGroup adGroup2 =
         AdGroup.newBuilder()
-            .setName(StringValue.of("Earth to Venus Cruises #" + System.currentTimeMillis()))
+            .setName("Earth to Venus Cruises #" + System.currentTimeMillis())
             .setStatus(AdGroupStatus.ENABLED)
-            .setCampaign(StringValue.of(campaignResourceName))
+            .setCampaign(campaignResourceName)
             .setType(AdGroupType.SEARCH_STANDARD)
-            .setCpcBidMicros(Int64Value.of(10_000_000L))
+            .setCpcBidMicros(10_000_000L)
             .build();
 
     List<AdGroupOperation> operations = new ArrayList<>();

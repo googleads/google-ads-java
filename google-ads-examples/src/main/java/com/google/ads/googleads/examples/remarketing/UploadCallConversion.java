@@ -18,16 +18,13 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.v4.errors.GoogleAdsError;
-import com.google.ads.googleads.v4.errors.GoogleAdsException;
-import com.google.ads.googleads.v4.services.CallConversion;
-import com.google.ads.googleads.v4.services.CallConversionResult;
-import com.google.ads.googleads.v4.services.ConversionUploadServiceClient;
-import com.google.ads.googleads.v4.services.UploadCallConversionsRequest;
-import com.google.ads.googleads.v4.services.UploadCallConversionsResponse;
-import com.google.common.collect.ImmutableList;
-import com.google.protobuf.DoubleValue;
-import com.google.protobuf.StringValue;
+import com.google.ads.googleads.v5.errors.GoogleAdsError;
+import com.google.ads.googleads.v5.errors.GoogleAdsException;
+import com.google.ads.googleads.v5.services.CallConversion;
+import com.google.ads.googleads.v5.services.CallConversionResult;
+import com.google.ads.googleads.v5.services.ConversionUploadServiceClient;
+import com.google.ads.googleads.v5.services.UploadCallConversionsRequest;
+import com.google.ads.googleads.v5.services.UploadCallConversionsResponse;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
@@ -77,16 +74,16 @@ public class UploadCallConversion {
       params.conversionValue = Double.parseDouble("INSERT_CONVERSION_VALUE");
     }
 
-    GoogleAdsClient googleAdsClient;
+    GoogleAdsClient googleAdsClient = null;
     try {
       googleAdsClient = GoogleAdsClient.newBuilder().fromPropertiesFile().build();
     } catch (FileNotFoundException fnfe) {
       System.err.printf(
           "Failed to load GoogleAdsClient configuration from file. Exception: %s%n", fnfe);
-      return;
+      System.exit(1);
     } catch (IOException ioe) {
       System.err.printf("Failed to create GoogleAdsClient. Exception: %s%n", ioe);
-      return;
+      System.exit(1);
     }
 
     try {
@@ -110,6 +107,7 @@ public class UploadCallConversion {
       for (GoogleAdsError googleAdsError : gae.getGoogleAdsFailure().getErrorsList()) {
         System.err.printf("  Error %d: %s%n", i++, googleAdsError);
       }
+      System.exit(1);
     }
   }
 
@@ -133,11 +131,11 @@ public class UploadCallConversion {
     // Create a call conversion by specifying currency as USD.
     CallConversion conversion =
         CallConversion.newBuilder()
-            .setConversionAction(StringValue.of(conversionActionId))
-            .setCallerId(StringValue.of(callerId))
-            .setCallStartDateTime(StringValue.of(callStartDateTime))
-            .setConversionValue(DoubleValue.of(conversionValue))
-            .setCurrencyCode(StringValue.of("USD"))
+            .setConversionAction(conversionActionId)
+            .setCallerId(callerId)
+            .setCallStartDateTime(callStartDateTime)
+            .setConversionValue(conversionValue)
+            .setCurrencyCode("USD")
             .build();
 
     // Uploads the call conversion to the API.
@@ -147,6 +145,7 @@ public class UploadCallConversion {
       UploadCallConversionsResponse response =
           conversionUploadServiceClient.uploadCallConversions(
               UploadCallConversionsRequest.newBuilder()
+                  .setCustomerId(String.valueOf(customerId))
                   .setCustomerId(Long.toString(customerId))
                   .addConversions(conversion)
                   .setPartialFailure(true)
@@ -163,9 +162,7 @@ public class UploadCallConversion {
       System.out.printf(
           "Uploaded call conversion that occurred at '%' for caller ID '%' to the conversion"
               + " action with resource name '%'.%n",
-          result.getCallStartDateTime().getValue(),
-          result.getCallerId().getValue(),
-          result.getConversionAction().getValue());
+          result.getCallStartDateTime(), result.getCallerId(), result.getConversionAction());
     }
   }
 }

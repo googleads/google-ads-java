@@ -18,18 +18,17 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.v4.common.ExpandedTextAdInfo;
-import com.google.ads.googleads.v4.enums.AdGroupAdStatusEnum.AdGroupAdStatus;
-import com.google.ads.googleads.v4.errors.GoogleAdsError;
-import com.google.ads.googleads.v4.errors.GoogleAdsException;
-import com.google.ads.googleads.v4.resources.Ad;
-import com.google.ads.googleads.v4.resources.AdGroupAd;
-import com.google.ads.googleads.v4.services.AdGroupAdOperation;
-import com.google.ads.googleads.v4.services.AdGroupAdServiceClient;
-import com.google.ads.googleads.v4.services.MutateAdGroupAdResult;
-import com.google.ads.googleads.v4.services.MutateAdGroupAdsResponse;
-import com.google.ads.googleads.v4.utils.ResourceNames;
-import com.google.protobuf.StringValue;
+import com.google.ads.googleads.v5.common.ExpandedTextAdInfo;
+import com.google.ads.googleads.v5.enums.AdGroupAdStatusEnum.AdGroupAdStatus;
+import com.google.ads.googleads.v5.errors.GoogleAdsError;
+import com.google.ads.googleads.v5.errors.GoogleAdsException;
+import com.google.ads.googleads.v5.resources.Ad;
+import com.google.ads.googleads.v5.resources.AdGroupAd;
+import com.google.ads.googleads.v5.services.AdGroupAdOperation;
+import com.google.ads.googleads.v5.services.AdGroupAdServiceClient;
+import com.google.ads.googleads.v5.services.MutateAdGroupAdResult;
+import com.google.ads.googleads.v5.services.MutateAdGroupAdsResponse;
+import com.google.ads.googleads.v5.utils.ResourceNames;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -60,16 +59,16 @@ public class AddExpandedTextAds {
       params.adGroupId = Long.parseLong("INSERT_AD_GROUP_ID_HERE");
     }
 
-    GoogleAdsClient googleAdsClient;
+    GoogleAdsClient googleAdsClient = null;
     try {
       googleAdsClient = GoogleAdsClient.newBuilder().fromPropertiesFile().build();
     } catch (FileNotFoundException fnfe) {
       System.err.printf(
           "Failed to load GoogleAdsClient configuration from file. Exception: %s%n", fnfe);
-      return;
+      System.exit(1);
     } catch (IOException ioe) {
       System.err.printf("Failed to create GoogleAdsClient. Exception: %s%n", ioe);
-      return;
+      System.exit(1);
     }
 
     try {
@@ -86,6 +85,7 @@ public class AddExpandedTextAds {
       for (GoogleAdsError googleAdsError : gae.getGoogleAdsFailure().getErrorsList()) {
         System.err.printf("  Error %d: %s%n", i++, googleAdsError);
       }
+      System.exit(1);
     }
   }
 
@@ -108,22 +108,22 @@ public class AddExpandedTextAds {
       // Creates the expanded text ad info.
       ExpandedTextAdInfo expandedTextAdInfo =
           ExpandedTextAdInfo.newBuilder()
-              .setHeadlinePart1(StringValue.of(String.format("Cruise #%d to Mars", i)))
-              .setHeadlinePart2(StringValue.of("Best Space Cruise Line"))
-              .setDescription(StringValue.of("Buy your tickets now!"))
+              .setHeadlinePart1(String.format("Cruise #%d to Mars", i))
+              .setHeadlinePart2("Best Space Cruise Line")
+              .setDescription("Buy your tickets now!")
               .build();
 
       // Wraps the info in an Ad object.
       Ad ad =
           Ad.newBuilder()
               .setExpandedTextAd(expandedTextAdInfo)
-              .addFinalUrls(StringValue.of("http://www.example.com"))
+              .addFinalUrls("http://www.example.com")
               .build();
 
       // Builds the final ad group ad representation.
       AdGroupAd adGroupAd =
           AdGroupAd.newBuilder()
-              .setAdGroup(StringValue.of(adGroupResourceName))
+              .setAdGroup(adGroupResourceName)
               .setStatus(AdGroupAdStatus.PAUSED)
               .setAd(ad)
               .build();

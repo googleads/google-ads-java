@@ -18,26 +18,23 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.v4.common.ManualCpc;
-import com.google.ads.googleads.v4.enums.AdvertisingChannelTypeEnum.AdvertisingChannelType;
-import com.google.ads.googleads.v4.enums.BudgetDeliveryMethodEnum.BudgetDeliveryMethod;
-import com.google.ads.googleads.v4.enums.CampaignStatusEnum.CampaignStatus;
-import com.google.ads.googleads.v4.errors.GoogleAdsError;
-import com.google.ads.googleads.v4.errors.GoogleAdsException;
-import com.google.ads.googleads.v4.resources.Campaign;
-import com.google.ads.googleads.v4.resources.Campaign.NetworkSettings;
-import com.google.ads.googleads.v4.resources.CampaignBudget;
-import com.google.ads.googleads.v4.services.CampaignBudgetOperation;
-import com.google.ads.googleads.v4.services.CampaignBudgetServiceClient;
-import com.google.ads.googleads.v4.services.CampaignOperation;
-import com.google.ads.googleads.v4.services.CampaignServiceClient;
-import com.google.ads.googleads.v4.services.MutateCampaignBudgetsResponse;
-import com.google.ads.googleads.v4.services.MutateCampaignResult;
-import com.google.ads.googleads.v4.services.MutateCampaignsResponse;
+import com.google.ads.googleads.v5.common.ManualCpc;
+import com.google.ads.googleads.v5.enums.AdvertisingChannelTypeEnum.AdvertisingChannelType;
+import com.google.ads.googleads.v5.enums.BudgetDeliveryMethodEnum.BudgetDeliveryMethod;
+import com.google.ads.googleads.v5.enums.CampaignStatusEnum.CampaignStatus;
+import com.google.ads.googleads.v5.errors.GoogleAdsError;
+import com.google.ads.googleads.v5.errors.GoogleAdsException;
+import com.google.ads.googleads.v5.resources.Campaign;
+import com.google.ads.googleads.v5.resources.Campaign.NetworkSettings;
+import com.google.ads.googleads.v5.resources.CampaignBudget;
+import com.google.ads.googleads.v5.services.CampaignBudgetOperation;
+import com.google.ads.googleads.v5.services.CampaignBudgetServiceClient;
+import com.google.ads.googleads.v5.services.CampaignOperation;
+import com.google.ads.googleads.v5.services.CampaignServiceClient;
+import com.google.ads.googleads.v5.services.MutateCampaignBudgetsResponse;
+import com.google.ads.googleads.v5.services.MutateCampaignResult;
+import com.google.ads.googleads.v5.services.MutateCampaignsResponse;
 import com.google.common.collect.ImmutableList;
-import com.google.protobuf.BoolValue;
-import com.google.protobuf.Int64Value;
-import com.google.protobuf.StringValue;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -65,16 +62,16 @@ public class AddCampaigns {
       params.customerId = Long.parseLong("INSERT_CUSTOMER_ID_HERE");
     }
 
-    GoogleAdsClient googleAdsClient;
+    GoogleAdsClient googleAdsClient = null;
     try {
       googleAdsClient = GoogleAdsClient.newBuilder().fromPropertiesFile().build();
     } catch (FileNotFoundException fnfe) {
       System.err.printf(
           "Failed to load GoogleAdsClient configuration from file. Exception: %s%n", fnfe);
-      return;
+      System.exit(1);
     } catch (IOException ioe) {
       System.err.printf("Failed to create GoogleAdsClient. Exception: %s%n", ioe);
-      return;
+      System.exit(1);
     }
 
     try {
@@ -91,6 +88,7 @@ public class AddCampaigns {
       for (GoogleAdsError googleAdsError : gae.getGoogleAdsFailure().getErrorsList()) {
         System.err.printf("  Error %d: %s%n", i++, googleAdsError);
       }
+      System.exit(1);
     }
   }
 
@@ -105,9 +103,9 @@ public class AddCampaigns {
   private static String addCampaignBudget(GoogleAdsClient googleAdsClient, long customerId) {
     CampaignBudget budget =
         CampaignBudget.newBuilder()
-            .setName(StringValue.of("Interplanetary Cruise Budget #" + System.currentTimeMillis()))
+            .setName("Interplanetary Cruise Budget #" + System.currentTimeMillis())
             .setDeliveryMethod(BudgetDeliveryMethod.STANDARD)
-            .setAmountMicros(Int64Value.of(500_000))
+            .setAmountMicros(500_000)
             .build();
 
     CampaignBudgetOperation op = CampaignBudgetOperation.newBuilder().setCreate(budget).build();
@@ -141,16 +139,16 @@ public class AddCampaigns {
       // Configures the campaign network options
       NetworkSettings networkSettings =
           NetworkSettings.newBuilder()
-              .setTargetGoogleSearch(BoolValue.of(true))
-              .setTargetSearchNetwork(BoolValue.of(true))
-              .setTargetContentNetwork(BoolValue.of(false))
-              .setTargetPartnerSearchNetwork(BoolValue.of(false))
+              .setTargetGoogleSearch(true)
+              .setTargetSearchNetwork(true)
+              .setTargetContentNetwork(false)
+              .setTargetPartnerSearchNetwork(false)
               .build();
 
       // Creates the campaign.
       Campaign campaign =
           Campaign.newBuilder()
-              .setName(StringValue.of("Interplanetary Cruise #" + System.currentTimeMillis()))
+              .setName("Interplanetary Cruise #" + System.currentTimeMillis())
               .setAdvertisingChannelType(AdvertisingChannelType.SEARCH)
               // Recommendation: Set the campaign to PAUSED when creating it to prevent
               // the ads from immediately serving. Set to ENABLED once you've added
@@ -158,12 +156,12 @@ public class AddCampaigns {
               .setStatus(CampaignStatus.PAUSED)
               // Sets the bidding strategy and budget.
               .setManualCpc(ManualCpc.newBuilder().build())
-              .setCampaignBudget(StringValue.of(budgetResourceName))
+              .setCampaignBudget(budgetResourceName)
               // Adds the networkSettings configured above.
               .setNetworkSettings(networkSettings)
               // Optional: Sets the start & end dates.
-              .setStartDate(StringValue.of(new DateTime().plusDays(1).toString("yyyyMMdd")))
-              .setEndDate(StringValue.of(new DateTime().plusDays(30).toString("yyyyMMdd")))
+              .setStartDate(new DateTime().plusDays(1).toString("yyyyMMdd"))
+              .setEndDate(new DateTime().plusDays(30).toString("yyyyMMdd"))
               .build();
 
       CampaignOperation op = CampaignOperation.newBuilder().setCreate(campaign).build();

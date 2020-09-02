@@ -14,7 +14,7 @@
 
 package com.google.ads.googleads.lib;
 
-import com.google.ads.googleads.lib.catalog.ApiCatalog;
+import com.google.ads.googleads.lib.catalog.GeneratedCatalog;
 import com.google.ads.googleads.lib.catalog.Version;
 import com.google.api.gax.rpc.ApiException;
 import java.util.Optional;
@@ -26,7 +26,7 @@ import java.util.Optional;
 public class GoogleAdsExceptionTransformation
     implements ExceptionTransformingCallable.ExceptionTransformation {
 
-  private static final ApiCatalog catalog = ApiCatalog.getDefault();
+  private static final GeneratedCatalog catalog = GeneratedCatalog.getDefault();
 
   @Override
   public Throwable transform(ApiException apiException) {

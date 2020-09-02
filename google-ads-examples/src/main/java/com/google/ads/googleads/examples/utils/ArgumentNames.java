@@ -19,13 +19,16 @@ public final class ArgumentNames {
 
   // Note to contributors: please insert new items alphabetically.
   public static final String AD_GROUP_ID = "--adGroupId";
+  public static final String AD_GROUP_IDS = "--adGroupIds";
   public static final String AD_ID = "--adId";
   public static final String ADJUSTMENT_DATE_TIME = "--adjustmentDateTime";
   public static final String ADJUSTMENT_TYPE = "--adjustmentType";
   public static final String ADVERTISER_UPLOAD_DATE_TIME = "--advertiserUploadDateTime";
   public static final String ARTIFACT_NAME = "--artifactName";
   public static final String ATTRIBUTE_VALUE = "--attributeValue";
+  public static final String BASE_CAMPAIGN_ID = "--baseCampaignId";
   public static final String BID_MODIFIER = "--bidModifier";
+  public static final String BID_MODIFIER_VALUE = "--bidModifierValue";
   public static final String BILLING_SETUP_ID = "--billingSetupId";
   public static final String BRIDGE_MAP_VERSION_ID = "--bridgeMapVersionId";
   public static final String BUSINESS_ACCOUNT_IDENTIFIER = "--businessAccountIdentifier";
@@ -33,24 +36,27 @@ public final class ArgumentNames {
   public static final String CALLOUT_TEXT = "--calloutText";
   public static final String CALL_START_DATE_TIME = "--callStartDateTime";
   public static final String CAMPAIGN_BUDGET_ID = "--campaignBudgetId";
+  public static final String CAMPAIGN_EXPERIMENT_ID = "--campaignExperimentId";
   public static final String CAMPAIGN_ID = "--campaignId";
+  public static final String CAMPAIGN_IDS = "--campaignIds";
+  public static final String CARRIER_COUNTRY_CODE = "--carrierCountryCode";
   public static final String CONVERSION_ACTION_ID = "--conversionActionId";
+  public static final String CONVERSION_ACTION_IDS = "--conversionActionIds";
   public static final String CONVERSION_DATE_TIME = "--conversionDateTime";
   public static final String CONVERSION_VALUE = "--conversionValue";
-  public static final String COUNTRY_CODE = "--countryCode";
   public static final String CPC_BID_CEILING_MICRO_AMOUNT = "--cpcBidCeilingMicroAmount";
   public static final String CPC_BID_MICRO_AMOUNT = "--cpcBidMicroAmount";
   public static final String CREATE_DEFAULT_LISTING_GROUP = "--createDefaultListingGroup";
   public static final String CRITERION_ID = "--criterionId";
   public static final String CUSTOMER_ID = "--customerId";
   public static final String CUSTOM_KEY = "--customKey";
+  public static final String CUSTOMER_IDS = "--customerIds";
   public static final String DRAFT_ID = "--draftId";
-  public static final String EXPERIMENT_ID = "--experimentId";
   public static final String EXTERNAL_ID = "--externalId";
   public static final String FEED_ID = "--feedId";
   public static final String FEED_ITEM_ID = "--feedItemId";
   public static final String FEED_ITEM_IDS = "--feedItemIds";
-  public static final String FLIGHT_PLACEHOLDER_FIELD = "--flightPlaceholderField";
+  public static final String FLIGHT_PLACEHOLDER_FIELD_NAME = "--flightPlaceholderFieldName";
   public static final String GCLID = "--gclid";
   public static final String GEO_TARGET_CONSTANT_ID = "--geoTargetConstantId";
   public static final String GMB_ACCESS_TOKEN = "--gmbAccessToken";
@@ -58,12 +64,15 @@ public final class ArgumentNames {
   public static final String HOTEL_CENTER_ACCOUNT_ID = "--hotelCenterAccountId";
   public static final String KEYWORD_PLAN_ID = "--keywordPlanId";
   public static final String KEYWORD_TEXT = "--keywordText";
+  public static final String KEYWORD_TEXTS = "--keywordTexts";
   public static final String LABEL_ID = "--labelId";
   public static final String LANGUAGE_CODE = "--languageCode";
   public static final String LANGUAGE_ID = "--languageId";
   public static final String LANGUAGE_NAME = "--languageName";
   public static final String LOCATION_ID = "--locationId";
+  public static final String LOCATION_IDS = "--locationIds";
   public static final String LOGIN_CUSTOMER_ID = "--loginCustomerId";
+  public static final String MANAGER_CUSTOMER_ID = "--managerCustomerId";
   public static final String MANAGER_ID = "--managerId";
   public static final String MARKETING_IMAGE_ASSET_RESOURCE_NAME =
       "--marketingImageAssetResourceName";
@@ -80,4 +89,5 @@ public final class ArgumentNames {
   public static final String SQUARE_MARKETING_IMAGE_ASSET_RESOURCE_NAME =
       "--squareMarketingImageAssetResourceName";
   public static final String USER_LIST_ID = "--userListId";
+  public static final String USER_LIST_IDS = "--userListIds";
 }

@@ -18,20 +18,19 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.v4.common.CustomParameter;
-import com.google.ads.googleads.v4.common.ExpandedTextAdInfo;
-import com.google.ads.googleads.v4.enums.AdGroupAdStatusEnum.AdGroupAdStatus;
-import com.google.ads.googleads.v4.errors.GoogleAdsError;
-import com.google.ads.googleads.v4.errors.GoogleAdsException;
-import com.google.ads.googleads.v4.resources.Ad;
-import com.google.ads.googleads.v4.resources.AdGroupAd;
-import com.google.ads.googleads.v4.services.AdGroupAdOperation;
-import com.google.ads.googleads.v4.services.AdGroupAdServiceClient;
-import com.google.ads.googleads.v4.services.MutateAdGroupAdResult;
-import com.google.ads.googleads.v4.services.MutateAdGroupAdsResponse;
-import com.google.ads.googleads.v4.utils.ResourceNames;
+import com.google.ads.googleads.v5.common.CustomParameter;
+import com.google.ads.googleads.v5.common.ExpandedTextAdInfo;
+import com.google.ads.googleads.v5.enums.AdGroupAdStatusEnum.AdGroupAdStatus;
+import com.google.ads.googleads.v5.errors.GoogleAdsError;
+import com.google.ads.googleads.v5.errors.GoogleAdsException;
+import com.google.ads.googleads.v5.resources.Ad;
+import com.google.ads.googleads.v5.resources.AdGroupAd;
+import com.google.ads.googleads.v5.services.AdGroupAdOperation;
+import com.google.ads.googleads.v5.services.AdGroupAdServiceClient;
+import com.google.ads.googleads.v5.services.MutateAdGroupAdResult;
+import com.google.ads.googleads.v5.services.MutateAdGroupAdsResponse;
+import com.google.ads.googleads.v5.utils.ResourceNames;
 import com.google.common.collect.ImmutableList;
-import com.google.protobuf.StringValue;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
@@ -57,16 +56,16 @@ public class AddExpandedTextAdWithUpgradedUrls {
       params.adGroupId = Long.parseLong("INSERT_AD_GROUP_ID_HERE");
     }
 
-    GoogleAdsClient googleAdsClient;
+    GoogleAdsClient googleAdsClient = null;
     try {
       googleAdsClient = GoogleAdsClient.newBuilder().fromPropertiesFile().build();
     } catch (FileNotFoundException fnfe) {
       System.err.printf(
           "Failed to load GoogleAdsClient configuration from file. Exception: %s%n", fnfe);
-      return;
+      System.exit(1);
     } catch (IOException ioe) {
       System.err.printf("Failed to create GoogleAdsClient. Exception: %s%n", ioe);
-      return;
+      System.exit(1);
     }
 
     try {
@@ -84,6 +83,7 @@ public class AddExpandedTextAdWithUpgradedUrls {
       for (GoogleAdsError googleAdsError : gae.getGoogleAdsFailure().getErrorsList()) {
         System.err.printf("  Error %d: %s%n", i++, googleAdsError);
       }
+      System.exit(1);
     }
   }
 
@@ -103,48 +103,38 @@ public class AddExpandedTextAdWithUpgradedUrls {
         Ad.newBuilder()
             .setExpandedTextAd(
                 ExpandedTextAdInfo.newBuilder()
-                    .setDescription(StringValue.of("Low-gravity fun for everyone!"))
-                    .setHeadlinePart1(StringValue.of("Luxury Cruise to Mars"))
-                    .setHeadlinePart2(StringValue.of("Visit the Red Planet in style."))
+                    .setDescription("Low-gravity fun for everyone!")
+                    .setHeadlinePart1("Luxury Cruise to Mars")
+                    .setHeadlinePart2("Visit the Red Planet in style.")
                     .build())
             // Specifies a tracking URL for 3rd party tracking provider. You may specify one at
             // customer, campaign, ad group, ad, criterion or feed item levels.
             .setTrackingUrlTemplate(
-                StringValue.of(
-                    "http://tracker.example.com/?season={_season}&promocode={_promocode}"
-                        + "&u={lpurl}"))
+                "http://tracker.example.com/?season={_season}&promocode={_promocode}"
+                    + "&u={lpurl}")
             // Since your tracking URL has two custom parameters, provide their values too. This can
             // be provided at campaign, ad group, ad, criterion or feed item levels.
             .addAllUrlCustomParameters(
                 ImmutableList.of(
-                    CustomParameter.newBuilder()
-                        .setKey(StringValue.of("season"))
-                        .setValue(StringValue.of("christmas"))
-                        .build(),
-                    CustomParameter.newBuilder()
-                        .setKey(StringValue.of("promocode"))
-                        .setValue(StringValue.of("NY123"))
-                        .build()))
+                    CustomParameter.newBuilder().setKey("season").setValue("christmas").build(),
+                    CustomParameter.newBuilder().setKey("promocode").setValue("NY123").build()))
             // Specifies a list of final URLs. This field cannot be set if URL field is set. This
             // may be specified at ad, criterion and feed item levels.
-            .addAllFinalUrls(
-                ImmutableList.of(
-                    StringValue.of("http://www.example.com/cruise/space/"),
-                    StringValue.of("http://www.example.com/locations/mars/")))
+            .addFinalUrls("http://www.example.com/cruise/space/")
+            .addFinalUrls("http://www.example.com/locations/mars/")
             // Specifies a list of final mobile URLs. This field cannot be set if URL field is
             // set, or finalUrls is unset. This may be specified at ad, criterion and feed item
             // levels.
             /*
-            .addAllFinalMobileUrls(Lists.newArrayList(
-                StringValue.of("http://mobile.example.com/cruise/space/"),
-                StringValue.of("http://mobile.example.com/locations/mars/")))
-             */
+             .addFinalMobileUrls("http://mobile.example.com/cruise/space/")
+             .addFinalMobileUrls("http://mobile.example.com/locations/mars/")
+            */
             .build();
 
     // Creates an ad group ad containing the ad.
     AdGroupAd adGroupAd =
         AdGroupAd.newBuilder()
-            .setAdGroup(StringValue.of(adGroupResourceName))
+            .setAdGroup(adGroupResourceName)
             .setAd(ad)
             // Sets the status to PAUSED.
             .setStatus(AdGroupAdStatus.PAUSED)

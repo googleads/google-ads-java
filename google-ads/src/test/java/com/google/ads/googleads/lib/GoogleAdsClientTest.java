@@ -26,12 +26,12 @@ import static org.junit.Assert.fail;
 import com.google.ads.googleads.lib.GoogleAdsClient.Builder;
 import com.google.ads.googleads.lib.GoogleAdsClient.Builder.ConfigPropertyKey;
 import com.google.ads.googleads.lib.catalog.ApiCatalog;
-import com.google.ads.googleads.v4.errors.GoogleAdsError;
-import com.google.ads.googleads.v4.errors.GoogleAdsException;
-import com.google.ads.googleads.v4.errors.GoogleAdsFailure;
-import com.google.ads.googleads.v4.services.GoogleAdsServiceClient;
-import com.google.ads.googleads.v4.services.MockGoogleAdsService;
-import com.google.ads.googleads.v4.services.SearchGoogleAdsResponse;
+import com.google.ads.googleads.v5.errors.GoogleAdsError;
+import com.google.ads.googleads.v5.errors.GoogleAdsException;
+import com.google.ads.googleads.v5.errors.GoogleAdsFailure;
+import com.google.ads.googleads.v5.services.GoogleAdsServiceClient;
+import com.google.ads.googleads.v5.services.MockGoogleAdsService;
+import com.google.ads.googleads.v5.services.SearchGoogleAdsResponse;
 import com.google.api.gax.grpc.GaxGrpcProperties;
 import com.google.api.gax.grpc.GrpcStatusCode;
 import com.google.api.gax.grpc.testing.LocalChannelProvider;
@@ -300,7 +300,7 @@ public class GoogleAdsClientTest {
             .setDeveloperToken(DEVELOPER_TOKEN)
             .setLoginCustomerId(LOGIN_CUSTOMER_ID)
             .build();
-    assertGoogleAdsClient(client, LOGIN_CUSTOMER_ID, false);
+    assertGoogleAdsClient(client, LOGIN_CUSTOMER_ID, true);
   }
 
   /**
