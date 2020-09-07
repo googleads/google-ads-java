@@ -45,7 +45,7 @@ import java.util.Map;
  * the AddFlightsFeed example. This example is specific to feeds of type DYNAMIC_FLIGHT. The
  * attribute you are removing must be present on the feed.
  */
-public class RemoveFlightsFeedItemStringAttributeValue {
+public class RemoveFlightsFeedItemAttributeValue {
   private static final int PAGE_SIZE = 1_000;
 
   private static class RemoveFlightsFeedItemStringAttributeValueParams extends CodeSampleParams {
@@ -89,7 +89,7 @@ public class RemoveFlightsFeedItemStringAttributeValue {
     }
 
     try {
-      new RemoveFlightsFeedItemStringAttributeValue()
+      new RemoveFlightsFeedItemAttributeValue()
           .runExample(
               googleAdsClient,
               params.customerId,
