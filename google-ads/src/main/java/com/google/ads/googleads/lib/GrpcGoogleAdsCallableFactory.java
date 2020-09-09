@@ -15,9 +15,6 @@
  */
 package com.google.ads.googleads.lib;
 
-import com.google.ads.googleads.lib.ExceptionTransformingCallable;
-import com.google.ads.googleads.lib.ExceptionTransformingCallable.ExceptionTransformation;
-import com.google.ads.googleads.lib.GoogleAdsExceptionTransformation;
 import com.google.api.gax.grpc.GrpcCallSettings;
 import com.google.api.gax.grpc.GrpcCallableFactory;
 import com.google.api.gax.grpc.GrpcStubCallableFactory;
@@ -39,11 +36,11 @@ import com.google.longrunning.stub.OperationsStub;
 
 public class GrpcGoogleAdsCallableFactory implements GrpcStubCallableFactory {
 
-  private static final ExceptionTransformation googleAdsExceptionTransformation = new GoogleAdsExceptionTransformation();
 
   public static <RequestT, ResponseT> UnaryCallable<RequestT, ResponseT> createBaseUnaryCallable(GrpcCallSettings<RequestT, ResponseT> grpcCallSettings, UnaryCallSettings<?, ?> callSettings, ClientContext clientContext) {
-    UnaryCallable<RequestT, ResponseT> callable = GrpcCallableFactory.createBaseUnaryCallable(grpcCallSettings, callSettings, clientContext);
-    return new ExceptionTransformingCallable<>(callable, googleAdsExceptionTransformation);
+    UnaryCallable<RequestT, ResponseT> callable = GrpcCallableFactory
+        .createBaseUnaryCallable(grpcCallSettings, callSettings, clientContext);
+    return callable;
   }
 
   public <RequestT, ResponseT> UnaryCallable<RequestT, ResponseT> createUnaryCallable(
@@ -97,8 +94,10 @@ public class GrpcGoogleAdsCallableFactory implements GrpcStubCallableFactory {
           GrpcCallSettings<RequestT, ResponseT> grpcCallSettings,
           ServerStreamingCallSettings<RequestT, ResponseT> streamingCallSettings,
           ClientContext clientContext) {
-    return GrpcCallableFactory.createServerStreamingCallable(
-        grpcCallSettings, streamingCallSettings, clientContext);
+    ServerStreamingCallable<RequestT, ResponseT> callable = GrpcCallableFactory
+        .createServerStreamingCallable(
+            grpcCallSettings, streamingCallSettings, clientContext);
+    return callable;
   }
 
   public <RequestT, ResponseT>

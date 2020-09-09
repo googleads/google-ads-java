@@ -13,7 +13,9 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
 -->
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
   <parent>
     <groupId>com.google.api-ads</groupId>
@@ -36,9 +38,10 @@
     <auto-value.version>1.7.3</auto-value.version>
     <!-- Keep all versions below consistent with the io.netty version. -->
     <netty.version>2.0.26.Final</netty.version>
-    <gax.version>1.57.1</gax.version>
+    <gax.version>1.58.3-SNAPSHOT</gax.version>
     <grpc.version>1.30.0</grpc.version>
     <protobuf.version>3.12.2</protobuf.version>
+    <auto-service.version>1.0-rc3</auto-service.version>
   </properties>
 
   <dependencies>
@@ -120,6 +123,12 @@
       <version>0.27</version>
       <scope>test</scope>
     </dependency>
+    <dependency>
+      <groupId>com.google.auto.service</groupId>
+      <artifactId>auto-service</artifactId>
+      <version>${auto-service.version}</version>
+      <optional>true</optional>
+    </dependency>
 
     <!-- Java EE Modules deprecated since JDK 9 -->
     <dependency>
@@ -143,7 +152,8 @@
               <goal>run</goal>
             </goals>
             <configuration>
-              <protocArtifact>com.google.protobuf:protoc:${protobuf.version}</protocArtifact>
+              <protocArtifact>com.google.protobuf:protoc:${protobuf.version}
+              </protocArtifact>
               <inputDirectories>
                 <include>src/test/resources/protos</include>
               </inputDirectories>
@@ -151,7 +161,8 @@
                 <outputTarget>
                   <type>java</type>
                   <addSources>none</addSources>
-                  <outputDirectory>target/generated-test-sources</outputDirectory>
+                  <outputDirectory>target/generated-test-sources
+                  </outputDirectory>
                 </outputTarget>
               </outputTargets>
             </configuration>

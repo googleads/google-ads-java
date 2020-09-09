@@ -17,19 +17,25 @@ package com.google.ads.googleads.lib;
 import com.google.ads.googleads.lib.catalog.GeneratedCatalog;
 import com.google.ads.googleads.lib.catalog.Version;
 import com.google.api.gax.rpc.ApiException;
+import com.google.api.gax.rpc.ApiExceptionFactory;
+import com.google.auto.service.AutoService;
 import java.util.Optional;
 
 /**
- * Transforms an ApiException into a GoogleAdsException whenever a binary GoogleAdsFailure message
- * was sent in the RPC trailers.
+ * Transforms an ApiException into a GoogleAdsException.
+ *
+ * <p>The server returns a binary GoogleAdsFailure message in the RPC trailers. This isn't
+ * immediately useful without deserialization, so this class transforms the exception before it is
+ * thrown.
  */
+@AutoService(ApiExceptionFactory.ExceptionTransformation.class)
 public class GoogleAdsExceptionTransformation
-    implements ExceptionTransformingCallable.ExceptionTransformation {
+    implements ApiExceptionFactory.ExceptionTransformation {
 
   private static final GeneratedCatalog catalog = GeneratedCatalog.getDefault();
 
   @Override
-  public Throwable transform(ApiException apiException) {
+  public ApiException transform(ApiException apiException) {
     for (Version version : catalog.getSupportedVersions()) {
       Optional<? extends BaseGoogleAdsException> result =
           version.getExceptionFactory().createGoogleAdsException(apiException);
