@@ -1,3 +1,20 @@
+# ads.properties
+#
+# Defines configuration for Google Ads API client library for Java.
+#
+# - By default this is searched for in ~/ads.properties.
+#   e.g. GoogleAdsClient.newBuilder().fromPropertiesFile() 
+#
+# - Can load from an arbitrary path.
+#   e.g. GoogleAdsClient.newBuilder().fromPropertiesFile("some/path")
+#
+# - All settings in this file can be set & overridden programmatically.
+#   e.g. GoogleAdsClient.newBuilder()
+#          .fromPropertiesFile() // optionally load from config file.
+#          .setDeveloperToken("your_token")
+
+# ------------------------------- OAuth ---------------------------------------
+
 # OAuth client ID
 #
 # Specifies the client ID that is used for Google's OAuth 2 API.
@@ -25,6 +42,8 @@
 # - Can access many Google Ads accounts. 
 # - Ad account is specified by the customerId in each request. 
 #api.googleads.refreshToken=
+
+# -------------------------- Google Ads API -----------------------------------
 
 # Developer token
 # 
@@ -55,7 +74,8 @@
 #
 # Specifies the endpoint to use for connecting to the ads API. 
 #
-# - Can be used to connect to a staging endpoint. 
-# - Most external clients can ignore this field.
+# Not required. Most users can ignore this field.
+#
+# - Can be used to connect to a testing API endpoint. 
 #api.googleads.endpoint=
 
