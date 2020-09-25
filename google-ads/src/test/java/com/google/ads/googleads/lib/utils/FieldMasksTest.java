@@ -2,7 +2,7 @@ package com.google.ads.googleads.lib.utils;
 
 import static org.junit.Assert.assertEquals;
 
-import com.google.ads.googleads.v6.resources.Campaign;
+import com.google.ads.googleads.v5.resources.Campaign;
 import com.google.common.collect.ImmutableList;
 import org.junit.Test;
 import org.junit.runner.RunWith;
