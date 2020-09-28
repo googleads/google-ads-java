@@ -17,7 +17,6 @@ package com.google.ads.googleads.lib.utils;
 import com.google.common.base.Preconditions;
 import com.google.protobuf.Descriptors.Descriptor;
 import com.google.protobuf.Descriptors.FieldDescriptor;
-import com.google.protobuf.Descriptors.FieldDescriptor.Type;
 import com.google.protobuf.FieldMask;
 import com.google.protobuf.GeneratedMessageV3;
 import com.google.protobuf.Message;
@@ -76,12 +75,14 @@ public class FieldMasks {
           mask.addPaths(fieldName);
         }
       } else {
+        boolean hasValueChanged =
+            original.hasField(field) != modified.hasField(field)
+                || !Objects.equals(originalValue, modifiedValue);
         switch (field.getJavaType()) {
           case MESSAGE:
             // Because getField never returns null, we use hasField to distinguish null
             // from empty message when getType() == MESSAGE
-            if (original.hasField(field) != modified.hasField(field)
-                || !Objects.equals(originalValue, modifiedValue)) {
+            if (hasValueChanged) {
               if (isWrapperType(field.getMessageType())) {
                 // For wrapper types, just emit the field name.
                 mask.addPaths(fieldName);
@@ -103,7 +104,7 @@ public class FieldMasks {
           case BYTE_STRING:
           case ENUM:
             // Handle all java types except MESSAGE
-            if (!Objects.equals(originalValue, modifiedValue)) {
+            if (hasValueChanged) {
               mask.addPaths(fieldName);
             }
             break;
