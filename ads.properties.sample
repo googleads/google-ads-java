@@ -2,6 +2,9 @@
 #
 # Defines configuration for Google Ads API client library for Java.
 #
+# See our developer documentation for more details:
+# https://developers.google.com/google-ads/api/docs/client-libs/java/quick-start
+#
 # - By default this is searched for in ~/ads.properties.
 #   e.g. GoogleAdsClient.newBuilder().fromPropertiesFile() 
 #
@@ -28,9 +31,8 @@
 #
 # Specifies the client secret that is used for Google's OAuth 2 API. 
 #
-# - Must match the OAuth clientId. 
-# - Created and managed via http://console.developers.google.com
-# - Provides an additional layer of security on top of refresh token.
+# - Must be the secret associated with the OAuth clientId.
+# - Created and managed via http://console.developers.google.com.
 #api.googleads.clientSecret=
 
 # OAuth refresh token
@@ -39,7 +41,8 @@
 #
 # - See guide for instructions on how to obtain a refresh token.
 #   https://developers.google.com/google-ads/api/docs/oauth/client-library
-# - Can access many Google Ads accounts. 
+# - Provides access to all Google Ads accounts on which the associated Google
+#   account is a user.
 # - Ad account is specified by the customerId in each request. 
 #api.googleads.refreshToken=
 
@@ -53,10 +56,8 @@
 # - Associated with a Google Ads manager accoount.
 # - Found by logging into the manager account on http://ads.google.com
 #   and navigating to -> Tools & Settings -> API Center.
-# - Must be approved by Google following a review of your intended use. 
-# - Only one approved developer token is permitted per company. 
-# - A test manager account's (unapproved) developer token can be used on test 
-#   accounts. 
+# - An unapproved developer token can be used to issue requests against test
+#   accounts.
 #api.googleads.developerToken=
 
 # Login customer ID
@@ -69,13 +70,4 @@
 # - Ad account access can be managed via http://ads.google.com and navigating
 #   to Tools & Settings -> Account Access
 #api.googleads.loginCustomerId=
-
-# Endpoint
-#
-# Specifies the endpoint to use for connecting to the ads API. 
-#
-# Not required. Most users can ignore this field.
-#
-# - Can be used to connect to a testing API endpoint. 
-#api.googleads.endpoint=
 
