@@ -16,6 +16,7 @@ package com.google.ads.googleads.lib;
 
 import static org.junit.Assert.assertEquals;
 
+import com.google.ads.googleads.lib.callables.GoogleAdsExceptionTransformation;
 import com.google.ads.googleads.lib.catalog.ApiCatalog;
 import com.google.ads.googleads.lib.catalog.Version;
 import com.google.api.gax.grpc.GrpcStatusCode;
