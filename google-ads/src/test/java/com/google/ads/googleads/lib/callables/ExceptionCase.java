@@ -31,7 +31,7 @@ import java.util.stream.Collectors;
 import org.mockito.ArgumentMatcher;
 
 /** Abstracts a test case for exception transformation. */
-public abstract class ExceptionCase implements ArgumentMatcher<Throwable> {
+public abstract class ExceptionCase extends ArgumentMatcher<Throwable> {
 
   /** Gets all test cases. */
   public static List<ExceptionCase> getCases() {
@@ -59,8 +59,8 @@ public abstract class ExceptionCase implements ArgumentMatcher<Throwable> {
    * <p>Handles most cases where the exceptions can be directly compared with Objects.equals().
    */
   @Override
-  public boolean matches(Throwable t) {
-    return Objects.equals(t, getInputThrowable());
+  public boolean matches(Object actual) {
+    return Objects.equals(actual, getInputThrowable());
   }
 
   /** Vanilla failure case with a GoogleAdsException. */
@@ -98,14 +98,14 @@ public abstract class ExceptionCase implements ArgumentMatcher<Throwable> {
       }
 
       @Override
-      public boolean matches(Throwable t) {
-        if (t == null) {
+      public boolean matches(Object actual) {
+        if (actual == null) {
           return false;
         }
-        if (!t.getClass().isAssignableFrom(GoogleAdsException.class)) {
+        if (!actual.getClass().isAssignableFrom(GoogleAdsException.class)) {
           return false;
         }
-        GoogleAdsException ex = (GoogleAdsException) t;
+        GoogleAdsException ex = (GoogleAdsException) actual;
         return Objects.equals(ex.getGoogleAdsFailure(), originalFailure);
       }
     };

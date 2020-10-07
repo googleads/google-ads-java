@@ -22,14 +22,12 @@ import com.google.api.gax.rpc.ApiCallContext;
 import com.google.api.gax.rpc.ResponseObserver;
 import com.google.api.gax.rpc.ServerStreamingCallable;
 import org.junit.Before;
-import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import org.junit.runners.Parameterized.Parameters;
 import org.mockito.Mock;
-import org.mockito.junit.MockitoJUnit;
-import org.mockito.junit.MockitoRule;
+import org.mockito.MockitoAnnotations;
 
 @RunWith(Parameterized.class)
 public class ExceptionTransformingServerStreamingCallableTest {
@@ -40,7 +38,6 @@ public class ExceptionTransformingServerStreamingCallableTest {
   private MockServerStreamingCallable innerCallable;
   private ExceptionTransformingServerStreamingCallable<Object, Object> serverStreamingCallable;
 
-  @Rule public MockitoRule mockitoRule = MockitoJUnit.rule();
   @Mock public ResponseObserver<Object> innerObserver;
 
   @Parameters(name = "{0}")
@@ -55,6 +52,7 @@ public class ExceptionTransformingServerStreamingCallableTest {
 
   @Before
   public void setup() {
+    MockitoAnnotations.initMocks(this);
     // Sets up mock callable to abstract away gRPC.
     this.innerCallable = new MockServerStreamingCallable();
     // Creates the instances to be tested.

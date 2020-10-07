@@ -30,7 +30,7 @@ public class GoogleAdsExceptionTransformation implements ExceptionTransformation
 
   @Override
   public Throwable transform(Throwable input) {
-    if (input.getClass().isAssignableFrom(ApiException.class)) {
+    if (ApiException.class.isAssignableFrom(input.getClass())) {
       for (Version version : catalog.getSupportedVersions()) {
         Optional<? extends BaseGoogleAdsException> result =
             version.getExceptionFactory().createGoogleAdsException((ApiException) input);

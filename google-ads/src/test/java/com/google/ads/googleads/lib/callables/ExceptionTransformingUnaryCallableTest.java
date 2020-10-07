@@ -24,14 +24,12 @@ import com.google.api.gax.rpc.ApiCallContext;
 import com.google.api.gax.rpc.UnaryCallable;
 import java.util.concurrent.ExecutionException;
 import org.junit.Before;
-import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import org.junit.runners.Parameterized.Parameters;
 import org.mockito.Mock;
-import org.mockito.junit.MockitoJUnit;
-import org.mockito.junit.MockitoRule;
+import org.mockito.MockitoAnnotations;
 
 @RunWith(Parameterized.class)
 public class ExceptionTransformingUnaryCallableTest {
@@ -42,7 +40,6 @@ public class ExceptionTransformingUnaryCallableTest {
   private ExceptionTransformingUnaryCallable callable;
   private SettableApiFuture<Object> innerFuture;
 
-  @Rule public MockitoRule mockito = MockitoJUnit.rule();
   @Mock public UnaryCallable mockCallable;
 
   @Parameters(name = "{0}")
@@ -56,6 +53,7 @@ public class ExceptionTransformingUnaryCallableTest {
 
   @Before
   public void setup() {
+    MockitoAnnotations.initMocks(this);
     // Sets up the class we're going to test.
     callable =
         new ExceptionTransformingUnaryCallable(
