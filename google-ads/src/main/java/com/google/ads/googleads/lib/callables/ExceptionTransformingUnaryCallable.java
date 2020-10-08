@@ -12,7 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-package com.google.ads.googleads.lib;
+package com.google.ads.googleads.lib.callables;
 
 import com.google.api.core.AbstractApiFuture;
 import com.google.api.core.ApiFuture;
@@ -20,26 +20,24 @@ import com.google.api.core.ApiFutureCallback;
 import com.google.api.core.ApiFutures;
 import com.google.api.gax.grpc.GrpcCallContext;
 import com.google.api.gax.rpc.ApiCallContext;
-import com.google.api.gax.rpc.ApiException;
 import com.google.api.gax.rpc.UnaryCallable;
 import com.google.common.base.Preconditions;
 import java.util.concurrent.CancellationException;
 
 /**
- * NOTE: This class could be pushed into the gax library, as it is not specific to the Google Ads
+ * Wrapper around a {@link UnaryCallable} which invokes an {@link ExceptionTransformation} for
+ * {@link Throwable}s which occur on the stream.
+ *
+ * <p>NOTE: This class could be pushed into the gax library, as it is not specific to the Google Ads
  * API.
  */
-public class ExceptionTransformingCallable<RequestT, ResponseT>
+public class ExceptionTransformingUnaryCallable<RequestT, ResponseT>
     extends UnaryCallable<RequestT, ResponseT> {
-
-  public interface ExceptionTransformation {
-    Throwable transform(ApiException throwable);
-  }
 
   private final UnaryCallable<RequestT, ResponseT> callable;
   private final ExceptionTransformation transformation;
 
-  public ExceptionTransformingCallable(
+  public ExceptionTransformingUnaryCallable(
       UnaryCallable<RequestT, ResponseT> callable, ExceptionTransformation transformation) {
     this.callable = Preconditions.checkNotNull(callable);
     this.transformation = transformation;
@@ -55,6 +53,7 @@ public class ExceptionTransformingCallable<RequestT, ResponseT>
     return transformingFuture;
   }
 
+  /** Provides a mechanism to transform exceptions which occur on the inner callable. */
   private class ExceptionTransformingFuture extends AbstractApiFuture<ResponseT>
       implements ApiFutureCallback<ResponseT> {
     private ApiFuture<ResponseT> innerCallFuture;
@@ -79,8 +78,8 @@ public class ExceptionTransformingCallable<RequestT, ResponseT>
     public void onFailure(Throwable throwable) {
       if (throwable instanceof CancellationException && cancelled) {
         // this just circled around, so ignore.
-      } else if (throwable instanceof ApiException) {
-        setException(transformation.transform((ApiException) throwable));
+      } else {
+        setException(transformation.transform(throwable));
       }
     }
   }

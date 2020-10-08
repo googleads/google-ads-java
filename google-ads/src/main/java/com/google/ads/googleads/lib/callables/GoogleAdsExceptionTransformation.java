@@ -12,8 +12,9 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-package com.google.ads.googleads.lib;
+package com.google.ads.googleads.lib.callables;
 
+import com.google.ads.googleads.lib.BaseGoogleAdsException;
 import com.google.ads.googleads.lib.catalog.GeneratedCatalog;
 import com.google.ads.googleads.lib.catalog.Version;
 import com.google.api.gax.rpc.ApiException;
@@ -23,20 +24,21 @@ import java.util.Optional;
  * Transforms an ApiException into a GoogleAdsException whenever a binary GoogleAdsFailure message
  * was sent in the RPC trailers.
  */
-public class GoogleAdsExceptionTransformation
-    implements ExceptionTransformingCallable.ExceptionTransformation {
+public class GoogleAdsExceptionTransformation implements ExceptionTransformation {
 
   private static final GeneratedCatalog catalog = GeneratedCatalog.getDefault();
 
   @Override
-  public Throwable transform(ApiException apiException) {
-    for (Version version : catalog.getSupportedVersions()) {
-      Optional<? extends BaseGoogleAdsException> result =
-          version.getExceptionFactory().createGoogleAdsException(apiException);
-      if (result.isPresent()) {
-        return result.get();
+  public Throwable transform(Throwable input) {
+    if (ApiException.class.isAssignableFrom(input.getClass())) {
+      for (Version version : catalog.getSupportedVersions()) {
+        Optional<? extends BaseGoogleAdsException> result =
+            version.getExceptionFactory().createGoogleAdsException((ApiException) input);
+        if (result.isPresent()) {
+          return result.get();
+        }
       }
     }
-    return apiException;
+    return input;
   }
 }
