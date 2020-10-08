@@ -20,7 +20,6 @@ import com.google.api.core.ApiFutureCallback;
 import com.google.api.core.ApiFutures;
 import com.google.api.gax.grpc.GrpcCallContext;
 import com.google.api.gax.rpc.ApiCallContext;
-import com.google.api.gax.rpc.ApiException;
 import com.google.api.gax.rpc.UnaryCallable;
 import com.google.common.base.Preconditions;
 import java.util.concurrent.CancellationException;
@@ -54,6 +53,7 @@ public class ExceptionTransformingUnaryCallable<RequestT, ResponseT>
     return transformingFuture;
   }
 
+  /** Provides a mechanism to transform exceptions which occur on the inner callable. */
   private class ExceptionTransformingFuture extends AbstractApiFuture<ResponseT>
       implements ApiFutureCallback<ResponseT> {
     private ApiFuture<ResponseT> innerCallFuture;
@@ -78,10 +78,8 @@ public class ExceptionTransformingUnaryCallable<RequestT, ResponseT>
     public void onFailure(Throwable throwable) {
       if (throwable instanceof CancellationException && cancelled) {
         // this just circled around, so ignore.
-      } else if (throwable instanceof ApiException) {
-        setException(transformation.transform(throwable));
       } else {
-        setException(throwable);
+        setException(transformation.transform(throwable));
       }
     }
   }

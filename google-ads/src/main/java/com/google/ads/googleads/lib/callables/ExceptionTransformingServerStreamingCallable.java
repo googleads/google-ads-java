@@ -46,6 +46,7 @@ public class ExceptionTransformingServerStreamingCallable<RequestT, ResponseT>
     innerCallable.call(request, new ExceptionTransformingStreamObserver(responseObserver), context);
   }
 
+  /** Provides a mechanism for transforming any exceptions which occur on the stream. */
   private class ExceptionTransformingStreamObserver implements ResponseObserver<ResponseT> {
 
     private final ResponseObserver<ResponseT> innerObserver;

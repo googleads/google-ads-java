@@ -29,10 +29,13 @@ import com.google.ads.googleads.lib.catalog.ApiCatalog;
 import com.google.ads.googleads.v5.errors.GoogleAdsError;
 import com.google.ads.googleads.v5.errors.GoogleAdsException;
 import com.google.ads.googleads.v5.errors.GoogleAdsFailure;
+import com.google.ads.googleads.v5.services.GoogleAdsRow;
 import com.google.ads.googleads.v5.services.GoogleAdsServiceClient;
+import com.google.ads.googleads.v5.services.GoogleAdsServiceClient.SearchPagedResponse;
 import com.google.ads.googleads.v5.services.MockGoogleAdsService;
 import com.google.ads.googleads.v5.services.SearchGoogleAdsResponse;
 import com.google.ads.googleads.v5.services.SearchGoogleAdsStreamRequest;
+import com.google.ads.googleads.v5.services.SearchGoogleAdsStreamResponse;
 import com.google.api.gax.grpc.GaxGrpcProperties;
 import com.google.api.gax.grpc.GrpcStatusCode;
 import com.google.api.gax.grpc.testing.LocalChannelProvider;
@@ -413,7 +416,11 @@ public class GoogleAdsClientTest {
     mockService.addException(new ApiException(rootCause, GrpcStatusCode.of(Code.UNKNOWN), false));
     try (GoogleAdsServiceClient googleAdsServiceClient =
         client.getLatestVersion().createGoogleAdsServiceClient()) {
-      googleAdsServiceClient.search("123", "select blah");
+      SearchPagedResponse response = googleAdsServiceClient.search("123", "select blah");
+      for (GoogleAdsRow row : response.iterateAll()) {
+        // Attempt to process the rows.
+      }
+      fail();
     } catch (GoogleAdsException ex) {
       // Expected
     }
@@ -439,9 +446,13 @@ public class GoogleAdsClientTest {
     mockService.addException(new ApiException(rootCause, GrpcStatusCode.of(Code.UNKNOWN), false));
     try (GoogleAdsServiceClient googleAdsServiceClient =
         client.getLatestVersion().createGoogleAdsServiceClient()) {
-      googleAdsServiceClient
-          .searchStreamCallable()
-          .call(SearchGoogleAdsStreamRequest.getDefaultInstance());
+      for (SearchGoogleAdsStreamResponse row :
+          googleAdsServiceClient
+              .searchStreamCallable()
+              .call(SearchGoogleAdsStreamRequest.getDefaultInstance())) {
+        // Attempt to process the stream.
+      }
+      fail();
     } catch (GoogleAdsException ex) {
       // Expected
     }
