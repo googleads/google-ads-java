@@ -30,12 +30,11 @@ import java.net.URL;
 import java.util.Properties;
 
 /**
- * Creates an OAuth2 refresh token for the Google Ads API using the Native/Installed application
- * flow.
+ * Creates an OAuth2 refresh token for the Google Ads API using the Desktop application flow.
  *
  * <p>This example is meant to be run from the command line and requires user input.
  */
-public class AuthenticateInStandaloneApplication {
+public class AuthenticateInDesktopApplication {
 
   // Scopes for the generated OAuth2 credentials. The list here only contains the AdWords scope,
   // but you can add multiple scopes if you want to use the credentials for other Google APIs.
@@ -73,7 +72,7 @@ public class AuthenticateInStandaloneApplication {
       clientSecret = String.valueOf(console.readPassword());
     }
 
-    new AuthenticateInStandaloneApplication().runExample(clientId, clientSecret);
+    new AuthenticateInDesktopApplication().runExample(clientId, clientSecret);
   }
 
   public void runExample(String clientId, String clientSecret) throws IOException {
