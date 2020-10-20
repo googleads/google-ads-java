@@ -256,6 +256,8 @@ public class AddCustomerMatchUserList {
       System.out.println("Waiting until operation completes.");
 
       // The polling future implements a default back-off policy for retrying.
+      // Note: Retrieving the results of the asynchronous request is for demonstrative purposes only
+      // as it may take several hours for the user list to be populated with the users.
       runFuture.getPollingFuture().get(MAX_TOTAL_POLL_INTERVAL_SECONDS, TimeUnit.SECONDS);
       System.out.printf(
           "Offline user data job with resource name '%s' has finished.%n",
