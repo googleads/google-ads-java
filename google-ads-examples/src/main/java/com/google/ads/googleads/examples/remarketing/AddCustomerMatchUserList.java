@@ -62,7 +62,7 @@ import java.util.List;
  * <p><em>Notes:</em>
  *
  * <ul>
- *   <li>This feature is only available to whitelisted accounts. See
+ *   <li>This feature is only available to allowlisted accounts. See
  *       https://support.google.com/adspolicy/answer/6299717 for more details.
  *   <li>It may take up to several hours for the list to be populated with members.
  *   <li>Email addresses must be associated with a Google account.
