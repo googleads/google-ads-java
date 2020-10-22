@@ -73,7 +73,7 @@ public class GetAccountHierarchy {
       // here if and only if the managerId is set. If the loginCustomerId is set neither on the
       // command line nor below, a null value will be passed to the run example method, and the
       // example will use each respective accessible customer ID as the loginCustomerId.
-      // params.managerId = Long.parseLong("INSERT_LOGIN_CUSTOMER_ID_HERE");
+      // params.loginCustomerId = Long.parseLong("INSERT_LOGIN_CUSTOMER_ID_HERE");
     }
 
     if (params.managerId != null && params.loginCustomerId == null) {
