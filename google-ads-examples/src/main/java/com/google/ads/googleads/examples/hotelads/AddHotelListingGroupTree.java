@@ -32,10 +32,13 @@ import com.google.ads.googleads.v5.services.AdGroupCriterionServiceClient;
 import com.google.ads.googleads.v5.services.MutateAdGroupCriteriaResponse;
 import com.google.ads.googleads.v5.services.MutateAdGroupCriterionResult;
 import com.google.ads.googleads.v5.utils.ResourceNames;
+import com.google.common.collect.AbstractSequentialIterator;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
+import org.checkerframework.checker.nullness.compatqual.NullableDecl;
 
 /**
  * This example shows how to add a hotel listing group tree, which has two levels. The first level
@@ -50,18 +53,8 @@ import java.util.List;
  * group tree to an ad group that already has one will fail.
  */
 public class AddHotelListingGroupTree {
-  /**
-   * The next temporary criterion ID to be used, which is a negative integer.
-   *
-   * <p>When creating a tree, we need to specify the parent-child relationships between nodes.
-   * However, until a criterion has been created on the server we do not have a criterion ID with
-   * which to refer to it.
-   *
-   * <p>Instead we can specify temporary IDs that are specific to a single mutate request. Once a
-   * criterion is created, it is assigned an ID as normal and the temporary ID will no longer refer
-   * to it.
-   */
-  private static int nextTempId = -1;
+
+  private static Iterator<Long> idGenerator;
 
   private static class AddHotelListingGroupTreeParams extends CodeSampleParams {
 
@@ -75,7 +68,7 @@ public class AddHotelListingGroupTree {
     // For simplicity, each ad group criterion will use the below amount equally. In practice, you
     // probably want to use different values for each ad group criterion.
     @Parameter(names = ArgumentNames.PERCENT_CPC_BID_MICRO_AMOUNT)
-    private int percentCpcBidMicroAmount = 1000000;
+    private Long percentCpcBidMicroAmount = 1_000_000L;
   }
 
   public static void main(String[] args) {
@@ -86,9 +79,9 @@ public class AddHotelListingGroupTree {
       // into the code here. See the parameter class definition above for descriptions.
       params.customerId = Long.parseLong("INSERT_CUSTOMER_ID_HERE");
       params.adGroupId = Long.parseLong("INSERT_AD_GROUP_ID_HERE");
-      // Optional: To use a different CPC bid micro value from the default (1000000), uncomment the
-      // line below and insert the desired CPC bid micro value.
-      // params.percentCpcBidMicroAmount = Integer.parseInt("INSERT_PERCENT_CPC_BID_MICRO_AMOUNT");
+      // Optional: To use a different CPC bid micro value from the default (1_000_000), uncomment
+      // the line below and insert the desired CPC bid micro value.
+      // params.percentCpcBidMicroAmount = Long.parseInt("INSERT_PERCENT_CPC_BID_MICRO_AMOUNT");
     }
 
     GoogleAdsClient googleAdsClient = null;
@@ -127,6 +120,30 @@ public class AddHotelListingGroupTree {
   }
 
   /**
+   * Constructor used to create iterator for generating temporary criterion IDs, which are negative
+   * integers.
+   *
+   * <p>When creating a tree, we need to specify the parent-child relationships between nodes.
+   * However, until a criterion has been created on the server we do not have a criterion ID with
+   * which to refer to it.
+   *
+   * <p>Instead we can specify temporary IDs that are specific to a single mutate request. Once a
+   * criterion is created, it is assigned an ID as normal and the temporary ID will no longer refer
+   * to it.
+   */
+  AddHotelListingGroupTree() {
+    long startingTempId = -1;
+    idGenerator =
+        new AbstractSequentialIterator<Long>(startingTempId) {
+          @Override
+          protected Long computeNext(@NullableDecl Long previous) {
+            assert previous != null;
+            return Long.MIN_VALUE == previous ? null : previous - 1;
+          }
+        };
+  }
+
+  /**
    * Runs the example.
    *
    * @param googleAdsClient the Google Ads API client.
@@ -140,7 +157,7 @@ public class AddHotelListingGroupTree {
       GoogleAdsClient googleAdsClient,
       long customerId,
       long adGroupId,
-      int percentCpcBidMicroAmount) {
+      long percentCpcBidMicroAmount) {
     List<AdGroupCriterionOperation> operations = new ArrayList<>();
 
     // Creates the root of the tree as a SUBDIVISION node.
@@ -183,7 +200,7 @@ public class AddHotelListingGroupTree {
       long customerId,
       long adGroupId,
       List<AdGroupCriterionOperation> operations,
-      int percentCpcBidMicroAmount) {
+      long percentCpcBidMicroAmount) {
     // Creates the root of the tree as a SUBDIVISION node.
     ListingGroupInfo root =
         ListingGroupInfo.newBuilder().setType(ListingGroupType.SUBDIVISION).build();
@@ -191,7 +208,6 @@ public class AddHotelListingGroupTree {
         createAdGroupCriterion(customerId, adGroupId, root, percentCpcBidMicroAmount);
     AdGroupCriterionOperation operation = generateCreateOperation(rootAdGroupCriterion);
     operations.add(operation);
-    nextTempId = nextTempId - 1;
     return rootAdGroupCriterion.getResourceName();
   }
 
@@ -212,7 +228,7 @@ public class AddHotelListingGroupTree {
       long adGroupId,
       String rootResourceName,
       List<AdGroupCriterionOperation> operations,
-      int percentCpcBidMicroAmount) {
+      long percentCpcBidMicroAmount) {
     // Creates hotel class info and dimension info for 5-star hotels.
     ListingDimensionInfo fiveStarredDimensionInfo =
         ListingDimensionInfo.newBuilder()
@@ -229,7 +245,6 @@ public class AddHotelListingGroupTree {
     AdGroupCriterion fiveStarredAdGroupCriterion =
         createAdGroupCriterion(customerId, adGroupId, fiveStarredUnit, percentCpcBidMicroAmount);
     // Decrements the temp ID for the next ad group criterion.
-    nextTempId = nextTempId - 1;
     AdGroupCriterionOperation operation = generateCreateOperation(fiveStarredAdGroupCriterion);
     operations.add(operation);
 
@@ -256,7 +271,6 @@ public class AddHotelListingGroupTree {
     operation = generateCreateOperation(otherHotelsAdGroupCriterion);
     operations.add(operation);
 
-    nextTempId = nextTempId - 1;
     return otherHotelsAdGroupCriterion.getResourceName();
   }
   // [END addLevel1Nodes]
@@ -276,7 +290,7 @@ public class AddHotelListingGroupTree {
       long adGroupId,
       String parentResourceName,
       List<AdGroupCriterionOperation> operations,
-      int percentCpcBidMicroAmount) {
+      long percentCpcBidMicroAmount) {
     // The criterion ID for Japan is 2392.
     // See https://developers.google.com/adwords/api/docs/appendix/geotargeting for criteria ID
     // of other countries.
@@ -297,7 +311,6 @@ public class AddHotelListingGroupTree {
     AdGroupCriterion japanHotelsAdGroupCriterion =
         createAdGroupCriterion(customerId, adGroupId, japanHotelsUnit, percentCpcBidMicroAmount);
     // Decrements the temp ID for the next ad group criterion.
-    nextTempId = nextTempId - 1;
     AdGroupCriterionOperation operation = generateCreateOperation(japanHotelsAdGroupCriterion);
     operations.add(operation);
 
@@ -332,9 +345,11 @@ public class AddHotelListingGroupTree {
       ListingGroupType listingGroupType,
       String parentCriterionResourceName,
       ListingDimensionInfo caseValue) {
-    return ListingGroupInfo.newBuilder().setType(listingGroupType)
+    return ListingGroupInfo.newBuilder()
+        .setType(listingGroupType)
         .setParentAdGroupCriterion(parentCriterionResourceName)
-        .setCaseValue(caseValue).build();
+        .setCaseValue(caseValue)
+        .build();
   }
 
   /**
@@ -352,12 +367,13 @@ public class AddHotelListingGroupTree {
       long customerId,
       long adGroupId,
       ListingGroupInfo listingGroupInfo,
-      int percentCpcBidMicroAmount) {
+      long percentCpcBidMicroAmount) {
     AdGroupCriterion.Builder adGroupCriterionBuilder =
         AdGroupCriterion.newBuilder()
             .setStatus(AdGroupCriterionStatus.ENABLED)
             .setListingGroup(listingGroupInfo)
-            .setResourceName(ResourceNames.adGroupCriterion(customerId, adGroupId, nextTempId));
+            .setResourceName(
+                ResourceNames.adGroupCriterion(customerId, adGroupId, idGenerator.next()));
 
     // Bids are valid only for UNIT nodes.
     if (listingGroupInfo.getType() == ListingGroupType.UNIT) {
