@@ -24,6 +24,7 @@ import com.google.ads.googleads.v5.common.OfflineUserAddressInfo;
 import com.google.ads.googleads.v5.common.UserData;
 import com.google.ads.googleads.v5.common.UserIdentifier;
 import com.google.ads.googleads.v5.enums.CustomerMatchUploadKeyTypeEnum.CustomerMatchUploadKeyType;
+import com.google.ads.googleads.v5.enums.OfflineUserDataJobStatusEnum.OfflineUserDataJobStatus;
 import com.google.ads.googleads.v5.enums.OfflineUserDataJobTypeEnum.OfflineUserDataJobType;
 import com.google.ads.googleads.v5.errors.GoogleAdsError;
 import com.google.ads.googleads.v5.errors.GoogleAdsException;
@@ -41,11 +42,9 @@ import com.google.ads.googleads.v5.services.SearchGoogleAdsStreamRequest;
 import com.google.ads.googleads.v5.services.SearchGoogleAdsStreamResponse;
 import com.google.ads.googleads.v5.services.UserListOperation;
 import com.google.ads.googleads.v5.services.UserListServiceClient;
-import com.google.api.gax.longrunning.OperationFuture;
 import com.google.api.gax.rpc.ServerStream;
 import com.google.common.collect.ImmutableList;
 import com.google.protobuf.BoolValue;
-import com.google.protobuf.Empty;
 import com.google.protobuf.Int64Value;
 import com.google.protobuf.StringValue;
 import java.io.FileNotFoundException;
@@ -56,9 +55,6 @@ import java.security.NoSuchAlgorithmException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import java.util.concurrent.ExecutionException;
-import java.util.concurrent.TimeUnit;
-import java.util.concurrent.TimeoutException;
 
 /**
  * Creates a user list (a.k.a. audience) and uploads members to populate the list.
@@ -66,7 +62,7 @@ import java.util.concurrent.TimeoutException;
  * <p><em>Notes:</em>
  *
  * <ul>
- *   <li>This feature is only available to whitelisted accounts. See
+ *   <li>This feature is only available to allowlisted accounts. See
  *       https://support.google.com/adspolicy/answer/6299717 for more details.
  *   <li>It may take up to several hours for the list to be populated with members.
  *   <li>Email addresses must be associated with a Google account.
@@ -76,8 +72,6 @@ import java.util.concurrent.TimeoutException;
  */
 public class AddCustomerMatchUserList {
 
-  private static final long MAX_TOTAL_POLL_INTERVAL_SECONDS = 60L;
-
   private static class AddCustomerMatchUserListParams extends CodeSampleParams {
 
     @Parameter(names = ArgumentNames.CUSTOMER_ID, required = true)
@@ -85,8 +79,7 @@ public class AddCustomerMatchUserList {
   }
 
   public static void main(String[] args)
-      throws InterruptedException, ExecutionException, TimeoutException,
-          UnsupportedEncodingException {
+      throws UnsupportedEncodingException {
     AddCustomerMatchUserListParams params = new AddCustomerMatchUserListParams();
     if (!params.parseArguments(args)) {
 
@@ -133,16 +126,12 @@ public class AddCustomerMatchUserList {
    * @throws GoogleAdsException if an API request failed with one or more service errors.
    */
   private void runExample(GoogleAdsClient googleAdsClient, long customerId)
-      throws InterruptedException, ExecutionException, TimeoutException,
-          UnsupportedEncodingException {
+      throws UnsupportedEncodingException {
     // Creates a Customer Match user list.
     String userListResourceName = createCustomerMatchUserList(googleAdsClient, customerId);
 
     // Adds members to the user list.
     addUsersToCustomerMatchUserList(googleAdsClient, customerId, userListResourceName);
-
-    // Prints information about the user list.
-    printCustomerMatchUserListInfo(googleAdsClient, customerId, userListResourceName);
   }
 
   /**
@@ -193,13 +182,12 @@ public class AddCustomerMatchUserList {
    *
    * @param googleAdsClient the Google Ads API client.
    * @param customerId the client customer ID.
-   * @param userListResourceName the resource name of the Customer Match user list to add members
+   * @param userListResourceName the resource name of the Customer Match user list to add members.
    *     to.
    */
   private void addUsersToCustomerMatchUserList(
       GoogleAdsClient googleAdsClient, long customerId, String userListResourceName)
-      throws InterruptedException, ExecutionException, TimeoutException,
-          UnsupportedEncodingException {
+      throws UnsupportedEncodingException {
     try (OfflineUserDataJobServiceClient offlineUserDataJobServiceClient =
         googleAdsClient.getLatestVersion().createOfflineUserDataJobServiceClient()) {
       // Creates a new offline user data job.
@@ -245,21 +233,14 @@ public class AddCustomerMatchUserList {
         System.out.printf(
             "Successfully added %d operations to the offline user data job.%n",
             userDataJobOperations.size());
+
+        // Offline user data jobs may take up to 24 hours to complete, so instead of waiting for the
+        // job to complete, retrieves and displays the job status once. If the job is completed
+        // successfully, prints information about the user list. Otherwise, prints the query to use
+        // to check the job again later.
+        checkJobStatus(
+            googleAdsClient, customerId, offlineUserDataJobResourceName, userListResourceName);
       }
-
-      // Issues an asynchronous request to run the offline user data job for executing all added
-      // operations.
-      OperationFuture<Empty, Empty> runFuture =
-          offlineUserDataJobServiceClient.runOfflineUserDataJobAsync(
-              offlineUserDataJobResourceName);
-      System.out.println("Asynchronous request to execute the added operations started.");
-      System.out.println("Waiting until operation completes.");
-
-      // The polling future implements a default back-off policy for retrying.
-      runFuture.getPollingFuture().get(MAX_TOTAL_POLL_INTERVAL_SECONDS, TimeUnit.SECONDS);
-      System.out.printf(
-          "Offline user data job with resource name '%s' has finished.%n",
-          offlineUserDataJobResourceName);
     }
   }
 
@@ -311,6 +292,85 @@ public class AddCustomerMatchUserList {
   }
 
   /**
+   * Returns the result of normalizing and then hashing the string using the provided digest.
+   * Private customer data must be hashed during upload, as described at
+   * https://support.google.com/google-ads/answer/7474263.
+   *
+   * @param digest the digest to use to hash the normalized string.
+   * @param s the string to normalize and hash.
+   */
+  private String normalizeAndHash(MessageDigest digest, String s)
+      throws UnsupportedEncodingException {
+    // Normalizes by removing leading and trailing whitespace and converting all characters to
+    // lower case.
+    String normalized = s.trim().toLowerCase();
+    // Hashes the normalized string using the hashing algorithm.
+    byte[] hash = digest.digest(normalized.getBytes("UTF-8"));
+    StringBuilder result = new StringBuilder();
+    for (byte b : hash) {
+      result.append(String.format("%02x", b));
+    }
+
+    return result.toString();
+  }
+
+  /**
+   * Retrieves, checks, and prints the status of the offline user data job.
+   *
+   * @param googleAdsClient the Google Ads API client.
+   * @param customerId the client customer ID.
+   * @param offlineUserDataJobResourceName the resource name of the OfflineUserDataJob to get the
+   *     status for.
+   * @param userListResourceName the resource name of the Customer Match user list.
+   */
+  private void checkJobStatus(
+      GoogleAdsClient googleAdsClient,
+      long customerId,
+      String offlineUserDataJobResourceName,
+      String userListResourceName) {
+    try (GoogleAdsServiceClient googleAdsServiceClient =
+        googleAdsClient.getLatestVersion().createGoogleAdsServiceClient()) {
+      String query =
+          String.format(
+              "SELECT offline_user_data_job.resource_name, "
+                  + "offline_user_data_job.id, "
+                  + "offline_user_data_job.status, "
+                  + "offline_user_data_job.type, "
+                  + "offline_user_data_job.failure_reason "
+                  + "FROM offline_user_data_job "
+                  + "WHERE offline_user_data_job.resource_name = '%s'",
+              offlineUserDataJobResourceName);
+      // Issues the query and gets the GoogleAdsRow containing the job from the response.
+      GoogleAdsRow googleAdsRow =
+          googleAdsServiceClient
+              .search(Long.toString(customerId), query)
+              .iterateAll()
+              .iterator()
+              .next();
+      OfflineUserDataJob offlineUserDataJob = googleAdsRow.getOfflineUserDataJob();
+      System.out.printf(
+          "Offline user data job ID %d with type '%s' has status: %s%n",
+          offlineUserDataJob.getId().getValue(),
+          offlineUserDataJob.getType(),
+          offlineUserDataJob.getStatus());
+      OfflineUserDataJobStatus jobStatus = offlineUserDataJob.getStatus();
+      if (OfflineUserDataJobStatus.SUCCESS == jobStatus) {
+        // Prints information about the user list.
+        printCustomerMatchUserListInfo(googleAdsClient, customerId, userListResourceName);
+      } else if (OfflineUserDataJobStatus.FAILED == jobStatus) {
+        System.out.printf("  Failure reason: %s%n", offlineUserDataJob.getFailureReason());
+      } else if (OfflineUserDataJobStatus.PENDING == jobStatus
+          || OfflineUserDataJobStatus.RUNNING == jobStatus) {
+        System.out.println();
+        System.out.printf(
+            "To check the status of the job periodically, use the following GAQL query with"
+                + " GoogleAdsService.search:%n%s%n",
+            query);
+      }
+    }
+  }
+
+  /**
    * Prints information about the Customer Match user list.
    *
    * @param googleAdsClient the Google Ads API client.
@@ -348,31 +408,6 @@ public class AddCustomerMatchUserList {
           userList.getResourceName(),
           userList.getSizeForDisplay().getValue(),
           userList.getSizeForSearch().getValue());
-      System.out.println(
-          "Reminder: It may take several hours for the user list to be populated with the users.");
     }
-  }
-
-  /**
-   * Returns the result of normalizing and then hashing the string using the provided digest.
-   * Private customer data must be hashed during upload, as described at
-   * https://support.google.com/google-ads/answer/7474263.
-   *
-   * @param digest the digest to use to hash the normalized string.
-   * @param s the string to normalize and hash.
-   */
-  private String normalizeAndHash(MessageDigest digest, String s)
-      throws UnsupportedEncodingException {
-    // Normalizes by removing leading and trailing whitespace and converting all characters to
-    // lower case.
-    String normalized = s.trim().toLowerCase();
-    // Hashes the normalized string using the hashing algorithm.
-    byte[] hash = digest.digest(normalized.getBytes("UTF-8"));
-    StringBuilder result = new StringBuilder();
-    for (byte b : hash) {
-      result.append(String.format("%02x", b));
-    }
-
-    return result.toString();
   }
 }
