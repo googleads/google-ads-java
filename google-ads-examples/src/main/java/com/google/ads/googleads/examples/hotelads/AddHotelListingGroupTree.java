@@ -137,7 +137,7 @@ public class AddHotelListingGroupTree {
         new AbstractSequentialIterator<Long>(startingTempId) {
           @Override
           protected Long computeNext(@NullableDecl Long previous) {
-            assert previous != null;
+            if (previous == null) { throw new IllegalStateException(); }
             return Long.MIN_VALUE == previous ? null : previous - 1;
           }
         };
