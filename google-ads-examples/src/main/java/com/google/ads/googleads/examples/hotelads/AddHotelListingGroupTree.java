@@ -32,14 +32,12 @@ import com.google.ads.googleads.v5.services.AdGroupCriterionServiceClient;
 import com.google.ads.googleads.v5.services.MutateAdGroupCriteriaResponse;
 import com.google.ads.googleads.v5.services.MutateAdGroupCriterionResult;
 import com.google.ads.googleads.v5.utils.ResourceNames;
-import com.google.common.collect.AbstractSequentialIterator;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 import java.util.stream.LongStream;
-import org.checkerframework.checker.nullness.compatqual.NullableDecl;
 
 /**
  * This example shows how to add a hotel listing group tree, which has two levels. The first level
