@@ -38,6 +38,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
+import java.util.stream.LongStream;
 import org.checkerframework.checker.nullness.compatqual.NullableDecl;
 
 /**
@@ -132,15 +133,7 @@ public class AddHotelListingGroupTree {
    * to it.
    */
   AddHotelListingGroupTree() {
-    long startingTempId = -1;
-    idGenerator =
-        new AbstractSequentialIterator<Long>(startingTempId) {
-          @Override
-          protected Long computeNext(@NullableDecl Long previous) {
-            if (previous == null) { throw new IllegalStateException(); }
-            return Long.MIN_VALUE == previous ? null : previous - 1;
-          }
-        };
+    idGenerator = LongStream.iterate(-1L, prev -> prev - 1).iterator();
   }
 
   /**
