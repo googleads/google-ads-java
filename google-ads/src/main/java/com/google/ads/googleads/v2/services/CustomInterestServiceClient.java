@@ -1,5 +1,5 @@
 /*
- * Copyright 2019 Google LLC
+ * Copyright 2020 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -21,7 +21,6 @@ import com.google.ads.googleads.v2.services.stub.CustomInterestServiceStubSettin
 import com.google.api.core.BetaApi;
 import com.google.api.gax.core.BackgroundResource;
 import com.google.api.gax.rpc.UnaryCallable;
-import com.google.api.pathtemplate.PathTemplate;
 import java.io.IOException;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
@@ -37,8 +36,8 @@ import javax.annotation.Generated;
  * <pre>
  * <code>
  * try (CustomInterestServiceClient customInterestServiceClient = CustomInterestServiceClient.create()) {
- *   String formattedResourceName = CustomInterestServiceClient.formatCustomInterestName("[CUSTOMER]", "[CUSTOM_INTEREST]");
- *   CustomInterest response = customInterestServiceClient.getCustomInterest(formattedResourceName);
+ *   CustomInterestName resourceName = CustomInterestName.of("[CUSTOMER]", "[CUSTOM_INTEREST]");
+ *   CustomInterest response = customInterestServiceClient.getCustomInterest(resourceName);
  * }
  * </code>
  * </pre>
@@ -100,44 +99,6 @@ public class CustomInterestServiceClient implements BackgroundResource {
   private final CustomInterestServiceSettings settings;
   private final CustomInterestServiceStub stub;
 
-  private static final PathTemplate CUSTOM_INTEREST_PATH_TEMPLATE =
-      PathTemplate.createWithoutUrlEncoding(
-          "customers/{customer}/customInterests/{custom_interest}");
-
-  /**
-   * Formats a string containing the fully-qualified path to represent a custom_interest resource.
-   *
-   * @deprecated Use the {@link CustomInterestName} class instead.
-   */
-  @Deprecated
-  public static final String formatCustomInterestName(String customer, String customInterest) {
-    return CUSTOM_INTEREST_PATH_TEMPLATE.instantiate(
-        "customer", customer,
-        "custom_interest", customInterest);
-  }
-
-  /**
-   * Parses the customer from the given fully-qualified path which represents a custom_interest
-   * resource.
-   *
-   * @deprecated Use the {@link CustomInterestName} class instead.
-   */
-  @Deprecated
-  public static final String parseCustomerFromCustomInterestName(String customInterestName) {
-    return CUSTOM_INTEREST_PATH_TEMPLATE.parse(customInterestName).get("customer");
-  }
-
-  /**
-   * Parses the custom_interest from the given fully-qualified path which represents a
-   * custom_interest resource.
-   *
-   * @deprecated Use the {@link CustomInterestName} class instead.
-   */
-  @Deprecated
-  public static final String parseCustomInterestFromCustomInterestName(String customInterestName) {
-    return CUSTOM_INTEREST_PATH_TEMPLATE.parse(customInterestName).get("custom_interest");
-  }
-
   /** Constructs an instance of CustomInterestServiceClient with default settings. */
   public static final CustomInterestServiceClient create() throws IOException {
     return create(CustomInterestServiceSettings.newBuilder().build());
@@ -194,16 +155,39 @@ public class CustomInterestServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (CustomInterestServiceClient customInterestServiceClient = CustomInterestServiceClient.create()) {
-   *   String formattedResourceName = CustomInterestServiceClient.formatCustomInterestName("[CUSTOMER]", "[CUSTOM_INTEREST]");
-   *   CustomInterest response = customInterestServiceClient.getCustomInterest(formattedResourceName);
+   *   CustomInterestName resourceName = CustomInterestName.of("[CUSTOMER]", "[CUSTOM_INTEREST]");
+   *   CustomInterest response = customInterestServiceClient.getCustomInterest(resourceName);
    * }
    * </code></pre>
    *
-   * @param resourceName The resource name of the custom interest to fetch.
+   * @param resourceName Required. The resource name of the custom interest to fetch.
+   * @throws com.google.api.gax.rpc.ApiException if the remote call fails
+   */
+  public final CustomInterest getCustomInterest(CustomInterestName resourceName) {
+    GetCustomInterestRequest request =
+        GetCustomInterestRequest.newBuilder()
+            .setResourceName(resourceName == null ? null : resourceName.toString())
+            .build();
+    return getCustomInterest(request);
+  }
+
+  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  /**
+   * Returns the requested custom interest in full detail.
+   *
+   * <p>Sample code:
+   *
+   * <pre><code>
+   * try (CustomInterestServiceClient customInterestServiceClient = CustomInterestServiceClient.create()) {
+   *   CustomInterestName resourceName = CustomInterestName.of("[CUSTOMER]", "[CUSTOM_INTEREST]");
+   *   CustomInterest response = customInterestServiceClient.getCustomInterest(resourceName.toString());
+   * }
+   * </code></pre>
+   *
+   * @param resourceName Required. The resource name of the custom interest to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final CustomInterest getCustomInterest(String resourceName) {
-    CUSTOM_INTEREST_PATH_TEMPLATE.validate(resourceName, "getCustomInterest");
     GetCustomInterestRequest request =
         GetCustomInterestRequest.newBuilder().setResourceName(resourceName).build();
     return getCustomInterest(request);
@@ -217,9 +201,9 @@ public class CustomInterestServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (CustomInterestServiceClient customInterestServiceClient = CustomInterestServiceClient.create()) {
-   *   String formattedResourceName = CustomInterestServiceClient.formatCustomInterestName("[CUSTOMER]", "[CUSTOM_INTEREST]");
+   *   CustomInterestName resourceName = CustomInterestName.of("[CUSTOMER]", "[CUSTOM_INTEREST]");
    *   GetCustomInterestRequest request = GetCustomInterestRequest.newBuilder()
-   *     .setResourceName(formattedResourceName)
+   *     .setResourceName(resourceName.toString())
    *     .build();
    *   CustomInterest response = customInterestServiceClient.getCustomInterest(request);
    * }
@@ -240,9 +224,9 @@ public class CustomInterestServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (CustomInterestServiceClient customInterestServiceClient = CustomInterestServiceClient.create()) {
-   *   String formattedResourceName = CustomInterestServiceClient.formatCustomInterestName("[CUSTOMER]", "[CUSTOM_INTEREST]");
+   *   CustomInterestName resourceName = CustomInterestName.of("[CUSTOMER]", "[CUSTOM_INTEREST]");
    *   GetCustomInterestRequest request = GetCustomInterestRequest.newBuilder()
-   *     .setResourceName(formattedResourceName)
+   *     .setResourceName(resourceName.toString())
    *     .build();
    *   ApiFuture&lt;CustomInterest&gt; future = customInterestServiceClient.getCustomInterestCallable().futureCall(request);
    *   // Do something
@@ -264,50 +248,16 @@ public class CustomInterestServiceClient implements BackgroundResource {
    * try (CustomInterestServiceClient customInterestServiceClient = CustomInterestServiceClient.create()) {
    *   String customerId = "";
    *   List&lt;CustomInterestOperation&gt; operations = new ArrayList&lt;&gt;();
-   *   boolean validateOnly = false;
-   *   MutateCustomInterestsResponse response = customInterestServiceClient.mutateCustomInterests(customerId, operations, validateOnly);
-   * }
-   * </code></pre>
-   *
-   * @param customerId The ID of the customer whose custom interests are being modified.
-   * @param operations The list of operations to perform on individual custom interests.
-   * @param validateOnly If true, the request is validated but not executed. Only errors are
-   *     returned, not results.
-   * @throws com.google.api.gax.rpc.ApiException if the remote call fails
-   */
-  public final MutateCustomInterestsResponse mutateCustomInterests(
-      String customerId, List<CustomInterestOperation> operations, boolean validateOnly) {
-
-    MutateCustomInterestsRequest request =
-        MutateCustomInterestsRequest.newBuilder()
-            .setCustomerId(customerId)
-            .addAllOperations(operations)
-            .setValidateOnly(validateOnly)
-            .build();
-    return mutateCustomInterests(request);
-  }
-
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
-  /**
-   * Creates or updates custom interests. Operation statuses are returned.
-   *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (CustomInterestServiceClient customInterestServiceClient = CustomInterestServiceClient.create()) {
-   *   String customerId = "";
-   *   List&lt;CustomInterestOperation&gt; operations = new ArrayList&lt;&gt;();
    *   MutateCustomInterestsResponse response = customInterestServiceClient.mutateCustomInterests(customerId, operations);
    * }
    * </code></pre>
    *
-   * @param customerId The ID of the customer whose custom interests are being modified.
-   * @param operations The list of operations to perform on individual custom interests.
+   * @param customerId Required. The ID of the customer whose custom interests are being modified.
+   * @param operations Required. The list of operations to perform on individual custom interests.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final MutateCustomInterestsResponse mutateCustomInterests(
       String customerId, List<CustomInterestOperation> operations) {
-
     MutateCustomInterestsRequest request =
         MutateCustomInterestsRequest.newBuilder()
             .setCustomerId(customerId)

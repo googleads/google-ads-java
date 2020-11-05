@@ -9,44 +9,48 @@ public interface MutateMerchantCenterLinkRequestOrBuilder extends
 
   /**
    * <pre>
-   * The ID of the customer being modified.
+   * Required. The ID of the customer being modified.
    * </pre>
    *
-   * <code>string customer_id = 1;</code>
+   * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+   * @return The customerId.
    */
   java.lang.String getCustomerId();
   /**
    * <pre>
-   * The ID of the customer being modified.
+   * Required. The ID of the customer being modified.
    * </pre>
    *
-   * <code>string customer_id = 1;</code>
+   * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+   * @return The bytes for customerId.
    */
   com.google.protobuf.ByteString
       getCustomerIdBytes();
 
   /**
    * <pre>
-   * The operation to perform on the link
+   * Required. The operation to perform on the link
    * </pre>
    *
-   * <code>.google.ads.googleads.v2.services.MerchantCenterLinkOperation operation = 2;</code>
+   * <code>.google.ads.googleads.v2.services.MerchantCenterLinkOperation operation = 2 [(.google.api.field_behavior) = REQUIRED];</code>
+   * @return Whether the operation field is set.
    */
   boolean hasOperation();
   /**
    * <pre>
-   * The operation to perform on the link
+   * Required. The operation to perform on the link
    * </pre>
    *
-   * <code>.google.ads.googleads.v2.services.MerchantCenterLinkOperation operation = 2;</code>
+   * <code>.google.ads.googleads.v2.services.MerchantCenterLinkOperation operation = 2 [(.google.api.field_behavior) = REQUIRED];</code>
+   * @return The operation.
    */
   com.google.ads.googleads.v2.services.MerchantCenterLinkOperation getOperation();
   /**
    * <pre>
-   * The operation to perform on the link
+   * Required. The operation to perform on the link
    * </pre>
    *
-   * <code>.google.ads.googleads.v2.services.MerchantCenterLinkOperation operation = 2;</code>
+   * <code>.google.ads.googleads.v2.services.MerchantCenterLinkOperation operation = 2 [(.google.api.field_behavior) = REQUIRED];</code>
    */
   com.google.ads.googleads.v2.services.MerchantCenterLinkOperationOrBuilder getOperationOrBuilder();
 }

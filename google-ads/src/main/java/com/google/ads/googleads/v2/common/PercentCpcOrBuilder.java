@@ -16,6 +16,7 @@ public interface PercentCpcOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value cpc_bid_ceiling_micros = 1;</code>
+   * @return Whether the cpcBidCeilingMicros field is set.
    */
   boolean hasCpcBidCeilingMicros();
   /**
@@ -27,6 +28,7 @@ public interface PercentCpcOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value cpc_bid_ceiling_micros = 1;</code>
+   * @return The cpcBidCeilingMicros.
    */
   com.google.protobuf.Int64Value getCpcBidCeilingMicros();
   /**
@@ -50,6 +52,7 @@ public interface PercentCpcOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.BoolValue enhanced_cpc_enabled = 2;</code>
+   * @return Whether the enhancedCpcEnabled field is set.
    */
   boolean hasEnhancedCpcEnabled();
   /**
@@ -61,6 +64,7 @@ public interface PercentCpcOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.BoolValue enhanced_cpc_enabled = 2;</code>
+   * @return The enhancedCpcEnabled.
    */
   com.google.protobuf.BoolValue getEnhancedCpcEnabled();
   /**

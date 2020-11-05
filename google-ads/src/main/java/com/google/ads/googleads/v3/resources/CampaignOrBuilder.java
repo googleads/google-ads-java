@@ -15,6 +15,7 @@ public interface CampaignOrBuilder extends
    * </pre>
    *
    * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * @return The resourceName.
    */
   java.lang.String getResourceName();
   /**
@@ -25,6 +26,7 @@ public interface CampaignOrBuilder extends
    * </pre>
    *
    * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * @return The bytes for resourceName.
    */
   com.google.protobuf.ByteString
       getResourceNameBytes();
@@ -35,6 +37,7 @@ public interface CampaignOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the id field is set.
    */
   boolean hasId();
   /**
@@ -43,6 +46,7 @@ public interface CampaignOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The id.
    */
   com.google.protobuf.Int64Value getId();
   /**
@@ -64,6 +68,7 @@ public interface CampaignOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue name = 4;</code>
+   * @return Whether the name field is set.
    */
   boolean hasName();
   /**
@@ -76,6 +81,7 @@ public interface CampaignOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue name = 4;</code>
+   * @return The name.
    */
   com.google.protobuf.StringValue getName();
   /**
@@ -98,6 +104,7 @@ public interface CampaignOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.CampaignStatusEnum.CampaignStatus status = 5;</code>
+   * @return The enum numeric value on the wire for status.
    */
   int getStatusValue();
   /**
@@ -107,6 +114,7 @@ public interface CampaignOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.CampaignStatusEnum.CampaignStatus status = 5;</code>
+   * @return The status.
    */
   com.google.ads.googleads.v3.enums.CampaignStatusEnum.CampaignStatus getStatus();
 
@@ -116,6 +124,7 @@ public interface CampaignOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.CampaignServingStatusEnum.CampaignServingStatus serving_status = 21 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The enum numeric value on the wire for servingStatus.
    */
   int getServingStatusValue();
   /**
@@ -124,6 +133,7 @@ public interface CampaignOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.CampaignServingStatusEnum.CampaignServingStatus serving_status = 21 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The servingStatus.
    */
   com.google.ads.googleads.v3.enums.CampaignServingStatusEnum.CampaignServingStatus getServingStatus();
 
@@ -133,6 +143,7 @@ public interface CampaignOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.AdServingOptimizationStatusEnum.AdServingOptimizationStatus ad_serving_optimization_status = 8;</code>
+   * @return The enum numeric value on the wire for adServingOptimizationStatus.
    */
   int getAdServingOptimizationStatusValue();
   /**
@@ -141,6 +152,7 @@ public interface CampaignOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.AdServingOptimizationStatusEnum.AdServingOptimizationStatus ad_serving_optimization_status = 8;</code>
+   * @return The adServingOptimizationStatus.
    */
   com.google.ads.googleads.v3.enums.AdServingOptimizationStatusEnum.AdServingOptimizationStatus getAdServingOptimizationStatus();
 
@@ -155,6 +167,7 @@ public interface CampaignOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.AdvertisingChannelTypeEnum.AdvertisingChannelType advertising_channel_type = 9 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The enum numeric value on the wire for advertisingChannelType.
    */
   int getAdvertisingChannelTypeValue();
   /**
@@ -168,6 +181,7 @@ public interface CampaignOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.AdvertisingChannelTypeEnum.AdvertisingChannelType advertising_channel_type = 9 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The advertisingChannelType.
    */
   com.google.ads.googleads.v3.enums.AdvertisingChannelTypeEnum.AdvertisingChannelType getAdvertisingChannelType();
 
@@ -180,6 +194,7 @@ public interface CampaignOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.AdvertisingChannelSubTypeEnum.AdvertisingChannelSubType advertising_channel_sub_type = 10 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The enum numeric value on the wire for advertisingChannelSubType.
    */
   int getAdvertisingChannelSubTypeValue();
   /**
@@ -191,6 +206,7 @@ public interface CampaignOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.AdvertisingChannelSubTypeEnum.AdvertisingChannelSubType advertising_channel_sub_type = 10 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The advertisingChannelSubType.
    */
   com.google.ads.googleads.v3.enums.AdvertisingChannelSubTypeEnum.AdvertisingChannelSubType getAdvertisingChannelSubType();
 
@@ -200,6 +216,7 @@ public interface CampaignOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue tracking_url_template = 11;</code>
+   * @return Whether the trackingUrlTemplate field is set.
    */
   boolean hasTrackingUrlTemplate();
   /**
@@ -208,6 +225,7 @@ public interface CampaignOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue tracking_url_template = 11;</code>
+   * @return The trackingUrlTemplate.
    */
   com.google.protobuf.StringValue getTrackingUrlTemplate();
   /**
@@ -275,6 +293,7 @@ public interface CampaignOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.RealTimeBiddingSetting real_time_bidding_setting = 39;</code>
+   * @return Whether the realTimeBiddingSetting field is set.
    */
   boolean hasRealTimeBiddingSetting();
   /**
@@ -284,6 +303,7 @@ public interface CampaignOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.RealTimeBiddingSetting real_time_bidding_setting = 39;</code>
+   * @return The realTimeBiddingSetting.
    */
   com.google.ads.googleads.v3.common.RealTimeBiddingSetting getRealTimeBiddingSetting();
   /**
@@ -302,6 +322,7 @@ public interface CampaignOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.Campaign.NetworkSettings network_settings = 14;</code>
+   * @return Whether the networkSettings field is set.
    */
   boolean hasNetworkSettings();
   /**
@@ -310,6 +331,7 @@ public interface CampaignOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.Campaign.NetworkSettings network_settings = 14;</code>
+   * @return The networkSettings.
    */
   com.google.ads.googleads.v3.resources.Campaign.NetworkSettings getNetworkSettings();
   /**
@@ -327,6 +349,7 @@ public interface CampaignOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.Campaign.HotelSettingInfo hotel_setting = 32 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return Whether the hotelSetting field is set.
    */
   boolean hasHotelSetting();
   /**
@@ -335,6 +358,7 @@ public interface CampaignOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.Campaign.HotelSettingInfo hotel_setting = 32 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The hotelSetting.
    */
   com.google.ads.googleads.v3.resources.Campaign.HotelSettingInfo getHotelSetting();
   /**
@@ -352,6 +376,7 @@ public interface CampaignOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.Campaign.DynamicSearchAdsSetting dynamic_search_ads_setting = 33;</code>
+   * @return Whether the dynamicSearchAdsSetting field is set.
    */
   boolean hasDynamicSearchAdsSetting();
   /**
@@ -360,6 +385,7 @@ public interface CampaignOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.Campaign.DynamicSearchAdsSetting dynamic_search_ads_setting = 33;</code>
+   * @return The dynamicSearchAdsSetting.
    */
   com.google.ads.googleads.v3.resources.Campaign.DynamicSearchAdsSetting getDynamicSearchAdsSetting();
   /**
@@ -377,6 +403,7 @@ public interface CampaignOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.Campaign.ShoppingSetting shopping_setting = 36;</code>
+   * @return Whether the shoppingSetting field is set.
    */
   boolean hasShoppingSetting();
   /**
@@ -385,6 +412,7 @@ public interface CampaignOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.Campaign.ShoppingSetting shopping_setting = 36;</code>
+   * @return The shoppingSetting.
    */
   com.google.ads.googleads.v3.resources.Campaign.ShoppingSetting getShoppingSetting();
   /**
@@ -402,6 +430,7 @@ public interface CampaignOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.TargetingSetting targeting_setting = 43;</code>
+   * @return Whether the targetingSetting field is set.
    */
   boolean hasTargetingSetting();
   /**
@@ -410,6 +439,7 @@ public interface CampaignOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.TargetingSetting targeting_setting = 43;</code>
+   * @return The targetingSetting.
    */
   com.google.ads.googleads.v3.common.TargetingSetting getTargetingSetting();
   /**
@@ -427,6 +457,7 @@ public interface CampaignOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.Campaign.GeoTargetTypeSetting geo_target_type_setting = 47;</code>
+   * @return Whether the geoTargetTypeSetting field is set.
    */
   boolean hasGeoTargetTypeSetting();
   /**
@@ -435,6 +466,7 @@ public interface CampaignOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.Campaign.GeoTargetTypeSetting geo_target_type_setting = 47;</code>
+   * @return The geoTargetTypeSetting.
    */
   com.google.ads.googleads.v3.resources.Campaign.GeoTargetTypeSetting getGeoTargetTypeSetting();
   /**
@@ -452,6 +484,7 @@ public interface CampaignOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.Campaign.AppCampaignSetting app_campaign_setting = 51;</code>
+   * @return Whether the appCampaignSetting field is set.
    */
   boolean hasAppCampaignSetting();
   /**
@@ -460,6 +493,7 @@ public interface CampaignOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.Campaign.AppCampaignSetting app_campaign_setting = 51;</code>
+   * @return The appCampaignSetting.
    */
   com.google.ads.googleads.v3.resources.Campaign.AppCampaignSetting getAppCampaignSetting();
   /**
@@ -521,6 +555,7 @@ public interface CampaignOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.CampaignExperimentTypeEnum.CampaignExperimentType experiment_type = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The enum numeric value on the wire for experimentType.
    */
   int getExperimentTypeValue();
   /**
@@ -529,6 +564,7 @@ public interface CampaignOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.CampaignExperimentTypeEnum.CampaignExperimentType experiment_type = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The experimentType.
    */
   com.google.ads.googleads.v3.enums.CampaignExperimentTypeEnum.CampaignExperimentType getExperimentType();
 
@@ -540,6 +576,7 @@ public interface CampaignOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue base_campaign = 28 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return Whether the baseCampaign field is set.
    */
   boolean hasBaseCampaign();
   /**
@@ -550,6 +587,7 @@ public interface CampaignOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue base_campaign = 28 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The baseCampaign.
    */
   com.google.protobuf.StringValue getBaseCampaign();
   /**
@@ -569,6 +607,7 @@ public interface CampaignOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue campaign_budget = 6 [(.google.api.resource_reference) = { ... }</code>
+   * @return Whether the campaignBudget field is set.
    */
   boolean hasCampaignBudget();
   /**
@@ -577,6 +616,7 @@ public interface CampaignOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue campaign_budget = 6 [(.google.api.resource_reference) = { ... }</code>
+   * @return The campaignBudget.
    */
   com.google.protobuf.StringValue getCampaignBudget();
   /**
@@ -598,6 +638,7 @@ public interface CampaignOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.BiddingStrategyTypeEnum.BiddingStrategyType bidding_strategy_type = 22 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The enum numeric value on the wire for biddingStrategyType.
    */
   int getBiddingStrategyTypeValue();
   /**
@@ -610,6 +651,7 @@ public interface CampaignOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.BiddingStrategyTypeEnum.BiddingStrategyType bidding_strategy_type = 22 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The biddingStrategyType.
    */
   com.google.ads.googleads.v3.enums.BiddingStrategyTypeEnum.BiddingStrategyType getBiddingStrategyType();
 
@@ -620,6 +662,7 @@ public interface CampaignOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue start_date = 19;</code>
+   * @return Whether the startDate field is set.
    */
   boolean hasStartDate();
   /**
@@ -629,6 +672,7 @@ public interface CampaignOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue start_date = 19;</code>
+   * @return The startDate.
    */
   com.google.protobuf.StringValue getStartDate();
   /**
@@ -648,6 +692,7 @@ public interface CampaignOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue end_date = 20;</code>
+   * @return Whether the endDate field is set.
    */
   boolean hasEndDate();
   /**
@@ -657,6 +702,7 @@ public interface CampaignOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue end_date = 20;</code>
+   * @return The endDate.
    */
   com.google.protobuf.StringValue getEndDate();
   /**
@@ -676,6 +722,7 @@ public interface CampaignOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue final_url_suffix = 38;</code>
+   * @return Whether the finalUrlSuffix field is set.
    */
   boolean hasFinalUrlSuffix();
   /**
@@ -685,6 +732,7 @@ public interface CampaignOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue final_url_suffix = 38;</code>
+   * @return The finalUrlSuffix.
    */
   com.google.protobuf.StringValue getFinalUrlSuffix();
   /**
@@ -747,6 +795,7 @@ public interface CampaignOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.BrandSafetySuitabilityEnum.BrandSafetySuitability video_brand_safety_suitability = 42 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The enum numeric value on the wire for videoBrandSafetySuitability.
    */
   int getVideoBrandSafetySuitabilityValue();
   /**
@@ -755,6 +804,7 @@ public interface CampaignOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.BrandSafetySuitabilityEnum.BrandSafetySuitability video_brand_safety_suitability = 42 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The videoBrandSafetySuitability.
    */
   com.google.ads.googleads.v3.enums.BrandSafetySuitabilityEnum.BrandSafetySuitability getVideoBrandSafetySuitability();
 
@@ -764,6 +814,7 @@ public interface CampaignOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.Campaign.VanityPharma vanity_pharma = 44;</code>
+   * @return Whether the vanityPharma field is set.
    */
   boolean hasVanityPharma();
   /**
@@ -772,6 +823,7 @@ public interface CampaignOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.Campaign.VanityPharma vanity_pharma = 44;</code>
+   * @return The vanityPharma.
    */
   com.google.ads.googleads.v3.resources.Campaign.VanityPharma getVanityPharma();
   /**
@@ -790,6 +842,7 @@ public interface CampaignOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.Campaign.SelectiveOptimization selective_optimization = 45;</code>
+   * @return Whether the selectiveOptimization field is set.
    */
   boolean hasSelectiveOptimization();
   /**
@@ -799,6 +852,7 @@ public interface CampaignOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.Campaign.SelectiveOptimization selective_optimization = 45;</code>
+   * @return The selectiveOptimization.
    */
   com.google.ads.googleads.v3.resources.Campaign.SelectiveOptimization getSelectiveOptimization();
   /**
@@ -817,6 +871,7 @@ public interface CampaignOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.Campaign.TrackingSetting tracking_setting = 46 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the trackingSetting field is set.
    */
   boolean hasTrackingSetting();
   /**
@@ -825,6 +880,7 @@ public interface CampaignOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.Campaign.TrackingSetting tracking_setting = 46 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The trackingSetting.
    */
   com.google.ads.googleads.v3.resources.Campaign.TrackingSetting getTrackingSetting();
   /**
@@ -842,6 +898,7 @@ public interface CampaignOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.PaymentModeEnum.PaymentMode payment_mode = 52;</code>
+   * @return The enum numeric value on the wire for paymentMode.
    */
   int getPaymentModeValue();
   /**
@@ -850,6 +907,7 @@ public interface CampaignOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.PaymentModeEnum.PaymentMode payment_mode = 52;</code>
+   * @return The paymentMode.
    */
   com.google.ads.googleads.v3.enums.PaymentModeEnum.PaymentMode getPaymentMode();
 
@@ -865,6 +923,7 @@ public interface CampaignOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue optimization_score = 55 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the optimizationScore field is set.
    */
   boolean hasOptimizationScore();
   /**
@@ -879,6 +938,7 @@ public interface CampaignOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue optimization_score = 55 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The optimizationScore.
    */
   com.google.protobuf.DoubleValue getOptimizationScore();
   /**
@@ -902,6 +962,7 @@ public interface CampaignOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue bidding_strategy = 23 [(.google.api.resource_reference) = { ... }</code>
+   * @return Whether the biddingStrategy field is set.
    */
   boolean hasBiddingStrategy();
   /**
@@ -910,6 +971,7 @@ public interface CampaignOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue bidding_strategy = 23 [(.google.api.resource_reference) = { ... }</code>
+   * @return The biddingStrategy.
    */
   com.google.protobuf.StringValue getBiddingStrategy();
   /**
@@ -928,6 +990,7 @@ public interface CampaignOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.Commission commission = 49;</code>
+   * @return Whether the commission field is set.
    */
   boolean hasCommission();
   /**
@@ -937,6 +1000,7 @@ public interface CampaignOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.Commission commission = 49;</code>
+   * @return The commission.
    */
   com.google.ads.googleads.v3.common.Commission getCommission();
   /**
@@ -956,6 +1020,7 @@ public interface CampaignOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.ManualCpc manual_cpc = 24;</code>
+   * @return Whether the manualCpc field is set.
    */
   boolean hasManualCpc();
   /**
@@ -965,6 +1030,7 @@ public interface CampaignOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.ManualCpc manual_cpc = 24;</code>
+   * @return The manualCpc.
    */
   com.google.ads.googleads.v3.common.ManualCpc getManualCpc();
   /**
@@ -985,6 +1051,7 @@ public interface CampaignOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.ManualCpm manual_cpm = 25;</code>
+   * @return Whether the manualCpm field is set.
    */
   boolean hasManualCpm();
   /**
@@ -995,6 +1062,7 @@ public interface CampaignOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.ManualCpm manual_cpm = 25;</code>
+   * @return The manualCpm.
    */
   com.google.ads.googleads.v3.common.ManualCpm getManualCpm();
   /**
@@ -1014,6 +1082,7 @@ public interface CampaignOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.ManualCpv manual_cpv = 37 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the manualCpv field is set.
    */
   boolean hasManualCpv();
   /**
@@ -1022,6 +1091,7 @@ public interface CampaignOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.ManualCpv manual_cpv = 37 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The manualCpv.
    */
   com.google.ads.googleads.v3.common.ManualCpv getManualCpv();
   /**
@@ -1040,6 +1110,7 @@ public interface CampaignOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.MaximizeConversions maximize_conversions = 30;</code>
+   * @return Whether the maximizeConversions field is set.
    */
   boolean hasMaximizeConversions();
   /**
@@ -1049,6 +1120,7 @@ public interface CampaignOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.MaximizeConversions maximize_conversions = 30;</code>
+   * @return The maximizeConversions.
    */
   com.google.ads.googleads.v3.common.MaximizeConversions getMaximizeConversions();
   /**
@@ -1068,6 +1140,7 @@ public interface CampaignOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.MaximizeConversionValue maximize_conversion_value = 31;</code>
+   * @return Whether the maximizeConversionValue field is set.
    */
   boolean hasMaximizeConversionValue();
   /**
@@ -1077,6 +1150,7 @@ public interface CampaignOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.MaximizeConversionValue maximize_conversion_value = 31;</code>
+   * @return The maximizeConversionValue.
    */
   com.google.ads.googleads.v3.common.MaximizeConversionValue getMaximizeConversionValue();
   /**
@@ -1097,6 +1171,7 @@ public interface CampaignOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.TargetCpa target_cpa = 26;</code>
+   * @return Whether the targetCpa field is set.
    */
   boolean hasTargetCpa();
   /**
@@ -1107,6 +1182,7 @@ public interface CampaignOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.TargetCpa target_cpa = 26;</code>
+   * @return The targetCpa.
    */
   com.google.ads.googleads.v3.common.TargetCpa getTargetCpa();
   /**
@@ -1127,6 +1203,7 @@ public interface CampaignOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.TargetImpressionShare target_impression_share = 48;</code>
+   * @return Whether the targetImpressionShare field is set.
    */
   boolean hasTargetImpressionShare();
   /**
@@ -1136,6 +1213,7 @@ public interface CampaignOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.TargetImpressionShare target_impression_share = 48;</code>
+   * @return The targetImpressionShare.
    */
   com.google.ads.googleads.v3.common.TargetImpressionShare getTargetImpressionShare();
   /**
@@ -1155,6 +1233,7 @@ public interface CampaignOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.TargetRoas target_roas = 29;</code>
+   * @return Whether the targetRoas field is set.
    */
   boolean hasTargetRoas();
   /**
@@ -1164,6 +1243,7 @@ public interface CampaignOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.TargetRoas target_roas = 29;</code>
+   * @return The targetRoas.
    */
   com.google.ads.googleads.v3.common.TargetRoas getTargetRoas();
   /**
@@ -1183,6 +1263,7 @@ public interface CampaignOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.TargetSpend target_spend = 27;</code>
+   * @return Whether the targetSpend field is set.
    */
   boolean hasTargetSpend();
   /**
@@ -1192,6 +1273,7 @@ public interface CampaignOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.TargetSpend target_spend = 27;</code>
+   * @return The targetSpend.
    */
   com.google.ads.googleads.v3.common.TargetSpend getTargetSpend();
   /**
@@ -1211,6 +1293,7 @@ public interface CampaignOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.PercentCpc percent_cpc = 34;</code>
+   * @return Whether the percentCpc field is set.
    */
   boolean hasPercentCpc();
   /**
@@ -1220,6 +1303,7 @@ public interface CampaignOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.PercentCpc percent_cpc = 34;</code>
+   * @return The percentCpc.
    */
   com.google.ads.googleads.v3.common.PercentCpc getPercentCpc();
   /**
@@ -1239,6 +1323,7 @@ public interface CampaignOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.TargetCpm target_cpm = 41;</code>
+   * @return Whether the targetCpm field is set.
    */
   boolean hasTargetCpm();
   /**
@@ -1248,6 +1333,7 @@ public interface CampaignOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.TargetCpm target_cpm = 41;</code>
+   * @return The targetCpm.
    */
   com.google.ads.googleads.v3.common.TargetCpm getTargetCpm();
   /**

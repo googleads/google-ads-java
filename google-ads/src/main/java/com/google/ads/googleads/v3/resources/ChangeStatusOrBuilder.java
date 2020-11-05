@@ -15,6 +15,7 @@ public interface ChangeStatusOrBuilder extends
    * </pre>
    *
    * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The resourceName.
    */
   java.lang.String getResourceName();
   /**
@@ -25,6 +26,7 @@ public interface ChangeStatusOrBuilder extends
    * </pre>
    *
    * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The bytes for resourceName.
    */
   com.google.protobuf.ByteString
       getResourceNameBytes();
@@ -35,6 +37,7 @@ public interface ChangeStatusOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue last_change_date_time = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the lastChangeDateTime field is set.
    */
   boolean hasLastChangeDateTime();
   /**
@@ -43,6 +46,7 @@ public interface ChangeStatusOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue last_change_date_time = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The lastChangeDateTime.
    */
   com.google.protobuf.StringValue getLastChangeDateTime();
   /**
@@ -62,6 +66,7 @@ public interface ChangeStatusOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.ChangeStatusResourceTypeEnum.ChangeStatusResourceType resource_type = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The enum numeric value on the wire for resourceType.
    */
   int getResourceTypeValue();
   /**
@@ -72,6 +77,7 @@ public interface ChangeStatusOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.ChangeStatusResourceTypeEnum.ChangeStatusResourceType resource_type = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The resourceType.
    */
   com.google.ads.googleads.v3.enums.ChangeStatusResourceTypeEnum.ChangeStatusResourceType getResourceType();
 
@@ -81,6 +87,7 @@ public interface ChangeStatusOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue campaign = 5 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return Whether the campaign field is set.
    */
   boolean hasCampaign();
   /**
@@ -89,6 +96,7 @@ public interface ChangeStatusOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue campaign = 5 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The campaign.
    */
   com.google.protobuf.StringValue getCampaign();
   /**
@@ -106,6 +114,7 @@ public interface ChangeStatusOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue ad_group = 6 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return Whether the adGroup field is set.
    */
   boolean hasAdGroup();
   /**
@@ -114,6 +123,7 @@ public interface ChangeStatusOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue ad_group = 6 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The adGroup.
    */
   com.google.protobuf.StringValue getAdGroup();
   /**
@@ -131,6 +141,7 @@ public interface ChangeStatusOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.ChangeStatusOperationEnum.ChangeStatusOperation resource_status = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The enum numeric value on the wire for resourceStatus.
    */
   int getResourceStatusValue();
   /**
@@ -139,6 +150,7 @@ public interface ChangeStatusOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.ChangeStatusOperationEnum.ChangeStatusOperation resource_status = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The resourceStatus.
    */
   com.google.ads.googleads.v3.enums.ChangeStatusOperationEnum.ChangeStatusOperation getResourceStatus();
 
@@ -148,6 +160,7 @@ public interface ChangeStatusOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue ad_group_ad = 9 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return Whether the adGroupAd field is set.
    */
   boolean hasAdGroupAd();
   /**
@@ -156,6 +169,7 @@ public interface ChangeStatusOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue ad_group_ad = 9 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The adGroupAd.
    */
   com.google.protobuf.StringValue getAdGroupAd();
   /**
@@ -173,6 +187,7 @@ public interface ChangeStatusOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue ad_group_criterion = 10 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return Whether the adGroupCriterion field is set.
    */
   boolean hasAdGroupCriterion();
   /**
@@ -181,6 +196,7 @@ public interface ChangeStatusOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue ad_group_criterion = 10 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The adGroupCriterion.
    */
   com.google.protobuf.StringValue getAdGroupCriterion();
   /**
@@ -198,6 +214,7 @@ public interface ChangeStatusOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue campaign_criterion = 11 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return Whether the campaignCriterion field is set.
    */
   boolean hasCampaignCriterion();
   /**
@@ -206,6 +223,7 @@ public interface ChangeStatusOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue campaign_criterion = 11 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The campaignCriterion.
    */
   com.google.protobuf.StringValue getCampaignCriterion();
   /**
@@ -223,6 +241,7 @@ public interface ChangeStatusOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue feed = 12 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return Whether the feed field is set.
    */
   boolean hasFeed();
   /**
@@ -231,6 +250,7 @@ public interface ChangeStatusOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue feed = 12 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The feed.
    */
   com.google.protobuf.StringValue getFeed();
   /**
@@ -248,6 +268,7 @@ public interface ChangeStatusOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue feed_item = 13 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return Whether the feedItem field is set.
    */
   boolean hasFeedItem();
   /**
@@ -256,6 +277,7 @@ public interface ChangeStatusOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue feed_item = 13 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The feedItem.
    */
   com.google.protobuf.StringValue getFeedItem();
   /**
@@ -273,6 +295,7 @@ public interface ChangeStatusOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue ad_group_feed = 14 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return Whether the adGroupFeed field is set.
    */
   boolean hasAdGroupFeed();
   /**
@@ -281,6 +304,7 @@ public interface ChangeStatusOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue ad_group_feed = 14 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The adGroupFeed.
    */
   com.google.protobuf.StringValue getAdGroupFeed();
   /**
@@ -298,6 +322,7 @@ public interface ChangeStatusOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue campaign_feed = 15 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return Whether the campaignFeed field is set.
    */
   boolean hasCampaignFeed();
   /**
@@ -306,6 +331,7 @@ public interface ChangeStatusOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue campaign_feed = 15 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The campaignFeed.
    */
   com.google.protobuf.StringValue getCampaignFeed();
   /**
@@ -323,6 +349,7 @@ public interface ChangeStatusOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue ad_group_bid_modifier = 16 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return Whether the adGroupBidModifier field is set.
    */
   boolean hasAdGroupBidModifier();
   /**
@@ -331,6 +358,7 @@ public interface ChangeStatusOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue ad_group_bid_modifier = 16 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The adGroupBidModifier.
    */
   com.google.protobuf.StringValue getAdGroupBidModifier();
   /**

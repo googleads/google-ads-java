@@ -13,6 +13,7 @@ public interface ClickConversionOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue gclid = 1;</code>
+   * @return Whether the gclid field is set.
    */
   boolean hasGclid();
   /**
@@ -21,6 +22,7 @@ public interface ClickConversionOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue gclid = 1;</code>
+   * @return The gclid.
    */
   com.google.protobuf.StringValue getGclid();
   /**
@@ -41,6 +43,7 @@ public interface ClickConversionOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue conversion_action = 2;</code>
+   * @return Whether the conversionAction field is set.
    */
   boolean hasConversionAction();
   /**
@@ -52,6 +55,7 @@ public interface ClickConversionOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue conversion_action = 2;</code>
+   * @return The conversionAction.
    */
   com.google.protobuf.StringValue getConversionAction();
   /**
@@ -74,6 +78,7 @@ public interface ClickConversionOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue conversion_date_time = 3;</code>
+   * @return Whether the conversionDateTime field is set.
    */
   boolean hasConversionDateTime();
   /**
@@ -84,6 +89,7 @@ public interface ClickConversionOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue conversion_date_time = 3;</code>
+   * @return The conversionDateTime.
    */
   com.google.protobuf.StringValue getConversionDateTime();
   /**
@@ -103,6 +109,7 @@ public interface ClickConversionOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue conversion_value = 4;</code>
+   * @return Whether the conversionValue field is set.
    */
   boolean hasConversionValue();
   /**
@@ -111,6 +118,7 @@ public interface ClickConversionOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue conversion_value = 4;</code>
+   * @return The conversionValue.
    */
   com.google.protobuf.DoubleValue getConversionValue();
   /**
@@ -129,6 +137,7 @@ public interface ClickConversionOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue currency_code = 5;</code>
+   * @return Whether the currencyCode field is set.
    */
   boolean hasCurrencyCode();
   /**
@@ -138,6 +147,7 @@ public interface ClickConversionOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue currency_code = 5;</code>
+   * @return The currencyCode.
    */
   com.google.protobuf.StringValue getCurrencyCode();
   /**
@@ -157,6 +167,7 @@ public interface ClickConversionOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue order_id = 6;</code>
+   * @return Whether the orderId field is set.
    */
   boolean hasOrderId();
   /**
@@ -166,6 +177,7 @@ public interface ClickConversionOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue order_id = 6;</code>
+   * @return The orderId.
    */
   com.google.protobuf.StringValue getOrderId();
   /**
@@ -186,6 +198,7 @@ public interface ClickConversionOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.services.ExternalAttributionData external_attribution_data = 7;</code>
+   * @return Whether the externalAttributionData field is set.
    */
   boolean hasExternalAttributionData();
   /**
@@ -196,6 +209,7 @@ public interface ClickConversionOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.services.ExternalAttributionData external_attribution_data = 7;</code>
+   * @return The externalAttributionData.
    */
   com.google.ads.googleads.v3.services.ExternalAttributionData getExternalAttributionData();
   /**

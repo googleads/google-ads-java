@@ -1,5 +1,5 @@
 /*
- * Copyright 2019 Google LLC
+ * Copyright 2020 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -21,7 +21,6 @@ import com.google.ads.googleads.v3.services.stub.CarrierConstantServiceStubSetti
 import com.google.api.core.BetaApi;
 import com.google.api.gax.core.BackgroundResource;
 import com.google.api.gax.rpc.UnaryCallable;
-import com.google.api.pathtemplate.PathTemplate;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 import javax.annotation.Generated;
@@ -36,8 +35,8 @@ import javax.annotation.Generated;
  * <pre>
  * <code>
  * try (CarrierConstantServiceClient carrierConstantServiceClient = CarrierConstantServiceClient.create()) {
- *   String formattedResourceName = CarrierConstantServiceClient.formatCarrierConstantName("[CARRIER_CONSTANT]");
- *   CarrierConstant response = carrierConstantServiceClient.getCarrierConstant(formattedResourceName);
+ *   CarrierConstantName resourceName = CarrierConstantName.of("[CARRIER_CONSTANT]");
+ *   CarrierConstant response = carrierConstantServiceClient.getCarrierConstant(resourceName);
  * }
  * </code>
  * </pre>
@@ -99,31 +98,6 @@ public class CarrierConstantServiceClient implements BackgroundResource {
   private final CarrierConstantServiceSettings settings;
   private final CarrierConstantServiceStub stub;
 
-  private static final PathTemplate CARRIER_CONSTANT_PATH_TEMPLATE =
-      PathTemplate.createWithoutUrlEncoding("carrierConstants/{carrier_constant}");
-
-  /**
-   * Formats a string containing the fully-qualified path to represent a carrier_constant resource.
-   *
-   * @deprecated Use the {@link CarrierConstantName} class instead.
-   */
-  @Deprecated
-  public static final String formatCarrierConstantName(String carrierConstant) {
-    return CARRIER_CONSTANT_PATH_TEMPLATE.instantiate("carrier_constant", carrierConstant);
-  }
-
-  /**
-   * Parses the carrier_constant from the given fully-qualified path which represents a
-   * carrier_constant resource.
-   *
-   * @deprecated Use the {@link CarrierConstantName} class instead.
-   */
-  @Deprecated
-  public static final String parseCarrierConstantFromCarrierConstantName(
-      String carrierConstantName) {
-    return CARRIER_CONSTANT_PATH_TEMPLATE.parse(carrierConstantName).get("carrier_constant");
-  }
-
   /** Constructs an instance of CarrierConstantServiceClient with default settings. */
   public static final CarrierConstantServiceClient create() throws IOException {
     return create(CarrierConstantServiceSettings.newBuilder().build());
@@ -181,8 +155,32 @@ public class CarrierConstantServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (CarrierConstantServiceClient carrierConstantServiceClient = CarrierConstantServiceClient.create()) {
-   *   String formattedResourceName = CarrierConstantServiceClient.formatCarrierConstantName("[CARRIER_CONSTANT]");
-   *   CarrierConstant response = carrierConstantServiceClient.getCarrierConstant(formattedResourceName);
+   *   CarrierConstantName resourceName = CarrierConstantName.of("[CARRIER_CONSTANT]");
+   *   CarrierConstant response = carrierConstantServiceClient.getCarrierConstant(resourceName);
+   * }
+   * </code></pre>
+   *
+   * @param resourceName Required. Resource name of the carrier constant to fetch.
+   * @throws com.google.api.gax.rpc.ApiException if the remote call fails
+   */
+  public final CarrierConstant getCarrierConstant(CarrierConstantName resourceName) {
+    GetCarrierConstantRequest request =
+        GetCarrierConstantRequest.newBuilder()
+            .setResourceName(resourceName == null ? null : resourceName.toString())
+            .build();
+    return getCarrierConstant(request);
+  }
+
+  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  /**
+   * Returns the requested carrier constant in full detail.
+   *
+   * <p>Sample code:
+   *
+   * <pre><code>
+   * try (CarrierConstantServiceClient carrierConstantServiceClient = CarrierConstantServiceClient.create()) {
+   *   CarrierConstantName resourceName = CarrierConstantName.of("[CARRIER_CONSTANT]");
+   *   CarrierConstant response = carrierConstantServiceClient.getCarrierConstant(resourceName.toString());
    * }
    * </code></pre>
    *
@@ -190,7 +188,6 @@ public class CarrierConstantServiceClient implements BackgroundResource {
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final CarrierConstant getCarrierConstant(String resourceName) {
-    CARRIER_CONSTANT_PATH_TEMPLATE.validate(resourceName, "getCarrierConstant");
     GetCarrierConstantRequest request =
         GetCarrierConstantRequest.newBuilder().setResourceName(resourceName).build();
     return getCarrierConstant(request);
@@ -204,9 +201,9 @@ public class CarrierConstantServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (CarrierConstantServiceClient carrierConstantServiceClient = CarrierConstantServiceClient.create()) {
-   *   String formattedResourceName = CarrierConstantServiceClient.formatCarrierConstantName("[CARRIER_CONSTANT]");
+   *   CarrierConstantName resourceName = CarrierConstantName.of("[CARRIER_CONSTANT]");
    *   GetCarrierConstantRequest request = GetCarrierConstantRequest.newBuilder()
-   *     .setResourceName(formattedResourceName)
+   *     .setResourceName(resourceName.toString())
    *     .build();
    *   CarrierConstant response = carrierConstantServiceClient.getCarrierConstant(request);
    * }
@@ -227,9 +224,9 @@ public class CarrierConstantServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (CarrierConstantServiceClient carrierConstantServiceClient = CarrierConstantServiceClient.create()) {
-   *   String formattedResourceName = CarrierConstantServiceClient.formatCarrierConstantName("[CARRIER_CONSTANT]");
+   *   CarrierConstantName resourceName = CarrierConstantName.of("[CARRIER_CONSTANT]");
    *   GetCarrierConstantRequest request = GetCarrierConstantRequest.newBuilder()
-   *     .setResourceName(formattedResourceName)
+   *     .setResourceName(resourceName.toString())
    *     .build();
    *   ApiFuture&lt;CarrierConstant&gt; future = carrierConstantServiceClient.getCarrierConstantCallable().futureCall(request);
    *   // Do something

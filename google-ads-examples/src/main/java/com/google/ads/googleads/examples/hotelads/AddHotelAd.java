@@ -18,40 +18,37 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.v3.common.HotelAdInfo;
-import com.google.ads.googleads.v3.common.PercentCpc;
-import com.google.ads.googleads.v3.enums.AdGroupAdStatusEnum.AdGroupAdStatus;
-import com.google.ads.googleads.v3.enums.AdGroupStatusEnum.AdGroupStatus;
-import com.google.ads.googleads.v3.enums.AdGroupTypeEnum.AdGroupType;
-import com.google.ads.googleads.v3.enums.AdvertisingChannelTypeEnum.AdvertisingChannelType;
-import com.google.ads.googleads.v3.enums.BudgetDeliveryMethodEnum.BudgetDeliveryMethod;
-import com.google.ads.googleads.v3.enums.CampaignStatusEnum.CampaignStatus;
-import com.google.ads.googleads.v3.errors.GoogleAdsError;
-import com.google.ads.googleads.v3.errors.GoogleAdsException;
-import com.google.ads.googleads.v3.resources.Ad;
-import com.google.ads.googleads.v3.resources.AdGroup;
-import com.google.ads.googleads.v3.resources.AdGroupAd;
-import com.google.ads.googleads.v3.resources.Campaign;
-import com.google.ads.googleads.v3.resources.Campaign.HotelSettingInfo;
-import com.google.ads.googleads.v3.resources.Campaign.NetworkSettings;
-import com.google.ads.googleads.v3.resources.CampaignBudget;
-import com.google.ads.googleads.v3.services.AdGroupAdOperation;
-import com.google.ads.googleads.v3.services.AdGroupAdServiceClient;
-import com.google.ads.googleads.v3.services.AdGroupOperation;
-import com.google.ads.googleads.v3.services.AdGroupServiceClient;
-import com.google.ads.googleads.v3.services.CampaignBudgetOperation;
-import com.google.ads.googleads.v3.services.CampaignBudgetServiceClient;
-import com.google.ads.googleads.v3.services.CampaignOperation;
-import com.google.ads.googleads.v3.services.CampaignServiceClient;
-import com.google.ads.googleads.v3.services.MutateAdGroupAdResult;
-import com.google.ads.googleads.v3.services.MutateAdGroupResult;
-import com.google.ads.googleads.v3.services.MutateCampaignBudgetsResponse;
-import com.google.ads.googleads.v3.services.MutateCampaignResult;
-import com.google.ads.googleads.v3.services.MutateCampaignsResponse;
+import com.google.ads.googleads.v5.common.HotelAdInfo;
+import com.google.ads.googleads.v5.common.PercentCpc;
+import com.google.ads.googleads.v5.enums.AdGroupAdStatusEnum.AdGroupAdStatus;
+import com.google.ads.googleads.v5.enums.AdGroupStatusEnum.AdGroupStatus;
+import com.google.ads.googleads.v5.enums.AdGroupTypeEnum.AdGroupType;
+import com.google.ads.googleads.v5.enums.AdvertisingChannelTypeEnum.AdvertisingChannelType;
+import com.google.ads.googleads.v5.enums.BudgetDeliveryMethodEnum.BudgetDeliveryMethod;
+import com.google.ads.googleads.v5.enums.CampaignStatusEnum.CampaignStatus;
+import com.google.ads.googleads.v5.errors.GoogleAdsError;
+import com.google.ads.googleads.v5.errors.GoogleAdsException;
+import com.google.ads.googleads.v5.resources.Ad;
+import com.google.ads.googleads.v5.resources.AdGroup;
+import com.google.ads.googleads.v5.resources.AdGroupAd;
+import com.google.ads.googleads.v5.resources.Campaign;
+import com.google.ads.googleads.v5.resources.Campaign.HotelSettingInfo;
+import com.google.ads.googleads.v5.resources.Campaign.NetworkSettings;
+import com.google.ads.googleads.v5.resources.CampaignBudget;
+import com.google.ads.googleads.v5.services.AdGroupAdOperation;
+import com.google.ads.googleads.v5.services.AdGroupAdServiceClient;
+import com.google.ads.googleads.v5.services.AdGroupOperation;
+import com.google.ads.googleads.v5.services.AdGroupServiceClient;
+import com.google.ads.googleads.v5.services.CampaignBudgetOperation;
+import com.google.ads.googleads.v5.services.CampaignBudgetServiceClient;
+import com.google.ads.googleads.v5.services.CampaignOperation;
+import com.google.ads.googleads.v5.services.CampaignServiceClient;
+import com.google.ads.googleads.v5.services.MutateAdGroupAdResult;
+import com.google.ads.googleads.v5.services.MutateAdGroupResult;
+import com.google.ads.googleads.v5.services.MutateCampaignBudgetsResponse;
+import com.google.ads.googleads.v5.services.MutateCampaignResult;
+import com.google.ads.googleads.v5.services.MutateCampaignsResponse;
 import com.google.common.collect.ImmutableList;
-import com.google.protobuf.BoolValue;
-import com.google.protobuf.Int64Value;
-import com.google.protobuf.StringValue;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Collections;
@@ -88,16 +85,16 @@ public class AddHotelAd {
       params.cpcBidCeilingMicroAmount = Long.parseLong("INSERT_CPC_BID_CEILING_MICRO_AMOUNT_HERE");
     }
 
-    GoogleAdsClient googleAdsClient;
+    GoogleAdsClient googleAdsClient = null;
     try {
       googleAdsClient = GoogleAdsClient.newBuilder().fromPropertiesFile().build();
     } catch (FileNotFoundException fnfe) {
       System.err.printf(
           "Failed to load GoogleAdsClient configuration from file. Exception: %s%n", fnfe);
-      return;
+      System.exit(1);
     } catch (IOException ioe) {
       System.err.printf("Failed to create GoogleAdsClient. Exception: %s%n", ioe);
-      return;
+      System.exit(1);
     }
 
     try {
@@ -119,6 +116,7 @@ public class AddHotelAd {
       for (GoogleAdsError googleAdsError : gae.getGoogleAdsFailure().getErrorsList()) {
         System.err.printf("  Error %d: %s%n", i++, googleAdsError);
       }
+      System.exit(1);
     }
   }
 
@@ -168,9 +166,9 @@ public class AddHotelAd {
   private String addCampaignBudget(GoogleAdsClient googleAdsClient, long customerId) {
     CampaignBudget budget =
         CampaignBudget.newBuilder()
-            .setName(StringValue.of("Interplanetary Cruise Budget #" + System.currentTimeMillis()))
+            .setName("Interplanetary Cruise Budget #" + System.currentTimeMillis())
             .setDeliveryMethod(BudgetDeliveryMethod.STANDARD)
-            .setAmountMicros(Int64Value.of(5_000_000))
+            .setAmountMicros(5_000_000)
             .build();
 
     CampaignBudgetOperation op = CampaignBudgetOperation.newBuilder().setCreate(budget).build();
@@ -207,17 +205,17 @@ public class AddHotelAd {
 
     // Configures the hotel settings.
     HotelSettingInfo hotelSettingInfo =
-        HotelSettingInfo.newBuilder().setHotelCenterId(Int64Value.of(hotelCenterAccountId)).build();
+        HotelSettingInfo.newBuilder().setHotelCenterId(hotelCenterAccountId).build();
 
     // Configures the campaign network options. Only Google Search is allowed for
     // hotel campaigns.
     NetworkSettings networkSettings =
-        NetworkSettings.newBuilder().setTargetGoogleSearch(BoolValue.of(true)).build();
+        NetworkSettings.newBuilder().setTargetGoogleSearch(true).build();
 
     // Creates the campaign.
     Campaign campaign =
         Campaign.newBuilder()
-            .setName(StringValue.of("Interplanetary Cruise #" + System.currentTimeMillis()))
+            .setName("Interplanetary Cruise #" + System.currentTimeMillis())
             // Configures settings related to hotel campaigns including advertising channel type
             // and hotel setting info.
             .setAdvertisingChannelType(AdvertisingChannelType.HOTEL)
@@ -229,11 +227,9 @@ public class AddHotelAd {
             // Sets the bidding strategy to Percent CPC. Only Manual CPC and Percent CPC can be used
             // for hotel campaigns.
             .setPercentCpc(
-                PercentCpc.newBuilder()
-                    .setCpcBidCeilingMicros(Int64Value.of(cpcBidCeilingMicroAmount))
-                    .build())
+                PercentCpc.newBuilder().setCpcBidCeilingMicros(cpcBidCeilingMicroAmount).build())
             // Sets the budget.
-            .setCampaignBudget(StringValue.of(budgetResourceName))
+            .setCampaignBudget(budgetResourceName)
             // Adds the networkSettings configured above.
             .setNetworkSettings(networkSettings)
             .build();
@@ -269,11 +265,11 @@ public class AddHotelAd {
     // Creates an ad group.
     AdGroup adGroup =
         AdGroup.newBuilder()
-            .setName(StringValue.of("Earth to Mars Cruises #" + System.currentTimeMillis()))
-            .setCampaign(StringValue.of(campaignResourceName))
+            .setName("Earth to Mars Cruises #" + System.currentTimeMillis())
+            .setCampaign(campaignResourceName)
             // Sets the ad group type to HOTEL_ADS. This cannot be set to other types.
             .setType(AdGroupType.HOTEL_ADS)
-            .setCpcBidMicros(Int64Value.of(1_000_000L))
+            .setCpcBidMicros(1_000_000L)
             .setStatus(AdGroupStatus.ENABLED)
             .build();
 
@@ -318,7 +314,7 @@ public class AddHotelAd {
             // campaign level.
             .setStatus(AdGroupAdStatus.ENABLED)
             // Sets the ad group.
-            .setAdGroup(StringValue.of(adGroupResourceName))
+            .setAdGroup(adGroupResourceName)
             .build();
 
     // Creates an ad group ad operation.

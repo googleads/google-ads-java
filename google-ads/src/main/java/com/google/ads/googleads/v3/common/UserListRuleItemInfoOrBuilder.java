@@ -20,6 +20,7 @@ public interface UserListRuleItemInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue name = 1;</code>
+   * @return Whether the name field is set.
    */
   boolean hasName();
   /**
@@ -35,6 +36,7 @@ public interface UserListRuleItemInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue name = 1;</code>
+   * @return The name.
    */
   com.google.protobuf.StringValue getName();
   /**
@@ -59,6 +61,7 @@ public interface UserListRuleItemInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.UserListNumberRuleItemInfo number_rule_item = 2;</code>
+   * @return Whether the numberRuleItem field is set.
    */
   boolean hasNumberRuleItem();
   /**
@@ -67,6 +70,7 @@ public interface UserListRuleItemInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.UserListNumberRuleItemInfo number_rule_item = 2;</code>
+   * @return The numberRuleItem.
    */
   com.google.ads.googleads.v3.common.UserListNumberRuleItemInfo getNumberRuleItem();
   /**
@@ -84,6 +88,7 @@ public interface UserListRuleItemInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.UserListStringRuleItemInfo string_rule_item = 3;</code>
+   * @return Whether the stringRuleItem field is set.
    */
   boolean hasStringRuleItem();
   /**
@@ -92,6 +97,7 @@ public interface UserListRuleItemInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.UserListStringRuleItemInfo string_rule_item = 3;</code>
+   * @return The stringRuleItem.
    */
   com.google.ads.googleads.v3.common.UserListStringRuleItemInfo getStringRuleItem();
   /**
@@ -109,6 +115,7 @@ public interface UserListRuleItemInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.UserListDateRuleItemInfo date_rule_item = 4;</code>
+   * @return Whether the dateRuleItem field is set.
    */
   boolean hasDateRuleItem();
   /**
@@ -117,6 +124,7 @@ public interface UserListRuleItemInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.UserListDateRuleItemInfo date_rule_item = 4;</code>
+   * @return The dateRuleItem.
    */
   com.google.ads.googleads.v3.common.UserListDateRuleItemInfo getDateRuleItem();
   /**

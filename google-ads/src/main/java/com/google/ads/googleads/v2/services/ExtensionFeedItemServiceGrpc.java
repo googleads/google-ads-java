@@ -21,7 +21,7 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.10.0)",
+    value = "by gRPC proto compiler",
     comments = "Source: google/ads/googleads/v2/services/extension_feed_item_service.proto")
 public final class ExtensionFeedItemServiceGrpc {
 
@@ -30,86 +30,80 @@ public final class ExtensionFeedItemServiceGrpc {
   public static final String SERVICE_NAME = "google.ads.googleads.v2.services.ExtensionFeedItemService";
 
   // Static method descriptors that strictly reflect the proto.
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  @java.lang.Deprecated // Use {@link #getGetExtensionFeedItemMethod()} instead. 
-  public static final io.grpc.MethodDescriptor<com.google.ads.googleads.v2.services.GetExtensionFeedItemRequest,
-      com.google.ads.googleads.v2.resources.ExtensionFeedItem> METHOD_GET_EXTENSION_FEED_ITEM = getGetExtensionFeedItemMethodHelper();
-
   private static volatile io.grpc.MethodDescriptor<com.google.ads.googleads.v2.services.GetExtensionFeedItemRequest,
       com.google.ads.googleads.v2.resources.ExtensionFeedItem> getGetExtensionFeedItemMethod;
 
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetExtensionFeedItem",
+      requestType = com.google.ads.googleads.v2.services.GetExtensionFeedItemRequest.class,
+      responseType = com.google.ads.googleads.v2.resources.ExtensionFeedItem.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<com.google.ads.googleads.v2.services.GetExtensionFeedItemRequest,
       com.google.ads.googleads.v2.resources.ExtensionFeedItem> getGetExtensionFeedItemMethod() {
-    return getGetExtensionFeedItemMethodHelper();
-  }
-
-  private static io.grpc.MethodDescriptor<com.google.ads.googleads.v2.services.GetExtensionFeedItemRequest,
-      com.google.ads.googleads.v2.resources.ExtensionFeedItem> getGetExtensionFeedItemMethodHelper() {
     io.grpc.MethodDescriptor<com.google.ads.googleads.v2.services.GetExtensionFeedItemRequest, com.google.ads.googleads.v2.resources.ExtensionFeedItem> getGetExtensionFeedItemMethod;
     if ((getGetExtensionFeedItemMethod = ExtensionFeedItemServiceGrpc.getGetExtensionFeedItemMethod) == null) {
       synchronized (ExtensionFeedItemServiceGrpc.class) {
         if ((getGetExtensionFeedItemMethod = ExtensionFeedItemServiceGrpc.getGetExtensionFeedItemMethod) == null) {
-          ExtensionFeedItemServiceGrpc.getGetExtensionFeedItemMethod = getGetExtensionFeedItemMethod = 
+          ExtensionFeedItemServiceGrpc.getGetExtensionFeedItemMethod = getGetExtensionFeedItemMethod =
               io.grpc.MethodDescriptor.<com.google.ads.googleads.v2.services.GetExtensionFeedItemRequest, com.google.ads.googleads.v2.resources.ExtensionFeedItem>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "google.ads.googleads.v2.services.ExtensionFeedItemService", "GetExtensionFeedItem"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetExtensionFeedItem"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v2.services.GetExtensionFeedItemRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v2.resources.ExtensionFeedItem.getDefaultInstance()))
-                  .setSchemaDescriptor(new ExtensionFeedItemServiceMethodDescriptorSupplier("GetExtensionFeedItem"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ExtensionFeedItemServiceMethodDescriptorSupplier("GetExtensionFeedItem"))
+              .build();
         }
-     }
-     return getGetExtensionFeedItemMethod;
+      }
+    }
+    return getGetExtensionFeedItemMethod;
   }
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  @java.lang.Deprecated // Use {@link #getMutateExtensionFeedItemsMethod()} instead. 
-  public static final io.grpc.MethodDescriptor<com.google.ads.googleads.v2.services.MutateExtensionFeedItemsRequest,
-      com.google.ads.googleads.v2.services.MutateExtensionFeedItemsResponse> METHOD_MUTATE_EXTENSION_FEED_ITEMS = getMutateExtensionFeedItemsMethodHelper();
 
   private static volatile io.grpc.MethodDescriptor<com.google.ads.googleads.v2.services.MutateExtensionFeedItemsRequest,
       com.google.ads.googleads.v2.services.MutateExtensionFeedItemsResponse> getMutateExtensionFeedItemsMethod;
 
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "MutateExtensionFeedItems",
+      requestType = com.google.ads.googleads.v2.services.MutateExtensionFeedItemsRequest.class,
+      responseType = com.google.ads.googleads.v2.services.MutateExtensionFeedItemsResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<com.google.ads.googleads.v2.services.MutateExtensionFeedItemsRequest,
       com.google.ads.googleads.v2.services.MutateExtensionFeedItemsResponse> getMutateExtensionFeedItemsMethod() {
-    return getMutateExtensionFeedItemsMethodHelper();
-  }
-
-  private static io.grpc.MethodDescriptor<com.google.ads.googleads.v2.services.MutateExtensionFeedItemsRequest,
-      com.google.ads.googleads.v2.services.MutateExtensionFeedItemsResponse> getMutateExtensionFeedItemsMethodHelper() {
     io.grpc.MethodDescriptor<com.google.ads.googleads.v2.services.MutateExtensionFeedItemsRequest, com.google.ads.googleads.v2.services.MutateExtensionFeedItemsResponse> getMutateExtensionFeedItemsMethod;
     if ((getMutateExtensionFeedItemsMethod = ExtensionFeedItemServiceGrpc.getMutateExtensionFeedItemsMethod) == null) {
       synchronized (ExtensionFeedItemServiceGrpc.class) {
         if ((getMutateExtensionFeedItemsMethod = ExtensionFeedItemServiceGrpc.getMutateExtensionFeedItemsMethod) == null) {
-          ExtensionFeedItemServiceGrpc.getMutateExtensionFeedItemsMethod = getMutateExtensionFeedItemsMethod = 
+          ExtensionFeedItemServiceGrpc.getMutateExtensionFeedItemsMethod = getMutateExtensionFeedItemsMethod =
               io.grpc.MethodDescriptor.<com.google.ads.googleads.v2.services.MutateExtensionFeedItemsRequest, com.google.ads.googleads.v2.services.MutateExtensionFeedItemsResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "google.ads.googleads.v2.services.ExtensionFeedItemService", "MutateExtensionFeedItems"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "MutateExtensionFeedItems"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v2.services.MutateExtensionFeedItemsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v2.services.MutateExtensionFeedItemsResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new ExtensionFeedItemServiceMethodDescriptorSupplier("MutateExtensionFeedItems"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ExtensionFeedItemServiceMethodDescriptorSupplier("MutateExtensionFeedItems"))
+              .build();
         }
-     }
-     return getMutateExtensionFeedItemsMethod;
+      }
+    }
+    return getMutateExtensionFeedItemsMethod;
   }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static ExtensionFeedItemServiceStub newStub(io.grpc.Channel channel) {
-    return new ExtensionFeedItemServiceStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<ExtensionFeedItemServiceStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<ExtensionFeedItemServiceStub>() {
+        @java.lang.Override
+        public ExtensionFeedItemServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new ExtensionFeedItemServiceStub(channel, callOptions);
+        }
+      };
+    return ExtensionFeedItemServiceStub.newStub(factory, channel);
   }
 
   /**
@@ -117,7 +111,14 @@ public final class ExtensionFeedItemServiceGrpc {
    */
   public static ExtensionFeedItemServiceBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new ExtensionFeedItemServiceBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<ExtensionFeedItemServiceBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<ExtensionFeedItemServiceBlockingStub>() {
+        @java.lang.Override
+        public ExtensionFeedItemServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new ExtensionFeedItemServiceBlockingStub(channel, callOptions);
+        }
+      };
+    return ExtensionFeedItemServiceBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -125,7 +126,14 @@ public final class ExtensionFeedItemServiceGrpc {
    */
   public static ExtensionFeedItemServiceFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new ExtensionFeedItemServiceFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<ExtensionFeedItemServiceFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<ExtensionFeedItemServiceFutureStub>() {
+        @java.lang.Override
+        public ExtensionFeedItemServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new ExtensionFeedItemServiceFutureStub(channel, callOptions);
+        }
+      };
+    return ExtensionFeedItemServiceFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -142,7 +150,7 @@ public final class ExtensionFeedItemServiceGrpc {
      */
     public void getExtensionFeedItem(com.google.ads.googleads.v2.services.GetExtensionFeedItemRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v2.resources.ExtensionFeedItem> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetExtensionFeedItemMethodHelper(), responseObserver);
+      asyncUnimplementedUnaryCall(getGetExtensionFeedItemMethod(), responseObserver);
     }
 
     /**
@@ -153,20 +161,20 @@ public final class ExtensionFeedItemServiceGrpc {
      */
     public void mutateExtensionFeedItems(com.google.ads.googleads.v2.services.MutateExtensionFeedItemsRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v2.services.MutateExtensionFeedItemsResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getMutateExtensionFeedItemsMethodHelper(), responseObserver);
+      asyncUnimplementedUnaryCall(getMutateExtensionFeedItemsMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
-            getGetExtensionFeedItemMethodHelper(),
+            getGetExtensionFeedItemMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 com.google.ads.googleads.v2.services.GetExtensionFeedItemRequest,
                 com.google.ads.googleads.v2.resources.ExtensionFeedItem>(
                   this, METHODID_GET_EXTENSION_FEED_ITEM)))
           .addMethod(
-            getMutateExtensionFeedItemsMethodHelper(),
+            getMutateExtensionFeedItemsMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 com.google.ads.googleads.v2.services.MutateExtensionFeedItemsRequest,
@@ -181,19 +189,15 @@ public final class ExtensionFeedItemServiceGrpc {
    * Service to manage extension feed items.
    * </pre>
    */
-  public static final class ExtensionFeedItemServiceStub extends io.grpc.stub.AbstractStub<ExtensionFeedItemServiceStub> {
-    private ExtensionFeedItemServiceStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private ExtensionFeedItemServiceStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class ExtensionFeedItemServiceStub extends io.grpc.stub.AbstractAsyncStub<ExtensionFeedItemServiceStub> {
+    private ExtensionFeedItemServiceStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected ExtensionFeedItemServiceStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected ExtensionFeedItemServiceStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new ExtensionFeedItemServiceStub(channel, callOptions);
     }
 
@@ -205,7 +209,7 @@ public final class ExtensionFeedItemServiceGrpc {
     public void getExtensionFeedItem(com.google.ads.googleads.v2.services.GetExtensionFeedItemRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v2.resources.ExtensionFeedItem> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(getGetExtensionFeedItemMethodHelper(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getGetExtensionFeedItemMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -217,7 +221,7 @@ public final class ExtensionFeedItemServiceGrpc {
     public void mutateExtensionFeedItems(com.google.ads.googleads.v2.services.MutateExtensionFeedItemsRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v2.services.MutateExtensionFeedItemsResponse> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(getMutateExtensionFeedItemsMethodHelper(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getMutateExtensionFeedItemsMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -226,19 +230,15 @@ public final class ExtensionFeedItemServiceGrpc {
    * Service to manage extension feed items.
    * </pre>
    */
-  public static final class ExtensionFeedItemServiceBlockingStub extends io.grpc.stub.AbstractStub<ExtensionFeedItemServiceBlockingStub> {
-    private ExtensionFeedItemServiceBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private ExtensionFeedItemServiceBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class ExtensionFeedItemServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<ExtensionFeedItemServiceBlockingStub> {
+    private ExtensionFeedItemServiceBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected ExtensionFeedItemServiceBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected ExtensionFeedItemServiceBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new ExtensionFeedItemServiceBlockingStub(channel, callOptions);
     }
 
@@ -249,7 +249,7 @@ public final class ExtensionFeedItemServiceGrpc {
      */
     public com.google.ads.googleads.v2.resources.ExtensionFeedItem getExtensionFeedItem(com.google.ads.googleads.v2.services.GetExtensionFeedItemRequest request) {
       return blockingUnaryCall(
-          getChannel(), getGetExtensionFeedItemMethodHelper(), getCallOptions(), request);
+          getChannel(), getGetExtensionFeedItemMethod(), getCallOptions(), request);
     }
 
     /**
@@ -260,7 +260,7 @@ public final class ExtensionFeedItemServiceGrpc {
      */
     public com.google.ads.googleads.v2.services.MutateExtensionFeedItemsResponse mutateExtensionFeedItems(com.google.ads.googleads.v2.services.MutateExtensionFeedItemsRequest request) {
       return blockingUnaryCall(
-          getChannel(), getMutateExtensionFeedItemsMethodHelper(), getCallOptions(), request);
+          getChannel(), getMutateExtensionFeedItemsMethod(), getCallOptions(), request);
     }
   }
 
@@ -269,19 +269,15 @@ public final class ExtensionFeedItemServiceGrpc {
    * Service to manage extension feed items.
    * </pre>
    */
-  public static final class ExtensionFeedItemServiceFutureStub extends io.grpc.stub.AbstractStub<ExtensionFeedItemServiceFutureStub> {
-    private ExtensionFeedItemServiceFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private ExtensionFeedItemServiceFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class ExtensionFeedItemServiceFutureStub extends io.grpc.stub.AbstractFutureStub<ExtensionFeedItemServiceFutureStub> {
+    private ExtensionFeedItemServiceFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected ExtensionFeedItemServiceFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected ExtensionFeedItemServiceFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new ExtensionFeedItemServiceFutureStub(channel, callOptions);
     }
 
@@ -293,7 +289,7 @@ public final class ExtensionFeedItemServiceGrpc {
     public com.google.common.util.concurrent.ListenableFuture<com.google.ads.googleads.v2.resources.ExtensionFeedItem> getExtensionFeedItem(
         com.google.ads.googleads.v2.services.GetExtensionFeedItemRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(getGetExtensionFeedItemMethodHelper(), getCallOptions()), request);
+          getChannel().newCall(getGetExtensionFeedItemMethod(), getCallOptions()), request);
     }
 
     /**
@@ -305,7 +301,7 @@ public final class ExtensionFeedItemServiceGrpc {
     public com.google.common.util.concurrent.ListenableFuture<com.google.ads.googleads.v2.services.MutateExtensionFeedItemsResponse> mutateExtensionFeedItems(
         com.google.ads.googleads.v2.services.MutateExtensionFeedItemsRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(getMutateExtensionFeedItemsMethodHelper(), getCallOptions()), request);
+          getChannel().newCall(getMutateExtensionFeedItemsMethod(), getCallOptions()), request);
     }
   }
 
@@ -398,8 +394,8 @@ public final class ExtensionFeedItemServiceGrpc {
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new ExtensionFeedItemServiceFileDescriptorSupplier())
-              .addMethod(getGetExtensionFeedItemMethodHelper())
-              .addMethod(getMutateExtensionFeedItemsMethodHelper())
+              .addMethod(getGetExtensionFeedItemMethod())
+              .addMethod(getMutateExtensionFeedItemsMethod())
               .build();
         }
       }

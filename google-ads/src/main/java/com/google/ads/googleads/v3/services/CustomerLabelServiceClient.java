@@ -1,5 +1,5 @@
 /*
- * Copyright 2019 Google LLC
+ * Copyright 2020 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -21,7 +21,6 @@ import com.google.ads.googleads.v3.services.stub.CustomerLabelServiceStubSetting
 import com.google.api.core.BetaApi;
 import com.google.api.gax.core.BackgroundResource;
 import com.google.api.gax.rpc.UnaryCallable;
-import com.google.api.pathtemplate.PathTemplate;
 import java.io.IOException;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
@@ -37,8 +36,8 @@ import javax.annotation.Generated;
  * <pre>
  * <code>
  * try (CustomerLabelServiceClient customerLabelServiceClient = CustomerLabelServiceClient.create()) {
- *   String formattedResourceName = CustomerLabelServiceClient.formatCustomerLabelName("[CUSTOMER]", "[CUSTOMER_LABEL]");
- *   CustomerLabel response = customerLabelServiceClient.getCustomerLabel(formattedResourceName);
+ *   CustomerLabelName resourceName = CustomerLabelName.of("[CUSTOMER]", "[CUSTOMER_LABEL]");
+ *   CustomerLabel response = customerLabelServiceClient.getCustomerLabel(resourceName);
  * }
  * </code>
  * </pre>
@@ -100,43 +99,6 @@ public class CustomerLabelServiceClient implements BackgroundResource {
   private final CustomerLabelServiceSettings settings;
   private final CustomerLabelServiceStub stub;
 
-  private static final PathTemplate CUSTOMER_LABEL_PATH_TEMPLATE =
-      PathTemplate.createWithoutUrlEncoding("customers/{customer}/customerLabels/{customer_label}");
-
-  /**
-   * Formats a string containing the fully-qualified path to represent a customer_label resource.
-   *
-   * @deprecated Use the {@link CustomerLabelName} class instead.
-   */
-  @Deprecated
-  public static final String formatCustomerLabelName(String customer, String customerLabel) {
-    return CUSTOMER_LABEL_PATH_TEMPLATE.instantiate(
-        "customer", customer,
-        "customer_label", customerLabel);
-  }
-
-  /**
-   * Parses the customer from the given fully-qualified path which represents a customer_label
-   * resource.
-   *
-   * @deprecated Use the {@link CustomerLabelName} class instead.
-   */
-  @Deprecated
-  public static final String parseCustomerFromCustomerLabelName(String customerLabelName) {
-    return CUSTOMER_LABEL_PATH_TEMPLATE.parse(customerLabelName).get("customer");
-  }
-
-  /**
-   * Parses the customer_label from the given fully-qualified path which represents a customer_label
-   * resource.
-   *
-   * @deprecated Use the {@link CustomerLabelName} class instead.
-   */
-  @Deprecated
-  public static final String parseCustomerLabelFromCustomerLabelName(String customerLabelName) {
-    return CUSTOMER_LABEL_PATH_TEMPLATE.parse(customerLabelName).get("customer_label");
-  }
-
   /** Constructs an instance of CustomerLabelServiceClient with default settings. */
   public static final CustomerLabelServiceClient create() throws IOException {
     return create(CustomerLabelServiceSettings.newBuilder().build());
@@ -193,8 +155,32 @@ public class CustomerLabelServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (CustomerLabelServiceClient customerLabelServiceClient = CustomerLabelServiceClient.create()) {
-   *   String formattedResourceName = CustomerLabelServiceClient.formatCustomerLabelName("[CUSTOMER]", "[CUSTOMER_LABEL]");
-   *   CustomerLabel response = customerLabelServiceClient.getCustomerLabel(formattedResourceName);
+   *   CustomerLabelName resourceName = CustomerLabelName.of("[CUSTOMER]", "[CUSTOMER_LABEL]");
+   *   CustomerLabel response = customerLabelServiceClient.getCustomerLabel(resourceName);
+   * }
+   * </code></pre>
+   *
+   * @param resourceName Required. The resource name of the customer-label relationship to fetch.
+   * @throws com.google.api.gax.rpc.ApiException if the remote call fails
+   */
+  public final CustomerLabel getCustomerLabel(CustomerLabelName resourceName) {
+    GetCustomerLabelRequest request =
+        GetCustomerLabelRequest.newBuilder()
+            .setResourceName(resourceName == null ? null : resourceName.toString())
+            .build();
+    return getCustomerLabel(request);
+  }
+
+  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  /**
+   * Returns the requested customer-label relationship in full detail.
+   *
+   * <p>Sample code:
+   *
+   * <pre><code>
+   * try (CustomerLabelServiceClient customerLabelServiceClient = CustomerLabelServiceClient.create()) {
+   *   CustomerLabelName resourceName = CustomerLabelName.of("[CUSTOMER]", "[CUSTOMER_LABEL]");
+   *   CustomerLabel response = customerLabelServiceClient.getCustomerLabel(resourceName.toString());
    * }
    * </code></pre>
    *
@@ -202,7 +188,6 @@ public class CustomerLabelServiceClient implements BackgroundResource {
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final CustomerLabel getCustomerLabel(String resourceName) {
-    CUSTOMER_LABEL_PATH_TEMPLATE.validate(resourceName, "getCustomerLabel");
     GetCustomerLabelRequest request =
         GetCustomerLabelRequest.newBuilder().setResourceName(resourceName).build();
     return getCustomerLabel(request);
@@ -216,9 +201,9 @@ public class CustomerLabelServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (CustomerLabelServiceClient customerLabelServiceClient = CustomerLabelServiceClient.create()) {
-   *   String formattedResourceName = CustomerLabelServiceClient.formatCustomerLabelName("[CUSTOMER]", "[CUSTOMER_LABEL]");
+   *   CustomerLabelName resourceName = CustomerLabelName.of("[CUSTOMER]", "[CUSTOMER_LABEL]");
    *   GetCustomerLabelRequest request = GetCustomerLabelRequest.newBuilder()
-   *     .setResourceName(formattedResourceName)
+   *     .setResourceName(resourceName.toString())
    *     .build();
    *   CustomerLabel response = customerLabelServiceClient.getCustomerLabel(request);
    * }
@@ -239,9 +224,9 @@ public class CustomerLabelServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (CustomerLabelServiceClient customerLabelServiceClient = CustomerLabelServiceClient.create()) {
-   *   String formattedResourceName = CustomerLabelServiceClient.formatCustomerLabelName("[CUSTOMER]", "[CUSTOMER_LABEL]");
+   *   CustomerLabelName resourceName = CustomerLabelName.of("[CUSTOMER]", "[CUSTOMER_LABEL]");
    *   GetCustomerLabelRequest request = GetCustomerLabelRequest.newBuilder()
-   *     .setResourceName(formattedResourceName)
+   *     .setResourceName(resourceName.toString())
    *     .build();
    *   ApiFuture&lt;CustomerLabel&gt; future = customerLabelServiceClient.getCustomerLabelCallable().futureCall(request);
    *   // Do something
@@ -251,48 +236,6 @@ public class CustomerLabelServiceClient implements BackgroundResource {
    */
   public final UnaryCallable<GetCustomerLabelRequest, CustomerLabel> getCustomerLabelCallable() {
     return stub.getCustomerLabelCallable();
-  }
-
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
-  /**
-   * Creates and removes customer-label relationships. Operation statuses are returned.
-   *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (CustomerLabelServiceClient customerLabelServiceClient = CustomerLabelServiceClient.create()) {
-   *   String customerId = "";
-   *   List&lt;CustomerLabelOperation&gt; operations = new ArrayList&lt;&gt;();
-   *   boolean partialFailure = false;
-   *   boolean validateOnly = false;
-   *   MutateCustomerLabelsResponse response = customerLabelServiceClient.mutateCustomerLabels(customerId, operations, partialFailure, validateOnly);
-   * }
-   * </code></pre>
-   *
-   * @param customerId Required. ID of the customer whose customer-label relationships are being
-   *     modified.
-   * @param operations Required. The list of operations to perform on customer-label relationships.
-   * @param partialFailure If true, successful operations will be carried out and invalid operations
-   *     will return errors. If false, all operations will be carried out in one transaction if and
-   *     only if they are all valid. Default is false.
-   * @param validateOnly If true, the request is validated but not executed. Only errors are
-   *     returned, not results.
-   * @throws com.google.api.gax.rpc.ApiException if the remote call fails
-   */
-  public final MutateCustomerLabelsResponse mutateCustomerLabels(
-      String customerId,
-      List<CustomerLabelOperation> operations,
-      boolean partialFailure,
-      boolean validateOnly) {
-
-    MutateCustomerLabelsRequest request =
-        MutateCustomerLabelsRequest.newBuilder()
-            .setCustomerId(customerId)
-            .addAllOperations(operations)
-            .setPartialFailure(partialFailure)
-            .setValidateOnly(validateOnly)
-            .build();
-    return mutateCustomerLabels(request);
   }
 
   // AUTO-GENERATED DOCUMENTATION AND METHOD
@@ -316,7 +259,6 @@ public class CustomerLabelServiceClient implements BackgroundResource {
    */
   public final MutateCustomerLabelsResponse mutateCustomerLabels(
       String customerId, List<CustomerLabelOperation> operations) {
-
     MutateCustomerLabelsRequest request =
         MutateCustomerLabelsRequest.newBuilder()
             .setCustomerId(customerId)

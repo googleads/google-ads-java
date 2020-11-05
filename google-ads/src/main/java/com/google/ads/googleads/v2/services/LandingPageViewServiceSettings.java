@@ -1,5 +1,5 @@
 /*
- * Copyright 2019 Google LLC
+ * Copyright 2020 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -44,15 +44,20 @@ import javax.annotation.Generated;
  * </ul>
  *
  * <p>The builder of this class is recursive, so contained classes are themselves builders. When
- * build() is called, the tree of builders is called to create the complete settings object. For
- * example, to set the total timeout of getLandingPageView to 30 seconds:
+ * build() is called, the tree of builders is called to create the complete settings object.
+ *
+ * <p>For example, to set the total timeout of getLandingPageView to 30 seconds:
  *
  * <pre>
  * <code>
  * LandingPageViewServiceSettings.Builder landingPageViewServiceSettingsBuilder =
  *     LandingPageViewServiceSettings.newBuilder();
- * landingPageViewServiceSettingsBuilder.getLandingPageViewSettings().getRetrySettings().toBuilder()
- *     .setTotalTimeout(Duration.ofSeconds(30));
+ * landingPageViewServiceSettingsBuilder
+ *     .getLandingPageViewSettings()
+ *     .setRetrySettings(
+ *         landingPageViewServiceSettingsBuilder.getLandingPageViewSettings().getRetrySettings().toBuilder()
+ *             .setTotalTimeout(Duration.ofSeconds(30))
+ *             .build());
  * LandingPageViewServiceSettings landingPageViewServiceSettings = landingPageViewServiceSettingsBuilder.build();
  * </code>
  * </pre>

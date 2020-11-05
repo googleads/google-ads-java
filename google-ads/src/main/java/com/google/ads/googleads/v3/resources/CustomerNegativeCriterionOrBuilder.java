@@ -15,6 +15,7 @@ public interface CustomerNegativeCriterionOrBuilder extends
    * </pre>
    *
    * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * @return The resourceName.
    */
   java.lang.String getResourceName();
   /**
@@ -25,6 +26,7 @@ public interface CustomerNegativeCriterionOrBuilder extends
    * </pre>
    *
    * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * @return The bytes for resourceName.
    */
   com.google.protobuf.ByteString
       getResourceNameBytes();
@@ -35,6 +37,7 @@ public interface CustomerNegativeCriterionOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the id field is set.
    */
   boolean hasId();
   /**
@@ -43,6 +46,7 @@ public interface CustomerNegativeCriterionOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The id.
    */
   com.google.protobuf.Int64Value getId();
   /**
@@ -60,6 +64,7 @@ public interface CustomerNegativeCriterionOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.CriterionTypeEnum.CriterionType type = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The enum numeric value on the wire for type.
    */
   int getTypeValue();
   /**
@@ -68,6 +73,7 @@ public interface CustomerNegativeCriterionOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.CriterionTypeEnum.CriterionType type = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The type.
    */
   com.google.ads.googleads.v3.enums.CriterionTypeEnum.CriterionType getType();
 
@@ -77,6 +83,7 @@ public interface CustomerNegativeCriterionOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.ContentLabelInfo content_label = 4 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return Whether the contentLabel field is set.
    */
   boolean hasContentLabel();
   /**
@@ -85,6 +92,7 @@ public interface CustomerNegativeCriterionOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.ContentLabelInfo content_label = 4 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The contentLabel.
    */
   com.google.ads.googleads.v3.common.ContentLabelInfo getContentLabel();
   /**
@@ -102,6 +110,7 @@ public interface CustomerNegativeCriterionOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.MobileApplicationInfo mobile_application = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return Whether the mobileApplication field is set.
    */
   boolean hasMobileApplication();
   /**
@@ -110,6 +119,7 @@ public interface CustomerNegativeCriterionOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.MobileApplicationInfo mobile_application = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The mobileApplication.
    */
   com.google.ads.googleads.v3.common.MobileApplicationInfo getMobileApplication();
   /**
@@ -127,6 +137,7 @@ public interface CustomerNegativeCriterionOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.MobileAppCategoryInfo mobile_app_category = 6 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return Whether the mobileAppCategory field is set.
    */
   boolean hasMobileAppCategory();
   /**
@@ -135,6 +146,7 @@ public interface CustomerNegativeCriterionOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.MobileAppCategoryInfo mobile_app_category = 6 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The mobileAppCategory.
    */
   com.google.ads.googleads.v3.common.MobileAppCategoryInfo getMobileAppCategory();
   /**
@@ -152,6 +164,7 @@ public interface CustomerNegativeCriterionOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.PlacementInfo placement = 7 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return Whether the placement field is set.
    */
   boolean hasPlacement();
   /**
@@ -160,6 +173,7 @@ public interface CustomerNegativeCriterionOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.PlacementInfo placement = 7 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The placement.
    */
   com.google.ads.googleads.v3.common.PlacementInfo getPlacement();
   /**
@@ -177,6 +191,7 @@ public interface CustomerNegativeCriterionOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.YouTubeVideoInfo youtube_video = 8 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return Whether the youtubeVideo field is set.
    */
   boolean hasYoutubeVideo();
   /**
@@ -185,6 +200,7 @@ public interface CustomerNegativeCriterionOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.YouTubeVideoInfo youtube_video = 8 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The youtubeVideo.
    */
   com.google.ads.googleads.v3.common.YouTubeVideoInfo getYoutubeVideo();
   /**
@@ -202,6 +218,7 @@ public interface CustomerNegativeCriterionOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.YouTubeChannelInfo youtube_channel = 9 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return Whether the youtubeChannel field is set.
    */
   boolean hasYoutubeChannel();
   /**
@@ -210,6 +227,7 @@ public interface CustomerNegativeCriterionOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.YouTubeChannelInfo youtube_channel = 9 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The youtubeChannel.
    */
   com.google.ads.googleads.v3.common.YouTubeChannelInfo getYoutubeChannel();
   /**

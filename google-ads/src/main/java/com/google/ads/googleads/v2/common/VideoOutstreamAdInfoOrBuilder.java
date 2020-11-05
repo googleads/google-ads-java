@@ -13,6 +13,7 @@ public interface VideoOutstreamAdInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue headline = 1;</code>
+   * @return Whether the headline field is set.
    */
   boolean hasHeadline();
   /**
@@ -21,6 +22,7 @@ public interface VideoOutstreamAdInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue headline = 1;</code>
+   * @return The headline.
    */
   com.google.protobuf.StringValue getHeadline();
   /**
@@ -38,6 +40,7 @@ public interface VideoOutstreamAdInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue description = 2;</code>
+   * @return Whether the description field is set.
    */
   boolean hasDescription();
   /**
@@ -46,6 +49,7 @@ public interface VideoOutstreamAdInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue description = 2;</code>
+   * @return The description.
    */
   com.google.protobuf.StringValue getDescription();
   /**

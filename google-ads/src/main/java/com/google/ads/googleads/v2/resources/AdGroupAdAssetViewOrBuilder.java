@@ -9,132 +9,148 @@ public interface AdGroupAdAssetViewOrBuilder extends
 
   /**
    * <pre>
-   * The resource name of the ad group ad asset view.
-   * Ad group ad asset view resource names have the form:
-   * `customers/{customer_id}/adGroupAdAssets/{AdGroupAdAsset.ad_group_id}~{AdGroupAdAsset.ad.ad_id}~{AdGroupAdAsset.asset_id}~{AdGroupAdAsset.asset_field_type}`
+   * Output only. The resource name of the ad group ad asset view.
+   * Ad group ad asset view resource names have the form (Before V4):
+   * `customers/{customer_id}/adGroupAdAssets/{AdGroupAdAsset.ad_group_id}~{AdGroupAdAsset.ad.ad_id}~{AdGroupAdAsset.asset_id}~{AdGroupAdAsset.field_type}`
+   * Ad group ad asset view resource names have the form (Beginning from V4):
+   * `customers/{customer_id}/adGroupAdAssetViews/{AdGroupAdAsset.ad_group_id}~{AdGroupAdAsset.ad_id}~{AdGroupAdAsset.asset_id}~{AdGroupAdAsset.field_type}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The resourceName.
    */
   java.lang.String getResourceName();
   /**
    * <pre>
-   * The resource name of the ad group ad asset view.
-   * Ad group ad asset view resource names have the form:
-   * `customers/{customer_id}/adGroupAdAssets/{AdGroupAdAsset.ad_group_id}~{AdGroupAdAsset.ad.ad_id}~{AdGroupAdAsset.asset_id}~{AdGroupAdAsset.asset_field_type}`
+   * Output only. The resource name of the ad group ad asset view.
+   * Ad group ad asset view resource names have the form (Before V4):
+   * `customers/{customer_id}/adGroupAdAssets/{AdGroupAdAsset.ad_group_id}~{AdGroupAdAsset.ad.ad_id}~{AdGroupAdAsset.asset_id}~{AdGroupAdAsset.field_type}`
+   * Ad group ad asset view resource names have the form (Beginning from V4):
+   * `customers/{customer_id}/adGroupAdAssetViews/{AdGroupAdAsset.ad_group_id}~{AdGroupAdAsset.ad_id}~{AdGroupAdAsset.asset_id}~{AdGroupAdAsset.field_type}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The bytes for resourceName.
    */
   com.google.protobuf.ByteString
       getResourceNameBytes();
 
   /**
    * <pre>
-   * The ad group ad to which the asset is linked.
+   * Output only. The ad group ad to which the asset is linked.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue ad_group_ad = 5;</code>
+   * <code>.google.protobuf.StringValue ad_group_ad = 5 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return Whether the adGroupAd field is set.
    */
   boolean hasAdGroupAd();
   /**
    * <pre>
-   * The ad group ad to which the asset is linked.
+   * Output only. The ad group ad to which the asset is linked.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue ad_group_ad = 5;</code>
+   * <code>.google.protobuf.StringValue ad_group_ad = 5 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The adGroupAd.
    */
   com.google.protobuf.StringValue getAdGroupAd();
   /**
    * <pre>
-   * The ad group ad to which the asset is linked.
+   * Output only. The ad group ad to which the asset is linked.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue ad_group_ad = 5;</code>
+   * <code>.google.protobuf.StringValue ad_group_ad = 5 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    */
   com.google.protobuf.StringValueOrBuilder getAdGroupAdOrBuilder();
 
   /**
    * <pre>
-   * The asset which is linked to the ad group ad.
+   * Output only. The asset which is linked to the ad group ad.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue asset = 6;</code>
+   * <code>.google.protobuf.StringValue asset = 6 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return Whether the asset field is set.
    */
   boolean hasAsset();
   /**
    * <pre>
-   * The asset which is linked to the ad group ad.
+   * Output only. The asset which is linked to the ad group ad.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue asset = 6;</code>
+   * <code>.google.protobuf.StringValue asset = 6 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The asset.
    */
   com.google.protobuf.StringValue getAsset();
   /**
    * <pre>
-   * The asset which is linked to the ad group ad.
+   * Output only. The asset which is linked to the ad group ad.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue asset = 6;</code>
+   * <code>.google.protobuf.StringValue asset = 6 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    */
   com.google.protobuf.StringValueOrBuilder getAssetOrBuilder();
 
   /**
    * <pre>
-   * Role that the asset takes in the ad.
+   * Output only. Role that the asset takes in the ad.
    * </pre>
    *
-   * <code>.google.ads.googleads.v2.enums.AssetFieldTypeEnum.AssetFieldType field_type = 2;</code>
+   * <code>.google.ads.googleads.v2.enums.AssetFieldTypeEnum.AssetFieldType field_type = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The enum numeric value on the wire for fieldType.
    */
   int getFieldTypeValue();
   /**
    * <pre>
-   * Role that the asset takes in the ad.
+   * Output only. Role that the asset takes in the ad.
    * </pre>
    *
-   * <code>.google.ads.googleads.v2.enums.AssetFieldTypeEnum.AssetFieldType field_type = 2;</code>
+   * <code>.google.ads.googleads.v2.enums.AssetFieldTypeEnum.AssetFieldType field_type = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The fieldType.
    */
   com.google.ads.googleads.v2.enums.AssetFieldTypeEnum.AssetFieldType getFieldType();
 
   /**
    * <pre>
-   * Policy information for the ad group ad asset.
+   * Output only. Policy information for the ad group ad asset.
    * </pre>
    *
-   * <code>.google.ads.googleads.v2.resources.AdGroupAdAssetPolicySummary policy_summary = 3;</code>
+   * <code>.google.ads.googleads.v2.resources.AdGroupAdAssetPolicySummary policy_summary = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the policySummary field is set.
    */
   boolean hasPolicySummary();
   /**
    * <pre>
-   * Policy information for the ad group ad asset.
+   * Output only. Policy information for the ad group ad asset.
    * </pre>
    *
-   * <code>.google.ads.googleads.v2.resources.AdGroupAdAssetPolicySummary policy_summary = 3;</code>
+   * <code>.google.ads.googleads.v2.resources.AdGroupAdAssetPolicySummary policy_summary = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The policySummary.
    */
   com.google.ads.googleads.v2.resources.AdGroupAdAssetPolicySummary getPolicySummary();
   /**
    * <pre>
-   * Policy information for the ad group ad asset.
+   * Output only. Policy information for the ad group ad asset.
    * </pre>
    *
-   * <code>.google.ads.googleads.v2.resources.AdGroupAdAssetPolicySummary policy_summary = 3;</code>
+   * <code>.google.ads.googleads.v2.resources.AdGroupAdAssetPolicySummary policy_summary = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.ads.googleads.v2.resources.AdGroupAdAssetPolicySummaryOrBuilder getPolicySummaryOrBuilder();
 
   /**
    * <pre>
-   * Performance of an asset linkage.
+   * Output only. Performance of an asset linkage.
    * </pre>
    *
-   * <code>.google.ads.googleads.v2.enums.AssetPerformanceLabelEnum.AssetPerformanceLabel performance_label = 4;</code>
+   * <code>.google.ads.googleads.v2.enums.AssetPerformanceLabelEnum.AssetPerformanceLabel performance_label = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The enum numeric value on the wire for performanceLabel.
    */
   int getPerformanceLabelValue();
   /**
    * <pre>
-   * Performance of an asset linkage.
+   * Output only. Performance of an asset linkage.
    * </pre>
    *
-   * <code>.google.ads.googleads.v2.enums.AssetPerformanceLabelEnum.AssetPerformanceLabel performance_label = 4;</code>
+   * <code>.google.ads.googleads.v2.enums.AssetPerformanceLabelEnum.AssetPerformanceLabel performance_label = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The performanceLabel.
    */
   com.google.ads.googleads.v2.enums.AssetPerformanceLabelEnum.AssetPerformanceLabel getPerformanceLabel();
 }

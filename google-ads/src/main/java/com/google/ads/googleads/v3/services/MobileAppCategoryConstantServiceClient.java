@@ -1,5 +1,5 @@
 /*
- * Copyright 2019 Google LLC
+ * Copyright 2020 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -21,7 +21,6 @@ import com.google.ads.googleads.v3.services.stub.MobileAppCategoryConstantServic
 import com.google.api.core.BetaApi;
 import com.google.api.gax.core.BackgroundResource;
 import com.google.api.gax.rpc.UnaryCallable;
-import com.google.api.pathtemplate.PathTemplate;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 import javax.annotation.Generated;
@@ -36,8 +35,8 @@ import javax.annotation.Generated;
  * <pre>
  * <code>
  * try (MobileAppCategoryConstantServiceClient mobileAppCategoryConstantServiceClient = MobileAppCategoryConstantServiceClient.create()) {
- *   String formattedResourceName = MobileAppCategoryConstantServiceClient.formatMobileAppCategoryConstantName("[MOBILE_APP_CATEGORY_CONSTANT]");
- *   MobileAppCategoryConstant response = mobileAppCategoryConstantServiceClient.getMobileAppCategoryConstant(formattedResourceName);
+ *   MobileAppCategoryConstantName resourceName = MobileAppCategoryConstantName.of("[MOBILE_APP_CATEGORY_CONSTANT]");
+ *   MobileAppCategoryConstant response = mobileAppCategoryConstantServiceClient.getMobileAppCategoryConstant(resourceName);
  * }
  * </code>
  * </pre>
@@ -98,36 +97,6 @@ import javax.annotation.Generated;
 public class MobileAppCategoryConstantServiceClient implements BackgroundResource {
   private final MobileAppCategoryConstantServiceSettings settings;
   private final MobileAppCategoryConstantServiceStub stub;
-
-  private static final PathTemplate MOBILE_APP_CATEGORY_CONSTANT_PATH_TEMPLATE =
-      PathTemplate.createWithoutUrlEncoding(
-          "mobileAppCategoryConstants/{mobile_app_category_constant}");
-
-  /**
-   * Formats a string containing the fully-qualified path to represent a
-   * mobile_app_category_constant resource.
-   *
-   * @deprecated Use the {@link MobileAppCategoryConstantName} class instead.
-   */
-  @Deprecated
-  public static final String formatMobileAppCategoryConstantName(String mobileAppCategoryConstant) {
-    return MOBILE_APP_CATEGORY_CONSTANT_PATH_TEMPLATE.instantiate(
-        "mobile_app_category_constant", mobileAppCategoryConstant);
-  }
-
-  /**
-   * Parses the mobile_app_category_constant from the given fully-qualified path which represents a
-   * mobile_app_category_constant resource.
-   *
-   * @deprecated Use the {@link MobileAppCategoryConstantName} class instead.
-   */
-  @Deprecated
-  public static final String parseMobileAppCategoryConstantFromMobileAppCategoryConstantName(
-      String mobileAppCategoryConstantName) {
-    return MOBILE_APP_CATEGORY_CONSTANT_PATH_TEMPLATE
-        .parse(mobileAppCategoryConstantName)
-        .get("mobile_app_category_constant");
-  }
 
   /** Constructs an instance of MobileAppCategoryConstantServiceClient with default settings. */
   public static final MobileAppCategoryConstantServiceClient create() throws IOException {
@@ -190,8 +159,33 @@ public class MobileAppCategoryConstantServiceClient implements BackgroundResourc
    *
    * <pre><code>
    * try (MobileAppCategoryConstantServiceClient mobileAppCategoryConstantServiceClient = MobileAppCategoryConstantServiceClient.create()) {
-   *   String formattedResourceName = MobileAppCategoryConstantServiceClient.formatMobileAppCategoryConstantName("[MOBILE_APP_CATEGORY_CONSTANT]");
-   *   MobileAppCategoryConstant response = mobileAppCategoryConstantServiceClient.getMobileAppCategoryConstant(formattedResourceName);
+   *   MobileAppCategoryConstantName resourceName = MobileAppCategoryConstantName.of("[MOBILE_APP_CATEGORY_CONSTANT]");
+   *   MobileAppCategoryConstant response = mobileAppCategoryConstantServiceClient.getMobileAppCategoryConstant(resourceName);
+   * }
+   * </code></pre>
+   *
+   * @param resourceName Required. Resource name of the mobile app category constant to fetch.
+   * @throws com.google.api.gax.rpc.ApiException if the remote call fails
+   */
+  public final MobileAppCategoryConstant getMobileAppCategoryConstant(
+      MobileAppCategoryConstantName resourceName) {
+    GetMobileAppCategoryConstantRequest request =
+        GetMobileAppCategoryConstantRequest.newBuilder()
+            .setResourceName(resourceName == null ? null : resourceName.toString())
+            .build();
+    return getMobileAppCategoryConstant(request);
+  }
+
+  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  /**
+   * Returns the requested mobile app category constant.
+   *
+   * <p>Sample code:
+   *
+   * <pre><code>
+   * try (MobileAppCategoryConstantServiceClient mobileAppCategoryConstantServiceClient = MobileAppCategoryConstantServiceClient.create()) {
+   *   MobileAppCategoryConstantName resourceName = MobileAppCategoryConstantName.of("[MOBILE_APP_CATEGORY_CONSTANT]");
+   *   MobileAppCategoryConstant response = mobileAppCategoryConstantServiceClient.getMobileAppCategoryConstant(resourceName.toString());
    * }
    * </code></pre>
    *
@@ -199,8 +193,6 @@ public class MobileAppCategoryConstantServiceClient implements BackgroundResourc
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final MobileAppCategoryConstant getMobileAppCategoryConstant(String resourceName) {
-    MOBILE_APP_CATEGORY_CONSTANT_PATH_TEMPLATE.validate(
-        resourceName, "getMobileAppCategoryConstant");
     GetMobileAppCategoryConstantRequest request =
         GetMobileAppCategoryConstantRequest.newBuilder().setResourceName(resourceName).build();
     return getMobileAppCategoryConstant(request);
@@ -214,9 +206,9 @@ public class MobileAppCategoryConstantServiceClient implements BackgroundResourc
    *
    * <pre><code>
    * try (MobileAppCategoryConstantServiceClient mobileAppCategoryConstantServiceClient = MobileAppCategoryConstantServiceClient.create()) {
-   *   String formattedResourceName = MobileAppCategoryConstantServiceClient.formatMobileAppCategoryConstantName("[MOBILE_APP_CATEGORY_CONSTANT]");
+   *   MobileAppCategoryConstantName resourceName = MobileAppCategoryConstantName.of("[MOBILE_APP_CATEGORY_CONSTANT]");
    *   GetMobileAppCategoryConstantRequest request = GetMobileAppCategoryConstantRequest.newBuilder()
-   *     .setResourceName(formattedResourceName)
+   *     .setResourceName(resourceName.toString())
    *     .build();
    *   MobileAppCategoryConstant response = mobileAppCategoryConstantServiceClient.getMobileAppCategoryConstant(request);
    * }
@@ -238,9 +230,9 @@ public class MobileAppCategoryConstantServiceClient implements BackgroundResourc
    *
    * <pre><code>
    * try (MobileAppCategoryConstantServiceClient mobileAppCategoryConstantServiceClient = MobileAppCategoryConstantServiceClient.create()) {
-   *   String formattedResourceName = MobileAppCategoryConstantServiceClient.formatMobileAppCategoryConstantName("[MOBILE_APP_CATEGORY_CONSTANT]");
+   *   MobileAppCategoryConstantName resourceName = MobileAppCategoryConstantName.of("[MOBILE_APP_CATEGORY_CONSTANT]");
    *   GetMobileAppCategoryConstantRequest request = GetMobileAppCategoryConstantRequest.newBuilder()
-   *     .setResourceName(formattedResourceName)
+   *     .setResourceName(resourceName.toString())
    *     .build();
    *   ApiFuture&lt;MobileAppCategoryConstant&gt; future = mobileAppCategoryConstantServiceClient.getMobileAppCategoryConstantCallable().futureCall(request);
    *   // Do something

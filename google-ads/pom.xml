@@ -18,7 +18,7 @@
   <parent>
     <groupId>com.google.api-ads</groupId>
     <artifactId>google-ads-parent</artifactId>
-    <version>5.1.1-SNAPSHOT</version>
+    <version>9.0.1-SNAPSHOT</version>
     <relativePath>../pom.xml</relativePath>
   </parent>
 
@@ -26,19 +26,19 @@
   <groupId>com.google.api-ads</groupId>
   <artifactId>google-ads</artifactId>
   <packaging>jar</packaging>
-  <version>5.1.1-SNAPSHOT</version>
+  <version>9.0.1-SNAPSHOT</version>
   <name>Google Ads API client library for Java</name>
   <description>
     Google Ads API client library for Java.
   </description>
 
   <properties>
-    <auto-value.version>1.6.6</auto-value.version>
+    <auto-value.version>1.7.3</auto-value.version>
     <!-- Keep all versions below consistent with the io.netty version. -->
     <netty.version>2.0.26.Final</netty.version>
-    <gax.version>1.50.1</gax.version>
-    <grpc.version>1.25.0</grpc.version>
-    <protobuf.version>3.10.0</protobuf.version>
+    <gax.version>1.57.1</gax.version>
+    <grpc.version>1.30.0</grpc.version>
+    <protobuf.version>3.12.2</protobuf.version>
   </properties>
 
   <dependencies>
@@ -70,6 +70,11 @@
       <groupId>org.slf4j</groupId>
       <artifactId>slf4j-api</artifactId>
       <version>1.7.25</version>
+    </dependency>
+    <dependency>
+      <groupId>com.google.api-ads</groupId>
+      <artifactId>google-ads-annotation-processing</artifactId>
+      <version>9.0.1-SNAPSHOT</version>
     </dependency>
 
     <!-- Test dependencies -->

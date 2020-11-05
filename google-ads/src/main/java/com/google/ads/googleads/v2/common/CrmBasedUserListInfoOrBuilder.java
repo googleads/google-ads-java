@@ -22,6 +22,7 @@ public interface CrmBasedUserListInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue app_id = 1;</code>
+   * @return Whether the appId field is set.
    */
   boolean hasAppId();
   /**
@@ -39,6 +40,7 @@ public interface CrmBasedUserListInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue app_id = 1;</code>
+   * @return The appId.
    */
   com.google.protobuf.StringValue getAppId();
   /**
@@ -67,6 +69,7 @@ public interface CrmBasedUserListInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.enums.CustomerMatchUploadKeyTypeEnum.CustomerMatchUploadKeyType upload_key_type = 2;</code>
+   * @return The enum numeric value on the wire for uploadKeyType.
    */
   int getUploadKeyTypeValue();
   /**
@@ -77,6 +80,7 @@ public interface CrmBasedUserListInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.enums.CustomerMatchUploadKeyTypeEnum.CustomerMatchUploadKeyType upload_key_type = 2;</code>
+   * @return The uploadKeyType.
    */
   com.google.ads.googleads.v2.enums.CustomerMatchUploadKeyTypeEnum.CustomerMatchUploadKeyType getUploadKeyType();
 
@@ -87,6 +91,7 @@ public interface CrmBasedUserListInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.enums.UserListCrmDataSourceTypeEnum.UserListCrmDataSourceType data_source_type = 3;</code>
+   * @return The enum numeric value on the wire for dataSourceType.
    */
   int getDataSourceTypeValue();
   /**
@@ -96,6 +101,7 @@ public interface CrmBasedUserListInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.enums.UserListCrmDataSourceTypeEnum.UserListCrmDataSourceType data_source_type = 3;</code>
+   * @return The dataSourceType.
    */
   com.google.ads.googleads.v2.enums.UserListCrmDataSourceTypeEnum.UserListCrmDataSourceType getDataSourceType();
 }

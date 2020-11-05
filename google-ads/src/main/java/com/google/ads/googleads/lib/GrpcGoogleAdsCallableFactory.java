@@ -15,9 +15,10 @@
  */
 package com.google.ads.googleads.lib;
 
-import com.google.ads.googleads.lib.ExceptionTransformingCallable;
-import com.google.ads.googleads.lib.ExceptionTransformingCallable.ExceptionTransformation;
-import com.google.ads.googleads.lib.GoogleAdsExceptionTransformation;
+import com.google.ads.googleads.lib.callables.ExceptionTransformation;
+import com.google.ads.googleads.lib.callables.ExceptionTransformingServerStreamingCallable;
+import com.google.ads.googleads.lib.callables.ExceptionTransformingUnaryCallable;
+import com.google.ads.googleads.lib.callables.GoogleAdsExceptionTransformation;
 import com.google.api.gax.grpc.GrpcCallSettings;
 import com.google.api.gax.grpc.GrpcCallableFactory;
 import com.google.api.gax.grpc.GrpcStubCallableFactory;
@@ -37,42 +38,61 @@ import com.google.api.gax.rpc.UnaryCallable;
 import com.google.longrunning.Operation;
 import com.google.longrunning.stub.OperationsStub;
 
+/**
+ * Defines the factory used to create instances for all Google Ads services.
+ *
+ * <p>Used in place of the default generated code to override the exceptions generated to throw
+ * GoogleAdsException instead of ApiException.
+ */
 public class GrpcGoogleAdsCallableFactory implements GrpcStubCallableFactory {
 
-  private static final ExceptionTransformation googleAdsExceptionTransformation = new GoogleAdsExceptionTransformation();
+  private static final ExceptionTransformation googleAdsExceptionTransformation =
+      new GoogleAdsExceptionTransformation();
 
-  public static <RequestT, ResponseT> UnaryCallable<RequestT, ResponseT> createBaseUnaryCallable(GrpcCallSettings<RequestT, ResponseT> grpcCallSettings, UnaryCallSettings<?, ?> callSettings, ClientContext clientContext) {
-    UnaryCallable<RequestT, ResponseT> callable = GrpcCallableFactory.createBaseUnaryCallable(grpcCallSettings, callSettings, clientContext);
-    return new ExceptionTransformingCallable<>(callable, googleAdsExceptionTransformation);
+  public static <RequestT, ResponseT> UnaryCallable<RequestT, ResponseT> createBaseUnaryCallable(
+      GrpcCallSettings<RequestT, ResponseT> grpcCallSettings,
+      UnaryCallSettings<?, ?> callSettings,
+      ClientContext clientContext) {
+    UnaryCallable<RequestT, ResponseT> callable =
+        GrpcCallableFactory.createBaseUnaryCallable(grpcCallSettings, callSettings, clientContext);
+    return new ExceptionTransformingUnaryCallable<>(callable, googleAdsExceptionTransformation);
   }
 
+  @Override
   public <RequestT, ResponseT> UnaryCallable<RequestT, ResponseT> createUnaryCallable(
       GrpcCallSettings<RequestT, ResponseT> grpcCallSettings,
       UnaryCallSettings<RequestT, ResponseT> callSettings,
       ClientContext clientContext) {
-    UnaryCallable<RequestT, ResponseT> callable = createBaseUnaryCallable(grpcCallSettings, callSettings, clientContext);
+    UnaryCallable<RequestT, ResponseT> callable =
+        createBaseUnaryCallable(grpcCallSettings, callSettings, clientContext);
     return callable.withDefaultCallContext(clientContext.getDefaultCallContext());
   }
 
+  @Override
   public <RequestT, ResponseT, PagedListResponseT>
       UnaryCallable<RequestT, PagedListResponseT> createPagedCallable(
           GrpcCallSettings<RequestT, ResponseT> grpcCallSettings,
           PagedCallSettings<RequestT, ResponseT, PagedListResponseT> pagedCallSettings,
           ClientContext clientContext) {
-    UnaryCallable<RequestT, ResponseT> innerCallable = createBaseUnaryCallable(grpcCallSettings, pagedCallSettings, clientContext);
-    UnaryCallable<RequestT, PagedListResponseT> pagedCallable = Callables.paged(innerCallable, pagedCallSettings);
+    UnaryCallable<RequestT, ResponseT> innerCallable =
+        createBaseUnaryCallable(grpcCallSettings, pagedCallSettings, clientContext);
+    UnaryCallable<RequestT, PagedListResponseT> pagedCallable =
+        Callables.paged(innerCallable, pagedCallSettings);
     return pagedCallable.withDefaultCallContext(clientContext.getDefaultCallContext());
   }
 
+  @Override
   public <RequestT, ResponseT> UnaryCallable<RequestT, ResponseT> createBatchingCallable(
       GrpcCallSettings<RequestT, ResponseT> grpcCallSettings,
       BatchingCallSettings<RequestT, ResponseT> batchingCallSettings,
       ClientContext clientContext) {
-    UnaryCallable<RequestT, ResponseT> callable = createBaseUnaryCallable(grpcCallSettings, batchingCallSettings, clientContext);
+    UnaryCallable<RequestT, ResponseT> callable =
+        createBaseUnaryCallable(grpcCallSettings, batchingCallSettings, clientContext);
     callable = Callables.batching(callable, batchingCallSettings, clientContext);
     return callable.withDefaultCallContext(clientContext.getDefaultCallContext());
   }
 
+  @Override
   public <RequestT, ResponseT, MetadataT>
       OperationCallable<RequestT, ResponseT, MetadataT> createOperationCallable(
           GrpcCallSettings<RequestT, Operation> grpcCallSettings,
@@ -83,6 +103,7 @@ public class GrpcGoogleAdsCallableFactory implements GrpcStubCallableFactory {
         grpcCallSettings, operationCallSettings, clientContext, operationsStub);
   }
 
+  @Override
   public <RequestT, ResponseT>
       BidiStreamingCallable<RequestT, ResponseT> createBidiStreamingCallable(
           GrpcCallSettings<RequestT, ResponseT> grpcCallSettings,
@@ -92,15 +113,20 @@ public class GrpcGoogleAdsCallableFactory implements GrpcStubCallableFactory {
         grpcCallSettings, streamingCallSettings, clientContext);
   }
 
+  @Override
   public <RequestT, ResponseT>
       ServerStreamingCallable<RequestT, ResponseT> createServerStreamingCallable(
           GrpcCallSettings<RequestT, ResponseT> grpcCallSettings,
           ServerStreamingCallSettings<RequestT, ResponseT> streamingCallSettings,
           ClientContext clientContext) {
-    return GrpcCallableFactory.createServerStreamingCallable(
-        grpcCallSettings, streamingCallSettings, clientContext);
+    ServerStreamingCallable<RequestT, ResponseT> defaultCallable =
+        GrpcCallableFactory.createServerStreamingCallable(
+            grpcCallSettings, streamingCallSettings, clientContext);
+    return new ExceptionTransformingServerStreamingCallable(
+        defaultCallable, new GoogleAdsExceptionTransformation());
   }
 
+  @Override
   public <RequestT, ResponseT>
       ClientStreamingCallable<RequestT, ResponseT> createClientStreamingCallable(
           GrpcCallSettings<RequestT, ResponseT> grpcCallSettings,

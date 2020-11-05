@@ -10,7 +10,7 @@ package com.google.ads.googleads.v2.common;
  *
  * Protobuf type {@code google.ads.googleads.v2.common.CalloutFeedItem}
  */
-public  final class CalloutFeedItem extends
+public final class CalloutFeedItem extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v2.common.CalloutFeedItem)
     CalloutFeedItemOrBuilder {
@@ -20,6 +20,13 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private CalloutFeedItem() {
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new CalloutFeedItem();
   }
 
   @java.lang.Override
@@ -35,7 +42,6 @@ private static final long serialVersionUID = 0L;
     if (extensionRegistry == null) {
       throw new java.lang.NullPointerException();
     }
-    int mutable_bitField0_ = 0;
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
         com.google.protobuf.UnknownFieldSet.newBuilder();
     try {
@@ -100,7 +106,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue callout_text = 1;</code>
+   * @return Whether the calloutText field is set.
    */
+  @java.lang.Override
   public boolean hasCalloutText() {
     return calloutText_ != null;
   }
@@ -111,7 +119,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue callout_text = 1;</code>
+   * @return The calloutText.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getCalloutText() {
     return calloutText_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : calloutText_;
   }
@@ -123,6 +133,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue callout_text = 1;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getCalloutTextOrBuilder() {
     return getCalloutText();
   }
@@ -456,6 +467,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue callout_text = 1;</code>
+     * @return Whether the calloutText field is set.
      */
     public boolean hasCalloutText() {
       return calloutTextBuilder_ != null || calloutText_ != null;
@@ -467,6 +479,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue callout_text = 1;</code>
+     * @return The calloutText.
      */
     public com.google.protobuf.StringValue getCalloutText() {
       if (calloutTextBuilder_ == null) {

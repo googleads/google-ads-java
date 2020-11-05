@@ -9,48 +9,52 @@ public interface AdOrBuilder extends
 
   /**
    * <pre>
-   * The resource name of the ad.
+   * Immutable. The resource name of the ad.
    * Ad resource names have the form:
    * `customers/{customer_id}/ads/{ad_id}`
    * </pre>
    *
-   * <code>string resource_name = 37;</code>
+   * <code>string resource_name = 37 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * @return The resourceName.
    */
   java.lang.String getResourceName();
   /**
    * <pre>
-   * The resource name of the ad.
+   * Immutable. The resource name of the ad.
    * Ad resource names have the form:
    * `customers/{customer_id}/ads/{ad_id}`
    * </pre>
    *
-   * <code>string resource_name = 37;</code>
+   * <code>string resource_name = 37 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * @return The bytes for resourceName.
    */
   com.google.protobuf.ByteString
       getResourceNameBytes();
 
   /**
    * <pre>
-   * The ID of the ad.
+   * Output only. The ID of the ad.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value id = 1;</code>
+   * <code>.google.protobuf.Int64Value id = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the id field is set.
    */
   boolean hasId();
   /**
    * <pre>
-   * The ID of the ad.
+   * Output only. The ID of the ad.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value id = 1;</code>
+   * <code>.google.protobuf.Int64Value id = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The id.
    */
   com.google.protobuf.Int64Value getId();
   /**
    * <pre>
-   * The ID of the ad.
+   * Output only. The ID of the ad.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value id = 1;</code>
+   * <code>.google.protobuf.Int64Value id = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.protobuf.Int64ValueOrBuilder getIdOrBuilder();
 
@@ -207,6 +211,7 @@ public interface AdOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue tracking_url_template = 12;</code>
+   * @return Whether the trackingUrlTemplate field is set.
    */
   boolean hasTrackingUrlTemplate();
   /**
@@ -215,6 +220,7 @@ public interface AdOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue tracking_url_template = 12;</code>
+   * @return The trackingUrlTemplate.
    */
   com.google.protobuf.StringValue getTrackingUrlTemplate();
   /**
@@ -232,6 +238,7 @@ public interface AdOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue final_url_suffix = 38;</code>
+   * @return Whether the finalUrlSuffix field is set.
    */
   boolean hasFinalUrlSuffix();
   /**
@@ -240,6 +247,7 @@ public interface AdOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue final_url_suffix = 38;</code>
+   * @return The finalUrlSuffix.
    */
   com.google.protobuf.StringValue getFinalUrlSuffix();
   /**
@@ -255,6 +263,7 @@ public interface AdOrBuilder extends
    * <pre>
    * The list of mappings that can be used to substitute custom parameter tags
    * in a `tracking_url_template`, `final_urls`, or `mobile_final_urls`.
+   * For mutates, please use url custom parameter operations.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v2.common.CustomParameter url_custom_parameters = 10;</code>
@@ -265,6 +274,7 @@ public interface AdOrBuilder extends
    * <pre>
    * The list of mappings that can be used to substitute custom parameter tags
    * in a `tracking_url_template`, `final_urls`, or `mobile_final_urls`.
+   * For mutates, please use url custom parameter operations.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v2.common.CustomParameter url_custom_parameters = 10;</code>
@@ -274,6 +284,7 @@ public interface AdOrBuilder extends
    * <pre>
    * The list of mappings that can be used to substitute custom parameter tags
    * in a `tracking_url_template`, `final_urls`, or `mobile_final_urls`.
+   * For mutates, please use url custom parameter operations.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v2.common.CustomParameter url_custom_parameters = 10;</code>
@@ -283,6 +294,7 @@ public interface AdOrBuilder extends
    * <pre>
    * The list of mappings that can be used to substitute custom parameter tags
    * in a `tracking_url_template`, `final_urls`, or `mobile_final_urls`.
+   * For mutates, please use url custom parameter operations.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v2.common.CustomParameter url_custom_parameters = 10;</code>
@@ -293,6 +305,7 @@ public interface AdOrBuilder extends
    * <pre>
    * The list of mappings that can be used to substitute custom parameter tags
    * in a `tracking_url_template`, `final_urls`, or `mobile_final_urls`.
+   * For mutates, please use url custom parameter operations.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v2.common.CustomParameter url_custom_parameters = 10;</code>
@@ -306,6 +319,7 @@ public interface AdOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue display_url = 4;</code>
+   * @return Whether the displayUrl field is set.
    */
   boolean hasDisplayUrl();
   /**
@@ -314,6 +328,7 @@ public interface AdOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue display_url = 4;</code>
+   * @return The displayUrl.
    */
   com.google.protobuf.StringValue getDisplayUrl();
   /**
@@ -327,52 +342,56 @@ public interface AdOrBuilder extends
 
   /**
    * <pre>
-   * The type of ad.
+   * Output only. The type of ad.
    * </pre>
    *
-   * <code>.google.ads.googleads.v2.enums.AdTypeEnum.AdType type = 5;</code>
+   * <code>.google.ads.googleads.v2.enums.AdTypeEnum.AdType type = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The enum numeric value on the wire for type.
    */
   int getTypeValue();
   /**
    * <pre>
-   * The type of ad.
+   * Output only. The type of ad.
    * </pre>
    *
-   * <code>.google.ads.googleads.v2.enums.AdTypeEnum.AdType type = 5;</code>
+   * <code>.google.ads.googleads.v2.enums.AdTypeEnum.AdType type = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The type.
    */
   com.google.ads.googleads.v2.enums.AdTypeEnum.AdType getType();
 
   /**
    * <pre>
-   * Indicates if this ad was automatically added by Google Ads and not by a
+   * Output only. Indicates if this ad was automatically added by Google Ads and not by a
    * user. For example, this could happen when ads are automatically created as
    * suggestions for new ads based on knowledge of how existing ads are
    * performing.
    * </pre>
    *
-   * <code>.google.protobuf.BoolValue added_by_google_ads = 19;</code>
+   * <code>.google.protobuf.BoolValue added_by_google_ads = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the addedByGoogleAds field is set.
    */
   boolean hasAddedByGoogleAds();
   /**
    * <pre>
-   * Indicates if this ad was automatically added by Google Ads and not by a
+   * Output only. Indicates if this ad was automatically added by Google Ads and not by a
    * user. For example, this could happen when ads are automatically created as
    * suggestions for new ads based on knowledge of how existing ads are
    * performing.
    * </pre>
    *
-   * <code>.google.protobuf.BoolValue added_by_google_ads = 19;</code>
+   * <code>.google.protobuf.BoolValue added_by_google_ads = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The addedByGoogleAds.
    */
   com.google.protobuf.BoolValue getAddedByGoogleAds();
   /**
    * <pre>
-   * Indicates if this ad was automatically added by Google Ads and not by a
+   * Output only. Indicates if this ad was automatically added by Google Ads and not by a
    * user. For example, this could happen when ads are automatically created as
    * suggestions for new ads based on knowledge of how existing ads are
    * performing.
    * </pre>
    *
-   * <code>.google.protobuf.BoolValue added_by_google_ads = 19;</code>
+   * <code>.google.protobuf.BoolValue added_by_google_ads = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.protobuf.BoolValueOrBuilder getAddedByGoogleAdsOrBuilder();
 
@@ -387,6 +406,7 @@ public interface AdOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.enums.DeviceEnum.Device device_preference = 20;</code>
+   * @return The enum numeric value on the wire for devicePreference.
    */
   int getDevicePreferenceValue();
   /**
@@ -400,6 +420,7 @@ public interface AdOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.enums.DeviceEnum.Device device_preference = 20;</code>
+   * @return The devicePreference.
    */
   com.google.ads.googleads.v2.enums.DeviceEnum.Device getDevicePreference();
 
@@ -454,48 +475,52 @@ public interface AdOrBuilder extends
 
   /**
    * <pre>
-   * The name of the ad. This is only used to be able to identify the ad. It
+   * Immutable. The name of the ad. This is only used to be able to identify the ad. It
    * does not need to be unique and does not affect the served ad.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue name = 23;</code>
+   * <code>.google.protobuf.StringValue name = 23 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return Whether the name field is set.
    */
   boolean hasName();
   /**
    * <pre>
-   * The name of the ad. This is only used to be able to identify the ad. It
+   * Immutable. The name of the ad. This is only used to be able to identify the ad. It
    * does not need to be unique and does not affect the served ad.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue name = 23;</code>
+   * <code>.google.protobuf.StringValue name = 23 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The name.
    */
   com.google.protobuf.StringValue getName();
   /**
    * <pre>
-   * The name of the ad. This is only used to be able to identify the ad. It
+   * Immutable. The name of the ad. This is only used to be able to identify the ad. It
    * does not need to be unique and does not affect the served ad.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue name = 23;</code>
+   * <code>.google.protobuf.StringValue name = 23 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   com.google.protobuf.StringValueOrBuilder getNameOrBuilder();
 
   /**
    * <pre>
-   * If this ad is system managed, then this field will indicate the source.
+   * Output only. If this ad is system managed, then this field will indicate the source.
    * This field is read-only.
    * </pre>
    *
-   * <code>.google.ads.googleads.v2.enums.SystemManagedResourceSourceEnum.SystemManagedResourceSource system_managed_resource_source = 27;</code>
+   * <code>.google.ads.googleads.v2.enums.SystemManagedResourceSourceEnum.SystemManagedResourceSource system_managed_resource_source = 27 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The enum numeric value on the wire for systemManagedResourceSource.
    */
   int getSystemManagedResourceSourceValue();
   /**
    * <pre>
-   * If this ad is system managed, then this field will indicate the source.
+   * Output only. If this ad is system managed, then this field will indicate the source.
    * This field is read-only.
    * </pre>
    *
-   * <code>.google.ads.googleads.v2.enums.SystemManagedResourceSourceEnum.SystemManagedResourceSource system_managed_resource_source = 27;</code>
+   * <code>.google.ads.googleads.v2.enums.SystemManagedResourceSourceEnum.SystemManagedResourceSource system_managed_resource_source = 27 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The systemManagedResourceSource.
    */
   com.google.ads.googleads.v2.enums.SystemManagedResourceSourceEnum.SystemManagedResourceSource getSystemManagedResourceSource();
 
@@ -505,6 +530,7 @@ public interface AdOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.common.TextAdInfo text_ad = 6;</code>
+   * @return Whether the textAd field is set.
    */
   boolean hasTextAd();
   /**
@@ -513,6 +539,7 @@ public interface AdOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.common.TextAdInfo text_ad = 6;</code>
+   * @return The textAd.
    */
   com.google.ads.googleads.v2.common.TextAdInfo getTextAd();
   /**
@@ -530,6 +557,7 @@ public interface AdOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.common.ExpandedTextAdInfo expanded_text_ad = 7;</code>
+   * @return Whether the expandedTextAd field is set.
    */
   boolean hasExpandedTextAd();
   /**
@@ -538,6 +566,7 @@ public interface AdOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.common.ExpandedTextAdInfo expanded_text_ad = 7;</code>
+   * @return The expandedTextAd.
    */
   com.google.ads.googleads.v2.common.ExpandedTextAdInfo getExpandedTextAd();
   /**
@@ -555,6 +584,7 @@ public interface AdOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.common.CallOnlyAdInfo call_only_ad = 13;</code>
+   * @return Whether the callOnlyAd field is set.
    */
   boolean hasCallOnlyAd();
   /**
@@ -563,6 +593,7 @@ public interface AdOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.common.CallOnlyAdInfo call_only_ad = 13;</code>
+   * @return The callOnlyAd.
    */
   com.google.ads.googleads.v2.common.CallOnlyAdInfo getCallOnlyAd();
   /**
@@ -584,6 +615,7 @@ public interface AdOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.common.ExpandedDynamicSearchAdInfo expanded_dynamic_search_ad = 14;</code>
+   * @return Whether the expandedDynamicSearchAd field is set.
    */
   boolean hasExpandedDynamicSearchAd();
   /**
@@ -596,6 +628,7 @@ public interface AdOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.common.ExpandedDynamicSearchAdInfo expanded_dynamic_search_ad = 14;</code>
+   * @return The expandedDynamicSearchAd.
    */
   com.google.ads.googleads.v2.common.ExpandedDynamicSearchAdInfo getExpandedDynamicSearchAd();
   /**
@@ -617,6 +650,7 @@ public interface AdOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.common.HotelAdInfo hotel_ad = 15;</code>
+   * @return Whether the hotelAd field is set.
    */
   boolean hasHotelAd();
   /**
@@ -625,6 +659,7 @@ public interface AdOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.common.HotelAdInfo hotel_ad = 15;</code>
+   * @return The hotelAd.
    */
   com.google.ads.googleads.v2.common.HotelAdInfo getHotelAd();
   /**
@@ -642,6 +677,7 @@ public interface AdOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.common.ShoppingSmartAdInfo shopping_smart_ad = 17;</code>
+   * @return Whether the shoppingSmartAd field is set.
    */
   boolean hasShoppingSmartAd();
   /**
@@ -650,6 +686,7 @@ public interface AdOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.common.ShoppingSmartAdInfo shopping_smart_ad = 17;</code>
+   * @return The shoppingSmartAd.
    */
   com.google.ads.googleads.v2.common.ShoppingSmartAdInfo getShoppingSmartAd();
   /**
@@ -667,6 +704,7 @@ public interface AdOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.common.ShoppingProductAdInfo shopping_product_ad = 18;</code>
+   * @return Whether the shoppingProductAd field is set.
    */
   boolean hasShoppingProductAd();
   /**
@@ -675,6 +713,7 @@ public interface AdOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.common.ShoppingProductAdInfo shopping_product_ad = 18;</code>
+   * @return The shoppingProductAd.
    */
   com.google.ads.googleads.v2.common.ShoppingProductAdInfo getShoppingProductAd();
   /**
@@ -692,6 +731,7 @@ public interface AdOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.common.GmailAdInfo gmail_ad = 21;</code>
+   * @return Whether the gmailAd field is set.
    */
   boolean hasGmailAd();
   /**
@@ -700,6 +740,7 @@ public interface AdOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.common.GmailAdInfo gmail_ad = 21;</code>
+   * @return The gmailAd.
    */
   com.google.ads.googleads.v2.common.GmailAdInfo getGmailAd();
   /**
@@ -717,6 +758,7 @@ public interface AdOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.common.ImageAdInfo image_ad = 22;</code>
+   * @return Whether the imageAd field is set.
    */
   boolean hasImageAd();
   /**
@@ -725,6 +767,7 @@ public interface AdOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.common.ImageAdInfo image_ad = 22;</code>
+   * @return The imageAd.
    */
   com.google.ads.googleads.v2.common.ImageAdInfo getImageAd();
   /**
@@ -742,6 +785,7 @@ public interface AdOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.common.VideoAdInfo video_ad = 24;</code>
+   * @return Whether the videoAd field is set.
    */
   boolean hasVideoAd();
   /**
@@ -750,6 +794,7 @@ public interface AdOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.common.VideoAdInfo video_ad = 24;</code>
+   * @return The videoAd.
    */
   com.google.ads.googleads.v2.common.VideoAdInfo getVideoAd();
   /**
@@ -767,6 +812,7 @@ public interface AdOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.common.ResponsiveSearchAdInfo responsive_search_ad = 25;</code>
+   * @return Whether the responsiveSearchAd field is set.
    */
   boolean hasResponsiveSearchAd();
   /**
@@ -775,6 +821,7 @@ public interface AdOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.common.ResponsiveSearchAdInfo responsive_search_ad = 25;</code>
+   * @return The responsiveSearchAd.
    */
   com.google.ads.googleads.v2.common.ResponsiveSearchAdInfo getResponsiveSearchAd();
   /**
@@ -792,6 +839,7 @@ public interface AdOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.common.LegacyResponsiveDisplayAdInfo legacy_responsive_display_ad = 28;</code>
+   * @return Whether the legacyResponsiveDisplayAd field is set.
    */
   boolean hasLegacyResponsiveDisplayAd();
   /**
@@ -800,6 +848,7 @@ public interface AdOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.common.LegacyResponsiveDisplayAdInfo legacy_responsive_display_ad = 28;</code>
+   * @return The legacyResponsiveDisplayAd.
    */
   com.google.ads.googleads.v2.common.LegacyResponsiveDisplayAdInfo getLegacyResponsiveDisplayAd();
   /**
@@ -817,6 +866,7 @@ public interface AdOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.common.AppAdInfo app_ad = 29;</code>
+   * @return Whether the appAd field is set.
    */
   boolean hasAppAd();
   /**
@@ -825,6 +875,7 @@ public interface AdOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.common.AppAdInfo app_ad = 29;</code>
+   * @return The appAd.
    */
   com.google.ads.googleads.v2.common.AppAdInfo getAppAd();
   /**
@@ -838,26 +889,28 @@ public interface AdOrBuilder extends
 
   /**
    * <pre>
-   * Details pertaining to a legacy app install ad.
+   * Immutable. Details pertaining to a legacy app install ad.
    * </pre>
    *
-   * <code>.google.ads.googleads.v2.common.LegacyAppInstallAdInfo legacy_app_install_ad = 30;</code>
+   * <code>.google.ads.googleads.v2.common.LegacyAppInstallAdInfo legacy_app_install_ad = 30 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return Whether the legacyAppInstallAd field is set.
    */
   boolean hasLegacyAppInstallAd();
   /**
    * <pre>
-   * Details pertaining to a legacy app install ad.
+   * Immutable. Details pertaining to a legacy app install ad.
    * </pre>
    *
-   * <code>.google.ads.googleads.v2.common.LegacyAppInstallAdInfo legacy_app_install_ad = 30;</code>
+   * <code>.google.ads.googleads.v2.common.LegacyAppInstallAdInfo legacy_app_install_ad = 30 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The legacyAppInstallAd.
    */
   com.google.ads.googleads.v2.common.LegacyAppInstallAdInfo getLegacyAppInstallAd();
   /**
    * <pre>
-   * Details pertaining to a legacy app install ad.
+   * Immutable. Details pertaining to a legacy app install ad.
    * </pre>
    *
-   * <code>.google.ads.googleads.v2.common.LegacyAppInstallAdInfo legacy_app_install_ad = 30;</code>
+   * <code>.google.ads.googleads.v2.common.LegacyAppInstallAdInfo legacy_app_install_ad = 30 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   com.google.ads.googleads.v2.common.LegacyAppInstallAdInfoOrBuilder getLegacyAppInstallAdOrBuilder();
 
@@ -867,6 +920,7 @@ public interface AdOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.common.ResponsiveDisplayAdInfo responsive_display_ad = 31;</code>
+   * @return Whether the responsiveDisplayAd field is set.
    */
   boolean hasResponsiveDisplayAd();
   /**
@@ -875,6 +929,7 @@ public interface AdOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.common.ResponsiveDisplayAdInfo responsive_display_ad = 31;</code>
+   * @return The responsiveDisplayAd.
    */
   com.google.ads.googleads.v2.common.ResponsiveDisplayAdInfo getResponsiveDisplayAd();
   /**
@@ -892,6 +947,7 @@ public interface AdOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.common.DisplayUploadAdInfo display_upload_ad = 33;</code>
+   * @return Whether the displayUploadAd field is set.
    */
   boolean hasDisplayUploadAd();
   /**
@@ -900,6 +956,7 @@ public interface AdOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.common.DisplayUploadAdInfo display_upload_ad = 33;</code>
+   * @return The displayUploadAd.
    */
   com.google.ads.googleads.v2.common.DisplayUploadAdInfo getDisplayUploadAd();
   /**
@@ -917,6 +974,7 @@ public interface AdOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.common.AppEngagementAdInfo app_engagement_ad = 34;</code>
+   * @return Whether the appEngagementAd field is set.
    */
   boolean hasAppEngagementAd();
   /**
@@ -925,6 +983,7 @@ public interface AdOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.common.AppEngagementAdInfo app_engagement_ad = 34;</code>
+   * @return The appEngagementAd.
    */
   com.google.ads.googleads.v2.common.AppEngagementAdInfo getAppEngagementAd();
   /**
@@ -942,6 +1001,7 @@ public interface AdOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.common.ShoppingComparisonListingAdInfo shopping_comparison_listing_ad = 36;</code>
+   * @return Whether the shoppingComparisonListingAd field is set.
    */
   boolean hasShoppingComparisonListingAd();
   /**
@@ -950,6 +1010,7 @@ public interface AdOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.common.ShoppingComparisonListingAdInfo shopping_comparison_listing_ad = 36;</code>
+   * @return The shoppingComparisonListingAd.
    */
   com.google.ads.googleads.v2.common.ShoppingComparisonListingAdInfo getShoppingComparisonListingAd();
   /**

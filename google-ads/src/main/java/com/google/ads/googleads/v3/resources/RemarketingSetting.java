@@ -10,7 +10,7 @@ package com.google.ads.googleads.v3.resources;
  *
  * Protobuf type {@code google.ads.googleads.v3.resources.RemarketingSetting}
  */
-public  final class RemarketingSetting extends
+public final class RemarketingSetting extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v3.resources.RemarketingSetting)
     RemarketingSettingOrBuilder {
@@ -20,6 +20,13 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private RemarketingSetting() {
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new RemarketingSetting();
   }
 
   @java.lang.Override
@@ -35,7 +42,6 @@ private static final long serialVersionUID = 0L;
     if (extensionRegistry == null) {
       throw new java.lang.NullPointerException();
     }
-    int mutable_bitField0_ = 0;
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
         com.google.protobuf.UnknownFieldSet.newBuilder();
     try {
@@ -99,7 +105,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue google_global_site_tag = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the googleGlobalSiteTag field is set.
    */
+  @java.lang.Override
   public boolean hasGoogleGlobalSiteTag() {
     return googleGlobalSiteTag_ != null;
   }
@@ -109,7 +117,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue google_global_site_tag = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The googleGlobalSiteTag.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getGoogleGlobalSiteTag() {
     return googleGlobalSiteTag_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : googleGlobalSiteTag_;
   }
@@ -120,6 +130,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue google_global_site_tag = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getGoogleGlobalSiteTagOrBuilder() {
     return getGoogleGlobalSiteTag();
   }
@@ -452,6 +463,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue google_global_site_tag = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the googleGlobalSiteTag field is set.
      */
     public boolean hasGoogleGlobalSiteTag() {
       return googleGlobalSiteTagBuilder_ != null || googleGlobalSiteTag_ != null;
@@ -462,6 +474,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue google_global_site_tag = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The googleGlobalSiteTag.
      */
     public com.google.protobuf.StringValue getGoogleGlobalSiteTag() {
       if (googleGlobalSiteTagBuilder_ == null) {

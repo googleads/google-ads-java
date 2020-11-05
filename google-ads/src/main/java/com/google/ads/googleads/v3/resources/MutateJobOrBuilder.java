@@ -15,6 +15,7 @@ public interface MutateJobOrBuilder extends
    * </pre>
    *
    * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * @return The resourceName.
    */
   java.lang.String getResourceName();
   /**
@@ -25,6 +26,7 @@ public interface MutateJobOrBuilder extends
    * </pre>
    *
    * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * @return The bytes for resourceName.
    */
   com.google.protobuf.ByteString
       getResourceNameBytes();
@@ -35,6 +37,7 @@ public interface MutateJobOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the id field is set.
    */
   boolean hasId();
   /**
@@ -43,6 +46,7 @@ public interface MutateJobOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The id.
    */
   com.google.protobuf.Int64Value getId();
   /**
@@ -61,6 +65,7 @@ public interface MutateJobOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue next_add_sequence_token = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the nextAddSequenceToken field is set.
    */
   boolean hasNextAddSequenceToken();
   /**
@@ -70,6 +75,7 @@ public interface MutateJobOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue next_add_sequence_token = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The nextAddSequenceToken.
    */
   com.google.protobuf.StringValue getNextAddSequenceToken();
   /**
@@ -88,6 +94,7 @@ public interface MutateJobOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.MutateJob.MutateJobMetadata metadata = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the metadata field is set.
    */
   boolean hasMetadata();
   /**
@@ -96,6 +103,7 @@ public interface MutateJobOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.MutateJob.MutateJobMetadata metadata = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The metadata.
    */
   com.google.ads.googleads.v3.resources.MutateJob.MutateJobMetadata getMetadata();
   /**
@@ -113,6 +121,7 @@ public interface MutateJobOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.MutateJobStatusEnum.MutateJobStatus status = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The enum numeric value on the wire for status.
    */
   int getStatusValue();
   /**
@@ -121,6 +130,7 @@ public interface MutateJobOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.MutateJobStatusEnum.MutateJobStatus status = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The status.
    */
   com.google.ads.googleads.v3.enums.MutateJobStatusEnum.MutateJobStatus getStatus();
 
@@ -131,6 +141,7 @@ public interface MutateJobOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue long_running_operation = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the longRunningOperation field is set.
    */
   boolean hasLongRunningOperation();
   /**
@@ -140,6 +151,7 @@ public interface MutateJobOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue long_running_operation = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The longRunningOperation.
    */
   com.google.protobuf.StringValue getLongRunningOperation();
   /**

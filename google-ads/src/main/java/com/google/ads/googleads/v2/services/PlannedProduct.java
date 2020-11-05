@@ -10,7 +10,7 @@ package com.google.ads.googleads.v2.services;
  *
  * Protobuf type {@code google.ads.googleads.v2.services.PlannedProduct}
  */
-public  final class PlannedProduct extends
+public final class PlannedProduct extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v2.services.PlannedProduct)
     PlannedProductOrBuilder {
@@ -20,6 +20,13 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private PlannedProduct() {
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new PlannedProduct();
   }
 
   @java.lang.Override
@@ -35,7 +42,6 @@ private static final long serialVersionUID = 0L;
     if (extensionRegistry == null) {
       throw new java.lang.NullPointerException();
     }
-    int mutable_bitField0_ = 0;
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
         com.google.protobuf.UnknownFieldSet.newBuilder();
     try {
@@ -113,7 +119,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue plannable_product_code = 1;</code>
+   * @return Whether the plannableProductCode field is set.
    */
+  @java.lang.Override
   public boolean hasPlannableProductCode() {
     return plannableProductCode_ != null;
   }
@@ -124,7 +132,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue plannable_product_code = 1;</code>
+   * @return The plannableProductCode.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getPlannableProductCode() {
     return plannableProductCode_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : plannableProductCode_;
   }
@@ -136,6 +146,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue plannable_product_code = 1;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getPlannableProductCodeOrBuilder() {
     return getPlannableProductCode();
   }
@@ -150,7 +161,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Int64Value budget_micros = 2;</code>
+   * @return Whether the budgetMicros field is set.
    */
+  @java.lang.Override
   public boolean hasBudgetMicros() {
     return budgetMicros_ != null;
   }
@@ -162,7 +175,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Int64Value budget_micros = 2;</code>
+   * @return The budgetMicros.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getBudgetMicros() {
     return budgetMicros_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : budgetMicros_;
   }
@@ -175,6 +190,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int64Value budget_micros = 2;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getBudgetMicrosOrBuilder() {
     return getBudgetMicros();
   }
@@ -538,6 +554,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue plannable_product_code = 1;</code>
+     * @return Whether the plannableProductCode field is set.
      */
     public boolean hasPlannableProductCode() {
       return plannableProductCodeBuilder_ != null || plannableProductCode_ != null;
@@ -549,6 +566,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue plannable_product_code = 1;</code>
+     * @return The plannableProductCode.
      */
     public com.google.protobuf.StringValue getPlannableProductCode() {
       if (plannableProductCodeBuilder_ == null) {
@@ -701,6 +719,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value budget_micros = 2;</code>
+     * @return Whether the budgetMicros field is set.
      */
     public boolean hasBudgetMicros() {
       return budgetMicrosBuilder_ != null || budgetMicros_ != null;
@@ -713,6 +732,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value budget_micros = 2;</code>
+     * @return The budgetMicros.
      */
     public com.google.protobuf.Int64Value getBudgetMicros() {
       if (budgetMicrosBuilder_ == null) {

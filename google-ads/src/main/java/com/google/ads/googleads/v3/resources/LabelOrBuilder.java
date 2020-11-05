@@ -15,6 +15,7 @@ public interface LabelOrBuilder extends
    * </pre>
    *
    * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * @return The resourceName.
    */
   java.lang.String getResourceName();
   /**
@@ -25,6 +26,7 @@ public interface LabelOrBuilder extends
    * </pre>
    *
    * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * @return The bytes for resourceName.
    */
   com.google.protobuf.ByteString
       getResourceNameBytes();
@@ -35,6 +37,7 @@ public interface LabelOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the id field is set.
    */
   boolean hasId();
   /**
@@ -43,6 +46,7 @@ public interface LabelOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The id.
    */
   com.google.protobuf.Int64Value getId();
   /**
@@ -62,6 +66,7 @@ public interface LabelOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue name = 3;</code>
+   * @return Whether the name field is set.
    */
   boolean hasName();
   /**
@@ -72,6 +77,7 @@ public interface LabelOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue name = 3;</code>
+   * @return The name.
    */
   com.google.protobuf.StringValue getName();
   /**
@@ -91,6 +97,7 @@ public interface LabelOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.LabelStatusEnum.LabelStatus status = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The enum numeric value on the wire for status.
    */
   int getStatusValue();
   /**
@@ -99,6 +106,7 @@ public interface LabelOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.LabelStatusEnum.LabelStatus status = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The status.
    */
   com.google.ads.googleads.v3.enums.LabelStatusEnum.LabelStatus getStatus();
 
@@ -108,6 +116,7 @@ public interface LabelOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.TextLabel text_label = 5;</code>
+   * @return Whether the textLabel field is set.
    */
   boolean hasTextLabel();
   /**
@@ -116,6 +125,7 @@ public interface LabelOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.TextLabel text_label = 5;</code>
+   * @return The textLabel.
    */
   com.google.ads.googleads.v3.common.TextLabel getTextLabel();
   /**

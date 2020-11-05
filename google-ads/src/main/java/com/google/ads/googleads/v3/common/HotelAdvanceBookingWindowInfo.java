@@ -10,7 +10,7 @@ package com.google.ads.googleads.v3.common;
  *
  * Protobuf type {@code google.ads.googleads.v3.common.HotelAdvanceBookingWindowInfo}
  */
-public  final class HotelAdvanceBookingWindowInfo extends
+public final class HotelAdvanceBookingWindowInfo extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v3.common.HotelAdvanceBookingWindowInfo)
     HotelAdvanceBookingWindowInfoOrBuilder {
@@ -20,6 +20,13 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private HotelAdvanceBookingWindowInfo() {
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new HotelAdvanceBookingWindowInfo();
   }
 
   @java.lang.Override
@@ -35,7 +42,6 @@ private static final long serialVersionUID = 0L;
     if (extensionRegistry == null) {
       throw new java.lang.NullPointerException();
     }
-    int mutable_bitField0_ = 0;
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
         com.google.protobuf.UnknownFieldSet.newBuilder();
     try {
@@ -112,7 +118,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Int64Value min_days = 1;</code>
+   * @return Whether the minDays field is set.
    */
+  @java.lang.Override
   public boolean hasMinDays() {
     return minDays_ != null;
   }
@@ -122,7 +130,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Int64Value min_days = 1;</code>
+   * @return The minDays.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getMinDays() {
     return minDays_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : minDays_;
   }
@@ -133,6 +143,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int64Value min_days = 1;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getMinDaysOrBuilder() {
     return getMinDays();
   }
@@ -145,7 +156,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Int64Value max_days = 2;</code>
+   * @return Whether the maxDays field is set.
    */
+  @java.lang.Override
   public boolean hasMaxDays() {
     return maxDays_ != null;
   }
@@ -155,7 +168,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Int64Value max_days = 2;</code>
+   * @return The maxDays.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getMaxDays() {
     return maxDays_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxDays_;
   }
@@ -166,6 +181,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int64Value max_days = 2;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getMaxDaysOrBuilder() {
     return getMaxDays();
   }
@@ -528,6 +544,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value min_days = 1;</code>
+     * @return Whether the minDays field is set.
      */
     public boolean hasMinDays() {
       return minDaysBuilder_ != null || minDays_ != null;
@@ -538,6 +555,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value min_days = 1;</code>
+     * @return The minDays.
      */
     public com.google.protobuf.Int64Value getMinDays() {
       if (minDaysBuilder_ == null) {
@@ -681,6 +699,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_days = 2;</code>
+     * @return Whether the maxDays field is set.
      */
     public boolean hasMaxDays() {
       return maxDaysBuilder_ != null || maxDays_ != null;
@@ -691,6 +710,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_days = 2;</code>
+     * @return The maxDays.
      */
     public com.google.protobuf.Int64Value getMaxDays() {
       if (maxDaysBuilder_ == null) {

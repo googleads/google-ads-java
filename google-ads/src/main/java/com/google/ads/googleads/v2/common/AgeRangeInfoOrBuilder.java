@@ -13,6 +13,7 @@ public interface AgeRangeInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.enums.AgeRangeTypeEnum.AgeRangeType type = 1;</code>
+   * @return The enum numeric value on the wire for type.
    */
   int getTypeValue();
   /**
@@ -21,6 +22,7 @@ public interface AgeRangeInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.enums.AgeRangeTypeEnum.AgeRangeType type = 1;</code>
+   * @return The type.
    */
   com.google.ads.googleads.v2.enums.AgeRangeTypeEnum.AgeRangeType getType();
 }

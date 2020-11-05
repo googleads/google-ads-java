@@ -15,6 +15,7 @@ public interface UserLocationViewOrBuilder extends
    * </pre>
    *
    * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The resourceName.
    */
   java.lang.String getResourceName();
   /**
@@ -25,6 +26,7 @@ public interface UserLocationViewOrBuilder extends
    * </pre>
    *
    * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The bytes for resourceName.
    */
   com.google.protobuf.ByteString
       getResourceNameBytes();
@@ -35,6 +37,7 @@ public interface UserLocationViewOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value country_criterion_id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the countryCriterionId field is set.
    */
   boolean hasCountryCriterionId();
   /**
@@ -43,6 +46,7 @@ public interface UserLocationViewOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value country_criterion_id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The countryCriterionId.
    */
   com.google.protobuf.Int64Value getCountryCriterionId();
   /**
@@ -60,6 +64,7 @@ public interface UserLocationViewOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.BoolValue targeting_location = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the targetingLocation field is set.
    */
   boolean hasTargetingLocation();
   /**
@@ -68,6 +73,7 @@ public interface UserLocationViewOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.BoolValue targeting_location = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The targetingLocation.
    */
   com.google.protobuf.BoolValue getTargetingLocation();
   /**

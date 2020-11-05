@@ -12,7 +12,7 @@ package com.google.ads.googleads.v3.common;
  *
  * Protobuf type {@code google.ads.googleads.v3.common.ExplorerAutoOptimizerSetting}
  */
-public  final class ExplorerAutoOptimizerSetting extends
+public final class ExplorerAutoOptimizerSetting extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v3.common.ExplorerAutoOptimizerSetting)
     ExplorerAutoOptimizerSettingOrBuilder {
@@ -22,6 +22,13 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private ExplorerAutoOptimizerSetting() {
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new ExplorerAutoOptimizerSetting();
   }
 
   @java.lang.Override
@@ -37,7 +44,6 @@ private static final long serialVersionUID = 0L;
     if (extensionRegistry == null) {
       throw new java.lang.NullPointerException();
     }
-    int mutable_bitField0_ = 0;
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
         com.google.protobuf.UnknownFieldSet.newBuilder();
     try {
@@ -101,7 +107,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.BoolValue opt_in = 1;</code>
+   * @return Whether the optIn field is set.
    */
+  @java.lang.Override
   public boolean hasOptIn() {
     return optIn_ != null;
   }
@@ -111,7 +119,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.BoolValue opt_in = 1;</code>
+   * @return The optIn.
    */
+  @java.lang.Override
   public com.google.protobuf.BoolValue getOptIn() {
     return optIn_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : optIn_;
   }
@@ -122,6 +132,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.BoolValue opt_in = 1;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.BoolValueOrBuilder getOptInOrBuilder() {
     return getOptIn();
   }
@@ -456,6 +467,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.BoolValue opt_in = 1;</code>
+     * @return Whether the optIn field is set.
      */
     public boolean hasOptIn() {
       return optInBuilder_ != null || optIn_ != null;
@@ -466,6 +478,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.BoolValue opt_in = 1;</code>
+     * @return The optIn.
      */
     public com.google.protobuf.BoolValue getOptIn() {
       if (optInBuilder_ == null) {

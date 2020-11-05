@@ -14,6 +14,7 @@ public interface CallConversionResultOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue caller_id = 1;</code>
+   * @return Whether the callerId field is set.
    */
   boolean hasCallerId();
   /**
@@ -23,6 +24,7 @@ public interface CallConversionResultOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue caller_id = 1;</code>
+   * @return The callerId.
    */
   com.google.protobuf.StringValue getCallerId();
   /**
@@ -42,6 +44,7 @@ public interface CallConversionResultOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue call_start_date_time = 2;</code>
+   * @return Whether the callStartDateTime field is set.
    */
   boolean hasCallStartDateTime();
   /**
@@ -51,6 +54,7 @@ public interface CallConversionResultOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue call_start_date_time = 2;</code>
+   * @return The callStartDateTime.
    */
   com.google.protobuf.StringValue getCallStartDateTime();
   /**
@@ -69,6 +73,7 @@ public interface CallConversionResultOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue conversion_action = 3;</code>
+   * @return Whether the conversionAction field is set.
    */
   boolean hasConversionAction();
   /**
@@ -77,6 +82,7 @@ public interface CallConversionResultOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue conversion_action = 3;</code>
+   * @return The conversionAction.
    */
   com.google.protobuf.StringValue getConversionAction();
   /**
@@ -95,6 +101,7 @@ public interface CallConversionResultOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue conversion_date_time = 4;</code>
+   * @return Whether the conversionDateTime field is set.
    */
   boolean hasConversionDateTime();
   /**
@@ -104,6 +111,7 @@ public interface CallConversionResultOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue conversion_date_time = 4;</code>
+   * @return The conversionDateTime.
    */
   com.google.protobuf.StringValue getConversionDateTime();
   /**

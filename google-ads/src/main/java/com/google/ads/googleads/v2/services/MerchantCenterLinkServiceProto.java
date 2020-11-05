@@ -62,69 +62,67 @@ public final class MerchantCenterLinkServiceProto {
       "ant_center_link_service.proto\022 google.ad" +
       "s.googleads.v2.services\032<google/ads/goog" +
       "leads/v2/resources/merchant_center_link." +
-      "proto\032\034google/api/annotations.proto\032 goo" +
-      "gle/protobuf/field_mask.proto\032\027google/ap" +
-      "i/client.proto\"5\n\036ListMerchantCenterLink" +
-      "sRequest\022\023\n\013customer_id\030\001 \001(\t\"w\n\037ListMer" +
-      "chantCenterLinksResponse\022T\n\025merchant_cen" +
-      "ter_links\030\001 \003(\01325.google.ads.googleads.v" +
-      "2.resources.MerchantCenterLink\"5\n\034GetMer" +
-      "chantCenterLinkRequest\022\025\n\rresource_name\030" +
-      "\001 \001(\t\"\210\001\n\037MutateMerchantCenterLinkReques" +
-      "t\022\023\n\013customer_id\030\001 \001(\t\022P\n\toperation\030\002 \001(" +
-      "\0132=.google.ads.googleads.v2.services.Mer" +
-      "chantCenterLinkOperation\"\266\001\n\033MerchantCen" +
-      "terLinkOperation\022/\n\013update_mask\030\003 \001(\0132\032." +
-      "google.protobuf.FieldMask\022G\n\006update\030\001 \001(" +
-      "\01325.google.ads.googleads.v2.resources.Me" +
-      "rchantCenterLinkH\000\022\020\n\006remove\030\002 \001(\tH\000B\013\n\t" +
-      "operation\"t\n MutateMerchantCenterLinkRes" +
-      "ponse\022P\n\006result\030\002 \001(\0132@.google.ads.googl" +
-      "eads.v2.services.MutateMerchantCenterLin" +
-      "kResult\"7\n\036MutateMerchantCenterLinkResul" +
-      "t\022\025\n\rresource_name\030\001 \001(\t2\315\005\n\031MerchantCen" +
-      "terLinkService\022\331\001\n\027ListMerchantCenterLin" +
-      "ks\022@.google.ads.googleads.v2.services.Li" +
-      "stMerchantCenterLinksRequest\032A.google.ad" +
-      "s.googleads.v2.services.ListMerchantCent" +
-      "erLinksResponse\"9\202\323\344\223\0023\0221/v2/customers/{" +
-      "customer_id=*}/merchantCenterLinks\022\315\001\n\025G" +
-      "etMerchantCenterLink\022>.google.ads.google" +
-      "ads.v2.services.GetMerchantCenterLinkReq" +
-      "uest\0325.google.ads.googleads.v2.resources" +
-      ".MerchantCenterLink\"=\202\323\344\223\0027\0225/v2/{resour" +
-      "ce_name=customers/*/merchantCenterLinks/" +
-      "*}\022\346\001\n\030MutateMerchantCenterLink\022A.google" +
-      ".ads.googleads.v2.services.MutateMerchan" +
-      "tCenterLinkRequest\032B.google.ads.googlead" +
-      "s.v2.services.MutateMerchantCenterLinkRe" +
-      "sponse\"C\202\323\344\223\002=\"8/v2/customers/{customer_" +
-      "id=*}/merchantCenterLinks:mutate:\001*\032\033\312A\030" +
-      "googleads.googleapis.comB\205\002\n$com.google." +
-      "ads.googleads.v2.servicesB\036MerchantCente" +
-      "rLinkServiceProtoP\001ZHgoogle.golang.org/g" +
-      "enproto/googleapis/ads/googleads/v2/serv" +
-      "ices;services\242\002\003GAA\252\002 Google.Ads.GoogleA" +
-      "ds.V2.Services\312\002 Google\\Ads\\GoogleAds\\V2" +
-      "\\Services\352\002$Google::Ads::GoogleAds::V2::" +
-      "Servicesb\006proto3"
+      "proto\032\034google/api/annotations.proto\032\027goo" +
+      "gle/api/client.proto\032\037google/api/field_b" +
+      "ehavior.proto\032\031google/api/resource.proto" +
+      "\032 google/protobuf/field_mask.proto\":\n\036Li" +
+      "stMerchantCenterLinksRequest\022\030\n\013customer" +
+      "_id\030\001 \001(\tB\003\340A\002\"w\n\037ListMerchantCenterLink" +
+      "sResponse\022T\n\025merchant_center_links\030\001 \003(\013" +
+      "25.google.ads.googleads.v2.resources.Mer" +
+      "chantCenterLink\"j\n\034GetMerchantCenterLink" +
+      "Request\022J\n\rresource_name\030\001 \001(\tB3\340A\002\372A-\n+" +
+      "googleads.googleapis.com/MerchantCenterL" +
+      "ink\"\222\001\n\037MutateMerchantCenterLinkRequest\022" +
+      "\030\n\013customer_id\030\001 \001(\tB\003\340A\002\022U\n\toperation\030\002" +
+      " \001(\0132=.google.ads.googleads.v2.services." +
+      "MerchantCenterLinkOperationB\003\340A\002\"\266\001\n\033Mer" +
+      "chantCenterLinkOperation\022/\n\013update_mask\030" +
+      "\003 \001(\0132\032.google.protobuf.FieldMask\022G\n\006upd" +
+      "ate\030\001 \001(\01325.google.ads.googleads.v2.reso" +
+      "urces.MerchantCenterLinkH\000\022\020\n\006remove\030\002 \001" +
+      "(\tH\000B\013\n\toperation\"t\n MutateMerchantCente" +
+      "rLinkResponse\022P\n\006result\030\002 \001(\0132@.google.a" +
+      "ds.googleads.v2.services.MutateMerchantC" +
+      "enterLinkResult\"7\n\036MutateMerchantCenterL" +
+      "inkResult\022\025\n\rresource_name\030\001 \001(\t2\203\006\n\031Mer" +
+      "chantCenterLinkService\022\347\001\n\027ListMerchantC" +
+      "enterLinks\022@.google.ads.googleads.v2.ser" +
+      "vices.ListMerchantCenterLinksRequest\032A.g" +
+      "oogle.ads.googleads.v2.services.ListMerc" +
+      "hantCenterLinksResponse\"G\202\323\344\223\0023\0221/v2/cus" +
+      "tomers/{customer_id=*}/merchantCenterLin" +
+      "ks\332A\013customer_id\022\335\001\n\025GetMerchantCenterLi" +
+      "nk\022>.google.ads.googleads.v2.services.Ge" +
+      "tMerchantCenterLinkRequest\0325.google.ads." +
+      "googleads.v2.resources.MerchantCenterLin" +
+      "k\"M\202\323\344\223\0027\0225/v2/{resource_name=customers/" +
+      "*/merchantCenterLinks/*}\332A\rresource_name" +
+      "\022\376\001\n\030MutateMerchantCenterLink\022A.google.a" +
+      "ds.googleads.v2.services.MutateMerchantC" +
+      "enterLinkRequest\032B.google.ads.googleads." +
+      "v2.services.MutateMerchantCenterLinkResp" +
+      "onse\"[\202\323\344\223\002=\"8/v2/customers/{customer_id" +
+      "=*}/merchantCenterLinks:mutate:\001*\332A\025cust" +
+      "omer_id,operation\032\033\312A\030googleads.googleap" +
+      "is.comB\205\002\n$com.google.ads.googleads.v2.s" +
+      "ervicesB\036MerchantCenterLinkServiceProtoP" +
+      "\001ZHgoogle.golang.org/genproto/googleapis" +
+      "/ads/googleads/v2/services;services\242\002\003GA" +
+      "A\252\002 Google.Ads.GoogleAds.V2.Services\312\002 G" +
+      "oogle\\Ads\\GoogleAds\\V2\\Services\352\002$Google" +
+      "::Ads::GoogleAds::V2::Servicesb\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.ads.googleads.v2.resources.MerchantCenterLinkProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
-          com.google.protobuf.FieldMaskProto.getDescriptor(),
           com.google.api.ClientProto.getDescriptor(),
-        }, assigner);
+          com.google.api.FieldBehaviorProto.getDescriptor(),
+          com.google.api.ResourceProto.getDescriptor(),
+          com.google.protobuf.FieldMaskProto.getDescriptor(),
+        });
     internal_static_google_ads_googleads_v2_services_ListMerchantCenterLinksRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_google_ads_googleads_v2_services_ListMerchantCenterLinksRequest_fieldAccessorTable = new
@@ -170,13 +168,18 @@ public final class MerchantCenterLinkServiceProto {
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.ClientProto.defaultHost);
+    registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);
     registry.add(com.google.api.AnnotationsProto.http);
+    registry.add(com.google.api.ClientProto.methodSignature);
+    registry.add(com.google.api.ResourceProto.resourceReference);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.ads.googleads.v2.resources.MerchantCenterLinkProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
-    com.google.protobuf.FieldMaskProto.getDescriptor();
     com.google.api.ClientProto.getDescriptor();
+    com.google.api.FieldBehaviorProto.getDescriptor();
+    com.google.api.ResourceProto.getDescriptor();
+    com.google.protobuf.FieldMaskProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

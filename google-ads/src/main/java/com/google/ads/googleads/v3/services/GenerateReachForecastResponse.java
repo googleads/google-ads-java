@@ -10,7 +10,7 @@ package com.google.ads.googleads.v3.services;
  *
  * Protobuf type {@code google.ads.googleads.v3.services.GenerateReachForecastResponse}
  */
-public  final class GenerateReachForecastResponse extends
+public final class GenerateReachForecastResponse extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v3.services.GenerateReachForecastResponse)
     GenerateReachForecastResponseOrBuilder {
@@ -20,6 +20,13 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private GenerateReachForecastResponse() {
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new GenerateReachForecastResponse();
   }
 
   @java.lang.Override
@@ -35,7 +42,6 @@ private static final long serialVersionUID = 0L;
     if (extensionRegistry == null) {
       throw new java.lang.NullPointerException();
     }
-    int mutable_bitField0_ = 0;
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
         com.google.protobuf.UnknownFieldSet.newBuilder();
     try {
@@ -112,7 +118,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.services.OnTargetAudienceMetrics on_target_audience_metrics = 1;</code>
+   * @return Whether the onTargetAudienceMetrics field is set.
    */
+  @java.lang.Override
   public boolean hasOnTargetAudienceMetrics() {
     return onTargetAudienceMetrics_ != null;
   }
@@ -122,7 +130,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.services.OnTargetAudienceMetrics on_target_audience_metrics = 1;</code>
+   * @return The onTargetAudienceMetrics.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.services.OnTargetAudienceMetrics getOnTargetAudienceMetrics() {
     return onTargetAudienceMetrics_ == null ? com.google.ads.googleads.v3.services.OnTargetAudienceMetrics.getDefaultInstance() : onTargetAudienceMetrics_;
   }
@@ -133,6 +143,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v3.services.OnTargetAudienceMetrics on_target_audience_metrics = 1;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.services.OnTargetAudienceMetricsOrBuilder getOnTargetAudienceMetricsOrBuilder() {
     return getOnTargetAudienceMetrics();
   }
@@ -145,7 +156,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.services.ReachCurve reach_curve = 2;</code>
+   * @return Whether the reachCurve field is set.
    */
+  @java.lang.Override
   public boolean hasReachCurve() {
     return reachCurve_ != null;
   }
@@ -155,7 +168,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.services.ReachCurve reach_curve = 2;</code>
+   * @return The reachCurve.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.services.ReachCurve getReachCurve() {
     return reachCurve_ == null ? com.google.ads.googleads.v3.services.ReachCurve.getDefaultInstance() : reachCurve_;
   }
@@ -166,6 +181,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v3.services.ReachCurve reach_curve = 2;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.services.ReachCurveOrBuilder getReachCurveOrBuilder() {
     return getReachCurve();
   }
@@ -528,6 +544,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.services.OnTargetAudienceMetrics on_target_audience_metrics = 1;</code>
+     * @return Whether the onTargetAudienceMetrics field is set.
      */
     public boolean hasOnTargetAudienceMetrics() {
       return onTargetAudienceMetricsBuilder_ != null || onTargetAudienceMetrics_ != null;
@@ -538,6 +555,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.services.OnTargetAudienceMetrics on_target_audience_metrics = 1;</code>
+     * @return The onTargetAudienceMetrics.
      */
     public com.google.ads.googleads.v3.services.OnTargetAudienceMetrics getOnTargetAudienceMetrics() {
       if (onTargetAudienceMetricsBuilder_ == null) {
@@ -681,6 +699,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.services.ReachCurve reach_curve = 2;</code>
+     * @return Whether the reachCurve field is set.
      */
     public boolean hasReachCurve() {
       return reachCurveBuilder_ != null || reachCurve_ != null;
@@ -691,6 +710,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.services.ReachCurve reach_curve = 2;</code>
+     * @return The reachCurve.
      */
     public com.google.ads.googleads.v3.services.ReachCurve getReachCurve() {
       if (reachCurveBuilder_ == null) {

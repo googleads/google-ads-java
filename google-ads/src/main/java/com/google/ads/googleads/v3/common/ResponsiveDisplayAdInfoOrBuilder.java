@@ -288,6 +288,7 @@ public interface ResponsiveDisplayAdInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.AdTextAsset long_headline = 6;</code>
+   * @return Whether the longHeadline field is set.
    */
   boolean hasLongHeadline();
   /**
@@ -296,6 +297,7 @@ public interface ResponsiveDisplayAdInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.AdTextAsset long_headline = 6;</code>
+   * @return The longHeadline.
    */
   com.google.ads.googleads.v3.common.AdTextAsset getLongHeadline();
   /**
@@ -406,6 +408,7 @@ public interface ResponsiveDisplayAdInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue business_name = 9;</code>
+   * @return Whether the businessName field is set.
    */
   boolean hasBusinessName();
   /**
@@ -414,6 +417,7 @@ public interface ResponsiveDisplayAdInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue business_name = 9;</code>
+   * @return The businessName.
    */
   com.google.protobuf.StringValue getBusinessName();
   /**
@@ -433,6 +437,7 @@ public interface ResponsiveDisplayAdInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue main_color = 10;</code>
+   * @return Whether the mainColor field is set.
    */
   boolean hasMainColor();
   /**
@@ -443,6 +448,7 @@ public interface ResponsiveDisplayAdInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue main_color = 10;</code>
+   * @return The mainColor.
    */
   com.google.protobuf.StringValue getMainColor();
   /**
@@ -464,6 +470,7 @@ public interface ResponsiveDisplayAdInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue accent_color = 11;</code>
+   * @return Whether the accentColor field is set.
    */
   boolean hasAccentColor();
   /**
@@ -474,6 +481,7 @@ public interface ResponsiveDisplayAdInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue accent_color = 11;</code>
+   * @return The accentColor.
    */
   com.google.protobuf.StringValue getAccentColor();
   /**
@@ -497,6 +505,7 @@ public interface ResponsiveDisplayAdInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.BoolValue allow_flexible_color = 12;</code>
+   * @return Whether the allowFlexibleColor field is set.
    */
   boolean hasAllowFlexibleColor();
   /**
@@ -509,6 +518,7 @@ public interface ResponsiveDisplayAdInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.BoolValue allow_flexible_color = 12;</code>
+   * @return The allowFlexibleColor.
    */
   com.google.protobuf.BoolValue getAllowFlexibleColor();
   /**
@@ -530,6 +540,7 @@ public interface ResponsiveDisplayAdInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue call_to_action_text = 13;</code>
+   * @return Whether the callToActionText field is set.
    */
   boolean hasCallToActionText();
   /**
@@ -538,6 +549,7 @@ public interface ResponsiveDisplayAdInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue call_to_action_text = 13;</code>
+   * @return The callToActionText.
    */
   com.google.protobuf.StringValue getCallToActionText();
   /**
@@ -555,6 +567,7 @@ public interface ResponsiveDisplayAdInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue price_prefix = 14;</code>
+   * @return Whether the pricePrefix field is set.
    */
   boolean hasPricePrefix();
   /**
@@ -563,6 +576,7 @@ public interface ResponsiveDisplayAdInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue price_prefix = 14;</code>
+   * @return The pricePrefix.
    */
   com.google.protobuf.StringValue getPricePrefix();
   /**
@@ -581,6 +595,7 @@ public interface ResponsiveDisplayAdInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue promo_text = 15;</code>
+   * @return Whether the promoText field is set.
    */
   boolean hasPromoText();
   /**
@@ -590,6 +605,7 @@ public interface ResponsiveDisplayAdInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue promo_text = 15;</code>
+   * @return The promoText.
    */
   com.google.protobuf.StringValue getPromoText();
   /**
@@ -608,6 +624,7 @@ public interface ResponsiveDisplayAdInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.DisplayAdFormatSettingEnum.DisplayAdFormatSetting format_setting = 16;</code>
+   * @return The enum numeric value on the wire for formatSetting.
    */
   int getFormatSettingValue();
   /**
@@ -616,6 +633,7 @@ public interface ResponsiveDisplayAdInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.DisplayAdFormatSettingEnum.DisplayAdFormatSetting format_setting = 16;</code>
+   * @return The formatSetting.
    */
   com.google.ads.googleads.v3.enums.DisplayAdFormatSettingEnum.DisplayAdFormatSetting getFormatSetting();
 }

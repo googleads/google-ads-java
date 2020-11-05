@@ -11,7 +11,7 @@ package com.google.ads.googleads.v3.services;
  *
  * Protobuf type {@code google.ads.googleads.v3.services.PlannableLocation}
  */
-public  final class PlannableLocation extends
+public final class PlannableLocation extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v3.services.PlannableLocation)
     PlannableLocationOrBuilder {
@@ -21,6 +21,13 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private PlannableLocation() {
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new PlannableLocation();
   }
 
   @java.lang.Override
@@ -36,7 +43,6 @@ private static final long serialVersionUID = 0L;
     if (extensionRegistry == null) {
       throw new java.lang.NullPointerException();
     }
-    int mutable_bitField0_ = 0;
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
         com.google.protobuf.UnknownFieldSet.newBuilder();
     try {
@@ -126,7 +132,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue id = 1;</code>
+   * @return Whether the id field is set.
    */
+  @java.lang.Override
   public boolean hasId() {
     return id_ != null;
   }
@@ -136,7 +144,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue id = 1;</code>
+   * @return The id.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getId() {
     return id_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : id_;
   }
@@ -147,6 +157,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue id = 1;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getIdOrBuilder() {
     return getId();
   }
@@ -159,7 +170,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue name = 2;</code>
+   * @return Whether the name field is set.
    */
+  @java.lang.Override
   public boolean hasName() {
     return name_ != null;
   }
@@ -169,7 +182,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue name = 2;</code>
+   * @return The name.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getName() {
     return name_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : name_;
   }
@@ -180,6 +195,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue name = 2;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getNameOrBuilder() {
     return getName();
   }
@@ -195,7 +211,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Int64Value parent_country_id = 3;</code>
+   * @return Whether the parentCountryId field is set.
    */
+  @java.lang.Override
   public boolean hasParentCountryId() {
     return parentCountryId_ != null;
   }
@@ -208,7 +226,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Int64Value parent_country_id = 3;</code>
+   * @return The parentCountryId.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getParentCountryId() {
     return parentCountryId_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : parentCountryId_;
   }
@@ -222,6 +242,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int64Value parent_country_id = 3;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getParentCountryIdOrBuilder() {
     return getParentCountryId();
   }
@@ -615,6 +636,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue id = 1;</code>
+     * @return Whether the id field is set.
      */
     public boolean hasId() {
       return idBuilder_ != null || id_ != null;
@@ -625,6 +647,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue id = 1;</code>
+     * @return The id.
      */
     public com.google.protobuf.StringValue getId() {
       if (idBuilder_ == null) {
@@ -768,6 +791,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue name = 2;</code>
+     * @return Whether the name field is set.
      */
     public boolean hasName() {
       return nameBuilder_ != null || name_ != null;
@@ -778,6 +802,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue name = 2;</code>
+     * @return The name.
      */
     public com.google.protobuf.StringValue getName() {
       if (nameBuilder_ == null) {
@@ -924,6 +949,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value parent_country_id = 3;</code>
+     * @return Whether the parentCountryId field is set.
      */
     public boolean hasParentCountryId() {
       return parentCountryIdBuilder_ != null || parentCountryId_ != null;
@@ -937,6 +963,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value parent_country_id = 3;</code>
+     * @return The parentCountryId.
      */
     public com.google.protobuf.Int64Value getParentCountryId() {
       if (parentCountryIdBuilder_ == null) {

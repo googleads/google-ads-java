@@ -9,73 +9,79 @@ public interface AdGroupFeedOrBuilder extends
 
   /**
    * <pre>
-   * The resource name of the ad group feed.
+   * Immutable. The resource name of the ad group feed.
    * Ad group feed resource names have the form:
    * `customers/{customer_id}/adGroupFeeds/{ad_group_id}~{feed_id}
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * @return The resourceName.
    */
   java.lang.String getResourceName();
   /**
    * <pre>
-   * The resource name of the ad group feed.
+   * Immutable. The resource name of the ad group feed.
    * Ad group feed resource names have the form:
    * `customers/{customer_id}/adGroupFeeds/{ad_group_id}~{feed_id}
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * @return The bytes for resourceName.
    */
   com.google.protobuf.ByteString
       getResourceNameBytes();
 
   /**
    * <pre>
-   * The feed being linked to the ad group.
+   * Immutable. The feed being linked to the ad group.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue feed = 2;</code>
+   * <code>.google.protobuf.StringValue feed = 2 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * @return Whether the feed field is set.
    */
   boolean hasFeed();
   /**
    * <pre>
-   * The feed being linked to the ad group.
+   * Immutable. The feed being linked to the ad group.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue feed = 2;</code>
+   * <code>.google.protobuf.StringValue feed = 2 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * @return The feed.
    */
   com.google.protobuf.StringValue getFeed();
   /**
    * <pre>
-   * The feed being linked to the ad group.
+   * Immutable. The feed being linked to the ad group.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue feed = 2;</code>
+   * <code>.google.protobuf.StringValue feed = 2 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    */
   com.google.protobuf.StringValueOrBuilder getFeedOrBuilder();
 
   /**
    * <pre>
-   * The ad group being linked to the feed.
+   * Immutable. The ad group being linked to the feed.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue ad_group = 3;</code>
+   * <code>.google.protobuf.StringValue ad_group = 3 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * @return Whether the adGroup field is set.
    */
   boolean hasAdGroup();
   /**
    * <pre>
-   * The ad group being linked to the feed.
+   * Immutable. The ad group being linked to the feed.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue ad_group = 3;</code>
+   * <code>.google.protobuf.StringValue ad_group = 3 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * @return The adGroup.
    */
   com.google.protobuf.StringValue getAdGroup();
   /**
    * <pre>
-   * The ad group being linked to the feed.
+   * Immutable. The ad group being linked to the feed.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue ad_group = 3;</code>
+   * <code>.google.protobuf.StringValue ad_group = 3 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    */
   com.google.protobuf.StringValueOrBuilder getAdGroupOrBuilder();
 
@@ -86,6 +92,7 @@ public interface AdGroupFeedOrBuilder extends
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v2.enums.PlaceholderTypeEnum.PlaceholderType placeholder_types = 4;</code>
+   * @return A list containing the placeholderTypes.
    */
   java.util.List<com.google.ads.googleads.v2.enums.PlaceholderTypeEnum.PlaceholderType> getPlaceholderTypesList();
   /**
@@ -95,6 +102,7 @@ public interface AdGroupFeedOrBuilder extends
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v2.enums.PlaceholderTypeEnum.PlaceholderType placeholder_types = 4;</code>
+   * @return The count of placeholderTypes.
    */
   int getPlaceholderTypesCount();
   /**
@@ -104,6 +112,8 @@ public interface AdGroupFeedOrBuilder extends
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v2.enums.PlaceholderTypeEnum.PlaceholderType placeholder_types = 4;</code>
+   * @param index The index of the element to return.
+   * @return The placeholderTypes at the given index.
    */
   com.google.ads.googleads.v2.enums.PlaceholderTypeEnum.PlaceholderType getPlaceholderTypes(int index);
   /**
@@ -113,6 +123,7 @@ public interface AdGroupFeedOrBuilder extends
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v2.enums.PlaceholderTypeEnum.PlaceholderType placeholder_types = 4;</code>
+   * @return A list containing the enum numeric values on the wire for placeholderTypes.
    */
   java.util.List<java.lang.Integer>
   getPlaceholderTypesValueList();
@@ -123,6 +134,8 @@ public interface AdGroupFeedOrBuilder extends
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v2.enums.PlaceholderTypeEnum.PlaceholderType placeholder_types = 4;</code>
+   * @param index The index of the value to return.
+   * @return The enum numeric value on the wire of placeholderTypes at the given index.
    */
   int getPlaceholderTypesValue(int index);
 
@@ -134,6 +147,7 @@ public interface AdGroupFeedOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.common.MatchingFunction matching_function = 5;</code>
+   * @return Whether the matchingFunction field is set.
    */
   boolean hasMatchingFunction();
   /**
@@ -144,6 +158,7 @@ public interface AdGroupFeedOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.common.MatchingFunction matching_function = 5;</code>
+   * @return The matchingFunction.
    */
   com.google.ads.googleads.v2.common.MatchingFunction getMatchingFunction();
   /**
@@ -159,20 +174,22 @@ public interface AdGroupFeedOrBuilder extends
 
   /**
    * <pre>
-   * Status of the ad group feed.
+   * Output only. Status of the ad group feed.
    * This field is read-only.
    * </pre>
    *
-   * <code>.google.ads.googleads.v2.enums.FeedLinkStatusEnum.FeedLinkStatus status = 6;</code>
+   * <code>.google.ads.googleads.v2.enums.FeedLinkStatusEnum.FeedLinkStatus status = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The enum numeric value on the wire for status.
    */
   int getStatusValue();
   /**
    * <pre>
-   * Status of the ad group feed.
+   * Output only. Status of the ad group feed.
    * This field is read-only.
    * </pre>
    *
-   * <code>.google.ads.googleads.v2.enums.FeedLinkStatusEnum.FeedLinkStatus status = 6;</code>
+   * <code>.google.ads.googleads.v2.enums.FeedLinkStatusEnum.FeedLinkStatus status = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The status.
    */
   com.google.ads.googleads.v2.enums.FeedLinkStatusEnum.FeedLinkStatus getStatus();
 }

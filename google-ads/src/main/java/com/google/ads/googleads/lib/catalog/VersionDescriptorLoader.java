@@ -14,7 +14,7 @@
 
 package com.google.ads.googleads.lib.catalog;
 
-import com.google.ads.googleads.lib.catalog.annotation.VersionDescriptor;
+import com.google.ads.googleads.annotations.api.VersionDescriptor;
 import com.google.common.collect.ImmutableSet;
 import java.lang.reflect.Method;
 
@@ -60,7 +60,7 @@ class VersionDescriptorLoader {
   }
 
   private VersionDescriptorLoader(Class<?> interfaceSpec)
-      throws IllegalAccessException, InstantiationException {
+    throws IllegalAccessException, InstantiationException {
     this.versions = loadAvailableVersions(interfaceSpec);
   }
 
@@ -70,13 +70,13 @@ class VersionDescriptorLoader {
 
   /** Loads the available GoogleAdsAllVersions for the library. */
   private static ImmutableSet<Version> loadAvailableVersions(Class<?> interfaceSpec)
-      throws InstantiationException, IllegalAccessException {
+    throws InstantiationException, IllegalAccessException {
     ImmutableSet.Builder<Version> builder = ImmutableSet.builder();
     for (Method method : interfaceSpec.getMethods()) {
       Class<?> descriptorClass = method.getReturnType();
       if (descriptorClass.isAnnotationPresent(VersionDescriptor.class)) {
         VersionDescriptor descriptor =
-            method.getReturnType().getAnnotation(VersionDescriptor.class);
+          method.getReturnType().getAnnotation(VersionDescriptor.class);
         builder.add(new Version(descriptor, descriptorClass));
       }
     }

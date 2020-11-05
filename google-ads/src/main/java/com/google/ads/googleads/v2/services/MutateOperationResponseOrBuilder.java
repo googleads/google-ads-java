@@ -13,6 +13,7 @@ public interface MutateOperationResponseOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.services.MutateAdGroupAdLabelResult ad_group_ad_label_result = 17;</code>
+   * @return Whether the adGroupAdLabelResult field is set.
    */
   boolean hasAdGroupAdLabelResult();
   /**
@@ -21,6 +22,7 @@ public interface MutateOperationResponseOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.services.MutateAdGroupAdLabelResult ad_group_ad_label_result = 17;</code>
+   * @return The adGroupAdLabelResult.
    */
   com.google.ads.googleads.v2.services.MutateAdGroupAdLabelResult getAdGroupAdLabelResult();
   /**
@@ -38,6 +40,7 @@ public interface MutateOperationResponseOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.services.MutateAdGroupAdResult ad_group_ad_result = 1;</code>
+   * @return Whether the adGroupAdResult field is set.
    */
   boolean hasAdGroupAdResult();
   /**
@@ -46,6 +49,7 @@ public interface MutateOperationResponseOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.services.MutateAdGroupAdResult ad_group_ad_result = 1;</code>
+   * @return The adGroupAdResult.
    */
   com.google.ads.googleads.v2.services.MutateAdGroupAdResult getAdGroupAdResult();
   /**
@@ -63,6 +67,7 @@ public interface MutateOperationResponseOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.services.MutateAdGroupBidModifierResult ad_group_bid_modifier_result = 2;</code>
+   * @return Whether the adGroupBidModifierResult field is set.
    */
   boolean hasAdGroupBidModifierResult();
   /**
@@ -71,6 +76,7 @@ public interface MutateOperationResponseOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.services.MutateAdGroupBidModifierResult ad_group_bid_modifier_result = 2;</code>
+   * @return The adGroupBidModifierResult.
    */
   com.google.ads.googleads.v2.services.MutateAdGroupBidModifierResult getAdGroupBidModifierResult();
   /**
@@ -88,6 +94,7 @@ public interface MutateOperationResponseOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.services.MutateAdGroupCriterionLabelResult ad_group_criterion_label_result = 18;</code>
+   * @return Whether the adGroupCriterionLabelResult field is set.
    */
   boolean hasAdGroupCriterionLabelResult();
   /**
@@ -96,6 +103,7 @@ public interface MutateOperationResponseOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.services.MutateAdGroupCriterionLabelResult ad_group_criterion_label_result = 18;</code>
+   * @return The adGroupCriterionLabelResult.
    */
   com.google.ads.googleads.v2.services.MutateAdGroupCriterionLabelResult getAdGroupCriterionLabelResult();
   /**
@@ -113,6 +121,7 @@ public interface MutateOperationResponseOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.services.MutateAdGroupCriterionResult ad_group_criterion_result = 3;</code>
+   * @return Whether the adGroupCriterionResult field is set.
    */
   boolean hasAdGroupCriterionResult();
   /**
@@ -121,6 +130,7 @@ public interface MutateOperationResponseOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.services.MutateAdGroupCriterionResult ad_group_criterion_result = 3;</code>
+   * @return The adGroupCriterionResult.
    */
   com.google.ads.googleads.v2.services.MutateAdGroupCriterionResult getAdGroupCriterionResult();
   /**
@@ -138,6 +148,7 @@ public interface MutateOperationResponseOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.services.MutateAdGroupExtensionSettingResult ad_group_extension_setting_result = 19;</code>
+   * @return Whether the adGroupExtensionSettingResult field is set.
    */
   boolean hasAdGroupExtensionSettingResult();
   /**
@@ -146,6 +157,7 @@ public interface MutateOperationResponseOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.services.MutateAdGroupExtensionSettingResult ad_group_extension_setting_result = 19;</code>
+   * @return The adGroupExtensionSettingResult.
    */
   com.google.ads.googleads.v2.services.MutateAdGroupExtensionSettingResult getAdGroupExtensionSettingResult();
   /**
@@ -163,6 +175,7 @@ public interface MutateOperationResponseOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.services.MutateAdGroupFeedResult ad_group_feed_result = 20;</code>
+   * @return Whether the adGroupFeedResult field is set.
    */
   boolean hasAdGroupFeedResult();
   /**
@@ -171,6 +184,7 @@ public interface MutateOperationResponseOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.services.MutateAdGroupFeedResult ad_group_feed_result = 20;</code>
+   * @return The adGroupFeedResult.
    */
   com.google.ads.googleads.v2.services.MutateAdGroupFeedResult getAdGroupFeedResult();
   /**
@@ -188,6 +202,7 @@ public interface MutateOperationResponseOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.services.MutateAdGroupLabelResult ad_group_label_result = 21;</code>
+   * @return Whether the adGroupLabelResult field is set.
    */
   boolean hasAdGroupLabelResult();
   /**
@@ -196,6 +211,7 @@ public interface MutateOperationResponseOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.services.MutateAdGroupLabelResult ad_group_label_result = 21;</code>
+   * @return The adGroupLabelResult.
    */
   com.google.ads.googleads.v2.services.MutateAdGroupLabelResult getAdGroupLabelResult();
   /**
@@ -213,6 +229,7 @@ public interface MutateOperationResponseOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.services.MutateAdGroupResult ad_group_result = 5;</code>
+   * @return Whether the adGroupResult field is set.
    */
   boolean hasAdGroupResult();
   /**
@@ -221,6 +238,7 @@ public interface MutateOperationResponseOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.services.MutateAdGroupResult ad_group_result = 5;</code>
+   * @return The adGroupResult.
    */
   com.google.ads.googleads.v2.services.MutateAdGroupResult getAdGroupResult();
   /**
@@ -238,6 +256,7 @@ public interface MutateOperationResponseOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.services.MutateAdParameterResult ad_parameter_result = 22;</code>
+   * @return Whether the adParameterResult field is set.
    */
   boolean hasAdParameterResult();
   /**
@@ -246,6 +265,7 @@ public interface MutateOperationResponseOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.services.MutateAdParameterResult ad_parameter_result = 22;</code>
+   * @return The adParameterResult.
    */
   com.google.ads.googleads.v2.services.MutateAdParameterResult getAdParameterResult();
   /**
@@ -263,6 +283,7 @@ public interface MutateOperationResponseOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.services.MutateAssetResult asset_result = 23;</code>
+   * @return Whether the assetResult field is set.
    */
   boolean hasAssetResult();
   /**
@@ -271,6 +292,7 @@ public interface MutateOperationResponseOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.services.MutateAssetResult asset_result = 23;</code>
+   * @return The assetResult.
    */
   com.google.ads.googleads.v2.services.MutateAssetResult getAssetResult();
   /**
@@ -288,6 +310,7 @@ public interface MutateOperationResponseOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.services.MutateBiddingStrategyResult bidding_strategy_result = 6;</code>
+   * @return Whether the biddingStrategyResult field is set.
    */
   boolean hasBiddingStrategyResult();
   /**
@@ -296,6 +319,7 @@ public interface MutateOperationResponseOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.services.MutateBiddingStrategyResult bidding_strategy_result = 6;</code>
+   * @return The biddingStrategyResult.
    */
   com.google.ads.googleads.v2.services.MutateBiddingStrategyResult getBiddingStrategyResult();
   /**
@@ -313,6 +337,7 @@ public interface MutateOperationResponseOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.services.MutateCampaignBidModifierResult campaign_bid_modifier_result = 7;</code>
+   * @return Whether the campaignBidModifierResult field is set.
    */
   boolean hasCampaignBidModifierResult();
   /**
@@ -321,6 +346,7 @@ public interface MutateOperationResponseOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.services.MutateCampaignBidModifierResult campaign_bid_modifier_result = 7;</code>
+   * @return The campaignBidModifierResult.
    */
   com.google.ads.googleads.v2.services.MutateCampaignBidModifierResult getCampaignBidModifierResult();
   /**
@@ -338,6 +364,7 @@ public interface MutateOperationResponseOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.services.MutateCampaignBudgetResult campaign_budget_result = 8;</code>
+   * @return Whether the campaignBudgetResult field is set.
    */
   boolean hasCampaignBudgetResult();
   /**
@@ -346,6 +373,7 @@ public interface MutateOperationResponseOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.services.MutateCampaignBudgetResult campaign_budget_result = 8;</code>
+   * @return The campaignBudgetResult.
    */
   com.google.ads.googleads.v2.services.MutateCampaignBudgetResult getCampaignBudgetResult();
   /**
@@ -363,6 +391,7 @@ public interface MutateOperationResponseOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.services.MutateCampaignCriterionResult campaign_criterion_result = 13;</code>
+   * @return Whether the campaignCriterionResult field is set.
    */
   boolean hasCampaignCriterionResult();
   /**
@@ -371,6 +400,7 @@ public interface MutateOperationResponseOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.services.MutateCampaignCriterionResult campaign_criterion_result = 13;</code>
+   * @return The campaignCriterionResult.
    */
   com.google.ads.googleads.v2.services.MutateCampaignCriterionResult getCampaignCriterionResult();
   /**
@@ -388,6 +418,7 @@ public interface MutateOperationResponseOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.services.MutateCampaignDraftResult campaign_draft_result = 24;</code>
+   * @return Whether the campaignDraftResult field is set.
    */
   boolean hasCampaignDraftResult();
   /**
@@ -396,6 +427,7 @@ public interface MutateOperationResponseOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.services.MutateCampaignDraftResult campaign_draft_result = 24;</code>
+   * @return The campaignDraftResult.
    */
   com.google.ads.googleads.v2.services.MutateCampaignDraftResult getCampaignDraftResult();
   /**
@@ -413,6 +445,7 @@ public interface MutateOperationResponseOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.services.MutateCampaignExperimentResult campaign_experiment_result = 25;</code>
+   * @return Whether the campaignExperimentResult field is set.
    */
   boolean hasCampaignExperimentResult();
   /**
@@ -421,6 +454,7 @@ public interface MutateOperationResponseOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.services.MutateCampaignExperimentResult campaign_experiment_result = 25;</code>
+   * @return The campaignExperimentResult.
    */
   com.google.ads.googleads.v2.services.MutateCampaignExperimentResult getCampaignExperimentResult();
   /**
@@ -438,6 +472,7 @@ public interface MutateOperationResponseOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.services.MutateCampaignExtensionSettingResult campaign_extension_setting_result = 26;</code>
+   * @return Whether the campaignExtensionSettingResult field is set.
    */
   boolean hasCampaignExtensionSettingResult();
   /**
@@ -446,6 +481,7 @@ public interface MutateOperationResponseOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.services.MutateCampaignExtensionSettingResult campaign_extension_setting_result = 26;</code>
+   * @return The campaignExtensionSettingResult.
    */
   com.google.ads.googleads.v2.services.MutateCampaignExtensionSettingResult getCampaignExtensionSettingResult();
   /**
@@ -463,6 +499,7 @@ public interface MutateOperationResponseOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.services.MutateCampaignFeedResult campaign_feed_result = 27;</code>
+   * @return Whether the campaignFeedResult field is set.
    */
   boolean hasCampaignFeedResult();
   /**
@@ -471,6 +508,7 @@ public interface MutateOperationResponseOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.services.MutateCampaignFeedResult campaign_feed_result = 27;</code>
+   * @return The campaignFeedResult.
    */
   com.google.ads.googleads.v2.services.MutateCampaignFeedResult getCampaignFeedResult();
   /**
@@ -488,6 +526,7 @@ public interface MutateOperationResponseOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.services.MutateCampaignLabelResult campaign_label_result = 28;</code>
+   * @return Whether the campaignLabelResult field is set.
    */
   boolean hasCampaignLabelResult();
   /**
@@ -496,6 +535,7 @@ public interface MutateOperationResponseOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.services.MutateCampaignLabelResult campaign_label_result = 28;</code>
+   * @return The campaignLabelResult.
    */
   com.google.ads.googleads.v2.services.MutateCampaignLabelResult getCampaignLabelResult();
   /**
@@ -513,6 +553,7 @@ public interface MutateOperationResponseOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.services.MutateCampaignResult campaign_result = 10;</code>
+   * @return Whether the campaignResult field is set.
    */
   boolean hasCampaignResult();
   /**
@@ -521,6 +562,7 @@ public interface MutateOperationResponseOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.services.MutateCampaignResult campaign_result = 10;</code>
+   * @return The campaignResult.
    */
   com.google.ads.googleads.v2.services.MutateCampaignResult getCampaignResult();
   /**
@@ -538,6 +580,7 @@ public interface MutateOperationResponseOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.services.MutateCampaignSharedSetResult campaign_shared_set_result = 11;</code>
+   * @return Whether the campaignSharedSetResult field is set.
    */
   boolean hasCampaignSharedSetResult();
   /**
@@ -546,6 +589,7 @@ public interface MutateOperationResponseOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.services.MutateCampaignSharedSetResult campaign_shared_set_result = 11;</code>
+   * @return The campaignSharedSetResult.
    */
   com.google.ads.googleads.v2.services.MutateCampaignSharedSetResult getCampaignSharedSetResult();
   /**
@@ -563,6 +607,7 @@ public interface MutateOperationResponseOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.services.MutateConversionActionResult conversion_action_result = 12;</code>
+   * @return Whether the conversionActionResult field is set.
    */
   boolean hasConversionActionResult();
   /**
@@ -571,6 +616,7 @@ public interface MutateOperationResponseOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.services.MutateConversionActionResult conversion_action_result = 12;</code>
+   * @return The conversionActionResult.
    */
   com.google.ads.googleads.v2.services.MutateConversionActionResult getConversionActionResult();
   /**
@@ -588,6 +634,7 @@ public interface MutateOperationResponseOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.services.MutateCustomerExtensionSettingResult customer_extension_setting_result = 30;</code>
+   * @return Whether the customerExtensionSettingResult field is set.
    */
   boolean hasCustomerExtensionSettingResult();
   /**
@@ -596,6 +643,7 @@ public interface MutateOperationResponseOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.services.MutateCustomerExtensionSettingResult customer_extension_setting_result = 30;</code>
+   * @return The customerExtensionSettingResult.
    */
   com.google.ads.googleads.v2.services.MutateCustomerExtensionSettingResult getCustomerExtensionSettingResult();
   /**
@@ -613,6 +661,7 @@ public interface MutateOperationResponseOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.services.MutateCustomerFeedResult customer_feed_result = 31;</code>
+   * @return Whether the customerFeedResult field is set.
    */
   boolean hasCustomerFeedResult();
   /**
@@ -621,6 +670,7 @@ public interface MutateOperationResponseOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.services.MutateCustomerFeedResult customer_feed_result = 31;</code>
+   * @return The customerFeedResult.
    */
   com.google.ads.googleads.v2.services.MutateCustomerFeedResult getCustomerFeedResult();
   /**
@@ -638,6 +688,7 @@ public interface MutateOperationResponseOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.services.MutateCustomerLabelResult customer_label_result = 32;</code>
+   * @return Whether the customerLabelResult field is set.
    */
   boolean hasCustomerLabelResult();
   /**
@@ -646,6 +697,7 @@ public interface MutateOperationResponseOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.services.MutateCustomerLabelResult customer_label_result = 32;</code>
+   * @return The customerLabelResult.
    */
   com.google.ads.googleads.v2.services.MutateCustomerLabelResult getCustomerLabelResult();
   /**
@@ -663,6 +715,7 @@ public interface MutateOperationResponseOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.services.MutateCustomerNegativeCriteriaResult customer_negative_criterion_result = 34;</code>
+   * @return Whether the customerNegativeCriterionResult field is set.
    */
   boolean hasCustomerNegativeCriterionResult();
   /**
@@ -671,6 +724,7 @@ public interface MutateOperationResponseOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.services.MutateCustomerNegativeCriteriaResult customer_negative_criterion_result = 34;</code>
+   * @return The customerNegativeCriterionResult.
    */
   com.google.ads.googleads.v2.services.MutateCustomerNegativeCriteriaResult getCustomerNegativeCriterionResult();
   /**
@@ -688,6 +742,7 @@ public interface MutateOperationResponseOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.services.MutateCustomerResult customer_result = 35;</code>
+   * @return Whether the customerResult field is set.
    */
   boolean hasCustomerResult();
   /**
@@ -696,6 +751,7 @@ public interface MutateOperationResponseOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.services.MutateCustomerResult customer_result = 35;</code>
+   * @return The customerResult.
    */
   com.google.ads.googleads.v2.services.MutateCustomerResult getCustomerResult();
   /**
@@ -713,6 +769,7 @@ public interface MutateOperationResponseOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.services.MutateExtensionFeedItemResult extension_feed_item_result = 36;</code>
+   * @return Whether the extensionFeedItemResult field is set.
    */
   boolean hasExtensionFeedItemResult();
   /**
@@ -721,6 +778,7 @@ public interface MutateOperationResponseOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.services.MutateExtensionFeedItemResult extension_feed_item_result = 36;</code>
+   * @return The extensionFeedItemResult.
    */
   com.google.ads.googleads.v2.services.MutateExtensionFeedItemResult getExtensionFeedItemResult();
   /**
@@ -738,6 +796,7 @@ public interface MutateOperationResponseOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.services.MutateFeedItemResult feed_item_result = 37;</code>
+   * @return Whether the feedItemResult field is set.
    */
   boolean hasFeedItemResult();
   /**
@@ -746,6 +805,7 @@ public interface MutateOperationResponseOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.services.MutateFeedItemResult feed_item_result = 37;</code>
+   * @return The feedItemResult.
    */
   com.google.ads.googleads.v2.services.MutateFeedItemResult getFeedItemResult();
   /**
@@ -763,6 +823,7 @@ public interface MutateOperationResponseOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.services.MutateFeedItemTargetResult feed_item_target_result = 38;</code>
+   * @return Whether the feedItemTargetResult field is set.
    */
   boolean hasFeedItemTargetResult();
   /**
@@ -771,6 +832,7 @@ public interface MutateOperationResponseOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.services.MutateFeedItemTargetResult feed_item_target_result = 38;</code>
+   * @return The feedItemTargetResult.
    */
   com.google.ads.googleads.v2.services.MutateFeedItemTargetResult getFeedItemTargetResult();
   /**
@@ -788,6 +850,7 @@ public interface MutateOperationResponseOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.services.MutateFeedMappingResult feed_mapping_result = 39;</code>
+   * @return Whether the feedMappingResult field is set.
    */
   boolean hasFeedMappingResult();
   /**
@@ -796,6 +859,7 @@ public interface MutateOperationResponseOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.services.MutateFeedMappingResult feed_mapping_result = 39;</code>
+   * @return The feedMappingResult.
    */
   com.google.ads.googleads.v2.services.MutateFeedMappingResult getFeedMappingResult();
   /**
@@ -813,6 +877,7 @@ public interface MutateOperationResponseOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.services.MutateFeedResult feed_result = 40;</code>
+   * @return Whether the feedResult field is set.
    */
   boolean hasFeedResult();
   /**
@@ -821,6 +886,7 @@ public interface MutateOperationResponseOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.services.MutateFeedResult feed_result = 40;</code>
+   * @return The feedResult.
    */
   com.google.ads.googleads.v2.services.MutateFeedResult getFeedResult();
   /**
@@ -838,6 +904,7 @@ public interface MutateOperationResponseOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.services.MutateLabelResult label_result = 41;</code>
+   * @return Whether the labelResult field is set.
    */
   boolean hasLabelResult();
   /**
@@ -846,6 +913,7 @@ public interface MutateOperationResponseOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.services.MutateLabelResult label_result = 41;</code>
+   * @return The labelResult.
    */
   com.google.ads.googleads.v2.services.MutateLabelResult getLabelResult();
   /**
@@ -863,6 +931,7 @@ public interface MutateOperationResponseOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.services.MutateMediaFileResult media_file_result = 42;</code>
+   * @return Whether the mediaFileResult field is set.
    */
   boolean hasMediaFileResult();
   /**
@@ -871,6 +940,7 @@ public interface MutateOperationResponseOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.services.MutateMediaFileResult media_file_result = 42;</code>
+   * @return The mediaFileResult.
    */
   com.google.ads.googleads.v2.services.MutateMediaFileResult getMediaFileResult();
   /**
@@ -888,6 +958,7 @@ public interface MutateOperationResponseOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.services.MutateRemarketingActionResult remarketing_action_result = 43;</code>
+   * @return Whether the remarketingActionResult field is set.
    */
   boolean hasRemarketingActionResult();
   /**
@@ -896,6 +967,7 @@ public interface MutateOperationResponseOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.services.MutateRemarketingActionResult remarketing_action_result = 43;</code>
+   * @return The remarketingActionResult.
    */
   com.google.ads.googleads.v2.services.MutateRemarketingActionResult getRemarketingActionResult();
   /**
@@ -913,6 +985,7 @@ public interface MutateOperationResponseOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.services.MutateSharedCriterionResult shared_criterion_result = 14;</code>
+   * @return Whether the sharedCriterionResult field is set.
    */
   boolean hasSharedCriterionResult();
   /**
@@ -921,6 +994,7 @@ public interface MutateOperationResponseOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.services.MutateSharedCriterionResult shared_criterion_result = 14;</code>
+   * @return The sharedCriterionResult.
    */
   com.google.ads.googleads.v2.services.MutateSharedCriterionResult getSharedCriterionResult();
   /**
@@ -938,6 +1012,7 @@ public interface MutateOperationResponseOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.services.MutateSharedSetResult shared_set_result = 15;</code>
+   * @return Whether the sharedSetResult field is set.
    */
   boolean hasSharedSetResult();
   /**
@@ -946,6 +1021,7 @@ public interface MutateOperationResponseOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.services.MutateSharedSetResult shared_set_result = 15;</code>
+   * @return The sharedSetResult.
    */
   com.google.ads.googleads.v2.services.MutateSharedSetResult getSharedSetResult();
   /**
@@ -963,6 +1039,7 @@ public interface MutateOperationResponseOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.services.MutateUserListResult user_list_result = 16;</code>
+   * @return Whether the userListResult field is set.
    */
   boolean hasUserListResult();
   /**
@@ -971,6 +1048,7 @@ public interface MutateOperationResponseOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.services.MutateUserListResult user_list_result = 16;</code>
+   * @return The userListResult.
    */
   com.google.ads.googleads.v2.services.MutateUserListResult getUserListResult();
   /**

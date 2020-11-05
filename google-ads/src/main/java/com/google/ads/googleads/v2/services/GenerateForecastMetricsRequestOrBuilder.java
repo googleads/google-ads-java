@@ -9,18 +9,20 @@ public interface GenerateForecastMetricsRequestOrBuilder extends
 
   /**
    * <pre>
-   * The resource name of the keyword plan to be forecasted.
+   * Required. The resource name of the keyword plan to be forecasted.
    * </pre>
    *
-   * <code>string keyword_plan = 1;</code>
+   * <code>string keyword_plan = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+   * @return The keywordPlan.
    */
   java.lang.String getKeywordPlan();
   /**
    * <pre>
-   * The resource name of the keyword plan to be forecasted.
+   * Required. The resource name of the keyword plan to be forecasted.
    * </pre>
    *
-   * <code>string keyword_plan = 1;</code>
+   * <code>string keyword_plan = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+   * @return The bytes for keywordPlan.
    */
   com.google.protobuf.ByteString
       getKeywordPlanBytes();

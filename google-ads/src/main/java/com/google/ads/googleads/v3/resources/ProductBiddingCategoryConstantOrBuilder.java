@@ -15,6 +15,7 @@ public interface ProductBiddingCategoryConstantOrBuilder extends
    * </pre>
    *
    * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The resourceName.
    */
   java.lang.String getResourceName();
   /**
@@ -25,6 +26,7 @@ public interface ProductBiddingCategoryConstantOrBuilder extends
    * </pre>
    *
    * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The bytes for resourceName.
    */
   com.google.protobuf.ByteString
       getResourceNameBytes();
@@ -37,6 +39,7 @@ public interface ProductBiddingCategoryConstantOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the id field is set.
    */
   boolean hasId();
   /**
@@ -47,6 +50,7 @@ public interface ProductBiddingCategoryConstantOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The id.
    */
   com.google.protobuf.Int64Value getId();
   /**
@@ -66,6 +70,7 @@ public interface ProductBiddingCategoryConstantOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue country_code = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the countryCode field is set.
    */
   boolean hasCountryCode();
   /**
@@ -74,6 +79,7 @@ public interface ProductBiddingCategoryConstantOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue country_code = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The countryCode.
    */
   com.google.protobuf.StringValue getCountryCode();
   /**
@@ -91,6 +97,7 @@ public interface ProductBiddingCategoryConstantOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue product_bidding_category_constant_parent = 4 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return Whether the productBiddingCategoryConstantParent field is set.
    */
   boolean hasProductBiddingCategoryConstantParent();
   /**
@@ -99,6 +106,7 @@ public interface ProductBiddingCategoryConstantOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue product_bidding_category_constant_parent = 4 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The productBiddingCategoryConstantParent.
    */
   com.google.protobuf.StringValue getProductBiddingCategoryConstantParent();
   /**
@@ -116,6 +124,7 @@ public interface ProductBiddingCategoryConstantOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.ProductBiddingCategoryLevelEnum.ProductBiddingCategoryLevel level = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The enum numeric value on the wire for level.
    */
   int getLevelValue();
   /**
@@ -124,6 +133,7 @@ public interface ProductBiddingCategoryConstantOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.ProductBiddingCategoryLevelEnum.ProductBiddingCategoryLevel level = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The level.
    */
   com.google.ads.googleads.v3.enums.ProductBiddingCategoryLevelEnum.ProductBiddingCategoryLevel getLevel();
 
@@ -133,6 +143,7 @@ public interface ProductBiddingCategoryConstantOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.ProductBiddingCategoryStatusEnum.ProductBiddingCategoryStatus status = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The enum numeric value on the wire for status.
    */
   int getStatusValue();
   /**
@@ -141,6 +152,7 @@ public interface ProductBiddingCategoryConstantOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.ProductBiddingCategoryStatusEnum.ProductBiddingCategoryStatus status = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The status.
    */
   com.google.ads.googleads.v3.enums.ProductBiddingCategoryStatusEnum.ProductBiddingCategoryStatus getStatus();
 
@@ -150,6 +162,7 @@ public interface ProductBiddingCategoryConstantOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue language_code = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the languageCode field is set.
    */
   boolean hasLanguageCode();
   /**
@@ -158,6 +171,7 @@ public interface ProductBiddingCategoryConstantOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue language_code = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The languageCode.
    */
   com.google.protobuf.StringValue getLanguageCode();
   /**
@@ -176,6 +190,7 @@ public interface ProductBiddingCategoryConstantOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue localized_name = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the localizedName field is set.
    */
   boolean hasLocalizedName();
   /**
@@ -185,6 +200,7 @@ public interface ProductBiddingCategoryConstantOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue localized_name = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The localizedName.
    */
   com.google.protobuf.StringValue getLocalizedName();
   /**

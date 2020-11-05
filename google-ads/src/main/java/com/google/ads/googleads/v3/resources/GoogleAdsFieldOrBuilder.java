@@ -15,6 +15,7 @@ public interface GoogleAdsFieldOrBuilder extends
    * </pre>
    *
    * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The resourceName.
    */
   java.lang.String getResourceName();
   /**
@@ -25,6 +26,7 @@ public interface GoogleAdsFieldOrBuilder extends
    * </pre>
    *
    * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The bytes for resourceName.
    */
   com.google.protobuf.ByteString
       getResourceNameBytes();
@@ -35,6 +37,7 @@ public interface GoogleAdsFieldOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue name = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the name field is set.
    */
   boolean hasName();
   /**
@@ -43,6 +46,7 @@ public interface GoogleAdsFieldOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue name = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The name.
    */
   com.google.protobuf.StringValue getName();
   /**
@@ -60,6 +64,7 @@ public interface GoogleAdsFieldOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.GoogleAdsFieldCategoryEnum.GoogleAdsFieldCategory category = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The enum numeric value on the wire for category.
    */
   int getCategoryValue();
   /**
@@ -68,6 +73,7 @@ public interface GoogleAdsFieldOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.GoogleAdsFieldCategoryEnum.GoogleAdsFieldCategory category = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The category.
    */
   com.google.ads.googleads.v3.enums.GoogleAdsFieldCategoryEnum.GoogleAdsFieldCategory getCategory();
 
@@ -78,6 +84,7 @@ public interface GoogleAdsFieldOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.BoolValue selectable = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the selectable field is set.
    */
   boolean hasSelectable();
   /**
@@ -87,6 +94,7 @@ public interface GoogleAdsFieldOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.BoolValue selectable = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The selectable.
    */
   com.google.protobuf.BoolValue getSelectable();
   /**
@@ -106,6 +114,7 @@ public interface GoogleAdsFieldOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.BoolValue filterable = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the filterable field is set.
    */
   boolean hasFilterable();
   /**
@@ -115,6 +124,7 @@ public interface GoogleAdsFieldOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.BoolValue filterable = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The filterable.
    */
   com.google.protobuf.BoolValue getFilterable();
   /**
@@ -134,6 +144,7 @@ public interface GoogleAdsFieldOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.BoolValue sortable = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the sortable field is set.
    */
   boolean hasSortable();
   /**
@@ -143,6 +154,7 @@ public interface GoogleAdsFieldOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.BoolValue sortable = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The sortable.
    */
   com.google.protobuf.BoolValue getSortable();
   /**
@@ -467,6 +479,7 @@ public interface GoogleAdsFieldOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.GoogleAdsFieldDataTypeEnum.GoogleAdsFieldDataType data_type = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The enum numeric value on the wire for dataType.
    */
   int getDataTypeValue();
   /**
@@ -476,6 +489,7 @@ public interface GoogleAdsFieldOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.GoogleAdsFieldDataTypeEnum.GoogleAdsFieldDataType data_type = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The dataType.
    */
   com.google.ads.googleads.v3.enums.GoogleAdsFieldDataTypeEnum.GoogleAdsFieldDataType getDataType();
 
@@ -485,6 +499,7 @@ public interface GoogleAdsFieldOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue type_url = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the typeUrl field is set.
    */
   boolean hasTypeUrl();
   /**
@@ -493,6 +508,7 @@ public interface GoogleAdsFieldOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue type_url = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The typeUrl.
    */
   com.google.protobuf.StringValue getTypeUrl();
   /**
@@ -510,6 +526,7 @@ public interface GoogleAdsFieldOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.BoolValue is_repeated = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the isRepeated field is set.
    */
   boolean hasIsRepeated();
   /**
@@ -518,6 +535,7 @@ public interface GoogleAdsFieldOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.BoolValue is_repeated = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The isRepeated.
    */
   com.google.protobuf.BoolValue getIsRepeated();
   /**

@@ -14,6 +14,7 @@ public interface TargetRoasOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue target_roas = 1;</code>
+   * @return Whether the targetRoas field is set.
    */
   boolean hasTargetRoas();
   /**
@@ -23,6 +24,7 @@ public interface TargetRoasOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue target_roas = 1;</code>
+   * @return The targetRoas.
    */
   com.google.protobuf.DoubleValue getTargetRoas();
   /**
@@ -42,6 +44,7 @@ public interface TargetRoasOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value cpc_bid_ceiling_micros = 2;</code>
+   * @return Whether the cpcBidCeilingMicros field is set.
    */
   boolean hasCpcBidCeilingMicros();
   /**
@@ -51,6 +54,7 @@ public interface TargetRoasOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value cpc_bid_ceiling_micros = 2;</code>
+   * @return The cpcBidCeilingMicros.
    */
   com.google.protobuf.Int64Value getCpcBidCeilingMicros();
   /**
@@ -70,6 +74,7 @@ public interface TargetRoasOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value cpc_bid_floor_micros = 3;</code>
+   * @return Whether the cpcBidFloorMicros field is set.
    */
   boolean hasCpcBidFloorMicros();
   /**
@@ -79,6 +84,7 @@ public interface TargetRoasOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value cpc_bid_floor_micros = 3;</code>
+   * @return The cpcBidFloorMicros.
    */
   com.google.protobuf.Int64Value getCpcBidFloorMicros();
   /**

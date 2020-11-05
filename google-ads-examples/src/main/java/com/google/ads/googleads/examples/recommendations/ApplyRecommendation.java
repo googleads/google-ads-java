@@ -18,13 +18,13 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.v3.errors.GoogleAdsError;
-import com.google.ads.googleads.v3.errors.GoogleAdsException;
-import com.google.ads.googleads.v3.services.ApplyRecommendationOperation;
-import com.google.ads.googleads.v3.services.ApplyRecommendationResponse;
-import com.google.ads.googleads.v3.services.ApplyRecommendationResult;
-import com.google.ads.googleads.v3.services.RecommendationServiceClient;
-import com.google.ads.googleads.v3.utils.ResourceNames;
+import com.google.ads.googleads.v5.errors.GoogleAdsError;
+import com.google.ads.googleads.v5.errors.GoogleAdsException;
+import com.google.ads.googleads.v5.services.ApplyRecommendationOperation;
+import com.google.ads.googleads.v5.services.ApplyRecommendationResponse;
+import com.google.ads.googleads.v5.services.ApplyRecommendationResult;
+import com.google.ads.googleads.v5.services.RecommendationServiceClient;
+import com.google.ads.googleads.v5.utils.ResourceNames;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -60,16 +60,16 @@ public class ApplyRecommendation {
       params.recommendationId = "INSERT_RECOMMENDATION_ID_HERE";
     }
 
-    GoogleAdsClient googleAdsClient;
+    GoogleAdsClient googleAdsClient = null;
     try {
       googleAdsClient = GoogleAdsClient.newBuilder().fromPropertiesFile().build();
     } catch (FileNotFoundException fnfe) {
       System.err.printf(
           "Failed to load GoogleAdsClient configuration from file. Exception: %s%n", fnfe);
-      return;
+      System.exit(1);
     } catch (IOException ioe) {
       System.err.printf("Failed to create GoogleAdsClient. Exception: %s%n", ioe);
-      return;
+      System.exit(1);
     }
 
     try {
@@ -87,6 +87,7 @@ public class ApplyRecommendation {
       for (GoogleAdsError googleAdsError : gae.getGoogleAdsFailure().getErrorsList()) {
         System.err.printf("  Error %d: %s%n", i++, googleAdsError);
       }
+      System.exit(1);
     }
   }
 
@@ -107,7 +108,7 @@ public class ApplyRecommendation {
     // Each recommendation types has optional parameters to override the recommended values.
     // This is an example to override a recommended ad when a TextAdRecommendation is applied.
     // Please read
-    // https://developers.google.com/google-ads/api/reference/rpc/google.ads.googleads.v1.services#google.ads.googleads.v1.services.ApplyRecommendationOperation
+    // https://developers.google.com/google-ads/api/reference/rpc/google.ads.googleads.v4.services#google.ads.googleads.v4.services.ApplyRecommendationOperation
     // for details.
     // Note that additional import statements are needed for this example to work. And also, please
     // replace INSERT_AD_ID_HERE with a valid ad ID below.

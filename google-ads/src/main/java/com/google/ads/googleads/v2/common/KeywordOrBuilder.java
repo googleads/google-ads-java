@@ -13,6 +13,7 @@ public interface KeywordOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue ad_group_criterion = 1;</code>
+   * @return Whether the adGroupCriterion field is set.
    */
   boolean hasAdGroupCriterion();
   /**
@@ -21,6 +22,7 @@ public interface KeywordOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue ad_group_criterion = 1;</code>
+   * @return The adGroupCriterion.
    */
   com.google.protobuf.StringValue getAdGroupCriterion();
   /**
@@ -38,6 +40,7 @@ public interface KeywordOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.common.KeywordInfo info = 2;</code>
+   * @return Whether the info field is set.
    */
   boolean hasInfo();
   /**
@@ -46,6 +49,7 @@ public interface KeywordOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.common.KeywordInfo info = 2;</code>
+   * @return The info.
    */
   com.google.ads.googleads.v2.common.KeywordInfo getInfo();
   /**

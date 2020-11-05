@@ -9,81 +9,85 @@ public interface AdGroupAdPolicySummaryOrBuilder extends
 
   /**
    * <pre>
-   * The list of policy findings for this ad.
+   * Output only. The list of policy findings for this ad.
    * </pre>
    *
-   * <code>repeated .google.ads.googleads.v2.common.PolicyTopicEntry policy_topic_entries = 1;</code>
+   * <code>repeated .google.ads.googleads.v2.common.PolicyTopicEntry policy_topic_entries = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   java.util.List<com.google.ads.googleads.v2.common.PolicyTopicEntry> 
       getPolicyTopicEntriesList();
   /**
    * <pre>
-   * The list of policy findings for this ad.
+   * Output only. The list of policy findings for this ad.
    * </pre>
    *
-   * <code>repeated .google.ads.googleads.v2.common.PolicyTopicEntry policy_topic_entries = 1;</code>
+   * <code>repeated .google.ads.googleads.v2.common.PolicyTopicEntry policy_topic_entries = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.ads.googleads.v2.common.PolicyTopicEntry getPolicyTopicEntries(int index);
   /**
    * <pre>
-   * The list of policy findings for this ad.
+   * Output only. The list of policy findings for this ad.
    * </pre>
    *
-   * <code>repeated .google.ads.googleads.v2.common.PolicyTopicEntry policy_topic_entries = 1;</code>
+   * <code>repeated .google.ads.googleads.v2.common.PolicyTopicEntry policy_topic_entries = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   int getPolicyTopicEntriesCount();
   /**
    * <pre>
-   * The list of policy findings for this ad.
+   * Output only. The list of policy findings for this ad.
    * </pre>
    *
-   * <code>repeated .google.ads.googleads.v2.common.PolicyTopicEntry policy_topic_entries = 1;</code>
+   * <code>repeated .google.ads.googleads.v2.common.PolicyTopicEntry policy_topic_entries = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   java.util.List<? extends com.google.ads.googleads.v2.common.PolicyTopicEntryOrBuilder> 
       getPolicyTopicEntriesOrBuilderList();
   /**
    * <pre>
-   * The list of policy findings for this ad.
+   * Output only. The list of policy findings for this ad.
    * </pre>
    *
-   * <code>repeated .google.ads.googleads.v2.common.PolicyTopicEntry policy_topic_entries = 1;</code>
+   * <code>repeated .google.ads.googleads.v2.common.PolicyTopicEntry policy_topic_entries = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.ads.googleads.v2.common.PolicyTopicEntryOrBuilder getPolicyTopicEntriesOrBuilder(
       int index);
 
   /**
    * <pre>
-   * Where in the review process this ad is.
+   * Output only. Where in the review process this ad is.
    * </pre>
    *
-   * <code>.google.ads.googleads.v2.enums.PolicyReviewStatusEnum.PolicyReviewStatus review_status = 2;</code>
+   * <code>.google.ads.googleads.v2.enums.PolicyReviewStatusEnum.PolicyReviewStatus review_status = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The enum numeric value on the wire for reviewStatus.
    */
   int getReviewStatusValue();
   /**
    * <pre>
-   * Where in the review process this ad is.
+   * Output only. Where in the review process this ad is.
    * </pre>
    *
-   * <code>.google.ads.googleads.v2.enums.PolicyReviewStatusEnum.PolicyReviewStatus review_status = 2;</code>
+   * <code>.google.ads.googleads.v2.enums.PolicyReviewStatusEnum.PolicyReviewStatus review_status = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The reviewStatus.
    */
   com.google.ads.googleads.v2.enums.PolicyReviewStatusEnum.PolicyReviewStatus getReviewStatus();
 
   /**
    * <pre>
-   * The overall approval status of this ad, calculated based on the status of
+   * Output only. The overall approval status of this ad, calculated based on the status of
    * its individual policy topic entries.
    * </pre>
    *
-   * <code>.google.ads.googleads.v2.enums.PolicyApprovalStatusEnum.PolicyApprovalStatus approval_status = 3;</code>
+   * <code>.google.ads.googleads.v2.enums.PolicyApprovalStatusEnum.PolicyApprovalStatus approval_status = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The enum numeric value on the wire for approvalStatus.
    */
   int getApprovalStatusValue();
   /**
    * <pre>
-   * The overall approval status of this ad, calculated based on the status of
+   * Output only. The overall approval status of this ad, calculated based on the status of
    * its individual policy topic entries.
    * </pre>
    *
-   * <code>.google.ads.googleads.v2.enums.PolicyApprovalStatusEnum.PolicyApprovalStatus approval_status = 3;</code>
+   * <code>.google.ads.googleads.v2.enums.PolicyApprovalStatusEnum.PolicyApprovalStatus approval_status = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The approvalStatus.
    */
   com.google.ads.googleads.v2.enums.PolicyApprovalStatusEnum.PolicyApprovalStatus getApprovalStatus();
 }

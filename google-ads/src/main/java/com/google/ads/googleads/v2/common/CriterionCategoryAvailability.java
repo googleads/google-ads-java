@@ -10,7 +10,7 @@ package com.google.ads.googleads.v2.common;
  *
  * Protobuf type {@code google.ads.googleads.v2.common.CriterionCategoryAvailability}
  */
-public  final class CriterionCategoryAvailability extends
+public final class CriterionCategoryAvailability extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v2.common.CriterionCategoryAvailability)
     CriterionCategoryAvailabilityOrBuilder {
@@ -21,6 +21,13 @@ private static final long serialVersionUID = 0L;
   }
   private CriterionCategoryAvailability() {
     locale_ = java.util.Collections.emptyList();
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new CriterionCategoryAvailability();
   }
 
   @java.lang.Override
@@ -61,9 +68,9 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 18: {
-            if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
               locale_ = new java.util.ArrayList<com.google.ads.googleads.v2.common.CriterionCategoryLocaleAvailability>();
-              mutable_bitField0_ |= 0x00000002;
+              mutable_bitField0_ |= 0x00000001;
             }
             locale_.add(
                 input.readMessage(com.google.ads.googleads.v2.common.CriterionCategoryLocaleAvailability.parser(), extensionRegistry));
@@ -84,7 +91,7 @@ private static final long serialVersionUID = 0L;
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
     } finally {
-      if (((mutable_bitField0_ & 0x00000002) != 0)) {
+      if (((mutable_bitField0_ & 0x00000001) != 0)) {
         locale_ = java.util.Collections.unmodifiableList(locale_);
       }
       this.unknownFields = unknownFields.build();
@@ -104,7 +111,6 @@ private static final long serialVersionUID = 0L;
             com.google.ads.googleads.v2.common.CriterionCategoryAvailability.class, com.google.ads.googleads.v2.common.CriterionCategoryAvailability.Builder.class);
   }
 
-  private int bitField0_;
   public static final int CHANNEL_FIELD_NUMBER = 1;
   private com.google.ads.googleads.v2.common.CriterionCategoryChannelAvailability channel_;
   /**
@@ -113,7 +119,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.common.CriterionCategoryChannelAvailability channel = 1;</code>
+   * @return Whether the channel field is set.
    */
+  @java.lang.Override
   public boolean hasChannel() {
     return channel_ != null;
   }
@@ -123,7 +131,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.common.CriterionCategoryChannelAvailability channel = 1;</code>
+   * @return The channel.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.common.CriterionCategoryChannelAvailability getChannel() {
     return channel_ == null ? com.google.ads.googleads.v2.common.CriterionCategoryChannelAvailability.getDefaultInstance() : channel_;
   }
@@ -134,6 +144,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v2.common.CriterionCategoryChannelAvailability channel = 1;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.common.CriterionCategoryChannelAvailabilityOrBuilder getChannelOrBuilder() {
     return getChannel();
   }
@@ -147,6 +158,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v2.common.CriterionCategoryLocaleAvailability locale = 2;</code>
    */
+  @java.lang.Override
   public java.util.List<com.google.ads.googleads.v2.common.CriterionCategoryLocaleAvailability> getLocaleList() {
     return locale_;
   }
@@ -157,6 +169,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v2.common.CriterionCategoryLocaleAvailability locale = 2;</code>
    */
+  @java.lang.Override
   public java.util.List<? extends com.google.ads.googleads.v2.common.CriterionCategoryLocaleAvailabilityOrBuilder> 
       getLocaleOrBuilderList() {
     return locale_;
@@ -168,6 +181,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v2.common.CriterionCategoryLocaleAvailability locale = 2;</code>
    */
+  @java.lang.Override
   public int getLocaleCount() {
     return locale_.size();
   }
@@ -178,6 +192,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v2.common.CriterionCategoryLocaleAvailability locale = 2;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.common.CriterionCategoryLocaleAvailability getLocale(int index) {
     return locale_.get(index);
   }
@@ -188,6 +203,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v2.common.CriterionCategoryLocaleAvailability locale = 2;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.common.CriterionCategoryLocaleAvailabilityOrBuilder getLocaleOrBuilder(
       int index) {
     return locale_.get(index);
@@ -417,7 +433,7 @@ private static final long serialVersionUID = 0L;
       }
       if (localeBuilder_ == null) {
         locale_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000001);
       } else {
         localeBuilder_.clear();
       }
@@ -448,22 +464,20 @@ private static final long serialVersionUID = 0L;
     public com.google.ads.googleads.v2.common.CriterionCategoryAvailability buildPartial() {
       com.google.ads.googleads.v2.common.CriterionCategoryAvailability result = new com.google.ads.googleads.v2.common.CriterionCategoryAvailability(this);
       int from_bitField0_ = bitField0_;
-      int to_bitField0_ = 0;
       if (channelBuilder_ == null) {
         result.channel_ = channel_;
       } else {
         result.channel_ = channelBuilder_.build();
       }
       if (localeBuilder_ == null) {
-        if (((bitField0_ & 0x00000002) != 0)) {
+        if (((bitField0_ & 0x00000001) != 0)) {
           locale_ = java.util.Collections.unmodifiableList(locale_);
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000001);
         }
         result.locale_ = locale_;
       } else {
         result.locale_ = localeBuilder_.build();
       }
-      result.bitField0_ = to_bitField0_;
       onBuilt();
       return result;
     }
@@ -519,7 +533,7 @@ private static final long serialVersionUID = 0L;
         if (!other.locale_.isEmpty()) {
           if (locale_.isEmpty()) {
             locale_ = other.locale_;
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000001);
           } else {
             ensureLocaleIsMutable();
             locale_.addAll(other.locale_);
@@ -532,7 +546,7 @@ private static final long serialVersionUID = 0L;
             localeBuilder_.dispose();
             localeBuilder_ = null;
             locale_ = other.locale_;
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000001);
             localeBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getLocaleFieldBuilder() : null;
@@ -580,6 +594,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.common.CriterionCategoryChannelAvailability channel = 1;</code>
+     * @return Whether the channel field is set.
      */
     public boolean hasChannel() {
       return channelBuilder_ != null || channel_ != null;
@@ -590,6 +605,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.common.CriterionCategoryChannelAvailability channel = 1;</code>
+     * @return The channel.
      */
     public com.google.ads.googleads.v2.common.CriterionCategoryChannelAvailability getChannel() {
       if (channelBuilder_ == null) {
@@ -727,9 +743,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.google.ads.googleads.v2.common.CriterionCategoryLocaleAvailability> locale_ =
       java.util.Collections.emptyList();
     private void ensureLocaleIsMutable() {
-      if (!((bitField0_ & 0x00000002) != 0)) {
+      if (!((bitField0_ & 0x00000001) != 0)) {
         locale_ = new java.util.ArrayList<com.google.ads.googleads.v2.common.CriterionCategoryLocaleAvailability>(locale_);
-        bitField0_ |= 0x00000002;
+        bitField0_ |= 0x00000001;
        }
     }
 
@@ -923,7 +939,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearLocale() {
       if (localeBuilder_ == null) {
         locale_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
       } else {
         localeBuilder_.clear();
@@ -1028,7 +1044,7 @@ private static final long serialVersionUID = 0L;
         localeBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.google.ads.googleads.v2.common.CriterionCategoryLocaleAvailability, com.google.ads.googleads.v2.common.CriterionCategoryLocaleAvailability.Builder, com.google.ads.googleads.v2.common.CriterionCategoryLocaleAvailabilityOrBuilder>(
                 locale_,
-                ((bitField0_ & 0x00000002) != 0),
+                ((bitField0_ & 0x00000001) != 0),
                 getParentForChildren(),
                 isClean());
         locale_ = null;

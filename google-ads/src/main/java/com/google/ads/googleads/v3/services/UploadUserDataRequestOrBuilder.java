@@ -13,6 +13,7 @@ public interface UploadUserDataRequestOrBuilder extends
    * </pre>
    *
    * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+   * @return The customerId.
    */
   java.lang.String getCustomerId();
   /**
@@ -21,6 +22,7 @@ public interface UploadUserDataRequestOrBuilder extends
    * </pre>
    *
    * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+   * @return The bytes for customerId.
    */
   com.google.protobuf.ByteString
       getCustomerIdBytes();
@@ -75,6 +77,7 @@ public interface UploadUserDataRequestOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.CustomerMatchUserListMetadata customer_match_user_list_metadata = 2;</code>
+   * @return Whether the customerMatchUserListMetadata field is set.
    */
   boolean hasCustomerMatchUserListMetadata();
   /**
@@ -83,6 +86,7 @@ public interface UploadUserDataRequestOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.CustomerMatchUserListMetadata customer_match_user_list_metadata = 2;</code>
+   * @return The customerMatchUserListMetadata.
    */
   com.google.ads.googleads.v3.common.CustomerMatchUserListMetadata getCustomerMatchUserListMetadata();
   /**

@@ -18,20 +18,18 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.v3.common.AgeRangeInfo;
-import com.google.ads.googleads.v3.common.GenderInfo;
-import com.google.ads.googleads.v3.enums.AgeRangeTypeEnum.AgeRangeType;
-import com.google.ads.googleads.v3.enums.GenderTypeEnum.GenderType;
-import com.google.ads.googleads.v3.errors.GoogleAdsError;
-import com.google.ads.googleads.v3.errors.GoogleAdsException;
-import com.google.ads.googleads.v3.resources.AdGroupCriterion;
-import com.google.ads.googleads.v3.services.AdGroupCriterionOperation;
-import com.google.ads.googleads.v3.services.AdGroupCriterionServiceClient;
-import com.google.ads.googleads.v3.services.MutateAdGroupCriteriaResponse;
-import com.google.ads.googleads.v3.services.MutateAdGroupCriterionResult;
-import com.google.ads.googleads.v3.utils.ResourceNames;
-import com.google.protobuf.BoolValue;
-import com.google.protobuf.StringValue;
+import com.google.ads.googleads.v5.common.AgeRangeInfo;
+import com.google.ads.googleads.v5.common.GenderInfo;
+import com.google.ads.googleads.v5.enums.AgeRangeTypeEnum.AgeRangeType;
+import com.google.ads.googleads.v5.enums.GenderTypeEnum.GenderType;
+import com.google.ads.googleads.v5.errors.GoogleAdsError;
+import com.google.ads.googleads.v5.errors.GoogleAdsException;
+import com.google.ads.googleads.v5.resources.AdGroupCriterion;
+import com.google.ads.googleads.v5.services.AdGroupCriterionOperation;
+import com.google.ads.googleads.v5.services.AdGroupCriterionServiceClient;
+import com.google.ads.googleads.v5.services.MutateAdGroupCriteriaResponse;
+import com.google.ads.googleads.v5.services.MutateAdGroupCriterionResult;
+import com.google.ads.googleads.v5.utils.ResourceNames;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -58,16 +56,16 @@ public class AddDemographicTargetingCriteria {
       params.adGroupId = Long.parseLong("INSERT_AD_GROUP_ID_HERE");
     }
 
-    GoogleAdsClient googleAdsClient;
+    GoogleAdsClient googleAdsClient = null;
     try {
       googleAdsClient = GoogleAdsClient.newBuilder().fromPropertiesFile().build();
     } catch (FileNotFoundException fnfe) {
       System.err.printf(
           "Failed to load GoogleAdsClient configuration from file. Exception: %s%n", fnfe);
-      return;
+      System.exit(1);
     } catch (IOException ioe) {
       System.err.printf("Failed to create GoogleAdsClient. Exception: %s%n", ioe);
-      return;
+      System.exit(1);
     }
 
     try {
@@ -85,6 +83,7 @@ public class AddDemographicTargetingCriteria {
       for (GoogleAdsError googleAdsError : gae.getGoogleAdsFailure().getErrorsList()) {
         System.err.printf("  Error %d: %s%n", i++, googleAdsError);
       }
+      System.exit(1);
     }
   }
 
@@ -103,15 +102,15 @@ public class AddDemographicTargetingCriteria {
     // Creates a gender demographic criterion.
     AdGroupCriterion genderAdGroupCriterionOperation =
         AdGroupCriterion.newBuilder()
-            .setAdGroup(StringValue.of(adGroupResourceName))
+            .setAdGroup(adGroupResourceName)
             .setGender(GenderInfo.newBuilder().setType(GenderType.MALE).build())
             .build();
 
     // Creates an age range negative demographic criterion.
     AdGroupCriterion ageRangeNegativeAdGroupCriterionOperation =
         AdGroupCriterion.newBuilder()
-            .setAdGroup(StringValue.of(adGroupResourceName))
-            .setNegative(BoolValue.of(true))
+            .setAdGroup(adGroupResourceName)
+            .setNegative(true)
             .setAgeRange(AgeRangeInfo.newBuilder().setType(AgeRangeType.AGE_RANGE_18_24).build())
             .build();
 

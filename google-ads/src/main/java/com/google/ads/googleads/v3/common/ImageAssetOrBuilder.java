@@ -13,6 +13,7 @@ public interface ImageAssetOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.BytesValue data = 1;</code>
+   * @return Whether the data field is set.
    */
   boolean hasData();
   /**
@@ -21,6 +22,7 @@ public interface ImageAssetOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.BytesValue data = 1;</code>
+   * @return The data.
    */
   com.google.protobuf.BytesValue getData();
   /**
@@ -38,6 +40,7 @@ public interface ImageAssetOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value file_size = 2;</code>
+   * @return Whether the fileSize field is set.
    */
   boolean hasFileSize();
   /**
@@ -46,6 +49,7 @@ public interface ImageAssetOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value file_size = 2;</code>
+   * @return The fileSize.
    */
   com.google.protobuf.Int64Value getFileSize();
   /**
@@ -63,6 +67,7 @@ public interface ImageAssetOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.MimeTypeEnum.MimeType mime_type = 3;</code>
+   * @return The enum numeric value on the wire for mimeType.
    */
   int getMimeTypeValue();
   /**
@@ -71,6 +76,7 @@ public interface ImageAssetOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.MimeTypeEnum.MimeType mime_type = 3;</code>
+   * @return The mimeType.
    */
   com.google.ads.googleads.v3.enums.MimeTypeEnum.MimeType getMimeType();
 
@@ -80,6 +86,7 @@ public interface ImageAssetOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.ImageDimension full_size = 4;</code>
+   * @return Whether the fullSize field is set.
    */
   boolean hasFullSize();
   /**
@@ -88,6 +95,7 @@ public interface ImageAssetOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.ImageDimension full_size = 4;</code>
+   * @return The fullSize.
    */
   com.google.ads.googleads.v3.common.ImageDimension getFullSize();
   /**

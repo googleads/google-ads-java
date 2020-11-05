@@ -18,50 +18,45 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.v3.common.AdImageAsset;
-import com.google.ads.googleads.v3.common.AdTextAsset;
-import com.google.ads.googleads.v3.common.ImageAsset;
-import com.google.ads.googleads.v3.common.ManualCpc;
-import com.google.ads.googleads.v3.common.ResponsiveDisplayAdInfo;
-import com.google.ads.googleads.v3.common.UserListInfo;
-import com.google.ads.googleads.v3.enums.AdGroupStatusEnum.AdGroupStatus;
-import com.google.ads.googleads.v3.enums.AdvertisingChannelTypeEnum.AdvertisingChannelType;
-import com.google.ads.googleads.v3.enums.AssetTypeEnum.AssetType;
-import com.google.ads.googleads.v3.enums.CampaignStatusEnum.CampaignStatus;
-import com.google.ads.googleads.v3.enums.DisplayAdFormatSettingEnum.DisplayAdFormatSetting;
-import com.google.ads.googleads.v3.errors.GoogleAdsError;
-import com.google.ads.googleads.v3.errors.GoogleAdsException;
-import com.google.ads.googleads.v3.resources.Ad;
-import com.google.ads.googleads.v3.resources.AdGroup;
-import com.google.ads.googleads.v3.resources.AdGroupAd;
-import com.google.ads.googleads.v3.resources.AdGroupCriterion;
-import com.google.ads.googleads.v3.resources.Asset;
-import com.google.ads.googleads.v3.resources.Campaign;
-import com.google.ads.googleads.v3.resources.Campaign.ShoppingSetting;
-import com.google.ads.googleads.v3.services.AdGroupAdOperation;
-import com.google.ads.googleads.v3.services.AdGroupAdServiceClient;
-import com.google.ads.googleads.v3.services.AdGroupCriterionOperation;
-import com.google.ads.googleads.v3.services.AdGroupCriterionServiceClient;
-import com.google.ads.googleads.v3.services.AdGroupOperation;
-import com.google.ads.googleads.v3.services.AdGroupServiceClient;
-import com.google.ads.googleads.v3.services.AssetOperation;
-import com.google.ads.googleads.v3.services.AssetServiceClient;
-import com.google.ads.googleads.v3.services.CampaignOperation;
-import com.google.ads.googleads.v3.services.CampaignServiceClient;
-import com.google.ads.googleads.v3.services.MutateAdGroupAdsResponse;
-import com.google.ads.googleads.v3.services.MutateAdGroupCriteriaResponse;
-import com.google.ads.googleads.v3.services.MutateAdGroupsResponse;
-import com.google.ads.googleads.v3.services.MutateAssetsResponse;
-import com.google.ads.googleads.v3.services.MutateCampaignsResponse;
-import com.google.ads.googleads.v3.utils.ResourceNames;
+import com.google.ads.googleads.v5.common.AdImageAsset;
+import com.google.ads.googleads.v5.common.AdTextAsset;
+import com.google.ads.googleads.v5.common.ImageAsset;
+import com.google.ads.googleads.v5.common.ManualCpc;
+import com.google.ads.googleads.v5.common.ResponsiveDisplayAdInfo;
+import com.google.ads.googleads.v5.common.UserListInfo;
+import com.google.ads.googleads.v5.enums.AdGroupStatusEnum.AdGroupStatus;
+import com.google.ads.googleads.v5.enums.AdvertisingChannelTypeEnum.AdvertisingChannelType;
+import com.google.ads.googleads.v5.enums.AssetTypeEnum.AssetType;
+import com.google.ads.googleads.v5.enums.CampaignStatusEnum.CampaignStatus;
+import com.google.ads.googleads.v5.enums.DisplayAdFormatSettingEnum.DisplayAdFormatSetting;
+import com.google.ads.googleads.v5.errors.GoogleAdsError;
+import com.google.ads.googleads.v5.errors.GoogleAdsException;
+import com.google.ads.googleads.v5.resources.Ad;
+import com.google.ads.googleads.v5.resources.AdGroup;
+import com.google.ads.googleads.v5.resources.AdGroupAd;
+import com.google.ads.googleads.v5.resources.AdGroupCriterion;
+import com.google.ads.googleads.v5.resources.Asset;
+import com.google.ads.googleads.v5.resources.Campaign;
+import com.google.ads.googleads.v5.resources.Campaign.ShoppingSetting;
+import com.google.ads.googleads.v5.services.AdGroupAdOperation;
+import com.google.ads.googleads.v5.services.AdGroupAdServiceClient;
+import com.google.ads.googleads.v5.services.AdGroupCriterionOperation;
+import com.google.ads.googleads.v5.services.AdGroupCriterionServiceClient;
+import com.google.ads.googleads.v5.services.AdGroupOperation;
+import com.google.ads.googleads.v5.services.AdGroupServiceClient;
+import com.google.ads.googleads.v5.services.AssetOperation;
+import com.google.ads.googleads.v5.services.AssetServiceClient;
+import com.google.ads.googleads.v5.services.CampaignOperation;
+import com.google.ads.googleads.v5.services.CampaignServiceClient;
+import com.google.ads.googleads.v5.services.MutateAdGroupAdsResponse;
+import com.google.ads.googleads.v5.services.MutateAdGroupCriteriaResponse;
+import com.google.ads.googleads.v5.services.MutateAdGroupsResponse;
+import com.google.ads.googleads.v5.services.MutateAssetsResponse;
+import com.google.ads.googleads.v5.services.MutateCampaignsResponse;
+import com.google.ads.googleads.v5.utils.ResourceNames;
 import com.google.common.collect.ImmutableList;
 import com.google.common.io.ByteStreams;
-import com.google.protobuf.BoolValue;
 import com.google.protobuf.ByteString;
-import com.google.protobuf.BytesValue;
-import com.google.protobuf.Int32Value;
-import com.google.protobuf.Int64Value;
-import com.google.protobuf.StringValue;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.net.URL;
@@ -99,16 +94,16 @@ public class AddMerchantCenterDynamicRemarketingCampaign {
       params.userListId = Long.parseLong("INSERT_USER_LIST_ID_HERE");
     }
 
-    GoogleAdsClient googleAdsClient;
+    GoogleAdsClient googleAdsClient = null;
     try {
       googleAdsClient = GoogleAdsClient.newBuilder().fromPropertiesFile().build();
     } catch (FileNotFoundException fnfe) {
       System.err.printf(
           "Failed to load GoogleAdsClient configuration from file. Exception: %s%n", fnfe);
-      return;
+      System.exit(1);
     } catch (IOException ioe) {
       System.err.printf("Failed to create GoogleAdsClient. Exception: %s%n", ioe);
-      return;
+      System.exit(1);
     }
 
     try {
@@ -125,6 +120,7 @@ public class AddMerchantCenterDynamicRemarketingCampaign {
       for (GoogleAdsError googleAdsError : gae.getGoogleAdsFailure().getErrorsList()) {
         System.err.printf("  Error %d: %s%n", i++, googleAdsError);
       }
+      System.exit(1);
     }
   }
 
@@ -173,24 +169,24 @@ public class AddMerchantCenterDynamicRemarketingCampaign {
     // Creates the campaign.
     Campaign campaign =
         Campaign.newBuilder()
-            .setName(StringValue.of("Shopping campaign #" + System.currentTimeMillis()))
+            .setName("Shopping campaign #" + System.currentTimeMillis())
             // Dynamic remarketing campaigns are only available on the Google Display Network.
             .setAdvertisingChannelType(AdvertisingChannelType.DISPLAY)
             .setStatus(CampaignStatus.PAUSED)
-            .setCampaignBudget(StringValue.of(budgetResourceName))
+            .setCampaignBudget(budgetResourceName)
             .setManualCpc(ManualCpc.newBuilder().build())
             // The settings for the shopping campaign.
             // This connects the campaign to the merchant center account.
             .setShoppingSetting(
                 ShoppingSetting.newBuilder()
-                    .setCampaignPriority(Int32Value.of(0))
-                    .setMerchantId(Int64Value.of(merchantCenterAccountId))
+                    .setCampaignPriority(0)
+                    .setMerchantId(merchantCenterAccountId)
                     // Display Network campaigns do not support partition by country. The only
                     // supported value is "ZZ". This signals that products from all countries are
                     // available in the campaign. The actual products which serve are based on
                     // the products tagged in the user list entry.
-                    .setSalesCountry(StringValue.of("ZZ"))
-                    .setEnableLocal(BoolValue.of(true))
+                    .setSalesCountry("ZZ")
+                    .setEnableLocal(true)
                     .build())
             .build();
 
@@ -223,8 +219,8 @@ public class AddMerchantCenterDynamicRemarketingCampaign {
     // Creates the ad group.
     AdGroup adGroup =
         AdGroup.newBuilder()
-            .setName(StringValue.of("Dynamic remarketing ad group"))
-            .setCampaign(StringValue.of(campaignResourceName))
+            .setName("Dynamic remarketing ad group")
+            .setCampaign(campaignResourceName)
             .setStatus(AdGroupStatus.ENABLED)
             .build();
 
@@ -268,27 +264,21 @@ public class AddMerchantCenterDynamicRemarketingCampaign {
     ResponsiveDisplayAdInfo responsiveDisplayAdInfo =
         ResponsiveDisplayAdInfo.newBuilder()
             .addMarketingImages(
-                AdImageAsset.newBuilder()
-                    .setAsset(StringValue.of(marketingImageResourceName))
-                    .build())
+                AdImageAsset.newBuilder().setAsset(marketingImageResourceName).build())
             .addSquareMarketingImages(
-                AdImageAsset.newBuilder()
-                    .setAsset(StringValue.of(squareMarketingImageResourceName))
-                    .build())
-            .addHeadlines(AdTextAsset.newBuilder().setText(StringValue.of("Travel")).build())
-            .setLongHeadline(
-                AdTextAsset.newBuilder().setText(StringValue.of("Travel the World")).build())
-            .addDescriptions(
-                AdTextAsset.newBuilder().setText(StringValue.of("Take to the air!")).build())
-            .setBusinessName(StringValue.of("Interplanetary Cruises"))
+                AdImageAsset.newBuilder().setAsset(squareMarketingImageResourceName).build())
+            .addHeadlines(AdTextAsset.newBuilder().setText("Travel").build())
+            .setLongHeadline(AdTextAsset.newBuilder().setText("Travel the World").build())
+            .addDescriptions(AdTextAsset.newBuilder().setText("Take to the air!").build())
+            .setBusinessName("Interplanetary Cruises")
             // Optional: Call to action text.
             // Valid texts: https://support.google.com/adwords/answer/7005917
-            .setCallToActionText(StringValue.of("Apply Now"))
+            .setCallToActionText("Apply Now")
             // Optional: Sets the ad colors.
-            .setMainColor(StringValue.of("#0000ff"))
-            .setAccentColor(StringValue.of("#ffff00"))
+            .setMainColor("#0000ff")
+            .setAccentColor("#ffff00")
             // Optional: Sets to false to strictly render the ad using the colors.
-            .setAllowFlexibleColor(BoolValue.of(false))
+            .setAllowFlexibleColor(false)
             // Optional: Sets the format setting that the ad will be served in.
             .setFormatSetting(DisplayAdFormatSetting.NON_NATIVE)
             // Optional: Creates a logo image and sets it to the ad.
@@ -311,12 +301,11 @@ public class AddMerchantCenterDynamicRemarketingCampaign {
     Ad ad =
         Ad.newBuilder()
             .setResponsiveDisplayAd(responsiveDisplayAdInfo)
-            .addFinalUrls(StringValue.of("http://www.example.com/"))
+            .addFinalUrls("http://www.example.com/")
             .build();
 
     // Creates the ad group ad.
-    AdGroupAd adGroupAd =
-        AdGroupAd.newBuilder().setAdGroup(StringValue.of(adGroupResourceName)).setAd(ad).build();
+    AdGroupAd adGroupAd = AdGroupAd.newBuilder().setAdGroup(adGroupResourceName).setAd(ad).build();
 
     // Creates the ad group ad operation.
     AdGroupAdOperation operation = AdGroupAdOperation.newBuilder().setCreate(adGroupAd).build();
@@ -351,12 +340,9 @@ public class AddMerchantCenterDynamicRemarketingCampaign {
     // Creates the image asset.
     Asset asset =
         Asset.newBuilder()
-            .setName(StringValue.of(assetName))
+            .setName(assetName)
             .setType(AssetType.IMAGE)
-            .setImageAsset(
-                ImageAsset.newBuilder()
-                    .setData(BytesValue.of(ByteString.copyFrom(imageData)))
-                    .build())
+            .setImageAsset(ImageAsset.newBuilder().setData(ByteString.copyFrom(imageData)).build())
             .build();
 
     // Creates the asset operation.
@@ -392,9 +378,8 @@ public class AddMerchantCenterDynamicRemarketingCampaign {
     // Creates the ad group criterion that targets the user list.
     AdGroupCriterion adGroupCriterion =
         AdGroupCriterion.newBuilder()
-            .setAdGroup(StringValue.of(adGroupResourceName))
-            .setUserList(
-                UserListInfo.newBuilder().setUserList(StringValue.of(userListResourceName)).build())
+            .setAdGroup(adGroupResourceName)
+            .setUserList(UserListInfo.newBuilder().setUserList(userListResourceName).build())
             .build();
 
     // Creates the ad group criterion operation.

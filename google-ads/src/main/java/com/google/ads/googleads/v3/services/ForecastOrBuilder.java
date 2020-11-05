@@ -15,6 +15,7 @@ public interface ForecastOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value on_target_reach = 1;</code>
+   * @return Whether the onTargetReach field is set.
    */
   boolean hasOnTargetReach();
   /**
@@ -25,6 +26,7 @@ public interface ForecastOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value on_target_reach = 1;</code>
+   * @return The onTargetReach.
    */
   com.google.protobuf.Int64Value getOnTargetReach();
   /**
@@ -46,6 +48,7 @@ public interface ForecastOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value total_reach = 2;</code>
+   * @return Whether the totalReach field is set.
    */
   boolean hasTotalReach();
   /**
@@ -56,6 +59,7 @@ public interface ForecastOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value total_reach = 2;</code>
+   * @return The totalReach.
    */
   com.google.protobuf.Int64Value getTotalReach();
   /**
@@ -75,6 +79,7 @@ public interface ForecastOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value on_target_impressions = 3;</code>
+   * @return Whether the onTargetImpressions field is set.
    */
   boolean hasOnTargetImpressions();
   /**
@@ -83,6 +88,7 @@ public interface ForecastOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value on_target_impressions = 3;</code>
+   * @return The onTargetImpressions.
    */
   com.google.protobuf.Int64Value getOnTargetImpressions();
   /**
@@ -102,6 +108,7 @@ public interface ForecastOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value total_impressions = 4;</code>
+   * @return Whether the totalImpressions field is set.
    */
   boolean hasTotalImpressions();
   /**
@@ -112,6 +119,7 @@ public interface ForecastOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value total_impressions = 4;</code>
+   * @return The totalImpressions.
    */
   com.google.protobuf.Int64Value getTotalImpressions();
   /**

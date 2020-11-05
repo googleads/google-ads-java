@@ -15,6 +15,7 @@ public interface SharedSetOrBuilder extends
    * </pre>
    *
    * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * @return The resourceName.
    */
   java.lang.String getResourceName();
   /**
@@ -25,6 +26,7 @@ public interface SharedSetOrBuilder extends
    * </pre>
    *
    * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * @return The bytes for resourceName.
    */
   com.google.protobuf.ByteString
       getResourceNameBytes();
@@ -35,6 +37,7 @@ public interface SharedSetOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the id field is set.
    */
   boolean hasId();
   /**
@@ -43,6 +46,7 @@ public interface SharedSetOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The id.
    */
   com.google.protobuf.Int64Value getId();
   /**
@@ -61,6 +65,7 @@ public interface SharedSetOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.SharedSetTypeEnum.SharedSetType type = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The enum numeric value on the wire for type.
    */
   int getTypeValue();
   /**
@@ -70,6 +75,7 @@ public interface SharedSetOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.SharedSetTypeEnum.SharedSetType type = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The type.
    */
   com.google.ads.googleads.v3.enums.SharedSetTypeEnum.SharedSetType getType();
 
@@ -83,6 +89,7 @@ public interface SharedSetOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue name = 4;</code>
+   * @return Whether the name field is set.
    */
   boolean hasName();
   /**
@@ -95,6 +102,7 @@ public interface SharedSetOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue name = 4;</code>
+   * @return The name.
    */
   com.google.protobuf.StringValue getName();
   /**
@@ -116,6 +124,7 @@ public interface SharedSetOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.SharedSetStatusEnum.SharedSetStatus status = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The enum numeric value on the wire for status.
    */
   int getStatusValue();
   /**
@@ -124,6 +133,7 @@ public interface SharedSetOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.SharedSetStatusEnum.SharedSetStatus status = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The status.
    */
   com.google.ads.googleads.v3.enums.SharedSetStatusEnum.SharedSetStatus getStatus();
 
@@ -133,6 +143,7 @@ public interface SharedSetOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value member_count = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the memberCount field is set.
    */
   boolean hasMemberCount();
   /**
@@ -141,6 +152,7 @@ public interface SharedSetOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value member_count = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The memberCount.
    */
   com.google.protobuf.Int64Value getMemberCount();
   /**
@@ -158,6 +170,7 @@ public interface SharedSetOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value reference_count = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the referenceCount field is set.
    */
   boolean hasReferenceCount();
   /**
@@ -166,6 +179,7 @@ public interface SharedSetOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value reference_count = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The referenceCount.
    */
   com.google.protobuf.Int64Value getReferenceCount();
   /**

@@ -9,43 +9,47 @@ public interface GenerateReachForecastRequestOrBuilder extends
 
   /**
    * <pre>
-   * The ID of the customer.
+   * Required. The ID of the customer.
    * </pre>
    *
-   * <code>string customer_id = 1;</code>
+   * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+   * @return The customerId.
    */
   java.lang.String getCustomerId();
   /**
    * <pre>
-   * The ID of the customer.
+   * Required. The ID of the customer.
    * </pre>
    *
-   * <code>string customer_id = 1;</code>
+   * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+   * @return The bytes for customerId.
    */
   com.google.protobuf.ByteString
       getCustomerIdBytes();
 
   /**
    * <pre>
-   * Required. The currency code.
+   * The currency code.
    * Three-character ISO 4217 currency code.
    * </pre>
    *
    * <code>.google.protobuf.StringValue currency_code = 2;</code>
+   * @return Whether the currencyCode field is set.
    */
   boolean hasCurrencyCode();
   /**
    * <pre>
-   * Required. The currency code.
+   * The currency code.
    * Three-character ISO 4217 currency code.
    * </pre>
    *
    * <code>.google.protobuf.StringValue currency_code = 2;</code>
+   * @return The currencyCode.
    */
   com.google.protobuf.StringValue getCurrencyCode();
   /**
    * <pre>
-   * Required. The currency code.
+   * The currency code.
    * Three-character ISO 4217 currency code.
    * </pre>
    *
@@ -55,26 +59,28 @@ public interface GenerateReachForecastRequestOrBuilder extends
 
   /**
    * <pre>
-   * Campaign duration.
+   * Required. Campaign duration.
    * </pre>
    *
-   * <code>.google.ads.googleads.v2.services.CampaignDuration campaign_duration = 3;</code>
+   * <code>.google.ads.googleads.v2.services.CampaignDuration campaign_duration = 3 [(.google.api.field_behavior) = REQUIRED];</code>
+   * @return Whether the campaignDuration field is set.
    */
   boolean hasCampaignDuration();
   /**
    * <pre>
-   * Campaign duration.
+   * Required. Campaign duration.
    * </pre>
    *
-   * <code>.google.ads.googleads.v2.services.CampaignDuration campaign_duration = 3;</code>
+   * <code>.google.ads.googleads.v2.services.CampaignDuration campaign_duration = 3 [(.google.api.field_behavior) = REQUIRED];</code>
+   * @return The campaignDuration.
    */
   com.google.ads.googleads.v2.services.CampaignDuration getCampaignDuration();
   /**
    * <pre>
-   * Campaign duration.
+   * Required. Campaign duration.
    * </pre>
    *
-   * <code>.google.ads.googleads.v2.services.CampaignDuration campaign_duration = 3;</code>
+   * <code>.google.ads.googleads.v2.services.CampaignDuration campaign_duration = 3 [(.google.api.field_behavior) = REQUIRED];</code>
    */
   com.google.ads.googleads.v2.services.CampaignDurationOrBuilder getCampaignDurationOrBuilder();
 
@@ -85,9 +91,12 @@ public interface GenerateReachForecastRequestOrBuilder extends
    * a campaign, it represents the maximum number of times an ad can be shown to
    * the same user.
    * If not specified no cap is applied.
+   * This field is deprecated in v4 and will eventually be removed.
+   * Please use cookie_frequency_cap_setting instead.
    * </pre>
    *
    * <code>.google.protobuf.Int32Value cookie_frequency_cap = 4;</code>
+   * @return Whether the cookieFrequencyCap field is set.
    */
   boolean hasCookieFrequencyCap();
   /**
@@ -97,9 +106,12 @@ public interface GenerateReachForecastRequestOrBuilder extends
    * a campaign, it represents the maximum number of times an ad can be shown to
    * the same user.
    * If not specified no cap is applied.
+   * This field is deprecated in v4 and will eventually be removed.
+   * Please use cookie_frequency_cap_setting instead.
    * </pre>
    *
    * <code>.google.protobuf.Int32Value cookie_frequency_cap = 4;</code>
+   * @return The cookieFrequencyCap.
    */
   com.google.protobuf.Int32Value getCookieFrequencyCap();
   /**
@@ -109,6 +121,8 @@ public interface GenerateReachForecastRequestOrBuilder extends
    * a campaign, it represents the maximum number of times an ad can be shown to
    * the same user.
    * If not specified no cap is applied.
+   * This field is deprecated in v4 and will eventually be removed.
+   * Please use cookie_frequency_cap_setting instead.
    * </pre>
    *
    * <code>.google.protobuf.Int32Value cookie_frequency_cap = 4;</code>
@@ -124,6 +138,7 @@ public interface GenerateReachForecastRequestOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int32Value min_effective_frequency = 5;</code>
+   * @return Whether the minEffectiveFrequency field is set.
    */
   boolean hasMinEffectiveFrequency();
   /**
@@ -135,6 +150,7 @@ public interface GenerateReachForecastRequestOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int32Value min_effective_frequency = 5;</code>
+   * @return The minEffectiveFrequency.
    */
   com.google.protobuf.Int32Value getMinEffectiveFrequency();
   /**
@@ -154,14 +170,13 @@ public interface GenerateReachForecastRequestOrBuilder extends
    * The targeting to be applied to all products selected in the product mix.
    * This is planned targeting: execution details might vary based on the
    * advertising product, please consult an implementation specialist.
-   * If no targeting dimensions are specified, then campaigns will target
-   * everywhere and everyone.
    * See specific metrics for details on how targeting affects them.
    * In some cases, targeting may be overridden using the
    * PlannedProduct.advanced_product_targeting field.
    * </pre>
    *
    * <code>.google.ads.googleads.v2.services.Targeting targeting = 6;</code>
+   * @return Whether the targeting field is set.
    */
   boolean hasTargeting();
   /**
@@ -169,14 +184,13 @@ public interface GenerateReachForecastRequestOrBuilder extends
    * The targeting to be applied to all products selected in the product mix.
    * This is planned targeting: execution details might vary based on the
    * advertising product, please consult an implementation specialist.
-   * If no targeting dimensions are specified, then campaigns will target
-   * everywhere and everyone.
    * See specific metrics for details on how targeting affects them.
    * In some cases, targeting may be overridden using the
    * PlannedProduct.advanced_product_targeting field.
    * </pre>
    *
    * <code>.google.ads.googleads.v2.services.Targeting targeting = 6;</code>
+   * @return The targeting.
    */
   com.google.ads.googleads.v2.services.Targeting getTargeting();
   /**
@@ -184,8 +198,6 @@ public interface GenerateReachForecastRequestOrBuilder extends
    * The targeting to be applied to all products selected in the product mix.
    * This is planned targeting: execution details might vary based on the
    * advertising product, please consult an implementation specialist.
-   * If no targeting dimensions are specified, then campaigns will target
-   * everywhere and everyone.
    * See specific metrics for details on how targeting affects them.
    * In some cases, targeting may be overridden using the
    * PlannedProduct.advanced_product_targeting field.
@@ -197,44 +209,49 @@ public interface GenerateReachForecastRequestOrBuilder extends
 
   /**
    * <pre>
-   * The product to be planned.
+   * Required. The products to be forecast.
+   * The max number of allowed planned products is 15.
    * </pre>
    *
-   * <code>repeated .google.ads.googleads.v2.services.PlannedProduct planned_products = 7;</code>
+   * <code>repeated .google.ads.googleads.v2.services.PlannedProduct planned_products = 7 [(.google.api.field_behavior) = REQUIRED];</code>
    */
   java.util.List<com.google.ads.googleads.v2.services.PlannedProduct> 
       getPlannedProductsList();
   /**
    * <pre>
-   * The product to be planned.
+   * Required. The products to be forecast.
+   * The max number of allowed planned products is 15.
    * </pre>
    *
-   * <code>repeated .google.ads.googleads.v2.services.PlannedProduct planned_products = 7;</code>
+   * <code>repeated .google.ads.googleads.v2.services.PlannedProduct planned_products = 7 [(.google.api.field_behavior) = REQUIRED];</code>
    */
   com.google.ads.googleads.v2.services.PlannedProduct getPlannedProducts(int index);
   /**
    * <pre>
-   * The product to be planned.
+   * Required. The products to be forecast.
+   * The max number of allowed planned products is 15.
    * </pre>
    *
-   * <code>repeated .google.ads.googleads.v2.services.PlannedProduct planned_products = 7;</code>
+   * <code>repeated .google.ads.googleads.v2.services.PlannedProduct planned_products = 7 [(.google.api.field_behavior) = REQUIRED];</code>
    */
   int getPlannedProductsCount();
   /**
    * <pre>
-   * The product to be planned.
+   * Required. The products to be forecast.
+   * The max number of allowed planned products is 15.
    * </pre>
    *
-   * <code>repeated .google.ads.googleads.v2.services.PlannedProduct planned_products = 7;</code>
+   * <code>repeated .google.ads.googleads.v2.services.PlannedProduct planned_products = 7 [(.google.api.field_behavior) = REQUIRED];</code>
    */
   java.util.List<? extends com.google.ads.googleads.v2.services.PlannedProductOrBuilder> 
       getPlannedProductsOrBuilderList();
   /**
    * <pre>
-   * The product to be planned.
+   * Required. The products to be forecast.
+   * The max number of allowed planned products is 15.
    * </pre>
    *
-   * <code>repeated .google.ads.googleads.v2.services.PlannedProduct planned_products = 7;</code>
+   * <code>repeated .google.ads.googleads.v2.services.PlannedProduct planned_products = 7 [(.google.api.field_behavior) = REQUIRED];</code>
    */
   com.google.ads.googleads.v2.services.PlannedProductOrBuilder getPlannedProductsOrBuilder(
       int index);

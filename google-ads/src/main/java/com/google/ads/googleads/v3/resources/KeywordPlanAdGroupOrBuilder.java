@@ -15,6 +15,7 @@ public interface KeywordPlanAdGroupOrBuilder extends
    * </pre>
    *
    * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * @return The resourceName.
    */
   java.lang.String getResourceName();
   /**
@@ -25,6 +26,7 @@ public interface KeywordPlanAdGroupOrBuilder extends
    * </pre>
    *
    * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * @return The bytes for resourceName.
    */
   com.google.protobuf.ByteString
       getResourceNameBytes();
@@ -35,6 +37,7 @@ public interface KeywordPlanAdGroupOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue keyword_plan_campaign = 2 [(.google.api.resource_reference) = { ... }</code>
+   * @return Whether the keywordPlanCampaign field is set.
    */
   boolean hasKeywordPlanCampaign();
   /**
@@ -43,6 +46,7 @@ public interface KeywordPlanAdGroupOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue keyword_plan_campaign = 2 [(.google.api.resource_reference) = { ... }</code>
+   * @return The keywordPlanCampaign.
    */
   com.google.protobuf.StringValue getKeywordPlanCampaign();
   /**
@@ -60,6 +64,7 @@ public interface KeywordPlanAdGroupOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the id field is set.
    */
   boolean hasId();
   /**
@@ -68,6 +73,7 @@ public interface KeywordPlanAdGroupOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The id.
    */
   com.google.protobuf.Int64Value getId();
   /**
@@ -87,6 +93,7 @@ public interface KeywordPlanAdGroupOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue name = 4;</code>
+   * @return Whether the name field is set.
    */
   boolean hasName();
   /**
@@ -97,6 +104,7 @@ public interface KeywordPlanAdGroupOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue name = 4;</code>
+   * @return The name.
    */
   com.google.protobuf.StringValue getName();
   /**
@@ -118,6 +126,7 @@ public interface KeywordPlanAdGroupOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value cpc_bid_micros = 5;</code>
+   * @return Whether the cpcBidMicros field is set.
    */
   boolean hasCpcBidMicros();
   /**
@@ -128,6 +137,7 @@ public interface KeywordPlanAdGroupOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value cpc_bid_micros = 5;</code>
+   * @return The cpcBidMicros.
    */
   com.google.protobuf.Int64Value getCpcBidMicros();
   /**

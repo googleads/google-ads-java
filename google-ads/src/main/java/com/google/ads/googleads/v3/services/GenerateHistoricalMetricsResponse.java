@@ -10,7 +10,7 @@ package com.google.ads.googleads.v3.services;
  *
  * Protobuf type {@code google.ads.googleads.v3.services.GenerateHistoricalMetricsResponse}
  */
-public  final class GenerateHistoricalMetricsResponse extends
+public final class GenerateHistoricalMetricsResponse extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v3.services.GenerateHistoricalMetricsResponse)
     GenerateHistoricalMetricsResponseOrBuilder {
@@ -21,6 +21,13 @@ private static final long serialVersionUID = 0L;
   }
   private GenerateHistoricalMetricsResponse() {
     metrics_ = java.util.Collections.emptyList();
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new GenerateHistoricalMetricsResponse();
   }
 
   @java.lang.Override
@@ -100,6 +107,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v3.services.KeywordPlanKeywordHistoricalMetrics metrics = 1;</code>
    */
+  @java.lang.Override
   public java.util.List<com.google.ads.googleads.v3.services.KeywordPlanKeywordHistoricalMetrics> getMetricsList() {
     return metrics_;
   }
@@ -110,6 +118,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v3.services.KeywordPlanKeywordHistoricalMetrics metrics = 1;</code>
    */
+  @java.lang.Override
   public java.util.List<? extends com.google.ads.googleads.v3.services.KeywordPlanKeywordHistoricalMetricsOrBuilder> 
       getMetricsOrBuilderList() {
     return metrics_;
@@ -121,6 +130,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v3.services.KeywordPlanKeywordHistoricalMetrics metrics = 1;</code>
    */
+  @java.lang.Override
   public int getMetricsCount() {
     return metrics_.size();
   }
@@ -131,6 +141,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v3.services.KeywordPlanKeywordHistoricalMetrics metrics = 1;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.services.KeywordPlanKeywordHistoricalMetrics getMetrics(int index) {
     return metrics_.get(index);
   }
@@ -141,6 +152,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v3.services.KeywordPlanKeywordHistoricalMetrics metrics = 1;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.services.KeywordPlanKeywordHistoricalMetricsOrBuilder getMetricsOrBuilder(
       int index) {
     return metrics_.get(index);

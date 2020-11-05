@@ -14,6 +14,7 @@ public interface AppAdInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.AdTextAsset mandatory_ad_text = 1;</code>
+   * @return Whether the mandatoryAdText field is set.
    */
   boolean hasMandatoryAdText();
   /**
@@ -23,6 +24,7 @@ public interface AppAdInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.AdTextAsset mandatory_ad_text = 1;</code>
+   * @return The mandatoryAdText.
    */
   com.google.ads.googleads.v3.common.AdTextAsset getMandatoryAdText();
   /**

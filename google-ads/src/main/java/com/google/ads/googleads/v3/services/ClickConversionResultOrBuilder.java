@@ -13,6 +13,7 @@ public interface ClickConversionResultOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue gclid = 1;</code>
+   * @return Whether the gclid field is set.
    */
   boolean hasGclid();
   /**
@@ -21,6 +22,7 @@ public interface ClickConversionResultOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue gclid = 1;</code>
+   * @return The gclid.
    */
   com.google.protobuf.StringValue getGclid();
   /**
@@ -38,6 +40,7 @@ public interface ClickConversionResultOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue conversion_action = 2;</code>
+   * @return Whether the conversionAction field is set.
    */
   boolean hasConversionAction();
   /**
@@ -46,6 +49,7 @@ public interface ClickConversionResultOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue conversion_action = 2;</code>
+   * @return The conversionAction.
    */
   com.google.protobuf.StringValue getConversionAction();
   /**
@@ -64,6 +68,7 @@ public interface ClickConversionResultOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue conversion_date_time = 3;</code>
+   * @return Whether the conversionDateTime field is set.
    */
   boolean hasConversionDateTime();
   /**
@@ -73,6 +78,7 @@ public interface ClickConversionResultOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue conversion_date_time = 3;</code>
+   * @return The conversionDateTime.
    */
   com.google.protobuf.StringValue getConversionDateTime();
   /**

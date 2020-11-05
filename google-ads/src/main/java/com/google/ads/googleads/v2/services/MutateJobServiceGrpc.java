@@ -21,7 +21,7 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.10.0)",
+    value = "by gRPC proto compiler",
     comments = "Source: google/ads/googleads/v2/services/mutate_job_service.proto")
 public final class MutateJobServiceGrpc {
 
@@ -30,197 +30,173 @@ public final class MutateJobServiceGrpc {
   public static final String SERVICE_NAME = "google.ads.googleads.v2.services.MutateJobService";
 
   // Static method descriptors that strictly reflect the proto.
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  @java.lang.Deprecated // Use {@link #getCreateMutateJobMethod()} instead. 
-  public static final io.grpc.MethodDescriptor<com.google.ads.googleads.v2.services.CreateMutateJobRequest,
-      com.google.ads.googleads.v2.services.CreateMutateJobResponse> METHOD_CREATE_MUTATE_JOB = getCreateMutateJobMethodHelper();
-
   private static volatile io.grpc.MethodDescriptor<com.google.ads.googleads.v2.services.CreateMutateJobRequest,
       com.google.ads.googleads.v2.services.CreateMutateJobResponse> getCreateMutateJobMethod;
 
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "CreateMutateJob",
+      requestType = com.google.ads.googleads.v2.services.CreateMutateJobRequest.class,
+      responseType = com.google.ads.googleads.v2.services.CreateMutateJobResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<com.google.ads.googleads.v2.services.CreateMutateJobRequest,
       com.google.ads.googleads.v2.services.CreateMutateJobResponse> getCreateMutateJobMethod() {
-    return getCreateMutateJobMethodHelper();
-  }
-
-  private static io.grpc.MethodDescriptor<com.google.ads.googleads.v2.services.CreateMutateJobRequest,
-      com.google.ads.googleads.v2.services.CreateMutateJobResponse> getCreateMutateJobMethodHelper() {
     io.grpc.MethodDescriptor<com.google.ads.googleads.v2.services.CreateMutateJobRequest, com.google.ads.googleads.v2.services.CreateMutateJobResponse> getCreateMutateJobMethod;
     if ((getCreateMutateJobMethod = MutateJobServiceGrpc.getCreateMutateJobMethod) == null) {
       synchronized (MutateJobServiceGrpc.class) {
         if ((getCreateMutateJobMethod = MutateJobServiceGrpc.getCreateMutateJobMethod) == null) {
-          MutateJobServiceGrpc.getCreateMutateJobMethod = getCreateMutateJobMethod = 
+          MutateJobServiceGrpc.getCreateMutateJobMethod = getCreateMutateJobMethod =
               io.grpc.MethodDescriptor.<com.google.ads.googleads.v2.services.CreateMutateJobRequest, com.google.ads.googleads.v2.services.CreateMutateJobResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "google.ads.googleads.v2.services.MutateJobService", "CreateMutateJob"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreateMutateJob"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v2.services.CreateMutateJobRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v2.services.CreateMutateJobResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new MutateJobServiceMethodDescriptorSupplier("CreateMutateJob"))
-                  .build();
-          }
+              .setSchemaDescriptor(new MutateJobServiceMethodDescriptorSupplier("CreateMutateJob"))
+              .build();
         }
-     }
-     return getCreateMutateJobMethod;
+      }
+    }
+    return getCreateMutateJobMethod;
   }
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  @java.lang.Deprecated // Use {@link #getGetMutateJobMethod()} instead. 
-  public static final io.grpc.MethodDescriptor<com.google.ads.googleads.v2.services.GetMutateJobRequest,
-      com.google.ads.googleads.v2.resources.MutateJob> METHOD_GET_MUTATE_JOB = getGetMutateJobMethodHelper();
 
   private static volatile io.grpc.MethodDescriptor<com.google.ads.googleads.v2.services.GetMutateJobRequest,
       com.google.ads.googleads.v2.resources.MutateJob> getGetMutateJobMethod;
 
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetMutateJob",
+      requestType = com.google.ads.googleads.v2.services.GetMutateJobRequest.class,
+      responseType = com.google.ads.googleads.v2.resources.MutateJob.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<com.google.ads.googleads.v2.services.GetMutateJobRequest,
       com.google.ads.googleads.v2.resources.MutateJob> getGetMutateJobMethod() {
-    return getGetMutateJobMethodHelper();
-  }
-
-  private static io.grpc.MethodDescriptor<com.google.ads.googleads.v2.services.GetMutateJobRequest,
-      com.google.ads.googleads.v2.resources.MutateJob> getGetMutateJobMethodHelper() {
     io.grpc.MethodDescriptor<com.google.ads.googleads.v2.services.GetMutateJobRequest, com.google.ads.googleads.v2.resources.MutateJob> getGetMutateJobMethod;
     if ((getGetMutateJobMethod = MutateJobServiceGrpc.getGetMutateJobMethod) == null) {
       synchronized (MutateJobServiceGrpc.class) {
         if ((getGetMutateJobMethod = MutateJobServiceGrpc.getGetMutateJobMethod) == null) {
-          MutateJobServiceGrpc.getGetMutateJobMethod = getGetMutateJobMethod = 
+          MutateJobServiceGrpc.getGetMutateJobMethod = getGetMutateJobMethod =
               io.grpc.MethodDescriptor.<com.google.ads.googleads.v2.services.GetMutateJobRequest, com.google.ads.googleads.v2.resources.MutateJob>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "google.ads.googleads.v2.services.MutateJobService", "GetMutateJob"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetMutateJob"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v2.services.GetMutateJobRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v2.resources.MutateJob.getDefaultInstance()))
-                  .setSchemaDescriptor(new MutateJobServiceMethodDescriptorSupplier("GetMutateJob"))
-                  .build();
-          }
+              .setSchemaDescriptor(new MutateJobServiceMethodDescriptorSupplier("GetMutateJob"))
+              .build();
         }
-     }
-     return getGetMutateJobMethod;
+      }
+    }
+    return getGetMutateJobMethod;
   }
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  @java.lang.Deprecated // Use {@link #getListMutateJobResultsMethod()} instead. 
-  public static final io.grpc.MethodDescriptor<com.google.ads.googleads.v2.services.ListMutateJobResultsRequest,
-      com.google.ads.googleads.v2.services.ListMutateJobResultsResponse> METHOD_LIST_MUTATE_JOB_RESULTS = getListMutateJobResultsMethodHelper();
 
   private static volatile io.grpc.MethodDescriptor<com.google.ads.googleads.v2.services.ListMutateJobResultsRequest,
       com.google.ads.googleads.v2.services.ListMutateJobResultsResponse> getListMutateJobResultsMethod;
 
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ListMutateJobResults",
+      requestType = com.google.ads.googleads.v2.services.ListMutateJobResultsRequest.class,
+      responseType = com.google.ads.googleads.v2.services.ListMutateJobResultsResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<com.google.ads.googleads.v2.services.ListMutateJobResultsRequest,
       com.google.ads.googleads.v2.services.ListMutateJobResultsResponse> getListMutateJobResultsMethod() {
-    return getListMutateJobResultsMethodHelper();
-  }
-
-  private static io.grpc.MethodDescriptor<com.google.ads.googleads.v2.services.ListMutateJobResultsRequest,
-      com.google.ads.googleads.v2.services.ListMutateJobResultsResponse> getListMutateJobResultsMethodHelper() {
     io.grpc.MethodDescriptor<com.google.ads.googleads.v2.services.ListMutateJobResultsRequest, com.google.ads.googleads.v2.services.ListMutateJobResultsResponse> getListMutateJobResultsMethod;
     if ((getListMutateJobResultsMethod = MutateJobServiceGrpc.getListMutateJobResultsMethod) == null) {
       synchronized (MutateJobServiceGrpc.class) {
         if ((getListMutateJobResultsMethod = MutateJobServiceGrpc.getListMutateJobResultsMethod) == null) {
-          MutateJobServiceGrpc.getListMutateJobResultsMethod = getListMutateJobResultsMethod = 
+          MutateJobServiceGrpc.getListMutateJobResultsMethod = getListMutateJobResultsMethod =
               io.grpc.MethodDescriptor.<com.google.ads.googleads.v2.services.ListMutateJobResultsRequest, com.google.ads.googleads.v2.services.ListMutateJobResultsResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "google.ads.googleads.v2.services.MutateJobService", "ListMutateJobResults"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListMutateJobResults"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v2.services.ListMutateJobResultsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v2.services.ListMutateJobResultsResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new MutateJobServiceMethodDescriptorSupplier("ListMutateJobResults"))
-                  .build();
-          }
+              .setSchemaDescriptor(new MutateJobServiceMethodDescriptorSupplier("ListMutateJobResults"))
+              .build();
         }
-     }
-     return getListMutateJobResultsMethod;
+      }
+    }
+    return getListMutateJobResultsMethod;
   }
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  @java.lang.Deprecated // Use {@link #getRunMutateJobMethod()} instead. 
-  public static final io.grpc.MethodDescriptor<com.google.ads.googleads.v2.services.RunMutateJobRequest,
-      com.google.longrunning.Operation> METHOD_RUN_MUTATE_JOB = getRunMutateJobMethodHelper();
 
   private static volatile io.grpc.MethodDescriptor<com.google.ads.googleads.v2.services.RunMutateJobRequest,
       com.google.longrunning.Operation> getRunMutateJobMethod;
 
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "RunMutateJob",
+      requestType = com.google.ads.googleads.v2.services.RunMutateJobRequest.class,
+      responseType = com.google.longrunning.Operation.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<com.google.ads.googleads.v2.services.RunMutateJobRequest,
       com.google.longrunning.Operation> getRunMutateJobMethod() {
-    return getRunMutateJobMethodHelper();
-  }
-
-  private static io.grpc.MethodDescriptor<com.google.ads.googleads.v2.services.RunMutateJobRequest,
-      com.google.longrunning.Operation> getRunMutateJobMethodHelper() {
     io.grpc.MethodDescriptor<com.google.ads.googleads.v2.services.RunMutateJobRequest, com.google.longrunning.Operation> getRunMutateJobMethod;
     if ((getRunMutateJobMethod = MutateJobServiceGrpc.getRunMutateJobMethod) == null) {
       synchronized (MutateJobServiceGrpc.class) {
         if ((getRunMutateJobMethod = MutateJobServiceGrpc.getRunMutateJobMethod) == null) {
-          MutateJobServiceGrpc.getRunMutateJobMethod = getRunMutateJobMethod = 
+          MutateJobServiceGrpc.getRunMutateJobMethod = getRunMutateJobMethod =
               io.grpc.MethodDescriptor.<com.google.ads.googleads.v2.services.RunMutateJobRequest, com.google.longrunning.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "google.ads.googleads.v2.services.MutateJobService", "RunMutateJob"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "RunMutateJob"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v2.services.RunMutateJobRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.longrunning.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new MutateJobServiceMethodDescriptorSupplier("RunMutateJob"))
-                  .build();
-          }
+              .setSchemaDescriptor(new MutateJobServiceMethodDescriptorSupplier("RunMutateJob"))
+              .build();
         }
-     }
-     return getRunMutateJobMethod;
+      }
+    }
+    return getRunMutateJobMethod;
   }
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  @java.lang.Deprecated // Use {@link #getAddMutateJobOperationsMethod()} instead. 
-  public static final io.grpc.MethodDescriptor<com.google.ads.googleads.v2.services.AddMutateJobOperationsRequest,
-      com.google.ads.googleads.v2.services.AddMutateJobOperationsResponse> METHOD_ADD_MUTATE_JOB_OPERATIONS = getAddMutateJobOperationsMethodHelper();
 
   private static volatile io.grpc.MethodDescriptor<com.google.ads.googleads.v2.services.AddMutateJobOperationsRequest,
       com.google.ads.googleads.v2.services.AddMutateJobOperationsResponse> getAddMutateJobOperationsMethod;
 
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "AddMutateJobOperations",
+      requestType = com.google.ads.googleads.v2.services.AddMutateJobOperationsRequest.class,
+      responseType = com.google.ads.googleads.v2.services.AddMutateJobOperationsResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<com.google.ads.googleads.v2.services.AddMutateJobOperationsRequest,
       com.google.ads.googleads.v2.services.AddMutateJobOperationsResponse> getAddMutateJobOperationsMethod() {
-    return getAddMutateJobOperationsMethodHelper();
-  }
-
-  private static io.grpc.MethodDescriptor<com.google.ads.googleads.v2.services.AddMutateJobOperationsRequest,
-      com.google.ads.googleads.v2.services.AddMutateJobOperationsResponse> getAddMutateJobOperationsMethodHelper() {
     io.grpc.MethodDescriptor<com.google.ads.googleads.v2.services.AddMutateJobOperationsRequest, com.google.ads.googleads.v2.services.AddMutateJobOperationsResponse> getAddMutateJobOperationsMethod;
     if ((getAddMutateJobOperationsMethod = MutateJobServiceGrpc.getAddMutateJobOperationsMethod) == null) {
       synchronized (MutateJobServiceGrpc.class) {
         if ((getAddMutateJobOperationsMethod = MutateJobServiceGrpc.getAddMutateJobOperationsMethod) == null) {
-          MutateJobServiceGrpc.getAddMutateJobOperationsMethod = getAddMutateJobOperationsMethod = 
+          MutateJobServiceGrpc.getAddMutateJobOperationsMethod = getAddMutateJobOperationsMethod =
               io.grpc.MethodDescriptor.<com.google.ads.googleads.v2.services.AddMutateJobOperationsRequest, com.google.ads.googleads.v2.services.AddMutateJobOperationsResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "google.ads.googleads.v2.services.MutateJobService", "AddMutateJobOperations"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "AddMutateJobOperations"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v2.services.AddMutateJobOperationsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v2.services.AddMutateJobOperationsResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new MutateJobServiceMethodDescriptorSupplier("AddMutateJobOperations"))
-                  .build();
-          }
+              .setSchemaDescriptor(new MutateJobServiceMethodDescriptorSupplier("AddMutateJobOperations"))
+              .build();
         }
-     }
-     return getAddMutateJobOperationsMethod;
+      }
+    }
+    return getAddMutateJobOperationsMethod;
   }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static MutateJobServiceStub newStub(io.grpc.Channel channel) {
-    return new MutateJobServiceStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<MutateJobServiceStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<MutateJobServiceStub>() {
+        @java.lang.Override
+        public MutateJobServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new MutateJobServiceStub(channel, callOptions);
+        }
+      };
+    return MutateJobServiceStub.newStub(factory, channel);
   }
 
   /**
@@ -228,7 +204,14 @@ public final class MutateJobServiceGrpc {
    */
   public static MutateJobServiceBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new MutateJobServiceBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<MutateJobServiceBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<MutateJobServiceBlockingStub>() {
+        @java.lang.Override
+        public MutateJobServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new MutateJobServiceBlockingStub(channel, callOptions);
+        }
+      };
+    return MutateJobServiceBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -236,7 +219,14 @@ public final class MutateJobServiceGrpc {
    */
   public static MutateJobServiceFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new MutateJobServiceFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<MutateJobServiceFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<MutateJobServiceFutureStub>() {
+        @java.lang.Override
+        public MutateJobServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new MutateJobServiceFutureStub(channel, callOptions);
+        }
+      };
+    return MutateJobServiceFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -253,7 +243,7 @@ public final class MutateJobServiceGrpc {
      */
     public void createMutateJob(com.google.ads.googleads.v2.services.CreateMutateJobRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v2.services.CreateMutateJobResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getCreateMutateJobMethodHelper(), responseObserver);
+      asyncUnimplementedUnaryCall(getCreateMutateJobMethod(), responseObserver);
     }
 
     /**
@@ -263,7 +253,7 @@ public final class MutateJobServiceGrpc {
      */
     public void getMutateJob(com.google.ads.googleads.v2.services.GetMutateJobRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v2.resources.MutateJob> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetMutateJobMethodHelper(), responseObserver);
+      asyncUnimplementedUnaryCall(getGetMutateJobMethod(), responseObserver);
     }
 
     /**
@@ -274,7 +264,7 @@ public final class MutateJobServiceGrpc {
      */
     public void listMutateJobResults(com.google.ads.googleads.v2.services.ListMutateJobResultsRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v2.services.ListMutateJobResultsResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getListMutateJobResultsMethodHelper(), responseObserver);
+      asyncUnimplementedUnaryCall(getListMutateJobResultsMethod(), responseObserver);
     }
 
     /**
@@ -287,7 +277,7 @@ public final class MutateJobServiceGrpc {
      */
     public void runMutateJob(com.google.ads.googleads.v2.services.RunMutateJobRequest request,
         io.grpc.stub.StreamObserver<com.google.longrunning.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getRunMutateJobMethodHelper(), responseObserver);
+      asyncUnimplementedUnaryCall(getRunMutateJobMethod(), responseObserver);
     }
 
     /**
@@ -297,41 +287,41 @@ public final class MutateJobServiceGrpc {
      */
     public void addMutateJobOperations(com.google.ads.googleads.v2.services.AddMutateJobOperationsRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v2.services.AddMutateJobOperationsResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getAddMutateJobOperationsMethodHelper(), responseObserver);
+      asyncUnimplementedUnaryCall(getAddMutateJobOperationsMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
-            getCreateMutateJobMethodHelper(),
+            getCreateMutateJobMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 com.google.ads.googleads.v2.services.CreateMutateJobRequest,
                 com.google.ads.googleads.v2.services.CreateMutateJobResponse>(
                   this, METHODID_CREATE_MUTATE_JOB)))
           .addMethod(
-            getGetMutateJobMethodHelper(),
+            getGetMutateJobMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 com.google.ads.googleads.v2.services.GetMutateJobRequest,
                 com.google.ads.googleads.v2.resources.MutateJob>(
                   this, METHODID_GET_MUTATE_JOB)))
           .addMethod(
-            getListMutateJobResultsMethodHelper(),
+            getListMutateJobResultsMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 com.google.ads.googleads.v2.services.ListMutateJobResultsRequest,
                 com.google.ads.googleads.v2.services.ListMutateJobResultsResponse>(
                   this, METHODID_LIST_MUTATE_JOB_RESULTS)))
           .addMethod(
-            getRunMutateJobMethodHelper(),
+            getRunMutateJobMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 com.google.ads.googleads.v2.services.RunMutateJobRequest,
                 com.google.longrunning.Operation>(
                   this, METHODID_RUN_MUTATE_JOB)))
           .addMethod(
-            getAddMutateJobOperationsMethodHelper(),
+            getAddMutateJobOperationsMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 com.google.ads.googleads.v2.services.AddMutateJobOperationsRequest,
@@ -346,19 +336,15 @@ public final class MutateJobServiceGrpc {
    * Service to manage mutate jobs.
    * </pre>
    */
-  public static final class MutateJobServiceStub extends io.grpc.stub.AbstractStub<MutateJobServiceStub> {
-    private MutateJobServiceStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private MutateJobServiceStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class MutateJobServiceStub extends io.grpc.stub.AbstractAsyncStub<MutateJobServiceStub> {
+    private MutateJobServiceStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected MutateJobServiceStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected MutateJobServiceStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new MutateJobServiceStub(channel, callOptions);
     }
 
@@ -370,7 +356,7 @@ public final class MutateJobServiceGrpc {
     public void createMutateJob(com.google.ads.googleads.v2.services.CreateMutateJobRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v2.services.CreateMutateJobResponse> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(getCreateMutateJobMethodHelper(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getCreateMutateJobMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -381,7 +367,7 @@ public final class MutateJobServiceGrpc {
     public void getMutateJob(com.google.ads.googleads.v2.services.GetMutateJobRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v2.resources.MutateJob> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(getGetMutateJobMethodHelper(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getGetMutateJobMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -393,7 +379,7 @@ public final class MutateJobServiceGrpc {
     public void listMutateJobResults(com.google.ads.googleads.v2.services.ListMutateJobResultsRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v2.services.ListMutateJobResultsResponse> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(getListMutateJobResultsMethodHelper(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getListMutateJobResultsMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -407,7 +393,7 @@ public final class MutateJobServiceGrpc {
     public void runMutateJob(com.google.ads.googleads.v2.services.RunMutateJobRequest request,
         io.grpc.stub.StreamObserver<com.google.longrunning.Operation> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(getRunMutateJobMethodHelper(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getRunMutateJobMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -418,7 +404,7 @@ public final class MutateJobServiceGrpc {
     public void addMutateJobOperations(com.google.ads.googleads.v2.services.AddMutateJobOperationsRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v2.services.AddMutateJobOperationsResponse> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(getAddMutateJobOperationsMethodHelper(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getAddMutateJobOperationsMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -427,19 +413,15 @@ public final class MutateJobServiceGrpc {
    * Service to manage mutate jobs.
    * </pre>
    */
-  public static final class MutateJobServiceBlockingStub extends io.grpc.stub.AbstractStub<MutateJobServiceBlockingStub> {
-    private MutateJobServiceBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private MutateJobServiceBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class MutateJobServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<MutateJobServiceBlockingStub> {
+    private MutateJobServiceBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected MutateJobServiceBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected MutateJobServiceBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new MutateJobServiceBlockingStub(channel, callOptions);
     }
 
@@ -450,7 +432,7 @@ public final class MutateJobServiceGrpc {
      */
     public com.google.ads.googleads.v2.services.CreateMutateJobResponse createMutateJob(com.google.ads.googleads.v2.services.CreateMutateJobRequest request) {
       return blockingUnaryCall(
-          getChannel(), getCreateMutateJobMethodHelper(), getCallOptions(), request);
+          getChannel(), getCreateMutateJobMethod(), getCallOptions(), request);
     }
 
     /**
@@ -460,7 +442,7 @@ public final class MutateJobServiceGrpc {
      */
     public com.google.ads.googleads.v2.resources.MutateJob getMutateJob(com.google.ads.googleads.v2.services.GetMutateJobRequest request) {
       return blockingUnaryCall(
-          getChannel(), getGetMutateJobMethodHelper(), getCallOptions(), request);
+          getChannel(), getGetMutateJobMethod(), getCallOptions(), request);
     }
 
     /**
@@ -471,7 +453,7 @@ public final class MutateJobServiceGrpc {
      */
     public com.google.ads.googleads.v2.services.ListMutateJobResultsResponse listMutateJobResults(com.google.ads.googleads.v2.services.ListMutateJobResultsRequest request) {
       return blockingUnaryCall(
-          getChannel(), getListMutateJobResultsMethodHelper(), getCallOptions(), request);
+          getChannel(), getListMutateJobResultsMethod(), getCallOptions(), request);
     }
 
     /**
@@ -484,7 +466,7 @@ public final class MutateJobServiceGrpc {
      */
     public com.google.longrunning.Operation runMutateJob(com.google.ads.googleads.v2.services.RunMutateJobRequest request) {
       return blockingUnaryCall(
-          getChannel(), getRunMutateJobMethodHelper(), getCallOptions(), request);
+          getChannel(), getRunMutateJobMethod(), getCallOptions(), request);
     }
 
     /**
@@ -494,7 +476,7 @@ public final class MutateJobServiceGrpc {
      */
     public com.google.ads.googleads.v2.services.AddMutateJobOperationsResponse addMutateJobOperations(com.google.ads.googleads.v2.services.AddMutateJobOperationsRequest request) {
       return blockingUnaryCall(
-          getChannel(), getAddMutateJobOperationsMethodHelper(), getCallOptions(), request);
+          getChannel(), getAddMutateJobOperationsMethod(), getCallOptions(), request);
     }
   }
 
@@ -503,19 +485,15 @@ public final class MutateJobServiceGrpc {
    * Service to manage mutate jobs.
    * </pre>
    */
-  public static final class MutateJobServiceFutureStub extends io.grpc.stub.AbstractStub<MutateJobServiceFutureStub> {
-    private MutateJobServiceFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private MutateJobServiceFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class MutateJobServiceFutureStub extends io.grpc.stub.AbstractFutureStub<MutateJobServiceFutureStub> {
+    private MutateJobServiceFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected MutateJobServiceFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected MutateJobServiceFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new MutateJobServiceFutureStub(channel, callOptions);
     }
 
@@ -527,7 +505,7 @@ public final class MutateJobServiceGrpc {
     public com.google.common.util.concurrent.ListenableFuture<com.google.ads.googleads.v2.services.CreateMutateJobResponse> createMutateJob(
         com.google.ads.googleads.v2.services.CreateMutateJobRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(getCreateMutateJobMethodHelper(), getCallOptions()), request);
+          getChannel().newCall(getCreateMutateJobMethod(), getCallOptions()), request);
     }
 
     /**
@@ -538,7 +516,7 @@ public final class MutateJobServiceGrpc {
     public com.google.common.util.concurrent.ListenableFuture<com.google.ads.googleads.v2.resources.MutateJob> getMutateJob(
         com.google.ads.googleads.v2.services.GetMutateJobRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(getGetMutateJobMethodHelper(), getCallOptions()), request);
+          getChannel().newCall(getGetMutateJobMethod(), getCallOptions()), request);
     }
 
     /**
@@ -550,7 +528,7 @@ public final class MutateJobServiceGrpc {
     public com.google.common.util.concurrent.ListenableFuture<com.google.ads.googleads.v2.services.ListMutateJobResultsResponse> listMutateJobResults(
         com.google.ads.googleads.v2.services.ListMutateJobResultsRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(getListMutateJobResultsMethodHelper(), getCallOptions()), request);
+          getChannel().newCall(getListMutateJobResultsMethod(), getCallOptions()), request);
     }
 
     /**
@@ -564,7 +542,7 @@ public final class MutateJobServiceGrpc {
     public com.google.common.util.concurrent.ListenableFuture<com.google.longrunning.Operation> runMutateJob(
         com.google.ads.googleads.v2.services.RunMutateJobRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(getRunMutateJobMethodHelper(), getCallOptions()), request);
+          getChannel().newCall(getRunMutateJobMethod(), getCallOptions()), request);
     }
 
     /**
@@ -575,7 +553,7 @@ public final class MutateJobServiceGrpc {
     public com.google.common.util.concurrent.ListenableFuture<com.google.ads.googleads.v2.services.AddMutateJobOperationsResponse> addMutateJobOperations(
         com.google.ads.googleads.v2.services.AddMutateJobOperationsRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(getAddMutateJobOperationsMethodHelper(), getCallOptions()), request);
+          getChannel().newCall(getAddMutateJobOperationsMethod(), getCallOptions()), request);
     }
   }
 
@@ -683,11 +661,11 @@ public final class MutateJobServiceGrpc {
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new MutateJobServiceFileDescriptorSupplier())
-              .addMethod(getCreateMutateJobMethodHelper())
-              .addMethod(getGetMutateJobMethodHelper())
-              .addMethod(getListMutateJobResultsMethodHelper())
-              .addMethod(getRunMutateJobMethodHelper())
-              .addMethod(getAddMutateJobOperationsMethodHelper())
+              .addMethod(getCreateMutateJobMethod())
+              .addMethod(getGetMutateJobMethod())
+              .addMethod(getListMutateJobResultsMethod())
+              .addMethod(getRunMutateJobMethod())
+              .addMethod(getAddMutateJobOperationsMethod())
               .build();
         }
       }

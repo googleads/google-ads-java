@@ -10,7 +10,7 @@ package com.google.ads.googleads.v3.resources;
  *
  * Protobuf type {@code google.ads.googleads.v3.resources.GoogleAdsField}
  */
-public  final class GoogleAdsField extends
+public final class GoogleAdsField extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v3.resources.GoogleAdsField)
     GoogleAdsFieldOrBuilder {
@@ -28,6 +28,13 @@ private static final long serialVersionUID = 0L;
     segments_ = java.util.Collections.emptyList();
     enumValues_ = java.util.Collections.emptyList();
     dataType_ = 0;
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new GoogleAdsField();
   }
 
   @java.lang.Override
@@ -119,45 +126,45 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 58: {
-            if (!((mutable_bitField0_ & 0x00000040) != 0)) {
+            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
               selectableWith_ = new java.util.ArrayList<com.google.protobuf.StringValue>();
-              mutable_bitField0_ |= 0x00000040;
+              mutable_bitField0_ |= 0x00000001;
             }
             selectableWith_.add(
                 input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry));
             break;
           }
           case 66: {
-            if (!((mutable_bitField0_ & 0x00000080) != 0)) {
+            if (!((mutable_bitField0_ & 0x00000002) != 0)) {
               attributeResources_ = new java.util.ArrayList<com.google.protobuf.StringValue>();
-              mutable_bitField0_ |= 0x00000080;
+              mutable_bitField0_ |= 0x00000002;
             }
             attributeResources_.add(
                 input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry));
             break;
           }
           case 74: {
-            if (!((mutable_bitField0_ & 0x00000100) != 0)) {
+            if (!((mutable_bitField0_ & 0x00000004) != 0)) {
               metrics_ = new java.util.ArrayList<com.google.protobuf.StringValue>();
-              mutable_bitField0_ |= 0x00000100;
+              mutable_bitField0_ |= 0x00000004;
             }
             metrics_.add(
                 input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry));
             break;
           }
           case 82: {
-            if (!((mutable_bitField0_ & 0x00000200) != 0)) {
+            if (!((mutable_bitField0_ & 0x00000008) != 0)) {
               segments_ = new java.util.ArrayList<com.google.protobuf.StringValue>();
-              mutable_bitField0_ |= 0x00000200;
+              mutable_bitField0_ |= 0x00000008;
             }
             segments_.add(
                 input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry));
             break;
           }
           case 90: {
-            if (!((mutable_bitField0_ & 0x00000400) != 0)) {
+            if (!((mutable_bitField0_ & 0x00000010) != 0)) {
               enumValues_ = new java.util.ArrayList<com.google.protobuf.StringValue>();
-              mutable_bitField0_ |= 0x00000400;
+              mutable_bitField0_ |= 0x00000010;
             }
             enumValues_.add(
                 input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry));
@@ -210,19 +217,19 @@ private static final long serialVersionUID = 0L;
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
     } finally {
-      if (((mutable_bitField0_ & 0x00000040) != 0)) {
+      if (((mutable_bitField0_ & 0x00000001) != 0)) {
         selectableWith_ = java.util.Collections.unmodifiableList(selectableWith_);
       }
-      if (((mutable_bitField0_ & 0x00000080) != 0)) {
+      if (((mutable_bitField0_ & 0x00000002) != 0)) {
         attributeResources_ = java.util.Collections.unmodifiableList(attributeResources_);
       }
-      if (((mutable_bitField0_ & 0x00000100) != 0)) {
+      if (((mutable_bitField0_ & 0x00000004) != 0)) {
         metrics_ = java.util.Collections.unmodifiableList(metrics_);
       }
-      if (((mutable_bitField0_ & 0x00000200) != 0)) {
+      if (((mutable_bitField0_ & 0x00000008) != 0)) {
         segments_ = java.util.Collections.unmodifiableList(segments_);
       }
-      if (((mutable_bitField0_ & 0x00000400) != 0)) {
+      if (((mutable_bitField0_ & 0x00000010) != 0)) {
         enumValues_ = java.util.Collections.unmodifiableList(enumValues_);
       }
       this.unknownFields = unknownFields.build();
@@ -242,7 +249,6 @@ private static final long serialVersionUID = 0L;
             com.google.ads.googleads.v3.resources.GoogleAdsField.class, com.google.ads.googleads.v3.resources.GoogleAdsField.Builder.class);
   }
 
-  private int bitField0_;
   public static final int RESOURCE_NAME_FIELD_NUMBER = 1;
   private volatile java.lang.Object resourceName_;
   /**
@@ -253,7 +259,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The resourceName.
    */
+  @java.lang.Override
   public java.lang.String getResourceName() {
     java.lang.Object ref = resourceName_;
     if (ref instanceof java.lang.String) {
@@ -274,7 +282,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The bytes for resourceName.
    */
+  @java.lang.Override
   public com.google.protobuf.ByteString
       getResourceNameBytes() {
     java.lang.Object ref = resourceName_;
@@ -297,7 +307,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue name = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the name field is set.
    */
+  @java.lang.Override
   public boolean hasName() {
     return name_ != null;
   }
@@ -307,7 +319,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue name = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The name.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getName() {
     return name_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : name_;
   }
@@ -318,6 +332,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue name = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getNameOrBuilder() {
     return getName();
   }
@@ -330,8 +345,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.GoogleAdsFieldCategoryEnum.GoogleAdsFieldCategory category = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The enum numeric value on the wire for category.
    */
-  public int getCategoryValue() {
+  @java.lang.Override public int getCategoryValue() {
     return category_;
   }
   /**
@@ -340,8 +356,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.GoogleAdsFieldCategoryEnum.GoogleAdsFieldCategory category = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The category.
    */
-  public com.google.ads.googleads.v3.enums.GoogleAdsFieldCategoryEnum.GoogleAdsFieldCategory getCategory() {
+  @java.lang.Override public com.google.ads.googleads.v3.enums.GoogleAdsFieldCategoryEnum.GoogleAdsFieldCategory getCategory() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v3.enums.GoogleAdsFieldCategoryEnum.GoogleAdsFieldCategory result = com.google.ads.googleads.v3.enums.GoogleAdsFieldCategoryEnum.GoogleAdsFieldCategory.valueOf(category_);
     return result == null ? com.google.ads.googleads.v3.enums.GoogleAdsFieldCategoryEnum.GoogleAdsFieldCategory.UNRECOGNIZED : result;
@@ -356,7 +373,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.BoolValue selectable = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the selectable field is set.
    */
+  @java.lang.Override
   public boolean hasSelectable() {
     return selectable_ != null;
   }
@@ -367,7 +386,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.BoolValue selectable = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The selectable.
    */
+  @java.lang.Override
   public com.google.protobuf.BoolValue getSelectable() {
     return selectable_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : selectable_;
   }
@@ -379,6 +400,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.BoolValue selectable = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.BoolValueOrBuilder getSelectableOrBuilder() {
     return getSelectable();
   }
@@ -392,7 +414,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.BoolValue filterable = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the filterable field is set.
    */
+  @java.lang.Override
   public boolean hasFilterable() {
     return filterable_ != null;
   }
@@ -403,7 +427,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.BoolValue filterable = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The filterable.
    */
+  @java.lang.Override
   public com.google.protobuf.BoolValue getFilterable() {
     return filterable_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : filterable_;
   }
@@ -415,6 +441,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.BoolValue filterable = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.BoolValueOrBuilder getFilterableOrBuilder() {
     return getFilterable();
   }
@@ -428,7 +455,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.BoolValue sortable = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the sortable field is set.
    */
+  @java.lang.Override
   public boolean hasSortable() {
     return sortable_ != null;
   }
@@ -439,7 +468,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.BoolValue sortable = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The sortable.
    */
+  @java.lang.Override
   public com.google.protobuf.BoolValue getSortable() {
     return sortable_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : sortable_;
   }
@@ -451,6 +482,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.BoolValue sortable = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.BoolValueOrBuilder getSortableOrBuilder() {
     return getSortable();
   }
@@ -465,6 +497,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.StringValue selectable_with = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public java.util.List<com.google.protobuf.StringValue> getSelectableWithList() {
     return selectableWith_;
   }
@@ -476,6 +509,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.StringValue selectable_with = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public java.util.List<? extends com.google.protobuf.StringValueOrBuilder> 
       getSelectableWithOrBuilderList() {
     return selectableWith_;
@@ -488,6 +522,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.StringValue selectable_with = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public int getSelectableWithCount() {
     return selectableWith_.size();
   }
@@ -499,6 +534,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.StringValue selectable_with = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getSelectableWith(int index) {
     return selectableWith_.get(index);
   }
@@ -510,6 +546,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.StringValue selectable_with = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getSelectableWithOrBuilder(
       int index) {
     return selectableWith_.get(index);
@@ -527,6 +564,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.StringValue attribute_resources = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public java.util.List<com.google.protobuf.StringValue> getAttributeResourcesList() {
     return attributeResources_;
   }
@@ -540,6 +578,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.StringValue attribute_resources = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public java.util.List<? extends com.google.protobuf.StringValueOrBuilder> 
       getAttributeResourcesOrBuilderList() {
     return attributeResources_;
@@ -554,6 +593,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.StringValue attribute_resources = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public int getAttributeResourcesCount() {
     return attributeResources_.size();
   }
@@ -567,6 +607,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.StringValue attribute_resources = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getAttributeResources(int index) {
     return attributeResources_.get(index);
   }
@@ -580,6 +621,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.StringValue attribute_resources = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getAttributeResourcesOrBuilder(
       int index) {
     return attributeResources_.get(index);
@@ -599,6 +641,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.StringValue metrics = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public java.util.List<com.google.protobuf.StringValue> getMetricsList() {
     return metrics_;
   }
@@ -614,6 +657,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.StringValue metrics = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public java.util.List<? extends com.google.protobuf.StringValueOrBuilder> 
       getMetricsOrBuilderList() {
     return metrics_;
@@ -630,6 +674,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.StringValue metrics = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public int getMetricsCount() {
     return metrics_.size();
   }
@@ -645,6 +690,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.StringValue metrics = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getMetrics(int index) {
     return metrics_.get(index);
   }
@@ -660,6 +706,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.StringValue metrics = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getMetricsOrBuilder(
       int index) {
     return metrics_.get(index);
@@ -681,6 +728,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.StringValue segments = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public java.util.List<com.google.protobuf.StringValue> getSegmentsList() {
     return segments_;
   }
@@ -698,6 +746,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.StringValue segments = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public java.util.List<? extends com.google.protobuf.StringValueOrBuilder> 
       getSegmentsOrBuilderList() {
     return segments_;
@@ -716,6 +765,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.StringValue segments = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public int getSegmentsCount() {
     return segments_.size();
   }
@@ -733,6 +783,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.StringValue segments = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getSegments(int index) {
     return segments_.get(index);
   }
@@ -750,6 +801,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.StringValue segments = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getSegmentsOrBuilder(
       int index) {
     return segments_.get(index);
@@ -765,6 +817,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.StringValue enum_values = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public java.util.List<com.google.protobuf.StringValue> getEnumValuesList() {
     return enumValues_;
   }
@@ -776,6 +829,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.StringValue enum_values = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public java.util.List<? extends com.google.protobuf.StringValueOrBuilder> 
       getEnumValuesOrBuilderList() {
     return enumValues_;
@@ -788,6 +842,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.StringValue enum_values = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public int getEnumValuesCount() {
     return enumValues_.size();
   }
@@ -799,6 +854,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.StringValue enum_values = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getEnumValues(int index) {
     return enumValues_.get(index);
   }
@@ -810,6 +866,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.StringValue enum_values = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getEnumValuesOrBuilder(
       int index) {
     return enumValues_.get(index);
@@ -824,8 +881,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.GoogleAdsFieldDataTypeEnum.GoogleAdsFieldDataType data_type = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The enum numeric value on the wire for dataType.
    */
-  public int getDataTypeValue() {
+  @java.lang.Override public int getDataTypeValue() {
     return dataType_;
   }
   /**
@@ -835,8 +893,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.GoogleAdsFieldDataTypeEnum.GoogleAdsFieldDataType data_type = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The dataType.
    */
-  public com.google.ads.googleads.v3.enums.GoogleAdsFieldDataTypeEnum.GoogleAdsFieldDataType getDataType() {
+  @java.lang.Override public com.google.ads.googleads.v3.enums.GoogleAdsFieldDataTypeEnum.GoogleAdsFieldDataType getDataType() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v3.enums.GoogleAdsFieldDataTypeEnum.GoogleAdsFieldDataType result = com.google.ads.googleads.v3.enums.GoogleAdsFieldDataTypeEnum.GoogleAdsFieldDataType.valueOf(dataType_);
     return result == null ? com.google.ads.googleads.v3.enums.GoogleAdsFieldDataTypeEnum.GoogleAdsFieldDataType.UNRECOGNIZED : result;
@@ -850,7 +909,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue type_url = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the typeUrl field is set.
    */
+  @java.lang.Override
   public boolean hasTypeUrl() {
     return typeUrl_ != null;
   }
@@ -860,7 +921,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue type_url = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The typeUrl.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getTypeUrl() {
     return typeUrl_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : typeUrl_;
   }
@@ -871,6 +934,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue type_url = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getTypeUrlOrBuilder() {
     return getTypeUrl();
   }
@@ -883,7 +947,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.BoolValue is_repeated = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the isRepeated field is set.
    */
+  @java.lang.Override
   public boolean hasIsRepeated() {
     return isRepeated_ != null;
   }
@@ -893,7 +959,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.BoolValue is_repeated = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The isRepeated.
    */
+  @java.lang.Override
   public com.google.protobuf.BoolValue getIsRepeated() {
     return isRepeated_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : isRepeated_;
   }
@@ -904,6 +972,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.BoolValue is_repeated = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.BoolValueOrBuilder getIsRepeatedOrBuilder() {
     return getIsRepeated();
   }
@@ -1320,31 +1389,31 @@ private static final long serialVersionUID = 0L;
       }
       if (selectableWithBuilder_ == null) {
         selectableWith_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000040);
+        bitField0_ = (bitField0_ & ~0x00000001);
       } else {
         selectableWithBuilder_.clear();
       }
       if (attributeResourcesBuilder_ == null) {
         attributeResources_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000080);
+        bitField0_ = (bitField0_ & ~0x00000002);
       } else {
         attributeResourcesBuilder_.clear();
       }
       if (metricsBuilder_ == null) {
         metrics_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000100);
+        bitField0_ = (bitField0_ & ~0x00000004);
       } else {
         metricsBuilder_.clear();
       }
       if (segmentsBuilder_ == null) {
         segments_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000200);
+        bitField0_ = (bitField0_ & ~0x00000008);
       } else {
         segmentsBuilder_.clear();
       }
       if (enumValuesBuilder_ == null) {
         enumValues_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000400);
+        bitField0_ = (bitField0_ & ~0x00000010);
       } else {
         enumValuesBuilder_.clear();
       }
@@ -1389,7 +1458,6 @@ private static final long serialVersionUID = 0L;
     public com.google.ads.googleads.v3.resources.GoogleAdsField buildPartial() {
       com.google.ads.googleads.v3.resources.GoogleAdsField result = new com.google.ads.googleads.v3.resources.GoogleAdsField(this);
       int from_bitField0_ = bitField0_;
-      int to_bitField0_ = 0;
       result.resourceName_ = resourceName_;
       if (nameBuilder_ == null) {
         result.name_ = name_;
@@ -1413,45 +1481,45 @@ private static final long serialVersionUID = 0L;
         result.sortable_ = sortableBuilder_.build();
       }
       if (selectableWithBuilder_ == null) {
-        if (((bitField0_ & 0x00000040) != 0)) {
+        if (((bitField0_ & 0x00000001) != 0)) {
           selectableWith_ = java.util.Collections.unmodifiableList(selectableWith_);
-          bitField0_ = (bitField0_ & ~0x00000040);
+          bitField0_ = (bitField0_ & ~0x00000001);
         }
         result.selectableWith_ = selectableWith_;
       } else {
         result.selectableWith_ = selectableWithBuilder_.build();
       }
       if (attributeResourcesBuilder_ == null) {
-        if (((bitField0_ & 0x00000080) != 0)) {
+        if (((bitField0_ & 0x00000002) != 0)) {
           attributeResources_ = java.util.Collections.unmodifiableList(attributeResources_);
-          bitField0_ = (bitField0_ & ~0x00000080);
+          bitField0_ = (bitField0_ & ~0x00000002);
         }
         result.attributeResources_ = attributeResources_;
       } else {
         result.attributeResources_ = attributeResourcesBuilder_.build();
       }
       if (metricsBuilder_ == null) {
-        if (((bitField0_ & 0x00000100) != 0)) {
+        if (((bitField0_ & 0x00000004) != 0)) {
           metrics_ = java.util.Collections.unmodifiableList(metrics_);
-          bitField0_ = (bitField0_ & ~0x00000100);
+          bitField0_ = (bitField0_ & ~0x00000004);
         }
         result.metrics_ = metrics_;
       } else {
         result.metrics_ = metricsBuilder_.build();
       }
       if (segmentsBuilder_ == null) {
-        if (((bitField0_ & 0x00000200) != 0)) {
+        if (((bitField0_ & 0x00000008) != 0)) {
           segments_ = java.util.Collections.unmodifiableList(segments_);
-          bitField0_ = (bitField0_ & ~0x00000200);
+          bitField0_ = (bitField0_ & ~0x00000008);
         }
         result.segments_ = segments_;
       } else {
         result.segments_ = segmentsBuilder_.build();
       }
       if (enumValuesBuilder_ == null) {
-        if (((bitField0_ & 0x00000400) != 0)) {
+        if (((bitField0_ & 0x00000010) != 0)) {
           enumValues_ = java.util.Collections.unmodifiableList(enumValues_);
-          bitField0_ = (bitField0_ & ~0x00000400);
+          bitField0_ = (bitField0_ & ~0x00000010);
         }
         result.enumValues_ = enumValues_;
       } else {
@@ -1468,7 +1536,6 @@ private static final long serialVersionUID = 0L;
       } else {
         result.isRepeated_ = isRepeatedBuilder_.build();
       }
-      result.bitField0_ = to_bitField0_;
       onBuilt();
       return result;
     }
@@ -1540,7 +1607,7 @@ private static final long serialVersionUID = 0L;
         if (!other.selectableWith_.isEmpty()) {
           if (selectableWith_.isEmpty()) {
             selectableWith_ = other.selectableWith_;
-            bitField0_ = (bitField0_ & ~0x00000040);
+            bitField0_ = (bitField0_ & ~0x00000001);
           } else {
             ensureSelectableWithIsMutable();
             selectableWith_.addAll(other.selectableWith_);
@@ -1553,7 +1620,7 @@ private static final long serialVersionUID = 0L;
             selectableWithBuilder_.dispose();
             selectableWithBuilder_ = null;
             selectableWith_ = other.selectableWith_;
-            bitField0_ = (bitField0_ & ~0x00000040);
+            bitField0_ = (bitField0_ & ~0x00000001);
             selectableWithBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getSelectableWithFieldBuilder() : null;
@@ -1566,7 +1633,7 @@ private static final long serialVersionUID = 0L;
         if (!other.attributeResources_.isEmpty()) {
           if (attributeResources_.isEmpty()) {
             attributeResources_ = other.attributeResources_;
-            bitField0_ = (bitField0_ & ~0x00000080);
+            bitField0_ = (bitField0_ & ~0x00000002);
           } else {
             ensureAttributeResourcesIsMutable();
             attributeResources_.addAll(other.attributeResources_);
@@ -1579,7 +1646,7 @@ private static final long serialVersionUID = 0L;
             attributeResourcesBuilder_.dispose();
             attributeResourcesBuilder_ = null;
             attributeResources_ = other.attributeResources_;
-            bitField0_ = (bitField0_ & ~0x00000080);
+            bitField0_ = (bitField0_ & ~0x00000002);
             attributeResourcesBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getAttributeResourcesFieldBuilder() : null;
@@ -1592,7 +1659,7 @@ private static final long serialVersionUID = 0L;
         if (!other.metrics_.isEmpty()) {
           if (metrics_.isEmpty()) {
             metrics_ = other.metrics_;
-            bitField0_ = (bitField0_ & ~0x00000100);
+            bitField0_ = (bitField0_ & ~0x00000004);
           } else {
             ensureMetricsIsMutable();
             metrics_.addAll(other.metrics_);
@@ -1605,7 +1672,7 @@ private static final long serialVersionUID = 0L;
             metricsBuilder_.dispose();
             metricsBuilder_ = null;
             metrics_ = other.metrics_;
-            bitField0_ = (bitField0_ & ~0x00000100);
+            bitField0_ = (bitField0_ & ~0x00000004);
             metricsBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getMetricsFieldBuilder() : null;
@@ -1618,7 +1685,7 @@ private static final long serialVersionUID = 0L;
         if (!other.segments_.isEmpty()) {
           if (segments_.isEmpty()) {
             segments_ = other.segments_;
-            bitField0_ = (bitField0_ & ~0x00000200);
+            bitField0_ = (bitField0_ & ~0x00000008);
           } else {
             ensureSegmentsIsMutable();
             segments_.addAll(other.segments_);
@@ -1631,7 +1698,7 @@ private static final long serialVersionUID = 0L;
             segmentsBuilder_.dispose();
             segmentsBuilder_ = null;
             segments_ = other.segments_;
-            bitField0_ = (bitField0_ & ~0x00000200);
+            bitField0_ = (bitField0_ & ~0x00000008);
             segmentsBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getSegmentsFieldBuilder() : null;
@@ -1644,7 +1711,7 @@ private static final long serialVersionUID = 0L;
         if (!other.enumValues_.isEmpty()) {
           if (enumValues_.isEmpty()) {
             enumValues_ = other.enumValues_;
-            bitField0_ = (bitField0_ & ~0x00000400);
+            bitField0_ = (bitField0_ & ~0x00000010);
           } else {
             ensureEnumValuesIsMutable();
             enumValues_.addAll(other.enumValues_);
@@ -1657,7 +1724,7 @@ private static final long serialVersionUID = 0L;
             enumValuesBuilder_.dispose();
             enumValuesBuilder_ = null;
             enumValues_ = other.enumValues_;
-            bitField0_ = (bitField0_ & ~0x00000400);
+            bitField0_ = (bitField0_ & ~0x00000010);
             enumValuesBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getEnumValuesFieldBuilder() : null;
@@ -1714,6 +1781,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @return The resourceName.
      */
     public java.lang.String getResourceName() {
       java.lang.Object ref = resourceName_;
@@ -1735,6 +1803,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @return The bytes for resourceName.
      */
     public com.google.protobuf.ByteString
         getResourceNameBytes() {
@@ -1757,6 +1826,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @param value The resourceName to set.
+     * @return This builder for chaining.
      */
     public Builder setResourceName(
         java.lang.String value) {
@@ -1776,6 +1847,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @return This builder for chaining.
      */
     public Builder clearResourceName() {
       
@@ -1791,6 +1863,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @param value The bytes for resourceName to set.
+     * @return This builder for chaining.
      */
     public Builder setResourceNameBytes(
         com.google.protobuf.ByteString value) {
@@ -1813,6 +1887,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue name = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the name field is set.
      */
     public boolean hasName() {
       return nameBuilder_ != null || name_ != null;
@@ -1823,6 +1898,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue name = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The name.
      */
     public com.google.protobuf.StringValue getName() {
       if (nameBuilder_ == null) {
@@ -1964,8 +2040,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.GoogleAdsFieldCategoryEnum.GoogleAdsFieldCategory category = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The enum numeric value on the wire for category.
      */
-    public int getCategoryValue() {
+    @java.lang.Override public int getCategoryValue() {
       return category_;
     }
     /**
@@ -1974,8 +2051,11 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.GoogleAdsFieldCategoryEnum.GoogleAdsFieldCategory category = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @param value The enum numeric value on the wire for category to set.
+     * @return This builder for chaining.
      */
     public Builder setCategoryValue(int value) {
+      
       category_ = value;
       onChanged();
       return this;
@@ -1986,7 +2066,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.GoogleAdsFieldCategoryEnum.GoogleAdsFieldCategory category = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The category.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.enums.GoogleAdsFieldCategoryEnum.GoogleAdsFieldCategory getCategory() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v3.enums.GoogleAdsFieldCategoryEnum.GoogleAdsFieldCategory result = com.google.ads.googleads.v3.enums.GoogleAdsFieldCategoryEnum.GoogleAdsFieldCategory.valueOf(category_);
@@ -1998,6 +2080,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.GoogleAdsFieldCategoryEnum.GoogleAdsFieldCategory category = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @param value The category to set.
+     * @return This builder for chaining.
      */
     public Builder setCategory(com.google.ads.googleads.v3.enums.GoogleAdsFieldCategoryEnum.GoogleAdsFieldCategory value) {
       if (value == null) {
@@ -2014,6 +2098,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.GoogleAdsFieldCategoryEnum.GoogleAdsFieldCategory category = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return This builder for chaining.
      */
     public Builder clearCategory() {
       
@@ -2032,6 +2117,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.BoolValue selectable = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the selectable field is set.
      */
     public boolean hasSelectable() {
       return selectableBuilder_ != null || selectable_ != null;
@@ -2043,6 +2129,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.BoolValue selectable = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The selectable.
      */
     public com.google.protobuf.BoolValue getSelectable() {
       if (selectableBuilder_ == null) {
@@ -2194,6 +2281,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.BoolValue filterable = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the filterable field is set.
      */
     public boolean hasFilterable() {
       return filterableBuilder_ != null || filterable_ != null;
@@ -2205,6 +2293,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.BoolValue filterable = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The filterable.
      */
     public com.google.protobuf.BoolValue getFilterable() {
       if (filterableBuilder_ == null) {
@@ -2356,6 +2445,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.BoolValue sortable = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the sortable field is set.
      */
     public boolean hasSortable() {
       return sortableBuilder_ != null || sortable_ != null;
@@ -2367,6 +2457,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.BoolValue sortable = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The sortable.
      */
     public com.google.protobuf.BoolValue getSortable() {
       if (sortableBuilder_ == null) {
@@ -2511,9 +2602,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.google.protobuf.StringValue> selectableWith_ =
       java.util.Collections.emptyList();
     private void ensureSelectableWithIsMutable() {
-      if (!((bitField0_ & 0x00000040) != 0)) {
+      if (!((bitField0_ & 0x00000001) != 0)) {
         selectableWith_ = new java.util.ArrayList<com.google.protobuf.StringValue>(selectableWith_);
-        bitField0_ |= 0x00000040;
+        bitField0_ |= 0x00000001;
        }
     }
 
@@ -2718,7 +2809,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearSelectableWith() {
       if (selectableWithBuilder_ == null) {
         selectableWith_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000040);
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
       } else {
         selectableWithBuilder_.clear();
@@ -2830,7 +2921,7 @@ private static final long serialVersionUID = 0L;
         selectableWithBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
                 selectableWith_,
-                ((bitField0_ & 0x00000040) != 0),
+                ((bitField0_ & 0x00000001) != 0),
                 getParentForChildren(),
                 isClean());
         selectableWith_ = null;
@@ -2841,9 +2932,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.google.protobuf.StringValue> attributeResources_ =
       java.util.Collections.emptyList();
     private void ensureAttributeResourcesIsMutable() {
-      if (!((bitField0_ & 0x00000080) != 0)) {
+      if (!((bitField0_ & 0x00000002) != 0)) {
         attributeResources_ = new java.util.ArrayList<com.google.protobuf.StringValue>(attributeResources_);
-        bitField0_ |= 0x00000080;
+        bitField0_ |= 0x00000002;
        }
     }
 
@@ -3070,7 +3161,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearAttributeResources() {
       if (attributeResourcesBuilder_ == null) {
         attributeResources_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000080);
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
       } else {
         attributeResourcesBuilder_.clear();
@@ -3196,7 +3287,7 @@ private static final long serialVersionUID = 0L;
         attributeResourcesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
                 attributeResources_,
-                ((bitField0_ & 0x00000080) != 0),
+                ((bitField0_ & 0x00000002) != 0),
                 getParentForChildren(),
                 isClean());
         attributeResources_ = null;
@@ -3207,9 +3298,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.google.protobuf.StringValue> metrics_ =
       java.util.Collections.emptyList();
     private void ensureMetricsIsMutable() {
-      if (!((bitField0_ & 0x00000100) != 0)) {
+      if (!((bitField0_ & 0x00000004) != 0)) {
         metrics_ = new java.util.ArrayList<com.google.protobuf.StringValue>(metrics_);
-        bitField0_ |= 0x00000100;
+        bitField0_ |= 0x00000004;
        }
     }
 
@@ -3458,7 +3549,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearMetrics() {
       if (metricsBuilder_ == null) {
         metrics_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000100);
+        bitField0_ = (bitField0_ & ~0x00000004);
         onChanged();
       } else {
         metricsBuilder_.clear();
@@ -3598,7 +3689,7 @@ private static final long serialVersionUID = 0L;
         metricsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
                 metrics_,
-                ((bitField0_ & 0x00000100) != 0),
+                ((bitField0_ & 0x00000004) != 0),
                 getParentForChildren(),
                 isClean());
         metrics_ = null;
@@ -3609,9 +3700,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.google.protobuf.StringValue> segments_ =
       java.util.Collections.emptyList();
     private void ensureSegmentsIsMutable() {
-      if (!((bitField0_ & 0x00000200) != 0)) {
+      if (!((bitField0_ & 0x00000008) != 0)) {
         segments_ = new java.util.ArrayList<com.google.protobuf.StringValue>(segments_);
-        bitField0_ |= 0x00000200;
+        bitField0_ |= 0x00000008;
        }
     }
 
@@ -3882,7 +3973,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearSegments() {
       if (segmentsBuilder_ == null) {
         segments_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000200);
+        bitField0_ = (bitField0_ & ~0x00000008);
         onChanged();
       } else {
         segmentsBuilder_.clear();
@@ -4036,7 +4127,7 @@ private static final long serialVersionUID = 0L;
         segmentsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
                 segments_,
-                ((bitField0_ & 0x00000200) != 0),
+                ((bitField0_ & 0x00000008) != 0),
                 getParentForChildren(),
                 isClean());
         segments_ = null;
@@ -4047,9 +4138,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.google.protobuf.StringValue> enumValues_ =
       java.util.Collections.emptyList();
     private void ensureEnumValuesIsMutable() {
-      if (!((bitField0_ & 0x00000400) != 0)) {
+      if (!((bitField0_ & 0x00000010) != 0)) {
         enumValues_ = new java.util.ArrayList<com.google.protobuf.StringValue>(enumValues_);
-        bitField0_ |= 0x00000400;
+        bitField0_ |= 0x00000010;
        }
     }
 
@@ -4254,7 +4345,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearEnumValues() {
       if (enumValuesBuilder_ == null) {
         enumValues_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000400);
+        bitField0_ = (bitField0_ & ~0x00000010);
         onChanged();
       } else {
         enumValuesBuilder_.clear();
@@ -4366,7 +4457,7 @@ private static final long serialVersionUID = 0L;
         enumValuesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
                 enumValues_,
-                ((bitField0_ & 0x00000400) != 0),
+                ((bitField0_ & 0x00000010) != 0),
                 getParentForChildren(),
                 isClean());
         enumValues_ = null;
@@ -4382,8 +4473,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.GoogleAdsFieldDataTypeEnum.GoogleAdsFieldDataType data_type = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The enum numeric value on the wire for dataType.
      */
-    public int getDataTypeValue() {
+    @java.lang.Override public int getDataTypeValue() {
       return dataType_;
     }
     /**
@@ -4393,8 +4485,11 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.GoogleAdsFieldDataTypeEnum.GoogleAdsFieldDataType data_type = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @param value The enum numeric value on the wire for dataType to set.
+     * @return This builder for chaining.
      */
     public Builder setDataTypeValue(int value) {
+      
       dataType_ = value;
       onChanged();
       return this;
@@ -4406,7 +4501,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.GoogleAdsFieldDataTypeEnum.GoogleAdsFieldDataType data_type = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The dataType.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.enums.GoogleAdsFieldDataTypeEnum.GoogleAdsFieldDataType getDataType() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v3.enums.GoogleAdsFieldDataTypeEnum.GoogleAdsFieldDataType result = com.google.ads.googleads.v3.enums.GoogleAdsFieldDataTypeEnum.GoogleAdsFieldDataType.valueOf(dataType_);
@@ -4419,6 +4516,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.GoogleAdsFieldDataTypeEnum.GoogleAdsFieldDataType data_type = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @param value The dataType to set.
+     * @return This builder for chaining.
      */
     public Builder setDataType(com.google.ads.googleads.v3.enums.GoogleAdsFieldDataTypeEnum.GoogleAdsFieldDataType value) {
       if (value == null) {
@@ -4436,6 +4535,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.GoogleAdsFieldDataTypeEnum.GoogleAdsFieldDataType data_type = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return This builder for chaining.
      */
     public Builder clearDataType() {
       
@@ -4453,6 +4553,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue type_url = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the typeUrl field is set.
      */
     public boolean hasTypeUrl() {
       return typeUrlBuilder_ != null || typeUrl_ != null;
@@ -4463,6 +4564,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue type_url = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The typeUrl.
      */
     public com.google.protobuf.StringValue getTypeUrl() {
       if (typeUrlBuilder_ == null) {
@@ -4606,6 +4708,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.BoolValue is_repeated = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the isRepeated field is set.
      */
     public boolean hasIsRepeated() {
       return isRepeatedBuilder_ != null || isRepeated_ != null;
@@ -4616,6 +4719,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.BoolValue is_repeated = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The isRepeated.
      */
     public com.google.protobuf.BoolValue getIsRepeated() {
       if (isRepeatedBuilder_ == null) {

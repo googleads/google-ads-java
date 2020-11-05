@@ -14,6 +14,7 @@ public interface AdGroupCriterionLabelOperationOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.AdGroupCriterionLabel create = 1;</code>
+   * @return Whether the create field is set.
    */
   boolean hasCreate();
   /**
@@ -23,6 +24,7 @@ public interface AdGroupCriterionLabelOperationOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.AdGroupCriterionLabel create = 1;</code>
+   * @return The create.
    */
   com.google.ads.googleads.v3.resources.AdGroupCriterionLabel getCreate();
   /**
@@ -43,6 +45,7 @@ public interface AdGroupCriterionLabelOperationOrBuilder extends
    * </pre>
    *
    * <code>string remove = 2;</code>
+   * @return The remove.
    */
   java.lang.String getRemove();
   /**
@@ -53,6 +56,7 @@ public interface AdGroupCriterionLabelOperationOrBuilder extends
    * </pre>
    *
    * <code>string remove = 2;</code>
+   * @return The bytes for remove.
    */
   com.google.protobuf.ByteString
       getRemoveBytes();

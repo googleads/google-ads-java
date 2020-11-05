@@ -13,6 +13,7 @@ public interface HotelStateInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue state_criterion = 1;</code>
+   * @return Whether the stateCriterion field is set.
    */
   boolean hasStateCriterion();
   /**
@@ -21,6 +22,7 @@ public interface HotelStateInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue state_criterion = 1;</code>
+   * @return The stateCriterion.
    */
   com.google.protobuf.StringValue getStateCriterion();
   /**

@@ -18,11 +18,11 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.v3.errors.GoogleAdsError;
-import com.google.ads.googleads.v3.errors.GoogleAdsException;
-import com.google.ads.googleads.v3.services.GoogleAdsServiceClient;
-import com.google.ads.googleads.v3.services.SearchGoogleAdsStreamRequest;
-import com.google.ads.googleads.v3.services.SearchGoogleAdsStreamResponse;
+import com.google.ads.googleads.v5.errors.GoogleAdsError;
+import com.google.ads.googleads.v5.errors.GoogleAdsException;
+import com.google.ads.googleads.v5.services.GoogleAdsServiceClient;
+import com.google.ads.googleads.v5.services.SearchGoogleAdsStreamRequest;
+import com.google.ads.googleads.v5.services.SearchGoogleAdsStreamResponse;
 import com.google.api.gax.rpc.ResponseObserver;
 import com.google.api.gax.rpc.StreamController;
 import com.google.common.collect.ImmutableList;
@@ -59,7 +59,7 @@ public class ParallelReportDownload {
   private static class ParallelReportDownloadParams extends CodeSampleParams {
 
     @Parameter(
-        names = ArgumentNames.CUSTOMER_ID,
+        names = ArgumentNames.CUSTOMER_IDS,
         required = true,
         description = "Specify a comma-separated list of customer IDs to downloads reports from.")
     List<Long> customerIds;
@@ -82,7 +82,7 @@ public class ParallelReportDownload {
       // params.loginCustomerId = Long.parseLong("INSERT_LOGIN_CUSTOMER_ID");
     }
 
-    GoogleAdsClient googleAdsClient;
+    GoogleAdsClient googleAdsClient = null;
     try {
       GoogleAdsClient.Builder builder = GoogleAdsClient.newBuilder().fromPropertiesFile();
       if (params.loginCustomerId != null) {

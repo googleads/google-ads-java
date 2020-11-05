@@ -1,5 +1,5 @@
 /*
- * Copyright 2019 Google LLC
+ * Copyright 2020 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -21,7 +21,6 @@ import com.google.ads.googleads.v2.services.stub.OperatingSystemVersionConstantS
 import com.google.api.core.BetaApi;
 import com.google.api.gax.core.BackgroundResource;
 import com.google.api.gax.rpc.UnaryCallable;
-import com.google.api.pathtemplate.PathTemplate;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 import javax.annotation.Generated;
@@ -36,8 +35,8 @@ import javax.annotation.Generated;
  * <pre>
  * <code>
  * try (OperatingSystemVersionConstantServiceClient operatingSystemVersionConstantServiceClient = OperatingSystemVersionConstantServiceClient.create()) {
- *   String formattedResourceName = OperatingSystemVersionConstantServiceClient.formatOperatingSystemVersionConstantName("[OPERATING_SYSTEM_VERSION_CONSTANT]");
- *   OperatingSystemVersionConstant response = operatingSystemVersionConstantServiceClient.getOperatingSystemVersionConstant(formattedResourceName);
+ *   OperatingSystemVersionConstantName resourceName = OperatingSystemVersionConstantName.of("[OPERATING_SYSTEM_VERSION_CONSTANT]");
+ *   OperatingSystemVersionConstant response = operatingSystemVersionConstantServiceClient.getOperatingSystemVersionConstant(resourceName);
  * }
  * </code>
  * </pre>
@@ -98,38 +97,6 @@ import javax.annotation.Generated;
 public class OperatingSystemVersionConstantServiceClient implements BackgroundResource {
   private final OperatingSystemVersionConstantServiceSettings settings;
   private final OperatingSystemVersionConstantServiceStub stub;
-
-  private static final PathTemplate OPERATING_SYSTEM_VERSION_CONSTANT_PATH_TEMPLATE =
-      PathTemplate.createWithoutUrlEncoding(
-          "operatingSystemVersionConstants/{operating_system_version_constant}");
-
-  /**
-   * Formats a string containing the fully-qualified path to represent a
-   * operating_system_version_constant resource.
-   *
-   * @deprecated Use the {@link OperatingSystemVersionConstantName} class instead.
-   */
-  @Deprecated
-  public static final String formatOperatingSystemVersionConstantName(
-      String operatingSystemVersionConstant) {
-    return OPERATING_SYSTEM_VERSION_CONSTANT_PATH_TEMPLATE.instantiate(
-        "operating_system_version_constant", operatingSystemVersionConstant);
-  }
-
-  /**
-   * Parses the operating_system_version_constant from the given fully-qualified path which
-   * represents a operating_system_version_constant resource.
-   *
-   * @deprecated Use the {@link OperatingSystemVersionConstantName} class instead.
-   */
-  @Deprecated
-  public static final String
-      parseOperatingSystemVersionConstantFromOperatingSystemVersionConstantName(
-          String operatingSystemVersionConstantName) {
-    return OPERATING_SYSTEM_VERSION_CONSTANT_PATH_TEMPLATE
-        .parse(operatingSystemVersionConstantName)
-        .get("operating_system_version_constant");
-  }
 
   /**
    * Constructs an instance of OperatingSystemVersionConstantServiceClient with default settings.
@@ -196,18 +163,41 @@ public class OperatingSystemVersionConstantServiceClient implements BackgroundRe
    *
    * <pre><code>
    * try (OperatingSystemVersionConstantServiceClient operatingSystemVersionConstantServiceClient = OperatingSystemVersionConstantServiceClient.create()) {
-   *   String formattedResourceName = OperatingSystemVersionConstantServiceClient.formatOperatingSystemVersionConstantName("[OPERATING_SYSTEM_VERSION_CONSTANT]");
-   *   OperatingSystemVersionConstant response = operatingSystemVersionConstantServiceClient.getOperatingSystemVersionConstant(formattedResourceName);
+   *   OperatingSystemVersionConstantName resourceName = OperatingSystemVersionConstantName.of("[OPERATING_SYSTEM_VERSION_CONSTANT]");
+   *   OperatingSystemVersionConstant response = operatingSystemVersionConstantServiceClient.getOperatingSystemVersionConstant(resourceName);
    * }
    * </code></pre>
    *
-   * @param resourceName Resource name of the OS version to fetch.
+   * @param resourceName Required. Resource name of the OS version to fetch.
+   * @throws com.google.api.gax.rpc.ApiException if the remote call fails
+   */
+  public final OperatingSystemVersionConstant getOperatingSystemVersionConstant(
+      OperatingSystemVersionConstantName resourceName) {
+    GetOperatingSystemVersionConstantRequest request =
+        GetOperatingSystemVersionConstantRequest.newBuilder()
+            .setResourceName(resourceName == null ? null : resourceName.toString())
+            .build();
+    return getOperatingSystemVersionConstant(request);
+  }
+
+  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  /**
+   * Returns the requested OS version constant in full detail.
+   *
+   * <p>Sample code:
+   *
+   * <pre><code>
+   * try (OperatingSystemVersionConstantServiceClient operatingSystemVersionConstantServiceClient = OperatingSystemVersionConstantServiceClient.create()) {
+   *   OperatingSystemVersionConstantName resourceName = OperatingSystemVersionConstantName.of("[OPERATING_SYSTEM_VERSION_CONSTANT]");
+   *   OperatingSystemVersionConstant response = operatingSystemVersionConstantServiceClient.getOperatingSystemVersionConstant(resourceName.toString());
+   * }
+   * </code></pre>
+   *
+   * @param resourceName Required. Resource name of the OS version to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final OperatingSystemVersionConstant getOperatingSystemVersionConstant(
       String resourceName) {
-    OPERATING_SYSTEM_VERSION_CONSTANT_PATH_TEMPLATE.validate(
-        resourceName, "getOperatingSystemVersionConstant");
     GetOperatingSystemVersionConstantRequest request =
         GetOperatingSystemVersionConstantRequest.newBuilder().setResourceName(resourceName).build();
     return getOperatingSystemVersionConstant(request);
@@ -221,9 +211,9 @@ public class OperatingSystemVersionConstantServiceClient implements BackgroundRe
    *
    * <pre><code>
    * try (OperatingSystemVersionConstantServiceClient operatingSystemVersionConstantServiceClient = OperatingSystemVersionConstantServiceClient.create()) {
-   *   String formattedResourceName = OperatingSystemVersionConstantServiceClient.formatOperatingSystemVersionConstantName("[OPERATING_SYSTEM_VERSION_CONSTANT]");
+   *   OperatingSystemVersionConstantName resourceName = OperatingSystemVersionConstantName.of("[OPERATING_SYSTEM_VERSION_CONSTANT]");
    *   GetOperatingSystemVersionConstantRequest request = GetOperatingSystemVersionConstantRequest.newBuilder()
-   *     .setResourceName(formattedResourceName)
+   *     .setResourceName(resourceName.toString())
    *     .build();
    *   OperatingSystemVersionConstant response = operatingSystemVersionConstantServiceClient.getOperatingSystemVersionConstant(request);
    * }
@@ -245,9 +235,9 @@ public class OperatingSystemVersionConstantServiceClient implements BackgroundRe
    *
    * <pre><code>
    * try (OperatingSystemVersionConstantServiceClient operatingSystemVersionConstantServiceClient = OperatingSystemVersionConstantServiceClient.create()) {
-   *   String formattedResourceName = OperatingSystemVersionConstantServiceClient.formatOperatingSystemVersionConstantName("[OPERATING_SYSTEM_VERSION_CONSTANT]");
+   *   OperatingSystemVersionConstantName resourceName = OperatingSystemVersionConstantName.of("[OPERATING_SYSTEM_VERSION_CONSTANT]");
    *   GetOperatingSystemVersionConstantRequest request = GetOperatingSystemVersionConstantRequest.newBuilder()
-   *     .setResourceName(formattedResourceName)
+   *     .setResourceName(resourceName.toString())
    *     .build();
    *   ApiFuture&lt;OperatingSystemVersionConstant&gt; future = operatingSystemVersionConstantServiceClient.getOperatingSystemVersionConstantCallable().futureCall(request);
    *   // Do something

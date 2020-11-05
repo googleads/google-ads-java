@@ -10,7 +10,7 @@ package com.google.ads.googleads.v3.common;
  *
  * Protobuf type {@code google.ads.googleads.v3.common.PriceFeedItem}
  */
-public  final class PriceFeedItem extends
+public final class PriceFeedItem extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v3.common.PriceFeedItem)
     PriceFeedItemOrBuilder {
@@ -23,6 +23,13 @@ private static final long serialVersionUID = 0L;
     type_ = 0;
     priceQualifier_ = 0;
     priceOfferings_ = java.util.Collections.emptyList();
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new PriceFeedItem();
   }
 
   @java.lang.Override
@@ -88,9 +95,9 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 42: {
-            if (!((mutable_bitField0_ & 0x00000010) != 0)) {
+            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
               priceOfferings_ = new java.util.ArrayList<com.google.ads.googleads.v3.common.PriceOffer>();
-              mutable_bitField0_ |= 0x00000010;
+              mutable_bitField0_ |= 0x00000001;
             }
             priceOfferings_.add(
                 input.readMessage(com.google.ads.googleads.v3.common.PriceOffer.parser(), extensionRegistry));
@@ -124,7 +131,7 @@ private static final long serialVersionUID = 0L;
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
     } finally {
-      if (((mutable_bitField0_ & 0x00000010) != 0)) {
+      if (((mutable_bitField0_ & 0x00000001) != 0)) {
         priceOfferings_ = java.util.Collections.unmodifiableList(priceOfferings_);
       }
       this.unknownFields = unknownFields.build();
@@ -144,7 +151,6 @@ private static final long serialVersionUID = 0L;
             com.google.ads.googleads.v3.common.PriceFeedItem.class, com.google.ads.googleads.v3.common.PriceFeedItem.Builder.class);
   }
 
-  private int bitField0_;
   public static final int TYPE_FIELD_NUMBER = 1;
   private int type_;
   /**
@@ -153,8 +159,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.PriceExtensionTypeEnum.PriceExtensionType type = 1;</code>
+   * @return The enum numeric value on the wire for type.
    */
-  public int getTypeValue() {
+  @java.lang.Override public int getTypeValue() {
     return type_;
   }
   /**
@@ -163,8 +170,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.PriceExtensionTypeEnum.PriceExtensionType type = 1;</code>
+   * @return The type.
    */
-  public com.google.ads.googleads.v3.enums.PriceExtensionTypeEnum.PriceExtensionType getType() {
+  @java.lang.Override public com.google.ads.googleads.v3.enums.PriceExtensionTypeEnum.PriceExtensionType getType() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v3.enums.PriceExtensionTypeEnum.PriceExtensionType result = com.google.ads.googleads.v3.enums.PriceExtensionTypeEnum.PriceExtensionType.valueOf(type_);
     return result == null ? com.google.ads.googleads.v3.enums.PriceExtensionTypeEnum.PriceExtensionType.UNRECOGNIZED : result;
@@ -178,8 +186,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.PriceExtensionPriceQualifierEnum.PriceExtensionPriceQualifier price_qualifier = 2;</code>
+   * @return The enum numeric value on the wire for priceQualifier.
    */
-  public int getPriceQualifierValue() {
+  @java.lang.Override public int getPriceQualifierValue() {
     return priceQualifier_;
   }
   /**
@@ -188,8 +197,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.PriceExtensionPriceQualifierEnum.PriceExtensionPriceQualifier price_qualifier = 2;</code>
+   * @return The priceQualifier.
    */
-  public com.google.ads.googleads.v3.enums.PriceExtensionPriceQualifierEnum.PriceExtensionPriceQualifier getPriceQualifier() {
+  @java.lang.Override public com.google.ads.googleads.v3.enums.PriceExtensionPriceQualifierEnum.PriceExtensionPriceQualifier getPriceQualifier() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v3.enums.PriceExtensionPriceQualifierEnum.PriceExtensionPriceQualifier result = com.google.ads.googleads.v3.enums.PriceExtensionPriceQualifierEnum.PriceExtensionPriceQualifier.valueOf(priceQualifier_);
     return result == null ? com.google.ads.googleads.v3.enums.PriceExtensionPriceQualifierEnum.PriceExtensionPriceQualifier.UNRECOGNIZED : result;
@@ -203,7 +213,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue tracking_url_template = 3;</code>
+   * @return Whether the trackingUrlTemplate field is set.
    */
+  @java.lang.Override
   public boolean hasTrackingUrlTemplate() {
     return trackingUrlTemplate_ != null;
   }
@@ -213,7 +225,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue tracking_url_template = 3;</code>
+   * @return The trackingUrlTemplate.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getTrackingUrlTemplate() {
     return trackingUrlTemplate_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : trackingUrlTemplate_;
   }
@@ -224,6 +238,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue tracking_url_template = 3;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getTrackingUrlTemplateOrBuilder() {
     return getTrackingUrlTemplate();
   }
@@ -236,7 +251,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue language_code = 4;</code>
+   * @return Whether the languageCode field is set.
    */
+  @java.lang.Override
   public boolean hasLanguageCode() {
     return languageCode_ != null;
   }
@@ -246,7 +263,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue language_code = 4;</code>
+   * @return The languageCode.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getLanguageCode() {
     return languageCode_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : languageCode_;
   }
@@ -257,6 +276,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue language_code = 4;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getLanguageCodeOrBuilder() {
     return getLanguageCode();
   }
@@ -270,6 +290,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v3.common.PriceOffer price_offerings = 5;</code>
    */
+  @java.lang.Override
   public java.util.List<com.google.ads.googleads.v3.common.PriceOffer> getPriceOfferingsList() {
     return priceOfferings_;
   }
@@ -280,6 +301,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v3.common.PriceOffer price_offerings = 5;</code>
    */
+  @java.lang.Override
   public java.util.List<? extends com.google.ads.googleads.v3.common.PriceOfferOrBuilder> 
       getPriceOfferingsOrBuilderList() {
     return priceOfferings_;
@@ -291,6 +313,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v3.common.PriceOffer price_offerings = 5;</code>
    */
+  @java.lang.Override
   public int getPriceOfferingsCount() {
     return priceOfferings_.size();
   }
@@ -301,6 +324,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v3.common.PriceOffer price_offerings = 5;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.common.PriceOffer getPriceOfferings(int index) {
     return priceOfferings_.get(index);
   }
@@ -311,6 +335,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v3.common.PriceOffer price_offerings = 5;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.common.PriceOfferOrBuilder getPriceOfferingsOrBuilder(
       int index) {
     return priceOfferings_.get(index);
@@ -325,7 +350,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue final_url_suffix = 6;</code>
+   * @return Whether the finalUrlSuffix field is set.
    */
+  @java.lang.Override
   public boolean hasFinalUrlSuffix() {
     return finalUrlSuffix_ != null;
   }
@@ -336,7 +363,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue final_url_suffix = 6;</code>
+   * @return The finalUrlSuffix.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getFinalUrlSuffix() {
     return finalUrlSuffix_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : finalUrlSuffix_;
   }
@@ -348,6 +377,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue final_url_suffix = 6;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getFinalUrlSuffixOrBuilder() {
     return getFinalUrlSuffix();
   }
@@ -638,7 +668,7 @@ private static final long serialVersionUID = 0L;
       }
       if (priceOfferingsBuilder_ == null) {
         priceOfferings_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000010);
+        bitField0_ = (bitField0_ & ~0x00000001);
       } else {
         priceOfferingsBuilder_.clear();
       }
@@ -675,7 +705,6 @@ private static final long serialVersionUID = 0L;
     public com.google.ads.googleads.v3.common.PriceFeedItem buildPartial() {
       com.google.ads.googleads.v3.common.PriceFeedItem result = new com.google.ads.googleads.v3.common.PriceFeedItem(this);
       int from_bitField0_ = bitField0_;
-      int to_bitField0_ = 0;
       result.type_ = type_;
       result.priceQualifier_ = priceQualifier_;
       if (trackingUrlTemplateBuilder_ == null) {
@@ -689,9 +718,9 @@ private static final long serialVersionUID = 0L;
         result.languageCode_ = languageCodeBuilder_.build();
       }
       if (priceOfferingsBuilder_ == null) {
-        if (((bitField0_ & 0x00000010) != 0)) {
+        if (((bitField0_ & 0x00000001) != 0)) {
           priceOfferings_ = java.util.Collections.unmodifiableList(priceOfferings_);
-          bitField0_ = (bitField0_ & ~0x00000010);
+          bitField0_ = (bitField0_ & ~0x00000001);
         }
         result.priceOfferings_ = priceOfferings_;
       } else {
@@ -702,7 +731,6 @@ private static final long serialVersionUID = 0L;
       } else {
         result.finalUrlSuffix_ = finalUrlSuffixBuilder_.build();
       }
-      result.bitField0_ = to_bitField0_;
       onBuilt();
       return result;
     }
@@ -767,7 +795,7 @@ private static final long serialVersionUID = 0L;
         if (!other.priceOfferings_.isEmpty()) {
           if (priceOfferings_.isEmpty()) {
             priceOfferings_ = other.priceOfferings_;
-            bitField0_ = (bitField0_ & ~0x00000010);
+            bitField0_ = (bitField0_ & ~0x00000001);
           } else {
             ensurePriceOfferingsIsMutable();
             priceOfferings_.addAll(other.priceOfferings_);
@@ -780,7 +808,7 @@ private static final long serialVersionUID = 0L;
             priceOfferingsBuilder_.dispose();
             priceOfferingsBuilder_ = null;
             priceOfferings_ = other.priceOfferings_;
-            bitField0_ = (bitField0_ & ~0x00000010);
+            bitField0_ = (bitField0_ & ~0x00000001);
             priceOfferingsBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getPriceOfferingsFieldBuilder() : null;
@@ -829,8 +857,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.PriceExtensionTypeEnum.PriceExtensionType type = 1;</code>
+     * @return The enum numeric value on the wire for type.
      */
-    public int getTypeValue() {
+    @java.lang.Override public int getTypeValue() {
       return type_;
     }
     /**
@@ -839,8 +868,11 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.PriceExtensionTypeEnum.PriceExtensionType type = 1;</code>
+     * @param value The enum numeric value on the wire for type to set.
+     * @return This builder for chaining.
      */
     public Builder setTypeValue(int value) {
+      
       type_ = value;
       onChanged();
       return this;
@@ -851,7 +883,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.PriceExtensionTypeEnum.PriceExtensionType type = 1;</code>
+     * @return The type.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.enums.PriceExtensionTypeEnum.PriceExtensionType getType() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v3.enums.PriceExtensionTypeEnum.PriceExtensionType result = com.google.ads.googleads.v3.enums.PriceExtensionTypeEnum.PriceExtensionType.valueOf(type_);
@@ -863,6 +897,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.PriceExtensionTypeEnum.PriceExtensionType type = 1;</code>
+     * @param value The type to set.
+     * @return This builder for chaining.
      */
     public Builder setType(com.google.ads.googleads.v3.enums.PriceExtensionTypeEnum.PriceExtensionType value) {
       if (value == null) {
@@ -879,6 +915,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.PriceExtensionTypeEnum.PriceExtensionType type = 1;</code>
+     * @return This builder for chaining.
      */
     public Builder clearType() {
       
@@ -894,8 +931,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.PriceExtensionPriceQualifierEnum.PriceExtensionPriceQualifier price_qualifier = 2;</code>
+     * @return The enum numeric value on the wire for priceQualifier.
      */
-    public int getPriceQualifierValue() {
+    @java.lang.Override public int getPriceQualifierValue() {
       return priceQualifier_;
     }
     /**
@@ -904,8 +942,11 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.PriceExtensionPriceQualifierEnum.PriceExtensionPriceQualifier price_qualifier = 2;</code>
+     * @param value The enum numeric value on the wire for priceQualifier to set.
+     * @return This builder for chaining.
      */
     public Builder setPriceQualifierValue(int value) {
+      
       priceQualifier_ = value;
       onChanged();
       return this;
@@ -916,7 +957,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.PriceExtensionPriceQualifierEnum.PriceExtensionPriceQualifier price_qualifier = 2;</code>
+     * @return The priceQualifier.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.enums.PriceExtensionPriceQualifierEnum.PriceExtensionPriceQualifier getPriceQualifier() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v3.enums.PriceExtensionPriceQualifierEnum.PriceExtensionPriceQualifier result = com.google.ads.googleads.v3.enums.PriceExtensionPriceQualifierEnum.PriceExtensionPriceQualifier.valueOf(priceQualifier_);
@@ -928,6 +971,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.PriceExtensionPriceQualifierEnum.PriceExtensionPriceQualifier price_qualifier = 2;</code>
+     * @param value The priceQualifier to set.
+     * @return This builder for chaining.
      */
     public Builder setPriceQualifier(com.google.ads.googleads.v3.enums.PriceExtensionPriceQualifierEnum.PriceExtensionPriceQualifier value) {
       if (value == null) {
@@ -944,6 +989,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.PriceExtensionPriceQualifierEnum.PriceExtensionPriceQualifier price_qualifier = 2;</code>
+     * @return This builder for chaining.
      */
     public Builder clearPriceQualifier() {
       
@@ -961,6 +1007,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue tracking_url_template = 3;</code>
+     * @return Whether the trackingUrlTemplate field is set.
      */
     public boolean hasTrackingUrlTemplate() {
       return trackingUrlTemplateBuilder_ != null || trackingUrlTemplate_ != null;
@@ -971,6 +1018,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue tracking_url_template = 3;</code>
+     * @return The trackingUrlTemplate.
      */
     public com.google.protobuf.StringValue getTrackingUrlTemplate() {
       if (trackingUrlTemplateBuilder_ == null) {
@@ -1114,6 +1162,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue language_code = 4;</code>
+     * @return Whether the languageCode field is set.
      */
     public boolean hasLanguageCode() {
       return languageCodeBuilder_ != null || languageCode_ != null;
@@ -1124,6 +1173,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue language_code = 4;</code>
+     * @return The languageCode.
      */
     public com.google.protobuf.StringValue getLanguageCode() {
       if (languageCodeBuilder_ == null) {
@@ -1261,9 +1311,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.google.ads.googleads.v3.common.PriceOffer> priceOfferings_ =
       java.util.Collections.emptyList();
     private void ensurePriceOfferingsIsMutable() {
-      if (!((bitField0_ & 0x00000010) != 0)) {
+      if (!((bitField0_ & 0x00000001) != 0)) {
         priceOfferings_ = new java.util.ArrayList<com.google.ads.googleads.v3.common.PriceOffer>(priceOfferings_);
-        bitField0_ |= 0x00000010;
+        bitField0_ |= 0x00000001;
        }
     }
 
@@ -1457,7 +1507,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearPriceOfferings() {
       if (priceOfferingsBuilder_ == null) {
         priceOfferings_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000010);
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
       } else {
         priceOfferingsBuilder_.clear();
@@ -1562,7 +1612,7 @@ private static final long serialVersionUID = 0L;
         priceOfferingsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.google.ads.googleads.v3.common.PriceOffer, com.google.ads.googleads.v3.common.PriceOffer.Builder, com.google.ads.googleads.v3.common.PriceOfferOrBuilder>(
                 priceOfferings_,
-                ((bitField0_ & 0x00000010) != 0),
+                ((bitField0_ & 0x00000001) != 0),
                 getParentForChildren(),
                 isClean());
         priceOfferings_ = null;
@@ -1580,6 +1630,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue final_url_suffix = 6;</code>
+     * @return Whether the finalUrlSuffix field is set.
      */
     public boolean hasFinalUrlSuffix() {
       return finalUrlSuffixBuilder_ != null || finalUrlSuffix_ != null;
@@ -1591,6 +1642,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue final_url_suffix = 6;</code>
+     * @return The finalUrlSuffix.
      */
     public com.google.protobuf.StringValue getFinalUrlSuffix() {
       if (finalUrlSuffixBuilder_ == null) {

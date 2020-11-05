@@ -57,9 +57,33 @@ public class GoogleAdsHeaderProviderTest {
             .setDeveloperToken("test")
             .setLoginCustomerId(123L)
             .build();
-    assertEquals("Incorrect login customer id", (long) 123, (long) provider.getLoginCustomerId());
+    assertEquals("Incorrect login customer id", 123, (long) provider.getLoginCustomerId());
     assertEquals(
         "Missing login customer id", "123", provider.getHeaders().get("login-customer-id"));
+  }
+
+  /** Verifies that the linked customer ID is nullable and when null is not present in headers. */
+  @Test
+  public void linkedCustomerIdOptional() {
+    GoogleAdsHeaderProvider provider =
+        GoogleAdsHeaderProvider.newBuilder().setDeveloperToken("test").build();
+    assertNull(provider.getLinkedCustomerId());
+    assertFalse(
+        "linked customer id found when null",
+        provider.getHeaders().containsKey("linked-customer-id"));
+  }
+
+  /** Verifies that the linked customer id is set and present when provided. */
+  @Test
+  public void linkedCustomerId_includesIfSet() {
+    GoogleAdsHeaderProvider provider =
+        GoogleAdsHeaderProvider.newBuilder()
+            .setDeveloperToken("test")
+            .setLinkedCustomerId(123L)
+            .build();
+    assertEquals("Incorrect linked customer id", 123, (long) provider.getLinkedCustomerId());
+    assertEquals(
+        "Missing linked customer id", "123", provider.getHeaders().get("linked-customer-id"));
   }
 
   /** Verifies that the developer token is set and present in the headers. */

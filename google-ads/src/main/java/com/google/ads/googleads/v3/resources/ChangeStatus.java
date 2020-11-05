@@ -10,7 +10,7 @@ package com.google.ads.googleads.v3.resources;
  *
  * Protobuf type {@code google.ads.googleads.v3.resources.ChangeStatus}
  */
-public  final class ChangeStatus extends
+public final class ChangeStatus extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v3.resources.ChangeStatus)
     ChangeStatusOrBuilder {
@@ -26,6 +26,13 @@ private static final long serialVersionUID = 0L;
   }
 
   @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new ChangeStatus();
+  }
+
+  @java.lang.Override
   public final com.google.protobuf.UnknownFieldSet
   getUnknownFields() {
     return this.unknownFields;
@@ -38,7 +45,6 @@ private static final long serialVersionUID = 0L;
     if (extensionRegistry == null) {
       throw new java.lang.NullPointerException();
     }
-    int mutable_bitField0_ = 0;
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
         com.google.protobuf.UnknownFieldSet.newBuilder();
     try {
@@ -252,7 +258,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The resourceName.
    */
+  @java.lang.Override
   public java.lang.String getResourceName() {
     java.lang.Object ref = resourceName_;
     if (ref instanceof java.lang.String) {
@@ -273,7 +281,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The bytes for resourceName.
    */
+  @java.lang.Override
   public com.google.protobuf.ByteString
       getResourceNameBytes() {
     java.lang.Object ref = resourceName_;
@@ -296,7 +306,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue last_change_date_time = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the lastChangeDateTime field is set.
    */
+  @java.lang.Override
   public boolean hasLastChangeDateTime() {
     return lastChangeDateTime_ != null;
   }
@@ -306,7 +318,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue last_change_date_time = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The lastChangeDateTime.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getLastChangeDateTime() {
     return lastChangeDateTime_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : lastChangeDateTime_;
   }
@@ -317,6 +331,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue last_change_date_time = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getLastChangeDateTimeOrBuilder() {
     return getLastChangeDateTime();
   }
@@ -331,8 +346,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.ChangeStatusResourceTypeEnum.ChangeStatusResourceType resource_type = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The enum numeric value on the wire for resourceType.
    */
-  public int getResourceTypeValue() {
+  @java.lang.Override public int getResourceTypeValue() {
     return resourceType_;
   }
   /**
@@ -343,8 +359,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.ChangeStatusResourceTypeEnum.ChangeStatusResourceType resource_type = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The resourceType.
    */
-  public com.google.ads.googleads.v3.enums.ChangeStatusResourceTypeEnum.ChangeStatusResourceType getResourceType() {
+  @java.lang.Override public com.google.ads.googleads.v3.enums.ChangeStatusResourceTypeEnum.ChangeStatusResourceType getResourceType() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v3.enums.ChangeStatusResourceTypeEnum.ChangeStatusResourceType result = com.google.ads.googleads.v3.enums.ChangeStatusResourceTypeEnum.ChangeStatusResourceType.valueOf(resourceType_);
     return result == null ? com.google.ads.googleads.v3.enums.ChangeStatusResourceTypeEnum.ChangeStatusResourceType.UNRECOGNIZED : result;
@@ -358,7 +375,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue campaign = 5 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return Whether the campaign field is set.
    */
+  @java.lang.Override
   public boolean hasCampaign() {
     return campaign_ != null;
   }
@@ -368,7 +387,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue campaign = 5 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The campaign.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getCampaign() {
     return campaign_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : campaign_;
   }
@@ -379,6 +400,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue campaign = 5 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getCampaignOrBuilder() {
     return getCampaign();
   }
@@ -391,7 +413,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue ad_group = 6 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return Whether the adGroup field is set.
    */
+  @java.lang.Override
   public boolean hasAdGroup() {
     return adGroup_ != null;
   }
@@ -401,7 +425,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue ad_group = 6 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The adGroup.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getAdGroup() {
     return adGroup_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : adGroup_;
   }
@@ -412,6 +438,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue ad_group = 6 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getAdGroupOrBuilder() {
     return getAdGroup();
   }
@@ -424,8 +451,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.ChangeStatusOperationEnum.ChangeStatusOperation resource_status = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The enum numeric value on the wire for resourceStatus.
    */
-  public int getResourceStatusValue() {
+  @java.lang.Override public int getResourceStatusValue() {
     return resourceStatus_;
   }
   /**
@@ -434,8 +462,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.ChangeStatusOperationEnum.ChangeStatusOperation resource_status = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The resourceStatus.
    */
-  public com.google.ads.googleads.v3.enums.ChangeStatusOperationEnum.ChangeStatusOperation getResourceStatus() {
+  @java.lang.Override public com.google.ads.googleads.v3.enums.ChangeStatusOperationEnum.ChangeStatusOperation getResourceStatus() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v3.enums.ChangeStatusOperationEnum.ChangeStatusOperation result = com.google.ads.googleads.v3.enums.ChangeStatusOperationEnum.ChangeStatusOperation.valueOf(resourceStatus_);
     return result == null ? com.google.ads.googleads.v3.enums.ChangeStatusOperationEnum.ChangeStatusOperation.UNRECOGNIZED : result;
@@ -449,7 +478,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue ad_group_ad = 9 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return Whether the adGroupAd field is set.
    */
+  @java.lang.Override
   public boolean hasAdGroupAd() {
     return adGroupAd_ != null;
   }
@@ -459,7 +490,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue ad_group_ad = 9 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The adGroupAd.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getAdGroupAd() {
     return adGroupAd_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : adGroupAd_;
   }
@@ -470,6 +503,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue ad_group_ad = 9 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getAdGroupAdOrBuilder() {
     return getAdGroupAd();
   }
@@ -482,7 +516,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue ad_group_criterion = 10 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return Whether the adGroupCriterion field is set.
    */
+  @java.lang.Override
   public boolean hasAdGroupCriterion() {
     return adGroupCriterion_ != null;
   }
@@ -492,7 +528,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue ad_group_criterion = 10 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The adGroupCriterion.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getAdGroupCriterion() {
     return adGroupCriterion_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : adGroupCriterion_;
   }
@@ -503,6 +541,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue ad_group_criterion = 10 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getAdGroupCriterionOrBuilder() {
     return getAdGroupCriterion();
   }
@@ -515,7 +554,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue campaign_criterion = 11 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return Whether the campaignCriterion field is set.
    */
+  @java.lang.Override
   public boolean hasCampaignCriterion() {
     return campaignCriterion_ != null;
   }
@@ -525,7 +566,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue campaign_criterion = 11 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The campaignCriterion.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getCampaignCriterion() {
     return campaignCriterion_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : campaignCriterion_;
   }
@@ -536,6 +579,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue campaign_criterion = 11 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getCampaignCriterionOrBuilder() {
     return getCampaignCriterion();
   }
@@ -548,7 +592,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue feed = 12 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return Whether the feed field is set.
    */
+  @java.lang.Override
   public boolean hasFeed() {
     return feed_ != null;
   }
@@ -558,7 +604,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue feed = 12 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The feed.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getFeed() {
     return feed_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : feed_;
   }
@@ -569,6 +617,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue feed = 12 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getFeedOrBuilder() {
     return getFeed();
   }
@@ -581,7 +630,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue feed_item = 13 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return Whether the feedItem field is set.
    */
+  @java.lang.Override
   public boolean hasFeedItem() {
     return feedItem_ != null;
   }
@@ -591,7 +642,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue feed_item = 13 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The feedItem.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getFeedItem() {
     return feedItem_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : feedItem_;
   }
@@ -602,6 +655,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue feed_item = 13 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getFeedItemOrBuilder() {
     return getFeedItem();
   }
@@ -614,7 +668,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue ad_group_feed = 14 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return Whether the adGroupFeed field is set.
    */
+  @java.lang.Override
   public boolean hasAdGroupFeed() {
     return adGroupFeed_ != null;
   }
@@ -624,7 +680,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue ad_group_feed = 14 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The adGroupFeed.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getAdGroupFeed() {
     return adGroupFeed_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : adGroupFeed_;
   }
@@ -635,6 +693,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue ad_group_feed = 14 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getAdGroupFeedOrBuilder() {
     return getAdGroupFeed();
   }
@@ -647,7 +706,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue campaign_feed = 15 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return Whether the campaignFeed field is set.
    */
+  @java.lang.Override
   public boolean hasCampaignFeed() {
     return campaignFeed_ != null;
   }
@@ -657,7 +718,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue campaign_feed = 15 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The campaignFeed.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getCampaignFeed() {
     return campaignFeed_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : campaignFeed_;
   }
@@ -668,6 +731,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue campaign_feed = 15 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getCampaignFeedOrBuilder() {
     return getCampaignFeed();
   }
@@ -680,7 +744,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue ad_group_bid_modifier = 16 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return Whether the adGroupBidModifier field is set.
    */
+  @java.lang.Override
   public boolean hasAdGroupBidModifier() {
     return adGroupBidModifier_ != null;
   }
@@ -690,7 +756,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue ad_group_bid_modifier = 16 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The adGroupBidModifier.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getAdGroupBidModifier() {
     return adGroupBidModifier_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : adGroupBidModifier_;
   }
@@ -701,6 +769,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue ad_group_bid_modifier = 16 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getAdGroupBidModifierOrBuilder() {
     return getAdGroupBidModifier();
   }
@@ -1382,6 +1451,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @return The resourceName.
      */
     public java.lang.String getResourceName() {
       java.lang.Object ref = resourceName_;
@@ -1403,6 +1473,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @return The bytes for resourceName.
      */
     public com.google.protobuf.ByteString
         getResourceNameBytes() {
@@ -1425,6 +1496,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @param value The resourceName to set.
+     * @return This builder for chaining.
      */
     public Builder setResourceName(
         java.lang.String value) {
@@ -1444,6 +1517,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @return This builder for chaining.
      */
     public Builder clearResourceName() {
       
@@ -1459,6 +1533,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @param value The bytes for resourceName to set.
+     * @return This builder for chaining.
      */
     public Builder setResourceNameBytes(
         com.google.protobuf.ByteString value) {
@@ -1481,6 +1557,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue last_change_date_time = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the lastChangeDateTime field is set.
      */
     public boolean hasLastChangeDateTime() {
       return lastChangeDateTimeBuilder_ != null || lastChangeDateTime_ != null;
@@ -1491,6 +1568,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue last_change_date_time = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The lastChangeDateTime.
      */
     public com.google.protobuf.StringValue getLastChangeDateTime() {
       if (lastChangeDateTimeBuilder_ == null) {
@@ -1634,8 +1712,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.ChangeStatusResourceTypeEnum.ChangeStatusResourceType resource_type = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The enum numeric value on the wire for resourceType.
      */
-    public int getResourceTypeValue() {
+    @java.lang.Override public int getResourceTypeValue() {
       return resourceType_;
     }
     /**
@@ -1646,8 +1725,11 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.ChangeStatusResourceTypeEnum.ChangeStatusResourceType resource_type = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @param value The enum numeric value on the wire for resourceType to set.
+     * @return This builder for chaining.
      */
     public Builder setResourceTypeValue(int value) {
+      
       resourceType_ = value;
       onChanged();
       return this;
@@ -1660,7 +1742,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.ChangeStatusResourceTypeEnum.ChangeStatusResourceType resource_type = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The resourceType.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.enums.ChangeStatusResourceTypeEnum.ChangeStatusResourceType getResourceType() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v3.enums.ChangeStatusResourceTypeEnum.ChangeStatusResourceType result = com.google.ads.googleads.v3.enums.ChangeStatusResourceTypeEnum.ChangeStatusResourceType.valueOf(resourceType_);
@@ -1674,6 +1758,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.ChangeStatusResourceTypeEnum.ChangeStatusResourceType resource_type = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @param value The resourceType to set.
+     * @return This builder for chaining.
      */
     public Builder setResourceType(com.google.ads.googleads.v3.enums.ChangeStatusResourceTypeEnum.ChangeStatusResourceType value) {
       if (value == null) {
@@ -1692,6 +1778,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.ChangeStatusResourceTypeEnum.ChangeStatusResourceType resource_type = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return This builder for chaining.
      */
     public Builder clearResourceType() {
       
@@ -1709,6 +1796,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue campaign = 5 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @return Whether the campaign field is set.
      */
     public boolean hasCampaign() {
       return campaignBuilder_ != null || campaign_ != null;
@@ -1719,6 +1807,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue campaign = 5 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @return The campaign.
      */
     public com.google.protobuf.StringValue getCampaign() {
       if (campaignBuilder_ == null) {
@@ -1862,6 +1951,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue ad_group = 6 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @return Whether the adGroup field is set.
      */
     public boolean hasAdGroup() {
       return adGroupBuilder_ != null || adGroup_ != null;
@@ -1872,6 +1962,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue ad_group = 6 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @return The adGroup.
      */
     public com.google.protobuf.StringValue getAdGroup() {
       if (adGroupBuilder_ == null) {
@@ -2013,8 +2104,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.ChangeStatusOperationEnum.ChangeStatusOperation resource_status = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The enum numeric value on the wire for resourceStatus.
      */
-    public int getResourceStatusValue() {
+    @java.lang.Override public int getResourceStatusValue() {
       return resourceStatus_;
     }
     /**
@@ -2023,8 +2115,11 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.ChangeStatusOperationEnum.ChangeStatusOperation resource_status = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @param value The enum numeric value on the wire for resourceStatus to set.
+     * @return This builder for chaining.
      */
     public Builder setResourceStatusValue(int value) {
+      
       resourceStatus_ = value;
       onChanged();
       return this;
@@ -2035,7 +2130,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.ChangeStatusOperationEnum.ChangeStatusOperation resource_status = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The resourceStatus.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.enums.ChangeStatusOperationEnum.ChangeStatusOperation getResourceStatus() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v3.enums.ChangeStatusOperationEnum.ChangeStatusOperation result = com.google.ads.googleads.v3.enums.ChangeStatusOperationEnum.ChangeStatusOperation.valueOf(resourceStatus_);
@@ -2047,6 +2144,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.ChangeStatusOperationEnum.ChangeStatusOperation resource_status = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @param value The resourceStatus to set.
+     * @return This builder for chaining.
      */
     public Builder setResourceStatus(com.google.ads.googleads.v3.enums.ChangeStatusOperationEnum.ChangeStatusOperation value) {
       if (value == null) {
@@ -2063,6 +2162,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.ChangeStatusOperationEnum.ChangeStatusOperation resource_status = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return This builder for chaining.
      */
     public Builder clearResourceStatus() {
       
@@ -2080,6 +2180,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue ad_group_ad = 9 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @return Whether the adGroupAd field is set.
      */
     public boolean hasAdGroupAd() {
       return adGroupAdBuilder_ != null || adGroupAd_ != null;
@@ -2090,6 +2191,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue ad_group_ad = 9 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @return The adGroupAd.
      */
     public com.google.protobuf.StringValue getAdGroupAd() {
       if (adGroupAdBuilder_ == null) {
@@ -2233,6 +2335,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue ad_group_criterion = 10 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @return Whether the adGroupCriterion field is set.
      */
     public boolean hasAdGroupCriterion() {
       return adGroupCriterionBuilder_ != null || adGroupCriterion_ != null;
@@ -2243,6 +2346,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue ad_group_criterion = 10 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @return The adGroupCriterion.
      */
     public com.google.protobuf.StringValue getAdGroupCriterion() {
       if (adGroupCriterionBuilder_ == null) {
@@ -2386,6 +2490,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue campaign_criterion = 11 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @return Whether the campaignCriterion field is set.
      */
     public boolean hasCampaignCriterion() {
       return campaignCriterionBuilder_ != null || campaignCriterion_ != null;
@@ -2396,6 +2501,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue campaign_criterion = 11 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @return The campaignCriterion.
      */
     public com.google.protobuf.StringValue getCampaignCriterion() {
       if (campaignCriterionBuilder_ == null) {
@@ -2539,6 +2645,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue feed = 12 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @return Whether the feed field is set.
      */
     public boolean hasFeed() {
       return feedBuilder_ != null || feed_ != null;
@@ -2549,6 +2656,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue feed = 12 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @return The feed.
      */
     public com.google.protobuf.StringValue getFeed() {
       if (feedBuilder_ == null) {
@@ -2692,6 +2800,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue feed_item = 13 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @return Whether the feedItem field is set.
      */
     public boolean hasFeedItem() {
       return feedItemBuilder_ != null || feedItem_ != null;
@@ -2702,6 +2811,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue feed_item = 13 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @return The feedItem.
      */
     public com.google.protobuf.StringValue getFeedItem() {
       if (feedItemBuilder_ == null) {
@@ -2845,6 +2955,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue ad_group_feed = 14 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @return Whether the adGroupFeed field is set.
      */
     public boolean hasAdGroupFeed() {
       return adGroupFeedBuilder_ != null || adGroupFeed_ != null;
@@ -2855,6 +2966,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue ad_group_feed = 14 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @return The adGroupFeed.
      */
     public com.google.protobuf.StringValue getAdGroupFeed() {
       if (adGroupFeedBuilder_ == null) {
@@ -2998,6 +3110,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue campaign_feed = 15 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @return Whether the campaignFeed field is set.
      */
     public boolean hasCampaignFeed() {
       return campaignFeedBuilder_ != null || campaignFeed_ != null;
@@ -3008,6 +3121,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue campaign_feed = 15 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @return The campaignFeed.
      */
     public com.google.protobuf.StringValue getCampaignFeed() {
       if (campaignFeedBuilder_ == null) {
@@ -3151,6 +3265,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue ad_group_bid_modifier = 16 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @return Whether the adGroupBidModifier field is set.
      */
     public boolean hasAdGroupBidModifier() {
       return adGroupBidModifierBuilder_ != null || adGroupBidModifier_ != null;
@@ -3161,6 +3276,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue ad_group_bid_modifier = 16 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @return The adGroupBidModifier.
      */
     public com.google.protobuf.StringValue getAdGroupBidModifier() {
       if (adGroupBidModifierBuilder_ == null) {

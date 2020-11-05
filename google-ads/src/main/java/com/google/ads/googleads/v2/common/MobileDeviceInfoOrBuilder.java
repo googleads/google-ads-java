@@ -13,6 +13,7 @@ public interface MobileDeviceInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue mobile_device_constant = 1;</code>
+   * @return Whether the mobileDeviceConstant field is set.
    */
   boolean hasMobileDeviceConstant();
   /**
@@ -21,6 +22,7 @@ public interface MobileDeviceInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue mobile_device_constant = 1;</code>
+   * @return The mobileDeviceConstant.
    */
   com.google.protobuf.StringValue getMobileDeviceConstant();
   /**

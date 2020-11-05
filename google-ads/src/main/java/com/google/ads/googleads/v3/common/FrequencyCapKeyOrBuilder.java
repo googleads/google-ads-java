@@ -14,6 +14,7 @@ public interface FrequencyCapKeyOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.FrequencyCapLevelEnum.FrequencyCapLevel level = 1;</code>
+   * @return The enum numeric value on the wire for level.
    */
   int getLevelValue();
   /**
@@ -23,6 +24,7 @@ public interface FrequencyCapKeyOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.FrequencyCapLevelEnum.FrequencyCapLevel level = 1;</code>
+   * @return The level.
    */
   com.google.ads.googleads.v3.enums.FrequencyCapLevelEnum.FrequencyCapLevel getLevel();
 
@@ -32,6 +34,7 @@ public interface FrequencyCapKeyOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.FrequencyCapEventTypeEnum.FrequencyCapEventType event_type = 3;</code>
+   * @return The enum numeric value on the wire for eventType.
    */
   int getEventTypeValue();
   /**
@@ -40,6 +43,7 @@ public interface FrequencyCapKeyOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.FrequencyCapEventTypeEnum.FrequencyCapEventType event_type = 3;</code>
+   * @return The eventType.
    */
   com.google.ads.googleads.v3.enums.FrequencyCapEventTypeEnum.FrequencyCapEventType getEventType();
 
@@ -49,6 +53,7 @@ public interface FrequencyCapKeyOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.FrequencyCapTimeUnitEnum.FrequencyCapTimeUnit time_unit = 2;</code>
+   * @return The enum numeric value on the wire for timeUnit.
    */
   int getTimeUnitValue();
   /**
@@ -57,6 +62,7 @@ public interface FrequencyCapKeyOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.FrequencyCapTimeUnitEnum.FrequencyCapTimeUnit time_unit = 2;</code>
+   * @return The timeUnit.
    */
   com.google.ads.googleads.v3.enums.FrequencyCapTimeUnitEnum.FrequencyCapTimeUnit getTimeUnit();
 
@@ -66,6 +72,7 @@ public interface FrequencyCapKeyOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int32Value time_length = 4;</code>
+   * @return Whether the timeLength field is set.
    */
   boolean hasTimeLength();
   /**
@@ -74,6 +81,7 @@ public interface FrequencyCapKeyOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int32Value time_length = 4;</code>
+   * @return The timeLength.
    */
   com.google.protobuf.Int32Value getTimeLength();
   /**

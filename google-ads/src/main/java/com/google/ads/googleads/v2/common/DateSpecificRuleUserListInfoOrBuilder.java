@@ -14,6 +14,7 @@ public interface DateSpecificRuleUserListInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.common.UserListRuleInfo rule = 1;</code>
+   * @return Whether the rule field is set.
    */
   boolean hasRule();
   /**
@@ -23,6 +24,7 @@ public interface DateSpecificRuleUserListInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.common.UserListRuleInfo rule = 1;</code>
+   * @return The rule.
    */
   com.google.ads.googleads.v2.common.UserListRuleInfo getRule();
   /**
@@ -43,6 +45,7 @@ public interface DateSpecificRuleUserListInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue start_date = 2;</code>
+   * @return Whether the startDate field is set.
    */
   boolean hasStartDate();
   /**
@@ -53,6 +56,7 @@ public interface DateSpecificRuleUserListInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue start_date = 2;</code>
+   * @return The startDate.
    */
   com.google.protobuf.StringValue getStartDate();
   /**
@@ -74,6 +78,7 @@ public interface DateSpecificRuleUserListInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue end_date = 3;</code>
+   * @return Whether the endDate field is set.
    */
   boolean hasEndDate();
   /**
@@ -84,6 +89,7 @@ public interface DateSpecificRuleUserListInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue end_date = 3;</code>
+   * @return The endDate.
    */
   com.google.protobuf.StringValue getEndDate();
   /**

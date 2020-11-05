@@ -14,8 +14,7 @@
 
 package com.google.ads.googleads.lib;
 
-import com.google.ads.googleads.lib.catalog.ApiCatalog;
-import com.google.ads.googleads.v1.services.stub.GoogleAdsServiceStubSettings;
+import com.google.ads.googleads.v4.services.stub.GoogleAdsServiceStubSettings;
 import com.google.api.gax.core.GaxProperties;
 import com.google.api.gax.grpc.GaxGrpcProperties;
 import com.google.api.gax.rpc.ApiClientHeaderProvider;
@@ -23,7 +22,6 @@ import com.google.api.gax.rpc.HeaderProvider;
 import com.google.auto.value.AutoValue;
 import com.google.auto.value.extension.memoized.Memoized;
 import com.google.common.collect.ImmutableMap;
-import java.util.Map;
 import javax.annotation.Nullable;
 
 /**
@@ -47,6 +45,10 @@ public abstract class GoogleAdsHeaderProvider implements HeaderProvider {
   @Nullable
   public abstract Long getLoginCustomerId();
 
+  /** Returns the configured linked customer ID. */
+  @Nullable
+  public abstract Long getLinkedCustomerId();
+
   @Override
   @Memoized
   public ImmutableMap<String, String> getHeaders() {
@@ -55,17 +57,19 @@ public abstract class GoogleAdsHeaderProvider implements HeaderProvider {
     if (getLoginCustomerId() != null) {
       builder.put("login-customer-id", String.valueOf(getLoginCustomerId()));
     }
+    if (getLinkedCustomerId() != null) {
+      builder.put("linked-customer-id", String.valueOf(getLinkedCustomerId()));
+    }
     // Add the x-goog-api-client header which is usually added by the stub settings. However,
     // this doesn't happen. Once we add headers, needsHeaders() is false, so GAX's
     // ClientContext.java doesn't add the additional headers.
-    ApiClientHeaderProvider apiClient = ApiClientHeaderProvider.newBuilder()
-        .setGeneratedLibToken(
-            "gapic",
-            GaxProperties.getLibraryVersion(GoogleAdsServiceStubSettings.class))
-        .setTransportToken(
-            GaxGrpcProperties.getGrpcTokenName(),
-            GaxGrpcProperties.getGrpcVersion())
-        .build();
+    ApiClientHeaderProvider apiClient =
+        ApiClientHeaderProvider.newBuilder()
+            .setGeneratedLibToken(
+                "gapic", GaxProperties.getLibraryVersion(GoogleAdsServiceStubSettings.class))
+            .setTransportToken(
+                GaxGrpcProperties.getGrpcTokenName(), GaxGrpcProperties.getGrpcVersion())
+            .build();
     builder.putAll(apiClient.getHeaders());
     return builder.build();
   }
@@ -78,6 +82,9 @@ public abstract class GoogleAdsHeaderProvider implements HeaderProvider {
 
     /** Sets the login customer ID. */
     public abstract Builder setLoginCustomerId(Long loginCustomerId);
+
+    /** Sets the linked customer ID. */
+    public abstract Builder setLinkedCustomerId(Long linkedCustomerId);
 
     /** Constructs a provider from the currently configured values. */
     public abstract GoogleAdsHeaderProvider build();

@@ -39,42 +39,38 @@ public final class InvoiceServiceProto {
       "s/month_of_year.proto\032/google/ads/google" +
       "ads/v2/resources/invoice.proto\032\034google/a" +
       "pi/annotations.proto\032\027google/api/client." +
-      "proto\"\246\001\n\023ListInvoicesRequest\022\023\n\013custome" +
-      "r_id\030\001 \001(\t\022\025\n\rbilling_setup\030\002 \001(\t\022\022\n\niss" +
-      "ue_year\030\003 \001(\t\022O\n\013issue_month\030\004 \001(\0162:.goo" +
-      "gle.ads.googleads.v2.enums.MonthOfYearEn" +
-      "um.MonthOfYear\"T\n\024ListInvoicesResponse\022<" +
-      "\n\010invoices\030\001 \003(\0132*.google.ads.googleads." +
-      "v2.resources.Invoice2\335\001\n\016InvoiceService\022" +
-      "\255\001\n\014ListInvoices\0225.google.ads.googleads." +
-      "v2.services.ListInvoicesRequest\0326.google" +
-      ".ads.googleads.v2.services.ListInvoicesR" +
-      "esponse\".\202\323\344\223\002(\022&/v2/customers/{customer" +
-      "_id=*}/invoices\032\033\312A\030googleads.googleapis" +
-      ".comB\372\001\n$com.google.ads.googleads.v2.ser" +
-      "vicesB\023InvoiceServiceProtoP\001ZHgoogle.gol" +
-      "ang.org/genproto/googleapis/ads/googlead" +
-      "s/v2/services;services\242\002\003GAA\252\002 Google.Ad" +
-      "s.GoogleAds.V2.Services\312\002 Google\\Ads\\Goo" +
-      "gleAds\\V2\\Services\352\002$Google::Ads::Google" +
-      "Ads::V2::Servicesb\006proto3"
+      "proto\032\037google/api/field_behavior.proto\"\272" +
+      "\001\n\023ListInvoicesRequest\022\030\n\013customer_id\030\001 " +
+      "\001(\tB\003\340A\002\022\032\n\rbilling_setup\030\002 \001(\tB\003\340A\002\022\027\n\n" +
+      "issue_year\030\003 \001(\tB\003\340A\002\022T\n\013issue_month\030\004 \001" +
+      "(\0162:.google.ads.googleads.v2.enums.Month" +
+      "OfYearEnum.MonthOfYearB\003\340A\002\"T\n\024ListInvoi" +
+      "cesResponse\022<\n\010invoices\030\001 \003(\0132*.google.a" +
+      "ds.googleads.v2.resources.Invoice2\220\002\n\016In" +
+      "voiceService\022\340\001\n\014ListInvoices\0225.google.a" +
+      "ds.googleads.v2.services.ListInvoicesReq" +
+      "uest\0326.google.ads.googleads.v2.services." +
+      "ListInvoicesResponse\"a\202\323\344\223\002(\022&/v2/custom" +
+      "ers/{customer_id=*}/invoices\332A0customer_" +
+      "id,billing_setup,issue_year,issue_month\032" +
+      "\033\312A\030googleads.googleapis.comB\372\001\n$com.goo" +
+      "gle.ads.googleads.v2.servicesB\023InvoiceSe" +
+      "rviceProtoP\001ZHgoogle.golang.org/genproto" +
+      "/googleapis/ads/googleads/v2/services;se" +
+      "rvices\242\002\003GAA\252\002 Google.Ads.GoogleAds.V2.S" +
+      "ervices\312\002 Google\\Ads\\GoogleAds\\V2\\Servic" +
+      "es\352\002$Google::Ads::GoogleAds::V2::Service" +
+      "sb\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.ads.googleads.v2.enums.MonthOfYearProto.getDescriptor(),
           com.google.ads.googleads.v2.resources.InvoiceProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
           com.google.api.ClientProto.getDescriptor(),
-        }, assigner);
+          com.google.api.FieldBehaviorProto.getDescriptor(),
+        });
     internal_static_google_ads_googleads_v2_services_ListInvoicesRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_google_ads_googleads_v2_services_ListInvoicesRequest_fieldAccessorTable = new
@@ -90,13 +86,16 @@ public final class InvoiceServiceProto {
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.ClientProto.defaultHost);
+    registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);
     registry.add(com.google.api.AnnotationsProto.http);
+    registry.add(com.google.api.ClientProto.methodSignature);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.ads.googleads.v2.enums.MonthOfYearProto.getDescriptor();
     com.google.ads.googleads.v2.resources.InvoiceProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
     com.google.api.ClientProto.getDescriptor();
+    com.google.api.FieldBehaviorProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

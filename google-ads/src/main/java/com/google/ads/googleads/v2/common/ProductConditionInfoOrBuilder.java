@@ -13,6 +13,7 @@ public interface ProductConditionInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.enums.ProductConditionEnum.ProductCondition condition = 1;</code>
+   * @return The enum numeric value on the wire for condition.
    */
   int getConditionValue();
   /**
@@ -21,6 +22,7 @@ public interface ProductConditionInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.enums.ProductConditionEnum.ProductCondition condition = 1;</code>
+   * @return The condition.
    */
   com.google.ads.googleads.v2.enums.ProductConditionEnum.ProductCondition getCondition();
 }

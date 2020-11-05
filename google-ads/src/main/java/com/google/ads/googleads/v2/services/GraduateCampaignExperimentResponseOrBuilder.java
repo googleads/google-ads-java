@@ -14,6 +14,7 @@ public interface GraduateCampaignExperimentResponseOrBuilder extends
    * </pre>
    *
    * <code>string graduated_campaign = 1;</code>
+   * @return The graduatedCampaign.
    */
   java.lang.String getGraduatedCampaign();
   /**
@@ -23,6 +24,7 @@ public interface GraduateCampaignExperimentResponseOrBuilder extends
    * </pre>
    *
    * <code>string graduated_campaign = 1;</code>
+   * @return The bytes for graduatedCampaign.
    */
   com.google.protobuf.ByteString
       getGraduatedCampaignBytes();

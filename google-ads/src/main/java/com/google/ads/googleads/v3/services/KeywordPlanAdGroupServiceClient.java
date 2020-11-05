@@ -1,5 +1,5 @@
 /*
- * Copyright 2019 Google LLC
+ * Copyright 2020 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -21,7 +21,6 @@ import com.google.ads.googleads.v3.services.stub.KeywordPlanAdGroupServiceStubSe
 import com.google.api.core.BetaApi;
 import com.google.api.gax.core.BackgroundResource;
 import com.google.api.gax.rpc.UnaryCallable;
-import com.google.api.pathtemplate.PathTemplate;
 import java.io.IOException;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
@@ -37,8 +36,8 @@ import javax.annotation.Generated;
  * <pre>
  * <code>
  * try (KeywordPlanAdGroupServiceClient keywordPlanAdGroupServiceClient = KeywordPlanAdGroupServiceClient.create()) {
- *   String formattedResourceName = KeywordPlanAdGroupServiceClient.formatKeywordPlanAdGroupName("[CUSTOMER]", "[KEYWORD_PLAN_AD_GROUP]");
- *   KeywordPlanAdGroup response = keywordPlanAdGroupServiceClient.getKeywordPlanAdGroup(formattedResourceName);
+ *   KeywordPlanAdGroupName resourceName = KeywordPlanAdGroupName.of("[CUSTOMER]", "[KEYWORD_PLAN_AD_GROUP]");
+ *   KeywordPlanAdGroup response = keywordPlanAdGroupServiceClient.getKeywordPlanAdGroup(resourceName);
  * }
  * </code>
  * </pre>
@@ -100,50 +99,6 @@ public class KeywordPlanAdGroupServiceClient implements BackgroundResource {
   private final KeywordPlanAdGroupServiceSettings settings;
   private final KeywordPlanAdGroupServiceStub stub;
 
-  private static final PathTemplate KEYWORD_PLAN_AD_GROUP_PATH_TEMPLATE =
-      PathTemplate.createWithoutUrlEncoding(
-          "customers/{customer}/keywordPlanAdGroups/{keyword_plan_ad_group}");
-
-  /**
-   * Formats a string containing the fully-qualified path to represent a keyword_plan_ad_group
-   * resource.
-   *
-   * @deprecated Use the {@link KeywordPlanAdGroupName} class instead.
-   */
-  @Deprecated
-  public static final String formatKeywordPlanAdGroupName(
-      String customer, String keywordPlanAdGroup) {
-    return KEYWORD_PLAN_AD_GROUP_PATH_TEMPLATE.instantiate(
-        "customer", customer,
-        "keyword_plan_ad_group", keywordPlanAdGroup);
-  }
-
-  /**
-   * Parses the customer from the given fully-qualified path which represents a
-   * keyword_plan_ad_group resource.
-   *
-   * @deprecated Use the {@link KeywordPlanAdGroupName} class instead.
-   */
-  @Deprecated
-  public static final String parseCustomerFromKeywordPlanAdGroupName(
-      String keywordPlanAdGroupName) {
-    return KEYWORD_PLAN_AD_GROUP_PATH_TEMPLATE.parse(keywordPlanAdGroupName).get("customer");
-  }
-
-  /**
-   * Parses the keyword_plan_ad_group from the given fully-qualified path which represents a
-   * keyword_plan_ad_group resource.
-   *
-   * @deprecated Use the {@link KeywordPlanAdGroupName} class instead.
-   */
-  @Deprecated
-  public static final String parseKeywordPlanAdGroupFromKeywordPlanAdGroupName(
-      String keywordPlanAdGroupName) {
-    return KEYWORD_PLAN_AD_GROUP_PATH_TEMPLATE
-        .parse(keywordPlanAdGroupName)
-        .get("keyword_plan_ad_group");
-  }
-
   /** Constructs an instance of KeywordPlanAdGroupServiceClient with default settings. */
   public static final KeywordPlanAdGroupServiceClient create() throws IOException {
     return create(KeywordPlanAdGroupServiceSettings.newBuilder().build());
@@ -202,8 +157,32 @@ public class KeywordPlanAdGroupServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (KeywordPlanAdGroupServiceClient keywordPlanAdGroupServiceClient = KeywordPlanAdGroupServiceClient.create()) {
-   *   String formattedResourceName = KeywordPlanAdGroupServiceClient.formatKeywordPlanAdGroupName("[CUSTOMER]", "[KEYWORD_PLAN_AD_GROUP]");
-   *   KeywordPlanAdGroup response = keywordPlanAdGroupServiceClient.getKeywordPlanAdGroup(formattedResourceName);
+   *   KeywordPlanAdGroupName resourceName = KeywordPlanAdGroupName.of("[CUSTOMER]", "[KEYWORD_PLAN_AD_GROUP]");
+   *   KeywordPlanAdGroup response = keywordPlanAdGroupServiceClient.getKeywordPlanAdGroup(resourceName);
+   * }
+   * </code></pre>
+   *
+   * @param resourceName Required. The resource name of the Keyword Plan ad group to fetch.
+   * @throws com.google.api.gax.rpc.ApiException if the remote call fails
+   */
+  public final KeywordPlanAdGroup getKeywordPlanAdGroup(KeywordPlanAdGroupName resourceName) {
+    GetKeywordPlanAdGroupRequest request =
+        GetKeywordPlanAdGroupRequest.newBuilder()
+            .setResourceName(resourceName == null ? null : resourceName.toString())
+            .build();
+    return getKeywordPlanAdGroup(request);
+  }
+
+  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  /**
+   * Returns the requested Keyword Plan ad group in full detail.
+   *
+   * <p>Sample code:
+   *
+   * <pre><code>
+   * try (KeywordPlanAdGroupServiceClient keywordPlanAdGroupServiceClient = KeywordPlanAdGroupServiceClient.create()) {
+   *   KeywordPlanAdGroupName resourceName = KeywordPlanAdGroupName.of("[CUSTOMER]", "[KEYWORD_PLAN_AD_GROUP]");
+   *   KeywordPlanAdGroup response = keywordPlanAdGroupServiceClient.getKeywordPlanAdGroup(resourceName.toString());
    * }
    * </code></pre>
    *
@@ -211,7 +190,6 @@ public class KeywordPlanAdGroupServiceClient implements BackgroundResource {
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final KeywordPlanAdGroup getKeywordPlanAdGroup(String resourceName) {
-    KEYWORD_PLAN_AD_GROUP_PATH_TEMPLATE.validate(resourceName, "getKeywordPlanAdGroup");
     GetKeywordPlanAdGroupRequest request =
         GetKeywordPlanAdGroupRequest.newBuilder().setResourceName(resourceName).build();
     return getKeywordPlanAdGroup(request);
@@ -225,9 +203,9 @@ public class KeywordPlanAdGroupServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (KeywordPlanAdGroupServiceClient keywordPlanAdGroupServiceClient = KeywordPlanAdGroupServiceClient.create()) {
-   *   String formattedResourceName = KeywordPlanAdGroupServiceClient.formatKeywordPlanAdGroupName("[CUSTOMER]", "[KEYWORD_PLAN_AD_GROUP]");
+   *   KeywordPlanAdGroupName resourceName = KeywordPlanAdGroupName.of("[CUSTOMER]", "[KEYWORD_PLAN_AD_GROUP]");
    *   GetKeywordPlanAdGroupRequest request = GetKeywordPlanAdGroupRequest.newBuilder()
-   *     .setResourceName(formattedResourceName)
+   *     .setResourceName(resourceName.toString())
    *     .build();
    *   KeywordPlanAdGroup response = keywordPlanAdGroupServiceClient.getKeywordPlanAdGroup(request);
    * }
@@ -248,9 +226,9 @@ public class KeywordPlanAdGroupServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (KeywordPlanAdGroupServiceClient keywordPlanAdGroupServiceClient = KeywordPlanAdGroupServiceClient.create()) {
-   *   String formattedResourceName = KeywordPlanAdGroupServiceClient.formatKeywordPlanAdGroupName("[CUSTOMER]", "[KEYWORD_PLAN_AD_GROUP]");
+   *   KeywordPlanAdGroupName resourceName = KeywordPlanAdGroupName.of("[CUSTOMER]", "[KEYWORD_PLAN_AD_GROUP]");
    *   GetKeywordPlanAdGroupRequest request = GetKeywordPlanAdGroupRequest.newBuilder()
-   *     .setResourceName(formattedResourceName)
+   *     .setResourceName(resourceName.toString())
    *     .build();
    *   ApiFuture&lt;KeywordPlanAdGroup&gt; future = keywordPlanAdGroupServiceClient.getKeywordPlanAdGroupCallable().futureCall(request);
    *   // Do something
@@ -261,49 +239,6 @@ public class KeywordPlanAdGroupServiceClient implements BackgroundResource {
   public final UnaryCallable<GetKeywordPlanAdGroupRequest, KeywordPlanAdGroup>
       getKeywordPlanAdGroupCallable() {
     return stub.getKeywordPlanAdGroupCallable();
-  }
-
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
-  /**
-   * Creates, updates, or removes Keyword Plan ad groups. Operation statuses are returned.
-   *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (KeywordPlanAdGroupServiceClient keywordPlanAdGroupServiceClient = KeywordPlanAdGroupServiceClient.create()) {
-   *   String customerId = "";
-   *   List&lt;KeywordPlanAdGroupOperation&gt; operations = new ArrayList&lt;&gt;();
-   *   boolean partialFailure = false;
-   *   boolean validateOnly = false;
-   *   MutateKeywordPlanAdGroupsResponse response = keywordPlanAdGroupServiceClient.mutateKeywordPlanAdGroups(customerId, operations, partialFailure, validateOnly);
-   * }
-   * </code></pre>
-   *
-   * @param customerId Required. The ID of the customer whose Keyword Plan ad groups are being
-   *     modified.
-   * @param operations Required. The list of operations to perform on individual Keyword Plan ad
-   *     groups.
-   * @param partialFailure If true, successful operations will be carried out and invalid operations
-   *     will return errors. If false, all operations will be carried out in one transaction if and
-   *     only if they are all valid. Default is false.
-   * @param validateOnly If true, the request is validated but not executed. Only errors are
-   *     returned, not results.
-   * @throws com.google.api.gax.rpc.ApiException if the remote call fails
-   */
-  public final MutateKeywordPlanAdGroupsResponse mutateKeywordPlanAdGroups(
-      String customerId,
-      List<KeywordPlanAdGroupOperation> operations,
-      boolean partialFailure,
-      boolean validateOnly) {
-
-    MutateKeywordPlanAdGroupsRequest request =
-        MutateKeywordPlanAdGroupsRequest.newBuilder()
-            .setCustomerId(customerId)
-            .addAllOperations(operations)
-            .setPartialFailure(partialFailure)
-            .setValidateOnly(validateOnly)
-            .build();
-    return mutateKeywordPlanAdGroups(request);
   }
 
   // AUTO-GENERATED DOCUMENTATION AND METHOD
@@ -328,7 +263,6 @@ public class KeywordPlanAdGroupServiceClient implements BackgroundResource {
    */
   public final MutateKeywordPlanAdGroupsResponse mutateKeywordPlanAdGroups(
       String customerId, List<KeywordPlanAdGroupOperation> operations) {
-
     MutateKeywordPlanAdGroupsRequest request =
         MutateKeywordPlanAdGroupsRequest.newBuilder()
             .setCustomerId(customerId)

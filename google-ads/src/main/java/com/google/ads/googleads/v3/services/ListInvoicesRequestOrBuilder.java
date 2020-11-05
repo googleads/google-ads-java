@@ -13,6 +13,7 @@ public interface ListInvoicesRequestOrBuilder extends
    * </pre>
    *
    * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+   * @return The customerId.
    */
   java.lang.String getCustomerId();
   /**
@@ -21,6 +22,7 @@ public interface ListInvoicesRequestOrBuilder extends
    * </pre>
    *
    * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+   * @return The bytes for customerId.
    */
   com.google.protobuf.ByteString
       getCustomerIdBytes();
@@ -32,6 +34,7 @@ public interface ListInvoicesRequestOrBuilder extends
    * </pre>
    *
    * <code>string billing_setup = 2 [(.google.api.field_behavior) = REQUIRED];</code>
+   * @return The billingSetup.
    */
   java.lang.String getBillingSetup();
   /**
@@ -41,6 +44,7 @@ public interface ListInvoicesRequestOrBuilder extends
    * </pre>
    *
    * <code>string billing_setup = 2 [(.google.api.field_behavior) = REQUIRED];</code>
+   * @return The bytes for billingSetup.
    */
   com.google.protobuf.ByteString
       getBillingSetupBytes();
@@ -52,6 +56,7 @@ public interface ListInvoicesRequestOrBuilder extends
    * </pre>
    *
    * <code>string issue_year = 3 [(.google.api.field_behavior) = REQUIRED];</code>
+   * @return The issueYear.
    */
   java.lang.String getIssueYear();
   /**
@@ -61,6 +66,7 @@ public interface ListInvoicesRequestOrBuilder extends
    * </pre>
    *
    * <code>string issue_year = 3 [(.google.api.field_behavior) = REQUIRED];</code>
+   * @return The bytes for issueYear.
    */
   com.google.protobuf.ByteString
       getIssueYearBytes();
@@ -71,6 +77,7 @@ public interface ListInvoicesRequestOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.MonthOfYearEnum.MonthOfYear issue_month = 4 [(.google.api.field_behavior) = REQUIRED];</code>
+   * @return The enum numeric value on the wire for issueMonth.
    */
   int getIssueMonthValue();
   /**
@@ -79,6 +86,7 @@ public interface ListInvoicesRequestOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.MonthOfYearEnum.MonthOfYear issue_month = 4 [(.google.api.field_behavior) = REQUIRED];</code>
+   * @return The issueMonth.
    */
   com.google.ads.googleads.v3.enums.MonthOfYearEnum.MonthOfYear getIssueMonth();
 }

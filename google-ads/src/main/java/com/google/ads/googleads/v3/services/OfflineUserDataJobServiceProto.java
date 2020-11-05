@@ -92,7 +92,7 @@ public final class OfflineUserDataJobServiceProto {
       ".v3.common.UserDataH\000\022\024\n\nremove_all\030\003 \001(" +
       "\010H\000B\013\n\toperation\"\\\n\'AddOfflineUserDataJo" +
       "bOperationsResponse\0221\n\025partial_failure_e" +
-      "rror\030\001 \001(\0132\022.google.rpc.Status2\206\010\n\031Offli" +
+      "rror\030\001 \001(\0132\022.google.rpc.Status2\270\010\n\031Offli" +
       "neUserDataJobService\022\370\001\n\030CreateOfflineUs" +
       "erDataJob\022A.google.ads.googleads.v3.serv" +
       "ices.CreateOfflineUserDataJobRequest\032B.g" +
@@ -112,30 +112,23 @@ public final class OfflineUserDataJobServiceProto {
       ".AddOfflineUserDataJobOperationsResponse" +
       "\"i\202\323\344\223\002H\"C/v3/{resource_name=customers/*" +
       "/offlineUserDataJobs/*}:addOperations:\001*" +
-      "\332A\030resource_name,operations\022\314\001\n\025RunOffli" +
+      "\332A\030resource_name,operations\022\376\001\n\025RunOffli" +
       "neUserDataJob\022>.google.ads.googleads.v3." +
       "services.RunOfflineUserDataJobRequest\032\035." +
-      "google.longrunning.Operation\"T\202\323\344\223\002>\"9/v" +
-      "3/{resource_name=customers/*/offlineUser" +
-      "DataJobs/*}:run:\001*\332A\rresource_name\032\033\312A\030g" +
-      "oogleads.googleapis.comB\205\002\n$com.google.a" +
-      "ds.googleads.v3.servicesB\036OfflineUserDat" +
-      "aJobServiceProtoP\001ZHgoogle.golang.org/ge" +
-      "nproto/googleapis/ads/googleads/v3/servi" +
-      "ces;services\242\002\003GAA\252\002 Google.Ads.GoogleAd" +
-      "s.V3.Services\312\002 Google\\Ads\\GoogleAds\\V3\\" +
-      "Services\352\002$Google::Ads::GoogleAds::V3::S" +
-      "ervicesb\006proto3"
+      "google.longrunning.Operation\"\205\001\202\323\344\223\002>\"9/" +
+      "v3/{resource_name=customers/*/offlineUse" +
+      "rDataJobs/*}:run:\001*\332A\rresource_name\312A.\n\025" +
+      "google.protobuf.Empty\022\025google.protobuf.E" +
+      "mpty\032\033\312A\030googleads.googleapis.comB\205\002\n$co" +
+      "m.google.ads.googleads.v3.servicesB\036Offl" +
+      "ineUserDataJobServiceProtoP\001ZHgoogle.gol" +
+      "ang.org/genproto/googleapis/ads/googlead" +
+      "s/v3/services;services\242\002\003GAA\252\002 Google.Ad" +
+      "s.GoogleAds.V3.Services\312\002 Google\\Ads\\Goo" +
+      "gleAds\\V3\\Services\352\002$Google::Ads::Google" +
+      "Ads::V3::Servicesb\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.ads.googleads.v3.common.OfflineUserDataProto.getDescriptor(),
@@ -147,7 +140,7 @@ public final class OfflineUserDataJobServiceProto {
           com.google.longrunning.OperationsProto.getDescriptor(),
           com.google.protobuf.WrappersProto.getDescriptor(),
           com.google.rpc.StatusProto.getDescriptor(),
-        }, assigner);
+        });
     internal_static_google_ads_googleads_v3_services_CreateOfflineUserDataJobRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_google_ads_googleads_v3_services_CreateOfflineUserDataJobRequest_fieldAccessorTable = new
@@ -197,6 +190,7 @@ public final class OfflineUserDataJobServiceProto {
     registry.add(com.google.api.AnnotationsProto.http);
     registry.add(com.google.api.ClientProto.methodSignature);
     registry.add(com.google.api.ResourceProto.resourceReference);
+    registry.add(com.google.longrunning.OperationsProto.operationInfo);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.ads.googleads.v3.common.OfflineUserDataProto.getDescriptor();

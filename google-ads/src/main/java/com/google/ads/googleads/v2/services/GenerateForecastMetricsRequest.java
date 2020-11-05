@@ -10,7 +10,7 @@ package com.google.ads.googleads.v2.services;
  *
  * Protobuf type {@code google.ads.googleads.v2.services.GenerateForecastMetricsRequest}
  */
-public  final class GenerateForecastMetricsRequest extends
+public final class GenerateForecastMetricsRequest extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v2.services.GenerateForecastMetricsRequest)
     GenerateForecastMetricsRequestOrBuilder {
@@ -21,6 +21,13 @@ private static final long serialVersionUID = 0L;
   }
   private GenerateForecastMetricsRequest() {
     keywordPlan_ = "";
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new GenerateForecastMetricsRequest();
   }
 
   @java.lang.Override
@@ -36,7 +43,6 @@ private static final long serialVersionUID = 0L;
     if (extensionRegistry == null) {
       throw new java.lang.NullPointerException();
     }
-    int mutable_bitField0_ = 0;
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
         com.google.protobuf.UnknownFieldSet.newBuilder();
     try {
@@ -89,11 +95,13 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object keywordPlan_;
   /**
    * <pre>
-   * The resource name of the keyword plan to be forecasted.
+   * Required. The resource name of the keyword plan to be forecasted.
    * </pre>
    *
-   * <code>string keyword_plan = 1;</code>
+   * <code>string keyword_plan = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+   * @return The keywordPlan.
    */
+  @java.lang.Override
   public java.lang.String getKeywordPlan() {
     java.lang.Object ref = keywordPlan_;
     if (ref instanceof java.lang.String) {
@@ -108,11 +116,13 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The resource name of the keyword plan to be forecasted.
+   * Required. The resource name of the keyword plan to be forecasted.
    * </pre>
    *
-   * <code>string keyword_plan = 1;</code>
+   * <code>string keyword_plan = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+   * @return The bytes for keywordPlan.
    */
+  @java.lang.Override
   public com.google.protobuf.ByteString
       getKeywordPlanBytes() {
     java.lang.Object ref = keywordPlan_;
@@ -436,10 +446,11 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object keywordPlan_ = "";
     /**
      * <pre>
-     * The resource name of the keyword plan to be forecasted.
+     * Required. The resource name of the keyword plan to be forecasted.
      * </pre>
      *
-     * <code>string keyword_plan = 1;</code>
+     * <code>string keyword_plan = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+     * @return The keywordPlan.
      */
     public java.lang.String getKeywordPlan() {
       java.lang.Object ref = keywordPlan_;
@@ -455,10 +466,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the keyword plan to be forecasted.
+     * Required. The resource name of the keyword plan to be forecasted.
      * </pre>
      *
-     * <code>string keyword_plan = 1;</code>
+     * <code>string keyword_plan = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+     * @return The bytes for keywordPlan.
      */
     public com.google.protobuf.ByteString
         getKeywordPlanBytes() {
@@ -475,10 +487,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the keyword plan to be forecasted.
+     * Required. The resource name of the keyword plan to be forecasted.
      * </pre>
      *
-     * <code>string keyword_plan = 1;</code>
+     * <code>string keyword_plan = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+     * @param value The keywordPlan to set.
+     * @return This builder for chaining.
      */
     public Builder setKeywordPlan(
         java.lang.String value) {
@@ -492,10 +506,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the keyword plan to be forecasted.
+     * Required. The resource name of the keyword plan to be forecasted.
      * </pre>
      *
-     * <code>string keyword_plan = 1;</code>
+     * <code>string keyword_plan = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+     * @return This builder for chaining.
      */
     public Builder clearKeywordPlan() {
       
@@ -505,10 +520,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the keyword plan to be forecasted.
+     * Required. The resource name of the keyword plan to be forecasted.
      * </pre>
      *
-     * <code>string keyword_plan = 1;</code>
+     * <code>string keyword_plan = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+     * @param value The bytes for keywordPlan to set.
+     * @return This builder for chaining.
      */
     public Builder setKeywordPlanBytes(
         com.google.protobuf.ByteString value) {

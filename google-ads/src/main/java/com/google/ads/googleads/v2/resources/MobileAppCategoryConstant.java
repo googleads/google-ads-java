@@ -10,7 +10,7 @@ package com.google.ads.googleads.v2.resources;
  *
  * Protobuf type {@code google.ads.googleads.v2.resources.MobileAppCategoryConstant}
  */
-public  final class MobileAppCategoryConstant extends
+public final class MobileAppCategoryConstant extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v2.resources.MobileAppCategoryConstant)
     MobileAppCategoryConstantOrBuilder {
@@ -21,6 +21,13 @@ private static final long serialVersionUID = 0L;
   }
   private MobileAppCategoryConstant() {
     resourceName_ = "";
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new MobileAppCategoryConstant();
   }
 
   @java.lang.Override
@@ -36,7 +43,6 @@ private static final long serialVersionUID = 0L;
     if (extensionRegistry == null) {
       throw new java.lang.NullPointerException();
     }
-    int mutable_bitField0_ = 0;
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
         com.google.protobuf.UnknownFieldSet.newBuilder();
     try {
@@ -115,13 +121,15 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object resourceName_;
   /**
    * <pre>
-   * The resource name of the mobile app category constant.
+   * Output only. The resource name of the mobile app category constant.
    * Mobile app category constant resource names have the form:
    * `mobileAppCategoryConstants/{mobile_app_category_id}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The resourceName.
    */
+  @java.lang.Override
   public java.lang.String getResourceName() {
     java.lang.Object ref = resourceName_;
     if (ref instanceof java.lang.String) {
@@ -136,13 +144,15 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The resource name of the mobile app category constant.
+   * Output only. The resource name of the mobile app category constant.
    * Mobile app category constant resource names have the form:
    * `mobileAppCategoryConstants/{mobile_app_category_id}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The bytes for resourceName.
    */
+  @java.lang.Override
   public com.google.protobuf.ByteString
       getResourceNameBytes() {
     java.lang.Object ref = resourceName_;
@@ -161,31 +171,36 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.Int32Value id_;
   /**
    * <pre>
-   * The ID of the mobile app category constant.
+   * Output only. The ID of the mobile app category constant.
    * </pre>
    *
-   * <code>.google.protobuf.Int32Value id = 2;</code>
+   * <code>.google.protobuf.Int32Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the id field is set.
    */
+  @java.lang.Override
   public boolean hasId() {
     return id_ != null;
   }
   /**
    * <pre>
-   * The ID of the mobile app category constant.
+   * Output only. The ID of the mobile app category constant.
    * </pre>
    *
-   * <code>.google.protobuf.Int32Value id = 2;</code>
+   * <code>.google.protobuf.Int32Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The id.
    */
+  @java.lang.Override
   public com.google.protobuf.Int32Value getId() {
     return id_ == null ? com.google.protobuf.Int32Value.getDefaultInstance() : id_;
   }
   /**
    * <pre>
-   * The ID of the mobile app category constant.
+   * Output only. The ID of the mobile app category constant.
    * </pre>
    *
-   * <code>.google.protobuf.Int32Value id = 2;</code>
+   * <code>.google.protobuf.Int32Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int32ValueOrBuilder getIdOrBuilder() {
     return getId();
   }
@@ -194,31 +209,36 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.StringValue name_;
   /**
    * <pre>
-   * Mobile app category name.
+   * Output only. Mobile app category name.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue name = 3;</code>
+   * <code>.google.protobuf.StringValue name = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the name field is set.
    */
+  @java.lang.Override
   public boolean hasName() {
     return name_ != null;
   }
   /**
    * <pre>
-   * Mobile app category name.
+   * Output only. Mobile app category name.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue name = 3;</code>
+   * <code>.google.protobuf.StringValue name = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The name.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getName() {
     return name_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : name_;
   }
   /**
    * <pre>
-   * Mobile app category name.
+   * Output only. Mobile app category name.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue name = 3;</code>
+   * <code>.google.protobuf.StringValue name = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getNameOrBuilder() {
     return getName();
   }
@@ -592,12 +612,13 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object resourceName_ = "";
     /**
      * <pre>
-     * The resource name of the mobile app category constant.
+     * Output only. The resource name of the mobile app category constant.
      * Mobile app category constant resource names have the form:
      * `mobileAppCategoryConstants/{mobile_app_category_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @return The resourceName.
      */
     public java.lang.String getResourceName() {
       java.lang.Object ref = resourceName_;
@@ -613,12 +634,13 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the mobile app category constant.
+     * Output only. The resource name of the mobile app category constant.
      * Mobile app category constant resource names have the form:
      * `mobileAppCategoryConstants/{mobile_app_category_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @return The bytes for resourceName.
      */
     public com.google.protobuf.ByteString
         getResourceNameBytes() {
@@ -635,12 +657,14 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the mobile app category constant.
+     * Output only. The resource name of the mobile app category constant.
      * Mobile app category constant resource names have the form:
      * `mobileAppCategoryConstants/{mobile_app_category_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @param value The resourceName to set.
+     * @return This builder for chaining.
      */
     public Builder setResourceName(
         java.lang.String value) {
@@ -654,12 +678,13 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the mobile app category constant.
+     * Output only. The resource name of the mobile app category constant.
      * Mobile app category constant resource names have the form:
      * `mobileAppCategoryConstants/{mobile_app_category_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @return This builder for chaining.
      */
     public Builder clearResourceName() {
       
@@ -669,12 +694,14 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the mobile app category constant.
+     * Output only. The resource name of the mobile app category constant.
      * Mobile app category constant resource names have the form:
      * `mobileAppCategoryConstants/{mobile_app_category_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @param value The bytes for resourceName to set.
+     * @return This builder for chaining.
      */
     public Builder setResourceNameBytes(
         com.google.protobuf.ByteString value) {
@@ -693,20 +720,22 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.Int32Value, com.google.protobuf.Int32Value.Builder, com.google.protobuf.Int32ValueOrBuilder> idBuilder_;
     /**
      * <pre>
-     * The ID of the mobile app category constant.
+     * Output only. The ID of the mobile app category constant.
      * </pre>
      *
-     * <code>.google.protobuf.Int32Value id = 2;</code>
+     * <code>.google.protobuf.Int32Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the id field is set.
      */
     public boolean hasId() {
       return idBuilder_ != null || id_ != null;
     }
     /**
      * <pre>
-     * The ID of the mobile app category constant.
+     * Output only. The ID of the mobile app category constant.
      * </pre>
      *
-     * <code>.google.protobuf.Int32Value id = 2;</code>
+     * <code>.google.protobuf.Int32Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The id.
      */
     public com.google.protobuf.Int32Value getId() {
       if (idBuilder_ == null) {
@@ -717,10 +746,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the mobile app category constant.
+     * Output only. The ID of the mobile app category constant.
      * </pre>
      *
-     * <code>.google.protobuf.Int32Value id = 2;</code>
+     * <code>.google.protobuf.Int32Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setId(com.google.protobuf.Int32Value value) {
       if (idBuilder_ == null) {
@@ -737,10 +766,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the mobile app category constant.
+     * Output only. The ID of the mobile app category constant.
      * </pre>
      *
-     * <code>.google.protobuf.Int32Value id = 2;</code>
+     * <code>.google.protobuf.Int32Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setId(
         com.google.protobuf.Int32Value.Builder builderForValue) {
@@ -755,10 +784,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the mobile app category constant.
+     * Output only. The ID of the mobile app category constant.
      * </pre>
      *
-     * <code>.google.protobuf.Int32Value id = 2;</code>
+     * <code>.google.protobuf.Int32Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder mergeId(com.google.protobuf.Int32Value value) {
       if (idBuilder_ == null) {
@@ -777,10 +806,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the mobile app category constant.
+     * Output only. The ID of the mobile app category constant.
      * </pre>
      *
-     * <code>.google.protobuf.Int32Value id = 2;</code>
+     * <code>.google.protobuf.Int32Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearId() {
       if (idBuilder_ == null) {
@@ -795,10 +824,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the mobile app category constant.
+     * Output only. The ID of the mobile app category constant.
      * </pre>
      *
-     * <code>.google.protobuf.Int32Value id = 2;</code>
+     * <code>.google.protobuf.Int32Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int32Value.Builder getIdBuilder() {
       
@@ -807,10 +836,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the mobile app category constant.
+     * Output only. The ID of the mobile app category constant.
      * </pre>
      *
-     * <code>.google.protobuf.Int32Value id = 2;</code>
+     * <code>.google.protobuf.Int32Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int32ValueOrBuilder getIdOrBuilder() {
       if (idBuilder_ != null) {
@@ -822,10 +851,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the mobile app category constant.
+     * Output only. The ID of the mobile app category constant.
      * </pre>
      *
-     * <code>.google.protobuf.Int32Value id = 2;</code>
+     * <code>.google.protobuf.Int32Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Int32Value, com.google.protobuf.Int32Value.Builder, com.google.protobuf.Int32ValueOrBuilder> 
@@ -846,20 +875,22 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> nameBuilder_;
     /**
      * <pre>
-     * Mobile app category name.
+     * Output only. Mobile app category name.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue name = 3;</code>
+     * <code>.google.protobuf.StringValue name = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the name field is set.
      */
     public boolean hasName() {
       return nameBuilder_ != null || name_ != null;
     }
     /**
      * <pre>
-     * Mobile app category name.
+     * Output only. Mobile app category name.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue name = 3;</code>
+     * <code>.google.protobuf.StringValue name = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The name.
      */
     public com.google.protobuf.StringValue getName() {
       if (nameBuilder_ == null) {
@@ -870,10 +901,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Mobile app category name.
+     * Output only. Mobile app category name.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue name = 3;</code>
+     * <code>.google.protobuf.StringValue name = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setName(com.google.protobuf.StringValue value) {
       if (nameBuilder_ == null) {
@@ -890,10 +921,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Mobile app category name.
+     * Output only. Mobile app category name.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue name = 3;</code>
+     * <code>.google.protobuf.StringValue name = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setName(
         com.google.protobuf.StringValue.Builder builderForValue) {
@@ -908,10 +939,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Mobile app category name.
+     * Output only. Mobile app category name.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue name = 3;</code>
+     * <code>.google.protobuf.StringValue name = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder mergeName(com.google.protobuf.StringValue value) {
       if (nameBuilder_ == null) {
@@ -930,10 +961,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Mobile app category name.
+     * Output only. Mobile app category name.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue name = 3;</code>
+     * <code>.google.protobuf.StringValue name = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearName() {
       if (nameBuilder_ == null) {
@@ -948,10 +979,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Mobile app category name.
+     * Output only. Mobile app category name.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue name = 3;</code>
+     * <code>.google.protobuf.StringValue name = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValue.Builder getNameBuilder() {
       
@@ -960,10 +991,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Mobile app category name.
+     * Output only. Mobile app category name.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue name = 3;</code>
+     * <code>.google.protobuf.StringValue name = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValueOrBuilder getNameOrBuilder() {
       if (nameBuilder_ != null) {
@@ -975,10 +1006,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Mobile app category name.
+     * Output only. Mobile app category name.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue name = 3;</code>
+     * <code>.google.protobuf.StringValue name = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 

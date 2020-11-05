@@ -14,6 +14,7 @@ public interface StoreAttributeOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue store_code = 1;</code>
+   * @return Whether the storeCode field is set.
    */
   boolean hasStoreCode();
   /**
@@ -23,6 +24,7 @@ public interface StoreAttributeOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue store_code = 1;</code>
+   * @return The storeCode.
    */
   com.google.protobuf.StringValue getStoreCode();
   /**

@@ -13,6 +13,7 @@ public interface PriceFeedItemOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.PriceExtensionTypeEnum.PriceExtensionType type = 1;</code>
+   * @return The enum numeric value on the wire for type.
    */
   int getTypeValue();
   /**
@@ -21,6 +22,7 @@ public interface PriceFeedItemOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.PriceExtensionTypeEnum.PriceExtensionType type = 1;</code>
+   * @return The type.
    */
   com.google.ads.googleads.v3.enums.PriceExtensionTypeEnum.PriceExtensionType getType();
 
@@ -30,6 +32,7 @@ public interface PriceFeedItemOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.PriceExtensionPriceQualifierEnum.PriceExtensionPriceQualifier price_qualifier = 2;</code>
+   * @return The enum numeric value on the wire for priceQualifier.
    */
   int getPriceQualifierValue();
   /**
@@ -38,6 +41,7 @@ public interface PriceFeedItemOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.PriceExtensionPriceQualifierEnum.PriceExtensionPriceQualifier price_qualifier = 2;</code>
+   * @return The priceQualifier.
    */
   com.google.ads.googleads.v3.enums.PriceExtensionPriceQualifierEnum.PriceExtensionPriceQualifier getPriceQualifier();
 
@@ -47,6 +51,7 @@ public interface PriceFeedItemOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue tracking_url_template = 3;</code>
+   * @return Whether the trackingUrlTemplate field is set.
    */
   boolean hasTrackingUrlTemplate();
   /**
@@ -55,6 +60,7 @@ public interface PriceFeedItemOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue tracking_url_template = 3;</code>
+   * @return The trackingUrlTemplate.
    */
   com.google.protobuf.StringValue getTrackingUrlTemplate();
   /**
@@ -72,6 +78,7 @@ public interface PriceFeedItemOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue language_code = 4;</code>
+   * @return Whether the languageCode field is set.
    */
   boolean hasLanguageCode();
   /**
@@ -80,6 +87,7 @@ public interface PriceFeedItemOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue language_code = 4;</code>
+   * @return The languageCode.
    */
   com.google.protobuf.StringValue getLanguageCode();
   /**
@@ -142,6 +150,7 @@ public interface PriceFeedItemOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue final_url_suffix = 6;</code>
+   * @return Whether the finalUrlSuffix field is set.
    */
   boolean hasFinalUrlSuffix();
   /**
@@ -151,6 +160,7 @@ public interface PriceFeedItemOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue final_url_suffix = 6;</code>
+   * @return The finalUrlSuffix.
    */
   com.google.protobuf.StringValue getFinalUrlSuffix();
   /**

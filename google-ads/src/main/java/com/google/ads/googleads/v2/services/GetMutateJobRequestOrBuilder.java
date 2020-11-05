@@ -9,18 +9,20 @@ public interface GetMutateJobRequestOrBuilder extends
 
   /**
    * <pre>
-   * The resource name of the MutateJob to get.
+   * Required. The resource name of the MutateJob to get.
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = { ... }</code>
+   * @return The resourceName.
    */
   java.lang.String getResourceName();
   /**
    * <pre>
-   * The resource name of the MutateJob to get.
+   * Required. The resource name of the MutateJob to get.
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = { ... }</code>
+   * @return The bytes for resourceName.
    */
   com.google.protobuf.ByteString
       getResourceNameBytes();

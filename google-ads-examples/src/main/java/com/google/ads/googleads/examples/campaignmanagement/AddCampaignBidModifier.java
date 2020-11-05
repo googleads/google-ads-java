@@ -18,19 +18,17 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.v3.common.InteractionTypeInfo;
-import com.google.ads.googleads.v3.enums.InteractionTypeEnum;
-import com.google.ads.googleads.v3.errors.GoogleAdsError;
-import com.google.ads.googleads.v3.errors.GoogleAdsException;
-import com.google.ads.googleads.v3.resources.CampaignBidModifier;
-import com.google.ads.googleads.v3.services.CampaignBidModifierOperation;
-import com.google.ads.googleads.v3.services.CampaignBidModifierServiceClient;
-import com.google.ads.googleads.v3.services.MutateCampaignBidModifierResult;
-import com.google.ads.googleads.v3.services.MutateCampaignBidModifiersResponse;
-import com.google.ads.googleads.v3.utils.ResourceNames;
+import com.google.ads.googleads.v5.common.InteractionTypeInfo;
+import com.google.ads.googleads.v5.enums.InteractionTypeEnum;
+import com.google.ads.googleads.v5.errors.GoogleAdsError;
+import com.google.ads.googleads.v5.errors.GoogleAdsException;
+import com.google.ads.googleads.v5.resources.CampaignBidModifier;
+import com.google.ads.googleads.v5.services.CampaignBidModifierOperation;
+import com.google.ads.googleads.v5.services.CampaignBidModifierServiceClient;
+import com.google.ads.googleads.v5.services.MutateCampaignBidModifierResult;
+import com.google.ads.googleads.v5.services.MutateCampaignBidModifiersResponse;
+import com.google.ads.googleads.v5.utils.ResourceNames;
 import com.google.common.collect.ImmutableList;
-import com.google.protobuf.DoubleValue;
-import com.google.protobuf.StringValue;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
@@ -45,7 +43,7 @@ public class AddCampaignBidModifier {
     @Parameter(names = ArgumentNames.CAMPAIGN_ID, required = true)
     private Long campaignId;
 
-    @Parameter(names = ArgumentNames.BID_MODIFIER, required = true)
+    @Parameter(names = ArgumentNames.BID_MODIFIER_VALUE, required = true)
     private Double bidModifier;
   }
 
@@ -60,16 +58,16 @@ public class AddCampaignBidModifier {
       params.bidModifier = Double.parseDouble("INSERT_BID_MODIFIER_HERE");
     }
 
-    GoogleAdsClient googleAdsClient;
+    GoogleAdsClient googleAdsClient = null;
     try {
       googleAdsClient = GoogleAdsClient.newBuilder().fromPropertiesFile().build();
     } catch (FileNotFoundException fnfe) {
       System.err.printf(
           "Failed to load GoogleAdsClient configuration from file. Exception: %s%n", fnfe);
-      return;
+      System.exit(1);
     } catch (IOException ioe) {
       System.err.printf("Failed to create GoogleAdsClient. Exception: %s%n", ioe);
-      return;
+      System.exit(1);
     }
 
     try {
@@ -87,6 +85,7 @@ public class AddCampaignBidModifier {
       for (GoogleAdsError googleAdsError : gae.getGoogleAdsFailure().getErrorsList()) {
         System.err.printf("  Error %d: %s%n", i++, googleAdsError);
       }
+      System.exit(1);
     }
   }
 
@@ -107,12 +106,12 @@ public class AddCampaignBidModifier {
     // Constructs a campaign bid modifier.
     CampaignBidModifier campaignBidModifier =
         CampaignBidModifier.newBuilder()
-            .setCampaign(StringValue.of(campaignResourceName))
+            .setCampaign(campaignResourceName)
             // Makes the bid modifier apply to call interactions.
             .setInteractionType(
                 InteractionTypeInfo.newBuilder().setType(InteractionTypeEnum.InteractionType.CALLS))
             // Uses the specified bid modifier value.
-            .setBidModifier(DoubleValue.of(bidModifier))
+            .setBidModifier(bidModifier)
             .build();
 
     // Constructs an operation to create the campaign bid modifier.

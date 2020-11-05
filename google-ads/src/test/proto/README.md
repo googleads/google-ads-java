@@ -9,3 +9,6 @@ To regenerate, run:
 $ cd src/test/proto
 $ protoc --java_out ../java/ google/ads/googleads/test/tester.proto
 ```
+
+You must install protoc with proto3 presence support (>= 3.12.4).
+For example: https://github.com/protocolbuffers/protobuf/releases/tag/v3.12.4

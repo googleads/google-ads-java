@@ -10,7 +10,7 @@ package com.google.ads.googleads.v2.common;
  *
  * Protobuf type {@code google.ads.googleads.v2.common.ExpressionRuleUserListInfo}
  */
-public  final class ExpressionRuleUserListInfo extends
+public final class ExpressionRuleUserListInfo extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v2.common.ExpressionRuleUserListInfo)
     ExpressionRuleUserListInfoOrBuilder {
@@ -20,6 +20,13 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private ExpressionRuleUserListInfo() {
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new ExpressionRuleUserListInfo();
   }
 
   @java.lang.Override
@@ -35,7 +42,6 @@ private static final long serialVersionUID = 0L;
     if (extensionRegistry == null) {
       throw new java.lang.NullPointerException();
     }
-    int mutable_bitField0_ = 0;
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
         com.google.protobuf.UnknownFieldSet.newBuilder();
     try {
@@ -103,7 +109,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.common.UserListRuleInfo rule = 1;</code>
+   * @return Whether the rule field is set.
    */
+  @java.lang.Override
   public boolean hasRule() {
     return rule_ != null;
   }
@@ -117,7 +125,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.common.UserListRuleInfo rule = 1;</code>
+   * @return The rule.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.common.UserListRuleInfo getRule() {
     return rule_ == null ? com.google.ads.googleads.v2.common.UserListRuleInfo.getDefaultInstance() : rule_;
   }
@@ -132,6 +142,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v2.common.UserListRuleInfo rule = 1;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.common.UserListRuleInfoOrBuilder getRuleOrBuilder() {
     return getRule();
   }
@@ -468,6 +479,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.common.UserListRuleInfo rule = 1;</code>
+     * @return Whether the rule field is set.
      */
     public boolean hasRule() {
       return ruleBuilder_ != null || rule_ != null;
@@ -482,6 +494,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.common.UserListRuleInfo rule = 1;</code>
+     * @return The rule.
      */
     public com.google.ads.googleads.v2.common.UserListRuleInfo getRule() {
       if (ruleBuilder_ == null) {

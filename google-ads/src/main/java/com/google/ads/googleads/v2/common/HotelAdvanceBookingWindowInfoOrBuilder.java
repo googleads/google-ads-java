@@ -13,6 +13,7 @@ public interface HotelAdvanceBookingWindowInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value min_days = 1;</code>
+   * @return Whether the minDays field is set.
    */
   boolean hasMinDays();
   /**
@@ -21,6 +22,7 @@ public interface HotelAdvanceBookingWindowInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value min_days = 1;</code>
+   * @return The minDays.
    */
   com.google.protobuf.Int64Value getMinDays();
   /**
@@ -38,6 +40,7 @@ public interface HotelAdvanceBookingWindowInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value max_days = 2;</code>
+   * @return Whether the maxDays field is set.
    */
   boolean hasMaxDays();
   /**
@@ -46,6 +49,7 @@ public interface HotelAdvanceBookingWindowInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value max_days = 2;</code>
+   * @return The maxDays.
    */
   com.google.protobuf.Int64Value getMaxDays();
   /**

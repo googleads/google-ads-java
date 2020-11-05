@@ -18,17 +18,16 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.v3.common.ContentLabelInfo;
-import com.google.ads.googleads.v3.common.PlacementInfo;
-import com.google.ads.googleads.v3.enums.ContentLabelTypeEnum.ContentLabelType;
-import com.google.ads.googleads.v3.errors.GoogleAdsError;
-import com.google.ads.googleads.v3.errors.GoogleAdsException;
-import com.google.ads.googleads.v3.resources.CustomerNegativeCriterion;
-import com.google.ads.googleads.v3.services.CustomerNegativeCriterionOperation;
-import com.google.ads.googleads.v3.services.CustomerNegativeCriterionServiceClient;
-import com.google.ads.googleads.v3.services.MutateCustomerNegativeCriteriaResponse;
-import com.google.ads.googleads.v3.services.MutateCustomerNegativeCriteriaResult;
-import com.google.protobuf.StringValue;
+import com.google.ads.googleads.v5.common.ContentLabelInfo;
+import com.google.ads.googleads.v5.common.PlacementInfo;
+import com.google.ads.googleads.v5.enums.ContentLabelTypeEnum.ContentLabelType;
+import com.google.ads.googleads.v5.errors.GoogleAdsError;
+import com.google.ads.googleads.v5.errors.GoogleAdsException;
+import com.google.ads.googleads.v5.resources.CustomerNegativeCriterion;
+import com.google.ads.googleads.v5.services.CustomerNegativeCriterionOperation;
+import com.google.ads.googleads.v5.services.CustomerNegativeCriterionServiceClient;
+import com.google.ads.googleads.v5.services.MutateCustomerNegativeCriteriaResponse;
+import com.google.ads.googleads.v5.services.MutateCustomerNegativeCriteriaResult;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Arrays;
@@ -55,16 +54,16 @@ public class AddCustomerNegativeCriteria {
       params.customerId = Long.parseLong("INSERT_CUSTOMER_ID_HERE");
     }
 
-    GoogleAdsClient googleAdsClient;
+    GoogleAdsClient googleAdsClient = null;
     try {
       googleAdsClient = GoogleAdsClient.newBuilder().fromPropertiesFile().build();
     } catch (FileNotFoundException fnfe) {
       System.err.printf(
           "Failed to load GoogleAdsClient configuration from file. Exception: %s%n", fnfe);
-      return;
+      System.exit(1);
     } catch (IOException ioe) {
       System.err.printf("Failed to create GoogleAdsClient. Exception: %s%n", ioe);
-      return;
+      System.exit(1);
     }
 
     try {
@@ -81,6 +80,7 @@ public class AddCustomerNegativeCriteria {
       for (GoogleAdsError googleAdsError : gae.getGoogleAdsFailure().getErrorsList()) {
         System.err.printf("  Error %d: %s%n", i++, googleAdsError);
       }
+      System.exit(1);
     }
   }
 
@@ -106,10 +106,7 @@ public class AddCustomerNegativeCriteria {
       // 'http://www.example.com'.
       CustomerNegativeCriterion placementCriterion =
           CustomerNegativeCriterion.newBuilder()
-              .setPlacement(
-                  PlacementInfo.newBuilder()
-                      .setUrl(StringValue.of("http://www.example.com"))
-                      .build())
+              .setPlacement(PlacementInfo.newBuilder().setUrl("http://www.example.com").build())
               .build();
 
       // Creates the operations.

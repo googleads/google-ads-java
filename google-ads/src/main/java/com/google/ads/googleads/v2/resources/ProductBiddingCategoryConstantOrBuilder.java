@@ -9,191 +9,207 @@ public interface ProductBiddingCategoryConstantOrBuilder extends
 
   /**
    * <pre>
-   * The resource name of the product bidding category.
+   * Output only. The resource name of the product bidding category.
    * Product bidding category resource names have the form:
    * `productBiddingCategoryConstants/{country_code}~{level}~{id}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The resourceName.
    */
   java.lang.String getResourceName();
   /**
    * <pre>
-   * The resource name of the product bidding category.
+   * Output only. The resource name of the product bidding category.
    * Product bidding category resource names have the form:
    * `productBiddingCategoryConstants/{country_code}~{level}~{id}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The bytes for resourceName.
    */
   com.google.protobuf.ByteString
       getResourceNameBytes();
 
   /**
    * <pre>
-   * ID of the product bidding category.
+   * Output only. ID of the product bidding category.
    * This ID is equivalent to the google_product_category ID as described in
    * this article: https://support.google.com/merchants/answer/6324436.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value id = 2;</code>
+   * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the id field is set.
    */
   boolean hasId();
   /**
    * <pre>
-   * ID of the product bidding category.
+   * Output only. ID of the product bidding category.
    * This ID is equivalent to the google_product_category ID as described in
    * this article: https://support.google.com/merchants/answer/6324436.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value id = 2;</code>
+   * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The id.
    */
   com.google.protobuf.Int64Value getId();
   /**
    * <pre>
-   * ID of the product bidding category.
+   * Output only. ID of the product bidding category.
    * This ID is equivalent to the google_product_category ID as described in
    * this article: https://support.google.com/merchants/answer/6324436.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value id = 2;</code>
+   * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.protobuf.Int64ValueOrBuilder getIdOrBuilder();
 
   /**
    * <pre>
-   * Two-letter upper-case country code of the product bidding category.
+   * Output only. Two-letter upper-case country code of the product bidding category.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue country_code = 3;</code>
+   * <code>.google.protobuf.StringValue country_code = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the countryCode field is set.
    */
   boolean hasCountryCode();
   /**
    * <pre>
-   * Two-letter upper-case country code of the product bidding category.
+   * Output only. Two-letter upper-case country code of the product bidding category.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue country_code = 3;</code>
+   * <code>.google.protobuf.StringValue country_code = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The countryCode.
    */
   com.google.protobuf.StringValue getCountryCode();
   /**
    * <pre>
-   * Two-letter upper-case country code of the product bidding category.
+   * Output only. Two-letter upper-case country code of the product bidding category.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue country_code = 3;</code>
+   * <code>.google.protobuf.StringValue country_code = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.protobuf.StringValueOrBuilder getCountryCodeOrBuilder();
 
   /**
    * <pre>
-   * Resource name of the parent product bidding category.
+   * Output only. Resource name of the parent product bidding category.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue product_bidding_category_constant_parent = 4;</code>
+   * <code>.google.protobuf.StringValue product_bidding_category_constant_parent = 4 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return Whether the productBiddingCategoryConstantParent field is set.
    */
   boolean hasProductBiddingCategoryConstantParent();
   /**
    * <pre>
-   * Resource name of the parent product bidding category.
+   * Output only. Resource name of the parent product bidding category.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue product_bidding_category_constant_parent = 4;</code>
+   * <code>.google.protobuf.StringValue product_bidding_category_constant_parent = 4 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The productBiddingCategoryConstantParent.
    */
   com.google.protobuf.StringValue getProductBiddingCategoryConstantParent();
   /**
    * <pre>
-   * Resource name of the parent product bidding category.
+   * Output only. Resource name of the parent product bidding category.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue product_bidding_category_constant_parent = 4;</code>
+   * <code>.google.protobuf.StringValue product_bidding_category_constant_parent = 4 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    */
   com.google.protobuf.StringValueOrBuilder getProductBiddingCategoryConstantParentOrBuilder();
 
   /**
    * <pre>
-   * Level of the product bidding category.
+   * Output only. Level of the product bidding category.
    * </pre>
    *
-   * <code>.google.ads.googleads.v2.enums.ProductBiddingCategoryLevelEnum.ProductBiddingCategoryLevel level = 5;</code>
+   * <code>.google.ads.googleads.v2.enums.ProductBiddingCategoryLevelEnum.ProductBiddingCategoryLevel level = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The enum numeric value on the wire for level.
    */
   int getLevelValue();
   /**
    * <pre>
-   * Level of the product bidding category.
+   * Output only. Level of the product bidding category.
    * </pre>
    *
-   * <code>.google.ads.googleads.v2.enums.ProductBiddingCategoryLevelEnum.ProductBiddingCategoryLevel level = 5;</code>
+   * <code>.google.ads.googleads.v2.enums.ProductBiddingCategoryLevelEnum.ProductBiddingCategoryLevel level = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The level.
    */
   com.google.ads.googleads.v2.enums.ProductBiddingCategoryLevelEnum.ProductBiddingCategoryLevel getLevel();
 
   /**
    * <pre>
-   * Status of the product bidding category.
+   * Output only. Status of the product bidding category.
    * </pre>
    *
-   * <code>.google.ads.googleads.v2.enums.ProductBiddingCategoryStatusEnum.ProductBiddingCategoryStatus status = 6;</code>
+   * <code>.google.ads.googleads.v2.enums.ProductBiddingCategoryStatusEnum.ProductBiddingCategoryStatus status = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The enum numeric value on the wire for status.
    */
   int getStatusValue();
   /**
    * <pre>
-   * Status of the product bidding category.
+   * Output only. Status of the product bidding category.
    * </pre>
    *
-   * <code>.google.ads.googleads.v2.enums.ProductBiddingCategoryStatusEnum.ProductBiddingCategoryStatus status = 6;</code>
+   * <code>.google.ads.googleads.v2.enums.ProductBiddingCategoryStatusEnum.ProductBiddingCategoryStatus status = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The status.
    */
   com.google.ads.googleads.v2.enums.ProductBiddingCategoryStatusEnum.ProductBiddingCategoryStatus getStatus();
 
   /**
    * <pre>
-   * Language code of the product bidding category.
+   * Output only. Language code of the product bidding category.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue language_code = 7;</code>
+   * <code>.google.protobuf.StringValue language_code = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the languageCode field is set.
    */
   boolean hasLanguageCode();
   /**
    * <pre>
-   * Language code of the product bidding category.
+   * Output only. Language code of the product bidding category.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue language_code = 7;</code>
+   * <code>.google.protobuf.StringValue language_code = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The languageCode.
    */
   com.google.protobuf.StringValue getLanguageCode();
   /**
    * <pre>
-   * Language code of the product bidding category.
+   * Output only. Language code of the product bidding category.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue language_code = 7;</code>
+   * <code>.google.protobuf.StringValue language_code = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.protobuf.StringValueOrBuilder getLanguageCodeOrBuilder();
 
   /**
    * <pre>
-   * Display value of the product bidding category localized according to
+   * Output only. Display value of the product bidding category localized according to
    * language_code.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue localized_name = 8;</code>
+   * <code>.google.protobuf.StringValue localized_name = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the localizedName field is set.
    */
   boolean hasLocalizedName();
   /**
    * <pre>
-   * Display value of the product bidding category localized according to
+   * Output only. Display value of the product bidding category localized according to
    * language_code.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue localized_name = 8;</code>
+   * <code>.google.protobuf.StringValue localized_name = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The localizedName.
    */
   com.google.protobuf.StringValue getLocalizedName();
   /**
    * <pre>
-   * Display value of the product bidding category localized according to
+   * Output only. Display value of the product bidding category localized according to
    * language_code.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue localized_name = 8;</code>
+   * <code>.google.protobuf.StringValue localized_name = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.protobuf.StringValueOrBuilder getLocalizedNameOrBuilder();
 }

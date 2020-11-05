@@ -15,6 +15,7 @@ public interface ClickViewOrBuilder extends
    * </pre>
    *
    * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The resourceName.
    */
   java.lang.String getResourceName();
   /**
@@ -25,6 +26,7 @@ public interface ClickViewOrBuilder extends
    * </pre>
    *
    * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The bytes for resourceName.
    */
   com.google.protobuf.ByteString
       getResourceNameBytes();
@@ -35,6 +37,7 @@ public interface ClickViewOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue gclid = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the gclid field is set.
    */
   boolean hasGclid();
   /**
@@ -43,6 +46,7 @@ public interface ClickViewOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue gclid = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The gclid.
    */
   com.google.protobuf.StringValue getGclid();
   /**
@@ -61,6 +65,7 @@ public interface ClickViewOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.ClickLocation area_of_interest = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the areaOfInterest field is set.
    */
   boolean hasAreaOfInterest();
   /**
@@ -70,6 +75,7 @@ public interface ClickViewOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.ClickLocation area_of_interest = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The areaOfInterest.
    */
   com.google.ads.googleads.v3.common.ClickLocation getAreaOfInterest();
   /**
@@ -89,6 +95,7 @@ public interface ClickViewOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.ClickLocation location_of_presence = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the locationOfPresence field is set.
    */
   boolean hasLocationOfPresence();
   /**
@@ -98,6 +105,7 @@ public interface ClickViewOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.ClickLocation location_of_presence = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The locationOfPresence.
    */
   com.google.ads.googleads.v3.common.ClickLocation getLocationOfPresence();
   /**
@@ -116,6 +124,7 @@ public interface ClickViewOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value page_number = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the pageNumber field is set.
    */
   boolean hasPageNumber();
   /**
@@ -124,6 +133,7 @@ public interface ClickViewOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value page_number = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The pageNumber.
    */
   com.google.protobuf.Int64Value getPageNumber();
   /**
@@ -141,6 +151,7 @@ public interface ClickViewOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue ad_group_ad = 7 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return Whether the adGroupAd field is set.
    */
   boolean hasAdGroupAd();
   /**
@@ -149,6 +160,7 @@ public interface ClickViewOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue ad_group_ad = 7 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The adGroupAd.
    */
   com.google.protobuf.StringValue getAdGroupAd();
   /**

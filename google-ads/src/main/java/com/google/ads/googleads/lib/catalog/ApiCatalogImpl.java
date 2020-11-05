@@ -35,16 +35,17 @@ class ApiCatalogImpl implements ApiCatalog {
   private static final ApiCatalogImpl instance =
       new ApiCatalogImpl(
           VersionDescriptorLoader.forVersionList(GoogleAdsAllVersions.class).getVersions());
+
   private final ImmutableSortedSet<Version> supportedVersions;
+
+  /** Creates a new catalog from a known collection of versions. */
+  public ApiCatalogImpl(Collection<Version> versions) {
+    supportedVersions = ImmutableSortedSet.copyOf(new TreeSet<>(versions));
+  }
 
   /** Returns a catalog with the versions declared in the class. */
   public static ApiCatalog getDefault() {
     return instance;
-  }
-
-  /** Creates a new constant catalog from a known collection of versions */
-  public ApiCatalogImpl(Collection<Version> versions) {
-    supportedVersions = ImmutableSortedSet.copyOf(new TreeSet<>(versions));
   }
 
   /** @inheritDoc */

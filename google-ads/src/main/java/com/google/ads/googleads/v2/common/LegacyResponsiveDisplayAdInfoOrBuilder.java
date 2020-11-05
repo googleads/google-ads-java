@@ -13,6 +13,7 @@ public interface LegacyResponsiveDisplayAdInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue short_headline = 1;</code>
+   * @return Whether the shortHeadline field is set.
    */
   boolean hasShortHeadline();
   /**
@@ -21,6 +22,7 @@ public interface LegacyResponsiveDisplayAdInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue short_headline = 1;</code>
+   * @return The shortHeadline.
    */
   com.google.protobuf.StringValue getShortHeadline();
   /**
@@ -38,6 +40,7 @@ public interface LegacyResponsiveDisplayAdInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue long_headline = 2;</code>
+   * @return Whether the longHeadline field is set.
    */
   boolean hasLongHeadline();
   /**
@@ -46,6 +49,7 @@ public interface LegacyResponsiveDisplayAdInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue long_headline = 2;</code>
+   * @return The longHeadline.
    */
   com.google.protobuf.StringValue getLongHeadline();
   /**
@@ -63,6 +67,7 @@ public interface LegacyResponsiveDisplayAdInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue description = 3;</code>
+   * @return Whether the description field is set.
    */
   boolean hasDescription();
   /**
@@ -71,6 +76,7 @@ public interface LegacyResponsiveDisplayAdInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue description = 3;</code>
+   * @return The description.
    */
   com.google.protobuf.StringValue getDescription();
   /**
@@ -88,6 +94,7 @@ public interface LegacyResponsiveDisplayAdInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue business_name = 4;</code>
+   * @return Whether the businessName field is set.
    */
   boolean hasBusinessName();
   /**
@@ -96,6 +103,7 @@ public interface LegacyResponsiveDisplayAdInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue business_name = 4;</code>
+   * @return The businessName.
    */
   com.google.protobuf.StringValue getBusinessName();
   /**
@@ -117,6 +125,7 @@ public interface LegacyResponsiveDisplayAdInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.BoolValue allow_flexible_color = 5;</code>
+   * @return Whether the allowFlexibleColor field is set.
    */
   boolean hasAllowFlexibleColor();
   /**
@@ -129,6 +138,7 @@ public interface LegacyResponsiveDisplayAdInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.BoolValue allow_flexible_color = 5;</code>
+   * @return The allowFlexibleColor.
    */
   com.google.protobuf.BoolValue getAllowFlexibleColor();
   /**
@@ -152,6 +162,7 @@ public interface LegacyResponsiveDisplayAdInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue accent_color = 6;</code>
+   * @return Whether the accentColor field is set.
    */
   boolean hasAccentColor();
   /**
@@ -162,6 +173,7 @@ public interface LegacyResponsiveDisplayAdInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue accent_color = 6;</code>
+   * @return The accentColor.
    */
   com.google.protobuf.StringValue getAccentColor();
   /**
@@ -183,6 +195,7 @@ public interface LegacyResponsiveDisplayAdInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue main_color = 7;</code>
+   * @return Whether the mainColor field is set.
    */
   boolean hasMainColor();
   /**
@@ -193,6 +206,7 @@ public interface LegacyResponsiveDisplayAdInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue main_color = 7;</code>
+   * @return The mainColor.
    */
   com.google.protobuf.StringValue getMainColor();
   /**
@@ -212,6 +226,7 @@ public interface LegacyResponsiveDisplayAdInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue call_to_action_text = 8;</code>
+   * @return Whether the callToActionText field is set.
    */
   boolean hasCallToActionText();
   /**
@@ -220,6 +235,7 @@ public interface LegacyResponsiveDisplayAdInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue call_to_action_text = 8;</code>
+   * @return The callToActionText.
    */
   com.google.protobuf.StringValue getCallToActionText();
   /**
@@ -237,6 +253,7 @@ public interface LegacyResponsiveDisplayAdInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue logo_image = 9;</code>
+   * @return Whether the logoImage field is set.
    */
   boolean hasLogoImage();
   /**
@@ -245,6 +262,7 @@ public interface LegacyResponsiveDisplayAdInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue logo_image = 9;</code>
+   * @return The logoImage.
    */
   com.google.protobuf.StringValue getLogoImage();
   /**
@@ -262,6 +280,7 @@ public interface LegacyResponsiveDisplayAdInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue square_logo_image = 10;</code>
+   * @return Whether the squareLogoImage field is set.
    */
   boolean hasSquareLogoImage();
   /**
@@ -270,6 +289,7 @@ public interface LegacyResponsiveDisplayAdInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue square_logo_image = 10;</code>
+   * @return The squareLogoImage.
    */
   com.google.protobuf.StringValue getSquareLogoImage();
   /**
@@ -287,6 +307,7 @@ public interface LegacyResponsiveDisplayAdInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue marketing_image = 11;</code>
+   * @return Whether the marketingImage field is set.
    */
   boolean hasMarketingImage();
   /**
@@ -295,6 +316,7 @@ public interface LegacyResponsiveDisplayAdInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue marketing_image = 11;</code>
+   * @return The marketingImage.
    */
   com.google.protobuf.StringValue getMarketingImage();
   /**
@@ -312,6 +334,7 @@ public interface LegacyResponsiveDisplayAdInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue square_marketing_image = 12;</code>
+   * @return Whether the squareMarketingImage field is set.
    */
   boolean hasSquareMarketingImage();
   /**
@@ -320,6 +343,7 @@ public interface LegacyResponsiveDisplayAdInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue square_marketing_image = 12;</code>
+   * @return The squareMarketingImage.
    */
   com.google.protobuf.StringValue getSquareMarketingImage();
   /**
@@ -337,6 +361,7 @@ public interface LegacyResponsiveDisplayAdInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.enums.DisplayAdFormatSettingEnum.DisplayAdFormatSetting format_setting = 13;</code>
+   * @return The enum numeric value on the wire for formatSetting.
    */
   int getFormatSettingValue();
   /**
@@ -345,6 +370,7 @@ public interface LegacyResponsiveDisplayAdInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.enums.DisplayAdFormatSettingEnum.DisplayAdFormatSetting format_setting = 13;</code>
+   * @return The formatSetting.
    */
   com.google.ads.googleads.v2.enums.DisplayAdFormatSettingEnum.DisplayAdFormatSetting getFormatSetting();
 
@@ -354,6 +380,7 @@ public interface LegacyResponsiveDisplayAdInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue price_prefix = 14;</code>
+   * @return Whether the pricePrefix field is set.
    */
   boolean hasPricePrefix();
   /**
@@ -362,6 +389,7 @@ public interface LegacyResponsiveDisplayAdInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue price_prefix = 14;</code>
+   * @return The pricePrefix.
    */
   com.google.protobuf.StringValue getPricePrefix();
   /**
@@ -380,6 +408,7 @@ public interface LegacyResponsiveDisplayAdInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue promo_text = 15;</code>
+   * @return Whether the promoText field is set.
    */
   boolean hasPromoText();
   /**
@@ -389,6 +418,7 @@ public interface LegacyResponsiveDisplayAdInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue promo_text = 15;</code>
+   * @return The promoText.
    */
   com.google.protobuf.StringValue getPromoText();
   /**

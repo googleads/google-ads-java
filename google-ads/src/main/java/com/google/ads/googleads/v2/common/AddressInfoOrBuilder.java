@@ -13,6 +13,7 @@ public interface AddressInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue postal_code = 1;</code>
+   * @return Whether the postalCode field is set.
    */
   boolean hasPostalCode();
   /**
@@ -21,6 +22,7 @@ public interface AddressInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue postal_code = 1;</code>
+   * @return The postalCode.
    */
   com.google.protobuf.StringValue getPostalCode();
   /**
@@ -38,6 +40,7 @@ public interface AddressInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue province_code = 2;</code>
+   * @return Whether the provinceCode field is set.
    */
   boolean hasProvinceCode();
   /**
@@ -46,6 +49,7 @@ public interface AddressInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue province_code = 2;</code>
+   * @return The provinceCode.
    */
   com.google.protobuf.StringValue getProvinceCode();
   /**
@@ -63,6 +67,7 @@ public interface AddressInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue country_code = 3;</code>
+   * @return Whether the countryCode field is set.
    */
   boolean hasCountryCode();
   /**
@@ -71,6 +76,7 @@ public interface AddressInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue country_code = 3;</code>
+   * @return The countryCode.
    */
   com.google.protobuf.StringValue getCountryCode();
   /**
@@ -88,6 +94,7 @@ public interface AddressInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue province_name = 4;</code>
+   * @return Whether the provinceName field is set.
    */
   boolean hasProvinceName();
   /**
@@ -96,6 +103,7 @@ public interface AddressInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue province_name = 4;</code>
+   * @return The provinceName.
    */
   com.google.protobuf.StringValue getProvinceName();
   /**
@@ -113,6 +121,7 @@ public interface AddressInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue street_address = 5;</code>
+   * @return Whether the streetAddress field is set.
    */
   boolean hasStreetAddress();
   /**
@@ -121,6 +130,7 @@ public interface AddressInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue street_address = 5;</code>
+   * @return The streetAddress.
    */
   com.google.protobuf.StringValue getStreetAddress();
   /**
@@ -140,6 +150,7 @@ public interface AddressInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue street_address2 = 6;</code>
+   * @return Whether the streetAddress2 field is set.
    */
   boolean hasStreetAddress2();
   /**
@@ -150,6 +161,7 @@ public interface AddressInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue street_address2 = 6;</code>
+   * @return The streetAddress2.
    */
   com.google.protobuf.StringValue getStreetAddress2();
   /**
@@ -169,6 +181,7 @@ public interface AddressInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue city_name = 7;</code>
+   * @return Whether the cityName field is set.
    */
   boolean hasCityName();
   /**
@@ -177,6 +190,7 @@ public interface AddressInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue city_name = 7;</code>
+   * @return The cityName.
    */
   com.google.protobuf.StringValue getCityName();
   /**

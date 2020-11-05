@@ -15,6 +15,7 @@ public interface GeographicViewOrBuilder extends
    * </pre>
    *
    * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The resourceName.
    */
   java.lang.String getResourceName();
   /**
@@ -25,6 +26,7 @@ public interface GeographicViewOrBuilder extends
    * </pre>
    *
    * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The bytes for resourceName.
    */
   com.google.protobuf.ByteString
       getResourceNameBytes();
@@ -35,6 +37,7 @@ public interface GeographicViewOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.GeoTargetingTypeEnum.GeoTargetingType location_type = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The enum numeric value on the wire for locationType.
    */
   int getLocationTypeValue();
   /**
@@ -43,6 +46,7 @@ public interface GeographicViewOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.GeoTargetingTypeEnum.GeoTargetingType location_type = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The locationType.
    */
   com.google.ads.googleads.v3.enums.GeoTargetingTypeEnum.GeoTargetingType getLocationType();
 
@@ -52,6 +56,7 @@ public interface GeographicViewOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value country_criterion_id = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the countryCriterionId field is set.
    */
   boolean hasCountryCriterionId();
   /**
@@ -60,6 +65,7 @@ public interface GeographicViewOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value country_criterion_id = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The countryCriterionId.
    */
   com.google.protobuf.Int64Value getCountryCriterionId();
   /**

@@ -19,22 +19,21 @@ import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
 import com.google.ads.googleads.lib.utils.FieldMasks;
-import com.google.ads.googleads.v3.common.TargetRestriction;
-import com.google.ads.googleads.v3.common.TargetingSetting;
-import com.google.ads.googleads.v3.enums.TargetingDimensionEnum.TargetingDimension;
-import com.google.ads.googleads.v3.errors.GoogleAdsError;
-import com.google.ads.googleads.v3.errors.GoogleAdsException;
-import com.google.ads.googleads.v3.resources.AdGroup;
-import com.google.ads.googleads.v3.services.AdGroupOperation;
-import com.google.ads.googleads.v3.services.AdGroupServiceClient;
-import com.google.ads.googleads.v3.services.GoogleAdsRow;
-import com.google.ads.googleads.v3.services.GoogleAdsServiceClient;
-import com.google.ads.googleads.v3.services.GoogleAdsServiceClient.SearchPagedResponse;
-import com.google.ads.googleads.v3.services.MutateAdGroupsResponse;
-import com.google.ads.googleads.v3.services.SearchGoogleAdsRequest;
-import com.google.ads.googleads.v3.utils.ResourceNames;
+import com.google.ads.googleads.v5.common.TargetRestriction;
+import com.google.ads.googleads.v5.common.TargetingSetting;
+import com.google.ads.googleads.v5.enums.TargetingDimensionEnum.TargetingDimension;
+import com.google.ads.googleads.v5.errors.GoogleAdsError;
+import com.google.ads.googleads.v5.errors.GoogleAdsException;
+import com.google.ads.googleads.v5.resources.AdGroup;
+import com.google.ads.googleads.v5.services.AdGroupOperation;
+import com.google.ads.googleads.v5.services.AdGroupServiceClient;
+import com.google.ads.googleads.v5.services.GoogleAdsRow;
+import com.google.ads.googleads.v5.services.GoogleAdsServiceClient;
+import com.google.ads.googleads.v5.services.GoogleAdsServiceClient.SearchPagedResponse;
+import com.google.ads.googleads.v5.services.MutateAdGroupsResponse;
+import com.google.ads.googleads.v5.services.SearchGoogleAdsRequest;
+import com.google.ads.googleads.v5.utils.ResourceNames;
 import com.google.common.collect.ImmutableList;
-import com.google.protobuf.BoolValue;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.List;
@@ -63,16 +62,16 @@ public class UpdateAudienceTargetRestriction {
       params.adGroupId = Long.parseLong("INSERT_AD_GROUP_ID_HERE");
     }
 
-    GoogleAdsClient googleAdsClient;
+    GoogleAdsClient googleAdsClient = null;
     try {
       googleAdsClient = GoogleAdsClient.newBuilder().fromPropertiesFile().build();
     } catch (FileNotFoundException fnfe) {
       System.err.printf(
           "Failed to load GoogleAdsClient configuration from file. Exception: %s%n", fnfe);
-      return;
+      System.exit(1);
     } catch (IOException ioe) {
       System.err.printf("Failed to create GoogleAdsClient. Exception: %s%n", ioe);
-      return;
+      System.exit(1);
     }
 
     try {
@@ -90,6 +89,7 @@ public class UpdateAudienceTargetRestriction {
       for (GoogleAdsError googleAdsError : gae.getGoogleAdsFailure().getErrorsList()) {
         System.err.printf("  Error %d: %s%n", i++, googleAdsError);
       }
+      System.exit(1);
     }
   }
 
@@ -135,7 +135,7 @@ public class UpdateAudienceTargetRestriction {
         System.out.printf(
             "Ad group with ID %d and name '%s' was found with the following targeting"
                 + " restrictions.%n",
-            adGroup.getId().getValue(), adGroup.getName().getValue());
+            adGroup.getId(), adGroup.getName());
         List<TargetRestriction> targetRestrictions =
             adGroup.getTargetingSetting().getTargetRestrictionsList();
         // Loops through and prints each of the target restrictions.
@@ -144,7 +144,7 @@ public class UpdateAudienceTargetRestriction {
         // the field mask includes targeting_setting in an update operation.
         for (TargetRestriction targetRestriction : targetRestrictions) {
           TargetingDimension targetingDimension = targetRestriction.getTargetingDimension();
-          boolean bidOnly = targetRestriction.getBidOnly().getValue();
+          boolean bidOnly = targetRestriction.getBidOnly();
           System.out.printf(
               "- Targeting restriction with targeting dimension '%s' and bid only set to '%b'.%n",
               targetingDimension, bidOnly);
@@ -161,7 +161,7 @@ public class UpdateAudienceTargetRestriction {
             targetingSettingBuilder.addTargetRestrictions(
                 TargetRestriction.newBuilder()
                     .setTargetingDimensionValue(TargetingDimension.AUDIENCE_VALUE)
-                    .setBidOnly(BoolValue.of(true)));
+                    .setBidOnly(true));
           }
         }
       }

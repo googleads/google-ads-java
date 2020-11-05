@@ -10,7 +10,7 @@ package com.google.ads.googleads.v2.services;
  *
  * Protobuf type {@code google.ads.googleads.v2.services.AddMutateJobOperationsResponse}
  */
-public  final class AddMutateJobOperationsResponse extends
+public final class AddMutateJobOperationsResponse extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v2.services.AddMutateJobOperationsResponse)
     AddMutateJobOperationsResponseOrBuilder {
@@ -21,6 +21,13 @@ private static final long serialVersionUID = 0L;
   }
   private AddMutateJobOperationsResponse() {
     nextSequenceToken_ = "";
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new AddMutateJobOperationsResponse();
   }
 
   @java.lang.Override
@@ -36,7 +43,6 @@ private static final long serialVersionUID = 0L;
     if (extensionRegistry == null) {
       throw new java.lang.NullPointerException();
     }
-    int mutable_bitField0_ = 0;
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
         com.google.protobuf.UnknownFieldSet.newBuilder();
     try {
@@ -98,7 +104,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>int64 total_operations = 1;</code>
+   * @return The totalOperations.
    */
+  @java.lang.Override
   public long getTotalOperations() {
     return totalOperations_;
   }
@@ -113,7 +121,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string next_sequence_token = 2;</code>
+   * @return The nextSequenceToken.
    */
+  @java.lang.Override
   public java.lang.String getNextSequenceToken() {
     java.lang.Object ref = nextSequenceToken_;
     if (ref instanceof java.lang.String) {
@@ -134,7 +144,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string next_sequence_token = 2;</code>
+   * @return The bytes for nextSequenceToken.
    */
+  @java.lang.Override
   public com.google.protobuf.ByteString
       getNextSequenceTokenBytes() {
     java.lang.Object ref = nextSequenceToken_;
@@ -480,7 +492,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>int64 total_operations = 1;</code>
+     * @return The totalOperations.
      */
+    @java.lang.Override
     public long getTotalOperations() {
       return totalOperations_;
     }
@@ -490,6 +504,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>int64 total_operations = 1;</code>
+     * @param value The totalOperations to set.
+     * @return This builder for chaining.
      */
     public Builder setTotalOperations(long value) {
       
@@ -503,6 +519,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>int64 total_operations = 1;</code>
+     * @return This builder for chaining.
      */
     public Builder clearTotalOperations() {
       
@@ -520,6 +537,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string next_sequence_token = 2;</code>
+     * @return The nextSequenceToken.
      */
     public java.lang.String getNextSequenceToken() {
       java.lang.Object ref = nextSequenceToken_;
@@ -541,6 +559,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string next_sequence_token = 2;</code>
+     * @return The bytes for nextSequenceToken.
      */
     public com.google.protobuf.ByteString
         getNextSequenceTokenBytes() {
@@ -563,6 +582,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string next_sequence_token = 2;</code>
+     * @param value The nextSequenceToken to set.
+     * @return This builder for chaining.
      */
     public Builder setNextSequenceToken(
         java.lang.String value) {
@@ -582,6 +603,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string next_sequence_token = 2;</code>
+     * @return This builder for chaining.
      */
     public Builder clearNextSequenceToken() {
       
@@ -597,6 +619,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string next_sequence_token = 2;</code>
+     * @param value The bytes for nextSequenceToken to set.
+     * @return This builder for chaining.
      */
     public Builder setNextSequenceTokenBytes(
         com.google.protobuf.ByteString value) {

@@ -21,7 +21,7 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.10.0)",
+    value = "by gRPC proto compiler",
     comments = "Source: google/ads/googleads/v3/services/change_status_service.proto")
 public final class ChangeStatusServiceGrpc {
 
@@ -30,49 +30,49 @@ public final class ChangeStatusServiceGrpc {
   public static final String SERVICE_NAME = "google.ads.googleads.v3.services.ChangeStatusService";
 
   // Static method descriptors that strictly reflect the proto.
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  @java.lang.Deprecated // Use {@link #getGetChangeStatusMethod()} instead. 
-  public static final io.grpc.MethodDescriptor<com.google.ads.googleads.v3.services.GetChangeStatusRequest,
-      com.google.ads.googleads.v3.resources.ChangeStatus> METHOD_GET_CHANGE_STATUS = getGetChangeStatusMethodHelper();
-
   private static volatile io.grpc.MethodDescriptor<com.google.ads.googleads.v3.services.GetChangeStatusRequest,
       com.google.ads.googleads.v3.resources.ChangeStatus> getGetChangeStatusMethod;
 
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetChangeStatus",
+      requestType = com.google.ads.googleads.v3.services.GetChangeStatusRequest.class,
+      responseType = com.google.ads.googleads.v3.resources.ChangeStatus.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<com.google.ads.googleads.v3.services.GetChangeStatusRequest,
       com.google.ads.googleads.v3.resources.ChangeStatus> getGetChangeStatusMethod() {
-    return getGetChangeStatusMethodHelper();
-  }
-
-  private static io.grpc.MethodDescriptor<com.google.ads.googleads.v3.services.GetChangeStatusRequest,
-      com.google.ads.googleads.v3.resources.ChangeStatus> getGetChangeStatusMethodHelper() {
     io.grpc.MethodDescriptor<com.google.ads.googleads.v3.services.GetChangeStatusRequest, com.google.ads.googleads.v3.resources.ChangeStatus> getGetChangeStatusMethod;
     if ((getGetChangeStatusMethod = ChangeStatusServiceGrpc.getGetChangeStatusMethod) == null) {
       synchronized (ChangeStatusServiceGrpc.class) {
         if ((getGetChangeStatusMethod = ChangeStatusServiceGrpc.getGetChangeStatusMethod) == null) {
-          ChangeStatusServiceGrpc.getGetChangeStatusMethod = getGetChangeStatusMethod = 
+          ChangeStatusServiceGrpc.getGetChangeStatusMethod = getGetChangeStatusMethod =
               io.grpc.MethodDescriptor.<com.google.ads.googleads.v3.services.GetChangeStatusRequest, com.google.ads.googleads.v3.resources.ChangeStatus>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "google.ads.googleads.v3.services.ChangeStatusService", "GetChangeStatus"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetChangeStatus"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v3.services.GetChangeStatusRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v3.resources.ChangeStatus.getDefaultInstance()))
-                  .setSchemaDescriptor(new ChangeStatusServiceMethodDescriptorSupplier("GetChangeStatus"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ChangeStatusServiceMethodDescriptorSupplier("GetChangeStatus"))
+              .build();
         }
-     }
-     return getGetChangeStatusMethod;
+      }
+    }
+    return getGetChangeStatusMethod;
   }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static ChangeStatusServiceStub newStub(io.grpc.Channel channel) {
-    return new ChangeStatusServiceStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<ChangeStatusServiceStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<ChangeStatusServiceStub>() {
+        @java.lang.Override
+        public ChangeStatusServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new ChangeStatusServiceStub(channel, callOptions);
+        }
+      };
+    return ChangeStatusServiceStub.newStub(factory, channel);
   }
 
   /**
@@ -80,7 +80,14 @@ public final class ChangeStatusServiceGrpc {
    */
   public static ChangeStatusServiceBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new ChangeStatusServiceBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<ChangeStatusServiceBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<ChangeStatusServiceBlockingStub>() {
+        @java.lang.Override
+        public ChangeStatusServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new ChangeStatusServiceBlockingStub(channel, callOptions);
+        }
+      };
+    return ChangeStatusServiceBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -88,7 +95,14 @@ public final class ChangeStatusServiceGrpc {
    */
   public static ChangeStatusServiceFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new ChangeStatusServiceFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<ChangeStatusServiceFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<ChangeStatusServiceFutureStub>() {
+        @java.lang.Override
+        public ChangeStatusServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new ChangeStatusServiceFutureStub(channel, callOptions);
+        }
+      };
+    return ChangeStatusServiceFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -105,13 +119,13 @@ public final class ChangeStatusServiceGrpc {
      */
     public void getChangeStatus(com.google.ads.googleads.v3.services.GetChangeStatusRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v3.resources.ChangeStatus> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetChangeStatusMethodHelper(), responseObserver);
+      asyncUnimplementedUnaryCall(getGetChangeStatusMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
-            getGetChangeStatusMethodHelper(),
+            getGetChangeStatusMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 com.google.ads.googleads.v3.services.GetChangeStatusRequest,
@@ -126,19 +140,15 @@ public final class ChangeStatusServiceGrpc {
    * Service to fetch change statuses.
    * </pre>
    */
-  public static final class ChangeStatusServiceStub extends io.grpc.stub.AbstractStub<ChangeStatusServiceStub> {
-    private ChangeStatusServiceStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private ChangeStatusServiceStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class ChangeStatusServiceStub extends io.grpc.stub.AbstractAsyncStub<ChangeStatusServiceStub> {
+    private ChangeStatusServiceStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected ChangeStatusServiceStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected ChangeStatusServiceStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new ChangeStatusServiceStub(channel, callOptions);
     }
 
@@ -150,7 +160,7 @@ public final class ChangeStatusServiceGrpc {
     public void getChangeStatus(com.google.ads.googleads.v3.services.GetChangeStatusRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v3.resources.ChangeStatus> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(getGetChangeStatusMethodHelper(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getGetChangeStatusMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -159,19 +169,15 @@ public final class ChangeStatusServiceGrpc {
    * Service to fetch change statuses.
    * </pre>
    */
-  public static final class ChangeStatusServiceBlockingStub extends io.grpc.stub.AbstractStub<ChangeStatusServiceBlockingStub> {
-    private ChangeStatusServiceBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private ChangeStatusServiceBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class ChangeStatusServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<ChangeStatusServiceBlockingStub> {
+    private ChangeStatusServiceBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected ChangeStatusServiceBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected ChangeStatusServiceBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new ChangeStatusServiceBlockingStub(channel, callOptions);
     }
 
@@ -182,7 +188,7 @@ public final class ChangeStatusServiceGrpc {
      */
     public com.google.ads.googleads.v3.resources.ChangeStatus getChangeStatus(com.google.ads.googleads.v3.services.GetChangeStatusRequest request) {
       return blockingUnaryCall(
-          getChannel(), getGetChangeStatusMethodHelper(), getCallOptions(), request);
+          getChannel(), getGetChangeStatusMethod(), getCallOptions(), request);
     }
   }
 
@@ -191,19 +197,15 @@ public final class ChangeStatusServiceGrpc {
    * Service to fetch change statuses.
    * </pre>
    */
-  public static final class ChangeStatusServiceFutureStub extends io.grpc.stub.AbstractStub<ChangeStatusServiceFutureStub> {
-    private ChangeStatusServiceFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private ChangeStatusServiceFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class ChangeStatusServiceFutureStub extends io.grpc.stub.AbstractFutureStub<ChangeStatusServiceFutureStub> {
+    private ChangeStatusServiceFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected ChangeStatusServiceFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected ChangeStatusServiceFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new ChangeStatusServiceFutureStub(channel, callOptions);
     }
 
@@ -215,7 +217,7 @@ public final class ChangeStatusServiceGrpc {
     public com.google.common.util.concurrent.ListenableFuture<com.google.ads.googleads.v3.resources.ChangeStatus> getChangeStatus(
         com.google.ads.googleads.v3.services.GetChangeStatusRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(getGetChangeStatusMethodHelper(), getCallOptions()), request);
+          getChannel().newCall(getGetChangeStatusMethod(), getCallOptions()), request);
     }
   }
 
@@ -303,7 +305,7 @@ public final class ChangeStatusServiceGrpc {
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new ChangeStatusServiceFileDescriptorSupplier())
-              .addMethod(getGetChangeStatusMethodHelper())
+              .addMethod(getGetChangeStatusMethod())
               .build();
         }
       }

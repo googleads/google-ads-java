@@ -32,28 +32,17 @@ public interface ApiCatalog {
     return ApiCatalogImpl.getDefault();
   }
 
-  /**
-   * By default, this library uses reflection to build the ApiCatalog. In order to reduce latency,
-   * users can set api.googleads.enableGeneratedCatalog=true in the ads.properties file, which
-   * will set the enableGeneratedCatalog parameter equal to true and generate an ApiCatalog without
-   * the use of reflection. This feature is still experimental.
-   */
-  static ApiCatalog getDefault(boolean enableGeneratedCatalog) {
-    if (enableGeneratedCatalog) {
-      return GeneratedCatalog.getDefault();
-    }
-    return ApiCatalog.getDefault();
-  }
-
   /** Returns all API versions available in the current catalog. */
-  SortedSet<Version> getSupportedVersions();
+  abstract SortedSet<Version> getSupportedVersions();
 
   /** Returns the most recent API version available. */
-  Version getLatestVersion();
+  abstract Version getLatestVersion();
 
   /**
-   * Instantiates a new GoogleAdsAllVersions object for the given TransportChannelProvider and Credentials.
-   * Calling this method multiple times will create multiple instances of GoogleAdsAllVersions.
+   * Instantiates a new GoogleAdsAllVersions object for the given TransportChannelProvider and
+   * Credentials. Calling this method multiple times will create multiple instances of
+   * GoogleAdsAllVersions.
    */
-  GoogleAdsAllVersions createAllVersionsClient(TransportChannelProvider provider, Credentials credentials);
+  abstract GoogleAdsAllVersions createAllVersionsClient(
+      TransportChannelProvider provider, Credentials credentials);
 }

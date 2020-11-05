@@ -10,7 +10,7 @@ package com.google.ads.googleads.v3.common;
  *
  * Protobuf type {@code google.ads.googleads.v3.common.UserListStringRuleItemInfo}
  */
-public  final class UserListStringRuleItemInfo extends
+public final class UserListStringRuleItemInfo extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v3.common.UserListStringRuleItemInfo)
     UserListStringRuleItemInfoOrBuilder {
@@ -21,6 +21,13 @@ private static final long serialVersionUID = 0L;
   }
   private UserListStringRuleItemInfo() {
     operator_ = 0;
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new UserListStringRuleItemInfo();
   }
 
   @java.lang.Override
@@ -36,7 +43,6 @@ private static final long serialVersionUID = 0L;
     if (extensionRegistry == null) {
       throw new java.lang.NullPointerException();
     }
-    int mutable_bitField0_ = 0;
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
         com.google.protobuf.UnknownFieldSet.newBuilder();
     try {
@@ -108,8 +114,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.UserListStringRuleItemOperatorEnum.UserListStringRuleItemOperator operator = 1;</code>
+   * @return The enum numeric value on the wire for operator.
    */
-  public int getOperatorValue() {
+  @java.lang.Override public int getOperatorValue() {
     return operator_;
   }
   /**
@@ -120,8 +127,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.UserListStringRuleItemOperatorEnum.UserListStringRuleItemOperator operator = 1;</code>
+   * @return The operator.
    */
-  public com.google.ads.googleads.v3.enums.UserListStringRuleItemOperatorEnum.UserListStringRuleItemOperator getOperator() {
+  @java.lang.Override public com.google.ads.googleads.v3.enums.UserListStringRuleItemOperatorEnum.UserListStringRuleItemOperator getOperator() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v3.enums.UserListStringRuleItemOperatorEnum.UserListStringRuleItemOperator result = com.google.ads.googleads.v3.enums.UserListStringRuleItemOperatorEnum.UserListStringRuleItemOperator.valueOf(operator_);
     return result == null ? com.google.ads.googleads.v3.enums.UserListStringRuleItemOperatorEnum.UserListStringRuleItemOperator.UNRECOGNIZED : result;
@@ -138,7 +146,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue value = 2;</code>
+   * @return Whether the value field is set.
    */
+  @java.lang.Override
   public boolean hasValue() {
     return value_ != null;
   }
@@ -151,7 +161,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue value = 2;</code>
+   * @return The value.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getValue() {
     return value_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : value_;
   }
@@ -165,6 +177,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue value = 2;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getValueOrBuilder() {
     return getValue();
   }
@@ -513,8 +526,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.UserListStringRuleItemOperatorEnum.UserListStringRuleItemOperator operator = 1;</code>
+     * @return The enum numeric value on the wire for operator.
      */
-    public int getOperatorValue() {
+    @java.lang.Override public int getOperatorValue() {
       return operator_;
     }
     /**
@@ -525,8 +539,11 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.UserListStringRuleItemOperatorEnum.UserListStringRuleItemOperator operator = 1;</code>
+     * @param value The enum numeric value on the wire for operator to set.
+     * @return This builder for chaining.
      */
     public Builder setOperatorValue(int value) {
+      
       operator_ = value;
       onChanged();
       return this;
@@ -539,7 +556,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.UserListStringRuleItemOperatorEnum.UserListStringRuleItemOperator operator = 1;</code>
+     * @return The operator.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.enums.UserListStringRuleItemOperatorEnum.UserListStringRuleItemOperator getOperator() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v3.enums.UserListStringRuleItemOperatorEnum.UserListStringRuleItemOperator result = com.google.ads.googleads.v3.enums.UserListStringRuleItemOperatorEnum.UserListStringRuleItemOperator.valueOf(operator_);
@@ -553,6 +572,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.UserListStringRuleItemOperatorEnum.UserListStringRuleItemOperator operator = 1;</code>
+     * @param value The operator to set.
+     * @return This builder for chaining.
      */
     public Builder setOperator(com.google.ads.googleads.v3.enums.UserListStringRuleItemOperatorEnum.UserListStringRuleItemOperator value) {
       if (value == null) {
@@ -571,6 +592,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.UserListStringRuleItemOperatorEnum.UserListStringRuleItemOperator operator = 1;</code>
+     * @return This builder for chaining.
      */
     public Builder clearOperator() {
       
@@ -591,6 +613,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue value = 2;</code>
+     * @return Whether the value field is set.
      */
     public boolean hasValue() {
       return valueBuilder_ != null || value_ != null;
@@ -604,6 +627,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue value = 2;</code>
+     * @return The value.
      */
     public com.google.protobuf.StringValue getValue() {
       if (valueBuilder_ == null) {

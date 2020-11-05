@@ -18,21 +18,20 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.v3.common.AdTextAsset;
-import com.google.ads.googleads.v3.common.ResponsiveSearchAdInfo;
-import com.google.ads.googleads.v3.enums.AdGroupAdStatusEnum.AdGroupAdStatus;
-import com.google.ads.googleads.v3.enums.ServedAssetFieldTypeEnum.ServedAssetFieldType;
-import com.google.ads.googleads.v3.errors.GoogleAdsError;
-import com.google.ads.googleads.v3.errors.GoogleAdsException;
-import com.google.ads.googleads.v3.resources.Ad;
-import com.google.ads.googleads.v3.resources.AdGroupAd;
-import com.google.ads.googleads.v3.services.AdGroupAdOperation;
-import com.google.ads.googleads.v3.services.AdGroupAdServiceClient;
-import com.google.ads.googleads.v3.services.MutateAdGroupAdResult;
-import com.google.ads.googleads.v3.services.MutateAdGroupAdsResponse;
-import com.google.ads.googleads.v3.utils.ResourceNames;
+import com.google.ads.googleads.v5.common.AdTextAsset;
+import com.google.ads.googleads.v5.common.ResponsiveSearchAdInfo;
+import com.google.ads.googleads.v5.enums.AdGroupAdStatusEnum.AdGroupAdStatus;
+import com.google.ads.googleads.v5.enums.ServedAssetFieldTypeEnum.ServedAssetFieldType;
+import com.google.ads.googleads.v5.errors.GoogleAdsError;
+import com.google.ads.googleads.v5.errors.GoogleAdsException;
+import com.google.ads.googleads.v5.resources.Ad;
+import com.google.ads.googleads.v5.resources.AdGroupAd;
+import com.google.ads.googleads.v5.services.AdGroupAdOperation;
+import com.google.ads.googleads.v5.services.AdGroupAdServiceClient;
+import com.google.ads.googleads.v5.services.MutateAdGroupAdResult;
+import com.google.ads.googleads.v5.services.MutateAdGroupAdsResponse;
+import com.google.ads.googleads.v5.utils.ResourceNames;
 import com.google.common.collect.ImmutableList;
-import com.google.protobuf.StringValue;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
@@ -58,16 +57,16 @@ public class AddResponsiveSearchAd {
       params.adGroupId = Long.parseLong("INSERT_AD_GROUP_ID_HERE");
     }
 
-    GoogleAdsClient googleAdsClient;
+    GoogleAdsClient googleAdsClient = null;
     try {
       googleAdsClient = GoogleAdsClient.newBuilder().fromPropertiesFile().build();
     } catch (FileNotFoundException fnfe) {
       System.err.printf(
           "Failed to load GoogleAdsClient configuration from file. Exception: %s%n", fnfe);
-      return;
+      System.exit(1);
     } catch (IOException ioe) {
       System.err.printf("Failed to create GoogleAdsClient. Exception: %s%n", ioe);
-      return;
+      System.exit(1);
     }
 
     try {
@@ -84,6 +83,7 @@ public class AddResponsiveSearchAd {
       for (GoogleAdsError googleAdsError : gae.getGoogleAdsFailure().getErrorsList()) {
         System.err.printf("  Error %d: %s%n", i++, googleAdsError);
       }
+      System.exit(1);
     }
   }
 
@@ -103,7 +103,7 @@ public class AddResponsiveSearchAd {
     // perform best will be used more often.
     AdTextAsset pinnedHeadline =
         AdTextAsset.newBuilder()
-            .setText(StringValue.of("Cruise to Mars #" + System.currentTimeMillis()))
+            .setText("Cruise to Mars #" + System.currentTimeMillis())
             .setPinnedField(ServedAssetFieldType.HEADLINE_1)
             .build();
 
@@ -115,21 +115,21 @@ public class AddResponsiveSearchAd {
             .addHeadlines(createAdTextAsset("Experience the Stars"))
             .addDescriptions(createAdTextAsset("Buy your tickets now"))
             .addDescriptions(createAdTextAsset("Visit the Red Planet"))
-            .setPath1(StringValue.of("all-inclusive"))
-            .setPath2(StringValue.of("deals"))
+            .setPath1("all-inclusive")
+            .setPath2("deals")
             .build();
 
     // Wraps the info in an Ad object.
     Ad ad =
         Ad.newBuilder()
             .setResponsiveSearchAd(responsiveSearchAdInfo)
-            .addFinalUrls(StringValue.of("http://www.example.com"))
+            .addFinalUrls("http://www.example.com")
             .build();
 
     // Builds the final ad group ad representation.
     AdGroupAd adGroupAd =
         AdGroupAd.newBuilder()
-            .setAdGroup(StringValue.of(adGroupResourceName))
+            .setAdGroup(adGroupResourceName)
             .setStatus(AdGroupAdStatus.PAUSED)
             .setAd(ad)
             .build();
@@ -158,6 +158,6 @@ public class AddResponsiveSearchAd {
    * @return AdTextAsset.
    */
   private AdTextAsset createAdTextAsset(String text) {
-    return AdTextAsset.newBuilder().setText(StringValue.of(text)).build();
+    return AdTextAsset.newBuilder().setText(text).build();
   }
 }

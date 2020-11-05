@@ -10,7 +10,7 @@ package com.google.ads.googleads.v2.common;
  *
  * Protobuf type {@code google.ads.googleads.v2.common.ProductImage}
  */
-public  final class ProductImage extends
+public final class ProductImage extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v2.common.ProductImage)
     ProductImageOrBuilder {
@@ -20,6 +20,13 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private ProductImage() {
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new ProductImage();
   }
 
   @java.lang.Override
@@ -35,7 +42,6 @@ private static final long serialVersionUID = 0L;
     if (extensionRegistry == null) {
       throw new java.lang.NullPointerException();
     }
-    int mutable_bitField0_ = 0;
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
         com.google.protobuf.UnknownFieldSet.newBuilder();
     try {
@@ -127,7 +133,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue product_image = 1;</code>
+   * @return Whether the productImage field is set.
    */
+  @java.lang.Override
   public boolean hasProductImage() {
     return productImage_ != null;
   }
@@ -139,7 +147,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue product_image = 1;</code>
+   * @return The productImage.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getProductImage() {
     return productImage_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : productImage_;
   }
@@ -152,6 +162,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue product_image = 1;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getProductImageOrBuilder() {
     return getProductImage();
   }
@@ -164,7 +175,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue description = 2;</code>
+   * @return Whether the description field is set.
    */
+  @java.lang.Override
   public boolean hasDescription() {
     return description_ != null;
   }
@@ -174,7 +187,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue description = 2;</code>
+   * @return The description.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getDescription() {
     return description_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : description_;
   }
@@ -185,6 +200,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue description = 2;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getDescriptionOrBuilder() {
     return getDescription();
   }
@@ -197,7 +213,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.common.DisplayCallToAction display_call_to_action = 3;</code>
+   * @return Whether the displayCallToAction field is set.
    */
+  @java.lang.Override
   public boolean hasDisplayCallToAction() {
     return displayCallToAction_ != null;
   }
@@ -207,7 +225,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.common.DisplayCallToAction display_call_to_action = 3;</code>
+   * @return The displayCallToAction.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.common.DisplayCallToAction getDisplayCallToAction() {
     return displayCallToAction_ == null ? com.google.ads.googleads.v2.common.DisplayCallToAction.getDefaultInstance() : displayCallToAction_;
   }
@@ -218,6 +238,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v2.common.DisplayCallToAction display_call_to_action = 3;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.common.DisplayCallToActionOrBuilder getDisplayCallToActionOrBuilder() {
     return getDisplayCallToAction();
   }
@@ -612,6 +633,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue product_image = 1;</code>
+     * @return Whether the productImage field is set.
      */
     public boolean hasProductImage() {
       return productImageBuilder_ != null || productImage_ != null;
@@ -624,6 +646,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue product_image = 1;</code>
+     * @return The productImage.
      */
     public com.google.protobuf.StringValue getProductImage() {
       if (productImageBuilder_ == null) {
@@ -781,6 +804,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue description = 2;</code>
+     * @return Whether the description field is set.
      */
     public boolean hasDescription() {
       return descriptionBuilder_ != null || description_ != null;
@@ -791,6 +815,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue description = 2;</code>
+     * @return The description.
      */
     public com.google.protobuf.StringValue getDescription() {
       if (descriptionBuilder_ == null) {
@@ -934,6 +959,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.common.DisplayCallToAction display_call_to_action = 3;</code>
+     * @return Whether the displayCallToAction field is set.
      */
     public boolean hasDisplayCallToAction() {
       return displayCallToActionBuilder_ != null || displayCallToAction_ != null;
@@ -944,6 +970,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.common.DisplayCallToAction display_call_to_action = 3;</code>
+     * @return The displayCallToAction.
      */
     public com.google.ads.googleads.v2.common.DisplayCallToAction getDisplayCallToAction() {
       if (displayCallToActionBuilder_ == null) {

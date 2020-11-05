@@ -15,6 +15,7 @@ public interface FeedItemTargetOrBuilder extends
    * </pre>
    *
    * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * @return The resourceName.
    */
   java.lang.String getResourceName();
   /**
@@ -25,6 +26,7 @@ public interface FeedItemTargetOrBuilder extends
    * </pre>
    *
    * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * @return The bytes for resourceName.
    */
   com.google.protobuf.ByteString
       getResourceNameBytes();
@@ -35,6 +37,7 @@ public interface FeedItemTargetOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue feed_item = 2 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * @return Whether the feedItem field is set.
    */
   boolean hasFeedItem();
   /**
@@ -43,6 +46,7 @@ public interface FeedItemTargetOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue feed_item = 2 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * @return The feedItem.
    */
   com.google.protobuf.StringValue getFeedItem();
   /**
@@ -60,6 +64,7 @@ public interface FeedItemTargetOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.FeedItemTargetTypeEnum.FeedItemTargetType feed_item_target_type = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The enum numeric value on the wire for feedItemTargetType.
    */
   int getFeedItemTargetTypeValue();
   /**
@@ -68,6 +73,7 @@ public interface FeedItemTargetOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.FeedItemTargetTypeEnum.FeedItemTargetType feed_item_target_type = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The feedItemTargetType.
    */
   com.google.ads.googleads.v3.enums.FeedItemTargetTypeEnum.FeedItemTargetType getFeedItemTargetType();
 
@@ -77,6 +83,7 @@ public interface FeedItemTargetOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value feed_item_target_id = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the feedItemTargetId field is set.
    */
   boolean hasFeedItemTargetId();
   /**
@@ -85,6 +92,7 @@ public interface FeedItemTargetOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value feed_item_target_id = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The feedItemTargetId.
    */
   com.google.protobuf.Int64Value getFeedItemTargetId();
   /**
@@ -103,6 +111,7 @@ public interface FeedItemTargetOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.FeedItemTargetStatusEnum.FeedItemTargetStatus status = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The enum numeric value on the wire for status.
    */
   int getStatusValue();
   /**
@@ -112,6 +121,7 @@ public interface FeedItemTargetOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.FeedItemTargetStatusEnum.FeedItemTargetStatus status = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The status.
    */
   com.google.ads.googleads.v3.enums.FeedItemTargetStatusEnum.FeedItemTargetStatus getStatus();
 
@@ -121,6 +131,7 @@ public interface FeedItemTargetOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue campaign = 4 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * @return Whether the campaign field is set.
    */
   boolean hasCampaign();
   /**
@@ -129,6 +140,7 @@ public interface FeedItemTargetOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue campaign = 4 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * @return The campaign.
    */
   com.google.protobuf.StringValue getCampaign();
   /**
@@ -146,6 +158,7 @@ public interface FeedItemTargetOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue ad_group = 5 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * @return Whether the adGroup field is set.
    */
   boolean hasAdGroup();
   /**
@@ -154,6 +167,7 @@ public interface FeedItemTargetOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue ad_group = 5 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * @return The adGroup.
    */
   com.google.protobuf.StringValue getAdGroup();
   /**
@@ -171,6 +185,7 @@ public interface FeedItemTargetOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.KeywordInfo keyword = 7 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return Whether the keyword field is set.
    */
   boolean hasKeyword();
   /**
@@ -179,6 +194,7 @@ public interface FeedItemTargetOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.KeywordInfo keyword = 7 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The keyword.
    */
   com.google.ads.googleads.v3.common.KeywordInfo getKeyword();
   /**
@@ -196,6 +212,7 @@ public interface FeedItemTargetOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue geo_target_constant = 8 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * @return Whether the geoTargetConstant field is set.
    */
   boolean hasGeoTargetConstant();
   /**
@@ -204,6 +221,7 @@ public interface FeedItemTargetOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue geo_target_constant = 8 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * @return The geoTargetConstant.
    */
   com.google.protobuf.StringValue getGeoTargetConstant();
   /**
@@ -221,6 +239,7 @@ public interface FeedItemTargetOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.FeedItemTargetDeviceEnum.FeedItemTargetDevice device = 9 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The enum numeric value on the wire for device.
    */
   int getDeviceValue();
   /**
@@ -229,6 +248,7 @@ public interface FeedItemTargetOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.FeedItemTargetDeviceEnum.FeedItemTargetDevice device = 9 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The device.
    */
   com.google.ads.googleads.v3.enums.FeedItemTargetDeviceEnum.FeedItemTargetDevice getDevice();
 
@@ -238,6 +258,7 @@ public interface FeedItemTargetOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.AdScheduleInfo ad_schedule = 10 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return Whether the adSchedule field is set.
    */
   boolean hasAdSchedule();
   /**
@@ -246,6 +267,7 @@ public interface FeedItemTargetOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.AdScheduleInfo ad_schedule = 10 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The adSchedule.
    */
   com.google.ads.googleads.v3.common.AdScheduleInfo getAdSchedule();
   /**

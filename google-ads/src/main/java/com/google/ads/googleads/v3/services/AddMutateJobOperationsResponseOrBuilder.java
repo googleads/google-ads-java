@@ -13,6 +13,7 @@ public interface AddMutateJobOperationsResponseOrBuilder extends
    * </pre>
    *
    * <code>int64 total_operations = 1;</code>
+   * @return The totalOperations.
    */
   long getTotalOperations();
 
@@ -24,6 +25,7 @@ public interface AddMutateJobOperationsResponseOrBuilder extends
    * </pre>
    *
    * <code>string next_sequence_token = 2;</code>
+   * @return The nextSequenceToken.
    */
   java.lang.String getNextSequenceToken();
   /**
@@ -34,6 +36,7 @@ public interface AddMutateJobOperationsResponseOrBuilder extends
    * </pre>
    *
    * <code>string next_sequence_token = 2;</code>
+   * @return The bytes for nextSequenceToken.
    */
   com.google.protobuf.ByteString
       getNextSequenceTokenBytes();

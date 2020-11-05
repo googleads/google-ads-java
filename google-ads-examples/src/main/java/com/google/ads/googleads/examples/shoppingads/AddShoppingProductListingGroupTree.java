@@ -18,27 +18,25 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.v3.common.ListingDimensionInfo;
-import com.google.ads.googleads.v3.common.ListingGroupInfo;
-import com.google.ads.googleads.v3.common.ProductBrandInfo;
-import com.google.ads.googleads.v3.common.ProductConditionInfo;
-import com.google.ads.googleads.v3.enums.AdGroupCriterionStatusEnum.AdGroupCriterionStatus;
-import com.google.ads.googleads.v3.enums.ListingGroupTypeEnum.ListingGroupType;
-import com.google.ads.googleads.v3.enums.ProductConditionEnum.ProductCondition;
-import com.google.ads.googleads.v3.errors.GoogleAdsError;
-import com.google.ads.googleads.v3.errors.GoogleAdsException;
-import com.google.ads.googleads.v3.resources.AdGroupCriterion;
-import com.google.ads.googleads.v3.services.AdGroupCriterionOperation;
-import com.google.ads.googleads.v3.services.AdGroupCriterionServiceClient;
-import com.google.ads.googleads.v3.services.GoogleAdsRow;
-import com.google.ads.googleads.v3.services.GoogleAdsServiceClient;
-import com.google.ads.googleads.v3.services.GoogleAdsServiceClient.SearchPagedResponse;
-import com.google.ads.googleads.v3.services.MutateAdGroupCriteriaResponse;
-import com.google.ads.googleads.v3.services.MutateAdGroupCriterionResult;
-import com.google.ads.googleads.v3.services.SearchGoogleAdsRequest;
-import com.google.ads.googleads.v3.utils.ResourceNames;
-import com.google.protobuf.Int64Value;
-import com.google.protobuf.StringValue;
+import com.google.ads.googleads.v5.common.ListingDimensionInfo;
+import com.google.ads.googleads.v5.common.ListingGroupInfo;
+import com.google.ads.googleads.v5.common.ProductBrandInfo;
+import com.google.ads.googleads.v5.common.ProductConditionInfo;
+import com.google.ads.googleads.v5.enums.AdGroupCriterionStatusEnum.AdGroupCriterionStatus;
+import com.google.ads.googleads.v5.enums.ListingGroupTypeEnum.ListingGroupType;
+import com.google.ads.googleads.v5.enums.ProductConditionEnum.ProductCondition;
+import com.google.ads.googleads.v5.errors.GoogleAdsError;
+import com.google.ads.googleads.v5.errors.GoogleAdsException;
+import com.google.ads.googleads.v5.resources.AdGroupCriterion;
+import com.google.ads.googleads.v5.services.AdGroupCriterionOperation;
+import com.google.ads.googleads.v5.services.AdGroupCriterionServiceClient;
+import com.google.ads.googleads.v5.services.GoogleAdsRow;
+import com.google.ads.googleads.v5.services.GoogleAdsServiceClient;
+import com.google.ads.googleads.v5.services.GoogleAdsServiceClient.SearchPagedResponse;
+import com.google.ads.googleads.v5.services.MutateAdGroupCriteriaResponse;
+import com.google.ads.googleads.v5.services.MutateAdGroupCriterionResult;
+import com.google.ads.googleads.v5.services.SearchGoogleAdsRequest;
+import com.google.ads.googleads.v5.utils.ResourceNames;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -87,16 +85,16 @@ public class AddShoppingProductListingGroupTree {
       params.replaceExistingTree = Boolean.parseBoolean("INSERT_REPLACE_EXISTING_TREE_HERE");
     }
 
-    GoogleAdsClient googleAdsClient;
+    GoogleAdsClient googleAdsClient = null;
     try {
       googleAdsClient = GoogleAdsClient.newBuilder().fromPropertiesFile().build();
     } catch (FileNotFoundException fnfe) {
       System.err.printf(
           "Failed to load GoogleAdsClient configuration from file. Exception: %s%n", fnfe);
-      return;
+      System.exit(1);
     } catch (IOException ioe) {
       System.err.printf("Failed to create GoogleAdsClient. Exception: %s%n", ioe);
-      return;
+      System.exit(1);
     }
 
     try {
@@ -115,6 +113,7 @@ public class AddShoppingProductListingGroupTree {
       for (GoogleAdsError googleAdsError : gae.getGoogleAdsFailure().getErrorsList()) {
         System.err.printf("  Error %d: %s%n", i++, googleAdsError);
       }
+      System.exit(1);
     }
   }
 
@@ -219,8 +218,7 @@ public class AddShoppingProductListingGroupTree {
             adGroupId,
             adGroupCriterionResourceNameConditionOther,
             ListingDimensionInfo.newBuilder()
-                .setProductBrand(
-                    ProductBrandInfo.newBuilder().setValue(StringValue.of("CoolBrand")).build())
+                .setProductBrand(ProductBrandInfo.newBuilder().setValue("CoolBrand").build())
                 .build(),
             900_000L);
     operations.add(
@@ -235,8 +233,7 @@ public class AddShoppingProductListingGroupTree {
             adGroupId,
             adGroupCriterionResourceNameConditionOther,
             ListingDimensionInfo.newBuilder()
-                .setProductBrand(
-                    ProductBrandInfo.newBuilder().setValue(StringValue.of("CheapBrand")).build())
+                .setProductBrand(ProductBrandInfo.newBuilder().setValue("CheapBrand").build())
                 .build(),
             10_000L);
     operations.add(
@@ -356,7 +353,7 @@ public class AddShoppingProductListingGroupTree {
     AdGroupCriterion adGroupCriterion =
         AdGroupCriterion.newBuilder()
             // The ad group the listing group will be attached to.
-            .setAdGroup(StringValue.of(adGroupResourceName))
+            .setAdGroup(adGroupResourceName)
             .setStatus(AdGroupCriterionStatus.ENABLED)
             .setListingGroup(
                 ListingGroupInfo.newBuilder()
@@ -365,13 +362,13 @@ public class AddShoppingProductListingGroupTree {
                     // Sets the ad group criterion resource name for the parent listing group.
                     // This can include a temporary ID if the parent criterion is not yet created.
                     // Use StringValue to convert from a String to a compatible argument type.
-                    .setParentAdGroupCriterion(StringValue.of(parentAdGroupCriterionResourceName))
+                    .setParentAdGroupCriterion(parentAdGroupCriterionResourceName)
                     // Case values contain the listing dimension used for the node.
                     .setCaseValue(listingDimensionInfo)
                     .build())
             // Sets the bid for this listing group unit.
             // This will be used as the CPC bid for items that are included in this listing group
-            .setCpcBidMicros(Int64Value.of(cpcBidMicros))
+            .setCpcBidMicros(cpcBidMicros)
             .build();
 
     return adGroupCriterion;
@@ -411,7 +408,7 @@ public class AddShoppingProductListingGroupTree {
                     // Sets the ad group criterion resource name for the parent listing group.
                     // This can include a temporary ID if the parent criterion is not yet created.
                     // Uses StringValue to convert from a String to a compatible argument type.
-                    .setParentAdGroupCriterion(StringValue.of(parentAdGroupCriterionResourceName))
+                    .setParentAdGroupCriterion(parentAdGroupCriterionResourceName)
                     // Case values contain the listing dimension used for the node.
                     .setCaseValue(listingDimensionInfo)
                     .build())

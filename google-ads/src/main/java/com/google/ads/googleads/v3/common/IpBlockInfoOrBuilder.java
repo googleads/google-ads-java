@@ -13,6 +13,7 @@ public interface IpBlockInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue ip_address = 1;</code>
+   * @return Whether the ipAddress field is set.
    */
   boolean hasIpAddress();
   /**
@@ -21,6 +22,7 @@ public interface IpBlockInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue ip_address = 1;</code>
+   * @return The ipAddress.
    */
   com.google.protobuf.StringValue getIpAddress();
   /**

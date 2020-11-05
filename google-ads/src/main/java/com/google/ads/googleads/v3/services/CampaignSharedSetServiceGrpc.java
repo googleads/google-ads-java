@@ -21,7 +21,7 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.10.0)",
+    value = "by gRPC proto compiler",
     comments = "Source: google/ads/googleads/v3/services/campaign_shared_set_service.proto")
 public final class CampaignSharedSetServiceGrpc {
 
@@ -30,86 +30,80 @@ public final class CampaignSharedSetServiceGrpc {
   public static final String SERVICE_NAME = "google.ads.googleads.v3.services.CampaignSharedSetService";
 
   // Static method descriptors that strictly reflect the proto.
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  @java.lang.Deprecated // Use {@link #getGetCampaignSharedSetMethod()} instead. 
-  public static final io.grpc.MethodDescriptor<com.google.ads.googleads.v3.services.GetCampaignSharedSetRequest,
-      com.google.ads.googleads.v3.resources.CampaignSharedSet> METHOD_GET_CAMPAIGN_SHARED_SET = getGetCampaignSharedSetMethodHelper();
-
   private static volatile io.grpc.MethodDescriptor<com.google.ads.googleads.v3.services.GetCampaignSharedSetRequest,
       com.google.ads.googleads.v3.resources.CampaignSharedSet> getGetCampaignSharedSetMethod;
 
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetCampaignSharedSet",
+      requestType = com.google.ads.googleads.v3.services.GetCampaignSharedSetRequest.class,
+      responseType = com.google.ads.googleads.v3.resources.CampaignSharedSet.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<com.google.ads.googleads.v3.services.GetCampaignSharedSetRequest,
       com.google.ads.googleads.v3.resources.CampaignSharedSet> getGetCampaignSharedSetMethod() {
-    return getGetCampaignSharedSetMethodHelper();
-  }
-
-  private static io.grpc.MethodDescriptor<com.google.ads.googleads.v3.services.GetCampaignSharedSetRequest,
-      com.google.ads.googleads.v3.resources.CampaignSharedSet> getGetCampaignSharedSetMethodHelper() {
     io.grpc.MethodDescriptor<com.google.ads.googleads.v3.services.GetCampaignSharedSetRequest, com.google.ads.googleads.v3.resources.CampaignSharedSet> getGetCampaignSharedSetMethod;
     if ((getGetCampaignSharedSetMethod = CampaignSharedSetServiceGrpc.getGetCampaignSharedSetMethod) == null) {
       synchronized (CampaignSharedSetServiceGrpc.class) {
         if ((getGetCampaignSharedSetMethod = CampaignSharedSetServiceGrpc.getGetCampaignSharedSetMethod) == null) {
-          CampaignSharedSetServiceGrpc.getGetCampaignSharedSetMethod = getGetCampaignSharedSetMethod = 
+          CampaignSharedSetServiceGrpc.getGetCampaignSharedSetMethod = getGetCampaignSharedSetMethod =
               io.grpc.MethodDescriptor.<com.google.ads.googleads.v3.services.GetCampaignSharedSetRequest, com.google.ads.googleads.v3.resources.CampaignSharedSet>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "google.ads.googleads.v3.services.CampaignSharedSetService", "GetCampaignSharedSet"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetCampaignSharedSet"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v3.services.GetCampaignSharedSetRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v3.resources.CampaignSharedSet.getDefaultInstance()))
-                  .setSchemaDescriptor(new CampaignSharedSetServiceMethodDescriptorSupplier("GetCampaignSharedSet"))
-                  .build();
-          }
+              .setSchemaDescriptor(new CampaignSharedSetServiceMethodDescriptorSupplier("GetCampaignSharedSet"))
+              .build();
         }
-     }
-     return getGetCampaignSharedSetMethod;
+      }
+    }
+    return getGetCampaignSharedSetMethod;
   }
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  @java.lang.Deprecated // Use {@link #getMutateCampaignSharedSetsMethod()} instead. 
-  public static final io.grpc.MethodDescriptor<com.google.ads.googleads.v3.services.MutateCampaignSharedSetsRequest,
-      com.google.ads.googleads.v3.services.MutateCampaignSharedSetsResponse> METHOD_MUTATE_CAMPAIGN_SHARED_SETS = getMutateCampaignSharedSetsMethodHelper();
 
   private static volatile io.grpc.MethodDescriptor<com.google.ads.googleads.v3.services.MutateCampaignSharedSetsRequest,
       com.google.ads.googleads.v3.services.MutateCampaignSharedSetsResponse> getMutateCampaignSharedSetsMethod;
 
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "MutateCampaignSharedSets",
+      requestType = com.google.ads.googleads.v3.services.MutateCampaignSharedSetsRequest.class,
+      responseType = com.google.ads.googleads.v3.services.MutateCampaignSharedSetsResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<com.google.ads.googleads.v3.services.MutateCampaignSharedSetsRequest,
       com.google.ads.googleads.v3.services.MutateCampaignSharedSetsResponse> getMutateCampaignSharedSetsMethod() {
-    return getMutateCampaignSharedSetsMethodHelper();
-  }
-
-  private static io.grpc.MethodDescriptor<com.google.ads.googleads.v3.services.MutateCampaignSharedSetsRequest,
-      com.google.ads.googleads.v3.services.MutateCampaignSharedSetsResponse> getMutateCampaignSharedSetsMethodHelper() {
     io.grpc.MethodDescriptor<com.google.ads.googleads.v3.services.MutateCampaignSharedSetsRequest, com.google.ads.googleads.v3.services.MutateCampaignSharedSetsResponse> getMutateCampaignSharedSetsMethod;
     if ((getMutateCampaignSharedSetsMethod = CampaignSharedSetServiceGrpc.getMutateCampaignSharedSetsMethod) == null) {
       synchronized (CampaignSharedSetServiceGrpc.class) {
         if ((getMutateCampaignSharedSetsMethod = CampaignSharedSetServiceGrpc.getMutateCampaignSharedSetsMethod) == null) {
-          CampaignSharedSetServiceGrpc.getMutateCampaignSharedSetsMethod = getMutateCampaignSharedSetsMethod = 
+          CampaignSharedSetServiceGrpc.getMutateCampaignSharedSetsMethod = getMutateCampaignSharedSetsMethod =
               io.grpc.MethodDescriptor.<com.google.ads.googleads.v3.services.MutateCampaignSharedSetsRequest, com.google.ads.googleads.v3.services.MutateCampaignSharedSetsResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "google.ads.googleads.v3.services.CampaignSharedSetService", "MutateCampaignSharedSets"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "MutateCampaignSharedSets"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v3.services.MutateCampaignSharedSetsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v3.services.MutateCampaignSharedSetsResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new CampaignSharedSetServiceMethodDescriptorSupplier("MutateCampaignSharedSets"))
-                  .build();
-          }
+              .setSchemaDescriptor(new CampaignSharedSetServiceMethodDescriptorSupplier("MutateCampaignSharedSets"))
+              .build();
         }
-     }
-     return getMutateCampaignSharedSetsMethod;
+      }
+    }
+    return getMutateCampaignSharedSetsMethod;
   }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static CampaignSharedSetServiceStub newStub(io.grpc.Channel channel) {
-    return new CampaignSharedSetServiceStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<CampaignSharedSetServiceStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<CampaignSharedSetServiceStub>() {
+        @java.lang.Override
+        public CampaignSharedSetServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new CampaignSharedSetServiceStub(channel, callOptions);
+        }
+      };
+    return CampaignSharedSetServiceStub.newStub(factory, channel);
   }
 
   /**
@@ -117,7 +111,14 @@ public final class CampaignSharedSetServiceGrpc {
    */
   public static CampaignSharedSetServiceBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new CampaignSharedSetServiceBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<CampaignSharedSetServiceBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<CampaignSharedSetServiceBlockingStub>() {
+        @java.lang.Override
+        public CampaignSharedSetServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new CampaignSharedSetServiceBlockingStub(channel, callOptions);
+        }
+      };
+    return CampaignSharedSetServiceBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -125,7 +126,14 @@ public final class CampaignSharedSetServiceGrpc {
    */
   public static CampaignSharedSetServiceFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new CampaignSharedSetServiceFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<CampaignSharedSetServiceFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<CampaignSharedSetServiceFutureStub>() {
+        @java.lang.Override
+        public CampaignSharedSetServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new CampaignSharedSetServiceFutureStub(channel, callOptions);
+        }
+      };
+    return CampaignSharedSetServiceFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -142,7 +150,7 @@ public final class CampaignSharedSetServiceGrpc {
      */
     public void getCampaignSharedSet(com.google.ads.googleads.v3.services.GetCampaignSharedSetRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v3.resources.CampaignSharedSet> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetCampaignSharedSetMethodHelper(), responseObserver);
+      asyncUnimplementedUnaryCall(getGetCampaignSharedSetMethod(), responseObserver);
     }
 
     /**
@@ -152,20 +160,20 @@ public final class CampaignSharedSetServiceGrpc {
      */
     public void mutateCampaignSharedSets(com.google.ads.googleads.v3.services.MutateCampaignSharedSetsRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v3.services.MutateCampaignSharedSetsResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getMutateCampaignSharedSetsMethodHelper(), responseObserver);
+      asyncUnimplementedUnaryCall(getMutateCampaignSharedSetsMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
-            getGetCampaignSharedSetMethodHelper(),
+            getGetCampaignSharedSetMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 com.google.ads.googleads.v3.services.GetCampaignSharedSetRequest,
                 com.google.ads.googleads.v3.resources.CampaignSharedSet>(
                   this, METHODID_GET_CAMPAIGN_SHARED_SET)))
           .addMethod(
-            getMutateCampaignSharedSetsMethodHelper(),
+            getMutateCampaignSharedSetsMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 com.google.ads.googleads.v3.services.MutateCampaignSharedSetsRequest,
@@ -180,19 +188,15 @@ public final class CampaignSharedSetServiceGrpc {
    * Service to manage campaign shared sets.
    * </pre>
    */
-  public static final class CampaignSharedSetServiceStub extends io.grpc.stub.AbstractStub<CampaignSharedSetServiceStub> {
-    private CampaignSharedSetServiceStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private CampaignSharedSetServiceStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class CampaignSharedSetServiceStub extends io.grpc.stub.AbstractAsyncStub<CampaignSharedSetServiceStub> {
+    private CampaignSharedSetServiceStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected CampaignSharedSetServiceStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected CampaignSharedSetServiceStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new CampaignSharedSetServiceStub(channel, callOptions);
     }
 
@@ -204,7 +208,7 @@ public final class CampaignSharedSetServiceGrpc {
     public void getCampaignSharedSet(com.google.ads.googleads.v3.services.GetCampaignSharedSetRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v3.resources.CampaignSharedSet> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(getGetCampaignSharedSetMethodHelper(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getGetCampaignSharedSetMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -215,7 +219,7 @@ public final class CampaignSharedSetServiceGrpc {
     public void mutateCampaignSharedSets(com.google.ads.googleads.v3.services.MutateCampaignSharedSetsRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v3.services.MutateCampaignSharedSetsResponse> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(getMutateCampaignSharedSetsMethodHelper(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getMutateCampaignSharedSetsMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -224,19 +228,15 @@ public final class CampaignSharedSetServiceGrpc {
    * Service to manage campaign shared sets.
    * </pre>
    */
-  public static final class CampaignSharedSetServiceBlockingStub extends io.grpc.stub.AbstractStub<CampaignSharedSetServiceBlockingStub> {
-    private CampaignSharedSetServiceBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private CampaignSharedSetServiceBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class CampaignSharedSetServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<CampaignSharedSetServiceBlockingStub> {
+    private CampaignSharedSetServiceBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected CampaignSharedSetServiceBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected CampaignSharedSetServiceBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new CampaignSharedSetServiceBlockingStub(channel, callOptions);
     }
 
@@ -247,7 +247,7 @@ public final class CampaignSharedSetServiceGrpc {
      */
     public com.google.ads.googleads.v3.resources.CampaignSharedSet getCampaignSharedSet(com.google.ads.googleads.v3.services.GetCampaignSharedSetRequest request) {
       return blockingUnaryCall(
-          getChannel(), getGetCampaignSharedSetMethodHelper(), getCallOptions(), request);
+          getChannel(), getGetCampaignSharedSetMethod(), getCallOptions(), request);
     }
 
     /**
@@ -257,7 +257,7 @@ public final class CampaignSharedSetServiceGrpc {
      */
     public com.google.ads.googleads.v3.services.MutateCampaignSharedSetsResponse mutateCampaignSharedSets(com.google.ads.googleads.v3.services.MutateCampaignSharedSetsRequest request) {
       return blockingUnaryCall(
-          getChannel(), getMutateCampaignSharedSetsMethodHelper(), getCallOptions(), request);
+          getChannel(), getMutateCampaignSharedSetsMethod(), getCallOptions(), request);
     }
   }
 
@@ -266,19 +266,15 @@ public final class CampaignSharedSetServiceGrpc {
    * Service to manage campaign shared sets.
    * </pre>
    */
-  public static final class CampaignSharedSetServiceFutureStub extends io.grpc.stub.AbstractStub<CampaignSharedSetServiceFutureStub> {
-    private CampaignSharedSetServiceFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private CampaignSharedSetServiceFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class CampaignSharedSetServiceFutureStub extends io.grpc.stub.AbstractFutureStub<CampaignSharedSetServiceFutureStub> {
+    private CampaignSharedSetServiceFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected CampaignSharedSetServiceFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected CampaignSharedSetServiceFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new CampaignSharedSetServiceFutureStub(channel, callOptions);
     }
 
@@ -290,7 +286,7 @@ public final class CampaignSharedSetServiceGrpc {
     public com.google.common.util.concurrent.ListenableFuture<com.google.ads.googleads.v3.resources.CampaignSharedSet> getCampaignSharedSet(
         com.google.ads.googleads.v3.services.GetCampaignSharedSetRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(getGetCampaignSharedSetMethodHelper(), getCallOptions()), request);
+          getChannel().newCall(getGetCampaignSharedSetMethod(), getCallOptions()), request);
     }
 
     /**
@@ -301,7 +297,7 @@ public final class CampaignSharedSetServiceGrpc {
     public com.google.common.util.concurrent.ListenableFuture<com.google.ads.googleads.v3.services.MutateCampaignSharedSetsResponse> mutateCampaignSharedSets(
         com.google.ads.googleads.v3.services.MutateCampaignSharedSetsRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(getMutateCampaignSharedSetsMethodHelper(), getCallOptions()), request);
+          getChannel().newCall(getMutateCampaignSharedSetsMethod(), getCallOptions()), request);
     }
   }
 
@@ -394,8 +390,8 @@ public final class CampaignSharedSetServiceGrpc {
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new CampaignSharedSetServiceFileDescriptorSupplier())
-              .addMethod(getGetCampaignSharedSetMethodHelper())
-              .addMethod(getMutateCampaignSharedSetsMethodHelper())
+              .addMethod(getGetCampaignSharedSetMethod())
+              .addMethod(getMutateCampaignSharedSetsMethod())
               .build();
         }
       }

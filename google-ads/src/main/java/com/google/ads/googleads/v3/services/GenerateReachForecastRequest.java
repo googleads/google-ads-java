@@ -10,7 +10,7 @@ package com.google.ads.googleads.v3.services;
  *
  * Protobuf type {@code google.ads.googleads.v3.services.GenerateReachForecastRequest}
  */
-public  final class GenerateReachForecastRequest extends
+public final class GenerateReachForecastRequest extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v3.services.GenerateReachForecastRequest)
     GenerateReachForecastRequestOrBuilder {
@@ -22,6 +22,13 @@ private static final long serialVersionUID = 0L;
   private GenerateReachForecastRequest() {
     customerId_ = "";
     plannedProducts_ = java.util.Collections.emptyList();
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new GenerateReachForecastRequest();
   }
 
   @java.lang.Override
@@ -120,9 +127,9 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 58: {
-            if (!((mutable_bitField0_ & 0x00000040) != 0)) {
+            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
               plannedProducts_ = new java.util.ArrayList<com.google.ads.googleads.v3.services.PlannedProduct>();
-              mutable_bitField0_ |= 0x00000040;
+              mutable_bitField0_ |= 0x00000001;
             }
             plannedProducts_.add(
                 input.readMessage(com.google.ads.googleads.v3.services.PlannedProduct.parser(), extensionRegistry));
@@ -143,7 +150,7 @@ private static final long serialVersionUID = 0L;
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
     } finally {
-      if (((mutable_bitField0_ & 0x00000040) != 0)) {
+      if (((mutable_bitField0_ & 0x00000001) != 0)) {
         plannedProducts_ = java.util.Collections.unmodifiableList(plannedProducts_);
       }
       this.unknownFields = unknownFields.build();
@@ -163,7 +170,6 @@ private static final long serialVersionUID = 0L;
             com.google.ads.googleads.v3.services.GenerateReachForecastRequest.class, com.google.ads.googleads.v3.services.GenerateReachForecastRequest.Builder.class);
   }
 
-  private int bitField0_;
   public static final int CUSTOMER_ID_FIELD_NUMBER = 1;
   private volatile java.lang.Object customerId_;
   /**
@@ -172,7 +178,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+   * @return The customerId.
    */
+  @java.lang.Override
   public java.lang.String getCustomerId() {
     java.lang.Object ref = customerId_;
     if (ref instanceof java.lang.String) {
@@ -191,7 +199,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+   * @return The bytes for customerId.
    */
+  @java.lang.Override
   public com.google.protobuf.ByteString
       getCustomerIdBytes() {
     java.lang.Object ref = customerId_;
@@ -215,7 +225,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue currency_code = 2;</code>
+   * @return Whether the currencyCode field is set.
    */
+  @java.lang.Override
   public boolean hasCurrencyCode() {
     return currencyCode_ != null;
   }
@@ -226,7 +238,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue currency_code = 2;</code>
+   * @return The currencyCode.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getCurrencyCode() {
     return currencyCode_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : currencyCode_;
   }
@@ -238,6 +252,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue currency_code = 2;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getCurrencyCodeOrBuilder() {
     return getCurrencyCode();
   }
@@ -250,7 +265,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.services.CampaignDuration campaign_duration = 3 [(.google.api.field_behavior) = REQUIRED];</code>
+   * @return Whether the campaignDuration field is set.
    */
+  @java.lang.Override
   public boolean hasCampaignDuration() {
     return campaignDuration_ != null;
   }
@@ -260,7 +277,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.services.CampaignDuration campaign_duration = 3 [(.google.api.field_behavior) = REQUIRED];</code>
+   * @return The campaignDuration.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.services.CampaignDuration getCampaignDuration() {
     return campaignDuration_ == null ? com.google.ads.googleads.v3.services.CampaignDuration.getDefaultInstance() : campaignDuration_;
   }
@@ -271,6 +290,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v3.services.CampaignDuration campaign_duration = 3 [(.google.api.field_behavior) = REQUIRED];</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.services.CampaignDurationOrBuilder getCampaignDurationOrBuilder() {
     return getCampaignDuration();
   }
@@ -283,11 +303,15 @@ private static final long serialVersionUID = 0L;
    * This is equivalent to the frequency cap exposed in Google Ads when creating
    * a campaign, it represents the maximum number of times an ad can be shown to
    * the same user.
-   * If not specified, no cap is applied.
+   * If not specified no cap is applied.
+   * This field is deprecated in v4 and will eventually be removed.
+   * Please use cookie_frequency_cap_setting instead.
    * </pre>
    *
    * <code>.google.protobuf.Int32Value cookie_frequency_cap = 4;</code>
+   * @return Whether the cookieFrequencyCap field is set.
    */
+  @java.lang.Override
   public boolean hasCookieFrequencyCap() {
     return cookieFrequencyCap_ != null;
   }
@@ -297,11 +321,15 @@ private static final long serialVersionUID = 0L;
    * This is equivalent to the frequency cap exposed in Google Ads when creating
    * a campaign, it represents the maximum number of times an ad can be shown to
    * the same user.
-   * If not specified, no cap is applied.
+   * If not specified no cap is applied.
+   * This field is deprecated in v4 and will eventually be removed.
+   * Please use cookie_frequency_cap_setting instead.
    * </pre>
    *
    * <code>.google.protobuf.Int32Value cookie_frequency_cap = 4;</code>
+   * @return The cookieFrequencyCap.
    */
+  @java.lang.Override
   public com.google.protobuf.Int32Value getCookieFrequencyCap() {
     return cookieFrequencyCap_ == null ? com.google.protobuf.Int32Value.getDefaultInstance() : cookieFrequencyCap_;
   }
@@ -311,11 +339,14 @@ private static final long serialVersionUID = 0L;
    * This is equivalent to the frequency cap exposed in Google Ads when creating
    * a campaign, it represents the maximum number of times an ad can be shown to
    * the same user.
-   * If not specified, no cap is applied.
+   * If not specified no cap is applied.
+   * This field is deprecated in v4 and will eventually be removed.
+   * Please use cookie_frequency_cap_setting instead.
    * </pre>
    *
    * <code>.google.protobuf.Int32Value cookie_frequency_cap = 4;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int32ValueOrBuilder getCookieFrequencyCapOrBuilder() {
     return getCookieFrequencyCap();
   }
@@ -331,7 +362,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Int32Value min_effective_frequency = 5;</code>
+   * @return Whether the minEffectiveFrequency field is set.
    */
+  @java.lang.Override
   public boolean hasMinEffectiveFrequency() {
     return minEffectiveFrequency_ != null;
   }
@@ -344,7 +377,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Int32Value min_effective_frequency = 5;</code>
+   * @return The minEffectiveFrequency.
    */
+  @java.lang.Override
   public com.google.protobuf.Int32Value getMinEffectiveFrequency() {
     return minEffectiveFrequency_ == null ? com.google.protobuf.Int32Value.getDefaultInstance() : minEffectiveFrequency_;
   }
@@ -358,6 +393,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int32Value min_effective_frequency = 5;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int32ValueOrBuilder getMinEffectiveFrequencyOrBuilder() {
     return getMinEffectiveFrequency();
   }
@@ -375,7 +411,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.services.Targeting targeting = 6;</code>
+   * @return Whether the targeting field is set.
    */
+  @java.lang.Override
   public boolean hasTargeting() {
     return targeting_ != null;
   }
@@ -390,7 +428,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.services.Targeting targeting = 6;</code>
+   * @return The targeting.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.services.Targeting getTargeting() {
     return targeting_ == null ? com.google.ads.googleads.v3.services.Targeting.getDefaultInstance() : targeting_;
   }
@@ -406,6 +446,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v3.services.Targeting targeting = 6;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.services.TargetingOrBuilder getTargetingOrBuilder() {
     return getTargeting();
   }
@@ -420,6 +461,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v3.services.PlannedProduct planned_products = 7 [(.google.api.field_behavior) = REQUIRED];</code>
    */
+  @java.lang.Override
   public java.util.List<com.google.ads.googleads.v3.services.PlannedProduct> getPlannedProductsList() {
     return plannedProducts_;
   }
@@ -431,6 +473,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v3.services.PlannedProduct planned_products = 7 [(.google.api.field_behavior) = REQUIRED];</code>
    */
+  @java.lang.Override
   public java.util.List<? extends com.google.ads.googleads.v3.services.PlannedProductOrBuilder> 
       getPlannedProductsOrBuilderList() {
     return plannedProducts_;
@@ -443,6 +486,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v3.services.PlannedProduct planned_products = 7 [(.google.api.field_behavior) = REQUIRED];</code>
    */
+  @java.lang.Override
   public int getPlannedProductsCount() {
     return plannedProducts_.size();
   }
@@ -454,6 +498,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v3.services.PlannedProduct planned_products = 7 [(.google.api.field_behavior) = REQUIRED];</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.services.PlannedProduct getPlannedProducts(int index) {
     return plannedProducts_.get(index);
   }
@@ -465,6 +510,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v3.services.PlannedProduct planned_products = 7 [(.google.api.field_behavior) = REQUIRED];</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.services.PlannedProductOrBuilder getPlannedProductsOrBuilder(
       int index) {
     return plannedProducts_.get(index);
@@ -794,7 +840,7 @@ private static final long serialVersionUID = 0L;
       }
       if (plannedProductsBuilder_ == null) {
         plannedProducts_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000040);
+        bitField0_ = (bitField0_ & ~0x00000001);
       } else {
         plannedProductsBuilder_.clear();
       }
@@ -825,7 +871,6 @@ private static final long serialVersionUID = 0L;
     public com.google.ads.googleads.v3.services.GenerateReachForecastRequest buildPartial() {
       com.google.ads.googleads.v3.services.GenerateReachForecastRequest result = new com.google.ads.googleads.v3.services.GenerateReachForecastRequest(this);
       int from_bitField0_ = bitField0_;
-      int to_bitField0_ = 0;
       result.customerId_ = customerId_;
       if (currencyCodeBuilder_ == null) {
         result.currencyCode_ = currencyCode_;
@@ -853,15 +898,14 @@ private static final long serialVersionUID = 0L;
         result.targeting_ = targetingBuilder_.build();
       }
       if (plannedProductsBuilder_ == null) {
-        if (((bitField0_ & 0x00000040) != 0)) {
+        if (((bitField0_ & 0x00000001) != 0)) {
           plannedProducts_ = java.util.Collections.unmodifiableList(plannedProducts_);
-          bitField0_ = (bitField0_ & ~0x00000040);
+          bitField0_ = (bitField0_ & ~0x00000001);
         }
         result.plannedProducts_ = plannedProducts_;
       } else {
         result.plannedProducts_ = plannedProductsBuilder_.build();
       }
-      result.bitField0_ = to_bitField0_;
       onBuilt();
       return result;
     }
@@ -933,7 +977,7 @@ private static final long serialVersionUID = 0L;
         if (!other.plannedProducts_.isEmpty()) {
           if (plannedProducts_.isEmpty()) {
             plannedProducts_ = other.plannedProducts_;
-            bitField0_ = (bitField0_ & ~0x00000040);
+            bitField0_ = (bitField0_ & ~0x00000001);
           } else {
             ensurePlannedProductsIsMutable();
             plannedProducts_.addAll(other.plannedProducts_);
@@ -946,7 +990,7 @@ private static final long serialVersionUID = 0L;
             plannedProductsBuilder_.dispose();
             plannedProductsBuilder_ = null;
             plannedProducts_ = other.plannedProducts_;
-            bitField0_ = (bitField0_ & ~0x00000040);
+            bitField0_ = (bitField0_ & ~0x00000001);
             plannedProductsBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getPlannedProductsFieldBuilder() : null;
@@ -992,6 +1036,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+     * @return The customerId.
      */
     public java.lang.String getCustomerId() {
       java.lang.Object ref = customerId_;
@@ -1011,6 +1056,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+     * @return The bytes for customerId.
      */
     public com.google.protobuf.ByteString
         getCustomerIdBytes() {
@@ -1031,6 +1077,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+     * @param value The customerId to set.
+     * @return This builder for chaining.
      */
     public Builder setCustomerId(
         java.lang.String value) {
@@ -1048,6 +1096,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+     * @return This builder for chaining.
      */
     public Builder clearCustomerId() {
       
@@ -1061,6 +1110,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+     * @param value The bytes for customerId to set.
+     * @return This builder for chaining.
      */
     public Builder setCustomerIdBytes(
         com.google.protobuf.ByteString value) {
@@ -1084,6 +1135,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue currency_code = 2;</code>
+     * @return Whether the currencyCode field is set.
      */
     public boolean hasCurrencyCode() {
       return currencyCodeBuilder_ != null || currencyCode_ != null;
@@ -1095,6 +1147,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue currency_code = 2;</code>
+     * @return The currencyCode.
      */
     public com.google.protobuf.StringValue getCurrencyCode() {
       if (currencyCodeBuilder_ == null) {
@@ -1245,6 +1298,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.services.CampaignDuration campaign_duration = 3 [(.google.api.field_behavior) = REQUIRED];</code>
+     * @return Whether the campaignDuration field is set.
      */
     public boolean hasCampaignDuration() {
       return campaignDurationBuilder_ != null || campaignDuration_ != null;
@@ -1255,6 +1309,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.services.CampaignDuration campaign_duration = 3 [(.google.api.field_behavior) = REQUIRED];</code>
+     * @return The campaignDuration.
      */
     public com.google.ads.googleads.v3.services.CampaignDuration getCampaignDuration() {
       if (campaignDurationBuilder_ == null) {
@@ -1398,10 +1453,13 @@ private static final long serialVersionUID = 0L;
      * This is equivalent to the frequency cap exposed in Google Ads when creating
      * a campaign, it represents the maximum number of times an ad can be shown to
      * the same user.
-     * If not specified, no cap is applied.
+     * If not specified no cap is applied.
+     * This field is deprecated in v4 and will eventually be removed.
+     * Please use cookie_frequency_cap_setting instead.
      * </pre>
      *
      * <code>.google.protobuf.Int32Value cookie_frequency_cap = 4;</code>
+     * @return Whether the cookieFrequencyCap field is set.
      */
     public boolean hasCookieFrequencyCap() {
       return cookieFrequencyCapBuilder_ != null || cookieFrequencyCap_ != null;
@@ -1412,10 +1470,13 @@ private static final long serialVersionUID = 0L;
      * This is equivalent to the frequency cap exposed in Google Ads when creating
      * a campaign, it represents the maximum number of times an ad can be shown to
      * the same user.
-     * If not specified, no cap is applied.
+     * If not specified no cap is applied.
+     * This field is deprecated in v4 and will eventually be removed.
+     * Please use cookie_frequency_cap_setting instead.
      * </pre>
      *
      * <code>.google.protobuf.Int32Value cookie_frequency_cap = 4;</code>
+     * @return The cookieFrequencyCap.
      */
     public com.google.protobuf.Int32Value getCookieFrequencyCap() {
       if (cookieFrequencyCapBuilder_ == null) {
@@ -1430,7 +1491,9 @@ private static final long serialVersionUID = 0L;
      * This is equivalent to the frequency cap exposed in Google Ads when creating
      * a campaign, it represents the maximum number of times an ad can be shown to
      * the same user.
-     * If not specified, no cap is applied.
+     * If not specified no cap is applied.
+     * This field is deprecated in v4 and will eventually be removed.
+     * Please use cookie_frequency_cap_setting instead.
      * </pre>
      *
      * <code>.google.protobuf.Int32Value cookie_frequency_cap = 4;</code>
@@ -1454,7 +1517,9 @@ private static final long serialVersionUID = 0L;
      * This is equivalent to the frequency cap exposed in Google Ads when creating
      * a campaign, it represents the maximum number of times an ad can be shown to
      * the same user.
-     * If not specified, no cap is applied.
+     * If not specified no cap is applied.
+     * This field is deprecated in v4 and will eventually be removed.
+     * Please use cookie_frequency_cap_setting instead.
      * </pre>
      *
      * <code>.google.protobuf.Int32Value cookie_frequency_cap = 4;</code>
@@ -1476,7 +1541,9 @@ private static final long serialVersionUID = 0L;
      * This is equivalent to the frequency cap exposed in Google Ads when creating
      * a campaign, it represents the maximum number of times an ad can be shown to
      * the same user.
-     * If not specified, no cap is applied.
+     * If not specified no cap is applied.
+     * This field is deprecated in v4 and will eventually be removed.
+     * Please use cookie_frequency_cap_setting instead.
      * </pre>
      *
      * <code>.google.protobuf.Int32Value cookie_frequency_cap = 4;</code>
@@ -1502,7 +1569,9 @@ private static final long serialVersionUID = 0L;
      * This is equivalent to the frequency cap exposed in Google Ads when creating
      * a campaign, it represents the maximum number of times an ad can be shown to
      * the same user.
-     * If not specified, no cap is applied.
+     * If not specified no cap is applied.
+     * This field is deprecated in v4 and will eventually be removed.
+     * Please use cookie_frequency_cap_setting instead.
      * </pre>
      *
      * <code>.google.protobuf.Int32Value cookie_frequency_cap = 4;</code>
@@ -1524,7 +1593,9 @@ private static final long serialVersionUID = 0L;
      * This is equivalent to the frequency cap exposed in Google Ads when creating
      * a campaign, it represents the maximum number of times an ad can be shown to
      * the same user.
-     * If not specified, no cap is applied.
+     * If not specified no cap is applied.
+     * This field is deprecated in v4 and will eventually be removed.
+     * Please use cookie_frequency_cap_setting instead.
      * </pre>
      *
      * <code>.google.protobuf.Int32Value cookie_frequency_cap = 4;</code>
@@ -1540,7 +1611,9 @@ private static final long serialVersionUID = 0L;
      * This is equivalent to the frequency cap exposed in Google Ads when creating
      * a campaign, it represents the maximum number of times an ad can be shown to
      * the same user.
-     * If not specified, no cap is applied.
+     * If not specified no cap is applied.
+     * This field is deprecated in v4 and will eventually be removed.
+     * Please use cookie_frequency_cap_setting instead.
      * </pre>
      *
      * <code>.google.protobuf.Int32Value cookie_frequency_cap = 4;</code>
@@ -1559,7 +1632,9 @@ private static final long serialVersionUID = 0L;
      * This is equivalent to the frequency cap exposed in Google Ads when creating
      * a campaign, it represents the maximum number of times an ad can be shown to
      * the same user.
-     * If not specified, no cap is applied.
+     * If not specified no cap is applied.
+     * This field is deprecated in v4 and will eventually be removed.
+     * Please use cookie_frequency_cap_setting instead.
      * </pre>
      *
      * <code>.google.protobuf.Int32Value cookie_frequency_cap = 4;</code>
@@ -1590,6 +1665,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int32Value min_effective_frequency = 5;</code>
+     * @return Whether the minEffectiveFrequency field is set.
      */
     public boolean hasMinEffectiveFrequency() {
       return minEffectiveFrequencyBuilder_ != null || minEffectiveFrequency_ != null;
@@ -1603,6 +1679,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int32Value min_effective_frequency = 5;</code>
+     * @return The minEffectiveFrequency.
      */
     public com.google.protobuf.Int32Value getMinEffectiveFrequency() {
       if (minEffectiveFrequencyBuilder_ == null) {
@@ -1772,6 +1849,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.services.Targeting targeting = 6;</code>
+     * @return Whether the targeting field is set.
      */
     public boolean hasTargeting() {
       return targetingBuilder_ != null || targeting_ != null;
@@ -1787,6 +1865,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.services.Targeting targeting = 6;</code>
+     * @return The targeting.
      */
     public com.google.ads.googleads.v3.services.Targeting getTargeting() {
       if (targetingBuilder_ == null) {
@@ -1959,9 +2038,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.google.ads.googleads.v3.services.PlannedProduct> plannedProducts_ =
       java.util.Collections.emptyList();
     private void ensurePlannedProductsIsMutable() {
-      if (!((bitField0_ & 0x00000040) != 0)) {
+      if (!((bitField0_ & 0x00000001) != 0)) {
         plannedProducts_ = new java.util.ArrayList<com.google.ads.googleads.v3.services.PlannedProduct>(plannedProducts_);
-        bitField0_ |= 0x00000040;
+        bitField0_ |= 0x00000001;
        }
     }
 
@@ -2166,7 +2245,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearPlannedProducts() {
       if (plannedProductsBuilder_ == null) {
         plannedProducts_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000040);
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
       } else {
         plannedProductsBuilder_.clear();
@@ -2278,7 +2357,7 @@ private static final long serialVersionUID = 0L;
         plannedProductsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.google.ads.googleads.v3.services.PlannedProduct, com.google.ads.googleads.v3.services.PlannedProduct.Builder, com.google.ads.googleads.v3.services.PlannedProductOrBuilder>(
                 plannedProducts_,
-                ((bitField0_ & 0x00000040) != 0),
+                ((bitField0_ & 0x00000001) != 0),
                 getParentForChildren(),
                 isClean());
         plannedProducts_ = null;

@@ -13,6 +13,7 @@ public interface CampaignDurationOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int32Value duration_in_days = 1;</code>
+   * @return Whether the durationInDays field is set.
    */
   boolean hasDurationInDays();
   /**
@@ -21,6 +22,7 @@ public interface CampaignDurationOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int32Value duration_in_days = 1;</code>
+   * @return The durationInDays.
    */
   com.google.protobuf.Int32Value getDurationInDays();
   /**

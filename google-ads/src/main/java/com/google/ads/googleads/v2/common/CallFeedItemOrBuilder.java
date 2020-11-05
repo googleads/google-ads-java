@@ -14,6 +14,7 @@ public interface CallFeedItemOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue phone_number = 1;</code>
+   * @return Whether the phoneNumber field is set.
    */
   boolean hasPhoneNumber();
   /**
@@ -23,6 +24,7 @@ public interface CallFeedItemOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue phone_number = 1;</code>
+   * @return The phoneNumber.
    */
   com.google.protobuf.StringValue getPhoneNumber();
   /**
@@ -42,6 +44,7 @@ public interface CallFeedItemOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue country_code = 2;</code>
+   * @return Whether the countryCode field is set.
    */
   boolean hasCountryCode();
   /**
@@ -51,6 +54,7 @@ public interface CallFeedItemOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue country_code = 2;</code>
+   * @return The countryCode.
    */
   com.google.protobuf.StringValue getCountryCode();
   /**
@@ -70,6 +74,7 @@ public interface CallFeedItemOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.BoolValue call_tracking_enabled = 3;</code>
+   * @return Whether the callTrackingEnabled field is set.
    */
   boolean hasCallTrackingEnabled();
   /**
@@ -79,6 +84,7 @@ public interface CallFeedItemOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.BoolValue call_tracking_enabled = 3;</code>
+   * @return The callTrackingEnabled.
    */
   com.google.protobuf.BoolValue getCallTrackingEnabled();
   /**
@@ -99,6 +105,7 @@ public interface CallFeedItemOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue call_conversion_action = 4;</code>
+   * @return Whether the callConversionAction field is set.
    */
   boolean hasCallConversionAction();
   /**
@@ -109,6 +116,7 @@ public interface CallFeedItemOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue call_conversion_action = 4;</code>
+   * @return The callConversionAction.
    */
   com.google.protobuf.StringValue getCallConversionAction();
   /**
@@ -129,6 +137,7 @@ public interface CallFeedItemOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.BoolValue call_conversion_tracking_disabled = 5;</code>
+   * @return Whether the callConversionTrackingDisabled field is set.
    */
   boolean hasCallConversionTrackingDisabled();
   /**
@@ -138,6 +147,7 @@ public interface CallFeedItemOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.BoolValue call_conversion_tracking_disabled = 5;</code>
+   * @return The callConversionTrackingDisabled.
    */
   com.google.protobuf.BoolValue getCallConversionTrackingDisabled();
   /**
@@ -158,6 +168,7 @@ public interface CallFeedItemOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.enums.CallConversionReportingStateEnum.CallConversionReportingState call_conversion_reporting_state = 6;</code>
+   * @return The enum numeric value on the wire for callConversionReportingState.
    */
   int getCallConversionReportingStateValue();
   /**
@@ -168,6 +179,7 @@ public interface CallFeedItemOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.enums.CallConversionReportingStateEnum.CallConversionReportingState call_conversion_reporting_state = 6;</code>
+   * @return The callConversionReportingState.
    */
   com.google.ads.googleads.v2.enums.CallConversionReportingStateEnum.CallConversionReportingState getCallConversionReportingState();
 }

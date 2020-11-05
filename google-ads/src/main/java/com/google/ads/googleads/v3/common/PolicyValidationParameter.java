@@ -12,7 +12,7 @@ package com.google.ads.googleads.v3.common;
  *
  * Protobuf type {@code google.ads.googleads.v3.common.PolicyValidationParameter}
  */
-public  final class PolicyValidationParameter extends
+public final class PolicyValidationParameter extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v3.common.PolicyValidationParameter)
     PolicyValidationParameterOrBuilder {
@@ -24,6 +24,13 @@ private static final long serialVersionUID = 0L;
   private PolicyValidationParameter() {
     ignorablePolicyTopics_ = java.util.Collections.emptyList();
     exemptPolicyViolationKeys_ = java.util.Collections.emptyList();
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new PolicyValidationParameter();
   }
 
   @java.lang.Override
@@ -121,6 +128,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.StringValue ignorable_policy_topics = 1;</code>
    */
+  @java.lang.Override
   public java.util.List<com.google.protobuf.StringValue> getIgnorablePolicyTopicsList() {
     return ignorablePolicyTopics_;
   }
@@ -137,6 +145,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.StringValue ignorable_policy_topics = 1;</code>
    */
+  @java.lang.Override
   public java.util.List<? extends com.google.protobuf.StringValueOrBuilder> 
       getIgnorablePolicyTopicsOrBuilderList() {
     return ignorablePolicyTopics_;
@@ -154,6 +163,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.StringValue ignorable_policy_topics = 1;</code>
    */
+  @java.lang.Override
   public int getIgnorablePolicyTopicsCount() {
     return ignorablePolicyTopics_.size();
   }
@@ -170,6 +180,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.StringValue ignorable_policy_topics = 1;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getIgnorablePolicyTopics(int index) {
     return ignorablePolicyTopics_.get(index);
   }
@@ -186,6 +197,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.StringValue ignorable_policy_topics = 1;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getIgnorablePolicyTopicsOrBuilder(
       int index) {
     return ignorablePolicyTopics_.get(index);
@@ -207,6 +219,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v3.common.PolicyViolationKey exempt_policy_violation_keys = 2;</code>
    */
+  @java.lang.Override
   public java.util.List<com.google.ads.googleads.v3.common.PolicyViolationKey> getExemptPolicyViolationKeysList() {
     return exemptPolicyViolationKeys_;
   }
@@ -224,6 +237,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v3.common.PolicyViolationKey exempt_policy_violation_keys = 2;</code>
    */
+  @java.lang.Override
   public java.util.List<? extends com.google.ads.googleads.v3.common.PolicyViolationKeyOrBuilder> 
       getExemptPolicyViolationKeysOrBuilderList() {
     return exemptPolicyViolationKeys_;
@@ -242,6 +256,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v3.common.PolicyViolationKey exempt_policy_violation_keys = 2;</code>
    */
+  @java.lang.Override
   public int getExemptPolicyViolationKeysCount() {
     return exemptPolicyViolationKeys_.size();
   }
@@ -259,6 +274,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v3.common.PolicyViolationKey exempt_policy_violation_keys = 2;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.common.PolicyViolationKey getExemptPolicyViolationKeys(int index) {
     return exemptPolicyViolationKeys_.get(index);
   }
@@ -276,6 +292,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v3.common.PolicyViolationKey exempt_policy_violation_keys = 2;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.common.PolicyViolationKeyOrBuilder getExemptPolicyViolationKeysOrBuilder(
       int index) {
     return exemptPolicyViolationKeys_.get(index);

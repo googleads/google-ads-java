@@ -13,6 +13,7 @@ public interface AttributeFieldMappingOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value feed_attribute_id = 1 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return Whether the feedAttributeId field is set.
    */
   boolean hasFeedAttributeId();
   /**
@@ -21,6 +22,7 @@ public interface AttributeFieldMappingOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value feed_attribute_id = 1 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The feedAttributeId.
    */
   com.google.protobuf.Int64Value getFeedAttributeId();
   /**
@@ -41,6 +43,7 @@ public interface AttributeFieldMappingOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value field_id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the fieldId field is set.
    */
   boolean hasFieldId();
   /**
@@ -52,6 +55,7 @@ public interface AttributeFieldMappingOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value field_id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The fieldId.
    */
   com.google.protobuf.Int64Value getFieldId();
   /**
@@ -72,6 +76,7 @@ public interface AttributeFieldMappingOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.SitelinkPlaceholderFieldEnum.SitelinkPlaceholderField sitelink_field = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The enum numeric value on the wire for sitelinkField.
    */
   int getSitelinkFieldValue();
   /**
@@ -80,6 +85,7 @@ public interface AttributeFieldMappingOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.SitelinkPlaceholderFieldEnum.SitelinkPlaceholderField sitelink_field = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The sitelinkField.
    */
   com.google.ads.googleads.v3.enums.SitelinkPlaceholderFieldEnum.SitelinkPlaceholderField getSitelinkField();
 
@@ -89,6 +95,7 @@ public interface AttributeFieldMappingOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.CallPlaceholderFieldEnum.CallPlaceholderField call_field = 4 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The enum numeric value on the wire for callField.
    */
   int getCallFieldValue();
   /**
@@ -97,6 +104,7 @@ public interface AttributeFieldMappingOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.CallPlaceholderFieldEnum.CallPlaceholderField call_field = 4 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The callField.
    */
   com.google.ads.googleads.v3.enums.CallPlaceholderFieldEnum.CallPlaceholderField getCallField();
 
@@ -106,6 +114,7 @@ public interface AttributeFieldMappingOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.AppPlaceholderFieldEnum.AppPlaceholderField app_field = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The enum numeric value on the wire for appField.
    */
   int getAppFieldValue();
   /**
@@ -114,6 +123,7 @@ public interface AttributeFieldMappingOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.AppPlaceholderFieldEnum.AppPlaceholderField app_field = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The appField.
    */
   com.google.ads.googleads.v3.enums.AppPlaceholderFieldEnum.AppPlaceholderField getAppField();
 
@@ -123,6 +133,7 @@ public interface AttributeFieldMappingOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.LocationPlaceholderFieldEnum.LocationPlaceholderField location_field = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The enum numeric value on the wire for locationField.
    */
   int getLocationFieldValue();
   /**
@@ -131,6 +142,7 @@ public interface AttributeFieldMappingOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.LocationPlaceholderFieldEnum.LocationPlaceholderField location_field = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The locationField.
    */
   com.google.ads.googleads.v3.enums.LocationPlaceholderFieldEnum.LocationPlaceholderField getLocationField();
 
@@ -140,6 +152,7 @@ public interface AttributeFieldMappingOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.AffiliateLocationPlaceholderFieldEnum.AffiliateLocationPlaceholderField affiliate_location_field = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The enum numeric value on the wire for affiliateLocationField.
    */
   int getAffiliateLocationFieldValue();
   /**
@@ -148,6 +161,7 @@ public interface AttributeFieldMappingOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.AffiliateLocationPlaceholderFieldEnum.AffiliateLocationPlaceholderField affiliate_location_field = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The affiliateLocationField.
    */
   com.google.ads.googleads.v3.enums.AffiliateLocationPlaceholderFieldEnum.AffiliateLocationPlaceholderField getAffiliateLocationField();
 
@@ -157,6 +171,7 @@ public interface AttributeFieldMappingOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.CalloutPlaceholderFieldEnum.CalloutPlaceholderField callout_field = 8 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The enum numeric value on the wire for calloutField.
    */
   int getCalloutFieldValue();
   /**
@@ -165,6 +180,7 @@ public interface AttributeFieldMappingOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.CalloutPlaceholderFieldEnum.CalloutPlaceholderField callout_field = 8 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The calloutField.
    */
   com.google.ads.googleads.v3.enums.CalloutPlaceholderFieldEnum.CalloutPlaceholderField getCalloutField();
 
@@ -174,6 +190,7 @@ public interface AttributeFieldMappingOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.StructuredSnippetPlaceholderFieldEnum.StructuredSnippetPlaceholderField structured_snippet_field = 9 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The enum numeric value on the wire for structuredSnippetField.
    */
   int getStructuredSnippetFieldValue();
   /**
@@ -182,6 +199,7 @@ public interface AttributeFieldMappingOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.StructuredSnippetPlaceholderFieldEnum.StructuredSnippetPlaceholderField structured_snippet_field = 9 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The structuredSnippetField.
    */
   com.google.ads.googleads.v3.enums.StructuredSnippetPlaceholderFieldEnum.StructuredSnippetPlaceholderField getStructuredSnippetField();
 
@@ -191,6 +209,7 @@ public interface AttributeFieldMappingOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.MessagePlaceholderFieldEnum.MessagePlaceholderField message_field = 10 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The enum numeric value on the wire for messageField.
    */
   int getMessageFieldValue();
   /**
@@ -199,6 +218,7 @@ public interface AttributeFieldMappingOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.MessagePlaceholderFieldEnum.MessagePlaceholderField message_field = 10 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The messageField.
    */
   com.google.ads.googleads.v3.enums.MessagePlaceholderFieldEnum.MessagePlaceholderField getMessageField();
 
@@ -208,6 +228,7 @@ public interface AttributeFieldMappingOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.PricePlaceholderFieldEnum.PricePlaceholderField price_field = 11 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The enum numeric value on the wire for priceField.
    */
   int getPriceFieldValue();
   /**
@@ -216,6 +237,7 @@ public interface AttributeFieldMappingOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.PricePlaceholderFieldEnum.PricePlaceholderField price_field = 11 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The priceField.
    */
   com.google.ads.googleads.v3.enums.PricePlaceholderFieldEnum.PricePlaceholderField getPriceField();
 
@@ -225,6 +247,7 @@ public interface AttributeFieldMappingOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.PromotionPlaceholderFieldEnum.PromotionPlaceholderField promotion_field = 12 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The enum numeric value on the wire for promotionField.
    */
   int getPromotionFieldValue();
   /**
@@ -233,6 +256,7 @@ public interface AttributeFieldMappingOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.PromotionPlaceholderFieldEnum.PromotionPlaceholderField promotion_field = 12 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The promotionField.
    */
   com.google.ads.googleads.v3.enums.PromotionPlaceholderFieldEnum.PromotionPlaceholderField getPromotionField();
 
@@ -242,6 +266,7 @@ public interface AttributeFieldMappingOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.AdCustomizerPlaceholderFieldEnum.AdCustomizerPlaceholderField ad_customizer_field = 13 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The enum numeric value on the wire for adCustomizerField.
    */
   int getAdCustomizerFieldValue();
   /**
@@ -250,6 +275,7 @@ public interface AttributeFieldMappingOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.AdCustomizerPlaceholderFieldEnum.AdCustomizerPlaceholderField ad_customizer_field = 13 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The adCustomizerField.
    */
   com.google.ads.googleads.v3.enums.AdCustomizerPlaceholderFieldEnum.AdCustomizerPlaceholderField getAdCustomizerField();
 
@@ -259,6 +285,7 @@ public interface AttributeFieldMappingOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.DsaPageFeedCriterionFieldEnum.DsaPageFeedCriterionField dsa_page_feed_field = 14 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The enum numeric value on the wire for dsaPageFeedField.
    */
   int getDsaPageFeedFieldValue();
   /**
@@ -267,6 +294,7 @@ public interface AttributeFieldMappingOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.DsaPageFeedCriterionFieldEnum.DsaPageFeedCriterionField dsa_page_feed_field = 14 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The dsaPageFeedField.
    */
   com.google.ads.googleads.v3.enums.DsaPageFeedCriterionFieldEnum.DsaPageFeedCriterionField getDsaPageFeedField();
 
@@ -276,6 +304,7 @@ public interface AttributeFieldMappingOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.LocationExtensionTargetingCriterionFieldEnum.LocationExtensionTargetingCriterionField location_extension_targeting_field = 15 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The enum numeric value on the wire for locationExtensionTargetingField.
    */
   int getLocationExtensionTargetingFieldValue();
   /**
@@ -284,6 +313,7 @@ public interface AttributeFieldMappingOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.LocationExtensionTargetingCriterionFieldEnum.LocationExtensionTargetingCriterionField location_extension_targeting_field = 15 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The locationExtensionTargetingField.
    */
   com.google.ads.googleads.v3.enums.LocationExtensionTargetingCriterionFieldEnum.LocationExtensionTargetingCriterionField getLocationExtensionTargetingField();
 
@@ -293,6 +323,7 @@ public interface AttributeFieldMappingOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.EducationPlaceholderFieldEnum.EducationPlaceholderField education_field = 16 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The enum numeric value on the wire for educationField.
    */
   int getEducationFieldValue();
   /**
@@ -301,6 +332,7 @@ public interface AttributeFieldMappingOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.EducationPlaceholderFieldEnum.EducationPlaceholderField education_field = 16 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The educationField.
    */
   com.google.ads.googleads.v3.enums.EducationPlaceholderFieldEnum.EducationPlaceholderField getEducationField();
 
@@ -310,6 +342,7 @@ public interface AttributeFieldMappingOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.FlightPlaceholderFieldEnum.FlightPlaceholderField flight_field = 17 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The enum numeric value on the wire for flightField.
    */
   int getFlightFieldValue();
   /**
@@ -318,6 +351,7 @@ public interface AttributeFieldMappingOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.FlightPlaceholderFieldEnum.FlightPlaceholderField flight_field = 17 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The flightField.
    */
   com.google.ads.googleads.v3.enums.FlightPlaceholderFieldEnum.FlightPlaceholderField getFlightField();
 
@@ -327,6 +361,7 @@ public interface AttributeFieldMappingOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.CustomPlaceholderFieldEnum.CustomPlaceholderField custom_field = 18 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The enum numeric value on the wire for customField.
    */
   int getCustomFieldValue();
   /**
@@ -335,6 +370,7 @@ public interface AttributeFieldMappingOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.CustomPlaceholderFieldEnum.CustomPlaceholderField custom_field = 18 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The customField.
    */
   com.google.ads.googleads.v3.enums.CustomPlaceholderFieldEnum.CustomPlaceholderField getCustomField();
 
@@ -344,6 +380,7 @@ public interface AttributeFieldMappingOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.HotelPlaceholderFieldEnum.HotelPlaceholderField hotel_field = 19 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The enum numeric value on the wire for hotelField.
    */
   int getHotelFieldValue();
   /**
@@ -352,6 +389,7 @@ public interface AttributeFieldMappingOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.HotelPlaceholderFieldEnum.HotelPlaceholderField hotel_field = 19 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The hotelField.
    */
   com.google.ads.googleads.v3.enums.HotelPlaceholderFieldEnum.HotelPlaceholderField getHotelField();
 
@@ -361,6 +399,7 @@ public interface AttributeFieldMappingOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.RealEstatePlaceholderFieldEnum.RealEstatePlaceholderField real_estate_field = 20 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The enum numeric value on the wire for realEstateField.
    */
   int getRealEstateFieldValue();
   /**
@@ -369,6 +408,7 @@ public interface AttributeFieldMappingOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.RealEstatePlaceholderFieldEnum.RealEstatePlaceholderField real_estate_field = 20 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The realEstateField.
    */
   com.google.ads.googleads.v3.enums.RealEstatePlaceholderFieldEnum.RealEstatePlaceholderField getRealEstateField();
 
@@ -378,6 +418,7 @@ public interface AttributeFieldMappingOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.TravelPlaceholderFieldEnum.TravelPlaceholderField travel_field = 21 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The enum numeric value on the wire for travelField.
    */
   int getTravelFieldValue();
   /**
@@ -386,6 +427,7 @@ public interface AttributeFieldMappingOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.TravelPlaceholderFieldEnum.TravelPlaceholderField travel_field = 21 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The travelField.
    */
   com.google.ads.googleads.v3.enums.TravelPlaceholderFieldEnum.TravelPlaceholderField getTravelField();
 
@@ -395,6 +437,7 @@ public interface AttributeFieldMappingOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.LocalPlaceholderFieldEnum.LocalPlaceholderField local_field = 22 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The enum numeric value on the wire for localField.
    */
   int getLocalFieldValue();
   /**
@@ -403,6 +446,7 @@ public interface AttributeFieldMappingOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.LocalPlaceholderFieldEnum.LocalPlaceholderField local_field = 22 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The localField.
    */
   com.google.ads.googleads.v3.enums.LocalPlaceholderFieldEnum.LocalPlaceholderField getLocalField();
 
@@ -412,6 +456,7 @@ public interface AttributeFieldMappingOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.JobPlaceholderFieldEnum.JobPlaceholderField job_field = 23 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The enum numeric value on the wire for jobField.
    */
   int getJobFieldValue();
   /**
@@ -420,6 +465,7 @@ public interface AttributeFieldMappingOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.JobPlaceholderFieldEnum.JobPlaceholderField job_field = 23 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The jobField.
    */
   com.google.ads.googleads.v3.enums.JobPlaceholderFieldEnum.JobPlaceholderField getJobField();
 

@@ -13,6 +13,7 @@ public interface DateRangeOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue start_date = 1;</code>
+   * @return Whether the startDate field is set.
    */
   boolean hasStartDate();
   /**
@@ -21,6 +22,7 @@ public interface DateRangeOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue start_date = 1;</code>
+   * @return The startDate.
    */
   com.google.protobuf.StringValue getStartDate();
   /**
@@ -38,6 +40,7 @@ public interface DateRangeOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue end_date = 2;</code>
+   * @return Whether the endDate field is set.
    */
   boolean hasEndDate();
   /**
@@ -46,6 +49,7 @@ public interface DateRangeOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue end_date = 2;</code>
+   * @return The endDate.
    */
   com.google.protobuf.StringValue getEndDate();
   /**

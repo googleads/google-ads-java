@@ -18,17 +18,17 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.v3.errors.GoogleAdsError;
-import com.google.ads.googleads.v3.errors.GoogleAdsException;
-import com.google.ads.googleads.v3.resources.AdGroup;
-import com.google.ads.googleads.v3.services.AdGroupOperation;
-import com.google.ads.googleads.v3.services.AdGroupServiceClient;
-import com.google.ads.googleads.v3.services.MutateAdGroupResult;
-import com.google.ads.googleads.v3.services.MutateAdGroupsResponse;
-import com.google.ads.googleads.v3.utils.ErrorUtils;
-import com.google.ads.googleads.v3.utils.ResourceNames;
+import com.google.ads.googleads.v5.errors.GoogleAdsError;
+import com.google.ads.googleads.v5.errors.GoogleAdsException;
+import com.google.ads.googleads.v5.resources.AdGroup;
+import com.google.ads.googleads.v5.services.AdGroupOperation;
+import com.google.ads.googleads.v5.services.AdGroupServiceClient;
+import com.google.ads.googleads.v5.services.MutateAdGroupResult;
+import com.google.ads.googleads.v5.services.MutateAdGroupsRequest;
+import com.google.ads.googleads.v5.services.MutateAdGroupsResponse;
+import com.google.ads.googleads.v5.utils.ErrorUtils;
+import com.google.ads.googleads.v5.utils.ResourceNames;
 import com.google.protobuf.InvalidProtocolBufferException;
-import com.google.protobuf.StringValue;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Arrays;
@@ -63,16 +63,16 @@ public class HandlePartialFailure {
       params.customerId = Long.parseLong("INSERT_CUSTOMER_ID");
       params.campaignId = Long.parseLong("INSERT_CAMPAIGN_ID");
     }
-    GoogleAdsClient googleAdsClient;
+    GoogleAdsClient googleAdsClient = null;
     try {
       googleAdsClient = GoogleAdsClient.newBuilder().fromPropertiesFile().build();
     } catch (FileNotFoundException fnfe) {
       System.err.printf(
           "Failed to load GoogleAdsClient configuration from file. Exception: %s%n", fnfe);
-      return;
+      System.exit(1);
     } catch (IOException ioe) {
       System.err.printf("Failed to create GoogleAdsClient. Exception: %s%n", ioe);
-      return;
+      System.exit(1);
     }
 
     try {
@@ -89,6 +89,7 @@ public class HandlePartialFailure {
       for (GoogleAdsError googleAdsError : gae.getGoogleAdsFailure().getErrorsList()) {
         System.err.printf("  Error %d: %s%n", i++, googleAdsError);
       }
+      System.exit(1);
     }
   }
 
@@ -118,19 +119,19 @@ public class HandlePartialFailure {
     // This AdGroup should be created successfully - assuming the campaign in the params exists.
     AdGroup group1 =
         AdGroup.newBuilder()
-            .setCampaign(StringValue.of(ResourceNames.campaign(customerId, campaignId)))
-            .setName(StringValue.of("Valid AdGroup: " + System.currentTimeMillis()))
+            .setCampaign(ResourceNames.campaign(customerId, campaignId))
+            .setName("Valid AdGroup: " + System.currentTimeMillis())
             .build();
     // This AdGroup will always fail - campaign ID 0 in resource names is never valid.
     AdGroup group2 =
         AdGroup.newBuilder()
-            .setCampaign(StringValue.of(ResourceNames.campaign(customerId, 0L)))
-            .setName(StringValue.of("Broken AdGroup: " + System.currentTimeMillis()))
+            .setCampaign(ResourceNames.campaign(customerId, 0L))
+            .setName("Broken AdGroup: " + System.currentTimeMillis())
             .build();
     // This AdGroup will always fail - duplicate ad group names are not allowed.
     AdGroup group3 =
         AdGroup.newBuilder()
-            .setCampaign(StringValue.of(ResourceNames.campaign(customerId, campaignId)))
+            .setCampaign(ResourceNames.campaign(customerId, campaignId))
             .setName(group1.getName())
             .build();
 
@@ -142,12 +143,12 @@ public class HandlePartialFailure {
         googleAdsClient.getLatestVersion().createAdGroupServiceClient()) {
       // Issues the mutate request, setting partialFailure=true.
       return service.mutateAdGroups(
-          String.valueOf(customerId),
-          Arrays.asList(op1, op2, op3),
-          // Sets partial failure to true.
-          true,
-          // Sets validate only to false.
-          false);
+          MutateAdGroupsRequest.newBuilder()
+              .setCustomerId(String.valueOf(customerId))
+              .setCustomerId(Long.toString(customerId))
+              .addAllOperations(Arrays.asList(op1, op2, op3))
+              .setPartialFailure(true)
+              .build());
     }
   }
 

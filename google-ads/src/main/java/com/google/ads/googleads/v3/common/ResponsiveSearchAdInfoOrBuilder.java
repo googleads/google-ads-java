@@ -111,6 +111,7 @@ public interface ResponsiveSearchAdInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue path1 = 3;</code>
+   * @return Whether the path1 field is set.
    */
   boolean hasPath1();
   /**
@@ -119,6 +120,7 @@ public interface ResponsiveSearchAdInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue path1 = 3;</code>
+   * @return The path1.
    */
   com.google.protobuf.StringValue getPath1();
   /**
@@ -137,6 +139,7 @@ public interface ResponsiveSearchAdInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue path2 = 4;</code>
+   * @return Whether the path2 field is set.
    */
   boolean hasPath2();
   /**
@@ -146,6 +149,7 @@ public interface ResponsiveSearchAdInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue path2 = 4;</code>
+   * @return The path2.
    */
   com.google.protobuf.StringValue getPath2();
   /**

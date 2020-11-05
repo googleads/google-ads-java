@@ -52,61 +52,59 @@ public final class AdParameterServiceProto {
       "rameter_service.proto\022 google.ads.google" +
       "ads.v2.services\0324google/ads/googleads/v2" +
       "/resources/ad_parameter.proto\032\034google/ap" +
-      "i/annotations.proto\032 google/protobuf/fie" +
-      "ld_mask.proto\032\027google/rpc/status.proto\032\027" +
-      "google/api/client.proto\".\n\025GetAdParamete" +
-      "rRequest\022\025\n\rresource_name\030\001 \001(\t\"\254\001\n\031Muta" +
-      "teAdParametersRequest\022\023\n\013customer_id\030\001 \001" +
-      "(\t\022J\n\noperations\030\002 \003(\01326.google.ads.goog" +
-      "leads.v2.services.AdParameterOperation\022\027" +
-      "\n\017partial_failure\030\003 \001(\010\022\025\n\rvalidate_only" +
-      "\030\004 \001(\010\"\352\001\n\024AdParameterOperation\022/\n\013updat" +
-      "e_mask\030\004 \001(\0132\032.google.protobuf.FieldMask" +
-      "\022@\n\006create\030\001 \001(\0132..google.ads.googleads." +
-      "v2.resources.AdParameterH\000\022@\n\006update\030\002 \001" +
-      "(\0132..google.ads.googleads.v2.resources.A" +
-      "dParameterH\000\022\020\n\006remove\030\003 \001(\tH\000B\013\n\toperat" +
-      "ion\"\233\001\n\032MutateAdParametersResponse\0221\n\025pa" +
-      "rtial_failure_error\030\003 \001(\0132\022.google.rpc.S" +
-      "tatus\022J\n\007results\030\002 \003(\01329.google.ads.goog" +
-      "leads.v2.services.MutateAdParameterResul" +
-      "t\"0\n\027MutateAdParameterResult\022\025\n\rresource" +
-      "_name\030\001 \001(\t2\265\003\n\022AdParameterService\022\261\001\n\016G" +
-      "etAdParameter\0227.google.ads.googleads.v2." +
-      "services.GetAdParameterRequest\032..google." +
-      "ads.googleads.v2.resources.AdParameter\"6" +
-      "\202\323\344\223\0020\022./v2/{resource_name=customers/*/a" +
-      "dParameters/*}\022\315\001\n\022MutateAdParameters\022;." +
-      "google.ads.googleads.v2.services.MutateA" +
-      "dParametersRequest\032<.google.ads.googlead" +
-      "s.v2.services.MutateAdParametersResponse" +
-      "\"<\202\323\344\223\0026\"1/v2/customers/{customer_id=*}/" +
-      "adParameters:mutate:\001*\032\033\312A\030googleads.goo" +
-      "gleapis.comB\376\001\n$com.google.ads.googleads" +
-      ".v2.servicesB\027AdParameterServiceProtoP\001Z" +
-      "Hgoogle.golang.org/genproto/googleapis/a" +
-      "ds/googleads/v2/services;services\242\002\003GAA\252" +
-      "\002 Google.Ads.GoogleAds.V2.Services\312\002 Goo" +
-      "gle\\Ads\\GoogleAds\\V2\\Services\352\002$Google::" +
-      "Ads::GoogleAds::V2::Servicesb\006proto3"
+      "i/annotations.proto\032\027google/api/client.p" +
+      "roto\032\037google/api/field_behavior.proto\032\031g" +
+      "oogle/api/resource.proto\032 google/protobu" +
+      "f/field_mask.proto\032\027google/rpc/status.pr" +
+      "oto\"\\\n\025GetAdParameterRequest\022C\n\rresource" +
+      "_name\030\001 \001(\tB,\340A\002\372A&\n$googleads.googleapi" +
+      "s.com/AdParameter\"\266\001\n\031MutateAdParameters" +
+      "Request\022\030\n\013customer_id\030\001 \001(\tB\003\340A\002\022O\n\nope" +
+      "rations\030\002 \003(\01326.google.ads.googleads.v2." +
+      "services.AdParameterOperationB\003\340A\002\022\027\n\017pa" +
+      "rtial_failure\030\003 \001(\010\022\025\n\rvalidate_only\030\004 \001" +
+      "(\010\"\352\001\n\024AdParameterOperation\022/\n\013update_ma" +
+      "sk\030\004 \001(\0132\032.google.protobuf.FieldMask\022@\n\006" +
+      "create\030\001 \001(\0132..google.ads.googleads.v2.r" +
+      "esources.AdParameterH\000\022@\n\006update\030\002 \001(\0132." +
+      ".google.ads.googleads.v2.resources.AdPar" +
+      "ameterH\000\022\020\n\006remove\030\003 \001(\tH\000B\013\n\toperation\"" +
+      "\233\001\n\032MutateAdParametersResponse\0221\n\025partia" +
+      "l_failure_error\030\003 \001(\0132\022.google.rpc.Statu" +
+      "s\022J\n\007results\030\002 \003(\01329.google.ads.googlead" +
+      "s.v2.services.MutateAdParameterResult\"0\n" +
+      "\027MutateAdParameterResult\022\025\n\rresource_nam" +
+      "e\030\001 \001(\t2\336\003\n\022AdParameterService\022\301\001\n\016GetAd" +
+      "Parameter\0227.google.ads.googleads.v2.serv" +
+      "ices.GetAdParameterRequest\032..google.ads." +
+      "googleads.v2.resources.AdParameter\"F\202\323\344\223" +
+      "\0020\022./v2/{resource_name=customers/*/adPar" +
+      "ameters/*}\332A\rresource_name\022\346\001\n\022MutateAdP" +
+      "arameters\022;.google.ads.googleads.v2.serv" +
+      "ices.MutateAdParametersRequest\032<.google." +
+      "ads.googleads.v2.services.MutateAdParame" +
+      "tersResponse\"U\202\323\344\223\0026\"1/v2/customers/{cus" +
+      "tomer_id=*}/adParameters:mutate:\001*\332A\026cus" +
+      "tomer_id,operations\032\033\312A\030googleads.google" +
+      "apis.comB\376\001\n$com.google.ads.googleads.v2" +
+      ".servicesB\027AdParameterServiceProtoP\001ZHgo" +
+      "ogle.golang.org/genproto/googleapis/ads/" +
+      "googleads/v2/services;services\242\002\003GAA\252\002 G" +
+      "oogle.Ads.GoogleAds.V2.Services\312\002 Google" +
+      "\\Ads\\GoogleAds\\V2\\Services\352\002$Google::Ads" +
+      "::GoogleAds::V2::Servicesb\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.ads.googleads.v2.resources.AdParameterProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
+          com.google.api.ClientProto.getDescriptor(),
+          com.google.api.FieldBehaviorProto.getDescriptor(),
+          com.google.api.ResourceProto.getDescriptor(),
           com.google.protobuf.FieldMaskProto.getDescriptor(),
           com.google.rpc.StatusProto.getDescriptor(),
-          com.google.api.ClientProto.getDescriptor(),
-        }, assigner);
+        });
     internal_static_google_ads_googleads_v2_services_GetAdParameterRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_google_ads_googleads_v2_services_GetAdParameterRequest_fieldAccessorTable = new
@@ -140,14 +138,19 @@ public final class AdParameterServiceProto {
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.ClientProto.defaultHost);
+    registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);
     registry.add(com.google.api.AnnotationsProto.http);
+    registry.add(com.google.api.ClientProto.methodSignature);
+    registry.add(com.google.api.ResourceProto.resourceReference);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.ads.googleads.v2.resources.AdParameterProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
+    com.google.api.ClientProto.getDescriptor();
+    com.google.api.FieldBehaviorProto.getDescriptor();
+    com.google.api.ResourceProto.getDescriptor();
     com.google.protobuf.FieldMaskProto.getDescriptor();
     com.google.rpc.StatusProto.getDescriptor();
-    com.google.api.ClientProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

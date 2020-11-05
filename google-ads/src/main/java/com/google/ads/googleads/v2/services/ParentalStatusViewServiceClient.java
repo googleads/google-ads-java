@@ -1,5 +1,5 @@
 /*
- * Copyright 2019 Google LLC
+ * Copyright 2020 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -21,7 +21,6 @@ import com.google.ads.googleads.v2.services.stub.ParentalStatusViewServiceStubSe
 import com.google.api.core.BetaApi;
 import com.google.api.gax.core.BackgroundResource;
 import com.google.api.gax.rpc.UnaryCallable;
-import com.google.api.pathtemplate.PathTemplate;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 import javax.annotation.Generated;
@@ -36,8 +35,8 @@ import javax.annotation.Generated;
  * <pre>
  * <code>
  * try (ParentalStatusViewServiceClient parentalStatusViewServiceClient = ParentalStatusViewServiceClient.create()) {
- *   String formattedResourceName = ParentalStatusViewServiceClient.formatParentalStatusViewName("[CUSTOMER]", "[PARENTAL_STATUS_VIEW]");
- *   ParentalStatusView response = parentalStatusViewServiceClient.getParentalStatusView(formattedResourceName);
+ *   ParentalStatusViewName resourceName = ParentalStatusViewName.of("[CUSTOMER]", "[PARENTAL_STATUS_VIEW]");
+ *   ParentalStatusView response = parentalStatusViewServiceClient.getParentalStatusView(resourceName);
  * }
  * </code>
  * </pre>
@@ -99,50 +98,6 @@ public class ParentalStatusViewServiceClient implements BackgroundResource {
   private final ParentalStatusViewServiceSettings settings;
   private final ParentalStatusViewServiceStub stub;
 
-  private static final PathTemplate PARENTAL_STATUS_VIEW_PATH_TEMPLATE =
-      PathTemplate.createWithoutUrlEncoding(
-          "customers/{customer}/parentalStatusViews/{parental_status_view}");
-
-  /**
-   * Formats a string containing the fully-qualified path to represent a parental_status_view
-   * resource.
-   *
-   * @deprecated Use the {@link ParentalStatusViewName} class instead.
-   */
-  @Deprecated
-  public static final String formatParentalStatusViewName(
-      String customer, String parentalStatusView) {
-    return PARENTAL_STATUS_VIEW_PATH_TEMPLATE.instantiate(
-        "customer", customer,
-        "parental_status_view", parentalStatusView);
-  }
-
-  /**
-   * Parses the customer from the given fully-qualified path which represents a parental_status_view
-   * resource.
-   *
-   * @deprecated Use the {@link ParentalStatusViewName} class instead.
-   */
-  @Deprecated
-  public static final String parseCustomerFromParentalStatusViewName(
-      String parentalStatusViewName) {
-    return PARENTAL_STATUS_VIEW_PATH_TEMPLATE.parse(parentalStatusViewName).get("customer");
-  }
-
-  /**
-   * Parses the parental_status_view from the given fully-qualified path which represents a
-   * parental_status_view resource.
-   *
-   * @deprecated Use the {@link ParentalStatusViewName} class instead.
-   */
-  @Deprecated
-  public static final String parseParentalStatusViewFromParentalStatusViewName(
-      String parentalStatusViewName) {
-    return PARENTAL_STATUS_VIEW_PATH_TEMPLATE
-        .parse(parentalStatusViewName)
-        .get("parental_status_view");
-  }
-
   /** Constructs an instance of ParentalStatusViewServiceClient with default settings. */
   public static final ParentalStatusViewServiceClient create() throws IOException {
     return create(ParentalStatusViewServiceSettings.newBuilder().build());
@@ -201,16 +156,39 @@ public class ParentalStatusViewServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (ParentalStatusViewServiceClient parentalStatusViewServiceClient = ParentalStatusViewServiceClient.create()) {
-   *   String formattedResourceName = ParentalStatusViewServiceClient.formatParentalStatusViewName("[CUSTOMER]", "[PARENTAL_STATUS_VIEW]");
-   *   ParentalStatusView response = parentalStatusViewServiceClient.getParentalStatusView(formattedResourceName);
+   *   ParentalStatusViewName resourceName = ParentalStatusViewName.of("[CUSTOMER]", "[PARENTAL_STATUS_VIEW]");
+   *   ParentalStatusView response = parentalStatusViewServiceClient.getParentalStatusView(resourceName);
    * }
    * </code></pre>
    *
-   * @param resourceName The resource name of the parental status view to fetch.
+   * @param resourceName Required. The resource name of the parental status view to fetch.
+   * @throws com.google.api.gax.rpc.ApiException if the remote call fails
+   */
+  public final ParentalStatusView getParentalStatusView(ParentalStatusViewName resourceName) {
+    GetParentalStatusViewRequest request =
+        GetParentalStatusViewRequest.newBuilder()
+            .setResourceName(resourceName == null ? null : resourceName.toString())
+            .build();
+    return getParentalStatusView(request);
+  }
+
+  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  /**
+   * Returns the requested parental status view in full detail.
+   *
+   * <p>Sample code:
+   *
+   * <pre><code>
+   * try (ParentalStatusViewServiceClient parentalStatusViewServiceClient = ParentalStatusViewServiceClient.create()) {
+   *   ParentalStatusViewName resourceName = ParentalStatusViewName.of("[CUSTOMER]", "[PARENTAL_STATUS_VIEW]");
+   *   ParentalStatusView response = parentalStatusViewServiceClient.getParentalStatusView(resourceName.toString());
+   * }
+   * </code></pre>
+   *
+   * @param resourceName Required. The resource name of the parental status view to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final ParentalStatusView getParentalStatusView(String resourceName) {
-    PARENTAL_STATUS_VIEW_PATH_TEMPLATE.validate(resourceName, "getParentalStatusView");
     GetParentalStatusViewRequest request =
         GetParentalStatusViewRequest.newBuilder().setResourceName(resourceName).build();
     return getParentalStatusView(request);
@@ -224,9 +202,9 @@ public class ParentalStatusViewServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (ParentalStatusViewServiceClient parentalStatusViewServiceClient = ParentalStatusViewServiceClient.create()) {
-   *   String formattedResourceName = ParentalStatusViewServiceClient.formatParentalStatusViewName("[CUSTOMER]", "[PARENTAL_STATUS_VIEW]");
+   *   ParentalStatusViewName resourceName = ParentalStatusViewName.of("[CUSTOMER]", "[PARENTAL_STATUS_VIEW]");
    *   GetParentalStatusViewRequest request = GetParentalStatusViewRequest.newBuilder()
-   *     .setResourceName(formattedResourceName)
+   *     .setResourceName(resourceName.toString())
    *     .build();
    *   ParentalStatusView response = parentalStatusViewServiceClient.getParentalStatusView(request);
    * }
@@ -247,9 +225,9 @@ public class ParentalStatusViewServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (ParentalStatusViewServiceClient parentalStatusViewServiceClient = ParentalStatusViewServiceClient.create()) {
-   *   String formattedResourceName = ParentalStatusViewServiceClient.formatParentalStatusViewName("[CUSTOMER]", "[PARENTAL_STATUS_VIEW]");
+   *   ParentalStatusViewName resourceName = ParentalStatusViewName.of("[CUSTOMER]", "[PARENTAL_STATUS_VIEW]");
    *   GetParentalStatusViewRequest request = GetParentalStatusViewRequest.newBuilder()
-   *     .setResourceName(formattedResourceName)
+   *     .setResourceName(resourceName.toString())
    *     .build();
    *   ApiFuture&lt;ParentalStatusView&gt; future = parentalStatusViewServiceClient.getParentalStatusViewCallable().futureCall(request);
    *   // Do something

@@ -10,7 +10,7 @@ package com.google.ads.googleads.v3.services;
  *
  * Protobuf type {@code google.ads.googleads.v3.services.MutateGoogleAdsRequest}
  */
-public  final class MutateGoogleAdsRequest extends
+public final class MutateGoogleAdsRequest extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v3.services.MutateGoogleAdsRequest)
     MutateGoogleAdsRequestOrBuilder {
@@ -22,6 +22,13 @@ private static final long serialVersionUID = 0L;
   private MutateGoogleAdsRequest() {
     customerId_ = "";
     mutateOperations_ = java.util.Collections.emptyList();
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new MutateGoogleAdsRequest();
   }
 
   @java.lang.Override
@@ -55,9 +62,9 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 18: {
-            if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
               mutateOperations_ = new java.util.ArrayList<com.google.ads.googleads.v3.services.MutateOperation>();
-              mutable_bitField0_ |= 0x00000002;
+              mutable_bitField0_ |= 0x00000001;
             }
             mutateOperations_.add(
                 input.readMessage(com.google.ads.googleads.v3.services.MutateOperation.parser(), extensionRegistry));
@@ -88,7 +95,7 @@ private static final long serialVersionUID = 0L;
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
     } finally {
-      if (((mutable_bitField0_ & 0x00000002) != 0)) {
+      if (((mutable_bitField0_ & 0x00000001) != 0)) {
         mutateOperations_ = java.util.Collections.unmodifiableList(mutateOperations_);
       }
       this.unknownFields = unknownFields.build();
@@ -108,7 +115,6 @@ private static final long serialVersionUID = 0L;
             com.google.ads.googleads.v3.services.MutateGoogleAdsRequest.class, com.google.ads.googleads.v3.services.MutateGoogleAdsRequest.Builder.class);
   }
 
-  private int bitField0_;
   public static final int CUSTOMER_ID_FIELD_NUMBER = 1;
   private volatile java.lang.Object customerId_;
   /**
@@ -117,7 +123,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+   * @return The customerId.
    */
+  @java.lang.Override
   public java.lang.String getCustomerId() {
     java.lang.Object ref = customerId_;
     if (ref instanceof java.lang.String) {
@@ -136,7 +144,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+   * @return The bytes for customerId.
    */
+  @java.lang.Override
   public com.google.protobuf.ByteString
       getCustomerIdBytes() {
     java.lang.Object ref = customerId_;
@@ -160,6 +170,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v3.services.MutateOperation mutate_operations = 2 [(.google.api.field_behavior) = REQUIRED];</code>
    */
+  @java.lang.Override
   public java.util.List<com.google.ads.googleads.v3.services.MutateOperation> getMutateOperationsList() {
     return mutateOperations_;
   }
@@ -170,6 +181,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v3.services.MutateOperation mutate_operations = 2 [(.google.api.field_behavior) = REQUIRED];</code>
    */
+  @java.lang.Override
   public java.util.List<? extends com.google.ads.googleads.v3.services.MutateOperationOrBuilder> 
       getMutateOperationsOrBuilderList() {
     return mutateOperations_;
@@ -181,6 +193,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v3.services.MutateOperation mutate_operations = 2 [(.google.api.field_behavior) = REQUIRED];</code>
    */
+  @java.lang.Override
   public int getMutateOperationsCount() {
     return mutateOperations_.size();
   }
@@ -191,6 +204,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v3.services.MutateOperation mutate_operations = 2 [(.google.api.field_behavior) = REQUIRED];</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.services.MutateOperation getMutateOperations(int index) {
     return mutateOperations_.get(index);
   }
@@ -201,6 +215,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v3.services.MutateOperation mutate_operations = 2 [(.google.api.field_behavior) = REQUIRED];</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.services.MutateOperationOrBuilder getMutateOperationsOrBuilder(
       int index) {
     return mutateOperations_.get(index);
@@ -217,7 +232,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>bool partial_failure = 3;</code>
+   * @return The partialFailure.
    */
+  @java.lang.Override
   public boolean getPartialFailure() {
     return partialFailure_;
   }
@@ -231,7 +248,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>bool validate_only = 4;</code>
+   * @return The validateOnly.
    */
+  @java.lang.Override
   public boolean getValidateOnly() {
     return validateOnly_;
   }
@@ -474,7 +493,7 @@ private static final long serialVersionUID = 0L;
 
       if (mutateOperationsBuilder_ == null) {
         mutateOperations_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000001);
       } else {
         mutateOperationsBuilder_.clear();
       }
@@ -509,12 +528,11 @@ private static final long serialVersionUID = 0L;
     public com.google.ads.googleads.v3.services.MutateGoogleAdsRequest buildPartial() {
       com.google.ads.googleads.v3.services.MutateGoogleAdsRequest result = new com.google.ads.googleads.v3.services.MutateGoogleAdsRequest(this);
       int from_bitField0_ = bitField0_;
-      int to_bitField0_ = 0;
       result.customerId_ = customerId_;
       if (mutateOperationsBuilder_ == null) {
-        if (((bitField0_ & 0x00000002) != 0)) {
+        if (((bitField0_ & 0x00000001) != 0)) {
           mutateOperations_ = java.util.Collections.unmodifiableList(mutateOperations_);
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000001);
         }
         result.mutateOperations_ = mutateOperations_;
       } else {
@@ -522,7 +540,6 @@ private static final long serialVersionUID = 0L;
       }
       result.partialFailure_ = partialFailure_;
       result.validateOnly_ = validateOnly_;
-      result.bitField0_ = to_bitField0_;
       onBuilt();
       return result;
     }
@@ -579,7 +596,7 @@ private static final long serialVersionUID = 0L;
         if (!other.mutateOperations_.isEmpty()) {
           if (mutateOperations_.isEmpty()) {
             mutateOperations_ = other.mutateOperations_;
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000001);
           } else {
             ensureMutateOperationsIsMutable();
             mutateOperations_.addAll(other.mutateOperations_);
@@ -592,7 +609,7 @@ private static final long serialVersionUID = 0L;
             mutateOperationsBuilder_.dispose();
             mutateOperationsBuilder_ = null;
             mutateOperations_ = other.mutateOperations_;
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000001);
             mutateOperationsBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getMutateOperationsFieldBuilder() : null;
@@ -644,6 +661,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+     * @return The customerId.
      */
     public java.lang.String getCustomerId() {
       java.lang.Object ref = customerId_;
@@ -663,6 +681,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+     * @return The bytes for customerId.
      */
     public com.google.protobuf.ByteString
         getCustomerIdBytes() {
@@ -683,6 +702,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+     * @param value The customerId to set.
+     * @return This builder for chaining.
      */
     public Builder setCustomerId(
         java.lang.String value) {
@@ -700,6 +721,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+     * @return This builder for chaining.
      */
     public Builder clearCustomerId() {
       
@@ -713,6 +735,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+     * @param value The bytes for customerId to set.
+     * @return This builder for chaining.
      */
     public Builder setCustomerIdBytes(
         com.google.protobuf.ByteString value) {
@@ -729,9 +753,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.google.ads.googleads.v3.services.MutateOperation> mutateOperations_ =
       java.util.Collections.emptyList();
     private void ensureMutateOperationsIsMutable() {
-      if (!((bitField0_ & 0x00000002) != 0)) {
+      if (!((bitField0_ & 0x00000001) != 0)) {
         mutateOperations_ = new java.util.ArrayList<com.google.ads.googleads.v3.services.MutateOperation>(mutateOperations_);
-        bitField0_ |= 0x00000002;
+        bitField0_ |= 0x00000001;
        }
     }
 
@@ -925,7 +949,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearMutateOperations() {
       if (mutateOperationsBuilder_ == null) {
         mutateOperations_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
       } else {
         mutateOperationsBuilder_.clear();
@@ -1030,7 +1054,7 @@ private static final long serialVersionUID = 0L;
         mutateOperationsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.google.ads.googleads.v3.services.MutateOperation, com.google.ads.googleads.v3.services.MutateOperation.Builder, com.google.ads.googleads.v3.services.MutateOperationOrBuilder>(
                 mutateOperations_,
-                ((bitField0_ & 0x00000002) != 0),
+                ((bitField0_ & 0x00000001) != 0),
                 getParentForChildren(),
                 isClean());
         mutateOperations_ = null;
@@ -1048,7 +1072,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>bool partial_failure = 3;</code>
+     * @return The partialFailure.
      */
+    @java.lang.Override
     public boolean getPartialFailure() {
       return partialFailure_;
     }
@@ -1061,6 +1087,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>bool partial_failure = 3;</code>
+     * @param value The partialFailure to set.
+     * @return This builder for chaining.
      */
     public Builder setPartialFailure(boolean value) {
       
@@ -1077,6 +1105,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>bool partial_failure = 3;</code>
+     * @return This builder for chaining.
      */
     public Builder clearPartialFailure() {
       
@@ -1093,7 +1122,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>bool validate_only = 4;</code>
+     * @return The validateOnly.
      */
+    @java.lang.Override
     public boolean getValidateOnly() {
       return validateOnly_;
     }
@@ -1104,6 +1135,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>bool validate_only = 4;</code>
+     * @param value The validateOnly to set.
+     * @return This builder for chaining.
      */
     public Builder setValidateOnly(boolean value) {
       
@@ -1118,6 +1151,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>bool validate_only = 4;</code>
+     * @return This builder for chaining.
      */
     public Builder clearValidateOnly() {
       

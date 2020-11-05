@@ -10,7 +10,7 @@ package com.google.ads.googleads.v3.common;
  *
  * Protobuf type {@code google.ads.googleads.v3.common.HotelLengthOfStayInfo}
  */
-public  final class HotelLengthOfStayInfo extends
+public final class HotelLengthOfStayInfo extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v3.common.HotelLengthOfStayInfo)
     HotelLengthOfStayInfoOrBuilder {
@@ -20,6 +20,13 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private HotelLengthOfStayInfo() {
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new HotelLengthOfStayInfo();
   }
 
   @java.lang.Override
@@ -35,7 +42,6 @@ private static final long serialVersionUID = 0L;
     if (extensionRegistry == null) {
       throw new java.lang.NullPointerException();
     }
-    int mutable_bitField0_ = 0;
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
         com.google.protobuf.UnknownFieldSet.newBuilder();
     try {
@@ -112,7 +118,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Int64Value min_nights = 1;</code>
+   * @return Whether the minNights field is set.
    */
+  @java.lang.Override
   public boolean hasMinNights() {
     return minNights_ != null;
   }
@@ -122,7 +130,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Int64Value min_nights = 1;</code>
+   * @return The minNights.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getMinNights() {
     return minNights_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : minNights_;
   }
@@ -133,6 +143,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int64Value min_nights = 1;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getMinNightsOrBuilder() {
     return getMinNights();
   }
@@ -145,7 +156,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Int64Value max_nights = 2;</code>
+   * @return Whether the maxNights field is set.
    */
+  @java.lang.Override
   public boolean hasMaxNights() {
     return maxNights_ != null;
   }
@@ -155,7 +168,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Int64Value max_nights = 2;</code>
+   * @return The maxNights.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getMaxNights() {
     return maxNights_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxNights_;
   }
@@ -166,6 +181,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int64Value max_nights = 2;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getMaxNightsOrBuilder() {
     return getMaxNights();
   }
@@ -528,6 +544,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value min_nights = 1;</code>
+     * @return Whether the minNights field is set.
      */
     public boolean hasMinNights() {
       return minNightsBuilder_ != null || minNights_ != null;
@@ -538,6 +555,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value min_nights = 1;</code>
+     * @return The minNights.
      */
     public com.google.protobuf.Int64Value getMinNights() {
       if (minNightsBuilder_ == null) {
@@ -681,6 +699,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_nights = 2;</code>
+     * @return Whether the maxNights field is set.
      */
     public boolean hasMaxNights() {
       return maxNightsBuilder_ != null || maxNights_ != null;
@@ -691,6 +710,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_nights = 2;</code>
+     * @return The maxNights.
      */
     public com.google.protobuf.Int64Value getMaxNights() {
       if (maxNightsBuilder_ == null) {

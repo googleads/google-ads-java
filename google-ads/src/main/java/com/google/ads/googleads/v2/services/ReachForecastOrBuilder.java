@@ -13,6 +13,7 @@ public interface ReachForecastOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value cost_micros = 1;</code>
+   * @return Whether the costMicros field is set.
    */
   boolean hasCostMicros();
   /**
@@ -21,6 +22,7 @@ public interface ReachForecastOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value cost_micros = 1;</code>
+   * @return The costMicros.
    */
   com.google.protobuf.Int64Value getCostMicros();
   /**
@@ -38,6 +40,7 @@ public interface ReachForecastOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.services.Forecast forecast = 2;</code>
+   * @return Whether the forecast field is set.
    */
   boolean hasForecast();
   /**
@@ -46,6 +49,7 @@ public interface ReachForecastOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.services.Forecast forecast = 2;</code>
+   * @return The forecast.
    */
   com.google.ads.googleads.v2.services.Forecast getForecast();
   /**

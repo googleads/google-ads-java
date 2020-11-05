@@ -11,7 +11,7 @@ package com.google.ads.googleads.v3.common;
  *
  * Protobuf type {@code google.ads.googleads.v3.common.VideoNonSkippableInStreamAdInfo}
  */
-public  final class VideoNonSkippableInStreamAdInfo extends
+public final class VideoNonSkippableInStreamAdInfo extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v3.common.VideoNonSkippableInStreamAdInfo)
     VideoNonSkippableInStreamAdInfoOrBuilder {
@@ -21,6 +21,13 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private VideoNonSkippableInStreamAdInfo() {
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new VideoNonSkippableInStreamAdInfo();
   }
 
   @java.lang.Override
@@ -36,7 +43,6 @@ private static final long serialVersionUID = 0L;
     if (extensionRegistry == null) {
       throw new java.lang.NullPointerException();
     }
-    int mutable_bitField0_ = 0;
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
         com.google.protobuf.UnknownFieldSet.newBuilder();
     try {
@@ -100,7 +106,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue companion_banner = 1;</code>
+   * @return Whether the companionBanner field is set.
    */
+  @java.lang.Override
   public boolean hasCompanionBanner() {
     return companionBanner_ != null;
   }
@@ -110,7 +118,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue companion_banner = 1;</code>
+   * @return The companionBanner.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getCompanionBanner() {
     return companionBanner_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : companionBanner_;
   }
@@ -121,6 +131,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue companion_banner = 1;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getCompanionBannerOrBuilder() {
     return getCompanionBanner();
   }
@@ -454,6 +465,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue companion_banner = 1;</code>
+     * @return Whether the companionBanner field is set.
      */
     public boolean hasCompanionBanner() {
       return companionBannerBuilder_ != null || companionBanner_ != null;
@@ -464,6 +476,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue companion_banner = 1;</code>
+     * @return The companionBanner.
      */
     public com.google.protobuf.StringValue getCompanionBanner() {
       if (companionBannerBuilder_ == null) {

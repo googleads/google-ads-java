@@ -15,6 +15,7 @@ public interface StoreSalesThirdPartyMetadataOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue advertiser_upload_date_time = 1;</code>
+   * @return Whether the advertiserUploadDateTime field is set.
    */
   boolean hasAdvertiserUploadDateTime();
   /**
@@ -25,6 +26,7 @@ public interface StoreSalesThirdPartyMetadataOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue advertiser_upload_date_time = 1;</code>
+   * @return The advertiserUploadDateTime.
    */
   com.google.protobuf.StringValue getAdvertiserUploadDateTime();
   /**
@@ -47,6 +49,7 @@ public interface StoreSalesThirdPartyMetadataOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue valid_transaction_fraction = 2;</code>
+   * @return Whether the validTransactionFraction field is set.
    */
   boolean hasValidTransactionFraction();
   /**
@@ -58,6 +61,7 @@ public interface StoreSalesThirdPartyMetadataOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue valid_transaction_fraction = 2;</code>
+   * @return The validTransactionFraction.
    */
   com.google.protobuf.DoubleValue getValidTransactionFraction();
   /**
@@ -81,6 +85,7 @@ public interface StoreSalesThirdPartyMetadataOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue partner_match_fraction = 3;</code>
+   * @return Whether the partnerMatchFraction field is set.
    */
   boolean hasPartnerMatchFraction();
   /**
@@ -92,6 +97,7 @@ public interface StoreSalesThirdPartyMetadataOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue partner_match_fraction = 3;</code>
+   * @return The partnerMatchFraction.
    */
   com.google.protobuf.DoubleValue getPartnerMatchFraction();
   /**
@@ -115,6 +121,7 @@ public interface StoreSalesThirdPartyMetadataOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue partner_upload_fraction = 4;</code>
+   * @return Whether the partnerUploadFraction field is set.
    */
   boolean hasPartnerUploadFraction();
   /**
@@ -126,6 +133,7 @@ public interface StoreSalesThirdPartyMetadataOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue partner_upload_fraction = 4;</code>
+   * @return The partnerUploadFraction.
    */
   com.google.protobuf.DoubleValue getPartnerUploadFraction();
   /**
@@ -146,6 +154,7 @@ public interface StoreSalesThirdPartyMetadataOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue bridge_map_version_id = 5;</code>
+   * @return Whether the bridgeMapVersionId field is set.
    */
   boolean hasBridgeMapVersionId();
   /**
@@ -154,6 +163,7 @@ public interface StoreSalesThirdPartyMetadataOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue bridge_map_version_id = 5;</code>
+   * @return The bridgeMapVersionId.
    */
   com.google.protobuf.StringValue getBridgeMapVersionId();
   /**
@@ -171,6 +181,7 @@ public interface StoreSalesThirdPartyMetadataOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value partner_id = 6;</code>
+   * @return Whether the partnerId field is set.
    */
   boolean hasPartnerId();
   /**
@@ -179,6 +190,7 @@ public interface StoreSalesThirdPartyMetadataOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value partner_id = 6;</code>
+   * @return The partnerId.
    */
   com.google.protobuf.Int64Value getPartnerId();
   /**

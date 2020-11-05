@@ -18,6 +18,7 @@ public interface TargetOutrankShareOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int32Value target_outrank_share_micros = 1;</code>
+   * @return Whether the targetOutrankShareMicros field is set.
    */
   boolean hasTargetOutrankShareMicros();
   /**
@@ -31,6 +32,7 @@ public interface TargetOutrankShareOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int32Value target_outrank_share_micros = 1;</code>
+   * @return The targetOutrankShareMicros.
    */
   com.google.protobuf.Int32Value getTargetOutrankShareMicros();
   /**
@@ -53,6 +55,7 @@ public interface TargetOutrankShareOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue competitor_domain = 2;</code>
+   * @return Whether the competitorDomain field is set.
    */
   boolean hasCompetitorDomain();
   /**
@@ -61,6 +64,7 @@ public interface TargetOutrankShareOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue competitor_domain = 2;</code>
+   * @return The competitorDomain.
    */
   com.google.protobuf.StringValue getCompetitorDomain();
   /**
@@ -79,6 +83,7 @@ public interface TargetOutrankShareOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value cpc_bid_ceiling_micros = 3;</code>
+   * @return Whether the cpcBidCeilingMicros field is set.
    */
   boolean hasCpcBidCeilingMicros();
   /**
@@ -88,6 +93,7 @@ public interface TargetOutrankShareOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value cpc_bid_ceiling_micros = 3;</code>
+   * @return The cpcBidCeilingMicros.
    */
   com.google.protobuf.Int64Value getCpcBidCeilingMicros();
   /**
@@ -110,6 +116,7 @@ public interface TargetOutrankShareOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.BoolValue only_raise_cpc_bids = 4;</code>
+   * @return Whether the onlyRaiseCpcBids field is set.
    */
   boolean hasOnlyRaiseCpcBids();
   /**
@@ -122,6 +129,7 @@ public interface TargetOutrankShareOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.BoolValue only_raise_cpc_bids = 4;</code>
+   * @return The onlyRaiseCpcBids.
    */
   com.google.protobuf.BoolValue getOnlyRaiseCpcBids();
   /**
@@ -144,6 +152,7 @@ public interface TargetOutrankShareOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.BoolValue raise_cpc_bid_when_quality_score_is_low = 5;</code>
+   * @return Whether the raiseCpcBidWhenQualityScoreIsLow field is set.
    */
   boolean hasRaiseCpcBidWhenQualityScoreIsLow();
   /**
@@ -153,6 +162,7 @@ public interface TargetOutrankShareOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.BoolValue raise_cpc_bid_when_quality_score_is_low = 5;</code>
+   * @return The raiseCpcBidWhenQualityScoreIsLow.
    */
   com.google.protobuf.BoolValue getRaiseCpcBidWhenQualityScoreIsLow();
   /**

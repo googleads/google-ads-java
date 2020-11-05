@@ -15,6 +15,7 @@ public interface AdGroupCriterionOrBuilder extends
    * </pre>
    *
    * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * @return The resourceName.
    */
   java.lang.String getResourceName();
   /**
@@ -25,6 +26,7 @@ public interface AdGroupCriterionOrBuilder extends
    * </pre>
    *
    * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * @return The bytes for resourceName.
    */
   com.google.protobuf.ByteString
       getResourceNameBytes();
@@ -36,6 +38,7 @@ public interface AdGroupCriterionOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value criterion_id = 26 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the criterionId field is set.
    */
   boolean hasCriterionId();
   /**
@@ -45,6 +48,7 @@ public interface AdGroupCriterionOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value criterion_id = 26 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The criterionId.
    */
   com.google.protobuf.Int64Value getCriterionId();
   /**
@@ -60,17 +64,35 @@ public interface AdGroupCriterionOrBuilder extends
   /**
    * <pre>
    * The status of the criterion.
+   * This is the status of the ad group criterion entity, set by the client.
+   * Note: UI reports may incorporate additional information that affects
+   * whether a criterion is eligible to run. In some cases a criterion that's
+   * REMOVED in the API can still show as enabled in the UI.
+   * For example, campaigns by default show to users of all age ranges unless
+   * excluded. The UI will show each age range as "enabled", since they're
+   * eligible to see the ads; but AdGroupCriterion.status will show "removed",
+   * since no positive criterion was added.
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.AdGroupCriterionStatusEnum.AdGroupCriterionStatus status = 3;</code>
+   * @return The enum numeric value on the wire for status.
    */
   int getStatusValue();
   /**
    * <pre>
    * The status of the criterion.
+   * This is the status of the ad group criterion entity, set by the client.
+   * Note: UI reports may incorporate additional information that affects
+   * whether a criterion is eligible to run. In some cases a criterion that's
+   * REMOVED in the API can still show as enabled in the UI.
+   * For example, campaigns by default show to users of all age ranges unless
+   * excluded. The UI will show each age range as "enabled", since they're
+   * eligible to see the ads; but AdGroupCriterion.status will show "removed",
+   * since no positive criterion was added.
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.AdGroupCriterionStatusEnum.AdGroupCriterionStatus status = 3;</code>
+   * @return The status.
    */
   com.google.ads.googleads.v3.enums.AdGroupCriterionStatusEnum.AdGroupCriterionStatus getStatus();
 
@@ -80,6 +102,7 @@ public interface AdGroupCriterionOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.AdGroupCriterion.QualityInfo quality_info = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the qualityInfo field is set.
    */
   boolean hasQualityInfo();
   /**
@@ -88,6 +111,7 @@ public interface AdGroupCriterionOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.AdGroupCriterion.QualityInfo quality_info = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The qualityInfo.
    */
   com.google.ads.googleads.v3.resources.AdGroupCriterion.QualityInfo getQualityInfo();
   /**
@@ -105,6 +129,7 @@ public interface AdGroupCriterionOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue ad_group = 5 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * @return Whether the adGroup field is set.
    */
   boolean hasAdGroup();
   /**
@@ -113,6 +138,7 @@ public interface AdGroupCriterionOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue ad_group = 5 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * @return The adGroup.
    */
   com.google.protobuf.StringValue getAdGroup();
   /**
@@ -130,6 +156,7 @@ public interface AdGroupCriterionOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.CriterionTypeEnum.CriterionType type = 25 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The enum numeric value on the wire for type.
    */
   int getTypeValue();
   /**
@@ -138,6 +165,7 @@ public interface AdGroupCriterionOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.CriterionTypeEnum.CriterionType type = 25 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The type.
    */
   com.google.ads.googleads.v3.enums.CriterionTypeEnum.CriterionType getType();
 
@@ -149,6 +177,7 @@ public interface AdGroupCriterionOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.BoolValue negative = 31 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return Whether the negative field is set.
    */
   boolean hasNegative();
   /**
@@ -159,6 +188,7 @@ public interface AdGroupCriterionOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.BoolValue negative = 31 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The negative.
    */
   com.google.protobuf.BoolValue getNegative();
   /**
@@ -178,6 +208,7 @@ public interface AdGroupCriterionOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.CriterionSystemServingStatusEnum.CriterionSystemServingStatus system_serving_status = 52 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The enum numeric value on the wire for systemServingStatus.
    */
   int getSystemServingStatusValue();
   /**
@@ -186,6 +217,7 @@ public interface AdGroupCriterionOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.CriterionSystemServingStatusEnum.CriterionSystemServingStatus system_serving_status = 52 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The systemServingStatus.
    */
   com.google.ads.googleads.v3.enums.CriterionSystemServingStatusEnum.CriterionSystemServingStatus getSystemServingStatus();
 
@@ -195,6 +227,7 @@ public interface AdGroupCriterionOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.AdGroupCriterionApprovalStatusEnum.AdGroupCriterionApprovalStatus approval_status = 53 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The enum numeric value on the wire for approvalStatus.
    */
   int getApprovalStatusValue();
   /**
@@ -203,6 +236,7 @@ public interface AdGroupCriterionOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.AdGroupCriterionApprovalStatusEnum.AdGroupCriterionApprovalStatus approval_status = 53 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The approvalStatus.
    */
   com.google.ads.googleads.v3.enums.AdGroupCriterionApprovalStatusEnum.AdGroupCriterionApprovalStatus getApprovalStatus();
 
@@ -213,6 +247,7 @@ public interface AdGroupCriterionOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue bid_modifier = 44;</code>
+   * @return Whether the bidModifier field is set.
    */
   boolean hasBidModifier();
   /**
@@ -222,6 +257,7 @@ public interface AdGroupCriterionOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue bid_modifier = 44;</code>
+   * @return The bidModifier.
    */
   com.google.protobuf.DoubleValue getBidModifier();
   /**
@@ -240,6 +276,7 @@ public interface AdGroupCriterionOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value cpc_bid_micros = 16;</code>
+   * @return Whether the cpcBidMicros field is set.
    */
   boolean hasCpcBidMicros();
   /**
@@ -248,6 +285,7 @@ public interface AdGroupCriterionOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value cpc_bid_micros = 16;</code>
+   * @return The cpcBidMicros.
    */
   com.google.protobuf.Int64Value getCpcBidMicros();
   /**
@@ -265,6 +303,7 @@ public interface AdGroupCriterionOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value cpm_bid_micros = 17;</code>
+   * @return Whether the cpmBidMicros field is set.
    */
   boolean hasCpmBidMicros();
   /**
@@ -273,6 +312,7 @@ public interface AdGroupCriterionOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value cpm_bid_micros = 17;</code>
+   * @return The cpmBidMicros.
    */
   com.google.protobuf.Int64Value getCpmBidMicros();
   /**
@@ -290,6 +330,7 @@ public interface AdGroupCriterionOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value cpv_bid_micros = 24;</code>
+   * @return Whether the cpvBidMicros field is set.
    */
   boolean hasCpvBidMicros();
   /**
@@ -298,6 +339,7 @@ public interface AdGroupCriterionOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value cpv_bid_micros = 24;</code>
+   * @return The cpvBidMicros.
    */
   com.google.protobuf.Int64Value getCpvBidMicros();
   /**
@@ -317,6 +359,7 @@ public interface AdGroupCriterionOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value percent_cpc_bid_micros = 33;</code>
+   * @return Whether the percentCpcBidMicros field is set.
    */
   boolean hasPercentCpcBidMicros();
   /**
@@ -327,6 +370,7 @@ public interface AdGroupCriterionOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value percent_cpc_bid_micros = 33;</code>
+   * @return The percentCpcBidMicros.
    */
   com.google.protobuf.Int64Value getPercentCpcBidMicros();
   /**
@@ -346,6 +390,7 @@ public interface AdGroupCriterionOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value effective_cpc_bid_micros = 18 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the effectiveCpcBidMicros field is set.
    */
   boolean hasEffectiveCpcBidMicros();
   /**
@@ -354,6 +399,7 @@ public interface AdGroupCriterionOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value effective_cpc_bid_micros = 18 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The effectiveCpcBidMicros.
    */
   com.google.protobuf.Int64Value getEffectiveCpcBidMicros();
   /**
@@ -371,6 +417,7 @@ public interface AdGroupCriterionOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value effective_cpm_bid_micros = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the effectiveCpmBidMicros field is set.
    */
   boolean hasEffectiveCpmBidMicros();
   /**
@@ -379,6 +426,7 @@ public interface AdGroupCriterionOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value effective_cpm_bid_micros = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The effectiveCpmBidMicros.
    */
   com.google.protobuf.Int64Value getEffectiveCpmBidMicros();
   /**
@@ -396,6 +444,7 @@ public interface AdGroupCriterionOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value effective_cpv_bid_micros = 20 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the effectiveCpvBidMicros field is set.
    */
   boolean hasEffectiveCpvBidMicros();
   /**
@@ -404,6 +453,7 @@ public interface AdGroupCriterionOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value effective_cpv_bid_micros = 20 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The effectiveCpvBidMicros.
    */
   com.google.protobuf.Int64Value getEffectiveCpvBidMicros();
   /**
@@ -421,6 +471,7 @@ public interface AdGroupCriterionOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value effective_percent_cpc_bid_micros = 34 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the effectivePercentCpcBidMicros field is set.
    */
   boolean hasEffectivePercentCpcBidMicros();
   /**
@@ -429,6 +480,7 @@ public interface AdGroupCriterionOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value effective_percent_cpc_bid_micros = 34 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The effectivePercentCpcBidMicros.
    */
   com.google.protobuf.Int64Value getEffectivePercentCpcBidMicros();
   /**
@@ -446,6 +498,7 @@ public interface AdGroupCriterionOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.BiddingSourceEnum.BiddingSource effective_cpc_bid_source = 21 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The enum numeric value on the wire for effectiveCpcBidSource.
    */
   int getEffectiveCpcBidSourceValue();
   /**
@@ -454,6 +507,7 @@ public interface AdGroupCriterionOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.BiddingSourceEnum.BiddingSource effective_cpc_bid_source = 21 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The effectiveCpcBidSource.
    */
   com.google.ads.googleads.v3.enums.BiddingSourceEnum.BiddingSource getEffectiveCpcBidSource();
 
@@ -463,6 +517,7 @@ public interface AdGroupCriterionOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.BiddingSourceEnum.BiddingSource effective_cpm_bid_source = 22 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The enum numeric value on the wire for effectiveCpmBidSource.
    */
   int getEffectiveCpmBidSourceValue();
   /**
@@ -471,6 +526,7 @@ public interface AdGroupCriterionOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.BiddingSourceEnum.BiddingSource effective_cpm_bid_source = 22 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The effectiveCpmBidSource.
    */
   com.google.ads.googleads.v3.enums.BiddingSourceEnum.BiddingSource getEffectiveCpmBidSource();
 
@@ -480,6 +536,7 @@ public interface AdGroupCriterionOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.BiddingSourceEnum.BiddingSource effective_cpv_bid_source = 23 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The enum numeric value on the wire for effectiveCpvBidSource.
    */
   int getEffectiveCpvBidSourceValue();
   /**
@@ -488,6 +545,7 @@ public interface AdGroupCriterionOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.BiddingSourceEnum.BiddingSource effective_cpv_bid_source = 23 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The effectiveCpvBidSource.
    */
   com.google.ads.googleads.v3.enums.BiddingSourceEnum.BiddingSource getEffectiveCpvBidSource();
 
@@ -497,6 +555,7 @@ public interface AdGroupCriterionOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.BiddingSourceEnum.BiddingSource effective_percent_cpc_bid_source = 35 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The enum numeric value on the wire for effectivePercentCpcBidSource.
    */
   int getEffectivePercentCpcBidSourceValue();
   /**
@@ -505,6 +564,7 @@ public interface AdGroupCriterionOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.BiddingSourceEnum.BiddingSource effective_percent_cpc_bid_source = 35 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The effectivePercentCpcBidSource.
    */
   com.google.ads.googleads.v3.enums.BiddingSourceEnum.BiddingSource getEffectivePercentCpcBidSource();
 
@@ -514,6 +574,7 @@ public interface AdGroupCriterionOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.AdGroupCriterion.PositionEstimates position_estimates = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the positionEstimates field is set.
    */
   boolean hasPositionEstimates();
   /**
@@ -522,6 +583,7 @@ public interface AdGroupCriterionOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.AdGroupCriterion.PositionEstimates position_estimates = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The positionEstimates.
    */
   com.google.ads.googleads.v3.resources.AdGroupCriterion.PositionEstimates getPositionEstimates();
   /**
@@ -632,6 +694,7 @@ public interface AdGroupCriterionOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue final_url_suffix = 50;</code>
+   * @return Whether the finalUrlSuffix field is set.
    */
   boolean hasFinalUrlSuffix();
   /**
@@ -640,6 +703,7 @@ public interface AdGroupCriterionOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue final_url_suffix = 50;</code>
+   * @return The finalUrlSuffix.
    */
   com.google.protobuf.StringValue getFinalUrlSuffix();
   /**
@@ -657,6 +721,7 @@ public interface AdGroupCriterionOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue tracking_url_template = 13;</code>
+   * @return Whether the trackingUrlTemplate field is set.
    */
   boolean hasTrackingUrlTemplate();
   /**
@@ -665,6 +730,7 @@ public interface AdGroupCriterionOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue tracking_url_template = 13;</code>
+   * @return The trackingUrlTemplate.
    */
   com.google.protobuf.StringValue getTrackingUrlTemplate();
   /**
@@ -731,6 +797,7 @@ public interface AdGroupCriterionOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.KeywordInfo keyword = 27 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return Whether the keyword field is set.
    */
   boolean hasKeyword();
   /**
@@ -739,6 +806,7 @@ public interface AdGroupCriterionOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.KeywordInfo keyword = 27 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The keyword.
    */
   com.google.ads.googleads.v3.common.KeywordInfo getKeyword();
   /**
@@ -756,6 +824,7 @@ public interface AdGroupCriterionOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.PlacementInfo placement = 28 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return Whether the placement field is set.
    */
   boolean hasPlacement();
   /**
@@ -764,6 +833,7 @@ public interface AdGroupCriterionOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.PlacementInfo placement = 28 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The placement.
    */
   com.google.ads.googleads.v3.common.PlacementInfo getPlacement();
   /**
@@ -781,6 +851,7 @@ public interface AdGroupCriterionOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.MobileAppCategoryInfo mobile_app_category = 29 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return Whether the mobileAppCategory field is set.
    */
   boolean hasMobileAppCategory();
   /**
@@ -789,6 +860,7 @@ public interface AdGroupCriterionOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.MobileAppCategoryInfo mobile_app_category = 29 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The mobileAppCategory.
    */
   com.google.ads.googleads.v3.common.MobileAppCategoryInfo getMobileAppCategory();
   /**
@@ -806,6 +878,7 @@ public interface AdGroupCriterionOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.MobileApplicationInfo mobile_application = 30 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return Whether the mobileApplication field is set.
    */
   boolean hasMobileApplication();
   /**
@@ -814,6 +887,7 @@ public interface AdGroupCriterionOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.MobileApplicationInfo mobile_application = 30 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The mobileApplication.
    */
   com.google.ads.googleads.v3.common.MobileApplicationInfo getMobileApplication();
   /**
@@ -831,6 +905,7 @@ public interface AdGroupCriterionOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.ListingGroupInfo listing_group = 32 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return Whether the listingGroup field is set.
    */
   boolean hasListingGroup();
   /**
@@ -839,6 +914,7 @@ public interface AdGroupCriterionOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.ListingGroupInfo listing_group = 32 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The listingGroup.
    */
   com.google.ads.googleads.v3.common.ListingGroupInfo getListingGroup();
   /**
@@ -856,6 +932,7 @@ public interface AdGroupCriterionOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.AgeRangeInfo age_range = 36 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return Whether the ageRange field is set.
    */
   boolean hasAgeRange();
   /**
@@ -864,6 +941,7 @@ public interface AdGroupCriterionOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.AgeRangeInfo age_range = 36 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The ageRange.
    */
   com.google.ads.googleads.v3.common.AgeRangeInfo getAgeRange();
   /**
@@ -881,6 +959,7 @@ public interface AdGroupCriterionOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.GenderInfo gender = 37 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return Whether the gender field is set.
    */
   boolean hasGender();
   /**
@@ -889,6 +968,7 @@ public interface AdGroupCriterionOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.GenderInfo gender = 37 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The gender.
    */
   com.google.ads.googleads.v3.common.GenderInfo getGender();
   /**
@@ -906,6 +986,7 @@ public interface AdGroupCriterionOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.IncomeRangeInfo income_range = 38 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return Whether the incomeRange field is set.
    */
   boolean hasIncomeRange();
   /**
@@ -914,6 +995,7 @@ public interface AdGroupCriterionOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.IncomeRangeInfo income_range = 38 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The incomeRange.
    */
   com.google.ads.googleads.v3.common.IncomeRangeInfo getIncomeRange();
   /**
@@ -931,6 +1013,7 @@ public interface AdGroupCriterionOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.ParentalStatusInfo parental_status = 39 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return Whether the parentalStatus field is set.
    */
   boolean hasParentalStatus();
   /**
@@ -939,6 +1022,7 @@ public interface AdGroupCriterionOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.ParentalStatusInfo parental_status = 39 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The parentalStatus.
    */
   com.google.ads.googleads.v3.common.ParentalStatusInfo getParentalStatus();
   /**
@@ -956,6 +1040,7 @@ public interface AdGroupCriterionOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.UserListInfo user_list = 42 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return Whether the userList field is set.
    */
   boolean hasUserList();
   /**
@@ -964,6 +1049,7 @@ public interface AdGroupCriterionOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.UserListInfo user_list = 42 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The userList.
    */
   com.google.ads.googleads.v3.common.UserListInfo getUserList();
   /**
@@ -981,6 +1067,7 @@ public interface AdGroupCriterionOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.YouTubeVideoInfo youtube_video = 40 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return Whether the youtubeVideo field is set.
    */
   boolean hasYoutubeVideo();
   /**
@@ -989,6 +1076,7 @@ public interface AdGroupCriterionOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.YouTubeVideoInfo youtube_video = 40 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The youtubeVideo.
    */
   com.google.ads.googleads.v3.common.YouTubeVideoInfo getYoutubeVideo();
   /**
@@ -1006,6 +1094,7 @@ public interface AdGroupCriterionOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.YouTubeChannelInfo youtube_channel = 41 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return Whether the youtubeChannel field is set.
    */
   boolean hasYoutubeChannel();
   /**
@@ -1014,6 +1103,7 @@ public interface AdGroupCriterionOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.YouTubeChannelInfo youtube_channel = 41 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The youtubeChannel.
    */
   com.google.ads.googleads.v3.common.YouTubeChannelInfo getYoutubeChannel();
   /**
@@ -1031,6 +1121,7 @@ public interface AdGroupCriterionOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.TopicInfo topic = 43 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return Whether the topic field is set.
    */
   boolean hasTopic();
   /**
@@ -1039,6 +1130,7 @@ public interface AdGroupCriterionOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.TopicInfo topic = 43 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The topic.
    */
   com.google.ads.googleads.v3.common.TopicInfo getTopic();
   /**
@@ -1056,6 +1148,7 @@ public interface AdGroupCriterionOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.UserInterestInfo user_interest = 45 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return Whether the userInterest field is set.
    */
   boolean hasUserInterest();
   /**
@@ -1064,6 +1157,7 @@ public interface AdGroupCriterionOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.UserInterestInfo user_interest = 45 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The userInterest.
    */
   com.google.ads.googleads.v3.common.UserInterestInfo getUserInterest();
   /**
@@ -1081,6 +1175,7 @@ public interface AdGroupCriterionOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.WebpageInfo webpage = 46 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return Whether the webpage field is set.
    */
   boolean hasWebpage();
   /**
@@ -1089,6 +1184,7 @@ public interface AdGroupCriterionOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.WebpageInfo webpage = 46 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The webpage.
    */
   com.google.ads.googleads.v3.common.WebpageInfo getWebpage();
   /**
@@ -1106,6 +1202,7 @@ public interface AdGroupCriterionOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.AppPaymentModelInfo app_payment_model = 47 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return Whether the appPaymentModel field is set.
    */
   boolean hasAppPaymentModel();
   /**
@@ -1114,6 +1211,7 @@ public interface AdGroupCriterionOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.AppPaymentModelInfo app_payment_model = 47 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The appPaymentModel.
    */
   com.google.ads.googleads.v3.common.AppPaymentModelInfo getAppPaymentModel();
   /**
@@ -1131,6 +1229,7 @@ public interface AdGroupCriterionOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.CustomAffinityInfo custom_affinity = 48 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return Whether the customAffinity field is set.
    */
   boolean hasCustomAffinity();
   /**
@@ -1139,6 +1238,7 @@ public interface AdGroupCriterionOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.CustomAffinityInfo custom_affinity = 48 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The customAffinity.
    */
   com.google.ads.googleads.v3.common.CustomAffinityInfo getCustomAffinity();
   /**
@@ -1156,6 +1256,7 @@ public interface AdGroupCriterionOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.CustomIntentInfo custom_intent = 49 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return Whether the customIntent field is set.
    */
   boolean hasCustomIntent();
   /**
@@ -1164,6 +1265,7 @@ public interface AdGroupCriterionOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.CustomIntentInfo custom_intent = 49 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The customIntent.
    */
   com.google.ads.googleads.v3.common.CustomIntentInfo getCustomIntent();
   /**

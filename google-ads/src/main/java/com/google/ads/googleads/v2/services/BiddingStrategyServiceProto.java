@@ -52,14 +52,17 @@ public final class BiddingStrategyServiceProto {
       "ng_strategy_service.proto\022 google.ads.go" +
       "ogleads.v2.services\0328google/ads/googlead" +
       "s/v2/resources/bidding_strategy.proto\032\034g" +
-      "oogle/api/annotations.proto\032 google/prot" +
-      "obuf/field_mask.proto\032\027google/rpc/status" +
-      ".proto\032\027google/api/client.proto\"2\n\031GetBi" +
-      "ddingStrategyRequest\022\025\n\rresource_name\030\001 " +
-      "\001(\t\"\265\001\n\036MutateBiddingStrategiesRequest\022\023" +
-      "\n\013customer_id\030\001 \001(\t\022N\n\noperations\030\002 \003(\0132" +
-      ":.google.ads.googleads.v2.services.Biddi" +
-      "ngStrategyOperation\022\027\n\017partial_failure\030\003" +
+      "oogle/api/annotations.proto\032\027google/api/" +
+      "client.proto\032\037google/api/field_behavior." +
+      "proto\032\031google/api/resource.proto\032 google" +
+      "/protobuf/field_mask.proto\032\027google/rpc/s" +
+      "tatus.proto\"d\n\031GetBiddingStrategyRequest" +
+      "\022G\n\rresource_name\030\001 \001(\tB0\340A\002\372A*\n(googlea" +
+      "ds.googleapis.com/BiddingStrategy\"\277\001\n\036Mu" +
+      "tateBiddingStrategiesRequest\022\030\n\013customer" +
+      "_id\030\001 \001(\tB\003\340A\002\022S\n\noperations\030\002 \003(\0132:.goo" +
+      "gle.ads.googleads.v2.services.BiddingStr" +
+      "ategyOperationB\003\340A\002\022\027\n\017partial_failure\030\003" +
       " \001(\010\022\025\n\rvalidate_only\030\004 \001(\010\"\366\001\n\030BiddingS" +
       "trategyOperation\022/\n\013update_mask\030\004 \001(\0132\032." +
       "google.protobuf.FieldMask\022D\n\006create\030\001 \001(" +
@@ -72,44 +75,39 @@ public final class BiddingStrategyServiceProto {
       "tus\022N\n\007results\030\002 \003(\0132=.google.ads.google" +
       "ads.v2.services.MutateBiddingStrategyRes" +
       "ult\"4\n\033MutateBiddingStrategyResult\022\025\n\rre" +
-      "source_name\030\001 \001(\t2\336\003\n\026BiddingStrategySer" +
-      "vice\022\302\001\n\022GetBiddingStrategy\022;.google.ads" +
+      "source_name\030\001 \001(\t2\207\004\n\026BiddingStrategySer" +
+      "vice\022\322\001\n\022GetBiddingStrategy\022;.google.ads" +
       ".googleads.v2.services.GetBiddingStrateg" +
       "yRequest\0322.google.ads.googleads.v2.resou" +
-      "rces.BiddingStrategy\";\202\323\344\223\0025\0223/v2/{resou" +
+      "rces.BiddingStrategy\"K\202\323\344\223\0025\0223/v2/{resou" +
       "rce_name=customers/*/biddingStrategies/*" +
-      "}\022\341\001\n\027MutateBiddingStrategies\022@.google.a" +
-      "ds.googleads.v2.services.MutateBiddingSt" +
-      "rategiesRequest\032A.google.ads.googleads.v" +
-      "2.services.MutateBiddingStrategiesRespon" +
-      "se\"A\202\323\344\223\002;\"6/v2/customers/{customer_id=*" +
-      "}/biddingStrategies:mutate:\001*\032\033\312A\030google" +
-      "ads.googleapis.comB\202\002\n$com.google.ads.go" +
-      "ogleads.v2.servicesB\033BiddingStrategyServ" +
-      "iceProtoP\001ZHgoogle.golang.org/genproto/g" +
-      "oogleapis/ads/googleads/v2/services;serv" +
-      "ices\242\002\003GAA\252\002 Google.Ads.GoogleAds.V2.Ser" +
-      "vices\312\002 Google\\Ads\\GoogleAds\\V2\\Services" +
-      "\352\002$Google::Ads::GoogleAds::V2::Servicesb" +
-      "\006proto3"
+      "}\332A\rresource_name\022\372\001\n\027MutateBiddingStrat" +
+      "egies\022@.google.ads.googleads.v2.services" +
+      ".MutateBiddingStrategiesRequest\032A.google" +
+      ".ads.googleads.v2.services.MutateBidding" +
+      "StrategiesResponse\"Z\202\323\344\223\002;\"6/v2/customer" +
+      "s/{customer_id=*}/biddingStrategies:muta" +
+      "te:\001*\332A\026customer_id,operations\032\033\312A\030googl" +
+      "eads.googleapis.comB\202\002\n$com.google.ads.g" +
+      "oogleads.v2.servicesB\033BiddingStrategySer" +
+      "viceProtoP\001ZHgoogle.golang.org/genproto/" +
+      "googleapis/ads/googleads/v2/services;ser" +
+      "vices\242\002\003GAA\252\002 Google.Ads.GoogleAds.V2.Se" +
+      "rvices\312\002 Google\\Ads\\GoogleAds\\V2\\Service" +
+      "s\352\002$Google::Ads::GoogleAds::V2::Services" +
+      "b\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.ads.googleads.v2.resources.BiddingStrategyProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
+          com.google.api.ClientProto.getDescriptor(),
+          com.google.api.FieldBehaviorProto.getDescriptor(),
+          com.google.api.ResourceProto.getDescriptor(),
           com.google.protobuf.FieldMaskProto.getDescriptor(),
           com.google.rpc.StatusProto.getDescriptor(),
-          com.google.api.ClientProto.getDescriptor(),
-        }, assigner);
+        });
     internal_static_google_ads_googleads_v2_services_GetBiddingStrategyRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_google_ads_googleads_v2_services_GetBiddingStrategyRequest_fieldAccessorTable = new
@@ -143,14 +141,19 @@ public final class BiddingStrategyServiceProto {
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.ClientProto.defaultHost);
+    registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);
     registry.add(com.google.api.AnnotationsProto.http);
+    registry.add(com.google.api.ClientProto.methodSignature);
+    registry.add(com.google.api.ResourceProto.resourceReference);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.ads.googleads.v2.resources.BiddingStrategyProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
+    com.google.api.ClientProto.getDescriptor();
+    com.google.api.FieldBehaviorProto.getDescriptor();
+    com.google.api.ResourceProto.getDescriptor();
     com.google.protobuf.FieldMaskProto.getDescriptor();
     com.google.rpc.StatusProto.getDescriptor();
-    com.google.api.ClientProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

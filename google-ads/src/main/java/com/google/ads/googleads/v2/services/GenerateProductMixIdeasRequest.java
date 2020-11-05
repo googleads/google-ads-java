@@ -10,7 +10,7 @@ package com.google.ads.googleads.v2.services;
  *
  * Protobuf type {@code google.ads.googleads.v2.services.GenerateProductMixIdeasRequest}
  */
-public  final class GenerateProductMixIdeasRequest extends
+public final class GenerateProductMixIdeasRequest extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v2.services.GenerateProductMixIdeasRequest)
     GenerateProductMixIdeasRequestOrBuilder {
@@ -21,6 +21,13 @@ private static final long serialVersionUID = 0L;
   }
   private GenerateProductMixIdeasRequest() {
     customerId_ = "";
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new GenerateProductMixIdeasRequest();
   }
 
   @java.lang.Override
@@ -36,7 +43,6 @@ private static final long serialVersionUID = 0L;
     if (extensionRegistry == null) {
       throw new java.lang.NullPointerException();
     }
-    int mutable_bitField0_ = 0;
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
         com.google.protobuf.UnknownFieldSet.newBuilder();
     try {
@@ -141,11 +147,13 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object customerId_;
   /**
    * <pre>
-   * The ID of the customer.
+   * Required. The ID of the customer.
    * </pre>
    *
-   * <code>string customer_id = 1;</code>
+   * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+   * @return The customerId.
    */
+  @java.lang.Override
   public java.lang.String getCustomerId() {
     java.lang.Object ref = customerId_;
     if (ref instanceof java.lang.String) {
@@ -160,11 +168,13 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The ID of the customer.
+   * Required. The ID of the customer.
    * </pre>
    *
-   * <code>string customer_id = 1;</code>
+   * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+   * @return The bytes for customerId.
    */
+  @java.lang.Override
   public com.google.protobuf.ByteString
       getCustomerIdBytes() {
     java.lang.Object ref = customerId_;
@@ -187,8 +197,10 @@ private static final long serialVersionUID = 0L;
    * ListPlannableLocations.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue plannable_location_id = 2;</code>
+   * <code>.google.protobuf.StringValue plannable_location_id = 2 [(.google.api.field_behavior) = REQUIRED];</code>
+   * @return Whether the plannableLocationId field is set.
    */
+  @java.lang.Override
   public boolean hasPlannableLocationId() {
     return plannableLocationId_ != null;
   }
@@ -198,8 +210,10 @@ private static final long serialVersionUID = 0L;
    * ListPlannableLocations.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue plannable_location_id = 2;</code>
+   * <code>.google.protobuf.StringValue plannable_location_id = 2 [(.google.api.field_behavior) = REQUIRED];</code>
+   * @return The plannableLocationId.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getPlannableLocationId() {
     return plannableLocationId_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : plannableLocationId_;
   }
@@ -209,8 +223,9 @@ private static final long serialVersionUID = 0L;
    * ListPlannableLocations.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue plannable_location_id = 2;</code>
+   * <code>.google.protobuf.StringValue plannable_location_id = 2 [(.google.api.field_behavior) = REQUIRED];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getPlannableLocationIdOrBuilder() {
     return getPlannableLocationId();
   }
@@ -223,8 +238,10 @@ private static final long serialVersionUID = 0L;
    * Three-character ISO 4217 currency code.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue currency_code = 3;</code>
+   * <code>.google.protobuf.StringValue currency_code = 3 [(.google.api.field_behavior) = REQUIRED];</code>
+   * @return Whether the currencyCode field is set.
    */
+  @java.lang.Override
   public boolean hasCurrencyCode() {
     return currencyCode_ != null;
   }
@@ -234,8 +251,10 @@ private static final long serialVersionUID = 0L;
    * Three-character ISO 4217 currency code.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue currency_code = 3;</code>
+   * <code>.google.protobuf.StringValue currency_code = 3 [(.google.api.field_behavior) = REQUIRED];</code>
+   * @return The currencyCode.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getCurrencyCode() {
     return currencyCode_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : currencyCode_;
   }
@@ -245,8 +264,9 @@ private static final long serialVersionUID = 0L;
    * Three-character ISO 4217 currency code.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue currency_code = 3;</code>
+   * <code>.google.protobuf.StringValue currency_code = 3 [(.google.api.field_behavior) = REQUIRED];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getCurrencyCodeOrBuilder() {
     return getCurrencyCode();
   }
@@ -259,8 +279,10 @@ private static final long serialVersionUID = 0L;
    * Amount in micros. One million is equivalent to one unit.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value budget_micros = 4;</code>
+   * <code>.google.protobuf.Int64Value budget_micros = 4 [(.google.api.field_behavior) = REQUIRED];</code>
+   * @return Whether the budgetMicros field is set.
    */
+  @java.lang.Override
   public boolean hasBudgetMicros() {
     return budgetMicros_ != null;
   }
@@ -270,8 +292,10 @@ private static final long serialVersionUID = 0L;
    * Amount in micros. One million is equivalent to one unit.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value budget_micros = 4;</code>
+   * <code>.google.protobuf.Int64Value budget_micros = 4 [(.google.api.field_behavior) = REQUIRED];</code>
+   * @return The budgetMicros.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getBudgetMicros() {
     return budgetMicros_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : budgetMicros_;
   }
@@ -281,8 +305,9 @@ private static final long serialVersionUID = 0L;
    * Amount in micros. One million is equivalent to one unit.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value budget_micros = 4;</code>
+   * <code>.google.protobuf.Int64Value budget_micros = 4 [(.google.api.field_behavior) = REQUIRED];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getBudgetMicrosOrBuilder() {
     return getBudgetMicros();
   }
@@ -297,7 +322,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.services.Preferences preferences = 5;</code>
+   * @return Whether the preferences field is set.
    */
+  @java.lang.Override
   public boolean hasPreferences() {
     return preferences_ != null;
   }
@@ -309,7 +336,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.services.Preferences preferences = 5;</code>
+   * @return The preferences.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.services.Preferences getPreferences() {
     return preferences_ == null ? com.google.ads.googleads.v2.services.Preferences.getDefaultInstance() : preferences_;
   }
@@ -322,6 +351,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v2.services.Preferences preferences = 5;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.services.PreferencesOrBuilder getPreferencesOrBuilder() {
     return getPreferences();
   }
@@ -755,10 +785,11 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object customerId_ = "";
     /**
      * <pre>
-     * The ID of the customer.
+     * Required. The ID of the customer.
      * </pre>
      *
-     * <code>string customer_id = 1;</code>
+     * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+     * @return The customerId.
      */
     public java.lang.String getCustomerId() {
       java.lang.Object ref = customerId_;
@@ -774,10 +805,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the customer.
+     * Required. The ID of the customer.
      * </pre>
      *
-     * <code>string customer_id = 1;</code>
+     * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+     * @return The bytes for customerId.
      */
     public com.google.protobuf.ByteString
         getCustomerIdBytes() {
@@ -794,10 +826,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the customer.
+     * Required. The ID of the customer.
      * </pre>
      *
-     * <code>string customer_id = 1;</code>
+     * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+     * @param value The customerId to set.
+     * @return This builder for chaining.
      */
     public Builder setCustomerId(
         java.lang.String value) {
@@ -811,10 +845,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the customer.
+     * Required. The ID of the customer.
      * </pre>
      *
-     * <code>string customer_id = 1;</code>
+     * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+     * @return This builder for chaining.
      */
     public Builder clearCustomerId() {
       
@@ -824,10 +859,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the customer.
+     * Required. The ID of the customer.
      * </pre>
      *
-     * <code>string customer_id = 1;</code>
+     * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+     * @param value The bytes for customerId to set.
+     * @return This builder for chaining.
      */
     public Builder setCustomerIdBytes(
         com.google.protobuf.ByteString value) {
@@ -850,7 +887,8 @@ private static final long serialVersionUID = 0L;
      * ListPlannableLocations.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue plannable_location_id = 2;</code>
+     * <code>.google.protobuf.StringValue plannable_location_id = 2 [(.google.api.field_behavior) = REQUIRED];</code>
+     * @return Whether the plannableLocationId field is set.
      */
     public boolean hasPlannableLocationId() {
       return plannableLocationIdBuilder_ != null || plannableLocationId_ != null;
@@ -861,7 +899,8 @@ private static final long serialVersionUID = 0L;
      * ListPlannableLocations.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue plannable_location_id = 2;</code>
+     * <code>.google.protobuf.StringValue plannable_location_id = 2 [(.google.api.field_behavior) = REQUIRED];</code>
+     * @return The plannableLocationId.
      */
     public com.google.protobuf.StringValue getPlannableLocationId() {
       if (plannableLocationIdBuilder_ == null) {
@@ -876,7 +915,7 @@ private static final long serialVersionUID = 0L;
      * ListPlannableLocations.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue plannable_location_id = 2;</code>
+     * <code>.google.protobuf.StringValue plannable_location_id = 2 [(.google.api.field_behavior) = REQUIRED];</code>
      */
     public Builder setPlannableLocationId(com.google.protobuf.StringValue value) {
       if (plannableLocationIdBuilder_ == null) {
@@ -897,7 +936,7 @@ private static final long serialVersionUID = 0L;
      * ListPlannableLocations.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue plannable_location_id = 2;</code>
+     * <code>.google.protobuf.StringValue plannable_location_id = 2 [(.google.api.field_behavior) = REQUIRED];</code>
      */
     public Builder setPlannableLocationId(
         com.google.protobuf.StringValue.Builder builderForValue) {
@@ -916,7 +955,7 @@ private static final long serialVersionUID = 0L;
      * ListPlannableLocations.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue plannable_location_id = 2;</code>
+     * <code>.google.protobuf.StringValue plannable_location_id = 2 [(.google.api.field_behavior) = REQUIRED];</code>
      */
     public Builder mergePlannableLocationId(com.google.protobuf.StringValue value) {
       if (plannableLocationIdBuilder_ == null) {
@@ -939,7 +978,7 @@ private static final long serialVersionUID = 0L;
      * ListPlannableLocations.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue plannable_location_id = 2;</code>
+     * <code>.google.protobuf.StringValue plannable_location_id = 2 [(.google.api.field_behavior) = REQUIRED];</code>
      */
     public Builder clearPlannableLocationId() {
       if (plannableLocationIdBuilder_ == null) {
@@ -958,7 +997,7 @@ private static final long serialVersionUID = 0L;
      * ListPlannableLocations.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue plannable_location_id = 2;</code>
+     * <code>.google.protobuf.StringValue plannable_location_id = 2 [(.google.api.field_behavior) = REQUIRED];</code>
      */
     public com.google.protobuf.StringValue.Builder getPlannableLocationIdBuilder() {
       
@@ -971,7 +1010,7 @@ private static final long serialVersionUID = 0L;
      * ListPlannableLocations.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue plannable_location_id = 2;</code>
+     * <code>.google.protobuf.StringValue plannable_location_id = 2 [(.google.api.field_behavior) = REQUIRED];</code>
      */
     public com.google.protobuf.StringValueOrBuilder getPlannableLocationIdOrBuilder() {
       if (plannableLocationIdBuilder_ != null) {
@@ -987,7 +1026,7 @@ private static final long serialVersionUID = 0L;
      * ListPlannableLocations.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue plannable_location_id = 2;</code>
+     * <code>.google.protobuf.StringValue plannable_location_id = 2 [(.google.api.field_behavior) = REQUIRED];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
@@ -1012,7 +1051,8 @@ private static final long serialVersionUID = 0L;
      * Three-character ISO 4217 currency code.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue currency_code = 3;</code>
+     * <code>.google.protobuf.StringValue currency_code = 3 [(.google.api.field_behavior) = REQUIRED];</code>
+     * @return Whether the currencyCode field is set.
      */
     public boolean hasCurrencyCode() {
       return currencyCodeBuilder_ != null || currencyCode_ != null;
@@ -1023,7 +1063,8 @@ private static final long serialVersionUID = 0L;
      * Three-character ISO 4217 currency code.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue currency_code = 3;</code>
+     * <code>.google.protobuf.StringValue currency_code = 3 [(.google.api.field_behavior) = REQUIRED];</code>
+     * @return The currencyCode.
      */
     public com.google.protobuf.StringValue getCurrencyCode() {
       if (currencyCodeBuilder_ == null) {
@@ -1038,7 +1079,7 @@ private static final long serialVersionUID = 0L;
      * Three-character ISO 4217 currency code.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue currency_code = 3;</code>
+     * <code>.google.protobuf.StringValue currency_code = 3 [(.google.api.field_behavior) = REQUIRED];</code>
      */
     public Builder setCurrencyCode(com.google.protobuf.StringValue value) {
       if (currencyCodeBuilder_ == null) {
@@ -1059,7 +1100,7 @@ private static final long serialVersionUID = 0L;
      * Three-character ISO 4217 currency code.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue currency_code = 3;</code>
+     * <code>.google.protobuf.StringValue currency_code = 3 [(.google.api.field_behavior) = REQUIRED];</code>
      */
     public Builder setCurrencyCode(
         com.google.protobuf.StringValue.Builder builderForValue) {
@@ -1078,7 +1119,7 @@ private static final long serialVersionUID = 0L;
      * Three-character ISO 4217 currency code.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue currency_code = 3;</code>
+     * <code>.google.protobuf.StringValue currency_code = 3 [(.google.api.field_behavior) = REQUIRED];</code>
      */
     public Builder mergeCurrencyCode(com.google.protobuf.StringValue value) {
       if (currencyCodeBuilder_ == null) {
@@ -1101,7 +1142,7 @@ private static final long serialVersionUID = 0L;
      * Three-character ISO 4217 currency code.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue currency_code = 3;</code>
+     * <code>.google.protobuf.StringValue currency_code = 3 [(.google.api.field_behavior) = REQUIRED];</code>
      */
     public Builder clearCurrencyCode() {
       if (currencyCodeBuilder_ == null) {
@@ -1120,7 +1161,7 @@ private static final long serialVersionUID = 0L;
      * Three-character ISO 4217 currency code.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue currency_code = 3;</code>
+     * <code>.google.protobuf.StringValue currency_code = 3 [(.google.api.field_behavior) = REQUIRED];</code>
      */
     public com.google.protobuf.StringValue.Builder getCurrencyCodeBuilder() {
       
@@ -1133,7 +1174,7 @@ private static final long serialVersionUID = 0L;
      * Three-character ISO 4217 currency code.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue currency_code = 3;</code>
+     * <code>.google.protobuf.StringValue currency_code = 3 [(.google.api.field_behavior) = REQUIRED];</code>
      */
     public com.google.protobuf.StringValueOrBuilder getCurrencyCodeOrBuilder() {
       if (currencyCodeBuilder_ != null) {
@@ -1149,7 +1190,7 @@ private static final long serialVersionUID = 0L;
      * Three-character ISO 4217 currency code.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue currency_code = 3;</code>
+     * <code>.google.protobuf.StringValue currency_code = 3 [(.google.api.field_behavior) = REQUIRED];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
@@ -1174,7 +1215,8 @@ private static final long serialVersionUID = 0L;
      * Amount in micros. One million is equivalent to one unit.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value budget_micros = 4;</code>
+     * <code>.google.protobuf.Int64Value budget_micros = 4 [(.google.api.field_behavior) = REQUIRED];</code>
+     * @return Whether the budgetMicros field is set.
      */
     public boolean hasBudgetMicros() {
       return budgetMicrosBuilder_ != null || budgetMicros_ != null;
@@ -1185,7 +1227,8 @@ private static final long serialVersionUID = 0L;
      * Amount in micros. One million is equivalent to one unit.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value budget_micros = 4;</code>
+     * <code>.google.protobuf.Int64Value budget_micros = 4 [(.google.api.field_behavior) = REQUIRED];</code>
+     * @return The budgetMicros.
      */
     public com.google.protobuf.Int64Value getBudgetMicros() {
       if (budgetMicrosBuilder_ == null) {
@@ -1200,7 +1243,7 @@ private static final long serialVersionUID = 0L;
      * Amount in micros. One million is equivalent to one unit.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value budget_micros = 4;</code>
+     * <code>.google.protobuf.Int64Value budget_micros = 4 [(.google.api.field_behavior) = REQUIRED];</code>
      */
     public Builder setBudgetMicros(com.google.protobuf.Int64Value value) {
       if (budgetMicrosBuilder_ == null) {
@@ -1221,7 +1264,7 @@ private static final long serialVersionUID = 0L;
      * Amount in micros. One million is equivalent to one unit.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value budget_micros = 4;</code>
+     * <code>.google.protobuf.Int64Value budget_micros = 4 [(.google.api.field_behavior) = REQUIRED];</code>
      */
     public Builder setBudgetMicros(
         com.google.protobuf.Int64Value.Builder builderForValue) {
@@ -1240,7 +1283,7 @@ private static final long serialVersionUID = 0L;
      * Amount in micros. One million is equivalent to one unit.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value budget_micros = 4;</code>
+     * <code>.google.protobuf.Int64Value budget_micros = 4 [(.google.api.field_behavior) = REQUIRED];</code>
      */
     public Builder mergeBudgetMicros(com.google.protobuf.Int64Value value) {
       if (budgetMicrosBuilder_ == null) {
@@ -1263,7 +1306,7 @@ private static final long serialVersionUID = 0L;
      * Amount in micros. One million is equivalent to one unit.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value budget_micros = 4;</code>
+     * <code>.google.protobuf.Int64Value budget_micros = 4 [(.google.api.field_behavior) = REQUIRED];</code>
      */
     public Builder clearBudgetMicros() {
       if (budgetMicrosBuilder_ == null) {
@@ -1282,7 +1325,7 @@ private static final long serialVersionUID = 0L;
      * Amount in micros. One million is equivalent to one unit.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value budget_micros = 4;</code>
+     * <code>.google.protobuf.Int64Value budget_micros = 4 [(.google.api.field_behavior) = REQUIRED];</code>
      */
     public com.google.protobuf.Int64Value.Builder getBudgetMicrosBuilder() {
       
@@ -1295,7 +1338,7 @@ private static final long serialVersionUID = 0L;
      * Amount in micros. One million is equivalent to one unit.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value budget_micros = 4;</code>
+     * <code>.google.protobuf.Int64Value budget_micros = 4 [(.google.api.field_behavior) = REQUIRED];</code>
      */
     public com.google.protobuf.Int64ValueOrBuilder getBudgetMicrosOrBuilder() {
       if (budgetMicrosBuilder_ != null) {
@@ -1311,7 +1354,7 @@ private static final long serialVersionUID = 0L;
      * Amount in micros. One million is equivalent to one unit.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value budget_micros = 4;</code>
+     * <code>.google.protobuf.Int64Value budget_micros = 4 [(.google.api.field_behavior) = REQUIRED];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
@@ -1338,6 +1381,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.services.Preferences preferences = 5;</code>
+     * @return Whether the preferences field is set.
      */
     public boolean hasPreferences() {
       return preferencesBuilder_ != null || preferences_ != null;
@@ -1350,6 +1394,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.services.Preferences preferences = 5;</code>
+     * @return The preferences.
      */
     public com.google.ads.googleads.v2.services.Preferences getPreferences() {
       if (preferencesBuilder_ == null) {

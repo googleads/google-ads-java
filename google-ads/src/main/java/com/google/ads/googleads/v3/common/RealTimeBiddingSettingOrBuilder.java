@@ -13,6 +13,7 @@ public interface RealTimeBiddingSettingOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.BoolValue opt_in = 1;</code>
+   * @return Whether the optIn field is set.
    */
   boolean hasOptIn();
   /**
@@ -21,6 +22,7 @@ public interface RealTimeBiddingSettingOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.BoolValue opt_in = 1;</code>
+   * @return The optIn.
    */
   com.google.protobuf.BoolValue getOptIn();
   /**

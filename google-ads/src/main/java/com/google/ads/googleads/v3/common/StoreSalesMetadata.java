@@ -10,7 +10,7 @@ package com.google.ads.googleads.v3.common;
  *
  * Protobuf type {@code google.ads.googleads.v3.common.StoreSalesMetadata}
  */
-public  final class StoreSalesMetadata extends
+public final class StoreSalesMetadata extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v3.common.StoreSalesMetadata)
     StoreSalesMetadataOrBuilder {
@@ -20,6 +20,13 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private StoreSalesMetadata() {
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new StoreSalesMetadata();
   }
 
   @java.lang.Override
@@ -35,7 +42,6 @@ private static final long serialVersionUID = 0L;
     if (extensionRegistry == null) {
       throw new java.lang.NullPointerException();
     }
-    int mutable_bitField0_ = 0;
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
         com.google.protobuf.UnknownFieldSet.newBuilder();
     try {
@@ -141,7 +147,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue loyalty_fraction = 1;</code>
+   * @return Whether the loyaltyFraction field is set.
    */
+  @java.lang.Override
   public boolean hasLoyaltyFraction() {
     return loyaltyFraction_ != null;
   }
@@ -154,7 +162,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue loyalty_fraction = 1;</code>
+   * @return The loyaltyFraction.
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValue getLoyaltyFraction() {
     return loyaltyFraction_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : loyaltyFraction_;
   }
@@ -168,6 +178,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.DoubleValue loyalty_fraction = 1;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValueOrBuilder getLoyaltyFractionOrBuilder() {
     return getLoyaltyFraction();
   }
@@ -184,7 +195,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue transaction_upload_fraction = 2;</code>
+   * @return Whether the transactionUploadFraction field is set.
    */
+  @java.lang.Override
   public boolean hasTransactionUploadFraction() {
     return transactionUploadFraction_ != null;
   }
@@ -198,7 +211,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue transaction_upload_fraction = 2;</code>
+   * @return The transactionUploadFraction.
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValue getTransactionUploadFraction() {
     return transactionUploadFraction_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : transactionUploadFraction_;
   }
@@ -213,6 +228,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.DoubleValue transaction_upload_fraction = 2;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValueOrBuilder getTransactionUploadFractionOrBuilder() {
     return getTransactionUploadFraction();
   }
@@ -223,12 +239,14 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Name of the store sales custom variable key. A predefined key that
    * can be applied to the transaction and then later used for custom
-   * segementation in reporting.
+   * segmentation in reporting.
    * Accessible to whitelisted customers only.
    * </pre>
    *
    * <code>.google.protobuf.StringValue custom_key = 4;</code>
+   * @return Whether the customKey field is set.
    */
+  @java.lang.Override
   public boolean hasCustomKey() {
     return customKey_ != null;
   }
@@ -236,12 +254,14 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Name of the store sales custom variable key. A predefined key that
    * can be applied to the transaction and then later used for custom
-   * segementation in reporting.
+   * segmentation in reporting.
    * Accessible to whitelisted customers only.
    * </pre>
    *
    * <code>.google.protobuf.StringValue custom_key = 4;</code>
+   * @return The customKey.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getCustomKey() {
     return customKey_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : customKey_;
   }
@@ -249,12 +269,13 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Name of the store sales custom variable key. A predefined key that
    * can be applied to the transaction and then later used for custom
-   * segementation in reporting.
+   * segmentation in reporting.
    * Accessible to whitelisted customers only.
    * </pre>
    *
    * <code>.google.protobuf.StringValue custom_key = 4;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getCustomKeyOrBuilder() {
     return getCustomKey();
   }
@@ -267,7 +288,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.StoreSalesThirdPartyMetadata third_party_metadata = 3;</code>
+   * @return Whether the thirdPartyMetadata field is set.
    */
+  @java.lang.Override
   public boolean hasThirdPartyMetadata() {
     return thirdPartyMetadata_ != null;
   }
@@ -277,7 +300,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.StoreSalesThirdPartyMetadata third_party_metadata = 3;</code>
+   * @return The thirdPartyMetadata.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.common.StoreSalesThirdPartyMetadata getThirdPartyMetadata() {
     return thirdPartyMetadata_ == null ? com.google.ads.googleads.v3.common.StoreSalesThirdPartyMetadata.getDefaultInstance() : thirdPartyMetadata_;
   }
@@ -288,6 +313,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v3.common.StoreSalesThirdPartyMetadata third_party_metadata = 3;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.common.StoreSalesThirdPartyMetadataOrBuilder getThirdPartyMetadataOrBuilder() {
     return getThirdPartyMetadata();
   }
@@ -713,6 +739,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue loyalty_fraction = 1;</code>
+     * @return Whether the loyaltyFraction field is set.
      */
     public boolean hasLoyaltyFraction() {
       return loyaltyFractionBuilder_ != null || loyaltyFraction_ != null;
@@ -726,6 +753,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue loyalty_fraction = 1;</code>
+     * @return The loyaltyFraction.
      */
     public com.google.protobuf.DoubleValue getLoyaltyFraction() {
       if (loyaltyFractionBuilder_ == null) {
@@ -894,6 +922,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue transaction_upload_fraction = 2;</code>
+     * @return Whether the transactionUploadFraction field is set.
      */
     public boolean hasTransactionUploadFraction() {
       return transactionUploadFractionBuilder_ != null || transactionUploadFraction_ != null;
@@ -908,6 +937,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue transaction_upload_fraction = 2;</code>
+     * @return The transactionUploadFraction.
      */
     public com.google.protobuf.DoubleValue getTransactionUploadFraction() {
       if (transactionUploadFractionBuilder_ == null) {
@@ -1077,11 +1107,12 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Name of the store sales custom variable key. A predefined key that
      * can be applied to the transaction and then later used for custom
-     * segementation in reporting.
+     * segmentation in reporting.
      * Accessible to whitelisted customers only.
      * </pre>
      *
      * <code>.google.protobuf.StringValue custom_key = 4;</code>
+     * @return Whether the customKey field is set.
      */
     public boolean hasCustomKey() {
       return customKeyBuilder_ != null || customKey_ != null;
@@ -1090,11 +1121,12 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Name of the store sales custom variable key. A predefined key that
      * can be applied to the transaction and then later used for custom
-     * segementation in reporting.
+     * segmentation in reporting.
      * Accessible to whitelisted customers only.
      * </pre>
      *
      * <code>.google.protobuf.StringValue custom_key = 4;</code>
+     * @return The customKey.
      */
     public com.google.protobuf.StringValue getCustomKey() {
       if (customKeyBuilder_ == null) {
@@ -1107,7 +1139,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Name of the store sales custom variable key. A predefined key that
      * can be applied to the transaction and then later used for custom
-     * segementation in reporting.
+     * segmentation in reporting.
      * Accessible to whitelisted customers only.
      * </pre>
      *
@@ -1130,7 +1162,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Name of the store sales custom variable key. A predefined key that
      * can be applied to the transaction and then later used for custom
-     * segementation in reporting.
+     * segmentation in reporting.
      * Accessible to whitelisted customers only.
      * </pre>
      *
@@ -1151,7 +1183,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Name of the store sales custom variable key. A predefined key that
      * can be applied to the transaction and then later used for custom
-     * segementation in reporting.
+     * segmentation in reporting.
      * Accessible to whitelisted customers only.
      * </pre>
      *
@@ -1176,7 +1208,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Name of the store sales custom variable key. A predefined key that
      * can be applied to the transaction and then later used for custom
-     * segementation in reporting.
+     * segmentation in reporting.
      * Accessible to whitelisted customers only.
      * </pre>
      *
@@ -1197,7 +1229,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Name of the store sales custom variable key. A predefined key that
      * can be applied to the transaction and then later used for custom
-     * segementation in reporting.
+     * segmentation in reporting.
      * Accessible to whitelisted customers only.
      * </pre>
      *
@@ -1212,7 +1244,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Name of the store sales custom variable key. A predefined key that
      * can be applied to the transaction and then later used for custom
-     * segementation in reporting.
+     * segmentation in reporting.
      * Accessible to whitelisted customers only.
      * </pre>
      *
@@ -1230,7 +1262,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Name of the store sales custom variable key. A predefined key that
      * can be applied to the transaction and then later used for custom
-     * segementation in reporting.
+     * segmentation in reporting.
      * Accessible to whitelisted customers only.
      * </pre>
      *
@@ -1259,6 +1291,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.common.StoreSalesThirdPartyMetadata third_party_metadata = 3;</code>
+     * @return Whether the thirdPartyMetadata field is set.
      */
     public boolean hasThirdPartyMetadata() {
       return thirdPartyMetadataBuilder_ != null || thirdPartyMetadata_ != null;
@@ -1269,6 +1302,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.common.StoreSalesThirdPartyMetadata third_party_metadata = 3;</code>
+     * @return The thirdPartyMetadata.
      */
     public com.google.ads.googleads.v3.common.StoreSalesThirdPartyMetadata getThirdPartyMetadata() {
       if (thirdPartyMetadataBuilder_ == null) {

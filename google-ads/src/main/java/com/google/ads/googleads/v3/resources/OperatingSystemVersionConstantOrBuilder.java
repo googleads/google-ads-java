@@ -15,6 +15,7 @@ public interface OperatingSystemVersionConstantOrBuilder extends
    * </pre>
    *
    * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The resourceName.
    */
   java.lang.String getResourceName();
   /**
@@ -25,6 +26,7 @@ public interface OperatingSystemVersionConstantOrBuilder extends
    * </pre>
    *
    * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The bytes for resourceName.
    */
   com.google.protobuf.ByteString
       getResourceNameBytes();
@@ -35,6 +37,7 @@ public interface OperatingSystemVersionConstantOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the id field is set.
    */
   boolean hasId();
   /**
@@ -43,6 +46,7 @@ public interface OperatingSystemVersionConstantOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The id.
    */
   com.google.protobuf.Int64Value getId();
   /**
@@ -60,6 +64,7 @@ public interface OperatingSystemVersionConstantOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue name = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the name field is set.
    */
   boolean hasName();
   /**
@@ -68,6 +73,7 @@ public interface OperatingSystemVersionConstantOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue name = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The name.
    */
   com.google.protobuf.StringValue getName();
   /**
@@ -85,6 +91,7 @@ public interface OperatingSystemVersionConstantOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int32Value os_major_version = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the osMajorVersion field is set.
    */
   boolean hasOsMajorVersion();
   /**
@@ -93,6 +100,7 @@ public interface OperatingSystemVersionConstantOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int32Value os_major_version = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The osMajorVersion.
    */
   com.google.protobuf.Int32Value getOsMajorVersion();
   /**
@@ -110,6 +118,7 @@ public interface OperatingSystemVersionConstantOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int32Value os_minor_version = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the osMinorVersion field is set.
    */
   boolean hasOsMinorVersion();
   /**
@@ -118,6 +127,7 @@ public interface OperatingSystemVersionConstantOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int32Value os_minor_version = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The osMinorVersion.
    */
   com.google.protobuf.Int32Value getOsMinorVersion();
   /**
@@ -136,6 +146,7 @@ public interface OperatingSystemVersionConstantOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.OperatingSystemVersionOperatorTypeEnum.OperatingSystemVersionOperatorType operator_type = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The enum numeric value on the wire for operatorType.
    */
   int getOperatorTypeValue();
   /**
@@ -145,6 +156,7 @@ public interface OperatingSystemVersionConstantOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.OperatingSystemVersionOperatorTypeEnum.OperatingSystemVersionOperatorType operator_type = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The operatorType.
    */
   com.google.ads.googleads.v3.enums.OperatingSystemVersionOperatorTypeEnum.OperatingSystemVersionOperatorType getOperatorType();
 }

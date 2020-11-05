@@ -21,7 +21,7 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.10.0)",
+    value = "by gRPC proto compiler",
     comments = "Source: google/ads/googleads/v3/services/product_group_view_service.proto")
 public final class ProductGroupViewServiceGrpc {
 
@@ -30,49 +30,49 @@ public final class ProductGroupViewServiceGrpc {
   public static final String SERVICE_NAME = "google.ads.googleads.v3.services.ProductGroupViewService";
 
   // Static method descriptors that strictly reflect the proto.
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  @java.lang.Deprecated // Use {@link #getGetProductGroupViewMethod()} instead. 
-  public static final io.grpc.MethodDescriptor<com.google.ads.googleads.v3.services.GetProductGroupViewRequest,
-      com.google.ads.googleads.v3.resources.ProductGroupView> METHOD_GET_PRODUCT_GROUP_VIEW = getGetProductGroupViewMethodHelper();
-
   private static volatile io.grpc.MethodDescriptor<com.google.ads.googleads.v3.services.GetProductGroupViewRequest,
       com.google.ads.googleads.v3.resources.ProductGroupView> getGetProductGroupViewMethod;
 
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetProductGroupView",
+      requestType = com.google.ads.googleads.v3.services.GetProductGroupViewRequest.class,
+      responseType = com.google.ads.googleads.v3.resources.ProductGroupView.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<com.google.ads.googleads.v3.services.GetProductGroupViewRequest,
       com.google.ads.googleads.v3.resources.ProductGroupView> getGetProductGroupViewMethod() {
-    return getGetProductGroupViewMethodHelper();
-  }
-
-  private static io.grpc.MethodDescriptor<com.google.ads.googleads.v3.services.GetProductGroupViewRequest,
-      com.google.ads.googleads.v3.resources.ProductGroupView> getGetProductGroupViewMethodHelper() {
     io.grpc.MethodDescriptor<com.google.ads.googleads.v3.services.GetProductGroupViewRequest, com.google.ads.googleads.v3.resources.ProductGroupView> getGetProductGroupViewMethod;
     if ((getGetProductGroupViewMethod = ProductGroupViewServiceGrpc.getGetProductGroupViewMethod) == null) {
       synchronized (ProductGroupViewServiceGrpc.class) {
         if ((getGetProductGroupViewMethod = ProductGroupViewServiceGrpc.getGetProductGroupViewMethod) == null) {
-          ProductGroupViewServiceGrpc.getGetProductGroupViewMethod = getGetProductGroupViewMethod = 
+          ProductGroupViewServiceGrpc.getGetProductGroupViewMethod = getGetProductGroupViewMethod =
               io.grpc.MethodDescriptor.<com.google.ads.googleads.v3.services.GetProductGroupViewRequest, com.google.ads.googleads.v3.resources.ProductGroupView>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "google.ads.googleads.v3.services.ProductGroupViewService", "GetProductGroupView"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetProductGroupView"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v3.services.GetProductGroupViewRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v3.resources.ProductGroupView.getDefaultInstance()))
-                  .setSchemaDescriptor(new ProductGroupViewServiceMethodDescriptorSupplier("GetProductGroupView"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ProductGroupViewServiceMethodDescriptorSupplier("GetProductGroupView"))
+              .build();
         }
-     }
-     return getGetProductGroupViewMethod;
+      }
+    }
+    return getGetProductGroupViewMethod;
   }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static ProductGroupViewServiceStub newStub(io.grpc.Channel channel) {
-    return new ProductGroupViewServiceStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<ProductGroupViewServiceStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<ProductGroupViewServiceStub>() {
+        @java.lang.Override
+        public ProductGroupViewServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new ProductGroupViewServiceStub(channel, callOptions);
+        }
+      };
+    return ProductGroupViewServiceStub.newStub(factory, channel);
   }
 
   /**
@@ -80,7 +80,14 @@ public final class ProductGroupViewServiceGrpc {
    */
   public static ProductGroupViewServiceBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new ProductGroupViewServiceBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<ProductGroupViewServiceBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<ProductGroupViewServiceBlockingStub>() {
+        @java.lang.Override
+        public ProductGroupViewServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new ProductGroupViewServiceBlockingStub(channel, callOptions);
+        }
+      };
+    return ProductGroupViewServiceBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -88,7 +95,14 @@ public final class ProductGroupViewServiceGrpc {
    */
   public static ProductGroupViewServiceFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new ProductGroupViewServiceFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<ProductGroupViewServiceFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<ProductGroupViewServiceFutureStub>() {
+        @java.lang.Override
+        public ProductGroupViewServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new ProductGroupViewServiceFutureStub(channel, callOptions);
+        }
+      };
+    return ProductGroupViewServiceFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -105,13 +119,13 @@ public final class ProductGroupViewServiceGrpc {
      */
     public void getProductGroupView(com.google.ads.googleads.v3.services.GetProductGroupViewRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v3.resources.ProductGroupView> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetProductGroupViewMethodHelper(), responseObserver);
+      asyncUnimplementedUnaryCall(getGetProductGroupViewMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
-            getGetProductGroupViewMethodHelper(),
+            getGetProductGroupViewMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 com.google.ads.googleads.v3.services.GetProductGroupViewRequest,
@@ -126,19 +140,15 @@ public final class ProductGroupViewServiceGrpc {
    * Service to manage product group views.
    * </pre>
    */
-  public static final class ProductGroupViewServiceStub extends io.grpc.stub.AbstractStub<ProductGroupViewServiceStub> {
-    private ProductGroupViewServiceStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private ProductGroupViewServiceStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class ProductGroupViewServiceStub extends io.grpc.stub.AbstractAsyncStub<ProductGroupViewServiceStub> {
+    private ProductGroupViewServiceStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected ProductGroupViewServiceStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected ProductGroupViewServiceStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new ProductGroupViewServiceStub(channel, callOptions);
     }
 
@@ -150,7 +160,7 @@ public final class ProductGroupViewServiceGrpc {
     public void getProductGroupView(com.google.ads.googleads.v3.services.GetProductGroupViewRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v3.resources.ProductGroupView> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(getGetProductGroupViewMethodHelper(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getGetProductGroupViewMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -159,19 +169,15 @@ public final class ProductGroupViewServiceGrpc {
    * Service to manage product group views.
    * </pre>
    */
-  public static final class ProductGroupViewServiceBlockingStub extends io.grpc.stub.AbstractStub<ProductGroupViewServiceBlockingStub> {
-    private ProductGroupViewServiceBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private ProductGroupViewServiceBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class ProductGroupViewServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<ProductGroupViewServiceBlockingStub> {
+    private ProductGroupViewServiceBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected ProductGroupViewServiceBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected ProductGroupViewServiceBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new ProductGroupViewServiceBlockingStub(channel, callOptions);
     }
 
@@ -182,7 +188,7 @@ public final class ProductGroupViewServiceGrpc {
      */
     public com.google.ads.googleads.v3.resources.ProductGroupView getProductGroupView(com.google.ads.googleads.v3.services.GetProductGroupViewRequest request) {
       return blockingUnaryCall(
-          getChannel(), getGetProductGroupViewMethodHelper(), getCallOptions(), request);
+          getChannel(), getGetProductGroupViewMethod(), getCallOptions(), request);
     }
   }
 
@@ -191,19 +197,15 @@ public final class ProductGroupViewServiceGrpc {
    * Service to manage product group views.
    * </pre>
    */
-  public static final class ProductGroupViewServiceFutureStub extends io.grpc.stub.AbstractStub<ProductGroupViewServiceFutureStub> {
-    private ProductGroupViewServiceFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private ProductGroupViewServiceFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class ProductGroupViewServiceFutureStub extends io.grpc.stub.AbstractFutureStub<ProductGroupViewServiceFutureStub> {
+    private ProductGroupViewServiceFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected ProductGroupViewServiceFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected ProductGroupViewServiceFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new ProductGroupViewServiceFutureStub(channel, callOptions);
     }
 
@@ -215,7 +217,7 @@ public final class ProductGroupViewServiceGrpc {
     public com.google.common.util.concurrent.ListenableFuture<com.google.ads.googleads.v3.resources.ProductGroupView> getProductGroupView(
         com.google.ads.googleads.v3.services.GetProductGroupViewRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(getGetProductGroupViewMethodHelper(), getCallOptions()), request);
+          getChannel().newCall(getGetProductGroupViewMethod(), getCallOptions()), request);
     }
   }
 
@@ -303,7 +305,7 @@ public final class ProductGroupViewServiceGrpc {
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new ProductGroupViewServiceFileDescriptorSupplier())
-              .addMethod(getGetProductGroupViewMethodHelper())
+              .addMethod(getGetProductGroupViewMethod())
               .build();
         }
       }

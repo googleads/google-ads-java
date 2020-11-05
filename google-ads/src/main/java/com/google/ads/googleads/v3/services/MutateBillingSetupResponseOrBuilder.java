@@ -13,6 +13,7 @@ public interface MutateBillingSetupResponseOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.services.MutateBillingSetupResult result = 1;</code>
+   * @return Whether the result field is set.
    */
   boolean hasResult();
   /**
@@ -21,6 +22,7 @@ public interface MutateBillingSetupResponseOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.services.MutateBillingSetupResult result = 1;</code>
+   * @return The result.
    */
   com.google.ads.googleads.v3.services.MutateBillingSetupResult getResult();
   /**

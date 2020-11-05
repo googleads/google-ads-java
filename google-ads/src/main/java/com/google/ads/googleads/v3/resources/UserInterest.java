@@ -10,7 +10,7 @@ package com.google.ads.googleads.v3.resources;
  *
  * Protobuf type {@code google.ads.googleads.v3.resources.UserInterest}
  */
-public  final class UserInterest extends
+public final class UserInterest extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v3.resources.UserInterest)
     UserInterestOrBuilder {
@@ -23,6 +23,13 @@ private static final long serialVersionUID = 0L;
     resourceName_ = "";
     taxonomyType_ = 0;
     availabilities_ = java.util.Collections.emptyList();
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new UserInterest();
   }
 
   @java.lang.Override
@@ -114,9 +121,9 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 58: {
-            if (!((mutable_bitField0_ & 0x00000040) != 0)) {
+            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
               availabilities_ = new java.util.ArrayList<com.google.ads.googleads.v3.common.CriterionCategoryAvailability>();
-              mutable_bitField0_ |= 0x00000040;
+              mutable_bitField0_ |= 0x00000001;
             }
             availabilities_.add(
                 input.readMessage(com.google.ads.googleads.v3.common.CriterionCategoryAvailability.parser(), extensionRegistry));
@@ -137,7 +144,7 @@ private static final long serialVersionUID = 0L;
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
     } finally {
-      if (((mutable_bitField0_ & 0x00000040) != 0)) {
+      if (((mutable_bitField0_ & 0x00000001) != 0)) {
         availabilities_ = java.util.Collections.unmodifiableList(availabilities_);
       }
       this.unknownFields = unknownFields.build();
@@ -157,7 +164,6 @@ private static final long serialVersionUID = 0L;
             com.google.ads.googleads.v3.resources.UserInterest.class, com.google.ads.googleads.v3.resources.UserInterest.Builder.class);
   }
 
-  private int bitField0_;
   public static final int RESOURCE_NAME_FIELD_NUMBER = 1;
   private volatile java.lang.Object resourceName_;
   /**
@@ -168,7 +174,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The resourceName.
    */
+  @java.lang.Override
   public java.lang.String getResourceName() {
     java.lang.Object ref = resourceName_;
     if (ref instanceof java.lang.String) {
@@ -189,7 +197,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The bytes for resourceName.
    */
+  @java.lang.Override
   public com.google.protobuf.ByteString
       getResourceNameBytes() {
     java.lang.Object ref = resourceName_;
@@ -212,8 +222,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.UserInterestTaxonomyTypeEnum.UserInterestTaxonomyType taxonomy_type = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The enum numeric value on the wire for taxonomyType.
    */
-  public int getTaxonomyTypeValue() {
+  @java.lang.Override public int getTaxonomyTypeValue() {
     return taxonomyType_;
   }
   /**
@@ -222,8 +233,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.UserInterestTaxonomyTypeEnum.UserInterestTaxonomyType taxonomy_type = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The taxonomyType.
    */
-  public com.google.ads.googleads.v3.enums.UserInterestTaxonomyTypeEnum.UserInterestTaxonomyType getTaxonomyType() {
+  @java.lang.Override public com.google.ads.googleads.v3.enums.UserInterestTaxonomyTypeEnum.UserInterestTaxonomyType getTaxonomyType() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v3.enums.UserInterestTaxonomyTypeEnum.UserInterestTaxonomyType result = com.google.ads.googleads.v3.enums.UserInterestTaxonomyTypeEnum.UserInterestTaxonomyType.valueOf(taxonomyType_);
     return result == null ? com.google.ads.googleads.v3.enums.UserInterestTaxonomyTypeEnum.UserInterestTaxonomyType.UNRECOGNIZED : result;
@@ -237,7 +249,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Int64Value user_interest_id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the userInterestId field is set.
    */
+  @java.lang.Override
   public boolean hasUserInterestId() {
     return userInterestId_ != null;
   }
@@ -247,7 +261,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Int64Value user_interest_id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The userInterestId.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getUserInterestId() {
     return userInterestId_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : userInterestId_;
   }
@@ -258,6 +274,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int64Value user_interest_id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getUserInterestIdOrBuilder() {
     return getUserInterestId();
   }
@@ -270,7 +287,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue name = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the name field is set.
    */
+  @java.lang.Override
   public boolean hasName() {
     return name_ != null;
   }
@@ -280,7 +299,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue name = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The name.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getName() {
     return name_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : name_;
   }
@@ -291,6 +312,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue name = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getNameOrBuilder() {
     return getName();
   }
@@ -303,7 +325,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue user_interest_parent = 5 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return Whether the userInterestParent field is set.
    */
+  @java.lang.Override
   public boolean hasUserInterestParent() {
     return userInterestParent_ != null;
   }
@@ -313,7 +337,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue user_interest_parent = 5 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The userInterestParent.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getUserInterestParent() {
     return userInterestParent_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : userInterestParent_;
   }
@@ -324,6 +350,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue user_interest_parent = 5 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getUserInterestParentOrBuilder() {
     return getUserInterestParent();
   }
@@ -336,7 +363,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.BoolValue launched_to_all = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the launchedToAll field is set.
    */
+  @java.lang.Override
   public boolean hasLaunchedToAll() {
     return launchedToAll_ != null;
   }
@@ -346,7 +375,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.BoolValue launched_to_all = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The launchedToAll.
    */
+  @java.lang.Override
   public com.google.protobuf.BoolValue getLaunchedToAll() {
     return launchedToAll_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : launchedToAll_;
   }
@@ -357,6 +388,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.BoolValue launched_to_all = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.BoolValueOrBuilder getLaunchedToAllOrBuilder() {
     return getLaunchedToAll();
   }
@@ -370,6 +402,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v3.common.CriterionCategoryAvailability availabilities = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public java.util.List<com.google.ads.googleads.v3.common.CriterionCategoryAvailability> getAvailabilitiesList() {
     return availabilities_;
   }
@@ -380,6 +413,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v3.common.CriterionCategoryAvailability availabilities = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public java.util.List<? extends com.google.ads.googleads.v3.common.CriterionCategoryAvailabilityOrBuilder> 
       getAvailabilitiesOrBuilderList() {
     return availabilities_;
@@ -391,6 +425,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v3.common.CriterionCategoryAvailability availabilities = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public int getAvailabilitiesCount() {
     return availabilities_.size();
   }
@@ -401,6 +436,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v3.common.CriterionCategoryAvailability availabilities = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.common.CriterionCategoryAvailability getAvailabilities(int index) {
     return availabilities_.get(index);
   }
@@ -411,6 +447,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v3.common.CriterionCategoryAvailability availabilities = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.common.CriterionCategoryAvailabilityOrBuilder getAvailabilitiesOrBuilder(
       int index) {
     return availabilities_.get(index);
@@ -730,7 +767,7 @@ private static final long serialVersionUID = 0L;
       }
       if (availabilitiesBuilder_ == null) {
         availabilities_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000040);
+        bitField0_ = (bitField0_ & ~0x00000001);
       } else {
         availabilitiesBuilder_.clear();
       }
@@ -761,7 +798,6 @@ private static final long serialVersionUID = 0L;
     public com.google.ads.googleads.v3.resources.UserInterest buildPartial() {
       com.google.ads.googleads.v3.resources.UserInterest result = new com.google.ads.googleads.v3.resources.UserInterest(this);
       int from_bitField0_ = bitField0_;
-      int to_bitField0_ = 0;
       result.resourceName_ = resourceName_;
       result.taxonomyType_ = taxonomyType_;
       if (userInterestIdBuilder_ == null) {
@@ -785,15 +821,14 @@ private static final long serialVersionUID = 0L;
         result.launchedToAll_ = launchedToAllBuilder_.build();
       }
       if (availabilitiesBuilder_ == null) {
-        if (((bitField0_ & 0x00000040) != 0)) {
+        if (((bitField0_ & 0x00000001) != 0)) {
           availabilities_ = java.util.Collections.unmodifiableList(availabilities_);
-          bitField0_ = (bitField0_ & ~0x00000040);
+          bitField0_ = (bitField0_ & ~0x00000001);
         }
         result.availabilities_ = availabilities_;
       } else {
         result.availabilities_ = availabilitiesBuilder_.build();
       }
-      result.bitField0_ = to_bitField0_;
       onBuilt();
       return result;
     }
@@ -865,7 +900,7 @@ private static final long serialVersionUID = 0L;
         if (!other.availabilities_.isEmpty()) {
           if (availabilities_.isEmpty()) {
             availabilities_ = other.availabilities_;
-            bitField0_ = (bitField0_ & ~0x00000040);
+            bitField0_ = (bitField0_ & ~0x00000001);
           } else {
             ensureAvailabilitiesIsMutable();
             availabilities_.addAll(other.availabilities_);
@@ -878,7 +913,7 @@ private static final long serialVersionUID = 0L;
             availabilitiesBuilder_.dispose();
             availabilitiesBuilder_ = null;
             availabilities_ = other.availabilities_;
-            bitField0_ = (bitField0_ & ~0x00000040);
+            bitField0_ = (bitField0_ & ~0x00000001);
             availabilitiesBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getAvailabilitiesFieldBuilder() : null;
@@ -926,6 +961,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @return The resourceName.
      */
     public java.lang.String getResourceName() {
       java.lang.Object ref = resourceName_;
@@ -947,6 +983,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @return The bytes for resourceName.
      */
     public com.google.protobuf.ByteString
         getResourceNameBytes() {
@@ -969,6 +1006,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @param value The resourceName to set.
+     * @return This builder for chaining.
      */
     public Builder setResourceName(
         java.lang.String value) {
@@ -988,6 +1027,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @return This builder for chaining.
      */
     public Builder clearResourceName() {
       
@@ -1003,6 +1043,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @param value The bytes for resourceName to set.
+     * @return This builder for chaining.
      */
     public Builder setResourceNameBytes(
         com.google.protobuf.ByteString value) {
@@ -1023,8 +1065,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.UserInterestTaxonomyTypeEnum.UserInterestTaxonomyType taxonomy_type = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The enum numeric value on the wire for taxonomyType.
      */
-    public int getTaxonomyTypeValue() {
+    @java.lang.Override public int getTaxonomyTypeValue() {
       return taxonomyType_;
     }
     /**
@@ -1033,8 +1076,11 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.UserInterestTaxonomyTypeEnum.UserInterestTaxonomyType taxonomy_type = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @param value The enum numeric value on the wire for taxonomyType to set.
+     * @return This builder for chaining.
      */
     public Builder setTaxonomyTypeValue(int value) {
+      
       taxonomyType_ = value;
       onChanged();
       return this;
@@ -1045,7 +1091,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.UserInterestTaxonomyTypeEnum.UserInterestTaxonomyType taxonomy_type = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The taxonomyType.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.enums.UserInterestTaxonomyTypeEnum.UserInterestTaxonomyType getTaxonomyType() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v3.enums.UserInterestTaxonomyTypeEnum.UserInterestTaxonomyType result = com.google.ads.googleads.v3.enums.UserInterestTaxonomyTypeEnum.UserInterestTaxonomyType.valueOf(taxonomyType_);
@@ -1057,6 +1105,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.UserInterestTaxonomyTypeEnum.UserInterestTaxonomyType taxonomy_type = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @param value The taxonomyType to set.
+     * @return This builder for chaining.
      */
     public Builder setTaxonomyType(com.google.ads.googleads.v3.enums.UserInterestTaxonomyTypeEnum.UserInterestTaxonomyType value) {
       if (value == null) {
@@ -1073,6 +1123,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.UserInterestTaxonomyTypeEnum.UserInterestTaxonomyType taxonomy_type = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return This builder for chaining.
      */
     public Builder clearTaxonomyType() {
       
@@ -1090,6 +1141,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value user_interest_id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the userInterestId field is set.
      */
     public boolean hasUserInterestId() {
       return userInterestIdBuilder_ != null || userInterestId_ != null;
@@ -1100,6 +1152,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value user_interest_id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The userInterestId.
      */
     public com.google.protobuf.Int64Value getUserInterestId() {
       if (userInterestIdBuilder_ == null) {
@@ -1243,6 +1296,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue name = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the name field is set.
      */
     public boolean hasName() {
       return nameBuilder_ != null || name_ != null;
@@ -1253,6 +1307,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue name = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The name.
      */
     public com.google.protobuf.StringValue getName() {
       if (nameBuilder_ == null) {
@@ -1396,6 +1451,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue user_interest_parent = 5 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @return Whether the userInterestParent field is set.
      */
     public boolean hasUserInterestParent() {
       return userInterestParentBuilder_ != null || userInterestParent_ != null;
@@ -1406,6 +1462,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue user_interest_parent = 5 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @return The userInterestParent.
      */
     public com.google.protobuf.StringValue getUserInterestParent() {
       if (userInterestParentBuilder_ == null) {
@@ -1549,6 +1606,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.BoolValue launched_to_all = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the launchedToAll field is set.
      */
     public boolean hasLaunchedToAll() {
       return launchedToAllBuilder_ != null || launchedToAll_ != null;
@@ -1559,6 +1617,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.BoolValue launched_to_all = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The launchedToAll.
      */
     public com.google.protobuf.BoolValue getLaunchedToAll() {
       if (launchedToAllBuilder_ == null) {
@@ -1696,9 +1755,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.google.ads.googleads.v3.common.CriterionCategoryAvailability> availabilities_ =
       java.util.Collections.emptyList();
     private void ensureAvailabilitiesIsMutable() {
-      if (!((bitField0_ & 0x00000040) != 0)) {
+      if (!((bitField0_ & 0x00000001) != 0)) {
         availabilities_ = new java.util.ArrayList<com.google.ads.googleads.v3.common.CriterionCategoryAvailability>(availabilities_);
-        bitField0_ |= 0x00000040;
+        bitField0_ |= 0x00000001;
        }
     }
 
@@ -1892,7 +1951,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearAvailabilities() {
       if (availabilitiesBuilder_ == null) {
         availabilities_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000040);
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
       } else {
         availabilitiesBuilder_.clear();
@@ -1997,7 +2056,7 @@ private static final long serialVersionUID = 0L;
         availabilitiesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.google.ads.googleads.v3.common.CriterionCategoryAvailability, com.google.ads.googleads.v3.common.CriterionCategoryAvailability.Builder, com.google.ads.googleads.v3.common.CriterionCategoryAvailabilityOrBuilder>(
                 availabilities_,
-                ((bitField0_ & 0x00000040) != 0),
+                ((bitField0_ & 0x00000001) != 0),
                 getParentForChildren(),
                 isClean());
         availabilities_ = null;

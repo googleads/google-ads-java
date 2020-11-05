@@ -18,19 +18,17 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.v3.enums.ConversionAdjustmentTypeEnum.ConversionAdjustmentType;
-import com.google.ads.googleads.v3.errors.GoogleAdsError;
-import com.google.ads.googleads.v3.errors.GoogleAdsException;
-import com.google.ads.googleads.v3.services.ConversionAdjustment;
-import com.google.ads.googleads.v3.services.ConversionAdjustmentResult;
-import com.google.ads.googleads.v3.services.ConversionAdjustmentUploadServiceClient;
-import com.google.ads.googleads.v3.services.GclidDateTimePair;
-import com.google.ads.googleads.v3.services.RestatementValue;
-import com.google.ads.googleads.v3.services.UploadConversionAdjustmentsResponse;
-import com.google.ads.googleads.v3.utils.ResourceNames;
-import com.google.common.collect.ImmutableList;
-import com.google.protobuf.DoubleValue;
-import com.google.protobuf.StringValue;
+import com.google.ads.googleads.v5.enums.ConversionAdjustmentTypeEnum.ConversionAdjustmentType;
+import com.google.ads.googleads.v5.errors.GoogleAdsError;
+import com.google.ads.googleads.v5.errors.GoogleAdsException;
+import com.google.ads.googleads.v5.services.ConversionAdjustment;
+import com.google.ads.googleads.v5.services.ConversionAdjustmentResult;
+import com.google.ads.googleads.v5.services.ConversionAdjustmentUploadServiceClient;
+import com.google.ads.googleads.v5.services.GclidDateTimePair;
+import com.google.ads.googleads.v5.services.RestatementValue;
+import com.google.ads.googleads.v5.services.UploadConversionAdjustmentsRequest;
+import com.google.ads.googleads.v5.services.UploadConversionAdjustmentsResponse;
+import com.google.ads.googleads.v5.utils.ResourceNames;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import javax.annotation.Nullable;
@@ -101,16 +99,16 @@ public class UploadConversionAdjustment {
       params.restatementValue = null;
     }
 
-    GoogleAdsClient googleAdsClient;
+    GoogleAdsClient googleAdsClient = null;
     try {
       googleAdsClient = GoogleAdsClient.newBuilder().fromPropertiesFile().build();
     } catch (FileNotFoundException fnfe) {
       System.err.printf(
           "Failed to load GoogleAdsClient configuration from file. Exception: %s%n", fnfe);
-      return;
+      System.exit(1);
     } catch (IOException ioe) {
       System.err.printf("Failed to create GoogleAdsClient. Exception: %s%n", ioe);
-      return;
+      System.exit(1);
     }
 
     try {
@@ -136,6 +134,7 @@ public class UploadConversionAdjustment {
       for (GoogleAdsError googleAdsError : gae.getGoogleAdsFailure().getErrorsList()) {
         System.err.printf("  Error %d: %s%n", i++, googleAdsError);
       }
+      System.exit(1);
     }
   }
 
@@ -168,15 +167,14 @@ public class UploadConversionAdjustment {
     // The GCLID should have been uploaded before with a conversion.
     ConversionAdjustment conversionAdjustment =
         ConversionAdjustment.newBuilder()
-            .setConversionAction(
-                StringValue.of(ResourceNames.conversionAction(customerId, conversionActionId)))
+            .setConversionAction(ResourceNames.conversionAction(customerId, conversionActionId))
             .setAdjustmentType(conversionAdjustmentType)
             .setGclidDateTimePair(
                 GclidDateTimePair.newBuilder()
-                    .setGclid(StringValue.of(gclid))
-                    .setConversionDateTime(StringValue.of(conversionDateTime))
+                    .setGclid(gclid)
+                    .setConversionDateTime(conversionDateTime)
                     .build())
-            .setAdjustmentDateTime(StringValue.of(adjustmentDateTime))
+            .setAdjustmentDateTime(adjustmentDateTime)
             .build();
 
     // Sets adjusted value for adjustment type RESTATEMENT.
@@ -185,9 +183,7 @@ public class UploadConversionAdjustment {
       conversionAdjustment =
           conversionAdjustment.toBuilder()
               .setRestatementValue(
-                  RestatementValue.newBuilder()
-                      .setAdjustedValue(DoubleValue.of(restatementValue))
-                      .build())
+                  RestatementValue.newBuilder().setAdjustedValue(restatementValue).build())
               .build();
     }
 
@@ -197,12 +193,12 @@ public class UploadConversionAdjustment {
       // Uploads the click conversion. Partial failure should always be set to true.
       UploadConversionAdjustmentsResponse response =
           conversionUploadServiceClient.uploadConversionAdjustments(
-              Long.toString(customerId),
-              ImmutableList.of(conversionAdjustment),
-              // Enables partial failure (must be true).
-              true,
-              // Disables validate only.
-              false);
+              UploadConversionAdjustmentsRequest.newBuilder()
+                  .setCustomerId(Long.toString(customerId))
+                  .addConversionAdjustments(conversionAdjustment)
+                  // Enables partial failure (must be true).
+                  .setPartialFailure(true)
+                  .build());
 
       // Prints any partial errors returned.
       if (response.hasPartialFailureError()) {
@@ -213,8 +209,7 @@ public class UploadConversionAdjustment {
         ConversionAdjustmentResult result = response.getResults(0);
         System.out.printf(
             "Uploaded conversion adjustment of '%s' for Google Click ID '%s'.%n",
-            result.getConversionAction().getValue(),
-            result.getGclidDateTimePair().getGclid().getValue());
+            result.getConversionAction(), result.getGclidDateTimePair().getGclid());
       }
     }
   }

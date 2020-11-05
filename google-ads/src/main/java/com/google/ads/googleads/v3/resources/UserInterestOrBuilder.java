@@ -15,6 +15,7 @@ public interface UserInterestOrBuilder extends
    * </pre>
    *
    * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The resourceName.
    */
   java.lang.String getResourceName();
   /**
@@ -25,6 +26,7 @@ public interface UserInterestOrBuilder extends
    * </pre>
    *
    * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The bytes for resourceName.
    */
   com.google.protobuf.ByteString
       getResourceNameBytes();
@@ -35,6 +37,7 @@ public interface UserInterestOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.UserInterestTaxonomyTypeEnum.UserInterestTaxonomyType taxonomy_type = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The enum numeric value on the wire for taxonomyType.
    */
   int getTaxonomyTypeValue();
   /**
@@ -43,6 +46,7 @@ public interface UserInterestOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.UserInterestTaxonomyTypeEnum.UserInterestTaxonomyType taxonomy_type = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The taxonomyType.
    */
   com.google.ads.googleads.v3.enums.UserInterestTaxonomyTypeEnum.UserInterestTaxonomyType getTaxonomyType();
 
@@ -52,6 +56,7 @@ public interface UserInterestOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value user_interest_id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the userInterestId field is set.
    */
   boolean hasUserInterestId();
   /**
@@ -60,6 +65,7 @@ public interface UserInterestOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value user_interest_id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The userInterestId.
    */
   com.google.protobuf.Int64Value getUserInterestId();
   /**
@@ -77,6 +83,7 @@ public interface UserInterestOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue name = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the name field is set.
    */
   boolean hasName();
   /**
@@ -85,6 +92,7 @@ public interface UserInterestOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue name = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The name.
    */
   com.google.protobuf.StringValue getName();
   /**
@@ -102,6 +110,7 @@ public interface UserInterestOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue user_interest_parent = 5 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return Whether the userInterestParent field is set.
    */
   boolean hasUserInterestParent();
   /**
@@ -110,6 +119,7 @@ public interface UserInterestOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue user_interest_parent = 5 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The userInterestParent.
    */
   com.google.protobuf.StringValue getUserInterestParent();
   /**
@@ -127,6 +137,7 @@ public interface UserInterestOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.BoolValue launched_to_all = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the launchedToAll field is set.
    */
   boolean hasLaunchedToAll();
   /**
@@ -135,6 +146,7 @@ public interface UserInterestOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.BoolValue launched_to_all = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The launchedToAll.
    */
   com.google.protobuf.BoolValue getLaunchedToAll();
   /**

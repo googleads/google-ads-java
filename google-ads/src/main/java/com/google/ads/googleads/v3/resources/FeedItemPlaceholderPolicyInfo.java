@@ -11,7 +11,7 @@ package com.google.ads.googleads.v3.resources;
  *
  * Protobuf type {@code google.ads.googleads.v3.resources.FeedItemPlaceholderPolicyInfo}
  */
-public  final class FeedItemPlaceholderPolicyInfo extends
+public final class FeedItemPlaceholderPolicyInfo extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v3.resources.FeedItemPlaceholderPolicyInfo)
     FeedItemPlaceholderPolicyInfoOrBuilder {
@@ -29,6 +29,13 @@ private static final long serialVersionUID = 0L;
     validationErrors_ = java.util.Collections.emptyList();
     qualityApprovalStatus_ = 0;
     qualityDisapprovalReasons_ = java.util.Collections.emptyList();
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new FeedItemPlaceholderPolicyInfo();
   }
 
   @java.lang.Override
@@ -81,9 +88,9 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 42: {
-            if (!((mutable_bitField0_ & 0x00000010) != 0)) {
+            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
               policyTopicEntries_ = new java.util.ArrayList<com.google.ads.googleads.v3.common.PolicyTopicEntry>();
-              mutable_bitField0_ |= 0x00000010;
+              mutable_bitField0_ |= 0x00000001;
             }
             policyTopicEntries_.add(
                 input.readMessage(com.google.ads.googleads.v3.common.PolicyTopicEntry.parser(), extensionRegistry));
@@ -96,9 +103,9 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 58: {
-            if (!((mutable_bitField0_ & 0x00000040) != 0)) {
+            if (!((mutable_bitField0_ & 0x00000002) != 0)) {
               validationErrors_ = new java.util.ArrayList<com.google.ads.googleads.v3.resources.FeedItemValidationError>();
-              mutable_bitField0_ |= 0x00000040;
+              mutable_bitField0_ |= 0x00000002;
             }
             validationErrors_.add(
                 input.readMessage(com.google.ads.googleads.v3.resources.FeedItemValidationError.parser(), extensionRegistry));
@@ -112,9 +119,9 @@ private static final long serialVersionUID = 0L;
           }
           case 72: {
             int rawValue = input.readEnum();
-            if (!((mutable_bitField0_ & 0x00000100) != 0)) {
+            if (!((mutable_bitField0_ & 0x00000004) != 0)) {
               qualityDisapprovalReasons_ = new java.util.ArrayList<java.lang.Integer>();
-              mutable_bitField0_ |= 0x00000100;
+              mutable_bitField0_ |= 0x00000004;
             }
             qualityDisapprovalReasons_.add(rawValue);
             break;
@@ -124,9 +131,9 @@ private static final long serialVersionUID = 0L;
             int oldLimit = input.pushLimit(length);
             while(input.getBytesUntilLimit() > 0) {
               int rawValue = input.readEnum();
-              if (!((mutable_bitField0_ & 0x00000100) != 0)) {
+              if (!((mutable_bitField0_ & 0x00000004) != 0)) {
                 qualityDisapprovalReasons_ = new java.util.ArrayList<java.lang.Integer>();
-                mutable_bitField0_ |= 0x00000100;
+                mutable_bitField0_ |= 0x00000004;
               }
               qualityDisapprovalReasons_.add(rawValue);
             }
@@ -154,13 +161,13 @@ private static final long serialVersionUID = 0L;
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
     } finally {
-      if (((mutable_bitField0_ & 0x00000010) != 0)) {
+      if (((mutable_bitField0_ & 0x00000001) != 0)) {
         policyTopicEntries_ = java.util.Collections.unmodifiableList(policyTopicEntries_);
       }
-      if (((mutable_bitField0_ & 0x00000040) != 0)) {
+      if (((mutable_bitField0_ & 0x00000002) != 0)) {
         validationErrors_ = java.util.Collections.unmodifiableList(validationErrors_);
       }
-      if (((mutable_bitField0_ & 0x00000100) != 0)) {
+      if (((mutable_bitField0_ & 0x00000004) != 0)) {
         qualityDisapprovalReasons_ = java.util.Collections.unmodifiableList(qualityDisapprovalReasons_);
       }
       this.unknownFields = unknownFields.build();
@@ -180,7 +187,6 @@ private static final long serialVersionUID = 0L;
             com.google.ads.googleads.v3.resources.FeedItemPlaceholderPolicyInfo.class, com.google.ads.googleads.v3.resources.FeedItemPlaceholderPolicyInfo.Builder.class);
   }
 
-  private int bitField0_;
   public static final int PLACEHOLDER_TYPE_ENUM_FIELD_NUMBER = 10;
   private int placeholderTypeEnum_;
   /**
@@ -189,8 +195,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.PlaceholderTypeEnum.PlaceholderType placeholder_type_enum = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The enum numeric value on the wire for placeholderTypeEnum.
    */
-  public int getPlaceholderTypeEnumValue() {
+  @java.lang.Override public int getPlaceholderTypeEnumValue() {
     return placeholderTypeEnum_;
   }
   /**
@@ -199,8 +206,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.PlaceholderTypeEnum.PlaceholderType placeholder_type_enum = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The placeholderTypeEnum.
    */
-  public com.google.ads.googleads.v3.enums.PlaceholderTypeEnum.PlaceholderType getPlaceholderTypeEnum() {
+  @java.lang.Override public com.google.ads.googleads.v3.enums.PlaceholderTypeEnum.PlaceholderType getPlaceholderTypeEnum() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v3.enums.PlaceholderTypeEnum.PlaceholderType result = com.google.ads.googleads.v3.enums.PlaceholderTypeEnum.PlaceholderType.valueOf(placeholderTypeEnum_);
     return result == null ? com.google.ads.googleads.v3.enums.PlaceholderTypeEnum.PlaceholderType.UNRECOGNIZED : result;
@@ -214,7 +222,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue feed_mapping_resource_name = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the feedMappingResourceName field is set.
    */
+  @java.lang.Override
   public boolean hasFeedMappingResourceName() {
     return feedMappingResourceName_ != null;
   }
@@ -224,7 +234,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue feed_mapping_resource_name = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The feedMappingResourceName.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getFeedMappingResourceName() {
     return feedMappingResourceName_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : feedMappingResourceName_;
   }
@@ -235,6 +247,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue feed_mapping_resource_name = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getFeedMappingResourceNameOrBuilder() {
     return getFeedMappingResourceName();
   }
@@ -247,8 +260,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.PolicyReviewStatusEnum.PolicyReviewStatus review_status = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The enum numeric value on the wire for reviewStatus.
    */
-  public int getReviewStatusValue() {
+  @java.lang.Override public int getReviewStatusValue() {
     return reviewStatus_;
   }
   /**
@@ -257,8 +271,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.PolicyReviewStatusEnum.PolicyReviewStatus review_status = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The reviewStatus.
    */
-  public com.google.ads.googleads.v3.enums.PolicyReviewStatusEnum.PolicyReviewStatus getReviewStatus() {
+  @java.lang.Override public com.google.ads.googleads.v3.enums.PolicyReviewStatusEnum.PolicyReviewStatus getReviewStatus() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v3.enums.PolicyReviewStatusEnum.PolicyReviewStatus result = com.google.ads.googleads.v3.enums.PolicyReviewStatusEnum.PolicyReviewStatus.valueOf(reviewStatus_);
     return result == null ? com.google.ads.googleads.v3.enums.PolicyReviewStatusEnum.PolicyReviewStatus.UNRECOGNIZED : result;
@@ -273,8 +288,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.PolicyApprovalStatusEnum.PolicyApprovalStatus approval_status = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The enum numeric value on the wire for approvalStatus.
    */
-  public int getApprovalStatusValue() {
+  @java.lang.Override public int getApprovalStatusValue() {
     return approvalStatus_;
   }
   /**
@@ -284,8 +300,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.PolicyApprovalStatusEnum.PolicyApprovalStatus approval_status = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The approvalStatus.
    */
-  public com.google.ads.googleads.v3.enums.PolicyApprovalStatusEnum.PolicyApprovalStatus getApprovalStatus() {
+  @java.lang.Override public com.google.ads.googleads.v3.enums.PolicyApprovalStatusEnum.PolicyApprovalStatus getApprovalStatus() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v3.enums.PolicyApprovalStatusEnum.PolicyApprovalStatus result = com.google.ads.googleads.v3.enums.PolicyApprovalStatusEnum.PolicyApprovalStatus.valueOf(approvalStatus_);
     return result == null ? com.google.ads.googleads.v3.enums.PolicyApprovalStatusEnum.PolicyApprovalStatus.UNRECOGNIZED : result;
@@ -300,6 +317,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v3.common.PolicyTopicEntry policy_topic_entries = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public java.util.List<com.google.ads.googleads.v3.common.PolicyTopicEntry> getPolicyTopicEntriesList() {
     return policyTopicEntries_;
   }
@@ -310,6 +328,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v3.common.PolicyTopicEntry policy_topic_entries = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public java.util.List<? extends com.google.ads.googleads.v3.common.PolicyTopicEntryOrBuilder> 
       getPolicyTopicEntriesOrBuilderList() {
     return policyTopicEntries_;
@@ -321,6 +340,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v3.common.PolicyTopicEntry policy_topic_entries = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public int getPolicyTopicEntriesCount() {
     return policyTopicEntries_.size();
   }
@@ -331,6 +351,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v3.common.PolicyTopicEntry policy_topic_entries = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.common.PolicyTopicEntry getPolicyTopicEntries(int index) {
     return policyTopicEntries_.get(index);
   }
@@ -341,6 +362,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v3.common.PolicyTopicEntry policy_topic_entries = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.common.PolicyTopicEntryOrBuilder getPolicyTopicEntriesOrBuilder(
       int index) {
     return policyTopicEntries_.get(index);
@@ -354,8 +376,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.FeedItemValidationStatusEnum.FeedItemValidationStatus validation_status = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The enum numeric value on the wire for validationStatus.
    */
-  public int getValidationStatusValue() {
+  @java.lang.Override public int getValidationStatusValue() {
     return validationStatus_;
   }
   /**
@@ -364,8 +387,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.FeedItemValidationStatusEnum.FeedItemValidationStatus validation_status = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The validationStatus.
    */
-  public com.google.ads.googleads.v3.enums.FeedItemValidationStatusEnum.FeedItemValidationStatus getValidationStatus() {
+  @java.lang.Override public com.google.ads.googleads.v3.enums.FeedItemValidationStatusEnum.FeedItemValidationStatus getValidationStatus() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v3.enums.FeedItemValidationStatusEnum.FeedItemValidationStatus result = com.google.ads.googleads.v3.enums.FeedItemValidationStatusEnum.FeedItemValidationStatus.valueOf(validationStatus_);
     return result == null ? com.google.ads.googleads.v3.enums.FeedItemValidationStatusEnum.FeedItemValidationStatus.UNRECOGNIZED : result;
@@ -380,6 +404,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v3.resources.FeedItemValidationError validation_errors = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public java.util.List<com.google.ads.googleads.v3.resources.FeedItemValidationError> getValidationErrorsList() {
     return validationErrors_;
   }
@@ -390,6 +415,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v3.resources.FeedItemValidationError validation_errors = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public java.util.List<? extends com.google.ads.googleads.v3.resources.FeedItemValidationErrorOrBuilder> 
       getValidationErrorsOrBuilderList() {
     return validationErrors_;
@@ -401,6 +427,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v3.resources.FeedItemValidationError validation_errors = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public int getValidationErrorsCount() {
     return validationErrors_.size();
   }
@@ -411,6 +438,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v3.resources.FeedItemValidationError validation_errors = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.resources.FeedItemValidationError getValidationErrors(int index) {
     return validationErrors_.get(index);
   }
@@ -421,6 +449,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v3.resources.FeedItemValidationError validation_errors = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.resources.FeedItemValidationErrorOrBuilder getValidationErrorsOrBuilder(
       int index) {
     return validationErrors_.get(index);
@@ -434,8 +463,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.FeedItemQualityApprovalStatusEnum.FeedItemQualityApprovalStatus quality_approval_status = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The enum numeric value on the wire for qualityApprovalStatus.
    */
-  public int getQualityApprovalStatusValue() {
+  @java.lang.Override public int getQualityApprovalStatusValue() {
     return qualityApprovalStatus_;
   }
   /**
@@ -444,8 +474,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.FeedItemQualityApprovalStatusEnum.FeedItemQualityApprovalStatus quality_approval_status = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The qualityApprovalStatus.
    */
-  public com.google.ads.googleads.v3.enums.FeedItemQualityApprovalStatusEnum.FeedItemQualityApprovalStatus getQualityApprovalStatus() {
+  @java.lang.Override public com.google.ads.googleads.v3.enums.FeedItemQualityApprovalStatusEnum.FeedItemQualityApprovalStatus getQualityApprovalStatus() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v3.enums.FeedItemQualityApprovalStatusEnum.FeedItemQualityApprovalStatus result = com.google.ads.googleads.v3.enums.FeedItemQualityApprovalStatusEnum.FeedItemQualityApprovalStatus.valueOf(qualityApprovalStatus_);
     return result == null ? com.google.ads.googleads.v3.enums.FeedItemQualityApprovalStatusEnum.FeedItemQualityApprovalStatus.UNRECOGNIZED : result;
@@ -469,7 +500,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v3.enums.FeedItemQualityDisapprovalReasonEnum.FeedItemQualityDisapprovalReason quality_disapproval_reasons = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return A list containing the qualityDisapprovalReasons.
    */
+  @java.lang.Override
   public java.util.List<com.google.ads.googleads.v3.enums.FeedItemQualityDisapprovalReasonEnum.FeedItemQualityDisapprovalReason> getQualityDisapprovalReasonsList() {
     return new com.google.protobuf.Internal.ListAdapter<
         java.lang.Integer, com.google.ads.googleads.v3.enums.FeedItemQualityDisapprovalReasonEnum.FeedItemQualityDisapprovalReason>(qualityDisapprovalReasons_, qualityDisapprovalReasons_converter_);
@@ -480,7 +513,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v3.enums.FeedItemQualityDisapprovalReasonEnum.FeedItemQualityDisapprovalReason quality_disapproval_reasons = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The count of qualityDisapprovalReasons.
    */
+  @java.lang.Override
   public int getQualityDisapprovalReasonsCount() {
     return qualityDisapprovalReasons_.size();
   }
@@ -490,7 +525,10 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v3.enums.FeedItemQualityDisapprovalReasonEnum.FeedItemQualityDisapprovalReason quality_disapproval_reasons = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @param index The index of the element to return.
+   * @return The qualityDisapprovalReasons at the given index.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.enums.FeedItemQualityDisapprovalReasonEnum.FeedItemQualityDisapprovalReason getQualityDisapprovalReasons(int index) {
     return qualityDisapprovalReasons_converter_.convert(qualityDisapprovalReasons_.get(index));
   }
@@ -500,7 +538,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v3.enums.FeedItemQualityDisapprovalReasonEnum.FeedItemQualityDisapprovalReason quality_disapproval_reasons = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return A list containing the enum numeric values on the wire for qualityDisapprovalReasons.
    */
+  @java.lang.Override
   public java.util.List<java.lang.Integer>
   getQualityDisapprovalReasonsValueList() {
     return qualityDisapprovalReasons_;
@@ -511,7 +551,10 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v3.enums.FeedItemQualityDisapprovalReasonEnum.FeedItemQualityDisapprovalReason quality_disapproval_reasons = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @param index The index of the value to return.
+   * @return The enum numeric value on the wire of qualityDisapprovalReasons at the given index.
    */
+  @java.lang.Override
   public int getQualityDisapprovalReasonsValue(int index) {
     return qualityDisapprovalReasons_.get(index);
   }
@@ -837,7 +880,7 @@ private static final long serialVersionUID = 0L;
 
       if (policyTopicEntriesBuilder_ == null) {
         policyTopicEntries_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000010);
+        bitField0_ = (bitField0_ & ~0x00000001);
       } else {
         policyTopicEntriesBuilder_.clear();
       }
@@ -845,14 +888,14 @@ private static final long serialVersionUID = 0L;
 
       if (validationErrorsBuilder_ == null) {
         validationErrors_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000040);
+        bitField0_ = (bitField0_ & ~0x00000002);
       } else {
         validationErrorsBuilder_.clear();
       }
       qualityApprovalStatus_ = 0;
 
       qualityDisapprovalReasons_ = java.util.Collections.emptyList();
-      bitField0_ = (bitField0_ & ~0x00000100);
+      bitField0_ = (bitField0_ & ~0x00000004);
       return this;
     }
 
@@ -880,7 +923,6 @@ private static final long serialVersionUID = 0L;
     public com.google.ads.googleads.v3.resources.FeedItemPlaceholderPolicyInfo buildPartial() {
       com.google.ads.googleads.v3.resources.FeedItemPlaceholderPolicyInfo result = new com.google.ads.googleads.v3.resources.FeedItemPlaceholderPolicyInfo(this);
       int from_bitField0_ = bitField0_;
-      int to_bitField0_ = 0;
       result.placeholderTypeEnum_ = placeholderTypeEnum_;
       if (feedMappingResourceNameBuilder_ == null) {
         result.feedMappingResourceName_ = feedMappingResourceName_;
@@ -890,9 +932,9 @@ private static final long serialVersionUID = 0L;
       result.reviewStatus_ = reviewStatus_;
       result.approvalStatus_ = approvalStatus_;
       if (policyTopicEntriesBuilder_ == null) {
-        if (((bitField0_ & 0x00000010) != 0)) {
+        if (((bitField0_ & 0x00000001) != 0)) {
           policyTopicEntries_ = java.util.Collections.unmodifiableList(policyTopicEntries_);
-          bitField0_ = (bitField0_ & ~0x00000010);
+          bitField0_ = (bitField0_ & ~0x00000001);
         }
         result.policyTopicEntries_ = policyTopicEntries_;
       } else {
@@ -900,21 +942,20 @@ private static final long serialVersionUID = 0L;
       }
       result.validationStatus_ = validationStatus_;
       if (validationErrorsBuilder_ == null) {
-        if (((bitField0_ & 0x00000040) != 0)) {
+        if (((bitField0_ & 0x00000002) != 0)) {
           validationErrors_ = java.util.Collections.unmodifiableList(validationErrors_);
-          bitField0_ = (bitField0_ & ~0x00000040);
+          bitField0_ = (bitField0_ & ~0x00000002);
         }
         result.validationErrors_ = validationErrors_;
       } else {
         result.validationErrors_ = validationErrorsBuilder_.build();
       }
       result.qualityApprovalStatus_ = qualityApprovalStatus_;
-      if (((bitField0_ & 0x00000100) != 0)) {
+      if (((bitField0_ & 0x00000004) != 0)) {
         qualityDisapprovalReasons_ = java.util.Collections.unmodifiableList(qualityDisapprovalReasons_);
-        bitField0_ = (bitField0_ & ~0x00000100);
+        bitField0_ = (bitField0_ & ~0x00000004);
       }
       result.qualityDisapprovalReasons_ = qualityDisapprovalReasons_;
-      result.bitField0_ = to_bitField0_;
       onBuilt();
       return result;
     }
@@ -979,7 +1020,7 @@ private static final long serialVersionUID = 0L;
         if (!other.policyTopicEntries_.isEmpty()) {
           if (policyTopicEntries_.isEmpty()) {
             policyTopicEntries_ = other.policyTopicEntries_;
-            bitField0_ = (bitField0_ & ~0x00000010);
+            bitField0_ = (bitField0_ & ~0x00000001);
           } else {
             ensurePolicyTopicEntriesIsMutable();
             policyTopicEntries_.addAll(other.policyTopicEntries_);
@@ -992,7 +1033,7 @@ private static final long serialVersionUID = 0L;
             policyTopicEntriesBuilder_.dispose();
             policyTopicEntriesBuilder_ = null;
             policyTopicEntries_ = other.policyTopicEntries_;
-            bitField0_ = (bitField0_ & ~0x00000010);
+            bitField0_ = (bitField0_ & ~0x00000001);
             policyTopicEntriesBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getPolicyTopicEntriesFieldBuilder() : null;
@@ -1008,7 +1049,7 @@ private static final long serialVersionUID = 0L;
         if (!other.validationErrors_.isEmpty()) {
           if (validationErrors_.isEmpty()) {
             validationErrors_ = other.validationErrors_;
-            bitField0_ = (bitField0_ & ~0x00000040);
+            bitField0_ = (bitField0_ & ~0x00000002);
           } else {
             ensureValidationErrorsIsMutable();
             validationErrors_.addAll(other.validationErrors_);
@@ -1021,7 +1062,7 @@ private static final long serialVersionUID = 0L;
             validationErrorsBuilder_.dispose();
             validationErrorsBuilder_ = null;
             validationErrors_ = other.validationErrors_;
-            bitField0_ = (bitField0_ & ~0x00000040);
+            bitField0_ = (bitField0_ & ~0x00000002);
             validationErrorsBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getValidationErrorsFieldBuilder() : null;
@@ -1036,7 +1077,7 @@ private static final long serialVersionUID = 0L;
       if (!other.qualityDisapprovalReasons_.isEmpty()) {
         if (qualityDisapprovalReasons_.isEmpty()) {
           qualityDisapprovalReasons_ = other.qualityDisapprovalReasons_;
-          bitField0_ = (bitField0_ & ~0x00000100);
+          bitField0_ = (bitField0_ & ~0x00000004);
         } else {
           ensureQualityDisapprovalReasonsIsMutable();
           qualityDisapprovalReasons_.addAll(other.qualityDisapprovalReasons_);
@@ -1080,8 +1121,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.PlaceholderTypeEnum.PlaceholderType placeholder_type_enum = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The enum numeric value on the wire for placeholderTypeEnum.
      */
-    public int getPlaceholderTypeEnumValue() {
+    @java.lang.Override public int getPlaceholderTypeEnumValue() {
       return placeholderTypeEnum_;
     }
     /**
@@ -1090,8 +1132,11 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.PlaceholderTypeEnum.PlaceholderType placeholder_type_enum = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @param value The enum numeric value on the wire for placeholderTypeEnum to set.
+     * @return This builder for chaining.
      */
     public Builder setPlaceholderTypeEnumValue(int value) {
+      
       placeholderTypeEnum_ = value;
       onChanged();
       return this;
@@ -1102,7 +1147,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.PlaceholderTypeEnum.PlaceholderType placeholder_type_enum = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The placeholderTypeEnum.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.enums.PlaceholderTypeEnum.PlaceholderType getPlaceholderTypeEnum() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v3.enums.PlaceholderTypeEnum.PlaceholderType result = com.google.ads.googleads.v3.enums.PlaceholderTypeEnum.PlaceholderType.valueOf(placeholderTypeEnum_);
@@ -1114,6 +1161,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.PlaceholderTypeEnum.PlaceholderType placeholder_type_enum = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @param value The placeholderTypeEnum to set.
+     * @return This builder for chaining.
      */
     public Builder setPlaceholderTypeEnum(com.google.ads.googleads.v3.enums.PlaceholderTypeEnum.PlaceholderType value) {
       if (value == null) {
@@ -1130,6 +1179,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.PlaceholderTypeEnum.PlaceholderType placeholder_type_enum = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return This builder for chaining.
      */
     public Builder clearPlaceholderTypeEnum() {
       
@@ -1147,6 +1197,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue feed_mapping_resource_name = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the feedMappingResourceName field is set.
      */
     public boolean hasFeedMappingResourceName() {
       return feedMappingResourceNameBuilder_ != null || feedMappingResourceName_ != null;
@@ -1157,6 +1208,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue feed_mapping_resource_name = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The feedMappingResourceName.
      */
     public com.google.protobuf.StringValue getFeedMappingResourceName() {
       if (feedMappingResourceNameBuilder_ == null) {
@@ -1298,8 +1350,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.PolicyReviewStatusEnum.PolicyReviewStatus review_status = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The enum numeric value on the wire for reviewStatus.
      */
-    public int getReviewStatusValue() {
+    @java.lang.Override public int getReviewStatusValue() {
       return reviewStatus_;
     }
     /**
@@ -1308,8 +1361,11 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.PolicyReviewStatusEnum.PolicyReviewStatus review_status = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @param value The enum numeric value on the wire for reviewStatus to set.
+     * @return This builder for chaining.
      */
     public Builder setReviewStatusValue(int value) {
+      
       reviewStatus_ = value;
       onChanged();
       return this;
@@ -1320,7 +1376,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.PolicyReviewStatusEnum.PolicyReviewStatus review_status = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The reviewStatus.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.enums.PolicyReviewStatusEnum.PolicyReviewStatus getReviewStatus() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v3.enums.PolicyReviewStatusEnum.PolicyReviewStatus result = com.google.ads.googleads.v3.enums.PolicyReviewStatusEnum.PolicyReviewStatus.valueOf(reviewStatus_);
@@ -1332,6 +1390,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.PolicyReviewStatusEnum.PolicyReviewStatus review_status = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @param value The reviewStatus to set.
+     * @return This builder for chaining.
      */
     public Builder setReviewStatus(com.google.ads.googleads.v3.enums.PolicyReviewStatusEnum.PolicyReviewStatus value) {
       if (value == null) {
@@ -1348,6 +1408,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.PolicyReviewStatusEnum.PolicyReviewStatus review_status = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return This builder for chaining.
      */
     public Builder clearReviewStatus() {
       
@@ -1364,8 +1425,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.PolicyApprovalStatusEnum.PolicyApprovalStatus approval_status = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The enum numeric value on the wire for approvalStatus.
      */
-    public int getApprovalStatusValue() {
+    @java.lang.Override public int getApprovalStatusValue() {
       return approvalStatus_;
     }
     /**
@@ -1375,8 +1437,11 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.PolicyApprovalStatusEnum.PolicyApprovalStatus approval_status = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @param value The enum numeric value on the wire for approvalStatus to set.
+     * @return This builder for chaining.
      */
     public Builder setApprovalStatusValue(int value) {
+      
       approvalStatus_ = value;
       onChanged();
       return this;
@@ -1388,7 +1453,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.PolicyApprovalStatusEnum.PolicyApprovalStatus approval_status = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The approvalStatus.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.enums.PolicyApprovalStatusEnum.PolicyApprovalStatus getApprovalStatus() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v3.enums.PolicyApprovalStatusEnum.PolicyApprovalStatus result = com.google.ads.googleads.v3.enums.PolicyApprovalStatusEnum.PolicyApprovalStatus.valueOf(approvalStatus_);
@@ -1401,6 +1468,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.PolicyApprovalStatusEnum.PolicyApprovalStatus approval_status = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @param value The approvalStatus to set.
+     * @return This builder for chaining.
      */
     public Builder setApprovalStatus(com.google.ads.googleads.v3.enums.PolicyApprovalStatusEnum.PolicyApprovalStatus value) {
       if (value == null) {
@@ -1418,6 +1487,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.PolicyApprovalStatusEnum.PolicyApprovalStatus approval_status = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return This builder for chaining.
      */
     public Builder clearApprovalStatus() {
       
@@ -1429,9 +1499,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.google.ads.googleads.v3.common.PolicyTopicEntry> policyTopicEntries_ =
       java.util.Collections.emptyList();
     private void ensurePolicyTopicEntriesIsMutable() {
-      if (!((bitField0_ & 0x00000010) != 0)) {
+      if (!((bitField0_ & 0x00000001) != 0)) {
         policyTopicEntries_ = new java.util.ArrayList<com.google.ads.googleads.v3.common.PolicyTopicEntry>(policyTopicEntries_);
-        bitField0_ |= 0x00000010;
+        bitField0_ |= 0x00000001;
        }
     }
 
@@ -1625,7 +1695,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearPolicyTopicEntries() {
       if (policyTopicEntriesBuilder_ == null) {
         policyTopicEntries_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000010);
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
       } else {
         policyTopicEntriesBuilder_.clear();
@@ -1730,7 +1800,7 @@ private static final long serialVersionUID = 0L;
         policyTopicEntriesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.google.ads.googleads.v3.common.PolicyTopicEntry, com.google.ads.googleads.v3.common.PolicyTopicEntry.Builder, com.google.ads.googleads.v3.common.PolicyTopicEntryOrBuilder>(
                 policyTopicEntries_,
-                ((bitField0_ & 0x00000010) != 0),
+                ((bitField0_ & 0x00000001) != 0),
                 getParentForChildren(),
                 isClean());
         policyTopicEntries_ = null;
@@ -1745,8 +1815,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.FeedItemValidationStatusEnum.FeedItemValidationStatus validation_status = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The enum numeric value on the wire for validationStatus.
      */
-    public int getValidationStatusValue() {
+    @java.lang.Override public int getValidationStatusValue() {
       return validationStatus_;
     }
     /**
@@ -1755,8 +1826,11 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.FeedItemValidationStatusEnum.FeedItemValidationStatus validation_status = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @param value The enum numeric value on the wire for validationStatus to set.
+     * @return This builder for chaining.
      */
     public Builder setValidationStatusValue(int value) {
+      
       validationStatus_ = value;
       onChanged();
       return this;
@@ -1767,7 +1841,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.FeedItemValidationStatusEnum.FeedItemValidationStatus validation_status = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The validationStatus.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.enums.FeedItemValidationStatusEnum.FeedItemValidationStatus getValidationStatus() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v3.enums.FeedItemValidationStatusEnum.FeedItemValidationStatus result = com.google.ads.googleads.v3.enums.FeedItemValidationStatusEnum.FeedItemValidationStatus.valueOf(validationStatus_);
@@ -1779,6 +1855,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.FeedItemValidationStatusEnum.FeedItemValidationStatus validation_status = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @param value The validationStatus to set.
+     * @return This builder for chaining.
      */
     public Builder setValidationStatus(com.google.ads.googleads.v3.enums.FeedItemValidationStatusEnum.FeedItemValidationStatus value) {
       if (value == null) {
@@ -1795,6 +1873,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.FeedItemValidationStatusEnum.FeedItemValidationStatus validation_status = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return This builder for chaining.
      */
     public Builder clearValidationStatus() {
       
@@ -1806,9 +1885,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.google.ads.googleads.v3.resources.FeedItemValidationError> validationErrors_ =
       java.util.Collections.emptyList();
     private void ensureValidationErrorsIsMutable() {
-      if (!((bitField0_ & 0x00000040) != 0)) {
+      if (!((bitField0_ & 0x00000002) != 0)) {
         validationErrors_ = new java.util.ArrayList<com.google.ads.googleads.v3.resources.FeedItemValidationError>(validationErrors_);
-        bitField0_ |= 0x00000040;
+        bitField0_ |= 0x00000002;
        }
     }
 
@@ -2002,7 +2081,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearValidationErrors() {
       if (validationErrorsBuilder_ == null) {
         validationErrors_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000040);
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
       } else {
         validationErrorsBuilder_.clear();
@@ -2107,7 +2186,7 @@ private static final long serialVersionUID = 0L;
         validationErrorsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.google.ads.googleads.v3.resources.FeedItemValidationError, com.google.ads.googleads.v3.resources.FeedItemValidationError.Builder, com.google.ads.googleads.v3.resources.FeedItemValidationErrorOrBuilder>(
                 validationErrors_,
-                ((bitField0_ & 0x00000040) != 0),
+                ((bitField0_ & 0x00000002) != 0),
                 getParentForChildren(),
                 isClean());
         validationErrors_ = null;
@@ -2122,8 +2201,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.FeedItemQualityApprovalStatusEnum.FeedItemQualityApprovalStatus quality_approval_status = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The enum numeric value on the wire for qualityApprovalStatus.
      */
-    public int getQualityApprovalStatusValue() {
+    @java.lang.Override public int getQualityApprovalStatusValue() {
       return qualityApprovalStatus_;
     }
     /**
@@ -2132,8 +2212,11 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.FeedItemQualityApprovalStatusEnum.FeedItemQualityApprovalStatus quality_approval_status = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @param value The enum numeric value on the wire for qualityApprovalStatus to set.
+     * @return This builder for chaining.
      */
     public Builder setQualityApprovalStatusValue(int value) {
+      
       qualityApprovalStatus_ = value;
       onChanged();
       return this;
@@ -2144,7 +2227,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.FeedItemQualityApprovalStatusEnum.FeedItemQualityApprovalStatus quality_approval_status = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The qualityApprovalStatus.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.enums.FeedItemQualityApprovalStatusEnum.FeedItemQualityApprovalStatus getQualityApprovalStatus() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v3.enums.FeedItemQualityApprovalStatusEnum.FeedItemQualityApprovalStatus result = com.google.ads.googleads.v3.enums.FeedItemQualityApprovalStatusEnum.FeedItemQualityApprovalStatus.valueOf(qualityApprovalStatus_);
@@ -2156,6 +2241,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.FeedItemQualityApprovalStatusEnum.FeedItemQualityApprovalStatus quality_approval_status = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @param value The qualityApprovalStatus to set.
+     * @return This builder for chaining.
      */
     public Builder setQualityApprovalStatus(com.google.ads.googleads.v3.enums.FeedItemQualityApprovalStatusEnum.FeedItemQualityApprovalStatus value) {
       if (value == null) {
@@ -2172,6 +2259,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.FeedItemQualityApprovalStatusEnum.FeedItemQualityApprovalStatus quality_approval_status = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return This builder for chaining.
      */
     public Builder clearQualityApprovalStatus() {
       
@@ -2183,9 +2271,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<java.lang.Integer> qualityDisapprovalReasons_ =
       java.util.Collections.emptyList();
     private void ensureQualityDisapprovalReasonsIsMutable() {
-      if (!((bitField0_ & 0x00000100) != 0)) {
+      if (!((bitField0_ & 0x00000004) != 0)) {
         qualityDisapprovalReasons_ = new java.util.ArrayList<java.lang.Integer>(qualityDisapprovalReasons_);
-        bitField0_ |= 0x00000100;
+        bitField0_ |= 0x00000004;
       }
     }
     /**
@@ -2194,6 +2282,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v3.enums.FeedItemQualityDisapprovalReasonEnum.FeedItemQualityDisapprovalReason quality_disapproval_reasons = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return A list containing the qualityDisapprovalReasons.
      */
     public java.util.List<com.google.ads.googleads.v3.enums.FeedItemQualityDisapprovalReasonEnum.FeedItemQualityDisapprovalReason> getQualityDisapprovalReasonsList() {
       return new com.google.protobuf.Internal.ListAdapter<
@@ -2205,6 +2294,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v3.enums.FeedItemQualityDisapprovalReasonEnum.FeedItemQualityDisapprovalReason quality_disapproval_reasons = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The count of qualityDisapprovalReasons.
      */
     public int getQualityDisapprovalReasonsCount() {
       return qualityDisapprovalReasons_.size();
@@ -2215,6 +2305,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v3.enums.FeedItemQualityDisapprovalReasonEnum.FeedItemQualityDisapprovalReason quality_disapproval_reasons = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @param index The index of the element to return.
+     * @return The qualityDisapprovalReasons at the given index.
      */
     public com.google.ads.googleads.v3.enums.FeedItemQualityDisapprovalReasonEnum.FeedItemQualityDisapprovalReason getQualityDisapprovalReasons(int index) {
       return qualityDisapprovalReasons_converter_.convert(qualityDisapprovalReasons_.get(index));
@@ -2225,6 +2317,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v3.enums.FeedItemQualityDisapprovalReasonEnum.FeedItemQualityDisapprovalReason quality_disapproval_reasons = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @param index The index to set the value at.
+     * @param value The qualityDisapprovalReasons to set.
+     * @return This builder for chaining.
      */
     public Builder setQualityDisapprovalReasons(
         int index, com.google.ads.googleads.v3.enums.FeedItemQualityDisapprovalReasonEnum.FeedItemQualityDisapprovalReason value) {
@@ -2242,6 +2337,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v3.enums.FeedItemQualityDisapprovalReasonEnum.FeedItemQualityDisapprovalReason quality_disapproval_reasons = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @param value The qualityDisapprovalReasons to add.
+     * @return This builder for chaining.
      */
     public Builder addQualityDisapprovalReasons(com.google.ads.googleads.v3.enums.FeedItemQualityDisapprovalReasonEnum.FeedItemQualityDisapprovalReason value) {
       if (value == null) {
@@ -2258,6 +2355,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v3.enums.FeedItemQualityDisapprovalReasonEnum.FeedItemQualityDisapprovalReason quality_disapproval_reasons = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @param values The qualityDisapprovalReasons to add.
+     * @return This builder for chaining.
      */
     public Builder addAllQualityDisapprovalReasons(
         java.lang.Iterable<? extends com.google.ads.googleads.v3.enums.FeedItemQualityDisapprovalReasonEnum.FeedItemQualityDisapprovalReason> values) {
@@ -2274,10 +2373,11 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v3.enums.FeedItemQualityDisapprovalReasonEnum.FeedItemQualityDisapprovalReason quality_disapproval_reasons = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return This builder for chaining.
      */
     public Builder clearQualityDisapprovalReasons() {
       qualityDisapprovalReasons_ = java.util.Collections.emptyList();
-      bitField0_ = (bitField0_ & ~0x00000100);
+      bitField0_ = (bitField0_ & ~0x00000004);
       onChanged();
       return this;
     }
@@ -2287,6 +2387,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v3.enums.FeedItemQualityDisapprovalReasonEnum.FeedItemQualityDisapprovalReason quality_disapproval_reasons = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return A list containing the enum numeric values on the wire for qualityDisapprovalReasons.
      */
     public java.util.List<java.lang.Integer>
     getQualityDisapprovalReasonsValueList() {
@@ -2298,6 +2399,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v3.enums.FeedItemQualityDisapprovalReasonEnum.FeedItemQualityDisapprovalReason quality_disapproval_reasons = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @param index The index of the value to return.
+     * @return The enum numeric value on the wire of qualityDisapprovalReasons at the given index.
      */
     public int getQualityDisapprovalReasonsValue(int index) {
       return qualityDisapprovalReasons_.get(index);
@@ -2308,6 +2411,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v3.enums.FeedItemQualityDisapprovalReasonEnum.FeedItemQualityDisapprovalReason quality_disapproval_reasons = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @param index The index of the value to return.
+     * @return The enum numeric value on the wire of qualityDisapprovalReasons at the given index.
+     * @return This builder for chaining.
      */
     public Builder setQualityDisapprovalReasonsValue(
         int index, int value) {
@@ -2322,6 +2428,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v3.enums.FeedItemQualityDisapprovalReasonEnum.FeedItemQualityDisapprovalReason quality_disapproval_reasons = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @param value The enum numeric value on the wire for qualityDisapprovalReasons to add.
+     * @return This builder for chaining.
      */
     public Builder addQualityDisapprovalReasonsValue(int value) {
       ensureQualityDisapprovalReasonsIsMutable();
@@ -2335,6 +2443,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v3.enums.FeedItemQualityDisapprovalReasonEnum.FeedItemQualityDisapprovalReason quality_disapproval_reasons = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @param values The enum numeric values on the wire for qualityDisapprovalReasons to add.
+     * @return This builder for chaining.
      */
     public Builder addAllQualityDisapprovalReasonsValue(
         java.lang.Iterable<java.lang.Integer> values) {

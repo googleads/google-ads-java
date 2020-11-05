@@ -1,5 +1,5 @@
 /*
- * Copyright 2019 Google LLC
+ * Copyright 2020 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -21,7 +21,6 @@ import com.google.ads.googleads.v3.services.stub.CampaignSharedSetServiceStubSet
 import com.google.api.core.BetaApi;
 import com.google.api.gax.core.BackgroundResource;
 import com.google.api.gax.rpc.UnaryCallable;
-import com.google.api.pathtemplate.PathTemplate;
 import java.io.IOException;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
@@ -37,8 +36,8 @@ import javax.annotation.Generated;
  * <pre>
  * <code>
  * try (CampaignSharedSetServiceClient campaignSharedSetServiceClient = CampaignSharedSetServiceClient.create()) {
- *   String formattedResourceName = CampaignSharedSetServiceClient.formatCampaignSharedSetName("[CUSTOMER]", "[CAMPAIGN_SHARED_SET]");
- *   CampaignSharedSet response = campaignSharedSetServiceClient.getCampaignSharedSet(formattedResourceName);
+ *   CampaignSharedSetName resourceName = CampaignSharedSetName.of("[CUSTOMER]", "[CAMPAIGN_SHARED_SET]");
+ *   CampaignSharedSet response = campaignSharedSetServiceClient.getCampaignSharedSet(resourceName);
  * }
  * </code>
  * </pre>
@@ -100,49 +99,6 @@ public class CampaignSharedSetServiceClient implements BackgroundResource {
   private final CampaignSharedSetServiceSettings settings;
   private final CampaignSharedSetServiceStub stub;
 
-  private static final PathTemplate CAMPAIGN_SHARED_SET_PATH_TEMPLATE =
-      PathTemplate.createWithoutUrlEncoding(
-          "customers/{customer}/campaignSharedSets/{campaign_shared_set}");
-
-  /**
-   * Formats a string containing the fully-qualified path to represent a campaign_shared_set
-   * resource.
-   *
-   * @deprecated Use the {@link CampaignSharedSetName} class instead.
-   */
-  @Deprecated
-  public static final String formatCampaignSharedSetName(
-      String customer, String campaignSharedSet) {
-    return CAMPAIGN_SHARED_SET_PATH_TEMPLATE.instantiate(
-        "customer", customer,
-        "campaign_shared_set", campaignSharedSet);
-  }
-
-  /**
-   * Parses the customer from the given fully-qualified path which represents a campaign_shared_set
-   * resource.
-   *
-   * @deprecated Use the {@link CampaignSharedSetName} class instead.
-   */
-  @Deprecated
-  public static final String parseCustomerFromCampaignSharedSetName(String campaignSharedSetName) {
-    return CAMPAIGN_SHARED_SET_PATH_TEMPLATE.parse(campaignSharedSetName).get("customer");
-  }
-
-  /**
-   * Parses the campaign_shared_set from the given fully-qualified path which represents a
-   * campaign_shared_set resource.
-   *
-   * @deprecated Use the {@link CampaignSharedSetName} class instead.
-   */
-  @Deprecated
-  public static final String parseCampaignSharedSetFromCampaignSharedSetName(
-      String campaignSharedSetName) {
-    return CAMPAIGN_SHARED_SET_PATH_TEMPLATE
-        .parse(campaignSharedSetName)
-        .get("campaign_shared_set");
-  }
-
   /** Constructs an instance of CampaignSharedSetServiceClient with default settings. */
   public static final CampaignSharedSetServiceClient create() throws IOException {
     return create(CampaignSharedSetServiceSettings.newBuilder().build());
@@ -201,8 +157,32 @@ public class CampaignSharedSetServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (CampaignSharedSetServiceClient campaignSharedSetServiceClient = CampaignSharedSetServiceClient.create()) {
-   *   String formattedResourceName = CampaignSharedSetServiceClient.formatCampaignSharedSetName("[CUSTOMER]", "[CAMPAIGN_SHARED_SET]");
-   *   CampaignSharedSet response = campaignSharedSetServiceClient.getCampaignSharedSet(formattedResourceName);
+   *   CampaignSharedSetName resourceName = CampaignSharedSetName.of("[CUSTOMER]", "[CAMPAIGN_SHARED_SET]");
+   *   CampaignSharedSet response = campaignSharedSetServiceClient.getCampaignSharedSet(resourceName);
+   * }
+   * </code></pre>
+   *
+   * @param resourceName Required. The resource name of the campaign shared set to fetch.
+   * @throws com.google.api.gax.rpc.ApiException if the remote call fails
+   */
+  public final CampaignSharedSet getCampaignSharedSet(CampaignSharedSetName resourceName) {
+    GetCampaignSharedSetRequest request =
+        GetCampaignSharedSetRequest.newBuilder()
+            .setResourceName(resourceName == null ? null : resourceName.toString())
+            .build();
+    return getCampaignSharedSet(request);
+  }
+
+  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  /**
+   * Returns the requested campaign shared set in full detail.
+   *
+   * <p>Sample code:
+   *
+   * <pre><code>
+   * try (CampaignSharedSetServiceClient campaignSharedSetServiceClient = CampaignSharedSetServiceClient.create()) {
+   *   CampaignSharedSetName resourceName = CampaignSharedSetName.of("[CUSTOMER]", "[CAMPAIGN_SHARED_SET]");
+   *   CampaignSharedSet response = campaignSharedSetServiceClient.getCampaignSharedSet(resourceName.toString());
    * }
    * </code></pre>
    *
@@ -210,7 +190,6 @@ public class CampaignSharedSetServiceClient implements BackgroundResource {
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final CampaignSharedSet getCampaignSharedSet(String resourceName) {
-    CAMPAIGN_SHARED_SET_PATH_TEMPLATE.validate(resourceName, "getCampaignSharedSet");
     GetCampaignSharedSetRequest request =
         GetCampaignSharedSetRequest.newBuilder().setResourceName(resourceName).build();
     return getCampaignSharedSet(request);
@@ -224,9 +203,9 @@ public class CampaignSharedSetServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (CampaignSharedSetServiceClient campaignSharedSetServiceClient = CampaignSharedSetServiceClient.create()) {
-   *   String formattedResourceName = CampaignSharedSetServiceClient.formatCampaignSharedSetName("[CUSTOMER]", "[CAMPAIGN_SHARED_SET]");
+   *   CampaignSharedSetName resourceName = CampaignSharedSetName.of("[CUSTOMER]", "[CAMPAIGN_SHARED_SET]");
    *   GetCampaignSharedSetRequest request = GetCampaignSharedSetRequest.newBuilder()
-   *     .setResourceName(formattedResourceName)
+   *     .setResourceName(resourceName.toString())
    *     .build();
    *   CampaignSharedSet response = campaignSharedSetServiceClient.getCampaignSharedSet(request);
    * }
@@ -247,9 +226,9 @@ public class CampaignSharedSetServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (CampaignSharedSetServiceClient campaignSharedSetServiceClient = CampaignSharedSetServiceClient.create()) {
-   *   String formattedResourceName = CampaignSharedSetServiceClient.formatCampaignSharedSetName("[CUSTOMER]", "[CAMPAIGN_SHARED_SET]");
+   *   CampaignSharedSetName resourceName = CampaignSharedSetName.of("[CUSTOMER]", "[CAMPAIGN_SHARED_SET]");
    *   GetCampaignSharedSetRequest request = GetCampaignSharedSetRequest.newBuilder()
-   *     .setResourceName(formattedResourceName)
+   *     .setResourceName(resourceName.toString())
    *     .build();
    *   ApiFuture&lt;CampaignSharedSet&gt; future = campaignSharedSetServiceClient.getCampaignSharedSetCallable().futureCall(request);
    *   // Do something
@@ -260,49 +239,6 @@ public class CampaignSharedSetServiceClient implements BackgroundResource {
   public final UnaryCallable<GetCampaignSharedSetRequest, CampaignSharedSet>
       getCampaignSharedSetCallable() {
     return stub.getCampaignSharedSetCallable();
-  }
-
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
-  /**
-   * Creates or removes campaign shared sets. Operation statuses are returned.
-   *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (CampaignSharedSetServiceClient campaignSharedSetServiceClient = CampaignSharedSetServiceClient.create()) {
-   *   String customerId = "";
-   *   List&lt;CampaignSharedSetOperation&gt; operations = new ArrayList&lt;&gt;();
-   *   boolean partialFailure = false;
-   *   boolean validateOnly = false;
-   *   MutateCampaignSharedSetsResponse response = campaignSharedSetServiceClient.mutateCampaignSharedSets(customerId, operations, partialFailure, validateOnly);
-   * }
-   * </code></pre>
-   *
-   * @param customerId Required. The ID of the customer whose campaign shared sets are being
-   *     modified.
-   * @param operations Required. The list of operations to perform on individual campaign shared
-   *     sets.
-   * @param partialFailure If true, successful operations will be carried out and invalid operations
-   *     will return errors. If false, all operations will be carried out in one transaction if and
-   *     only if they are all valid. Default is false.
-   * @param validateOnly If true, the request is validated but not executed. Only errors are
-   *     returned, not results.
-   * @throws com.google.api.gax.rpc.ApiException if the remote call fails
-   */
-  public final MutateCampaignSharedSetsResponse mutateCampaignSharedSets(
-      String customerId,
-      List<CampaignSharedSetOperation> operations,
-      boolean partialFailure,
-      boolean validateOnly) {
-
-    MutateCampaignSharedSetsRequest request =
-        MutateCampaignSharedSetsRequest.newBuilder()
-            .setCustomerId(customerId)
-            .addAllOperations(operations)
-            .setPartialFailure(partialFailure)
-            .setValidateOnly(validateOnly)
-            .build();
-    return mutateCampaignSharedSets(request);
   }
 
   // AUTO-GENERATED DOCUMENTATION AND METHOD
@@ -327,7 +263,6 @@ public class CampaignSharedSetServiceClient implements BackgroundResource {
    */
   public final MutateCampaignSharedSetsResponse mutateCampaignSharedSets(
       String customerId, List<CampaignSharedSetOperation> operations) {
-
     MutateCampaignSharedSetsRequest request =
         MutateCampaignSharedSetsRequest.newBuilder()
             .setCustomerId(customerId)

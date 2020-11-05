@@ -10,7 +10,7 @@ package com.google.ads.googleads.v3.common;
  *
  * Protobuf type {@code google.ads.googleads.v3.common.TargetCpaSimulationPointList}
  */
-public  final class TargetCpaSimulationPointList extends
+public final class TargetCpaSimulationPointList extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v3.common.TargetCpaSimulationPointList)
     TargetCpaSimulationPointListOrBuilder {
@@ -21,6 +21,13 @@ private static final long serialVersionUID = 0L;
   }
   private TargetCpaSimulationPointList() {
     points_ = java.util.Collections.emptyList();
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new TargetCpaSimulationPointList();
   }
 
   @java.lang.Override
@@ -100,6 +107,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v3.common.TargetCpaSimulationPoint points = 1;</code>
    */
+  @java.lang.Override
   public java.util.List<com.google.ads.googleads.v3.common.TargetCpaSimulationPoint> getPointsList() {
     return points_;
   }
@@ -110,6 +118,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v3.common.TargetCpaSimulationPoint points = 1;</code>
    */
+  @java.lang.Override
   public java.util.List<? extends com.google.ads.googleads.v3.common.TargetCpaSimulationPointOrBuilder> 
       getPointsOrBuilderList() {
     return points_;
@@ -121,6 +130,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v3.common.TargetCpaSimulationPoint points = 1;</code>
    */
+  @java.lang.Override
   public int getPointsCount() {
     return points_.size();
   }
@@ -131,6 +141,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v3.common.TargetCpaSimulationPoint points = 1;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.common.TargetCpaSimulationPoint getPoints(int index) {
     return points_.get(index);
   }
@@ -141,6 +152,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v3.common.TargetCpaSimulationPoint points = 1;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.common.TargetCpaSimulationPointOrBuilder getPointsOrBuilder(
       int index) {
     return points_.get(index);

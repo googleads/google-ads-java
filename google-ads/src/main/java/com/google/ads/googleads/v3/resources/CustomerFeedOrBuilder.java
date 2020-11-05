@@ -15,6 +15,7 @@ public interface CustomerFeedOrBuilder extends
    * </pre>
    *
    * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * @return The resourceName.
    */
   java.lang.String getResourceName();
   /**
@@ -25,6 +26,7 @@ public interface CustomerFeedOrBuilder extends
    * </pre>
    *
    * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * @return The bytes for resourceName.
    */
   com.google.protobuf.ByteString
       getResourceNameBytes();
@@ -35,6 +37,7 @@ public interface CustomerFeedOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue feed = 2 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * @return Whether the feed field is set.
    */
   boolean hasFeed();
   /**
@@ -43,6 +46,7 @@ public interface CustomerFeedOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue feed = 2 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * @return The feed.
    */
   com.google.protobuf.StringValue getFeed();
   /**
@@ -61,6 +65,7 @@ public interface CustomerFeedOrBuilder extends
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v3.enums.PlaceholderTypeEnum.PlaceholderType placeholder_types = 3;</code>
+   * @return A list containing the placeholderTypes.
    */
   java.util.List<com.google.ads.googleads.v3.enums.PlaceholderTypeEnum.PlaceholderType> getPlaceholderTypesList();
   /**
@@ -70,6 +75,7 @@ public interface CustomerFeedOrBuilder extends
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v3.enums.PlaceholderTypeEnum.PlaceholderType placeholder_types = 3;</code>
+   * @return The count of placeholderTypes.
    */
   int getPlaceholderTypesCount();
   /**
@@ -79,6 +85,8 @@ public interface CustomerFeedOrBuilder extends
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v3.enums.PlaceholderTypeEnum.PlaceholderType placeholder_types = 3;</code>
+   * @param index The index of the element to return.
+   * @return The placeholderTypes at the given index.
    */
   com.google.ads.googleads.v3.enums.PlaceholderTypeEnum.PlaceholderType getPlaceholderTypes(int index);
   /**
@@ -88,6 +96,7 @@ public interface CustomerFeedOrBuilder extends
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v3.enums.PlaceholderTypeEnum.PlaceholderType placeholder_types = 3;</code>
+   * @return A list containing the enum numeric values on the wire for placeholderTypes.
    */
   java.util.List<java.lang.Integer>
   getPlaceholderTypesValueList();
@@ -98,6 +107,8 @@ public interface CustomerFeedOrBuilder extends
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v3.enums.PlaceholderTypeEnum.PlaceholderType placeholder_types = 3;</code>
+   * @param index The index of the value to return.
+   * @return The enum numeric value on the wire of placeholderTypes at the given index.
    */
   int getPlaceholderTypesValue(int index);
 
@@ -109,6 +120,7 @@ public interface CustomerFeedOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.MatchingFunction matching_function = 4;</code>
+   * @return Whether the matchingFunction field is set.
    */
   boolean hasMatchingFunction();
   /**
@@ -119,6 +131,7 @@ public interface CustomerFeedOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.MatchingFunction matching_function = 4;</code>
+   * @return The matchingFunction.
    */
   com.google.ads.googleads.v3.common.MatchingFunction getMatchingFunction();
   /**
@@ -139,6 +152,7 @@ public interface CustomerFeedOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.FeedLinkStatusEnum.FeedLinkStatus status = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The enum numeric value on the wire for status.
    */
   int getStatusValue();
   /**
@@ -148,6 +162,7 @@ public interface CustomerFeedOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.FeedLinkStatusEnum.FeedLinkStatus status = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The status.
    */
   com.google.ads.googleads.v3.enums.FeedLinkStatusEnum.FeedLinkStatus getStatus();
 }

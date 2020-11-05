@@ -15,7 +15,7 @@
 package com.google.ads.googleads.lib.catalog;
 
 import com.google.ads.googleads.lib.catalog.annotation.ServiceClientDescriptor;
-import com.google.ads.googleads.lib.catalog.annotation.VersionDescriptor;
+import com.google.ads.googleads.annotations.api.VersionDescriptor;
 import com.google.api.gax.core.FixedCredentialsProvider;
 import com.google.api.gax.rpc.ClientSettings;
 import com.google.api.gax.rpc.ClientSettings.Builder;
@@ -26,7 +26,6 @@ import com.google.common.collect.ImmutableMap;
 import com.google.common.reflect.AbstractInvocationHandler;
 import com.google.common.reflect.Reflection;
 import java.io.IOException;
-import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 

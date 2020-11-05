@@ -15,6 +15,7 @@ public interface ProductAllocationOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue plannable_product_code = 1;</code>
+   * @return Whether the plannableProductCode field is set.
    */
   boolean hasPlannableProductCode();
   /**
@@ -25,6 +26,7 @@ public interface ProductAllocationOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue plannable_product_code = 1;</code>
+   * @return The plannableProductCode.
    */
   com.google.protobuf.StringValue getPlannableProductCode();
   /**
@@ -45,6 +47,7 @@ public interface ProductAllocationOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value budget_micros = 2;</code>
+   * @return Whether the budgetMicros field is set.
    */
   boolean hasBudgetMicros();
   /**
@@ -54,6 +57,7 @@ public interface ProductAllocationOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value budget_micros = 2;</code>
+   * @return The budgetMicros.
    */
   com.google.protobuf.Int64Value getBudgetMicros();
   /**

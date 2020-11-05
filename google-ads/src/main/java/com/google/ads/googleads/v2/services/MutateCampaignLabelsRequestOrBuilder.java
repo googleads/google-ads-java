@@ -9,62 +9,64 @@ public interface MutateCampaignLabelsRequestOrBuilder extends
 
   /**
    * <pre>
-   * ID of the customer whose campaign-label relationships are being modified.
+   * Required. ID of the customer whose campaign-label relationships are being modified.
    * </pre>
    *
-   * <code>string customer_id = 1;</code>
+   * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+   * @return The customerId.
    */
   java.lang.String getCustomerId();
   /**
    * <pre>
-   * ID of the customer whose campaign-label relationships are being modified.
+   * Required. ID of the customer whose campaign-label relationships are being modified.
    * </pre>
    *
-   * <code>string customer_id = 1;</code>
+   * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+   * @return The bytes for customerId.
    */
   com.google.protobuf.ByteString
       getCustomerIdBytes();
 
   /**
    * <pre>
-   * The list of operations to perform on campaign-label relationships.
+   * Required. The list of operations to perform on campaign-label relationships.
    * </pre>
    *
-   * <code>repeated .google.ads.googleads.v2.services.CampaignLabelOperation operations = 2;</code>
+   * <code>repeated .google.ads.googleads.v2.services.CampaignLabelOperation operations = 2 [(.google.api.field_behavior) = REQUIRED];</code>
    */
   java.util.List<com.google.ads.googleads.v2.services.CampaignLabelOperation> 
       getOperationsList();
   /**
    * <pre>
-   * The list of operations to perform on campaign-label relationships.
+   * Required. The list of operations to perform on campaign-label relationships.
    * </pre>
    *
-   * <code>repeated .google.ads.googleads.v2.services.CampaignLabelOperation operations = 2;</code>
+   * <code>repeated .google.ads.googleads.v2.services.CampaignLabelOperation operations = 2 [(.google.api.field_behavior) = REQUIRED];</code>
    */
   com.google.ads.googleads.v2.services.CampaignLabelOperation getOperations(int index);
   /**
    * <pre>
-   * The list of operations to perform on campaign-label relationships.
+   * Required. The list of operations to perform on campaign-label relationships.
    * </pre>
    *
-   * <code>repeated .google.ads.googleads.v2.services.CampaignLabelOperation operations = 2;</code>
+   * <code>repeated .google.ads.googleads.v2.services.CampaignLabelOperation operations = 2 [(.google.api.field_behavior) = REQUIRED];</code>
    */
   int getOperationsCount();
   /**
    * <pre>
-   * The list of operations to perform on campaign-label relationships.
+   * Required. The list of operations to perform on campaign-label relationships.
    * </pre>
    *
-   * <code>repeated .google.ads.googleads.v2.services.CampaignLabelOperation operations = 2;</code>
+   * <code>repeated .google.ads.googleads.v2.services.CampaignLabelOperation operations = 2 [(.google.api.field_behavior) = REQUIRED];</code>
    */
   java.util.List<? extends com.google.ads.googleads.v2.services.CampaignLabelOperationOrBuilder> 
       getOperationsOrBuilderList();
   /**
    * <pre>
-   * The list of operations to perform on campaign-label relationships.
+   * Required. The list of operations to perform on campaign-label relationships.
    * </pre>
    *
-   * <code>repeated .google.ads.googleads.v2.services.CampaignLabelOperation operations = 2;</code>
+   * <code>repeated .google.ads.googleads.v2.services.CampaignLabelOperation operations = 2 [(.google.api.field_behavior) = REQUIRED];</code>
    */
   com.google.ads.googleads.v2.services.CampaignLabelOperationOrBuilder getOperationsOrBuilder(
       int index);
@@ -78,6 +80,7 @@ public interface MutateCampaignLabelsRequestOrBuilder extends
    * </pre>
    *
    * <code>bool partial_failure = 3;</code>
+   * @return The partialFailure.
    */
   boolean getPartialFailure();
 
@@ -88,6 +91,7 @@ public interface MutateCampaignLabelsRequestOrBuilder extends
    * </pre>
    *
    * <code>bool validate_only = 4;</code>
+   * @return The validateOnly.
    */
   boolean getValidateOnly();
 }

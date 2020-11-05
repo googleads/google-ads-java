@@ -10,7 +10,7 @@ package com.google.ads.googleads.v2.services;
  *
  * Protobuf type {@code google.ads.googleads.v2.services.ProductMetadata}
  */
-public  final class ProductMetadata extends
+public final class ProductMetadata extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v2.services.ProductMetadata)
     ProductMetadataOrBuilder {
@@ -20,6 +20,13 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private ProductMetadata() {
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new ProductMetadata();
   }
 
   @java.lang.Override
@@ -35,7 +42,6 @@ private static final long serialVersionUID = 0L;
     if (extensionRegistry == null) {
       throw new java.lang.NullPointerException();
     }
-    int mutable_bitField0_ = 0;
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
         com.google.protobuf.UnknownFieldSet.newBuilder();
     try {
@@ -113,7 +119,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue plannable_product_code = 1;</code>
+   * @return Whether the plannableProductCode field is set.
    */
+  @java.lang.Override
   public boolean hasPlannableProductCode() {
     return plannableProductCode_ != null;
   }
@@ -124,7 +132,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue plannable_product_code = 1;</code>
+   * @return The plannableProductCode.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getPlannableProductCode() {
     return plannableProductCode_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : plannableProductCode_;
   }
@@ -136,6 +146,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue plannable_product_code = 1;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getPlannableProductCodeOrBuilder() {
     return getPlannableProductCode();
   }
@@ -148,7 +159,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.services.PlannableTargeting plannable_targeting = 2;</code>
+   * @return Whether the plannableTargeting field is set.
    */
+  @java.lang.Override
   public boolean hasPlannableTargeting() {
     return plannableTargeting_ != null;
   }
@@ -158,7 +171,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.services.PlannableTargeting plannable_targeting = 2;</code>
+   * @return The plannableTargeting.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.services.PlannableTargeting getPlannableTargeting() {
     return plannableTargeting_ == null ? com.google.ads.googleads.v2.services.PlannableTargeting.getDefaultInstance() : plannableTargeting_;
   }
@@ -169,6 +184,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v2.services.PlannableTargeting plannable_targeting = 2;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.services.PlannableTargetingOrBuilder getPlannableTargetingOrBuilder() {
     return getPlannableTargeting();
   }
@@ -532,6 +548,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue plannable_product_code = 1;</code>
+     * @return Whether the plannableProductCode field is set.
      */
     public boolean hasPlannableProductCode() {
       return plannableProductCodeBuilder_ != null || plannableProductCode_ != null;
@@ -543,6 +560,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue plannable_product_code = 1;</code>
+     * @return The plannableProductCode.
      */
     public com.google.protobuf.StringValue getPlannableProductCode() {
       if (plannableProductCodeBuilder_ == null) {
@@ -693,6 +711,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.services.PlannableTargeting plannable_targeting = 2;</code>
+     * @return Whether the plannableTargeting field is set.
      */
     public boolean hasPlannableTargeting() {
       return plannableTargetingBuilder_ != null || plannableTargeting_ != null;
@@ -703,6 +722,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.services.PlannableTargeting plannable_targeting = 2;</code>
+     * @return The plannableTargeting.
      */
     public com.google.ads.googleads.v2.services.PlannableTargeting getPlannableTargeting() {
       if (plannableTargetingBuilder_ == null) {

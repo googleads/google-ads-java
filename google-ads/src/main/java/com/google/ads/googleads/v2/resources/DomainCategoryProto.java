@@ -30,48 +30,58 @@ public final class DomainCategoryProto {
     java.lang.String[] descriptorData = {
       "\n7google/ads/googleads/v2/resources/doma" +
       "in_category.proto\022!google.ads.googleads." +
-      "v2.resources\032\036google/protobuf/wrappers.p" +
-      "roto\032\034google/api/annotations.proto\"\312\003\n\016D" +
-      "omainCategory\022\025\n\rresource_name\030\001 \001(\t\022.\n\010" +
-      "campaign\030\002 \001(\0132\034.google.protobuf.StringV" +
-      "alue\022.\n\010category\030\003 \001(\0132\034.google.protobuf" +
-      ".StringValue\0223\n\rlanguage_code\030\004 \001(\0132\034.go" +
-      "ogle.protobuf.StringValue\022,\n\006domain\030\005 \001(" +
-      "\0132\034.google.protobuf.StringValue\0227\n\021cover" +
-      "age_fraction\030\006 \001(\0132\034.google.protobuf.Dou" +
-      "bleValue\0222\n\rcategory_rank\030\007 \001(\0132\033.google" +
-      ".protobuf.Int64Value\0220\n\014has_children\030\010 \001" +
-      "(\0132\032.google.protobuf.BoolValue\022?\n\032recomm" +
-      "ended_cpc_bid_micros\030\t \001(\0132\033.google.prot" +
-      "obuf.Int64ValueB\200\002\n%com.google.ads.googl" +
-      "eads.v2.resourcesB\023DomainCategoryProtoP\001" +
-      "ZJgoogle.golang.org/genproto/googleapis/" +
-      "ads/googleads/v2/resources;resources\242\002\003G" +
-      "AA\252\002!Google.Ads.GoogleAds.V2.Resources\312\002" +
-      "!Google\\Ads\\GoogleAds\\V2\\Resources\352\002%Goo" +
-      "gle::Ads::GoogleAds::V2::Resourcesb\006prot" +
-      "o3"
+      "v2.resources\032\037google/api/field_behavior." +
+      "proto\032\031google/api/resource.proto\032\036google" +
+      "/protobuf/wrappers.proto\032\034google/api/ann" +
+      "otations.proto\"\260\005\n\016DomainCategory\022F\n\rres" +
+      "ource_name\030\001 \001(\tB/\340A\003\372A)\n\'googleads.goog" +
+      "leapis.com/DomainCategory\022Y\n\010campaign\030\002 " +
+      "\001(\0132\034.google.protobuf.StringValueB)\340A\003\372A" +
+      "#\n!googleads.googleapis.com/Campaign\0223\n\010" +
+      "category\030\003 \001(\0132\034.google.protobuf.StringV" +
+      "alueB\003\340A\003\0228\n\rlanguage_code\030\004 \001(\0132\034.googl" +
+      "e.protobuf.StringValueB\003\340A\003\0221\n\006domain\030\005 " +
+      "\001(\0132\034.google.protobuf.StringValueB\003\340A\003\022<" +
+      "\n\021coverage_fraction\030\006 \001(\0132\034.google.proto" +
+      "buf.DoubleValueB\003\340A\003\0227\n\rcategory_rank\030\007 " +
+      "\001(\0132\033.google.protobuf.Int64ValueB\003\340A\003\0225\n" +
+      "\014has_children\030\010 \001(\0132\032.google.protobuf.Bo" +
+      "olValueB\003\340A\003\022D\n\032recommended_cpc_bid_micr" +
+      "os\030\t \001(\0132\033.google.protobuf.Int64ValueB\003\340" +
+      "A\003:e\352Ab\n\'googleads.googleapis.com/Domain" +
+      "Category\0227customers/{customer}/domainCat" +
+      "egories/{domain_category}B\200\002\n%com.google" +
+      ".ads.googleads.v2.resourcesB\023DomainCateg" +
+      "oryProtoP\001ZJgoogle.golang.org/genproto/g" +
+      "oogleapis/ads/googleads/v2/resources;res" +
+      "ources\242\002\003GAA\252\002!Google.Ads.GoogleAds.V2.R" +
+      "esources\312\002!Google\\Ads\\GoogleAds\\V2\\Resou" +
+      "rces\352\002%Google::Ads::GoogleAds::V2::Resou" +
+      "rcesb\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          com.google.api.FieldBehaviorProto.getDescriptor(),
+          com.google.api.ResourceProto.getDescriptor(),
           com.google.protobuf.WrappersProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
-        }, assigner);
+        });
     internal_static_google_ads_googleads_v2_resources_DomainCategory_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_google_ads_googleads_v2_resources_DomainCategory_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v2_resources_DomainCategory_descriptor,
         new java.lang.String[] { "ResourceName", "Campaign", "Category", "LanguageCode", "Domain", "CoverageFraction", "CategoryRank", "HasChildren", "RecommendedCpcBidMicros", });
+    com.google.protobuf.ExtensionRegistry registry =
+        com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);
+    registry.add(com.google.api.ResourceProto.resource);
+    registry.add(com.google.api.ResourceProto.resourceReference);
+    com.google.protobuf.Descriptors.FileDescriptor
+        .internalUpdateFileDescriptor(descriptor, registry);
+    com.google.api.FieldBehaviorProto.getDescriptor();
+    com.google.api.ResourceProto.getDescriptor();
     com.google.protobuf.WrappersProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
   }

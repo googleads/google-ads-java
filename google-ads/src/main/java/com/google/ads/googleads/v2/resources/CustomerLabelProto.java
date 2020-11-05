@@ -30,39 +30,48 @@ public final class CustomerLabelProto {
     java.lang.String[] descriptorData = {
       "\n6google/ads/googleads/v2/resources/cust" +
       "omer_label.proto\022!google.ads.googleads.v" +
-      "2.resources\032\036google/protobuf/wrappers.pr" +
-      "oto\032\034google/api/annotations.proto\"\203\001\n\rCu" +
-      "stomerLabel\022\025\n\rresource_name\030\001 \001(\t\022.\n\010cu" +
-      "stomer\030\002 \001(\0132\034.google.protobuf.StringVal" +
-      "ue\022+\n\005label\030\003 \001(\0132\034.google.protobuf.Stri" +
-      "ngValueB\377\001\n%com.google.ads.googleads.v2." +
-      "resourcesB\022CustomerLabelProtoP\001ZJgoogle." +
-      "golang.org/genproto/googleapis/ads/googl" +
-      "eads/v2/resources;resources\242\002\003GAA\252\002!Goog" +
-      "le.Ads.GoogleAds.V2.Resources\312\002!Google\\A" +
-      "ds\\GoogleAds\\V2\\Resources\352\002%Google::Ads:" +
-      ":GoogleAds::V2::Resourcesb\006proto3"
+      "2.resources\032\037google/api/field_behavior.p" +
+      "roto\032\031google/api/resource.proto\032\036google/" +
+      "protobuf/wrappers.proto\032\034google/api/anno" +
+      "tations.proto\"\240\002\n\rCustomerLabel\022E\n\rresou" +
+      "rce_name\030\001 \001(\tB.\340A\005\372A(\n&googleads.google" +
+      "apis.com/CustomerLabel\0223\n\010customer\030\002 \001(\013" +
+      "2\034.google.protobuf.StringValueB\003\340A\003\0220\n\005l" +
+      "abel\030\003 \001(\0132\034.google.protobuf.StringValue" +
+      "B\003\340A\003:a\352A^\n&googleads.googleapis.com/Cus" +
+      "tomerLabel\0224customers/{customer}/custome" +
+      "rLabels/{customer_label}B\377\001\n%com.google." +
+      "ads.googleads.v2.resourcesB\022CustomerLabe" +
+      "lProtoP\001ZJgoogle.golang.org/genproto/goo" +
+      "gleapis/ads/googleads/v2/resources;resou" +
+      "rces\242\002\003GAA\252\002!Google.Ads.GoogleAds.V2.Res" +
+      "ources\312\002!Google\\Ads\\GoogleAds\\V2\\Resourc" +
+      "es\352\002%Google::Ads::GoogleAds::V2::Resourc" +
+      "esb\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          com.google.api.FieldBehaviorProto.getDescriptor(),
+          com.google.api.ResourceProto.getDescriptor(),
           com.google.protobuf.WrappersProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
-        }, assigner);
+        });
     internal_static_google_ads_googleads_v2_resources_CustomerLabel_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_google_ads_googleads_v2_resources_CustomerLabel_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v2_resources_CustomerLabel_descriptor,
         new java.lang.String[] { "ResourceName", "Customer", "Label", });
+    com.google.protobuf.ExtensionRegistry registry =
+        com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);
+    registry.add(com.google.api.ResourceProto.resource);
+    registry.add(com.google.api.ResourceProto.resourceReference);
+    com.google.protobuf.Descriptors.FileDescriptor
+        .internalUpdateFileDescriptor(descriptor, registry);
+    com.google.api.FieldBehaviorProto.getDescriptor();
+    com.google.api.ResourceProto.getDescriptor();
     com.google.protobuf.WrappersProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
   }

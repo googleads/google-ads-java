@@ -13,6 +13,7 @@ public interface GenerateReachForecastRequestOrBuilder extends
    * </pre>
    *
    * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+   * @return The customerId.
    */
   java.lang.String getCustomerId();
   /**
@@ -21,6 +22,7 @@ public interface GenerateReachForecastRequestOrBuilder extends
    * </pre>
    *
    * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+   * @return The bytes for customerId.
    */
   com.google.protobuf.ByteString
       getCustomerIdBytes();
@@ -32,6 +34,7 @@ public interface GenerateReachForecastRequestOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue currency_code = 2;</code>
+   * @return Whether the currencyCode field is set.
    */
   boolean hasCurrencyCode();
   /**
@@ -41,6 +44,7 @@ public interface GenerateReachForecastRequestOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue currency_code = 2;</code>
+   * @return The currencyCode.
    */
   com.google.protobuf.StringValue getCurrencyCode();
   /**
@@ -59,6 +63,7 @@ public interface GenerateReachForecastRequestOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.services.CampaignDuration campaign_duration = 3 [(.google.api.field_behavior) = REQUIRED];</code>
+   * @return Whether the campaignDuration field is set.
    */
   boolean hasCampaignDuration();
   /**
@@ -67,6 +72,7 @@ public interface GenerateReachForecastRequestOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.services.CampaignDuration campaign_duration = 3 [(.google.api.field_behavior) = REQUIRED];</code>
+   * @return The campaignDuration.
    */
   com.google.ads.googleads.v3.services.CampaignDuration getCampaignDuration();
   /**
@@ -84,10 +90,13 @@ public interface GenerateReachForecastRequestOrBuilder extends
    * This is equivalent to the frequency cap exposed in Google Ads when creating
    * a campaign, it represents the maximum number of times an ad can be shown to
    * the same user.
-   * If not specified, no cap is applied.
+   * If not specified no cap is applied.
+   * This field is deprecated in v4 and will eventually be removed.
+   * Please use cookie_frequency_cap_setting instead.
    * </pre>
    *
    * <code>.google.protobuf.Int32Value cookie_frequency_cap = 4;</code>
+   * @return Whether the cookieFrequencyCap field is set.
    */
   boolean hasCookieFrequencyCap();
   /**
@@ -96,10 +105,13 @@ public interface GenerateReachForecastRequestOrBuilder extends
    * This is equivalent to the frequency cap exposed in Google Ads when creating
    * a campaign, it represents the maximum number of times an ad can be shown to
    * the same user.
-   * If not specified, no cap is applied.
+   * If not specified no cap is applied.
+   * This field is deprecated in v4 and will eventually be removed.
+   * Please use cookie_frequency_cap_setting instead.
    * </pre>
    *
    * <code>.google.protobuf.Int32Value cookie_frequency_cap = 4;</code>
+   * @return The cookieFrequencyCap.
    */
   com.google.protobuf.Int32Value getCookieFrequencyCap();
   /**
@@ -108,7 +120,9 @@ public interface GenerateReachForecastRequestOrBuilder extends
    * This is equivalent to the frequency cap exposed in Google Ads when creating
    * a campaign, it represents the maximum number of times an ad can be shown to
    * the same user.
-   * If not specified, no cap is applied.
+   * If not specified no cap is applied.
+   * This field is deprecated in v4 and will eventually be removed.
+   * Please use cookie_frequency_cap_setting instead.
    * </pre>
    *
    * <code>.google.protobuf.Int32Value cookie_frequency_cap = 4;</code>
@@ -124,6 +138,7 @@ public interface GenerateReachForecastRequestOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int32Value min_effective_frequency = 5;</code>
+   * @return Whether the minEffectiveFrequency field is set.
    */
   boolean hasMinEffectiveFrequency();
   /**
@@ -135,6 +150,7 @@ public interface GenerateReachForecastRequestOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int32Value min_effective_frequency = 5;</code>
+   * @return The minEffectiveFrequency.
    */
   com.google.protobuf.Int32Value getMinEffectiveFrequency();
   /**
@@ -160,6 +176,7 @@ public interface GenerateReachForecastRequestOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.services.Targeting targeting = 6;</code>
+   * @return Whether the targeting field is set.
    */
   boolean hasTargeting();
   /**
@@ -173,6 +190,7 @@ public interface GenerateReachForecastRequestOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.services.Targeting targeting = 6;</code>
+   * @return The targeting.
    */
   com.google.ads.googleads.v3.services.Targeting getTargeting();
   /**

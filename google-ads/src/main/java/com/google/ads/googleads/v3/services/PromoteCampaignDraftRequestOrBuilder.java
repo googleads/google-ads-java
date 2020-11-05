@@ -13,6 +13,7 @@ public interface PromoteCampaignDraftRequestOrBuilder extends
    * </pre>
    *
    * <code>string campaign_draft = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+   * @return The campaignDraft.
    */
   java.lang.String getCampaignDraft();
   /**
@@ -21,6 +22,7 @@ public interface PromoteCampaignDraftRequestOrBuilder extends
    * </pre>
    *
    * <code>string campaign_draft = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+   * @return The bytes for campaignDraft.
    */
   com.google.protobuf.ByteString
       getCampaignDraftBytes();

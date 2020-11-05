@@ -14,6 +14,7 @@ public interface CustomerMatchUserListMetadataOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue user_list = 1;</code>
+   * @return Whether the userList field is set.
    */
   boolean hasUserList();
   /**
@@ -23,6 +24,7 @@ public interface CustomerMatchUserListMetadataOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue user_list = 1;</code>
+   * @return The userList.
    */
   com.google.protobuf.StringValue getUserList();
   /**

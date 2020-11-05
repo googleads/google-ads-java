@@ -10,7 +10,7 @@ package com.google.ads.googleads.v2.resources;
  *
  * Protobuf type {@code google.ads.googleads.v2.resources.ChangeStatus}
  */
-public  final class ChangeStatus extends
+public final class ChangeStatus extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v2.resources.ChangeStatus)
     ChangeStatusOrBuilder {
@@ -26,6 +26,13 @@ private static final long serialVersionUID = 0L;
   }
 
   @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new ChangeStatus();
+  }
+
+  @java.lang.Override
   public final com.google.protobuf.UnknownFieldSet
   getUnknownFields() {
     return this.unknownFields;
@@ -38,7 +45,6 @@ private static final long serialVersionUID = 0L;
     if (extensionRegistry == null) {
       throw new java.lang.NullPointerException();
     }
-    int mutable_bitField0_ = 0;
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
         com.google.protobuf.UnknownFieldSet.newBuilder();
     try {
@@ -246,13 +252,15 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object resourceName_;
   /**
    * <pre>
-   * The resource name of the change status.
+   * Output only. The resource name of the change status.
    * Change status resource names have the form:
    * `customers/{customer_id}/changeStatus/{change_status_id}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The resourceName.
    */
+  @java.lang.Override
   public java.lang.String getResourceName() {
     java.lang.Object ref = resourceName_;
     if (ref instanceof java.lang.String) {
@@ -267,13 +275,15 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The resource name of the change status.
+   * Output only. The resource name of the change status.
    * Change status resource names have the form:
    * `customers/{customer_id}/changeStatus/{change_status_id}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The bytes for resourceName.
    */
+  @java.lang.Override
   public com.google.protobuf.ByteString
       getResourceNameBytes() {
     java.lang.Object ref = resourceName_;
@@ -292,31 +302,36 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.StringValue lastChangeDateTime_;
   /**
    * <pre>
-   * Time at which the most recent change has occurred on this resource.
+   * Output only. Time at which the most recent change has occurred on this resource.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue last_change_date_time = 3;</code>
+   * <code>.google.protobuf.StringValue last_change_date_time = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the lastChangeDateTime field is set.
    */
+  @java.lang.Override
   public boolean hasLastChangeDateTime() {
     return lastChangeDateTime_ != null;
   }
   /**
    * <pre>
-   * Time at which the most recent change has occurred on this resource.
+   * Output only. Time at which the most recent change has occurred on this resource.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue last_change_date_time = 3;</code>
+   * <code>.google.protobuf.StringValue last_change_date_time = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The lastChangeDateTime.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getLastChangeDateTime() {
     return lastChangeDateTime_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : lastChangeDateTime_;
   }
   /**
    * <pre>
-   * Time at which the most recent change has occurred on this resource.
+   * Output only. Time at which the most recent change has occurred on this resource.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue last_change_date_time = 3;</code>
+   * <code>.google.protobuf.StringValue last_change_date_time = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getLastChangeDateTimeOrBuilder() {
     return getLastChangeDateTime();
   }
@@ -325,26 +340,28 @@ private static final long serialVersionUID = 0L;
   private int resourceType_;
   /**
    * <pre>
-   * Represents the type of the changed resource. This dictates what fields
+   * Output only. Represents the type of the changed resource. This dictates what fields
    * will be set. For example, for AD_GROUP, campaign and ad_group fields will
    * be set.
    * </pre>
    *
-   * <code>.google.ads.googleads.v2.enums.ChangeStatusResourceTypeEnum.ChangeStatusResourceType resource_type = 4;</code>
+   * <code>.google.ads.googleads.v2.enums.ChangeStatusResourceTypeEnum.ChangeStatusResourceType resource_type = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The enum numeric value on the wire for resourceType.
    */
-  public int getResourceTypeValue() {
+  @java.lang.Override public int getResourceTypeValue() {
     return resourceType_;
   }
   /**
    * <pre>
-   * Represents the type of the changed resource. This dictates what fields
+   * Output only. Represents the type of the changed resource. This dictates what fields
    * will be set. For example, for AD_GROUP, campaign and ad_group fields will
    * be set.
    * </pre>
    *
-   * <code>.google.ads.googleads.v2.enums.ChangeStatusResourceTypeEnum.ChangeStatusResourceType resource_type = 4;</code>
+   * <code>.google.ads.googleads.v2.enums.ChangeStatusResourceTypeEnum.ChangeStatusResourceType resource_type = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The resourceType.
    */
-  public com.google.ads.googleads.v2.enums.ChangeStatusResourceTypeEnum.ChangeStatusResourceType getResourceType() {
+  @java.lang.Override public com.google.ads.googleads.v2.enums.ChangeStatusResourceTypeEnum.ChangeStatusResourceType getResourceType() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v2.enums.ChangeStatusResourceTypeEnum.ChangeStatusResourceType result = com.google.ads.googleads.v2.enums.ChangeStatusResourceTypeEnum.ChangeStatusResourceType.valueOf(resourceType_);
     return result == null ? com.google.ads.googleads.v2.enums.ChangeStatusResourceTypeEnum.ChangeStatusResourceType.UNRECOGNIZED : result;
@@ -354,31 +371,36 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.StringValue campaign_;
   /**
    * <pre>
-   * The Campaign affected by this change.
+   * Output only. The Campaign affected by this change.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue campaign = 5;</code>
+   * <code>.google.protobuf.StringValue campaign = 5 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return Whether the campaign field is set.
    */
+  @java.lang.Override
   public boolean hasCampaign() {
     return campaign_ != null;
   }
   /**
    * <pre>
-   * The Campaign affected by this change.
+   * Output only. The Campaign affected by this change.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue campaign = 5;</code>
+   * <code>.google.protobuf.StringValue campaign = 5 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The campaign.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getCampaign() {
     return campaign_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : campaign_;
   }
   /**
    * <pre>
-   * The Campaign affected by this change.
+   * Output only. The Campaign affected by this change.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue campaign = 5;</code>
+   * <code>.google.protobuf.StringValue campaign = 5 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getCampaignOrBuilder() {
     return getCampaign();
   }
@@ -387,31 +409,36 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.StringValue adGroup_;
   /**
    * <pre>
-   * The AdGroup affected by this change.
+   * Output only. The AdGroup affected by this change.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue ad_group = 6;</code>
+   * <code>.google.protobuf.StringValue ad_group = 6 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return Whether the adGroup field is set.
    */
+  @java.lang.Override
   public boolean hasAdGroup() {
     return adGroup_ != null;
   }
   /**
    * <pre>
-   * The AdGroup affected by this change.
+   * Output only. The AdGroup affected by this change.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue ad_group = 6;</code>
+   * <code>.google.protobuf.StringValue ad_group = 6 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The adGroup.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getAdGroup() {
     return adGroup_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : adGroup_;
   }
   /**
    * <pre>
-   * The AdGroup affected by this change.
+   * Output only. The AdGroup affected by this change.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue ad_group = 6;</code>
+   * <code>.google.protobuf.StringValue ad_group = 6 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getAdGroupOrBuilder() {
     return getAdGroup();
   }
@@ -420,22 +447,24 @@ private static final long serialVersionUID = 0L;
   private int resourceStatus_;
   /**
    * <pre>
-   * Represents the status of the changed resource.
+   * Output only. Represents the status of the changed resource.
    * </pre>
    *
-   * <code>.google.ads.googleads.v2.enums.ChangeStatusOperationEnum.ChangeStatusOperation resource_status = 8;</code>
+   * <code>.google.ads.googleads.v2.enums.ChangeStatusOperationEnum.ChangeStatusOperation resource_status = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The enum numeric value on the wire for resourceStatus.
    */
-  public int getResourceStatusValue() {
+  @java.lang.Override public int getResourceStatusValue() {
     return resourceStatus_;
   }
   /**
    * <pre>
-   * Represents the status of the changed resource.
+   * Output only. Represents the status of the changed resource.
    * </pre>
    *
-   * <code>.google.ads.googleads.v2.enums.ChangeStatusOperationEnum.ChangeStatusOperation resource_status = 8;</code>
+   * <code>.google.ads.googleads.v2.enums.ChangeStatusOperationEnum.ChangeStatusOperation resource_status = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The resourceStatus.
    */
-  public com.google.ads.googleads.v2.enums.ChangeStatusOperationEnum.ChangeStatusOperation getResourceStatus() {
+  @java.lang.Override public com.google.ads.googleads.v2.enums.ChangeStatusOperationEnum.ChangeStatusOperation getResourceStatus() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v2.enums.ChangeStatusOperationEnum.ChangeStatusOperation result = com.google.ads.googleads.v2.enums.ChangeStatusOperationEnum.ChangeStatusOperation.valueOf(resourceStatus_);
     return result == null ? com.google.ads.googleads.v2.enums.ChangeStatusOperationEnum.ChangeStatusOperation.UNRECOGNIZED : result;
@@ -445,31 +474,36 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.StringValue adGroupAd_;
   /**
    * <pre>
-   * The AdGroupAd affected by this change.
+   * Output only. The AdGroupAd affected by this change.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue ad_group_ad = 9;</code>
+   * <code>.google.protobuf.StringValue ad_group_ad = 9 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return Whether the adGroupAd field is set.
    */
+  @java.lang.Override
   public boolean hasAdGroupAd() {
     return adGroupAd_ != null;
   }
   /**
    * <pre>
-   * The AdGroupAd affected by this change.
+   * Output only. The AdGroupAd affected by this change.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue ad_group_ad = 9;</code>
+   * <code>.google.protobuf.StringValue ad_group_ad = 9 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The adGroupAd.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getAdGroupAd() {
     return adGroupAd_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : adGroupAd_;
   }
   /**
    * <pre>
-   * The AdGroupAd affected by this change.
+   * Output only. The AdGroupAd affected by this change.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue ad_group_ad = 9;</code>
+   * <code>.google.protobuf.StringValue ad_group_ad = 9 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getAdGroupAdOrBuilder() {
     return getAdGroupAd();
   }
@@ -478,31 +512,36 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.StringValue adGroupCriterion_;
   /**
    * <pre>
-   * The AdGroupCriterion affected by this change.
+   * Output only. The AdGroupCriterion affected by this change.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue ad_group_criterion = 10;</code>
+   * <code>.google.protobuf.StringValue ad_group_criterion = 10 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return Whether the adGroupCriterion field is set.
    */
+  @java.lang.Override
   public boolean hasAdGroupCriterion() {
     return adGroupCriterion_ != null;
   }
   /**
    * <pre>
-   * The AdGroupCriterion affected by this change.
+   * Output only. The AdGroupCriterion affected by this change.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue ad_group_criterion = 10;</code>
+   * <code>.google.protobuf.StringValue ad_group_criterion = 10 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The adGroupCriterion.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getAdGroupCriterion() {
     return adGroupCriterion_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : adGroupCriterion_;
   }
   /**
    * <pre>
-   * The AdGroupCriterion affected by this change.
+   * Output only. The AdGroupCriterion affected by this change.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue ad_group_criterion = 10;</code>
+   * <code>.google.protobuf.StringValue ad_group_criterion = 10 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getAdGroupCriterionOrBuilder() {
     return getAdGroupCriterion();
   }
@@ -511,31 +550,36 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.StringValue campaignCriterion_;
   /**
    * <pre>
-   * The CampaignCriterion affected by this change.
+   * Output only. The CampaignCriterion affected by this change.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue campaign_criterion = 11;</code>
+   * <code>.google.protobuf.StringValue campaign_criterion = 11 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return Whether the campaignCriterion field is set.
    */
+  @java.lang.Override
   public boolean hasCampaignCriterion() {
     return campaignCriterion_ != null;
   }
   /**
    * <pre>
-   * The CampaignCriterion affected by this change.
+   * Output only. The CampaignCriterion affected by this change.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue campaign_criterion = 11;</code>
+   * <code>.google.protobuf.StringValue campaign_criterion = 11 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The campaignCriterion.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getCampaignCriterion() {
     return campaignCriterion_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : campaignCriterion_;
   }
   /**
    * <pre>
-   * The CampaignCriterion affected by this change.
+   * Output only. The CampaignCriterion affected by this change.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue campaign_criterion = 11;</code>
+   * <code>.google.protobuf.StringValue campaign_criterion = 11 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getCampaignCriterionOrBuilder() {
     return getCampaignCriterion();
   }
@@ -544,31 +588,36 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.StringValue feed_;
   /**
    * <pre>
-   * The Feed affected by this change.
+   * Output only. The Feed affected by this change.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue feed = 12;</code>
+   * <code>.google.protobuf.StringValue feed = 12 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return Whether the feed field is set.
    */
+  @java.lang.Override
   public boolean hasFeed() {
     return feed_ != null;
   }
   /**
    * <pre>
-   * The Feed affected by this change.
+   * Output only. The Feed affected by this change.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue feed = 12;</code>
+   * <code>.google.protobuf.StringValue feed = 12 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The feed.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getFeed() {
     return feed_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : feed_;
   }
   /**
    * <pre>
-   * The Feed affected by this change.
+   * Output only. The Feed affected by this change.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue feed = 12;</code>
+   * <code>.google.protobuf.StringValue feed = 12 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getFeedOrBuilder() {
     return getFeed();
   }
@@ -577,31 +626,36 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.StringValue feedItem_;
   /**
    * <pre>
-   * The FeedItem affected by this change.
+   * Output only. The FeedItem affected by this change.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue feed_item = 13;</code>
+   * <code>.google.protobuf.StringValue feed_item = 13 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return Whether the feedItem field is set.
    */
+  @java.lang.Override
   public boolean hasFeedItem() {
     return feedItem_ != null;
   }
   /**
    * <pre>
-   * The FeedItem affected by this change.
+   * Output only. The FeedItem affected by this change.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue feed_item = 13;</code>
+   * <code>.google.protobuf.StringValue feed_item = 13 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The feedItem.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getFeedItem() {
     return feedItem_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : feedItem_;
   }
   /**
    * <pre>
-   * The FeedItem affected by this change.
+   * Output only. The FeedItem affected by this change.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue feed_item = 13;</code>
+   * <code>.google.protobuf.StringValue feed_item = 13 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getFeedItemOrBuilder() {
     return getFeedItem();
   }
@@ -610,31 +664,36 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.StringValue adGroupFeed_;
   /**
    * <pre>
-   * The AdGroupFeed affected by this change.
+   * Output only. The AdGroupFeed affected by this change.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue ad_group_feed = 14;</code>
+   * <code>.google.protobuf.StringValue ad_group_feed = 14 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return Whether the adGroupFeed field is set.
    */
+  @java.lang.Override
   public boolean hasAdGroupFeed() {
     return adGroupFeed_ != null;
   }
   /**
    * <pre>
-   * The AdGroupFeed affected by this change.
+   * Output only. The AdGroupFeed affected by this change.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue ad_group_feed = 14;</code>
+   * <code>.google.protobuf.StringValue ad_group_feed = 14 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The adGroupFeed.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getAdGroupFeed() {
     return adGroupFeed_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : adGroupFeed_;
   }
   /**
    * <pre>
-   * The AdGroupFeed affected by this change.
+   * Output only. The AdGroupFeed affected by this change.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue ad_group_feed = 14;</code>
+   * <code>.google.protobuf.StringValue ad_group_feed = 14 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getAdGroupFeedOrBuilder() {
     return getAdGroupFeed();
   }
@@ -643,31 +702,36 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.StringValue campaignFeed_;
   /**
    * <pre>
-   * The CampaignFeed affected by this change.
+   * Output only. The CampaignFeed affected by this change.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue campaign_feed = 15;</code>
+   * <code>.google.protobuf.StringValue campaign_feed = 15 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return Whether the campaignFeed field is set.
    */
+  @java.lang.Override
   public boolean hasCampaignFeed() {
     return campaignFeed_ != null;
   }
   /**
    * <pre>
-   * The CampaignFeed affected by this change.
+   * Output only. The CampaignFeed affected by this change.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue campaign_feed = 15;</code>
+   * <code>.google.protobuf.StringValue campaign_feed = 15 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The campaignFeed.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getCampaignFeed() {
     return campaignFeed_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : campaignFeed_;
   }
   /**
    * <pre>
-   * The CampaignFeed affected by this change.
+   * Output only. The CampaignFeed affected by this change.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue campaign_feed = 15;</code>
+   * <code>.google.protobuf.StringValue campaign_feed = 15 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getCampaignFeedOrBuilder() {
     return getCampaignFeed();
   }
@@ -676,31 +740,36 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.StringValue adGroupBidModifier_;
   /**
    * <pre>
-   * The AdGroupBidModifier affected by this change.
+   * Output only. The AdGroupBidModifier affected by this change.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue ad_group_bid_modifier = 16;</code>
+   * <code>.google.protobuf.StringValue ad_group_bid_modifier = 16 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return Whether the adGroupBidModifier field is set.
    */
+  @java.lang.Override
   public boolean hasAdGroupBidModifier() {
     return adGroupBidModifier_ != null;
   }
   /**
    * <pre>
-   * The AdGroupBidModifier affected by this change.
+   * Output only. The AdGroupBidModifier affected by this change.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue ad_group_bid_modifier = 16;</code>
+   * <code>.google.protobuf.StringValue ad_group_bid_modifier = 16 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The adGroupBidModifier.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getAdGroupBidModifier() {
     return adGroupBidModifier_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : adGroupBidModifier_;
   }
   /**
    * <pre>
-   * The AdGroupBidModifier affected by this change.
+   * Output only. The AdGroupBidModifier affected by this change.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue ad_group_bid_modifier = 16;</code>
+   * <code>.google.protobuf.StringValue ad_group_bid_modifier = 16 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getAdGroupBidModifierOrBuilder() {
     return getAdGroupBidModifier();
   }
@@ -1376,12 +1445,13 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object resourceName_ = "";
     /**
      * <pre>
-     * The resource name of the change status.
+     * Output only. The resource name of the change status.
      * Change status resource names have the form:
      * `customers/{customer_id}/changeStatus/{change_status_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @return The resourceName.
      */
     public java.lang.String getResourceName() {
       java.lang.Object ref = resourceName_;
@@ -1397,12 +1467,13 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the change status.
+     * Output only. The resource name of the change status.
      * Change status resource names have the form:
      * `customers/{customer_id}/changeStatus/{change_status_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @return The bytes for resourceName.
      */
     public com.google.protobuf.ByteString
         getResourceNameBytes() {
@@ -1419,12 +1490,14 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the change status.
+     * Output only. The resource name of the change status.
      * Change status resource names have the form:
      * `customers/{customer_id}/changeStatus/{change_status_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @param value The resourceName to set.
+     * @return This builder for chaining.
      */
     public Builder setResourceName(
         java.lang.String value) {
@@ -1438,12 +1511,13 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the change status.
+     * Output only. The resource name of the change status.
      * Change status resource names have the form:
      * `customers/{customer_id}/changeStatus/{change_status_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @return This builder for chaining.
      */
     public Builder clearResourceName() {
       
@@ -1453,12 +1527,14 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the change status.
+     * Output only. The resource name of the change status.
      * Change status resource names have the form:
      * `customers/{customer_id}/changeStatus/{change_status_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @param value The bytes for resourceName to set.
+     * @return This builder for chaining.
      */
     public Builder setResourceNameBytes(
         com.google.protobuf.ByteString value) {
@@ -1477,20 +1553,22 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> lastChangeDateTimeBuilder_;
     /**
      * <pre>
-     * Time at which the most recent change has occurred on this resource.
+     * Output only. Time at which the most recent change has occurred on this resource.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue last_change_date_time = 3;</code>
+     * <code>.google.protobuf.StringValue last_change_date_time = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the lastChangeDateTime field is set.
      */
     public boolean hasLastChangeDateTime() {
       return lastChangeDateTimeBuilder_ != null || lastChangeDateTime_ != null;
     }
     /**
      * <pre>
-     * Time at which the most recent change has occurred on this resource.
+     * Output only. Time at which the most recent change has occurred on this resource.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue last_change_date_time = 3;</code>
+     * <code>.google.protobuf.StringValue last_change_date_time = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The lastChangeDateTime.
      */
     public com.google.protobuf.StringValue getLastChangeDateTime() {
       if (lastChangeDateTimeBuilder_ == null) {
@@ -1501,10 +1579,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Time at which the most recent change has occurred on this resource.
+     * Output only. Time at which the most recent change has occurred on this resource.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue last_change_date_time = 3;</code>
+     * <code>.google.protobuf.StringValue last_change_date_time = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setLastChangeDateTime(com.google.protobuf.StringValue value) {
       if (lastChangeDateTimeBuilder_ == null) {
@@ -1521,10 +1599,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Time at which the most recent change has occurred on this resource.
+     * Output only. Time at which the most recent change has occurred on this resource.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue last_change_date_time = 3;</code>
+     * <code>.google.protobuf.StringValue last_change_date_time = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setLastChangeDateTime(
         com.google.protobuf.StringValue.Builder builderForValue) {
@@ -1539,10 +1617,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Time at which the most recent change has occurred on this resource.
+     * Output only. Time at which the most recent change has occurred on this resource.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue last_change_date_time = 3;</code>
+     * <code>.google.protobuf.StringValue last_change_date_time = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder mergeLastChangeDateTime(com.google.protobuf.StringValue value) {
       if (lastChangeDateTimeBuilder_ == null) {
@@ -1561,10 +1639,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Time at which the most recent change has occurred on this resource.
+     * Output only. Time at which the most recent change has occurred on this resource.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue last_change_date_time = 3;</code>
+     * <code>.google.protobuf.StringValue last_change_date_time = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearLastChangeDateTime() {
       if (lastChangeDateTimeBuilder_ == null) {
@@ -1579,10 +1657,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Time at which the most recent change has occurred on this resource.
+     * Output only. Time at which the most recent change has occurred on this resource.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue last_change_date_time = 3;</code>
+     * <code>.google.protobuf.StringValue last_change_date_time = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValue.Builder getLastChangeDateTimeBuilder() {
       
@@ -1591,10 +1669,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Time at which the most recent change has occurred on this resource.
+     * Output only. Time at which the most recent change has occurred on this resource.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue last_change_date_time = 3;</code>
+     * <code>.google.protobuf.StringValue last_change_date_time = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValueOrBuilder getLastChangeDateTimeOrBuilder() {
       if (lastChangeDateTimeBuilder_ != null) {
@@ -1606,10 +1684,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Time at which the most recent change has occurred on this resource.
+     * Output only. Time at which the most recent change has occurred on this resource.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue last_change_date_time = 3;</code>
+     * <code>.google.protobuf.StringValue last_change_date_time = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
@@ -1628,39 +1706,45 @@ private static final long serialVersionUID = 0L;
     private int resourceType_ = 0;
     /**
      * <pre>
-     * Represents the type of the changed resource. This dictates what fields
+     * Output only. Represents the type of the changed resource. This dictates what fields
      * will be set. For example, for AD_GROUP, campaign and ad_group fields will
      * be set.
      * </pre>
      *
-     * <code>.google.ads.googleads.v2.enums.ChangeStatusResourceTypeEnum.ChangeStatusResourceType resource_type = 4;</code>
+     * <code>.google.ads.googleads.v2.enums.ChangeStatusResourceTypeEnum.ChangeStatusResourceType resource_type = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The enum numeric value on the wire for resourceType.
      */
-    public int getResourceTypeValue() {
+    @java.lang.Override public int getResourceTypeValue() {
       return resourceType_;
     }
     /**
      * <pre>
-     * Represents the type of the changed resource. This dictates what fields
+     * Output only. Represents the type of the changed resource. This dictates what fields
      * will be set. For example, for AD_GROUP, campaign and ad_group fields will
      * be set.
      * </pre>
      *
-     * <code>.google.ads.googleads.v2.enums.ChangeStatusResourceTypeEnum.ChangeStatusResourceType resource_type = 4;</code>
+     * <code>.google.ads.googleads.v2.enums.ChangeStatusResourceTypeEnum.ChangeStatusResourceType resource_type = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @param value The enum numeric value on the wire for resourceType to set.
+     * @return This builder for chaining.
      */
     public Builder setResourceTypeValue(int value) {
+      
       resourceType_ = value;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Represents the type of the changed resource. This dictates what fields
+     * Output only. Represents the type of the changed resource. This dictates what fields
      * will be set. For example, for AD_GROUP, campaign and ad_group fields will
      * be set.
      * </pre>
      *
-     * <code>.google.ads.googleads.v2.enums.ChangeStatusResourceTypeEnum.ChangeStatusResourceType resource_type = 4;</code>
+     * <code>.google.ads.googleads.v2.enums.ChangeStatusResourceTypeEnum.ChangeStatusResourceType resource_type = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The resourceType.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v2.enums.ChangeStatusResourceTypeEnum.ChangeStatusResourceType getResourceType() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v2.enums.ChangeStatusResourceTypeEnum.ChangeStatusResourceType result = com.google.ads.googleads.v2.enums.ChangeStatusResourceTypeEnum.ChangeStatusResourceType.valueOf(resourceType_);
@@ -1668,12 +1752,14 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Represents the type of the changed resource. This dictates what fields
+     * Output only. Represents the type of the changed resource. This dictates what fields
      * will be set. For example, for AD_GROUP, campaign and ad_group fields will
      * be set.
      * </pre>
      *
-     * <code>.google.ads.googleads.v2.enums.ChangeStatusResourceTypeEnum.ChangeStatusResourceType resource_type = 4;</code>
+     * <code>.google.ads.googleads.v2.enums.ChangeStatusResourceTypeEnum.ChangeStatusResourceType resource_type = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @param value The resourceType to set.
+     * @return This builder for chaining.
      */
     public Builder setResourceType(com.google.ads.googleads.v2.enums.ChangeStatusResourceTypeEnum.ChangeStatusResourceType value) {
       if (value == null) {
@@ -1686,12 +1772,13 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Represents the type of the changed resource. This dictates what fields
+     * Output only. Represents the type of the changed resource. This dictates what fields
      * will be set. For example, for AD_GROUP, campaign and ad_group fields will
      * be set.
      * </pre>
      *
-     * <code>.google.ads.googleads.v2.enums.ChangeStatusResourceTypeEnum.ChangeStatusResourceType resource_type = 4;</code>
+     * <code>.google.ads.googleads.v2.enums.ChangeStatusResourceTypeEnum.ChangeStatusResourceType resource_type = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return This builder for chaining.
      */
     public Builder clearResourceType() {
       
@@ -1705,20 +1792,22 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> campaignBuilder_;
     /**
      * <pre>
-     * The Campaign affected by this change.
+     * Output only. The Campaign affected by this change.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue campaign = 5;</code>
+     * <code>.google.protobuf.StringValue campaign = 5 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @return Whether the campaign field is set.
      */
     public boolean hasCampaign() {
       return campaignBuilder_ != null || campaign_ != null;
     }
     /**
      * <pre>
-     * The Campaign affected by this change.
+     * Output only. The Campaign affected by this change.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue campaign = 5;</code>
+     * <code>.google.protobuf.StringValue campaign = 5 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @return The campaign.
      */
     public com.google.protobuf.StringValue getCampaign() {
       if (campaignBuilder_ == null) {
@@ -1729,10 +1818,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The Campaign affected by this change.
+     * Output only. The Campaign affected by this change.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue campaign = 5;</code>
+     * <code>.google.protobuf.StringValue campaign = 5 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder setCampaign(com.google.protobuf.StringValue value) {
       if (campaignBuilder_ == null) {
@@ -1749,10 +1838,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The Campaign affected by this change.
+     * Output only. The Campaign affected by this change.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue campaign = 5;</code>
+     * <code>.google.protobuf.StringValue campaign = 5 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder setCampaign(
         com.google.protobuf.StringValue.Builder builderForValue) {
@@ -1767,10 +1856,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The Campaign affected by this change.
+     * Output only. The Campaign affected by this change.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue campaign = 5;</code>
+     * <code>.google.protobuf.StringValue campaign = 5 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder mergeCampaign(com.google.protobuf.StringValue value) {
       if (campaignBuilder_ == null) {
@@ -1789,10 +1878,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The Campaign affected by this change.
+     * Output only. The Campaign affected by this change.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue campaign = 5;</code>
+     * <code>.google.protobuf.StringValue campaign = 5 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder clearCampaign() {
       if (campaignBuilder_ == null) {
@@ -1807,10 +1896,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The Campaign affected by this change.
+     * Output only. The Campaign affected by this change.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue campaign = 5;</code>
+     * <code>.google.protobuf.StringValue campaign = 5 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public com.google.protobuf.StringValue.Builder getCampaignBuilder() {
       
@@ -1819,10 +1908,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The Campaign affected by this change.
+     * Output only. The Campaign affected by this change.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue campaign = 5;</code>
+     * <code>.google.protobuf.StringValue campaign = 5 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public com.google.protobuf.StringValueOrBuilder getCampaignOrBuilder() {
       if (campaignBuilder_ != null) {
@@ -1834,10 +1923,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The Campaign affected by this change.
+     * Output only. The Campaign affected by this change.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue campaign = 5;</code>
+     * <code>.google.protobuf.StringValue campaign = 5 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
@@ -1858,20 +1947,22 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> adGroupBuilder_;
     /**
      * <pre>
-     * The AdGroup affected by this change.
+     * Output only. The AdGroup affected by this change.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue ad_group = 6;</code>
+     * <code>.google.protobuf.StringValue ad_group = 6 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @return Whether the adGroup field is set.
      */
     public boolean hasAdGroup() {
       return adGroupBuilder_ != null || adGroup_ != null;
     }
     /**
      * <pre>
-     * The AdGroup affected by this change.
+     * Output only. The AdGroup affected by this change.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue ad_group = 6;</code>
+     * <code>.google.protobuf.StringValue ad_group = 6 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @return The adGroup.
      */
     public com.google.protobuf.StringValue getAdGroup() {
       if (adGroupBuilder_ == null) {
@@ -1882,10 +1973,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The AdGroup affected by this change.
+     * Output only. The AdGroup affected by this change.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue ad_group = 6;</code>
+     * <code>.google.protobuf.StringValue ad_group = 6 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder setAdGroup(com.google.protobuf.StringValue value) {
       if (adGroupBuilder_ == null) {
@@ -1902,10 +1993,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The AdGroup affected by this change.
+     * Output only. The AdGroup affected by this change.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue ad_group = 6;</code>
+     * <code>.google.protobuf.StringValue ad_group = 6 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder setAdGroup(
         com.google.protobuf.StringValue.Builder builderForValue) {
@@ -1920,10 +2011,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The AdGroup affected by this change.
+     * Output only. The AdGroup affected by this change.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue ad_group = 6;</code>
+     * <code>.google.protobuf.StringValue ad_group = 6 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder mergeAdGroup(com.google.protobuf.StringValue value) {
       if (adGroupBuilder_ == null) {
@@ -1942,10 +2033,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The AdGroup affected by this change.
+     * Output only. The AdGroup affected by this change.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue ad_group = 6;</code>
+     * <code>.google.protobuf.StringValue ad_group = 6 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder clearAdGroup() {
       if (adGroupBuilder_ == null) {
@@ -1960,10 +2051,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The AdGroup affected by this change.
+     * Output only. The AdGroup affected by this change.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue ad_group = 6;</code>
+     * <code>.google.protobuf.StringValue ad_group = 6 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public com.google.protobuf.StringValue.Builder getAdGroupBuilder() {
       
@@ -1972,10 +2063,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The AdGroup affected by this change.
+     * Output only. The AdGroup affected by this change.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue ad_group = 6;</code>
+     * <code>.google.protobuf.StringValue ad_group = 6 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public com.google.protobuf.StringValueOrBuilder getAdGroupOrBuilder() {
       if (adGroupBuilder_ != null) {
@@ -1987,10 +2078,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The AdGroup affected by this change.
+     * Output only. The AdGroup affected by this change.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue ad_group = 6;</code>
+     * <code>.google.protobuf.StringValue ad_group = 6 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
@@ -2009,33 +2100,39 @@ private static final long serialVersionUID = 0L;
     private int resourceStatus_ = 0;
     /**
      * <pre>
-     * Represents the status of the changed resource.
+     * Output only. Represents the status of the changed resource.
      * </pre>
      *
-     * <code>.google.ads.googleads.v2.enums.ChangeStatusOperationEnum.ChangeStatusOperation resource_status = 8;</code>
+     * <code>.google.ads.googleads.v2.enums.ChangeStatusOperationEnum.ChangeStatusOperation resource_status = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The enum numeric value on the wire for resourceStatus.
      */
-    public int getResourceStatusValue() {
+    @java.lang.Override public int getResourceStatusValue() {
       return resourceStatus_;
     }
     /**
      * <pre>
-     * Represents the status of the changed resource.
+     * Output only. Represents the status of the changed resource.
      * </pre>
      *
-     * <code>.google.ads.googleads.v2.enums.ChangeStatusOperationEnum.ChangeStatusOperation resource_status = 8;</code>
+     * <code>.google.ads.googleads.v2.enums.ChangeStatusOperationEnum.ChangeStatusOperation resource_status = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @param value The enum numeric value on the wire for resourceStatus to set.
+     * @return This builder for chaining.
      */
     public Builder setResourceStatusValue(int value) {
+      
       resourceStatus_ = value;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Represents the status of the changed resource.
+     * Output only. Represents the status of the changed resource.
      * </pre>
      *
-     * <code>.google.ads.googleads.v2.enums.ChangeStatusOperationEnum.ChangeStatusOperation resource_status = 8;</code>
+     * <code>.google.ads.googleads.v2.enums.ChangeStatusOperationEnum.ChangeStatusOperation resource_status = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The resourceStatus.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v2.enums.ChangeStatusOperationEnum.ChangeStatusOperation getResourceStatus() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v2.enums.ChangeStatusOperationEnum.ChangeStatusOperation result = com.google.ads.googleads.v2.enums.ChangeStatusOperationEnum.ChangeStatusOperation.valueOf(resourceStatus_);
@@ -2043,10 +2140,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Represents the status of the changed resource.
+     * Output only. Represents the status of the changed resource.
      * </pre>
      *
-     * <code>.google.ads.googleads.v2.enums.ChangeStatusOperationEnum.ChangeStatusOperation resource_status = 8;</code>
+     * <code>.google.ads.googleads.v2.enums.ChangeStatusOperationEnum.ChangeStatusOperation resource_status = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @param value The resourceStatus to set.
+     * @return This builder for chaining.
      */
     public Builder setResourceStatus(com.google.ads.googleads.v2.enums.ChangeStatusOperationEnum.ChangeStatusOperation value) {
       if (value == null) {
@@ -2059,10 +2158,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Represents the status of the changed resource.
+     * Output only. Represents the status of the changed resource.
      * </pre>
      *
-     * <code>.google.ads.googleads.v2.enums.ChangeStatusOperationEnum.ChangeStatusOperation resource_status = 8;</code>
+     * <code>.google.ads.googleads.v2.enums.ChangeStatusOperationEnum.ChangeStatusOperation resource_status = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return This builder for chaining.
      */
     public Builder clearResourceStatus() {
       
@@ -2076,20 +2176,22 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> adGroupAdBuilder_;
     /**
      * <pre>
-     * The AdGroupAd affected by this change.
+     * Output only. The AdGroupAd affected by this change.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue ad_group_ad = 9;</code>
+     * <code>.google.protobuf.StringValue ad_group_ad = 9 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @return Whether the adGroupAd field is set.
      */
     public boolean hasAdGroupAd() {
       return adGroupAdBuilder_ != null || adGroupAd_ != null;
     }
     /**
      * <pre>
-     * The AdGroupAd affected by this change.
+     * Output only. The AdGroupAd affected by this change.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue ad_group_ad = 9;</code>
+     * <code>.google.protobuf.StringValue ad_group_ad = 9 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @return The adGroupAd.
      */
     public com.google.protobuf.StringValue getAdGroupAd() {
       if (adGroupAdBuilder_ == null) {
@@ -2100,10 +2202,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The AdGroupAd affected by this change.
+     * Output only. The AdGroupAd affected by this change.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue ad_group_ad = 9;</code>
+     * <code>.google.protobuf.StringValue ad_group_ad = 9 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder setAdGroupAd(com.google.protobuf.StringValue value) {
       if (adGroupAdBuilder_ == null) {
@@ -2120,10 +2222,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The AdGroupAd affected by this change.
+     * Output only. The AdGroupAd affected by this change.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue ad_group_ad = 9;</code>
+     * <code>.google.protobuf.StringValue ad_group_ad = 9 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder setAdGroupAd(
         com.google.protobuf.StringValue.Builder builderForValue) {
@@ -2138,10 +2240,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The AdGroupAd affected by this change.
+     * Output only. The AdGroupAd affected by this change.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue ad_group_ad = 9;</code>
+     * <code>.google.protobuf.StringValue ad_group_ad = 9 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder mergeAdGroupAd(com.google.protobuf.StringValue value) {
       if (adGroupAdBuilder_ == null) {
@@ -2160,10 +2262,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The AdGroupAd affected by this change.
+     * Output only. The AdGroupAd affected by this change.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue ad_group_ad = 9;</code>
+     * <code>.google.protobuf.StringValue ad_group_ad = 9 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder clearAdGroupAd() {
       if (adGroupAdBuilder_ == null) {
@@ -2178,10 +2280,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The AdGroupAd affected by this change.
+     * Output only. The AdGroupAd affected by this change.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue ad_group_ad = 9;</code>
+     * <code>.google.protobuf.StringValue ad_group_ad = 9 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public com.google.protobuf.StringValue.Builder getAdGroupAdBuilder() {
       
@@ -2190,10 +2292,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The AdGroupAd affected by this change.
+     * Output only. The AdGroupAd affected by this change.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue ad_group_ad = 9;</code>
+     * <code>.google.protobuf.StringValue ad_group_ad = 9 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public com.google.protobuf.StringValueOrBuilder getAdGroupAdOrBuilder() {
       if (adGroupAdBuilder_ != null) {
@@ -2205,10 +2307,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The AdGroupAd affected by this change.
+     * Output only. The AdGroupAd affected by this change.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue ad_group_ad = 9;</code>
+     * <code>.google.protobuf.StringValue ad_group_ad = 9 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
@@ -2229,20 +2331,22 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> adGroupCriterionBuilder_;
     /**
      * <pre>
-     * The AdGroupCriterion affected by this change.
+     * Output only. The AdGroupCriterion affected by this change.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue ad_group_criterion = 10;</code>
+     * <code>.google.protobuf.StringValue ad_group_criterion = 10 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @return Whether the adGroupCriterion field is set.
      */
     public boolean hasAdGroupCriterion() {
       return adGroupCriterionBuilder_ != null || adGroupCriterion_ != null;
     }
     /**
      * <pre>
-     * The AdGroupCriterion affected by this change.
+     * Output only. The AdGroupCriterion affected by this change.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue ad_group_criterion = 10;</code>
+     * <code>.google.protobuf.StringValue ad_group_criterion = 10 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @return The adGroupCriterion.
      */
     public com.google.protobuf.StringValue getAdGroupCriterion() {
       if (adGroupCriterionBuilder_ == null) {
@@ -2253,10 +2357,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The AdGroupCriterion affected by this change.
+     * Output only. The AdGroupCriterion affected by this change.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue ad_group_criterion = 10;</code>
+     * <code>.google.protobuf.StringValue ad_group_criterion = 10 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder setAdGroupCriterion(com.google.protobuf.StringValue value) {
       if (adGroupCriterionBuilder_ == null) {
@@ -2273,10 +2377,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The AdGroupCriterion affected by this change.
+     * Output only. The AdGroupCriterion affected by this change.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue ad_group_criterion = 10;</code>
+     * <code>.google.protobuf.StringValue ad_group_criterion = 10 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder setAdGroupCriterion(
         com.google.protobuf.StringValue.Builder builderForValue) {
@@ -2291,10 +2395,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The AdGroupCriterion affected by this change.
+     * Output only. The AdGroupCriterion affected by this change.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue ad_group_criterion = 10;</code>
+     * <code>.google.protobuf.StringValue ad_group_criterion = 10 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder mergeAdGroupCriterion(com.google.protobuf.StringValue value) {
       if (adGroupCriterionBuilder_ == null) {
@@ -2313,10 +2417,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The AdGroupCriterion affected by this change.
+     * Output only. The AdGroupCriterion affected by this change.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue ad_group_criterion = 10;</code>
+     * <code>.google.protobuf.StringValue ad_group_criterion = 10 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder clearAdGroupCriterion() {
       if (adGroupCriterionBuilder_ == null) {
@@ -2331,10 +2435,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The AdGroupCriterion affected by this change.
+     * Output only. The AdGroupCriterion affected by this change.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue ad_group_criterion = 10;</code>
+     * <code>.google.protobuf.StringValue ad_group_criterion = 10 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public com.google.protobuf.StringValue.Builder getAdGroupCriterionBuilder() {
       
@@ -2343,10 +2447,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The AdGroupCriterion affected by this change.
+     * Output only. The AdGroupCriterion affected by this change.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue ad_group_criterion = 10;</code>
+     * <code>.google.protobuf.StringValue ad_group_criterion = 10 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public com.google.protobuf.StringValueOrBuilder getAdGroupCriterionOrBuilder() {
       if (adGroupCriterionBuilder_ != null) {
@@ -2358,10 +2462,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The AdGroupCriterion affected by this change.
+     * Output only. The AdGroupCriterion affected by this change.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue ad_group_criterion = 10;</code>
+     * <code>.google.protobuf.StringValue ad_group_criterion = 10 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
@@ -2382,20 +2486,22 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> campaignCriterionBuilder_;
     /**
      * <pre>
-     * The CampaignCriterion affected by this change.
+     * Output only. The CampaignCriterion affected by this change.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue campaign_criterion = 11;</code>
+     * <code>.google.protobuf.StringValue campaign_criterion = 11 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @return Whether the campaignCriterion field is set.
      */
     public boolean hasCampaignCriterion() {
       return campaignCriterionBuilder_ != null || campaignCriterion_ != null;
     }
     /**
      * <pre>
-     * The CampaignCriterion affected by this change.
+     * Output only. The CampaignCriterion affected by this change.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue campaign_criterion = 11;</code>
+     * <code>.google.protobuf.StringValue campaign_criterion = 11 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @return The campaignCriterion.
      */
     public com.google.protobuf.StringValue getCampaignCriterion() {
       if (campaignCriterionBuilder_ == null) {
@@ -2406,10 +2512,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The CampaignCriterion affected by this change.
+     * Output only. The CampaignCriterion affected by this change.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue campaign_criterion = 11;</code>
+     * <code>.google.protobuf.StringValue campaign_criterion = 11 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder setCampaignCriterion(com.google.protobuf.StringValue value) {
       if (campaignCriterionBuilder_ == null) {
@@ -2426,10 +2532,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The CampaignCriterion affected by this change.
+     * Output only. The CampaignCriterion affected by this change.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue campaign_criterion = 11;</code>
+     * <code>.google.protobuf.StringValue campaign_criterion = 11 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder setCampaignCriterion(
         com.google.protobuf.StringValue.Builder builderForValue) {
@@ -2444,10 +2550,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The CampaignCriterion affected by this change.
+     * Output only. The CampaignCriterion affected by this change.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue campaign_criterion = 11;</code>
+     * <code>.google.protobuf.StringValue campaign_criterion = 11 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder mergeCampaignCriterion(com.google.protobuf.StringValue value) {
       if (campaignCriterionBuilder_ == null) {
@@ -2466,10 +2572,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The CampaignCriterion affected by this change.
+     * Output only. The CampaignCriterion affected by this change.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue campaign_criterion = 11;</code>
+     * <code>.google.protobuf.StringValue campaign_criterion = 11 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder clearCampaignCriterion() {
       if (campaignCriterionBuilder_ == null) {
@@ -2484,10 +2590,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The CampaignCriterion affected by this change.
+     * Output only. The CampaignCriterion affected by this change.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue campaign_criterion = 11;</code>
+     * <code>.google.protobuf.StringValue campaign_criterion = 11 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public com.google.protobuf.StringValue.Builder getCampaignCriterionBuilder() {
       
@@ -2496,10 +2602,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The CampaignCriterion affected by this change.
+     * Output only. The CampaignCriterion affected by this change.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue campaign_criterion = 11;</code>
+     * <code>.google.protobuf.StringValue campaign_criterion = 11 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public com.google.protobuf.StringValueOrBuilder getCampaignCriterionOrBuilder() {
       if (campaignCriterionBuilder_ != null) {
@@ -2511,10 +2617,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The CampaignCriterion affected by this change.
+     * Output only. The CampaignCriterion affected by this change.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue campaign_criterion = 11;</code>
+     * <code>.google.protobuf.StringValue campaign_criterion = 11 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
@@ -2535,20 +2641,22 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> feedBuilder_;
     /**
      * <pre>
-     * The Feed affected by this change.
+     * Output only. The Feed affected by this change.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue feed = 12;</code>
+     * <code>.google.protobuf.StringValue feed = 12 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @return Whether the feed field is set.
      */
     public boolean hasFeed() {
       return feedBuilder_ != null || feed_ != null;
     }
     /**
      * <pre>
-     * The Feed affected by this change.
+     * Output only. The Feed affected by this change.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue feed = 12;</code>
+     * <code>.google.protobuf.StringValue feed = 12 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @return The feed.
      */
     public com.google.protobuf.StringValue getFeed() {
       if (feedBuilder_ == null) {
@@ -2559,10 +2667,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The Feed affected by this change.
+     * Output only. The Feed affected by this change.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue feed = 12;</code>
+     * <code>.google.protobuf.StringValue feed = 12 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder setFeed(com.google.protobuf.StringValue value) {
       if (feedBuilder_ == null) {
@@ -2579,10 +2687,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The Feed affected by this change.
+     * Output only. The Feed affected by this change.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue feed = 12;</code>
+     * <code>.google.protobuf.StringValue feed = 12 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder setFeed(
         com.google.protobuf.StringValue.Builder builderForValue) {
@@ -2597,10 +2705,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The Feed affected by this change.
+     * Output only. The Feed affected by this change.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue feed = 12;</code>
+     * <code>.google.protobuf.StringValue feed = 12 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder mergeFeed(com.google.protobuf.StringValue value) {
       if (feedBuilder_ == null) {
@@ -2619,10 +2727,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The Feed affected by this change.
+     * Output only. The Feed affected by this change.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue feed = 12;</code>
+     * <code>.google.protobuf.StringValue feed = 12 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder clearFeed() {
       if (feedBuilder_ == null) {
@@ -2637,10 +2745,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The Feed affected by this change.
+     * Output only. The Feed affected by this change.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue feed = 12;</code>
+     * <code>.google.protobuf.StringValue feed = 12 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public com.google.protobuf.StringValue.Builder getFeedBuilder() {
       
@@ -2649,10 +2757,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The Feed affected by this change.
+     * Output only. The Feed affected by this change.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue feed = 12;</code>
+     * <code>.google.protobuf.StringValue feed = 12 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public com.google.protobuf.StringValueOrBuilder getFeedOrBuilder() {
       if (feedBuilder_ != null) {
@@ -2664,10 +2772,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The Feed affected by this change.
+     * Output only. The Feed affected by this change.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue feed = 12;</code>
+     * <code>.google.protobuf.StringValue feed = 12 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
@@ -2688,20 +2796,22 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> feedItemBuilder_;
     /**
      * <pre>
-     * The FeedItem affected by this change.
+     * Output only. The FeedItem affected by this change.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue feed_item = 13;</code>
+     * <code>.google.protobuf.StringValue feed_item = 13 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @return Whether the feedItem field is set.
      */
     public boolean hasFeedItem() {
       return feedItemBuilder_ != null || feedItem_ != null;
     }
     /**
      * <pre>
-     * The FeedItem affected by this change.
+     * Output only. The FeedItem affected by this change.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue feed_item = 13;</code>
+     * <code>.google.protobuf.StringValue feed_item = 13 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @return The feedItem.
      */
     public com.google.protobuf.StringValue getFeedItem() {
       if (feedItemBuilder_ == null) {
@@ -2712,10 +2822,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The FeedItem affected by this change.
+     * Output only. The FeedItem affected by this change.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue feed_item = 13;</code>
+     * <code>.google.protobuf.StringValue feed_item = 13 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder setFeedItem(com.google.protobuf.StringValue value) {
       if (feedItemBuilder_ == null) {
@@ -2732,10 +2842,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The FeedItem affected by this change.
+     * Output only. The FeedItem affected by this change.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue feed_item = 13;</code>
+     * <code>.google.protobuf.StringValue feed_item = 13 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder setFeedItem(
         com.google.protobuf.StringValue.Builder builderForValue) {
@@ -2750,10 +2860,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The FeedItem affected by this change.
+     * Output only. The FeedItem affected by this change.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue feed_item = 13;</code>
+     * <code>.google.protobuf.StringValue feed_item = 13 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder mergeFeedItem(com.google.protobuf.StringValue value) {
       if (feedItemBuilder_ == null) {
@@ -2772,10 +2882,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The FeedItem affected by this change.
+     * Output only. The FeedItem affected by this change.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue feed_item = 13;</code>
+     * <code>.google.protobuf.StringValue feed_item = 13 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder clearFeedItem() {
       if (feedItemBuilder_ == null) {
@@ -2790,10 +2900,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The FeedItem affected by this change.
+     * Output only. The FeedItem affected by this change.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue feed_item = 13;</code>
+     * <code>.google.protobuf.StringValue feed_item = 13 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public com.google.protobuf.StringValue.Builder getFeedItemBuilder() {
       
@@ -2802,10 +2912,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The FeedItem affected by this change.
+     * Output only. The FeedItem affected by this change.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue feed_item = 13;</code>
+     * <code>.google.protobuf.StringValue feed_item = 13 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public com.google.protobuf.StringValueOrBuilder getFeedItemOrBuilder() {
       if (feedItemBuilder_ != null) {
@@ -2817,10 +2927,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The FeedItem affected by this change.
+     * Output only. The FeedItem affected by this change.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue feed_item = 13;</code>
+     * <code>.google.protobuf.StringValue feed_item = 13 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
@@ -2841,20 +2951,22 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> adGroupFeedBuilder_;
     /**
      * <pre>
-     * The AdGroupFeed affected by this change.
+     * Output only. The AdGroupFeed affected by this change.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue ad_group_feed = 14;</code>
+     * <code>.google.protobuf.StringValue ad_group_feed = 14 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @return Whether the adGroupFeed field is set.
      */
     public boolean hasAdGroupFeed() {
       return adGroupFeedBuilder_ != null || adGroupFeed_ != null;
     }
     /**
      * <pre>
-     * The AdGroupFeed affected by this change.
+     * Output only. The AdGroupFeed affected by this change.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue ad_group_feed = 14;</code>
+     * <code>.google.protobuf.StringValue ad_group_feed = 14 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @return The adGroupFeed.
      */
     public com.google.protobuf.StringValue getAdGroupFeed() {
       if (adGroupFeedBuilder_ == null) {
@@ -2865,10 +2977,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The AdGroupFeed affected by this change.
+     * Output only. The AdGroupFeed affected by this change.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue ad_group_feed = 14;</code>
+     * <code>.google.protobuf.StringValue ad_group_feed = 14 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder setAdGroupFeed(com.google.protobuf.StringValue value) {
       if (adGroupFeedBuilder_ == null) {
@@ -2885,10 +2997,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The AdGroupFeed affected by this change.
+     * Output only. The AdGroupFeed affected by this change.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue ad_group_feed = 14;</code>
+     * <code>.google.protobuf.StringValue ad_group_feed = 14 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder setAdGroupFeed(
         com.google.protobuf.StringValue.Builder builderForValue) {
@@ -2903,10 +3015,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The AdGroupFeed affected by this change.
+     * Output only. The AdGroupFeed affected by this change.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue ad_group_feed = 14;</code>
+     * <code>.google.protobuf.StringValue ad_group_feed = 14 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder mergeAdGroupFeed(com.google.protobuf.StringValue value) {
       if (adGroupFeedBuilder_ == null) {
@@ -2925,10 +3037,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The AdGroupFeed affected by this change.
+     * Output only. The AdGroupFeed affected by this change.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue ad_group_feed = 14;</code>
+     * <code>.google.protobuf.StringValue ad_group_feed = 14 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder clearAdGroupFeed() {
       if (adGroupFeedBuilder_ == null) {
@@ -2943,10 +3055,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The AdGroupFeed affected by this change.
+     * Output only. The AdGroupFeed affected by this change.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue ad_group_feed = 14;</code>
+     * <code>.google.protobuf.StringValue ad_group_feed = 14 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public com.google.protobuf.StringValue.Builder getAdGroupFeedBuilder() {
       
@@ -2955,10 +3067,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The AdGroupFeed affected by this change.
+     * Output only. The AdGroupFeed affected by this change.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue ad_group_feed = 14;</code>
+     * <code>.google.protobuf.StringValue ad_group_feed = 14 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public com.google.protobuf.StringValueOrBuilder getAdGroupFeedOrBuilder() {
       if (adGroupFeedBuilder_ != null) {
@@ -2970,10 +3082,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The AdGroupFeed affected by this change.
+     * Output only. The AdGroupFeed affected by this change.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue ad_group_feed = 14;</code>
+     * <code>.google.protobuf.StringValue ad_group_feed = 14 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
@@ -2994,20 +3106,22 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> campaignFeedBuilder_;
     /**
      * <pre>
-     * The CampaignFeed affected by this change.
+     * Output only. The CampaignFeed affected by this change.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue campaign_feed = 15;</code>
+     * <code>.google.protobuf.StringValue campaign_feed = 15 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @return Whether the campaignFeed field is set.
      */
     public boolean hasCampaignFeed() {
       return campaignFeedBuilder_ != null || campaignFeed_ != null;
     }
     /**
      * <pre>
-     * The CampaignFeed affected by this change.
+     * Output only. The CampaignFeed affected by this change.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue campaign_feed = 15;</code>
+     * <code>.google.protobuf.StringValue campaign_feed = 15 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @return The campaignFeed.
      */
     public com.google.protobuf.StringValue getCampaignFeed() {
       if (campaignFeedBuilder_ == null) {
@@ -3018,10 +3132,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The CampaignFeed affected by this change.
+     * Output only. The CampaignFeed affected by this change.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue campaign_feed = 15;</code>
+     * <code>.google.protobuf.StringValue campaign_feed = 15 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder setCampaignFeed(com.google.protobuf.StringValue value) {
       if (campaignFeedBuilder_ == null) {
@@ -3038,10 +3152,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The CampaignFeed affected by this change.
+     * Output only. The CampaignFeed affected by this change.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue campaign_feed = 15;</code>
+     * <code>.google.protobuf.StringValue campaign_feed = 15 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder setCampaignFeed(
         com.google.protobuf.StringValue.Builder builderForValue) {
@@ -3056,10 +3170,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The CampaignFeed affected by this change.
+     * Output only. The CampaignFeed affected by this change.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue campaign_feed = 15;</code>
+     * <code>.google.protobuf.StringValue campaign_feed = 15 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder mergeCampaignFeed(com.google.protobuf.StringValue value) {
       if (campaignFeedBuilder_ == null) {
@@ -3078,10 +3192,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The CampaignFeed affected by this change.
+     * Output only. The CampaignFeed affected by this change.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue campaign_feed = 15;</code>
+     * <code>.google.protobuf.StringValue campaign_feed = 15 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder clearCampaignFeed() {
       if (campaignFeedBuilder_ == null) {
@@ -3096,10 +3210,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The CampaignFeed affected by this change.
+     * Output only. The CampaignFeed affected by this change.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue campaign_feed = 15;</code>
+     * <code>.google.protobuf.StringValue campaign_feed = 15 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public com.google.protobuf.StringValue.Builder getCampaignFeedBuilder() {
       
@@ -3108,10 +3222,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The CampaignFeed affected by this change.
+     * Output only. The CampaignFeed affected by this change.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue campaign_feed = 15;</code>
+     * <code>.google.protobuf.StringValue campaign_feed = 15 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public com.google.protobuf.StringValueOrBuilder getCampaignFeedOrBuilder() {
       if (campaignFeedBuilder_ != null) {
@@ -3123,10 +3237,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The CampaignFeed affected by this change.
+     * Output only. The CampaignFeed affected by this change.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue campaign_feed = 15;</code>
+     * <code>.google.protobuf.StringValue campaign_feed = 15 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
@@ -3147,20 +3261,22 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> adGroupBidModifierBuilder_;
     /**
      * <pre>
-     * The AdGroupBidModifier affected by this change.
+     * Output only. The AdGroupBidModifier affected by this change.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue ad_group_bid_modifier = 16;</code>
+     * <code>.google.protobuf.StringValue ad_group_bid_modifier = 16 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @return Whether the adGroupBidModifier field is set.
      */
     public boolean hasAdGroupBidModifier() {
       return adGroupBidModifierBuilder_ != null || adGroupBidModifier_ != null;
     }
     /**
      * <pre>
-     * The AdGroupBidModifier affected by this change.
+     * Output only. The AdGroupBidModifier affected by this change.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue ad_group_bid_modifier = 16;</code>
+     * <code>.google.protobuf.StringValue ad_group_bid_modifier = 16 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @return The adGroupBidModifier.
      */
     public com.google.protobuf.StringValue getAdGroupBidModifier() {
       if (adGroupBidModifierBuilder_ == null) {
@@ -3171,10 +3287,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The AdGroupBidModifier affected by this change.
+     * Output only. The AdGroupBidModifier affected by this change.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue ad_group_bid_modifier = 16;</code>
+     * <code>.google.protobuf.StringValue ad_group_bid_modifier = 16 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder setAdGroupBidModifier(com.google.protobuf.StringValue value) {
       if (adGroupBidModifierBuilder_ == null) {
@@ -3191,10 +3307,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The AdGroupBidModifier affected by this change.
+     * Output only. The AdGroupBidModifier affected by this change.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue ad_group_bid_modifier = 16;</code>
+     * <code>.google.protobuf.StringValue ad_group_bid_modifier = 16 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder setAdGroupBidModifier(
         com.google.protobuf.StringValue.Builder builderForValue) {
@@ -3209,10 +3325,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The AdGroupBidModifier affected by this change.
+     * Output only. The AdGroupBidModifier affected by this change.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue ad_group_bid_modifier = 16;</code>
+     * <code>.google.protobuf.StringValue ad_group_bid_modifier = 16 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder mergeAdGroupBidModifier(com.google.protobuf.StringValue value) {
       if (adGroupBidModifierBuilder_ == null) {
@@ -3231,10 +3347,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The AdGroupBidModifier affected by this change.
+     * Output only. The AdGroupBidModifier affected by this change.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue ad_group_bid_modifier = 16;</code>
+     * <code>.google.protobuf.StringValue ad_group_bid_modifier = 16 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder clearAdGroupBidModifier() {
       if (adGroupBidModifierBuilder_ == null) {
@@ -3249,10 +3365,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The AdGroupBidModifier affected by this change.
+     * Output only. The AdGroupBidModifier affected by this change.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue ad_group_bid_modifier = 16;</code>
+     * <code>.google.protobuf.StringValue ad_group_bid_modifier = 16 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public com.google.protobuf.StringValue.Builder getAdGroupBidModifierBuilder() {
       
@@ -3261,10 +3377,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The AdGroupBidModifier affected by this change.
+     * Output only. The AdGroupBidModifier affected by this change.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue ad_group_bid_modifier = 16;</code>
+     * <code>.google.protobuf.StringValue ad_group_bid_modifier = 16 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public com.google.protobuf.StringValueOrBuilder getAdGroupBidModifierOrBuilder() {
       if (adGroupBidModifierBuilder_ != null) {
@@ -3276,10 +3392,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The AdGroupBidModifier affected by this change.
+     * Output only. The AdGroupBidModifier affected by this change.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue ad_group_bid_modifier = 16;</code>
+     * <code>.google.protobuf.StringValue ad_group_bid_modifier = 16 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 

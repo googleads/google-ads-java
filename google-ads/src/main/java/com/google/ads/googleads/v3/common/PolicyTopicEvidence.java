@@ -10,7 +10,7 @@ package com.google.ads.googleads.v3.common;
  *
  * Protobuf type {@code google.ads.googleads.v3.common.PolicyTopicEvidence}
  */
-public  final class PolicyTopicEvidence extends
+public final class PolicyTopicEvidence extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v3.common.PolicyTopicEvidence)
     PolicyTopicEvidenceOrBuilder {
@@ -20,6 +20,13 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private PolicyTopicEvidence() {
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new PolicyTopicEvidence();
   }
 
   @java.lang.Override
@@ -35,7 +42,6 @@ private static final long serialVersionUID = 0L;
     if (extensionRegistry == null) {
       throw new java.lang.NullPointerException();
     }
-    int mutable_bitField0_ = 0;
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
         com.google.protobuf.UnknownFieldSet.newBuilder();
     try {
@@ -217,7 +223,7 @@ private static final long serialVersionUID = 0L;
    *
    * Protobuf type {@code google.ads.googleads.v3.common.PolicyTopicEvidence.TextList}
    */
-  public  static final class TextList extends
+  public static final class TextList extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:google.ads.googleads.v3.common.PolicyTopicEvidence.TextList)
       TextListOrBuilder {
@@ -228,6 +234,13 @@ private static final long serialVersionUID = 0L;
     }
     private TextList() {
       texts_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new TextList();
     }
 
     @java.lang.Override
@@ -307,6 +320,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated .google.protobuf.StringValue texts = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<com.google.protobuf.StringValue> getTextsList() {
       return texts_;
     }
@@ -317,6 +331,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated .google.protobuf.StringValue texts = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends com.google.protobuf.StringValueOrBuilder> 
         getTextsOrBuilderList() {
       return texts_;
@@ -328,6 +343,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated .google.protobuf.StringValue texts = 1;</code>
      */
+    @java.lang.Override
     public int getTextsCount() {
       return texts_.size();
     }
@@ -338,6 +354,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated .google.protobuf.StringValue texts = 1;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.StringValue getTexts(int index) {
       return texts_.get(index);
     }
@@ -348,6 +365,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated .google.protobuf.StringValue texts = 1;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.StringValueOrBuilder getTextsOrBuilder(
         int index) {
       return texts_.get(index);
@@ -1121,7 +1139,7 @@ private static final long serialVersionUID = 0L;
    *
    * Protobuf type {@code google.ads.googleads.v3.common.PolicyTopicEvidence.WebsiteList}
    */
-  public  static final class WebsiteList extends
+  public static final class WebsiteList extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:google.ads.googleads.v3.common.PolicyTopicEvidence.WebsiteList)
       WebsiteListOrBuilder {
@@ -1132,6 +1150,13 @@ private static final long serialVersionUID = 0L;
     }
     private WebsiteList() {
       websites_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new WebsiteList();
     }
 
     @java.lang.Override
@@ -1211,6 +1236,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated .google.protobuf.StringValue websites = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<com.google.protobuf.StringValue> getWebsitesList() {
       return websites_;
     }
@@ -1221,6 +1247,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated .google.protobuf.StringValue websites = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends com.google.protobuf.StringValueOrBuilder> 
         getWebsitesOrBuilderList() {
       return websites_;
@@ -1232,6 +1259,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated .google.protobuf.StringValue websites = 1;</code>
      */
+    @java.lang.Override
     public int getWebsitesCount() {
       return websites_.size();
     }
@@ -1242,6 +1270,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated .google.protobuf.StringValue websites = 1;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.StringValue getWebsites(int index) {
       return websites_.get(index);
     }
@@ -1252,6 +1281,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated .google.protobuf.StringValue websites = 1;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.StringValueOrBuilder getWebsitesOrBuilder(
         int index) {
       return websites_.get(index);
@@ -2026,7 +2056,7 @@ private static final long serialVersionUID = 0L;
    *
    * Protobuf type {@code google.ads.googleads.v3.common.PolicyTopicEvidence.DestinationTextList}
    */
-  public  static final class DestinationTextList extends
+  public static final class DestinationTextList extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:google.ads.googleads.v3.common.PolicyTopicEvidence.DestinationTextList)
       DestinationTextListOrBuilder {
@@ -2037,6 +2067,13 @@ private static final long serialVersionUID = 0L;
     }
     private DestinationTextList() {
       destinationTexts_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DestinationTextList();
     }
 
     @java.lang.Override
@@ -2116,6 +2153,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated .google.protobuf.StringValue destination_texts = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<com.google.protobuf.StringValue> getDestinationTextsList() {
       return destinationTexts_;
     }
@@ -2126,6 +2164,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated .google.protobuf.StringValue destination_texts = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends com.google.protobuf.StringValueOrBuilder> 
         getDestinationTextsOrBuilderList() {
       return destinationTexts_;
@@ -2137,6 +2176,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated .google.protobuf.StringValue destination_texts = 1;</code>
      */
+    @java.lang.Override
     public int getDestinationTextsCount() {
       return destinationTexts_.size();
     }
@@ -2147,6 +2187,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated .google.protobuf.StringValue destination_texts = 1;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.StringValue getDestinationTexts(int index) {
       return destinationTexts_.get(index);
     }
@@ -2157,6 +2198,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated .google.protobuf.StringValue destination_texts = 1;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.StringValueOrBuilder getDestinationTextsOrBuilder(
         int index) {
       return destinationTexts_.get(index);
@@ -2883,6 +2925,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v3.enums.PolicyTopicEvidenceDestinationMismatchUrlTypeEnum.PolicyTopicEvidenceDestinationMismatchUrlType url_types = 1;</code>
+     * @return A list containing the urlTypes.
      */
     java.util.List<com.google.ads.googleads.v3.enums.PolicyTopicEvidenceDestinationMismatchUrlTypeEnum.PolicyTopicEvidenceDestinationMismatchUrlType> getUrlTypesList();
     /**
@@ -2891,6 +2934,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v3.enums.PolicyTopicEvidenceDestinationMismatchUrlTypeEnum.PolicyTopicEvidenceDestinationMismatchUrlType url_types = 1;</code>
+     * @return The count of urlTypes.
      */
     int getUrlTypesCount();
     /**
@@ -2899,6 +2943,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v3.enums.PolicyTopicEvidenceDestinationMismatchUrlTypeEnum.PolicyTopicEvidenceDestinationMismatchUrlType url_types = 1;</code>
+     * @param index The index of the element to return.
+     * @return The urlTypes at the given index.
      */
     com.google.ads.googleads.v3.enums.PolicyTopicEvidenceDestinationMismatchUrlTypeEnum.PolicyTopicEvidenceDestinationMismatchUrlType getUrlTypes(int index);
     /**
@@ -2907,6 +2953,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v3.enums.PolicyTopicEvidenceDestinationMismatchUrlTypeEnum.PolicyTopicEvidenceDestinationMismatchUrlType url_types = 1;</code>
+     * @return A list containing the enum numeric values on the wire for urlTypes.
      */
     java.util.List<java.lang.Integer>
     getUrlTypesValueList();
@@ -2916,6 +2963,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v3.enums.PolicyTopicEvidenceDestinationMismatchUrlTypeEnum.PolicyTopicEvidenceDestinationMismatchUrlType url_types = 1;</code>
+     * @param index The index of the value to return.
+     * @return The enum numeric value on the wire of urlTypes at the given index.
      */
     int getUrlTypesValue(int index);
   }
@@ -2926,7 +2975,7 @@ private static final long serialVersionUID = 0L;
    *
    * Protobuf type {@code google.ads.googleads.v3.common.PolicyTopicEvidence.DestinationMismatch}
    */
-  public  static final class DestinationMismatch extends
+  public static final class DestinationMismatch extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:google.ads.googleads.v3.common.PolicyTopicEvidence.DestinationMismatch)
       DestinationMismatchOrBuilder {
@@ -2937,6 +2986,13 @@ private static final long serialVersionUID = 0L;
     }
     private DestinationMismatch() {
       urlTypes_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DestinationMismatch();
     }
 
     @java.lang.Override
@@ -3039,7 +3095,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v3.enums.PolicyTopicEvidenceDestinationMismatchUrlTypeEnum.PolicyTopicEvidenceDestinationMismatchUrlType url_types = 1;</code>
+     * @return A list containing the urlTypes.
      */
+    @java.lang.Override
     public java.util.List<com.google.ads.googleads.v3.enums.PolicyTopicEvidenceDestinationMismatchUrlTypeEnum.PolicyTopicEvidenceDestinationMismatchUrlType> getUrlTypesList() {
       return new com.google.protobuf.Internal.ListAdapter<
           java.lang.Integer, com.google.ads.googleads.v3.enums.PolicyTopicEvidenceDestinationMismatchUrlTypeEnum.PolicyTopicEvidenceDestinationMismatchUrlType>(urlTypes_, urlTypes_converter_);
@@ -3050,7 +3108,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v3.enums.PolicyTopicEvidenceDestinationMismatchUrlTypeEnum.PolicyTopicEvidenceDestinationMismatchUrlType url_types = 1;</code>
+     * @return The count of urlTypes.
      */
+    @java.lang.Override
     public int getUrlTypesCount() {
       return urlTypes_.size();
     }
@@ -3060,7 +3120,10 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v3.enums.PolicyTopicEvidenceDestinationMismatchUrlTypeEnum.PolicyTopicEvidenceDestinationMismatchUrlType url_types = 1;</code>
+     * @param index The index of the element to return.
+     * @return The urlTypes at the given index.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.enums.PolicyTopicEvidenceDestinationMismatchUrlTypeEnum.PolicyTopicEvidenceDestinationMismatchUrlType getUrlTypes(int index) {
       return urlTypes_converter_.convert(urlTypes_.get(index));
     }
@@ -3070,7 +3133,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v3.enums.PolicyTopicEvidenceDestinationMismatchUrlTypeEnum.PolicyTopicEvidenceDestinationMismatchUrlType url_types = 1;</code>
+     * @return A list containing the enum numeric values on the wire for urlTypes.
      */
+    @java.lang.Override
     public java.util.List<java.lang.Integer>
     getUrlTypesValueList() {
       return urlTypes_;
@@ -3081,7 +3146,10 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v3.enums.PolicyTopicEvidenceDestinationMismatchUrlTypeEnum.PolicyTopicEvidenceDestinationMismatchUrlType url_types = 1;</code>
+     * @param index The index of the value to return.
+     * @return The enum numeric value on the wire of urlTypes at the given index.
      */
+    @java.lang.Override
     public int getUrlTypesValue(int index) {
       return urlTypes_.get(index);
     }
@@ -3434,6 +3502,7 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>repeated .google.ads.googleads.v3.enums.PolicyTopicEvidenceDestinationMismatchUrlTypeEnum.PolicyTopicEvidenceDestinationMismatchUrlType url_types = 1;</code>
+       * @return A list containing the urlTypes.
        */
       public java.util.List<com.google.ads.googleads.v3.enums.PolicyTopicEvidenceDestinationMismatchUrlTypeEnum.PolicyTopicEvidenceDestinationMismatchUrlType> getUrlTypesList() {
         return new com.google.protobuf.Internal.ListAdapter<
@@ -3445,6 +3514,7 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>repeated .google.ads.googleads.v3.enums.PolicyTopicEvidenceDestinationMismatchUrlTypeEnum.PolicyTopicEvidenceDestinationMismatchUrlType url_types = 1;</code>
+       * @return The count of urlTypes.
        */
       public int getUrlTypesCount() {
         return urlTypes_.size();
@@ -3455,6 +3525,8 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>repeated .google.ads.googleads.v3.enums.PolicyTopicEvidenceDestinationMismatchUrlTypeEnum.PolicyTopicEvidenceDestinationMismatchUrlType url_types = 1;</code>
+       * @param index The index of the element to return.
+       * @return The urlTypes at the given index.
        */
       public com.google.ads.googleads.v3.enums.PolicyTopicEvidenceDestinationMismatchUrlTypeEnum.PolicyTopicEvidenceDestinationMismatchUrlType getUrlTypes(int index) {
         return urlTypes_converter_.convert(urlTypes_.get(index));
@@ -3465,6 +3537,9 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>repeated .google.ads.googleads.v3.enums.PolicyTopicEvidenceDestinationMismatchUrlTypeEnum.PolicyTopicEvidenceDestinationMismatchUrlType url_types = 1;</code>
+       * @param index The index to set the value at.
+       * @param value The urlTypes to set.
+       * @return This builder for chaining.
        */
       public Builder setUrlTypes(
           int index, com.google.ads.googleads.v3.enums.PolicyTopicEvidenceDestinationMismatchUrlTypeEnum.PolicyTopicEvidenceDestinationMismatchUrlType value) {
@@ -3482,6 +3557,8 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>repeated .google.ads.googleads.v3.enums.PolicyTopicEvidenceDestinationMismatchUrlTypeEnum.PolicyTopicEvidenceDestinationMismatchUrlType url_types = 1;</code>
+       * @param value The urlTypes to add.
+       * @return This builder for chaining.
        */
       public Builder addUrlTypes(com.google.ads.googleads.v3.enums.PolicyTopicEvidenceDestinationMismatchUrlTypeEnum.PolicyTopicEvidenceDestinationMismatchUrlType value) {
         if (value == null) {
@@ -3498,6 +3575,8 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>repeated .google.ads.googleads.v3.enums.PolicyTopicEvidenceDestinationMismatchUrlTypeEnum.PolicyTopicEvidenceDestinationMismatchUrlType url_types = 1;</code>
+       * @param values The urlTypes to add.
+       * @return This builder for chaining.
        */
       public Builder addAllUrlTypes(
           java.lang.Iterable<? extends com.google.ads.googleads.v3.enums.PolicyTopicEvidenceDestinationMismatchUrlTypeEnum.PolicyTopicEvidenceDestinationMismatchUrlType> values) {
@@ -3514,6 +3593,7 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>repeated .google.ads.googleads.v3.enums.PolicyTopicEvidenceDestinationMismatchUrlTypeEnum.PolicyTopicEvidenceDestinationMismatchUrlType url_types = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearUrlTypes() {
         urlTypes_ = java.util.Collections.emptyList();
@@ -3527,6 +3607,7 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>repeated .google.ads.googleads.v3.enums.PolicyTopicEvidenceDestinationMismatchUrlTypeEnum.PolicyTopicEvidenceDestinationMismatchUrlType url_types = 1;</code>
+       * @return A list containing the enum numeric values on the wire for urlTypes.
        */
       public java.util.List<java.lang.Integer>
       getUrlTypesValueList() {
@@ -3538,6 +3619,8 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>repeated .google.ads.googleads.v3.enums.PolicyTopicEvidenceDestinationMismatchUrlTypeEnum.PolicyTopicEvidenceDestinationMismatchUrlType url_types = 1;</code>
+       * @param index The index of the value to return.
+       * @return The enum numeric value on the wire of urlTypes at the given index.
        */
       public int getUrlTypesValue(int index) {
         return urlTypes_.get(index);
@@ -3548,6 +3631,9 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>repeated .google.ads.googleads.v3.enums.PolicyTopicEvidenceDestinationMismatchUrlTypeEnum.PolicyTopicEvidenceDestinationMismatchUrlType url_types = 1;</code>
+       * @param index The index of the value to return.
+       * @return The enum numeric value on the wire of urlTypes at the given index.
+       * @return This builder for chaining.
        */
       public Builder setUrlTypesValue(
           int index, int value) {
@@ -3562,6 +3648,8 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>repeated .google.ads.googleads.v3.enums.PolicyTopicEvidenceDestinationMismatchUrlTypeEnum.PolicyTopicEvidenceDestinationMismatchUrlType url_types = 1;</code>
+       * @param value The enum numeric value on the wire for urlTypes to add.
+       * @return This builder for chaining.
        */
       public Builder addUrlTypesValue(int value) {
         ensureUrlTypesIsMutable();
@@ -3575,6 +3663,8 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>repeated .google.ads.googleads.v3.enums.PolicyTopicEvidenceDestinationMismatchUrlTypeEnum.PolicyTopicEvidenceDestinationMismatchUrlType url_types = 1;</code>
+       * @param values The enum numeric values on the wire for urlTypes to add.
+       * @return This builder for chaining.
        */
       public Builder addAllUrlTypesValue(
           java.lang.Iterable<java.lang.Integer> values) {
@@ -3648,6 +3738,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue expanded_url = 3;</code>
+     * @return Whether the expandedUrl field is set.
      */
     boolean hasExpandedUrl();
     /**
@@ -3656,6 +3747,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue expanded_url = 3;</code>
+     * @return The expandedUrl.
      */
     com.google.protobuf.StringValue getExpandedUrl();
     /**
@@ -3673,6 +3765,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.PolicyTopicEvidenceDestinationNotWorkingDeviceEnum.PolicyTopicEvidenceDestinationNotWorkingDevice device = 4;</code>
+     * @return The enum numeric value on the wire for device.
      */
     int getDeviceValue();
     /**
@@ -3681,6 +3774,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.PolicyTopicEvidenceDestinationNotWorkingDeviceEnum.PolicyTopicEvidenceDestinationNotWorkingDevice device = 4;</code>
+     * @return The device.
      */
     com.google.ads.googleads.v3.enums.PolicyTopicEvidenceDestinationNotWorkingDeviceEnum.PolicyTopicEvidenceDestinationNotWorkingDevice getDevice();
 
@@ -3692,6 +3786,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue last_checked_date_time = 5;</code>
+     * @return Whether the lastCheckedDateTime field is set.
      */
     boolean hasLastCheckedDateTime();
     /**
@@ -3702,6 +3797,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue last_checked_date_time = 5;</code>
+     * @return The lastCheckedDateTime.
      */
     com.google.protobuf.StringValue getLastCheckedDateTime();
     /**
@@ -3721,6 +3817,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.PolicyTopicEvidenceDestinationNotWorkingDnsErrorTypeEnum.PolicyTopicEvidenceDestinationNotWorkingDnsErrorType dns_error_type = 1;</code>
+     * @return The enum numeric value on the wire for dnsErrorType.
      */
     int getDnsErrorTypeValue();
     /**
@@ -3729,6 +3826,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.PolicyTopicEvidenceDestinationNotWorkingDnsErrorTypeEnum.PolicyTopicEvidenceDestinationNotWorkingDnsErrorType dns_error_type = 1;</code>
+     * @return The dnsErrorType.
      */
     com.google.ads.googleads.v3.enums.PolicyTopicEvidenceDestinationNotWorkingDnsErrorTypeEnum.PolicyTopicEvidenceDestinationNotWorkingDnsErrorType getDnsErrorType();
 
@@ -3738,6 +3836,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value http_error_code = 2;</code>
+     * @return Whether the httpErrorCode field is set.
      */
     boolean hasHttpErrorCode();
     /**
@@ -3746,6 +3845,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value http_error_code = 2;</code>
+     * @return The httpErrorCode.
      */
     com.google.protobuf.Int64Value getHttpErrorCode();
     /**
@@ -3767,7 +3867,7 @@ private static final long serialVersionUID = 0L;
    *
    * Protobuf type {@code google.ads.googleads.v3.common.PolicyTopicEvidence.DestinationNotWorking}
    */
-  public  static final class DestinationNotWorking extends
+  public static final class DestinationNotWorking extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:google.ads.googleads.v3.common.PolicyTopicEvidence.DestinationNotWorking)
       DestinationNotWorkingOrBuilder {
@@ -3778,6 +3878,13 @@ private static final long serialVersionUID = 0L;
     }
     private DestinationNotWorking() {
       device_ = 0;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DestinationNotWorking();
     }
 
     @java.lang.Override
@@ -3793,7 +3900,6 @@ private static final long serialVersionUID = 0L;
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -3891,7 +3997,8 @@ private static final long serialVersionUID = 0L;
     private int reasonCase_ = 0;
     private java.lang.Object reason_;
     public enum ReasonCase
-        implements com.google.protobuf.Internal.EnumLite {
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
       DNS_ERROR_TYPE(1),
       HTTP_ERROR_CODE(2),
       REASON_NOT_SET(0);
@@ -3900,6 +4007,8 @@ private static final long serialVersionUID = 0L;
         this.value = value;
       }
       /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -3934,7 +4043,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue expanded_url = 3;</code>
+     * @return Whether the expandedUrl field is set.
      */
+    @java.lang.Override
     public boolean hasExpandedUrl() {
       return expandedUrl_ != null;
     }
@@ -3944,7 +4055,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue expanded_url = 3;</code>
+     * @return The expandedUrl.
      */
+    @java.lang.Override
     public com.google.protobuf.StringValue getExpandedUrl() {
       return expandedUrl_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : expandedUrl_;
     }
@@ -3955,6 +4068,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.protobuf.StringValue expanded_url = 3;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.StringValueOrBuilder getExpandedUrlOrBuilder() {
       return getExpandedUrl();
     }
@@ -3967,8 +4081,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.PolicyTopicEvidenceDestinationNotWorkingDeviceEnum.PolicyTopicEvidenceDestinationNotWorkingDevice device = 4;</code>
+     * @return The enum numeric value on the wire for device.
      */
-    public int getDeviceValue() {
+    @java.lang.Override public int getDeviceValue() {
       return device_;
     }
     /**
@@ -3977,8 +4092,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.PolicyTopicEvidenceDestinationNotWorkingDeviceEnum.PolicyTopicEvidenceDestinationNotWorkingDevice device = 4;</code>
+     * @return The device.
      */
-    public com.google.ads.googleads.v3.enums.PolicyTopicEvidenceDestinationNotWorkingDeviceEnum.PolicyTopicEvidenceDestinationNotWorkingDevice getDevice() {
+    @java.lang.Override public com.google.ads.googleads.v3.enums.PolicyTopicEvidenceDestinationNotWorkingDeviceEnum.PolicyTopicEvidenceDestinationNotWorkingDevice getDevice() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v3.enums.PolicyTopicEvidenceDestinationNotWorkingDeviceEnum.PolicyTopicEvidenceDestinationNotWorkingDevice result = com.google.ads.googleads.v3.enums.PolicyTopicEvidenceDestinationNotWorkingDeviceEnum.PolicyTopicEvidenceDestinationNotWorkingDevice.valueOf(device_);
       return result == null ? com.google.ads.googleads.v3.enums.PolicyTopicEvidenceDestinationNotWorkingDeviceEnum.PolicyTopicEvidenceDestinationNotWorkingDevice.UNRECOGNIZED : result;
@@ -3994,7 +4110,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue last_checked_date_time = 5;</code>
+     * @return Whether the lastCheckedDateTime field is set.
      */
+    @java.lang.Override
     public boolean hasLastCheckedDateTime() {
       return lastCheckedDateTime_ != null;
     }
@@ -4006,7 +4124,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue last_checked_date_time = 5;</code>
+     * @return The lastCheckedDateTime.
      */
+    @java.lang.Override
     public com.google.protobuf.StringValue getLastCheckedDateTime() {
       return lastCheckedDateTime_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : lastCheckedDateTime_;
     }
@@ -4019,6 +4139,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.protobuf.StringValue last_checked_date_time = 5;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.StringValueOrBuilder getLastCheckedDateTimeOrBuilder() {
       return getLastCheckedDateTime();
     }
@@ -4030,6 +4151,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.PolicyTopicEvidenceDestinationNotWorkingDnsErrorTypeEnum.PolicyTopicEvidenceDestinationNotWorkingDnsErrorType dns_error_type = 1;</code>
+     * @return The enum numeric value on the wire for dnsErrorType.
      */
     public int getDnsErrorTypeValue() {
       if (reasonCase_ == 1) {
@@ -4043,6 +4165,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.PolicyTopicEvidenceDestinationNotWorkingDnsErrorTypeEnum.PolicyTopicEvidenceDestinationNotWorkingDnsErrorType dns_error_type = 1;</code>
+     * @return The dnsErrorType.
      */
     public com.google.ads.googleads.v3.enums.PolicyTopicEvidenceDestinationNotWorkingDnsErrorTypeEnum.PolicyTopicEvidenceDestinationNotWorkingDnsErrorType getDnsErrorType() {
       if (reasonCase_ == 1) {
@@ -4061,7 +4184,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value http_error_code = 2;</code>
+     * @return Whether the httpErrorCode field is set.
      */
+    @java.lang.Override
     public boolean hasHttpErrorCode() {
       return reasonCase_ == 2;
     }
@@ -4071,7 +4196,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value http_error_code = 2;</code>
+     * @return The httpErrorCode.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getHttpErrorCode() {
       if (reasonCase_ == 2) {
          return (com.google.protobuf.Int64Value) reason_;
@@ -4085,6 +4212,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.protobuf.Int64Value http_error_code = 2;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getHttpErrorCodeOrBuilder() {
       if (reasonCase_ == 2) {
          return (com.google.protobuf.Int64Value) reason_;
@@ -4547,6 +4675,7 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>.google.protobuf.StringValue expanded_url = 3;</code>
+       * @return Whether the expandedUrl field is set.
        */
       public boolean hasExpandedUrl() {
         return expandedUrlBuilder_ != null || expandedUrl_ != null;
@@ -4557,6 +4686,7 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>.google.protobuf.StringValue expanded_url = 3;</code>
+       * @return The expandedUrl.
        */
       public com.google.protobuf.StringValue getExpandedUrl() {
         if (expandedUrlBuilder_ == null) {
@@ -4698,8 +4828,9 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>.google.ads.googleads.v3.enums.PolicyTopicEvidenceDestinationNotWorkingDeviceEnum.PolicyTopicEvidenceDestinationNotWorkingDevice device = 4;</code>
+       * @return The enum numeric value on the wire for device.
        */
-      public int getDeviceValue() {
+      @java.lang.Override public int getDeviceValue() {
         return device_;
       }
       /**
@@ -4708,8 +4839,11 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>.google.ads.googleads.v3.enums.PolicyTopicEvidenceDestinationNotWorkingDeviceEnum.PolicyTopicEvidenceDestinationNotWorkingDevice device = 4;</code>
+       * @param value The enum numeric value on the wire for device to set.
+       * @return This builder for chaining.
        */
       public Builder setDeviceValue(int value) {
+        
         device_ = value;
         onChanged();
         return this;
@@ -4720,7 +4854,9 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>.google.ads.googleads.v3.enums.PolicyTopicEvidenceDestinationNotWorkingDeviceEnum.PolicyTopicEvidenceDestinationNotWorkingDevice device = 4;</code>
+       * @return The device.
        */
+      @java.lang.Override
       public com.google.ads.googleads.v3.enums.PolicyTopicEvidenceDestinationNotWorkingDeviceEnum.PolicyTopicEvidenceDestinationNotWorkingDevice getDevice() {
         @SuppressWarnings("deprecation")
         com.google.ads.googleads.v3.enums.PolicyTopicEvidenceDestinationNotWorkingDeviceEnum.PolicyTopicEvidenceDestinationNotWorkingDevice result = com.google.ads.googleads.v3.enums.PolicyTopicEvidenceDestinationNotWorkingDeviceEnum.PolicyTopicEvidenceDestinationNotWorkingDevice.valueOf(device_);
@@ -4732,6 +4868,8 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>.google.ads.googleads.v3.enums.PolicyTopicEvidenceDestinationNotWorkingDeviceEnum.PolicyTopicEvidenceDestinationNotWorkingDevice device = 4;</code>
+       * @param value The device to set.
+       * @return This builder for chaining.
        */
       public Builder setDevice(com.google.ads.googleads.v3.enums.PolicyTopicEvidenceDestinationNotWorkingDeviceEnum.PolicyTopicEvidenceDestinationNotWorkingDevice value) {
         if (value == null) {
@@ -4748,6 +4886,7 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>.google.ads.googleads.v3.enums.PolicyTopicEvidenceDestinationNotWorkingDeviceEnum.PolicyTopicEvidenceDestinationNotWorkingDevice device = 4;</code>
+       * @return This builder for chaining.
        */
       public Builder clearDevice() {
         
@@ -4767,6 +4906,7 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>.google.protobuf.StringValue last_checked_date_time = 5;</code>
+       * @return Whether the lastCheckedDateTime field is set.
        */
       public boolean hasLastCheckedDateTime() {
         return lastCheckedDateTimeBuilder_ != null || lastCheckedDateTime_ != null;
@@ -4779,6 +4919,7 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>.google.protobuf.StringValue last_checked_date_time = 5;</code>
+       * @return The lastCheckedDateTime.
        */
       public com.google.protobuf.StringValue getLastCheckedDateTime() {
         if (lastCheckedDateTimeBuilder_ == null) {
@@ -4933,7 +5074,9 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>.google.ads.googleads.v3.enums.PolicyTopicEvidenceDestinationNotWorkingDnsErrorTypeEnum.PolicyTopicEvidenceDestinationNotWorkingDnsErrorType dns_error_type = 1;</code>
+       * @return The enum numeric value on the wire for dnsErrorType.
        */
+      @java.lang.Override
       public int getDnsErrorTypeValue() {
         if (reasonCase_ == 1) {
           return ((java.lang.Integer) reason_).intValue();
@@ -4946,6 +5089,8 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>.google.ads.googleads.v3.enums.PolicyTopicEvidenceDestinationNotWorkingDnsErrorTypeEnum.PolicyTopicEvidenceDestinationNotWorkingDnsErrorType dns_error_type = 1;</code>
+       * @param value The enum numeric value on the wire for dnsErrorType to set.
+       * @return This builder for chaining.
        */
       public Builder setDnsErrorTypeValue(int value) {
         reasonCase_ = 1;
@@ -4959,7 +5104,9 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>.google.ads.googleads.v3.enums.PolicyTopicEvidenceDestinationNotWorkingDnsErrorTypeEnum.PolicyTopicEvidenceDestinationNotWorkingDnsErrorType dns_error_type = 1;</code>
+       * @return The dnsErrorType.
        */
+      @java.lang.Override
       public com.google.ads.googleads.v3.enums.PolicyTopicEvidenceDestinationNotWorkingDnsErrorTypeEnum.PolicyTopicEvidenceDestinationNotWorkingDnsErrorType getDnsErrorType() {
         if (reasonCase_ == 1) {
           @SuppressWarnings("deprecation")
@@ -4975,6 +5122,8 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>.google.ads.googleads.v3.enums.PolicyTopicEvidenceDestinationNotWorkingDnsErrorTypeEnum.PolicyTopicEvidenceDestinationNotWorkingDnsErrorType dns_error_type = 1;</code>
+       * @param value The dnsErrorType to set.
+       * @return This builder for chaining.
        */
       public Builder setDnsErrorType(com.google.ads.googleads.v3.enums.PolicyTopicEvidenceDestinationNotWorkingDnsErrorTypeEnum.PolicyTopicEvidenceDestinationNotWorkingDnsErrorType value) {
         if (value == null) {
@@ -4991,6 +5140,7 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>.google.ads.googleads.v3.enums.PolicyTopicEvidenceDestinationNotWorkingDnsErrorTypeEnum.PolicyTopicEvidenceDestinationNotWorkingDnsErrorType dns_error_type = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearDnsErrorType() {
         if (reasonCase_ == 1) {
@@ -5009,7 +5159,9 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>.google.protobuf.Int64Value http_error_code = 2;</code>
+       * @return Whether the httpErrorCode field is set.
        */
+      @java.lang.Override
       public boolean hasHttpErrorCode() {
         return reasonCase_ == 2;
       }
@@ -5019,7 +5171,9 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>.google.protobuf.Int64Value http_error_code = 2;</code>
+       * @return The httpErrorCode.
        */
+      @java.lang.Override
       public com.google.protobuf.Int64Value getHttpErrorCode() {
         if (httpErrorCodeBuilder_ == null) {
           if (reasonCase_ == 2) {
@@ -5137,6 +5291,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>.google.protobuf.Int64Value http_error_code = 2;</code>
        */
+      @java.lang.Override
       public com.google.protobuf.Int64ValueOrBuilder getHttpErrorCodeOrBuilder() {
         if ((reasonCase_ == 2) && (httpErrorCodeBuilder_ != null)) {
           return httpErrorCodeBuilder_.getMessageOrBuilder();
@@ -5228,7 +5383,8 @@ private static final long serialVersionUID = 0L;
   private int valueCase_ = 0;
   private java.lang.Object value_;
   public enum ValueCase
-      implements com.google.protobuf.Internal.EnumLite {
+      implements com.google.protobuf.Internal.EnumLite,
+          com.google.protobuf.AbstractMessage.InternalOneOfEnum {
     WEBSITE_LIST(3),
     TEXT_LIST(4),
     LANGUAGE_CODE(5),
@@ -5241,6 +5397,8 @@ private static final long serialVersionUID = 0L;
       this.value = value;
     }
     /**
+     * @param value The number of the enum to look for.
+     * @return The enum associated with the given number.
      * @deprecated Use {@link #forNumber(int)} instead.
      */
     @java.lang.Deprecated
@@ -5278,7 +5436,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.PolicyTopicEvidence.WebsiteList website_list = 3;</code>
+   * @return Whether the websiteList field is set.
    */
+  @java.lang.Override
   public boolean hasWebsiteList() {
     return valueCase_ == 3;
   }
@@ -5288,7 +5448,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.PolicyTopicEvidence.WebsiteList website_list = 3;</code>
+   * @return The websiteList.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.common.PolicyTopicEvidence.WebsiteList getWebsiteList() {
     if (valueCase_ == 3) {
        return (com.google.ads.googleads.v3.common.PolicyTopicEvidence.WebsiteList) value_;
@@ -5302,6 +5464,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v3.common.PolicyTopicEvidence.WebsiteList website_list = 3;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.common.PolicyTopicEvidence.WebsiteListOrBuilder getWebsiteListOrBuilder() {
     if (valueCase_ == 3) {
        return (com.google.ads.googleads.v3.common.PolicyTopicEvidence.WebsiteList) value_;
@@ -5316,7 +5479,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.PolicyTopicEvidence.TextList text_list = 4;</code>
+   * @return Whether the textList field is set.
    */
+  @java.lang.Override
   public boolean hasTextList() {
     return valueCase_ == 4;
   }
@@ -5326,7 +5491,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.PolicyTopicEvidence.TextList text_list = 4;</code>
+   * @return The textList.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.common.PolicyTopicEvidence.TextList getTextList() {
     if (valueCase_ == 4) {
        return (com.google.ads.googleads.v3.common.PolicyTopicEvidence.TextList) value_;
@@ -5340,6 +5507,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v3.common.PolicyTopicEvidence.TextList text_list = 4;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.common.PolicyTopicEvidence.TextListOrBuilder getTextListOrBuilder() {
     if (valueCase_ == 4) {
        return (com.google.ads.googleads.v3.common.PolicyTopicEvidence.TextList) value_;
@@ -5355,7 +5523,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue language_code = 5;</code>
+   * @return Whether the languageCode field is set.
    */
+  @java.lang.Override
   public boolean hasLanguageCode() {
     return valueCase_ == 5;
   }
@@ -5366,7 +5536,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue language_code = 5;</code>
+   * @return The languageCode.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getLanguageCode() {
     if (valueCase_ == 5) {
        return (com.google.protobuf.StringValue) value_;
@@ -5381,6 +5553,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue language_code = 5;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getLanguageCodeOrBuilder() {
     if (valueCase_ == 5) {
        return (com.google.protobuf.StringValue) value_;
@@ -5396,7 +5569,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.PolicyTopicEvidence.DestinationTextList destination_text_list = 6;</code>
+   * @return Whether the destinationTextList field is set.
    */
+  @java.lang.Override
   public boolean hasDestinationTextList() {
     return valueCase_ == 6;
   }
@@ -5407,7 +5582,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.PolicyTopicEvidence.DestinationTextList destination_text_list = 6;</code>
+   * @return The destinationTextList.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.common.PolicyTopicEvidence.DestinationTextList getDestinationTextList() {
     if (valueCase_ == 6) {
        return (com.google.ads.googleads.v3.common.PolicyTopicEvidence.DestinationTextList) value_;
@@ -5422,6 +5599,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v3.common.PolicyTopicEvidence.DestinationTextList destination_text_list = 6;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.common.PolicyTopicEvidence.DestinationTextListOrBuilder getDestinationTextListOrBuilder() {
     if (valueCase_ == 6) {
        return (com.google.ads.googleads.v3.common.PolicyTopicEvidence.DestinationTextList) value_;
@@ -5436,7 +5614,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.PolicyTopicEvidence.DestinationMismatch destination_mismatch = 7;</code>
+   * @return Whether the destinationMismatch field is set.
    */
+  @java.lang.Override
   public boolean hasDestinationMismatch() {
     return valueCase_ == 7;
   }
@@ -5446,7 +5626,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.PolicyTopicEvidence.DestinationMismatch destination_mismatch = 7;</code>
+   * @return The destinationMismatch.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.common.PolicyTopicEvidence.DestinationMismatch getDestinationMismatch() {
     if (valueCase_ == 7) {
        return (com.google.ads.googleads.v3.common.PolicyTopicEvidence.DestinationMismatch) value_;
@@ -5460,6 +5642,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v3.common.PolicyTopicEvidence.DestinationMismatch destination_mismatch = 7;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.common.PolicyTopicEvidence.DestinationMismatchOrBuilder getDestinationMismatchOrBuilder() {
     if (valueCase_ == 7) {
        return (com.google.ads.googleads.v3.common.PolicyTopicEvidence.DestinationMismatch) value_;
@@ -5475,7 +5658,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.PolicyTopicEvidence.DestinationNotWorking destination_not_working = 8;</code>
+   * @return Whether the destinationNotWorking field is set.
    */
+  @java.lang.Override
   public boolean hasDestinationNotWorking() {
     return valueCase_ == 8;
   }
@@ -5486,7 +5671,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.PolicyTopicEvidence.DestinationNotWorking destination_not_working = 8;</code>
+   * @return The destinationNotWorking.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.common.PolicyTopicEvidence.DestinationNotWorking getDestinationNotWorking() {
     if (valueCase_ == 8) {
        return (com.google.ads.googleads.v3.common.PolicyTopicEvidence.DestinationNotWorking) value_;
@@ -5501,6 +5688,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v3.common.PolicyTopicEvidence.DestinationNotWorking destination_not_working = 8;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.common.PolicyTopicEvidence.DestinationNotWorkingOrBuilder getDestinationNotWorkingOrBuilder() {
     if (valueCase_ == 8) {
        return (com.google.ads.googleads.v3.common.PolicyTopicEvidence.DestinationNotWorking) value_;
@@ -5993,7 +6181,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.common.PolicyTopicEvidence.WebsiteList website_list = 3;</code>
+     * @return Whether the websiteList field is set.
      */
+    @java.lang.Override
     public boolean hasWebsiteList() {
       return valueCase_ == 3;
     }
@@ -6003,7 +6193,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.common.PolicyTopicEvidence.WebsiteList website_list = 3;</code>
+     * @return The websiteList.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.common.PolicyTopicEvidence.WebsiteList getWebsiteList() {
       if (websiteListBuilder_ == null) {
         if (valueCase_ == 3) {
@@ -6121,6 +6313,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v3.common.PolicyTopicEvidence.WebsiteList website_list = 3;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.common.PolicyTopicEvidence.WebsiteListOrBuilder getWebsiteListOrBuilder() {
       if ((valueCase_ == 3) && (websiteListBuilder_ != null)) {
         return websiteListBuilder_.getMessageOrBuilder();
@@ -6165,7 +6358,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.common.PolicyTopicEvidence.TextList text_list = 4;</code>
+     * @return Whether the textList field is set.
      */
+    @java.lang.Override
     public boolean hasTextList() {
       return valueCase_ == 4;
     }
@@ -6175,7 +6370,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.common.PolicyTopicEvidence.TextList text_list = 4;</code>
+     * @return The textList.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.common.PolicyTopicEvidence.TextList getTextList() {
       if (textListBuilder_ == null) {
         if (valueCase_ == 4) {
@@ -6293,6 +6490,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v3.common.PolicyTopicEvidence.TextList text_list = 4;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.common.PolicyTopicEvidence.TextListOrBuilder getTextListOrBuilder() {
       if ((valueCase_ == 4) && (textListBuilder_ != null)) {
         return textListBuilder_.getMessageOrBuilder();
@@ -6338,7 +6536,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue language_code = 5;</code>
+     * @return Whether the languageCode field is set.
      */
+    @java.lang.Override
     public boolean hasLanguageCode() {
       return valueCase_ == 5;
     }
@@ -6349,7 +6549,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue language_code = 5;</code>
+     * @return The languageCode.
      */
+    @java.lang.Override
     public com.google.protobuf.StringValue getLanguageCode() {
       if (languageCodeBuilder_ == null) {
         if (valueCase_ == 5) {
@@ -6473,6 +6675,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.protobuf.StringValue language_code = 5;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.StringValueOrBuilder getLanguageCodeOrBuilder() {
       if ((valueCase_ == 5) && (languageCodeBuilder_ != null)) {
         return languageCodeBuilder_.getMessageOrBuilder();
@@ -6519,7 +6722,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.common.PolicyTopicEvidence.DestinationTextList destination_text_list = 6;</code>
+     * @return Whether the destinationTextList field is set.
      */
+    @java.lang.Override
     public boolean hasDestinationTextList() {
       return valueCase_ == 6;
     }
@@ -6530,7 +6735,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.common.PolicyTopicEvidence.DestinationTextList destination_text_list = 6;</code>
+     * @return The destinationTextList.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.common.PolicyTopicEvidence.DestinationTextList getDestinationTextList() {
       if (destinationTextListBuilder_ == null) {
         if (valueCase_ == 6) {
@@ -6654,6 +6861,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v3.common.PolicyTopicEvidence.DestinationTextList destination_text_list = 6;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.common.PolicyTopicEvidence.DestinationTextListOrBuilder getDestinationTextListOrBuilder() {
       if ((valueCase_ == 6) && (destinationTextListBuilder_ != null)) {
         return destinationTextListBuilder_.getMessageOrBuilder();
@@ -6699,7 +6907,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.common.PolicyTopicEvidence.DestinationMismatch destination_mismatch = 7;</code>
+     * @return Whether the destinationMismatch field is set.
      */
+    @java.lang.Override
     public boolean hasDestinationMismatch() {
       return valueCase_ == 7;
     }
@@ -6709,7 +6919,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.common.PolicyTopicEvidence.DestinationMismatch destination_mismatch = 7;</code>
+     * @return The destinationMismatch.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.common.PolicyTopicEvidence.DestinationMismatch getDestinationMismatch() {
       if (destinationMismatchBuilder_ == null) {
         if (valueCase_ == 7) {
@@ -6827,6 +7039,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v3.common.PolicyTopicEvidence.DestinationMismatch destination_mismatch = 7;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.common.PolicyTopicEvidence.DestinationMismatchOrBuilder getDestinationMismatchOrBuilder() {
       if ((valueCase_ == 7) && (destinationMismatchBuilder_ != null)) {
         return destinationMismatchBuilder_.getMessageOrBuilder();
@@ -6872,7 +7085,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.common.PolicyTopicEvidence.DestinationNotWorking destination_not_working = 8;</code>
+     * @return Whether the destinationNotWorking field is set.
      */
+    @java.lang.Override
     public boolean hasDestinationNotWorking() {
       return valueCase_ == 8;
     }
@@ -6883,7 +7098,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.common.PolicyTopicEvidence.DestinationNotWorking destination_not_working = 8;</code>
+     * @return The destinationNotWorking.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.common.PolicyTopicEvidence.DestinationNotWorking getDestinationNotWorking() {
       if (destinationNotWorkingBuilder_ == null) {
         if (valueCase_ == 8) {
@@ -7007,6 +7224,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v3.common.PolicyTopicEvidence.DestinationNotWorking destination_not_working = 8;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.common.PolicyTopicEvidence.DestinationNotWorkingOrBuilder getDestinationNotWorkingOrBuilder() {
       if ((valueCase_ == 8) && (destinationNotWorkingBuilder_ != null)) {
         return destinationNotWorkingBuilder_.getMessageOrBuilder();

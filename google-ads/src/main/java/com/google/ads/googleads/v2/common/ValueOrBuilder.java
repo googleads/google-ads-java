@@ -13,6 +13,7 @@ public interface ValueOrBuilder extends
    * </pre>
    *
    * <code>bool boolean_value = 1;</code>
+   * @return The booleanValue.
    */
   boolean getBooleanValue();
 
@@ -22,6 +23,7 @@ public interface ValueOrBuilder extends
    * </pre>
    *
    * <code>int64 int64_value = 2;</code>
+   * @return The int64Value.
    */
   long getInt64Value();
 
@@ -31,6 +33,7 @@ public interface ValueOrBuilder extends
    * </pre>
    *
    * <code>float float_value = 3;</code>
+   * @return The floatValue.
    */
   float getFloatValue();
 
@@ -40,6 +43,7 @@ public interface ValueOrBuilder extends
    * </pre>
    *
    * <code>double double_value = 4;</code>
+   * @return The doubleValue.
    */
   double getDoubleValue();
 
@@ -49,6 +53,7 @@ public interface ValueOrBuilder extends
    * </pre>
    *
    * <code>string string_value = 5;</code>
+   * @return The stringValue.
    */
   java.lang.String getStringValue();
   /**
@@ -57,6 +62,7 @@ public interface ValueOrBuilder extends
    * </pre>
    *
    * <code>string string_value = 5;</code>
+   * @return The bytes for stringValue.
    */
   com.google.protobuf.ByteString
       getStringValueBytes();

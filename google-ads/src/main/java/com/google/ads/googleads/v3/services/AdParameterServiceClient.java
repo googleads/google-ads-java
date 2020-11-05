@@ -1,5 +1,5 @@
 /*
- * Copyright 2019 Google LLC
+ * Copyright 2020 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -21,7 +21,6 @@ import com.google.ads.googleads.v3.services.stub.AdParameterServiceStubSettings;
 import com.google.api.core.BetaApi;
 import com.google.api.gax.core.BackgroundResource;
 import com.google.api.gax.rpc.UnaryCallable;
-import com.google.api.pathtemplate.PathTemplate;
 import java.io.IOException;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
@@ -37,8 +36,8 @@ import javax.annotation.Generated;
  * <pre>
  * <code>
  * try (AdParameterServiceClient adParameterServiceClient = AdParameterServiceClient.create()) {
- *   String formattedResourceName = AdParameterServiceClient.formatAdParameterName("[CUSTOMER]", "[AD_PARAMETER]");
- *   AdParameter response = adParameterServiceClient.getAdParameter(formattedResourceName);
+ *   AdParameterName resourceName = AdParameterName.of("[CUSTOMER]", "[AD_PARAMETER]");
+ *   AdParameter response = adParameterServiceClient.getAdParameter(resourceName);
  * }
  * </code>
  * </pre>
@@ -100,43 +99,6 @@ public class AdParameterServiceClient implements BackgroundResource {
   private final AdParameterServiceSettings settings;
   private final AdParameterServiceStub stub;
 
-  private static final PathTemplate AD_PARAMETER_PATH_TEMPLATE =
-      PathTemplate.createWithoutUrlEncoding("customers/{customer}/adParameters/{ad_parameter}");
-
-  /**
-   * Formats a string containing the fully-qualified path to represent a ad_parameter resource.
-   *
-   * @deprecated Use the {@link AdParameterName} class instead.
-   */
-  @Deprecated
-  public static final String formatAdParameterName(String customer, String adParameter) {
-    return AD_PARAMETER_PATH_TEMPLATE.instantiate(
-        "customer", customer,
-        "ad_parameter", adParameter);
-  }
-
-  /**
-   * Parses the customer from the given fully-qualified path which represents a ad_parameter
-   * resource.
-   *
-   * @deprecated Use the {@link AdParameterName} class instead.
-   */
-  @Deprecated
-  public static final String parseCustomerFromAdParameterName(String adParameterName) {
-    return AD_PARAMETER_PATH_TEMPLATE.parse(adParameterName).get("customer");
-  }
-
-  /**
-   * Parses the ad_parameter from the given fully-qualified path which represents a ad_parameter
-   * resource.
-   *
-   * @deprecated Use the {@link AdParameterName} class instead.
-   */
-  @Deprecated
-  public static final String parseAdParameterFromAdParameterName(String adParameterName) {
-    return AD_PARAMETER_PATH_TEMPLATE.parse(adParameterName).get("ad_parameter");
-  }
-
   /** Constructs an instance of AdParameterServiceClient with default settings. */
   public static final AdParameterServiceClient create() throws IOException {
     return create(AdParameterServiceSettings.newBuilder().build());
@@ -193,8 +155,32 @@ public class AdParameterServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (AdParameterServiceClient adParameterServiceClient = AdParameterServiceClient.create()) {
-   *   String formattedResourceName = AdParameterServiceClient.formatAdParameterName("[CUSTOMER]", "[AD_PARAMETER]");
-   *   AdParameter response = adParameterServiceClient.getAdParameter(formattedResourceName);
+   *   AdParameterName resourceName = AdParameterName.of("[CUSTOMER]", "[AD_PARAMETER]");
+   *   AdParameter response = adParameterServiceClient.getAdParameter(resourceName);
+   * }
+   * </code></pre>
+   *
+   * @param resourceName Required. The resource name of the ad parameter to fetch.
+   * @throws com.google.api.gax.rpc.ApiException if the remote call fails
+   */
+  public final AdParameter getAdParameter(AdParameterName resourceName) {
+    GetAdParameterRequest request =
+        GetAdParameterRequest.newBuilder()
+            .setResourceName(resourceName == null ? null : resourceName.toString())
+            .build();
+    return getAdParameter(request);
+  }
+
+  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  /**
+   * Returns the requested ad parameter in full detail.
+   *
+   * <p>Sample code:
+   *
+   * <pre><code>
+   * try (AdParameterServiceClient adParameterServiceClient = AdParameterServiceClient.create()) {
+   *   AdParameterName resourceName = AdParameterName.of("[CUSTOMER]", "[AD_PARAMETER]");
+   *   AdParameter response = adParameterServiceClient.getAdParameter(resourceName.toString());
    * }
    * </code></pre>
    *
@@ -202,7 +188,6 @@ public class AdParameterServiceClient implements BackgroundResource {
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final AdParameter getAdParameter(String resourceName) {
-    AD_PARAMETER_PATH_TEMPLATE.validate(resourceName, "getAdParameter");
     GetAdParameterRequest request =
         GetAdParameterRequest.newBuilder().setResourceName(resourceName).build();
     return getAdParameter(request);
@@ -216,9 +201,9 @@ public class AdParameterServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (AdParameterServiceClient adParameterServiceClient = AdParameterServiceClient.create()) {
-   *   String formattedResourceName = AdParameterServiceClient.formatAdParameterName("[CUSTOMER]", "[AD_PARAMETER]");
+   *   AdParameterName resourceName = AdParameterName.of("[CUSTOMER]", "[AD_PARAMETER]");
    *   GetAdParameterRequest request = GetAdParameterRequest.newBuilder()
-   *     .setResourceName(formattedResourceName)
+   *     .setResourceName(resourceName.toString())
    *     .build();
    *   AdParameter response = adParameterServiceClient.getAdParameter(request);
    * }
@@ -239,9 +224,9 @@ public class AdParameterServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (AdParameterServiceClient adParameterServiceClient = AdParameterServiceClient.create()) {
-   *   String formattedResourceName = AdParameterServiceClient.formatAdParameterName("[CUSTOMER]", "[AD_PARAMETER]");
+   *   AdParameterName resourceName = AdParameterName.of("[CUSTOMER]", "[AD_PARAMETER]");
    *   GetAdParameterRequest request = GetAdParameterRequest.newBuilder()
-   *     .setResourceName(formattedResourceName)
+   *     .setResourceName(resourceName.toString())
    *     .build();
    *   ApiFuture&lt;AdParameter&gt; future = adParameterServiceClient.getAdParameterCallable().futureCall(request);
    *   // Do something
@@ -251,47 +236,6 @@ public class AdParameterServiceClient implements BackgroundResource {
    */
   public final UnaryCallable<GetAdParameterRequest, AdParameter> getAdParameterCallable() {
     return stub.getAdParameterCallable();
-  }
-
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
-  /**
-   * Creates, updates, or removes ad parameters. Operation statuses are returned.
-   *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (AdParameterServiceClient adParameterServiceClient = AdParameterServiceClient.create()) {
-   *   String customerId = "";
-   *   List&lt;AdParameterOperation&gt; operations = new ArrayList&lt;&gt;();
-   *   boolean partialFailure = false;
-   *   boolean validateOnly = false;
-   *   MutateAdParametersResponse response = adParameterServiceClient.mutateAdParameters(customerId, operations, partialFailure, validateOnly);
-   * }
-   * </code></pre>
-   *
-   * @param customerId Required. The ID of the customer whose ad parameters are being modified.
-   * @param operations Required. The list of operations to perform on individual ad parameters.
-   * @param partialFailure If true, successful operations will be carried out and invalid operations
-   *     will return errors. If false, all operations will be carried out in one transaction if and
-   *     only if they are all valid. Default is false.
-   * @param validateOnly If true, the request is validated but not executed. Only errors are
-   *     returned, not results.
-   * @throws com.google.api.gax.rpc.ApiException if the remote call fails
-   */
-  public final MutateAdParametersResponse mutateAdParameters(
-      String customerId,
-      List<AdParameterOperation> operations,
-      boolean partialFailure,
-      boolean validateOnly) {
-
-    MutateAdParametersRequest request =
-        MutateAdParametersRequest.newBuilder()
-            .setCustomerId(customerId)
-            .addAllOperations(operations)
-            .setPartialFailure(partialFailure)
-            .setValidateOnly(validateOnly)
-            .build();
-    return mutateAdParameters(request);
   }
 
   // AUTO-GENERATED DOCUMENTATION AND METHOD
@@ -314,7 +258,6 @@ public class AdParameterServiceClient implements BackgroundResource {
    */
   public final MutateAdParametersResponse mutateAdParameters(
       String customerId, List<AdParameterOperation> operations) {
-
     MutateAdParametersRequest request =
         MutateAdParametersRequest.newBuilder()
             .setCustomerId(customerId)

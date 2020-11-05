@@ -21,7 +21,7 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.10.0)",
+    value = "by gRPC proto compiler",
     comments = "Source: google/ads/googleads/v2/services/parental_status_view_service.proto")
 public final class ParentalStatusViewServiceGrpc {
 
@@ -30,49 +30,49 @@ public final class ParentalStatusViewServiceGrpc {
   public static final String SERVICE_NAME = "google.ads.googleads.v2.services.ParentalStatusViewService";
 
   // Static method descriptors that strictly reflect the proto.
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  @java.lang.Deprecated // Use {@link #getGetParentalStatusViewMethod()} instead. 
-  public static final io.grpc.MethodDescriptor<com.google.ads.googleads.v2.services.GetParentalStatusViewRequest,
-      com.google.ads.googleads.v2.resources.ParentalStatusView> METHOD_GET_PARENTAL_STATUS_VIEW = getGetParentalStatusViewMethodHelper();
-
   private static volatile io.grpc.MethodDescriptor<com.google.ads.googleads.v2.services.GetParentalStatusViewRequest,
       com.google.ads.googleads.v2.resources.ParentalStatusView> getGetParentalStatusViewMethod;
 
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetParentalStatusView",
+      requestType = com.google.ads.googleads.v2.services.GetParentalStatusViewRequest.class,
+      responseType = com.google.ads.googleads.v2.resources.ParentalStatusView.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<com.google.ads.googleads.v2.services.GetParentalStatusViewRequest,
       com.google.ads.googleads.v2.resources.ParentalStatusView> getGetParentalStatusViewMethod() {
-    return getGetParentalStatusViewMethodHelper();
-  }
-
-  private static io.grpc.MethodDescriptor<com.google.ads.googleads.v2.services.GetParentalStatusViewRequest,
-      com.google.ads.googleads.v2.resources.ParentalStatusView> getGetParentalStatusViewMethodHelper() {
     io.grpc.MethodDescriptor<com.google.ads.googleads.v2.services.GetParentalStatusViewRequest, com.google.ads.googleads.v2.resources.ParentalStatusView> getGetParentalStatusViewMethod;
     if ((getGetParentalStatusViewMethod = ParentalStatusViewServiceGrpc.getGetParentalStatusViewMethod) == null) {
       synchronized (ParentalStatusViewServiceGrpc.class) {
         if ((getGetParentalStatusViewMethod = ParentalStatusViewServiceGrpc.getGetParentalStatusViewMethod) == null) {
-          ParentalStatusViewServiceGrpc.getGetParentalStatusViewMethod = getGetParentalStatusViewMethod = 
+          ParentalStatusViewServiceGrpc.getGetParentalStatusViewMethod = getGetParentalStatusViewMethod =
               io.grpc.MethodDescriptor.<com.google.ads.googleads.v2.services.GetParentalStatusViewRequest, com.google.ads.googleads.v2.resources.ParentalStatusView>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "google.ads.googleads.v2.services.ParentalStatusViewService", "GetParentalStatusView"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetParentalStatusView"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v2.services.GetParentalStatusViewRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v2.resources.ParentalStatusView.getDefaultInstance()))
-                  .setSchemaDescriptor(new ParentalStatusViewServiceMethodDescriptorSupplier("GetParentalStatusView"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ParentalStatusViewServiceMethodDescriptorSupplier("GetParentalStatusView"))
+              .build();
         }
-     }
-     return getGetParentalStatusViewMethod;
+      }
+    }
+    return getGetParentalStatusViewMethod;
   }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static ParentalStatusViewServiceStub newStub(io.grpc.Channel channel) {
-    return new ParentalStatusViewServiceStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<ParentalStatusViewServiceStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<ParentalStatusViewServiceStub>() {
+        @java.lang.Override
+        public ParentalStatusViewServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new ParentalStatusViewServiceStub(channel, callOptions);
+        }
+      };
+    return ParentalStatusViewServiceStub.newStub(factory, channel);
   }
 
   /**
@@ -80,7 +80,14 @@ public final class ParentalStatusViewServiceGrpc {
    */
   public static ParentalStatusViewServiceBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new ParentalStatusViewServiceBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<ParentalStatusViewServiceBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<ParentalStatusViewServiceBlockingStub>() {
+        @java.lang.Override
+        public ParentalStatusViewServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new ParentalStatusViewServiceBlockingStub(channel, callOptions);
+        }
+      };
+    return ParentalStatusViewServiceBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -88,7 +95,14 @@ public final class ParentalStatusViewServiceGrpc {
    */
   public static ParentalStatusViewServiceFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new ParentalStatusViewServiceFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<ParentalStatusViewServiceFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<ParentalStatusViewServiceFutureStub>() {
+        @java.lang.Override
+        public ParentalStatusViewServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new ParentalStatusViewServiceFutureStub(channel, callOptions);
+        }
+      };
+    return ParentalStatusViewServiceFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -105,13 +119,13 @@ public final class ParentalStatusViewServiceGrpc {
      */
     public void getParentalStatusView(com.google.ads.googleads.v2.services.GetParentalStatusViewRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v2.resources.ParentalStatusView> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetParentalStatusViewMethodHelper(), responseObserver);
+      asyncUnimplementedUnaryCall(getGetParentalStatusViewMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
-            getGetParentalStatusViewMethodHelper(),
+            getGetParentalStatusViewMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 com.google.ads.googleads.v2.services.GetParentalStatusViewRequest,
@@ -126,19 +140,15 @@ public final class ParentalStatusViewServiceGrpc {
    * Service to manage parental status views.
    * </pre>
    */
-  public static final class ParentalStatusViewServiceStub extends io.grpc.stub.AbstractStub<ParentalStatusViewServiceStub> {
-    private ParentalStatusViewServiceStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private ParentalStatusViewServiceStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class ParentalStatusViewServiceStub extends io.grpc.stub.AbstractAsyncStub<ParentalStatusViewServiceStub> {
+    private ParentalStatusViewServiceStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected ParentalStatusViewServiceStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected ParentalStatusViewServiceStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new ParentalStatusViewServiceStub(channel, callOptions);
     }
 
@@ -150,7 +160,7 @@ public final class ParentalStatusViewServiceGrpc {
     public void getParentalStatusView(com.google.ads.googleads.v2.services.GetParentalStatusViewRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v2.resources.ParentalStatusView> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(getGetParentalStatusViewMethodHelper(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getGetParentalStatusViewMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -159,19 +169,15 @@ public final class ParentalStatusViewServiceGrpc {
    * Service to manage parental status views.
    * </pre>
    */
-  public static final class ParentalStatusViewServiceBlockingStub extends io.grpc.stub.AbstractStub<ParentalStatusViewServiceBlockingStub> {
-    private ParentalStatusViewServiceBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private ParentalStatusViewServiceBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class ParentalStatusViewServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<ParentalStatusViewServiceBlockingStub> {
+    private ParentalStatusViewServiceBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected ParentalStatusViewServiceBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected ParentalStatusViewServiceBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new ParentalStatusViewServiceBlockingStub(channel, callOptions);
     }
 
@@ -182,7 +188,7 @@ public final class ParentalStatusViewServiceGrpc {
      */
     public com.google.ads.googleads.v2.resources.ParentalStatusView getParentalStatusView(com.google.ads.googleads.v2.services.GetParentalStatusViewRequest request) {
       return blockingUnaryCall(
-          getChannel(), getGetParentalStatusViewMethodHelper(), getCallOptions(), request);
+          getChannel(), getGetParentalStatusViewMethod(), getCallOptions(), request);
     }
   }
 
@@ -191,19 +197,15 @@ public final class ParentalStatusViewServiceGrpc {
    * Service to manage parental status views.
    * </pre>
    */
-  public static final class ParentalStatusViewServiceFutureStub extends io.grpc.stub.AbstractStub<ParentalStatusViewServiceFutureStub> {
-    private ParentalStatusViewServiceFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private ParentalStatusViewServiceFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class ParentalStatusViewServiceFutureStub extends io.grpc.stub.AbstractFutureStub<ParentalStatusViewServiceFutureStub> {
+    private ParentalStatusViewServiceFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected ParentalStatusViewServiceFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected ParentalStatusViewServiceFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new ParentalStatusViewServiceFutureStub(channel, callOptions);
     }
 
@@ -215,7 +217,7 @@ public final class ParentalStatusViewServiceGrpc {
     public com.google.common.util.concurrent.ListenableFuture<com.google.ads.googleads.v2.resources.ParentalStatusView> getParentalStatusView(
         com.google.ads.googleads.v2.services.GetParentalStatusViewRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(getGetParentalStatusViewMethodHelper(), getCallOptions()), request);
+          getChannel().newCall(getGetParentalStatusViewMethod(), getCallOptions()), request);
     }
   }
 
@@ -303,7 +305,7 @@ public final class ParentalStatusViewServiceGrpc {
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new ParentalStatusViewServiceFileDescriptorSupplier())
-              .addMethod(getGetParentalStatusViewMethodHelper())
+              .addMethod(getGetParentalStatusViewMethod())
               .build();
         }
       }

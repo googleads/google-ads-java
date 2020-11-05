@@ -15,6 +15,7 @@ public interface CombinedRuleUserListInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.UserListRuleInfo left_operand = 1;</code>
+   * @return Whether the leftOperand field is set.
    */
   boolean hasLeftOperand();
   /**
@@ -25,6 +26,7 @@ public interface CombinedRuleUserListInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.UserListRuleInfo left_operand = 1;</code>
+   * @return The leftOperand.
    */
   com.google.ads.googleads.v3.common.UserListRuleInfo getLeftOperand();
   /**
@@ -46,6 +48,7 @@ public interface CombinedRuleUserListInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.UserListRuleInfo right_operand = 2;</code>
+   * @return Whether the rightOperand field is set.
    */
   boolean hasRightOperand();
   /**
@@ -56,6 +59,7 @@ public interface CombinedRuleUserListInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.UserListRuleInfo right_operand = 2;</code>
+   * @return The rightOperand.
    */
   com.google.ads.googleads.v3.common.UserListRuleInfo getRightOperand();
   /**
@@ -76,6 +80,7 @@ public interface CombinedRuleUserListInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.UserListCombinedRuleOperatorEnum.UserListCombinedRuleOperator rule_operator = 3;</code>
+   * @return The enum numeric value on the wire for ruleOperator.
    */
   int getRuleOperatorValue();
   /**
@@ -85,6 +90,7 @@ public interface CombinedRuleUserListInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.UserListCombinedRuleOperatorEnum.UserListCombinedRuleOperator rule_operator = 3;</code>
+   * @return The ruleOperator.
    */
   com.google.ads.googleads.v3.enums.UserListCombinedRuleOperatorEnum.UserListCombinedRuleOperator getRuleOperator();
 }

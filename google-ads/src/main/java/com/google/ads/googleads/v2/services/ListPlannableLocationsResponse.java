@@ -10,7 +10,7 @@ package com.google.ads.googleads.v2.services;
  *
  * Protobuf type {@code google.ads.googleads.v2.services.ListPlannableLocationsResponse}
  */
-public  final class ListPlannableLocationsResponse extends
+public final class ListPlannableLocationsResponse extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v2.services.ListPlannableLocationsResponse)
     ListPlannableLocationsResponseOrBuilder {
@@ -21,6 +21,13 @@ private static final long serialVersionUID = 0L;
   }
   private ListPlannableLocationsResponse() {
     plannableLocations_ = java.util.Collections.emptyList();
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new ListPlannableLocationsResponse();
   }
 
   @java.lang.Override
@@ -104,6 +111,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v2.services.PlannableLocation plannable_locations = 1;</code>
    */
+  @java.lang.Override
   public java.util.List<com.google.ads.googleads.v2.services.PlannableLocation> getPlannableLocationsList() {
     return plannableLocations_;
   }
@@ -118,6 +126,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v2.services.PlannableLocation plannable_locations = 1;</code>
    */
+  @java.lang.Override
   public java.util.List<? extends com.google.ads.googleads.v2.services.PlannableLocationOrBuilder> 
       getPlannableLocationsOrBuilderList() {
     return plannableLocations_;
@@ -133,6 +142,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v2.services.PlannableLocation plannable_locations = 1;</code>
    */
+  @java.lang.Override
   public int getPlannableLocationsCount() {
     return plannableLocations_.size();
   }
@@ -147,6 +157,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v2.services.PlannableLocation plannable_locations = 1;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.services.PlannableLocation getPlannableLocations(int index) {
     return plannableLocations_.get(index);
   }
@@ -161,6 +172,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v2.services.PlannableLocation plannable_locations = 1;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.services.PlannableLocationOrBuilder getPlannableLocationsOrBuilder(
       int index) {
     return plannableLocations_.get(index);

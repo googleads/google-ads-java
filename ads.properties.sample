@@ -1,0 +1,73 @@
+# ads.properties
+#
+# Defines configuration for Google Ads API client library for Java.
+#
+# See our developer documentation for more details:
+# https://developers.google.com/google-ads/api/docs/client-libs/java/quick-start
+#
+# - By default this is searched for in ~/ads.properties.
+#   e.g. GoogleAdsClient.newBuilder().fromPropertiesFile() 
+#
+# - Can load from an arbitrary path.
+#   e.g. GoogleAdsClient.newBuilder().fromPropertiesFile("some/path")
+#
+# - All settings in this file can be set & overridden programmatically.
+#   e.g. GoogleAdsClient.newBuilder()
+#          .fromPropertiesFile() // optionally load from config file.
+#          .setDeveloperToken("your_token")
+
+# ------------------------------- OAuth ---------------------------------------
+
+# OAuth client ID
+#
+# Specifies the client ID that is used for Google's OAuth 2 API.
+#
+# - Must use the same client ID which originally generated the refresh token.
+# - Created and managed via http://console.developers.google.com
+# - Doesn't grant access to any specific ad account.
+#api.googleads.clientId=
+
+# OAuth client secret
+#
+# Specifies the client secret that is used for Google's OAuth 2 API. 
+#
+# - Must be the secret associated with the OAuth clientId.
+# - Created and managed via http://console.developers.google.com.
+#api.googleads.clientSecret=
+
+# OAuth refresh token
+#
+# Credential which authorizes access to a Google account. 
+#
+# - See guide for instructions on how to obtain a refresh token.
+#   https://developers.google.com/google-ads/api/docs/oauth/client-library
+# - Provides access to all Google Ads accounts on which the associated Google
+#   account is a user.
+# - Ad account is specified by the customerId in each request. 
+#api.googleads.refreshToken=
+
+# -------------------------- Google Ads API -----------------------------------
+
+# Developer token
+# 
+# Specifies the credential used to access the Google Ads API. 
+#
+# - Grants access to the API, not any Google account or Google Ads account.
+# - Associated with a Google Ads manager accoount.
+# - Found by logging into the manager account on http://ads.google.com
+#   and navigating to -> Tools & Settings -> API Center.
+# - An unapproved developer token can be used to issue requests against test
+#   accounts.
+#api.googleads.developerToken=
+
+# Login customer ID
+#
+# Specifies an ad account which grants access to ad accounts.
+#
+# - Must be specified if your access to an ad account is via a manager account.
+# - May be specified in all requests if your Google user has direct access to 
+#   the ad account.
+# - Ad account access can be managed via http://ads.google.com and navigating
+#   to Tools & Settings -> Account Access
+#api.googleads.loginCustomerId=
+

@@ -10,7 +10,7 @@ package com.google.ads.googleads.v3.services;
  *
  * Protobuf type {@code google.ads.googleads.v3.services.CreateCustomerClientRequest}
  */
-public  final class CreateCustomerClientRequest extends
+public final class CreateCustomerClientRequest extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v3.services.CreateCustomerClientRequest)
     CreateCustomerClientRequestOrBuilder {
@@ -22,6 +22,13 @@ private static final long serialVersionUID = 0L;
   private CreateCustomerClientRequest() {
     customerId_ = "";
     accessRole_ = 0;
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new CreateCustomerClientRequest();
   }
 
   @java.lang.Override
@@ -37,7 +44,6 @@ private static final long serialVersionUID = 0L;
     if (extensionRegistry == null) {
       throw new java.lang.NullPointerException();
     }
-    int mutable_bitField0_ = 0;
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
         com.google.protobuf.UnknownFieldSet.newBuilder();
     try {
@@ -126,7 +132,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+   * @return The customerId.
    */
+  @java.lang.Override
   public java.lang.String getCustomerId() {
     java.lang.Object ref = customerId_;
     if (ref instanceof java.lang.String) {
@@ -145,7 +153,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+   * @return The bytes for customerId.
    */
+  @java.lang.Override
   public com.google.protobuf.ByteString
       getCustomerIdBytes() {
     java.lang.Object ref = customerId_;
@@ -169,7 +179,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.Customer customer_client = 2 [(.google.api.field_behavior) = REQUIRED];</code>
+   * @return Whether the customerClient field is set.
    */
+  @java.lang.Override
   public boolean hasCustomerClient() {
     return customerClient_ != null;
   }
@@ -180,7 +192,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.Customer customer_client = 2 [(.google.api.field_behavior) = REQUIRED];</code>
+   * @return The customerClient.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.resources.Customer getCustomerClient() {
     return customerClient_ == null ? com.google.ads.googleads.v3.resources.Customer.getDefaultInstance() : customerClient_;
   }
@@ -192,6 +206,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v3.resources.Customer customer_client = 2 [(.google.api.field_behavior) = REQUIRED];</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.resources.CustomerOrBuilder getCustomerClientOrBuilder() {
     return getCustomerClient();
   }
@@ -205,7 +220,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue email_address = 3;</code>
+   * @return Whether the emailAddress field is set.
    */
+  @java.lang.Override
   public boolean hasEmailAddress() {
     return emailAddress_ != null;
   }
@@ -216,7 +233,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue email_address = 3;</code>
+   * @return The emailAddress.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getEmailAddress() {
     return emailAddress_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : emailAddress_;
   }
@@ -228,6 +247,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue email_address = 3;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getEmailAddressOrBuilder() {
     return getEmailAddress();
   }
@@ -241,8 +261,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.AccessRoleEnum.AccessRole access_role = 4;</code>
+   * @return The enum numeric value on the wire for accessRole.
    */
-  public int getAccessRoleValue() {
+  @java.lang.Override public int getAccessRoleValue() {
     return accessRole_;
   }
   /**
@@ -252,8 +273,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.AccessRoleEnum.AccessRole access_role = 4;</code>
+   * @return The accessRole.
    */
-  public com.google.ads.googleads.v3.enums.AccessRoleEnum.AccessRole getAccessRole() {
+  @java.lang.Override public com.google.ads.googleads.v3.enums.AccessRoleEnum.AccessRole getAccessRole() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v3.enums.AccessRoleEnum.AccessRole result = com.google.ads.googleads.v3.enums.AccessRoleEnum.AccessRole.valueOf(accessRole_);
     return result == null ? com.google.ads.googleads.v3.enums.AccessRoleEnum.AccessRole.UNRECOGNIZED : result;
@@ -648,6 +670,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+     * @return The customerId.
      */
     public java.lang.String getCustomerId() {
       java.lang.Object ref = customerId_;
@@ -667,6 +690,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+     * @return The bytes for customerId.
      */
     public com.google.protobuf.ByteString
         getCustomerIdBytes() {
@@ -687,6 +711,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+     * @param value The customerId to set.
+     * @return This builder for chaining.
      */
     public Builder setCustomerId(
         java.lang.String value) {
@@ -704,6 +730,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+     * @return This builder for chaining.
      */
     public Builder clearCustomerId() {
       
@@ -717,6 +744,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+     * @param value The bytes for customerId to set.
+     * @return This builder for chaining.
      */
     public Builder setCustomerIdBytes(
         com.google.protobuf.ByteString value) {
@@ -740,6 +769,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.resources.Customer customer_client = 2 [(.google.api.field_behavior) = REQUIRED];</code>
+     * @return Whether the customerClient field is set.
      */
     public boolean hasCustomerClient() {
       return customerClientBuilder_ != null || customerClient_ != null;
@@ -751,6 +781,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.resources.Customer customer_client = 2 [(.google.api.field_behavior) = REQUIRED];</code>
+     * @return The customerClient.
      */
     public com.google.ads.googleads.v3.resources.Customer getCustomerClient() {
       if (customerClientBuilder_ == null) {
@@ -902,6 +933,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue email_address = 3;</code>
+     * @return Whether the emailAddress field is set.
      */
     public boolean hasEmailAddress() {
       return emailAddressBuilder_ != null || emailAddress_ != null;
@@ -913,6 +945,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue email_address = 3;</code>
+     * @return The emailAddress.
      */
     public com.google.protobuf.StringValue getEmailAddress() {
       if (emailAddressBuilder_ == null) {
@@ -1062,8 +1095,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.AccessRoleEnum.AccessRole access_role = 4;</code>
+     * @return The enum numeric value on the wire for accessRole.
      */
-    public int getAccessRoleValue() {
+    @java.lang.Override public int getAccessRoleValue() {
       return accessRole_;
     }
     /**
@@ -1073,8 +1107,11 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.AccessRoleEnum.AccessRole access_role = 4;</code>
+     * @param value The enum numeric value on the wire for accessRole to set.
+     * @return This builder for chaining.
      */
     public Builder setAccessRoleValue(int value) {
+      
       accessRole_ = value;
       onChanged();
       return this;
@@ -1086,7 +1123,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.AccessRoleEnum.AccessRole access_role = 4;</code>
+     * @return The accessRole.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.enums.AccessRoleEnum.AccessRole getAccessRole() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v3.enums.AccessRoleEnum.AccessRole result = com.google.ads.googleads.v3.enums.AccessRoleEnum.AccessRole.valueOf(accessRole_);
@@ -1099,6 +1138,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.AccessRoleEnum.AccessRole access_role = 4;</code>
+     * @param value The accessRole to set.
+     * @return This builder for chaining.
      */
     public Builder setAccessRole(com.google.ads.googleads.v3.enums.AccessRoleEnum.AccessRole value) {
       if (value == null) {
@@ -1116,6 +1157,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.AccessRoleEnum.AccessRole access_role = 4;</code>
+     * @return This builder for chaining.
      */
     public Builder clearAccessRole() {
       

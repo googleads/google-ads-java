@@ -10,7 +10,7 @@ package com.google.ads.googleads.v3.services;
  *
  * Protobuf type {@code google.ads.googleads.v3.services.PlannableTargeting}
  */
-public  final class PlannableTargeting extends
+public final class PlannableTargeting extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v3.services.PlannableTargeting)
     PlannableTargetingOrBuilder {
@@ -24,6 +24,13 @@ private static final long serialVersionUID = 0L;
     genders_ = java.util.Collections.emptyList();
     devices_ = java.util.Collections.emptyList();
     networks_ = java.util.Collections.emptyList();
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new PlannableTargeting();
   }
 
   @java.lang.Override
@@ -178,7 +185,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v3.enums.ReachPlanAgeRangeEnum.ReachPlanAgeRange age_ranges = 1;</code>
+   * @return A list containing the ageRanges.
    */
+  @java.lang.Override
   public java.util.List<com.google.ads.googleads.v3.enums.ReachPlanAgeRangeEnum.ReachPlanAgeRange> getAgeRangesList() {
     return new com.google.protobuf.Internal.ListAdapter<
         java.lang.Integer, com.google.ads.googleads.v3.enums.ReachPlanAgeRangeEnum.ReachPlanAgeRange>(ageRanges_, ageRanges_converter_);
@@ -191,7 +200,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v3.enums.ReachPlanAgeRangeEnum.ReachPlanAgeRange age_ranges = 1;</code>
+   * @return The count of ageRanges.
    */
+  @java.lang.Override
   public int getAgeRangesCount() {
     return ageRanges_.size();
   }
@@ -203,7 +214,10 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v3.enums.ReachPlanAgeRangeEnum.ReachPlanAgeRange age_ranges = 1;</code>
+   * @param index The index of the element to return.
+   * @return The ageRanges at the given index.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.enums.ReachPlanAgeRangeEnum.ReachPlanAgeRange getAgeRanges(int index) {
     return ageRanges_converter_.convert(ageRanges_.get(index));
   }
@@ -215,7 +229,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v3.enums.ReachPlanAgeRangeEnum.ReachPlanAgeRange age_ranges = 1;</code>
+   * @return A list containing the enum numeric values on the wire for ageRanges.
    */
+  @java.lang.Override
   public java.util.List<java.lang.Integer>
   getAgeRangesValueList() {
     return ageRanges_;
@@ -228,7 +244,10 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v3.enums.ReachPlanAgeRangeEnum.ReachPlanAgeRange age_ranges = 1;</code>
+   * @param index The index of the value to return.
+   * @return The enum numeric value on the wire of ageRanges at the given index.
    */
+  @java.lang.Override
   public int getAgeRangesValue(int index) {
     return ageRanges_.get(index);
   }
@@ -243,6 +262,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v3.common.GenderInfo genders = 2;</code>
    */
+  @java.lang.Override
   public java.util.List<com.google.ads.googleads.v3.common.GenderInfo> getGendersList() {
     return genders_;
   }
@@ -253,6 +273,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v3.common.GenderInfo genders = 2;</code>
    */
+  @java.lang.Override
   public java.util.List<? extends com.google.ads.googleads.v3.common.GenderInfoOrBuilder> 
       getGendersOrBuilderList() {
     return genders_;
@@ -264,6 +285,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v3.common.GenderInfo genders = 2;</code>
    */
+  @java.lang.Override
   public int getGendersCount() {
     return genders_.size();
   }
@@ -274,6 +296,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v3.common.GenderInfo genders = 2;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.common.GenderInfo getGenders(int index) {
     return genders_.get(index);
   }
@@ -284,6 +307,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v3.common.GenderInfo genders = 2;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.common.GenderInfoOrBuilder getGendersOrBuilder(
       int index) {
     return genders_.get(index);
@@ -298,6 +322,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v3.common.DeviceInfo devices = 3;</code>
    */
+  @java.lang.Override
   public java.util.List<com.google.ads.googleads.v3.common.DeviceInfo> getDevicesList() {
     return devices_;
   }
@@ -308,6 +333,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v3.common.DeviceInfo devices = 3;</code>
    */
+  @java.lang.Override
   public java.util.List<? extends com.google.ads.googleads.v3.common.DeviceInfoOrBuilder> 
       getDevicesOrBuilderList() {
     return devices_;
@@ -319,6 +345,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v3.common.DeviceInfo devices = 3;</code>
    */
+  @java.lang.Override
   public int getDevicesCount() {
     return devices_.size();
   }
@@ -329,6 +356,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v3.common.DeviceInfo devices = 3;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.common.DeviceInfo getDevices(int index) {
     return devices_.get(index);
   }
@@ -339,6 +367,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v3.common.DeviceInfo devices = 3;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.common.DeviceInfoOrBuilder getDevicesOrBuilder(
       int index) {
     return devices_.get(index);
@@ -362,7 +391,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v3.enums.ReachPlanNetworkEnum.ReachPlanNetwork networks = 4;</code>
+   * @return A list containing the networks.
    */
+  @java.lang.Override
   public java.util.List<com.google.ads.googleads.v3.enums.ReachPlanNetworkEnum.ReachPlanNetwork> getNetworksList() {
     return new com.google.protobuf.Internal.ListAdapter<
         java.lang.Integer, com.google.ads.googleads.v3.enums.ReachPlanNetworkEnum.ReachPlanNetwork>(networks_, networks_converter_);
@@ -373,7 +404,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v3.enums.ReachPlanNetworkEnum.ReachPlanNetwork networks = 4;</code>
+   * @return The count of networks.
    */
+  @java.lang.Override
   public int getNetworksCount() {
     return networks_.size();
   }
@@ -383,7 +416,10 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v3.enums.ReachPlanNetworkEnum.ReachPlanNetwork networks = 4;</code>
+   * @param index The index of the element to return.
+   * @return The networks at the given index.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.enums.ReachPlanNetworkEnum.ReachPlanNetwork getNetworks(int index) {
     return networks_converter_.convert(networks_.get(index));
   }
@@ -393,7 +429,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v3.enums.ReachPlanNetworkEnum.ReachPlanNetwork networks = 4;</code>
+   * @return A list containing the enum numeric values on the wire for networks.
    */
+  @java.lang.Override
   public java.util.List<java.lang.Integer>
   getNetworksValueList() {
     return networks_;
@@ -404,7 +442,10 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v3.enums.ReachPlanNetworkEnum.ReachPlanNetwork networks = 4;</code>
+   * @param index The index of the value to return.
+   * @return The enum numeric value on the wire of networks at the given index.
    */
+  @java.lang.Override
   public int getNetworksValue(int index) {
     return networks_.get(index);
   }
@@ -910,6 +951,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v3.enums.ReachPlanAgeRangeEnum.ReachPlanAgeRange age_ranges = 1;</code>
+     * @return A list containing the ageRanges.
      */
     public java.util.List<com.google.ads.googleads.v3.enums.ReachPlanAgeRangeEnum.ReachPlanAgeRange> getAgeRangesList() {
       return new com.google.protobuf.Internal.ListAdapter<
@@ -923,6 +965,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v3.enums.ReachPlanAgeRangeEnum.ReachPlanAgeRange age_ranges = 1;</code>
+     * @return The count of ageRanges.
      */
     public int getAgeRangesCount() {
       return ageRanges_.size();
@@ -935,6 +978,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v3.enums.ReachPlanAgeRangeEnum.ReachPlanAgeRange age_ranges = 1;</code>
+     * @param index The index of the element to return.
+     * @return The ageRanges at the given index.
      */
     public com.google.ads.googleads.v3.enums.ReachPlanAgeRangeEnum.ReachPlanAgeRange getAgeRanges(int index) {
       return ageRanges_converter_.convert(ageRanges_.get(index));
@@ -947,6 +992,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v3.enums.ReachPlanAgeRangeEnum.ReachPlanAgeRange age_ranges = 1;</code>
+     * @param index The index to set the value at.
+     * @param value The ageRanges to set.
+     * @return This builder for chaining.
      */
     public Builder setAgeRanges(
         int index, com.google.ads.googleads.v3.enums.ReachPlanAgeRangeEnum.ReachPlanAgeRange value) {
@@ -966,6 +1014,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v3.enums.ReachPlanAgeRangeEnum.ReachPlanAgeRange age_ranges = 1;</code>
+     * @param value The ageRanges to add.
+     * @return This builder for chaining.
      */
     public Builder addAgeRanges(com.google.ads.googleads.v3.enums.ReachPlanAgeRangeEnum.ReachPlanAgeRange value) {
       if (value == null) {
@@ -984,6 +1034,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v3.enums.ReachPlanAgeRangeEnum.ReachPlanAgeRange age_ranges = 1;</code>
+     * @param values The ageRanges to add.
+     * @return This builder for chaining.
      */
     public Builder addAllAgeRanges(
         java.lang.Iterable<? extends com.google.ads.googleads.v3.enums.ReachPlanAgeRangeEnum.ReachPlanAgeRange> values) {
@@ -1002,6 +1054,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v3.enums.ReachPlanAgeRangeEnum.ReachPlanAgeRange age_ranges = 1;</code>
+     * @return This builder for chaining.
      */
     public Builder clearAgeRanges() {
       ageRanges_ = java.util.Collections.emptyList();
@@ -1017,6 +1070,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v3.enums.ReachPlanAgeRangeEnum.ReachPlanAgeRange age_ranges = 1;</code>
+     * @return A list containing the enum numeric values on the wire for ageRanges.
      */
     public java.util.List<java.lang.Integer>
     getAgeRangesValueList() {
@@ -1030,6 +1084,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v3.enums.ReachPlanAgeRangeEnum.ReachPlanAgeRange age_ranges = 1;</code>
+     * @param index The index of the value to return.
+     * @return The enum numeric value on the wire of ageRanges at the given index.
      */
     public int getAgeRangesValue(int index) {
       return ageRanges_.get(index);
@@ -1042,6 +1098,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v3.enums.ReachPlanAgeRangeEnum.ReachPlanAgeRange age_ranges = 1;</code>
+     * @param index The index of the value to return.
+     * @return The enum numeric value on the wire of ageRanges at the given index.
+     * @return This builder for chaining.
      */
     public Builder setAgeRangesValue(
         int index, int value) {
@@ -1058,6 +1117,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v3.enums.ReachPlanAgeRangeEnum.ReachPlanAgeRange age_ranges = 1;</code>
+     * @param value The enum numeric value on the wire for ageRanges to add.
+     * @return This builder for chaining.
      */
     public Builder addAgeRangesValue(int value) {
       ensureAgeRangesIsMutable();
@@ -1073,6 +1134,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v3.enums.ReachPlanAgeRangeEnum.ReachPlanAgeRange age_ranges = 1;</code>
+     * @param values The enum numeric values on the wire for ageRanges to add.
+     * @return This builder for chaining.
      */
     public Builder addAllAgeRangesValue(
         java.lang.Iterable<java.lang.Integer> values) {
@@ -1722,6 +1785,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v3.enums.ReachPlanNetworkEnum.ReachPlanNetwork networks = 4;</code>
+     * @return A list containing the networks.
      */
     public java.util.List<com.google.ads.googleads.v3.enums.ReachPlanNetworkEnum.ReachPlanNetwork> getNetworksList() {
       return new com.google.protobuf.Internal.ListAdapter<
@@ -1733,6 +1797,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v3.enums.ReachPlanNetworkEnum.ReachPlanNetwork networks = 4;</code>
+     * @return The count of networks.
      */
     public int getNetworksCount() {
       return networks_.size();
@@ -1743,6 +1808,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v3.enums.ReachPlanNetworkEnum.ReachPlanNetwork networks = 4;</code>
+     * @param index The index of the element to return.
+     * @return The networks at the given index.
      */
     public com.google.ads.googleads.v3.enums.ReachPlanNetworkEnum.ReachPlanNetwork getNetworks(int index) {
       return networks_converter_.convert(networks_.get(index));
@@ -1753,6 +1820,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v3.enums.ReachPlanNetworkEnum.ReachPlanNetwork networks = 4;</code>
+     * @param index The index to set the value at.
+     * @param value The networks to set.
+     * @return This builder for chaining.
      */
     public Builder setNetworks(
         int index, com.google.ads.googleads.v3.enums.ReachPlanNetworkEnum.ReachPlanNetwork value) {
@@ -1770,6 +1840,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v3.enums.ReachPlanNetworkEnum.ReachPlanNetwork networks = 4;</code>
+     * @param value The networks to add.
+     * @return This builder for chaining.
      */
     public Builder addNetworks(com.google.ads.googleads.v3.enums.ReachPlanNetworkEnum.ReachPlanNetwork value) {
       if (value == null) {
@@ -1786,6 +1858,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v3.enums.ReachPlanNetworkEnum.ReachPlanNetwork networks = 4;</code>
+     * @param values The networks to add.
+     * @return This builder for chaining.
      */
     public Builder addAllNetworks(
         java.lang.Iterable<? extends com.google.ads.googleads.v3.enums.ReachPlanNetworkEnum.ReachPlanNetwork> values) {
@@ -1802,6 +1876,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v3.enums.ReachPlanNetworkEnum.ReachPlanNetwork networks = 4;</code>
+     * @return This builder for chaining.
      */
     public Builder clearNetworks() {
       networks_ = java.util.Collections.emptyList();
@@ -1815,6 +1890,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v3.enums.ReachPlanNetworkEnum.ReachPlanNetwork networks = 4;</code>
+     * @return A list containing the enum numeric values on the wire for networks.
      */
     public java.util.List<java.lang.Integer>
     getNetworksValueList() {
@@ -1826,6 +1902,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v3.enums.ReachPlanNetworkEnum.ReachPlanNetwork networks = 4;</code>
+     * @param index The index of the value to return.
+     * @return The enum numeric value on the wire of networks at the given index.
      */
     public int getNetworksValue(int index) {
       return networks_.get(index);
@@ -1836,6 +1914,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v3.enums.ReachPlanNetworkEnum.ReachPlanNetwork networks = 4;</code>
+     * @param index The index of the value to return.
+     * @return The enum numeric value on the wire of networks at the given index.
+     * @return This builder for chaining.
      */
     public Builder setNetworksValue(
         int index, int value) {
@@ -1850,6 +1931,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v3.enums.ReachPlanNetworkEnum.ReachPlanNetwork networks = 4;</code>
+     * @param value The enum numeric value on the wire for networks to add.
+     * @return This builder for chaining.
      */
     public Builder addNetworksValue(int value) {
       ensureNetworksIsMutable();
@@ -1863,6 +1946,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v3.enums.ReachPlanNetworkEnum.ReachPlanNetwork networks = 4;</code>
+     * @param values The enum numeric values on the wire for networks to add.
+     * @return This builder for chaining.
      */
     public Builder addAllNetworksValue(
         java.lang.Iterable<java.lang.Integer> values) {

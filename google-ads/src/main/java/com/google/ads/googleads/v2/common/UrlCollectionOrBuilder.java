@@ -13,6 +13,7 @@ public interface UrlCollectionOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue url_collection_id = 1;</code>
+   * @return Whether the urlCollectionId field is set.
    */
   boolean hasUrlCollectionId();
   /**
@@ -21,6 +22,7 @@ public interface UrlCollectionOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue url_collection_id = 1;</code>
+   * @return The urlCollectionId.
    */
   com.google.protobuf.StringValue getUrlCollectionId();
   /**
@@ -126,6 +128,7 @@ public interface UrlCollectionOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue tracking_url_template = 4;</code>
+   * @return Whether the trackingUrlTemplate field is set.
    */
   boolean hasTrackingUrlTemplate();
   /**
@@ -134,6 +137,7 @@ public interface UrlCollectionOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue tracking_url_template = 4;</code>
+   * @return The trackingUrlTemplate.
    */
   com.google.protobuf.StringValue getTrackingUrlTemplate();
   /**

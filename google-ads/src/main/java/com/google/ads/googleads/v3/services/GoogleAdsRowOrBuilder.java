@@ -13,6 +13,7 @@ public interface GoogleAdsRowOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.AccountBudget account_budget = 42;</code>
+   * @return Whether the accountBudget field is set.
    */
   boolean hasAccountBudget();
   /**
@@ -21,6 +22,7 @@ public interface GoogleAdsRowOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.AccountBudget account_budget = 42;</code>
+   * @return The accountBudget.
    */
   com.google.ads.googleads.v3.resources.AccountBudget getAccountBudget();
   /**
@@ -38,6 +40,7 @@ public interface GoogleAdsRowOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.AccountBudgetProposal account_budget_proposal = 43;</code>
+   * @return Whether the accountBudgetProposal field is set.
    */
   boolean hasAccountBudgetProposal();
   /**
@@ -46,6 +49,7 @@ public interface GoogleAdsRowOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.AccountBudgetProposal account_budget_proposal = 43;</code>
+   * @return The accountBudgetProposal.
    */
   com.google.ads.googleads.v3.resources.AccountBudgetProposal getAccountBudgetProposal();
   /**
@@ -63,6 +67,7 @@ public interface GoogleAdsRowOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.AdGroup ad_group = 3;</code>
+   * @return Whether the adGroup field is set.
    */
   boolean hasAdGroup();
   /**
@@ -71,6 +76,7 @@ public interface GoogleAdsRowOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.AdGroup ad_group = 3;</code>
+   * @return The adGroup.
    */
   com.google.ads.googleads.v3.resources.AdGroup getAdGroup();
   /**
@@ -88,6 +94,7 @@ public interface GoogleAdsRowOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.AdGroupAd ad_group_ad = 16;</code>
+   * @return Whether the adGroupAd field is set.
    */
   boolean hasAdGroupAd();
   /**
@@ -96,6 +103,7 @@ public interface GoogleAdsRowOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.AdGroupAd ad_group_ad = 16;</code>
+   * @return The adGroupAd.
    */
   com.google.ads.googleads.v3.resources.AdGroupAd getAdGroupAd();
   /**
@@ -113,6 +121,7 @@ public interface GoogleAdsRowOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.AdGroupAdAssetView ad_group_ad_asset_view = 131;</code>
+   * @return Whether the adGroupAdAssetView field is set.
    */
   boolean hasAdGroupAdAssetView();
   /**
@@ -121,6 +130,7 @@ public interface GoogleAdsRowOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.AdGroupAdAssetView ad_group_ad_asset_view = 131;</code>
+   * @return The adGroupAdAssetView.
    */
   com.google.ads.googleads.v3.resources.AdGroupAdAssetView getAdGroupAdAssetView();
   /**
@@ -138,6 +148,7 @@ public interface GoogleAdsRowOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.AdGroupAdLabel ad_group_ad_label = 120;</code>
+   * @return Whether the adGroupAdLabel field is set.
    */
   boolean hasAdGroupAdLabel();
   /**
@@ -146,6 +157,7 @@ public interface GoogleAdsRowOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.AdGroupAdLabel ad_group_ad_label = 120;</code>
+   * @return The adGroupAdLabel.
    */
   com.google.ads.googleads.v3.resources.AdGroupAdLabel getAdGroupAdLabel();
   /**
@@ -163,6 +175,7 @@ public interface GoogleAdsRowOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.AdGroupAudienceView ad_group_audience_view = 57;</code>
+   * @return Whether the adGroupAudienceView field is set.
    */
   boolean hasAdGroupAudienceView();
   /**
@@ -171,6 +184,7 @@ public interface GoogleAdsRowOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.AdGroupAudienceView ad_group_audience_view = 57;</code>
+   * @return The adGroupAudienceView.
    */
   com.google.ads.googleads.v3.resources.AdGroupAudienceView getAdGroupAudienceView();
   /**
@@ -188,6 +202,7 @@ public interface GoogleAdsRowOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.AdGroupBidModifier ad_group_bid_modifier = 24;</code>
+   * @return Whether the adGroupBidModifier field is set.
    */
   boolean hasAdGroupBidModifier();
   /**
@@ -196,6 +211,7 @@ public interface GoogleAdsRowOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.AdGroupBidModifier ad_group_bid_modifier = 24;</code>
+   * @return The adGroupBidModifier.
    */
   com.google.ads.googleads.v3.resources.AdGroupBidModifier getAdGroupBidModifier();
   /**
@@ -213,6 +229,7 @@ public interface GoogleAdsRowOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.AdGroupCriterion ad_group_criterion = 17;</code>
+   * @return Whether the adGroupCriterion field is set.
    */
   boolean hasAdGroupCriterion();
   /**
@@ -221,6 +238,7 @@ public interface GoogleAdsRowOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.AdGroupCriterion ad_group_criterion = 17;</code>
+   * @return The adGroupCriterion.
    */
   com.google.ads.googleads.v3.resources.AdGroupCriterion getAdGroupCriterion();
   /**
@@ -238,6 +256,7 @@ public interface GoogleAdsRowOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.AdGroupCriterionLabel ad_group_criterion_label = 121;</code>
+   * @return Whether the adGroupCriterionLabel field is set.
    */
   boolean hasAdGroupCriterionLabel();
   /**
@@ -246,6 +265,7 @@ public interface GoogleAdsRowOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.AdGroupCriterionLabel ad_group_criterion_label = 121;</code>
+   * @return The adGroupCriterionLabel.
    */
   com.google.ads.googleads.v3.resources.AdGroupCriterionLabel getAdGroupCriterionLabel();
   /**
@@ -263,6 +283,7 @@ public interface GoogleAdsRowOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.AdGroupCriterionSimulation ad_group_criterion_simulation = 110;</code>
+   * @return Whether the adGroupCriterionSimulation field is set.
    */
   boolean hasAdGroupCriterionSimulation();
   /**
@@ -271,6 +292,7 @@ public interface GoogleAdsRowOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.AdGroupCriterionSimulation ad_group_criterion_simulation = 110;</code>
+   * @return The adGroupCriterionSimulation.
    */
   com.google.ads.googleads.v3.resources.AdGroupCriterionSimulation getAdGroupCriterionSimulation();
   /**
@@ -288,6 +310,7 @@ public interface GoogleAdsRowOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.AdGroupExtensionSetting ad_group_extension_setting = 112;</code>
+   * @return Whether the adGroupExtensionSetting field is set.
    */
   boolean hasAdGroupExtensionSetting();
   /**
@@ -296,6 +319,7 @@ public interface GoogleAdsRowOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.AdGroupExtensionSetting ad_group_extension_setting = 112;</code>
+   * @return The adGroupExtensionSetting.
    */
   com.google.ads.googleads.v3.resources.AdGroupExtensionSetting getAdGroupExtensionSetting();
   /**
@@ -313,6 +337,7 @@ public interface GoogleAdsRowOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.AdGroupFeed ad_group_feed = 67;</code>
+   * @return Whether the adGroupFeed field is set.
    */
   boolean hasAdGroupFeed();
   /**
@@ -321,6 +346,7 @@ public interface GoogleAdsRowOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.AdGroupFeed ad_group_feed = 67;</code>
+   * @return The adGroupFeed.
    */
   com.google.ads.googleads.v3.resources.AdGroupFeed getAdGroupFeed();
   /**
@@ -338,6 +364,7 @@ public interface GoogleAdsRowOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.AdGroupLabel ad_group_label = 115;</code>
+   * @return Whether the adGroupLabel field is set.
    */
   boolean hasAdGroupLabel();
   /**
@@ -346,6 +373,7 @@ public interface GoogleAdsRowOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.AdGroupLabel ad_group_label = 115;</code>
+   * @return The adGroupLabel.
    */
   com.google.ads.googleads.v3.resources.AdGroupLabel getAdGroupLabel();
   /**
@@ -363,6 +391,7 @@ public interface GoogleAdsRowOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.AdGroupSimulation ad_group_simulation = 107;</code>
+   * @return Whether the adGroupSimulation field is set.
    */
   boolean hasAdGroupSimulation();
   /**
@@ -371,6 +400,7 @@ public interface GoogleAdsRowOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.AdGroupSimulation ad_group_simulation = 107;</code>
+   * @return The adGroupSimulation.
    */
   com.google.ads.googleads.v3.resources.AdGroupSimulation getAdGroupSimulation();
   /**
@@ -388,6 +418,7 @@ public interface GoogleAdsRowOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.AdParameter ad_parameter = 130;</code>
+   * @return Whether the adParameter field is set.
    */
   boolean hasAdParameter();
   /**
@@ -396,6 +427,7 @@ public interface GoogleAdsRowOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.AdParameter ad_parameter = 130;</code>
+   * @return The adParameter.
    */
   com.google.ads.googleads.v3.resources.AdParameter getAdParameter();
   /**
@@ -413,6 +445,7 @@ public interface GoogleAdsRowOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.AgeRangeView age_range_view = 48;</code>
+   * @return Whether the ageRangeView field is set.
    */
   boolean hasAgeRangeView();
   /**
@@ -421,6 +454,7 @@ public interface GoogleAdsRowOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.AgeRangeView age_range_view = 48;</code>
+   * @return The ageRangeView.
    */
   com.google.ads.googleads.v3.resources.AgeRangeView getAgeRangeView();
   /**
@@ -438,6 +472,7 @@ public interface GoogleAdsRowOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.AdScheduleView ad_schedule_view = 89;</code>
+   * @return Whether the adScheduleView field is set.
    */
   boolean hasAdScheduleView();
   /**
@@ -446,6 +481,7 @@ public interface GoogleAdsRowOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.AdScheduleView ad_schedule_view = 89;</code>
+   * @return The adScheduleView.
    */
   com.google.ads.googleads.v3.resources.AdScheduleView getAdScheduleView();
   /**
@@ -463,6 +499,7 @@ public interface GoogleAdsRowOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.DomainCategory domain_category = 91;</code>
+   * @return Whether the domainCategory field is set.
    */
   boolean hasDomainCategory();
   /**
@@ -471,6 +508,7 @@ public interface GoogleAdsRowOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.DomainCategory domain_category = 91;</code>
+   * @return The domainCategory.
    */
   com.google.ads.googleads.v3.resources.DomainCategory getDomainCategory();
   /**
@@ -488,6 +526,7 @@ public interface GoogleAdsRowOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.Asset asset = 105;</code>
+   * @return Whether the asset field is set.
    */
   boolean hasAsset();
   /**
@@ -496,6 +535,7 @@ public interface GoogleAdsRowOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.Asset asset = 105;</code>
+   * @return The asset.
    */
   com.google.ads.googleads.v3.resources.Asset getAsset();
   /**
@@ -513,6 +553,7 @@ public interface GoogleAdsRowOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.BiddingStrategy bidding_strategy = 18;</code>
+   * @return Whether the biddingStrategy field is set.
    */
   boolean hasBiddingStrategy();
   /**
@@ -521,6 +562,7 @@ public interface GoogleAdsRowOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.BiddingStrategy bidding_strategy = 18;</code>
+   * @return The biddingStrategy.
    */
   com.google.ads.googleads.v3.resources.BiddingStrategy getBiddingStrategy();
   /**
@@ -538,6 +580,7 @@ public interface GoogleAdsRowOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.BillingSetup billing_setup = 41;</code>
+   * @return Whether the billingSetup field is set.
    */
   boolean hasBillingSetup();
   /**
@@ -546,6 +589,7 @@ public interface GoogleAdsRowOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.BillingSetup billing_setup = 41;</code>
+   * @return The billingSetup.
    */
   com.google.ads.googleads.v3.resources.BillingSetup getBillingSetup();
   /**
@@ -563,6 +607,7 @@ public interface GoogleAdsRowOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.CampaignBudget campaign_budget = 19;</code>
+   * @return Whether the campaignBudget field is set.
    */
   boolean hasCampaignBudget();
   /**
@@ -571,6 +616,7 @@ public interface GoogleAdsRowOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.CampaignBudget campaign_budget = 19;</code>
+   * @return The campaignBudget.
    */
   com.google.ads.googleads.v3.resources.CampaignBudget getCampaignBudget();
   /**
@@ -588,6 +634,7 @@ public interface GoogleAdsRowOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.Campaign campaign = 2;</code>
+   * @return Whether the campaign field is set.
    */
   boolean hasCampaign();
   /**
@@ -596,6 +643,7 @@ public interface GoogleAdsRowOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.Campaign campaign = 2;</code>
+   * @return The campaign.
    */
   com.google.ads.googleads.v3.resources.Campaign getCampaign();
   /**
@@ -613,6 +661,7 @@ public interface GoogleAdsRowOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.CampaignAudienceView campaign_audience_view = 69;</code>
+   * @return Whether the campaignAudienceView field is set.
    */
   boolean hasCampaignAudienceView();
   /**
@@ -621,6 +670,7 @@ public interface GoogleAdsRowOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.CampaignAudienceView campaign_audience_view = 69;</code>
+   * @return The campaignAudienceView.
    */
   com.google.ads.googleads.v3.resources.CampaignAudienceView getCampaignAudienceView();
   /**
@@ -638,6 +688,7 @@ public interface GoogleAdsRowOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.CampaignBidModifier campaign_bid_modifier = 26;</code>
+   * @return Whether the campaignBidModifier field is set.
    */
   boolean hasCampaignBidModifier();
   /**
@@ -646,6 +697,7 @@ public interface GoogleAdsRowOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.CampaignBidModifier campaign_bid_modifier = 26;</code>
+   * @return The campaignBidModifier.
    */
   com.google.ads.googleads.v3.resources.CampaignBidModifier getCampaignBidModifier();
   /**
@@ -663,6 +715,7 @@ public interface GoogleAdsRowOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.CampaignCriterion campaign_criterion = 20;</code>
+   * @return Whether the campaignCriterion field is set.
    */
   boolean hasCampaignCriterion();
   /**
@@ -671,6 +724,7 @@ public interface GoogleAdsRowOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.CampaignCriterion campaign_criterion = 20;</code>
+   * @return The campaignCriterion.
    */
   com.google.ads.googleads.v3.resources.CampaignCriterion getCampaignCriterion();
   /**
@@ -688,6 +742,7 @@ public interface GoogleAdsRowOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.CampaignCriterionSimulation campaign_criterion_simulation = 111;</code>
+   * @return Whether the campaignCriterionSimulation field is set.
    */
   boolean hasCampaignCriterionSimulation();
   /**
@@ -696,6 +751,7 @@ public interface GoogleAdsRowOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.CampaignCriterionSimulation campaign_criterion_simulation = 111;</code>
+   * @return The campaignCriterionSimulation.
    */
   com.google.ads.googleads.v3.resources.CampaignCriterionSimulation getCampaignCriterionSimulation();
   /**
@@ -713,6 +769,7 @@ public interface GoogleAdsRowOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.CampaignDraft campaign_draft = 49;</code>
+   * @return Whether the campaignDraft field is set.
    */
   boolean hasCampaignDraft();
   /**
@@ -721,6 +778,7 @@ public interface GoogleAdsRowOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.CampaignDraft campaign_draft = 49;</code>
+   * @return The campaignDraft.
    */
   com.google.ads.googleads.v3.resources.CampaignDraft getCampaignDraft();
   /**
@@ -738,6 +796,7 @@ public interface GoogleAdsRowOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.CampaignExperiment campaign_experiment = 84;</code>
+   * @return Whether the campaignExperiment field is set.
    */
   boolean hasCampaignExperiment();
   /**
@@ -746,6 +805,7 @@ public interface GoogleAdsRowOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.CampaignExperiment campaign_experiment = 84;</code>
+   * @return The campaignExperiment.
    */
   com.google.ads.googleads.v3.resources.CampaignExperiment getCampaignExperiment();
   /**
@@ -763,6 +823,7 @@ public interface GoogleAdsRowOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.CampaignExtensionSetting campaign_extension_setting = 113;</code>
+   * @return Whether the campaignExtensionSetting field is set.
    */
   boolean hasCampaignExtensionSetting();
   /**
@@ -771,6 +832,7 @@ public interface GoogleAdsRowOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.CampaignExtensionSetting campaign_extension_setting = 113;</code>
+   * @return The campaignExtensionSetting.
    */
   com.google.ads.googleads.v3.resources.CampaignExtensionSetting getCampaignExtensionSetting();
   /**
@@ -788,6 +850,7 @@ public interface GoogleAdsRowOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.CampaignFeed campaign_feed = 63;</code>
+   * @return Whether the campaignFeed field is set.
    */
   boolean hasCampaignFeed();
   /**
@@ -796,6 +859,7 @@ public interface GoogleAdsRowOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.CampaignFeed campaign_feed = 63;</code>
+   * @return The campaignFeed.
    */
   com.google.ads.googleads.v3.resources.CampaignFeed getCampaignFeed();
   /**
@@ -813,6 +877,7 @@ public interface GoogleAdsRowOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.CampaignLabel campaign_label = 108;</code>
+   * @return Whether the campaignLabel field is set.
    */
   boolean hasCampaignLabel();
   /**
@@ -821,6 +886,7 @@ public interface GoogleAdsRowOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.CampaignLabel campaign_label = 108;</code>
+   * @return The campaignLabel.
    */
   com.google.ads.googleads.v3.resources.CampaignLabel getCampaignLabel();
   /**
@@ -838,6 +904,7 @@ public interface GoogleAdsRowOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.CampaignSharedSet campaign_shared_set = 30;</code>
+   * @return Whether the campaignSharedSet field is set.
    */
   boolean hasCampaignSharedSet();
   /**
@@ -846,6 +913,7 @@ public interface GoogleAdsRowOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.CampaignSharedSet campaign_shared_set = 30;</code>
+   * @return The campaignSharedSet.
    */
   com.google.ads.googleads.v3.resources.CampaignSharedSet getCampaignSharedSet();
   /**
@@ -863,6 +931,7 @@ public interface GoogleAdsRowOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.CarrierConstant carrier_constant = 66;</code>
+   * @return Whether the carrierConstant field is set.
    */
   boolean hasCarrierConstant();
   /**
@@ -871,6 +940,7 @@ public interface GoogleAdsRowOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.CarrierConstant carrier_constant = 66;</code>
+   * @return The carrierConstant.
    */
   com.google.ads.googleads.v3.resources.CarrierConstant getCarrierConstant();
   /**
@@ -888,6 +958,7 @@ public interface GoogleAdsRowOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.ChangeStatus change_status = 37;</code>
+   * @return Whether the changeStatus field is set.
    */
   boolean hasChangeStatus();
   /**
@@ -896,6 +967,7 @@ public interface GoogleAdsRowOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.ChangeStatus change_status = 37;</code>
+   * @return The changeStatus.
    */
   com.google.ads.googleads.v3.resources.ChangeStatus getChangeStatus();
   /**
@@ -913,6 +985,7 @@ public interface GoogleAdsRowOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.ConversionAction conversion_action = 103;</code>
+   * @return Whether the conversionAction field is set.
    */
   boolean hasConversionAction();
   /**
@@ -921,6 +994,7 @@ public interface GoogleAdsRowOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.ConversionAction conversion_action = 103;</code>
+   * @return The conversionAction.
    */
   com.google.ads.googleads.v3.resources.ConversionAction getConversionAction();
   /**
@@ -938,6 +1012,7 @@ public interface GoogleAdsRowOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.ClickView click_view = 122;</code>
+   * @return Whether the clickView field is set.
    */
   boolean hasClickView();
   /**
@@ -946,6 +1021,7 @@ public interface GoogleAdsRowOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.ClickView click_view = 122;</code>
+   * @return The clickView.
    */
   com.google.ads.googleads.v3.resources.ClickView getClickView();
   /**
@@ -963,6 +1039,7 @@ public interface GoogleAdsRowOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.CurrencyConstant currency_constant = 134;</code>
+   * @return Whether the currencyConstant field is set.
    */
   boolean hasCurrencyConstant();
   /**
@@ -971,6 +1048,7 @@ public interface GoogleAdsRowOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.CurrencyConstant currency_constant = 134;</code>
+   * @return The currencyConstant.
    */
   com.google.ads.googleads.v3.resources.CurrencyConstant getCurrencyConstant();
   /**
@@ -988,6 +1066,7 @@ public interface GoogleAdsRowOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.CustomInterest custom_interest = 104;</code>
+   * @return Whether the customInterest field is set.
    */
   boolean hasCustomInterest();
   /**
@@ -996,6 +1075,7 @@ public interface GoogleAdsRowOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.CustomInterest custom_interest = 104;</code>
+   * @return The customInterest.
    */
   com.google.ads.googleads.v3.resources.CustomInterest getCustomInterest();
   /**
@@ -1013,6 +1093,7 @@ public interface GoogleAdsRowOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.Customer customer = 1;</code>
+   * @return Whether the customer field is set.
    */
   boolean hasCustomer();
   /**
@@ -1021,6 +1102,7 @@ public interface GoogleAdsRowOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.Customer customer = 1;</code>
+   * @return The customer.
    */
   com.google.ads.googleads.v3.resources.Customer getCustomer();
   /**
@@ -1038,6 +1120,7 @@ public interface GoogleAdsRowOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.CustomerManagerLink customer_manager_link = 61;</code>
+   * @return Whether the customerManagerLink field is set.
    */
   boolean hasCustomerManagerLink();
   /**
@@ -1046,6 +1129,7 @@ public interface GoogleAdsRowOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.CustomerManagerLink customer_manager_link = 61;</code>
+   * @return The customerManagerLink.
    */
   com.google.ads.googleads.v3.resources.CustomerManagerLink getCustomerManagerLink();
   /**
@@ -1063,6 +1147,7 @@ public interface GoogleAdsRowOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.CustomerClientLink customer_client_link = 62;</code>
+   * @return Whether the customerClientLink field is set.
    */
   boolean hasCustomerClientLink();
   /**
@@ -1071,6 +1156,7 @@ public interface GoogleAdsRowOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.CustomerClientLink customer_client_link = 62;</code>
+   * @return The customerClientLink.
    */
   com.google.ads.googleads.v3.resources.CustomerClientLink getCustomerClientLink();
   /**
@@ -1088,6 +1174,7 @@ public interface GoogleAdsRowOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.CustomerClient customer_client = 70;</code>
+   * @return Whether the customerClient field is set.
    */
   boolean hasCustomerClient();
   /**
@@ -1096,6 +1183,7 @@ public interface GoogleAdsRowOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.CustomerClient customer_client = 70;</code>
+   * @return The customerClient.
    */
   com.google.ads.googleads.v3.resources.CustomerClient getCustomerClient();
   /**
@@ -1113,6 +1201,7 @@ public interface GoogleAdsRowOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.CustomerExtensionSetting customer_extension_setting = 114;</code>
+   * @return Whether the customerExtensionSetting field is set.
    */
   boolean hasCustomerExtensionSetting();
   /**
@@ -1121,6 +1210,7 @@ public interface GoogleAdsRowOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.CustomerExtensionSetting customer_extension_setting = 114;</code>
+   * @return The customerExtensionSetting.
    */
   com.google.ads.googleads.v3.resources.CustomerExtensionSetting getCustomerExtensionSetting();
   /**
@@ -1138,6 +1228,7 @@ public interface GoogleAdsRowOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.CustomerFeed customer_feed = 64;</code>
+   * @return Whether the customerFeed field is set.
    */
   boolean hasCustomerFeed();
   /**
@@ -1146,6 +1237,7 @@ public interface GoogleAdsRowOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.CustomerFeed customer_feed = 64;</code>
+   * @return The customerFeed.
    */
   com.google.ads.googleads.v3.resources.CustomerFeed getCustomerFeed();
   /**
@@ -1163,6 +1255,7 @@ public interface GoogleAdsRowOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.CustomerLabel customer_label = 124;</code>
+   * @return Whether the customerLabel field is set.
    */
   boolean hasCustomerLabel();
   /**
@@ -1171,6 +1264,7 @@ public interface GoogleAdsRowOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.CustomerLabel customer_label = 124;</code>
+   * @return The customerLabel.
    */
   com.google.ads.googleads.v3.resources.CustomerLabel getCustomerLabel();
   /**
@@ -1188,6 +1282,7 @@ public interface GoogleAdsRowOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.CustomerNegativeCriterion customer_negative_criterion = 88;</code>
+   * @return Whether the customerNegativeCriterion field is set.
    */
   boolean hasCustomerNegativeCriterion();
   /**
@@ -1196,6 +1291,7 @@ public interface GoogleAdsRowOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.CustomerNegativeCriterion customer_negative_criterion = 88;</code>
+   * @return The customerNegativeCriterion.
    */
   com.google.ads.googleads.v3.resources.CustomerNegativeCriterion getCustomerNegativeCriterion();
   /**
@@ -1213,6 +1309,7 @@ public interface GoogleAdsRowOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.DetailPlacementView detail_placement_view = 118;</code>
+   * @return Whether the detailPlacementView field is set.
    */
   boolean hasDetailPlacementView();
   /**
@@ -1221,6 +1318,7 @@ public interface GoogleAdsRowOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.DetailPlacementView detail_placement_view = 118;</code>
+   * @return The detailPlacementView.
    */
   com.google.ads.googleads.v3.resources.DetailPlacementView getDetailPlacementView();
   /**
@@ -1238,6 +1336,7 @@ public interface GoogleAdsRowOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.DisplayKeywordView display_keyword_view = 47;</code>
+   * @return Whether the displayKeywordView field is set.
    */
   boolean hasDisplayKeywordView();
   /**
@@ -1246,6 +1345,7 @@ public interface GoogleAdsRowOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.DisplayKeywordView display_keyword_view = 47;</code>
+   * @return The displayKeywordView.
    */
   com.google.ads.googleads.v3.resources.DisplayKeywordView getDisplayKeywordView();
   /**
@@ -1263,6 +1363,7 @@ public interface GoogleAdsRowOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.DistanceView distance_view = 132;</code>
+   * @return Whether the distanceView field is set.
    */
   boolean hasDistanceView();
   /**
@@ -1271,6 +1372,7 @@ public interface GoogleAdsRowOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.DistanceView distance_view = 132;</code>
+   * @return The distanceView.
    */
   com.google.ads.googleads.v3.resources.DistanceView getDistanceView();
   /**
@@ -1288,6 +1390,7 @@ public interface GoogleAdsRowOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.DynamicSearchAdsSearchTermView dynamic_search_ads_search_term_view = 106;</code>
+   * @return Whether the dynamicSearchAdsSearchTermView field is set.
    */
   boolean hasDynamicSearchAdsSearchTermView();
   /**
@@ -1296,6 +1399,7 @@ public interface GoogleAdsRowOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.DynamicSearchAdsSearchTermView dynamic_search_ads_search_term_view = 106;</code>
+   * @return The dynamicSearchAdsSearchTermView.
    */
   com.google.ads.googleads.v3.resources.DynamicSearchAdsSearchTermView getDynamicSearchAdsSearchTermView();
   /**
@@ -1313,6 +1417,7 @@ public interface GoogleAdsRowOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.ExpandedLandingPageView expanded_landing_page_view = 128;</code>
+   * @return Whether the expandedLandingPageView field is set.
    */
   boolean hasExpandedLandingPageView();
   /**
@@ -1321,6 +1426,7 @@ public interface GoogleAdsRowOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.ExpandedLandingPageView expanded_landing_page_view = 128;</code>
+   * @return The expandedLandingPageView.
    */
   com.google.ads.googleads.v3.resources.ExpandedLandingPageView getExpandedLandingPageView();
   /**
@@ -1338,6 +1444,7 @@ public interface GoogleAdsRowOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.ExtensionFeedItem extension_feed_item = 85;</code>
+   * @return Whether the extensionFeedItem field is set.
    */
   boolean hasExtensionFeedItem();
   /**
@@ -1346,6 +1453,7 @@ public interface GoogleAdsRowOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.ExtensionFeedItem extension_feed_item = 85;</code>
+   * @return The extensionFeedItem.
    */
   com.google.ads.googleads.v3.resources.ExtensionFeedItem getExtensionFeedItem();
   /**
@@ -1363,6 +1471,7 @@ public interface GoogleAdsRowOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.Feed feed = 46;</code>
+   * @return Whether the feed field is set.
    */
   boolean hasFeed();
   /**
@@ -1371,6 +1480,7 @@ public interface GoogleAdsRowOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.Feed feed = 46;</code>
+   * @return The feed.
    */
   com.google.ads.googleads.v3.resources.Feed getFeed();
   /**
@@ -1388,6 +1498,7 @@ public interface GoogleAdsRowOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.FeedItem feed_item = 50;</code>
+   * @return Whether the feedItem field is set.
    */
   boolean hasFeedItem();
   /**
@@ -1396,6 +1507,7 @@ public interface GoogleAdsRowOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.FeedItem feed_item = 50;</code>
+   * @return The feedItem.
    */
   com.google.ads.googleads.v3.resources.FeedItem getFeedItem();
   /**
@@ -1413,6 +1525,7 @@ public interface GoogleAdsRowOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.FeedItemTarget feed_item_target = 116;</code>
+   * @return Whether the feedItemTarget field is set.
    */
   boolean hasFeedItemTarget();
   /**
@@ -1421,6 +1534,7 @@ public interface GoogleAdsRowOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.FeedItemTarget feed_item_target = 116;</code>
+   * @return The feedItemTarget.
    */
   com.google.ads.googleads.v3.resources.FeedItemTarget getFeedItemTarget();
   /**
@@ -1438,6 +1552,7 @@ public interface GoogleAdsRowOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.FeedMapping feed_mapping = 58;</code>
+   * @return Whether the feedMapping field is set.
    */
   boolean hasFeedMapping();
   /**
@@ -1446,6 +1561,7 @@ public interface GoogleAdsRowOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.FeedMapping feed_mapping = 58;</code>
+   * @return The feedMapping.
    */
   com.google.ads.googleads.v3.resources.FeedMapping getFeedMapping();
   /**
@@ -1463,6 +1579,7 @@ public interface GoogleAdsRowOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.FeedPlaceholderView feed_placeholder_view = 97;</code>
+   * @return Whether the feedPlaceholderView field is set.
    */
   boolean hasFeedPlaceholderView();
   /**
@@ -1471,6 +1588,7 @@ public interface GoogleAdsRowOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.FeedPlaceholderView feed_placeholder_view = 97;</code>
+   * @return The feedPlaceholderView.
    */
   com.google.ads.googleads.v3.resources.FeedPlaceholderView getFeedPlaceholderView();
   /**
@@ -1488,6 +1606,7 @@ public interface GoogleAdsRowOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.GenderView gender_view = 40;</code>
+   * @return Whether the genderView field is set.
    */
   boolean hasGenderView();
   /**
@@ -1496,6 +1615,7 @@ public interface GoogleAdsRowOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.GenderView gender_view = 40;</code>
+   * @return The genderView.
    */
   com.google.ads.googleads.v3.resources.GenderView getGenderView();
   /**
@@ -1513,6 +1633,7 @@ public interface GoogleAdsRowOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.GeoTargetConstant geo_target_constant = 23;</code>
+   * @return Whether the geoTargetConstant field is set.
    */
   boolean hasGeoTargetConstant();
   /**
@@ -1521,6 +1642,7 @@ public interface GoogleAdsRowOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.GeoTargetConstant geo_target_constant = 23;</code>
+   * @return The geoTargetConstant.
    */
   com.google.ads.googleads.v3.resources.GeoTargetConstant getGeoTargetConstant();
   /**
@@ -1538,6 +1660,7 @@ public interface GoogleAdsRowOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.GeographicView geographic_view = 125;</code>
+   * @return Whether the geographicView field is set.
    */
   boolean hasGeographicView();
   /**
@@ -1546,6 +1669,7 @@ public interface GoogleAdsRowOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.GeographicView geographic_view = 125;</code>
+   * @return The geographicView.
    */
   com.google.ads.googleads.v3.resources.GeographicView getGeographicView();
   /**
@@ -1563,6 +1687,7 @@ public interface GoogleAdsRowOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.GroupPlacementView group_placement_view = 119;</code>
+   * @return Whether the groupPlacementView field is set.
    */
   boolean hasGroupPlacementView();
   /**
@@ -1571,6 +1696,7 @@ public interface GoogleAdsRowOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.GroupPlacementView group_placement_view = 119;</code>
+   * @return The groupPlacementView.
    */
   com.google.ads.googleads.v3.resources.GroupPlacementView getGroupPlacementView();
   /**
@@ -1588,6 +1714,7 @@ public interface GoogleAdsRowOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.HotelGroupView hotel_group_view = 51;</code>
+   * @return Whether the hotelGroupView field is set.
    */
   boolean hasHotelGroupView();
   /**
@@ -1596,6 +1723,7 @@ public interface GoogleAdsRowOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.HotelGroupView hotel_group_view = 51;</code>
+   * @return The hotelGroupView.
    */
   com.google.ads.googleads.v3.resources.HotelGroupView getHotelGroupView();
   /**
@@ -1613,6 +1741,7 @@ public interface GoogleAdsRowOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.HotelPerformanceView hotel_performance_view = 71;</code>
+   * @return Whether the hotelPerformanceView field is set.
    */
   boolean hasHotelPerformanceView();
   /**
@@ -1621,6 +1750,7 @@ public interface GoogleAdsRowOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.HotelPerformanceView hotel_performance_view = 71;</code>
+   * @return The hotelPerformanceView.
    */
   com.google.ads.googleads.v3.resources.HotelPerformanceView getHotelPerformanceView();
   /**
@@ -1638,6 +1768,7 @@ public interface GoogleAdsRowOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.KeywordView keyword_view = 21;</code>
+   * @return Whether the keywordView field is set.
    */
   boolean hasKeywordView();
   /**
@@ -1646,6 +1777,7 @@ public interface GoogleAdsRowOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.KeywordView keyword_view = 21;</code>
+   * @return The keywordView.
    */
   com.google.ads.googleads.v3.resources.KeywordView getKeywordView();
   /**
@@ -1663,6 +1795,7 @@ public interface GoogleAdsRowOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.KeywordPlan keyword_plan = 32;</code>
+   * @return Whether the keywordPlan field is set.
    */
   boolean hasKeywordPlan();
   /**
@@ -1671,6 +1804,7 @@ public interface GoogleAdsRowOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.KeywordPlan keyword_plan = 32;</code>
+   * @return The keywordPlan.
    */
   com.google.ads.googleads.v3.resources.KeywordPlan getKeywordPlan();
   /**
@@ -1688,6 +1822,7 @@ public interface GoogleAdsRowOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.KeywordPlanCampaign keyword_plan_campaign = 33;</code>
+   * @return Whether the keywordPlanCampaign field is set.
    */
   boolean hasKeywordPlanCampaign();
   /**
@@ -1696,6 +1831,7 @@ public interface GoogleAdsRowOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.KeywordPlanCampaign keyword_plan_campaign = 33;</code>
+   * @return The keywordPlanCampaign.
    */
   com.google.ads.googleads.v3.resources.KeywordPlanCampaign getKeywordPlanCampaign();
   /**
@@ -1713,6 +1849,7 @@ public interface GoogleAdsRowOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.KeywordPlanNegativeKeyword keyword_plan_negative_keyword = 34;</code>
+   * @return Whether the keywordPlanNegativeKeyword field is set.
    */
   boolean hasKeywordPlanNegativeKeyword();
   /**
@@ -1721,6 +1858,7 @@ public interface GoogleAdsRowOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.KeywordPlanNegativeKeyword keyword_plan_negative_keyword = 34;</code>
+   * @return The keywordPlanNegativeKeyword.
    */
   com.google.ads.googleads.v3.resources.KeywordPlanNegativeKeyword getKeywordPlanNegativeKeyword();
   /**
@@ -1738,6 +1876,7 @@ public interface GoogleAdsRowOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.KeywordPlanAdGroup keyword_plan_ad_group = 35;</code>
+   * @return Whether the keywordPlanAdGroup field is set.
    */
   boolean hasKeywordPlanAdGroup();
   /**
@@ -1746,6 +1885,7 @@ public interface GoogleAdsRowOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.KeywordPlanAdGroup keyword_plan_ad_group = 35;</code>
+   * @return The keywordPlanAdGroup.
    */
   com.google.ads.googleads.v3.resources.KeywordPlanAdGroup getKeywordPlanAdGroup();
   /**
@@ -1763,6 +1903,7 @@ public interface GoogleAdsRowOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.KeywordPlanKeyword keyword_plan_keyword = 36;</code>
+   * @return Whether the keywordPlanKeyword field is set.
    */
   boolean hasKeywordPlanKeyword();
   /**
@@ -1771,6 +1912,7 @@ public interface GoogleAdsRowOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.KeywordPlanKeyword keyword_plan_keyword = 36;</code>
+   * @return The keywordPlanKeyword.
    */
   com.google.ads.googleads.v3.resources.KeywordPlanKeyword getKeywordPlanKeyword();
   /**
@@ -1788,6 +1930,7 @@ public interface GoogleAdsRowOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.Label label = 52;</code>
+   * @return Whether the label field is set.
    */
   boolean hasLabel();
   /**
@@ -1796,6 +1939,7 @@ public interface GoogleAdsRowOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.Label label = 52;</code>
+   * @return The label.
    */
   com.google.ads.googleads.v3.resources.Label getLabel();
   /**
@@ -1813,6 +1957,7 @@ public interface GoogleAdsRowOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.LandingPageView landing_page_view = 126;</code>
+   * @return Whether the landingPageView field is set.
    */
   boolean hasLandingPageView();
   /**
@@ -1821,6 +1966,7 @@ public interface GoogleAdsRowOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.LandingPageView landing_page_view = 126;</code>
+   * @return The landingPageView.
    */
   com.google.ads.googleads.v3.resources.LandingPageView getLandingPageView();
   /**
@@ -1838,6 +1984,7 @@ public interface GoogleAdsRowOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.LanguageConstant language_constant = 55;</code>
+   * @return Whether the languageConstant field is set.
    */
   boolean hasLanguageConstant();
   /**
@@ -1846,6 +1993,7 @@ public interface GoogleAdsRowOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.LanguageConstant language_constant = 55;</code>
+   * @return The languageConstant.
    */
   com.google.ads.googleads.v3.resources.LanguageConstant getLanguageConstant();
   /**
@@ -1863,6 +2011,7 @@ public interface GoogleAdsRowOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.LocationView location_view = 123;</code>
+   * @return Whether the locationView field is set.
    */
   boolean hasLocationView();
   /**
@@ -1871,6 +2020,7 @@ public interface GoogleAdsRowOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.LocationView location_view = 123;</code>
+   * @return The locationView.
    */
   com.google.ads.googleads.v3.resources.LocationView getLocationView();
   /**
@@ -1888,6 +2038,7 @@ public interface GoogleAdsRowOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.ManagedPlacementView managed_placement_view = 53;</code>
+   * @return Whether the managedPlacementView field is set.
    */
   boolean hasManagedPlacementView();
   /**
@@ -1896,6 +2047,7 @@ public interface GoogleAdsRowOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.ManagedPlacementView managed_placement_view = 53;</code>
+   * @return The managedPlacementView.
    */
   com.google.ads.googleads.v3.resources.ManagedPlacementView getManagedPlacementView();
   /**
@@ -1913,6 +2065,7 @@ public interface GoogleAdsRowOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.MediaFile media_file = 90;</code>
+   * @return Whether the mediaFile field is set.
    */
   boolean hasMediaFile();
   /**
@@ -1921,6 +2074,7 @@ public interface GoogleAdsRowOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.MediaFile media_file = 90;</code>
+   * @return The mediaFile.
    */
   com.google.ads.googleads.v3.resources.MediaFile getMediaFile();
   /**
@@ -1938,6 +2092,7 @@ public interface GoogleAdsRowOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.MobileAppCategoryConstant mobile_app_category_constant = 87;</code>
+   * @return Whether the mobileAppCategoryConstant field is set.
    */
   boolean hasMobileAppCategoryConstant();
   /**
@@ -1946,6 +2101,7 @@ public interface GoogleAdsRowOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.MobileAppCategoryConstant mobile_app_category_constant = 87;</code>
+   * @return The mobileAppCategoryConstant.
    */
   com.google.ads.googleads.v3.resources.MobileAppCategoryConstant getMobileAppCategoryConstant();
   /**
@@ -1963,6 +2119,7 @@ public interface GoogleAdsRowOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.MobileDeviceConstant mobile_device_constant = 98;</code>
+   * @return Whether the mobileDeviceConstant field is set.
    */
   boolean hasMobileDeviceConstant();
   /**
@@ -1971,6 +2128,7 @@ public interface GoogleAdsRowOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.MobileDeviceConstant mobile_device_constant = 98;</code>
+   * @return The mobileDeviceConstant.
    */
   com.google.ads.googleads.v3.resources.MobileDeviceConstant getMobileDeviceConstant();
   /**
@@ -1988,6 +2146,7 @@ public interface GoogleAdsRowOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.MutateJob mutate_job = 127;</code>
+   * @return Whether the mutateJob field is set.
    */
   boolean hasMutateJob();
   /**
@@ -1996,6 +2155,7 @@ public interface GoogleAdsRowOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.MutateJob mutate_job = 127;</code>
+   * @return The mutateJob.
    */
   com.google.ads.googleads.v3.resources.MutateJob getMutateJob();
   /**
@@ -2013,6 +2173,7 @@ public interface GoogleAdsRowOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.OfflineUserDataJob offline_user_data_job = 137;</code>
+   * @return Whether the offlineUserDataJob field is set.
    */
   boolean hasOfflineUserDataJob();
   /**
@@ -2021,6 +2182,7 @@ public interface GoogleAdsRowOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.OfflineUserDataJob offline_user_data_job = 137;</code>
+   * @return The offlineUserDataJob.
    */
   com.google.ads.googleads.v3.resources.OfflineUserDataJob getOfflineUserDataJob();
   /**
@@ -2038,6 +2200,7 @@ public interface GoogleAdsRowOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.OperatingSystemVersionConstant operating_system_version_constant = 86;</code>
+   * @return Whether the operatingSystemVersionConstant field is set.
    */
   boolean hasOperatingSystemVersionConstant();
   /**
@@ -2046,6 +2209,7 @@ public interface GoogleAdsRowOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.OperatingSystemVersionConstant operating_system_version_constant = 86;</code>
+   * @return The operatingSystemVersionConstant.
    */
   com.google.ads.googleads.v3.resources.OperatingSystemVersionConstant getOperatingSystemVersionConstant();
   /**
@@ -2063,6 +2227,7 @@ public interface GoogleAdsRowOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.PaidOrganicSearchTermView paid_organic_search_term_view = 129;</code>
+   * @return Whether the paidOrganicSearchTermView field is set.
    */
   boolean hasPaidOrganicSearchTermView();
   /**
@@ -2071,6 +2236,7 @@ public interface GoogleAdsRowOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.PaidOrganicSearchTermView paid_organic_search_term_view = 129;</code>
+   * @return The paidOrganicSearchTermView.
    */
   com.google.ads.googleads.v3.resources.PaidOrganicSearchTermView getPaidOrganicSearchTermView();
   /**
@@ -2088,6 +2254,7 @@ public interface GoogleAdsRowOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.ParentalStatusView parental_status_view = 45;</code>
+   * @return Whether the parentalStatusView field is set.
    */
   boolean hasParentalStatusView();
   /**
@@ -2096,6 +2263,7 @@ public interface GoogleAdsRowOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.ParentalStatusView parental_status_view = 45;</code>
+   * @return The parentalStatusView.
    */
   com.google.ads.googleads.v3.resources.ParentalStatusView getParentalStatusView();
   /**
@@ -2113,6 +2281,7 @@ public interface GoogleAdsRowOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.ProductBiddingCategoryConstant product_bidding_category_constant = 109;</code>
+   * @return Whether the productBiddingCategoryConstant field is set.
    */
   boolean hasProductBiddingCategoryConstant();
   /**
@@ -2121,6 +2290,7 @@ public interface GoogleAdsRowOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.ProductBiddingCategoryConstant product_bidding_category_constant = 109;</code>
+   * @return The productBiddingCategoryConstant.
    */
   com.google.ads.googleads.v3.resources.ProductBiddingCategoryConstant getProductBiddingCategoryConstant();
   /**
@@ -2138,6 +2308,7 @@ public interface GoogleAdsRowOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.ProductGroupView product_group_view = 54;</code>
+   * @return Whether the productGroupView field is set.
    */
   boolean hasProductGroupView();
   /**
@@ -2146,6 +2317,7 @@ public interface GoogleAdsRowOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.ProductGroupView product_group_view = 54;</code>
+   * @return The productGroupView.
    */
   com.google.ads.googleads.v3.resources.ProductGroupView getProductGroupView();
   /**
@@ -2163,6 +2335,7 @@ public interface GoogleAdsRowOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.Recommendation recommendation = 22;</code>
+   * @return Whether the recommendation field is set.
    */
   boolean hasRecommendation();
   /**
@@ -2171,6 +2344,7 @@ public interface GoogleAdsRowOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.Recommendation recommendation = 22;</code>
+   * @return The recommendation.
    */
   com.google.ads.googleads.v3.resources.Recommendation getRecommendation();
   /**
@@ -2188,6 +2362,7 @@ public interface GoogleAdsRowOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.SearchTermView search_term_view = 68;</code>
+   * @return Whether the searchTermView field is set.
    */
   boolean hasSearchTermView();
   /**
@@ -2196,6 +2371,7 @@ public interface GoogleAdsRowOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.SearchTermView search_term_view = 68;</code>
+   * @return The searchTermView.
    */
   com.google.ads.googleads.v3.resources.SearchTermView getSearchTermView();
   /**
@@ -2213,6 +2389,7 @@ public interface GoogleAdsRowOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.SharedCriterion shared_criterion = 29;</code>
+   * @return Whether the sharedCriterion field is set.
    */
   boolean hasSharedCriterion();
   /**
@@ -2221,6 +2398,7 @@ public interface GoogleAdsRowOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.SharedCriterion shared_criterion = 29;</code>
+   * @return The sharedCriterion.
    */
   com.google.ads.googleads.v3.resources.SharedCriterion getSharedCriterion();
   /**
@@ -2238,6 +2416,7 @@ public interface GoogleAdsRowOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.SharedSet shared_set = 27;</code>
+   * @return Whether the sharedSet field is set.
    */
   boolean hasSharedSet();
   /**
@@ -2246,6 +2425,7 @@ public interface GoogleAdsRowOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.SharedSet shared_set = 27;</code>
+   * @return The sharedSet.
    */
   com.google.ads.googleads.v3.resources.SharedSet getSharedSet();
   /**
@@ -2263,6 +2443,7 @@ public interface GoogleAdsRowOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.ShoppingPerformanceView shopping_performance_view = 117;</code>
+   * @return Whether the shoppingPerformanceView field is set.
    */
   boolean hasShoppingPerformanceView();
   /**
@@ -2271,6 +2452,7 @@ public interface GoogleAdsRowOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.ShoppingPerformanceView shopping_performance_view = 117;</code>
+   * @return The shoppingPerformanceView.
    */
   com.google.ads.googleads.v3.resources.ShoppingPerformanceView getShoppingPerformanceView();
   /**
@@ -2288,6 +2470,7 @@ public interface GoogleAdsRowOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.TopicView topic_view = 44;</code>
+   * @return Whether the topicView field is set.
    */
   boolean hasTopicView();
   /**
@@ -2296,6 +2479,7 @@ public interface GoogleAdsRowOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.TopicView topic_view = 44;</code>
+   * @return The topicView.
    */
   com.google.ads.googleads.v3.resources.TopicView getTopicView();
   /**
@@ -2313,6 +2497,7 @@ public interface GoogleAdsRowOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.UserInterest user_interest = 59;</code>
+   * @return Whether the userInterest field is set.
    */
   boolean hasUserInterest();
   /**
@@ -2321,6 +2506,7 @@ public interface GoogleAdsRowOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.UserInterest user_interest = 59;</code>
+   * @return The userInterest.
    */
   com.google.ads.googleads.v3.resources.UserInterest getUserInterest();
   /**
@@ -2338,6 +2524,7 @@ public interface GoogleAdsRowOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.UserList user_list = 38;</code>
+   * @return Whether the userList field is set.
    */
   boolean hasUserList();
   /**
@@ -2346,6 +2533,7 @@ public interface GoogleAdsRowOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.UserList user_list = 38;</code>
+   * @return The userList.
    */
   com.google.ads.googleads.v3.resources.UserList getUserList();
   /**
@@ -2363,6 +2551,7 @@ public interface GoogleAdsRowOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.UserLocationView user_location_view = 135;</code>
+   * @return Whether the userLocationView field is set.
    */
   boolean hasUserLocationView();
   /**
@@ -2371,6 +2560,7 @@ public interface GoogleAdsRowOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.UserLocationView user_location_view = 135;</code>
+   * @return The userLocationView.
    */
   com.google.ads.googleads.v3.resources.UserLocationView getUserLocationView();
   /**
@@ -2388,6 +2578,7 @@ public interface GoogleAdsRowOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.RemarketingAction remarketing_action = 60;</code>
+   * @return Whether the remarketingAction field is set.
    */
   boolean hasRemarketingAction();
   /**
@@ -2396,6 +2587,7 @@ public interface GoogleAdsRowOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.RemarketingAction remarketing_action = 60;</code>
+   * @return The remarketingAction.
    */
   com.google.ads.googleads.v3.resources.RemarketingAction getRemarketingAction();
   /**
@@ -2413,6 +2605,7 @@ public interface GoogleAdsRowOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.TopicConstant topic_constant = 31;</code>
+   * @return Whether the topicConstant field is set.
    */
   boolean hasTopicConstant();
   /**
@@ -2421,6 +2614,7 @@ public interface GoogleAdsRowOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.TopicConstant topic_constant = 31;</code>
+   * @return The topicConstant.
    */
   com.google.ads.googleads.v3.resources.TopicConstant getTopicConstant();
   /**
@@ -2438,6 +2632,7 @@ public interface GoogleAdsRowOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.Video video = 39;</code>
+   * @return Whether the video field is set.
    */
   boolean hasVideo();
   /**
@@ -2446,6 +2641,7 @@ public interface GoogleAdsRowOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.Video video = 39;</code>
+   * @return The video.
    */
   com.google.ads.googleads.v3.resources.Video getVideo();
   /**
@@ -2463,6 +2659,7 @@ public interface GoogleAdsRowOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.Metrics metrics = 4;</code>
+   * @return Whether the metrics field is set.
    */
   boolean hasMetrics();
   /**
@@ -2471,6 +2668,7 @@ public interface GoogleAdsRowOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.Metrics metrics = 4;</code>
+   * @return The metrics.
    */
   com.google.ads.googleads.v3.common.Metrics getMetrics();
   /**
@@ -2488,6 +2686,7 @@ public interface GoogleAdsRowOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.Segments segments = 102;</code>
+   * @return Whether the segments field is set.
    */
   boolean hasSegments();
   /**
@@ -2496,6 +2695,7 @@ public interface GoogleAdsRowOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.Segments segments = 102;</code>
+   * @return The segments.
    */
   com.google.ads.googleads.v3.common.Segments getSegments();
   /**

@@ -13,6 +13,7 @@ public interface CustomIntentInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue custom_intent = 1;</code>
+   * @return Whether the customIntent field is set.
    */
   boolean hasCustomIntent();
   /**
@@ -21,6 +22,7 @@ public interface CustomIntentInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue custom_intent = 1;</code>
+   * @return The customIntent.
    */
   com.google.protobuf.StringValue getCustomIntent();
   /**

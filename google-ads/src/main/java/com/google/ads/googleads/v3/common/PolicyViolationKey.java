@@ -11,7 +11,7 @@ package com.google.ads.googleads.v3.common;
  *
  * Protobuf type {@code google.ads.googleads.v3.common.PolicyViolationKey}
  */
-public  final class PolicyViolationKey extends
+public final class PolicyViolationKey extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v3.common.PolicyViolationKey)
     PolicyViolationKeyOrBuilder {
@@ -21,6 +21,13 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private PolicyViolationKey() {
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new PolicyViolationKey();
   }
 
   @java.lang.Override
@@ -36,7 +43,6 @@ private static final long serialVersionUID = 0L;
     if (extensionRegistry == null) {
       throw new java.lang.NullPointerException();
     }
-    int mutable_bitField0_ = 0;
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
         com.google.protobuf.UnknownFieldSet.newBuilder();
     try {
@@ -113,7 +119,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue policy_name = 1;</code>
+   * @return Whether the policyName field is set.
    */
+  @java.lang.Override
   public boolean hasPolicyName() {
     return policyName_ != null;
   }
@@ -123,7 +131,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue policy_name = 1;</code>
+   * @return The policyName.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getPolicyName() {
     return policyName_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : policyName_;
   }
@@ -134,6 +144,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue policy_name = 1;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getPolicyNameOrBuilder() {
     return getPolicyName();
   }
@@ -150,7 +161,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue violating_text = 2;</code>
+   * @return Whether the violatingText field is set.
    */
+  @java.lang.Override
   public boolean hasViolatingText() {
     return violatingText_ != null;
   }
@@ -164,7 +177,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue violating_text = 2;</code>
+   * @return The violatingText.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getViolatingText() {
     return violatingText_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : violatingText_;
   }
@@ -179,6 +194,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue violating_text = 2;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getViolatingTextOrBuilder() {
     return getViolatingText();
   }
@@ -542,6 +558,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue policy_name = 1;</code>
+     * @return Whether the policyName field is set.
      */
     public boolean hasPolicyName() {
       return policyNameBuilder_ != null || policyName_ != null;
@@ -552,6 +569,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue policy_name = 1;</code>
+     * @return The policyName.
      */
     public com.google.protobuf.StringValue getPolicyName() {
       if (policyNameBuilder_ == null) {
@@ -699,6 +717,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue violating_text = 2;</code>
+     * @return Whether the violatingText field is set.
      */
     public boolean hasViolatingText() {
       return violatingTextBuilder_ != null || violatingText_ != null;
@@ -713,6 +732,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue violating_text = 2;</code>
+     * @return The violatingText.
      */
     public com.google.protobuf.StringValue getViolatingText() {
       if (violatingTextBuilder_ == null) {

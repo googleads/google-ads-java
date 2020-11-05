@@ -14,6 +14,7 @@ public interface TargetingOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue plannable_location_id = 1;</code>
+   * @return Whether the plannableLocationId field is set.
    */
   boolean hasPlannableLocationId();
   /**
@@ -23,6 +24,7 @@ public interface TargetingOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue plannable_location_id = 1;</code>
+   * @return The plannableLocationId.
    */
   com.google.protobuf.StringValue getPlannableLocationId();
   /**
@@ -42,6 +44,7 @@ public interface TargetingOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.ReachPlanAgeRangeEnum.ReachPlanAgeRange age_range = 2;</code>
+   * @return The enum numeric value on the wire for ageRange.
    */
   int getAgeRangeValue();
   /**
@@ -51,6 +54,7 @@ public interface TargetingOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.ReachPlanAgeRangeEnum.ReachPlanAgeRange age_range = 2;</code>
+   * @return The ageRange.
    */
   com.google.ads.googleads.v3.enums.ReachPlanAgeRangeEnum.ReachPlanAgeRange getAgeRange();
 
@@ -165,6 +169,7 @@ public interface TargetingOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.ReachPlanNetworkEnum.ReachPlanNetwork network = 5;</code>
+   * @return The enum numeric value on the wire for network.
    */
   int getNetworkValue();
   /**
@@ -175,6 +180,7 @@ public interface TargetingOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.ReachPlanNetworkEnum.ReachPlanNetwork network = 5;</code>
+   * @return The network.
    */
   com.google.ads.googleads.v3.enums.ReachPlanNetworkEnum.ReachPlanNetwork getNetwork();
 }

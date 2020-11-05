@@ -10,7 +10,7 @@ package com.google.ads.googleads.v2.services;
  *
  * Protobuf type {@code google.ads.googleads.v2.services.MutateCustomerClientLinkResponse}
  */
-public  final class MutateCustomerClientLinkResponse extends
+public final class MutateCustomerClientLinkResponse extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v2.services.MutateCustomerClientLinkResponse)
     MutateCustomerClientLinkResponseOrBuilder {
@@ -20,6 +20,13 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private MutateCustomerClientLinkResponse() {
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new MutateCustomerClientLinkResponse();
   }
 
   @java.lang.Override
@@ -35,7 +42,6 @@ private static final long serialVersionUID = 0L;
     if (extensionRegistry == null) {
       throw new java.lang.NullPointerException();
     }
-    int mutable_bitField0_ = 0;
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
         com.google.protobuf.UnknownFieldSet.newBuilder();
     try {
@@ -99,7 +105,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.services.MutateCustomerClientLinkResult result = 1;</code>
+   * @return Whether the result field is set.
    */
+  @java.lang.Override
   public boolean hasResult() {
     return result_ != null;
   }
@@ -109,7 +117,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.services.MutateCustomerClientLinkResult result = 1;</code>
+   * @return The result.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.services.MutateCustomerClientLinkResult getResult() {
     return result_ == null ? com.google.ads.googleads.v2.services.MutateCustomerClientLinkResult.getDefaultInstance() : result_;
   }
@@ -120,6 +130,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v2.services.MutateCustomerClientLinkResult result = 1;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.services.MutateCustomerClientLinkResultOrBuilder getResultOrBuilder() {
     return getResult();
   }
@@ -452,6 +463,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.services.MutateCustomerClientLinkResult result = 1;</code>
+     * @return Whether the result field is set.
      */
     public boolean hasResult() {
       return resultBuilder_ != null || result_ != null;
@@ -462,6 +474,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.services.MutateCustomerClientLinkResult result = 1;</code>
+     * @return The result.
      */
     public com.google.ads.googleads.v2.services.MutateCustomerClientLinkResult getResult() {
       if (resultBuilder_ == null) {

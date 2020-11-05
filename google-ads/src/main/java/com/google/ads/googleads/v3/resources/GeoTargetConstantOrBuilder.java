@@ -15,6 +15,7 @@ public interface GeoTargetConstantOrBuilder extends
    * </pre>
    *
    * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The resourceName.
    */
   java.lang.String getResourceName();
   /**
@@ -25,6 +26,7 @@ public interface GeoTargetConstantOrBuilder extends
    * </pre>
    *
    * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The bytes for resourceName.
    */
   com.google.protobuf.ByteString
       getResourceNameBytes();
@@ -35,6 +37,7 @@ public interface GeoTargetConstantOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the id field is set.
    */
   boolean hasId();
   /**
@@ -43,6 +46,7 @@ public interface GeoTargetConstantOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The id.
    */
   com.google.protobuf.Int64Value getId();
   /**
@@ -60,6 +64,7 @@ public interface GeoTargetConstantOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue name = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the name field is set.
    */
   boolean hasName();
   /**
@@ -68,6 +73,7 @@ public interface GeoTargetConstantOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue name = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The name.
    */
   com.google.protobuf.StringValue getName();
   /**
@@ -85,6 +91,7 @@ public interface GeoTargetConstantOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue country_code = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the countryCode field is set.
    */
   boolean hasCountryCode();
   /**
@@ -93,6 +100,7 @@ public interface GeoTargetConstantOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue country_code = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The countryCode.
    */
   com.google.protobuf.StringValue getCountryCode();
   /**
@@ -110,6 +118,7 @@ public interface GeoTargetConstantOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue target_type = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the targetType field is set.
    */
   boolean hasTargetType();
   /**
@@ -118,6 +127,7 @@ public interface GeoTargetConstantOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue target_type = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The targetType.
    */
   com.google.protobuf.StringValue getTargetType();
   /**
@@ -135,6 +145,7 @@ public interface GeoTargetConstantOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.GeoTargetConstantStatusEnum.GeoTargetConstantStatus status = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The enum numeric value on the wire for status.
    */
   int getStatusValue();
   /**
@@ -143,6 +154,7 @@ public interface GeoTargetConstantOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.GeoTargetConstantStatusEnum.GeoTargetConstantStatus status = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The status.
    */
   com.google.ads.googleads.v3.enums.GeoTargetConstantStatusEnum.GeoTargetConstantStatus getStatus();
 
@@ -153,6 +165,7 @@ public interface GeoTargetConstantOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue canonical_name = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the canonicalName field is set.
    */
   boolean hasCanonicalName();
   /**
@@ -162,6 +175,7 @@ public interface GeoTargetConstantOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue canonical_name = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The canonicalName.
    */
   com.google.protobuf.StringValue getCanonicalName();
   /**

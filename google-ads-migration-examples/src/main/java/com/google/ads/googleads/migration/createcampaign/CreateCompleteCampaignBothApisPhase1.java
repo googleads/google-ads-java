@@ -21,16 +21,16 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.lib.GoogleAdsClient;
 import com.google.ads.googleads.migration.utils.ArgumentNames;
 import com.google.ads.googleads.migration.utils.CodeSampleParams;
-import com.google.ads.googleads.v3.enums.BudgetDeliveryMethodEnum.BudgetDeliveryMethod;
-import com.google.ads.googleads.v3.errors.GoogleAdsError;
-import com.google.ads.googleads.v3.errors.GoogleAdsException;
-import com.google.ads.googleads.v3.resources.CampaignBudget;
-import com.google.ads.googleads.v3.services.CampaignBudgetOperation;
-import com.google.ads.googleads.v3.services.CampaignBudgetServiceClient;
-import com.google.ads.googleads.v3.services.GoogleAdsServiceClient;
-import com.google.ads.googleads.v3.services.GoogleAdsServiceClient.SearchPagedResponse;
-import com.google.ads.googleads.v3.services.MutateCampaignBudgetsResponse;
-import com.google.ads.googleads.v3.services.SearchGoogleAdsRequest;
+import com.google.ads.googleads.v5.enums.BudgetDeliveryMethodEnum.BudgetDeliveryMethod;
+import com.google.ads.googleads.v5.errors.GoogleAdsError;
+import com.google.ads.googleads.v5.errors.GoogleAdsException;
+import com.google.ads.googleads.v5.resources.CampaignBudget;
+import com.google.ads.googleads.v5.services.CampaignBudgetOperation;
+import com.google.ads.googleads.v5.services.CampaignBudgetServiceClient;
+import com.google.ads.googleads.v5.services.GoogleAdsServiceClient;
+import com.google.ads.googleads.v5.services.GoogleAdsServiceClient.SearchPagedResponse;
+import com.google.ads.googleads.v5.services.MutateCampaignBudgetsResponse;
+import com.google.ads.googleads.v5.services.SearchGoogleAdsRequest;
 import com.google.api.ads.adwords.axis.factory.AdWordsServices;
 import com.google.api.ads.adwords.axis.v201809.cm.AdGroup;
 import com.google.api.ads.adwords.axis.v201809.cm.AdGroupAd;
@@ -77,8 +77,6 @@ import com.google.api.ads.common.lib.exception.OAuthException;
 import com.google.api.ads.common.lib.exception.ValidationException;
 import com.google.api.client.auth.oauth2.Credential;
 import com.google.common.collect.ImmutableList;
-import com.google.protobuf.Int64Value;
-import com.google.protobuf.StringValue;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
@@ -222,29 +220,28 @@ public class CreateCompleteCampaignBothApisPhase1 {
   private CampaignBudget createBudget(GoogleAdsClient googleAdsClient, long customerId) {
     // Creates the budget.
     CampaignBudget budget =
-      CampaignBudget.newBuilder()
-        .setName(StringValue.of("Interplanetary Cruise Budget #" + System.currentTimeMillis()))
-        .setDeliveryMethod(BudgetDeliveryMethod.STANDARD)
-        .setAmountMicros(Int64Value.of(10_000_000))
-        .build();
+        CampaignBudget.newBuilder()
+            .setName("Interplanetary Cruise Budget #" + System.currentTimeMillis())
+            .setDeliveryMethod(BudgetDeliveryMethod.STANDARD)
+            .setAmountMicros(10_000_000)
+            .build();
 
     // Creates the operation.
     CampaignBudgetOperation op = CampaignBudgetOperation.newBuilder().setCreate(budget).build();
 
     // Gets the CampaignBudget service.
     try (CampaignBudgetServiceClient campaignBudgetServiceClient =
-           googleAdsClient.getLatestVersion().createCampaignBudgetServiceClient()) {
+        googleAdsClient.getLatestVersion().createCampaignBudgetServiceClient()) {
       // Adds the budget.
       MutateCampaignBudgetsResponse response =
-        campaignBudgetServiceClient.mutateCampaignBudgets(
-          Long.toString(customerId), ImmutableList.of(op));
+          campaignBudgetServiceClient.mutateCampaignBudgets(
+              Long.toString(customerId), ImmutableList.of(op));
       String budgetResourceName = response.getResults(0).getResourceName();
       // Retrieves the budget.
       CampaignBudget newBudget = getBudget(googleAdsClient, customerId, budgetResourceName);
       // Displays the results.
       System.out.printf(
-        "Budget with ID %s and name '%s' was created.%n",
-        newBudget.getId().getValue(), newBudget.getName().getValue());
+          "Budget with ID %s and name '%s' was created.%n", newBudget.getId(), newBudget.getName());
       return newBudget;
     }
   }
@@ -258,23 +255,23 @@ public class CreateCompleteCampaignBothApisPhase1 {
    * @throws GoogleAdsException if an API request failed with one or more service errors.
    */
   private CampaignBudget getBudget(
-    GoogleAdsClient googleAdsClient, long customerId, String budgetResourceName) {
+      GoogleAdsClient googleAdsClient, long customerId, String budgetResourceName) {
     // Gets the GoogleAdsService.
     try (GoogleAdsServiceClient googleAdsServiceClient =
-           googleAdsClient.getLatestVersion().createGoogleAdsServiceClient()) {
+        googleAdsClient.getLatestVersion().createGoogleAdsServiceClient()) {
 
       // Creates the request.
       SearchGoogleAdsRequest request =
-        SearchGoogleAdsRequest.newBuilder()
-          .setCustomerId(Long.toString(customerId))
-          .setPageSize(PAGE_SIZE)
-          .setQuery(
-            String.format(
-              "SELECT campaign_budget.id, campaign_budget.name, "
-                + "campaign_budget.resource_name FROM campaign_budget "
-                + "WHERE campaign_budget.resource_name = '%s'",
-              budgetResourceName))
-          .build();
+          SearchGoogleAdsRequest.newBuilder()
+              .setCustomerId(Long.toString(customerId))
+              .setPageSize(PAGE_SIZE)
+              .setQuery(
+                  String.format(
+                      "SELECT campaign_budget.id, campaign_budget.name, "
+                          + "campaign_budget.resource_name FROM campaign_budget "
+                          + "WHERE campaign_budget.resource_name = '%s'",
+                      budgetResourceName))
+              .build();
 
       // Retrieves the budget.
       SearchPagedResponse searchPagedResponse = googleAdsServiceClient.search(request);
@@ -291,11 +288,11 @@ public class CreateCompleteCampaignBothApisPhase1 {
    * @throws RemoteException if the API request failed due to other errors.
    */
   private Campaign createCampaign(
-    AdWordsServicesInterface adWordsServices, AdWordsSession session, CampaignBudget budget)
-    throws RemoteException {
+      AdWordsServicesInterface adWordsServices, AdWordsSession session, CampaignBudget budget)
+      throws RemoteException {
     // Gets the CampaignService.
     CampaignServiceInterface campaignService =
-      adWordsServices.get(session, CampaignServiceInterface.class);
+        adWordsServices.get(session, CampaignServiceInterface.class);
 
     // Creates the campaign.
     Campaign campaign = new Campaign();
@@ -316,7 +313,7 @@ public class CreateCompleteCampaignBothApisPhase1 {
 
     // Only the budgetId should be sent, all other fields will be ignored by CampaignService.
     Budget newBudget = new Budget();
-    newBudget.setBudgetId(budget.getId().getValue());
+    newBudget.setBudgetId(budget.getId());
     campaign.setBudget(newBudget);
 
     campaign.setAdvertisingChannelType(AdvertisingChannelType.SEARCH);
@@ -342,8 +339,8 @@ public class CreateCompleteCampaignBothApisPhase1 {
     Campaign campaignResult = result.getValue(0);
     // Displays the campaign.
     System.out.printf(
-      "Campaign with ID %d and name '%s' was created.%n",
-      campaignResult.getId(), campaignResult.getName());
+        "Campaign with ID %d and name '%s' was created.%n",
+        campaignResult.getId(), campaignResult.getName());
     return campaignResult;
   }
 
@@ -356,11 +353,11 @@ public class CreateCompleteCampaignBothApisPhase1 {
    * @throws RemoteException if the API request failed due to other errors.
    */
   private AdGroup createAdGroup(
-    AdWordsServicesInterface adWordsServices, AdWordsSession session, Campaign campaign)
-    throws RemoteException {
+      AdWordsServicesInterface adWordsServices, AdWordsSession session, Campaign campaign)
+      throws RemoteException {
     // Gets the AdGroupService.
     AdGroupServiceInterface adGroupService =
-      adWordsServices.get(session, AdGroupServiceInterface.class);
+        adWordsServices.get(session, AdGroupServiceInterface.class);
 
     // Creates the ad group.
     AdGroup adGroup = new AdGroup();
@@ -394,8 +391,8 @@ public class CreateCompleteCampaignBothApisPhase1 {
     AdGroup adGroupResult = result.getValue(0);
     // Displays the new ad group.
     System.out.printf(
-      "Ad group with ID %d and name '%s' was created.%n",
-      adGroupResult.getId(), adGroupResult.getName());
+        "Ad group with ID %d and name '%s' was created.%n",
+        adGroupResult.getId(), adGroupResult.getName());
 
     return adGroupResult;
   }
@@ -409,15 +406,15 @@ public class CreateCompleteCampaignBothApisPhase1 {
    * @throws RemoteException if the API request failed due to other errors.
    */
   private AdGroupAd[] createTextAds(
-    AdWordsServicesInterface adWordsServices,
-    AdWordsSession session,
-    AdGroup adGroup,
-    int numberOfAds)
-    throws RemoteException {
+      AdWordsServicesInterface adWordsServices,
+      AdWordsSession session,
+      AdGroup adGroup,
+      int numberOfAds)
+      throws RemoteException {
 
     // Gets the AdGroupAdService.
     AdGroupAdServiceInterface adGroupAdService =
-      adWordsServices.get(session, AdGroupAdServiceInterface.class);
+        adWordsServices.get(session, AdGroupAdServiceInterface.class);
 
     List<AdGroupAdOperation> operations = new ArrayList<>();
 
@@ -447,15 +444,15 @@ public class CreateCompleteCampaignBothApisPhase1 {
 
     // Adds the ads.
     AdGroupAdReturnValue result =
-      adGroupAdService.mutate(operations.toArray(new AdGroupAdOperation[0]));
+        adGroupAdService.mutate(operations.toArray(new AdGroupAdOperation[0]));
 
     // Displays the ads.
     for (AdGroupAd adGroupAdResult : result.getValue()) {
       ExpandedTextAd newAd = (ExpandedTextAd) adGroupAdResult.getAd();
       System.out.printf(
-        "Expanded text ad with ID %d "
-          + "and headline '%s - %s' was created in ad group with ID %d.%n",
-        newAd.getId(), newAd.getHeadlinePart1(), newAd.getHeadlinePart2(), adGroup.getId());
+          "Expanded text ad with ID %d "
+              + "and headline '%s - %s' was created in ad group with ID %d.%n",
+          newAd.getId(), newAd.getHeadlinePart1(), newAd.getHeadlinePart2(), adGroup.getId());
     }
     return result.getValue();
   }
@@ -471,14 +468,14 @@ public class CreateCompleteCampaignBothApisPhase1 {
    * @throws UnsupportedEncodingException if encoding the final URL failed.
    */
   private AdGroupCriterion[] createKeywords(
-    AdWordsServicesInterface adWordsServices,
-    AdWordsSession session,
-    AdGroup adGroup,
-    List<String> keywordsToAdd)
-    throws RemoteException, UnsupportedEncodingException {
+      AdWordsServicesInterface adWordsServices,
+      AdWordsSession session,
+      AdGroup adGroup,
+      List<String> keywordsToAdd)
+      throws RemoteException, UnsupportedEncodingException {
     // Gets the AdGroupCriterionService.
     AdGroupCriterionServiceInterface adGroupCriterionService =
-      adWordsServices.get(session, AdGroupCriterionServiceInterface.class);
+        adWordsServices.get(session, AdGroupCriterionServiceInterface.class);
 
     List<AdGroupCriterionOperation> operations = new ArrayList<>();
 
@@ -497,9 +494,9 @@ public class CreateCompleteCampaignBothApisPhase1 {
       keywordBiddableAdGroupCriterion.setUserStatus(UserStatus.PAUSED);
 
       String encodedFinalUrl =
-        String.format(
-          "http://example.com/mars/cruise/?kw=%s",
-          URLEncoder.encode(keyword.getText(), UTF_8.name()));
+          String.format(
+              "http://example.com/mars/cruise/?kw=%s",
+              URLEncoder.encode(keyword.getText(), UTF_8.name()));
       keywordBiddableAdGroupCriterion.setFinalUrls(new UrlList(new String[] {encodedFinalUrl}));
 
       // Creates the operation.
@@ -512,17 +509,17 @@ public class CreateCompleteCampaignBothApisPhase1 {
 
     // Adds the keywords.
     AdGroupCriterionReturnValue result =
-      adGroupCriterionService.mutate(operations.toArray(new AdGroupCriterionOperation[0]));
+        adGroupCriterionService.mutate(operations.toArray(new AdGroupCriterionOperation[0]));
 
     // Displays the results.
     for (AdGroupCriterion adGroupCriterionResult : result.getValue()) {
       System.out.printf(
-        "Keyword ad group criterion with ad group ID %d, criterion ID %d, "
-          + "text '%s', and match type '%s' was added.%n",
-        adGroupCriterionResult.getAdGroupId(),
-        adGroupCriterionResult.getCriterion().getId(),
-        ((Keyword) adGroupCriterionResult.getCriterion()).getText(),
-        ((Keyword) adGroupCriterionResult.getCriterion()).getMatchType());
+          "Keyword ad group criterion with ad group ID %d, criterion ID %d, "
+              + "text '%s', and match type '%s' was added.%n",
+          adGroupCriterionResult.getAdGroupId(),
+          adGroupCriterionResult.getCriterion().getId(),
+          ((Keyword) adGroupCriterionResult.getCriterion()).getText(),
+          ((Keyword) adGroupCriterionResult.getCriterion()).getMatchType());
     }
     return result.getValue();
   }

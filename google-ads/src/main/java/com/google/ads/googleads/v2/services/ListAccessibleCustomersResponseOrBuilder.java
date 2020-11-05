@@ -14,6 +14,7 @@ public interface ListAccessibleCustomersResponseOrBuilder extends
    * </pre>
    *
    * <code>repeated string resource_names = 1;</code>
+   * @return A list containing the resourceNames.
    */
   java.util.List<java.lang.String>
       getResourceNamesList();
@@ -24,6 +25,7 @@ public interface ListAccessibleCustomersResponseOrBuilder extends
    * </pre>
    *
    * <code>repeated string resource_names = 1;</code>
+   * @return The count of resourceNames.
    */
   int getResourceNamesCount();
   /**
@@ -33,6 +35,8 @@ public interface ListAccessibleCustomersResponseOrBuilder extends
    * </pre>
    *
    * <code>repeated string resource_names = 1;</code>
+   * @param index The index of the element to return.
+   * @return The resourceNames at the given index.
    */
   java.lang.String getResourceNames(int index);
   /**
@@ -42,6 +46,8 @@ public interface ListAccessibleCustomersResponseOrBuilder extends
    * </pre>
    *
    * <code>repeated string resource_names = 1;</code>
+   * @param index The index of the value to return.
+   * @return The bytes of the resourceNames at the given index.
    */
   com.google.protobuf.ByteString
       getResourceNamesBytes(int index);

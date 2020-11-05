@@ -18,12 +18,12 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.v3.errors.GoogleAdsError;
-import com.google.ads.googleads.v3.errors.GoogleAdsException;
-import com.google.ads.googleads.v3.resources.ChangeStatus;
-import com.google.ads.googleads.v3.services.GoogleAdsRow;
-import com.google.ads.googleads.v3.services.GoogleAdsServiceClient;
-import com.google.ads.googleads.v3.services.GoogleAdsServiceClient.SearchPagedResponse;
+import com.google.ads.googleads.v5.errors.GoogleAdsError;
+import com.google.ads.googleads.v5.errors.GoogleAdsException;
+import com.google.ads.googleads.v5.resources.ChangeStatus;
+import com.google.ads.googleads.v5.services.GoogleAdsRow;
+import com.google.ads.googleads.v5.services.GoogleAdsServiceClient;
+import com.google.ads.googleads.v5.services.GoogleAdsServiceClient.SearchPagedResponse;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Optional;
@@ -46,16 +46,16 @@ public class GetAccountChanges {
       params.customerId = Long.parseLong("INSERT_CUSTOMER_ID_HERE");
     }
 
-    GoogleAdsClient googleAdsClient;
+    GoogleAdsClient googleAdsClient = null;
     try {
       googleAdsClient = GoogleAdsClient.newBuilder().fromPropertiesFile().build();
     } catch (FileNotFoundException fnfe) {
       System.err.printf(
           "Failed to load GoogleAdsClient configuration from file. Exception: %s%n", fnfe);
-      return;
+      System.exit(1);
     } catch (IOException ioe) {
       System.err.printf("Failed to create GoogleAdsClient. Exception: %s%n", ioe);
-      return;
+      System.exit(1);
     }
 
     try {
@@ -72,6 +72,7 @@ public class GetAccountChanges {
       for (GoogleAdsError googleAdsError : gae.getGoogleAdsFailure().getErrorsList()) {
         System.err.printf("  Error %d: %s%n", i++, googleAdsError);
       }
+      System.exit(1);
     }
   }
 
@@ -135,7 +136,7 @@ public class GetAccountChanges {
     // See https://developers.google.com/google-ads/api/docs/change-status for a description.
     switch (changeStatus.getResourceType()) {
       case AD_GROUP:
-        resourceName = changeStatus.getAdGroup().getValue();
+        resourceName = changeStatus.getAdGroup();
         break;
       case AD_GROUP_AD:
         resourceName = changeStatus.getAdGroupAd().getValue();
@@ -144,13 +145,13 @@ public class GetAccountChanges {
         resourceName = changeStatus.getAdGroupBidModifier().getValue();
         break;
       case AD_GROUP_CRITERION:
-        resourceName = changeStatus.getAdGroup().getValue();
+        resourceName = changeStatus.getAdGroup();
         break;
       case AD_GROUP_FEED:
         resourceName = changeStatus.getAdGroupFeed().getValue();
         break;
       case CAMPAIGN:
-        resourceName = changeStatus.getCampaign().getValue();
+        resourceName = changeStatus.getCampaign();
         break;
       case CAMPAIGN_CRITERION:
         resourceName = changeStatus.getCampaignCriterion().getValue();

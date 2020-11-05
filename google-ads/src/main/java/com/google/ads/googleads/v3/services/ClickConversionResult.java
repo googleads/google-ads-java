@@ -10,7 +10,7 @@ package com.google.ads.googleads.v3.services;
  *
  * Protobuf type {@code google.ads.googleads.v3.services.ClickConversionResult}
  */
-public  final class ClickConversionResult extends
+public final class ClickConversionResult extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v3.services.ClickConversionResult)
     ClickConversionResultOrBuilder {
@@ -20,6 +20,13 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private ClickConversionResult() {
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new ClickConversionResult();
   }
 
   @java.lang.Override
@@ -35,7 +42,6 @@ private static final long serialVersionUID = 0L;
     if (extensionRegistry == null) {
       throw new java.lang.NullPointerException();
     }
-    int mutable_bitField0_ = 0;
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
         com.google.protobuf.UnknownFieldSet.newBuilder();
     try {
@@ -125,7 +131,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue gclid = 1;</code>
+   * @return Whether the gclid field is set.
    */
+  @java.lang.Override
   public boolean hasGclid() {
     return gclid_ != null;
   }
@@ -135,7 +143,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue gclid = 1;</code>
+   * @return The gclid.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getGclid() {
     return gclid_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : gclid_;
   }
@@ -146,6 +156,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue gclid = 1;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getGclidOrBuilder() {
     return getGclid();
   }
@@ -158,7 +169,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue conversion_action = 2;</code>
+   * @return Whether the conversionAction field is set.
    */
+  @java.lang.Override
   public boolean hasConversionAction() {
     return conversionAction_ != null;
   }
@@ -168,7 +181,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue conversion_action = 2;</code>
+   * @return The conversionAction.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getConversionAction() {
     return conversionAction_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : conversionAction_;
   }
@@ -179,6 +194,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue conversion_action = 2;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getConversionActionOrBuilder() {
     return getConversionAction();
   }
@@ -192,7 +208,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue conversion_date_time = 3;</code>
+   * @return Whether the conversionDateTime field is set.
    */
+  @java.lang.Override
   public boolean hasConversionDateTime() {
     return conversionDateTime_ != null;
   }
@@ -203,7 +221,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue conversion_date_time = 3;</code>
+   * @return The conversionDateTime.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getConversionDateTime() {
     return conversionDateTime_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : conversionDateTime_;
   }
@@ -215,6 +235,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue conversion_date_time = 3;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getConversionDateTimeOrBuilder() {
     return getConversionDateTime();
   }
@@ -607,6 +628,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue gclid = 1;</code>
+     * @return Whether the gclid field is set.
      */
     public boolean hasGclid() {
       return gclidBuilder_ != null || gclid_ != null;
@@ -617,6 +639,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue gclid = 1;</code>
+     * @return The gclid.
      */
     public com.google.protobuf.StringValue getGclid() {
       if (gclidBuilder_ == null) {
@@ -760,6 +783,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue conversion_action = 2;</code>
+     * @return Whether the conversionAction field is set.
      */
     public boolean hasConversionAction() {
       return conversionActionBuilder_ != null || conversionAction_ != null;
@@ -770,6 +794,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue conversion_action = 2;</code>
+     * @return The conversionAction.
      */
     public com.google.protobuf.StringValue getConversionAction() {
       if (conversionActionBuilder_ == null) {
@@ -914,6 +939,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue conversion_date_time = 3;</code>
+     * @return Whether the conversionDateTime field is set.
      */
     public boolean hasConversionDateTime() {
       return conversionDateTimeBuilder_ != null || conversionDateTime_ != null;
@@ -925,6 +951,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue conversion_date_time = 3;</code>
+     * @return The conversionDateTime.
      */
     public com.google.protobuf.StringValue getConversionDateTime() {
       if (conversionDateTimeBuilder_ == null) {

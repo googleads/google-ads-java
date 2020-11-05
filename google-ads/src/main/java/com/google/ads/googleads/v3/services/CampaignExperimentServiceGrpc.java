@@ -29,7 +29,7 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.10.0)",
+    value = "by gRPC proto compiler",
     comments = "Source: google/ads/googleads/v3/services/campaign_experiment_service.proto")
 public final class CampaignExperimentServiceGrpc {
 
@@ -38,271 +38,235 @@ public final class CampaignExperimentServiceGrpc {
   public static final String SERVICE_NAME = "google.ads.googleads.v3.services.CampaignExperimentService";
 
   // Static method descriptors that strictly reflect the proto.
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  @java.lang.Deprecated // Use {@link #getGetCampaignExperimentMethod()} instead. 
-  public static final io.grpc.MethodDescriptor<com.google.ads.googleads.v3.services.GetCampaignExperimentRequest,
-      com.google.ads.googleads.v3.resources.CampaignExperiment> METHOD_GET_CAMPAIGN_EXPERIMENT = getGetCampaignExperimentMethodHelper();
-
   private static volatile io.grpc.MethodDescriptor<com.google.ads.googleads.v3.services.GetCampaignExperimentRequest,
       com.google.ads.googleads.v3.resources.CampaignExperiment> getGetCampaignExperimentMethod;
 
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetCampaignExperiment",
+      requestType = com.google.ads.googleads.v3.services.GetCampaignExperimentRequest.class,
+      responseType = com.google.ads.googleads.v3.resources.CampaignExperiment.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<com.google.ads.googleads.v3.services.GetCampaignExperimentRequest,
       com.google.ads.googleads.v3.resources.CampaignExperiment> getGetCampaignExperimentMethod() {
-    return getGetCampaignExperimentMethodHelper();
-  }
-
-  private static io.grpc.MethodDescriptor<com.google.ads.googleads.v3.services.GetCampaignExperimentRequest,
-      com.google.ads.googleads.v3.resources.CampaignExperiment> getGetCampaignExperimentMethodHelper() {
     io.grpc.MethodDescriptor<com.google.ads.googleads.v3.services.GetCampaignExperimentRequest, com.google.ads.googleads.v3.resources.CampaignExperiment> getGetCampaignExperimentMethod;
     if ((getGetCampaignExperimentMethod = CampaignExperimentServiceGrpc.getGetCampaignExperimentMethod) == null) {
       synchronized (CampaignExperimentServiceGrpc.class) {
         if ((getGetCampaignExperimentMethod = CampaignExperimentServiceGrpc.getGetCampaignExperimentMethod) == null) {
-          CampaignExperimentServiceGrpc.getGetCampaignExperimentMethod = getGetCampaignExperimentMethod = 
+          CampaignExperimentServiceGrpc.getGetCampaignExperimentMethod = getGetCampaignExperimentMethod =
               io.grpc.MethodDescriptor.<com.google.ads.googleads.v3.services.GetCampaignExperimentRequest, com.google.ads.googleads.v3.resources.CampaignExperiment>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "google.ads.googleads.v3.services.CampaignExperimentService", "GetCampaignExperiment"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetCampaignExperiment"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v3.services.GetCampaignExperimentRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v3.resources.CampaignExperiment.getDefaultInstance()))
-                  .setSchemaDescriptor(new CampaignExperimentServiceMethodDescriptorSupplier("GetCampaignExperiment"))
-                  .build();
-          }
+              .setSchemaDescriptor(new CampaignExperimentServiceMethodDescriptorSupplier("GetCampaignExperiment"))
+              .build();
         }
-     }
-     return getGetCampaignExperimentMethod;
+      }
+    }
+    return getGetCampaignExperimentMethod;
   }
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  @java.lang.Deprecated // Use {@link #getCreateCampaignExperimentMethod()} instead. 
-  public static final io.grpc.MethodDescriptor<com.google.ads.googleads.v3.services.CreateCampaignExperimentRequest,
-      com.google.longrunning.Operation> METHOD_CREATE_CAMPAIGN_EXPERIMENT = getCreateCampaignExperimentMethodHelper();
 
   private static volatile io.grpc.MethodDescriptor<com.google.ads.googleads.v3.services.CreateCampaignExperimentRequest,
       com.google.longrunning.Operation> getCreateCampaignExperimentMethod;
 
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "CreateCampaignExperiment",
+      requestType = com.google.ads.googleads.v3.services.CreateCampaignExperimentRequest.class,
+      responseType = com.google.longrunning.Operation.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<com.google.ads.googleads.v3.services.CreateCampaignExperimentRequest,
       com.google.longrunning.Operation> getCreateCampaignExperimentMethod() {
-    return getCreateCampaignExperimentMethodHelper();
-  }
-
-  private static io.grpc.MethodDescriptor<com.google.ads.googleads.v3.services.CreateCampaignExperimentRequest,
-      com.google.longrunning.Operation> getCreateCampaignExperimentMethodHelper() {
     io.grpc.MethodDescriptor<com.google.ads.googleads.v3.services.CreateCampaignExperimentRequest, com.google.longrunning.Operation> getCreateCampaignExperimentMethod;
     if ((getCreateCampaignExperimentMethod = CampaignExperimentServiceGrpc.getCreateCampaignExperimentMethod) == null) {
       synchronized (CampaignExperimentServiceGrpc.class) {
         if ((getCreateCampaignExperimentMethod = CampaignExperimentServiceGrpc.getCreateCampaignExperimentMethod) == null) {
-          CampaignExperimentServiceGrpc.getCreateCampaignExperimentMethod = getCreateCampaignExperimentMethod = 
+          CampaignExperimentServiceGrpc.getCreateCampaignExperimentMethod = getCreateCampaignExperimentMethod =
               io.grpc.MethodDescriptor.<com.google.ads.googleads.v3.services.CreateCampaignExperimentRequest, com.google.longrunning.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "google.ads.googleads.v3.services.CampaignExperimentService", "CreateCampaignExperiment"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreateCampaignExperiment"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v3.services.CreateCampaignExperimentRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.longrunning.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new CampaignExperimentServiceMethodDescriptorSupplier("CreateCampaignExperiment"))
-                  .build();
-          }
+              .setSchemaDescriptor(new CampaignExperimentServiceMethodDescriptorSupplier("CreateCampaignExperiment"))
+              .build();
         }
-     }
-     return getCreateCampaignExperimentMethod;
+      }
+    }
+    return getCreateCampaignExperimentMethod;
   }
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  @java.lang.Deprecated // Use {@link #getMutateCampaignExperimentsMethod()} instead. 
-  public static final io.grpc.MethodDescriptor<com.google.ads.googleads.v3.services.MutateCampaignExperimentsRequest,
-      com.google.ads.googleads.v3.services.MutateCampaignExperimentsResponse> METHOD_MUTATE_CAMPAIGN_EXPERIMENTS = getMutateCampaignExperimentsMethodHelper();
 
   private static volatile io.grpc.MethodDescriptor<com.google.ads.googleads.v3.services.MutateCampaignExperimentsRequest,
       com.google.ads.googleads.v3.services.MutateCampaignExperimentsResponse> getMutateCampaignExperimentsMethod;
 
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "MutateCampaignExperiments",
+      requestType = com.google.ads.googleads.v3.services.MutateCampaignExperimentsRequest.class,
+      responseType = com.google.ads.googleads.v3.services.MutateCampaignExperimentsResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<com.google.ads.googleads.v3.services.MutateCampaignExperimentsRequest,
       com.google.ads.googleads.v3.services.MutateCampaignExperimentsResponse> getMutateCampaignExperimentsMethod() {
-    return getMutateCampaignExperimentsMethodHelper();
-  }
-
-  private static io.grpc.MethodDescriptor<com.google.ads.googleads.v3.services.MutateCampaignExperimentsRequest,
-      com.google.ads.googleads.v3.services.MutateCampaignExperimentsResponse> getMutateCampaignExperimentsMethodHelper() {
     io.grpc.MethodDescriptor<com.google.ads.googleads.v3.services.MutateCampaignExperimentsRequest, com.google.ads.googleads.v3.services.MutateCampaignExperimentsResponse> getMutateCampaignExperimentsMethod;
     if ((getMutateCampaignExperimentsMethod = CampaignExperimentServiceGrpc.getMutateCampaignExperimentsMethod) == null) {
       synchronized (CampaignExperimentServiceGrpc.class) {
         if ((getMutateCampaignExperimentsMethod = CampaignExperimentServiceGrpc.getMutateCampaignExperimentsMethod) == null) {
-          CampaignExperimentServiceGrpc.getMutateCampaignExperimentsMethod = getMutateCampaignExperimentsMethod = 
+          CampaignExperimentServiceGrpc.getMutateCampaignExperimentsMethod = getMutateCampaignExperimentsMethod =
               io.grpc.MethodDescriptor.<com.google.ads.googleads.v3.services.MutateCampaignExperimentsRequest, com.google.ads.googleads.v3.services.MutateCampaignExperimentsResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "google.ads.googleads.v3.services.CampaignExperimentService", "MutateCampaignExperiments"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "MutateCampaignExperiments"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v3.services.MutateCampaignExperimentsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v3.services.MutateCampaignExperimentsResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new CampaignExperimentServiceMethodDescriptorSupplier("MutateCampaignExperiments"))
-                  .build();
-          }
+              .setSchemaDescriptor(new CampaignExperimentServiceMethodDescriptorSupplier("MutateCampaignExperiments"))
+              .build();
         }
-     }
-     return getMutateCampaignExperimentsMethod;
+      }
+    }
+    return getMutateCampaignExperimentsMethod;
   }
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  @java.lang.Deprecated // Use {@link #getGraduateCampaignExperimentMethod()} instead. 
-  public static final io.grpc.MethodDescriptor<com.google.ads.googleads.v3.services.GraduateCampaignExperimentRequest,
-      com.google.ads.googleads.v3.services.GraduateCampaignExperimentResponse> METHOD_GRADUATE_CAMPAIGN_EXPERIMENT = getGraduateCampaignExperimentMethodHelper();
 
   private static volatile io.grpc.MethodDescriptor<com.google.ads.googleads.v3.services.GraduateCampaignExperimentRequest,
       com.google.ads.googleads.v3.services.GraduateCampaignExperimentResponse> getGraduateCampaignExperimentMethod;
 
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GraduateCampaignExperiment",
+      requestType = com.google.ads.googleads.v3.services.GraduateCampaignExperimentRequest.class,
+      responseType = com.google.ads.googleads.v3.services.GraduateCampaignExperimentResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<com.google.ads.googleads.v3.services.GraduateCampaignExperimentRequest,
       com.google.ads.googleads.v3.services.GraduateCampaignExperimentResponse> getGraduateCampaignExperimentMethod() {
-    return getGraduateCampaignExperimentMethodHelper();
-  }
-
-  private static io.grpc.MethodDescriptor<com.google.ads.googleads.v3.services.GraduateCampaignExperimentRequest,
-      com.google.ads.googleads.v3.services.GraduateCampaignExperimentResponse> getGraduateCampaignExperimentMethodHelper() {
     io.grpc.MethodDescriptor<com.google.ads.googleads.v3.services.GraduateCampaignExperimentRequest, com.google.ads.googleads.v3.services.GraduateCampaignExperimentResponse> getGraduateCampaignExperimentMethod;
     if ((getGraduateCampaignExperimentMethod = CampaignExperimentServiceGrpc.getGraduateCampaignExperimentMethod) == null) {
       synchronized (CampaignExperimentServiceGrpc.class) {
         if ((getGraduateCampaignExperimentMethod = CampaignExperimentServiceGrpc.getGraduateCampaignExperimentMethod) == null) {
-          CampaignExperimentServiceGrpc.getGraduateCampaignExperimentMethod = getGraduateCampaignExperimentMethod = 
+          CampaignExperimentServiceGrpc.getGraduateCampaignExperimentMethod = getGraduateCampaignExperimentMethod =
               io.grpc.MethodDescriptor.<com.google.ads.googleads.v3.services.GraduateCampaignExperimentRequest, com.google.ads.googleads.v3.services.GraduateCampaignExperimentResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "google.ads.googleads.v3.services.CampaignExperimentService", "GraduateCampaignExperiment"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GraduateCampaignExperiment"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v3.services.GraduateCampaignExperimentRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v3.services.GraduateCampaignExperimentResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new CampaignExperimentServiceMethodDescriptorSupplier("GraduateCampaignExperiment"))
-                  .build();
-          }
+              .setSchemaDescriptor(new CampaignExperimentServiceMethodDescriptorSupplier("GraduateCampaignExperiment"))
+              .build();
         }
-     }
-     return getGraduateCampaignExperimentMethod;
+      }
+    }
+    return getGraduateCampaignExperimentMethod;
   }
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  @java.lang.Deprecated // Use {@link #getPromoteCampaignExperimentMethod()} instead. 
-  public static final io.grpc.MethodDescriptor<com.google.ads.googleads.v3.services.PromoteCampaignExperimentRequest,
-      com.google.longrunning.Operation> METHOD_PROMOTE_CAMPAIGN_EXPERIMENT = getPromoteCampaignExperimentMethodHelper();
 
   private static volatile io.grpc.MethodDescriptor<com.google.ads.googleads.v3.services.PromoteCampaignExperimentRequest,
       com.google.longrunning.Operation> getPromoteCampaignExperimentMethod;
 
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "PromoteCampaignExperiment",
+      requestType = com.google.ads.googleads.v3.services.PromoteCampaignExperimentRequest.class,
+      responseType = com.google.longrunning.Operation.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<com.google.ads.googleads.v3.services.PromoteCampaignExperimentRequest,
       com.google.longrunning.Operation> getPromoteCampaignExperimentMethod() {
-    return getPromoteCampaignExperimentMethodHelper();
-  }
-
-  private static io.grpc.MethodDescriptor<com.google.ads.googleads.v3.services.PromoteCampaignExperimentRequest,
-      com.google.longrunning.Operation> getPromoteCampaignExperimentMethodHelper() {
     io.grpc.MethodDescriptor<com.google.ads.googleads.v3.services.PromoteCampaignExperimentRequest, com.google.longrunning.Operation> getPromoteCampaignExperimentMethod;
     if ((getPromoteCampaignExperimentMethod = CampaignExperimentServiceGrpc.getPromoteCampaignExperimentMethod) == null) {
       synchronized (CampaignExperimentServiceGrpc.class) {
         if ((getPromoteCampaignExperimentMethod = CampaignExperimentServiceGrpc.getPromoteCampaignExperimentMethod) == null) {
-          CampaignExperimentServiceGrpc.getPromoteCampaignExperimentMethod = getPromoteCampaignExperimentMethod = 
+          CampaignExperimentServiceGrpc.getPromoteCampaignExperimentMethod = getPromoteCampaignExperimentMethod =
               io.grpc.MethodDescriptor.<com.google.ads.googleads.v3.services.PromoteCampaignExperimentRequest, com.google.longrunning.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "google.ads.googleads.v3.services.CampaignExperimentService", "PromoteCampaignExperiment"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "PromoteCampaignExperiment"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v3.services.PromoteCampaignExperimentRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.longrunning.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new CampaignExperimentServiceMethodDescriptorSupplier("PromoteCampaignExperiment"))
-                  .build();
-          }
+              .setSchemaDescriptor(new CampaignExperimentServiceMethodDescriptorSupplier("PromoteCampaignExperiment"))
+              .build();
         }
-     }
-     return getPromoteCampaignExperimentMethod;
+      }
+    }
+    return getPromoteCampaignExperimentMethod;
   }
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  @java.lang.Deprecated // Use {@link #getEndCampaignExperimentMethod()} instead. 
-  public static final io.grpc.MethodDescriptor<com.google.ads.googleads.v3.services.EndCampaignExperimentRequest,
-      com.google.protobuf.Empty> METHOD_END_CAMPAIGN_EXPERIMENT = getEndCampaignExperimentMethodHelper();
 
   private static volatile io.grpc.MethodDescriptor<com.google.ads.googleads.v3.services.EndCampaignExperimentRequest,
       com.google.protobuf.Empty> getEndCampaignExperimentMethod;
 
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "EndCampaignExperiment",
+      requestType = com.google.ads.googleads.v3.services.EndCampaignExperimentRequest.class,
+      responseType = com.google.protobuf.Empty.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<com.google.ads.googleads.v3.services.EndCampaignExperimentRequest,
       com.google.protobuf.Empty> getEndCampaignExperimentMethod() {
-    return getEndCampaignExperimentMethodHelper();
-  }
-
-  private static io.grpc.MethodDescriptor<com.google.ads.googleads.v3.services.EndCampaignExperimentRequest,
-      com.google.protobuf.Empty> getEndCampaignExperimentMethodHelper() {
     io.grpc.MethodDescriptor<com.google.ads.googleads.v3.services.EndCampaignExperimentRequest, com.google.protobuf.Empty> getEndCampaignExperimentMethod;
     if ((getEndCampaignExperimentMethod = CampaignExperimentServiceGrpc.getEndCampaignExperimentMethod) == null) {
       synchronized (CampaignExperimentServiceGrpc.class) {
         if ((getEndCampaignExperimentMethod = CampaignExperimentServiceGrpc.getEndCampaignExperimentMethod) == null) {
-          CampaignExperimentServiceGrpc.getEndCampaignExperimentMethod = getEndCampaignExperimentMethod = 
+          CampaignExperimentServiceGrpc.getEndCampaignExperimentMethod = getEndCampaignExperimentMethod =
               io.grpc.MethodDescriptor.<com.google.ads.googleads.v3.services.EndCampaignExperimentRequest, com.google.protobuf.Empty>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "google.ads.googleads.v3.services.CampaignExperimentService", "EndCampaignExperiment"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "EndCampaignExperiment"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v3.services.EndCampaignExperimentRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.protobuf.Empty.getDefaultInstance()))
-                  .setSchemaDescriptor(new CampaignExperimentServiceMethodDescriptorSupplier("EndCampaignExperiment"))
-                  .build();
-          }
+              .setSchemaDescriptor(new CampaignExperimentServiceMethodDescriptorSupplier("EndCampaignExperiment"))
+              .build();
         }
-     }
-     return getEndCampaignExperimentMethod;
+      }
+    }
+    return getEndCampaignExperimentMethod;
   }
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  @java.lang.Deprecated // Use {@link #getListCampaignExperimentAsyncErrorsMethod()} instead. 
-  public static final io.grpc.MethodDescriptor<com.google.ads.googleads.v3.services.ListCampaignExperimentAsyncErrorsRequest,
-      com.google.ads.googleads.v3.services.ListCampaignExperimentAsyncErrorsResponse> METHOD_LIST_CAMPAIGN_EXPERIMENT_ASYNC_ERRORS = getListCampaignExperimentAsyncErrorsMethodHelper();
 
   private static volatile io.grpc.MethodDescriptor<com.google.ads.googleads.v3.services.ListCampaignExperimentAsyncErrorsRequest,
       com.google.ads.googleads.v3.services.ListCampaignExperimentAsyncErrorsResponse> getListCampaignExperimentAsyncErrorsMethod;
 
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ListCampaignExperimentAsyncErrors",
+      requestType = com.google.ads.googleads.v3.services.ListCampaignExperimentAsyncErrorsRequest.class,
+      responseType = com.google.ads.googleads.v3.services.ListCampaignExperimentAsyncErrorsResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<com.google.ads.googleads.v3.services.ListCampaignExperimentAsyncErrorsRequest,
       com.google.ads.googleads.v3.services.ListCampaignExperimentAsyncErrorsResponse> getListCampaignExperimentAsyncErrorsMethod() {
-    return getListCampaignExperimentAsyncErrorsMethodHelper();
-  }
-
-  private static io.grpc.MethodDescriptor<com.google.ads.googleads.v3.services.ListCampaignExperimentAsyncErrorsRequest,
-      com.google.ads.googleads.v3.services.ListCampaignExperimentAsyncErrorsResponse> getListCampaignExperimentAsyncErrorsMethodHelper() {
     io.grpc.MethodDescriptor<com.google.ads.googleads.v3.services.ListCampaignExperimentAsyncErrorsRequest, com.google.ads.googleads.v3.services.ListCampaignExperimentAsyncErrorsResponse> getListCampaignExperimentAsyncErrorsMethod;
     if ((getListCampaignExperimentAsyncErrorsMethod = CampaignExperimentServiceGrpc.getListCampaignExperimentAsyncErrorsMethod) == null) {
       synchronized (CampaignExperimentServiceGrpc.class) {
         if ((getListCampaignExperimentAsyncErrorsMethod = CampaignExperimentServiceGrpc.getListCampaignExperimentAsyncErrorsMethod) == null) {
-          CampaignExperimentServiceGrpc.getListCampaignExperimentAsyncErrorsMethod = getListCampaignExperimentAsyncErrorsMethod = 
+          CampaignExperimentServiceGrpc.getListCampaignExperimentAsyncErrorsMethod = getListCampaignExperimentAsyncErrorsMethod =
               io.grpc.MethodDescriptor.<com.google.ads.googleads.v3.services.ListCampaignExperimentAsyncErrorsRequest, com.google.ads.googleads.v3.services.ListCampaignExperimentAsyncErrorsResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "google.ads.googleads.v3.services.CampaignExperimentService", "ListCampaignExperimentAsyncErrors"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListCampaignExperimentAsyncErrors"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v3.services.ListCampaignExperimentAsyncErrorsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v3.services.ListCampaignExperimentAsyncErrorsResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new CampaignExperimentServiceMethodDescriptorSupplier("ListCampaignExperimentAsyncErrors"))
-                  .build();
-          }
+              .setSchemaDescriptor(new CampaignExperimentServiceMethodDescriptorSupplier("ListCampaignExperimentAsyncErrors"))
+              .build();
         }
-     }
-     return getListCampaignExperimentAsyncErrorsMethod;
+      }
+    }
+    return getListCampaignExperimentAsyncErrorsMethod;
   }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static CampaignExperimentServiceStub newStub(io.grpc.Channel channel) {
-    return new CampaignExperimentServiceStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<CampaignExperimentServiceStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<CampaignExperimentServiceStub>() {
+        @java.lang.Override
+        public CampaignExperimentServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new CampaignExperimentServiceStub(channel, callOptions);
+        }
+      };
+    return CampaignExperimentServiceStub.newStub(factory, channel);
   }
 
   /**
@@ -310,7 +274,14 @@ public final class CampaignExperimentServiceGrpc {
    */
   public static CampaignExperimentServiceBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new CampaignExperimentServiceBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<CampaignExperimentServiceBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<CampaignExperimentServiceBlockingStub>() {
+        @java.lang.Override
+        public CampaignExperimentServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new CampaignExperimentServiceBlockingStub(channel, callOptions);
+        }
+      };
+    return CampaignExperimentServiceBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -318,7 +289,14 @@ public final class CampaignExperimentServiceGrpc {
    */
   public static CampaignExperimentServiceFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new CampaignExperimentServiceFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<CampaignExperimentServiceFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<CampaignExperimentServiceFutureStub>() {
+        @java.lang.Override
+        public CampaignExperimentServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new CampaignExperimentServiceFutureStub(channel, callOptions);
+        }
+      };
+    return CampaignExperimentServiceFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -343,7 +321,7 @@ public final class CampaignExperimentServiceGrpc {
      */
     public void getCampaignExperiment(com.google.ads.googleads.v3.services.GetCampaignExperimentRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v3.resources.CampaignExperiment> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetCampaignExperimentMethodHelper(), responseObserver);
+      asyncUnimplementedUnaryCall(getGetCampaignExperimentMethod(), responseObserver);
     }
 
     /**
@@ -361,7 +339,7 @@ public final class CampaignExperimentServiceGrpc {
      */
     public void createCampaignExperiment(com.google.ads.googleads.v3.services.CreateCampaignExperimentRequest request,
         io.grpc.stub.StreamObserver<com.google.longrunning.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getCreateCampaignExperimentMethodHelper(), responseObserver);
+      asyncUnimplementedUnaryCall(getCreateCampaignExperimentMethod(), responseObserver);
     }
 
     /**
@@ -371,7 +349,7 @@ public final class CampaignExperimentServiceGrpc {
      */
     public void mutateCampaignExperiments(com.google.ads.googleads.v3.services.MutateCampaignExperimentsRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v3.services.MutateCampaignExperimentsResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getMutateCampaignExperimentsMethodHelper(), responseObserver);
+      asyncUnimplementedUnaryCall(getMutateCampaignExperimentsMethod(), responseObserver);
     }
 
     /**
@@ -382,7 +360,7 @@ public final class CampaignExperimentServiceGrpc {
      */
     public void graduateCampaignExperiment(com.google.ads.googleads.v3.services.GraduateCampaignExperimentRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v3.services.GraduateCampaignExperimentResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getGraduateCampaignExperimentMethodHelper(), responseObserver);
+      asyncUnimplementedUnaryCall(getGraduateCampaignExperimentMethod(), responseObserver);
     }
 
     /**
@@ -396,7 +374,7 @@ public final class CampaignExperimentServiceGrpc {
      */
     public void promoteCampaignExperiment(com.google.ads.googleads.v3.services.PromoteCampaignExperimentRequest request,
         io.grpc.stub.StreamObserver<com.google.longrunning.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getPromoteCampaignExperimentMethodHelper(), responseObserver);
+      asyncUnimplementedUnaryCall(getPromoteCampaignExperimentMethod(), responseObserver);
     }
 
     /**
@@ -408,7 +386,7 @@ public final class CampaignExperimentServiceGrpc {
      */
     public void endCampaignExperiment(com.google.ads.googleads.v3.services.EndCampaignExperimentRequest request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
-      asyncUnimplementedUnaryCall(getEndCampaignExperimentMethodHelper(), responseObserver);
+      asyncUnimplementedUnaryCall(getEndCampaignExperimentMethod(), responseObserver);
     }
 
     /**
@@ -420,55 +398,55 @@ public final class CampaignExperimentServiceGrpc {
      */
     public void listCampaignExperimentAsyncErrors(com.google.ads.googleads.v3.services.ListCampaignExperimentAsyncErrorsRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v3.services.ListCampaignExperimentAsyncErrorsResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getListCampaignExperimentAsyncErrorsMethodHelper(), responseObserver);
+      asyncUnimplementedUnaryCall(getListCampaignExperimentAsyncErrorsMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
-            getGetCampaignExperimentMethodHelper(),
+            getGetCampaignExperimentMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 com.google.ads.googleads.v3.services.GetCampaignExperimentRequest,
                 com.google.ads.googleads.v3.resources.CampaignExperiment>(
                   this, METHODID_GET_CAMPAIGN_EXPERIMENT)))
           .addMethod(
-            getCreateCampaignExperimentMethodHelper(),
+            getCreateCampaignExperimentMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 com.google.ads.googleads.v3.services.CreateCampaignExperimentRequest,
                 com.google.longrunning.Operation>(
                   this, METHODID_CREATE_CAMPAIGN_EXPERIMENT)))
           .addMethod(
-            getMutateCampaignExperimentsMethodHelper(),
+            getMutateCampaignExperimentsMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 com.google.ads.googleads.v3.services.MutateCampaignExperimentsRequest,
                 com.google.ads.googleads.v3.services.MutateCampaignExperimentsResponse>(
                   this, METHODID_MUTATE_CAMPAIGN_EXPERIMENTS)))
           .addMethod(
-            getGraduateCampaignExperimentMethodHelper(),
+            getGraduateCampaignExperimentMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 com.google.ads.googleads.v3.services.GraduateCampaignExperimentRequest,
                 com.google.ads.googleads.v3.services.GraduateCampaignExperimentResponse>(
                   this, METHODID_GRADUATE_CAMPAIGN_EXPERIMENT)))
           .addMethod(
-            getPromoteCampaignExperimentMethodHelper(),
+            getPromoteCampaignExperimentMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 com.google.ads.googleads.v3.services.PromoteCampaignExperimentRequest,
                 com.google.longrunning.Operation>(
                   this, METHODID_PROMOTE_CAMPAIGN_EXPERIMENT)))
           .addMethod(
-            getEndCampaignExperimentMethodHelper(),
+            getEndCampaignExperimentMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 com.google.ads.googleads.v3.services.EndCampaignExperimentRequest,
                 com.google.protobuf.Empty>(
                   this, METHODID_END_CAMPAIGN_EXPERIMENT)))
           .addMethod(
-            getListCampaignExperimentAsyncErrorsMethodHelper(),
+            getListCampaignExperimentAsyncErrorsMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 com.google.ads.googleads.v3.services.ListCampaignExperimentAsyncErrorsRequest,
@@ -491,19 +469,15 @@ public final class CampaignExperimentServiceGrpc {
    * and will be a snapshot of changes in the draft at the time of creation.
    * </pre>
    */
-  public static final class CampaignExperimentServiceStub extends io.grpc.stub.AbstractStub<CampaignExperimentServiceStub> {
-    private CampaignExperimentServiceStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private CampaignExperimentServiceStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class CampaignExperimentServiceStub extends io.grpc.stub.AbstractAsyncStub<CampaignExperimentServiceStub> {
+    private CampaignExperimentServiceStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected CampaignExperimentServiceStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected CampaignExperimentServiceStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new CampaignExperimentServiceStub(channel, callOptions);
     }
 
@@ -515,7 +489,7 @@ public final class CampaignExperimentServiceGrpc {
     public void getCampaignExperiment(com.google.ads.googleads.v3.services.GetCampaignExperimentRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v3.resources.CampaignExperiment> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(getGetCampaignExperimentMethodHelper(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getGetCampaignExperimentMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -534,7 +508,7 @@ public final class CampaignExperimentServiceGrpc {
     public void createCampaignExperiment(com.google.ads.googleads.v3.services.CreateCampaignExperimentRequest request,
         io.grpc.stub.StreamObserver<com.google.longrunning.Operation> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(getCreateCampaignExperimentMethodHelper(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getCreateCampaignExperimentMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -545,7 +519,7 @@ public final class CampaignExperimentServiceGrpc {
     public void mutateCampaignExperiments(com.google.ads.googleads.v3.services.MutateCampaignExperimentsRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v3.services.MutateCampaignExperimentsResponse> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(getMutateCampaignExperimentsMethodHelper(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getMutateCampaignExperimentsMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -557,7 +531,7 @@ public final class CampaignExperimentServiceGrpc {
     public void graduateCampaignExperiment(com.google.ads.googleads.v3.services.GraduateCampaignExperimentRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v3.services.GraduateCampaignExperimentResponse> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(getGraduateCampaignExperimentMethodHelper(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getGraduateCampaignExperimentMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -572,7 +546,7 @@ public final class CampaignExperimentServiceGrpc {
     public void promoteCampaignExperiment(com.google.ads.googleads.v3.services.PromoteCampaignExperimentRequest request,
         io.grpc.stub.StreamObserver<com.google.longrunning.Operation> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(getPromoteCampaignExperimentMethodHelper(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getPromoteCampaignExperimentMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -585,7 +559,7 @@ public final class CampaignExperimentServiceGrpc {
     public void endCampaignExperiment(com.google.ads.googleads.v3.services.EndCampaignExperimentRequest request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(getEndCampaignExperimentMethodHelper(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getEndCampaignExperimentMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -598,7 +572,7 @@ public final class CampaignExperimentServiceGrpc {
     public void listCampaignExperimentAsyncErrors(com.google.ads.googleads.v3.services.ListCampaignExperimentAsyncErrorsRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v3.services.ListCampaignExperimentAsyncErrorsResponse> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(getListCampaignExperimentAsyncErrorsMethodHelper(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getListCampaignExperimentAsyncErrorsMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -615,19 +589,15 @@ public final class CampaignExperimentServiceGrpc {
    * and will be a snapshot of changes in the draft at the time of creation.
    * </pre>
    */
-  public static final class CampaignExperimentServiceBlockingStub extends io.grpc.stub.AbstractStub<CampaignExperimentServiceBlockingStub> {
-    private CampaignExperimentServiceBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private CampaignExperimentServiceBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class CampaignExperimentServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<CampaignExperimentServiceBlockingStub> {
+    private CampaignExperimentServiceBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected CampaignExperimentServiceBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected CampaignExperimentServiceBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new CampaignExperimentServiceBlockingStub(channel, callOptions);
     }
 
@@ -638,7 +608,7 @@ public final class CampaignExperimentServiceGrpc {
      */
     public com.google.ads.googleads.v3.resources.CampaignExperiment getCampaignExperiment(com.google.ads.googleads.v3.services.GetCampaignExperimentRequest request) {
       return blockingUnaryCall(
-          getChannel(), getGetCampaignExperimentMethodHelper(), getCallOptions(), request);
+          getChannel(), getGetCampaignExperimentMethod(), getCallOptions(), request);
     }
 
     /**
@@ -656,7 +626,7 @@ public final class CampaignExperimentServiceGrpc {
      */
     public com.google.longrunning.Operation createCampaignExperiment(com.google.ads.googleads.v3.services.CreateCampaignExperimentRequest request) {
       return blockingUnaryCall(
-          getChannel(), getCreateCampaignExperimentMethodHelper(), getCallOptions(), request);
+          getChannel(), getCreateCampaignExperimentMethod(), getCallOptions(), request);
     }
 
     /**
@@ -666,7 +636,7 @@ public final class CampaignExperimentServiceGrpc {
      */
     public com.google.ads.googleads.v3.services.MutateCampaignExperimentsResponse mutateCampaignExperiments(com.google.ads.googleads.v3.services.MutateCampaignExperimentsRequest request) {
       return blockingUnaryCall(
-          getChannel(), getMutateCampaignExperimentsMethodHelper(), getCallOptions(), request);
+          getChannel(), getMutateCampaignExperimentsMethod(), getCallOptions(), request);
     }
 
     /**
@@ -677,7 +647,7 @@ public final class CampaignExperimentServiceGrpc {
      */
     public com.google.ads.googleads.v3.services.GraduateCampaignExperimentResponse graduateCampaignExperiment(com.google.ads.googleads.v3.services.GraduateCampaignExperimentRequest request) {
       return blockingUnaryCall(
-          getChannel(), getGraduateCampaignExperimentMethodHelper(), getCallOptions(), request);
+          getChannel(), getGraduateCampaignExperimentMethod(), getCallOptions(), request);
     }
 
     /**
@@ -691,7 +661,7 @@ public final class CampaignExperimentServiceGrpc {
      */
     public com.google.longrunning.Operation promoteCampaignExperiment(com.google.ads.googleads.v3.services.PromoteCampaignExperimentRequest request) {
       return blockingUnaryCall(
-          getChannel(), getPromoteCampaignExperimentMethodHelper(), getCallOptions(), request);
+          getChannel(), getPromoteCampaignExperimentMethod(), getCallOptions(), request);
     }
 
     /**
@@ -703,7 +673,7 @@ public final class CampaignExperimentServiceGrpc {
      */
     public com.google.protobuf.Empty endCampaignExperiment(com.google.ads.googleads.v3.services.EndCampaignExperimentRequest request) {
       return blockingUnaryCall(
-          getChannel(), getEndCampaignExperimentMethodHelper(), getCallOptions(), request);
+          getChannel(), getEndCampaignExperimentMethod(), getCallOptions(), request);
     }
 
     /**
@@ -715,7 +685,7 @@ public final class CampaignExperimentServiceGrpc {
      */
     public com.google.ads.googleads.v3.services.ListCampaignExperimentAsyncErrorsResponse listCampaignExperimentAsyncErrors(com.google.ads.googleads.v3.services.ListCampaignExperimentAsyncErrorsRequest request) {
       return blockingUnaryCall(
-          getChannel(), getListCampaignExperimentAsyncErrorsMethodHelper(), getCallOptions(), request);
+          getChannel(), getListCampaignExperimentAsyncErrorsMethod(), getCallOptions(), request);
     }
   }
 
@@ -732,19 +702,15 @@ public final class CampaignExperimentServiceGrpc {
    * and will be a snapshot of changes in the draft at the time of creation.
    * </pre>
    */
-  public static final class CampaignExperimentServiceFutureStub extends io.grpc.stub.AbstractStub<CampaignExperimentServiceFutureStub> {
-    private CampaignExperimentServiceFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private CampaignExperimentServiceFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class CampaignExperimentServiceFutureStub extends io.grpc.stub.AbstractFutureStub<CampaignExperimentServiceFutureStub> {
+    private CampaignExperimentServiceFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected CampaignExperimentServiceFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected CampaignExperimentServiceFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new CampaignExperimentServiceFutureStub(channel, callOptions);
     }
 
@@ -756,7 +722,7 @@ public final class CampaignExperimentServiceGrpc {
     public com.google.common.util.concurrent.ListenableFuture<com.google.ads.googleads.v3.resources.CampaignExperiment> getCampaignExperiment(
         com.google.ads.googleads.v3.services.GetCampaignExperimentRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(getGetCampaignExperimentMethodHelper(), getCallOptions()), request);
+          getChannel().newCall(getGetCampaignExperimentMethod(), getCallOptions()), request);
     }
 
     /**
@@ -775,7 +741,7 @@ public final class CampaignExperimentServiceGrpc {
     public com.google.common.util.concurrent.ListenableFuture<com.google.longrunning.Operation> createCampaignExperiment(
         com.google.ads.googleads.v3.services.CreateCampaignExperimentRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(getCreateCampaignExperimentMethodHelper(), getCallOptions()), request);
+          getChannel().newCall(getCreateCampaignExperimentMethod(), getCallOptions()), request);
     }
 
     /**
@@ -786,7 +752,7 @@ public final class CampaignExperimentServiceGrpc {
     public com.google.common.util.concurrent.ListenableFuture<com.google.ads.googleads.v3.services.MutateCampaignExperimentsResponse> mutateCampaignExperiments(
         com.google.ads.googleads.v3.services.MutateCampaignExperimentsRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(getMutateCampaignExperimentsMethodHelper(), getCallOptions()), request);
+          getChannel().newCall(getMutateCampaignExperimentsMethod(), getCallOptions()), request);
     }
 
     /**
@@ -798,7 +764,7 @@ public final class CampaignExperimentServiceGrpc {
     public com.google.common.util.concurrent.ListenableFuture<com.google.ads.googleads.v3.services.GraduateCampaignExperimentResponse> graduateCampaignExperiment(
         com.google.ads.googleads.v3.services.GraduateCampaignExperimentRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(getGraduateCampaignExperimentMethodHelper(), getCallOptions()), request);
+          getChannel().newCall(getGraduateCampaignExperimentMethod(), getCallOptions()), request);
     }
 
     /**
@@ -813,7 +779,7 @@ public final class CampaignExperimentServiceGrpc {
     public com.google.common.util.concurrent.ListenableFuture<com.google.longrunning.Operation> promoteCampaignExperiment(
         com.google.ads.googleads.v3.services.PromoteCampaignExperimentRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(getPromoteCampaignExperimentMethodHelper(), getCallOptions()), request);
+          getChannel().newCall(getPromoteCampaignExperimentMethod(), getCallOptions()), request);
     }
 
     /**
@@ -826,7 +792,7 @@ public final class CampaignExperimentServiceGrpc {
     public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> endCampaignExperiment(
         com.google.ads.googleads.v3.services.EndCampaignExperimentRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(getEndCampaignExperimentMethodHelper(), getCallOptions()), request);
+          getChannel().newCall(getEndCampaignExperimentMethod(), getCallOptions()), request);
     }
 
     /**
@@ -839,7 +805,7 @@ public final class CampaignExperimentServiceGrpc {
     public com.google.common.util.concurrent.ListenableFuture<com.google.ads.googleads.v3.services.ListCampaignExperimentAsyncErrorsResponse> listCampaignExperimentAsyncErrors(
         com.google.ads.googleads.v3.services.ListCampaignExperimentAsyncErrorsRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(getListCampaignExperimentAsyncErrorsMethodHelper(), getCallOptions()), request);
+          getChannel().newCall(getListCampaignExperimentAsyncErrorsMethod(), getCallOptions()), request);
     }
   }
 
@@ -957,13 +923,13 @@ public final class CampaignExperimentServiceGrpc {
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new CampaignExperimentServiceFileDescriptorSupplier())
-              .addMethod(getGetCampaignExperimentMethodHelper())
-              .addMethod(getCreateCampaignExperimentMethodHelper())
-              .addMethod(getMutateCampaignExperimentsMethodHelper())
-              .addMethod(getGraduateCampaignExperimentMethodHelper())
-              .addMethod(getPromoteCampaignExperimentMethodHelper())
-              .addMethod(getEndCampaignExperimentMethodHelper())
-              .addMethod(getListCampaignExperimentAsyncErrorsMethodHelper())
+              .addMethod(getGetCampaignExperimentMethod())
+              .addMethod(getCreateCampaignExperimentMethod())
+              .addMethod(getMutateCampaignExperimentsMethod())
+              .addMethod(getGraduateCampaignExperimentMethod())
+              .addMethod(getPromoteCampaignExperimentMethod())
+              .addMethod(getEndCampaignExperimentMethod())
+              .addMethod(getListCampaignExperimentAsyncErrorsMethod())
               .build();
         }
       }

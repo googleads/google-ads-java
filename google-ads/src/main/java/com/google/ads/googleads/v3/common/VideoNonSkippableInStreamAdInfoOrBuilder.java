@@ -13,6 +13,7 @@ public interface VideoNonSkippableInStreamAdInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue companion_banner = 1;</code>
+   * @return Whether the companionBanner field is set.
    */
   boolean hasCompanionBanner();
   /**
@@ -21,6 +22,7 @@ public interface VideoNonSkippableInStreamAdInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue companion_banner = 1;</code>
+   * @return The companionBanner.
    */
   com.google.protobuf.StringValue getCompanionBanner();
   /**

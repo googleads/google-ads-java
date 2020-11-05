@@ -13,6 +13,7 @@ public interface CreateCampaignExperimentRequestOrBuilder extends
    * </pre>
    *
    * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+   * @return The customerId.
    */
   java.lang.String getCustomerId();
   /**
@@ -21,6 +22,7 @@ public interface CreateCampaignExperimentRequestOrBuilder extends
    * </pre>
    *
    * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+   * @return The bytes for customerId.
    */
   com.google.protobuf.ByteString
       getCustomerIdBytes();
@@ -31,6 +33,7 @@ public interface CreateCampaignExperimentRequestOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.CampaignExperiment campaign_experiment = 2 [(.google.api.field_behavior) = REQUIRED];</code>
+   * @return Whether the campaignExperiment field is set.
    */
   boolean hasCampaignExperiment();
   /**
@@ -39,6 +42,7 @@ public interface CreateCampaignExperimentRequestOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.CampaignExperiment campaign_experiment = 2 [(.google.api.field_behavior) = REQUIRED];</code>
+   * @return The campaignExperiment.
    */
   com.google.ads.googleads.v3.resources.CampaignExperiment getCampaignExperiment();
   /**
@@ -57,6 +61,7 @@ public interface CreateCampaignExperimentRequestOrBuilder extends
    * </pre>
    *
    * <code>bool validate_only = 3;</code>
+   * @return The validateOnly.
    */
   boolean getValidateOnly();
 }

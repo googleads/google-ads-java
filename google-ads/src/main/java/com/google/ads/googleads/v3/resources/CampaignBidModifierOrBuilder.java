@@ -15,6 +15,7 @@ public interface CampaignBidModifierOrBuilder extends
    * </pre>
    *
    * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * @return The resourceName.
    */
   java.lang.String getResourceName();
   /**
@@ -25,6 +26,7 @@ public interface CampaignBidModifierOrBuilder extends
    * </pre>
    *
    * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * @return The bytes for resourceName.
    */
   com.google.protobuf.ByteString
       getResourceNameBytes();
@@ -35,6 +37,7 @@ public interface CampaignBidModifierOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue campaign = 2 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return Whether the campaign field is set.
    */
   boolean hasCampaign();
   /**
@@ -43,6 +46,7 @@ public interface CampaignBidModifierOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue campaign = 2 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The campaign.
    */
   com.google.protobuf.StringValue getCampaign();
   /**
@@ -61,6 +65,7 @@ public interface CampaignBidModifierOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value criterion_id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the criterionId field is set.
    */
   boolean hasCriterionId();
   /**
@@ -70,6 +75,7 @@ public interface CampaignBidModifierOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value criterion_id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The criterionId.
    */
   com.google.protobuf.Int64Value getCriterionId();
   /**
@@ -88,6 +94,7 @@ public interface CampaignBidModifierOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue bid_modifier = 4;</code>
+   * @return Whether the bidModifier field is set.
    */
   boolean hasBidModifier();
   /**
@@ -96,6 +103,7 @@ public interface CampaignBidModifierOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue bid_modifier = 4;</code>
+   * @return The bidModifier.
    */
   com.google.protobuf.DoubleValue getBidModifier();
   /**
@@ -113,6 +121,7 @@ public interface CampaignBidModifierOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.InteractionTypeInfo interaction_type = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return Whether the interactionType field is set.
    */
   boolean hasInteractionType();
   /**
@@ -121,6 +130,7 @@ public interface CampaignBidModifierOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.InteractionTypeInfo interaction_type = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The interactionType.
    */
   com.google.ads.googleads.v3.common.InteractionTypeInfo getInteractionType();
   /**

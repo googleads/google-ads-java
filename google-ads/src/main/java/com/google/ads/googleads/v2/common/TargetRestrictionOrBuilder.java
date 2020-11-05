@@ -13,6 +13,7 @@ public interface TargetRestrictionOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.enums.TargetingDimensionEnum.TargetingDimension targeting_dimension = 1;</code>
+   * @return The enum numeric value on the wire for targetingDimension.
    */
   int getTargetingDimensionValue();
   /**
@@ -21,6 +22,7 @@ public interface TargetRestrictionOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.enums.TargetingDimensionEnum.TargetingDimension targeting_dimension = 1;</code>
+   * @return The targetingDimension.
    */
   com.google.ads.googleads.v2.enums.TargetingDimensionEnum.TargetingDimension getTargetingDimension();
 
@@ -36,6 +38,7 @@ public interface TargetRestrictionOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.BoolValue bid_only = 2;</code>
+   * @return Whether the bidOnly field is set.
    */
   boolean hasBidOnly();
   /**
@@ -50,6 +53,7 @@ public interface TargetRestrictionOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.BoolValue bid_only = 2;</code>
+   * @return The bidOnly.
    */
   com.google.protobuf.BoolValue getBidOnly();
   /**

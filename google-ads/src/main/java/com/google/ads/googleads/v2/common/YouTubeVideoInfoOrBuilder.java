@@ -13,6 +13,7 @@ public interface YouTubeVideoInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue video_id = 1;</code>
+   * @return Whether the videoId field is set.
    */
   boolean hasVideoId();
   /**
@@ -21,6 +22,7 @@ public interface YouTubeVideoInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue video_id = 1;</code>
+   * @return The videoId.
    */
   com.google.protobuf.StringValue getVideoId();
   /**

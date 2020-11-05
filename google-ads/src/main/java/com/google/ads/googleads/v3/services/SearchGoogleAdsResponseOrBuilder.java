@@ -60,6 +60,7 @@ public interface SearchGoogleAdsResponseOrBuilder extends
    * </pre>
    *
    * <code>string next_page_token = 2;</code>
+   * @return The nextPageToken.
    */
   java.lang.String getNextPageToken();
   /**
@@ -71,6 +72,7 @@ public interface SearchGoogleAdsResponseOrBuilder extends
    * </pre>
    *
    * <code>string next_page_token = 2;</code>
+   * @return The bytes for nextPageToken.
    */
   com.google.protobuf.ByteString
       getNextPageTokenBytes();
@@ -82,6 +84,7 @@ public interface SearchGoogleAdsResponseOrBuilder extends
    * </pre>
    *
    * <code>int64 total_results_count = 3;</code>
+   * @return The totalResultsCount.
    */
   long getTotalResultsCount();
 
@@ -91,6 +94,7 @@ public interface SearchGoogleAdsResponseOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.FieldMask field_mask = 5;</code>
+   * @return Whether the fieldMask field is set.
    */
   boolean hasFieldMask();
   /**
@@ -99,6 +103,7 @@ public interface SearchGoogleAdsResponseOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.FieldMask field_mask = 5;</code>
+   * @return The fieldMask.
    */
   com.google.protobuf.FieldMask getFieldMask();
   /**
@@ -118,6 +123,7 @@ public interface SearchGoogleAdsResponseOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.services.GoogleAdsRow summary_row = 6;</code>
+   * @return Whether the summaryRow field is set.
    */
   boolean hasSummaryRow();
   /**
@@ -128,6 +134,7 @@ public interface SearchGoogleAdsResponseOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.services.GoogleAdsRow summary_row = 6;</code>
+   * @return The summaryRow.
    */
   com.google.ads.googleads.v3.services.GoogleAdsRow getSummaryRow();
   /**

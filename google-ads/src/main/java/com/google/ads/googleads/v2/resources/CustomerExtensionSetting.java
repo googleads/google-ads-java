@@ -10,7 +10,7 @@ package com.google.ads.googleads.v2.resources;
  *
  * Protobuf type {@code google.ads.googleads.v2.resources.CustomerExtensionSetting}
  */
-public  final class CustomerExtensionSetting extends
+public final class CustomerExtensionSetting extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v2.resources.CustomerExtensionSetting)
     CustomerExtensionSettingOrBuilder {
@@ -24,6 +24,13 @@ private static final long serialVersionUID = 0L;
     extensionType_ = 0;
     extensionFeedItems_ = java.util.Collections.emptyList();
     device_ = 0;
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new CustomerExtensionSetting();
   }
 
   @java.lang.Override
@@ -63,9 +70,9 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 26: {
-            if (!((mutable_bitField0_ & 0x00000004) != 0)) {
+            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
               extensionFeedItems_ = new java.util.ArrayList<com.google.protobuf.StringValue>();
-              mutable_bitField0_ |= 0x00000004;
+              mutable_bitField0_ |= 0x00000001;
             }
             extensionFeedItems_.add(
                 input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry));
@@ -92,7 +99,7 @@ private static final long serialVersionUID = 0L;
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
     } finally {
-      if (((mutable_bitField0_ & 0x00000004) != 0)) {
+      if (((mutable_bitField0_ & 0x00000001) != 0)) {
         extensionFeedItems_ = java.util.Collections.unmodifiableList(extensionFeedItems_);
       }
       this.unknownFields = unknownFields.build();
@@ -112,18 +119,19 @@ private static final long serialVersionUID = 0L;
             com.google.ads.googleads.v2.resources.CustomerExtensionSetting.class, com.google.ads.googleads.v2.resources.CustomerExtensionSetting.Builder.class);
   }
 
-  private int bitField0_;
   public static final int RESOURCE_NAME_FIELD_NUMBER = 1;
   private volatile java.lang.Object resourceName_;
   /**
    * <pre>
-   * The resource name of the customer extension setting.
+   * Immutable. The resource name of the customer extension setting.
    * CustomerExtensionSetting resource names have the form:
    * `customers/{customer_id}/customerExtensionSettings/{extension_type}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * @return The resourceName.
    */
+  @java.lang.Override
   public java.lang.String getResourceName() {
     java.lang.Object ref = resourceName_;
     if (ref instanceof java.lang.String) {
@@ -138,13 +146,15 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The resource name of the customer extension setting.
+   * Immutable. The resource name of the customer extension setting.
    * CustomerExtensionSetting resource names have the form:
    * `customers/{customer_id}/customerExtensionSettings/{extension_type}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * @return The bytes for resourceName.
    */
+  @java.lang.Override
   public com.google.protobuf.ByteString
       getResourceNameBytes() {
     java.lang.Object ref = resourceName_;
@@ -163,22 +173,24 @@ private static final long serialVersionUID = 0L;
   private int extensionType_;
   /**
    * <pre>
-   * The extension type of the customer extension setting.
+   * Immutable. The extension type of the customer extension setting.
    * </pre>
    *
-   * <code>.google.ads.googleads.v2.enums.ExtensionTypeEnum.ExtensionType extension_type = 2;</code>
+   * <code>.google.ads.googleads.v2.enums.ExtensionTypeEnum.ExtensionType extension_type = 2 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The enum numeric value on the wire for extensionType.
    */
-  public int getExtensionTypeValue() {
+  @java.lang.Override public int getExtensionTypeValue() {
     return extensionType_;
   }
   /**
    * <pre>
-   * The extension type of the customer extension setting.
+   * Immutable. The extension type of the customer extension setting.
    * </pre>
    *
-   * <code>.google.ads.googleads.v2.enums.ExtensionTypeEnum.ExtensionType extension_type = 2;</code>
+   * <code>.google.ads.googleads.v2.enums.ExtensionTypeEnum.ExtensionType extension_type = 2 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The extensionType.
    */
-  public com.google.ads.googleads.v2.enums.ExtensionTypeEnum.ExtensionType getExtensionType() {
+  @java.lang.Override public com.google.ads.googleads.v2.enums.ExtensionTypeEnum.ExtensionType getExtensionType() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v2.enums.ExtensionTypeEnum.ExtensionType result = com.google.ads.googleads.v2.enums.ExtensionTypeEnum.ExtensionType.valueOf(extensionType_);
     return result == null ? com.google.ads.googleads.v2.enums.ExtensionTypeEnum.ExtensionType.UNRECOGNIZED : result;
@@ -193,8 +205,9 @@ private static final long serialVersionUID = 0L;
    * `customers/{customer_id}/extensionFeedItems/{feed_item_id}`
    * </pre>
    *
-   * <code>repeated .google.protobuf.StringValue extension_feed_items = 3;</code>
+   * <code>repeated .google.protobuf.StringValue extension_feed_items = 3 [(.google.api.resource_reference) = { ... }</code>
    */
+  @java.lang.Override
   public java.util.List<com.google.protobuf.StringValue> getExtensionFeedItemsList() {
     return extensionFeedItems_;
   }
@@ -205,8 +218,9 @@ private static final long serialVersionUID = 0L;
    * `customers/{customer_id}/extensionFeedItems/{feed_item_id}`
    * </pre>
    *
-   * <code>repeated .google.protobuf.StringValue extension_feed_items = 3;</code>
+   * <code>repeated .google.protobuf.StringValue extension_feed_items = 3 [(.google.api.resource_reference) = { ... }</code>
    */
+  @java.lang.Override
   public java.util.List<? extends com.google.protobuf.StringValueOrBuilder> 
       getExtensionFeedItemsOrBuilderList() {
     return extensionFeedItems_;
@@ -218,8 +232,9 @@ private static final long serialVersionUID = 0L;
    * `customers/{customer_id}/extensionFeedItems/{feed_item_id}`
    * </pre>
    *
-   * <code>repeated .google.protobuf.StringValue extension_feed_items = 3;</code>
+   * <code>repeated .google.protobuf.StringValue extension_feed_items = 3 [(.google.api.resource_reference) = { ... }</code>
    */
+  @java.lang.Override
   public int getExtensionFeedItemsCount() {
     return extensionFeedItems_.size();
   }
@@ -230,8 +245,9 @@ private static final long serialVersionUID = 0L;
    * `customers/{customer_id}/extensionFeedItems/{feed_item_id}`
    * </pre>
    *
-   * <code>repeated .google.protobuf.StringValue extension_feed_items = 3;</code>
+   * <code>repeated .google.protobuf.StringValue extension_feed_items = 3 [(.google.api.resource_reference) = { ... }</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getExtensionFeedItems(int index) {
     return extensionFeedItems_.get(index);
   }
@@ -242,8 +258,9 @@ private static final long serialVersionUID = 0L;
    * `customers/{customer_id}/extensionFeedItems/{feed_item_id}`
    * </pre>
    *
-   * <code>repeated .google.protobuf.StringValue extension_feed_items = 3;</code>
+   * <code>repeated .google.protobuf.StringValue extension_feed_items = 3 [(.google.api.resource_reference) = { ... }</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getExtensionFeedItemsOrBuilder(
       int index) {
     return extensionFeedItems_.get(index);
@@ -257,8 +274,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.enums.ExtensionSettingDeviceEnum.ExtensionSettingDevice device = 4;</code>
+   * @return The enum numeric value on the wire for device.
    */
-  public int getDeviceValue() {
+  @java.lang.Override public int getDeviceValue() {
     return device_;
   }
   /**
@@ -267,8 +285,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.enums.ExtensionSettingDeviceEnum.ExtensionSettingDevice device = 4;</code>
+   * @return The device.
    */
-  public com.google.ads.googleads.v2.enums.ExtensionSettingDeviceEnum.ExtensionSettingDevice getDevice() {
+  @java.lang.Override public com.google.ads.googleads.v2.enums.ExtensionSettingDeviceEnum.ExtensionSettingDevice getDevice() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v2.enums.ExtensionSettingDeviceEnum.ExtensionSettingDevice result = com.google.ads.googleads.v2.enums.ExtensionSettingDeviceEnum.ExtensionSettingDevice.valueOf(device_);
     return result == null ? com.google.ads.googleads.v2.enums.ExtensionSettingDeviceEnum.ExtensionSettingDevice.UNRECOGNIZED : result;
@@ -510,7 +529,7 @@ private static final long serialVersionUID = 0L;
 
       if (extensionFeedItemsBuilder_ == null) {
         extensionFeedItems_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000004);
+        bitField0_ = (bitField0_ & ~0x00000001);
       } else {
         extensionFeedItemsBuilder_.clear();
       }
@@ -543,20 +562,18 @@ private static final long serialVersionUID = 0L;
     public com.google.ads.googleads.v2.resources.CustomerExtensionSetting buildPartial() {
       com.google.ads.googleads.v2.resources.CustomerExtensionSetting result = new com.google.ads.googleads.v2.resources.CustomerExtensionSetting(this);
       int from_bitField0_ = bitField0_;
-      int to_bitField0_ = 0;
       result.resourceName_ = resourceName_;
       result.extensionType_ = extensionType_;
       if (extensionFeedItemsBuilder_ == null) {
-        if (((bitField0_ & 0x00000004) != 0)) {
+        if (((bitField0_ & 0x00000001) != 0)) {
           extensionFeedItems_ = java.util.Collections.unmodifiableList(extensionFeedItems_);
-          bitField0_ = (bitField0_ & ~0x00000004);
+          bitField0_ = (bitField0_ & ~0x00000001);
         }
         result.extensionFeedItems_ = extensionFeedItems_;
       } else {
         result.extensionFeedItems_ = extensionFeedItemsBuilder_.build();
       }
       result.device_ = device_;
-      result.bitField0_ = to_bitField0_;
       onBuilt();
       return result;
     }
@@ -616,7 +633,7 @@ private static final long serialVersionUID = 0L;
         if (!other.extensionFeedItems_.isEmpty()) {
           if (extensionFeedItems_.isEmpty()) {
             extensionFeedItems_ = other.extensionFeedItems_;
-            bitField0_ = (bitField0_ & ~0x00000004);
+            bitField0_ = (bitField0_ & ~0x00000001);
           } else {
             ensureExtensionFeedItemsIsMutable();
             extensionFeedItems_.addAll(other.extensionFeedItems_);
@@ -629,7 +646,7 @@ private static final long serialVersionUID = 0L;
             extensionFeedItemsBuilder_.dispose();
             extensionFeedItemsBuilder_ = null;
             extensionFeedItems_ = other.extensionFeedItems_;
-            bitField0_ = (bitField0_ & ~0x00000004);
+            bitField0_ = (bitField0_ & ~0x00000001);
             extensionFeedItemsBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getExtensionFeedItemsFieldBuilder() : null;
@@ -674,12 +691,13 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object resourceName_ = "";
     /**
      * <pre>
-     * The resource name of the customer extension setting.
+     * Immutable. The resource name of the customer extension setting.
      * CustomerExtensionSetting resource names have the form:
      * `customers/{customer_id}/customerExtensionSettings/{extension_type}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * @return The resourceName.
      */
     public java.lang.String getResourceName() {
       java.lang.Object ref = resourceName_;
@@ -695,12 +713,13 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the customer extension setting.
+     * Immutable. The resource name of the customer extension setting.
      * CustomerExtensionSetting resource names have the form:
      * `customers/{customer_id}/customerExtensionSettings/{extension_type}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * @return The bytes for resourceName.
      */
     public com.google.protobuf.ByteString
         getResourceNameBytes() {
@@ -717,12 +736,14 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the customer extension setting.
+     * Immutable. The resource name of the customer extension setting.
      * CustomerExtensionSetting resource names have the form:
      * `customers/{customer_id}/customerExtensionSettings/{extension_type}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * @param value The resourceName to set.
+     * @return This builder for chaining.
      */
     public Builder setResourceName(
         java.lang.String value) {
@@ -736,12 +757,13 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the customer extension setting.
+     * Immutable. The resource name of the customer extension setting.
      * CustomerExtensionSetting resource names have the form:
      * `customers/{customer_id}/customerExtensionSettings/{extension_type}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * @return This builder for chaining.
      */
     public Builder clearResourceName() {
       
@@ -751,12 +773,14 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the customer extension setting.
+     * Immutable. The resource name of the customer extension setting.
      * CustomerExtensionSetting resource names have the form:
      * `customers/{customer_id}/customerExtensionSettings/{extension_type}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * @param value The bytes for resourceName to set.
+     * @return This builder for chaining.
      */
     public Builder setResourceNameBytes(
         com.google.protobuf.ByteString value) {
@@ -773,33 +797,39 @@ private static final long serialVersionUID = 0L;
     private int extensionType_ = 0;
     /**
      * <pre>
-     * The extension type of the customer extension setting.
+     * Immutable. The extension type of the customer extension setting.
      * </pre>
      *
-     * <code>.google.ads.googleads.v2.enums.ExtensionTypeEnum.ExtensionType extension_type = 2;</code>
+     * <code>.google.ads.googleads.v2.enums.ExtensionTypeEnum.ExtensionType extension_type = 2 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * @return The enum numeric value on the wire for extensionType.
      */
-    public int getExtensionTypeValue() {
+    @java.lang.Override public int getExtensionTypeValue() {
       return extensionType_;
     }
     /**
      * <pre>
-     * The extension type of the customer extension setting.
+     * Immutable. The extension type of the customer extension setting.
      * </pre>
      *
-     * <code>.google.ads.googleads.v2.enums.ExtensionTypeEnum.ExtensionType extension_type = 2;</code>
+     * <code>.google.ads.googleads.v2.enums.ExtensionTypeEnum.ExtensionType extension_type = 2 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * @param value The enum numeric value on the wire for extensionType to set.
+     * @return This builder for chaining.
      */
     public Builder setExtensionTypeValue(int value) {
+      
       extensionType_ = value;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * The extension type of the customer extension setting.
+     * Immutable. The extension type of the customer extension setting.
      * </pre>
      *
-     * <code>.google.ads.googleads.v2.enums.ExtensionTypeEnum.ExtensionType extension_type = 2;</code>
+     * <code>.google.ads.googleads.v2.enums.ExtensionTypeEnum.ExtensionType extension_type = 2 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * @return The extensionType.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v2.enums.ExtensionTypeEnum.ExtensionType getExtensionType() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v2.enums.ExtensionTypeEnum.ExtensionType result = com.google.ads.googleads.v2.enums.ExtensionTypeEnum.ExtensionType.valueOf(extensionType_);
@@ -807,10 +837,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The extension type of the customer extension setting.
+     * Immutable. The extension type of the customer extension setting.
      * </pre>
      *
-     * <code>.google.ads.googleads.v2.enums.ExtensionTypeEnum.ExtensionType extension_type = 2;</code>
+     * <code>.google.ads.googleads.v2.enums.ExtensionTypeEnum.ExtensionType extension_type = 2 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * @param value The extensionType to set.
+     * @return This builder for chaining.
      */
     public Builder setExtensionType(com.google.ads.googleads.v2.enums.ExtensionTypeEnum.ExtensionType value) {
       if (value == null) {
@@ -823,10 +855,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The extension type of the customer extension setting.
+     * Immutable. The extension type of the customer extension setting.
      * </pre>
      *
-     * <code>.google.ads.googleads.v2.enums.ExtensionTypeEnum.ExtensionType extension_type = 2;</code>
+     * <code>.google.ads.googleads.v2.enums.ExtensionTypeEnum.ExtensionType extension_type = 2 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * @return This builder for chaining.
      */
     public Builder clearExtensionType() {
       
@@ -838,9 +871,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.google.protobuf.StringValue> extensionFeedItems_ =
       java.util.Collections.emptyList();
     private void ensureExtensionFeedItemsIsMutable() {
-      if (!((bitField0_ & 0x00000004) != 0)) {
+      if (!((bitField0_ & 0x00000001) != 0)) {
         extensionFeedItems_ = new java.util.ArrayList<com.google.protobuf.StringValue>(extensionFeedItems_);
-        bitField0_ |= 0x00000004;
+        bitField0_ |= 0x00000001;
        }
     }
 
@@ -854,7 +887,7 @@ private static final long serialVersionUID = 0L;
      * `customers/{customer_id}/extensionFeedItems/{feed_item_id}`
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue extension_feed_items = 3;</code>
+     * <code>repeated .google.protobuf.StringValue extension_feed_items = 3 [(.google.api.resource_reference) = { ... }</code>
      */
     public java.util.List<com.google.protobuf.StringValue> getExtensionFeedItemsList() {
       if (extensionFeedItemsBuilder_ == null) {
@@ -870,7 +903,7 @@ private static final long serialVersionUID = 0L;
      * `customers/{customer_id}/extensionFeedItems/{feed_item_id}`
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue extension_feed_items = 3;</code>
+     * <code>repeated .google.protobuf.StringValue extension_feed_items = 3 [(.google.api.resource_reference) = { ... }</code>
      */
     public int getExtensionFeedItemsCount() {
       if (extensionFeedItemsBuilder_ == null) {
@@ -886,7 +919,7 @@ private static final long serialVersionUID = 0L;
      * `customers/{customer_id}/extensionFeedItems/{feed_item_id}`
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue extension_feed_items = 3;</code>
+     * <code>repeated .google.protobuf.StringValue extension_feed_items = 3 [(.google.api.resource_reference) = { ... }</code>
      */
     public com.google.protobuf.StringValue getExtensionFeedItems(int index) {
       if (extensionFeedItemsBuilder_ == null) {
@@ -902,7 +935,7 @@ private static final long serialVersionUID = 0L;
      * `customers/{customer_id}/extensionFeedItems/{feed_item_id}`
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue extension_feed_items = 3;</code>
+     * <code>repeated .google.protobuf.StringValue extension_feed_items = 3 [(.google.api.resource_reference) = { ... }</code>
      */
     public Builder setExtensionFeedItems(
         int index, com.google.protobuf.StringValue value) {
@@ -925,7 +958,7 @@ private static final long serialVersionUID = 0L;
      * `customers/{customer_id}/extensionFeedItems/{feed_item_id}`
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue extension_feed_items = 3;</code>
+     * <code>repeated .google.protobuf.StringValue extension_feed_items = 3 [(.google.api.resource_reference) = { ... }</code>
      */
     public Builder setExtensionFeedItems(
         int index, com.google.protobuf.StringValue.Builder builderForValue) {
@@ -945,7 +978,7 @@ private static final long serialVersionUID = 0L;
      * `customers/{customer_id}/extensionFeedItems/{feed_item_id}`
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue extension_feed_items = 3;</code>
+     * <code>repeated .google.protobuf.StringValue extension_feed_items = 3 [(.google.api.resource_reference) = { ... }</code>
      */
     public Builder addExtensionFeedItems(com.google.protobuf.StringValue value) {
       if (extensionFeedItemsBuilder_ == null) {
@@ -967,7 +1000,7 @@ private static final long serialVersionUID = 0L;
      * `customers/{customer_id}/extensionFeedItems/{feed_item_id}`
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue extension_feed_items = 3;</code>
+     * <code>repeated .google.protobuf.StringValue extension_feed_items = 3 [(.google.api.resource_reference) = { ... }</code>
      */
     public Builder addExtensionFeedItems(
         int index, com.google.protobuf.StringValue value) {
@@ -990,7 +1023,7 @@ private static final long serialVersionUID = 0L;
      * `customers/{customer_id}/extensionFeedItems/{feed_item_id}`
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue extension_feed_items = 3;</code>
+     * <code>repeated .google.protobuf.StringValue extension_feed_items = 3 [(.google.api.resource_reference) = { ... }</code>
      */
     public Builder addExtensionFeedItems(
         com.google.protobuf.StringValue.Builder builderForValue) {
@@ -1010,7 +1043,7 @@ private static final long serialVersionUID = 0L;
      * `customers/{customer_id}/extensionFeedItems/{feed_item_id}`
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue extension_feed_items = 3;</code>
+     * <code>repeated .google.protobuf.StringValue extension_feed_items = 3 [(.google.api.resource_reference) = { ... }</code>
      */
     public Builder addExtensionFeedItems(
         int index, com.google.protobuf.StringValue.Builder builderForValue) {
@@ -1030,7 +1063,7 @@ private static final long serialVersionUID = 0L;
      * `customers/{customer_id}/extensionFeedItems/{feed_item_id}`
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue extension_feed_items = 3;</code>
+     * <code>repeated .google.protobuf.StringValue extension_feed_items = 3 [(.google.api.resource_reference) = { ... }</code>
      */
     public Builder addAllExtensionFeedItems(
         java.lang.Iterable<? extends com.google.protobuf.StringValue> values) {
@@ -1051,12 +1084,12 @@ private static final long serialVersionUID = 0L;
      * `customers/{customer_id}/extensionFeedItems/{feed_item_id}`
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue extension_feed_items = 3;</code>
+     * <code>repeated .google.protobuf.StringValue extension_feed_items = 3 [(.google.api.resource_reference) = { ... }</code>
      */
     public Builder clearExtensionFeedItems() {
       if (extensionFeedItemsBuilder_ == null) {
         extensionFeedItems_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000004);
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
       } else {
         extensionFeedItemsBuilder_.clear();
@@ -1070,7 +1103,7 @@ private static final long serialVersionUID = 0L;
      * `customers/{customer_id}/extensionFeedItems/{feed_item_id}`
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue extension_feed_items = 3;</code>
+     * <code>repeated .google.protobuf.StringValue extension_feed_items = 3 [(.google.api.resource_reference) = { ... }</code>
      */
     public Builder removeExtensionFeedItems(int index) {
       if (extensionFeedItemsBuilder_ == null) {
@@ -1089,7 +1122,7 @@ private static final long serialVersionUID = 0L;
      * `customers/{customer_id}/extensionFeedItems/{feed_item_id}`
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue extension_feed_items = 3;</code>
+     * <code>repeated .google.protobuf.StringValue extension_feed_items = 3 [(.google.api.resource_reference) = { ... }</code>
      */
     public com.google.protobuf.StringValue.Builder getExtensionFeedItemsBuilder(
         int index) {
@@ -1102,7 +1135,7 @@ private static final long serialVersionUID = 0L;
      * `customers/{customer_id}/extensionFeedItems/{feed_item_id}`
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue extension_feed_items = 3;</code>
+     * <code>repeated .google.protobuf.StringValue extension_feed_items = 3 [(.google.api.resource_reference) = { ... }</code>
      */
     public com.google.protobuf.StringValueOrBuilder getExtensionFeedItemsOrBuilder(
         int index) {
@@ -1118,7 +1151,7 @@ private static final long serialVersionUID = 0L;
      * `customers/{customer_id}/extensionFeedItems/{feed_item_id}`
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue extension_feed_items = 3;</code>
+     * <code>repeated .google.protobuf.StringValue extension_feed_items = 3 [(.google.api.resource_reference) = { ... }</code>
      */
     public java.util.List<? extends com.google.protobuf.StringValueOrBuilder> 
          getExtensionFeedItemsOrBuilderList() {
@@ -1135,7 +1168,7 @@ private static final long serialVersionUID = 0L;
      * `customers/{customer_id}/extensionFeedItems/{feed_item_id}`
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue extension_feed_items = 3;</code>
+     * <code>repeated .google.protobuf.StringValue extension_feed_items = 3 [(.google.api.resource_reference) = { ... }</code>
      */
     public com.google.protobuf.StringValue.Builder addExtensionFeedItemsBuilder() {
       return getExtensionFeedItemsFieldBuilder().addBuilder(
@@ -1148,7 +1181,7 @@ private static final long serialVersionUID = 0L;
      * `customers/{customer_id}/extensionFeedItems/{feed_item_id}`
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue extension_feed_items = 3;</code>
+     * <code>repeated .google.protobuf.StringValue extension_feed_items = 3 [(.google.api.resource_reference) = { ... }</code>
      */
     public com.google.protobuf.StringValue.Builder addExtensionFeedItemsBuilder(
         int index) {
@@ -1162,7 +1195,7 @@ private static final long serialVersionUID = 0L;
      * `customers/{customer_id}/extensionFeedItems/{feed_item_id}`
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue extension_feed_items = 3;</code>
+     * <code>repeated .google.protobuf.StringValue extension_feed_items = 3 [(.google.api.resource_reference) = { ... }</code>
      */
     public java.util.List<com.google.protobuf.StringValue.Builder> 
          getExtensionFeedItemsBuilderList() {
@@ -1175,7 +1208,7 @@ private static final long serialVersionUID = 0L;
         extensionFeedItemsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
                 extensionFeedItems_,
-                ((bitField0_ & 0x00000004) != 0),
+                ((bitField0_ & 0x00000001) != 0),
                 getParentForChildren(),
                 isClean());
         extensionFeedItems_ = null;
@@ -1190,8 +1223,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.enums.ExtensionSettingDeviceEnum.ExtensionSettingDevice device = 4;</code>
+     * @return The enum numeric value on the wire for device.
      */
-    public int getDeviceValue() {
+    @java.lang.Override public int getDeviceValue() {
       return device_;
     }
     /**
@@ -1200,8 +1234,11 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.enums.ExtensionSettingDeviceEnum.ExtensionSettingDevice device = 4;</code>
+     * @param value The enum numeric value on the wire for device to set.
+     * @return This builder for chaining.
      */
     public Builder setDeviceValue(int value) {
+      
       device_ = value;
       onChanged();
       return this;
@@ -1212,7 +1249,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.enums.ExtensionSettingDeviceEnum.ExtensionSettingDevice device = 4;</code>
+     * @return The device.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v2.enums.ExtensionSettingDeviceEnum.ExtensionSettingDevice getDevice() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v2.enums.ExtensionSettingDeviceEnum.ExtensionSettingDevice result = com.google.ads.googleads.v2.enums.ExtensionSettingDeviceEnum.ExtensionSettingDevice.valueOf(device_);
@@ -1224,6 +1263,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.enums.ExtensionSettingDeviceEnum.ExtensionSettingDevice device = 4;</code>
+     * @param value The device to set.
+     * @return This builder for chaining.
      */
     public Builder setDevice(com.google.ads.googleads.v2.enums.ExtensionSettingDeviceEnum.ExtensionSettingDevice value) {
       if (value == null) {
@@ -1240,6 +1281,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.enums.ExtensionSettingDeviceEnum.ExtensionSettingDevice device = 4;</code>
+     * @return This builder for chaining.
      */
     public Builder clearDevice() {
       

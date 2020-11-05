@@ -11,7 +11,7 @@ package com.google.ads.googleads.v3.services;
  *
  * Protobuf type {@code google.ads.googleads.v3.services.AddOfflineUserDataJobOperationsRequest}
  */
-public  final class AddOfflineUserDataJobOperationsRequest extends
+public final class AddOfflineUserDataJobOperationsRequest extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v3.services.AddOfflineUserDataJobOperationsRequest)
     AddOfflineUserDataJobOperationsRequestOrBuilder {
@@ -23,6 +23,13 @@ private static final long serialVersionUID = 0L;
   private AddOfflineUserDataJobOperationsRequest() {
     resourceName_ = "";
     operations_ = java.util.Collections.emptyList();
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new AddOfflineUserDataJobOperationsRequest();
   }
 
   @java.lang.Override
@@ -69,9 +76,9 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 26: {
-            if (!((mutable_bitField0_ & 0x00000004) != 0)) {
+            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
               operations_ = new java.util.ArrayList<com.google.ads.googleads.v3.services.OfflineUserDataJobOperation>();
-              mutable_bitField0_ |= 0x00000004;
+              mutable_bitField0_ |= 0x00000001;
             }
             operations_.add(
                 input.readMessage(com.google.ads.googleads.v3.services.OfflineUserDataJobOperation.parser(), extensionRegistry));
@@ -92,7 +99,7 @@ private static final long serialVersionUID = 0L;
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
     } finally {
-      if (((mutable_bitField0_ & 0x00000004) != 0)) {
+      if (((mutable_bitField0_ & 0x00000001) != 0)) {
         operations_ = java.util.Collections.unmodifiableList(operations_);
       }
       this.unknownFields = unknownFields.build();
@@ -112,7 +119,6 @@ private static final long serialVersionUID = 0L;
             com.google.ads.googleads.v3.services.AddOfflineUserDataJobOperationsRequest.class, com.google.ads.googleads.v3.services.AddOfflineUserDataJobOperationsRequest.Builder.class);
   }
 
-  private int bitField0_;
   public static final int RESOURCE_NAME_FIELD_NUMBER = 1;
   private volatile java.lang.Object resourceName_;
   /**
@@ -121,7 +127,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string resource_name = 1 [(.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = { ... }</code>
+   * @return The resourceName.
    */
+  @java.lang.Override
   public java.lang.String getResourceName() {
     java.lang.Object ref = resourceName_;
     if (ref instanceof java.lang.String) {
@@ -140,7 +148,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string resource_name = 1 [(.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = { ... }</code>
+   * @return The bytes for resourceName.
    */
+  @java.lang.Override
   public com.google.protobuf.ByteString
       getResourceNameBytes() {
     java.lang.Object ref = resourceName_;
@@ -163,7 +173,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.BoolValue enable_partial_failure = 2;</code>
+   * @return Whether the enablePartialFailure field is set.
    */
+  @java.lang.Override
   public boolean hasEnablePartialFailure() {
     return enablePartialFailure_ != null;
   }
@@ -173,7 +185,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.BoolValue enable_partial_failure = 2;</code>
+   * @return The enablePartialFailure.
    */
+  @java.lang.Override
   public com.google.protobuf.BoolValue getEnablePartialFailure() {
     return enablePartialFailure_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : enablePartialFailure_;
   }
@@ -184,6 +198,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.BoolValue enable_partial_failure = 2;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.BoolValueOrBuilder getEnablePartialFailureOrBuilder() {
     return getEnablePartialFailure();
   }
@@ -197,6 +212,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v3.services.OfflineUserDataJobOperation operations = 3 [(.google.api.field_behavior) = REQUIRED];</code>
    */
+  @java.lang.Override
   public java.util.List<com.google.ads.googleads.v3.services.OfflineUserDataJobOperation> getOperationsList() {
     return operations_;
   }
@@ -207,6 +223,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v3.services.OfflineUserDataJobOperation operations = 3 [(.google.api.field_behavior) = REQUIRED];</code>
    */
+  @java.lang.Override
   public java.util.List<? extends com.google.ads.googleads.v3.services.OfflineUserDataJobOperationOrBuilder> 
       getOperationsOrBuilderList() {
     return operations_;
@@ -218,6 +235,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v3.services.OfflineUserDataJobOperation operations = 3 [(.google.api.field_behavior) = REQUIRED];</code>
    */
+  @java.lang.Override
   public int getOperationsCount() {
     return operations_.size();
   }
@@ -228,6 +246,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v3.services.OfflineUserDataJobOperation operations = 3 [(.google.api.field_behavior) = REQUIRED];</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.services.OfflineUserDataJobOperation getOperations(int index) {
     return operations_.get(index);
   }
@@ -238,6 +257,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v3.services.OfflineUserDataJobOperation operations = 3 [(.google.api.field_behavior) = REQUIRED];</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.services.OfflineUserDataJobOperationOrBuilder getOperationsOrBuilder(
       int index) {
     return operations_.get(index);
@@ -480,7 +500,7 @@ private static final long serialVersionUID = 0L;
       }
       if (operationsBuilder_ == null) {
         operations_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000004);
+        bitField0_ = (bitField0_ & ~0x00000001);
       } else {
         operationsBuilder_.clear();
       }
@@ -511,7 +531,6 @@ private static final long serialVersionUID = 0L;
     public com.google.ads.googleads.v3.services.AddOfflineUserDataJobOperationsRequest buildPartial() {
       com.google.ads.googleads.v3.services.AddOfflineUserDataJobOperationsRequest result = new com.google.ads.googleads.v3.services.AddOfflineUserDataJobOperationsRequest(this);
       int from_bitField0_ = bitField0_;
-      int to_bitField0_ = 0;
       result.resourceName_ = resourceName_;
       if (enablePartialFailureBuilder_ == null) {
         result.enablePartialFailure_ = enablePartialFailure_;
@@ -519,15 +538,14 @@ private static final long serialVersionUID = 0L;
         result.enablePartialFailure_ = enablePartialFailureBuilder_.build();
       }
       if (operationsBuilder_ == null) {
-        if (((bitField0_ & 0x00000004) != 0)) {
+        if (((bitField0_ & 0x00000001) != 0)) {
           operations_ = java.util.Collections.unmodifiableList(operations_);
-          bitField0_ = (bitField0_ & ~0x00000004);
+          bitField0_ = (bitField0_ & ~0x00000001);
         }
         result.operations_ = operations_;
       } else {
         result.operations_ = operationsBuilder_.build();
       }
-      result.bitField0_ = to_bitField0_;
       onBuilt();
       return result;
     }
@@ -587,7 +605,7 @@ private static final long serialVersionUID = 0L;
         if (!other.operations_.isEmpty()) {
           if (operations_.isEmpty()) {
             operations_ = other.operations_;
-            bitField0_ = (bitField0_ & ~0x00000004);
+            bitField0_ = (bitField0_ & ~0x00000001);
           } else {
             ensureOperationsIsMutable();
             operations_.addAll(other.operations_);
@@ -600,7 +618,7 @@ private static final long serialVersionUID = 0L;
             operationsBuilder_.dispose();
             operationsBuilder_ = null;
             operations_ = other.operations_;
-            bitField0_ = (bitField0_ & ~0x00000004);
+            bitField0_ = (bitField0_ & ~0x00000001);
             operationsBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getOperationsFieldBuilder() : null;
@@ -646,6 +664,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string resource_name = 1 [(.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = { ... }</code>
+     * @return The resourceName.
      */
     public java.lang.String getResourceName() {
       java.lang.Object ref = resourceName_;
@@ -665,6 +684,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string resource_name = 1 [(.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = { ... }</code>
+     * @return The bytes for resourceName.
      */
     public com.google.protobuf.ByteString
         getResourceNameBytes() {
@@ -685,6 +705,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string resource_name = 1 [(.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = { ... }</code>
+     * @param value The resourceName to set.
+     * @return This builder for chaining.
      */
     public Builder setResourceName(
         java.lang.String value) {
@@ -702,6 +724,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string resource_name = 1 [(.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = { ... }</code>
+     * @return This builder for chaining.
      */
     public Builder clearResourceName() {
       
@@ -715,6 +738,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string resource_name = 1 [(.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = { ... }</code>
+     * @param value The bytes for resourceName to set.
+     * @return This builder for chaining.
      */
     public Builder setResourceNameBytes(
         com.google.protobuf.ByteString value) {
@@ -737,6 +762,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.BoolValue enable_partial_failure = 2;</code>
+     * @return Whether the enablePartialFailure field is set.
      */
     public boolean hasEnablePartialFailure() {
       return enablePartialFailureBuilder_ != null || enablePartialFailure_ != null;
@@ -747,6 +773,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.BoolValue enable_partial_failure = 2;</code>
+     * @return The enablePartialFailure.
      */
     public com.google.protobuf.BoolValue getEnablePartialFailure() {
       if (enablePartialFailureBuilder_ == null) {
@@ -884,9 +911,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.google.ads.googleads.v3.services.OfflineUserDataJobOperation> operations_ =
       java.util.Collections.emptyList();
     private void ensureOperationsIsMutable() {
-      if (!((bitField0_ & 0x00000004) != 0)) {
+      if (!((bitField0_ & 0x00000001) != 0)) {
         operations_ = new java.util.ArrayList<com.google.ads.googleads.v3.services.OfflineUserDataJobOperation>(operations_);
-        bitField0_ |= 0x00000004;
+        bitField0_ |= 0x00000001;
        }
     }
 
@@ -1080,7 +1107,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearOperations() {
       if (operationsBuilder_ == null) {
         operations_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000004);
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
       } else {
         operationsBuilder_.clear();
@@ -1185,7 +1212,7 @@ private static final long serialVersionUID = 0L;
         operationsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.google.ads.googleads.v3.services.OfflineUserDataJobOperation, com.google.ads.googleads.v3.services.OfflineUserDataJobOperation.Builder, com.google.ads.googleads.v3.services.OfflineUserDataJobOperationOrBuilder>(
                 operations_,
-                ((bitField0_ & 0x00000004) != 0),
+                ((bitField0_ & 0x00000001) != 0),
                 getParentForChildren(),
                 isClean());
         operations_ = null;

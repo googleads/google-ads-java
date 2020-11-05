@@ -14,6 +14,7 @@ public interface ListPlannableProductsRequestOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue plannable_location_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+   * @return Whether the plannableLocationId field is set.
    */
   boolean hasPlannableLocationId();
   /**
@@ -23,6 +24,7 @@ public interface ListPlannableProductsRequestOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue plannable_location_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+   * @return The plannableLocationId.
    */
   com.google.protobuf.StringValue getPlannableLocationId();
   /**

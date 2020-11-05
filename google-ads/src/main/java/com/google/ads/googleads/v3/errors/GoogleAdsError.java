@@ -10,7 +10,7 @@ package com.google.ads.googleads.v3.errors;
  *
  * Protobuf type {@code google.ads.googleads.v3.errors.GoogleAdsError}
  */
-public  final class GoogleAdsError extends
+public final class GoogleAdsError extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v3.errors.GoogleAdsError)
     GoogleAdsErrorOrBuilder {
@@ -21,6 +21,13 @@ private static final long serialVersionUID = 0L;
   }
   private GoogleAdsError() {
     message_ = "";
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new GoogleAdsError();
   }
 
   @java.lang.Override
@@ -36,7 +43,6 @@ private static final long serialVersionUID = 0L;
     if (extensionRegistry == null) {
       throw new java.lang.NullPointerException();
     }
-    int mutable_bitField0_ = 0;
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
         com.google.protobuf.UnknownFieldSet.newBuilder();
     try {
@@ -145,7 +151,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.ErrorCode error_code = 1;</code>
+   * @return Whether the errorCode field is set.
    */
+  @java.lang.Override
   public boolean hasErrorCode() {
     return errorCode_ != null;
   }
@@ -155,7 +163,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.ErrorCode error_code = 1;</code>
+   * @return The errorCode.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.errors.ErrorCode getErrorCode() {
     return errorCode_ == null ? com.google.ads.googleads.v3.errors.ErrorCode.getDefaultInstance() : errorCode_;
   }
@@ -166,6 +176,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v3.errors.ErrorCode error_code = 1;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.errors.ErrorCodeOrBuilder getErrorCodeOrBuilder() {
     return getErrorCode();
   }
@@ -178,7 +189,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string message = 2;</code>
+   * @return The message.
    */
+  @java.lang.Override
   public java.lang.String getMessage() {
     java.lang.Object ref = message_;
     if (ref instanceof java.lang.String) {
@@ -197,7 +210,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string message = 2;</code>
+   * @return The bytes for message.
    */
+  @java.lang.Override
   public com.google.protobuf.ByteString
       getMessageBytes() {
     java.lang.Object ref = message_;
@@ -220,7 +235,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.Value trigger = 3;</code>
+   * @return Whether the trigger field is set.
    */
+  @java.lang.Override
   public boolean hasTrigger() {
     return trigger_ != null;
   }
@@ -230,7 +247,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.Value trigger = 3;</code>
+   * @return The trigger.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.common.Value getTrigger() {
     return trigger_ == null ? com.google.ads.googleads.v3.common.Value.getDefaultInstance() : trigger_;
   }
@@ -241,6 +260,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v3.common.Value trigger = 3;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.common.ValueOrBuilder getTriggerOrBuilder() {
     return getTrigger();
   }
@@ -253,7 +273,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.ErrorLocation location = 4;</code>
+   * @return Whether the location field is set.
    */
+  @java.lang.Override
   public boolean hasLocation() {
     return location_ != null;
   }
@@ -263,7 +285,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.ErrorLocation location = 4;</code>
+   * @return The location.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.errors.ErrorLocation getLocation() {
     return location_ == null ? com.google.ads.googleads.v3.errors.ErrorLocation.getDefaultInstance() : location_;
   }
@@ -274,6 +298,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v3.errors.ErrorLocation location = 4;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.errors.ErrorLocationOrBuilder getLocationOrBuilder() {
     return getLocation();
   }
@@ -287,7 +312,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.ErrorDetails details = 5;</code>
+   * @return Whether the details field is set.
    */
+  @java.lang.Override
   public boolean hasDetails() {
     return details_ != null;
   }
@@ -298,7 +325,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.ErrorDetails details = 5;</code>
+   * @return The details.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.errors.ErrorDetails getDetails() {
     return details_ == null ? com.google.ads.googleads.v3.errors.ErrorDetails.getDefaultInstance() : details_;
   }
@@ -310,6 +339,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v3.errors.ErrorDetails details = 5;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.errors.ErrorDetailsOrBuilder getDetailsOrBuilder() {
     return getDetails();
   }
@@ -749,6 +779,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.ErrorCode error_code = 1;</code>
+     * @return Whether the errorCode field is set.
      */
     public boolean hasErrorCode() {
       return errorCodeBuilder_ != null || errorCode_ != null;
@@ -759,6 +790,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.ErrorCode error_code = 1;</code>
+     * @return The errorCode.
      */
     public com.google.ads.googleads.v3.errors.ErrorCode getErrorCode() {
       if (errorCodeBuilder_ == null) {
@@ -900,6 +932,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string message = 2;</code>
+     * @return The message.
      */
     public java.lang.String getMessage() {
       java.lang.Object ref = message_;
@@ -919,6 +952,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string message = 2;</code>
+     * @return The bytes for message.
      */
     public com.google.protobuf.ByteString
         getMessageBytes() {
@@ -939,6 +973,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string message = 2;</code>
+     * @param value The message to set.
+     * @return This builder for chaining.
      */
     public Builder setMessage(
         java.lang.String value) {
@@ -956,6 +992,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string message = 2;</code>
+     * @return This builder for chaining.
      */
     public Builder clearMessage() {
       
@@ -969,6 +1006,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string message = 2;</code>
+     * @param value The bytes for message to set.
+     * @return This builder for chaining.
      */
     public Builder setMessageBytes(
         com.google.protobuf.ByteString value) {
@@ -991,6 +1030,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.common.Value trigger = 3;</code>
+     * @return Whether the trigger field is set.
      */
     public boolean hasTrigger() {
       return triggerBuilder_ != null || trigger_ != null;
@@ -1001,6 +1041,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.common.Value trigger = 3;</code>
+     * @return The trigger.
      */
     public com.google.ads.googleads.v3.common.Value getTrigger() {
       if (triggerBuilder_ == null) {
@@ -1144,6 +1185,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.ErrorLocation location = 4;</code>
+     * @return Whether the location field is set.
      */
     public boolean hasLocation() {
       return locationBuilder_ != null || location_ != null;
@@ -1154,6 +1196,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.ErrorLocation location = 4;</code>
+     * @return The location.
      */
     public com.google.ads.googleads.v3.errors.ErrorLocation getLocation() {
       if (locationBuilder_ == null) {
@@ -1298,6 +1341,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.ErrorDetails details = 5;</code>
+     * @return Whether the details field is set.
      */
     public boolean hasDetails() {
       return detailsBuilder_ != null || details_ != null;
@@ -1309,6 +1353,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.errors.ErrorDetails details = 5;</code>
+     * @return The details.
      */
     public com.google.ads.googleads.v3.errors.ErrorDetails getDetails() {
       if (detailsBuilder_ == null) {

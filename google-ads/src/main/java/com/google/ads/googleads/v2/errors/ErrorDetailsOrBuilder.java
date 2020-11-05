@@ -10,19 +10,21 @@ public interface ErrorDetailsOrBuilder extends
   /**
    * <pre>
    * The error code that should have been returned, but wasn't. This is used
-   * when the error code is InternalError.ERROR_CODE_NOT_PUBLISHED.
+   * when the error code is not published in the client specified version.
    * </pre>
    *
    * <code>string unpublished_error_code = 1;</code>
+   * @return The unpublishedErrorCode.
    */
   java.lang.String getUnpublishedErrorCode();
   /**
    * <pre>
    * The error code that should have been returned, but wasn't. This is used
-   * when the error code is InternalError.ERROR_CODE_NOT_PUBLISHED.
+   * when the error code is not published in the client specified version.
    * </pre>
    *
    * <code>string unpublished_error_code = 1;</code>
+   * @return The bytes for unpublishedErrorCode.
    */
   com.google.protobuf.ByteString
       getUnpublishedErrorCodeBytes();
@@ -33,6 +35,7 @@ public interface ErrorDetailsOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.errors.PolicyViolationDetails policy_violation_details = 2;</code>
+   * @return Whether the policyViolationDetails field is set.
    */
   boolean hasPolicyViolationDetails();
   /**
@@ -41,6 +44,7 @@ public interface ErrorDetailsOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.errors.PolicyViolationDetails policy_violation_details = 2;</code>
+   * @return The policyViolationDetails.
    */
   com.google.ads.googleads.v2.errors.PolicyViolationDetails getPolicyViolationDetails();
   /**
@@ -58,6 +62,7 @@ public interface ErrorDetailsOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.errors.PolicyFindingDetails policy_finding_details = 3;</code>
+   * @return Whether the policyFindingDetails field is set.
    */
   boolean hasPolicyFindingDetails();
   /**
@@ -66,6 +71,7 @@ public interface ErrorDetailsOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.errors.PolicyFindingDetails policy_finding_details = 3;</code>
+   * @return The policyFindingDetails.
    */
   com.google.ads.googleads.v2.errors.PolicyFindingDetails getPolicyFindingDetails();
   /**

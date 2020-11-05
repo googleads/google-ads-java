@@ -14,6 +14,7 @@ public interface ProductMetadataOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue plannable_product_code = 1;</code>
+   * @return Whether the plannableProductCode field is set.
    */
   boolean hasPlannableProductCode();
   /**
@@ -23,6 +24,7 @@ public interface ProductMetadataOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue plannable_product_code = 1;</code>
+   * @return The plannableProductCode.
    */
   com.google.protobuf.StringValue getPlannableProductCode();
   /**
@@ -41,6 +43,7 @@ public interface ProductMetadataOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.services.PlannableTargeting plannable_targeting = 2;</code>
+   * @return Whether the plannableTargeting field is set.
    */
   boolean hasPlannableTargeting();
   /**
@@ -49,6 +52,7 @@ public interface ProductMetadataOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.services.PlannableTargeting plannable_targeting = 2;</code>
+   * @return The plannableTargeting.
    */
   com.google.ads.googleads.v3.services.PlannableTargeting getPlannableTargeting();
   /**

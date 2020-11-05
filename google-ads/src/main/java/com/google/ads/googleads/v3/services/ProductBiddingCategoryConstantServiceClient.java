@@ -1,5 +1,5 @@
 /*
- * Copyright 2019 Google LLC
+ * Copyright 2020 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -21,7 +21,6 @@ import com.google.ads.googleads.v3.services.stub.ProductBiddingCategoryConstantS
 import com.google.api.core.BetaApi;
 import com.google.api.gax.core.BackgroundResource;
 import com.google.api.gax.rpc.UnaryCallable;
-import com.google.api.pathtemplate.PathTemplate;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 import javax.annotation.Generated;
@@ -36,8 +35,8 @@ import javax.annotation.Generated;
  * <pre>
  * <code>
  * try (ProductBiddingCategoryConstantServiceClient productBiddingCategoryConstantServiceClient = ProductBiddingCategoryConstantServiceClient.create()) {
- *   String formattedResourceName = ProductBiddingCategoryConstantServiceClient.formatProductBiddingCategoryConstantName("[PRODUCT_BIDDING_CATEGORY_CONSTANT]");
- *   ProductBiddingCategoryConstant response = productBiddingCategoryConstantServiceClient.getProductBiddingCategoryConstant(formattedResourceName);
+ *   ProductBiddingCategoryConstantName resourceName = ProductBiddingCategoryConstantName.of("[PRODUCT_BIDDING_CATEGORY_CONSTANT]");
+ *   ProductBiddingCategoryConstant response = productBiddingCategoryConstantServiceClient.getProductBiddingCategoryConstant(resourceName);
  * }
  * </code>
  * </pre>
@@ -98,38 +97,6 @@ import javax.annotation.Generated;
 public class ProductBiddingCategoryConstantServiceClient implements BackgroundResource {
   private final ProductBiddingCategoryConstantServiceSettings settings;
   private final ProductBiddingCategoryConstantServiceStub stub;
-
-  private static final PathTemplate PRODUCT_BIDDING_CATEGORY_CONSTANT_PATH_TEMPLATE =
-      PathTemplate.createWithoutUrlEncoding(
-          "productBiddingCategoryConstants/{product_bidding_category_constant}");
-
-  /**
-   * Formats a string containing the fully-qualified path to represent a
-   * product_bidding_category_constant resource.
-   *
-   * @deprecated Use the {@link ProductBiddingCategoryConstantName} class instead.
-   */
-  @Deprecated
-  public static final String formatProductBiddingCategoryConstantName(
-      String productBiddingCategoryConstant) {
-    return PRODUCT_BIDDING_CATEGORY_CONSTANT_PATH_TEMPLATE.instantiate(
-        "product_bidding_category_constant", productBiddingCategoryConstant);
-  }
-
-  /**
-   * Parses the product_bidding_category_constant from the given fully-qualified path which
-   * represents a product_bidding_category_constant resource.
-   *
-   * @deprecated Use the {@link ProductBiddingCategoryConstantName} class instead.
-   */
-  @Deprecated
-  public static final String
-      parseProductBiddingCategoryConstantFromProductBiddingCategoryConstantName(
-          String productBiddingCategoryConstantName) {
-    return PRODUCT_BIDDING_CATEGORY_CONSTANT_PATH_TEMPLATE
-        .parse(productBiddingCategoryConstantName)
-        .get("product_bidding_category_constant");
-  }
 
   /**
    * Constructs an instance of ProductBiddingCategoryConstantServiceClient with default settings.
@@ -196,8 +163,33 @@ public class ProductBiddingCategoryConstantServiceClient implements BackgroundRe
    *
    * <pre><code>
    * try (ProductBiddingCategoryConstantServiceClient productBiddingCategoryConstantServiceClient = ProductBiddingCategoryConstantServiceClient.create()) {
-   *   String formattedResourceName = ProductBiddingCategoryConstantServiceClient.formatProductBiddingCategoryConstantName("[PRODUCT_BIDDING_CATEGORY_CONSTANT]");
-   *   ProductBiddingCategoryConstant response = productBiddingCategoryConstantServiceClient.getProductBiddingCategoryConstant(formattedResourceName);
+   *   ProductBiddingCategoryConstantName resourceName = ProductBiddingCategoryConstantName.of("[PRODUCT_BIDDING_CATEGORY_CONSTANT]");
+   *   ProductBiddingCategoryConstant response = productBiddingCategoryConstantServiceClient.getProductBiddingCategoryConstant(resourceName);
+   * }
+   * </code></pre>
+   *
+   * @param resourceName Required. Resource name of the Product Bidding Category to fetch.
+   * @throws com.google.api.gax.rpc.ApiException if the remote call fails
+   */
+  public final ProductBiddingCategoryConstant getProductBiddingCategoryConstant(
+      ProductBiddingCategoryConstantName resourceName) {
+    GetProductBiddingCategoryConstantRequest request =
+        GetProductBiddingCategoryConstantRequest.newBuilder()
+            .setResourceName(resourceName == null ? null : resourceName.toString())
+            .build();
+    return getProductBiddingCategoryConstant(request);
+  }
+
+  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  /**
+   * Returns the requested Product Bidding Category in full detail.
+   *
+   * <p>Sample code:
+   *
+   * <pre><code>
+   * try (ProductBiddingCategoryConstantServiceClient productBiddingCategoryConstantServiceClient = ProductBiddingCategoryConstantServiceClient.create()) {
+   *   ProductBiddingCategoryConstantName resourceName = ProductBiddingCategoryConstantName.of("[PRODUCT_BIDDING_CATEGORY_CONSTANT]");
+   *   ProductBiddingCategoryConstant response = productBiddingCategoryConstantServiceClient.getProductBiddingCategoryConstant(resourceName.toString());
    * }
    * </code></pre>
    *
@@ -206,8 +198,6 @@ public class ProductBiddingCategoryConstantServiceClient implements BackgroundRe
    */
   public final ProductBiddingCategoryConstant getProductBiddingCategoryConstant(
       String resourceName) {
-    PRODUCT_BIDDING_CATEGORY_CONSTANT_PATH_TEMPLATE.validate(
-        resourceName, "getProductBiddingCategoryConstant");
     GetProductBiddingCategoryConstantRequest request =
         GetProductBiddingCategoryConstantRequest.newBuilder().setResourceName(resourceName).build();
     return getProductBiddingCategoryConstant(request);
@@ -221,9 +211,9 @@ public class ProductBiddingCategoryConstantServiceClient implements BackgroundRe
    *
    * <pre><code>
    * try (ProductBiddingCategoryConstantServiceClient productBiddingCategoryConstantServiceClient = ProductBiddingCategoryConstantServiceClient.create()) {
-   *   String formattedResourceName = ProductBiddingCategoryConstantServiceClient.formatProductBiddingCategoryConstantName("[PRODUCT_BIDDING_CATEGORY_CONSTANT]");
+   *   ProductBiddingCategoryConstantName resourceName = ProductBiddingCategoryConstantName.of("[PRODUCT_BIDDING_CATEGORY_CONSTANT]");
    *   GetProductBiddingCategoryConstantRequest request = GetProductBiddingCategoryConstantRequest.newBuilder()
-   *     .setResourceName(formattedResourceName)
+   *     .setResourceName(resourceName.toString())
    *     .build();
    *   ProductBiddingCategoryConstant response = productBiddingCategoryConstantServiceClient.getProductBiddingCategoryConstant(request);
    * }
@@ -245,9 +235,9 @@ public class ProductBiddingCategoryConstantServiceClient implements BackgroundRe
    *
    * <pre><code>
    * try (ProductBiddingCategoryConstantServiceClient productBiddingCategoryConstantServiceClient = ProductBiddingCategoryConstantServiceClient.create()) {
-   *   String formattedResourceName = ProductBiddingCategoryConstantServiceClient.formatProductBiddingCategoryConstantName("[PRODUCT_BIDDING_CATEGORY_CONSTANT]");
+   *   ProductBiddingCategoryConstantName resourceName = ProductBiddingCategoryConstantName.of("[PRODUCT_BIDDING_CATEGORY_CONSTANT]");
    *   GetProductBiddingCategoryConstantRequest request = GetProductBiddingCategoryConstantRequest.newBuilder()
-   *     .setResourceName(formattedResourceName)
+   *     .setResourceName(resourceName.toString())
    *     .build();
    *   ApiFuture&lt;ProductBiddingCategoryConstant&gt; future = productBiddingCategoryConstantServiceClient.getProductBiddingCategoryConstantCallable().futureCall(request);
    *   // Do something

@@ -10,7 +10,7 @@ package com.google.ads.googleads.v3.resources;
  *
  * Protobuf type {@code google.ads.googleads.v3.resources.CurrencyConstant}
  */
-public  final class CurrencyConstant extends
+public final class CurrencyConstant extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v3.resources.CurrencyConstant)
     CurrencyConstantOrBuilder {
@@ -21,6 +21,13 @@ private static final long serialVersionUID = 0L;
   }
   private CurrencyConstant() {
     resourceName_ = "";
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new CurrencyConstant();
   }
 
   @java.lang.Override
@@ -36,7 +43,6 @@ private static final long serialVersionUID = 0L;
     if (extensionRegistry == null) {
       throw new java.lang.NullPointerException();
     }
-    int mutable_bitField0_ = 0;
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
         com.google.protobuf.UnknownFieldSet.newBuilder();
     try {
@@ -147,7 +153,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The resourceName.
    */
+  @java.lang.Override
   public java.lang.String getResourceName() {
     java.lang.Object ref = resourceName_;
     if (ref instanceof java.lang.String) {
@@ -168,7 +176,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The bytes for resourceName.
    */
+  @java.lang.Override
   public com.google.protobuf.ByteString
       getResourceNameBytes() {
     java.lang.Object ref = resourceName_;
@@ -191,7 +201,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue code = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the code field is set.
    */
+  @java.lang.Override
   public boolean hasCode() {
     return code_ != null;
   }
@@ -201,7 +213,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue code = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The code.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getCode() {
     return code_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : code_;
   }
@@ -212,6 +226,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue code = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getCodeOrBuilder() {
     return getCode();
   }
@@ -224,7 +239,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue name = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the name field is set.
    */
+  @java.lang.Override
   public boolean hasName() {
     return name_ != null;
   }
@@ -234,7 +251,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue name = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The name.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getName() {
     return name_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : name_;
   }
@@ -245,6 +264,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue name = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getNameOrBuilder() {
     return getName();
   }
@@ -257,7 +277,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue symbol = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the symbol field is set.
    */
+  @java.lang.Override
   public boolean hasSymbol() {
     return symbol_ != null;
   }
@@ -267,7 +289,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue symbol = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The symbol.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getSymbol() {
     return symbol_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : symbol_;
   }
@@ -278,6 +302,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue symbol = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getSymbolOrBuilder() {
     return getSymbol();
   }
@@ -291,7 +316,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Int64Value billable_unit_micros = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the billableUnitMicros field is set.
    */
+  @java.lang.Override
   public boolean hasBillableUnitMicros() {
     return billableUnitMicros_ != null;
   }
@@ -302,7 +329,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Int64Value billable_unit_micros = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The billableUnitMicros.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getBillableUnitMicros() {
     return billableUnitMicros_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : billableUnitMicros_;
   }
@@ -314,6 +343,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int64Value billable_unit_micros = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getBillableUnitMicrosOrBuilder() {
     return getBillableUnitMicros();
   }
@@ -753,6 +783,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @return The resourceName.
      */
     public java.lang.String getResourceName() {
       java.lang.Object ref = resourceName_;
@@ -774,6 +805,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @return The bytes for resourceName.
      */
     public com.google.protobuf.ByteString
         getResourceNameBytes() {
@@ -796,6 +828,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @param value The resourceName to set.
+     * @return This builder for chaining.
      */
     public Builder setResourceName(
         java.lang.String value) {
@@ -815,6 +849,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @return This builder for chaining.
      */
     public Builder clearResourceName() {
       
@@ -830,6 +865,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @param value The bytes for resourceName to set.
+     * @return This builder for chaining.
      */
     public Builder setResourceNameBytes(
         com.google.protobuf.ByteString value) {
@@ -852,6 +889,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue code = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the code field is set.
      */
     public boolean hasCode() {
       return codeBuilder_ != null || code_ != null;
@@ -862,6 +900,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue code = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The code.
      */
     public com.google.protobuf.StringValue getCode() {
       if (codeBuilder_ == null) {
@@ -1005,6 +1044,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue name = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the name field is set.
      */
     public boolean hasName() {
       return nameBuilder_ != null || name_ != null;
@@ -1015,6 +1055,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue name = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The name.
      */
     public com.google.protobuf.StringValue getName() {
       if (nameBuilder_ == null) {
@@ -1158,6 +1199,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue symbol = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the symbol field is set.
      */
     public boolean hasSymbol() {
       return symbolBuilder_ != null || symbol_ != null;
@@ -1168,6 +1210,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue symbol = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The symbol.
      */
     public com.google.protobuf.StringValue getSymbol() {
       if (symbolBuilder_ == null) {
@@ -1312,6 +1355,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value billable_unit_micros = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the billableUnitMicros field is set.
      */
     public boolean hasBillableUnitMicros() {
       return billableUnitMicrosBuilder_ != null || billableUnitMicros_ != null;
@@ -1323,6 +1367,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value billable_unit_micros = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The billableUnitMicros.
      */
     public com.google.protobuf.Int64Value getBillableUnitMicros() {
       if (billableUnitMicrosBuilder_ == null) {

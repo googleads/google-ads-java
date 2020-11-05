@@ -10,7 +10,7 @@ package com.google.ads.googleads.v3.common;
  *
  * Protobuf type {@code google.ads.googleads.v3.common.WebpageInfo}
  */
-public  final class WebpageInfo extends
+public final class WebpageInfo extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v3.common.WebpageInfo)
     WebpageInfoOrBuilder {
@@ -21,6 +21,13 @@ private static final long serialVersionUID = 0L;
   }
   private WebpageInfo() {
     conditions_ = java.util.Collections.emptyList();
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new WebpageInfo();
   }
 
   @java.lang.Override
@@ -61,9 +68,9 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 18: {
-            if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
               conditions_ = new java.util.ArrayList<com.google.ads.googleads.v3.common.WebpageConditionInfo>();
-              mutable_bitField0_ |= 0x00000002;
+              mutable_bitField0_ |= 0x00000001;
             }
             conditions_.add(
                 input.readMessage(com.google.ads.googleads.v3.common.WebpageConditionInfo.parser(), extensionRegistry));
@@ -84,7 +91,7 @@ private static final long serialVersionUID = 0L;
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
     } finally {
-      if (((mutable_bitField0_ & 0x00000002) != 0)) {
+      if (((mutable_bitField0_ & 0x00000001) != 0)) {
         conditions_ = java.util.Collections.unmodifiableList(conditions_);
       }
       this.unknownFields = unknownFields.build();
@@ -104,7 +111,6 @@ private static final long serialVersionUID = 0L;
             com.google.ads.googleads.v3.common.WebpageInfo.class, com.google.ads.googleads.v3.common.WebpageInfo.Builder.class);
   }
 
-  private int bitField0_;
   public static final int CRITERION_NAME_FIELD_NUMBER = 1;
   private com.google.protobuf.StringValue criterionName_;
   /**
@@ -117,7 +123,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue criterion_name = 1;</code>
+   * @return Whether the criterionName field is set.
    */
+  @java.lang.Override
   public boolean hasCriterionName() {
     return criterionName_ != null;
   }
@@ -131,7 +139,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue criterion_name = 1;</code>
+   * @return The criterionName.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getCriterionName() {
     return criterionName_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : criterionName_;
   }
@@ -146,6 +156,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue criterion_name = 1;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getCriterionNameOrBuilder() {
     return getCriterionName();
   }
@@ -163,6 +174,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v3.common.WebpageConditionInfo conditions = 2;</code>
    */
+  @java.lang.Override
   public java.util.List<com.google.ads.googleads.v3.common.WebpageConditionInfo> getConditionsList() {
     return conditions_;
   }
@@ -177,6 +189,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v3.common.WebpageConditionInfo conditions = 2;</code>
    */
+  @java.lang.Override
   public java.util.List<? extends com.google.ads.googleads.v3.common.WebpageConditionInfoOrBuilder> 
       getConditionsOrBuilderList() {
     return conditions_;
@@ -192,6 +205,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v3.common.WebpageConditionInfo conditions = 2;</code>
    */
+  @java.lang.Override
   public int getConditionsCount() {
     return conditions_.size();
   }
@@ -206,6 +220,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v3.common.WebpageConditionInfo conditions = 2;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.common.WebpageConditionInfo getConditions(int index) {
     return conditions_.get(index);
   }
@@ -220,6 +235,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v3.common.WebpageConditionInfo conditions = 2;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.common.WebpageConditionInfoOrBuilder getConditionsOrBuilder(
       int index) {
     return conditions_.get(index);
@@ -449,7 +465,7 @@ private static final long serialVersionUID = 0L;
       }
       if (conditionsBuilder_ == null) {
         conditions_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000001);
       } else {
         conditionsBuilder_.clear();
       }
@@ -480,22 +496,20 @@ private static final long serialVersionUID = 0L;
     public com.google.ads.googleads.v3.common.WebpageInfo buildPartial() {
       com.google.ads.googleads.v3.common.WebpageInfo result = new com.google.ads.googleads.v3.common.WebpageInfo(this);
       int from_bitField0_ = bitField0_;
-      int to_bitField0_ = 0;
       if (criterionNameBuilder_ == null) {
         result.criterionName_ = criterionName_;
       } else {
         result.criterionName_ = criterionNameBuilder_.build();
       }
       if (conditionsBuilder_ == null) {
-        if (((bitField0_ & 0x00000002) != 0)) {
+        if (((bitField0_ & 0x00000001) != 0)) {
           conditions_ = java.util.Collections.unmodifiableList(conditions_);
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000001);
         }
         result.conditions_ = conditions_;
       } else {
         result.conditions_ = conditionsBuilder_.build();
       }
-      result.bitField0_ = to_bitField0_;
       onBuilt();
       return result;
     }
@@ -551,7 +565,7 @@ private static final long serialVersionUID = 0L;
         if (!other.conditions_.isEmpty()) {
           if (conditions_.isEmpty()) {
             conditions_ = other.conditions_;
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000001);
           } else {
             ensureConditionsIsMutable();
             conditions_.addAll(other.conditions_);
@@ -564,7 +578,7 @@ private static final long serialVersionUID = 0L;
             conditionsBuilder_.dispose();
             conditionsBuilder_ = null;
             conditions_ = other.conditions_;
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000001);
             conditionsBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getConditionsFieldBuilder() : null;
@@ -616,6 +630,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue criterion_name = 1;</code>
+     * @return Whether the criterionName field is set.
      */
     public boolean hasCriterionName() {
       return criterionNameBuilder_ != null || criterionName_ != null;
@@ -630,6 +645,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue criterion_name = 1;</code>
+     * @return The criterionName.
      */
     public com.google.protobuf.StringValue getCriterionName() {
       if (criterionNameBuilder_ == null) {
@@ -795,9 +811,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.google.ads.googleads.v3.common.WebpageConditionInfo> conditions_ =
       java.util.Collections.emptyList();
     private void ensureConditionsIsMutable() {
-      if (!((bitField0_ & 0x00000002) != 0)) {
+      if (!((bitField0_ & 0x00000001) != 0)) {
         conditions_ = new java.util.ArrayList<com.google.ads.googleads.v3.common.WebpageConditionInfo>(conditions_);
-        bitField0_ |= 0x00000002;
+        bitField0_ |= 0x00000001;
        }
     }
 
@@ -1035,7 +1051,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearConditions() {
       if (conditionsBuilder_ == null) {
         conditions_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
       } else {
         conditionsBuilder_.clear();
@@ -1168,7 +1184,7 @@ private static final long serialVersionUID = 0L;
         conditionsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.google.ads.googleads.v3.common.WebpageConditionInfo, com.google.ads.googleads.v3.common.WebpageConditionInfo.Builder, com.google.ads.googleads.v3.common.WebpageConditionInfoOrBuilder>(
                 conditions_,
-                ((bitField0_ & 0x00000002) != 0),
+                ((bitField0_ & 0x00000001) != 0),
                 getParentForChildren(),
                 isClean());
         conditions_ = null;

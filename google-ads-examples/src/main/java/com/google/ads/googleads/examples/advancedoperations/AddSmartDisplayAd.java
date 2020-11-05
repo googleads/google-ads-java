@@ -18,46 +18,43 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.v3.common.AdImageAsset;
-import com.google.ads.googleads.v3.common.AdTextAsset;
-import com.google.ads.googleads.v3.common.ImageAsset;
-import com.google.ads.googleads.v3.common.ResponsiveDisplayAdInfo;
-import com.google.ads.googleads.v3.common.TargetCpa;
-import com.google.ads.googleads.v3.enums.AdGroupAdStatusEnum.AdGroupAdStatus;
-import com.google.ads.googleads.v3.enums.AdGroupStatusEnum.AdGroupStatus;
-import com.google.ads.googleads.v3.enums.AdvertisingChannelSubTypeEnum.AdvertisingChannelSubType;
-import com.google.ads.googleads.v3.enums.AdvertisingChannelTypeEnum.AdvertisingChannelType;
-import com.google.ads.googleads.v3.enums.AssetTypeEnum.AssetType;
-import com.google.ads.googleads.v3.enums.BudgetDeliveryMethodEnum.BudgetDeliveryMethod;
-import com.google.ads.googleads.v3.errors.GoogleAdsError;
-import com.google.ads.googleads.v3.errors.GoogleAdsException;
-import com.google.ads.googleads.v3.resources.Ad;
-import com.google.ads.googleads.v3.resources.AdGroup;
-import com.google.ads.googleads.v3.resources.AdGroupAd;
-import com.google.ads.googleads.v3.resources.Asset;
-import com.google.ads.googleads.v3.resources.Campaign;
-import com.google.ads.googleads.v3.resources.CampaignBudget;
-import com.google.ads.googleads.v3.services.AdGroupAdOperation;
-import com.google.ads.googleads.v3.services.AdGroupAdServiceClient;
-import com.google.ads.googleads.v3.services.AdGroupOperation;
-import com.google.ads.googleads.v3.services.AdGroupServiceClient;
-import com.google.ads.googleads.v3.services.AssetOperation;
-import com.google.ads.googleads.v3.services.AssetServiceClient;
-import com.google.ads.googleads.v3.services.CampaignBudgetOperation;
-import com.google.ads.googleads.v3.services.CampaignBudgetServiceClient;
-import com.google.ads.googleads.v3.services.CampaignOperation;
-import com.google.ads.googleads.v3.services.CampaignServiceClient;
-import com.google.ads.googleads.v3.services.MutateAdGroupAdsResponse;
-import com.google.ads.googleads.v3.services.MutateAdGroupsResponse;
-import com.google.ads.googleads.v3.services.MutateAssetsResponse;
-import com.google.ads.googleads.v3.services.MutateCampaignBudgetsResponse;
-import com.google.ads.googleads.v3.services.MutateCampaignsResponse;
+import com.google.ads.googleads.v5.common.AdImageAsset;
+import com.google.ads.googleads.v5.common.AdTextAsset;
+import com.google.ads.googleads.v5.common.ImageAsset;
+import com.google.ads.googleads.v5.common.ResponsiveDisplayAdInfo;
+import com.google.ads.googleads.v5.common.TargetCpa;
+import com.google.ads.googleads.v5.enums.AdGroupAdStatusEnum.AdGroupAdStatus;
+import com.google.ads.googleads.v5.enums.AdGroupStatusEnum.AdGroupStatus;
+import com.google.ads.googleads.v5.enums.AdvertisingChannelSubTypeEnum.AdvertisingChannelSubType;
+import com.google.ads.googleads.v5.enums.AdvertisingChannelTypeEnum.AdvertisingChannelType;
+import com.google.ads.googleads.v5.enums.AssetTypeEnum.AssetType;
+import com.google.ads.googleads.v5.enums.BudgetDeliveryMethodEnum.BudgetDeliveryMethod;
+import com.google.ads.googleads.v5.errors.GoogleAdsError;
+import com.google.ads.googleads.v5.errors.GoogleAdsException;
+import com.google.ads.googleads.v5.resources.Ad;
+import com.google.ads.googleads.v5.resources.AdGroup;
+import com.google.ads.googleads.v5.resources.AdGroupAd;
+import com.google.ads.googleads.v5.resources.Asset;
+import com.google.ads.googleads.v5.resources.Campaign;
+import com.google.ads.googleads.v5.resources.CampaignBudget;
+import com.google.ads.googleads.v5.services.AdGroupAdOperation;
+import com.google.ads.googleads.v5.services.AdGroupAdServiceClient;
+import com.google.ads.googleads.v5.services.AdGroupOperation;
+import com.google.ads.googleads.v5.services.AdGroupServiceClient;
+import com.google.ads.googleads.v5.services.AssetOperation;
+import com.google.ads.googleads.v5.services.AssetServiceClient;
+import com.google.ads.googleads.v5.services.CampaignBudgetOperation;
+import com.google.ads.googleads.v5.services.CampaignBudgetServiceClient;
+import com.google.ads.googleads.v5.services.CampaignOperation;
+import com.google.ads.googleads.v5.services.CampaignServiceClient;
+import com.google.ads.googleads.v5.services.MutateAdGroupAdsResponse;
+import com.google.ads.googleads.v5.services.MutateAdGroupsResponse;
+import com.google.ads.googleads.v5.services.MutateAssetsResponse;
+import com.google.ads.googleads.v5.services.MutateCampaignBudgetsResponse;
+import com.google.ads.googleads.v5.services.MutateCampaignsResponse;
 import com.google.common.collect.ImmutableList;
 import com.google.common.io.ByteStreams;
 import com.google.protobuf.ByteString;
-import com.google.protobuf.BytesValue;
-import com.google.protobuf.Int64Value;
-import com.google.protobuf.StringValue;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.net.URL;
@@ -109,16 +106,16 @@ public class AddSmartDisplayAd {
       params.squareMarketingImageAssetResourceName = null;
     }
 
-    GoogleAdsClient googleAdsClient;
+    GoogleAdsClient googleAdsClient = null;
     try {
       googleAdsClient = GoogleAdsClient.newBuilder().fromPropertiesFile().build();
     } catch (FileNotFoundException fnfe) {
       System.err.printf(
           "Failed to load GoogleAdsClient configuration from file. Exception: %s%n", fnfe);
-      return;
+      System.exit(1);
     } catch (IOException ioe) {
       System.err.printf("Failed to create GoogleAdsClient. Exception: %s%n", ioe);
-      return;
+      System.exit(1);
     }
 
     try {
@@ -140,6 +137,7 @@ public class AddSmartDisplayAd {
       for (GoogleAdsError googleAdsError : gae.getGoogleAdsFailure().getErrorsList()) {
         System.err.printf("  Error %d: %s%n", i++, googleAdsError);
       }
+      System.exit(1);
     }
   }
 
@@ -181,8 +179,8 @@ public class AddSmartDisplayAd {
     // Creates the budget.
     CampaignBudget campaignBudget =
         CampaignBudget.newBuilder()
-            .setName(StringValue.of("Interplanetary Cruise Budget #" + System.currentTimeMillis()))
-            .setAmountMicros(Int64Value.of(5_000_000))
+            .setName("Interplanetary Cruise Budget #" + System.currentTimeMillis())
+            .setAmountMicros(5_000_000)
             .setDeliveryMethod(BudgetDeliveryMethod.STANDARD)
             .build();
 
@@ -217,20 +215,19 @@ public class AddSmartDisplayAd {
     // Creates the campaign.
     Campaign campaign =
         Campaign.newBuilder()
-            .setName(StringValue.of("Smart Display Campaign #" + System.currentTimeMillis()))
+            .setName("Smart Display Campaign #" + System.currentTimeMillis())
             // Smart Display campaign requires the advertising channel type as 'DISPLAY'.
             .setAdvertisingChannelType(AdvertisingChannelType.DISPLAY)
             // Smart Display campaign requires the advertising channel sub type as
             // 'DISPLAY_SMART_CAMPAIGN'.
             .setAdvertisingChannelSubType(AdvertisingChannelSubType.DISPLAY_SMART_CAMPAIGN)
             // Smart Display campaign requires the TargetCpa bidding strategy.
-            .setTargetCpa(
-                TargetCpa.newBuilder().setTargetCpaMicros(Int64Value.of(5_000_000)).build())
-            .setCampaignBudget(StringValue.of(budgetResourceName))
+            .setTargetCpa(TargetCpa.newBuilder().setTargetCpaMicros(5_000_000).build())
+            .setCampaignBudget(budgetResourceName)
             // Optional: Sets the start and end dates for the campaign, beginning one day from
             // now and ending a month from now.
-            .setStartDate(StringValue.of(new DateTime().plusDays(1).toString("yyyyMMdd")))
-            .setEndDate(StringValue.of(new DateTime().plusMonths(1).toString("yyyyMMdd")))
+            .setStartDate(new DateTime().plusDays(1).toString("yyyyMMdd"))
+            .setEndDate(new DateTime().plusMonths(1).toString("yyyyMMdd"))
             .build();
 
     // Creates the operation.
@@ -265,8 +262,8 @@ public class AddSmartDisplayAd {
     // Creates the ad group.
     AdGroup adGroup =
         AdGroup.newBuilder()
-            .setName(StringValue.of("Earth to Mars Cruises #" + System.currentTimeMillis()))
-            .setCampaign(StringValue.of(campaignResourceName))
+            .setName("Earth to Mars Cruises #" + System.currentTimeMillis())
+            .setCampaign(campaignResourceName)
             .setStatus(AdGroupStatus.PAUSED)
             .build();
 
@@ -320,31 +317,29 @@ public class AddSmartDisplayAd {
     ResponsiveDisplayAdInfo responsiveDisplayAdInfo =
         ResponsiveDisplayAdInfo.newBuilder()
             // Sets some basic required information for the responsive display ad.
-            .addHeadlines(AdTextAsset.newBuilder().setText(StringValue.of("Travel")))
-            .setLongHeadline(AdTextAsset.newBuilder().setText(StringValue.of("Travel the World")))
-            .addDescriptions(AdTextAsset.newBuilder().setText(StringValue.of("Take to the air!")))
-            .setBusinessName(StringValue.of("Google"))
+            .addHeadlines(AdTextAsset.newBuilder().setText("Travel"))
+            .setLongHeadline(AdTextAsset.newBuilder().setText("Travel the World"))
+            .addDescriptions(AdTextAsset.newBuilder().setText("Take to the air!"))
+            .setBusinessName("Google")
             // Sets the marketing image and square marketing image to the previously created image
             // assets.
-            .addMarketingImages(
-                AdImageAsset.newBuilder().setAsset(StringValue.of(marketingImageAssetResourceName)))
+            .addMarketingImages(AdImageAsset.newBuilder().setAsset(marketingImageAssetResourceName))
             .addSquareMarketingImages(
-                AdImageAsset.newBuilder()
-                    .setAsset(StringValue.of(squareMarketingImageAssetResourceName)))
+                AdImageAsset.newBuilder().setAsset(squareMarketingImageAssetResourceName))
             // Optional: Sets call to action text, price prefix, and promotion text.
-            .setCallToActionText(StringValue.of("Shop Now"))
-            .setPricePrefix(StringValue.of("as low as"))
-            .setPromoText(StringValue.of("Free shipping!"))
+            .setCallToActionText("Shop Now")
+            .setPricePrefix("as low as")
+            .setPromoText("Free shipping!")
             .build();
 
     // Creates an ad group ad with the created responsive display ad info.
     AdGroupAd adGroupAd =
         AdGroupAd.newBuilder()
-            .setAdGroup(StringValue.of(adGroupResourceName))
+            .setAdGroup(adGroupResourceName)
             .setStatus(AdGroupAdStatus.PAUSED)
             .setAd(
                 Ad.newBuilder()
-                    .addFinalUrls(StringValue.of("https://www.example.com"))
+                    .addFinalUrls("https://www.example.com")
                     .setResponsiveDisplayAd(responsiveDisplayAdInfo))
             .build();
 
@@ -380,12 +375,9 @@ public class AddSmartDisplayAd {
     byte[] assetBytes = ByteStreams.toByteArray(new URL(imageUrl).openStream());
     Asset asset =
         Asset.newBuilder()
-            .setName(StringValue.of(imageName))
+            .setName(imageName)
             .setType(AssetType.IMAGE)
-            .setImageAsset(
-                ImageAsset.newBuilder()
-                    .setData(BytesValue.of(ByteString.copyFrom(assetBytes)))
-                    .build())
+            .setImageAsset(ImageAsset.newBuilder().setData(ByteString.copyFrom(assetBytes)).build())
             .build();
 
     // Creates an asset operation.

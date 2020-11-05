@@ -73,15 +73,7 @@ public final class GoogleAdsFieldServiceProto {
       "s\\V3\\Services\352\002$Google::Ads::GoogleAds::" +
       "V3::Servicesb\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.ads.googleads.v3.resources.GoogleAdsFieldProto.getDescriptor(),
@@ -89,7 +81,7 @@ public final class GoogleAdsFieldServiceProto {
           com.google.api.ClientProto.getDescriptor(),
           com.google.api.FieldBehaviorProto.getDescriptor(),
           com.google.api.ResourceProto.getDescriptor(),
-        }, assigner);
+        });
     internal_static_google_ads_googleads_v3_services_GetGoogleAdsFieldRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_google_ads_googleads_v3_services_GetGoogleAdsFieldRequest_fieldAccessorTable = new

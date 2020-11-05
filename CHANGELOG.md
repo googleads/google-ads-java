@@ -1,3 +1,36 @@
+9.0.0 - 2020-09-01
+------------------
+- Added support and examples for Google Ads API v5_0.
+- Switched internal catalog implementation default to use annotation processor.
+
+8.0.0 - 2020-07-31
+------------------
+- Removed v1 from the library.
+- Added example demonstrating how to add a geo target to an extension feed item.
+
+7.0.0 - 2020-07-23
+------------------
+- Generated library with a new build system. A side effect of that change is
+  that certain overloaded method signatures containing boolean flags for making
+  requests have been removed.
+
+6.0.0 - 2020-07-17
+------------------
+- Added support for Google Ads API v4_0.
+- Moved documentation. Now hosted at:
+  https://developers.google.com/google-ads/api/docs/client-libs/java.
+- Added examples demonstrating:
+  - Drafts and experiments.
+  - Parallel report download.
+  - CPC bid simulations.
+  - Programmatic library configuration.
+  - Keyword policy violation handling.
+  - Updating expanded text ads.
+- Removed vulnerable dependency on log4j 1.2.16.
+- Added support for linked-customer-id header. This is needed for an extremely
+  narrow authentication use-case. Any developer who requires this to be set
+  will be advised. It is otherwise safe to ignore.
+
 5.1.0 - 2020-05-06
 ------------------
 - Added support for Google Ads API v3_1.

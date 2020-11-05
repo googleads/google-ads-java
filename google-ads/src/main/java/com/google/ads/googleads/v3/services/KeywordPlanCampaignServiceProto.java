@@ -99,15 +99,7 @@ public final class KeywordPlanCampaignServiceProto {
       "ices\352\002$Google::Ads::GoogleAds::V3::Servi" +
       "cesb\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.ads.googleads.v3.resources.KeywordPlanCampaignProto.getDescriptor(),
@@ -117,7 +109,7 @@ public final class KeywordPlanCampaignServiceProto {
           com.google.api.ResourceProto.getDescriptor(),
           com.google.protobuf.FieldMaskProto.getDescriptor(),
           com.google.rpc.StatusProto.getDescriptor(),
-        }, assigner);
+        });
     internal_static_google_ads_googleads_v3_services_GetKeywordPlanCampaignRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_google_ads_googleads_v3_services_GetKeywordPlanCampaignRequest_fieldAccessorTable = new

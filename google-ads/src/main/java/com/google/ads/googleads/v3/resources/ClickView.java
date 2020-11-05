@@ -15,7 +15,7 @@ package com.google.ads.googleads.v3.resources;
  *
  * Protobuf type {@code google.ads.googleads.v3.resources.ClickView}
  */
-public  final class ClickView extends
+public final class ClickView extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v3.resources.ClickView)
     ClickViewOrBuilder {
@@ -26,6 +26,13 @@ private static final long serialVersionUID = 0L;
   }
   private ClickView() {
     resourceName_ = "";
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new ClickView();
   }
 
   @java.lang.Override
@@ -41,7 +48,6 @@ private static final long serialVersionUID = 0L;
     if (extensionRegistry == null) {
       throw new java.lang.NullPointerException();
     }
-    int mutable_bitField0_ = 0;
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
         com.google.protobuf.UnknownFieldSet.newBuilder();
     try {
@@ -165,7 +171,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The resourceName.
    */
+  @java.lang.Override
   public java.lang.String getResourceName() {
     java.lang.Object ref = resourceName_;
     if (ref instanceof java.lang.String) {
@@ -186,7 +194,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The bytes for resourceName.
    */
+  @java.lang.Override
   public com.google.protobuf.ByteString
       getResourceNameBytes() {
     java.lang.Object ref = resourceName_;
@@ -209,7 +219,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue gclid = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the gclid field is set.
    */
+  @java.lang.Override
   public boolean hasGclid() {
     return gclid_ != null;
   }
@@ -219,7 +231,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue gclid = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The gclid.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getGclid() {
     return gclid_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : gclid_;
   }
@@ -230,6 +244,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue gclid = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getGclidOrBuilder() {
     return getGclid();
   }
@@ -243,7 +258,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.ClickLocation area_of_interest = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the areaOfInterest field is set.
    */
+  @java.lang.Override
   public boolean hasAreaOfInterest() {
     return areaOfInterest_ != null;
   }
@@ -254,7 +271,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.ClickLocation area_of_interest = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The areaOfInterest.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.common.ClickLocation getAreaOfInterest() {
     return areaOfInterest_ == null ? com.google.ads.googleads.v3.common.ClickLocation.getDefaultInstance() : areaOfInterest_;
   }
@@ -266,6 +285,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v3.common.ClickLocation area_of_interest = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.common.ClickLocationOrBuilder getAreaOfInterestOrBuilder() {
     return getAreaOfInterest();
   }
@@ -279,7 +299,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.ClickLocation location_of_presence = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the locationOfPresence field is set.
    */
+  @java.lang.Override
   public boolean hasLocationOfPresence() {
     return locationOfPresence_ != null;
   }
@@ -290,7 +312,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.ClickLocation location_of_presence = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The locationOfPresence.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.common.ClickLocation getLocationOfPresence() {
     return locationOfPresence_ == null ? com.google.ads.googleads.v3.common.ClickLocation.getDefaultInstance() : locationOfPresence_;
   }
@@ -302,6 +326,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v3.common.ClickLocation location_of_presence = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.common.ClickLocationOrBuilder getLocationOfPresenceOrBuilder() {
     return getLocationOfPresence();
   }
@@ -314,7 +339,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Int64Value page_number = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the pageNumber field is set.
    */
+  @java.lang.Override
   public boolean hasPageNumber() {
     return pageNumber_ != null;
   }
@@ -324,7 +351,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Int64Value page_number = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The pageNumber.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getPageNumber() {
     return pageNumber_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : pageNumber_;
   }
@@ -335,6 +364,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int64Value page_number = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getPageNumberOrBuilder() {
     return getPageNumber();
   }
@@ -347,7 +377,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue ad_group_ad = 7 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return Whether the adGroupAd field is set.
    */
+  @java.lang.Override
   public boolean hasAdGroupAd() {
     return adGroupAd_ != null;
   }
@@ -357,7 +389,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue ad_group_ad = 7 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The adGroupAd.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getAdGroupAd() {
     return adGroupAd_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : adGroupAd_;
   }
@@ -368,6 +402,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue ad_group_ad = 7 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getAdGroupAdOrBuilder() {
     return getAdGroupAd();
   }
@@ -842,6 +877,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @return The resourceName.
      */
     public java.lang.String getResourceName() {
       java.lang.Object ref = resourceName_;
@@ -863,6 +899,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @return The bytes for resourceName.
      */
     public com.google.protobuf.ByteString
         getResourceNameBytes() {
@@ -885,6 +922,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @param value The resourceName to set.
+     * @return This builder for chaining.
      */
     public Builder setResourceName(
         java.lang.String value) {
@@ -904,6 +943,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @return This builder for chaining.
      */
     public Builder clearResourceName() {
       
@@ -919,6 +959,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @param value The bytes for resourceName to set.
+     * @return This builder for chaining.
      */
     public Builder setResourceNameBytes(
         com.google.protobuf.ByteString value) {
@@ -941,6 +983,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue gclid = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the gclid field is set.
      */
     public boolean hasGclid() {
       return gclidBuilder_ != null || gclid_ != null;
@@ -951,6 +994,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue gclid = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The gclid.
      */
     public com.google.protobuf.StringValue getGclid() {
       if (gclidBuilder_ == null) {
@@ -1095,6 +1139,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.common.ClickLocation area_of_interest = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the areaOfInterest field is set.
      */
     public boolean hasAreaOfInterest() {
       return areaOfInterestBuilder_ != null || areaOfInterest_ != null;
@@ -1106,6 +1151,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.common.ClickLocation area_of_interest = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The areaOfInterest.
      */
     public com.google.ads.googleads.v3.common.ClickLocation getAreaOfInterest() {
       if (areaOfInterestBuilder_ == null) {
@@ -1257,6 +1303,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.common.ClickLocation location_of_presence = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the locationOfPresence field is set.
      */
     public boolean hasLocationOfPresence() {
       return locationOfPresenceBuilder_ != null || locationOfPresence_ != null;
@@ -1268,6 +1315,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.common.ClickLocation location_of_presence = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The locationOfPresence.
      */
     public com.google.ads.googleads.v3.common.ClickLocation getLocationOfPresence() {
       if (locationOfPresenceBuilder_ == null) {
@@ -1418,6 +1466,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value page_number = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the pageNumber field is set.
      */
     public boolean hasPageNumber() {
       return pageNumberBuilder_ != null || pageNumber_ != null;
@@ -1428,6 +1477,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value page_number = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The pageNumber.
      */
     public com.google.protobuf.Int64Value getPageNumber() {
       if (pageNumberBuilder_ == null) {
@@ -1571,6 +1621,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue ad_group_ad = 7 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @return Whether the adGroupAd field is set.
      */
     public boolean hasAdGroupAd() {
       return adGroupAdBuilder_ != null || adGroupAd_ != null;
@@ -1581,6 +1632,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue ad_group_ad = 7 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @return The adGroupAd.
      */
     public com.google.protobuf.StringValue getAdGroupAd() {
       if (adGroupAdBuilder_ == null) {

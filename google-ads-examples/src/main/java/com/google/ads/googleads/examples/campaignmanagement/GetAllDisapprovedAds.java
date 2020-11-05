@@ -18,19 +18,18 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.v3.common.PolicyTopicEntry;
-import com.google.ads.googleads.v3.common.PolicyTopicEvidence;
-import com.google.ads.googleads.v3.common.PolicyTopicEvidence.TextList;
-import com.google.ads.googleads.v3.enums.PolicyApprovalStatusEnum.PolicyApprovalStatus;
-import com.google.ads.googleads.v3.errors.GoogleAdsError;
-import com.google.ads.googleads.v3.errors.GoogleAdsException;
-import com.google.ads.googleads.v3.resources.Ad;
-import com.google.ads.googleads.v3.resources.AdGroupAd;
-import com.google.ads.googleads.v3.resources.AdGroupAdPolicySummary;
-import com.google.ads.googleads.v3.services.GoogleAdsRow;
-import com.google.ads.googleads.v3.services.GoogleAdsServiceClient;
-import com.google.ads.googleads.v3.services.GoogleAdsServiceClient.SearchPagedResponse;
-import com.google.ads.googleads.v3.services.SearchGoogleAdsRequest;
+import com.google.ads.googleads.v5.common.PolicyTopicEntry;
+import com.google.ads.googleads.v5.common.PolicyTopicEvidence;
+import com.google.ads.googleads.v5.common.PolicyTopicEvidence.TextList;
+import com.google.ads.googleads.v5.errors.GoogleAdsError;
+import com.google.ads.googleads.v5.errors.GoogleAdsException;
+import com.google.ads.googleads.v5.resources.Ad;
+import com.google.ads.googleads.v5.resources.AdGroupAd;
+import com.google.ads.googleads.v5.resources.AdGroupAdPolicySummary;
+import com.google.ads.googleads.v5.services.GoogleAdsRow;
+import com.google.ads.googleads.v5.services.GoogleAdsServiceClient;
+import com.google.ads.googleads.v5.services.GoogleAdsServiceClient.SearchPagedResponse;
+import com.google.ads.googleads.v5.services.SearchGoogleAdsRequest;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
@@ -58,16 +57,16 @@ public class GetAllDisapprovedAds {
       params.campaignId = Long.parseLong("INSERT_CAMPAIGN_ID_HERE");
     }
 
-    GoogleAdsClient googleAdsClient;
+    GoogleAdsClient googleAdsClient = null;
     try {
       googleAdsClient = GoogleAdsClient.newBuilder().fromPropertiesFile().build();
     } catch (FileNotFoundException fnfe) {
       System.err.printf(
           "Failed to load GoogleAdsClient configuration from file. Exception: %s%n", fnfe);
-      return;
+      System.exit(1);
     } catch (IOException ioe) {
       System.err.printf("Failed to create GoogleAdsClient. Exception: %s%n", ioe);
-      return;
+      System.exit(1);
     }
 
     try {
@@ -84,6 +83,7 @@ public class GetAllDisapprovedAds {
       for (GoogleAdsError googleAdsError : gae.getGoogleAdsFailure().getErrorsList()) {
         System.err.printf("  Error %d: %s%n", i++, googleAdsError);
       }
+      System.exit(1);
     }
   }
 
@@ -100,11 +100,13 @@ public class GetAllDisapprovedAds {
         googleAdsClient.getLatestVersion().createGoogleAdsServiceClient()) {
       String searchQuery =
           String.format(
-              "SELECT ad_group_ad.ad.id, "
-                  + "ad_group_ad.ad.type, "
-                  + "ad_group_ad.policy_summary "
+              "SELECT ad_group_ad.ad.id,"
+                  + "ad_group_ad.ad.type,"
+                  + "ad_group_ad.policy_summary.approval_status,"
+                  + "ad_group_ad.policy_summary.policy_topic_entries "
                   + "FROM ad_group_ad "
-                  + "WHERE campaign.id = %d",
+                  + "WHERE campaign.id = %d "
+                  + "AND ad_group_ad.policy_summary.approval_status = 'DISAPPROVED'",
               campaignId);
       // Creates a request that will retrieve all ads using pages of the specified page size.
       SearchGoogleAdsRequest request =
@@ -112,11 +114,10 @@ public class GetAllDisapprovedAds {
               .setCustomerId(Long.toString(customerId))
               .setPageSize(PAGE_SIZE)
               .setQuery(searchQuery)
+              .setReturnTotalResultsCount(true)
               .build();
       // Issues the search request.
       SearchPagedResponse searchPagedResponse = googleAdsServiceClient.search(request);
-
-      int disapprovedAdsCount = 0;
 
       // Iterates over all rows in all pages and counts disapproved ads.
       for (GoogleAdsRow googleAdsRow : searchPagedResponse.iterateAll()) {
@@ -124,31 +125,26 @@ public class GetAllDisapprovedAds {
         AdGroupAdPolicySummary policySummary = adGroupAd.getPolicySummary();
         Ad ad = googleAdsRow.getAdGroupAd().getAd();
 
-        if (policySummary.getApprovalStatus() != PolicyApprovalStatus.DISAPPROVED) {
-          continue;
-        }
-
-        disapprovedAdsCount++;
-
         System.out.printf(
             "Ad with ID %d and type '%s' was disapproved with the following policy "
                 + "topic entries:%n",
-            ad.getId().getValue(), ad.getType());
+            ad.getId(), ad.getType());
         for (PolicyTopicEntry policyTopicEntry : policySummary.getPolicyTopicEntriesList()) {
           System.out.printf(
               "  topic: '%s', type: '%s'%n",
-              policyTopicEntry.getTopic().getValue(), policyTopicEntry.getType());
+              policyTopicEntry.getTopic(), policyTopicEntry.getType());
           for (PolicyTopicEvidence evidence : policyTopicEntry.getEvidencesList()) {
             TextList textList = evidence.getTextList();
             for (int i = 0; i < textList.getTextsCount(); i++) {
-              System.out.printf(
-                  "    evidence text[%d]: '%s'%n", i, textList.getTexts(i).getValue());
+              System.out.printf("    evidence text[%d]: '%s'%n", i, textList.getTexts(i));
             }
           }
         }
       }
 
-      System.out.printf("Number of disapproved ads found: %d%n", disapprovedAdsCount);
+      System.out.printf(
+          "Number of disapproved ads found: %d%n",
+          searchPagedResponse.getPage().getResponse().getTotalResultsCount());
     }
   }
 }

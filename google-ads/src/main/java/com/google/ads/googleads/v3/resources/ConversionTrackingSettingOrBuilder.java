@@ -15,6 +15,7 @@ public interface ConversionTrackingSettingOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value conversion_tracking_id = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the conversionTrackingId field is set.
    */
   boolean hasConversionTrackingId();
   /**
@@ -25,6 +26,7 @@ public interface ConversionTrackingSettingOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value conversion_tracking_id = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The conversionTrackingId.
    */
   com.google.protobuf.Int64Value getConversionTrackingId();
   /**
@@ -47,6 +49,7 @@ public interface ConversionTrackingSettingOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value cross_account_conversion_tracking_id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the crossAccountConversionTrackingId field is set.
    */
   boolean hasCrossAccountConversionTrackingId();
   /**
@@ -58,6 +61,7 @@ public interface ConversionTrackingSettingOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value cross_account_conversion_tracking_id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The crossAccountConversionTrackingId.
    */
   com.google.protobuf.Int64Value getCrossAccountConversionTrackingId();
   /**

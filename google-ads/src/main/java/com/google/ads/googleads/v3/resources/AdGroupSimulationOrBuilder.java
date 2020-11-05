@@ -15,6 +15,7 @@ public interface AdGroupSimulationOrBuilder extends
    * </pre>
    *
    * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The resourceName.
    */
   java.lang.String getResourceName();
   /**
@@ -25,6 +26,7 @@ public interface AdGroupSimulationOrBuilder extends
    * </pre>
    *
    * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The bytes for resourceName.
    */
   com.google.protobuf.ByteString
       getResourceNameBytes();
@@ -35,6 +37,7 @@ public interface AdGroupSimulationOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value ad_group_id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the adGroupId field is set.
    */
   boolean hasAdGroupId();
   /**
@@ -43,6 +46,7 @@ public interface AdGroupSimulationOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value ad_group_id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The adGroupId.
    */
   com.google.protobuf.Int64Value getAdGroupId();
   /**
@@ -60,6 +64,7 @@ public interface AdGroupSimulationOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.SimulationTypeEnum.SimulationType type = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The enum numeric value on the wire for type.
    */
   int getTypeValue();
   /**
@@ -68,6 +73,7 @@ public interface AdGroupSimulationOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.SimulationTypeEnum.SimulationType type = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The type.
    */
   com.google.ads.googleads.v3.enums.SimulationTypeEnum.SimulationType getType();
 
@@ -77,6 +83,7 @@ public interface AdGroupSimulationOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.SimulationModificationMethodEnum.SimulationModificationMethod modification_method = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The enum numeric value on the wire for modificationMethod.
    */
   int getModificationMethodValue();
   /**
@@ -85,6 +92,7 @@ public interface AdGroupSimulationOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.SimulationModificationMethodEnum.SimulationModificationMethod modification_method = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The modificationMethod.
    */
   com.google.ads.googleads.v3.enums.SimulationModificationMethodEnum.SimulationModificationMethod getModificationMethod();
 
@@ -94,6 +102,7 @@ public interface AdGroupSimulationOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue start_date = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the startDate field is set.
    */
   boolean hasStartDate();
   /**
@@ -102,6 +111,7 @@ public interface AdGroupSimulationOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue start_date = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The startDate.
    */
   com.google.protobuf.StringValue getStartDate();
   /**
@@ -119,6 +129,7 @@ public interface AdGroupSimulationOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue end_date = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the endDate field is set.
    */
   boolean hasEndDate();
   /**
@@ -127,6 +138,7 @@ public interface AdGroupSimulationOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue end_date = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The endDate.
    */
   com.google.protobuf.StringValue getEndDate();
   /**
@@ -144,6 +156,7 @@ public interface AdGroupSimulationOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.CpcBidSimulationPointList cpc_bid_point_list = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the cpcBidPointList field is set.
    */
   boolean hasCpcBidPointList();
   /**
@@ -152,6 +165,7 @@ public interface AdGroupSimulationOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.CpcBidSimulationPointList cpc_bid_point_list = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The cpcBidPointList.
    */
   com.google.ads.googleads.v3.common.CpcBidSimulationPointList getCpcBidPointList();
   /**
@@ -169,6 +183,7 @@ public interface AdGroupSimulationOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.CpvBidSimulationPointList cpv_bid_point_list = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the cpvBidPointList field is set.
    */
   boolean hasCpvBidPointList();
   /**
@@ -177,6 +192,7 @@ public interface AdGroupSimulationOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.CpvBidSimulationPointList cpv_bid_point_list = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The cpvBidPointList.
    */
   com.google.ads.googleads.v3.common.CpvBidSimulationPointList getCpvBidPointList();
   /**
@@ -194,6 +210,7 @@ public interface AdGroupSimulationOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.TargetCpaSimulationPointList target_cpa_point_list = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the targetCpaPointList field is set.
    */
   boolean hasTargetCpaPointList();
   /**
@@ -202,6 +219,7 @@ public interface AdGroupSimulationOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.TargetCpaSimulationPointList target_cpa_point_list = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The targetCpaPointList.
    */
   com.google.ads.googleads.v3.common.TargetCpaSimulationPointList getTargetCpaPointList();
   /**

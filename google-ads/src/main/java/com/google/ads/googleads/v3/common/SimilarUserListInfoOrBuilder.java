@@ -13,6 +13,7 @@ public interface SimilarUserListInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue seed_user_list = 1;</code>
+   * @return Whether the seedUserList field is set.
    */
   boolean hasSeedUserList();
   /**
@@ -21,6 +22,7 @@ public interface SimilarUserListInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue seed_user_list = 1;</code>
+   * @return The seedUserList.
    */
   com.google.protobuf.StringValue getSeedUserList();
   /**

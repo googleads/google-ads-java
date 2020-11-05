@@ -16,16 +16,17 @@ public interface MobileApplicationInfoOrBuilder extends
    * corresponding platform.
    * For iOS, this native identifier is the 9 digit string that appears at the
    * end of an App Store URL (e.g., "476943146" for "Flood-It! 2" whose App
-   * Store link is http://itunes.apple.com/us/app/flood-it!-2/id476943146).
+   * Store link is "http://itunes.apple.com/us/app/flood-it!-2/id476943146").
    * For Android, this native identifier is the application's package name
    * (e.g., "com.labpixies.colordrips" for "Color Drips" given Google Play link
-   * https://play.google.com/store/apps/details?id=com.labpixies.colordrips).
+   * "https://play.google.com/store/apps/details?id=com.labpixies.colordrips").
    * A well formed app id for Google Ads API would thus be "1-476943146" for iOS
    * and "2-com.labpixies.colordrips" for Android.
    * This field is required and must be set in CREATE operations.
    * </pre>
    *
    * <code>.google.protobuf.StringValue app_id = 2;</code>
+   * @return Whether the appId field is set.
    */
   boolean hasAppId();
   /**
@@ -37,16 +38,17 @@ public interface MobileApplicationInfoOrBuilder extends
    * corresponding platform.
    * For iOS, this native identifier is the 9 digit string that appears at the
    * end of an App Store URL (e.g., "476943146" for "Flood-It! 2" whose App
-   * Store link is http://itunes.apple.com/us/app/flood-it!-2/id476943146).
+   * Store link is "http://itunes.apple.com/us/app/flood-it!-2/id476943146").
    * For Android, this native identifier is the application's package name
    * (e.g., "com.labpixies.colordrips" for "Color Drips" given Google Play link
-   * https://play.google.com/store/apps/details?id=com.labpixies.colordrips).
+   * "https://play.google.com/store/apps/details?id=com.labpixies.colordrips").
    * A well formed app id for Google Ads API would thus be "1-476943146" for iOS
    * and "2-com.labpixies.colordrips" for Android.
    * This field is required and must be set in CREATE operations.
    * </pre>
    *
    * <code>.google.protobuf.StringValue app_id = 2;</code>
+   * @return The appId.
    */
   com.google.protobuf.StringValue getAppId();
   /**
@@ -58,10 +60,10 @@ public interface MobileApplicationInfoOrBuilder extends
    * corresponding platform.
    * For iOS, this native identifier is the 9 digit string that appears at the
    * end of an App Store URL (e.g., "476943146" for "Flood-It! 2" whose App
-   * Store link is http://itunes.apple.com/us/app/flood-it!-2/id476943146).
+   * Store link is "http://itunes.apple.com/us/app/flood-it!-2/id476943146").
    * For Android, this native identifier is the application's package name
    * (e.g., "com.labpixies.colordrips" for "Color Drips" given Google Play link
-   * https://play.google.com/store/apps/details?id=com.labpixies.colordrips).
+   * "https://play.google.com/store/apps/details?id=com.labpixies.colordrips").
    * A well formed app id for Google Ads API would thus be "1-476943146" for iOS
    * and "2-com.labpixies.colordrips" for Android.
    * This field is required and must be set in CREATE operations.
@@ -77,6 +79,7 @@ public interface MobileApplicationInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue name = 3;</code>
+   * @return Whether the name field is set.
    */
   boolean hasName();
   /**
@@ -85,6 +88,7 @@ public interface MobileApplicationInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue name = 3;</code>
+   * @return The name.
    */
   com.google.protobuf.StringValue getName();
   /**

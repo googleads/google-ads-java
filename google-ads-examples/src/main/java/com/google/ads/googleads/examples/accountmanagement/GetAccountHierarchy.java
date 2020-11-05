@@ -18,17 +18,17 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.v3.errors.GoogleAdsError;
-import com.google.ads.googleads.v3.errors.GoogleAdsException;
-import com.google.ads.googleads.v3.resources.CustomerClient;
-import com.google.ads.googleads.v3.resources.CustomerName;
-import com.google.ads.googleads.v3.services.CustomerServiceClient;
-import com.google.ads.googleads.v3.services.GoogleAdsRow;
-import com.google.ads.googleads.v3.services.GoogleAdsServiceClient;
-import com.google.ads.googleads.v3.services.GoogleAdsServiceClient.SearchPagedResponse;
-import com.google.ads.googleads.v3.services.ListAccessibleCustomersRequest;
-import com.google.ads.googleads.v3.services.ListAccessibleCustomersResponse;
-import com.google.ads.googleads.v3.services.SearchGoogleAdsRequest;
+import com.google.ads.googleads.v5.errors.GoogleAdsError;
+import com.google.ads.googleads.v5.errors.GoogleAdsException;
+import com.google.ads.googleads.v5.resources.CustomerClient;
+import com.google.ads.googleads.v5.services.CustomerName;
+import com.google.ads.googleads.v5.services.CustomerServiceClient;
+import com.google.ads.googleads.v5.services.GoogleAdsRow;
+import com.google.ads.googleads.v5.services.GoogleAdsServiceClient;
+import com.google.ads.googleads.v5.services.GoogleAdsServiceClient.SearchPagedResponse;
+import com.google.ads.googleads.v5.services.ListAccessibleCustomersRequest;
+import com.google.ads.googleads.v5.services.ListAccessibleCustomersResponse;
+import com.google.ads.googleads.v5.services.SearchGoogleAdsRequest;
 import com.google.common.base.Strings;
 import com.google.common.collect.ArrayListMultimap;
 import com.google.common.collect.Multimap;
@@ -53,7 +53,7 @@ public class GetAccountHierarchy {
 
   private static class GetAccountHierarchyParams extends CodeSampleParams {
 
-    @Parameter(names = ArgumentNames.MANAGER_ID)
+    @Parameter(names = ArgumentNames.MANAGER_CUSTOMER_ID)
     private Long managerId;
 
     @Parameter(names = ArgumentNames.LOGIN_CUSTOMER_ID)
@@ -84,16 +84,16 @@ public class GetAccountHierarchy {
       return;
     }
 
-    GoogleAdsClient googleAdsClient;
+    GoogleAdsClient googleAdsClient = null;
     try {
       googleAdsClient = GoogleAdsClient.newBuilder().fromPropertiesFile().build();
     } catch (FileNotFoundException fnfe) {
       System.err.printf(
           "Failed to load GoogleAdsClient configuration from file. Exception: %s%n", fnfe);
-      return;
+      System.exit(1);
     } catch (IOException ioe) {
       System.err.printf("Failed to create GoogleAdsClient. Exception: %s%n", ioe);
-      return;
+      System.exit(1);
     }
 
     try {
@@ -111,8 +111,10 @@ public class GetAccountHierarchy {
       for (GoogleAdsError googleAdsError : gae.getGoogleAdsFailure().getErrorsList()) {
         System.err.printf("  Error %d: %s%n", i++, googleAdsError);
       }
+      System.exit(1);
     } catch (IOException ioe) {
       System.err.printf("Request failed. Exception: %s%n", ioe);
+      System.exit(1);
     }
   }
 
@@ -259,6 +261,7 @@ public class GetAccountHierarchy {
           System.out.printf(
               "Unable to retrieve hierarchy for customer ID %d: %s%n",
               customerIdToSearchFrom, gae.getGoogleAdsFailure().getErrors(0).getMessage());
+          return null;
         }
       }
 

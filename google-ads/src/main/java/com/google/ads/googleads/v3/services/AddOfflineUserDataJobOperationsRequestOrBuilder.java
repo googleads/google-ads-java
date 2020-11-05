@@ -13,6 +13,7 @@ public interface AddOfflineUserDataJobOperationsRequestOrBuilder extends
    * </pre>
    *
    * <code>string resource_name = 1 [(.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = { ... }</code>
+   * @return The resourceName.
    */
   java.lang.String getResourceName();
   /**
@@ -21,6 +22,7 @@ public interface AddOfflineUserDataJobOperationsRequestOrBuilder extends
    * </pre>
    *
    * <code>string resource_name = 1 [(.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = { ... }</code>
+   * @return The bytes for resourceName.
    */
   com.google.protobuf.ByteString
       getResourceNameBytes();
@@ -31,6 +33,7 @@ public interface AddOfflineUserDataJobOperationsRequestOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.BoolValue enable_partial_failure = 2;</code>
+   * @return Whether the enablePartialFailure field is set.
    */
   boolean hasEnablePartialFailure();
   /**
@@ -39,6 +42,7 @@ public interface AddOfflineUserDataJobOperationsRequestOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.BoolValue enable_partial_failure = 2;</code>
+   * @return The enablePartialFailure.
    */
   com.google.protobuf.BoolValue getEnablePartialFailure();
   /**

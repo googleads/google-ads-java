@@ -21,7 +21,7 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.10.0)",
+    value = "by gRPC proto compiler",
     comments = "Source: google/ads/googleads/v3/services/shopping_performance_view_service.proto")
 public final class ShoppingPerformanceViewServiceGrpc {
 
@@ -30,49 +30,49 @@ public final class ShoppingPerformanceViewServiceGrpc {
   public static final String SERVICE_NAME = "google.ads.googleads.v3.services.ShoppingPerformanceViewService";
 
   // Static method descriptors that strictly reflect the proto.
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  @java.lang.Deprecated // Use {@link #getGetShoppingPerformanceViewMethod()} instead. 
-  public static final io.grpc.MethodDescriptor<com.google.ads.googleads.v3.services.GetShoppingPerformanceViewRequest,
-      com.google.ads.googleads.v3.resources.ShoppingPerformanceView> METHOD_GET_SHOPPING_PERFORMANCE_VIEW = getGetShoppingPerformanceViewMethodHelper();
-
   private static volatile io.grpc.MethodDescriptor<com.google.ads.googleads.v3.services.GetShoppingPerformanceViewRequest,
       com.google.ads.googleads.v3.resources.ShoppingPerformanceView> getGetShoppingPerformanceViewMethod;
 
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetShoppingPerformanceView",
+      requestType = com.google.ads.googleads.v3.services.GetShoppingPerformanceViewRequest.class,
+      responseType = com.google.ads.googleads.v3.resources.ShoppingPerformanceView.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<com.google.ads.googleads.v3.services.GetShoppingPerformanceViewRequest,
       com.google.ads.googleads.v3.resources.ShoppingPerformanceView> getGetShoppingPerformanceViewMethod() {
-    return getGetShoppingPerformanceViewMethodHelper();
-  }
-
-  private static io.grpc.MethodDescriptor<com.google.ads.googleads.v3.services.GetShoppingPerformanceViewRequest,
-      com.google.ads.googleads.v3.resources.ShoppingPerformanceView> getGetShoppingPerformanceViewMethodHelper() {
     io.grpc.MethodDescriptor<com.google.ads.googleads.v3.services.GetShoppingPerformanceViewRequest, com.google.ads.googleads.v3.resources.ShoppingPerformanceView> getGetShoppingPerformanceViewMethod;
     if ((getGetShoppingPerformanceViewMethod = ShoppingPerformanceViewServiceGrpc.getGetShoppingPerformanceViewMethod) == null) {
       synchronized (ShoppingPerformanceViewServiceGrpc.class) {
         if ((getGetShoppingPerformanceViewMethod = ShoppingPerformanceViewServiceGrpc.getGetShoppingPerformanceViewMethod) == null) {
-          ShoppingPerformanceViewServiceGrpc.getGetShoppingPerformanceViewMethod = getGetShoppingPerformanceViewMethod = 
+          ShoppingPerformanceViewServiceGrpc.getGetShoppingPerformanceViewMethod = getGetShoppingPerformanceViewMethod =
               io.grpc.MethodDescriptor.<com.google.ads.googleads.v3.services.GetShoppingPerformanceViewRequest, com.google.ads.googleads.v3.resources.ShoppingPerformanceView>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "google.ads.googleads.v3.services.ShoppingPerformanceViewService", "GetShoppingPerformanceView"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetShoppingPerformanceView"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v3.services.GetShoppingPerformanceViewRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v3.resources.ShoppingPerformanceView.getDefaultInstance()))
-                  .setSchemaDescriptor(new ShoppingPerformanceViewServiceMethodDescriptorSupplier("GetShoppingPerformanceView"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ShoppingPerformanceViewServiceMethodDescriptorSupplier("GetShoppingPerformanceView"))
+              .build();
         }
-     }
-     return getGetShoppingPerformanceViewMethod;
+      }
+    }
+    return getGetShoppingPerformanceViewMethod;
   }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static ShoppingPerformanceViewServiceStub newStub(io.grpc.Channel channel) {
-    return new ShoppingPerformanceViewServiceStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<ShoppingPerformanceViewServiceStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<ShoppingPerformanceViewServiceStub>() {
+        @java.lang.Override
+        public ShoppingPerformanceViewServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new ShoppingPerformanceViewServiceStub(channel, callOptions);
+        }
+      };
+    return ShoppingPerformanceViewServiceStub.newStub(factory, channel);
   }
 
   /**
@@ -80,7 +80,14 @@ public final class ShoppingPerformanceViewServiceGrpc {
    */
   public static ShoppingPerformanceViewServiceBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new ShoppingPerformanceViewServiceBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<ShoppingPerformanceViewServiceBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<ShoppingPerformanceViewServiceBlockingStub>() {
+        @java.lang.Override
+        public ShoppingPerformanceViewServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new ShoppingPerformanceViewServiceBlockingStub(channel, callOptions);
+        }
+      };
+    return ShoppingPerformanceViewServiceBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -88,7 +95,14 @@ public final class ShoppingPerformanceViewServiceGrpc {
    */
   public static ShoppingPerformanceViewServiceFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new ShoppingPerformanceViewServiceFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<ShoppingPerformanceViewServiceFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<ShoppingPerformanceViewServiceFutureStub>() {
+        @java.lang.Override
+        public ShoppingPerformanceViewServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new ShoppingPerformanceViewServiceFutureStub(channel, callOptions);
+        }
+      };
+    return ShoppingPerformanceViewServiceFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -105,13 +119,13 @@ public final class ShoppingPerformanceViewServiceGrpc {
      */
     public void getShoppingPerformanceView(com.google.ads.googleads.v3.services.GetShoppingPerformanceViewRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v3.resources.ShoppingPerformanceView> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetShoppingPerformanceViewMethodHelper(), responseObserver);
+      asyncUnimplementedUnaryCall(getGetShoppingPerformanceViewMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
-            getGetShoppingPerformanceViewMethodHelper(),
+            getGetShoppingPerformanceViewMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 com.google.ads.googleads.v3.services.GetShoppingPerformanceViewRequest,
@@ -126,19 +140,15 @@ public final class ShoppingPerformanceViewServiceGrpc {
    * Service to fetch Shopping performance views.
    * </pre>
    */
-  public static final class ShoppingPerformanceViewServiceStub extends io.grpc.stub.AbstractStub<ShoppingPerformanceViewServiceStub> {
-    private ShoppingPerformanceViewServiceStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private ShoppingPerformanceViewServiceStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class ShoppingPerformanceViewServiceStub extends io.grpc.stub.AbstractAsyncStub<ShoppingPerformanceViewServiceStub> {
+    private ShoppingPerformanceViewServiceStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected ShoppingPerformanceViewServiceStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected ShoppingPerformanceViewServiceStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new ShoppingPerformanceViewServiceStub(channel, callOptions);
     }
 
@@ -150,7 +160,7 @@ public final class ShoppingPerformanceViewServiceGrpc {
     public void getShoppingPerformanceView(com.google.ads.googleads.v3.services.GetShoppingPerformanceViewRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v3.resources.ShoppingPerformanceView> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(getGetShoppingPerformanceViewMethodHelper(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getGetShoppingPerformanceViewMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -159,19 +169,15 @@ public final class ShoppingPerformanceViewServiceGrpc {
    * Service to fetch Shopping performance views.
    * </pre>
    */
-  public static final class ShoppingPerformanceViewServiceBlockingStub extends io.grpc.stub.AbstractStub<ShoppingPerformanceViewServiceBlockingStub> {
-    private ShoppingPerformanceViewServiceBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private ShoppingPerformanceViewServiceBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class ShoppingPerformanceViewServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<ShoppingPerformanceViewServiceBlockingStub> {
+    private ShoppingPerformanceViewServiceBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected ShoppingPerformanceViewServiceBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected ShoppingPerformanceViewServiceBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new ShoppingPerformanceViewServiceBlockingStub(channel, callOptions);
     }
 
@@ -182,7 +188,7 @@ public final class ShoppingPerformanceViewServiceGrpc {
      */
     public com.google.ads.googleads.v3.resources.ShoppingPerformanceView getShoppingPerformanceView(com.google.ads.googleads.v3.services.GetShoppingPerformanceViewRequest request) {
       return blockingUnaryCall(
-          getChannel(), getGetShoppingPerformanceViewMethodHelper(), getCallOptions(), request);
+          getChannel(), getGetShoppingPerformanceViewMethod(), getCallOptions(), request);
     }
   }
 
@@ -191,19 +197,15 @@ public final class ShoppingPerformanceViewServiceGrpc {
    * Service to fetch Shopping performance views.
    * </pre>
    */
-  public static final class ShoppingPerformanceViewServiceFutureStub extends io.grpc.stub.AbstractStub<ShoppingPerformanceViewServiceFutureStub> {
-    private ShoppingPerformanceViewServiceFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private ShoppingPerformanceViewServiceFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class ShoppingPerformanceViewServiceFutureStub extends io.grpc.stub.AbstractFutureStub<ShoppingPerformanceViewServiceFutureStub> {
+    private ShoppingPerformanceViewServiceFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected ShoppingPerformanceViewServiceFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected ShoppingPerformanceViewServiceFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new ShoppingPerformanceViewServiceFutureStub(channel, callOptions);
     }
 
@@ -215,7 +217,7 @@ public final class ShoppingPerformanceViewServiceGrpc {
     public com.google.common.util.concurrent.ListenableFuture<com.google.ads.googleads.v3.resources.ShoppingPerformanceView> getShoppingPerformanceView(
         com.google.ads.googleads.v3.services.GetShoppingPerformanceViewRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(getGetShoppingPerformanceViewMethodHelper(), getCallOptions()), request);
+          getChannel().newCall(getGetShoppingPerformanceViewMethod(), getCallOptions()), request);
     }
   }
 
@@ -303,7 +305,7 @@ public final class ShoppingPerformanceViewServiceGrpc {
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new ShoppingPerformanceViewServiceFileDescriptorSupplier())
-              .addMethod(getGetShoppingPerformanceViewMethodHelper())
+              .addMethod(getGetShoppingPerformanceViewMethod())
               .build();
         }
       }

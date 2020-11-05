@@ -9,26 +9,28 @@ public interface RemarketingSettingOrBuilder extends
 
   /**
    * <pre>
-   * The Google global site tag.
+   * Output only. The Google global site tag.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue google_global_site_tag = 1;</code>
+   * <code>.google.protobuf.StringValue google_global_site_tag = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the googleGlobalSiteTag field is set.
    */
   boolean hasGoogleGlobalSiteTag();
   /**
    * <pre>
-   * The Google global site tag.
+   * Output only. The Google global site tag.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue google_global_site_tag = 1;</code>
+   * <code>.google.protobuf.StringValue google_global_site_tag = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The googleGlobalSiteTag.
    */
   com.google.protobuf.StringValue getGoogleGlobalSiteTag();
   /**
    * <pre>
-   * The Google global site tag.
+   * Output only. The Google global site tag.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue google_global_site_tag = 1;</code>
+   * <code>.google.protobuf.StringValue google_global_site_tag = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.protobuf.StringValueOrBuilder getGoogleGlobalSiteTagOrBuilder();
 }

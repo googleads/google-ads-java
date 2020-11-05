@@ -14,6 +14,7 @@ public interface RecommendationOrBuilder extends
    * </pre>
    *
    * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * @return The resourceName.
    */
   java.lang.String getResourceName();
   /**
@@ -23,6 +24,7 @@ public interface RecommendationOrBuilder extends
    * </pre>
    *
    * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * @return The bytes for resourceName.
    */
   com.google.protobuf.ByteString
       getResourceNameBytes();
@@ -33,6 +35,7 @@ public interface RecommendationOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.RecommendationTypeEnum.RecommendationType type = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The enum numeric value on the wire for type.
    */
   int getTypeValue();
   /**
@@ -41,6 +44,7 @@ public interface RecommendationOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.RecommendationTypeEnum.RecommendationType type = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The type.
    */
   com.google.ads.googleads.v3.enums.RecommendationTypeEnum.RecommendationType getType();
 
@@ -51,6 +55,7 @@ public interface RecommendationOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.Recommendation.RecommendationImpact impact = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the impact field is set.
    */
   boolean hasImpact();
   /**
@@ -60,6 +65,7 @@ public interface RecommendationOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.Recommendation.RecommendationImpact impact = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The impact.
    */
   com.google.ads.googleads.v3.resources.Recommendation.RecommendationImpact getImpact();
   /**
@@ -77,10 +83,11 @@ public interface RecommendationOrBuilder extends
    * Output only. The budget targeted by this recommendation. This will be set only when
    * the recommendation affects a single campaign budget.
    * This field will be set for the following recommendation types:
-   * CAMPAIGN_BUDGET, MOVE_UNUSED_BUDGET
+   * CAMPAIGN_BUDGET, FORECASTING_CAMPAIGN_BUDGET, MOVE_UNUSED_BUDGET
    * </pre>
    *
    * <code>.google.protobuf.StringValue campaign_budget = 5 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return Whether the campaignBudget field is set.
    */
   boolean hasCampaignBudget();
   /**
@@ -88,10 +95,11 @@ public interface RecommendationOrBuilder extends
    * Output only. The budget targeted by this recommendation. This will be set only when
    * the recommendation affects a single campaign budget.
    * This field will be set for the following recommendation types:
-   * CAMPAIGN_BUDGET, MOVE_UNUSED_BUDGET
+   * CAMPAIGN_BUDGET, FORECASTING_CAMPAIGN_BUDGET, MOVE_UNUSED_BUDGET
    * </pre>
    *
    * <code>.google.protobuf.StringValue campaign_budget = 5 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The campaignBudget.
    */
   com.google.protobuf.StringValue getCampaignBudget();
   /**
@@ -99,7 +107,7 @@ public interface RecommendationOrBuilder extends
    * Output only. The budget targeted by this recommendation. This will be set only when
    * the recommendation affects a single campaign budget.
    * This field will be set for the following recommendation types:
-   * CAMPAIGN_BUDGET, MOVE_UNUSED_BUDGET
+   * CAMPAIGN_BUDGET, FORECASTING_CAMPAIGN_BUDGET, MOVE_UNUSED_BUDGET
    * </pre>
    *
    * <code>.google.protobuf.StringValue campaign_budget = 5 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
@@ -118,6 +126,7 @@ public interface RecommendationOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue campaign = 6 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return Whether the campaign field is set.
    */
   boolean hasCampaign();
   /**
@@ -132,6 +141,7 @@ public interface RecommendationOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue campaign = 6 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The campaign.
    */
   com.google.protobuf.StringValue getCampaign();
   /**
@@ -158,6 +168,7 @@ public interface RecommendationOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue ad_group = 7 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return Whether the adGroup field is set.
    */
   boolean hasAdGroup();
   /**
@@ -169,6 +180,7 @@ public interface RecommendationOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue ad_group = 7 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The adGroup.
    */
   com.google.protobuf.StringValue getAdGroup();
   /**
@@ -189,6 +201,7 @@ public interface RecommendationOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.BoolValue dismissed = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the dismissed field is set.
    */
   boolean hasDismissed();
   /**
@@ -197,6 +210,7 @@ public interface RecommendationOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.BoolValue dismissed = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The dismissed.
    */
   com.google.protobuf.BoolValue getDismissed();
   /**
@@ -214,6 +228,7 @@ public interface RecommendationOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.Recommendation.CampaignBudgetRecommendation campaign_budget_recommendation = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the campaignBudgetRecommendation field is set.
    */
   boolean hasCampaignBudgetRecommendation();
   /**
@@ -222,6 +237,7 @@ public interface RecommendationOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.Recommendation.CampaignBudgetRecommendation campaign_budget_recommendation = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The campaignBudgetRecommendation.
    */
   com.google.ads.googleads.v3.resources.Recommendation.CampaignBudgetRecommendation getCampaignBudgetRecommendation();
   /**
@@ -239,6 +255,7 @@ public interface RecommendationOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.Recommendation.KeywordRecommendation keyword_recommendation = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the keywordRecommendation field is set.
    */
   boolean hasKeywordRecommendation();
   /**
@@ -247,6 +264,7 @@ public interface RecommendationOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.Recommendation.KeywordRecommendation keyword_recommendation = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The keywordRecommendation.
    */
   com.google.ads.googleads.v3.resources.Recommendation.KeywordRecommendation getKeywordRecommendation();
   /**
@@ -264,6 +282,7 @@ public interface RecommendationOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.Recommendation.TextAdRecommendation text_ad_recommendation = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the textAdRecommendation field is set.
    */
   boolean hasTextAdRecommendation();
   /**
@@ -272,6 +291,7 @@ public interface RecommendationOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.Recommendation.TextAdRecommendation text_ad_recommendation = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The textAdRecommendation.
    */
   com.google.ads.googleads.v3.resources.Recommendation.TextAdRecommendation getTextAdRecommendation();
   /**
@@ -289,6 +309,7 @@ public interface RecommendationOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.Recommendation.TargetCpaOptInRecommendation target_cpa_opt_in_recommendation = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the targetCpaOptInRecommendation field is set.
    */
   boolean hasTargetCpaOptInRecommendation();
   /**
@@ -297,6 +318,7 @@ public interface RecommendationOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.Recommendation.TargetCpaOptInRecommendation target_cpa_opt_in_recommendation = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The targetCpaOptInRecommendation.
    */
   com.google.ads.googleads.v3.resources.Recommendation.TargetCpaOptInRecommendation getTargetCpaOptInRecommendation();
   /**
@@ -314,6 +336,7 @@ public interface RecommendationOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.Recommendation.MaximizeConversionsOptInRecommendation maximize_conversions_opt_in_recommendation = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the maximizeConversionsOptInRecommendation field is set.
    */
   boolean hasMaximizeConversionsOptInRecommendation();
   /**
@@ -322,6 +345,7 @@ public interface RecommendationOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.Recommendation.MaximizeConversionsOptInRecommendation maximize_conversions_opt_in_recommendation = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The maximizeConversionsOptInRecommendation.
    */
   com.google.ads.googleads.v3.resources.Recommendation.MaximizeConversionsOptInRecommendation getMaximizeConversionsOptInRecommendation();
   /**
@@ -339,6 +363,7 @@ public interface RecommendationOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.Recommendation.EnhancedCpcOptInRecommendation enhanced_cpc_opt_in_recommendation = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the enhancedCpcOptInRecommendation field is set.
    */
   boolean hasEnhancedCpcOptInRecommendation();
   /**
@@ -347,6 +372,7 @@ public interface RecommendationOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.Recommendation.EnhancedCpcOptInRecommendation enhanced_cpc_opt_in_recommendation = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The enhancedCpcOptInRecommendation.
    */
   com.google.ads.googleads.v3.resources.Recommendation.EnhancedCpcOptInRecommendation getEnhancedCpcOptInRecommendation();
   /**
@@ -364,6 +390,7 @@ public interface RecommendationOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.Recommendation.SearchPartnersOptInRecommendation search_partners_opt_in_recommendation = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the searchPartnersOptInRecommendation field is set.
    */
   boolean hasSearchPartnersOptInRecommendation();
   /**
@@ -372,6 +399,7 @@ public interface RecommendationOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.Recommendation.SearchPartnersOptInRecommendation search_partners_opt_in_recommendation = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The searchPartnersOptInRecommendation.
    */
   com.google.ads.googleads.v3.resources.Recommendation.SearchPartnersOptInRecommendation getSearchPartnersOptInRecommendation();
   /**
@@ -389,6 +417,7 @@ public interface RecommendationOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.Recommendation.MaximizeClicksOptInRecommendation maximize_clicks_opt_in_recommendation = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the maximizeClicksOptInRecommendation field is set.
    */
   boolean hasMaximizeClicksOptInRecommendation();
   /**
@@ -397,6 +426,7 @@ public interface RecommendationOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.Recommendation.MaximizeClicksOptInRecommendation maximize_clicks_opt_in_recommendation = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The maximizeClicksOptInRecommendation.
    */
   com.google.ads.googleads.v3.resources.Recommendation.MaximizeClicksOptInRecommendation getMaximizeClicksOptInRecommendation();
   /**
@@ -414,6 +444,7 @@ public interface RecommendationOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.Recommendation.OptimizeAdRotationRecommendation optimize_ad_rotation_recommendation = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the optimizeAdRotationRecommendation field is set.
    */
   boolean hasOptimizeAdRotationRecommendation();
   /**
@@ -422,6 +453,7 @@ public interface RecommendationOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.Recommendation.OptimizeAdRotationRecommendation optimize_ad_rotation_recommendation = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The optimizeAdRotationRecommendation.
    */
   com.google.ads.googleads.v3.resources.Recommendation.OptimizeAdRotationRecommendation getOptimizeAdRotationRecommendation();
   /**
@@ -439,6 +471,7 @@ public interface RecommendationOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.Recommendation.CalloutExtensionRecommendation callout_extension_recommendation = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the calloutExtensionRecommendation field is set.
    */
   boolean hasCalloutExtensionRecommendation();
   /**
@@ -447,6 +480,7 @@ public interface RecommendationOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.Recommendation.CalloutExtensionRecommendation callout_extension_recommendation = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The calloutExtensionRecommendation.
    */
   com.google.ads.googleads.v3.resources.Recommendation.CalloutExtensionRecommendation getCalloutExtensionRecommendation();
   /**
@@ -464,6 +498,7 @@ public interface RecommendationOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.Recommendation.SitelinkExtensionRecommendation sitelink_extension_recommendation = 18 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the sitelinkExtensionRecommendation field is set.
    */
   boolean hasSitelinkExtensionRecommendation();
   /**
@@ -472,6 +507,7 @@ public interface RecommendationOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.Recommendation.SitelinkExtensionRecommendation sitelink_extension_recommendation = 18 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The sitelinkExtensionRecommendation.
    */
   com.google.ads.googleads.v3.resources.Recommendation.SitelinkExtensionRecommendation getSitelinkExtensionRecommendation();
   /**
@@ -489,6 +525,7 @@ public interface RecommendationOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.Recommendation.CallExtensionRecommendation call_extension_recommendation = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the callExtensionRecommendation field is set.
    */
   boolean hasCallExtensionRecommendation();
   /**
@@ -497,6 +534,7 @@ public interface RecommendationOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.Recommendation.CallExtensionRecommendation call_extension_recommendation = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The callExtensionRecommendation.
    */
   com.google.ads.googleads.v3.resources.Recommendation.CallExtensionRecommendation getCallExtensionRecommendation();
   /**
@@ -514,6 +552,7 @@ public interface RecommendationOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.Recommendation.KeywordMatchTypeRecommendation keyword_match_type_recommendation = 20 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the keywordMatchTypeRecommendation field is set.
    */
   boolean hasKeywordMatchTypeRecommendation();
   /**
@@ -522,6 +561,7 @@ public interface RecommendationOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.Recommendation.KeywordMatchTypeRecommendation keyword_match_type_recommendation = 20 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The keywordMatchTypeRecommendation.
    */
   com.google.ads.googleads.v3.resources.Recommendation.KeywordMatchTypeRecommendation getKeywordMatchTypeRecommendation();
   /**
@@ -539,6 +579,7 @@ public interface RecommendationOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.Recommendation.MoveUnusedBudgetRecommendation move_unused_budget_recommendation = 21 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the moveUnusedBudgetRecommendation field is set.
    */
   boolean hasMoveUnusedBudgetRecommendation();
   /**
@@ -547,6 +588,7 @@ public interface RecommendationOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.Recommendation.MoveUnusedBudgetRecommendation move_unused_budget_recommendation = 21 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The moveUnusedBudgetRecommendation.
    */
   com.google.ads.googleads.v3.resources.Recommendation.MoveUnusedBudgetRecommendation getMoveUnusedBudgetRecommendation();
   /**

@@ -13,6 +13,7 @@ public interface FinalAppUrlOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.AppUrlOperatingSystemTypeEnum.AppUrlOperatingSystemType os_type = 1;</code>
+   * @return The enum numeric value on the wire for osType.
    */
   int getOsTypeValue();
   /**
@@ -21,6 +22,7 @@ public interface FinalAppUrlOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.AppUrlOperatingSystemTypeEnum.AppUrlOperatingSystemType os_type = 1;</code>
+   * @return The osType.
    */
   com.google.ads.googleads.v3.enums.AppUrlOperatingSystemTypeEnum.AppUrlOperatingSystemType getOsType();
 
@@ -36,6 +38,7 @@ public interface FinalAppUrlOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue url = 2;</code>
+   * @return Whether the url field is set.
    */
   boolean hasUrl();
   /**
@@ -50,6 +53,7 @@ public interface FinalAppUrlOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue url = 2;</code>
+   * @return The url.
    */
   com.google.protobuf.StringValue getUrl();
   /**

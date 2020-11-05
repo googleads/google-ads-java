@@ -18,19 +18,17 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.v3.common.DeviceInfo;
-import com.google.ads.googleads.v3.enums.DeviceEnum.Device;
-import com.google.ads.googleads.v3.errors.GoogleAdsError;
-import com.google.ads.googleads.v3.errors.GoogleAdsException;
-import com.google.ads.googleads.v3.resources.AdGroupBidModifier;
-import com.google.ads.googleads.v3.resources.AdGroupName;
-import com.google.ads.googleads.v3.services.AdGroupBidModifierOperation;
-import com.google.ads.googleads.v3.services.AdGroupBidModifierServiceClient;
-import com.google.ads.googleads.v3.services.MutateAdGroupBidModifierResult;
-import com.google.ads.googleads.v3.services.MutateAdGroupBidModifiersResponse;
+import com.google.ads.googleads.v5.common.DeviceInfo;
+import com.google.ads.googleads.v5.enums.DeviceEnum.Device;
+import com.google.ads.googleads.v5.errors.GoogleAdsError;
+import com.google.ads.googleads.v5.errors.GoogleAdsException;
+import com.google.ads.googleads.v5.resources.AdGroupBidModifier;
+import com.google.ads.googleads.v5.services.AdGroupBidModifierOperation;
+import com.google.ads.googleads.v5.services.AdGroupBidModifierServiceClient;
+import com.google.ads.googleads.v5.services.MutateAdGroupBidModifierResult;
+import com.google.ads.googleads.v5.services.MutateAdGroupBidModifiersResponse;
+import com.google.ads.googleads.v5.utils.ResourceNames;
 import com.google.common.collect.ImmutableList;
-import com.google.protobuf.DoubleValue;
-import com.google.protobuf.StringValue;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
@@ -49,7 +47,7 @@ public class AddAdGroupBidModifier {
     private Long adGroupId;
 
     /** Specify the bid modifier value here or the default specified below will be used. */
-    @Parameter(names = ArgumentNames.BID_MODIFIER)
+    @Parameter(names = ArgumentNames.BID_MODIFIER_VALUE)
     private Double bidModifier = 1.5;
   }
 
@@ -66,16 +64,16 @@ public class AddAdGroupBidModifier {
       // params.bidModifier = Double.parseDouble("INSERT_BID_MODIFIER_VALUE_HERE");
     }
 
-    GoogleAdsClient googleAdsClient;
+    GoogleAdsClient googleAdsClient = null;
     try {
       googleAdsClient = GoogleAdsClient.newBuilder().fromPropertiesFile().build();
     } catch (FileNotFoundException fnfe) {
       System.err.printf(
           "Failed to load GoogleAdsClient configuration from file. Exception: %s%n", fnfe);
-      return;
+      System.exit(1);
     } catch (IOException ioe) {
       System.err.printf("Failed to create GoogleAdsClient. Exception: %s%n", ioe);
-      return;
+      System.exit(1);
     }
 
     try {
@@ -93,6 +91,7 @@ public class AddAdGroupBidModifier {
       for (GoogleAdsError googleAdsError : gae.getGoogleAdsFailure().getErrorsList()) {
         System.err.printf("  Error %d: %s%n", i++, googleAdsError);
       }
+      System.exit(1);
     }
   }
 
@@ -112,10 +111,8 @@ public class AddAdGroupBidModifier {
     // bid modifier value.
     AdGroupBidModifier adGroupBidModifier =
         AdGroupBidModifier.newBuilder()
-            .setAdGroup(
-                StringValue.of(
-                    AdGroupName.format(Long.toString(customerId), Long.toString(adGroupId))))
-            .setBidModifier(DoubleValue.of(bidModifier))
+            .setAdGroup(ResourceNames.adGroup(customerId, adGroupId))
+            .setBidModifier(bidModifier)
             .setDevice(DeviceInfo.newBuilder().setType(Device.MOBILE))
             .build();
 

@@ -13,6 +13,7 @@ public interface ListingGroupInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.ListingGroupTypeEnum.ListingGroupType type = 1;</code>
+   * @return The enum numeric value on the wire for type.
    */
   int getTypeValue();
   /**
@@ -21,6 +22,7 @@ public interface ListingGroupInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.ListingGroupTypeEnum.ListingGroupType type = 1;</code>
+   * @return The type.
    */
   com.google.ads.googleads.v3.enums.ListingGroupTypeEnum.ListingGroupType getType();
 
@@ -31,6 +33,7 @@ public interface ListingGroupInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.ListingDimensionInfo case_value = 2;</code>
+   * @return Whether the caseValue field is set.
    */
   boolean hasCaseValue();
   /**
@@ -40,6 +43,7 @@ public interface ListingGroupInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.ListingDimensionInfo case_value = 2;</code>
+   * @return The caseValue.
    */
   com.google.ads.googleads.v3.common.ListingDimensionInfo getCaseValue();
   /**
@@ -59,6 +63,7 @@ public interface ListingGroupInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue parent_ad_group_criterion = 3;</code>
+   * @return Whether the parentAdGroupCriterion field is set.
    */
   boolean hasParentAdGroupCriterion();
   /**
@@ -68,6 +73,7 @@ public interface ListingGroupInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue parent_ad_group_criterion = 3;</code>
+   * @return The parentAdGroupCriterion.
    */
   com.google.protobuf.StringValue getParentAdGroupCriterion();
   /**

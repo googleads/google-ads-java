@@ -13,6 +13,7 @@ public interface GenerateKeywordIdeasRequestOrBuilder extends
    * </pre>
    *
    * <code>string customer_id = 1;</code>
+   * @return The customerId.
    */
   java.lang.String getCustomerId();
   /**
@@ -21,6 +22,7 @@ public interface GenerateKeywordIdeasRequestOrBuilder extends
    * </pre>
    *
    * <code>string customer_id = 1;</code>
+   * @return The bytes for customerId.
    */
   com.google.protobuf.ByteString
       getCustomerIdBytes();
@@ -32,6 +34,7 @@ public interface GenerateKeywordIdeasRequestOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue language = 7 [(.google.api.field_behavior) = REQUIRED];</code>
+   * @return Whether the language field is set.
    */
   boolean hasLanguage();
   /**
@@ -41,6 +44,7 @@ public interface GenerateKeywordIdeasRequestOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue language = 7 [(.google.api.field_behavior) = REQUIRED];</code>
+   * @return The language.
    */
   com.google.protobuf.StringValue getLanguage();
   /**
@@ -108,6 +112,7 @@ public interface GenerateKeywordIdeasRequestOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.KeywordPlanNetworkEnum.KeywordPlanNetwork keyword_plan_network = 9;</code>
+   * @return The enum numeric value on the wire for keywordPlanNetwork.
    */
   int getKeywordPlanNetworkValue();
   /**
@@ -116,6 +121,7 @@ public interface GenerateKeywordIdeasRequestOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.KeywordPlanNetworkEnum.KeywordPlanNetwork keyword_plan_network = 9;</code>
+   * @return The keywordPlanNetwork.
    */
   com.google.ads.googleads.v3.enums.KeywordPlanNetworkEnum.KeywordPlanNetwork getKeywordPlanNetwork();
 
@@ -126,6 +132,7 @@ public interface GenerateKeywordIdeasRequestOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.services.KeywordAndUrlSeed keyword_and_url_seed = 2;</code>
+   * @return Whether the keywordAndUrlSeed field is set.
    */
   boolean hasKeywordAndUrlSeed();
   /**
@@ -135,6 +142,7 @@ public interface GenerateKeywordIdeasRequestOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.services.KeywordAndUrlSeed keyword_and_url_seed = 2;</code>
+   * @return The keywordAndUrlSeed.
    */
   com.google.ads.googleads.v3.services.KeywordAndUrlSeed getKeywordAndUrlSeed();
   /**
@@ -153,6 +161,7 @@ public interface GenerateKeywordIdeasRequestOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.services.KeywordSeed keyword_seed = 3;</code>
+   * @return Whether the keywordSeed field is set.
    */
   boolean hasKeywordSeed();
   /**
@@ -161,6 +170,7 @@ public interface GenerateKeywordIdeasRequestOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.services.KeywordSeed keyword_seed = 3;</code>
+   * @return The keywordSeed.
    */
   com.google.ads.googleads.v3.services.KeywordSeed getKeywordSeed();
   /**
@@ -178,6 +188,7 @@ public interface GenerateKeywordIdeasRequestOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.services.UrlSeed url_seed = 5;</code>
+   * @return Whether the urlSeed field is set.
    */
   boolean hasUrlSeed();
   /**
@@ -186,6 +197,7 @@ public interface GenerateKeywordIdeasRequestOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.services.UrlSeed url_seed = 5;</code>
+   * @return The urlSeed.
    */
   com.google.ads.googleads.v3.services.UrlSeed getUrlSeed();
   /**

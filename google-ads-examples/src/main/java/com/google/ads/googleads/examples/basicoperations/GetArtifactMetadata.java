@@ -18,15 +18,12 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.v3.errors.GoogleAdsError;
-import com.google.ads.googleads.v3.errors.GoogleAdsException;
-import com.google.ads.googleads.v3.resources.GoogleAdsField;
-import com.google.ads.googleads.v3.services.GoogleAdsFieldServiceClient;
-import com.google.ads.googleads.v3.services.GoogleAdsFieldServiceClient.SearchGoogleAdsFieldsPagedResponse;
-import com.google.common.base.Function;
+import com.google.ads.googleads.v5.errors.GoogleAdsError;
+import com.google.ads.googleads.v5.errors.GoogleAdsException;
+import com.google.ads.googleads.v5.resources.GoogleAdsField;
+import com.google.ads.googleads.v5.services.GoogleAdsFieldServiceClient;
+import com.google.ads.googleads.v5.services.GoogleAdsFieldServiceClient.SearchGoogleAdsFieldsPagedResponse;
 import com.google.common.collect.Lists;
-import com.google.protobuf.BoolValue;
-import com.google.protobuf.StringValue;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -56,16 +53,16 @@ public class GetArtifactMetadata {
       params.artifactName = "INSERT_ARTIFACT_NAME_HERE";
     }
 
-    GoogleAdsClient googleAdsClient;
+    GoogleAdsClient googleAdsClient = null;
     try {
       googleAdsClient = GoogleAdsClient.newBuilder().fromPropertiesFile().build();
     } catch (FileNotFoundException fnfe) {
       System.err.printf(
           "Failed to load GoogleAdsClient configuration from file. Exception: %s%n", fnfe);
-      return;
+      System.exit(1);
     } catch (IOException ioe) {
       System.err.printf("Failed to create GoogleAdsClient. Exception: %s%n", ioe);
-      return;
+      System.exit(1);
     }
 
     try {
@@ -82,6 +79,7 @@ public class GetArtifactMetadata {
       for (GoogleAdsError googleAdsError : gae.getGoogleAdsFailure().getErrorsList()) {
         System.err.printf("  Error %d: %s%n", i++, googleAdsError);
       }
+      System.exit(1);
     }
   }
 
@@ -110,7 +108,7 @@ public class GetArtifactMetadata {
         System.out.printf(
             "An artifact named '%s' with category '%s' and data type '%s' %s selectable, %s "
                 + "filterable, %s sortable and %s repeated.%n%n",
-            googleAdsField.getName().getValue(),
+            googleAdsField.getName(),
             googleAdsField.getCategory(),
             googleAdsField.getDataType(),
             getIsOrIsNot(googleAdsField.getSelectable()),
@@ -118,18 +116,8 @@ public class GetArtifactMetadata {
             getIsOrIsNot(googleAdsField.getSortable()),
             getIsOrIsNot(googleAdsField.getIsRepeated()));
 
-        // Unwraps and sorts the list of artifact names that are selectable with the specified
-        // artifact.
-        List<String> selectableArtifacts =
-            new ArrayList<>(
-                Lists.transform(
-                    googleAdsField.getSelectableWithList(),
-                    new Function<StringValue, String>() {
-                      @Override
-                      public String apply(StringValue selectableWithField) {
-                        return selectableWithField.getValue();
-                      }
-                    }));
+        // Sorts the list of artifact names that are selectable with the specified artifact.
+        List<String> selectableArtifacts = new ArrayList(googleAdsField.getSelectableWithList());
         Collections.sort(selectableArtifacts);
 
         System.out.println("The artifact can be selected with the following artifacts:");
@@ -147,7 +135,7 @@ public class GetArtifactMetadata {
   /**
    * Returns "is" when the specified value is true and "is not" when the specified value is false.
    */
-  private String getIsOrIsNot(BoolValue boolValue) {
-    return boolValue.getValue() ? "is" : "is not";
+  private String getIsOrIsNot(boolean value) {
+    return value ? "is" : "is not";
   }
 }

@@ -15,6 +15,7 @@ public interface CampaignDraftOrBuilder extends
    * </pre>
    *
    * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * @return The resourceName.
    */
   java.lang.String getResourceName();
   /**
@@ -25,6 +26,7 @@ public interface CampaignDraftOrBuilder extends
    * </pre>
    *
    * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * @return The bytes for resourceName.
    */
   com.google.protobuf.ByteString
       getResourceNameBytes();
@@ -36,6 +38,7 @@ public interface CampaignDraftOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value draft_id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the draftId field is set.
    */
   boolean hasDraftId();
   /**
@@ -45,6 +48,7 @@ public interface CampaignDraftOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value draft_id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The draftId.
    */
   com.google.protobuf.Int64Value getDraftId();
   /**
@@ -63,6 +67,7 @@ public interface CampaignDraftOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue base_campaign = 3 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * @return Whether the baseCampaign field is set.
    */
   boolean hasBaseCampaign();
   /**
@@ -71,6 +76,7 @@ public interface CampaignDraftOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue base_campaign = 3 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * @return The baseCampaign.
    */
   com.google.protobuf.StringValue getBaseCampaign();
   /**
@@ -92,6 +98,7 @@ public interface CampaignDraftOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue name = 4;</code>
+   * @return Whether the name field is set.
    */
   boolean hasName();
   /**
@@ -104,6 +111,7 @@ public interface CampaignDraftOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue name = 4;</code>
+   * @return The name.
    */
   com.google.protobuf.StringValue getName();
   /**
@@ -127,6 +135,7 @@ public interface CampaignDraftOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue draft_campaign = 5 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return Whether the draftCampaign field is set.
    */
   boolean hasDraftCampaign();
   /**
@@ -137,6 +146,7 @@ public interface CampaignDraftOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue draft_campaign = 5 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The draftCampaign.
    */
   com.google.protobuf.StringValue getDraftCampaign();
   /**
@@ -157,6 +167,7 @@ public interface CampaignDraftOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.CampaignDraftStatusEnum.CampaignDraftStatus status = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The enum numeric value on the wire for status.
    */
   int getStatusValue();
   /**
@@ -166,6 +177,7 @@ public interface CampaignDraftOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.CampaignDraftStatusEnum.CampaignDraftStatus status = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The status.
    */
   com.google.ads.googleads.v3.enums.CampaignDraftStatusEnum.CampaignDraftStatus getStatus();
 
@@ -175,6 +187,7 @@ public interface CampaignDraftOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.BoolValue has_experiment_running = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the hasExperimentRunning field is set.
    */
   boolean hasHasExperimentRunning();
   /**
@@ -183,6 +196,7 @@ public interface CampaignDraftOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.BoolValue has_experiment_running = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The hasExperimentRunning.
    */
   com.google.protobuf.BoolValue getHasExperimentRunning();
   /**
@@ -202,6 +216,7 @@ public interface CampaignDraftOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue long_running_operation = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the longRunningOperation field is set.
    */
   boolean hasLongRunningOperation();
   /**
@@ -212,6 +227,7 @@ public interface CampaignDraftOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue long_running_operation = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The longRunningOperation.
    */
   com.google.protobuf.StringValue getLongRunningOperation();
   /**

@@ -16,6 +16,7 @@ public interface InvoiceOrBuilder extends
    * </pre>
    *
    * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The resourceName.
    */
   java.lang.String getResourceName();
   /**
@@ -27,6 +28,7 @@ public interface InvoiceOrBuilder extends
    * </pre>
    *
    * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The bytes for resourceName.
    */
   com.google.protobuf.ByteString
       getResourceNameBytes();
@@ -37,6 +39,7 @@ public interface InvoiceOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the id field is set.
    */
   boolean hasId();
   /**
@@ -45,6 +48,7 @@ public interface InvoiceOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The id.
    */
   com.google.protobuf.StringValue getId();
   /**
@@ -62,6 +66,7 @@ public interface InvoiceOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.InvoiceTypeEnum.InvoiceType type = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The enum numeric value on the wire for type.
    */
   int getTypeValue();
   /**
@@ -70,6 +75,7 @@ public interface InvoiceOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.InvoiceTypeEnum.InvoiceType type = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The type.
    */
   com.google.ads.googleads.v3.enums.InvoiceTypeEnum.InvoiceType getType();
 
@@ -80,6 +86,7 @@ public interface InvoiceOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue billing_setup = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the billingSetup field is set.
    */
   boolean hasBillingSetup();
   /**
@@ -89,6 +96,7 @@ public interface InvoiceOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue billing_setup = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The billingSetup.
    */
   com.google.protobuf.StringValue getBillingSetup();
   /**
@@ -109,6 +117,7 @@ public interface InvoiceOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue payments_account_id = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the paymentsAccountId field is set.
    */
   boolean hasPaymentsAccountId();
   /**
@@ -119,6 +128,7 @@ public interface InvoiceOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue payments_account_id = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The paymentsAccountId.
    */
   com.google.protobuf.StringValue getPaymentsAccountId();
   /**
@@ -140,6 +150,7 @@ public interface InvoiceOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue payments_profile_id = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the paymentsProfileId field is set.
    */
   boolean hasPaymentsProfileId();
   /**
@@ -150,6 +161,7 @@ public interface InvoiceOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue payments_profile_id = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The paymentsProfileId.
    */
   com.google.protobuf.StringValue getPaymentsProfileId();
   /**
@@ -170,6 +182,7 @@ public interface InvoiceOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue issue_date = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the issueDate field is set.
    */
   boolean hasIssueDate();
   /**
@@ -179,6 +192,7 @@ public interface InvoiceOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue issue_date = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The issueDate.
    */
   com.google.protobuf.StringValue getIssueDate();
   /**
@@ -197,6 +211,7 @@ public interface InvoiceOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue due_date = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the dueDate field is set.
    */
   boolean hasDueDate();
   /**
@@ -205,6 +220,7 @@ public interface InvoiceOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue due_date = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The dueDate.
    */
   com.google.protobuf.StringValue getDueDate();
   /**
@@ -222,6 +238,7 @@ public interface InvoiceOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.DateRange service_date_range = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the serviceDateRange field is set.
    */
   boolean hasServiceDateRange();
   /**
@@ -230,6 +247,7 @@ public interface InvoiceOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.DateRange service_date_range = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The serviceDateRange.
    */
   com.google.ads.googleads.v3.common.DateRange getServiceDateRange();
   /**
@@ -248,6 +266,7 @@ public interface InvoiceOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue currency_code = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the currencyCode field is set.
    */
   boolean hasCurrencyCode();
   /**
@@ -257,6 +276,7 @@ public interface InvoiceOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue currency_code = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The currencyCode.
    */
   com.google.protobuf.StringValue getCurrencyCode();
   /**
@@ -276,6 +296,7 @@ public interface InvoiceOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value invoice_level_adjustments_micros = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the invoiceLevelAdjustmentsMicros field is set.
    */
   boolean hasInvoiceLevelAdjustmentsMicros();
   /**
@@ -285,6 +306,7 @@ public interface InvoiceOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value invoice_level_adjustments_micros = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The invoiceLevelAdjustmentsMicros.
    */
   com.google.protobuf.Int64Value getInvoiceLevelAdjustmentsMicros();
   /**
@@ -304,6 +326,7 @@ public interface InvoiceOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value subtotal_amount_micros = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the subtotalAmountMicros field is set.
    */
   boolean hasSubtotalAmountMicros();
   /**
@@ -313,6 +336,7 @@ public interface InvoiceOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value subtotal_amount_micros = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The subtotalAmountMicros.
    */
   com.google.protobuf.Int64Value getSubtotalAmountMicros();
   /**
@@ -333,6 +357,7 @@ public interface InvoiceOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value tax_amount_micros = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the taxAmountMicros field is set.
    */
   boolean hasTaxAmountMicros();
   /**
@@ -343,6 +368,7 @@ public interface InvoiceOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value tax_amount_micros = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The taxAmountMicros.
    */
   com.google.protobuf.Int64Value getTaxAmountMicros();
   /**
@@ -363,6 +389,7 @@ public interface InvoiceOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value total_amount_micros = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the totalAmountMicros field is set.
    */
   boolean hasTotalAmountMicros();
   /**
@@ -372,6 +399,7 @@ public interface InvoiceOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value total_amount_micros = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The totalAmountMicros.
    */
   com.google.protobuf.Int64Value getTotalAmountMicros();
   /**
@@ -394,6 +422,7 @@ public interface InvoiceOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue corrected_invoice = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the correctedInvoice field is set.
    */
   boolean hasCorrectedInvoice();
   /**
@@ -406,6 +435,7 @@ public interface InvoiceOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue corrected_invoice = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The correctedInvoice.
    */
   com.google.protobuf.StringValue getCorrectedInvoice();
   /**
@@ -502,6 +532,7 @@ public interface InvoiceOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue pdf_url = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the pdfUrl field is set.
    */
   boolean hasPdfUrl();
   /**
@@ -511,6 +542,7 @@ public interface InvoiceOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue pdf_url = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The pdfUrl.
    */
   com.google.protobuf.StringValue getPdfUrl();
   /**

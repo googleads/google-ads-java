@@ -13,6 +13,7 @@ public interface GmailAdInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.common.GmailTeaser teaser = 1;</code>
+   * @return Whether the teaser field is set.
    */
   boolean hasTeaser();
   /**
@@ -21,6 +22,7 @@ public interface GmailAdInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.common.GmailTeaser teaser = 1;</code>
+   * @return The teaser.
    */
   com.google.ads.googleads.v2.common.GmailTeaser getTeaser();
   /**
@@ -40,6 +42,7 @@ public interface GmailAdInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue header_image = 2;</code>
+   * @return Whether the headerImage field is set.
    */
   boolean hasHeaderImage();
   /**
@@ -50,6 +53,7 @@ public interface GmailAdInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue header_image = 2;</code>
+   * @return The headerImage.
    */
   com.google.protobuf.StringValue getHeaderImage();
   /**
@@ -72,6 +76,7 @@ public interface GmailAdInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue marketing_image = 3;</code>
+   * @return Whether the marketingImage field is set.
    */
   boolean hasMarketingImage();
   /**
@@ -83,6 +88,7 @@ public interface GmailAdInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue marketing_image = 3;</code>
+   * @return The marketingImage.
    */
   com.google.protobuf.StringValue getMarketingImage();
   /**
@@ -103,6 +109,7 @@ public interface GmailAdInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue marketing_image_headline = 4;</code>
+   * @return Whether the marketingImageHeadline field is set.
    */
   boolean hasMarketingImageHeadline();
   /**
@@ -111,6 +118,7 @@ public interface GmailAdInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue marketing_image_headline = 4;</code>
+   * @return The marketingImageHeadline.
    */
   com.google.protobuf.StringValue getMarketingImageHeadline();
   /**
@@ -128,6 +136,7 @@ public interface GmailAdInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue marketing_image_description = 5;</code>
+   * @return Whether the marketingImageDescription field is set.
    */
   boolean hasMarketingImageDescription();
   /**
@@ -136,6 +145,7 @@ public interface GmailAdInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue marketing_image_description = 5;</code>
+   * @return The marketingImageDescription.
    */
   com.google.protobuf.StringValue getMarketingImageDescription();
   /**
@@ -153,6 +163,7 @@ public interface GmailAdInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.common.DisplayCallToAction marketing_image_display_call_to_action = 6;</code>
+   * @return Whether the marketingImageDisplayCallToAction field is set.
    */
   boolean hasMarketingImageDisplayCallToAction();
   /**
@@ -161,6 +172,7 @@ public interface GmailAdInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.common.DisplayCallToAction marketing_image_display_call_to_action = 6;</code>
+   * @return The marketingImageDisplayCallToAction.
    */
   com.google.ads.googleads.v2.common.DisplayCallToAction getMarketingImageDisplayCallToAction();
   /**

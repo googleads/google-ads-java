@@ -11,7 +11,7 @@ package com.google.ads.googleads.v3.resources;
  *
  * Protobuf type {@code google.ads.googleads.v3.resources.KeywordPlanCampaign}
  */
-public  final class KeywordPlanCampaign extends
+public final class KeywordPlanCampaign extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v3.resources.KeywordPlanCampaign)
     KeywordPlanCampaignOrBuilder {
@@ -25,6 +25,13 @@ private static final long serialVersionUID = 0L;
     languageConstants_ = java.util.Collections.emptyList();
     keywordPlanNetwork_ = 0;
     geoTargets_ = java.util.Collections.emptyList();
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new KeywordPlanCampaign();
   }
 
   @java.lang.Override
@@ -97,9 +104,9 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 42: {
-            if (!((mutable_bitField0_ & 0x00000010) != 0)) {
+            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
               languageConstants_ = new java.util.ArrayList<com.google.protobuf.StringValue>();
-              mutable_bitField0_ |= 0x00000010;
+              mutable_bitField0_ |= 0x00000001;
             }
             languageConstants_.add(
                 input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry));
@@ -125,9 +132,9 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 66: {
-            if (!((mutable_bitField0_ & 0x00000080) != 0)) {
+            if (!((mutable_bitField0_ & 0x00000002) != 0)) {
               geoTargets_ = new java.util.ArrayList<com.google.ads.googleads.v3.resources.KeywordPlanGeoTarget>();
-              mutable_bitField0_ |= 0x00000080;
+              mutable_bitField0_ |= 0x00000002;
             }
             geoTargets_.add(
                 input.readMessage(com.google.ads.googleads.v3.resources.KeywordPlanGeoTarget.parser(), extensionRegistry));
@@ -148,10 +155,10 @@ private static final long serialVersionUID = 0L;
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
     } finally {
-      if (((mutable_bitField0_ & 0x00000010) != 0)) {
+      if (((mutable_bitField0_ & 0x00000001) != 0)) {
         languageConstants_ = java.util.Collections.unmodifiableList(languageConstants_);
       }
-      if (((mutable_bitField0_ & 0x00000080) != 0)) {
+      if (((mutable_bitField0_ & 0x00000002) != 0)) {
         geoTargets_ = java.util.Collections.unmodifiableList(geoTargets_);
       }
       this.unknownFields = unknownFields.build();
@@ -171,7 +178,6 @@ private static final long serialVersionUID = 0L;
             com.google.ads.googleads.v3.resources.KeywordPlanCampaign.class, com.google.ads.googleads.v3.resources.KeywordPlanCampaign.Builder.class);
   }
 
-  private int bitField0_;
   public static final int RESOURCE_NAME_FIELD_NUMBER = 1;
   private volatile java.lang.Object resourceName_;
   /**
@@ -182,7 +188,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * @return The resourceName.
    */
+  @java.lang.Override
   public java.lang.String getResourceName() {
     java.lang.Object ref = resourceName_;
     if (ref instanceof java.lang.String) {
@@ -203,7 +211,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * @return The bytes for resourceName.
    */
+  @java.lang.Override
   public com.google.protobuf.ByteString
       getResourceNameBytes() {
     java.lang.Object ref = resourceName_;
@@ -226,7 +236,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue keyword_plan = 2 [(.google.api.resource_reference) = { ... }</code>
+   * @return Whether the keywordPlan field is set.
    */
+  @java.lang.Override
   public boolean hasKeywordPlan() {
     return keywordPlan_ != null;
   }
@@ -236,7 +248,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue keyword_plan = 2 [(.google.api.resource_reference) = { ... }</code>
+   * @return The keywordPlan.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getKeywordPlan() {
     return keywordPlan_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : keywordPlan_;
   }
@@ -247,6 +261,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue keyword_plan = 2 [(.google.api.resource_reference) = { ... }</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getKeywordPlanOrBuilder() {
     return getKeywordPlan();
   }
@@ -259,7 +274,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the id field is set.
    */
+  @java.lang.Override
   public boolean hasId() {
     return id_ != null;
   }
@@ -269,7 +286,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The id.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getId() {
     return id_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : id_;
   }
@@ -280,6 +299,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getIdOrBuilder() {
     return getId();
   }
@@ -294,7 +314,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue name = 4;</code>
+   * @return Whether the name field is set.
    */
+  @java.lang.Override
   public boolean hasName() {
     return name_ != null;
   }
@@ -306,7 +328,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue name = 4;</code>
+   * @return The name.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getName() {
     return name_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : name_;
   }
@@ -319,6 +343,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue name = 4;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getNameOrBuilder() {
     return getName();
   }
@@ -333,6 +358,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.StringValue language_constants = 5 [(.google.api.resource_reference) = { ... }</code>
    */
+  @java.lang.Override
   public java.util.List<com.google.protobuf.StringValue> getLanguageConstantsList() {
     return languageConstants_;
   }
@@ -344,6 +370,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.StringValue language_constants = 5 [(.google.api.resource_reference) = { ... }</code>
    */
+  @java.lang.Override
   public java.util.List<? extends com.google.protobuf.StringValueOrBuilder> 
       getLanguageConstantsOrBuilderList() {
     return languageConstants_;
@@ -356,6 +383,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.StringValue language_constants = 5 [(.google.api.resource_reference) = { ... }</code>
    */
+  @java.lang.Override
   public int getLanguageConstantsCount() {
     return languageConstants_.size();
   }
@@ -367,6 +395,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.StringValue language_constants = 5 [(.google.api.resource_reference) = { ... }</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getLanguageConstants(int index) {
     return languageConstants_.get(index);
   }
@@ -378,6 +407,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.StringValue language_constants = 5 [(.google.api.resource_reference) = { ... }</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getLanguageConstantsOrBuilder(
       int index) {
     return languageConstants_.get(index);
@@ -393,8 +423,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.KeywordPlanNetworkEnum.KeywordPlanNetwork keyword_plan_network = 6;</code>
+   * @return The enum numeric value on the wire for keywordPlanNetwork.
    */
-  public int getKeywordPlanNetworkValue() {
+  @java.lang.Override public int getKeywordPlanNetworkValue() {
     return keywordPlanNetwork_;
   }
   /**
@@ -405,8 +436,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.KeywordPlanNetworkEnum.KeywordPlanNetwork keyword_plan_network = 6;</code>
+   * @return The keywordPlanNetwork.
    */
-  public com.google.ads.googleads.v3.enums.KeywordPlanNetworkEnum.KeywordPlanNetwork getKeywordPlanNetwork() {
+  @java.lang.Override public com.google.ads.googleads.v3.enums.KeywordPlanNetworkEnum.KeywordPlanNetwork getKeywordPlanNetwork() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v3.enums.KeywordPlanNetworkEnum.KeywordPlanNetwork result = com.google.ads.googleads.v3.enums.KeywordPlanNetworkEnum.KeywordPlanNetwork.valueOf(keywordPlanNetwork_);
     return result == null ? com.google.ads.googleads.v3.enums.KeywordPlanNetworkEnum.KeywordPlanNetwork.UNRECOGNIZED : result;
@@ -423,7 +455,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Int64Value cpc_bid_micros = 7;</code>
+   * @return Whether the cpcBidMicros field is set.
    */
+  @java.lang.Override
   public boolean hasCpcBidMicros() {
     return cpcBidMicros_ != null;
   }
@@ -436,7 +470,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Int64Value cpc_bid_micros = 7;</code>
+   * @return The cpcBidMicros.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getCpcBidMicros() {
     return cpcBidMicros_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : cpcBidMicros_;
   }
@@ -450,6 +486,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int64Value cpc_bid_micros = 7;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getCpcBidMicrosOrBuilder() {
     return getCpcBidMicros();
   }
@@ -464,6 +501,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v3.resources.KeywordPlanGeoTarget geo_targets = 8;</code>
    */
+  @java.lang.Override
   public java.util.List<com.google.ads.googleads.v3.resources.KeywordPlanGeoTarget> getGeoTargetsList() {
     return geoTargets_;
   }
@@ -475,6 +513,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v3.resources.KeywordPlanGeoTarget geo_targets = 8;</code>
    */
+  @java.lang.Override
   public java.util.List<? extends com.google.ads.googleads.v3.resources.KeywordPlanGeoTargetOrBuilder> 
       getGeoTargetsOrBuilderList() {
     return geoTargets_;
@@ -487,6 +526,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v3.resources.KeywordPlanGeoTarget geo_targets = 8;</code>
    */
+  @java.lang.Override
   public int getGeoTargetsCount() {
     return geoTargets_.size();
   }
@@ -498,6 +538,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v3.resources.KeywordPlanGeoTarget geo_targets = 8;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.resources.KeywordPlanGeoTarget getGeoTargets(int index) {
     return geoTargets_.get(index);
   }
@@ -509,6 +550,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v3.resources.KeywordPlanGeoTarget geo_targets = 8;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.resources.KeywordPlanGeoTargetOrBuilder getGeoTargetsOrBuilder(
       int index) {
     return geoTargets_.get(index);
@@ -835,7 +877,7 @@ private static final long serialVersionUID = 0L;
       }
       if (languageConstantsBuilder_ == null) {
         languageConstants_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000010);
+        bitField0_ = (bitField0_ & ~0x00000001);
       } else {
         languageConstantsBuilder_.clear();
       }
@@ -849,7 +891,7 @@ private static final long serialVersionUID = 0L;
       }
       if (geoTargetsBuilder_ == null) {
         geoTargets_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000080);
+        bitField0_ = (bitField0_ & ~0x00000002);
       } else {
         geoTargetsBuilder_.clear();
       }
@@ -880,7 +922,6 @@ private static final long serialVersionUID = 0L;
     public com.google.ads.googleads.v3.resources.KeywordPlanCampaign buildPartial() {
       com.google.ads.googleads.v3.resources.KeywordPlanCampaign result = new com.google.ads.googleads.v3.resources.KeywordPlanCampaign(this);
       int from_bitField0_ = bitField0_;
-      int to_bitField0_ = 0;
       result.resourceName_ = resourceName_;
       if (keywordPlanBuilder_ == null) {
         result.keywordPlan_ = keywordPlan_;
@@ -898,9 +939,9 @@ private static final long serialVersionUID = 0L;
         result.name_ = nameBuilder_.build();
       }
       if (languageConstantsBuilder_ == null) {
-        if (((bitField0_ & 0x00000010) != 0)) {
+        if (((bitField0_ & 0x00000001) != 0)) {
           languageConstants_ = java.util.Collections.unmodifiableList(languageConstants_);
-          bitField0_ = (bitField0_ & ~0x00000010);
+          bitField0_ = (bitField0_ & ~0x00000001);
         }
         result.languageConstants_ = languageConstants_;
       } else {
@@ -913,15 +954,14 @@ private static final long serialVersionUID = 0L;
         result.cpcBidMicros_ = cpcBidMicrosBuilder_.build();
       }
       if (geoTargetsBuilder_ == null) {
-        if (((bitField0_ & 0x00000080) != 0)) {
+        if (((bitField0_ & 0x00000002) != 0)) {
           geoTargets_ = java.util.Collections.unmodifiableList(geoTargets_);
-          bitField0_ = (bitField0_ & ~0x00000080);
+          bitField0_ = (bitField0_ & ~0x00000002);
         }
         result.geoTargets_ = geoTargets_;
       } else {
         result.geoTargets_ = geoTargetsBuilder_.build();
       }
-      result.bitField0_ = to_bitField0_;
       onBuilt();
       return result;
     }
@@ -987,7 +1027,7 @@ private static final long serialVersionUID = 0L;
         if (!other.languageConstants_.isEmpty()) {
           if (languageConstants_.isEmpty()) {
             languageConstants_ = other.languageConstants_;
-            bitField0_ = (bitField0_ & ~0x00000010);
+            bitField0_ = (bitField0_ & ~0x00000001);
           } else {
             ensureLanguageConstantsIsMutable();
             languageConstants_.addAll(other.languageConstants_);
@@ -1000,7 +1040,7 @@ private static final long serialVersionUID = 0L;
             languageConstantsBuilder_.dispose();
             languageConstantsBuilder_ = null;
             languageConstants_ = other.languageConstants_;
-            bitField0_ = (bitField0_ & ~0x00000010);
+            bitField0_ = (bitField0_ & ~0x00000001);
             languageConstantsBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getLanguageConstantsFieldBuilder() : null;
@@ -1019,7 +1059,7 @@ private static final long serialVersionUID = 0L;
         if (!other.geoTargets_.isEmpty()) {
           if (geoTargets_.isEmpty()) {
             geoTargets_ = other.geoTargets_;
-            bitField0_ = (bitField0_ & ~0x00000080);
+            bitField0_ = (bitField0_ & ~0x00000002);
           } else {
             ensureGeoTargetsIsMutable();
             geoTargets_.addAll(other.geoTargets_);
@@ -1032,7 +1072,7 @@ private static final long serialVersionUID = 0L;
             geoTargetsBuilder_.dispose();
             geoTargetsBuilder_ = null;
             geoTargets_ = other.geoTargets_;
-            bitField0_ = (bitField0_ & ~0x00000080);
+            bitField0_ = (bitField0_ & ~0x00000002);
             geoTargetsBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getGeoTargetsFieldBuilder() : null;
@@ -1080,6 +1120,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * @return The resourceName.
      */
     public java.lang.String getResourceName() {
       java.lang.Object ref = resourceName_;
@@ -1101,6 +1142,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * @return The bytes for resourceName.
      */
     public com.google.protobuf.ByteString
         getResourceNameBytes() {
@@ -1123,6 +1165,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * @param value The resourceName to set.
+     * @return This builder for chaining.
      */
     public Builder setResourceName(
         java.lang.String value) {
@@ -1142,6 +1186,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * @return This builder for chaining.
      */
     public Builder clearResourceName() {
       
@@ -1157,6 +1202,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * @param value The bytes for resourceName to set.
+     * @return This builder for chaining.
      */
     public Builder setResourceNameBytes(
         com.google.protobuf.ByteString value) {
@@ -1179,6 +1226,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue keyword_plan = 2 [(.google.api.resource_reference) = { ... }</code>
+     * @return Whether the keywordPlan field is set.
      */
     public boolean hasKeywordPlan() {
       return keywordPlanBuilder_ != null || keywordPlan_ != null;
@@ -1189,6 +1237,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue keyword_plan = 2 [(.google.api.resource_reference) = { ... }</code>
+     * @return The keywordPlan.
      */
     public com.google.protobuf.StringValue getKeywordPlan() {
       if (keywordPlanBuilder_ == null) {
@@ -1332,6 +1381,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the id field is set.
      */
     public boolean hasId() {
       return idBuilder_ != null || id_ != null;
@@ -1342,6 +1392,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The id.
      */
     public com.google.protobuf.Int64Value getId() {
       if (idBuilder_ == null) {
@@ -1487,6 +1538,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue name = 4;</code>
+     * @return Whether the name field is set.
      */
     public boolean hasName() {
       return nameBuilder_ != null || name_ != null;
@@ -1499,6 +1551,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue name = 4;</code>
+     * @return The name.
      */
     public com.google.protobuf.StringValue getName() {
       if (nameBuilder_ == null) {
@@ -1650,9 +1703,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.google.protobuf.StringValue> languageConstants_ =
       java.util.Collections.emptyList();
     private void ensureLanguageConstantsIsMutable() {
-      if (!((bitField0_ & 0x00000010) != 0)) {
+      if (!((bitField0_ & 0x00000001) != 0)) {
         languageConstants_ = new java.util.ArrayList<com.google.protobuf.StringValue>(languageConstants_);
-        bitField0_ |= 0x00000010;
+        bitField0_ |= 0x00000001;
        }
     }
 
@@ -1857,7 +1910,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearLanguageConstants() {
       if (languageConstantsBuilder_ == null) {
         languageConstants_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000010);
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
       } else {
         languageConstantsBuilder_.clear();
@@ -1969,7 +2022,7 @@ private static final long serialVersionUID = 0L;
         languageConstantsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
                 languageConstants_,
-                ((bitField0_ & 0x00000010) != 0),
+                ((bitField0_ & 0x00000001) != 0),
                 getParentForChildren(),
                 isClean());
         languageConstants_ = null;
@@ -1986,8 +2039,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.KeywordPlanNetworkEnum.KeywordPlanNetwork keyword_plan_network = 6;</code>
+     * @return The enum numeric value on the wire for keywordPlanNetwork.
      */
-    public int getKeywordPlanNetworkValue() {
+    @java.lang.Override public int getKeywordPlanNetworkValue() {
       return keywordPlanNetwork_;
     }
     /**
@@ -1998,8 +2052,11 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.KeywordPlanNetworkEnum.KeywordPlanNetwork keyword_plan_network = 6;</code>
+     * @param value The enum numeric value on the wire for keywordPlanNetwork to set.
+     * @return This builder for chaining.
      */
     public Builder setKeywordPlanNetworkValue(int value) {
+      
       keywordPlanNetwork_ = value;
       onChanged();
       return this;
@@ -2012,7 +2069,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.KeywordPlanNetworkEnum.KeywordPlanNetwork keyword_plan_network = 6;</code>
+     * @return The keywordPlanNetwork.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.enums.KeywordPlanNetworkEnum.KeywordPlanNetwork getKeywordPlanNetwork() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v3.enums.KeywordPlanNetworkEnum.KeywordPlanNetwork result = com.google.ads.googleads.v3.enums.KeywordPlanNetworkEnum.KeywordPlanNetwork.valueOf(keywordPlanNetwork_);
@@ -2026,6 +2085,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.KeywordPlanNetworkEnum.KeywordPlanNetwork keyword_plan_network = 6;</code>
+     * @param value The keywordPlanNetwork to set.
+     * @return This builder for chaining.
      */
     public Builder setKeywordPlanNetwork(com.google.ads.googleads.v3.enums.KeywordPlanNetworkEnum.KeywordPlanNetwork value) {
       if (value == null) {
@@ -2044,6 +2105,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.KeywordPlanNetworkEnum.KeywordPlanNetwork keyword_plan_network = 6;</code>
+     * @return This builder for chaining.
      */
     public Builder clearKeywordPlanNetwork() {
       
@@ -2064,6 +2126,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value cpc_bid_micros = 7;</code>
+     * @return Whether the cpcBidMicros field is set.
      */
     public boolean hasCpcBidMicros() {
       return cpcBidMicrosBuilder_ != null || cpcBidMicros_ != null;
@@ -2077,6 +2140,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value cpc_bid_micros = 7;</code>
+     * @return The cpcBidMicros.
      */
     public com.google.protobuf.Int64Value getCpcBidMicros() {
       if (cpcBidMicrosBuilder_ == null) {
@@ -2235,9 +2299,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.google.ads.googleads.v3.resources.KeywordPlanGeoTarget> geoTargets_ =
       java.util.Collections.emptyList();
     private void ensureGeoTargetsIsMutable() {
-      if (!((bitField0_ & 0x00000080) != 0)) {
+      if (!((bitField0_ & 0x00000002) != 0)) {
         geoTargets_ = new java.util.ArrayList<com.google.ads.googleads.v3.resources.KeywordPlanGeoTarget>(geoTargets_);
-        bitField0_ |= 0x00000080;
+        bitField0_ |= 0x00000002;
        }
     }
 
@@ -2442,7 +2506,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearGeoTargets() {
       if (geoTargetsBuilder_ == null) {
         geoTargets_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000080);
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
       } else {
         geoTargetsBuilder_.clear();
@@ -2554,7 +2618,7 @@ private static final long serialVersionUID = 0L;
         geoTargetsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.google.ads.googleads.v3.resources.KeywordPlanGeoTarget, com.google.ads.googleads.v3.resources.KeywordPlanGeoTarget.Builder, com.google.ads.googleads.v3.resources.KeywordPlanGeoTargetOrBuilder>(
                 geoTargets_,
-                ((bitField0_ & 0x00000080) != 0),
+                ((bitField0_ & 0x00000002) != 0),
                 getParentForChildren(),
                 isClean());
         geoTargets_ = null;

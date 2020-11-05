@@ -1,5 +1,5 @@
 /*
- * Copyright 2019 Google LLC
+ * Copyright 2020 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -21,7 +21,6 @@ import com.google.ads.googleads.v3.services.stub.KeywordViewServiceStubSettings;
 import com.google.api.core.BetaApi;
 import com.google.api.gax.core.BackgroundResource;
 import com.google.api.gax.rpc.UnaryCallable;
-import com.google.api.pathtemplate.PathTemplate;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 import javax.annotation.Generated;
@@ -36,8 +35,8 @@ import javax.annotation.Generated;
  * <pre>
  * <code>
  * try (KeywordViewServiceClient keywordViewServiceClient = KeywordViewServiceClient.create()) {
- *   String formattedResourceName = KeywordViewServiceClient.formatKeywordViewName("[CUSTOMER]", "[KEYWORD_VIEW]");
- *   KeywordView response = keywordViewServiceClient.getKeywordView(formattedResourceName);
+ *   KeywordViewName resourceName = KeywordViewName.of("[CUSTOMER]", "[KEYWORD_VIEW]");
+ *   KeywordView response = keywordViewServiceClient.getKeywordView(resourceName);
  * }
  * </code>
  * </pre>
@@ -99,43 +98,6 @@ public class KeywordViewServiceClient implements BackgroundResource {
   private final KeywordViewServiceSettings settings;
   private final KeywordViewServiceStub stub;
 
-  private static final PathTemplate KEYWORD_VIEW_PATH_TEMPLATE =
-      PathTemplate.createWithoutUrlEncoding("customers/{customer}/keywordViews/{keyword_view}");
-
-  /**
-   * Formats a string containing the fully-qualified path to represent a keyword_view resource.
-   *
-   * @deprecated Use the {@link KeywordViewName} class instead.
-   */
-  @Deprecated
-  public static final String formatKeywordViewName(String customer, String keywordView) {
-    return KEYWORD_VIEW_PATH_TEMPLATE.instantiate(
-        "customer", customer,
-        "keyword_view", keywordView);
-  }
-
-  /**
-   * Parses the customer from the given fully-qualified path which represents a keyword_view
-   * resource.
-   *
-   * @deprecated Use the {@link KeywordViewName} class instead.
-   */
-  @Deprecated
-  public static final String parseCustomerFromKeywordViewName(String keywordViewName) {
-    return KEYWORD_VIEW_PATH_TEMPLATE.parse(keywordViewName).get("customer");
-  }
-
-  /**
-   * Parses the keyword_view from the given fully-qualified path which represents a keyword_view
-   * resource.
-   *
-   * @deprecated Use the {@link KeywordViewName} class instead.
-   */
-  @Deprecated
-  public static final String parseKeywordViewFromKeywordViewName(String keywordViewName) {
-    return KEYWORD_VIEW_PATH_TEMPLATE.parse(keywordViewName).get("keyword_view");
-  }
-
   /** Constructs an instance of KeywordViewServiceClient with default settings. */
   public static final KeywordViewServiceClient create() throws IOException {
     return create(KeywordViewServiceSettings.newBuilder().build());
@@ -192,8 +154,32 @@ public class KeywordViewServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (KeywordViewServiceClient keywordViewServiceClient = KeywordViewServiceClient.create()) {
-   *   String formattedResourceName = KeywordViewServiceClient.formatKeywordViewName("[CUSTOMER]", "[KEYWORD_VIEW]");
-   *   KeywordView response = keywordViewServiceClient.getKeywordView(formattedResourceName);
+   *   KeywordViewName resourceName = KeywordViewName.of("[CUSTOMER]", "[KEYWORD_VIEW]");
+   *   KeywordView response = keywordViewServiceClient.getKeywordView(resourceName);
+   * }
+   * </code></pre>
+   *
+   * @param resourceName Required. The resource name of the keyword view to fetch.
+   * @throws com.google.api.gax.rpc.ApiException if the remote call fails
+   */
+  public final KeywordView getKeywordView(KeywordViewName resourceName) {
+    GetKeywordViewRequest request =
+        GetKeywordViewRequest.newBuilder()
+            .setResourceName(resourceName == null ? null : resourceName.toString())
+            .build();
+    return getKeywordView(request);
+  }
+
+  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  /**
+   * Returns the requested keyword view in full detail.
+   *
+   * <p>Sample code:
+   *
+   * <pre><code>
+   * try (KeywordViewServiceClient keywordViewServiceClient = KeywordViewServiceClient.create()) {
+   *   KeywordViewName resourceName = KeywordViewName.of("[CUSTOMER]", "[KEYWORD_VIEW]");
+   *   KeywordView response = keywordViewServiceClient.getKeywordView(resourceName.toString());
    * }
    * </code></pre>
    *
@@ -201,7 +187,6 @@ public class KeywordViewServiceClient implements BackgroundResource {
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final KeywordView getKeywordView(String resourceName) {
-    KEYWORD_VIEW_PATH_TEMPLATE.validate(resourceName, "getKeywordView");
     GetKeywordViewRequest request =
         GetKeywordViewRequest.newBuilder().setResourceName(resourceName).build();
     return getKeywordView(request);
@@ -215,9 +200,9 @@ public class KeywordViewServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (KeywordViewServiceClient keywordViewServiceClient = KeywordViewServiceClient.create()) {
-   *   String formattedResourceName = KeywordViewServiceClient.formatKeywordViewName("[CUSTOMER]", "[KEYWORD_VIEW]");
+   *   KeywordViewName resourceName = KeywordViewName.of("[CUSTOMER]", "[KEYWORD_VIEW]");
    *   GetKeywordViewRequest request = GetKeywordViewRequest.newBuilder()
-   *     .setResourceName(formattedResourceName)
+   *     .setResourceName(resourceName.toString())
    *     .build();
    *   KeywordView response = keywordViewServiceClient.getKeywordView(request);
    * }
@@ -238,9 +223,9 @@ public class KeywordViewServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (KeywordViewServiceClient keywordViewServiceClient = KeywordViewServiceClient.create()) {
-   *   String formattedResourceName = KeywordViewServiceClient.formatKeywordViewName("[CUSTOMER]", "[KEYWORD_VIEW]");
+   *   KeywordViewName resourceName = KeywordViewName.of("[CUSTOMER]", "[KEYWORD_VIEW]");
    *   GetKeywordViewRequest request = GetKeywordViewRequest.newBuilder()
-   *     .setResourceName(formattedResourceName)
+   *     .setResourceName(resourceName.toString())
    *     .build();
    *   ApiFuture&lt;KeywordView&gt; future = keywordViewServiceClient.getKeywordViewCallable().futureCall(request);
    *   // Do something

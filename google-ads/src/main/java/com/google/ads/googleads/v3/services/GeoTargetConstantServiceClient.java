@@ -1,5 +1,5 @@
 /*
- * Copyright 2019 Google LLC
+ * Copyright 2020 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -21,8 +21,6 @@ import com.google.ads.googleads.v3.services.stub.GeoTargetConstantServiceStubSet
 import com.google.api.core.BetaApi;
 import com.google.api.gax.core.BackgroundResource;
 import com.google.api.gax.rpc.UnaryCallable;
-import com.google.api.pathtemplate.PathTemplate;
-import com.google.protobuf.StringValue;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 import javax.annotation.Generated;
@@ -37,8 +35,8 @@ import javax.annotation.Generated;
  * <pre>
  * <code>
  * try (GeoTargetConstantServiceClient geoTargetConstantServiceClient = GeoTargetConstantServiceClient.create()) {
- *   String formattedResourceName = GeoTargetConstantServiceClient.formatGeoTargetConstantName("[GEO_TARGET_CONSTANT]");
- *   GeoTargetConstant response = geoTargetConstantServiceClient.getGeoTargetConstant(formattedResourceName);
+ *   GeoTargetConstantName resourceName = GeoTargetConstantName.of("[GEO_TARGET_CONSTANT]");
+ *   GeoTargetConstant response = geoTargetConstantServiceClient.getGeoTargetConstant(resourceName);
  * }
  * </code>
  * </pre>
@@ -100,34 +98,6 @@ public class GeoTargetConstantServiceClient implements BackgroundResource {
   private final GeoTargetConstantServiceSettings settings;
   private final GeoTargetConstantServiceStub stub;
 
-  private static final PathTemplate GEO_TARGET_CONSTANT_PATH_TEMPLATE =
-      PathTemplate.createWithoutUrlEncoding("geoTargetConstants/{geo_target_constant}");
-
-  /**
-   * Formats a string containing the fully-qualified path to represent a geo_target_constant
-   * resource.
-   *
-   * @deprecated Use the {@link GeoTargetConstantName} class instead.
-   */
-  @Deprecated
-  public static final String formatGeoTargetConstantName(String geoTargetConstant) {
-    return GEO_TARGET_CONSTANT_PATH_TEMPLATE.instantiate("geo_target_constant", geoTargetConstant);
-  }
-
-  /**
-   * Parses the geo_target_constant from the given fully-qualified path which represents a
-   * geo_target_constant resource.
-   *
-   * @deprecated Use the {@link GeoTargetConstantName} class instead.
-   */
-  @Deprecated
-  public static final String parseGeoTargetConstantFromGeoTargetConstantName(
-      String geoTargetConstantName) {
-    return GEO_TARGET_CONSTANT_PATH_TEMPLATE
-        .parse(geoTargetConstantName)
-        .get("geo_target_constant");
-  }
-
   /** Constructs an instance of GeoTargetConstantServiceClient with default settings. */
   public static final GeoTargetConstantServiceClient create() throws IOException {
     return create(GeoTargetConstantServiceSettings.newBuilder().build());
@@ -186,8 +156,32 @@ public class GeoTargetConstantServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (GeoTargetConstantServiceClient geoTargetConstantServiceClient = GeoTargetConstantServiceClient.create()) {
-   *   String formattedResourceName = GeoTargetConstantServiceClient.formatGeoTargetConstantName("[GEO_TARGET_CONSTANT]");
-   *   GeoTargetConstant response = geoTargetConstantServiceClient.getGeoTargetConstant(formattedResourceName);
+   *   GeoTargetConstantName resourceName = GeoTargetConstantName.of("[GEO_TARGET_CONSTANT]");
+   *   GeoTargetConstant response = geoTargetConstantServiceClient.getGeoTargetConstant(resourceName);
+   * }
+   * </code></pre>
+   *
+   * @param resourceName Required. The resource name of the geo target constant to fetch.
+   * @throws com.google.api.gax.rpc.ApiException if the remote call fails
+   */
+  public final GeoTargetConstant getGeoTargetConstant(GeoTargetConstantName resourceName) {
+    GetGeoTargetConstantRequest request =
+        GetGeoTargetConstantRequest.newBuilder()
+            .setResourceName(resourceName == null ? null : resourceName.toString())
+            .build();
+    return getGeoTargetConstant(request);
+  }
+
+  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  /**
+   * Returns the requested geo target constant in full detail.
+   *
+   * <p>Sample code:
+   *
+   * <pre><code>
+   * try (GeoTargetConstantServiceClient geoTargetConstantServiceClient = GeoTargetConstantServiceClient.create()) {
+   *   GeoTargetConstantName resourceName = GeoTargetConstantName.of("[GEO_TARGET_CONSTANT]");
+   *   GeoTargetConstant response = geoTargetConstantServiceClient.getGeoTargetConstant(resourceName.toString());
    * }
    * </code></pre>
    *
@@ -195,7 +189,6 @@ public class GeoTargetConstantServiceClient implements BackgroundResource {
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final GeoTargetConstant getGeoTargetConstant(String resourceName) {
-    GEO_TARGET_CONSTANT_PATH_TEMPLATE.validate(resourceName, "getGeoTargetConstant");
     GetGeoTargetConstantRequest request =
         GetGeoTargetConstantRequest.newBuilder().setResourceName(resourceName).build();
     return getGeoTargetConstant(request);
@@ -209,9 +202,9 @@ public class GeoTargetConstantServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (GeoTargetConstantServiceClient geoTargetConstantServiceClient = GeoTargetConstantServiceClient.create()) {
-   *   String formattedResourceName = GeoTargetConstantServiceClient.formatGeoTargetConstantName("[GEO_TARGET_CONSTANT]");
+   *   GeoTargetConstantName resourceName = GeoTargetConstantName.of("[GEO_TARGET_CONSTANT]");
    *   GetGeoTargetConstantRequest request = GetGeoTargetConstantRequest.newBuilder()
-   *     .setResourceName(formattedResourceName)
+   *     .setResourceName(resourceName.toString())
    *     .build();
    *   GeoTargetConstant response = geoTargetConstantServiceClient.getGeoTargetConstant(request);
    * }
@@ -232,9 +225,9 @@ public class GeoTargetConstantServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (GeoTargetConstantServiceClient geoTargetConstantServiceClient = GeoTargetConstantServiceClient.create()) {
-   *   String formattedResourceName = GeoTargetConstantServiceClient.formatGeoTargetConstantName("[GEO_TARGET_CONSTANT]");
+   *   GeoTargetConstantName resourceName = GeoTargetConstantName.of("[GEO_TARGET_CONSTANT]");
    *   GetGeoTargetConstantRequest request = GetGeoTargetConstantRequest.newBuilder()
-   *     .setResourceName(formattedResourceName)
+   *     .setResourceName(resourceName.toString())
    *     .build();
    *   ApiFuture&lt;GeoTargetConstant&gt; future = geoTargetConstantServiceClient.getGeoTargetConstantCallable().futureCall(request);
    *   // Do something
@@ -255,42 +248,7 @@ public class GeoTargetConstantServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (GeoTargetConstantServiceClient geoTargetConstantServiceClient = GeoTargetConstantServiceClient.create()) {
-   *   StringValue locale = StringValue.newBuilder().build();
-   *   StringValue countryCode = StringValue.newBuilder().build();
-   *   SuggestGeoTargetConstantsResponse response = geoTargetConstantServiceClient.suggestGeoTargetConstants(locale, countryCode);
-   * }
-   * </code></pre>
-   *
-   * @param locale If possible, returned geo targets are translated using this locale. If not, en is
-   *     used by default. This is also used as a hint for returned geo targets.
-   * @param countryCode Returned geo targets are restricted to this country code.
-   * @throws com.google.api.gax.rpc.ApiException if the remote call fails
-   */
-  public final SuggestGeoTargetConstantsResponse suggestGeoTargetConstants(
-      StringValue locale, StringValue countryCode) {
-
-    SuggestGeoTargetConstantsRequest request =
-        SuggestGeoTargetConstantsRequest.newBuilder()
-            .setLocale(locale)
-            .setCountryCode(countryCode)
-            .build();
-    return suggestGeoTargetConstants(request);
-  }
-
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
-  /**
-   * Returns GeoTargetConstant suggestions by location name or by resource name.
-   *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (GeoTargetConstantServiceClient geoTargetConstantServiceClient = GeoTargetConstantServiceClient.create()) {
-   *   StringValue locale = StringValue.newBuilder().build();
-   *   StringValue countryCode = StringValue.newBuilder().build();
-   *   SuggestGeoTargetConstantsRequest request = SuggestGeoTargetConstantsRequest.newBuilder()
-   *     .setLocale(locale)
-   *     .setCountryCode(countryCode)
-   *     .build();
+   *   SuggestGeoTargetConstantsRequest request = SuggestGeoTargetConstantsRequest.newBuilder().build();
    *   SuggestGeoTargetConstantsResponse response = geoTargetConstantServiceClient.suggestGeoTargetConstants(request);
    * }
    * </code></pre>
@@ -311,12 +269,7 @@ public class GeoTargetConstantServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (GeoTargetConstantServiceClient geoTargetConstantServiceClient = GeoTargetConstantServiceClient.create()) {
-   *   StringValue locale = StringValue.newBuilder().build();
-   *   StringValue countryCode = StringValue.newBuilder().build();
-   *   SuggestGeoTargetConstantsRequest request = SuggestGeoTargetConstantsRequest.newBuilder()
-   *     .setLocale(locale)
-   *     .setCountryCode(countryCode)
-   *     .build();
+   *   SuggestGeoTargetConstantsRequest request = SuggestGeoTargetConstantsRequest.newBuilder().build();
    *   ApiFuture&lt;SuggestGeoTargetConstantsResponse&gt; future = geoTargetConstantServiceClient.suggestGeoTargetConstantsCallable().futureCall(request);
    *   // Do something
    *   SuggestGeoTargetConstantsResponse response = future.get();

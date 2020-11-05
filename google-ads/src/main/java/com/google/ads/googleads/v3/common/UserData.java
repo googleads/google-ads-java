@@ -10,7 +10,7 @@ package com.google.ads.googleads.v3.common;
  *
  * Protobuf type {@code google.ads.googleads.v3.common.UserData}
  */
-public  final class UserData extends
+public final class UserData extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v3.common.UserData)
     UserDataOrBuilder {
@@ -21,6 +21,13 @@ private static final long serialVersionUID = 0L;
   }
   private UserData() {
     userIdentifiers_ = java.util.Collections.emptyList();
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new UserData();
   }
 
   @java.lang.Override
@@ -104,7 +111,6 @@ private static final long serialVersionUID = 0L;
             com.google.ads.googleads.v3.common.UserData.class, com.google.ads.googleads.v3.common.UserData.Builder.class);
   }
 
-  private int bitField0_;
   public static final int USER_IDENTIFIERS_FIELD_NUMBER = 1;
   private java.util.List<com.google.ads.googleads.v3.common.UserIdentifier> userIdentifiers_;
   /**
@@ -114,6 +120,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v3.common.UserIdentifier user_identifiers = 1;</code>
    */
+  @java.lang.Override
   public java.util.List<com.google.ads.googleads.v3.common.UserIdentifier> getUserIdentifiersList() {
     return userIdentifiers_;
   }
@@ -124,6 +131,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v3.common.UserIdentifier user_identifiers = 1;</code>
    */
+  @java.lang.Override
   public java.util.List<? extends com.google.ads.googleads.v3.common.UserIdentifierOrBuilder> 
       getUserIdentifiersOrBuilderList() {
     return userIdentifiers_;
@@ -135,6 +143,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v3.common.UserIdentifier user_identifiers = 1;</code>
    */
+  @java.lang.Override
   public int getUserIdentifiersCount() {
     return userIdentifiers_.size();
   }
@@ -145,6 +154,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v3.common.UserIdentifier user_identifiers = 1;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.common.UserIdentifier getUserIdentifiers(int index) {
     return userIdentifiers_.get(index);
   }
@@ -155,6 +165,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v3.common.UserIdentifier user_identifiers = 1;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.common.UserIdentifierOrBuilder getUserIdentifiersOrBuilder(
       int index) {
     return userIdentifiers_.get(index);
@@ -169,7 +180,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.TransactionAttribute transaction_attribute = 2;</code>
+   * @return Whether the transactionAttribute field is set.
    */
+  @java.lang.Override
   public boolean hasTransactionAttribute() {
     return transactionAttribute_ != null;
   }
@@ -180,7 +193,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.TransactionAttribute transaction_attribute = 2;</code>
+   * @return The transactionAttribute.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.common.TransactionAttribute getTransactionAttribute() {
     return transactionAttribute_ == null ? com.google.ads.googleads.v3.common.TransactionAttribute.getDefaultInstance() : transactionAttribute_;
   }
@@ -192,6 +207,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v3.common.TransactionAttribute transaction_attribute = 2;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.common.TransactionAttributeOrBuilder getTransactionAttributeOrBuilder() {
     return getTransactionAttribute();
   }
@@ -451,7 +467,6 @@ private static final long serialVersionUID = 0L;
     public com.google.ads.googleads.v3.common.UserData buildPartial() {
       com.google.ads.googleads.v3.common.UserData result = new com.google.ads.googleads.v3.common.UserData(this);
       int from_bitField0_ = bitField0_;
-      int to_bitField0_ = 0;
       if (userIdentifiersBuilder_ == null) {
         if (((bitField0_ & 0x00000001) != 0)) {
           userIdentifiers_ = java.util.Collections.unmodifiableList(userIdentifiers_);
@@ -466,7 +481,6 @@ private static final long serialVersionUID = 0L;
       } else {
         result.transactionAttribute_ = transactionAttributeBuilder_.build();
       }
-      result.bitField0_ = to_bitField0_;
       onBuilt();
       return result;
     }
@@ -896,6 +910,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.common.TransactionAttribute transaction_attribute = 2;</code>
+     * @return Whether the transactionAttribute field is set.
      */
     public boolean hasTransactionAttribute() {
       return transactionAttributeBuilder_ != null || transactionAttribute_ != null;
@@ -907,6 +922,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.common.TransactionAttribute transaction_attribute = 2;</code>
+     * @return The transactionAttribute.
      */
     public com.google.ads.googleads.v3.common.TransactionAttribute getTransactionAttribute() {
       if (transactionAttributeBuilder_ == null) {

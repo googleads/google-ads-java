@@ -13,6 +13,7 @@ public interface TargetRestrictionOperationOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.TargetRestrictionOperation.Operator operator = 1;</code>
+   * @return The enum numeric value on the wire for operator.
    */
   int getOperatorValue();
   /**
@@ -21,6 +22,7 @@ public interface TargetRestrictionOperationOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.TargetRestrictionOperation.Operator operator = 1;</code>
+   * @return The operator.
    */
   com.google.ads.googleads.v3.common.TargetRestrictionOperation.Operator getOperator();
 
@@ -30,6 +32,7 @@ public interface TargetRestrictionOperationOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.TargetRestriction value = 2;</code>
+   * @return Whether the value field is set.
    */
   boolean hasValue();
   /**
@@ -38,6 +41,7 @@ public interface TargetRestrictionOperationOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.TargetRestriction value = 2;</code>
+   * @return The value.
    */
   com.google.ads.googleads.v3.common.TargetRestriction getValue();
   /**

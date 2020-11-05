@@ -9,336 +9,364 @@ public interface ChangeStatusOrBuilder extends
 
   /**
    * <pre>
-   * The resource name of the change status.
+   * Output only. The resource name of the change status.
    * Change status resource names have the form:
    * `customers/{customer_id}/changeStatus/{change_status_id}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The resourceName.
    */
   java.lang.String getResourceName();
   /**
    * <pre>
-   * The resource name of the change status.
+   * Output only. The resource name of the change status.
    * Change status resource names have the form:
    * `customers/{customer_id}/changeStatus/{change_status_id}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The bytes for resourceName.
    */
   com.google.protobuf.ByteString
       getResourceNameBytes();
 
   /**
    * <pre>
-   * Time at which the most recent change has occurred on this resource.
+   * Output only. Time at which the most recent change has occurred on this resource.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue last_change_date_time = 3;</code>
+   * <code>.google.protobuf.StringValue last_change_date_time = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the lastChangeDateTime field is set.
    */
   boolean hasLastChangeDateTime();
   /**
    * <pre>
-   * Time at which the most recent change has occurred on this resource.
+   * Output only. Time at which the most recent change has occurred on this resource.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue last_change_date_time = 3;</code>
+   * <code>.google.protobuf.StringValue last_change_date_time = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The lastChangeDateTime.
    */
   com.google.protobuf.StringValue getLastChangeDateTime();
   /**
    * <pre>
-   * Time at which the most recent change has occurred on this resource.
+   * Output only. Time at which the most recent change has occurred on this resource.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue last_change_date_time = 3;</code>
+   * <code>.google.protobuf.StringValue last_change_date_time = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.protobuf.StringValueOrBuilder getLastChangeDateTimeOrBuilder();
 
   /**
    * <pre>
-   * Represents the type of the changed resource. This dictates what fields
+   * Output only. Represents the type of the changed resource. This dictates what fields
    * will be set. For example, for AD_GROUP, campaign and ad_group fields will
    * be set.
    * </pre>
    *
-   * <code>.google.ads.googleads.v2.enums.ChangeStatusResourceTypeEnum.ChangeStatusResourceType resource_type = 4;</code>
+   * <code>.google.ads.googleads.v2.enums.ChangeStatusResourceTypeEnum.ChangeStatusResourceType resource_type = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The enum numeric value on the wire for resourceType.
    */
   int getResourceTypeValue();
   /**
    * <pre>
-   * Represents the type of the changed resource. This dictates what fields
+   * Output only. Represents the type of the changed resource. This dictates what fields
    * will be set. For example, for AD_GROUP, campaign and ad_group fields will
    * be set.
    * </pre>
    *
-   * <code>.google.ads.googleads.v2.enums.ChangeStatusResourceTypeEnum.ChangeStatusResourceType resource_type = 4;</code>
+   * <code>.google.ads.googleads.v2.enums.ChangeStatusResourceTypeEnum.ChangeStatusResourceType resource_type = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The resourceType.
    */
   com.google.ads.googleads.v2.enums.ChangeStatusResourceTypeEnum.ChangeStatusResourceType getResourceType();
 
   /**
    * <pre>
-   * The Campaign affected by this change.
+   * Output only. The Campaign affected by this change.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue campaign = 5;</code>
+   * <code>.google.protobuf.StringValue campaign = 5 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return Whether the campaign field is set.
    */
   boolean hasCampaign();
   /**
    * <pre>
-   * The Campaign affected by this change.
+   * Output only. The Campaign affected by this change.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue campaign = 5;</code>
+   * <code>.google.protobuf.StringValue campaign = 5 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The campaign.
    */
   com.google.protobuf.StringValue getCampaign();
   /**
    * <pre>
-   * The Campaign affected by this change.
+   * Output only. The Campaign affected by this change.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue campaign = 5;</code>
+   * <code>.google.protobuf.StringValue campaign = 5 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    */
   com.google.protobuf.StringValueOrBuilder getCampaignOrBuilder();
 
   /**
    * <pre>
-   * The AdGroup affected by this change.
+   * Output only. The AdGroup affected by this change.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue ad_group = 6;</code>
+   * <code>.google.protobuf.StringValue ad_group = 6 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return Whether the adGroup field is set.
    */
   boolean hasAdGroup();
   /**
    * <pre>
-   * The AdGroup affected by this change.
+   * Output only. The AdGroup affected by this change.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue ad_group = 6;</code>
+   * <code>.google.protobuf.StringValue ad_group = 6 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The adGroup.
    */
   com.google.protobuf.StringValue getAdGroup();
   /**
    * <pre>
-   * The AdGroup affected by this change.
+   * Output only. The AdGroup affected by this change.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue ad_group = 6;</code>
+   * <code>.google.protobuf.StringValue ad_group = 6 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    */
   com.google.protobuf.StringValueOrBuilder getAdGroupOrBuilder();
 
   /**
    * <pre>
-   * Represents the status of the changed resource.
+   * Output only. Represents the status of the changed resource.
    * </pre>
    *
-   * <code>.google.ads.googleads.v2.enums.ChangeStatusOperationEnum.ChangeStatusOperation resource_status = 8;</code>
+   * <code>.google.ads.googleads.v2.enums.ChangeStatusOperationEnum.ChangeStatusOperation resource_status = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The enum numeric value on the wire for resourceStatus.
    */
   int getResourceStatusValue();
   /**
    * <pre>
-   * Represents the status of the changed resource.
+   * Output only. Represents the status of the changed resource.
    * </pre>
    *
-   * <code>.google.ads.googleads.v2.enums.ChangeStatusOperationEnum.ChangeStatusOperation resource_status = 8;</code>
+   * <code>.google.ads.googleads.v2.enums.ChangeStatusOperationEnum.ChangeStatusOperation resource_status = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The resourceStatus.
    */
   com.google.ads.googleads.v2.enums.ChangeStatusOperationEnum.ChangeStatusOperation getResourceStatus();
 
   /**
    * <pre>
-   * The AdGroupAd affected by this change.
+   * Output only. The AdGroupAd affected by this change.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue ad_group_ad = 9;</code>
+   * <code>.google.protobuf.StringValue ad_group_ad = 9 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return Whether the adGroupAd field is set.
    */
   boolean hasAdGroupAd();
   /**
    * <pre>
-   * The AdGroupAd affected by this change.
+   * Output only. The AdGroupAd affected by this change.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue ad_group_ad = 9;</code>
+   * <code>.google.protobuf.StringValue ad_group_ad = 9 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The adGroupAd.
    */
   com.google.protobuf.StringValue getAdGroupAd();
   /**
    * <pre>
-   * The AdGroupAd affected by this change.
+   * Output only. The AdGroupAd affected by this change.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue ad_group_ad = 9;</code>
+   * <code>.google.protobuf.StringValue ad_group_ad = 9 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    */
   com.google.protobuf.StringValueOrBuilder getAdGroupAdOrBuilder();
 
   /**
    * <pre>
-   * The AdGroupCriterion affected by this change.
+   * Output only. The AdGroupCriterion affected by this change.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue ad_group_criterion = 10;</code>
+   * <code>.google.protobuf.StringValue ad_group_criterion = 10 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return Whether the adGroupCriterion field is set.
    */
   boolean hasAdGroupCriterion();
   /**
    * <pre>
-   * The AdGroupCriterion affected by this change.
+   * Output only. The AdGroupCriterion affected by this change.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue ad_group_criterion = 10;</code>
+   * <code>.google.protobuf.StringValue ad_group_criterion = 10 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The adGroupCriterion.
    */
   com.google.protobuf.StringValue getAdGroupCriterion();
   /**
    * <pre>
-   * The AdGroupCriterion affected by this change.
+   * Output only. The AdGroupCriterion affected by this change.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue ad_group_criterion = 10;</code>
+   * <code>.google.protobuf.StringValue ad_group_criterion = 10 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    */
   com.google.protobuf.StringValueOrBuilder getAdGroupCriterionOrBuilder();
 
   /**
    * <pre>
-   * The CampaignCriterion affected by this change.
+   * Output only. The CampaignCriterion affected by this change.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue campaign_criterion = 11;</code>
+   * <code>.google.protobuf.StringValue campaign_criterion = 11 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return Whether the campaignCriterion field is set.
    */
   boolean hasCampaignCriterion();
   /**
    * <pre>
-   * The CampaignCriterion affected by this change.
+   * Output only. The CampaignCriterion affected by this change.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue campaign_criterion = 11;</code>
+   * <code>.google.protobuf.StringValue campaign_criterion = 11 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The campaignCriterion.
    */
   com.google.protobuf.StringValue getCampaignCriterion();
   /**
    * <pre>
-   * The CampaignCriterion affected by this change.
+   * Output only. The CampaignCriterion affected by this change.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue campaign_criterion = 11;</code>
+   * <code>.google.protobuf.StringValue campaign_criterion = 11 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    */
   com.google.protobuf.StringValueOrBuilder getCampaignCriterionOrBuilder();
 
   /**
    * <pre>
-   * The Feed affected by this change.
+   * Output only. The Feed affected by this change.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue feed = 12;</code>
+   * <code>.google.protobuf.StringValue feed = 12 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return Whether the feed field is set.
    */
   boolean hasFeed();
   /**
    * <pre>
-   * The Feed affected by this change.
+   * Output only. The Feed affected by this change.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue feed = 12;</code>
+   * <code>.google.protobuf.StringValue feed = 12 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The feed.
    */
   com.google.protobuf.StringValue getFeed();
   /**
    * <pre>
-   * The Feed affected by this change.
+   * Output only. The Feed affected by this change.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue feed = 12;</code>
+   * <code>.google.protobuf.StringValue feed = 12 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    */
   com.google.protobuf.StringValueOrBuilder getFeedOrBuilder();
 
   /**
    * <pre>
-   * The FeedItem affected by this change.
+   * Output only. The FeedItem affected by this change.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue feed_item = 13;</code>
+   * <code>.google.protobuf.StringValue feed_item = 13 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return Whether the feedItem field is set.
    */
   boolean hasFeedItem();
   /**
    * <pre>
-   * The FeedItem affected by this change.
+   * Output only. The FeedItem affected by this change.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue feed_item = 13;</code>
+   * <code>.google.protobuf.StringValue feed_item = 13 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The feedItem.
    */
   com.google.protobuf.StringValue getFeedItem();
   /**
    * <pre>
-   * The FeedItem affected by this change.
+   * Output only. The FeedItem affected by this change.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue feed_item = 13;</code>
+   * <code>.google.protobuf.StringValue feed_item = 13 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    */
   com.google.protobuf.StringValueOrBuilder getFeedItemOrBuilder();
 
   /**
    * <pre>
-   * The AdGroupFeed affected by this change.
+   * Output only. The AdGroupFeed affected by this change.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue ad_group_feed = 14;</code>
+   * <code>.google.protobuf.StringValue ad_group_feed = 14 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return Whether the adGroupFeed field is set.
    */
   boolean hasAdGroupFeed();
   /**
    * <pre>
-   * The AdGroupFeed affected by this change.
+   * Output only. The AdGroupFeed affected by this change.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue ad_group_feed = 14;</code>
+   * <code>.google.protobuf.StringValue ad_group_feed = 14 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The adGroupFeed.
    */
   com.google.protobuf.StringValue getAdGroupFeed();
   /**
    * <pre>
-   * The AdGroupFeed affected by this change.
+   * Output only. The AdGroupFeed affected by this change.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue ad_group_feed = 14;</code>
+   * <code>.google.protobuf.StringValue ad_group_feed = 14 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    */
   com.google.protobuf.StringValueOrBuilder getAdGroupFeedOrBuilder();
 
   /**
    * <pre>
-   * The CampaignFeed affected by this change.
+   * Output only. The CampaignFeed affected by this change.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue campaign_feed = 15;</code>
+   * <code>.google.protobuf.StringValue campaign_feed = 15 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return Whether the campaignFeed field is set.
    */
   boolean hasCampaignFeed();
   /**
    * <pre>
-   * The CampaignFeed affected by this change.
+   * Output only. The CampaignFeed affected by this change.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue campaign_feed = 15;</code>
+   * <code>.google.protobuf.StringValue campaign_feed = 15 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The campaignFeed.
    */
   com.google.protobuf.StringValue getCampaignFeed();
   /**
    * <pre>
-   * The CampaignFeed affected by this change.
+   * Output only. The CampaignFeed affected by this change.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue campaign_feed = 15;</code>
+   * <code>.google.protobuf.StringValue campaign_feed = 15 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    */
   com.google.protobuf.StringValueOrBuilder getCampaignFeedOrBuilder();
 
   /**
    * <pre>
-   * The AdGroupBidModifier affected by this change.
+   * Output only. The AdGroupBidModifier affected by this change.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue ad_group_bid_modifier = 16;</code>
+   * <code>.google.protobuf.StringValue ad_group_bid_modifier = 16 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return Whether the adGroupBidModifier field is set.
    */
   boolean hasAdGroupBidModifier();
   /**
    * <pre>
-   * The AdGroupBidModifier affected by this change.
+   * Output only. The AdGroupBidModifier affected by this change.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue ad_group_bid_modifier = 16;</code>
+   * <code>.google.protobuf.StringValue ad_group_bid_modifier = 16 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The adGroupBidModifier.
    */
   com.google.protobuf.StringValue getAdGroupBidModifier();
   /**
    * <pre>
-   * The AdGroupBidModifier affected by this change.
+   * Output only. The AdGroupBidModifier affected by this change.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue ad_group_bid_modifier = 16;</code>
+   * <code>.google.protobuf.StringValue ad_group_bid_modifier = 16 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    */
   com.google.protobuf.StringValueOrBuilder getAdGroupBidModifierOrBuilder();
 }

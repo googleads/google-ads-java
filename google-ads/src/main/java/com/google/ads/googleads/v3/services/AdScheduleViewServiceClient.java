@@ -1,5 +1,5 @@
 /*
- * Copyright 2019 Google LLC
+ * Copyright 2020 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -21,7 +21,6 @@ import com.google.ads.googleads.v3.services.stub.AdScheduleViewServiceStubSettin
 import com.google.api.core.BetaApi;
 import com.google.api.gax.core.BackgroundResource;
 import com.google.api.gax.rpc.UnaryCallable;
-import com.google.api.pathtemplate.PathTemplate;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 import javax.annotation.Generated;
@@ -36,8 +35,8 @@ import javax.annotation.Generated;
  * <pre>
  * <code>
  * try (AdScheduleViewServiceClient adScheduleViewServiceClient = AdScheduleViewServiceClient.create()) {
- *   String formattedResourceName = AdScheduleViewServiceClient.formatAdScheduleViewName("[CUSTOMER]", "[AD_SCHEDULE_VIEW]");
- *   AdScheduleView response = adScheduleViewServiceClient.getAdScheduleView(formattedResourceName);
+ *   AdScheduleViewName resourceName = AdScheduleViewName.of("[CUSTOMER]", "[AD_SCHEDULE_VIEW]");
+ *   AdScheduleView response = adScheduleViewServiceClient.getAdScheduleView(resourceName);
  * }
  * </code>
  * </pre>
@@ -99,44 +98,6 @@ public class AdScheduleViewServiceClient implements BackgroundResource {
   private final AdScheduleViewServiceSettings settings;
   private final AdScheduleViewServiceStub stub;
 
-  private static final PathTemplate AD_SCHEDULE_VIEW_PATH_TEMPLATE =
-      PathTemplate.createWithoutUrlEncoding(
-          "customers/{customer}/adScheduleViews/{ad_schedule_view}");
-
-  /**
-   * Formats a string containing the fully-qualified path to represent a ad_schedule_view resource.
-   *
-   * @deprecated Use the {@link AdScheduleViewName} class instead.
-   */
-  @Deprecated
-  public static final String formatAdScheduleViewName(String customer, String adScheduleView) {
-    return AD_SCHEDULE_VIEW_PATH_TEMPLATE.instantiate(
-        "customer", customer,
-        "ad_schedule_view", adScheduleView);
-  }
-
-  /**
-   * Parses the customer from the given fully-qualified path which represents a ad_schedule_view
-   * resource.
-   *
-   * @deprecated Use the {@link AdScheduleViewName} class instead.
-   */
-  @Deprecated
-  public static final String parseCustomerFromAdScheduleViewName(String adScheduleViewName) {
-    return AD_SCHEDULE_VIEW_PATH_TEMPLATE.parse(adScheduleViewName).get("customer");
-  }
-
-  /**
-   * Parses the ad_schedule_view from the given fully-qualified path which represents a
-   * ad_schedule_view resource.
-   *
-   * @deprecated Use the {@link AdScheduleViewName} class instead.
-   */
-  @Deprecated
-  public static final String parseAdScheduleViewFromAdScheduleViewName(String adScheduleViewName) {
-    return AD_SCHEDULE_VIEW_PATH_TEMPLATE.parse(adScheduleViewName).get("ad_schedule_view");
-  }
-
   /** Constructs an instance of AdScheduleViewServiceClient with default settings. */
   public static final AdScheduleViewServiceClient create() throws IOException {
     return create(AdScheduleViewServiceSettings.newBuilder().build());
@@ -193,8 +154,32 @@ public class AdScheduleViewServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (AdScheduleViewServiceClient adScheduleViewServiceClient = AdScheduleViewServiceClient.create()) {
-   *   String formattedResourceName = AdScheduleViewServiceClient.formatAdScheduleViewName("[CUSTOMER]", "[AD_SCHEDULE_VIEW]");
-   *   AdScheduleView response = adScheduleViewServiceClient.getAdScheduleView(formattedResourceName);
+   *   AdScheduleViewName resourceName = AdScheduleViewName.of("[CUSTOMER]", "[AD_SCHEDULE_VIEW]");
+   *   AdScheduleView response = adScheduleViewServiceClient.getAdScheduleView(resourceName);
+   * }
+   * </code></pre>
+   *
+   * @param resourceName Required. The resource name of the ad schedule view to fetch.
+   * @throws com.google.api.gax.rpc.ApiException if the remote call fails
+   */
+  public final AdScheduleView getAdScheduleView(AdScheduleViewName resourceName) {
+    GetAdScheduleViewRequest request =
+        GetAdScheduleViewRequest.newBuilder()
+            .setResourceName(resourceName == null ? null : resourceName.toString())
+            .build();
+    return getAdScheduleView(request);
+  }
+
+  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  /**
+   * Returns the requested ad schedule view in full detail.
+   *
+   * <p>Sample code:
+   *
+   * <pre><code>
+   * try (AdScheduleViewServiceClient adScheduleViewServiceClient = AdScheduleViewServiceClient.create()) {
+   *   AdScheduleViewName resourceName = AdScheduleViewName.of("[CUSTOMER]", "[AD_SCHEDULE_VIEW]");
+   *   AdScheduleView response = adScheduleViewServiceClient.getAdScheduleView(resourceName.toString());
    * }
    * </code></pre>
    *
@@ -202,7 +187,6 @@ public class AdScheduleViewServiceClient implements BackgroundResource {
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final AdScheduleView getAdScheduleView(String resourceName) {
-    AD_SCHEDULE_VIEW_PATH_TEMPLATE.validate(resourceName, "getAdScheduleView");
     GetAdScheduleViewRequest request =
         GetAdScheduleViewRequest.newBuilder().setResourceName(resourceName).build();
     return getAdScheduleView(request);
@@ -216,9 +200,9 @@ public class AdScheduleViewServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (AdScheduleViewServiceClient adScheduleViewServiceClient = AdScheduleViewServiceClient.create()) {
-   *   String formattedResourceName = AdScheduleViewServiceClient.formatAdScheduleViewName("[CUSTOMER]", "[AD_SCHEDULE_VIEW]");
+   *   AdScheduleViewName resourceName = AdScheduleViewName.of("[CUSTOMER]", "[AD_SCHEDULE_VIEW]");
    *   GetAdScheduleViewRequest request = GetAdScheduleViewRequest.newBuilder()
-   *     .setResourceName(formattedResourceName)
+   *     .setResourceName(resourceName.toString())
    *     .build();
    *   AdScheduleView response = adScheduleViewServiceClient.getAdScheduleView(request);
    * }
@@ -239,9 +223,9 @@ public class AdScheduleViewServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (AdScheduleViewServiceClient adScheduleViewServiceClient = AdScheduleViewServiceClient.create()) {
-   *   String formattedResourceName = AdScheduleViewServiceClient.formatAdScheduleViewName("[CUSTOMER]", "[AD_SCHEDULE_VIEW]");
+   *   AdScheduleViewName resourceName = AdScheduleViewName.of("[CUSTOMER]", "[AD_SCHEDULE_VIEW]");
    *   GetAdScheduleViewRequest request = GetAdScheduleViewRequest.newBuilder()
-   *     .setResourceName(formattedResourceName)
+   *     .setResourceName(resourceName.toString())
    *     .build();
    *   ApiFuture&lt;AdScheduleView&gt; future = adScheduleViewServiceClient.getAdScheduleViewCallable().futureCall(request);
    *   // Do something

@@ -10,7 +10,7 @@ package com.google.ads.googleads.v3.resources;
  *
  * Protobuf type {@code google.ads.googleads.v3.resources.FeedItem}
  */
-public  final class FeedItem extends
+public final class FeedItem extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v3.resources.FeedItem)
     FeedItemOrBuilder {
@@ -26,6 +26,13 @@ private static final long serialVersionUID = 0L;
     urlCustomParameters_ = java.util.Collections.emptyList();
     status_ = 0;
     policyInfos_ = java.util.Collections.emptyList();
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new FeedItem();
   }
 
   @java.lang.Override
@@ -111,9 +118,9 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 50: {
-            if (!((mutable_bitField0_ & 0x00000020) != 0)) {
+            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
               attributeValues_ = new java.util.ArrayList<com.google.ads.googleads.v3.resources.FeedItemAttributeValue>();
-              mutable_bitField0_ |= 0x00000020;
+              mutable_bitField0_ |= 0x00000001;
             }
             attributeValues_.add(
                 input.readMessage(com.google.ads.googleads.v3.resources.FeedItemAttributeValue.parser(), extensionRegistry));
@@ -126,9 +133,9 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 66: {
-            if (!((mutable_bitField0_ & 0x00000080) != 0)) {
+            if (!((mutable_bitField0_ & 0x00000002) != 0)) {
               urlCustomParameters_ = new java.util.ArrayList<com.google.ads.googleads.v3.common.CustomParameter>();
-              mutable_bitField0_ |= 0x00000080;
+              mutable_bitField0_ |= 0x00000002;
             }
             urlCustomParameters_.add(
                 input.readMessage(com.google.ads.googleads.v3.common.CustomParameter.parser(), extensionRegistry));
@@ -141,9 +148,9 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 82: {
-            if (!((mutable_bitField0_ & 0x00000200) != 0)) {
+            if (!((mutable_bitField0_ & 0x00000004) != 0)) {
               policyInfos_ = new java.util.ArrayList<com.google.ads.googleads.v3.resources.FeedItemPlaceholderPolicyInfo>();
-              mutable_bitField0_ |= 0x00000200;
+              mutable_bitField0_ |= 0x00000004;
             }
             policyInfos_.add(
                 input.readMessage(com.google.ads.googleads.v3.resources.FeedItemPlaceholderPolicyInfo.parser(), extensionRegistry));
@@ -164,13 +171,13 @@ private static final long serialVersionUID = 0L;
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
     } finally {
-      if (((mutable_bitField0_ & 0x00000020) != 0)) {
+      if (((mutable_bitField0_ & 0x00000001) != 0)) {
         attributeValues_ = java.util.Collections.unmodifiableList(attributeValues_);
       }
-      if (((mutable_bitField0_ & 0x00000080) != 0)) {
+      if (((mutable_bitField0_ & 0x00000002) != 0)) {
         urlCustomParameters_ = java.util.Collections.unmodifiableList(urlCustomParameters_);
       }
-      if (((mutable_bitField0_ & 0x00000200) != 0)) {
+      if (((mutable_bitField0_ & 0x00000004) != 0)) {
         policyInfos_ = java.util.Collections.unmodifiableList(policyInfos_);
       }
       this.unknownFields = unknownFields.build();
@@ -190,7 +197,6 @@ private static final long serialVersionUID = 0L;
             com.google.ads.googleads.v3.resources.FeedItem.class, com.google.ads.googleads.v3.resources.FeedItem.Builder.class);
   }
 
-  private int bitField0_;
   public static final int RESOURCE_NAME_FIELD_NUMBER = 1;
   private volatile java.lang.Object resourceName_;
   /**
@@ -201,7 +207,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * @return The resourceName.
    */
+  @java.lang.Override
   public java.lang.String getResourceName() {
     java.lang.Object ref = resourceName_;
     if (ref instanceof java.lang.String) {
@@ -222,7 +230,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * @return The bytes for resourceName.
    */
+  @java.lang.Override
   public com.google.protobuf.ByteString
       getResourceNameBytes() {
     java.lang.Object ref = resourceName_;
@@ -245,7 +255,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue feed = 2 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * @return Whether the feed field is set.
    */
+  @java.lang.Override
   public boolean hasFeed() {
     return feed_ != null;
   }
@@ -255,7 +267,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue feed = 2 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * @return The feed.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getFeed() {
     return feed_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : feed_;
   }
@@ -266,6 +280,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue feed = 2 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getFeedOrBuilder() {
     return getFeed();
   }
@@ -278,7 +293,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the id field is set.
    */
+  @java.lang.Override
   public boolean hasId() {
     return id_ != null;
   }
@@ -288,7 +305,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The id.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getId() {
     return id_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : id_;
   }
@@ -299,6 +318,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getIdOrBuilder() {
     return getId();
   }
@@ -314,7 +334,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue start_date_time = 4;</code>
+   * @return Whether the startDateTime field is set.
    */
+  @java.lang.Override
   public boolean hasStartDateTime() {
     return startDateTime_ != null;
   }
@@ -327,7 +349,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue start_date_time = 4;</code>
+   * @return The startDateTime.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getStartDateTime() {
     return startDateTime_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : startDateTime_;
   }
@@ -341,6 +365,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue start_date_time = 4;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getStartDateTimeOrBuilder() {
     return getStartDateTime();
   }
@@ -356,7 +381,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue end_date_time = 5;</code>
+   * @return Whether the endDateTime field is set.
    */
+  @java.lang.Override
   public boolean hasEndDateTime() {
     return endDateTime_ != null;
   }
@@ -369,7 +396,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue end_date_time = 5;</code>
+   * @return The endDateTime.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getEndDateTime() {
     return endDateTime_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : endDateTime_;
   }
@@ -383,6 +412,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue end_date_time = 5;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getEndDateTimeOrBuilder() {
     return getEndDateTime();
   }
@@ -396,6 +426,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v3.resources.FeedItemAttributeValue attribute_values = 6;</code>
    */
+  @java.lang.Override
   public java.util.List<com.google.ads.googleads.v3.resources.FeedItemAttributeValue> getAttributeValuesList() {
     return attributeValues_;
   }
@@ -406,6 +437,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v3.resources.FeedItemAttributeValue attribute_values = 6;</code>
    */
+  @java.lang.Override
   public java.util.List<? extends com.google.ads.googleads.v3.resources.FeedItemAttributeValueOrBuilder> 
       getAttributeValuesOrBuilderList() {
     return attributeValues_;
@@ -417,6 +449,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v3.resources.FeedItemAttributeValue attribute_values = 6;</code>
    */
+  @java.lang.Override
   public int getAttributeValuesCount() {
     return attributeValues_.size();
   }
@@ -427,6 +460,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v3.resources.FeedItemAttributeValue attribute_values = 6;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.resources.FeedItemAttributeValue getAttributeValues(int index) {
     return attributeValues_.get(index);
   }
@@ -437,6 +471,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v3.resources.FeedItemAttributeValue attribute_values = 6;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.resources.FeedItemAttributeValueOrBuilder getAttributeValuesOrBuilder(
       int index) {
     return attributeValues_.get(index);
@@ -451,8 +486,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.GeoTargetingRestrictionEnum.GeoTargetingRestriction geo_targeting_restriction = 7;</code>
+   * @return The enum numeric value on the wire for geoTargetingRestriction.
    */
-  public int getGeoTargetingRestrictionValue() {
+  @java.lang.Override public int getGeoTargetingRestrictionValue() {
     return geoTargetingRestriction_;
   }
   /**
@@ -462,8 +498,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.GeoTargetingRestrictionEnum.GeoTargetingRestriction geo_targeting_restriction = 7;</code>
+   * @return The geoTargetingRestriction.
    */
-  public com.google.ads.googleads.v3.enums.GeoTargetingRestrictionEnum.GeoTargetingRestriction getGeoTargetingRestriction() {
+  @java.lang.Override public com.google.ads.googleads.v3.enums.GeoTargetingRestrictionEnum.GeoTargetingRestriction getGeoTargetingRestriction() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v3.enums.GeoTargetingRestrictionEnum.GeoTargetingRestriction result = com.google.ads.googleads.v3.enums.GeoTargetingRestrictionEnum.GeoTargetingRestriction.valueOf(geoTargetingRestriction_);
     return result == null ? com.google.ads.googleads.v3.enums.GeoTargetingRestrictionEnum.GeoTargetingRestriction.UNRECOGNIZED : result;
@@ -479,6 +516,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v3.common.CustomParameter url_custom_parameters = 8;</code>
    */
+  @java.lang.Override
   public java.util.List<com.google.ads.googleads.v3.common.CustomParameter> getUrlCustomParametersList() {
     return urlCustomParameters_;
   }
@@ -490,6 +528,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v3.common.CustomParameter url_custom_parameters = 8;</code>
    */
+  @java.lang.Override
   public java.util.List<? extends com.google.ads.googleads.v3.common.CustomParameterOrBuilder> 
       getUrlCustomParametersOrBuilderList() {
     return urlCustomParameters_;
@@ -502,6 +541,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v3.common.CustomParameter url_custom_parameters = 8;</code>
    */
+  @java.lang.Override
   public int getUrlCustomParametersCount() {
     return urlCustomParameters_.size();
   }
@@ -513,6 +553,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v3.common.CustomParameter url_custom_parameters = 8;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.common.CustomParameter getUrlCustomParameters(int index) {
     return urlCustomParameters_.get(index);
   }
@@ -524,6 +565,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v3.common.CustomParameter url_custom_parameters = 8;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.common.CustomParameterOrBuilder getUrlCustomParametersOrBuilder(
       int index) {
     return urlCustomParameters_.get(index);
@@ -538,8 +580,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.FeedItemStatusEnum.FeedItemStatus status = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The enum numeric value on the wire for status.
    */
-  public int getStatusValue() {
+  @java.lang.Override public int getStatusValue() {
     return status_;
   }
   /**
@@ -549,8 +592,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.FeedItemStatusEnum.FeedItemStatus status = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The status.
    */
-  public com.google.ads.googleads.v3.enums.FeedItemStatusEnum.FeedItemStatus getStatus() {
+  @java.lang.Override public com.google.ads.googleads.v3.enums.FeedItemStatusEnum.FeedItemStatus getStatus() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v3.enums.FeedItemStatusEnum.FeedItemStatus result = com.google.ads.googleads.v3.enums.FeedItemStatusEnum.FeedItemStatus.valueOf(status_);
     return result == null ? com.google.ads.googleads.v3.enums.FeedItemStatusEnum.FeedItemStatus.UNRECOGNIZED : result;
@@ -570,6 +614,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v3.resources.FeedItemPlaceholderPolicyInfo policy_infos = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public java.util.List<com.google.ads.googleads.v3.resources.FeedItemPlaceholderPolicyInfo> getPolicyInfosList() {
     return policyInfos_;
   }
@@ -585,6 +630,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v3.resources.FeedItemPlaceholderPolicyInfo policy_infos = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public java.util.List<? extends com.google.ads.googleads.v3.resources.FeedItemPlaceholderPolicyInfoOrBuilder> 
       getPolicyInfosOrBuilderList() {
     return policyInfos_;
@@ -601,6 +647,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v3.resources.FeedItemPlaceholderPolicyInfo policy_infos = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public int getPolicyInfosCount() {
     return policyInfos_.size();
   }
@@ -616,6 +663,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v3.resources.FeedItemPlaceholderPolicyInfo policy_infos = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.resources.FeedItemPlaceholderPolicyInfo getPolicyInfos(int index) {
     return policyInfos_.get(index);
   }
@@ -631,6 +679,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v3.resources.FeedItemPlaceholderPolicyInfo policy_infos = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.resources.FeedItemPlaceholderPolicyInfoOrBuilder getPolicyInfosOrBuilder(
       int index) {
     return policyInfos_.get(index);
@@ -986,7 +1035,7 @@ private static final long serialVersionUID = 0L;
       }
       if (attributeValuesBuilder_ == null) {
         attributeValues_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000020);
+        bitField0_ = (bitField0_ & ~0x00000001);
       } else {
         attributeValuesBuilder_.clear();
       }
@@ -994,7 +1043,7 @@ private static final long serialVersionUID = 0L;
 
       if (urlCustomParametersBuilder_ == null) {
         urlCustomParameters_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000080);
+        bitField0_ = (bitField0_ & ~0x00000002);
       } else {
         urlCustomParametersBuilder_.clear();
       }
@@ -1002,7 +1051,7 @@ private static final long serialVersionUID = 0L;
 
       if (policyInfosBuilder_ == null) {
         policyInfos_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000200);
+        bitField0_ = (bitField0_ & ~0x00000004);
       } else {
         policyInfosBuilder_.clear();
       }
@@ -1033,7 +1082,6 @@ private static final long serialVersionUID = 0L;
     public com.google.ads.googleads.v3.resources.FeedItem buildPartial() {
       com.google.ads.googleads.v3.resources.FeedItem result = new com.google.ads.googleads.v3.resources.FeedItem(this);
       int from_bitField0_ = bitField0_;
-      int to_bitField0_ = 0;
       result.resourceName_ = resourceName_;
       if (feedBuilder_ == null) {
         result.feed_ = feed_;
@@ -1056,9 +1104,9 @@ private static final long serialVersionUID = 0L;
         result.endDateTime_ = endDateTimeBuilder_.build();
       }
       if (attributeValuesBuilder_ == null) {
-        if (((bitField0_ & 0x00000020) != 0)) {
+        if (((bitField0_ & 0x00000001) != 0)) {
           attributeValues_ = java.util.Collections.unmodifiableList(attributeValues_);
-          bitField0_ = (bitField0_ & ~0x00000020);
+          bitField0_ = (bitField0_ & ~0x00000001);
         }
         result.attributeValues_ = attributeValues_;
       } else {
@@ -1066,9 +1114,9 @@ private static final long serialVersionUID = 0L;
       }
       result.geoTargetingRestriction_ = geoTargetingRestriction_;
       if (urlCustomParametersBuilder_ == null) {
-        if (((bitField0_ & 0x00000080) != 0)) {
+        if (((bitField0_ & 0x00000002) != 0)) {
           urlCustomParameters_ = java.util.Collections.unmodifiableList(urlCustomParameters_);
-          bitField0_ = (bitField0_ & ~0x00000080);
+          bitField0_ = (bitField0_ & ~0x00000002);
         }
         result.urlCustomParameters_ = urlCustomParameters_;
       } else {
@@ -1076,15 +1124,14 @@ private static final long serialVersionUID = 0L;
       }
       result.status_ = status_;
       if (policyInfosBuilder_ == null) {
-        if (((bitField0_ & 0x00000200) != 0)) {
+        if (((bitField0_ & 0x00000004) != 0)) {
           policyInfos_ = java.util.Collections.unmodifiableList(policyInfos_);
-          bitField0_ = (bitField0_ & ~0x00000200);
+          bitField0_ = (bitField0_ & ~0x00000004);
         }
         result.policyInfos_ = policyInfos_;
       } else {
         result.policyInfos_ = policyInfosBuilder_.build();
       }
-      result.bitField0_ = to_bitField0_;
       onBuilt();
       return result;
     }
@@ -1153,7 +1200,7 @@ private static final long serialVersionUID = 0L;
         if (!other.attributeValues_.isEmpty()) {
           if (attributeValues_.isEmpty()) {
             attributeValues_ = other.attributeValues_;
-            bitField0_ = (bitField0_ & ~0x00000020);
+            bitField0_ = (bitField0_ & ~0x00000001);
           } else {
             ensureAttributeValuesIsMutable();
             attributeValues_.addAll(other.attributeValues_);
@@ -1166,7 +1213,7 @@ private static final long serialVersionUID = 0L;
             attributeValuesBuilder_.dispose();
             attributeValuesBuilder_ = null;
             attributeValues_ = other.attributeValues_;
-            bitField0_ = (bitField0_ & ~0x00000020);
+            bitField0_ = (bitField0_ & ~0x00000001);
             attributeValuesBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getAttributeValuesFieldBuilder() : null;
@@ -1182,7 +1229,7 @@ private static final long serialVersionUID = 0L;
         if (!other.urlCustomParameters_.isEmpty()) {
           if (urlCustomParameters_.isEmpty()) {
             urlCustomParameters_ = other.urlCustomParameters_;
-            bitField0_ = (bitField0_ & ~0x00000080);
+            bitField0_ = (bitField0_ & ~0x00000002);
           } else {
             ensureUrlCustomParametersIsMutable();
             urlCustomParameters_.addAll(other.urlCustomParameters_);
@@ -1195,7 +1242,7 @@ private static final long serialVersionUID = 0L;
             urlCustomParametersBuilder_.dispose();
             urlCustomParametersBuilder_ = null;
             urlCustomParameters_ = other.urlCustomParameters_;
-            bitField0_ = (bitField0_ & ~0x00000080);
+            bitField0_ = (bitField0_ & ~0x00000002);
             urlCustomParametersBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getUrlCustomParametersFieldBuilder() : null;
@@ -1211,7 +1258,7 @@ private static final long serialVersionUID = 0L;
         if (!other.policyInfos_.isEmpty()) {
           if (policyInfos_.isEmpty()) {
             policyInfos_ = other.policyInfos_;
-            bitField0_ = (bitField0_ & ~0x00000200);
+            bitField0_ = (bitField0_ & ~0x00000004);
           } else {
             ensurePolicyInfosIsMutable();
             policyInfos_.addAll(other.policyInfos_);
@@ -1224,7 +1271,7 @@ private static final long serialVersionUID = 0L;
             policyInfosBuilder_.dispose();
             policyInfosBuilder_ = null;
             policyInfos_ = other.policyInfos_;
-            bitField0_ = (bitField0_ & ~0x00000200);
+            bitField0_ = (bitField0_ & ~0x00000004);
             policyInfosBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getPolicyInfosFieldBuilder() : null;
@@ -1272,6 +1319,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * @return The resourceName.
      */
     public java.lang.String getResourceName() {
       java.lang.Object ref = resourceName_;
@@ -1293,6 +1341,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * @return The bytes for resourceName.
      */
     public com.google.protobuf.ByteString
         getResourceNameBytes() {
@@ -1315,6 +1364,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * @param value The resourceName to set.
+     * @return This builder for chaining.
      */
     public Builder setResourceName(
         java.lang.String value) {
@@ -1334,6 +1385,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * @return This builder for chaining.
      */
     public Builder clearResourceName() {
       
@@ -1349,6 +1401,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * @param value The bytes for resourceName to set.
+     * @return This builder for chaining.
      */
     public Builder setResourceNameBytes(
         com.google.protobuf.ByteString value) {
@@ -1371,6 +1425,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue feed = 2 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * @return Whether the feed field is set.
      */
     public boolean hasFeed() {
       return feedBuilder_ != null || feed_ != null;
@@ -1381,6 +1436,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue feed = 2 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * @return The feed.
      */
     public com.google.protobuf.StringValue getFeed() {
       if (feedBuilder_ == null) {
@@ -1524,6 +1580,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the id field is set.
      */
     public boolean hasId() {
       return idBuilder_ != null || id_ != null;
@@ -1534,6 +1591,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The id.
      */
     public com.google.protobuf.Int64Value getId() {
       if (idBuilder_ == null) {
@@ -1680,6 +1738,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue start_date_time = 4;</code>
+     * @return Whether the startDateTime field is set.
      */
     public boolean hasStartDateTime() {
       return startDateTimeBuilder_ != null || startDateTime_ != null;
@@ -1693,6 +1752,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue start_date_time = 4;</code>
+     * @return The startDateTime.
      */
     public com.google.protobuf.StringValue getStartDateTime() {
       if (startDateTimeBuilder_ == null) {
@@ -1860,6 +1920,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue end_date_time = 5;</code>
+     * @return Whether the endDateTime field is set.
      */
     public boolean hasEndDateTime() {
       return endDateTimeBuilder_ != null || endDateTime_ != null;
@@ -1873,6 +1934,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue end_date_time = 5;</code>
+     * @return The endDateTime.
      */
     public com.google.protobuf.StringValue getEndDateTime() {
       if (endDateTimeBuilder_ == null) {
@@ -2031,9 +2093,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.google.ads.googleads.v3.resources.FeedItemAttributeValue> attributeValues_ =
       java.util.Collections.emptyList();
     private void ensureAttributeValuesIsMutable() {
-      if (!((bitField0_ & 0x00000020) != 0)) {
+      if (!((bitField0_ & 0x00000001) != 0)) {
         attributeValues_ = new java.util.ArrayList<com.google.ads.googleads.v3.resources.FeedItemAttributeValue>(attributeValues_);
-        bitField0_ |= 0x00000020;
+        bitField0_ |= 0x00000001;
        }
     }
 
@@ -2227,7 +2289,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearAttributeValues() {
       if (attributeValuesBuilder_ == null) {
         attributeValues_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000020);
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
       } else {
         attributeValuesBuilder_.clear();
@@ -2332,7 +2394,7 @@ private static final long serialVersionUID = 0L;
         attributeValuesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.google.ads.googleads.v3.resources.FeedItemAttributeValue, com.google.ads.googleads.v3.resources.FeedItemAttributeValue.Builder, com.google.ads.googleads.v3.resources.FeedItemAttributeValueOrBuilder>(
                 attributeValues_,
-                ((bitField0_ & 0x00000020) != 0),
+                ((bitField0_ & 0x00000001) != 0),
                 getParentForChildren(),
                 isClean());
         attributeValues_ = null;
@@ -2348,8 +2410,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.GeoTargetingRestrictionEnum.GeoTargetingRestriction geo_targeting_restriction = 7;</code>
+     * @return The enum numeric value on the wire for geoTargetingRestriction.
      */
-    public int getGeoTargetingRestrictionValue() {
+    @java.lang.Override public int getGeoTargetingRestrictionValue() {
       return geoTargetingRestriction_;
     }
     /**
@@ -2359,8 +2422,11 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.GeoTargetingRestrictionEnum.GeoTargetingRestriction geo_targeting_restriction = 7;</code>
+     * @param value The enum numeric value on the wire for geoTargetingRestriction to set.
+     * @return This builder for chaining.
      */
     public Builder setGeoTargetingRestrictionValue(int value) {
+      
       geoTargetingRestriction_ = value;
       onChanged();
       return this;
@@ -2372,7 +2438,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.GeoTargetingRestrictionEnum.GeoTargetingRestriction geo_targeting_restriction = 7;</code>
+     * @return The geoTargetingRestriction.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.enums.GeoTargetingRestrictionEnum.GeoTargetingRestriction getGeoTargetingRestriction() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v3.enums.GeoTargetingRestrictionEnum.GeoTargetingRestriction result = com.google.ads.googleads.v3.enums.GeoTargetingRestrictionEnum.GeoTargetingRestriction.valueOf(geoTargetingRestriction_);
@@ -2385,6 +2453,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.GeoTargetingRestrictionEnum.GeoTargetingRestriction geo_targeting_restriction = 7;</code>
+     * @param value The geoTargetingRestriction to set.
+     * @return This builder for chaining.
      */
     public Builder setGeoTargetingRestriction(com.google.ads.googleads.v3.enums.GeoTargetingRestrictionEnum.GeoTargetingRestriction value) {
       if (value == null) {
@@ -2402,6 +2472,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.GeoTargetingRestrictionEnum.GeoTargetingRestriction geo_targeting_restriction = 7;</code>
+     * @return This builder for chaining.
      */
     public Builder clearGeoTargetingRestriction() {
       
@@ -2413,9 +2484,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.google.ads.googleads.v3.common.CustomParameter> urlCustomParameters_ =
       java.util.Collections.emptyList();
     private void ensureUrlCustomParametersIsMutable() {
-      if (!((bitField0_ & 0x00000080) != 0)) {
+      if (!((bitField0_ & 0x00000002) != 0)) {
         urlCustomParameters_ = new java.util.ArrayList<com.google.ads.googleads.v3.common.CustomParameter>(urlCustomParameters_);
-        bitField0_ |= 0x00000080;
+        bitField0_ |= 0x00000002;
        }
     }
 
@@ -2620,7 +2691,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearUrlCustomParameters() {
       if (urlCustomParametersBuilder_ == null) {
         urlCustomParameters_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000080);
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
       } else {
         urlCustomParametersBuilder_.clear();
@@ -2732,7 +2803,7 @@ private static final long serialVersionUID = 0L;
         urlCustomParametersBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.google.ads.googleads.v3.common.CustomParameter, com.google.ads.googleads.v3.common.CustomParameter.Builder, com.google.ads.googleads.v3.common.CustomParameterOrBuilder>(
                 urlCustomParameters_,
-                ((bitField0_ & 0x00000080) != 0),
+                ((bitField0_ & 0x00000002) != 0),
                 getParentForChildren(),
                 isClean());
         urlCustomParameters_ = null;
@@ -2748,8 +2819,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.FeedItemStatusEnum.FeedItemStatus status = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The enum numeric value on the wire for status.
      */
-    public int getStatusValue() {
+    @java.lang.Override public int getStatusValue() {
       return status_;
     }
     /**
@@ -2759,8 +2831,11 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.FeedItemStatusEnum.FeedItemStatus status = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @param value The enum numeric value on the wire for status to set.
+     * @return This builder for chaining.
      */
     public Builder setStatusValue(int value) {
+      
       status_ = value;
       onChanged();
       return this;
@@ -2772,7 +2847,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.FeedItemStatusEnum.FeedItemStatus status = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The status.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.enums.FeedItemStatusEnum.FeedItemStatus getStatus() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v3.enums.FeedItemStatusEnum.FeedItemStatus result = com.google.ads.googleads.v3.enums.FeedItemStatusEnum.FeedItemStatus.valueOf(status_);
@@ -2785,6 +2862,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.FeedItemStatusEnum.FeedItemStatus status = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @param value The status to set.
+     * @return This builder for chaining.
      */
     public Builder setStatus(com.google.ads.googleads.v3.enums.FeedItemStatusEnum.FeedItemStatus value) {
       if (value == null) {
@@ -2802,6 +2881,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.FeedItemStatusEnum.FeedItemStatus status = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return This builder for chaining.
      */
     public Builder clearStatus() {
       
@@ -2813,9 +2893,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.google.ads.googleads.v3.resources.FeedItemPlaceholderPolicyInfo> policyInfos_ =
       java.util.Collections.emptyList();
     private void ensurePolicyInfosIsMutable() {
-      if (!((bitField0_ & 0x00000200) != 0)) {
+      if (!((bitField0_ & 0x00000004) != 0)) {
         policyInfos_ = new java.util.ArrayList<com.google.ads.googleads.v3.resources.FeedItemPlaceholderPolicyInfo>(policyInfos_);
-        bitField0_ |= 0x00000200;
+        bitField0_ |= 0x00000004;
        }
     }
 
@@ -3064,7 +3144,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearPolicyInfos() {
       if (policyInfosBuilder_ == null) {
         policyInfos_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000200);
+        bitField0_ = (bitField0_ & ~0x00000004);
         onChanged();
       } else {
         policyInfosBuilder_.clear();
@@ -3204,7 +3284,7 @@ private static final long serialVersionUID = 0L;
         policyInfosBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.google.ads.googleads.v3.resources.FeedItemPlaceholderPolicyInfo, com.google.ads.googleads.v3.resources.FeedItemPlaceholderPolicyInfo.Builder, com.google.ads.googleads.v3.resources.FeedItemPlaceholderPolicyInfoOrBuilder>(
                 policyInfos_,
-                ((bitField0_ & 0x00000200) != 0),
+                ((bitField0_ & 0x00000004) != 0),
                 getParentForChildren(),
                 isClean());
         policyInfos_ = null;

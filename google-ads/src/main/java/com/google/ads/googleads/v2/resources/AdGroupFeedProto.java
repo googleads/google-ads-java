@@ -34,52 +34,62 @@ public final class AdGroupFeedProto {
       "on/matching_function.proto\0324google/ads/g" +
       "oogleads/v2/enums/feed_link_status.proto" +
       "\0324google/ads/googleads/v2/enums/placehol" +
-      "der_type.proto\032\036google/protobuf/wrappers" +
-      ".proto\032\034google/api/annotations.proto\"\376\002\n" +
-      "\013AdGroupFeed\022\025\n\rresource_name\030\001 \001(\t\022*\n\004f" +
-      "eed\030\002 \001(\0132\034.google.protobuf.StringValue\022" +
-      ".\n\010ad_group\030\003 \001(\0132\034.google.protobuf.Stri" +
-      "ngValue\022]\n\021placeholder_types\030\004 \003(\0162B.goo" +
-      "gle.ads.googleads.v2.enums.PlaceholderTy" +
-      "peEnum.PlaceholderType\022K\n\021matching_funct" +
-      "ion\030\005 \001(\01320.google.ads.googleads.v2.comm" +
-      "on.MatchingFunction\022P\n\006status\030\006 \001(\0162@.go" +
-      "ogle.ads.googleads.v2.enums.FeedLinkStat" +
-      "usEnum.FeedLinkStatusB\375\001\n%com.google.ads" +
-      ".googleads.v2.resourcesB\020AdGroupFeedProt" +
-      "oP\001ZJgoogle.golang.org/genproto/googleap" +
-      "is/ads/googleads/v2/resources;resources\242" +
-      "\002\003GAA\252\002!Google.Ads.GoogleAds.V2.Resource" +
-      "s\312\002!Google\\Ads\\GoogleAds\\V2\\Resources\352\002%" +
-      "Google::Ads::GoogleAds::V2::Resourcesb\006p" +
-      "roto3"
+      "der_type.proto\032\037google/api/field_behavio" +
+      "r.proto\032\031google/api/resource.proto\032\036goog" +
+      "le/protobuf/wrappers.proto\032\034google/api/a" +
+      "nnotations.proto\"\340\004\n\013AdGroupFeed\022C\n\rreso" +
+      "urce_name\030\001 \001(\tB,\340A\005\372A&\n$googleads.googl" +
+      "eapis.com/AdGroupFeed\022Q\n\004feed\030\002 \001(\0132\034.go" +
+      "ogle.protobuf.StringValueB%\340A\005\372A\037\n\035googl" +
+      "eads.googleapis.com/Feed\022X\n\010ad_group\030\003 \001" +
+      "(\0132\034.google.protobuf.StringValueB(\340A\005\372A\"" +
+      "\n googleads.googleapis.com/AdGroup\022]\n\021pl" +
+      "aceholder_types\030\004 \003(\0162B.google.ads.googl" +
+      "eads.v2.enums.PlaceholderTypeEnum.Placeh" +
+      "olderType\022K\n\021matching_function\030\005 \001(\01320.g" +
+      "oogle.ads.googleads.v2.common.MatchingFu" +
+      "nction\022U\n\006status\030\006 \001(\0162@.google.ads.goog" +
+      "leads.v2.enums.FeedLinkStatusEnum.FeedLi" +
+      "nkStatusB\003\340A\003:\\\352AY\n$googleads.googleapis" +
+      ".com/AdGroupFeed\0221customers/{customer}/a" +
+      "dGroupFeeds/{ad_group_feed}B\375\001\n%com.goog" +
+      "le.ads.googleads.v2.resourcesB\020AdGroupFe" +
+      "edProtoP\001ZJgoogle.golang.org/genproto/go" +
+      "ogleapis/ads/googleads/v2/resources;reso" +
+      "urces\242\002\003GAA\252\002!Google.Ads.GoogleAds.V2.Re" +
+      "sources\312\002!Google\\Ads\\GoogleAds\\V2\\Resour" +
+      "ces\352\002%Google::Ads::GoogleAds::V2::Resour" +
+      "cesb\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.ads.googleads.v2.common.MatchingFunctionProto.getDescriptor(),
           com.google.ads.googleads.v2.enums.FeedLinkStatusProto.getDescriptor(),
           com.google.ads.googleads.v2.enums.PlaceholderTypeProto.getDescriptor(),
+          com.google.api.FieldBehaviorProto.getDescriptor(),
+          com.google.api.ResourceProto.getDescriptor(),
           com.google.protobuf.WrappersProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
-        }, assigner);
+        });
     internal_static_google_ads_googleads_v2_resources_AdGroupFeed_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_google_ads_googleads_v2_resources_AdGroupFeed_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v2_resources_AdGroupFeed_descriptor,
         new java.lang.String[] { "ResourceName", "Feed", "AdGroup", "PlaceholderTypes", "MatchingFunction", "Status", });
+    com.google.protobuf.ExtensionRegistry registry =
+        com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);
+    registry.add(com.google.api.ResourceProto.resource);
+    registry.add(com.google.api.ResourceProto.resourceReference);
+    com.google.protobuf.Descriptors.FileDescriptor
+        .internalUpdateFileDescriptor(descriptor, registry);
     com.google.ads.googleads.v2.common.MatchingFunctionProto.getDescriptor();
     com.google.ads.googleads.v2.enums.FeedLinkStatusProto.getDescriptor();
     com.google.ads.googleads.v2.enums.PlaceholderTypeProto.getDescriptor();
+    com.google.api.FieldBehaviorProto.getDescriptor();
+    com.google.api.ResourceProto.getDescriptor();
     com.google.protobuf.WrappersProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
   }

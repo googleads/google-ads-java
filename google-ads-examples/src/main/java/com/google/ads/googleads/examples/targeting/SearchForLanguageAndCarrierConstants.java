@@ -18,14 +18,14 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.v3.errors.GoogleAdsError;
-import com.google.ads.googleads.v3.errors.GoogleAdsException;
-import com.google.ads.googleads.v3.resources.CarrierConstant;
-import com.google.ads.googleads.v3.resources.LanguageConstant;
-import com.google.ads.googleads.v3.services.GoogleAdsRow;
-import com.google.ads.googleads.v3.services.GoogleAdsServiceClient;
-import com.google.ads.googleads.v3.services.SearchGoogleAdsStreamRequest;
-import com.google.ads.googleads.v3.services.SearchGoogleAdsStreamResponse;
+import com.google.ads.googleads.v5.errors.GoogleAdsError;
+import com.google.ads.googleads.v5.errors.GoogleAdsException;
+import com.google.ads.googleads.v5.resources.CarrierConstant;
+import com.google.ads.googleads.v5.resources.LanguageConstant;
+import com.google.ads.googleads.v5.services.GoogleAdsRow;
+import com.google.ads.googleads.v5.services.GoogleAdsServiceClient;
+import com.google.ads.googleads.v5.services.SearchGoogleAdsStreamRequest;
+import com.google.ads.googleads.v5.services.SearchGoogleAdsStreamResponse;
 import com.google.api.gax.rpc.ServerStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -49,7 +49,7 @@ public class SearchForLanguageAndCarrierConstants {
     private String languageName = "eng";
 
     @Parameter(
-        names = ArgumentNames.COUNTRY_CODE,
+        names = ArgumentNames.CARRIER_COUNTRY_CODE,
         description =
             "Country code for carrier constant filtering. A list of country codes can be"
                 + " referenced here:"
@@ -71,16 +71,16 @@ public class SearchForLanguageAndCarrierConstants {
       // params.countryCode = "INSERT_COUNTRY_CODE_HERE";
     }
 
-    GoogleAdsClient googleAdsClient;
+    GoogleAdsClient googleAdsClient = null;
     try {
       googleAdsClient = GoogleAdsClient.newBuilder().fromPropertiesFile().build();
     } catch (FileNotFoundException fnfe) {
       System.err.printf(
           "Failed to load GoogleAdsClient configuration from file. Exception: %s%n", fnfe);
-      return;
+      System.exit(1);
     } catch (IOException ioe) {
       System.err.printf("Failed to create GoogleAdsClient. Exception: %s%n", ioe);
-      return;
+      System.exit(1);
     }
 
     try {
@@ -98,6 +98,7 @@ public class SearchForLanguageAndCarrierConstants {
       for (GoogleAdsError googleAdsError : gae.getGoogleAdsFailure().getErrorsList()) {
         System.err.printf("  Error %d: %s%n", i++, googleAdsError);
       }
+      System.exit(1);
     }
   }
 
@@ -157,10 +158,10 @@ public class SearchForLanguageAndCarrierConstants {
           LanguageConstant languageConstant = googleAdsRow.getLanguageConstant();
           System.out.printf(
               "Language with ID %d, code '%s', name '%s', and targetable '%s' was found.%n",
-              languageConstant.getId().getValue(),
-              languageConstant.getCode().getValue(),
-              languageConstant.getName().getValue(),
-              languageConstant.getTargetable().getValue());
+              languageConstant.getId(),
+              languageConstant.getCode(),
+              languageConstant.getName(),
+              languageConstant.getTargetable());
         }
       }
     }
@@ -206,9 +207,7 @@ public class SearchForLanguageAndCarrierConstants {
           CarrierConstant carrierConstant = googleAdsRow.getCarrierConstant();
           System.out.printf(
               "Carrier with ID %d, name '%s', and country code '%s' was found.%n",
-              carrierConstant.getId().getValue(),
-              carrierConstant.getName().getValue(),
-              carrierConstant.getCountryCode().getValue());
+              carrierConstant.getId(), carrierConstant.getName(), carrierConstant.getCountryCode());
         }
       }
     }

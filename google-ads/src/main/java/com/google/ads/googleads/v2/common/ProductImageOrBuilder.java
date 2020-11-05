@@ -15,6 +15,7 @@ public interface ProductImageOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue product_image = 1;</code>
+   * @return Whether the productImage field is set.
    */
   boolean hasProductImage();
   /**
@@ -25,6 +26,7 @@ public interface ProductImageOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue product_image = 1;</code>
+   * @return The productImage.
    */
   com.google.protobuf.StringValue getProductImage();
   /**
@@ -44,6 +46,7 @@ public interface ProductImageOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue description = 2;</code>
+   * @return Whether the description field is set.
    */
   boolean hasDescription();
   /**
@@ -52,6 +55,7 @@ public interface ProductImageOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue description = 2;</code>
+   * @return The description.
    */
   com.google.protobuf.StringValue getDescription();
   /**
@@ -69,6 +73,7 @@ public interface ProductImageOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.common.DisplayCallToAction display_call_to_action = 3;</code>
+   * @return Whether the displayCallToAction field is set.
    */
   boolean hasDisplayCallToAction();
   /**
@@ -77,6 +82,7 @@ public interface ProductImageOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.common.DisplayCallToAction display_call_to_action = 3;</code>
+   * @return The displayCallToAction.
    */
   com.google.ads.googleads.v2.common.DisplayCallToAction getDisplayCallToAction();
   /**

@@ -1,5 +1,5 @@
 /*
- * Copyright 2019 Google LLC
+ * Copyright 2020 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -21,7 +21,6 @@ import com.google.api.core.BetaApi;
 import com.google.api.gax.core.BackgroundResource;
 import com.google.api.gax.rpc.UnaryCallable;
 import java.io.IOException;
-import java.util.List;
 import java.util.concurrent.TimeUnit;
 import javax.annotation.Generated;
 
@@ -38,7 +37,11 @@ import javax.annotation.Generated;
  * try (UserDataServiceClient userDataServiceClient = UserDataServiceClient.create()) {
  *   String customerId = "";
  *   List&lt;UserDataOperation&gt; operations = new ArrayList&lt;&gt;();
- *   UploadUserDataResponse response = userDataServiceClient.uploadUserData(customerId, operations);
+ *   UploadUserDataRequest request = UploadUserDataRequest.newBuilder()
+ *     .setCustomerId(customerId)
+ *     .addAllOperations(operations)
+ *     .build();
+ *   UploadUserDataResponse response = userDataServiceClient.uploadUserData(request);
  * }
  * </code>
  * </pre>
@@ -146,35 +149,6 @@ public class UserDataServiceClient implements BackgroundResource {
   @BetaApi("A restructuring of stub classes is planned, so this may break in the future")
   public UserDataServiceStub getStub() {
     return stub;
-  }
-
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
-  /**
-   * Uploads the given user data.
-   *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (UserDataServiceClient userDataServiceClient = UserDataServiceClient.create()) {
-   *   String customerId = "";
-   *   List&lt;UserDataOperation&gt; operations = new ArrayList&lt;&gt;();
-   *   UploadUserDataResponse response = userDataServiceClient.uploadUserData(customerId, operations);
-   * }
-   * </code></pre>
-   *
-   * @param customerId Required. The ID of the customer for which to update the user data.
-   * @param operations Required. The list of operations to be done.
-   * @throws com.google.api.gax.rpc.ApiException if the remote call fails
-   */
-  public final UploadUserDataResponse uploadUserData(
-      String customerId, List<UserDataOperation> operations) {
-
-    UploadUserDataRequest request =
-        UploadUserDataRequest.newBuilder()
-            .setCustomerId(customerId)
-            .addAllOperations(operations)
-            .build();
-    return uploadUserData(request);
   }
 
   // AUTO-GENERATED DOCUMENTATION AND METHOD

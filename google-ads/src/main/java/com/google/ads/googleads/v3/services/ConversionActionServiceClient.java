@@ -1,5 +1,5 @@
 /*
- * Copyright 2019 Google LLC
+ * Copyright 2020 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -21,7 +21,6 @@ import com.google.ads.googleads.v3.services.stub.ConversionActionServiceStubSett
 import com.google.api.core.BetaApi;
 import com.google.api.gax.core.BackgroundResource;
 import com.google.api.gax.rpc.UnaryCallable;
-import com.google.api.pathtemplate.PathTemplate;
 import java.io.IOException;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
@@ -37,8 +36,8 @@ import javax.annotation.Generated;
  * <pre>
  * <code>
  * try (ConversionActionServiceClient conversionActionServiceClient = ConversionActionServiceClient.create()) {
- *   String formattedResourceName = ConversionActionServiceClient.formatConversionActionName("[CUSTOMER]", "[CONVERSION_ACTION]");
- *   ConversionAction response = conversionActionServiceClient.getConversionAction(formattedResourceName);
+ *   ConversionActionName resourceName = ConversionActionName.of("[CUSTOMER]", "[CONVERSION_ACTION]");
+ *   ConversionAction response = conversionActionServiceClient.getConversionAction(resourceName);
  * }
  * </code>
  * </pre>
@@ -100,45 +99,6 @@ public class ConversionActionServiceClient implements BackgroundResource {
   private final ConversionActionServiceSettings settings;
   private final ConversionActionServiceStub stub;
 
-  private static final PathTemplate CONVERSION_ACTION_PATH_TEMPLATE =
-      PathTemplate.createWithoutUrlEncoding(
-          "customers/{customer}/conversionActions/{conversion_action}");
-
-  /**
-   * Formats a string containing the fully-qualified path to represent a conversion_action resource.
-   *
-   * @deprecated Use the {@link ConversionActionName} class instead.
-   */
-  @Deprecated
-  public static final String formatConversionActionName(String customer, String conversionAction) {
-    return CONVERSION_ACTION_PATH_TEMPLATE.instantiate(
-        "customer", customer,
-        "conversion_action", conversionAction);
-  }
-
-  /**
-   * Parses the customer from the given fully-qualified path which represents a conversion_action
-   * resource.
-   *
-   * @deprecated Use the {@link ConversionActionName} class instead.
-   */
-  @Deprecated
-  public static final String parseCustomerFromConversionActionName(String conversionActionName) {
-    return CONVERSION_ACTION_PATH_TEMPLATE.parse(conversionActionName).get("customer");
-  }
-
-  /**
-   * Parses the conversion_action from the given fully-qualified path which represents a
-   * conversion_action resource.
-   *
-   * @deprecated Use the {@link ConversionActionName} class instead.
-   */
-  @Deprecated
-  public static final String parseConversionActionFromConversionActionName(
-      String conversionActionName) {
-    return CONVERSION_ACTION_PATH_TEMPLATE.parse(conversionActionName).get("conversion_action");
-  }
-
   /** Constructs an instance of ConversionActionServiceClient with default settings. */
   public static final ConversionActionServiceClient create() throws IOException {
     return create(ConversionActionServiceSettings.newBuilder().build());
@@ -196,8 +156,32 @@ public class ConversionActionServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (ConversionActionServiceClient conversionActionServiceClient = ConversionActionServiceClient.create()) {
-   *   String formattedResourceName = ConversionActionServiceClient.formatConversionActionName("[CUSTOMER]", "[CONVERSION_ACTION]");
-   *   ConversionAction response = conversionActionServiceClient.getConversionAction(formattedResourceName);
+   *   ConversionActionName resourceName = ConversionActionName.of("[CUSTOMER]", "[CONVERSION_ACTION]");
+   *   ConversionAction response = conversionActionServiceClient.getConversionAction(resourceName);
+   * }
+   * </code></pre>
+   *
+   * @param resourceName Required. The resource name of the conversion action to fetch.
+   * @throws com.google.api.gax.rpc.ApiException if the remote call fails
+   */
+  public final ConversionAction getConversionAction(ConversionActionName resourceName) {
+    GetConversionActionRequest request =
+        GetConversionActionRequest.newBuilder()
+            .setResourceName(resourceName == null ? null : resourceName.toString())
+            .build();
+    return getConversionAction(request);
+  }
+
+  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  /**
+   * Returns the requested conversion action.
+   *
+   * <p>Sample code:
+   *
+   * <pre><code>
+   * try (ConversionActionServiceClient conversionActionServiceClient = ConversionActionServiceClient.create()) {
+   *   ConversionActionName resourceName = ConversionActionName.of("[CUSTOMER]", "[CONVERSION_ACTION]");
+   *   ConversionAction response = conversionActionServiceClient.getConversionAction(resourceName.toString());
    * }
    * </code></pre>
    *
@@ -205,7 +189,6 @@ public class ConversionActionServiceClient implements BackgroundResource {
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final ConversionAction getConversionAction(String resourceName) {
-    CONVERSION_ACTION_PATH_TEMPLATE.validate(resourceName, "getConversionAction");
     GetConversionActionRequest request =
         GetConversionActionRequest.newBuilder().setResourceName(resourceName).build();
     return getConversionAction(request);
@@ -219,9 +202,9 @@ public class ConversionActionServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (ConversionActionServiceClient conversionActionServiceClient = ConversionActionServiceClient.create()) {
-   *   String formattedResourceName = ConversionActionServiceClient.formatConversionActionName("[CUSTOMER]", "[CONVERSION_ACTION]");
+   *   ConversionActionName resourceName = ConversionActionName.of("[CUSTOMER]", "[CONVERSION_ACTION]");
    *   GetConversionActionRequest request = GetConversionActionRequest.newBuilder()
-   *     .setResourceName(formattedResourceName)
+   *     .setResourceName(resourceName.toString())
    *     .build();
    *   ConversionAction response = conversionActionServiceClient.getConversionAction(request);
    * }
@@ -242,9 +225,9 @@ public class ConversionActionServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (ConversionActionServiceClient conversionActionServiceClient = ConversionActionServiceClient.create()) {
-   *   String formattedResourceName = ConversionActionServiceClient.formatConversionActionName("[CUSTOMER]", "[CONVERSION_ACTION]");
+   *   ConversionActionName resourceName = ConversionActionName.of("[CUSTOMER]", "[CONVERSION_ACTION]");
    *   GetConversionActionRequest request = GetConversionActionRequest.newBuilder()
-   *     .setResourceName(formattedResourceName)
+   *     .setResourceName(resourceName.toString())
    *     .build();
    *   ApiFuture&lt;ConversionAction&gt; future = conversionActionServiceClient.getConversionActionCallable().futureCall(request);
    *   // Do something
@@ -267,47 +250,6 @@ public class ConversionActionServiceClient implements BackgroundResource {
    * try (ConversionActionServiceClient conversionActionServiceClient = ConversionActionServiceClient.create()) {
    *   String customerId = "";
    *   List&lt;ConversionActionOperation&gt; operations = new ArrayList&lt;&gt;();
-   *   boolean partialFailure = false;
-   *   boolean validateOnly = false;
-   *   MutateConversionActionsResponse response = conversionActionServiceClient.mutateConversionActions(customerId, operations, partialFailure, validateOnly);
-   * }
-   * </code></pre>
-   *
-   * @param customerId Required. The ID of the customer whose conversion actions are being modified.
-   * @param operations Required. The list of operations to perform on individual conversion actions.
-   * @param partialFailure If true, successful operations will be carried out and invalid operations
-   *     will return errors. If false, all operations will be carried out in one transaction if and
-   *     only if they are all valid. Default is false.
-   * @param validateOnly If true, the request is validated but not executed. Only errors are
-   *     returned, not results.
-   * @throws com.google.api.gax.rpc.ApiException if the remote call fails
-   */
-  public final MutateConversionActionsResponse mutateConversionActions(
-      String customerId,
-      List<ConversionActionOperation> operations,
-      boolean partialFailure,
-      boolean validateOnly) {
-
-    MutateConversionActionsRequest request =
-        MutateConversionActionsRequest.newBuilder()
-            .setCustomerId(customerId)
-            .addAllOperations(operations)
-            .setPartialFailure(partialFailure)
-            .setValidateOnly(validateOnly)
-            .build();
-    return mutateConversionActions(request);
-  }
-
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
-  /**
-   * Creates, updates or removes conversion actions. Operation statuses are returned.
-   *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (ConversionActionServiceClient conversionActionServiceClient = ConversionActionServiceClient.create()) {
-   *   String customerId = "";
-   *   List&lt;ConversionActionOperation&gt; operations = new ArrayList&lt;&gt;();
    *   MutateConversionActionsResponse response = conversionActionServiceClient.mutateConversionActions(customerId, operations);
    * }
    * </code></pre>
@@ -318,7 +260,6 @@ public class ConversionActionServiceClient implements BackgroundResource {
    */
   public final MutateConversionActionsResponse mutateConversionActions(
       String customerId, List<ConversionActionOperation> operations) {
-
     MutateConversionActionsRequest request =
         MutateConversionActionsRequest.newBuilder()
             .setCustomerId(customerId)

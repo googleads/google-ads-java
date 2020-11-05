@@ -13,6 +13,7 @@ public interface PlannableLocationOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue id = 1;</code>
+   * @return Whether the id field is set.
    */
   boolean hasId();
   /**
@@ -21,6 +22,7 @@ public interface PlannableLocationOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue id = 1;</code>
+   * @return The id.
    */
   com.google.protobuf.StringValue getId();
   /**
@@ -38,6 +40,7 @@ public interface PlannableLocationOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue name = 2;</code>
+   * @return Whether the name field is set.
    */
   boolean hasName();
   /**
@@ -46,6 +49,7 @@ public interface PlannableLocationOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue name = 2;</code>
+   * @return The name.
    */
   com.google.protobuf.StringValue getName();
   /**
@@ -66,6 +70,7 @@ public interface PlannableLocationOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value parent_country_id = 3;</code>
+   * @return Whether the parentCountryId field is set.
    */
   boolean hasParentCountryId();
   /**
@@ -77,6 +82,7 @@ public interface PlannableLocationOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value parent_country_id = 3;</code>
+   * @return The parentCountryId.
    */
   com.google.protobuf.Int64Value getParentCountryId();
   /**

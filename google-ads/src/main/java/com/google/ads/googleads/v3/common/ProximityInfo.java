@@ -16,7 +16,7 @@ package com.google.ads.googleads.v3.common;
  *
  * Protobuf type {@code google.ads.googleads.v3.common.ProximityInfo}
  */
-public  final class ProximityInfo extends
+public final class ProximityInfo extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v3.common.ProximityInfo)
     ProximityInfoOrBuilder {
@@ -27,6 +27,13 @@ private static final long serialVersionUID = 0L;
   }
   private ProximityInfo() {
     radiusUnits_ = 0;
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new ProximityInfo();
   }
 
   @java.lang.Override
@@ -42,7 +49,6 @@ private static final long serialVersionUID = 0L;
     if (extensionRegistry == null) {
       throw new java.lang.NullPointerException();
     }
-    int mutable_bitField0_ = 0;
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
         com.google.protobuf.UnknownFieldSet.newBuilder();
     try {
@@ -138,7 +144,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.GeoPointInfo geo_point = 1;</code>
+   * @return Whether the geoPoint field is set.
    */
+  @java.lang.Override
   public boolean hasGeoPoint() {
     return geoPoint_ != null;
   }
@@ -148,7 +156,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.GeoPointInfo geo_point = 1;</code>
+   * @return The geoPoint.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.common.GeoPointInfo getGeoPoint() {
     return geoPoint_ == null ? com.google.ads.googleads.v3.common.GeoPointInfo.getDefaultInstance() : geoPoint_;
   }
@@ -159,6 +169,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v3.common.GeoPointInfo geo_point = 1;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.common.GeoPointInfoOrBuilder getGeoPointOrBuilder() {
     return getGeoPoint();
   }
@@ -171,7 +182,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue radius = 2;</code>
+   * @return Whether the radius field is set.
    */
+  @java.lang.Override
   public boolean hasRadius() {
     return radius_ != null;
   }
@@ -181,7 +194,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue radius = 2;</code>
+   * @return The radius.
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValue getRadius() {
     return radius_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : radius_;
   }
@@ -192,6 +207,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.DoubleValue radius = 2;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValueOrBuilder getRadiusOrBuilder() {
     return getRadius();
   }
@@ -204,8 +220,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.ProximityRadiusUnitsEnum.ProximityRadiusUnits radius_units = 3;</code>
+   * @return The enum numeric value on the wire for radiusUnits.
    */
-  public int getRadiusUnitsValue() {
+  @java.lang.Override public int getRadiusUnitsValue() {
     return radiusUnits_;
   }
   /**
@@ -214,8 +231,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.ProximityRadiusUnitsEnum.ProximityRadiusUnits radius_units = 3;</code>
+   * @return The radiusUnits.
    */
-  public com.google.ads.googleads.v3.enums.ProximityRadiusUnitsEnum.ProximityRadiusUnits getRadiusUnits() {
+  @java.lang.Override public com.google.ads.googleads.v3.enums.ProximityRadiusUnitsEnum.ProximityRadiusUnits getRadiusUnits() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v3.enums.ProximityRadiusUnitsEnum.ProximityRadiusUnits result = com.google.ads.googleads.v3.enums.ProximityRadiusUnitsEnum.ProximityRadiusUnits.valueOf(radiusUnits_);
     return result == null ? com.google.ads.googleads.v3.enums.ProximityRadiusUnitsEnum.ProximityRadiusUnits.UNRECOGNIZED : result;
@@ -229,7 +247,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.AddressInfo address = 4;</code>
+   * @return Whether the address field is set.
    */
+  @java.lang.Override
   public boolean hasAddress() {
     return address_ != null;
   }
@@ -239,7 +259,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.AddressInfo address = 4;</code>
+   * @return The address.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.common.AddressInfo getAddress() {
     return address_ == null ? com.google.ads.googleads.v3.common.AddressInfo.getDefaultInstance() : address_;
   }
@@ -250,6 +272,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v3.common.AddressInfo address = 4;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.common.AddressInfoOrBuilder getAddressOrBuilder() {
     return getAddress();
   }
@@ -664,6 +687,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.common.GeoPointInfo geo_point = 1;</code>
+     * @return Whether the geoPoint field is set.
      */
     public boolean hasGeoPoint() {
       return geoPointBuilder_ != null || geoPoint_ != null;
@@ -674,6 +698,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.common.GeoPointInfo geo_point = 1;</code>
+     * @return The geoPoint.
      */
     public com.google.ads.googleads.v3.common.GeoPointInfo getGeoPoint() {
       if (geoPointBuilder_ == null) {
@@ -817,6 +842,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue radius = 2;</code>
+     * @return Whether the radius field is set.
      */
     public boolean hasRadius() {
       return radiusBuilder_ != null || radius_ != null;
@@ -827,6 +853,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue radius = 2;</code>
+     * @return The radius.
      */
     public com.google.protobuf.DoubleValue getRadius() {
       if (radiusBuilder_ == null) {
@@ -968,8 +995,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.ProximityRadiusUnitsEnum.ProximityRadiusUnits radius_units = 3;</code>
+     * @return The enum numeric value on the wire for radiusUnits.
      */
-    public int getRadiusUnitsValue() {
+    @java.lang.Override public int getRadiusUnitsValue() {
       return radiusUnits_;
     }
     /**
@@ -978,8 +1006,11 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.ProximityRadiusUnitsEnum.ProximityRadiusUnits radius_units = 3;</code>
+     * @param value The enum numeric value on the wire for radiusUnits to set.
+     * @return This builder for chaining.
      */
     public Builder setRadiusUnitsValue(int value) {
+      
       radiusUnits_ = value;
       onChanged();
       return this;
@@ -990,7 +1021,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.ProximityRadiusUnitsEnum.ProximityRadiusUnits radius_units = 3;</code>
+     * @return The radiusUnits.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.enums.ProximityRadiusUnitsEnum.ProximityRadiusUnits getRadiusUnits() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v3.enums.ProximityRadiusUnitsEnum.ProximityRadiusUnits result = com.google.ads.googleads.v3.enums.ProximityRadiusUnitsEnum.ProximityRadiusUnits.valueOf(radiusUnits_);
@@ -1002,6 +1035,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.ProximityRadiusUnitsEnum.ProximityRadiusUnits radius_units = 3;</code>
+     * @param value The radiusUnits to set.
+     * @return This builder for chaining.
      */
     public Builder setRadiusUnits(com.google.ads.googleads.v3.enums.ProximityRadiusUnitsEnum.ProximityRadiusUnits value) {
       if (value == null) {
@@ -1018,6 +1053,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.ProximityRadiusUnitsEnum.ProximityRadiusUnits radius_units = 3;</code>
+     * @return This builder for chaining.
      */
     public Builder clearRadiusUnits() {
       
@@ -1035,6 +1071,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.common.AddressInfo address = 4;</code>
+     * @return Whether the address field is set.
      */
     public boolean hasAddress() {
       return addressBuilder_ != null || address_ != null;
@@ -1045,6 +1082,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.common.AddressInfo address = 4;</code>
+     * @return The address.
      */
     public com.google.ads.googleads.v3.common.AddressInfo getAddress() {
       if (addressBuilder_ == null) {
