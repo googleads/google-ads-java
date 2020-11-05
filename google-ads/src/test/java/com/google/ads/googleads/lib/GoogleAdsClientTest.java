@@ -25,6 +25,7 @@ import static org.junit.Assert.fail;
 
 import com.google.ads.googleads.lib.GoogleAdsClient.Builder;
 import com.google.ads.googleads.lib.GoogleAdsClient.Builder.ConfigPropertyKey;
+import com.google.ads.googleads.lib.GoogleAdsClient.Builder.ServiceAccountCredentialsFactory;
 import com.google.ads.googleads.lib.catalog.ApiCatalog;
 import com.google.ads.googleads.v5.errors.GoogleAdsError;
 import com.google.ads.googleads.v5.errors.GoogleAdsException;
@@ -34,8 +35,6 @@ import com.google.ads.googleads.v5.services.GoogleAdsServiceClient;
 import com.google.ads.googleads.v5.services.GoogleAdsServiceClient.SearchPagedResponse;
 import com.google.ads.googleads.v5.services.MockGoogleAdsService;
 import com.google.ads.googleads.v5.services.SearchGoogleAdsResponse;
-import com.google.ads.googleads.v5.services.SearchGoogleAdsStreamRequest;
-import com.google.ads.googleads.v5.services.SearchGoogleAdsStreamResponse;
 import com.google.api.gax.grpc.GaxGrpcProperties;
 import com.google.api.gax.grpc.GrpcStatusCode;
 import com.google.api.gax.grpc.testing.LocalChannelProvider;
@@ -43,6 +42,7 @@ import com.google.api.gax.grpc.testing.MockServiceHelper;
 import com.google.api.gax.rpc.ApiClientHeaderProvider;
 import com.google.api.gax.rpc.ApiException;
 import com.google.auth.Credentials;
+import com.google.auth.oauth2.ServiceAccountCredentials;
 import com.google.auth.oauth2.UserCredentials;
 import io.grpc.Metadata;
 import io.grpc.Status;
@@ -52,8 +52,11 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.InputStream;
 import java.lang.reflect.InvocationTargetException;
+import java.security.PrivateKey;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 import java.util.Properties;
 import java.util.concurrent.ScheduledExecutorService;
@@ -71,6 +74,7 @@ import org.junit.rules.TemporaryFolder;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import org.mockito.Mock;
+import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
 
 /** Tests for {@link GoogleAdsClient}. */
@@ -456,9 +460,7 @@ public class GoogleAdsClientTest {
         localChannelProvider.isHeaderSent("login-customer-id", Pattern.compile(".*")));
   }
 
-  /**
-   * Verifies that the exception transformation behaviour is working for a test example.
-   */
+  /** Verifies that the exception transformation behaviour is working for a test example. */
   @Test
   public void linkedCustomerId_sentIfSpecified() {
     GoogleAdsClient client =
@@ -491,11 +493,8 @@ public class GoogleAdsClientTest {
             .setTransportChannelProvider(localChannelProvider)
             .setEnableGeneratedCatalog(enabledGeneratedCatalog)
             .build();
-    Metadata.Key trailerKey = ApiCatalog
-        .getDefault(enabledGeneratedCatalog)
-        .getLatestVersion()
-        .getExceptionFactory()
-        .getTrailerKey();
+    Metadata.Key trailerKey =
+        ApiCatalog.getDefault().getLatestVersion().getExceptionFactory().getTrailerKey();
     Metadata trailers = new Metadata();
     GoogleAdsFailure.Builder failure = GoogleAdsFailure.newBuilder();
     failure.addErrors(GoogleAdsError.newBuilder().setMessage("Test error message"));
@@ -514,9 +513,7 @@ public class GoogleAdsClientTest {
     }
   }
 
-  /**
-   * Ensure that can set endpoint on default transport channel.
-   */
+  /** Ensure that can set endpoint on default transport channel. */
   @Test
   public void transportChannelProvider_defaultRequiresEndpoint() {
     assertTrue(
