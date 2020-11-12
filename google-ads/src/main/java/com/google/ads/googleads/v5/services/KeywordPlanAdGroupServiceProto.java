@@ -64,39 +64,41 @@ public final class KeywordPlanAdGroupServiceProto {
       "ations\030\002 \003(\0132=.google.ads.googleads.v5.s" +
       "ervices.KeywordPlanAdGroupOperationB\003\340A\002" +
       "\022\027\n\017partial_failure\030\003 \001(\010\022\025\n\rvalidate_on" +
-      "ly\030\004 \001(\010\"\377\001\n\033KeywordPlanAdGroupOperation" +
+      "ly\030\004 \001(\010\"\261\002\n\033KeywordPlanAdGroupOperation" +
       "\022/\n\013update_mask\030\004 \001(\0132\032.google.protobuf." +
       "FieldMask\022G\n\006create\030\001 \001(\01325.google.ads.g" +
       "oogleads.v5.resources.KeywordPlanAdGroup" +
       "H\000\022G\n\006update\030\002 \001(\01325.google.ads.googlead" +
-      "s.v5.resources.KeywordPlanAdGroupH\000\022\020\n\006r" +
-      "emove\030\003 \001(\tH\000B\013\n\toperation\"\251\001\n!MutateKey" +
-      "wordPlanAdGroupsResponse\0221\n\025partial_fail" +
-      "ure_error\030\003 \001(\0132\022.google.rpc.Status\022Q\n\007r" +
-      "esults\030\002 \003(\0132@.google.ads.googleads.v5.s" +
-      "ervices.MutateKeywordPlanAdGroupResult\"7" +
-      "\n\036MutateKeywordPlanAdGroupResult\022\025\n\rreso" +
-      "urce_name\030\001 \001(\t2\235\004\n\031KeywordPlanAdGroupSe" +
-      "rvice\022\335\001\n\025GetKeywordPlanAdGroup\022>.google" +
-      ".ads.googleads.v5.services.GetKeywordPla" +
-      "nAdGroupRequest\0325.google.ads.googleads.v" +
-      "5.resources.KeywordPlanAdGroup\"M\202\323\344\223\0027\0225" +
-      "/v5/{resource_name=customers/*/keywordPl" +
-      "anAdGroups/*}\332A\rresource_name\022\202\002\n\031Mutate" +
-      "KeywordPlanAdGroups\022B.google.ads.googlea" +
-      "ds.v5.services.MutateKeywordPlanAdGroups" +
-      "Request\032C.google.ads.googleads.v5.servic" +
-      "es.MutateKeywordPlanAdGroupsResponse\"\\\202\323" +
-      "\344\223\002=\"8/v5/customers/{customer_id=*}/keyw" +
-      "ordPlanAdGroups:mutate:\001*\332A\026customer_id," +
-      "operations\032\033\312A\030googleads.googleapis.comB" +
-      "\205\002\n$com.google.ads.googleads.v5.services" +
-      "B\036KeywordPlanAdGroupServiceProtoP\001ZHgoog" +
-      "le.golang.org/genproto/googleapis/ads/go" +
-      "ogleads/v5/services;services\242\002\003GAA\252\002 Goo" +
-      "gle.Ads.GoogleAds.V5.Services\312\002 Google\\A" +
-      "ds\\GoogleAds\\V5\\Services\352\002$Google::Ads::" +
-      "GoogleAds::V5::Servicesb\006proto3"
+      "s.v5.resources.KeywordPlanAdGroupH\000\022B\n\006r" +
+      "emove\030\003 \001(\tB0\372A-\n+googleads.googleapis.c" +
+      "om/KeywordPlanAdGroupH\000B\013\n\toperation\"\251\001\n" +
+      "!MutateKeywordPlanAdGroupsResponse\0221\n\025pa" +
+      "rtial_failure_error\030\003 \001(\0132\022.google.rpc.S" +
+      "tatus\022Q\n\007results\030\002 \003(\0132@.google.ads.goog" +
+      "leads.v5.services.MutateKeywordPlanAdGro" +
+      "upResult\"7\n\036MutateKeywordPlanAdGroupResu" +
+      "lt\022\025\n\rresource_name\030\001 \001(\t2\235\004\n\031KeywordPla" +
+      "nAdGroupService\022\335\001\n\025GetKeywordPlanAdGrou" +
+      "p\022>.google.ads.googleads.v5.services.Get" +
+      "KeywordPlanAdGroupRequest\0325.google.ads.g" +
+      "oogleads.v5.resources.KeywordPlanAdGroup" +
+      "\"M\202\323\344\223\0027\0225/v5/{resource_name=customers/*" +
+      "/keywordPlanAdGroups/*}\332A\rresource_name\022" +
+      "\202\002\n\031MutateKeywordPlanAdGroups\022B.google.a" +
+      "ds.googleads.v5.services.MutateKeywordPl" +
+      "anAdGroupsRequest\032C.google.ads.googleads" +
+      ".v5.services.MutateKeywordPlanAdGroupsRe" +
+      "sponse\"\\\202\323\344\223\002=\"8/v5/customers/{customer_" +
+      "id=*}/keywordPlanAdGroups:mutate:\001*\332A\026cu" +
+      "stomer_id,operations\032\033\312A\030googleads.googl" +
+      "eapis.comB\205\002\n$com.google.ads.googleads.v" +
+      "5.servicesB\036KeywordPlanAdGroupServicePro" +
+      "toP\001ZHgoogle.golang.org/genproto/googlea" +
+      "pis/ads/googleads/v5/services;services\242\002" +
+      "\003GAA\252\002 Google.Ads.GoogleAds.V5.Services\312" +
+      "\002 Google\\Ads\\GoogleAds\\V5\\Services\352\002$Goo" +
+      "gle::Ads::GoogleAds::V5::Servicesb\006proto" +
+      "3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

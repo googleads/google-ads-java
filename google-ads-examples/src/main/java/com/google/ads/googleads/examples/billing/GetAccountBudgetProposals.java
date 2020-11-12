@@ -17,13 +17,13 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.v5.errors.GoogleAdsError;
-import com.google.ads.googleads.v5.errors.GoogleAdsException;
-import com.google.ads.googleads.v5.resources.AccountBudgetProposal;
-import com.google.ads.googleads.v5.services.GoogleAdsRow;
-import com.google.ads.googleads.v5.services.GoogleAdsServiceClient;
-import com.google.ads.googleads.v5.services.GoogleAdsServiceClient.SearchPagedResponse;
-import com.google.ads.googleads.v5.services.SearchGoogleAdsRequest;
+import com.google.ads.googleads.v6.errors.GoogleAdsError;
+import com.google.ads.googleads.v6.errors.GoogleAdsException;
+import com.google.ads.googleads.v6.resources.AccountBudgetProposal;
+import com.google.ads.googleads.v6.services.GoogleAdsRow;
+import com.google.ads.googleads.v6.services.GoogleAdsServiceClient;
+import com.google.ads.googleads.v6.services.GoogleAdsServiceClient.SearchPagedResponse;
+import com.google.ads.googleads.v6.services.SearchGoogleAdsRequest;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
@@ -131,16 +131,16 @@ public class GetAccountBudgetProposals {
                 + "proposal_type '%s' "
                 + "approval_date_time '%s' "
                 + "creation_date_time '%s'.%n",
-            proposal.getId().getValue(),
+            proposal.getId(),
             proposal.getStatus().name(),
-            proposal.getAccountBudget().getValue(),
-            proposal.getBillingSetup().getValue(),
-            proposal.getProposedName().getValue(),
-            proposal.getProposedNotes().getValue(),
-            proposal.getProposedPurchaseOrderNumber().getValue(),
+            proposal.getAccountBudget(),
+            proposal.getBillingSetup(),
+            proposal.getProposedName(),
+            proposal.getProposedNotes(),
+            proposal.getProposedPurchaseOrderNumber(),
             proposal.getProposalType().name(),
-            proposal.getApprovalDateTime().getValue(),
-            proposal.getCreationDateTime().getValue());
+            proposal.getApprovalDateTime(),
+            proposal.getCreationDateTime());
       }
     }
   }

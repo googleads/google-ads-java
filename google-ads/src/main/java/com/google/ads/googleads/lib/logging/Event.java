@@ -15,7 +15,7 @@
 package com.google.ads.googleads.lib.logging;
 
 import com.google.ads.googleads.lib.BaseGoogleAdsException.Factory;
-import com.google.ads.googleads.lib.catalog.GeneratedCatalog;
+import com.google.ads.googleads.lib.catalog.ApiCatalog;
 import com.google.ads.googleads.lib.catalog.Version;
 import com.google.auto.value.AutoValue;
 import com.google.common.collect.ImmutableMap;
@@ -144,7 +144,7 @@ abstract class Event {
     public Optional<Message> deserializeFailureMessage() throws InvalidProtocolBufferException {
       Metadata trailers = getResponseTrailerMetadata();
       if (trailers != null) {
-        for (Version version : GeneratedCatalog.getDefault().getSupportedVersions()) {
+        for (Version version : ApiCatalog.getDefault().getSupportedVersions()) {
           Factory exceptionFactory = version.getExceptionFactory();
           Metadata.Key<byte[]> trailerKey = exceptionFactory.getTrailerKey();
           if (trailers.containsKey(trailerKey)) {

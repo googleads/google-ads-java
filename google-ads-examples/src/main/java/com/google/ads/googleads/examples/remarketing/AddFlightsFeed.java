@@ -18,35 +18,33 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.v5.enums.FeedAttributeTypeEnum.FeedAttributeType;
-import com.google.ads.googleads.v5.enums.FlightPlaceholderFieldEnum.FlightPlaceholderField;
-import com.google.ads.googleads.v5.enums.PlaceholderTypeEnum.PlaceholderType;
-import com.google.ads.googleads.v5.errors.GoogleAdsError;
-import com.google.ads.googleads.v5.errors.GoogleAdsException;
-import com.google.ads.googleads.v5.resources.AttributeFieldMapping;
-import com.google.ads.googleads.v5.resources.Feed;
-import com.google.ads.googleads.v5.resources.FeedAttribute;
-import com.google.ads.googleads.v5.resources.FeedItem;
-import com.google.ads.googleads.v5.resources.FeedItemAttributeValue;
-import com.google.ads.googleads.v5.resources.FeedMapping;
-import com.google.ads.googleads.v5.services.FeedItemOperation;
-import com.google.ads.googleads.v5.services.FeedItemServiceClient;
-import com.google.ads.googleads.v5.services.FeedMappingOperation;
-import com.google.ads.googleads.v5.services.FeedMappingServiceClient;
-import com.google.ads.googleads.v5.services.FeedOperation;
-import com.google.ads.googleads.v5.services.FeedServiceClient;
-import com.google.ads.googleads.v5.services.GoogleAdsRow;
-import com.google.ads.googleads.v5.services.GoogleAdsServiceClient;
-import com.google.ads.googleads.v5.services.GoogleAdsServiceClient.SearchPagedResponse;
-import com.google.ads.googleads.v5.services.MutateFeedItemResult;
-import com.google.ads.googleads.v5.services.MutateFeedItemsResponse;
-import com.google.ads.googleads.v5.services.MutateFeedMappingResult;
-import com.google.ads.googleads.v5.services.MutateFeedMappingsResponse;
-import com.google.ads.googleads.v5.services.MutateFeedsResponse;
-import com.google.ads.googleads.v5.services.SearchGoogleAdsRequest;
+import com.google.ads.googleads.v6.enums.FeedAttributeTypeEnum.FeedAttributeType;
+import com.google.ads.googleads.v6.enums.FlightPlaceholderFieldEnum.FlightPlaceholderField;
+import com.google.ads.googleads.v6.enums.PlaceholderTypeEnum.PlaceholderType;
+import com.google.ads.googleads.v6.errors.GoogleAdsError;
+import com.google.ads.googleads.v6.errors.GoogleAdsException;
+import com.google.ads.googleads.v6.resources.AttributeFieldMapping;
+import com.google.ads.googleads.v6.resources.Feed;
+import com.google.ads.googleads.v6.resources.FeedAttribute;
+import com.google.ads.googleads.v6.resources.FeedItem;
+import com.google.ads.googleads.v6.resources.FeedItemAttributeValue;
+import com.google.ads.googleads.v6.resources.FeedMapping;
+import com.google.ads.googleads.v6.services.FeedItemOperation;
+import com.google.ads.googleads.v6.services.FeedItemServiceClient;
+import com.google.ads.googleads.v6.services.FeedMappingOperation;
+import com.google.ads.googleads.v6.services.FeedMappingServiceClient;
+import com.google.ads.googleads.v6.services.FeedOperation;
+import com.google.ads.googleads.v6.services.FeedServiceClient;
+import com.google.ads.googleads.v6.services.GoogleAdsRow;
+import com.google.ads.googleads.v6.services.GoogleAdsServiceClient;
+import com.google.ads.googleads.v6.services.GoogleAdsServiceClient.SearchPagedResponse;
+import com.google.ads.googleads.v6.services.MutateFeedItemResult;
+import com.google.ads.googleads.v6.services.MutateFeedItemsResponse;
+import com.google.ads.googleads.v6.services.MutateFeedMappingResult;
+import com.google.ads.googleads.v6.services.MutateFeedMappingsResponse;
+import com.google.ads.googleads.v6.services.MutateFeedsResponse;
+import com.google.ads.googleads.v6.services.SearchGoogleAdsRequest;
 import com.google.common.collect.ImmutableList;
-import com.google.protobuf.Int64Value;
-import com.google.protobuf.StringValue;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.HashMap;
@@ -134,37 +132,37 @@ public class AddFlightsFeed {
     FeedAttribute flightDescriptionAttribute =
         FeedAttribute.newBuilder()
             .setType(FeedAttributeType.STRING)
-            .setName(StringValue.of("Flight Description"))
+            .setName("Flight Description")
             .build();
     // Creates a Destination ID attribute.
     FeedAttribute destinationIdAttribute =
         FeedAttribute.newBuilder()
             .setType(FeedAttributeType.STRING)
-            .setName(StringValue.of("Destination ID"))
+            .setName("Destination ID")
             .build();
     // Creates a Flight Price attribute.
     FeedAttribute flightPriceAttribute =
         FeedAttribute.newBuilder()
             .setType(FeedAttributeType.STRING)
-            .setName(StringValue.of("Flight Price"))
+            .setName("Flight Price")
             .build();
     // Creates a Flight Sale Price attribute.
     FeedAttribute flightSalesPriceAttribute =
         FeedAttribute.newBuilder()
             .setType(FeedAttributeType.STRING)
-            .setName(StringValue.of("Flight Sale Price"))
+            .setName("Flight Sale Price")
             .build();
     // Creates a Final URLs attribute.
     FeedAttribute finalUrlsAttribute =
         FeedAttribute.newBuilder()
             .setType(FeedAttributeType.URL_LIST)
-            .setName(StringValue.of("Final URLs"))
+            .setName("Final URLs")
             .build();
 
     // Creates the feed.
     Feed feed =
         Feed.newBuilder()
-            .setName(StringValue.of("Flights Feed #" + System.currentTimeMillis()))
+            .setName("Flights Feed #" + System.currentTimeMillis())
             .addAttributes(flightDescriptionAttribute)
             .addAttributes(destinationIdAttribute)
             .addAttributes(flightPriceAttribute)
@@ -227,7 +225,7 @@ public class AddFlightsFeed {
       Map<FlightPlaceholderField, FeedAttribute> feedAttributes = new HashMap<>();
       // Loops through the feed attributes to populate the map.
       for (FeedAttribute feedAttribute : feedAttributeList) {
-        switch (feedAttribute.getName().getValue()) {
+        switch (feedAttribute.getName()) {
           case "Flight Description":
             feedAttributes.put(FlightPlaceholderField.FLIGHT_DESCRIPTION, feedAttribute);
             break;
@@ -244,7 +242,7 @@ public class AddFlightsFeed {
             feedAttributes.put(FlightPlaceholderField.FINAL_URLS, feedAttribute);
             break;
             // The full list of FlightPlaceholderFields can be found here
-            // https://developers.google.com/google-ads/api/reference/rpc/google.ads.googleads.[INSERT_VERSION].enums#flightplaceholderfieldenum.
+            // https://developers.google.com/google-ads/api/reference/rpc/latest/FlightPlaceholderFieldEnum.FlightPlaceholderField
           default:
             throw new Error("Invalid attribute name.");
         }
@@ -270,42 +268,28 @@ public class AddFlightsFeed {
     AttributeFieldMapping flightDescriptionMapping =
         AttributeFieldMapping.newBuilder()
             .setFeedAttributeId(
-                Int64Value.of(
-                    feedAttributes
-                        .get(FlightPlaceholderField.FLIGHT_DESCRIPTION)
-                        .getId()
-                        .getValue()))
+                feedAttributes.get(FlightPlaceholderField.FLIGHT_DESCRIPTION).getId())
             .setFlightField(FlightPlaceholderField.FLIGHT_DESCRIPTION)
             .build();
     AttributeFieldMapping destinationIdMapping =
         AttributeFieldMapping.newBuilder()
-            .setFeedAttributeId(
-                Int64Value.of(
-                    feedAttributes.get(FlightPlaceholderField.DESTINATION_ID).getId().getValue()))
+            .setFeedAttributeId(feedAttributes.get(FlightPlaceholderField.DESTINATION_ID).getId())
             .setFlightField(FlightPlaceholderField.DESTINATION_ID)
             .build();
     AttributeFieldMapping flightPriceMapping =
         AttributeFieldMapping.newBuilder()
-            .setFeedAttributeId(
-                Int64Value.of(
-                    feedAttributes.get(FlightPlaceholderField.FLIGHT_PRICE).getId().getValue()))
+            .setFeedAttributeId(feedAttributes.get(FlightPlaceholderField.FLIGHT_PRICE).getId())
             .setFlightField(FlightPlaceholderField.FLIGHT_PRICE)
             .build();
     AttributeFieldMapping flightSalePriceMapping =
         AttributeFieldMapping.newBuilder()
             .setFeedAttributeId(
-                Int64Value.of(
-                    feedAttributes
-                        .get(FlightPlaceholderField.FLIGHT_SALE_PRICE)
-                        .getId()
-                        .getValue()))
+                feedAttributes.get(FlightPlaceholderField.FLIGHT_SALE_PRICE).getId())
             .setFlightField(FlightPlaceholderField.FLIGHT_SALE_PRICE)
             .build();
     AttributeFieldMapping finalUrlsMapping =
         AttributeFieldMapping.newBuilder()
-            .setFeedAttributeId(
-                Int64Value.of(
-                    feedAttributes.get(FlightPlaceholderField.FINAL_URLS).getId().getValue()))
+            .setFeedAttributeId(feedAttributes.get(FlightPlaceholderField.FINAL_URLS).getId())
             .setFlightField(FlightPlaceholderField.FINAL_URLS)
             .build();
 
@@ -313,7 +297,7 @@ public class AddFlightsFeed {
     FeedMapping feedMapping =
         FeedMapping.newBuilder()
             .setPlaceholderType(PlaceholderType.DYNAMIC_FLIGHT)
-            .setFeed(StringValue.of(feedResourceName))
+            .setFeed(feedResourceName)
             .addAttributeFieldMappings(flightDescriptionMapping)
             .addAttributeFieldMappings(destinationIdMapping)
             .addAttributeFieldMappings(flightPriceMapping)
@@ -358,53 +342,39 @@ public class AddFlightsFeed {
     FeedItemAttributeValue flightDescription =
         FeedItemAttributeValue.newBuilder()
             .setFeedAttributeId(
-                Int64Value.of(
-                    feedAttributes
-                        .get(FlightPlaceholderField.FLIGHT_DESCRIPTION)
-                        .getId()
-                        .getValue()))
-            .setStringValue(StringValue.of("Earth to Mars"))
+                feedAttributes.get(FlightPlaceholderField.FLIGHT_DESCRIPTION).getId())
+            .setStringValue("Earth to Mars")
             .build();
     // Creates the destination ID feed attribute value.
     FeedItemAttributeValue destinationId =
         FeedItemAttributeValue.newBuilder()
-            .setFeedAttributeId(
-                Int64Value.of(
-                    feedAttributes.get(FlightPlaceholderField.DESTINATION_ID).getId().getValue()))
-            .setStringValue(StringValue.of("Mars"))
+            .setFeedAttributeId(feedAttributes.get(FlightPlaceholderField.DESTINATION_ID).getId())
+            .setStringValue("Mars")
             .build();
     // Creates the flight price feed attribute value.
     FeedItemAttributeValue flightPrice =
         FeedItemAttributeValue.newBuilder()
-            .setFeedAttributeId(
-                Int64Value.of(
-                    feedAttributes.get(FlightPlaceholderField.FLIGHT_PRICE).getId().getValue()))
-            .setStringValue(StringValue.of("499.99 USD"))
+            .setFeedAttributeId(feedAttributes.get(FlightPlaceholderField.FLIGHT_PRICE).getId())
+            .setStringValue("499.99 USD")
             .build();
     // Creates the flight sale price feed attribute value.
     FeedItemAttributeValue flightSalePrice =
         FeedItemAttributeValue.newBuilder()
             .setFeedAttributeId(
-                Int64Value.of(
-                    feedAttributes
-                        .get(FlightPlaceholderField.FLIGHT_SALE_PRICE)
-                        .getId()
-                        .getValue()))
-            .setStringValue(StringValue.of("299.99 USD"))
+                feedAttributes.get(FlightPlaceholderField.FLIGHT_SALE_PRICE).getId())
+            .setStringValue("299.99 USD")
             .build();
     // Creates the final URLs feed attribute value.
     FeedItemAttributeValue finalUrls =
         FeedItemAttributeValue.newBuilder()
-            .setFeedAttributeId(
-                Int64Value.of(
-                    feedAttributes.get(FlightPlaceholderField.FINAL_URLS).getId().getValue()))
-            .addStringValues(StringValue.of("http://www.example.com/flights/"))
+            .setFeedAttributeId(feedAttributes.get(FlightPlaceholderField.FINAL_URLS).getId())
+            .addStringValues("http://www.example.com/flights/")
             .build();
 
     // Creates the FeedItem, specifying the Feed ID and the attributes created above.
     FeedItem feedItem =
         FeedItem.newBuilder()
-            .setFeed(StringValue.of(feedResourceName))
+            .setFeed(feedResourceName)
             .addAttributeValues(flightDescription)
             .addAttributeValues(destinationId)
             .addAttributeValues(flightPrice)

@@ -18,29 +18,28 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.v5.common.HotelCalloutFeedItem;
-import com.google.ads.googleads.v5.enums.ExtensionTypeEnum.ExtensionType;
-import com.google.ads.googleads.v5.errors.GoogleAdsError;
-import com.google.ads.googleads.v5.errors.GoogleAdsException;
-import com.google.ads.googleads.v5.resources.AdGroupExtensionSetting;
-import com.google.ads.googleads.v5.resources.CampaignExtensionSetting;
-import com.google.ads.googleads.v5.resources.CustomerExtensionSetting;
-import com.google.ads.googleads.v5.resources.ExtensionFeedItem;
-import com.google.ads.googleads.v5.services.AdGroupExtensionSettingOperation;
-import com.google.ads.googleads.v5.services.AdGroupExtensionSettingServiceClient;
-import com.google.ads.googleads.v5.services.CampaignExtensionSettingOperation;
-import com.google.ads.googleads.v5.services.CampaignExtensionSettingServiceClient;
-import com.google.ads.googleads.v5.services.CustomerExtensionSettingOperation;
-import com.google.ads.googleads.v5.services.CustomerExtensionSettingServiceClient;
-import com.google.ads.googleads.v5.services.ExtensionFeedItemOperation;
-import com.google.ads.googleads.v5.services.ExtensionFeedItemServiceClient;
-import com.google.ads.googleads.v5.services.MutateAdGroupExtensionSettingsResponse;
-import com.google.ads.googleads.v5.services.MutateCampaignExtensionSettingsResponse;
-import com.google.ads.googleads.v5.services.MutateCustomerExtensionSettingsResponse;
-import com.google.ads.googleads.v5.services.MutateExtensionFeedItemsResponse;
-import com.google.ads.googleads.v5.utils.ResourceNames;
+import com.google.ads.googleads.v6.common.HotelCalloutFeedItem;
+import com.google.ads.googleads.v6.enums.ExtensionTypeEnum.ExtensionType;
+import com.google.ads.googleads.v6.errors.GoogleAdsError;
+import com.google.ads.googleads.v6.errors.GoogleAdsException;
+import com.google.ads.googleads.v6.resources.AdGroupExtensionSetting;
+import com.google.ads.googleads.v6.resources.CampaignExtensionSetting;
+import com.google.ads.googleads.v6.resources.CustomerExtensionSetting;
+import com.google.ads.googleads.v6.resources.ExtensionFeedItem;
+import com.google.ads.googleads.v6.services.AdGroupExtensionSettingOperation;
+import com.google.ads.googleads.v6.services.AdGroupExtensionSettingServiceClient;
+import com.google.ads.googleads.v6.services.CampaignExtensionSettingOperation;
+import com.google.ads.googleads.v6.services.CampaignExtensionSettingServiceClient;
+import com.google.ads.googleads.v6.services.CustomerExtensionSettingOperation;
+import com.google.ads.googleads.v6.services.CustomerExtensionSettingServiceClient;
+import com.google.ads.googleads.v6.services.ExtensionFeedItemOperation;
+import com.google.ads.googleads.v6.services.ExtensionFeedItemServiceClient;
+import com.google.ads.googleads.v6.services.MutateAdGroupExtensionSettingsResponse;
+import com.google.ads.googleads.v6.services.MutateCampaignExtensionSettingsResponse;
+import com.google.ads.googleads.v6.services.MutateCustomerExtensionSettingsResponse;
+import com.google.ads.googleads.v6.services.MutateExtensionFeedItemsResponse;
+import com.google.ads.googleads.v6.utils.ResourceNames;
 import com.google.common.collect.ImmutableList;
-import com.google.protobuf.StringValue;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
@@ -147,8 +146,8 @@ public class AddHotelCallout {
     // Creates the callout with text and language of choice.
     HotelCalloutFeedItem hotelCallout =
         HotelCalloutFeedItem.newBuilder()
-            .setText(StringValue.of(calloutText))
-            .setLanguageCode(StringValue.of(languageCode))
+            .setText(calloutText)
+            .setLanguageCode(languageCode)
             .build();
 
     // Attaches the callout to a feed item.
@@ -179,7 +178,7 @@ public class AddHotelCallout {
     CustomerExtensionSetting customerExtensionSetting =
         CustomerExtensionSetting.newBuilder()
             .setExtensionType(ExtensionType.HOTEL_CALLOUT)
-            .addExtensionFeedItems(StringValue.of(extensionFeedItemResourceName))
+            .addExtensionFeedItems(extensionFeedItemResourceName)
             .build();
 
     // Creates the customer extension setting operation.
@@ -211,8 +210,8 @@ public class AddHotelCallout {
     CampaignExtensionSetting campaignExtensionSetting =
         CampaignExtensionSetting.newBuilder()
             .setExtensionType(ExtensionType.HOTEL_CALLOUT)
-            .setCampaign(StringValue.of(campaignResourceName))
-            .addExtensionFeedItems(StringValue.of(extensionFeedItemResourceName))
+            .setCampaign(campaignResourceName)
+            .addExtensionFeedItems(extensionFeedItemResourceName)
             .build();
 
     // Creates the campaign extension setting operation.
@@ -244,8 +243,8 @@ public class AddHotelCallout {
     AdGroupExtensionSetting adGroupExtensionSetting =
         AdGroupExtensionSetting.newBuilder()
             .setExtensionType(ExtensionType.HOTEL_CALLOUT)
-            .setAdGroup(StringValue.of(adGroupResourceName))
-            .addExtensionFeedItems(StringValue.of(extensionFeedItemResourceName))
+            .setAdGroup(adGroupResourceName)
+            .addExtensionFeedItems(extensionFeedItemResourceName)
             .build();
 
     // Creates the ad group extension setting operation.

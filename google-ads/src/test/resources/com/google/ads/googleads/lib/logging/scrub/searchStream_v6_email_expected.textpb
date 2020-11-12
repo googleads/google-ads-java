@@ -1,0 +1,9 @@
+results {
+  customer_user_access {
+    resource_name: "foo"
+    email_address: "REDACTED"
+  }
+}
+field_mask {
+  paths: "customer_user_access.email_address"
+}

@@ -91,13 +91,15 @@ public class KeywordPlanIdeaServiceStubSettings
       ImmutableList.<String>builder().build();
 
   private final PagedCallSettings<
-          GenerateKeywordIdeasRequest, GenerateKeywordIdeaResponse,
+          GenerateKeywordIdeasRequest,
+          GenerateKeywordIdeaResponse,
           GenerateKeywordIdeasPagedResponse>
       generateKeywordIdeasSettings;
 
   /** Returns the object with the settings used for calls to generateKeywordIdeas. */
   public PagedCallSettings<
-          GenerateKeywordIdeasRequest, GenerateKeywordIdeaResponse,
+          GenerateKeywordIdeasRequest,
+          GenerateKeywordIdeaResponse,
           GenerateKeywordIdeasPagedResponse>
       generateKeywordIdeasSettings() {
     return generateKeywordIdeasSettings;
@@ -179,7 +181,8 @@ public class KeywordPlanIdeaServiceStubSettings
           GenerateKeywordIdeasRequest, GenerateKeywordIdeaResponse, GenerateKeywordIdeaResult>
       GENERATE_KEYWORD_IDEAS_PAGE_STR_DESC =
           new PagedListDescriptor<
-              GenerateKeywordIdeasRequest, GenerateKeywordIdeaResponse,
+              GenerateKeywordIdeasRequest,
+              GenerateKeywordIdeaResponse,
               GenerateKeywordIdeaResult>() {
             @Override
             public String emptyToken() {
@@ -218,11 +221,13 @@ public class KeywordPlanIdeaServiceStubSettings
           };
 
   private static final PagedListResponseFactory<
-          GenerateKeywordIdeasRequest, GenerateKeywordIdeaResponse,
+          GenerateKeywordIdeasRequest,
+          GenerateKeywordIdeaResponse,
           GenerateKeywordIdeasPagedResponse>
       GENERATE_KEYWORD_IDEAS_PAGE_STR_FACT =
           new PagedListResponseFactory<
-              GenerateKeywordIdeasRequest, GenerateKeywordIdeaResponse,
+              GenerateKeywordIdeasRequest,
+              GenerateKeywordIdeaResponse,
               GenerateKeywordIdeasPagedResponse>() {
             @Override
             public ApiFuture<GenerateKeywordIdeasPagedResponse> getFuturePagedResponse(
@@ -231,7 +236,8 @@ public class KeywordPlanIdeaServiceStubSettings
                 ApiCallContext context,
                 ApiFuture<GenerateKeywordIdeaResponse> futureResponse) {
               PageContext<
-                      GenerateKeywordIdeasRequest, GenerateKeywordIdeaResponse,
+                      GenerateKeywordIdeasRequest,
+                      GenerateKeywordIdeaResponse,
                       GenerateKeywordIdeaResult>
                   pageContext =
                       PageContext.create(
@@ -246,7 +252,8 @@ public class KeywordPlanIdeaServiceStubSettings
     private final ImmutableList<UnaryCallSettings.Builder<?, ?>> unaryMethodSettingsBuilders;
 
     private final PagedCallSettings.Builder<
-            GenerateKeywordIdeasRequest, GenerateKeywordIdeaResponse,
+            GenerateKeywordIdeasRequest,
+            GenerateKeywordIdeaResponse,
             GenerateKeywordIdeasPagedResponse>
         generateKeywordIdeasSettings;
 
@@ -358,7 +365,8 @@ public class KeywordPlanIdeaServiceStubSettings
 
     /** Returns the builder for the settings used for calls to generateKeywordIdeas. */
     public PagedCallSettings.Builder<
-            GenerateKeywordIdeasRequest, GenerateKeywordIdeaResponse,
+            GenerateKeywordIdeasRequest,
+            GenerateKeywordIdeaResponse,
             GenerateKeywordIdeasPagedResponse>
         generateKeywordIdeasSettings() {
       return generateKeywordIdeasSettings;

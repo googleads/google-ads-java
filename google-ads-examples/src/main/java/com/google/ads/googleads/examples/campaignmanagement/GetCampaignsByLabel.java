@@ -18,12 +18,12 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.v5.errors.GoogleAdsError;
-import com.google.ads.googleads.v5.errors.GoogleAdsException;
-import com.google.ads.googleads.v5.services.GoogleAdsRow;
-import com.google.ads.googleads.v5.services.GoogleAdsServiceClient;
-import com.google.ads.googleads.v5.services.GoogleAdsServiceClient.SearchPagedResponse;
-import com.google.ads.googleads.v5.services.SearchGoogleAdsRequest;
+import com.google.ads.googleads.v6.errors.GoogleAdsError;
+import com.google.ads.googleads.v6.errors.GoogleAdsException;
+import com.google.ads.googleads.v6.services.GoogleAdsRow;
+import com.google.ads.googleads.v6.services.GoogleAdsServiceClient;
+import com.google.ads.googleads.v6.services.GoogleAdsServiceClient.SearchPagedResponse;
+import com.google.ads.googleads.v6.services.SearchGoogleAdsRequest;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
@@ -116,7 +116,7 @@ public class GetCampaignsByLabel {
               "Campaign found with name '%s', ID %d, and label: %s.%n",
               googleAdsRow.getCampaign().getName(),
               googleAdsRow.getCampaign().getId(),
-              googleAdsRow.getLabel().getName().getValue());
+              googleAdsRow.getLabel().getName());
         }
       } else {
         System.out.println("No campaigns were found.");

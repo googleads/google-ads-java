@@ -58,13 +58,13 @@ import javax.annotation.Generated;
  * methods:
  *
  * <ol>
- *   <li> A "flattened" method. With this type of method, the fields of the request type have been
+ *   <li>A "flattened" method. With this type of method, the fields of the request type have been
  *       converted into function parameters. It may be the case that not all fields are available as
  *       parameters, and not every API method will have a flattened method entry point.
- *   <li> A "request object" method. This type of method only takes one parameter, a request object,
+ *   <li>A "request object" method. This type of method only takes one parameter, a request object,
  *       which must be constructed before the call. Not every API method will have a request object
  *       method.
- *   <li> A "callable" method. This type of method takes no parameters and returns an immutable API
+ *   <li>A "callable" method. This type of method takes no parameters and returns an immutable API
  *       callable object, which can be used to initiate calls to the service.
  * </ol>
  *
@@ -385,8 +385,11 @@ public class GoogleAdsFieldServiceClient implements BackgroundResource {
 
   public static class SearchGoogleAdsFieldsPagedResponse
       extends AbstractPagedListResponse<
-          SearchGoogleAdsFieldsRequest, SearchGoogleAdsFieldsResponse, GoogleAdsField,
-          SearchGoogleAdsFieldsPage, SearchGoogleAdsFieldsFixedSizeCollection> {
+          SearchGoogleAdsFieldsRequest,
+          SearchGoogleAdsFieldsResponse,
+          GoogleAdsField,
+          SearchGoogleAdsFieldsPage,
+          SearchGoogleAdsFieldsFixedSizeCollection> {
 
     public static ApiFuture<SearchGoogleAdsFieldsPagedResponse> createAsync(
         PageContext<SearchGoogleAdsFieldsRequest, SearchGoogleAdsFieldsResponse, GoogleAdsField>
@@ -412,7 +415,9 @@ public class GoogleAdsFieldServiceClient implements BackgroundResource {
 
   public static class SearchGoogleAdsFieldsPage
       extends AbstractPage<
-          SearchGoogleAdsFieldsRequest, SearchGoogleAdsFieldsResponse, GoogleAdsField,
+          SearchGoogleAdsFieldsRequest,
+          SearchGoogleAdsFieldsResponse,
+          GoogleAdsField,
           SearchGoogleAdsFieldsPage> {
 
     private SearchGoogleAdsFieldsPage(
@@ -445,8 +450,11 @@ public class GoogleAdsFieldServiceClient implements BackgroundResource {
 
   public static class SearchGoogleAdsFieldsFixedSizeCollection
       extends AbstractFixedSizeCollection<
-          SearchGoogleAdsFieldsRequest, SearchGoogleAdsFieldsResponse, GoogleAdsField,
-          SearchGoogleAdsFieldsPage, SearchGoogleAdsFieldsFixedSizeCollection> {
+          SearchGoogleAdsFieldsRequest,
+          SearchGoogleAdsFieldsResponse,
+          GoogleAdsField,
+          SearchGoogleAdsFieldsPage,
+          SearchGoogleAdsFieldsFixedSizeCollection> {
 
     private SearchGoogleAdsFieldsFixedSizeCollection(
         List<SearchGoogleAdsFieldsPage> pages, int collectionSize) {

@@ -4,26 +4,32 @@
 package com.google.ads.googleads.v5.resources;
 
 /**
+ *
+ *
  * <pre>
  * An ad group criterion simulation. Supported combinations of advertising
  * channel type, criterion type, simulation type, and simulation modification
- * method are detailed below respectively.
+ * method are detailed below respectively. Hotel AdGroupCriterion simulation
+ * operations starting in V5.
  * 1. DISPLAY - KEYWORD - CPC_BID - UNIFORM
  * 2. SEARCH - KEYWORD - CPC_BID - UNIFORM
  * 3. SHOPPING - LISTING_GROUP - CPC_BID - UNIFORM
+ * 4. HOTEL - LISTING_GROUP - CPC_BID - UNIFORM
+ * 5. HOTEL - LISTING_GROUP - PERCENT_CPC_BID - UNIFORM
  * </pre>
  *
  * Protobuf type {@code google.ads.googleads.v5.resources.AdGroupCriterionSimulation}
  */
-public final class AdGroupCriterionSimulation extends
-    com.google.protobuf.GeneratedMessageV3 implements
+public final class AdGroupCriterionSimulation extends com.google.protobuf.GeneratedMessageV3
+    implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v5.resources.AdGroupCriterionSimulation)
     AdGroupCriterionSimulationOrBuilder {
-private static final long serialVersionUID = 0L;
+  private static final long serialVersionUID = 0L;
   // Use AdGroupCriterionSimulation.newBuilder() to construct.
   private AdGroupCriterionSimulation(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
+
   private AdGroupCriterionSimulation() {
     resourceName_ = "";
     type_ = 0;
@@ -34,16 +40,15 @@ private static final long serialVersionUID = 0L;
 
   @java.lang.Override
   @SuppressWarnings({"unused"})
-  protected java.lang.Object newInstance(
-      UnusedPrivateParameter unused) {
+  protected java.lang.Object newInstance(UnusedPrivateParameter unused) {
     return new AdGroupCriterionSimulation();
   }
 
   @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
+  public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
     return this.unknownFields;
   }
+
   private AdGroupCriterionSimulation(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -63,116 +68,144 @@ private static final long serialVersionUID = 0L;
           case 0:
             done = true;
             break;
-          case 10: {
-            java.lang.String s = input.readStringRequireUtf8();
+          case 10:
+            {
+              java.lang.String s = input.readStringRequireUtf8();
 
-            resourceName_ = s;
-            break;
-          }
-          case 32: {
-            int rawValue = input.readEnum();
+              resourceName_ = s;
+              break;
+            }
+          case 32:
+            {
+              int rawValue = input.readEnum();
 
-            type_ = rawValue;
-            break;
-          }
-          case 40: {
-            int rawValue = input.readEnum();
+              type_ = rawValue;
+              break;
+            }
+          case 40:
+            {
+              int rawValue = input.readEnum();
 
-            modificationMethod_ = rawValue;
-            break;
-          }
-          case 66: {
-            com.google.ads.googleads.v5.common.CpcBidSimulationPointList.Builder subBuilder = null;
-            if (pointListCase_ == 8) {
-              subBuilder = ((com.google.ads.googleads.v5.common.CpcBidSimulationPointList) pointList_).toBuilder();
+              modificationMethod_ = rawValue;
+              break;
             }
-            pointList_ =
-                input.readMessage(com.google.ads.googleads.v5.common.CpcBidSimulationPointList.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.google.ads.googleads.v5.common.CpcBidSimulationPointList) pointList_);
-              pointList_ = subBuilder.buildPartial();
+          case 66:
+            {
+              com.google.ads.googleads.v5.common.CpcBidSimulationPointList.Builder subBuilder =
+                  null;
+              if (pointListCase_ == 8) {
+                subBuilder =
+                    ((com.google.ads.googleads.v5.common.CpcBidSimulationPointList) pointList_)
+                        .toBuilder();
+              }
+              pointList_ =
+                  input.readMessage(
+                      com.google.ads.googleads.v5.common.CpcBidSimulationPointList.parser(),
+                      extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(
+                    (com.google.ads.googleads.v5.common.CpcBidSimulationPointList) pointList_);
+                pointList_ = subBuilder.buildPartial();
+              }
+              pointListCase_ = 8;
+              break;
             }
-            pointListCase_ = 8;
-            break;
-          }
-          case 72: {
-            bitField0_ |= 0x00000001;
-            adGroupId_ = input.readInt64();
-            break;
-          }
-          case 80: {
-            bitField0_ |= 0x00000002;
-            criterionId_ = input.readInt64();
-            break;
-          }
-          case 90: {
-            java.lang.String s = input.readStringRequireUtf8();
-            bitField0_ |= 0x00000004;
-            startDate_ = s;
-            break;
-          }
-          case 98: {
-            java.lang.String s = input.readStringRequireUtf8();
-            bitField0_ |= 0x00000008;
-            endDate_ = s;
-            break;
-          }
-          case 106: {
-            com.google.ads.googleads.v5.common.PercentCpcBidSimulationPointList.Builder subBuilder = null;
-            if (pointListCase_ == 13) {
-              subBuilder = ((com.google.ads.googleads.v5.common.PercentCpcBidSimulationPointList) pointList_).toBuilder();
+          case 72:
+            {
+              bitField0_ |= 0x00000001;
+              adGroupId_ = input.readInt64();
+              break;
             }
-            pointList_ =
-                input.readMessage(com.google.ads.googleads.v5.common.PercentCpcBidSimulationPointList.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.google.ads.googleads.v5.common.PercentCpcBidSimulationPointList) pointList_);
-              pointList_ = subBuilder.buildPartial();
+          case 80:
+            {
+              bitField0_ |= 0x00000002;
+              criterionId_ = input.readInt64();
+              break;
             }
-            pointListCase_ = 13;
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
+          case 90:
+            {
+              java.lang.String s = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000004;
+              startDate_ = s;
+              break;
             }
-            break;
-          }
+          case 98:
+            {
+              java.lang.String s = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000008;
+              endDate_ = s;
+              break;
+            }
+          case 106:
+            {
+              com.google.ads.googleads.v5.common.PercentCpcBidSimulationPointList.Builder
+                  subBuilder = null;
+              if (pointListCase_ == 13) {
+                subBuilder =
+                    ((com.google.ads.googleads.v5.common.PercentCpcBidSimulationPointList)
+                            pointList_)
+                        .toBuilder();
+              }
+              pointList_ =
+                  input.readMessage(
+                      com.google.ads.googleads.v5.common.PercentCpcBidSimulationPointList.parser(),
+                      extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(
+                    (com.google.ads.googleads.v5.common.PercentCpcBidSimulationPointList)
+                        pointList_);
+                pointList_ = subBuilder.buildPartial();
+              }
+              pointListCase_ = 13;
+              break;
+            }
+          default:
+            {
+              if (!parseUnknownField(input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
         }
       }
     } catch (com.google.protobuf.InvalidProtocolBufferException e) {
       throw e.setUnfinishedMessage(this);
     } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
+      throw new com.google.protobuf.InvalidProtocolBufferException(e).setUnfinishedMessage(this);
     } finally {
       this.unknownFields = unknownFields.build();
       makeExtensionsImmutable();
     }
   }
-  public static final com.google.protobuf.Descriptors.Descriptor
-      getDescriptor() {
-    return com.google.ads.googleads.v5.resources.AdGroupCriterionSimulationProto.internal_static_google_ads_googleads_v5_resources_AdGroupCriterionSimulation_descriptor;
+
+  public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+    return com.google.ads.googleads.v5.resources.AdGroupCriterionSimulationProto
+        .internal_static_google_ads_googleads_v5_resources_AdGroupCriterionSimulation_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.google.ads.googleads.v5.resources.AdGroupCriterionSimulationProto.internal_static_google_ads_googleads_v5_resources_AdGroupCriterionSimulation_fieldAccessorTable
+    return com.google.ads.googleads.v5.resources.AdGroupCriterionSimulationProto
+        .internal_static_google_ads_googleads_v5_resources_AdGroupCriterionSimulation_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.google.ads.googleads.v5.resources.AdGroupCriterionSimulation.class, com.google.ads.googleads.v5.resources.AdGroupCriterionSimulation.Builder.class);
+            com.google.ads.googleads.v5.resources.AdGroupCriterionSimulation.class,
+            com.google.ads.googleads.v5.resources.AdGroupCriterionSimulation.Builder.class);
   }
 
   private int bitField0_;
   private int pointListCase_ = 0;
   private java.lang.Object pointList_;
+
   public enum PointListCase
-      implements com.google.protobuf.Internal.EnumLite,
+      implements
+          com.google.protobuf.Internal.EnumLite,
           com.google.protobuf.AbstractMessage.InternalOneOfEnum {
     CPC_BID_POINT_LIST(8),
     PERCENT_CPC_BID_POINT_LIST(13),
     POINTLIST_NOT_SET(0);
     private final int value;
+
     private PointListCase(int value) {
       this.value = value;
     }
@@ -188,33 +221,41 @@ private static final long serialVersionUID = 0L;
 
     public static PointListCase forNumber(int value) {
       switch (value) {
-        case 8: return CPC_BID_POINT_LIST;
-        case 13: return PERCENT_CPC_BID_POINT_LIST;
-        case 0: return POINTLIST_NOT_SET;
-        default: return null;
+        case 8:
+          return CPC_BID_POINT_LIST;
+        case 13:
+          return PERCENT_CPC_BID_POINT_LIST;
+        case 0:
+          return POINTLIST_NOT_SET;
+        default:
+          return null;
       }
     }
+
     public int getNumber() {
       return this.value;
     }
   };
 
-  public PointListCase
-  getPointListCase() {
-    return PointListCase.forNumber(
-        pointListCase_);
+  public PointListCase getPointListCase() {
+    return PointListCase.forNumber(pointListCase_);
   }
 
   public static final int RESOURCE_NAME_FIELD_NUMBER = 1;
   private volatile java.lang.Object resourceName_;
   /**
+   *
+   *
    * <pre>
    * Output only. The resource name of the ad group criterion simulation.
    * Ad group criterion simulation resource names have the form:
    * `customers/{customer_id}/adGroupCriterionSimulations/{ad_group_id}~{criterion_id}~{type}~{modification_method}~{start_date}~{end_date}`
    * </pre>
    *
-   * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * <code>
+   * string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }
+   * </code>
+   *
    * @return The resourceName.
    */
   @java.lang.Override
@@ -223,31 +264,33 @@ private static final long serialVersionUID = 0L;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
     } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
+      com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
       resourceName_ = s;
       return s;
     }
   }
   /**
+   *
+   *
    * <pre>
    * Output only. The resource name of the ad group criterion simulation.
    * Ad group criterion simulation resource names have the form:
    * `customers/{customer_id}/adGroupCriterionSimulations/{ad_group_id}~{criterion_id}~{type}~{modification_method}~{start_date}~{end_date}`
    * </pre>
    *
-   * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * <code>
+   * string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }
+   * </code>
+   *
    * @return The bytes for resourceName.
    */
   @java.lang.Override
-  public com.google.protobuf.ByteString
-      getResourceNameBytes() {
+  public com.google.protobuf.ByteString getResourceNameBytes() {
     java.lang.Object ref = resourceName_;
     if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
+      com.google.protobuf.ByteString b =
+          com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
       resourceName_ = b;
       return b;
     } else {
@@ -258,11 +301,14 @@ private static final long serialVersionUID = 0L;
   public static final int AD_GROUP_ID_FIELD_NUMBER = 9;
   private long adGroupId_;
   /**
+   *
+   *
    * <pre>
    * Output only. AdGroup ID of the simulation.
    * </pre>
    *
    * <code>int64 ad_group_id = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   *
    * @return Whether the adGroupId field is set.
    */
   @java.lang.Override
@@ -270,11 +316,14 @@ private static final long serialVersionUID = 0L;
     return ((bitField0_ & 0x00000001) != 0);
   }
   /**
+   *
+   *
    * <pre>
    * Output only. AdGroup ID of the simulation.
    * </pre>
    *
    * <code>int64 ad_group_id = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   *
    * @return The adGroupId.
    */
   @java.lang.Override
@@ -285,11 +334,14 @@ private static final long serialVersionUID = 0L;
   public static final int CRITERION_ID_FIELD_NUMBER = 10;
   private long criterionId_;
   /**
+   *
+   *
    * <pre>
    * Output only. Criterion ID of the simulation.
    * </pre>
    *
    * <code>int64 criterion_id = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   *
    * @return Whether the criterionId field is set.
    */
   @java.lang.Override
@@ -297,11 +349,14 @@ private static final long serialVersionUID = 0L;
     return ((bitField0_ & 0x00000002) != 0);
   }
   /**
+   *
+   *
    * <pre>
    * Output only. Criterion ID of the simulation.
    * </pre>
    *
    * <code>int64 criterion_id = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   *
    * @return The criterionId.
    */
   @java.lang.Override
@@ -312,65 +367,103 @@ private static final long serialVersionUID = 0L;
   public static final int TYPE_FIELD_NUMBER = 4;
   private int type_;
   /**
+   *
+   *
    * <pre>
    * Output only. The field that the simulation modifies.
    * </pre>
    *
-   * <code>.google.ads.googleads.v5.enums.SimulationTypeEnum.SimulationType type = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>
+   * .google.ads.googleads.v5.enums.SimulationTypeEnum.SimulationType type = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];
+   * </code>
+   *
    * @return The enum numeric value on the wire for type.
    */
-  @java.lang.Override public int getTypeValue() {
+  @java.lang.Override
+  public int getTypeValue() {
     return type_;
   }
   /**
+   *
+   *
    * <pre>
    * Output only. The field that the simulation modifies.
    * </pre>
    *
-   * <code>.google.ads.googleads.v5.enums.SimulationTypeEnum.SimulationType type = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>
+   * .google.ads.googleads.v5.enums.SimulationTypeEnum.SimulationType type = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];
+   * </code>
+   *
    * @return The type.
    */
-  @java.lang.Override public com.google.ads.googleads.v5.enums.SimulationTypeEnum.SimulationType getType() {
+  @java.lang.Override
+  public com.google.ads.googleads.v5.enums.SimulationTypeEnum.SimulationType getType() {
     @SuppressWarnings("deprecation")
-    com.google.ads.googleads.v5.enums.SimulationTypeEnum.SimulationType result = com.google.ads.googleads.v5.enums.SimulationTypeEnum.SimulationType.valueOf(type_);
-    return result == null ? com.google.ads.googleads.v5.enums.SimulationTypeEnum.SimulationType.UNRECOGNIZED : result;
+    com.google.ads.googleads.v5.enums.SimulationTypeEnum.SimulationType result =
+        com.google.ads.googleads.v5.enums.SimulationTypeEnum.SimulationType.valueOf(type_);
+    return result == null
+        ? com.google.ads.googleads.v5.enums.SimulationTypeEnum.SimulationType.UNRECOGNIZED
+        : result;
   }
 
   public static final int MODIFICATION_METHOD_FIELD_NUMBER = 5;
   private int modificationMethod_;
   /**
+   *
+   *
    * <pre>
    * Output only. How the simulation modifies the field.
    * </pre>
    *
-   * <code>.google.ads.googleads.v5.enums.SimulationModificationMethodEnum.SimulationModificationMethod modification_method = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>
+   * .google.ads.googleads.v5.enums.SimulationModificationMethodEnum.SimulationModificationMethod modification_method = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];
+   * </code>
+   *
    * @return The enum numeric value on the wire for modificationMethod.
    */
-  @java.lang.Override public int getModificationMethodValue() {
+  @java.lang.Override
+  public int getModificationMethodValue() {
     return modificationMethod_;
   }
   /**
+   *
+   *
    * <pre>
    * Output only. How the simulation modifies the field.
    * </pre>
    *
-   * <code>.google.ads.googleads.v5.enums.SimulationModificationMethodEnum.SimulationModificationMethod modification_method = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>
+   * .google.ads.googleads.v5.enums.SimulationModificationMethodEnum.SimulationModificationMethod modification_method = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];
+   * </code>
+   *
    * @return The modificationMethod.
    */
-  @java.lang.Override public com.google.ads.googleads.v5.enums.SimulationModificationMethodEnum.SimulationModificationMethod getModificationMethod() {
+  @java.lang.Override
+  public com.google.ads.googleads.v5.enums.SimulationModificationMethodEnum
+          .SimulationModificationMethod
+      getModificationMethod() {
     @SuppressWarnings("deprecation")
-    com.google.ads.googleads.v5.enums.SimulationModificationMethodEnum.SimulationModificationMethod result = com.google.ads.googleads.v5.enums.SimulationModificationMethodEnum.SimulationModificationMethod.valueOf(modificationMethod_);
-    return result == null ? com.google.ads.googleads.v5.enums.SimulationModificationMethodEnum.SimulationModificationMethod.UNRECOGNIZED : result;
+    com.google.ads.googleads.v5.enums.SimulationModificationMethodEnum.SimulationModificationMethod
+        result =
+            com.google.ads.googleads.v5.enums.SimulationModificationMethodEnum
+                .SimulationModificationMethod.valueOf(modificationMethod_);
+    return result == null
+        ? com.google.ads.googleads.v5.enums.SimulationModificationMethodEnum
+            .SimulationModificationMethod.UNRECOGNIZED
+        : result;
   }
 
   public static final int START_DATE_FIELD_NUMBER = 11;
   private volatile java.lang.Object startDate_;
   /**
+   *
+   *
    * <pre>
    * Output only. First day on which the simulation is based, in YYYY-MM-DD format.
    * </pre>
    *
    * <code>string start_date = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   *
    * @return Whether the startDate field is set.
    */
   @java.lang.Override
@@ -378,11 +471,14 @@ private static final long serialVersionUID = 0L;
     return ((bitField0_ & 0x00000004) != 0);
   }
   /**
+   *
+   *
    * <pre>
    * Output only. First day on which the simulation is based, in YYYY-MM-DD format.
    * </pre>
    *
    * <code>string start_date = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   *
    * @return The startDate.
    */
   @java.lang.Override
@@ -391,29 +487,29 @@ private static final long serialVersionUID = 0L;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
     } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
+      com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
       startDate_ = s;
       return s;
     }
   }
   /**
+   *
+   *
    * <pre>
    * Output only. First day on which the simulation is based, in YYYY-MM-DD format.
    * </pre>
    *
    * <code>string start_date = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   *
    * @return The bytes for startDate.
    */
   @java.lang.Override
-  public com.google.protobuf.ByteString
-      getStartDateBytes() {
+  public com.google.protobuf.ByteString getStartDateBytes() {
     java.lang.Object ref = startDate_;
     if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
+      com.google.protobuf.ByteString b =
+          com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
       startDate_ = b;
       return b;
     } else {
@@ -424,11 +520,14 @@ private static final long serialVersionUID = 0L;
   public static final int END_DATE_FIELD_NUMBER = 12;
   private volatile java.lang.Object endDate_;
   /**
+   *
+   *
    * <pre>
    * Output only. Last day on which the simulation is based, in YYYY-MM-DD format.
    * </pre>
    *
    * <code>string end_date = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   *
    * @return Whether the endDate field is set.
    */
   @java.lang.Override
@@ -436,11 +535,14 @@ private static final long serialVersionUID = 0L;
     return ((bitField0_ & 0x00000008) != 0);
   }
   /**
+   *
+   *
    * <pre>
    * Output only. Last day on which the simulation is based, in YYYY-MM-DD format.
    * </pre>
    *
    * <code>string end_date = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   *
    * @return The endDate.
    */
   @java.lang.Override
@@ -449,29 +551,29 @@ private static final long serialVersionUID = 0L;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
     } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
+      com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
       endDate_ = s;
       return s;
     }
   }
   /**
+   *
+   *
    * <pre>
    * Output only. Last day on which the simulation is based, in YYYY-MM-DD format.
    * </pre>
    *
    * <code>string end_date = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   *
    * @return The bytes for endDate.
    */
   @java.lang.Override
-  public com.google.protobuf.ByteString
-      getEndDateBytes() {
+  public com.google.protobuf.ByteString getEndDateBytes() {
     java.lang.Object ref = endDate_;
     if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
+      com.google.protobuf.ByteString b =
+          com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
       endDate_ = b;
       return b;
     } else {
@@ -481,11 +583,16 @@ private static final long serialVersionUID = 0L;
 
   public static final int CPC_BID_POINT_LIST_FIELD_NUMBER = 8;
   /**
+   *
+   *
    * <pre>
    * Output only. Simulation points if the simulation type is CPC_BID.
    * </pre>
    *
-   * <code>.google.ads.googleads.v5.common.CpcBidSimulationPointList cpc_bid_point_list = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>
+   * .google.ads.googleads.v5.common.CpcBidSimulationPointList cpc_bid_point_list = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];
+   * </code>
+   *
    * @return Whether the cpcBidPointList field is set.
    */
   @java.lang.Override
@@ -493,42 +600,57 @@ private static final long serialVersionUID = 0L;
     return pointListCase_ == 8;
   }
   /**
+   *
+   *
    * <pre>
    * Output only. Simulation points if the simulation type is CPC_BID.
    * </pre>
    *
-   * <code>.google.ads.googleads.v5.common.CpcBidSimulationPointList cpc_bid_point_list = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>
+   * .google.ads.googleads.v5.common.CpcBidSimulationPointList cpc_bid_point_list = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];
+   * </code>
+   *
    * @return The cpcBidPointList.
    */
   @java.lang.Override
   public com.google.ads.googleads.v5.common.CpcBidSimulationPointList getCpcBidPointList() {
     if (pointListCase_ == 8) {
-       return (com.google.ads.googleads.v5.common.CpcBidSimulationPointList) pointList_;
+      return (com.google.ads.googleads.v5.common.CpcBidSimulationPointList) pointList_;
     }
     return com.google.ads.googleads.v5.common.CpcBidSimulationPointList.getDefaultInstance();
   }
   /**
+   *
+   *
    * <pre>
    * Output only. Simulation points if the simulation type is CPC_BID.
    * </pre>
    *
-   * <code>.google.ads.googleads.v5.common.CpcBidSimulationPointList cpc_bid_point_list = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>
+   * .google.ads.googleads.v5.common.CpcBidSimulationPointList cpc_bid_point_list = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];
+   * </code>
    */
   @java.lang.Override
-  public com.google.ads.googleads.v5.common.CpcBidSimulationPointListOrBuilder getCpcBidPointListOrBuilder() {
+  public com.google.ads.googleads.v5.common.CpcBidSimulationPointListOrBuilder
+      getCpcBidPointListOrBuilder() {
     if (pointListCase_ == 8) {
-       return (com.google.ads.googleads.v5.common.CpcBidSimulationPointList) pointList_;
+      return (com.google.ads.googleads.v5.common.CpcBidSimulationPointList) pointList_;
     }
     return com.google.ads.googleads.v5.common.CpcBidSimulationPointList.getDefaultInstance();
   }
 
   public static final int PERCENT_CPC_BID_POINT_LIST_FIELD_NUMBER = 13;
   /**
+   *
+   *
    * <pre>
    * Output only. Simulation points if the simulation type is PERCENT_CPC_BID.
    * </pre>
    *
-   * <code>.google.ads.googleads.v5.common.PercentCpcBidSimulationPointList percent_cpc_bid_point_list = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>
+   * .google.ads.googleads.v5.common.PercentCpcBidSimulationPointList percent_cpc_bid_point_list = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];
+   * </code>
+   *
    * @return Whether the percentCpcBidPointList field is set.
    */
   @java.lang.Override
@@ -536,36 +658,48 @@ private static final long serialVersionUID = 0L;
     return pointListCase_ == 13;
   }
   /**
+   *
+   *
    * <pre>
    * Output only. Simulation points if the simulation type is PERCENT_CPC_BID.
    * </pre>
    *
-   * <code>.google.ads.googleads.v5.common.PercentCpcBidSimulationPointList percent_cpc_bid_point_list = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>
+   * .google.ads.googleads.v5.common.PercentCpcBidSimulationPointList percent_cpc_bid_point_list = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];
+   * </code>
+   *
    * @return The percentCpcBidPointList.
    */
   @java.lang.Override
-  public com.google.ads.googleads.v5.common.PercentCpcBidSimulationPointList getPercentCpcBidPointList() {
+  public com.google.ads.googleads.v5.common.PercentCpcBidSimulationPointList
+      getPercentCpcBidPointList() {
     if (pointListCase_ == 13) {
-       return (com.google.ads.googleads.v5.common.PercentCpcBidSimulationPointList) pointList_;
+      return (com.google.ads.googleads.v5.common.PercentCpcBidSimulationPointList) pointList_;
     }
     return com.google.ads.googleads.v5.common.PercentCpcBidSimulationPointList.getDefaultInstance();
   }
   /**
+   *
+   *
    * <pre>
    * Output only. Simulation points if the simulation type is PERCENT_CPC_BID.
    * </pre>
    *
-   * <code>.google.ads.googleads.v5.common.PercentCpcBidSimulationPointList percent_cpc_bid_point_list = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>
+   * .google.ads.googleads.v5.common.PercentCpcBidSimulationPointList percent_cpc_bid_point_list = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];
+   * </code>
    */
   @java.lang.Override
-  public com.google.ads.googleads.v5.common.PercentCpcBidSimulationPointListOrBuilder getPercentCpcBidPointListOrBuilder() {
+  public com.google.ads.googleads.v5.common.PercentCpcBidSimulationPointListOrBuilder
+      getPercentCpcBidPointListOrBuilder() {
     if (pointListCase_ == 13) {
-       return (com.google.ads.googleads.v5.common.PercentCpcBidSimulationPointList) pointList_;
+      return (com.google.ads.googleads.v5.common.PercentCpcBidSimulationPointList) pointList_;
     }
     return com.google.ads.googleads.v5.common.PercentCpcBidSimulationPointList.getDefaultInstance();
   }
 
   private byte memoizedIsInitialized = -1;
+
   @java.lang.Override
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
@@ -577,19 +711,24 @@ private static final long serialVersionUID = 0L;
   }
 
   @java.lang.Override
-  public void writeTo(com.google.protobuf.CodedOutputStream output)
-                      throws java.io.IOException {
+  public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
     if (!getResourceNameBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, resourceName_);
     }
-    if (type_ != com.google.ads.googleads.v5.enums.SimulationTypeEnum.SimulationType.UNSPECIFIED.getNumber()) {
+    if (type_
+        != com.google.ads.googleads.v5.enums.SimulationTypeEnum.SimulationType.UNSPECIFIED
+            .getNumber()) {
       output.writeEnum(4, type_);
     }
-    if (modificationMethod_ != com.google.ads.googleads.v5.enums.SimulationModificationMethodEnum.SimulationModificationMethod.UNSPECIFIED.getNumber()) {
+    if (modificationMethod_
+        != com.google.ads.googleads.v5.enums.SimulationModificationMethodEnum
+            .SimulationModificationMethod.UNSPECIFIED
+            .getNumber()) {
       output.writeEnum(5, modificationMethod_);
     }
     if (pointListCase_ == 8) {
-      output.writeMessage(8, (com.google.ads.googleads.v5.common.CpcBidSimulationPointList) pointList_);
+      output.writeMessage(
+          8, (com.google.ads.googleads.v5.common.CpcBidSimulationPointList) pointList_);
     }
     if (((bitField0_ & 0x00000001) != 0)) {
       output.writeInt64(9, adGroupId_);
@@ -604,7 +743,8 @@ private static final long serialVersionUID = 0L;
       com.google.protobuf.GeneratedMessageV3.writeString(output, 12, endDate_);
     }
     if (pointListCase_ == 13) {
-      output.writeMessage(13, (com.google.ads.googleads.v5.common.PercentCpcBidSimulationPointList) pointList_);
+      output.writeMessage(
+          13, (com.google.ads.googleads.v5.common.PercentCpcBidSimulationPointList) pointList_);
     }
     unknownFields.writeTo(output);
   }
@@ -618,25 +758,27 @@ private static final long serialVersionUID = 0L;
     if (!getResourceNameBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, resourceName_);
     }
-    if (type_ != com.google.ads.googleads.v5.enums.SimulationTypeEnum.SimulationType.UNSPECIFIED.getNumber()) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeEnumSize(4, type_);
+    if (type_
+        != com.google.ads.googleads.v5.enums.SimulationTypeEnum.SimulationType.UNSPECIFIED
+            .getNumber()) {
+      size += com.google.protobuf.CodedOutputStream.computeEnumSize(4, type_);
     }
-    if (modificationMethod_ != com.google.ads.googleads.v5.enums.SimulationModificationMethodEnum.SimulationModificationMethod.UNSPECIFIED.getNumber()) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeEnumSize(5, modificationMethod_);
+    if (modificationMethod_
+        != com.google.ads.googleads.v5.enums.SimulationModificationMethodEnum
+            .SimulationModificationMethod.UNSPECIFIED
+            .getNumber()) {
+      size += com.google.protobuf.CodedOutputStream.computeEnumSize(5, modificationMethod_);
     }
     if (pointListCase_ == 8) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(8, (com.google.ads.googleads.v5.common.CpcBidSimulationPointList) pointList_);
+      size +=
+          com.google.protobuf.CodedOutputStream.computeMessageSize(
+              8, (com.google.ads.googleads.v5.common.CpcBidSimulationPointList) pointList_);
     }
     if (((bitField0_ & 0x00000001) != 0)) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeInt64Size(9, adGroupId_);
+      size += com.google.protobuf.CodedOutputStream.computeInt64Size(9, adGroupId_);
     }
     if (((bitField0_ & 0x00000002) != 0)) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeInt64Size(10, criterionId_);
+      size += com.google.protobuf.CodedOutputStream.computeInt64Size(10, criterionId_);
     }
     if (((bitField0_ & 0x00000004) != 0)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(11, startDate_);
@@ -645,8 +787,9 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(12, endDate_);
     }
     if (pointListCase_ == 13) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(13, (com.google.ads.googleads.v5.common.PercentCpcBidSimulationPointList) pointList_);
+      size +=
+          com.google.protobuf.CodedOutputStream.computeMessageSize(
+              13, (com.google.ads.googleads.v5.common.PercentCpcBidSimulationPointList) pointList_);
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -656,46 +799,40 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public boolean equals(final java.lang.Object obj) {
     if (obj == this) {
-     return true;
+      return true;
     }
     if (!(obj instanceof com.google.ads.googleads.v5.resources.AdGroupCriterionSimulation)) {
       return super.equals(obj);
     }
-    com.google.ads.googleads.v5.resources.AdGroupCriterionSimulation other = (com.google.ads.googleads.v5.resources.AdGroupCriterionSimulation) obj;
+    com.google.ads.googleads.v5.resources.AdGroupCriterionSimulation other =
+        (com.google.ads.googleads.v5.resources.AdGroupCriterionSimulation) obj;
 
-    if (!getResourceName()
-        .equals(other.getResourceName())) return false;
+    if (!getResourceName().equals(other.getResourceName())) return false;
     if (hasAdGroupId() != other.hasAdGroupId()) return false;
     if (hasAdGroupId()) {
-      if (getAdGroupId()
-          != other.getAdGroupId()) return false;
+      if (getAdGroupId() != other.getAdGroupId()) return false;
     }
     if (hasCriterionId() != other.hasCriterionId()) return false;
     if (hasCriterionId()) {
-      if (getCriterionId()
-          != other.getCriterionId()) return false;
+      if (getCriterionId() != other.getCriterionId()) return false;
     }
     if (type_ != other.type_) return false;
     if (modificationMethod_ != other.modificationMethod_) return false;
     if (hasStartDate() != other.hasStartDate()) return false;
     if (hasStartDate()) {
-      if (!getStartDate()
-          .equals(other.getStartDate())) return false;
+      if (!getStartDate().equals(other.getStartDate())) return false;
     }
     if (hasEndDate() != other.hasEndDate()) return false;
     if (hasEndDate()) {
-      if (!getEndDate()
-          .equals(other.getEndDate())) return false;
+      if (!getEndDate().equals(other.getEndDate())) return false;
     }
     if (!getPointListCase().equals(other.getPointListCase())) return false;
     switch (pointListCase_) {
       case 8:
-        if (!getCpcBidPointList()
-            .equals(other.getCpcBidPointList())) return false;
+        if (!getCpcBidPointList().equals(other.getCpcBidPointList())) return false;
         break;
       case 13:
-        if (!getPercentCpcBidPointList()
-            .equals(other.getPercentCpcBidPointList())) return false;
+        if (!getPercentCpcBidPointList().equals(other.getPercentCpcBidPointList())) return false;
         break;
       case 0:
       default:
@@ -715,13 +852,11 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + getResourceName().hashCode();
     if (hasAdGroupId()) {
       hash = (37 * hash) + AD_GROUP_ID_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          getAdGroupId());
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(getAdGroupId());
     }
     if (hasCriterionId()) {
       hash = (37 * hash) + CRITERION_ID_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          getCriterionId());
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(getCriterionId());
     }
     hash = (37 * hash) + TYPE_FIELD_NUMBER;
     hash = (53 * hash) + type_;
@@ -753,122 +888,135 @@ private static final long serialVersionUID = 0L;
   }
 
   public static com.google.ads.googleads.v5.resources.AdGroupCriterionSimulation parseFrom(
-      java.nio.ByteBuffer data)
-      throws com.google.protobuf.InvalidProtocolBufferException {
+      java.nio.ByteBuffer data) throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
+
   public static com.google.ads.googleads.v5.resources.AdGroupCriterionSimulation parseFrom(
-      java.nio.ByteBuffer data,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.nio.ByteBuffer data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
+
   public static com.google.ads.googleads.v5.resources.AdGroupCriterionSimulation parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
+
   public static com.google.ads.googleads.v5.resources.AdGroupCriterionSimulation parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.google.ads.googleads.v5.resources.AdGroupCriterionSimulation parseFrom(byte[] data)
-      throws com.google.protobuf.InvalidProtocolBufferException {
+
+  public static com.google.ads.googleads.v5.resources.AdGroupCriterionSimulation parseFrom(
+      byte[] data) throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
+
   public static com.google.ads.googleads.v5.resources.AdGroupCriterionSimulation parseFrom(
-      byte[] data,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      byte[] data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.google.ads.googleads.v5.resources.AdGroupCriterionSimulation parseFrom(java.io.InputStream input)
-      throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3
-        .parseWithIOException(PARSER, input);
-  }
+
   public static com.google.ads.googleads.v5.resources.AdGroupCriterionSimulation parseFrom(
-      java.io.InputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3
-        .parseWithIOException(PARSER, input, extensionRegistry);
+      java.io.InputStream input) throws java.io.IOException {
+    return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
   }
-  public static com.google.ads.googleads.v5.resources.AdGroupCriterionSimulation parseDelimitedFrom(java.io.InputStream input)
+
+  public static com.google.ads.googleads.v5.resources.AdGroupCriterionSimulation parseFrom(
+      java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3
-        .parseDelimitedWithIOException(PARSER, input);
+    return com.google.protobuf.GeneratedMessageV3.parseWithIOException(
+        PARSER, input, extensionRegistry);
   }
+
   public static com.google.ads.googleads.v5.resources.AdGroupCriterionSimulation parseDelimitedFrom(
-      java.io.InputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3
-        .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      java.io.InputStream input) throws java.io.IOException {
+    return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(PARSER, input);
   }
+
+  public static com.google.ads.googleads.v5.resources.AdGroupCriterionSimulation parseDelimitedFrom(
+      java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws java.io.IOException {
+    return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(
+        PARSER, input, extensionRegistry);
+  }
+
   public static com.google.ads.googleads.v5.resources.AdGroupCriterionSimulation parseFrom(
-      com.google.protobuf.CodedInputStream input)
-      throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3
-        .parseWithIOException(PARSER, input);
+      com.google.protobuf.CodedInputStream input) throws java.io.IOException {
+    return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
   }
+
   public static com.google.ads.googleads.v5.resources.AdGroupCriterionSimulation parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3
-        .parseWithIOException(PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessageV3.parseWithIOException(
+        PARSER, input, extensionRegistry);
   }
 
   @java.lang.Override
-  public Builder newBuilderForType() { return newBuilder(); }
+  public Builder newBuilderForType() {
+    return newBuilder();
+  }
+
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(com.google.ads.googleads.v5.resources.AdGroupCriterionSimulation prototype) {
+
+  public static Builder newBuilder(
+      com.google.ads.googleads.v5.resources.AdGroupCriterionSimulation prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-  }
-  @java.lang.Override
-  public Builder toBuilder() {
-    return this == DEFAULT_INSTANCE
-        ? new Builder() : new Builder().mergeFrom(this);
   }
 
   @java.lang.Override
-  protected Builder newBuilderForType(
-      com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+  public Builder toBuilder() {
+    return this == DEFAULT_INSTANCE ? new Builder() : new Builder().mergeFrom(this);
+  }
+
+  @java.lang.Override
+  protected Builder newBuilderForType(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
     Builder builder = new Builder(parent);
     return builder;
   }
   /**
+   *
+   *
    * <pre>
    * An ad group criterion simulation. Supported combinations of advertising
    * channel type, criterion type, simulation type, and simulation modification
-   * method are detailed below respectively.
+   * method are detailed below respectively. Hotel AdGroupCriterion simulation
+   * operations starting in V5.
    * 1. DISPLAY - KEYWORD - CPC_BID - UNIFORM
    * 2. SEARCH - KEYWORD - CPC_BID - UNIFORM
    * 3. SHOPPING - LISTING_GROUP - CPC_BID - UNIFORM
+   * 4. HOTEL - LISTING_GROUP - CPC_BID - UNIFORM
+   * 5. HOTEL - LISTING_GROUP - PERCENT_CPC_BID - UNIFORM
    * </pre>
    *
    * Protobuf type {@code google.ads.googleads.v5.resources.AdGroupCriterionSimulation}
    */
-  public static final class Builder extends
-      com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+  public static final class Builder extends com.google.protobuf.GeneratedMessageV3.Builder<Builder>
+      implements
       // @@protoc_insertion_point(builder_implements:google.ads.googleads.v5.resources.AdGroupCriterionSimulation)
       com.google.ads.googleads.v5.resources.AdGroupCriterionSimulationOrBuilder {
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.google.ads.googleads.v5.resources.AdGroupCriterionSimulationProto.internal_static_google_ads_googleads_v5_resources_AdGroupCriterionSimulation_descriptor;
+    public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+      return com.google.ads.googleads.v5.resources.AdGroupCriterionSimulationProto
+          .internal_static_google_ads_googleads_v5_resources_AdGroupCriterionSimulation_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.google.ads.googleads.v5.resources.AdGroupCriterionSimulationProto.internal_static_google_ads_googleads_v5_resources_AdGroupCriterionSimulation_fieldAccessorTable
+      return com.google.ads.googleads.v5.resources.AdGroupCriterionSimulationProto
+          .internal_static_google_ads_googleads_v5_resources_AdGroupCriterionSimulation_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.google.ads.googleads.v5.resources.AdGroupCriterionSimulation.class, com.google.ads.googleads.v5.resources.AdGroupCriterionSimulation.Builder.class);
+              com.google.ads.googleads.v5.resources.AdGroupCriterionSimulation.class,
+              com.google.ads.googleads.v5.resources.AdGroupCriterionSimulation.Builder.class);
     }
 
     // Construct using com.google.ads.googleads.v5.resources.AdGroupCriterionSimulation.newBuilder()
@@ -876,16 +1024,15 @@ private static final long serialVersionUID = 0L;
       maybeForceBuilderInitialization();
     }
 
-    private Builder(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+    private Builder(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
       maybeForceBuilderInitialization();
     }
+
     private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-      }
+      if (com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders) {}
     }
+
     @java.lang.Override
     public Builder clear() {
       super.clear();
@@ -909,13 +1056,14 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Descriptors.Descriptor
-        getDescriptorForType() {
-      return com.google.ads.googleads.v5.resources.AdGroupCriterionSimulationProto.internal_static_google_ads_googleads_v5_resources_AdGroupCriterionSimulation_descriptor;
+    public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
+      return com.google.ads.googleads.v5.resources.AdGroupCriterionSimulationProto
+          .internal_static_google_ads_googleads_v5_resources_AdGroupCriterionSimulation_descriptor;
     }
 
     @java.lang.Override
-    public com.google.ads.googleads.v5.resources.AdGroupCriterionSimulation getDefaultInstanceForType() {
+    public com.google.ads.googleads.v5.resources.AdGroupCriterionSimulation
+        getDefaultInstanceForType() {
       return com.google.ads.googleads.v5.resources.AdGroupCriterionSimulation.getDefaultInstance();
     }
 
@@ -930,7 +1078,8 @@ private static final long serialVersionUID = 0L;
 
     @java.lang.Override
     public com.google.ads.googleads.v5.resources.AdGroupCriterionSimulation buildPartial() {
-      com.google.ads.googleads.v5.resources.AdGroupCriterionSimulation result = new com.google.ads.googleads.v5.resources.AdGroupCriterionSimulation(this);
+      com.google.ads.googleads.v5.resources.AdGroupCriterionSimulation result =
+          new com.google.ads.googleads.v5.resources.AdGroupCriterionSimulation(this);
       int from_bitField0_ = bitField0_;
       int to_bitField0_ = 0;
       result.resourceName_ = resourceName_;
@@ -976,46 +1125,50 @@ private static final long serialVersionUID = 0L;
     public Builder clone() {
       return super.clone();
     }
+
     @java.lang.Override
     public Builder setField(
-        com.google.protobuf.Descriptors.FieldDescriptor field,
-        java.lang.Object value) {
+        com.google.protobuf.Descriptors.FieldDescriptor field, java.lang.Object value) {
       return super.setField(field, value);
     }
+
     @java.lang.Override
-    public Builder clearField(
-        com.google.protobuf.Descriptors.FieldDescriptor field) {
+    public Builder clearField(com.google.protobuf.Descriptors.FieldDescriptor field) {
       return super.clearField(field);
     }
+
     @java.lang.Override
-    public Builder clearOneof(
-        com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+    public Builder clearOneof(com.google.protobuf.Descriptors.OneofDescriptor oneof) {
       return super.clearOneof(oneof);
     }
+
     @java.lang.Override
     public Builder setRepeatedField(
-        com.google.protobuf.Descriptors.FieldDescriptor field,
-        int index, java.lang.Object value) {
+        com.google.protobuf.Descriptors.FieldDescriptor field, int index, java.lang.Object value) {
       return super.setRepeatedField(field, index, value);
     }
+
     @java.lang.Override
     public Builder addRepeatedField(
-        com.google.protobuf.Descriptors.FieldDescriptor field,
-        java.lang.Object value) {
+        com.google.protobuf.Descriptors.FieldDescriptor field, java.lang.Object value) {
       return super.addRepeatedField(field, value);
     }
+
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
       if (other instanceof com.google.ads.googleads.v5.resources.AdGroupCriterionSimulation) {
-        return mergeFrom((com.google.ads.googleads.v5.resources.AdGroupCriterionSimulation)other);
+        return mergeFrom((com.google.ads.googleads.v5.resources.AdGroupCriterionSimulation) other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(com.google.ads.googleads.v5.resources.AdGroupCriterionSimulation other) {
-      if (other == com.google.ads.googleads.v5.resources.AdGroupCriterionSimulation.getDefaultInstance()) return this;
+    public Builder mergeFrom(
+        com.google.ads.googleads.v5.resources.AdGroupCriterionSimulation other) {
+      if (other
+          == com.google.ads.googleads.v5.resources.AdGroupCriterionSimulation.getDefaultInstance())
+        return this;
       if (!other.getResourceName().isEmpty()) {
         resourceName_ = other.resourceName_;
         onChanged();
@@ -1043,17 +1196,20 @@ private static final long serialVersionUID = 0L;
         onChanged();
       }
       switch (other.getPointListCase()) {
-        case CPC_BID_POINT_LIST: {
-          mergeCpcBidPointList(other.getCpcBidPointList());
-          break;
-        }
-        case PERCENT_CPC_BID_POINT_LIST: {
-          mergePercentCpcBidPointList(other.getPercentCpcBidPointList());
-          break;
-        }
-        case POINTLIST_NOT_SET: {
-          break;
-        }
+        case CPC_BID_POINT_LIST:
+          {
+            mergeCpcBidPointList(other.getCpcBidPointList());
+            break;
+          }
+        case PERCENT_CPC_BID_POINT_LIST:
+          {
+            mergePercentCpcBidPointList(other.getPercentCpcBidPointList());
+            break;
+          }
+        case POINTLIST_NOT_SET:
+          {
+            break;
+          }
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -1074,7 +1230,9 @@ private static final long serialVersionUID = 0L;
       try {
         parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.google.ads.googleads.v5.resources.AdGroupCriterionSimulation) e.getUnfinishedMessage();
+        parsedMessage =
+            (com.google.ads.googleads.v5.resources.AdGroupCriterionSimulation)
+                e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
         if (parsedMessage != null) {
@@ -1083,12 +1241,12 @@ private static final long serialVersionUID = 0L;
       }
       return this;
     }
+
     private int pointListCase_ = 0;
     private java.lang.Object pointList_;
-    public PointListCase
-        getPointListCase() {
-      return PointListCase.forNumber(
-          pointListCase_);
+
+    public PointListCase getPointListCase() {
+      return PointListCase.forNumber(pointListCase_);
     }
 
     public Builder clearPointList() {
@@ -1102,20 +1260,24 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object resourceName_ = "";
     /**
+     *
+     *
      * <pre>
      * Output only. The resource name of the ad group criterion simulation.
      * Ad group criterion simulation resource names have the form:
      * `customers/{customer_id}/adGroupCriterionSimulations/{ad_group_id}~{criterion_id}~{type}~{modification_method}~{start_date}~{end_date}`
      * </pre>
      *
-     * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * <code>
+     * string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }
+     * </code>
+     *
      * @return The resourceName.
      */
     public java.lang.String getResourceName() {
       java.lang.Object ref = resourceName_;
       if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
+        com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         resourceName_ = s;
         return s;
@@ -1124,22 +1286,25 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     *
+     *
      * <pre>
      * Output only. The resource name of the ad group criterion simulation.
      * Ad group criterion simulation resource names have the form:
      * `customers/{customer_id}/adGroupCriterionSimulations/{ad_group_id}~{criterion_id}~{type}~{modification_method}~{start_date}~{end_date}`
      * </pre>
      *
-     * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * <code>
+     * string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }
+     * </code>
+     *
      * @return The bytes for resourceName.
      */
-    public com.google.protobuf.ByteString
-        getResourceNameBytes() {
+    public com.google.protobuf.ByteString getResourceNameBytes() {
       java.lang.Object ref = resourceName_;
       if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+        com.google.protobuf.ByteString b =
+            com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
         resourceName_ = b;
         return b;
       } else {
@@ -1147,72 +1312,88 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     *
+     *
      * <pre>
      * Output only. The resource name of the ad group criterion simulation.
      * Ad group criterion simulation resource names have the form:
      * `customers/{customer_id}/adGroupCriterionSimulations/{ad_group_id}~{criterion_id}~{type}~{modification_method}~{start_date}~{end_date}`
      * </pre>
      *
-     * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * <code>
+     * string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }
+     * </code>
+     *
      * @param value The resourceName to set.
      * @return This builder for chaining.
      */
-    public Builder setResourceName(
-        java.lang.String value) {
+    public Builder setResourceName(java.lang.String value) {
       if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        throw new NullPointerException();
+      }
+
       resourceName_ = value;
       onChanged();
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * Output only. The resource name of the ad group criterion simulation.
      * Ad group criterion simulation resource names have the form:
      * `customers/{customer_id}/adGroupCriterionSimulations/{ad_group_id}~{criterion_id}~{type}~{modification_method}~{start_date}~{end_date}`
      * </pre>
      *
-     * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * <code>
+     * string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }
+     * </code>
+     *
      * @return This builder for chaining.
      */
     public Builder clearResourceName() {
-      
+
       resourceName_ = getDefaultInstance().getResourceName();
       onChanged();
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * Output only. The resource name of the ad group criterion simulation.
      * Ad group criterion simulation resource names have the form:
      * `customers/{customer_id}/adGroupCriterionSimulations/{ad_group_id}~{criterion_id}~{type}~{modification_method}~{start_date}~{end_date}`
      * </pre>
      *
-     * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * <code>
+     * string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }
+     * </code>
+     *
      * @param value The bytes for resourceName to set.
      * @return This builder for chaining.
      */
-    public Builder setResourceNameBytes(
-        com.google.protobuf.ByteString value) {
+    public Builder setResourceNameBytes(com.google.protobuf.ByteString value) {
       if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+        throw new NullPointerException();
+      }
+      checkByteStringIsUtf8(value);
+
       resourceName_ = value;
       onChanged();
       return this;
     }
 
-    private long adGroupId_ ;
+    private long adGroupId_;
     /**
+     *
+     *
      * <pre>
      * Output only. AdGroup ID of the simulation.
      * </pre>
      *
      * <code>int64 ad_group_id = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     *
      * @return Whether the adGroupId field is set.
      */
     @java.lang.Override
@@ -1220,11 +1401,14 @@ private static final long serialVersionUID = 0L;
       return ((bitField0_ & 0x00000001) != 0);
     }
     /**
+     *
+     *
      * <pre>
      * Output only. AdGroup ID of the simulation.
      * </pre>
      *
      * <code>int64 ad_group_id = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     *
      * @return The adGroupId.
      */
     @java.lang.Override
@@ -1232,11 +1416,14 @@ private static final long serialVersionUID = 0L;
       return adGroupId_;
     }
     /**
+     *
+     *
      * <pre>
      * Output only. AdGroup ID of the simulation.
      * </pre>
      *
      * <code>int64 ad_group_id = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     *
      * @param value The adGroupId to set.
      * @return This builder for chaining.
      */
@@ -1247,11 +1434,14 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * Output only. AdGroup ID of the simulation.
      * </pre>
      *
      * <code>int64 ad_group_id = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     *
      * @return This builder for chaining.
      */
     public Builder clearAdGroupId() {
@@ -1261,13 +1451,16 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private long criterionId_ ;
+    private long criterionId_;
     /**
+     *
+     *
      * <pre>
      * Output only. Criterion ID of the simulation.
      * </pre>
      *
      * <code>int64 criterion_id = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     *
      * @return Whether the criterionId field is set.
      */
     @java.lang.Override
@@ -1275,11 +1468,14 @@ private static final long serialVersionUID = 0L;
       return ((bitField0_ & 0x00000002) != 0);
     }
     /**
+     *
+     *
      * <pre>
      * Output only. Criterion ID of the simulation.
      * </pre>
      *
      * <code>int64 criterion_id = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     *
      * @return The criterionId.
      */
     @java.lang.Override
@@ -1287,11 +1483,14 @@ private static final long serialVersionUID = 0L;
       return criterionId_;
     }
     /**
+     *
+     *
      * <pre>
      * Output only. Criterion ID of the simulation.
      * </pre>
      *
      * <code>int64 criterion_id = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     *
      * @param value The criterionId to set.
      * @return This builder for chaining.
      */
@@ -1302,11 +1501,14 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * Output only. Criterion ID of the simulation.
      * </pre>
      *
      * <code>int64 criterion_id = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     *
      * @return This builder for chaining.
      */
     public Builder clearCriterionId() {
@@ -1318,73 +1520,103 @@ private static final long serialVersionUID = 0L;
 
     private int type_ = 0;
     /**
+     *
+     *
      * <pre>
      * Output only. The field that the simulation modifies.
      * </pre>
      *
-     * <code>.google.ads.googleads.v5.enums.SimulationTypeEnum.SimulationType type = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>
+     * .google.ads.googleads.v5.enums.SimulationTypeEnum.SimulationType type = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];
+     * </code>
+     *
      * @return The enum numeric value on the wire for type.
      */
-    @java.lang.Override public int getTypeValue() {
+    @java.lang.Override
+    public int getTypeValue() {
       return type_;
     }
     /**
+     *
+     *
      * <pre>
      * Output only. The field that the simulation modifies.
      * </pre>
      *
-     * <code>.google.ads.googleads.v5.enums.SimulationTypeEnum.SimulationType type = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>
+     * .google.ads.googleads.v5.enums.SimulationTypeEnum.SimulationType type = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];
+     * </code>
+     *
      * @param value The enum numeric value on the wire for type to set.
      * @return This builder for chaining.
      */
     public Builder setTypeValue(int value) {
-      
+
       type_ = value;
       onChanged();
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * Output only. The field that the simulation modifies.
      * </pre>
      *
-     * <code>.google.ads.googleads.v5.enums.SimulationTypeEnum.SimulationType type = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>
+     * .google.ads.googleads.v5.enums.SimulationTypeEnum.SimulationType type = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];
+     * </code>
+     *
      * @return The type.
      */
     @java.lang.Override
     public com.google.ads.googleads.v5.enums.SimulationTypeEnum.SimulationType getType() {
       @SuppressWarnings("deprecation")
-      com.google.ads.googleads.v5.enums.SimulationTypeEnum.SimulationType result = com.google.ads.googleads.v5.enums.SimulationTypeEnum.SimulationType.valueOf(type_);
-      return result == null ? com.google.ads.googleads.v5.enums.SimulationTypeEnum.SimulationType.UNRECOGNIZED : result;
+      com.google.ads.googleads.v5.enums.SimulationTypeEnum.SimulationType result =
+          com.google.ads.googleads.v5.enums.SimulationTypeEnum.SimulationType.valueOf(type_);
+      return result == null
+          ? com.google.ads.googleads.v5.enums.SimulationTypeEnum.SimulationType.UNRECOGNIZED
+          : result;
     }
     /**
+     *
+     *
      * <pre>
      * Output only. The field that the simulation modifies.
      * </pre>
      *
-     * <code>.google.ads.googleads.v5.enums.SimulationTypeEnum.SimulationType type = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>
+     * .google.ads.googleads.v5.enums.SimulationTypeEnum.SimulationType type = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];
+     * </code>
+     *
      * @param value The type to set.
      * @return This builder for chaining.
      */
-    public Builder setType(com.google.ads.googleads.v5.enums.SimulationTypeEnum.SimulationType value) {
+    public Builder setType(
+        com.google.ads.googleads.v5.enums.SimulationTypeEnum.SimulationType value) {
       if (value == null) {
         throw new NullPointerException();
       }
-      
+
       type_ = value.getNumber();
       onChanged();
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * Output only. The field that the simulation modifies.
      * </pre>
      *
-     * <code>.google.ads.googleads.v5.enums.SimulationTypeEnum.SimulationType type = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>
+     * .google.ads.googleads.v5.enums.SimulationTypeEnum.SimulationType type = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];
+     * </code>
+     *
      * @return This builder for chaining.
      */
     public Builder clearType() {
-      
+
       type_ = 0;
       onChanged();
       return this;
@@ -1392,73 +1624,111 @@ private static final long serialVersionUID = 0L;
 
     private int modificationMethod_ = 0;
     /**
+     *
+     *
      * <pre>
      * Output only. How the simulation modifies the field.
      * </pre>
      *
-     * <code>.google.ads.googleads.v5.enums.SimulationModificationMethodEnum.SimulationModificationMethod modification_method = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>
+     * .google.ads.googleads.v5.enums.SimulationModificationMethodEnum.SimulationModificationMethod modification_method = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];
+     * </code>
+     *
      * @return The enum numeric value on the wire for modificationMethod.
      */
-    @java.lang.Override public int getModificationMethodValue() {
+    @java.lang.Override
+    public int getModificationMethodValue() {
       return modificationMethod_;
     }
     /**
+     *
+     *
      * <pre>
      * Output only. How the simulation modifies the field.
      * </pre>
      *
-     * <code>.google.ads.googleads.v5.enums.SimulationModificationMethodEnum.SimulationModificationMethod modification_method = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>
+     * .google.ads.googleads.v5.enums.SimulationModificationMethodEnum.SimulationModificationMethod modification_method = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];
+     * </code>
+     *
      * @param value The enum numeric value on the wire for modificationMethod to set.
      * @return This builder for chaining.
      */
     public Builder setModificationMethodValue(int value) {
-      
+
       modificationMethod_ = value;
       onChanged();
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * Output only. How the simulation modifies the field.
      * </pre>
      *
-     * <code>.google.ads.googleads.v5.enums.SimulationModificationMethodEnum.SimulationModificationMethod modification_method = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>
+     * .google.ads.googleads.v5.enums.SimulationModificationMethodEnum.SimulationModificationMethod modification_method = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];
+     * </code>
+     *
      * @return The modificationMethod.
      */
     @java.lang.Override
-    public com.google.ads.googleads.v5.enums.SimulationModificationMethodEnum.SimulationModificationMethod getModificationMethod() {
+    public com.google.ads.googleads.v5.enums.SimulationModificationMethodEnum
+            .SimulationModificationMethod
+        getModificationMethod() {
       @SuppressWarnings("deprecation")
-      com.google.ads.googleads.v5.enums.SimulationModificationMethodEnum.SimulationModificationMethod result = com.google.ads.googleads.v5.enums.SimulationModificationMethodEnum.SimulationModificationMethod.valueOf(modificationMethod_);
-      return result == null ? com.google.ads.googleads.v5.enums.SimulationModificationMethodEnum.SimulationModificationMethod.UNRECOGNIZED : result;
+      com.google.ads.googleads.v5.enums.SimulationModificationMethodEnum
+              .SimulationModificationMethod
+          result =
+              com.google.ads.googleads.v5.enums.SimulationModificationMethodEnum
+                  .SimulationModificationMethod.valueOf(modificationMethod_);
+      return result == null
+          ? com.google.ads.googleads.v5.enums.SimulationModificationMethodEnum
+              .SimulationModificationMethod.UNRECOGNIZED
+          : result;
     }
     /**
+     *
+     *
      * <pre>
      * Output only. How the simulation modifies the field.
      * </pre>
      *
-     * <code>.google.ads.googleads.v5.enums.SimulationModificationMethodEnum.SimulationModificationMethod modification_method = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>
+     * .google.ads.googleads.v5.enums.SimulationModificationMethodEnum.SimulationModificationMethod modification_method = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];
+     * </code>
+     *
      * @param value The modificationMethod to set.
      * @return This builder for chaining.
      */
-    public Builder setModificationMethod(com.google.ads.googleads.v5.enums.SimulationModificationMethodEnum.SimulationModificationMethod value) {
+    public Builder setModificationMethod(
+        com.google.ads.googleads.v5.enums.SimulationModificationMethodEnum
+                .SimulationModificationMethod
+            value) {
       if (value == null) {
         throw new NullPointerException();
       }
-      
+
       modificationMethod_ = value.getNumber();
       onChanged();
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * Output only. How the simulation modifies the field.
      * </pre>
      *
-     * <code>.google.ads.googleads.v5.enums.SimulationModificationMethodEnum.SimulationModificationMethod modification_method = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>
+     * .google.ads.googleads.v5.enums.SimulationModificationMethodEnum.SimulationModificationMethod modification_method = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];
+     * </code>
+     *
      * @return This builder for chaining.
      */
     public Builder clearModificationMethod() {
-      
+
       modificationMethod_ = 0;
       onChanged();
       return this;
@@ -1466,29 +1736,34 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object startDate_ = "";
     /**
+     *
+     *
      * <pre>
      * Output only. First day on which the simulation is based, in YYYY-MM-DD format.
      * </pre>
      *
      * <code>string start_date = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     *
      * @return Whether the startDate field is set.
      */
     public boolean hasStartDate() {
       return ((bitField0_ & 0x00000004) != 0);
     }
     /**
+     *
+     *
      * <pre>
      * Output only. First day on which the simulation is based, in YYYY-MM-DD format.
      * </pre>
      *
      * <code>string start_date = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     *
      * @return The startDate.
      */
     public java.lang.String getStartDate() {
       java.lang.Object ref = startDate_;
       if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
+        com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         startDate_ = s;
         return s;
@@ -1497,20 +1772,21 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     *
+     *
      * <pre>
      * Output only. First day on which the simulation is based, in YYYY-MM-DD format.
      * </pre>
      *
      * <code>string start_date = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     *
      * @return The bytes for startDate.
      */
-    public com.google.protobuf.ByteString
-        getStartDateBytes() {
+    public com.google.protobuf.ByteString getStartDateBytes() {
       java.lang.Object ref = startDate_;
       if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+        com.google.protobuf.ByteString b =
+            com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
         startDate_ = b;
         return b;
       } else {
@@ -1518,30 +1794,35 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     *
+     *
      * <pre>
      * Output only. First day on which the simulation is based, in YYYY-MM-DD format.
      * </pre>
      *
      * <code>string start_date = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     *
      * @param value The startDate to set.
      * @return This builder for chaining.
      */
-    public Builder setStartDate(
-        java.lang.String value) {
+    public Builder setStartDate(java.lang.String value) {
       if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000004;
+        throw new NullPointerException();
+      }
+      bitField0_ |= 0x00000004;
       startDate_ = value;
       onChanged();
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * Output only. First day on which the simulation is based, in YYYY-MM-DD format.
      * </pre>
      *
      * <code>string start_date = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     *
      * @return This builder for chaining.
      */
     public Builder clearStartDate() {
@@ -1551,20 +1832,22 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * Output only. First day on which the simulation is based, in YYYY-MM-DD format.
      * </pre>
      *
      * <code>string start_date = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     *
      * @param value The bytes for startDate to set.
      * @return This builder for chaining.
      */
-    public Builder setStartDateBytes(
-        com.google.protobuf.ByteString value) {
+    public Builder setStartDateBytes(com.google.protobuf.ByteString value) {
       if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
+        throw new NullPointerException();
+      }
+      checkByteStringIsUtf8(value);
       bitField0_ |= 0x00000004;
       startDate_ = value;
       onChanged();
@@ -1573,29 +1856,34 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object endDate_ = "";
     /**
+     *
+     *
      * <pre>
      * Output only. Last day on which the simulation is based, in YYYY-MM-DD format.
      * </pre>
      *
      * <code>string end_date = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     *
      * @return Whether the endDate field is set.
      */
     public boolean hasEndDate() {
       return ((bitField0_ & 0x00000008) != 0);
     }
     /**
+     *
+     *
      * <pre>
      * Output only. Last day on which the simulation is based, in YYYY-MM-DD format.
      * </pre>
      *
      * <code>string end_date = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     *
      * @return The endDate.
      */
     public java.lang.String getEndDate() {
       java.lang.Object ref = endDate_;
       if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
+        com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         endDate_ = s;
         return s;
@@ -1604,20 +1892,21 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     *
+     *
      * <pre>
      * Output only. Last day on which the simulation is based, in YYYY-MM-DD format.
      * </pre>
      *
      * <code>string end_date = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     *
      * @return The bytes for endDate.
      */
-    public com.google.protobuf.ByteString
-        getEndDateBytes() {
+    public com.google.protobuf.ByteString getEndDateBytes() {
       java.lang.Object ref = endDate_;
       if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+        com.google.protobuf.ByteString b =
+            com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
         endDate_ = b;
         return b;
       } else {
@@ -1625,30 +1914,35 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     *
+     *
      * <pre>
      * Output only. Last day on which the simulation is based, in YYYY-MM-DD format.
      * </pre>
      *
      * <code>string end_date = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     *
      * @param value The endDate to set.
      * @return This builder for chaining.
      */
-    public Builder setEndDate(
-        java.lang.String value) {
+    public Builder setEndDate(java.lang.String value) {
       if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000008;
+        throw new NullPointerException();
+      }
+      bitField0_ |= 0x00000008;
       endDate_ = value;
       onChanged();
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * Output only. Last day on which the simulation is based, in YYYY-MM-DD format.
      * </pre>
      *
      * <code>string end_date = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     *
      * @return This builder for chaining.
      */
     public Builder clearEndDate() {
@@ -1658,20 +1952,22 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * Output only. Last day on which the simulation is based, in YYYY-MM-DD format.
      * </pre>
      *
      * <code>string end_date = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     *
      * @param value The bytes for endDate to set.
      * @return This builder for chaining.
      */
-    public Builder setEndDateBytes(
-        com.google.protobuf.ByteString value) {
+    public Builder setEndDateBytes(com.google.protobuf.ByteString value) {
       if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
+        throw new NullPointerException();
+      }
+      checkByteStringIsUtf8(value);
       bitField0_ |= 0x00000008;
       endDate_ = value;
       onChanged();
@@ -1679,13 +1975,21 @@ private static final long serialVersionUID = 0L;
     }
 
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.google.ads.googleads.v5.common.CpcBidSimulationPointList, com.google.ads.googleads.v5.common.CpcBidSimulationPointList.Builder, com.google.ads.googleads.v5.common.CpcBidSimulationPointListOrBuilder> cpcBidPointListBuilder_;
+            com.google.ads.googleads.v5.common.CpcBidSimulationPointList,
+            com.google.ads.googleads.v5.common.CpcBidSimulationPointList.Builder,
+            com.google.ads.googleads.v5.common.CpcBidSimulationPointListOrBuilder>
+        cpcBidPointListBuilder_;
     /**
+     *
+     *
      * <pre>
      * Output only. Simulation points if the simulation type is CPC_BID.
      * </pre>
      *
-     * <code>.google.ads.googleads.v5.common.CpcBidSimulationPointList cpc_bid_point_list = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>
+     * .google.ads.googleads.v5.common.CpcBidSimulationPointList cpc_bid_point_list = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];
+     * </code>
+     *
      * @return Whether the cpcBidPointList field is set.
      */
     @java.lang.Override
@@ -1693,11 +1997,16 @@ private static final long serialVersionUID = 0L;
       return pointListCase_ == 8;
     }
     /**
+     *
+     *
      * <pre>
      * Output only. Simulation points if the simulation type is CPC_BID.
      * </pre>
      *
-     * <code>.google.ads.googleads.v5.common.CpcBidSimulationPointList cpc_bid_point_list = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>
+     * .google.ads.googleads.v5.common.CpcBidSimulationPointList cpc_bid_point_list = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];
+     * </code>
+     *
      * @return The cpcBidPointList.
      */
     @java.lang.Override
@@ -1715,13 +2024,18 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     *
+     *
      * <pre>
      * Output only. Simulation points if the simulation type is CPC_BID.
      * </pre>
      *
-     * <code>.google.ads.googleads.v5.common.CpcBidSimulationPointList cpc_bid_point_list = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>
+     * .google.ads.googleads.v5.common.CpcBidSimulationPointList cpc_bid_point_list = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];
+     * </code>
      */
-    public Builder setCpcBidPointList(com.google.ads.googleads.v5.common.CpcBidSimulationPointList value) {
+    public Builder setCpcBidPointList(
+        com.google.ads.googleads.v5.common.CpcBidSimulationPointList value) {
       if (cpcBidPointListBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -1735,11 +2049,15 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * Output only. Simulation points if the simulation type is CPC_BID.
      * </pre>
      *
-     * <code>.google.ads.googleads.v5.common.CpcBidSimulationPointList cpc_bid_point_list = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>
+     * .google.ads.googleads.v5.common.CpcBidSimulationPointList cpc_bid_point_list = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];
+     * </code>
      */
     public Builder setCpcBidPointList(
         com.google.ads.googleads.v5.common.CpcBidSimulationPointList.Builder builderForValue) {
@@ -1753,18 +2071,28 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * Output only. Simulation points if the simulation type is CPC_BID.
      * </pre>
      *
-     * <code>.google.ads.googleads.v5.common.CpcBidSimulationPointList cpc_bid_point_list = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>
+     * .google.ads.googleads.v5.common.CpcBidSimulationPointList cpc_bid_point_list = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];
+     * </code>
      */
-    public Builder mergeCpcBidPointList(com.google.ads.googleads.v5.common.CpcBidSimulationPointList value) {
+    public Builder mergeCpcBidPointList(
+        com.google.ads.googleads.v5.common.CpcBidSimulationPointList value) {
       if (cpcBidPointListBuilder_ == null) {
-        if (pointListCase_ == 8 &&
-            pointList_ != com.google.ads.googleads.v5.common.CpcBidSimulationPointList.getDefaultInstance()) {
-          pointList_ = com.google.ads.googleads.v5.common.CpcBidSimulationPointList.newBuilder((com.google.ads.googleads.v5.common.CpcBidSimulationPointList) pointList_)
-              .mergeFrom(value).buildPartial();
+        if (pointListCase_ == 8
+            && pointList_
+                != com.google.ads.googleads.v5.common.CpcBidSimulationPointList
+                    .getDefaultInstance()) {
+          pointList_ =
+              com.google.ads.googleads.v5.common.CpcBidSimulationPointList.newBuilder(
+                      (com.google.ads.googleads.v5.common.CpcBidSimulationPointList) pointList_)
+                  .mergeFrom(value)
+                  .buildPartial();
         } else {
           pointList_ = value;
         }
@@ -1779,11 +2107,15 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * Output only. Simulation points if the simulation type is CPC_BID.
      * </pre>
      *
-     * <code>.google.ads.googleads.v5.common.CpcBidSimulationPointList cpc_bid_point_list = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>
+     * .google.ads.googleads.v5.common.CpcBidSimulationPointList cpc_bid_point_list = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];
+     * </code>
      */
     public Builder clearCpcBidPointList() {
       if (cpcBidPointListBuilder_ == null) {
@@ -1802,24 +2134,34 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * Output only. Simulation points if the simulation type is CPC_BID.
      * </pre>
      *
-     * <code>.google.ads.googleads.v5.common.CpcBidSimulationPointList cpc_bid_point_list = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>
+     * .google.ads.googleads.v5.common.CpcBidSimulationPointList cpc_bid_point_list = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];
+     * </code>
      */
-    public com.google.ads.googleads.v5.common.CpcBidSimulationPointList.Builder getCpcBidPointListBuilder() {
+    public com.google.ads.googleads.v5.common.CpcBidSimulationPointList.Builder
+        getCpcBidPointListBuilder() {
       return getCpcBidPointListFieldBuilder().getBuilder();
     }
     /**
+     *
+     *
      * <pre>
      * Output only. Simulation points if the simulation type is CPC_BID.
      * </pre>
      *
-     * <code>.google.ads.googleads.v5.common.CpcBidSimulationPointList cpc_bid_point_list = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>
+     * .google.ads.googleads.v5.common.CpcBidSimulationPointList cpc_bid_point_list = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];
+     * </code>
      */
     @java.lang.Override
-    public com.google.ads.googleads.v5.common.CpcBidSimulationPointListOrBuilder getCpcBidPointListOrBuilder() {
+    public com.google.ads.googleads.v5.common.CpcBidSimulationPointListOrBuilder
+        getCpcBidPointListOrBuilder() {
       if ((pointListCase_ == 8) && (cpcBidPointListBuilder_ != null)) {
         return cpcBidPointListBuilder_.getMessageOrBuilder();
       } else {
@@ -1830,39 +2172,58 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     *
+     *
      * <pre>
      * Output only. Simulation points if the simulation type is CPC_BID.
      * </pre>
      *
-     * <code>.google.ads.googleads.v5.common.CpcBidSimulationPointList cpc_bid_point_list = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>
+     * .google.ads.googleads.v5.common.CpcBidSimulationPointList cpc_bid_point_list = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];
+     * </code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.google.ads.googleads.v5.common.CpcBidSimulationPointList, com.google.ads.googleads.v5.common.CpcBidSimulationPointList.Builder, com.google.ads.googleads.v5.common.CpcBidSimulationPointListOrBuilder> 
+            com.google.ads.googleads.v5.common.CpcBidSimulationPointList,
+            com.google.ads.googleads.v5.common.CpcBidSimulationPointList.Builder,
+            com.google.ads.googleads.v5.common.CpcBidSimulationPointListOrBuilder>
         getCpcBidPointListFieldBuilder() {
       if (cpcBidPointListBuilder_ == null) {
         if (!(pointListCase_ == 8)) {
-          pointList_ = com.google.ads.googleads.v5.common.CpcBidSimulationPointList.getDefaultInstance();
+          pointList_ =
+              com.google.ads.googleads.v5.common.CpcBidSimulationPointList.getDefaultInstance();
         }
-        cpcBidPointListBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            com.google.ads.googleads.v5.common.CpcBidSimulationPointList, com.google.ads.googleads.v5.common.CpcBidSimulationPointList.Builder, com.google.ads.googleads.v5.common.CpcBidSimulationPointListOrBuilder>(
+        cpcBidPointListBuilder_ =
+            new com.google.protobuf.SingleFieldBuilderV3<
+                com.google.ads.googleads.v5.common.CpcBidSimulationPointList,
+                com.google.ads.googleads.v5.common.CpcBidSimulationPointList.Builder,
+                com.google.ads.googleads.v5.common.CpcBidSimulationPointListOrBuilder>(
                 (com.google.ads.googleads.v5.common.CpcBidSimulationPointList) pointList_,
                 getParentForChildren(),
                 isClean());
         pointList_ = null;
       }
       pointListCase_ = 8;
-      onChanged();;
+      onChanged();
+      ;
       return cpcBidPointListBuilder_;
     }
 
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.google.ads.googleads.v5.common.PercentCpcBidSimulationPointList, com.google.ads.googleads.v5.common.PercentCpcBidSimulationPointList.Builder, com.google.ads.googleads.v5.common.PercentCpcBidSimulationPointListOrBuilder> percentCpcBidPointListBuilder_;
+            com.google.ads.googleads.v5.common.PercentCpcBidSimulationPointList,
+            com.google.ads.googleads.v5.common.PercentCpcBidSimulationPointList.Builder,
+            com.google.ads.googleads.v5.common.PercentCpcBidSimulationPointListOrBuilder>
+        percentCpcBidPointListBuilder_;
     /**
+     *
+     *
      * <pre>
      * Output only. Simulation points if the simulation type is PERCENT_CPC_BID.
      * </pre>
      *
-     * <code>.google.ads.googleads.v5.common.PercentCpcBidSimulationPointList percent_cpc_bid_point_list = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>
+     * .google.ads.googleads.v5.common.PercentCpcBidSimulationPointList percent_cpc_bid_point_list = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];
+     * </code>
+     *
      * @return Whether the percentCpcBidPointList field is set.
      */
     @java.lang.Override
@@ -1870,35 +2231,48 @@ private static final long serialVersionUID = 0L;
       return pointListCase_ == 13;
     }
     /**
+     *
+     *
      * <pre>
      * Output only. Simulation points if the simulation type is PERCENT_CPC_BID.
      * </pre>
      *
-     * <code>.google.ads.googleads.v5.common.PercentCpcBidSimulationPointList percent_cpc_bid_point_list = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>
+     * .google.ads.googleads.v5.common.PercentCpcBidSimulationPointList percent_cpc_bid_point_list = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];
+     * </code>
+     *
      * @return The percentCpcBidPointList.
      */
     @java.lang.Override
-    public com.google.ads.googleads.v5.common.PercentCpcBidSimulationPointList getPercentCpcBidPointList() {
+    public com.google.ads.googleads.v5.common.PercentCpcBidSimulationPointList
+        getPercentCpcBidPointList() {
       if (percentCpcBidPointListBuilder_ == null) {
         if (pointListCase_ == 13) {
           return (com.google.ads.googleads.v5.common.PercentCpcBidSimulationPointList) pointList_;
         }
-        return com.google.ads.googleads.v5.common.PercentCpcBidSimulationPointList.getDefaultInstance();
+        return com.google.ads.googleads.v5.common.PercentCpcBidSimulationPointList
+            .getDefaultInstance();
       } else {
         if (pointListCase_ == 13) {
           return percentCpcBidPointListBuilder_.getMessage();
         }
-        return com.google.ads.googleads.v5.common.PercentCpcBidSimulationPointList.getDefaultInstance();
+        return com.google.ads.googleads.v5.common.PercentCpcBidSimulationPointList
+            .getDefaultInstance();
       }
     }
     /**
+     *
+     *
      * <pre>
      * Output only. Simulation points if the simulation type is PERCENT_CPC_BID.
      * </pre>
      *
-     * <code>.google.ads.googleads.v5.common.PercentCpcBidSimulationPointList percent_cpc_bid_point_list = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>
+     * .google.ads.googleads.v5.common.PercentCpcBidSimulationPointList percent_cpc_bid_point_list = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];
+     * </code>
      */
-    public Builder setPercentCpcBidPointList(com.google.ads.googleads.v5.common.PercentCpcBidSimulationPointList value) {
+    public Builder setPercentCpcBidPointList(
+        com.google.ads.googleads.v5.common.PercentCpcBidSimulationPointList value) {
       if (percentCpcBidPointListBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -1912,14 +2286,19 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * Output only. Simulation points if the simulation type is PERCENT_CPC_BID.
      * </pre>
      *
-     * <code>.google.ads.googleads.v5.common.PercentCpcBidSimulationPointList percent_cpc_bid_point_list = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>
+     * .google.ads.googleads.v5.common.PercentCpcBidSimulationPointList percent_cpc_bid_point_list = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];
+     * </code>
      */
     public Builder setPercentCpcBidPointList(
-        com.google.ads.googleads.v5.common.PercentCpcBidSimulationPointList.Builder builderForValue) {
+        com.google.ads.googleads.v5.common.PercentCpcBidSimulationPointList.Builder
+            builderForValue) {
       if (percentCpcBidPointListBuilder_ == null) {
         pointList_ = builderForValue.build();
         onChanged();
@@ -1930,18 +2309,29 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * Output only. Simulation points if the simulation type is PERCENT_CPC_BID.
      * </pre>
      *
-     * <code>.google.ads.googleads.v5.common.PercentCpcBidSimulationPointList percent_cpc_bid_point_list = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>
+     * .google.ads.googleads.v5.common.PercentCpcBidSimulationPointList percent_cpc_bid_point_list = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];
+     * </code>
      */
-    public Builder mergePercentCpcBidPointList(com.google.ads.googleads.v5.common.PercentCpcBidSimulationPointList value) {
+    public Builder mergePercentCpcBidPointList(
+        com.google.ads.googleads.v5.common.PercentCpcBidSimulationPointList value) {
       if (percentCpcBidPointListBuilder_ == null) {
-        if (pointListCase_ == 13 &&
-            pointList_ != com.google.ads.googleads.v5.common.PercentCpcBidSimulationPointList.getDefaultInstance()) {
-          pointList_ = com.google.ads.googleads.v5.common.PercentCpcBidSimulationPointList.newBuilder((com.google.ads.googleads.v5.common.PercentCpcBidSimulationPointList) pointList_)
-              .mergeFrom(value).buildPartial();
+        if (pointListCase_ == 13
+            && pointList_
+                != com.google.ads.googleads.v5.common.PercentCpcBidSimulationPointList
+                    .getDefaultInstance()) {
+          pointList_ =
+              com.google.ads.googleads.v5.common.PercentCpcBidSimulationPointList.newBuilder(
+                      (com.google.ads.googleads.v5.common.PercentCpcBidSimulationPointList)
+                          pointList_)
+                  .mergeFrom(value)
+                  .buildPartial();
         } else {
           pointList_ = value;
         }
@@ -1956,11 +2346,15 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * Output only. Simulation points if the simulation type is PERCENT_CPC_BID.
      * </pre>
      *
-     * <code>.google.ads.googleads.v5.common.PercentCpcBidSimulationPointList percent_cpc_bid_point_list = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>
+     * .google.ads.googleads.v5.common.PercentCpcBidSimulationPointList percent_cpc_bid_point_list = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];
+     * </code>
      */
     public Builder clearPercentCpcBidPointList() {
       if (percentCpcBidPointListBuilder_ == null) {
@@ -1979,61 +2373,84 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * Output only. Simulation points if the simulation type is PERCENT_CPC_BID.
      * </pre>
      *
-     * <code>.google.ads.googleads.v5.common.PercentCpcBidSimulationPointList percent_cpc_bid_point_list = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>
+     * .google.ads.googleads.v5.common.PercentCpcBidSimulationPointList percent_cpc_bid_point_list = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];
+     * </code>
      */
-    public com.google.ads.googleads.v5.common.PercentCpcBidSimulationPointList.Builder getPercentCpcBidPointListBuilder() {
+    public com.google.ads.googleads.v5.common.PercentCpcBidSimulationPointList.Builder
+        getPercentCpcBidPointListBuilder() {
       return getPercentCpcBidPointListFieldBuilder().getBuilder();
     }
     /**
+     *
+     *
      * <pre>
      * Output only. Simulation points if the simulation type is PERCENT_CPC_BID.
      * </pre>
      *
-     * <code>.google.ads.googleads.v5.common.PercentCpcBidSimulationPointList percent_cpc_bid_point_list = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>
+     * .google.ads.googleads.v5.common.PercentCpcBidSimulationPointList percent_cpc_bid_point_list = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];
+     * </code>
      */
     @java.lang.Override
-    public com.google.ads.googleads.v5.common.PercentCpcBidSimulationPointListOrBuilder getPercentCpcBidPointListOrBuilder() {
+    public com.google.ads.googleads.v5.common.PercentCpcBidSimulationPointListOrBuilder
+        getPercentCpcBidPointListOrBuilder() {
       if ((pointListCase_ == 13) && (percentCpcBidPointListBuilder_ != null)) {
         return percentCpcBidPointListBuilder_.getMessageOrBuilder();
       } else {
         if (pointListCase_ == 13) {
           return (com.google.ads.googleads.v5.common.PercentCpcBidSimulationPointList) pointList_;
         }
-        return com.google.ads.googleads.v5.common.PercentCpcBidSimulationPointList.getDefaultInstance();
+        return com.google.ads.googleads.v5.common.PercentCpcBidSimulationPointList
+            .getDefaultInstance();
       }
     }
     /**
+     *
+     *
      * <pre>
      * Output only. Simulation points if the simulation type is PERCENT_CPC_BID.
      * </pre>
      *
-     * <code>.google.ads.googleads.v5.common.PercentCpcBidSimulationPointList percent_cpc_bid_point_list = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>
+     * .google.ads.googleads.v5.common.PercentCpcBidSimulationPointList percent_cpc_bid_point_list = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];
+     * </code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.google.ads.googleads.v5.common.PercentCpcBidSimulationPointList, com.google.ads.googleads.v5.common.PercentCpcBidSimulationPointList.Builder, com.google.ads.googleads.v5.common.PercentCpcBidSimulationPointListOrBuilder> 
+            com.google.ads.googleads.v5.common.PercentCpcBidSimulationPointList,
+            com.google.ads.googleads.v5.common.PercentCpcBidSimulationPointList.Builder,
+            com.google.ads.googleads.v5.common.PercentCpcBidSimulationPointListOrBuilder>
         getPercentCpcBidPointListFieldBuilder() {
       if (percentCpcBidPointListBuilder_ == null) {
         if (!(pointListCase_ == 13)) {
-          pointList_ = com.google.ads.googleads.v5.common.PercentCpcBidSimulationPointList.getDefaultInstance();
+          pointList_ =
+              com.google.ads.googleads.v5.common.PercentCpcBidSimulationPointList
+                  .getDefaultInstance();
         }
-        percentCpcBidPointListBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            com.google.ads.googleads.v5.common.PercentCpcBidSimulationPointList, com.google.ads.googleads.v5.common.PercentCpcBidSimulationPointList.Builder, com.google.ads.googleads.v5.common.PercentCpcBidSimulationPointListOrBuilder>(
+        percentCpcBidPointListBuilder_ =
+            new com.google.protobuf.SingleFieldBuilderV3<
+                com.google.ads.googleads.v5.common.PercentCpcBidSimulationPointList,
+                com.google.ads.googleads.v5.common.PercentCpcBidSimulationPointList.Builder,
+                com.google.ads.googleads.v5.common.PercentCpcBidSimulationPointListOrBuilder>(
                 (com.google.ads.googleads.v5.common.PercentCpcBidSimulationPointList) pointList_,
                 getParentForChildren(),
                 isClean());
         pointList_ = null;
       }
       pointListCase_ = 13;
-      onChanged();;
+      onChanged();
+      ;
       return percentCpcBidPointListBuilder_;
     }
+
     @java.lang.Override
-    public final Builder setUnknownFields(
-        final com.google.protobuf.UnknownFieldSet unknownFields) {
+    public final Builder setUnknownFields(final com.google.protobuf.UnknownFieldSet unknownFields) {
       return super.setUnknownFields(unknownFields);
     }
 
@@ -2043,30 +2460,32 @@ private static final long serialVersionUID = 0L;
       return super.mergeUnknownFields(unknownFields);
     }
 
-
     // @@protoc_insertion_point(builder_scope:google.ads.googleads.v5.resources.AdGroupCriterionSimulation)
   }
 
   // @@protoc_insertion_point(class_scope:google.ads.googleads.v5.resources.AdGroupCriterionSimulation)
-  private static final com.google.ads.googleads.v5.resources.AdGroupCriterionSimulation DEFAULT_INSTANCE;
+  private static final com.google.ads.googleads.v5.resources.AdGroupCriterionSimulation
+      DEFAULT_INSTANCE;
+
   static {
     DEFAULT_INSTANCE = new com.google.ads.googleads.v5.resources.AdGroupCriterionSimulation();
   }
 
-  public static com.google.ads.googleads.v5.resources.AdGroupCriterionSimulation getDefaultInstance() {
+  public static com.google.ads.googleads.v5.resources.AdGroupCriterionSimulation
+      getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<AdGroupCriterionSimulation>
-      PARSER = new com.google.protobuf.AbstractParser<AdGroupCriterionSimulation>() {
-    @java.lang.Override
-    public AdGroupCriterionSimulation parsePartialFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return new AdGroupCriterionSimulation(input, extensionRegistry);
-    }
-  };
+  private static final com.google.protobuf.Parser<AdGroupCriterionSimulation> PARSER =
+      new com.google.protobuf.AbstractParser<AdGroupCriterionSimulation>() {
+        @java.lang.Override
+        public AdGroupCriterionSimulation parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new AdGroupCriterionSimulation(input, extensionRegistry);
+        }
+      };
 
   public static com.google.protobuf.Parser<AdGroupCriterionSimulation> parser() {
     return PARSER;
@@ -2078,9 +2497,8 @@ private static final long serialVersionUID = 0L;
   }
 
   @java.lang.Override
-  public com.google.ads.googleads.v5.resources.AdGroupCriterionSimulation getDefaultInstanceForType() {
+  public com.google.ads.googleads.v5.resources.AdGroupCriterionSimulation
+      getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
-
 }
-

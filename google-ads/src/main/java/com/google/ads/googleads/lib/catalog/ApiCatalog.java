@@ -15,8 +15,11 @@
 package com.google.ads.googleads.lib.catalog;
 
 import com.google.ads.googleads.lib.GoogleAdsAllVersions;
+import com.google.ads.googleads.lib.utils.messageproxy.MessageProxyProvider;
 import com.google.api.gax.rpc.TransportChannelProvider;
 import com.google.auth.Credentials;
+import com.google.protobuf.Message;
+import java.util.Optional;
 import java.util.SortedSet;
 
 /**
@@ -29,20 +32,26 @@ public interface ApiCatalog {
 
   /** Returns a ApiCatalog implementation which reflects the current state of the library. */
   static ApiCatalog getDefault() {
-    return ApiCatalogImpl.getDefault();
+    return GeneratedCatalog.getDefault();
   }
 
   /** Returns all API versions available in the current catalog. */
-  abstract SortedSet<Version> getSupportedVersions();
+  SortedSet<Version> getSupportedVersions();
 
   /** Returns the most recent API version available. */
-  abstract Version getLatestVersion();
+  Version getLatestVersion();
 
   /**
    * Instantiates a new GoogleAdsAllVersions object for the given TransportChannelProvider and
    * Credentials. Calling this method multiple times will create multiple instances of
    * GoogleAdsAllVersions.
    */
-  abstract GoogleAdsAllVersions createAllVersionsClient(
+  GoogleAdsAllVersions createAllVersionsClient(
       TransportChannelProvider provider, Credentials credentials);
+
+  /** Gets the {@link MessageProxyProvider} for a given message. */
+  Optional<MessageProxyProvider> getMessageProxyProvider(Message input);
+
+  /** Gets the {@link Version} for a given message. */
+  Optional<Version> getVersionForMessage(Message input);
 }

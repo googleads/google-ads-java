@@ -1,0 +1,9 @@
+results {
+  customer_user_access {
+    resource_name: "foo"
+    access_creation_date_time: "bar"
+  }
+}
+field_mask {
+  paths: "customer_user_access.access_creation_date_time"
+}

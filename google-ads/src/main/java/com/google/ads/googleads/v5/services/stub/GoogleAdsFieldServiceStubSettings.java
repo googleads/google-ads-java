@@ -94,7 +94,8 @@ public class GoogleAdsFieldServiceStubSettings
   private final UnaryCallSettings<GetGoogleAdsFieldRequest, GoogleAdsField>
       getGoogleAdsFieldSettings;
   private final PagedCallSettings<
-          SearchGoogleAdsFieldsRequest, SearchGoogleAdsFieldsResponse,
+          SearchGoogleAdsFieldsRequest,
+          SearchGoogleAdsFieldsResponse,
           SearchGoogleAdsFieldsPagedResponse>
       searchGoogleAdsFieldsSettings;
 
@@ -105,7 +106,8 @@ public class GoogleAdsFieldServiceStubSettings
 
   /** Returns the object with the settings used for calls to searchGoogleAdsFields. */
   public PagedCallSettings<
-          SearchGoogleAdsFieldsRequest, SearchGoogleAdsFieldsResponse,
+          SearchGoogleAdsFieldsRequest,
+          SearchGoogleAdsFieldsResponse,
           SearchGoogleAdsFieldsPagedResponse>
       searchGoogleAdsFieldsSettings() {
     return searchGoogleAdsFieldsSettings;
@@ -226,11 +228,13 @@ public class GoogleAdsFieldServiceStubSettings
           };
 
   private static final PagedListResponseFactory<
-          SearchGoogleAdsFieldsRequest, SearchGoogleAdsFieldsResponse,
+          SearchGoogleAdsFieldsRequest,
+          SearchGoogleAdsFieldsResponse,
           SearchGoogleAdsFieldsPagedResponse>
       SEARCH_GOOGLE_ADS_FIELDS_PAGE_STR_FACT =
           new PagedListResponseFactory<
-              SearchGoogleAdsFieldsRequest, SearchGoogleAdsFieldsResponse,
+              SearchGoogleAdsFieldsRequest,
+              SearchGoogleAdsFieldsResponse,
               SearchGoogleAdsFieldsPagedResponse>() {
             @Override
             public ApiFuture<SearchGoogleAdsFieldsPagedResponse> getFuturePagedResponse(
@@ -255,7 +259,8 @@ public class GoogleAdsFieldServiceStubSettings
     private final UnaryCallSettings.Builder<GetGoogleAdsFieldRequest, GoogleAdsField>
         getGoogleAdsFieldSettings;
     private final PagedCallSettings.Builder<
-            SearchGoogleAdsFieldsRequest, SearchGoogleAdsFieldsResponse,
+            SearchGoogleAdsFieldsRequest,
+            SearchGoogleAdsFieldsResponse,
             SearchGoogleAdsFieldsPagedResponse>
         searchGoogleAdsFieldsSettings;
 
@@ -383,7 +388,8 @@ public class GoogleAdsFieldServiceStubSettings
 
     /** Returns the builder for the settings used for calls to searchGoogleAdsFields. */
     public PagedCallSettings.Builder<
-            SearchGoogleAdsFieldsRequest, SearchGoogleAdsFieldsResponse,
+            SearchGoogleAdsFieldsRequest,
+            SearchGoogleAdsFieldsResponse,
             SearchGoogleAdsFieldsPagedResponse>
         searchGoogleAdsFieldsSettings() {
       return searchGoogleAdsFieldsSettings;

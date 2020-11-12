@@ -18,13 +18,13 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.v5.errors.GoogleAdsError;
-import com.google.ads.googleads.v5.errors.GoogleAdsException;
-import com.google.ads.googleads.v5.services.ApplyRecommendationOperation;
-import com.google.ads.googleads.v5.services.ApplyRecommendationResponse;
-import com.google.ads.googleads.v5.services.ApplyRecommendationResult;
-import com.google.ads.googleads.v5.services.RecommendationServiceClient;
-import com.google.ads.googleads.v5.utils.ResourceNames;
+import com.google.ads.googleads.v6.errors.GoogleAdsError;
+import com.google.ads.googleads.v6.errors.GoogleAdsException;
+import com.google.ads.googleads.v6.services.ApplyRecommendationOperation;
+import com.google.ads.googleads.v6.services.ApplyRecommendationResponse;
+import com.google.ads.googleads.v6.services.ApplyRecommendationResult;
+import com.google.ads.googleads.v6.services.RecommendationServiceClient;
+import com.google.ads.googleads.v6.utils.ResourceNames;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -108,13 +108,12 @@ public class ApplyRecommendation {
     // Each recommendation types has optional parameters to override the recommended values.
     // This is an example to override a recommended ad when a TextAdRecommendation is applied.
     // Please read
-    // https://developers.google.com/google-ads/api/reference/rpc/google.ads.googleads.v4.services#google.ads.googleads.v4.services.ApplyRecommendationOperation
+    // https://developers.google.com/google-ads/api/reference/rpc/latest/ApplyRecommendationOperation
     // for details.
     // Note that additional import statements are needed for this example to work. And also, please
     // replace INSERT_AD_ID_HERE with a valid ad ID below.
     //
-    // Ad overrideAd = Ad.newBuilder().setId(Int64Value.of(Long.parseLong(
-    //     "INSERT_AD_ID_HERE"))).build();
+    // Ad overrideAd = Ad.newBuilder().setId(Long.parseLong("INSERT_AD_ID_HERE")).build();
     // operationBuilder.setTextAd(TextAdParameters.newBuilder().
     //     setAd(overrideAd).build()).build();
     List<ApplyRecommendationOperation> operations = new ArrayList<>();

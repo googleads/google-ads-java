@@ -506,7 +506,7 @@ public class KeywordPlanServiceClientTest {
         GenerateForecastCurveResponse.newBuilder().build();
     mockKeywordPlanService.addResponse(expectedResponse);
 
-    String keywordPlan = "keywordPlan-1589809217";
+    KeywordPlanName keywordPlan = KeywordPlanName.of("[CUSTOMER]", "[KEYWORD_PLAN]");
 
     GenerateForecastCurveResponse actualResponse = client.generateForecastCurve(keywordPlan);
     Assert.assertEquals(expectedResponse, actualResponse);
@@ -516,7 +516,7 @@ public class KeywordPlanServiceClientTest {
     GenerateForecastCurveRequest actualRequest =
         (GenerateForecastCurveRequest) actualRequests.get(0);
 
-    Assert.assertEquals(keywordPlan, actualRequest.getKeywordPlan());
+    Assert.assertEquals(keywordPlan, KeywordPlanName.parse(actualRequest.getKeywordPlan()));
     Assert.assertTrue(
         channelProvider.isHeaderSent(
             ApiClientHeaderProvider.getDefaultApiClientHeaderKey(),
@@ -530,7 +530,7 @@ public class KeywordPlanServiceClientTest {
     mockKeywordPlanService.addException(exception);
 
     try {
-      String keywordPlan = "keywordPlan-1589809217";
+      KeywordPlanName keywordPlan = KeywordPlanName.of("[CUSTOMER]", "[KEYWORD_PLAN]");
 
       client.generateForecastCurve(keywordPlan);
       Assert.fail("No exception raised");
@@ -546,7 +546,7 @@ public class KeywordPlanServiceClientTest {
         GenerateForecastTimeSeriesResponse.newBuilder().build();
     mockKeywordPlanService.addResponse(expectedResponse);
 
-    String keywordPlan = "keywordPlan-1589809217";
+    KeywordPlanName keywordPlan = KeywordPlanName.of("[CUSTOMER]", "[KEYWORD_PLAN]");
 
     GenerateForecastTimeSeriesResponse actualResponse =
         client.generateForecastTimeSeries(keywordPlan);
@@ -557,7 +557,7 @@ public class KeywordPlanServiceClientTest {
     GenerateForecastTimeSeriesRequest actualRequest =
         (GenerateForecastTimeSeriesRequest) actualRequests.get(0);
 
-    Assert.assertEquals(keywordPlan, actualRequest.getKeywordPlan());
+    Assert.assertEquals(keywordPlan, KeywordPlanName.parse(actualRequest.getKeywordPlan()));
     Assert.assertTrue(
         channelProvider.isHeaderSent(
             ApiClientHeaderProvider.getDefaultApiClientHeaderKey(),
@@ -571,7 +571,7 @@ public class KeywordPlanServiceClientTest {
     mockKeywordPlanService.addException(exception);
 
     try {
-      String keywordPlan = "keywordPlan-1589809217";
+      KeywordPlanName keywordPlan = KeywordPlanName.of("[CUSTOMER]", "[KEYWORD_PLAN]");
 
       client.generateForecastTimeSeries(keywordPlan);
       Assert.fail("No exception raised");
@@ -587,7 +587,7 @@ public class KeywordPlanServiceClientTest {
         GenerateForecastMetricsResponse.newBuilder().build();
     mockKeywordPlanService.addResponse(expectedResponse);
 
-    String keywordPlan = "keywordPlan-1589809217";
+    KeywordPlanName keywordPlan = KeywordPlanName.of("[CUSTOMER]", "[KEYWORD_PLAN]");
 
     GenerateForecastMetricsResponse actualResponse = client.generateForecastMetrics(keywordPlan);
     Assert.assertEquals(expectedResponse, actualResponse);
@@ -597,7 +597,7 @@ public class KeywordPlanServiceClientTest {
     GenerateForecastMetricsRequest actualRequest =
         (GenerateForecastMetricsRequest) actualRequests.get(0);
 
-    Assert.assertEquals(keywordPlan, actualRequest.getKeywordPlan());
+    Assert.assertEquals(keywordPlan, KeywordPlanName.parse(actualRequest.getKeywordPlan()));
     Assert.assertTrue(
         channelProvider.isHeaderSent(
             ApiClientHeaderProvider.getDefaultApiClientHeaderKey(),
@@ -611,7 +611,7 @@ public class KeywordPlanServiceClientTest {
     mockKeywordPlanService.addException(exception);
 
     try {
-      String keywordPlan = "keywordPlan-1589809217";
+      KeywordPlanName keywordPlan = KeywordPlanName.of("[CUSTOMER]", "[KEYWORD_PLAN]");
 
       client.generateForecastMetrics(keywordPlan);
       Assert.fail("No exception raised");
@@ -627,7 +627,7 @@ public class KeywordPlanServiceClientTest {
         GenerateHistoricalMetricsResponse.newBuilder().build();
     mockKeywordPlanService.addResponse(expectedResponse);
 
-    String keywordPlan = "keywordPlan-1589809217";
+    KeywordPlanName keywordPlan = KeywordPlanName.of("[CUSTOMER]", "[KEYWORD_PLAN]");
 
     GenerateHistoricalMetricsResponse actualResponse =
         client.generateHistoricalMetrics(keywordPlan);
@@ -638,7 +638,7 @@ public class KeywordPlanServiceClientTest {
     GenerateHistoricalMetricsRequest actualRequest =
         (GenerateHistoricalMetricsRequest) actualRequests.get(0);
 
-    Assert.assertEquals(keywordPlan, actualRequest.getKeywordPlan());
+    Assert.assertEquals(keywordPlan, KeywordPlanName.parse(actualRequest.getKeywordPlan()));
     Assert.assertTrue(
         channelProvider.isHeaderSent(
             ApiClientHeaderProvider.getDefaultApiClientHeaderKey(),
@@ -652,7 +652,7 @@ public class KeywordPlanServiceClientTest {
     mockKeywordPlanService.addException(exception);
 
     try {
-      String keywordPlan = "keywordPlan-1589809217";
+      KeywordPlanName keywordPlan = KeywordPlanName.of("[CUSTOMER]", "[KEYWORD_PLAN]");
 
       client.generateHistoricalMetrics(keywordPlan);
       Assert.fail("No exception raised");

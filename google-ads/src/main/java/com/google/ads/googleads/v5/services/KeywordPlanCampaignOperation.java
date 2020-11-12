@@ -315,7 +315,7 @@ private static final long serialVersionUID = 0L;
    * `customers/{customer_id}/keywordPlanCampaigns/{keywordPlan_campaign_id}`
    * </pre>
    *
-   * <code>string remove = 3;</code>
+   * <code>string remove = 3 [(.google.api.resource_reference) = { ... }</code>
    * @return The remove.
    */
   public java.lang.String getRemove() {
@@ -342,7 +342,7 @@ private static final long serialVersionUID = 0L;
    * `customers/{customer_id}/keywordPlanCampaigns/{keywordPlan_campaign_id}`
    * </pre>
    *
-   * <code>string remove = 3;</code>
+   * <code>string remove = 3 [(.google.api.resource_reference) = { ... }</code>
    * @return The bytes for remove.
    */
   public com.google.protobuf.ByteString
@@ -1333,7 +1333,7 @@ private static final long serialVersionUID = 0L;
      * `customers/{customer_id}/keywordPlanCampaigns/{keywordPlan_campaign_id}`
      * </pre>
      *
-     * <code>string remove = 3;</code>
+     * <code>string remove = 3 [(.google.api.resource_reference) = { ... }</code>
      * @return The remove.
      */
     @java.lang.Override
@@ -1361,7 +1361,7 @@ private static final long serialVersionUID = 0L;
      * `customers/{customer_id}/keywordPlanCampaigns/{keywordPlan_campaign_id}`
      * </pre>
      *
-     * <code>string remove = 3;</code>
+     * <code>string remove = 3 [(.google.api.resource_reference) = { ... }</code>
      * @return The bytes for remove.
      */
     @java.lang.Override
@@ -1390,7 +1390,7 @@ private static final long serialVersionUID = 0L;
      * `customers/{customer_id}/keywordPlanCampaigns/{keywordPlan_campaign_id}`
      * </pre>
      *
-     * <code>string remove = 3;</code>
+     * <code>string remove = 3 [(.google.api.resource_reference) = { ... }</code>
      * @param value The remove to set.
      * @return This builder for chaining.
      */
@@ -1411,7 +1411,7 @@ private static final long serialVersionUID = 0L;
      * `customers/{customer_id}/keywordPlanCampaigns/{keywordPlan_campaign_id}`
      * </pre>
      *
-     * <code>string remove = 3;</code>
+     * <code>string remove = 3 [(.google.api.resource_reference) = { ... }</code>
      * @return This builder for chaining.
      */
     public Builder clearRemove() {
@@ -1429,7 +1429,7 @@ private static final long serialVersionUID = 0L;
      * `customers/{customer_id}/keywordPlanCampaigns/{keywordPlan_campaign_id}`
      * </pre>
      *
-     * <code>string remove = 3;</code>
+     * <code>string remove = 3 [(.google.api.resource_reference) = { ... }</code>
      * @param value The bytes for remove to set.
      * @return This builder for chaining.
      */

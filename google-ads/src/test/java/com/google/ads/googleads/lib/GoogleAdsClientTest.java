@@ -26,16 +26,16 @@ import static org.junit.Assert.fail;
 import com.google.ads.googleads.lib.GoogleAdsClient.Builder;
 import com.google.ads.googleads.lib.GoogleAdsClient.Builder.ConfigPropertyKey;
 import com.google.ads.googleads.lib.catalog.ApiCatalog;
-import com.google.ads.googleads.v5.errors.GoogleAdsError;
-import com.google.ads.googleads.v5.errors.GoogleAdsException;
-import com.google.ads.googleads.v5.errors.GoogleAdsFailure;
-import com.google.ads.googleads.v5.services.GoogleAdsRow;
-import com.google.ads.googleads.v5.services.GoogleAdsServiceClient;
-import com.google.ads.googleads.v5.services.GoogleAdsServiceClient.SearchPagedResponse;
-import com.google.ads.googleads.v5.services.MockGoogleAdsService;
-import com.google.ads.googleads.v5.services.SearchGoogleAdsResponse;
-import com.google.ads.googleads.v5.services.SearchGoogleAdsStreamRequest;
-import com.google.ads.googleads.v5.services.SearchGoogleAdsStreamResponse;
+import com.google.ads.googleads.v6.errors.GoogleAdsError;
+import com.google.ads.googleads.v6.errors.GoogleAdsException;
+import com.google.ads.googleads.v6.errors.GoogleAdsFailure;
+import com.google.ads.googleads.v6.services.GoogleAdsRow;
+import com.google.ads.googleads.v6.services.GoogleAdsServiceClient;
+import com.google.ads.googleads.v6.services.GoogleAdsServiceClient.SearchPagedResponse;
+import com.google.ads.googleads.v6.services.MockGoogleAdsService;
+import com.google.ads.googleads.v6.services.SearchGoogleAdsResponse;
+import com.google.ads.googleads.v6.services.SearchGoogleAdsStreamRequest;
+import com.google.ads.googleads.v6.services.SearchGoogleAdsStreamResponse;
 import com.google.api.gax.grpc.GaxGrpcProperties;
 import com.google.api.gax.grpc.GrpcStatusCode;
 import com.google.api.gax.grpc.testing.LocalChannelProvider;
@@ -53,8 +53,6 @@ import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
-import java.util.Arrays;
-import java.util.List;
 import java.util.Properties;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.regex.Pattern;
@@ -69,12 +67,12 @@ import org.junit.Test;
 import org.junit.rules.ExpectedException;
 import org.junit.rules.TemporaryFolder;
 import org.junit.runner.RunWith;
-import org.junit.runners.Parameterized;
+import org.junit.runners.JUnit4;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 
 /** Tests for {@link GoogleAdsClient}. */
-@RunWith(Parameterized.class)
+@RunWith(JUnit4.class)
 public class GoogleAdsClientTest {
 
   private static final String CLIENT_ID = "xyz.apps.googleusercontent.com";
@@ -92,16 +90,6 @@ public class GoogleAdsClientTest {
   private Credentials fakeCredentials = new FakeCredential();
   private LocalChannelProvider localChannelProvider;
   private Properties testProperties;
-  private final boolean enabledGeneratedCatalog;
-
-  public GoogleAdsClientTest(boolean enabledGeneratedCatalog) {
-    this.enabledGeneratedCatalog = enabledGeneratedCatalog;
-  }
-
-  @Parameterized.Parameters
-  public static List<Object[]> parameters() {
-    return Arrays.asList(new Object[] {Boolean.FALSE}, new Object[] {Boolean.TRUE});
-  }
 
   @BeforeClass
   public static void startLocalServer() {
@@ -123,9 +111,6 @@ public class GoogleAdsClientTest {
     testProperties.setProperty(ConfigPropertyKey.DEVELOPER_TOKEN.getPropertyKey(), DEVELOPER_TOKEN);
     testProperties.setProperty(
         ConfigPropertyKey.LOGIN_CUSTOMER_ID.getPropertyKey(), String.valueOf(LOGIN_CUSTOMER_ID));
-    testProperties.setProperty(
-        ConfigPropertyKey.ENABLE_GENERATED_CATALOG.getPropertyKey(),
-        String.valueOf(enabledGeneratedCatalog));
     mockServiceHelper.reset();
     localChannelProvider = mockServiceHelper.createChannelProvider();
   }
@@ -196,7 +181,7 @@ public class GoogleAdsClientTest {
             .fromPropertiesFile(propertiesFile)
             .setTransportChannelProvider(localChannelProvider)
             .build();
-    assertGoogleAdsClient(client, null, enabledGeneratedCatalog);
+    assertGoogleAdsClient(client, null);
   }
 
   /** Tests that an exception is thrown for a nonexistant properties file. */
@@ -226,7 +211,6 @@ public class GoogleAdsClientTest {
             .setCredentials(credentials)
             .setDeveloperToken(DEVELOPER_TOKEN)
             .setLoginCustomerId(1L)
-            .setEnableGeneratedCatalog(enabledGeneratedCatalog)
             .build();
     client = client.toBuilder().setLoginCustomerId(null).build();
     assertNull("Unable to clear loginCustomerId", client.getLoginCustomerId());
@@ -246,7 +230,6 @@ public class GoogleAdsClientTest {
             .setCredentials(credentials)
             .setDeveloperToken(DEVELOPER_TOKEN)
             .setLoginCustomerId(LOGIN_CUSTOMER_ID)
-            .setEnableGeneratedCatalog(enabledGeneratedCatalog)
             .setTransportChannelProvider(localChannelProvider)
             .build();
     assertGoogleAdsClient(client);
@@ -265,27 +248,8 @@ public class GoogleAdsClientTest {
         GoogleAdsClient.newBuilder()
             .setCredentials(credentials)
             .setDeveloperToken(DEVELOPER_TOKEN)
-            .setEnableGeneratedCatalog(enabledGeneratedCatalog)
             .build();
     assertNull("invalid login-customer-id", client.getLoginCustomerId());
-  }
-
-  /** Verifies that builder does not require enableGeneratedCatalog to be set explicitly. */
-  @Test
-  public void build_enableGeneratedCatalog_not_required() throws IOException {
-    Credentials credentials =
-        UserCredentials.newBuilder()
-            .setClientId(CLIENT_ID)
-            .setClientSecret(CLIENT_SECRET)
-            .setRefreshToken(REFRESH_TOKEN)
-            .build();
-    GoogleAdsClient client =
-        GoogleAdsClient.newBuilder()
-            .setCredentials(credentials)
-            .setDeveloperToken(DEVELOPER_TOKEN)
-            .setLoginCustomerId(LOGIN_CUSTOMER_ID)
-            .build();
-    assertGoogleAdsClient(client, LOGIN_CUSTOMER_ID, true);
   }
 
   /** Verifies that loginCustomerId is not required. */
@@ -294,14 +258,6 @@ public class GoogleAdsClientTest {
     testProperties.remove(ConfigPropertyKey.LOGIN_CUSTOMER_ID.getPropertyKey());
     GoogleAdsClient client = GoogleAdsClient.newBuilder().fromProperties(testProperties).build();
     assertNull(client.getLoginCustomerId());
-  }
-
-  /** Verifies that enableGeneratedCatalog is not required and defaults to false. */
-  @Test
-  public void buildFromProperties_enableGeneratedCatalog_isOptional() {
-    testProperties.remove(ConfigPropertyKey.ENABLE_GENERATED_CATALOG.getPropertyKey());
-    GoogleAdsClient client = GoogleAdsClient.newBuilder().fromProperties(testProperties).build();
-    assertFalse(client.getEnableGeneratedCatalog());
   }
 
   /**
@@ -314,7 +270,6 @@ public class GoogleAdsClientTest {
             .setCredentials(fakeCredentials)
             .setDeveloperToken(DEVELOPER_TOKEN)
             .setLoginCustomerId(LOGIN_CUSTOMER_ID)
-            .setEnableGeneratedCatalog(enabledGeneratedCatalog)
             .setTransportChannelProvider(localChannelProvider)
             .setEndpoint("fake-address")
             .build();
@@ -338,7 +293,6 @@ public class GoogleAdsClientTest {
             .setCredentials(fakeCredentials)
             .setDeveloperToken(DEVELOPER_TOKEN)
             .setLoginCustomerId(LOGIN_CUSTOMER_ID)
-            .setEnableGeneratedCatalog(enabledGeneratedCatalog)
             .setTransportChannelProvider(localChannelProvider)
             .setEndpoint("fake-address")
             .build();
@@ -361,7 +315,6 @@ public class GoogleAdsClientTest {
             .setCredentials(fakeCredentials)
             .setDeveloperToken(DEVELOPER_TOKEN)
             .setTransportChannelProvider(localChannelProvider)
-            .setEnableGeneratedCatalog(enabledGeneratedCatalog)
             .build();
     mockService.addResponse(SearchGoogleAdsResponse.newBuilder().build());
     try (GoogleAdsServiceClient googleAdsServiceClient =
@@ -381,7 +334,6 @@ public class GoogleAdsClientTest {
             .setCredentials(fakeCredentials)
             .setDeveloperToken(DEVELOPER_TOKEN)
             .setLinkedCustomerId(LINKED_CUSTOMER_ID)
-            .setEnableGeneratedCatalog(enabledGeneratedCatalog)
             .setTransportChannelProvider(localChannelProvider)
             .setEndpoint("fake-address")
             .build();
@@ -404,7 +356,6 @@ public class GoogleAdsClientTest {
             .setCredentials(fakeCredentials)
             .setDeveloperToken(DEVELOPER_TOKEN)
             .setTransportChannelProvider(localChannelProvider)
-            .setEnableGeneratedCatalog(enabledGeneratedCatalog)
             .build();
     Metadata.Key trailerKey =
         ApiCatalog.getDefault().getLatestVersion().getExceptionFactory().getTrailerKey();
@@ -434,7 +385,6 @@ public class GoogleAdsClientTest {
             .setCredentials(fakeCredentials)
             .setDeveloperToken(DEVELOPER_TOKEN)
             .setTransportChannelProvider(localChannelProvider)
-            .setEnableGeneratedCatalog(enabledGeneratedCatalog)
             .build();
     Metadata.Key trailerKey =
         ApiCatalog.getDefault().getLatestVersion().getExceptionFactory().getTrailerKey();
@@ -473,13 +423,11 @@ public class GoogleAdsClientTest {
         GoogleAdsClient.newBuilder()
             .setCredentials(fakeCredentials)
             .setDeveloperToken(DEVELOPER_TOKEN)
-            .setEnableGeneratedCatalog(enabledGeneratedCatalog)
             .build();
     GoogleAdsClient clientB =
         GoogleAdsClient.newBuilder()
             .setCredentials(fakeCredentials)
             .setDeveloperToken(DEVELOPER_TOKEN + "asdf")
-            .setEnableGeneratedCatalog(enabledGeneratedCatalog)
             .build();
     // Granted there could be hash collisions, but this should not happen for this test case.
     assertNotEquals(
@@ -495,7 +443,6 @@ public class GoogleAdsClientTest {
         GoogleAdsClient.newBuilder()
             .setCredentials(fakeCredentials)
             .setDeveloperToken(DEVELOPER_TOKEN)
-            .setEnableGeneratedCatalog(enabledGeneratedCatalog)
             .build();
     assertEquals("same instance should be equal", client, client);
   }
@@ -507,13 +454,11 @@ public class GoogleAdsClientTest {
         GoogleAdsClient.newBuilder()
             .setCredentials(fakeCredentials)
             .setDeveloperToken(DEVELOPER_TOKEN)
-            .setEnableGeneratedCatalog(enabledGeneratedCatalog)
             .build();
     GoogleAdsClient clientB =
         GoogleAdsClient.newBuilder()
             .setCredentials(fakeCredentials)
             .setDeveloperToken(DEVELOPER_TOKEN)
-            .setEnableGeneratedCatalog(enabledGeneratedCatalog)
             .build();
     assertNotEquals("different instances should not be equal", clientA, clientB);
   }
@@ -525,7 +470,6 @@ public class GoogleAdsClientTest {
         GoogleAdsClient.newBuilder()
             .setCredentials(fakeCredentials)
             .setDeveloperToken(DEVELOPER_TOKEN)
-            .setEnableGeneratedCatalog(enabledGeneratedCatalog)
             .build();
     String toString = client.toString();
     assertNotNull("toString should return a non-null string", toString);
@@ -538,7 +482,6 @@ public class GoogleAdsClientTest {
         .setCredentials(fakeCredentials)
         .setDeveloperToken(DEVELOPER_TOKEN)
         .setLoginCustomerId(LOGIN_CUSTOMER_ID)
-        .setEnableGeneratedCatalog(enabledGeneratedCatalog)
         .setTransportChannelProvider(localChannelProvider)
         .build();
   }
@@ -548,15 +491,14 @@ public class GoogleAdsClientTest {
    * #LOGIN_CUSTOMER_ID} on the client.
    */
   private void assertGoogleAdsClient(GoogleAdsClient client) throws IOException {
-    assertGoogleAdsClient(client, LOGIN_CUSTOMER_ID, enabledGeneratedCatalog);
+    assertGoogleAdsClient(client, LOGIN_CUSTOMER_ID);
   }
 
   /**
    * Asserts that the provided client matches expectations. Expects a login customer ID that matches
    * the provided value.
    */
-  private void assertGoogleAdsClient(
-      GoogleAdsClient client, @Nullable Long loginCustomerId, boolean enableGeneratedCatalog)
+  private void assertGoogleAdsClient(GoogleAdsClient client, @Nullable Long loginCustomerId)
       throws IOException {
     assertNotNull("Null client", client);
 
@@ -570,7 +512,5 @@ public class GoogleAdsClientTest {
 
     assertEquals("Developer token", DEVELOPER_TOKEN, client.getDeveloperToken());
     assertEquals("Login customer id", loginCustomerId, client.getLoginCustomerId());
-    assertEquals(
-        "Enable generated catalog", enableGeneratedCatalog, client.getEnableGeneratedCatalog());
   }
 }

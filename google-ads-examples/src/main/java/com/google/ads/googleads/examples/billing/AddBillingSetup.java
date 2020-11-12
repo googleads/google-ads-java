@@ -18,20 +18,19 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.v5.utils.ResourceNames;
-import com.google.ads.googleads.v5.errors.GoogleAdsError;
-import com.google.ads.googleads.v5.errors.GoogleAdsException;
-import com.google.ads.googleads.v5.resources.BillingSetup;
-import com.google.ads.googleads.v5.resources.BillingSetup.PaymentsAccountInfo;
-import com.google.ads.googleads.v5.services.BillingSetupOperation;
-import com.google.ads.googleads.v5.services.BillingSetupServiceClient;
-import com.google.ads.googleads.v5.services.GoogleAdsServiceClient;
-import com.google.ads.googleads.v5.services.GoogleAdsServiceClient.SearchPagedResponse;
-import com.google.ads.googleads.v5.services.MutateBillingSetupResponse;
-import org.joda.time.DateTime;
-import com.google.protobuf.StringValue;
+import com.google.ads.googleads.v6.errors.GoogleAdsError;
+import com.google.ads.googleads.v6.errors.GoogleAdsException;
+import com.google.ads.googleads.v6.resources.BillingSetup;
+import com.google.ads.googleads.v6.resources.BillingSetup.PaymentsAccountInfo;
+import com.google.ads.googleads.v6.services.BillingSetupOperation;
+import com.google.ads.googleads.v6.services.BillingSetupServiceClient;
+import com.google.ads.googleads.v6.services.GoogleAdsServiceClient;
+import com.google.ads.googleads.v6.services.GoogleAdsServiceClient.SearchPagedResponse;
+import com.google.ads.googleads.v6.services.MutateBillingSetupResponse;
+import com.google.ads.googleads.v6.utils.ResourceNames;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import org.joda.time.DateTime;
 
 /**
  * Creates a billing setup for a customer. A billing setup is a link between a payments account and
@@ -172,16 +171,15 @@ public class AddBillingSetup {
       // name. You can list available payments accounts via the PaymentsAccountService's
       // ListPaymentsAccounts method.
       billingSetupBuilder.setPaymentsAccount(
-          StringValue.of(ResourceNames.paymentsAccount(customerId, paymentsAccountId)));
+          ResourceNames.paymentsAccount(customerId, paymentsAccountId));
     } else if (paymentsProfileId != null) {
       // Otherwise, create a new payments account by setting the PaymentsAccountInfo
       // field. See https://support.google.com/google-ads/answer/7268503 for information
       // about payments profiles.
       billingSetupBuilder.setPaymentsAccountInfo(
           PaymentsAccountInfo.newBuilder()
-              .setPaymentsAccountName(
-                  StringValue.of("Payments Account #" + System.currentTimeMillis()))
-              .setPaymentsProfileId(StringValue.of(paymentsProfileId))
+              .setPaymentsAccountName("Payments Account #" + System.currentTimeMillis())
+              .setPaymentsProfileId(paymentsProfileId)
               .build());
     } else {
       throw new Exception("No paymentsAccountId or paymentsProfileId provided.");
@@ -224,7 +222,7 @@ public class AddBillingSetup {
       BillingSetup.Builder billingSetupBuilder = billingSetup.toBuilder();
       if (searchPagedResponse.getPage().getResponse().getResultsCount() > 0) {
         // Retrieves the ending date time of the last billing setup.
-        StringValue lastEndingDateTimeString =
+        String lastEndingDateTimeString =
             searchPagedResponse
                 .getPage()
                 .getResponse()
@@ -243,19 +241,16 @@ public class AddBillingSetup {
         DateTime lastEndingDateTime = DateTime.parse(lastEndingDateTimeString.toString());
 
         // Sets the new billing setup to start one day after the ending date time.
-        billingSetupBuilder.setStartDateTime(
-            StringValue.of(lastEndingDateTime.plusDays(1).toString("yyyy-MM-dd")));
+        billingSetupBuilder.setStartDateTime(lastEndingDateTime.plusDays(1).toString("yyyy-MM-dd"));
 
         // Sets the new billing setup to end one day after the starting date time.
-        billingSetupBuilder.setEndDateTime(
-            StringValue.of(lastEndingDateTime.plusDays(2).toString("yyyy-MM-dd")));
+        billingSetupBuilder.setEndDateTime(lastEndingDateTime.plusDays(2).toString("yyyy-MM-dd"));
       } else {
         // Otherwise, the only acceptable start time is DateTime.now().
-        billingSetupBuilder.setStartDateTime(StringValue.of(DateTime.now().toString()));
+        billingSetupBuilder.setStartDateTime(DateTime.now().toString());
 
         // Sets the new billing setup to end tomorrow.
-        billingSetupBuilder.setEndDateTime(
-            StringValue.of(new DateTime().plusDays(1).toString("yyyy-MM-dd")));
+        billingSetupBuilder.setEndDateTime(new DateTime().plusDays(1).toString("yyyy-MM-dd"));
       }
       return billingSetupBuilder.build();
     }

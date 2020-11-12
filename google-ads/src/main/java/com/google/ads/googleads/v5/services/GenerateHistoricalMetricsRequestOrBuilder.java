@@ -13,7 +13,7 @@ public interface GenerateHistoricalMetricsRequestOrBuilder extends
    * requested.
    * </pre>
    *
-   * <code>string keyword_plan = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+   * <code>string keyword_plan = 1 [(.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = { ... }</code>
    * @return The keywordPlan.
    */
   java.lang.String getKeywordPlan();
@@ -23,7 +23,7 @@ public interface GenerateHistoricalMetricsRequestOrBuilder extends
    * requested.
    * </pre>
    *
-   * <code>string keyword_plan = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+   * <code>string keyword_plan = 1 [(.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = { ... }</code>
    * @return The bytes for keywordPlan.
    */
   com.google.protobuf.ByteString

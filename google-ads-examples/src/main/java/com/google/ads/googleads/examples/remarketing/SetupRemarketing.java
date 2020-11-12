@@ -19,39 +19,37 @@ import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
 import com.google.ads.googleads.lib.utils.FieldMasks;
-import com.google.ads.googleads.v5.common.ExpressionRuleUserListInfo;
-import com.google.ads.googleads.v5.common.RuleBasedUserListInfo;
-import com.google.ads.googleads.v5.common.UserListInfo;
-import com.google.ads.googleads.v5.common.UserListRuleInfo;
-import com.google.ads.googleads.v5.common.UserListRuleItemGroupInfo;
-import com.google.ads.googleads.v5.common.UserListRuleItemInfo;
-import com.google.ads.googleads.v5.common.UserListStringRuleItemInfo;
-import com.google.ads.googleads.v5.enums.UserListMembershipStatusEnum.UserListMembershipStatus;
-import com.google.ads.googleads.v5.enums.UserListPrepopulationStatusEnum.UserListPrepopulationStatus;
-import com.google.ads.googleads.v5.enums.UserListStringRuleItemOperatorEnum.UserListStringRuleItemOperator;
-import com.google.ads.googleads.v5.errors.GoogleAdsError;
-import com.google.ads.googleads.v5.errors.GoogleAdsException;
-import com.google.ads.googleads.v5.resources.AdGroupCriterion;
-import com.google.ads.googleads.v5.resources.CampaignCriterion;
-import com.google.ads.googleads.v5.resources.UserList;
-import com.google.ads.googleads.v5.services.AdGroupCriterionOperation;
-import com.google.ads.googleads.v5.services.AdGroupCriterionServiceClient;
-import com.google.ads.googleads.v5.services.CampaignCriterionOperation;
-import com.google.ads.googleads.v5.services.CampaignCriterionServiceClient;
-import com.google.ads.googleads.v5.services.GoogleAdsRow;
-import com.google.ads.googleads.v5.services.GoogleAdsServiceClient;
-import com.google.ads.googleads.v5.services.GoogleAdsServiceClient.SearchPagedResponse;
-import com.google.ads.googleads.v5.services.MutateAdGroupCriteriaResponse;
-import com.google.ads.googleads.v5.services.MutateAdGroupCriterionResult;
-import com.google.ads.googleads.v5.services.MutateCampaignCriteriaResponse;
-import com.google.ads.googleads.v5.services.MutateUserListsResponse;
-import com.google.ads.googleads.v5.services.SearchGoogleAdsRequest;
-import com.google.ads.googleads.v5.services.UserListOperation;
-import com.google.ads.googleads.v5.services.UserListServiceClient;
-import com.google.ads.googleads.v5.utils.ResourceNames;
+import com.google.ads.googleads.v6.common.ExpressionRuleUserListInfo;
+import com.google.ads.googleads.v6.common.RuleBasedUserListInfo;
+import com.google.ads.googleads.v6.common.UserListInfo;
+import com.google.ads.googleads.v6.common.UserListRuleInfo;
+import com.google.ads.googleads.v6.common.UserListRuleItemGroupInfo;
+import com.google.ads.googleads.v6.common.UserListRuleItemInfo;
+import com.google.ads.googleads.v6.common.UserListStringRuleItemInfo;
+import com.google.ads.googleads.v6.enums.UserListMembershipStatusEnum.UserListMembershipStatus;
+import com.google.ads.googleads.v6.enums.UserListPrepopulationStatusEnum.UserListPrepopulationStatus;
+import com.google.ads.googleads.v6.enums.UserListStringRuleItemOperatorEnum.UserListStringRuleItemOperator;
+import com.google.ads.googleads.v6.errors.GoogleAdsError;
+import com.google.ads.googleads.v6.errors.GoogleAdsException;
+import com.google.ads.googleads.v6.resources.AdGroupCriterion;
+import com.google.ads.googleads.v6.resources.CampaignCriterion;
+import com.google.ads.googleads.v6.resources.UserList;
+import com.google.ads.googleads.v6.services.AdGroupCriterionOperation;
+import com.google.ads.googleads.v6.services.AdGroupCriterionServiceClient;
+import com.google.ads.googleads.v6.services.CampaignCriterionOperation;
+import com.google.ads.googleads.v6.services.CampaignCriterionServiceClient;
+import com.google.ads.googleads.v6.services.GoogleAdsRow;
+import com.google.ads.googleads.v6.services.GoogleAdsServiceClient;
+import com.google.ads.googleads.v6.services.GoogleAdsServiceClient.SearchPagedResponse;
+import com.google.ads.googleads.v6.services.MutateAdGroupCriteriaResponse;
+import com.google.ads.googleads.v6.services.MutateAdGroupCriterionResult;
+import com.google.ads.googleads.v6.services.MutateCampaignCriteriaResponse;
+import com.google.ads.googleads.v6.services.MutateUserListsResponse;
+import com.google.ads.googleads.v6.services.SearchGoogleAdsRequest;
+import com.google.ads.googleads.v6.services.UserListOperation;
+import com.google.ads.googleads.v6.services.UserListServiceClient;
+import com.google.ads.googleads.v6.utils.ResourceNames;
 import com.google.common.collect.ImmutableList;
-import com.google.protobuf.Int64Value;
-import com.google.protobuf.StringValue;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -171,11 +169,11 @@ public class SetupRemarketing {
     UserListRuleItemInfo rule =
         UserListRuleItemInfo.newBuilder()
             // Uses a built-in parameter to create a domain URL rule.
-            .setName(StringValue.of("url__"))
+            .setName("url__")
             .setStringRuleItem(
                 UserListStringRuleItemInfo.newBuilder()
                     .setOperator(UserListStringRuleItemOperator.CONTAINS)
-                    .setValue(StringValue.of("example.com"))
+                    .setValue("example.com")
                     .build())
             .build();
 
@@ -201,10 +199,10 @@ public class SetupRemarketing {
     // Creates the user list.
     UserList userList =
         UserList.newBuilder()
-            .setName(StringValue.of("All visitors to example.com" + System.currentTimeMillis()))
-            .setDescription(StringValue.of("Any visitor to any page of example.com"))
+            .setName("All visitors to example.com" + System.currentTimeMillis())
+            .setDescription("Any visitor to any page of example.com")
             .setMembershipStatus(UserListMembershipStatus.OPEN)
-            .setMembershipLifeSpan(Int64Value.of(365))
+            .setMembershipLifeSpan(365)
             .setRuleBasedUserList(ruleBasedUserListInfo)
             .build();
 

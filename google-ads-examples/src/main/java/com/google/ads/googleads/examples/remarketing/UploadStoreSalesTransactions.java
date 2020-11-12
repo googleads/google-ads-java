@@ -18,30 +18,26 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.v5.common.OfflineUserAddressInfo;
-import com.google.ads.googleads.v5.common.StoreSalesMetadata;
-import com.google.ads.googleads.v5.common.StoreSalesThirdPartyMetadata;
-import com.google.ads.googleads.v5.common.TransactionAttribute;
-import com.google.ads.googleads.v5.common.UserData;
-import com.google.ads.googleads.v5.common.UserIdentifier;
-import com.google.ads.googleads.v5.enums.OfflineUserDataJobStatusEnum.OfflineUserDataJobStatus;
-import com.google.ads.googleads.v5.enums.OfflineUserDataJobTypeEnum.OfflineUserDataJobType;
-import com.google.ads.googleads.v5.errors.GoogleAdsError;
-import com.google.ads.googleads.v5.errors.GoogleAdsException;
-import com.google.ads.googleads.v5.resources.OfflineUserDataJob;
-import com.google.ads.googleads.v5.services.AddOfflineUserDataJobOperationsRequest;
-import com.google.ads.googleads.v5.services.AddOfflineUserDataJobOperationsResponse;
-import com.google.ads.googleads.v5.services.CreateOfflineUserDataJobResponse;
-import com.google.ads.googleads.v5.services.GoogleAdsRow;
-import com.google.ads.googleads.v5.services.GoogleAdsServiceClient;
-import com.google.ads.googleads.v5.services.OfflineUserDataJobOperation;
-import com.google.ads.googleads.v5.services.OfflineUserDataJobServiceClient;
-import com.google.ads.googleads.v5.utils.ResourceNames;
+import com.google.ads.googleads.v6.common.OfflineUserAddressInfo;
+import com.google.ads.googleads.v6.common.StoreSalesMetadata;
+import com.google.ads.googleads.v6.common.StoreSalesThirdPartyMetadata;
+import com.google.ads.googleads.v6.common.TransactionAttribute;
+import com.google.ads.googleads.v6.common.UserData;
+import com.google.ads.googleads.v6.common.UserIdentifier;
+import com.google.ads.googleads.v6.enums.OfflineUserDataJobStatusEnum.OfflineUserDataJobStatus;
+import com.google.ads.googleads.v6.enums.OfflineUserDataJobTypeEnum.OfflineUserDataJobType;
+import com.google.ads.googleads.v6.errors.GoogleAdsError;
+import com.google.ads.googleads.v6.errors.GoogleAdsException;
+import com.google.ads.googleads.v6.resources.OfflineUserDataJob;
+import com.google.ads.googleads.v6.services.AddOfflineUserDataJobOperationsRequest;
+import com.google.ads.googleads.v6.services.AddOfflineUserDataJobOperationsResponse;
+import com.google.ads.googleads.v6.services.CreateOfflineUserDataJobResponse;
+import com.google.ads.googleads.v6.services.GoogleAdsRow;
+import com.google.ads.googleads.v6.services.GoogleAdsServiceClient;
+import com.google.ads.googleads.v6.services.OfflineUserDataJobOperation;
+import com.google.ads.googleads.v6.services.OfflineUserDataJobServiceClient;
+import com.google.ads.googleads.v6.utils.ResourceNames;
 import com.google.common.collect.ImmutableList;
-import com.google.protobuf.BoolValue;
-import com.google.protobuf.DoubleValue;
-import com.google.protobuf.Int64Value;
-import com.google.protobuf.StringValue;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
@@ -87,11 +83,12 @@ public class UploadStoreSalesTransactions {
         required = true,
         description = "The ID of a store sales conversion action")
     private Long conversionActionId;
-    
+
     @Parameter(
         names = ArgumentNames.CUSTOM_KEY,
         required = false,
-        description = "Only required after creating a custom key and custom values in the account."
+        description =
+            "Only required after creating a custom key and custom values in the account."
                 + " Custom key and values are used to segment store sales conversions."
                 + " This measurement can be used to provide more advanced insights.")
     private String customKey;
@@ -184,8 +181,8 @@ public class UploadStoreSalesTransactions {
    *     STORE_SALES_UPLOAD_THIRD_PARTY}. Otherwise, use {@code STORE_SALES_UPLOAD_FIRST_PARTY}.
    * @param externalId optional (but recommended) external ID for the offline user data job.
    * @param conversionActionId the ID of a store sales conversion action.
-   * @param customKey to segment store sales conversions. Only required after creating a 
-   *     custom key and custom values in the account.
+   * @param customKey to segment store sales conversions. Only required after creating a custom key
+   *     and custom values in the account.
    * @param advertiserUploadDateTime date and time the advertiser uploaded data to the partner. Only
    *     required for third party uploads.
    * @param bridgeMapVersionId version of partner IDs to be used for uploads. Only required for
@@ -267,17 +264,17 @@ public class UploadStoreSalesTransactions {
             // your database or loyalty program.
             // For example, set this to 0.7 if you have 100 transactions over 30 days, and out of
             // those 100 transactions, you can identify 70 by an email address or phone number.
-            .setLoyaltyFraction(DoubleValue.of(0.7))
+            .setLoyaltyFraction(0.7)
             // Sets the fraction of sales you're uploading out of the overall sales that you (or the
             // advertiser, in the third party case) can associate with a customer. In most cases,
             // you will set this to 1.0.
             // Continuing the example above for loyalty fraction, a value of 1.0 here indicates that
             // you are uploading all 70 of the transactions that can be identified by an email
             // address or phone number.
-            .setTransactionUploadFraction(DoubleValue.of(1.0));
-    
+            .setTransactionUploadFraction(1.0);
+
     if (customKey != null && !customKey.isEmpty()) {
-        storeSalesMetadataBuilder.setCustomKey(StringValue.of(customKey));
+      storeSalesMetadataBuilder.setCustomKey(customKey);
     }
 
     if (OfflineUserDataJobType.STORE_SALES_UPLOAD_THIRD_PARTY == offlineUserDataJobType) {
@@ -285,19 +282,19 @@ public class UploadStoreSalesTransactions {
       StoreSalesThirdPartyMetadata storeSalesThirdPartyMetadata =
           StoreSalesThirdPartyMetadata.newBuilder()
               // The date/time must be in the format "yyyy-MM-dd hh:mm:ss".
-              .setAdvertiserUploadDateTime(StringValue.of(advertiserUploadDateTime))
+              .setAdvertiserUploadDateTime(advertiserUploadDateTime)
 
               // Sets the fraction of transactions you received from the advertiser that have valid
               // formatting and values. This captures any transactions the advertiser provided to
               // you but which you are unable to upload to Google due to formatting errors or
               // missing data.
               // In most cases, you will set this to 1.0.
-              .setValidTransactionFraction(DoubleValue.of(1.0))
+              .setValidTransactionFraction(1.0)
               // Sets the fraction of valid transactions (as defined above) you received from the
               // advertiser that you (the third party) have matched to an external user ID on your
               // side.
               // In most cases, you will set this to 1.0.
-              .setPartnerMatchFraction(DoubleValue.of(1.0))
+              .setPartnerMatchFraction(1.0)
 
               // Sets the fraction of transactions you (the third party) are uploading out of the
               // transactions you received from the advertiser that meet both of the following
@@ -307,15 +304,15 @@ public class UploadStoreSalesTransactions {
               // 2. You matched to an external user ID on your side. See partner match fraction
               // above.
               // In most cases, you will set this to 1.0.
-              .setPartnerUploadFraction(DoubleValue.of(1.0))
+              .setPartnerUploadFraction(1.0)
 
               // Please speak with your Google representative to get the values to use for the
               // bridge map version and partner IDs.
 
               // Sets the version of partner IDs to be used for uploads.
-              .setBridgeMapVersionId(StringValue.of(bridgeMapVersionId))
+              .setBridgeMapVersionId(bridgeMapVersionId)
               // Sets the third party partner ID uploading the transactions.
-              .setPartnerId(Int64Value.of(partnerId))
+              .setPartnerId(partnerId)
               .build();
       storeSalesMetadataBuilder.setThirdPartyMetadata(storeSalesThirdPartyMetadata);
     }
@@ -326,7 +323,7 @@ public class UploadStoreSalesTransactions {
             .setType(offlineUserDataJobType)
             .setStoreSalesMetadata(storeSalesMetadataBuilder);
     if (externalId != null) {
-      offlineUserDataJobBuilder.setExternalId(Int64Value.of(externalId));
+      offlineUserDataJobBuilder.setExternalId(externalId);
     }
 
     // Issues a request to create the offline user data job.
@@ -357,7 +354,7 @@ public class UploadStoreSalesTransactions {
         offlineUserDataJobServiceClient.addOfflineUserDataJobOperations(
             AddOfflineUserDataJobOperationsRequest.newBuilder()
                 .setResourceName(offlineUserDataJobResourceName)
-                .setEnablePartialFailure(BoolValue.of(true))
+                .setEnablePartialFailure(true)
                 .addAllOperations(userDataJobOperations)
                 .build());
 
@@ -403,28 +400,28 @@ public class UploadStoreSalesTransactions {
                 ImmutableList.of(
                     UserIdentifier.newBuilder()
                         .setHashedEmail(
-                            StringValue.of(
-                                // Email addresses must be normalized and hashed.
-                                normalizeAndHash(sha256Digest, "customer@example.com")))
+                            // Email addresses must be normalized and hashed.
+                            normalizeAndHash(sha256Digest, "customer@example.com"))
                         .build(),
                     UserIdentifier.newBuilder()
-                        .setAddressInfo(
-                            OfflineUserAddressInfo.newBuilder().setState(StringValue.of("NY")))
+                        .setAddressInfo(OfflineUserAddressInfo.newBuilder().setState("NY"))
                         .build()))
             .setTransactionAttribute(
                 TransactionAttribute.newBuilder()
                     .setConversionAction(
-                        StringValue.of(
-                            ResourceNames.conversionAction(customerId, conversionActionId)))
-                    .setCurrencyCode(StringValue.of("USD"))
+                        ResourceNames.conversionAction(customerId, conversionActionId))
+                    .setCurrencyCode("USD")
                     // Converts the transaction amount from $200 USD to micros.
-                    .setTransactionAmountMicros(DoubleValue.of(200L * 1_000_000L))
-                    // Specifies the date and time of the transaction. This date and time will be
-                    // interpreted by the API using the Google Ads customer's time zone.
-                    // The date/time must be in the format "yyyy-MM-dd hh:mm:ss".
-                    .setTransactionDateTime(StringValue.of("2020-05-01 23:52:12"))
-                    // OPTIONAL: If uploading data with custom key and values, also specify the following value:
-                    // .setCustomValue(StringValue.of("INSERT_CUSTOM_VALUE_HERE"))
+                    .setTransactionAmountMicros(200L * 1_000_000L)
+                    // Specifies the date and time of the transaction. The format is
+                    // "YYYY-MM-DD HH:MM:SS[+HH:MM]", where [+HH:MM] is an optional
+                    // timezone offset from UTC. If the offset is absent, the API will
+                    // use the account's timezone as default. Examples: "2018-03-05 09:15:00"
+                    // or "2018-02-01 14:34:30+03:00".
+                    .setTransactionDateTime("2020-05-01 23:52:12")
+                // OPTIONAL: If uploading data with custom key and values, also specify the
+                // following value:
+                // .setCustomValue("INSERT_CUSTOM_VALUE_HERE")
                 )
             .build();
 
@@ -435,26 +432,24 @@ public class UploadStoreSalesTransactions {
                 UserIdentifier.newBuilder()
                     .setAddressInfo(
                         OfflineUserAddressInfo.newBuilder()
-                            .setHashedFirstName(
-                                StringValue.of(normalizeAndHash(sha256Digest, "John")))
-                            .setHashedLastName(
-                                StringValue.of(normalizeAndHash(sha256Digest, "Doe")))
-                            .setCountryCode(StringValue.of("US"))
-                            .setPostalCode(StringValue.of("10011"))))
+                            .setHashedFirstName(normalizeAndHash(sha256Digest, "John"))
+                            .setHashedLastName(normalizeAndHash(sha256Digest, "Doe"))
+                            .setCountryCode("US")
+                            .setPostalCode("10011")))
             .setTransactionAttribute(
                 TransactionAttribute.newBuilder()
                     .setConversionAction(
-                        StringValue.of(
-                            ResourceNames.conversionAction(customerId, conversionActionId)))
-                    .setCurrencyCode(StringValue.of("EUR"))
+                        ResourceNames.conversionAction(customerId, conversionActionId))
+                    .setCurrencyCode("EUR")
                     // Converts the transaction amount from 450 EUR to micros.
-                    .setTransactionAmountMicros(DoubleValue.of(450L * 1_000_000L))
+                    .setTransactionAmountMicros(450L * 1_000_000L)
                     // Specifies the date and time of the transaction. This date and time will be
                     // interpreted by the API using the Google Ads customer's time zone.
                     // The date/time must be in the format "yyyy-MM-dd hh:mm:ss".
-                    .setTransactionDateTime(StringValue.of("2020-05-14 19:07:02"))
-                    // OPTIONAL: If uploading data with custom key and values, also specify the following value:
-                    // .setCustomValue(StringValue.of("INSERT_CUSTOM_VALUE_HERE"))
+                    .setTransactionDateTime("2020-05-14 19:07:02")
+                // OPTIONAL: If uploading data with custom key and values, also specify the
+                // following value:
+                // .setCustomValue("INSERT_CUSTOM_VALUE_HERE")
                 )
             .build();
 
@@ -515,9 +510,7 @@ public class UploadStoreSalesTransactions {
       OfflineUserDataJob offlineUserDataJob = googleAdsRow.getOfflineUserDataJob();
       System.out.printf(
           "Offline user data job ID %d with type '%s' has status: %s%n",
-          offlineUserDataJob.getId().getValue(),
-          offlineUserDataJob.getType(),
-          offlineUserDataJob.getStatus());
+          offlineUserDataJob.getId(), offlineUserDataJob.getType(), offlineUserDataJob.getStatus());
       OfflineUserDataJobStatus jobStatus = offlineUserDataJob.getStatus();
       if (OfflineUserDataJobStatus.FAILED == jobStatus) {
         System.out.printf("  Failure reason: %s%n", offlineUserDataJob.getFailureReason());

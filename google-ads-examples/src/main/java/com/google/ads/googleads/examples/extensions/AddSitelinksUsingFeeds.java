@@ -18,42 +18,41 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.v5.common.MatchingFunction;
-import com.google.ads.googleads.v5.enums.FeedAttributeTypeEnum.FeedAttributeType;
-import com.google.ads.googleads.v5.enums.FeedOriginEnum.FeedOrigin;
-import com.google.ads.googleads.v5.enums.PlaceholderTypeEnum.PlaceholderType;
-import com.google.ads.googleads.v5.enums.SitelinkPlaceholderFieldEnum.SitelinkPlaceholderField;
-import com.google.ads.googleads.v5.errors.GoogleAdsError;
-import com.google.ads.googleads.v5.errors.GoogleAdsException;
-import com.google.ads.googleads.v5.resources.AttributeFieldMapping;
-import com.google.ads.googleads.v5.resources.CampaignFeed;
-import com.google.ads.googleads.v5.resources.Feed;
-import com.google.ads.googleads.v5.resources.FeedAttribute;
-import com.google.ads.googleads.v5.resources.FeedItem;
-import com.google.ads.googleads.v5.resources.FeedItemAttributeValue;
-import com.google.ads.googleads.v5.resources.FeedItemTarget;
-import com.google.ads.googleads.v5.resources.FeedMapping;
-import com.google.ads.googleads.v5.services.CampaignFeedOperation;
-import com.google.ads.googleads.v5.services.CampaignFeedServiceClient;
-import com.google.ads.googleads.v5.services.FeedItemOperation;
-import com.google.ads.googleads.v5.services.FeedItemServiceClient;
-import com.google.ads.googleads.v5.services.FeedItemTargetOperation;
-import com.google.ads.googleads.v5.services.FeedItemTargetServiceClient;
-import com.google.ads.googleads.v5.services.FeedMappingOperation;
-import com.google.ads.googleads.v5.services.FeedMappingServiceClient;
-import com.google.ads.googleads.v5.services.FeedOperation;
-import com.google.ads.googleads.v5.services.FeedServiceClient;
-import com.google.ads.googleads.v5.services.GoogleAdsServiceClient;
-import com.google.ads.googleads.v5.services.GoogleAdsServiceClient.SearchPagedResponse;
-import com.google.ads.googleads.v5.services.MutateCampaignFeedsResponse;
-import com.google.ads.googleads.v5.services.MutateFeedItemResult;
-import com.google.ads.googleads.v5.services.MutateFeedItemTargetsResponse;
-import com.google.ads.googleads.v5.services.MutateFeedItemsResponse;
-import com.google.ads.googleads.v5.services.MutateFeedMappingsResponse;
-import com.google.ads.googleads.v5.services.MutateFeedsResponse;
-import com.google.ads.googleads.v5.utils.ResourceNames;
+import com.google.ads.googleads.v6.common.MatchingFunction;
+import com.google.ads.googleads.v6.enums.FeedAttributeTypeEnum.FeedAttributeType;
+import com.google.ads.googleads.v6.enums.FeedOriginEnum.FeedOrigin;
+import com.google.ads.googleads.v6.enums.PlaceholderTypeEnum.PlaceholderType;
+import com.google.ads.googleads.v6.enums.SitelinkPlaceholderFieldEnum.SitelinkPlaceholderField;
+import com.google.ads.googleads.v6.errors.GoogleAdsError;
+import com.google.ads.googleads.v6.errors.GoogleAdsException;
+import com.google.ads.googleads.v6.resources.AttributeFieldMapping;
+import com.google.ads.googleads.v6.resources.CampaignFeed;
+import com.google.ads.googleads.v6.resources.Feed;
+import com.google.ads.googleads.v6.resources.FeedAttribute;
+import com.google.ads.googleads.v6.resources.FeedItem;
+import com.google.ads.googleads.v6.resources.FeedItemAttributeValue;
+import com.google.ads.googleads.v6.resources.FeedItemTarget;
+import com.google.ads.googleads.v6.resources.FeedMapping;
+import com.google.ads.googleads.v6.services.CampaignFeedOperation;
+import com.google.ads.googleads.v6.services.CampaignFeedServiceClient;
+import com.google.ads.googleads.v6.services.FeedItemOperation;
+import com.google.ads.googleads.v6.services.FeedItemServiceClient;
+import com.google.ads.googleads.v6.services.FeedItemTargetOperation;
+import com.google.ads.googleads.v6.services.FeedItemTargetServiceClient;
+import com.google.ads.googleads.v6.services.FeedMappingOperation;
+import com.google.ads.googleads.v6.services.FeedMappingServiceClient;
+import com.google.ads.googleads.v6.services.FeedOperation;
+import com.google.ads.googleads.v6.services.FeedServiceClient;
+import com.google.ads.googleads.v6.services.GoogleAdsServiceClient;
+import com.google.ads.googleads.v6.services.GoogleAdsServiceClient.SearchPagedResponse;
+import com.google.ads.googleads.v6.services.MutateCampaignFeedsResponse;
+import com.google.ads.googleads.v6.services.MutateFeedItemResult;
+import com.google.ads.googleads.v6.services.MutateFeedItemTargetsResponse;
+import com.google.ads.googleads.v6.services.MutateFeedItemsResponse;
+import com.google.ads.googleads.v6.services.MutateFeedMappingsResponse;
+import com.google.ads.googleads.v6.services.MutateFeedsResponse;
+import com.google.ads.googleads.v6.utils.ResourceNames;
 import com.google.common.collect.ImmutableList;
-import com.google.protobuf.StringValue;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -161,7 +160,7 @@ public class AddSitelinksUsingFeeds {
     // Creates the feed.
     Feed feed =
         Feed.newBuilder()
-            .setName(StringValue.of("Sitelinks Feed #" + System.currentTimeMillis()))
+            .setName("Sitelinks Feed #" + System.currentTimeMillis())
             .setOrigin(FeedOrigin.USER)
             // Specifies the column name and data type. This is just raw data at this point
             // and not yet linked to any particular purpose. The names are used to help us
@@ -169,19 +168,19 @@ public class AddSitelinksUsingFeeds {
             .addAllAttributes(
                 ImmutableList.of(
                     FeedAttribute.newBuilder()
-                        .setName(StringValue.of("Link Text"))
+                        .setName("Link Text")
                         .setType(FeedAttributeType.STRING)
                         .build(),
                     FeedAttribute.newBuilder()
-                        .setName(StringValue.of("Link Final URL"))
+                        .setName("Link Final URL")
                         .setType(FeedAttributeType.URL_LIST)
                         .build(),
                     FeedAttribute.newBuilder()
-                        .setName(StringValue.of("Line 1"))
+                        .setName("Line 1")
                         .setType(FeedAttributeType.STRING)
                         .build(),
                     FeedAttribute.newBuilder()
-                        .setName(StringValue.of("Line 2"))
+                        .setName("Line 2")
                         .setType(FeedAttributeType.STRING)
                         .build()))
             .build();
@@ -230,12 +229,12 @@ public class AddSitelinksUsingFeeds {
     FeedMapping.Builder feedMapping =
         FeedMapping.newBuilder()
             .setPlaceholderType(PlaceholderType.SITELINK)
-            .setFeed(StringValue.of(feed.getResourceName()));
+            .setFeed(feed.getResourceName());
 
     // Adds the attribute field mappings to the feed mapping.
     SitelinkPlaceholderField sitelinkPlaceholderField;
     for (FeedAttribute feedAttribute : feed.getAttributesList()) {
-      switch (feedAttribute.getName().getValue()) {
+      switch (feedAttribute.getName()) {
         case "Link Text":
           sitelinkPlaceholderField = SitelinkPlaceholderField.TEXT;
           break;
@@ -332,13 +331,12 @@ public class AddSitelinksUsingFeeds {
   private FeedItemOperation createFeedItemOperation(
       Feed feed, String linkText, String finalUrl, String line1, String line2) {
     // Creates a feed item.
-    FeedItem.Builder feedItem =
-        FeedItem.newBuilder().setFeed(StringValue.of(feed.getResourceName()));
+    FeedItem.Builder feedItem = FeedItem.newBuilder().setFeed(feed.getResourceName());
 
     // Adds the attributes to the feed item.
     String stringValue;
     for (FeedAttribute feedAttribute : feed.getAttributesList()) {
-      switch (feedAttribute.getName().getValue()) {
+      switch (feedAttribute.getName()) {
         case "Link Text":
           stringValue = linkText;
           break;
@@ -359,10 +357,10 @@ public class AddSitelinksUsingFeeds {
               .setFeedAttributeId(feedAttribute.getId())
               // This field will be ignored when the feed item attribute is a list of strings (i.e.
               // FINAL_URLS).
-              .setStringValue(StringValue.of(stringValue))
+              .setStringValue(stringValue)
               // This field will be ignored when the feed item attribute is not a list of strings
               // (i.e. all fields other than FINAL_URLS).
-              .addAllStringValues(ImmutableList.of(StringValue.of(stringValue)))
+              .addAllStringValues(ImmutableList.of(stringValue))
               .build());
     }
     return FeedItemOperation.newBuilder().setCreate(feedItem.build()).build();
@@ -381,7 +379,7 @@ public class AddSitelinksUsingFeeds {
     // Creates a comma separated list of feed attribute IDs for the matching function.
     List<Long> feedAttributesIds =
         feed.getAttributesList().stream()
-            .map(feedAttribute -> feedAttribute.getId().getValue())
+            .map(feedAttribute -> feedAttribute.getId())
             .collect(Collectors.toList());
     String feedAttributesString = StringUtils.join(feedAttributesIds, ",");
 
@@ -389,15 +387,14 @@ public class AddSitelinksUsingFeeds {
     CampaignFeed campaignFeed =
         CampaignFeed.newBuilder()
             .addPlaceholderTypes(PlaceholderType.SITELINK)
-            .setFeed(StringValue.of(feed.getResourceName()))
-            .setCampaign(StringValue.of(ResourceNames.campaign(customerId, campaignId)))
+            .setFeed(feed.getResourceName())
+            .setCampaign(ResourceNames.campaign(customerId, campaignId))
             .setMatchingFunction(
                 MatchingFunction.newBuilder()
                     .setFunctionString(
-                        StringValue.of(
-                            String.format(
-                                "AND(IN(FEED_ITEM_ID,{ %s }),EQUALS(CONTEXT.DEVICE,'Mobile'))",
-                                feedAttributesString)))
+                        String.format(
+                            "AND(IN(FEED_ITEM_ID,{ %s }),EQUALS(CONTEXT.DEVICE,'Mobile'))",
+                            feedAttributesString))
                     .build())
             .build();
 
@@ -436,8 +433,8 @@ public class AddSitelinksUsingFeeds {
         FeedItemTarget.newBuilder()
             // You must set targeting on a per-feed-item basis. This will restrict the
             // first feed item we added to only serve for the given ad group.
-            .setFeedItem(StringValue.of(feedItems.get(0)))
-            .setAdGroup(StringValue.of(ResourceNames.adGroup(customerId, adGroupId)))
+            .setFeedItem(feedItems.get(0))
+            .setAdGroup(ResourceNames.adGroup(customerId, adGroupId))
             .build();
 
     // Adds the operation.

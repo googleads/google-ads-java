@@ -18,44 +18,43 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.v5.common.ExpandedTextAdInfo;
-import com.google.ads.googleads.v5.enums.AdCustomizerPlaceholderFieldEnum.AdCustomizerPlaceholderField;
-import com.google.ads.googleads.v5.enums.FeedAttributeTypeEnum.FeedAttributeType;
-import com.google.ads.googleads.v5.enums.PlaceholderTypeEnum.PlaceholderType;
-import com.google.ads.googleads.v5.errors.GoogleAdsError;
-import com.google.ads.googleads.v5.errors.GoogleAdsException;
-import com.google.ads.googleads.v5.resources.Ad;
-import com.google.ads.googleads.v5.resources.AdGroupAd;
-import com.google.ads.googleads.v5.resources.AttributeFieldMapping;
-import com.google.ads.googleads.v5.resources.Feed;
-import com.google.ads.googleads.v5.resources.FeedAttribute;
-import com.google.ads.googleads.v5.resources.FeedItem;
-import com.google.ads.googleads.v5.resources.FeedItemAttributeValue;
-import com.google.ads.googleads.v5.resources.FeedItemTarget;
-import com.google.ads.googleads.v5.resources.FeedMapping;
-import com.google.ads.googleads.v5.services.AdGroupAdOperation;
-import com.google.ads.googleads.v5.services.AdGroupAdServiceClient;
-import com.google.ads.googleads.v5.services.FeedItemOperation;
-import com.google.ads.googleads.v5.services.FeedItemServiceClient;
-import com.google.ads.googleads.v5.services.FeedItemTargetOperation;
-import com.google.ads.googleads.v5.services.FeedItemTargetServiceClient;
-import com.google.ads.googleads.v5.services.FeedMappingOperation;
-import com.google.ads.googleads.v5.services.FeedMappingServiceClient;
-import com.google.ads.googleads.v5.services.FeedOperation;
-import com.google.ads.googleads.v5.services.FeedServiceClient;
-import com.google.ads.googleads.v5.services.GoogleAdsServiceClient;
-import com.google.ads.googleads.v5.services.GoogleAdsServiceClient.SearchPagedResponse;
-import com.google.ads.googleads.v5.services.MutateAdGroupAdResult;
-import com.google.ads.googleads.v5.services.MutateAdGroupAdsResponse;
-import com.google.ads.googleads.v5.services.MutateFeedItemResult;
-import com.google.ads.googleads.v5.services.MutateFeedItemTargetsResponse;
-import com.google.ads.googleads.v5.services.MutateFeedItemsResponse;
-import com.google.ads.googleads.v5.services.MutateFeedMappingsResponse;
-import com.google.ads.googleads.v5.services.MutateFeedsResponse;
-import com.google.ads.googleads.v5.services.SearchGoogleAdsRequest;
-import com.google.ads.googleads.v5.utils.ResourceNames;
+import com.google.ads.googleads.v6.common.ExpandedTextAdInfo;
+import com.google.ads.googleads.v6.enums.AdCustomizerPlaceholderFieldEnum.AdCustomizerPlaceholderField;
+import com.google.ads.googleads.v6.enums.FeedAttributeTypeEnum.FeedAttributeType;
+import com.google.ads.googleads.v6.enums.PlaceholderTypeEnum.PlaceholderType;
+import com.google.ads.googleads.v6.errors.GoogleAdsError;
+import com.google.ads.googleads.v6.errors.GoogleAdsException;
+import com.google.ads.googleads.v6.resources.Ad;
+import com.google.ads.googleads.v6.resources.AdGroupAd;
+import com.google.ads.googleads.v6.resources.AttributeFieldMapping;
+import com.google.ads.googleads.v6.resources.Feed;
+import com.google.ads.googleads.v6.resources.FeedAttribute;
+import com.google.ads.googleads.v6.resources.FeedItem;
+import com.google.ads.googleads.v6.resources.FeedItemAttributeValue;
+import com.google.ads.googleads.v6.resources.FeedItemTarget;
+import com.google.ads.googleads.v6.resources.FeedMapping;
+import com.google.ads.googleads.v6.services.AdGroupAdOperation;
+import com.google.ads.googleads.v6.services.AdGroupAdServiceClient;
+import com.google.ads.googleads.v6.services.FeedItemOperation;
+import com.google.ads.googleads.v6.services.FeedItemServiceClient;
+import com.google.ads.googleads.v6.services.FeedItemTargetOperation;
+import com.google.ads.googleads.v6.services.FeedItemTargetServiceClient;
+import com.google.ads.googleads.v6.services.FeedMappingOperation;
+import com.google.ads.googleads.v6.services.FeedMappingServiceClient;
+import com.google.ads.googleads.v6.services.FeedOperation;
+import com.google.ads.googleads.v6.services.FeedServiceClient;
+import com.google.ads.googleads.v6.services.GoogleAdsServiceClient;
+import com.google.ads.googleads.v6.services.GoogleAdsServiceClient.SearchPagedResponse;
+import com.google.ads.googleads.v6.services.MutateAdGroupAdResult;
+import com.google.ads.googleads.v6.services.MutateAdGroupAdsResponse;
+import com.google.ads.googleads.v6.services.MutateFeedItemResult;
+import com.google.ads.googleads.v6.services.MutateFeedItemTargetsResponse;
+import com.google.ads.googleads.v6.services.MutateFeedItemsResponse;
+import com.google.ads.googleads.v6.services.MutateFeedMappingsResponse;
+import com.google.ads.googleads.v6.services.MutateFeedsResponse;
+import com.google.ads.googleads.v6.services.SearchGoogleAdsRequest;
+import com.google.ads.googleads.v6.utils.ResourceNames;
 import com.google.common.collect.ImmutableList;
-import com.google.protobuf.StringValue;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -190,26 +189,17 @@ public class AddAdCustomizer {
     // Creates three feed attributes: a name, a price and a date. The attribute names are arbitrary
     // choices and will be used as placeholders in the ad text fields.
     FeedAttribute nameAttribute =
-        FeedAttribute.newBuilder()
-            .setName(StringValue.of("Name"))
-            .setType(FeedAttributeType.STRING)
-            .build();
+        FeedAttribute.newBuilder().setName("Name").setType(FeedAttributeType.STRING).build();
 
     FeedAttribute priceAttribute =
-        FeedAttribute.newBuilder()
-            .setName(StringValue.of("Price"))
-            .setType(FeedAttributeType.STRING)
-            .build();
+        FeedAttribute.newBuilder().setName("Price").setType(FeedAttributeType.STRING).build();
 
     FeedAttribute dateAttribute =
-        FeedAttribute.newBuilder()
-            .setName(StringValue.of("Date"))
-            .setType(FeedAttributeType.DATE_TIME)
-            .build();
+        FeedAttribute.newBuilder().setName("Date").setType(FeedAttributeType.DATE_TIME).build();
 
     Feed adCustomizerFeed =
         Feed.newBuilder()
-            .setName(StringValue.of(feedName))
+            .setName(feedName)
             .addAttributes(nameAttribute)
             .addAttributes(priceAttribute)
             .addAttributes(dateAttribute)
@@ -260,14 +250,12 @@ public class AddAdCustomizer {
       Feed feed = searchPagedResponse.iterateAll().iterator().next().getFeed();
 
       System.out.printf(
-          "Found the following attributes for feed with name '%s':%n", feed.getName().getValue());
+          "Found the following attributes for feed with name '%s':%n", feed.getName());
       for (FeedAttribute feedAttribute : feed.getAttributesList()) {
         System.out.printf(
             "\t'%s' with id %d and type '%s'%n",
-            feedAttribute.getName().getValue(),
-            feedAttribute.getId().getValue(),
-            feedAttribute.getType());
-        feedAttributes.put(feedAttribute.getName().getValue(), feedAttribute);
+            feedAttribute.getName(), feedAttribute.getId(), feedAttribute.getType());
+        feedAttributes.put(feedAttribute.getName(), feedAttribute);
       }
     }
     return feedAttributes;
@@ -289,7 +277,7 @@ public class AddAdCustomizer {
 
     // Map the feed attributes to ad customizer placeholder fields.
     // For a full list of ad customizer placeholder fields, see
-    // https://developers.google.com/google-ads/api/reference/rpc/google.ads.googleads.v3.enums#google.ads.googleads.v3.enums.AdCustomizerPlaceholderFieldEnum.AdCustomizerPlaceholderField
+    // https://developers.google.com/google-ads/api/reference/rpc/latest/AdCustomizerPlaceholderFieldEnum.AdCustomizerPlaceholderField
     AttributeFieldMapping nameFieldMapping =
         AttributeFieldMapping.newBuilder()
             .setFeedAttributeId(feedAttributes.get("Name").getId())
@@ -310,7 +298,7 @@ public class AddAdCustomizer {
 
     FeedMapping feedMapping =
         FeedMapping.newBuilder()
-            .setFeed(StringValue.of(feedResourceName))
+            .setFeed(feedResourceName)
             // Sets the feed to the AD_CUSTOMIZER placeholder type.
             .setPlaceholderType(PlaceholderType.AD_CUSTOMIZER)
             .addAttributeFieldMappings(nameFieldMapping)
@@ -404,24 +392,24 @@ public class AddAdCustomizer {
     FeedItemAttributeValue nameAttributeValue =
         FeedItemAttributeValue.newBuilder()
             .setFeedAttributeId(feedAttributes.get("Name").getId())
-            .setStringValue(StringValue.of(name))
+            .setStringValue(name)
             .build();
 
     FeedItemAttributeValue priceAttributeValue =
         FeedItemAttributeValue.newBuilder()
             .setFeedAttributeId(feedAttributes.get("Price").getId())
-            .setStringValue(StringValue.of(price))
+            .setStringValue(price)
             .build();
 
     FeedItemAttributeValue dateAttributeValue =
         FeedItemAttributeValue.newBuilder()
             .setFeedAttributeId(feedAttributes.get("Date").getId())
-            .setStringValue(StringValue.of(date))
+            .setStringValue(date)
             .build();
 
     FeedItem feedItem =
         FeedItem.newBuilder()
-            .setFeed(StringValue.of(feedResourceName))
+            .setFeed(feedResourceName)
             .addAttributeValues(nameAttributeValue)
             .addAttributeValues(priceAttributeValue)
             .addAttributeValues(dateAttributeValue)
@@ -454,8 +442,8 @@ public class AddAdCustomizer {
 
       FeedItemTarget feedItemTarget =
           FeedItemTarget.newBuilder()
-              .setAdGroup(StringValue.of(ResourceNames.adGroup(customerId, adGroupId)))
-              .setFeedItem(StringValue.of(feedItemResourceName))
+              .setAdGroup(ResourceNames.adGroup(customerId, adGroupId))
+              .setFeedItem(feedItemResourceName)
               .build();
 
       FeedItemTargetOperation feedItemTargetOperation =

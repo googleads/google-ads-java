@@ -17,17 +17,15 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.v5.enums.AccountBudgetProposalTypeEnum.AccountBudgetProposalType;
-import com.google.ads.googleads.v5.enums.TimeTypeEnum.TimeType;
-import com.google.ads.googleads.v5.errors.GoogleAdsError;
-import com.google.ads.googleads.v5.errors.GoogleAdsException;
-import com.google.ads.googleads.v5.resources.AccountBudgetProposal;
-import com.google.ads.googleads.v5.services.AccountBudgetProposalOperation;
-import com.google.ads.googleads.v5.services.AccountBudgetProposalServiceClient;
-import com.google.ads.googleads.v5.services.MutateAccountBudgetProposalResponse;
-import com.google.ads.googleads.v5.utils.ResourceNames;
-import com.google.protobuf.Int64Value;
-import com.google.protobuf.StringValue;
+import com.google.ads.googleads.v6.enums.AccountBudgetProposalTypeEnum.AccountBudgetProposalType;
+import com.google.ads.googleads.v6.enums.TimeTypeEnum.TimeType;
+import com.google.ads.googleads.v6.errors.GoogleAdsError;
+import com.google.ads.googleads.v6.errors.GoogleAdsException;
+import com.google.ads.googleads.v6.resources.AccountBudgetProposal;
+import com.google.ads.googleads.v6.services.AccountBudgetProposalOperation;
+import com.google.ads.googleads.v6.services.AccountBudgetProposalServiceClient;
+import com.google.ads.googleads.v6.services.MutateAccountBudgetProposalResponse;
+import com.google.ads.googleads.v6.utils.ResourceNames;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
@@ -92,9 +90,9 @@ public class AddAccountBudgetProposal {
     // approved will become an AccountBudget.
     AccountBudgetProposal proposal =
         AccountBudgetProposal.newBuilder()
-            .setBillingSetup(StringValue.of(ResourceNames.billingSetup(customerId, billingSetupId)))
+            .setBillingSetup(ResourceNames.billingSetup(customerId, billingSetupId))
             .setProposalType(AccountBudgetProposalType.CREATE)
-            .setProposedName(StringValue.of("Account Budget (example)"))
+            .setProposedName("Account Budget (example)")
 
             // Specifies the account budget starts immediately.
             .setProposedStartTimeType(TimeType.NOW)
@@ -102,23 +100,23 @@ public class AddAccountBudgetProposal {
             // AccountBudgetProposal
             // resource documentation for allowed formats.
             //
-            // .setProposedStartDateTime(StringValue.of("2020-01-02 03:04:05"))
+            // .setProposedStartDateTime("2020-01-02 03:04:05")
 
             // Specifies that the budget runs forever.
             .setProposedEndTimeType(TimeType.FOREVER)
             // Alternatively you can specify a specific end time. Allowed formats are as above.
-            // .setProposedEndDateTime(StringValue.of("2021-02-03 04:05:06"))
+            // .setProposedEndDateTime("2021-02-03 04:05:06")
 
             // Optional: sets notes for the budget. These are free text and do not effect budget
             // delivery.
-            // .setProposedNotes(StringValue.of("Received prepayment of $0.01"))
+            // .setProposedNotes("Received prepayment of $0.01")
 
             // Sets the spending limit to 0.01, measured in the Google Ads account currency.
-            .setProposedSpendingLimitMicros(Int64Value.of(10_000))
+            .setProposedSpendingLimitMicros(10_000)
 
             // Optional: sets PO number for record keeping. This value is at the user's
             // discretion, and has no effect on Google Billing & Payments.
-            // .setProposedPurchaseOrderNumber(StringValue.of("PO number 12345"))
+            // .setProposedPurchaseOrderNumber("PO number 12345")
             .build();
 
     // Creates an operation which will add the new AccountBudgetProposal.

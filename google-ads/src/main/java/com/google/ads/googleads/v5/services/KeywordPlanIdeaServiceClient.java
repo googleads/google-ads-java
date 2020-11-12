@@ -64,13 +64,13 @@ import javax.annotation.Generated;
  * methods:
  *
  * <ol>
- *   <li> A "flattened" method. With this type of method, the fields of the request type have been
+ *   <li>A "flattened" method. With this type of method, the fields of the request type have been
  *       converted into function parameters. It may be the case that not all fields are available as
  *       parameters, and not every API method will have a flattened method entry point.
- *   <li> A "request object" method. This type of method only takes one parameter, a request object,
+ *   <li>A "request object" method. This type of method only takes one parameter, a request object,
  *       which must be constructed before the call. Not every API method will have a request object
  *       method.
- *   <li> A "callable" method. This type of method takes no parameters and returns an immutable API
+ *   <li>A "callable" method. This type of method takes no parameters and returns an immutable API
  *       callable object, which can be used to initiate calls to the service.
  * </ol>
  *
@@ -277,8 +277,11 @@ public class KeywordPlanIdeaServiceClient implements BackgroundResource {
 
   public static class GenerateKeywordIdeasPagedResponse
       extends AbstractPagedListResponse<
-          GenerateKeywordIdeasRequest, GenerateKeywordIdeaResponse, GenerateKeywordIdeaResult,
-          GenerateKeywordIdeasPage, GenerateKeywordIdeasFixedSizeCollection> {
+          GenerateKeywordIdeasRequest,
+          GenerateKeywordIdeaResponse,
+          GenerateKeywordIdeaResult,
+          GenerateKeywordIdeasPage,
+          GenerateKeywordIdeasFixedSizeCollection> {
 
     public static ApiFuture<GenerateKeywordIdeasPagedResponse> createAsync(
         PageContext<
@@ -305,7 +308,9 @@ public class KeywordPlanIdeaServiceClient implements BackgroundResource {
 
   public static class GenerateKeywordIdeasPage
       extends AbstractPage<
-          GenerateKeywordIdeasRequest, GenerateKeywordIdeaResponse, GenerateKeywordIdeaResult,
+          GenerateKeywordIdeasRequest,
+          GenerateKeywordIdeaResponse,
+          GenerateKeywordIdeaResult,
           GenerateKeywordIdeasPage> {
 
     private GenerateKeywordIdeasPage(
@@ -341,8 +346,11 @@ public class KeywordPlanIdeaServiceClient implements BackgroundResource {
 
   public static class GenerateKeywordIdeasFixedSizeCollection
       extends AbstractFixedSizeCollection<
-          GenerateKeywordIdeasRequest, GenerateKeywordIdeaResponse, GenerateKeywordIdeaResult,
-          GenerateKeywordIdeasPage, GenerateKeywordIdeasFixedSizeCollection> {
+          GenerateKeywordIdeasRequest,
+          GenerateKeywordIdeaResponse,
+          GenerateKeywordIdeaResult,
+          GenerateKeywordIdeasPage,
+          GenerateKeywordIdeasFixedSizeCollection> {
 
     private GenerateKeywordIdeasFixedSizeCollection(
         List<GenerateKeywordIdeasPage> pages, int collectionSize) {
