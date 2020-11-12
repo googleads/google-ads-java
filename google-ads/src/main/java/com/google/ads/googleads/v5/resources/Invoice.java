@@ -3791,8 +3791,12 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.Int64Value subtotalAmountMicros_;
   /**
    * <pre>
-   * Output only. The pretax subtotal amount, in micros. This equals the sum of the
-   * AccountBudgetSummary subtotal amounts, plus the invoice level adjustments.
+   * Output only. The pretax subtotal amount, in micros. This equals the
+   * sum of the AccountBudgetSummary subtotal amounts,
+   * Invoice.adjustments_subtotal_amount_micros, and
+   * Invoice.regulatory_costs_subtotal_amount_micros.
+   * Starting with v6, the Invoice.regulatory_costs_subtotal_amount_micros is no
+   * longer included.
    * </pre>
    *
    * <code>.google.protobuf.Int64Value subtotal_amount_micros = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -3804,8 +3808,12 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. The pretax subtotal amount, in micros. This equals the sum of the
-   * AccountBudgetSummary subtotal amounts, plus the invoice level adjustments.
+   * Output only. The pretax subtotal amount, in micros. This equals the
+   * sum of the AccountBudgetSummary subtotal amounts,
+   * Invoice.adjustments_subtotal_amount_micros, and
+   * Invoice.regulatory_costs_subtotal_amount_micros.
+   * Starting with v6, the Invoice.regulatory_costs_subtotal_amount_micros is no
+   * longer included.
    * </pre>
    *
    * <code>.google.protobuf.Int64Value subtotal_amount_micros = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -3817,8 +3825,12 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. The pretax subtotal amount, in micros. This equals the sum of the
-   * AccountBudgetSummary subtotal amounts, plus the invoice level adjustments.
+   * Output only. The pretax subtotal amount, in micros. This equals the
+   * sum of the AccountBudgetSummary subtotal amounts,
+   * Invoice.adjustments_subtotal_amount_micros, and
+   * Invoice.regulatory_costs_subtotal_amount_micros.
+   * Starting with v6, the Invoice.regulatory_costs_subtotal_amount_micros is no
+   * longer included.
    * </pre>
    *
    * <code>.google.protobuf.Int64Value subtotal_amount_micros = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -3876,8 +3888,11 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.Int64Value totalAmountMicros_;
   /**
    * <pre>
-   * Output only. The total amount, in micros. This equals the sum of the invoice subtotal
-   * amount and the invoice tax amount.
+   * Output only. The total amount, in micros. This equals the sum of
+   * Invoice.subtotal_amount_micros and Invoice.tax_amount_micros.
+   * Starting with v6, Invoice.regulatory_costs_subtotal_amount_micros is
+   * also added as it is no longer already included in
+   * Invoice.tax_amount_micros.
    * </pre>
    *
    * <code>.google.protobuf.Int64Value total_amount_micros = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -3889,8 +3904,11 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. The total amount, in micros. This equals the sum of the invoice subtotal
-   * amount and the invoice tax amount.
+   * Output only. The total amount, in micros. This equals the sum of
+   * Invoice.subtotal_amount_micros and Invoice.tax_amount_micros.
+   * Starting with v6, Invoice.regulatory_costs_subtotal_amount_micros is
+   * also added as it is no longer already included in
+   * Invoice.tax_amount_micros.
    * </pre>
    *
    * <code>.google.protobuf.Int64Value total_amount_micros = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -3902,8 +3920,11 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. The total amount, in micros. This equals the sum of the invoice subtotal
-   * amount and the invoice tax amount.
+   * Output only. The total amount, in micros. This equals the sum of
+   * Invoice.subtotal_amount_micros and Invoice.tax_amount_micros.
+   * Starting with v6, Invoice.regulatory_costs_subtotal_amount_micros is
+   * also added as it is no longer already included in
+   * Invoice.tax_amount_micros.
    * </pre>
    *
    * <code>.google.protobuf.Int64Value total_amount_micros = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -6672,8 +6693,12 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> subtotalAmountMicrosBuilder_;
     /**
      * <pre>
-     * Output only. The pretax subtotal amount, in micros. This equals the sum of the
-     * AccountBudgetSummary subtotal amounts, plus the invoice level adjustments.
+     * Output only. The pretax subtotal amount, in micros. This equals the
+     * sum of the AccountBudgetSummary subtotal amounts,
+     * Invoice.adjustments_subtotal_amount_micros, and
+     * Invoice.regulatory_costs_subtotal_amount_micros.
+     * Starting with v6, the Invoice.regulatory_costs_subtotal_amount_micros is no
+     * longer included.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value subtotal_amount_micros = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -6684,8 +6709,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The pretax subtotal amount, in micros. This equals the sum of the
-     * AccountBudgetSummary subtotal amounts, plus the invoice level adjustments.
+     * Output only. The pretax subtotal amount, in micros. This equals the
+     * sum of the AccountBudgetSummary subtotal amounts,
+     * Invoice.adjustments_subtotal_amount_micros, and
+     * Invoice.regulatory_costs_subtotal_amount_micros.
+     * Starting with v6, the Invoice.regulatory_costs_subtotal_amount_micros is no
+     * longer included.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value subtotal_amount_micros = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -6700,8 +6729,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The pretax subtotal amount, in micros. This equals the sum of the
-     * AccountBudgetSummary subtotal amounts, plus the invoice level adjustments.
+     * Output only. The pretax subtotal amount, in micros. This equals the
+     * sum of the AccountBudgetSummary subtotal amounts,
+     * Invoice.adjustments_subtotal_amount_micros, and
+     * Invoice.regulatory_costs_subtotal_amount_micros.
+     * Starting with v6, the Invoice.regulatory_costs_subtotal_amount_micros is no
+     * longer included.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value subtotal_amount_micros = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -6721,8 +6754,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The pretax subtotal amount, in micros. This equals the sum of the
-     * AccountBudgetSummary subtotal amounts, plus the invoice level adjustments.
+     * Output only. The pretax subtotal amount, in micros. This equals the
+     * sum of the AccountBudgetSummary subtotal amounts,
+     * Invoice.adjustments_subtotal_amount_micros, and
+     * Invoice.regulatory_costs_subtotal_amount_micros.
+     * Starting with v6, the Invoice.regulatory_costs_subtotal_amount_micros is no
+     * longer included.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value subtotal_amount_micros = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -6740,8 +6777,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The pretax subtotal amount, in micros. This equals the sum of the
-     * AccountBudgetSummary subtotal amounts, plus the invoice level adjustments.
+     * Output only. The pretax subtotal amount, in micros. This equals the
+     * sum of the AccountBudgetSummary subtotal amounts,
+     * Invoice.adjustments_subtotal_amount_micros, and
+     * Invoice.regulatory_costs_subtotal_amount_micros.
+     * Starting with v6, the Invoice.regulatory_costs_subtotal_amount_micros is no
+     * longer included.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value subtotal_amount_micros = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -6763,8 +6804,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The pretax subtotal amount, in micros. This equals the sum of the
-     * AccountBudgetSummary subtotal amounts, plus the invoice level adjustments.
+     * Output only. The pretax subtotal amount, in micros. This equals the
+     * sum of the AccountBudgetSummary subtotal amounts,
+     * Invoice.adjustments_subtotal_amount_micros, and
+     * Invoice.regulatory_costs_subtotal_amount_micros.
+     * Starting with v6, the Invoice.regulatory_costs_subtotal_amount_micros is no
+     * longer included.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value subtotal_amount_micros = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -6782,8 +6827,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The pretax subtotal amount, in micros. This equals the sum of the
-     * AccountBudgetSummary subtotal amounts, plus the invoice level adjustments.
+     * Output only. The pretax subtotal amount, in micros. This equals the
+     * sum of the AccountBudgetSummary subtotal amounts,
+     * Invoice.adjustments_subtotal_amount_micros, and
+     * Invoice.regulatory_costs_subtotal_amount_micros.
+     * Starting with v6, the Invoice.regulatory_costs_subtotal_amount_micros is no
+     * longer included.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value subtotal_amount_micros = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -6795,8 +6844,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The pretax subtotal amount, in micros. This equals the sum of the
-     * AccountBudgetSummary subtotal amounts, plus the invoice level adjustments.
+     * Output only. The pretax subtotal amount, in micros. This equals the
+     * sum of the AccountBudgetSummary subtotal amounts,
+     * Invoice.adjustments_subtotal_amount_micros, and
+     * Invoice.regulatory_costs_subtotal_amount_micros.
+     * Starting with v6, the Invoice.regulatory_costs_subtotal_amount_micros is no
+     * longer included.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value subtotal_amount_micros = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -6811,8 +6864,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The pretax subtotal amount, in micros. This equals the sum of the
-     * AccountBudgetSummary subtotal amounts, plus the invoice level adjustments.
+     * Output only. The pretax subtotal amount, in micros. This equals the
+     * sum of the AccountBudgetSummary subtotal amounts,
+     * Invoice.adjustments_subtotal_amount_micros, and
+     * Invoice.regulatory_costs_subtotal_amount_micros.
+     * Starting with v6, the Invoice.regulatory_costs_subtotal_amount_micros is no
+     * longer included.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value subtotal_amount_micros = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -7009,8 +7066,11 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> totalAmountMicrosBuilder_;
     /**
      * <pre>
-     * Output only. The total amount, in micros. This equals the sum of the invoice subtotal
-     * amount and the invoice tax amount.
+     * Output only. The total amount, in micros. This equals the sum of
+     * Invoice.subtotal_amount_micros and Invoice.tax_amount_micros.
+     * Starting with v6, Invoice.regulatory_costs_subtotal_amount_micros is
+     * also added as it is no longer already included in
+     * Invoice.tax_amount_micros.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value total_amount_micros = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -7021,8 +7081,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The total amount, in micros. This equals the sum of the invoice subtotal
-     * amount and the invoice tax amount.
+     * Output only. The total amount, in micros. This equals the sum of
+     * Invoice.subtotal_amount_micros and Invoice.tax_amount_micros.
+     * Starting with v6, Invoice.regulatory_costs_subtotal_amount_micros is
+     * also added as it is no longer already included in
+     * Invoice.tax_amount_micros.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value total_amount_micros = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -7037,8 +7100,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The total amount, in micros. This equals the sum of the invoice subtotal
-     * amount and the invoice tax amount.
+     * Output only. The total amount, in micros. This equals the sum of
+     * Invoice.subtotal_amount_micros and Invoice.tax_amount_micros.
+     * Starting with v6, Invoice.regulatory_costs_subtotal_amount_micros is
+     * also added as it is no longer already included in
+     * Invoice.tax_amount_micros.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value total_amount_micros = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -7058,8 +7124,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The total amount, in micros. This equals the sum of the invoice subtotal
-     * amount and the invoice tax amount.
+     * Output only. The total amount, in micros. This equals the sum of
+     * Invoice.subtotal_amount_micros and Invoice.tax_amount_micros.
+     * Starting with v6, Invoice.regulatory_costs_subtotal_amount_micros is
+     * also added as it is no longer already included in
+     * Invoice.tax_amount_micros.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value total_amount_micros = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -7077,8 +7146,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The total amount, in micros. This equals the sum of the invoice subtotal
-     * amount and the invoice tax amount.
+     * Output only. The total amount, in micros. This equals the sum of
+     * Invoice.subtotal_amount_micros and Invoice.tax_amount_micros.
+     * Starting with v6, Invoice.regulatory_costs_subtotal_amount_micros is
+     * also added as it is no longer already included in
+     * Invoice.tax_amount_micros.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value total_amount_micros = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -7100,8 +7172,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The total amount, in micros. This equals the sum of the invoice subtotal
-     * amount and the invoice tax amount.
+     * Output only. The total amount, in micros. This equals the sum of
+     * Invoice.subtotal_amount_micros and Invoice.tax_amount_micros.
+     * Starting with v6, Invoice.regulatory_costs_subtotal_amount_micros is
+     * also added as it is no longer already included in
+     * Invoice.tax_amount_micros.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value total_amount_micros = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -7119,8 +7194,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The total amount, in micros. This equals the sum of the invoice subtotal
-     * amount and the invoice tax amount.
+     * Output only. The total amount, in micros. This equals the sum of
+     * Invoice.subtotal_amount_micros and Invoice.tax_amount_micros.
+     * Starting with v6, Invoice.regulatory_costs_subtotal_amount_micros is
+     * also added as it is no longer already included in
+     * Invoice.tax_amount_micros.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value total_amount_micros = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -7132,8 +7210,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The total amount, in micros. This equals the sum of the invoice subtotal
-     * amount and the invoice tax amount.
+     * Output only. The total amount, in micros. This equals the sum of
+     * Invoice.subtotal_amount_micros and Invoice.tax_amount_micros.
+     * Starting with v6, Invoice.regulatory_costs_subtotal_amount_micros is
+     * also added as it is no longer already included in
+     * Invoice.tax_amount_micros.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value total_amount_micros = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -7148,8 +7229,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The total amount, in micros. This equals the sum of the invoice subtotal
-     * amount and the invoice tax amount.
+     * Output only. The total amount, in micros. This equals the sum of
+     * Invoice.subtotal_amount_micros and Invoice.tax_amount_micros.
+     * Starting with v6, Invoice.regulatory_costs_subtotal_amount_micros is
+     * also added as it is no longer already included in
+     * Invoice.tax_amount_micros.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value total_amount_micros = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>

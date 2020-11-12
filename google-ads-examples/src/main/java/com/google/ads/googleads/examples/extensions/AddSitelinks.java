@@ -18,29 +18,28 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.v5.common.AdScheduleInfo;
-import com.google.ads.googleads.v5.common.KeywordInfo;
-import com.google.ads.googleads.v5.common.SitelinkFeedItem;
-import com.google.ads.googleads.v5.enums.DayOfWeekEnum.DayOfWeek;
-import com.google.ads.googleads.v5.enums.ExtensionTypeEnum.ExtensionType;
-import com.google.ads.googleads.v5.enums.FeedItemTargetDeviceEnum.FeedItemTargetDevice;
-import com.google.ads.googleads.v5.enums.KeywordMatchTypeEnum.KeywordMatchType;
-import com.google.ads.googleads.v5.enums.MinuteOfHourEnum.MinuteOfHour;
-import com.google.ads.googleads.v5.errors.GoogleAdsError;
-import com.google.ads.googleads.v5.errors.GoogleAdsException;
-import com.google.ads.googleads.v5.resources.CampaignExtensionSetting;
-import com.google.ads.googleads.v5.resources.ExtensionFeedItem;
-import com.google.ads.googleads.v5.services.CampaignExtensionSettingOperation;
-import com.google.ads.googleads.v5.services.CampaignExtensionSettingServiceClient;
-import com.google.ads.googleads.v5.services.ExtensionFeedItemOperation;
-import com.google.ads.googleads.v5.services.ExtensionFeedItemServiceClient;
-import com.google.ads.googleads.v5.services.MutateCampaignExtensionSettingResult;
-import com.google.ads.googleads.v5.services.MutateCampaignExtensionSettingsResponse;
-import com.google.ads.googleads.v5.services.MutateExtensionFeedItemResult;
-import com.google.ads.googleads.v5.services.MutateExtensionFeedItemsResponse;
-import com.google.ads.googleads.v5.utils.ResourceNames;
+import com.google.ads.googleads.v6.common.AdScheduleInfo;
+import com.google.ads.googleads.v6.common.KeywordInfo;
+import com.google.ads.googleads.v6.common.SitelinkFeedItem;
+import com.google.ads.googleads.v6.enums.DayOfWeekEnum.DayOfWeek;
+import com.google.ads.googleads.v6.enums.ExtensionTypeEnum.ExtensionType;
+import com.google.ads.googleads.v6.enums.FeedItemTargetDeviceEnum.FeedItemTargetDevice;
+import com.google.ads.googleads.v6.enums.KeywordMatchTypeEnum.KeywordMatchType;
+import com.google.ads.googleads.v6.enums.MinuteOfHourEnum.MinuteOfHour;
+import com.google.ads.googleads.v6.errors.GoogleAdsError;
+import com.google.ads.googleads.v6.errors.GoogleAdsException;
+import com.google.ads.googleads.v6.resources.CampaignExtensionSetting;
+import com.google.ads.googleads.v6.resources.ExtensionFeedItem;
+import com.google.ads.googleads.v6.services.CampaignExtensionSettingOperation;
+import com.google.ads.googleads.v6.services.CampaignExtensionSettingServiceClient;
+import com.google.ads.googleads.v6.services.ExtensionFeedItemOperation;
+import com.google.ads.googleads.v6.services.ExtensionFeedItemServiceClient;
+import com.google.ads.googleads.v6.services.MutateCampaignExtensionSettingResult;
+import com.google.ads.googleads.v6.services.MutateCampaignExtensionSettingsResponse;
+import com.google.ads.googleads.v6.services.MutateExtensionFeedItemResult;
+import com.google.ads.googleads.v6.services.MutateExtensionFeedItemsResponse;
+import com.google.ads.googleads.v6.utils.ResourceNames;
 import com.google.common.collect.ImmutableList;
-import com.google.protobuf.StringValue;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -110,13 +109,13 @@ public class AddSitelinks {
   private void runExample(GoogleAdsClient googleAdsClient, long customerId, long campaignId) {
     String campaignResourceName = ResourceNames.campaign(customerId, campaignId);
 
-    List<StringValue> extensionFeedItems =
+    List<String> extensionFeedItems =
         createExtensionFeedItems(googleAdsClient, customerId, campaignResourceName);
 
     // Creates a CampaignExtensionSetting.
     CampaignExtensionSetting campaignExtensionSetting =
         CampaignExtensionSetting.newBuilder()
-            .setCampaign(StringValue.of(campaignResourceName))
+            .setCampaign(campaignResourceName)
             .setExtensionType(ExtensionType.SITELINK)
             .addAllExtensionFeedItems(extensionFeedItems)
             .build();
@@ -147,7 +146,7 @@ public class AddSitelinks {
    * @param customerId the client customer ID.
    * @param campaignResourceName the resource name of the campaign to target.
    */
-  private static List<StringValue> createExtensionFeedItems(
+  private static List<String> createExtensionFeedItems(
       GoogleAdsClient googleAdsClient, long customerId, String campaignResourceName) {
     SitelinkFeedItem sitelinkFeedItem1 =
         createSitelinkFeedItem("Store Hours", "http://www.example.com/storehours");
@@ -157,7 +156,7 @@ public class AddSitelinks {
         ExtensionFeedItem.newBuilder()
             .setExtensionType(ExtensionType.SITELINK)
             .setSitelinkFeedItem(sitelinkFeedItem1)
-            .setTargetedCampaign(StringValue.of(campaignResourceName))
+            .setTargetedCampaign(campaignResourceName)
             .build();
 
     List<ExtensionFeedItemOperation> operations = new ArrayList<>();
@@ -188,10 +187,10 @@ public class AddSitelinks {
         ExtensionFeedItem.newBuilder()
             .setExtensionType(ExtensionType.SITELINK)
             .setSitelinkFeedItem(sitelinkFeedItem2)
-            .setTargetedCampaign(StringValue.of(campaignResourceName))
-            .setStartDateTime(StringValue.of(startTimeString))
-            .setEndDateTime(StringValue.of(endTimeString))
-            .setTargetedGeoTargetConstant(StringValue.of(unitedStates))
+            .setTargetedCampaign(campaignResourceName)
+            .setStartDateTime(startTimeString)
+            .setEndDateTime(endTimeString)
+            .setTargetedGeoTargetConstant(unitedStates)
             .build();
 
     operations.add(ExtensionFeedItemOperation.newBuilder().setCreate(extensionFeedItem2).build());
@@ -203,7 +202,7 @@ public class AddSitelinks {
         ExtensionFeedItem.newBuilder()
             .setExtensionType(ExtensionType.SITELINK)
             .setSitelinkFeedItem(sitelinkFeedItem3)
-            .setTargetedCampaign(StringValue.of(campaignResourceName))
+            .setTargetedCampaign(campaignResourceName)
             .setDevice(FeedItemTargetDevice.MOBILE)
             .setTargetedKeyword(
                 KeywordInfo.newBuilder()
@@ -221,7 +220,7 @@ public class AddSitelinks {
         ExtensionFeedItem.newBuilder()
             .setExtensionType(ExtensionType.SITELINK)
             .setSitelinkFeedItem(sitelinkFeedItem4)
-            .setTargetedCampaign(StringValue.of(campaignResourceName))
+            .setTargetedCampaign(campaignResourceName)
             .addAdSchedules(
                 createAdScheduleInfo(
                     DayOfWeek.MONDAY, 18, MinuteOfHour.ZERO, 21, MinuteOfHour.ZERO))
@@ -249,11 +248,11 @@ public class AddSitelinks {
           extensionFeedItemServiceClient.mutateExtensionFeedItems(
               Long.toString(customerId), operations);
       System.out.printf("Added %d ExtensionFeedItems:%n", response.getResultsCount());
-      List<StringValue> resourceNames = new ArrayList<>();
+      List<String> resourceNames = new ArrayList<>();
       for (MutateExtensionFeedItemResult result : response.getResultsList()) {
         System.out.printf(
             "Created ExtensionFeedItems with resource name '%s'.%n", result.getResourceName());
-        resourceNames.add(StringValue.of(result.getResourceName()));
+        resourceNames.add(result.getResourceName());
       }
       return resourceNames;
     }
@@ -267,8 +266,8 @@ public class AddSitelinks {
    */
   private static SitelinkFeedItem createSitelinkFeedItem(String sitelinkText, String sitelinkUrl) {
     return SitelinkFeedItem.newBuilder()
-        .setLinkText(StringValue.of(sitelinkText))
-        .addFinalUrls(StringValue.of(sitelinkUrl))
+        .setLinkText(sitelinkText)
+        .addFinalUrls(sitelinkUrl)
         .build();
   }
 

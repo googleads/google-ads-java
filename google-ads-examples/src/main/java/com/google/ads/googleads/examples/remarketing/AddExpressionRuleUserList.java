@@ -18,24 +18,22 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.v5.common.ExpressionRuleUserListInfo;
-import com.google.ads.googleads.v5.common.RuleBasedUserListInfo;
-import com.google.ads.googleads.v5.common.UserListRuleInfo;
-import com.google.ads.googleads.v5.common.UserListRuleItemGroupInfo;
-import com.google.ads.googleads.v5.common.UserListRuleItemInfo;
-import com.google.ads.googleads.v5.common.UserListStringRuleItemInfo;
-import com.google.ads.googleads.v5.enums.UserListMembershipStatusEnum.UserListMembershipStatus;
-import com.google.ads.googleads.v5.enums.UserListPrepopulationStatusEnum.UserListPrepopulationStatus;
-import com.google.ads.googleads.v5.enums.UserListStringRuleItemOperatorEnum.UserListStringRuleItemOperator;
-import com.google.ads.googleads.v5.errors.GoogleAdsError;
-import com.google.ads.googleads.v5.errors.GoogleAdsException;
-import com.google.ads.googleads.v5.resources.UserList;
-import com.google.ads.googleads.v5.services.MutateUserListsResponse;
-import com.google.ads.googleads.v5.services.UserListOperation;
-import com.google.ads.googleads.v5.services.UserListServiceClient;
+import com.google.ads.googleads.v6.common.ExpressionRuleUserListInfo;
+import com.google.ads.googleads.v6.common.RuleBasedUserListInfo;
+import com.google.ads.googleads.v6.common.UserListRuleInfo;
+import com.google.ads.googleads.v6.common.UserListRuleItemGroupInfo;
+import com.google.ads.googleads.v6.common.UserListRuleItemInfo;
+import com.google.ads.googleads.v6.common.UserListStringRuleItemInfo;
+import com.google.ads.googleads.v6.enums.UserListMembershipStatusEnum.UserListMembershipStatus;
+import com.google.ads.googleads.v6.enums.UserListPrepopulationStatusEnum.UserListPrepopulationStatus;
+import com.google.ads.googleads.v6.enums.UserListStringRuleItemOperatorEnum.UserListStringRuleItemOperator;
+import com.google.ads.googleads.v6.errors.GoogleAdsError;
+import com.google.ads.googleads.v6.errors.GoogleAdsException;
+import com.google.ads.googleads.v6.resources.UserList;
+import com.google.ads.googleads.v6.services.MutateUserListsResponse;
+import com.google.ads.googleads.v6.services.UserListOperation;
+import com.google.ads.googleads.v6.services.UserListServiceClient;
 import com.google.common.collect.ImmutableList;
-import com.google.protobuf.Int64Value;
-import com.google.protobuf.StringValue;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
@@ -104,11 +102,11 @@ public class AddExpressionRuleUserList {
     UserListRuleItemInfo rule1 =
         UserListRuleItemInfo.newBuilder()
             // Uses a built-in parameter to create a domain URL rule.
-            .setName(StringValue.of(urlString))
+            .setName(urlString)
             .setStringRuleItem(
                 UserListStringRuleItemInfo.newBuilder()
                     .setOperator(UserListStringRuleItemOperator.CONTAINS)
-                    .setValue(StringValue.of("example.com/section1"))
+                    .setValue("example.com/section1")
                     .build())
             .build();
 
@@ -116,11 +114,11 @@ public class AddExpressionRuleUserList {
     UserListRuleItemInfo rule2 =
         UserListRuleItemInfo.newBuilder()
             // Uses a built-in parameter to create a domain URL rule.
-            .setName(StringValue.of(urlString))
+            .setName(urlString)
             .setStringRuleItem(
                 UserListStringRuleItemInfo.newBuilder()
                     .setOperator(UserListStringRuleItemOperator.CONTAINS)
-                    .setValue(StringValue.of("example.com/section2"))
+                    .setValue("example.com/section2")
                     .build())
             .build();
 
@@ -155,13 +153,11 @@ public class AddExpressionRuleUserList {
     UserList userList =
         UserList.newBuilder()
             .setName(
-                StringValue.of(
-                    "All visitors to example.com/section1 AND example.com/section2 #"
-                        + System.currentTimeMillis()))
-            .setDescription(
-                StringValue.of("Visitors of both example.com/section1 AND example.com/section2"))
+                "All visitors to example.com/section1 AND example.com/section2 #"
+                    + System.currentTimeMillis())
+            .setDescription("Visitors of both example.com/section1 AND example.com/section2")
             .setMembershipStatus(UserListMembershipStatus.OPEN)
-            .setMembershipLifeSpan(Int64Value.of(365))
+            .setMembershipLifeSpan(365)
             .setRuleBasedUserList(ruleBasedUserListInfo)
             .build();
 

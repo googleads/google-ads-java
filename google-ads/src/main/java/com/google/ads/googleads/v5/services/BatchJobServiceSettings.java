@@ -218,7 +218,8 @@ public class BatchJobServiceSettings extends ClientSettings<BatchJobServiceSetti
 
     /** Returns the builder for the settings used for calls to listBatchJobResults. */
     public PagedCallSettings.Builder<
-            ListBatchJobResultsRequest, ListBatchJobResultsResponse,
+            ListBatchJobResultsRequest,
+            ListBatchJobResultsResponse,
             ListBatchJobResultsPagedResponse>
         listBatchJobResultsSettings() {
       return getStubSettingsBuilder().listBatchJobResultsSettings();

@@ -11,7 +11,7 @@ public interface CampaignBudgetOrBuilder extends
    * <pre>
    * Immutable. The resource name of the campaign budget.
    * Campaign budget resource names have the form:
-   * `customers/{customer_id}/campaignBudgets/{budget_id}`
+   * `customers/{customer_id}/campaignBudgets/{campaign_budget_id}`
    * </pre>
    *
    * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
@@ -22,7 +22,7 @@ public interface CampaignBudgetOrBuilder extends
    * <pre>
    * Immutable. The resource name of the campaign budget.
    * Campaign budget resource names have the form:
-   * `customers/{customer_id}/campaignBudgets/{budget_id}`
+   * `customers/{customer_id}/campaignBudgets/{campaign_budget_id}`
    * </pre>
    *
    * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>

@@ -18,30 +18,28 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.v5.common.AdScheduleInfo;
-import com.google.ads.googleads.v5.common.Money;
-import com.google.ads.googleads.v5.common.PriceFeedItem;
-import com.google.ads.googleads.v5.common.PriceOffer;
-import com.google.ads.googleads.v5.enums.DayOfWeekEnum.DayOfWeek;
-import com.google.ads.googleads.v5.enums.ExtensionTypeEnum.ExtensionType;
-import com.google.ads.googleads.v5.enums.MinuteOfHourEnum.MinuteOfHour;
-import com.google.ads.googleads.v5.enums.PriceExtensionPriceQualifierEnum.PriceExtensionPriceQualifier;
-import com.google.ads.googleads.v5.enums.PriceExtensionPriceUnitEnum.PriceExtensionPriceUnit;
-import com.google.ads.googleads.v5.enums.PriceExtensionTypeEnum.PriceExtensionType;
-import com.google.ads.googleads.v5.errors.GoogleAdsError;
-import com.google.ads.googleads.v5.errors.GoogleAdsException;
-import com.google.ads.googleads.v5.resources.CustomerExtensionSetting;
-import com.google.ads.googleads.v5.resources.ExtensionFeedItem;
-import com.google.ads.googleads.v5.services.CustomerExtensionSettingOperation;
-import com.google.ads.googleads.v5.services.CustomerExtensionSettingServiceClient;
-import com.google.ads.googleads.v5.services.ExtensionFeedItemOperation;
-import com.google.ads.googleads.v5.services.ExtensionFeedItemServiceClient;
-import com.google.ads.googleads.v5.services.MutateCustomerExtensionSettingsResponse;
-import com.google.ads.googleads.v5.services.MutateExtensionFeedItemsResponse;
-import com.google.ads.googleads.v5.utils.ResourceNames;
+import com.google.ads.googleads.v6.common.AdScheduleInfo;
+import com.google.ads.googleads.v6.common.Money;
+import com.google.ads.googleads.v6.common.PriceFeedItem;
+import com.google.ads.googleads.v6.common.PriceOffer;
+import com.google.ads.googleads.v6.enums.DayOfWeekEnum.DayOfWeek;
+import com.google.ads.googleads.v6.enums.ExtensionTypeEnum.ExtensionType;
+import com.google.ads.googleads.v6.enums.MinuteOfHourEnum.MinuteOfHour;
+import com.google.ads.googleads.v6.enums.PriceExtensionPriceQualifierEnum.PriceExtensionPriceQualifier;
+import com.google.ads.googleads.v6.enums.PriceExtensionPriceUnitEnum.PriceExtensionPriceUnit;
+import com.google.ads.googleads.v6.enums.PriceExtensionTypeEnum.PriceExtensionType;
+import com.google.ads.googleads.v6.errors.GoogleAdsError;
+import com.google.ads.googleads.v6.errors.GoogleAdsException;
+import com.google.ads.googleads.v6.resources.CustomerExtensionSetting;
+import com.google.ads.googleads.v6.resources.ExtensionFeedItem;
+import com.google.ads.googleads.v6.services.CustomerExtensionSettingOperation;
+import com.google.ads.googleads.v6.services.CustomerExtensionSettingServiceClient;
+import com.google.ads.googleads.v6.services.ExtensionFeedItemOperation;
+import com.google.ads.googleads.v6.services.ExtensionFeedItemServiceClient;
+import com.google.ads.googleads.v6.services.MutateCustomerExtensionSettingsResponse;
+import com.google.ads.googleads.v6.services.MutateExtensionFeedItemsResponse;
+import com.google.ads.googleads.v6.utils.ResourceNames;
 import com.google.common.collect.ImmutableList;
-import com.google.protobuf.Int64Value;
-import com.google.protobuf.StringValue;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
@@ -115,7 +113,7 @@ public class AddPrices {
     CustomerExtensionSetting customerExtensionSetting =
         CustomerExtensionSetting.newBuilder()
             .setExtensionType(ExtensionType.PRICE)
-            .addExtensionFeedItems(StringValue.of(extensionFeedItemResourceName))
+            .addExtensionFeedItems(extensionFeedItemResourceName)
             .build();
 
     // Creates an operation to add the extension setting.
@@ -149,8 +147,8 @@ public class AddPrices {
             .setType(PriceExtensionType.SERVICES)
             // Optional: sets a qualifier text to show with the price extension.
             .setPriceQualifier(PriceExtensionPriceQualifier.FROM)
-            .setTrackingUrlTemplate(StringValue.of("http://tracker.example.com/?u={lpurl}"))
-            .setLanguageCode(StringValue.of("en"))
+            .setTrackingUrlTemplate("http://tracker.example.com/?u={lpurl}")
+            .setLanguageCode("en")
             // To create a price extension, at least three price offerings are needed.
             .addPriceOfferings(
                 createPriceOffer(
@@ -186,7 +184,7 @@ public class AddPrices {
         ExtensionFeedItem.newBuilder()
             .setExtensionType(ExtensionType.PRICE)
             .setPriceFeedItem(priceFeedItem)
-            .setTargetedCampaign(StringValue.of(ResourceNames.campaign(customerId, campaignId)))
+            .setTargetedCampaign(ResourceNames.campaign(customerId, campaignId))
             .addAdSchedules(
                 createAdSchedule(DayOfWeek.SUNDAY, 10, MinuteOfHour.ZERO, 18, MinuteOfHour.ZERO))
             .addAdSchedules(
@@ -256,18 +254,16 @@ public class AddPrices {
       String finalMobileUrl) {
     PriceOffer.Builder priceBuilder =
         PriceOffer.newBuilder()
-            .setHeader(StringValue.of(header))
-            .setDescription(StringValue.of(description))
-            .addFinalUrls(StringValue.of(finalUrl))
+            .setHeader(header)
+            .setDescription(description)
+            .addFinalUrls(finalUrl)
             .setPrice(
-                Money.newBuilder()
-                    .setAmountMicros(Int64Value.of(priceInMicros))
-                    .setCurrencyCode(StringValue.of(currencyCode)))
+                Money.newBuilder().setAmountMicros(priceInMicros).setCurrencyCode(currencyCode))
             .setUnit(unit);
 
     // Optional: Sets the final mobile URLs.
     if (finalMobileUrl != null) {
-      priceBuilder.addFinalMobileUrls(StringValue.of(finalMobileUrl));
+      priceBuilder.addFinalMobileUrls(finalMobileUrl);
     }
     return priceBuilder.build();
   }

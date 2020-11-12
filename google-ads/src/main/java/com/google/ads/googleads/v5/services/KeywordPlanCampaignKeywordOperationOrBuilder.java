@@ -104,7 +104,7 @@ public interface KeywordPlanCampaignKeywordOperationOrBuilder extends
    * `customers/{customer_id}/keywordPlanCampaignKeywords/{kp_campaign_keyword_id}`
    * </pre>
    *
-   * <code>string remove = 3;</code>
+   * <code>string remove = 3 [(.google.api.resource_reference) = { ... }</code>
    * @return The remove.
    */
   java.lang.String getRemove();
@@ -115,7 +115,7 @@ public interface KeywordPlanCampaignKeywordOperationOrBuilder extends
    * `customers/{customer_id}/keywordPlanCampaignKeywords/{kp_campaign_keyword_id}`
    * </pre>
    *
-   * <code>string remove = 3;</code>
+   * <code>string remove = 3 [(.google.api.resource_reference) = { ... }</code>
    * @return The bytes for remove.
    */
   com.google.protobuf.ByteString

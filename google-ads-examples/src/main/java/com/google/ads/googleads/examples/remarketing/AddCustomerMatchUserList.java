@@ -18,35 +18,32 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.v5.common.CrmBasedUserListInfo;
-import com.google.ads.googleads.v5.common.CustomerMatchUserListMetadata;
-import com.google.ads.googleads.v5.common.OfflineUserAddressInfo;
-import com.google.ads.googleads.v5.common.UserData;
-import com.google.ads.googleads.v5.common.UserIdentifier;
-import com.google.ads.googleads.v5.enums.CustomerMatchUploadKeyTypeEnum.CustomerMatchUploadKeyType;
-import com.google.ads.googleads.v5.enums.OfflineUserDataJobStatusEnum.OfflineUserDataJobStatus;
-import com.google.ads.googleads.v5.enums.OfflineUserDataJobTypeEnum.OfflineUserDataJobType;
-import com.google.ads.googleads.v5.errors.GoogleAdsError;
-import com.google.ads.googleads.v5.errors.GoogleAdsException;
-import com.google.ads.googleads.v5.resources.OfflineUserDataJob;
-import com.google.ads.googleads.v5.resources.UserList;
-import com.google.ads.googleads.v5.services.AddOfflineUserDataJobOperationsRequest;
-import com.google.ads.googleads.v5.services.AddOfflineUserDataJobOperationsResponse;
-import com.google.ads.googleads.v5.services.CreateOfflineUserDataJobResponse;
-import com.google.ads.googleads.v5.services.GoogleAdsRow;
-import com.google.ads.googleads.v5.services.GoogleAdsServiceClient;
-import com.google.ads.googleads.v5.services.MutateUserListsResponse;
-import com.google.ads.googleads.v5.services.OfflineUserDataJobOperation;
-import com.google.ads.googleads.v5.services.OfflineUserDataJobServiceClient;
-import com.google.ads.googleads.v5.services.SearchGoogleAdsStreamRequest;
-import com.google.ads.googleads.v5.services.SearchGoogleAdsStreamResponse;
-import com.google.ads.googleads.v5.services.UserListOperation;
-import com.google.ads.googleads.v5.services.UserListServiceClient;
+import com.google.ads.googleads.v6.common.CrmBasedUserListInfo;
+import com.google.ads.googleads.v6.common.CustomerMatchUserListMetadata;
+import com.google.ads.googleads.v6.common.OfflineUserAddressInfo;
+import com.google.ads.googleads.v6.common.UserData;
+import com.google.ads.googleads.v6.common.UserIdentifier;
+import com.google.ads.googleads.v6.enums.CustomerMatchUploadKeyTypeEnum.CustomerMatchUploadKeyType;
+import com.google.ads.googleads.v6.enums.OfflineUserDataJobStatusEnum.OfflineUserDataJobStatus;
+import com.google.ads.googleads.v6.enums.OfflineUserDataJobTypeEnum.OfflineUserDataJobType;
+import com.google.ads.googleads.v6.errors.GoogleAdsError;
+import com.google.ads.googleads.v6.errors.GoogleAdsException;
+import com.google.ads.googleads.v6.resources.OfflineUserDataJob;
+import com.google.ads.googleads.v6.resources.UserList;
+import com.google.ads.googleads.v6.services.AddOfflineUserDataJobOperationsRequest;
+import com.google.ads.googleads.v6.services.AddOfflineUserDataJobOperationsResponse;
+import com.google.ads.googleads.v6.services.CreateOfflineUserDataJobResponse;
+import com.google.ads.googleads.v6.services.GoogleAdsRow;
+import com.google.ads.googleads.v6.services.GoogleAdsServiceClient;
+import com.google.ads.googleads.v6.services.MutateUserListsResponse;
+import com.google.ads.googleads.v6.services.OfflineUserDataJobOperation;
+import com.google.ads.googleads.v6.services.OfflineUserDataJobServiceClient;
+import com.google.ads.googleads.v6.services.SearchGoogleAdsStreamRequest;
+import com.google.ads.googleads.v6.services.SearchGoogleAdsStreamResponse;
+import com.google.ads.googleads.v6.services.UserListOperation;
+import com.google.ads.googleads.v6.services.UserListServiceClient;
 import com.google.api.gax.rpc.ServerStream;
 import com.google.common.collect.ImmutableList;
-import com.google.protobuf.BoolValue;
-import com.google.protobuf.Int64Value;
-import com.google.protobuf.StringValue;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
@@ -78,8 +75,7 @@ public class AddCustomerMatchUserList {
     private Long customerId;
   }
 
-  public static void main(String[] args)
-      throws UnsupportedEncodingException {
+  public static void main(String[] args) throws UnsupportedEncodingException {
     AddCustomerMatchUserListParams params = new AddCustomerMatchUserListParams();
     if (!params.parseArguments(args)) {
 
@@ -145,13 +141,12 @@ public class AddCustomerMatchUserList {
     // Creates the new user list.
     UserList userList =
         UserList.newBuilder()
-            .setName(StringValue.of("Customer Match list #" + System.currentTimeMillis()))
-            .setDescription(
-                StringValue.of("A list of customers that originated from email addresses"))
+            .setName("Customer Match list #" + System.currentTimeMillis())
+            .setDescription("A list of customers that originated from email addresses")
             // Customer Match user lists can use a membership life span of 10,000 to indicate
             // unlimited; otherwise normal values apply.
             // Sets the membership life span to 30 days.
-            .setMembershipLifeSpan(Int64Value.of(30))
+            .setMembershipLifeSpan(30)
             // Sets the upload key type to indicate the type of identifier that will be used to
             // add users to the list. This field is immutable and required for an ADD operation.
             .setCrmBasedUserList(
@@ -195,8 +190,7 @@ public class AddCustomerMatchUserList {
           OfflineUserDataJob.newBuilder()
               .setType(OfflineUserDataJobType.CUSTOMER_MATCH_USER_LIST)
               .setCustomerMatchUserListMetadata(
-                  CustomerMatchUserListMetadata.newBuilder()
-                      .setUserList(StringValue.of(userListResourceName)))
+                  CustomerMatchUserListMetadata.newBuilder().setUserList(userListResourceName))
               .build();
 
       // Issues a request to create the offline user data job.
@@ -214,7 +208,7 @@ public class AddCustomerMatchUserList {
           offlineUserDataJobServiceClient.addOfflineUserDataJobOperations(
               AddOfflineUserDataJobOperationsRequest.newBuilder()
                   .setResourceName(offlineUserDataJobResourceName)
-                  .setEnablePartialFailure(BoolValue.of(true))
+                  .setEnablePartialFailure(true)
                   .addAllOperations(userDataJobOperations)
                   .build());
 
@@ -263,8 +257,7 @@ public class AddCustomerMatchUserList {
         UserData.newBuilder()
             .addUserIdentifiers(
                 UserIdentifier.newBuilder()
-                    .setHashedEmail(
-                        StringValue.of(normalizeAndHash(sha256Digest, "customer@example.com"))))
+                    .setHashedEmail(normalizeAndHash(sha256Digest, "customer@example.com")))
             .build();
 
     // Creates the second user data based on a physical address.
@@ -274,12 +267,10 @@ public class AddCustomerMatchUserList {
                 UserIdentifier.newBuilder()
                     .setAddressInfo(
                         OfflineUserAddressInfo.newBuilder()
-                            .setHashedFirstName(
-                                StringValue.of(normalizeAndHash(sha256Digest, "John")))
-                            .setHashedLastName(
-                                StringValue.of(normalizeAndHash(sha256Digest, "Doe")))
-                            .setCountryCode(StringValue.of("US"))
-                            .setPostalCode(StringValue.of("10011"))))
+                            .setHashedFirstName(normalizeAndHash(sha256Digest, "John"))
+                            .setHashedLastName(normalizeAndHash(sha256Digest, "Doe"))
+                            .setCountryCode("US")
+                            .setPostalCode("10011")))
             .build();
 
     // Creates the operations to add the two users.
@@ -350,9 +341,7 @@ public class AddCustomerMatchUserList {
       OfflineUserDataJob offlineUserDataJob = googleAdsRow.getOfflineUserDataJob();
       System.out.printf(
           "Offline user data job ID %d with type '%s' has status: %s%n",
-          offlineUserDataJob.getId().getValue(),
-          offlineUserDataJob.getType(),
-          offlineUserDataJob.getStatus());
+          offlineUserDataJob.getId(), offlineUserDataJob.getType(), offlineUserDataJob.getStatus());
       OfflineUserDataJobStatus jobStatus = offlineUserDataJob.getStatus();
       if (OfflineUserDataJobStatus.SUCCESS == jobStatus) {
         // Prints information about the user list.
@@ -405,9 +394,9 @@ public class AddCustomerMatchUserList {
       UserList userList = googleAdsRow.getUserList();
       System.out.printf(
           "User list '%s' has an estimated %d users for Display and %d users for Search.%n",
-          userList.getResourceName(),
-          userList.getSizeForDisplay().getValue(),
-          userList.getSizeForSearch().getValue());
+          userList.getResourceName(), userList.getSizeForDisplay(), userList.getSizeForSearch());
+      System.out.println(
+          "Reminder: It may take several hours for the user list to be populated with the users.");
     }
   }
 }

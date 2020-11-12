@@ -1,0 +1,8 @@
+results {
+  ad_group {
+    resource_name: "foo"
+  }
+}
+field_mask {
+  paths: "ad_group.name"
+}

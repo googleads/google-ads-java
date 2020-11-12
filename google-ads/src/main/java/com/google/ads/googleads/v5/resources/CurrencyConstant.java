@@ -125,7 +125,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Output only. The resource name of the currency constant.
    * Currency constant resource names have the form:
-   * `currencyConstants/{currency_code}`
+   * `currencyConstants/{code}`
    * </pre>
    *
    * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
@@ -148,7 +148,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Output only. The resource name of the currency constant.
    * Currency constant resource names have the form:
-   * `currencyConstants/{currency_code}`
+   * `currencyConstants/{code}`
    * </pre>
    *
    * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
@@ -791,7 +791,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. The resource name of the currency constant.
      * Currency constant resource names have the form:
-     * `currencyConstants/{currency_code}`
+     * `currencyConstants/{code}`
      * </pre>
      *
      * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
@@ -813,7 +813,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. The resource name of the currency constant.
      * Currency constant resource names have the form:
-     * `currencyConstants/{currency_code}`
+     * `currencyConstants/{code}`
      * </pre>
      *
      * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
@@ -836,7 +836,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. The resource name of the currency constant.
      * Currency constant resource names have the form:
-     * `currencyConstants/{currency_code}`
+     * `currencyConstants/{code}`
      * </pre>
      *
      * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
@@ -857,7 +857,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. The resource name of the currency constant.
      * Currency constant resource names have the form:
-     * `currencyConstants/{currency_code}`
+     * `currencyConstants/{code}`
      * </pre>
      *
      * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
@@ -873,7 +873,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. The resource name of the currency constant.
      * Currency constant resource names have the form:
-     * `currencyConstants/{currency_code}`
+     * `currencyConstants/{code}`
      * </pre>
      *
      * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>

@@ -20,22 +20,21 @@ import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
 import com.google.ads.googleads.lib.utils.FieldMasks;
-import com.google.ads.googleads.v5.enums.FlightPlaceholderFieldEnum.FlightPlaceholderField;
-import com.google.ads.googleads.v5.errors.GoogleAdsError;
-import com.google.ads.googleads.v5.errors.GoogleAdsException;
-import com.google.ads.googleads.v5.resources.FeedAttribute;
-import com.google.ads.googleads.v5.resources.FeedItem;
-import com.google.ads.googleads.v5.resources.FeedItemAttributeValue;
-import com.google.ads.googleads.v5.services.FeedItemOperation;
-import com.google.ads.googleads.v5.services.FeedItemServiceClient;
-import com.google.ads.googleads.v5.services.GoogleAdsServiceClient;
-import com.google.ads.googleads.v5.services.GoogleAdsServiceClient.SearchPagedResponse;
-import com.google.ads.googleads.v5.services.MutateFeedItemResult;
-import com.google.ads.googleads.v5.services.MutateFeedItemsResponse;
-import com.google.ads.googleads.v5.services.SearchGoogleAdsRequest;
-import com.google.ads.googleads.v5.utils.ResourceNames;
+import com.google.ads.googleads.v6.enums.FlightPlaceholderFieldEnum.FlightPlaceholderField;
+import com.google.ads.googleads.v6.errors.GoogleAdsError;
+import com.google.ads.googleads.v6.errors.GoogleAdsException;
+import com.google.ads.googleads.v6.resources.FeedAttribute;
+import com.google.ads.googleads.v6.resources.FeedItem;
+import com.google.ads.googleads.v6.resources.FeedItemAttributeValue;
+import com.google.ads.googleads.v6.services.FeedItemOperation;
+import com.google.ads.googleads.v6.services.FeedItemServiceClient;
+import com.google.ads.googleads.v6.services.GoogleAdsServiceClient;
+import com.google.ads.googleads.v6.services.GoogleAdsServiceClient.SearchPagedResponse;
+import com.google.ads.googleads.v6.services.MutateFeedItemResult;
+import com.google.ads.googleads.v6.services.MutateFeedItemsResponse;
+import com.google.ads.googleads.v6.services.SearchGoogleAdsRequest;
+import com.google.ads.googleads.v6.utils.ResourceNames;
 import com.google.common.collect.ImmutableList;
-import com.google.protobuf.Int64Value;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Map;
@@ -202,13 +201,13 @@ public class RemoveFlightsFeedItemAttributeValue {
       String feedItemResourceName,
       FlightPlaceholderField flightPlaceholderField) {
     // Gets the ID of the FeedAttribute for the placeholder field and converts to an integer.
-    long attributeId = feedAttributes.get(flightPlaceholderField).getId().getValue();
+    long attributeId = feedAttributes.get(flightPlaceholderField).getId();
 
     // Retrieves the feed item and its associated attributes based on its resource name.
     FeedItem feedItem = getFeedItem(googleAdsClient, customerId, feedItemResourceName);
     // Creates the FeedItemAttributeValue that will be updated.
     FeedItemAttributeValue feedItemAttributeValue =
-        FeedItemAttributeValue.newBuilder().setFeedAttributeId(Int64Value.of(attributeId)).build();
+        FeedItemAttributeValue.newBuilder().setFeedAttributeId(attributeId).build();
     // Gets the index of the attribute value that will be removed.
     int attributeIndex = getAttributeIndex(feedItem, feedItemAttributeValue);
 
@@ -269,8 +268,8 @@ public class RemoveFlightsFeedItemAttributeValue {
     for (FeedItemAttributeValue feedItemAttributeValue : feedItem.getAttributeValuesList()) {
       attributeIndex = (attributeIndex != null) ? attributeIndex + 1 : 0;
       // Checks if the current feedItemAttributeValue is the one we are updating
-      if (feedItemAttributeValue.getFeedAttributeId().getValue()
-          == removedFeedItemAttributeValue.getFeedAttributeId().getValue()) {
+      if (feedItemAttributeValue.getFeedAttributeId()
+          == removedFeedItemAttributeValue.getFeedAttributeId()) {
         break;
       }
     }

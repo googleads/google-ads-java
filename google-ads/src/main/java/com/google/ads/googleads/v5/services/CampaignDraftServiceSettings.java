@@ -98,7 +98,8 @@ public class CampaignDraftServiceSettings extends ClientSettings<CampaignDraftSe
 
   /** Returns the object with the settings used for calls to listCampaignDraftAsyncErrors. */
   public PagedCallSettings<
-          ListCampaignDraftAsyncErrorsRequest, ListCampaignDraftAsyncErrorsResponse,
+          ListCampaignDraftAsyncErrorsRequest,
+          ListCampaignDraftAsyncErrorsResponse,
           ListCampaignDraftAsyncErrorsPagedResponse>
       listCampaignDraftAsyncErrorsSettings() {
     return ((CampaignDraftServiceStubSettings) getStubSettings())
@@ -231,7 +232,8 @@ public class CampaignDraftServiceSettings extends ClientSettings<CampaignDraftSe
 
     /** Returns the builder for the settings used for calls to listCampaignDraftAsyncErrors. */
     public PagedCallSettings.Builder<
-            ListCampaignDraftAsyncErrorsRequest, ListCampaignDraftAsyncErrorsResponse,
+            ListCampaignDraftAsyncErrorsRequest,
+            ListCampaignDraftAsyncErrorsResponse,
             ListCampaignDraftAsyncErrorsPagedResponse>
         listCampaignDraftAsyncErrorsSettings() {
       return getStubSettingsBuilder().listCampaignDraftAsyncErrorsSettings();

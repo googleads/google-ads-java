@@ -69,7 +69,8 @@ import javax.annotation.Generated;
 public class KeywordPlanIdeaServiceSettings extends ClientSettings<KeywordPlanIdeaServiceSettings> {
   /** Returns the object with the settings used for calls to generateKeywordIdeas. */
   public PagedCallSettings<
-          GenerateKeywordIdeasRequest, GenerateKeywordIdeaResponse,
+          GenerateKeywordIdeasRequest,
+          GenerateKeywordIdeaResponse,
           GenerateKeywordIdeasPagedResponse>
       generateKeywordIdeasSettings() {
     return ((KeywordPlanIdeaServiceStubSettings) getStubSettings()).generateKeywordIdeasSettings();
@@ -175,7 +176,8 @@ public class KeywordPlanIdeaServiceSettings extends ClientSettings<KeywordPlanId
 
     /** Returns the builder for the settings used for calls to generateKeywordIdeas. */
     public PagedCallSettings.Builder<
-            GenerateKeywordIdeasRequest, GenerateKeywordIdeaResponse,
+            GenerateKeywordIdeasRequest,
+            GenerateKeywordIdeaResponse,
             GenerateKeywordIdeasPagedResponse>
         generateKeywordIdeasSettings() {
       return getStubSettingsBuilder().generateKeywordIdeasSettings();

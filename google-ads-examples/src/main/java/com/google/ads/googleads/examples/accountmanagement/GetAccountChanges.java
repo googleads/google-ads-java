@@ -18,12 +18,12 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.v5.errors.GoogleAdsError;
-import com.google.ads.googleads.v5.errors.GoogleAdsException;
-import com.google.ads.googleads.v5.resources.ChangeStatus;
-import com.google.ads.googleads.v5.services.GoogleAdsRow;
-import com.google.ads.googleads.v5.services.GoogleAdsServiceClient;
-import com.google.ads.googleads.v5.services.GoogleAdsServiceClient.SearchPagedResponse;
+import com.google.ads.googleads.v6.errors.GoogleAdsError;
+import com.google.ads.googleads.v6.errors.GoogleAdsException;
+import com.google.ads.googleads.v6.resources.ChangeStatus;
+import com.google.ads.googleads.v6.services.GoogleAdsRow;
+import com.google.ads.googleads.v6.services.GoogleAdsServiceClient;
+import com.google.ads.googleads.v6.services.GoogleAdsServiceClient.SearchPagedResponse;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Optional;
@@ -113,7 +113,7 @@ public class GetAccountChanges {
         System.out.printf(
             "On '%s', change status '%s' shows a resource type of '%s' "
                 + "with resource name '%s' was '%s'.%n",
-            row.getChangeStatus().getLastChangeDateTime().getValue(),
+            row.getChangeStatus().getLastChangeDateTime(),
             row.getChangeStatus().getResourceName(),
             row.getChangeStatus().getResourceType().name(),
             resourceNameOfChangedEntity.orElse(""),
@@ -139,31 +139,31 @@ public class GetAccountChanges {
         resourceName = changeStatus.getAdGroup();
         break;
       case AD_GROUP_AD:
-        resourceName = changeStatus.getAdGroupAd().getValue();
+        resourceName = changeStatus.getAdGroupAd();
         break;
       case AD_GROUP_BID_MODIFIER:
-        resourceName = changeStatus.getAdGroupBidModifier().getValue();
+        resourceName = changeStatus.getAdGroupBidModifier();
         break;
       case AD_GROUP_CRITERION:
         resourceName = changeStatus.getAdGroup();
         break;
       case AD_GROUP_FEED:
-        resourceName = changeStatus.getAdGroupFeed().getValue();
+        resourceName = changeStatus.getAdGroupFeed();
         break;
       case CAMPAIGN:
         resourceName = changeStatus.getCampaign();
         break;
       case CAMPAIGN_CRITERION:
-        resourceName = changeStatus.getCampaignCriterion().getValue();
+        resourceName = changeStatus.getCampaignCriterion();
         break;
       case CAMPAIGN_FEED:
-        resourceName = changeStatus.getCampaignFeed().getValue();
+        resourceName = changeStatus.getCampaignFeed();
         break;
       case FEED:
-        resourceName = changeStatus.getFeed().getValue();
+        resourceName = changeStatus.getFeed();
         break;
       case FEED_ITEM:
-        resourceName = changeStatus.getFeedItem().getValue();
+        resourceName = changeStatus.getFeedItem();
         break;
     }
     return Optional.ofNullable(resourceName);

@@ -18,25 +18,23 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.v5.common.CombinedRuleUserListInfo;
-import com.google.ads.googleads.v5.common.RuleBasedUserListInfo;
-import com.google.ads.googleads.v5.common.UserListRuleInfo;
-import com.google.ads.googleads.v5.common.UserListRuleItemGroupInfo;
-import com.google.ads.googleads.v5.common.UserListRuleItemInfo;
-import com.google.ads.googleads.v5.common.UserListStringRuleItemInfo;
-import com.google.ads.googleads.v5.enums.UserListCombinedRuleOperatorEnum.UserListCombinedRuleOperator;
-import com.google.ads.googleads.v5.enums.UserListMembershipStatusEnum.UserListMembershipStatus;
-import com.google.ads.googleads.v5.enums.UserListPrepopulationStatusEnum.UserListPrepopulationStatus;
-import com.google.ads.googleads.v5.enums.UserListStringRuleItemOperatorEnum.UserListStringRuleItemOperator;
-import com.google.ads.googleads.v5.errors.GoogleAdsError;
-import com.google.ads.googleads.v5.errors.GoogleAdsException;
-import com.google.ads.googleads.v5.resources.UserList;
-import com.google.ads.googleads.v5.services.MutateUserListsResponse;
-import com.google.ads.googleads.v5.services.UserListOperation;
-import com.google.ads.googleads.v5.services.UserListServiceClient;
+import com.google.ads.googleads.v6.common.CombinedRuleUserListInfo;
+import com.google.ads.googleads.v6.common.RuleBasedUserListInfo;
+import com.google.ads.googleads.v6.common.UserListRuleInfo;
+import com.google.ads.googleads.v6.common.UserListRuleItemGroupInfo;
+import com.google.ads.googleads.v6.common.UserListRuleItemInfo;
+import com.google.ads.googleads.v6.common.UserListStringRuleItemInfo;
+import com.google.ads.googleads.v6.enums.UserListCombinedRuleOperatorEnum.UserListCombinedRuleOperator;
+import com.google.ads.googleads.v6.enums.UserListMembershipStatusEnum.UserListMembershipStatus;
+import com.google.ads.googleads.v6.enums.UserListPrepopulationStatusEnum.UserListPrepopulationStatus;
+import com.google.ads.googleads.v6.enums.UserListStringRuleItemOperatorEnum.UserListStringRuleItemOperator;
+import com.google.ads.googleads.v6.errors.GoogleAdsError;
+import com.google.ads.googleads.v6.errors.GoogleAdsException;
+import com.google.ads.googleads.v6.resources.UserList;
+import com.google.ads.googleads.v6.services.MutateUserListsResponse;
+import com.google.ads.googleads.v6.services.UserListOperation;
+import com.google.ads.googleads.v6.services.UserListServiceClient;
 import com.google.common.collect.ImmutableList;
-import com.google.protobuf.Int64Value;
-import com.google.protobuf.StringValue;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
@@ -106,11 +104,11 @@ public class AddCombinedRuleUserList {
     UserListRuleItemInfo userVisitedSite1Rule =
         UserListRuleItemInfo.newBuilder()
             // Uses a built-in parameter to create a domain URL rule.
-            .setName(StringValue.of(urlString))
+            .setName(urlString)
             .setStringRuleItem(
                 UserListStringRuleItemInfo.newBuilder()
                     .setOperator(UserListStringRuleItemOperator.EQUALS)
-                    .setValue(StringValue.of("http://example.com/example1"))
+                    .setValue("http://example.com/example1")
                     .build())
             .build();
 
@@ -126,11 +124,11 @@ public class AddCombinedRuleUserList {
     UserListRuleItemInfo userVisitedSite2Rule =
         UserListRuleItemInfo.newBuilder()
             // Uses a built-in parameter to create a domain URL rule.
-            .setName(StringValue.of(urlString))
+            .setName(urlString)
             .setStringRuleItem(
                 UserListStringRuleItemInfo.newBuilder()
                     .setOperator(UserListStringRuleItemOperator.EQUALS)
-                    .setValue(StringValue.of("http://example.com/example2"))
+                    .setValue("http://example.com/example2")
                     .build())
             .build();
 
@@ -164,14 +162,12 @@ public class AddCombinedRuleUserList {
     UserList userList =
         UserList.newBuilder()
             .setName(
-                StringValue.of(
-                    "All visitors to http://example.com/example1 AND http://example.com/example2 #"
-                        + System.currentTimeMillis()))
+                "All visitors to http://example.com/example1 AND http://example.com/example2 #"
+                    + System.currentTimeMillis())
             .setDescription(
-                StringValue.of(
-                    "Visitors of both http://example.com/example1 AND http://example.com/example2"))
+                "Visitors of both http://example.com/example1 AND http://example.com/example2")
             .setMembershipStatus(UserListMembershipStatus.OPEN)
-            .setMembershipLifeSpan(Int64Value.of(365))
+            .setMembershipLifeSpan(365)
             .setRuleBasedUserList(ruleBasedUserListInfo)
             .build();
 

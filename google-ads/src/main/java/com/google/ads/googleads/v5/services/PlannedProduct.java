@@ -115,7 +115,8 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Required. Selected product for planning.
-   * Plannable products codes can be obtained from ListPlannableProducts.
+   * The code associated with the ad product. E.g. Trueview, Bumper
+   * To list the available plannable product codes use ListPlannableProducts.
    * </pre>
    *
    * <code>.google.protobuf.StringValue plannable_product_code = 1;</code>
@@ -128,7 +129,8 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Required. Selected product for planning.
-   * Plannable products codes can be obtained from ListPlannableProducts.
+   * The code associated with the ad product. E.g. Trueview, Bumper
+   * To list the available plannable product codes use ListPlannableProducts.
    * </pre>
    *
    * <code>.google.protobuf.StringValue plannable_product_code = 1;</code>
@@ -141,7 +143,8 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Required. Selected product for planning.
-   * Plannable products codes can be obtained from ListPlannableProducts.
+   * The code associated with the ad product. E.g. Trueview, Bumper
+   * To list the available plannable product codes use ListPlannableProducts.
    * </pre>
    *
    * <code>.google.protobuf.StringValue plannable_product_code = 1;</code>
@@ -550,7 +553,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Required. Selected product for planning.
-     * Plannable products codes can be obtained from ListPlannableProducts.
+     * The code associated with the ad product. E.g. Trueview, Bumper
+     * To list the available plannable product codes use ListPlannableProducts.
      * </pre>
      *
      * <code>.google.protobuf.StringValue plannable_product_code = 1;</code>
@@ -562,7 +566,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Required. Selected product for planning.
-     * Plannable products codes can be obtained from ListPlannableProducts.
+     * The code associated with the ad product. E.g. Trueview, Bumper
+     * To list the available plannable product codes use ListPlannableProducts.
      * </pre>
      *
      * <code>.google.protobuf.StringValue plannable_product_code = 1;</code>
@@ -578,7 +583,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Required. Selected product for planning.
-     * Plannable products codes can be obtained from ListPlannableProducts.
+     * The code associated with the ad product. E.g. Trueview, Bumper
+     * To list the available plannable product codes use ListPlannableProducts.
      * </pre>
      *
      * <code>.google.protobuf.StringValue plannable_product_code = 1;</code>
@@ -599,7 +605,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Required. Selected product for planning.
-     * Plannable products codes can be obtained from ListPlannableProducts.
+     * The code associated with the ad product. E.g. Trueview, Bumper
+     * To list the available plannable product codes use ListPlannableProducts.
      * </pre>
      *
      * <code>.google.protobuf.StringValue plannable_product_code = 1;</code>
@@ -618,7 +625,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Required. Selected product for planning.
-     * Plannable products codes can be obtained from ListPlannableProducts.
+     * The code associated with the ad product. E.g. Trueview, Bumper
+     * To list the available plannable product codes use ListPlannableProducts.
      * </pre>
      *
      * <code>.google.protobuf.StringValue plannable_product_code = 1;</code>
@@ -641,7 +649,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Required. Selected product for planning.
-     * Plannable products codes can be obtained from ListPlannableProducts.
+     * The code associated with the ad product. E.g. Trueview, Bumper
+     * To list the available plannable product codes use ListPlannableProducts.
      * </pre>
      *
      * <code>.google.protobuf.StringValue plannable_product_code = 1;</code>
@@ -660,7 +669,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Required. Selected product for planning.
-     * Plannable products codes can be obtained from ListPlannableProducts.
+     * The code associated with the ad product. E.g. Trueview, Bumper
+     * To list the available plannable product codes use ListPlannableProducts.
      * </pre>
      *
      * <code>.google.protobuf.StringValue plannable_product_code = 1;</code>
@@ -673,7 +683,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Required. Selected product for planning.
-     * Plannable products codes can be obtained from ListPlannableProducts.
+     * The code associated with the ad product. E.g. Trueview, Bumper
+     * To list the available plannable product codes use ListPlannableProducts.
      * </pre>
      *
      * <code>.google.protobuf.StringValue plannable_product_code = 1;</code>
@@ -689,7 +700,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Required. Selected product for planning.
-     * Plannable products codes can be obtained from ListPlannableProducts.
+     * The code associated with the ad product. E.g. Trueview, Bumper
+     * To list the available plannable product codes use ListPlannableProducts.
      * </pre>
      *
      * <code>.google.protobuf.StringValue plannable_product_code = 1;</code>

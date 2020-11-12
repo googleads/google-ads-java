@@ -19,47 +19,45 @@ import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
 import com.google.ads.googleads.lib.utils.FieldMasks;
-import com.google.ads.googleads.v5.common.WebpageConditionInfo;
-import com.google.ads.googleads.v5.common.WebpageInfo;
-import com.google.ads.googleads.v5.enums.DsaPageFeedCriterionFieldEnum.DsaPageFeedCriterionField;
-import com.google.ads.googleads.v5.enums.FeedAttributeTypeEnum.FeedAttributeType;
-import com.google.ads.googleads.v5.enums.FeedMappingCriterionTypeEnum.FeedMappingCriterionType;
-import com.google.ads.googleads.v5.enums.WebpageConditionOperandEnum.WebpageConditionOperand;
-import com.google.ads.googleads.v5.errors.GoogleAdsError;
-import com.google.ads.googleads.v5.errors.GoogleAdsException;
-import com.google.ads.googleads.v5.resources.AdGroupCriterion;
-import com.google.ads.googleads.v5.resources.AttributeFieldMapping;
-import com.google.ads.googleads.v5.resources.Campaign;
-import com.google.ads.googleads.v5.resources.Campaign.DynamicSearchAdsSetting;
-import com.google.ads.googleads.v5.resources.Feed;
-import com.google.ads.googleads.v5.resources.FeedAttribute;
-import com.google.ads.googleads.v5.resources.FeedItem;
-import com.google.ads.googleads.v5.resources.FeedItemAttributeValue;
-import com.google.ads.googleads.v5.resources.FeedMapping;
-import com.google.ads.googleads.v5.services.AdGroupCriterionOperation;
-import com.google.ads.googleads.v5.services.AdGroupCriterionServiceClient;
-import com.google.ads.googleads.v5.services.CampaignOperation;
-import com.google.ads.googleads.v5.services.CampaignServiceClient;
-import com.google.ads.googleads.v5.services.FeedItemOperation;
-import com.google.ads.googleads.v5.services.FeedItemServiceClient;
-import com.google.ads.googleads.v5.services.FeedMappingOperation;
-import com.google.ads.googleads.v5.services.FeedMappingServiceClient;
-import com.google.ads.googleads.v5.services.FeedOperation;
-import com.google.ads.googleads.v5.services.FeedServiceClient;
-import com.google.ads.googleads.v5.services.GoogleAdsRow;
-import com.google.ads.googleads.v5.services.GoogleAdsServiceClient;
-import com.google.ads.googleads.v5.services.GoogleAdsServiceClient.SearchPagedResponse;
-import com.google.ads.googleads.v5.services.MutateAdGroupCriteriaResponse;
-import com.google.ads.googleads.v5.services.MutateCampaignsResponse;
-import com.google.ads.googleads.v5.services.MutateFeedItemResult;
-import com.google.ads.googleads.v5.services.MutateFeedItemsResponse;
-import com.google.ads.googleads.v5.services.MutateFeedMappingsResponse;
-import com.google.ads.googleads.v5.services.MutateFeedsResponse;
-import com.google.ads.googleads.v5.services.SearchGoogleAdsRequest;
-import com.google.ads.googleads.v5.utils.ResourceNames;
+import com.google.ads.googleads.v6.common.WebpageConditionInfo;
+import com.google.ads.googleads.v6.common.WebpageInfo;
+import com.google.ads.googleads.v6.enums.DsaPageFeedCriterionFieldEnum.DsaPageFeedCriterionField;
+import com.google.ads.googleads.v6.enums.FeedAttributeTypeEnum.FeedAttributeType;
+import com.google.ads.googleads.v6.enums.FeedMappingCriterionTypeEnum.FeedMappingCriterionType;
+import com.google.ads.googleads.v6.enums.WebpageConditionOperandEnum.WebpageConditionOperand;
+import com.google.ads.googleads.v6.errors.GoogleAdsError;
+import com.google.ads.googleads.v6.errors.GoogleAdsException;
+import com.google.ads.googleads.v6.resources.AdGroupCriterion;
+import com.google.ads.googleads.v6.resources.AttributeFieldMapping;
+import com.google.ads.googleads.v6.resources.Campaign;
+import com.google.ads.googleads.v6.resources.Campaign.DynamicSearchAdsSetting;
+import com.google.ads.googleads.v6.resources.Feed;
+import com.google.ads.googleads.v6.resources.FeedAttribute;
+import com.google.ads.googleads.v6.resources.FeedItem;
+import com.google.ads.googleads.v6.resources.FeedItemAttributeValue;
+import com.google.ads.googleads.v6.resources.FeedMapping;
+import com.google.ads.googleads.v6.services.AdGroupCriterionOperation;
+import com.google.ads.googleads.v6.services.AdGroupCriterionServiceClient;
+import com.google.ads.googleads.v6.services.CampaignOperation;
+import com.google.ads.googleads.v6.services.CampaignServiceClient;
+import com.google.ads.googleads.v6.services.FeedItemOperation;
+import com.google.ads.googleads.v6.services.FeedItemServiceClient;
+import com.google.ads.googleads.v6.services.FeedMappingOperation;
+import com.google.ads.googleads.v6.services.FeedMappingServiceClient;
+import com.google.ads.googleads.v6.services.FeedOperation;
+import com.google.ads.googleads.v6.services.FeedServiceClient;
+import com.google.ads.googleads.v6.services.GoogleAdsRow;
+import com.google.ads.googleads.v6.services.GoogleAdsServiceClient;
+import com.google.ads.googleads.v6.services.GoogleAdsServiceClient.SearchPagedResponse;
+import com.google.ads.googleads.v6.services.MutateAdGroupCriteriaResponse;
+import com.google.ads.googleads.v6.services.MutateCampaignsResponse;
+import com.google.ads.googleads.v6.services.MutateFeedItemResult;
+import com.google.ads.googleads.v6.services.MutateFeedItemsResponse;
+import com.google.ads.googleads.v6.services.MutateFeedMappingsResponse;
+import com.google.ads.googleads.v6.services.MutateFeedsResponse;
+import com.google.ads.googleads.v6.services.SearchGoogleAdsRequest;
+import com.google.ads.googleads.v6.utils.ResourceNames;
 import com.google.common.collect.ImmutableList;
-import com.google.protobuf.Int64Value;
-import com.google.protobuf.StringValue;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -166,22 +164,16 @@ public class AddDynamicPageFeed {
   private static String createFeed(GoogleAdsClient googleAdsClient, long customerId) {
     // Creates a URL attribute.
     FeedAttribute urlAttribute =
-        FeedAttribute.newBuilder()
-            .setType(FeedAttributeType.URL_LIST)
-            .setName(StringValue.of("Page URL"))
-            .build();
+        FeedAttribute.newBuilder().setType(FeedAttributeType.URL_LIST).setName("Page URL").build();
 
     // Creates a label attribute.
     FeedAttribute labelAttribute =
-        FeedAttribute.newBuilder()
-            .setType(FeedAttributeType.STRING_LIST)
-            .setName(StringValue.of("Label"))
-            .build();
+        FeedAttribute.newBuilder().setType(FeedAttributeType.STRING_LIST).setName("Label").build();
 
     // Creates the feed.
     Feed feed =
         Feed.newBuilder()
-            .setName(StringValue.of("DSA Feed #" + System.currentTimeMillis()))
+            .setName("DSA Feed #" + System.currentTimeMillis())
             .addAllAttributes(ImmutableList.of(urlAttribute, labelAttribute))
             .build();
 
@@ -237,7 +229,7 @@ public class AddDynamicPageFeed {
       Map<String, Long> feedDetails = new HashMap<>();
       // Adds each of the feed attributes and IDs to the map.
       for (FeedAttribute feedAttribute : feedAttributes) {
-        feedDetails.put(feedAttribute.getName().getValue(), feedAttribute.getId().getValue());
+        feedDetails.put(feedAttribute.getName(), feedAttribute.getId());
       }
 
       return feedDetails;
@@ -260,13 +252,13 @@ public class AddDynamicPageFeed {
     // Maps the feed attribute IDs to the field ID constants.
     AttributeFieldMapping urlFieldMapping =
         AttributeFieldMapping.newBuilder()
-            .setFeedAttributeId(Int64Value.of(feedDetails.get("Page URL")))
+            .setFeedAttributeId(feedDetails.get("Page URL"))
             .setDsaPageFeedField(DsaPageFeedCriterionField.PAGE_URL)
             .build();
 
     AttributeFieldMapping labelFieldMapping =
         AttributeFieldMapping.newBuilder()
-            .setFeedAttributeId(Int64Value.of(feedDetails.get("Label")))
+            .setFeedAttributeId(feedDetails.get("Label"))
             .setDsaPageFeedField(DsaPageFeedCriterionField.LABEL)
             .build();
 
@@ -274,7 +266,7 @@ public class AddDynamicPageFeed {
     FeedMapping feedMapping =
         FeedMapping.newBuilder()
             .setCriterionType(FeedMappingCriterionType.DSA_PAGE_FEED)
-            .setFeed(StringValue.of(feedResourceName))
+            .setFeed(feedResourceName)
             .addAllAttributeFieldMappings(ImmutableList.of(urlFieldMapping, labelFieldMapping))
             .build();
 
@@ -320,9 +312,8 @@ public class AddDynamicPageFeed {
     // Creates a value for the label attribute.
     FeedItemAttributeValue labelAttributeValue =
         FeedItemAttributeValue.newBuilder()
-            .setFeedAttributeId(Int64Value.of(feedDetails.get("Label")))
-            .addAllStringValues(
-                ImmutableList.of(StringValue.newBuilder().setValue(dsaPageUrlLabel).build()))
+            .setFeedAttributeId(feedDetails.get("Label"))
+            .addAllStringValues(ImmutableList.of(dsaPageUrlLabel))
             .build();
 
     // Creates one operation per URL.
@@ -331,14 +322,14 @@ public class AddDynamicPageFeed {
       // Creates a url attribute.
       FeedItemAttributeValue urlAttributeValue =
           FeedItemAttributeValue.newBuilder()
-              .setFeedAttributeId(Int64Value.of(feedDetails.get("Page URL")))
-              .addAllStringValues(ImmutableList.of(StringValue.newBuilder().setValue(url).build()))
+              .setFeedAttributeId(feedDetails.get("Page URL"))
+              .addAllStringValues(ImmutableList.of(url))
               .build();
 
       // Creates a feed item.
       FeedItem feedItem =
           FeedItem.newBuilder()
-              .setFeed(StringValue.of(feedResourceName))
+              .setFeed(feedResourceName)
               .addAllAttributeValues(ImmutableList.of(urlAttributeValue, labelAttributeValue))
               .build();
 

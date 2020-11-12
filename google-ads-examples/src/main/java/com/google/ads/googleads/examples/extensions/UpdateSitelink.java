@@ -19,17 +19,16 @@ import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
 import com.google.ads.googleads.lib.utils.FieldMasks;
-import com.google.ads.googleads.v5.common.SitelinkFeedItem;
-import com.google.ads.googleads.v5.errors.GoogleAdsError;
-import com.google.ads.googleads.v5.errors.GoogleAdsException;
-import com.google.ads.googleads.v5.resources.ExtensionFeedItem;
-import com.google.ads.googleads.v5.services.ExtensionFeedItemOperation;
-import com.google.ads.googleads.v5.services.ExtensionFeedItemServiceClient;
-import com.google.ads.googleads.v5.services.MutateExtensionFeedItemResult;
-import com.google.ads.googleads.v5.services.MutateExtensionFeedItemsResponse;
-import com.google.ads.googleads.v5.utils.ResourceNames;
+import com.google.ads.googleads.v6.common.SitelinkFeedItem;
+import com.google.ads.googleads.v6.errors.GoogleAdsError;
+import com.google.ads.googleads.v6.errors.GoogleAdsException;
+import com.google.ads.googleads.v6.resources.ExtensionFeedItem;
+import com.google.ads.googleads.v6.services.ExtensionFeedItemOperation;
+import com.google.ads.googleads.v6.services.ExtensionFeedItemServiceClient;
+import com.google.ads.googleads.v6.services.MutateExtensionFeedItemResult;
+import com.google.ads.googleads.v6.services.MutateExtensionFeedItemsResponse;
+import com.google.ads.googleads.v6.utils.ResourceNames;
 import com.google.common.collect.ImmutableList;
-import com.google.protobuf.StringValue;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
@@ -110,8 +109,7 @@ public class UpdateSitelink {
       ExtensionFeedItem extensionFeedItem =
           ExtensionFeedItem.newBuilder()
               .setResourceName(ResourceNames.extensionFeedItem(customerId, feedItemId))
-              .setSitelinkFeedItem(
-                  SitelinkFeedItem.newBuilder().setLinkText(StringValue.of(sitelinkText)).build())
+              .setSitelinkFeedItem(SitelinkFeedItem.newBuilder().setLinkText(sitelinkText).build())
               .build();
       // Constructs an operation that will update the extension feed item, using the FieldMasks
       // utility to derive the update mask. This mask tells the Google Ads API which attributes of
