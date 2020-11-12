@@ -13,14 +13,12 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
 -->
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
   <parent>
     <groupId>com.google.api-ads</groupId>
     <artifactId>google-ads-parent</artifactId>
-    <version>9.0.1-SNAPSHOT</version>
+    <version>10.0.0</version>
     <relativePath>../pom.xml</relativePath>
   </parent>
 
@@ -28,7 +26,7 @@
   <groupId>com.google.api-ads</groupId>
   <artifactId>google-ads-annotation-processing</artifactId>
   <packaging>jar</packaging>
-  <version>9.0.1-SNAPSHOT</version>
+  <version>10.0.0</version>
   <name>Google Ads API client library for Java annotation processor</name>
   <description>
     Handles code generation via annotation processing for the client
