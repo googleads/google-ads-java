@@ -126,7 +126,8 @@ public class CampaignExperimentServiceStubSettings
   private final UnaryCallSettings<EndCampaignExperimentRequest, Empty>
       endCampaignExperimentSettings;
   private final PagedCallSettings<
-          ListCampaignExperimentAsyncErrorsRequest, ListCampaignExperimentAsyncErrorsResponse,
+          ListCampaignExperimentAsyncErrorsRequest,
+          ListCampaignExperimentAsyncErrorsResponse,
           ListCampaignExperimentAsyncErrorsPagedResponse>
       listCampaignExperimentAsyncErrorsSettings;
 
@@ -182,7 +183,8 @@ public class CampaignExperimentServiceStubSettings
 
   /** Returns the object with the settings used for calls to listCampaignExperimentAsyncErrors. */
   public PagedCallSettings<
-          ListCampaignExperimentAsyncErrorsRequest, ListCampaignExperimentAsyncErrorsResponse,
+          ListCampaignExperimentAsyncErrorsRequest,
+          ListCampaignExperimentAsyncErrorsResponse,
           ListCampaignExperimentAsyncErrorsPagedResponse>
       listCampaignExperimentAsyncErrorsSettings() {
     return listCampaignExperimentAsyncErrorsSettings;
@@ -273,11 +275,13 @@ public class CampaignExperimentServiceStubSettings
   }
 
   private static final PagedListDescriptor<
-          ListCampaignExperimentAsyncErrorsRequest, ListCampaignExperimentAsyncErrorsResponse,
+          ListCampaignExperimentAsyncErrorsRequest,
+          ListCampaignExperimentAsyncErrorsResponse,
           Status>
       LIST_CAMPAIGN_EXPERIMENT_ASYNC_ERRORS_PAGE_STR_DESC =
           new PagedListDescriptor<
-              ListCampaignExperimentAsyncErrorsRequest, ListCampaignExperimentAsyncErrorsResponse,
+              ListCampaignExperimentAsyncErrorsRequest,
+              ListCampaignExperimentAsyncErrorsResponse,
               Status>() {
             @Override
             public String emptyToken() {
@@ -320,11 +324,13 @@ public class CampaignExperimentServiceStubSettings
           };
 
   private static final PagedListResponseFactory<
-          ListCampaignExperimentAsyncErrorsRequest, ListCampaignExperimentAsyncErrorsResponse,
+          ListCampaignExperimentAsyncErrorsRequest,
+          ListCampaignExperimentAsyncErrorsResponse,
           ListCampaignExperimentAsyncErrorsPagedResponse>
       LIST_CAMPAIGN_EXPERIMENT_ASYNC_ERRORS_PAGE_STR_FACT =
           new PagedListResponseFactory<
-              ListCampaignExperimentAsyncErrorsRequest, ListCampaignExperimentAsyncErrorsResponse,
+              ListCampaignExperimentAsyncErrorsRequest,
+              ListCampaignExperimentAsyncErrorsResponse,
               ListCampaignExperimentAsyncErrorsPagedResponse>() {
             @Override
             public ApiFuture<ListCampaignExperimentAsyncErrorsPagedResponse> getFuturePagedResponse(
@@ -337,7 +343,8 @@ public class CampaignExperimentServiceStubSettings
                 ApiFuture<ListCampaignExperimentAsyncErrorsResponse> futureResponse) {
               PageContext<
                       ListCampaignExperimentAsyncErrorsRequest,
-                      ListCampaignExperimentAsyncErrorsResponse, Status>
+                      ListCampaignExperimentAsyncErrorsResponse,
+                      Status>
                   pageContext =
                       PageContext.create(
                           callable,
@@ -374,7 +381,8 @@ public class CampaignExperimentServiceStubSettings
     private final UnaryCallSettings.Builder<EndCampaignExperimentRequest, Empty>
         endCampaignExperimentSettings;
     private final PagedCallSettings.Builder<
-            ListCampaignExperimentAsyncErrorsRequest, ListCampaignExperimentAsyncErrorsResponse,
+            ListCampaignExperimentAsyncErrorsRequest,
+            ListCampaignExperimentAsyncErrorsResponse,
             ListCampaignExperimentAsyncErrorsPagedResponse>
         listCampaignExperimentAsyncErrorsSettings;
 
@@ -660,7 +668,8 @@ public class CampaignExperimentServiceStubSettings
 
     /** Returns the builder for the settings used for calls to listCampaignExperimentAsyncErrors. */
     public PagedCallSettings.Builder<
-            ListCampaignExperimentAsyncErrorsRequest, ListCampaignExperimentAsyncErrorsResponse,
+            ListCampaignExperimentAsyncErrorsRequest,
+            ListCampaignExperimentAsyncErrorsResponse,
             ListCampaignExperimentAsyncErrorsPagedResponse>
         listCampaignExperimentAsyncErrorsSettings() {
       return listCampaignExperimentAsyncErrorsSettings;

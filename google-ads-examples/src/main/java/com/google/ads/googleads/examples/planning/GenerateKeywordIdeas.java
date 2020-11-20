@@ -18,21 +18,19 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.v5.enums.KeywordPlanNetworkEnum.KeywordPlanNetwork;
-import com.google.ads.googleads.v5.errors.GoogleAdsError;
-import com.google.ads.googleads.v5.errors.GoogleAdsException;
-import com.google.ads.googleads.v5.services.GenerateKeywordIdeaResult;
-import com.google.ads.googleads.v5.services.GenerateKeywordIdeasRequest;
-import com.google.ads.googleads.v5.services.KeywordPlanIdeaServiceClient;
-import com.google.ads.googleads.v5.services.KeywordPlanIdeaServiceClient.GenerateKeywordIdeasPagedResponse;
-import com.google.ads.googleads.v5.utils.ResourceNames;
-import com.google.protobuf.StringValue;
+import com.google.ads.googleads.v6.enums.KeywordPlanNetworkEnum.KeywordPlanNetwork;
+import com.google.ads.googleads.v6.errors.GoogleAdsError;
+import com.google.ads.googleads.v6.errors.GoogleAdsException;
+import com.google.ads.googleads.v6.services.GenerateKeywordIdeaResult;
+import com.google.ads.googleads.v6.services.GenerateKeywordIdeasRequest;
+import com.google.ads.googleads.v6.services.KeywordPlanIdeaServiceClient;
+import com.google.ads.googleads.v6.services.KeywordPlanIdeaServiceClient.GenerateKeywordIdeasPagedResponse;
+import com.google.ads.googleads.v6.utils.ResourceNames;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import java.util.stream.Collectors;
 import javax.annotation.Nullable;
 
 /** Generates keyword ideas from a list of seed keywords. */
@@ -149,15 +147,14 @@ public class GenerateKeywordIdeas {
           GenerateKeywordIdeasRequest.newBuilder()
               .setCustomerId(Long.toString(customerId))
               // Sets the language resource using the provided language ID.
-              .setLanguage(StringValue.of(ResourceNames.languageConstant(languageId)))
+              .setLanguage(ResourceNames.languageConstant(languageId))
               // Sets the network. To restrict to only Google Search, change the parameter below to
               // KeywordPlanNetwork.GOOGLE_SEARCH.
               .setKeywordPlanNetwork(KeywordPlanNetwork.GOOGLE_SEARCH_AND_PARTNERS);
 
       // Adds the resource name of each location ID to the request.
       for (Long locationId : locationIds) {
-        requestBuilder.addGeoTargetConstants(
-            StringValue.of(ResourceNames.geoTargetConstant(locationId)));
+        requestBuilder.addGeoTargetConstants(ResourceNames.geoTargetConstant(locationId));
       }
 
       // Makes sure that keywords and/or page URL were specified. The request must have exactly one
@@ -169,18 +166,13 @@ public class GenerateKeywordIdeas {
 
       if (keywords.isEmpty()) {
         // Only page URL was specified, so use a UrlSeed.
-        requestBuilder.getUrlSeedBuilder().setUrl(StringValue.of(pageUrl));
+        requestBuilder.getUrlSeedBuilder().setUrl(pageUrl);
       } else if (pageUrl == null) {
         // Only keywords were specified, so use a KeywordSeed.
-        requestBuilder
-            .getKeywordSeedBuilder()
-            .addAllKeywords(keywords.stream().map(StringValue::of).collect(Collectors.toList()));
+        requestBuilder.getKeywordSeedBuilder().addAllKeywords(keywords);
       } else {
         // Both page URL and keywords were specified, so use a KeywordAndUrlSeed.
-        requestBuilder
-            .getKeywordAndUrlSeedBuilder()
-            .setUrl(StringValue.of(pageUrl))
-            .addAllKeywords(keywords.stream().map(StringValue::of).collect(Collectors.toList()));
+        requestBuilder.getKeywordAndUrlSeedBuilder().setUrl(pageUrl).addAllKeywords(keywords);
       }
 
       // Sends the keyword ideas request.
@@ -190,8 +182,8 @@ public class GenerateKeywordIdeas {
       for (GenerateKeywordIdeaResult result : response.iterateAll()) {
         System.out.printf(
             "Keyword idea text '%s' has %d average monthly searches and '%s' competition.%n",
-            result.getText().getValue(),
-            result.getKeywordIdeaMetrics().getAvgMonthlySearches().getValue(),
+            result.getText(),
+            result.getKeywordIdeaMetrics().getAvgMonthlySearches(),
             result.getKeywordIdeaMetrics().getCompetition());
       }
     }

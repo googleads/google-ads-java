@@ -14,9 +14,10 @@
 
 package com.google.ads.googleads.lib.catalog;
 
-import com.google.ads.googleads.annotations.api.VersionDescriptor;
 import com.google.ads.googleads.lib.BaseGoogleAdsException;
+import com.google.ads.googleads.lib.utils.messageproxy.MessageProxyProvider;
 import com.google.common.base.Preconditions;
+import com.google.protobuf.Message;
 import java.util.Objects;
 
 /**
@@ -30,24 +31,28 @@ public final class Version implements Comparable<Version> {
 
   private final String versionName;
   private final BaseGoogleAdsException.Factory exceptionFactory;
-
-  Version(VersionDescriptor descriptor, Class<?> descriptorClass)
-      throws IllegalAccessException, InstantiationException {
-    this(
-        descriptor.versionName(),
-        (BaseGoogleAdsException.Factory) descriptor.googleAdsExceptionFactory().newInstance(),
-        descriptorClass);
-  }
+  private final MessageProxyProvider messageProxyProvider;
+  private final int versionNumber;
+  private final String packageNameIdentifier;
 
   Version(
       String versionName,
       BaseGoogleAdsException.Factory exceptionFactory,
-      Class<?> descriptorClass) {
-    this.versionName = Preconditions.checkNotNull(versionName);
-    this.descriptorClass = Preconditions.checkNotNull(descriptorClass);
-    this.exceptionFactory = Preconditions.checkNotNull(exceptionFactory);
+      Class<?> descriptorClass,
+      MessageProxyProvider messageProxyProvider) {
     Preconditions.checkArgument(
         versionName.matches("v[0-9]+"), "Invalid version name: %", versionName);
+    this.versionName = Preconditions.checkNotNull(versionName);
+    this.versionNumber = Preconditions.checkNotNull(extractVersionNumber(versionName));
+    this.descriptorClass = Preconditions.checkNotNull(descriptorClass);
+    this.exceptionFactory = Preconditions.checkNotNull(exceptionFactory);
+    this.messageProxyProvider = Preconditions.checkNotNull(messageProxyProvider);
+    this.packageNameIdentifier = "." + versionName + ".";
+  }
+
+  /** Gets the (major) version number of this version. */
+  public int getVersionNumber() {
+    return versionNumber;
   }
 
   /**
@@ -78,6 +83,16 @@ public final class Version implements Comparable<Version> {
     return exceptionFactory;
   }
 
+  /** Gets the {@link MessageProxyProvider} for this Version. */
+  public MessageProxyProvider getMessageProxyProvider() {
+    return messageProxyProvider;
+  }
+
+  /** Returns true if this Version is the same as that of the provided message. */
+  public boolean containsMessage(Message input) {
+    return input.getClass().getPackage().getName().contains(packageNameIdentifier);
+  }
+
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -93,5 +108,10 @@ public final class Version implements Comparable<Version> {
   @Override
   public int hashCode() {
     return Objects.hash(versionName);
+  }
+
+  /** Gets the version number from a string matching v[0-9]+. */
+  private static int extractVersionNumber(String versionName) {
+    return Integer.valueOf(versionName.substring(1));
   }
 }

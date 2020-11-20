@@ -18,27 +18,25 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.v5.common.MatchingFunction;
-import com.google.ads.googleads.v5.common.Operand;
-import com.google.ads.googleads.v5.common.Operand.ConstantOperand;
-import com.google.ads.googleads.v5.enums.FeedOriginEnum.FeedOrigin;
-import com.google.ads.googleads.v5.enums.MatchingFunctionOperatorEnum.MatchingFunctionOperator;
-import com.google.ads.googleads.v5.enums.PlaceholderTypeEnum.PlaceholderType;
-import com.google.ads.googleads.v5.errors.GoogleAdsError;
-import com.google.ads.googleads.v5.errors.GoogleAdsException;
-import com.google.ads.googleads.v5.resources.CustomerFeed;
-import com.google.ads.googleads.v5.resources.Feed;
-import com.google.ads.googleads.v5.resources.Feed.PlacesLocationFeedData;
-import com.google.ads.googleads.v5.resources.Feed.PlacesLocationFeedData.OAuthInfo;
-import com.google.ads.googleads.v5.services.CustomerFeedOperation;
-import com.google.ads.googleads.v5.services.CustomerFeedServiceClient;
-import com.google.ads.googleads.v5.services.FeedOperation;
-import com.google.ads.googleads.v5.services.FeedServiceClient;
-import com.google.ads.googleads.v5.services.MutateCustomerFeedsResponse;
-import com.google.ads.googleads.v5.services.MutateFeedsResponse;
+import com.google.ads.googleads.v6.common.MatchingFunction;
+import com.google.ads.googleads.v6.common.Operand;
+import com.google.ads.googleads.v6.common.Operand.ConstantOperand;
+import com.google.ads.googleads.v6.enums.FeedOriginEnum.FeedOrigin;
+import com.google.ads.googleads.v6.enums.MatchingFunctionOperatorEnum.MatchingFunctionOperator;
+import com.google.ads.googleads.v6.enums.PlaceholderTypeEnum.PlaceholderType;
+import com.google.ads.googleads.v6.errors.GoogleAdsError;
+import com.google.ads.googleads.v6.errors.GoogleAdsException;
+import com.google.ads.googleads.v6.resources.CustomerFeed;
+import com.google.ads.googleads.v6.resources.Feed;
+import com.google.ads.googleads.v6.resources.Feed.PlacesLocationFeedData;
+import com.google.ads.googleads.v6.resources.Feed.PlacesLocationFeedData.OAuthInfo;
+import com.google.ads.googleads.v6.services.CustomerFeedOperation;
+import com.google.ads.googleads.v6.services.CustomerFeedServiceClient;
+import com.google.ads.googleads.v6.services.FeedOperation;
+import com.google.ads.googleads.v6.services.FeedServiceClient;
+import com.google.ads.googleads.v6.services.MutateCustomerFeedsResponse;
+import com.google.ads.googleads.v6.services.MutateFeedsResponse;
 import com.google.common.collect.ImmutableList;
-import com.google.protobuf.BoolValue;
-import com.google.protobuf.StringValue;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
@@ -142,23 +140,23 @@ public class AddGoogleMyBusinessLocationExtensions {
     // account on behalf of the user identified by gmbEmailAddress.
     PlacesLocationFeedData.Builder placesLocationFeedData =
         PlacesLocationFeedData.newBuilder()
-            .setEmailAddress(StringValue.of(gmbEmailAddress))
+            .setEmailAddress(gmbEmailAddress)
             // Used to filter Google My Business listings by labels. If entries exist in
             // label_filters, only listings that have at least one of the labels set are
             // candidates to be synchronized into FeedItems. If no entries exist in
             // label_filters, then all listings are candidates for syncing.
-            .addLabelFilters(StringValue.of("Stores in New York"))
+            .addLabelFilters("Stores in New York")
             // Sets the authentication info to be able to connect Google Ads to the GMB
             // account.
             .setOauthInfo(
                 OAuthInfo.newBuilder()
-                    .setHttpMethod(StringValue.of("GET"))
-                    .setHttpRequestUrl(StringValue.of(GOOGLE_ADS_SCOPE))
-                    .setHttpAuthorizationHeader(StringValue.of("Bearer " + gmbAccessToken))
+                    .setHttpMethod("GET")
+                    .setHttpRequestUrl(GOOGLE_ADS_SCOPE)
+                    .setHttpAuthorizationHeader("Bearer " + gmbAccessToken)
                     .build());
 
     if (businessAccountIdentifier != null) {
-      placesLocationFeedData.setBusinessAccountId(StringValue.of(businessAccountIdentifier));
+      placesLocationFeedData.setBusinessAccountId(businessAccountIdentifier);
     }
 
     // Creates a feed that will sync to the Google My Business account. Do not add FeedAttributes to
@@ -166,7 +164,7 @@ public class AddGoogleMyBusinessLocationExtensions {
     // feed.
     Feed.Builder gmbFeed =
         Feed.newBuilder()
-            .setName(StringValue.of("Google My Business feed #" + System.currentTimeMillis()))
+            .setName("Google My Business feed #" + System.currentTimeMillis())
             // Configures the location feed populated from Google My Business Locations.
             .setPlacesLocationFeedData(placesLocationFeedData)
             // Since this feed's feed items will be managed by Google,
@@ -190,7 +188,7 @@ public class AddGoogleMyBusinessLocationExtensions {
       // the LOCATION placeholder type.
       CustomerFeed customerFeed =
           CustomerFeed.newBuilder()
-              .setFeed(StringValue.of(gmbFeedResourceName))
+              .setFeed(gmbFeedResourceName)
               .addPlaceholderTypes(PlaceholderType.LOCATION)
               // Creates a matching function that will always evaluate to true.
               .setMatchingFunction(
@@ -198,11 +196,9 @@ public class AddGoogleMyBusinessLocationExtensions {
                       .addLeftOperands(
                           Operand.newBuilder()
                               .setConstantOperand(
-                                  ConstantOperand.newBuilder()
-                                      .setBooleanValue(BoolValue.of(true))
-                                      .build())
+                                  ConstantOperand.newBuilder().setBooleanValue(true).build())
                               .build())
-                      .setFunctionString(StringValue.of("IDENTITY(true)"))
+                      .setFunctionString("IDENTITY(true)")
                       .setOperator(MatchingFunctionOperator.IDENTITY)
                       .build())
               .build();

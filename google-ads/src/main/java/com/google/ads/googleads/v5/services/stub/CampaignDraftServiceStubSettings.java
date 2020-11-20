@@ -109,7 +109,8 @@ public class CampaignDraftServiceStubSettings
   private final OperationCallSettings<PromoteCampaignDraftRequest, Empty, Empty>
       promoteCampaignDraftOperationSettings;
   private final PagedCallSettings<
-          ListCampaignDraftAsyncErrorsRequest, ListCampaignDraftAsyncErrorsResponse,
+          ListCampaignDraftAsyncErrorsRequest,
+          ListCampaignDraftAsyncErrorsResponse,
           ListCampaignDraftAsyncErrorsPagedResponse>
       listCampaignDraftAsyncErrorsSettings;
 
@@ -138,7 +139,8 @@ public class CampaignDraftServiceStubSettings
 
   /** Returns the object with the settings used for calls to listCampaignDraftAsyncErrors. */
   public PagedCallSettings<
-          ListCampaignDraftAsyncErrorsRequest, ListCampaignDraftAsyncErrorsResponse,
+          ListCampaignDraftAsyncErrorsRequest,
+          ListCampaignDraftAsyncErrorsResponse,
           ListCampaignDraftAsyncErrorsPagedResponse>
       listCampaignDraftAsyncErrorsSettings() {
     return listCampaignDraftAsyncErrorsSettings;
@@ -267,11 +269,13 @@ public class CampaignDraftServiceStubSettings
           };
 
   private static final PagedListResponseFactory<
-          ListCampaignDraftAsyncErrorsRequest, ListCampaignDraftAsyncErrorsResponse,
+          ListCampaignDraftAsyncErrorsRequest,
+          ListCampaignDraftAsyncErrorsResponse,
           ListCampaignDraftAsyncErrorsPagedResponse>
       LIST_CAMPAIGN_DRAFT_ASYNC_ERRORS_PAGE_STR_FACT =
           new PagedListResponseFactory<
-              ListCampaignDraftAsyncErrorsRequest, ListCampaignDraftAsyncErrorsResponse,
+              ListCampaignDraftAsyncErrorsRequest,
+              ListCampaignDraftAsyncErrorsResponse,
               ListCampaignDraftAsyncErrorsPagedResponse>() {
             @Override
             public ApiFuture<ListCampaignDraftAsyncErrorsPagedResponse> getFuturePagedResponse(
@@ -282,7 +286,8 @@ public class CampaignDraftServiceStubSettings
                 ApiCallContext context,
                 ApiFuture<ListCampaignDraftAsyncErrorsResponse> futureResponse) {
               PageContext<
-                      ListCampaignDraftAsyncErrorsRequest, ListCampaignDraftAsyncErrorsResponse,
+                      ListCampaignDraftAsyncErrorsRequest,
+                      ListCampaignDraftAsyncErrorsResponse,
                       Status>
                   pageContext =
                       PageContext.create(
@@ -310,7 +315,8 @@ public class CampaignDraftServiceStubSettings
     private final OperationCallSettings.Builder<PromoteCampaignDraftRequest, Empty, Empty>
         promoteCampaignDraftOperationSettings;
     private final PagedCallSettings.Builder<
-            ListCampaignDraftAsyncErrorsRequest, ListCampaignDraftAsyncErrorsResponse,
+            ListCampaignDraftAsyncErrorsRequest,
+            ListCampaignDraftAsyncErrorsResponse,
             ListCampaignDraftAsyncErrorsPagedResponse>
         listCampaignDraftAsyncErrorsSettings;
 
@@ -508,7 +514,8 @@ public class CampaignDraftServiceStubSettings
 
     /** Returns the builder for the settings used for calls to listCampaignDraftAsyncErrors. */
     public PagedCallSettings.Builder<
-            ListCampaignDraftAsyncErrorsRequest, ListCampaignDraftAsyncErrorsResponse,
+            ListCampaignDraftAsyncErrorsRequest,
+            ListCampaignDraftAsyncErrorsResponse,
             ListCampaignDraftAsyncErrorsPagedResponse>
         listCampaignDraftAsyncErrorsSettings() {
       return listCampaignDraftAsyncErrorsSettings;

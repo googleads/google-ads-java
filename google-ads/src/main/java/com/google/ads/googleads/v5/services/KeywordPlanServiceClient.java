@@ -50,13 +50,13 @@ import javax.annotation.Generated;
  * methods:
  *
  * <ol>
- *   <li> A "flattened" method. With this type of method, the fields of the request type have been
+ *   <li>A "flattened" method. With this type of method, the fields of the request type have been
  *       converted into function parameters. It may be the case that not all fields are available as
  *       parameters, and not every API method will have a flattened method entry point.
- *   <li> A "request object" method. This type of method only takes one parameter, a request object,
+ *   <li>A "request object" method. This type of method only takes one parameter, a request object,
  *       which must be constructed before the call. Not every API method will have a request object
  *       method.
- *   <li> A "callable" method. This type of method takes no parameters and returns an immutable API
+ *   <li>A "callable" method. This type of method takes no parameters and returns an immutable API
  *       callable object, which can be used to initiate calls to the service.
  * </ol>
  *
@@ -328,8 +328,36 @@ public class KeywordPlanServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (KeywordPlanServiceClient keywordPlanServiceClient = KeywordPlanServiceClient.create()) {
-   *   String keywordPlan = "";
+   *   KeywordPlanName keywordPlan = KeywordPlanName.of("[CUSTOMER]", "[KEYWORD_PLAN]");
    *   GenerateForecastCurveResponse response = keywordPlanServiceClient.generateForecastCurve(keywordPlan);
+   * }
+   * </code></pre>
+   *
+   * @param keywordPlan Required. The resource name of the keyword plan to be forecasted.
+   * @throws com.google.api.gax.rpc.ApiException if the remote call fails
+   */
+  public final GenerateForecastCurveResponse generateForecastCurve(KeywordPlanName keywordPlan) {
+    GenerateForecastCurveRequest request =
+        GenerateForecastCurveRequest.newBuilder()
+            .setKeywordPlan(keywordPlan == null ? null : keywordPlan.toString())
+            .build();
+    return generateForecastCurve(request);
+  }
+
+  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  /**
+   * Returns the requested Keyword Plan forecast curve. Only the bidding strategy is considered for
+   * generating forecast curve. The bidding strategy value specified in the plan is ignored.
+   *
+   * <p>To generate a forecast at a value specified in the plan, use
+   * KeywordPlanService.GenerateForecastMetrics.
+   *
+   * <p>Sample code:
+   *
+   * <pre><code>
+   * try (KeywordPlanServiceClient keywordPlanServiceClient = KeywordPlanServiceClient.create()) {
+   *   KeywordPlanName keywordPlan = KeywordPlanName.of("[CUSTOMER]", "[KEYWORD_PLAN]");
+   *   GenerateForecastCurveResponse response = keywordPlanServiceClient.generateForecastCurve(keywordPlan.toString());
    * }
    * </code></pre>
    *
@@ -354,9 +382,9 @@ public class KeywordPlanServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (KeywordPlanServiceClient keywordPlanServiceClient = KeywordPlanServiceClient.create()) {
-   *   String keywordPlan = "";
+   *   KeywordPlanName keywordPlan = KeywordPlanName.of("[CUSTOMER]", "[KEYWORD_PLAN]");
    *   GenerateForecastCurveRequest request = GenerateForecastCurveRequest.newBuilder()
-   *     .setKeywordPlan(keywordPlan)
+   *     .setKeywordPlan(keywordPlan.toString())
    *     .build();
    *   GenerateForecastCurveResponse response = keywordPlanServiceClient.generateForecastCurve(request);
    * }
@@ -382,9 +410,9 @@ public class KeywordPlanServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (KeywordPlanServiceClient keywordPlanServiceClient = KeywordPlanServiceClient.create()) {
-   *   String keywordPlan = "";
+   *   KeywordPlanName keywordPlan = KeywordPlanName.of("[CUSTOMER]", "[KEYWORD_PLAN]");
    *   GenerateForecastCurveRequest request = GenerateForecastCurveRequest.newBuilder()
-   *     .setKeywordPlan(keywordPlan)
+   *     .setKeywordPlan(keywordPlan.toString())
    *     .build();
    *   ApiFuture&lt;GenerateForecastCurveResponse&gt; future = keywordPlanServiceClient.generateForecastCurveCallable().futureCall(request);
    *   // Do something
@@ -409,8 +437,37 @@ public class KeywordPlanServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (KeywordPlanServiceClient keywordPlanServiceClient = KeywordPlanServiceClient.create()) {
-   *   String keywordPlan = "";
+   *   KeywordPlanName keywordPlan = KeywordPlanName.of("[CUSTOMER]", "[KEYWORD_PLAN]");
    *   GenerateForecastTimeSeriesResponse response = keywordPlanServiceClient.generateForecastTimeSeries(keywordPlan);
+   * }
+   * </code></pre>
+   *
+   * @param keywordPlan Required. The resource name of the keyword plan to be forecasted.
+   * @throws com.google.api.gax.rpc.ApiException if the remote call fails
+   */
+  public final GenerateForecastTimeSeriesResponse generateForecastTimeSeries(
+      KeywordPlanName keywordPlan) {
+    GenerateForecastTimeSeriesRequest request =
+        GenerateForecastTimeSeriesRequest.newBuilder()
+            .setKeywordPlan(keywordPlan == null ? null : keywordPlan.toString())
+            .build();
+    return generateForecastTimeSeries(request);
+  }
+
+  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  /**
+   * Returns a forecast in the form of a time series for the Keyword Plan over the next 52 weeks.
+   * (1) Forecasts closer to the current date are generally more accurate than further out.
+   *
+   * <p>(2) The forecast reflects seasonal trends using current and prior traffic patterns. The
+   * forecast period of the plan is ignored.
+   *
+   * <p>Sample code:
+   *
+   * <pre><code>
+   * try (KeywordPlanServiceClient keywordPlanServiceClient = KeywordPlanServiceClient.create()) {
+   *   KeywordPlanName keywordPlan = KeywordPlanName.of("[CUSTOMER]", "[KEYWORD_PLAN]");
+   *   GenerateForecastTimeSeriesResponse response = keywordPlanServiceClient.generateForecastTimeSeries(keywordPlan.toString());
    * }
    * </code></pre>
    *
@@ -435,9 +492,9 @@ public class KeywordPlanServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (KeywordPlanServiceClient keywordPlanServiceClient = KeywordPlanServiceClient.create()) {
-   *   String keywordPlan = "";
+   *   KeywordPlanName keywordPlan = KeywordPlanName.of("[CUSTOMER]", "[KEYWORD_PLAN]");
    *   GenerateForecastTimeSeriesRequest request = GenerateForecastTimeSeriesRequest.newBuilder()
-   *     .setKeywordPlan(keywordPlan)
+   *     .setKeywordPlan(keywordPlan.toString())
    *     .build();
    *   GenerateForecastTimeSeriesResponse response = keywordPlanServiceClient.generateForecastTimeSeries(request);
    * }
@@ -463,9 +520,9 @@ public class KeywordPlanServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (KeywordPlanServiceClient keywordPlanServiceClient = KeywordPlanServiceClient.create()) {
-   *   String keywordPlan = "";
+   *   KeywordPlanName keywordPlan = KeywordPlanName.of("[CUSTOMER]", "[KEYWORD_PLAN]");
    *   GenerateForecastTimeSeriesRequest request = GenerateForecastTimeSeriesRequest.newBuilder()
-   *     .setKeywordPlan(keywordPlan)
+   *     .setKeywordPlan(keywordPlan.toString())
    *     .build();
    *   ApiFuture&lt;GenerateForecastTimeSeriesResponse&gt; future = keywordPlanServiceClient.generateForecastTimeSeriesCallable().futureCall(request);
    *   // Do something
@@ -486,8 +543,33 @@ public class KeywordPlanServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (KeywordPlanServiceClient keywordPlanServiceClient = KeywordPlanServiceClient.create()) {
-   *   String keywordPlan = "";
+   *   KeywordPlanName keywordPlan = KeywordPlanName.of("[CUSTOMER]", "[KEYWORD_PLAN]");
    *   GenerateForecastMetricsResponse response = keywordPlanServiceClient.generateForecastMetrics(keywordPlan);
+   * }
+   * </code></pre>
+   *
+   * @param keywordPlan Required. The resource name of the keyword plan to be forecasted.
+   * @throws com.google.api.gax.rpc.ApiException if the remote call fails
+   */
+  public final GenerateForecastMetricsResponse generateForecastMetrics(
+      KeywordPlanName keywordPlan) {
+    GenerateForecastMetricsRequest request =
+        GenerateForecastMetricsRequest.newBuilder()
+            .setKeywordPlan(keywordPlan == null ? null : keywordPlan.toString())
+            .build();
+    return generateForecastMetrics(request);
+  }
+
+  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  /**
+   * Returns the requested Keyword Plan forecasts.
+   *
+   * <p>Sample code:
+   *
+   * <pre><code>
+   * try (KeywordPlanServiceClient keywordPlanServiceClient = KeywordPlanServiceClient.create()) {
+   *   KeywordPlanName keywordPlan = KeywordPlanName.of("[CUSTOMER]", "[KEYWORD_PLAN]");
+   *   GenerateForecastMetricsResponse response = keywordPlanServiceClient.generateForecastMetrics(keywordPlan.toString());
    * }
    * </code></pre>
    *
@@ -508,9 +590,9 @@ public class KeywordPlanServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (KeywordPlanServiceClient keywordPlanServiceClient = KeywordPlanServiceClient.create()) {
-   *   String keywordPlan = "";
+   *   KeywordPlanName keywordPlan = KeywordPlanName.of("[CUSTOMER]", "[KEYWORD_PLAN]");
    *   GenerateForecastMetricsRequest request = GenerateForecastMetricsRequest.newBuilder()
-   *     .setKeywordPlan(keywordPlan)
+   *     .setKeywordPlan(keywordPlan.toString())
    *     .build();
    *   GenerateForecastMetricsResponse response = keywordPlanServiceClient.generateForecastMetrics(request);
    * }
@@ -532,9 +614,9 @@ public class KeywordPlanServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (KeywordPlanServiceClient keywordPlanServiceClient = KeywordPlanServiceClient.create()) {
-   *   String keywordPlan = "";
+   *   KeywordPlanName keywordPlan = KeywordPlanName.of("[CUSTOMER]", "[KEYWORD_PLAN]");
    *   GenerateForecastMetricsRequest request = GenerateForecastMetricsRequest.newBuilder()
-   *     .setKeywordPlan(keywordPlan)
+   *     .setKeywordPlan(keywordPlan.toString())
    *     .build();
    *   ApiFuture&lt;GenerateForecastMetricsResponse&gt; future = keywordPlanServiceClient.generateForecastMetricsCallable().futureCall(request);
    *   // Do something
@@ -555,8 +637,34 @@ public class KeywordPlanServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (KeywordPlanServiceClient keywordPlanServiceClient = KeywordPlanServiceClient.create()) {
-   *   String keywordPlan = "";
+   *   KeywordPlanName keywordPlan = KeywordPlanName.of("[CUSTOMER]", "[KEYWORD_PLAN]");
    *   GenerateHistoricalMetricsResponse response = keywordPlanServiceClient.generateHistoricalMetrics(keywordPlan);
+   * }
+   * </code></pre>
+   *
+   * @param keywordPlan Required. The resource name of the keyword plan of which historical metrics
+   *     are requested.
+   * @throws com.google.api.gax.rpc.ApiException if the remote call fails
+   */
+  public final GenerateHistoricalMetricsResponse generateHistoricalMetrics(
+      KeywordPlanName keywordPlan) {
+    GenerateHistoricalMetricsRequest request =
+        GenerateHistoricalMetricsRequest.newBuilder()
+            .setKeywordPlan(keywordPlan == null ? null : keywordPlan.toString())
+            .build();
+    return generateHistoricalMetrics(request);
+  }
+
+  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  /**
+   * Returns the requested Keyword Plan historical metrics.
+   *
+   * <p>Sample code:
+   *
+   * <pre><code>
+   * try (KeywordPlanServiceClient keywordPlanServiceClient = KeywordPlanServiceClient.create()) {
+   *   KeywordPlanName keywordPlan = KeywordPlanName.of("[CUSTOMER]", "[KEYWORD_PLAN]");
+   *   GenerateHistoricalMetricsResponse response = keywordPlanServiceClient.generateHistoricalMetrics(keywordPlan.toString());
    * }
    * </code></pre>
    *
@@ -578,9 +686,9 @@ public class KeywordPlanServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (KeywordPlanServiceClient keywordPlanServiceClient = KeywordPlanServiceClient.create()) {
-   *   String keywordPlan = "";
+   *   KeywordPlanName keywordPlan = KeywordPlanName.of("[CUSTOMER]", "[KEYWORD_PLAN]");
    *   GenerateHistoricalMetricsRequest request = GenerateHistoricalMetricsRequest.newBuilder()
-   *     .setKeywordPlan(keywordPlan)
+   *     .setKeywordPlan(keywordPlan.toString())
    *     .build();
    *   GenerateHistoricalMetricsResponse response = keywordPlanServiceClient.generateHistoricalMetrics(request);
    * }
@@ -602,9 +710,9 @@ public class KeywordPlanServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (KeywordPlanServiceClient keywordPlanServiceClient = KeywordPlanServiceClient.create()) {
-   *   String keywordPlan = "";
+   *   KeywordPlanName keywordPlan = KeywordPlanName.of("[CUSTOMER]", "[KEYWORD_PLAN]");
    *   GenerateHistoricalMetricsRequest request = GenerateHistoricalMetricsRequest.newBuilder()
-   *     .setKeywordPlan(keywordPlan)
+   *     .setKeywordPlan(keywordPlan.toString())
    *     .build();
    *   ApiFuture&lt;GenerateHistoricalMetricsResponse&gt; future = keywordPlanServiceClient.generateHistoricalMetricsCallable().futureCall(request);
    *   // Do something

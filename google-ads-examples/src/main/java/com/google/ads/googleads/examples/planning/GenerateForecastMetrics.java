@@ -18,13 +18,13 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.v5.errors.GoogleAdsError;
-import com.google.ads.googleads.v5.errors.GoogleAdsException;
-import com.google.ads.googleads.v5.services.ForecastMetrics;
-import com.google.ads.googleads.v5.services.GenerateForecastMetricsResponse;
-import com.google.ads.googleads.v5.services.KeywordPlanKeywordForecast;
-import com.google.ads.googleads.v5.services.KeywordPlanServiceClient;
-import com.google.ads.googleads.v5.utils.ResourceNames;
+import com.google.ads.googleads.v6.errors.GoogleAdsError;
+import com.google.ads.googleads.v6.errors.GoogleAdsException;
+import com.google.ads.googleads.v6.services.ForecastMetrics;
+import com.google.ads.googleads.v6.services.GenerateForecastMetricsResponse;
+import com.google.ads.googleads.v6.services.KeywordPlanKeywordForecast;
+import com.google.ads.googleads.v6.services.KeywordPlanServiceClient;
+import com.google.ads.googleads.v6.utils.ResourceNames;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
@@ -102,12 +102,10 @@ public class GenerateForecastMetrics {
       int i = 0;
       for (KeywordPlanKeywordForecast forecast : response.getKeywordForecastsList()) {
         ForecastMetrics metrics = forecast.getKeywordForecast();
-        System.out.printf(
-            "%d Keyword ID: %s%n", ++i, forecast.getKeywordPlanAdGroupKeyword().getValue());
-        System.out.printf("Estimated daily clicks: %f%n", metrics.getClicks().getValue());
-        System.out.printf("Estimated daily impressions: %f%n", metrics.getImpressions().getValue());
-        System.out.printf(
-            "Estimated average cpc (micros): %d%n%n", metrics.getAverageCpc().getValue());
+        System.out.printf("%d Keyword ID: %s%n", ++i, forecast.getKeywordPlanAdGroupKeyword());
+        System.out.printf("Estimated daily clicks: %f%n", metrics.getClicks());
+        System.out.printf("Estimated daily impressions: %f%n", metrics.getImpressions());
+        System.out.printf("Estimated average cpc (micros): %d%n%n", metrics.getAverageCpc());
       }
     }
   }

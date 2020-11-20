@@ -18,19 +18,17 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.v5.common.BasicUserListInfo;
-import com.google.ads.googleads.v5.common.UserListActionInfo;
-import com.google.ads.googleads.v5.enums.UserListMembershipStatusEnum.UserListMembershipStatus;
-import com.google.ads.googleads.v5.errors.GoogleAdsError;
-import com.google.ads.googleads.v5.errors.GoogleAdsException;
-import com.google.ads.googleads.v5.resources.UserList;
-import com.google.ads.googleads.v5.services.MutateUserListsResponse;
-import com.google.ads.googleads.v5.services.UserListOperation;
-import com.google.ads.googleads.v5.services.UserListServiceClient;
-import com.google.ads.googleads.v5.utils.ResourceNames;
+import com.google.ads.googleads.v6.common.BasicUserListInfo;
+import com.google.ads.googleads.v6.common.UserListActionInfo;
+import com.google.ads.googleads.v6.enums.UserListMembershipStatusEnum.UserListMembershipStatus;
+import com.google.ads.googleads.v6.errors.GoogleAdsError;
+import com.google.ads.googleads.v6.errors.GoogleAdsException;
+import com.google.ads.googleads.v6.resources.UserList;
+import com.google.ads.googleads.v6.services.MutateUserListsResponse;
+import com.google.ads.googleads.v6.services.UserListOperation;
+import com.google.ads.googleads.v6.services.UserListServiceClient;
+import com.google.ads.googleads.v6.utils.ResourceNames;
 import com.google.common.collect.ImmutableList;
-import com.google.protobuf.Int64Value;
-import com.google.protobuf.StringValue;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -108,8 +106,7 @@ public class AddConversionBasedUserList {
       // conversion action that, when triggered, will cause a user to be added to a UserList.
       UserListActionInfo userListActionInfo =
           UserListActionInfo.newBuilder()
-              .setConversionAction(
-                  StringValue.of(ResourceNames.conversionAction(customerId, conversionActionId)))
+              .setConversionAction(ResourceNames.conversionAction(customerId, conversionActionId))
               .build();
       userListActionInfoList.add(userListActionInfo);
     }
@@ -121,11 +118,9 @@ public class AddConversionBasedUserList {
     // Creates the basic user list.
     UserList basicUserList =
         UserList.newBuilder()
-            .setName(StringValue.of("Example BasicUserList #" + System.currentTimeMillis()))
-            .setDescription(
-                StringValue.of(
-                    "A list of people who have triggered one or more conversion actions"))
-            .setMembershipLifeSpan(Int64Value.of(365))
+            .setName("Example BasicUserList #" + System.currentTimeMillis())
+            .setDescription("A list of people who have triggered one or more conversion actions")
+            .setMembershipLifeSpan(365)
             .setBasicUserList(basicUserListInfo)
             .setMembershipStatus(UserListMembershipStatus.OPEN)
             .build();

@@ -1,3 +1,12 @@
+10.0.0 - 2020-11-11
+-------------------
+- Added support and examples for Google Ads API v6.0.
+- Updated logging to scrub personal information (email addresses) from logs.
+- Ensure that GoogleAdsFailure is decoded for exceptions on server streaming 
+  calls (#332).
+- Fix FieldMasks util to return correct result for optional fields (#344).
+- Removed reflection based catalog in favour of generated code.
+
 9.0.0 - 2020-09-01
 ------------------
 - Added support and examples for Google Ads API v5_0.

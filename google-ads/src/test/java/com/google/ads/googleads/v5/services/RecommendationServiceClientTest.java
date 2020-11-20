@@ -16,7 +16,6 @@
 package com.google.ads.googleads.v5.services;
 
 import com.google.ads.googleads.v5.resources.Recommendation;
-import com.google.ads.googleads.v5.services.DismissRecommendationRequest.DismissRecommendationOperation;
 import com.google.api.gax.core.NoCredentialsProvider;
 import com.google.api.gax.grpc.GaxGrpcProperties;
 import com.google.api.gax.grpc.testing.LocalChannelProvider;

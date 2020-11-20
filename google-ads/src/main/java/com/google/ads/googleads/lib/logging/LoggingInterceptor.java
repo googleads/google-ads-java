@@ -15,6 +15,8 @@
 package com.google.ads.googleads.lib.logging;
 
 import com.google.ads.googleads.lib.logging.Event.Summary;
+import com.google.ads.googleads.lib.logging.scrub.LogScrubber;
+import com.google.ads.googleads.lib.utils.messageproxy.MessageEditor;
 import com.google.common.collect.ImmutableMap;
 import com.google.common.collect.ImmutableSet;
 import io.grpc.CallOptions;
@@ -45,6 +47,7 @@ public class LoggingInterceptor implements ClientInterceptor {
   private static final ImmutableSet<CharSequence> HEADERS_TO_SCRUB =
       ImmutableSet.of("developer-token", "authorization");
   private static final Logger thisClassLogger = LoggerFactory.getLogger(LoggingInterceptor.class);
+  private final MessageEditor<Object> MESSAGE_SCRUBBER = LogScrubber.getInstance();
   private final RequestLogger requestLogger;
   private final ImmutableMap<String, String> requestHeaders;
   private final ImmutableMap<String, String> scrubbedRequestHeaders;
@@ -59,11 +62,7 @@ public class LoggingInterceptor implements ClientInterceptor {
     this.endpoint = endpoint;
   }
 
-  /**
-   * Logs the Google Ads API fields required for debugging.
-   *
-   * {@inheritDoc}
-   */
+  /** Logs the Google Ads API fields required for debugging. */
   @Override
   public <ReqT, RespT> ClientCall<ReqT, RespT> interceptCall(
       final MethodDescriptor<ReqT, RespT> method, CallOptions callOptions, Channel next) {
@@ -79,8 +78,9 @@ public class LoggingInterceptor implements ClientInterceptor {
             new SimpleForwardingClientCallListener<RespT>(responseListener) {
               @Override
               public void onMessage(RespT message) {
-                response = message;
+                // Forwards the message onto other interceptors first so we don't delay processing.
                 super.onMessage(message);
+                response = (RespT) MESSAGE_SCRUBBER.edit(message);
               }
 
               @Override
@@ -116,8 +116,9 @@ public class LoggingInterceptor implements ClientInterceptor {
 
       @Override
       public void sendMessage(ReqT message) {
-        request = message;
+        // Forwards the message onto other interceptors first so we don't delay processing.
         super.sendMessage(message);
+        request = (ReqT) MESSAGE_SCRUBBER.edit(message);
       }
     };
   }

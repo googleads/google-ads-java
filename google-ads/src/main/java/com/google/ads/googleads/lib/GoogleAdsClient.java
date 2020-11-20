@@ -16,7 +16,6 @@ package com.google.ads.googleads.lib;
 
 import com.google.ads.googleads.lib.catalog.ApiCatalog;
 import com.google.ads.googleads.lib.catalog.Primer;
-import com.google.ads.googleads.lib.catalog.GeneratedCatalog;
 import com.google.ads.googleads.lib.logging.LoggingInterceptor;
 import com.google.ads.googleads.lib.logging.RequestLogger;
 import com.google.api.gax.grpc.InstantiatingGrpcChannelProvider;
@@ -25,7 +24,6 @@ import com.google.auth.Credentials;
 import com.google.auth.oauth2.ServiceAccountCredentials;
 import com.google.auth.oauth2.UserCredentials;
 import com.google.auto.value.AutoValue;
-import com.google.common.annotations.Beta;
 import com.google.common.annotations.VisibleForTesting;
 import com.google.common.base.MoreObjects;
 import com.google.common.base.Preconditions;
@@ -78,8 +76,6 @@ public abstract class GoogleAdsClient extends AbstractGoogleAdsClient {
   /** Returns a new builder for {@link GoogleAdsClient} with only default values set. */
   public static Builder newBuilder() {
     AutoValue_GoogleAdsClient.Builder clientBuilder = new AutoValue_GoogleAdsClient.Builder();
-    // Sets the default value for enableGeneratedCatalog.
-    clientBuilder.setEnableGeneratedCatalog(true);
     // Constructs the channel provider.
     InstantiatingGrpcChannelProvider transportChannelProvider =
         InstantiatingGrpcChannelProvider.newBuilder()
@@ -122,10 +118,6 @@ public abstract class GoogleAdsClient extends AbstractGoogleAdsClient {
    */
   @Nullable
   public abstract Long getLinkedCustomerId();
-
-  /** Returns whether this client will enable the generated catalog. */
-  @Beta
-  abstract boolean getEnableGeneratedCatalog();
 
   /** Returns a new {@link GoogleAdsClient.Builder} with the properties as this instance. */
   public abstract Builder toBuilder();
@@ -255,7 +247,6 @@ public abstract class GoogleAdsClient extends AbstractGoogleAdsClient {
     abstract TransportChannelProvider getTransportChannelProvider();
 
     /** Sets the TransportChannelProvider to use. */
-    @VisibleForTesting
     abstract Builder setTransportChannelProvider(TransportChannelProvider transportChannelProvider);
 
     /** Returns the developer token currently configured. */
@@ -302,25 +293,6 @@ public abstract class GoogleAdsClient extends AbstractGoogleAdsClient {
               ex);
         }
       }
-    }
-
-    /** Returns whether this client will enable the generated catalog. */
-    @Beta
-    public abstract boolean getEnableGeneratedCatalog();
-
-    /**
-     * By default, this library uses reflection to build the ApiCatalog. In order to reduce latency,
-     * users may use a pre-generated ApiCatalog that does not use of reflection. This feature is
-     * still experimental.
-     */
-    @Beta
-    public abstract Builder setEnableGeneratedCatalog(boolean enableGeneratedCatalog);
-
-    @Beta
-    private void setEnableGeneratedCatalog(Properties properties) {
-      String configuredEnableGeneratedCatalog =
-          properties.getProperty(ConfigPropertyKey.ENABLE_GENERATED_CATALOG.getPropertyKey());
-      setEnableGeneratedCatalog(Boolean.parseBoolean(configuredEnableGeneratedCatalog));
     }
 
     /** Returns the endpoint currently configured. */
@@ -397,7 +369,6 @@ public abstract class GoogleAdsClient extends AbstractGoogleAdsClient {
       setDeveloperToken(properties);
       setEndpoint(properties);
       setLoginCustomerId(properties);
-      setEnableGeneratedCatalog(properties);
       return this;
     }
 
@@ -430,23 +401,11 @@ public abstract class GoogleAdsClient extends AbstractGoogleAdsClient {
       }
       setTransportChannelProvider(transportChannelProvider);
 
-      // This library has historically used reflection to build the ApiCatalog. In order to reduce
-      // latency, the library now uses an ApiCatalog that is generated during compile time. This
-      // feature is still experimental. In order to restore the previous behavior and build an
-      // ApiCatalog at runtime with the use of reflection, users can set
-      // api.googleads.enableGeneratedCatalog=false in the ads.properties file, which will set the
-      // enableGeneratedCatalog parameter equal to false.
-      GoogleAdsAllVersions versionsCatalog;
-      if (getEnableGeneratedCatalog()) {
-        versionsCatalog =
-            GeneratedCatalog.getDefault()
-                .createAllVersionsClient(getTransportChannelProvider(), getCredentials());
-      } else {
-        versionsCatalog =
-            ApiCatalog.getDefault()
-                .createAllVersionsClient(getTransportChannelProvider(), getCredentials());
-      }
-      setGoogleAdsAllVersions(versionsCatalog);
+      GoogleAdsAllVersions allVersionsClient =
+          ApiCatalog.getDefault()
+              .createAllVersionsClient(getTransportChannelProvider(), getCredentials());
+      setGoogleAdsAllVersions(allVersionsClient);
+
       GoogleAdsClient provider = autoBuild();
       Long loginCustomerId = provider.getLoginCustomerId();
       Preconditions.checkArgument(

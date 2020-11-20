@@ -18,20 +18,18 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.v5.enums.CampaignExperimentTrafficSplitTypeEnum.CampaignExperimentTrafficSplitType;
-import com.google.ads.googleads.v5.errors.GoogleAdsError;
-import com.google.ads.googleads.v5.errors.GoogleAdsException;
-import com.google.ads.googleads.v5.resources.CampaignExperiment;
-import com.google.ads.googleads.v5.services.CampaignExperimentServiceClient;
-import com.google.ads.googleads.v5.services.CreateCampaignExperimentMetadata;
-import com.google.ads.googleads.v5.services.GoogleAdsRow;
-import com.google.ads.googleads.v5.services.GoogleAdsServiceClient;
-import com.google.ads.googleads.v5.services.GoogleAdsServiceClient.SearchPagedResponse;
-import com.google.ads.googleads.v5.utils.ResourceNames;
+import com.google.ads.googleads.v6.enums.CampaignExperimentTrafficSplitTypeEnum.CampaignExperimentTrafficSplitType;
+import com.google.ads.googleads.v6.errors.GoogleAdsError;
+import com.google.ads.googleads.v6.errors.GoogleAdsException;
+import com.google.ads.googleads.v6.resources.CampaignExperiment;
+import com.google.ads.googleads.v6.services.CampaignExperimentServiceClient;
+import com.google.ads.googleads.v6.services.CreateCampaignExperimentMetadata;
+import com.google.ads.googleads.v6.services.GoogleAdsRow;
+import com.google.ads.googleads.v6.services.GoogleAdsServiceClient;
+import com.google.ads.googleads.v6.services.GoogleAdsServiceClient.SearchPagedResponse;
+import com.google.ads.googleads.v6.utils.ResourceNames;
 import com.google.api.gax.longrunning.OperationFuture;
 import com.google.protobuf.Empty;
-import com.google.protobuf.Int64Value;
-import com.google.protobuf.StringValue;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.concurrent.ExecutionException;
@@ -132,10 +130,9 @@ public class CreateCampaignExperiment {
     // Defines the experiment to be created.
     CampaignExperiment experiment =
         CampaignExperiment.newBuilder()
-            .setCampaignDraft(
-                StringValue.of(ResourceNames.campaignDraft(customerId, baseCampaignId, draftId)))
-            .setName(StringValue.of("Campaign experiment #" + System.currentTimeMillis()))
-            .setTrafficSplitPercent(Int64Value.of(50))
+            .setCampaignDraft(ResourceNames.campaignDraft(customerId, baseCampaignId, draftId))
+            .setName("Campaign experiment #" + System.currentTimeMillis())
+            .setTrafficSplitPercent(50)
             .setTrafficSplitType(CampaignExperimentTrafficSplitType.RANDOM_QUERY)
             .build();
 

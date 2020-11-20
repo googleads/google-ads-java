@@ -65,43 +65,44 @@ public final class KeywordPlanCampaignKeywordServiceProto {
       "ations\030\002 \003(\0132E.google.ads.googleads.v5.s" +
       "ervices.KeywordPlanCampaignKeywordOperat" +
       "ionB\003\340A\002\022\027\n\017partial_failure\030\003 \001(\010\022\025\n\rval" +
-      "idate_only\030\004 \001(\010\"\227\002\n#KeywordPlanCampaign" +
+      "idate_only\030\004 \001(\010\"\321\002\n#KeywordPlanCampaign" +
       "KeywordOperation\022/\n\013update_mask\030\004 \001(\0132\032." +
       "google.protobuf.FieldMask\022O\n\006create\030\001 \001(" +
       "\0132=.google.ads.googleads.v5.resources.Ke" +
       "ywordPlanCampaignKeywordH\000\022O\n\006update\030\002 \001" +
       "(\0132=.google.ads.googleads.v5.resources.K" +
-      "eywordPlanCampaignKeywordH\000\022\020\n\006remove\030\003 " +
-      "\001(\tH\000B\013\n\toperation\"\271\001\n)MutateKeywordPlan" +
-      "CampaignKeywordsResponse\0221\n\025partial_fail" +
-      "ure_error\030\003 \001(\0132\022.google.rpc.Status\022Y\n\007r" +
-      "esults\030\002 \003(\0132H.google.ads.googleads.v5.s" +
-      "ervices.MutateKeywordPlanCampaignKeyword" +
-      "Result\"?\n&MutateKeywordPlanCampaignKeywo" +
-      "rdResult\022\025\n\rresource_name\030\001 \001(\t2\345\004\n!Keyw" +
-      "ordPlanCampaignKeywordService\022\375\001\n\035GetKey" +
-      "wordPlanCampaignKeyword\022F.google.ads.goo" +
-      "gleads.v5.services.GetKeywordPlanCampaig" +
-      "nKeywordRequest\032=.google.ads.googleads.v" +
-      "5.resources.KeywordPlanCampaignKeyword\"U" +
-      "\202\323\344\223\002?\022=/v5/{resource_name=customers/*/k" +
-      "eywordPlanCampaignKeywords/*}\332A\rresource" +
-      "_name\022\242\002\n!MutateKeywordPlanCampaignKeywo" +
-      "rds\022J.google.ads.googleads.v5.services.M" +
-      "utateKeywordPlanCampaignKeywordsRequest\032" +
-      "K.google.ads.googleads.v5.services.Mutat" +
-      "eKeywordPlanCampaignKeywordsResponse\"d\202\323" +
-      "\344\223\002E\"@/v5/customers/{customer_id=*}/keyw" +
-      "ordPlanCampaignKeywords:mutate:\001*\332A\026cust" +
-      "omer_id,operations\032\033\312A\030googleads.googlea" +
-      "pis.comB\215\002\n$com.google.ads.googleads.v5." +
-      "servicesB&KeywordPlanCampaignKeywordServ" +
-      "iceProtoP\001ZHgoogle.golang.org/genproto/g" +
-      "oogleapis/ads/googleads/v5/services;serv" +
-      "ices\242\002\003GAA\252\002 Google.Ads.GoogleAds.V5.Ser" +
-      "vices\312\002 Google\\Ads\\GoogleAds\\V5\\Services" +
-      "\352\002$Google::Ads::GoogleAds::V5::Servicesb" +
-      "\006proto3"
+      "eywordPlanCampaignKeywordH\000\022J\n\006remove\030\003 " +
+      "\001(\tB8\372A5\n3googleads.googleapis.com/Keywo" +
+      "rdPlanCampaignKeywordH\000B\013\n\toperation\"\271\001\n" +
+      ")MutateKeywordPlanCampaignKeywordsRespon" +
+      "se\0221\n\025partial_failure_error\030\003 \001(\0132\022.goog" +
+      "le.rpc.Status\022Y\n\007results\030\002 \003(\0132H.google." +
+      "ads.googleads.v5.services.MutateKeywordP" +
+      "lanCampaignKeywordResult\"?\n&MutateKeywor" +
+      "dPlanCampaignKeywordResult\022\025\n\rresource_n" +
+      "ame\030\001 \001(\t2\345\004\n!KeywordPlanCampaignKeyword" +
+      "Service\022\375\001\n\035GetKeywordPlanCampaignKeywor" +
+      "d\022F.google.ads.googleads.v5.services.Get" +
+      "KeywordPlanCampaignKeywordRequest\032=.goog" +
+      "le.ads.googleads.v5.resources.KeywordPla" +
+      "nCampaignKeyword\"U\202\323\344\223\002?\022=/v5/{resource_" +
+      "name=customers/*/keywordPlanCampaignKeyw" +
+      "ords/*}\332A\rresource_name\022\242\002\n!MutateKeywor" +
+      "dPlanCampaignKeywords\022J.google.ads.googl" +
+      "eads.v5.services.MutateKeywordPlanCampai" +
+      "gnKeywordsRequest\032K.google.ads.googleads" +
+      ".v5.services.MutateKeywordPlanCampaignKe" +
+      "ywordsResponse\"d\202\323\344\223\002E\"@/v5/customers/{c" +
+      "ustomer_id=*}/keywordPlanCampaignKeyword" +
+      "s:mutate:\001*\332A\026customer_id,operations\032\033\312A" +
+      "\030googleads.googleapis.comB\215\002\n$com.google" +
+      ".ads.googleads.v5.servicesB&KeywordPlanC" +
+      "ampaignKeywordServiceProtoP\001ZHgoogle.gol" +
+      "ang.org/genproto/googleapis/ads/googlead" +
+      "s/v5/services;services\242\002\003GAA\252\002 Google.Ad" +
+      "s.GoogleAds.V5.Services\312\002 Google\\Ads\\Goo" +
+      "gleAds\\V5\\Services\352\002$Google::Ads::Google" +
+      "Ads::V5::Servicesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

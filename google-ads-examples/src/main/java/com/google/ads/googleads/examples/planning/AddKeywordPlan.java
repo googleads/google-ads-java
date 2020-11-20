@@ -18,38 +18,35 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.v5.enums.KeywordMatchTypeEnum.KeywordMatchType;
-import com.google.ads.googleads.v5.enums.KeywordPlanForecastIntervalEnum.KeywordPlanForecastInterval;
-import com.google.ads.googleads.v5.enums.KeywordPlanNetworkEnum.KeywordPlanNetwork;
-import com.google.ads.googleads.v5.errors.GoogleAdsError;
-import com.google.ads.googleads.v5.errors.GoogleAdsException;
-import com.google.ads.googleads.v5.resources.KeywordPlan;
-import com.google.ads.googleads.v5.resources.KeywordPlanAdGroup;
-import com.google.ads.googleads.v5.resources.KeywordPlanAdGroupKeyword;
-import com.google.ads.googleads.v5.resources.KeywordPlanCampaign;
-import com.google.ads.googleads.v5.resources.KeywordPlanCampaignKeyword;
-import com.google.ads.googleads.v5.resources.KeywordPlanForecastPeriod;
-import com.google.ads.googleads.v5.resources.KeywordPlanGeoTarget;
-import com.google.ads.googleads.v5.services.KeywordPlanAdGroupKeywordOperation;
-import com.google.ads.googleads.v5.services.KeywordPlanAdGroupKeywordServiceClient;
-import com.google.ads.googleads.v5.services.KeywordPlanAdGroupOperation;
-import com.google.ads.googleads.v5.services.KeywordPlanAdGroupServiceClient;
-import com.google.ads.googleads.v5.services.KeywordPlanCampaignKeywordOperation;
-import com.google.ads.googleads.v5.services.KeywordPlanCampaignKeywordServiceClient;
-import com.google.ads.googleads.v5.services.KeywordPlanCampaignOperation;
-import com.google.ads.googleads.v5.services.KeywordPlanCampaignServiceClient;
-import com.google.ads.googleads.v5.services.KeywordPlanOperation;
-import com.google.ads.googleads.v5.services.KeywordPlanServiceClient;
-import com.google.ads.googleads.v5.services.MutateKeywordPlanAdGroupKeywordResult;
-import com.google.ads.googleads.v5.services.MutateKeywordPlanAdGroupKeywordsResponse;
-import com.google.ads.googleads.v5.services.MutateKeywordPlanAdGroupsResponse;
-import com.google.ads.googleads.v5.services.MutateKeywordPlanCampaignKeywordsResponse;
-import com.google.ads.googleads.v5.services.MutateKeywordPlanCampaignsResponse;
-import com.google.ads.googleads.v5.services.MutateKeywordPlansResponse;
-import com.google.ads.googleads.v5.utils.ResourceNames;
-import com.google.protobuf.BoolValue;
-import com.google.protobuf.Int64Value;
-import com.google.protobuf.StringValue;
+import com.google.ads.googleads.v6.enums.KeywordMatchTypeEnum.KeywordMatchType;
+import com.google.ads.googleads.v6.enums.KeywordPlanForecastIntervalEnum.KeywordPlanForecastInterval;
+import com.google.ads.googleads.v6.enums.KeywordPlanNetworkEnum.KeywordPlanNetwork;
+import com.google.ads.googleads.v6.errors.GoogleAdsError;
+import com.google.ads.googleads.v6.errors.GoogleAdsException;
+import com.google.ads.googleads.v6.resources.KeywordPlan;
+import com.google.ads.googleads.v6.resources.KeywordPlanAdGroup;
+import com.google.ads.googleads.v6.resources.KeywordPlanAdGroupKeyword;
+import com.google.ads.googleads.v6.resources.KeywordPlanCampaign;
+import com.google.ads.googleads.v6.resources.KeywordPlanCampaignKeyword;
+import com.google.ads.googleads.v6.resources.KeywordPlanForecastPeriod;
+import com.google.ads.googleads.v6.resources.KeywordPlanGeoTarget;
+import com.google.ads.googleads.v6.services.KeywordPlanAdGroupKeywordOperation;
+import com.google.ads.googleads.v6.services.KeywordPlanAdGroupKeywordServiceClient;
+import com.google.ads.googleads.v6.services.KeywordPlanAdGroupOperation;
+import com.google.ads.googleads.v6.services.KeywordPlanAdGroupServiceClient;
+import com.google.ads.googleads.v6.services.KeywordPlanCampaignKeywordOperation;
+import com.google.ads.googleads.v6.services.KeywordPlanCampaignKeywordServiceClient;
+import com.google.ads.googleads.v6.services.KeywordPlanCampaignOperation;
+import com.google.ads.googleads.v6.services.KeywordPlanCampaignServiceClient;
+import com.google.ads.googleads.v6.services.KeywordPlanOperation;
+import com.google.ads.googleads.v6.services.KeywordPlanServiceClient;
+import com.google.ads.googleads.v6.services.MutateKeywordPlanAdGroupKeywordResult;
+import com.google.ads.googleads.v6.services.MutateKeywordPlanAdGroupKeywordsResponse;
+import com.google.ads.googleads.v6.services.MutateKeywordPlanAdGroupsResponse;
+import com.google.ads.googleads.v6.services.MutateKeywordPlanCampaignKeywordsResponse;
+import com.google.ads.googleads.v6.services.MutateKeywordPlanCampaignsResponse;
+import com.google.ads.googleads.v6.services.MutateKeywordPlansResponse;
+import com.google.ads.googleads.v6.utils.ResourceNames;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Arrays;
@@ -132,8 +129,7 @@ public class AddKeywordPlan {
   private static String createKeywordPlan(GoogleAdsClient googleAdsClient, Long customerId) {
     KeywordPlan plan =
         KeywordPlan.newBuilder()
-            .setName(
-                StringValue.of("Keyword plan for traffic estimate #" + System.currentTimeMillis()))
+            .setName("Keyword plan for traffic estimate #" + System.currentTimeMillis())
             .setForecastPeriod(
                 KeywordPlanForecastPeriod.newBuilder()
                     .setDateInterval(KeywordPlanForecastInterval.NEXT_QUARTER)
@@ -167,24 +163,24 @@ public class AddKeywordPlan {
     // Creates a keyword plan campaign.
     KeywordPlanCampaign.Builder campaign =
         KeywordPlanCampaign.newBuilder()
-            .setName(StringValue.of("Keyword plan campaign #" + System.currentTimeMillis()))
-            .setCpcBidMicros(Int64Value.of(1_000_000L))
+            .setName("Keyword plan campaign #" + System.currentTimeMillis())
+            .setCpcBidMicros(1_000_000L)
             .setKeywordPlanNetwork(KeywordPlanNetwork.GOOGLE_SEARCH)
-            .setKeywordPlan(StringValue.of(keywordPlanResource));
+            .setKeywordPlan(keywordPlanResource);
 
     // See https://developers.google.com/adwords/api/docs/appendix/geotargeting
     // for the list of geo target IDs.
     campaign.addGeoTargets(
         KeywordPlanGeoTarget.newBuilder()
             // Geo-target constant 2840 is for USA.
-            .setGeoTargetConstant(StringValue.of(ResourceNames.geoTargetConstant(2840)))
+            .setGeoTargetConstant(ResourceNames.geoTargetConstant(2840))
             .build());
 
     // See https://developers.google.com/adwords/api/docs/appendix/codes-formats#languages
     // for the list of language criteria IDs.
     //
     // Language criteria 1000 is for English.
-    campaign.addLanguageConstants(StringValue.of(ResourceNames.languageConstant(1000)));
+    campaign.addLanguageConstants(ResourceNames.languageConstant(1000));
 
     KeywordPlanCampaignOperation op =
         KeywordPlanCampaignOperation.newBuilder().setCreate(campaign).build();
@@ -214,9 +210,9 @@ public class AddKeywordPlan {
     // Creates the keyword plan ad group.
     KeywordPlanAdGroup.Builder adGroup =
         KeywordPlanAdGroup.newBuilder()
-            .setKeywordPlanCampaign(StringValue.of(planCampaignResource))
-            .setName(StringValue.of("Keyword plan ad group #" + System.currentTimeMillis()))
-            .setCpcBidMicros(Int64Value.of(2_500_000L));
+            .setKeywordPlanCampaign(planCampaignResource)
+            .setName("Keyword plan ad group #" + System.currentTimeMillis())
+            .setCpcBidMicros(2_500_000L);
 
     KeywordPlanAdGroupOperation op =
         KeywordPlanAdGroupOperation.newBuilder().setCreate(adGroup).build();
@@ -245,24 +241,24 @@ public class AddKeywordPlan {
     // Creates the keywords for keyword plan.
     KeywordPlanAdGroupKeyword keyword1 =
         KeywordPlanAdGroupKeyword.newBuilder()
-            .setKeywordPlanAdGroup(StringValue.of(planAdGroupResource))
-            .setCpcBidMicros(Int64Value.of(2_000_000L))
+            .setKeywordPlanAdGroup(planAdGroupResource)
+            .setCpcBidMicros(2_000_000L)
             .setMatchType(KeywordMatchType.BROAD)
-            .setText(StringValue.of("mars cruise"))
+            .setText("mars cruise")
             .build();
     KeywordPlanAdGroupKeyword keyword2 =
         KeywordPlanAdGroupKeyword.newBuilder()
-            .setKeywordPlanAdGroup(StringValue.of(planAdGroupResource))
-            .setCpcBidMicros(Int64Value.of(1_500_000L))
+            .setKeywordPlanAdGroup(planAdGroupResource)
+            .setCpcBidMicros(1_500_000L)
             .setMatchType(KeywordMatchType.PHRASE)
-            .setText(StringValue.of("cheap cruise"))
+            .setText("cheap cruise")
             .build();
     KeywordPlanAdGroupKeyword keyword3 =
         KeywordPlanAdGroupKeyword.newBuilder()
-            .setKeywordPlanAdGroup(StringValue.of(planAdGroupResource))
-            .setCpcBidMicros(Int64Value.of(1_990_000L))
+            .setKeywordPlanAdGroup(planAdGroupResource)
+            .setCpcBidMicros(1_990_000L)
             .setMatchType(KeywordMatchType.EXACT)
-            .setText(StringValue.of("jupiter cruise"))
+            .setText("jupiter cruise")
             .build();
 
     // Creates an operation for each plan keyword.
@@ -294,10 +290,10 @@ public class AddKeywordPlan {
       GoogleAdsClient googleAdsClient, Long customerId, String planCampaignResource) {
     KeywordPlanCampaignKeyword negativeKeyword =
         KeywordPlanCampaignKeyword.newBuilder()
-            .setKeywordPlanCampaign(StringValue.of(planCampaignResource))
+            .setKeywordPlanCampaign(planCampaignResource)
             .setMatchType(KeywordMatchType.BROAD)
-            .setNegative(BoolValue.of(true))
-            .setText(StringValue.of("moon walk"))
+            .setNegative(true)
+            .setText("moon walk")
             .build();
     KeywordPlanCampaignKeywordOperation op =
         KeywordPlanCampaignKeywordOperation.newBuilder().setCreate(negativeKeyword).build();

@@ -18,6 +18,7 @@ package com.google.ads.googleads.examples.utils;
 public final class ArgumentNames {
 
   // Note to contributors: please insert new items alphabetically.
+  public static final String ACCESS_ROLE = "--accessRole";
   public static final String AD_GROUP_ID = "--adGroupId";
   public static final String AD_GROUP_IDS = "--adGroupIds";
   public static final String AD_ID = "--adId";
@@ -52,10 +53,12 @@ public final class ArgumentNames {
   public static final String CUSTOM_KEY = "--customKey";
   public static final String CUSTOMER_IDS = "--customerIds";
   public static final String DRAFT_ID = "--draftId";
+  public static final String EMAIL_ADDRESS = "--emailAddress";
   public static final String EXTERNAL_ID = "--externalId";
   public static final String FEED_ID = "--feedId";
   public static final String FEED_ITEM_ID = "--feedItemId";
   public static final String FEED_ITEM_IDS = "--feedItemIds";
+  public static final String FEED_ITEM_SET_ID = "--feedItemSetId";
   public static final String FLIGHT_PLACEHOLDER_FIELD_NAME = "--flightPlaceholderFieldName";
   public static final String GCLID = "--gclid";
   public static final String GEO_TARGET_CONSTANT_ID = "--geoTargetConstantId";

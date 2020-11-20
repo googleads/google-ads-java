@@ -271,7 +271,8 @@ public class BatchJobServiceStubSettings extends StubSettings<BatchJobServiceStu
           ListBatchJobResultsRequest, ListBatchJobResultsResponse, ListBatchJobResultsPagedResponse>
       LIST_BATCH_JOB_RESULTS_PAGE_STR_FACT =
           new PagedListResponseFactory<
-              ListBatchJobResultsRequest, ListBatchJobResultsResponse,
+              ListBatchJobResultsRequest,
+              ListBatchJobResultsResponse,
               ListBatchJobResultsPagedResponse>() {
             @Override
             public ApiFuture<ListBatchJobResultsPagedResponse> getFuturePagedResponse(
@@ -295,7 +296,8 @@ public class BatchJobServiceStubSettings extends StubSettings<BatchJobServiceStu
         mutateBatchJobSettings;
     private final UnaryCallSettings.Builder<GetBatchJobRequest, BatchJob> getBatchJobSettings;
     private final PagedCallSettings.Builder<
-            ListBatchJobResultsRequest, ListBatchJobResultsResponse,
+            ListBatchJobResultsRequest,
+            ListBatchJobResultsResponse,
             ListBatchJobResultsPagedResponse>
         listBatchJobResultsSettings;
     private final UnaryCallSettings.Builder<RunBatchJobRequest, Operation> runBatchJobSettings;
@@ -491,7 +493,8 @@ public class BatchJobServiceStubSettings extends StubSettings<BatchJobServiceStu
 
     /** Returns the builder for the settings used for calls to listBatchJobResults. */
     public PagedCallSettings.Builder<
-            ListBatchJobResultsRequest, ListBatchJobResultsResponse,
+            ListBatchJobResultsRequest,
+            ListBatchJobResultsResponse,
             ListBatchJobResultsPagedResponse>
         listBatchJobResultsSettings() {
       return listBatchJobResultsSettings;

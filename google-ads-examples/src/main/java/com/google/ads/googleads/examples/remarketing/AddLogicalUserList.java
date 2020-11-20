@@ -18,19 +18,18 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.v5.common.LogicalUserListInfo;
-import com.google.ads.googleads.v5.common.LogicalUserListOperandInfo;
-import com.google.ads.googleads.v5.common.UserListLogicalRuleInfo;
-import com.google.ads.googleads.v5.enums.UserListLogicalRuleOperatorEnum.UserListLogicalRuleOperator;
-import com.google.ads.googleads.v5.errors.GoogleAdsError;
-import com.google.ads.googleads.v5.errors.GoogleAdsException;
-import com.google.ads.googleads.v5.resources.UserList;
-import com.google.ads.googleads.v5.services.MutateUserListsResponse;
-import com.google.ads.googleads.v5.services.UserListOperation;
-import com.google.ads.googleads.v5.services.UserListServiceClient;
-import com.google.ads.googleads.v5.utils.ResourceNames;
+import com.google.ads.googleads.v6.common.LogicalUserListInfo;
+import com.google.ads.googleads.v6.common.LogicalUserListOperandInfo;
+import com.google.ads.googleads.v6.common.UserListLogicalRuleInfo;
+import com.google.ads.googleads.v6.enums.UserListLogicalRuleOperatorEnum.UserListLogicalRuleOperator;
+import com.google.ads.googleads.v6.errors.GoogleAdsError;
+import com.google.ads.googleads.v6.errors.GoogleAdsException;
+import com.google.ads.googleads.v6.resources.UserList;
+import com.google.ads.googleads.v6.services.MutateUserListsResponse;
+import com.google.ads.googleads.v6.services.UserListOperation;
+import com.google.ads.googleads.v6.services.UserListServiceClient;
+import com.google.ads.googleads.v6.utils.ResourceNames;
 import com.google.common.collect.ImmutableList;
-import com.google.protobuf.StringValue;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -111,9 +110,7 @@ public class AddLogicalUserList {
     for (long userListId : userListIds) {
       String userListResourceName = ResourceNames.userList(customerId, userListId);
       logicalUserListOperandInfoList.add(
-          LogicalUserListOperandInfo.newBuilder()
-              .setUserList(StringValue.of(userListResourceName))
-              .build());
+          LogicalUserListOperandInfo.newBuilder().setUserList(userListResourceName).build());
     }
 
     // Creates the UserListLogicalRuleInfo specifying that a user should be added to the new list if
@@ -131,9 +128,7 @@ public class AddLogicalUserList {
     // Creates the new combination user list.
     UserList userList =
         UserList.newBuilder()
-            .setName(
-                StringValue.of(
-                    "My combination list of other user lists #" + System.currentTimeMillis()))
+            .setName("My combination list of other user lists #" + System.currentTimeMillis())
             .setLogicalUserList(
                 LogicalUserListInfo.newBuilder().addRules(userListLogicalRuleInfo).build())
             .build();

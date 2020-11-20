@@ -17,13 +17,13 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.v5.errors.GoogleAdsError;
-import com.google.ads.googleads.v5.errors.GoogleAdsException;
-import com.google.ads.googleads.v5.resources.BillingSetup;
-import com.google.ads.googleads.v5.services.GoogleAdsRow;
-import com.google.ads.googleads.v5.services.GoogleAdsServiceClient;
-import com.google.ads.googleads.v5.services.GoogleAdsServiceClient.SearchPagedResponse;
-import com.google.ads.googleads.v5.services.SearchGoogleAdsRequest;
+import com.google.ads.googleads.v6.errors.GoogleAdsError;
+import com.google.ads.googleads.v6.errors.GoogleAdsException;
+import com.google.ads.googleads.v6.resources.BillingSetup;
+import com.google.ads.googleads.v6.services.GoogleAdsRow;
+import com.google.ads.googleads.v6.services.GoogleAdsServiceClient;
+import com.google.ads.googleads.v6.services.GoogleAdsServiceClient.SearchPagedResponse;
+import com.google.ads.googleads.v6.services.SearchGoogleAdsRequest;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
@@ -123,14 +123,14 @@ public class GetBillingSetup {
                 + "payments_profile_id '%s', "
                 + "payments_profile_name '%s', "
                 + "secondary_payments_profile_id '%s'.%n",
-            billingSetup.getId().getValue(),
+            billingSetup.getId(),
             billingSetup.getStatus(),
-            billingSetup.getPaymentsAccount().getValue(),
-            billingSetup.getPaymentsAccountInfo().getPaymentsAccountId().getValue(),
-            billingSetup.getPaymentsAccountInfo().getPaymentsAccountName().getValue(),
-            billingSetup.getPaymentsAccountInfo().getPaymentsProfileId().getValue(),
-            billingSetup.getPaymentsAccountInfo().getPaymentsProfileName().getValue(),
-            billingSetup.getPaymentsAccountInfo().getSecondaryPaymentsProfileId().getValue());
+            billingSetup.getPaymentsAccount(),
+            billingSetup.getPaymentsAccountInfo().getPaymentsAccountId(),
+            billingSetup.getPaymentsAccountInfo().getPaymentsAccountName(),
+            billingSetup.getPaymentsAccountInfo().getPaymentsProfileId(),
+            billingSetup.getPaymentsAccountInfo().getPaymentsProfileName(),
+            billingSetup.getPaymentsAccountInfo().getSecondaryPaymentsProfileId());
       }
     }
   }

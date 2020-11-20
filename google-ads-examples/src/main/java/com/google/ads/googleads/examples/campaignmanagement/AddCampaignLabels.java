@@ -18,15 +18,14 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.v5.errors.GoogleAdsError;
-import com.google.ads.googleads.v5.errors.GoogleAdsException;
-import com.google.ads.googleads.v5.resources.CampaignLabel;
-import com.google.ads.googleads.v5.services.CampaignLabelOperation;
-import com.google.ads.googleads.v5.services.CampaignLabelServiceClient;
-import com.google.ads.googleads.v5.services.MutateCampaignLabelResult;
-import com.google.ads.googleads.v5.services.MutateCampaignLabelsResponse;
-import com.google.ads.googleads.v5.utils.ResourceNames;
-import com.google.protobuf.StringValue;
+import com.google.ads.googleads.v6.errors.GoogleAdsError;
+import com.google.ads.googleads.v6.errors.GoogleAdsException;
+import com.google.ads.googleads.v6.resources.CampaignLabel;
+import com.google.ads.googleads.v6.services.CampaignLabelOperation;
+import com.google.ads.googleads.v6.services.CampaignLabelServiceClient;
+import com.google.ads.googleads.v6.services.MutateCampaignLabelResult;
+import com.google.ads.googleads.v6.services.MutateCampaignLabelsResponse;
+import com.google.ads.googleads.v6.utils.ResourceNames;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -114,8 +113,8 @@ public class AddCampaignLabels {
       // Creates the campaign label.
       CampaignLabel campaignLabel =
           CampaignLabel.newBuilder()
-              .setCampaign(StringValue.of(campaignResourceName))
-              .setLabel(StringValue.of(labelResourceName))
+              .setCampaign(campaignResourceName)
+              .setLabel(labelResourceName)
               .build();
 
       operations.add(CampaignLabelOperation.newBuilder().setCreate(campaignLabel).build());

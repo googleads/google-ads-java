@@ -99,7 +99,7 @@ private static final long serialVersionUID = 0L;
    * requested.
    * </pre>
    *
-   * <code>string keyword_plan = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+   * <code>string keyword_plan = 1 [(.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = { ... }</code>
    * @return The keywordPlan.
    */
   @java.lang.Override
@@ -121,7 +121,7 @@ private static final long serialVersionUID = 0L;
    * requested.
    * </pre>
    *
-   * <code>string keyword_plan = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+   * <code>string keyword_plan = 1 [(.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = { ... }</code>
    * @return The bytes for keywordPlan.
    */
   @java.lang.Override
@@ -452,7 +452,7 @@ private static final long serialVersionUID = 0L;
      * requested.
      * </pre>
      *
-     * <code>string keyword_plan = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+     * <code>string keyword_plan = 1 [(.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = { ... }</code>
      * @return The keywordPlan.
      */
     public java.lang.String getKeywordPlan() {
@@ -473,7 +473,7 @@ private static final long serialVersionUID = 0L;
      * requested.
      * </pre>
      *
-     * <code>string keyword_plan = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+     * <code>string keyword_plan = 1 [(.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = { ... }</code>
      * @return The bytes for keywordPlan.
      */
     public com.google.protobuf.ByteString
@@ -495,7 +495,7 @@ private static final long serialVersionUID = 0L;
      * requested.
      * </pre>
      *
-     * <code>string keyword_plan = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+     * <code>string keyword_plan = 1 [(.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = { ... }</code>
      * @param value The keywordPlan to set.
      * @return This builder for chaining.
      */
@@ -515,7 +515,7 @@ private static final long serialVersionUID = 0L;
      * requested.
      * </pre>
      *
-     * <code>string keyword_plan = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+     * <code>string keyword_plan = 1 [(.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = { ... }</code>
      * @return This builder for chaining.
      */
     public Builder clearKeywordPlan() {
@@ -530,7 +530,7 @@ private static final long serialVersionUID = 0L;
      * requested.
      * </pre>
      *
-     * <code>string keyword_plan = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+     * <code>string keyword_plan = 1 [(.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = { ... }</code>
      * @param value The bytes for keywordPlan to set.
      * @return This builder for chaining.
      */

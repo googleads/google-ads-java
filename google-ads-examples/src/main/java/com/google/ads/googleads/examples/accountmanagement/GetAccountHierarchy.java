@@ -18,17 +18,17 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.v5.errors.GoogleAdsError;
-import com.google.ads.googleads.v5.errors.GoogleAdsException;
-import com.google.ads.googleads.v5.resources.CustomerClient;
-import com.google.ads.googleads.v5.services.CustomerName;
-import com.google.ads.googleads.v5.services.CustomerServiceClient;
-import com.google.ads.googleads.v5.services.GoogleAdsRow;
-import com.google.ads.googleads.v5.services.GoogleAdsServiceClient;
-import com.google.ads.googleads.v5.services.GoogleAdsServiceClient.SearchPagedResponse;
-import com.google.ads.googleads.v5.services.ListAccessibleCustomersRequest;
-import com.google.ads.googleads.v5.services.ListAccessibleCustomersResponse;
-import com.google.ads.googleads.v5.services.SearchGoogleAdsRequest;
+import com.google.ads.googleads.v6.errors.GoogleAdsError;
+import com.google.ads.googleads.v6.errors.GoogleAdsException;
+import com.google.ads.googleads.v6.resources.CustomerClient;
+import com.google.ads.googleads.v6.services.CustomerName;
+import com.google.ads.googleads.v6.services.CustomerServiceClient;
+import com.google.ads.googleads.v6.services.GoogleAdsRow;
+import com.google.ads.googleads.v6.services.GoogleAdsServiceClient;
+import com.google.ads.googleads.v6.services.GoogleAdsServiceClient.SearchPagedResponse;
+import com.google.ads.googleads.v6.services.ListAccessibleCustomersRequest;
+import com.google.ads.googleads.v6.services.ListAccessibleCustomersResponse;
+import com.google.ads.googleads.v6.services.SearchGoogleAdsRequest;
 import com.google.common.base.Strings;
 import com.google.common.collect.ArrayListMultimap;
 import com.google.common.collect.Multimap;
@@ -166,7 +166,7 @@ public class GetAccountHierarchy {
     // Prints the hierarchy information for all accounts for which there is hierarchy information
     // available.
     for (CustomerClient rootCustomerClient : allHierarchies.keySet()) {
-      System.out.printf("Hierarchy of customer ID %d:%n", rootCustomerClient.getId().getValue());
+      System.out.printf("Hierarchy of customer ID %d:%n", rootCustomerClient.getId());
       printAccountHierarchy(rootCustomerClient, allHierarchies.get(rootCustomerClient), depth);
       System.out.println();
     }
@@ -231,13 +231,13 @@ public class GetAccountHierarchy {
             CustomerClient customerClient = googleAdsRow.getCustomerClient();
 
             // Gets the CustomerClient object for the root customer in the tree.
-            if (customerClient.getId().getValue() == seedCustomerId) {
+            if (customerClient.getId() == seedCustomerId) {
               rootCustomerClient = customerClient;
             }
 
             // The steps below map parent and children accounts. Continue here so that managers
             // accounts exclude themselves from the list of their children accounts.
-            if (customerClient.getId().getValue() == customerIdToSearchFrom) {
+            if (customerClient.getId() == customerIdToSearchFrom) {
               continue;
             }
 
@@ -247,13 +247,13 @@ public class GetAccountHierarchy {
             customerIdsToChildAccounts.put(customerIdToSearchFrom, customerClient);
             // Checks if the child account is a manager itself so that it can later be processed
             // and added to the map if it hasn't been already.
-            if (customerClient.getManager().getValue()) {
+            if (customerClient.getManager()) {
               // A customer can be managed by multiple managers, so to prevent visiting the same
               // customer multiple times, we need to check if it's already in the map.
               boolean alreadyVisited =
-                  customerIdsToChildAccounts.containsKey(customerClient.getId().getValue());
-              if (!alreadyVisited && customerClient.getLevel().getValue() == 1) {
-                managerAccountsToSearch.add(customerClient.getId().getValue());
+                  customerIdsToChildAccounts.containsKey(customerClient.getId());
+              if (!alreadyVisited && customerClient.getLevel() == 1) {
+                managerAccountsToSearch.add(customerClient.getId());
               }
             }
           }
@@ -299,7 +299,7 @@ public class GetAccountHierarchy {
               + "hierarchies of all accessible customer IDs:");
 
       for (String customerResourceName : accessibleCustomers.getResourceNamesList()) {
-        Long customer = Long.parseLong(CustomerName.parse(customerResourceName).getCustomer());
+        Long customer = Long.parseLong(CustomerName.parse(customerResourceName).getCustomerId());
         System.out.println(customer);
         seedCustomerIds.add(customer);
       }
@@ -327,13 +327,13 @@ public class GetAccountHierarchy {
       System.out.println("|");
     }
     System.out.print(Strings.repeat("-", depth * 2));
-    long customerId = customerClient.getId().getValue();
+    long customerId = customerClient.getId();
     System.out.printf(
         leadingSpace + "%d ('%s', '%s', '%s')%n",
         customerId,
-        customerClient.getDescriptiveName().getValue(),
-        customerClient.getCurrencyCode().getValue(),
-        customerClient.getTimeZone().getValue());
+        customerClient.getDescriptiveName(),
+        customerClient.getCurrencyCode(),
+        customerClient.getTimeZone());
 
     // Recursively calls this function for all child accounts of customerClient if the current
     // customer is a manager account.

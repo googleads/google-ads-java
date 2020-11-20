@@ -16,7 +16,6 @@ package com.google.ads.googleads.lib.logging;
 
 import static org.mockito.Matchers.any;
 import static org.mockito.Matchers.eq;
-import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
@@ -24,6 +23,10 @@ import com.google.ads.googleads.lib.catalog.ApiCatalog;
 import com.google.ads.googleads.lib.catalog.Version;
 import com.google.ads.googleads.lib.logging.Event.Detail;
 import com.google.ads.googleads.lib.logging.Event.Summary;
+import com.google.ads.googleads.lib.utils.FieldMasks;
+import com.google.ads.googleads.v6.resources.CustomerUserAccess;
+import com.google.ads.googleads.v6.services.SearchGoogleAdsResponse;
+import com.google.ads.googleads.v6.services.SearchGoogleAdsStreamResponse;
 import com.google.common.collect.ImmutableMap;
 import com.google.protobuf.InvalidProtocolBufferException;
 import com.google.protobuf.Message;
@@ -334,6 +337,108 @@ public class LoggingInterceptorTest {
         });
   }
 
+  @Test
+  public void scrubsEmailAddress_from_searchStreamResponse() {
+    SearchGoogleAdsStreamResponse.Builder builder = SearchGoogleAdsStreamResponse.newBuilder();
+    builder
+        .addResultsBuilder()
+        .getCustomerUserAccessBuilder()
+        .setEmailAddress("foo@bar.com")
+        .setInviterUserEmailAddress("foo@bar.com");
+    builder.setFieldMask(FieldMasks.allSetFieldsOf(builder.getResults(0)));
+    response = builder.build();
+
+    runDefaultCallNoVerify();
+
+    // Recreates the detail message with the REDACTED text.
+    builder
+        .getResultsBuilder(0)
+        .getCustomerUserAccessBuilder()
+        .setEmailAddress("REDACTED")
+        .setInviterUserEmailAddress("REDACTED");
+    response = builder.build();
+
+    verifyLoggers(createDetail(), createSummary(), detailLogger, summaryLogger);
+  }
+
+  @Test
+  public void scrubsEmailAddress_from_searchPagedResponse() {
+    SearchGoogleAdsResponse.Builder builder = SearchGoogleAdsResponse.newBuilder();
+    builder
+        .addResultsBuilder()
+        .getCustomerUserAccessBuilder()
+        .setEmailAddress("foo@bar.com")
+        .setInviterUserEmailAddress("foo@bar.com");
+    builder.setFieldMask(FieldMasks.allSetFieldsOf(builder.getResults(0)));
+    response = builder.build();
+
+    runDefaultCallNoVerify();
+
+    // Recreates the detail message with the REDACTED text.
+    builder
+        .getResultsBuilder(0)
+        .getCustomerUserAccessBuilder()
+        .setEmailAddress("REDACTED")
+        .setInviterUserEmailAddress("REDACTED");
+    response = builder.build();
+
+    verifyLoggers(createDetail(), createSummary(), detailLogger, summaryLogger);
+  }
+
+  @Test
+  public void scrubsEmailAddress_from_customerUserAccess() {
+    CustomerUserAccess.Builder builder =
+        CustomerUserAccess.newBuilder()
+            .setEmailAddress("foo@bar.com")
+            .setInviterUserEmailAddress("foo@bar.com");
+    response = builder.build();
+
+    runDefaultCallNoVerify();
+
+    // Recreates the detail message with the REDACTED text.
+    builder.setEmailAddress("REDACTED").setInviterUserEmailAddress("REDACTED");
+    response = builder.build();
+
+    verifyLoggers(createDetail(), createSummary(), detailLogger, summaryLogger);
+  }
+
+  @Test
+  public void scrubsInviterEmailAddress_from_searchStreamResponse() {
+    SearchGoogleAdsStreamResponse.Builder builder = SearchGoogleAdsStreamResponse.newBuilder();
+    builder
+        .addResultsBuilder()
+        .getCustomerUserAccessBuilder()
+        .setInviterUserEmailAddress("foo@bar.com");
+    builder.setFieldMask(FieldMasks.allSetFieldsOf(builder.getResults(0)));
+    response = builder.build();
+
+    runDefaultCallNoVerify();
+
+    // Recreates the detail message with the REDACTED text.
+    builder
+        .getResultsBuilder(0)
+        .getCustomerUserAccessBuilder()
+        .setInviterUserEmailAddress("REDACTED");
+    response = builder.build();
+
+    verifyLoggers(createDetail(), createSummary(), detailLogger, summaryLogger);
+  }
+
+  @Test
+  public void scrubsUserEmail_from_searchStreamResponse() {
+    SearchGoogleAdsStreamResponse.Builder builder = SearchGoogleAdsStreamResponse.newBuilder();
+    builder.addResultsBuilder().getChangeEventBuilder().setUserEmail("foo@bar.com");
+    builder.setFieldMask(FieldMasks.allSetFieldsOf(builder.getResults(0)));
+    response = builder.build();
+
+    runDefaultCallNoVerify();
+
+    // Recreates the detail message with the REDACTED text.
+    builder.getResultsBuilder(0).getChangeEventBuilder().setUserEmail("REDACTED");
+    response = builder.build();
+
+    verifyLoggers(createDetail(), createSummary(), detailLogger, summaryLogger);
+  }
 
   private static Listener simulateCall(
       RequestLogger requestLogger,
@@ -419,12 +524,13 @@ public class LoggingInterceptorTest {
   }
 
   private void runDefaultCall() {
-    runCall(
-        (listener, detail) -> {
-          listener.onHeaders(detail.getResponseHeaderMetadata());
-          listener.onMessage(detail.getResponse());
-          listener.onClose(detail.getResponseStatus(), detail.getResponseTrailerMetadata());
-        });
+    runCall(LoggingInterceptorTest::runDefaultCallback);
+  }
+
+  private static void runDefaultCallback(Listener listener, Detail detail) {
+    listener.onHeaders(detail.getResponseHeaderMetadata());
+    listener.onMessage(detail.getResponse());
+    listener.onClose(detail.getResponseStatus(), detail.getResponseTrailerMetadata());
   }
 
   private void runCall(BiConsumer<Listener, Detail> callback) {
@@ -434,10 +540,19 @@ public class LoggingInterceptorTest {
   }
 
   private void runCall(BiConsumer<Listener, Detail> callback, Detail detail, Summary summary) {
+    runCallNoVerify(callback, detail, summary);
+    verifyLoggers(detail, summary, detailLogger, summaryLogger);
+  }
+
+  private void runDefaultCallNoVerify() {
+    runCallNoVerify(LoggingInterceptorTest::runDefaultCallback, createDetail(), createSummary());
+  }
+
+  private void runCallNoVerify(
+      BiConsumer<Listener, Detail> callback, Detail detail, Summary summary) {
     Listener listener =
         simulateCall(requestLogger, detail, summary, methodDescriptor, nextChannel, nextCall);
     callback.accept(listener, detail);
-    verifyLoggers(detail, summary, detailLogger, summaryLogger);
   }
 
   private Detail createDetail() {

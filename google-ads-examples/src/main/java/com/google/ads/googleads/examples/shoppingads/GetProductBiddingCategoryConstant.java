@@ -18,13 +18,13 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.v5.errors.GoogleAdsError;
-import com.google.ads.googleads.v5.errors.GoogleAdsException;
-import com.google.ads.googleads.v5.resources.ProductBiddingCategoryConstant;
-import com.google.ads.googleads.v5.services.GoogleAdsRow;
-import com.google.ads.googleads.v5.services.GoogleAdsServiceClient;
-import com.google.ads.googleads.v5.services.GoogleAdsServiceClient.SearchPagedResponse;
-import com.google.ads.googleads.v5.services.SearchGoogleAdsRequest;
+import com.google.ads.googleads.v6.errors.GoogleAdsError;
+import com.google.ads.googleads.v6.errors.GoogleAdsException;
+import com.google.ads.googleads.v6.resources.ProductBiddingCategoryConstant;
+import com.google.ads.googleads.v6.services.GoogleAdsRow;
+import com.google.ads.googleads.v6.services.GoogleAdsServiceClient;
+import com.google.ads.googleads.v6.services.GoogleAdsServiceClient.SearchPagedResponse;
+import com.google.ads.googleads.v6.services.SearchGoogleAdsRequest;
 import com.google.api.client.util.Preconditions;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -125,7 +125,7 @@ public class GetProductBiddingCategoryConstant {
         ProductBiddingCategoryConstant productBiddingCategory =
             googleAdsRow.getProductBiddingCategoryConstant();
 
-        String localizedName = productBiddingCategory.getLocalizedName().getValue();
+        String localizedName = productBiddingCategory.getLocalizedName();
         String resourceName = productBiddingCategory.getResourceName();
         CategoryNode node = biddingCategories.get(resourceName);
         if (node == null) {
@@ -139,7 +139,7 @@ public class GetProductBiddingCategoryConstant {
 
         if (productBiddingCategory.hasProductBiddingCategoryConstantParent()) {
           String parentResourceName =
-              productBiddingCategory.getProductBiddingCategoryConstantParent().getValue();
+              productBiddingCategory.getProductBiddingCategoryConstantParent();
           CategoryNode parentNode = biddingCategories.get(parentResourceName);
           if (parentNode == null) {
             parentNode = new CategoryNode(parentResourceName);

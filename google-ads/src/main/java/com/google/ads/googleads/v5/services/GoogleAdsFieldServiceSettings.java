@@ -75,7 +75,8 @@ public class GoogleAdsFieldServiceSettings extends ClientSettings<GoogleAdsField
 
   /** Returns the object with the settings used for calls to searchGoogleAdsFields. */
   public PagedCallSettings<
-          SearchGoogleAdsFieldsRequest, SearchGoogleAdsFieldsResponse,
+          SearchGoogleAdsFieldsRequest,
+          SearchGoogleAdsFieldsResponse,
           SearchGoogleAdsFieldsPagedResponse>
       searchGoogleAdsFieldsSettings() {
     return ((GoogleAdsFieldServiceStubSettings) getStubSettings()).searchGoogleAdsFieldsSettings();
@@ -187,7 +188,8 @@ public class GoogleAdsFieldServiceSettings extends ClientSettings<GoogleAdsField
 
     /** Returns the builder for the settings used for calls to searchGoogleAdsFields. */
     public PagedCallSettings.Builder<
-            SearchGoogleAdsFieldsRequest, SearchGoogleAdsFieldsResponse,
+            SearchGoogleAdsFieldsRequest,
+            SearchGoogleAdsFieldsResponse,
             SearchGoogleAdsFieldsPagedResponse>
         searchGoogleAdsFieldsSettings() {
       return getStubSettingsBuilder().searchGoogleAdsFieldsSettings();

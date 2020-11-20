@@ -18,35 +18,33 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.v5.enums.FeedAttributeTypeEnum.FeedAttributeType;
-import com.google.ads.googleads.v5.enums.PlaceholderTypeEnum.PlaceholderType;
-import com.google.ads.googleads.v5.enums.RealEstatePlaceholderFieldEnum.RealEstatePlaceholderField;
-import com.google.ads.googleads.v5.errors.GoogleAdsError;
-import com.google.ads.googleads.v5.errors.GoogleAdsException;
-import com.google.ads.googleads.v5.resources.AttributeFieldMapping;
-import com.google.ads.googleads.v5.resources.Feed;
-import com.google.ads.googleads.v5.resources.FeedAttribute;
-import com.google.ads.googleads.v5.resources.FeedItem;
-import com.google.ads.googleads.v5.resources.FeedItemAttributeValue;
-import com.google.ads.googleads.v5.resources.FeedMapping;
-import com.google.ads.googleads.v5.services.FeedItemOperation;
-import com.google.ads.googleads.v5.services.FeedItemServiceClient;
-import com.google.ads.googleads.v5.services.FeedMappingOperation;
-import com.google.ads.googleads.v5.services.FeedMappingServiceClient;
-import com.google.ads.googleads.v5.services.FeedOperation;
-import com.google.ads.googleads.v5.services.FeedServiceClient;
-import com.google.ads.googleads.v5.services.GoogleAdsRow;
-import com.google.ads.googleads.v5.services.GoogleAdsServiceClient;
-import com.google.ads.googleads.v5.services.GoogleAdsServiceClient.SearchPagedResponse;
-import com.google.ads.googleads.v5.services.MutateFeedItemResult;
-import com.google.ads.googleads.v5.services.MutateFeedItemsResponse;
-import com.google.ads.googleads.v5.services.MutateFeedMappingResult;
-import com.google.ads.googleads.v5.services.MutateFeedMappingsResponse;
-import com.google.ads.googleads.v5.services.MutateFeedsResponse;
-import com.google.ads.googleads.v5.services.SearchGoogleAdsRequest;
+import com.google.ads.googleads.v6.enums.FeedAttributeTypeEnum.FeedAttributeType;
+import com.google.ads.googleads.v6.enums.PlaceholderTypeEnum.PlaceholderType;
+import com.google.ads.googleads.v6.enums.RealEstatePlaceholderFieldEnum.RealEstatePlaceholderField;
+import com.google.ads.googleads.v6.errors.GoogleAdsError;
+import com.google.ads.googleads.v6.errors.GoogleAdsException;
+import com.google.ads.googleads.v6.resources.AttributeFieldMapping;
+import com.google.ads.googleads.v6.resources.Feed;
+import com.google.ads.googleads.v6.resources.FeedAttribute;
+import com.google.ads.googleads.v6.resources.FeedItem;
+import com.google.ads.googleads.v6.resources.FeedItemAttributeValue;
+import com.google.ads.googleads.v6.resources.FeedMapping;
+import com.google.ads.googleads.v6.services.FeedItemOperation;
+import com.google.ads.googleads.v6.services.FeedItemServiceClient;
+import com.google.ads.googleads.v6.services.FeedMappingOperation;
+import com.google.ads.googleads.v6.services.FeedMappingServiceClient;
+import com.google.ads.googleads.v6.services.FeedOperation;
+import com.google.ads.googleads.v6.services.FeedServiceClient;
+import com.google.ads.googleads.v6.services.GoogleAdsRow;
+import com.google.ads.googleads.v6.services.GoogleAdsServiceClient;
+import com.google.ads.googleads.v6.services.GoogleAdsServiceClient.SearchPagedResponse;
+import com.google.ads.googleads.v6.services.MutateFeedItemResult;
+import com.google.ads.googleads.v6.services.MutateFeedItemsResponse;
+import com.google.ads.googleads.v6.services.MutateFeedMappingResult;
+import com.google.ads.googleads.v6.services.MutateFeedMappingsResponse;
+import com.google.ads.googleads.v6.services.MutateFeedsResponse;
+import com.google.ads.googleads.v6.services.SearchGoogleAdsRequest;
 import com.google.common.collect.ImmutableList;
-import com.google.protobuf.Int64Value;
-import com.google.protobuf.StringValue;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.HashMap;
@@ -133,43 +131,37 @@ public class AddRealEstateFeed {
   private String createFeed(GoogleAdsClient googleAdsClient, long customerId) {
     // Creates a Listing ID attribute.
     FeedAttribute listingIdAttribute =
-        FeedAttribute.newBuilder()
-            .setType(FeedAttributeType.STRING)
-            .setName(StringValue.of("Listing ID"))
-            .build();
+        FeedAttribute.newBuilder().setType(FeedAttributeType.STRING).setName("Listing ID").build();
 
     // Creates a Listing Name attribute.
     FeedAttribute listingNameAttribute =
         FeedAttribute.newBuilder()
             .setType(FeedAttributeType.STRING)
-            .setName(StringValue.of("Listing Name"))
+            .setName("Listing Name")
             .build();
 
     // Creates a Final URLs attribute.
     FeedAttribute finalUrlsAttribute =
         FeedAttribute.newBuilder()
             .setType(FeedAttributeType.URL_LIST)
-            .setName(StringValue.of("Final URLs"))
+            .setName("Final URLs")
             .build();
 
     // Creates an Image URL attribute
     FeedAttribute imageUrlAttribute =
-        FeedAttribute.newBuilder()
-            .setType(FeedAttributeType.URL)
-            .setName(StringValue.of("Image URL"))
-            .build();
+        FeedAttribute.newBuilder().setType(FeedAttributeType.URL).setName("Image URL").build();
 
     // Creates a Contextual Keywords attribute
     FeedAttribute contextualKeywordsAttribute =
         FeedAttribute.newBuilder()
             .setType(FeedAttributeType.STRING_LIST)
-            .setName(StringValue.of("Contextual Keywords"))
+            .setName("Contextual Keywords")
             .build();
 
     // Creates the feed.
     Feed feed =
         Feed.newBuilder()
-            .setName(StringValue.of("Real Estate Feed #" + System.currentTimeMillis()))
+            .setName("Real Estate Feed #" + System.currentTimeMillis())
             .addAttributes(listingIdAttribute)
             .addAttributes(listingNameAttribute)
             .addAttributes(finalUrlsAttribute)
@@ -232,7 +224,7 @@ public class AddRealEstateFeed {
       Map<RealEstatePlaceholderField, FeedAttribute> feedAttributes = new HashMap<>();
       // Loops through each of the feed attributes and populates the map.
       for (FeedAttribute feedAttribute : feedAttributeList) {
-        switch (feedAttribute.getName().getValue()) {
+        switch (feedAttribute.getName()) {
           case "Listing ID":
             feedAttributes.put(RealEstatePlaceholderField.LISTING_ID, feedAttribute);
             break;
@@ -277,44 +269,32 @@ public class AddRealEstateFeed {
     // associates the feed column by ID to this type and controls how the feed attributes are
     // presented in dynamic content.
     // See
-    // https://developers.google.com/google-ads/api/reference/rpc/google.ads.googleads.v3.enums#google.ads.googleads.v3.enums.RealEstatePlaceholderFieldEnum.RealEstatePlaceholderField
+    // https://developers.google.com/google-ads/api/reference/rpc/latest/RealEstatePlaceholderFieldEnum.RealEstatePlaceholderField
     // for the full list of placeholder values.
     AttributeFieldMapping listingIdMapping =
         AttributeFieldMapping.newBuilder()
-            .setFeedAttributeId(
-                Int64Value.of(
-                    feedAttributes.get(RealEstatePlaceholderField.LISTING_ID).getId().getValue()))
+            .setFeedAttributeId(feedAttributes.get(RealEstatePlaceholderField.LISTING_ID).getId())
             .setRealEstateField(RealEstatePlaceholderField.LISTING_ID)
             .build();
     AttributeFieldMapping listingNameMapping =
         AttributeFieldMapping.newBuilder()
-            .setFeedAttributeId(
-                Int64Value.of(
-                    feedAttributes.get(RealEstatePlaceholderField.LISTING_NAME).getId().getValue()))
+            .setFeedAttributeId(feedAttributes.get(RealEstatePlaceholderField.LISTING_NAME).getId())
             .setRealEstateField(RealEstatePlaceholderField.LISTING_NAME)
             .build();
     AttributeFieldMapping finalUrlsMapping =
         AttributeFieldMapping.newBuilder()
-            .setFeedAttributeId(
-                Int64Value.of(
-                    feedAttributes.get(RealEstatePlaceholderField.FINAL_URLS).getId().getValue()))
+            .setFeedAttributeId(feedAttributes.get(RealEstatePlaceholderField.FINAL_URLS).getId())
             .setRealEstateField(RealEstatePlaceholderField.FINAL_URLS)
             .build();
     AttributeFieldMapping imageUrlMapping =
         AttributeFieldMapping.newBuilder()
-            .setFeedAttributeId(
-                Int64Value.of(
-                    feedAttributes.get(RealEstatePlaceholderField.IMAGE_URL).getId().getValue()))
+            .setFeedAttributeId(feedAttributes.get(RealEstatePlaceholderField.IMAGE_URL).getId())
             .setRealEstateField(RealEstatePlaceholderField.IMAGE_URL)
             .build();
     AttributeFieldMapping contextualKeywordsMapping =
         AttributeFieldMapping.newBuilder()
             .setFeedAttributeId(
-                Int64Value.of(
-                    feedAttributes
-                        .get(RealEstatePlaceholderField.CONTEXTUAL_KEYWORDS)
-                        .getId()
-                        .getValue()))
+                feedAttributes.get(RealEstatePlaceholderField.CONTEXTUAL_KEYWORDS).getId())
             .setRealEstateField(RealEstatePlaceholderField.CONTEXTUAL_KEYWORDS)
             .build();
 
@@ -322,7 +302,7 @@ public class AddRealEstateFeed {
     FeedMapping feedMapping =
         FeedMapping.newBuilder()
             .setPlaceholderType(PlaceholderType.DYNAMIC_REAL_ESTATE)
-            .setFeed(StringValue.of(feedResourceName))
+            .setFeed(feedResourceName)
             .addAttributeFieldMappings(listingIdMapping)
             .addAttributeFieldMappings(listingNameMapping)
             .addAttributeFieldMappings(finalUrlsMapping)
@@ -366,26 +346,20 @@ public class AddRealEstateFeed {
     // Creates the listing ID feed attribute value.
     FeedItemAttributeValue listingId =
         FeedItemAttributeValue.newBuilder()
-            .setFeedAttributeId(
-                Int64Value.of(
-                    feedAttributes.get(RealEstatePlaceholderField.LISTING_ID).getId().getValue()))
-            .setStringValue(StringValue.of("ABC123DEF"))
+            .setFeedAttributeId(feedAttributes.get(RealEstatePlaceholderField.LISTING_ID).getId())
+            .setStringValue("ABC123DEF")
             .build();
     // Creates the listing name feed attribute value.
     FeedItemAttributeValue listingName =
         FeedItemAttributeValue.newBuilder()
-            .setFeedAttributeId(
-                Int64Value.of(
-                    feedAttributes.get(RealEstatePlaceholderField.LISTING_NAME).getId().getValue()))
-            .setStringValue(StringValue.of("Two bedroom with magnificent views"))
+            .setFeedAttributeId(feedAttributes.get(RealEstatePlaceholderField.LISTING_NAME).getId())
+            .setStringValue("Two bedroom with magnificent views")
             .build();
     // Creates the final URLs feed attribute value.
     FeedItemAttributeValue finalUrls =
         FeedItemAttributeValue.newBuilder()
-            .setFeedAttributeId(
-                Int64Value.of(
-                    feedAttributes.get(RealEstatePlaceholderField.FINAL_URLS).getId().getValue()))
-            .addStringValues(StringValue.of("http://www.example.com/listings/"))
+            .setFeedAttributeId(feedAttributes.get(RealEstatePlaceholderField.FINAL_URLS).getId())
+            .addStringValues("http://www.example.com/listings/")
             .build();
 
     // Optionally insert additional attributes here, such as address, city, description, etc.
@@ -393,30 +367,23 @@ public class AddRealEstateFeed {
     // Creates the image URL feed attribute value.
     FeedItemAttributeValue imageUrl =
         FeedItemAttributeValue.newBuilder()
-            .setFeedAttributeId(
-                Int64Value.of(
-                    feedAttributes.get(RealEstatePlaceholderField.IMAGE_URL).getId().getValue()))
-            .setStringValue(
-                StringValue.of("http://www.example.com/listings/images?listing_id=ABC123DEF"))
+            .setFeedAttributeId(feedAttributes.get(RealEstatePlaceholderField.IMAGE_URL).getId())
+            .setStringValue("http://www.example.com/listings/images?listing_id=ABC123DEF")
             .build();
     // Creates the contextual keywords feed attribute value.
     FeedItemAttributeValue contextualKeywords =
         FeedItemAttributeValue.newBuilder()
             .setFeedAttributeId(
-                Int64Value.of(
-                    feedAttributes
-                        .get(RealEstatePlaceholderField.CONTEXTUAL_KEYWORDS)
-                        .getId()
-                        .getValue()))
-            .addStringValues(StringValue.of("beach community"))
-            .addStringValues(StringValue.of("ocean view"))
-            .addStringValues(StringValue.of("two bedroom"))
+                feedAttributes.get(RealEstatePlaceholderField.CONTEXTUAL_KEYWORDS).getId())
+            .addStringValues("beach community")
+            .addStringValues("ocean view")
+            .addStringValues("two bedroom")
             .build();
 
     // Creates the FeedItem, specifying the Feed ID and the attributes created above.
     FeedItem feedItem =
         FeedItem.newBuilder()
-            .setFeed(StringValue.of(feedResourceName))
+            .setFeed(feedResourceName)
             .addAttributeValues(listingId)
             .addAttributeValues(listingName)
             .addAttributeValues(finalUrls)

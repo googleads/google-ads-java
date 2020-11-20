@@ -134,7 +134,8 @@ public class CampaignExperimentServiceSettings
 
   /** Returns the object with the settings used for calls to listCampaignExperimentAsyncErrors. */
   public PagedCallSettings<
-          ListCampaignExperimentAsyncErrorsRequest, ListCampaignExperimentAsyncErrorsResponse,
+          ListCampaignExperimentAsyncErrorsRequest,
+          ListCampaignExperimentAsyncErrorsResponse,
           ListCampaignExperimentAsyncErrorsPagedResponse>
       listCampaignExperimentAsyncErrorsSettings() {
     return ((CampaignExperimentServiceStubSettings) getStubSettings())
@@ -296,7 +297,8 @@ public class CampaignExperimentServiceSettings
 
     /** Returns the builder for the settings used for calls to listCampaignExperimentAsyncErrors. */
     public PagedCallSettings.Builder<
-            ListCampaignExperimentAsyncErrorsRequest, ListCampaignExperimentAsyncErrorsResponse,
+            ListCampaignExperimentAsyncErrorsRequest,
+            ListCampaignExperimentAsyncErrorsResponse,
             ListCampaignExperimentAsyncErrorsPagedResponse>
         listCampaignExperimentAsyncErrorsSettings() {
       return getStubSettingsBuilder().listCampaignExperimentAsyncErrorsSettings();

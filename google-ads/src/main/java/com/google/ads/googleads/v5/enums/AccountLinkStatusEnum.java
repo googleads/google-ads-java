@@ -4,36 +4,37 @@
 package com.google.ads.googleads.v5.enums;
 
 /**
+ *
+ *
  * <pre>
  * Container for enum describing possible statuses of an account link.
  * </pre>
  *
  * Protobuf type {@code google.ads.googleads.v5.enums.AccountLinkStatusEnum}
  */
-public final class AccountLinkStatusEnum extends
-    com.google.protobuf.GeneratedMessageV3 implements
+public final class AccountLinkStatusEnum extends com.google.protobuf.GeneratedMessageV3
+    implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v5.enums.AccountLinkStatusEnum)
     AccountLinkStatusEnumOrBuilder {
-private static final long serialVersionUID = 0L;
+  private static final long serialVersionUID = 0L;
   // Use AccountLinkStatusEnum.newBuilder() to construct.
   private AccountLinkStatusEnum(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
-  private AccountLinkStatusEnum() {
-  }
+
+  private AccountLinkStatusEnum() {}
 
   @java.lang.Override
   @SuppressWarnings({"unused"})
-  protected java.lang.Object newInstance(
-      UnusedPrivateParameter unused) {
+  protected java.lang.Object newInstance(UnusedPrivateParameter unused) {
     return new AccountLinkStatusEnum();
   }
 
   @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
+  public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
     return this.unknownFields;
   }
+
   private AccountLinkStatusEnum(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -52,39 +53,43 @@ private static final long serialVersionUID = 0L;
           case 0:
             done = true;
             break;
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
+          default:
+            {
+              if (!parseUnknownField(input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
             }
-            break;
-          }
         }
       }
     } catch (com.google.protobuf.InvalidProtocolBufferException e) {
       throw e.setUnfinishedMessage(this);
     } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
+      throw new com.google.protobuf.InvalidProtocolBufferException(e).setUnfinishedMessage(this);
     } finally {
       this.unknownFields = unknownFields.build();
       makeExtensionsImmutable();
     }
   }
-  public static final com.google.protobuf.Descriptors.Descriptor
-      getDescriptor() {
-    return com.google.ads.googleads.v5.enums.AccountLinkStatusProto.internal_static_google_ads_googleads_v5_enums_AccountLinkStatusEnum_descriptor;
+
+  public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+    return com.google.ads.googleads.v5.enums.AccountLinkStatusProto
+        .internal_static_google_ads_googleads_v5_enums_AccountLinkStatusEnum_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.google.ads.googleads.v5.enums.AccountLinkStatusProto.internal_static_google_ads_googleads_v5_enums_AccountLinkStatusEnum_fieldAccessorTable
+    return com.google.ads.googleads.v5.enums.AccountLinkStatusProto
+        .internal_static_google_ads_googleads_v5_enums_AccountLinkStatusEnum_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.google.ads.googleads.v5.enums.AccountLinkStatusEnum.class, com.google.ads.googleads.v5.enums.AccountLinkStatusEnum.Builder.class);
+            com.google.ads.googleads.v5.enums.AccountLinkStatusEnum.class,
+            com.google.ads.googleads.v5.enums.AccountLinkStatusEnum.Builder.class);
   }
 
   /**
+   *
+   *
    * <pre>
    * Describes the possible statuses for a link between a Google Ads customer
    * and another account.
@@ -92,9 +97,10 @@ private static final long serialVersionUID = 0L;
    *
    * Protobuf enum {@code google.ads.googleads.v5.enums.AccountLinkStatusEnum.AccountLinkStatus}
    */
-  public enum AccountLinkStatus
-      implements com.google.protobuf.ProtocolMessageEnum {
+  public enum AccountLinkStatus implements com.google.protobuf.ProtocolMessageEnum {
     /**
+     *
+     *
      * <pre>
      * Not specified.
      * </pre>
@@ -103,6 +109,8 @@ private static final long serialVersionUID = 0L;
      */
     UNSPECIFIED(0),
     /**
+     *
+     *
      * <pre>
      * Used for return value only. Represents value unknown in this version.
      * </pre>
@@ -111,6 +119,8 @@ private static final long serialVersionUID = 0L;
      */
     UNKNOWN(1),
     /**
+     *
+     *
      * <pre>
      * The link is enabled.
      * </pre>
@@ -119,6 +129,8 @@ private static final long serialVersionUID = 0L;
      */
     ENABLED(2),
     /**
+     *
+     *
      * <pre>
      * The link is removed/disabled.
      * </pre>
@@ -127,18 +139,22 @@ private static final long serialVersionUID = 0L;
      */
     REMOVED(3),
     /**
+     *
+     *
      * <pre>
      * The link to the other account has been requested. A user on the other
-     * account may now approve the link by setting the status to ENABLED
+     * account may now approve the link by setting the status to ENABLED.
      * </pre>
      *
      * <code>REQUESTED = 4;</code>
      */
     REQUESTED(4),
     /**
+     *
+     *
      * <pre>
      * This link has been requested by a user on the other account. It may be
-     * approved by a user on this account by setting the status to ENABLED
+     * approved by a user on this account by setting the status to ENABLED.
      * </pre>
      *
      * <code>PENDING_APPROVAL = 5;</code>
@@ -148,6 +164,8 @@ private static final long serialVersionUID = 0L;
     ;
 
     /**
+     *
+     *
      * <pre>
      * Not specified.
      * </pre>
@@ -156,6 +174,8 @@ private static final long serialVersionUID = 0L;
      */
     public static final int UNSPECIFIED_VALUE = 0;
     /**
+     *
+     *
      * <pre>
      * Used for return value only. Represents value unknown in this version.
      * </pre>
@@ -164,6 +184,8 @@ private static final long serialVersionUID = 0L;
      */
     public static final int UNKNOWN_VALUE = 1;
     /**
+     *
+     *
      * <pre>
      * The link is enabled.
      * </pre>
@@ -172,6 +194,8 @@ private static final long serialVersionUID = 0L;
      */
     public static final int ENABLED_VALUE = 2;
     /**
+     *
+     *
      * <pre>
      * The link is removed/disabled.
      * </pre>
@@ -180,24 +204,27 @@ private static final long serialVersionUID = 0L;
      */
     public static final int REMOVED_VALUE = 3;
     /**
+     *
+     *
      * <pre>
      * The link to the other account has been requested. A user on the other
-     * account may now approve the link by setting the status to ENABLED
+     * account may now approve the link by setting the status to ENABLED.
      * </pre>
      *
      * <code>REQUESTED = 4;</code>
      */
     public static final int REQUESTED_VALUE = 4;
     /**
+     *
+     *
      * <pre>
      * This link has been requested by a user on the other account. It may be
-     * approved by a user on this account by setting the status to ENABLED
+     * approved by a user on this account by setting the status to ENABLED.
      * </pre>
      *
      * <code>PENDING_APPROVAL = 5;</code>
      */
     public static final int PENDING_APPROVAL_VALUE = 5;
-
 
     public final int getNumber() {
       if (this == UNRECOGNIZED) {
@@ -223,13 +250,20 @@ private static final long serialVersionUID = 0L;
      */
     public static AccountLinkStatus forNumber(int value) {
       switch (value) {
-        case 0: return UNSPECIFIED;
-        case 1: return UNKNOWN;
-        case 2: return ENABLED;
-        case 3: return REMOVED;
-        case 4: return REQUESTED;
-        case 5: return PENDING_APPROVAL;
-        default: return null;
+        case 0:
+          return UNSPECIFIED;
+        case 1:
+          return UNKNOWN;
+        case 2:
+          return ENABLED;
+        case 3:
+          return REMOVED;
+        case 4:
+          return REQUESTED;
+        case 5:
+          return PENDING_APPROVAL;
+        default:
+          return null;
       }
     }
 
@@ -237,29 +271,31 @@ private static final long serialVersionUID = 0L;
         internalGetValueMap() {
       return internalValueMap;
     }
-    private static final com.google.protobuf.Internal.EnumLiteMap<
-        AccountLinkStatus> internalValueMap =
-          new com.google.protobuf.Internal.EnumLiteMap<AccountLinkStatus>() {
-            public AccountLinkStatus findValueByNumber(int number) {
-              return AccountLinkStatus.forNumber(number);
-            }
-          };
 
-    public final com.google.protobuf.Descriptors.EnumValueDescriptor
-        getValueDescriptor() {
+    private static final com.google.protobuf.Internal.EnumLiteMap<AccountLinkStatus>
+        internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<AccountLinkStatus>() {
+              public AccountLinkStatus findValueByNumber(int number) {
+                return AccountLinkStatus.forNumber(number);
+              }
+            };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor getValueDescriptor() {
       if (this == UNRECOGNIZED) {
         throw new java.lang.IllegalStateException(
             "Can't get the descriptor of an unrecognized enum value.");
       }
       return getDescriptor().getValues().get(ordinal());
     }
-    public final com.google.protobuf.Descriptors.EnumDescriptor
-        getDescriptorForType() {
+
+    public final com.google.protobuf.Descriptors.EnumDescriptor getDescriptorForType() {
       return getDescriptor();
     }
-    public static final com.google.protobuf.Descriptors.EnumDescriptor
-        getDescriptor() {
-      return com.google.ads.googleads.v5.enums.AccountLinkStatusEnum.getDescriptor().getEnumTypes().get(0);
+
+    public static final com.google.protobuf.Descriptors.EnumDescriptor getDescriptor() {
+      return com.google.ads.googleads.v5.enums.AccountLinkStatusEnum.getDescriptor()
+          .getEnumTypes()
+          .get(0);
     }
 
     private static final AccountLinkStatus[] VALUES = values();
@@ -267,8 +303,7 @@ private static final long serialVersionUID = 0L;
     public static AccountLinkStatus valueOf(
         com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
       if (desc.getType() != getDescriptor()) {
-        throw new java.lang.IllegalArgumentException(
-          "EnumValueDescriptor is not for this type.");
+        throw new java.lang.IllegalArgumentException("EnumValueDescriptor is not for this type.");
       }
       if (desc.getIndex() == -1) {
         return UNRECOGNIZED;
@@ -286,6 +321,7 @@ private static final long serialVersionUID = 0L;
   }
 
   private byte memoizedIsInitialized = -1;
+
   @java.lang.Override
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
@@ -297,8 +333,7 @@ private static final long serialVersionUID = 0L;
   }
 
   @java.lang.Override
-  public void writeTo(com.google.protobuf.CodedOutputStream output)
-                      throws java.io.IOException {
+  public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
     unknownFields.writeTo(output);
   }
 
@@ -316,12 +351,13 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public boolean equals(final java.lang.Object obj) {
     if (obj == this) {
-     return true;
+      return true;
     }
     if (!(obj instanceof com.google.ads.googleads.v5.enums.AccountLinkStatusEnum)) {
       return super.equals(obj);
     }
-    com.google.ads.googleads.v5.enums.AccountLinkStatusEnum other = (com.google.ads.googleads.v5.enums.AccountLinkStatusEnum) obj;
+    com.google.ads.googleads.v5.enums.AccountLinkStatusEnum other =
+        (com.google.ads.googleads.v5.enums.AccountLinkStatusEnum) obj;
 
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
@@ -340,117 +376,127 @@ private static final long serialVersionUID = 0L;
   }
 
   public static com.google.ads.googleads.v5.enums.AccountLinkStatusEnum parseFrom(
-      java.nio.ByteBuffer data)
-      throws com.google.protobuf.InvalidProtocolBufferException {
+      java.nio.ByteBuffer data) throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
+
   public static com.google.ads.googleads.v5.enums.AccountLinkStatusEnum parseFrom(
-      java.nio.ByteBuffer data,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.nio.ByteBuffer data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
+
   public static com.google.ads.googleads.v5.enums.AccountLinkStatusEnum parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
+
   public static com.google.ads.googleads.v5.enums.AccountLinkStatusEnum parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
+
   public static com.google.ads.googleads.v5.enums.AccountLinkStatusEnum parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
+
   public static com.google.ads.googleads.v5.enums.AccountLinkStatusEnum parseFrom(
-      byte[] data,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      byte[] data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.google.ads.googleads.v5.enums.AccountLinkStatusEnum parseFrom(java.io.InputStream input)
-      throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3
-        .parseWithIOException(PARSER, input);
-  }
+
   public static com.google.ads.googleads.v5.enums.AccountLinkStatusEnum parseFrom(
-      java.io.InputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3
-        .parseWithIOException(PARSER, input, extensionRegistry);
+      java.io.InputStream input) throws java.io.IOException {
+    return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
   }
-  public static com.google.ads.googleads.v5.enums.AccountLinkStatusEnum parseDelimitedFrom(java.io.InputStream input)
+
+  public static com.google.ads.googleads.v5.enums.AccountLinkStatusEnum parseFrom(
+      java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3
-        .parseDelimitedWithIOException(PARSER, input);
+    return com.google.protobuf.GeneratedMessageV3.parseWithIOException(
+        PARSER, input, extensionRegistry);
   }
+
   public static com.google.ads.googleads.v5.enums.AccountLinkStatusEnum parseDelimitedFrom(
-      java.io.InputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3
-        .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      java.io.InputStream input) throws java.io.IOException {
+    return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(PARSER, input);
   }
+
+  public static com.google.ads.googleads.v5.enums.AccountLinkStatusEnum parseDelimitedFrom(
+      java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws java.io.IOException {
+    return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(
+        PARSER, input, extensionRegistry);
+  }
+
   public static com.google.ads.googleads.v5.enums.AccountLinkStatusEnum parseFrom(
-      com.google.protobuf.CodedInputStream input)
-      throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3
-        .parseWithIOException(PARSER, input);
+      com.google.protobuf.CodedInputStream input) throws java.io.IOException {
+    return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
   }
+
   public static com.google.ads.googleads.v5.enums.AccountLinkStatusEnum parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3
-        .parseWithIOException(PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessageV3.parseWithIOException(
+        PARSER, input, extensionRegistry);
   }
 
   @java.lang.Override
-  public Builder newBuilderForType() { return newBuilder(); }
+  public Builder newBuilderForType() {
+    return newBuilder();
+  }
+
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(com.google.ads.googleads.v5.enums.AccountLinkStatusEnum prototype) {
+
+  public static Builder newBuilder(
+      com.google.ads.googleads.v5.enums.AccountLinkStatusEnum prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-  }
-  @java.lang.Override
-  public Builder toBuilder() {
-    return this == DEFAULT_INSTANCE
-        ? new Builder() : new Builder().mergeFrom(this);
   }
 
   @java.lang.Override
-  protected Builder newBuilderForType(
-      com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+  public Builder toBuilder() {
+    return this == DEFAULT_INSTANCE ? new Builder() : new Builder().mergeFrom(this);
+  }
+
+  @java.lang.Override
+  protected Builder newBuilderForType(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
     Builder builder = new Builder(parent);
     return builder;
   }
   /**
+   *
+   *
    * <pre>
    * Container for enum describing possible statuses of an account link.
    * </pre>
    *
    * Protobuf type {@code google.ads.googleads.v5.enums.AccountLinkStatusEnum}
    */
-  public static final class Builder extends
-      com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+  public static final class Builder extends com.google.protobuf.GeneratedMessageV3.Builder<Builder>
+      implements
       // @@protoc_insertion_point(builder_implements:google.ads.googleads.v5.enums.AccountLinkStatusEnum)
       com.google.ads.googleads.v5.enums.AccountLinkStatusEnumOrBuilder {
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.google.ads.googleads.v5.enums.AccountLinkStatusProto.internal_static_google_ads_googleads_v5_enums_AccountLinkStatusEnum_descriptor;
+    public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+      return com.google.ads.googleads.v5.enums.AccountLinkStatusProto
+          .internal_static_google_ads_googleads_v5_enums_AccountLinkStatusEnum_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.google.ads.googleads.v5.enums.AccountLinkStatusProto.internal_static_google_ads_googleads_v5_enums_AccountLinkStatusEnum_fieldAccessorTable
+      return com.google.ads.googleads.v5.enums.AccountLinkStatusProto
+          .internal_static_google_ads_googleads_v5_enums_AccountLinkStatusEnum_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.google.ads.googleads.v5.enums.AccountLinkStatusEnum.class, com.google.ads.googleads.v5.enums.AccountLinkStatusEnum.Builder.class);
+              com.google.ads.googleads.v5.enums.AccountLinkStatusEnum.class,
+              com.google.ads.googleads.v5.enums.AccountLinkStatusEnum.Builder.class);
     }
 
     // Construct using com.google.ads.googleads.v5.enums.AccountLinkStatusEnum.newBuilder()
@@ -458,16 +504,15 @@ private static final long serialVersionUID = 0L;
       maybeForceBuilderInitialization();
     }
 
-    private Builder(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+    private Builder(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
       maybeForceBuilderInitialization();
     }
+
     private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-      }
+      if (com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders) {}
     }
+
     @java.lang.Override
     public Builder clear() {
       super.clear();
@@ -475,9 +520,9 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Descriptors.Descriptor
-        getDescriptorForType() {
-      return com.google.ads.googleads.v5.enums.AccountLinkStatusProto.internal_static_google_ads_googleads_v5_enums_AccountLinkStatusEnum_descriptor;
+    public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
+      return com.google.ads.googleads.v5.enums.AccountLinkStatusProto
+          .internal_static_google_ads_googleads_v5_enums_AccountLinkStatusEnum_descriptor;
     }
 
     @java.lang.Override
@@ -496,7 +541,8 @@ private static final long serialVersionUID = 0L;
 
     @java.lang.Override
     public com.google.ads.googleads.v5.enums.AccountLinkStatusEnum buildPartial() {
-      com.google.ads.googleads.v5.enums.AccountLinkStatusEnum result = new com.google.ads.googleads.v5.enums.AccountLinkStatusEnum(this);
+      com.google.ads.googleads.v5.enums.AccountLinkStatusEnum result =
+          new com.google.ads.googleads.v5.enums.AccountLinkStatusEnum(this);
       onBuilt();
       return result;
     }
@@ -505,38 +551,39 @@ private static final long serialVersionUID = 0L;
     public Builder clone() {
       return super.clone();
     }
+
     @java.lang.Override
     public Builder setField(
-        com.google.protobuf.Descriptors.FieldDescriptor field,
-        java.lang.Object value) {
+        com.google.protobuf.Descriptors.FieldDescriptor field, java.lang.Object value) {
       return super.setField(field, value);
     }
+
     @java.lang.Override
-    public Builder clearField(
-        com.google.protobuf.Descriptors.FieldDescriptor field) {
+    public Builder clearField(com.google.protobuf.Descriptors.FieldDescriptor field) {
       return super.clearField(field);
     }
+
     @java.lang.Override
-    public Builder clearOneof(
-        com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+    public Builder clearOneof(com.google.protobuf.Descriptors.OneofDescriptor oneof) {
       return super.clearOneof(oneof);
     }
+
     @java.lang.Override
     public Builder setRepeatedField(
-        com.google.protobuf.Descriptors.FieldDescriptor field,
-        int index, java.lang.Object value) {
+        com.google.protobuf.Descriptors.FieldDescriptor field, int index, java.lang.Object value) {
       return super.setRepeatedField(field, index, value);
     }
+
     @java.lang.Override
     public Builder addRepeatedField(
-        com.google.protobuf.Descriptors.FieldDescriptor field,
-        java.lang.Object value) {
+        com.google.protobuf.Descriptors.FieldDescriptor field, java.lang.Object value) {
       return super.addRepeatedField(field, value);
     }
+
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
       if (other instanceof com.google.ads.googleads.v5.enums.AccountLinkStatusEnum) {
-        return mergeFrom((com.google.ads.googleads.v5.enums.AccountLinkStatusEnum)other);
+        return mergeFrom((com.google.ads.googleads.v5.enums.AccountLinkStatusEnum) other);
       } else {
         super.mergeFrom(other);
         return this;
@@ -544,7 +591,8 @@ private static final long serialVersionUID = 0L;
     }
 
     public Builder mergeFrom(com.google.ads.googleads.v5.enums.AccountLinkStatusEnum other) {
-      if (other == com.google.ads.googleads.v5.enums.AccountLinkStatusEnum.getDefaultInstance()) return this;
+      if (other == com.google.ads.googleads.v5.enums.AccountLinkStatusEnum.getDefaultInstance())
+        return this;
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
       return this;
@@ -564,7 +612,8 @@ private static final long serialVersionUID = 0L;
       try {
         parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.google.ads.googleads.v5.enums.AccountLinkStatusEnum) e.getUnfinishedMessage();
+        parsedMessage =
+            (com.google.ads.googleads.v5.enums.AccountLinkStatusEnum) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
         if (parsedMessage != null) {
@@ -573,9 +622,9 @@ private static final long serialVersionUID = 0L;
       }
       return this;
     }
+
     @java.lang.Override
-    public final Builder setUnknownFields(
-        final com.google.protobuf.UnknownFieldSet unknownFields) {
+    public final Builder setUnknownFields(final com.google.protobuf.UnknownFieldSet unknownFields) {
       return super.setUnknownFields(unknownFields);
     }
 
@@ -585,12 +634,12 @@ private static final long serialVersionUID = 0L;
       return super.mergeUnknownFields(unknownFields);
     }
 
-
     // @@protoc_insertion_point(builder_scope:google.ads.googleads.v5.enums.AccountLinkStatusEnum)
   }
 
   // @@protoc_insertion_point(class_scope:google.ads.googleads.v5.enums.AccountLinkStatusEnum)
   private static final com.google.ads.googleads.v5.enums.AccountLinkStatusEnum DEFAULT_INSTANCE;
+
   static {
     DEFAULT_INSTANCE = new com.google.ads.googleads.v5.enums.AccountLinkStatusEnum();
   }
@@ -599,16 +648,16 @@ private static final long serialVersionUID = 0L;
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<AccountLinkStatusEnum>
-      PARSER = new com.google.protobuf.AbstractParser<AccountLinkStatusEnum>() {
-    @java.lang.Override
-    public AccountLinkStatusEnum parsePartialFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return new AccountLinkStatusEnum(input, extensionRegistry);
-    }
-  };
+  private static final com.google.protobuf.Parser<AccountLinkStatusEnum> PARSER =
+      new com.google.protobuf.AbstractParser<AccountLinkStatusEnum>() {
+        @java.lang.Override
+        public AccountLinkStatusEnum parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new AccountLinkStatusEnum(input, extensionRegistry);
+        }
+      };
 
   public static com.google.protobuf.Parser<AccountLinkStatusEnum> parser() {
     return PARSER;
@@ -623,6 +672,4 @@ private static final long serialVersionUID = 0L;
   public com.google.ads.googleads.v5.enums.AccountLinkStatusEnum getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
-
 }
-
