@@ -169,7 +169,6 @@ public abstract class GoogleAdsClient extends AbstractGoogleAdsClient {
     public abstract Builder setCredentials(Credentials credentials);
 
     private void setCredentials(Properties properties) throws IOException {
-      Credentials credentials;
       String serviceAccountSecretsPath =
           ConfigPropertyKey.SERVICE_ACCOUNT_SECRETS_PATH.getPropertyValue(properties);
       String refreshToken = ConfigPropertyKey.REFRESH_TOKEN.getPropertyValue(properties);
@@ -197,35 +196,67 @@ public abstract class GoogleAdsClient extends AbstractGoogleAdsClient {
       }
 
       // Constructs the credentials object using the appropriate set of properties.
-      if (serviceAccountSecretsPath != null) {
-        // Service accounts secrets path is specified, so constructs service account credentials.
-        String serviceAccountUser =
-            ConfigPropertyKey.SERVICE_ACCOUNT_USER.getPropertyValue(properties);
-        // Confirms the service account user is specified. This is required for service account
-        // credentials when using the Google Ads API.
-        Preconditions.checkNotNull(
-            serviceAccountUser,
-            "No service account user specified under the key: %s",
-            ConfigPropertyKey.SERVICE_ACCOUNT_USER);
-        // Creates base service account credentials from the secrets JSON file.
-        ServiceAccountCredentials baseCredentials =
-            ServiceAccountCredentials.fromStream(new FileInputStream(serviceAccountSecretsPath));
-        // Decorates the base credentials with the service account user and scopes.
-        credentials =
-            baseCredentials.toBuilder()
-                .setServiceAccountUser(serviceAccountUser)
-                .setScopes(Collections.singletonList(GOOGLE_ADS_API_SCOPE))
-                .build();
+      Credentials credentials;
+      if (refreshToken != null) {
+        // Refresh token is specified, so constructs user credentials for the installed or web
+        // server application flow.
+        credentials = createUserCredentials(properties);
       } else {
-        // Refresh token is specified, so constructs user credentials.
-        credentials =
-            UserCredentials.newBuilder()
-                .setClientId(ConfigPropertyKey.CLIENT_ID.getPropertyValue(properties))
-                .setClientSecret(ConfigPropertyKey.CLIENT_SECRET.getPropertyValue(properties))
-                .setRefreshToken(ConfigPropertyKey.REFRESH_TOKEN.getPropertyValue(properties))
-                .build();
+        // Service accounts secrets path is specified, so constructs service account credentials.
+        credentials = createServiceAccountCredentials(properties);
       }
       setCredentials(credentials);
+    }
+
+    /**
+     * Creates and returns a {@link Credentials} object based on the installed app or web server
+     * configuration keys.
+     */
+    private Credentials createUserCredentials(Properties properties) {
+      String refreshToken = ConfigPropertyKey.REFRESH_TOKEN.getPropertyValue(properties);
+      Preconditions.checkNotNull(
+          "No refresh token specified under the key: %s", ConfigPropertyKey.REFRESH_TOKEN);
+      String clientId = ConfigPropertyKey.CLIENT_ID.getPropertyValue(properties);
+      Preconditions.checkNotNull(
+          "No client ID specified under the key: %s", ConfigPropertyKey.CLIENT_ID);
+      String clientSecret = ConfigPropertyKey.CLIENT_SECRET.getPropertyValue(properties);
+      Preconditions.checkNotNull(
+          "No client secret specified under the key: %s", ConfigPropertyKey.CLIENT_SECRET);
+
+      return UserCredentials.newBuilder()
+          .setClientId(ConfigPropertyKey.CLIENT_ID.getPropertyValue(properties))
+          .setClientSecret(ConfigPropertyKey.CLIENT_SECRET.getPropertyValue(properties))
+          .setRefreshToken(refreshToken)
+          .build();
+    }
+
+    /**
+     * Creates and returns a {@link Credentials} object based on the service account configuration
+     * keys.
+     */
+    private Credentials createServiceAccountCredentials(Properties properties) throws IOException {
+      String serviceAccountSecretsPath =
+          ConfigPropertyKey.SERVICE_ACCOUNT_SECRETS_PATH.getPropertyValue(properties);
+      Preconditions.checkNotNull(
+          serviceAccountSecretsPath,
+          "No service account secrets path specified under the key: %s",
+          ConfigPropertyKey.SERVICE_ACCOUNT_SECRETS_PATH);
+      String serviceAccountUser =
+          ConfigPropertyKey.SERVICE_ACCOUNT_USER.getPropertyValue(properties);
+      // Confirms the service account user is specified. This is required for service account
+      // credentials when using the Google Ads API.
+      Preconditions.checkNotNull(
+          serviceAccountUser,
+          "No service account user specified under the key: %s",
+          ConfigPropertyKey.SERVICE_ACCOUNT_USER);
+      // Creates base service account credentials from the secrets JSON file.
+      ServiceAccountCredentials baseCredentials =
+          ServiceAccountCredentials.fromStream(new FileInputStream(serviceAccountSecretsPath));
+      // Decorates the base credentials with the service account user and scopes.
+      return baseCredentials.toBuilder()
+          .setServiceAccountUser(serviceAccountUser)
+          .setScopes(Collections.singletonList(GOOGLE_ADS_API_SCOPE))
+          .build();
     }
 
     /** Returns the TransportChannelProvider currently configured. */
