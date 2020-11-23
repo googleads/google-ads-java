@@ -174,7 +174,11 @@ public abstract class GoogleAdsClient extends AbstractGoogleAdsClient {
       String refreshToken = ConfigPropertyKey.REFRESH_TOKEN.getPropertyValue(properties);
       // Validates that entries are present for exactly one of installed app/web flow credentials or
       // service account credentials.
-      if (serviceAccountSecretsPath == null && refreshToken == null) {
+      boolean hasInstalledAppKeys =
+          INSTALLED_APP_OAUTH_KEYS.stream().anyMatch(k -> k.getPropertyValue(properties) != null);
+      boolean hasServiceAccountKeys =
+          SERVICE_ACCOUNT_OAUTH_KEYS.stream().anyMatch(k -> k.getPropertyValue(properties) != null);
+      if (!(hasInstalledAppKeys || hasServiceAccountKeys)) {
         // Entries missing for both types of credentials.
         throw new IllegalArgumentException(
             String.format(
@@ -182,7 +186,7 @@ public abstract class GoogleAdsClient extends AbstractGoogleAdsClient {
                     + " for %s if using installed application/web flow credentials, or %s if using"
                     + " service account credentials.",
                 INSTALLED_APP_OAUTH_KEYS, SERVICE_ACCOUNT_OAUTH_KEYS));
-      } else if (serviceAccountSecretsPath != null && refreshToken != null) {
+      } else if (hasInstalledAppKeys && hasServiceAccountKeys) {
         // Entries specified for both types of credentials.
         throw new IllegalArgumentException(
             String.format(

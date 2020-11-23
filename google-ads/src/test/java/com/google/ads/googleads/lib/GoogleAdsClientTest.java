@@ -289,6 +289,8 @@ public class GoogleAdsClientTest {
    */
   @Test
   public void buildFromProperties_neitherCredentialsPresent_throwsException() {
+    testProperties.remove(ConfigPropertyKey.CLIENT_ID.getPropertyKey());
+    testProperties.remove(ConfigPropertyKey.CLIENT_SECRET.getPropertyKey());
     testProperties.remove(ConfigPropertyKey.REFRESH_TOKEN.getPropertyKey());
     testProperties.remove(ConfigPropertyKey.SERVICE_ACCOUNT_SECRETS_PATH.getPropertyKey());
     // Invokes the fromProperties method on the builder, which should fail.
@@ -314,6 +316,8 @@ public class GoogleAdsClientTest {
 
     // Configures properties for the service account use case, including reading the service account
     // secrets from the file created above.
+    testProperties.remove(ConfigPropertyKey.CLIENT_ID.getPropertyKey());
+    testProperties.remove(ConfigPropertyKey.CLIENT_SECRET.getPropertyKey());
     testProperties.remove(ConfigPropertyKey.REFRESH_TOKEN.getPropertyKey());
     testProperties.setProperty(
         ConfigPropertyKey.SERVICE_ACCOUNT_SECRETS_PATH.getPropertyKey(), secretsFile.getPath());
