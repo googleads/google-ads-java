@@ -304,15 +304,16 @@ public class GoogleAdsClientTest {
   @Test
   public void buildFromProperties_withServiceAccountCredentials()
       throws IOException, NoSuchAlgorithmException {
-    // Copies the mock service account credentials secrets file to the temporary directory.
+    // Copies the mock service account credentials secrets file from test resources to a file in the
+    // temporary folder.
     File secretsFile = folder.newFile("serviceAccountSecrets.json");
-
     Resources.asCharSource(
             Resources.getResource(getClass(), "mock_service_account_secrets.json"),
             StandardCharsets.UTF_8)
         .copyTo(Files.asCharSink(secretsFile, StandardCharsets.UTF_8));
 
-    // Configures properties for the service account use case.
+    // Configures properties for the service account use case, including reading the service account
+    // secrets from the file created above.
     testProperties.remove(ConfigPropertyKey.REFRESH_TOKEN.getPropertyKey());
     testProperties.setProperty(
         ConfigPropertyKey.SERVICE_ACCOUNT_SECRETS_PATH.getPropertyKey(), secretsFile.getPath());
