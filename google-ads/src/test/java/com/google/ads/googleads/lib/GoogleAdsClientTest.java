@@ -25,7 +25,6 @@ import static org.junit.Assert.fail;
 
 import com.google.ads.googleads.lib.GoogleAdsClient.Builder;
 import com.google.ads.googleads.lib.GoogleAdsClient.Builder.ConfigPropertyKey;
-import com.google.ads.googleads.lib.GoogleAdsClient.Builder.ServiceAccountCredentialsFactory;
 import com.google.ads.googleads.lib.catalog.ApiCatalog;
 import com.google.ads.googleads.v6.errors.GoogleAdsError;
 import com.google.ads.googleads.v6.errors.GoogleAdsException;
@@ -46,6 +45,8 @@ import com.google.api.gax.rpc.ApiException;
 import com.google.auth.Credentials;
 import com.google.auth.oauth2.ServiceAccountCredentials;
 import com.google.auth.oauth2.UserCredentials;
+import com.google.common.io.Files;
+import com.google.common.io.Resources;
 import io.grpc.Metadata;
 import io.grpc.Status;
 import io.grpc.Status.Code;
@@ -54,12 +55,10 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.io.InputStream;
 import java.lang.reflect.InvocationTargetException;
-import java.security.PrivateKey;
-import java.util.Arrays;
+import java.nio.charset.StandardCharsets;
+import java.security.NoSuchAlgorithmException;
 import java.util.Collections;
-import java.util.List;
 import java.util.Properties;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.regex.Pattern;
@@ -76,7 +75,6 @@ import org.junit.rules.TemporaryFolder;
 import org.junit.runner.RunWith;
 import org.junit.runners.JUnit4;
 import org.mockito.Mock;
-import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
 
 /** Tests for {@link GoogleAdsClient}. */
@@ -304,22 +302,15 @@ public class GoogleAdsClientTest {
    * have valid values in the properties map.
    */
   @Test
-  public void buildFromProperties_withServiceAccountCredentials() throws IOException {
-    // Creates a mock service account credentials secrets file in a temporary directory.
+  public void buildFromProperties_withServiceAccountCredentials()
+      throws IOException, NoSuchAlgorithmException {
+    // Copies the mock service account credentials secrets file to the temporary directory.
     File secretsFile = folder.newFile("serviceAccountSecrets.json");
 
-    // Sets up mocks needed for service account creation.
-    ServiceAccountCredentialsFactory serviceAccountCredentialsFactory =
-        Mockito.mock(ServiceAccountCredentialsFactory.class);
-    PrivateKey mockPrivateKey = Mockito.mock(PrivateKey.class);
-    ServiceAccountCredentials mockCredentials =
-        ServiceAccountCredentials.newBuilder()
-            .setClientEmail("someclientemail@example.com")
-            .setClientId("fooapps.googleusercontent.com")
-            .setPrivateKey(mockPrivateKey)
-            .build();
-    Mockito.when(serviceAccountCredentialsFactory.fromStream(Mockito.any(InputStream.class)))
-        .thenReturn(mockCredentials);
+    Resources.asCharSource(
+            Resources.getResource(getClass(), "mock_service_account_secrets.json"),
+            StandardCharsets.UTF_8)
+        .copyTo(Files.asCharSink(secretsFile, StandardCharsets.UTF_8));
 
     // Configures properties for the service account use case.
     testProperties.remove(ConfigPropertyKey.REFRESH_TOKEN.getPropertyKey());
@@ -329,13 +320,7 @@ public class GoogleAdsClientTest {
         ConfigPropertyKey.SERVICE_ACCOUNT_USER.getPropertyKey(), "someuser@example.com");
 
     // Builds the client.
-    GoogleAdsClient client =
-        GoogleAdsClient.newBuilder()
-            .setServiceAccountCredentialsFactory(serviceAccountCredentialsFactory)
-            .fromProperties(testProperties)
-            .build();
-    // Verifies that the mock service account factory's fromStream method was invoked.
-    Mockito.verify(serviceAccountCredentialsFactory).fromStream(Mockito.any(InputStream.class));
+    GoogleAdsClient client = GoogleAdsClient.newBuilder().fromProperties(testProperties).build();
 
     // Asserts client and credentials match expectations.
     ServiceAccountCredentials credentials = (ServiceAccountCredentials) client.getCredentials();

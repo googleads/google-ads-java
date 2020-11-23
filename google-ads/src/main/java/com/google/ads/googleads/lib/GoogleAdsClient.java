@@ -34,7 +34,6 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.io.InputStream;
 import java.util.Collections;
 import java.util.Properties;
 import java.util.function.Supplier;
@@ -129,11 +128,6 @@ public abstract class GoogleAdsClient extends AbstractGoogleAdsClient {
   @AutoValue.Builder
   public abstract static class Builder {
 
-    /** Interface to allow tests to mock service account credentials creation. */
-    @VisibleForTesting
-    interface ServiceAccountCredentialsFactory {
-      ServiceAccountCredentials fromStream(InputStream inputStream) throws IOException;
-    }
     /**
      * The default file name for the properties configuration file. This does <em>not</em> include a
      * path.
@@ -161,13 +155,6 @@ public abstract class GoogleAdsClient extends AbstractGoogleAdsClient {
      */
     private Supplier<File> configurationFileSupplier =
         () -> new File(System.getProperty("user.home"), DEFAULT_PROPERTIES_CONFIG_FILE_NAME);
-
-    /**
-     * Allows injecting a different factory method for creating {@link ServiceAccountCredentials}
-     * from a stream. Only for testing.
-     */
-    private ServiceAccountCredentialsFactory serviceAccountCredentialsFactory =
-        inputStream -> ServiceAccountCredentials.fromStream(inputStream);
 
     /** Returns the credentials currently configured. */
     public abstract Credentials getCredentials();
@@ -222,8 +209,7 @@ public abstract class GoogleAdsClient extends AbstractGoogleAdsClient {
             ConfigPropertyKey.SERVICE_ACCOUNT_USER);
         // Creates base service account credentials from the secrets JSON file.
         ServiceAccountCredentials baseCredentials =
-            serviceAccountCredentialsFactory.fromStream(
-                new FileInputStream(serviceAccountSecretsPath));
+            ServiceAccountCredentials.fromStream(new FileInputStream(serviceAccountSecretsPath));
         // Decorates the base credentials with the service account user and scopes.
         credentials =
             baseCredentials.toBuilder()
@@ -420,17 +406,6 @@ public abstract class GoogleAdsClient extends AbstractGoogleAdsClient {
     @VisibleForTesting
     Builder setConfigurationFileSupplier(Supplier<File> configurationFileSupplier) {
       this.configurationFileSupplier = configurationFileSupplier;
-      return this;
-    }
-
-    /**
-     * Sets the service accounts credentials factory for this builder. Required for tests since the
-     * ServiceAccountCredentials#fromStream method requires a valid service account secrets JSON
-     * file, but tests need to provide mock credentials.
-     */
-    @VisibleForTesting
-    Builder setServiceAccountCredentialsFactory(ServiceAccountCredentialsFactory factory) {
-      this.serviceAccountCredentialsFactory = factory;
       return this;
     }
 
