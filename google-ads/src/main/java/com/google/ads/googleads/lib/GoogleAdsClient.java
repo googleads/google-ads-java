@@ -200,16 +200,10 @@ public abstract class GoogleAdsClient extends AbstractGoogleAdsClient {
       }
 
       // Constructs the credentials object using the appropriate set of properties.
-      Credentials credentials;
-      if (refreshToken != null) {
-        // Refresh token is specified, so constructs user credentials for the installed or web
-        // server application flow.
-        credentials = createUserCredentials(properties);
-      } else {
-        // Service accounts secrets path is specified, so constructs service account credentials.
-        credentials = createServiceAccountCredentials(properties);
-      }
-      setCredentials(credentials);
+      setCredentials(
+          hasInstalledAppKeys
+              ? createUserCredentials(properties)
+              : createServiceAccountCredentials(properties));
     }
 
     /**
