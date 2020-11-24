@@ -213,17 +213,21 @@ public abstract class GoogleAdsClient extends AbstractGoogleAdsClient {
     private Credentials createUserCredentials(Properties properties) {
       String refreshToken = ConfigPropertyKey.REFRESH_TOKEN.getPropertyValue(properties);
       Preconditions.checkNotNull(
-          "No refresh token specified under the key: %s", ConfigPropertyKey.REFRESH_TOKEN);
+          refreshToken,
+          "No refresh token specified under the key: %s",
+          ConfigPropertyKey.REFRESH_TOKEN);
       String clientId = ConfigPropertyKey.CLIENT_ID.getPropertyValue(properties);
       Preconditions.checkNotNull(
-          "No client ID specified under the key: %s", ConfigPropertyKey.CLIENT_ID);
+          clientId, "No client ID specified under the key: %s", ConfigPropertyKey.CLIENT_ID);
       String clientSecret = ConfigPropertyKey.CLIENT_SECRET.getPropertyValue(properties);
       Preconditions.checkNotNull(
-          "No client secret specified under the key: %s", ConfigPropertyKey.CLIENT_SECRET);
+          clientSecret,
+          "No client secret specified under the key: %s",
+          ConfigPropertyKey.CLIENT_SECRET);
 
       return UserCredentials.newBuilder()
-          .setClientId(ConfigPropertyKey.CLIENT_ID.getPropertyValue(properties))
-          .setClientSecret(ConfigPropertyKey.CLIENT_SECRET.getPropertyValue(properties))
+          .setClientId(clientId)
+          .setClientSecret(clientSecret)
           .setRefreshToken(refreshToken)
           .build();
     }
