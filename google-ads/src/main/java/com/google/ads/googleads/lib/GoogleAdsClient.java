@@ -450,7 +450,6 @@ public abstract class GoogleAdsClient extends AbstractGoogleAdsClient {
       REFRESH_TOKEN("api.googleads.refreshToken"),
       ENDPOINT("api.googleads.endpoint"),
       LOGIN_CUSTOMER_ID("api.googleads.loginCustomerId"),
-      ENABLE_GENERATED_CATALOG("api.googleads.enableGeneratedCatalog"),
       // Service account keys
       SERVICE_ACCOUNT_SECRETS_PATH("api.googleads.serviceAccountSecretsPath"),
       SERVICE_ACCOUNT_USER("api.googleads.serviceAccountUser");
