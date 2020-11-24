@@ -141,6 +141,7 @@ public class RemoveFlightsFeedItemAttributeValue {
    * @param feedItemId ID of the feed item to be updated.
    * @param flightPlaceholderField the placeholder type for the attribute to be removed.
    */
+  // [START RemoveFlightsFeedItemAttributeValue_1]
   private void removeAttributeFromFeedItem(
       GoogleAdsClient googleAdsClient,
       long customerId,
@@ -184,6 +185,7 @@ public class RemoveFlightsFeedItemAttributeValue {
       }
     }
   }
+  // [END RemoveFlightsFeedItemAttributeValue_1]
 
   /**
    * Removes a feed item attribute value.
@@ -194,6 +196,7 @@ public class RemoveFlightsFeedItemAttributeValue {
    * @param feedItemResourceName the resource name of the feedItem to be updated.
    * @param flightPlaceholderField the placeholder type for the attribute to be removed.
    */
+  // [START RemoveFlightsFeedItemAttributeValue]
   private FeedItem removeAttributeValueFromFeedItem(
       GoogleAdsClient googleAdsClient,
       long customerId,
@@ -217,6 +220,7 @@ public class RemoveFlightsFeedItemAttributeValue {
     // be removed.
     return feedItem.toBuilder().removeAttributeValues(attributeIndex).build();
   }
+  // [END RemoveFlightsFeedItemAttributeValue]
 
   /**
    * Retrieves a feed item and its attribute values given a resource name.

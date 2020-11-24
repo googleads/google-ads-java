@@ -85,6 +85,7 @@ public class AddAccountBudgetProposal {
     }
   }
 
+  // [START AddAccountBudgetProposal]
   private void runExample(GoogleAdsClient googleAdsClient, long customerId, long billingSetupId) {
     // Creates an AccountBudgetProposal. This will be reviewed offline by Google Ads, and if
     // approved will become an AccountBudget.
@@ -134,4 +135,5 @@ public class AddAccountBudgetProposal {
           "Account budget proposal created: %s.%n", response.getResult().getResourceName());
     }
   }
+  // [END AddAccountBudgetProposal]
 }

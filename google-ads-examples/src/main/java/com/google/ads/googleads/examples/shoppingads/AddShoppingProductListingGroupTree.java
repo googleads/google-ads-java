@@ -128,6 +128,7 @@ public class AddShoppingProductListingGroupTree {
    *     group tree already exists and this option is not set to true.
    * @throws GoogleAdsException if an API request failed with one or more service errors.
    */
+  // [START AddShoppingProductListingGroupTree]
   private void runExample(
       GoogleAdsClient googleAdsClient,
       long customerId,
@@ -269,6 +270,7 @@ public class AddShoppingProductListingGroupTree {
       }
     }
   }
+  // [END AddShoppingProductListingGroupTree]
 
   /**
    * Removes all the ad group criteria that define the existing listing group tree for an ad group.

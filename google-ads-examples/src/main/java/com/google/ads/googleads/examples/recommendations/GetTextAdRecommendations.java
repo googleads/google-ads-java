@@ -87,6 +87,7 @@ public class GetTextAdRecommendations {
    * @param customerId the client customer ID.
    * @throws GoogleAdsException if an API request failed with one or more service errors.
    */
+  // [START GetTextAdRecommendations]
   private void runExample(GoogleAdsClient googleAdsClient, long customerId) {
     try (GoogleAdsServiceClient googleAdsServiceClient =
         googleAdsClient.getLatestVersion().createGoogleAdsServiceClient()) {
@@ -135,4 +136,5 @@ public class GetTextAdRecommendations {
       }
     }
   }
+  // [END GetTextAdRecommendations]
 }

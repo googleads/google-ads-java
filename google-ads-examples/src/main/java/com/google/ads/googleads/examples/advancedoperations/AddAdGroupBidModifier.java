@@ -104,6 +104,7 @@ public class AddAdGroupBidModifier {
    * @param bidModifier the bid modifier value to set
    * @throws GoogleAdsException if an API request failed with one or more service errors.
    */
+  // [START AddAdGroupBidModifier]
   private void runExample(
       GoogleAdsClient googleAdsClient, long customerId, long adGroupId, double bidModifier) {
 
@@ -134,4 +135,5 @@ public class AddAdGroupBidModifier {
       }
     }
   }
+  // [END AddAdGroupBidModifier]
 }

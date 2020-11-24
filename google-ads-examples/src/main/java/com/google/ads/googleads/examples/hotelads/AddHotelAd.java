@@ -130,6 +130,7 @@ public class AddHotelAd {
    *     using the Percent CPC bidding strategy.
    * @throws GoogleAdsException if an API request failed with one or more service errors.
    */
+  // [START AddHotelAd]
   private void runExample(
       GoogleAdsClient googleAdsClient,
       long customerId,
@@ -154,6 +155,7 @@ public class AddHotelAd {
     // Creates a hotel ad group ad.
     addHotelAdGroupAd(googleAdsClient, customerId, adGroupResourceName);
   }
+  // [END AddHotelAd]
 
   /**
    * Creates a new campaign budget in the specified client account.
@@ -212,6 +214,7 @@ public class AddHotelAd {
     NetworkSettings networkSettings =
         NetworkSettings.newBuilder().setTargetGoogleSearch(true).build();
 
+    // [START AddHotelAd_1]
     // Creates the campaign.
     Campaign campaign =
         Campaign.newBuilder()
@@ -233,6 +236,7 @@ public class AddHotelAd {
             // Adds the networkSettings configured above.
             .setNetworkSettings(networkSettings)
             .build();
+            // [END AddHotelAd_1]
 
     // Creates a campaign operation.
     CampaignOperation operation = CampaignOperation.newBuilder().setCreate(campaign).build();
