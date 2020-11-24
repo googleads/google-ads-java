@@ -57,7 +57,6 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
 import java.nio.charset.StandardCharsets;
-import java.security.NoSuchAlgorithmException;
 import java.util.Collections;
 import java.util.Properties;
 import java.util.concurrent.ScheduledExecutorService;
@@ -304,8 +303,7 @@ public class GoogleAdsClientTest {
    * have valid values in the properties map.
    */
   @Test
-  public void buildFromProperties_withServiceAccountCredentials()
-      throws IOException, NoSuchAlgorithmException {
+  public void buildFromProperties_withServiceAccountCredentials() throws IOException {
     // Copies the mock service account credentials secrets file from test resources to a file in the
     // temporary folder.
     File secretsFile = folder.newFile("serviceAccountSecrets.json");
