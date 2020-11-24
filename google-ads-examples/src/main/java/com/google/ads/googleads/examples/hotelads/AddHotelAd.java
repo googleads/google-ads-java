@@ -236,7 +236,7 @@ public class AddHotelAd {
             // Adds the networkSettings configured above.
             .setNetworkSettings(networkSettings)
             .build();
-            // [END AddHotelAd_1]
+    // [END AddHotelAd_1]
 
     // Creates a campaign operation.
     CampaignOperation operation = CampaignOperation.newBuilder().setCreate(campaign).build();

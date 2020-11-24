@@ -178,7 +178,7 @@ public class HandleKeywordPolicyViolations {
                 + "policy violation exemptions.%n",
             response.getResults(0).getResourceName());
       } else {
-      // [END HandleKeywordPolicyViolations_1]
+        // [END HandleKeywordPolicyViolations_1]
         System.out.println("No exemption request was sent because either:");
         System.out.println("1) your keyword contained some non-exemptible policy violations, or");
         System.out.println("2) other non-policy related errors were thrown");

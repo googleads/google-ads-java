@@ -232,7 +232,7 @@ public class UsePortfolioBiddingStrategy {
               .setAdvertisingChannelType(AdvertisingChannelType.SEARCH)
               .setNetworkSettings(networkSettings)
               .build();
-              // [END UsePortfolioBiddingStrategy_2]
+      // [END UsePortfolioBiddingStrategy_2]
       // Constructs an operation that will create a campaign.
       CampaignOperation operation = CampaignOperation.newBuilder().setCreate(campaign).build();
       // Sends the operation in a mutate request.

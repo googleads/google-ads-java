@@ -166,7 +166,7 @@ public class AddCampaigns {
               .setStartDate(new DateTime().plusDays(1).toString("yyyyMMdd"))
               .setEndDate(new DateTime().plusDays(30).toString("yyyyMMdd"))
               .build();
-              // [END AddCampaigns_1]
+      // [END AddCampaigns_1]
 
       CampaignOperation op = CampaignOperation.newBuilder().setCreate(campaign).build();
       operations.add(op);

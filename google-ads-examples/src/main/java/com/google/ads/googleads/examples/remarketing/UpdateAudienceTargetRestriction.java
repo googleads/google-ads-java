@@ -115,7 +115,7 @@ public class UpdateAudienceTargetRestriction {
               + "FROM ad_group "
               + "WHERE ad_group.id = "
               + adGroupId;
-              // [END UpdateAudienceTargetRestriction]
+      // [END UpdateAudienceTargetRestriction]
 
       // Creates a request that will retrieve all ad groups using pages of the specified page size.
       SearchGoogleAdsRequest request =

@@ -123,7 +123,7 @@ public class AddRemarketingAction {
                 + "FROM remarketing_action "
                 + "WHERE remarketing_action.resource_name = '%s'",
             remarketingActionResourceName);
-            // [END AddRemarketingAction_1]
+    // [END AddRemarketingAction_1]
     try (GoogleAdsServiceClient googleAdsServiceClient =
         googleAdsClient.getLatestVersion().createGoogleAdsServiceClient()) {
       // Issues a search request.

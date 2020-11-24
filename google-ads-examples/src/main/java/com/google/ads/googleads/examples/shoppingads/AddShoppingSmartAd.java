@@ -257,7 +257,7 @@ public class AddShoppingSmartAd {
             // Sets the budget.
             .setCampaignBudget(budgetResourceName)
             .build();
-            // [END AddShoppingSmartAd]
+    // [END AddShoppingSmartAd]
 
     // Creates a campaign operation.
     CampaignOperation operation = CampaignOperation.newBuilder().setCreate(campaign).build();

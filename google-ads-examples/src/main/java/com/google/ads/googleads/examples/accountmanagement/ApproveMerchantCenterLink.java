@@ -118,14 +118,14 @@ public class ApproveMerchantCenterLink {
       System.out.printf(
           "%d Merchant Center link(s) found with the following details:%n",
           response.getMerchantCenterLinksCount());
-          // [END ApproveMerchantCenterLink]
+      // [END ApproveMerchantCenterLink]
 
       for (MerchantCenterLink merchantCenterLink : response.getMerchantCenterLinksList()) {
         // [START ApproveMerchantCenterLink_1]
         System.out.printf(
             "Link '%s' has status '%s'.%n",
             merchantCenterLink.getResourceName(), merchantCenterLink.getStatus());
-            // [END ApproveMerchantCenterLink_1]
+        // [END ApproveMerchantCenterLink_1]
 
         // Checks if there is a link for the Merchant Center account we are looking for, then only
         // approves the link if it is in a 'PENDING' state.
