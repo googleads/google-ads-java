@@ -92,6 +92,7 @@ public class LinkManagerToClient {
   }
 
   /** Runs the example. */
+  // [START LinkManagerToClient]
   private void runExample(GoogleAdsClient googleAdsClient, long clientCustomerId, long managerId) {
     // This example assumes that the same credentials will work for both customers, but that may not
     // be the case. If you need to use different credentials for each customer, then you may either
@@ -163,4 +164,5 @@ public class LinkManagerToClient {
           response.getResults(0).getResourceName());
     }
   }
+  // [END LinkManagerToClient]
 }

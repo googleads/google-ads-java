@@ -106,6 +106,7 @@ public class AddSitelinks {
    * @param campaignId the campaign ID.
    * @throws GoogleAdsException if an API request failed with one or more service errors.
    */
+  // [START AddSitelinks]
   private void runExample(GoogleAdsClient googleAdsClient, long customerId, long campaignId) {
     String campaignResourceName = ResourceNames.campaign(customerId, campaignId);
 
@@ -138,6 +139,7 @@ public class AddSitelinks {
       }
     }
   }
+  // [END AddSitelinks]
 
   /**
    * Creates a list of ExtensionFeedItems.

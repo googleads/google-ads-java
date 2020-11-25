@@ -87,6 +87,7 @@ public class AddRemarketingAction {
    * @param customerId the client customer ID.
    * @throws GoogleAdsException if an API request failed with one or more service errors.
    */
+  // [START AddRemarketingAction]
   private void runExample(GoogleAdsClient googleAdsClient, long customerId) {
 
     // Creates a remarketing action with the specified name.
@@ -113,6 +114,7 @@ public class AddRemarketingAction {
 
     // Creates a query that retrieves the previously created remarketing action with its generated
     // tag snippets.
+    // [START AddRemarketingAction_1]
     String query =
         String.format(
             "SELECT remarketing_action.id,"
@@ -121,6 +123,7 @@ public class AddRemarketingAction {
                 + "FROM remarketing_action "
                 + "WHERE remarketing_action.resource_name = '%s'",
             remarketingActionResourceName);
+    // [END AddRemarketingAction_1]
     try (GoogleAdsServiceClient googleAdsServiceClient =
         googleAdsClient.getLatestVersion().createGoogleAdsServiceClient()) {
       // Issues a search request.
@@ -147,4 +150,5 @@ public class AddRemarketingAction {
       }
     }
   }
+  // [END AddRemarketingAction]
 }

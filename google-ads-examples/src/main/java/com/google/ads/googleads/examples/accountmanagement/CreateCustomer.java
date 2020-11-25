@@ -82,6 +82,7 @@ public class CreateCustomer {
     }
   }
 
+  // [START CreateCustomer]
   private void runExample(GoogleAdsClient googleAdsClient, Long managerId) {
     // Formats the current date/time to use as a timestamp in the new customer description.
     String dateTime = ZonedDateTime.now().format(DateTimeFormatter.RFC_1123_DATE_TIME);
@@ -109,4 +110,5 @@ public class CreateCustomer {
           response.getResourceName(), managerId);
     }
   }
+  // [END CreateCustomer]
 }
