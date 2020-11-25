@@ -43,7 +43,10 @@ import com.google.api.gax.grpc.testing.MockServiceHelper;
 import com.google.api.gax.rpc.ApiClientHeaderProvider;
 import com.google.api.gax.rpc.ApiException;
 import com.google.auth.Credentials;
+import com.google.auth.oauth2.ServiceAccountCredentials;
 import com.google.auth.oauth2.UserCredentials;
+import com.google.common.io.Files;
+import com.google.common.io.Resources;
 import io.grpc.Metadata;
 import io.grpc.Status;
 import io.grpc.Status.Code;
@@ -53,6 +56,8 @@ import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
+import java.nio.charset.StandardCharsets;
+import java.util.Collections;
 import java.util.Properties;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.regex.Pattern;
@@ -258,6 +263,80 @@ public class GoogleAdsClientTest {
     testProperties.remove(ConfigPropertyKey.LOGIN_CUSTOMER_ID.getPropertyKey());
     GoogleAdsClient client = GoogleAdsClient.newBuilder().fromProperties(testProperties).build();
     assertNull(client.getLoginCustomerId());
+  }
+
+  /**
+   * Verifies that a proper exception is thrown when both refresh token and service account secrets
+   * path are specified in properties.
+   */
+  @Test
+  public void buildFromProperties_bothCredentialsPresent_throwsException() {
+    assertNotNull(
+        "Refresh token not set in test properties",
+        ConfigPropertyKey.REFRESH_TOKEN.getPropertyValue(testProperties));
+    testProperties.put(
+        ConfigPropertyKey.SERVICE_ACCOUNT_SECRETS_PATH.getPropertyKey(), "/some/path/secrets.json");
+    // Invokes the fromProperties method on the builder, which should fail.
+    thrown.expect(IllegalArgumentException.class);
+    thrown.expectMessage("both");
+    GoogleAdsClient.newBuilder().fromProperties(testProperties).build();
+  }
+
+  /**
+   * Verifies that a proper exception is thrown when neither refresh token nor service account
+   * secrets path are specified in properties.
+   */
+  @Test
+  public void buildFromProperties_neitherCredentialsPresent_throwsException() {
+    testProperties.remove(ConfigPropertyKey.CLIENT_ID.getPropertyKey());
+    testProperties.remove(ConfigPropertyKey.CLIENT_SECRET.getPropertyKey());
+    testProperties.remove(ConfigPropertyKey.REFRESH_TOKEN.getPropertyKey());
+    testProperties.remove(ConfigPropertyKey.SERVICE_ACCOUNT_SECRETS_PATH.getPropertyKey());
+    // Invokes the fromProperties method on the builder, which should fail.
+    thrown.expect(IllegalArgumentException.class);
+    thrown.expectMessage("Missing properties");
+    GoogleAdsClient.newBuilder().fromProperties(testProperties).build();
+  }
+
+  /**
+   * Verifies that a client with service account credentials is created when service account keys
+   * have valid values in the properties map.
+   */
+  @Test
+  public void buildFromProperties_withServiceAccountCredentials() throws IOException {
+    // Copies the mock service account credentials secrets file from test resources to a file in the
+    // temporary folder.
+    File secretsFile = folder.newFile("serviceAccountSecrets.json");
+    Resources.asCharSource(
+            Resources.getResource(getClass(), "mock_service_account_secrets.json"),
+            StandardCharsets.UTF_8)
+        .copyTo(Files.asCharSink(secretsFile, StandardCharsets.UTF_8));
+
+    // Configures properties for the service account use case, including reading the service account
+    // secrets from the file created above.
+    testProperties.remove(ConfigPropertyKey.CLIENT_ID.getPropertyKey());
+    testProperties.remove(ConfigPropertyKey.CLIENT_SECRET.getPropertyKey());
+    testProperties.remove(ConfigPropertyKey.REFRESH_TOKEN.getPropertyKey());
+    testProperties.setProperty(
+        ConfigPropertyKey.SERVICE_ACCOUNT_SECRETS_PATH.getPropertyKey(), secretsFile.getPath());
+    testProperties.setProperty(
+        ConfigPropertyKey.SERVICE_ACCOUNT_USER.getPropertyKey(), "someuser@example.com");
+
+    // Builds the client.
+    GoogleAdsClient client = GoogleAdsClient.newBuilder().fromProperties(testProperties).build();
+
+    // Asserts client and credentials match expectations.
+    ServiceAccountCredentials credentials = (ServiceAccountCredentials) client.getCredentials();
+    assertNotNull("Null credentials", credentials);
+    assertEquals(
+        "Service account user", "someuser@example.com", credentials.getServiceAccountUser());
+    assertEquals(
+        "Scope",
+        Collections.singleton("https://www.googleapis.com/auth/adwords"),
+        credentials.getScopes());
+
+    assertEquals("Developer token", DEVELOPER_TOKEN, client.getDeveloperToken());
+    assertEquals("Login customer ID", Long.valueOf(LOGIN_CUSTOMER_ID), client.getLoginCustomerId());
   }
 
   /**
