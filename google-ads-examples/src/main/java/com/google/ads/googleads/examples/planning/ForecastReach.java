@@ -18,35 +18,33 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.v4.common.DeviceInfo;
-import com.google.ads.googleads.v4.common.GenderInfo;
-import com.google.ads.googleads.v4.enums.DeviceEnum.Device;
-import com.google.ads.googleads.v4.enums.GenderTypeEnum.GenderType;
-import com.google.ads.googleads.v4.enums.ReachPlanAdLengthEnum.ReachPlanAdLength;
-import com.google.ads.googleads.v4.enums.ReachPlanAgeRangeEnum.ReachPlanAgeRange;
-import com.google.ads.googleads.v4.errors.GoogleAdsError;
-import com.google.ads.googleads.v4.errors.GoogleAdsException;
-import com.google.ads.googleads.v4.services.CampaignDuration;
-import com.google.ads.googleads.v4.services.GenerateProductMixIdeasRequest;
-import com.google.ads.googleads.v4.services.GenerateProductMixIdeasResponse;
-import com.google.ads.googleads.v4.services.GenerateReachForecastRequest;
-import com.google.ads.googleads.v4.services.GenerateReachForecastResponse;
-import com.google.ads.googleads.v4.services.ListPlannableLocationsRequest;
-import com.google.ads.googleads.v4.services.ListPlannableLocationsResponse;
-import com.google.ads.googleads.v4.services.ListPlannableProductsRequest;
-import com.google.ads.googleads.v4.services.ListPlannableProductsResponse;
-import com.google.ads.googleads.v4.services.PlannableLocation;
-import com.google.ads.googleads.v4.services.PlannedProduct;
-import com.google.ads.googleads.v4.services.Preferences;
-import com.google.ads.googleads.v4.services.ProductAllocation;
-import com.google.ads.googleads.v4.services.ProductMetadata;
-import com.google.ads.googleads.v4.services.ReachForecast;
-import com.google.ads.googleads.v4.services.ReachPlanServiceClient;
-import com.google.ads.googleads.v4.services.Targeting;
-import com.google.protobuf.BoolValue;
-import com.google.protobuf.Int32Value;
-import com.google.protobuf.Int64Value;
-import com.google.protobuf.StringValue;
+import com.google.ads.googleads.v6.common.DeviceInfo;
+import com.google.ads.googleads.v6.common.GenderInfo;
+import com.google.ads.googleads.v6.enums.DeviceEnum.Device;
+import com.google.ads.googleads.v6.enums.GenderTypeEnum.GenderType;
+import com.google.ads.googleads.v6.enums.ReachPlanAdLengthEnum.ReachPlanAdLength;
+import com.google.ads.googleads.v6.enums.ReachPlanAgeRangeEnum.ReachPlanAgeRange;
+import com.google.ads.googleads.v6.errors.GoogleAdsError;
+import com.google.ads.googleads.v6.errors.GoogleAdsException;
+import com.google.ads.googleads.v6.services.CampaignDuration;
+import com.google.ads.googleads.v6.services.GenerateProductMixIdeasRequest;
+import com.google.ads.googleads.v6.services.GenerateProductMixIdeasResponse;
+import com.google.ads.googleads.v6.services.GenerateReachForecastRequest;
+import com.google.ads.googleads.v6.services.GenerateReachForecastResponse;
+import com.google.ads.googleads.v6.services.ListPlannableLocationsRequest;
+import com.google.ads.googleads.v6.services.ListPlannableLocationsResponse;
+import com.google.ads.googleads.v6.services.ListPlannableProductsRequest;
+import com.google.ads.googleads.v6.services.ListPlannableProductsResponse;
+import com.google.ads.googleads.v6.services.PlannableLocation;
+import com.google.ads.googleads.v6.services.PlannedProduct;
+import com.google.ads.googleads.v6.services.PlannedProductReachForecast;
+import com.google.ads.googleads.v6.services.Preferences;
+import com.google.ads.googleads.v6.services.ProductAllocation;
+import com.google.ads.googleads.v6.services.ProductMetadata;
+import com.google.ads.googleads.v6.services.ReachForecast;
+import com.google.ads.googleads.v6.services.ReachPlanServiceClient;
+import com.google.ads.googleads.v6.services.Targeting;
+import com.google.common.base.Joiner;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -112,7 +110,7 @@ public class ForecastReach {
   private void runExample(GoogleAdsClient googleAdsClient, long customerId) {
     String locationId = "2840"; // US
     String currencyCode = "USD";
-    long budgetMicros = 5_000_000L;
+    long budgetMicros = 5_000_000L; // $5 USD
 
     try (ReachPlanServiceClient reachPlanServiceClient =
         googleAdsClient.getLatestVersion().createReachPlanServiceClient()) {
@@ -138,10 +136,7 @@ public class ForecastReach {
     System.out.println("Name,\tId,\t,ParentCountryId");
     for (PlannableLocation location : response.getPlannableLocationsList()) {
       System.out.printf(
-          "%s,\t%s,%s%n",
-          location.getName().getValue(),
-          location.getId().getValue(),
-          location.getParentCountryId().getValue());
+          "%s,\t%s,%s%n", location.getName(), location.getId(), location.getParentCountryId());
     }
   }
 
@@ -150,15 +145,13 @@ public class ForecastReach {
    *
    * @param reachPlanServiceClient instance of Reach Plan Service client.
    * @param locationId location ID to plan for. To find a valid location ID, either see
-   *     https://developers.google.com/adwords/api/docs/appendix/geotargeting or call
+   *     https://developers.google.com/google-ads/api/reference/data/geotargets or call
    *     ReachPlanServiceClient.listPlannableLocations().
    */
   private void showPlannableProducts(
       ReachPlanServiceClient reachPlanServiceClient, String locationId) {
     ListPlannableProductsRequest request =
-        ListPlannableProductsRequest.newBuilder()
-            .setPlannableLocationId(StringValue.of(locationId))
-            .build();
+        ListPlannableProductsRequest.newBuilder().setPlannableLocationId(locationId).build();
 
     ListPlannableProductsResponse response = reachPlanServiceClient.listPlannableProducts(request);
 
@@ -186,15 +179,14 @@ public class ForecastReach {
    * @param customerId the customer ID for the reach forecast.
    * @param productMix the product mix for the reach forecast.
    * @param locationId location ID to plan for. To find a valid location ID, either see
-   *     https://developers.google.com/adwords/api/docs/appendix/geotargeting or call
+   *     https://developers.google.com/google-ads/api/reference/data/geotargets or call
    *     ReachPlanServiceClient.ListPlannableLocations.
    * @param currencyCode three-character ISO 4217 currency code.
    * @return populated GenerateReachForecastRequest object.
    */
   private GenerateReachForecastRequest buildReachRequest(
       Long customerId, List<PlannedProduct> productMix, String locationId, String currencyCode) {
-    CampaignDuration duration =
-        CampaignDuration.newBuilder().setDurationInDays(Int32Value.of(28)).build();
+    CampaignDuration duration = CampaignDuration.newBuilder().setDurationInDays(28).build();
 
     List<GenderInfo> genders =
         Arrays.asList(
@@ -209,20 +201,20 @@ public class ForecastReach {
 
     Targeting targeting =
         Targeting.newBuilder()
-            .setPlannableLocationId(StringValue.of(locationId))
+            .setPlannableLocationId(locationId)
             .setAgeRange(ReachPlanAgeRange.AGE_RANGE_18_65_UP)
             .addAllGenders(genders)
             .addAllDevices(devices)
             .build();
 
     // See the docs for defaults and valid ranges:
-    // https://developers.google.com/google-ads/api/reference/rpc/v4/GenerateReachForecastRequest
+    // https://developers.google.com/google-ads/api/reference/rpc/latest/GenerateReachForecastRequest
     return GenerateReachForecastRequest.newBuilder()
         .setCustomerId(Long.toString(customerId))
-        .setCurrencyCode(StringValue.of(currencyCode))
+        .setCurrencyCode(currencyCode)
         .setCampaignDuration(duration)
         .setTargeting(targeting)
-        .setMinEffectiveFrequency(Int32Value.of(1))
+        .setMinEffectiveFrequency(1)
         .addAllPlannedProducts(productMix)
         .build();
   }
@@ -241,16 +233,19 @@ public class ForecastReach {
         "Currency, Cost Micros, On-Target Reach, On-Target Imprs, Total Reach, Total Imprs,"
             + " Products");
     for (ReachForecast point : response.getReachCurve().getReachForecastsList()) {
-      System.out.printf("%s,", request.getCurrencyCode());
-      System.out.printf("%s,", point.getCostMicros());
-      System.out.printf("%s,", point.getForecast().getOnTargetReach());
-      System.out.printf("%s,", point.getForecast().getOnTargetImpressions());
-      System.out.printf("%s,", point.getForecast().getTotalReach());
-      System.out.printf("%s,", point.getForecast().getTotalImpressions());
+      Joiner joiner = Joiner.on("%s, ");
+      System.out.printf(
+          joiner.join(
+              request.getCurrencyCode(),
+              point.getCostMicros(),
+              point.getForecast().getOnTargetReach(),
+              point.getForecast().getOnTargetImpressions(),
+              point.getForecast().getTotalReach(),
+              point.getForecast().getTotalImpressions()));
       System.out.print("\"[");
-      for (ProductAllocation product : point.getForecastedProductAllocationsList()) {
+      for (PlannedProductReachForecast product : point.getPlannedProductReachForecastsList()) {
         System.out.printf("Product: %s,", product.getPlannableProductCode());
-        System.out.printf("Budget Micros: %s", product.getBudgetMicros());
+        System.out.printf("Budget Micros: %s", product.getCostMicros());
       }
       System.out.print("\"]%n");
     }
@@ -281,16 +276,16 @@ public class ForecastReach {
 
     // See listPlannableProducts on ReachPlanService to retrieve a list
     // of valid PlannableProductCode's for a given location:
-    // https://developers.google.com/google-ads/api/reference/rpc/v4/ReachPlanService
+    // https://developers.google.com/google-ads/api/reference/rpc/latest/ReachPlanService
     productMix.add(
         PlannedProduct.newBuilder()
-            .setPlannableProductCode(StringValue.of("TRUEVIEW_IN_STREAM"))
-            .setBudgetMicros(Int64Value.of((long) (budgetMicros * bumperAllocation)))
+            .setPlannableProductCode("TRUEVIEW_IN_STREAM")
+            .setBudgetMicros((long) (budgetMicros * bumperAllocation))
             .build());
     productMix.add(
         PlannedProduct.newBuilder()
-            .setPlannableProductCode(StringValue.of("BUMPER"))
-            .setBudgetMicros(Int64Value.of((long) (budgetMicros * bumperAllocation)))
+            .setPlannableProductCode("BUMPER")
+            .setBudgetMicros((long) (budgetMicros * bumperAllocation))
             .build());
 
     GenerateReachForecastRequest request =
@@ -321,19 +316,19 @@ public class ForecastReach {
     // Note: If preferences are too restrictive, then the response will be empty.
     Preferences preferences =
         Preferences.newBuilder()
-            .setHasGuaranteedPrice(BoolValue.of(true))
-            .setStartsWithSound(BoolValue.of(true))
-            .setIsSkippable(BoolValue.of(false))
-            .setTopContentOnly(BoolValue.of(true))
+            .setHasGuaranteedPrice(true)
+            .setStartsWithSound(true)
+            .setIsSkippable(false)
+            .setTopContentOnly(true)
             .setAdLength(ReachPlanAdLength.FIFTEEN_OR_TWENTY_SECONDS)
             .build();
 
     GenerateProductMixIdeasRequest mixRequest =
         GenerateProductMixIdeasRequest.newBuilder()
-            .setBudgetMicros(Int64Value.of(budgetMicros))
-            .setCurrencyCode(StringValue.of(currencyCode))
+            .setBudgetMicros(budgetMicros)
+            .setCurrencyCode(currencyCode)
             .setCustomerId(Long.toString(customerId))
-            .setPlannableLocationId(StringValue.of(locationId))
+            .setPlannableLocationId(locationId)
             .setPreferences(preferences)
             .build();
 
