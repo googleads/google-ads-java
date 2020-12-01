@@ -133,10 +133,10 @@ public class ForecastReach {
         reachPlanServiceClient.listPlannableLocations(request);
 
     System.out.println("Plannable Locations:");
-    System.out.println("Name,\tId,\t,ParentCountryId");
     for (PlannableLocation location : response.getPlannableLocationsList()) {
       System.out.printf(
-          "%s,\t%s,%s%n", location.getName(), location.getId(), location.getParentCountryId());
+          "Name: %s, ID: %s, ParentCountryId: %s%n",
+          location.getName(), location.getId(), location.getParentCountryId());
     }
   }
 
