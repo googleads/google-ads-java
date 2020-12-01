@@ -233,21 +233,21 @@ public class ForecastReach {
         "Currency, Cost Micros, On-Target Reach, On-Target Imprs, Total Reach, Total Imprs,"
             + " Products");
     for (ReachForecast point : response.getReachCurve().getReachForecastsList()) {
-      Joiner joiner = Joiner.on(", ");
-      joiner.join(
-          request.getCurrencyCode(),
-          point.getCostMicros(),
-          point.getForecast().getOnTargetReach(),
-          point.getForecast().getOnTargetImpressions(),
-          point.getForecast().getTotalReach(),
-          point.getForecast().getTotalImpressions());
-      System.out.printf("%s, %s, %s, %s, %s, %s", joiner);
-      System.out.print("\"[");
+      System.out.printf(
+          "%s, \"",
+          Joiner.on(", ")
+              .join(
+                  request.getCurrencyCode(),
+                  String.valueOf(point.getCostMicros()),
+                  String.valueOf(point.getForecast().getOnTargetReach()),
+                  String.valueOf(point.getForecast().getOnTargetImpressions()),
+                  String.valueOf(point.getForecast().getTotalReach()),
+                  String.valueOf(point.getForecast().getTotalImpressions())));
       for (PlannedProductReachForecast product : point.getPlannedProductReachForecastsList()) {
-        System.out.printf("Product: %s,", product.getPlannableProductCode());
-        System.out.printf("Budget Micros: %s", product.getCostMicros());
+        System.out.printf("[Product: %s, ", product.getPlannableProductCode());
+        System.out.printf("Budget Micros: %s]", product.getCostMicros());
       }
-      System.out.print("\"]%n");
+      System.out.printf("\"%n");
     }
   }
 
