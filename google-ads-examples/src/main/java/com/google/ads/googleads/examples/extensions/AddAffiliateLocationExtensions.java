@@ -59,6 +59,7 @@ import java.util.stream.Collectors;
  * a campaign for serving affiliate location extensions.
  */
 public class AddAffiliateLocationExtensions {
+  private static final int MAX_FEEDMAPPING_RETRIEVAL_ATTEMPTS = 10;
 
   private static class AddAffiliateLocationExtensionsParams extends CodeSampleParams {
 
@@ -78,8 +79,6 @@ public class AddAffiliateLocationExtensions {
     private long chainId;
   }
 
-  private static final int MAX_FEEDMAPPING_RETRIEVAL_ATTEMPTS = 10;
-
   public static void main(String[] args) throws IOException {
     AddAffiliateLocationExtensionsParams params = new AddAffiliateLocationExtensionsParams();
     if (!params.parseArguments(args)) {
@@ -87,6 +86,8 @@ public class AddAffiliateLocationExtensions {
       // Either pass the required parameters for this example on the command line, or insert them
       // into the code here. See the parameter class definition above for descriptions.
       params.customerId = Long.parseLong("INSERT_CUSTOMER_ID_HERE");
+      params.campaignId = Long.parseLong("INSERT_CAMPAIGN_ID_HERE");
+      params.chainId = Long.parseLong("INSERT_CHAIN_ID_HERE");
     }
 
     GoogleAdsClient googleAdsClient = null;
@@ -125,11 +126,10 @@ public class AddAffiliateLocationExtensions {
       GoogleAdsClient googleAdsClient, long customerId, long campaignId, long chainId) {
     String feedResourceName =
         createAffiliateLocationExtensionFeed(googleAdsClient, customerId, chainId);
-    // After the completion of the feed creation operation above the added feed will not
-    // be available for usage in a campaign feed until the feed mappings are created.
-    // We will wait with an exponential back-off policy until the feed mappings have
-    // been created.
+    // The feed created above will not be available for use in a campaign feed until the associated
+    // feed mappings have been created by Google.
     FeedMapping feedMapping = waitForFeedToBeReady(googleAdsClient, customerId, feedResourceName);
+    // Creates the campaign feed now that the feed mappings are ready.
     createCampaignFeed(
         googleAdsClient, customerId, campaignId, feedMapping, feedResourceName, chainId);
   }
@@ -137,12 +137,12 @@ public class AddAffiliateLocationExtensions {
   /** Creates an affiliate location extension feed. */
   private String createAffiliateLocationExtensionFeed(
       GoogleAdsClient googleAdsClient, long customerId, long chainId) {
-    // Deletes all existing location extension feeds. This is an optional step,
-    // but is required for this code example to run correctly more than once. This is because:
+    // Removes all existing location extension feeds. This is an optional step, but is required for
+    // this code example to run correctly more than once. This is because:
     //   1. Google Ads only allows one location extension feed per email address.
     //   2. A Google Ads account cannot have a location extension feed and an affiliate
     // location extension feed at the same time.
-    deleteLocationExtensionFeeds(googleAdsClient, customerId);
+    removeLocationExtensionFeeds(googleAdsClient, customerId);
 
     // Creates a feed that will sync to retail addresses for a given retail chain ID.
     // Do not add FeedAttributes to this object as Google Ads will add
@@ -162,7 +162,7 @@ public class AddAffiliateLocationExtensions {
     // Constructs an operation to create the feed.
     FeedOperation op = FeedOperation.newBuilder().setCreate(feed).build();
 
-    // Connects to the API.
+    // Creates the FeedServiceClient.
     try (FeedServiceClient feedService =
         googleAdsClient.getLatestVersion().createFeedServiceClient()) {
       // Issues a mutate request to add the feed.
@@ -178,16 +178,17 @@ public class AddAffiliateLocationExtensions {
     }
   }
 
-  /** Deletes a location extension feed. */
-  private void deleteLocationExtensionFeeds(GoogleAdsClient googleAdsClient, long customerId) {
-    // Deletes a location extension feed. Does this with the following steps:
-    //   1. Delete the CustomerFeed so that the location extensions from the feed stop serving.
-    //   2. Delete the feed so that Google Ads will no longer sync from the GMB account.
+  /** Removes all location extension feeds. */
+  private void removeLocationExtensionFeeds(GoogleAdsClient googleAdsClient, long customerId) {
+    // Removes a location extension feed. Does this with the following steps:
+    //   1. Retrieves the existing CustomerFeed links.
+    //   2. Removes the CustomerFeed so that the location extensions from the feed stop serving.
+    //   3. Removes the feed so that Google Ads will no longer sync from the GMB account.
     List<CustomerFeed> oldCustomerFeeds =
         getLocationExtensionCustomerFeeds(googleAdsClient, customerId);
     if (oldCustomerFeeds.isEmpty()) {
-      // Optional: You may also want to delete the CampaignFeeds and AdGroupFeeds.
-      deleteCustomerFeeds(googleAdsClient, customerId, oldCustomerFeeds);
+      // Optional: You may also want to remove the CampaignFeeds and AdGroupFeeds.
+      removeCustomerFeeds(googleAdsClient, customerId, oldCustomerFeeds);
     }
     List<Feed> feeds = getLocationExtensionFeeds(googleAdsClient, customerId);
 
@@ -270,14 +271,14 @@ public class AddAffiliateLocationExtensions {
   /** Retrieves all location extension feeds from a specified customer ID. */
   private List<Feed> getLocationExtensionFeeds(GoogleAdsClient googleAdsClient, long customerId) {
     String query =
-        "SELECT "
+        "SELECT"
             + "  customer_feed.resource_name, "
             + "  customer_feed.feed, "
             + "  customer_feed.status, "
             + "  customer_feed.matching_function.function_string "
-            + "FROM "
+            + "FROM"
             + "  customer_feed "
-            + "WHERE "
+            + "WHERE"
             + "  customer_feed.placeholder_types CONTAINS ANY(LOCATION, AFFILIATE_LOCATION)"
             + "  AND customer_feed.status = ENABLED";
 
@@ -291,8 +292,8 @@ public class AddAffiliateLocationExtensions {
     }
   }
 
-  /** Deletes all feeds linked at the customer (global) level. */
-  private void deleteCustomerFeeds(
+  /** Removes all feeds linked at the customer (global) level. */
+  private void removeCustomerFeeds(
       GoogleAdsClient googleAdsClient, long customerId, List<CustomerFeed> oldCustomerFeeds) {
     List<FeedOperation> operations =
         oldCustomerFeeds.stream()
@@ -310,14 +311,14 @@ public class AddAffiliateLocationExtensions {
   private List<CustomerFeed> getLocationExtensionCustomerFeeds(
       GoogleAdsClient googleAdsClient, long customerId) {
     String query =
-        "SELECT "
+        "SELECT"
             + "  customer_feed.resource_name, "
             + "  customer_feed.feed, "
             + "  customer_feed.status, "
             + "  customer_feed.matching_function.function_string "
-            + "FROM "
+            + "FROM"
             + "  customer_feed "
-            + "WHERE "
+            + "WHERE"
             + "  customer_feed.placeholder_types CONTAINS ANY(LOCATION, AFFILIATE_LOCATION) "
             + "  AND customer_feed.status = ENABLED";
     try (GoogleAdsServiceClient googleAdsServiceClient =
@@ -344,7 +345,7 @@ public class AddAffiliateLocationExtensions {
           getFeedMapping(googleAdsServiceClient, customerId, feedResourceName);
 
       if (feedMapping.isPresent()) {
-        System.out.printf("Feed %s is now ready.%n", feedResourceName);
+        System.out.printf("Feed with resource name '%s' is now ready.%n", feedResourceName);
         return feedMapping.get();
       } else {
         numAttempts++;
@@ -373,13 +374,13 @@ public class AddAffiliateLocationExtensions {
       GoogleAdsClient googleAdsServiceClient, long customerId, String feedResourceName) {
     String query =
         String.format(
-            "SELECT "
+            "SELECT"
                 + "  feed_mapping.resource_name, "
                 + "  feed_mapping.attribute_field_mappings, "
                 + "  feed_mapping.status "
-                + "FROM "
+                + "FROM"
                 + "  feed_mapping "
-                + "WHERE feed_mapping.feed = '%s' "
+                + "WHERE feed_mapping.feed = '%s'"
                 + "  AND feed_mapping.status = ENABLED "
                 + "  AND feed_mapping.placeholder_type = AFFILIATE_LOCATION "
                 + "LIMIT 1",
