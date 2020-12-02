@@ -22,12 +22,16 @@ import com.google.ads.googleads.v6.enums.ExtensionTypeEnum.ExtensionType;
 import com.google.ads.googleads.v6.errors.GoogleAdsError;
 import com.google.ads.googleads.v6.errors.GoogleAdsException;
 import com.google.ads.googleads.v6.services.CampaignExtensionSettingOperation;
+import com.google.ads.googleads.v6.services.ExtensionFeedItemOperation;
+import com.google.ads.googleads.v6.services.GoogleAdsRow;
 import com.google.ads.googleads.v6.services.GoogleAdsServiceClient;
-import com.google.ads.googleads.v6.services.GoogleAdsServiceClient.SearchPagedResponse;
 import com.google.ads.googleads.v6.services.MutateGoogleAdsResponse;
 import com.google.ads.googleads.v6.services.MutateOperation;
 import com.google.ads.googleads.v6.services.MutateOperationResponse;
+import com.google.ads.googleads.v6.services.SearchGoogleAdsStreamRequest;
+import com.google.ads.googleads.v6.services.SearchGoogleAdsStreamResponse;
 import com.google.ads.googleads.v6.utils.ResourceNames;
+import com.google.api.gax.rpc.ServerStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -85,6 +89,7 @@ public class RemoveEntireSitelinkCampaignExtensionSetting {
       // Instances of this exception have a message and a GoogleAdsFailure that contains a
       // collection of GoogleAdsErrors that indicate the underlying causes of the
       // GoogleAdsException.
+      gae.printStackTrace();
       System.err.printf(
           "Request ID %s failed due to GoogleAdsException. Underlying errors:%n",
           gae.getRequestId());
@@ -97,6 +102,7 @@ public class RemoveEntireSitelinkCampaignExtensionSetting {
   }
 
   /** Runs the example. */
+  // [START RemoveEntireSitelinkCampaignExtensionSetting]
   private void runExample(GoogleAdsClient googleAdsClient, long customerId, long campaignId) {
     // Creates an operation to remove a campaign extension setting.
     CampaignExtensionSettingOperation extensionSettingOperation =
@@ -107,21 +113,17 @@ public class RemoveEntireSitelinkCampaignExtensionSetting {
             .build();
 
     // Retrieves all sitelink extension feed items for a customer and campaign.
-    List<String> extensionFeedItems =
+    List<String> extensionFeedItemResourceNames =
         getSitelinkExtensionFeedItems(googleAdsClient, customerId, campaignId);
 
     // Constructs operations to remove the extension feed item operations.
     List<MutateOperation> extensionFeedItemOperations =
-        extensionFeedItems.stream()
+        extensionFeedItemResourceNames.stream()
             .map(
-                sitelinkExtension ->
-                    CampaignExtensionSettingOperation.newBuilder()
-                        .setRemove(sitelinkExtension)
-                        .build())
-            .map(
-                extensionOperation ->
+                feedItem ->
                     MutateOperation.newBuilder()
-                        .setCampaignExtensionSettingOperation(extensionOperation)
+                        .setExtensionFeedItemOperation(
+                            ExtensionFeedItemOperation.newBuilder().setRemove(feedItem))
                         .build())
             .collect(Collectors.toList());
 
@@ -141,6 +143,9 @@ public class RemoveEntireSitelinkCampaignExtensionSetting {
       MutateGoogleAdsResponse response = client.mutate(String.valueOf(customerId), allOperations);
 
       // Prints the result of removing the campaign extension setting.
+      // Each mutate operation response is returned in the same order as we passed its
+      // corresponding operation. Therefore, the first belongs to the campaign setting operation,
+      // and the rest belong to the extension feed item operations.
       System.out.printf(
           "Removed a campaign extension setting with resource name: '%s'.%n",
           response
@@ -159,8 +164,10 @@ public class RemoveEntireSitelinkCampaignExtensionSetting {
       }
     }
   }
+  // [END RemoveEntireSitelinkCampaignExtensionSetting]
 
   /** Retrieves all sitelink extension feed items for a customer + campaign combination. */
+  // [START RemoveEntireSitelinkCampaignExtensionSetting_1]
   private List<String> getSitelinkExtensionFeedItems(
       GoogleAdsClient googleAdsClient, long customerId, long campaignId) {
     // Defines a query to retrieve the sitelink extension feed items.
@@ -179,14 +186,28 @@ public class RemoveEntireSitelinkCampaignExtensionSetting {
     try (GoogleAdsServiceClient client =
         googleAdsClient.getLatestVersion().createGoogleAdsServiceClient()) {
       // Issues the search request.
-      SearchPagedResponse response = client.search(String.valueOf(customerId), query);
+      ServerStream<SearchGoogleAdsStreamResponse> response =
+          client
+              .searchStreamCallable()
+              .call(
+                  SearchGoogleAdsStreamRequest.newBuilder()
+                      .setCustomerId(String.valueOf(customerId))
+                      .setQuery(query)
+                      .build());
 
       // Constructs the result (a list of resource names matching the query).
       List<String> result = new ArrayList();
-      response
-          .iterateAll()
-          .forEach(row -> result.add(row.getCampaignExtensionSetting().getResourceName()));
+      for (SearchGoogleAdsStreamResponse page : response) {
+        for (GoogleAdsRow row : page.getResultsList()) {
+          result.addAll(row.getCampaignExtensionSetting().getExtensionFeedItemsList());
+        }
+      }
+      if (result.isEmpty()) {
+        System.out.println(
+            "The specified campaign does not contain a sitelink campaign extension setting.");
+      }
       return result;
     }
   }
+  // [END RemoveEntireSitelinkCampaignExtensionSetting_1]
 }
