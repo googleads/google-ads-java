@@ -162,6 +162,7 @@ public class AddDynamicSearchAds {
    * @param budgetResourceName the campaign budget resource name.
    * @return the campaign resource name.
    */
+  // [START AddDynamicSearchAds]
   private static String addCampaign(
       GoogleAdsClient googleAdsClient, long customerId, String budgetResourceName) {
     // Creates the campaign.
@@ -199,6 +200,7 @@ public class AddDynamicSearchAds {
       return campaignResourceName;
     }
   }
+  // [END AddDynamicSearchAds]
 
   /**
    * Adds an ad group.
@@ -208,6 +210,7 @@ public class AddDynamicSearchAds {
    * @param campaignResourceName the campaign resource name.
    * @return the ad group resource name.
    */
+  // [START AddDynamicSearchAds_1]
   private static String addAdGroup(
       GoogleAdsClient googleAdsClient, long customerId, String campaignResourceName) {
     // Creates the ad group.
@@ -236,6 +239,7 @@ public class AddDynamicSearchAds {
       return adGroupResourceName;
     }
   }
+  // [END AddDynamicSearchAds_1]
 
   /**
    * Adds an expanded dynamic search ad.
@@ -244,6 +248,7 @@ public class AddDynamicSearchAds {
    * @param customerId the client customer ID.
    * @param adGroupResourceName the ad group resource name.
    */
+  // [START AddDynamicSearchAds_2]
   private static void addExpandedDSA(
       GoogleAdsClient googleAdsClient, long customerId, String adGroupResourceName) {
     // Creates an ad group ad.
@@ -276,6 +281,7 @@ public class AddDynamicSearchAds {
           "Added ad group ad with resource name '%s'.%n", response.getResults(0).getResourceName());
     }
   }
+  // [END AddDynamicSearchAds_2]
 
   /**
    * Adds webpage targeting criteria for the DSA.
