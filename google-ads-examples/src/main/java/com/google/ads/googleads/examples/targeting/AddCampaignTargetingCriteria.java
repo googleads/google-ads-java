@@ -183,6 +183,7 @@ public class AddCampaignTargetingCriteria {
    * @param campaignResourceName the campaign resource name to target.
    * @return a campaign criterion object with the specified locationId and resource name.
    */
+  // [START AddCampaignTargetingCriteria]
   private static CampaignCriterion buildLocationIdCriterion(
       long locationId, String campaignResourceName) {
     Builder criterionBuilder = CampaignCriterion.newBuilder().setCampaign(campaignResourceName);
@@ -193,6 +194,7 @@ public class AddCampaignTargetingCriteria {
 
     return criterionBuilder.build();
   }
+  // [END AddCampaignTargetingCriteria]
 
   /**
    * Creates a campaign criterion from an address and proximity radius.
@@ -200,6 +202,7 @@ public class AddCampaignTargetingCriteria {
    * @param campaignResourceName the campaign resource name to target.
    * @return a campaign criterion object with the specified address and targeting radius.
    */
+  // [START AddCampaignTargetingCriteria_1]
   private static CampaignCriterion buildProximityLocation(String campaignResourceName) {
     Builder builder = CampaignCriterion.newBuilder().setCampaign(campaignResourceName);
 
@@ -215,4 +218,5 @@ public class AddCampaignTargetingCriteria {
 
     return builder.build();
   }
+  // [END AddCampaignTargetingCriteria_1]
 }

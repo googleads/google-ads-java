@@ -47,6 +47,7 @@ public class UpdateAdGroup {
     private Long cpcBidMicroAmount;
   }
 
+  // [START UpdateAdGroup]
   public static void main(String[] args) {
     UpdateAdGroupParams params = new UpdateAdGroupParams();
     if (!params.parseArguments(args)) {
@@ -89,6 +90,7 @@ public class UpdateAdGroup {
       System.exit(1);
     }
   }
+  // [END UpdateAdGroup]
 
   /**
    * Runs the example.

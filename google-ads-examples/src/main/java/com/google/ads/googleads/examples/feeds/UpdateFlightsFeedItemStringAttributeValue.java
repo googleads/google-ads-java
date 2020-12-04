@@ -150,6 +150,7 @@ public class UpdateFlightsFeedItemStringAttributeValue {
    * @param flightPlaceholderField the placeholder type for the attribute to be removed.
    * @param attributeValue String value with which to update the FeedAttributeValue.
    */
+  // [START UpdateFlightsFeedItemStringAttributeValue]
   private void updateFeedItem(
       GoogleAdsClient googleAdsClient,
       long customerId,
@@ -212,6 +213,7 @@ public class UpdateFlightsFeedItemStringAttributeValue {
       }
     }
   }
+  // [END UpdateFlightsFeedItemStringAttributeValue]
 
   /**
    * Retrieves a feed item and its attribute values given a resource name.

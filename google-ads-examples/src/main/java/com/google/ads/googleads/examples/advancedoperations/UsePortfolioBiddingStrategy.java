@@ -131,6 +131,7 @@ public class UsePortfolioBiddingStrategy {
    * @param customerId the client customer ID.
    * @throws GoogleAdsException if an API request failed with one or more service errors.
    */
+  // [START UsePortfolioBiddingStrategy_1]
   private String createBiddingStrategy(GoogleAdsClient googleAdsClient, long customerId) {
     try (BiddingStrategyServiceClient biddingStrategyServiceClient =
         googleAdsClient.getLatestVersion().createBiddingStrategyServiceClient()) {
@@ -158,6 +159,7 @@ public class UsePortfolioBiddingStrategy {
       return mutateBiddingStrategyResult.getResourceName();
     }
   }
+  // [END UsePortfolioBiddingStrategy_1]
 
   /**
    * Creates an explicit budget to be used only to create the campaign.
@@ -166,6 +168,7 @@ public class UsePortfolioBiddingStrategy {
    * @param customerId the client customer ID.
    * @throws GoogleAdsException if an API request failed with one or more service errors.
    */
+  // [START UsePortfolioBiddingStrategy]
   private String createSharedCampaignBudget(GoogleAdsClient googleAdsClient, long customerId) {
     try (CampaignBudgetServiceClient campaignBudgetServiceClient =
         googleAdsClient.getLatestVersion().createCampaignBudgetServiceClient()) {
@@ -194,6 +197,7 @@ public class UsePortfolioBiddingStrategy {
       return mutateCampaignBudgetResult.getResourceName();
     }
   }
+  // [END UsePortfolioBiddingStrategy]
 
   /**
    * Create a Campaign with a portfolio bidding strategy.
@@ -218,6 +222,7 @@ public class UsePortfolioBiddingStrategy {
               .setTargetSearchNetwork(true)
               .setTargetContentNetwork(true)
               .build();
+      // [START UsePortfolioBiddingStrategy_2]
       Campaign campaign =
           Campaign.newBuilder()
               .setName("Interplanetary Cruise #" + System.currentTimeMillis())
@@ -227,6 +232,7 @@ public class UsePortfolioBiddingStrategy {
               .setAdvertisingChannelType(AdvertisingChannelType.SEARCH)
               .setNetworkSettings(networkSettings)
               .build();
+      // [END UsePortfolioBiddingStrategy_2]
       // Constructs an operation that will create a campaign.
       CampaignOperation operation = CampaignOperation.newBuilder().setCreate(campaign).build();
       // Sends the operation in a mutate request.

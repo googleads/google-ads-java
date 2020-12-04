@@ -211,6 +211,7 @@ public class AddShoppingSmartAd {
    * @return resource name of the newly created campaign.
    * @throws GoogleAdsException if an API request failed with one or more service errors.
    */
+  // [START AddShoppingSmartAd_3]
   private String addSmartShoppingCampaign(
       GoogleAdsClient googleAdsClient,
       long customerId,
@@ -227,6 +228,7 @@ public class AddShoppingSmartAd {
             .setMerchantId(merchantCenterAccountId)
             .build();
 
+    // [START AddShoppingSmartAd]
     // Creates the campaign.
     Campaign campaign =
         Campaign.newBuilder()
@@ -255,6 +257,7 @@ public class AddShoppingSmartAd {
             // Sets the budget.
             .setCampaignBudget(budgetResourceName)
             .build();
+    // [END AddShoppingSmartAd]
 
     // Creates a campaign operation.
     CampaignOperation operation = CampaignOperation.newBuilder().setCreate(campaign).build();
@@ -271,6 +274,7 @@ public class AddShoppingSmartAd {
       return result.getResourceName();
     }
   }
+  // [END AddShoppingSmartAd_3]
 
   /**
    * Creates a new ad group in the specified Smart Shopping campaign.
@@ -282,6 +286,7 @@ public class AddShoppingSmartAd {
    * @return resource name of the newly created ad group.
    * @throws GoogleAdsException if an API request failed with one or more service errors.
    */
+  // [START AddShoppingSmartAd_2]
   private String addSmartShoppingAdGroup(
       GoogleAdsClient googleAdsClient, long customerId, String campaignResourceName) {
     // Creates an ad group.
@@ -310,6 +315,7 @@ public class AddShoppingSmartAd {
       return mutateAdGroupResult.getResourceName();
     }
   }
+  // [END AddShoppingSmartAd_2]
 
   /**
    * Creates a new ad group ad in the specified Smart Shopping ad group.
@@ -321,6 +327,7 @@ public class AddShoppingSmartAd {
    * @return resource name of the newly created ad group ad.
    * @throws GoogleAdsException if an API request failed with one or more service errors.
    */
+  // [START AddShoppingSmartAd_1]
   private String addSmartShoppingAdGroupAd(
       GoogleAdsClient googleAdsClient, long customerId, String adGroupResourceName) {
     // Creates a new Smart Shopping ad.
@@ -350,6 +357,7 @@ public class AddShoppingSmartAd {
       return mutateAdGroupAdResult.getResourceName();
     }
   }
+  // [END AddShoppingSmartAd_1]
 
   /**
    * Creates a new Shopping listing group for the specified ad group. This is known as a "product

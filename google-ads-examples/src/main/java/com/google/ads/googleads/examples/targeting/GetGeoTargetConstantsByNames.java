@@ -65,6 +65,7 @@ public class GetGeoTargetConstantsByNames {
    * @param googleAdsClient the Google Ads API client.
    * @throws GoogleAdsException if an API request failed with one or more service errors.
    */
+  // [START GetGeoTargetConstantsByNames]
   private void runExample(GoogleAdsClient googleAdsClient) {
     try (GeoTargetConstantServiceClient geoTargetClient =
         googleAdsClient.getLatestVersion().createGeoTargetConstantServiceClient()) {
@@ -101,4 +102,5 @@ public class GetGeoTargetConstantsByNames {
       }
     }
   }
+  // [END GetGeoTargetConstantsByNames]
 }

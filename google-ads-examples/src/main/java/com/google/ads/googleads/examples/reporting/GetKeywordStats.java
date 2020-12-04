@@ -90,6 +90,7 @@ public class GetKeywordStats {
    * @param customerId the client customer ID.
    * @throws GoogleAdsException if an API request failed with one or more service errors.
    */
+  // [START GetKeywordStats]
   private void runExample(GoogleAdsClient googleAdsClient, long customerId) {
     try (GoogleAdsServiceClient googleAdsServiceClient =
         googleAdsClient.getLatestVersion().createGoogleAdsServiceClient()) {
@@ -159,4 +160,5 @@ public class GetKeywordStats {
       }
     }
   }
+  // [END GetKeywordStats]
 }

@@ -175,6 +175,7 @@ public class AddSmartDisplayAd {
    * @param customerId the client customer ID.
    * @return the campaign budget resource name.
    */
+  // [START AddSmartDisplayAd]
   private static String createCampaignBudget(GoogleAdsClient googleAdsClient, long customerId) {
     // Creates the budget.
     CampaignBudget campaignBudget =
@@ -201,6 +202,7 @@ public class AddSmartDisplayAd {
       return budgetResourceName;
     }
   }
+  // [END AddSmartDisplayAd]
 
   /**
    * Adds a Smart Display campaign.
@@ -210,6 +212,7 @@ public class AddSmartDisplayAd {
    * @param budgetResourceName the campaign budget resource name.
    * @return the campaign resource name.
    */
+  // [START AddSmartDisplayAd_1]
   private static String createSmartDisplayCampaign(
       GoogleAdsClient googleAdsClient, long customerId, String budgetResourceName) {
     // Creates the campaign.
@@ -248,6 +251,7 @@ public class AddSmartDisplayAd {
       return campaignResourceName;
     }
   }
+  // [END AddSmartDisplayAd_1]
 
   /**
    * Adds an ad group.
@@ -257,6 +261,7 @@ public class AddSmartDisplayAd {
    * @param campaignResourceName the campaign resource name.
    * @return the ad group resource name.
    */
+  // [START AddSmartDisplayAd_4]
   private static String createAdGroup(
       GoogleAdsClient googleAdsClient, long customerId, String campaignResourceName) {
     // Creates the ad group.
@@ -282,6 +287,7 @@ public class AddSmartDisplayAd {
       return adGroupResourceName;
     }
   }
+  // [END AddSmartDisplayAd_4]
 
   /**
    * Adds a responsive display ad, which is a recommended ad type for Smart Display campaigns.
@@ -294,6 +300,7 @@ public class AddSmartDisplayAd {
    * @param squareMarketingImageAssetResourceName optional, the resource name of the square
    *     marketing image asset.
    */
+  // [START AddSmartDisplayAd_2]
   private static void createResponsiveDisplayAd(
       GoogleAdsClient googleAdsClient,
       long customerId,
@@ -358,6 +365,7 @@ public class AddSmartDisplayAd {
           "Added ad group ad with resource name '%s'.%n", response.getResults(0).getResourceName());
     }
   }
+  // [END AddSmartDisplayAd_2]
 
   /**
    * Creates an image asset to be used for creating ads.
@@ -368,6 +376,7 @@ public class AddSmartDisplayAd {
    * @param imageName the image name.
    * @return the created image asset's resource name.
    */
+  // [START AddSmartDisplayAd_3]
   private static String createImageAsset(
       GoogleAdsClient googleAdsClient, long customerId, String imageUrl, String imageName)
       throws IOException {
@@ -394,4 +403,5 @@ public class AddSmartDisplayAd {
       return imageResourceName;
     }
   }
+  // [END AddSmartDisplayAd_3]
 }

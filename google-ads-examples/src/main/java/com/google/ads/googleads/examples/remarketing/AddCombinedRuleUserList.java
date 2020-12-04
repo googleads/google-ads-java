@@ -96,6 +96,7 @@ public class AddCombinedRuleUserList {
    * @param customerId the client customer ID.
    * @throws GoogleAdsException if an API request failed with one or more service errors.
    */
+  // [START AddCombinedRuleUserList]
   private void runExample(GoogleAdsClient googleAdsClient, long customerId) {
     String urlString = "url__";
 
@@ -186,4 +187,5 @@ public class AddCombinedRuleUserList {
       System.out.printf("Created user list with resource name '%s'.%n", userListResourceName);
     }
   }
+  // [END AddCombinedRuleUserList]
 }

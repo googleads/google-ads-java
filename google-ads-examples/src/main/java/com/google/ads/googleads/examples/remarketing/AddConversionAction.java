@@ -88,6 +88,7 @@ public class AddConversionAction {
    * @param customerId the client customer ID.
    * @throws GoogleAdsException if an API request failed with one or more service errors.
    */
+  // [START AddConversionAction]
   private void runExample(GoogleAdsClient googleAdsClient, long customerId) {
 
     // Creates a ConversionAction.
@@ -121,4 +122,5 @@ public class AddConversionAction {
       }
     }
   }
+  // [END AddConversionAction]
 }
