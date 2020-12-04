@@ -110,6 +110,7 @@ public class AddKeywordPlan {
    * @param googleAdsClient the Google Ads API client.
    * @param customerId the client customer ID.
    */
+  // [START AddKeywordPlan]
   private void runExample(GoogleAdsClient googleAdsClient, Long customerId) {
     String keywordPlanResource = createKeywordPlan(googleAdsClient, customerId);
     String planCampaignResource =
@@ -309,4 +310,5 @@ public class AddKeywordPlan {
       System.out.printf("Created negative keyword for keyword plan: %s%n", resourceName);
     }
   }
+  // [END AddKeywordPlan]
 }

@@ -264,6 +264,7 @@ public class AddHotelAd {
    * @return resource name of the newly created ad group.
    * @throws GoogleAdsException if an API request failed with one or more service errors.
    */
+  // [START AddHotelAd_2]
   private String addHotelAdGroup(
       GoogleAdsClient googleAdsClient, long customerId, String campaignResourceName) {
     // Creates an ad group.
@@ -293,6 +294,7 @@ public class AddHotelAd {
       return mutateAdGroupResult.getResourceName();
     }
   }
+  // [END AddHotelAd_2]
 
   /**
    * Creates a new hotel ad group ad in the specified ad group.
@@ -304,6 +306,7 @@ public class AddHotelAd {
    * @return resource name of the newly created ad group ad.
    * @throws GoogleAdsException if an API request failed with one or more service errors.
    */
+  // [START AddHotelAd_3]
   private String addHotelAdGroupAd(
       GoogleAdsClient googleAdsClient, long customerId, String adGroupResourceName) {
     // Creates a new hotel ad.
@@ -337,4 +340,5 @@ public class AddHotelAd {
       return mutateAdGroupAdResult.getResourceName();
     }
   }
+  // [END AddHotelAd_3]
 }

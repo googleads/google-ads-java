@@ -97,6 +97,7 @@ public class AddExpandedTextAds {
    * @param adGroupId the ad group ID.
    * @throws GoogleAdsException if an API request failed with one or more service errors.
    */
+  // [START AddExpandedTextAds]
   private void runExample(GoogleAdsClient googleAdsClient, long customerId, long adGroupId) {
 
     String adGroupResourceName = ResourceNames.adGroup(customerId, adGroupId);
@@ -142,4 +143,5 @@ public class AddExpandedTextAds {
       }
     }
   }
+  // [END AddExpandedTextAds]
 }

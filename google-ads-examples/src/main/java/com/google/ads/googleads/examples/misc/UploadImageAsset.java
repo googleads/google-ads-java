@@ -90,6 +90,7 @@ public class UploadImageAsset {
    * @param customerId the client customer ID.
    * @throws IOException if there are errors related to image processing.
    */
+  // [START UploadImageAsset]
   private void runExample(GoogleAdsClient googleAdsClient, long customerId) throws IOException {
     byte[] imageData = ByteStreams.toByteArray(new URL(IMAGE_URL).openStream());
 
@@ -123,4 +124,5 @@ public class UploadImageAsset {
           response.getResults(0).getResourceName());
     }
   }
+  // [END UploadImageAsset]
 }

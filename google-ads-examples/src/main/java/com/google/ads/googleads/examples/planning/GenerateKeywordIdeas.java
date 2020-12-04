@@ -134,6 +134,7 @@ public class GenerateKeywordIdeas {
    * @throws IllegalArgumentException if {@code keywords} is empty and {@code pageUrl} is null.
    * @throws Exception if the example failed due to other errors.
    */
+  // [START GenerateKeywordIdeas]
   private void runExample(
       GoogleAdsClient googleAdsClient,
       long customerId,
@@ -188,4 +189,5 @@ public class GenerateKeywordIdeas {
       }
     }
   }
+  // [END GenerateKeywordIdeas]
 }

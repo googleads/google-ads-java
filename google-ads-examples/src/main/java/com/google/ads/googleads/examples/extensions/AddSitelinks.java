@@ -148,6 +148,7 @@ public class AddSitelinks {
    * @param customerId the client customer ID.
    * @param campaignResourceName the resource name of the campaign to target.
    */
+  // [START AddSitelinks_1]
   private static List<String> createExtensionFeedItems(
       GoogleAdsClient googleAdsClient, long customerId, String campaignResourceName) {
     SitelinkFeedItem sitelinkFeedItem1 =
@@ -259,6 +260,7 @@ public class AddSitelinks {
       return resourceNames;
     }
   }
+  // [END AddSitelinks_1]
 
   /**
    * Creates a new SitelinkFeedItem with the specified attributes.
