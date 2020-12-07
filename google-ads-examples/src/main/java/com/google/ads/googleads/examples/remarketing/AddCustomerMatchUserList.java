@@ -180,6 +180,7 @@ public class AddCustomerMatchUserList {
    * @param userListResourceName the resource name of the Customer Match user list to add members.
    *     to.
    */
+  // [START AddCustomerMatchUserList]
   private void addUsersToCustomerMatchUserList(
       GoogleAdsClient googleAdsClient, long customerId, String userListResourceName)
       throws UnsupportedEncodingException {
@@ -237,6 +238,7 @@ public class AddCustomerMatchUserList {
       }
     }
   }
+  // [END AddCustomerMatchUserList]
 
   /**
    * Creates a list of offline user data job operations that will add users to the list.

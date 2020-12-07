@@ -89,6 +89,7 @@ public class UpdateExpandedTextAd {
    * @param customerId the customer ID to update.
    * @param adId the ad ID to update.
    */
+  // [START UpdateExpandedTextAd]
   private void runExample(GoogleAdsClient googleAdsClient, long customerId, long adId) {
     // Creates an AdOperation to update an ad.
     AdOperation.Builder adOperation = AdOperation.newBuilder();
@@ -125,4 +126,5 @@ public class UpdateExpandedTextAd {
       }
     }
   }
+  // [END UpdateExpandedTextAd]
 }

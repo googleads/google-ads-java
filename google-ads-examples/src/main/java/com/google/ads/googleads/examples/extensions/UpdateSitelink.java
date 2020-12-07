@@ -101,6 +101,7 @@ public class UpdateSitelink {
    * @param sitelinkText the new sitelink text to update to.
    * @throws GoogleAdsException if an API request failed with one or more service errors.
    */
+  // [START UpdateSitelink]
   private void runExample(
       GoogleAdsClient googleAdsClient, long customerId, long feedItemId, String sitelinkText) {
     try (ExtensionFeedItemServiceClient extensionFeedItemServiceClient =
@@ -132,4 +133,5 @@ public class UpdateSitelink {
       }
     }
   }
+  // [END UpdateSitelink]
 }

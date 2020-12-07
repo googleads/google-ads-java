@@ -93,6 +93,7 @@ public class GenerateForecastMetrics {
    * @param customerId the client customer ID.
    * @param planId the plan ID.
    */
+  // [START GenerateForecastMetrics]
   private void runExample(GoogleAdsClient googleAdsClient, Long customerId, Long planId) {
     String planResourceName = ResourceNames.keywordPlan(customerId, planId);
 
@@ -109,4 +110,5 @@ public class GenerateForecastMetrics {
       }
     }
   }
+  // [END GenerateForecastMetrics]
 }
