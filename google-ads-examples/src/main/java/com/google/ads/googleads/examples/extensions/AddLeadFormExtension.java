@@ -161,7 +161,12 @@ public class AddLeadFormExtension {
                         LeadFormField.newBuilder()
                             .setInputType(LeadFormFieldUserInputType.TRAVEL_BUDGET)
                             .build())
-                    // Define the response page after the user signs up on the form.
+
+                    // Optional: You can also specify a background image asset.
+                    // To upload an asset, see Misc/UploadImageAsset.java.
+                    //.setBackgroundImageAsset("INSERT_IMAGE_ASSET_HERE")
+
+                    // Optional: Define the response page after the user signs up on the form.
                     .setPostSubmitHeadline("Thanks for signing up!")
                     .setPostSubmitDescription(
                         "We will reach out to you shortly. Visit our website "
@@ -219,7 +224,6 @@ public class AddLeadFormExtension {
             .setAsset(leadFormAssetResourceName)
             .setFieldType(AssetFieldType.LEAD_FORM)
             .setCampaign(ResourceNames.campaign(customerId, campaignId))
-            .setStatus(AssetLinkStatus.ENABLED)
             .build();
 
     // Creates an operation to add the campaign asset.
