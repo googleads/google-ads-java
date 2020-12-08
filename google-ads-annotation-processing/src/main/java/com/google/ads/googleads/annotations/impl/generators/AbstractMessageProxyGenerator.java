@@ -148,6 +148,7 @@ public abstract class AbstractMessageProxyGenerator implements Generator {
         minVersion,
         minVersion);
   }
+
   /**
    * Generates a setter for a string property.
    *
