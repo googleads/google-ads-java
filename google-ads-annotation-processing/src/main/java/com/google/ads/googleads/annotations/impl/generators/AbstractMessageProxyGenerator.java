@@ -29,6 +29,7 @@ public abstract class AbstractMessageProxyGenerator implements Generator {
 
   public static final int MIN_VERSION_FOR_CUSTOMER_USER_ACCESS = 6;
   public static final int MIN_VERSION_FOR_CHANGE_EVENT = 6;
+  public static final int MIN_VERSION_FOR_FEED_PLACES_LOCATION_DATA_EMAIL = 6;
   protected static final String MESSAGE_PROXY_PACKAGE_NAME =
       "com.google.ads.googleads.lib.utils.messageproxy";
   protected static final String GENERATED_PACKAGE_NAME = MESSAGE_PROXY_PACKAGE_NAME + ".generated";

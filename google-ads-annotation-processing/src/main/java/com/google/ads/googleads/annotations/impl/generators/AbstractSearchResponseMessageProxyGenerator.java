@@ -129,7 +129,7 @@ public abstract class AbstractSearchResponseMessageProxyGenerator
         "row.hasFeed() && row.getFeed().hasPlacesLocationFeedData() "
             + "&& row.getFeed().getPlacesLocationFeedData().hasEmailAddress()",
         "row.getFeedBuilder().getPlacesLocationFeedDataBuilder().setEmailAddress(toSet)",
-        MIN_VERSION_FOR_CHANGE_EVENT);
+        MIN_VERSION_FOR_FEED_PLACES_LOCATION_DATA_EMAIL);
   }
 
   /**
