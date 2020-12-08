@@ -120,6 +120,16 @@ public abstract class AbstractSearchResponseMessageProxyGenerator
         "row.hasChangeEvent() && !row.getChangeEvent().getUserEmail().isEmpty()",
         "row.getChangeEventBuilder().setUserEmail(toSet)",
         MIN_VERSION_FOR_CHANGE_EVENT);
+
+    generateResultFieldSetterString(
+        version,
+        proxiedBuilderClassName,
+        typeBuilder,
+        "setPlacesLocationFeedDataEmailAddressIfPresent",
+        "row.hasFeed() && row.getFeed().hasPlacesLocationFeedData() "
+            + "&& row.getFeed().getPlacesLocationFeedData().hasEmailAddress()",
+        "row.getFeedBuilder().getPlacesLocationFeedDataBuilder().setEmailAddress(toSet)",
+        MIN_VERSION_FOR_CHANGE_EVENT);
   }
 
   /**

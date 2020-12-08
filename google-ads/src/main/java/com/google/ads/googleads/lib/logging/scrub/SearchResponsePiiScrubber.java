@@ -32,6 +32,8 @@ public class SearchResponsePiiScrubber implements MessageEditor<Message> {
   private static final String CUSTOMER_USER_INVITER_EMAIL_PATH =
       "customer_user_access.inviter_user_email_address";
   private static final String CHANGE_EVENT_EMAIL_PATH = "change_event.user_email";
+  private static final String FEED_PLACES_LOCATION_DATA_EMAIL_PATH =
+      "feed.places_location_feed_data.email_address";
 
   @Override
   public Message edit(Message input) {
@@ -66,28 +68,36 @@ public class SearchResponsePiiScrubber implements MessageEditor<Message> {
     }
     // Uses FieldMask to determine which fields need to scrubbed. This allows us to avoid checking
     // each message in the response (which may contain up to 10k messages).
-    boolean needsEmailScrub = false;
+    boolean needsCustomerUserEmailScrub = false;
     boolean needsInviterEmailScrub = false;
     boolean needsChangeEventEmailScrub = false;
+    boolean needsFeedPlacesLocationDataEmailScrub = false;
     for (String path : (List<String>) proxy.getFieldMaskPaths(input)) {
-      if (!needsEmailScrub && path.equals(CUSTOMER_USER_EMAIL_PATH)) {
-        needsEmailScrub = true;
-        continue;
+      if (!needsCustomerUserEmailScrub && path.equals(CUSTOMER_USER_EMAIL_PATH)) {
+        needsCustomerUserEmailScrub = true;
       }
       if (!needsInviterEmailScrub && path.equals(CUSTOMER_USER_INVITER_EMAIL_PATH)) {
         needsInviterEmailScrub = true;
       }
+      // Exits early once all CustomerUser fields to scrub are found.
+      if (needsCustomerUserEmailScrub && needsInviterEmailScrub) {
+        break;
+      }
       if (!needsChangeEventEmailScrub && path.equals(CHANGE_EVENT_EMAIL_PATH)) {
         needsChangeEventEmailScrub = true;
+        // Exits early since no other scrubbable fields can be returned by the API in this response.
+        break;
       }
-      // Exits early once all fields to scrub are found.
-      if ((needsEmailScrub && needsInviterEmailScrub) || needsChangeEventEmailScrub) {
+      if (!needsFeedPlacesLocationDataEmailScrub
+          && path.equals(FEED_PLACES_LOCATION_DATA_EMAIL_PATH)) {
+        needsFeedPlacesLocationDataEmailScrub = true;
+        // Exits early since no other scrubbable fields can be returned by the API in this response.
         break;
       }
     }
     // Scrubs the response.
     Message.Builder builder = input.toBuilder();
-    if (needsEmailScrub) {
+    if (needsCustomerUserEmailScrub) {
       proxy.setCustomerUserAccessEmailAddressIfPresent(builder, LogScrubber.MASK_PATTERN);
     }
     if (needsInviterEmailScrub) {
@@ -95,6 +105,9 @@ public class SearchResponsePiiScrubber implements MessageEditor<Message> {
     }
     if (needsChangeEventEmailScrub) {
       proxy.setChangeEventUserEmailIfPresent(builder, LogScrubber.MASK_PATTERN);
+    }
+    if (needsFeedPlacesLocationDataEmailScrub) {
+      proxy.setPlacesLocationFeedDataEmailAddressIfPresent(builder, LogScrubber.MASK_PATTERN);
     }
     return builder.build();
   }
