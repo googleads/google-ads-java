@@ -26,6 +26,7 @@ import com.google.ads.googleads.lib.logging.Event.Summary;
 import com.google.ads.googleads.lib.utils.FieldMasks;
 import com.google.ads.googleads.v6.resources.CustomerUserAccess;
 import com.google.ads.googleads.v6.resources.Feed;
+import com.google.ads.googleads.v6.services.CreateCustomerClientRequest;
 import com.google.ads.googleads.v6.services.SearchGoogleAdsResponse;
 import com.google.ads.googleads.v6.services.SearchGoogleAdsStreamResponse;
 import com.google.common.collect.ImmutableMap;
@@ -496,6 +497,20 @@ public class LoggingInterceptorTest {
         .getFeedBuilder()
         .getPlacesLocationFeedDataBuilder()
         .setEmailAddress("REDACTED");
+    response = builder.build();
+
+    verifyLoggers(createDetail(), createSummary(), detailLogger, summaryLogger);
+  }
+
+  @Test
+  public void scrubsEmail_from_CreateCustomerClientRequest() {
+    CreateCustomerClientRequest.Builder builder = CreateCustomerClientRequest.newBuilder();
+    builder.setEmailAddress("foo@bar.com");
+    response = builder.build();
+
+    runDefaultCallNoVerify();
+
+    builder.setEmailAddress("REDACTED");
     response = builder.build();
 
     verifyLoggers(createDetail(), createSummary(), detailLogger, summaryLogger);

@@ -143,6 +143,11 @@ public class VersionCatalogCodeGenerator implements Generator {
           ClassName.get(
               "com.google.ads.googleads.lib.utils.messageproxy.generated.v" + version,
               "FeedMessageProxy");
+      // Defines the CreateCustomerClientRequest message proxy implementation.
+      ClassName createCustomerClientRequestProxyName =
+          ClassName.get(
+              "com.google.ads.googleads.lib.utils.messageproxy.generated.v" + version,
+              "CreateCustomerClientRequestMessageProxy");
       // Adds a Version instance to the builder with the params as defined above.
       getCatalogBuilder.addStatement(
           "builder.add(new Version(\n"
@@ -150,6 +155,7 @@ public class VersionCatalogCodeGenerator implements Generator {
               + "  new $T(),\n"
               + "  $T.class,\n"
               + "  new $T(\n"
+              + "    new $T(),\n"
               + "    new $T(),\n"
               + "    new $T(),\n"
               + "    new $T(),\n"
@@ -161,7 +167,8 @@ public class VersionCatalogCodeGenerator implements Generator {
           searchStreamResponseProxyName,
           searchPagedResponseProxyName,
           customerUserAccessProxyName,
-          feedMessageProxyName);
+          feedMessageProxyName,
+          createCustomerClientRequestProxyName);
     }
 
     getCatalogBuilder.addStatement("return builder.build()");

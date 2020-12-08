@@ -69,4 +69,7 @@ public interface MessageProxyProvider {
 
   /** Returns a proxy for handling Feed instances. */
   FeedMessageProxy getFeedMessageProxy();
+
+  /** Returns a proxy for handling CreateCustomerClientRequest instances. */
+  CreateCustomerClientRequestMessageProxy getCreateCustomerClientRequestMessageProxy();
 }
