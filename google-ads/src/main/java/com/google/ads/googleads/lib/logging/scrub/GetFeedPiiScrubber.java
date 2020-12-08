@@ -15,29 +15,28 @@
 package com.google.ads.googleads.lib.logging.scrub;
 
 import com.google.ads.googleads.lib.catalog.Version;
-import com.google.ads.googleads.lib.utils.messageproxy.CustomerUserAccessMessageProxy;
+import com.google.ads.googleads.lib.utils.messageproxy.FeedMessageProxy;
 import com.google.protobuf.Message;
 
-/** Scrubs PII from CustomerUserAccess.get(). */
-public class GetCustomerUserAccessPiiScrubber extends AbstractScrubber {
+/** Scrubs PII from Feed.get(). */
+public class GetFeedPiiScrubber extends AbstractScrubber {
+
   private static final int MIN_VERSION_FOR_SCRUB = 6;
 
-  public GetCustomerUserAccessPiiScrubber() {
+  public GetFeedPiiScrubber() {
     super(MIN_VERSION_FOR_SCRUB);
   }
 
   @Override
   protected Message scrubValidatedMessage(Message input, Version version) {
     Message.Builder builder = input.toBuilder();
-    CustomerUserAccessMessageProxy proxy =
-        version.getMessageProxyProvider().getCustomerUserAccessProxy();
-    proxy.setCustomerUserAccessEmailAddressIfPresent(builder, LogScrubber.MASK_PATTERN);
-    proxy.setCustomerUserAccessInviterEmailAddressIfPresent(builder, LogScrubber.MASK_PATTERN);
+    FeedMessageProxy proxy = version.getMessageProxyProvider().getFeedMessageProxy();
+    proxy.setPlacesLocationFeedDataEmailAddressIfPresent(builder, LogScrubber.MASK_PATTERN);
     return builder.build();
   }
 
   @Override
   public boolean supports(Message input) {
-    return input != null && input.getClass().getSimpleName().equals("CustomerUserAccess");
+    return input != null && input.getClass().getSimpleName().equals("Feed");
   }
 }

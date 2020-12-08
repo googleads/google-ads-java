@@ -42,4 +42,10 @@ public class SearchGoogleAdsStreamResponseMessageProxy implements SearchResponse
       SearchGoogleAdsStreamResponse.Builder builder, String toSet) {
     return builder;
   }
+
+  @Override
+  public SearchGoogleAdsStreamResponse.Builder setPlacesLocationFeedDataEmailAddressIfPresent(
+      SearchGoogleAdsStreamResponse.Builder builder, String toSet) {
+    return builder;
+  }
 }

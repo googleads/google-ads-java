@@ -32,7 +32,10 @@ public class LogScrubber implements MessageEditor<Object> {
 
   public static final String MASK_PATTERN = "REDACTED";
   private final ImmutableList<MessageEditor<Message>> scrubbers =
-      ImmutableList.of(new SearchResponsePiiScrubber(), new GetCustomerUserAccessPiiScrubber());
+      ImmutableList.of(
+          new SearchResponsePiiScrubber(),
+          new GetCustomerUserAccessPiiScrubber(),
+          new GetFeedPiiScrubber());
   private static final LogScrubber INSTANCE = new LogScrubber();
 
   private LogScrubber() {}

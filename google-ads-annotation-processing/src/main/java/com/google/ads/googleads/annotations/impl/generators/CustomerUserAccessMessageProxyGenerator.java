@@ -15,13 +15,11 @@
 package com.google.ads.googleads.annotations.impl.generators;
 
 import com.squareup.javapoet.ClassName;
-import com.squareup.javapoet.MethodSpec;
 import com.squareup.javapoet.TypeName;
 import com.squareup.javapoet.TypeSpec;
 import java.util.Set;
 import javax.annotation.processing.Filer;
 import javax.annotation.processing.Messager;
-import javax.lang.model.element.Modifier;
 
 /**
  * Generates CustomerUserAccessMessageProxy implementations.
@@ -99,46 +97,6 @@ public class CustomerUserAccessMessageProxyGenerator extends AbstractMessageProx
         "builder.setInviterUserEmailAddress(toSet)",
         version,
         MIN_VERSION_FOR_CUSTOMER_USER_ACCESS);
-  }
-
-  /**
-   * Generates a setter for a string property.
-   *
-   * @param typeBuilder the type which should contain the new setter.
-   * @param proxiedBuilderClassName the builder for the type which is being proxied.
-   * @param fullNameOfSetterMethod the name of the new method.
-   * @param filterStatement a filter which should be applied prior to setting the new value. The
-   *     builder will be available from a variable named builder.
-   * @param updateStatement a statement to update the value. The builder will be available from a
-   *     variable named builder.
-   * @param version the version this setter is generated for.
-   * @param minVersion the minimum version required to support the filter + update statements.
-   */
-  protected static void generateStringSetter(
-      TypeSpec.Builder typeBuilder,
-      ClassName proxiedBuilderClassName,
-      String fullNameOfSetterMethod,
-      String filterStatement,
-      String updateStatement,
-      int version,
-      int minVersion) {
-    if (version < minVersion) {
-      proxiedBuilderClassName = ClassName.get("com.google.protobuf", "Message", "Builder");
-    }
-    MethodSpec.Builder methodBuilder =
-        MethodSpec.methodBuilder(fullNameOfSetterMethod)
-            .addAnnotation(Override.class)
-            .addModifiers(Modifier.PUBLIC)
-            .returns(proxiedBuilderClassName)
-            .addParameter(proxiedBuilderClassName, "builder")
-            .addParameter(String.class, "toSet");
-    if (version >= minVersion) {
-      methodBuilder.beginControlFlow("if ($L)", filterStatement);
-      methodBuilder.addStatement(updateStatement);
-      methodBuilder.endControlFlow();
-    }
-    methodBuilder.addStatement("return builder");
-    typeBuilder.addMethod(methodBuilder.build());
   }
 
   @Override

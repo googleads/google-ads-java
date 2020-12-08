@@ -51,4 +51,13 @@ public class SearchGoogleAdsStreamResponseMessageProxy implements SearchResponse
         .forEach(row -> row.getChangeEventBuilder().setUserEmail(toSet));
     return builder;
   }
+
+  @Override
+  public SearchGoogleAdsStreamResponse.Builder setPlacesLocationFeedDataEmailAddressIfPresent(
+      SearchGoogleAdsStreamResponse.Builder builder, String toSet) {
+    builder.getResultsBuilderList().stream()
+        .filter(row -> row.hasFeed() && row.getFeed().hasPlacesLocationFeedData() && row.getFeed().getPlacesLocationFeedData().hasEmailAddress())
+        .forEach(row -> row.getFeedBuilder().getPlacesLocationFeedDataBuilder().setEmailAddress(toSet));
+    return builder;
+  }
 }

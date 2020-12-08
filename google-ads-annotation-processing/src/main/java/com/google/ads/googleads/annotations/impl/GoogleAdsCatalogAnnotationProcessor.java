@@ -19,6 +19,7 @@ import static java.lang.Math.max;
 import com.google.ads.googleads.annotations.api.VersionDescriptor;
 import com.google.ads.googleads.annotations.impl.generators.AbstractGoogleAdsClientCodeGenerator;
 import com.google.ads.googleads.annotations.impl.generators.CustomerUserAccessMessageProxyGenerator;
+import com.google.ads.googleads.annotations.impl.generators.FeedMessageProxyGenerator;
 import com.google.ads.googleads.annotations.impl.generators.GeneratedCatalogCodeGenerator;
 import com.google.ads.googleads.annotations.impl.generators.Generator;
 import com.google.ads.googleads.annotations.impl.generators.GoogleAdsAllVersionsCodeGenerator;
@@ -148,7 +149,8 @@ public class GoogleAdsCatalogAnnotationProcessor extends AbstractProcessor {
             versions, latestVersion, catalogName, messager, filer),
         new SearchStreamResponseMessageProxyGenerator(versions, messager, filer),
         new SearchPagedResponseMessageProxyGenerator(versions, messager, filer),
-        new CustomerUserAccessMessageProxyGenerator(versions, messager, filer));
+        new CustomerUserAccessMessageProxyGenerator(versions, messager, filer),
+        new FeedMessageProxyGenerator(versions, messager, filer));
   }
 
   /**

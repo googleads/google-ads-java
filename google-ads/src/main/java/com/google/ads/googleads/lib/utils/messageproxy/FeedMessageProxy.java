@@ -15,17 +15,9 @@
 package com.google.ads.googleads.lib.utils.messageproxy;
 
 import com.google.protobuf.Message;
-import java.util.List;
 
-/**
- * Provides an interface for handling SearchGoogleAdsStreamResponse objects independently of the API
- * version. This is useful to e.g. update fields in the message without having to handle all API
- * version cases.
- */
-public interface SearchResponseProxy<MsgT extends Message, BuilderT extends Message.Builder>
-    extends CustomerUserAccessMessageProxy<MsgT, BuilderT>,
-        ChangeEventMessageProxy<MsgT, BuilderT>,
-        FeedMessageProxy<MsgT, BuilderT> {
+public interface FeedMessageProxy<MsgT extends Message, BuilderT extends Message.Builder> {
 
-  List<String> getFieldMaskPaths(MsgT message);
+  /** Sets the feed.places_location_feed_data.email_address property. */
+  BuilderT setPlacesLocationFeedDataEmailAddressIfPresent(BuilderT builder, String toSet);
 }
