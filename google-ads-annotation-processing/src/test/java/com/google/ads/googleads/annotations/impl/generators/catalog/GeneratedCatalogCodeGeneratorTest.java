@@ -12,10 +12,11 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-package com.google.ads.googleads.annotations.impl.generators;
+package com.google.ads.googleads.annotations.impl.generators.catalog;
 
 import static org.mockito.Mockito.when;
 
+import com.google.ads.googleads.annotations.impl.generators.AbstractGeneratorTest;
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableSet;
 import java.io.IOException;

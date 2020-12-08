@@ -26,10 +26,10 @@ import javax.tools.Diagnostic;
 import javax.tools.Diagnostic.Kind;
 
 /** Provides access to utility methods used in code generation during annotation processing. */
-class Utils {
+public class Utils {
 
   /** Creates the @Generated annotation */
-  static AnnotationSpec generatedAnnotation() {
+  public static AnnotationSpec generatedAnnotation() {
     return AnnotationSpec.builder(Generated.class)
         .addMember("value", "$S", "GoogleAdsCatalogAnnotationProcessor")
         .build();
@@ -42,7 +42,7 @@ class Utils {
    * @param serviceClient the service client for which the class is being created.
    * @return ClassName object for the given version of the library and service client.
    */
-  static ClassName createServiceClientClassName(int version, String serviceClient) {
+  public static ClassName createServiceClientClassName(int version, String serviceClient) {
     return ClassName.get("com.google.ads.googleads.v" + version + ".services", serviceClient);
   }
 
@@ -50,7 +50,7 @@ class Utils {
    * @param packageName the name of the package.
    * @param typeSpec the generated type.
    */
-  static void writeGeneratedClassToFile(
+  public static void writeGeneratedClassToFile(
       String packageName, TypeSpec typeSpec, Messager messager, Filer filer) {
     final String LICENSE =
         ""

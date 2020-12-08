@@ -12,7 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-package com.google.ads.googleads.annotations.impl.generators;
+package com.google.ads.googleads.annotations.impl.generators.messageproxy;
 
 import com.squareup.javapoet.ClassName;
 import com.squareup.javapoet.MethodSpec;

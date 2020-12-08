@@ -12,8 +12,9 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-package com.google.ads.googleads.annotations.impl.generators;
+package com.google.ads.googleads.annotations.impl.generators.messageproxy;
 
+import com.google.ads.googleads.annotations.impl.generators.AbstractGeneratorTest;
 import com.google.common.collect.ImmutableSet;
 import java.io.IOException;
 import org.junit.Test;

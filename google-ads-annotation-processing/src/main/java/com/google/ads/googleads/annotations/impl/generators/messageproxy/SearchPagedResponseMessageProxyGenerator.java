@@ -1,4 +1,4 @@
-package com.google.ads.googleads.annotations.impl.generators;
+package com.google.ads.googleads.annotations.impl.generators.messageproxy;
 
 import com.squareup.javapoet.ClassName;
 import java.util.Set;

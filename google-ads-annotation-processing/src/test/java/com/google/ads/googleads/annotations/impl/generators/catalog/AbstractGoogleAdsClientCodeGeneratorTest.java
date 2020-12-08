@@ -12,26 +12,31 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-package com.google.ads.googleads.annotations.impl.generators;
+package com.google.ads.googleads.annotations.impl.generators.catalog;
 
+import com.google.ads.googleads.annotations.impl.generators.AbstractGeneratorTest;
 import com.google.common.collect.ImmutableSet;
 import java.io.IOException;
+import java.util.Set;
 import org.junit.Test;
 
-/** Test cases for {@link VersionCatalogCodeGenerator}. */
-public class VersionCatalogCodeGeneratorTest extends AbstractGeneratorTest {
+/** Test cases for {@link AbstractGoogleAdsClientCodeGenerator}. */
+public class AbstractGoogleAdsClientCodeGeneratorTest extends AbstractGeneratorTest {
 
-  /** Ensures that generated code matches expectations for a catalog with several versions. */
+  private Set<Integer> versions = ImmutableSet.of(1, 2, 3);
+  private int latestVersion = 3;
+  private String catalogName = "";
+
+  /** Ensures that the generated code for a base case works as expected. */
   @Test
-  public void baseCaseGeneratedCodeMatches() throws IOException {
+  public void baseCaseCodeMatches() throws IOException {
     assertGeneratedCodeMatches(
-        "/com/google/ads/googleads/annotations/impl/VersionCatalog.java.expected");
+        "/com/google/ads/googleads/annotations/impl/AbstractGoogleAdsClient.java.expected");
   }
 
-  /** Implements the abstract method to invoke the code generator. */
   @Override
   protected void invokeCodeGenClass() {
-    new VersionCatalogCodeGenerator(ImmutableSet.of(123, 456, 789), "foo", messager, filer)
+    new AbstractGoogleAdsClientCodeGenerator(versions, latestVersion, catalogName, messager, filer)
         .generate();
   }
 }

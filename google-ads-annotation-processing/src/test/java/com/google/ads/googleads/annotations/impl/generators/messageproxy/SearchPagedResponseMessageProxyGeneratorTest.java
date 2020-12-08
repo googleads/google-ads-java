@@ -12,11 +12,12 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-package com.google.ads.googleads.annotations.impl.generators;
+package com.google.ads.googleads.annotations.impl.generators.messageproxy;
 
-import static com.google.ads.googleads.annotations.impl.generators.AbstractMessageProxyGenerator.MIN_VERSION_FOR_CHANGE_EVENT;
-import static com.google.ads.googleads.annotations.impl.generators.AbstractMessageProxyGenerator.MIN_VERSION_FOR_CUSTOMER_USER_ACCESS;
+import static com.google.ads.googleads.annotations.impl.generators.messageproxy.AbstractMessageProxyGenerator.MIN_VERSION_FOR_CHANGE_EVENT;
+import static com.google.ads.googleads.annotations.impl.generators.messageproxy.AbstractMessageProxyGenerator.MIN_VERSION_FOR_CUSTOMER_USER_ACCESS;
 
+import com.google.ads.googleads.annotations.impl.generators.AbstractGeneratorTest;
 import com.google.common.collect.ImmutableSet;
 import java.io.IOException;
 import java.util.Set;
