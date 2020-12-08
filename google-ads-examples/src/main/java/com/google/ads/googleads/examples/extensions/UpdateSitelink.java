@@ -33,8 +33,7 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 
 /**
- * Updates a sitelink extension feed item {@code SitelinkFeedItem} with the specified link text and
- * URL.
+ * Updates a sitelink extension feed item {@code SitelinkFeedItem} with the specified link text.
  */
 public class UpdateSitelink {
 
