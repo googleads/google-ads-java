@@ -23,6 +23,9 @@ import javax.annotation.processing.Messager;
 /** Generates an implementation of FeedMessageProxy. */
 public class FeedMessageProxyGenerator extends AbstractMessageProxyGenerator {
 
+  private static final int MIN_VERSION_FOR_FEED = 1;
+  private static final int MIN_VERSION_FOR_FEED_PLACES_LOCATION_DATA_EMAIL = 6;
+
   public FeedMessageProxyGenerator(Set<Integer> versions, Messager messager, Filer filer) {
     super(versions, messager, filer);
   }
@@ -41,8 +44,8 @@ public class FeedMessageProxyGenerator extends AbstractMessageProxyGenerator {
             + " && builder.getPlacesLocationFeedData().hasEmailAddress()",
         "builder.getPlacesLocationFeedDataBuilder().setEmailAddress(toSet)",
         version,
-        1,
-        6);
+        MIN_VERSION_FOR_FEED,
+        MIN_VERSION_FOR_FEED_PLACES_LOCATION_DATA_EMAIL);
   }
 
   @Override
