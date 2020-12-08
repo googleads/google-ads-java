@@ -139,7 +139,7 @@ public class UpdateUserAccess {
                 + "  customer_user_access.access_creation_date_time "
                 + "FROM customer_user_access "
                 + "WHERE"
-                + "  customer_user_access.email_address = '%s'",
+                + "  customer_user_access.email_address LIKE '%s'",
             emailAddress);
     // Connects a new API client to retrieve the access.
     try (GoogleAdsServiceClient googleAdsServiceClient =
