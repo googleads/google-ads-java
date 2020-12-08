@@ -12,8 +12,10 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-package com.google.ads.googleads.annotations.impl.generators;
+package com.google.ads.googleads.annotations.impl.generators.catalog;
 
+import com.google.ads.googleads.annotations.impl.generators.Generator;
+import com.google.ads.googleads.annotations.impl.generators.Utils;
 import com.google.api.gax.core.FixedCredentialsProvider;
 import com.google.api.gax.rpc.TransportChannelProvider;
 import com.google.auth.Credentials;
