@@ -24,16 +24,19 @@ public class DefaultMessageProxyProvider implements MessageProxyProvider {
   private final SearchResponseProxy searchPagedResponseProxy;
   private final CustomerUserAccessMessageProxy customerUserAccessProxy;
   private final FeedMessageProxy feedMessageProxy;
+  private final CreateCustomerClientRequestMessageProxy createCustomerClientRequestMessageProxy;
 
   public DefaultMessageProxyProvider(
       SearchResponseProxy searchStreamResponseProxy,
       SearchResponseProxy searchPagedResponseProxy,
       CustomerUserAccessMessageProxy customerUserAccessProxy,
-      FeedMessageProxy feedMessageProxy) {
+      FeedMessageProxy feedMessageProxy,
+      CreateCustomerClientRequestMessageProxy createCustomerClientRequestMessageProxy) {
     this.searchStreamResponseProxy = searchStreamResponseProxy;
     this.searchPagedResponseProxy = searchPagedResponseProxy;
     this.customerUserAccessProxy = customerUserAccessProxy;
     this.feedMessageProxy = feedMessageProxy;
+    this.createCustomerClientRequestMessageProxy = createCustomerClientRequestMessageProxy;
   }
 
   @Override
@@ -54,5 +57,10 @@ public class DefaultMessageProxyProvider implements MessageProxyProvider {
   @Override
   public FeedMessageProxy getFeedMessageProxy() {
     return feedMessageProxy;
+  }
+
+  @Override
+  public CreateCustomerClientRequestMessageProxy getCreateCustomerClientRequestMessageProxy() {
+    return createCustomerClientRequestMessageProxy;
   }
 }

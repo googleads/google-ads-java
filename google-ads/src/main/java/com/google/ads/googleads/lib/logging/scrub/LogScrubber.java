@@ -35,7 +35,8 @@ public class LogScrubber implements MessageEditor<Object> {
       ImmutableList.of(
           new SearchResponsePiiScrubber(),
           new GetCustomerUserAccessPiiScrubber(),
-          new GetFeedPiiScrubber());
+          new GetFeedPiiScrubber(),
+          new CreateCustomerClientRequestScrubber());
   private static final LogScrubber INSTANCE = new LogScrubber();
 
   private LogScrubber() {}
