@@ -73,7 +73,7 @@ public final class AdGroupCriterionLabelServiceProto {
       "\003(\0132C.google.ads.googleads.v6.services.M" +
       "utateAdGroupCriterionLabelResult\":\n!Muta" +
       "teAdGroupCriterionLabelResult\022\025\n\rresourc" +
-      "e_name\030\001 \001(\t2\270\004\n\034AdGroupCriterionLabelSe" +
+      "e_name\030\001 \001(\t2\342\004\n\034AdGroupCriterionLabelSe" +
       "rvice\022\351\001\n\030GetAdGroupCriterionLabel\022A.goo" +
       "gle.ads.googleads.v6.services.GetAdGroup" +
       "CriterionLabelRequest\0328.google.ads.googl" +
@@ -86,15 +86,16 @@ public final class AdGroupCriterionLabelServiceProto {
       "oogleads.v6.services.MutateAdGroupCriter" +
       "ionLabelsResponse\"_\202\323\344\223\002@\";/v6/customers" +
       "/{customer_id=*}/adGroupCriterionLabels:" +
-      "mutate:\001*\332A\026customer_id,operations\032\033\312A\030g" +
-      "oogleads.googleapis.comB\210\002\n$com.google.a" +
-      "ds.googleads.v6.servicesB!AdGroupCriteri" +
-      "onLabelServiceProtoP\001ZHgoogle.golang.org" +
-      "/genproto/googleapis/ads/googleads/v6/se" +
-      "rvices;services\242\002\003GAA\252\002 Google.Ads.Googl" +
-      "eAds.V6.Services\312\002 Google\\Ads\\GoogleAds\\" +
-      "V6\\Services\352\002$Google::Ads::GoogleAds::V6" +
-      "::Servicesb\006proto3"
+      "mutate:\001*\332A\026customer_id,operations\032E\312A\030g" +
+      "oogleads.googleapis.com\322A\'https://www.go" +
+      "ogleapis.com/auth/adwordsB\210\002\n$com.google" +
+      ".ads.googleads.v6.servicesB!AdGroupCrite" +
+      "rionLabelServiceProtoP\001ZHgoogle.golang.o" +
+      "rg/genproto/googleapis/ads/googleads/v6/" +
+      "services;services\242\002\003GAA\252\002 Google.Ads.Goo" +
+      "gleAds.V6.Services\312\002 Google\\Ads\\GoogleAd" +
+      "s\\V6\\Services\352\002$Google::Ads::GoogleAds::" +
+      "V6::Servicesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -142,6 +143,7 @@ public final class AdGroupCriterionLabelServiceProto {
     registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);
     registry.add(com.google.api.AnnotationsProto.http);
     registry.add(com.google.api.ClientProto.methodSignature);
+    registry.add(com.google.api.ClientProto.oauthScopes);
     registry.add(com.google.api.ResourceProto.resourceReference);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);

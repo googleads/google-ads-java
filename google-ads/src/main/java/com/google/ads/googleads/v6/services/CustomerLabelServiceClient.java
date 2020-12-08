@@ -5,7 +5,7 @@
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
- *     https://www.apache.org/licenses/LICENSE-2.0
+ *      https://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -13,9 +13,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
 package com.google.ads.googleads.v6.services;
 
 import com.google.ads.googleads.v6.resources.CustomerLabel;
+import com.google.ads.googleads.v6.resources.CustomerLabelName;
 import com.google.ads.googleads.v6.services.stub.CustomerLabelServiceStub;
 import com.google.ads.googleads.v6.services.stub.CustomerLabelServiceStubSettings;
 import com.google.api.core.BetaApi;
@@ -26,23 +28,14 @@ import java.util.List;
 import java.util.concurrent.TimeUnit;
 import javax.annotation.Generated;
 
-// AUTO-GENERATED DOCUMENTATION AND SERVICE
+// AUTO-GENERATED DOCUMENTATION AND CLASS.
 /**
  * Service Description: Service to manage labels on customers.
  *
  * <p>This class provides the ability to make remote calls to the backing service through method
  * calls that map to API methods. Sample code to get started:
  *
- * <pre>
- * <code>
- * try (CustomerLabelServiceClient customerLabelServiceClient = CustomerLabelServiceClient.create()) {
- *   CustomerLabelName resourceName = CustomerLabelName.of("[CUSTOMER_ID]", "[LABEL_ID]");
- *   CustomerLabel response = customerLabelServiceClient.getCustomerLabel(resourceName);
- * }
- * </code>
- * </pre>
- *
- * <p>Note: close() needs to be called on the customerLabelServiceClient object to clean up
+ * <p>Note: close() needs to be called on the CustomerLabelServiceClient object to clean up
  * resources such as threads. In the example above, try-with-resources is used, which automatically
  * calls close().
  *
@@ -71,30 +64,28 @@ import javax.annotation.Generated;
  *
  * <p>To customize credentials:
  *
- * <pre>
- * <code>
+ * <pre>{@code
  * CustomerLabelServiceSettings customerLabelServiceSettings =
  *     CustomerLabelServiceSettings.newBuilder()
  *         .setCredentialsProvider(FixedCredentialsProvider.create(myCredentials))
  *         .build();
  * CustomerLabelServiceClient customerLabelServiceClient =
  *     CustomerLabelServiceClient.create(customerLabelServiceSettings);
- * </code>
- * </pre>
+ * }</pre>
  *
- * To customize the endpoint:
+ * <p>To customize the endpoint:
  *
- * <pre>
- * <code>
+ * <pre>{@code
  * CustomerLabelServiceSettings customerLabelServiceSettings =
  *     CustomerLabelServiceSettings.newBuilder().setEndpoint(myEndpoint).build();
  * CustomerLabelServiceClient customerLabelServiceClient =
  *     CustomerLabelServiceClient.create(customerLabelServiceSettings);
- * </code>
- * </pre>
+ * }</pre>
+ *
+ * <p>Please refer to the GitHub repository's samples for more quickstart code snippets.
  */
-@Generated("by gapic-generator")
 @BetaApi
+@Generated("by gapic-generator")
 public class CustomerLabelServiceClient implements BackgroundResource {
   private final CustomerLabelServiceSettings settings;
   private final CustomerLabelServiceStub stub;
@@ -115,7 +106,7 @@ public class CustomerLabelServiceClient implements BackgroundResource {
 
   /**
    * Constructs an instance of CustomerLabelServiceClient, using the given stub for making calls.
-   * This is for advanced usage - prefer to use CustomerLabelServiceSettings}.
+   * This is for advanced usage - prefer using create(CustomerLabelServiceSettings).
    */
   @BetaApi("A restructuring of stub classes is planned, so this may break in the future")
   public static final CustomerLabelServiceClient create(CustomerLabelServiceStub stub) {
@@ -147,20 +138,11 @@ public class CustomerLabelServiceClient implements BackgroundResource {
     return stub;
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Returns the requested customer-label relationship in full detail.
    *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (CustomerLabelServiceClient customerLabelServiceClient = CustomerLabelServiceClient.create()) {
-   *   CustomerLabelName resourceName = CustomerLabelName.of("[CUSTOMER_ID]", "[LABEL_ID]");
-   *   CustomerLabel response = customerLabelServiceClient.getCustomerLabel(resourceName);
-   * }
-   * </code></pre>
-   *
-   * @param resourceName Required. The resource name of the customer-label relationship to fetch.
+   * @param resource_name Required. The resource name of the customer-label relationship to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final CustomerLabel getCustomerLabel(CustomerLabelName resourceName) {
@@ -171,20 +153,11 @@ public class CustomerLabelServiceClient implements BackgroundResource {
     return getCustomerLabel(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Returns the requested customer-label relationship in full detail.
    *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (CustomerLabelServiceClient customerLabelServiceClient = CustomerLabelServiceClient.create()) {
-   *   CustomerLabelName resourceName = CustomerLabelName.of("[CUSTOMER_ID]", "[LABEL_ID]");
-   *   CustomerLabel response = customerLabelServiceClient.getCustomerLabel(resourceName.toString());
-   * }
-   * </code></pre>
-   *
-   * @param resourceName Required. The resource name of the customer-label relationship to fetch.
+   * @param resource_name Required. The resource name of the customer-label relationship to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final CustomerLabel getCustomerLabel(String resourceName) {
@@ -193,21 +166,9 @@ public class CustomerLabelServiceClient implements BackgroundResource {
     return getCustomerLabel(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Returns the requested customer-label relationship in full detail.
-   *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (CustomerLabelServiceClient customerLabelServiceClient = CustomerLabelServiceClient.create()) {
-   *   CustomerLabelName resourceName = CustomerLabelName.of("[CUSTOMER_ID]", "[LABEL_ID]");
-   *   GetCustomerLabelRequest request = GetCustomerLabelRequest.newBuilder()
-   *     .setResourceName(resourceName.toString())
-   *     .build();
-   *   CustomerLabel response = customerLabelServiceClient.getCustomerLabel(request);
-   * }
-   * </code></pre>
    *
    * @param request The request object containing all of the parameters for the API call.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
@@ -216,43 +177,21 @@ public class CustomerLabelServiceClient implements BackgroundResource {
     return getCustomerLabelCallable().call(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Returns the requested customer-label relationship in full detail.
    *
    * <p>Sample code:
-   *
-   * <pre><code>
-   * try (CustomerLabelServiceClient customerLabelServiceClient = CustomerLabelServiceClient.create()) {
-   *   CustomerLabelName resourceName = CustomerLabelName.of("[CUSTOMER_ID]", "[LABEL_ID]");
-   *   GetCustomerLabelRequest request = GetCustomerLabelRequest.newBuilder()
-   *     .setResourceName(resourceName.toString())
-   *     .build();
-   *   ApiFuture&lt;CustomerLabel&gt; future = customerLabelServiceClient.getCustomerLabelCallable().futureCall(request);
-   *   // Do something
-   *   CustomerLabel response = future.get();
-   * }
-   * </code></pre>
    */
   public final UnaryCallable<GetCustomerLabelRequest, CustomerLabel> getCustomerLabelCallable() {
     return stub.getCustomerLabelCallable();
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Creates and removes customer-label relationships. Operation statuses are returned.
    *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (CustomerLabelServiceClient customerLabelServiceClient = CustomerLabelServiceClient.create()) {
-   *   String customerId = "";
-   *   List&lt;CustomerLabelOperation&gt; operations = new ArrayList&lt;&gt;();
-   *   MutateCustomerLabelsResponse response = customerLabelServiceClient.mutateCustomerLabels(customerId, operations);
-   * }
-   * </code></pre>
-   *
-   * @param customerId Required. ID of the customer whose customer-label relationships are being
+   * @param customer_id Required. ID of the customer whose customer-label relationships are being
    *     modified.
    * @param operations Required. The list of operations to perform on customer-label relationships.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
@@ -267,23 +206,9 @@ public class CustomerLabelServiceClient implements BackgroundResource {
     return mutateCustomerLabels(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Creates and removes customer-label relationships. Operation statuses are returned.
-   *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (CustomerLabelServiceClient customerLabelServiceClient = CustomerLabelServiceClient.create()) {
-   *   String customerId = "";
-   *   List&lt;CustomerLabelOperation&gt; operations = new ArrayList&lt;&gt;();
-   *   MutateCustomerLabelsRequest request = MutateCustomerLabelsRequest.newBuilder()
-   *     .setCustomerId(customerId)
-   *     .addAllOperations(operations)
-   *     .build();
-   *   MutateCustomerLabelsResponse response = customerLabelServiceClient.mutateCustomerLabels(request);
-   * }
-   * </code></pre>
    *
    * @param request The request object containing all of the parameters for the API call.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
@@ -293,25 +218,11 @@ public class CustomerLabelServiceClient implements BackgroundResource {
     return mutateCustomerLabelsCallable().call(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Creates and removes customer-label relationships. Operation statuses are returned.
    *
    * <p>Sample code:
-   *
-   * <pre><code>
-   * try (CustomerLabelServiceClient customerLabelServiceClient = CustomerLabelServiceClient.create()) {
-   *   String customerId = "";
-   *   List&lt;CustomerLabelOperation&gt; operations = new ArrayList&lt;&gt;();
-   *   MutateCustomerLabelsRequest request = MutateCustomerLabelsRequest.newBuilder()
-   *     .setCustomerId(customerId)
-   *     .addAllOperations(operations)
-   *     .build();
-   *   ApiFuture&lt;MutateCustomerLabelsResponse&gt; future = customerLabelServiceClient.mutateCustomerLabelsCallable().futureCall(request);
-   *   // Do something
-   *   MutateCustomerLabelsResponse response = future.get();
-   * }
-   * </code></pre>
    */
   public final UnaryCallable<MutateCustomerLabelsRequest, MutateCustomerLabelsResponse>
       mutateCustomerLabelsCallable() {

@@ -5,7 +5,7 @@
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
- *     https://www.apache.org/licenses/LICENSE-2.0
+ *      https://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -13,9 +13,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
 package com.google.ads.googleads.v6.services;
 
 import com.google.ads.googleads.v6.resources.PaidOrganicSearchTermView;
+import com.google.ads.googleads.v6.resources.PaidOrganicSearchTermViewName;
 import com.google.ads.googleads.v6.services.stub.PaidOrganicSearchTermViewServiceStub;
 import com.google.ads.googleads.v6.services.stub.PaidOrganicSearchTermViewServiceStubSettings;
 import com.google.api.core.BetaApi;
@@ -25,23 +27,14 @@ import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 import javax.annotation.Generated;
 
-// AUTO-GENERATED DOCUMENTATION AND SERVICE
+// AUTO-GENERATED DOCUMENTATION AND CLASS.
 /**
  * Service Description: Service to fetch paid organic search term views.
  *
  * <p>This class provides the ability to make remote calls to the backing service through method
  * calls that map to API methods. Sample code to get started:
  *
- * <pre>
- * <code>
- * try (PaidOrganicSearchTermViewServiceClient paidOrganicSearchTermViewServiceClient = PaidOrganicSearchTermViewServiceClient.create()) {
- *   PaidOrganicSearchTermViewName resourceName = PaidOrganicSearchTermViewName.of("[CUSTOMER_ID]", "[CAMPAIGN_ID]", "[AD_GROUP_ID]", "[BASE64_SEARCH_TERM]");
- *   PaidOrganicSearchTermView response = paidOrganicSearchTermViewServiceClient.getPaidOrganicSearchTermView(resourceName);
- * }
- * </code>
- * </pre>
- *
- * <p>Note: close() needs to be called on the paidOrganicSearchTermViewServiceClient object to clean
+ * <p>Note: close() needs to be called on the PaidOrganicSearchTermViewServiceClient object to clean
  * up resources such as threads. In the example above, try-with-resources is used, which
  * automatically calls close().
  *
@@ -70,30 +63,28 @@ import javax.annotation.Generated;
  *
  * <p>To customize credentials:
  *
- * <pre>
- * <code>
+ * <pre>{@code
  * PaidOrganicSearchTermViewServiceSettings paidOrganicSearchTermViewServiceSettings =
  *     PaidOrganicSearchTermViewServiceSettings.newBuilder()
  *         .setCredentialsProvider(FixedCredentialsProvider.create(myCredentials))
  *         .build();
  * PaidOrganicSearchTermViewServiceClient paidOrganicSearchTermViewServiceClient =
  *     PaidOrganicSearchTermViewServiceClient.create(paidOrganicSearchTermViewServiceSettings);
- * </code>
- * </pre>
+ * }</pre>
  *
- * To customize the endpoint:
+ * <p>To customize the endpoint:
  *
- * <pre>
- * <code>
+ * <pre>{@code
  * PaidOrganicSearchTermViewServiceSettings paidOrganicSearchTermViewServiceSettings =
  *     PaidOrganicSearchTermViewServiceSettings.newBuilder().setEndpoint(myEndpoint).build();
  * PaidOrganicSearchTermViewServiceClient paidOrganicSearchTermViewServiceClient =
  *     PaidOrganicSearchTermViewServiceClient.create(paidOrganicSearchTermViewServiceSettings);
- * </code>
- * </pre>
+ * }</pre>
+ *
+ * <p>Please refer to the GitHub repository's samples for more quickstart code snippets.
  */
-@Generated("by gapic-generator")
 @BetaApi
+@Generated("by gapic-generator")
 public class PaidOrganicSearchTermViewServiceClient implements BackgroundResource {
   private final PaidOrganicSearchTermViewServiceSettings settings;
   private final PaidOrganicSearchTermViewServiceStub stub;
@@ -115,8 +106,8 @@ public class PaidOrganicSearchTermViewServiceClient implements BackgroundResourc
 
   /**
    * Constructs an instance of PaidOrganicSearchTermViewServiceClient, using the given stub for
-   * making calls. This is for advanced usage - prefer to use
-   * PaidOrganicSearchTermViewServiceSettings}.
+   * making calls. This is for advanced usage - prefer using
+   * create(PaidOrganicSearchTermViewServiceSettings).
    */
   @BetaApi("A restructuring of stub classes is planned, so this may break in the future")
   public static final PaidOrganicSearchTermViewServiceClient create(
@@ -151,20 +142,11 @@ public class PaidOrganicSearchTermViewServiceClient implements BackgroundResourc
     return stub;
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Returns the requested paid organic search term view in full detail.
    *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (PaidOrganicSearchTermViewServiceClient paidOrganicSearchTermViewServiceClient = PaidOrganicSearchTermViewServiceClient.create()) {
-   *   PaidOrganicSearchTermViewName resourceName = PaidOrganicSearchTermViewName.of("[CUSTOMER_ID]", "[CAMPAIGN_ID]", "[AD_GROUP_ID]", "[BASE64_SEARCH_TERM]");
-   *   PaidOrganicSearchTermView response = paidOrganicSearchTermViewServiceClient.getPaidOrganicSearchTermView(resourceName);
-   * }
-   * </code></pre>
-   *
-   * @param resourceName Required. The resource name of the paid organic search term view to fetch.
+   * @param resource_name Required. The resource name of the paid organic search term view to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final PaidOrganicSearchTermView getPaidOrganicSearchTermView(
@@ -176,20 +158,11 @@ public class PaidOrganicSearchTermViewServiceClient implements BackgroundResourc
     return getPaidOrganicSearchTermView(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Returns the requested paid organic search term view in full detail.
    *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (PaidOrganicSearchTermViewServiceClient paidOrganicSearchTermViewServiceClient = PaidOrganicSearchTermViewServiceClient.create()) {
-   *   PaidOrganicSearchTermViewName resourceName = PaidOrganicSearchTermViewName.of("[CUSTOMER_ID]", "[CAMPAIGN_ID]", "[AD_GROUP_ID]", "[BASE64_SEARCH_TERM]");
-   *   PaidOrganicSearchTermView response = paidOrganicSearchTermViewServiceClient.getPaidOrganicSearchTermView(resourceName.toString());
-   * }
-   * </code></pre>
-   *
-   * @param resourceName Required. The resource name of the paid organic search term view to fetch.
+   * @param resource_name Required. The resource name of the paid organic search term view to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final PaidOrganicSearchTermView getPaidOrganicSearchTermView(String resourceName) {
@@ -198,21 +171,9 @@ public class PaidOrganicSearchTermViewServiceClient implements BackgroundResourc
     return getPaidOrganicSearchTermView(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Returns the requested paid organic search term view in full detail.
-   *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (PaidOrganicSearchTermViewServiceClient paidOrganicSearchTermViewServiceClient = PaidOrganicSearchTermViewServiceClient.create()) {
-   *   PaidOrganicSearchTermViewName resourceName = PaidOrganicSearchTermViewName.of("[CUSTOMER_ID]", "[CAMPAIGN_ID]", "[AD_GROUP_ID]", "[BASE64_SEARCH_TERM]");
-   *   GetPaidOrganicSearchTermViewRequest request = GetPaidOrganicSearchTermViewRequest.newBuilder()
-   *     .setResourceName(resourceName.toString())
-   *     .build();
-   *   PaidOrganicSearchTermView response = paidOrganicSearchTermViewServiceClient.getPaidOrganicSearchTermView(request);
-   * }
-   * </code></pre>
    *
    * @param request The request object containing all of the parameters for the API call.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
@@ -222,23 +183,11 @@ public class PaidOrganicSearchTermViewServiceClient implements BackgroundResourc
     return getPaidOrganicSearchTermViewCallable().call(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Returns the requested paid organic search term view in full detail.
    *
    * <p>Sample code:
-   *
-   * <pre><code>
-   * try (PaidOrganicSearchTermViewServiceClient paidOrganicSearchTermViewServiceClient = PaidOrganicSearchTermViewServiceClient.create()) {
-   *   PaidOrganicSearchTermViewName resourceName = PaidOrganicSearchTermViewName.of("[CUSTOMER_ID]", "[CAMPAIGN_ID]", "[AD_GROUP_ID]", "[BASE64_SEARCH_TERM]");
-   *   GetPaidOrganicSearchTermViewRequest request = GetPaidOrganicSearchTermViewRequest.newBuilder()
-   *     .setResourceName(resourceName.toString())
-   *     .build();
-   *   ApiFuture&lt;PaidOrganicSearchTermView&gt; future = paidOrganicSearchTermViewServiceClient.getPaidOrganicSearchTermViewCallable().futureCall(request);
-   *   // Do something
-   *   PaidOrganicSearchTermView response = future.get();
-   * }
-   * </code></pre>
    */
   public final UnaryCallable<GetPaidOrganicSearchTermViewRequest, PaidOrganicSearchTermView>
       getPaidOrganicSearchTermViewCallable() {

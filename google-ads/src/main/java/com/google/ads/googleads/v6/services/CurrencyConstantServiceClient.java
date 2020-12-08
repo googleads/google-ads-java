@@ -5,7 +5,7 @@
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
- *     https://www.apache.org/licenses/LICENSE-2.0
+ *      https://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -13,9 +13,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
 package com.google.ads.googleads.v6.services;
 
 import com.google.ads.googleads.v6.resources.CurrencyConstant;
+import com.google.ads.googleads.v6.resources.CurrencyConstantName;
 import com.google.ads.googleads.v6.services.stub.CurrencyConstantServiceStub;
 import com.google.ads.googleads.v6.services.stub.CurrencyConstantServiceStubSettings;
 import com.google.api.core.BetaApi;
@@ -25,23 +27,14 @@ import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 import javax.annotation.Generated;
 
-// AUTO-GENERATED DOCUMENTATION AND SERVICE
+// AUTO-GENERATED DOCUMENTATION AND CLASS.
 /**
  * Service Description: Service to fetch currency constants.
  *
  * <p>This class provides the ability to make remote calls to the backing service through method
  * calls that map to API methods. Sample code to get started:
  *
- * <pre>
- * <code>
- * try (CurrencyConstantServiceClient currencyConstantServiceClient = CurrencyConstantServiceClient.create()) {
- *   CurrencyConstantName resourceName = CurrencyConstantName.of("[CODE]");
- *   CurrencyConstant response = currencyConstantServiceClient.getCurrencyConstant(resourceName);
- * }
- * </code>
- * </pre>
- *
- * <p>Note: close() needs to be called on the currencyConstantServiceClient object to clean up
+ * <p>Note: close() needs to be called on the CurrencyConstantServiceClient object to clean up
  * resources such as threads. In the example above, try-with-resources is used, which automatically
  * calls close().
  *
@@ -70,30 +63,28 @@ import javax.annotation.Generated;
  *
  * <p>To customize credentials:
  *
- * <pre>
- * <code>
+ * <pre>{@code
  * CurrencyConstantServiceSettings currencyConstantServiceSettings =
  *     CurrencyConstantServiceSettings.newBuilder()
  *         .setCredentialsProvider(FixedCredentialsProvider.create(myCredentials))
  *         .build();
  * CurrencyConstantServiceClient currencyConstantServiceClient =
  *     CurrencyConstantServiceClient.create(currencyConstantServiceSettings);
- * </code>
- * </pre>
+ * }</pre>
  *
- * To customize the endpoint:
+ * <p>To customize the endpoint:
  *
- * <pre>
- * <code>
+ * <pre>{@code
  * CurrencyConstantServiceSettings currencyConstantServiceSettings =
  *     CurrencyConstantServiceSettings.newBuilder().setEndpoint(myEndpoint).build();
  * CurrencyConstantServiceClient currencyConstantServiceClient =
  *     CurrencyConstantServiceClient.create(currencyConstantServiceSettings);
- * </code>
- * </pre>
+ * }</pre>
+ *
+ * <p>Please refer to the GitHub repository's samples for more quickstart code snippets.
  */
-@Generated("by gapic-generator")
 @BetaApi
+@Generated("by gapic-generator")
 public class CurrencyConstantServiceClient implements BackgroundResource {
   private final CurrencyConstantServiceSettings settings;
   private final CurrencyConstantServiceStub stub;
@@ -114,7 +105,7 @@ public class CurrencyConstantServiceClient implements BackgroundResource {
 
   /**
    * Constructs an instance of CurrencyConstantServiceClient, using the given stub for making calls.
-   * This is for advanced usage - prefer to use CurrencyConstantServiceSettings}.
+   * This is for advanced usage - prefer using create(CurrencyConstantServiceSettings).
    */
   @BetaApi("A restructuring of stub classes is planned, so this may break in the future")
   public static final CurrencyConstantServiceClient create(CurrencyConstantServiceStub stub) {
@@ -147,20 +138,11 @@ public class CurrencyConstantServiceClient implements BackgroundResource {
     return stub;
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Returns the requested currency constant.
    *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (CurrencyConstantServiceClient currencyConstantServiceClient = CurrencyConstantServiceClient.create()) {
-   *   CurrencyConstantName resourceName = CurrencyConstantName.of("[CODE]");
-   *   CurrencyConstant response = currencyConstantServiceClient.getCurrencyConstant(resourceName);
-   * }
-   * </code></pre>
-   *
-   * @param resourceName Required. Resource name of the currency constant to fetch.
+   * @param resource_name Required. Resource name of the currency constant to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final CurrencyConstant getCurrencyConstant(CurrencyConstantName resourceName) {
@@ -171,20 +153,11 @@ public class CurrencyConstantServiceClient implements BackgroundResource {
     return getCurrencyConstant(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Returns the requested currency constant.
    *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (CurrencyConstantServiceClient currencyConstantServiceClient = CurrencyConstantServiceClient.create()) {
-   *   CurrencyConstantName resourceName = CurrencyConstantName.of("[CODE]");
-   *   CurrencyConstant response = currencyConstantServiceClient.getCurrencyConstant(resourceName.toString());
-   * }
-   * </code></pre>
-   *
-   * @param resourceName Required. Resource name of the currency constant to fetch.
+   * @param resource_name Required. Resource name of the currency constant to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final CurrencyConstant getCurrencyConstant(String resourceName) {
@@ -193,21 +166,9 @@ public class CurrencyConstantServiceClient implements BackgroundResource {
     return getCurrencyConstant(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Returns the requested currency constant.
-   *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (CurrencyConstantServiceClient currencyConstantServiceClient = CurrencyConstantServiceClient.create()) {
-   *   CurrencyConstantName resourceName = CurrencyConstantName.of("[CODE]");
-   *   GetCurrencyConstantRequest request = GetCurrencyConstantRequest.newBuilder()
-   *     .setResourceName(resourceName.toString())
-   *     .build();
-   *   CurrencyConstant response = currencyConstantServiceClient.getCurrencyConstant(request);
-   * }
-   * </code></pre>
    *
    * @param request The request object containing all of the parameters for the API call.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
@@ -216,23 +177,11 @@ public class CurrencyConstantServiceClient implements BackgroundResource {
     return getCurrencyConstantCallable().call(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Returns the requested currency constant.
    *
    * <p>Sample code:
-   *
-   * <pre><code>
-   * try (CurrencyConstantServiceClient currencyConstantServiceClient = CurrencyConstantServiceClient.create()) {
-   *   CurrencyConstantName resourceName = CurrencyConstantName.of("[CODE]");
-   *   GetCurrencyConstantRequest request = GetCurrencyConstantRequest.newBuilder()
-   *     .setResourceName(resourceName.toString())
-   *     .build();
-   *   ApiFuture&lt;CurrencyConstant&gt; future = currencyConstantServiceClient.getCurrencyConstantCallable().futureCall(request);
-   *   // Do something
-   *   CurrencyConstant response = future.get();
-   * }
-   * </code></pre>
    */
   public final UnaryCallable<GetCurrencyConstantRequest, CurrencyConstant>
       getCurrencyConstantCallable() {

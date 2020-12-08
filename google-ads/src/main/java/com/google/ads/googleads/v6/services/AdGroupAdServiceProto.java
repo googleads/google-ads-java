@@ -83,7 +83,7 @@ public final class AdGroupAdServiceProto {
       "sult\"q\n\025MutateAdGroupAdResult\022\025\n\rresourc" +
       "e_name\030\001 \001(\t\022A\n\013ad_group_ad\030\002 \001(\0132,.goog" +
       "le.ads.googleads.v6.resources.AdGroupAd2" +
-      "\314\003\n\020AdGroupAdService\022\271\001\n\014GetAdGroupAd\0225." +
+      "\366\003\n\020AdGroupAdService\022\271\001\n\014GetAdGroupAd\0225." +
       "google.ads.googleads.v6.services.GetAdGr" +
       "oupAdRequest\032,.google.ads.googleads.v6.r" +
       "esources.AdGroupAd\"D\202\323\344\223\002.\022,/v6/{resourc" +
@@ -93,15 +93,16 @@ public final class AdGroupAdServiceProto {
       "sRequest\032:.google.ads.googleads.v6.servi" +
       "ces.MutateAdGroupAdsResponse\"S\202\323\344\223\0024\"//v" +
       "6/customers/{customer_id=*}/adGroupAds:m" +
-      "utate:\001*\332A\026customer_id,operations\032\033\312A\030go" +
-      "ogleads.googleapis.comB\374\001\n$com.google.ad" +
-      "s.googleads.v6.servicesB\025AdGroupAdServic" +
-      "eProtoP\001ZHgoogle.golang.org/genproto/goo" +
-      "gleapis/ads/googleads/v6/services;servic" +
-      "es\242\002\003GAA\252\002 Google.Ads.GoogleAds.V6.Servi" +
-      "ces\312\002 Google\\Ads\\GoogleAds\\V6\\Services\352\002" +
-      "$Google::Ads::GoogleAds::V6::Servicesb\006p" +
-      "roto3"
+      "utate:\001*\332A\026customer_id,operations\032E\312A\030go" +
+      "ogleads.googleapis.com\322A\'https://www.goo" +
+      "gleapis.com/auth/adwordsB\374\001\n$com.google." +
+      "ads.googleads.v6.servicesB\025AdGroupAdServ" +
+      "iceProtoP\001ZHgoogle.golang.org/genproto/g" +
+      "oogleapis/ads/googleads/v6/services;serv" +
+      "ices\242\002\003GAA\252\002 Google.Ads.GoogleAds.V6.Ser" +
+      "vices\312\002 Google\\Ads\\GoogleAds\\V6\\Services" +
+      "\352\002$Google::Ads::GoogleAds::V6::Servicesb" +
+      "\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -152,6 +153,7 @@ public final class AdGroupAdServiceProto {
     registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);
     registry.add(com.google.api.AnnotationsProto.http);
     registry.add(com.google.api.ClientProto.methodSignature);
+    registry.add(com.google.api.ClientProto.oauthScopes);
     registry.add(com.google.api.ResourceProto.resourceReference);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);

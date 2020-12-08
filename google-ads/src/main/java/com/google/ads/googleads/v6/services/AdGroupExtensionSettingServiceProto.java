@@ -77,7 +77,7 @@ public final class AdGroupExtensionSettingServiceProto {
       "tatus\022V\n\007results\030\002 \003(\0132E.google.ads.goog" +
       "leads.v6.services.MutateAdGroupExtension" +
       "SettingResult\"<\n#MutateAdGroupExtensionS" +
-      "ettingResult\022\025\n\rresource_name\030\001 \001(\t2\312\004\n\036" +
+      "ettingResult\022\025\n\rresource_name\030\001 \001(\t2\364\004\n\036" +
       "AdGroupExtensionSettingService\022\361\001\n\032GetAd" +
       "GroupExtensionSetting\022C.google.ads.googl" +
       "eads.v6.services.GetAdGroupExtensionSett" +
@@ -91,15 +91,16 @@ public final class AdGroupExtensionSettingServiceProto {
       "leads.v6.services.MutateAdGroupExtension" +
       "SettingsResponse\"a\202\323\344\223\002B\"=/v6/customers/" +
       "{customer_id=*}/adGroupExtensionSettings" +
-      ":mutate:\001*\332A\026customer_id,operations\032\033\312A\030" +
-      "googleads.googleapis.comB\212\002\n$com.google." +
-      "ads.googleads.v6.servicesB#AdGroupExtens" +
-      "ionSettingServiceProtoP\001ZHgoogle.golang." +
-      "org/genproto/googleapis/ads/googleads/v6" +
-      "/services;services\242\002\003GAA\252\002 Google.Ads.Go" +
-      "ogleAds.V6.Services\312\002 Google\\Ads\\GoogleA" +
-      "ds\\V6\\Services\352\002$Google::Ads::GoogleAds:" +
-      ":V6::Servicesb\006proto3"
+      ":mutate:\001*\332A\026customer_id,operations\032E\312A\030" +
+      "googleads.googleapis.com\322A\'https://www.g" +
+      "oogleapis.com/auth/adwordsB\212\002\n$com.googl" +
+      "e.ads.googleads.v6.servicesB#AdGroupExte" +
+      "nsionSettingServiceProtoP\001ZHgoogle.golan" +
+      "g.org/genproto/googleapis/ads/googleads/" +
+      "v6/services;services\242\002\003GAA\252\002 Google.Ads." +
+      "GoogleAds.V6.Services\312\002 Google\\Ads\\Googl" +
+      "eAds\\V6\\Services\352\002$Google::Ads::GoogleAd" +
+      "s::V6::Servicesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -148,6 +149,7 @@ public final class AdGroupExtensionSettingServiceProto {
     registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);
     registry.add(com.google.api.AnnotationsProto.http);
     registry.add(com.google.api.ClientProto.methodSignature);
+    registry.add(com.google.api.ClientProto.oauthScopes);
     registry.add(com.google.api.ResourceProto.resourceReference);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);

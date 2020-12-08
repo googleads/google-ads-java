@@ -36,19 +36,20 @@ public final class VideoServiceProto {
       "pi/field_behavior.proto\032\031google/api/reso" +
       "urce.proto\"P\n\017GetVideoRequest\022=\n\rresourc" +
       "e_name\030\001 \001(\tB&\340A\002\372A \n\036googleads.googleap" +
-      "is.com/Video2\327\001\n\014VideoService\022\251\001\n\010GetVid" +
+      "is.com/Video2\201\002\n\014VideoService\022\251\001\n\010GetVid" +
       "eo\0221.google.ads.googleads.v6.services.Ge" +
       "tVideoRequest\032(.google.ads.googleads.v6." +
       "resources.Video\"@\202\323\344\223\002*\022(/v6/{resource_n" +
       "ame=customers/*/videos/*}\332A\rresource_nam" +
-      "e\032\033\312A\030googleads.googleapis.comB\370\001\n$com.g" +
-      "oogle.ads.googleads.v6.servicesB\021VideoSe" +
-      "rviceProtoP\001ZHgoogle.golang.org/genproto" +
-      "/googleapis/ads/googleads/v6/services;se" +
-      "rvices\242\002\003GAA\252\002 Google.Ads.GoogleAds.V6.S" +
-      "ervices\312\002 Google\\Ads\\GoogleAds\\V6\\Servic" +
-      "es\352\002$Google::Ads::GoogleAds::V6::Service" +
-      "sb\006proto3"
+      "e\032E\312A\030googleads.googleapis.com\322A\'https:/" +
+      "/www.googleapis.com/auth/adwordsB\370\001\n$com" +
+      ".google.ads.googleads.v6.servicesB\021Video" +
+      "ServiceProtoP\001ZHgoogle.golang.org/genpro" +
+      "to/googleapis/ads/googleads/v6/services;" +
+      "services\242\002\003GAA\252\002 Google.Ads.GoogleAds.V6" +
+      ".Services\312\002 Google\\Ads\\GoogleAds\\V6\\Serv" +
+      "ices\352\002$Google::Ads::GoogleAds::V6::Servi" +
+      "cesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -71,6 +72,7 @@ public final class VideoServiceProto {
     registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);
     registry.add(com.google.api.AnnotationsProto.http);
     registry.add(com.google.api.ClientProto.methodSignature);
+    registry.add(com.google.api.ClientProto.oauthScopes);
     registry.add(com.google.api.ResourceProto.resourceReference);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);

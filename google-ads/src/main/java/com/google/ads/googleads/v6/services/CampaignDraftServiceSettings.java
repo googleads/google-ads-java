@@ -5,7 +5,7 @@
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
- *     https://www.apache.org/licenses/LICENSE-2.0
+ *      https://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -13,6 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
 package com.google.ads.googleads.v6.services;
 
 import static com.google.ads.googleads.v6.services.CampaignDraftServiceClient.ListCampaignDraftAsyncErrorsPagedResponse;
@@ -29,6 +30,7 @@ import com.google.api.gax.rpc.ClientContext;
 import com.google.api.gax.rpc.ClientSettings;
 import com.google.api.gax.rpc.OperationCallSettings;
 import com.google.api.gax.rpc.PagedCallSettings;
+import com.google.api.gax.rpc.StubSettings;
 import com.google.api.gax.rpc.TransportChannelProvider;
 import com.google.api.gax.rpc.UnaryCallSettings;
 import com.google.longrunning.Operation;
@@ -37,7 +39,7 @@ import java.io.IOException;
 import java.util.List;
 import javax.annotation.Generated;
 
-// AUTO-GENERATED DOCUMENTATION AND CLASS
+// AUTO-GENERATED DOCUMENTATION AND CLASS.
 /**
  * Settings class to configure an instance of {@link CampaignDraftServiceClient}.
  *
@@ -54,23 +56,25 @@ import javax.annotation.Generated;
  *
  * <p>For example, to set the total timeout of getCampaignDraft to 30 seconds:
  *
- * <pre>
- * <code>
+ * <pre>{@code
  * CampaignDraftServiceSettings.Builder campaignDraftServiceSettingsBuilder =
  *     CampaignDraftServiceSettings.newBuilder();
  * campaignDraftServiceSettingsBuilder
  *     .getCampaignDraftSettings()
  *     .setRetrySettings(
- *         campaignDraftServiceSettingsBuilder.getCampaignDraftSettings().getRetrySettings().toBuilder()
+ *         campaignDraftServiceSettingsBuilder
+ *             .getCampaignDraftSettings()
+ *             .getRetrySettings()
+ *             .toBuilder()
  *             .setTotalTimeout(Duration.ofSeconds(30))
  *             .build());
- * CampaignDraftServiceSettings campaignDraftServiceSettings = campaignDraftServiceSettingsBuilder.build();
- * </code>
- * </pre>
+ * CampaignDraftServiceSettings campaignDraftServiceSettings =
+ *     campaignDraftServiceSettingsBuilder.build();
+ * }</pre>
  */
-@Generated("by gapic-generator")
-@BetaApi
+@Generated("by gapic-generator-java")
 public class CampaignDraftServiceSettings extends ClientSettings<CampaignDraftServiceSettings> {
+
   /** Returns the object with the settings used for calls to getCampaignDraft. */
   public UnaryCallSettings<GetCampaignDraftRequest, CampaignDraft> getCampaignDraftSettings() {
     return ((CampaignDraftServiceStubSettings) getStubSettings()).getCampaignDraftSettings();
@@ -88,8 +92,6 @@ public class CampaignDraftServiceSettings extends ClientSettings<CampaignDraftSe
   }
 
   /** Returns the object with the settings used for calls to promoteCampaignDraft. */
-  @BetaApi(
-      "The surface for long-running operations is not stable yet and may change in the future.")
   public OperationCallSettings<PromoteCampaignDraftRequest, Empty, Empty>
       promoteCampaignDraftOperationSettings() {
     return ((CampaignDraftServiceStubSettings) getStubSettings())
@@ -167,16 +169,13 @@ public class CampaignDraftServiceSettings extends ClientSettings<CampaignDraftSe
   /** Builder for CampaignDraftServiceSettings. */
   public static class Builder
       extends ClientSettings.Builder<CampaignDraftServiceSettings, Builder> {
+
     protected Builder() throws IOException {
-      this((ClientContext) null);
+      this(((ClientContext) null));
     }
 
     protected Builder(ClientContext clientContext) {
       super(CampaignDraftServiceStubSettings.newBuilder(clientContext));
-    }
-
-    private static Builder createDefault() {
-      return new Builder(CampaignDraftServiceStubSettings.newBuilder());
     }
 
     protected Builder(CampaignDraftServiceSettings settings) {
@@ -187,11 +186,15 @@ public class CampaignDraftServiceSettings extends ClientSettings<CampaignDraftSe
       super(stubSettings);
     }
 
+    private static Builder createDefault() {
+      return new Builder(CampaignDraftServiceStubSettings.newBuilder());
+    }
+
     public CampaignDraftServiceStubSettings.Builder getStubSettingsBuilder() {
       return ((CampaignDraftServiceStubSettings.Builder) getStubSettings());
     }
 
-    // NEXT_MAJOR_VER: remove 'throws Exception'
+    // NEXT_MAJOR_VER: remove 'throws Exception'.
     /**
      * Applies the given settings updater function to all of the unary API methods in this service.
      *
@@ -223,8 +226,6 @@ public class CampaignDraftServiceSettings extends ClientSettings<CampaignDraftSe
     }
 
     /** Returns the builder for the settings used for calls to promoteCampaignDraft. */
-    @BetaApi(
-        "The surface for long-running operations is not stable yet and may change in the future.")
     public OperationCallSettings.Builder<PromoteCampaignDraftRequest, Empty, Empty>
         promoteCampaignDraftOperationSettings() {
       return getStubSettingsBuilder().promoteCampaignDraftOperationSettings();

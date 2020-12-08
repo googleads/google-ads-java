@@ -71,7 +71,7 @@ public final class CustomerUserAccessServiceProto {
       "lt\030\001 \001(\0132@.google.ads.googleads.v6.servi" +
       "ces.MutateCustomerUserAccessResult\"7\n\036Mu" +
       "tateCustomerUserAccessResult\022\025\n\rresource" +
-      "_name\030\001 \001(\t2\233\004\n\031CustomerUserAccessServic" +
+      "_name\030\001 \001(\t2\305\004\n\031CustomerUserAccessServic" +
       "e\022\336\001\n\025GetCustomerUserAccess\022>.google.ads" +
       ".googleads.v6.services.GetCustomerUserAc" +
       "cessRequest\0325.google.ads.googleads.v6.re" +
@@ -84,14 +84,15 @@ public final class CustomerUserAccessServiceProto {
       "tateCustomerUserAccessResponse\"\\\202\323\344\223\002>\"9" +
       "/v6/customers/{customer_id=*}/customerUs" +
       "erAccesses:mutate:\001*\332A\025customer_id,opera" +
-      "tion\032\033\312A\030googleads.googleapis.comB\205\002\n$co" +
-      "m.google.ads.googleads.v6.servicesB\036Cust" +
-      "omerUserAccessServiceProtoP\001ZHgoogle.gol" +
-      "ang.org/genproto/googleapis/ads/googlead" +
-      "s/v6/services;services\242\002\003GAA\252\002 Google.Ad" +
-      "s.GoogleAds.V6.Services\312\002 Google\\Ads\\Goo" +
-      "gleAds\\V6\\Services\352\002$Google::Ads::Google" +
-      "Ads::V6::Servicesb\006proto3"
+      "tion\032E\312A\030googleads.googleapis.com\322A\'http" +
+      "s://www.googleapis.com/auth/adwordsB\205\002\n$" +
+      "com.google.ads.googleads.v6.servicesB\036Cu" +
+      "stomerUserAccessServiceProtoP\001ZHgoogle.g" +
+      "olang.org/genproto/googleapis/ads/google" +
+      "ads/v6/services;services\242\002\003GAA\252\002 Google." +
+      "Ads.GoogleAds.V6.Services\312\002 Google\\Ads\\G" +
+      "oogleAds\\V6\\Services\352\002$Google::Ads::Goog" +
+      "leAds::V6::Servicesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -139,6 +140,7 @@ public final class CustomerUserAccessServiceProto {
     registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);
     registry.add(com.google.api.AnnotationsProto.http);
     registry.add(com.google.api.ClientProto.methodSignature);
+    registry.add(com.google.api.ClientProto.oauthScopes);
     registry.add(com.google.api.ResourceProto.resourceReference);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);

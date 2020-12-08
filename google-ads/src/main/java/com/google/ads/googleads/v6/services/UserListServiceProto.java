@@ -73,7 +73,7 @@ public final class UserListServiceProto {
       ".rpc.Status\022G\n\007results\030\002 \003(\01326.google.ad" +
       "s.googleads.v6.services.MutateUserListRe" +
       "sult\"-\n\024MutateUserListResult\022\025\n\rresource" +
-      "_name\030\001 \001(\t2\303\003\n\017UserListService\022\265\001\n\013GetU" +
+      "_name\030\001 \001(\t2\355\003\n\017UserListService\022\265\001\n\013GetU" +
       "serList\0224.google.ads.googleads.v6.servic" +
       "es.GetUserListRequest\032+.google.ads.googl" +
       "eads.v6.resources.UserList\"C\202\323\344\223\002-\022+/v6/" +
@@ -83,15 +83,16 @@ public final class UserListServiceProto {
       "rListsRequest\0329.google.ads.googleads.v6." +
       "services.MutateUserListsResponse\"R\202\323\344\223\0023" +
       "\"./v6/customers/{customer_id=*}/userList" +
-      "s:mutate:\001*\332A\026customer_id,operations\032\033\312A" +
-      "\030googleads.googleapis.comB\373\001\n$com.google" +
-      ".ads.googleads.v6.servicesB\024UserListServ" +
-      "iceProtoP\001ZHgoogle.golang.org/genproto/g" +
-      "oogleapis/ads/googleads/v6/services;serv" +
-      "ices\242\002\003GAA\252\002 Google.Ads.GoogleAds.V6.Ser" +
-      "vices\312\002 Google\\Ads\\GoogleAds\\V6\\Services" +
-      "\352\002$Google::Ads::GoogleAds::V6::Servicesb" +
-      "\006proto3"
+      "s:mutate:\001*\332A\026customer_id,operations\032E\312A" +
+      "\030googleads.googleapis.com\322A\'https://www." +
+      "googleapis.com/auth/adwordsB\373\001\n$com.goog" +
+      "le.ads.googleads.v6.servicesB\024UserListSe" +
+      "rviceProtoP\001ZHgoogle.golang.org/genproto" +
+      "/googleapis/ads/googleads/v6/services;se" +
+      "rvices\242\002\003GAA\252\002 Google.Ads.GoogleAds.V6.S" +
+      "ervices\312\002 Google\\Ads\\GoogleAds\\V6\\Servic" +
+      "es\352\002$Google::Ads::GoogleAds::V6::Service" +
+      "sb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -140,6 +141,7 @@ public final class UserListServiceProto {
     registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);
     registry.add(com.google.api.AnnotationsProto.http);
     registry.add(com.google.api.ClientProto.methodSignature);
+    registry.add(com.google.api.ClientProto.oauthScopes);
     registry.add(com.google.api.ResourceProto.resourceReference);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);

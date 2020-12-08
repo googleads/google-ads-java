@@ -5,7 +5,7 @@
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
- *     https://www.apache.org/licenses/LICENSE-2.0
+ *      https://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -13,9 +13,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
 package com.google.ads.googleads.v6.services;
 
 import com.google.ads.googleads.v6.resources.BiddingStrategy;
+import com.google.ads.googleads.v6.resources.BiddingStrategyName;
 import com.google.ads.googleads.v6.services.stub.BiddingStrategyServiceStub;
 import com.google.ads.googleads.v6.services.stub.BiddingStrategyServiceStubSettings;
 import com.google.api.core.BetaApi;
@@ -26,23 +28,14 @@ import java.util.List;
 import java.util.concurrent.TimeUnit;
 import javax.annotation.Generated;
 
-// AUTO-GENERATED DOCUMENTATION AND SERVICE
+// AUTO-GENERATED DOCUMENTATION AND CLASS.
 /**
  * Service Description: Service to manage bidding strategies.
  *
  * <p>This class provides the ability to make remote calls to the backing service through method
  * calls that map to API methods. Sample code to get started:
  *
- * <pre>
- * <code>
- * try (BiddingStrategyServiceClient biddingStrategyServiceClient = BiddingStrategyServiceClient.create()) {
- *   BiddingStrategyName resourceName = BiddingStrategyName.of("[CUSTOMER_ID]", "[BIDDING_STRATEGY_ID]");
- *   BiddingStrategy response = biddingStrategyServiceClient.getBiddingStrategy(resourceName);
- * }
- * </code>
- * </pre>
- *
- * <p>Note: close() needs to be called on the biddingStrategyServiceClient object to clean up
+ * <p>Note: close() needs to be called on the BiddingStrategyServiceClient object to clean up
  * resources such as threads. In the example above, try-with-resources is used, which automatically
  * calls close().
  *
@@ -71,30 +64,28 @@ import javax.annotation.Generated;
  *
  * <p>To customize credentials:
  *
- * <pre>
- * <code>
+ * <pre>{@code
  * BiddingStrategyServiceSettings biddingStrategyServiceSettings =
  *     BiddingStrategyServiceSettings.newBuilder()
  *         .setCredentialsProvider(FixedCredentialsProvider.create(myCredentials))
  *         .build();
  * BiddingStrategyServiceClient biddingStrategyServiceClient =
  *     BiddingStrategyServiceClient.create(biddingStrategyServiceSettings);
- * </code>
- * </pre>
+ * }</pre>
  *
- * To customize the endpoint:
+ * <p>To customize the endpoint:
  *
- * <pre>
- * <code>
+ * <pre>{@code
  * BiddingStrategyServiceSettings biddingStrategyServiceSettings =
  *     BiddingStrategyServiceSettings.newBuilder().setEndpoint(myEndpoint).build();
  * BiddingStrategyServiceClient biddingStrategyServiceClient =
  *     BiddingStrategyServiceClient.create(biddingStrategyServiceSettings);
- * </code>
- * </pre>
+ * }</pre>
+ *
+ * <p>Please refer to the GitHub repository's samples for more quickstart code snippets.
  */
-@Generated("by gapic-generator")
 @BetaApi
+@Generated("by gapic-generator")
 public class BiddingStrategyServiceClient implements BackgroundResource {
   private final BiddingStrategyServiceSettings settings;
   private final BiddingStrategyServiceStub stub;
@@ -115,7 +106,7 @@ public class BiddingStrategyServiceClient implements BackgroundResource {
 
   /**
    * Constructs an instance of BiddingStrategyServiceClient, using the given stub for making calls.
-   * This is for advanced usage - prefer to use BiddingStrategyServiceSettings}.
+   * This is for advanced usage - prefer using create(BiddingStrategyServiceSettings).
    */
   @BetaApi("A restructuring of stub classes is planned, so this may break in the future")
   public static final BiddingStrategyServiceClient create(BiddingStrategyServiceStub stub) {
@@ -148,20 +139,11 @@ public class BiddingStrategyServiceClient implements BackgroundResource {
     return stub;
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Returns the requested bidding strategy in full detail.
    *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (BiddingStrategyServiceClient biddingStrategyServiceClient = BiddingStrategyServiceClient.create()) {
-   *   BiddingStrategyName resourceName = BiddingStrategyName.of("[CUSTOMER_ID]", "[BIDDING_STRATEGY_ID]");
-   *   BiddingStrategy response = biddingStrategyServiceClient.getBiddingStrategy(resourceName);
-   * }
-   * </code></pre>
-   *
-   * @param resourceName Required. The resource name of the bidding strategy to fetch.
+   * @param resource_name Required. The resource name of the bidding strategy to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final BiddingStrategy getBiddingStrategy(BiddingStrategyName resourceName) {
@@ -172,20 +154,11 @@ public class BiddingStrategyServiceClient implements BackgroundResource {
     return getBiddingStrategy(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Returns the requested bidding strategy in full detail.
    *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (BiddingStrategyServiceClient biddingStrategyServiceClient = BiddingStrategyServiceClient.create()) {
-   *   BiddingStrategyName resourceName = BiddingStrategyName.of("[CUSTOMER_ID]", "[BIDDING_STRATEGY_ID]");
-   *   BiddingStrategy response = biddingStrategyServiceClient.getBiddingStrategy(resourceName.toString());
-   * }
-   * </code></pre>
-   *
-   * @param resourceName Required. The resource name of the bidding strategy to fetch.
+   * @param resource_name Required. The resource name of the bidding strategy to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final BiddingStrategy getBiddingStrategy(String resourceName) {
@@ -194,21 +167,9 @@ public class BiddingStrategyServiceClient implements BackgroundResource {
     return getBiddingStrategy(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Returns the requested bidding strategy in full detail.
-   *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (BiddingStrategyServiceClient biddingStrategyServiceClient = BiddingStrategyServiceClient.create()) {
-   *   BiddingStrategyName resourceName = BiddingStrategyName.of("[CUSTOMER_ID]", "[BIDDING_STRATEGY_ID]");
-   *   GetBiddingStrategyRequest request = GetBiddingStrategyRequest.newBuilder()
-   *     .setResourceName(resourceName.toString())
-   *     .build();
-   *   BiddingStrategy response = biddingStrategyServiceClient.getBiddingStrategy(request);
-   * }
-   * </code></pre>
    *
    * @param request The request object containing all of the parameters for the API call.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
@@ -217,44 +178,23 @@ public class BiddingStrategyServiceClient implements BackgroundResource {
     return getBiddingStrategyCallable().call(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Returns the requested bidding strategy in full detail.
    *
    * <p>Sample code:
-   *
-   * <pre><code>
-   * try (BiddingStrategyServiceClient biddingStrategyServiceClient = BiddingStrategyServiceClient.create()) {
-   *   BiddingStrategyName resourceName = BiddingStrategyName.of("[CUSTOMER_ID]", "[BIDDING_STRATEGY_ID]");
-   *   GetBiddingStrategyRequest request = GetBiddingStrategyRequest.newBuilder()
-   *     .setResourceName(resourceName.toString())
-   *     .build();
-   *   ApiFuture&lt;BiddingStrategy&gt; future = biddingStrategyServiceClient.getBiddingStrategyCallable().futureCall(request);
-   *   // Do something
-   *   BiddingStrategy response = future.get();
-   * }
-   * </code></pre>
    */
   public final UnaryCallable<GetBiddingStrategyRequest, BiddingStrategy>
       getBiddingStrategyCallable() {
     return stub.getBiddingStrategyCallable();
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Creates, updates, or removes bidding strategies. Operation statuses are returned.
    *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (BiddingStrategyServiceClient biddingStrategyServiceClient = BiddingStrategyServiceClient.create()) {
-   *   String customerId = "";
-   *   List&lt;BiddingStrategyOperation&gt; operations = new ArrayList&lt;&gt;();
-   *   MutateBiddingStrategiesResponse response = biddingStrategyServiceClient.mutateBiddingStrategies(customerId, operations);
-   * }
-   * </code></pre>
-   *
-   * @param customerId Required. The ID of the customer whose bidding strategies are being modified.
+   * @param customer_id Required. The ID of the customer whose bidding strategies are being
+   *     modified.
    * @param operations Required. The list of operations to perform on individual bidding strategies.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
@@ -268,23 +208,9 @@ public class BiddingStrategyServiceClient implements BackgroundResource {
     return mutateBiddingStrategies(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Creates, updates, or removes bidding strategies. Operation statuses are returned.
-   *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (BiddingStrategyServiceClient biddingStrategyServiceClient = BiddingStrategyServiceClient.create()) {
-   *   String customerId = "";
-   *   List&lt;BiddingStrategyOperation&gt; operations = new ArrayList&lt;&gt;();
-   *   MutateBiddingStrategiesRequest request = MutateBiddingStrategiesRequest.newBuilder()
-   *     .setCustomerId(customerId)
-   *     .addAllOperations(operations)
-   *     .build();
-   *   MutateBiddingStrategiesResponse response = biddingStrategyServiceClient.mutateBiddingStrategies(request);
-   * }
-   * </code></pre>
    *
    * @param request The request object containing all of the parameters for the API call.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
@@ -294,25 +220,11 @@ public class BiddingStrategyServiceClient implements BackgroundResource {
     return mutateBiddingStrategiesCallable().call(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Creates, updates, or removes bidding strategies. Operation statuses are returned.
    *
    * <p>Sample code:
-   *
-   * <pre><code>
-   * try (BiddingStrategyServiceClient biddingStrategyServiceClient = BiddingStrategyServiceClient.create()) {
-   *   String customerId = "";
-   *   List&lt;BiddingStrategyOperation&gt; operations = new ArrayList&lt;&gt;();
-   *   MutateBiddingStrategiesRequest request = MutateBiddingStrategiesRequest.newBuilder()
-   *     .setCustomerId(customerId)
-   *     .addAllOperations(operations)
-   *     .build();
-   *   ApiFuture&lt;MutateBiddingStrategiesResponse&gt; future = biddingStrategyServiceClient.mutateBiddingStrategiesCallable().futureCall(request);
-   *   // Do something
-   *   MutateBiddingStrategiesResponse response = future.get();
-   * }
-   * </code></pre>
    */
   public final UnaryCallable<MutateBiddingStrategiesRequest, MutateBiddingStrategiesResponse>
       mutateBiddingStrategiesCallable() {

@@ -5,7 +5,7 @@
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
- *     https://www.apache.org/licenses/LICENSE-2.0
+ *      https://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -13,6 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
 package com.google.ads.googleads.v6.services.stub;
 
 import static com.google.ads.googleads.v6.services.CampaignDraftServiceClient.ListCampaignDraftAsyncErrorsPagedResponse;
@@ -24,7 +25,6 @@ import com.google.ads.googleads.v6.services.ListCampaignDraftAsyncErrorsResponse
 import com.google.ads.googleads.v6.services.MutateCampaignDraftsRequest;
 import com.google.ads.googleads.v6.services.MutateCampaignDraftsResponse;
 import com.google.ads.googleads.v6.services.PromoteCampaignDraftRequest;
-import com.google.api.core.BetaApi;
 import com.google.api.gax.core.BackgroundResource;
 import com.google.api.gax.core.BackgroundResourceAggregation;
 import com.google.api.gax.grpc.GrpcCallSettings;
@@ -44,16 +44,14 @@ import java.util.Map;
 import java.util.concurrent.TimeUnit;
 import javax.annotation.Generated;
 
-// AUTO-GENERATED DOCUMENTATION AND CLASS
+// AUTO-GENERATED DOCUMENTATION AND CLASS.
 /**
- * gRPC stub implementation for Google Ads API.
+ * gRPC stub implementation for the CampaignDraftService service API.
  *
  * <p>This class is for advanced usage and reflects the underlying API directly.
  */
-@Generated("by gapic-generator")
-@BetaApi("A restructuring of stub classes is planned, so this may break in the future")
+@Generated("by gapic-generator-java")
 public class GrpcCampaignDraftServiceStub extends CampaignDraftServiceStub {
-
   private static final MethodDescriptor<GetCampaignDraftRequest, CampaignDraft>
       getCampaignDraftMethodDescriptor =
           MethodDescriptor.<GetCampaignDraftRequest, CampaignDraft>newBuilder()
@@ -64,6 +62,7 @@ public class GrpcCampaignDraftServiceStub extends CampaignDraftServiceStub {
                   ProtoUtils.marshaller(GetCampaignDraftRequest.getDefaultInstance()))
               .setResponseMarshaller(ProtoUtils.marshaller(CampaignDraft.getDefaultInstance()))
               .build();
+
   private static final MethodDescriptor<MutateCampaignDraftsRequest, MutateCampaignDraftsResponse>
       mutateCampaignDraftsMethodDescriptor =
           MethodDescriptor.<MutateCampaignDraftsRequest, MutateCampaignDraftsResponse>newBuilder()
@@ -75,6 +74,7 @@ public class GrpcCampaignDraftServiceStub extends CampaignDraftServiceStub {
               .setResponseMarshaller(
                   ProtoUtils.marshaller(MutateCampaignDraftsResponse.getDefaultInstance()))
               .build();
+
   private static final MethodDescriptor<PromoteCampaignDraftRequest, Operation>
       promoteCampaignDraftMethodDescriptor =
           MethodDescriptor.<PromoteCampaignDraftRequest, Operation>newBuilder()
@@ -85,6 +85,7 @@ public class GrpcCampaignDraftServiceStub extends CampaignDraftServiceStub {
                   ProtoUtils.marshaller(PromoteCampaignDraftRequest.getDefaultInstance()))
               .setResponseMarshaller(ProtoUtils.marshaller(Operation.getDefaultInstance()))
               .build();
+
   private static final MethodDescriptor<
           ListCampaignDraftAsyncErrorsRequest, ListCampaignDraftAsyncErrorsResponse>
       listCampaignDraftAsyncErrorsMethodDescriptor =
@@ -100,9 +101,6 @@ public class GrpcCampaignDraftServiceStub extends CampaignDraftServiceStub {
                   ProtoUtils.marshaller(ListCampaignDraftAsyncErrorsResponse.getDefaultInstance()))
               .build();
 
-  private final BackgroundResource backgroundResources;
-  private final GrpcOperationsStub operationsStub;
-
   private final UnaryCallable<GetCampaignDraftRequest, CampaignDraft> getCampaignDraftCallable;
   private final UnaryCallable<MutateCampaignDraftsRequest, MutateCampaignDraftsResponse>
       mutateCampaignDraftsCallable;
@@ -116,6 +114,8 @@ public class GrpcCampaignDraftServiceStub extends CampaignDraftServiceStub {
           ListCampaignDraftAsyncErrorsRequest, ListCampaignDraftAsyncErrorsPagedResponse>
       listCampaignDraftAsyncErrorsPagedCallable;
 
+  private final BackgroundResource backgroundResources;
+  private final GrpcOperationsStub operationsStub;
   private final GrpcStubCallableFactory callableFactory;
 
   public static final GrpcCampaignDraftServiceStub create(CampaignDraftServiceStubSettings settings)
@@ -135,21 +135,11 @@ public class GrpcCampaignDraftServiceStub extends CampaignDraftServiceStub {
         CampaignDraftServiceStubSettings.newBuilder().build(), clientContext, callableFactory);
   }
 
-  /**
-   * Constructs an instance of GrpcCampaignDraftServiceStub, using the given settings. This is
-   * protected so that it is easy to make a subclass, but otherwise, the static factory methods
-   * should be preferred.
-   */
   protected GrpcCampaignDraftServiceStub(
       CampaignDraftServiceStubSettings settings, ClientContext clientContext) throws IOException {
     this(settings, clientContext, new GrpcCampaignDraftServiceCallableFactory());
   }
 
-  /**
-   * Constructs an instance of GrpcCampaignDraftServiceStub, using the given settings. This is
-   * protected so that it is easy to make a subclass, but otherwise, the static factory methods
-   * should be preferred.
-   */
   protected GrpcCampaignDraftServiceStub(
       CampaignDraftServiceStubSettings settings,
       ClientContext clientContext,
@@ -234,7 +224,7 @@ public class GrpcCampaignDraftServiceStub extends CampaignDraftServiceStub {
             promoteCampaignDraftTransportSettings,
             settings.promoteCampaignDraftOperationSettings(),
             clientContext,
-            this.operationsStub);
+            operationsStub);
     this.listCampaignDraftAsyncErrorsCallable =
         callableFactory.createUnaryCallable(
             listCampaignDraftAsyncErrorsTransportSettings,
@@ -246,10 +236,10 @@ public class GrpcCampaignDraftServiceStub extends CampaignDraftServiceStub {
             settings.listCampaignDraftAsyncErrorsSettings(),
             clientContext);
 
-    backgroundResources = new BackgroundResourceAggregation(clientContext.getBackgroundResources());
+    this.backgroundResources =
+        new BackgroundResourceAggregation(clientContext.getBackgroundResources());
   }
 
-  @BetaApi("The surface for use by generated code is not stable yet and may change in the future.")
   public GrpcOperationsStub getOperationsStub() {
     return operationsStub;
   }
@@ -263,25 +253,24 @@ public class GrpcCampaignDraftServiceStub extends CampaignDraftServiceStub {
     return mutateCampaignDraftsCallable;
   }
 
-  @BetaApi("The surface for use by generated code is not stable yet and may change in the future.")
+  public UnaryCallable<PromoteCampaignDraftRequest, Operation> promoteCampaignDraftCallable() {
+    return promoteCampaignDraftCallable;
+  }
+
   public OperationCallable<PromoteCampaignDraftRequest, Empty, Empty>
       promoteCampaignDraftOperationCallable() {
     return promoteCampaignDraftOperationCallable;
   }
 
-  public UnaryCallable<PromoteCampaignDraftRequest, Operation> promoteCampaignDraftCallable() {
-    return promoteCampaignDraftCallable;
+  public UnaryCallable<ListCampaignDraftAsyncErrorsRequest, ListCampaignDraftAsyncErrorsResponse>
+      listCampaignDraftAsyncErrorsCallable() {
+    return listCampaignDraftAsyncErrorsCallable;
   }
 
   public UnaryCallable<
           ListCampaignDraftAsyncErrorsRequest, ListCampaignDraftAsyncErrorsPagedResponse>
       listCampaignDraftAsyncErrorsPagedCallable() {
     return listCampaignDraftAsyncErrorsPagedCallable;
-  }
-
-  public UnaryCallable<ListCampaignDraftAsyncErrorsRequest, ListCampaignDraftAsyncErrorsResponse>
-      listCampaignDraftAsyncErrorsCallable() {
-    return listCampaignDraftAsyncErrorsCallable;
   }
 
   @Override

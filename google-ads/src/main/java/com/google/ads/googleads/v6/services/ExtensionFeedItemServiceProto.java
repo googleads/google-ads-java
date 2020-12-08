@@ -82,7 +82,7 @@ public final class ExtensionFeedItemServiceProto {
       "teExtensionFeedItemResult\022\025\n\rresource_na" +
       "me\030\001 \001(\t\022Q\n\023extension_feed_item\030\002 \001(\01324." +
       "google.ads.googleads.v6.resources.Extens" +
-      "ionFeedItem2\224\004\n\030ExtensionFeedItemService" +
+      "ionFeedItem2\276\004\n\030ExtensionFeedItemService" +
       "\022\331\001\n\024GetExtensionFeedItem\022=.google.ads.g" +
       "oogleads.v6.services.GetExtensionFeedIte" +
       "mRequest\0324.google.ads.googleads.v6.resou" +
@@ -94,15 +94,16 @@ public final class ExtensionFeedItemServiceProto {
       "oogle.ads.googleads.v6.services.MutateEx" +
       "tensionFeedItemsResponse\"[\202\323\344\223\002<\"7/v6/cu" +
       "stomers/{customer_id=*}/extensionFeedIte" +
-      "ms:mutate:\001*\332A\026customer_id,operations\032\033\312" +
-      "A\030googleads.googleapis.comB\204\002\n$com.googl" +
-      "e.ads.googleads.v6.servicesB\035ExtensionFe" +
-      "edItemServiceProtoP\001ZHgoogle.golang.org/" +
-      "genproto/googleapis/ads/googleads/v6/ser" +
-      "vices;services\242\002\003GAA\252\002 Google.Ads.Google" +
-      "Ads.V6.Services\312\002 Google\\Ads\\GoogleAds\\V" +
-      "6\\Services\352\002$Google::Ads::GoogleAds::V6:" +
-      ":Servicesb\006proto3"
+      "ms:mutate:\001*\332A\026customer_id,operations\032E\312" +
+      "A\030googleads.googleapis.com\322A\'https://www" +
+      ".googleapis.com/auth/adwordsB\204\002\n$com.goo" +
+      "gle.ads.googleads.v6.servicesB\035Extension" +
+      "FeedItemServiceProtoP\001ZHgoogle.golang.or" +
+      "g/genproto/googleapis/ads/googleads/v6/s" +
+      "ervices;services\242\002\003GAA\252\002 Google.Ads.Goog" +
+      "leAds.V6.Services\312\002 Google\\Ads\\GoogleAds" +
+      "\\V6\\Services\352\002$Google::Ads::GoogleAds::V" +
+      "6::Servicesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -152,6 +153,7 @@ public final class ExtensionFeedItemServiceProto {
     registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);
     registry.add(com.google.api.AnnotationsProto.http);
     registry.add(com.google.api.ClientProto.methodSignature);
+    registry.add(com.google.api.ClientProto.oauthScopes);
     registry.add(com.google.api.ResourceProto.resourceReference);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);

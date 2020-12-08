@@ -5,7 +5,7 @@
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
- *     https://www.apache.org/licenses/LICENSE-2.0
+ *      https://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -13,9 +13,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
 package com.google.ads.googleads.v6.services;
 
 import com.google.ads.googleads.v6.resources.RemarketingAction;
+import com.google.ads.googleads.v6.resources.RemarketingActionName;
 import com.google.ads.googleads.v6.services.stub.RemarketingActionServiceStub;
 import com.google.ads.googleads.v6.services.stub.RemarketingActionServiceStubSettings;
 import com.google.api.core.BetaApi;
@@ -26,23 +28,14 @@ import java.util.List;
 import java.util.concurrent.TimeUnit;
 import javax.annotation.Generated;
 
-// AUTO-GENERATED DOCUMENTATION AND SERVICE
+// AUTO-GENERATED DOCUMENTATION AND CLASS.
 /**
  * Service Description: Service to manage remarketing actions.
  *
  * <p>This class provides the ability to make remote calls to the backing service through method
  * calls that map to API methods. Sample code to get started:
  *
- * <pre>
- * <code>
- * try (RemarketingActionServiceClient remarketingActionServiceClient = RemarketingActionServiceClient.create()) {
- *   RemarketingActionName resourceName = RemarketingActionName.of("[CUSTOMER_ID]", "[REMARKETING_ACTION_ID]");
- *   RemarketingAction response = remarketingActionServiceClient.getRemarketingAction(resourceName);
- * }
- * </code>
- * </pre>
- *
- * <p>Note: close() needs to be called on the remarketingActionServiceClient object to clean up
+ * <p>Note: close() needs to be called on the RemarketingActionServiceClient object to clean up
  * resources such as threads. In the example above, try-with-resources is used, which automatically
  * calls close().
  *
@@ -71,30 +64,28 @@ import javax.annotation.Generated;
  *
  * <p>To customize credentials:
  *
- * <pre>
- * <code>
+ * <pre>{@code
  * RemarketingActionServiceSettings remarketingActionServiceSettings =
  *     RemarketingActionServiceSettings.newBuilder()
  *         .setCredentialsProvider(FixedCredentialsProvider.create(myCredentials))
  *         .build();
  * RemarketingActionServiceClient remarketingActionServiceClient =
  *     RemarketingActionServiceClient.create(remarketingActionServiceSettings);
- * </code>
- * </pre>
+ * }</pre>
  *
- * To customize the endpoint:
+ * <p>To customize the endpoint:
  *
- * <pre>
- * <code>
+ * <pre>{@code
  * RemarketingActionServiceSettings remarketingActionServiceSettings =
  *     RemarketingActionServiceSettings.newBuilder().setEndpoint(myEndpoint).build();
  * RemarketingActionServiceClient remarketingActionServiceClient =
  *     RemarketingActionServiceClient.create(remarketingActionServiceSettings);
- * </code>
- * </pre>
+ * }</pre>
+ *
+ * <p>Please refer to the GitHub repository's samples for more quickstart code snippets.
  */
-@Generated("by gapic-generator")
 @BetaApi
+@Generated("by gapic-generator")
 public class RemarketingActionServiceClient implements BackgroundResource {
   private final RemarketingActionServiceSettings settings;
   private final RemarketingActionServiceStub stub;
@@ -116,7 +107,7 @@ public class RemarketingActionServiceClient implements BackgroundResource {
 
   /**
    * Constructs an instance of RemarketingActionServiceClient, using the given stub for making
-   * calls. This is for advanced usage - prefer to use RemarketingActionServiceSettings}.
+   * calls. This is for advanced usage - prefer using create(RemarketingActionServiceSettings).
    */
   @BetaApi("A restructuring of stub classes is planned, so this may break in the future")
   public static final RemarketingActionServiceClient create(RemarketingActionServiceStub stub) {
@@ -149,20 +140,11 @@ public class RemarketingActionServiceClient implements BackgroundResource {
     return stub;
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Returns the requested remarketing action in full detail.
    *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (RemarketingActionServiceClient remarketingActionServiceClient = RemarketingActionServiceClient.create()) {
-   *   RemarketingActionName resourceName = RemarketingActionName.of("[CUSTOMER_ID]", "[REMARKETING_ACTION_ID]");
-   *   RemarketingAction response = remarketingActionServiceClient.getRemarketingAction(resourceName);
-   * }
-   * </code></pre>
-   *
-   * @param resourceName Required. The resource name of the remarketing action to fetch.
+   * @param resource_name Required. The resource name of the remarketing action to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final RemarketingAction getRemarketingAction(RemarketingActionName resourceName) {
@@ -173,20 +155,11 @@ public class RemarketingActionServiceClient implements BackgroundResource {
     return getRemarketingAction(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Returns the requested remarketing action in full detail.
    *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (RemarketingActionServiceClient remarketingActionServiceClient = RemarketingActionServiceClient.create()) {
-   *   RemarketingActionName resourceName = RemarketingActionName.of("[CUSTOMER_ID]", "[REMARKETING_ACTION_ID]");
-   *   RemarketingAction response = remarketingActionServiceClient.getRemarketingAction(resourceName.toString());
-   * }
-   * </code></pre>
-   *
-   * @param resourceName Required. The resource name of the remarketing action to fetch.
+   * @param resource_name Required. The resource name of the remarketing action to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final RemarketingAction getRemarketingAction(String resourceName) {
@@ -195,21 +168,9 @@ public class RemarketingActionServiceClient implements BackgroundResource {
     return getRemarketingAction(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Returns the requested remarketing action in full detail.
-   *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (RemarketingActionServiceClient remarketingActionServiceClient = RemarketingActionServiceClient.create()) {
-   *   RemarketingActionName resourceName = RemarketingActionName.of("[CUSTOMER_ID]", "[REMARKETING_ACTION_ID]");
-   *   GetRemarketingActionRequest request = GetRemarketingActionRequest.newBuilder()
-   *     .setResourceName(resourceName.toString())
-   *     .build();
-   *   RemarketingAction response = remarketingActionServiceClient.getRemarketingAction(request);
-   * }
-   * </code></pre>
    *
    * @param request The request object containing all of the parameters for the API call.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
@@ -218,44 +179,22 @@ public class RemarketingActionServiceClient implements BackgroundResource {
     return getRemarketingActionCallable().call(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Returns the requested remarketing action in full detail.
    *
    * <p>Sample code:
-   *
-   * <pre><code>
-   * try (RemarketingActionServiceClient remarketingActionServiceClient = RemarketingActionServiceClient.create()) {
-   *   RemarketingActionName resourceName = RemarketingActionName.of("[CUSTOMER_ID]", "[REMARKETING_ACTION_ID]");
-   *   GetRemarketingActionRequest request = GetRemarketingActionRequest.newBuilder()
-   *     .setResourceName(resourceName.toString())
-   *     .build();
-   *   ApiFuture&lt;RemarketingAction&gt; future = remarketingActionServiceClient.getRemarketingActionCallable().futureCall(request);
-   *   // Do something
-   *   RemarketingAction response = future.get();
-   * }
-   * </code></pre>
    */
   public final UnaryCallable<GetRemarketingActionRequest, RemarketingAction>
       getRemarketingActionCallable() {
     return stub.getRemarketingActionCallable();
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Creates or updates remarketing actions. Operation statuses are returned.
    *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (RemarketingActionServiceClient remarketingActionServiceClient = RemarketingActionServiceClient.create()) {
-   *   String customerId = "";
-   *   List&lt;RemarketingActionOperation&gt; operations = new ArrayList&lt;&gt;();
-   *   MutateRemarketingActionsResponse response = remarketingActionServiceClient.mutateRemarketingActions(customerId, operations);
-   * }
-   * </code></pre>
-   *
-   * @param customerId Required. The ID of the customer whose remarketing actions are being
+   * @param customer_id Required. The ID of the customer whose remarketing actions are being
    *     modified.
    * @param operations Required. The list of operations to perform on individual remarketing
    *     actions.
@@ -271,23 +210,9 @@ public class RemarketingActionServiceClient implements BackgroundResource {
     return mutateRemarketingActions(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Creates or updates remarketing actions. Operation statuses are returned.
-   *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (RemarketingActionServiceClient remarketingActionServiceClient = RemarketingActionServiceClient.create()) {
-   *   String customerId = "";
-   *   List&lt;RemarketingActionOperation&gt; operations = new ArrayList&lt;&gt;();
-   *   MutateRemarketingActionsRequest request = MutateRemarketingActionsRequest.newBuilder()
-   *     .setCustomerId(customerId)
-   *     .addAllOperations(operations)
-   *     .build();
-   *   MutateRemarketingActionsResponse response = remarketingActionServiceClient.mutateRemarketingActions(request);
-   * }
-   * </code></pre>
    *
    * @param request The request object containing all of the parameters for the API call.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
@@ -297,25 +222,11 @@ public class RemarketingActionServiceClient implements BackgroundResource {
     return mutateRemarketingActionsCallable().call(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Creates or updates remarketing actions. Operation statuses are returned.
    *
    * <p>Sample code:
-   *
-   * <pre><code>
-   * try (RemarketingActionServiceClient remarketingActionServiceClient = RemarketingActionServiceClient.create()) {
-   *   String customerId = "";
-   *   List&lt;RemarketingActionOperation&gt; operations = new ArrayList&lt;&gt;();
-   *   MutateRemarketingActionsRequest request = MutateRemarketingActionsRequest.newBuilder()
-   *     .setCustomerId(customerId)
-   *     .addAllOperations(operations)
-   *     .build();
-   *   ApiFuture&lt;MutateRemarketingActionsResponse&gt; future = remarketingActionServiceClient.mutateRemarketingActionsCallable().futureCall(request);
-   *   // Do something
-   *   MutateRemarketingActionsResponse response = future.get();
-   * }
-   * </code></pre>
    */
   public final UnaryCallable<MutateRemarketingActionsRequest, MutateRemarketingActionsResponse>
       mutateRemarketingActionsCallable() {

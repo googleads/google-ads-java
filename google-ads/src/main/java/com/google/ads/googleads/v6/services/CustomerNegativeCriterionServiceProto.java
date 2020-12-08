@@ -74,7 +74,7 @@ public final class CustomerNegativeCriterionServiceProto {
       "le.ads.googleads.v6.services.MutateCusto" +
       "merNegativeCriteriaResult\"=\n$MutateCusto" +
       "merNegativeCriteriaResult\022\025\n\rresource_na" +
-      "me\030\001 \001(\t2\322\004\n CustomerNegativeCriterionSe" +
+      "me\030\001 \001(\t2\374\004\n CustomerNegativeCriterionSe" +
       "rvice\022\367\001\n\034GetCustomerNegativeCriterion\022E" +
       ".google.ads.googleads.v6.services.GetCus" +
       "tomerNegativeCriterionRequest\032<.google.a" +
@@ -88,15 +88,16 @@ public final class CustomerNegativeCriterionServiceProto {
       "utateCustomerNegativeCriteriaResponse\"a\202" +
       "\323\344\223\002B\"=/v6/customers/{customer_id=*}/cus" +
       "tomerNegativeCriteria:mutate:\001*\332A\026custom" +
-      "er_id,operations\032\033\312A\030googleads.googleapi" +
-      "s.comB\214\002\n$com.google.ads.googleads.v6.se" +
-      "rvicesB%CustomerNegativeCriterionService" +
-      "ProtoP\001ZHgoogle.golang.org/genproto/goog" +
-      "leapis/ads/googleads/v6/services;service" +
-      "s\242\002\003GAA\252\002 Google.Ads.GoogleAds.V6.Servic" +
-      "es\312\002 Google\\Ads\\GoogleAds\\V6\\Services\352\002$" +
-      "Google::Ads::GoogleAds::V6::Servicesb\006pr" +
-      "oto3"
+      "er_id,operations\032E\312A\030googleads.googleapi" +
+      "s.com\322A\'https://www.googleapis.com/auth/" +
+      "adwordsB\214\002\n$com.google.ads.googleads.v6." +
+      "servicesB%CustomerNegativeCriterionServi" +
+      "ceProtoP\001ZHgoogle.golang.org/genproto/go" +
+      "ogleapis/ads/googleads/v6/services;servi" +
+      "ces\242\002\003GAA\252\002 Google.Ads.GoogleAds.V6.Serv" +
+      "ices\312\002 Google\\Ads\\GoogleAds\\V6\\Services\352" +
+      "\002$Google::Ads::GoogleAds::V6::Servicesb\006" +
+      "proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -144,6 +145,7 @@ public final class CustomerNegativeCriterionServiceProto {
     registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);
     registry.add(com.google.api.AnnotationsProto.http);
     registry.add(com.google.api.ClientProto.methodSignature);
+    registry.add(com.google.api.ClientProto.oauthScopes);
     registry.add(com.google.api.ResourceProto.resourceReference);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);

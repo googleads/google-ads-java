@@ -39,22 +39,23 @@ public final class ProductBiddingCategoryConstantServiceProto {
       "tBiddingCategoryConstantRequest\022V\n\rresou" +
       "rce_name\030\001 \001(\tB?\340A\002\372A9\n7googleads.google" +
       "apis.com/ProductBiddingCategoryConstant2" +
-      "\310\002\n%ProductBiddingCategoryConstantServic" +
+      "\362\002\n%ProductBiddingCategoryConstantServic" +
       "e\022\201\002\n!GetProductBiddingCategoryConstant\022" +
       "J.google.ads.googleads.v6.services.GetPr" +
       "oductBiddingCategoryConstantRequest\032A.go" +
       "ogle.ads.googleads.v6.resources.ProductB" +
       "iddingCategoryConstant\"M\202\323\344\223\0027\0225/v6/{res" +
       "ource_name=productBiddingCategoryConstan" +
-      "ts/*}\332A\rresource_name\032\033\312A\030googleads.goog" +
-      "leapis.comB\221\002\n$com.google.ads.googleads." +
-      "v6.servicesB*ProductBiddingCategoryConst" +
-      "antServiceProtoP\001ZHgoogle.golang.org/gen" +
-      "proto/googleapis/ads/googleads/v6/servic" +
-      "es;services\242\002\003GAA\252\002 Google.Ads.GoogleAds" +
-      ".V6.Services\312\002 Google\\Ads\\GoogleAds\\V6\\S" +
-      "ervices\352\002$Google::Ads::GoogleAds::V6::Se" +
-      "rvicesb\006proto3"
+      "ts/*}\332A\rresource_name\032E\312A\030googleads.goog" +
+      "leapis.com\322A\'https://www.googleapis.com/" +
+      "auth/adwordsB\221\002\n$com.google.ads.googlead" +
+      "s.v6.servicesB*ProductBiddingCategoryCon" +
+      "stantServiceProtoP\001ZHgoogle.golang.org/g" +
+      "enproto/googleapis/ads/googleads/v6/serv" +
+      "ices;services\242\002\003GAA\252\002 Google.Ads.GoogleA" +
+      "ds.V6.Services\312\002 Google\\Ads\\GoogleAds\\V6" +
+      "\\Services\352\002$Google::Ads::GoogleAds::V6::" +
+      "Servicesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -77,6 +78,7 @@ public final class ProductBiddingCategoryConstantServiceProto {
     registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);
     registry.add(com.google.api.AnnotationsProto.http);
     registry.add(com.google.api.ClientProto.methodSignature);
+    registry.add(com.google.api.ClientProto.oauthScopes);
     registry.add(com.google.api.ResourceProto.resourceReference);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);

@@ -36,20 +36,21 @@ public final class TopicViewServiceProto {
       "\032\037google/api/field_behavior.proto\032\031googl" +
       "e/api/resource.proto\"X\n\023GetTopicViewRequ" +
       "est\022A\n\rresource_name\030\001 \001(\tB*\340A\002\372A$\n\"goog" +
-      "leads.googleapis.com/TopicView2\353\001\n\020Topic" +
+      "leads.googleapis.com/TopicView2\225\002\n\020Topic" +
       "ViewService\022\271\001\n\014GetTopicView\0225.google.ad" +
       "s.googleads.v6.services.GetTopicViewRequ" +
       "est\032,.google.ads.googleads.v6.resources." +
       "TopicView\"D\202\323\344\223\002.\022,/v6/{resource_name=cu" +
       "stomers/*/topicViews/*}\332A\rresource_name\032" +
-      "\033\312A\030googleads.googleapis.comB\374\001\n$com.goo" +
-      "gle.ads.googleads.v6.servicesB\025TopicView" +
-      "ServiceProtoP\001ZHgoogle.golang.org/genpro" +
-      "to/googleapis/ads/googleads/v6/services;" +
-      "services\242\002\003GAA\252\002 Google.Ads.GoogleAds.V6" +
-      ".Services\312\002 Google\\Ads\\GoogleAds\\V6\\Serv" +
-      "ices\352\002$Google::Ads::GoogleAds::V6::Servi" +
-      "cesb\006proto3"
+      "E\312A\030googleads.googleapis.com\322A\'https://w" +
+      "ww.googleapis.com/auth/adwordsB\374\001\n$com.g" +
+      "oogle.ads.googleads.v6.servicesB\025TopicVi" +
+      "ewServiceProtoP\001ZHgoogle.golang.org/genp" +
+      "roto/googleapis/ads/googleads/v6/service" +
+      "s;services\242\002\003GAA\252\002 Google.Ads.GoogleAds." +
+      "V6.Services\312\002 Google\\Ads\\GoogleAds\\V6\\Se" +
+      "rvices\352\002$Google::Ads::GoogleAds::V6::Ser" +
+      "vicesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -72,6 +73,7 @@ public final class TopicViewServiceProto {
     registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);
     registry.add(com.google.api.AnnotationsProto.http);
     registry.add(com.google.api.ClientProto.methodSignature);
+    registry.add(com.google.api.ClientProto.oauthScopes);
     registry.add(com.google.api.ResourceProto.resourceReference);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);

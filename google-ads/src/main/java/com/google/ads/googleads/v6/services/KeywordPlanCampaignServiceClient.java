@@ -5,7 +5,7 @@
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
- *     https://www.apache.org/licenses/LICENSE-2.0
+ *      https://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -13,9 +13,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
 package com.google.ads.googleads.v6.services;
 
 import com.google.ads.googleads.v6.resources.KeywordPlanCampaign;
+import com.google.ads.googleads.v6.resources.KeywordPlanCampaignName;
 import com.google.ads.googleads.v6.services.stub.KeywordPlanCampaignServiceStub;
 import com.google.ads.googleads.v6.services.stub.KeywordPlanCampaignServiceStubSettings;
 import com.google.api.core.BetaApi;
@@ -26,23 +28,14 @@ import java.util.List;
 import java.util.concurrent.TimeUnit;
 import javax.annotation.Generated;
 
-// AUTO-GENERATED DOCUMENTATION AND SERVICE
+// AUTO-GENERATED DOCUMENTATION AND CLASS.
 /**
  * Service Description: Service to manage Keyword Plan campaigns.
  *
  * <p>This class provides the ability to make remote calls to the backing service through method
  * calls that map to API methods. Sample code to get started:
  *
- * <pre>
- * <code>
- * try (KeywordPlanCampaignServiceClient keywordPlanCampaignServiceClient = KeywordPlanCampaignServiceClient.create()) {
- *   KeywordPlanCampaignName resourceName = KeywordPlanCampaignName.of("[CUSTOMER_ID]", "[KEYWORD_PLAN_CAMPAIGN_ID]");
- *   KeywordPlanCampaign response = keywordPlanCampaignServiceClient.getKeywordPlanCampaign(resourceName);
- * }
- * </code>
- * </pre>
- *
- * <p>Note: close() needs to be called on the keywordPlanCampaignServiceClient object to clean up
+ * <p>Note: close() needs to be called on the KeywordPlanCampaignServiceClient object to clean up
  * resources such as threads. In the example above, try-with-resources is used, which automatically
  * calls close().
  *
@@ -71,30 +64,28 @@ import javax.annotation.Generated;
  *
  * <p>To customize credentials:
  *
- * <pre>
- * <code>
+ * <pre>{@code
  * KeywordPlanCampaignServiceSettings keywordPlanCampaignServiceSettings =
  *     KeywordPlanCampaignServiceSettings.newBuilder()
  *         .setCredentialsProvider(FixedCredentialsProvider.create(myCredentials))
  *         .build();
  * KeywordPlanCampaignServiceClient keywordPlanCampaignServiceClient =
  *     KeywordPlanCampaignServiceClient.create(keywordPlanCampaignServiceSettings);
- * </code>
- * </pre>
+ * }</pre>
  *
- * To customize the endpoint:
+ * <p>To customize the endpoint:
  *
- * <pre>
- * <code>
+ * <pre>{@code
  * KeywordPlanCampaignServiceSettings keywordPlanCampaignServiceSettings =
  *     KeywordPlanCampaignServiceSettings.newBuilder().setEndpoint(myEndpoint).build();
  * KeywordPlanCampaignServiceClient keywordPlanCampaignServiceClient =
  *     KeywordPlanCampaignServiceClient.create(keywordPlanCampaignServiceSettings);
- * </code>
- * </pre>
+ * }</pre>
+ *
+ * <p>Please refer to the GitHub repository's samples for more quickstart code snippets.
  */
-@Generated("by gapic-generator")
 @BetaApi
+@Generated("by gapic-generator")
 public class KeywordPlanCampaignServiceClient implements BackgroundResource {
   private final KeywordPlanCampaignServiceSettings settings;
   private final KeywordPlanCampaignServiceStub stub;
@@ -116,7 +107,7 @@ public class KeywordPlanCampaignServiceClient implements BackgroundResource {
 
   /**
    * Constructs an instance of KeywordPlanCampaignServiceClient, using the given stub for making
-   * calls. This is for advanced usage - prefer to use KeywordPlanCampaignServiceSettings}.
+   * calls. This is for advanced usage - prefer using create(KeywordPlanCampaignServiceSettings).
    */
   @BetaApi("A restructuring of stub classes is planned, so this may break in the future")
   public static final KeywordPlanCampaignServiceClient create(KeywordPlanCampaignServiceStub stub) {
@@ -149,20 +140,11 @@ public class KeywordPlanCampaignServiceClient implements BackgroundResource {
     return stub;
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Returns the requested Keyword Plan campaign in full detail.
    *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (KeywordPlanCampaignServiceClient keywordPlanCampaignServiceClient = KeywordPlanCampaignServiceClient.create()) {
-   *   KeywordPlanCampaignName resourceName = KeywordPlanCampaignName.of("[CUSTOMER_ID]", "[KEYWORD_PLAN_CAMPAIGN_ID]");
-   *   KeywordPlanCampaign response = keywordPlanCampaignServiceClient.getKeywordPlanCampaign(resourceName);
-   * }
-   * </code></pre>
-   *
-   * @param resourceName Required. The resource name of the Keyword Plan campaign to fetch.
+   * @param resource_name Required. The resource name of the Keyword Plan campaign to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final KeywordPlanCampaign getKeywordPlanCampaign(KeywordPlanCampaignName resourceName) {
@@ -173,20 +155,11 @@ public class KeywordPlanCampaignServiceClient implements BackgroundResource {
     return getKeywordPlanCampaign(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Returns the requested Keyword Plan campaign in full detail.
    *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (KeywordPlanCampaignServiceClient keywordPlanCampaignServiceClient = KeywordPlanCampaignServiceClient.create()) {
-   *   KeywordPlanCampaignName resourceName = KeywordPlanCampaignName.of("[CUSTOMER_ID]", "[KEYWORD_PLAN_CAMPAIGN_ID]");
-   *   KeywordPlanCampaign response = keywordPlanCampaignServiceClient.getKeywordPlanCampaign(resourceName.toString());
-   * }
-   * </code></pre>
-   *
-   * @param resourceName Required. The resource name of the Keyword Plan campaign to fetch.
+   * @param resource_name Required. The resource name of the Keyword Plan campaign to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final KeywordPlanCampaign getKeywordPlanCampaign(String resourceName) {
@@ -195,21 +168,9 @@ public class KeywordPlanCampaignServiceClient implements BackgroundResource {
     return getKeywordPlanCampaign(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Returns the requested Keyword Plan campaign in full detail.
-   *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (KeywordPlanCampaignServiceClient keywordPlanCampaignServiceClient = KeywordPlanCampaignServiceClient.create()) {
-   *   KeywordPlanCampaignName resourceName = KeywordPlanCampaignName.of("[CUSTOMER_ID]", "[KEYWORD_PLAN_CAMPAIGN_ID]");
-   *   GetKeywordPlanCampaignRequest request = GetKeywordPlanCampaignRequest.newBuilder()
-   *     .setResourceName(resourceName.toString())
-   *     .build();
-   *   KeywordPlanCampaign response = keywordPlanCampaignServiceClient.getKeywordPlanCampaign(request);
-   * }
-   * </code></pre>
    *
    * @param request The request object containing all of the parameters for the API call.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
@@ -218,44 +179,22 @@ public class KeywordPlanCampaignServiceClient implements BackgroundResource {
     return getKeywordPlanCampaignCallable().call(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Returns the requested Keyword Plan campaign in full detail.
    *
    * <p>Sample code:
-   *
-   * <pre><code>
-   * try (KeywordPlanCampaignServiceClient keywordPlanCampaignServiceClient = KeywordPlanCampaignServiceClient.create()) {
-   *   KeywordPlanCampaignName resourceName = KeywordPlanCampaignName.of("[CUSTOMER_ID]", "[KEYWORD_PLAN_CAMPAIGN_ID]");
-   *   GetKeywordPlanCampaignRequest request = GetKeywordPlanCampaignRequest.newBuilder()
-   *     .setResourceName(resourceName.toString())
-   *     .build();
-   *   ApiFuture&lt;KeywordPlanCampaign&gt; future = keywordPlanCampaignServiceClient.getKeywordPlanCampaignCallable().futureCall(request);
-   *   // Do something
-   *   KeywordPlanCampaign response = future.get();
-   * }
-   * </code></pre>
    */
   public final UnaryCallable<GetKeywordPlanCampaignRequest, KeywordPlanCampaign>
       getKeywordPlanCampaignCallable() {
     return stub.getKeywordPlanCampaignCallable();
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Creates, updates, or removes Keyword Plan campaigns. Operation statuses are returned.
    *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (KeywordPlanCampaignServiceClient keywordPlanCampaignServiceClient = KeywordPlanCampaignServiceClient.create()) {
-   *   String customerId = "";
-   *   List&lt;KeywordPlanCampaignOperation&gt; operations = new ArrayList&lt;&gt;();
-   *   MutateKeywordPlanCampaignsResponse response = keywordPlanCampaignServiceClient.mutateKeywordPlanCampaigns(customerId, operations);
-   * }
-   * </code></pre>
-   *
-   * @param customerId Required. The ID of the customer whose Keyword Plan campaigns are being
+   * @param customer_id Required. The ID of the customer whose Keyword Plan campaigns are being
    *     modified.
    * @param operations Required. The list of operations to perform on individual Keyword Plan
    *     campaigns.
@@ -271,23 +210,9 @@ public class KeywordPlanCampaignServiceClient implements BackgroundResource {
     return mutateKeywordPlanCampaigns(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Creates, updates, or removes Keyword Plan campaigns. Operation statuses are returned.
-   *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (KeywordPlanCampaignServiceClient keywordPlanCampaignServiceClient = KeywordPlanCampaignServiceClient.create()) {
-   *   String customerId = "";
-   *   List&lt;KeywordPlanCampaignOperation&gt; operations = new ArrayList&lt;&gt;();
-   *   MutateKeywordPlanCampaignsRequest request = MutateKeywordPlanCampaignsRequest.newBuilder()
-   *     .setCustomerId(customerId)
-   *     .addAllOperations(operations)
-   *     .build();
-   *   MutateKeywordPlanCampaignsResponse response = keywordPlanCampaignServiceClient.mutateKeywordPlanCampaigns(request);
-   * }
-   * </code></pre>
    *
    * @param request The request object containing all of the parameters for the API call.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
@@ -297,25 +222,11 @@ public class KeywordPlanCampaignServiceClient implements BackgroundResource {
     return mutateKeywordPlanCampaignsCallable().call(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Creates, updates, or removes Keyword Plan campaigns. Operation statuses are returned.
    *
    * <p>Sample code:
-   *
-   * <pre><code>
-   * try (KeywordPlanCampaignServiceClient keywordPlanCampaignServiceClient = KeywordPlanCampaignServiceClient.create()) {
-   *   String customerId = "";
-   *   List&lt;KeywordPlanCampaignOperation&gt; operations = new ArrayList&lt;&gt;();
-   *   MutateKeywordPlanCampaignsRequest request = MutateKeywordPlanCampaignsRequest.newBuilder()
-   *     .setCustomerId(customerId)
-   *     .addAllOperations(operations)
-   *     .build();
-   *   ApiFuture&lt;MutateKeywordPlanCampaignsResponse&gt; future = keywordPlanCampaignServiceClient.mutateKeywordPlanCampaignsCallable().futureCall(request);
-   *   // Do something
-   *   MutateKeywordPlanCampaignsResponse response = future.get();
-   * }
-   * </code></pre>
    */
   public final UnaryCallable<MutateKeywordPlanCampaignsRequest, MutateKeywordPlanCampaignsResponse>
       mutateKeywordPlanCampaignsCallable() {

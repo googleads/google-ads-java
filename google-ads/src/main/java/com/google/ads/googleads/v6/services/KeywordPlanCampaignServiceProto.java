@@ -77,7 +77,7 @@ public final class KeywordPlanCampaignServiceProto {
       "gle.rpc.Status\022R\n\007results\030\002 \003(\0132A.google" +
       ".ads.googleads.v6.services.MutateKeyword" +
       "PlanCampaignResult\"8\n\037MutateKeywordPlanC" +
-      "ampaignResult\022\025\n\rresource_name\030\001 \001(\t2\246\004\n" +
+      "ampaignResult\022\025\n\rresource_name\030\001 \001(\t2\320\004\n" +
       "\032KeywordPlanCampaignService\022\341\001\n\026GetKeywo" +
       "rdPlanCampaign\022?.google.ads.googleads.v6" +
       ".services.GetKeywordPlanCampaignRequest\032" +
@@ -91,14 +91,15 @@ public final class KeywordPlanCampaignServiceProto {
       "wordPlanCampaignsResponse\"]\202\323\344\223\002>\"9/v6/c" +
       "ustomers/{customer_id=*}/keywordPlanCamp" +
       "aigns:mutate:\001*\332A\026customer_id,operations" +
-      "\032\033\312A\030googleads.googleapis.comB\206\002\n$com.go" +
-      "ogle.ads.googleads.v6.servicesB\037KeywordP" +
-      "lanCampaignServiceProtoP\001ZHgoogle.golang" +
-      ".org/genproto/googleapis/ads/googleads/v" +
-      "6/services;services\242\002\003GAA\252\002 Google.Ads.G" +
-      "oogleAds.V6.Services\312\002 Google\\Ads\\Google" +
-      "Ads\\V6\\Services\352\002$Google::Ads::GoogleAds" +
-      "::V6::Servicesb\006proto3"
+      "\032E\312A\030googleads.googleapis.com\322A\'https://" +
+      "www.googleapis.com/auth/adwordsB\206\002\n$com." +
+      "google.ads.googleads.v6.servicesB\037Keywor" +
+      "dPlanCampaignServiceProtoP\001ZHgoogle.gola" +
+      "ng.org/genproto/googleapis/ads/googleads" +
+      "/v6/services;services\242\002\003GAA\252\002 Google.Ads" +
+      ".GoogleAds.V6.Services\312\002 Google\\Ads\\Goog" +
+      "leAds\\V6\\Services\352\002$Google::Ads::GoogleA" +
+      "ds::V6::Servicesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -147,6 +148,7 @@ public final class KeywordPlanCampaignServiceProto {
     registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);
     registry.add(com.google.api.AnnotationsProto.http);
     registry.add(com.google.api.ClientProto.methodSignature);
+    registry.add(com.google.api.ClientProto.oauthScopes);
     registry.add(com.google.api.ResourceProto.resourceReference);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);

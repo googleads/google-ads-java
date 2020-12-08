@@ -5,7 +5,7 @@
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
- *     https://www.apache.org/licenses/LICENSE-2.0
+ *      https://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -13,9 +13,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
 package com.google.ads.googleads.v6.services;
 
 import com.google.ads.googleads.v6.resources.AdGroupCriterionLabel;
+import com.google.ads.googleads.v6.resources.AdGroupCriterionLabelName;
 import com.google.ads.googleads.v6.services.stub.AdGroupCriterionLabelServiceStub;
 import com.google.ads.googleads.v6.services.stub.AdGroupCriterionLabelServiceStubSettings;
 import com.google.api.core.BetaApi;
@@ -26,23 +28,14 @@ import java.util.List;
 import java.util.concurrent.TimeUnit;
 import javax.annotation.Generated;
 
-// AUTO-GENERATED DOCUMENTATION AND SERVICE
+// AUTO-GENERATED DOCUMENTATION AND CLASS.
 /**
  * Service Description: Service to manage labels on ad group criteria.
  *
  * <p>This class provides the ability to make remote calls to the backing service through method
  * calls that map to API methods. Sample code to get started:
  *
- * <pre>
- * <code>
- * try (AdGroupCriterionLabelServiceClient adGroupCriterionLabelServiceClient = AdGroupCriterionLabelServiceClient.create()) {
- *   AdGroupCriterionLabelName resourceName = AdGroupCriterionLabelName.of("[CUSTOMER_ID]", "[AD_GROUP_ID]", "[CRITERION_ID]", "[LABEL_ID]");
- *   AdGroupCriterionLabel response = adGroupCriterionLabelServiceClient.getAdGroupCriterionLabel(resourceName);
- * }
- * </code>
- * </pre>
- *
- * <p>Note: close() needs to be called on the adGroupCriterionLabelServiceClient object to clean up
+ * <p>Note: close() needs to be called on the AdGroupCriterionLabelServiceClient object to clean up
  * resources such as threads. In the example above, try-with-resources is used, which automatically
  * calls close().
  *
@@ -71,30 +64,28 @@ import javax.annotation.Generated;
  *
  * <p>To customize credentials:
  *
- * <pre>
- * <code>
+ * <pre>{@code
  * AdGroupCriterionLabelServiceSettings adGroupCriterionLabelServiceSettings =
  *     AdGroupCriterionLabelServiceSettings.newBuilder()
  *         .setCredentialsProvider(FixedCredentialsProvider.create(myCredentials))
  *         .build();
  * AdGroupCriterionLabelServiceClient adGroupCriterionLabelServiceClient =
  *     AdGroupCriterionLabelServiceClient.create(adGroupCriterionLabelServiceSettings);
- * </code>
- * </pre>
+ * }</pre>
  *
- * To customize the endpoint:
+ * <p>To customize the endpoint:
  *
- * <pre>
- * <code>
+ * <pre>{@code
  * AdGroupCriterionLabelServiceSettings adGroupCriterionLabelServiceSettings =
  *     AdGroupCriterionLabelServiceSettings.newBuilder().setEndpoint(myEndpoint).build();
  * AdGroupCriterionLabelServiceClient adGroupCriterionLabelServiceClient =
  *     AdGroupCriterionLabelServiceClient.create(adGroupCriterionLabelServiceSettings);
- * </code>
- * </pre>
+ * }</pre>
+ *
+ * <p>Please refer to the GitHub repository's samples for more quickstart code snippets.
  */
-@Generated("by gapic-generator")
 @BetaApi
+@Generated("by gapic-generator")
 public class AdGroupCriterionLabelServiceClient implements BackgroundResource {
   private final AdGroupCriterionLabelServiceSettings settings;
   private final AdGroupCriterionLabelServiceStub stub;
@@ -116,7 +107,7 @@ public class AdGroupCriterionLabelServiceClient implements BackgroundResource {
 
   /**
    * Constructs an instance of AdGroupCriterionLabelServiceClient, using the given stub for making
-   * calls. This is for advanced usage - prefer to use AdGroupCriterionLabelServiceSettings}.
+   * calls. This is for advanced usage - prefer using create(AdGroupCriterionLabelServiceSettings).
    */
   @BetaApi("A restructuring of stub classes is planned, so this may break in the future")
   public static final AdGroupCriterionLabelServiceClient create(
@@ -151,20 +142,11 @@ public class AdGroupCriterionLabelServiceClient implements BackgroundResource {
     return stub;
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Returns the requested ad group criterion label in full detail.
    *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (AdGroupCriterionLabelServiceClient adGroupCriterionLabelServiceClient = AdGroupCriterionLabelServiceClient.create()) {
-   *   AdGroupCriterionLabelName resourceName = AdGroupCriterionLabelName.of("[CUSTOMER_ID]", "[AD_GROUP_ID]", "[CRITERION_ID]", "[LABEL_ID]");
-   *   AdGroupCriterionLabel response = adGroupCriterionLabelServiceClient.getAdGroupCriterionLabel(resourceName);
-   * }
-   * </code></pre>
-   *
-   * @param resourceName Required. The resource name of the ad group criterion label to fetch.
+   * @param resource_name Required. The resource name of the ad group criterion label to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final AdGroupCriterionLabel getAdGroupCriterionLabel(
@@ -176,20 +158,11 @@ public class AdGroupCriterionLabelServiceClient implements BackgroundResource {
     return getAdGroupCriterionLabel(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Returns the requested ad group criterion label in full detail.
    *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (AdGroupCriterionLabelServiceClient adGroupCriterionLabelServiceClient = AdGroupCriterionLabelServiceClient.create()) {
-   *   AdGroupCriterionLabelName resourceName = AdGroupCriterionLabelName.of("[CUSTOMER_ID]", "[AD_GROUP_ID]", "[CRITERION_ID]", "[LABEL_ID]");
-   *   AdGroupCriterionLabel response = adGroupCriterionLabelServiceClient.getAdGroupCriterionLabel(resourceName.toString());
-   * }
-   * </code></pre>
-   *
-   * @param resourceName Required. The resource name of the ad group criterion label to fetch.
+   * @param resource_name Required. The resource name of the ad group criterion label to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final AdGroupCriterionLabel getAdGroupCriterionLabel(String resourceName) {
@@ -198,21 +171,9 @@ public class AdGroupCriterionLabelServiceClient implements BackgroundResource {
     return getAdGroupCriterionLabel(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Returns the requested ad group criterion label in full detail.
-   *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (AdGroupCriterionLabelServiceClient adGroupCriterionLabelServiceClient = AdGroupCriterionLabelServiceClient.create()) {
-   *   AdGroupCriterionLabelName resourceName = AdGroupCriterionLabelName.of("[CUSTOMER_ID]", "[AD_GROUP_ID]", "[CRITERION_ID]", "[LABEL_ID]");
-   *   GetAdGroupCriterionLabelRequest request = GetAdGroupCriterionLabelRequest.newBuilder()
-   *     .setResourceName(resourceName.toString())
-   *     .build();
-   *   AdGroupCriterionLabel response = adGroupCriterionLabelServiceClient.getAdGroupCriterionLabel(request);
-   * }
-   * </code></pre>
    *
    * @param request The request object containing all of the parameters for the API call.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
@@ -222,44 +183,22 @@ public class AdGroupCriterionLabelServiceClient implements BackgroundResource {
     return getAdGroupCriterionLabelCallable().call(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Returns the requested ad group criterion label in full detail.
    *
    * <p>Sample code:
-   *
-   * <pre><code>
-   * try (AdGroupCriterionLabelServiceClient adGroupCriterionLabelServiceClient = AdGroupCriterionLabelServiceClient.create()) {
-   *   AdGroupCriterionLabelName resourceName = AdGroupCriterionLabelName.of("[CUSTOMER_ID]", "[AD_GROUP_ID]", "[CRITERION_ID]", "[LABEL_ID]");
-   *   GetAdGroupCriterionLabelRequest request = GetAdGroupCriterionLabelRequest.newBuilder()
-   *     .setResourceName(resourceName.toString())
-   *     .build();
-   *   ApiFuture&lt;AdGroupCriterionLabel&gt; future = adGroupCriterionLabelServiceClient.getAdGroupCriterionLabelCallable().futureCall(request);
-   *   // Do something
-   *   AdGroupCriterionLabel response = future.get();
-   * }
-   * </code></pre>
    */
   public final UnaryCallable<GetAdGroupCriterionLabelRequest, AdGroupCriterionLabel>
       getAdGroupCriterionLabelCallable() {
     return stub.getAdGroupCriterionLabelCallable();
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Creates and removes ad group criterion labels. Operation statuses are returned.
    *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (AdGroupCriterionLabelServiceClient adGroupCriterionLabelServiceClient = AdGroupCriterionLabelServiceClient.create()) {
-   *   String customerId = "";
-   *   List&lt;AdGroupCriterionLabelOperation&gt; operations = new ArrayList&lt;&gt;();
-   *   MutateAdGroupCriterionLabelsResponse response = adGroupCriterionLabelServiceClient.mutateAdGroupCriterionLabels(customerId, operations);
-   * }
-   * </code></pre>
-   *
-   * @param customerId Required. ID of the customer whose ad group criterion labels are being
+   * @param customer_id Required. ID of the customer whose ad group criterion labels are being
    *     modified.
    * @param operations Required. The list of operations to perform on ad group criterion labels.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
@@ -274,23 +213,9 @@ public class AdGroupCriterionLabelServiceClient implements BackgroundResource {
     return mutateAdGroupCriterionLabels(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Creates and removes ad group criterion labels. Operation statuses are returned.
-   *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (AdGroupCriterionLabelServiceClient adGroupCriterionLabelServiceClient = AdGroupCriterionLabelServiceClient.create()) {
-   *   String customerId = "";
-   *   List&lt;AdGroupCriterionLabelOperation&gt; operations = new ArrayList&lt;&gt;();
-   *   MutateAdGroupCriterionLabelsRequest request = MutateAdGroupCriterionLabelsRequest.newBuilder()
-   *     .setCustomerId(customerId)
-   *     .addAllOperations(operations)
-   *     .build();
-   *   MutateAdGroupCriterionLabelsResponse response = adGroupCriterionLabelServiceClient.mutateAdGroupCriterionLabels(request);
-   * }
-   * </code></pre>
    *
    * @param request The request object containing all of the parameters for the API call.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
@@ -300,25 +225,11 @@ public class AdGroupCriterionLabelServiceClient implements BackgroundResource {
     return mutateAdGroupCriterionLabelsCallable().call(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Creates and removes ad group criterion labels. Operation statuses are returned.
    *
    * <p>Sample code:
-   *
-   * <pre><code>
-   * try (AdGroupCriterionLabelServiceClient adGroupCriterionLabelServiceClient = AdGroupCriterionLabelServiceClient.create()) {
-   *   String customerId = "";
-   *   List&lt;AdGroupCriterionLabelOperation&gt; operations = new ArrayList&lt;&gt;();
-   *   MutateAdGroupCriterionLabelsRequest request = MutateAdGroupCriterionLabelsRequest.newBuilder()
-   *     .setCustomerId(customerId)
-   *     .addAllOperations(operations)
-   *     .build();
-   *   ApiFuture&lt;MutateAdGroupCriterionLabelsResponse&gt; future = adGroupCriterionLabelServiceClient.mutateAdGroupCriterionLabelsCallable().futureCall(request);
-   *   // Do something
-   *   MutateAdGroupCriterionLabelsResponse response = future.get();
-   * }
-   * </code></pre>
    */
   public final UnaryCallable<
           MutateAdGroupCriterionLabelsRequest, MutateAdGroupCriterionLabelsResponse>

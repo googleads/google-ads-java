@@ -5,7 +5,7 @@
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
- *     https://www.apache.org/licenses/LICENSE-2.0
+ *      https://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -13,9 +13,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
 package com.google.ads.googleads.v6.services;
 
 import com.google.ads.googleads.v6.resources.AdGroupExtensionSetting;
+import com.google.ads.googleads.v6.resources.AdGroupExtensionSettingName;
 import com.google.ads.googleads.v6.services.stub.AdGroupExtensionSettingServiceStub;
 import com.google.ads.googleads.v6.services.stub.AdGroupExtensionSettingServiceStubSettings;
 import com.google.api.core.BetaApi;
@@ -26,23 +28,14 @@ import java.util.List;
 import java.util.concurrent.TimeUnit;
 import javax.annotation.Generated;
 
-// AUTO-GENERATED DOCUMENTATION AND SERVICE
+// AUTO-GENERATED DOCUMENTATION AND CLASS.
 /**
  * Service Description: Service to manage ad group extension settings.
  *
  * <p>This class provides the ability to make remote calls to the backing service through method
  * calls that map to API methods. Sample code to get started:
  *
- * <pre>
- * <code>
- * try (AdGroupExtensionSettingServiceClient adGroupExtensionSettingServiceClient = AdGroupExtensionSettingServiceClient.create()) {
- *   AdGroupExtensionSettingName resourceName = AdGroupExtensionSettingName.of("[CUSTOMER_ID]", "[AD_GROUP_ID]", "[EXTENSION_TYPE]");
- *   AdGroupExtensionSetting response = adGroupExtensionSettingServiceClient.getAdGroupExtensionSetting(resourceName);
- * }
- * </code>
- * </pre>
- *
- * <p>Note: close() needs to be called on the adGroupExtensionSettingServiceClient object to clean
+ * <p>Note: close() needs to be called on the AdGroupExtensionSettingServiceClient object to clean
  * up resources such as threads. In the example above, try-with-resources is used, which
  * automatically calls close().
  *
@@ -71,30 +64,28 @@ import javax.annotation.Generated;
  *
  * <p>To customize credentials:
  *
- * <pre>
- * <code>
+ * <pre>{@code
  * AdGroupExtensionSettingServiceSettings adGroupExtensionSettingServiceSettings =
  *     AdGroupExtensionSettingServiceSettings.newBuilder()
  *         .setCredentialsProvider(FixedCredentialsProvider.create(myCredentials))
  *         .build();
  * AdGroupExtensionSettingServiceClient adGroupExtensionSettingServiceClient =
  *     AdGroupExtensionSettingServiceClient.create(adGroupExtensionSettingServiceSettings);
- * </code>
- * </pre>
+ * }</pre>
  *
- * To customize the endpoint:
+ * <p>To customize the endpoint:
  *
- * <pre>
- * <code>
+ * <pre>{@code
  * AdGroupExtensionSettingServiceSettings adGroupExtensionSettingServiceSettings =
  *     AdGroupExtensionSettingServiceSettings.newBuilder().setEndpoint(myEndpoint).build();
  * AdGroupExtensionSettingServiceClient adGroupExtensionSettingServiceClient =
  *     AdGroupExtensionSettingServiceClient.create(adGroupExtensionSettingServiceSettings);
- * </code>
- * </pre>
+ * }</pre>
+ *
+ * <p>Please refer to the GitHub repository's samples for more quickstart code snippets.
  */
-@Generated("by gapic-generator")
 @BetaApi
+@Generated("by gapic-generator")
 public class AdGroupExtensionSettingServiceClient implements BackgroundResource {
   private final AdGroupExtensionSettingServiceSettings settings;
   private final AdGroupExtensionSettingServiceStub stub;
@@ -116,7 +107,8 @@ public class AdGroupExtensionSettingServiceClient implements BackgroundResource 
 
   /**
    * Constructs an instance of AdGroupExtensionSettingServiceClient, using the given stub for making
-   * calls. This is for advanced usage - prefer to use AdGroupExtensionSettingServiceSettings}.
+   * calls. This is for advanced usage - prefer using
+   * create(AdGroupExtensionSettingServiceSettings).
    */
   @BetaApi("A restructuring of stub classes is planned, so this may break in the future")
   public static final AdGroupExtensionSettingServiceClient create(
@@ -151,20 +143,11 @@ public class AdGroupExtensionSettingServiceClient implements BackgroundResource 
     return stub;
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Returns the requested ad group extension setting in full detail.
    *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (AdGroupExtensionSettingServiceClient adGroupExtensionSettingServiceClient = AdGroupExtensionSettingServiceClient.create()) {
-   *   AdGroupExtensionSettingName resourceName = AdGroupExtensionSettingName.of("[CUSTOMER_ID]", "[AD_GROUP_ID]", "[EXTENSION_TYPE]");
-   *   AdGroupExtensionSetting response = adGroupExtensionSettingServiceClient.getAdGroupExtensionSetting(resourceName);
-   * }
-   * </code></pre>
-   *
-   * @param resourceName Required. The resource name of the ad group extension setting to fetch.
+   * @param resource_name Required. The resource name of the ad group extension setting to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final AdGroupExtensionSetting getAdGroupExtensionSetting(
@@ -176,20 +159,11 @@ public class AdGroupExtensionSettingServiceClient implements BackgroundResource 
     return getAdGroupExtensionSetting(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Returns the requested ad group extension setting in full detail.
    *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (AdGroupExtensionSettingServiceClient adGroupExtensionSettingServiceClient = AdGroupExtensionSettingServiceClient.create()) {
-   *   AdGroupExtensionSettingName resourceName = AdGroupExtensionSettingName.of("[CUSTOMER_ID]", "[AD_GROUP_ID]", "[EXTENSION_TYPE]");
-   *   AdGroupExtensionSetting response = adGroupExtensionSettingServiceClient.getAdGroupExtensionSetting(resourceName.toString());
-   * }
-   * </code></pre>
-   *
-   * @param resourceName Required. The resource name of the ad group extension setting to fetch.
+   * @param resource_name Required. The resource name of the ad group extension setting to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final AdGroupExtensionSetting getAdGroupExtensionSetting(String resourceName) {
@@ -198,21 +172,9 @@ public class AdGroupExtensionSettingServiceClient implements BackgroundResource 
     return getAdGroupExtensionSetting(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Returns the requested ad group extension setting in full detail.
-   *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (AdGroupExtensionSettingServiceClient adGroupExtensionSettingServiceClient = AdGroupExtensionSettingServiceClient.create()) {
-   *   AdGroupExtensionSettingName resourceName = AdGroupExtensionSettingName.of("[CUSTOMER_ID]", "[AD_GROUP_ID]", "[EXTENSION_TYPE]");
-   *   GetAdGroupExtensionSettingRequest request = GetAdGroupExtensionSettingRequest.newBuilder()
-   *     .setResourceName(resourceName.toString())
-   *     .build();
-   *   AdGroupExtensionSetting response = adGroupExtensionSettingServiceClient.getAdGroupExtensionSetting(request);
-   * }
-   * </code></pre>
    *
    * @param request The request object containing all of the parameters for the API call.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
@@ -222,44 +184,22 @@ public class AdGroupExtensionSettingServiceClient implements BackgroundResource 
     return getAdGroupExtensionSettingCallable().call(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Returns the requested ad group extension setting in full detail.
    *
    * <p>Sample code:
-   *
-   * <pre><code>
-   * try (AdGroupExtensionSettingServiceClient adGroupExtensionSettingServiceClient = AdGroupExtensionSettingServiceClient.create()) {
-   *   AdGroupExtensionSettingName resourceName = AdGroupExtensionSettingName.of("[CUSTOMER_ID]", "[AD_GROUP_ID]", "[EXTENSION_TYPE]");
-   *   GetAdGroupExtensionSettingRequest request = GetAdGroupExtensionSettingRequest.newBuilder()
-   *     .setResourceName(resourceName.toString())
-   *     .build();
-   *   ApiFuture&lt;AdGroupExtensionSetting&gt; future = adGroupExtensionSettingServiceClient.getAdGroupExtensionSettingCallable().futureCall(request);
-   *   // Do something
-   *   AdGroupExtensionSetting response = future.get();
-   * }
-   * </code></pre>
    */
   public final UnaryCallable<GetAdGroupExtensionSettingRequest, AdGroupExtensionSetting>
       getAdGroupExtensionSettingCallable() {
     return stub.getAdGroupExtensionSettingCallable();
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Creates, updates, or removes ad group extension settings. Operation statuses are returned.
    *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (AdGroupExtensionSettingServiceClient adGroupExtensionSettingServiceClient = AdGroupExtensionSettingServiceClient.create()) {
-   *   String customerId = "";
-   *   List&lt;AdGroupExtensionSettingOperation&gt; operations = new ArrayList&lt;&gt;();
-   *   MutateAdGroupExtensionSettingsResponse response = adGroupExtensionSettingServiceClient.mutateAdGroupExtensionSettings(customerId, operations);
-   * }
-   * </code></pre>
-   *
-   * @param customerId Required. The ID of the customer whose ad group extension settings are being
+   * @param customer_id Required. The ID of the customer whose ad group extension settings are being
    *     modified.
    * @param operations Required. The list of operations to perform on individual ad group extension
    *     settings.
@@ -275,23 +215,9 @@ public class AdGroupExtensionSettingServiceClient implements BackgroundResource 
     return mutateAdGroupExtensionSettings(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Creates, updates, or removes ad group extension settings. Operation statuses are returned.
-   *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (AdGroupExtensionSettingServiceClient adGroupExtensionSettingServiceClient = AdGroupExtensionSettingServiceClient.create()) {
-   *   String customerId = "";
-   *   List&lt;AdGroupExtensionSettingOperation&gt; operations = new ArrayList&lt;&gt;();
-   *   MutateAdGroupExtensionSettingsRequest request = MutateAdGroupExtensionSettingsRequest.newBuilder()
-   *     .setCustomerId(customerId)
-   *     .addAllOperations(operations)
-   *     .build();
-   *   MutateAdGroupExtensionSettingsResponse response = adGroupExtensionSettingServiceClient.mutateAdGroupExtensionSettings(request);
-   * }
-   * </code></pre>
    *
    * @param request The request object containing all of the parameters for the API call.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
@@ -301,25 +227,11 @@ public class AdGroupExtensionSettingServiceClient implements BackgroundResource 
     return mutateAdGroupExtensionSettingsCallable().call(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Creates, updates, or removes ad group extension settings. Operation statuses are returned.
    *
    * <p>Sample code:
-   *
-   * <pre><code>
-   * try (AdGroupExtensionSettingServiceClient adGroupExtensionSettingServiceClient = AdGroupExtensionSettingServiceClient.create()) {
-   *   String customerId = "";
-   *   List&lt;AdGroupExtensionSettingOperation&gt; operations = new ArrayList&lt;&gt;();
-   *   MutateAdGroupExtensionSettingsRequest request = MutateAdGroupExtensionSettingsRequest.newBuilder()
-   *     .setCustomerId(customerId)
-   *     .addAllOperations(operations)
-   *     .build();
-   *   ApiFuture&lt;MutateAdGroupExtensionSettingsResponse&gt; future = adGroupExtensionSettingServiceClient.mutateAdGroupExtensionSettingsCallable().futureCall(request);
-   *   // Do something
-   *   MutateAdGroupExtensionSettingsResponse response = future.get();
-   * }
-   * </code></pre>
    */
   public final UnaryCallable<
           MutateAdGroupExtensionSettingsRequest, MutateAdGroupExtensionSettingsResponse>

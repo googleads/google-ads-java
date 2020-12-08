@@ -5,7 +5,7 @@
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
- *     https://www.apache.org/licenses/LICENSE-2.0
+ *      https://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -13,9 +13,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
 package com.google.ads.googleads.v6.services;
 
 import com.google.ads.googleads.v6.resources.AdGroupFeed;
+import com.google.ads.googleads.v6.resources.AdGroupFeedName;
 import com.google.ads.googleads.v6.services.stub.AdGroupFeedServiceStub;
 import com.google.ads.googleads.v6.services.stub.AdGroupFeedServiceStubSettings;
 import com.google.api.core.BetaApi;
@@ -26,23 +28,14 @@ import java.util.List;
 import java.util.concurrent.TimeUnit;
 import javax.annotation.Generated;
 
-// AUTO-GENERATED DOCUMENTATION AND SERVICE
+// AUTO-GENERATED DOCUMENTATION AND CLASS.
 /**
  * Service Description: Service to manage ad group feeds.
  *
  * <p>This class provides the ability to make remote calls to the backing service through method
  * calls that map to API methods. Sample code to get started:
  *
- * <pre>
- * <code>
- * try (AdGroupFeedServiceClient adGroupFeedServiceClient = AdGroupFeedServiceClient.create()) {
- *   AdGroupFeedName resourceName = AdGroupFeedName.of("[CUSTOMER_ID]", "[AD_GROUP_ID]", "[FEED_ID]");
- *   AdGroupFeed response = adGroupFeedServiceClient.getAdGroupFeed(resourceName);
- * }
- * </code>
- * </pre>
- *
- * <p>Note: close() needs to be called on the adGroupFeedServiceClient object to clean up resources
+ * <p>Note: close() needs to be called on the AdGroupFeedServiceClient object to clean up resources
  * such as threads. In the example above, try-with-resources is used, which automatically calls
  * close().
  *
@@ -71,30 +64,28 @@ import javax.annotation.Generated;
  *
  * <p>To customize credentials:
  *
- * <pre>
- * <code>
+ * <pre>{@code
  * AdGroupFeedServiceSettings adGroupFeedServiceSettings =
  *     AdGroupFeedServiceSettings.newBuilder()
  *         .setCredentialsProvider(FixedCredentialsProvider.create(myCredentials))
  *         .build();
  * AdGroupFeedServiceClient adGroupFeedServiceClient =
  *     AdGroupFeedServiceClient.create(adGroupFeedServiceSettings);
- * </code>
- * </pre>
+ * }</pre>
  *
- * To customize the endpoint:
+ * <p>To customize the endpoint:
  *
- * <pre>
- * <code>
+ * <pre>{@code
  * AdGroupFeedServiceSettings adGroupFeedServiceSettings =
  *     AdGroupFeedServiceSettings.newBuilder().setEndpoint(myEndpoint).build();
  * AdGroupFeedServiceClient adGroupFeedServiceClient =
  *     AdGroupFeedServiceClient.create(adGroupFeedServiceSettings);
- * </code>
- * </pre>
+ * }</pre>
+ *
+ * <p>Please refer to the GitHub repository's samples for more quickstart code snippets.
  */
-@Generated("by gapic-generator")
 @BetaApi
+@Generated("by gapic-generator")
 public class AdGroupFeedServiceClient implements BackgroundResource {
   private final AdGroupFeedServiceSettings settings;
   private final AdGroupFeedServiceStub stub;
@@ -115,7 +106,7 @@ public class AdGroupFeedServiceClient implements BackgroundResource {
 
   /**
    * Constructs an instance of AdGroupFeedServiceClient, using the given stub for making calls. This
-   * is for advanced usage - prefer to use AdGroupFeedServiceSettings}.
+   * is for advanced usage - prefer using create(AdGroupFeedServiceSettings).
    */
   @BetaApi("A restructuring of stub classes is planned, so this may break in the future")
   public static final AdGroupFeedServiceClient create(AdGroupFeedServiceStub stub) {
@@ -147,20 +138,11 @@ public class AdGroupFeedServiceClient implements BackgroundResource {
     return stub;
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Returns the requested ad group feed in full detail.
    *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (AdGroupFeedServiceClient adGroupFeedServiceClient = AdGroupFeedServiceClient.create()) {
-   *   AdGroupFeedName resourceName = AdGroupFeedName.of("[CUSTOMER_ID]", "[AD_GROUP_ID]", "[FEED_ID]");
-   *   AdGroupFeed response = adGroupFeedServiceClient.getAdGroupFeed(resourceName);
-   * }
-   * </code></pre>
-   *
-   * @param resourceName Required. The resource name of the ad group feed to fetch.
+   * @param resource_name Required. The resource name of the ad group feed to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final AdGroupFeed getAdGroupFeed(AdGroupFeedName resourceName) {
@@ -171,20 +153,11 @@ public class AdGroupFeedServiceClient implements BackgroundResource {
     return getAdGroupFeed(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Returns the requested ad group feed in full detail.
    *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (AdGroupFeedServiceClient adGroupFeedServiceClient = AdGroupFeedServiceClient.create()) {
-   *   AdGroupFeedName resourceName = AdGroupFeedName.of("[CUSTOMER_ID]", "[AD_GROUP_ID]", "[FEED_ID]");
-   *   AdGroupFeed response = adGroupFeedServiceClient.getAdGroupFeed(resourceName.toString());
-   * }
-   * </code></pre>
-   *
-   * @param resourceName Required. The resource name of the ad group feed to fetch.
+   * @param resource_name Required. The resource name of the ad group feed to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final AdGroupFeed getAdGroupFeed(String resourceName) {
@@ -193,21 +166,9 @@ public class AdGroupFeedServiceClient implements BackgroundResource {
     return getAdGroupFeed(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Returns the requested ad group feed in full detail.
-   *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (AdGroupFeedServiceClient adGroupFeedServiceClient = AdGroupFeedServiceClient.create()) {
-   *   AdGroupFeedName resourceName = AdGroupFeedName.of("[CUSTOMER_ID]", "[AD_GROUP_ID]", "[FEED_ID]");
-   *   GetAdGroupFeedRequest request = GetAdGroupFeedRequest.newBuilder()
-   *     .setResourceName(resourceName.toString())
-   *     .build();
-   *   AdGroupFeed response = adGroupFeedServiceClient.getAdGroupFeed(request);
-   * }
-   * </code></pre>
    *
    * @param request The request object containing all of the parameters for the API call.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
@@ -216,43 +177,21 @@ public class AdGroupFeedServiceClient implements BackgroundResource {
     return getAdGroupFeedCallable().call(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Returns the requested ad group feed in full detail.
    *
    * <p>Sample code:
-   *
-   * <pre><code>
-   * try (AdGroupFeedServiceClient adGroupFeedServiceClient = AdGroupFeedServiceClient.create()) {
-   *   AdGroupFeedName resourceName = AdGroupFeedName.of("[CUSTOMER_ID]", "[AD_GROUP_ID]", "[FEED_ID]");
-   *   GetAdGroupFeedRequest request = GetAdGroupFeedRequest.newBuilder()
-   *     .setResourceName(resourceName.toString())
-   *     .build();
-   *   ApiFuture&lt;AdGroupFeed&gt; future = adGroupFeedServiceClient.getAdGroupFeedCallable().futureCall(request);
-   *   // Do something
-   *   AdGroupFeed response = future.get();
-   * }
-   * </code></pre>
    */
   public final UnaryCallable<GetAdGroupFeedRequest, AdGroupFeed> getAdGroupFeedCallable() {
     return stub.getAdGroupFeedCallable();
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Creates, updates, or removes ad group feeds. Operation statuses are returned.
    *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (AdGroupFeedServiceClient adGroupFeedServiceClient = AdGroupFeedServiceClient.create()) {
-   *   String customerId = "";
-   *   List&lt;AdGroupFeedOperation&gt; operations = new ArrayList&lt;&gt;();
-   *   MutateAdGroupFeedsResponse response = adGroupFeedServiceClient.mutateAdGroupFeeds(customerId, operations);
-   * }
-   * </code></pre>
-   *
-   * @param customerId Required. The ID of the customer whose ad group feeds are being modified.
+   * @param customer_id Required. The ID of the customer whose ad group feeds are being modified.
    * @param operations Required. The list of operations to perform on individual ad group feeds.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
@@ -266,23 +205,9 @@ public class AdGroupFeedServiceClient implements BackgroundResource {
     return mutateAdGroupFeeds(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Creates, updates, or removes ad group feeds. Operation statuses are returned.
-   *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (AdGroupFeedServiceClient adGroupFeedServiceClient = AdGroupFeedServiceClient.create()) {
-   *   String customerId = "";
-   *   List&lt;AdGroupFeedOperation&gt; operations = new ArrayList&lt;&gt;();
-   *   MutateAdGroupFeedsRequest request = MutateAdGroupFeedsRequest.newBuilder()
-   *     .setCustomerId(customerId)
-   *     .addAllOperations(operations)
-   *     .build();
-   *   MutateAdGroupFeedsResponse response = adGroupFeedServiceClient.mutateAdGroupFeeds(request);
-   * }
-   * </code></pre>
    *
    * @param request The request object containing all of the parameters for the API call.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
@@ -291,25 +216,11 @@ public class AdGroupFeedServiceClient implements BackgroundResource {
     return mutateAdGroupFeedsCallable().call(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Creates, updates, or removes ad group feeds. Operation statuses are returned.
    *
    * <p>Sample code:
-   *
-   * <pre><code>
-   * try (AdGroupFeedServiceClient adGroupFeedServiceClient = AdGroupFeedServiceClient.create()) {
-   *   String customerId = "";
-   *   List&lt;AdGroupFeedOperation&gt; operations = new ArrayList&lt;&gt;();
-   *   MutateAdGroupFeedsRequest request = MutateAdGroupFeedsRequest.newBuilder()
-   *     .setCustomerId(customerId)
-   *     .addAllOperations(operations)
-   *     .build();
-   *   ApiFuture&lt;MutateAdGroupFeedsResponse&gt; future = adGroupFeedServiceClient.mutateAdGroupFeedsCallable().futureCall(request);
-   *   // Do something
-   *   MutateAdGroupFeedsResponse response = future.get();
-   * }
-   * </code></pre>
    */
   public final UnaryCallable<MutateAdGroupFeedsRequest, MutateAdGroupFeedsResponse>
       mutateAdGroupFeedsCallable() {

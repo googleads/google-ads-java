@@ -37,20 +37,21 @@ public final class AgeRangeViewServiceProto {
       "o\032\031google/api/resource.proto\"^\n\026GetAgeRa" +
       "ngeViewRequest\022D\n\rresource_name\030\001 \001(\tB-\340" +
       "A\002\372A\'\n%googleads.googleapis.com/AgeRange" +
-      "View2\372\001\n\023AgeRangeViewService\022\305\001\n\017GetAgeR" +
+      "View2\244\002\n\023AgeRangeViewService\022\305\001\n\017GetAgeR" +
       "angeView\0228.google.ads.googleads.v6.servi" +
       "ces.GetAgeRangeViewRequest\032/.google.ads." +
       "googleads.v6.resources.AgeRangeView\"G\202\323\344" +
       "\223\0021\022//v6/{resource_name=customers/*/ageR" +
-      "angeViews/*}\332A\rresource_name\032\033\312A\030googlea" +
-      "ds.googleapis.comB\377\001\n$com.google.ads.goo" +
-      "gleads.v6.servicesB\030AgeRangeViewServiceP" +
-      "rotoP\001ZHgoogle.golang.org/genproto/googl" +
-      "eapis/ads/googleads/v6/services;services" +
-      "\242\002\003GAA\252\002 Google.Ads.GoogleAds.V6.Service" +
-      "s\312\002 Google\\Ads\\GoogleAds\\V6\\Services\352\002$G" +
-      "oogle::Ads::GoogleAds::V6::Servicesb\006pro" +
-      "to3"
+      "angeViews/*}\332A\rresource_name\032E\312A\030googlea" +
+      "ds.googleapis.com\322A\'https://www.googleap" +
+      "is.com/auth/adwordsB\377\001\n$com.google.ads.g" +
+      "oogleads.v6.servicesB\030AgeRangeViewServic" +
+      "eProtoP\001ZHgoogle.golang.org/genproto/goo" +
+      "gleapis/ads/googleads/v6/services;servic" +
+      "es\242\002\003GAA\252\002 Google.Ads.GoogleAds.V6.Servi" +
+      "ces\312\002 Google\\Ads\\GoogleAds\\V6\\Services\352\002" +
+      "$Google::Ads::GoogleAds::V6::Servicesb\006p" +
+      "roto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -73,6 +74,7 @@ public final class AgeRangeViewServiceProto {
     registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);
     registry.add(com.google.api.AnnotationsProto.http);
     registry.add(com.google.api.ClientProto.methodSignature);
+    registry.add(com.google.api.ClientProto.oauthScopes);
     registry.add(com.google.api.ResourceProto.resourceReference);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);

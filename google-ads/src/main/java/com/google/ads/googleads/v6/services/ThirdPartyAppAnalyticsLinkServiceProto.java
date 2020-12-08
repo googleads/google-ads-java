@@ -51,7 +51,7 @@ public final class ThirdPartyAppAnalyticsLinkServiceProto {
       "teShareableLinkIdRequest\022O\n\rresource_nam" +
       "e\030\001 \001(\tB8\372A5\n3googleads.googleapis.com/T" +
       "hirdPartyAppAnalyticsLink\"#\n!RegenerateS" +
-      "hareableLinkIdResponse2\273\004\n!ThirdPartyApp" +
+      "hareableLinkIdResponse2\345\004\n!ThirdPartyApp" +
       "AnalyticsLinkService\022\355\001\n\035GetThirdPartyAp" +
       "pAnalyticsLink\022F.google.ads.googleads.v6" +
       ".services.GetThirdPartyAppAnalyticsLinkR" +
@@ -65,14 +65,15 @@ public final class ThirdPartyAppAnalyticsLinkServiceProto {
       "rateShareableLinkIdResponse\"b\202\323\344\223\002\\\"W/v6" +
       "/{resource_name=customers/*/thirdPartyAp" +
       "pAnalyticsLinks/*}:regenerateShareableLi" +
-      "nkId:\001*\032\033\312A\030googleads.googleapis.comB\215\002\n" +
-      "$com.google.ads.googleads.v6.servicesB&T" +
-      "hirdPartyAppAnalyticsLinkServiceProtoP\001Z" +
-      "Hgoogle.golang.org/genproto/googleapis/a" +
-      "ds/googleads/v6/services;services\242\002\003GAA\252" +
-      "\002 Google.Ads.GoogleAds.V6.Services\312\002 Goo" +
-      "gle\\Ads\\GoogleAds\\V6\\Services\352\002$Google::" +
-      "Ads::GoogleAds::V6::Servicesb\006proto3"
+      "nkId:\001*\032E\312A\030googleads.googleapis.com\322A\'h" +
+      "ttps://www.googleapis.com/auth/adwordsB\215" +
+      "\002\n$com.google.ads.googleads.v6.servicesB" +
+      "&ThirdPartyAppAnalyticsLinkServiceProtoP" +
+      "\001ZHgoogle.golang.org/genproto/googleapis" +
+      "/ads/googleads/v6/services;services\242\002\003GA" +
+      "A\252\002 Google.Ads.GoogleAds.V6.Services\312\002 G" +
+      "oogle\\Ads\\GoogleAds\\V6\\Services\352\002$Google" +
+      "::Ads::GoogleAds::V6::Servicesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -104,6 +105,7 @@ public final class ThirdPartyAppAnalyticsLinkServiceProto {
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.ClientProto.defaultHost);
     registry.add(com.google.api.AnnotationsProto.http);
+    registry.add(com.google.api.ClientProto.oauthScopes);
     registry.add(com.google.api.ResourceProto.resourceReference);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);

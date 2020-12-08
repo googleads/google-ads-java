@@ -37,21 +37,22 @@ public final class FeedPlaceholderViewServiceProto {
       "_behavior.proto\032\031google/api/resource.pro" +
       "to\"l\n\035GetFeedPlaceholderViewRequest\022K\n\rr" +
       "esource_name\030\001 \001(\tB4\340A\002\372A.\n,googleads.go" +
-      "ogleapis.com/FeedPlaceholderView2\235\002\n\032Fee" +
+      "ogleapis.com/FeedPlaceholderView2\307\002\n\032Fee" +
       "dPlaceholderViewService\022\341\001\n\026GetFeedPlace" +
       "holderView\022?.google.ads.googleads.v6.ser" +
       "vices.GetFeedPlaceholderViewRequest\0326.go" +
       "ogle.ads.googleads.v6.resources.FeedPlac" +
       "eholderView\"N\202\323\344\223\0028\0226/v6/{resource_name=" +
       "customers/*/feedPlaceholderViews/*}\332A\rre" +
-      "source_name\032\033\312A\030googleads.googleapis.com" +
-      "B\206\002\n$com.google.ads.googleads.v6.service" +
-      "sB\037FeedPlaceholderViewServiceProtoP\001ZHgo" +
-      "ogle.golang.org/genproto/googleapis/ads/" +
-      "googleads/v6/services;services\242\002\003GAA\252\002 G" +
-      "oogle.Ads.GoogleAds.V6.Services\312\002 Google" +
-      "\\Ads\\GoogleAds\\V6\\Services\352\002$Google::Ads" +
-      "::GoogleAds::V6::Servicesb\006proto3"
+      "source_name\032E\312A\030googleads.googleapis.com" +
+      "\322A\'https://www.googleapis.com/auth/adwor" +
+      "dsB\206\002\n$com.google.ads.googleads.v6.servi" +
+      "cesB\037FeedPlaceholderViewServiceProtoP\001ZH" +
+      "google.golang.org/genproto/googleapis/ad" +
+      "s/googleads/v6/services;services\242\002\003GAA\252\002" +
+      " Google.Ads.GoogleAds.V6.Services\312\002 Goog" +
+      "le\\Ads\\GoogleAds\\V6\\Services\352\002$Google::A" +
+      "ds::GoogleAds::V6::Servicesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -74,6 +75,7 @@ public final class FeedPlaceholderViewServiceProto {
     registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);
     registry.add(com.google.api.AnnotationsProto.http);
     registry.add(com.google.api.ClientProto.methodSignature);
+    registry.add(com.google.api.ClientProto.oauthScopes);
     registry.add(com.google.api.ResourceProto.resourceReference);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);

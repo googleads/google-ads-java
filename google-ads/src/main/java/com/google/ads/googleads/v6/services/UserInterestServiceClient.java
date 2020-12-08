@@ -5,7 +5,7 @@
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
- *     https://www.apache.org/licenses/LICENSE-2.0
+ *      https://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -13,9 +13,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
 package com.google.ads.googleads.v6.services;
 
 import com.google.ads.googleads.v6.resources.UserInterest;
+import com.google.ads.googleads.v6.resources.UserInterestName;
 import com.google.ads.googleads.v6.services.stub.UserInterestServiceStub;
 import com.google.ads.googleads.v6.services.stub.UserInterestServiceStubSettings;
 import com.google.api.core.BetaApi;
@@ -25,23 +27,14 @@ import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 import javax.annotation.Generated;
 
-// AUTO-GENERATED DOCUMENTATION AND SERVICE
+// AUTO-GENERATED DOCUMENTATION AND CLASS.
 /**
  * Service Description: Service to fetch Google Ads User Interest.
  *
  * <p>This class provides the ability to make remote calls to the backing service through method
  * calls that map to API methods. Sample code to get started:
  *
- * <pre>
- * <code>
- * try (UserInterestServiceClient userInterestServiceClient = UserInterestServiceClient.create()) {
- *   UserInterestName resourceName = UserInterestName.of("[CUSTOMER_ID]", "[USER_INTEREST_ID]");
- *   UserInterest response = userInterestServiceClient.getUserInterest(resourceName);
- * }
- * </code>
- * </pre>
- *
- * <p>Note: close() needs to be called on the userInterestServiceClient object to clean up resources
+ * <p>Note: close() needs to be called on the UserInterestServiceClient object to clean up resources
  * such as threads. In the example above, try-with-resources is used, which automatically calls
  * close().
  *
@@ -70,30 +63,28 @@ import javax.annotation.Generated;
  *
  * <p>To customize credentials:
  *
- * <pre>
- * <code>
+ * <pre>{@code
  * UserInterestServiceSettings userInterestServiceSettings =
  *     UserInterestServiceSettings.newBuilder()
  *         .setCredentialsProvider(FixedCredentialsProvider.create(myCredentials))
  *         .build();
  * UserInterestServiceClient userInterestServiceClient =
  *     UserInterestServiceClient.create(userInterestServiceSettings);
- * </code>
- * </pre>
+ * }</pre>
  *
- * To customize the endpoint:
+ * <p>To customize the endpoint:
  *
- * <pre>
- * <code>
+ * <pre>{@code
  * UserInterestServiceSettings userInterestServiceSettings =
  *     UserInterestServiceSettings.newBuilder().setEndpoint(myEndpoint).build();
  * UserInterestServiceClient userInterestServiceClient =
  *     UserInterestServiceClient.create(userInterestServiceSettings);
- * </code>
- * </pre>
+ * }</pre>
+ *
+ * <p>Please refer to the GitHub repository's samples for more quickstart code snippets.
  */
-@Generated("by gapic-generator")
 @BetaApi
+@Generated("by gapic-generator")
 public class UserInterestServiceClient implements BackgroundResource {
   private final UserInterestServiceSettings settings;
   private final UserInterestServiceStub stub;
@@ -114,7 +105,7 @@ public class UserInterestServiceClient implements BackgroundResource {
 
   /**
    * Constructs an instance of UserInterestServiceClient, using the given stub for making calls.
-   * This is for advanced usage - prefer to use UserInterestServiceSettings}.
+   * This is for advanced usage - prefer using create(UserInterestServiceSettings).
    */
   @BetaApi("A restructuring of stub classes is planned, so this may break in the future")
   public static final UserInterestServiceClient create(UserInterestServiceStub stub) {
@@ -146,20 +137,11 @@ public class UserInterestServiceClient implements BackgroundResource {
     return stub;
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Returns the requested user interest in full detail
    *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (UserInterestServiceClient userInterestServiceClient = UserInterestServiceClient.create()) {
-   *   UserInterestName resourceName = UserInterestName.of("[CUSTOMER_ID]", "[USER_INTEREST_ID]");
-   *   UserInterest response = userInterestServiceClient.getUserInterest(resourceName);
-   * }
-   * </code></pre>
-   *
-   * @param resourceName Required. Resource name of the UserInterest to fetch.
+   * @param resource_name Required. Resource name of the UserInterest to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final UserInterest getUserInterest(UserInterestName resourceName) {
@@ -170,20 +152,11 @@ public class UserInterestServiceClient implements BackgroundResource {
     return getUserInterest(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Returns the requested user interest in full detail
    *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (UserInterestServiceClient userInterestServiceClient = UserInterestServiceClient.create()) {
-   *   UserInterestName resourceName = UserInterestName.of("[CUSTOMER_ID]", "[USER_INTEREST_ID]");
-   *   UserInterest response = userInterestServiceClient.getUserInterest(resourceName.toString());
-   * }
-   * </code></pre>
-   *
-   * @param resourceName Required. Resource name of the UserInterest to fetch.
+   * @param resource_name Required. Resource name of the UserInterest to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final UserInterest getUserInterest(String resourceName) {
@@ -192,21 +165,9 @@ public class UserInterestServiceClient implements BackgroundResource {
     return getUserInterest(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Returns the requested user interest in full detail
-   *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (UserInterestServiceClient userInterestServiceClient = UserInterestServiceClient.create()) {
-   *   UserInterestName resourceName = UserInterestName.of("[CUSTOMER_ID]", "[USER_INTEREST_ID]");
-   *   GetUserInterestRequest request = GetUserInterestRequest.newBuilder()
-   *     .setResourceName(resourceName.toString())
-   *     .build();
-   *   UserInterest response = userInterestServiceClient.getUserInterest(request);
-   * }
-   * </code></pre>
    *
    * @param request The request object containing all of the parameters for the API call.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
@@ -215,23 +176,11 @@ public class UserInterestServiceClient implements BackgroundResource {
     return getUserInterestCallable().call(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Returns the requested user interest in full detail
    *
    * <p>Sample code:
-   *
-   * <pre><code>
-   * try (UserInterestServiceClient userInterestServiceClient = UserInterestServiceClient.create()) {
-   *   UserInterestName resourceName = UserInterestName.of("[CUSTOMER_ID]", "[USER_INTEREST_ID]");
-   *   GetUserInterestRequest request = GetUserInterestRequest.newBuilder()
-   *     .setResourceName(resourceName.toString())
-   *     .build();
-   *   ApiFuture&lt;UserInterest&gt; future = userInterestServiceClient.getUserInterestCallable().futureCall(request);
-   *   // Do something
-   *   UserInterest response = future.get();
-   * }
-   * </code></pre>
    */
   public final UnaryCallable<GetUserInterestRequest, UserInterest> getUserInterestCallable() {
     return stub.getUserInterestCallable();

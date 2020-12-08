@@ -5,7 +5,7 @@
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
- *     https://www.apache.org/licenses/LICENSE-2.0
+ *      https://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -13,6 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
 package com.google.ads.googleads.v6.services.stub;
 
 import com.google.ads.googleads.v6.resources.PaidOrganicSearchTermView;
@@ -41,7 +42,7 @@ import java.util.List;
 import javax.annotation.Generated;
 import org.threeten.bp.Duration;
 
-// AUTO-GENERATED DOCUMENTATION AND CLASS
+// AUTO-GENERATED DOCUMENTATION AND CLASS.
 /**
  * Settings class to configure an instance of {@link PaidOrganicSearchTermViewServiceStub}.
  *
@@ -58,27 +59,30 @@ import org.threeten.bp.Duration;
  *
  * <p>For example, to set the total timeout of getPaidOrganicSearchTermView to 30 seconds:
  *
- * <pre>
- * <code>
- * PaidOrganicSearchTermViewServiceStubSettings.Builder paidOrganicSearchTermViewServiceSettingsBuilder =
- *     PaidOrganicSearchTermViewServiceStubSettings.newBuilder();
+ * <pre>{@code
+ * PaidOrganicSearchTermViewServiceStubSettings.Builder
+ *     paidOrganicSearchTermViewServiceSettingsBuilder =
+ *         PaidOrganicSearchTermViewServiceStubSettings.newBuilder();
  * paidOrganicSearchTermViewServiceSettingsBuilder
  *     .getPaidOrganicSearchTermViewSettings()
  *     .setRetrySettings(
- *         paidOrganicSearchTermViewServiceSettingsBuilder.getPaidOrganicSearchTermViewSettings().getRetrySettings().toBuilder()
+ *         paidOrganicSearchTermViewServiceSettingsBuilder
+ *             .getPaidOrganicSearchTermViewSettings()
+ *             .getRetrySettings()
+ *             .toBuilder()
  *             .setTotalTimeout(Duration.ofSeconds(30))
  *             .build());
- * PaidOrganicSearchTermViewServiceStubSettings paidOrganicSearchTermViewServiceSettings = paidOrganicSearchTermViewServiceSettingsBuilder.build();
- * </code>
- * </pre>
+ * PaidOrganicSearchTermViewServiceStubSettings paidOrganicSearchTermViewServiceSettings =
+ *     paidOrganicSearchTermViewServiceSettingsBuilder.build();
+ * }</pre>
  */
-@Generated("by gapic-generator")
 @BetaApi
+@Generated("by gapic-generator-java")
 public class PaidOrganicSearchTermViewServiceStubSettings
     extends StubSettings<PaidOrganicSearchTermViewServiceStubSettings> {
   /** The default scopes of the service. */
   private static final ImmutableList<String> DEFAULT_SERVICE_SCOPES =
-      ImmutableList.<String>builder().build();
+      ImmutableList.<String>builder().add("https://www.googleapis.com/auth/adwords").build();
 
   private final UnaryCallSettings<GetPaidOrganicSearchTermViewRequest, PaidOrganicSearchTermView>
       getPaidOrganicSearchTermViewSettings;
@@ -95,10 +99,10 @@ public class PaidOrganicSearchTermViewServiceStubSettings
         .getTransportName()
         .equals(GrpcTransportChannel.getGrpcTransportName())) {
       return GrpcPaidOrganicSearchTermViewServiceStub.create(this);
-    } else {
-      throw new UnsupportedOperationException(
-          "Transport not supported: " + getTransportChannelProvider().getTransportName());
     }
+    throw new UnsupportedOperationException(
+        String.format(
+            "Transport not supported: %s", getTransportChannelProvider().getTransportName()));
   }
 
   /** Returns a builder for the default ExecutorProvider for this service. */
@@ -168,11 +172,9 @@ public class PaidOrganicSearchTermViewServiceStubSettings
   public static class Builder
       extends StubSettings.Builder<PaidOrganicSearchTermViewServiceStubSettings, Builder> {
     private final ImmutableList<UnaryCallSettings.Builder<?, ?>> unaryMethodSettingsBuilders;
-
     private final UnaryCallSettings.Builder<
             GetPaidOrganicSearchTermViewRequest, PaidOrganicSearchTermView>
         getPaidOrganicSearchTermViewSettings;
-
     private static final ImmutableMap<String, ImmutableSet<StatusCode.Code>>
         RETRYABLE_CODE_DEFINITIONS;
 
@@ -180,13 +182,10 @@ public class PaidOrganicSearchTermViewServiceStubSettings
       ImmutableMap.Builder<String, ImmutableSet<StatusCode.Code>> definitions =
           ImmutableMap.builder();
       definitions.put(
-          "retry_policy_1_codes",
+          "retry_policy_0_codes",
           ImmutableSet.copyOf(
               Lists.<StatusCode.Code>newArrayList(
                   StatusCode.Code.UNAVAILABLE, StatusCode.Code.DEADLINE_EXCEEDED)));
-      definitions.put("no_retry_codes", ImmutableSet.copyOf(Lists.<StatusCode.Code>newArrayList()));
-      definitions.put(
-          "no_retry_1_codes", ImmutableSet.copyOf(Lists.<StatusCode.Code>newArrayList()));
       RETRYABLE_CODE_DEFINITIONS = definitions.build();
     }
 
@@ -205,22 +204,12 @@ public class PaidOrganicSearchTermViewServiceStubSettings
               .setMaxRpcTimeout(Duration.ofMillis(3600000L))
               .setTotalTimeout(Duration.ofMillis(3600000L))
               .build();
-      definitions.put("retry_policy_1_params", settings);
-      settings = RetrySettings.newBuilder().setRpcTimeoutMultiplier(1.0).build();
-      definitions.put("no_retry_params", settings);
-      settings =
-          RetrySettings.newBuilder()
-              .setInitialRpcTimeout(Duration.ofMillis(3600000L))
-              .setRpcTimeoutMultiplier(1.0)
-              .setMaxRpcTimeout(Duration.ofMillis(3600000L))
-              .setTotalTimeout(Duration.ofMillis(3600000L))
-              .build();
-      definitions.put("no_retry_1_params", settings);
+      definitions.put("retry_policy_0_params", settings);
       RETRY_PARAM_DEFINITIONS = definitions.build();
     }
 
     protected Builder() {
-      this((ClientContext) null);
+      this(((ClientContext) null));
     }
 
     protected Builder(ClientContext clientContext) {
@@ -230,27 +219,7 @@ public class PaidOrganicSearchTermViewServiceStubSettings
 
       unaryMethodSettingsBuilders =
           ImmutableList.<UnaryCallSettings.Builder<?, ?>>of(getPaidOrganicSearchTermViewSettings);
-
       initDefaults(this);
-    }
-
-    private static Builder createDefault() {
-      Builder builder = new Builder((ClientContext) null);
-      builder.setTransportChannelProvider(defaultTransportChannelProvider());
-      builder.setCredentialsProvider(defaultCredentialsProviderBuilder().build());
-      builder.setInternalHeaderProvider(defaultApiClientHeaderProviderBuilder().build());
-      builder.setEndpoint(getDefaultEndpoint());
-      return initDefaults(builder);
-    }
-
-    private static Builder initDefaults(Builder builder) {
-
-      builder
-          .getPaidOrganicSearchTermViewSettings()
-          .setRetryableCodes(RETRYABLE_CODE_DEFINITIONS.get("retry_policy_1_codes"))
-          .setRetrySettings(RETRY_PARAM_DEFINITIONS.get("retry_policy_1_params"));
-
-      return builder;
     }
 
     protected Builder(PaidOrganicSearchTermViewServiceStubSettings settings) {
@@ -263,7 +232,27 @@ public class PaidOrganicSearchTermViewServiceStubSettings
           ImmutableList.<UnaryCallSettings.Builder<?, ?>>of(getPaidOrganicSearchTermViewSettings);
     }
 
-    // NEXT_MAJOR_VER: remove 'throws Exception'
+    private static Builder createDefault() {
+      Builder builder = new Builder(((ClientContext) null));
+
+      builder.setTransportChannelProvider(defaultTransportChannelProvider());
+      builder.setCredentialsProvider(defaultCredentialsProviderBuilder().build());
+      builder.setInternalHeaderProvider(defaultApiClientHeaderProviderBuilder().build());
+      builder.setEndpoint(getDefaultEndpoint());
+
+      return initDefaults(builder);
+    }
+
+    private static Builder initDefaults(Builder builder) {
+      builder
+          .getPaidOrganicSearchTermViewSettings()
+          .setRetryableCodes(RETRYABLE_CODE_DEFINITIONS.get("retry_policy_0_codes"))
+          .setRetrySettings(RETRY_PARAM_DEFINITIONS.get("retry_policy_0_params"));
+
+      return builder;
+    }
+
+    // NEXT_MAJOR_VER: remove 'throws Exception'.
     /**
      * Applies the given settings updater function to all of the unary API methods in this service.
      *

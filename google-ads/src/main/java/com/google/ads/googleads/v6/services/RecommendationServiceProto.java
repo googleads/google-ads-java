@@ -204,7 +204,7 @@ public final class RecommendationServiceProto {
       "mmendationResult\0221\n\025partial_failure_erro" +
       "r\030\002 \001(\0132\022.google.rpc.Status\0324\n\033DismissRe" +
       "commendationResult\022\025\n\rresource_name\030\001 \001(" +
-      "\t2\350\005\n\025RecommendationService\022\315\001\n\021GetRecom" +
+      "\t2\222\006\n\025RecommendationService\022\315\001\n\021GetRecom" +
       "mendation\022:.google.ads.googleads.v6.serv" +
       "ices.GetRecommendationRequest\0321.google.a" +
       "ds.googleads.v6.resources.Recommendation" +
@@ -222,14 +222,15 @@ public final class RecommendationServiceProto {
       "ismissRecommendationResponse\"Y\202\323\344\223\002:\"5/v" +
       "6/customers/{customer_id=*}/recommendati" +
       "ons:dismiss:\001*\332A\026customer_id,operations\032" +
-      "\033\312A\030googleads.googleapis.comB\201\002\n$com.goo" +
-      "gle.ads.googleads.v6.servicesB\032Recommend" +
-      "ationServiceProtoP\001ZHgoogle.golang.org/g" +
-      "enproto/googleapis/ads/googleads/v6/serv" +
-      "ices;services\242\002\003GAA\252\002 Google.Ads.GoogleA" +
-      "ds.V6.Services\312\002 Google\\Ads\\GoogleAds\\V6" +
-      "\\Services\352\002$Google::Ads::GoogleAds::V6::" +
-      "Servicesb\006proto3"
+      "E\312A\030googleads.googleapis.com\322A\'https://w" +
+      "ww.googleapis.com/auth/adwordsB\201\002\n$com.g" +
+      "oogle.ads.googleads.v6.servicesB\032Recomme" +
+      "ndationServiceProtoP\001ZHgoogle.golang.org" +
+      "/genproto/googleapis/ads/googleads/v6/se" +
+      "rvices;services\242\002\003GAA\252\002 Google.Ads.Googl" +
+      "eAds.V6.Services\312\002 Google\\Ads\\GoogleAds\\" +
+      "V6\\Services\352\002$Google::Ads::GoogleAds::V6" +
+      "::Servicesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -358,6 +359,7 @@ public final class RecommendationServiceProto {
     registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);
     registry.add(com.google.api.AnnotationsProto.http);
     registry.add(com.google.api.ClientProto.methodSignature);
+    registry.add(com.google.api.ClientProto.oauthScopes);
     registry.add(com.google.api.ResourceProto.resourceReference);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);

@@ -5,7 +5,7 @@
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
- *     https://www.apache.org/licenses/LICENSE-2.0
+ *      https://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -13,13 +13,13 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
 package com.google.ads.googleads.v6.services.stub;
 
 import static com.google.ads.googleads.v6.services.KeywordPlanIdeaServiceClient.GenerateKeywordIdeasPagedResponse;
 
 import com.google.ads.googleads.v6.services.GenerateKeywordIdeaResponse;
 import com.google.ads.googleads.v6.services.GenerateKeywordIdeasRequest;
-import com.google.api.core.BetaApi;
 import com.google.api.gax.core.BackgroundResource;
 import com.google.api.gax.core.BackgroundResourceAggregation;
 import com.google.api.gax.grpc.GrpcCallSettings;
@@ -28,6 +28,7 @@ import com.google.api.gax.rpc.ClientContext;
 import com.google.api.gax.rpc.RequestParamsExtractor;
 import com.google.api.gax.rpc.UnaryCallable;
 import com.google.common.collect.ImmutableMap;
+import com.google.longrunning.stub.GrpcOperationsStub;
 import io.grpc.MethodDescriptor;
 import io.grpc.protobuf.ProtoUtils;
 import java.io.IOException;
@@ -35,16 +36,14 @@ import java.util.Map;
 import java.util.concurrent.TimeUnit;
 import javax.annotation.Generated;
 
-// AUTO-GENERATED DOCUMENTATION AND CLASS
+// AUTO-GENERATED DOCUMENTATION AND CLASS.
 /**
- * gRPC stub implementation for Google Ads API.
+ * gRPC stub implementation for the KeywordPlanIdeaService service API.
  *
  * <p>This class is for advanced usage and reflects the underlying API directly.
  */
-@Generated("by gapic-generator")
-@BetaApi("A restructuring of stub classes is planned, so this may break in the future")
+@Generated("by gapic-generator-java")
 public class GrpcKeywordPlanIdeaServiceStub extends KeywordPlanIdeaServiceStub {
-
   private static final MethodDescriptor<GenerateKeywordIdeasRequest, GenerateKeywordIdeaResponse>
       generateKeywordIdeasMethodDescriptor =
           MethodDescriptor.<GenerateKeywordIdeasRequest, GenerateKeywordIdeaResponse>newBuilder()
@@ -57,13 +56,13 @@ public class GrpcKeywordPlanIdeaServiceStub extends KeywordPlanIdeaServiceStub {
                   ProtoUtils.marshaller(GenerateKeywordIdeaResponse.getDefaultInstance()))
               .build();
 
-  private final BackgroundResource backgroundResources;
-
   private final UnaryCallable<GenerateKeywordIdeasRequest, GenerateKeywordIdeaResponse>
       generateKeywordIdeasCallable;
   private final UnaryCallable<GenerateKeywordIdeasRequest, GenerateKeywordIdeasPagedResponse>
       generateKeywordIdeasPagedCallable;
 
+  private final BackgroundResource backgroundResources;
+  private final GrpcOperationsStub operationsStub;
   private final GrpcStubCallableFactory callableFactory;
 
   public static final GrpcKeywordPlanIdeaServiceStub create(
@@ -83,27 +82,18 @@ public class GrpcKeywordPlanIdeaServiceStub extends KeywordPlanIdeaServiceStub {
         KeywordPlanIdeaServiceStubSettings.newBuilder().build(), clientContext, callableFactory);
   }
 
-  /**
-   * Constructs an instance of GrpcKeywordPlanIdeaServiceStub, using the given settings. This is
-   * protected so that it is easy to make a subclass, but otherwise, the static factory methods
-   * should be preferred.
-   */
   protected GrpcKeywordPlanIdeaServiceStub(
       KeywordPlanIdeaServiceStubSettings settings, ClientContext clientContext) throws IOException {
     this(settings, clientContext, new GrpcKeywordPlanIdeaServiceCallableFactory());
   }
 
-  /**
-   * Constructs an instance of GrpcKeywordPlanIdeaServiceStub, using the given settings. This is
-   * protected so that it is easy to make a subclass, but otherwise, the static factory methods
-   * should be preferred.
-   */
   protected GrpcKeywordPlanIdeaServiceStub(
       KeywordPlanIdeaServiceStubSettings settings,
       ClientContext clientContext,
       GrpcStubCallableFactory callableFactory)
       throws IOException {
     this.callableFactory = callableFactory;
+    this.operationsStub = GrpcOperationsStub.create(clientContext, callableFactory);
 
     GrpcCallSettings<GenerateKeywordIdeasRequest, GenerateKeywordIdeaResponse>
         generateKeywordIdeasTransportSettings =
@@ -131,17 +121,22 @@ public class GrpcKeywordPlanIdeaServiceStub extends KeywordPlanIdeaServiceStub {
             settings.generateKeywordIdeasSettings(),
             clientContext);
 
-    backgroundResources = new BackgroundResourceAggregation(clientContext.getBackgroundResources());
+    this.backgroundResources =
+        new BackgroundResourceAggregation(clientContext.getBackgroundResources());
   }
 
-  public UnaryCallable<GenerateKeywordIdeasRequest, GenerateKeywordIdeasPagedResponse>
-      generateKeywordIdeasPagedCallable() {
-    return generateKeywordIdeasPagedCallable;
+  public GrpcOperationsStub getOperationsStub() {
+    return operationsStub;
   }
 
   public UnaryCallable<GenerateKeywordIdeasRequest, GenerateKeywordIdeaResponse>
       generateKeywordIdeasCallable() {
     return generateKeywordIdeasCallable;
+  }
+
+  public UnaryCallable<GenerateKeywordIdeasRequest, GenerateKeywordIdeasPagedResponse>
+      generateKeywordIdeasPagedCallable() {
+    return generateKeywordIdeasPagedCallable;
   }
 
   @Override

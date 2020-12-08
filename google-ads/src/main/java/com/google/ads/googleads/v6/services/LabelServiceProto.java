@@ -77,7 +77,7 @@ public final class LabelServiceProto {
       "(\01323.google.ads.googleads.v6.services.Mu" +
       "tateLabelResult\"c\n\021MutateLabelResult\022\025\n\r" +
       "resource_name\030\001 \001(\t\0227\n\005label\030\002 \001(\0132(.goo" +
-      "gle.ads.googleads.v6.resources.Label2\250\003\n" +
+      "gle.ads.googleads.v6.resources.Label2\322\003\n" +
       "\014LabelService\022\251\001\n\010GetLabel\0221.google.ads." +
       "googleads.v6.services.GetLabelRequest\032(." +
       "google.ads.googleads.v6.resources.Label\"" +
@@ -87,15 +87,16 @@ public final class LabelServiceProto {
       "tateLabelsRequest\0326.google.ads.googleads" +
       ".v6.services.MutateLabelsResponse\"O\202\323\344\223\002" +
       "0\"+/v6/customers/{customer_id=*}/labels:" +
-      "mutate:\001*\332A\026customer_id,operations\032\033\312A\030g" +
-      "oogleads.googleapis.comB\370\001\n$com.google.a" +
-      "ds.googleads.v6.servicesB\021LabelServicePr" +
-      "otoP\001ZHgoogle.golang.org/genproto/google" +
-      "apis/ads/googleads/v6/services;services\242" +
-      "\002\003GAA\252\002 Google.Ads.GoogleAds.V6.Services" +
-      "\312\002 Google\\Ads\\GoogleAds\\V6\\Services\352\002$Go" +
-      "ogle::Ads::GoogleAds::V6::Servicesb\006prot" +
-      "o3"
+      "mutate:\001*\332A\026customer_id,operations\032E\312A\030g" +
+      "oogleads.googleapis.com\322A\'https://www.go" +
+      "ogleapis.com/auth/adwordsB\370\001\n$com.google" +
+      ".ads.googleads.v6.servicesB\021LabelService" +
+      "ProtoP\001ZHgoogle.golang.org/genproto/goog" +
+      "leapis/ads/googleads/v6/services;service" +
+      "s\242\002\003GAA\252\002 Google.Ads.GoogleAds.V6.Servic" +
+      "es\312\002 Google\\Ads\\GoogleAds\\V6\\Services\352\002$" +
+      "Google::Ads::GoogleAds::V6::Servicesb\006pr" +
+      "oto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -145,6 +146,7 @@ public final class LabelServiceProto {
     registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);
     registry.add(com.google.api.AnnotationsProto.http);
     registry.add(com.google.api.ClientProto.methodSignature);
+    registry.add(com.google.api.ClientProto.oauthScopes);
     registry.add(com.google.api.ResourceProto.resourceReference);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);

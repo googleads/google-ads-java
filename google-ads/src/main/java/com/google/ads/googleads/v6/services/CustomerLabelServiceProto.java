@@ -71,7 +71,7 @@ public final class CustomerLabelServiceProto {
       "\030\002 \003(\0132;.google.ads.googleads.v6.service" +
       "s.MutateCustomerLabelResult\"2\n\031MutateCus" +
       "tomerLabelResult\022\025\n\rresource_name\030\001 \001(\t2" +
-      "\360\003\n\024CustomerLabelService\022\311\001\n\020GetCustomer" +
+      "\232\004\n\024CustomerLabelService\022\311\001\n\020GetCustomer" +
       "Label\0229.google.ads.googleads.v6.services" +
       ".GetCustomerLabelRequest\0320.google.ads.go" +
       "ogleads.v6.resources.CustomerLabel\"H\202\323\344\223" +
@@ -82,15 +82,16 @@ public final class CustomerLabelServiceProto {
       "oogle.ads.googleads.v6.services.MutateCu" +
       "stomerLabelsResponse\"W\202\323\344\223\0028\"3/v6/custom" +
       "ers/{customer_id=*}/customerLabels:mutat" +
-      "e:\001*\332A\026customer_id,operations\032\033\312A\030google" +
-      "ads.googleapis.comB\200\002\n$com.google.ads.go" +
-      "ogleads.v6.servicesB\031CustomerLabelServic" +
-      "eProtoP\001ZHgoogle.golang.org/genproto/goo" +
-      "gleapis/ads/googleads/v6/services;servic" +
-      "es\242\002\003GAA\252\002 Google.Ads.GoogleAds.V6.Servi" +
-      "ces\312\002 Google\\Ads\\GoogleAds\\V6\\Services\352\002" +
-      "$Google::Ads::GoogleAds::V6::Servicesb\006p" +
-      "roto3"
+      "e:\001*\332A\026customer_id,operations\032E\312A\030google" +
+      "ads.googleapis.com\322A\'https://www.googlea" +
+      "pis.com/auth/adwordsB\200\002\n$com.google.ads." +
+      "googleads.v6.servicesB\031CustomerLabelServ" +
+      "iceProtoP\001ZHgoogle.golang.org/genproto/g" +
+      "oogleapis/ads/googleads/v6/services;serv" +
+      "ices\242\002\003GAA\252\002 Google.Ads.GoogleAds.V6.Ser" +
+      "vices\312\002 Google\\Ads\\GoogleAds\\V6\\Services" +
+      "\352\002$Google::Ads::GoogleAds::V6::Servicesb" +
+      "\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -138,6 +139,7 @@ public final class CustomerLabelServiceProto {
     registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);
     registry.add(com.google.api.AnnotationsProto.http);
     registry.add(com.google.api.ClientProto.methodSignature);
+    registry.add(com.google.api.ClientProto.oauthScopes);
     registry.add(com.google.api.ResourceProto.resourceReference);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);

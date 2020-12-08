@@ -38,22 +38,23 @@ public final class PaidOrganicSearchTermViewServiceProto {
       "api/resource.proto\"x\n#GetPaidOrganicSear" +
       "chTermViewRequest\022Q\n\rresource_name\030\001 \001(\t" +
       "B:\340A\002\372A4\n2googleads.googleapis.com/PaidO" +
-      "rganicSearchTermView2\273\002\n PaidOrganicSear" +
+      "rganicSearchTermView2\345\002\n PaidOrganicSear" +
       "chTermViewService\022\371\001\n\034GetPaidOrganicSear" +
       "chTermView\022E.google.ads.googleads.v6.ser" +
       "vices.GetPaidOrganicSearchTermViewReques" +
       "t\032<.google.ads.googleads.v6.resources.Pa" +
       "idOrganicSearchTermView\"T\202\323\344\223\002>\022</v6/{re" +
       "source_name=customers/*/paidOrganicSearc" +
-      "hTermViews/*}\332A\rresource_name\032\033\312A\030google" +
-      "ads.googleapis.comB\214\002\n$com.google.ads.go" +
-      "ogleads.v6.servicesB%PaidOrganicSearchTe" +
-      "rmViewServiceProtoP\001ZHgoogle.golang.org/" +
-      "genproto/googleapis/ads/googleads/v6/ser" +
-      "vices;services\242\002\003GAA\252\002 Google.Ads.Google" +
-      "Ads.V6.Services\312\002 Google\\Ads\\GoogleAds\\V" +
-      "6\\Services\352\002$Google::Ads::GoogleAds::V6:" +
-      ":Servicesb\006proto3"
+      "hTermViews/*}\332A\rresource_name\032E\312A\030google" +
+      "ads.googleapis.com\322A\'https://www.googlea" +
+      "pis.com/auth/adwordsB\214\002\n$com.google.ads." +
+      "googleads.v6.servicesB%PaidOrganicSearch" +
+      "TermViewServiceProtoP\001ZHgoogle.golang.or" +
+      "g/genproto/googleapis/ads/googleads/v6/s" +
+      "ervices;services\242\002\003GAA\252\002 Google.Ads.Goog" +
+      "leAds.V6.Services\312\002 Google\\Ads\\GoogleAds" +
+      "\\V6\\Services\352\002$Google::Ads::GoogleAds::V" +
+      "6::Servicesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -76,6 +77,7 @@ public final class PaidOrganicSearchTermViewServiceProto {
     registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);
     registry.add(com.google.api.AnnotationsProto.http);
     registry.add(com.google.api.ClientProto.methodSignature);
+    registry.add(com.google.api.ClientProto.oauthScopes);
     registry.add(com.google.api.ResourceProto.resourceReference);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);

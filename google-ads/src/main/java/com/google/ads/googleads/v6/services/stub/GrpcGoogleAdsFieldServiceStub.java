@@ -5,7 +5,7 @@
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
- *     https://www.apache.org/licenses/LICENSE-2.0
+ *      https://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -13,6 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
 package com.google.ads.googleads.v6.services.stub;
 
 import static com.google.ads.googleads.v6.services.GoogleAdsFieldServiceClient.SearchGoogleAdsFieldsPagedResponse;
@@ -21,7 +22,6 @@ import com.google.ads.googleads.v6.resources.GoogleAdsField;
 import com.google.ads.googleads.v6.services.GetGoogleAdsFieldRequest;
 import com.google.ads.googleads.v6.services.SearchGoogleAdsFieldsRequest;
 import com.google.ads.googleads.v6.services.SearchGoogleAdsFieldsResponse;
-import com.google.api.core.BetaApi;
 import com.google.api.gax.core.BackgroundResource;
 import com.google.api.gax.core.BackgroundResourceAggregation;
 import com.google.api.gax.grpc.GrpcCallSettings;
@@ -30,6 +30,7 @@ import com.google.api.gax.rpc.ClientContext;
 import com.google.api.gax.rpc.RequestParamsExtractor;
 import com.google.api.gax.rpc.UnaryCallable;
 import com.google.common.collect.ImmutableMap;
+import com.google.longrunning.stub.GrpcOperationsStub;
 import io.grpc.MethodDescriptor;
 import io.grpc.protobuf.ProtoUtils;
 import java.io.IOException;
@@ -37,16 +38,14 @@ import java.util.Map;
 import java.util.concurrent.TimeUnit;
 import javax.annotation.Generated;
 
-// AUTO-GENERATED DOCUMENTATION AND CLASS
+// AUTO-GENERATED DOCUMENTATION AND CLASS.
 /**
- * gRPC stub implementation for Google Ads API.
+ * gRPC stub implementation for the GoogleAdsFieldService service API.
  *
  * <p>This class is for advanced usage and reflects the underlying API directly.
  */
-@Generated("by gapic-generator")
-@BetaApi("A restructuring of stub classes is planned, so this may break in the future")
+@Generated("by gapic-generator-java")
 public class GrpcGoogleAdsFieldServiceStub extends GoogleAdsFieldServiceStub {
-
   private static final MethodDescriptor<GetGoogleAdsFieldRequest, GoogleAdsField>
       getGoogleAdsFieldMethodDescriptor =
           MethodDescriptor.<GetGoogleAdsFieldRequest, GoogleAdsField>newBuilder()
@@ -57,6 +56,7 @@ public class GrpcGoogleAdsFieldServiceStub extends GoogleAdsFieldServiceStub {
                   ProtoUtils.marshaller(GetGoogleAdsFieldRequest.getDefaultInstance()))
               .setResponseMarshaller(ProtoUtils.marshaller(GoogleAdsField.getDefaultInstance()))
               .build();
+
   private static final MethodDescriptor<SearchGoogleAdsFieldsRequest, SearchGoogleAdsFieldsResponse>
       searchGoogleAdsFieldsMethodDescriptor =
           MethodDescriptor.<SearchGoogleAdsFieldsRequest, SearchGoogleAdsFieldsResponse>newBuilder()
@@ -69,14 +69,14 @@ public class GrpcGoogleAdsFieldServiceStub extends GoogleAdsFieldServiceStub {
                   ProtoUtils.marshaller(SearchGoogleAdsFieldsResponse.getDefaultInstance()))
               .build();
 
-  private final BackgroundResource backgroundResources;
-
   private final UnaryCallable<GetGoogleAdsFieldRequest, GoogleAdsField> getGoogleAdsFieldCallable;
   private final UnaryCallable<SearchGoogleAdsFieldsRequest, SearchGoogleAdsFieldsResponse>
       searchGoogleAdsFieldsCallable;
   private final UnaryCallable<SearchGoogleAdsFieldsRequest, SearchGoogleAdsFieldsPagedResponse>
       searchGoogleAdsFieldsPagedCallable;
 
+  private final BackgroundResource backgroundResources;
+  private final GrpcOperationsStub operationsStub;
   private final GrpcStubCallableFactory callableFactory;
 
   public static final GrpcGoogleAdsFieldServiceStub create(
@@ -96,27 +96,18 @@ public class GrpcGoogleAdsFieldServiceStub extends GoogleAdsFieldServiceStub {
         GoogleAdsFieldServiceStubSettings.newBuilder().build(), clientContext, callableFactory);
   }
 
-  /**
-   * Constructs an instance of GrpcGoogleAdsFieldServiceStub, using the given settings. This is
-   * protected so that it is easy to make a subclass, but otherwise, the static factory methods
-   * should be preferred.
-   */
   protected GrpcGoogleAdsFieldServiceStub(
       GoogleAdsFieldServiceStubSettings settings, ClientContext clientContext) throws IOException {
     this(settings, clientContext, new GrpcGoogleAdsFieldServiceCallableFactory());
   }
 
-  /**
-   * Constructs an instance of GrpcGoogleAdsFieldServiceStub, using the given settings. This is
-   * protected so that it is easy to make a subclass, but otherwise, the static factory methods
-   * should be preferred.
-   */
   protected GrpcGoogleAdsFieldServiceStub(
       GoogleAdsFieldServiceStubSettings settings,
       ClientContext clientContext,
       GrpcStubCallableFactory callableFactory)
       throws IOException {
     this.callableFactory = callableFactory;
+    this.operationsStub = GrpcOperationsStub.create(clientContext, callableFactory);
 
     GrpcCallSettings<GetGoogleAdsFieldRequest, GoogleAdsField> getGoogleAdsFieldTransportSettings =
         GrpcCallSettings.<GetGoogleAdsFieldRequest, GoogleAdsField>newBuilder()
@@ -154,21 +145,26 @@ public class GrpcGoogleAdsFieldServiceStub extends GoogleAdsFieldServiceStub {
             settings.searchGoogleAdsFieldsSettings(),
             clientContext);
 
-    backgroundResources = new BackgroundResourceAggregation(clientContext.getBackgroundResources());
+    this.backgroundResources =
+        new BackgroundResourceAggregation(clientContext.getBackgroundResources());
+  }
+
+  public GrpcOperationsStub getOperationsStub() {
+    return operationsStub;
   }
 
   public UnaryCallable<GetGoogleAdsFieldRequest, GoogleAdsField> getGoogleAdsFieldCallable() {
     return getGoogleAdsFieldCallable;
   }
 
-  public UnaryCallable<SearchGoogleAdsFieldsRequest, SearchGoogleAdsFieldsPagedResponse>
-      searchGoogleAdsFieldsPagedCallable() {
-    return searchGoogleAdsFieldsPagedCallable;
-  }
-
   public UnaryCallable<SearchGoogleAdsFieldsRequest, SearchGoogleAdsFieldsResponse>
       searchGoogleAdsFieldsCallable() {
     return searchGoogleAdsFieldsCallable;
+  }
+
+  public UnaryCallable<SearchGoogleAdsFieldsRequest, SearchGoogleAdsFieldsPagedResponse>
+      searchGoogleAdsFieldsPagedCallable() {
+    return searchGoogleAdsFieldsPagedCallable;
   }
 
   @Override

@@ -75,7 +75,7 @@ public final class BiddingStrategyServiceProto {
       "tus\022N\n\007results\030\002 \003(\0132=.google.ads.google" +
       "ads.v6.services.MutateBiddingStrategyRes" +
       "ult\"4\n\033MutateBiddingStrategyResult\022\025\n\rre" +
-      "source_name\030\001 \001(\t2\207\004\n\026BiddingStrategySer" +
+      "source_name\030\001 \001(\t2\261\004\n\026BiddingStrategySer" +
       "vice\022\322\001\n\022GetBiddingStrategy\022;.google.ads" +
       ".googleads.v6.services.GetBiddingStrateg" +
       "yRequest\0322.google.ads.googleads.v6.resou" +
@@ -87,15 +87,16 @@ public final class BiddingStrategyServiceProto {
       ".ads.googleads.v6.services.MutateBidding" +
       "StrategiesResponse\"Z\202\323\344\223\002;\"6/v6/customer" +
       "s/{customer_id=*}/biddingStrategies:muta" +
-      "te:\001*\332A\026customer_id,operations\032\033\312A\030googl" +
-      "eads.googleapis.comB\202\002\n$com.google.ads.g" +
-      "oogleads.v6.servicesB\033BiddingStrategySer" +
-      "viceProtoP\001ZHgoogle.golang.org/genproto/" +
-      "googleapis/ads/googleads/v6/services;ser" +
-      "vices\242\002\003GAA\252\002 Google.Ads.GoogleAds.V6.Se" +
-      "rvices\312\002 Google\\Ads\\GoogleAds\\V6\\Service" +
-      "s\352\002$Google::Ads::GoogleAds::V6::Services" +
-      "b\006proto3"
+      "te:\001*\332A\026customer_id,operations\032E\312A\030googl" +
+      "eads.googleapis.com\322A\'https://www.google" +
+      "apis.com/auth/adwordsB\202\002\n$com.google.ads" +
+      ".googleads.v6.servicesB\033BiddingStrategyS" +
+      "erviceProtoP\001ZHgoogle.golang.org/genprot" +
+      "o/googleapis/ads/googleads/v6/services;s" +
+      "ervices\242\002\003GAA\252\002 Google.Ads.GoogleAds.V6." +
+      "Services\312\002 Google\\Ads\\GoogleAds\\V6\\Servi" +
+      "ces\352\002$Google::Ads::GoogleAds::V6::Servic" +
+      "esb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -144,6 +145,7 @@ public final class BiddingStrategyServiceProto {
     registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);
     registry.add(com.google.api.AnnotationsProto.http);
     registry.add(com.google.api.ClientProto.methodSignature);
+    registry.add(com.google.api.ClientProto.oauthScopes);
     registry.add(com.google.api.ResourceProto.resourceReference);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);

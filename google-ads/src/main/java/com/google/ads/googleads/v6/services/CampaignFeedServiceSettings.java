@@ -5,7 +5,7 @@
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
- *     https://www.apache.org/licenses/LICENSE-2.0
+ *      https://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -13,6 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
 package com.google.ads.googleads.v6.services;
 
 import com.google.ads.googleads.v6.resources.CampaignFeed;
@@ -25,13 +26,14 @@ import com.google.api.gax.grpc.InstantiatingGrpcChannelProvider;
 import com.google.api.gax.rpc.ApiClientHeaderProvider;
 import com.google.api.gax.rpc.ClientContext;
 import com.google.api.gax.rpc.ClientSettings;
+import com.google.api.gax.rpc.StubSettings;
 import com.google.api.gax.rpc.TransportChannelProvider;
 import com.google.api.gax.rpc.UnaryCallSettings;
 import java.io.IOException;
 import java.util.List;
 import javax.annotation.Generated;
 
-// AUTO-GENERATED DOCUMENTATION AND CLASS
+// AUTO-GENERATED DOCUMENTATION AND CLASS.
 /**
  * Settings class to configure an instance of {@link CampaignFeedServiceClient}.
  *
@@ -48,23 +50,25 @@ import javax.annotation.Generated;
  *
  * <p>For example, to set the total timeout of getCampaignFeed to 30 seconds:
  *
- * <pre>
- * <code>
+ * <pre>{@code
  * CampaignFeedServiceSettings.Builder campaignFeedServiceSettingsBuilder =
  *     CampaignFeedServiceSettings.newBuilder();
  * campaignFeedServiceSettingsBuilder
  *     .getCampaignFeedSettings()
  *     .setRetrySettings(
- *         campaignFeedServiceSettingsBuilder.getCampaignFeedSettings().getRetrySettings().toBuilder()
+ *         campaignFeedServiceSettingsBuilder
+ *             .getCampaignFeedSettings()
+ *             .getRetrySettings()
+ *             .toBuilder()
  *             .setTotalTimeout(Duration.ofSeconds(30))
  *             .build());
- * CampaignFeedServiceSettings campaignFeedServiceSettings = campaignFeedServiceSettingsBuilder.build();
- * </code>
- * </pre>
+ * CampaignFeedServiceSettings campaignFeedServiceSettings =
+ *     campaignFeedServiceSettingsBuilder.build();
+ * }</pre>
  */
-@Generated("by gapic-generator")
-@BetaApi
+@Generated("by gapic-generator-java")
 public class CampaignFeedServiceSettings extends ClientSettings<CampaignFeedServiceSettings> {
+
   /** Returns the object with the settings used for calls to getCampaignFeed. */
   public UnaryCallSettings<GetCampaignFeedRequest, CampaignFeed> getCampaignFeedSettings() {
     return ((CampaignFeedServiceStubSettings) getStubSettings()).getCampaignFeedSettings();
@@ -136,16 +140,13 @@ public class CampaignFeedServiceSettings extends ClientSettings<CampaignFeedServ
 
   /** Builder for CampaignFeedServiceSettings. */
   public static class Builder extends ClientSettings.Builder<CampaignFeedServiceSettings, Builder> {
+
     protected Builder() throws IOException {
-      this((ClientContext) null);
+      this(((ClientContext) null));
     }
 
     protected Builder(ClientContext clientContext) {
       super(CampaignFeedServiceStubSettings.newBuilder(clientContext));
-    }
-
-    private static Builder createDefault() {
-      return new Builder(CampaignFeedServiceStubSettings.newBuilder());
     }
 
     protected Builder(CampaignFeedServiceSettings settings) {
@@ -156,11 +157,15 @@ public class CampaignFeedServiceSettings extends ClientSettings<CampaignFeedServ
       super(stubSettings);
     }
 
+    private static Builder createDefault() {
+      return new Builder(CampaignFeedServiceStubSettings.newBuilder());
+    }
+
     public CampaignFeedServiceStubSettings.Builder getStubSettingsBuilder() {
       return ((CampaignFeedServiceStubSettings.Builder) getStubSettings());
     }
 
-    // NEXT_MAJOR_VER: remove 'throws Exception'
+    // NEXT_MAJOR_VER: remove 'throws Exception'.
     /**
      * Applies the given settings updater function to all of the unary API methods in this service.
      *

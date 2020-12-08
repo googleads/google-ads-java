@@ -5,7 +5,7 @@
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
- *     https://www.apache.org/licenses/LICENSE-2.0
+ *      https://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -13,6 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
 package com.google.ads.googleads.v6.services.stub;
 
 import static com.google.ads.googleads.v6.services.GoogleAdsServiceClient.SearchPagedResponse;
@@ -56,7 +57,7 @@ import java.util.List;
 import javax.annotation.Generated;
 import org.threeten.bp.Duration;
 
-// AUTO-GENERATED DOCUMENTATION AND CLASS
+// AUTO-GENERATED DOCUMENTATION AND CLASS.
 /**
  * Settings class to configure an instance of {@link GoogleAdsServiceStub}.
  *
@@ -73,26 +74,27 @@ import org.threeten.bp.Duration;
  *
  * <p>For example, to set the total timeout of mutate to 30 seconds:
  *
- * <pre>
- * <code>
+ * <pre>{@code
  * GoogleAdsServiceStubSettings.Builder googleAdsServiceSettingsBuilder =
  *     GoogleAdsServiceStubSettings.newBuilder();
  * googleAdsServiceSettingsBuilder
  *     .mutateSettings()
  *     .setRetrySettings(
- *         googleAdsServiceSettingsBuilder.mutateSettings().getRetrySettings().toBuilder()
+ *         googleAdsServiceSettingsBuilder
+ *             .mutateSettings()
+ *             .getRetrySettings()
+ *             .toBuilder()
  *             .setTotalTimeout(Duration.ofSeconds(30))
  *             .build());
  * GoogleAdsServiceStubSettings googleAdsServiceSettings = googleAdsServiceSettingsBuilder.build();
- * </code>
- * </pre>
+ * }</pre>
  */
-@Generated("by gapic-generator")
 @BetaApi
+@Generated("by gapic-generator-java")
 public class GoogleAdsServiceStubSettings extends StubSettings<GoogleAdsServiceStubSettings> {
   /** The default scopes of the service. */
   private static final ImmutableList<String> DEFAULT_SERVICE_SCOPES =
-      ImmutableList.<String>builder().build();
+      ImmutableList.<String>builder().add("https://www.googleapis.com/auth/adwords").build();
 
   private final PagedCallSettings<
           SearchGoogleAdsRequest, SearchGoogleAdsResponse, SearchPagedResponse>
@@ -101,6 +103,63 @@ public class GoogleAdsServiceStubSettings extends StubSettings<GoogleAdsServiceS
           SearchGoogleAdsStreamRequest, SearchGoogleAdsStreamResponse>
       searchStreamSettings;
   private final UnaryCallSettings<MutateGoogleAdsRequest, MutateGoogleAdsResponse> mutateSettings;
+
+  private static final PagedListDescriptor<
+          SearchGoogleAdsRequest, SearchGoogleAdsResponse, GoogleAdsRow>
+      SEARCH_PAGE_STR_DESC =
+          new PagedListDescriptor<SearchGoogleAdsRequest, SearchGoogleAdsResponse, GoogleAdsRow>() {
+            @Override
+            public String emptyToken() {
+              return "";
+            }
+
+            @Override
+            public SearchGoogleAdsRequest injectToken(
+                SearchGoogleAdsRequest payload, String token) {
+              return SearchGoogleAdsRequest.newBuilder(payload).setPageToken(token).build();
+            }
+
+            @Override
+            public SearchGoogleAdsRequest injectPageSize(
+                SearchGoogleAdsRequest payload, int pageSize) {
+              return SearchGoogleAdsRequest.newBuilder(payload).setPageSize(pageSize).build();
+            }
+
+            @Override
+            public Integer extractPageSize(SearchGoogleAdsRequest payload) {
+              return payload.getPageSize();
+            }
+
+            @Override
+            public String extractNextToken(SearchGoogleAdsResponse payload) {
+              return payload.getNextPageToken();
+            }
+
+            @Override
+            public Iterable<GoogleAdsRow> extractResources(SearchGoogleAdsResponse payload) {
+              return payload.getResultsList() == null
+                  ? ImmutableList.<GoogleAdsRow>of()
+                  : payload.getResultsList();
+            }
+          };
+
+  private static final PagedListResponseFactory<
+          SearchGoogleAdsRequest, SearchGoogleAdsResponse, SearchPagedResponse>
+      SEARCH_PAGE_STR_FACT =
+          new PagedListResponseFactory<
+              SearchGoogleAdsRequest, SearchGoogleAdsResponse, SearchPagedResponse>() {
+            @Override
+            public ApiFuture<SearchPagedResponse> getFuturePagedResponse(
+                UnaryCallable<SearchGoogleAdsRequest, SearchGoogleAdsResponse> callable,
+                SearchGoogleAdsRequest request,
+                ApiCallContext context,
+                ApiFuture<SearchGoogleAdsResponse> futureResponse) {
+              PageContext<SearchGoogleAdsRequest, SearchGoogleAdsResponse, GoogleAdsRow>
+                  pageContext =
+                      PageContext.create(callable, SEARCH_PAGE_STR_DESC, request, context);
+              return SearchPagedResponse.createAsync(pageContext, futureResponse);
+            }
+          };
 
   /** Returns the object with the settings used for calls to search. */
   public PagedCallSettings<SearchGoogleAdsRequest, SearchGoogleAdsResponse, SearchPagedResponse>
@@ -125,10 +184,10 @@ public class GoogleAdsServiceStubSettings extends StubSettings<GoogleAdsServiceS
         .getTransportName()
         .equals(GrpcTransportChannel.getGrpcTransportName())) {
       return GrpcGoogleAdsServiceStub.create(this);
-    } else {
-      throw new UnsupportedOperationException(
-          "Transport not supported: " + getTransportChannelProvider().getTransportName());
     }
+    throw new UnsupportedOperationException(
+        String.format(
+            "Transport not supported: %s", getTransportChannelProvider().getTransportName()));
   }
 
   /** Returns a builder for the default ExecutorProvider for this service. */
@@ -193,67 +252,9 @@ public class GoogleAdsServiceStubSettings extends StubSettings<GoogleAdsServiceS
     mutateSettings = settingsBuilder.mutateSettings().build();
   }
 
-  private static final PagedListDescriptor<
-          SearchGoogleAdsRequest, SearchGoogleAdsResponse, GoogleAdsRow>
-      SEARCH_PAGE_STR_DESC =
-          new PagedListDescriptor<SearchGoogleAdsRequest, SearchGoogleAdsResponse, GoogleAdsRow>() {
-            @Override
-            public String emptyToken() {
-              return "";
-            }
-
-            @Override
-            public SearchGoogleAdsRequest injectToken(
-                SearchGoogleAdsRequest payload, String token) {
-              return SearchGoogleAdsRequest.newBuilder(payload).setPageToken(token).build();
-            }
-
-            @Override
-            public SearchGoogleAdsRequest injectPageSize(
-                SearchGoogleAdsRequest payload, int pageSize) {
-              return SearchGoogleAdsRequest.newBuilder(payload).setPageSize(pageSize).build();
-            }
-
-            @Override
-            public Integer extractPageSize(SearchGoogleAdsRequest payload) {
-              return payload.getPageSize();
-            }
-
-            @Override
-            public String extractNextToken(SearchGoogleAdsResponse payload) {
-              return payload.getNextPageToken();
-            }
-
-            @Override
-            public Iterable<GoogleAdsRow> extractResources(SearchGoogleAdsResponse payload) {
-              return payload.getResultsList() != null
-                  ? payload.getResultsList()
-                  : ImmutableList.<GoogleAdsRow>of();
-            }
-          };
-
-  private static final PagedListResponseFactory<
-          SearchGoogleAdsRequest, SearchGoogleAdsResponse, SearchPagedResponse>
-      SEARCH_PAGE_STR_FACT =
-          new PagedListResponseFactory<
-              SearchGoogleAdsRequest, SearchGoogleAdsResponse, SearchPagedResponse>() {
-            @Override
-            public ApiFuture<SearchPagedResponse> getFuturePagedResponse(
-                UnaryCallable<SearchGoogleAdsRequest, SearchGoogleAdsResponse> callable,
-                SearchGoogleAdsRequest request,
-                ApiCallContext context,
-                ApiFuture<SearchGoogleAdsResponse> futureResponse) {
-              PageContext<SearchGoogleAdsRequest, SearchGoogleAdsResponse, GoogleAdsRow>
-                  pageContext =
-                      PageContext.create(callable, SEARCH_PAGE_STR_DESC, request, context);
-              return SearchPagedResponse.createAsync(pageContext, futureResponse);
-            }
-          };
-
   /** Builder for GoogleAdsServiceStubSettings. */
   public static class Builder extends StubSettings.Builder<GoogleAdsServiceStubSettings, Builder> {
     private final ImmutableList<UnaryCallSettings.Builder<?, ?>> unaryMethodSettingsBuilders;
-
     private final PagedCallSettings.Builder<
             SearchGoogleAdsRequest, SearchGoogleAdsResponse, SearchPagedResponse>
         searchSettings;
@@ -262,7 +263,6 @@ public class GoogleAdsServiceStubSettings extends StubSettings<GoogleAdsServiceS
         searchStreamSettings;
     private final UnaryCallSettings.Builder<MutateGoogleAdsRequest, MutateGoogleAdsResponse>
         mutateSettings;
-
     private static final ImmutableMap<String, ImmutableSet<StatusCode.Code>>
         RETRYABLE_CODE_DEFINITIONS;
 
@@ -270,13 +270,10 @@ public class GoogleAdsServiceStubSettings extends StubSettings<GoogleAdsServiceS
       ImmutableMap.Builder<String, ImmutableSet<StatusCode.Code>> definitions =
           ImmutableMap.builder();
       definitions.put(
-          "retry_policy_1_codes",
+          "retry_policy_0_codes",
           ImmutableSet.copyOf(
               Lists.<StatusCode.Code>newArrayList(
                   StatusCode.Code.UNAVAILABLE, StatusCode.Code.DEADLINE_EXCEEDED)));
-      definitions.put("no_retry_codes", ImmutableSet.copyOf(Lists.<StatusCode.Code>newArrayList()));
-      definitions.put(
-          "no_retry_1_codes", ImmutableSet.copyOf(Lists.<StatusCode.Code>newArrayList()));
       RETRYABLE_CODE_DEFINITIONS = definitions.build();
     }
 
@@ -295,66 +292,24 @@ public class GoogleAdsServiceStubSettings extends StubSettings<GoogleAdsServiceS
               .setMaxRpcTimeout(Duration.ofMillis(3600000L))
               .setTotalTimeout(Duration.ofMillis(3600000L))
               .build();
-      definitions.put("retry_policy_1_params", settings);
-      settings = RetrySettings.newBuilder().setRpcTimeoutMultiplier(1.0).build();
-      definitions.put("no_retry_params", settings);
-      settings =
-          RetrySettings.newBuilder()
-              .setInitialRpcTimeout(Duration.ofMillis(3600000L))
-              .setRpcTimeoutMultiplier(1.0)
-              .setMaxRpcTimeout(Duration.ofMillis(3600000L))
-              .setTotalTimeout(Duration.ofMillis(3600000L))
-              .build();
-      definitions.put("no_retry_1_params", settings);
+      definitions.put("retry_policy_0_params", settings);
       RETRY_PARAM_DEFINITIONS = definitions.build();
     }
 
     protected Builder() {
-      this((ClientContext) null);
+      this(((ClientContext) null));
     }
 
     protected Builder(ClientContext clientContext) {
       super(clientContext);
 
       searchSettings = PagedCallSettings.newBuilder(SEARCH_PAGE_STR_FACT);
-
       searchStreamSettings = ServerStreamingCallSettings.newBuilder();
-
       mutateSettings = UnaryCallSettings.newUnaryCallSettingsBuilder();
 
       unaryMethodSettingsBuilders =
           ImmutableList.<UnaryCallSettings.Builder<?, ?>>of(searchSettings, mutateSettings);
-
       initDefaults(this);
-    }
-
-    private static Builder createDefault() {
-      Builder builder = new Builder((ClientContext) null);
-      builder.setTransportChannelProvider(defaultTransportChannelProvider());
-      builder.setCredentialsProvider(defaultCredentialsProviderBuilder().build());
-      builder.setInternalHeaderProvider(defaultApiClientHeaderProviderBuilder().build());
-      builder.setEndpoint(getDefaultEndpoint());
-      return initDefaults(builder);
-    }
-
-    private static Builder initDefaults(Builder builder) {
-
-      builder
-          .searchSettings()
-          .setRetryableCodes(RETRYABLE_CODE_DEFINITIONS.get("retry_policy_1_codes"))
-          .setRetrySettings(RETRY_PARAM_DEFINITIONS.get("retry_policy_1_params"));
-
-      builder
-          .searchStreamSettings()
-          .setRetryableCodes(RETRYABLE_CODE_DEFINITIONS.get("no_retry_1_codes"))
-          .setRetrySettings(RETRY_PARAM_DEFINITIONS.get("no_retry_1_params"));
-
-      builder
-          .mutateSettings()
-          .setRetryableCodes(RETRYABLE_CODE_DEFINITIONS.get("retry_policy_1_codes"))
-          .setRetrySettings(RETRY_PARAM_DEFINITIONS.get("retry_policy_1_params"));
-
-      return builder;
     }
 
     protected Builder(GoogleAdsServiceStubSettings settings) {
@@ -368,7 +323,37 @@ public class GoogleAdsServiceStubSettings extends StubSettings<GoogleAdsServiceS
           ImmutableList.<UnaryCallSettings.Builder<?, ?>>of(searchSettings, mutateSettings);
     }
 
-    // NEXT_MAJOR_VER: remove 'throws Exception'
+    private static Builder createDefault() {
+      Builder builder = new Builder(((ClientContext) null));
+
+      builder.setTransportChannelProvider(defaultTransportChannelProvider());
+      builder.setCredentialsProvider(defaultCredentialsProviderBuilder().build());
+      builder.setInternalHeaderProvider(defaultApiClientHeaderProviderBuilder().build());
+      builder.setEndpoint(getDefaultEndpoint());
+
+      return initDefaults(builder);
+    }
+
+    private static Builder initDefaults(Builder builder) {
+      builder
+          .searchSettings()
+          .setRetryableCodes(RETRYABLE_CODE_DEFINITIONS.get("retry_policy_0_codes"))
+          .setRetrySettings(RETRY_PARAM_DEFINITIONS.get("retry_policy_0_params"));
+
+      builder
+          .searchStreamSettings()
+          .setRetryableCodes(RETRYABLE_CODE_DEFINITIONS.get("retry_policy_0_codes"))
+          .setRetrySettings(RETRY_PARAM_DEFINITIONS.get("retry_policy_0_params"));
+
+      builder
+          .mutateSettings()
+          .setRetryableCodes(RETRYABLE_CODE_DEFINITIONS.get("retry_policy_0_codes"))
+          .setRetrySettings(RETRY_PARAM_DEFINITIONS.get("retry_policy_0_params"));
+
+      return builder;
+    }
+
+    // NEXT_MAJOR_VER: remove 'throws Exception'.
     /**
      * Applies the given settings updater function to all of the unary API methods in this service.
      *

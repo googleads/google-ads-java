@@ -38,22 +38,23 @@ public final class MobileAppCategoryConstantServiceProto {
       "i/resource.proto\"x\n#GetMobileAppCategory" +
       "ConstantRequest\022Q\n\rresource_name\030\001 \001(\tB:" +
       "\340A\002\372A4\n2googleads.googleapis.com/MobileA" +
-      "ppCategoryConstant2\257\002\n MobileAppCategory" +
+      "ppCategoryConstant2\331\002\n MobileAppCategory" +
       "ConstantService\022\355\001\n\034GetMobileAppCategory" +
       "Constant\022E.google.ads.googleads.v6.servi" +
       "ces.GetMobileAppCategoryConstantRequest\032" +
       "<.google.ads.googleads.v6.resources.Mobi" +
       "leAppCategoryConstant\"H\202\323\344\223\0022\0220/v6/{reso" +
       "urce_name=mobileAppCategoryConstants/*}\332" +
-      "A\rresource_name\032\033\312A\030googleads.googleapis" +
-      ".comB\214\002\n$com.google.ads.googleads.v6.ser" +
-      "vicesB%MobileAppCategoryConstantServiceP" +
-      "rotoP\001ZHgoogle.golang.org/genproto/googl" +
-      "eapis/ads/googleads/v6/services;services" +
-      "\242\002\003GAA\252\002 Google.Ads.GoogleAds.V6.Service" +
-      "s\312\002 Google\\Ads\\GoogleAds\\V6\\Services\352\002$G" +
-      "oogle::Ads::GoogleAds::V6::Servicesb\006pro" +
-      "to3"
+      "A\rresource_name\032E\312A\030googleads.googleapis" +
+      ".com\322A\'https://www.googleapis.com/auth/a" +
+      "dwordsB\214\002\n$com.google.ads.googleads.v6.s" +
+      "ervicesB%MobileAppCategoryConstantServic" +
+      "eProtoP\001ZHgoogle.golang.org/genproto/goo" +
+      "gleapis/ads/googleads/v6/services;servic" +
+      "es\242\002\003GAA\252\002 Google.Ads.GoogleAds.V6.Servi" +
+      "ces\312\002 Google\\Ads\\GoogleAds\\V6\\Services\352\002" +
+      "$Google::Ads::GoogleAds::V6::Servicesb\006p" +
+      "roto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -76,6 +77,7 @@ public final class MobileAppCategoryConstantServiceProto {
     registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);
     registry.add(com.google.api.AnnotationsProto.http);
     registry.add(com.google.api.ClientProto.methodSignature);
+    registry.add(com.google.api.ClientProto.oauthScopes);
     registry.add(com.google.api.ResourceProto.resourceReference);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);

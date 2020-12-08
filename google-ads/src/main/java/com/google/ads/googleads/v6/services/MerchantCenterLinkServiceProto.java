@@ -85,7 +85,7 @@ public final class MerchantCenterLinkServiceProto {
       "rLinkResponse\022P\n\006result\030\002 \001(\0132@.google.a" +
       "ds.googleads.v6.services.MutateMerchantC" +
       "enterLinkResult\"7\n\036MutateMerchantCenterL" +
-      "inkResult\022\025\n\rresource_name\030\001 \001(\t2\203\006\n\031Mer" +
+      "inkResult\022\025\n\rresource_name\030\001 \001(\t2\255\006\n\031Mer" +
       "chantCenterLinkService\022\347\001\n\027ListMerchantC" +
       "enterLinks\022@.google.ads.googleads.v6.ser" +
       "vices.ListMerchantCenterLinksRequest\032A.g" +
@@ -104,14 +104,15 @@ public final class MerchantCenterLinkServiceProto {
       "v6.services.MutateMerchantCenterLinkResp" +
       "onse\"[\202\323\344\223\002=\"8/v6/customers/{customer_id" +
       "=*}/merchantCenterLinks:mutate:\001*\332A\025cust" +
-      "omer_id,operation\032\033\312A\030googleads.googleap" +
-      "is.comB\205\002\n$com.google.ads.googleads.v6.s" +
-      "ervicesB\036MerchantCenterLinkServiceProtoP" +
-      "\001ZHgoogle.golang.org/genproto/googleapis" +
-      "/ads/googleads/v6/services;services\242\002\003GA" +
-      "A\252\002 Google.Ads.GoogleAds.V6.Services\312\002 G" +
-      "oogle\\Ads\\GoogleAds\\V6\\Services\352\002$Google" +
-      "::Ads::GoogleAds::V6::Servicesb\006proto3"
+      "omer_id,operation\032E\312A\030googleads.googleap" +
+      "is.com\322A\'https://www.googleapis.com/auth" +
+      "/adwordsB\205\002\n$com.google.ads.googleads.v6" +
+      ".servicesB\036MerchantCenterLinkServiceProt" +
+      "oP\001ZHgoogle.golang.org/genproto/googleap" +
+      "is/ads/googleads/v6/services;services\242\002\003" +
+      "GAA\252\002 Google.Ads.GoogleAds.V6.Services\312\002" +
+      " Google\\Ads\\GoogleAds\\V6\\Services\352\002$Goog" +
+      "le::Ads::GoogleAds::V6::Servicesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -171,6 +172,7 @@ public final class MerchantCenterLinkServiceProto {
     registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);
     registry.add(com.google.api.AnnotationsProto.http);
     registry.add(com.google.api.ClientProto.methodSignature);
+    registry.add(com.google.api.ClientProto.oauthScopes);
     registry.add(com.google.api.ResourceProto.resourceReference);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);

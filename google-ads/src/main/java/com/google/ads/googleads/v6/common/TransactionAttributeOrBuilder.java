@@ -10,8 +10,10 @@ public interface TransactionAttributeOrBuilder extends
   /**
    * <pre>
    * Timestamp when transaction occurred. Required.
-   * The format is "YYYY-MM-DD HH:MM:SS".
-   * Examples: "2018-03-05 09:15:00" or "2018-02-01 14:34:30"
+   * The format is "YYYY-MM-DD HH:MM:SS[+/-HH:MM]", where [+/-HH:MM] is an
+   * optional timezone offset from UTC. If the offset is absent, the API will
+   * use the account's timezone as default.
+   * Examples: "2018-03-05 09:15:00" or "2018-02-01 14:34:30+03:00"
    * </pre>
    *
    * <code>string transaction_date_time = 8;</code>
@@ -21,8 +23,10 @@ public interface TransactionAttributeOrBuilder extends
   /**
    * <pre>
    * Timestamp when transaction occurred. Required.
-   * The format is "YYYY-MM-DD HH:MM:SS".
-   * Examples: "2018-03-05 09:15:00" or "2018-02-01 14:34:30"
+   * The format is "YYYY-MM-DD HH:MM:SS[+/-HH:MM]", where [+/-HH:MM] is an
+   * optional timezone offset from UTC. If the offset is absent, the API will
+   * use the account's timezone as default.
+   * Examples: "2018-03-05 09:15:00" or "2018-02-01 14:34:30+03:00"
    * </pre>
    *
    * <code>string transaction_date_time = 8;</code>
@@ -32,8 +36,10 @@ public interface TransactionAttributeOrBuilder extends
   /**
    * <pre>
    * Timestamp when transaction occurred. Required.
-   * The format is "YYYY-MM-DD HH:MM:SS".
-   * Examples: "2018-03-05 09:15:00" or "2018-02-01 14:34:30"
+   * The format is "YYYY-MM-DD HH:MM:SS[+/-HH:MM]", where [+/-HH:MM] is an
+   * optional timezone offset from UTC. If the offset is absent, the API will
+   * use the account's timezone as default.
+   * Examples: "2018-03-05 09:15:00" or "2018-02-01 14:34:30+03:00"
    * </pre>
    *
    * <code>string transaction_date_time = 8;</code>

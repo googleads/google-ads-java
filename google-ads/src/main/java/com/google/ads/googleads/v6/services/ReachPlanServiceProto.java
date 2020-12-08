@@ -254,7 +254,7 @@ public final class ReachPlanServiceProto {
       "getAudienceMetrics\022\"\n\025youtube_audience_s" +
       "ize\030\003 \001(\003H\000\210\001\001\022!\n\024census_audience_size\030\004" +
       " \001(\003H\001\210\001\001B\030\n\026_youtube_audience_sizeB\027\n\025_" +
-      "census_audience_size2\375\007\n\020ReachPlanServic" +
+      "census_audience_size2\247\010\n\020ReachPlanServic" +
       "e\022\302\001\n\026ListPlannableLocations\022?.google.ad" +
       "s.googleads.v6.services.ListPlannableLoc" +
       "ationsRequest\032@.google.ads.googleads.v6." +
@@ -279,14 +279,15 @@ public final class ReachPlanServiceProto {
       "eReachForecastResponse\"o\202\323\344\223\0028\"3/v6/cust" +
       "omers/{customer_id=*}:generateReachForec" +
       "ast:\001*\332A.customer_id,campaign_duration,p" +
-      "lanned_products\032\033\312A\030googleads.googleapis" +
-      ".comB\374\001\n$com.google.ads.googleads.v6.ser" +
-      "vicesB\025ReachPlanServiceProtoP\001ZHgoogle.g" +
-      "olang.org/genproto/googleapis/ads/google" +
-      "ads/v6/services;services\242\002\003GAA\252\002 Google." +
-      "Ads.GoogleAds.V6.Services\312\002 Google\\Ads\\G" +
-      "oogleAds\\V6\\Services\352\002$Google::Ads::Goog" +
-      "leAds::V6::Servicesb\006proto3"
+      "lanned_products\032E\312A\030googleads.googleapis" +
+      ".com\322A\'https://www.googleapis.com/auth/a" +
+      "dwordsB\374\001\n$com.google.ads.googleads.v6.s" +
+      "ervicesB\025ReachPlanServiceProtoP\001ZHgoogle" +
+      ".golang.org/genproto/googleapis/ads/goog" +
+      "leads/v6/services;services\242\002\003GAA\252\002 Googl" +
+      "e.Ads.GoogleAds.V6.Services\312\002 Google\\Ads" +
+      "\\GoogleAds\\V6\\Services\352\002$Google::Ads::Go" +
+      "ogleAds::V6::Servicesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -444,6 +445,7 @@ public final class ReachPlanServiceProto {
     registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);
     registry.add(com.google.api.AnnotationsProto.http);
     registry.add(com.google.api.ClientProto.methodSignature);
+    registry.add(com.google.api.ClientProto.oauthScopes);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.ads.googleads.v6.common.CriteriaProto.getDescriptor();

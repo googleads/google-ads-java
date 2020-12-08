@@ -5,7 +5,7 @@
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
- *     https://www.apache.org/licenses/LICENSE-2.0
+ *      https://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -13,9 +13,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
 package com.google.ads.googleads.v6.services;
 
 import com.google.ads.googleads.v6.resources.DynamicSearchAdsSearchTermView;
+import com.google.ads.googleads.v6.resources.DynamicSearchAdsSearchTermViewName;
 import com.google.ads.googleads.v6.services.stub.DynamicSearchAdsSearchTermViewServiceStub;
 import com.google.ads.googleads.v6.services.stub.DynamicSearchAdsSearchTermViewServiceStubSettings;
 import com.google.api.core.BetaApi;
@@ -25,23 +27,14 @@ import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 import javax.annotation.Generated;
 
-// AUTO-GENERATED DOCUMENTATION AND SERVICE
+// AUTO-GENERATED DOCUMENTATION AND CLASS.
 /**
  * Service Description: Service to fetch dynamic search ads views.
  *
  * <p>This class provides the ability to make remote calls to the backing service through method
  * calls that map to API methods. Sample code to get started:
  *
- * <pre>
- * <code>
- * try (DynamicSearchAdsSearchTermViewServiceClient dynamicSearchAdsSearchTermViewServiceClient = DynamicSearchAdsSearchTermViewServiceClient.create()) {
- *   DynamicSearchAdsSearchTermViewName resourceName = DynamicSearchAdsSearchTermViewName.of("[CUSTOMER_ID]", "[AD_GROUP_ID]", "[SEARCH_TERM_FINGERPRINT]", "[HEADLINE_FINGERPRINT]", "[LANDING_PAGE_FINGERPRINT]", "[PAGE_URL_FINGERPRINT]");
- *   DynamicSearchAdsSearchTermView response = dynamicSearchAdsSearchTermViewServiceClient.getDynamicSearchAdsSearchTermView(resourceName);
- * }
- * </code>
- * </pre>
- *
- * <p>Note: close() needs to be called on the dynamicSearchAdsSearchTermViewServiceClient object to
+ * <p>Note: close() needs to be called on the DynamicSearchAdsSearchTermViewServiceClient object to
  * clean up resources such as threads. In the example above, try-with-resources is used, which
  * automatically calls close().
  *
@@ -70,30 +63,30 @@ import javax.annotation.Generated;
  *
  * <p>To customize credentials:
  *
- * <pre>
- * <code>
+ * <pre>{@code
  * DynamicSearchAdsSearchTermViewServiceSettings dynamicSearchAdsSearchTermViewServiceSettings =
  *     DynamicSearchAdsSearchTermViewServiceSettings.newBuilder()
  *         .setCredentialsProvider(FixedCredentialsProvider.create(myCredentials))
  *         .build();
  * DynamicSearchAdsSearchTermViewServiceClient dynamicSearchAdsSearchTermViewServiceClient =
- *     DynamicSearchAdsSearchTermViewServiceClient.create(dynamicSearchAdsSearchTermViewServiceSettings);
- * </code>
- * </pre>
+ *     DynamicSearchAdsSearchTermViewServiceClient.create(
+ *         dynamicSearchAdsSearchTermViewServiceSettings);
+ * }</pre>
  *
- * To customize the endpoint:
+ * <p>To customize the endpoint:
  *
- * <pre>
- * <code>
+ * <pre>{@code
  * DynamicSearchAdsSearchTermViewServiceSettings dynamicSearchAdsSearchTermViewServiceSettings =
  *     DynamicSearchAdsSearchTermViewServiceSettings.newBuilder().setEndpoint(myEndpoint).build();
  * DynamicSearchAdsSearchTermViewServiceClient dynamicSearchAdsSearchTermViewServiceClient =
- *     DynamicSearchAdsSearchTermViewServiceClient.create(dynamicSearchAdsSearchTermViewServiceSettings);
- * </code>
- * </pre>
+ *     DynamicSearchAdsSearchTermViewServiceClient.create(
+ *         dynamicSearchAdsSearchTermViewServiceSettings);
+ * }</pre>
+ *
+ * <p>Please refer to the GitHub repository's samples for more quickstart code snippets.
  */
-@Generated("by gapic-generator")
 @BetaApi
+@Generated("by gapic-generator")
 public class DynamicSearchAdsSearchTermViewServiceClient implements BackgroundResource {
   private final DynamicSearchAdsSearchTermViewServiceSettings settings;
   private final DynamicSearchAdsSearchTermViewServiceStub stub;
@@ -117,8 +110,8 @@ public class DynamicSearchAdsSearchTermViewServiceClient implements BackgroundRe
 
   /**
    * Constructs an instance of DynamicSearchAdsSearchTermViewServiceClient, using the given stub for
-   * making calls. This is for advanced usage - prefer to use
-   * DynamicSearchAdsSearchTermViewServiceSettings}.
+   * making calls. This is for advanced usage - prefer using
+   * create(DynamicSearchAdsSearchTermViewServiceSettings).
    */
   @BetaApi("A restructuring of stub classes is planned, so this may break in the future")
   public static final DynamicSearchAdsSearchTermViewServiceClient create(
@@ -155,20 +148,11 @@ public class DynamicSearchAdsSearchTermViewServiceClient implements BackgroundRe
     return stub;
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Returns the requested dynamic search ads search term view in full detail.
    *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (DynamicSearchAdsSearchTermViewServiceClient dynamicSearchAdsSearchTermViewServiceClient = DynamicSearchAdsSearchTermViewServiceClient.create()) {
-   *   DynamicSearchAdsSearchTermViewName resourceName = DynamicSearchAdsSearchTermViewName.of("[CUSTOMER_ID]", "[AD_GROUP_ID]", "[SEARCH_TERM_FINGERPRINT]", "[HEADLINE_FINGERPRINT]", "[LANDING_PAGE_FINGERPRINT]", "[PAGE_URL_FINGERPRINT]");
-   *   DynamicSearchAdsSearchTermView response = dynamicSearchAdsSearchTermViewServiceClient.getDynamicSearchAdsSearchTermView(resourceName);
-   * }
-   * </code></pre>
-   *
-   * @param resourceName Required. The resource name of the dynamic search ads search term view to
+   * @param resource_name Required. The resource name of the dynamic search ads search term view to
    *     fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
@@ -181,20 +165,11 @@ public class DynamicSearchAdsSearchTermViewServiceClient implements BackgroundRe
     return getDynamicSearchAdsSearchTermView(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Returns the requested dynamic search ads search term view in full detail.
    *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (DynamicSearchAdsSearchTermViewServiceClient dynamicSearchAdsSearchTermViewServiceClient = DynamicSearchAdsSearchTermViewServiceClient.create()) {
-   *   DynamicSearchAdsSearchTermViewName resourceName = DynamicSearchAdsSearchTermViewName.of("[CUSTOMER_ID]", "[AD_GROUP_ID]", "[SEARCH_TERM_FINGERPRINT]", "[HEADLINE_FINGERPRINT]", "[LANDING_PAGE_FINGERPRINT]", "[PAGE_URL_FINGERPRINT]");
-   *   DynamicSearchAdsSearchTermView response = dynamicSearchAdsSearchTermViewServiceClient.getDynamicSearchAdsSearchTermView(resourceName.toString());
-   * }
-   * </code></pre>
-   *
-   * @param resourceName Required. The resource name of the dynamic search ads search term view to
+   * @param resource_name Required. The resource name of the dynamic search ads search term view to
    *     fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
@@ -205,21 +180,9 @@ public class DynamicSearchAdsSearchTermViewServiceClient implements BackgroundRe
     return getDynamicSearchAdsSearchTermView(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Returns the requested dynamic search ads search term view in full detail.
-   *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (DynamicSearchAdsSearchTermViewServiceClient dynamicSearchAdsSearchTermViewServiceClient = DynamicSearchAdsSearchTermViewServiceClient.create()) {
-   *   DynamicSearchAdsSearchTermViewName resourceName = DynamicSearchAdsSearchTermViewName.of("[CUSTOMER_ID]", "[AD_GROUP_ID]", "[SEARCH_TERM_FINGERPRINT]", "[HEADLINE_FINGERPRINT]", "[LANDING_PAGE_FINGERPRINT]", "[PAGE_URL_FINGERPRINT]");
-   *   GetDynamicSearchAdsSearchTermViewRequest request = GetDynamicSearchAdsSearchTermViewRequest.newBuilder()
-   *     .setResourceName(resourceName.toString())
-   *     .build();
-   *   DynamicSearchAdsSearchTermView response = dynamicSearchAdsSearchTermViewServiceClient.getDynamicSearchAdsSearchTermView(request);
-   * }
-   * </code></pre>
    *
    * @param request The request object containing all of the parameters for the API call.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
@@ -229,23 +192,11 @@ public class DynamicSearchAdsSearchTermViewServiceClient implements BackgroundRe
     return getDynamicSearchAdsSearchTermViewCallable().call(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Returns the requested dynamic search ads search term view in full detail.
    *
    * <p>Sample code:
-   *
-   * <pre><code>
-   * try (DynamicSearchAdsSearchTermViewServiceClient dynamicSearchAdsSearchTermViewServiceClient = DynamicSearchAdsSearchTermViewServiceClient.create()) {
-   *   DynamicSearchAdsSearchTermViewName resourceName = DynamicSearchAdsSearchTermViewName.of("[CUSTOMER_ID]", "[AD_GROUP_ID]", "[SEARCH_TERM_FINGERPRINT]", "[HEADLINE_FINGERPRINT]", "[LANDING_PAGE_FINGERPRINT]", "[PAGE_URL_FINGERPRINT]");
-   *   GetDynamicSearchAdsSearchTermViewRequest request = GetDynamicSearchAdsSearchTermViewRequest.newBuilder()
-   *     .setResourceName(resourceName.toString())
-   *     .build();
-   *   ApiFuture&lt;DynamicSearchAdsSearchTermView&gt; future = dynamicSearchAdsSearchTermViewServiceClient.getDynamicSearchAdsSearchTermViewCallable().futureCall(request);
-   *   // Do something
-   *   DynamicSearchAdsSearchTermView response = future.get();
-   * }
-   * </code></pre>
    */
   public final UnaryCallable<
           GetDynamicSearchAdsSearchTermViewRequest, DynamicSearchAdsSearchTermView>
