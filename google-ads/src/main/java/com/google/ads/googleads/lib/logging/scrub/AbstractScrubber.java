@@ -17,6 +17,7 @@ package com.google.ads.googleads.lib.logging.scrub;
 import com.google.ads.googleads.lib.catalog.ApiCatalog;
 import com.google.ads.googleads.lib.catalog.Version;
 import com.google.ads.googleads.lib.utils.messageproxy.MessageEditor;
+import com.google.common.annotations.VisibleForTesting;
 import com.google.protobuf.Message;
 import java.util.Optional;
 import org.slf4j.Logger;
@@ -28,8 +29,8 @@ import org.slf4j.LoggerFactory;
  */
 public abstract class AbstractScrubber implements MessageEditor<Message> {
 
-  private static final ApiCatalog CATALOG = ApiCatalog.getDefault();
   private static final Logger LOGGER = LoggerFactory.getLogger(AbstractScrubber.class);
+  private final ApiCatalog catalog;
   private final int minVersionForScrub;
 
   /**
@@ -37,12 +38,18 @@ public abstract class AbstractScrubber implements MessageEditor<Message> {
    * scrubbing.
    */
   public AbstractScrubber(int minVersionForScrub) {
+    this(minVersionForScrub, ApiCatalog.getDefault());
+  }
+
+  @VisibleForTesting
+  AbstractScrubber(int minVersionForScrub, ApiCatalog catalog) {
+    this.catalog = catalog;
     this.minVersionForScrub = minVersionForScrub;
   }
 
   @Override
   public Message edit(Message input) {
-    Optional<Version> versionForMessage = CATALOG.getVersionForMessage(input);
+    Optional<Version> versionForMessage = catalog.getVersionForMessage(input);
     if (!versionForMessage.isPresent()) {
       // Don't throw unchecked exceptions here, but ask users nicely to report a bug.
       LOGGER.warn(
