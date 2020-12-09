@@ -41,6 +41,7 @@ public final class ArgumentNames {
   public static final String CAMPAIGN_ID = "--campaignId";
   public static final String CAMPAIGN_IDS = "--campaignIds";
   public static final String CARRIER_COUNTRY_CODE = "--carrierCountryCode";
+  public static final String CHAIN_ID = "--chainId";
   public static final String CONVERSION_ACTION_ID = "--conversionActionId";
   public static final String CONVERSION_ACTION_IDS = "--conversionActionIds";
   public static final String CONVERSION_DATE_TIME = "--conversionDateTime";
