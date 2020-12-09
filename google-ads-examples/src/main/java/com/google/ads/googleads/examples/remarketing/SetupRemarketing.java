@@ -58,8 +58,8 @@ import java.util.List;
 /**
  * Demonstrates various operations involved in remarketing, including (a) creating a user list based
  * on visitors to a website, (b) targeting a user list with an ad group criterion, (c) updating the
- * bid modifier on an ad group criterion, (d) finding and removing all ad group criteria under a
- * given campaign, (e) targeting a user list with a campaign criterion, and (f) updating the bid
+ * bid modifier value on an ad group criterion, (d) finding and removing all ad group criteria under
+ * a given campaign, (e) targeting a user list with a campaign criterion, and (f) updating the bid
  * modifier on a campaign criterion. It is unlikely that users will need to perform all of these
  * operations consecutively, and all of the operations contained herein are meant of for
  * illustrative purposes.
@@ -80,8 +80,8 @@ public class SetupRemarketing {
     private Long campaignId;
 
     /** Specify the bid modifier value here or the default specified below will be used. */
-    @Parameter(names = ArgumentNames.BID_MODIFIER)
-    private Double bidModifier = 1.5;
+    @Parameter(names = ArgumentNames.BID_MODIFIER_VALUE)
+    private Double bidModifierValue = 1.5;
   }
 
   public static void main(String[] args) {
@@ -95,7 +95,7 @@ public class SetupRemarketing {
       params.campaignId = Long.parseLong("INSERT_CAMPAIGN_ID_HERE");
       // Optional: To use a different bid modifier value from the default (1.5), uncomment
       // the line below and insert the desired bid modifier value.
-      // params.bidModifier = Double.parseDouble("INSERT_BID_MODIFIER_VALUE_HERE");
+      // params.bidModifierValue = Double.parseDouble("INSERT_BID_MODIFIER_VALUE_HERE");
     }
 
     GoogleAdsClient googleAdsClient = null;
@@ -117,7 +117,7 @@ public class SetupRemarketing {
               params.customerId,
               params.adGroupId,
               params.campaignId,
-              params.bidModifier);
+              params.bidModifierValue);
     } catch (GoogleAdsException gae) {
       // GoogleAdsException is the base class for most exceptions thrown by an API request.
       // Instances of this exception have a message and a GoogleAdsFailure that contains a
@@ -146,15 +146,16 @@ public class SetupRemarketing {
       long customerId,
       long adGroupId,
       long campaignId,
-      double bidModifier) {
+      double bidModifierValue) {
     String userList = createUserList(googleAdsClient, customerId);
     String adGroupCriterionResourceName =
         targetAdsInAdGroupToUserList(googleAdsClient, customerId, adGroupId, userList);
-    modifyAdGroupBids(googleAdsClient, customerId, adGroupCriterionResourceName, bidModifier);
+    modifyAdGroupBids(googleAdsClient, customerId, adGroupCriterionResourceName, bidModifierValue);
     removeExistingListCriteriaFromAdGroup(googleAdsClient, customerId, campaignId);
     String campaignCriterionResourceName =
         targetAdsInCampaignToUserList(googleAdsClient, customerId, campaignId, userList);
-    modifyCampaignBids(googleAdsClient, customerId, campaignCriterionResourceName, bidModifier);
+    modifyCampaignBids(
+        googleAdsClient, customerId, campaignCriterionResourceName, bidModifierValue);
   }
 
   /**
@@ -267,24 +268,24 @@ public class SetupRemarketing {
   // [END SetupRemarketing_1]
 
   /**
-   * Updates the bid modifier on an ad group criterion.
+   * Updates the bid modifier value on an ad group criterion.
    *
    * @param googleAdsClient the Google Ads API client.
    * @param customerId the client customer ID.
    * @param adGroupCriterionResourceName the ad group criterion to update.
-   * @param bidModifier the bid modifier.
+   * @param bidModifierValue the bid modifier value.
    */
   private void modifyAdGroupBids(
       GoogleAdsClient googleAdsClient,
       long customerId,
       String adGroupCriterionResourceName,
-      double bidModifier) {
-    // Creates the ad group criterion with a bid modifier. You may alternatively set the bid for
-    // the ad group criterion directly.
+      double bidModifierValue) {
+    // Creates the ad group criterion with a bid modifier value. You may alternatively set the bid
+    // for the ad group criterion directly.
     AdGroupCriterion adGroupCriterion =
         AdGroupCriterion.newBuilder()
             .setResourceName(adGroupCriterionResourceName)
-            .setBidModifier(bidModifier)
+            .setBidModifier(bidModifierValue)
             .build();
 
     // Creates the update operation.
@@ -433,23 +434,23 @@ public class SetupRemarketing {
   // [END SetupRemarketing_4]
 
   /**
-   * Updates the bid modifier on a campaign criterion.
+   * Updates the bid modifier value on a campaign criterion.
    *
    * @param googleAdsClient the Google Ads API client.
    * @param customerId the client customer ID.
    * @param campaignCriterionResourceName the campaign criterion to update.
-   * @param bidModifier the bid modifier.
+   * @param bidModifierValue the bid modifier value.
    */
   private void modifyCampaignBids(
       GoogleAdsClient googleAdsClient,
       long customerId,
       String campaignCriterionResourceName,
-      double bidModifier) {
+      double bidModifierValue) {
     // Creates the campaign criterion to update.
     CampaignCriterion campaignCriterion =
         CampaignCriterion.newBuilder()
             .setResourceName(campaignCriterionResourceName)
-            .setBidModifier((float) bidModifier)
+            .setBidModifier((float) bidModifierValue)
             .build();
 
     // Creates the update operation.

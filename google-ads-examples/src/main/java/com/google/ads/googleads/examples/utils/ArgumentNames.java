@@ -28,7 +28,6 @@ public final class ArgumentNames {
   public static final String ARTIFACT_NAME = "--artifactName";
   public static final String ATTRIBUTE_VALUE = "--attributeValue";
   public static final String BASE_CAMPAIGN_ID = "--baseCampaignId";
-  public static final String BID_MODIFIER = "--bidModifier";
   public static final String BID_MODIFIER_VALUE = "--bidModifierValue";
   public static final String BILLING_SETUP_ID = "--billingSetupId";
   public static final String BRIDGE_MAP_VERSION_ID = "--bridgeMapVersionId";
