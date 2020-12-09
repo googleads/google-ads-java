@@ -44,8 +44,8 @@ import java.util.stream.Collectors;
  * steps, since removing the campaign extension setting doesn't automatically remove its extension
  * feed items.
  *
- * <p>To make this example work with other types of extensions, find `ExtensionType::SITELINK` and
- * replace it with the extension type you wish to remove.
+ * <p>To make this example work with other types of extensions, find {@link ExtensionType}#SITELINK
+ * and replace it with the extension type you wish to remove.
  */
 public class RemoveEntireSitelinkCampaignExtensionSetting {
 
@@ -104,20 +104,13 @@ public class RemoveEntireSitelinkCampaignExtensionSetting {
   /** Runs the example. */
   // [START RemoveEntireSitelinkCampaignExtensionSetting]
   private void runExample(GoogleAdsClient googleAdsClient, long customerId, long campaignId) {
-    // Creates an operation to remove a campaign extension setting.
-    CampaignExtensionSettingOperation extensionSettingOperation =
-        CampaignExtensionSettingOperation.newBuilder()
-            .setRemove(
-                ResourceNames.campaignExtensionSetting(
-                    customerId, campaignId, ExtensionType.SITELINK))
-            .build();
 
     // Retrieves all sitelink extension feed items for a customer and campaign.
     List<String> extensionFeedItemResourceNames =
         getSitelinkExtensionFeedItems(googleAdsClient, customerId, campaignId);
 
-    // Constructs operations to remove the extension feed item operations.
-    List<MutateOperation> extensionFeedItemOperations =
+    // Constructs operations to remove the extension feed items.
+    List<MutateOperation> feedItemMutateOperations =
         extensionFeedItemResourceNames.stream()
             .map(
                 feedItem ->
@@ -130,11 +123,18 @@ public class RemoveEntireSitelinkCampaignExtensionSetting {
     // Creates a list of operations that contains both the campaign extension setting and the feed
     // item operations.
     List<MutateOperation> allOperations = new ArrayList();
+    // Adds an operation to remove the campaign extension setting.
     allOperations.add(
         MutateOperation.newBuilder()
-            .setCampaignExtensionSettingOperation(extensionSettingOperation)
+            .setCampaignExtensionSettingOperation(
+                CampaignExtensionSettingOperation.newBuilder()
+                    .setRemove(
+                        ResourceNames.campaignExtensionSetting(
+                            customerId, campaignId, ExtensionType.SITELINK))
+                    .build())
             .build());
-    allOperations.addAll(extensionFeedItemOperations);
+    // Adds the operations to remove the feed items.
+    allOperations.addAll(feedItemMutateOperations);
 
     // Connects to the API.
     try (GoogleAdsServiceClient client =
