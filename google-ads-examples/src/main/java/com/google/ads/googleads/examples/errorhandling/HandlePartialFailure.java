@@ -16,6 +16,7 @@ package com.google.ads.googleads.examples.errorhandling;
 
 import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
+import com.google.ads.googleads.examples.utils.CodeSampleHelper;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
 import com.google.ads.googleads.v6.errors.GoogleAdsError;
@@ -121,13 +122,13 @@ public class HandlePartialFailure {
     AdGroup group1 =
         AdGroup.newBuilder()
             .setCampaign(ResourceNames.campaign(customerId, campaignId))
-            .setName("Valid AdGroup: " + System.currentTimeMillis())
+            .setName("Valid AdGroup: " + CodeSampleHelper.getPrintableDatetime())
             .build();
     // This AdGroup will always fail - campaign ID 0 in resource names is never valid.
     AdGroup group2 =
         AdGroup.newBuilder()
             .setCampaign(ResourceNames.campaign(customerId, 0L))
-            .setName("Broken AdGroup: " + System.currentTimeMillis())
+            .setName("Broken AdGroup: " + CodeSampleHelper.getPrintableDatetime())
             .build();
     // This AdGroup will always fail - duplicate ad group names are not allowed.
     AdGroup group3 =

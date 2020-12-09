@@ -16,6 +16,7 @@ package com.google.ads.googleads.examples.hotelads;
 
 import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
+import com.google.ads.googleads.examples.utils.CodeSampleHelper;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
 import com.google.ads.googleads.v6.common.HotelAdInfo;
@@ -168,7 +169,7 @@ public class AddHotelAd {
   private String addCampaignBudget(GoogleAdsClient googleAdsClient, long customerId) {
     CampaignBudget budget =
         CampaignBudget.newBuilder()
-            .setName("Interplanetary Cruise Budget #" + System.currentTimeMillis())
+            .setName("Interplanetary Cruise Budget #" + CodeSampleHelper.getPrintableDatetime())
             .setDeliveryMethod(BudgetDeliveryMethod.STANDARD)
             .setAmountMicros(5_000_000)
             .build();
@@ -218,7 +219,7 @@ public class AddHotelAd {
     // Creates the campaign.
     Campaign campaign =
         Campaign.newBuilder()
-            .setName("Interplanetary Cruise #" + System.currentTimeMillis())
+            .setName("Interplanetary Cruise #" + CodeSampleHelper.getPrintableDatetime())
             // Configures settings related to hotel campaigns including advertising channel type
             // and hotel setting info.
             .setAdvertisingChannelType(AdvertisingChannelType.HOTEL)
@@ -270,7 +271,7 @@ public class AddHotelAd {
     // Creates an ad group.
     AdGroup adGroup =
         AdGroup.newBuilder()
-            .setName("Earth to Mars Cruises #" + System.currentTimeMillis())
+            .setName("Earth to Mars Cruises #" + CodeSampleHelper.getPrintableDatetime())
             .setCampaign(campaignResourceName)
             // Sets the ad group type to HOTEL_ADS. This cannot be set to other types.
             .setType(AdGroupType.HOTEL_ADS)

@@ -16,6 +16,7 @@ package com.google.ads.googleads.examples.basicoperations;
 
 import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
+import com.google.ads.googleads.examples.utils.CodeSampleHelper;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
 import com.google.ads.googleads.v6.enums.AdGroupStatusEnum.AdGroupStatus;
@@ -99,7 +100,7 @@ public class AddAdGroups {
     // Creates an ad group, setting an optional CPC value.
     AdGroup adGroup1 =
         AdGroup.newBuilder()
-            .setName("Earth to Mars Cruises #" + System.currentTimeMillis())
+            .setName("Earth to Mars Cruises #" + CodeSampleHelper.getPrintableDatetime())
             .setStatus(AdGroupStatus.ENABLED)
             .setCampaign(campaignResourceName)
             .setType(AdGroupType.SEARCH_STANDARD)
@@ -109,7 +110,7 @@ public class AddAdGroups {
     // You may add as many additional ad groups as you need.
     AdGroup adGroup2 =
         AdGroup.newBuilder()
-            .setName("Earth to Venus Cruises #" + System.currentTimeMillis())
+            .setName("Earth to Venus Cruises #" + CodeSampleHelper.getPrintableDatetime())
             .setStatus(AdGroupStatus.ENABLED)
             .setCampaign(campaignResourceName)
             .setType(AdGroupType.SEARCH_STANDARD)

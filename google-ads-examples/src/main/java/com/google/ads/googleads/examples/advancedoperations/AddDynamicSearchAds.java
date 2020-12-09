@@ -16,6 +16,7 @@ package com.google.ads.googleads.examples.advancedoperations;
 
 import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
+import com.google.ads.googleads.examples.utils.CodeSampleHelper;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
 import com.google.ads.googleads.v6.common.ExpandedDynamicSearchAdInfo;
@@ -131,7 +132,7 @@ public class AddDynamicSearchAds {
     // Creates the budget.
     CampaignBudget campaignBudget =
         CampaignBudget.newBuilder()
-            .setName("Interplanetary Cruise Budget #" + System.currentTimeMillis())
+            .setName("Interplanetary Cruise Budget #" + CodeSampleHelper.getPrintableDatetime())
             .setAmountMicros(3_000_000)
             .setDeliveryMethod(BudgetDeliveryMethod.STANDARD)
             .build();
@@ -168,7 +169,7 @@ public class AddDynamicSearchAds {
     // Creates the campaign.
     Campaign campaign =
         Campaign.newBuilder()
-            .setName("Interplanetary Cruise #" + System.currentTimeMillis())
+            .setName("Interplanetary Cruise #" + CodeSampleHelper.getPrintableDatetime())
             .setAdvertisingChannelType(AdvertisingChannelType.SEARCH)
             .setStatus(CampaignStatus.PAUSED)
             .setManualCpc(ManualCpc.newBuilder().build())
@@ -216,7 +217,7 @@ public class AddDynamicSearchAds {
     // Creates the ad group.
     AdGroup adGroup =
         AdGroup.newBuilder()
-            .setName("Earth to Mars Cruises #" + System.currentTimeMillis())
+            .setName("Earth to Mars Cruises #" + CodeSampleHelper.getPrintableDatetime())
             .setCampaign(campaignResourceName)
             .setType(AdGroupType.SEARCH_DYNAMIC_ADS)
             .setStatus(AdGroupStatus.PAUSED)

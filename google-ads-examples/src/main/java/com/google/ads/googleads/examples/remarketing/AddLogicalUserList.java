@@ -16,6 +16,7 @@ package com.google.ads.googleads.examples.remarketing;
 
 import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
+import com.google.ads.googleads.examples.utils.CodeSampleHelper;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
 import com.google.ads.googleads.v6.common.LogicalUserListInfo;
@@ -129,7 +130,7 @@ public class AddLogicalUserList {
     // Creates the new combination user list.
     UserList userList =
         UserList.newBuilder()
-            .setName("My combination list of other user lists #" + System.currentTimeMillis())
+            .setName("My combination list of other user lists #" + CodeSampleHelper.getPrintableDatetime())
             .setLogicalUserList(
                 LogicalUserListInfo.newBuilder().addRules(userListLogicalRuleInfo).build())
             .build();

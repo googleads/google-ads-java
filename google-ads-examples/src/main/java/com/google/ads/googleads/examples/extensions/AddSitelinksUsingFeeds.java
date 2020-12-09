@@ -16,6 +16,7 @@ package com.google.ads.googleads.examples.extensions;
 
 import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
+import com.google.ads.googleads.examples.utils.CodeSampleHelper;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
 import com.google.ads.googleads.v6.common.MatchingFunction;
@@ -160,7 +161,7 @@ public class AddSitelinksUsingFeeds {
     // Creates the feed.
     Feed feed =
         Feed.newBuilder()
-            .setName("Sitelinks Feed #" + System.currentTimeMillis())
+            .setName("Sitelinks Feed #" + CodeSampleHelper.getPrintableDatetime())
             .setOrigin(FeedOrigin.USER)
             // Specifies the column name and data type. This is just raw data at this point
             // and not yet linked to any particular purpose. The names are used to help us

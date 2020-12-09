@@ -16,6 +16,7 @@ package com.google.ads.googleads.examples.remarketing;
 
 import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
+import com.google.ads.googleads.examples.utils.CodeSampleHelper;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
 import com.google.ads.googleads.v6.common.ExpressionRuleUserListInfo;
@@ -155,7 +156,7 @@ public class AddExpressionRuleUserList {
         UserList.newBuilder()
             .setName(
                 "All visitors to example.com/section1 AND example.com/section2 #"
-                    + System.currentTimeMillis())
+                    + CodeSampleHelper.getPrintableDatetime())
             .setDescription("Visitors of both example.com/section1 AND example.com/section2")
             .setMembershipStatus(UserListMembershipStatus.OPEN)
             .setMembershipLifeSpan(365)

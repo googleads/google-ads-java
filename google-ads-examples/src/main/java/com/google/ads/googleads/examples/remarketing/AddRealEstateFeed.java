@@ -16,6 +16,7 @@ package com.google.ads.googleads.examples.remarketing;
 
 import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
+import com.google.ads.googleads.examples.utils.CodeSampleHelper;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
 import com.google.ads.googleads.v6.enums.FeedAttributeTypeEnum.FeedAttributeType;
@@ -161,7 +162,7 @@ public class AddRealEstateFeed {
     // Creates the feed.
     Feed feed =
         Feed.newBuilder()
-            .setName("Real Estate Feed #" + System.currentTimeMillis())
+            .setName("Real Estate Feed #" + CodeSampleHelper.getPrintableDatetime())
             .addAttributes(listingIdAttribute)
             .addAttributes(listingNameAttribute)
             .addAttributes(finalUrlsAttribute)

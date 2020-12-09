@@ -16,6 +16,7 @@ package com.google.ads.googleads.examples.billing;
 
 import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
+import com.google.ads.googleads.examples.utils.CodeSampleHelper;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
 import com.google.ads.googleads.v6.errors.GoogleAdsError;
@@ -178,7 +179,7 @@ public class AddBillingSetup {
       // about payments profiles.
       billingSetupBuilder.setPaymentsAccountInfo(
           PaymentsAccountInfo.newBuilder()
-              .setPaymentsAccountName("Payments Account #" + System.currentTimeMillis())
+              .setPaymentsAccountName("Payments Account #" + CodeSampleHelper.getPrintableDatetime())
               .setPaymentsProfileId(paymentsProfileId)
               .build());
     } else {

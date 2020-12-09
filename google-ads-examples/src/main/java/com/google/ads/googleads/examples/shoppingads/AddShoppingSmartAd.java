@@ -16,6 +16,7 @@ package com.google.ads.googleads.examples.shoppingads;
 
 import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
+import com.google.ads.googleads.examples.utils.CodeSampleHelper;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
 import com.google.ads.googleads.v6.common.ListingGroupInfo;
@@ -178,7 +179,7 @@ public class AddShoppingSmartAd {
   private String addCampaignBudget(GoogleAdsClient googleAdsClient, long customerId) {
     CampaignBudget budget =
         CampaignBudget.newBuilder()
-            .setName("Interplanetary Cruise Budget #" + System.currentTimeMillis())
+            .setName("Interplanetary Cruise Budget #" + CodeSampleHelper.getPrintableDatetime())
             .setDeliveryMethod(BudgetDeliveryMethod.STANDARD)
             // The budget is specified in the local currency of the account.
             // The amount should be specified in micros, where one million is equivalent to one
@@ -232,7 +233,7 @@ public class AddShoppingSmartAd {
     // Creates the campaign.
     Campaign campaign =
         Campaign.newBuilder()
-            .setName("Interplanetary Cruise #" + System.currentTimeMillis())
+            .setName("Interplanetary Cruise #" + CodeSampleHelper.getPrintableDatetime())
             // Configures settings related to shopping campaigns including advertising channel type,
             // advertising sub-type and shopping setting.
             .setAdvertisingChannelType(AdvertisingChannelType.SHOPPING)
@@ -292,7 +293,7 @@ public class AddShoppingSmartAd {
     // Creates an ad group.
     AdGroup adGroup =
         AdGroup.newBuilder()
-            .setName("Earth to Mars Cruises #" + System.currentTimeMillis())
+            .setName("Earth to Mars Cruises #" + CodeSampleHelper.getPrintableDatetime())
             .setCampaign(campaignResourceName)
             // Sets the ad group type to SHOPPING_SMART_ADS. This cannot be set to other types.
             .setType(AdGroupType.SHOPPING_SMART_ADS)

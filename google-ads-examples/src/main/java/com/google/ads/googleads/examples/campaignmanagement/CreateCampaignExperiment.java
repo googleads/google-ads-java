@@ -16,6 +16,7 @@ package com.google.ads.googleads.examples.campaignmanagement;
 
 import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
+import com.google.ads.googleads.examples.utils.CodeSampleHelper;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
 import com.google.ads.googleads.v6.enums.CampaignExperimentTrafficSplitTypeEnum.CampaignExperimentTrafficSplitType;
@@ -131,7 +132,7 @@ public class CreateCampaignExperiment {
     CampaignExperiment experiment =
         CampaignExperiment.newBuilder()
             .setCampaignDraft(ResourceNames.campaignDraft(customerId, baseCampaignId, draftId))
-            .setName("Campaign experiment #" + System.currentTimeMillis())
+            .setName("Campaign experiment #" + CodeSampleHelper.getPrintableDatetime())
             .setTrafficSplitPercent(50)
             .setTrafficSplitType(CampaignExperimentTrafficSplitType.RANDOM_QUERY)
             .build();

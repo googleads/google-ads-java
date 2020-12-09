@@ -16,6 +16,7 @@ package com.google.ads.googleads.examples.campaignmanagement;
 
 import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
+import com.google.ads.googleads.examples.utils.CodeSampleHelper;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
 import com.google.ads.googleads.v6.enums.BudgetDeliveryMethodEnum.BudgetDeliveryMethod;
@@ -98,7 +99,7 @@ public class GraduateCampaignExperiment {
     // after it is made independent by graduation.
     CampaignBudget budget =
         CampaignBudget.newBuilder()
-            .setName("Budget #" + System.currentTimeMillis())
+            .setName("Budget #" + CodeSampleHelper.getPrintableDatetime())
             .setAmountMicros(50_000_000)
             .setDeliveryMethod(BudgetDeliveryMethod.STANDARD)
             .build();

@@ -16,6 +16,7 @@ package com.google.ads.googleads.examples.remarketing;
 
 import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
+import com.google.ads.googleads.examples.utils.CodeSampleHelper;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
 import com.google.ads.googleads.v6.common.CombinedRuleUserListInfo;
@@ -164,7 +165,7 @@ public class AddCombinedRuleUserList {
         UserList.newBuilder()
             .setName(
                 "All visitors to http://example.com/example1 AND http://example.com/example2 #"
-                    + System.currentTimeMillis())
+                    + CodeSampleHelper.getPrintableDatetime())
             .setDescription(
                 "Visitors of both http://example.com/example1 AND http://example.com/example2")
             .setMembershipStatus(UserListMembershipStatus.OPEN)

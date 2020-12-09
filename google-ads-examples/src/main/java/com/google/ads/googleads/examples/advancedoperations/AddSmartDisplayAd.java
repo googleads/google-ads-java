@@ -16,6 +16,7 @@ package com.google.ads.googleads.examples.advancedoperations;
 
 import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
+import com.google.ads.googleads.examples.utils.CodeSampleHelper;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
 import com.google.ads.googleads.v6.common.AdImageAsset;
@@ -180,7 +181,7 @@ public class AddSmartDisplayAd {
     // Creates the budget.
     CampaignBudget campaignBudget =
         CampaignBudget.newBuilder()
-            .setName("Interplanetary Cruise Budget #" + System.currentTimeMillis())
+            .setName("Interplanetary Cruise Budget #" + CodeSampleHelper.getPrintableDatetime())
             .setAmountMicros(5_000_000)
             .setDeliveryMethod(BudgetDeliveryMethod.STANDARD)
             .build();
@@ -218,7 +219,7 @@ public class AddSmartDisplayAd {
     // Creates the campaign.
     Campaign campaign =
         Campaign.newBuilder()
-            .setName("Smart Display Campaign #" + System.currentTimeMillis())
+            .setName("Smart Display Campaign #" + CodeSampleHelper.getPrintableDatetime())
             // Smart Display campaign requires the advertising channel type as 'DISPLAY'.
             .setAdvertisingChannelType(AdvertisingChannelType.DISPLAY)
             // Smart Display campaign requires the advertising channel sub type as
@@ -267,7 +268,7 @@ public class AddSmartDisplayAd {
     // Creates the ad group.
     AdGroup adGroup =
         AdGroup.newBuilder()
-            .setName("Earth to Mars Cruises #" + System.currentTimeMillis())
+            .setName("Earth to Mars Cruises #" + CodeSampleHelper.getPrintableDatetime())
             .setCampaign(campaignResourceName)
             .setStatus(AdGroupStatus.PAUSED)
             .build();
