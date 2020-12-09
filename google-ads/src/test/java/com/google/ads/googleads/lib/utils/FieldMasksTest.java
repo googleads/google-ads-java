@@ -75,9 +75,9 @@ public class FieldMasksTest {
 
   @Test
   public void getFieldValue_repeated_throws_exception() {
-    IllegalArgumentException exception =
+    IllegalStateException exception =
         assertThrows(
-            IllegalArgumentException.class,
+            IllegalStateException.class,
             () -> {
               FieldMasks.getFieldValue("url_custom_parameters.key", campaign);
             });
@@ -89,9 +89,9 @@ public class FieldMasksTest {
 
   @Test
   public void getFieldValue_non_message_throws_exception() {
-    IllegalArgumentException exception =
+    IllegalStateException exception =
         assertThrows(
-            IllegalArgumentException.class,
+            IllegalStateException.class,
             () -> {
               FieldMasks.getFieldValue("status.paused", campaign);
             });

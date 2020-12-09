@@ -136,10 +136,8 @@ public class FieldMasks {
     Message currentEntity = entity;
     while (!fieldMaskParts.isEmpty()) {
       String fieldMaskPart = fieldMaskParts.remove();
-      if (Objects.isNull(currentEntity)) {
-        throw new IllegalArgumentException(
-            String.format("Cannot get field value. %s is null.", fieldMaskPart));
-      }
+      Preconditions.checkNotNull(
+          currentEntity, String.format("Cannot get field value. %s is null.", fieldMaskPart));
       Descriptor descriptor = currentEntity.getDescriptorForType();
       FieldDescriptor childField = descriptor.findFieldByName(fieldMaskPart);
       V childValue;
@@ -158,26 +156,21 @@ public class FieldMasks {
         // we can recurse.
         currentEntity = (Message) childValue;
       } else if (childField.isRepeated() && childValue instanceof List) {
-        if (fieldMaskParts.isEmpty()) {
-          return childValue;
-        } else {
-          throw new IllegalArgumentException(
-              String.format(
-                  "Cannot retrieve field value. A repeated field was encountered after"
-                      + " navigating %s up to %s.",
-                  fieldMaskPath, fieldMaskPart));
-        }
+        Preconditions.checkState(
+            fieldMaskParts.isEmpty(),
+            String.format(
+                "Cannot retrieve field value. A repeated field was encountered after"
+                    + " navigating %s up to %s.",
+                fieldMaskPath, fieldMaskPart));
+        return childValue;
       } else {
-        if (fieldMaskParts.isEmpty()) {
-          // we cannot recurse any longer.
-          return childValue;
-        } else {
-          throw new IllegalArgumentException(
-              String.format(
-                  "Cannot retrieve field value. A non-MESSAGE field was encountered after"
-                      + " navigating %s up to %s.",
-                  fieldMaskPath, fieldMaskPart));
-        }
+        Preconditions.checkState(
+            fieldMaskParts.isEmpty(),
+            String.format(
+                "Cannot retrieve field value. A non-MESSAGE field was encountered after"
+                    + " navigating %s up to %s.",
+                fieldMaskPath, fieldMaskPart));
+        return childValue;
       }
     }
     return (V) currentEntity;
