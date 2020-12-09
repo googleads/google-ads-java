@@ -235,7 +235,7 @@ public class GetAccountHierarchy {
               rootCustomerClient = customerClient;
             }
 
-            // The steps below map parent and children accounts. Continue here so that managers
+            // The steps below map parent and children accounts. Continue here so that manager
             // accounts exclude themselves from the list of their children accounts.
             if (customerClient.getId() == customerIdToSearchFrom) {
               continue;
@@ -266,7 +266,7 @@ public class GetAccountHierarchy {
       }
 
       // The rootCustomerClient will be null if the account hierarchy was unable to be retrieved
-      // (e.g. the account is a test account or a client account with an incomplete billing setup.
+      // (e.g. the account is a test account or a client account with an incomplete billing setup).
       // This method returns null in these cases to add the seedCustomerId to the list of
       // customer IDs for which the account hierarchy could not be retrieved.
       if (rootCustomerClient == null) {
