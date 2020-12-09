@@ -17,9 +17,13 @@ package com.google.ads.googleads.lib.utils;
 import com.google.common.base.Preconditions;
 import com.google.protobuf.Descriptors.Descriptor;
 import com.google.protobuf.Descriptors.FieldDescriptor;
+import com.google.protobuf.Descriptors.FieldDescriptor.JavaType;
 import com.google.protobuf.FieldMask;
 import com.google.protobuf.GeneratedMessageV3;
 import com.google.protobuf.Message;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 import java.util.Objects;
 
 /** Utility methods for working with field masks. */
@@ -117,6 +121,65 @@ public class FieldMasks {
         }
       }
     }
+  }
+
+  /**
+   * Gets the field value of a message from a field mask path.
+   *
+   * @param fieldMaskPath The field mask path.
+   * @param entity The entity to retrieve values from.
+   * @return the field Object.
+   */
+  public static Object getFieldValue(String fieldMaskPath, Message entity) {
+    List<String> fieldMaskParts = new ArrayList<>(Arrays.asList(fieldMaskPath.split("\\.")));
+    Message currentEntity = entity;
+    while (!fieldMaskParts.isEmpty()) {
+      String fieldMaskPart = fieldMaskParts.remove(0);
+      if (Objects.isNull(currentEntity)) {
+        throw new IllegalArgumentException(
+            String.format("Cannot get field value. %s is null.", fieldMaskPart));
+      }
+      Descriptor descriptor = currentEntity.getDescriptorForType();
+      FieldDescriptor childField = descriptor.findFieldByName(fieldMaskPart);
+      Object childValue;
+      try {
+        childValue = currentEntity.getField(childField);
+      } catch (NullPointerException e) {
+        throw new IllegalArgumentException(
+            String.format(
+                "Cannot retrieve field value. A matching field was not found after"
+                    + " navigating %s up to %s.",
+                fieldMaskPath, fieldMaskPart));
+      }
+      if (!childField.isRepeated()
+          && childField.getJavaType() == JavaType.MESSAGE
+          && childValue instanceof Message) {
+        // we can recurse.
+        currentEntity = (Message) childValue;
+      } else if (childField.isRepeated() && childValue instanceof List) {
+        if (fieldMaskParts.size() == 0) {
+          return childValue;
+        } else {
+          throw new IllegalArgumentException(
+              String.format(
+                  "Cannot retrieve field value. A repeated field was encountered after"
+                      + " navigating %s up to %s.",
+                  fieldMaskPath, fieldMaskPart));
+        }
+      } else {
+        if (fieldMaskParts.size() == 0) {
+          // we cannot recurse any longer.
+          return childValue;
+        } else {
+          throw new IllegalArgumentException(
+              String.format(
+                  "Cannot retrieve field value. A non-MESSAGE field was encountered after"
+                      + " navigating %s up to %s.",
+                  fieldMaskPath, fieldMaskPart));
+        }
+      }
+    }
+    return currentEntity;
   }
 
   private static String getFieldName(String currentField, FieldDescriptor field) {
