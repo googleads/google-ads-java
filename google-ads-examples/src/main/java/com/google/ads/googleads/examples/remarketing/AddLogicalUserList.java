@@ -130,7 +130,9 @@ public class AddLogicalUserList {
     // Creates the new combination user list.
     UserList userList =
         UserList.newBuilder()
-            .setName("My combination list of other user lists #" + CodeSampleHelper.getPrintableDatetime())
+            .setName(
+                "My combination list of other user lists #"
+                    + CodeSampleHelper.getPrintableDatetime())
             .setLogicalUserList(
                 LogicalUserListInfo.newBuilder().addRules(userListLogicalRuleInfo).build())
             .build();

@@ -32,9 +32,7 @@ import com.google.common.collect.ImmutableList;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
-/**
- * Updates a sitelink extension feed item {@code SitelinkFeedItem} with the specified link text.
- */
+/** Updates a sitelink extension feed item {@code SitelinkFeedItem} with the specified link text. */
 public class UpdateSitelink {
 
   private static class UpdateSitelinkParams extends CodeSampleParams {

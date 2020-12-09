@@ -179,7 +179,8 @@ public class AddBillingSetup {
       // about payments profiles.
       billingSetupBuilder.setPaymentsAccountInfo(
           PaymentsAccountInfo.newBuilder()
-              .setPaymentsAccountName("Payments Account #" + CodeSampleHelper.getPrintableDatetime())
+              .setPaymentsAccountName(
+                  "Payments Account #" + CodeSampleHelper.getPrintableDatetime())
               .setPaymentsProfileId(paymentsProfileId)
               .build());
     } else {

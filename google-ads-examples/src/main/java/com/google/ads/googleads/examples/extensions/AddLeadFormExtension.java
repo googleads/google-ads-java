@@ -25,7 +25,6 @@ import com.google.ads.googleads.v6.common.LeadFormField;
 import com.google.ads.googleads.v6.common.LeadFormSingleChoiceAnswers;
 import com.google.ads.googleads.v6.common.WebhookDelivery;
 import com.google.ads.googleads.v6.enums.AssetFieldTypeEnum.AssetFieldType;
-import com.google.ads.googleads.v6.enums.AssetLinkStatusEnum.AssetLinkStatus;
 import com.google.ads.googleads.v6.enums.LeadFormCallToActionTypeEnum.LeadFormCallToActionType;
 import com.google.ads.googleads.v6.enums.LeadFormFieldUserInputTypeEnum.LeadFormFieldUserInputType;
 import com.google.ads.googleads.v6.enums.LeadFormPostSubmitCallToActionTypeEnum.LeadFormPostSubmitCallToActionType;
@@ -124,7 +123,8 @@ public class AddLeadFormExtension {
     // Creates the lead form asset.
     Asset leadFormAsset =
         Asset.newBuilder()
-            .setName("Interplanetary Cruise #" + CodeSampleHelper.getPrintableDatetime() + " Lead Form")
+            .setName(
+                "Interplanetary Cruise #" + CodeSampleHelper.getPrintableDatetime() + " Lead Form")
             .setLeadFormAsset(
                 LeadFormAsset.newBuilder()
                     // Specify the details of the extension that the users will see.
@@ -165,7 +165,7 @@ public class AddLeadFormExtension {
 
                     // Optional: You can also specify a background image asset.
                     // To upload an asset, see Misc/UploadImageAsset.java.
-                    //.setBackgroundImageAsset("INSERT_IMAGE_ASSET_HERE")
+                    // .setBackgroundImageAsset("INSERT_IMAGE_ASSET_HERE")
 
                     // Optional: Define the response page after the user signs up on the form.
                     .setPostSubmitHeadline("Thanks for signing up!")

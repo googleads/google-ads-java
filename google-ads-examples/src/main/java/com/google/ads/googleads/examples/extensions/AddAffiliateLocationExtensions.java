@@ -150,7 +150,8 @@ public class AddAffiliateLocationExtensions {
     // them automatically because this will be a system generated feed.
     Feed feed =
         Feed.newBuilder()
-            .setName("Affiliate Location Extension feed #" + CodeSampleHelper.getPrintableDatetime())
+            .setName(
+                "Affiliate Location Extension feed #" + CodeSampleHelper.getPrintableDatetime())
             .setAffiliateLocationFeedData(
                 AffiliateLocationFeedData.newBuilder()
                     .addChainIds(chainId)

@@ -22,6 +22,7 @@ public abstract class CodeSampleHelper {
 
   /**
    * Generates a printable string for the current date and time in UTC time zone.
+   *
    * @return the result string.
    */
   public static String getPrintableDatetime() {

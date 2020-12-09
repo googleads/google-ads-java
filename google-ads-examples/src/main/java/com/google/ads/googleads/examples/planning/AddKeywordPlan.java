@@ -131,7 +131,8 @@ public class AddKeywordPlan {
   private static String createKeywordPlan(GoogleAdsClient googleAdsClient, Long customerId) {
     KeywordPlan plan =
         KeywordPlan.newBuilder()
-            .setName("Keyword plan for traffic estimate #" + CodeSampleHelper.getPrintableDatetime())
+            .setName(
+                "Keyword plan for traffic estimate #" + CodeSampleHelper.getPrintableDatetime())
             .setForecastPeriod(
                 KeywordPlanForecastPeriod.newBuilder()
                     .setDateInterval(KeywordPlanForecastInterval.NEXT_QUARTER)
