@@ -80,7 +80,7 @@ public class SetupRemarketing {
     private Long campaignId;
 
     /** Specify the bid modifier value here or the default specified below will be used. */
-    @Parameter(names = ArgumentNames.BID_MODIFIER)
+    @Parameter(names = ArgumentNames.BID_MODIFIER_VALUE)
     private Double bidModifier = 1.5;
   }
 
