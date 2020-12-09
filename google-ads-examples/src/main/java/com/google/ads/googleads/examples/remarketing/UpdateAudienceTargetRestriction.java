@@ -217,7 +217,7 @@ public class UpdateAudienceTargetRestriction {
               Long.toString(customerId), ImmutableList.of(operation));
       // Prints the resource name of the updated object.
       System.out.printf(
-          "Updated targeting setting of ad group with resourceName '%s'; set the AUDIENCE "
+          "Updated targeting setting of ad group with resource name '%s'; set the AUDIENCE "
               + "target restriction to 'Observation'.%n",
           response.getResults(0).getResourceName());
     }
