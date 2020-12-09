@@ -26,6 +26,6 @@ public abstract class CodeSampleHelper {
    * @return the result string.
    */
   public static String getPrintableDatetime() {
-    return new DateTime(DateTimeZone.UTC).toString("yyyyMMdd_HH:mm:ss.SSS") + "_UTC";
+    return new DateTime().toString("yyyy-MM-dd'T'HH:mm:ss.SSSZZ");
   }
 }
