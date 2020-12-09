@@ -3,8 +3,8 @@ package com.google.ads.googleads.lib.utils;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertThrows;
 
-import com.google.ads.googleads.v5.enums.CampaignStatusEnum.CampaignStatus;
-import com.google.ads.googleads.v5.resources.Campaign;
+import com.google.ads.googleads.v6.enums.CampaignStatusEnum.CampaignStatus;
+import com.google.ads.googleads.v6.resources.Campaign;
 import com.google.common.collect.ImmutableList;
 import org.junit.Before;
 import org.junit.Test;

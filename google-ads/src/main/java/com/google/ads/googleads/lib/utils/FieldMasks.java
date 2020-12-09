@@ -21,8 +21,9 @@ import com.google.protobuf.Descriptors.FieldDescriptor.JavaType;
 import com.google.protobuf.FieldMask;
 import com.google.protobuf.GeneratedMessageV3;
 import com.google.protobuf.Message;
-import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Deque;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Objects;
 
@@ -130,20 +131,20 @@ public class FieldMasks {
    * @param entity The entity to retrieve values from.
    * @return the field Object.
    */
-  public static Object getFieldValue(String fieldMaskPath, Message entity) {
-    List<String> fieldMaskParts = new ArrayList<>(Arrays.asList(fieldMaskPath.split("\\.")));
+  public static <V> V getFieldValue(String fieldMaskPath, Message entity) {
+    Deque<String> fieldMaskParts = new LinkedList<>(Arrays.asList(fieldMaskPath.split("\\.")));
     Message currentEntity = entity;
     while (!fieldMaskParts.isEmpty()) {
-      String fieldMaskPart = fieldMaskParts.remove(0);
+      String fieldMaskPart = fieldMaskParts.remove();
       if (Objects.isNull(currentEntity)) {
         throw new IllegalArgumentException(
             String.format("Cannot get field value. %s is null.", fieldMaskPart));
       }
       Descriptor descriptor = currentEntity.getDescriptorForType();
       FieldDescriptor childField = descriptor.findFieldByName(fieldMaskPart);
-      Object childValue;
+      V childValue;
       try {
-        childValue = currentEntity.getField(childField);
+        childValue = (V) currentEntity.getField(childField);
       } catch (NullPointerException e) {
         throw new IllegalArgumentException(
             String.format(
@@ -157,7 +158,7 @@ public class FieldMasks {
         // we can recurse.
         currentEntity = (Message) childValue;
       } else if (childField.isRepeated() && childValue instanceof List) {
-        if (fieldMaskParts.size() == 0) {
+        if (fieldMaskParts.isEmpty()) {
           return childValue;
         } else {
           throw new IllegalArgumentException(
@@ -167,7 +168,7 @@ public class FieldMasks {
                   fieldMaskPath, fieldMaskPart));
         }
       } else {
-        if (fieldMaskParts.size() == 0) {
+        if (fieldMaskParts.isEmpty()) {
           // we cannot recurse any longer.
           return childValue;
         } else {
@@ -179,7 +180,7 @@ public class FieldMasks {
         }
       }
     }
-    return currentEntity;
+    return (V) currentEntity;
   }
 
   private static String getFieldName(String currentField, FieldDescriptor field) {
