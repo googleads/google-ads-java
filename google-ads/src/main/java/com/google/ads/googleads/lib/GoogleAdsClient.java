@@ -242,6 +242,11 @@ public abstract class GoogleAdsClient extends AbstractGoogleAdsClient {
         }
       }
 
+      // Clears the explicitly set credentials. This ensures that the credentials configured here
+      // will be used, even if the user previously explicitly set credentials. See build() for
+      // details.
+      setCredentials((Credentials) null);
+
       // Updates the credentials builder using the appropriate set of properties.
       GoogleCredentials.Builder updatedBuilder;
       if (hasInstalledAppKeys) {
@@ -525,6 +530,12 @@ public abstract class GoogleAdsClient extends AbstractGoogleAdsClient {
      * Returns a new instance of {@link GoogleAdsClient} based on the attributes of this builder.
      */
     public GoogleAdsClient build() {
+      // Implements "last one wins" logic for credentials. The client should use the credentials
+      // configured by the LAST of the following actions:
+      // - The user configured credentials by calling fromProperties() or fromEnvironment() along
+      //   with properties/environment variables that include credential settings. Note that
+      //   fromProperties() will set credentials to null in this case.
+      // - The user explicitly set credentials via setCredentials(Credentials).
       if (getCredentials() == null) {
         if (credentialsBuilder.isPresent()) {
           // Sets the credentials using the credentials builder.
@@ -533,17 +544,10 @@ public abstract class GoogleAdsClient extends AbstractGoogleAdsClient {
           throw new IllegalStateException("Property \"credentials\" has not been set");
         }
       } else {
-        // If the user both has credential values in the config file, properties, or environment
-        // variables, but they also explicitly set credentials via setCredentials(), their intent
-        // is not 100% clear. Instead of attempting to guess their intent by merging the former with
-        // the latter or always choosing one over the other (neither of which may be the user's
-        // intent), raise an exception and require the user to remove the ambiguity.
-        Preconditions.checkState(
-            !credentialsBuilder.isPresent(),
-            "Credentials were both (a) explicitly set via setCredentials() and (b) configured from"
-                + " a file, properties, or environment variables. Either remove credentials"
-                + " settings from the latter or do not call setCredentials().");
+        // The last action by the user was to invoke setCredentials(Credentials), so no further
+        // action is needed.
       }
+
       // Provides the credentials to the primer to preemptively get these ready for usage.
       Primer.getInstance().ifPresent(p -> p.primeCredentialsAsync(getCredentials()));
       // Proceeds with creating the client library instance.

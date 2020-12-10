@@ -19,6 +19,7 @@ import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNotEquals;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertNull;
+import static org.junit.Assert.assertSame;
 import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.fail;
 
@@ -507,8 +508,12 @@ public class GoogleAdsClientTest {
     assertGoogleAdsClient(client, false);
   }
 
+  /**
+   * Verifies that if the user configures service account credentials via properties or environment
+   * variables and also explicitly sets credentials via the setter, the last action is used.
+   */
   @Test
-  public void buildFromProperties_withConfigAndExplicitServiceAccountCredentials_throwsException()
+  public void buildFromProperties_withConfigAndExplicitServiceAccountCredentials_lastWins()
       throws IOException {
     File secretsFile = createTestServiceAccountSecretsFile();
 
@@ -528,16 +533,59 @@ public class GoogleAdsClientTest {
             .build();
 
     // Builds the client, first explicitly setting credentials, then loading from properties.
-    GoogleAdsClient.Builder builder =
+    GoogleAdsClient client =
         GoogleAdsClient.newBuilder()
             .setCredentials(serviceAccountCredentials)
-            .fromProperties(testProperties);
+            .fromProperties(testProperties)
+            .build();
+    assertEquals(
+        "Service account user should match setting from properties",
+        SERVICE_ACCOUNT_USER,
+        ((ServiceAccountCredentials) client.getCredentials()).getServiceAccountUser());
+    // Changes the order.
+    client =
+        GoogleAdsClient.newBuilder()
+            .fromProperties(testProperties)
+            .setCredentials(serviceAccountCredentials)
+            .build();
+    assertSame(
+        "Credentials should be the ones explicitly set",
+        serviceAccountCredentials,
+        client.getCredentials());
+  }
 
-    // Invokes the build method on the builder, which should fail.
-    thrown.expect(IllegalStateException.class);
-    thrown.expectMessage("explicitly set");
-    thrown.expectMessage("configured from a file");
-    builder.build();
+  /**
+   * Verifies that if the user configures user credentials via properties or environment variables
+   * and also explicitly sets credentials via the setter, the last action is used.
+   */
+  @Test
+  public void buildFromProperties_withConfigAndExplicitUserCredentials_lastWins()
+      throws IOException {
+    UserCredentials userCredentials =
+        UserCredentials.newBuilder()
+            .setClientId(CLIENT_ID)
+            .setClientSecret(CLIENT_SECRET)
+            .setRefreshToken("some-other-refresh-token")
+            .build();
+
+    // Builds the client, first explicitly setting credentials, then loading from properties.
+    GoogleAdsClient client =
+        GoogleAdsClient.newBuilder()
+            .setCredentials(userCredentials)
+            .fromProperties(testProperties)
+            .build();
+    assertEquals(
+        "Refresh token should match setting from properties",
+        REFRESH_TOKEN,
+        ((UserCredentials) client.getCredentials()).getRefreshToken());
+    // Changes the order.
+    client =
+        GoogleAdsClient.newBuilder()
+            .fromProperties(testProperties)
+            .setCredentials(userCredentials)
+            .build();
+    assertSame(
+        "Credentials should be the ones explicitly set", userCredentials, client.getCredentials());
   }
 
   /**
