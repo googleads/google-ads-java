@@ -21,7 +21,7 @@ import org.joda.time.DateTimeZone;
 public abstract class CodeSampleHelper {
 
   /**
-   * Generates a printable string for the current date and time in UTC time zone.
+   * Generates a printable string for the current date and time in local time zone.
    *
    * @return the result string.
    */
