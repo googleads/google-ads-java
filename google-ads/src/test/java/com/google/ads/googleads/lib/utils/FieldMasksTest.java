@@ -70,33 +70,32 @@ public class FieldMasksTest {
     assertEquals(
         exception.getMessage(),
         "Cannot retrieve field value. A matching field was not found after navigating foo.bar up to"
-            + " foo.");
+            + " foo");
   }
 
   @Test
   public void getFieldValue_repeated_throws_exception() {
-    IllegalStateException exception =
+    IllegalArgumentException exception =
         assertThrows(
-            IllegalStateException.class,
+            IllegalArgumentException.class,
             () -> {
               FieldMasks.getFieldValue("url_custom_parameters.key", campaign);
             });
     assertEquals(
         exception.getMessage(),
-        "Cannot retrieve field value. A repeated field was encountered after navigating"
-            + " url_custom_parameters.key up to url_custom_parameters.");
+        "Cannot access repeated sub-field url_custom_parameters of class com.google.ads.googleads.v6.resources.Campaign");
   }
 
   @Test
   public void getFieldValue_non_message_throws_exception() {
-    IllegalStateException exception =
+    IllegalArgumentException exception =
         assertThrows(
-            IllegalStateException.class,
+            IllegalArgumentException.class,
             () -> {
               FieldMasks.getFieldValue("status.paused", campaign);
             });
     assertEquals(
         exception.getMessage(),
-        "Cannot retrieve field value. A non-MESSAGE field was encountered after navigating status.paused up to status.");
+        "Cannot access a field nested inside a primitive or enum status in class com.google.ads.googleads.v6.resources.Campaign");
   }
 }
