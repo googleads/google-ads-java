@@ -14,9 +14,10 @@
 
 package com.google.ads.googleads.examples.extensions;
 
+import static com.google.ads.googleads.examples.utils.CodeSampleHelper.getPrintableDatetime;
+
 import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
-import com.google.ads.googleads.examples.utils.CodeSampleHelper;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
 import com.google.ads.googleads.v6.common.MatchingFunction;
@@ -150,8 +151,7 @@ public class AddAffiliateLocationExtensions {
     // them automatically because this will be a system generated feed.
     Feed feed =
         Feed.newBuilder()
-            .setName(
-                "Affiliate Location Extension feed #" + CodeSampleHelper.getPrintableDatetime())
+            .setName("Affiliate Location Extension feed #" + getPrintableDatetime())
             .setAffiliateLocationFeedData(
                 AffiliateLocationFeedData.newBuilder()
                     .addChainIds(chainId)

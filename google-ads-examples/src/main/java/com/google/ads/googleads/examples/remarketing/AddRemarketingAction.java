@@ -14,9 +14,10 @@
 
 package com.google.ads.googleads.examples.remarketing;
 
+import static com.google.ads.googleads.examples.utils.CodeSampleHelper.getPrintableDatetime;
+
 import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
-import com.google.ads.googleads.examples.utils.CodeSampleHelper;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
 import com.google.ads.googleads.v6.common.TagSnippet;
@@ -94,7 +95,7 @@ public class AddRemarketingAction {
     // Creates a remarketing action with the specified name.
     RemarketingAction remarketingAction =
         RemarketingAction.newBuilder()
-            .setName("Remarketing action #" + CodeSampleHelper.getPrintableDatetime())
+            .setName("Remarketing action #" + getPrintableDatetime())
             .build();
 
     // Creates a remarketing action operation.

@@ -14,9 +14,10 @@
 
 package com.google.ads.googleads.examples.remarketing;
 
+import static com.google.ads.googleads.examples.utils.CodeSampleHelper.getPrintableDatetime;
+
 import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
-import com.google.ads.googleads.examples.utils.CodeSampleHelper;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
 import com.google.ads.googleads.v6.common.CrmBasedUserListInfo;
@@ -142,7 +143,7 @@ public class AddCustomerMatchUserList {
     // Creates the new user list.
     UserList userList =
         UserList.newBuilder()
-            .setName("Customer Match list #" + CodeSampleHelper.getPrintableDatetime())
+            .setName("Customer Match list #" + getPrintableDatetime())
             .setDescription("A list of customers that originated from email addresses")
             // Customer Match user lists can use a membership life span of 10,000 to indicate
             // unlimited; otherwise normal values apply.

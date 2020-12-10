@@ -14,9 +14,10 @@
 
 package com.google.ads.googleads.examples.advancedoperations;
 
+import static com.google.ads.googleads.examples.utils.CodeSampleHelper.getPrintableDatetime;
+
 import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
-import com.google.ads.googleads.examples.utils.CodeSampleHelper;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
 import com.google.ads.googleads.v6.common.AdTextAsset;
@@ -142,7 +143,7 @@ public class AddAppCampaign {
     // Creates a campaign budget.
     CampaignBudget campaignBudget =
         CampaignBudget.newBuilder()
-            .setName("Interplanetary Cruise #" + CodeSampleHelper.getPrintableDatetime())
+            .setName("Interplanetary Cruise #" + getPrintableDatetime())
             .setAmountMicros(50_000_000)
             .setDeliveryMethod(BudgetDeliveryMethod.STANDARD)
             // An App campaign cannot use a shared campaign budget.
@@ -181,7 +182,7 @@ public class AddAppCampaign {
     // Creates a campaign.
     Campaign campaign =
         Campaign.newBuilder()
-            .setName("Interplanetary Cruise App #" + CodeSampleHelper.getPrintableDatetime())
+            .setName("Interplanetary Cruise App #" + getPrintableDatetime())
             .setCampaignBudget(budgetResourceName)
             // Recommendation: Set the campaign to PAUSED when creating it to prevent
             // the ads from immediately serving. Set to ENABLED once you've added
@@ -340,7 +341,7 @@ public class AddAppCampaign {
     //   2. you cannot add ad group criteria.
     AdGroup adGroup =
         AdGroup.newBuilder()
-            .setName("Earth to Mars cruises #" + CodeSampleHelper.getPrintableDatetime())
+            .setName("Earth to Mars cruises #" + getPrintableDatetime())
             .setStatus(AdGroupStatus.ENABLED)
             .setCampaign(campaignResourceName)
             .build();

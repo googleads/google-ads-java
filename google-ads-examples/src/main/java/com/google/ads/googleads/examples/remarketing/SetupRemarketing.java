@@ -14,9 +14,10 @@
 
 package com.google.ads.googleads.examples.remarketing;
 
+import static com.google.ads.googleads.examples.utils.CodeSampleHelper.getPrintableDatetime;
+
 import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
-import com.google.ads.googleads.examples.utils.CodeSampleHelper;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
 import com.google.ads.googleads.lib.utils.FieldMasks;
@@ -202,7 +203,7 @@ public class SetupRemarketing {
     // Creates the user list.
     UserList userList =
         UserList.newBuilder()
-            .setName("All visitors to example.com" + CodeSampleHelper.getPrintableDatetime())
+            .setName("All visitors to example.com" + getPrintableDatetime())
             .setDescription("Any visitor to any page of example.com")
             .setMembershipStatus(UserListMembershipStatus.OPEN)
             .setMembershipLifeSpan(365)

@@ -14,9 +14,10 @@
 
 package com.google.ads.googleads.examples.remarketing;
 
+import static com.google.ads.googleads.examples.utils.CodeSampleHelper.getPrintableDatetime;
+
 import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
-import com.google.ads.googleads.examples.utils.CodeSampleHelper;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
 import com.google.ads.googleads.v6.common.BasicUserListInfo;
@@ -120,7 +121,7 @@ public class AddConversionBasedUserList {
     // Creates the basic user list.
     UserList basicUserList =
         UserList.newBuilder()
-            .setName("Example BasicUserList #" + CodeSampleHelper.getPrintableDatetime())
+            .setName("Example BasicUserList #" + getPrintableDatetime())
             .setDescription("A list of people who have triggered one or more conversion actions")
             .setMembershipLifeSpan(365)
             .setBasicUserList(basicUserListInfo)

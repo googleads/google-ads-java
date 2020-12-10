@@ -14,9 +14,10 @@
 
 package com.google.ads.googleads.examples.advancedoperations;
 
+import static com.google.ads.googleads.examples.utils.CodeSampleHelper.getPrintableDatetime;
+
 import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
-import com.google.ads.googleads.examples.utils.CodeSampleHelper;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
 import com.google.ads.googleads.v6.common.TargetSpend;
@@ -140,7 +141,7 @@ public class UsePortfolioBiddingStrategy {
       TargetSpend targetSpend = TargetSpend.newBuilder().setCpcBidCeilingMicros(2_000_000L).build();
       BiddingStrategy portfolioBiddingStrategy =
           BiddingStrategy.newBuilder()
-              .setName("Maximize Clicks #" + CodeSampleHelper.getPrintableDatetime())
+              .setName("Maximize Clicks #" + getPrintableDatetime())
               .setTargetSpend(targetSpend)
               .build();
       // Constructs an operation that will create a portfolio bidding strategy.
@@ -176,7 +177,7 @@ public class UsePortfolioBiddingStrategy {
       // Creates a shared budget.
       CampaignBudget budget =
           CampaignBudget.newBuilder()
-              .setName("Shared Interplanetary Budget #" + CodeSampleHelper.getPrintableDatetime())
+              .setName("Shared Interplanetary Budget #" + getPrintableDatetime())
               .setAmountMicros(50_000_000L)
               .setDeliveryMethod(BudgetDeliveryMethod.STANDARD)
               .setExplicitlyShared(true)
@@ -226,7 +227,7 @@ public class UsePortfolioBiddingStrategy {
       // [START UsePortfolioBiddingStrategy_2]
       Campaign campaign =
           Campaign.newBuilder()
-              .setName("Interplanetary Cruise #" + CodeSampleHelper.getPrintableDatetime())
+              .setName("Interplanetary Cruise #" + getPrintableDatetime())
               .setStatus(CampaignStatus.PAUSED)
               .setCampaignBudget(campaignBudgetResourceName)
               .setBiddingStrategy(biddingStrategyResourceName)

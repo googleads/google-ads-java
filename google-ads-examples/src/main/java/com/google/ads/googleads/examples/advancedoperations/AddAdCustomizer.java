@@ -14,9 +14,10 @@
 
 package com.google.ads.googleads.examples.advancedoperations;
 
+import static com.google.ads.googleads.examples.utils.CodeSampleHelper.getPrintableDatetime;
+
 import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
-import com.google.ads.googleads.examples.utils.CodeSampleHelper;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
 import com.google.ads.googleads.v6.common.ExpandedTextAdInfo;
@@ -142,7 +143,7 @@ public class AddAdCustomizer {
           "Please pass exactly two ad group IDs in the adGroupId parameter.");
     }
 
-    String feedName = "Ad Customizer example feed " + CodeSampleHelper.getPrintableDatetime();
+    String feedName = "Ad Customizer example feed " + getPrintableDatetime();
 
     // Create a feed to be used as the ad customizer.
     String adCustomizerFeedResourceName =

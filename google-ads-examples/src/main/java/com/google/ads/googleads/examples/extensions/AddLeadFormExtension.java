@@ -14,9 +14,10 @@
 
 package com.google.ads.googleads.examples.extensions;
 
+import static com.google.ads.googleads.examples.utils.CodeSampleHelper.getPrintableDatetime;
+
 import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
-import com.google.ads.googleads.examples.utils.CodeSampleHelper;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
 import com.google.ads.googleads.v6.common.LeadFormAsset;
@@ -123,8 +124,7 @@ public class AddLeadFormExtension {
     // Creates the lead form asset.
     Asset leadFormAsset =
         Asset.newBuilder()
-            .setName(
-                "Interplanetary Cruise #" + CodeSampleHelper.getPrintableDatetime() + " Lead Form")
+            .setName("Interplanetary Cruise #" + getPrintableDatetime() + " Lead Form")
             .setLeadFormAsset(
                 LeadFormAsset.newBuilder()
                     // Specify the details of the extension that the users will see.

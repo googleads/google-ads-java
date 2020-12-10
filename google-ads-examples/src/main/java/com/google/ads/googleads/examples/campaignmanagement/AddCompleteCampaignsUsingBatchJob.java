@@ -14,9 +14,10 @@
 
 package com.google.ads.googleads.examples.campaignmanagement;
 
+import static com.google.ads.googleads.examples.utils.CodeSampleHelper.getPrintableDatetime;
+
 import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
-import com.google.ads.googleads.examples.utils.CodeSampleHelper;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
 import com.google.ads.googleads.v6.common.ExpandedTextAdInfo;
@@ -340,7 +341,7 @@ public class AddCompleteCampaignsUsingBatchJob {
         CampaignBudget.newBuilder()
             // Creates a resource name using the temporary ID.
             .setResourceName(ResourceNames.campaignBudget(customerId, getNextTemporaryId()))
-            .setName("Interplanetary Cruise Budget #" + CodeSampleHelper.getPrintableDatetime())
+            .setName("Interplanetary Cruise Budget #" + getPrintableDatetime())
             .setDeliveryMethod(BudgetDeliveryMethod.STANDARD)
             .setAmountMicros(5_000_000)
             .build();
@@ -368,11 +369,7 @@ public class AddCompleteCampaignsUsingBatchJob {
           Campaign.newBuilder()
               // Creates a resource name using the temporary ID.
               .setResourceName(ResourceNames.campaign(customerId, campaignId))
-              .setName(
-                  "Mutate job campaign #"
-                      + CodeSampleHelper.getPrintableDatetime()
-                      + "."
-                      + campaignId)
+              .setName("Mutate job campaign #" + getPrintableDatetime() + "." + campaignId)
               .setAdvertisingChannelType(AdvertisingChannelType.SEARCH)
               // Recommendation: Set the campaign to PAUSED when creating it to prevent
               // the ads from immediately serving. Set to ENABLED once you've added
@@ -443,11 +440,7 @@ public class AddCompleteCampaignsUsingBatchJob {
             AdGroup.newBuilder()
                 // Creates a resource name using the temporary ID.
                 .setResourceName(ResourceNames.adGroup(customerId, adGroupId))
-                .setName(
-                    "Mutate job ad group #"
-                        + CodeSampleHelper.getPrintableDatetime()
-                        + "."
-                        + adGroupId)
+                .setName("Mutate job ad group #" + getPrintableDatetime() + "." + adGroupId)
                 .setCampaign(campaignOperation.getCreate().getResourceName())
                 .setType(AdGroupType.SEARCH_STANDARD)
                 .setCpcBidMicros(10_000_000)
@@ -523,8 +516,7 @@ public class AddCompleteCampaignsUsingBatchJob {
                       // Sets the expanded text ad info on an ad.
                       .setExpandedTextAd(
                           ExpandedTextAdInfo.newBuilder()
-                              .setHeadlinePart1(
-                                  "Cruise to Mars #" + CodeSampleHelper.getPrintableDatetime())
+                              .setHeadlinePart1("Cruise to Mars #" + getPrintableDatetime())
                               .setHeadlinePart2("Best Space Cruise Line")
                               .setDescription("Buy your tickets now!")
                               .build())

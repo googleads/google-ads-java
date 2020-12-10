@@ -13,9 +13,10 @@
 // limitations under the License.
 package com.google.ads.googleads.examples.basicoperations;
 
+import static com.google.ads.googleads.examples.utils.CodeSampleHelper.getPrintableDatetime;
+
 import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
-import com.google.ads.googleads.examples.utils.CodeSampleHelper;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
 import com.google.ads.googleads.lib.utils.FieldMasks;
@@ -106,7 +107,7 @@ public class UpdateExpandedTextAd {
     // Sets the expanded text ad properties to update on the ad.
     adBuilder
         .getExpandedTextAdBuilder()
-        .setHeadlinePart1("Cruise to Pluto #" + CodeSampleHelper.getPrintableDatetime())
+        .setHeadlinePart1("Cruise to Pluto #" + getPrintableDatetime())
         .setHeadlinePart2("Tickets on sale now")
         .setDescription("Best space cruise ever.");
 
