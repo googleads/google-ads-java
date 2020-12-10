@@ -212,7 +212,8 @@ public class GoogleAdsClientTest {
                 AdsEnvironmentVariable.GOOGLE_ADS_CONFIGURATION_FILE_PATH.name(),
                 propertiesFile.getPath())
             .build();
-    GoogleAdsClient client = builder.setEnvironment(environment).fromPropertiesFile().build();
+    GoogleAdsClient client =
+        builder.setEnvironmentValueGetter(environment::get).fromPropertiesFile().build();
     assertGoogleAdsClient(client, true);
   }
 
@@ -321,10 +322,12 @@ public class GoogleAdsClientTest {
                 "/some/path/secrets.json")
             .put(AdsEnvironmentVariable.GOOGLE_ADS_IMPERSONATED_EMAIL.name(), SERVICE_ACCOUNT_USER)
             .build();
+    GoogleAdsClient.Builder builder =
+        GoogleAdsClient.newBuilder().setEnvironmentValueGetter(environment::get);
     // Invokes the fromEnvironment method on the builder, which should fail.
     thrown.expect(IllegalArgumentException.class);
     thrown.expectMessage("both");
-    GoogleAdsClient.newBuilder().fromEnvironment(environment);
+    builder.fromEnvironment();
   }
   /**
    * Verifies that a proper exception is thrown when neither refresh token nor service account
@@ -360,15 +363,17 @@ public class GoogleAdsClientTest {
     testProperties.remove(ConfigPropertyKey.REFRESH_TOKEN.getPropertyKey());
     GoogleAdsClient client =
         GoogleAdsClient.newBuilder()
-            .fromEnvironment(environment)
+            .setEnvironmentValueGetter(environment::get)
+            .fromEnvironment()
             .fromProperties(testProperties)
             .build();
     assertGoogleAdsClient(client, true);
     // Changes the order to properties, then environment, and tests again.
     client =
         GoogleAdsClient.newBuilder()
+            .setEnvironmentValueGetter(environment::get)
             .fromProperties(testProperties)
-            .fromEnvironment(environment)
+            .fromEnvironment()
             .build();
     assertGoogleAdsClient(client, true);
     assertEquals(LINKED_CUSTOMER_ID, client.getLinkedCustomerId().longValue());
@@ -389,15 +394,17 @@ public class GoogleAdsClientTest {
     testProperties.remove(ConfigPropertyKey.CLIENT_SECRET.getPropertyKey());
     GoogleAdsClient client =
         GoogleAdsClient.newBuilder()
-            .fromEnvironment(environment)
+            .setEnvironmentValueGetter(environment::get)
+            .fromEnvironment()
             .fromProperties(testProperties)
             .build();
     assertGoogleAdsClient(client, true);
     // Changes the order to properties, then environment, and tests again.
     client =
         GoogleAdsClient.newBuilder()
+            .setEnvironmentValueGetter(environment::get)
             .fromProperties(testProperties)
-            .fromEnvironment(environment)
+            .fromEnvironment()
             .build();
     assertGoogleAdsClient(client, true);
   }
@@ -421,7 +428,8 @@ public class GoogleAdsClientTest {
         ConfigPropertyKey.LINKED_CUSTOMER_ID.getPropertyKey(), Long.toString(LINKED_CUSTOMER_ID));
     GoogleAdsClient client =
         GoogleAdsClient.newBuilder()
-            .fromEnvironment(environment)
+            .setEnvironmentValueGetter(environment::get)
+            .fromEnvironment()
             .fromProperties(testProperties)
             .build();
     assertGoogleAdsClient(client, false);
@@ -429,8 +437,9 @@ public class GoogleAdsClientTest {
     // Changes the order to properties, then environment, and tests again.
     client =
         GoogleAdsClient.newBuilder()
+            .setEnvironmentValueGetter(environment::get)
             .fromProperties(testProperties)
-            .fromEnvironment(environment)
+            .fromEnvironment()
             .build();
     assertGoogleAdsClient(client, false);
     assertEquals(LINKED_CUSTOMER_ID, client.getLinkedCustomerId().longValue());
@@ -459,15 +468,17 @@ public class GoogleAdsClientTest {
         ConfigPropertyKey.SERVICE_ACCOUNT_SECRETS_PATH.getPropertyKey(), secretsFile.getPath());
     GoogleAdsClient client =
         GoogleAdsClient.newBuilder()
-            .fromEnvironment(environment)
+            .setEnvironmentValueGetter(environment::get)
+            .fromEnvironment()
             .fromProperties(testProperties)
             .build();
     assertGoogleAdsClient(client, false);
     // Changes the order to properties, then environment, and tests again.
     client =
         GoogleAdsClient.newBuilder()
+            .setEnvironmentValueGetter(environment::get)
             .fromProperties(testProperties)
-            .fromEnvironment(environment)
+            .fromEnvironment()
             .build();
     assertGoogleAdsClient(client, false);
   }
@@ -495,15 +506,17 @@ public class GoogleAdsClientTest {
         ConfigPropertyKey.SERVICE_ACCOUNT_USER.getPropertyKey(), SERVICE_ACCOUNT_USER);
     GoogleAdsClient client =
         GoogleAdsClient.newBuilder()
-            .fromEnvironment(environment)
+            .setEnvironmentValueGetter(environment::get)
+            .fromEnvironment()
             .fromProperties(testProperties)
             .build();
     assertGoogleAdsClient(client, false);
     // Changes the order to properties, then environment, and tests again.
     client =
         GoogleAdsClient.newBuilder()
+            .setEnvironmentValueGetter(environment::get)
             .fromProperties(testProperties)
-            .fromEnvironment(environment)
+            .fromEnvironment()
             .build();
     assertGoogleAdsClient(client, false);
   }

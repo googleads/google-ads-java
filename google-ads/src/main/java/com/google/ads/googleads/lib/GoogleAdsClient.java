@@ -36,9 +36,9 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Collections;
-import java.util.Map;
 import java.util.Optional;
 import java.util.Properties;
+import java.util.function.Function;
 import java.util.function.Supplier;
 import javax.annotation.Nullable;
 import javax.annotation.concurrent.Immutable;
@@ -98,7 +98,6 @@ public abstract class GoogleAdsClient extends AbstractGoogleAdsClient {
     clientBuilder
         .setEndpoint(DEFAULT_ENDPOINT)
         .setTransportChannelProvider(transportChannelProvider);
-    clientBuilder.setEnvironment(System.getenv());
     return clientBuilder;
   }
 
@@ -106,7 +105,7 @@ public abstract class GoogleAdsClient extends AbstractGoogleAdsClient {
    * Returns the credentials for this client.
    *
    * <p>This field is marked nullable to enable proper builder behavior. In practice, all requests
-   * to Google Ads API must be authenticated.
+   * to Google Ads API must be authenticated, and this field will never be null.
    */
   @Nullable
   public abstract Credentials getCredentials();
@@ -164,26 +163,31 @@ public abstract class GoogleAdsClient extends AbstractGoogleAdsClient {
             ConfigPropertyKey.SERVICE_ACCOUNT_SECRETS_PATH, ConfigPropertyKey.SERVICE_ACCOUNT_USER);
 
     /**
+     * Allows injecting a different mechanism for retrieving the value of environment variables.
+     * Only modify this for testing.
+     */
+    private Function<String, String> environmentValueGetter = System::getenv;
+
+    /**
      * Allows injecting a different default configuration file, instead of using {@value
      * #DEFAULT_PROPERTIES_CONFIG_FILE_NAME}. Only for testing.
      */
     private Supplier<File> configurationFileSupplier =
         () -> {
           String envConfigFilePath =
-              getEnvironment()
-                  .get(AdsEnvironmentVariable.GOOGLE_ADS_CONFIGURATION_FILE_PATH.name());
+              environmentValueGetter.apply(
+                  AdsEnvironmentVariable.GOOGLE_ADS_CONFIGURATION_FILE_PATH.name());
           if (envConfigFilePath != null) {
             return new File(envConfigFilePath);
           }
           return new File(System.getProperty("user.home"), DEFAULT_PROPERTIES_CONFIG_FILE_NAME);
         };
 
-    /** Allows injecting a different map of environment variables. Only modify this for testing. */
-    private Map<String, String> environment;
-
     /**
-     * A builder for the client's Credentials. If this optional {@link Optional#isPresent()}, then
-     * it will be set to either a UserCredentials.Builder or a ServiceAccountCredentials.Builder.
+     * A builder for the client's Credentials.
+     *
+     * <p>If setting the value of this {@code Optional}, use either a UserCredentials.Builder or a
+     * ServiceAccountCredentials.Builder.
      */
     private Optional<GoogleCredentials.Builder> credentialsBuilder = Optional.empty();
 
@@ -494,17 +498,13 @@ public abstract class GoogleAdsClient extends AbstractGoogleAdsClient {
     }
 
     public Builder fromEnvironment() {
-      return fromEnvironment(getEnvironment());
-    }
-
-    public Builder fromEnvironment(Map<String, String> environment) {
       // Converts the value for each relevant environment variable into its equivalent in property.
       // This allows environment variable configuration to leverage the same methods and validation
       // that's used for properties configuration.
       Properties properties = new Properties();
       for (AdsEnvironmentVariable adsEnvVar : AdsEnvironmentVariable.values()) {
         if (adsEnvVar.configPropertyKey.isPresent()) {
-          String envVarValue = environment.get(adsEnvVar.name());
+          String envVarValue = environmentValueGetter.apply(adsEnvVar.name());
           if (envVarValue != null) {
             properties.put(adsEnvVar.configPropertyKey.get().getPropertyKey(), envVarValue);
           }
@@ -583,13 +583,9 @@ public abstract class GoogleAdsClient extends AbstractGoogleAdsClient {
     }
 
     @VisibleForTesting
-    Builder setEnvironment(Map<String, String> environment) {
-      this.environment = ImmutableMap.copyOf(environment);
+    Builder setEnvironmentValueGetter(Function<String, String> environmentValueGetter) {
+      this.environmentValueGetter = environmentValueGetter;
       return this;
-    }
-
-    Map<String, String> getEnvironment() {
-      return environment;
     }
 
     /**
