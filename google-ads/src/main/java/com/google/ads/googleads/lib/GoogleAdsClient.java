@@ -182,8 +182,8 @@ public abstract class GoogleAdsClient extends AbstractGoogleAdsClient {
     private Map<String, String> environment;
 
     /**
-     * A builder for the client's Credentials. This will be not set, a UserCredentials.Builder, or a
-     * ServiceAccountCredentials.Builder.
+     * A builder for the client's Credentials. If this optional {@link Optional#isPresent()}, then
+     * it will be set to either a UserCredentials.Builder or a ServiceAccountCredentials.Builder.
      */
     private Optional<GoogleCredentials.Builder> credentialsBuilder = Optional.empty();
 
@@ -540,9 +540,9 @@ public abstract class GoogleAdsClient extends AbstractGoogleAdsClient {
         // intent), raise an exception and require the user to remove the ambiguity.
         Preconditions.checkState(
             !credentialsBuilder.isPresent(),
-            "Credentials were both explicitly set and configured from a file, properties, or "
-                + "environment variables. Either remove credentials settings from the latter or "
-                + "do not call setCredentials().");
+            "Credentials were both (a) explicitly set via setCredentials() and (b) configured from"
+                + " a file, properties, or environment variables. Either remove credentials"
+                + " settings from the latter or do not call setCredentials().");
       }
       // Provides the credentials to the primer to preemptively get these ready for usage.
       Primer.getInstance().ifPresent(p -> p.primeCredentialsAsync(getCredentials()));

@@ -535,7 +535,8 @@ public class GoogleAdsClientTest {
 
     // Invokes the build method on the builder, which should fail.
     thrown.expect(IllegalStateException.class);
-    thrown.expectMessage("both explicitly set and configured");
+    thrown.expectMessage("explicitly set");
+    thrown.expectMessage("configured from a file");
     builder.build();
   }
 
