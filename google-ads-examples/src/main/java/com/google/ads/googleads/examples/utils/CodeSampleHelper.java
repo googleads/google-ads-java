@@ -14,11 +14,15 @@
 
 package com.google.ads.googleads.examples.utils;
 
-import org.joda.time.DateTime;
-import org.joda.time.DateTimeZone;
+import java.time.ZonedDateTime;
+import java.time.format.DateTimeFormatter;
 
 /** A helper class for all code examples. */
 public abstract class CodeSampleHelper {
+
+  /** The date format used for printing. */
+  private static final DateTimeFormatter format =
+      DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss.SSSZZ");
 
   /**
    * Generates a printable string for the current date and time in local time zone.
@@ -26,6 +30,6 @@ public abstract class CodeSampleHelper {
    * @return the result string.
    */
   public static String getPrintableDatetime() {
-    return new DateTime().toString("yyyy-MM-dd'T'HH:mm:ss.SSSZZ");
+    return ZonedDateTime.now().format(format);
   }
 }
