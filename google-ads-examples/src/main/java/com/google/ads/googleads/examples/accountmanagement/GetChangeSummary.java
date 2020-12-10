@@ -29,7 +29,7 @@ import java.io.IOException;
 import java.util.Optional;
 
 /** Gets the changes in the account made in the last 7 days. */
-public class GetAccountChanges {
+public class GetChangeSummary {
 
   private static class GetAccountChangesParams extends CodeSampleParams {
 
@@ -59,7 +59,7 @@ public class GetAccountChanges {
     }
 
     try {
-      new GetAccountChanges().runExample(googleAdsClient, params.customerId);
+      new GetChangeSummary().runExample(googleAdsClient, params.customerId);
     } catch (GoogleAdsException gae) {
       // GoogleAdsException is the base class for most exceptions thrown by an API request.
       // Instances of this exception have a message and a GoogleAdsFailure that contains a
@@ -100,8 +100,9 @@ public class GetAccountChanges {
             + "change_status.feed, "
             + "change_status.feed_item "
             + "FROM change_status "
-            + "WHERE change_status.last_change_date_time DURING LAST_7_DAYS "
-            + "ORDER BY change_status.last_change_date_time";
+            + "WHERE change_status.last_change_date_time DURING LAST_14_DAYS "
+            + "ORDER BY change_status.last_change_date_time"
+            + "LIMIT 10000";
 
     try (GoogleAdsServiceClient client =
         googleAdsClient.getLatestVersion().createGoogleAdsServiceClient()) {
