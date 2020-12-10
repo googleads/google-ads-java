@@ -5,7 +5,7 @@
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
- *     https://www.apache.org/licenses/LICENSE-2.0
+ *      https://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -13,9 +13,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
 package com.google.ads.googleads.v6.services;
 
 import com.google.ads.googleads.v6.resources.AgeRangeView;
+import com.google.ads.googleads.v6.resources.AgeRangeViewName;
 import com.google.ads.googleads.v6.services.stub.AgeRangeViewServiceStub;
 import com.google.ads.googleads.v6.services.stub.AgeRangeViewServiceStubSettings;
 import com.google.api.core.BetaApi;
@@ -25,23 +27,14 @@ import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 import javax.annotation.Generated;
 
-// AUTO-GENERATED DOCUMENTATION AND SERVICE
+// AUTO-GENERATED DOCUMENTATION AND CLASS.
 /**
  * Service Description: Service to manage age range views.
  *
  * <p>This class provides the ability to make remote calls to the backing service through method
  * calls that map to API methods. Sample code to get started:
  *
- * <pre>
- * <code>
- * try (AgeRangeViewServiceClient ageRangeViewServiceClient = AgeRangeViewServiceClient.create()) {
- *   AgeRangeViewName resourceName = AgeRangeViewName.of("[CUSTOMER_ID]", "[AD_GROUP_ID]", "[CRITERION_ID]");
- *   AgeRangeView response = ageRangeViewServiceClient.getAgeRangeView(resourceName);
- * }
- * </code>
- * </pre>
- *
- * <p>Note: close() needs to be called on the ageRangeViewServiceClient object to clean up resources
+ * <p>Note: close() needs to be called on the AgeRangeViewServiceClient object to clean up resources
  * such as threads. In the example above, try-with-resources is used, which automatically calls
  * close().
  *
@@ -70,30 +63,28 @@ import javax.annotation.Generated;
  *
  * <p>To customize credentials:
  *
- * <pre>
- * <code>
+ * <pre>{@code
  * AgeRangeViewServiceSettings ageRangeViewServiceSettings =
  *     AgeRangeViewServiceSettings.newBuilder()
  *         .setCredentialsProvider(FixedCredentialsProvider.create(myCredentials))
  *         .build();
  * AgeRangeViewServiceClient ageRangeViewServiceClient =
  *     AgeRangeViewServiceClient.create(ageRangeViewServiceSettings);
- * </code>
- * </pre>
+ * }</pre>
  *
- * To customize the endpoint:
+ * <p>To customize the endpoint:
  *
- * <pre>
- * <code>
+ * <pre>{@code
  * AgeRangeViewServiceSettings ageRangeViewServiceSettings =
  *     AgeRangeViewServiceSettings.newBuilder().setEndpoint(myEndpoint).build();
  * AgeRangeViewServiceClient ageRangeViewServiceClient =
  *     AgeRangeViewServiceClient.create(ageRangeViewServiceSettings);
- * </code>
- * </pre>
+ * }</pre>
+ *
+ * <p>Please refer to the GitHub repository's samples for more quickstart code snippets.
  */
-@Generated("by gapic-generator")
 @BetaApi
+@Generated("by gapic-generator")
 public class AgeRangeViewServiceClient implements BackgroundResource {
   private final AgeRangeViewServiceSettings settings;
   private final AgeRangeViewServiceStub stub;
@@ -114,7 +105,7 @@ public class AgeRangeViewServiceClient implements BackgroundResource {
 
   /**
    * Constructs an instance of AgeRangeViewServiceClient, using the given stub for making calls.
-   * This is for advanced usage - prefer to use AgeRangeViewServiceSettings}.
+   * This is for advanced usage - prefer using create(AgeRangeViewServiceSettings).
    */
   @BetaApi("A restructuring of stub classes is planned, so this may break in the future")
   public static final AgeRangeViewServiceClient create(AgeRangeViewServiceStub stub) {
@@ -146,20 +137,11 @@ public class AgeRangeViewServiceClient implements BackgroundResource {
     return stub;
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Returns the requested age range view in full detail.
    *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (AgeRangeViewServiceClient ageRangeViewServiceClient = AgeRangeViewServiceClient.create()) {
-   *   AgeRangeViewName resourceName = AgeRangeViewName.of("[CUSTOMER_ID]", "[AD_GROUP_ID]", "[CRITERION_ID]");
-   *   AgeRangeView response = ageRangeViewServiceClient.getAgeRangeView(resourceName);
-   * }
-   * </code></pre>
-   *
-   * @param resourceName Required. The resource name of the age range view to fetch.
+   * @param resource_name Required. The resource name of the age range view to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final AgeRangeView getAgeRangeView(AgeRangeViewName resourceName) {
@@ -170,20 +152,11 @@ public class AgeRangeViewServiceClient implements BackgroundResource {
     return getAgeRangeView(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Returns the requested age range view in full detail.
    *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (AgeRangeViewServiceClient ageRangeViewServiceClient = AgeRangeViewServiceClient.create()) {
-   *   AgeRangeViewName resourceName = AgeRangeViewName.of("[CUSTOMER_ID]", "[AD_GROUP_ID]", "[CRITERION_ID]");
-   *   AgeRangeView response = ageRangeViewServiceClient.getAgeRangeView(resourceName.toString());
-   * }
-   * </code></pre>
-   *
-   * @param resourceName Required. The resource name of the age range view to fetch.
+   * @param resource_name Required. The resource name of the age range view to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final AgeRangeView getAgeRangeView(String resourceName) {
@@ -192,21 +165,9 @@ public class AgeRangeViewServiceClient implements BackgroundResource {
     return getAgeRangeView(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Returns the requested age range view in full detail.
-   *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (AgeRangeViewServiceClient ageRangeViewServiceClient = AgeRangeViewServiceClient.create()) {
-   *   AgeRangeViewName resourceName = AgeRangeViewName.of("[CUSTOMER_ID]", "[AD_GROUP_ID]", "[CRITERION_ID]");
-   *   GetAgeRangeViewRequest request = GetAgeRangeViewRequest.newBuilder()
-   *     .setResourceName(resourceName.toString())
-   *     .build();
-   *   AgeRangeView response = ageRangeViewServiceClient.getAgeRangeView(request);
-   * }
-   * </code></pre>
    *
    * @param request The request object containing all of the parameters for the API call.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
@@ -215,23 +176,11 @@ public class AgeRangeViewServiceClient implements BackgroundResource {
     return getAgeRangeViewCallable().call(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Returns the requested age range view in full detail.
    *
    * <p>Sample code:
-   *
-   * <pre><code>
-   * try (AgeRangeViewServiceClient ageRangeViewServiceClient = AgeRangeViewServiceClient.create()) {
-   *   AgeRangeViewName resourceName = AgeRangeViewName.of("[CUSTOMER_ID]", "[AD_GROUP_ID]", "[CRITERION_ID]");
-   *   GetAgeRangeViewRequest request = GetAgeRangeViewRequest.newBuilder()
-   *     .setResourceName(resourceName.toString())
-   *     .build();
-   *   ApiFuture&lt;AgeRangeView&gt; future = ageRangeViewServiceClient.getAgeRangeViewCallable().futureCall(request);
-   *   // Do something
-   *   AgeRangeView response = future.get();
-   * }
-   * </code></pre>
    */
   public final UnaryCallable<GetAgeRangeViewRequest, AgeRangeView> getAgeRangeViewCallable() {
     return stub.getAgeRangeViewCallable();

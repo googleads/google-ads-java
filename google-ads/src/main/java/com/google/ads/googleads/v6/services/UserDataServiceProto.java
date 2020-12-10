@@ -57,20 +57,21 @@ public final class UserDataServiceProto {
       "n\"\222\001\n\026UploadUserDataResponse\022\035\n\020upload_d" +
       "ate_time\030\003 \001(\tH\000\210\001\001\022&\n\031received_operatio" +
       "ns_count\030\004 \001(\005H\001\210\001\001B\023\n\021_upload_date_time" +
-      "B\034\n\032_received_operations_count2\355\001\n\017UserD" +
+      "B\034\n\032_received_operations_count2\227\002\n\017UserD" +
       "ataService\022\274\001\n\016UploadUserData\0227.google.a" +
       "ds.googleads.v6.services.UploadUserDataR" +
       "equest\0328.google.ads.googleads.v6.service" +
       "s.UploadUserDataResponse\"7\202\323\344\223\0021\",/v6/cu" +
       "stomers/{customer_id=*}:uploadUserData:\001" +
-      "*\032\033\312A\030googleads.googleapis.comB\373\001\n$com.g" +
-      "oogle.ads.googleads.v6.servicesB\024UserDat" +
-      "aServiceProtoP\001ZHgoogle.golang.org/genpr" +
-      "oto/googleapis/ads/googleads/v6/services" +
-      ";services\242\002\003GAA\252\002 Google.Ads.GoogleAds.V" +
-      "6.Services\312\002 Google\\Ads\\GoogleAds\\V6\\Ser" +
-      "vices\352\002$Google::Ads::GoogleAds::V6::Serv" +
-      "icesb\006proto3"
+      "*\032E\312A\030googleads.googleapis.com\322A\'https:/" +
+      "/www.googleapis.com/auth/adwordsB\373\001\n$com" +
+      ".google.ads.googleads.v6.servicesB\024UserD" +
+      "ataServiceProtoP\001ZHgoogle.golang.org/gen" +
+      "proto/googleapis/ads/googleads/v6/servic" +
+      "es;services\242\002\003GAA\252\002 Google.Ads.GoogleAds" +
+      ".V6.Services\312\002 Google\\Ads\\GoogleAds\\V6\\S" +
+      "ervices\352\002$Google::Ads::GoogleAds::V6::Se" +
+      "rvicesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -103,6 +104,7 @@ public final class UserDataServiceProto {
     registry.add(com.google.api.ClientProto.defaultHost);
     registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);
     registry.add(com.google.api.AnnotationsProto.http);
+    registry.add(com.google.api.ClientProto.oauthScopes);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.ads.googleads.v6.common.OfflineUserDataProto.getDescriptor();

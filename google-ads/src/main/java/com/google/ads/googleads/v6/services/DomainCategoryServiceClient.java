@@ -5,7 +5,7 @@
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
- *     https://www.apache.org/licenses/LICENSE-2.0
+ *      https://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -13,9 +13,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
 package com.google.ads.googleads.v6.services;
 
 import com.google.ads.googleads.v6.resources.DomainCategory;
+import com.google.ads.googleads.v6.resources.DomainCategoryName;
 import com.google.ads.googleads.v6.services.stub.DomainCategoryServiceStub;
 import com.google.ads.googleads.v6.services.stub.DomainCategoryServiceStubSettings;
 import com.google.api.core.BetaApi;
@@ -25,23 +27,14 @@ import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 import javax.annotation.Generated;
 
-// AUTO-GENERATED DOCUMENTATION AND SERVICE
+// AUTO-GENERATED DOCUMENTATION AND CLASS.
 /**
  * Service Description: Service to fetch domain categories.
  *
  * <p>This class provides the ability to make remote calls to the backing service through method
  * calls that map to API methods. Sample code to get started:
  *
- * <pre>
- * <code>
- * try (DomainCategoryServiceClient domainCategoryServiceClient = DomainCategoryServiceClient.create()) {
- *   DomainCategoryName resourceName = DomainCategoryName.of("[CUSTOMER_ID]", "[CAMPAIGN_ID]", "[BASE64_CATEGORY]", "[LANGUAGE_CODE]");
- *   DomainCategory response = domainCategoryServiceClient.getDomainCategory(resourceName);
- * }
- * </code>
- * </pre>
- *
- * <p>Note: close() needs to be called on the domainCategoryServiceClient object to clean up
+ * <p>Note: close() needs to be called on the DomainCategoryServiceClient object to clean up
  * resources such as threads. In the example above, try-with-resources is used, which automatically
  * calls close().
  *
@@ -70,30 +63,28 @@ import javax.annotation.Generated;
  *
  * <p>To customize credentials:
  *
- * <pre>
- * <code>
+ * <pre>{@code
  * DomainCategoryServiceSettings domainCategoryServiceSettings =
  *     DomainCategoryServiceSettings.newBuilder()
  *         .setCredentialsProvider(FixedCredentialsProvider.create(myCredentials))
  *         .build();
  * DomainCategoryServiceClient domainCategoryServiceClient =
  *     DomainCategoryServiceClient.create(domainCategoryServiceSettings);
- * </code>
- * </pre>
+ * }</pre>
  *
- * To customize the endpoint:
+ * <p>To customize the endpoint:
  *
- * <pre>
- * <code>
+ * <pre>{@code
  * DomainCategoryServiceSettings domainCategoryServiceSettings =
  *     DomainCategoryServiceSettings.newBuilder().setEndpoint(myEndpoint).build();
  * DomainCategoryServiceClient domainCategoryServiceClient =
  *     DomainCategoryServiceClient.create(domainCategoryServiceSettings);
- * </code>
- * </pre>
+ * }</pre>
+ *
+ * <p>Please refer to the GitHub repository's samples for more quickstart code snippets.
  */
-@Generated("by gapic-generator")
 @BetaApi
+@Generated("by gapic-generator")
 public class DomainCategoryServiceClient implements BackgroundResource {
   private final DomainCategoryServiceSettings settings;
   private final DomainCategoryServiceStub stub;
@@ -114,7 +105,7 @@ public class DomainCategoryServiceClient implements BackgroundResource {
 
   /**
    * Constructs an instance of DomainCategoryServiceClient, using the given stub for making calls.
-   * This is for advanced usage - prefer to use DomainCategoryServiceSettings}.
+   * This is for advanced usage - prefer using create(DomainCategoryServiceSettings).
    */
   @BetaApi("A restructuring of stub classes is planned, so this may break in the future")
   public static final DomainCategoryServiceClient create(DomainCategoryServiceStub stub) {
@@ -146,20 +137,11 @@ public class DomainCategoryServiceClient implements BackgroundResource {
     return stub;
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Returns the requested domain category.
    *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (DomainCategoryServiceClient domainCategoryServiceClient = DomainCategoryServiceClient.create()) {
-   *   DomainCategoryName resourceName = DomainCategoryName.of("[CUSTOMER_ID]", "[CAMPAIGN_ID]", "[BASE64_CATEGORY]", "[LANGUAGE_CODE]");
-   *   DomainCategory response = domainCategoryServiceClient.getDomainCategory(resourceName);
-   * }
-   * </code></pre>
-   *
-   * @param resourceName Required. Resource name of the domain category to fetch.
+   * @param resource_name Required. Resource name of the domain category to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final DomainCategory getDomainCategory(DomainCategoryName resourceName) {
@@ -170,20 +152,11 @@ public class DomainCategoryServiceClient implements BackgroundResource {
     return getDomainCategory(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Returns the requested domain category.
    *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (DomainCategoryServiceClient domainCategoryServiceClient = DomainCategoryServiceClient.create()) {
-   *   DomainCategoryName resourceName = DomainCategoryName.of("[CUSTOMER_ID]", "[CAMPAIGN_ID]", "[BASE64_CATEGORY]", "[LANGUAGE_CODE]");
-   *   DomainCategory response = domainCategoryServiceClient.getDomainCategory(resourceName.toString());
-   * }
-   * </code></pre>
-   *
-   * @param resourceName Required. Resource name of the domain category to fetch.
+   * @param resource_name Required. Resource name of the domain category to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final DomainCategory getDomainCategory(String resourceName) {
@@ -192,21 +165,9 @@ public class DomainCategoryServiceClient implements BackgroundResource {
     return getDomainCategory(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Returns the requested domain category.
-   *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (DomainCategoryServiceClient domainCategoryServiceClient = DomainCategoryServiceClient.create()) {
-   *   DomainCategoryName resourceName = DomainCategoryName.of("[CUSTOMER_ID]", "[CAMPAIGN_ID]", "[BASE64_CATEGORY]", "[LANGUAGE_CODE]");
-   *   GetDomainCategoryRequest request = GetDomainCategoryRequest.newBuilder()
-   *     .setResourceName(resourceName.toString())
-   *     .build();
-   *   DomainCategory response = domainCategoryServiceClient.getDomainCategory(request);
-   * }
-   * </code></pre>
    *
    * @param request The request object containing all of the parameters for the API call.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
@@ -215,23 +176,11 @@ public class DomainCategoryServiceClient implements BackgroundResource {
     return getDomainCategoryCallable().call(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Returns the requested domain category.
    *
    * <p>Sample code:
-   *
-   * <pre><code>
-   * try (DomainCategoryServiceClient domainCategoryServiceClient = DomainCategoryServiceClient.create()) {
-   *   DomainCategoryName resourceName = DomainCategoryName.of("[CUSTOMER_ID]", "[CAMPAIGN_ID]", "[BASE64_CATEGORY]", "[LANGUAGE_CODE]");
-   *   GetDomainCategoryRequest request = GetDomainCategoryRequest.newBuilder()
-   *     .setResourceName(resourceName.toString())
-   *     .build();
-   *   ApiFuture&lt;DomainCategory&gt; future = domainCategoryServiceClient.getDomainCategoryCallable().futureCall(request);
-   *   // Do something
-   *   DomainCategory response = future.get();
-   * }
-   * </code></pre>
    */
   public final UnaryCallable<GetDomainCategoryRequest, DomainCategory> getDomainCategoryCallable() {
     return stub.getDomainCategoryCallable();

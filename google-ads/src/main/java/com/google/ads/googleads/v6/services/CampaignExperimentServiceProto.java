@@ -142,7 +142,7 @@ public final class CampaignExperimentServiceProto {
       "\n\npage_token\030\002 \001(\t\022\021\n\tpage_size\030\003 \001(\005\"h\n" +
       ")ListCampaignExperimentAsyncErrorsRespon" +
       "se\022\"\n\006errors\030\001 \003(\0132\022.google.rpc.Status\022\027" +
-      "\n\017next_page_token\030\002 \001(\t2\215\017\n\031CampaignExpe" +
+      "\n\017next_page_token\030\002 \001(\t2\267\017\n\031CampaignExpe" +
       "rimentService\022\335\001\n\025GetCampaignExperiment\022" +
       ">.google.ads.googleads.v6.services.GetCa" +
       "mpaignExperimentRequest\0325.google.ads.goo" +
@@ -190,14 +190,15 @@ public final class CampaignExperimentServiceProto {
       "mpaignExperimentAsyncErrorsResponse\"]\202\323\344" +
       "\223\002G\022E/v6/{resource_name=customers/*/camp" +
       "aignExperiments/*}:listAsyncErrors\332A\rres" +
-      "ource_name\032\033\312A\030googleads.googleapis.comB" +
-      "\205\002\n$com.google.ads.googleads.v6.services" +
-      "B\036CampaignExperimentServiceProtoP\001ZHgoog" +
-      "le.golang.org/genproto/googleapis/ads/go" +
-      "ogleads/v6/services;services\242\002\003GAA\252\002 Goo" +
-      "gle.Ads.GoogleAds.V6.Services\312\002 Google\\A" +
-      "ds\\GoogleAds\\V6\\Services\352\002$Google::Ads::" +
-      "GoogleAds::V6::Servicesb\006proto3"
+      "ource_name\032E\312A\030googleads.googleapis.com\322" +
+      "A\'https://www.googleapis.com/auth/adword" +
+      "sB\205\002\n$com.google.ads.googleads.v6.servic" +
+      "esB\036CampaignExperimentServiceProtoP\001ZHgo" +
+      "ogle.golang.org/genproto/googleapis/ads/" +
+      "googleads/v6/services;services\242\002\003GAA\252\002 G" +
+      "oogle.Ads.GoogleAds.V6.Services\312\002 Google" +
+      "\\Ads\\GoogleAds\\V6\\Services\352\002$Google::Ads" +
+      "::GoogleAds::V6::Servicesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -297,6 +298,7 @@ public final class CampaignExperimentServiceProto {
     registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);
     registry.add(com.google.api.AnnotationsProto.http);
     registry.add(com.google.api.ClientProto.methodSignature);
+    registry.add(com.google.api.ClientProto.oauthScopes);
     registry.add(com.google.api.ResourceProto.resourceReference);
     registry.add(com.google.longrunning.OperationsProto.operationInfo);
     com.google.protobuf.Descriptors.FileDescriptor

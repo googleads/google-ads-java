@@ -92,7 +92,7 @@ public final class OfflineUserDataJobServiceProto {
       "ove_all\030\003 \001(\010H\000B\013\n\toperation\"\\\n\'AddOffli" +
       "neUserDataJobOperationsResponse\0221\n\025parti" +
       "al_failure_error\030\001 \001(\0132\022.google.rpc.Stat" +
-      "us2\270\010\n\031OfflineUserDataJobService\022\370\001\n\030Cre" +
+      "us2\342\010\n\031OfflineUserDataJobService\022\370\001\n\030Cre" +
       "ateOfflineUserDataJob\022A.google.ads.googl" +
       "eads.v6.services.CreateOfflineUserDataJo" +
       "bRequest\032B.google.ads.googleads.v6.servi" +
@@ -118,14 +118,15 @@ public final class OfflineUserDataJobServiceProto {
       "\"\205\001\202\323\344\223\002>\"9/v6/{resource_name=customers/" +
       "*/offlineUserDataJobs/*}:run:\001*\332A\rresour" +
       "ce_name\312A.\n\025google.protobuf.Empty\022\025googl" +
-      "e.protobuf.Empty\032\033\312A\030googleads.googleapi" +
-      "s.comB\205\002\n$com.google.ads.googleads.v6.se" +
-      "rvicesB\036OfflineUserDataJobServiceProtoP\001" +
-      "ZHgoogle.golang.org/genproto/googleapis/" +
-      "ads/googleads/v6/services;services\242\002\003GAA" +
-      "\252\002 Google.Ads.GoogleAds.V6.Services\312\002 Go" +
-      "ogle\\Ads\\GoogleAds\\V6\\Services\352\002$Google:" +
-      ":Ads::GoogleAds::V6::Servicesb\006proto3"
+      "e.protobuf.Empty\032E\312A\030googleads.googleapi" +
+      "s.com\322A\'https://www.googleapis.com/auth/" +
+      "adwordsB\205\002\n$com.google.ads.googleads.v6." +
+      "servicesB\036OfflineUserDataJobServiceProto" +
+      "P\001ZHgoogle.golang.org/genproto/googleapi" +
+      "s/ads/googleads/v6/services;services\242\002\003G" +
+      "AA\252\002 Google.Ads.GoogleAds.V6.Services\312\002 " +
+      "Google\\Ads\\GoogleAds\\V6\\Services\352\002$Googl" +
+      "e::Ads::GoogleAds::V6::Servicesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -187,6 +188,7 @@ public final class OfflineUserDataJobServiceProto {
     registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);
     registry.add(com.google.api.AnnotationsProto.http);
     registry.add(com.google.api.ClientProto.methodSignature);
+    registry.add(com.google.api.ClientProto.oauthScopes);
     registry.add(com.google.api.ResourceProto.resourceReference);
     registry.add(com.google.longrunning.OperationsProto.operationInfo);
     com.google.protobuf.Descriptors.FileDescriptor

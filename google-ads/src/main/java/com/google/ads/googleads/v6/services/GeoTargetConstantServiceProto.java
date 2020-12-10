@@ -84,7 +84,7 @@ public final class GeoTargetConstantServiceProto {
       "geo_target_constant_parents\030\005 \003(\01324.goog" +
       "le.ads.googleads.v6.resources.GeoTargetC" +
       "onstantB\t\n\007_localeB\010\n\006_reachB\016\n\014_search_" +
-      "term2\331\003\n\030GeoTargetConstantService\022\315\001\n\024Ge" +
+      "term2\203\004\n\030GeoTargetConstantService\022\315\001\n\024Ge" +
       "tGeoTargetConstant\022=.google.ads.googlead" +
       "s.v6.services.GetGeoTargetConstantReques" +
       "t\0324.google.ads.googleads.v6.resources.Ge" +
@@ -95,14 +95,15 @@ public final class GeoTargetConstantServiceProto {
       "getConstantsRequest\032C.google.ads.googlea" +
       "ds.v6.services.SuggestGeoTargetConstants" +
       "Response\")\202\323\344\223\002#\"\036/v6/geoTargetConstants" +
-      ":suggest:\001*\032\033\312A\030googleads.googleapis.com" +
-      "B\204\002\n$com.google.ads.googleads.v6.service" +
-      "sB\035GeoTargetConstantServiceProtoP\001ZHgoog" +
-      "le.golang.org/genproto/googleapis/ads/go" +
-      "ogleads/v6/services;services\242\002\003GAA\252\002 Goo" +
-      "gle.Ads.GoogleAds.V6.Services\312\002 Google\\A" +
-      "ds\\GoogleAds\\V6\\Services\352\002$Google::Ads::" +
-      "GoogleAds::V6::Servicesb\006proto3"
+      ":suggest:\001*\032E\312A\030googleads.googleapis.com" +
+      "\322A\'https://www.googleapis.com/auth/adwor" +
+      "dsB\204\002\n$com.google.ads.googleads.v6.servi" +
+      "cesB\035GeoTargetConstantServiceProtoP\001ZHgo" +
+      "ogle.golang.org/genproto/googleapis/ads/" +
+      "googleads/v6/services;services\242\002\003GAA\252\002 G" +
+      "oogle.Ads.GoogleAds.V6.Services\312\002 Google" +
+      "\\Ads\\GoogleAds\\V6\\Services\352\002$Google::Ads" +
+      "::GoogleAds::V6::Servicesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -155,6 +156,7 @@ public final class GeoTargetConstantServiceProto {
     registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);
     registry.add(com.google.api.AnnotationsProto.http);
     registry.add(com.google.api.ClientProto.methodSignature);
+    registry.add(com.google.api.ClientProto.oauthScopes);
     registry.add(com.google.api.ResourceProto.resourceReference);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);

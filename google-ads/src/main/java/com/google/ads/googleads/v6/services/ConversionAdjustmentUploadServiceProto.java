@@ -96,7 +96,7 @@ public final class ConversionAdjustmentUploadServiceProto {
       "e.ads.googleads.v6.services.GclidDateTim" +
       "ePairH\000\022\022\n\010order_id\030\006 \001(\tH\000B\027\n\025conversio" +
       "n_identifierB\024\n\022_conversion_actionB\027\n\025_a" +
-      "djustment_date_time2\350\002\n!ConversionAdjust" +
+      "djustment_date_time2\222\003\n!ConversionAdjust" +
       "mentUploadService\022\245\002\n\033UploadConversionAd" +
       "justments\022D.google.ads.googleads.v6.serv" +
       "ices.UploadConversionAdjustmentsRequest\032" +
@@ -104,15 +104,16 @@ public final class ConversionAdjustmentUploadServiceProto {
       "dConversionAdjustmentsResponse\"y\202\323\344\223\002>\"9" +
       "/v6/customers/{customer_id=*}:uploadConv" +
       "ersionAdjustments:\001*\332A2customer_id,conve" +
-      "rsion_adjustments,partial_failure\032\033\312A\030go" +
-      "ogleads.googleapis.comB\215\002\n$com.google.ad" +
-      "s.googleads.v6.servicesB&ConversionAdjus" +
-      "tmentUploadServiceProtoP\001ZHgoogle.golang" +
-      ".org/genproto/googleapis/ads/googleads/v" +
-      "6/services;services\242\002\003GAA\252\002 Google.Ads.G" +
-      "oogleAds.V6.Services\312\002 Google\\Ads\\Google" +
-      "Ads\\V6\\Services\352\002$Google::Ads::GoogleAds" +
-      "::V6::Servicesb\006proto3"
+      "rsion_adjustments,partial_failure\032E\312A\030go" +
+      "ogleads.googleapis.com\322A\'https://www.goo" +
+      "gleapis.com/auth/adwordsB\215\002\n$com.google." +
+      "ads.googleads.v6.servicesB&ConversionAdj" +
+      "ustmentUploadServiceProtoP\001ZHgoogle.gola" +
+      "ng.org/genproto/googleapis/ads/googleads" +
+      "/v6/services;services\242\002\003GAA\252\002 Google.Ads" +
+      ".GoogleAds.V6.Services\312\002 Google\\Ads\\Goog" +
+      "leAds\\V6\\Services\352\002$Google::Ads::GoogleA" +
+      "ds::V6::Servicesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -165,6 +166,7 @@ public final class ConversionAdjustmentUploadServiceProto {
     registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);
     registry.add(com.google.api.AnnotationsProto.http);
     registry.add(com.google.api.ClientProto.methodSignature);
+    registry.add(com.google.api.ClientProto.oauthScopes);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.ads.googleads.v6.enums.ConversionAdjustmentTypeProto.getDescriptor();

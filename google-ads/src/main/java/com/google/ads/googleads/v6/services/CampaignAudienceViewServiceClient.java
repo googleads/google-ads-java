@@ -5,7 +5,7 @@
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
- *     https://www.apache.org/licenses/LICENSE-2.0
+ *      https://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -13,9 +13,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
 package com.google.ads.googleads.v6.services;
 
 import com.google.ads.googleads.v6.resources.CampaignAudienceView;
+import com.google.ads.googleads.v6.resources.CampaignAudienceViewName;
 import com.google.ads.googleads.v6.services.stub.CampaignAudienceViewServiceStub;
 import com.google.ads.googleads.v6.services.stub.CampaignAudienceViewServiceStubSettings;
 import com.google.api.core.BetaApi;
@@ -25,23 +27,14 @@ import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 import javax.annotation.Generated;
 
-// AUTO-GENERATED DOCUMENTATION AND SERVICE
+// AUTO-GENERATED DOCUMENTATION AND CLASS.
 /**
  * Service Description: Service to manage campaign audience views.
  *
  * <p>This class provides the ability to make remote calls to the backing service through method
  * calls that map to API methods. Sample code to get started:
  *
- * <pre>
- * <code>
- * try (CampaignAudienceViewServiceClient campaignAudienceViewServiceClient = CampaignAudienceViewServiceClient.create()) {
- *   CampaignAudienceViewName resourceName = CampaignAudienceViewName.of("[CUSTOMER_ID]", "[CAMPAIGN_ID]", "[CRITERION_ID]");
- *   CampaignAudienceView response = campaignAudienceViewServiceClient.getCampaignAudienceView(resourceName);
- * }
- * </code>
- * </pre>
- *
- * <p>Note: close() needs to be called on the campaignAudienceViewServiceClient object to clean up
+ * <p>Note: close() needs to be called on the CampaignAudienceViewServiceClient object to clean up
  * resources such as threads. In the example above, try-with-resources is used, which automatically
  * calls close().
  *
@@ -70,30 +63,28 @@ import javax.annotation.Generated;
  *
  * <p>To customize credentials:
  *
- * <pre>
- * <code>
+ * <pre>{@code
  * CampaignAudienceViewServiceSettings campaignAudienceViewServiceSettings =
  *     CampaignAudienceViewServiceSettings.newBuilder()
  *         .setCredentialsProvider(FixedCredentialsProvider.create(myCredentials))
  *         .build();
  * CampaignAudienceViewServiceClient campaignAudienceViewServiceClient =
  *     CampaignAudienceViewServiceClient.create(campaignAudienceViewServiceSettings);
- * </code>
- * </pre>
+ * }</pre>
  *
- * To customize the endpoint:
+ * <p>To customize the endpoint:
  *
- * <pre>
- * <code>
+ * <pre>{@code
  * CampaignAudienceViewServiceSettings campaignAudienceViewServiceSettings =
  *     CampaignAudienceViewServiceSettings.newBuilder().setEndpoint(myEndpoint).build();
  * CampaignAudienceViewServiceClient campaignAudienceViewServiceClient =
  *     CampaignAudienceViewServiceClient.create(campaignAudienceViewServiceSettings);
- * </code>
- * </pre>
+ * }</pre>
+ *
+ * <p>Please refer to the GitHub repository's samples for more quickstart code snippets.
  */
-@Generated("by gapic-generator")
 @BetaApi
+@Generated("by gapic-generator")
 public class CampaignAudienceViewServiceClient implements BackgroundResource {
   private final CampaignAudienceViewServiceSettings settings;
   private final CampaignAudienceViewServiceStub stub;
@@ -115,7 +106,7 @@ public class CampaignAudienceViewServiceClient implements BackgroundResource {
 
   /**
    * Constructs an instance of CampaignAudienceViewServiceClient, using the given stub for making
-   * calls. This is for advanced usage - prefer to use CampaignAudienceViewServiceSettings}.
+   * calls. This is for advanced usage - prefer using create(CampaignAudienceViewServiceSettings).
    */
   @BetaApi("A restructuring of stub classes is planned, so this may break in the future")
   public static final CampaignAudienceViewServiceClient create(
@@ -149,20 +140,11 @@ public class CampaignAudienceViewServiceClient implements BackgroundResource {
     return stub;
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Returns the requested campaign audience view in full detail.
    *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (CampaignAudienceViewServiceClient campaignAudienceViewServiceClient = CampaignAudienceViewServiceClient.create()) {
-   *   CampaignAudienceViewName resourceName = CampaignAudienceViewName.of("[CUSTOMER_ID]", "[CAMPAIGN_ID]", "[CRITERION_ID]");
-   *   CampaignAudienceView response = campaignAudienceViewServiceClient.getCampaignAudienceView(resourceName);
-   * }
-   * </code></pre>
-   *
-   * @param resourceName Required. The resource name of the campaign audience view to fetch.
+   * @param resource_name Required. The resource name of the campaign audience view to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final CampaignAudienceView getCampaignAudienceView(CampaignAudienceViewName resourceName) {
@@ -173,20 +155,11 @@ public class CampaignAudienceViewServiceClient implements BackgroundResource {
     return getCampaignAudienceView(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Returns the requested campaign audience view in full detail.
    *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (CampaignAudienceViewServiceClient campaignAudienceViewServiceClient = CampaignAudienceViewServiceClient.create()) {
-   *   CampaignAudienceViewName resourceName = CampaignAudienceViewName.of("[CUSTOMER_ID]", "[CAMPAIGN_ID]", "[CRITERION_ID]");
-   *   CampaignAudienceView response = campaignAudienceViewServiceClient.getCampaignAudienceView(resourceName.toString());
-   * }
-   * </code></pre>
-   *
-   * @param resourceName Required. The resource name of the campaign audience view to fetch.
+   * @param resource_name Required. The resource name of the campaign audience view to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final CampaignAudienceView getCampaignAudienceView(String resourceName) {
@@ -195,21 +168,9 @@ public class CampaignAudienceViewServiceClient implements BackgroundResource {
     return getCampaignAudienceView(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Returns the requested campaign audience view in full detail.
-   *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (CampaignAudienceViewServiceClient campaignAudienceViewServiceClient = CampaignAudienceViewServiceClient.create()) {
-   *   CampaignAudienceViewName resourceName = CampaignAudienceViewName.of("[CUSTOMER_ID]", "[CAMPAIGN_ID]", "[CRITERION_ID]");
-   *   GetCampaignAudienceViewRequest request = GetCampaignAudienceViewRequest.newBuilder()
-   *     .setResourceName(resourceName.toString())
-   *     .build();
-   *   CampaignAudienceView response = campaignAudienceViewServiceClient.getCampaignAudienceView(request);
-   * }
-   * </code></pre>
    *
    * @param request The request object containing all of the parameters for the API call.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
@@ -219,23 +180,11 @@ public class CampaignAudienceViewServiceClient implements BackgroundResource {
     return getCampaignAudienceViewCallable().call(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Returns the requested campaign audience view in full detail.
    *
    * <p>Sample code:
-   *
-   * <pre><code>
-   * try (CampaignAudienceViewServiceClient campaignAudienceViewServiceClient = CampaignAudienceViewServiceClient.create()) {
-   *   CampaignAudienceViewName resourceName = CampaignAudienceViewName.of("[CUSTOMER_ID]", "[CAMPAIGN_ID]", "[CRITERION_ID]");
-   *   GetCampaignAudienceViewRequest request = GetCampaignAudienceViewRequest.newBuilder()
-   *     .setResourceName(resourceName.toString())
-   *     .build();
-   *   ApiFuture&lt;CampaignAudienceView&gt; future = campaignAudienceViewServiceClient.getCampaignAudienceViewCallable().futureCall(request);
-   *   // Do something
-   *   CampaignAudienceView response = future.get();
-   * }
-   * </code></pre>
    */
   public final UnaryCallable<GetCampaignAudienceViewRequest, CampaignAudienceView>
       getCampaignAudienceViewCallable() {

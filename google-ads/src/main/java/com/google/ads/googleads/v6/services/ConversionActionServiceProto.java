@@ -75,7 +75,7 @@ public final class ConversionActionServiceProto {
       ".rpc.Status\022O\n\007results\030\002 \003(\0132>.google.ad" +
       "s.googleads.v6.services.MutateConversion" +
       "ActionResult\"5\n\034MutateConversionActionRe" +
-      "sult\022\025\n\rresource_name\030\001 \001(\t2\213\004\n\027Conversi" +
+      "sult\022\025\n\rresource_name\030\001 \001(\t2\265\004\n\027Conversi" +
       "onActionService\022\325\001\n\023GetConversionAction\022" +
       "<.google.ads.googleads.v6.services.GetCo" +
       "nversionActionRequest\0323.google.ads.googl" +
@@ -88,14 +88,15 @@ public final class ConversionActionServiceProto {
       ".MutateConversionActionsResponse\"Z\202\323\344\223\002;" +
       "\"6/v6/customers/{customer_id=*}/conversi" +
       "onActions:mutate:\001*\332A\026customer_id,operat" +
-      "ions\032\033\312A\030googleads.googleapis.comB\203\002\n$co" +
-      "m.google.ads.googleads.v6.servicesB\034Conv" +
-      "ersionActionServiceProtoP\001ZHgoogle.golan" +
-      "g.org/genproto/googleapis/ads/googleads/" +
-      "v6/services;services\242\002\003GAA\252\002 Google.Ads." +
-      "GoogleAds.V6.Services\312\002 Google\\Ads\\Googl" +
-      "eAds\\V6\\Services\352\002$Google::Ads::GoogleAd" +
-      "s::V6::Servicesb\006proto3"
+      "ions\032E\312A\030googleads.googleapis.com\322A\'http" +
+      "s://www.googleapis.com/auth/adwordsB\203\002\n$" +
+      "com.google.ads.googleads.v6.servicesB\034Co" +
+      "nversionActionServiceProtoP\001ZHgoogle.gol" +
+      "ang.org/genproto/googleapis/ads/googlead" +
+      "s/v6/services;services\242\002\003GAA\252\002 Google.Ad" +
+      "s.GoogleAds.V6.Services\312\002 Google\\Ads\\Goo" +
+      "gleAds\\V6\\Services\352\002$Google::Ads::Google" +
+      "Ads::V6::Servicesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -144,6 +145,7 @@ public final class ConversionActionServiceProto {
     registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);
     registry.add(com.google.api.AnnotationsProto.http);
     registry.add(com.google.api.ClientProto.methodSignature);
+    registry.add(com.google.api.ClientProto.oauthScopes);
     registry.add(com.google.api.ResourceProto.resourceReference);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);

@@ -5,7 +5,7 @@
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
- *     https://www.apache.org/licenses/LICENSE-2.0
+ *      https://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -13,9 +13,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
 package com.google.ads.googleads.v6.services;
 
 import com.google.ads.googleads.v6.resources.FeedMapping;
+import com.google.ads.googleads.v6.resources.FeedMappingName;
 import com.google.ads.googleads.v6.services.stub.FeedMappingServiceStub;
 import com.google.ads.googleads.v6.services.stub.FeedMappingServiceStubSettings;
 import com.google.api.core.BetaApi;
@@ -26,23 +28,14 @@ import java.util.List;
 import java.util.concurrent.TimeUnit;
 import javax.annotation.Generated;
 
-// AUTO-GENERATED DOCUMENTATION AND SERVICE
+// AUTO-GENERATED DOCUMENTATION AND CLASS.
 /**
  * Service Description: Service to manage feed mappings.
  *
  * <p>This class provides the ability to make remote calls to the backing service through method
  * calls that map to API methods. Sample code to get started:
  *
- * <pre>
- * <code>
- * try (FeedMappingServiceClient feedMappingServiceClient = FeedMappingServiceClient.create()) {
- *   FeedMappingName resourceName = FeedMappingName.of("[CUSTOMER_ID]", "[FEED_ID]", "[FEED_MAPPING_ID]");
- *   FeedMapping response = feedMappingServiceClient.getFeedMapping(resourceName);
- * }
- * </code>
- * </pre>
- *
- * <p>Note: close() needs to be called on the feedMappingServiceClient object to clean up resources
+ * <p>Note: close() needs to be called on the FeedMappingServiceClient object to clean up resources
  * such as threads. In the example above, try-with-resources is used, which automatically calls
  * close().
  *
@@ -71,30 +64,28 @@ import javax.annotation.Generated;
  *
  * <p>To customize credentials:
  *
- * <pre>
- * <code>
+ * <pre>{@code
  * FeedMappingServiceSettings feedMappingServiceSettings =
  *     FeedMappingServiceSettings.newBuilder()
  *         .setCredentialsProvider(FixedCredentialsProvider.create(myCredentials))
  *         .build();
  * FeedMappingServiceClient feedMappingServiceClient =
  *     FeedMappingServiceClient.create(feedMappingServiceSettings);
- * </code>
- * </pre>
+ * }</pre>
  *
- * To customize the endpoint:
+ * <p>To customize the endpoint:
  *
- * <pre>
- * <code>
+ * <pre>{@code
  * FeedMappingServiceSettings feedMappingServiceSettings =
  *     FeedMappingServiceSettings.newBuilder().setEndpoint(myEndpoint).build();
  * FeedMappingServiceClient feedMappingServiceClient =
  *     FeedMappingServiceClient.create(feedMappingServiceSettings);
- * </code>
- * </pre>
+ * }</pre>
+ *
+ * <p>Please refer to the GitHub repository's samples for more quickstart code snippets.
  */
-@Generated("by gapic-generator")
 @BetaApi
+@Generated("by gapic-generator")
 public class FeedMappingServiceClient implements BackgroundResource {
   private final FeedMappingServiceSettings settings;
   private final FeedMappingServiceStub stub;
@@ -115,7 +106,7 @@ public class FeedMappingServiceClient implements BackgroundResource {
 
   /**
    * Constructs an instance of FeedMappingServiceClient, using the given stub for making calls. This
-   * is for advanced usage - prefer to use FeedMappingServiceSettings}.
+   * is for advanced usage - prefer using create(FeedMappingServiceSettings).
    */
   @BetaApi("A restructuring of stub classes is planned, so this may break in the future")
   public static final FeedMappingServiceClient create(FeedMappingServiceStub stub) {
@@ -147,20 +138,11 @@ public class FeedMappingServiceClient implements BackgroundResource {
     return stub;
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Returns the requested feed mapping in full detail.
    *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (FeedMappingServiceClient feedMappingServiceClient = FeedMappingServiceClient.create()) {
-   *   FeedMappingName resourceName = FeedMappingName.of("[CUSTOMER_ID]", "[FEED_ID]", "[FEED_MAPPING_ID]");
-   *   FeedMapping response = feedMappingServiceClient.getFeedMapping(resourceName);
-   * }
-   * </code></pre>
-   *
-   * @param resourceName Required. The resource name of the feed mapping to fetch.
+   * @param resource_name Required. The resource name of the feed mapping to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final FeedMapping getFeedMapping(FeedMappingName resourceName) {
@@ -171,20 +153,11 @@ public class FeedMappingServiceClient implements BackgroundResource {
     return getFeedMapping(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Returns the requested feed mapping in full detail.
    *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (FeedMappingServiceClient feedMappingServiceClient = FeedMappingServiceClient.create()) {
-   *   FeedMappingName resourceName = FeedMappingName.of("[CUSTOMER_ID]", "[FEED_ID]", "[FEED_MAPPING_ID]");
-   *   FeedMapping response = feedMappingServiceClient.getFeedMapping(resourceName.toString());
-   * }
-   * </code></pre>
-   *
-   * @param resourceName Required. The resource name of the feed mapping to fetch.
+   * @param resource_name Required. The resource name of the feed mapping to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final FeedMapping getFeedMapping(String resourceName) {
@@ -193,21 +166,9 @@ public class FeedMappingServiceClient implements BackgroundResource {
     return getFeedMapping(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Returns the requested feed mapping in full detail.
-   *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (FeedMappingServiceClient feedMappingServiceClient = FeedMappingServiceClient.create()) {
-   *   FeedMappingName resourceName = FeedMappingName.of("[CUSTOMER_ID]", "[FEED_ID]", "[FEED_MAPPING_ID]");
-   *   GetFeedMappingRequest request = GetFeedMappingRequest.newBuilder()
-   *     .setResourceName(resourceName.toString())
-   *     .build();
-   *   FeedMapping response = feedMappingServiceClient.getFeedMapping(request);
-   * }
-   * </code></pre>
    *
    * @param request The request object containing all of the parameters for the API call.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
@@ -216,43 +177,21 @@ public class FeedMappingServiceClient implements BackgroundResource {
     return getFeedMappingCallable().call(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Returns the requested feed mapping in full detail.
    *
    * <p>Sample code:
-   *
-   * <pre><code>
-   * try (FeedMappingServiceClient feedMappingServiceClient = FeedMappingServiceClient.create()) {
-   *   FeedMappingName resourceName = FeedMappingName.of("[CUSTOMER_ID]", "[FEED_ID]", "[FEED_MAPPING_ID]");
-   *   GetFeedMappingRequest request = GetFeedMappingRequest.newBuilder()
-   *     .setResourceName(resourceName.toString())
-   *     .build();
-   *   ApiFuture&lt;FeedMapping&gt; future = feedMappingServiceClient.getFeedMappingCallable().futureCall(request);
-   *   // Do something
-   *   FeedMapping response = future.get();
-   * }
-   * </code></pre>
    */
   public final UnaryCallable<GetFeedMappingRequest, FeedMapping> getFeedMappingCallable() {
     return stub.getFeedMappingCallable();
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Creates or removes feed mappings. Operation statuses are returned.
    *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (FeedMappingServiceClient feedMappingServiceClient = FeedMappingServiceClient.create()) {
-   *   String customerId = "";
-   *   List&lt;FeedMappingOperation&gt; operations = new ArrayList&lt;&gt;();
-   *   MutateFeedMappingsResponse response = feedMappingServiceClient.mutateFeedMappings(customerId, operations);
-   * }
-   * </code></pre>
-   *
-   * @param customerId Required. The ID of the customer whose feed mappings are being modified.
+   * @param customer_id Required. The ID of the customer whose feed mappings are being modified.
    * @param operations Required. The list of operations to perform on individual feed mappings.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
@@ -266,23 +205,9 @@ public class FeedMappingServiceClient implements BackgroundResource {
     return mutateFeedMappings(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Creates or removes feed mappings. Operation statuses are returned.
-   *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (FeedMappingServiceClient feedMappingServiceClient = FeedMappingServiceClient.create()) {
-   *   String customerId = "";
-   *   List&lt;FeedMappingOperation&gt; operations = new ArrayList&lt;&gt;();
-   *   MutateFeedMappingsRequest request = MutateFeedMappingsRequest.newBuilder()
-   *     .setCustomerId(customerId)
-   *     .addAllOperations(operations)
-   *     .build();
-   *   MutateFeedMappingsResponse response = feedMappingServiceClient.mutateFeedMappings(request);
-   * }
-   * </code></pre>
    *
    * @param request The request object containing all of the parameters for the API call.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
@@ -291,25 +216,11 @@ public class FeedMappingServiceClient implements BackgroundResource {
     return mutateFeedMappingsCallable().call(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Creates or removes feed mappings. Operation statuses are returned.
    *
    * <p>Sample code:
-   *
-   * <pre><code>
-   * try (FeedMappingServiceClient feedMappingServiceClient = FeedMappingServiceClient.create()) {
-   *   String customerId = "";
-   *   List&lt;FeedMappingOperation&gt; operations = new ArrayList&lt;&gt;();
-   *   MutateFeedMappingsRequest request = MutateFeedMappingsRequest.newBuilder()
-   *     .setCustomerId(customerId)
-   *     .addAllOperations(operations)
-   *     .build();
-   *   ApiFuture&lt;MutateFeedMappingsResponse&gt; future = feedMappingServiceClient.mutateFeedMappingsCallable().futureCall(request);
-   *   // Do something
-   *   MutateFeedMappingsResponse response = future.get();
-   * }
-   * </code></pre>
    */
   public final UnaryCallable<MutateFeedMappingsRequest, MutateFeedMappingsResponse>
       mutateFeedMappingsCallable() {

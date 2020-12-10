@@ -5,7 +5,7 @@
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
- *     https://www.apache.org/licenses/LICENSE-2.0
+ *      https://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -13,6 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
 package com.google.ads.googleads.v6.services;
 
 import com.google.ads.googleads.v6.resources.HotelPerformanceView;
@@ -24,9 +25,10 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
+import javax.annotation.Generated;
 
-@javax.annotation.Generated("by GAPIC")
 @BetaApi
+@Generated("by gapic-generator-java")
 public class MockHotelPerformanceViewServiceImpl extends HotelPerformanceViewServiceImplBase {
   private List<AbstractMessage> requests;
   private Queue<Object> responses;
@@ -64,10 +66,10 @@ public class MockHotelPerformanceViewServiceImpl extends HotelPerformanceViewSer
     Object response = responses.remove();
     if (response instanceof HotelPerformanceView) {
       requests.add(request);
-      responseObserver.onNext((HotelPerformanceView) response);
+      responseObserver.onNext(((HotelPerformanceView) response));
       responseObserver.onCompleted();
     } else if (response instanceof Exception) {
-      responseObserver.onError((Exception) response);
+      responseObserver.onError(((Exception) response));
     } else {
       responseObserver.onError(new IllegalArgumentException("Unrecognized response type"));
     }

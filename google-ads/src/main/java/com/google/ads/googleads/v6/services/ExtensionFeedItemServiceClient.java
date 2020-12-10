@@ -5,7 +5,7 @@
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
- *     https://www.apache.org/licenses/LICENSE-2.0
+ *      https://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -13,9 +13,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
 package com.google.ads.googleads.v6.services;
 
 import com.google.ads.googleads.v6.resources.ExtensionFeedItem;
+import com.google.ads.googleads.v6.resources.ExtensionFeedItemName;
 import com.google.ads.googleads.v6.services.stub.ExtensionFeedItemServiceStub;
 import com.google.ads.googleads.v6.services.stub.ExtensionFeedItemServiceStubSettings;
 import com.google.api.core.BetaApi;
@@ -26,23 +28,14 @@ import java.util.List;
 import java.util.concurrent.TimeUnit;
 import javax.annotation.Generated;
 
-// AUTO-GENERATED DOCUMENTATION AND SERVICE
+// AUTO-GENERATED DOCUMENTATION AND CLASS.
 /**
  * Service Description: Service to manage extension feed items.
  *
  * <p>This class provides the ability to make remote calls to the backing service through method
  * calls that map to API methods. Sample code to get started:
  *
- * <pre>
- * <code>
- * try (ExtensionFeedItemServiceClient extensionFeedItemServiceClient = ExtensionFeedItemServiceClient.create()) {
- *   ExtensionFeedItemName resourceName = ExtensionFeedItemName.of("[CUSTOMER_ID]", "[FEED_ITEM_ID]");
- *   ExtensionFeedItem response = extensionFeedItemServiceClient.getExtensionFeedItem(resourceName);
- * }
- * </code>
- * </pre>
- *
- * <p>Note: close() needs to be called on the extensionFeedItemServiceClient object to clean up
+ * <p>Note: close() needs to be called on the ExtensionFeedItemServiceClient object to clean up
  * resources such as threads. In the example above, try-with-resources is used, which automatically
  * calls close().
  *
@@ -71,30 +64,28 @@ import javax.annotation.Generated;
  *
  * <p>To customize credentials:
  *
- * <pre>
- * <code>
+ * <pre>{@code
  * ExtensionFeedItemServiceSettings extensionFeedItemServiceSettings =
  *     ExtensionFeedItemServiceSettings.newBuilder()
  *         .setCredentialsProvider(FixedCredentialsProvider.create(myCredentials))
  *         .build();
  * ExtensionFeedItemServiceClient extensionFeedItemServiceClient =
  *     ExtensionFeedItemServiceClient.create(extensionFeedItemServiceSettings);
- * </code>
- * </pre>
+ * }</pre>
  *
- * To customize the endpoint:
+ * <p>To customize the endpoint:
  *
- * <pre>
- * <code>
+ * <pre>{@code
  * ExtensionFeedItemServiceSettings extensionFeedItemServiceSettings =
  *     ExtensionFeedItemServiceSettings.newBuilder().setEndpoint(myEndpoint).build();
  * ExtensionFeedItemServiceClient extensionFeedItemServiceClient =
  *     ExtensionFeedItemServiceClient.create(extensionFeedItemServiceSettings);
- * </code>
- * </pre>
+ * }</pre>
+ *
+ * <p>Please refer to the GitHub repository's samples for more quickstart code snippets.
  */
-@Generated("by gapic-generator")
 @BetaApi
+@Generated("by gapic-generator")
 public class ExtensionFeedItemServiceClient implements BackgroundResource {
   private final ExtensionFeedItemServiceSettings settings;
   private final ExtensionFeedItemServiceStub stub;
@@ -116,7 +107,7 @@ public class ExtensionFeedItemServiceClient implements BackgroundResource {
 
   /**
    * Constructs an instance of ExtensionFeedItemServiceClient, using the given stub for making
-   * calls. This is for advanced usage - prefer to use ExtensionFeedItemServiceSettings}.
+   * calls. This is for advanced usage - prefer using create(ExtensionFeedItemServiceSettings).
    */
   @BetaApi("A restructuring of stub classes is planned, so this may break in the future")
   public static final ExtensionFeedItemServiceClient create(ExtensionFeedItemServiceStub stub) {
@@ -149,20 +140,11 @@ public class ExtensionFeedItemServiceClient implements BackgroundResource {
     return stub;
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Returns the requested extension feed item in full detail.
    *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (ExtensionFeedItemServiceClient extensionFeedItemServiceClient = ExtensionFeedItemServiceClient.create()) {
-   *   ExtensionFeedItemName resourceName = ExtensionFeedItemName.of("[CUSTOMER_ID]", "[FEED_ITEM_ID]");
-   *   ExtensionFeedItem response = extensionFeedItemServiceClient.getExtensionFeedItem(resourceName);
-   * }
-   * </code></pre>
-   *
-   * @param resourceName Required. The resource name of the extension feed item to fetch.
+   * @param resource_name Required. The resource name of the extension feed item to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final ExtensionFeedItem getExtensionFeedItem(ExtensionFeedItemName resourceName) {
@@ -173,20 +155,11 @@ public class ExtensionFeedItemServiceClient implements BackgroundResource {
     return getExtensionFeedItem(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Returns the requested extension feed item in full detail.
    *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (ExtensionFeedItemServiceClient extensionFeedItemServiceClient = ExtensionFeedItemServiceClient.create()) {
-   *   ExtensionFeedItemName resourceName = ExtensionFeedItemName.of("[CUSTOMER_ID]", "[FEED_ITEM_ID]");
-   *   ExtensionFeedItem response = extensionFeedItemServiceClient.getExtensionFeedItem(resourceName.toString());
-   * }
-   * </code></pre>
-   *
-   * @param resourceName Required. The resource name of the extension feed item to fetch.
+   * @param resource_name Required. The resource name of the extension feed item to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final ExtensionFeedItem getExtensionFeedItem(String resourceName) {
@@ -195,21 +168,9 @@ public class ExtensionFeedItemServiceClient implements BackgroundResource {
     return getExtensionFeedItem(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Returns the requested extension feed item in full detail.
-   *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (ExtensionFeedItemServiceClient extensionFeedItemServiceClient = ExtensionFeedItemServiceClient.create()) {
-   *   ExtensionFeedItemName resourceName = ExtensionFeedItemName.of("[CUSTOMER_ID]", "[FEED_ITEM_ID]");
-   *   GetExtensionFeedItemRequest request = GetExtensionFeedItemRequest.newBuilder()
-   *     .setResourceName(resourceName.toString())
-   *     .build();
-   *   ExtensionFeedItem response = extensionFeedItemServiceClient.getExtensionFeedItem(request);
-   * }
-   * </code></pre>
    *
    * @param request The request object containing all of the parameters for the API call.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
@@ -218,44 +179,22 @@ public class ExtensionFeedItemServiceClient implements BackgroundResource {
     return getExtensionFeedItemCallable().call(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Returns the requested extension feed item in full detail.
    *
    * <p>Sample code:
-   *
-   * <pre><code>
-   * try (ExtensionFeedItemServiceClient extensionFeedItemServiceClient = ExtensionFeedItemServiceClient.create()) {
-   *   ExtensionFeedItemName resourceName = ExtensionFeedItemName.of("[CUSTOMER_ID]", "[FEED_ITEM_ID]");
-   *   GetExtensionFeedItemRequest request = GetExtensionFeedItemRequest.newBuilder()
-   *     .setResourceName(resourceName.toString())
-   *     .build();
-   *   ApiFuture&lt;ExtensionFeedItem&gt; future = extensionFeedItemServiceClient.getExtensionFeedItemCallable().futureCall(request);
-   *   // Do something
-   *   ExtensionFeedItem response = future.get();
-   * }
-   * </code></pre>
    */
   public final UnaryCallable<GetExtensionFeedItemRequest, ExtensionFeedItem>
       getExtensionFeedItemCallable() {
     return stub.getExtensionFeedItemCallable();
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Creates, updates, or removes extension feed items. Operation statuses are returned.
    *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (ExtensionFeedItemServiceClient extensionFeedItemServiceClient = ExtensionFeedItemServiceClient.create()) {
-   *   String customerId = "";
-   *   List&lt;ExtensionFeedItemOperation&gt; operations = new ArrayList&lt;&gt;();
-   *   MutateExtensionFeedItemsResponse response = extensionFeedItemServiceClient.mutateExtensionFeedItems(customerId, operations);
-   * }
-   * </code></pre>
-   *
-   * @param customerId Required. The ID of the customer whose extension feed items are being
+   * @param customer_id Required. The ID of the customer whose extension feed items are being
    *     modified.
    * @param operations Required. The list of operations to perform on individual extension feed
    *     items.
@@ -271,23 +210,9 @@ public class ExtensionFeedItemServiceClient implements BackgroundResource {
     return mutateExtensionFeedItems(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Creates, updates, or removes extension feed items. Operation statuses are returned.
-   *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (ExtensionFeedItemServiceClient extensionFeedItemServiceClient = ExtensionFeedItemServiceClient.create()) {
-   *   String customerId = "";
-   *   List&lt;ExtensionFeedItemOperation&gt; operations = new ArrayList&lt;&gt;();
-   *   MutateExtensionFeedItemsRequest request = MutateExtensionFeedItemsRequest.newBuilder()
-   *     .setCustomerId(customerId)
-   *     .addAllOperations(operations)
-   *     .build();
-   *   MutateExtensionFeedItemsResponse response = extensionFeedItemServiceClient.mutateExtensionFeedItems(request);
-   * }
-   * </code></pre>
    *
    * @param request The request object containing all of the parameters for the API call.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
@@ -297,25 +222,11 @@ public class ExtensionFeedItemServiceClient implements BackgroundResource {
     return mutateExtensionFeedItemsCallable().call(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Creates, updates, or removes extension feed items. Operation statuses are returned.
    *
    * <p>Sample code:
-   *
-   * <pre><code>
-   * try (ExtensionFeedItemServiceClient extensionFeedItemServiceClient = ExtensionFeedItemServiceClient.create()) {
-   *   String customerId = "";
-   *   List&lt;ExtensionFeedItemOperation&gt; operations = new ArrayList&lt;&gt;();
-   *   MutateExtensionFeedItemsRequest request = MutateExtensionFeedItemsRequest.newBuilder()
-   *     .setCustomerId(customerId)
-   *     .addAllOperations(operations)
-   *     .build();
-   *   ApiFuture&lt;MutateExtensionFeedItemsResponse&gt; future = extensionFeedItemServiceClient.mutateExtensionFeedItemsCallable().futureCall(request);
-   *   // Do something
-   *   MutateExtensionFeedItemsResponse response = future.get();
-   * }
-   * </code></pre>
    */
   public final UnaryCallable<MutateExtensionFeedItemsRequest, MutateExtensionFeedItemsResponse>
       mutateExtensionFeedItemsCallable() {

@@ -5,7 +5,7 @@
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
- *     https://www.apache.org/licenses/LICENSE-2.0
+ *      https://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -13,9 +13,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
 package com.google.ads.googleads.v6.services;
 
 import com.google.ads.googleads.v6.resources.AdScheduleView;
+import com.google.ads.googleads.v6.resources.AdScheduleViewName;
 import com.google.ads.googleads.v6.services.stub.AdScheduleViewServiceStub;
 import com.google.ads.googleads.v6.services.stub.AdScheduleViewServiceStubSettings;
 import com.google.api.core.BetaApi;
@@ -25,23 +27,14 @@ import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 import javax.annotation.Generated;
 
-// AUTO-GENERATED DOCUMENTATION AND SERVICE
+// AUTO-GENERATED DOCUMENTATION AND CLASS.
 /**
  * Service Description: Service to fetch ad schedule views.
  *
  * <p>This class provides the ability to make remote calls to the backing service through method
  * calls that map to API methods. Sample code to get started:
  *
- * <pre>
- * <code>
- * try (AdScheduleViewServiceClient adScheduleViewServiceClient = AdScheduleViewServiceClient.create()) {
- *   AdScheduleViewName resourceName = AdScheduleViewName.of("[CUSTOMER_ID]", "[CAMPAIGN_ID]", "[CRITERION_ID]");
- *   AdScheduleView response = adScheduleViewServiceClient.getAdScheduleView(resourceName);
- * }
- * </code>
- * </pre>
- *
- * <p>Note: close() needs to be called on the adScheduleViewServiceClient object to clean up
+ * <p>Note: close() needs to be called on the AdScheduleViewServiceClient object to clean up
  * resources such as threads. In the example above, try-with-resources is used, which automatically
  * calls close().
  *
@@ -70,30 +63,28 @@ import javax.annotation.Generated;
  *
  * <p>To customize credentials:
  *
- * <pre>
- * <code>
+ * <pre>{@code
  * AdScheduleViewServiceSettings adScheduleViewServiceSettings =
  *     AdScheduleViewServiceSettings.newBuilder()
  *         .setCredentialsProvider(FixedCredentialsProvider.create(myCredentials))
  *         .build();
  * AdScheduleViewServiceClient adScheduleViewServiceClient =
  *     AdScheduleViewServiceClient.create(adScheduleViewServiceSettings);
- * </code>
- * </pre>
+ * }</pre>
  *
- * To customize the endpoint:
+ * <p>To customize the endpoint:
  *
- * <pre>
- * <code>
+ * <pre>{@code
  * AdScheduleViewServiceSettings adScheduleViewServiceSettings =
  *     AdScheduleViewServiceSettings.newBuilder().setEndpoint(myEndpoint).build();
  * AdScheduleViewServiceClient adScheduleViewServiceClient =
  *     AdScheduleViewServiceClient.create(adScheduleViewServiceSettings);
- * </code>
- * </pre>
+ * }</pre>
+ *
+ * <p>Please refer to the GitHub repository's samples for more quickstart code snippets.
  */
-@Generated("by gapic-generator")
 @BetaApi
+@Generated("by gapic-generator")
 public class AdScheduleViewServiceClient implements BackgroundResource {
   private final AdScheduleViewServiceSettings settings;
   private final AdScheduleViewServiceStub stub;
@@ -114,7 +105,7 @@ public class AdScheduleViewServiceClient implements BackgroundResource {
 
   /**
    * Constructs an instance of AdScheduleViewServiceClient, using the given stub for making calls.
-   * This is for advanced usage - prefer to use AdScheduleViewServiceSettings}.
+   * This is for advanced usage - prefer using create(AdScheduleViewServiceSettings).
    */
   @BetaApi("A restructuring of stub classes is planned, so this may break in the future")
   public static final AdScheduleViewServiceClient create(AdScheduleViewServiceStub stub) {
@@ -146,20 +137,11 @@ public class AdScheduleViewServiceClient implements BackgroundResource {
     return stub;
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Returns the requested ad schedule view in full detail.
    *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (AdScheduleViewServiceClient adScheduleViewServiceClient = AdScheduleViewServiceClient.create()) {
-   *   AdScheduleViewName resourceName = AdScheduleViewName.of("[CUSTOMER_ID]", "[CAMPAIGN_ID]", "[CRITERION_ID]");
-   *   AdScheduleView response = adScheduleViewServiceClient.getAdScheduleView(resourceName);
-   * }
-   * </code></pre>
-   *
-   * @param resourceName Required. The resource name of the ad schedule view to fetch.
+   * @param resource_name Required. The resource name of the ad schedule view to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final AdScheduleView getAdScheduleView(AdScheduleViewName resourceName) {
@@ -170,20 +152,11 @@ public class AdScheduleViewServiceClient implements BackgroundResource {
     return getAdScheduleView(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Returns the requested ad schedule view in full detail.
    *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (AdScheduleViewServiceClient adScheduleViewServiceClient = AdScheduleViewServiceClient.create()) {
-   *   AdScheduleViewName resourceName = AdScheduleViewName.of("[CUSTOMER_ID]", "[CAMPAIGN_ID]", "[CRITERION_ID]");
-   *   AdScheduleView response = adScheduleViewServiceClient.getAdScheduleView(resourceName.toString());
-   * }
-   * </code></pre>
-   *
-   * @param resourceName Required. The resource name of the ad schedule view to fetch.
+   * @param resource_name Required. The resource name of the ad schedule view to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final AdScheduleView getAdScheduleView(String resourceName) {
@@ -192,21 +165,9 @@ public class AdScheduleViewServiceClient implements BackgroundResource {
     return getAdScheduleView(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Returns the requested ad schedule view in full detail.
-   *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (AdScheduleViewServiceClient adScheduleViewServiceClient = AdScheduleViewServiceClient.create()) {
-   *   AdScheduleViewName resourceName = AdScheduleViewName.of("[CUSTOMER_ID]", "[CAMPAIGN_ID]", "[CRITERION_ID]");
-   *   GetAdScheduleViewRequest request = GetAdScheduleViewRequest.newBuilder()
-   *     .setResourceName(resourceName.toString())
-   *     .build();
-   *   AdScheduleView response = adScheduleViewServiceClient.getAdScheduleView(request);
-   * }
-   * </code></pre>
    *
    * @param request The request object containing all of the parameters for the API call.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
@@ -215,23 +176,11 @@ public class AdScheduleViewServiceClient implements BackgroundResource {
     return getAdScheduleViewCallable().call(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Returns the requested ad schedule view in full detail.
    *
    * <p>Sample code:
-   *
-   * <pre><code>
-   * try (AdScheduleViewServiceClient adScheduleViewServiceClient = AdScheduleViewServiceClient.create()) {
-   *   AdScheduleViewName resourceName = AdScheduleViewName.of("[CUSTOMER_ID]", "[CAMPAIGN_ID]", "[CRITERION_ID]");
-   *   GetAdScheduleViewRequest request = GetAdScheduleViewRequest.newBuilder()
-   *     .setResourceName(resourceName.toString())
-   *     .build();
-   *   ApiFuture&lt;AdScheduleView&gt; future = adScheduleViewServiceClient.getAdScheduleViewCallable().futureCall(request);
-   *   // Do something
-   *   AdScheduleView response = future.get();
-   * }
-   * </code></pre>
    */
   public final UnaryCallable<GetAdScheduleViewRequest, AdScheduleView> getAdScheduleViewCallable() {
     return stub.getAdScheduleViewCallable();

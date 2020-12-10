@@ -5,7 +5,7 @@
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
- *     https://www.apache.org/licenses/LICENSE-2.0
+ *      https://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -13,9 +13,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
 package com.google.ads.googleads.v6.services;
 
 import com.google.ads.googleads.v6.resources.MerchantCenterLink;
+import com.google.ads.googleads.v6.resources.MerchantCenterLinkName;
 import com.google.ads.googleads.v6.services.stub.MerchantCenterLinkServiceStub;
 import com.google.ads.googleads.v6.services.stub.MerchantCenterLinkServiceStubSettings;
 import com.google.api.core.BetaApi;
@@ -25,7 +27,7 @@ import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 import javax.annotation.Generated;
 
-// AUTO-GENERATED DOCUMENTATION AND SERVICE
+// AUTO-GENERATED DOCUMENTATION AND CLASS.
 /**
  * Service Description: This service allows management of links between Google Ads and Google
  * Merchant Center.
@@ -33,16 +35,7 @@ import javax.annotation.Generated;
  * <p>This class provides the ability to make remote calls to the backing service through method
  * calls that map to API methods. Sample code to get started:
  *
- * <pre>
- * <code>
- * try (MerchantCenterLinkServiceClient merchantCenterLinkServiceClient = MerchantCenterLinkServiceClient.create()) {
- *   String customerId = "";
- *   ListMerchantCenterLinksResponse response = merchantCenterLinkServiceClient.listMerchantCenterLinks(customerId);
- * }
- * </code>
- * </pre>
- *
- * <p>Note: close() needs to be called on the merchantCenterLinkServiceClient object to clean up
+ * <p>Note: close() needs to be called on the MerchantCenterLinkServiceClient object to clean up
  * resources such as threads. In the example above, try-with-resources is used, which automatically
  * calls close().
  *
@@ -71,30 +64,28 @@ import javax.annotation.Generated;
  *
  * <p>To customize credentials:
  *
- * <pre>
- * <code>
+ * <pre>{@code
  * MerchantCenterLinkServiceSettings merchantCenterLinkServiceSettings =
  *     MerchantCenterLinkServiceSettings.newBuilder()
  *         .setCredentialsProvider(FixedCredentialsProvider.create(myCredentials))
  *         .build();
  * MerchantCenterLinkServiceClient merchantCenterLinkServiceClient =
  *     MerchantCenterLinkServiceClient.create(merchantCenterLinkServiceSettings);
- * </code>
- * </pre>
+ * }</pre>
  *
- * To customize the endpoint:
+ * <p>To customize the endpoint:
  *
- * <pre>
- * <code>
+ * <pre>{@code
  * MerchantCenterLinkServiceSettings merchantCenterLinkServiceSettings =
  *     MerchantCenterLinkServiceSettings.newBuilder().setEndpoint(myEndpoint).build();
  * MerchantCenterLinkServiceClient merchantCenterLinkServiceClient =
  *     MerchantCenterLinkServiceClient.create(merchantCenterLinkServiceSettings);
- * </code>
- * </pre>
+ * }</pre>
+ *
+ * <p>Please refer to the GitHub repository's samples for more quickstart code snippets.
  */
-@Generated("by gapic-generator")
 @BetaApi
+@Generated("by gapic-generator")
 public class MerchantCenterLinkServiceClient implements BackgroundResource {
   private final MerchantCenterLinkServiceSettings settings;
   private final MerchantCenterLinkServiceStub stub;
@@ -116,7 +107,7 @@ public class MerchantCenterLinkServiceClient implements BackgroundResource {
 
   /**
    * Constructs an instance of MerchantCenterLinkServiceClient, using the given stub for making
-   * calls. This is for advanced usage - prefer to use MerchantCenterLinkServiceSettings}.
+   * calls. This is for advanced usage - prefer using create(MerchantCenterLinkServiceSettings).
    */
   @BetaApi("A restructuring of stub classes is planned, so this may break in the future")
   public static final MerchantCenterLinkServiceClient create(MerchantCenterLinkServiceStub stub) {
@@ -149,21 +140,12 @@ public class MerchantCenterLinkServiceClient implements BackgroundResource {
     return stub;
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Returns Merchant Center links available for this customer.
    *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (MerchantCenterLinkServiceClient merchantCenterLinkServiceClient = MerchantCenterLinkServiceClient.create()) {
-   *   String customerId = "";
-   *   ListMerchantCenterLinksResponse response = merchantCenterLinkServiceClient.listMerchantCenterLinks(customerId);
-   * }
-   * </code></pre>
-   *
-   * @param customerId Required. The ID of the customer onto which to apply the Merchant Center link
-   *     list operation.
+   * @param customer_id Required. The ID of the customer onto which to apply the Merchant Center
+   *     link list operation.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final ListMerchantCenterLinksResponse listMerchantCenterLinks(String customerId) {
@@ -172,21 +154,9 @@ public class MerchantCenterLinkServiceClient implements BackgroundResource {
     return listMerchantCenterLinks(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Returns Merchant Center links available for this customer.
-   *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (MerchantCenterLinkServiceClient merchantCenterLinkServiceClient = MerchantCenterLinkServiceClient.create()) {
-   *   String customerId = "";
-   *   ListMerchantCenterLinksRequest request = ListMerchantCenterLinksRequest.newBuilder()
-   *     .setCustomerId(customerId)
-   *     .build();
-   *   ListMerchantCenterLinksResponse response = merchantCenterLinkServiceClient.listMerchantCenterLinks(request);
-   * }
-   * </code></pre>
    *
    * @param request The request object containing all of the parameters for the API call.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
@@ -196,43 +166,22 @@ public class MerchantCenterLinkServiceClient implements BackgroundResource {
     return listMerchantCenterLinksCallable().call(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Returns Merchant Center links available for this customer.
    *
    * <p>Sample code:
-   *
-   * <pre><code>
-   * try (MerchantCenterLinkServiceClient merchantCenterLinkServiceClient = MerchantCenterLinkServiceClient.create()) {
-   *   String customerId = "";
-   *   ListMerchantCenterLinksRequest request = ListMerchantCenterLinksRequest.newBuilder()
-   *     .setCustomerId(customerId)
-   *     .build();
-   *   ApiFuture&lt;ListMerchantCenterLinksResponse&gt; future = merchantCenterLinkServiceClient.listMerchantCenterLinksCallable().futureCall(request);
-   *   // Do something
-   *   ListMerchantCenterLinksResponse response = future.get();
-   * }
-   * </code></pre>
    */
   public final UnaryCallable<ListMerchantCenterLinksRequest, ListMerchantCenterLinksResponse>
       listMerchantCenterLinksCallable() {
     return stub.listMerchantCenterLinksCallable();
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Returns the Merchant Center link in full detail.
    *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (MerchantCenterLinkServiceClient merchantCenterLinkServiceClient = MerchantCenterLinkServiceClient.create()) {
-   *   MerchantCenterLinkName resourceName = MerchantCenterLinkName.of("[CUSTOMER_ID]", "[MERCHANT_CENTER_ID]");
-   *   MerchantCenterLink response = merchantCenterLinkServiceClient.getMerchantCenterLink(resourceName);
-   * }
-   * </code></pre>
-   *
-   * @param resourceName Required. Resource name of the Merchant Center link.
+   * @param resource_name Required. Resource name of the Merchant Center link.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final MerchantCenterLink getMerchantCenterLink(MerchantCenterLinkName resourceName) {
@@ -243,20 +192,11 @@ public class MerchantCenterLinkServiceClient implements BackgroundResource {
     return getMerchantCenterLink(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Returns the Merchant Center link in full detail.
    *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (MerchantCenterLinkServiceClient merchantCenterLinkServiceClient = MerchantCenterLinkServiceClient.create()) {
-   *   MerchantCenterLinkName resourceName = MerchantCenterLinkName.of("[CUSTOMER_ID]", "[MERCHANT_CENTER_ID]");
-   *   MerchantCenterLink response = merchantCenterLinkServiceClient.getMerchantCenterLink(resourceName.toString());
-   * }
-   * </code></pre>
-   *
-   * @param resourceName Required. Resource name of the Merchant Center link.
+   * @param resource_name Required. Resource name of the Merchant Center link.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final MerchantCenterLink getMerchantCenterLink(String resourceName) {
@@ -265,21 +205,9 @@ public class MerchantCenterLinkServiceClient implements BackgroundResource {
     return getMerchantCenterLink(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Returns the Merchant Center link in full detail.
-   *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (MerchantCenterLinkServiceClient merchantCenterLinkServiceClient = MerchantCenterLinkServiceClient.create()) {
-   *   MerchantCenterLinkName resourceName = MerchantCenterLinkName.of("[CUSTOMER_ID]", "[MERCHANT_CENTER_ID]");
-   *   GetMerchantCenterLinkRequest request = GetMerchantCenterLinkRequest.newBuilder()
-   *     .setResourceName(resourceName.toString())
-   *     .build();
-   *   MerchantCenterLink response = merchantCenterLinkServiceClient.getMerchantCenterLink(request);
-   * }
-   * </code></pre>
    *
    * @param request The request object containing all of the parameters for the API call.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
@@ -288,44 +216,22 @@ public class MerchantCenterLinkServiceClient implements BackgroundResource {
     return getMerchantCenterLinkCallable().call(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Returns the Merchant Center link in full detail.
    *
    * <p>Sample code:
-   *
-   * <pre><code>
-   * try (MerchantCenterLinkServiceClient merchantCenterLinkServiceClient = MerchantCenterLinkServiceClient.create()) {
-   *   MerchantCenterLinkName resourceName = MerchantCenterLinkName.of("[CUSTOMER_ID]", "[MERCHANT_CENTER_ID]");
-   *   GetMerchantCenterLinkRequest request = GetMerchantCenterLinkRequest.newBuilder()
-   *     .setResourceName(resourceName.toString())
-   *     .build();
-   *   ApiFuture&lt;MerchantCenterLink&gt; future = merchantCenterLinkServiceClient.getMerchantCenterLinkCallable().futureCall(request);
-   *   // Do something
-   *   MerchantCenterLink response = future.get();
-   * }
-   * </code></pre>
    */
   public final UnaryCallable<GetMerchantCenterLinkRequest, MerchantCenterLink>
       getMerchantCenterLinkCallable() {
     return stub.getMerchantCenterLinkCallable();
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Updates status or removes a Merchant Center link.
    *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (MerchantCenterLinkServiceClient merchantCenterLinkServiceClient = MerchantCenterLinkServiceClient.create()) {
-   *   String customerId = "";
-   *   MerchantCenterLinkOperation operation = MerchantCenterLinkOperation.newBuilder().build();
-   *   MutateMerchantCenterLinkResponse response = merchantCenterLinkServiceClient.mutateMerchantCenterLink(customerId, operation);
-   * }
-   * </code></pre>
-   *
-   * @param customerId Required. The ID of the customer being modified.
+   * @param customer_id Required. The ID of the customer being modified.
    * @param operation Required. The operation to perform on the link
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
@@ -339,23 +245,9 @@ public class MerchantCenterLinkServiceClient implements BackgroundResource {
     return mutateMerchantCenterLink(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Updates status or removes a Merchant Center link.
-   *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (MerchantCenterLinkServiceClient merchantCenterLinkServiceClient = MerchantCenterLinkServiceClient.create()) {
-   *   String customerId = "";
-   *   MerchantCenterLinkOperation operation = MerchantCenterLinkOperation.newBuilder().build();
-   *   MutateMerchantCenterLinkRequest request = MutateMerchantCenterLinkRequest.newBuilder()
-   *     .setCustomerId(customerId)
-   *     .setOperation(operation)
-   *     .build();
-   *   MutateMerchantCenterLinkResponse response = merchantCenterLinkServiceClient.mutateMerchantCenterLink(request);
-   * }
-   * </code></pre>
    *
    * @param request The request object containing all of the parameters for the API call.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
@@ -365,25 +257,11 @@ public class MerchantCenterLinkServiceClient implements BackgroundResource {
     return mutateMerchantCenterLinkCallable().call(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Updates status or removes a Merchant Center link.
    *
    * <p>Sample code:
-   *
-   * <pre><code>
-   * try (MerchantCenterLinkServiceClient merchantCenterLinkServiceClient = MerchantCenterLinkServiceClient.create()) {
-   *   String customerId = "";
-   *   MerchantCenterLinkOperation operation = MerchantCenterLinkOperation.newBuilder().build();
-   *   MutateMerchantCenterLinkRequest request = MutateMerchantCenterLinkRequest.newBuilder()
-   *     .setCustomerId(customerId)
-   *     .setOperation(operation)
-   *     .build();
-   *   ApiFuture&lt;MutateMerchantCenterLinkResponse&gt; future = merchantCenterLinkServiceClient.mutateMerchantCenterLinkCallable().futureCall(request);
-   *   // Do something
-   *   MutateMerchantCenterLinkResponse response = future.get();
-   * }
-   * </code></pre>
    */
   public final UnaryCallable<MutateMerchantCenterLinkRequest, MutateMerchantCenterLinkResponse>
       mutateMerchantCenterLinkCallable() {

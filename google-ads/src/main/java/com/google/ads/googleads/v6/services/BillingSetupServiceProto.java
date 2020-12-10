@@ -67,7 +67,7 @@ public final class BillingSetupServiceProto {
       "etupResponse\022J\n\006result\030\001 \001(\0132:.google.ad" +
       "s.googleads.v6.services.MutateBillingSet" +
       "upResult\"1\n\030MutateBillingSetupResult\022\025\n\r" +
-      "resource_name\030\001 \001(\t2\343\003\n\023BillingSetupServ" +
+      "resource_name\030\001 \001(\t2\215\004\n\023BillingSetupServ" +
       "ice\022\305\001\n\017GetBillingSetup\0228.google.ads.goo" +
       "gleads.v6.services.GetBillingSetupReques" +
       "t\032/.google.ads.googleads.v6.resources.Bi" +
@@ -78,15 +78,16 @@ public final class BillingSetupServiceProto {
       "Request\032<.google.ads.googleads.v6.servic" +
       "es.MutateBillingSetupResponse\"U\202\323\344\223\0027\"2/" +
       "v6/customers/{customer_id=*}/billingSetu" +
-      "ps:mutate:\001*\332A\025customer_id,operation\032\033\312A" +
-      "\030googleads.googleapis.comB\377\001\n$com.google" +
-      ".ads.googleads.v6.servicesB\030BillingSetup" +
-      "ServiceProtoP\001ZHgoogle.golang.org/genpro" +
-      "to/googleapis/ads/googleads/v6/services;" +
-      "services\242\002\003GAA\252\002 Google.Ads.GoogleAds.V6" +
-      ".Services\312\002 Google\\Ads\\GoogleAds\\V6\\Serv" +
-      "ices\352\002$Google::Ads::GoogleAds::V6::Servi" +
-      "cesb\006proto3"
+      "ps:mutate:\001*\332A\025customer_id,operation\032E\312A" +
+      "\030googleads.googleapis.com\322A\'https://www." +
+      "googleapis.com/auth/adwordsB\377\001\n$com.goog" +
+      "le.ads.googleads.v6.servicesB\030BillingSet" +
+      "upServiceProtoP\001ZHgoogle.golang.org/genp" +
+      "roto/googleapis/ads/googleads/v6/service" +
+      "s;services\242\002\003GAA\252\002 Google.Ads.GoogleAds." +
+      "V6.Services\312\002 Google\\Ads\\GoogleAds\\V6\\Se" +
+      "rvices\352\002$Google::Ads::GoogleAds::V6::Ser" +
+      "vicesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -133,6 +134,7 @@ public final class BillingSetupServiceProto {
     registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);
     registry.add(com.google.api.AnnotationsProto.http);
     registry.add(com.google.api.ClientProto.methodSignature);
+    registry.add(com.google.api.ClientProto.oauthScopes);
     registry.add(com.google.api.ResourceProto.resourceReference);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);

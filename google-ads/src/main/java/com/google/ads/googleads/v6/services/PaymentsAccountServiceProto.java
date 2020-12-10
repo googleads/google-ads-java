@@ -43,20 +43,22 @@ public final class PaymentsAccountServiceProto {
       "customer_id\030\001 \001(\tB\003\340A\002\"m\n\034ListPaymentsAc" +
       "countsResponse\022M\n\021payments_accounts\030\001 \003(" +
       "\01322.google.ads.googleads.v6.resources.Pa" +
-      "ymentsAccount2\223\002\n\026PaymentsAccountService" +
+      "ymentsAccount2\275\002\n\026PaymentsAccountService" +
       "\022\333\001\n\024ListPaymentsAccounts\022=.google.ads.g" +
       "oogleads.v6.services.ListPaymentsAccount" +
       "sRequest\032>.google.ads.googleads.v6.servi" +
       "ces.ListPaymentsAccountsResponse\"D\202\323\344\223\0020" +
       "\022./v6/customers/{customer_id=*}/payments" +
-      "Accounts\332A\013customer_id\032\033\312A\030googleads.goo" +
-      "gleapis.comB\202\002\n$com.google.ads.googleads" +
-      ".v6.servicesB\033PaymentsAccountServiceProt" +
-      "oP\001ZHgoogle.golang.org/genproto/googleap" +
-      "is/ads/googleads/v6/services;services\242\002\003" +
-      "GAA\252\002 Google.Ads.GoogleAds.V6.Services\312\002" +
-      " Google\\Ads\\GoogleAds\\V6\\Services\352\002$Goog" +
-      "le::Ads::GoogleAds::V6::Servicesb\006proto3"
+      "Accounts\332A\013customer_id\032E\312A\030googleads.goo" +
+      "gleapis.com\322A\'https://www.googleapis.com" +
+      "/auth/adwordsB\202\002\n$com.google.ads.googlea" +
+      "ds.v6.servicesB\033PaymentsAccountServicePr" +
+      "otoP\001ZHgoogle.golang.org/genproto/google" +
+      "apis/ads/googleads/v6/services;services\242" +
+      "\002\003GAA\252\002 Google.Ads.GoogleAds.V6.Services" +
+      "\312\002 Google\\Ads\\GoogleAds\\V6\\Services\352\002$Go" +
+      "ogle::Ads::GoogleAds::V6::Servicesb\006prot" +
+      "o3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -84,6 +86,7 @@ public final class PaymentsAccountServiceProto {
     registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);
     registry.add(com.google.api.AnnotationsProto.http);
     registry.add(com.google.api.ClientProto.methodSignature);
+    registry.add(com.google.api.ClientProto.oauthScopes);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.ads.googleads.v6.resources.PaymentsAccountProto.getDescriptor();

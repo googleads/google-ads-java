@@ -5,7 +5,7 @@
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
- *     https://www.apache.org/licenses/LICENSE-2.0
+ *      https://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -13,9 +13,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
 package com.google.ads.googleads.v6.services;
 
 import com.google.ads.googleads.v6.resources.CampaignCriterion;
+import com.google.ads.googleads.v6.resources.CampaignCriterionName;
 import com.google.ads.googleads.v6.services.stub.CampaignCriterionServiceStub;
 import com.google.ads.googleads.v6.services.stub.CampaignCriterionServiceStubSettings;
 import com.google.api.core.BetaApi;
@@ -26,23 +28,14 @@ import java.util.List;
 import java.util.concurrent.TimeUnit;
 import javax.annotation.Generated;
 
-// AUTO-GENERATED DOCUMENTATION AND SERVICE
+// AUTO-GENERATED DOCUMENTATION AND CLASS.
 /**
  * Service Description: Service to manage campaign criteria.
  *
  * <p>This class provides the ability to make remote calls to the backing service through method
  * calls that map to API methods. Sample code to get started:
  *
- * <pre>
- * <code>
- * try (CampaignCriterionServiceClient campaignCriterionServiceClient = CampaignCriterionServiceClient.create()) {
- *   CampaignCriterionName resourceName = CampaignCriterionName.of("[CUSTOMER_ID]", "[CAMPAIGN_ID]", "[CRITERION_ID]");
- *   CampaignCriterion response = campaignCriterionServiceClient.getCampaignCriterion(resourceName);
- * }
- * </code>
- * </pre>
- *
- * <p>Note: close() needs to be called on the campaignCriterionServiceClient object to clean up
+ * <p>Note: close() needs to be called on the CampaignCriterionServiceClient object to clean up
  * resources such as threads. In the example above, try-with-resources is used, which automatically
  * calls close().
  *
@@ -71,30 +64,28 @@ import javax.annotation.Generated;
  *
  * <p>To customize credentials:
  *
- * <pre>
- * <code>
+ * <pre>{@code
  * CampaignCriterionServiceSettings campaignCriterionServiceSettings =
  *     CampaignCriterionServiceSettings.newBuilder()
  *         .setCredentialsProvider(FixedCredentialsProvider.create(myCredentials))
  *         .build();
  * CampaignCriterionServiceClient campaignCriterionServiceClient =
  *     CampaignCriterionServiceClient.create(campaignCriterionServiceSettings);
- * </code>
- * </pre>
+ * }</pre>
  *
- * To customize the endpoint:
+ * <p>To customize the endpoint:
  *
- * <pre>
- * <code>
+ * <pre>{@code
  * CampaignCriterionServiceSettings campaignCriterionServiceSettings =
  *     CampaignCriterionServiceSettings.newBuilder().setEndpoint(myEndpoint).build();
  * CampaignCriterionServiceClient campaignCriterionServiceClient =
  *     CampaignCriterionServiceClient.create(campaignCriterionServiceSettings);
- * </code>
- * </pre>
+ * }</pre>
+ *
+ * <p>Please refer to the GitHub repository's samples for more quickstart code snippets.
  */
-@Generated("by gapic-generator")
 @BetaApi
+@Generated("by gapic-generator")
 public class CampaignCriterionServiceClient implements BackgroundResource {
   private final CampaignCriterionServiceSettings settings;
   private final CampaignCriterionServiceStub stub;
@@ -116,7 +107,7 @@ public class CampaignCriterionServiceClient implements BackgroundResource {
 
   /**
    * Constructs an instance of CampaignCriterionServiceClient, using the given stub for making
-   * calls. This is for advanced usage - prefer to use CampaignCriterionServiceSettings}.
+   * calls. This is for advanced usage - prefer using create(CampaignCriterionServiceSettings).
    */
   @BetaApi("A restructuring of stub classes is planned, so this may break in the future")
   public static final CampaignCriterionServiceClient create(CampaignCriterionServiceStub stub) {
@@ -149,20 +140,11 @@ public class CampaignCriterionServiceClient implements BackgroundResource {
     return stub;
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Returns the requested criterion in full detail.
    *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (CampaignCriterionServiceClient campaignCriterionServiceClient = CampaignCriterionServiceClient.create()) {
-   *   CampaignCriterionName resourceName = CampaignCriterionName.of("[CUSTOMER_ID]", "[CAMPAIGN_ID]", "[CRITERION_ID]");
-   *   CampaignCriterion response = campaignCriterionServiceClient.getCampaignCriterion(resourceName);
-   * }
-   * </code></pre>
-   *
-   * @param resourceName Required. The resource name of the criterion to fetch.
+   * @param resource_name Required. The resource name of the criterion to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final CampaignCriterion getCampaignCriterion(CampaignCriterionName resourceName) {
@@ -173,20 +155,11 @@ public class CampaignCriterionServiceClient implements BackgroundResource {
     return getCampaignCriterion(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Returns the requested criterion in full detail.
    *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (CampaignCriterionServiceClient campaignCriterionServiceClient = CampaignCriterionServiceClient.create()) {
-   *   CampaignCriterionName resourceName = CampaignCriterionName.of("[CUSTOMER_ID]", "[CAMPAIGN_ID]", "[CRITERION_ID]");
-   *   CampaignCriterion response = campaignCriterionServiceClient.getCampaignCriterion(resourceName.toString());
-   * }
-   * </code></pre>
-   *
-   * @param resourceName Required. The resource name of the criterion to fetch.
+   * @param resource_name Required. The resource name of the criterion to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final CampaignCriterion getCampaignCriterion(String resourceName) {
@@ -195,21 +168,9 @@ public class CampaignCriterionServiceClient implements BackgroundResource {
     return getCampaignCriterion(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Returns the requested criterion in full detail.
-   *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (CampaignCriterionServiceClient campaignCriterionServiceClient = CampaignCriterionServiceClient.create()) {
-   *   CampaignCriterionName resourceName = CampaignCriterionName.of("[CUSTOMER_ID]", "[CAMPAIGN_ID]", "[CRITERION_ID]");
-   *   GetCampaignCriterionRequest request = GetCampaignCriterionRequest.newBuilder()
-   *     .setResourceName(resourceName.toString())
-   *     .build();
-   *   CampaignCriterion response = campaignCriterionServiceClient.getCampaignCriterion(request);
-   * }
-   * </code></pre>
    *
    * @param request The request object containing all of the parameters for the API call.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
@@ -218,44 +179,22 @@ public class CampaignCriterionServiceClient implements BackgroundResource {
     return getCampaignCriterionCallable().call(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Returns the requested criterion in full detail.
    *
    * <p>Sample code:
-   *
-   * <pre><code>
-   * try (CampaignCriterionServiceClient campaignCriterionServiceClient = CampaignCriterionServiceClient.create()) {
-   *   CampaignCriterionName resourceName = CampaignCriterionName.of("[CUSTOMER_ID]", "[CAMPAIGN_ID]", "[CRITERION_ID]");
-   *   GetCampaignCriterionRequest request = GetCampaignCriterionRequest.newBuilder()
-   *     .setResourceName(resourceName.toString())
-   *     .build();
-   *   ApiFuture&lt;CampaignCriterion&gt; future = campaignCriterionServiceClient.getCampaignCriterionCallable().futureCall(request);
-   *   // Do something
-   *   CampaignCriterion response = future.get();
-   * }
-   * </code></pre>
    */
   public final UnaryCallable<GetCampaignCriterionRequest, CampaignCriterion>
       getCampaignCriterionCallable() {
     return stub.getCampaignCriterionCallable();
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Creates, updates, or removes criteria. Operation statuses are returned.
    *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (CampaignCriterionServiceClient campaignCriterionServiceClient = CampaignCriterionServiceClient.create()) {
-   *   String customerId = "";
-   *   List&lt;CampaignCriterionOperation&gt; operations = new ArrayList&lt;&gt;();
-   *   MutateCampaignCriteriaResponse response = campaignCriterionServiceClient.mutateCampaignCriteria(customerId, operations);
-   * }
-   * </code></pre>
-   *
-   * @param customerId Required. The ID of the customer whose criteria are being modified.
+   * @param customer_id Required. The ID of the customer whose criteria are being modified.
    * @param operations Required. The list of operations to perform on individual criteria.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
@@ -269,23 +208,9 @@ public class CampaignCriterionServiceClient implements BackgroundResource {
     return mutateCampaignCriteria(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Creates, updates, or removes criteria. Operation statuses are returned.
-   *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (CampaignCriterionServiceClient campaignCriterionServiceClient = CampaignCriterionServiceClient.create()) {
-   *   String customerId = "";
-   *   List&lt;CampaignCriterionOperation&gt; operations = new ArrayList&lt;&gt;();
-   *   MutateCampaignCriteriaRequest request = MutateCampaignCriteriaRequest.newBuilder()
-   *     .setCustomerId(customerId)
-   *     .addAllOperations(operations)
-   *     .build();
-   *   MutateCampaignCriteriaResponse response = campaignCriterionServiceClient.mutateCampaignCriteria(request);
-   * }
-   * </code></pre>
    *
    * @param request The request object containing all of the parameters for the API call.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
@@ -295,25 +220,11 @@ public class CampaignCriterionServiceClient implements BackgroundResource {
     return mutateCampaignCriteriaCallable().call(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Creates, updates, or removes criteria. Operation statuses are returned.
    *
    * <p>Sample code:
-   *
-   * <pre><code>
-   * try (CampaignCriterionServiceClient campaignCriterionServiceClient = CampaignCriterionServiceClient.create()) {
-   *   String customerId = "";
-   *   List&lt;CampaignCriterionOperation&gt; operations = new ArrayList&lt;&gt;();
-   *   MutateCampaignCriteriaRequest request = MutateCampaignCriteriaRequest.newBuilder()
-   *     .setCustomerId(customerId)
-   *     .addAllOperations(operations)
-   *     .build();
-   *   ApiFuture&lt;MutateCampaignCriteriaResponse&gt; future = campaignCriterionServiceClient.mutateCampaignCriteriaCallable().futureCall(request);
-   *   // Do something
-   *   MutateCampaignCriteriaResponse response = future.get();
-   * }
-   * </code></pre>
    */
   public final UnaryCallable<MutateCampaignCriteriaRequest, MutateCampaignCriteriaResponse>
       mutateCampaignCriteriaCallable() {

@@ -5,7 +5,7 @@
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
- *     https://www.apache.org/licenses/LICENSE-2.0
+ *      https://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -13,9 +13,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
 package com.google.ads.googleads.v6.services;
 
 import com.google.ads.googleads.v6.resources.ConversionAction;
+import com.google.ads.googleads.v6.resources.ConversionActionName;
 import com.google.ads.googleads.v6.services.stub.ConversionActionServiceStub;
 import com.google.ads.googleads.v6.services.stub.ConversionActionServiceStubSettings;
 import com.google.api.core.BetaApi;
@@ -26,23 +28,14 @@ import java.util.List;
 import java.util.concurrent.TimeUnit;
 import javax.annotation.Generated;
 
-// AUTO-GENERATED DOCUMENTATION AND SERVICE
+// AUTO-GENERATED DOCUMENTATION AND CLASS.
 /**
  * Service Description: Service to manage conversion actions.
  *
  * <p>This class provides the ability to make remote calls to the backing service through method
  * calls that map to API methods. Sample code to get started:
  *
- * <pre>
- * <code>
- * try (ConversionActionServiceClient conversionActionServiceClient = ConversionActionServiceClient.create()) {
- *   ConversionActionName resourceName = ConversionActionName.of("[CUSTOMER_ID]", "[CONVERSION_ACTION_ID]");
- *   ConversionAction response = conversionActionServiceClient.getConversionAction(resourceName);
- * }
- * </code>
- * </pre>
- *
- * <p>Note: close() needs to be called on the conversionActionServiceClient object to clean up
+ * <p>Note: close() needs to be called on the ConversionActionServiceClient object to clean up
  * resources such as threads. In the example above, try-with-resources is used, which automatically
  * calls close().
  *
@@ -71,30 +64,28 @@ import javax.annotation.Generated;
  *
  * <p>To customize credentials:
  *
- * <pre>
- * <code>
+ * <pre>{@code
  * ConversionActionServiceSettings conversionActionServiceSettings =
  *     ConversionActionServiceSettings.newBuilder()
  *         .setCredentialsProvider(FixedCredentialsProvider.create(myCredentials))
  *         .build();
  * ConversionActionServiceClient conversionActionServiceClient =
  *     ConversionActionServiceClient.create(conversionActionServiceSettings);
- * </code>
- * </pre>
+ * }</pre>
  *
- * To customize the endpoint:
+ * <p>To customize the endpoint:
  *
- * <pre>
- * <code>
+ * <pre>{@code
  * ConversionActionServiceSettings conversionActionServiceSettings =
  *     ConversionActionServiceSettings.newBuilder().setEndpoint(myEndpoint).build();
  * ConversionActionServiceClient conversionActionServiceClient =
  *     ConversionActionServiceClient.create(conversionActionServiceSettings);
- * </code>
- * </pre>
+ * }</pre>
+ *
+ * <p>Please refer to the GitHub repository's samples for more quickstart code snippets.
  */
-@Generated("by gapic-generator")
 @BetaApi
+@Generated("by gapic-generator")
 public class ConversionActionServiceClient implements BackgroundResource {
   private final ConversionActionServiceSettings settings;
   private final ConversionActionServiceStub stub;
@@ -115,7 +106,7 @@ public class ConversionActionServiceClient implements BackgroundResource {
 
   /**
    * Constructs an instance of ConversionActionServiceClient, using the given stub for making calls.
-   * This is for advanced usage - prefer to use ConversionActionServiceSettings}.
+   * This is for advanced usage - prefer using create(ConversionActionServiceSettings).
    */
   @BetaApi("A restructuring of stub classes is planned, so this may break in the future")
   public static final ConversionActionServiceClient create(ConversionActionServiceStub stub) {
@@ -148,20 +139,11 @@ public class ConversionActionServiceClient implements BackgroundResource {
     return stub;
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Returns the requested conversion action.
    *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (ConversionActionServiceClient conversionActionServiceClient = ConversionActionServiceClient.create()) {
-   *   ConversionActionName resourceName = ConversionActionName.of("[CUSTOMER_ID]", "[CONVERSION_ACTION_ID]");
-   *   ConversionAction response = conversionActionServiceClient.getConversionAction(resourceName);
-   * }
-   * </code></pre>
-   *
-   * @param resourceName Required. The resource name of the conversion action to fetch.
+   * @param resource_name Required. The resource name of the conversion action to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final ConversionAction getConversionAction(ConversionActionName resourceName) {
@@ -172,20 +154,11 @@ public class ConversionActionServiceClient implements BackgroundResource {
     return getConversionAction(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Returns the requested conversion action.
    *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (ConversionActionServiceClient conversionActionServiceClient = ConversionActionServiceClient.create()) {
-   *   ConversionActionName resourceName = ConversionActionName.of("[CUSTOMER_ID]", "[CONVERSION_ACTION_ID]");
-   *   ConversionAction response = conversionActionServiceClient.getConversionAction(resourceName.toString());
-   * }
-   * </code></pre>
-   *
-   * @param resourceName Required. The resource name of the conversion action to fetch.
+   * @param resource_name Required. The resource name of the conversion action to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final ConversionAction getConversionAction(String resourceName) {
@@ -194,21 +167,9 @@ public class ConversionActionServiceClient implements BackgroundResource {
     return getConversionAction(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Returns the requested conversion action.
-   *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (ConversionActionServiceClient conversionActionServiceClient = ConversionActionServiceClient.create()) {
-   *   ConversionActionName resourceName = ConversionActionName.of("[CUSTOMER_ID]", "[CONVERSION_ACTION_ID]");
-   *   GetConversionActionRequest request = GetConversionActionRequest.newBuilder()
-   *     .setResourceName(resourceName.toString())
-   *     .build();
-   *   ConversionAction response = conversionActionServiceClient.getConversionAction(request);
-   * }
-   * </code></pre>
    *
    * @param request The request object containing all of the parameters for the API call.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
@@ -217,44 +178,23 @@ public class ConversionActionServiceClient implements BackgroundResource {
     return getConversionActionCallable().call(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Returns the requested conversion action.
    *
    * <p>Sample code:
-   *
-   * <pre><code>
-   * try (ConversionActionServiceClient conversionActionServiceClient = ConversionActionServiceClient.create()) {
-   *   ConversionActionName resourceName = ConversionActionName.of("[CUSTOMER_ID]", "[CONVERSION_ACTION_ID]");
-   *   GetConversionActionRequest request = GetConversionActionRequest.newBuilder()
-   *     .setResourceName(resourceName.toString())
-   *     .build();
-   *   ApiFuture&lt;ConversionAction&gt; future = conversionActionServiceClient.getConversionActionCallable().futureCall(request);
-   *   // Do something
-   *   ConversionAction response = future.get();
-   * }
-   * </code></pre>
    */
   public final UnaryCallable<GetConversionActionRequest, ConversionAction>
       getConversionActionCallable() {
     return stub.getConversionActionCallable();
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Creates, updates or removes conversion actions. Operation statuses are returned.
    *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (ConversionActionServiceClient conversionActionServiceClient = ConversionActionServiceClient.create()) {
-   *   String customerId = "";
-   *   List&lt;ConversionActionOperation&gt; operations = new ArrayList&lt;&gt;();
-   *   MutateConversionActionsResponse response = conversionActionServiceClient.mutateConversionActions(customerId, operations);
-   * }
-   * </code></pre>
-   *
-   * @param customerId Required. The ID of the customer whose conversion actions are being modified.
+   * @param customer_id Required. The ID of the customer whose conversion actions are being
+   *     modified.
    * @param operations Required. The list of operations to perform on individual conversion actions.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
@@ -268,23 +208,9 @@ public class ConversionActionServiceClient implements BackgroundResource {
     return mutateConversionActions(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Creates, updates or removes conversion actions. Operation statuses are returned.
-   *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (ConversionActionServiceClient conversionActionServiceClient = ConversionActionServiceClient.create()) {
-   *   String customerId = "";
-   *   List&lt;ConversionActionOperation&gt; operations = new ArrayList&lt;&gt;();
-   *   MutateConversionActionsRequest request = MutateConversionActionsRequest.newBuilder()
-   *     .setCustomerId(customerId)
-   *     .addAllOperations(operations)
-   *     .build();
-   *   MutateConversionActionsResponse response = conversionActionServiceClient.mutateConversionActions(request);
-   * }
-   * </code></pre>
    *
    * @param request The request object containing all of the parameters for the API call.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
@@ -294,25 +220,11 @@ public class ConversionActionServiceClient implements BackgroundResource {
     return mutateConversionActionsCallable().call(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Creates, updates or removes conversion actions. Operation statuses are returned.
    *
    * <p>Sample code:
-   *
-   * <pre><code>
-   * try (ConversionActionServiceClient conversionActionServiceClient = ConversionActionServiceClient.create()) {
-   *   String customerId = "";
-   *   List&lt;ConversionActionOperation&gt; operations = new ArrayList&lt;&gt;();
-   *   MutateConversionActionsRequest request = MutateConversionActionsRequest.newBuilder()
-   *     .setCustomerId(customerId)
-   *     .addAllOperations(operations)
-   *     .build();
-   *   ApiFuture&lt;MutateConversionActionsResponse&gt; future = conversionActionServiceClient.mutateConversionActionsCallable().futureCall(request);
-   *   // Do something
-   *   MutateConversionActionsResponse response = future.get();
-   * }
-   * </code></pre>
    */
   public final UnaryCallable<MutateConversionActionsRequest, MutateConversionActionsResponse>
       mutateConversionActionsCallable() {

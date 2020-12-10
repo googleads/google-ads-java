@@ -37,20 +37,21 @@ public final class DomainCategoryServiceProto {
       "oto\032\031google/api/resource.proto\"b\n\030GetDom" +
       "ainCategoryRequest\022F\n\rresource_name\030\001 \001(" +
       "\tB/\340A\002\372A)\n\'googleads.googleapis.com/Doma" +
-      "inCategory2\205\002\n\025DomainCategoryService\022\316\001\n" +
+      "inCategory2\257\002\n\025DomainCategoryService\022\316\001\n" +
       "\021GetDomainCategory\022:.google.ads.googlead" +
       "s.v6.services.GetDomainCategoryRequest\0321" +
       ".google.ads.googleads.v6.resources.Domai" +
       "nCategory\"J\202\323\344\223\0024\0222/v6/{resource_name=cu" +
       "stomers/*/domainCategories/*}\332A\rresource" +
-      "_name\032\033\312A\030googleads.googleapis.comB\201\002\n$c" +
-      "om.google.ads.googleads.v6.servicesB\032Dom" +
-      "ainCategoryServiceProtoP\001ZHgoogle.golang" +
-      ".org/genproto/googleapis/ads/googleads/v" +
-      "6/services;services\242\002\003GAA\252\002 Google.Ads.G" +
-      "oogleAds.V6.Services\312\002 Google\\Ads\\Google" +
-      "Ads\\V6\\Services\352\002$Google::Ads::GoogleAds" +
-      "::V6::Servicesb\006proto3"
+      "_name\032E\312A\030googleads.googleapis.com\322A\'htt" +
+      "ps://www.googleapis.com/auth/adwordsB\201\002\n" +
+      "$com.google.ads.googleads.v6.servicesB\032D" +
+      "omainCategoryServiceProtoP\001ZHgoogle.gola" +
+      "ng.org/genproto/googleapis/ads/googleads" +
+      "/v6/services;services\242\002\003GAA\252\002 Google.Ads" +
+      ".GoogleAds.V6.Services\312\002 Google\\Ads\\Goog" +
+      "leAds\\V6\\Services\352\002$Google::Ads::GoogleA" +
+      "ds::V6::Servicesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -73,6 +74,7 @@ public final class DomainCategoryServiceProto {
     registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);
     registry.add(com.google.api.AnnotationsProto.http);
     registry.add(com.google.api.ClientProto.methodSignature);
+    registry.add(com.google.api.ClientProto.oauthScopes);
     registry.add(com.google.api.ResourceProto.resourceReference);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);

@@ -79,8 +79,8 @@ public final class KeywordPlanAdGroupKeywordServiceProto {
       "atus\022X\n\007results\030\002 \003(\0132G.google.ads.googl" +
       "eads.v6.services.MutateKeywordPlanAdGrou" +
       "pKeywordResult\">\n%MutateKeywordPlanAdGro" +
-      "upKeywordResult\022\025\n\rresource_name\030\001 \001(\t2\334" +
-      "\004\n KeywordPlanAdGroupKeywordService\022\371\001\n\034" +
+      "upKeywordResult\022\025\n\rresource_name\030\001 \001(\t2\206" +
+      "\005\n KeywordPlanAdGroupKeywordService\022\371\001\n\034" +
       "GetKeywordPlanAdGroupKeyword\022E.google.ad" +
       "s.googleads.v6.services.GetKeywordPlanAd" +
       "GroupKeywordRequest\032<.google.ads.googlea" +
@@ -94,15 +94,16 @@ public final class KeywordPlanAdGroupKeywordServiceProto {
       "eKeywordPlanAdGroupKeywordsResponse\"c\202\323\344" +
       "\223\002D\"?/v6/customers/{customer_id=*}/keywo" +
       "rdPlanAdGroupKeywords:mutate:\001*\332A\026custom" +
-      "er_id,operations\032\033\312A\030googleads.googleapi" +
-      "s.comB\214\002\n$com.google.ads.googleads.v6.se" +
-      "rvicesB%KeywordPlanAdGroupKeywordService" +
-      "ProtoP\001ZHgoogle.golang.org/genproto/goog" +
-      "leapis/ads/googleads/v6/services;service" +
-      "s\242\002\003GAA\252\002 Google.Ads.GoogleAds.V6.Servic" +
-      "es\312\002 Google\\Ads\\GoogleAds\\V6\\Services\352\002$" +
-      "Google::Ads::GoogleAds::V6::Servicesb\006pr" +
-      "oto3"
+      "er_id,operations\032E\312A\030googleads.googleapi" +
+      "s.com\322A\'https://www.googleapis.com/auth/" +
+      "adwordsB\214\002\n$com.google.ads.googleads.v6." +
+      "servicesB%KeywordPlanAdGroupKeywordServi" +
+      "ceProtoP\001ZHgoogle.golang.org/genproto/go" +
+      "ogleapis/ads/googleads/v6/services;servi" +
+      "ces\242\002\003GAA\252\002 Google.Ads.GoogleAds.V6.Serv" +
+      "ices\312\002 Google\\Ads\\GoogleAds\\V6\\Services\352" +
+      "\002$Google::Ads::GoogleAds::V6::Servicesb\006" +
+      "proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -151,6 +152,7 @@ public final class KeywordPlanAdGroupKeywordServiceProto {
     registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);
     registry.add(com.google.api.AnnotationsProto.http);
     registry.add(com.google.api.ClientProto.methodSignature);
+    registry.add(com.google.api.ClientProto.oauthScopes);
     registry.add(com.google.api.ResourceProto.resourceReference);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);

@@ -72,7 +72,7 @@ public final class CampaignSharedSetServiceProto {
       "\002 \003(\0132?.google.ads.googleads.v6.services" +
       ".MutateCampaignSharedSetResult\"6\n\035Mutate" +
       "CampaignSharedSetResult\022\025\n\rresource_name" +
-      "\030\001 \001(\t2\224\004\n\030CampaignSharedSetService\022\331\001\n\024" +
+      "\030\001 \001(\t2\276\004\n\030CampaignSharedSetService\022\331\001\n\024" +
       "GetCampaignSharedSet\022=.google.ads.google" +
       "ads.v6.services.GetCampaignSharedSetRequ" +
       "est\0324.google.ads.googleads.v6.resources." +
@@ -84,15 +84,16 @@ public final class CampaignSharedSetServiceProto {
       ".ads.googleads.v6.services.MutateCampaig" +
       "nSharedSetsResponse\"[\202\323\344\223\002<\"7/v6/custome" +
       "rs/{customer_id=*}/campaignSharedSets:mu" +
-      "tate:\001*\332A\026customer_id,operations\032\033\312A\030goo" +
-      "gleads.googleapis.comB\204\002\n$com.google.ads" +
-      ".googleads.v6.servicesB\035CampaignSharedSe" +
-      "tServiceProtoP\001ZHgoogle.golang.org/genpr" +
-      "oto/googleapis/ads/googleads/v6/services" +
-      ";services\242\002\003GAA\252\002 Google.Ads.GoogleAds.V" +
-      "6.Services\312\002 Google\\Ads\\GoogleAds\\V6\\Ser" +
-      "vices\352\002$Google::Ads::GoogleAds::V6::Serv" +
-      "icesb\006proto3"
+      "tate:\001*\332A\026customer_id,operations\032E\312A\030goo" +
+      "gleads.googleapis.com\322A\'https://www.goog" +
+      "leapis.com/auth/adwordsB\204\002\n$com.google.a" +
+      "ds.googleads.v6.servicesB\035CampaignShared" +
+      "SetServiceProtoP\001ZHgoogle.golang.org/gen" +
+      "proto/googleapis/ads/googleads/v6/servic" +
+      "es;services\242\002\003GAA\252\002 Google.Ads.GoogleAds" +
+      ".V6.Services\312\002 Google\\Ads\\GoogleAds\\V6\\S" +
+      "ervices\352\002$Google::Ads::GoogleAds::V6::Se" +
+      "rvicesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -140,6 +141,7 @@ public final class CampaignSharedSetServiceProto {
     registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);
     registry.add(com.google.api.AnnotationsProto.http);
     registry.add(com.google.api.ClientProto.methodSignature);
+    registry.add(com.google.api.ClientProto.oauthScopes);
     registry.add(com.google.api.ResourceProto.resourceReference);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);

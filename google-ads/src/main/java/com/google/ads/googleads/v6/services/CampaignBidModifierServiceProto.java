@@ -76,7 +76,7 @@ public final class CampaignBidModifierServiceProto {
       "tus\022R\n\007results\030\002 \003(\0132A.google.ads.google" +
       "ads.v6.services.MutateCampaignBidModifie" +
       "rResult\"8\n\037MutateCampaignBidModifierResu" +
-      "lt\022\025\n\rresource_name\030\001 \001(\t2\246\004\n\032CampaignBi" +
+      "lt\022\025\n\rresource_name\030\001 \001(\t2\320\004\n\032CampaignBi" +
       "dModifierService\022\341\001\n\026GetCampaignBidModif" +
       "ier\022?.google.ads.googleads.v6.services.G" +
       "etCampaignBidModifierRequest\0326.google.ad" +
@@ -89,15 +89,16 @@ public final class CampaignBidModifierServiceProto {
       "ogleads.v6.services.MutateCampaignBidMod" +
       "ifiersResponse\"]\202\323\344\223\002>\"9/v6/customers/{c" +
       "ustomer_id=*}/campaignBidModifiers:mutat" +
-      "e:\001*\332A\026customer_id,operations\032\033\312A\030google" +
-      "ads.googleapis.comB\206\002\n$com.google.ads.go" +
-      "ogleads.v6.servicesB\037CampaignBidModifier" +
-      "ServiceProtoP\001ZHgoogle.golang.org/genpro" +
-      "to/googleapis/ads/googleads/v6/services;" +
-      "services\242\002\003GAA\252\002 Google.Ads.GoogleAds.V6" +
-      ".Services\312\002 Google\\Ads\\GoogleAds\\V6\\Serv" +
-      "ices\352\002$Google::Ads::GoogleAds::V6::Servi" +
-      "cesb\006proto3"
+      "e:\001*\332A\026customer_id,operations\032E\312A\030google" +
+      "ads.googleapis.com\322A\'https://www.googlea" +
+      "pis.com/auth/adwordsB\206\002\n$com.google.ads." +
+      "googleads.v6.servicesB\037CampaignBidModifi" +
+      "erServiceProtoP\001ZHgoogle.golang.org/genp" +
+      "roto/googleapis/ads/googleads/v6/service" +
+      "s;services\242\002\003GAA\252\002 Google.Ads.GoogleAds." +
+      "V6.Services\312\002 Google\\Ads\\GoogleAds\\V6\\Se" +
+      "rvices\352\002$Google::Ads::GoogleAds::V6::Ser" +
+      "vicesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -146,6 +147,7 @@ public final class CampaignBidModifierServiceProto {
     registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);
     registry.add(com.google.api.AnnotationsProto.http);
     registry.add(com.google.api.ClientProto.methodSignature);
+    registry.add(com.google.api.ClientProto.oauthScopes);
     registry.add(com.google.api.ResourceProto.resourceReference);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);

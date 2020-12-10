@@ -46,21 +46,22 @@ public final class InvoiceServiceProto {
       "(\0162:.google.ads.googleads.v6.enums.Month" +
       "OfYearEnum.MonthOfYearB\003\340A\002\"T\n\024ListInvoi" +
       "cesResponse\022<\n\010invoices\030\001 \003(\0132*.google.a" +
-      "ds.googleads.v6.resources.Invoice2\220\002\n\016In" +
+      "ds.googleads.v6.resources.Invoice2\272\002\n\016In" +
       "voiceService\022\340\001\n\014ListInvoices\0225.google.a" +
       "ds.googleads.v6.services.ListInvoicesReq" +
       "uest\0326.google.ads.googleads.v6.services." +
       "ListInvoicesResponse\"a\202\323\344\223\002(\022&/v6/custom" +
       "ers/{customer_id=*}/invoices\332A0customer_" +
       "id,billing_setup,issue_year,issue_month\032" +
-      "\033\312A\030googleads.googleapis.comB\372\001\n$com.goo" +
-      "gle.ads.googleads.v6.servicesB\023InvoiceSe" +
-      "rviceProtoP\001ZHgoogle.golang.org/genproto" +
-      "/googleapis/ads/googleads/v6/services;se" +
-      "rvices\242\002\003GAA\252\002 Google.Ads.GoogleAds.V6.S" +
-      "ervices\312\002 Google\\Ads\\GoogleAds\\V6\\Servic" +
-      "es\352\002$Google::Ads::GoogleAds::V6::Service" +
-      "sb\006proto3"
+      "E\312A\030googleads.googleapis.com\322A\'https://w" +
+      "ww.googleapis.com/auth/adwordsB\372\001\n$com.g" +
+      "oogle.ads.googleads.v6.servicesB\023Invoice" +
+      "ServiceProtoP\001ZHgoogle.golang.org/genpro" +
+      "to/googleapis/ads/googleads/v6/services;" +
+      "services\242\002\003GAA\252\002 Google.Ads.GoogleAds.V6" +
+      ".Services\312\002 Google\\Ads\\GoogleAds\\V6\\Serv" +
+      "ices\352\002$Google::Ads::GoogleAds::V6::Servi" +
+      "cesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -89,6 +90,7 @@ public final class InvoiceServiceProto {
     registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);
     registry.add(com.google.api.AnnotationsProto.http);
     registry.add(com.google.api.ClientProto.methodSignature);
+    registry.add(com.google.api.ClientProto.oauthScopes);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.ads.googleads.v6.enums.MonthOfYearProto.getDescriptor();

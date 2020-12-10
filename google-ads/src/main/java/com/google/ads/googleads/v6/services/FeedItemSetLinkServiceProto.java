@@ -69,7 +69,7 @@ public final class FeedItemSetLinkServiceProto {
       "tLinksResponse\022N\n\007results\030\001 \003(\0132=.google" +
       ".ads.googleads.v6.services.MutateFeedIte" +
       "mSetLinkResult\"4\n\033MutateFeedItemSetLinkR" +
-      "esult\022\025\n\rresource_name\030\001 \001(\t2\202\004\n\026FeedIte" +
+      "esult\022\025\n\rresource_name\030\001 \001(\t2\254\004\n\026FeedIte" +
       "mSetLinkService\022\321\001\n\022GetFeedItemSetLink\022;" +
       ".google.ads.googleads.v6.services.GetFee" +
       "dItemSetLinkRequest\0322.google.ads.googlea" +
@@ -81,15 +81,16 @@ public final class FeedItemSetLinkServiceProto {
       "@.google.ads.googleads.v6.services.Mutat" +
       "eFeedItemSetLinksResponse\"Y\202\323\344\223\002:\"5/v6/c" +
       "ustomers/{customer_id=*}/feedItemSetLink" +
-      "s:mutate:\001*\332A\026customer_id,operations\032\033\312A" +
-      "\030googleads.googleapis.comB\202\002\n$com.google" +
-      ".ads.googleads.v6.servicesB\033FeedItemSetL" +
-      "inkServiceProtoP\001ZHgoogle.golang.org/gen" +
-      "proto/googleapis/ads/googleads/v6/servic" +
-      "es;services\242\002\003GAA\252\002 Google.Ads.GoogleAds" +
-      ".V6.Services\312\002 Google\\Ads\\GoogleAds\\V6\\S" +
-      "ervices\352\002$Google::Ads::GoogleAds::V6::Se" +
-      "rvicesb\006proto3"
+      "s:mutate:\001*\332A\026customer_id,operations\032E\312A" +
+      "\030googleads.googleapis.com\322A\'https://www." +
+      "googleapis.com/auth/adwordsB\202\002\n$com.goog" +
+      "le.ads.googleads.v6.servicesB\033FeedItemSe" +
+      "tLinkServiceProtoP\001ZHgoogle.golang.org/g" +
+      "enproto/googleapis/ads/googleads/v6/serv" +
+      "ices;services\242\002\003GAA\252\002 Google.Ads.GoogleA" +
+      "ds.V6.Services\312\002 Google\\Ads\\GoogleAds\\V6" +
+      "\\Services\352\002$Google::Ads::GoogleAds::V6::" +
+      "Servicesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -136,6 +137,7 @@ public final class FeedItemSetLinkServiceProto {
     registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);
     registry.add(com.google.api.AnnotationsProto.http);
     registry.add(com.google.api.ClientProto.methodSignature);
+    registry.add(com.google.api.ClientProto.oauthScopes);
     registry.add(com.google.api.ResourceProto.resourceReference);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);

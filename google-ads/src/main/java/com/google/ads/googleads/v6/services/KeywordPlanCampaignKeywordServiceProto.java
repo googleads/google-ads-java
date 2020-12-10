@@ -80,7 +80,7 @@ public final class KeywordPlanCampaignKeywordServiceProto {
       "ads.googleads.v6.services.MutateKeywordP" +
       "lanCampaignKeywordResult\"?\n&MutateKeywor" +
       "dPlanCampaignKeywordResult\022\025\n\rresource_n" +
-      "ame\030\001 \001(\t2\345\004\n!KeywordPlanCampaignKeyword" +
+      "ame\030\001 \001(\t2\217\005\n!KeywordPlanCampaignKeyword" +
       "Service\022\375\001\n\035GetKeywordPlanCampaignKeywor" +
       "d\022F.google.ads.googleads.v6.services.Get" +
       "KeywordPlanCampaignKeywordRequest\032=.goog" +
@@ -94,15 +94,16 @@ public final class KeywordPlanCampaignKeywordServiceProto {
       ".v6.services.MutateKeywordPlanCampaignKe" +
       "ywordsResponse\"d\202\323\344\223\002E\"@/v6/customers/{c" +
       "ustomer_id=*}/keywordPlanCampaignKeyword" +
-      "s:mutate:\001*\332A\026customer_id,operations\032\033\312A" +
-      "\030googleads.googleapis.comB\215\002\n$com.google" +
-      ".ads.googleads.v6.servicesB&KeywordPlanC" +
-      "ampaignKeywordServiceProtoP\001ZHgoogle.gol" +
-      "ang.org/genproto/googleapis/ads/googlead" +
-      "s/v6/services;services\242\002\003GAA\252\002 Google.Ad" +
-      "s.GoogleAds.V6.Services\312\002 Google\\Ads\\Goo" +
-      "gleAds\\V6\\Services\352\002$Google::Ads::Google" +
-      "Ads::V6::Servicesb\006proto3"
+      "s:mutate:\001*\332A\026customer_id,operations\032E\312A" +
+      "\030googleads.googleapis.com\322A\'https://www." +
+      "googleapis.com/auth/adwordsB\215\002\n$com.goog" +
+      "le.ads.googleads.v6.servicesB&KeywordPla" +
+      "nCampaignKeywordServiceProtoP\001ZHgoogle.g" +
+      "olang.org/genproto/googleapis/ads/google" +
+      "ads/v6/services;services\242\002\003GAA\252\002 Google." +
+      "Ads.GoogleAds.V6.Services\312\002 Google\\Ads\\G" +
+      "oogleAds\\V6\\Services\352\002$Google::Ads::Goog" +
+      "leAds::V6::Servicesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -151,6 +152,7 @@ public final class KeywordPlanCampaignKeywordServiceProto {
     registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);
     registry.add(com.google.api.AnnotationsProto.http);
     registry.add(com.google.api.ClientProto.methodSignature);
+    registry.add(com.google.api.ClientProto.oauthScopes);
     registry.add(com.google.api.ResourceProto.resourceReference);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);

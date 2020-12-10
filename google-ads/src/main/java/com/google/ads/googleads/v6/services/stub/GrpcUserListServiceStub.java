@@ -5,7 +5,7 @@
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
- *     https://www.apache.org/licenses/LICENSE-2.0
+ *      https://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -13,13 +13,13 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
 package com.google.ads.googleads.v6.services.stub;
 
 import com.google.ads.googleads.v6.resources.UserList;
 import com.google.ads.googleads.v6.services.GetUserListRequest;
 import com.google.ads.googleads.v6.services.MutateUserListsRequest;
 import com.google.ads.googleads.v6.services.MutateUserListsResponse;
-import com.google.api.core.BetaApi;
 import com.google.api.gax.core.BackgroundResource;
 import com.google.api.gax.core.BackgroundResourceAggregation;
 import com.google.api.gax.grpc.GrpcCallSettings;
@@ -28,6 +28,7 @@ import com.google.api.gax.rpc.ClientContext;
 import com.google.api.gax.rpc.RequestParamsExtractor;
 import com.google.api.gax.rpc.UnaryCallable;
 import com.google.common.collect.ImmutableMap;
+import com.google.longrunning.stub.GrpcOperationsStub;
 import io.grpc.MethodDescriptor;
 import io.grpc.protobuf.ProtoUtils;
 import java.io.IOException;
@@ -35,16 +36,14 @@ import java.util.Map;
 import java.util.concurrent.TimeUnit;
 import javax.annotation.Generated;
 
-// AUTO-GENERATED DOCUMENTATION AND CLASS
+// AUTO-GENERATED DOCUMENTATION AND CLASS.
 /**
- * gRPC stub implementation for Google Ads API.
+ * gRPC stub implementation for the UserListService service API.
  *
  * <p>This class is for advanced usage and reflects the underlying API directly.
  */
-@Generated("by gapic-generator")
-@BetaApi("A restructuring of stub classes is planned, so this may break in the future")
+@Generated("by gapic-generator-java")
 public class GrpcUserListServiceStub extends UserListServiceStub {
-
   private static final MethodDescriptor<GetUserListRequest, UserList> getUserListMethodDescriptor =
       MethodDescriptor.<GetUserListRequest, UserList>newBuilder()
           .setType(MethodDescriptor.MethodType.UNARY)
@@ -52,6 +51,7 @@ public class GrpcUserListServiceStub extends UserListServiceStub {
           .setRequestMarshaller(ProtoUtils.marshaller(GetUserListRequest.getDefaultInstance()))
           .setResponseMarshaller(ProtoUtils.marshaller(UserList.getDefaultInstance()))
           .build();
+
   private static final MethodDescriptor<MutateUserListsRequest, MutateUserListsResponse>
       mutateUserListsMethodDescriptor =
           MethodDescriptor.<MutateUserListsRequest, MutateUserListsResponse>newBuilder()
@@ -63,12 +63,12 @@ public class GrpcUserListServiceStub extends UserListServiceStub {
                   ProtoUtils.marshaller(MutateUserListsResponse.getDefaultInstance()))
               .build();
 
-  private final BackgroundResource backgroundResources;
-
   private final UnaryCallable<GetUserListRequest, UserList> getUserListCallable;
   private final UnaryCallable<MutateUserListsRequest, MutateUserListsResponse>
       mutateUserListsCallable;
 
+  private final BackgroundResource backgroundResources;
+  private final GrpcOperationsStub operationsStub;
   private final GrpcStubCallableFactory callableFactory;
 
   public static final GrpcUserListServiceStub create(UserListServiceStubSettings settings)
@@ -88,27 +88,18 @@ public class GrpcUserListServiceStub extends UserListServiceStub {
         UserListServiceStubSettings.newBuilder().build(), clientContext, callableFactory);
   }
 
-  /**
-   * Constructs an instance of GrpcUserListServiceStub, using the given settings. This is protected
-   * so that it is easy to make a subclass, but otherwise, the static factory methods should be
-   * preferred.
-   */
   protected GrpcUserListServiceStub(
       UserListServiceStubSettings settings, ClientContext clientContext) throws IOException {
     this(settings, clientContext, new GrpcUserListServiceCallableFactory());
   }
 
-  /**
-   * Constructs an instance of GrpcUserListServiceStub, using the given settings. This is protected
-   * so that it is easy to make a subclass, but otherwise, the static factory methods should be
-   * preferred.
-   */
   protected GrpcUserListServiceStub(
       UserListServiceStubSettings settings,
       ClientContext clientContext,
       GrpcStubCallableFactory callableFactory)
       throws IOException {
     this.callableFactory = callableFactory;
+    this.operationsStub = GrpcOperationsStub.create(clientContext, callableFactory);
 
     GrpcCallSettings<GetUserListRequest, UserList> getUserListTransportSettings =
         GrpcCallSettings.<GetUserListRequest, UserList>newBuilder()
@@ -145,7 +136,12 @@ public class GrpcUserListServiceStub extends UserListServiceStub {
         callableFactory.createUnaryCallable(
             mutateUserListsTransportSettings, settings.mutateUserListsSettings(), clientContext);
 
-    backgroundResources = new BackgroundResourceAggregation(clientContext.getBackgroundResources());
+    this.backgroundResources =
+        new BackgroundResourceAggregation(clientContext.getBackgroundResources());
+  }
+
+  public GrpcOperationsStub getOperationsStub() {
+    return operationsStub;
   }
 
   public UnaryCallable<GetUserListRequest, UserList> getUserListCallable() {

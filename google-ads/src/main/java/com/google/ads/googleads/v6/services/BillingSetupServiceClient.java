@@ -5,7 +5,7 @@
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
- *     https://www.apache.org/licenses/LICENSE-2.0
+ *      https://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -13,9 +13,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
 package com.google.ads.googleads.v6.services;
 
 import com.google.ads.googleads.v6.resources.BillingSetup;
+import com.google.ads.googleads.v6.resources.BillingSetupName;
 import com.google.ads.googleads.v6.services.stub.BillingSetupServiceStub;
 import com.google.ads.googleads.v6.services.stub.BillingSetupServiceStubSettings;
 import com.google.api.core.BetaApi;
@@ -25,7 +27,7 @@ import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 import javax.annotation.Generated;
 
-// AUTO-GENERATED DOCUMENTATION AND SERVICE
+// AUTO-GENERATED DOCUMENTATION AND CLASS.
 /**
  * Service Description: A service for designating the business entity responsible for accrued costs.
  *
@@ -39,16 +41,7 @@ import javax.annotation.Generated;
  * <p>This class provides the ability to make remote calls to the backing service through method
  * calls that map to API methods. Sample code to get started:
  *
- * <pre>
- * <code>
- * try (BillingSetupServiceClient billingSetupServiceClient = BillingSetupServiceClient.create()) {
- *   BillingSetupName resourceName = BillingSetupName.of("[CUSTOMER_ID]", "[BILLING_SETUP_ID]");
- *   BillingSetup response = billingSetupServiceClient.getBillingSetup(resourceName);
- * }
- * </code>
- * </pre>
- *
- * <p>Note: close() needs to be called on the billingSetupServiceClient object to clean up resources
+ * <p>Note: close() needs to be called on the BillingSetupServiceClient object to clean up resources
  * such as threads. In the example above, try-with-resources is used, which automatically calls
  * close().
  *
@@ -77,30 +70,28 @@ import javax.annotation.Generated;
  *
  * <p>To customize credentials:
  *
- * <pre>
- * <code>
+ * <pre>{@code
  * BillingSetupServiceSettings billingSetupServiceSettings =
  *     BillingSetupServiceSettings.newBuilder()
  *         .setCredentialsProvider(FixedCredentialsProvider.create(myCredentials))
  *         .build();
  * BillingSetupServiceClient billingSetupServiceClient =
  *     BillingSetupServiceClient.create(billingSetupServiceSettings);
- * </code>
- * </pre>
+ * }</pre>
  *
- * To customize the endpoint:
+ * <p>To customize the endpoint:
  *
- * <pre>
- * <code>
+ * <pre>{@code
  * BillingSetupServiceSettings billingSetupServiceSettings =
  *     BillingSetupServiceSettings.newBuilder().setEndpoint(myEndpoint).build();
  * BillingSetupServiceClient billingSetupServiceClient =
  *     BillingSetupServiceClient.create(billingSetupServiceSettings);
- * </code>
- * </pre>
+ * }</pre>
+ *
+ * <p>Please refer to the GitHub repository's samples for more quickstart code snippets.
  */
-@Generated("by gapic-generator")
 @BetaApi
+@Generated("by gapic-generator")
 public class BillingSetupServiceClient implements BackgroundResource {
   private final BillingSetupServiceSettings settings;
   private final BillingSetupServiceStub stub;
@@ -121,7 +112,7 @@ public class BillingSetupServiceClient implements BackgroundResource {
 
   /**
    * Constructs an instance of BillingSetupServiceClient, using the given stub for making calls.
-   * This is for advanced usage - prefer to use BillingSetupServiceSettings}.
+   * This is for advanced usage - prefer using create(BillingSetupServiceSettings).
    */
   @BetaApi("A restructuring of stub classes is planned, so this may break in the future")
   public static final BillingSetupServiceClient create(BillingSetupServiceStub stub) {
@@ -153,20 +144,11 @@ public class BillingSetupServiceClient implements BackgroundResource {
     return stub;
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Returns a billing setup.
    *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (BillingSetupServiceClient billingSetupServiceClient = BillingSetupServiceClient.create()) {
-   *   BillingSetupName resourceName = BillingSetupName.of("[CUSTOMER_ID]", "[BILLING_SETUP_ID]");
-   *   BillingSetup response = billingSetupServiceClient.getBillingSetup(resourceName);
-   * }
-   * </code></pre>
-   *
-   * @param resourceName Required. The resource name of the billing setup to fetch.
+   * @param resource_name Required. The resource name of the billing setup to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final BillingSetup getBillingSetup(BillingSetupName resourceName) {
@@ -177,20 +159,11 @@ public class BillingSetupServiceClient implements BackgroundResource {
     return getBillingSetup(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Returns a billing setup.
    *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (BillingSetupServiceClient billingSetupServiceClient = BillingSetupServiceClient.create()) {
-   *   BillingSetupName resourceName = BillingSetupName.of("[CUSTOMER_ID]", "[BILLING_SETUP_ID]");
-   *   BillingSetup response = billingSetupServiceClient.getBillingSetup(resourceName.toString());
-   * }
-   * </code></pre>
-   *
-   * @param resourceName Required. The resource name of the billing setup to fetch.
+   * @param resource_name Required. The resource name of the billing setup to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final BillingSetup getBillingSetup(String resourceName) {
@@ -199,21 +172,9 @@ public class BillingSetupServiceClient implements BackgroundResource {
     return getBillingSetup(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Returns a billing setup.
-   *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (BillingSetupServiceClient billingSetupServiceClient = BillingSetupServiceClient.create()) {
-   *   BillingSetupName resourceName = BillingSetupName.of("[CUSTOMER_ID]", "[BILLING_SETUP_ID]");
-   *   GetBillingSetupRequest request = GetBillingSetupRequest.newBuilder()
-   *     .setResourceName(resourceName.toString())
-   *     .build();
-   *   BillingSetup response = billingSetupServiceClient.getBillingSetup(request);
-   * }
-   * </code></pre>
    *
    * @param request The request object containing all of the parameters for the API call.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
@@ -222,43 +183,21 @@ public class BillingSetupServiceClient implements BackgroundResource {
     return getBillingSetupCallable().call(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Returns a billing setup.
    *
    * <p>Sample code:
-   *
-   * <pre><code>
-   * try (BillingSetupServiceClient billingSetupServiceClient = BillingSetupServiceClient.create()) {
-   *   BillingSetupName resourceName = BillingSetupName.of("[CUSTOMER_ID]", "[BILLING_SETUP_ID]");
-   *   GetBillingSetupRequest request = GetBillingSetupRequest.newBuilder()
-   *     .setResourceName(resourceName.toString())
-   *     .build();
-   *   ApiFuture&lt;BillingSetup&gt; future = billingSetupServiceClient.getBillingSetupCallable().futureCall(request);
-   *   // Do something
-   *   BillingSetup response = future.get();
-   * }
-   * </code></pre>
    */
   public final UnaryCallable<GetBillingSetupRequest, BillingSetup> getBillingSetupCallable() {
     return stub.getBillingSetupCallable();
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Creates a billing setup, or cancels an existing billing setup.
    *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (BillingSetupServiceClient billingSetupServiceClient = BillingSetupServiceClient.create()) {
-   *   String customerId = "";
-   *   BillingSetupOperation operation = BillingSetupOperation.newBuilder().build();
-   *   MutateBillingSetupResponse response = billingSetupServiceClient.mutateBillingSetup(customerId, operation);
-   * }
-   * </code></pre>
-   *
-   * @param customerId Required. Id of the customer to apply the billing setup mutate operation to.
+   * @param customer_id Required. Id of the customer to apply the billing setup mutate operation to.
    * @param operation Required. The operation to perform.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
@@ -272,23 +211,9 @@ public class BillingSetupServiceClient implements BackgroundResource {
     return mutateBillingSetup(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Creates a billing setup, or cancels an existing billing setup.
-   *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (BillingSetupServiceClient billingSetupServiceClient = BillingSetupServiceClient.create()) {
-   *   String customerId = "";
-   *   BillingSetupOperation operation = BillingSetupOperation.newBuilder().build();
-   *   MutateBillingSetupRequest request = MutateBillingSetupRequest.newBuilder()
-   *     .setCustomerId(customerId)
-   *     .setOperation(operation)
-   *     .build();
-   *   MutateBillingSetupResponse response = billingSetupServiceClient.mutateBillingSetup(request);
-   * }
-   * </code></pre>
    *
    * @param request The request object containing all of the parameters for the API call.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
@@ -297,25 +222,11 @@ public class BillingSetupServiceClient implements BackgroundResource {
     return mutateBillingSetupCallable().call(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Creates a billing setup, or cancels an existing billing setup.
    *
    * <p>Sample code:
-   *
-   * <pre><code>
-   * try (BillingSetupServiceClient billingSetupServiceClient = BillingSetupServiceClient.create()) {
-   *   String customerId = "";
-   *   BillingSetupOperation operation = BillingSetupOperation.newBuilder().build();
-   *   MutateBillingSetupRequest request = MutateBillingSetupRequest.newBuilder()
-   *     .setCustomerId(customerId)
-   *     .setOperation(operation)
-   *     .build();
-   *   ApiFuture&lt;MutateBillingSetupResponse&gt; future = billingSetupServiceClient.mutateBillingSetupCallable().futureCall(request);
-   *   // Do something
-   *   MutateBillingSetupResponse response = future.get();
-   * }
-   * </code></pre>
    */
   public final UnaryCallable<MutateBillingSetupRequest, MutateBillingSetupResponse>
       mutateBillingSetupCallable() {

@@ -5,7 +5,7 @@
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
- *     https://www.apache.org/licenses/LICENSE-2.0
+ *      https://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -13,9 +13,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
 package com.google.ads.googleads.v6.services;
 
 import com.google.ads.googleads.v6.resources.SearchTermView;
+import com.google.ads.googleads.v6.resources.SearchTermViewName;
 import com.google.ads.googleads.v6.services.stub.SearchTermViewServiceStub;
 import com.google.ads.googleads.v6.services.stub.SearchTermViewServiceStubSettings;
 import com.google.api.core.BetaApi;
@@ -25,23 +27,14 @@ import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 import javax.annotation.Generated;
 
-// AUTO-GENERATED DOCUMENTATION AND SERVICE
+// AUTO-GENERATED DOCUMENTATION AND CLASS.
 /**
  * Service Description: Service to manage search term views.
  *
  * <p>This class provides the ability to make remote calls to the backing service through method
  * calls that map to API methods. Sample code to get started:
  *
- * <pre>
- * <code>
- * try (SearchTermViewServiceClient searchTermViewServiceClient = SearchTermViewServiceClient.create()) {
- *   SearchTermViewName resourceName = SearchTermViewName.of("[CUSTOMER_ID]", "[CAMPAIGN_ID]", "[AD_GROUP_ID]", "[QUERY]");
- *   SearchTermView response = searchTermViewServiceClient.getSearchTermView(resourceName);
- * }
- * </code>
- * </pre>
- *
- * <p>Note: close() needs to be called on the searchTermViewServiceClient object to clean up
+ * <p>Note: close() needs to be called on the SearchTermViewServiceClient object to clean up
  * resources such as threads. In the example above, try-with-resources is used, which automatically
  * calls close().
  *
@@ -70,30 +63,28 @@ import javax.annotation.Generated;
  *
  * <p>To customize credentials:
  *
- * <pre>
- * <code>
+ * <pre>{@code
  * SearchTermViewServiceSettings searchTermViewServiceSettings =
  *     SearchTermViewServiceSettings.newBuilder()
  *         .setCredentialsProvider(FixedCredentialsProvider.create(myCredentials))
  *         .build();
  * SearchTermViewServiceClient searchTermViewServiceClient =
  *     SearchTermViewServiceClient.create(searchTermViewServiceSettings);
- * </code>
- * </pre>
+ * }</pre>
  *
- * To customize the endpoint:
+ * <p>To customize the endpoint:
  *
- * <pre>
- * <code>
+ * <pre>{@code
  * SearchTermViewServiceSettings searchTermViewServiceSettings =
  *     SearchTermViewServiceSettings.newBuilder().setEndpoint(myEndpoint).build();
  * SearchTermViewServiceClient searchTermViewServiceClient =
  *     SearchTermViewServiceClient.create(searchTermViewServiceSettings);
- * </code>
- * </pre>
+ * }</pre>
+ *
+ * <p>Please refer to the GitHub repository's samples for more quickstart code snippets.
  */
-@Generated("by gapic-generator")
 @BetaApi
+@Generated("by gapic-generator")
 public class SearchTermViewServiceClient implements BackgroundResource {
   private final SearchTermViewServiceSettings settings;
   private final SearchTermViewServiceStub stub;
@@ -114,7 +105,7 @@ public class SearchTermViewServiceClient implements BackgroundResource {
 
   /**
    * Constructs an instance of SearchTermViewServiceClient, using the given stub for making calls.
-   * This is for advanced usage - prefer to use SearchTermViewServiceSettings}.
+   * This is for advanced usage - prefer using create(SearchTermViewServiceSettings).
    */
   @BetaApi("A restructuring of stub classes is planned, so this may break in the future")
   public static final SearchTermViewServiceClient create(SearchTermViewServiceStub stub) {
@@ -146,20 +137,11 @@ public class SearchTermViewServiceClient implements BackgroundResource {
     return stub;
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Returns the attributes of the requested search term view.
    *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (SearchTermViewServiceClient searchTermViewServiceClient = SearchTermViewServiceClient.create()) {
-   *   SearchTermViewName resourceName = SearchTermViewName.of("[CUSTOMER_ID]", "[CAMPAIGN_ID]", "[AD_GROUP_ID]", "[QUERY]");
-   *   SearchTermView response = searchTermViewServiceClient.getSearchTermView(resourceName);
-   * }
-   * </code></pre>
-   *
-   * @param resourceName Required. The resource name of the search term view to fetch.
+   * @param resource_name Required. The resource name of the search term view to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final SearchTermView getSearchTermView(SearchTermViewName resourceName) {
@@ -170,20 +152,11 @@ public class SearchTermViewServiceClient implements BackgroundResource {
     return getSearchTermView(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Returns the attributes of the requested search term view.
    *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (SearchTermViewServiceClient searchTermViewServiceClient = SearchTermViewServiceClient.create()) {
-   *   SearchTermViewName resourceName = SearchTermViewName.of("[CUSTOMER_ID]", "[CAMPAIGN_ID]", "[AD_GROUP_ID]", "[QUERY]");
-   *   SearchTermView response = searchTermViewServiceClient.getSearchTermView(resourceName.toString());
-   * }
-   * </code></pre>
-   *
-   * @param resourceName Required. The resource name of the search term view to fetch.
+   * @param resource_name Required. The resource name of the search term view to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final SearchTermView getSearchTermView(String resourceName) {
@@ -192,21 +165,9 @@ public class SearchTermViewServiceClient implements BackgroundResource {
     return getSearchTermView(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Returns the attributes of the requested search term view.
-   *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (SearchTermViewServiceClient searchTermViewServiceClient = SearchTermViewServiceClient.create()) {
-   *   SearchTermViewName resourceName = SearchTermViewName.of("[CUSTOMER_ID]", "[CAMPAIGN_ID]", "[AD_GROUP_ID]", "[QUERY]");
-   *   GetSearchTermViewRequest request = GetSearchTermViewRequest.newBuilder()
-   *     .setResourceName(resourceName.toString())
-   *     .build();
-   *   SearchTermView response = searchTermViewServiceClient.getSearchTermView(request);
-   * }
-   * </code></pre>
    *
    * @param request The request object containing all of the parameters for the API call.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
@@ -215,23 +176,11 @@ public class SearchTermViewServiceClient implements BackgroundResource {
     return getSearchTermViewCallable().call(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Returns the attributes of the requested search term view.
    *
    * <p>Sample code:
-   *
-   * <pre><code>
-   * try (SearchTermViewServiceClient searchTermViewServiceClient = SearchTermViewServiceClient.create()) {
-   *   SearchTermViewName resourceName = SearchTermViewName.of("[CUSTOMER_ID]", "[CAMPAIGN_ID]", "[AD_GROUP_ID]", "[QUERY]");
-   *   GetSearchTermViewRequest request = GetSearchTermViewRequest.newBuilder()
-   *     .setResourceName(resourceName.toString())
-   *     .build();
-   *   ApiFuture&lt;SearchTermView&gt; future = searchTermViewServiceClient.getSearchTermViewCallable().futureCall(request);
-   *   // Do something
-   *   SearchTermView response = future.get();
-   * }
-   * </code></pre>
    */
   public final UnaryCallable<GetSearchTermViewRequest, SearchTermView> getSearchTermViewCallable() {
     return stub.getSearchTermViewCallable();

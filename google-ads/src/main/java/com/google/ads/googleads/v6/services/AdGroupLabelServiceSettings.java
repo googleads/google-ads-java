@@ -5,7 +5,7 @@
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
- *     https://www.apache.org/licenses/LICENSE-2.0
+ *      https://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -13,6 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
 package com.google.ads.googleads.v6.services;
 
 import com.google.ads.googleads.v6.resources.AdGroupLabel;
@@ -25,13 +26,14 @@ import com.google.api.gax.grpc.InstantiatingGrpcChannelProvider;
 import com.google.api.gax.rpc.ApiClientHeaderProvider;
 import com.google.api.gax.rpc.ClientContext;
 import com.google.api.gax.rpc.ClientSettings;
+import com.google.api.gax.rpc.StubSettings;
 import com.google.api.gax.rpc.TransportChannelProvider;
 import com.google.api.gax.rpc.UnaryCallSettings;
 import java.io.IOException;
 import java.util.List;
 import javax.annotation.Generated;
 
-// AUTO-GENERATED DOCUMENTATION AND CLASS
+// AUTO-GENERATED DOCUMENTATION AND CLASS.
 /**
  * Settings class to configure an instance of {@link AdGroupLabelServiceClient}.
  *
@@ -48,23 +50,25 @@ import javax.annotation.Generated;
  *
  * <p>For example, to set the total timeout of getAdGroupLabel to 30 seconds:
  *
- * <pre>
- * <code>
+ * <pre>{@code
  * AdGroupLabelServiceSettings.Builder adGroupLabelServiceSettingsBuilder =
  *     AdGroupLabelServiceSettings.newBuilder();
  * adGroupLabelServiceSettingsBuilder
  *     .getAdGroupLabelSettings()
  *     .setRetrySettings(
- *         adGroupLabelServiceSettingsBuilder.getAdGroupLabelSettings().getRetrySettings().toBuilder()
+ *         adGroupLabelServiceSettingsBuilder
+ *             .getAdGroupLabelSettings()
+ *             .getRetrySettings()
+ *             .toBuilder()
  *             .setTotalTimeout(Duration.ofSeconds(30))
  *             .build());
- * AdGroupLabelServiceSettings adGroupLabelServiceSettings = adGroupLabelServiceSettingsBuilder.build();
- * </code>
- * </pre>
+ * AdGroupLabelServiceSettings adGroupLabelServiceSettings =
+ *     adGroupLabelServiceSettingsBuilder.build();
+ * }</pre>
  */
-@Generated("by gapic-generator")
-@BetaApi
+@Generated("by gapic-generator-java")
 public class AdGroupLabelServiceSettings extends ClientSettings<AdGroupLabelServiceSettings> {
+
   /** Returns the object with the settings used for calls to getAdGroupLabel. */
   public UnaryCallSettings<GetAdGroupLabelRequest, AdGroupLabel> getAdGroupLabelSettings() {
     return ((AdGroupLabelServiceStubSettings) getStubSettings()).getAdGroupLabelSettings();
@@ -136,16 +140,13 @@ public class AdGroupLabelServiceSettings extends ClientSettings<AdGroupLabelServ
 
   /** Builder for AdGroupLabelServiceSettings. */
   public static class Builder extends ClientSettings.Builder<AdGroupLabelServiceSettings, Builder> {
+
     protected Builder() throws IOException {
-      this((ClientContext) null);
+      this(((ClientContext) null));
     }
 
     protected Builder(ClientContext clientContext) {
       super(AdGroupLabelServiceStubSettings.newBuilder(clientContext));
-    }
-
-    private static Builder createDefault() {
-      return new Builder(AdGroupLabelServiceStubSettings.newBuilder());
     }
 
     protected Builder(AdGroupLabelServiceSettings settings) {
@@ -156,11 +157,15 @@ public class AdGroupLabelServiceSettings extends ClientSettings<AdGroupLabelServ
       super(stubSettings);
     }
 
+    private static Builder createDefault() {
+      return new Builder(AdGroupLabelServiceStubSettings.newBuilder());
+    }
+
     public AdGroupLabelServiceStubSettings.Builder getStubSettingsBuilder() {
       return ((AdGroupLabelServiceStubSettings.Builder) getStubSettings());
     }
 
-    // NEXT_MAJOR_VER: remove 'throws Exception'
+    // NEXT_MAJOR_VER: remove 'throws Exception'.
     /**
      * Applies the given settings updater function to all of the unary API methods in this service.
      *

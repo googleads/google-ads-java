@@ -5,7 +5,7 @@
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
- *     https://www.apache.org/licenses/LICENSE-2.0
+ *      https://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -13,9 +13,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
 package com.google.ads.googleads.v6.services;
 
 import com.google.ads.googleads.v6.resources.CampaignDraft;
+import com.google.ads.googleads.v6.resources.CampaignDraftName;
 import com.google.ads.googleads.v6.services.stub.CampaignDraftServiceStub;
 import com.google.ads.googleads.v6.services.stub.CampaignDraftServiceStubSettings;
 import com.google.api.core.ApiFunction;
@@ -40,23 +42,14 @@ import java.util.List;
 import java.util.concurrent.TimeUnit;
 import javax.annotation.Generated;
 
-// AUTO-GENERATED DOCUMENTATION AND SERVICE
+// AUTO-GENERATED DOCUMENTATION AND CLASS.
 /**
  * Service Description: Service to manage campaign drafts.
  *
  * <p>This class provides the ability to make remote calls to the backing service through method
  * calls that map to API methods. Sample code to get started:
  *
- * <pre>
- * <code>
- * try (CampaignDraftServiceClient campaignDraftServiceClient = CampaignDraftServiceClient.create()) {
- *   CampaignDraftName resourceName = CampaignDraftName.of("[CUSTOMER_ID]", "[BASE_CAMPAIGN_ID]", "[DRAFT_ID]");
- *   CampaignDraft response = campaignDraftServiceClient.getCampaignDraft(resourceName);
- * }
- * </code>
- * </pre>
- *
- * <p>Note: close() needs to be called on the campaignDraftServiceClient object to clean up
+ * <p>Note: close() needs to be called on the CampaignDraftServiceClient object to clean up
  * resources such as threads. In the example above, try-with-resources is used, which automatically
  * calls close().
  *
@@ -85,30 +78,28 @@ import javax.annotation.Generated;
  *
  * <p>To customize credentials:
  *
- * <pre>
- * <code>
+ * <pre>{@code
  * CampaignDraftServiceSettings campaignDraftServiceSettings =
  *     CampaignDraftServiceSettings.newBuilder()
  *         .setCredentialsProvider(FixedCredentialsProvider.create(myCredentials))
  *         .build();
  * CampaignDraftServiceClient campaignDraftServiceClient =
  *     CampaignDraftServiceClient.create(campaignDraftServiceSettings);
- * </code>
- * </pre>
+ * }</pre>
  *
- * To customize the endpoint:
+ * <p>To customize the endpoint:
  *
- * <pre>
- * <code>
+ * <pre>{@code
  * CampaignDraftServiceSettings campaignDraftServiceSettings =
  *     CampaignDraftServiceSettings.newBuilder().setEndpoint(myEndpoint).build();
  * CampaignDraftServiceClient campaignDraftServiceClient =
  *     CampaignDraftServiceClient.create(campaignDraftServiceSettings);
- * </code>
- * </pre>
+ * }</pre>
+ *
+ * <p>Please refer to the GitHub repository's samples for more quickstart code snippets.
  */
-@Generated("by gapic-generator")
 @BetaApi
+@Generated("by gapic-generator")
 public class CampaignDraftServiceClient implements BackgroundResource {
   private final CampaignDraftServiceSettings settings;
   private final CampaignDraftServiceStub stub;
@@ -130,7 +121,7 @@ public class CampaignDraftServiceClient implements BackgroundResource {
 
   /**
    * Constructs an instance of CampaignDraftServiceClient, using the given stub for making calls.
-   * This is for advanced usage - prefer to use CampaignDraftServiceSettings}.
+   * This is for advanced usage - prefer using create(CampaignDraftServiceSettings).
    */
   @BetaApi("A restructuring of stub classes is planned, so this may break in the future")
   public static final CampaignDraftServiceClient create(CampaignDraftServiceStub stub) {
@@ -168,26 +159,15 @@ public class CampaignDraftServiceClient implements BackgroundResource {
    * Returns the OperationsClient that can be used to query the status of a long-running operation
    * returned by another API method call.
    */
-  @BetaApi(
-      "The surface for long-running operations is not stable yet and may change in the future.")
   public final OperationsClient getOperationsClient() {
     return operationsClient;
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Returns the requested campaign draft in full detail.
    *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (CampaignDraftServiceClient campaignDraftServiceClient = CampaignDraftServiceClient.create()) {
-   *   CampaignDraftName resourceName = CampaignDraftName.of("[CUSTOMER_ID]", "[BASE_CAMPAIGN_ID]", "[DRAFT_ID]");
-   *   CampaignDraft response = campaignDraftServiceClient.getCampaignDraft(resourceName);
-   * }
-   * </code></pre>
-   *
-   * @param resourceName Required. The resource name of the campaign draft to fetch.
+   * @param resource_name Required. The resource name of the campaign draft to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final CampaignDraft getCampaignDraft(CampaignDraftName resourceName) {
@@ -198,20 +178,11 @@ public class CampaignDraftServiceClient implements BackgroundResource {
     return getCampaignDraft(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Returns the requested campaign draft in full detail.
    *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (CampaignDraftServiceClient campaignDraftServiceClient = CampaignDraftServiceClient.create()) {
-   *   CampaignDraftName resourceName = CampaignDraftName.of("[CUSTOMER_ID]", "[BASE_CAMPAIGN_ID]", "[DRAFT_ID]");
-   *   CampaignDraft response = campaignDraftServiceClient.getCampaignDraft(resourceName.toString());
-   * }
-   * </code></pre>
-   *
-   * @param resourceName Required. The resource name of the campaign draft to fetch.
+   * @param resource_name Required. The resource name of the campaign draft to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final CampaignDraft getCampaignDraft(String resourceName) {
@@ -220,21 +191,9 @@ public class CampaignDraftServiceClient implements BackgroundResource {
     return getCampaignDraft(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Returns the requested campaign draft in full detail.
-   *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (CampaignDraftServiceClient campaignDraftServiceClient = CampaignDraftServiceClient.create()) {
-   *   CampaignDraftName resourceName = CampaignDraftName.of("[CUSTOMER_ID]", "[BASE_CAMPAIGN_ID]", "[DRAFT_ID]");
-   *   GetCampaignDraftRequest request = GetCampaignDraftRequest.newBuilder()
-   *     .setResourceName(resourceName.toString())
-   *     .build();
-   *   CampaignDraft response = campaignDraftServiceClient.getCampaignDraft(request);
-   * }
-   * </code></pre>
    *
    * @param request The request object containing all of the parameters for the API call.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
@@ -243,43 +202,21 @@ public class CampaignDraftServiceClient implements BackgroundResource {
     return getCampaignDraftCallable().call(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Returns the requested campaign draft in full detail.
    *
    * <p>Sample code:
-   *
-   * <pre><code>
-   * try (CampaignDraftServiceClient campaignDraftServiceClient = CampaignDraftServiceClient.create()) {
-   *   CampaignDraftName resourceName = CampaignDraftName.of("[CUSTOMER_ID]", "[BASE_CAMPAIGN_ID]", "[DRAFT_ID]");
-   *   GetCampaignDraftRequest request = GetCampaignDraftRequest.newBuilder()
-   *     .setResourceName(resourceName.toString())
-   *     .build();
-   *   ApiFuture&lt;CampaignDraft&gt; future = campaignDraftServiceClient.getCampaignDraftCallable().futureCall(request);
-   *   // Do something
-   *   CampaignDraft response = future.get();
-   * }
-   * </code></pre>
    */
   public final UnaryCallable<GetCampaignDraftRequest, CampaignDraft> getCampaignDraftCallable() {
     return stub.getCampaignDraftCallable();
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Creates, updates, or removes campaign drafts. Operation statuses are returned.
    *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (CampaignDraftServiceClient campaignDraftServiceClient = CampaignDraftServiceClient.create()) {
-   *   String customerId = "";
-   *   List&lt;CampaignDraftOperation&gt; operations = new ArrayList&lt;&gt;();
-   *   MutateCampaignDraftsResponse response = campaignDraftServiceClient.mutateCampaignDrafts(customerId, operations);
-   * }
-   * </code></pre>
-   *
-   * @param customerId Required. The ID of the customer whose campaign drafts are being modified.
+   * @param customer_id Required. The ID of the customer whose campaign drafts are being modified.
    * @param operations Required. The list of operations to perform on individual campaign drafts.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
@@ -293,23 +230,9 @@ public class CampaignDraftServiceClient implements BackgroundResource {
     return mutateCampaignDrafts(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Creates, updates, or removes campaign drafts. Operation statuses are returned.
-   *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (CampaignDraftServiceClient campaignDraftServiceClient = CampaignDraftServiceClient.create()) {
-   *   String customerId = "";
-   *   List&lt;CampaignDraftOperation&gt; operations = new ArrayList&lt;&gt;();
-   *   MutateCampaignDraftsRequest request = MutateCampaignDraftsRequest.newBuilder()
-   *     .setCustomerId(customerId)
-   *     .addAllOperations(operations)
-   *     .build();
-   *   MutateCampaignDraftsResponse response = campaignDraftServiceClient.mutateCampaignDrafts(request);
-   * }
-   * </code></pre>
    *
    * @param request The request object containing all of the parameters for the API call.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
@@ -319,32 +242,18 @@ public class CampaignDraftServiceClient implements BackgroundResource {
     return mutateCampaignDraftsCallable().call(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Creates, updates, or removes campaign drafts. Operation statuses are returned.
    *
    * <p>Sample code:
-   *
-   * <pre><code>
-   * try (CampaignDraftServiceClient campaignDraftServiceClient = CampaignDraftServiceClient.create()) {
-   *   String customerId = "";
-   *   List&lt;CampaignDraftOperation&gt; operations = new ArrayList&lt;&gt;();
-   *   MutateCampaignDraftsRequest request = MutateCampaignDraftsRequest.newBuilder()
-   *     .setCustomerId(customerId)
-   *     .addAllOperations(operations)
-   *     .build();
-   *   ApiFuture&lt;MutateCampaignDraftsResponse&gt; future = campaignDraftServiceClient.mutateCampaignDraftsCallable().futureCall(request);
-   *   // Do something
-   *   MutateCampaignDraftsResponse response = future.get();
-   * }
-   * </code></pre>
    */
   public final UnaryCallable<MutateCampaignDraftsRequest, MutateCampaignDraftsResponse>
       mutateCampaignDraftsCallable() {
     return stub.mutateCampaignDraftsCallable();
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Promotes the changes in a draft back to the base campaign.
    *
@@ -355,27 +264,16 @@ public class CampaignDraftServiceClient implements BackgroundResource {
    * [CampaignDraftService.ListCampaignDraftAsyncErrors][google.ads.googleads.v6.services.CampaignDraftService.ListCampaignDraftAsyncErrors]
    * to view the list of error reasons.
    *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (CampaignDraftServiceClient campaignDraftServiceClient = CampaignDraftServiceClient.create()) {
-   *   String campaignDraft = "";
-   *   campaignDraftServiceClient.promoteCampaignDraftAsync(campaignDraft).get();
-   * }
-   * </code></pre>
-   *
-   * @param campaignDraft Required. The resource name of the campaign draft to promote.
+   * @param campaign_draft Required. The resource name of the campaign draft to promote.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
-  @BetaApi(
-      "The surface for long-running operations is not stable yet and may change in the future.")
   public final OperationFuture<Empty, Empty> promoteCampaignDraftAsync(String campaignDraft) {
     PromoteCampaignDraftRequest request =
         PromoteCampaignDraftRequest.newBuilder().setCampaignDraft(campaignDraft).build();
     return promoteCampaignDraftAsync(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Promotes the changes in a draft back to the base campaign.
    *
@@ -386,29 +284,15 @@ public class CampaignDraftServiceClient implements BackgroundResource {
    * [CampaignDraftService.ListCampaignDraftAsyncErrors][google.ads.googleads.v6.services.CampaignDraftService.ListCampaignDraftAsyncErrors]
    * to view the list of error reasons.
    *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (CampaignDraftServiceClient campaignDraftServiceClient = CampaignDraftServiceClient.create()) {
-   *   String campaignDraft = "";
-   *   PromoteCampaignDraftRequest request = PromoteCampaignDraftRequest.newBuilder()
-   *     .setCampaignDraft(campaignDraft)
-   *     .build();
-   *   campaignDraftServiceClient.promoteCampaignDraftAsync(request).get();
-   * }
-   * </code></pre>
-   *
    * @param request The request object containing all of the parameters for the API call.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
-  @BetaApi(
-      "The surface for long-running operations is not stable yet and may change in the future.")
   public final OperationFuture<Empty, Empty> promoteCampaignDraftAsync(
       PromoteCampaignDraftRequest request) {
     return promoteCampaignDraftOperationCallable().futureCall(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Promotes the changes in a draft back to the base campaign.
    *
@@ -420,26 +304,13 @@ public class CampaignDraftServiceClient implements BackgroundResource {
    * to view the list of error reasons.
    *
    * <p>Sample code:
-   *
-   * <pre><code>
-   * try (CampaignDraftServiceClient campaignDraftServiceClient = CampaignDraftServiceClient.create()) {
-   *   String campaignDraft = "";
-   *   PromoteCampaignDraftRequest request = PromoteCampaignDraftRequest.newBuilder()
-   *     .setCampaignDraft(campaignDraft)
-   *     .build();
-   *   OperationFuture&lt;Empty, Empty&gt; future = campaignDraftServiceClient.promoteCampaignDraftOperationCallable().futureCall(request);
-   *   // Do something
-   *   future.get();
-   * }
-   * </code></pre>
    */
-  @BetaApi("The surface for use by generated code is not stable yet and may change in the future.")
   public final OperationCallable<PromoteCampaignDraftRequest, Empty, Empty>
       promoteCampaignDraftOperationCallable() {
     return stub.promoteCampaignDraftOperationCallable();
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Promotes the changes in a draft back to the base campaign.
    *
@@ -451,41 +322,18 @@ public class CampaignDraftServiceClient implements BackgroundResource {
    * to view the list of error reasons.
    *
    * <p>Sample code:
-   *
-   * <pre><code>
-   * try (CampaignDraftServiceClient campaignDraftServiceClient = CampaignDraftServiceClient.create()) {
-   *   String campaignDraft = "";
-   *   PromoteCampaignDraftRequest request = PromoteCampaignDraftRequest.newBuilder()
-   *     .setCampaignDraft(campaignDraft)
-   *     .build();
-   *   ApiFuture&lt;Operation&gt; future = campaignDraftServiceClient.promoteCampaignDraftCallable().futureCall(request);
-   *   // Do something
-   *   future.get();
-   * }
-   * </code></pre>
    */
   public final UnaryCallable<PromoteCampaignDraftRequest, Operation>
       promoteCampaignDraftCallable() {
     return stub.promoteCampaignDraftCallable();
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Returns all errors that occurred during CampaignDraft promote. Throws an error if called before
    * campaign draft is promoted. Supports standard list paging.
    *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (CampaignDraftServiceClient campaignDraftServiceClient = CampaignDraftServiceClient.create()) {
-   *   CampaignDraftName resourceName = CampaignDraftName.of("[CUSTOMER_ID]", "[BASE_CAMPAIGN_ID]", "[DRAFT_ID]");
-   *   for (Status element : campaignDraftServiceClient.listCampaignDraftAsyncErrors(resourceName).iterateAll()) {
-   *     // doThingsWith(element);
-   *   }
-   * }
-   * </code></pre>
-   *
-   * @param resourceName Required. The name of the campaign draft from which to retrieve the async
+   * @param resource_name Required. The name of the campaign draft from which to retrieve the async
    *     errors.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
@@ -498,23 +346,12 @@ public class CampaignDraftServiceClient implements BackgroundResource {
     return listCampaignDraftAsyncErrors(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Returns all errors that occurred during CampaignDraft promote. Throws an error if called before
    * campaign draft is promoted. Supports standard list paging.
    *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (CampaignDraftServiceClient campaignDraftServiceClient = CampaignDraftServiceClient.create()) {
-   *   CampaignDraftName resourceName = CampaignDraftName.of("[CUSTOMER_ID]", "[BASE_CAMPAIGN_ID]", "[DRAFT_ID]");
-   *   for (Status element : campaignDraftServiceClient.listCampaignDraftAsyncErrors(resourceName.toString()).iterateAll()) {
-   *     // doThingsWith(element);
-   *   }
-   * }
-   * </code></pre>
-   *
-   * @param resourceName Required. The name of the campaign draft from which to retrieve the async
+   * @param resource_name Required. The name of the campaign draft from which to retrieve the async
    *     errors.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
@@ -525,24 +362,10 @@ public class CampaignDraftServiceClient implements BackgroundResource {
     return listCampaignDraftAsyncErrors(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Returns all errors that occurred during CampaignDraft promote. Throws an error if called before
    * campaign draft is promoted. Supports standard list paging.
-   *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (CampaignDraftServiceClient campaignDraftServiceClient = CampaignDraftServiceClient.create()) {
-   *   CampaignDraftName resourceName = CampaignDraftName.of("[CUSTOMER_ID]", "[BASE_CAMPAIGN_ID]", "[DRAFT_ID]");
-   *   ListCampaignDraftAsyncErrorsRequest request = ListCampaignDraftAsyncErrorsRequest.newBuilder()
-   *     .setResourceName(resourceName.toString())
-   *     .build();
-   *   for (Status element : campaignDraftServiceClient.listCampaignDraftAsyncErrors(request).iterateAll()) {
-   *     // doThingsWith(element);
-   *   }
-   * }
-   * </code></pre>
    *
    * @param request The request object containing all of the parameters for the API call.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
@@ -552,26 +375,12 @@ public class CampaignDraftServiceClient implements BackgroundResource {
     return listCampaignDraftAsyncErrorsPagedCallable().call(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Returns all errors that occurred during CampaignDraft promote. Throws an error if called before
    * campaign draft is promoted. Supports standard list paging.
    *
    * <p>Sample code:
-   *
-   * <pre><code>
-   * try (CampaignDraftServiceClient campaignDraftServiceClient = CampaignDraftServiceClient.create()) {
-   *   CampaignDraftName resourceName = CampaignDraftName.of("[CUSTOMER_ID]", "[BASE_CAMPAIGN_ID]", "[DRAFT_ID]");
-   *   ListCampaignDraftAsyncErrorsRequest request = ListCampaignDraftAsyncErrorsRequest.newBuilder()
-   *     .setResourceName(resourceName.toString())
-   *     .build();
-   *   ApiFuture&lt;ListCampaignDraftAsyncErrorsPagedResponse&gt; future = campaignDraftServiceClient.listCampaignDraftAsyncErrorsPagedCallable().futureCall(request);
-   *   // Do something
-   *   for (Status element : future.get().iterateAll()) {
-   *     // doThingsWith(element);
-   *   }
-   * }
-   * </code></pre>
    */
   public final UnaryCallable<
           ListCampaignDraftAsyncErrorsRequest, ListCampaignDraftAsyncErrorsPagedResponse>
@@ -579,33 +388,12 @@ public class CampaignDraftServiceClient implements BackgroundResource {
     return stub.listCampaignDraftAsyncErrorsPagedCallable();
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Returns all errors that occurred during CampaignDraft promote. Throws an error if called before
    * campaign draft is promoted. Supports standard list paging.
    *
    * <p>Sample code:
-   *
-   * <pre><code>
-   * try (CampaignDraftServiceClient campaignDraftServiceClient = CampaignDraftServiceClient.create()) {
-   *   CampaignDraftName resourceName = CampaignDraftName.of("[CUSTOMER_ID]", "[BASE_CAMPAIGN_ID]", "[DRAFT_ID]");
-   *   ListCampaignDraftAsyncErrorsRequest request = ListCampaignDraftAsyncErrorsRequest.newBuilder()
-   *     .setResourceName(resourceName.toString())
-   *     .build();
-   *   while (true) {
-   *     ListCampaignDraftAsyncErrorsResponse response = campaignDraftServiceClient.listCampaignDraftAsyncErrorsCallable().call(request);
-   *     for (Status element : response.getErrorsList()) {
-   *       // doThingsWith(element);
-   *     }
-   *     String nextPageToken = response.getNextPageToken();
-   *     if (!Strings.isNullOrEmpty(nextPageToken)) {
-   *       request = request.toBuilder().setPageToken(nextPageToken).build();
-   *     } else {
-   *       break;
-   *     }
-   *   }
-   * }
-   * </code></pre>
    */
   public final UnaryCallable<
           ListCampaignDraftAsyncErrorsRequest, ListCampaignDraftAsyncErrorsResponse>

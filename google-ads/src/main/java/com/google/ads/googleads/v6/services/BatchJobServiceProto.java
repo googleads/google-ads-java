@@ -119,7 +119,7 @@ public final class BatchJobServiceProto {
       "(\003\022\\\n\031mutate_operation_response\030\002 \001(\01329." +
       "google.ads.googleads.v6.services.MutateO" +
       "perationResponse\022\"\n\006status\030\003 \001(\0132\022.googl" +
-      "e.rpc.Status2\343\t\n\017BatchJobService\022\326\001\n\016Mut" +
+      "e.rpc.Status2\215\n\n\017BatchJobService\022\326\001\n\016Mut" +
       "ateBatchJob\0227.google.ads.googleads.v6.se" +
       "rvices.MutateBatchJobRequest\0328.google.ad" +
       "s.googleads.v6.services.MutateBatchJobRe" +
@@ -149,15 +149,16 @@ public final class BatchJobServiceProto {
       "nse\"\227\001\202\323\344\223\002>\"9/v6/{resource_name=custome" +
       "rs/*/batchJobs/*}:addOperations:\001*\332A.res" +
       "ource_name,sequence_token,mutate_operati" +
-      "ons\332A\037resource_name,mutate_operations\032\033\312" +
-      "A\030googleads.googleapis.comB\373\001\n$com.googl" +
-      "e.ads.googleads.v6.servicesB\024BatchJobSer" +
-      "viceProtoP\001ZHgoogle.golang.org/genproto/" +
-      "googleapis/ads/googleads/v6/services;ser" +
-      "vices\242\002\003GAA\252\002 Google.Ads.GoogleAds.V6.Se" +
-      "rvices\312\002 Google\\Ads\\GoogleAds\\V6\\Service" +
-      "s\352\002$Google::Ads::GoogleAds::V6::Services" +
-      "b\006proto3"
+      "ons\332A\037resource_name,mutate_operations\032E\312" +
+      "A\030googleads.googleapis.com\322A\'https://www" +
+      ".googleapis.com/auth/adwordsB\373\001\n$com.goo" +
+      "gle.ads.googleads.v6.servicesB\024BatchJobS" +
+      "erviceProtoP\001ZHgoogle.golang.org/genprot" +
+      "o/googleapis/ads/googleads/v6/services;s" +
+      "ervices\242\002\003GAA\252\002 Google.Ads.GoogleAds.V6." +
+      "Services\312\002 Google\\Ads\\GoogleAds\\V6\\Servi" +
+      "ces\352\002$Google::Ads::GoogleAds::V6::Servic" +
+      "esb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -243,6 +244,7 @@ public final class BatchJobServiceProto {
     registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);
     registry.add(com.google.api.AnnotationsProto.http);
     registry.add(com.google.api.ClientProto.methodSignature);
+    registry.add(com.google.api.ClientProto.oauthScopes);
     registry.add(com.google.api.ResourceProto.resourceReference);
     registry.add(com.google.longrunning.OperationsProto.operationInfo);
     com.google.protobuf.Descriptors.FileDescriptor

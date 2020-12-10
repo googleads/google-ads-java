@@ -5,7 +5,7 @@
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
- *     https://www.apache.org/licenses/LICENSE-2.0
+ *      https://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -13,9 +13,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
 package com.google.ads.googleads.v6.services;
 
 import com.google.ads.googleads.v6.resources.CustomerUserAccess;
+import com.google.ads.googleads.v6.resources.CustomerUserAccessName;
 import com.google.ads.googleads.v6.services.stub.CustomerUserAccessServiceStub;
 import com.google.ads.googleads.v6.services.stub.CustomerUserAccessServiceStubSettings;
 import com.google.api.core.BetaApi;
@@ -25,23 +27,14 @@ import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 import javax.annotation.Generated;
 
-// AUTO-GENERATED DOCUMENTATION AND SERVICE
+// AUTO-GENERATED DOCUMENTATION AND CLASS.
 /**
  * Service Description: This service manages the permissions of a user on a given customer.
  *
  * <p>This class provides the ability to make remote calls to the backing service through method
  * calls that map to API methods. Sample code to get started:
  *
- * <pre>
- * <code>
- * try (CustomerUserAccessServiceClient customerUserAccessServiceClient = CustomerUserAccessServiceClient.create()) {
- *   CustomerUserAccessName resourceName = CustomerUserAccessName.of("[CUSTOMER_ID]", "[USER_ID]");
- *   CustomerUserAccess response = customerUserAccessServiceClient.getCustomerUserAccess(resourceName);
- * }
- * </code>
- * </pre>
- *
- * <p>Note: close() needs to be called on the customerUserAccessServiceClient object to clean up
+ * <p>Note: close() needs to be called on the CustomerUserAccessServiceClient object to clean up
  * resources such as threads. In the example above, try-with-resources is used, which automatically
  * calls close().
  *
@@ -70,30 +63,28 @@ import javax.annotation.Generated;
  *
  * <p>To customize credentials:
  *
- * <pre>
- * <code>
+ * <pre>{@code
  * CustomerUserAccessServiceSettings customerUserAccessServiceSettings =
  *     CustomerUserAccessServiceSettings.newBuilder()
  *         .setCredentialsProvider(FixedCredentialsProvider.create(myCredentials))
  *         .build();
  * CustomerUserAccessServiceClient customerUserAccessServiceClient =
  *     CustomerUserAccessServiceClient.create(customerUserAccessServiceSettings);
- * </code>
- * </pre>
+ * }</pre>
  *
- * To customize the endpoint:
+ * <p>To customize the endpoint:
  *
- * <pre>
- * <code>
+ * <pre>{@code
  * CustomerUserAccessServiceSettings customerUserAccessServiceSettings =
  *     CustomerUserAccessServiceSettings.newBuilder().setEndpoint(myEndpoint).build();
  * CustomerUserAccessServiceClient customerUserAccessServiceClient =
  *     CustomerUserAccessServiceClient.create(customerUserAccessServiceSettings);
- * </code>
- * </pre>
+ * }</pre>
+ *
+ * <p>Please refer to the GitHub repository's samples for more quickstart code snippets.
  */
-@Generated("by gapic-generator")
 @BetaApi
+@Generated("by gapic-generator")
 public class CustomerUserAccessServiceClient implements BackgroundResource {
   private final CustomerUserAccessServiceSettings settings;
   private final CustomerUserAccessServiceStub stub;
@@ -115,7 +106,7 @@ public class CustomerUserAccessServiceClient implements BackgroundResource {
 
   /**
    * Constructs an instance of CustomerUserAccessServiceClient, using the given stub for making
-   * calls. This is for advanced usage - prefer to use CustomerUserAccessServiceSettings}.
+   * calls. This is for advanced usage - prefer using create(CustomerUserAccessServiceSettings).
    */
   @BetaApi("A restructuring of stub classes is planned, so this may break in the future")
   public static final CustomerUserAccessServiceClient create(CustomerUserAccessServiceStub stub) {
@@ -148,20 +139,11 @@ public class CustomerUserAccessServiceClient implements BackgroundResource {
     return stub;
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Returns the CustomerUserAccess in full detail.
    *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (CustomerUserAccessServiceClient customerUserAccessServiceClient = CustomerUserAccessServiceClient.create()) {
-   *   CustomerUserAccessName resourceName = CustomerUserAccessName.of("[CUSTOMER_ID]", "[USER_ID]");
-   *   CustomerUserAccess response = customerUserAccessServiceClient.getCustomerUserAccess(resourceName);
-   * }
-   * </code></pre>
-   *
-   * @param resourceName Required. Resource name of the customer user access.
+   * @param resource_name Required. Resource name of the customer user access.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final CustomerUserAccess getCustomerUserAccess(CustomerUserAccessName resourceName) {
@@ -172,20 +154,11 @@ public class CustomerUserAccessServiceClient implements BackgroundResource {
     return getCustomerUserAccess(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Returns the CustomerUserAccess in full detail.
    *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (CustomerUserAccessServiceClient customerUserAccessServiceClient = CustomerUserAccessServiceClient.create()) {
-   *   CustomerUserAccessName resourceName = CustomerUserAccessName.of("[CUSTOMER_ID]", "[USER_ID]");
-   *   CustomerUserAccess response = customerUserAccessServiceClient.getCustomerUserAccess(resourceName.toString());
-   * }
-   * </code></pre>
-   *
-   * @param resourceName Required. Resource name of the customer user access.
+   * @param resource_name Required. Resource name of the customer user access.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final CustomerUserAccess getCustomerUserAccess(String resourceName) {
@@ -194,21 +167,9 @@ public class CustomerUserAccessServiceClient implements BackgroundResource {
     return getCustomerUserAccess(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Returns the CustomerUserAccess in full detail.
-   *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (CustomerUserAccessServiceClient customerUserAccessServiceClient = CustomerUserAccessServiceClient.create()) {
-   *   CustomerUserAccessName resourceName = CustomerUserAccessName.of("[CUSTOMER_ID]", "[USER_ID]");
-   *   GetCustomerUserAccessRequest request = GetCustomerUserAccessRequest.newBuilder()
-   *     .setResourceName(resourceName.toString())
-   *     .build();
-   *   CustomerUserAccess response = customerUserAccessServiceClient.getCustomerUserAccess(request);
-   * }
-   * </code></pre>
    *
    * @param request The request object containing all of the parameters for the API call.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
@@ -217,44 +178,22 @@ public class CustomerUserAccessServiceClient implements BackgroundResource {
     return getCustomerUserAccessCallable().call(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Returns the CustomerUserAccess in full detail.
    *
    * <p>Sample code:
-   *
-   * <pre><code>
-   * try (CustomerUserAccessServiceClient customerUserAccessServiceClient = CustomerUserAccessServiceClient.create()) {
-   *   CustomerUserAccessName resourceName = CustomerUserAccessName.of("[CUSTOMER_ID]", "[USER_ID]");
-   *   GetCustomerUserAccessRequest request = GetCustomerUserAccessRequest.newBuilder()
-   *     .setResourceName(resourceName.toString())
-   *     .build();
-   *   ApiFuture&lt;CustomerUserAccess&gt; future = customerUserAccessServiceClient.getCustomerUserAccessCallable().futureCall(request);
-   *   // Do something
-   *   CustomerUserAccess response = future.get();
-   * }
-   * </code></pre>
    */
   public final UnaryCallable<GetCustomerUserAccessRequest, CustomerUserAccess>
       getCustomerUserAccessCallable() {
     return stub.getCustomerUserAccessCallable();
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Updates, removes permission of a user on a given customer. Operation statuses are returned.
    *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (CustomerUserAccessServiceClient customerUserAccessServiceClient = CustomerUserAccessServiceClient.create()) {
-   *   String customerId = "";
-   *   CustomerUserAccessOperation operation = CustomerUserAccessOperation.newBuilder().build();
-   *   MutateCustomerUserAccessResponse response = customerUserAccessServiceClient.mutateCustomerUserAccess(customerId, operation);
-   * }
-   * </code></pre>
-   *
-   * @param customerId Required. The ID of the customer being modified.
+   * @param customer_id Required. The ID of the customer being modified.
    * @param operation Required. The operation to perform on the customer
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
@@ -268,23 +207,9 @@ public class CustomerUserAccessServiceClient implements BackgroundResource {
     return mutateCustomerUserAccess(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Updates, removes permission of a user on a given customer. Operation statuses are returned.
-   *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (CustomerUserAccessServiceClient customerUserAccessServiceClient = CustomerUserAccessServiceClient.create()) {
-   *   String customerId = "";
-   *   CustomerUserAccessOperation operation = CustomerUserAccessOperation.newBuilder().build();
-   *   MutateCustomerUserAccessRequest request = MutateCustomerUserAccessRequest.newBuilder()
-   *     .setCustomerId(customerId)
-   *     .setOperation(operation)
-   *     .build();
-   *   MutateCustomerUserAccessResponse response = customerUserAccessServiceClient.mutateCustomerUserAccess(request);
-   * }
-   * </code></pre>
    *
    * @param request The request object containing all of the parameters for the API call.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
@@ -294,25 +219,11 @@ public class CustomerUserAccessServiceClient implements BackgroundResource {
     return mutateCustomerUserAccessCallable().call(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Updates, removes permission of a user on a given customer. Operation statuses are returned.
    *
    * <p>Sample code:
-   *
-   * <pre><code>
-   * try (CustomerUserAccessServiceClient customerUserAccessServiceClient = CustomerUserAccessServiceClient.create()) {
-   *   String customerId = "";
-   *   CustomerUserAccessOperation operation = CustomerUserAccessOperation.newBuilder().build();
-   *   MutateCustomerUserAccessRequest request = MutateCustomerUserAccessRequest.newBuilder()
-   *     .setCustomerId(customerId)
-   *     .setOperation(operation)
-   *     .build();
-   *   ApiFuture&lt;MutateCustomerUserAccessResponse&gt; future = customerUserAccessServiceClient.mutateCustomerUserAccessCallable().futureCall(request);
-   *   // Do something
-   *   MutateCustomerUserAccessResponse response = future.get();
-   * }
-   * </code></pre>
    */
   public final UnaryCallable<MutateCustomerUserAccessRequest, MutateCustomerUserAccessResponse>
       mutateCustomerUserAccessCallable() {

@@ -37,19 +37,21 @@ public final class ChangeStatusServiceProto {
       "\031google/api/resource.proto\"^\n\026GetChangeS" +
       "tatusRequest\022D\n\rresource_name\030\001 \001(\tB-\340A\002" +
       "\372A\'\n%googleads.googleapis.com/ChangeStat" +
-      "us2\371\001\n\023ChangeStatusService\022\304\001\n\017GetChange" +
+      "us2\243\002\n\023ChangeStatusService\022\304\001\n\017GetChange" +
       "Status\0228.google.ads.googleads.v6.service" +
       "s.GetChangeStatusRequest\032/.google.ads.go" +
       "ogleads.v6.resources.ChangeStatus\"F\202\323\344\223\002" +
       "0\022./v6/{resource_name=customers/*/change" +
-      "Status/*}\332A\rresource_name\032\033\312A\030googleads." +
-      "googleapis.comB\377\001\n$com.google.ads.google" +
-      "ads.v6.servicesB\030ChangeStatusServiceProt" +
-      "oP\001ZHgoogle.golang.org/genproto/googleap" +
-      "is/ads/googleads/v6/services;services\242\002\003" +
-      "GAA\252\002 Google.Ads.GoogleAds.V6.Services\312\002" +
-      " Google\\Ads\\GoogleAds\\V6\\Services\352\002$Goog" +
-      "le::Ads::GoogleAds::V6::Servicesb\006proto3"
+      "Status/*}\332A\rresource_name\032E\312A\030googleads." +
+      "googleapis.com\322A\'https://www.googleapis." +
+      "com/auth/adwordsB\377\001\n$com.google.ads.goog" +
+      "leads.v6.servicesB\030ChangeStatusServicePr" +
+      "otoP\001ZHgoogle.golang.org/genproto/google" +
+      "apis/ads/googleads/v6/services;services\242" +
+      "\002\003GAA\252\002 Google.Ads.GoogleAds.V6.Services" +
+      "\312\002 Google\\Ads\\GoogleAds\\V6\\Services\352\002$Go" +
+      "ogle::Ads::GoogleAds::V6::Servicesb\006prot" +
+      "o3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -72,6 +74,7 @@ public final class ChangeStatusServiceProto {
     registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);
     registry.add(com.google.api.AnnotationsProto.http);
     registry.add(com.google.api.ClientProto.methodSignature);
+    registry.add(com.google.api.ClientProto.oauthScopes);
     registry.add(com.google.api.ResourceProto.resourceReference);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);

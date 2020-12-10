@@ -5,7 +5,7 @@
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
- *     https://www.apache.org/licenses/LICENSE-2.0
+ *      https://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -13,9 +13,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
 package com.google.ads.googleads.v6.services;
 
 import com.google.ads.googleads.v6.resources.Recommendation;
+import com.google.ads.googleads.v6.resources.RecommendationName;
 import com.google.ads.googleads.v6.services.stub.RecommendationServiceStub;
 import com.google.ads.googleads.v6.services.stub.RecommendationServiceStubSettings;
 import com.google.api.core.BetaApi;
@@ -26,23 +28,14 @@ import java.util.List;
 import java.util.concurrent.TimeUnit;
 import javax.annotation.Generated;
 
-// AUTO-GENERATED DOCUMENTATION AND SERVICE
+// AUTO-GENERATED DOCUMENTATION AND CLASS.
 /**
  * Service Description: Service to manage recommendations.
  *
  * <p>This class provides the ability to make remote calls to the backing service through method
  * calls that map to API methods. Sample code to get started:
  *
- * <pre>
- * <code>
- * try (RecommendationServiceClient recommendationServiceClient = RecommendationServiceClient.create()) {
- *   RecommendationName resourceName = RecommendationName.of("[CUSTOMER_ID]", "[RECOMMENDATION_ID]");
- *   Recommendation response = recommendationServiceClient.getRecommendation(resourceName);
- * }
- * </code>
- * </pre>
- *
- * <p>Note: close() needs to be called on the recommendationServiceClient object to clean up
+ * <p>Note: close() needs to be called on the RecommendationServiceClient object to clean up
  * resources such as threads. In the example above, try-with-resources is used, which automatically
  * calls close().
  *
@@ -71,30 +64,28 @@ import javax.annotation.Generated;
  *
  * <p>To customize credentials:
  *
- * <pre>
- * <code>
+ * <pre>{@code
  * RecommendationServiceSettings recommendationServiceSettings =
  *     RecommendationServiceSettings.newBuilder()
  *         .setCredentialsProvider(FixedCredentialsProvider.create(myCredentials))
  *         .build();
  * RecommendationServiceClient recommendationServiceClient =
  *     RecommendationServiceClient.create(recommendationServiceSettings);
- * </code>
- * </pre>
+ * }</pre>
  *
- * To customize the endpoint:
+ * <p>To customize the endpoint:
  *
- * <pre>
- * <code>
+ * <pre>{@code
  * RecommendationServiceSettings recommendationServiceSettings =
  *     RecommendationServiceSettings.newBuilder().setEndpoint(myEndpoint).build();
  * RecommendationServiceClient recommendationServiceClient =
  *     RecommendationServiceClient.create(recommendationServiceSettings);
- * </code>
- * </pre>
+ * }</pre>
+ *
+ * <p>Please refer to the GitHub repository's samples for more quickstart code snippets.
  */
-@Generated("by gapic-generator")
 @BetaApi
+@Generated("by gapic-generator")
 public class RecommendationServiceClient implements BackgroundResource {
   private final RecommendationServiceSettings settings;
   private final RecommendationServiceStub stub;
@@ -115,7 +106,7 @@ public class RecommendationServiceClient implements BackgroundResource {
 
   /**
    * Constructs an instance of RecommendationServiceClient, using the given stub for making calls.
-   * This is for advanced usage - prefer to use RecommendationServiceSettings}.
+   * This is for advanced usage - prefer using create(RecommendationServiceSettings).
    */
   @BetaApi("A restructuring of stub classes is planned, so this may break in the future")
   public static final RecommendationServiceClient create(RecommendationServiceStub stub) {
@@ -147,20 +138,11 @@ public class RecommendationServiceClient implements BackgroundResource {
     return stub;
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Returns the requested recommendation in full detail.
    *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (RecommendationServiceClient recommendationServiceClient = RecommendationServiceClient.create()) {
-   *   RecommendationName resourceName = RecommendationName.of("[CUSTOMER_ID]", "[RECOMMENDATION_ID]");
-   *   Recommendation response = recommendationServiceClient.getRecommendation(resourceName);
-   * }
-   * </code></pre>
-   *
-   * @param resourceName Required. The resource name of the recommendation to fetch.
+   * @param resource_name Required. The resource name of the recommendation to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final Recommendation getRecommendation(RecommendationName resourceName) {
@@ -171,20 +153,11 @@ public class RecommendationServiceClient implements BackgroundResource {
     return getRecommendation(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Returns the requested recommendation in full detail.
    *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (RecommendationServiceClient recommendationServiceClient = RecommendationServiceClient.create()) {
-   *   RecommendationName resourceName = RecommendationName.of("[CUSTOMER_ID]", "[RECOMMENDATION_ID]");
-   *   Recommendation response = recommendationServiceClient.getRecommendation(resourceName.toString());
-   * }
-   * </code></pre>
-   *
-   * @param resourceName Required. The resource name of the recommendation to fetch.
+   * @param resource_name Required. The resource name of the recommendation to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final Recommendation getRecommendation(String resourceName) {
@@ -193,21 +166,9 @@ public class RecommendationServiceClient implements BackgroundResource {
     return getRecommendation(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Returns the requested recommendation in full detail.
-   *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (RecommendationServiceClient recommendationServiceClient = RecommendationServiceClient.create()) {
-   *   RecommendationName resourceName = RecommendationName.of("[CUSTOMER_ID]", "[RECOMMENDATION_ID]");
-   *   GetRecommendationRequest request = GetRecommendationRequest.newBuilder()
-   *     .setResourceName(resourceName.toString())
-   *     .build();
-   *   Recommendation response = recommendationServiceClient.getRecommendation(request);
-   * }
-   * </code></pre>
    *
    * @param request The request object containing all of the parameters for the API call.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
@@ -216,43 +177,21 @@ public class RecommendationServiceClient implements BackgroundResource {
     return getRecommendationCallable().call(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Returns the requested recommendation in full detail.
    *
    * <p>Sample code:
-   *
-   * <pre><code>
-   * try (RecommendationServiceClient recommendationServiceClient = RecommendationServiceClient.create()) {
-   *   RecommendationName resourceName = RecommendationName.of("[CUSTOMER_ID]", "[RECOMMENDATION_ID]");
-   *   GetRecommendationRequest request = GetRecommendationRequest.newBuilder()
-   *     .setResourceName(resourceName.toString())
-   *     .build();
-   *   ApiFuture&lt;Recommendation&gt; future = recommendationServiceClient.getRecommendationCallable().futureCall(request);
-   *   // Do something
-   *   Recommendation response = future.get();
-   * }
-   * </code></pre>
    */
   public final UnaryCallable<GetRecommendationRequest, Recommendation> getRecommendationCallable() {
     return stub.getRecommendationCallable();
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Applies given recommendations with corresponding apply parameters.
    *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (RecommendationServiceClient recommendationServiceClient = RecommendationServiceClient.create()) {
-   *   String customerId = "";
-   *   List&lt;ApplyRecommendationOperation&gt; operations = new ArrayList&lt;&gt;();
-   *   ApplyRecommendationResponse response = recommendationServiceClient.applyRecommendation(customerId, operations);
-   * }
-   * </code></pre>
-   *
-   * @param customerId Required. The ID of the customer with the recommendation.
+   * @param customer_id Required. The ID of the customer with the recommendation.
    * @param operations Required. The list of operations to apply recommendations. If
    *     partial_failure=false all recommendations should be of the same type There is a limit of
    *     100 operations per request.
@@ -268,23 +207,9 @@ public class RecommendationServiceClient implements BackgroundResource {
     return applyRecommendation(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Applies given recommendations with corresponding apply parameters.
-   *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (RecommendationServiceClient recommendationServiceClient = RecommendationServiceClient.create()) {
-   *   String customerId = "";
-   *   List&lt;ApplyRecommendationOperation&gt; operations = new ArrayList&lt;&gt;();
-   *   ApplyRecommendationRequest request = ApplyRecommendationRequest.newBuilder()
-   *     .setCustomerId(customerId)
-   *     .addAllOperations(operations)
-   *     .build();
-   *   ApplyRecommendationResponse response = recommendationServiceClient.applyRecommendation(request);
-   * }
-   * </code></pre>
    *
    * @param request The request object containing all of the parameters for the API call.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
@@ -293,46 +218,22 @@ public class RecommendationServiceClient implements BackgroundResource {
     return applyRecommendationCallable().call(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Applies given recommendations with corresponding apply parameters.
    *
    * <p>Sample code:
-   *
-   * <pre><code>
-   * try (RecommendationServiceClient recommendationServiceClient = RecommendationServiceClient.create()) {
-   *   String customerId = "";
-   *   List&lt;ApplyRecommendationOperation&gt; operations = new ArrayList&lt;&gt;();
-   *   ApplyRecommendationRequest request = ApplyRecommendationRequest.newBuilder()
-   *     .setCustomerId(customerId)
-   *     .addAllOperations(operations)
-   *     .build();
-   *   ApiFuture&lt;ApplyRecommendationResponse&gt; future = recommendationServiceClient.applyRecommendationCallable().futureCall(request);
-   *   // Do something
-   *   ApplyRecommendationResponse response = future.get();
-   * }
-   * </code></pre>
    */
   public final UnaryCallable<ApplyRecommendationRequest, ApplyRecommendationResponse>
       applyRecommendationCallable() {
     return stub.applyRecommendationCallable();
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Dismisses given recommendations.
    *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (RecommendationServiceClient recommendationServiceClient = RecommendationServiceClient.create()) {
-   *   String customerId = "";
-   *   List&lt;DismissRecommendationRequest.DismissRecommendationOperation&gt; operations = new ArrayList&lt;&gt;();
-   *   DismissRecommendationResponse response = recommendationServiceClient.dismissRecommendation(customerId, operations);
-   * }
-   * </code></pre>
-   *
-   * @param customerId Required. The ID of the customer with the recommendation.
+   * @param customer_id Required. The ID of the customer with the recommendation.
    * @param operations Required. The list of operations to dismiss recommendations. If
    *     partial_failure=false all recommendations should be of the same type There is a limit of
    *     100 operations per request.
@@ -349,23 +250,9 @@ public class RecommendationServiceClient implements BackgroundResource {
     return dismissRecommendation(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Dismisses given recommendations.
-   *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (RecommendationServiceClient recommendationServiceClient = RecommendationServiceClient.create()) {
-   *   String customerId = "";
-   *   List&lt;DismissRecommendationRequest.DismissRecommendationOperation&gt; operations = new ArrayList&lt;&gt;();
-   *   DismissRecommendationRequest request = DismissRecommendationRequest.newBuilder()
-   *     .setCustomerId(customerId)
-   *     .addAllOperations(operations)
-   *     .build();
-   *   DismissRecommendationResponse response = recommendationServiceClient.dismissRecommendation(request);
-   * }
-   * </code></pre>
    *
    * @param request The request object containing all of the parameters for the API call.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
@@ -375,25 +262,11 @@ public class RecommendationServiceClient implements BackgroundResource {
     return dismissRecommendationCallable().call(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Dismisses given recommendations.
    *
    * <p>Sample code:
-   *
-   * <pre><code>
-   * try (RecommendationServiceClient recommendationServiceClient = RecommendationServiceClient.create()) {
-   *   String customerId = "";
-   *   List&lt;DismissRecommendationRequest.DismissRecommendationOperation&gt; operations = new ArrayList&lt;&gt;();
-   *   DismissRecommendationRequest request = DismissRecommendationRequest.newBuilder()
-   *     .setCustomerId(customerId)
-   *     .addAllOperations(operations)
-   *     .build();
-   *   ApiFuture&lt;DismissRecommendationResponse&gt; future = recommendationServiceClient.dismissRecommendationCallable().futureCall(request);
-   *   // Do something
-   *   DismissRecommendationResponse response = future.get();
-   * }
-   * </code></pre>
    */
   public final UnaryCallable<DismissRecommendationRequest, DismissRecommendationResponse>
       dismissRecommendationCallable() {

@@ -37,21 +37,22 @@ public final class AdGroupSimulationServiceProto {
       "avior.proto\032\031google/api/resource.proto\"h" +
       "\n\033GetAdGroupSimulationRequest\022I\n\rresourc" +
       "e_name\030\001 \001(\tB2\340A\002\372A,\n*googleads.googleap" +
-      "is.com/AdGroupSimulation2\223\002\n\030AdGroupSimu" +
+      "is.com/AdGroupSimulation2\275\002\n\030AdGroupSimu" +
       "lationService\022\331\001\n\024GetAdGroupSimulation\022=" +
       ".google.ads.googleads.v6.services.GetAdG" +
       "roupSimulationRequest\0324.google.ads.googl" +
       "eads.v6.resources.AdGroupSimulation\"L\202\323\344" +
       "\223\0026\0224/v6/{resource_name=customers/*/adGr" +
-      "oupSimulations/*}\332A\rresource_name\032\033\312A\030go" +
-      "ogleads.googleapis.comB\204\002\n$com.google.ad" +
-      "s.googleads.v6.servicesB\035AdGroupSimulati" +
-      "onServiceProtoP\001ZHgoogle.golang.org/genp" +
-      "roto/googleapis/ads/googleads/v6/service" +
-      "s;services\242\002\003GAA\252\002 Google.Ads.GoogleAds." +
-      "V6.Services\312\002 Google\\Ads\\GoogleAds\\V6\\Se" +
-      "rvices\352\002$Google::Ads::GoogleAds::V6::Ser" +
-      "vicesb\006proto3"
+      "oupSimulations/*}\332A\rresource_name\032E\312A\030go" +
+      "ogleads.googleapis.com\322A\'https://www.goo" +
+      "gleapis.com/auth/adwordsB\204\002\n$com.google." +
+      "ads.googleads.v6.servicesB\035AdGroupSimula" +
+      "tionServiceProtoP\001ZHgoogle.golang.org/ge" +
+      "nproto/googleapis/ads/googleads/v6/servi" +
+      "ces;services\242\002\003GAA\252\002 Google.Ads.GoogleAd" +
+      "s.V6.Services\312\002 Google\\Ads\\GoogleAds\\V6\\" +
+      "Services\352\002$Google::Ads::GoogleAds::V6::S" +
+      "ervicesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -74,6 +75,7 @@ public final class AdGroupSimulationServiceProto {
     registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);
     registry.add(com.google.api.AnnotationsProto.http);
     registry.add(com.google.api.ClientProto.methodSignature);
+    registry.add(com.google.api.ClientProto.oauthScopes);
     registry.add(com.google.api.ResourceProto.resourceReference);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);

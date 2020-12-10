@@ -74,7 +74,7 @@ public final class AdParameterServiceProto {
       "s\022J\n\007results\030\002 \003(\01329.google.ads.googlead" +
       "s.v6.services.MutateAdParameterResult\"0\n" +
       "\027MutateAdParameterResult\022\025\n\rresource_nam" +
-      "e\030\001 \001(\t2\336\003\n\022AdParameterService\022\301\001\n\016GetAd" +
+      "e\030\001 \001(\t2\210\004\n\022AdParameterService\022\301\001\n\016GetAd" +
       "Parameter\0227.google.ads.googleads.v6.serv" +
       "ices.GetAdParameterRequest\032..google.ads." +
       "googleads.v6.resources.AdParameter\"F\202\323\344\223" +
@@ -85,14 +85,15 @@ public final class AdParameterServiceProto {
       "ads.googleads.v6.services.MutateAdParame" +
       "tersResponse\"U\202\323\344\223\0026\"1/v6/customers/{cus" +
       "tomer_id=*}/adParameters:mutate:\001*\332A\026cus" +
-      "tomer_id,operations\032\033\312A\030googleads.google" +
-      "apis.comB\376\001\n$com.google.ads.googleads.v6" +
-      ".servicesB\027AdParameterServiceProtoP\001ZHgo" +
-      "ogle.golang.org/genproto/googleapis/ads/" +
-      "googleads/v6/services;services\242\002\003GAA\252\002 G" +
-      "oogle.Ads.GoogleAds.V6.Services\312\002 Google" +
-      "\\Ads\\GoogleAds\\V6\\Services\352\002$Google::Ads" +
-      "::GoogleAds::V6::Servicesb\006proto3"
+      "tomer_id,operations\032E\312A\030googleads.google" +
+      "apis.com\322A\'https://www.googleapis.com/au" +
+      "th/adwordsB\376\001\n$com.google.ads.googleads." +
+      "v6.servicesB\027AdParameterServiceProtoP\001ZH" +
+      "google.golang.org/genproto/googleapis/ad" +
+      "s/googleads/v6/services;services\242\002\003GAA\252\002" +
+      " Google.Ads.GoogleAds.V6.Services\312\002 Goog" +
+      "le\\Ads\\GoogleAds\\V6\\Services\352\002$Google::A" +
+      "ds::GoogleAds::V6::Servicesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -141,6 +142,7 @@ public final class AdParameterServiceProto {
     registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);
     registry.add(com.google.api.AnnotationsProto.http);
     registry.add(com.google.api.ClientProto.methodSignature);
+    registry.add(com.google.api.ClientProto.oauthScopes);
     registry.add(com.google.api.ResourceProto.resourceReference);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);

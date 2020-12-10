@@ -5,7 +5,7 @@
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
- *     https://www.apache.org/licenses/LICENSE-2.0
+ *      https://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -13,12 +13,12 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
 package com.google.ads.googleads.v6.services.stub;
 
 import static com.google.ads.googleads.v6.services.BatchJobServiceClient.ListBatchJobResultsPagedResponse;
 
 import com.google.ads.googleads.v6.resources.BatchJob;
-import com.google.ads.googleads.v6.resources.BatchJob.BatchJobMetadata;
 import com.google.ads.googleads.v6.services.AddBatchJobOperationsRequest;
 import com.google.ads.googleads.v6.services.AddBatchJobOperationsResponse;
 import com.google.ads.googleads.v6.services.BatchJobResult;
@@ -65,7 +65,7 @@ import java.util.List;
 import javax.annotation.Generated;
 import org.threeten.bp.Duration;
 
-// AUTO-GENERATED DOCUMENTATION AND CLASS
+// AUTO-GENERATED DOCUMENTATION AND CLASS.
 /**
  * Settings class to configure an instance of {@link BatchJobServiceStub}.
  *
@@ -82,26 +82,27 @@ import org.threeten.bp.Duration;
  *
  * <p>For example, to set the total timeout of mutateBatchJob to 30 seconds:
  *
- * <pre>
- * <code>
+ * <pre>{@code
  * BatchJobServiceStubSettings.Builder batchJobServiceSettingsBuilder =
  *     BatchJobServiceStubSettings.newBuilder();
  * batchJobServiceSettingsBuilder
  *     .mutateBatchJobSettings()
  *     .setRetrySettings(
- *         batchJobServiceSettingsBuilder.mutateBatchJobSettings().getRetrySettings().toBuilder()
+ *         batchJobServiceSettingsBuilder
+ *             .mutateBatchJobSettings()
+ *             .getRetrySettings()
+ *             .toBuilder()
  *             .setTotalTimeout(Duration.ofSeconds(30))
  *             .build());
  * BatchJobServiceStubSettings batchJobServiceSettings = batchJobServiceSettingsBuilder.build();
- * </code>
- * </pre>
+ * }</pre>
  */
-@Generated("by gapic-generator")
 @BetaApi
+@Generated("by gapic-generator-java")
 public class BatchJobServiceStubSettings extends StubSettings<BatchJobServiceStubSettings> {
   /** The default scopes of the service. */
   private static final ImmutableList<String> DEFAULT_SERVICE_SCOPES =
-      ImmutableList.<String>builder().build();
+      ImmutableList.<String>builder().add("https://www.googleapis.com/auth/adwords").build();
 
   private final UnaryCallSettings<MutateBatchJobRequest, MutateBatchJobResponse>
       mutateBatchJobSettings;
@@ -110,10 +111,71 @@ public class BatchJobServiceStubSettings extends StubSettings<BatchJobServiceStu
           ListBatchJobResultsRequest, ListBatchJobResultsResponse, ListBatchJobResultsPagedResponse>
       listBatchJobResultsSettings;
   private final UnaryCallSettings<RunBatchJobRequest, Operation> runBatchJobSettings;
-  private final OperationCallSettings<RunBatchJobRequest, Empty, BatchJobMetadata>
+  private final OperationCallSettings<RunBatchJobRequest, Empty, BatchJob.BatchJobMetadata>
       runBatchJobOperationSettings;
   private final UnaryCallSettings<AddBatchJobOperationsRequest, AddBatchJobOperationsResponse>
       addBatchJobOperationsSettings;
+
+  private static final PagedListDescriptor<
+          ListBatchJobResultsRequest, ListBatchJobResultsResponse, BatchJobResult>
+      LIST_BATCH_JOB_RESULTS_PAGE_STR_DESC =
+          new PagedListDescriptor<
+              ListBatchJobResultsRequest, ListBatchJobResultsResponse, BatchJobResult>() {
+            @Override
+            public String emptyToken() {
+              return "";
+            }
+
+            @Override
+            public ListBatchJobResultsRequest injectToken(
+                ListBatchJobResultsRequest payload, String token) {
+              return ListBatchJobResultsRequest.newBuilder(payload).setPageToken(token).build();
+            }
+
+            @Override
+            public ListBatchJobResultsRequest injectPageSize(
+                ListBatchJobResultsRequest payload, int pageSize) {
+              return ListBatchJobResultsRequest.newBuilder(payload).setPageSize(pageSize).build();
+            }
+
+            @Override
+            public Integer extractPageSize(ListBatchJobResultsRequest payload) {
+              return payload.getPageSize();
+            }
+
+            @Override
+            public String extractNextToken(ListBatchJobResultsResponse payload) {
+              return payload.getNextPageToken();
+            }
+
+            @Override
+            public Iterable<BatchJobResult> extractResources(ListBatchJobResultsResponse payload) {
+              return payload.getResultsList() == null
+                  ? ImmutableList.<BatchJobResult>of()
+                  : payload.getResultsList();
+            }
+          };
+
+  private static final PagedListResponseFactory<
+          ListBatchJobResultsRequest, ListBatchJobResultsResponse, ListBatchJobResultsPagedResponse>
+      LIST_BATCH_JOB_RESULTS_PAGE_STR_FACT =
+          new PagedListResponseFactory<
+              ListBatchJobResultsRequest,
+              ListBatchJobResultsResponse,
+              ListBatchJobResultsPagedResponse>() {
+            @Override
+            public ApiFuture<ListBatchJobResultsPagedResponse> getFuturePagedResponse(
+                UnaryCallable<ListBatchJobResultsRequest, ListBatchJobResultsResponse> callable,
+                ListBatchJobResultsRequest request,
+                ApiCallContext context,
+                ApiFuture<ListBatchJobResultsResponse> futureResponse) {
+              PageContext<ListBatchJobResultsRequest, ListBatchJobResultsResponse, BatchJobResult>
+                  pageContext =
+                      PageContext.create(
+                          callable, LIST_BATCH_JOB_RESULTS_PAGE_STR_DESC, request, context);
+              return ListBatchJobResultsPagedResponse.createAsync(pageContext, futureResponse);
+            }
+          };
 
   /** Returns the object with the settings used for calls to mutateBatchJob. */
   public UnaryCallSettings<MutateBatchJobRequest, MutateBatchJobResponse> mutateBatchJobSettings() {
@@ -138,8 +200,7 @@ public class BatchJobServiceStubSettings extends StubSettings<BatchJobServiceStu
   }
 
   /** Returns the object with the settings used for calls to runBatchJob. */
-  @BetaApi("The surface for use by generated code is not stable yet and may change in the future.")
-  public OperationCallSettings<RunBatchJobRequest, Empty, BatchJobMetadata>
+  public OperationCallSettings<RunBatchJobRequest, Empty, BatchJob.BatchJobMetadata>
       runBatchJobOperationSettings() {
     return runBatchJobOperationSettings;
   }
@@ -156,10 +217,10 @@ public class BatchJobServiceStubSettings extends StubSettings<BatchJobServiceStu
         .getTransportName()
         .equals(GrpcTransportChannel.getGrpcTransportName())) {
       return GrpcBatchJobServiceStub.create(this);
-    } else {
-      throw new UnsupportedOperationException(
-          "Transport not supported: " + getTransportChannelProvider().getTransportName());
     }
+    throw new UnsupportedOperationException(
+        String.format(
+            "Transport not supported: %s", getTransportChannelProvider().getTransportName()));
   }
 
   /** Returns a builder for the default ExecutorProvider for this service. */
@@ -227,71 +288,9 @@ public class BatchJobServiceStubSettings extends StubSettings<BatchJobServiceStu
     addBatchJobOperationsSettings = settingsBuilder.addBatchJobOperationsSettings().build();
   }
 
-  private static final PagedListDescriptor<
-          ListBatchJobResultsRequest, ListBatchJobResultsResponse, BatchJobResult>
-      LIST_BATCH_JOB_RESULTS_PAGE_STR_DESC =
-          new PagedListDescriptor<
-              ListBatchJobResultsRequest, ListBatchJobResultsResponse, BatchJobResult>() {
-            @Override
-            public String emptyToken() {
-              return "";
-            }
-
-            @Override
-            public ListBatchJobResultsRequest injectToken(
-                ListBatchJobResultsRequest payload, String token) {
-              return ListBatchJobResultsRequest.newBuilder(payload).setPageToken(token).build();
-            }
-
-            @Override
-            public ListBatchJobResultsRequest injectPageSize(
-                ListBatchJobResultsRequest payload, int pageSize) {
-              return ListBatchJobResultsRequest.newBuilder(payload).setPageSize(pageSize).build();
-            }
-
-            @Override
-            public Integer extractPageSize(ListBatchJobResultsRequest payload) {
-              return payload.getPageSize();
-            }
-
-            @Override
-            public String extractNextToken(ListBatchJobResultsResponse payload) {
-              return payload.getNextPageToken();
-            }
-
-            @Override
-            public Iterable<BatchJobResult> extractResources(ListBatchJobResultsResponse payload) {
-              return payload.getResultsList() != null
-                  ? payload.getResultsList()
-                  : ImmutableList.<BatchJobResult>of();
-            }
-          };
-
-  private static final PagedListResponseFactory<
-          ListBatchJobResultsRequest, ListBatchJobResultsResponse, ListBatchJobResultsPagedResponse>
-      LIST_BATCH_JOB_RESULTS_PAGE_STR_FACT =
-          new PagedListResponseFactory<
-              ListBatchJobResultsRequest,
-              ListBatchJobResultsResponse,
-              ListBatchJobResultsPagedResponse>() {
-            @Override
-            public ApiFuture<ListBatchJobResultsPagedResponse> getFuturePagedResponse(
-                UnaryCallable<ListBatchJobResultsRequest, ListBatchJobResultsResponse> callable,
-                ListBatchJobResultsRequest request,
-                ApiCallContext context,
-                ApiFuture<ListBatchJobResultsResponse> futureResponse) {
-              PageContext<ListBatchJobResultsRequest, ListBatchJobResultsResponse, BatchJobResult>
-                  pageContext =
-                      PageContext.create(
-                          callable, LIST_BATCH_JOB_RESULTS_PAGE_STR_DESC, request, context);
-              return ListBatchJobResultsPagedResponse.createAsync(pageContext, futureResponse);
-            }
-          };
-
   /** Builder for BatchJobServiceStubSettings. */
   public static class Builder extends StubSettings.Builder<BatchJobServiceStubSettings, Builder> {
     private final ImmutableList<UnaryCallSettings.Builder<?, ?>> unaryMethodSettingsBuilders;
-
     private final UnaryCallSettings.Builder<MutateBatchJobRequest, MutateBatchJobResponse>
         mutateBatchJobSettings;
     private final UnaryCallSettings.Builder<GetBatchJobRequest, BatchJob> getBatchJobSettings;
@@ -301,12 +300,12 @@ public class BatchJobServiceStubSettings extends StubSettings<BatchJobServiceStu
             ListBatchJobResultsPagedResponse>
         listBatchJobResultsSettings;
     private final UnaryCallSettings.Builder<RunBatchJobRequest, Operation> runBatchJobSettings;
-    private final OperationCallSettings.Builder<RunBatchJobRequest, Empty, BatchJobMetadata>
+    private final OperationCallSettings.Builder<
+            RunBatchJobRequest, Empty, BatchJob.BatchJobMetadata>
         runBatchJobOperationSettings;
     private final UnaryCallSettings.Builder<
             AddBatchJobOperationsRequest, AddBatchJobOperationsResponse>
         addBatchJobOperationsSettings;
-
     private static final ImmutableMap<String, ImmutableSet<StatusCode.Code>>
         RETRYABLE_CODE_DEFINITIONS;
 
@@ -314,13 +313,10 @@ public class BatchJobServiceStubSettings extends StubSettings<BatchJobServiceStu
       ImmutableMap.Builder<String, ImmutableSet<StatusCode.Code>> definitions =
           ImmutableMap.builder();
       definitions.put(
-          "retry_policy_1_codes",
+          "retry_policy_0_codes",
           ImmutableSet.copyOf(
               Lists.<StatusCode.Code>newArrayList(
                   StatusCode.Code.UNAVAILABLE, StatusCode.Code.DEADLINE_EXCEEDED)));
-      definitions.put("no_retry_codes", ImmutableSet.copyOf(Lists.<StatusCode.Code>newArrayList()));
-      definitions.put(
-          "no_retry_1_codes", ImmutableSet.copyOf(Lists.<StatusCode.Code>newArrayList()));
       RETRYABLE_CODE_DEFINITIONS = definitions.build();
     }
 
@@ -339,38 +335,23 @@ public class BatchJobServiceStubSettings extends StubSettings<BatchJobServiceStu
               .setMaxRpcTimeout(Duration.ofMillis(3600000L))
               .setTotalTimeout(Duration.ofMillis(3600000L))
               .build();
-      definitions.put("retry_policy_1_params", settings);
-      settings = RetrySettings.newBuilder().setRpcTimeoutMultiplier(1.0).build();
-      definitions.put("no_retry_params", settings);
-      settings =
-          RetrySettings.newBuilder()
-              .setInitialRpcTimeout(Duration.ofMillis(3600000L))
-              .setRpcTimeoutMultiplier(1.0)
-              .setMaxRpcTimeout(Duration.ofMillis(3600000L))
-              .setTotalTimeout(Duration.ofMillis(3600000L))
-              .build();
-      definitions.put("no_retry_1_params", settings);
+      definitions.put("retry_policy_0_params", settings);
       RETRY_PARAM_DEFINITIONS = definitions.build();
     }
 
     protected Builder() {
-      this((ClientContext) null);
+      this(((ClientContext) null));
     }
 
     protected Builder(ClientContext clientContext) {
       super(clientContext);
 
       mutateBatchJobSettings = UnaryCallSettings.newUnaryCallSettingsBuilder();
-
       getBatchJobSettings = UnaryCallSettings.newUnaryCallSettingsBuilder();
-
       listBatchJobResultsSettings =
           PagedCallSettings.newBuilder(LIST_BATCH_JOB_RESULTS_PAGE_STR_FACT);
-
       runBatchJobSettings = UnaryCallSettings.newUnaryCallSettingsBuilder();
-
       runBatchJobOperationSettings = OperationCallSettings.newBuilder();
-
       addBatchJobOperationsSettings = UnaryCallSettings.newUnaryCallSettingsBuilder();
 
       unaryMethodSettingsBuilders =
@@ -380,69 +361,7 @@ public class BatchJobServiceStubSettings extends StubSettings<BatchJobServiceStu
               listBatchJobResultsSettings,
               runBatchJobSettings,
               addBatchJobOperationsSettings);
-
       initDefaults(this);
-    }
-
-    private static Builder createDefault() {
-      Builder builder = new Builder((ClientContext) null);
-      builder.setTransportChannelProvider(defaultTransportChannelProvider());
-      builder.setCredentialsProvider(defaultCredentialsProviderBuilder().build());
-      builder.setInternalHeaderProvider(defaultApiClientHeaderProviderBuilder().build());
-      builder.setEndpoint(getDefaultEndpoint());
-      return initDefaults(builder);
-    }
-
-    private static Builder initDefaults(Builder builder) {
-
-      builder
-          .mutateBatchJobSettings()
-          .setRetryableCodes(RETRYABLE_CODE_DEFINITIONS.get("retry_policy_1_codes"))
-          .setRetrySettings(RETRY_PARAM_DEFINITIONS.get("retry_policy_1_params"));
-
-      builder
-          .getBatchJobSettings()
-          .setRetryableCodes(RETRYABLE_CODE_DEFINITIONS.get("retry_policy_1_codes"))
-          .setRetrySettings(RETRY_PARAM_DEFINITIONS.get("retry_policy_1_params"));
-
-      builder
-          .listBatchJobResultsSettings()
-          .setRetryableCodes(RETRYABLE_CODE_DEFINITIONS.get("retry_policy_1_codes"))
-          .setRetrySettings(RETRY_PARAM_DEFINITIONS.get("retry_policy_1_params"));
-
-      builder
-          .runBatchJobSettings()
-          .setRetryableCodes(RETRYABLE_CODE_DEFINITIONS.get("retry_policy_1_codes"))
-          .setRetrySettings(RETRY_PARAM_DEFINITIONS.get("retry_policy_1_params"));
-
-      builder
-          .addBatchJobOperationsSettings()
-          .setRetryableCodes(RETRYABLE_CODE_DEFINITIONS.get("retry_policy_1_codes"))
-          .setRetrySettings(RETRY_PARAM_DEFINITIONS.get("retry_policy_1_params"));
-      builder
-          .runBatchJobOperationSettings()
-          .setInitialCallSettings(
-              UnaryCallSettings.<RunBatchJobRequest, OperationSnapshot>newUnaryCallSettingsBuilder()
-                  .setRetryableCodes(RETRYABLE_CODE_DEFINITIONS.get("retry_policy_1_codes"))
-                  .setRetrySettings(RETRY_PARAM_DEFINITIONS.get("retry_policy_1_params"))
-                  .build())
-          .setResponseTransformer(
-              ProtoOperationTransformers.ResponseTransformer.create(Empty.class))
-          .setMetadataTransformer(
-              ProtoOperationTransformers.MetadataTransformer.create(BatchJobMetadata.class))
-          .setPollingAlgorithm(
-              OperationTimedPollAlgorithm.create(
-                  RetrySettings.newBuilder()
-                      .setInitialRetryDelay(Duration.ofMillis(500L))
-                      .setRetryDelayMultiplier(1.5)
-                      .setMaxRetryDelay(Duration.ofMillis(5000L))
-                      .setInitialRpcTimeout(Duration.ZERO) // ignored
-                      .setRpcTimeoutMultiplier(1.0) // ignored
-                      .setMaxRpcTimeout(Duration.ZERO) // ignored
-                      .setTotalTimeout(Duration.ofMillis(300000L))
-                      .build()));
-
-      return builder;
     }
 
     protected Builder(BatchJobServiceStubSettings settings) {
@@ -464,7 +383,71 @@ public class BatchJobServiceStubSettings extends StubSettings<BatchJobServiceStu
               addBatchJobOperationsSettings);
     }
 
-    // NEXT_MAJOR_VER: remove 'throws Exception'
+    private static Builder createDefault() {
+      Builder builder = new Builder(((ClientContext) null));
+
+      builder.setTransportChannelProvider(defaultTransportChannelProvider());
+      builder.setCredentialsProvider(defaultCredentialsProviderBuilder().build());
+      builder.setInternalHeaderProvider(defaultApiClientHeaderProviderBuilder().build());
+      builder.setEndpoint(getDefaultEndpoint());
+
+      return initDefaults(builder);
+    }
+
+    private static Builder initDefaults(Builder builder) {
+      builder
+          .mutateBatchJobSettings()
+          .setRetryableCodes(RETRYABLE_CODE_DEFINITIONS.get("retry_policy_0_codes"))
+          .setRetrySettings(RETRY_PARAM_DEFINITIONS.get("retry_policy_0_params"));
+
+      builder
+          .getBatchJobSettings()
+          .setRetryableCodes(RETRYABLE_CODE_DEFINITIONS.get("retry_policy_0_codes"))
+          .setRetrySettings(RETRY_PARAM_DEFINITIONS.get("retry_policy_0_params"));
+
+      builder
+          .listBatchJobResultsSettings()
+          .setRetryableCodes(RETRYABLE_CODE_DEFINITIONS.get("retry_policy_0_codes"))
+          .setRetrySettings(RETRY_PARAM_DEFINITIONS.get("retry_policy_0_params"));
+
+      builder
+          .runBatchJobSettings()
+          .setRetryableCodes(RETRYABLE_CODE_DEFINITIONS.get("retry_policy_0_codes"))
+          .setRetrySettings(RETRY_PARAM_DEFINITIONS.get("retry_policy_0_params"));
+
+      builder
+          .addBatchJobOperationsSettings()
+          .setRetryableCodes(RETRYABLE_CODE_DEFINITIONS.get("retry_policy_0_codes"))
+          .setRetrySettings(RETRY_PARAM_DEFINITIONS.get("retry_policy_0_params"));
+
+      builder
+          .runBatchJobOperationSettings()
+          .setInitialCallSettings(
+              UnaryCallSettings.<RunBatchJobRequest, OperationSnapshot>newUnaryCallSettingsBuilder()
+                  .setRetryableCodes(RETRYABLE_CODE_DEFINITIONS.get("retry_policy_0_codes"))
+                  .setRetrySettings(RETRY_PARAM_DEFINITIONS.get("retry_policy_0_params"))
+                  .build())
+          .setResponseTransformer(
+              ProtoOperationTransformers.ResponseTransformer.create(Empty.class))
+          .setMetadataTransformer(
+              ProtoOperationTransformers.MetadataTransformer.create(
+                  BatchJob.BatchJobMetadata.class))
+          .setPollingAlgorithm(
+              OperationTimedPollAlgorithm.create(
+                  RetrySettings.newBuilder()
+                      .setInitialRetryDelay(Duration.ofMillis(5000L))
+                      .setRetryDelayMultiplier(1.5)
+                      .setMaxRetryDelay(Duration.ofMillis(45000L))
+                      .setInitialRpcTimeout(Duration.ZERO)
+                      .setRpcTimeoutMultiplier(1.0)
+                      .setMaxRpcTimeout(Duration.ZERO)
+                      .setTotalTimeout(Duration.ofMillis(300000L))
+                      .build()));
+
+      return builder;
+    }
+
+    // NEXT_MAJOR_VER: remove 'throws Exception'.
     /**
      * Applies the given settings updater function to all of the unary API methods in this service.
      *
@@ -508,7 +491,7 @@ public class BatchJobServiceStubSettings extends StubSettings<BatchJobServiceStu
     /** Returns the builder for the settings used for calls to runBatchJob. */
     @BetaApi(
         "The surface for use by generated code is not stable yet and may change in the future.")
-    public OperationCallSettings.Builder<RunBatchJobRequest, Empty, BatchJobMetadata>
+    public OperationCallSettings.Builder<RunBatchJobRequest, Empty, BatchJob.BatchJobMetadata>
         runBatchJobOperationSettings() {
       return runBatchJobOperationSettings;
     }

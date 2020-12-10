@@ -37,20 +37,21 @@ public final class IncomeRangeViewServiceProto {
       "r.proto\032\031google/api/resource.proto\"d\n\031Ge" +
       "tIncomeRangeViewRequest\022G\n\rresource_name" +
       "\030\001 \001(\tB0\340A\002\372A*\n(googleads.googleapis.com" +
-      "/IncomeRangeView2\211\002\n\026IncomeRangeViewServ" +
+      "/IncomeRangeView2\263\002\n\026IncomeRangeViewServ" +
       "ice\022\321\001\n\022GetIncomeRangeView\022;.google.ads." +
       "googleads.v6.services.GetIncomeRangeView" +
       "Request\0322.google.ads.googleads.v6.resour" +
       "ces.IncomeRangeView\"J\202\323\344\223\0024\0222/v6/{resour" +
       "ce_name=customers/*/incomeRangeViews/*}\332" +
-      "A\rresource_name\032\033\312A\030googleads.googleapis" +
-      ".comB\202\002\n$com.google.ads.googleads.v6.ser" +
-      "vicesB\033IncomeRangeViewServiceProtoP\001ZHgo" +
-      "ogle.golang.org/genproto/googleapis/ads/" +
-      "googleads/v6/services;services\242\002\003GAA\252\002 G" +
-      "oogle.Ads.GoogleAds.V6.Services\312\002 Google" +
-      "\\Ads\\GoogleAds\\V6\\Services\352\002$Google::Ads" +
-      "::GoogleAds::V6::Servicesb\006proto3"
+      "A\rresource_name\032E\312A\030googleads.googleapis" +
+      ".com\322A\'https://www.googleapis.com/auth/a" +
+      "dwordsB\202\002\n$com.google.ads.googleads.v6.s" +
+      "ervicesB\033IncomeRangeViewServiceProtoP\001ZH" +
+      "google.golang.org/genproto/googleapis/ad" +
+      "s/googleads/v6/services;services\242\002\003GAA\252\002" +
+      " Google.Ads.GoogleAds.V6.Services\312\002 Goog" +
+      "le\\Ads\\GoogleAds\\V6\\Services\352\002$Google::A" +
+      "ds::GoogleAds::V6::Servicesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -73,6 +74,7 @@ public final class IncomeRangeViewServiceProto {
     registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);
     registry.add(com.google.api.AnnotationsProto.http);
     registry.add(com.google.api.ClientProto.methodSignature);
+    registry.add(com.google.api.ClientProto.oauthScopes);
     registry.add(com.google.api.ResourceProto.resourceReference);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);

@@ -91,20 +91,21 @@ public final class KeywordPlanIdeaServiceProto {
       "KeywordIdeaResult\022\021\n\004text\030\005 \001(\tH\000\210\001\001\022Z\n\024" +
       "keyword_idea_metrics\030\003 \001(\0132<.google.ads." +
       "googleads.v6.common.KeywordPlanHistorica" +
-      "lMetricsB\007\n\005_text2\213\002\n\026KeywordPlanIdeaSer" +
+      "lMetricsB\007\n\005_text2\265\002\n\026KeywordPlanIdeaSer" +
       "vice\022\323\001\n\024GenerateKeywordIdeas\022=.google.a" +
       "ds.googleads.v6.services.GenerateKeyword" +
       "IdeasRequest\032=.google.ads.googleads.v6.s" +
       "ervices.GenerateKeywordIdeaResponse\"=\202\323\344" +
       "\223\0027\"2/v6/customers/{customer_id=*}:gener" +
-      "ateKeywordIdeas:\001*\032\033\312A\030googleads.googlea" +
-      "pis.comB\202\002\n$com.google.ads.googleads.v6." +
-      "servicesB\033KeywordPlanIdeaServiceProtoP\001Z" +
-      "Hgoogle.golang.org/genproto/googleapis/a" +
-      "ds/googleads/v6/services;services\242\002\003GAA\252" +
-      "\002 Google.Ads.GoogleAds.V6.Services\312\002 Goo" +
-      "gle\\Ads\\GoogleAds\\V6\\Services\352\002$Google::" +
-      "Ads::GoogleAds::V6::Servicesb\006proto3"
+      "ateKeywordIdeas:\001*\032E\312A\030googleads.googlea" +
+      "pis.com\322A\'https://www.googleapis.com/aut" +
+      "h/adwordsB\202\002\n$com.google.ads.googleads.v" +
+      "6.servicesB\033KeywordPlanIdeaServiceProtoP" +
+      "\001ZHgoogle.golang.org/genproto/googleapis" +
+      "/ads/googleads/v6/services;services\242\002\003GA" +
+      "A\252\002 Google.Ads.GoogleAds.V6.Services\312\002 G" +
+      "oogle\\Ads\\GoogleAds\\V6\\Services\352\002$Google" +
+      "::Ads::GoogleAds::V6::Servicesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -160,6 +161,7 @@ public final class KeywordPlanIdeaServiceProto {
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.ClientProto.defaultHost);
     registry.add(com.google.api.AnnotationsProto.http);
+    registry.add(com.google.api.ClientProto.oauthScopes);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.ads.googleads.v6.common.KeywordPlanCommonProto.getDescriptor();

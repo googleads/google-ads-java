@@ -5,7 +5,7 @@
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
- *     https://www.apache.org/licenses/LICENSE-2.0
+ *      https://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -13,6 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
 package com.google.ads.googleads.v6.services;
 
 import com.google.ads.googleads.v6.services.stub.UserDataServiceStub;
@@ -24,7 +25,7 @@ import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 import javax.annotation.Generated;
 
-// AUTO-GENERATED DOCUMENTATION AND SERVICE
+// AUTO-GENERATED DOCUMENTATION AND CLASS.
 /**
  * Service Description: Service to manage user data uploads. Accessible only to customers on the
  * allow-list.
@@ -32,21 +33,7 @@ import javax.annotation.Generated;
  * <p>This class provides the ability to make remote calls to the backing service through method
  * calls that map to API methods. Sample code to get started:
  *
- * <pre>
- * <code>
- * try (UserDataServiceClient userDataServiceClient = UserDataServiceClient.create()) {
- *   String customerId = "";
- *   List&lt;UserDataOperation&gt; operations = new ArrayList&lt;&gt;();
- *   UploadUserDataRequest request = UploadUserDataRequest.newBuilder()
- *     .setCustomerId(customerId)
- *     .addAllOperations(operations)
- *     .build();
- *   UploadUserDataResponse response = userDataServiceClient.uploadUserData(request);
- * }
- * </code>
- * </pre>
- *
- * <p>Note: close() needs to be called on the userDataServiceClient object to clean up resources
+ * <p>Note: close() needs to be called on the UserDataServiceClient object to clean up resources
  * such as threads. In the example above, try-with-resources is used, which automatically calls
  * close().
  *
@@ -75,30 +62,28 @@ import javax.annotation.Generated;
  *
  * <p>To customize credentials:
  *
- * <pre>
- * <code>
+ * <pre>{@code
  * UserDataServiceSettings userDataServiceSettings =
  *     UserDataServiceSettings.newBuilder()
  *         .setCredentialsProvider(FixedCredentialsProvider.create(myCredentials))
  *         .build();
  * UserDataServiceClient userDataServiceClient =
  *     UserDataServiceClient.create(userDataServiceSettings);
- * </code>
- * </pre>
+ * }</pre>
  *
- * To customize the endpoint:
+ * <p>To customize the endpoint:
  *
- * <pre>
- * <code>
+ * <pre>{@code
  * UserDataServiceSettings userDataServiceSettings =
  *     UserDataServiceSettings.newBuilder().setEndpoint(myEndpoint).build();
  * UserDataServiceClient userDataServiceClient =
  *     UserDataServiceClient.create(userDataServiceSettings);
- * </code>
- * </pre>
+ * }</pre>
+ *
+ * <p>Please refer to the GitHub repository's samples for more quickstart code snippets.
  */
-@Generated("by gapic-generator")
 @BetaApi
+@Generated("by gapic-generator")
 public class UserDataServiceClient implements BackgroundResource {
   private final UserDataServiceSettings settings;
   private final UserDataServiceStub stub;
@@ -119,7 +104,7 @@ public class UserDataServiceClient implements BackgroundResource {
 
   /**
    * Constructs an instance of UserDataServiceClient, using the given stub for making calls. This is
-   * for advanced usage - prefer to use UserDataServiceSettings}.
+   * for advanced usage - prefer using create(UserDataServiceSettings).
    */
   @BetaApi("A restructuring of stub classes is planned, so this may break in the future")
   public static final UserDataServiceClient create(UserDataServiceStub stub) {
@@ -151,23 +136,9 @@ public class UserDataServiceClient implements BackgroundResource {
     return stub;
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Uploads the given user data.
-   *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (UserDataServiceClient userDataServiceClient = UserDataServiceClient.create()) {
-   *   String customerId = "";
-   *   List&lt;UserDataOperation&gt; operations = new ArrayList&lt;&gt;();
-   *   UploadUserDataRequest request = UploadUserDataRequest.newBuilder()
-   *     .setCustomerId(customerId)
-   *     .addAllOperations(operations)
-   *     .build();
-   *   UploadUserDataResponse response = userDataServiceClient.uploadUserData(request);
-   * }
-   * </code></pre>
    *
    * @param request The request object containing all of the parameters for the API call.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
@@ -176,25 +147,11 @@ public class UserDataServiceClient implements BackgroundResource {
     return uploadUserDataCallable().call(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Uploads the given user data.
    *
    * <p>Sample code:
-   *
-   * <pre><code>
-   * try (UserDataServiceClient userDataServiceClient = UserDataServiceClient.create()) {
-   *   String customerId = "";
-   *   List&lt;UserDataOperation&gt; operations = new ArrayList&lt;&gt;();
-   *   UploadUserDataRequest request = UploadUserDataRequest.newBuilder()
-   *     .setCustomerId(customerId)
-   *     .addAllOperations(operations)
-   *     .build();
-   *   ApiFuture&lt;UploadUserDataResponse&gt; future = userDataServiceClient.uploadUserDataCallable().futureCall(request);
-   *   // Do something
-   *   UploadUserDataResponse response = future.get();
-   * }
-   * </code></pre>
    */
   public final UnaryCallable<UploadUserDataRequest, UploadUserDataResponse>
       uploadUserDataCallable() {

@@ -5,7 +5,7 @@
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
- *     https://www.apache.org/licenses/LICENSE-2.0
+ *      https://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -13,6 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
 package com.google.ads.googleads.v6.services.stub;
 
 import static com.google.ads.googleads.v6.services.CampaignDraftServiceClient.ListCampaignDraftAsyncErrorsPagedResponse;
@@ -62,7 +63,7 @@ import java.util.List;
 import javax.annotation.Generated;
 import org.threeten.bp.Duration;
 
-// AUTO-GENERATED DOCUMENTATION AND CLASS
+// AUTO-GENERATED DOCUMENTATION AND CLASS.
 /**
  * Settings class to configure an instance of {@link CampaignDraftServiceStub}.
  *
@@ -79,27 +80,29 @@ import org.threeten.bp.Duration;
  *
  * <p>For example, to set the total timeout of getCampaignDraft to 30 seconds:
  *
- * <pre>
- * <code>
+ * <pre>{@code
  * CampaignDraftServiceStubSettings.Builder campaignDraftServiceSettingsBuilder =
  *     CampaignDraftServiceStubSettings.newBuilder();
  * campaignDraftServiceSettingsBuilder
  *     .getCampaignDraftSettings()
  *     .setRetrySettings(
- *         campaignDraftServiceSettingsBuilder.getCampaignDraftSettings().getRetrySettings().toBuilder()
+ *         campaignDraftServiceSettingsBuilder
+ *             .getCampaignDraftSettings()
+ *             .getRetrySettings()
+ *             .toBuilder()
  *             .setTotalTimeout(Duration.ofSeconds(30))
  *             .build());
- * CampaignDraftServiceStubSettings campaignDraftServiceSettings = campaignDraftServiceSettingsBuilder.build();
- * </code>
- * </pre>
+ * CampaignDraftServiceStubSettings campaignDraftServiceSettings =
+ *     campaignDraftServiceSettingsBuilder.build();
+ * }</pre>
  */
-@Generated("by gapic-generator")
 @BetaApi
+@Generated("by gapic-generator-java")
 public class CampaignDraftServiceStubSettings
     extends StubSettings<CampaignDraftServiceStubSettings> {
   /** The default scopes of the service. */
   private static final ImmutableList<String> DEFAULT_SERVICE_SCOPES =
-      ImmutableList.<String>builder().build();
+      ImmutableList.<String>builder().add("https://www.googleapis.com/auth/adwords").build();
 
   private final UnaryCallSettings<GetCampaignDraftRequest, CampaignDraft> getCampaignDraftSettings;
   private final UnaryCallSettings<MutateCampaignDraftsRequest, MutateCampaignDraftsResponse>
@@ -113,6 +116,82 @@ public class CampaignDraftServiceStubSettings
           ListCampaignDraftAsyncErrorsResponse,
           ListCampaignDraftAsyncErrorsPagedResponse>
       listCampaignDraftAsyncErrorsSettings;
+
+  private static final PagedListDescriptor<
+          ListCampaignDraftAsyncErrorsRequest, ListCampaignDraftAsyncErrorsResponse, Status>
+      LIST_CAMPAIGN_DRAFT_ASYNC_ERRORS_PAGE_STR_DESC =
+          new PagedListDescriptor<
+              ListCampaignDraftAsyncErrorsRequest, ListCampaignDraftAsyncErrorsResponse, Status>() {
+            @Override
+            public String emptyToken() {
+              return "";
+            }
+
+            @Override
+            public ListCampaignDraftAsyncErrorsRequest injectToken(
+                ListCampaignDraftAsyncErrorsRequest payload, String token) {
+              return ListCampaignDraftAsyncErrorsRequest.newBuilder(payload)
+                  .setPageToken(token)
+                  .build();
+            }
+
+            @Override
+            public ListCampaignDraftAsyncErrorsRequest injectPageSize(
+                ListCampaignDraftAsyncErrorsRequest payload, int pageSize) {
+              return ListCampaignDraftAsyncErrorsRequest.newBuilder(payload)
+                  .setPageSize(pageSize)
+                  .build();
+            }
+
+            @Override
+            public Integer extractPageSize(ListCampaignDraftAsyncErrorsRequest payload) {
+              return payload.getPageSize();
+            }
+
+            @Override
+            public String extractNextToken(ListCampaignDraftAsyncErrorsResponse payload) {
+              return payload.getNextPageToken();
+            }
+
+            @Override
+            public Iterable<Status> extractResources(ListCampaignDraftAsyncErrorsResponse payload) {
+              return payload.getErrorsList() == null
+                  ? ImmutableList.<Status>of()
+                  : payload.getErrorsList();
+            }
+          };
+
+  private static final PagedListResponseFactory<
+          ListCampaignDraftAsyncErrorsRequest,
+          ListCampaignDraftAsyncErrorsResponse,
+          ListCampaignDraftAsyncErrorsPagedResponse>
+      LIST_CAMPAIGN_DRAFT_ASYNC_ERRORS_PAGE_STR_FACT =
+          new PagedListResponseFactory<
+              ListCampaignDraftAsyncErrorsRequest,
+              ListCampaignDraftAsyncErrorsResponse,
+              ListCampaignDraftAsyncErrorsPagedResponse>() {
+            @Override
+            public ApiFuture<ListCampaignDraftAsyncErrorsPagedResponse> getFuturePagedResponse(
+                UnaryCallable<
+                        ListCampaignDraftAsyncErrorsRequest, ListCampaignDraftAsyncErrorsResponse>
+                    callable,
+                ListCampaignDraftAsyncErrorsRequest request,
+                ApiCallContext context,
+                ApiFuture<ListCampaignDraftAsyncErrorsResponse> futureResponse) {
+              PageContext<
+                      ListCampaignDraftAsyncErrorsRequest,
+                      ListCampaignDraftAsyncErrorsResponse,
+                      Status>
+                  pageContext =
+                      PageContext.create(
+                          callable,
+                          LIST_CAMPAIGN_DRAFT_ASYNC_ERRORS_PAGE_STR_DESC,
+                          request,
+                          context);
+              return ListCampaignDraftAsyncErrorsPagedResponse.createAsync(
+                  pageContext, futureResponse);
+            }
+          };
 
   /** Returns the object with the settings used for calls to getCampaignDraft. */
   public UnaryCallSettings<GetCampaignDraftRequest, CampaignDraft> getCampaignDraftSettings() {
@@ -131,7 +210,6 @@ public class CampaignDraftServiceStubSettings
   }
 
   /** Returns the object with the settings used for calls to promoteCampaignDraft. */
-  @BetaApi("The surface for use by generated code is not stable yet and may change in the future.")
   public OperationCallSettings<PromoteCampaignDraftRequest, Empty, Empty>
       promoteCampaignDraftOperationSettings() {
     return promoteCampaignDraftOperationSettings;
@@ -152,10 +230,10 @@ public class CampaignDraftServiceStubSettings
         .getTransportName()
         .equals(GrpcTransportChannel.getGrpcTransportName())) {
       return GrpcCampaignDraftServiceStub.create(this);
-    } else {
-      throw new UnsupportedOperationException(
-          "Transport not supported: " + getTransportChannelProvider().getTransportName());
     }
+    throw new UnsupportedOperationException(
+        String.format(
+            "Transport not supported: %s", getTransportChannelProvider().getTransportName()));
   }
 
   /** Returns a builder for the default ExecutorProvider for this service. */
@@ -224,87 +302,10 @@ public class CampaignDraftServiceStubSettings
         settingsBuilder.listCampaignDraftAsyncErrorsSettings().build();
   }
 
-  private static final PagedListDescriptor<
-          ListCampaignDraftAsyncErrorsRequest, ListCampaignDraftAsyncErrorsResponse, Status>
-      LIST_CAMPAIGN_DRAFT_ASYNC_ERRORS_PAGE_STR_DESC =
-          new PagedListDescriptor<
-              ListCampaignDraftAsyncErrorsRequest, ListCampaignDraftAsyncErrorsResponse, Status>() {
-            @Override
-            public String emptyToken() {
-              return "";
-            }
-
-            @Override
-            public ListCampaignDraftAsyncErrorsRequest injectToken(
-                ListCampaignDraftAsyncErrorsRequest payload, String token) {
-              return ListCampaignDraftAsyncErrorsRequest.newBuilder(payload)
-                  .setPageToken(token)
-                  .build();
-            }
-
-            @Override
-            public ListCampaignDraftAsyncErrorsRequest injectPageSize(
-                ListCampaignDraftAsyncErrorsRequest payload, int pageSize) {
-              return ListCampaignDraftAsyncErrorsRequest.newBuilder(payload)
-                  .setPageSize(pageSize)
-                  .build();
-            }
-
-            @Override
-            public Integer extractPageSize(ListCampaignDraftAsyncErrorsRequest payload) {
-              return payload.getPageSize();
-            }
-
-            @Override
-            public String extractNextToken(ListCampaignDraftAsyncErrorsResponse payload) {
-              return payload.getNextPageToken();
-            }
-
-            @Override
-            public Iterable<Status> extractResources(ListCampaignDraftAsyncErrorsResponse payload) {
-              return payload.getErrorsList() != null
-                  ? payload.getErrorsList()
-                  : ImmutableList.<Status>of();
-            }
-          };
-
-  private static final PagedListResponseFactory<
-          ListCampaignDraftAsyncErrorsRequest,
-          ListCampaignDraftAsyncErrorsResponse,
-          ListCampaignDraftAsyncErrorsPagedResponse>
-      LIST_CAMPAIGN_DRAFT_ASYNC_ERRORS_PAGE_STR_FACT =
-          new PagedListResponseFactory<
-              ListCampaignDraftAsyncErrorsRequest,
-              ListCampaignDraftAsyncErrorsResponse,
-              ListCampaignDraftAsyncErrorsPagedResponse>() {
-            @Override
-            public ApiFuture<ListCampaignDraftAsyncErrorsPagedResponse> getFuturePagedResponse(
-                UnaryCallable<
-                        ListCampaignDraftAsyncErrorsRequest, ListCampaignDraftAsyncErrorsResponse>
-                    callable,
-                ListCampaignDraftAsyncErrorsRequest request,
-                ApiCallContext context,
-                ApiFuture<ListCampaignDraftAsyncErrorsResponse> futureResponse) {
-              PageContext<
-                      ListCampaignDraftAsyncErrorsRequest,
-                      ListCampaignDraftAsyncErrorsResponse,
-                      Status>
-                  pageContext =
-                      PageContext.create(
-                          callable,
-                          LIST_CAMPAIGN_DRAFT_ASYNC_ERRORS_PAGE_STR_DESC,
-                          request,
-                          context);
-              return ListCampaignDraftAsyncErrorsPagedResponse.createAsync(
-                  pageContext, futureResponse);
-            }
-          };
-
   /** Builder for CampaignDraftServiceStubSettings. */
   public static class Builder
       extends StubSettings.Builder<CampaignDraftServiceStubSettings, Builder> {
     private final ImmutableList<UnaryCallSettings.Builder<?, ?>> unaryMethodSettingsBuilders;
-
     private final UnaryCallSettings.Builder<GetCampaignDraftRequest, CampaignDraft>
         getCampaignDraftSettings;
     private final UnaryCallSettings.Builder<
@@ -319,7 +320,6 @@ public class CampaignDraftServiceStubSettings
             ListCampaignDraftAsyncErrorsResponse,
             ListCampaignDraftAsyncErrorsPagedResponse>
         listCampaignDraftAsyncErrorsSettings;
-
     private static final ImmutableMap<String, ImmutableSet<StatusCode.Code>>
         RETRYABLE_CODE_DEFINITIONS;
 
@@ -327,13 +327,10 @@ public class CampaignDraftServiceStubSettings
       ImmutableMap.Builder<String, ImmutableSet<StatusCode.Code>> definitions =
           ImmutableMap.builder();
       definitions.put(
-          "retry_policy_1_codes",
+          "retry_policy_0_codes",
           ImmutableSet.copyOf(
               Lists.<StatusCode.Code>newArrayList(
                   StatusCode.Code.UNAVAILABLE, StatusCode.Code.DEADLINE_EXCEEDED)));
-      definitions.put("no_retry_codes", ImmutableSet.copyOf(Lists.<StatusCode.Code>newArrayList()));
-      definitions.put(
-          "no_retry_1_codes", ImmutableSet.copyOf(Lists.<StatusCode.Code>newArrayList()));
       RETRYABLE_CODE_DEFINITIONS = definitions.build();
     }
 
@@ -352,35 +349,21 @@ public class CampaignDraftServiceStubSettings
               .setMaxRpcTimeout(Duration.ofMillis(3600000L))
               .setTotalTimeout(Duration.ofMillis(3600000L))
               .build();
-      definitions.put("retry_policy_1_params", settings);
-      settings = RetrySettings.newBuilder().setRpcTimeoutMultiplier(1.0).build();
-      definitions.put("no_retry_params", settings);
-      settings =
-          RetrySettings.newBuilder()
-              .setInitialRpcTimeout(Duration.ofMillis(3600000L))
-              .setRpcTimeoutMultiplier(1.0)
-              .setMaxRpcTimeout(Duration.ofMillis(3600000L))
-              .setTotalTimeout(Duration.ofMillis(3600000L))
-              .build();
-      definitions.put("no_retry_1_params", settings);
+      definitions.put("retry_policy_0_params", settings);
       RETRY_PARAM_DEFINITIONS = definitions.build();
     }
 
     protected Builder() {
-      this((ClientContext) null);
+      this(((ClientContext) null));
     }
 
     protected Builder(ClientContext clientContext) {
       super(clientContext);
 
       getCampaignDraftSettings = UnaryCallSettings.newUnaryCallSettingsBuilder();
-
       mutateCampaignDraftsSettings = UnaryCallSettings.newUnaryCallSettingsBuilder();
-
       promoteCampaignDraftSettings = UnaryCallSettings.newUnaryCallSettingsBuilder();
-
       promoteCampaignDraftOperationSettings = OperationCallSettings.newBuilder();
-
       listCampaignDraftAsyncErrorsSettings =
           PagedCallSettings.newBuilder(LIST_CAMPAIGN_DRAFT_ASYNC_ERRORS_PAGE_STR_FACT);
 
@@ -390,65 +373,7 @@ public class CampaignDraftServiceStubSettings
               mutateCampaignDraftsSettings,
               promoteCampaignDraftSettings,
               listCampaignDraftAsyncErrorsSettings);
-
       initDefaults(this);
-    }
-
-    private static Builder createDefault() {
-      Builder builder = new Builder((ClientContext) null);
-      builder.setTransportChannelProvider(defaultTransportChannelProvider());
-      builder.setCredentialsProvider(defaultCredentialsProviderBuilder().build());
-      builder.setInternalHeaderProvider(defaultApiClientHeaderProviderBuilder().build());
-      builder.setEndpoint(getDefaultEndpoint());
-      return initDefaults(builder);
-    }
-
-    private static Builder initDefaults(Builder builder) {
-
-      builder
-          .getCampaignDraftSettings()
-          .setRetryableCodes(RETRYABLE_CODE_DEFINITIONS.get("retry_policy_1_codes"))
-          .setRetrySettings(RETRY_PARAM_DEFINITIONS.get("retry_policy_1_params"));
-
-      builder
-          .mutateCampaignDraftsSettings()
-          .setRetryableCodes(RETRYABLE_CODE_DEFINITIONS.get("retry_policy_1_codes"))
-          .setRetrySettings(RETRY_PARAM_DEFINITIONS.get("retry_policy_1_params"));
-
-      builder
-          .promoteCampaignDraftSettings()
-          .setRetryableCodes(RETRYABLE_CODE_DEFINITIONS.get("retry_policy_1_codes"))
-          .setRetrySettings(RETRY_PARAM_DEFINITIONS.get("retry_policy_1_params"));
-
-      builder
-          .listCampaignDraftAsyncErrorsSettings()
-          .setRetryableCodes(RETRYABLE_CODE_DEFINITIONS.get("retry_policy_1_codes"))
-          .setRetrySettings(RETRY_PARAM_DEFINITIONS.get("retry_policy_1_params"));
-      builder
-          .promoteCampaignDraftOperationSettings()
-          .setInitialCallSettings(
-              UnaryCallSettings
-                  .<PromoteCampaignDraftRequest, OperationSnapshot>newUnaryCallSettingsBuilder()
-                  .setRetryableCodes(RETRYABLE_CODE_DEFINITIONS.get("retry_policy_1_codes"))
-                  .setRetrySettings(RETRY_PARAM_DEFINITIONS.get("retry_policy_1_params"))
-                  .build())
-          .setResponseTransformer(
-              ProtoOperationTransformers.ResponseTransformer.create(Empty.class))
-          .setMetadataTransformer(
-              ProtoOperationTransformers.MetadataTransformer.create(Empty.class))
-          .setPollingAlgorithm(
-              OperationTimedPollAlgorithm.create(
-                  RetrySettings.newBuilder()
-                      .setInitialRetryDelay(Duration.ofMillis(500L))
-                      .setRetryDelayMultiplier(1.5)
-                      .setMaxRetryDelay(Duration.ofMillis(5000L))
-                      .setInitialRpcTimeout(Duration.ZERO) // ignored
-                      .setRpcTimeoutMultiplier(1.0) // ignored
-                      .setMaxRpcTimeout(Duration.ZERO) // ignored
-                      .setTotalTimeout(Duration.ofMillis(300000L))
-                      .build()));
-
-      return builder;
     }
 
     protected Builder(CampaignDraftServiceStubSettings settings) {
@@ -470,7 +395,66 @@ public class CampaignDraftServiceStubSettings
               listCampaignDraftAsyncErrorsSettings);
     }
 
-    // NEXT_MAJOR_VER: remove 'throws Exception'
+    private static Builder createDefault() {
+      Builder builder = new Builder(((ClientContext) null));
+
+      builder.setTransportChannelProvider(defaultTransportChannelProvider());
+      builder.setCredentialsProvider(defaultCredentialsProviderBuilder().build());
+      builder.setInternalHeaderProvider(defaultApiClientHeaderProviderBuilder().build());
+      builder.setEndpoint(getDefaultEndpoint());
+
+      return initDefaults(builder);
+    }
+
+    private static Builder initDefaults(Builder builder) {
+      builder
+          .getCampaignDraftSettings()
+          .setRetryableCodes(RETRYABLE_CODE_DEFINITIONS.get("retry_policy_0_codes"))
+          .setRetrySettings(RETRY_PARAM_DEFINITIONS.get("retry_policy_0_params"));
+
+      builder
+          .mutateCampaignDraftsSettings()
+          .setRetryableCodes(RETRYABLE_CODE_DEFINITIONS.get("retry_policy_0_codes"))
+          .setRetrySettings(RETRY_PARAM_DEFINITIONS.get("retry_policy_0_params"));
+
+      builder
+          .promoteCampaignDraftSettings()
+          .setRetryableCodes(RETRYABLE_CODE_DEFINITIONS.get("retry_policy_0_codes"))
+          .setRetrySettings(RETRY_PARAM_DEFINITIONS.get("retry_policy_0_params"));
+
+      builder
+          .listCampaignDraftAsyncErrorsSettings()
+          .setRetryableCodes(RETRYABLE_CODE_DEFINITIONS.get("retry_policy_0_codes"))
+          .setRetrySettings(RETRY_PARAM_DEFINITIONS.get("retry_policy_0_params"));
+
+      builder
+          .promoteCampaignDraftOperationSettings()
+          .setInitialCallSettings(
+              UnaryCallSettings
+                  .<PromoteCampaignDraftRequest, OperationSnapshot>newUnaryCallSettingsBuilder()
+                  .setRetryableCodes(RETRYABLE_CODE_DEFINITIONS.get("retry_policy_0_codes"))
+                  .setRetrySettings(RETRY_PARAM_DEFINITIONS.get("retry_policy_0_params"))
+                  .build())
+          .setResponseTransformer(
+              ProtoOperationTransformers.ResponseTransformer.create(Empty.class))
+          .setMetadataTransformer(
+              ProtoOperationTransformers.MetadataTransformer.create(Empty.class))
+          .setPollingAlgorithm(
+              OperationTimedPollAlgorithm.create(
+                  RetrySettings.newBuilder()
+                      .setInitialRetryDelay(Duration.ofMillis(5000L))
+                      .setRetryDelayMultiplier(1.5)
+                      .setMaxRetryDelay(Duration.ofMillis(45000L))
+                      .setInitialRpcTimeout(Duration.ZERO)
+                      .setRpcTimeoutMultiplier(1.0)
+                      .setMaxRpcTimeout(Duration.ZERO)
+                      .setTotalTimeout(Duration.ofMillis(300000L))
+                      .build()));
+
+      return builder;
+    }
+
+    // NEXT_MAJOR_VER: remove 'throws Exception'.
     /**
      * Applies the given settings updater function to all of the unary API methods in this service.
      *

@@ -77,7 +77,7 @@ public final class KeywordPlanAdGroupServiceProto {
       "tatus\022Q\n\007results\030\002 \003(\0132@.google.ads.goog" +
       "leads.v6.services.MutateKeywordPlanAdGro" +
       "upResult\"7\n\036MutateKeywordPlanAdGroupResu" +
-      "lt\022\025\n\rresource_name\030\001 \001(\t2\235\004\n\031KeywordPla" +
+      "lt\022\025\n\rresource_name\030\001 \001(\t2\307\004\n\031KeywordPla" +
       "nAdGroupService\022\335\001\n\025GetKeywordPlanAdGrou" +
       "p\022>.google.ads.googleads.v6.services.Get" +
       "KeywordPlanAdGroupRequest\0325.google.ads.g" +
@@ -90,15 +90,16 @@ public final class KeywordPlanAdGroupServiceProto {
       ".v6.services.MutateKeywordPlanAdGroupsRe" +
       "sponse\"\\\202\323\344\223\002=\"8/v6/customers/{customer_" +
       "id=*}/keywordPlanAdGroups:mutate:\001*\332A\026cu" +
-      "stomer_id,operations\032\033\312A\030googleads.googl" +
-      "eapis.comB\205\002\n$com.google.ads.googleads.v" +
-      "6.servicesB\036KeywordPlanAdGroupServicePro" +
-      "toP\001ZHgoogle.golang.org/genproto/googlea" +
-      "pis/ads/googleads/v6/services;services\242\002" +
-      "\003GAA\252\002 Google.Ads.GoogleAds.V6.Services\312" +
-      "\002 Google\\Ads\\GoogleAds\\V6\\Services\352\002$Goo" +
-      "gle::Ads::GoogleAds::V6::Servicesb\006proto" +
-      "3"
+      "stomer_id,operations\032E\312A\030googleads.googl" +
+      "eapis.com\322A\'https://www.googleapis.com/a" +
+      "uth/adwordsB\205\002\n$com.google.ads.googleads" +
+      ".v6.servicesB\036KeywordPlanAdGroupServiceP" +
+      "rotoP\001ZHgoogle.golang.org/genproto/googl" +
+      "eapis/ads/googleads/v6/services;services" +
+      "\242\002\003GAA\252\002 Google.Ads.GoogleAds.V6.Service" +
+      "s\312\002 Google\\Ads\\GoogleAds\\V6\\Services\352\002$G" +
+      "oogle::Ads::GoogleAds::V6::Servicesb\006pro" +
+      "to3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -147,6 +148,7 @@ public final class KeywordPlanAdGroupServiceProto {
     registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);
     registry.add(com.google.api.AnnotationsProto.http);
     registry.add(com.google.api.ClientProto.methodSignature);
+    registry.add(com.google.api.ClientProto.oauthScopes);
     registry.add(com.google.api.ResourceProto.resourceReference);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);

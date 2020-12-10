@@ -5,7 +5,7 @@
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
- *     https://www.apache.org/licenses/LICENSE-2.0
+ *      https://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -13,9 +13,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
 package com.google.ads.googleads.v6.services;
 
 import com.google.ads.googleads.v6.resources.CampaignExperiment;
+import com.google.ads.googleads.v6.resources.CampaignExperimentName;
 import com.google.ads.googleads.v6.services.stub.CampaignExperimentServiceStub;
 import com.google.ads.googleads.v6.services.stub.CampaignExperimentServiceStubSettings;
 import com.google.api.core.ApiFunction;
@@ -40,7 +42,7 @@ import java.util.List;
 import java.util.concurrent.TimeUnit;
 import javax.annotation.Generated;
 
-// AUTO-GENERATED DOCUMENTATION AND SERVICE
+// AUTO-GENERATED DOCUMENTATION AND CLASS.
 /**
  * Service Description: CampaignExperimentService manages the life cycle of campaign experiments. It
  * is used to create new experiments from drafts, modify experiment properties, promote changes in
@@ -55,16 +57,7 @@ import javax.annotation.Generated;
  * <p>This class provides the ability to make remote calls to the backing service through method
  * calls that map to API methods. Sample code to get started:
  *
- * <pre>
- * <code>
- * try (CampaignExperimentServiceClient campaignExperimentServiceClient = CampaignExperimentServiceClient.create()) {
- *   CampaignExperimentName resourceName = CampaignExperimentName.of("[CUSTOMER_ID]", "[CAMPAIGN_EXPERIMENT_ID]");
- *   CampaignExperiment response = campaignExperimentServiceClient.getCampaignExperiment(resourceName);
- * }
- * </code>
- * </pre>
- *
- * <p>Note: close() needs to be called on the campaignExperimentServiceClient object to clean up
+ * <p>Note: close() needs to be called on the CampaignExperimentServiceClient object to clean up
  * resources such as threads. In the example above, try-with-resources is used, which automatically
  * calls close().
  *
@@ -93,30 +86,28 @@ import javax.annotation.Generated;
  *
  * <p>To customize credentials:
  *
- * <pre>
- * <code>
+ * <pre>{@code
  * CampaignExperimentServiceSettings campaignExperimentServiceSettings =
  *     CampaignExperimentServiceSettings.newBuilder()
  *         .setCredentialsProvider(FixedCredentialsProvider.create(myCredentials))
  *         .build();
  * CampaignExperimentServiceClient campaignExperimentServiceClient =
  *     CampaignExperimentServiceClient.create(campaignExperimentServiceSettings);
- * </code>
- * </pre>
+ * }</pre>
  *
- * To customize the endpoint:
+ * <p>To customize the endpoint:
  *
- * <pre>
- * <code>
+ * <pre>{@code
  * CampaignExperimentServiceSettings campaignExperimentServiceSettings =
  *     CampaignExperimentServiceSettings.newBuilder().setEndpoint(myEndpoint).build();
  * CampaignExperimentServiceClient campaignExperimentServiceClient =
  *     CampaignExperimentServiceClient.create(campaignExperimentServiceSettings);
- * </code>
- * </pre>
+ * }</pre>
+ *
+ * <p>Please refer to the GitHub repository's samples for more quickstart code snippets.
  */
-@Generated("by gapic-generator")
 @BetaApi
+@Generated("by gapic-generator")
 public class CampaignExperimentServiceClient implements BackgroundResource {
   private final CampaignExperimentServiceSettings settings;
   private final CampaignExperimentServiceStub stub;
@@ -139,7 +130,7 @@ public class CampaignExperimentServiceClient implements BackgroundResource {
 
   /**
    * Constructs an instance of CampaignExperimentServiceClient, using the given stub for making
-   * calls. This is for advanced usage - prefer to use CampaignExperimentServiceSettings}.
+   * calls. This is for advanced usage - prefer using create(CampaignExperimentServiceSettings).
    */
   @BetaApi("A restructuring of stub classes is planned, so this may break in the future")
   public static final CampaignExperimentServiceClient create(CampaignExperimentServiceStub stub) {
@@ -178,26 +169,15 @@ public class CampaignExperimentServiceClient implements BackgroundResource {
    * Returns the OperationsClient that can be used to query the status of a long-running operation
    * returned by another API method call.
    */
-  @BetaApi(
-      "The surface for long-running operations is not stable yet and may change in the future.")
   public final OperationsClient getOperationsClient() {
     return operationsClient;
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Returns the requested campaign experiment in full detail.
    *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (CampaignExperimentServiceClient campaignExperimentServiceClient = CampaignExperimentServiceClient.create()) {
-   *   CampaignExperimentName resourceName = CampaignExperimentName.of("[CUSTOMER_ID]", "[CAMPAIGN_EXPERIMENT_ID]");
-   *   CampaignExperiment response = campaignExperimentServiceClient.getCampaignExperiment(resourceName);
-   * }
-   * </code></pre>
-   *
-   * @param resourceName Required. The resource name of the campaign experiment to fetch.
+   * @param resource_name Required. The resource name of the campaign experiment to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final CampaignExperiment getCampaignExperiment(CampaignExperimentName resourceName) {
@@ -208,20 +188,11 @@ public class CampaignExperimentServiceClient implements BackgroundResource {
     return getCampaignExperiment(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Returns the requested campaign experiment in full detail.
    *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (CampaignExperimentServiceClient campaignExperimentServiceClient = CampaignExperimentServiceClient.create()) {
-   *   CampaignExperimentName resourceName = CampaignExperimentName.of("[CUSTOMER_ID]", "[CAMPAIGN_EXPERIMENT_ID]");
-   *   CampaignExperiment response = campaignExperimentServiceClient.getCampaignExperiment(resourceName.toString());
-   * }
-   * </code></pre>
-   *
-   * @param resourceName Required. The resource name of the campaign experiment to fetch.
+   * @param resource_name Required. The resource name of the campaign experiment to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final CampaignExperiment getCampaignExperiment(String resourceName) {
@@ -230,21 +201,9 @@ public class CampaignExperimentServiceClient implements BackgroundResource {
     return getCampaignExperiment(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Returns the requested campaign experiment in full detail.
-   *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (CampaignExperimentServiceClient campaignExperimentServiceClient = CampaignExperimentServiceClient.create()) {
-   *   CampaignExperimentName resourceName = CampaignExperimentName.of("[CUSTOMER_ID]", "[CAMPAIGN_EXPERIMENT_ID]");
-   *   GetCampaignExperimentRequest request = GetCampaignExperimentRequest.newBuilder()
-   *     .setResourceName(resourceName.toString())
-   *     .build();
-   *   CampaignExperiment response = campaignExperimentServiceClient.getCampaignExperiment(request);
-   * }
-   * </code></pre>
    *
    * @param request The request object containing all of the parameters for the API call.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
@@ -253,30 +212,18 @@ public class CampaignExperimentServiceClient implements BackgroundResource {
     return getCampaignExperimentCallable().call(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Returns the requested campaign experiment in full detail.
    *
    * <p>Sample code:
-   *
-   * <pre><code>
-   * try (CampaignExperimentServiceClient campaignExperimentServiceClient = CampaignExperimentServiceClient.create()) {
-   *   CampaignExperimentName resourceName = CampaignExperimentName.of("[CUSTOMER_ID]", "[CAMPAIGN_EXPERIMENT_ID]");
-   *   GetCampaignExperimentRequest request = GetCampaignExperimentRequest.newBuilder()
-   *     .setResourceName(resourceName.toString())
-   *     .build();
-   *   ApiFuture&lt;CampaignExperiment&gt; future = campaignExperimentServiceClient.getCampaignExperimentCallable().futureCall(request);
-   *   // Do something
-   *   CampaignExperiment response = future.get();
-   * }
-   * </code></pre>
    */
   public final UnaryCallable<GetCampaignExperimentRequest, CampaignExperiment>
       getCampaignExperimentCallable() {
     return stub.getCampaignExperimentCallable();
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Creates a campaign experiment based on a campaign draft. The draft campaign will be forked into
    * a real campaign (called the experiment campaign) that will begin serving ads if successfully
@@ -288,22 +235,10 @@ public class CampaignExperimentServiceClient implements BackgroundResource {
    * operation's metadata will be a StringValue containing the resource name of the created campaign
    * experiment.
    *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (CampaignExperimentServiceClient campaignExperimentServiceClient = CampaignExperimentServiceClient.create()) {
-   *   String customerId = "";
-   *   CampaignExperiment campaignExperiment = CampaignExperiment.newBuilder().build();
-   *   campaignExperimentServiceClient.createCampaignExperimentAsync(customerId, campaignExperiment).get();
-   * }
-   * </code></pre>
-   *
-   * @param customerId Required. The ID of the customer whose campaign experiment is being created.
-   * @param campaignExperiment Required. The campaign experiment to be created.
+   * @param customer_id Required. The ID of the customer whose campaign experiment is being created.
+   * @param campaign_experiment Required. The campaign experiment to be created.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
-  @BetaApi(
-      "The surface for long-running operations is not stable yet and may change in the future.")
   public final OperationFuture<Empty, CreateCampaignExperimentMetadata>
       createCampaignExperimentAsync(String customerId, CampaignExperiment campaignExperiment) {
     CreateCampaignExperimentRequest request =
@@ -314,7 +249,7 @@ public class CampaignExperimentServiceClient implements BackgroundResource {
     return createCampaignExperimentAsync(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Creates a campaign experiment based on a campaign draft. The draft campaign will be forked into
    * a real campaign (called the experiment campaign) that will begin serving ads if successfully
@@ -326,31 +261,15 @@ public class CampaignExperimentServiceClient implements BackgroundResource {
    * operation's metadata will be a StringValue containing the resource name of the created campaign
    * experiment.
    *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (CampaignExperimentServiceClient campaignExperimentServiceClient = CampaignExperimentServiceClient.create()) {
-   *   String customerId = "";
-   *   CampaignExperiment campaignExperiment = CampaignExperiment.newBuilder().build();
-   *   CreateCampaignExperimentRequest request = CreateCampaignExperimentRequest.newBuilder()
-   *     .setCustomerId(customerId)
-   *     .setCampaignExperiment(campaignExperiment)
-   *     .build();
-   *   campaignExperimentServiceClient.createCampaignExperimentAsync(request).get();
-   * }
-   * </code></pre>
-   *
    * @param request The request object containing all of the parameters for the API call.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
-  @BetaApi(
-      "The surface for long-running operations is not stable yet and may change in the future.")
   public final OperationFuture<Empty, CreateCampaignExperimentMetadata>
       createCampaignExperimentAsync(CreateCampaignExperimentRequest request) {
     return createCampaignExperimentOperationCallable().futureCall(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Creates a campaign experiment based on a campaign draft. The draft campaign will be forked into
    * a real campaign (called the experiment campaign) that will begin serving ads if successfully
@@ -363,29 +282,14 @@ public class CampaignExperimentServiceClient implements BackgroundResource {
    * experiment.
    *
    * <p>Sample code:
-   *
-   * <pre><code>
-   * try (CampaignExperimentServiceClient campaignExperimentServiceClient = CampaignExperimentServiceClient.create()) {
-   *   String customerId = "";
-   *   CampaignExperiment campaignExperiment = CampaignExperiment.newBuilder().build();
-   *   CreateCampaignExperimentRequest request = CreateCampaignExperimentRequest.newBuilder()
-   *     .setCustomerId(customerId)
-   *     .setCampaignExperiment(campaignExperiment)
-   *     .build();
-   *   OperationFuture&lt;Empty, CreateCampaignExperimentMetadata&gt; future = campaignExperimentServiceClient.createCampaignExperimentOperationCallable().futureCall(request);
-   *   // Do something
-   *   future.get();
-   * }
-   * </code></pre>
    */
-  @BetaApi("The surface for use by generated code is not stable yet and may change in the future.")
   public final OperationCallable<
           CreateCampaignExperimentRequest, Empty, CreateCampaignExperimentMetadata>
       createCampaignExperimentOperationCallable() {
     return stub.createCampaignExperimentOperationCallable();
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Creates a campaign experiment based on a campaign draft. The draft campaign will be forked into
    * a real campaign (called the experiment campaign) that will begin serving ads if successfully
@@ -398,41 +302,17 @@ public class CampaignExperimentServiceClient implements BackgroundResource {
    * experiment.
    *
    * <p>Sample code:
-   *
-   * <pre><code>
-   * try (CampaignExperimentServiceClient campaignExperimentServiceClient = CampaignExperimentServiceClient.create()) {
-   *   String customerId = "";
-   *   CampaignExperiment campaignExperiment = CampaignExperiment.newBuilder().build();
-   *   CreateCampaignExperimentRequest request = CreateCampaignExperimentRequest.newBuilder()
-   *     .setCustomerId(customerId)
-   *     .setCampaignExperiment(campaignExperiment)
-   *     .build();
-   *   ApiFuture&lt;Operation&gt; future = campaignExperimentServiceClient.createCampaignExperimentCallable().futureCall(request);
-   *   // Do something
-   *   future.get();
-   * }
-   * </code></pre>
    */
   public final UnaryCallable<CreateCampaignExperimentRequest, Operation>
       createCampaignExperimentCallable() {
     return stub.createCampaignExperimentCallable();
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Updates campaign experiments. Operation statuses are returned.
    *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (CampaignExperimentServiceClient campaignExperimentServiceClient = CampaignExperimentServiceClient.create()) {
-   *   String customerId = "";
-   *   List&lt;CampaignExperimentOperation&gt; operations = new ArrayList&lt;&gt;();
-   *   MutateCampaignExperimentsResponse response = campaignExperimentServiceClient.mutateCampaignExperiments(customerId, operations);
-   * }
-   * </code></pre>
-   *
-   * @param customerId Required. The ID of the customer whose campaign experiments are being
+   * @param customer_id Required. The ID of the customer whose campaign experiments are being
    *     modified.
    * @param operations Required. The list of operations to perform on individual campaign
    *     experiments.
@@ -448,23 +328,9 @@ public class CampaignExperimentServiceClient implements BackgroundResource {
     return mutateCampaignExperiments(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Updates campaign experiments. Operation statuses are returned.
-   *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (CampaignExperimentServiceClient campaignExperimentServiceClient = CampaignExperimentServiceClient.create()) {
-   *   String customerId = "";
-   *   List&lt;CampaignExperimentOperation&gt; operations = new ArrayList&lt;&gt;();
-   *   MutateCampaignExperimentsRequest request = MutateCampaignExperimentsRequest.newBuilder()
-   *     .setCustomerId(customerId)
-   *     .addAllOperations(operations)
-   *     .build();
-   *   MutateCampaignExperimentsResponse response = campaignExperimentServiceClient.mutateCampaignExperiments(request);
-   * }
-   * </code></pre>
    *
    * @param request The request object containing all of the parameters for the API call.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
@@ -474,49 +340,25 @@ public class CampaignExperimentServiceClient implements BackgroundResource {
     return mutateCampaignExperimentsCallable().call(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Updates campaign experiments. Operation statuses are returned.
    *
    * <p>Sample code:
-   *
-   * <pre><code>
-   * try (CampaignExperimentServiceClient campaignExperimentServiceClient = CampaignExperimentServiceClient.create()) {
-   *   String customerId = "";
-   *   List&lt;CampaignExperimentOperation&gt; operations = new ArrayList&lt;&gt;();
-   *   MutateCampaignExperimentsRequest request = MutateCampaignExperimentsRequest.newBuilder()
-   *     .setCustomerId(customerId)
-   *     .addAllOperations(operations)
-   *     .build();
-   *   ApiFuture&lt;MutateCampaignExperimentsResponse&gt; future = campaignExperimentServiceClient.mutateCampaignExperimentsCallable().futureCall(request);
-   *   // Do something
-   *   MutateCampaignExperimentsResponse response = future.get();
-   * }
-   * </code></pre>
    */
   public final UnaryCallable<MutateCampaignExperimentsRequest, MutateCampaignExperimentsResponse>
       mutateCampaignExperimentsCallable() {
     return stub.mutateCampaignExperimentsCallable();
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Graduates a campaign experiment to a full campaign. The base and experiment campaigns will
    * start running independently with their own budgets.
    *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (CampaignExperimentServiceClient campaignExperimentServiceClient = CampaignExperimentServiceClient.create()) {
-   *   String campaignExperiment = "";
-   *   String campaignBudget = "";
-   *   GraduateCampaignExperimentResponse response = campaignExperimentServiceClient.graduateCampaignExperiment(campaignExperiment, campaignBudget);
-   * }
-   * </code></pre>
-   *
-   * @param campaignExperiment Required. The resource name of the campaign experiment to graduate.
-   * @param campaignBudget Required. Resource name of the budget to attach to the campaign graduated
-   *     from the experiment.
+   * @param campaign_experiment Required. The resource name of the campaign experiment to graduate.
+   * @param campaign_budget Required. Resource name of the budget to attach to the campaign
+   *     graduated from the experiment.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final GraduateCampaignExperimentResponse graduateCampaignExperiment(
@@ -529,24 +371,10 @@ public class CampaignExperimentServiceClient implements BackgroundResource {
     return graduateCampaignExperiment(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Graduates a campaign experiment to a full campaign. The base and experiment campaigns will
    * start running independently with their own budgets.
-   *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (CampaignExperimentServiceClient campaignExperimentServiceClient = CampaignExperimentServiceClient.create()) {
-   *   String campaignExperiment = "";
-   *   String campaignBudget = "";
-   *   GraduateCampaignExperimentRequest request = GraduateCampaignExperimentRequest.newBuilder()
-   *     .setCampaignExperiment(campaignExperiment)
-   *     .setCampaignBudget(campaignBudget)
-   *     .build();
-   *   GraduateCampaignExperimentResponse response = campaignExperimentServiceClient.graduateCampaignExperiment(request);
-   * }
-   * </code></pre>
    *
    * @param request The request object containing all of the parameters for the API call.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
@@ -556,33 +384,19 @@ public class CampaignExperimentServiceClient implements BackgroundResource {
     return graduateCampaignExperimentCallable().call(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Graduates a campaign experiment to a full campaign. The base and experiment campaigns will
    * start running independently with their own budgets.
    *
    * <p>Sample code:
-   *
-   * <pre><code>
-   * try (CampaignExperimentServiceClient campaignExperimentServiceClient = CampaignExperimentServiceClient.create()) {
-   *   String campaignExperiment = "";
-   *   String campaignBudget = "";
-   *   GraduateCampaignExperimentRequest request = GraduateCampaignExperimentRequest.newBuilder()
-   *     .setCampaignExperiment(campaignExperiment)
-   *     .setCampaignBudget(campaignBudget)
-   *     .build();
-   *   ApiFuture&lt;GraduateCampaignExperimentResponse&gt; future = campaignExperimentServiceClient.graduateCampaignExperimentCallable().futureCall(request);
-   *   // Do something
-   *   GraduateCampaignExperimentResponse response = future.get();
-   * }
-   * </code></pre>
    */
   public final UnaryCallable<GraduateCampaignExperimentRequest, GraduateCampaignExperimentResponse>
       graduateCampaignExperimentCallable() {
     return stub.graduateCampaignExperimentCallable();
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Promotes the changes in a experiment campaign back to the base campaign.
    *
@@ -590,20 +404,9 @@ public class CampaignExperimentServiceClient implements BackgroundResource {
    * long running operation that tracks the promoting of the experiment campaign. If the promoting
    * fails, a list of errors can be retrieved using the ListCampaignExperimentAsyncErrors method.
    *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (CampaignExperimentServiceClient campaignExperimentServiceClient = CampaignExperimentServiceClient.create()) {
-   *   String campaignExperiment = "";
-   *   campaignExperimentServiceClient.promoteCampaignExperimentAsync(campaignExperiment).get();
-   * }
-   * </code></pre>
-   *
-   * @param campaignExperiment Required. The resource name of the campaign experiment to promote.
+   * @param campaign_experiment Required. The resource name of the campaign experiment to promote.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
-  @BetaApi(
-      "The surface for long-running operations is not stable yet and may change in the future.")
   public final OperationFuture<Empty, Empty> promoteCampaignExperimentAsync(
       String campaignExperiment) {
     PromoteCampaignExperimentRequest request =
@@ -613,7 +416,7 @@ public class CampaignExperimentServiceClient implements BackgroundResource {
     return promoteCampaignExperimentAsync(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Promotes the changes in a experiment campaign back to the base campaign.
    *
@@ -621,29 +424,15 @@ public class CampaignExperimentServiceClient implements BackgroundResource {
    * long running operation that tracks the promoting of the experiment campaign. If the promoting
    * fails, a list of errors can be retrieved using the ListCampaignExperimentAsyncErrors method.
    *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (CampaignExperimentServiceClient campaignExperimentServiceClient = CampaignExperimentServiceClient.create()) {
-   *   String campaignExperiment = "";
-   *   PromoteCampaignExperimentRequest request = PromoteCampaignExperimentRequest.newBuilder()
-   *     .setCampaignExperiment(campaignExperiment)
-   *     .build();
-   *   campaignExperimentServiceClient.promoteCampaignExperimentAsync(request).get();
-   * }
-   * </code></pre>
-   *
    * @param request The request object containing all of the parameters for the API call.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
-  @BetaApi(
-      "The surface for long-running operations is not stable yet and may change in the future.")
   public final OperationFuture<Empty, Empty> promoteCampaignExperimentAsync(
       PromoteCampaignExperimentRequest request) {
     return promoteCampaignExperimentOperationCallable().futureCall(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Promotes the changes in a experiment campaign back to the base campaign.
    *
@@ -652,26 +441,13 @@ public class CampaignExperimentServiceClient implements BackgroundResource {
    * fails, a list of errors can be retrieved using the ListCampaignExperimentAsyncErrors method.
    *
    * <p>Sample code:
-   *
-   * <pre><code>
-   * try (CampaignExperimentServiceClient campaignExperimentServiceClient = CampaignExperimentServiceClient.create()) {
-   *   String campaignExperiment = "";
-   *   PromoteCampaignExperimentRequest request = PromoteCampaignExperimentRequest.newBuilder()
-   *     .setCampaignExperiment(campaignExperiment)
-   *     .build();
-   *   OperationFuture&lt;Empty, Empty&gt; future = campaignExperimentServiceClient.promoteCampaignExperimentOperationCallable().futureCall(request);
-   *   // Do something
-   *   future.get();
-   * }
-   * </code></pre>
    */
-  @BetaApi("The surface for use by generated code is not stable yet and may change in the future.")
   public final OperationCallable<PromoteCampaignExperimentRequest, Empty, Empty>
       promoteCampaignExperimentOperationCallable() {
     return stub.promoteCampaignExperimentOperationCallable();
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Promotes the changes in a experiment campaign back to the base campaign.
    *
@@ -680,39 +456,18 @@ public class CampaignExperimentServiceClient implements BackgroundResource {
    * fails, a list of errors can be retrieved using the ListCampaignExperimentAsyncErrors method.
    *
    * <p>Sample code:
-   *
-   * <pre><code>
-   * try (CampaignExperimentServiceClient campaignExperimentServiceClient = CampaignExperimentServiceClient.create()) {
-   *   String campaignExperiment = "";
-   *   PromoteCampaignExperimentRequest request = PromoteCampaignExperimentRequest.newBuilder()
-   *     .setCampaignExperiment(campaignExperiment)
-   *     .build();
-   *   ApiFuture&lt;Operation&gt; future = campaignExperimentServiceClient.promoteCampaignExperimentCallable().futureCall(request);
-   *   // Do something
-   *   future.get();
-   * }
-   * </code></pre>
    */
   public final UnaryCallable<PromoteCampaignExperimentRequest, Operation>
       promoteCampaignExperimentCallable() {
     return stub.promoteCampaignExperimentCallable();
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Immediately ends a campaign experiment, changing the experiment's scheduled end date and
    * without waiting for end of day. End date is updated to be the time of the request.
    *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (CampaignExperimentServiceClient campaignExperimentServiceClient = CampaignExperimentServiceClient.create()) {
-   *   String campaignExperiment = "";
-   *   campaignExperimentServiceClient.endCampaignExperiment(campaignExperiment);
-   * }
-   * </code></pre>
-   *
-   * @param campaignExperiment Required. The resource name of the campaign experiment to end.
+   * @param campaign_experiment Required. The resource name of the campaign experiment to end.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final void endCampaignExperiment(String campaignExperiment) {
@@ -721,22 +476,10 @@ public class CampaignExperimentServiceClient implements BackgroundResource {
     endCampaignExperiment(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Immediately ends a campaign experiment, changing the experiment's scheduled end date and
    * without waiting for end of day. End date is updated to be the time of the request.
-   *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (CampaignExperimentServiceClient campaignExperimentServiceClient = CampaignExperimentServiceClient.create()) {
-   *   String campaignExperiment = "";
-   *   EndCampaignExperimentRequest request = EndCampaignExperimentRequest.newBuilder()
-   *     .setCampaignExperiment(campaignExperiment)
-   *     .build();
-   *   campaignExperimentServiceClient.endCampaignExperiment(request);
-   * }
-   * </code></pre>
    *
    * @param request The request object containing all of the parameters for the API call.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
@@ -745,46 +488,23 @@ public class CampaignExperimentServiceClient implements BackgroundResource {
     endCampaignExperimentCallable().call(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Immediately ends a campaign experiment, changing the experiment's scheduled end date and
    * without waiting for end of day. End date is updated to be the time of the request.
    *
    * <p>Sample code:
-   *
-   * <pre><code>
-   * try (CampaignExperimentServiceClient campaignExperimentServiceClient = CampaignExperimentServiceClient.create()) {
-   *   String campaignExperiment = "";
-   *   EndCampaignExperimentRequest request = EndCampaignExperimentRequest.newBuilder()
-   *     .setCampaignExperiment(campaignExperiment)
-   *     .build();
-   *   ApiFuture&lt;Void&gt; future = campaignExperimentServiceClient.endCampaignExperimentCallable().futureCall(request);
-   *   // Do something
-   *   future.get();
-   * }
-   * </code></pre>
    */
   public final UnaryCallable<EndCampaignExperimentRequest, Empty> endCampaignExperimentCallable() {
     return stub.endCampaignExperimentCallable();
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Returns all errors that occurred during CampaignExperiment create or promote (whichever
    * occurred last). Supports standard list paging.
    *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (CampaignExperimentServiceClient campaignExperimentServiceClient = CampaignExperimentServiceClient.create()) {
-   *   CampaignExperimentName resourceName = CampaignExperimentName.of("[CUSTOMER_ID]", "[CAMPAIGN_EXPERIMENT_ID]");
-   *   for (Status element : campaignExperimentServiceClient.listCampaignExperimentAsyncErrors(resourceName).iterateAll()) {
-   *     // doThingsWith(element);
-   *   }
-   * }
-   * </code></pre>
-   *
-   * @param resourceName Required. The name of the campaign experiment from which to retrieve the
+   * @param resource_name Required. The name of the campaign experiment from which to retrieve the
    *     async errors.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
@@ -797,23 +517,12 @@ public class CampaignExperimentServiceClient implements BackgroundResource {
     return listCampaignExperimentAsyncErrors(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Returns all errors that occurred during CampaignExperiment create or promote (whichever
    * occurred last). Supports standard list paging.
    *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (CampaignExperimentServiceClient campaignExperimentServiceClient = CampaignExperimentServiceClient.create()) {
-   *   CampaignExperimentName resourceName = CampaignExperimentName.of("[CUSTOMER_ID]", "[CAMPAIGN_EXPERIMENT_ID]");
-   *   for (Status element : campaignExperimentServiceClient.listCampaignExperimentAsyncErrors(resourceName.toString()).iterateAll()) {
-   *     // doThingsWith(element);
-   *   }
-   * }
-   * </code></pre>
-   *
-   * @param resourceName Required. The name of the campaign experiment from which to retrieve the
+   * @param resource_name Required. The name of the campaign experiment from which to retrieve the
    *     async errors.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
@@ -824,24 +533,10 @@ public class CampaignExperimentServiceClient implements BackgroundResource {
     return listCampaignExperimentAsyncErrors(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Returns all errors that occurred during CampaignExperiment create or promote (whichever
    * occurred last). Supports standard list paging.
-   *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (CampaignExperimentServiceClient campaignExperimentServiceClient = CampaignExperimentServiceClient.create()) {
-   *   CampaignExperimentName resourceName = CampaignExperimentName.of("[CUSTOMER_ID]", "[CAMPAIGN_EXPERIMENT_ID]");
-   *   ListCampaignExperimentAsyncErrorsRequest request = ListCampaignExperimentAsyncErrorsRequest.newBuilder()
-   *     .setResourceName(resourceName.toString())
-   *     .build();
-   *   for (Status element : campaignExperimentServiceClient.listCampaignExperimentAsyncErrors(request).iterateAll()) {
-   *     // doThingsWith(element);
-   *   }
-   * }
-   * </code></pre>
    *
    * @param request The request object containing all of the parameters for the API call.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
@@ -851,26 +546,12 @@ public class CampaignExperimentServiceClient implements BackgroundResource {
     return listCampaignExperimentAsyncErrorsPagedCallable().call(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Returns all errors that occurred during CampaignExperiment create or promote (whichever
    * occurred last). Supports standard list paging.
    *
    * <p>Sample code:
-   *
-   * <pre><code>
-   * try (CampaignExperimentServiceClient campaignExperimentServiceClient = CampaignExperimentServiceClient.create()) {
-   *   CampaignExperimentName resourceName = CampaignExperimentName.of("[CUSTOMER_ID]", "[CAMPAIGN_EXPERIMENT_ID]");
-   *   ListCampaignExperimentAsyncErrorsRequest request = ListCampaignExperimentAsyncErrorsRequest.newBuilder()
-   *     .setResourceName(resourceName.toString())
-   *     .build();
-   *   ApiFuture&lt;ListCampaignExperimentAsyncErrorsPagedResponse&gt; future = campaignExperimentServiceClient.listCampaignExperimentAsyncErrorsPagedCallable().futureCall(request);
-   *   // Do something
-   *   for (Status element : future.get().iterateAll()) {
-   *     // doThingsWith(element);
-   *   }
-   * }
-   * </code></pre>
    */
   public final UnaryCallable<
           ListCampaignExperimentAsyncErrorsRequest, ListCampaignExperimentAsyncErrorsPagedResponse>
@@ -878,33 +559,12 @@ public class CampaignExperimentServiceClient implements BackgroundResource {
     return stub.listCampaignExperimentAsyncErrorsPagedCallable();
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Returns all errors that occurred during CampaignExperiment create or promote (whichever
    * occurred last). Supports standard list paging.
    *
    * <p>Sample code:
-   *
-   * <pre><code>
-   * try (CampaignExperimentServiceClient campaignExperimentServiceClient = CampaignExperimentServiceClient.create()) {
-   *   CampaignExperimentName resourceName = CampaignExperimentName.of("[CUSTOMER_ID]", "[CAMPAIGN_EXPERIMENT_ID]");
-   *   ListCampaignExperimentAsyncErrorsRequest request = ListCampaignExperimentAsyncErrorsRequest.newBuilder()
-   *     .setResourceName(resourceName.toString())
-   *     .build();
-   *   while (true) {
-   *     ListCampaignExperimentAsyncErrorsResponse response = campaignExperimentServiceClient.listCampaignExperimentAsyncErrorsCallable().call(request);
-   *     for (Status element : response.getErrorsList()) {
-   *       // doThingsWith(element);
-   *     }
-   *     String nextPageToken = response.getNextPageToken();
-   *     if (!Strings.isNullOrEmpty(nextPageToken)) {
-   *       request = request.toBuilder().setPageToken(nextPageToken).build();
-   *     } else {
-   *       break;
-   *     }
-   *   }
-   * }
-   * </code></pre>
    */
   public final UnaryCallable<
           ListCampaignExperimentAsyncErrorsRequest, ListCampaignExperimentAsyncErrorsResponse>

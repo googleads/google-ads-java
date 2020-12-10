@@ -5,7 +5,7 @@
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
- *     https://www.apache.org/licenses/LICENSE-2.0
+ *      https://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -13,6 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
 package com.google.ads.googleads.v6.services;
 
 import static com.google.ads.googleads.v6.services.CampaignExperimentServiceClient.ListCampaignExperimentAsyncErrorsPagedResponse;
@@ -29,6 +30,7 @@ import com.google.api.gax.rpc.ClientContext;
 import com.google.api.gax.rpc.ClientSettings;
 import com.google.api.gax.rpc.OperationCallSettings;
 import com.google.api.gax.rpc.PagedCallSettings;
+import com.google.api.gax.rpc.StubSettings;
 import com.google.api.gax.rpc.TransportChannelProvider;
 import com.google.api.gax.rpc.UnaryCallSettings;
 import com.google.longrunning.Operation;
@@ -37,7 +39,7 @@ import java.io.IOException;
 import java.util.List;
 import javax.annotation.Generated;
 
-// AUTO-GENERATED DOCUMENTATION AND CLASS
+// AUTO-GENERATED DOCUMENTATION AND CLASS.
 /**
  * Settings class to configure an instance of {@link CampaignExperimentServiceClient}.
  *
@@ -54,24 +56,26 @@ import javax.annotation.Generated;
  *
  * <p>For example, to set the total timeout of getCampaignExperiment to 30 seconds:
  *
- * <pre>
- * <code>
+ * <pre>{@code
  * CampaignExperimentServiceSettings.Builder campaignExperimentServiceSettingsBuilder =
  *     CampaignExperimentServiceSettings.newBuilder();
  * campaignExperimentServiceSettingsBuilder
  *     .getCampaignExperimentSettings()
  *     .setRetrySettings(
- *         campaignExperimentServiceSettingsBuilder.getCampaignExperimentSettings().getRetrySettings().toBuilder()
+ *         campaignExperimentServiceSettingsBuilder
+ *             .getCampaignExperimentSettings()
+ *             .getRetrySettings()
+ *             .toBuilder()
  *             .setTotalTimeout(Duration.ofSeconds(30))
  *             .build());
- * CampaignExperimentServiceSettings campaignExperimentServiceSettings = campaignExperimentServiceSettingsBuilder.build();
- * </code>
- * </pre>
+ * CampaignExperimentServiceSettings campaignExperimentServiceSettings =
+ *     campaignExperimentServiceSettingsBuilder.build();
+ * }</pre>
  */
-@Generated("by gapic-generator")
-@BetaApi
+@Generated("by gapic-generator-java")
 public class CampaignExperimentServiceSettings
     extends ClientSettings<CampaignExperimentServiceSettings> {
+
   /** Returns the object with the settings used for calls to getCampaignExperiment. */
   public UnaryCallSettings<GetCampaignExperimentRequest, CampaignExperiment>
       getCampaignExperimentSettings() {
@@ -87,8 +91,6 @@ public class CampaignExperimentServiceSettings
   }
 
   /** Returns the object with the settings used for calls to createCampaignExperiment. */
-  @BetaApi(
-      "The surface for long-running operations is not stable yet and may change in the future.")
   public OperationCallSettings<
           CreateCampaignExperimentRequest, Empty, CreateCampaignExperimentMetadata>
       createCampaignExperimentOperationSettings() {
@@ -118,8 +120,6 @@ public class CampaignExperimentServiceSettings
   }
 
   /** Returns the object with the settings used for calls to promoteCampaignExperiment. */
-  @BetaApi(
-      "The surface for long-running operations is not stable yet and may change in the future.")
   public OperationCallSettings<PromoteCampaignExperimentRequest, Empty, Empty>
       promoteCampaignExperimentOperationSettings() {
     return ((CampaignExperimentServiceStubSettings) getStubSettings())
@@ -203,16 +203,13 @@ public class CampaignExperimentServiceSettings
   /** Builder for CampaignExperimentServiceSettings. */
   public static class Builder
       extends ClientSettings.Builder<CampaignExperimentServiceSettings, Builder> {
+
     protected Builder() throws IOException {
-      this((ClientContext) null);
+      this(((ClientContext) null));
     }
 
     protected Builder(ClientContext clientContext) {
       super(CampaignExperimentServiceStubSettings.newBuilder(clientContext));
-    }
-
-    private static Builder createDefault() {
-      return new Builder(CampaignExperimentServiceStubSettings.newBuilder());
     }
 
     protected Builder(CampaignExperimentServiceSettings settings) {
@@ -223,11 +220,15 @@ public class CampaignExperimentServiceSettings
       super(stubSettings);
     }
 
+    private static Builder createDefault() {
+      return new Builder(CampaignExperimentServiceStubSettings.newBuilder());
+    }
+
     public CampaignExperimentServiceStubSettings.Builder getStubSettingsBuilder() {
       return ((CampaignExperimentServiceStubSettings.Builder) getStubSettings());
     }
 
-    // NEXT_MAJOR_VER: remove 'throws Exception'
+    // NEXT_MAJOR_VER: remove 'throws Exception'.
     /**
      * Applies the given settings updater function to all of the unary API methods in this service.
      *
@@ -253,8 +254,6 @@ public class CampaignExperimentServiceSettings
     }
 
     /** Returns the builder for the settings used for calls to createCampaignExperiment. */
-    @BetaApi(
-        "The surface for long-running operations is not stable yet and may change in the future.")
     public OperationCallSettings.Builder<
             CreateCampaignExperimentRequest, Empty, CreateCampaignExperimentMetadata>
         createCampaignExperimentOperationSettings() {
@@ -282,8 +281,6 @@ public class CampaignExperimentServiceSettings
     }
 
     /** Returns the builder for the settings used for calls to promoteCampaignExperiment. */
-    @BetaApi(
-        "The surface for long-running operations is not stable yet and may change in the future.")
     public OperationCallSettings.Builder<PromoteCampaignExperimentRequest, Empty, Empty>
         promoteCampaignExperimentOperationSettings() {
       return getStubSettingsBuilder().promoteCampaignExperimentOperationSettings();

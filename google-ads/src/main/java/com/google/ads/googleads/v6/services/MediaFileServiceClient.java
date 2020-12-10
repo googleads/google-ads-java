@@ -5,7 +5,7 @@
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
- *     https://www.apache.org/licenses/LICENSE-2.0
+ *      https://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -13,9 +13,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
 package com.google.ads.googleads.v6.services;
 
 import com.google.ads.googleads.v6.resources.MediaFile;
+import com.google.ads.googleads.v6.resources.MediaFileName;
 import com.google.ads.googleads.v6.services.stub.MediaFileServiceStub;
 import com.google.ads.googleads.v6.services.stub.MediaFileServiceStubSettings;
 import com.google.api.core.BetaApi;
@@ -26,23 +28,14 @@ import java.util.List;
 import java.util.concurrent.TimeUnit;
 import javax.annotation.Generated;
 
-// AUTO-GENERATED DOCUMENTATION AND SERVICE
+// AUTO-GENERATED DOCUMENTATION AND CLASS.
 /**
  * Service Description: Service to manage media files.
  *
  * <p>This class provides the ability to make remote calls to the backing service through method
  * calls that map to API methods. Sample code to get started:
  *
- * <pre>
- * <code>
- * try (MediaFileServiceClient mediaFileServiceClient = MediaFileServiceClient.create()) {
- *   MediaFileName resourceName = MediaFileName.of("[CUSTOMER_ID]", "[MEDIA_FILE_ID]");
- *   MediaFile response = mediaFileServiceClient.getMediaFile(resourceName);
- * }
- * </code>
- * </pre>
- *
- * <p>Note: close() needs to be called on the mediaFileServiceClient object to clean up resources
+ * <p>Note: close() needs to be called on the MediaFileServiceClient object to clean up resources
  * such as threads. In the example above, try-with-resources is used, which automatically calls
  * close().
  *
@@ -71,30 +64,28 @@ import javax.annotation.Generated;
  *
  * <p>To customize credentials:
  *
- * <pre>
- * <code>
+ * <pre>{@code
  * MediaFileServiceSettings mediaFileServiceSettings =
  *     MediaFileServiceSettings.newBuilder()
  *         .setCredentialsProvider(FixedCredentialsProvider.create(myCredentials))
  *         .build();
  * MediaFileServiceClient mediaFileServiceClient =
  *     MediaFileServiceClient.create(mediaFileServiceSettings);
- * </code>
- * </pre>
+ * }</pre>
  *
- * To customize the endpoint:
+ * <p>To customize the endpoint:
  *
- * <pre>
- * <code>
+ * <pre>{@code
  * MediaFileServiceSettings mediaFileServiceSettings =
  *     MediaFileServiceSettings.newBuilder().setEndpoint(myEndpoint).build();
  * MediaFileServiceClient mediaFileServiceClient =
  *     MediaFileServiceClient.create(mediaFileServiceSettings);
- * </code>
- * </pre>
+ * }</pre>
+ *
+ * <p>Please refer to the GitHub repository's samples for more quickstart code snippets.
  */
-@Generated("by gapic-generator")
 @BetaApi
+@Generated("by gapic-generator")
 public class MediaFileServiceClient implements BackgroundResource {
   private final MediaFileServiceSettings settings;
   private final MediaFileServiceStub stub;
@@ -115,7 +106,7 @@ public class MediaFileServiceClient implements BackgroundResource {
 
   /**
    * Constructs an instance of MediaFileServiceClient, using the given stub for making calls. This
-   * is for advanced usage - prefer to use MediaFileServiceSettings}.
+   * is for advanced usage - prefer using create(MediaFileServiceSettings).
    */
   @BetaApi("A restructuring of stub classes is planned, so this may break in the future")
   public static final MediaFileServiceClient create(MediaFileServiceStub stub) {
@@ -147,20 +138,11 @@ public class MediaFileServiceClient implements BackgroundResource {
     return stub;
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Returns the requested media file in full detail.
    *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (MediaFileServiceClient mediaFileServiceClient = MediaFileServiceClient.create()) {
-   *   MediaFileName resourceName = MediaFileName.of("[CUSTOMER_ID]", "[MEDIA_FILE_ID]");
-   *   MediaFile response = mediaFileServiceClient.getMediaFile(resourceName);
-   * }
-   * </code></pre>
-   *
-   * @param resourceName Required. The resource name of the media file to fetch.
+   * @param resource_name Required. The resource name of the media file to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final MediaFile getMediaFile(MediaFileName resourceName) {
@@ -171,20 +153,11 @@ public class MediaFileServiceClient implements BackgroundResource {
     return getMediaFile(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Returns the requested media file in full detail.
    *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (MediaFileServiceClient mediaFileServiceClient = MediaFileServiceClient.create()) {
-   *   MediaFileName resourceName = MediaFileName.of("[CUSTOMER_ID]", "[MEDIA_FILE_ID]");
-   *   MediaFile response = mediaFileServiceClient.getMediaFile(resourceName.toString());
-   * }
-   * </code></pre>
-   *
-   * @param resourceName Required. The resource name of the media file to fetch.
+   * @param resource_name Required. The resource name of the media file to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final MediaFile getMediaFile(String resourceName) {
@@ -193,21 +166,9 @@ public class MediaFileServiceClient implements BackgroundResource {
     return getMediaFile(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Returns the requested media file in full detail.
-   *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (MediaFileServiceClient mediaFileServiceClient = MediaFileServiceClient.create()) {
-   *   MediaFileName resourceName = MediaFileName.of("[CUSTOMER_ID]", "[MEDIA_FILE_ID]");
-   *   GetMediaFileRequest request = GetMediaFileRequest.newBuilder()
-   *     .setResourceName(resourceName.toString())
-   *     .build();
-   *   MediaFile response = mediaFileServiceClient.getMediaFile(request);
-   * }
-   * </code></pre>
    *
    * @param request The request object containing all of the parameters for the API call.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
@@ -216,43 +177,21 @@ public class MediaFileServiceClient implements BackgroundResource {
     return getMediaFileCallable().call(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Returns the requested media file in full detail.
    *
    * <p>Sample code:
-   *
-   * <pre><code>
-   * try (MediaFileServiceClient mediaFileServiceClient = MediaFileServiceClient.create()) {
-   *   MediaFileName resourceName = MediaFileName.of("[CUSTOMER_ID]", "[MEDIA_FILE_ID]");
-   *   GetMediaFileRequest request = GetMediaFileRequest.newBuilder()
-   *     .setResourceName(resourceName.toString())
-   *     .build();
-   *   ApiFuture&lt;MediaFile&gt; future = mediaFileServiceClient.getMediaFileCallable().futureCall(request);
-   *   // Do something
-   *   MediaFile response = future.get();
-   * }
-   * </code></pre>
    */
   public final UnaryCallable<GetMediaFileRequest, MediaFile> getMediaFileCallable() {
     return stub.getMediaFileCallable();
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Creates media files. Operation statuses are returned.
    *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (MediaFileServiceClient mediaFileServiceClient = MediaFileServiceClient.create()) {
-   *   String customerId = "";
-   *   List&lt;MediaFileOperation&gt; operations = new ArrayList&lt;&gt;();
-   *   MutateMediaFilesResponse response = mediaFileServiceClient.mutateMediaFiles(customerId, operations);
-   * }
-   * </code></pre>
-   *
-   * @param customerId Required. The ID of the customer whose media files are being modified.
+   * @param customer_id Required. The ID of the customer whose media files are being modified.
    * @param operations Required. The list of operations to perform on individual media file.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
@@ -266,23 +205,9 @@ public class MediaFileServiceClient implements BackgroundResource {
     return mutateMediaFiles(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Creates media files. Operation statuses are returned.
-   *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (MediaFileServiceClient mediaFileServiceClient = MediaFileServiceClient.create()) {
-   *   String customerId = "";
-   *   List&lt;MediaFileOperation&gt; operations = new ArrayList&lt;&gt;();
-   *   MutateMediaFilesRequest request = MutateMediaFilesRequest.newBuilder()
-   *     .setCustomerId(customerId)
-   *     .addAllOperations(operations)
-   *     .build();
-   *   MutateMediaFilesResponse response = mediaFileServiceClient.mutateMediaFiles(request);
-   * }
-   * </code></pre>
    *
    * @param request The request object containing all of the parameters for the API call.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
@@ -291,25 +216,11 @@ public class MediaFileServiceClient implements BackgroundResource {
     return mutateMediaFilesCallable().call(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Creates media files. Operation statuses are returned.
    *
    * <p>Sample code:
-   *
-   * <pre><code>
-   * try (MediaFileServiceClient mediaFileServiceClient = MediaFileServiceClient.create()) {
-   *   String customerId = "";
-   *   List&lt;MediaFileOperation&gt; operations = new ArrayList&lt;&gt;();
-   *   MutateMediaFilesRequest request = MutateMediaFilesRequest.newBuilder()
-   *     .setCustomerId(customerId)
-   *     .addAllOperations(operations)
-   *     .build();
-   *   ApiFuture&lt;MutateMediaFilesResponse&gt; future = mediaFileServiceClient.mutateMediaFilesCallable().futureCall(request);
-   *   // Do something
-   *   MutateMediaFilesResponse response = future.get();
-   * }
-   * </code></pre>
    */
   public final UnaryCallable<MutateMediaFilesRequest, MutateMediaFilesResponse>
       mutateMediaFilesCallable() {

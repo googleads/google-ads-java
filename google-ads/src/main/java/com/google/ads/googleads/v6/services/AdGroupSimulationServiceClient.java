@@ -5,7 +5,7 @@
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
- *     https://www.apache.org/licenses/LICENSE-2.0
+ *      https://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -13,9 +13,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
 package com.google.ads.googleads.v6.services;
 
 import com.google.ads.googleads.v6.resources.AdGroupSimulation;
+import com.google.ads.googleads.v6.resources.AdGroupSimulationName;
 import com.google.ads.googleads.v6.services.stub.AdGroupSimulationServiceStub;
 import com.google.ads.googleads.v6.services.stub.AdGroupSimulationServiceStubSettings;
 import com.google.api.core.BetaApi;
@@ -25,23 +27,14 @@ import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 import javax.annotation.Generated;
 
-// AUTO-GENERATED DOCUMENTATION AND SERVICE
+// AUTO-GENERATED DOCUMENTATION AND CLASS.
 /**
  * Service Description: Service to fetch ad group simulations.
  *
  * <p>This class provides the ability to make remote calls to the backing service through method
  * calls that map to API methods. Sample code to get started:
  *
- * <pre>
- * <code>
- * try (AdGroupSimulationServiceClient adGroupSimulationServiceClient = AdGroupSimulationServiceClient.create()) {
- *   AdGroupSimulationName resourceName = AdGroupSimulationName.of("[CUSTOMER_ID]", "[AD_GROUP_ID]", "[TYPE]", "[MODIFICATION_METHOD]", "[START_DATE]", "[END_DATE]");
- *   AdGroupSimulation response = adGroupSimulationServiceClient.getAdGroupSimulation(resourceName);
- * }
- * </code>
- * </pre>
- *
- * <p>Note: close() needs to be called on the adGroupSimulationServiceClient object to clean up
+ * <p>Note: close() needs to be called on the AdGroupSimulationServiceClient object to clean up
  * resources such as threads. In the example above, try-with-resources is used, which automatically
  * calls close().
  *
@@ -70,30 +63,28 @@ import javax.annotation.Generated;
  *
  * <p>To customize credentials:
  *
- * <pre>
- * <code>
+ * <pre>{@code
  * AdGroupSimulationServiceSettings adGroupSimulationServiceSettings =
  *     AdGroupSimulationServiceSettings.newBuilder()
  *         .setCredentialsProvider(FixedCredentialsProvider.create(myCredentials))
  *         .build();
  * AdGroupSimulationServiceClient adGroupSimulationServiceClient =
  *     AdGroupSimulationServiceClient.create(adGroupSimulationServiceSettings);
- * </code>
- * </pre>
+ * }</pre>
  *
- * To customize the endpoint:
+ * <p>To customize the endpoint:
  *
- * <pre>
- * <code>
+ * <pre>{@code
  * AdGroupSimulationServiceSettings adGroupSimulationServiceSettings =
  *     AdGroupSimulationServiceSettings.newBuilder().setEndpoint(myEndpoint).build();
  * AdGroupSimulationServiceClient adGroupSimulationServiceClient =
  *     AdGroupSimulationServiceClient.create(adGroupSimulationServiceSettings);
- * </code>
- * </pre>
+ * }</pre>
+ *
+ * <p>Please refer to the GitHub repository's samples for more quickstart code snippets.
  */
-@Generated("by gapic-generator")
 @BetaApi
+@Generated("by gapic-generator")
 public class AdGroupSimulationServiceClient implements BackgroundResource {
   private final AdGroupSimulationServiceSettings settings;
   private final AdGroupSimulationServiceStub stub;
@@ -115,7 +106,7 @@ public class AdGroupSimulationServiceClient implements BackgroundResource {
 
   /**
    * Constructs an instance of AdGroupSimulationServiceClient, using the given stub for making
-   * calls. This is for advanced usage - prefer to use AdGroupSimulationServiceSettings}.
+   * calls. This is for advanced usage - prefer using create(AdGroupSimulationServiceSettings).
    */
   @BetaApi("A restructuring of stub classes is planned, so this may break in the future")
   public static final AdGroupSimulationServiceClient create(AdGroupSimulationServiceStub stub) {
@@ -148,20 +139,11 @@ public class AdGroupSimulationServiceClient implements BackgroundResource {
     return stub;
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Returns the requested ad group simulation in full detail.
    *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (AdGroupSimulationServiceClient adGroupSimulationServiceClient = AdGroupSimulationServiceClient.create()) {
-   *   AdGroupSimulationName resourceName = AdGroupSimulationName.of("[CUSTOMER_ID]", "[AD_GROUP_ID]", "[TYPE]", "[MODIFICATION_METHOD]", "[START_DATE]", "[END_DATE]");
-   *   AdGroupSimulation response = adGroupSimulationServiceClient.getAdGroupSimulation(resourceName);
-   * }
-   * </code></pre>
-   *
-   * @param resourceName Required. The resource name of the ad group simulation to fetch.
+   * @param resource_name Required. The resource name of the ad group simulation to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final AdGroupSimulation getAdGroupSimulation(AdGroupSimulationName resourceName) {
@@ -172,20 +154,11 @@ public class AdGroupSimulationServiceClient implements BackgroundResource {
     return getAdGroupSimulation(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Returns the requested ad group simulation in full detail.
    *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (AdGroupSimulationServiceClient adGroupSimulationServiceClient = AdGroupSimulationServiceClient.create()) {
-   *   AdGroupSimulationName resourceName = AdGroupSimulationName.of("[CUSTOMER_ID]", "[AD_GROUP_ID]", "[TYPE]", "[MODIFICATION_METHOD]", "[START_DATE]", "[END_DATE]");
-   *   AdGroupSimulation response = adGroupSimulationServiceClient.getAdGroupSimulation(resourceName.toString());
-   * }
-   * </code></pre>
-   *
-   * @param resourceName Required. The resource name of the ad group simulation to fetch.
+   * @param resource_name Required. The resource name of the ad group simulation to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final AdGroupSimulation getAdGroupSimulation(String resourceName) {
@@ -194,21 +167,9 @@ public class AdGroupSimulationServiceClient implements BackgroundResource {
     return getAdGroupSimulation(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Returns the requested ad group simulation in full detail.
-   *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (AdGroupSimulationServiceClient adGroupSimulationServiceClient = AdGroupSimulationServiceClient.create()) {
-   *   AdGroupSimulationName resourceName = AdGroupSimulationName.of("[CUSTOMER_ID]", "[AD_GROUP_ID]", "[TYPE]", "[MODIFICATION_METHOD]", "[START_DATE]", "[END_DATE]");
-   *   GetAdGroupSimulationRequest request = GetAdGroupSimulationRequest.newBuilder()
-   *     .setResourceName(resourceName.toString())
-   *     .build();
-   *   AdGroupSimulation response = adGroupSimulationServiceClient.getAdGroupSimulation(request);
-   * }
-   * </code></pre>
    *
    * @param request The request object containing all of the parameters for the API call.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
@@ -217,23 +178,11 @@ public class AdGroupSimulationServiceClient implements BackgroundResource {
     return getAdGroupSimulationCallable().call(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Returns the requested ad group simulation in full detail.
    *
    * <p>Sample code:
-   *
-   * <pre><code>
-   * try (AdGroupSimulationServiceClient adGroupSimulationServiceClient = AdGroupSimulationServiceClient.create()) {
-   *   AdGroupSimulationName resourceName = AdGroupSimulationName.of("[CUSTOMER_ID]", "[AD_GROUP_ID]", "[TYPE]", "[MODIFICATION_METHOD]", "[START_DATE]", "[END_DATE]");
-   *   GetAdGroupSimulationRequest request = GetAdGroupSimulationRequest.newBuilder()
-   *     .setResourceName(resourceName.toString())
-   *     .build();
-   *   ApiFuture&lt;AdGroupSimulation&gt; future = adGroupSimulationServiceClient.getAdGroupSimulationCallable().futureCall(request);
-   *   // Do something
-   *   AdGroupSimulation response = future.get();
-   * }
-   * </code></pre>
    */
   public final UnaryCallable<GetAdGroupSimulationRequest, AdGroupSimulation>
       getAdGroupSimulationCallable() {

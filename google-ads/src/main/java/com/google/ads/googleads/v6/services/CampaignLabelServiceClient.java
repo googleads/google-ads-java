@@ -5,7 +5,7 @@
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
- *     https://www.apache.org/licenses/LICENSE-2.0
+ *      https://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -13,9 +13,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
 package com.google.ads.googleads.v6.services;
 
 import com.google.ads.googleads.v6.resources.CampaignLabel;
+import com.google.ads.googleads.v6.resources.CampaignLabelName;
 import com.google.ads.googleads.v6.services.stub.CampaignLabelServiceStub;
 import com.google.ads.googleads.v6.services.stub.CampaignLabelServiceStubSettings;
 import com.google.api.core.BetaApi;
@@ -26,23 +28,14 @@ import java.util.List;
 import java.util.concurrent.TimeUnit;
 import javax.annotation.Generated;
 
-// AUTO-GENERATED DOCUMENTATION AND SERVICE
+// AUTO-GENERATED DOCUMENTATION AND CLASS.
 /**
  * Service Description: Service to manage labels on campaigns.
  *
  * <p>This class provides the ability to make remote calls to the backing service through method
  * calls that map to API methods. Sample code to get started:
  *
- * <pre>
- * <code>
- * try (CampaignLabelServiceClient campaignLabelServiceClient = CampaignLabelServiceClient.create()) {
- *   CampaignLabelName resourceName = CampaignLabelName.of("[CUSTOMER_ID]", "[CAMPAIGN_ID]", "[LABEL_ID]");
- *   CampaignLabel response = campaignLabelServiceClient.getCampaignLabel(resourceName);
- * }
- * </code>
- * </pre>
- *
- * <p>Note: close() needs to be called on the campaignLabelServiceClient object to clean up
+ * <p>Note: close() needs to be called on the CampaignLabelServiceClient object to clean up
  * resources such as threads. In the example above, try-with-resources is used, which automatically
  * calls close().
  *
@@ -71,30 +64,28 @@ import javax.annotation.Generated;
  *
  * <p>To customize credentials:
  *
- * <pre>
- * <code>
+ * <pre>{@code
  * CampaignLabelServiceSettings campaignLabelServiceSettings =
  *     CampaignLabelServiceSettings.newBuilder()
  *         .setCredentialsProvider(FixedCredentialsProvider.create(myCredentials))
  *         .build();
  * CampaignLabelServiceClient campaignLabelServiceClient =
  *     CampaignLabelServiceClient.create(campaignLabelServiceSettings);
- * </code>
- * </pre>
+ * }</pre>
  *
- * To customize the endpoint:
+ * <p>To customize the endpoint:
  *
- * <pre>
- * <code>
+ * <pre>{@code
  * CampaignLabelServiceSettings campaignLabelServiceSettings =
  *     CampaignLabelServiceSettings.newBuilder().setEndpoint(myEndpoint).build();
  * CampaignLabelServiceClient campaignLabelServiceClient =
  *     CampaignLabelServiceClient.create(campaignLabelServiceSettings);
- * </code>
- * </pre>
+ * }</pre>
+ *
+ * <p>Please refer to the GitHub repository's samples for more quickstart code snippets.
  */
-@Generated("by gapic-generator")
 @BetaApi
+@Generated("by gapic-generator")
 public class CampaignLabelServiceClient implements BackgroundResource {
   private final CampaignLabelServiceSettings settings;
   private final CampaignLabelServiceStub stub;
@@ -115,7 +106,7 @@ public class CampaignLabelServiceClient implements BackgroundResource {
 
   /**
    * Constructs an instance of CampaignLabelServiceClient, using the given stub for making calls.
-   * This is for advanced usage - prefer to use CampaignLabelServiceSettings}.
+   * This is for advanced usage - prefer using create(CampaignLabelServiceSettings).
    */
   @BetaApi("A restructuring of stub classes is planned, so this may break in the future")
   public static final CampaignLabelServiceClient create(CampaignLabelServiceStub stub) {
@@ -147,20 +138,11 @@ public class CampaignLabelServiceClient implements BackgroundResource {
     return stub;
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Returns the requested campaign-label relationship in full detail.
    *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (CampaignLabelServiceClient campaignLabelServiceClient = CampaignLabelServiceClient.create()) {
-   *   CampaignLabelName resourceName = CampaignLabelName.of("[CUSTOMER_ID]", "[CAMPAIGN_ID]", "[LABEL_ID]");
-   *   CampaignLabel response = campaignLabelServiceClient.getCampaignLabel(resourceName);
-   * }
-   * </code></pre>
-   *
-   * @param resourceName Required. The resource name of the campaign-label relationship to fetch.
+   * @param resource_name Required. The resource name of the campaign-label relationship to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final CampaignLabel getCampaignLabel(CampaignLabelName resourceName) {
@@ -171,20 +153,11 @@ public class CampaignLabelServiceClient implements BackgroundResource {
     return getCampaignLabel(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Returns the requested campaign-label relationship in full detail.
    *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (CampaignLabelServiceClient campaignLabelServiceClient = CampaignLabelServiceClient.create()) {
-   *   CampaignLabelName resourceName = CampaignLabelName.of("[CUSTOMER_ID]", "[CAMPAIGN_ID]", "[LABEL_ID]");
-   *   CampaignLabel response = campaignLabelServiceClient.getCampaignLabel(resourceName.toString());
-   * }
-   * </code></pre>
-   *
-   * @param resourceName Required. The resource name of the campaign-label relationship to fetch.
+   * @param resource_name Required. The resource name of the campaign-label relationship to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final CampaignLabel getCampaignLabel(String resourceName) {
@@ -193,21 +166,9 @@ public class CampaignLabelServiceClient implements BackgroundResource {
     return getCampaignLabel(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Returns the requested campaign-label relationship in full detail.
-   *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (CampaignLabelServiceClient campaignLabelServiceClient = CampaignLabelServiceClient.create()) {
-   *   CampaignLabelName resourceName = CampaignLabelName.of("[CUSTOMER_ID]", "[CAMPAIGN_ID]", "[LABEL_ID]");
-   *   GetCampaignLabelRequest request = GetCampaignLabelRequest.newBuilder()
-   *     .setResourceName(resourceName.toString())
-   *     .build();
-   *   CampaignLabel response = campaignLabelServiceClient.getCampaignLabel(request);
-   * }
-   * </code></pre>
    *
    * @param request The request object containing all of the parameters for the API call.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
@@ -216,43 +177,21 @@ public class CampaignLabelServiceClient implements BackgroundResource {
     return getCampaignLabelCallable().call(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Returns the requested campaign-label relationship in full detail.
    *
    * <p>Sample code:
-   *
-   * <pre><code>
-   * try (CampaignLabelServiceClient campaignLabelServiceClient = CampaignLabelServiceClient.create()) {
-   *   CampaignLabelName resourceName = CampaignLabelName.of("[CUSTOMER_ID]", "[CAMPAIGN_ID]", "[LABEL_ID]");
-   *   GetCampaignLabelRequest request = GetCampaignLabelRequest.newBuilder()
-   *     .setResourceName(resourceName.toString())
-   *     .build();
-   *   ApiFuture&lt;CampaignLabel&gt; future = campaignLabelServiceClient.getCampaignLabelCallable().futureCall(request);
-   *   // Do something
-   *   CampaignLabel response = future.get();
-   * }
-   * </code></pre>
    */
   public final UnaryCallable<GetCampaignLabelRequest, CampaignLabel> getCampaignLabelCallable() {
     return stub.getCampaignLabelCallable();
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Creates and removes campaign-label relationships. Operation statuses are returned.
    *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (CampaignLabelServiceClient campaignLabelServiceClient = CampaignLabelServiceClient.create()) {
-   *   String customerId = "";
-   *   List&lt;CampaignLabelOperation&gt; operations = new ArrayList&lt;&gt;();
-   *   MutateCampaignLabelsResponse response = campaignLabelServiceClient.mutateCampaignLabels(customerId, operations);
-   * }
-   * </code></pre>
-   *
-   * @param customerId Required. ID of the customer whose campaign-label relationships are being
+   * @param customer_id Required. ID of the customer whose campaign-label relationships are being
    *     modified.
    * @param operations Required. The list of operations to perform on campaign-label relationships.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
@@ -267,23 +206,9 @@ public class CampaignLabelServiceClient implements BackgroundResource {
     return mutateCampaignLabels(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Creates and removes campaign-label relationships. Operation statuses are returned.
-   *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (CampaignLabelServiceClient campaignLabelServiceClient = CampaignLabelServiceClient.create()) {
-   *   String customerId = "";
-   *   List&lt;CampaignLabelOperation&gt; operations = new ArrayList&lt;&gt;();
-   *   MutateCampaignLabelsRequest request = MutateCampaignLabelsRequest.newBuilder()
-   *     .setCustomerId(customerId)
-   *     .addAllOperations(operations)
-   *     .build();
-   *   MutateCampaignLabelsResponse response = campaignLabelServiceClient.mutateCampaignLabels(request);
-   * }
-   * </code></pre>
    *
    * @param request The request object containing all of the parameters for the API call.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
@@ -293,25 +218,11 @@ public class CampaignLabelServiceClient implements BackgroundResource {
     return mutateCampaignLabelsCallable().call(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Creates and removes campaign-label relationships. Operation statuses are returned.
    *
    * <p>Sample code:
-   *
-   * <pre><code>
-   * try (CampaignLabelServiceClient campaignLabelServiceClient = CampaignLabelServiceClient.create()) {
-   *   String customerId = "";
-   *   List&lt;CampaignLabelOperation&gt; operations = new ArrayList&lt;&gt;();
-   *   MutateCampaignLabelsRequest request = MutateCampaignLabelsRequest.newBuilder()
-   *     .setCustomerId(customerId)
-   *     .addAllOperations(operations)
-   *     .build();
-   *   ApiFuture&lt;MutateCampaignLabelsResponse&gt; future = campaignLabelServiceClient.mutateCampaignLabelsCallable().futureCall(request);
-   *   // Do something
-   *   MutateCampaignLabelsResponse response = future.get();
-   * }
-   * </code></pre>
    */
   public final UnaryCallable<MutateCampaignLabelsRequest, MutateCampaignLabelsResponse>
       mutateCampaignLabelsCallable() {

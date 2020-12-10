@@ -5,7 +5,7 @@
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
- *     https://www.apache.org/licenses/LICENSE-2.0
+ *      https://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -13,6 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
 package com.google.ads.googleads.v6.services;
 
 import com.google.ads.googleads.v6.resources.ThirdPartyAppAnalyticsLink;
@@ -25,7 +26,7 @@ import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 import javax.annotation.Generated;
 
-// AUTO-GENERATED DOCUMENTATION AND SERVICE
+// AUTO-GENERATED DOCUMENTATION AND CLASS.
 /**
  * Service Description: This service allows management of links between Google Ads and third party
  * app analytics.
@@ -33,16 +34,7 @@ import javax.annotation.Generated;
  * <p>This class provides the ability to make remote calls to the backing service through method
  * calls that map to API methods. Sample code to get started:
  *
- * <pre>
- * <code>
- * try (ThirdPartyAppAnalyticsLinkServiceClient thirdPartyAppAnalyticsLinkServiceClient = ThirdPartyAppAnalyticsLinkServiceClient.create()) {
- *   GetThirdPartyAppAnalyticsLinkRequest request = GetThirdPartyAppAnalyticsLinkRequest.newBuilder().build();
- *   ThirdPartyAppAnalyticsLink response = thirdPartyAppAnalyticsLinkServiceClient.getThirdPartyAppAnalyticsLink(request);
- * }
- * </code>
- * </pre>
- *
- * <p>Note: close() needs to be called on the thirdPartyAppAnalyticsLinkServiceClient object to
+ * <p>Note: close() needs to be called on the ThirdPartyAppAnalyticsLinkServiceClient object to
  * clean up resources such as threads. In the example above, try-with-resources is used, which
  * automatically calls close().
  *
@@ -71,30 +63,28 @@ import javax.annotation.Generated;
  *
  * <p>To customize credentials:
  *
- * <pre>
- * <code>
+ * <pre>{@code
  * ThirdPartyAppAnalyticsLinkServiceSettings thirdPartyAppAnalyticsLinkServiceSettings =
  *     ThirdPartyAppAnalyticsLinkServiceSettings.newBuilder()
  *         .setCredentialsProvider(FixedCredentialsProvider.create(myCredentials))
  *         .build();
  * ThirdPartyAppAnalyticsLinkServiceClient thirdPartyAppAnalyticsLinkServiceClient =
  *     ThirdPartyAppAnalyticsLinkServiceClient.create(thirdPartyAppAnalyticsLinkServiceSettings);
- * </code>
- * </pre>
+ * }</pre>
  *
- * To customize the endpoint:
+ * <p>To customize the endpoint:
  *
- * <pre>
- * <code>
+ * <pre>{@code
  * ThirdPartyAppAnalyticsLinkServiceSettings thirdPartyAppAnalyticsLinkServiceSettings =
  *     ThirdPartyAppAnalyticsLinkServiceSettings.newBuilder().setEndpoint(myEndpoint).build();
  * ThirdPartyAppAnalyticsLinkServiceClient thirdPartyAppAnalyticsLinkServiceClient =
  *     ThirdPartyAppAnalyticsLinkServiceClient.create(thirdPartyAppAnalyticsLinkServiceSettings);
- * </code>
- * </pre>
+ * }</pre>
+ *
+ * <p>Please refer to the GitHub repository's samples for more quickstart code snippets.
  */
-@Generated("by gapic-generator")
 @BetaApi
+@Generated("by gapic-generator")
 public class ThirdPartyAppAnalyticsLinkServiceClient implements BackgroundResource {
   private final ThirdPartyAppAnalyticsLinkServiceSettings settings;
   private final ThirdPartyAppAnalyticsLinkServiceStub stub;
@@ -116,8 +106,8 @@ public class ThirdPartyAppAnalyticsLinkServiceClient implements BackgroundResour
 
   /**
    * Constructs an instance of ThirdPartyAppAnalyticsLinkServiceClient, using the given stub for
-   * making calls. This is for advanced usage - prefer to use
-   * ThirdPartyAppAnalyticsLinkServiceSettings}.
+   * making calls. This is for advanced usage - prefer using
+   * create(ThirdPartyAppAnalyticsLinkServiceSettings).
    */
   @BetaApi("A restructuring of stub classes is planned, so this may break in the future")
   public static final ThirdPartyAppAnalyticsLinkServiceClient create(
@@ -152,18 +142,9 @@ public class ThirdPartyAppAnalyticsLinkServiceClient implements BackgroundResour
     return stub;
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Returns the third party app analytics link in full detail.
-   *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (ThirdPartyAppAnalyticsLinkServiceClient thirdPartyAppAnalyticsLinkServiceClient = ThirdPartyAppAnalyticsLinkServiceClient.create()) {
-   *   GetThirdPartyAppAnalyticsLinkRequest request = GetThirdPartyAppAnalyticsLinkRequest.newBuilder().build();
-   *   ThirdPartyAppAnalyticsLink response = thirdPartyAppAnalyticsLinkServiceClient.getThirdPartyAppAnalyticsLink(request);
-   * }
-   * </code></pre>
    *
    * @param request The request object containing all of the parameters for the API call.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
@@ -173,39 +154,21 @@ public class ThirdPartyAppAnalyticsLinkServiceClient implements BackgroundResour
     return getThirdPartyAppAnalyticsLinkCallable().call(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Returns the third party app analytics link in full detail.
    *
    * <p>Sample code:
-   *
-   * <pre><code>
-   * try (ThirdPartyAppAnalyticsLinkServiceClient thirdPartyAppAnalyticsLinkServiceClient = ThirdPartyAppAnalyticsLinkServiceClient.create()) {
-   *   GetThirdPartyAppAnalyticsLinkRequest request = GetThirdPartyAppAnalyticsLinkRequest.newBuilder().build();
-   *   ApiFuture&lt;ThirdPartyAppAnalyticsLink&gt; future = thirdPartyAppAnalyticsLinkServiceClient.getThirdPartyAppAnalyticsLinkCallable().futureCall(request);
-   *   // Do something
-   *   ThirdPartyAppAnalyticsLink response = future.get();
-   * }
-   * </code></pre>
    */
   public final UnaryCallable<GetThirdPartyAppAnalyticsLinkRequest, ThirdPartyAppAnalyticsLink>
       getThirdPartyAppAnalyticsLinkCallable() {
     return stub.getThirdPartyAppAnalyticsLinkCallable();
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Regenerate ThirdPartyAppAnalyticsLink.shareable_link_id that should be provided to the third
    * party when setting up app analytics.
-   *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (ThirdPartyAppAnalyticsLinkServiceClient thirdPartyAppAnalyticsLinkServiceClient = ThirdPartyAppAnalyticsLinkServiceClient.create()) {
-   *   RegenerateShareableLinkIdRequest request = RegenerateShareableLinkIdRequest.newBuilder().build();
-   *   RegenerateShareableLinkIdResponse response = thirdPartyAppAnalyticsLinkServiceClient.regenerateShareableLinkId(request);
-   * }
-   * </code></pre>
    *
    * @param request The request object containing all of the parameters for the API call.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
@@ -215,21 +178,12 @@ public class ThirdPartyAppAnalyticsLinkServiceClient implements BackgroundResour
     return regenerateShareableLinkIdCallable().call(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Regenerate ThirdPartyAppAnalyticsLink.shareable_link_id that should be provided to the third
    * party when setting up app analytics.
    *
    * <p>Sample code:
-   *
-   * <pre><code>
-   * try (ThirdPartyAppAnalyticsLinkServiceClient thirdPartyAppAnalyticsLinkServiceClient = ThirdPartyAppAnalyticsLinkServiceClient.create()) {
-   *   RegenerateShareableLinkIdRequest request = RegenerateShareableLinkIdRequest.newBuilder().build();
-   *   ApiFuture&lt;RegenerateShareableLinkIdResponse&gt; future = thirdPartyAppAnalyticsLinkServiceClient.regenerateShareableLinkIdCallable().futureCall(request);
-   *   // Do something
-   *   RegenerateShareableLinkIdResponse response = future.get();
-   * }
-   * </code></pre>
    */
   public final UnaryCallable<RegenerateShareableLinkIdRequest, RegenerateShareableLinkIdResponse>
       regenerateShareableLinkIdCallable() {

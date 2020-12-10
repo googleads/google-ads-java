@@ -5,7 +5,7 @@
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
- *     https://www.apache.org/licenses/LICENSE-2.0
+ *      https://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -13,9 +13,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
 package com.google.ads.googleads.v6.services;
 
 import com.google.ads.googleads.v6.resources.AdGroupBidModifier;
+import com.google.ads.googleads.v6.resources.AdGroupBidModifierName;
 import com.google.ads.googleads.v6.services.stub.AdGroupBidModifierServiceStub;
 import com.google.ads.googleads.v6.services.stub.AdGroupBidModifierServiceStubSettings;
 import com.google.api.core.BetaApi;
@@ -26,23 +28,14 @@ import java.util.List;
 import java.util.concurrent.TimeUnit;
 import javax.annotation.Generated;
 
-// AUTO-GENERATED DOCUMENTATION AND SERVICE
+// AUTO-GENERATED DOCUMENTATION AND CLASS.
 /**
  * Service Description: Service to manage ad group bid modifiers.
  *
  * <p>This class provides the ability to make remote calls to the backing service through method
  * calls that map to API methods. Sample code to get started:
  *
- * <pre>
- * <code>
- * try (AdGroupBidModifierServiceClient adGroupBidModifierServiceClient = AdGroupBidModifierServiceClient.create()) {
- *   AdGroupBidModifierName resourceName = AdGroupBidModifierName.of("[CUSTOMER_ID]", "[AD_GROUP_ID]", "[CRITERION_ID]");
- *   AdGroupBidModifier response = adGroupBidModifierServiceClient.getAdGroupBidModifier(resourceName);
- * }
- * </code>
- * </pre>
- *
- * <p>Note: close() needs to be called on the adGroupBidModifierServiceClient object to clean up
+ * <p>Note: close() needs to be called on the AdGroupBidModifierServiceClient object to clean up
  * resources such as threads. In the example above, try-with-resources is used, which automatically
  * calls close().
  *
@@ -71,30 +64,28 @@ import javax.annotation.Generated;
  *
  * <p>To customize credentials:
  *
- * <pre>
- * <code>
+ * <pre>{@code
  * AdGroupBidModifierServiceSettings adGroupBidModifierServiceSettings =
  *     AdGroupBidModifierServiceSettings.newBuilder()
  *         .setCredentialsProvider(FixedCredentialsProvider.create(myCredentials))
  *         .build();
  * AdGroupBidModifierServiceClient adGroupBidModifierServiceClient =
  *     AdGroupBidModifierServiceClient.create(adGroupBidModifierServiceSettings);
- * </code>
- * </pre>
+ * }</pre>
  *
- * To customize the endpoint:
+ * <p>To customize the endpoint:
  *
- * <pre>
- * <code>
+ * <pre>{@code
  * AdGroupBidModifierServiceSettings adGroupBidModifierServiceSettings =
  *     AdGroupBidModifierServiceSettings.newBuilder().setEndpoint(myEndpoint).build();
  * AdGroupBidModifierServiceClient adGroupBidModifierServiceClient =
  *     AdGroupBidModifierServiceClient.create(adGroupBidModifierServiceSettings);
- * </code>
- * </pre>
+ * }</pre>
+ *
+ * <p>Please refer to the GitHub repository's samples for more quickstart code snippets.
  */
-@Generated("by gapic-generator")
 @BetaApi
+@Generated("by gapic-generator")
 public class AdGroupBidModifierServiceClient implements BackgroundResource {
   private final AdGroupBidModifierServiceSettings settings;
   private final AdGroupBidModifierServiceStub stub;
@@ -116,7 +107,7 @@ public class AdGroupBidModifierServiceClient implements BackgroundResource {
 
   /**
    * Constructs an instance of AdGroupBidModifierServiceClient, using the given stub for making
-   * calls. This is for advanced usage - prefer to use AdGroupBidModifierServiceSettings}.
+   * calls. This is for advanced usage - prefer using create(AdGroupBidModifierServiceSettings).
    */
   @BetaApi("A restructuring of stub classes is planned, so this may break in the future")
   public static final AdGroupBidModifierServiceClient create(AdGroupBidModifierServiceStub stub) {
@@ -149,20 +140,11 @@ public class AdGroupBidModifierServiceClient implements BackgroundResource {
     return stub;
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Returns the requested ad group bid modifier in full detail.
    *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (AdGroupBidModifierServiceClient adGroupBidModifierServiceClient = AdGroupBidModifierServiceClient.create()) {
-   *   AdGroupBidModifierName resourceName = AdGroupBidModifierName.of("[CUSTOMER_ID]", "[AD_GROUP_ID]", "[CRITERION_ID]");
-   *   AdGroupBidModifier response = adGroupBidModifierServiceClient.getAdGroupBidModifier(resourceName);
-   * }
-   * </code></pre>
-   *
-   * @param resourceName Required. The resource name of the ad group bid modifier to fetch.
+   * @param resource_name Required. The resource name of the ad group bid modifier to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final AdGroupBidModifier getAdGroupBidModifier(AdGroupBidModifierName resourceName) {
@@ -173,20 +155,11 @@ public class AdGroupBidModifierServiceClient implements BackgroundResource {
     return getAdGroupBidModifier(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Returns the requested ad group bid modifier in full detail.
    *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (AdGroupBidModifierServiceClient adGroupBidModifierServiceClient = AdGroupBidModifierServiceClient.create()) {
-   *   AdGroupBidModifierName resourceName = AdGroupBidModifierName.of("[CUSTOMER_ID]", "[AD_GROUP_ID]", "[CRITERION_ID]");
-   *   AdGroupBidModifier response = adGroupBidModifierServiceClient.getAdGroupBidModifier(resourceName.toString());
-   * }
-   * </code></pre>
-   *
-   * @param resourceName Required. The resource name of the ad group bid modifier to fetch.
+   * @param resource_name Required. The resource name of the ad group bid modifier to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final AdGroupBidModifier getAdGroupBidModifier(String resourceName) {
@@ -195,21 +168,9 @@ public class AdGroupBidModifierServiceClient implements BackgroundResource {
     return getAdGroupBidModifier(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Returns the requested ad group bid modifier in full detail.
-   *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (AdGroupBidModifierServiceClient adGroupBidModifierServiceClient = AdGroupBidModifierServiceClient.create()) {
-   *   AdGroupBidModifierName resourceName = AdGroupBidModifierName.of("[CUSTOMER_ID]", "[AD_GROUP_ID]", "[CRITERION_ID]");
-   *   GetAdGroupBidModifierRequest request = GetAdGroupBidModifierRequest.newBuilder()
-   *     .setResourceName(resourceName.toString())
-   *     .build();
-   *   AdGroupBidModifier response = adGroupBidModifierServiceClient.getAdGroupBidModifier(request);
-   * }
-   * </code></pre>
    *
    * @param request The request object containing all of the parameters for the API call.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
@@ -218,44 +179,23 @@ public class AdGroupBidModifierServiceClient implements BackgroundResource {
     return getAdGroupBidModifierCallable().call(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Returns the requested ad group bid modifier in full detail.
    *
    * <p>Sample code:
-   *
-   * <pre><code>
-   * try (AdGroupBidModifierServiceClient adGroupBidModifierServiceClient = AdGroupBidModifierServiceClient.create()) {
-   *   AdGroupBidModifierName resourceName = AdGroupBidModifierName.of("[CUSTOMER_ID]", "[AD_GROUP_ID]", "[CRITERION_ID]");
-   *   GetAdGroupBidModifierRequest request = GetAdGroupBidModifierRequest.newBuilder()
-   *     .setResourceName(resourceName.toString())
-   *     .build();
-   *   ApiFuture&lt;AdGroupBidModifier&gt; future = adGroupBidModifierServiceClient.getAdGroupBidModifierCallable().futureCall(request);
-   *   // Do something
-   *   AdGroupBidModifier response = future.get();
-   * }
-   * </code></pre>
    */
   public final UnaryCallable<GetAdGroupBidModifierRequest, AdGroupBidModifier>
       getAdGroupBidModifierCallable() {
     return stub.getAdGroupBidModifierCallable();
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Creates, updates, or removes ad group bid modifiers. Operation statuses are returned.
    *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (AdGroupBidModifierServiceClient adGroupBidModifierServiceClient = AdGroupBidModifierServiceClient.create()) {
-   *   String customerId = "";
-   *   List&lt;AdGroupBidModifierOperation&gt; operations = new ArrayList&lt;&gt;();
-   *   MutateAdGroupBidModifiersResponse response = adGroupBidModifierServiceClient.mutateAdGroupBidModifiers(customerId, operations);
-   * }
-   * </code></pre>
-   *
-   * @param customerId Required. ID of the customer whose ad group bid modifiers are being modified.
+   * @param customer_id Required. ID of the customer whose ad group bid modifiers are being
+   *     modified.
    * @param operations Required. The list of operations to perform on individual ad group bid
    *     modifiers.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
@@ -270,23 +210,9 @@ public class AdGroupBidModifierServiceClient implements BackgroundResource {
     return mutateAdGroupBidModifiers(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Creates, updates, or removes ad group bid modifiers. Operation statuses are returned.
-   *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (AdGroupBidModifierServiceClient adGroupBidModifierServiceClient = AdGroupBidModifierServiceClient.create()) {
-   *   String customerId = "";
-   *   List&lt;AdGroupBidModifierOperation&gt; operations = new ArrayList&lt;&gt;();
-   *   MutateAdGroupBidModifiersRequest request = MutateAdGroupBidModifiersRequest.newBuilder()
-   *     .setCustomerId(customerId)
-   *     .addAllOperations(operations)
-   *     .build();
-   *   MutateAdGroupBidModifiersResponse response = adGroupBidModifierServiceClient.mutateAdGroupBidModifiers(request);
-   * }
-   * </code></pre>
    *
    * @param request The request object containing all of the parameters for the API call.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
@@ -296,25 +222,11 @@ public class AdGroupBidModifierServiceClient implements BackgroundResource {
     return mutateAdGroupBidModifiersCallable().call(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Creates, updates, or removes ad group bid modifiers. Operation statuses are returned.
    *
    * <p>Sample code:
-   *
-   * <pre><code>
-   * try (AdGroupBidModifierServiceClient adGroupBidModifierServiceClient = AdGroupBidModifierServiceClient.create()) {
-   *   String customerId = "";
-   *   List&lt;AdGroupBidModifierOperation&gt; operations = new ArrayList&lt;&gt;();
-   *   MutateAdGroupBidModifiersRequest request = MutateAdGroupBidModifiersRequest.newBuilder()
-   *     .setCustomerId(customerId)
-   *     .addAllOperations(operations)
-   *     .build();
-   *   ApiFuture&lt;MutateAdGroupBidModifiersResponse&gt; future = adGroupBidModifierServiceClient.mutateAdGroupBidModifiersCallable().futureCall(request);
-   *   // Do something
-   *   MutateAdGroupBidModifiersResponse response = future.get();
-   * }
-   * </code></pre>
    */
   public final UnaryCallable<MutateAdGroupBidModifiersRequest, MutateAdGroupBidModifiersResponse>
       mutateAdGroupBidModifiersCallable() {

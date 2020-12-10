@@ -5,7 +5,7 @@
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
- *     https://www.apache.org/licenses/LICENSE-2.0
+ *      https://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -13,9 +13,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
 package com.google.ads.googleads.v6.services;
 
 import com.google.ads.googleads.v6.resources.FeedItemSet;
+import com.google.ads.googleads.v6.resources.FeedItemSetName;
 import com.google.ads.googleads.v6.services.stub.FeedItemSetServiceStub;
 import com.google.ads.googleads.v6.services.stub.FeedItemSetServiceStubSettings;
 import com.google.api.core.BetaApi;
@@ -26,23 +28,14 @@ import java.util.List;
 import java.util.concurrent.TimeUnit;
 import javax.annotation.Generated;
 
-// AUTO-GENERATED DOCUMENTATION AND SERVICE
+// AUTO-GENERATED DOCUMENTATION AND CLASS.
 /**
  * Service Description: Service to manage feed Item Set
  *
  * <p>This class provides the ability to make remote calls to the backing service through method
  * calls that map to API methods. Sample code to get started:
  *
- * <pre>
- * <code>
- * try (FeedItemSetServiceClient feedItemSetServiceClient = FeedItemSetServiceClient.create()) {
- *   FeedItemSetName resourceName = FeedItemSetName.of("[CUSTOMER_ID]", "[FEED_ID]", "[FEED_ITEM_SET_ID]");
- *   FeedItemSet response = feedItemSetServiceClient.getFeedItemSet(resourceName);
- * }
- * </code>
- * </pre>
- *
- * <p>Note: close() needs to be called on the feedItemSetServiceClient object to clean up resources
+ * <p>Note: close() needs to be called on the FeedItemSetServiceClient object to clean up resources
  * such as threads. In the example above, try-with-resources is used, which automatically calls
  * close().
  *
@@ -71,30 +64,28 @@ import javax.annotation.Generated;
  *
  * <p>To customize credentials:
  *
- * <pre>
- * <code>
+ * <pre>{@code
  * FeedItemSetServiceSettings feedItemSetServiceSettings =
  *     FeedItemSetServiceSettings.newBuilder()
  *         .setCredentialsProvider(FixedCredentialsProvider.create(myCredentials))
  *         .build();
  * FeedItemSetServiceClient feedItemSetServiceClient =
  *     FeedItemSetServiceClient.create(feedItemSetServiceSettings);
- * </code>
- * </pre>
+ * }</pre>
  *
- * To customize the endpoint:
+ * <p>To customize the endpoint:
  *
- * <pre>
- * <code>
+ * <pre>{@code
  * FeedItemSetServiceSettings feedItemSetServiceSettings =
  *     FeedItemSetServiceSettings.newBuilder().setEndpoint(myEndpoint).build();
  * FeedItemSetServiceClient feedItemSetServiceClient =
  *     FeedItemSetServiceClient.create(feedItemSetServiceSettings);
- * </code>
- * </pre>
+ * }</pre>
+ *
+ * <p>Please refer to the GitHub repository's samples for more quickstart code snippets.
  */
-@Generated("by gapic-generator")
 @BetaApi
+@Generated("by gapic-generator")
 public class FeedItemSetServiceClient implements BackgroundResource {
   private final FeedItemSetServiceSettings settings;
   private final FeedItemSetServiceStub stub;
@@ -115,7 +106,7 @@ public class FeedItemSetServiceClient implements BackgroundResource {
 
   /**
    * Constructs an instance of FeedItemSetServiceClient, using the given stub for making calls. This
-   * is for advanced usage - prefer to use FeedItemSetServiceSettings}.
+   * is for advanced usage - prefer using create(FeedItemSetServiceSettings).
    */
   @BetaApi("A restructuring of stub classes is planned, so this may break in the future")
   public static final FeedItemSetServiceClient create(FeedItemSetServiceStub stub) {
@@ -147,20 +138,11 @@ public class FeedItemSetServiceClient implements BackgroundResource {
     return stub;
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Returns the requested feed item set in full detail.
    *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (FeedItemSetServiceClient feedItemSetServiceClient = FeedItemSetServiceClient.create()) {
-   *   FeedItemSetName resourceName = FeedItemSetName.of("[CUSTOMER_ID]", "[FEED_ID]", "[FEED_ITEM_SET_ID]");
-   *   FeedItemSet response = feedItemSetServiceClient.getFeedItemSet(resourceName);
-   * }
-   * </code></pre>
-   *
-   * @param resourceName Required. The resource name of the feed item set to fetch.
+   * @param resource_name Required. The resource name of the feed item set to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final FeedItemSet getFeedItemSet(FeedItemSetName resourceName) {
@@ -171,20 +153,11 @@ public class FeedItemSetServiceClient implements BackgroundResource {
     return getFeedItemSet(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Returns the requested feed item set in full detail.
    *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (FeedItemSetServiceClient feedItemSetServiceClient = FeedItemSetServiceClient.create()) {
-   *   FeedItemSetName resourceName = FeedItemSetName.of("[CUSTOMER_ID]", "[FEED_ID]", "[FEED_ITEM_SET_ID]");
-   *   FeedItemSet response = feedItemSetServiceClient.getFeedItemSet(resourceName.toString());
-   * }
-   * </code></pre>
-   *
-   * @param resourceName Required. The resource name of the feed item set to fetch.
+   * @param resource_name Required. The resource name of the feed item set to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final FeedItemSet getFeedItemSet(String resourceName) {
@@ -193,21 +166,9 @@ public class FeedItemSetServiceClient implements BackgroundResource {
     return getFeedItemSet(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Returns the requested feed item set in full detail.
-   *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (FeedItemSetServiceClient feedItemSetServiceClient = FeedItemSetServiceClient.create()) {
-   *   FeedItemSetName resourceName = FeedItemSetName.of("[CUSTOMER_ID]", "[FEED_ID]", "[FEED_ITEM_SET_ID]");
-   *   GetFeedItemSetRequest request = GetFeedItemSetRequest.newBuilder()
-   *     .setResourceName(resourceName.toString())
-   *     .build();
-   *   FeedItemSet response = feedItemSetServiceClient.getFeedItemSet(request);
-   * }
-   * </code></pre>
    *
    * @param request The request object containing all of the parameters for the API call.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
@@ -216,43 +177,21 @@ public class FeedItemSetServiceClient implements BackgroundResource {
     return getFeedItemSetCallable().call(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Returns the requested feed item set in full detail.
    *
    * <p>Sample code:
-   *
-   * <pre><code>
-   * try (FeedItemSetServiceClient feedItemSetServiceClient = FeedItemSetServiceClient.create()) {
-   *   FeedItemSetName resourceName = FeedItemSetName.of("[CUSTOMER_ID]", "[FEED_ID]", "[FEED_ITEM_SET_ID]");
-   *   GetFeedItemSetRequest request = GetFeedItemSetRequest.newBuilder()
-   *     .setResourceName(resourceName.toString())
-   *     .build();
-   *   ApiFuture&lt;FeedItemSet&gt; future = feedItemSetServiceClient.getFeedItemSetCallable().futureCall(request);
-   *   // Do something
-   *   FeedItemSet response = future.get();
-   * }
-   * </code></pre>
    */
   public final UnaryCallable<GetFeedItemSetRequest, FeedItemSet> getFeedItemSetCallable() {
     return stub.getFeedItemSetCallable();
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Creates, updates or removes feed item sets. Operation statuses are returned.
    *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (FeedItemSetServiceClient feedItemSetServiceClient = FeedItemSetServiceClient.create()) {
-   *   String customerId = "";
-   *   List&lt;FeedItemSetOperation&gt; operations = new ArrayList&lt;&gt;();
-   *   MutateFeedItemSetsResponse response = feedItemSetServiceClient.mutateFeedItemSets(customerId, operations);
-   * }
-   * </code></pre>
-   *
-   * @param customerId Required. The ID of the customer whose feed item sets are being modified.
+   * @param customer_id Required. The ID of the customer whose feed item sets are being modified.
    * @param operations Required. The list of operations to perform on individual feed item sets.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
@@ -266,23 +205,9 @@ public class FeedItemSetServiceClient implements BackgroundResource {
     return mutateFeedItemSets(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Creates, updates or removes feed item sets. Operation statuses are returned.
-   *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (FeedItemSetServiceClient feedItemSetServiceClient = FeedItemSetServiceClient.create()) {
-   *   String customerId = "";
-   *   List&lt;FeedItemSetOperation&gt; operations = new ArrayList&lt;&gt;();
-   *   MutateFeedItemSetsRequest request = MutateFeedItemSetsRequest.newBuilder()
-   *     .setCustomerId(customerId)
-   *     .addAllOperations(operations)
-   *     .build();
-   *   MutateFeedItemSetsResponse response = feedItemSetServiceClient.mutateFeedItemSets(request);
-   * }
-   * </code></pre>
    *
    * @param request The request object containing all of the parameters for the API call.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
@@ -291,25 +216,11 @@ public class FeedItemSetServiceClient implements BackgroundResource {
     return mutateFeedItemSetsCallable().call(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Creates, updates or removes feed item sets. Operation statuses are returned.
    *
    * <p>Sample code:
-   *
-   * <pre><code>
-   * try (FeedItemSetServiceClient feedItemSetServiceClient = FeedItemSetServiceClient.create()) {
-   *   String customerId = "";
-   *   List&lt;FeedItemSetOperation&gt; operations = new ArrayList&lt;&gt;();
-   *   MutateFeedItemSetsRequest request = MutateFeedItemSetsRequest.newBuilder()
-   *     .setCustomerId(customerId)
-   *     .addAllOperations(operations)
-   *     .build();
-   *   ApiFuture&lt;MutateFeedItemSetsResponse&gt; future = feedItemSetServiceClient.mutateFeedItemSetsCallable().futureCall(request);
-   *   // Do something
-   *   MutateFeedItemSetsResponse response = future.get();
-   * }
-   * </code></pre>
    */
   public final UnaryCallable<MutateFeedItemSetsRequest, MutateFeedItemSetsResponse>
       mutateFeedItemSetsCallable() {

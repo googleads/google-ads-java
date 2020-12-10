@@ -5,7 +5,7 @@
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
- *     https://www.apache.org/licenses/LICENSE-2.0
+ *      https://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -13,9 +13,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
 package com.google.ads.googleads.v6.services;
 
 import com.google.ads.googleads.v6.resources.OperatingSystemVersionConstant;
+import com.google.ads.googleads.v6.resources.OperatingSystemVersionConstantName;
 import com.google.ads.googleads.v6.services.stub.OperatingSystemVersionConstantServiceStub;
 import com.google.ads.googleads.v6.services.stub.OperatingSystemVersionConstantServiceStubSettings;
 import com.google.api.core.BetaApi;
@@ -25,23 +27,14 @@ import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 import javax.annotation.Generated;
 
-// AUTO-GENERATED DOCUMENTATION AND SERVICE
+// AUTO-GENERATED DOCUMENTATION AND CLASS.
 /**
  * Service Description: Service to fetch Operating System Version constants.
  *
  * <p>This class provides the ability to make remote calls to the backing service through method
  * calls that map to API methods. Sample code to get started:
  *
- * <pre>
- * <code>
- * try (OperatingSystemVersionConstantServiceClient operatingSystemVersionConstantServiceClient = OperatingSystemVersionConstantServiceClient.create()) {
- *   OperatingSystemVersionConstantName resourceName = OperatingSystemVersionConstantName.of("[CRITERION_ID]");
- *   OperatingSystemVersionConstant response = operatingSystemVersionConstantServiceClient.getOperatingSystemVersionConstant(resourceName);
- * }
- * </code>
- * </pre>
- *
- * <p>Note: close() needs to be called on the operatingSystemVersionConstantServiceClient object to
+ * <p>Note: close() needs to be called on the OperatingSystemVersionConstantServiceClient object to
  * clean up resources such as threads. In the example above, try-with-resources is used, which
  * automatically calls close().
  *
@@ -70,30 +63,30 @@ import javax.annotation.Generated;
  *
  * <p>To customize credentials:
  *
- * <pre>
- * <code>
+ * <pre>{@code
  * OperatingSystemVersionConstantServiceSettings operatingSystemVersionConstantServiceSettings =
  *     OperatingSystemVersionConstantServiceSettings.newBuilder()
  *         .setCredentialsProvider(FixedCredentialsProvider.create(myCredentials))
  *         .build();
  * OperatingSystemVersionConstantServiceClient operatingSystemVersionConstantServiceClient =
- *     OperatingSystemVersionConstantServiceClient.create(operatingSystemVersionConstantServiceSettings);
- * </code>
- * </pre>
+ *     OperatingSystemVersionConstantServiceClient.create(
+ *         operatingSystemVersionConstantServiceSettings);
+ * }</pre>
  *
- * To customize the endpoint:
+ * <p>To customize the endpoint:
  *
- * <pre>
- * <code>
+ * <pre>{@code
  * OperatingSystemVersionConstantServiceSettings operatingSystemVersionConstantServiceSettings =
  *     OperatingSystemVersionConstantServiceSettings.newBuilder().setEndpoint(myEndpoint).build();
  * OperatingSystemVersionConstantServiceClient operatingSystemVersionConstantServiceClient =
- *     OperatingSystemVersionConstantServiceClient.create(operatingSystemVersionConstantServiceSettings);
- * </code>
- * </pre>
+ *     OperatingSystemVersionConstantServiceClient.create(
+ *         operatingSystemVersionConstantServiceSettings);
+ * }</pre>
+ *
+ * <p>Please refer to the GitHub repository's samples for more quickstart code snippets.
  */
-@Generated("by gapic-generator")
 @BetaApi
+@Generated("by gapic-generator")
 public class OperatingSystemVersionConstantServiceClient implements BackgroundResource {
   private final OperatingSystemVersionConstantServiceSettings settings;
   private final OperatingSystemVersionConstantServiceStub stub;
@@ -117,8 +110,8 @@ public class OperatingSystemVersionConstantServiceClient implements BackgroundRe
 
   /**
    * Constructs an instance of OperatingSystemVersionConstantServiceClient, using the given stub for
-   * making calls. This is for advanced usage - prefer to use
-   * OperatingSystemVersionConstantServiceSettings}.
+   * making calls. This is for advanced usage - prefer using
+   * create(OperatingSystemVersionConstantServiceSettings).
    */
   @BetaApi("A restructuring of stub classes is planned, so this may break in the future")
   public static final OperatingSystemVersionConstantServiceClient create(
@@ -155,20 +148,11 @@ public class OperatingSystemVersionConstantServiceClient implements BackgroundRe
     return stub;
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Returns the requested OS version constant in full detail.
    *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (OperatingSystemVersionConstantServiceClient operatingSystemVersionConstantServiceClient = OperatingSystemVersionConstantServiceClient.create()) {
-   *   OperatingSystemVersionConstantName resourceName = OperatingSystemVersionConstantName.of("[CRITERION_ID]");
-   *   OperatingSystemVersionConstant response = operatingSystemVersionConstantServiceClient.getOperatingSystemVersionConstant(resourceName);
-   * }
-   * </code></pre>
-   *
-   * @param resourceName Required. Resource name of the OS version to fetch.
+   * @param resource_name Required. Resource name of the OS version to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final OperatingSystemVersionConstant getOperatingSystemVersionConstant(
@@ -180,20 +164,11 @@ public class OperatingSystemVersionConstantServiceClient implements BackgroundRe
     return getOperatingSystemVersionConstant(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Returns the requested OS version constant in full detail.
    *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (OperatingSystemVersionConstantServiceClient operatingSystemVersionConstantServiceClient = OperatingSystemVersionConstantServiceClient.create()) {
-   *   OperatingSystemVersionConstantName resourceName = OperatingSystemVersionConstantName.of("[CRITERION_ID]");
-   *   OperatingSystemVersionConstant response = operatingSystemVersionConstantServiceClient.getOperatingSystemVersionConstant(resourceName.toString());
-   * }
-   * </code></pre>
-   *
-   * @param resourceName Required. Resource name of the OS version to fetch.
+   * @param resource_name Required. Resource name of the OS version to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final OperatingSystemVersionConstant getOperatingSystemVersionConstant(
@@ -203,21 +178,9 @@ public class OperatingSystemVersionConstantServiceClient implements BackgroundRe
     return getOperatingSystemVersionConstant(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Returns the requested OS version constant in full detail.
-   *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (OperatingSystemVersionConstantServiceClient operatingSystemVersionConstantServiceClient = OperatingSystemVersionConstantServiceClient.create()) {
-   *   OperatingSystemVersionConstantName resourceName = OperatingSystemVersionConstantName.of("[CRITERION_ID]");
-   *   GetOperatingSystemVersionConstantRequest request = GetOperatingSystemVersionConstantRequest.newBuilder()
-   *     .setResourceName(resourceName.toString())
-   *     .build();
-   *   OperatingSystemVersionConstant response = operatingSystemVersionConstantServiceClient.getOperatingSystemVersionConstant(request);
-   * }
-   * </code></pre>
    *
    * @param request The request object containing all of the parameters for the API call.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
@@ -227,23 +190,11 @@ public class OperatingSystemVersionConstantServiceClient implements BackgroundRe
     return getOperatingSystemVersionConstantCallable().call(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Returns the requested OS version constant in full detail.
    *
    * <p>Sample code:
-   *
-   * <pre><code>
-   * try (OperatingSystemVersionConstantServiceClient operatingSystemVersionConstantServiceClient = OperatingSystemVersionConstantServiceClient.create()) {
-   *   OperatingSystemVersionConstantName resourceName = OperatingSystemVersionConstantName.of("[CRITERION_ID]");
-   *   GetOperatingSystemVersionConstantRequest request = GetOperatingSystemVersionConstantRequest.newBuilder()
-   *     .setResourceName(resourceName.toString())
-   *     .build();
-   *   ApiFuture&lt;OperatingSystemVersionConstant&gt; future = operatingSystemVersionConstantServiceClient.getOperatingSystemVersionConstantCallable().futureCall(request);
-   *   // Do something
-   *   OperatingSystemVersionConstant response = future.get();
-   * }
-   * </code></pre>
    */
   public final UnaryCallable<
           GetOperatingSystemVersionConstantRequest, OperatingSystemVersionConstant>

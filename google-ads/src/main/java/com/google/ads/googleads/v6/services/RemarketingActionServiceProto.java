@@ -75,7 +75,7 @@ public final class RemarketingActionServiceProto {
       "tus\022P\n\007results\030\002 \003(\0132?.google.ads.google" +
       "ads.v6.services.MutateRemarketingActionR" +
       "esult\"6\n\035MutateRemarketingActionResult\022\025" +
-      "\n\rresource_name\030\001 \001(\t2\224\004\n\030RemarketingAct" +
+      "\n\rresource_name\030\001 \001(\t2\276\004\n\030RemarketingAct" +
       "ionService\022\331\001\n\024GetRemarketingAction\022=.go" +
       "ogle.ads.googleads.v6.services.GetRemark" +
       "etingActionRequest\0324.google.ads.googlead" +
@@ -88,14 +88,15 @@ public final class RemarketingActionServiceProto {
       "s.MutateRemarketingActionsResponse\"[\202\323\344\223" +
       "\002<\"7/v6/customers/{customer_id=*}/remark" +
       "etingActions:mutate:\001*\332A\026customer_id,ope" +
-      "rations\032\033\312A\030googleads.googleapis.comB\204\002\n" +
-      "$com.google.ads.googleads.v6.servicesB\035R" +
-      "emarketingActionServiceProtoP\001ZHgoogle.g" +
-      "olang.org/genproto/googleapis/ads/google" +
-      "ads/v6/services;services\242\002\003GAA\252\002 Google." +
-      "Ads.GoogleAds.V6.Services\312\002 Google\\Ads\\G" +
-      "oogleAds\\V6\\Services\352\002$Google::Ads::Goog" +
-      "leAds::V6::Servicesb\006proto3"
+      "rations\032E\312A\030googleads.googleapis.com\322A\'h" +
+      "ttps://www.googleapis.com/auth/adwordsB\204" +
+      "\002\n$com.google.ads.googleads.v6.servicesB" +
+      "\035RemarketingActionServiceProtoP\001ZHgoogle" +
+      ".golang.org/genproto/googleapis/ads/goog" +
+      "leads/v6/services;services\242\002\003GAA\252\002 Googl" +
+      "e.Ads.GoogleAds.V6.Services\312\002 Google\\Ads" +
+      "\\GoogleAds\\V6\\Services\352\002$Google::Ads::Go" +
+      "ogleAds::V6::Servicesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -144,6 +145,7 @@ public final class RemarketingActionServiceProto {
     registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);
     registry.add(com.google.api.AnnotationsProto.http);
     registry.add(com.google.api.ClientProto.methodSignature);
+    registry.add(com.google.api.ClientProto.oauthScopes);
     registry.add(com.google.api.ResourceProto.resourceReference);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
