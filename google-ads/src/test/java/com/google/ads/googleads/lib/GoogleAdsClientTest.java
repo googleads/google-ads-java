@@ -19,11 +19,12 @@ import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNotEquals;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertNull;
-import static org.junit.Assert.assertThat;
+import static org.junit.Assert.assertSame;
 import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.fail;
 
 import com.google.ads.googleads.lib.GoogleAdsClient.Builder;
+import com.google.ads.googleads.lib.GoogleAdsClient.Builder.AdsEnvironmentVariable;
 import com.google.ads.googleads.lib.GoogleAdsClient.Builder.ConfigPropertyKey;
 import com.google.ads.googleads.lib.catalog.ApiCatalog;
 import com.google.ads.googleads.v6.errors.GoogleAdsError;
@@ -45,6 +46,7 @@ import com.google.api.gax.rpc.ApiException;
 import com.google.auth.Credentials;
 import com.google.auth.oauth2.ServiceAccountCredentials;
 import com.google.auth.oauth2.UserCredentials;
+import com.google.common.collect.ImmutableMap;
 import com.google.common.io.Files;
 import com.google.common.io.Resources;
 import io.grpc.Metadata;
@@ -52,17 +54,20 @@ import io.grpc.Status;
 import io.grpc.Status.Code;
 import io.grpc.StatusException;
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
 import java.nio.charset.StandardCharsets;
 import java.util.Collections;
+import java.util.Map;
 import java.util.Properties;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.regex.Pattern;
 import java.util.stream.Stream;
 import javax.annotation.Nullable;
+import org.hamcrest.MatcherAssert;
 import org.hamcrest.Matchers;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -84,6 +89,7 @@ public class GoogleAdsClientTest {
   private static final String CLIENT_SECRET = "abcdefghijklmnop";
   private static final String REFRESH_TOKEN = "QRSTUVWXYZ";
   private static final String DEVELOPER_TOKEN = "developer_token";
+  private static final String SERVICE_ACCOUNT_USER = "someuser@example.com";
   private static final long LOGIN_CUSTOMER_ID = 123456789L;
   private static final long LINKED_CUSTOMER_ID = 987654321L;
   private static final MockGoogleAdsService mockService = new MockGoogleAdsService();
@@ -148,7 +154,7 @@ public class GoogleAdsClientTest {
     Builder builder = GoogleAdsClient.newBuilder();
     builder.setConfigurationFileSupplier(() -> propertiesFile);
     GoogleAdsClient client = builder.fromPropertiesFile().build();
-    assertGoogleAdsClient(client);
+    assertGoogleAdsClient(client, true);
   }
 
   /** Tests building a client from a properties file. */
@@ -163,7 +169,7 @@ public class GoogleAdsClientTest {
     // Build a new client from the file.
     GoogleAdsClient client =
         GoogleAdsClient.newBuilder().fromPropertiesFile(propertiesFile).build();
-    assertGoogleAdsClient(client);
+    assertGoogleAdsClient(client, true);
   }
 
   /**
@@ -186,7 +192,29 @@ public class GoogleAdsClientTest {
             .fromPropertiesFile(propertiesFile)
             .setTransportChannelProvider(localChannelProvider)
             .build();
-    assertGoogleAdsClient(client, null);
+    assertGoogleAdsClient(client, null, true);
+  }
+
+  /**
+   * Verifies reading config from a Java properties file where the path is specified from the
+   * environment variable.
+   */
+  @Test
+  public void buildFromPropertiesFile_readsFromPropertiesFile_viaEnvironment() throws IOException {
+    File propertiesFile = folder.newFile("ads.properties");
+    try (FileWriter propertiesFileWriter = new FileWriter(propertiesFile)) {
+      testProperties.store(propertiesFileWriter, null);
+    }
+    Builder builder = GoogleAdsClient.newBuilder();
+    Map<String, String> environment =
+        ImmutableMap.<String, String>builder()
+            .put(
+                AdsEnvironmentVariable.GOOGLE_ADS_CONFIGURATION_FILE_PATH.name(),
+                propertiesFile.getPath())
+            .build();
+    GoogleAdsClient client =
+        builder.setEnvironmentValueGetter(environment::get).fromPropertiesFile().build();
+    assertGoogleAdsClient(client, true);
   }
 
   /** Tests that an exception is thrown for a nonexistant properties file. */
@@ -237,7 +265,7 @@ public class GoogleAdsClientTest {
             .setLoginCustomerId(LOGIN_CUSTOMER_ID)
             .setTransportChannelProvider(localChannelProvider)
             .build();
-    assertGoogleAdsClient(client);
+    assertGoogleAdsClient(client, true);
   }
 
   /** Verifies that builder supports nullable loginCustomerId. */
@@ -282,35 +310,225 @@ public class GoogleAdsClientTest {
     GoogleAdsClient.newBuilder().fromProperties(testProperties).build();
   }
 
+  @Test
+  public void buildFromEnvironment_bothCredentialsPresent_throwsException() {
+    Map<String, String> environment =
+        ImmutableMap.<String, String>builder()
+            .put(AdsEnvironmentVariable.GOOGLE_ADS_CLIENT_ID.name(), CLIENT_ID)
+            .put(AdsEnvironmentVariable.GOOGLE_ADS_CLIENT_SECRET.name(), CLIENT_SECRET)
+            .put(AdsEnvironmentVariable.GOOGLE_ADS_REFRESH_TOKEN.name(), REFRESH_TOKEN)
+            .put(
+                AdsEnvironmentVariable.GOOGLE_ADS_JSON_KEY_FILE_PATH.name(),
+                "/some/path/secrets.json")
+            .put(AdsEnvironmentVariable.GOOGLE_ADS_IMPERSONATED_EMAIL.name(), SERVICE_ACCOUNT_USER)
+            .build();
+    GoogleAdsClient.Builder builder =
+        GoogleAdsClient.newBuilder().setEnvironmentValueGetter(environment::get);
+    // Invokes the fromEnvironment method on the builder, which should fail.
+    thrown.expect(IllegalArgumentException.class);
+    thrown.expectMessage("both");
+    builder.fromEnvironment();
+  }
   /**
    * Verifies that a proper exception is thrown when neither refresh token nor service account
    * secrets path are specified in properties.
    */
   @Test
-  public void buildFromProperties_neitherCredentialsPresent_throwsException() {
+  public void buildFromProperties_neitherCredentialsPresent_throwsException_atBuild() {
     testProperties.remove(ConfigPropertyKey.CLIENT_ID.getPropertyKey());
     testProperties.remove(ConfigPropertyKey.CLIENT_SECRET.getPropertyKey());
     testProperties.remove(ConfigPropertyKey.REFRESH_TOKEN.getPropertyKey());
     testProperties.remove(ConfigPropertyKey.SERVICE_ACCOUNT_SECRETS_PATH.getPropertyKey());
-    // Invokes the fromProperties method on the builder, which should fail.
-    thrown.expect(IllegalArgumentException.class);
-    thrown.expectMessage("Missing properties");
-    GoogleAdsClient.newBuilder().fromProperties(testProperties).build();
+    // Invokes the fromProperties() method on the builder, which should succeed.
+    Builder builder = GoogleAdsClient.newBuilder().fromProperties(testProperties);
+    // Invokes the build() method on the builder, which should fail.
+    thrown.expect(IllegalStateException.class);
+    thrown.expectMessage("credentials");
+    builder.build();
+  }
+
+  @Test
+  public void buildFromEnvironment_mergeWithProperties_withUserCredentials() throws IOException {
+    Map<String, String> environment =
+        ImmutableMap.<String, String>builder()
+            .put(AdsEnvironmentVariable.GOOGLE_ADS_CLIENT_ID.name(), CLIENT_ID)
+            .put(AdsEnvironmentVariable.GOOGLE_ADS_CLIENT_SECRET.name(), CLIENT_SECRET)
+            .put(AdsEnvironmentVariable.GOOGLE_ADS_REFRESH_TOKEN.name(), REFRESH_TOKEN)
+            .put(
+                AdsEnvironmentVariable.GOOGLE_ADS_LINKED_CUSTOMER_ID.name(),
+                Long.toString(LINKED_CUSTOMER_ID))
+            .build();
+    testProperties.remove(ConfigPropertyKey.CLIENT_ID.getPropertyKey());
+    testProperties.remove(ConfigPropertyKey.CLIENT_SECRET.getPropertyKey());
+    testProperties.remove(ConfigPropertyKey.REFRESH_TOKEN.getPropertyKey());
+    GoogleAdsClient client =
+        GoogleAdsClient.newBuilder()
+            .setEnvironmentValueGetter(environment::get)
+            .fromEnvironment()
+            .fromProperties(testProperties)
+            .build();
+    assertGoogleAdsClient(client, true);
+    // Changes the order to properties, then environment, and tests again.
+    client =
+        GoogleAdsClient.newBuilder()
+            .setEnvironmentValueGetter(environment::get)
+            .fromProperties(testProperties)
+            .fromEnvironment()
+            .build();
+    assertGoogleAdsClient(client, true);
+    assertEquals(LINKED_CUSTOMER_ID, client.getLinkedCustomerId().longValue());
+  }
+
+  @Test
+  public void buildFromEnvironment_mergeWithProperties_withUserCredentials_split()
+      throws IOException {
+    // Specifies the client ID and secret via environment variables, and refresh token via
+    // properties.
+    Map<String, String> environment =
+        ImmutableMap.<String, String>builder()
+            .put(AdsEnvironmentVariable.GOOGLE_ADS_CLIENT_ID.name(), CLIENT_ID)
+            .put(AdsEnvironmentVariable.GOOGLE_ADS_CLIENT_SECRET.name(), CLIENT_SECRET)
+            .build();
+    // Removes all auth properties except refresh token.
+    testProperties.remove(ConfigPropertyKey.CLIENT_ID.getPropertyKey());
+    testProperties.remove(ConfigPropertyKey.CLIENT_SECRET.getPropertyKey());
+    GoogleAdsClient client =
+        GoogleAdsClient.newBuilder()
+            .setEnvironmentValueGetter(environment::get)
+            .fromEnvironment()
+            .fromProperties(testProperties)
+            .build();
+    assertGoogleAdsClient(client, true);
+    // Changes the order to properties, then environment, and tests again.
+    client =
+        GoogleAdsClient.newBuilder()
+            .setEnvironmentValueGetter(environment::get)
+            .fromProperties(testProperties)
+            .fromEnvironment()
+            .build();
+    assertGoogleAdsClient(client, true);
+  }
+
+  @Test
+  public void buildFromEnvironment_mergeWithProperties_withServiceAccountCredentials()
+      throws IOException {
+    // Copies the mock service account credentials secrets file from test resources to a file in the
+    // temporary folder.
+    File secretsFile = createTestServiceAccountSecretsFile();
+    Map<String, String> environment =
+        ImmutableMap.<String, String>builder()
+            .put(AdsEnvironmentVariable.GOOGLE_ADS_JSON_KEY_FILE_PATH.name(), secretsFile.getPath())
+            .put(AdsEnvironmentVariable.GOOGLE_ADS_IMPERSONATED_EMAIL.name(), SERVICE_ACCOUNT_USER)
+            .build();
+    // Removes all auth properties.
+    testProperties.remove(ConfigPropertyKey.CLIENT_ID.getPropertyKey());
+    testProperties.remove(ConfigPropertyKey.CLIENT_SECRET.getPropertyKey());
+    testProperties.remove(ConfigPropertyKey.REFRESH_TOKEN.getPropertyKey());
+    testProperties.put(
+        ConfigPropertyKey.LINKED_CUSTOMER_ID.getPropertyKey(), Long.toString(LINKED_CUSTOMER_ID));
+    GoogleAdsClient client =
+        GoogleAdsClient.newBuilder()
+            .setEnvironmentValueGetter(environment::get)
+            .fromEnvironment()
+            .fromProperties(testProperties)
+            .build();
+    assertGoogleAdsClient(client, false);
+    assertEquals(LINKED_CUSTOMER_ID, client.getLinkedCustomerId().longValue());
+    // Changes the order to properties, then environment, and tests again.
+    client =
+        GoogleAdsClient.newBuilder()
+            .setEnvironmentValueGetter(environment::get)
+            .fromProperties(testProperties)
+            .fromEnvironment()
+            .build();
+    assertGoogleAdsClient(client, false);
+    assertEquals(LINKED_CUSTOMER_ID, client.getLinkedCustomerId().longValue());
   }
 
   /**
-   * Verifies that a client with service account credentials is created when service account keys
-   * have valid values in the properties map.
+   * Tests the service accounts case where the impersonated email comes from the environment and the
+   * file comes from properties.
    */
   @Test
-  public void buildFromProperties_withServiceAccountCredentials() throws IOException {
+  public void buildFromEnvironment_mergeWithProperties_withServiceAccountCredentials_split_1()
+      throws IOException {
     // Copies the mock service account credentials secrets file from test resources to a file in the
     // temporary folder.
-    File secretsFile = folder.newFile("serviceAccountSecrets.json");
-    Resources.asCharSource(
-            Resources.getResource(getClass(), "mock_service_account_secrets.json"),
-            StandardCharsets.UTF_8)
-        .copyTo(Files.asCharSink(secretsFile, StandardCharsets.UTF_8));
+    File secretsFile = createTestServiceAccountSecretsFile();
+    Map<String, String> environment =
+        ImmutableMap.<String, String>builder()
+            .put(AdsEnvironmentVariable.GOOGLE_ADS_IMPERSONATED_EMAIL.name(), SERVICE_ACCOUNT_USER)
+            .build();
+    // Removes all auth properties for user credentials, and adds the service account secrets path
+    // property.
+    testProperties.remove(ConfigPropertyKey.CLIENT_ID.getPropertyKey());
+    testProperties.remove(ConfigPropertyKey.CLIENT_SECRET.getPropertyKey());
+    testProperties.remove(ConfigPropertyKey.REFRESH_TOKEN.getPropertyKey());
+    testProperties.put(
+        ConfigPropertyKey.SERVICE_ACCOUNT_SECRETS_PATH.getPropertyKey(), secretsFile.getPath());
+    GoogleAdsClient client =
+        GoogleAdsClient.newBuilder()
+            .setEnvironmentValueGetter(environment::get)
+            .fromEnvironment()
+            .fromProperties(testProperties)
+            .build();
+    assertGoogleAdsClient(client, false);
+    // Changes the order to properties, then environment, and tests again.
+    client =
+        GoogleAdsClient.newBuilder()
+            .setEnvironmentValueGetter(environment::get)
+            .fromProperties(testProperties)
+            .fromEnvironment()
+            .build();
+    assertGoogleAdsClient(client, false);
+  }
+
+  /**
+   * Tests the service accounts case where the file comes from the environment and the impersonated
+   * email comes from properties.
+   */
+  @Test
+  public void buildFromEnvironment_mergeWithProperties_withServiceAccountCredentials_split_2()
+      throws IOException {
+    // Copies the mock service account credentials secrets file from test resources to a file in the
+    // temporary folder.
+    File secretsFile = createTestServiceAccountSecretsFile();
+    Map<String, String> environment =
+        ImmutableMap.<String, String>builder()
+            .put(AdsEnvironmentVariable.GOOGLE_ADS_JSON_KEY_FILE_PATH.name(), secretsFile.getPath())
+            .build();
+    // Removes all auth properties for user credentials, and adds the service account user
+    // property.
+    testProperties.remove(ConfigPropertyKey.CLIENT_ID.getPropertyKey());
+    testProperties.remove(ConfigPropertyKey.CLIENT_SECRET.getPropertyKey());
+    testProperties.remove(ConfigPropertyKey.REFRESH_TOKEN.getPropertyKey());
+    testProperties.put(
+        ConfigPropertyKey.SERVICE_ACCOUNT_USER.getPropertyKey(), SERVICE_ACCOUNT_USER);
+    GoogleAdsClient client =
+        GoogleAdsClient.newBuilder()
+            .setEnvironmentValueGetter(environment::get)
+            .fromEnvironment()
+            .fromProperties(testProperties)
+            .build();
+    assertGoogleAdsClient(client, false);
+    // Changes the order to properties, then environment, and tests again.
+    client =
+        GoogleAdsClient.newBuilder()
+            .setEnvironmentValueGetter(environment::get)
+            .fromProperties(testProperties)
+            .fromEnvironment()
+            .build();
+    assertGoogleAdsClient(client, false);
+  }
+
+  /**
+   * Verifies that if the user configures service account credentials via properties or environment
+   * variables and also explicitly sets credentials via the setter, the last action is used.
+   */
+  @Test
+  public void buildFromProperties_withConfigAndExplicitServiceAccountCredentials_lastWins()
+      throws IOException {
+    File secretsFile = createTestServiceAccountSecretsFile();
 
     // Configures properties for the service account use case, including reading the service account
     // secrets from the file created above.
@@ -320,23 +538,92 @@ public class GoogleAdsClientTest {
     testProperties.setProperty(
         ConfigPropertyKey.SERVICE_ACCOUNT_SECRETS_PATH.getPropertyKey(), secretsFile.getPath());
     testProperties.setProperty(
-        ConfigPropertyKey.SERVICE_ACCOUNT_USER.getPropertyKey(), "someuser@example.com");
+        ConfigPropertyKey.SERVICE_ACCOUNT_USER.getPropertyKey(), SERVICE_ACCOUNT_USER);
+
+    ServiceAccountCredentials serviceAccountCredentials =
+        ServiceAccountCredentials.fromStream(new FileInputStream(secretsFile)).toBuilder()
+            .setServiceAccountUser("someOtherUser@example.com")
+            .build();
+
+    // Builds the client, first explicitly setting credentials, then loading from properties.
+    GoogleAdsClient client =
+        GoogleAdsClient.newBuilder()
+            .setCredentials(serviceAccountCredentials)
+            .fromProperties(testProperties)
+            .build();
+    assertEquals(
+        "Service account user should match setting from properties",
+        SERVICE_ACCOUNT_USER,
+        ((ServiceAccountCredentials) client.getCredentials()).getServiceAccountUser());
+    // Changes the order.
+    client =
+        GoogleAdsClient.newBuilder()
+            .fromProperties(testProperties)
+            .setCredentials(serviceAccountCredentials)
+            .build();
+    assertSame(
+        "Credentials should be the ones explicitly set",
+        serviceAccountCredentials,
+        client.getCredentials());
+  }
+
+  /**
+   * Verifies that if the user configures user credentials via properties or environment variables
+   * and also explicitly sets credentials via the setter, the last action is used.
+   */
+  @Test
+  public void buildFromProperties_withConfigAndExplicitUserCredentials_lastWins()
+      throws IOException {
+    UserCredentials userCredentials =
+        UserCredentials.newBuilder()
+            .setClientId(CLIENT_ID)
+            .setClientSecret(CLIENT_SECRET)
+            .setRefreshToken("some-other-refresh-token")
+            .build();
+
+    // Builds the client, first explicitly setting credentials, then loading from properties.
+    GoogleAdsClient client =
+        GoogleAdsClient.newBuilder()
+            .setCredentials(userCredentials)
+            .fromProperties(testProperties)
+            .build();
+    assertEquals(
+        "Refresh token should match setting from properties",
+        REFRESH_TOKEN,
+        ((UserCredentials) client.getCredentials()).getRefreshToken());
+    // Changes the order.
+    client =
+        GoogleAdsClient.newBuilder()
+            .fromProperties(testProperties)
+            .setCredentials(userCredentials)
+            .build();
+    assertSame(
+        "Credentials should be the ones explicitly set", userCredentials, client.getCredentials());
+  }
+
+  /**
+   * Verifies that a client with service account credentials is created when service account keys
+   * have valid values in the properties map.
+   */
+  @Test
+  public void buildFromProperties_withServiceAccountCredentials() throws IOException {
+    File secretsFile = createTestServiceAccountSecretsFile();
+
+    // Configures properties for the service account use case, including reading the service account
+    // secrets from the file created above.
+    testProperties.remove(ConfigPropertyKey.CLIENT_ID.getPropertyKey());
+    testProperties.remove(ConfigPropertyKey.CLIENT_SECRET.getPropertyKey());
+    testProperties.remove(ConfigPropertyKey.REFRESH_TOKEN.getPropertyKey());
+    testProperties.setProperty(
+        ConfigPropertyKey.SERVICE_ACCOUNT_SECRETS_PATH.getPropertyKey(), secretsFile.getPath());
+    testProperties.setProperty(
+        ConfigPropertyKey.SERVICE_ACCOUNT_USER.getPropertyKey(), SERVICE_ACCOUNT_USER);
 
     // Builds the client.
     GoogleAdsClient client = GoogleAdsClient.newBuilder().fromProperties(testProperties).build();
 
     // Asserts client and credentials match expectations.
-    ServiceAccountCredentials credentials = (ServiceAccountCredentials) client.getCredentials();
-    assertNotNull("Null credentials", credentials);
-    assertEquals(
-        "Service account user", "someuser@example.com", credentials.getServiceAccountUser());
-    assertEquals(
-        "Scope",
-        Collections.singleton("https://www.googleapis.com/auth/adwords"),
-        credentials.getScopes());
-
-    assertEquals("Developer token", DEVELOPER_TOKEN, client.getDeveloperToken());
-    assertEquals("Login customer ID", Long.valueOf(LOGIN_CUSTOMER_ID), client.getLoginCustomerId());
+    assertGoogleAdsClient(client, false);
   }
 
   /**
@@ -569,27 +856,52 @@ public class GoogleAdsClientTest {
    * Asserts that the provided client matches expectations. Expects a login customer ID of {@link
    * #LOGIN_CUSTOMER_ID} on the client.
    */
-  private void assertGoogleAdsClient(GoogleAdsClient client) throws IOException {
-    assertGoogleAdsClient(client, LOGIN_CUSTOMER_ID);
+  private void assertGoogleAdsClient(GoogleAdsClient client, boolean expectUserCredentials) {
+    assertGoogleAdsClient(client, LOGIN_CUSTOMER_ID, expectUserCredentials);
   }
 
   /**
    * Asserts that the provided client matches expectations. Expects a login customer ID that matches
    * the provided value.
    */
-  private void assertGoogleAdsClient(GoogleAdsClient client, @Nullable Long loginCustomerId)
-      throws IOException {
+  private void assertGoogleAdsClient(
+      GoogleAdsClient client, @Nullable Long loginCustomerId, boolean expectUserCredentials) {
     assertNotNull("Null client", client);
 
     Credentials credentials = client.getCredentials();
     assertNotNull("Null credentials", credentials);
-    assertThat(credentials, Matchers.instanceOf(UserCredentials.class));
-    UserCredentials userCredentials = (UserCredentials) credentials;
-    assertEquals("Client ID", CLIENT_ID, userCredentials.getClientId());
-    assertEquals("Client secret", CLIENT_SECRET, userCredentials.getClientSecret());
-    assertEquals("Refresh token", REFRESH_TOKEN, userCredentials.getRefreshToken());
+    if (expectUserCredentials) {
+      MatcherAssert.assertThat(credentials, Matchers.instanceOf(UserCredentials.class));
+      UserCredentials userCredentials = (UserCredentials) credentials;
+      assertEquals("Client ID", CLIENT_ID, userCredentials.getClientId());
+      assertEquals("Client secret", CLIENT_SECRET, userCredentials.getClientSecret());
+      assertEquals("Refresh token", REFRESH_TOKEN, userCredentials.getRefreshToken());
+    } else {
+      MatcherAssert.assertThat(credentials, Matchers.instanceOf(ServiceAccountCredentials.class));
+      ServiceAccountCredentials serviceAccountCredentials = (ServiceAccountCredentials) credentials;
+      assertEquals(SERVICE_ACCOUNT_USER, serviceAccountCredentials.getServiceAccountUser());
+      assertEquals(
+          "Scope",
+          Collections.singleton("https://www.googleapis.com/auth/adwords"),
+          serviceAccountCredentials.getScopes());
+    }
 
     assertEquals("Developer token", DEVELOPER_TOKEN, client.getDeveloperToken());
     assertEquals("Login customer id", loginCustomerId, client.getLoginCustomerId());
+  }
+
+  /**
+   * Copies the mock service account credentials secrets file from test resources to a file in the
+   * temporary folder.
+   *
+   * @return the created secrets file
+   */
+  private File createTestServiceAccountSecretsFile() throws IOException {
+    File secretsFile = folder.newFile("serviceAccountSecrets.json");
+    Resources.asCharSource(
+            Resources.getResource(getClass(), "mock_service_account_secrets.json"),
+            StandardCharsets.UTF_8)
+        .copyTo(Files.asCharSink(secretsFile, StandardCharsets.UTF_8));
+    return secretsFile;
   }
 }

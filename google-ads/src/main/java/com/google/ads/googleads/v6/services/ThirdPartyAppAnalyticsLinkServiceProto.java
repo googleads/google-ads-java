@@ -5,110 +5,110 @@ package com.google.ads.googleads.v6.services;
 
 public final class ThirdPartyAppAnalyticsLinkServiceProto {
   private ThirdPartyAppAnalyticsLinkServiceProto() {}
-  public static void registerAllExtensions(
-      com.google.protobuf.ExtensionRegistryLite registry) {
+
+  public static void registerAllExtensions(com.google.protobuf.ExtensionRegistryLite registry) {}
+
+  public static void registerAllExtensions(com.google.protobuf.ExtensionRegistry registry) {
+    registerAllExtensions((com.google.protobuf.ExtensionRegistryLite) registry);
   }
 
-  public static void registerAllExtensions(
-      com.google.protobuf.ExtensionRegistry registry) {
-    registerAllExtensions(
-        (com.google.protobuf.ExtensionRegistryLite) registry);
-  }
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_google_ads_googleads_v6_services_GetThirdPartyAppAnalyticsLinkRequest_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_google_ads_googleads_v6_services_GetThirdPartyAppAnalyticsLinkRequest_descriptor;
+  static final com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_google_ads_googleads_v6_services_GetThirdPartyAppAnalyticsLinkRequest_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_google_ads_googleads_v6_services_RegenerateShareableLinkIdRequest_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_google_ads_googleads_v6_services_RegenerateShareableLinkIdRequest_descriptor;
+  static final com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_google_ads_googleads_v6_services_RegenerateShareableLinkIdRequest_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_google_ads_googleads_v6_services_RegenerateShareableLinkIdResponse_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_google_ads_googleads_v6_services_RegenerateShareableLinkIdResponse_descriptor;
+  static final com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_google_ads_googleads_v6_services_RegenerateShareableLinkIdResponse_fieldAccessorTable;
 
-  public static com.google.protobuf.Descriptors.FileDescriptor
-      getDescriptor() {
+  public static com.google.protobuf.Descriptors.FileDescriptor getDescriptor() {
     return descriptor;
   }
-  private static  com.google.protobuf.Descriptors.FileDescriptor
-      descriptor;
+
+  private static com.google.protobuf.Descriptors.FileDescriptor descriptor;
+
   static {
     java.lang.String[] descriptorData = {
-      "\nMgoogle/ads/googleads/v6/services/third" +
-      "_party_app_analytics_link_service.proto\022" +
-      " google.ads.googleads.v6.services\032Fgoogl" +
-      "e/ads/googleads/v6/resources/third_party" +
-      "_app_analytics_link.proto\032\034google/api/an" +
-      "notations.proto\032\031google/api/resource.pro" +
-      "to\032\027google/api/client.proto\"w\n$GetThirdP" +
-      "artyAppAnalyticsLinkRequest\022O\n\rresource_" +
-      "name\030\001 \001(\tB8\372A5\n3googleads.googleapis.co" +
-      "m/ThirdPartyAppAnalyticsLink\"s\n Regenera" +
-      "teShareableLinkIdRequest\022O\n\rresource_nam" +
-      "e\030\001 \001(\tB8\372A5\n3googleads.googleapis.com/T" +
-      "hirdPartyAppAnalyticsLink\"#\n!RegenerateS" +
-      "hareableLinkIdResponse2\345\004\n!ThirdPartyApp" +
-      "AnalyticsLinkService\022\355\001\n\035GetThirdPartyAp" +
-      "pAnalyticsLink\022F.google.ads.googleads.v6" +
-      ".services.GetThirdPartyAppAnalyticsLinkR" +
-      "equest\032=.google.ads.googleads.v6.resourc" +
-      "es.ThirdPartyAppAnalyticsLink\"E\202\323\344\223\002?\022=/" +
-      "v6/{resource_name=customers/*/thirdParty" +
-      "AppAnalyticsLinks/*}\022\210\002\n\031RegenerateShare" +
-      "ableLinkId\022B.google.ads.googleads.v6.ser" +
-      "vices.RegenerateShareableLinkIdRequest\032C" +
-      ".google.ads.googleads.v6.services.Regene" +
-      "rateShareableLinkIdResponse\"b\202\323\344\223\002\\\"W/v6" +
-      "/{resource_name=customers/*/thirdPartyAp" +
-      "pAnalyticsLinks/*}:regenerateShareableLi" +
-      "nkId:\001*\032E\312A\030googleads.googleapis.com\322A\'h" +
-      "ttps://www.googleapis.com/auth/adwordsB\215" +
-      "\002\n$com.google.ads.googleads.v6.servicesB" +
-      "&ThirdPartyAppAnalyticsLinkServiceProtoP" +
-      "\001ZHgoogle.golang.org/genproto/googleapis" +
-      "/ads/googleads/v6/services;services\242\002\003GA" +
-      "A\252\002 Google.Ads.GoogleAds.V6.Services\312\002 G" +
-      "oogle\\Ads\\GoogleAds\\V6\\Services\352\002$Google" +
-      "::Ads::GoogleAds::V6::Servicesb\006proto3"
+      "\nMgoogle/ads/googleads/v6/services/third"
+          + "_party_app_analytics_link_service.proto\022"
+          + " google.ads.googleads.v6.services\032Fgoogl"
+          + "e/ads/googleads/v6/resources/third_party"
+          + "_app_analytics_link.proto\032\034google/api/an"
+          + "notations.proto\032\031google/api/resource.pro"
+          + "to\032\027google/api/client.proto\"w\n$GetThirdP"
+          + "artyAppAnalyticsLinkRequest\022O\n\rresource_"
+          + "name\030\001 \001(\tB8\372A5\n3googleads.googleapis.co"
+          + "m/ThirdPartyAppAnalyticsLink\"s\n Regenera"
+          + "teShareableLinkIdRequest\022O\n\rresource_nam"
+          + "e\030\001 \001(\tB8\372A5\n3googleads.googleapis.com/T"
+          + "hirdPartyAppAnalyticsLink\"#\n!RegenerateS"
+          + "hareableLinkIdResponse2\345\004\n!ThirdPartyApp"
+          + "AnalyticsLinkService\022\355\001\n\035GetThirdPartyAp"
+          + "pAnalyticsLink\022F.google.ads.googleads.v6"
+          + ".services.GetThirdPartyAppAnalyticsLinkR"
+          + "equest\032=.google.ads.googleads.v6.resourc"
+          + "es.ThirdPartyAppAnalyticsLink\"E\202\323\344\223\002?\022=/"
+          + "v6/{resource_name=customers/*/thirdParty"
+          + "AppAnalyticsLinks/*}\022\210\002\n\031RegenerateShare"
+          + "ableLinkId\022B.google.ads.googleads.v6.ser"
+          + "vices.RegenerateShareableLinkIdRequest\032C"
+          + ".google.ads.googleads.v6.services.Regene"
+          + "rateShareableLinkIdResponse\"b\202\323\344\223\002\\\"W/v6"
+          + "/{resource_name=customers/*/thirdPartyAp"
+          + "pAnalyticsLinks/*}:regenerateShareableLi"
+          + "nkId:\001*\032E\312A\030googleads.googleapis.com\322A\'h"
+          + "ttps://www.googleapis.com/auth/adwordsB\215"
+          + "\002\n$com.google.ads.googleads.v6.servicesB"
+          + "&ThirdPartyAppAnalyticsLinkServiceProtoP"
+          + "\001ZHgoogle.golang.org/genproto/googleapis"
+          + "/ads/googleads/v6/services;services\242\002\003GA"
+          + "A\252\002 Google.Ads.GoogleAds.V6.Services\312\002 G"
+          + "oogle\\Ads\\GoogleAds\\V6\\Services\352\002$Google"
+          + "::Ads::GoogleAds::V6::Servicesb\006proto3"
     };
-    descriptor = com.google.protobuf.Descriptors.FileDescriptor
-      .internalBuildGeneratedFileFrom(descriptorData,
-        new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.google.ads.googleads.v6.resources.ThirdPartyAppAnalyticsLinkProto.getDescriptor(),
-          com.google.api.AnnotationsProto.getDescriptor(),
-          com.google.api.ResourceProto.getDescriptor(),
-          com.google.api.ClientProto.getDescriptor(),
-        });
+    descriptor =
+        com.google.protobuf.Descriptors.FileDescriptor.internalBuildGeneratedFileFrom(
+            descriptorData,
+            new com.google.protobuf.Descriptors.FileDescriptor[] {
+              com.google.ads.googleads.v6.resources.ThirdPartyAppAnalyticsLinkProto.getDescriptor(),
+              com.google.api.AnnotationsProto.getDescriptor(),
+              com.google.api.ResourceProto.getDescriptor(),
+              com.google.api.ClientProto.getDescriptor(),
+            });
     internal_static_google_ads_googleads_v6_services_GetThirdPartyAppAnalyticsLinkRequest_descriptor =
-      getDescriptor().getMessageTypes().get(0);
-    internal_static_google_ads_googleads_v6_services_GetThirdPartyAppAnalyticsLinkRequest_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_google_ads_googleads_v6_services_GetThirdPartyAppAnalyticsLinkRequest_descriptor,
-        new java.lang.String[] { "ResourceName", });
+        getDescriptor().getMessageTypes().get(0);
+    internal_static_google_ads_googleads_v6_services_GetThirdPartyAppAnalyticsLinkRequest_fieldAccessorTable =
+        new com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+            internal_static_google_ads_googleads_v6_services_GetThirdPartyAppAnalyticsLinkRequest_descriptor,
+            new java.lang.String[] {
+              "ResourceName",
+            });
     internal_static_google_ads_googleads_v6_services_RegenerateShareableLinkIdRequest_descriptor =
-      getDescriptor().getMessageTypes().get(1);
-    internal_static_google_ads_googleads_v6_services_RegenerateShareableLinkIdRequest_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_google_ads_googleads_v6_services_RegenerateShareableLinkIdRequest_descriptor,
-        new java.lang.String[] { "ResourceName", });
+        getDescriptor().getMessageTypes().get(1);
+    internal_static_google_ads_googleads_v6_services_RegenerateShareableLinkIdRequest_fieldAccessorTable =
+        new com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+            internal_static_google_ads_googleads_v6_services_RegenerateShareableLinkIdRequest_descriptor,
+            new java.lang.String[] {
+              "ResourceName",
+            });
     internal_static_google_ads_googleads_v6_services_RegenerateShareableLinkIdResponse_descriptor =
-      getDescriptor().getMessageTypes().get(2);
-    internal_static_google_ads_googleads_v6_services_RegenerateShareableLinkIdResponse_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_google_ads_googleads_v6_services_RegenerateShareableLinkIdResponse_descriptor,
-        new java.lang.String[] { });
+        getDescriptor().getMessageTypes().get(2);
+    internal_static_google_ads_googleads_v6_services_RegenerateShareableLinkIdResponse_fieldAccessorTable =
+        new com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+            internal_static_google_ads_googleads_v6_services_RegenerateShareableLinkIdResponse_descriptor,
+            new java.lang.String[] {});
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.ClientProto.defaultHost);
     registry.add(com.google.api.AnnotationsProto.http);
     registry.add(com.google.api.ClientProto.oauthScopes);
     registry.add(com.google.api.ResourceProto.resourceReference);
-    com.google.protobuf.Descriptors.FileDescriptor
-        .internalUpdateFileDescriptor(descriptor, registry);
+    com.google.protobuf.Descriptors.FileDescriptor.internalUpdateFileDescriptor(
+        descriptor, registry);
     com.google.ads.googleads.v6.resources.ThirdPartyAppAnalyticsLinkProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
     com.google.api.ResourceProto.getDescriptor();

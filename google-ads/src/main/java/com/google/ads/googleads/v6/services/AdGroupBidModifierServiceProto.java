@@ -5,149 +5,153 @@ package com.google.ads.googleads.v6.services;
 
 public final class AdGroupBidModifierServiceProto {
   private AdGroupBidModifierServiceProto() {}
-  public static void registerAllExtensions(
-      com.google.protobuf.ExtensionRegistryLite registry) {
+
+  public static void registerAllExtensions(com.google.protobuf.ExtensionRegistryLite registry) {}
+
+  public static void registerAllExtensions(com.google.protobuf.ExtensionRegistry registry) {
+    registerAllExtensions((com.google.protobuf.ExtensionRegistryLite) registry);
   }
 
-  public static void registerAllExtensions(
-      com.google.protobuf.ExtensionRegistry registry) {
-    registerAllExtensions(
-        (com.google.protobuf.ExtensionRegistryLite) registry);
-  }
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_google_ads_googleads_v6_services_GetAdGroupBidModifierRequest_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_google_ads_googleads_v6_services_GetAdGroupBidModifierRequest_descriptor;
+  static final com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_google_ads_googleads_v6_services_GetAdGroupBidModifierRequest_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_google_ads_googleads_v6_services_MutateAdGroupBidModifiersRequest_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_google_ads_googleads_v6_services_MutateAdGroupBidModifiersRequest_descriptor;
+  static final com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_google_ads_googleads_v6_services_MutateAdGroupBidModifiersRequest_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_google_ads_googleads_v6_services_AdGroupBidModifierOperation_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_google_ads_googleads_v6_services_AdGroupBidModifierOperation_descriptor;
+  static final com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_google_ads_googleads_v6_services_AdGroupBidModifierOperation_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_google_ads_googleads_v6_services_MutateAdGroupBidModifiersResponse_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_google_ads_googleads_v6_services_MutateAdGroupBidModifiersResponse_descriptor;
+  static final com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_google_ads_googleads_v6_services_MutateAdGroupBidModifiersResponse_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_google_ads_googleads_v6_services_MutateAdGroupBidModifierResult_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_google_ads_googleads_v6_services_MutateAdGroupBidModifierResult_descriptor;
+  static final com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_google_ads_googleads_v6_services_MutateAdGroupBidModifierResult_fieldAccessorTable;
 
-  public static com.google.protobuf.Descriptors.FileDescriptor
-      getDescriptor() {
+  public static com.google.protobuf.Descriptors.FileDescriptor getDescriptor() {
     return descriptor;
   }
-  private static  com.google.protobuf.Descriptors.FileDescriptor
-      descriptor;
+
+  private static com.google.protobuf.Descriptors.FileDescriptor descriptor;
+
   static {
     java.lang.String[] descriptorData = {
-      "\nDgoogle/ads/googleads/v6/services/ad_gr" +
-      "oup_bid_modifier_service.proto\022 google.a" +
-      "ds.googleads.v6.services\0329google/ads/goo" +
-      "gleads/v6/enums/response_content_type.pr" +
-      "oto\032=google/ads/googleads/v6/resources/a" +
-      "d_group_bid_modifier.proto\032\034google/api/a" +
-      "nnotations.proto\032\027google/api/client.prot" +
-      "o\032\037google/api/field_behavior.proto\032\031goog" +
-      "le/api/resource.proto\032 google/protobuf/f" +
-      "ield_mask.proto\032\027google/rpc/status.proto" +
-      "\"j\n\034GetAdGroupBidModifierRequest\022J\n\rreso" +
-      "urce_name\030\001 \001(\tB3\340A\002\372A-\n+googleads.googl" +
-      "eapis.com/AdGroupBidModifier\"\257\002\n MutateA" +
-      "dGroupBidModifiersRequest\022\030\n\013customer_id" +
-      "\030\001 \001(\tB\003\340A\002\022V\n\noperations\030\002 \003(\0132=.google" +
-      ".ads.googleads.v6.services.AdGroupBidMod" +
-      "ifierOperationB\003\340A\002\022\027\n\017partial_failure\030\003" +
-      " \001(\010\022\025\n\rvalidate_only\030\004 \001(\010\022i\n\025response_" +
-      "content_type\030\005 \001(\0162J.google.ads.googlead" +
-      "s.v6.enums.ResponseContentTypeEnum.Respo" +
-      "nseContentType\"\377\001\n\033AdGroupBidModifierOpe" +
-      "ration\022/\n\013update_mask\030\004 \001(\0132\032.google.pro" +
-      "tobuf.FieldMask\022G\n\006create\030\001 \001(\01325.google" +
-      ".ads.googleads.v6.resources.AdGroupBidMo" +
-      "difierH\000\022G\n\006update\030\002 \001(\01325.google.ads.go" +
-      "ogleads.v6.resources.AdGroupBidModifierH" +
-      "\000\022\020\n\006remove\030\003 \001(\tH\000B\013\n\toperation\"\251\001\n!Mut" +
-      "ateAdGroupBidModifiersResponse\0221\n\025partia" +
-      "l_failure_error\030\003 \001(\0132\022.google.rpc.Statu" +
-      "s\022Q\n\007results\030\002 \003(\0132@.google.ads.googlead" +
-      "s.v6.services.MutateAdGroupBidModifierRe" +
-      "sult\"\215\001\n\036MutateAdGroupBidModifierResult\022" +
-      "\025\n\rresource_name\030\001 \001(\t\022T\n\025ad_group_bid_m" +
-      "odifier\030\002 \001(\01325.google.ads.googleads.v6." +
-      "resources.AdGroupBidModifier2\307\004\n\031AdGroup" +
-      "BidModifierService\022\335\001\n\025GetAdGroupBidModi" +
-      "fier\022>.google.ads.googleads.v6.services." +
-      "GetAdGroupBidModifierRequest\0325.google.ad" +
-      "s.googleads.v6.resources.AdGroupBidModif" +
-      "ier\"M\202\323\344\223\0027\0225/v6/{resource_name=customer" +
-      "s/*/adGroupBidModifiers/*}\332A\rresource_na" +
-      "me\022\202\002\n\031MutateAdGroupBidModifiers\022B.googl" +
-      "e.ads.googleads.v6.services.MutateAdGrou" +
-      "pBidModifiersRequest\032C.google.ads.google" +
-      "ads.v6.services.MutateAdGroupBidModifier" +
-      "sResponse\"\\\202\323\344\223\002=\"8/v6/customers/{custom" +
-      "er_id=*}/adGroupBidModifiers:mutate:\001*\332A" +
-      "\026customer_id,operations\032E\312A\030googleads.go" +
-      "ogleapis.com\322A\'https://www.googleapis.co" +
-      "m/auth/adwordsB\205\002\n$com.google.ads.google" +
-      "ads.v6.servicesB\036AdGroupBidModifierServi" +
-      "ceProtoP\001ZHgoogle.golang.org/genproto/go" +
-      "ogleapis/ads/googleads/v6/services;servi" +
-      "ces\242\002\003GAA\252\002 Google.Ads.GoogleAds.V6.Serv" +
-      "ices\312\002 Google\\Ads\\GoogleAds\\V6\\Services\352" +
-      "\002$Google::Ads::GoogleAds::V6::Servicesb\006" +
-      "proto3"
+      "\nDgoogle/ads/googleads/v6/services/ad_gr"
+          + "oup_bid_modifier_service.proto\022 google.a"
+          + "ds.googleads.v6.services\0329google/ads/goo"
+          + "gleads/v6/enums/response_content_type.pr"
+          + "oto\032=google/ads/googleads/v6/resources/a"
+          + "d_group_bid_modifier.proto\032\034google/api/a"
+          + "nnotations.proto\032\027google/api/client.prot"
+          + "o\032\037google/api/field_behavior.proto\032\031goog"
+          + "le/api/resource.proto\032 google/protobuf/f"
+          + "ield_mask.proto\032\027google/rpc/status.proto"
+          + "\"j\n\034GetAdGroupBidModifierRequest\022J\n\rreso"
+          + "urce_name\030\001 \001(\tB3\340A\002\372A-\n+googleads.googl"
+          + "eapis.com/AdGroupBidModifier\"\257\002\n MutateA"
+          + "dGroupBidModifiersRequest\022\030\n\013customer_id"
+          + "\030\001 \001(\tB\003\340A\002\022V\n\noperations\030\002 \003(\0132=.google"
+          + ".ads.googleads.v6.services.AdGroupBidMod"
+          + "ifierOperationB\003\340A\002\022\027\n\017partial_failure\030\003"
+          + " \001(\010\022\025\n\rvalidate_only\030\004 \001(\010\022i\n\025response_"
+          + "content_type\030\005 \001(\0162J.google.ads.googlead"
+          + "s.v6.enums.ResponseContentTypeEnum.Respo"
+          + "nseContentType\"\377\001\n\033AdGroupBidModifierOpe"
+          + "ration\022/\n\013update_mask\030\004 \001(\0132\032.google.pro"
+          + "tobuf.FieldMask\022G\n\006create\030\001 \001(\01325.google"
+          + ".ads.googleads.v6.resources.AdGroupBidMo"
+          + "difierH\000\022G\n\006update\030\002 \001(\01325.google.ads.go"
+          + "ogleads.v6.resources.AdGroupBidModifierH"
+          + "\000\022\020\n\006remove\030\003 \001(\tH\000B\013\n\toperation\"\251\001\n!Mut"
+          + "ateAdGroupBidModifiersResponse\0221\n\025partia"
+          + "l_failure_error\030\003 \001(\0132\022.google.rpc.Statu"
+          + "s\022Q\n\007results\030\002 \003(\0132@.google.ads.googlead"
+          + "s.v6.services.MutateAdGroupBidModifierRe"
+          + "sult\"\215\001\n\036MutateAdGroupBidModifierResult\022"
+          + "\025\n\rresource_name\030\001 \001(\t\022T\n\025ad_group_bid_m"
+          + "odifier\030\002 \001(\01325.google.ads.googleads.v6."
+          + "resources.AdGroupBidModifier2\307\004\n\031AdGroup"
+          + "BidModifierService\022\335\001\n\025GetAdGroupBidModi"
+          + "fier\022>.google.ads.googleads.v6.services."
+          + "GetAdGroupBidModifierRequest\0325.google.ad"
+          + "s.googleads.v6.resources.AdGroupBidModif"
+          + "ier\"M\202\323\344\223\0027\0225/v6/{resource_name=customer"
+          + "s/*/adGroupBidModifiers/*}\332A\rresource_na"
+          + "me\022\202\002\n\031MutateAdGroupBidModifiers\022B.googl"
+          + "e.ads.googleads.v6.services.MutateAdGrou"
+          + "pBidModifiersRequest\032C.google.ads.google"
+          + "ads.v6.services.MutateAdGroupBidModifier"
+          + "sResponse\"\\\202\323\344\223\002=\"8/v6/customers/{custom"
+          + "er_id=*}/adGroupBidModifiers:mutate:\001*\332A"
+          + "\026customer_id,operations\032E\312A\030googleads.go"
+          + "ogleapis.com\322A\'https://www.googleapis.co"
+          + "m/auth/adwordsB\205\002\n$com.google.ads.google"
+          + "ads.v6.servicesB\036AdGroupBidModifierServi"
+          + "ceProtoP\001ZHgoogle.golang.org/genproto/go"
+          + "ogleapis/ads/googleads/v6/services;servi"
+          + "ces\242\002\003GAA\252\002 Google.Ads.GoogleAds.V6.Serv"
+          + "ices\312\002 Google\\Ads\\GoogleAds\\V6\\Services\352"
+          + "\002$Google::Ads::GoogleAds::V6::Servicesb\006"
+          + "proto3"
     };
-    descriptor = com.google.protobuf.Descriptors.FileDescriptor
-      .internalBuildGeneratedFileFrom(descriptorData,
-        new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.google.ads.googleads.v6.enums.ResponseContentTypeProto.getDescriptor(),
-          com.google.ads.googleads.v6.resources.AdGroupBidModifierProto.getDescriptor(),
-          com.google.api.AnnotationsProto.getDescriptor(),
-          com.google.api.ClientProto.getDescriptor(),
-          com.google.api.FieldBehaviorProto.getDescriptor(),
-          com.google.api.ResourceProto.getDescriptor(),
-          com.google.protobuf.FieldMaskProto.getDescriptor(),
-          com.google.rpc.StatusProto.getDescriptor(),
-        });
+    descriptor =
+        com.google.protobuf.Descriptors.FileDescriptor.internalBuildGeneratedFileFrom(
+            descriptorData,
+            new com.google.protobuf.Descriptors.FileDescriptor[] {
+              com.google.ads.googleads.v6.enums.ResponseContentTypeProto.getDescriptor(),
+              com.google.ads.googleads.v6.resources.AdGroupBidModifierProto.getDescriptor(),
+              com.google.api.AnnotationsProto.getDescriptor(),
+              com.google.api.ClientProto.getDescriptor(),
+              com.google.api.FieldBehaviorProto.getDescriptor(),
+              com.google.api.ResourceProto.getDescriptor(),
+              com.google.protobuf.FieldMaskProto.getDescriptor(),
+              com.google.rpc.StatusProto.getDescriptor(),
+            });
     internal_static_google_ads_googleads_v6_services_GetAdGroupBidModifierRequest_descriptor =
-      getDescriptor().getMessageTypes().get(0);
-    internal_static_google_ads_googleads_v6_services_GetAdGroupBidModifierRequest_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_google_ads_googleads_v6_services_GetAdGroupBidModifierRequest_descriptor,
-        new java.lang.String[] { "ResourceName", });
+        getDescriptor().getMessageTypes().get(0);
+    internal_static_google_ads_googleads_v6_services_GetAdGroupBidModifierRequest_fieldAccessorTable =
+        new com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+            internal_static_google_ads_googleads_v6_services_GetAdGroupBidModifierRequest_descriptor,
+            new java.lang.String[] {
+              "ResourceName",
+            });
     internal_static_google_ads_googleads_v6_services_MutateAdGroupBidModifiersRequest_descriptor =
-      getDescriptor().getMessageTypes().get(1);
-    internal_static_google_ads_googleads_v6_services_MutateAdGroupBidModifiersRequest_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_google_ads_googleads_v6_services_MutateAdGroupBidModifiersRequest_descriptor,
-        new java.lang.String[] { "CustomerId", "Operations", "PartialFailure", "ValidateOnly", "ResponseContentType", });
+        getDescriptor().getMessageTypes().get(1);
+    internal_static_google_ads_googleads_v6_services_MutateAdGroupBidModifiersRequest_fieldAccessorTable =
+        new com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+            internal_static_google_ads_googleads_v6_services_MutateAdGroupBidModifiersRequest_descriptor,
+            new java.lang.String[] {
+              "CustomerId", "Operations", "PartialFailure", "ValidateOnly", "ResponseContentType",
+            });
     internal_static_google_ads_googleads_v6_services_AdGroupBidModifierOperation_descriptor =
-      getDescriptor().getMessageTypes().get(2);
-    internal_static_google_ads_googleads_v6_services_AdGroupBidModifierOperation_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_google_ads_googleads_v6_services_AdGroupBidModifierOperation_descriptor,
-        new java.lang.String[] { "UpdateMask", "Create", "Update", "Remove", "Operation", });
+        getDescriptor().getMessageTypes().get(2);
+    internal_static_google_ads_googleads_v6_services_AdGroupBidModifierOperation_fieldAccessorTable =
+        new com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+            internal_static_google_ads_googleads_v6_services_AdGroupBidModifierOperation_descriptor,
+            new java.lang.String[] {
+              "UpdateMask", "Create", "Update", "Remove", "Operation",
+            });
     internal_static_google_ads_googleads_v6_services_MutateAdGroupBidModifiersResponse_descriptor =
-      getDescriptor().getMessageTypes().get(3);
-    internal_static_google_ads_googleads_v6_services_MutateAdGroupBidModifiersResponse_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_google_ads_googleads_v6_services_MutateAdGroupBidModifiersResponse_descriptor,
-        new java.lang.String[] { "PartialFailureError", "Results", });
+        getDescriptor().getMessageTypes().get(3);
+    internal_static_google_ads_googleads_v6_services_MutateAdGroupBidModifiersResponse_fieldAccessorTable =
+        new com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+            internal_static_google_ads_googleads_v6_services_MutateAdGroupBidModifiersResponse_descriptor,
+            new java.lang.String[] {
+              "PartialFailureError", "Results",
+            });
     internal_static_google_ads_googleads_v6_services_MutateAdGroupBidModifierResult_descriptor =
-      getDescriptor().getMessageTypes().get(4);
-    internal_static_google_ads_googleads_v6_services_MutateAdGroupBidModifierResult_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_google_ads_googleads_v6_services_MutateAdGroupBidModifierResult_descriptor,
-        new java.lang.String[] { "ResourceName", "AdGroupBidModifier", });
+        getDescriptor().getMessageTypes().get(4);
+    internal_static_google_ads_googleads_v6_services_MutateAdGroupBidModifierResult_fieldAccessorTable =
+        new com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+            internal_static_google_ads_googleads_v6_services_MutateAdGroupBidModifierResult_descriptor,
+            new java.lang.String[] {
+              "ResourceName", "AdGroupBidModifier",
+            });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.ClientProto.defaultHost);
@@ -156,8 +160,8 @@ public final class AdGroupBidModifierServiceProto {
     registry.add(com.google.api.ClientProto.methodSignature);
     registry.add(com.google.api.ClientProto.oauthScopes);
     registry.add(com.google.api.ResourceProto.resourceReference);
-    com.google.protobuf.Descriptors.FileDescriptor
-        .internalUpdateFileDescriptor(descriptor, registry);
+    com.google.protobuf.Descriptors.FileDescriptor.internalUpdateFileDescriptor(
+        descriptor, registry);
     com.google.ads.googleads.v6.enums.ResponseContentTypeProto.getDescriptor();
     com.google.ads.googleads.v6.resources.AdGroupBidModifierProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();

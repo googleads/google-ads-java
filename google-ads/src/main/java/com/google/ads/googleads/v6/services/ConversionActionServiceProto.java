@@ -5,140 +5,144 @@ package com.google.ads.googleads.v6.services;
 
 public final class ConversionActionServiceProto {
   private ConversionActionServiceProto() {}
-  public static void registerAllExtensions(
-      com.google.protobuf.ExtensionRegistryLite registry) {
+
+  public static void registerAllExtensions(com.google.protobuf.ExtensionRegistryLite registry) {}
+
+  public static void registerAllExtensions(com.google.protobuf.ExtensionRegistry registry) {
+    registerAllExtensions((com.google.protobuf.ExtensionRegistryLite) registry);
   }
 
-  public static void registerAllExtensions(
-      com.google.protobuf.ExtensionRegistry registry) {
-    registerAllExtensions(
-        (com.google.protobuf.ExtensionRegistryLite) registry);
-  }
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_google_ads_googleads_v6_services_GetConversionActionRequest_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_google_ads_googleads_v6_services_GetConversionActionRequest_descriptor;
+  static final com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_google_ads_googleads_v6_services_GetConversionActionRequest_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_google_ads_googleads_v6_services_MutateConversionActionsRequest_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_google_ads_googleads_v6_services_MutateConversionActionsRequest_descriptor;
+  static final com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_google_ads_googleads_v6_services_MutateConversionActionsRequest_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_google_ads_googleads_v6_services_ConversionActionOperation_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_google_ads_googleads_v6_services_ConversionActionOperation_descriptor;
+  static final com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_google_ads_googleads_v6_services_ConversionActionOperation_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_google_ads_googleads_v6_services_MutateConversionActionsResponse_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_google_ads_googleads_v6_services_MutateConversionActionsResponse_descriptor;
+  static final com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_google_ads_googleads_v6_services_MutateConversionActionsResponse_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_google_ads_googleads_v6_services_MutateConversionActionResult_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_google_ads_googleads_v6_services_MutateConversionActionResult_descriptor;
+  static final com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_google_ads_googleads_v6_services_MutateConversionActionResult_fieldAccessorTable;
 
-  public static com.google.protobuf.Descriptors.FileDescriptor
-      getDescriptor() {
+  public static com.google.protobuf.Descriptors.FileDescriptor getDescriptor() {
     return descriptor;
   }
-  private static  com.google.protobuf.Descriptors.FileDescriptor
-      descriptor;
+
+  private static com.google.protobuf.Descriptors.FileDescriptor descriptor;
+
   static {
     java.lang.String[] descriptorData = {
-      "\n@google/ads/googleads/v6/services/conve" +
-      "rsion_action_service.proto\022 google.ads.g" +
-      "oogleads.v6.services\0329google/ads/googlea" +
-      "ds/v6/resources/conversion_action.proto\032" +
-      "\034google/api/annotations.proto\032\027google/ap" +
-      "i/client.proto\032\037google/api/field_behavio" +
-      "r.proto\032\031google/api/resource.proto\032 goog" +
-      "le/protobuf/field_mask.proto\032\027google/rpc" +
-      "/status.proto\"f\n\032GetConversionActionRequ" +
-      "est\022H\n\rresource_name\030\001 \001(\tB1\340A\002\372A+\n)goog" +
-      "leads.googleapis.com/ConversionAction\"\300\001" +
-      "\n\036MutateConversionActionsRequest\022\030\n\013cust" +
-      "omer_id\030\001 \001(\tB\003\340A\002\022T\n\noperations\030\002 \003(\0132;" +
-      ".google.ads.googleads.v6.services.Conver" +
-      "sionActionOperationB\003\340A\002\022\027\n\017partial_fail" +
-      "ure\030\003 \001(\010\022\025\n\rvalidate_only\030\004 \001(\010\"\371\001\n\031Con" +
-      "versionActionOperation\022/\n\013update_mask\030\004 " +
-      "\001(\0132\032.google.protobuf.FieldMask\022E\n\006creat" +
-      "e\030\001 \001(\01323.google.ads.googleads.v6.resour" +
-      "ces.ConversionActionH\000\022E\n\006update\030\002 \001(\01323" +
-      ".google.ads.googleads.v6.resources.Conve" +
-      "rsionActionH\000\022\020\n\006remove\030\003 \001(\tH\000B\013\n\topera" +
-      "tion\"\245\001\n\037MutateConversionActionsResponse" +
-      "\0221\n\025partial_failure_error\030\003 \001(\0132\022.google" +
-      ".rpc.Status\022O\n\007results\030\002 \003(\0132>.google.ad" +
-      "s.googleads.v6.services.MutateConversion" +
-      "ActionResult\"5\n\034MutateConversionActionRe" +
-      "sult\022\025\n\rresource_name\030\001 \001(\t2\265\004\n\027Conversi" +
-      "onActionService\022\325\001\n\023GetConversionAction\022" +
-      "<.google.ads.googleads.v6.services.GetCo" +
-      "nversionActionRequest\0323.google.ads.googl" +
-      "eads.v6.resources.ConversionAction\"K\202\323\344\223" +
-      "\0025\0223/v6/{resource_name=customers/*/conve" +
-      "rsionActions/*}\332A\rresource_name\022\372\001\n\027Muta" +
-      "teConversionActions\022@.google.ads.googlea" +
-      "ds.v6.services.MutateConversionActionsRe" +
-      "quest\032A.google.ads.googleads.v6.services" +
-      ".MutateConversionActionsResponse\"Z\202\323\344\223\002;" +
-      "\"6/v6/customers/{customer_id=*}/conversi" +
-      "onActions:mutate:\001*\332A\026customer_id,operat" +
-      "ions\032E\312A\030googleads.googleapis.com\322A\'http" +
-      "s://www.googleapis.com/auth/adwordsB\203\002\n$" +
-      "com.google.ads.googleads.v6.servicesB\034Co" +
-      "nversionActionServiceProtoP\001ZHgoogle.gol" +
-      "ang.org/genproto/googleapis/ads/googlead" +
-      "s/v6/services;services\242\002\003GAA\252\002 Google.Ad" +
-      "s.GoogleAds.V6.Services\312\002 Google\\Ads\\Goo" +
-      "gleAds\\V6\\Services\352\002$Google::Ads::Google" +
-      "Ads::V6::Servicesb\006proto3"
+      "\n@google/ads/googleads/v6/services/conve"
+          + "rsion_action_service.proto\022 google.ads.g"
+          + "oogleads.v6.services\0329google/ads/googlea"
+          + "ds/v6/resources/conversion_action.proto\032"
+          + "\034google/api/annotations.proto\032\027google/ap"
+          + "i/client.proto\032\037google/api/field_behavio"
+          + "r.proto\032\031google/api/resource.proto\032 goog"
+          + "le/protobuf/field_mask.proto\032\027google/rpc"
+          + "/status.proto\"f\n\032GetConversionActionRequ"
+          + "est\022H\n\rresource_name\030\001 \001(\tB1\340A\002\372A+\n)goog"
+          + "leads.googleapis.com/ConversionAction\"\300\001"
+          + "\n\036MutateConversionActionsRequest\022\030\n\013cust"
+          + "omer_id\030\001 \001(\tB\003\340A\002\022T\n\noperations\030\002 \003(\0132;"
+          + ".google.ads.googleads.v6.services.Conver"
+          + "sionActionOperationB\003\340A\002\022\027\n\017partial_fail"
+          + "ure\030\003 \001(\010\022\025\n\rvalidate_only\030\004 \001(\010\"\371\001\n\031Con"
+          + "versionActionOperation\022/\n\013update_mask\030\004 "
+          + "\001(\0132\032.google.protobuf.FieldMask\022E\n\006creat"
+          + "e\030\001 \001(\01323.google.ads.googleads.v6.resour"
+          + "ces.ConversionActionH\000\022E\n\006update\030\002 \001(\01323"
+          + ".google.ads.googleads.v6.resources.Conve"
+          + "rsionActionH\000\022\020\n\006remove\030\003 \001(\tH\000B\013\n\topera"
+          + "tion\"\245\001\n\037MutateConversionActionsResponse"
+          + "\0221\n\025partial_failure_error\030\003 \001(\0132\022.google"
+          + ".rpc.Status\022O\n\007results\030\002 \003(\0132>.google.ad"
+          + "s.googleads.v6.services.MutateConversion"
+          + "ActionResult\"5\n\034MutateConversionActionRe"
+          + "sult\022\025\n\rresource_name\030\001 \001(\t2\265\004\n\027Conversi"
+          + "onActionService\022\325\001\n\023GetConversionAction\022"
+          + "<.google.ads.googleads.v6.services.GetCo"
+          + "nversionActionRequest\0323.google.ads.googl"
+          + "eads.v6.resources.ConversionAction\"K\202\323\344\223"
+          + "\0025\0223/v6/{resource_name=customers/*/conve"
+          + "rsionActions/*}\332A\rresource_name\022\372\001\n\027Muta"
+          + "teConversionActions\022@.google.ads.googlea"
+          + "ds.v6.services.MutateConversionActionsRe"
+          + "quest\032A.google.ads.googleads.v6.services"
+          + ".MutateConversionActionsResponse\"Z\202\323\344\223\002;"
+          + "\"6/v6/customers/{customer_id=*}/conversi"
+          + "onActions:mutate:\001*\332A\026customer_id,operat"
+          + "ions\032E\312A\030googleads.googleapis.com\322A\'http"
+          + "s://www.googleapis.com/auth/adwordsB\203\002\n$"
+          + "com.google.ads.googleads.v6.servicesB\034Co"
+          + "nversionActionServiceProtoP\001ZHgoogle.gol"
+          + "ang.org/genproto/googleapis/ads/googlead"
+          + "s/v6/services;services\242\002\003GAA\252\002 Google.Ad"
+          + "s.GoogleAds.V6.Services\312\002 Google\\Ads\\Goo"
+          + "gleAds\\V6\\Services\352\002$Google::Ads::Google"
+          + "Ads::V6::Servicesb\006proto3"
     };
-    descriptor = com.google.protobuf.Descriptors.FileDescriptor
-      .internalBuildGeneratedFileFrom(descriptorData,
-        new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.google.ads.googleads.v6.resources.ConversionActionProto.getDescriptor(),
-          com.google.api.AnnotationsProto.getDescriptor(),
-          com.google.api.ClientProto.getDescriptor(),
-          com.google.api.FieldBehaviorProto.getDescriptor(),
-          com.google.api.ResourceProto.getDescriptor(),
-          com.google.protobuf.FieldMaskProto.getDescriptor(),
-          com.google.rpc.StatusProto.getDescriptor(),
-        });
+    descriptor =
+        com.google.protobuf.Descriptors.FileDescriptor.internalBuildGeneratedFileFrom(
+            descriptorData,
+            new com.google.protobuf.Descriptors.FileDescriptor[] {
+              com.google.ads.googleads.v6.resources.ConversionActionProto.getDescriptor(),
+              com.google.api.AnnotationsProto.getDescriptor(),
+              com.google.api.ClientProto.getDescriptor(),
+              com.google.api.FieldBehaviorProto.getDescriptor(),
+              com.google.api.ResourceProto.getDescriptor(),
+              com.google.protobuf.FieldMaskProto.getDescriptor(),
+              com.google.rpc.StatusProto.getDescriptor(),
+            });
     internal_static_google_ads_googleads_v6_services_GetConversionActionRequest_descriptor =
-      getDescriptor().getMessageTypes().get(0);
-    internal_static_google_ads_googleads_v6_services_GetConversionActionRequest_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_google_ads_googleads_v6_services_GetConversionActionRequest_descriptor,
-        new java.lang.String[] { "ResourceName", });
+        getDescriptor().getMessageTypes().get(0);
+    internal_static_google_ads_googleads_v6_services_GetConversionActionRequest_fieldAccessorTable =
+        new com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+            internal_static_google_ads_googleads_v6_services_GetConversionActionRequest_descriptor,
+            new java.lang.String[] {
+              "ResourceName",
+            });
     internal_static_google_ads_googleads_v6_services_MutateConversionActionsRequest_descriptor =
-      getDescriptor().getMessageTypes().get(1);
-    internal_static_google_ads_googleads_v6_services_MutateConversionActionsRequest_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_google_ads_googleads_v6_services_MutateConversionActionsRequest_descriptor,
-        new java.lang.String[] { "CustomerId", "Operations", "PartialFailure", "ValidateOnly", });
+        getDescriptor().getMessageTypes().get(1);
+    internal_static_google_ads_googleads_v6_services_MutateConversionActionsRequest_fieldAccessorTable =
+        new com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+            internal_static_google_ads_googleads_v6_services_MutateConversionActionsRequest_descriptor,
+            new java.lang.String[] {
+              "CustomerId", "Operations", "PartialFailure", "ValidateOnly",
+            });
     internal_static_google_ads_googleads_v6_services_ConversionActionOperation_descriptor =
-      getDescriptor().getMessageTypes().get(2);
-    internal_static_google_ads_googleads_v6_services_ConversionActionOperation_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_google_ads_googleads_v6_services_ConversionActionOperation_descriptor,
-        new java.lang.String[] { "UpdateMask", "Create", "Update", "Remove", "Operation", });
+        getDescriptor().getMessageTypes().get(2);
+    internal_static_google_ads_googleads_v6_services_ConversionActionOperation_fieldAccessorTable =
+        new com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+            internal_static_google_ads_googleads_v6_services_ConversionActionOperation_descriptor,
+            new java.lang.String[] {
+              "UpdateMask", "Create", "Update", "Remove", "Operation",
+            });
     internal_static_google_ads_googleads_v6_services_MutateConversionActionsResponse_descriptor =
-      getDescriptor().getMessageTypes().get(3);
-    internal_static_google_ads_googleads_v6_services_MutateConversionActionsResponse_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_google_ads_googleads_v6_services_MutateConversionActionsResponse_descriptor,
-        new java.lang.String[] { "PartialFailureError", "Results", });
+        getDescriptor().getMessageTypes().get(3);
+    internal_static_google_ads_googleads_v6_services_MutateConversionActionsResponse_fieldAccessorTable =
+        new com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+            internal_static_google_ads_googleads_v6_services_MutateConversionActionsResponse_descriptor,
+            new java.lang.String[] {
+              "PartialFailureError", "Results",
+            });
     internal_static_google_ads_googleads_v6_services_MutateConversionActionResult_descriptor =
-      getDescriptor().getMessageTypes().get(4);
-    internal_static_google_ads_googleads_v6_services_MutateConversionActionResult_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_google_ads_googleads_v6_services_MutateConversionActionResult_descriptor,
-        new java.lang.String[] { "ResourceName", });
+        getDescriptor().getMessageTypes().get(4);
+    internal_static_google_ads_googleads_v6_services_MutateConversionActionResult_fieldAccessorTable =
+        new com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+            internal_static_google_ads_googleads_v6_services_MutateConversionActionResult_descriptor,
+            new java.lang.String[] {
+              "ResourceName",
+            });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.ClientProto.defaultHost);
@@ -147,8 +151,8 @@ public final class ConversionActionServiceProto {
     registry.add(com.google.api.ClientProto.methodSignature);
     registry.add(com.google.api.ClientProto.oauthScopes);
     registry.add(com.google.api.ResourceProto.resourceReference);
-    com.google.protobuf.Descriptors.FileDescriptor
-        .internalUpdateFileDescriptor(descriptor, registry);
+    com.google.protobuf.Descriptors.FileDescriptor.internalUpdateFileDescriptor(
+        descriptor, registry);
     com.google.ads.googleads.v6.resources.ConversionActionProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
     com.google.api.ClientProto.getDescriptor();
