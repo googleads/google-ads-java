@@ -41,7 +41,7 @@ public class AddCampaignDraft {
     @Parameter(names = ArgumentNames.CUSTOMER_ID, required = true)
     private Long customerId;
 
-    @Parameter(names = ArgumentNames.CAMPAIGN_ID, required = true)
+    @Parameter(names = ArgumentNames.BASE_CAMPAIGN_ID, required = true)
     private Long baseCampaignId;
   }
 
