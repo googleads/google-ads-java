@@ -44,7 +44,7 @@ import java.util.stream.Collectors;
  * steps, since removing the campaign extension setting doesn't automatically remove its extension
  * feed items.
  *
- * <p>To make this example work with other types of extensions, find {@link ExtensionType}#SITELINK
+ * <p>To make this example work with other types of extensions, find {@link ExtensionType#SITELINK}
  * and replace it with the extension type you wish to remove.
  */
 public class RemoveEntireSitelinkCampaignExtensionSetting {
@@ -89,7 +89,6 @@ public class RemoveEntireSitelinkCampaignExtensionSetting {
       // Instances of this exception have a message and a GoogleAdsFailure that contains a
       // collection of GoogleAdsErrors that indicate the underlying causes of the
       // GoogleAdsException.
-      gae.printStackTrace();
       System.err.printf(
           "Request ID %s failed due to GoogleAdsException. Underlying errors:%n",
           gae.getRequestId());
