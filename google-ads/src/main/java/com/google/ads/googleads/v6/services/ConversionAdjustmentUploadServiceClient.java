@@ -5,7 +5,7 @@
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
- *     https://www.apache.org/licenses/LICENSE-2.0
+ *      https://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -13,6 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
 package com.google.ads.googleads.v6.services;
 
 import com.google.ads.googleads.v6.services.stub.ConversionAdjustmentUploadServiceStub;
@@ -25,25 +26,14 @@ import java.util.List;
 import java.util.concurrent.TimeUnit;
 import javax.annotation.Generated;
 
-// AUTO-GENERATED DOCUMENTATION AND SERVICE
+// AUTO-GENERATED DOCUMENTATION AND CLASS.
 /**
  * Service Description: Service to upload conversion adjustments.
  *
  * <p>This class provides the ability to make remote calls to the backing service through method
  * calls that map to API methods. Sample code to get started:
  *
- * <pre>
- * <code>
- * try (ConversionAdjustmentUploadServiceClient conversionAdjustmentUploadServiceClient = ConversionAdjustmentUploadServiceClient.create()) {
- *   String customerId = "";
- *   List&lt;ConversionAdjustment&gt; conversionAdjustments = new ArrayList&lt;&gt;();
- *   boolean partialFailure = false;
- *   UploadConversionAdjustmentsResponse response = conversionAdjustmentUploadServiceClient.uploadConversionAdjustments(customerId, conversionAdjustments, partialFailure);
- * }
- * </code>
- * </pre>
- *
- * <p>Note: close() needs to be called on the conversionAdjustmentUploadServiceClient object to
+ * <p>Note: close() needs to be called on the ConversionAdjustmentUploadServiceClient object to
  * clean up resources such as threads. In the example above, try-with-resources is used, which
  * automatically calls close().
  *
@@ -72,30 +62,28 @@ import javax.annotation.Generated;
  *
  * <p>To customize credentials:
  *
- * <pre>
- * <code>
+ * <pre>{@code
  * ConversionAdjustmentUploadServiceSettings conversionAdjustmentUploadServiceSettings =
  *     ConversionAdjustmentUploadServiceSettings.newBuilder()
  *         .setCredentialsProvider(FixedCredentialsProvider.create(myCredentials))
  *         .build();
  * ConversionAdjustmentUploadServiceClient conversionAdjustmentUploadServiceClient =
  *     ConversionAdjustmentUploadServiceClient.create(conversionAdjustmentUploadServiceSettings);
- * </code>
- * </pre>
+ * }</pre>
  *
- * To customize the endpoint:
+ * <p>To customize the endpoint:
  *
- * <pre>
- * <code>
+ * <pre>{@code
  * ConversionAdjustmentUploadServiceSettings conversionAdjustmentUploadServiceSettings =
  *     ConversionAdjustmentUploadServiceSettings.newBuilder().setEndpoint(myEndpoint).build();
  * ConversionAdjustmentUploadServiceClient conversionAdjustmentUploadServiceClient =
  *     ConversionAdjustmentUploadServiceClient.create(conversionAdjustmentUploadServiceSettings);
- * </code>
- * </pre>
+ * }</pre>
+ *
+ * <p>Please refer to the GitHub repository's samples for more quickstart code snippets.
  */
-@Generated("by gapic-generator")
 @BetaApi
+@Generated("by gapic-generator")
 public class ConversionAdjustmentUploadServiceClient implements BackgroundResource {
   private final ConversionAdjustmentUploadServiceSettings settings;
   private final ConversionAdjustmentUploadServiceStub stub;
@@ -117,8 +105,8 @@ public class ConversionAdjustmentUploadServiceClient implements BackgroundResour
 
   /**
    * Constructs an instance of ConversionAdjustmentUploadServiceClient, using the given stub for
-   * making calls. This is for advanced usage - prefer to use
-   * ConversionAdjustmentUploadServiceSettings}.
+   * making calls. This is for advanced usage - prefer using
+   * create(ConversionAdjustmentUploadServiceSettings).
    */
   @BetaApi("A restructuring of stub classes is planned, so this may break in the future")
   public static final ConversionAdjustmentUploadServiceClient create(
@@ -153,24 +141,13 @@ public class ConversionAdjustmentUploadServiceClient implements BackgroundResour
     return stub;
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Processes the given conversion adjustments.
    *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (ConversionAdjustmentUploadServiceClient conversionAdjustmentUploadServiceClient = ConversionAdjustmentUploadServiceClient.create()) {
-   *   String customerId = "";
-   *   List&lt;ConversionAdjustment&gt; conversionAdjustments = new ArrayList&lt;&gt;();
-   *   boolean partialFailure = false;
-   *   UploadConversionAdjustmentsResponse response = conversionAdjustmentUploadServiceClient.uploadConversionAdjustments(customerId, conversionAdjustments, partialFailure);
-   * }
-   * </code></pre>
-   *
-   * @param customerId Required. The ID of the customer performing the upload.
-   * @param conversionAdjustments Required. The conversion adjustments that are being uploaded.
-   * @param partialFailure Required. If true, successful operations will be carried out and invalid
+   * @param customer_id Required. The ID of the customer performing the upload.
+   * @param conversion_adjustments Required. The conversion adjustments that are being uploaded.
+   * @param partial_failure Required. If true, successful operations will be carried out and invalid
    *     operations will return errors. If false, all operations will be carried out in one
    *     transaction if and only if they are all valid. This should always be set to true. See
    *     https://developers.google.com/google-ads/api/docs/best-practices/partial-failures for more
@@ -188,25 +165,9 @@ public class ConversionAdjustmentUploadServiceClient implements BackgroundResour
     return uploadConversionAdjustments(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Processes the given conversion adjustments.
-   *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (ConversionAdjustmentUploadServiceClient conversionAdjustmentUploadServiceClient = ConversionAdjustmentUploadServiceClient.create()) {
-   *   String customerId = "";
-   *   List&lt;ConversionAdjustment&gt; conversionAdjustments = new ArrayList&lt;&gt;();
-   *   boolean partialFailure = false;
-   *   UploadConversionAdjustmentsRequest request = UploadConversionAdjustmentsRequest.newBuilder()
-   *     .setCustomerId(customerId)
-   *     .addAllConversionAdjustments(conversionAdjustments)
-   *     .setPartialFailure(partialFailure)
-   *     .build();
-   *   UploadConversionAdjustmentsResponse response = conversionAdjustmentUploadServiceClient.uploadConversionAdjustments(request);
-   * }
-   * </code></pre>
    *
    * @param request The request object containing all of the parameters for the API call.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
@@ -216,27 +177,11 @@ public class ConversionAdjustmentUploadServiceClient implements BackgroundResour
     return uploadConversionAdjustmentsCallable().call(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Processes the given conversion adjustments.
    *
    * <p>Sample code:
-   *
-   * <pre><code>
-   * try (ConversionAdjustmentUploadServiceClient conversionAdjustmentUploadServiceClient = ConversionAdjustmentUploadServiceClient.create()) {
-   *   String customerId = "";
-   *   List&lt;ConversionAdjustment&gt; conversionAdjustments = new ArrayList&lt;&gt;();
-   *   boolean partialFailure = false;
-   *   UploadConversionAdjustmentsRequest request = UploadConversionAdjustmentsRequest.newBuilder()
-   *     .setCustomerId(customerId)
-   *     .addAllConversionAdjustments(conversionAdjustments)
-   *     .setPartialFailure(partialFailure)
-   *     .build();
-   *   ApiFuture&lt;UploadConversionAdjustmentsResponse&gt; future = conversionAdjustmentUploadServiceClient.uploadConversionAdjustmentsCallable().futureCall(request);
-   *   // Do something
-   *   UploadConversionAdjustmentsResponse response = future.get();
-   * }
-   * </code></pre>
    */
   public final UnaryCallable<
           UploadConversionAdjustmentsRequest, UploadConversionAdjustmentsResponse>

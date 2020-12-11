@@ -5,7 +5,7 @@
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
- *     https://www.apache.org/licenses/LICENSE-2.0
+ *      https://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -13,6 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
 package com.google.ads.googleads.v6.services;
 
 import com.google.ads.googleads.v6.services.stub.ReachPlanServiceStub;
@@ -25,7 +26,7 @@ import java.util.List;
 import java.util.concurrent.TimeUnit;
 import javax.annotation.Generated;
 
-// AUTO-GENERATED DOCUMENTATION AND SERVICE
+// AUTO-GENERATED DOCUMENTATION AND CLASS.
 /**
  * Service Description: Reach Plan Service gives users information about audience size that can be
  * reached through advertisement on YouTube. In particular, GenerateReachForecast provides estimated
@@ -35,16 +36,7 @@ import javax.annotation.Generated;
  * <p>This class provides the ability to make remote calls to the backing service through method
  * calls that map to API methods. Sample code to get started:
  *
- * <pre>
- * <code>
- * try (ReachPlanServiceClient reachPlanServiceClient = ReachPlanServiceClient.create()) {
- *   String plannableLocationId = "";
- *   ListPlannableProductsResponse response = reachPlanServiceClient.listPlannableProducts(plannableLocationId);
- * }
- * </code>
- * </pre>
- *
- * <p>Note: close() needs to be called on the reachPlanServiceClient object to clean up resources
+ * <p>Note: close() needs to be called on the ReachPlanServiceClient object to clean up resources
  * such as threads. In the example above, try-with-resources is used, which automatically calls
  * close().
  *
@@ -73,30 +65,28 @@ import javax.annotation.Generated;
  *
  * <p>To customize credentials:
  *
- * <pre>
- * <code>
+ * <pre>{@code
  * ReachPlanServiceSettings reachPlanServiceSettings =
  *     ReachPlanServiceSettings.newBuilder()
  *         .setCredentialsProvider(FixedCredentialsProvider.create(myCredentials))
  *         .build();
  * ReachPlanServiceClient reachPlanServiceClient =
  *     ReachPlanServiceClient.create(reachPlanServiceSettings);
- * </code>
- * </pre>
+ * }</pre>
  *
- * To customize the endpoint:
+ * <p>To customize the endpoint:
  *
- * <pre>
- * <code>
+ * <pre>{@code
  * ReachPlanServiceSettings reachPlanServiceSettings =
  *     ReachPlanServiceSettings.newBuilder().setEndpoint(myEndpoint).build();
  * ReachPlanServiceClient reachPlanServiceClient =
  *     ReachPlanServiceClient.create(reachPlanServiceSettings);
- * </code>
- * </pre>
+ * }</pre>
+ *
+ * <p>Please refer to the GitHub repository's samples for more quickstart code snippets.
  */
-@Generated("by gapic-generator")
 @BetaApi
+@Generated("by gapic-generator")
 public class ReachPlanServiceClient implements BackgroundResource {
   private final ReachPlanServiceSettings settings;
   private final ReachPlanServiceStub stub;
@@ -117,7 +107,7 @@ public class ReachPlanServiceClient implements BackgroundResource {
 
   /**
    * Constructs an instance of ReachPlanServiceClient, using the given stub for making calls. This
-   * is for advanced usage - prefer to use ReachPlanServiceSettings}.
+   * is for advanced usage - prefer using create(ReachPlanServiceSettings).
    */
   @BetaApi("A restructuring of stub classes is planned, so this may break in the future")
   public static final ReachPlanServiceClient create(ReachPlanServiceStub stub) {
@@ -149,18 +139,9 @@ public class ReachPlanServiceClient implements BackgroundResource {
     return stub;
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Returns the list of plannable locations (for example, countries &amp; DMAs).
-   *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (ReachPlanServiceClient reachPlanServiceClient = ReachPlanServiceClient.create()) {
-   *   ListPlannableLocationsRequest request = ListPlannableLocationsRequest.newBuilder().build();
-   *   ListPlannableLocationsResponse response = reachPlanServiceClient.listPlannableLocations(request);
-   * }
-   * </code></pre>
    *
    * @param request The request object containing all of the parameters for the API call.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
@@ -170,41 +151,23 @@ public class ReachPlanServiceClient implements BackgroundResource {
     return listPlannableLocationsCallable().call(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Returns the list of plannable locations (for example, countries &amp; DMAs).
    *
    * <p>Sample code:
-   *
-   * <pre><code>
-   * try (ReachPlanServiceClient reachPlanServiceClient = ReachPlanServiceClient.create()) {
-   *   ListPlannableLocationsRequest request = ListPlannableLocationsRequest.newBuilder().build();
-   *   ApiFuture&lt;ListPlannableLocationsResponse&gt; future = reachPlanServiceClient.listPlannableLocationsCallable().futureCall(request);
-   *   // Do something
-   *   ListPlannableLocationsResponse response = future.get();
-   * }
-   * </code></pre>
    */
   public final UnaryCallable<ListPlannableLocationsRequest, ListPlannableLocationsResponse>
       listPlannableLocationsCallable() {
     return stub.listPlannableLocationsCallable();
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Returns the list of per-location plannable YouTube ad formats with allowed targeting.
    *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (ReachPlanServiceClient reachPlanServiceClient = ReachPlanServiceClient.create()) {
-   *   String plannableLocationId = "";
-   *   ListPlannableProductsResponse response = reachPlanServiceClient.listPlannableProducts(plannableLocationId);
-   * }
-   * </code></pre>
-   *
-   * @param plannableLocationId Required. The ID of the selected location for planning. To list the
-   *     available plannable location ids use ListPlannableLocations.
+   * @param plannable_location_id Required. The ID of the selected location for planning. To list
+   *     the available plannable location ids use ListPlannableLocations.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final ListPlannableProductsResponse listPlannableProducts(String plannableLocationId) {
@@ -215,21 +178,9 @@ public class ReachPlanServiceClient implements BackgroundResource {
     return listPlannableProducts(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Returns the list of per-location plannable YouTube ad formats with allowed targeting.
-   *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (ReachPlanServiceClient reachPlanServiceClient = ReachPlanServiceClient.create()) {
-   *   String plannableLocationId = "";
-   *   ListPlannableProductsRequest request = ListPlannableProductsRequest.newBuilder()
-   *     .setPlannableLocationId(plannableLocationId)
-   *     .build();
-   *   ListPlannableProductsResponse response = reachPlanServiceClient.listPlannableProducts(request);
-   * }
-   * </code></pre>
    *
    * @param request The request object containing all of the parameters for the API call.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
@@ -239,51 +190,27 @@ public class ReachPlanServiceClient implements BackgroundResource {
     return listPlannableProductsCallable().call(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Returns the list of per-location plannable YouTube ad formats with allowed targeting.
    *
    * <p>Sample code:
-   *
-   * <pre><code>
-   * try (ReachPlanServiceClient reachPlanServiceClient = ReachPlanServiceClient.create()) {
-   *   String plannableLocationId = "";
-   *   ListPlannableProductsRequest request = ListPlannableProductsRequest.newBuilder()
-   *     .setPlannableLocationId(plannableLocationId)
-   *     .build();
-   *   ApiFuture&lt;ListPlannableProductsResponse&gt; future = reachPlanServiceClient.listPlannableProductsCallable().futureCall(request);
-   *   // Do something
-   *   ListPlannableProductsResponse response = future.get();
-   * }
-   * </code></pre>
    */
   public final UnaryCallable<ListPlannableProductsRequest, ListPlannableProductsResponse>
       listPlannableProductsCallable() {
     return stub.listPlannableProductsCallable();
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Generates a product mix ideas given a set of preferences. This method helps the advertiser to
    * obtain a good mix of ad formats and budget allocations based on its preferences.
    *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (ReachPlanServiceClient reachPlanServiceClient = ReachPlanServiceClient.create()) {
-   *   String customerId = "";
-   *   String plannableLocationId = "";
-   *   String currencyCode = "";
-   *   long budgetMicros = 0L;
-   *   GenerateProductMixIdeasResponse response = reachPlanServiceClient.generateProductMixIdeas(customerId, plannableLocationId, currencyCode, budgetMicros);
-   * }
-   * </code></pre>
-   *
-   * @param customerId Required. The ID of the customer.
-   * @param plannableLocationId Required. The ID of the location, this is one of the ids returned by
-   *     ListPlannableLocations.
-   * @param currencyCode Required. Currency code. Three-character ISO 4217 currency code.
-   * @param budgetMicros Required. Total budget. Amount in micros. One million is equivalent to one
+   * @param customer_id Required. The ID of the customer.
+   * @param plannable_location_id Required. The ID of the location, this is one of the ids returned
+   *     by ListPlannableLocations.
+   * @param currency_code Required. Currency code. Three-character ISO 4217 currency code.
+   * @param budget_micros Required. Total budget. Amount in micros. One million is equivalent to one
    *     unit.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
@@ -299,28 +226,10 @@ public class ReachPlanServiceClient implements BackgroundResource {
     return generateProductMixIdeas(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Generates a product mix ideas given a set of preferences. This method helps the advertiser to
    * obtain a good mix of ad formats and budget allocations based on its preferences.
-   *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (ReachPlanServiceClient reachPlanServiceClient = ReachPlanServiceClient.create()) {
-   *   String customerId = "";
-   *   String plannableLocationId = "";
-   *   String currencyCode = "";
-   *   long budgetMicros = 0L;
-   *   GenerateProductMixIdeasRequest request = GenerateProductMixIdeasRequest.newBuilder()
-   *     .setCustomerId(customerId)
-   *     .setPlannableLocationId(plannableLocationId)
-   *     .setCurrencyCode(currencyCode)
-   *     .setBudgetMicros(budgetMicros)
-   *     .build();
-   *   GenerateProductMixIdeasResponse response = reachPlanServiceClient.generateProductMixIdeas(request);
-   * }
-   * </code></pre>
    *
    * @param request The request object containing all of the parameters for the API call.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
@@ -330,55 +239,26 @@ public class ReachPlanServiceClient implements BackgroundResource {
     return generateProductMixIdeasCallable().call(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Generates a product mix ideas given a set of preferences. This method helps the advertiser to
    * obtain a good mix of ad formats and budget allocations based on its preferences.
    *
    * <p>Sample code:
-   *
-   * <pre><code>
-   * try (ReachPlanServiceClient reachPlanServiceClient = ReachPlanServiceClient.create()) {
-   *   String customerId = "";
-   *   String plannableLocationId = "";
-   *   String currencyCode = "";
-   *   long budgetMicros = 0L;
-   *   GenerateProductMixIdeasRequest request = GenerateProductMixIdeasRequest.newBuilder()
-   *     .setCustomerId(customerId)
-   *     .setPlannableLocationId(plannableLocationId)
-   *     .setCurrencyCode(currencyCode)
-   *     .setBudgetMicros(budgetMicros)
-   *     .build();
-   *   ApiFuture&lt;GenerateProductMixIdeasResponse&gt; future = reachPlanServiceClient.generateProductMixIdeasCallable().futureCall(request);
-   *   // Do something
-   *   GenerateProductMixIdeasResponse response = future.get();
-   * }
-   * </code></pre>
    */
   public final UnaryCallable<GenerateProductMixIdeasRequest, GenerateProductMixIdeasResponse>
       generateProductMixIdeasCallable() {
     return stub.generateProductMixIdeasCallable();
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Generates a reach forecast for a given targeting / product mix.
    *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (ReachPlanServiceClient reachPlanServiceClient = ReachPlanServiceClient.create()) {
-   *   String customerId = "";
-   *   CampaignDuration campaignDuration = CampaignDuration.newBuilder().build();
-   *   List&lt;PlannedProduct&gt; plannedProducts = new ArrayList&lt;&gt;();
-   *   GenerateReachForecastResponse response = reachPlanServiceClient.generateReachForecast(customerId, campaignDuration, plannedProducts);
-   * }
-   * </code></pre>
-   *
-   * @param customerId Required. The ID of the customer.
-   * @param campaignDuration Required. Campaign duration.
-   * @param plannedProducts Required. The products to be forecast. The max number of allowed planned
-   *     products is 15.
+   * @param customer_id Required. The ID of the customer.
+   * @param campaign_duration Required. Campaign duration.
+   * @param planned_products Required. The products to be forecast. The max number of allowed
+   *     planned products is 15.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final GenerateReachForecastResponse generateReachForecast(
@@ -392,25 +272,9 @@ public class ReachPlanServiceClient implements BackgroundResource {
     return generateReachForecast(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Generates a reach forecast for a given targeting / product mix.
-   *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (ReachPlanServiceClient reachPlanServiceClient = ReachPlanServiceClient.create()) {
-   *   String customerId = "";
-   *   CampaignDuration campaignDuration = CampaignDuration.newBuilder().build();
-   *   List&lt;PlannedProduct&gt; plannedProducts = new ArrayList&lt;&gt;();
-   *   GenerateReachForecastRequest request = GenerateReachForecastRequest.newBuilder()
-   *     .setCustomerId(customerId)
-   *     .setCampaignDuration(campaignDuration)
-   *     .addAllPlannedProducts(plannedProducts)
-   *     .build();
-   *   GenerateReachForecastResponse response = reachPlanServiceClient.generateReachForecast(request);
-   * }
-   * </code></pre>
    *
    * @param request The request object containing all of the parameters for the API call.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
@@ -420,27 +284,11 @@ public class ReachPlanServiceClient implements BackgroundResource {
     return generateReachForecastCallable().call(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Generates a reach forecast for a given targeting / product mix.
    *
    * <p>Sample code:
-   *
-   * <pre><code>
-   * try (ReachPlanServiceClient reachPlanServiceClient = ReachPlanServiceClient.create()) {
-   *   String customerId = "";
-   *   CampaignDuration campaignDuration = CampaignDuration.newBuilder().build();
-   *   List&lt;PlannedProduct&gt; plannedProducts = new ArrayList&lt;&gt;();
-   *   GenerateReachForecastRequest request = GenerateReachForecastRequest.newBuilder()
-   *     .setCustomerId(customerId)
-   *     .setCampaignDuration(campaignDuration)
-   *     .addAllPlannedProducts(plannedProducts)
-   *     .build();
-   *   ApiFuture&lt;GenerateReachForecastResponse&gt; future = reachPlanServiceClient.generateReachForecastCallable().futureCall(request);
-   *   // Do something
-   *   GenerateReachForecastResponse response = future.get();
-   * }
-   * </code></pre>
    */
   public final UnaryCallable<GenerateReachForecastRequest, GenerateReachForecastResponse>
       generateReachForecastCallable() {

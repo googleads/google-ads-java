@@ -5,7 +5,7 @@
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
- *     https://www.apache.org/licenses/LICENSE-2.0
+ *      https://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -13,6 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
 package com.google.ads.googleads.v6.services;
 
 import com.google.ads.googleads.v6.resources.AdGroup;
@@ -31,7 +32,7 @@ import java.io.IOException;
 import java.util.List;
 import javax.annotation.Generated;
 
-// AUTO-GENERATED DOCUMENTATION AND CLASS
+// AUTO-GENERATED DOCUMENTATION AND CLASS.
 /**
  * Settings class to configure an instance of {@link AdGroupServiceClient}.
  *
@@ -48,23 +49,24 @@ import javax.annotation.Generated;
  *
  * <p>For example, to set the total timeout of getAdGroup to 30 seconds:
  *
- * <pre>
- * <code>
+ * <pre>{@code
  * AdGroupServiceSettings.Builder adGroupServiceSettingsBuilder =
  *     AdGroupServiceSettings.newBuilder();
  * adGroupServiceSettingsBuilder
  *     .getAdGroupSettings()
  *     .setRetrySettings(
- *         adGroupServiceSettingsBuilder.getAdGroupSettings().getRetrySettings().toBuilder()
+ *         adGroupServiceSettingsBuilder
+ *             .getAdGroupSettings()
+ *             .getRetrySettings()
+ *             .toBuilder()
  *             .setTotalTimeout(Duration.ofSeconds(30))
  *             .build());
  * AdGroupServiceSettings adGroupServiceSettings = adGroupServiceSettingsBuilder.build();
- * </code>
- * </pre>
+ * }</pre>
  */
-@Generated("by gapic-generator")
-@BetaApi
+@Generated("by gapic-generator-java")
 public class AdGroupServiceSettings extends ClientSettings<AdGroupServiceSettings> {
+
   /** Returns the object with the settings used for calls to getAdGroup. */
   public UnaryCallSettings<GetAdGroupRequest, AdGroup> getAdGroupSettings() {
     return ((AdGroupServiceStubSettings) getStubSettings()).getAdGroupSettings();
@@ -135,16 +137,13 @@ public class AdGroupServiceSettings extends ClientSettings<AdGroupServiceSetting
 
   /** Builder for AdGroupServiceSettings. */
   public static class Builder extends ClientSettings.Builder<AdGroupServiceSettings, Builder> {
+
     protected Builder() throws IOException {
-      this((ClientContext) null);
+      this(((ClientContext) null));
     }
 
     protected Builder(ClientContext clientContext) {
       super(AdGroupServiceStubSettings.newBuilder(clientContext));
-    }
-
-    private static Builder createDefault() {
-      return new Builder(AdGroupServiceStubSettings.newBuilder());
     }
 
     protected Builder(AdGroupServiceSettings settings) {
@@ -155,11 +154,15 @@ public class AdGroupServiceSettings extends ClientSettings<AdGroupServiceSetting
       super(stubSettings);
     }
 
+    private static Builder createDefault() {
+      return new Builder(AdGroupServiceStubSettings.newBuilder());
+    }
+
     public AdGroupServiceStubSettings.Builder getStubSettingsBuilder() {
       return ((AdGroupServiceStubSettings.Builder) getStubSettings());
     }
 
-    // NEXT_MAJOR_VER: remove 'throws Exception'
+    // NEXT_MAJOR_VER: remove 'throws Exception'.
     /**
      * Applies the given settings updater function to all of the unary API methods in this service.
      *

@@ -5,7 +5,7 @@
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
- *     https://www.apache.org/licenses/LICENSE-2.0
+ *      https://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -13,6 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
 package com.google.ads.googleads.v6.services.stub;
 
 import static com.google.ads.googleads.v6.services.GoogleAdsServiceClient.SearchPagedResponse;
@@ -23,7 +24,6 @@ import com.google.ads.googleads.v6.services.SearchGoogleAdsRequest;
 import com.google.ads.googleads.v6.services.SearchGoogleAdsResponse;
 import com.google.ads.googleads.v6.services.SearchGoogleAdsStreamRequest;
 import com.google.ads.googleads.v6.services.SearchGoogleAdsStreamResponse;
-import com.google.api.core.BetaApi;
 import com.google.api.gax.core.BackgroundResource;
 import com.google.api.gax.core.BackgroundResourceAggregation;
 import com.google.api.gax.grpc.GrpcCallSettings;
@@ -33,6 +33,7 @@ import com.google.api.gax.rpc.RequestParamsExtractor;
 import com.google.api.gax.rpc.ServerStreamingCallable;
 import com.google.api.gax.rpc.UnaryCallable;
 import com.google.common.collect.ImmutableMap;
+import com.google.longrunning.stub.GrpcOperationsStub;
 import io.grpc.MethodDescriptor;
 import io.grpc.protobuf.ProtoUtils;
 import java.io.IOException;
@@ -40,16 +41,14 @@ import java.util.Map;
 import java.util.concurrent.TimeUnit;
 import javax.annotation.Generated;
 
-// AUTO-GENERATED DOCUMENTATION AND CLASS
+// AUTO-GENERATED DOCUMENTATION AND CLASS.
 /**
- * gRPC stub implementation for Google Ads API.
+ * gRPC stub implementation for the GoogleAdsService service API.
  *
  * <p>This class is for advanced usage and reflects the underlying API directly.
  */
-@Generated("by gapic-generator")
-@BetaApi("A restructuring of stub classes is planned, so this may break in the future")
+@Generated("by gapic-generator-java")
 public class GrpcGoogleAdsServiceStub extends GoogleAdsServiceStub {
-
   private static final MethodDescriptor<SearchGoogleAdsRequest, SearchGoogleAdsResponse>
       searchMethodDescriptor =
           MethodDescriptor.<SearchGoogleAdsRequest, SearchGoogleAdsResponse>newBuilder()
@@ -60,6 +59,7 @@ public class GrpcGoogleAdsServiceStub extends GoogleAdsServiceStub {
               .setResponseMarshaller(
                   ProtoUtils.marshaller(SearchGoogleAdsResponse.getDefaultInstance()))
               .build();
+
   private static final MethodDescriptor<SearchGoogleAdsStreamRequest, SearchGoogleAdsStreamResponse>
       searchStreamMethodDescriptor =
           MethodDescriptor.<SearchGoogleAdsStreamRequest, SearchGoogleAdsStreamResponse>newBuilder()
@@ -70,6 +70,7 @@ public class GrpcGoogleAdsServiceStub extends GoogleAdsServiceStub {
               .setResponseMarshaller(
                   ProtoUtils.marshaller(SearchGoogleAdsStreamResponse.getDefaultInstance()))
               .build();
+
   private static final MethodDescriptor<MutateGoogleAdsRequest, MutateGoogleAdsResponse>
       mutateMethodDescriptor =
           MethodDescriptor.<MutateGoogleAdsRequest, MutateGoogleAdsResponse>newBuilder()
@@ -81,14 +82,14 @@ public class GrpcGoogleAdsServiceStub extends GoogleAdsServiceStub {
                   ProtoUtils.marshaller(MutateGoogleAdsResponse.getDefaultInstance()))
               .build();
 
-  private final BackgroundResource backgroundResources;
-
   private final UnaryCallable<SearchGoogleAdsRequest, SearchGoogleAdsResponse> searchCallable;
   private final UnaryCallable<SearchGoogleAdsRequest, SearchPagedResponse> searchPagedCallable;
   private final ServerStreamingCallable<SearchGoogleAdsStreamRequest, SearchGoogleAdsStreamResponse>
       searchStreamCallable;
   private final UnaryCallable<MutateGoogleAdsRequest, MutateGoogleAdsResponse> mutateCallable;
 
+  private final BackgroundResource backgroundResources;
+  private final GrpcOperationsStub operationsStub;
   private final GrpcStubCallableFactory callableFactory;
 
   public static final GrpcGoogleAdsServiceStub create(GoogleAdsServiceStubSettings settings)
@@ -108,27 +109,18 @@ public class GrpcGoogleAdsServiceStub extends GoogleAdsServiceStub {
         GoogleAdsServiceStubSettings.newBuilder().build(), clientContext, callableFactory);
   }
 
-  /**
-   * Constructs an instance of GrpcGoogleAdsServiceStub, using the given settings. This is protected
-   * so that it is easy to make a subclass, but otherwise, the static factory methods should be
-   * preferred.
-   */
   protected GrpcGoogleAdsServiceStub(
       GoogleAdsServiceStubSettings settings, ClientContext clientContext) throws IOException {
     this(settings, clientContext, new GrpcGoogleAdsServiceCallableFactory());
   }
 
-  /**
-   * Constructs an instance of GrpcGoogleAdsServiceStub, using the given settings. This is protected
-   * so that it is easy to make a subclass, but otherwise, the static factory methods should be
-   * preferred.
-   */
   protected GrpcGoogleAdsServiceStub(
       GoogleAdsServiceStubSettings settings,
       ClientContext clientContext,
       GrpcStubCallableFactory callableFactory)
       throws IOException {
     this.callableFactory = callableFactory;
+    this.operationsStub = GrpcOperationsStub.create(clientContext, callableFactory);
 
     GrpcCallSettings<SearchGoogleAdsRequest, SearchGoogleAdsResponse> searchTransportSettings =
         GrpcCallSettings.<SearchGoogleAdsRequest, SearchGoogleAdsResponse>newBuilder()
@@ -185,15 +177,20 @@ public class GrpcGoogleAdsServiceStub extends GoogleAdsServiceStub {
         callableFactory.createUnaryCallable(
             mutateTransportSettings, settings.mutateSettings(), clientContext);
 
-    backgroundResources = new BackgroundResourceAggregation(clientContext.getBackgroundResources());
+    this.backgroundResources =
+        new BackgroundResourceAggregation(clientContext.getBackgroundResources());
   }
 
-  public UnaryCallable<SearchGoogleAdsRequest, SearchPagedResponse> searchPagedCallable() {
-    return searchPagedCallable;
+  public GrpcOperationsStub getOperationsStub() {
+    return operationsStub;
   }
 
   public UnaryCallable<SearchGoogleAdsRequest, SearchGoogleAdsResponse> searchCallable() {
     return searchCallable;
+  }
+
+  public UnaryCallable<SearchGoogleAdsRequest, SearchPagedResponse> searchPagedCallable() {
+    return searchPagedCallable;
   }
 
   public ServerStreamingCallable<SearchGoogleAdsStreamRequest, SearchGoogleAdsStreamResponse>

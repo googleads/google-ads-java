@@ -5,7 +5,7 @@
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
- *     https://www.apache.org/licenses/LICENSE-2.0
+ *      https://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -13,6 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
 package com.google.ads.googleads.v6.services;
 
 import com.google.ads.googleads.v6.resources.CustomerClient;
@@ -31,7 +32,7 @@ import java.io.IOException;
 import java.util.List;
 import javax.annotation.Generated;
 
-// AUTO-GENERATED DOCUMENTATION AND CLASS
+// AUTO-GENERATED DOCUMENTATION AND CLASS.
 /**
  * Settings class to configure an instance of {@link CustomerClientServiceClient}.
  *
@@ -48,23 +49,25 @@ import javax.annotation.Generated;
  *
  * <p>For example, to set the total timeout of getCustomerClient to 30 seconds:
  *
- * <pre>
- * <code>
+ * <pre>{@code
  * CustomerClientServiceSettings.Builder customerClientServiceSettingsBuilder =
  *     CustomerClientServiceSettings.newBuilder();
  * customerClientServiceSettingsBuilder
  *     .getCustomerClientSettings()
  *     .setRetrySettings(
- *         customerClientServiceSettingsBuilder.getCustomerClientSettings().getRetrySettings().toBuilder()
+ *         customerClientServiceSettingsBuilder
+ *             .getCustomerClientSettings()
+ *             .getRetrySettings()
+ *             .toBuilder()
  *             .setTotalTimeout(Duration.ofSeconds(30))
  *             .build());
- * CustomerClientServiceSettings customerClientServiceSettings = customerClientServiceSettingsBuilder.build();
- * </code>
- * </pre>
+ * CustomerClientServiceSettings customerClientServiceSettings =
+ *     customerClientServiceSettingsBuilder.build();
+ * }</pre>
  */
-@Generated("by gapic-generator")
-@BetaApi
+@Generated("by gapic-generator-java")
 public class CustomerClientServiceSettings extends ClientSettings<CustomerClientServiceSettings> {
+
   /** Returns the object with the settings used for calls to getCustomerClient. */
   public UnaryCallSettings<GetCustomerClientRequest, CustomerClient> getCustomerClientSettings() {
     return ((CustomerClientServiceStubSettings) getStubSettings()).getCustomerClientSettings();
@@ -131,16 +134,13 @@ public class CustomerClientServiceSettings extends ClientSettings<CustomerClient
   /** Builder for CustomerClientServiceSettings. */
   public static class Builder
       extends ClientSettings.Builder<CustomerClientServiceSettings, Builder> {
+
     protected Builder() throws IOException {
-      this((ClientContext) null);
+      this(((ClientContext) null));
     }
 
     protected Builder(ClientContext clientContext) {
       super(CustomerClientServiceStubSettings.newBuilder(clientContext));
-    }
-
-    private static Builder createDefault() {
-      return new Builder(CustomerClientServiceStubSettings.newBuilder());
     }
 
     protected Builder(CustomerClientServiceSettings settings) {
@@ -151,11 +151,15 @@ public class CustomerClientServiceSettings extends ClientSettings<CustomerClient
       super(stubSettings);
     }
 
+    private static Builder createDefault() {
+      return new Builder(CustomerClientServiceStubSettings.newBuilder());
+    }
+
     public CustomerClientServiceStubSettings.Builder getStubSettingsBuilder() {
       return ((CustomerClientServiceStubSettings.Builder) getStubSettings());
     }
 
-    // NEXT_MAJOR_VER: remove 'throws Exception'
+    // NEXT_MAJOR_VER: remove 'throws Exception'.
     /**
      * Applies the given settings updater function to all of the unary API methods in this service.
      *

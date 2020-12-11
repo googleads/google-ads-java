@@ -5,7 +5,7 @@
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
- *     https://www.apache.org/licenses/LICENSE-2.0
+ *      https://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -13,6 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
 package com.google.ads.googleads.v6.services.stub;
 
 import com.google.ads.googleads.v6.resources.MerchantCenterLink;
@@ -21,7 +22,6 @@ import com.google.ads.googleads.v6.services.ListMerchantCenterLinksRequest;
 import com.google.ads.googleads.v6.services.ListMerchantCenterLinksResponse;
 import com.google.ads.googleads.v6.services.MutateMerchantCenterLinkRequest;
 import com.google.ads.googleads.v6.services.MutateMerchantCenterLinkResponse;
-import com.google.api.core.BetaApi;
 import com.google.api.gax.core.BackgroundResource;
 import com.google.api.gax.core.BackgroundResourceAggregation;
 import com.google.api.gax.grpc.GrpcCallSettings;
@@ -30,6 +30,7 @@ import com.google.api.gax.rpc.ClientContext;
 import com.google.api.gax.rpc.RequestParamsExtractor;
 import com.google.api.gax.rpc.UnaryCallable;
 import com.google.common.collect.ImmutableMap;
+import com.google.longrunning.stub.GrpcOperationsStub;
 import io.grpc.MethodDescriptor;
 import io.grpc.protobuf.ProtoUtils;
 import java.io.IOException;
@@ -37,16 +38,14 @@ import java.util.Map;
 import java.util.concurrent.TimeUnit;
 import javax.annotation.Generated;
 
-// AUTO-GENERATED DOCUMENTATION AND CLASS
+// AUTO-GENERATED DOCUMENTATION AND CLASS.
 /**
- * gRPC stub implementation for Google Ads API.
+ * gRPC stub implementation for the MerchantCenterLinkService service API.
  *
  * <p>This class is for advanced usage and reflects the underlying API directly.
  */
-@Generated("by gapic-generator")
-@BetaApi("A restructuring of stub classes is planned, so this may break in the future")
+@Generated("by gapic-generator-java")
 public class GrpcMerchantCenterLinkServiceStub extends MerchantCenterLinkServiceStub {
-
   private static final MethodDescriptor<
           ListMerchantCenterLinksRequest, ListMerchantCenterLinksResponse>
       listMerchantCenterLinksMethodDescriptor =
@@ -60,6 +59,7 @@ public class GrpcMerchantCenterLinkServiceStub extends MerchantCenterLinkService
               .setResponseMarshaller(
                   ProtoUtils.marshaller(ListMerchantCenterLinksResponse.getDefaultInstance()))
               .build();
+
   private static final MethodDescriptor<GetMerchantCenterLinkRequest, MerchantCenterLink>
       getMerchantCenterLinkMethodDescriptor =
           MethodDescriptor.<GetMerchantCenterLinkRequest, MerchantCenterLink>newBuilder()
@@ -70,6 +70,7 @@ public class GrpcMerchantCenterLinkServiceStub extends MerchantCenterLinkService
                   ProtoUtils.marshaller(GetMerchantCenterLinkRequest.getDefaultInstance()))
               .setResponseMarshaller(ProtoUtils.marshaller(MerchantCenterLink.getDefaultInstance()))
               .build();
+
   private static final MethodDescriptor<
           MutateMerchantCenterLinkRequest, MutateMerchantCenterLinkResponse>
       mutateMerchantCenterLinkMethodDescriptor =
@@ -84,8 +85,6 @@ public class GrpcMerchantCenterLinkServiceStub extends MerchantCenterLinkService
                   ProtoUtils.marshaller(MutateMerchantCenterLinkResponse.getDefaultInstance()))
               .build();
 
-  private final BackgroundResource backgroundResources;
-
   private final UnaryCallable<ListMerchantCenterLinksRequest, ListMerchantCenterLinksResponse>
       listMerchantCenterLinksCallable;
   private final UnaryCallable<GetMerchantCenterLinkRequest, MerchantCenterLink>
@@ -93,6 +92,8 @@ public class GrpcMerchantCenterLinkServiceStub extends MerchantCenterLinkService
   private final UnaryCallable<MutateMerchantCenterLinkRequest, MutateMerchantCenterLinkResponse>
       mutateMerchantCenterLinkCallable;
 
+  private final BackgroundResource backgroundResources;
+  private final GrpcOperationsStub operationsStub;
   private final GrpcStubCallableFactory callableFactory;
 
   public static final GrpcMerchantCenterLinkServiceStub create(
@@ -112,28 +113,19 @@ public class GrpcMerchantCenterLinkServiceStub extends MerchantCenterLinkService
         MerchantCenterLinkServiceStubSettings.newBuilder().build(), clientContext, callableFactory);
   }
 
-  /**
-   * Constructs an instance of GrpcMerchantCenterLinkServiceStub, using the given settings. This is
-   * protected so that it is easy to make a subclass, but otherwise, the static factory methods
-   * should be preferred.
-   */
   protected GrpcMerchantCenterLinkServiceStub(
       MerchantCenterLinkServiceStubSettings settings, ClientContext clientContext)
       throws IOException {
     this(settings, clientContext, new GrpcMerchantCenterLinkServiceCallableFactory());
   }
 
-  /**
-   * Constructs an instance of GrpcMerchantCenterLinkServiceStub, using the given settings. This is
-   * protected so that it is easy to make a subclass, but otherwise, the static factory methods
-   * should be preferred.
-   */
   protected GrpcMerchantCenterLinkServiceStub(
       MerchantCenterLinkServiceStubSettings settings,
       ClientContext clientContext,
       GrpcStubCallableFactory callableFactory)
       throws IOException {
     this.callableFactory = callableFactory;
+    this.operationsStub = GrpcOperationsStub.create(clientContext, callableFactory);
 
     GrpcCallSettings<ListMerchantCenterLinksRequest, ListMerchantCenterLinksResponse>
         listMerchantCenterLinksTransportSettings =
@@ -196,7 +188,12 @@ public class GrpcMerchantCenterLinkServiceStub extends MerchantCenterLinkService
             settings.mutateMerchantCenterLinkSettings(),
             clientContext);
 
-    backgroundResources = new BackgroundResourceAggregation(clientContext.getBackgroundResources());
+    this.backgroundResources =
+        new BackgroundResourceAggregation(clientContext.getBackgroundResources());
+  }
+
+  public GrpcOperationsStub getOperationsStub() {
+    return operationsStub;
   }
 
   public UnaryCallable<ListMerchantCenterLinksRequest, ListMerchantCenterLinksResponse>

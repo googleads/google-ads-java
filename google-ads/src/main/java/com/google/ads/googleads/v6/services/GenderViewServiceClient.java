@@ -5,7 +5,7 @@
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
- *     https://www.apache.org/licenses/LICENSE-2.0
+ *      https://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -13,9 +13,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
 package com.google.ads.googleads.v6.services;
 
 import com.google.ads.googleads.v6.resources.GenderView;
+import com.google.ads.googleads.v6.resources.GenderViewName;
 import com.google.ads.googleads.v6.services.stub.GenderViewServiceStub;
 import com.google.ads.googleads.v6.services.stub.GenderViewServiceStubSettings;
 import com.google.api.core.BetaApi;
@@ -25,23 +27,14 @@ import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 import javax.annotation.Generated;
 
-// AUTO-GENERATED DOCUMENTATION AND SERVICE
+// AUTO-GENERATED DOCUMENTATION AND CLASS.
 /**
  * Service Description: Service to manage gender views.
  *
  * <p>This class provides the ability to make remote calls to the backing service through method
  * calls that map to API methods. Sample code to get started:
  *
- * <pre>
- * <code>
- * try (GenderViewServiceClient genderViewServiceClient = GenderViewServiceClient.create()) {
- *   GenderViewName resourceName = GenderViewName.of("[CUSTOMER_ID]", "[AD_GROUP_ID]", "[CRITERION_ID]");
- *   GenderView response = genderViewServiceClient.getGenderView(resourceName);
- * }
- * </code>
- * </pre>
- *
- * <p>Note: close() needs to be called on the genderViewServiceClient object to clean up resources
+ * <p>Note: close() needs to be called on the GenderViewServiceClient object to clean up resources
  * such as threads. In the example above, try-with-resources is used, which automatically calls
  * close().
  *
@@ -70,30 +63,28 @@ import javax.annotation.Generated;
  *
  * <p>To customize credentials:
  *
- * <pre>
- * <code>
+ * <pre>{@code
  * GenderViewServiceSettings genderViewServiceSettings =
  *     GenderViewServiceSettings.newBuilder()
  *         .setCredentialsProvider(FixedCredentialsProvider.create(myCredentials))
  *         .build();
  * GenderViewServiceClient genderViewServiceClient =
  *     GenderViewServiceClient.create(genderViewServiceSettings);
- * </code>
- * </pre>
+ * }</pre>
  *
- * To customize the endpoint:
+ * <p>To customize the endpoint:
  *
- * <pre>
- * <code>
+ * <pre>{@code
  * GenderViewServiceSettings genderViewServiceSettings =
  *     GenderViewServiceSettings.newBuilder().setEndpoint(myEndpoint).build();
  * GenderViewServiceClient genderViewServiceClient =
  *     GenderViewServiceClient.create(genderViewServiceSettings);
- * </code>
- * </pre>
+ * }</pre>
+ *
+ * <p>Please refer to the GitHub repository's samples for more quickstart code snippets.
  */
-@Generated("by gapic-generator")
 @BetaApi
+@Generated("by gapic-generator")
 public class GenderViewServiceClient implements BackgroundResource {
   private final GenderViewServiceSettings settings;
   private final GenderViewServiceStub stub;
@@ -114,7 +105,7 @@ public class GenderViewServiceClient implements BackgroundResource {
 
   /**
    * Constructs an instance of GenderViewServiceClient, using the given stub for making calls. This
-   * is for advanced usage - prefer to use GenderViewServiceSettings}.
+   * is for advanced usage - prefer using create(GenderViewServiceSettings).
    */
   @BetaApi("A restructuring of stub classes is planned, so this may break in the future")
   public static final GenderViewServiceClient create(GenderViewServiceStub stub) {
@@ -146,20 +137,11 @@ public class GenderViewServiceClient implements BackgroundResource {
     return stub;
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Returns the requested gender view in full detail.
    *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (GenderViewServiceClient genderViewServiceClient = GenderViewServiceClient.create()) {
-   *   GenderViewName resourceName = GenderViewName.of("[CUSTOMER_ID]", "[AD_GROUP_ID]", "[CRITERION_ID]");
-   *   GenderView response = genderViewServiceClient.getGenderView(resourceName);
-   * }
-   * </code></pre>
-   *
-   * @param resourceName Required. The resource name of the gender view to fetch.
+   * @param resource_name Required. The resource name of the gender view to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final GenderView getGenderView(GenderViewName resourceName) {
@@ -170,20 +152,11 @@ public class GenderViewServiceClient implements BackgroundResource {
     return getGenderView(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Returns the requested gender view in full detail.
    *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (GenderViewServiceClient genderViewServiceClient = GenderViewServiceClient.create()) {
-   *   GenderViewName resourceName = GenderViewName.of("[CUSTOMER_ID]", "[AD_GROUP_ID]", "[CRITERION_ID]");
-   *   GenderView response = genderViewServiceClient.getGenderView(resourceName.toString());
-   * }
-   * </code></pre>
-   *
-   * @param resourceName Required. The resource name of the gender view to fetch.
+   * @param resource_name Required. The resource name of the gender view to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final GenderView getGenderView(String resourceName) {
@@ -192,21 +165,9 @@ public class GenderViewServiceClient implements BackgroundResource {
     return getGenderView(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Returns the requested gender view in full detail.
-   *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (GenderViewServiceClient genderViewServiceClient = GenderViewServiceClient.create()) {
-   *   GenderViewName resourceName = GenderViewName.of("[CUSTOMER_ID]", "[AD_GROUP_ID]", "[CRITERION_ID]");
-   *   GetGenderViewRequest request = GetGenderViewRequest.newBuilder()
-   *     .setResourceName(resourceName.toString())
-   *     .build();
-   *   GenderView response = genderViewServiceClient.getGenderView(request);
-   * }
-   * </code></pre>
    *
    * @param request The request object containing all of the parameters for the API call.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
@@ -215,23 +176,11 @@ public class GenderViewServiceClient implements BackgroundResource {
     return getGenderViewCallable().call(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Returns the requested gender view in full detail.
    *
    * <p>Sample code:
-   *
-   * <pre><code>
-   * try (GenderViewServiceClient genderViewServiceClient = GenderViewServiceClient.create()) {
-   *   GenderViewName resourceName = GenderViewName.of("[CUSTOMER_ID]", "[AD_GROUP_ID]", "[CRITERION_ID]");
-   *   GetGenderViewRequest request = GetGenderViewRequest.newBuilder()
-   *     .setResourceName(resourceName.toString())
-   *     .build();
-   *   ApiFuture&lt;GenderView&gt; future = genderViewServiceClient.getGenderViewCallable().futureCall(request);
-   *   // Do something
-   *   GenderView response = future.get();
-   * }
-   * </code></pre>
    */
   public final UnaryCallable<GetGenderViewRequest, GenderView> getGenderViewCallable() {
     return stub.getGenderViewCallable();

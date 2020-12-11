@@ -5,7 +5,7 @@
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
- *     https://www.apache.org/licenses/LICENSE-2.0
+ *      https://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -13,9 +13,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
 package com.google.ads.googleads.v6.services;
 
 import com.google.ads.googleads.v6.resources.UserList;
+import com.google.ads.googleads.v6.resources.UserListName;
 import com.google.ads.googleads.v6.services.stub.UserListServiceStub;
 import com.google.ads.googleads.v6.services.stub.UserListServiceStubSettings;
 import com.google.api.core.BetaApi;
@@ -26,23 +28,14 @@ import java.util.List;
 import java.util.concurrent.TimeUnit;
 import javax.annotation.Generated;
 
-// AUTO-GENERATED DOCUMENTATION AND SERVICE
+// AUTO-GENERATED DOCUMENTATION AND CLASS.
 /**
  * Service Description: Service to manage user lists.
  *
  * <p>This class provides the ability to make remote calls to the backing service through method
  * calls that map to API methods. Sample code to get started:
  *
- * <pre>
- * <code>
- * try (UserListServiceClient userListServiceClient = UserListServiceClient.create()) {
- *   UserListName resourceName = UserListName.of("[CUSTOMER_ID]", "[USER_LIST_ID]");
- *   UserList response = userListServiceClient.getUserList(resourceName);
- * }
- * </code>
- * </pre>
- *
- * <p>Note: close() needs to be called on the userListServiceClient object to clean up resources
+ * <p>Note: close() needs to be called on the UserListServiceClient object to clean up resources
  * such as threads. In the example above, try-with-resources is used, which automatically calls
  * close().
  *
@@ -71,30 +64,28 @@ import javax.annotation.Generated;
  *
  * <p>To customize credentials:
  *
- * <pre>
- * <code>
+ * <pre>{@code
  * UserListServiceSettings userListServiceSettings =
  *     UserListServiceSettings.newBuilder()
  *         .setCredentialsProvider(FixedCredentialsProvider.create(myCredentials))
  *         .build();
  * UserListServiceClient userListServiceClient =
  *     UserListServiceClient.create(userListServiceSettings);
- * </code>
- * </pre>
+ * }</pre>
  *
- * To customize the endpoint:
+ * <p>To customize the endpoint:
  *
- * <pre>
- * <code>
+ * <pre>{@code
  * UserListServiceSettings userListServiceSettings =
  *     UserListServiceSettings.newBuilder().setEndpoint(myEndpoint).build();
  * UserListServiceClient userListServiceClient =
  *     UserListServiceClient.create(userListServiceSettings);
- * </code>
- * </pre>
+ * }</pre>
+ *
+ * <p>Please refer to the GitHub repository's samples for more quickstart code snippets.
  */
-@Generated("by gapic-generator")
 @BetaApi
+@Generated("by gapic-generator")
 public class UserListServiceClient implements BackgroundResource {
   private final UserListServiceSettings settings;
   private final UserListServiceStub stub;
@@ -115,7 +106,7 @@ public class UserListServiceClient implements BackgroundResource {
 
   /**
    * Constructs an instance of UserListServiceClient, using the given stub for making calls. This is
-   * for advanced usage - prefer to use UserListServiceSettings}.
+   * for advanced usage - prefer using create(UserListServiceSettings).
    */
   @BetaApi("A restructuring of stub classes is planned, so this may break in the future")
   public static final UserListServiceClient create(UserListServiceStub stub) {
@@ -147,20 +138,11 @@ public class UserListServiceClient implements BackgroundResource {
     return stub;
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Returns the requested user list.
    *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (UserListServiceClient userListServiceClient = UserListServiceClient.create()) {
-   *   UserListName resourceName = UserListName.of("[CUSTOMER_ID]", "[USER_LIST_ID]");
-   *   UserList response = userListServiceClient.getUserList(resourceName);
-   * }
-   * </code></pre>
-   *
-   * @param resourceName Required. The resource name of the user list to fetch.
+   * @param resource_name Required. The resource name of the user list to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final UserList getUserList(UserListName resourceName) {
@@ -171,20 +153,11 @@ public class UserListServiceClient implements BackgroundResource {
     return getUserList(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Returns the requested user list.
    *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (UserListServiceClient userListServiceClient = UserListServiceClient.create()) {
-   *   UserListName resourceName = UserListName.of("[CUSTOMER_ID]", "[USER_LIST_ID]");
-   *   UserList response = userListServiceClient.getUserList(resourceName.toString());
-   * }
-   * </code></pre>
-   *
-   * @param resourceName Required. The resource name of the user list to fetch.
+   * @param resource_name Required. The resource name of the user list to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final UserList getUserList(String resourceName) {
@@ -193,21 +166,9 @@ public class UserListServiceClient implements BackgroundResource {
     return getUserList(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Returns the requested user list.
-   *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (UserListServiceClient userListServiceClient = UserListServiceClient.create()) {
-   *   UserListName resourceName = UserListName.of("[CUSTOMER_ID]", "[USER_LIST_ID]");
-   *   GetUserListRequest request = GetUserListRequest.newBuilder()
-   *     .setResourceName(resourceName.toString())
-   *     .build();
-   *   UserList response = userListServiceClient.getUserList(request);
-   * }
-   * </code></pre>
    *
    * @param request The request object containing all of the parameters for the API call.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
@@ -216,43 +177,21 @@ public class UserListServiceClient implements BackgroundResource {
     return getUserListCallable().call(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Returns the requested user list.
    *
    * <p>Sample code:
-   *
-   * <pre><code>
-   * try (UserListServiceClient userListServiceClient = UserListServiceClient.create()) {
-   *   UserListName resourceName = UserListName.of("[CUSTOMER_ID]", "[USER_LIST_ID]");
-   *   GetUserListRequest request = GetUserListRequest.newBuilder()
-   *     .setResourceName(resourceName.toString())
-   *     .build();
-   *   ApiFuture&lt;UserList&gt; future = userListServiceClient.getUserListCallable().futureCall(request);
-   *   // Do something
-   *   UserList response = future.get();
-   * }
-   * </code></pre>
    */
   public final UnaryCallable<GetUserListRequest, UserList> getUserListCallable() {
     return stub.getUserListCallable();
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Creates or updates user lists. Operation statuses are returned.
    *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (UserListServiceClient userListServiceClient = UserListServiceClient.create()) {
-   *   String customerId = "";
-   *   List&lt;UserListOperation&gt; operations = new ArrayList&lt;&gt;();
-   *   MutateUserListsResponse response = userListServiceClient.mutateUserLists(customerId, operations);
-   * }
-   * </code></pre>
-   *
-   * @param customerId Required. The ID of the customer whose user lists are being modified.
+   * @param customer_id Required. The ID of the customer whose user lists are being modified.
    * @param operations Required. The list of operations to perform on individual user lists.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
@@ -266,23 +205,9 @@ public class UserListServiceClient implements BackgroundResource {
     return mutateUserLists(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Creates or updates user lists. Operation statuses are returned.
-   *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (UserListServiceClient userListServiceClient = UserListServiceClient.create()) {
-   *   String customerId = "";
-   *   List&lt;UserListOperation&gt; operations = new ArrayList&lt;&gt;();
-   *   MutateUserListsRequest request = MutateUserListsRequest.newBuilder()
-   *     .setCustomerId(customerId)
-   *     .addAllOperations(operations)
-   *     .build();
-   *   MutateUserListsResponse response = userListServiceClient.mutateUserLists(request);
-   * }
-   * </code></pre>
    *
    * @param request The request object containing all of the parameters for the API call.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
@@ -291,25 +216,11 @@ public class UserListServiceClient implements BackgroundResource {
     return mutateUserListsCallable().call(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Creates or updates user lists. Operation statuses are returned.
    *
    * <p>Sample code:
-   *
-   * <pre><code>
-   * try (UserListServiceClient userListServiceClient = UserListServiceClient.create()) {
-   *   String customerId = "";
-   *   List&lt;UserListOperation&gt; operations = new ArrayList&lt;&gt;();
-   *   MutateUserListsRequest request = MutateUserListsRequest.newBuilder()
-   *     .setCustomerId(customerId)
-   *     .addAllOperations(operations)
-   *     .build();
-   *   ApiFuture&lt;MutateUserListsResponse&gt; future = userListServiceClient.mutateUserListsCallable().futureCall(request);
-   *   // Do something
-   *   MutateUserListsResponse response = future.get();
-   * }
-   * </code></pre>
    */
   public final UnaryCallable<MutateUserListsRequest, MutateUserListsResponse>
       mutateUserListsCallable() {

@@ -5,7 +5,7 @@
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
- *     https://www.apache.org/licenses/LICENSE-2.0
+ *      https://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -13,9 +13,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
 package com.google.ads.googleads.v6.services;
 
 import com.google.ads.googleads.v6.resources.Feed;
+import com.google.ads.googleads.v6.resources.FeedName;
 import com.google.ads.googleads.v6.services.stub.FeedServiceStub;
 import com.google.ads.googleads.v6.services.stub.FeedServiceStubSettings;
 import com.google.api.core.BetaApi;
@@ -26,23 +28,14 @@ import java.util.List;
 import java.util.concurrent.TimeUnit;
 import javax.annotation.Generated;
 
-// AUTO-GENERATED DOCUMENTATION AND SERVICE
+// AUTO-GENERATED DOCUMENTATION AND CLASS.
 /**
  * Service Description: Service to manage feeds.
  *
  * <p>This class provides the ability to make remote calls to the backing service through method
  * calls that map to API methods. Sample code to get started:
  *
- * <pre>
- * <code>
- * try (FeedServiceClient feedServiceClient = FeedServiceClient.create()) {
- *   FeedName resourceName = FeedName.of("[CUSTOMER_ID]", "[FEED_ID]");
- *   Feed response = feedServiceClient.getFeed(resourceName);
- * }
- * </code>
- * </pre>
- *
- * <p>Note: close() needs to be called on the feedServiceClient object to clean up resources such as
+ * <p>Note: close() needs to be called on the FeedServiceClient object to clean up resources such as
  * threads. In the example above, try-with-resources is used, which automatically calls close().
  *
  * <p>The surface of this class includes several types of Java methods for each of the API's
@@ -70,30 +63,26 @@ import javax.annotation.Generated;
  *
  * <p>To customize credentials:
  *
- * <pre>
- * <code>
+ * <pre>{@code
  * FeedServiceSettings feedServiceSettings =
  *     FeedServiceSettings.newBuilder()
  *         .setCredentialsProvider(FixedCredentialsProvider.create(myCredentials))
  *         .build();
- * FeedServiceClient feedServiceClient =
- *     FeedServiceClient.create(feedServiceSettings);
- * </code>
- * </pre>
+ * FeedServiceClient feedServiceClient = FeedServiceClient.create(feedServiceSettings);
+ * }</pre>
  *
- * To customize the endpoint:
+ * <p>To customize the endpoint:
  *
- * <pre>
- * <code>
+ * <pre>{@code
  * FeedServiceSettings feedServiceSettings =
  *     FeedServiceSettings.newBuilder().setEndpoint(myEndpoint).build();
- * FeedServiceClient feedServiceClient =
- *     FeedServiceClient.create(feedServiceSettings);
- * </code>
- * </pre>
+ * FeedServiceClient feedServiceClient = FeedServiceClient.create(feedServiceSettings);
+ * }</pre>
+ *
+ * <p>Please refer to the GitHub repository's samples for more quickstart code snippets.
  */
-@Generated("by gapic-generator")
 @BetaApi
+@Generated("by gapic-generator")
 public class FeedServiceClient implements BackgroundResource {
   private final FeedServiceSettings settings;
   private final FeedServiceStub stub;
@@ -113,7 +102,7 @@ public class FeedServiceClient implements BackgroundResource {
 
   /**
    * Constructs an instance of FeedServiceClient, using the given stub for making calls. This is for
-   * advanced usage - prefer to use FeedServiceSettings}.
+   * advanced usage - prefer using create(FeedServiceSettings).
    */
   @BetaApi("A restructuring of stub classes is planned, so this may break in the future")
   public static final FeedServiceClient create(FeedServiceStub stub) {
@@ -145,20 +134,11 @@ public class FeedServiceClient implements BackgroundResource {
     return stub;
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Returns the requested feed in full detail.
    *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (FeedServiceClient feedServiceClient = FeedServiceClient.create()) {
-   *   FeedName resourceName = FeedName.of("[CUSTOMER_ID]", "[FEED_ID]");
-   *   Feed response = feedServiceClient.getFeed(resourceName);
-   * }
-   * </code></pre>
-   *
-   * @param resourceName Required. The resource name of the feed to fetch.
+   * @param resource_name Required. The resource name of the feed to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final Feed getFeed(FeedName resourceName) {
@@ -169,20 +149,11 @@ public class FeedServiceClient implements BackgroundResource {
     return getFeed(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Returns the requested feed in full detail.
    *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (FeedServiceClient feedServiceClient = FeedServiceClient.create()) {
-   *   FeedName resourceName = FeedName.of("[CUSTOMER_ID]", "[FEED_ID]");
-   *   Feed response = feedServiceClient.getFeed(resourceName.toString());
-   * }
-   * </code></pre>
-   *
-   * @param resourceName Required. The resource name of the feed to fetch.
+   * @param resource_name Required. The resource name of the feed to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final Feed getFeed(String resourceName) {
@@ -190,21 +161,9 @@ public class FeedServiceClient implements BackgroundResource {
     return getFeed(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Returns the requested feed in full detail.
-   *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (FeedServiceClient feedServiceClient = FeedServiceClient.create()) {
-   *   FeedName resourceName = FeedName.of("[CUSTOMER_ID]", "[FEED_ID]");
-   *   GetFeedRequest request = GetFeedRequest.newBuilder()
-   *     .setResourceName(resourceName.toString())
-   *     .build();
-   *   Feed response = feedServiceClient.getFeed(request);
-   * }
-   * </code></pre>
    *
    * @param request The request object containing all of the parameters for the API call.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
@@ -213,43 +172,21 @@ public class FeedServiceClient implements BackgroundResource {
     return getFeedCallable().call(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Returns the requested feed in full detail.
    *
    * <p>Sample code:
-   *
-   * <pre><code>
-   * try (FeedServiceClient feedServiceClient = FeedServiceClient.create()) {
-   *   FeedName resourceName = FeedName.of("[CUSTOMER_ID]", "[FEED_ID]");
-   *   GetFeedRequest request = GetFeedRequest.newBuilder()
-   *     .setResourceName(resourceName.toString())
-   *     .build();
-   *   ApiFuture&lt;Feed&gt; future = feedServiceClient.getFeedCallable().futureCall(request);
-   *   // Do something
-   *   Feed response = future.get();
-   * }
-   * </code></pre>
    */
   public final UnaryCallable<GetFeedRequest, Feed> getFeedCallable() {
     return stub.getFeedCallable();
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Creates, updates, or removes feeds. Operation statuses are returned.
    *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (FeedServiceClient feedServiceClient = FeedServiceClient.create()) {
-   *   String customerId = "";
-   *   List&lt;FeedOperation&gt; operations = new ArrayList&lt;&gt;();
-   *   MutateFeedsResponse response = feedServiceClient.mutateFeeds(customerId, operations);
-   * }
-   * </code></pre>
-   *
-   * @param customerId Required. The ID of the customer whose feeds are being modified.
+   * @param customer_id Required. The ID of the customer whose feeds are being modified.
    * @param operations Required. The list of operations to perform on individual feeds.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
@@ -262,23 +199,9 @@ public class FeedServiceClient implements BackgroundResource {
     return mutateFeeds(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Creates, updates, or removes feeds. Operation statuses are returned.
-   *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (FeedServiceClient feedServiceClient = FeedServiceClient.create()) {
-   *   String customerId = "";
-   *   List&lt;FeedOperation&gt; operations = new ArrayList&lt;&gt;();
-   *   MutateFeedsRequest request = MutateFeedsRequest.newBuilder()
-   *     .setCustomerId(customerId)
-   *     .addAllOperations(operations)
-   *     .build();
-   *   MutateFeedsResponse response = feedServiceClient.mutateFeeds(request);
-   * }
-   * </code></pre>
    *
    * @param request The request object containing all of the parameters for the API call.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
@@ -287,25 +210,11 @@ public class FeedServiceClient implements BackgroundResource {
     return mutateFeedsCallable().call(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Creates, updates, or removes feeds. Operation statuses are returned.
    *
    * <p>Sample code:
-   *
-   * <pre><code>
-   * try (FeedServiceClient feedServiceClient = FeedServiceClient.create()) {
-   *   String customerId = "";
-   *   List&lt;FeedOperation&gt; operations = new ArrayList&lt;&gt;();
-   *   MutateFeedsRequest request = MutateFeedsRequest.newBuilder()
-   *     .setCustomerId(customerId)
-   *     .addAllOperations(operations)
-   *     .build();
-   *   ApiFuture&lt;MutateFeedsResponse&gt; future = feedServiceClient.mutateFeedsCallable().futureCall(request);
-   *   // Do something
-   *   MutateFeedsResponse response = future.get();
-   * }
-   * </code></pre>
    */
   public final UnaryCallable<MutateFeedsRequest, MutateFeedsResponse> mutateFeedsCallable() {
     return stub.mutateFeedsCallable();

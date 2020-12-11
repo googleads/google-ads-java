@@ -5,7 +5,7 @@
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
- *     https://www.apache.org/licenses/LICENSE-2.0
+ *      https://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -13,6 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
 package com.google.ads.googleads.v6.services.stub;
 
 import static com.google.ads.googleads.v6.services.CampaignExperimentServiceClient.ListCampaignExperimentAsyncErrorsPagedResponse;
@@ -29,7 +30,6 @@ import com.google.ads.googleads.v6.services.ListCampaignExperimentAsyncErrorsRes
 import com.google.ads.googleads.v6.services.MutateCampaignExperimentsRequest;
 import com.google.ads.googleads.v6.services.MutateCampaignExperimentsResponse;
 import com.google.ads.googleads.v6.services.PromoteCampaignExperimentRequest;
-import com.google.api.core.BetaApi;
 import com.google.api.gax.core.BackgroundResource;
 import com.google.api.gax.core.BackgroundResourceAggregation;
 import com.google.api.gax.grpc.GrpcCallSettings;
@@ -49,16 +49,14 @@ import java.util.Map;
 import java.util.concurrent.TimeUnit;
 import javax.annotation.Generated;
 
-// AUTO-GENERATED DOCUMENTATION AND CLASS
+// AUTO-GENERATED DOCUMENTATION AND CLASS.
 /**
- * gRPC stub implementation for Google Ads API.
+ * gRPC stub implementation for the CampaignExperimentService service API.
  *
  * <p>This class is for advanced usage and reflects the underlying API directly.
  */
-@Generated("by gapic-generator")
-@BetaApi("A restructuring of stub classes is planned, so this may break in the future")
+@Generated("by gapic-generator-java")
 public class GrpcCampaignExperimentServiceStub extends CampaignExperimentServiceStub {
-
   private static final MethodDescriptor<GetCampaignExperimentRequest, CampaignExperiment>
       getCampaignExperimentMethodDescriptor =
           MethodDescriptor.<GetCampaignExperimentRequest, CampaignExperiment>newBuilder()
@@ -69,6 +67,7 @@ public class GrpcCampaignExperimentServiceStub extends CampaignExperimentService
                   ProtoUtils.marshaller(GetCampaignExperimentRequest.getDefaultInstance()))
               .setResponseMarshaller(ProtoUtils.marshaller(CampaignExperiment.getDefaultInstance()))
               .build();
+
   private static final MethodDescriptor<CreateCampaignExperimentRequest, Operation>
       createCampaignExperimentMethodDescriptor =
           MethodDescriptor.<CreateCampaignExperimentRequest, Operation>newBuilder()
@@ -79,6 +78,7 @@ public class GrpcCampaignExperimentServiceStub extends CampaignExperimentService
                   ProtoUtils.marshaller(CreateCampaignExperimentRequest.getDefaultInstance()))
               .setResponseMarshaller(ProtoUtils.marshaller(Operation.getDefaultInstance()))
               .build();
+
   private static final MethodDescriptor<
           MutateCampaignExperimentsRequest, MutateCampaignExperimentsResponse>
       mutateCampaignExperimentsMethodDescriptor =
@@ -92,6 +92,7 @@ public class GrpcCampaignExperimentServiceStub extends CampaignExperimentService
               .setResponseMarshaller(
                   ProtoUtils.marshaller(MutateCampaignExperimentsResponse.getDefaultInstance()))
               .build();
+
   private static final MethodDescriptor<
           GraduateCampaignExperimentRequest, GraduateCampaignExperimentResponse>
       graduateCampaignExperimentMethodDescriptor =
@@ -105,6 +106,7 @@ public class GrpcCampaignExperimentServiceStub extends CampaignExperimentService
               .setResponseMarshaller(
                   ProtoUtils.marshaller(GraduateCampaignExperimentResponse.getDefaultInstance()))
               .build();
+
   private static final MethodDescriptor<PromoteCampaignExperimentRequest, Operation>
       promoteCampaignExperimentMethodDescriptor =
           MethodDescriptor.<PromoteCampaignExperimentRequest, Operation>newBuilder()
@@ -115,6 +117,7 @@ public class GrpcCampaignExperimentServiceStub extends CampaignExperimentService
                   ProtoUtils.marshaller(PromoteCampaignExperimentRequest.getDefaultInstance()))
               .setResponseMarshaller(ProtoUtils.marshaller(Operation.getDefaultInstance()))
               .build();
+
   private static final MethodDescriptor<EndCampaignExperimentRequest, Empty>
       endCampaignExperimentMethodDescriptor =
           MethodDescriptor.<EndCampaignExperimentRequest, Empty>newBuilder()
@@ -125,6 +128,7 @@ public class GrpcCampaignExperimentServiceStub extends CampaignExperimentService
                   ProtoUtils.marshaller(EndCampaignExperimentRequest.getDefaultInstance()))
               .setResponseMarshaller(ProtoUtils.marshaller(Empty.getDefaultInstance()))
               .build();
+
   private static final MethodDescriptor<
           ListCampaignExperimentAsyncErrorsRequest, ListCampaignExperimentAsyncErrorsResponse>
       listCampaignExperimentAsyncErrorsMethodDescriptor =
@@ -141,9 +145,6 @@ public class GrpcCampaignExperimentServiceStub extends CampaignExperimentService
                   ProtoUtils.marshaller(
                       ListCampaignExperimentAsyncErrorsResponse.getDefaultInstance()))
               .build();
-
-  private final BackgroundResource backgroundResources;
-  private final GrpcOperationsStub operationsStub;
 
   private final UnaryCallable<GetCampaignExperimentRequest, CampaignExperiment>
       getCampaignExperimentCallable;
@@ -168,6 +169,8 @@ public class GrpcCampaignExperimentServiceStub extends CampaignExperimentService
           ListCampaignExperimentAsyncErrorsRequest, ListCampaignExperimentAsyncErrorsPagedResponse>
       listCampaignExperimentAsyncErrorsPagedCallable;
 
+  private final BackgroundResource backgroundResources;
+  private final GrpcOperationsStub operationsStub;
   private final GrpcStubCallableFactory callableFactory;
 
   public static final GrpcCampaignExperimentServiceStub create(
@@ -187,22 +190,12 @@ public class GrpcCampaignExperimentServiceStub extends CampaignExperimentService
         CampaignExperimentServiceStubSettings.newBuilder().build(), clientContext, callableFactory);
   }
 
-  /**
-   * Constructs an instance of GrpcCampaignExperimentServiceStub, using the given settings. This is
-   * protected so that it is easy to make a subclass, but otherwise, the static factory methods
-   * should be preferred.
-   */
   protected GrpcCampaignExperimentServiceStub(
       CampaignExperimentServiceStubSettings settings, ClientContext clientContext)
       throws IOException {
     this(settings, clientContext, new GrpcCampaignExperimentServiceCallableFactory());
   }
 
-  /**
-   * Constructs an instance of GrpcCampaignExperimentServiceStub, using the given settings. This is
-   * protected so that it is easy to make a subclass, but otherwise, the static factory methods
-   * should be preferred.
-   */
   protected GrpcCampaignExperimentServiceStub(
       CampaignExperimentServiceStubSettings settings,
       ClientContext clientContext,
@@ -335,7 +328,7 @@ public class GrpcCampaignExperimentServiceStub extends CampaignExperimentService
             createCampaignExperimentTransportSettings,
             settings.createCampaignExperimentOperationSettings(),
             clientContext,
-            this.operationsStub);
+            operationsStub);
     this.mutateCampaignExperimentsCallable =
         callableFactory.createUnaryCallable(
             mutateCampaignExperimentsTransportSettings,
@@ -356,7 +349,7 @@ public class GrpcCampaignExperimentServiceStub extends CampaignExperimentService
             promoteCampaignExperimentTransportSettings,
             settings.promoteCampaignExperimentOperationSettings(),
             clientContext,
-            this.operationsStub);
+            operationsStub);
     this.endCampaignExperimentCallable =
         callableFactory.createUnaryCallable(
             endCampaignExperimentTransportSettings,
@@ -373,10 +366,10 @@ public class GrpcCampaignExperimentServiceStub extends CampaignExperimentService
             settings.listCampaignExperimentAsyncErrorsSettings(),
             clientContext);
 
-    backgroundResources = new BackgroundResourceAggregation(clientContext.getBackgroundResources());
+    this.backgroundResources =
+        new BackgroundResourceAggregation(clientContext.getBackgroundResources());
   }
 
-  @BetaApi("The surface for use by generated code is not stable yet and may change in the future.")
   public GrpcOperationsStub getOperationsStub() {
     return operationsStub;
   }
@@ -386,15 +379,14 @@ public class GrpcCampaignExperimentServiceStub extends CampaignExperimentService
     return getCampaignExperimentCallable;
   }
 
-  @BetaApi("The surface for use by generated code is not stable yet and may change in the future.")
-  public OperationCallable<CreateCampaignExperimentRequest, Empty, CreateCampaignExperimentMetadata>
-      createCampaignExperimentOperationCallable() {
-    return createCampaignExperimentOperationCallable;
-  }
-
   public UnaryCallable<CreateCampaignExperimentRequest, Operation>
       createCampaignExperimentCallable() {
     return createCampaignExperimentCallable;
+  }
+
+  public OperationCallable<CreateCampaignExperimentRequest, Empty, CreateCampaignExperimentMetadata>
+      createCampaignExperimentOperationCallable() {
+    return createCampaignExperimentOperationCallable;
   }
 
   public UnaryCallable<MutateCampaignExperimentsRequest, MutateCampaignExperimentsResponse>
@@ -407,15 +399,14 @@ public class GrpcCampaignExperimentServiceStub extends CampaignExperimentService
     return graduateCampaignExperimentCallable;
   }
 
-  @BetaApi("The surface for use by generated code is not stable yet and may change in the future.")
-  public OperationCallable<PromoteCampaignExperimentRequest, Empty, Empty>
-      promoteCampaignExperimentOperationCallable() {
-    return promoteCampaignExperimentOperationCallable;
-  }
-
   public UnaryCallable<PromoteCampaignExperimentRequest, Operation>
       promoteCampaignExperimentCallable() {
     return promoteCampaignExperimentCallable;
+  }
+
+  public OperationCallable<PromoteCampaignExperimentRequest, Empty, Empty>
+      promoteCampaignExperimentOperationCallable() {
+    return promoteCampaignExperimentOperationCallable;
   }
 
   public UnaryCallable<EndCampaignExperimentRequest, Empty> endCampaignExperimentCallable() {
@@ -423,15 +414,15 @@ public class GrpcCampaignExperimentServiceStub extends CampaignExperimentService
   }
 
   public UnaryCallable<
-          ListCampaignExperimentAsyncErrorsRequest, ListCampaignExperimentAsyncErrorsPagedResponse>
-      listCampaignExperimentAsyncErrorsPagedCallable() {
-    return listCampaignExperimentAsyncErrorsPagedCallable;
-  }
-
-  public UnaryCallable<
           ListCampaignExperimentAsyncErrorsRequest, ListCampaignExperimentAsyncErrorsResponse>
       listCampaignExperimentAsyncErrorsCallable() {
     return listCampaignExperimentAsyncErrorsCallable;
+  }
+
+  public UnaryCallable<
+          ListCampaignExperimentAsyncErrorsRequest, ListCampaignExperimentAsyncErrorsPagedResponse>
+      listCampaignExperimentAsyncErrorsPagedCallable() {
+    return listCampaignExperimentAsyncErrorsPagedCallable;
   }
 
   @Override

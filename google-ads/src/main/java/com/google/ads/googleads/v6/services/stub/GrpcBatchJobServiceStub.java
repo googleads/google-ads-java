@@ -5,7 +5,7 @@
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
- *     https://www.apache.org/licenses/LICENSE-2.0
+ *      https://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -13,12 +13,12 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
 package com.google.ads.googleads.v6.services.stub;
 
 import static com.google.ads.googleads.v6.services.BatchJobServiceClient.ListBatchJobResultsPagedResponse;
 
 import com.google.ads.googleads.v6.resources.BatchJob;
-import com.google.ads.googleads.v6.resources.BatchJob.BatchJobMetadata;
 import com.google.ads.googleads.v6.services.AddBatchJobOperationsRequest;
 import com.google.ads.googleads.v6.services.AddBatchJobOperationsResponse;
 import com.google.ads.googleads.v6.services.GetBatchJobRequest;
@@ -27,7 +27,6 @@ import com.google.ads.googleads.v6.services.ListBatchJobResultsResponse;
 import com.google.ads.googleads.v6.services.MutateBatchJobRequest;
 import com.google.ads.googleads.v6.services.MutateBatchJobResponse;
 import com.google.ads.googleads.v6.services.RunBatchJobRequest;
-import com.google.api.core.BetaApi;
 import com.google.api.gax.core.BackgroundResource;
 import com.google.api.gax.core.BackgroundResourceAggregation;
 import com.google.api.gax.grpc.GrpcCallSettings;
@@ -47,16 +46,14 @@ import java.util.Map;
 import java.util.concurrent.TimeUnit;
 import javax.annotation.Generated;
 
-// AUTO-GENERATED DOCUMENTATION AND CLASS
+// AUTO-GENERATED DOCUMENTATION AND CLASS.
 /**
- * gRPC stub implementation for Google Ads API.
+ * gRPC stub implementation for the BatchJobService service API.
  *
  * <p>This class is for advanced usage and reflects the underlying API directly.
  */
-@Generated("by gapic-generator")
-@BetaApi("A restructuring of stub classes is planned, so this may break in the future")
+@Generated("by gapic-generator-java")
 public class GrpcBatchJobServiceStub extends BatchJobServiceStub {
-
   private static final MethodDescriptor<MutateBatchJobRequest, MutateBatchJobResponse>
       mutateBatchJobMethodDescriptor =
           MethodDescriptor.<MutateBatchJobRequest, MutateBatchJobResponse>newBuilder()
@@ -67,6 +64,7 @@ public class GrpcBatchJobServiceStub extends BatchJobServiceStub {
               .setResponseMarshaller(
                   ProtoUtils.marshaller(MutateBatchJobResponse.getDefaultInstance()))
               .build();
+
   private static final MethodDescriptor<GetBatchJobRequest, BatchJob> getBatchJobMethodDescriptor =
       MethodDescriptor.<GetBatchJobRequest, BatchJob>newBuilder()
           .setType(MethodDescriptor.MethodType.UNARY)
@@ -74,6 +72,7 @@ public class GrpcBatchJobServiceStub extends BatchJobServiceStub {
           .setRequestMarshaller(ProtoUtils.marshaller(GetBatchJobRequest.getDefaultInstance()))
           .setResponseMarshaller(ProtoUtils.marshaller(BatchJob.getDefaultInstance()))
           .build();
+
   private static final MethodDescriptor<ListBatchJobResultsRequest, ListBatchJobResultsResponse>
       listBatchJobResultsMethodDescriptor =
           MethodDescriptor.<ListBatchJobResultsRequest, ListBatchJobResultsResponse>newBuilder()
@@ -85,6 +84,7 @@ public class GrpcBatchJobServiceStub extends BatchJobServiceStub {
               .setResponseMarshaller(
                   ProtoUtils.marshaller(ListBatchJobResultsResponse.getDefaultInstance()))
               .build();
+
   private static final MethodDescriptor<RunBatchJobRequest, Operation> runBatchJobMethodDescriptor =
       MethodDescriptor.<RunBatchJobRequest, Operation>newBuilder()
           .setType(MethodDescriptor.MethodType.UNARY)
@@ -92,6 +92,7 @@ public class GrpcBatchJobServiceStub extends BatchJobServiceStub {
           .setRequestMarshaller(ProtoUtils.marshaller(RunBatchJobRequest.getDefaultInstance()))
           .setResponseMarshaller(ProtoUtils.marshaller(Operation.getDefaultInstance()))
           .build();
+
   private static final MethodDescriptor<AddBatchJobOperationsRequest, AddBatchJobOperationsResponse>
       addBatchJobOperationsMethodDescriptor =
           MethodDescriptor.<AddBatchJobOperationsRequest, AddBatchJobOperationsResponse>newBuilder()
@@ -104,9 +105,6 @@ public class GrpcBatchJobServiceStub extends BatchJobServiceStub {
                   ProtoUtils.marshaller(AddBatchJobOperationsResponse.getDefaultInstance()))
               .build();
 
-  private final BackgroundResource backgroundResources;
-  private final GrpcOperationsStub operationsStub;
-
   private final UnaryCallable<MutateBatchJobRequest, MutateBatchJobResponse> mutateBatchJobCallable;
   private final UnaryCallable<GetBatchJobRequest, BatchJob> getBatchJobCallable;
   private final UnaryCallable<ListBatchJobResultsRequest, ListBatchJobResultsResponse>
@@ -114,11 +112,13 @@ public class GrpcBatchJobServiceStub extends BatchJobServiceStub {
   private final UnaryCallable<ListBatchJobResultsRequest, ListBatchJobResultsPagedResponse>
       listBatchJobResultsPagedCallable;
   private final UnaryCallable<RunBatchJobRequest, Operation> runBatchJobCallable;
-  private final OperationCallable<RunBatchJobRequest, Empty, BatchJobMetadata>
+  private final OperationCallable<RunBatchJobRequest, Empty, BatchJob.BatchJobMetadata>
       runBatchJobOperationCallable;
   private final UnaryCallable<AddBatchJobOperationsRequest, AddBatchJobOperationsResponse>
       addBatchJobOperationsCallable;
 
+  private final BackgroundResource backgroundResources;
+  private final GrpcOperationsStub operationsStub;
   private final GrpcStubCallableFactory callableFactory;
 
   public static final GrpcBatchJobServiceStub create(BatchJobServiceStubSettings settings)
@@ -138,21 +138,11 @@ public class GrpcBatchJobServiceStub extends BatchJobServiceStub {
         BatchJobServiceStubSettings.newBuilder().build(), clientContext, callableFactory);
   }
 
-  /**
-   * Constructs an instance of GrpcBatchJobServiceStub, using the given settings. This is protected
-   * so that it is easy to make a subclass, but otherwise, the static factory methods should be
-   * preferred.
-   */
   protected GrpcBatchJobServiceStub(
       BatchJobServiceStubSettings settings, ClientContext clientContext) throws IOException {
     this(settings, clientContext, new GrpcBatchJobServiceCallableFactory());
   }
 
-  /**
-   * Constructs an instance of GrpcBatchJobServiceStub, using the given settings. This is protected
-   * so that it is easy to make a subclass, but otherwise, the static factory methods should be
-   * preferred.
-   */
   protected GrpcBatchJobServiceStub(
       BatchJobServiceStubSettings settings,
       ClientContext clientContext,
@@ -255,17 +245,17 @@ public class GrpcBatchJobServiceStub extends BatchJobServiceStub {
             runBatchJobTransportSettings,
             settings.runBatchJobOperationSettings(),
             clientContext,
-            this.operationsStub);
+            operationsStub);
     this.addBatchJobOperationsCallable =
         callableFactory.createUnaryCallable(
             addBatchJobOperationsTransportSettings,
             settings.addBatchJobOperationsSettings(),
             clientContext);
 
-    backgroundResources = new BackgroundResourceAggregation(clientContext.getBackgroundResources());
+    this.backgroundResources =
+        new BackgroundResourceAggregation(clientContext.getBackgroundResources());
   }
 
-  @BetaApi("The surface for use by generated code is not stable yet and may change in the future.")
   public GrpcOperationsStub getOperationsStub() {
     return operationsStub;
   }
@@ -278,24 +268,23 @@ public class GrpcBatchJobServiceStub extends BatchJobServiceStub {
     return getBatchJobCallable;
   }
 
-  public UnaryCallable<ListBatchJobResultsRequest, ListBatchJobResultsPagedResponse>
-      listBatchJobResultsPagedCallable() {
-    return listBatchJobResultsPagedCallable;
-  }
-
   public UnaryCallable<ListBatchJobResultsRequest, ListBatchJobResultsResponse>
       listBatchJobResultsCallable() {
     return listBatchJobResultsCallable;
   }
 
-  @BetaApi("The surface for use by generated code is not stable yet and may change in the future.")
-  public OperationCallable<RunBatchJobRequest, Empty, BatchJobMetadata>
-      runBatchJobOperationCallable() {
-    return runBatchJobOperationCallable;
+  public UnaryCallable<ListBatchJobResultsRequest, ListBatchJobResultsPagedResponse>
+      listBatchJobResultsPagedCallable() {
+    return listBatchJobResultsPagedCallable;
   }
 
   public UnaryCallable<RunBatchJobRequest, Operation> runBatchJobCallable() {
     return runBatchJobCallable;
+  }
+
+  public OperationCallable<RunBatchJobRequest, Empty, BatchJob.BatchJobMetadata>
+      runBatchJobOperationCallable() {
+    return runBatchJobOperationCallable;
   }
 
   public UnaryCallable<AddBatchJobOperationsRequest, AddBatchJobOperationsResponse>

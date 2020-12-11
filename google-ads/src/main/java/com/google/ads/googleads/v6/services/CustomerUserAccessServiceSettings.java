@@ -5,7 +5,7 @@
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
- *     https://www.apache.org/licenses/LICENSE-2.0
+ *      https://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -13,6 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
 package com.google.ads.googleads.v6.services;
 
 import com.google.ads.googleads.v6.resources.CustomerUserAccess;
@@ -31,7 +32,7 @@ import java.io.IOException;
 import java.util.List;
 import javax.annotation.Generated;
 
-// AUTO-GENERATED DOCUMENTATION AND CLASS
+// AUTO-GENERATED DOCUMENTATION AND CLASS.
 /**
  * Settings class to configure an instance of {@link CustomerUserAccessServiceClient}.
  *
@@ -48,24 +49,26 @@ import javax.annotation.Generated;
  *
  * <p>For example, to set the total timeout of getCustomerUserAccess to 30 seconds:
  *
- * <pre>
- * <code>
+ * <pre>{@code
  * CustomerUserAccessServiceSettings.Builder customerUserAccessServiceSettingsBuilder =
  *     CustomerUserAccessServiceSettings.newBuilder();
  * customerUserAccessServiceSettingsBuilder
  *     .getCustomerUserAccessSettings()
  *     .setRetrySettings(
- *         customerUserAccessServiceSettingsBuilder.getCustomerUserAccessSettings().getRetrySettings().toBuilder()
+ *         customerUserAccessServiceSettingsBuilder
+ *             .getCustomerUserAccessSettings()
+ *             .getRetrySettings()
+ *             .toBuilder()
  *             .setTotalTimeout(Duration.ofSeconds(30))
  *             .build());
- * CustomerUserAccessServiceSettings customerUserAccessServiceSettings = customerUserAccessServiceSettingsBuilder.build();
- * </code>
- * </pre>
+ * CustomerUserAccessServiceSettings customerUserAccessServiceSettings =
+ *     customerUserAccessServiceSettingsBuilder.build();
+ * }</pre>
  */
-@Generated("by gapic-generator")
-@BetaApi
+@Generated("by gapic-generator-java")
 public class CustomerUserAccessServiceSettings
     extends ClientSettings<CustomerUserAccessServiceSettings> {
+
   /** Returns the object with the settings used for calls to getCustomerUserAccess. */
   public UnaryCallSettings<GetCustomerUserAccessRequest, CustomerUserAccess>
       getCustomerUserAccessSettings() {
@@ -141,16 +144,13 @@ public class CustomerUserAccessServiceSettings
   /** Builder for CustomerUserAccessServiceSettings. */
   public static class Builder
       extends ClientSettings.Builder<CustomerUserAccessServiceSettings, Builder> {
+
     protected Builder() throws IOException {
-      this((ClientContext) null);
+      this(((ClientContext) null));
     }
 
     protected Builder(ClientContext clientContext) {
       super(CustomerUserAccessServiceStubSettings.newBuilder(clientContext));
-    }
-
-    private static Builder createDefault() {
-      return new Builder(CustomerUserAccessServiceStubSettings.newBuilder());
     }
 
     protected Builder(CustomerUserAccessServiceSettings settings) {
@@ -161,11 +161,15 @@ public class CustomerUserAccessServiceSettings
       super(stubSettings);
     }
 
+    private static Builder createDefault() {
+      return new Builder(CustomerUserAccessServiceStubSettings.newBuilder());
+    }
+
     public CustomerUserAccessServiceStubSettings.Builder getStubSettingsBuilder() {
       return ((CustomerUserAccessServiceStubSettings.Builder) getStubSettings());
     }
 
-    // NEXT_MAJOR_VER: remove 'throws Exception'
+    // NEXT_MAJOR_VER: remove 'throws Exception'.
     /**
      * Applies the given settings updater function to all of the unary API methods in this service.
      *

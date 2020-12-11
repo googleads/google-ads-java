@@ -5,7 +5,7 @@
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
- *     https://www.apache.org/licenses/LICENSE-2.0
+ *      https://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -13,9 +13,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
 package com.google.ads.googleads.v6.services;
 
 import com.google.ads.googleads.v6.resources.Asset;
+import com.google.ads.googleads.v6.resources.AssetName;
 import com.google.ads.googleads.v6.services.stub.AssetServiceStub;
 import com.google.ads.googleads.v6.services.stub.AssetServiceStubSettings;
 import com.google.api.core.BetaApi;
@@ -26,7 +28,7 @@ import java.util.List;
 import java.util.concurrent.TimeUnit;
 import javax.annotation.Generated;
 
-// AUTO-GENERATED DOCUMENTATION AND SERVICE
+// AUTO-GENERATED DOCUMENTATION AND CLASS.
 /**
  * Service Description: Service to manage assets. Asset types can be created with AssetService are
  * YoutubeVideoAsset, MediaBundleAsset and ImageAsset. TextAsset should be created with Ad inline.
@@ -34,16 +36,7 @@ import javax.annotation.Generated;
  * <p>This class provides the ability to make remote calls to the backing service through method
  * calls that map to API methods. Sample code to get started:
  *
- * <pre>
- * <code>
- * try (AssetServiceClient assetServiceClient = AssetServiceClient.create()) {
- *   AssetName resourceName = AssetName.of("[CUSTOMER_ID]", "[ASSET_ID]");
- *   Asset response = assetServiceClient.getAsset(resourceName);
- * }
- * </code>
- * </pre>
- *
- * <p>Note: close() needs to be called on the assetServiceClient object to clean up resources such
+ * <p>Note: close() needs to be called on the AssetServiceClient object to clean up resources such
  * as threads. In the example above, try-with-resources is used, which automatically calls close().
  *
  * <p>The surface of this class includes several types of Java methods for each of the API's
@@ -71,30 +64,26 @@ import javax.annotation.Generated;
  *
  * <p>To customize credentials:
  *
- * <pre>
- * <code>
+ * <pre>{@code
  * AssetServiceSettings assetServiceSettings =
  *     AssetServiceSettings.newBuilder()
  *         .setCredentialsProvider(FixedCredentialsProvider.create(myCredentials))
  *         .build();
- * AssetServiceClient assetServiceClient =
- *     AssetServiceClient.create(assetServiceSettings);
- * </code>
- * </pre>
+ * AssetServiceClient assetServiceClient = AssetServiceClient.create(assetServiceSettings);
+ * }</pre>
  *
- * To customize the endpoint:
+ * <p>To customize the endpoint:
  *
- * <pre>
- * <code>
+ * <pre>{@code
  * AssetServiceSettings assetServiceSettings =
  *     AssetServiceSettings.newBuilder().setEndpoint(myEndpoint).build();
- * AssetServiceClient assetServiceClient =
- *     AssetServiceClient.create(assetServiceSettings);
- * </code>
- * </pre>
+ * AssetServiceClient assetServiceClient = AssetServiceClient.create(assetServiceSettings);
+ * }</pre>
+ *
+ * <p>Please refer to the GitHub repository's samples for more quickstart code snippets.
  */
-@Generated("by gapic-generator")
 @BetaApi
+@Generated("by gapic-generator")
 public class AssetServiceClient implements BackgroundResource {
   private final AssetServiceSettings settings;
   private final AssetServiceStub stub;
@@ -114,7 +103,7 @@ public class AssetServiceClient implements BackgroundResource {
 
   /**
    * Constructs an instance of AssetServiceClient, using the given stub for making calls. This is
-   * for advanced usage - prefer to use AssetServiceSettings}.
+   * for advanced usage - prefer using create(AssetServiceSettings).
    */
   @BetaApi("A restructuring of stub classes is planned, so this may break in the future")
   public static final AssetServiceClient create(AssetServiceStub stub) {
@@ -146,20 +135,11 @@ public class AssetServiceClient implements BackgroundResource {
     return stub;
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Returns the requested asset in full detail.
    *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (AssetServiceClient assetServiceClient = AssetServiceClient.create()) {
-   *   AssetName resourceName = AssetName.of("[CUSTOMER_ID]", "[ASSET_ID]");
-   *   Asset response = assetServiceClient.getAsset(resourceName);
-   * }
-   * </code></pre>
-   *
-   * @param resourceName Required. The resource name of the asset to fetch.
+   * @param resource_name Required. The resource name of the asset to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final Asset getAsset(AssetName resourceName) {
@@ -170,20 +150,11 @@ public class AssetServiceClient implements BackgroundResource {
     return getAsset(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Returns the requested asset in full detail.
    *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (AssetServiceClient assetServiceClient = AssetServiceClient.create()) {
-   *   AssetName resourceName = AssetName.of("[CUSTOMER_ID]", "[ASSET_ID]");
-   *   Asset response = assetServiceClient.getAsset(resourceName.toString());
-   * }
-   * </code></pre>
-   *
-   * @param resourceName Required. The resource name of the asset to fetch.
+   * @param resource_name Required. The resource name of the asset to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final Asset getAsset(String resourceName) {
@@ -191,21 +162,9 @@ public class AssetServiceClient implements BackgroundResource {
     return getAsset(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Returns the requested asset in full detail.
-   *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (AssetServiceClient assetServiceClient = AssetServiceClient.create()) {
-   *   AssetName resourceName = AssetName.of("[CUSTOMER_ID]", "[ASSET_ID]");
-   *   GetAssetRequest request = GetAssetRequest.newBuilder()
-   *     .setResourceName(resourceName.toString())
-   *     .build();
-   *   Asset response = assetServiceClient.getAsset(request);
-   * }
-   * </code></pre>
    *
    * @param request The request object containing all of the parameters for the API call.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
@@ -214,43 +173,21 @@ public class AssetServiceClient implements BackgroundResource {
     return getAssetCallable().call(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Returns the requested asset in full detail.
    *
    * <p>Sample code:
-   *
-   * <pre><code>
-   * try (AssetServiceClient assetServiceClient = AssetServiceClient.create()) {
-   *   AssetName resourceName = AssetName.of("[CUSTOMER_ID]", "[ASSET_ID]");
-   *   GetAssetRequest request = GetAssetRequest.newBuilder()
-   *     .setResourceName(resourceName.toString())
-   *     .build();
-   *   ApiFuture&lt;Asset&gt; future = assetServiceClient.getAssetCallable().futureCall(request);
-   *   // Do something
-   *   Asset response = future.get();
-   * }
-   * </code></pre>
    */
   public final UnaryCallable<GetAssetRequest, Asset> getAssetCallable() {
     return stub.getAssetCallable();
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Creates assets. Operation statuses are returned.
    *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (AssetServiceClient assetServiceClient = AssetServiceClient.create()) {
-   *   String customerId = "";
-   *   List&lt;AssetOperation&gt; operations = new ArrayList&lt;&gt;();
-   *   MutateAssetsResponse response = assetServiceClient.mutateAssets(customerId, operations);
-   * }
-   * </code></pre>
-   *
-   * @param customerId Required. The ID of the customer whose assets are being modified.
+   * @param customer_id Required. The ID of the customer whose assets are being modified.
    * @param operations Required. The list of operations to perform on individual assets.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
@@ -264,23 +201,9 @@ public class AssetServiceClient implements BackgroundResource {
     return mutateAssets(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Creates assets. Operation statuses are returned.
-   *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (AssetServiceClient assetServiceClient = AssetServiceClient.create()) {
-   *   String customerId = "";
-   *   List&lt;AssetOperation&gt; operations = new ArrayList&lt;&gt;();
-   *   MutateAssetsRequest request = MutateAssetsRequest.newBuilder()
-   *     .setCustomerId(customerId)
-   *     .addAllOperations(operations)
-   *     .build();
-   *   MutateAssetsResponse response = assetServiceClient.mutateAssets(request);
-   * }
-   * </code></pre>
    *
    * @param request The request object containing all of the parameters for the API call.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
@@ -289,25 +212,11 @@ public class AssetServiceClient implements BackgroundResource {
     return mutateAssetsCallable().call(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Creates assets. Operation statuses are returned.
    *
    * <p>Sample code:
-   *
-   * <pre><code>
-   * try (AssetServiceClient assetServiceClient = AssetServiceClient.create()) {
-   *   String customerId = "";
-   *   List&lt;AssetOperation&gt; operations = new ArrayList&lt;&gt;();
-   *   MutateAssetsRequest request = MutateAssetsRequest.newBuilder()
-   *     .setCustomerId(customerId)
-   *     .addAllOperations(operations)
-   *     .build();
-   *   ApiFuture&lt;MutateAssetsResponse&gt; future = assetServiceClient.mutateAssetsCallable().futureCall(request);
-   *   // Do something
-   *   MutateAssetsResponse response = future.get();
-   * }
-   * </code></pre>
    */
   public final UnaryCallable<MutateAssetsRequest, MutateAssetsResponse> mutateAssetsCallable() {
     return stub.mutateAssetsCallable();

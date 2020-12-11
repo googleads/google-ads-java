@@ -5,7 +5,7 @@
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
- *     https://www.apache.org/licenses/LICENSE-2.0
+ *      https://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -13,9 +13,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
 package com.google.ads.googleads.v6.services;
 
 import com.google.ads.googleads.v6.resources.AccountLink;
+import com.google.ads.googleads.v6.resources.AccountLinkName;
 import com.google.ads.googleads.v6.services.stub.AccountLinkServiceStub;
 import com.google.ads.googleads.v6.services.stub.AccountLinkServiceStubSettings;
 import com.google.api.core.BetaApi;
@@ -25,7 +27,7 @@ import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 import javax.annotation.Generated;
 
-// AUTO-GENERATED DOCUMENTATION AND SERVICE
+// AUTO-GENERATED DOCUMENTATION AND CLASS.
 /**
  * Service Description: This service allows management of links between Google Ads accounts and
  * other accounts.
@@ -33,16 +35,7 @@ import javax.annotation.Generated;
  * <p>This class provides the ability to make remote calls to the backing service through method
  * calls that map to API methods. Sample code to get started:
  *
- * <pre>
- * <code>
- * try (AccountLinkServiceClient accountLinkServiceClient = AccountLinkServiceClient.create()) {
- *   AccountLinkName resourceName = AccountLinkName.of("[CUSTOMER_ID]", "[ACCOUNT_LINK_ID]");
- *   AccountLink response = accountLinkServiceClient.getAccountLink(resourceName);
- * }
- * </code>
- * </pre>
- *
- * <p>Note: close() needs to be called on the accountLinkServiceClient object to clean up resources
+ * <p>Note: close() needs to be called on the AccountLinkServiceClient object to clean up resources
  * such as threads. In the example above, try-with-resources is used, which automatically calls
  * close().
  *
@@ -71,30 +64,28 @@ import javax.annotation.Generated;
  *
  * <p>To customize credentials:
  *
- * <pre>
- * <code>
+ * <pre>{@code
  * AccountLinkServiceSettings accountLinkServiceSettings =
  *     AccountLinkServiceSettings.newBuilder()
  *         .setCredentialsProvider(FixedCredentialsProvider.create(myCredentials))
  *         .build();
  * AccountLinkServiceClient accountLinkServiceClient =
  *     AccountLinkServiceClient.create(accountLinkServiceSettings);
- * </code>
- * </pre>
+ * }</pre>
  *
- * To customize the endpoint:
+ * <p>To customize the endpoint:
  *
- * <pre>
- * <code>
+ * <pre>{@code
  * AccountLinkServiceSettings accountLinkServiceSettings =
  *     AccountLinkServiceSettings.newBuilder().setEndpoint(myEndpoint).build();
  * AccountLinkServiceClient accountLinkServiceClient =
  *     AccountLinkServiceClient.create(accountLinkServiceSettings);
- * </code>
- * </pre>
+ * }</pre>
+ *
+ * <p>Please refer to the GitHub repository's samples for more quickstart code snippets.
  */
-@Generated("by gapic-generator")
 @BetaApi
+@Generated("by gapic-generator")
 public class AccountLinkServiceClient implements BackgroundResource {
   private final AccountLinkServiceSettings settings;
   private final AccountLinkServiceStub stub;
@@ -115,7 +106,7 @@ public class AccountLinkServiceClient implements BackgroundResource {
 
   /**
    * Constructs an instance of AccountLinkServiceClient, using the given stub for making calls. This
-   * is for advanced usage - prefer to use AccountLinkServiceSettings}.
+   * is for advanced usage - prefer using create(AccountLinkServiceSettings).
    */
   @BetaApi("A restructuring of stub classes is planned, so this may break in the future")
   public static final AccountLinkServiceClient create(AccountLinkServiceStub stub) {
@@ -147,20 +138,11 @@ public class AccountLinkServiceClient implements BackgroundResource {
     return stub;
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Returns the account link in full detail.
    *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (AccountLinkServiceClient accountLinkServiceClient = AccountLinkServiceClient.create()) {
-   *   AccountLinkName resourceName = AccountLinkName.of("[CUSTOMER_ID]", "[ACCOUNT_LINK_ID]");
-   *   AccountLink response = accountLinkServiceClient.getAccountLink(resourceName);
-   * }
-   * </code></pre>
-   *
-   * @param resourceName Required. Resource name of the account link.
+   * @param resource_name Required. Resource name of the account link.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final AccountLink getAccountLink(AccountLinkName resourceName) {
@@ -171,20 +153,11 @@ public class AccountLinkServiceClient implements BackgroundResource {
     return getAccountLink(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Returns the account link in full detail.
    *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (AccountLinkServiceClient accountLinkServiceClient = AccountLinkServiceClient.create()) {
-   *   AccountLinkName resourceName = AccountLinkName.of("[CUSTOMER_ID]", "[ACCOUNT_LINK_ID]");
-   *   AccountLink response = accountLinkServiceClient.getAccountLink(resourceName.toString());
-   * }
-   * </code></pre>
-   *
-   * @param resourceName Required. Resource name of the account link.
+   * @param resource_name Required. Resource name of the account link.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final AccountLink getAccountLink(String resourceName) {
@@ -193,21 +166,9 @@ public class AccountLinkServiceClient implements BackgroundResource {
     return getAccountLink(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Returns the account link in full detail.
-   *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (AccountLinkServiceClient accountLinkServiceClient = AccountLinkServiceClient.create()) {
-   *   AccountLinkName resourceName = AccountLinkName.of("[CUSTOMER_ID]", "[ACCOUNT_LINK_ID]");
-   *   GetAccountLinkRequest request = GetAccountLinkRequest.newBuilder()
-   *     .setResourceName(resourceName.toString())
-   *     .build();
-   *   AccountLink response = accountLinkServiceClient.getAccountLink(request);
-   * }
-   * </code></pre>
    *
    * @param request The request object containing all of the parameters for the API call.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
@@ -216,44 +177,22 @@ public class AccountLinkServiceClient implements BackgroundResource {
     return getAccountLinkCallable().call(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Returns the account link in full detail.
    *
    * <p>Sample code:
-   *
-   * <pre><code>
-   * try (AccountLinkServiceClient accountLinkServiceClient = AccountLinkServiceClient.create()) {
-   *   AccountLinkName resourceName = AccountLinkName.of("[CUSTOMER_ID]", "[ACCOUNT_LINK_ID]");
-   *   GetAccountLinkRequest request = GetAccountLinkRequest.newBuilder()
-   *     .setResourceName(resourceName.toString())
-   *     .build();
-   *   ApiFuture&lt;AccountLink&gt; future = accountLinkServiceClient.getAccountLinkCallable().futureCall(request);
-   *   // Do something
-   *   AccountLink response = future.get();
-   * }
-   * </code></pre>
    */
   public final UnaryCallable<GetAccountLinkRequest, AccountLink> getAccountLinkCallable() {
     return stub.getAccountLinkCallable();
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Creates an account link.
    *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (AccountLinkServiceClient accountLinkServiceClient = AccountLinkServiceClient.create()) {
-   *   String customerId = "";
-   *   AccountLink accountLink = AccountLink.newBuilder().build();
-   *   CreateAccountLinkResponse response = accountLinkServiceClient.createAccountLink(customerId, accountLink);
-   * }
-   * </code></pre>
-   *
-   * @param customerId Required. The ID of the customer for which the account link is created.
-   * @param accountLink Required. The account link to be created.
+   * @param customer_id Required. The ID of the customer for which the account link is created.
+   * @param account_link Required. The account link to be created.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final CreateAccountLinkResponse createAccountLink(
@@ -266,23 +205,9 @@ public class AccountLinkServiceClient implements BackgroundResource {
     return createAccountLink(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Creates an account link.
-   *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (AccountLinkServiceClient accountLinkServiceClient = AccountLinkServiceClient.create()) {
-   *   String customerId = "";
-   *   AccountLink accountLink = AccountLink.newBuilder().build();
-   *   CreateAccountLinkRequest request = CreateAccountLinkRequest.newBuilder()
-   *     .setCustomerId(customerId)
-   *     .setAccountLink(accountLink)
-   *     .build();
-   *   CreateAccountLinkResponse response = accountLinkServiceClient.createAccountLink(request);
-   * }
-   * </code></pre>
    *
    * @param request The request object containing all of the parameters for the API call.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
@@ -291,47 +216,23 @@ public class AccountLinkServiceClient implements BackgroundResource {
     return createAccountLinkCallable().call(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Creates an account link.
    *
    * <p>Sample code:
-   *
-   * <pre><code>
-   * try (AccountLinkServiceClient accountLinkServiceClient = AccountLinkServiceClient.create()) {
-   *   String customerId = "";
-   *   AccountLink accountLink = AccountLink.newBuilder().build();
-   *   CreateAccountLinkRequest request = CreateAccountLinkRequest.newBuilder()
-   *     .setCustomerId(customerId)
-   *     .setAccountLink(accountLink)
-   *     .build();
-   *   ApiFuture&lt;CreateAccountLinkResponse&gt; future = accountLinkServiceClient.createAccountLinkCallable().futureCall(request);
-   *   // Do something
-   *   CreateAccountLinkResponse response = future.get();
-   * }
-   * </code></pre>
    */
   public final UnaryCallable<CreateAccountLinkRequest, CreateAccountLinkResponse>
       createAccountLinkCallable() {
     return stub.createAccountLinkCallable();
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Creates or removes an account link. From V5, create is not supported through
    * AccountLinkService.MutateAccountLink. Please use AccountLinkService.CreateAccountLink instead.
    *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (AccountLinkServiceClient accountLinkServiceClient = AccountLinkServiceClient.create()) {
-   *   String customerId = "";
-   *   AccountLinkOperation operation = AccountLinkOperation.newBuilder().build();
-   *   MutateAccountLinkResponse response = accountLinkServiceClient.mutateAccountLink(customerId, operation);
-   * }
-   * </code></pre>
-   *
-   * @param customerId Required. The ID of the customer being modified.
+   * @param customer_id Required. The ID of the customer being modified.
    * @param operation Required. The operation to perform on the link.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
@@ -345,24 +246,10 @@ public class AccountLinkServiceClient implements BackgroundResource {
     return mutateAccountLink(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Creates or removes an account link. From V5, create is not supported through
    * AccountLinkService.MutateAccountLink. Please use AccountLinkService.CreateAccountLink instead.
-   *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (AccountLinkServiceClient accountLinkServiceClient = AccountLinkServiceClient.create()) {
-   *   String customerId = "";
-   *   AccountLinkOperation operation = AccountLinkOperation.newBuilder().build();
-   *   MutateAccountLinkRequest request = MutateAccountLinkRequest.newBuilder()
-   *     .setCustomerId(customerId)
-   *     .setOperation(operation)
-   *     .build();
-   *   MutateAccountLinkResponse response = accountLinkServiceClient.mutateAccountLink(request);
-   * }
-   * </code></pre>
    *
    * @param request The request object containing all of the parameters for the API call.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
@@ -371,26 +258,12 @@ public class AccountLinkServiceClient implements BackgroundResource {
     return mutateAccountLinkCallable().call(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Creates or removes an account link. From V5, create is not supported through
    * AccountLinkService.MutateAccountLink. Please use AccountLinkService.CreateAccountLink instead.
    *
    * <p>Sample code:
-   *
-   * <pre><code>
-   * try (AccountLinkServiceClient accountLinkServiceClient = AccountLinkServiceClient.create()) {
-   *   String customerId = "";
-   *   AccountLinkOperation operation = AccountLinkOperation.newBuilder().build();
-   *   MutateAccountLinkRequest request = MutateAccountLinkRequest.newBuilder()
-   *     .setCustomerId(customerId)
-   *     .setOperation(operation)
-   *     .build();
-   *   ApiFuture&lt;MutateAccountLinkResponse&gt; future = accountLinkServiceClient.mutateAccountLinkCallable().futureCall(request);
-   *   // Do something
-   *   MutateAccountLinkResponse response = future.get();
-   * }
-   * </code></pre>
    */
   public final UnaryCallable<MutateAccountLinkRequest, MutateAccountLinkResponse>
       mutateAccountLinkCallable() {

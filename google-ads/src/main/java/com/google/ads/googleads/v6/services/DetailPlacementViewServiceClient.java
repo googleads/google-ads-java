@@ -5,7 +5,7 @@
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
- *     https://www.apache.org/licenses/LICENSE-2.0
+ *      https://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -13,9 +13,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
 package com.google.ads.googleads.v6.services;
 
 import com.google.ads.googleads.v6.resources.DetailPlacementView;
+import com.google.ads.googleads.v6.resources.DetailPlacementViewName;
 import com.google.ads.googleads.v6.services.stub.DetailPlacementViewServiceStub;
 import com.google.ads.googleads.v6.services.stub.DetailPlacementViewServiceStubSettings;
 import com.google.api.core.BetaApi;
@@ -25,23 +27,14 @@ import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 import javax.annotation.Generated;
 
-// AUTO-GENERATED DOCUMENTATION AND SERVICE
+// AUTO-GENERATED DOCUMENTATION AND CLASS.
 /**
  * Service Description: Service to fetch Detail Placement views.
  *
  * <p>This class provides the ability to make remote calls to the backing service through method
  * calls that map to API methods. Sample code to get started:
  *
- * <pre>
- * <code>
- * try (DetailPlacementViewServiceClient detailPlacementViewServiceClient = DetailPlacementViewServiceClient.create()) {
- *   DetailPlacementViewName resourceName = DetailPlacementViewName.of("[CUSTOMER_ID]", "[AD_GROUP_ID]", "[BASE64_PLACEMENT]");
- *   DetailPlacementView response = detailPlacementViewServiceClient.getDetailPlacementView(resourceName);
- * }
- * </code>
- * </pre>
- *
- * <p>Note: close() needs to be called on the detailPlacementViewServiceClient object to clean up
+ * <p>Note: close() needs to be called on the DetailPlacementViewServiceClient object to clean up
  * resources such as threads. In the example above, try-with-resources is used, which automatically
  * calls close().
  *
@@ -70,30 +63,28 @@ import javax.annotation.Generated;
  *
  * <p>To customize credentials:
  *
- * <pre>
- * <code>
+ * <pre>{@code
  * DetailPlacementViewServiceSettings detailPlacementViewServiceSettings =
  *     DetailPlacementViewServiceSettings.newBuilder()
  *         .setCredentialsProvider(FixedCredentialsProvider.create(myCredentials))
  *         .build();
  * DetailPlacementViewServiceClient detailPlacementViewServiceClient =
  *     DetailPlacementViewServiceClient.create(detailPlacementViewServiceSettings);
- * </code>
- * </pre>
+ * }</pre>
  *
- * To customize the endpoint:
+ * <p>To customize the endpoint:
  *
- * <pre>
- * <code>
+ * <pre>{@code
  * DetailPlacementViewServiceSettings detailPlacementViewServiceSettings =
  *     DetailPlacementViewServiceSettings.newBuilder().setEndpoint(myEndpoint).build();
  * DetailPlacementViewServiceClient detailPlacementViewServiceClient =
  *     DetailPlacementViewServiceClient.create(detailPlacementViewServiceSettings);
- * </code>
- * </pre>
+ * }</pre>
+ *
+ * <p>Please refer to the GitHub repository's samples for more quickstart code snippets.
  */
-@Generated("by gapic-generator")
 @BetaApi
+@Generated("by gapic-generator")
 public class DetailPlacementViewServiceClient implements BackgroundResource {
   private final DetailPlacementViewServiceSettings settings;
   private final DetailPlacementViewServiceStub stub;
@@ -115,7 +106,7 @@ public class DetailPlacementViewServiceClient implements BackgroundResource {
 
   /**
    * Constructs an instance of DetailPlacementViewServiceClient, using the given stub for making
-   * calls. This is for advanced usage - prefer to use DetailPlacementViewServiceSettings}.
+   * calls. This is for advanced usage - prefer using create(DetailPlacementViewServiceSettings).
    */
   @BetaApi("A restructuring of stub classes is planned, so this may break in the future")
   public static final DetailPlacementViewServiceClient create(DetailPlacementViewServiceStub stub) {
@@ -148,20 +139,11 @@ public class DetailPlacementViewServiceClient implements BackgroundResource {
     return stub;
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Returns the requested Detail Placement view in full detail.
    *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (DetailPlacementViewServiceClient detailPlacementViewServiceClient = DetailPlacementViewServiceClient.create()) {
-   *   DetailPlacementViewName resourceName = DetailPlacementViewName.of("[CUSTOMER_ID]", "[AD_GROUP_ID]", "[BASE64_PLACEMENT]");
-   *   DetailPlacementView response = detailPlacementViewServiceClient.getDetailPlacementView(resourceName);
-   * }
-   * </code></pre>
-   *
-   * @param resourceName Required. The resource name of the Detail Placement view to fetch.
+   * @param resource_name Required. The resource name of the Detail Placement view to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final DetailPlacementView getDetailPlacementView(DetailPlacementViewName resourceName) {
@@ -172,20 +154,11 @@ public class DetailPlacementViewServiceClient implements BackgroundResource {
     return getDetailPlacementView(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Returns the requested Detail Placement view in full detail.
    *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (DetailPlacementViewServiceClient detailPlacementViewServiceClient = DetailPlacementViewServiceClient.create()) {
-   *   DetailPlacementViewName resourceName = DetailPlacementViewName.of("[CUSTOMER_ID]", "[AD_GROUP_ID]", "[BASE64_PLACEMENT]");
-   *   DetailPlacementView response = detailPlacementViewServiceClient.getDetailPlacementView(resourceName.toString());
-   * }
-   * </code></pre>
-   *
-   * @param resourceName Required. The resource name of the Detail Placement view to fetch.
+   * @param resource_name Required. The resource name of the Detail Placement view to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final DetailPlacementView getDetailPlacementView(String resourceName) {
@@ -194,21 +167,9 @@ public class DetailPlacementViewServiceClient implements BackgroundResource {
     return getDetailPlacementView(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Returns the requested Detail Placement view in full detail.
-   *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (DetailPlacementViewServiceClient detailPlacementViewServiceClient = DetailPlacementViewServiceClient.create()) {
-   *   DetailPlacementViewName resourceName = DetailPlacementViewName.of("[CUSTOMER_ID]", "[AD_GROUP_ID]", "[BASE64_PLACEMENT]");
-   *   GetDetailPlacementViewRequest request = GetDetailPlacementViewRequest.newBuilder()
-   *     .setResourceName(resourceName.toString())
-   *     .build();
-   *   DetailPlacementView response = detailPlacementViewServiceClient.getDetailPlacementView(request);
-   * }
-   * </code></pre>
    *
    * @param request The request object containing all of the parameters for the API call.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
@@ -217,23 +178,11 @@ public class DetailPlacementViewServiceClient implements BackgroundResource {
     return getDetailPlacementViewCallable().call(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Returns the requested Detail Placement view in full detail.
    *
    * <p>Sample code:
-   *
-   * <pre><code>
-   * try (DetailPlacementViewServiceClient detailPlacementViewServiceClient = DetailPlacementViewServiceClient.create()) {
-   *   DetailPlacementViewName resourceName = DetailPlacementViewName.of("[CUSTOMER_ID]", "[AD_GROUP_ID]", "[BASE64_PLACEMENT]");
-   *   GetDetailPlacementViewRequest request = GetDetailPlacementViewRequest.newBuilder()
-   *     .setResourceName(resourceName.toString())
-   *     .build();
-   *   ApiFuture&lt;DetailPlacementView&gt; future = detailPlacementViewServiceClient.getDetailPlacementViewCallable().futureCall(request);
-   *   // Do something
-   *   DetailPlacementView response = future.get();
-   * }
-   * </code></pre>
    */
   public final UnaryCallable<GetDetailPlacementViewRequest, DetailPlacementView>
       getDetailPlacementViewCallable() {

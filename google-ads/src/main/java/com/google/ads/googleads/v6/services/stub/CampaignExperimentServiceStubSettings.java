@@ -5,7 +5,7 @@
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
- *     https://www.apache.org/licenses/LICENSE-2.0
+ *      https://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -13,6 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
 package com.google.ads.googleads.v6.services.stub;
 
 import static com.google.ads.googleads.v6.services.CampaignExperimentServiceClient.ListCampaignExperimentAsyncErrorsPagedResponse;
@@ -67,7 +68,7 @@ import java.util.List;
 import javax.annotation.Generated;
 import org.threeten.bp.Duration;
 
-// AUTO-GENERATED DOCUMENTATION AND CLASS
+// AUTO-GENERATED DOCUMENTATION AND CLASS.
 /**
  * Settings class to configure an instance of {@link CampaignExperimentServiceStub}.
  *
@@ -84,27 +85,29 @@ import org.threeten.bp.Duration;
  *
  * <p>For example, to set the total timeout of getCampaignExperiment to 30 seconds:
  *
- * <pre>
- * <code>
+ * <pre>{@code
  * CampaignExperimentServiceStubSettings.Builder campaignExperimentServiceSettingsBuilder =
  *     CampaignExperimentServiceStubSettings.newBuilder();
  * campaignExperimentServiceSettingsBuilder
  *     .getCampaignExperimentSettings()
  *     .setRetrySettings(
- *         campaignExperimentServiceSettingsBuilder.getCampaignExperimentSettings().getRetrySettings().toBuilder()
+ *         campaignExperimentServiceSettingsBuilder
+ *             .getCampaignExperimentSettings()
+ *             .getRetrySettings()
+ *             .toBuilder()
  *             .setTotalTimeout(Duration.ofSeconds(30))
  *             .build());
- * CampaignExperimentServiceStubSettings campaignExperimentServiceSettings = campaignExperimentServiceSettingsBuilder.build();
- * </code>
- * </pre>
+ * CampaignExperimentServiceStubSettings campaignExperimentServiceSettings =
+ *     campaignExperimentServiceSettingsBuilder.build();
+ * }</pre>
  */
-@Generated("by gapic-generator")
 @BetaApi
+@Generated("by gapic-generator-java")
 public class CampaignExperimentServiceStubSettings
     extends StubSettings<CampaignExperimentServiceStubSettings> {
   /** The default scopes of the service. */
   private static final ImmutableList<String> DEFAULT_SERVICE_SCOPES =
-      ImmutableList.<String>builder().build();
+      ImmutableList.<String>builder().add("https://www.googleapis.com/auth/adwords").build();
 
   private final UnaryCallSettings<GetCampaignExperimentRequest, CampaignExperiment>
       getCampaignExperimentSettings;
@@ -131,6 +134,88 @@ public class CampaignExperimentServiceStubSettings
           ListCampaignExperimentAsyncErrorsPagedResponse>
       listCampaignExperimentAsyncErrorsSettings;
 
+  private static final PagedListDescriptor<
+          ListCampaignExperimentAsyncErrorsRequest,
+          ListCampaignExperimentAsyncErrorsResponse,
+          Status>
+      LIST_CAMPAIGN_EXPERIMENT_ASYNC_ERRORS_PAGE_STR_DESC =
+          new PagedListDescriptor<
+              ListCampaignExperimentAsyncErrorsRequest,
+              ListCampaignExperimentAsyncErrorsResponse,
+              Status>() {
+            @Override
+            public String emptyToken() {
+              return "";
+            }
+
+            @Override
+            public ListCampaignExperimentAsyncErrorsRequest injectToken(
+                ListCampaignExperimentAsyncErrorsRequest payload, String token) {
+              return ListCampaignExperimentAsyncErrorsRequest.newBuilder(payload)
+                  .setPageToken(token)
+                  .build();
+            }
+
+            @Override
+            public ListCampaignExperimentAsyncErrorsRequest injectPageSize(
+                ListCampaignExperimentAsyncErrorsRequest payload, int pageSize) {
+              return ListCampaignExperimentAsyncErrorsRequest.newBuilder(payload)
+                  .setPageSize(pageSize)
+                  .build();
+            }
+
+            @Override
+            public Integer extractPageSize(ListCampaignExperimentAsyncErrorsRequest payload) {
+              return payload.getPageSize();
+            }
+
+            @Override
+            public String extractNextToken(ListCampaignExperimentAsyncErrorsResponse payload) {
+              return payload.getNextPageToken();
+            }
+
+            @Override
+            public Iterable<Status> extractResources(
+                ListCampaignExperimentAsyncErrorsResponse payload) {
+              return payload.getErrorsList() == null
+                  ? ImmutableList.<Status>of()
+                  : payload.getErrorsList();
+            }
+          };
+
+  private static final PagedListResponseFactory<
+          ListCampaignExperimentAsyncErrorsRequest,
+          ListCampaignExperimentAsyncErrorsResponse,
+          ListCampaignExperimentAsyncErrorsPagedResponse>
+      LIST_CAMPAIGN_EXPERIMENT_ASYNC_ERRORS_PAGE_STR_FACT =
+          new PagedListResponseFactory<
+              ListCampaignExperimentAsyncErrorsRequest,
+              ListCampaignExperimentAsyncErrorsResponse,
+              ListCampaignExperimentAsyncErrorsPagedResponse>() {
+            @Override
+            public ApiFuture<ListCampaignExperimentAsyncErrorsPagedResponse> getFuturePagedResponse(
+                UnaryCallable<
+                        ListCampaignExperimentAsyncErrorsRequest,
+                        ListCampaignExperimentAsyncErrorsResponse>
+                    callable,
+                ListCampaignExperimentAsyncErrorsRequest request,
+                ApiCallContext context,
+                ApiFuture<ListCampaignExperimentAsyncErrorsResponse> futureResponse) {
+              PageContext<
+                      ListCampaignExperimentAsyncErrorsRequest,
+                      ListCampaignExperimentAsyncErrorsResponse,
+                      Status>
+                  pageContext =
+                      PageContext.create(
+                          callable,
+                          LIST_CAMPAIGN_EXPERIMENT_ASYNC_ERRORS_PAGE_STR_DESC,
+                          request,
+                          context);
+              return ListCampaignExperimentAsyncErrorsPagedResponse.createAsync(
+                  pageContext, futureResponse);
+            }
+          };
+
   /** Returns the object with the settings used for calls to getCampaignExperiment. */
   public UnaryCallSettings<GetCampaignExperimentRequest, CampaignExperiment>
       getCampaignExperimentSettings() {
@@ -144,7 +229,6 @@ public class CampaignExperimentServiceStubSettings
   }
 
   /** Returns the object with the settings used for calls to createCampaignExperiment. */
-  @BetaApi("The surface for use by generated code is not stable yet and may change in the future.")
   public OperationCallSettings<
           CreateCampaignExperimentRequest, Empty, CreateCampaignExperimentMetadata>
       createCampaignExperimentOperationSettings() {
@@ -170,7 +254,6 @@ public class CampaignExperimentServiceStubSettings
   }
 
   /** Returns the object with the settings used for calls to promoteCampaignExperiment. */
-  @BetaApi("The surface for use by generated code is not stable yet and may change in the future.")
   public OperationCallSettings<PromoteCampaignExperimentRequest, Empty, Empty>
       promoteCampaignExperimentOperationSettings() {
     return promoteCampaignExperimentOperationSettings;
@@ -196,10 +279,10 @@ public class CampaignExperimentServiceStubSettings
         .getTransportName()
         .equals(GrpcTransportChannel.getGrpcTransportName())) {
       return GrpcCampaignExperimentServiceStub.create(this);
-    } else {
-      throw new UnsupportedOperationException(
-          "Transport not supported: " + getTransportChannelProvider().getTransportName());
     }
+    throw new UnsupportedOperationException(
+        String.format(
+            "Transport not supported: %s", getTransportChannelProvider().getTransportName()));
   }
 
   /** Returns a builder for the default ExecutorProvider for this service. */
@@ -274,93 +357,10 @@ public class CampaignExperimentServiceStubSettings
         settingsBuilder.listCampaignExperimentAsyncErrorsSettings().build();
   }
 
-  private static final PagedListDescriptor<
-          ListCampaignExperimentAsyncErrorsRequest,
-          ListCampaignExperimentAsyncErrorsResponse,
-          Status>
-      LIST_CAMPAIGN_EXPERIMENT_ASYNC_ERRORS_PAGE_STR_DESC =
-          new PagedListDescriptor<
-              ListCampaignExperimentAsyncErrorsRequest,
-              ListCampaignExperimentAsyncErrorsResponse,
-              Status>() {
-            @Override
-            public String emptyToken() {
-              return "";
-            }
-
-            @Override
-            public ListCampaignExperimentAsyncErrorsRequest injectToken(
-                ListCampaignExperimentAsyncErrorsRequest payload, String token) {
-              return ListCampaignExperimentAsyncErrorsRequest.newBuilder(payload)
-                  .setPageToken(token)
-                  .build();
-            }
-
-            @Override
-            public ListCampaignExperimentAsyncErrorsRequest injectPageSize(
-                ListCampaignExperimentAsyncErrorsRequest payload, int pageSize) {
-              return ListCampaignExperimentAsyncErrorsRequest.newBuilder(payload)
-                  .setPageSize(pageSize)
-                  .build();
-            }
-
-            @Override
-            public Integer extractPageSize(ListCampaignExperimentAsyncErrorsRequest payload) {
-              return payload.getPageSize();
-            }
-
-            @Override
-            public String extractNextToken(ListCampaignExperimentAsyncErrorsResponse payload) {
-              return payload.getNextPageToken();
-            }
-
-            @Override
-            public Iterable<Status> extractResources(
-                ListCampaignExperimentAsyncErrorsResponse payload) {
-              return payload.getErrorsList() != null
-                  ? payload.getErrorsList()
-                  : ImmutableList.<Status>of();
-            }
-          };
-
-  private static final PagedListResponseFactory<
-          ListCampaignExperimentAsyncErrorsRequest,
-          ListCampaignExperimentAsyncErrorsResponse,
-          ListCampaignExperimentAsyncErrorsPagedResponse>
-      LIST_CAMPAIGN_EXPERIMENT_ASYNC_ERRORS_PAGE_STR_FACT =
-          new PagedListResponseFactory<
-              ListCampaignExperimentAsyncErrorsRequest,
-              ListCampaignExperimentAsyncErrorsResponse,
-              ListCampaignExperimentAsyncErrorsPagedResponse>() {
-            @Override
-            public ApiFuture<ListCampaignExperimentAsyncErrorsPagedResponse> getFuturePagedResponse(
-                UnaryCallable<
-                        ListCampaignExperimentAsyncErrorsRequest,
-                        ListCampaignExperimentAsyncErrorsResponse>
-                    callable,
-                ListCampaignExperimentAsyncErrorsRequest request,
-                ApiCallContext context,
-                ApiFuture<ListCampaignExperimentAsyncErrorsResponse> futureResponse) {
-              PageContext<
-                      ListCampaignExperimentAsyncErrorsRequest,
-                      ListCampaignExperimentAsyncErrorsResponse,
-                      Status>
-                  pageContext =
-                      PageContext.create(
-                          callable,
-                          LIST_CAMPAIGN_EXPERIMENT_ASYNC_ERRORS_PAGE_STR_DESC,
-                          request,
-                          context);
-              return ListCampaignExperimentAsyncErrorsPagedResponse.createAsync(
-                  pageContext, futureResponse);
-            }
-          };
-
   /** Builder for CampaignExperimentServiceStubSettings. */
   public static class Builder
       extends StubSettings.Builder<CampaignExperimentServiceStubSettings, Builder> {
     private final ImmutableList<UnaryCallSettings.Builder<?, ?>> unaryMethodSettingsBuilders;
-
     private final UnaryCallSettings.Builder<GetCampaignExperimentRequest, CampaignExperiment>
         getCampaignExperimentSettings;
     private final UnaryCallSettings.Builder<CreateCampaignExperimentRequest, Operation>
@@ -385,7 +385,6 @@ public class CampaignExperimentServiceStubSettings
             ListCampaignExperimentAsyncErrorsResponse,
             ListCampaignExperimentAsyncErrorsPagedResponse>
         listCampaignExperimentAsyncErrorsSettings;
-
     private static final ImmutableMap<String, ImmutableSet<StatusCode.Code>>
         RETRYABLE_CODE_DEFINITIONS;
 
@@ -393,13 +392,10 @@ public class CampaignExperimentServiceStubSettings
       ImmutableMap.Builder<String, ImmutableSet<StatusCode.Code>> definitions =
           ImmutableMap.builder();
       definitions.put(
-          "retry_policy_1_codes",
+          "retry_policy_0_codes",
           ImmutableSet.copyOf(
               Lists.<StatusCode.Code>newArrayList(
                   StatusCode.Code.UNAVAILABLE, StatusCode.Code.DEADLINE_EXCEEDED)));
-      definitions.put("no_retry_codes", ImmutableSet.copyOf(Lists.<StatusCode.Code>newArrayList()));
-      definitions.put(
-          "no_retry_1_codes", ImmutableSet.copyOf(Lists.<StatusCode.Code>newArrayList()));
       RETRYABLE_CODE_DEFINITIONS = definitions.build();
     }
 
@@ -418,43 +414,25 @@ public class CampaignExperimentServiceStubSettings
               .setMaxRpcTimeout(Duration.ofMillis(3600000L))
               .setTotalTimeout(Duration.ofMillis(3600000L))
               .build();
-      definitions.put("retry_policy_1_params", settings);
-      settings = RetrySettings.newBuilder().setRpcTimeoutMultiplier(1.0).build();
-      definitions.put("no_retry_params", settings);
-      settings =
-          RetrySettings.newBuilder()
-              .setInitialRpcTimeout(Duration.ofMillis(3600000L))
-              .setRpcTimeoutMultiplier(1.0)
-              .setMaxRpcTimeout(Duration.ofMillis(3600000L))
-              .setTotalTimeout(Duration.ofMillis(3600000L))
-              .build();
-      definitions.put("no_retry_1_params", settings);
+      definitions.put("retry_policy_0_params", settings);
       RETRY_PARAM_DEFINITIONS = definitions.build();
     }
 
     protected Builder() {
-      this((ClientContext) null);
+      this(((ClientContext) null));
     }
 
     protected Builder(ClientContext clientContext) {
       super(clientContext);
 
       getCampaignExperimentSettings = UnaryCallSettings.newUnaryCallSettingsBuilder();
-
       createCampaignExperimentSettings = UnaryCallSettings.newUnaryCallSettingsBuilder();
-
       createCampaignExperimentOperationSettings = OperationCallSettings.newBuilder();
-
       mutateCampaignExperimentsSettings = UnaryCallSettings.newUnaryCallSettingsBuilder();
-
       graduateCampaignExperimentSettings = UnaryCallSettings.newUnaryCallSettingsBuilder();
-
       promoteCampaignExperimentSettings = UnaryCallSettings.newUnaryCallSettingsBuilder();
-
       promoteCampaignExperimentOperationSettings = OperationCallSettings.newBuilder();
-
       endCampaignExperimentSettings = UnaryCallSettings.newUnaryCallSettingsBuilder();
-
       listCampaignExperimentAsyncErrorsSettings =
           PagedCallSettings.newBuilder(LIST_CAMPAIGN_EXPERIMENT_ASYNC_ERRORS_PAGE_STR_FACT);
 
@@ -467,105 +445,7 @@ public class CampaignExperimentServiceStubSettings
               promoteCampaignExperimentSettings,
               endCampaignExperimentSettings,
               listCampaignExperimentAsyncErrorsSettings);
-
       initDefaults(this);
-    }
-
-    private static Builder createDefault() {
-      Builder builder = new Builder((ClientContext) null);
-      builder.setTransportChannelProvider(defaultTransportChannelProvider());
-      builder.setCredentialsProvider(defaultCredentialsProviderBuilder().build());
-      builder.setInternalHeaderProvider(defaultApiClientHeaderProviderBuilder().build());
-      builder.setEndpoint(getDefaultEndpoint());
-      return initDefaults(builder);
-    }
-
-    private static Builder initDefaults(Builder builder) {
-
-      builder
-          .getCampaignExperimentSettings()
-          .setRetryableCodes(RETRYABLE_CODE_DEFINITIONS.get("retry_policy_1_codes"))
-          .setRetrySettings(RETRY_PARAM_DEFINITIONS.get("retry_policy_1_params"));
-
-      builder
-          .createCampaignExperimentSettings()
-          .setRetryableCodes(RETRYABLE_CODE_DEFINITIONS.get("retry_policy_1_codes"))
-          .setRetrySettings(RETRY_PARAM_DEFINITIONS.get("retry_policy_1_params"));
-
-      builder
-          .mutateCampaignExperimentsSettings()
-          .setRetryableCodes(RETRYABLE_CODE_DEFINITIONS.get("retry_policy_1_codes"))
-          .setRetrySettings(RETRY_PARAM_DEFINITIONS.get("retry_policy_1_params"));
-
-      builder
-          .graduateCampaignExperimentSettings()
-          .setRetryableCodes(RETRYABLE_CODE_DEFINITIONS.get("retry_policy_1_codes"))
-          .setRetrySettings(RETRY_PARAM_DEFINITIONS.get("retry_policy_1_params"));
-
-      builder
-          .promoteCampaignExperimentSettings()
-          .setRetryableCodes(RETRYABLE_CODE_DEFINITIONS.get("retry_policy_1_codes"))
-          .setRetrySettings(RETRY_PARAM_DEFINITIONS.get("retry_policy_1_params"));
-
-      builder
-          .endCampaignExperimentSettings()
-          .setRetryableCodes(RETRYABLE_CODE_DEFINITIONS.get("retry_policy_1_codes"))
-          .setRetrySettings(RETRY_PARAM_DEFINITIONS.get("retry_policy_1_params"));
-
-      builder
-          .listCampaignExperimentAsyncErrorsSettings()
-          .setRetryableCodes(RETRYABLE_CODE_DEFINITIONS.get("retry_policy_1_codes"))
-          .setRetrySettings(RETRY_PARAM_DEFINITIONS.get("retry_policy_1_params"));
-      builder
-          .createCampaignExperimentOperationSettings()
-          .setInitialCallSettings(
-              UnaryCallSettings
-                  .<CreateCampaignExperimentRequest, OperationSnapshot>newUnaryCallSettingsBuilder()
-                  .setRetryableCodes(RETRYABLE_CODE_DEFINITIONS.get("retry_policy_1_codes"))
-                  .setRetrySettings(RETRY_PARAM_DEFINITIONS.get("retry_policy_1_params"))
-                  .build())
-          .setResponseTransformer(
-              ProtoOperationTransformers.ResponseTransformer.create(Empty.class))
-          .setMetadataTransformer(
-              ProtoOperationTransformers.MetadataTransformer.create(
-                  CreateCampaignExperimentMetadata.class))
-          .setPollingAlgorithm(
-              OperationTimedPollAlgorithm.create(
-                  RetrySettings.newBuilder()
-                      .setInitialRetryDelay(Duration.ofMillis(500L))
-                      .setRetryDelayMultiplier(1.5)
-                      .setMaxRetryDelay(Duration.ofMillis(5000L))
-                      .setInitialRpcTimeout(Duration.ZERO) // ignored
-                      .setRpcTimeoutMultiplier(1.0) // ignored
-                      .setMaxRpcTimeout(Duration.ZERO) // ignored
-                      .setTotalTimeout(Duration.ofMillis(300000L))
-                      .build()));
-      builder
-          .promoteCampaignExperimentOperationSettings()
-          .setInitialCallSettings(
-              UnaryCallSettings
-                  .<PromoteCampaignExperimentRequest, OperationSnapshot>
-                      newUnaryCallSettingsBuilder()
-                  .setRetryableCodes(RETRYABLE_CODE_DEFINITIONS.get("retry_policy_1_codes"))
-                  .setRetrySettings(RETRY_PARAM_DEFINITIONS.get("retry_policy_1_params"))
-                  .build())
-          .setResponseTransformer(
-              ProtoOperationTransformers.ResponseTransformer.create(Empty.class))
-          .setMetadataTransformer(
-              ProtoOperationTransformers.MetadataTransformer.create(Empty.class))
-          .setPollingAlgorithm(
-              OperationTimedPollAlgorithm.create(
-                  RetrySettings.newBuilder()
-                      .setInitialRetryDelay(Duration.ofMillis(500L))
-                      .setRetryDelayMultiplier(1.5)
-                      .setMaxRetryDelay(Duration.ofMillis(5000L))
-                      .setInitialRpcTimeout(Duration.ZERO) // ignored
-                      .setRpcTimeoutMultiplier(1.0) // ignored
-                      .setMaxRpcTimeout(Duration.ZERO) // ignored
-                      .setTotalTimeout(Duration.ofMillis(300000L))
-                      .build()));
-
-      return builder;
     }
 
     protected Builder(CampaignExperimentServiceStubSettings settings) {
@@ -595,7 +475,107 @@ public class CampaignExperimentServiceStubSettings
               listCampaignExperimentAsyncErrorsSettings);
     }
 
-    // NEXT_MAJOR_VER: remove 'throws Exception'
+    private static Builder createDefault() {
+      Builder builder = new Builder(((ClientContext) null));
+
+      builder.setTransportChannelProvider(defaultTransportChannelProvider());
+      builder.setCredentialsProvider(defaultCredentialsProviderBuilder().build());
+      builder.setInternalHeaderProvider(defaultApiClientHeaderProviderBuilder().build());
+      builder.setEndpoint(getDefaultEndpoint());
+
+      return initDefaults(builder);
+    }
+
+    private static Builder initDefaults(Builder builder) {
+      builder
+          .getCampaignExperimentSettings()
+          .setRetryableCodes(RETRYABLE_CODE_DEFINITIONS.get("retry_policy_0_codes"))
+          .setRetrySettings(RETRY_PARAM_DEFINITIONS.get("retry_policy_0_params"));
+
+      builder
+          .createCampaignExperimentSettings()
+          .setRetryableCodes(RETRYABLE_CODE_DEFINITIONS.get("retry_policy_0_codes"))
+          .setRetrySettings(RETRY_PARAM_DEFINITIONS.get("retry_policy_0_params"));
+
+      builder
+          .mutateCampaignExperimentsSettings()
+          .setRetryableCodes(RETRYABLE_CODE_DEFINITIONS.get("retry_policy_0_codes"))
+          .setRetrySettings(RETRY_PARAM_DEFINITIONS.get("retry_policy_0_params"));
+
+      builder
+          .graduateCampaignExperimentSettings()
+          .setRetryableCodes(RETRYABLE_CODE_DEFINITIONS.get("retry_policy_0_codes"))
+          .setRetrySettings(RETRY_PARAM_DEFINITIONS.get("retry_policy_0_params"));
+
+      builder
+          .promoteCampaignExperimentSettings()
+          .setRetryableCodes(RETRYABLE_CODE_DEFINITIONS.get("retry_policy_0_codes"))
+          .setRetrySettings(RETRY_PARAM_DEFINITIONS.get("retry_policy_0_params"));
+
+      builder
+          .endCampaignExperimentSettings()
+          .setRetryableCodes(RETRYABLE_CODE_DEFINITIONS.get("retry_policy_0_codes"))
+          .setRetrySettings(RETRY_PARAM_DEFINITIONS.get("retry_policy_0_params"));
+
+      builder
+          .listCampaignExperimentAsyncErrorsSettings()
+          .setRetryableCodes(RETRYABLE_CODE_DEFINITIONS.get("retry_policy_0_codes"))
+          .setRetrySettings(RETRY_PARAM_DEFINITIONS.get("retry_policy_0_params"));
+
+      builder
+          .createCampaignExperimentOperationSettings()
+          .setInitialCallSettings(
+              UnaryCallSettings
+                  .<CreateCampaignExperimentRequest, OperationSnapshot>newUnaryCallSettingsBuilder()
+                  .setRetryableCodes(RETRYABLE_CODE_DEFINITIONS.get("retry_policy_0_codes"))
+                  .setRetrySettings(RETRY_PARAM_DEFINITIONS.get("retry_policy_0_params"))
+                  .build())
+          .setResponseTransformer(
+              ProtoOperationTransformers.ResponseTransformer.create(Empty.class))
+          .setMetadataTransformer(
+              ProtoOperationTransformers.MetadataTransformer.create(
+                  CreateCampaignExperimentMetadata.class))
+          .setPollingAlgorithm(
+              OperationTimedPollAlgorithm.create(
+                  RetrySettings.newBuilder()
+                      .setInitialRetryDelay(Duration.ofMillis(5000L))
+                      .setRetryDelayMultiplier(1.5)
+                      .setMaxRetryDelay(Duration.ofMillis(45000L))
+                      .setInitialRpcTimeout(Duration.ZERO)
+                      .setRpcTimeoutMultiplier(1.0)
+                      .setMaxRpcTimeout(Duration.ZERO)
+                      .setTotalTimeout(Duration.ofMillis(300000L))
+                      .build()));
+
+      builder
+          .promoteCampaignExperimentOperationSettings()
+          .setInitialCallSettings(
+              UnaryCallSettings
+                  .<PromoteCampaignExperimentRequest, OperationSnapshot>
+                      newUnaryCallSettingsBuilder()
+                  .setRetryableCodes(RETRYABLE_CODE_DEFINITIONS.get("retry_policy_0_codes"))
+                  .setRetrySettings(RETRY_PARAM_DEFINITIONS.get("retry_policy_0_params"))
+                  .build())
+          .setResponseTransformer(
+              ProtoOperationTransformers.ResponseTransformer.create(Empty.class))
+          .setMetadataTransformer(
+              ProtoOperationTransformers.MetadataTransformer.create(Empty.class))
+          .setPollingAlgorithm(
+              OperationTimedPollAlgorithm.create(
+                  RetrySettings.newBuilder()
+                      .setInitialRetryDelay(Duration.ofMillis(5000L))
+                      .setRetryDelayMultiplier(1.5)
+                      .setMaxRetryDelay(Duration.ofMillis(45000L))
+                      .setInitialRpcTimeout(Duration.ZERO)
+                      .setRpcTimeoutMultiplier(1.0)
+                      .setMaxRpcTimeout(Duration.ZERO)
+                      .setTotalTimeout(Duration.ofMillis(300000L))
+                      .build()));
+
+      return builder;
+    }
+
+    // NEXT_MAJOR_VER: remove 'throws Exception'.
     /**
      * Applies the given settings updater function to all of the unary API methods in this service.
      *

@@ -5,7 +5,7 @@
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
- *     https://www.apache.org/licenses/LICENSE-2.0
+ *      https://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -13,6 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
 package com.google.ads.googleads.v6.services.stub;
 
 import com.google.ads.googleads.v6.resources.OfflineUserDataJob;
@@ -52,7 +53,7 @@ import java.util.List;
 import javax.annotation.Generated;
 import org.threeten.bp.Duration;
 
-// AUTO-GENERATED DOCUMENTATION AND CLASS
+// AUTO-GENERATED DOCUMENTATION AND CLASS.
 /**
  * Settings class to configure an instance of {@link OfflineUserDataJobServiceStub}.
  *
@@ -69,32 +70,30 @@ import org.threeten.bp.Duration;
  *
  * <p>For example, to set the total timeout of createOfflineUserDataJob to 30 seconds:
  *
- * <pre>
- * <code>
+ * <pre>{@code
  * OfflineUserDataJobServiceStubSettings.Builder offlineUserDataJobServiceSettingsBuilder =
  *     OfflineUserDataJobServiceStubSettings.newBuilder();
  * offlineUserDataJobServiceSettingsBuilder
  *     .createOfflineUserDataJobSettings()
  *     .setRetrySettings(
- *         offlineUserDataJobServiceSettingsBuilder.createOfflineUserDataJobSettings().getRetrySettings().toBuilder()
+ *         offlineUserDataJobServiceSettingsBuilder
+ *             .createOfflineUserDataJobSettings()
+ *             .getRetrySettings()
+ *             .toBuilder()
  *             .setTotalTimeout(Duration.ofSeconds(30))
  *             .build());
- * OfflineUserDataJobServiceStubSettings offlineUserDataJobServiceSettings = offlineUserDataJobServiceSettingsBuilder.build();
- * </code>
- * </pre>
+ * OfflineUserDataJobServiceStubSettings offlineUserDataJobServiceSettings =
+ *     offlineUserDataJobServiceSettingsBuilder.build();
+ * }</pre>
  */
-@Generated("by gapic-generator")
 @BetaApi
+@Generated("by gapic-generator-java")
 public class OfflineUserDataJobServiceStubSettings
     extends StubSettings<OfflineUserDataJobServiceStubSettings> {
   /** The default scopes of the service. */
   private static final ImmutableList<String> DEFAULT_SERVICE_SCOPES =
-      ImmutableList.<String>builder().build();
+      ImmutableList.<String>builder().add("https://www.googleapis.com/auth/adwords").build();
 
-  private final UnaryCallSettings<RunOfflineUserDataJobRequest, Operation>
-      runOfflineUserDataJobSettings;
-  private final OperationCallSettings<RunOfflineUserDataJobRequest, Empty, Empty>
-      runOfflineUserDataJobOperationSettings;
   private final UnaryCallSettings<CreateOfflineUserDataJobRequest, CreateOfflineUserDataJobResponse>
       createOfflineUserDataJobSettings;
   private final UnaryCallSettings<GetOfflineUserDataJobRequest, OfflineUserDataJob>
@@ -102,19 +101,10 @@ public class OfflineUserDataJobServiceStubSettings
   private final UnaryCallSettings<
           AddOfflineUserDataJobOperationsRequest, AddOfflineUserDataJobOperationsResponse>
       addOfflineUserDataJobOperationsSettings;
-
-  /** Returns the object with the settings used for calls to runOfflineUserDataJob. */
-  public UnaryCallSettings<RunOfflineUserDataJobRequest, Operation>
-      runOfflineUserDataJobSettings() {
-    return runOfflineUserDataJobSettings;
-  }
-
-  /** Returns the object with the settings used for calls to runOfflineUserDataJob. */
-  @BetaApi("The surface for use by generated code is not stable yet and may change in the future.")
-  public OperationCallSettings<RunOfflineUserDataJobRequest, Empty, Empty>
-      runOfflineUserDataJobOperationSettings() {
-    return runOfflineUserDataJobOperationSettings;
-  }
+  private final UnaryCallSettings<RunOfflineUserDataJobRequest, Operation>
+      runOfflineUserDataJobSettings;
+  private final OperationCallSettings<RunOfflineUserDataJobRequest, Empty, Empty>
+      runOfflineUserDataJobOperationSettings;
 
   /** Returns the object with the settings used for calls to createOfflineUserDataJob. */
   public UnaryCallSettings<CreateOfflineUserDataJobRequest, CreateOfflineUserDataJobResponse>
@@ -135,16 +125,28 @@ public class OfflineUserDataJobServiceStubSettings
     return addOfflineUserDataJobOperationsSettings;
   }
 
+  /** Returns the object with the settings used for calls to runOfflineUserDataJob. */
+  public UnaryCallSettings<RunOfflineUserDataJobRequest, Operation>
+      runOfflineUserDataJobSettings() {
+    return runOfflineUserDataJobSettings;
+  }
+
+  /** Returns the object with the settings used for calls to runOfflineUserDataJob. */
+  public OperationCallSettings<RunOfflineUserDataJobRequest, Empty, Empty>
+      runOfflineUserDataJobOperationSettings() {
+    return runOfflineUserDataJobOperationSettings;
+  }
+
   @BetaApi("A restructuring of stub classes is planned, so this may break in the future")
   public OfflineUserDataJobServiceStub createStub() throws IOException {
     if (getTransportChannelProvider()
         .getTransportName()
         .equals(GrpcTransportChannel.getGrpcTransportName())) {
       return GrpcOfflineUserDataJobServiceStub.create(this);
-    } else {
-      throw new UnsupportedOperationException(
-          "Transport not supported: " + getTransportChannelProvider().getTransportName());
     }
+    throw new UnsupportedOperationException(
+        String.format(
+            "Transport not supported: %s", getTransportChannelProvider().getTransportName()));
   }
 
   /** Returns a builder for the default ExecutorProvider for this service. */
@@ -204,24 +206,19 @@ public class OfflineUserDataJobServiceStubSettings
   protected OfflineUserDataJobServiceStubSettings(Builder settingsBuilder) throws IOException {
     super(settingsBuilder);
 
-    runOfflineUserDataJobSettings = settingsBuilder.runOfflineUserDataJobSettings().build();
-    runOfflineUserDataJobOperationSettings =
-        settingsBuilder.runOfflineUserDataJobOperationSettings().build();
     createOfflineUserDataJobSettings = settingsBuilder.createOfflineUserDataJobSettings().build();
     getOfflineUserDataJobSettings = settingsBuilder.getOfflineUserDataJobSettings().build();
     addOfflineUserDataJobOperationsSettings =
         settingsBuilder.addOfflineUserDataJobOperationsSettings().build();
+    runOfflineUserDataJobSettings = settingsBuilder.runOfflineUserDataJobSettings().build();
+    runOfflineUserDataJobOperationSettings =
+        settingsBuilder.runOfflineUserDataJobOperationSettings().build();
   }
 
   /** Builder for OfflineUserDataJobServiceStubSettings. */
   public static class Builder
       extends StubSettings.Builder<OfflineUserDataJobServiceStubSettings, Builder> {
     private final ImmutableList<UnaryCallSettings.Builder<?, ?>> unaryMethodSettingsBuilders;
-
-    private final UnaryCallSettings.Builder<RunOfflineUserDataJobRequest, Operation>
-        runOfflineUserDataJobSettings;
-    private final OperationCallSettings.Builder<RunOfflineUserDataJobRequest, Empty, Empty>
-        runOfflineUserDataJobOperationSettings;
     private final UnaryCallSettings.Builder<
             CreateOfflineUserDataJobRequest, CreateOfflineUserDataJobResponse>
         createOfflineUserDataJobSettings;
@@ -230,7 +227,10 @@ public class OfflineUserDataJobServiceStubSettings
     private final UnaryCallSettings.Builder<
             AddOfflineUserDataJobOperationsRequest, AddOfflineUserDataJobOperationsResponse>
         addOfflineUserDataJobOperationsSettings;
-
+    private final UnaryCallSettings.Builder<RunOfflineUserDataJobRequest, Operation>
+        runOfflineUserDataJobSettings;
+    private final OperationCallSettings.Builder<RunOfflineUserDataJobRequest, Empty, Empty>
+        runOfflineUserDataJobOperationSettings;
     private static final ImmutableMap<String, ImmutableSet<StatusCode.Code>>
         RETRYABLE_CODE_DEFINITIONS;
 
@@ -238,11 +238,10 @@ public class OfflineUserDataJobServiceStubSettings
       ImmutableMap.Builder<String, ImmutableSet<StatusCode.Code>> definitions =
           ImmutableMap.builder();
       definitions.put(
-          "retry_policy_1_codes",
+          "retry_policy_0_codes",
           ImmutableSet.copyOf(
               Lists.<StatusCode.Code>newArrayList(
                   StatusCode.Code.UNAVAILABLE, StatusCode.Code.DEADLINE_EXCEEDED)));
-      definitions.put("no_retry_codes", ImmutableSet.copyOf(Lists.<StatusCode.Code>newArrayList()));
       RETRYABLE_CODE_DEFINITIONS = definitions.build();
     }
 
@@ -261,76 +260,90 @@ public class OfflineUserDataJobServiceStubSettings
               .setMaxRpcTimeout(Duration.ofMillis(3600000L))
               .setTotalTimeout(Duration.ofMillis(3600000L))
               .build();
-      definitions.put("retry_policy_1_params", settings);
-      settings = RetrySettings.newBuilder().setRpcTimeoutMultiplier(1.0).build();
-      definitions.put("no_retry_params", settings);
+      definitions.put("retry_policy_0_params", settings);
       RETRY_PARAM_DEFINITIONS = definitions.build();
     }
 
     protected Builder() {
-      this((ClientContext) null);
+      this(((ClientContext) null));
     }
 
     protected Builder(ClientContext clientContext) {
       super(clientContext);
 
-      runOfflineUserDataJobSettings = UnaryCallSettings.newUnaryCallSettingsBuilder();
-
-      runOfflineUserDataJobOperationSettings = OperationCallSettings.newBuilder();
-
       createOfflineUserDataJobSettings = UnaryCallSettings.newUnaryCallSettingsBuilder();
-
       getOfflineUserDataJobSettings = UnaryCallSettings.newUnaryCallSettingsBuilder();
-
       addOfflineUserDataJobOperationsSettings = UnaryCallSettings.newUnaryCallSettingsBuilder();
+      runOfflineUserDataJobSettings = UnaryCallSettings.newUnaryCallSettingsBuilder();
+      runOfflineUserDataJobOperationSettings = OperationCallSettings.newBuilder();
 
       unaryMethodSettingsBuilders =
           ImmutableList.<UnaryCallSettings.Builder<?, ?>>of(
-              runOfflineUserDataJobSettings,
               createOfflineUserDataJobSettings,
               getOfflineUserDataJobSettings,
-              addOfflineUserDataJobOperationsSettings);
-
+              addOfflineUserDataJobOperationsSettings,
+              runOfflineUserDataJobSettings);
       initDefaults(this);
     }
 
+    protected Builder(OfflineUserDataJobServiceStubSettings settings) {
+      super(settings);
+
+      createOfflineUserDataJobSettings = settings.createOfflineUserDataJobSettings.toBuilder();
+      getOfflineUserDataJobSettings = settings.getOfflineUserDataJobSettings.toBuilder();
+      addOfflineUserDataJobOperationsSettings =
+          settings.addOfflineUserDataJobOperationsSettings.toBuilder();
+      runOfflineUserDataJobSettings = settings.runOfflineUserDataJobSettings.toBuilder();
+      runOfflineUserDataJobOperationSettings =
+          settings.runOfflineUserDataJobOperationSettings.toBuilder();
+
+      unaryMethodSettingsBuilders =
+          ImmutableList.<UnaryCallSettings.Builder<?, ?>>of(
+              createOfflineUserDataJobSettings,
+              getOfflineUserDataJobSettings,
+              addOfflineUserDataJobOperationsSettings,
+              runOfflineUserDataJobSettings);
+    }
+
     private static Builder createDefault() {
-      Builder builder = new Builder((ClientContext) null);
+      Builder builder = new Builder(((ClientContext) null));
+
       builder.setTransportChannelProvider(defaultTransportChannelProvider());
       builder.setCredentialsProvider(defaultCredentialsProviderBuilder().build());
       builder.setInternalHeaderProvider(defaultApiClientHeaderProviderBuilder().build());
       builder.setEndpoint(getDefaultEndpoint());
+
       return initDefaults(builder);
     }
 
     private static Builder initDefaults(Builder builder) {
-
-      builder
-          .runOfflineUserDataJobSettings()
-          .setRetryableCodes(RETRYABLE_CODE_DEFINITIONS.get("retry_policy_1_codes"))
-          .setRetrySettings(RETRY_PARAM_DEFINITIONS.get("retry_policy_1_params"));
-
       builder
           .createOfflineUserDataJobSettings()
-          .setRetryableCodes(RETRYABLE_CODE_DEFINITIONS.get("retry_policy_1_codes"))
-          .setRetrySettings(RETRY_PARAM_DEFINITIONS.get("retry_policy_1_params"));
+          .setRetryableCodes(RETRYABLE_CODE_DEFINITIONS.get("retry_policy_0_codes"))
+          .setRetrySettings(RETRY_PARAM_DEFINITIONS.get("retry_policy_0_params"));
 
       builder
           .getOfflineUserDataJobSettings()
-          .setRetryableCodes(RETRYABLE_CODE_DEFINITIONS.get("retry_policy_1_codes"))
-          .setRetrySettings(RETRY_PARAM_DEFINITIONS.get("retry_policy_1_params"));
+          .setRetryableCodes(RETRYABLE_CODE_DEFINITIONS.get("retry_policy_0_codes"))
+          .setRetrySettings(RETRY_PARAM_DEFINITIONS.get("retry_policy_0_params"));
 
       builder
           .addOfflineUserDataJobOperationsSettings()
-          .setRetryableCodes(RETRYABLE_CODE_DEFINITIONS.get("retry_policy_1_codes"))
-          .setRetrySettings(RETRY_PARAM_DEFINITIONS.get("retry_policy_1_params"));
+          .setRetryableCodes(RETRYABLE_CODE_DEFINITIONS.get("retry_policy_0_codes"))
+          .setRetrySettings(RETRY_PARAM_DEFINITIONS.get("retry_policy_0_params"));
+
+      builder
+          .runOfflineUserDataJobSettings()
+          .setRetryableCodes(RETRYABLE_CODE_DEFINITIONS.get("retry_policy_0_codes"))
+          .setRetrySettings(RETRY_PARAM_DEFINITIONS.get("retry_policy_0_params"));
+
       builder
           .runOfflineUserDataJobOperationSettings()
           .setInitialCallSettings(
               UnaryCallSettings
                   .<RunOfflineUserDataJobRequest, OperationSnapshot>newUnaryCallSettingsBuilder()
-                  .setRetryableCodes(RETRYABLE_CODE_DEFINITIONS.get("retry_policy_1_codes"))
-                  .setRetrySettings(RETRY_PARAM_DEFINITIONS.get("retry_policy_1_params"))
+                  .setRetryableCodes(RETRYABLE_CODE_DEFINITIONS.get("retry_policy_0_codes"))
+                  .setRetrySettings(RETRY_PARAM_DEFINITIONS.get("retry_policy_0_params"))
                   .build())
           .setResponseTransformer(
               ProtoOperationTransformers.ResponseTransformer.create(Empty.class))
@@ -340,37 +353,18 @@ public class OfflineUserDataJobServiceStubSettings
               OperationTimedPollAlgorithm.create(
                   RetrySettings.newBuilder()
                       .setInitialRetryDelay(Duration.ofMillis(300000L))
-                      .setRetryDelayMultiplier(1.25)
+                      .setRetryDelayMultiplier(1.3)
                       .setMaxRetryDelay(Duration.ofMillis(3600000L))
-                      .setInitialRpcTimeout(Duration.ZERO) // ignored
-                      .setRpcTimeoutMultiplier(1.0) // ignored
-                      .setMaxRpcTimeout(Duration.ZERO) // ignored
+                      .setInitialRpcTimeout(Duration.ZERO)
+                      .setRpcTimeoutMultiplier(1.0)
+                      .setMaxRpcTimeout(Duration.ZERO)
                       .setTotalTimeout(Duration.ofMillis(43200000L))
                       .build()));
 
       return builder;
     }
 
-    protected Builder(OfflineUserDataJobServiceStubSettings settings) {
-      super(settings);
-
-      runOfflineUserDataJobSettings = settings.runOfflineUserDataJobSettings.toBuilder();
-      runOfflineUserDataJobOperationSettings =
-          settings.runOfflineUserDataJobOperationSettings.toBuilder();
-      createOfflineUserDataJobSettings = settings.createOfflineUserDataJobSettings.toBuilder();
-      getOfflineUserDataJobSettings = settings.getOfflineUserDataJobSettings.toBuilder();
-      addOfflineUserDataJobOperationsSettings =
-          settings.addOfflineUserDataJobOperationsSettings.toBuilder();
-
-      unaryMethodSettingsBuilders =
-          ImmutableList.<UnaryCallSettings.Builder<?, ?>>of(
-              runOfflineUserDataJobSettings,
-              createOfflineUserDataJobSettings,
-              getOfflineUserDataJobSettings,
-              addOfflineUserDataJobOperationsSettings);
-    }
-
-    // NEXT_MAJOR_VER: remove 'throws Exception'
+    // NEXT_MAJOR_VER: remove 'throws Exception'.
     /**
      * Applies the given settings updater function to all of the unary API methods in this service.
      *
@@ -384,20 +378,6 @@ public class OfflineUserDataJobServiceStubSettings
 
     public ImmutableList<UnaryCallSettings.Builder<?, ?>> unaryMethodSettingsBuilders() {
       return unaryMethodSettingsBuilders;
-    }
-
-    /** Returns the builder for the settings used for calls to runOfflineUserDataJob. */
-    public UnaryCallSettings.Builder<RunOfflineUserDataJobRequest, Operation>
-        runOfflineUserDataJobSettings() {
-      return runOfflineUserDataJobSettings;
-    }
-
-    /** Returns the builder for the settings used for calls to runOfflineUserDataJob. */
-    @BetaApi(
-        "The surface for use by generated code is not stable yet and may change in the future.")
-    public OperationCallSettings.Builder<RunOfflineUserDataJobRequest, Empty, Empty>
-        runOfflineUserDataJobOperationSettings() {
-      return runOfflineUserDataJobOperationSettings;
     }
 
     /** Returns the builder for the settings used for calls to createOfflineUserDataJob. */
@@ -418,6 +398,20 @@ public class OfflineUserDataJobServiceStubSettings
             AddOfflineUserDataJobOperationsRequest, AddOfflineUserDataJobOperationsResponse>
         addOfflineUserDataJobOperationsSettings() {
       return addOfflineUserDataJobOperationsSettings;
+    }
+
+    /** Returns the builder for the settings used for calls to runOfflineUserDataJob. */
+    public UnaryCallSettings.Builder<RunOfflineUserDataJobRequest, Operation>
+        runOfflineUserDataJobSettings() {
+      return runOfflineUserDataJobSettings;
+    }
+
+    /** Returns the builder for the settings used for calls to runOfflineUserDataJob. */
+    @BetaApi(
+        "The surface for use by generated code is not stable yet and may change in the future.")
+    public OperationCallSettings.Builder<RunOfflineUserDataJobRequest, Empty, Empty>
+        runOfflineUserDataJobOperationSettings() {
+      return runOfflineUserDataJobOperationSettings;
     }
 
     @Override

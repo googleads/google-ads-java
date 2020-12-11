@@ -5,7 +5,7 @@
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
- *     https://www.apache.org/licenses/LICENSE-2.0
+ *      https://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -13,9 +13,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
 package com.google.ads.googleads.v6.services;
 
 import com.google.ads.googleads.v6.resources.CustomerClientLink;
+import com.google.ads.googleads.v6.resources.CustomerClientLinkName;
 import com.google.ads.googleads.v6.services.stub.CustomerClientLinkServiceStub;
 import com.google.ads.googleads.v6.services.stub.CustomerClientLinkServiceStubSettings;
 import com.google.api.core.BetaApi;
@@ -25,23 +27,14 @@ import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 import javax.annotation.Generated;
 
-// AUTO-GENERATED DOCUMENTATION AND SERVICE
+// AUTO-GENERATED DOCUMENTATION AND CLASS.
 /**
  * Service Description: Service to manage customer client links.
  *
  * <p>This class provides the ability to make remote calls to the backing service through method
  * calls that map to API methods. Sample code to get started:
  *
- * <pre>
- * <code>
- * try (CustomerClientLinkServiceClient customerClientLinkServiceClient = CustomerClientLinkServiceClient.create()) {
- *   CustomerClientLinkName resourceName = CustomerClientLinkName.of("[CUSTOMER_ID]", "[CLIENT_CUSTOMER_ID]", "[MANAGER_LINK_ID]");
- *   CustomerClientLink response = customerClientLinkServiceClient.getCustomerClientLink(resourceName);
- * }
- * </code>
- * </pre>
- *
- * <p>Note: close() needs to be called on the customerClientLinkServiceClient object to clean up
+ * <p>Note: close() needs to be called on the CustomerClientLinkServiceClient object to clean up
  * resources such as threads. In the example above, try-with-resources is used, which automatically
  * calls close().
  *
@@ -70,30 +63,28 @@ import javax.annotation.Generated;
  *
  * <p>To customize credentials:
  *
- * <pre>
- * <code>
+ * <pre>{@code
  * CustomerClientLinkServiceSettings customerClientLinkServiceSettings =
  *     CustomerClientLinkServiceSettings.newBuilder()
  *         .setCredentialsProvider(FixedCredentialsProvider.create(myCredentials))
  *         .build();
  * CustomerClientLinkServiceClient customerClientLinkServiceClient =
  *     CustomerClientLinkServiceClient.create(customerClientLinkServiceSettings);
- * </code>
- * </pre>
+ * }</pre>
  *
- * To customize the endpoint:
+ * <p>To customize the endpoint:
  *
- * <pre>
- * <code>
+ * <pre>{@code
  * CustomerClientLinkServiceSettings customerClientLinkServiceSettings =
  *     CustomerClientLinkServiceSettings.newBuilder().setEndpoint(myEndpoint).build();
  * CustomerClientLinkServiceClient customerClientLinkServiceClient =
  *     CustomerClientLinkServiceClient.create(customerClientLinkServiceSettings);
- * </code>
- * </pre>
+ * }</pre>
+ *
+ * <p>Please refer to the GitHub repository's samples for more quickstart code snippets.
  */
-@Generated("by gapic-generator")
 @BetaApi
+@Generated("by gapic-generator")
 public class CustomerClientLinkServiceClient implements BackgroundResource {
   private final CustomerClientLinkServiceSettings settings;
   private final CustomerClientLinkServiceStub stub;
@@ -115,7 +106,7 @@ public class CustomerClientLinkServiceClient implements BackgroundResource {
 
   /**
    * Constructs an instance of CustomerClientLinkServiceClient, using the given stub for making
-   * calls. This is for advanced usage - prefer to use CustomerClientLinkServiceSettings}.
+   * calls. This is for advanced usage - prefer using create(CustomerClientLinkServiceSettings).
    */
   @BetaApi("A restructuring of stub classes is planned, so this may break in the future")
   public static final CustomerClientLinkServiceClient create(CustomerClientLinkServiceStub stub) {
@@ -148,20 +139,11 @@ public class CustomerClientLinkServiceClient implements BackgroundResource {
     return stub;
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Returns the requested CustomerClientLink in full detail.
    *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (CustomerClientLinkServiceClient customerClientLinkServiceClient = CustomerClientLinkServiceClient.create()) {
-   *   CustomerClientLinkName resourceName = CustomerClientLinkName.of("[CUSTOMER_ID]", "[CLIENT_CUSTOMER_ID]", "[MANAGER_LINK_ID]");
-   *   CustomerClientLink response = customerClientLinkServiceClient.getCustomerClientLink(resourceName);
-   * }
-   * </code></pre>
-   *
-   * @param resourceName Required. The resource name of the customer client link to fetch.
+   * @param resource_name Required. The resource name of the customer client link to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final CustomerClientLink getCustomerClientLink(CustomerClientLinkName resourceName) {
@@ -172,20 +154,11 @@ public class CustomerClientLinkServiceClient implements BackgroundResource {
     return getCustomerClientLink(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Returns the requested CustomerClientLink in full detail.
    *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (CustomerClientLinkServiceClient customerClientLinkServiceClient = CustomerClientLinkServiceClient.create()) {
-   *   CustomerClientLinkName resourceName = CustomerClientLinkName.of("[CUSTOMER_ID]", "[CLIENT_CUSTOMER_ID]", "[MANAGER_LINK_ID]");
-   *   CustomerClientLink response = customerClientLinkServiceClient.getCustomerClientLink(resourceName.toString());
-   * }
-   * </code></pre>
-   *
-   * @param resourceName Required. The resource name of the customer client link to fetch.
+   * @param resource_name Required. The resource name of the customer client link to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final CustomerClientLink getCustomerClientLink(String resourceName) {
@@ -194,21 +167,9 @@ public class CustomerClientLinkServiceClient implements BackgroundResource {
     return getCustomerClientLink(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Returns the requested CustomerClientLink in full detail.
-   *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (CustomerClientLinkServiceClient customerClientLinkServiceClient = CustomerClientLinkServiceClient.create()) {
-   *   CustomerClientLinkName resourceName = CustomerClientLinkName.of("[CUSTOMER_ID]", "[CLIENT_CUSTOMER_ID]", "[MANAGER_LINK_ID]");
-   *   GetCustomerClientLinkRequest request = GetCustomerClientLinkRequest.newBuilder()
-   *     .setResourceName(resourceName.toString())
-   *     .build();
-   *   CustomerClientLink response = customerClientLinkServiceClient.getCustomerClientLink(request);
-   * }
-   * </code></pre>
    *
    * @param request The request object containing all of the parameters for the API call.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
@@ -217,44 +178,22 @@ public class CustomerClientLinkServiceClient implements BackgroundResource {
     return getCustomerClientLinkCallable().call(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Returns the requested CustomerClientLink in full detail.
    *
    * <p>Sample code:
-   *
-   * <pre><code>
-   * try (CustomerClientLinkServiceClient customerClientLinkServiceClient = CustomerClientLinkServiceClient.create()) {
-   *   CustomerClientLinkName resourceName = CustomerClientLinkName.of("[CUSTOMER_ID]", "[CLIENT_CUSTOMER_ID]", "[MANAGER_LINK_ID]");
-   *   GetCustomerClientLinkRequest request = GetCustomerClientLinkRequest.newBuilder()
-   *     .setResourceName(resourceName.toString())
-   *     .build();
-   *   ApiFuture&lt;CustomerClientLink&gt; future = customerClientLinkServiceClient.getCustomerClientLinkCallable().futureCall(request);
-   *   // Do something
-   *   CustomerClientLink response = future.get();
-   * }
-   * </code></pre>
    */
   public final UnaryCallable<GetCustomerClientLinkRequest, CustomerClientLink>
       getCustomerClientLinkCallable() {
     return stub.getCustomerClientLinkCallable();
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Creates or updates a customer client link. Operation statuses are returned.
    *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (CustomerClientLinkServiceClient customerClientLinkServiceClient = CustomerClientLinkServiceClient.create()) {
-   *   String customerId = "";
-   *   CustomerClientLinkOperation operation = CustomerClientLinkOperation.newBuilder().build();
-   *   MutateCustomerClientLinkResponse response = customerClientLinkServiceClient.mutateCustomerClientLink(customerId, operation);
-   * }
-   * </code></pre>
-   *
-   * @param customerId Required. The ID of the customer whose customer link are being modified.
+   * @param customer_id Required. The ID of the customer whose customer link are being modified.
    * @param operation Required. The operation to perform on the individual CustomerClientLink.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
@@ -268,23 +207,9 @@ public class CustomerClientLinkServiceClient implements BackgroundResource {
     return mutateCustomerClientLink(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Creates or updates a customer client link. Operation statuses are returned.
-   *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (CustomerClientLinkServiceClient customerClientLinkServiceClient = CustomerClientLinkServiceClient.create()) {
-   *   String customerId = "";
-   *   CustomerClientLinkOperation operation = CustomerClientLinkOperation.newBuilder().build();
-   *   MutateCustomerClientLinkRequest request = MutateCustomerClientLinkRequest.newBuilder()
-   *     .setCustomerId(customerId)
-   *     .setOperation(operation)
-   *     .build();
-   *   MutateCustomerClientLinkResponse response = customerClientLinkServiceClient.mutateCustomerClientLink(request);
-   * }
-   * </code></pre>
    *
    * @param request The request object containing all of the parameters for the API call.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
@@ -294,25 +219,11 @@ public class CustomerClientLinkServiceClient implements BackgroundResource {
     return mutateCustomerClientLinkCallable().call(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Creates or updates a customer client link. Operation statuses are returned.
    *
    * <p>Sample code:
-   *
-   * <pre><code>
-   * try (CustomerClientLinkServiceClient customerClientLinkServiceClient = CustomerClientLinkServiceClient.create()) {
-   *   String customerId = "";
-   *   CustomerClientLinkOperation operation = CustomerClientLinkOperation.newBuilder().build();
-   *   MutateCustomerClientLinkRequest request = MutateCustomerClientLinkRequest.newBuilder()
-   *     .setCustomerId(customerId)
-   *     .setOperation(operation)
-   *     .build();
-   *   ApiFuture&lt;MutateCustomerClientLinkResponse&gt; future = customerClientLinkServiceClient.mutateCustomerClientLinkCallable().futureCall(request);
-   *   // Do something
-   *   MutateCustomerClientLinkResponse response = future.get();
-   * }
-   * </code></pre>
    */
   public final UnaryCallable<MutateCustomerClientLinkRequest, MutateCustomerClientLinkResponse>
       mutateCustomerClientLinkCallable() {

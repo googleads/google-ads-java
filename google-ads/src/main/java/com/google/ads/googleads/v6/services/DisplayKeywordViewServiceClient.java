@@ -5,7 +5,7 @@
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
- *     https://www.apache.org/licenses/LICENSE-2.0
+ *      https://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -13,9 +13,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
 package com.google.ads.googleads.v6.services;
 
 import com.google.ads.googleads.v6.resources.DisplayKeywordView;
+import com.google.ads.googleads.v6.resources.DisplayKeywordViewName;
 import com.google.ads.googleads.v6.services.stub.DisplayKeywordViewServiceStub;
 import com.google.ads.googleads.v6.services.stub.DisplayKeywordViewServiceStubSettings;
 import com.google.api.core.BetaApi;
@@ -25,23 +27,14 @@ import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 import javax.annotation.Generated;
 
-// AUTO-GENERATED DOCUMENTATION AND SERVICE
+// AUTO-GENERATED DOCUMENTATION AND CLASS.
 /**
  * Service Description: Service to manage display keyword views.
  *
  * <p>This class provides the ability to make remote calls to the backing service through method
  * calls that map to API methods. Sample code to get started:
  *
- * <pre>
- * <code>
- * try (DisplayKeywordViewServiceClient displayKeywordViewServiceClient = DisplayKeywordViewServiceClient.create()) {
- *   DisplayKeywordViewName resourceName = DisplayKeywordViewName.of("[CUSTOMER_ID]", "[AD_GROUP_ID]", "[CRITERION_ID]");
- *   DisplayKeywordView response = displayKeywordViewServiceClient.getDisplayKeywordView(resourceName);
- * }
- * </code>
- * </pre>
- *
- * <p>Note: close() needs to be called on the displayKeywordViewServiceClient object to clean up
+ * <p>Note: close() needs to be called on the DisplayKeywordViewServiceClient object to clean up
  * resources such as threads. In the example above, try-with-resources is used, which automatically
  * calls close().
  *
@@ -70,30 +63,28 @@ import javax.annotation.Generated;
  *
  * <p>To customize credentials:
  *
- * <pre>
- * <code>
+ * <pre>{@code
  * DisplayKeywordViewServiceSettings displayKeywordViewServiceSettings =
  *     DisplayKeywordViewServiceSettings.newBuilder()
  *         .setCredentialsProvider(FixedCredentialsProvider.create(myCredentials))
  *         .build();
  * DisplayKeywordViewServiceClient displayKeywordViewServiceClient =
  *     DisplayKeywordViewServiceClient.create(displayKeywordViewServiceSettings);
- * </code>
- * </pre>
+ * }</pre>
  *
- * To customize the endpoint:
+ * <p>To customize the endpoint:
  *
- * <pre>
- * <code>
+ * <pre>{@code
  * DisplayKeywordViewServiceSettings displayKeywordViewServiceSettings =
  *     DisplayKeywordViewServiceSettings.newBuilder().setEndpoint(myEndpoint).build();
  * DisplayKeywordViewServiceClient displayKeywordViewServiceClient =
  *     DisplayKeywordViewServiceClient.create(displayKeywordViewServiceSettings);
- * </code>
- * </pre>
+ * }</pre>
+ *
+ * <p>Please refer to the GitHub repository's samples for more quickstart code snippets.
  */
-@Generated("by gapic-generator")
 @BetaApi
+@Generated("by gapic-generator")
 public class DisplayKeywordViewServiceClient implements BackgroundResource {
   private final DisplayKeywordViewServiceSettings settings;
   private final DisplayKeywordViewServiceStub stub;
@@ -115,7 +106,7 @@ public class DisplayKeywordViewServiceClient implements BackgroundResource {
 
   /**
    * Constructs an instance of DisplayKeywordViewServiceClient, using the given stub for making
-   * calls. This is for advanced usage - prefer to use DisplayKeywordViewServiceSettings}.
+   * calls. This is for advanced usage - prefer using create(DisplayKeywordViewServiceSettings).
    */
   @BetaApi("A restructuring of stub classes is planned, so this may break in the future")
   public static final DisplayKeywordViewServiceClient create(DisplayKeywordViewServiceStub stub) {
@@ -148,20 +139,11 @@ public class DisplayKeywordViewServiceClient implements BackgroundResource {
     return stub;
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Returns the requested display keyword view in full detail.
    *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (DisplayKeywordViewServiceClient displayKeywordViewServiceClient = DisplayKeywordViewServiceClient.create()) {
-   *   DisplayKeywordViewName resourceName = DisplayKeywordViewName.of("[CUSTOMER_ID]", "[AD_GROUP_ID]", "[CRITERION_ID]");
-   *   DisplayKeywordView response = displayKeywordViewServiceClient.getDisplayKeywordView(resourceName);
-   * }
-   * </code></pre>
-   *
-   * @param resourceName Required. The resource name of the display keyword view to fetch.
+   * @param resource_name Required. The resource name of the display keyword view to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final DisplayKeywordView getDisplayKeywordView(DisplayKeywordViewName resourceName) {
@@ -172,20 +154,11 @@ public class DisplayKeywordViewServiceClient implements BackgroundResource {
     return getDisplayKeywordView(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Returns the requested display keyword view in full detail.
    *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (DisplayKeywordViewServiceClient displayKeywordViewServiceClient = DisplayKeywordViewServiceClient.create()) {
-   *   DisplayKeywordViewName resourceName = DisplayKeywordViewName.of("[CUSTOMER_ID]", "[AD_GROUP_ID]", "[CRITERION_ID]");
-   *   DisplayKeywordView response = displayKeywordViewServiceClient.getDisplayKeywordView(resourceName.toString());
-   * }
-   * </code></pre>
-   *
-   * @param resourceName Required. The resource name of the display keyword view to fetch.
+   * @param resource_name Required. The resource name of the display keyword view to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final DisplayKeywordView getDisplayKeywordView(String resourceName) {
@@ -194,21 +167,9 @@ public class DisplayKeywordViewServiceClient implements BackgroundResource {
     return getDisplayKeywordView(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Returns the requested display keyword view in full detail.
-   *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (DisplayKeywordViewServiceClient displayKeywordViewServiceClient = DisplayKeywordViewServiceClient.create()) {
-   *   DisplayKeywordViewName resourceName = DisplayKeywordViewName.of("[CUSTOMER_ID]", "[AD_GROUP_ID]", "[CRITERION_ID]");
-   *   GetDisplayKeywordViewRequest request = GetDisplayKeywordViewRequest.newBuilder()
-   *     .setResourceName(resourceName.toString())
-   *     .build();
-   *   DisplayKeywordView response = displayKeywordViewServiceClient.getDisplayKeywordView(request);
-   * }
-   * </code></pre>
    *
    * @param request The request object containing all of the parameters for the API call.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
@@ -217,23 +178,11 @@ public class DisplayKeywordViewServiceClient implements BackgroundResource {
     return getDisplayKeywordViewCallable().call(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Returns the requested display keyword view in full detail.
    *
    * <p>Sample code:
-   *
-   * <pre><code>
-   * try (DisplayKeywordViewServiceClient displayKeywordViewServiceClient = DisplayKeywordViewServiceClient.create()) {
-   *   DisplayKeywordViewName resourceName = DisplayKeywordViewName.of("[CUSTOMER_ID]", "[AD_GROUP_ID]", "[CRITERION_ID]");
-   *   GetDisplayKeywordViewRequest request = GetDisplayKeywordViewRequest.newBuilder()
-   *     .setResourceName(resourceName.toString())
-   *     .build();
-   *   ApiFuture&lt;DisplayKeywordView&gt; future = displayKeywordViewServiceClient.getDisplayKeywordViewCallable().futureCall(request);
-   *   // Do something
-   *   DisplayKeywordView response = future.get();
-   * }
-   * </code></pre>
    */
   public final UnaryCallable<GetDisplayKeywordViewRequest, DisplayKeywordView>
       getDisplayKeywordViewCallable() {

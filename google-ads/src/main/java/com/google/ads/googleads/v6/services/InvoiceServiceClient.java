@@ -5,7 +5,7 @@
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
- *     https://www.apache.org/licenses/LICENSE-2.0
+ *      https://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -13,6 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
 package com.google.ads.googleads.v6.services;
 
 import com.google.ads.googleads.v6.enums.MonthOfYearEnum;
@@ -25,26 +26,14 @@ import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 import javax.annotation.Generated;
 
-// AUTO-GENERATED DOCUMENTATION AND SERVICE
+// AUTO-GENERATED DOCUMENTATION AND CLASS.
 /**
  * Service Description: A service to fetch invoices issued for a billing setup during a given month.
  *
  * <p>This class provides the ability to make remote calls to the backing service through method
  * calls that map to API methods. Sample code to get started:
  *
- * <pre>
- * <code>
- * try (InvoiceServiceClient invoiceServiceClient = InvoiceServiceClient.create()) {
- *   String customerId = "";
- *   String billingSetup = "";
- *   String issueYear = "";
- *   MonthOfYearEnum.MonthOfYear issueMonth = MonthOfYearEnum.MonthOfYear.UNSPECIFIED;
- *   ListInvoicesResponse response = invoiceServiceClient.listInvoices(customerId, billingSetup, issueYear, issueMonth);
- * }
- * </code>
- * </pre>
- *
- * <p>Note: close() needs to be called on the invoiceServiceClient object to clean up resources such
+ * <p>Note: close() needs to be called on the InvoiceServiceClient object to clean up resources such
  * as threads. In the example above, try-with-resources is used, which automatically calls close().
  *
  * <p>The surface of this class includes several types of Java methods for each of the API's
@@ -72,30 +61,26 @@ import javax.annotation.Generated;
  *
  * <p>To customize credentials:
  *
- * <pre>
- * <code>
+ * <pre>{@code
  * InvoiceServiceSettings invoiceServiceSettings =
  *     InvoiceServiceSettings.newBuilder()
  *         .setCredentialsProvider(FixedCredentialsProvider.create(myCredentials))
  *         .build();
- * InvoiceServiceClient invoiceServiceClient =
- *     InvoiceServiceClient.create(invoiceServiceSettings);
- * </code>
- * </pre>
+ * InvoiceServiceClient invoiceServiceClient = InvoiceServiceClient.create(invoiceServiceSettings);
+ * }</pre>
  *
- * To customize the endpoint:
+ * <p>To customize the endpoint:
  *
- * <pre>
- * <code>
+ * <pre>{@code
  * InvoiceServiceSettings invoiceServiceSettings =
  *     InvoiceServiceSettings.newBuilder().setEndpoint(myEndpoint).build();
- * InvoiceServiceClient invoiceServiceClient =
- *     InvoiceServiceClient.create(invoiceServiceSettings);
- * </code>
- * </pre>
+ * InvoiceServiceClient invoiceServiceClient = InvoiceServiceClient.create(invoiceServiceSettings);
+ * }</pre>
+ *
+ * <p>Please refer to the GitHub repository's samples for more quickstart code snippets.
  */
-@Generated("by gapic-generator")
 @BetaApi
+@Generated("by gapic-generator")
 public class InvoiceServiceClient implements BackgroundResource {
   private final InvoiceServiceSettings settings;
   private final InvoiceServiceStub stub;
@@ -116,7 +101,7 @@ public class InvoiceServiceClient implements BackgroundResource {
 
   /**
    * Constructs an instance of InvoiceServiceClient, using the given stub for making calls. This is
-   * for advanced usage - prefer to use InvoiceServiceSettings}.
+   * for advanced usage - prefer using create(InvoiceServiceSettings).
    */
   @BetaApi("A restructuring of stub classes is planned, so this may break in the future")
   public static final InvoiceServiceClient create(InvoiceServiceStub stub) {
@@ -148,28 +133,16 @@ public class InvoiceServiceClient implements BackgroundResource {
     return stub;
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Returns all invoices associated with a billing setup, for a given month.
    *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (InvoiceServiceClient invoiceServiceClient = InvoiceServiceClient.create()) {
-   *   String customerId = "";
-   *   String billingSetup = "";
-   *   String issueYear = "";
-   *   MonthOfYearEnum.MonthOfYear issueMonth = MonthOfYearEnum.MonthOfYear.UNSPECIFIED;
-   *   ListInvoicesResponse response = invoiceServiceClient.listInvoices(customerId, billingSetup, issueYear, issueMonth);
-   * }
-   * </code></pre>
-   *
-   * @param customerId Required. The ID of the customer to fetch invoices for.
-   * @param billingSetup Required. The billing setup resource name of the requested invoices.
+   * @param customer_id Required. The ID of the customer to fetch invoices for.
+   * @param billing_setup Required. The billing setup resource name of the requested invoices.
    *     <p>`customers/{customer_id}/billingSetups/{billing_setup_id}`
-   * @param issueYear Required. The issue year to retrieve invoices, in yyyy format. Only invoices
+   * @param issue_year Required. The issue year to retrieve invoices, in yyyy format. Only invoices
    *     issued in 2019 or later can be retrieved.
-   * @param issueMonth Required. The issue month to retrieve invoices.
+   * @param issue_month Required. The issue month to retrieve invoices.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final ListInvoicesResponse listInvoices(
@@ -187,27 +160,9 @@ public class InvoiceServiceClient implements BackgroundResource {
     return listInvoices(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Returns all invoices associated with a billing setup, for a given month.
-   *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (InvoiceServiceClient invoiceServiceClient = InvoiceServiceClient.create()) {
-   *   String customerId = "";
-   *   String billingSetup = "";
-   *   String issueYear = "";
-   *   MonthOfYearEnum.MonthOfYear issueMonth = MonthOfYearEnum.MonthOfYear.UNSPECIFIED;
-   *   ListInvoicesRequest request = ListInvoicesRequest.newBuilder()
-   *     .setCustomerId(customerId)
-   *     .setBillingSetup(billingSetup)
-   *     .setIssueYear(issueYear)
-   *     .setIssueMonth(issueMonth)
-   *     .build();
-   *   ListInvoicesResponse response = invoiceServiceClient.listInvoices(request);
-   * }
-   * </code></pre>
    *
    * @param request The request object containing all of the parameters for the API call.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
@@ -216,29 +171,11 @@ public class InvoiceServiceClient implements BackgroundResource {
     return listInvoicesCallable().call(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Returns all invoices associated with a billing setup, for a given month.
    *
    * <p>Sample code:
-   *
-   * <pre><code>
-   * try (InvoiceServiceClient invoiceServiceClient = InvoiceServiceClient.create()) {
-   *   String customerId = "";
-   *   String billingSetup = "";
-   *   String issueYear = "";
-   *   MonthOfYearEnum.MonthOfYear issueMonth = MonthOfYearEnum.MonthOfYear.UNSPECIFIED;
-   *   ListInvoicesRequest request = ListInvoicesRequest.newBuilder()
-   *     .setCustomerId(customerId)
-   *     .setBillingSetup(billingSetup)
-   *     .setIssueYear(issueYear)
-   *     .setIssueMonth(issueMonth)
-   *     .build();
-   *   ApiFuture&lt;ListInvoicesResponse&gt; future = invoiceServiceClient.listInvoicesCallable().futureCall(request);
-   *   // Do something
-   *   ListInvoicesResponse response = future.get();
-   * }
-   * </code></pre>
    */
   public final UnaryCallable<ListInvoicesRequest, ListInvoicesResponse> listInvoicesCallable() {
     return stub.listInvoicesCallable();

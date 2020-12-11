@@ -5,7 +5,7 @@
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
- *     https://www.apache.org/licenses/LICENSE-2.0
+ *      https://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -13,6 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
 package com.google.ads.googleads.v6.services;
 
 import com.google.ads.googleads.v6.services.stub.KeywordPlanIdeaServiceStub;
@@ -33,27 +34,14 @@ import java.util.List;
 import java.util.concurrent.TimeUnit;
 import javax.annotation.Generated;
 
-// AUTO-GENERATED DOCUMENTATION AND SERVICE
+// AUTO-GENERATED DOCUMENTATION AND CLASS.
 /**
  * Service Description: Service to generate keyword ideas.
  *
  * <p>This class provides the ability to make remote calls to the backing service through method
  * calls that map to API methods. Sample code to get started:
  *
- * <pre>
- * <code>
- * try (KeywordPlanIdeaServiceClient keywordPlanIdeaServiceClient = KeywordPlanIdeaServiceClient.create()) {
- *   GenerateKeywordIdeasRequest request = GenerateKeywordIdeasRequest.newBuilder().build();
- *   ApiFuture&lt;GenerateKeywordIdeasPagedResponse&gt; future = keywordPlanIdeaServiceClient.generateKeywordIdeasPagedCallable().futureCall(request);
- *   // Do something
- *   for (GenerateKeywordIdeaResult element : future.get().iterateAll()) {
- *     // doThingsWith(element);
- *   }
- * }
- * </code>
- * </pre>
- *
- * <p>Note: close() needs to be called on the keywordPlanIdeaServiceClient object to clean up
+ * <p>Note: close() needs to be called on the KeywordPlanIdeaServiceClient object to clean up
  * resources such as threads. In the example above, try-with-resources is used, which automatically
  * calls close().
  *
@@ -82,30 +70,28 @@ import javax.annotation.Generated;
  *
  * <p>To customize credentials:
  *
- * <pre>
- * <code>
+ * <pre>{@code
  * KeywordPlanIdeaServiceSettings keywordPlanIdeaServiceSettings =
  *     KeywordPlanIdeaServiceSettings.newBuilder()
  *         .setCredentialsProvider(FixedCredentialsProvider.create(myCredentials))
  *         .build();
  * KeywordPlanIdeaServiceClient keywordPlanIdeaServiceClient =
  *     KeywordPlanIdeaServiceClient.create(keywordPlanIdeaServiceSettings);
- * </code>
- * </pre>
+ * }</pre>
  *
- * To customize the endpoint:
+ * <p>To customize the endpoint:
  *
- * <pre>
- * <code>
+ * <pre>{@code
  * KeywordPlanIdeaServiceSettings keywordPlanIdeaServiceSettings =
  *     KeywordPlanIdeaServiceSettings.newBuilder().setEndpoint(myEndpoint).build();
  * KeywordPlanIdeaServiceClient keywordPlanIdeaServiceClient =
  *     KeywordPlanIdeaServiceClient.create(keywordPlanIdeaServiceSettings);
- * </code>
- * </pre>
+ * }</pre>
+ *
+ * <p>Please refer to the GitHub repository's samples for more quickstart code snippets.
  */
-@Generated("by gapic-generator")
 @BetaApi
+@Generated("by gapic-generator")
 public class KeywordPlanIdeaServiceClient implements BackgroundResource {
   private final KeywordPlanIdeaServiceSettings settings;
   private final KeywordPlanIdeaServiceStub stub;
@@ -126,7 +112,7 @@ public class KeywordPlanIdeaServiceClient implements BackgroundResource {
 
   /**
    * Constructs an instance of KeywordPlanIdeaServiceClient, using the given stub for making calls.
-   * This is for advanced usage - prefer to use KeywordPlanIdeaServiceSettings}.
+   * This is for advanced usage - prefer using create(KeywordPlanIdeaServiceSettings).
    */
   @BetaApi("A restructuring of stub classes is planned, so this may break in the future")
   public static final KeywordPlanIdeaServiceClient create(KeywordPlanIdeaServiceStub stub) {
@@ -159,20 +145,9 @@ public class KeywordPlanIdeaServiceClient implements BackgroundResource {
     return stub;
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Returns a list of keyword ideas.
-   *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (KeywordPlanIdeaServiceClient keywordPlanIdeaServiceClient = KeywordPlanIdeaServiceClient.create()) {
-   *   GenerateKeywordIdeasRequest request = GenerateKeywordIdeasRequest.newBuilder().build();
-   *   for (GenerateKeywordIdeaResult element : keywordPlanIdeaServiceClient.generateKeywordIdeas(request).iterateAll()) {
-   *     // doThingsWith(element);
-   *   }
-   * }
-   * </code></pre>
    *
    * @param request The request object containing all of the parameters for the API call.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
@@ -182,51 +157,22 @@ public class KeywordPlanIdeaServiceClient implements BackgroundResource {
     return generateKeywordIdeasPagedCallable().call(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Returns a list of keyword ideas.
    *
    * <p>Sample code:
-   *
-   * <pre><code>
-   * try (KeywordPlanIdeaServiceClient keywordPlanIdeaServiceClient = KeywordPlanIdeaServiceClient.create()) {
-   *   GenerateKeywordIdeasRequest request = GenerateKeywordIdeasRequest.newBuilder().build();
-   *   ApiFuture&lt;GenerateKeywordIdeasPagedResponse&gt; future = keywordPlanIdeaServiceClient.generateKeywordIdeasPagedCallable().futureCall(request);
-   *   // Do something
-   *   for (GenerateKeywordIdeaResult element : future.get().iterateAll()) {
-   *     // doThingsWith(element);
-   *   }
-   * }
-   * </code></pre>
    */
   public final UnaryCallable<GenerateKeywordIdeasRequest, GenerateKeywordIdeasPagedResponse>
       generateKeywordIdeasPagedCallable() {
     return stub.generateKeywordIdeasPagedCallable();
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Returns a list of keyword ideas.
    *
    * <p>Sample code:
-   *
-   * <pre><code>
-   * try (KeywordPlanIdeaServiceClient keywordPlanIdeaServiceClient = KeywordPlanIdeaServiceClient.create()) {
-   *   GenerateKeywordIdeasRequest request = GenerateKeywordIdeasRequest.newBuilder().build();
-   *   while (true) {
-   *     GenerateKeywordIdeaResponse response = keywordPlanIdeaServiceClient.generateKeywordIdeasCallable().call(request);
-   *     for (GenerateKeywordIdeaResult element : response.getResultsList()) {
-   *       // doThingsWith(element);
-   *     }
-   *     String nextPageToken = response.getNextPageToken();
-   *     if (!Strings.isNullOrEmpty(nextPageToken)) {
-   *       request = request.toBuilder().setPageToken(nextPageToken).build();
-   *     } else {
-   *       break;
-   *     }
-   *   }
-   * }
-   * </code></pre>
    */
   public final UnaryCallable<GenerateKeywordIdeasRequest, GenerateKeywordIdeaResponse>
       generateKeywordIdeasCallable() {

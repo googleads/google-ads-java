@@ -5,7 +5,7 @@
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
- *     https://www.apache.org/licenses/LICENSE-2.0
+ *      https://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -13,9 +13,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
 package com.google.ads.googleads.v6.services;
 
 import com.google.ads.googleads.v6.resources.AdGroupAdLabel;
+import com.google.ads.googleads.v6.resources.AdGroupAdLabelName;
 import com.google.ads.googleads.v6.services.stub.AdGroupAdLabelServiceStub;
 import com.google.ads.googleads.v6.services.stub.AdGroupAdLabelServiceStubSettings;
 import com.google.api.core.BetaApi;
@@ -26,23 +28,14 @@ import java.util.List;
 import java.util.concurrent.TimeUnit;
 import javax.annotation.Generated;
 
-// AUTO-GENERATED DOCUMENTATION AND SERVICE
+// AUTO-GENERATED DOCUMENTATION AND CLASS.
 /**
  * Service Description: Service to manage labels on ad group ads.
  *
  * <p>This class provides the ability to make remote calls to the backing service through method
  * calls that map to API methods. Sample code to get started:
  *
- * <pre>
- * <code>
- * try (AdGroupAdLabelServiceClient adGroupAdLabelServiceClient = AdGroupAdLabelServiceClient.create()) {
- *   AdGroupAdLabelName resourceName = AdGroupAdLabelName.of("[CUSTOMER_ID]", "[AD_GROUP_ID]", "[AD_ID]", "[LABEL_ID]");
- *   AdGroupAdLabel response = adGroupAdLabelServiceClient.getAdGroupAdLabel(resourceName);
- * }
- * </code>
- * </pre>
- *
- * <p>Note: close() needs to be called on the adGroupAdLabelServiceClient object to clean up
+ * <p>Note: close() needs to be called on the AdGroupAdLabelServiceClient object to clean up
  * resources such as threads. In the example above, try-with-resources is used, which automatically
  * calls close().
  *
@@ -71,30 +64,28 @@ import javax.annotation.Generated;
  *
  * <p>To customize credentials:
  *
- * <pre>
- * <code>
+ * <pre>{@code
  * AdGroupAdLabelServiceSettings adGroupAdLabelServiceSettings =
  *     AdGroupAdLabelServiceSettings.newBuilder()
  *         .setCredentialsProvider(FixedCredentialsProvider.create(myCredentials))
  *         .build();
  * AdGroupAdLabelServiceClient adGroupAdLabelServiceClient =
  *     AdGroupAdLabelServiceClient.create(adGroupAdLabelServiceSettings);
- * </code>
- * </pre>
+ * }</pre>
  *
- * To customize the endpoint:
+ * <p>To customize the endpoint:
  *
- * <pre>
- * <code>
+ * <pre>{@code
  * AdGroupAdLabelServiceSettings adGroupAdLabelServiceSettings =
  *     AdGroupAdLabelServiceSettings.newBuilder().setEndpoint(myEndpoint).build();
  * AdGroupAdLabelServiceClient adGroupAdLabelServiceClient =
  *     AdGroupAdLabelServiceClient.create(adGroupAdLabelServiceSettings);
- * </code>
- * </pre>
+ * }</pre>
+ *
+ * <p>Please refer to the GitHub repository's samples for more quickstart code snippets.
  */
-@Generated("by gapic-generator")
 @BetaApi
+@Generated("by gapic-generator")
 public class AdGroupAdLabelServiceClient implements BackgroundResource {
   private final AdGroupAdLabelServiceSettings settings;
   private final AdGroupAdLabelServiceStub stub;
@@ -115,7 +106,7 @@ public class AdGroupAdLabelServiceClient implements BackgroundResource {
 
   /**
    * Constructs an instance of AdGroupAdLabelServiceClient, using the given stub for making calls.
-   * This is for advanced usage - prefer to use AdGroupAdLabelServiceSettings}.
+   * This is for advanced usage - prefer using create(AdGroupAdLabelServiceSettings).
    */
   @BetaApi("A restructuring of stub classes is planned, so this may break in the future")
   public static final AdGroupAdLabelServiceClient create(AdGroupAdLabelServiceStub stub) {
@@ -147,20 +138,11 @@ public class AdGroupAdLabelServiceClient implements BackgroundResource {
     return stub;
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Returns the requested ad group ad label in full detail.
    *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (AdGroupAdLabelServiceClient adGroupAdLabelServiceClient = AdGroupAdLabelServiceClient.create()) {
-   *   AdGroupAdLabelName resourceName = AdGroupAdLabelName.of("[CUSTOMER_ID]", "[AD_GROUP_ID]", "[AD_ID]", "[LABEL_ID]");
-   *   AdGroupAdLabel response = adGroupAdLabelServiceClient.getAdGroupAdLabel(resourceName);
-   * }
-   * </code></pre>
-   *
-   * @param resourceName Required. The resource name of the ad group ad label to fetch.
+   * @param resource_name Required. The resource name of the ad group ad label to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final AdGroupAdLabel getAdGroupAdLabel(AdGroupAdLabelName resourceName) {
@@ -171,20 +153,11 @@ public class AdGroupAdLabelServiceClient implements BackgroundResource {
     return getAdGroupAdLabel(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Returns the requested ad group ad label in full detail.
    *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (AdGroupAdLabelServiceClient adGroupAdLabelServiceClient = AdGroupAdLabelServiceClient.create()) {
-   *   AdGroupAdLabelName resourceName = AdGroupAdLabelName.of("[CUSTOMER_ID]", "[AD_GROUP_ID]", "[AD_ID]", "[LABEL_ID]");
-   *   AdGroupAdLabel response = adGroupAdLabelServiceClient.getAdGroupAdLabel(resourceName.toString());
-   * }
-   * </code></pre>
-   *
-   * @param resourceName Required. The resource name of the ad group ad label to fetch.
+   * @param resource_name Required. The resource name of the ad group ad label to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final AdGroupAdLabel getAdGroupAdLabel(String resourceName) {
@@ -193,21 +166,9 @@ public class AdGroupAdLabelServiceClient implements BackgroundResource {
     return getAdGroupAdLabel(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Returns the requested ad group ad label in full detail.
-   *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (AdGroupAdLabelServiceClient adGroupAdLabelServiceClient = AdGroupAdLabelServiceClient.create()) {
-   *   AdGroupAdLabelName resourceName = AdGroupAdLabelName.of("[CUSTOMER_ID]", "[AD_GROUP_ID]", "[AD_ID]", "[LABEL_ID]");
-   *   GetAdGroupAdLabelRequest request = GetAdGroupAdLabelRequest.newBuilder()
-   *     .setResourceName(resourceName.toString())
-   *     .build();
-   *   AdGroupAdLabel response = adGroupAdLabelServiceClient.getAdGroupAdLabel(request);
-   * }
-   * </code></pre>
    *
    * @param request The request object containing all of the parameters for the API call.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
@@ -216,43 +177,21 @@ public class AdGroupAdLabelServiceClient implements BackgroundResource {
     return getAdGroupAdLabelCallable().call(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Returns the requested ad group ad label in full detail.
    *
    * <p>Sample code:
-   *
-   * <pre><code>
-   * try (AdGroupAdLabelServiceClient adGroupAdLabelServiceClient = AdGroupAdLabelServiceClient.create()) {
-   *   AdGroupAdLabelName resourceName = AdGroupAdLabelName.of("[CUSTOMER_ID]", "[AD_GROUP_ID]", "[AD_ID]", "[LABEL_ID]");
-   *   GetAdGroupAdLabelRequest request = GetAdGroupAdLabelRequest.newBuilder()
-   *     .setResourceName(resourceName.toString())
-   *     .build();
-   *   ApiFuture&lt;AdGroupAdLabel&gt; future = adGroupAdLabelServiceClient.getAdGroupAdLabelCallable().futureCall(request);
-   *   // Do something
-   *   AdGroupAdLabel response = future.get();
-   * }
-   * </code></pre>
    */
   public final UnaryCallable<GetAdGroupAdLabelRequest, AdGroupAdLabel> getAdGroupAdLabelCallable() {
     return stub.getAdGroupAdLabelCallable();
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Creates and removes ad group ad labels. Operation statuses are returned.
    *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (AdGroupAdLabelServiceClient adGroupAdLabelServiceClient = AdGroupAdLabelServiceClient.create()) {
-   *   String customerId = "";
-   *   List&lt;AdGroupAdLabelOperation&gt; operations = new ArrayList&lt;&gt;();
-   *   MutateAdGroupAdLabelsResponse response = adGroupAdLabelServiceClient.mutateAdGroupAdLabels(customerId, operations);
-   * }
-   * </code></pre>
-   *
-   * @param customerId Required. ID of the customer whose ad group ad labels are being modified.
+   * @param customer_id Required. ID of the customer whose ad group ad labels are being modified.
    * @param operations Required. The list of operations to perform on ad group ad labels.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
@@ -266,23 +205,9 @@ public class AdGroupAdLabelServiceClient implements BackgroundResource {
     return mutateAdGroupAdLabels(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Creates and removes ad group ad labels. Operation statuses are returned.
-   *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (AdGroupAdLabelServiceClient adGroupAdLabelServiceClient = AdGroupAdLabelServiceClient.create()) {
-   *   String customerId = "";
-   *   List&lt;AdGroupAdLabelOperation&gt; operations = new ArrayList&lt;&gt;();
-   *   MutateAdGroupAdLabelsRequest request = MutateAdGroupAdLabelsRequest.newBuilder()
-   *     .setCustomerId(customerId)
-   *     .addAllOperations(operations)
-   *     .build();
-   *   MutateAdGroupAdLabelsResponse response = adGroupAdLabelServiceClient.mutateAdGroupAdLabels(request);
-   * }
-   * </code></pre>
    *
    * @param request The request object containing all of the parameters for the API call.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
@@ -292,25 +217,11 @@ public class AdGroupAdLabelServiceClient implements BackgroundResource {
     return mutateAdGroupAdLabelsCallable().call(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Creates and removes ad group ad labels. Operation statuses are returned.
    *
    * <p>Sample code:
-   *
-   * <pre><code>
-   * try (AdGroupAdLabelServiceClient adGroupAdLabelServiceClient = AdGroupAdLabelServiceClient.create()) {
-   *   String customerId = "";
-   *   List&lt;AdGroupAdLabelOperation&gt; operations = new ArrayList&lt;&gt;();
-   *   MutateAdGroupAdLabelsRequest request = MutateAdGroupAdLabelsRequest.newBuilder()
-   *     .setCustomerId(customerId)
-   *     .addAllOperations(operations)
-   *     .build();
-   *   ApiFuture&lt;MutateAdGroupAdLabelsResponse&gt; future = adGroupAdLabelServiceClient.mutateAdGroupAdLabelsCallable().futureCall(request);
-   *   // Do something
-   *   MutateAdGroupAdLabelsResponse response = future.get();
-   * }
-   * </code></pre>
    */
   public final UnaryCallable<MutateAdGroupAdLabelsRequest, MutateAdGroupAdLabelsResponse>
       mutateAdGroupAdLabelsCallable() {

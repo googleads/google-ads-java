@@ -4,21 +4,24 @@
 package com.google.ads.googleads.v6.common;
 
 /**
+ *
+ *
  * <pre>
  * Attribute of the store sales transaction.
  * </pre>
  *
  * Protobuf type {@code google.ads.googleads.v6.common.TransactionAttribute}
  */
-public final class TransactionAttribute extends
-    com.google.protobuf.GeneratedMessageV3 implements
+public final class TransactionAttribute extends com.google.protobuf.GeneratedMessageV3
+    implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v6.common.TransactionAttribute)
     TransactionAttributeOrBuilder {
-private static final long serialVersionUID = 0L;
+  private static final long serialVersionUID = 0L;
   // Use TransactionAttribute.newBuilder() to construct.
   private TransactionAttribute(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
+
   private TransactionAttribute() {
     transactionDateTime_ = "";
     currencyCode_ = "";
@@ -29,16 +32,15 @@ private static final long serialVersionUID = 0L;
 
   @java.lang.Override
   @SuppressWarnings({"unused"})
-  protected java.lang.Object newInstance(
-      UnusedPrivateParameter unused) {
+  protected java.lang.Object newInstance(UnusedPrivateParameter unused) {
     return new TransactionAttribute();
   }
 
   @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
+  public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
     return this.unknownFields;
   }
+
   private TransactionAttribute(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -58,97 +60,114 @@ private static final long serialVersionUID = 0L;
           case 0:
             done = true;
             break;
-          case 50: {
-            com.google.ads.googleads.v6.common.StoreAttribute.Builder subBuilder = null;
-            if (storeAttribute_ != null) {
-              subBuilder = storeAttribute_.toBuilder();
-            }
-            storeAttribute_ = input.readMessage(com.google.ads.googleads.v6.common.StoreAttribute.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(storeAttribute_);
-              storeAttribute_ = subBuilder.buildPartial();
-            }
+          case 50:
+            {
+              com.google.ads.googleads.v6.common.StoreAttribute.Builder subBuilder = null;
+              if (storeAttribute_ != null) {
+                subBuilder = storeAttribute_.toBuilder();
+              }
+              storeAttribute_ =
+                  input.readMessage(
+                      com.google.ads.googleads.v6.common.StoreAttribute.parser(),
+                      extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(storeAttribute_);
+                storeAttribute_ = subBuilder.buildPartial();
+              }
 
-            break;
-          }
-          case 66: {
-            java.lang.String s = input.readStringRequireUtf8();
-            bitField0_ |= 0x00000001;
-            transactionDateTime_ = s;
-            break;
-          }
-          case 73: {
-            bitField0_ |= 0x00000002;
-            transactionAmountMicros_ = input.readDouble();
-            break;
-          }
-          case 82: {
-            java.lang.String s = input.readStringRequireUtf8();
-            bitField0_ |= 0x00000004;
-            currencyCode_ = s;
-            break;
-          }
-          case 90: {
-            java.lang.String s = input.readStringRequireUtf8();
-            bitField0_ |= 0x00000008;
-            conversionAction_ = s;
-            break;
-          }
-          case 98: {
-            java.lang.String s = input.readStringRequireUtf8();
-            bitField0_ |= 0x00000010;
-            orderId_ = s;
-            break;
-          }
-          case 106: {
-            java.lang.String s = input.readStringRequireUtf8();
-            bitField0_ |= 0x00000020;
-            customValue_ = s;
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
+              break;
             }
-            break;
-          }
+          case 66:
+            {
+              java.lang.String s = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000001;
+              transactionDateTime_ = s;
+              break;
+            }
+          case 73:
+            {
+              bitField0_ |= 0x00000002;
+              transactionAmountMicros_ = input.readDouble();
+              break;
+            }
+          case 82:
+            {
+              java.lang.String s = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000004;
+              currencyCode_ = s;
+              break;
+            }
+          case 90:
+            {
+              java.lang.String s = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000008;
+              conversionAction_ = s;
+              break;
+            }
+          case 98:
+            {
+              java.lang.String s = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000010;
+              orderId_ = s;
+              break;
+            }
+          case 106:
+            {
+              java.lang.String s = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000020;
+              customValue_ = s;
+              break;
+            }
+          default:
+            {
+              if (!parseUnknownField(input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
         }
       }
     } catch (com.google.protobuf.InvalidProtocolBufferException e) {
       throw e.setUnfinishedMessage(this);
     } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
+      throw new com.google.protobuf.InvalidProtocolBufferException(e).setUnfinishedMessage(this);
     } finally {
       this.unknownFields = unknownFields.build();
       makeExtensionsImmutable();
     }
   }
-  public static final com.google.protobuf.Descriptors.Descriptor
-      getDescriptor() {
-    return com.google.ads.googleads.v6.common.OfflineUserDataProto.internal_static_google_ads_googleads_v6_common_TransactionAttribute_descriptor;
+
+  public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+    return com.google.ads.googleads.v6.common.OfflineUserDataProto
+        .internal_static_google_ads_googleads_v6_common_TransactionAttribute_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.google.ads.googleads.v6.common.OfflineUserDataProto.internal_static_google_ads_googleads_v6_common_TransactionAttribute_fieldAccessorTable
+    return com.google.ads.googleads.v6.common.OfflineUserDataProto
+        .internal_static_google_ads_googleads_v6_common_TransactionAttribute_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.google.ads.googleads.v6.common.TransactionAttribute.class, com.google.ads.googleads.v6.common.TransactionAttribute.Builder.class);
+            com.google.ads.googleads.v6.common.TransactionAttribute.class,
+            com.google.ads.googleads.v6.common.TransactionAttribute.Builder.class);
   }
 
   private int bitField0_;
   public static final int TRANSACTION_DATE_TIME_FIELD_NUMBER = 8;
   private volatile java.lang.Object transactionDateTime_;
   /**
+   *
+   *
    * <pre>
    * Timestamp when transaction occurred. Required.
-   * The format is "YYYY-MM-DD HH:MM:SS".
-   * Examples: "2018-03-05 09:15:00" or "2018-02-01 14:34:30"
+   * The format is "YYYY-MM-DD HH:MM:SS[+/-HH:MM]", where [+/-HH:MM] is an
+   * optional timezone offset from UTC. If the offset is absent, the API will
+   * use the account's timezone as default.
+   * Examples: "2018-03-05 09:15:00" or "2018-02-01 14:34:30+03:00"
    * </pre>
    *
    * <code>string transaction_date_time = 8;</code>
+   *
    * @return Whether the transactionDateTime field is set.
    */
   @java.lang.Override
@@ -156,13 +175,18 @@ private static final long serialVersionUID = 0L;
     return ((bitField0_ & 0x00000001) != 0);
   }
   /**
+   *
+   *
    * <pre>
    * Timestamp when transaction occurred. Required.
-   * The format is "YYYY-MM-DD HH:MM:SS".
-   * Examples: "2018-03-05 09:15:00" or "2018-02-01 14:34:30"
+   * The format is "YYYY-MM-DD HH:MM:SS[+/-HH:MM]", where [+/-HH:MM] is an
+   * optional timezone offset from UTC. If the offset is absent, the API will
+   * use the account's timezone as default.
+   * Examples: "2018-03-05 09:15:00" or "2018-02-01 14:34:30+03:00"
    * </pre>
    *
    * <code>string transaction_date_time = 8;</code>
+   *
    * @return The transactionDateTime.
    */
   @java.lang.Override
@@ -171,31 +195,33 @@ private static final long serialVersionUID = 0L;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
     } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
+      com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
       transactionDateTime_ = s;
       return s;
     }
   }
   /**
+   *
+   *
    * <pre>
    * Timestamp when transaction occurred. Required.
-   * The format is "YYYY-MM-DD HH:MM:SS".
-   * Examples: "2018-03-05 09:15:00" or "2018-02-01 14:34:30"
+   * The format is "YYYY-MM-DD HH:MM:SS[+/-HH:MM]", where [+/-HH:MM] is an
+   * optional timezone offset from UTC. If the offset is absent, the API will
+   * use the account's timezone as default.
+   * Examples: "2018-03-05 09:15:00" or "2018-02-01 14:34:30+03:00"
    * </pre>
    *
    * <code>string transaction_date_time = 8;</code>
+   *
    * @return The bytes for transactionDateTime.
    */
   @java.lang.Override
-  public com.google.protobuf.ByteString
-      getTransactionDateTimeBytes() {
+  public com.google.protobuf.ByteString getTransactionDateTimeBytes() {
     java.lang.Object ref = transactionDateTime_;
     if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
+      com.google.protobuf.ByteString b =
+          com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
       transactionDateTime_ = b;
       return b;
     } else {
@@ -206,11 +232,14 @@ private static final long serialVersionUID = 0L;
   public static final int TRANSACTION_AMOUNT_MICROS_FIELD_NUMBER = 9;
   private double transactionAmountMicros_;
   /**
+   *
+   *
    * <pre>
    * Transaction amount in micros. Required.
    * </pre>
    *
    * <code>double transaction_amount_micros = 9;</code>
+   *
    * @return Whether the transactionAmountMicros field is set.
    */
   @java.lang.Override
@@ -218,11 +247,14 @@ private static final long serialVersionUID = 0L;
     return ((bitField0_ & 0x00000002) != 0);
   }
   /**
+   *
+   *
    * <pre>
    * Transaction amount in micros. Required.
    * </pre>
    *
    * <code>double transaction_amount_micros = 9;</code>
+   *
    * @return The transactionAmountMicros.
    */
   @java.lang.Override
@@ -233,11 +265,14 @@ private static final long serialVersionUID = 0L;
   public static final int CURRENCY_CODE_FIELD_NUMBER = 10;
   private volatile java.lang.Object currencyCode_;
   /**
+   *
+   *
    * <pre>
    * Transaction currency code. ISO 4217 three-letter code is used. Required.
    * </pre>
    *
    * <code>string currency_code = 10;</code>
+   *
    * @return Whether the currencyCode field is set.
    */
   @java.lang.Override
@@ -245,11 +280,14 @@ private static final long serialVersionUID = 0L;
     return ((bitField0_ & 0x00000004) != 0);
   }
   /**
+   *
+   *
    * <pre>
    * Transaction currency code. ISO 4217 three-letter code is used. Required.
    * </pre>
    *
    * <code>string currency_code = 10;</code>
+   *
    * @return The currencyCode.
    */
   @java.lang.Override
@@ -258,29 +296,29 @@ private static final long serialVersionUID = 0L;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
     } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
+      com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
       currencyCode_ = s;
       return s;
     }
   }
   /**
+   *
+   *
    * <pre>
    * Transaction currency code. ISO 4217 three-letter code is used. Required.
    * </pre>
    *
    * <code>string currency_code = 10;</code>
+   *
    * @return The bytes for currencyCode.
    */
   @java.lang.Override
-  public com.google.protobuf.ByteString
-      getCurrencyCodeBytes() {
+  public com.google.protobuf.ByteString getCurrencyCodeBytes() {
     java.lang.Object ref = currencyCode_;
     if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
+      com.google.protobuf.ByteString b =
+          com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
       currencyCode_ = b;
       return b;
     } else {
@@ -291,12 +329,15 @@ private static final long serialVersionUID = 0L;
   public static final int CONVERSION_ACTION_FIELD_NUMBER = 11;
   private volatile java.lang.Object conversionAction_;
   /**
+   *
+   *
    * <pre>
    * The resource name of conversion action to report conversions to.
    * Required.
    * </pre>
    *
    * <code>string conversion_action = 11;</code>
+   *
    * @return Whether the conversionAction field is set.
    */
   @java.lang.Override
@@ -304,12 +345,15 @@ private static final long serialVersionUID = 0L;
     return ((bitField0_ & 0x00000008) != 0);
   }
   /**
+   *
+   *
    * <pre>
    * The resource name of conversion action to report conversions to.
    * Required.
    * </pre>
    *
    * <code>string conversion_action = 11;</code>
+   *
    * @return The conversionAction.
    */
   @java.lang.Override
@@ -318,30 +362,30 @@ private static final long serialVersionUID = 0L;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
     } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
+      com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
       conversionAction_ = s;
       return s;
     }
   }
   /**
+   *
+   *
    * <pre>
    * The resource name of conversion action to report conversions to.
    * Required.
    * </pre>
    *
    * <code>string conversion_action = 11;</code>
+   *
    * @return The bytes for conversionAction.
    */
   @java.lang.Override
-  public com.google.protobuf.ByteString
-      getConversionActionBytes() {
+  public com.google.protobuf.ByteString getConversionActionBytes() {
     java.lang.Object ref = conversionAction_;
     if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
+      com.google.protobuf.ByteString b =
+          com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
       conversionAction_ = b;
       return b;
     } else {
@@ -352,12 +396,15 @@ private static final long serialVersionUID = 0L;
   public static final int ORDER_ID_FIELD_NUMBER = 12;
   private volatile java.lang.Object orderId_;
   /**
+   *
+   *
    * <pre>
    * Transaction order id.
    * Accessible only to customers on the allow-list.
    * </pre>
    *
    * <code>string order_id = 12;</code>
+   *
    * @return Whether the orderId field is set.
    */
   @java.lang.Override
@@ -365,12 +412,15 @@ private static final long serialVersionUID = 0L;
     return ((bitField0_ & 0x00000010) != 0);
   }
   /**
+   *
+   *
    * <pre>
    * Transaction order id.
    * Accessible only to customers on the allow-list.
    * </pre>
    *
    * <code>string order_id = 12;</code>
+   *
    * @return The orderId.
    */
   @java.lang.Override
@@ -379,30 +429,30 @@ private static final long serialVersionUID = 0L;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
     } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
+      com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
       orderId_ = s;
       return s;
     }
   }
   /**
+   *
+   *
    * <pre>
    * Transaction order id.
    * Accessible only to customers on the allow-list.
    * </pre>
    *
    * <code>string order_id = 12;</code>
+   *
    * @return The bytes for orderId.
    */
   @java.lang.Override
-  public com.google.protobuf.ByteString
-      getOrderIdBytes() {
+  public com.google.protobuf.ByteString getOrderIdBytes() {
     java.lang.Object ref = orderId_;
     if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
+      com.google.protobuf.ByteString b =
+          com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
       orderId_ = b;
       return b;
     } else {
@@ -413,12 +463,15 @@ private static final long serialVersionUID = 0L;
   public static final int STORE_ATTRIBUTE_FIELD_NUMBER = 6;
   private com.google.ads.googleads.v6.common.StoreAttribute storeAttribute_;
   /**
+   *
+   *
    * <pre>
    * Store attributes of the transaction.
    * Accessible only to customers on the allow-list.
    * </pre>
    *
    * <code>.google.ads.googleads.v6.common.StoreAttribute store_attribute = 6;</code>
+   *
    * @return Whether the storeAttribute field is set.
    */
   @java.lang.Override
@@ -426,19 +479,26 @@ private static final long serialVersionUID = 0L;
     return storeAttribute_ != null;
   }
   /**
+   *
+   *
    * <pre>
    * Store attributes of the transaction.
    * Accessible only to customers on the allow-list.
    * </pre>
    *
    * <code>.google.ads.googleads.v6.common.StoreAttribute store_attribute = 6;</code>
+   *
    * @return The storeAttribute.
    */
   @java.lang.Override
   public com.google.ads.googleads.v6.common.StoreAttribute getStoreAttribute() {
-    return storeAttribute_ == null ? com.google.ads.googleads.v6.common.StoreAttribute.getDefaultInstance() : storeAttribute_;
+    return storeAttribute_ == null
+        ? com.google.ads.googleads.v6.common.StoreAttribute.getDefaultInstance()
+        : storeAttribute_;
   }
   /**
+   *
+   *
    * <pre>
    * Store attributes of the transaction.
    * Accessible only to customers on the allow-list.
@@ -454,12 +514,15 @@ private static final long serialVersionUID = 0L;
   public static final int CUSTOM_VALUE_FIELD_NUMBER = 13;
   private volatile java.lang.Object customValue_;
   /**
+   *
+   *
    * <pre>
    * Value of the custom variable for each transaction.
    * Accessible only to customers on the allow-list.
    * </pre>
    *
    * <code>string custom_value = 13;</code>
+   *
    * @return Whether the customValue field is set.
    */
   @java.lang.Override
@@ -467,12 +530,15 @@ private static final long serialVersionUID = 0L;
     return ((bitField0_ & 0x00000020) != 0);
   }
   /**
+   *
+   *
    * <pre>
    * Value of the custom variable for each transaction.
    * Accessible only to customers on the allow-list.
    * </pre>
    *
    * <code>string custom_value = 13;</code>
+   *
    * @return The customValue.
    */
   @java.lang.Override
@@ -481,30 +547,30 @@ private static final long serialVersionUID = 0L;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
     } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
+      com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
       customValue_ = s;
       return s;
     }
   }
   /**
+   *
+   *
    * <pre>
    * Value of the custom variable for each transaction.
    * Accessible only to customers on the allow-list.
    * </pre>
    *
    * <code>string custom_value = 13;</code>
+   *
    * @return The bytes for customValue.
    */
   @java.lang.Override
-  public com.google.protobuf.ByteString
-      getCustomValueBytes() {
+  public com.google.protobuf.ByteString getCustomValueBytes() {
     java.lang.Object ref = customValue_;
     if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
+      com.google.protobuf.ByteString b =
+          com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
       customValue_ = b;
       return b;
     } else {
@@ -513,6 +579,7 @@ private static final long serialVersionUID = 0L;
   }
 
   private byte memoizedIsInitialized = -1;
+
   @java.lang.Override
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
@@ -524,8 +591,7 @@ private static final long serialVersionUID = 0L;
   }
 
   @java.lang.Override
-  public void writeTo(com.google.protobuf.CodedOutputStream output)
-                      throws java.io.IOException {
+  public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
     if (storeAttribute_ != null) {
       output.writeMessage(6, getStoreAttribute());
     }
@@ -557,15 +623,13 @@ private static final long serialVersionUID = 0L;
 
     size = 0;
     if (storeAttribute_ != null) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(6, getStoreAttribute());
+      size += com.google.protobuf.CodedOutputStream.computeMessageSize(6, getStoreAttribute());
     }
     if (((bitField0_ & 0x00000001) != 0)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, transactionDateTime_);
     }
     if (((bitField0_ & 0x00000002) != 0)) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeDoubleSize(9, transactionAmountMicros_);
+      size += com.google.protobuf.CodedOutputStream.computeDoubleSize(9, transactionAmountMicros_);
     }
     if (((bitField0_ & 0x00000004) != 0)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(10, currencyCode_);
@@ -587,48 +651,42 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public boolean equals(final java.lang.Object obj) {
     if (obj == this) {
-     return true;
+      return true;
     }
     if (!(obj instanceof com.google.ads.googleads.v6.common.TransactionAttribute)) {
       return super.equals(obj);
     }
-    com.google.ads.googleads.v6.common.TransactionAttribute other = (com.google.ads.googleads.v6.common.TransactionAttribute) obj;
+    com.google.ads.googleads.v6.common.TransactionAttribute other =
+        (com.google.ads.googleads.v6.common.TransactionAttribute) obj;
 
     if (hasTransactionDateTime() != other.hasTransactionDateTime()) return false;
     if (hasTransactionDateTime()) {
-      if (!getTransactionDateTime()
-          .equals(other.getTransactionDateTime())) return false;
+      if (!getTransactionDateTime().equals(other.getTransactionDateTime())) return false;
     }
     if (hasTransactionAmountMicros() != other.hasTransactionAmountMicros()) return false;
     if (hasTransactionAmountMicros()) {
       if (java.lang.Double.doubleToLongBits(getTransactionAmountMicros())
-          != java.lang.Double.doubleToLongBits(
-              other.getTransactionAmountMicros())) return false;
+          != java.lang.Double.doubleToLongBits(other.getTransactionAmountMicros())) return false;
     }
     if (hasCurrencyCode() != other.hasCurrencyCode()) return false;
     if (hasCurrencyCode()) {
-      if (!getCurrencyCode()
-          .equals(other.getCurrencyCode())) return false;
+      if (!getCurrencyCode().equals(other.getCurrencyCode())) return false;
     }
     if (hasConversionAction() != other.hasConversionAction()) return false;
     if (hasConversionAction()) {
-      if (!getConversionAction()
-          .equals(other.getConversionAction())) return false;
+      if (!getConversionAction().equals(other.getConversionAction())) return false;
     }
     if (hasOrderId() != other.hasOrderId()) return false;
     if (hasOrderId()) {
-      if (!getOrderId()
-          .equals(other.getOrderId())) return false;
+      if (!getOrderId().equals(other.getOrderId())) return false;
     }
     if (hasStoreAttribute() != other.hasStoreAttribute()) return false;
     if (hasStoreAttribute()) {
-      if (!getStoreAttribute()
-          .equals(other.getStoreAttribute())) return false;
+      if (!getStoreAttribute().equals(other.getStoreAttribute())) return false;
     }
     if (hasCustomValue() != other.hasCustomValue()) return false;
     if (hasCustomValue()) {
-      if (!getCustomValue()
-          .equals(other.getCustomValue())) return false;
+      if (!getCustomValue().equals(other.getCustomValue())) return false;
     }
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
@@ -647,8 +705,10 @@ private static final long serialVersionUID = 0L;
     }
     if (hasTransactionAmountMicros()) {
       hash = (37 * hash) + TRANSACTION_AMOUNT_MICROS_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          java.lang.Double.doubleToLongBits(getTransactionAmountMicros()));
+      hash =
+          (53 * hash)
+              + com.google.protobuf.Internal.hashLong(
+                  java.lang.Double.doubleToLongBits(getTransactionAmountMicros()));
     }
     if (hasCurrencyCode()) {
       hash = (37 * hash) + CURRENCY_CODE_FIELD_NUMBER;
@@ -676,117 +736,127 @@ private static final long serialVersionUID = 0L;
   }
 
   public static com.google.ads.googleads.v6.common.TransactionAttribute parseFrom(
-      java.nio.ByteBuffer data)
-      throws com.google.protobuf.InvalidProtocolBufferException {
+      java.nio.ByteBuffer data) throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
+
   public static com.google.ads.googleads.v6.common.TransactionAttribute parseFrom(
-      java.nio.ByteBuffer data,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.nio.ByteBuffer data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
+
   public static com.google.ads.googleads.v6.common.TransactionAttribute parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
+
   public static com.google.ads.googleads.v6.common.TransactionAttribute parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
+
   public static com.google.ads.googleads.v6.common.TransactionAttribute parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
+
   public static com.google.ads.googleads.v6.common.TransactionAttribute parseFrom(
-      byte[] data,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      byte[] data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.google.ads.googleads.v6.common.TransactionAttribute parseFrom(java.io.InputStream input)
-      throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3
-        .parseWithIOException(PARSER, input);
-  }
+
   public static com.google.ads.googleads.v6.common.TransactionAttribute parseFrom(
-      java.io.InputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3
-        .parseWithIOException(PARSER, input, extensionRegistry);
+      java.io.InputStream input) throws java.io.IOException {
+    return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
   }
-  public static com.google.ads.googleads.v6.common.TransactionAttribute parseDelimitedFrom(java.io.InputStream input)
+
+  public static com.google.ads.googleads.v6.common.TransactionAttribute parseFrom(
+      java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3
-        .parseDelimitedWithIOException(PARSER, input);
+    return com.google.protobuf.GeneratedMessageV3.parseWithIOException(
+        PARSER, input, extensionRegistry);
   }
+
   public static com.google.ads.googleads.v6.common.TransactionAttribute parseDelimitedFrom(
-      java.io.InputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3
-        .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      java.io.InputStream input) throws java.io.IOException {
+    return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(PARSER, input);
   }
+
+  public static com.google.ads.googleads.v6.common.TransactionAttribute parseDelimitedFrom(
+      java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws java.io.IOException {
+    return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(
+        PARSER, input, extensionRegistry);
+  }
+
   public static com.google.ads.googleads.v6.common.TransactionAttribute parseFrom(
-      com.google.protobuf.CodedInputStream input)
-      throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3
-        .parseWithIOException(PARSER, input);
+      com.google.protobuf.CodedInputStream input) throws java.io.IOException {
+    return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
   }
+
   public static com.google.ads.googleads.v6.common.TransactionAttribute parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3
-        .parseWithIOException(PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessageV3.parseWithIOException(
+        PARSER, input, extensionRegistry);
   }
 
   @java.lang.Override
-  public Builder newBuilderForType() { return newBuilder(); }
+  public Builder newBuilderForType() {
+    return newBuilder();
+  }
+
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(com.google.ads.googleads.v6.common.TransactionAttribute prototype) {
+
+  public static Builder newBuilder(
+      com.google.ads.googleads.v6.common.TransactionAttribute prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-  }
-  @java.lang.Override
-  public Builder toBuilder() {
-    return this == DEFAULT_INSTANCE
-        ? new Builder() : new Builder().mergeFrom(this);
   }
 
   @java.lang.Override
-  protected Builder newBuilderForType(
-      com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+  public Builder toBuilder() {
+    return this == DEFAULT_INSTANCE ? new Builder() : new Builder().mergeFrom(this);
+  }
+
+  @java.lang.Override
+  protected Builder newBuilderForType(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
     Builder builder = new Builder(parent);
     return builder;
   }
   /**
+   *
+   *
    * <pre>
    * Attribute of the store sales transaction.
    * </pre>
    *
    * Protobuf type {@code google.ads.googleads.v6.common.TransactionAttribute}
    */
-  public static final class Builder extends
-      com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+  public static final class Builder extends com.google.protobuf.GeneratedMessageV3.Builder<Builder>
+      implements
       // @@protoc_insertion_point(builder_implements:google.ads.googleads.v6.common.TransactionAttribute)
       com.google.ads.googleads.v6.common.TransactionAttributeOrBuilder {
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.google.ads.googleads.v6.common.OfflineUserDataProto.internal_static_google_ads_googleads_v6_common_TransactionAttribute_descriptor;
+    public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+      return com.google.ads.googleads.v6.common.OfflineUserDataProto
+          .internal_static_google_ads_googleads_v6_common_TransactionAttribute_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.google.ads.googleads.v6.common.OfflineUserDataProto.internal_static_google_ads_googleads_v6_common_TransactionAttribute_fieldAccessorTable
+      return com.google.ads.googleads.v6.common.OfflineUserDataProto
+          .internal_static_google_ads_googleads_v6_common_TransactionAttribute_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.google.ads.googleads.v6.common.TransactionAttribute.class, com.google.ads.googleads.v6.common.TransactionAttribute.Builder.class);
+              com.google.ads.googleads.v6.common.TransactionAttribute.class,
+              com.google.ads.googleads.v6.common.TransactionAttribute.Builder.class);
     }
 
     // Construct using com.google.ads.googleads.v6.common.TransactionAttribute.newBuilder()
@@ -794,16 +864,15 @@ private static final long serialVersionUID = 0L;
       maybeForceBuilderInitialization();
     }
 
-    private Builder(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+    private Builder(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
       maybeForceBuilderInitialization();
     }
+
     private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-      }
+      if (com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders) {}
     }
+
     @java.lang.Override
     public Builder clear() {
       super.clear();
@@ -829,9 +898,9 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Descriptors.Descriptor
-        getDescriptorForType() {
-      return com.google.ads.googleads.v6.common.OfflineUserDataProto.internal_static_google_ads_googleads_v6_common_TransactionAttribute_descriptor;
+    public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
+      return com.google.ads.googleads.v6.common.OfflineUserDataProto
+          .internal_static_google_ads_googleads_v6_common_TransactionAttribute_descriptor;
     }
 
     @java.lang.Override
@@ -850,7 +919,8 @@ private static final long serialVersionUID = 0L;
 
     @java.lang.Override
     public com.google.ads.googleads.v6.common.TransactionAttribute buildPartial() {
-      com.google.ads.googleads.v6.common.TransactionAttribute result = new com.google.ads.googleads.v6.common.TransactionAttribute(this);
+      com.google.ads.googleads.v6.common.TransactionAttribute result =
+          new com.google.ads.googleads.v6.common.TransactionAttribute(this);
       int from_bitField0_ = bitField0_;
       int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000001) != 0)) {
@@ -891,38 +961,39 @@ private static final long serialVersionUID = 0L;
     public Builder clone() {
       return super.clone();
     }
+
     @java.lang.Override
     public Builder setField(
-        com.google.protobuf.Descriptors.FieldDescriptor field,
-        java.lang.Object value) {
+        com.google.protobuf.Descriptors.FieldDescriptor field, java.lang.Object value) {
       return super.setField(field, value);
     }
+
     @java.lang.Override
-    public Builder clearField(
-        com.google.protobuf.Descriptors.FieldDescriptor field) {
+    public Builder clearField(com.google.protobuf.Descriptors.FieldDescriptor field) {
       return super.clearField(field);
     }
+
     @java.lang.Override
-    public Builder clearOneof(
-        com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+    public Builder clearOneof(com.google.protobuf.Descriptors.OneofDescriptor oneof) {
       return super.clearOneof(oneof);
     }
+
     @java.lang.Override
     public Builder setRepeatedField(
-        com.google.protobuf.Descriptors.FieldDescriptor field,
-        int index, java.lang.Object value) {
+        com.google.protobuf.Descriptors.FieldDescriptor field, int index, java.lang.Object value) {
       return super.setRepeatedField(field, index, value);
     }
+
     @java.lang.Override
     public Builder addRepeatedField(
-        com.google.protobuf.Descriptors.FieldDescriptor field,
-        java.lang.Object value) {
+        com.google.protobuf.Descriptors.FieldDescriptor field, java.lang.Object value) {
       return super.addRepeatedField(field, value);
     }
+
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
       if (other instanceof com.google.ads.googleads.v6.common.TransactionAttribute) {
-        return mergeFrom((com.google.ads.googleads.v6.common.TransactionAttribute)other);
+        return mergeFrom((com.google.ads.googleads.v6.common.TransactionAttribute) other);
       } else {
         super.mergeFrom(other);
         return this;
@@ -930,7 +1001,8 @@ private static final long serialVersionUID = 0L;
     }
 
     public Builder mergeFrom(com.google.ads.googleads.v6.common.TransactionAttribute other) {
-      if (other == com.google.ads.googleads.v6.common.TransactionAttribute.getDefaultInstance()) return this;
+      if (other == com.google.ads.googleads.v6.common.TransactionAttribute.getDefaultInstance())
+        return this;
       if (other.hasTransactionDateTime()) {
         bitField0_ |= 0x00000001;
         transactionDateTime_ = other.transactionDateTime_;
@@ -981,7 +1053,8 @@ private static final long serialVersionUID = 0L;
       try {
         parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.google.ads.googleads.v6.common.TransactionAttribute) e.getUnfinishedMessage();
+        parsedMessage =
+            (com.google.ads.googleads.v6.common.TransactionAttribute) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
         if (parsedMessage != null) {
@@ -990,37 +1063,47 @@ private static final long serialVersionUID = 0L;
       }
       return this;
     }
+
     private int bitField0_;
 
     private java.lang.Object transactionDateTime_ = "";
     /**
+     *
+     *
      * <pre>
      * Timestamp when transaction occurred. Required.
-     * The format is "YYYY-MM-DD HH:MM:SS".
-     * Examples: "2018-03-05 09:15:00" or "2018-02-01 14:34:30"
+     * The format is "YYYY-MM-DD HH:MM:SS[+/-HH:MM]", where [+/-HH:MM] is an
+     * optional timezone offset from UTC. If the offset is absent, the API will
+     * use the account's timezone as default.
+     * Examples: "2018-03-05 09:15:00" or "2018-02-01 14:34:30+03:00"
      * </pre>
      *
      * <code>string transaction_date_time = 8;</code>
+     *
      * @return Whether the transactionDateTime field is set.
      */
     public boolean hasTransactionDateTime() {
       return ((bitField0_ & 0x00000001) != 0);
     }
     /**
+     *
+     *
      * <pre>
      * Timestamp when transaction occurred. Required.
-     * The format is "YYYY-MM-DD HH:MM:SS".
-     * Examples: "2018-03-05 09:15:00" or "2018-02-01 14:34:30"
+     * The format is "YYYY-MM-DD HH:MM:SS[+/-HH:MM]", where [+/-HH:MM] is an
+     * optional timezone offset from UTC. If the offset is absent, the API will
+     * use the account's timezone as default.
+     * Examples: "2018-03-05 09:15:00" or "2018-02-01 14:34:30+03:00"
      * </pre>
      *
      * <code>string transaction_date_time = 8;</code>
+     *
      * @return The transactionDateTime.
      */
     public java.lang.String getTransactionDateTime() {
       java.lang.Object ref = transactionDateTime_;
       if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
+        com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         transactionDateTime_ = s;
         return s;
@@ -1029,22 +1112,25 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     *
+     *
      * <pre>
      * Timestamp when transaction occurred. Required.
-     * The format is "YYYY-MM-DD HH:MM:SS".
-     * Examples: "2018-03-05 09:15:00" or "2018-02-01 14:34:30"
+     * The format is "YYYY-MM-DD HH:MM:SS[+/-HH:MM]", where [+/-HH:MM] is an
+     * optional timezone offset from UTC. If the offset is absent, the API will
+     * use the account's timezone as default.
+     * Examples: "2018-03-05 09:15:00" or "2018-02-01 14:34:30+03:00"
      * </pre>
      *
      * <code>string transaction_date_time = 8;</code>
+     *
      * @return The bytes for transactionDateTime.
      */
-    public com.google.protobuf.ByteString
-        getTransactionDateTimeBytes() {
+    public com.google.protobuf.ByteString getTransactionDateTimeBytes() {
       java.lang.Object ref = transactionDateTime_;
       if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+        com.google.protobuf.ByteString b =
+            com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
         transactionDateTime_ = b;
         return b;
       } else {
@@ -1052,34 +1138,43 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     *
+     *
      * <pre>
      * Timestamp when transaction occurred. Required.
-     * The format is "YYYY-MM-DD HH:MM:SS".
-     * Examples: "2018-03-05 09:15:00" or "2018-02-01 14:34:30"
+     * The format is "YYYY-MM-DD HH:MM:SS[+/-HH:MM]", where [+/-HH:MM] is an
+     * optional timezone offset from UTC. If the offset is absent, the API will
+     * use the account's timezone as default.
+     * Examples: "2018-03-05 09:15:00" or "2018-02-01 14:34:30+03:00"
      * </pre>
      *
      * <code>string transaction_date_time = 8;</code>
+     *
      * @param value The transactionDateTime to set.
      * @return This builder for chaining.
      */
-    public Builder setTransactionDateTime(
-        java.lang.String value) {
+    public Builder setTransactionDateTime(java.lang.String value) {
       if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000001;
+        throw new NullPointerException();
+      }
+      bitField0_ |= 0x00000001;
       transactionDateTime_ = value;
       onChanged();
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * Timestamp when transaction occurred. Required.
-     * The format is "YYYY-MM-DD HH:MM:SS".
-     * Examples: "2018-03-05 09:15:00" or "2018-02-01 14:34:30"
+     * The format is "YYYY-MM-DD HH:MM:SS[+/-HH:MM]", where [+/-HH:MM] is an
+     * optional timezone offset from UTC. If the offset is absent, the API will
+     * use the account's timezone as default.
+     * Examples: "2018-03-05 09:15:00" or "2018-02-01 14:34:30+03:00"
      * </pre>
      *
      * <code>string transaction_date_time = 8;</code>
+     *
      * @return This builder for chaining.
      */
     public Builder clearTransactionDateTime() {
@@ -1089,35 +1184,42 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * Timestamp when transaction occurred. Required.
-     * The format is "YYYY-MM-DD HH:MM:SS".
-     * Examples: "2018-03-05 09:15:00" or "2018-02-01 14:34:30"
+     * The format is "YYYY-MM-DD HH:MM:SS[+/-HH:MM]", where [+/-HH:MM] is an
+     * optional timezone offset from UTC. If the offset is absent, the API will
+     * use the account's timezone as default.
+     * Examples: "2018-03-05 09:15:00" or "2018-02-01 14:34:30+03:00"
      * </pre>
      *
      * <code>string transaction_date_time = 8;</code>
+     *
      * @param value The bytes for transactionDateTime to set.
      * @return This builder for chaining.
      */
-    public Builder setTransactionDateTimeBytes(
-        com.google.protobuf.ByteString value) {
+    public Builder setTransactionDateTimeBytes(com.google.protobuf.ByteString value) {
       if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
+        throw new NullPointerException();
+      }
+      checkByteStringIsUtf8(value);
       bitField0_ |= 0x00000001;
       transactionDateTime_ = value;
       onChanged();
       return this;
     }
 
-    private double transactionAmountMicros_ ;
+    private double transactionAmountMicros_;
     /**
+     *
+     *
      * <pre>
      * Transaction amount in micros. Required.
      * </pre>
      *
      * <code>double transaction_amount_micros = 9;</code>
+     *
      * @return Whether the transactionAmountMicros field is set.
      */
     @java.lang.Override
@@ -1125,11 +1227,14 @@ private static final long serialVersionUID = 0L;
       return ((bitField0_ & 0x00000002) != 0);
     }
     /**
+     *
+     *
      * <pre>
      * Transaction amount in micros. Required.
      * </pre>
      *
      * <code>double transaction_amount_micros = 9;</code>
+     *
      * @return The transactionAmountMicros.
      */
     @java.lang.Override
@@ -1137,11 +1242,14 @@ private static final long serialVersionUID = 0L;
       return transactionAmountMicros_;
     }
     /**
+     *
+     *
      * <pre>
      * Transaction amount in micros. Required.
      * </pre>
      *
      * <code>double transaction_amount_micros = 9;</code>
+     *
      * @param value The transactionAmountMicros to set.
      * @return This builder for chaining.
      */
@@ -1152,11 +1260,14 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * Transaction amount in micros. Required.
      * </pre>
      *
      * <code>double transaction_amount_micros = 9;</code>
+     *
      * @return This builder for chaining.
      */
     public Builder clearTransactionAmountMicros() {
@@ -1168,29 +1279,34 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object currencyCode_ = "";
     /**
+     *
+     *
      * <pre>
      * Transaction currency code. ISO 4217 three-letter code is used. Required.
      * </pre>
      *
      * <code>string currency_code = 10;</code>
+     *
      * @return Whether the currencyCode field is set.
      */
     public boolean hasCurrencyCode() {
       return ((bitField0_ & 0x00000004) != 0);
     }
     /**
+     *
+     *
      * <pre>
      * Transaction currency code. ISO 4217 three-letter code is used. Required.
      * </pre>
      *
      * <code>string currency_code = 10;</code>
+     *
      * @return The currencyCode.
      */
     public java.lang.String getCurrencyCode() {
       java.lang.Object ref = currencyCode_;
       if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
+        com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         currencyCode_ = s;
         return s;
@@ -1199,20 +1315,21 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     *
+     *
      * <pre>
      * Transaction currency code. ISO 4217 three-letter code is used. Required.
      * </pre>
      *
      * <code>string currency_code = 10;</code>
+     *
      * @return The bytes for currencyCode.
      */
-    public com.google.protobuf.ByteString
-        getCurrencyCodeBytes() {
+    public com.google.protobuf.ByteString getCurrencyCodeBytes() {
       java.lang.Object ref = currencyCode_;
       if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+        com.google.protobuf.ByteString b =
+            com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
         currencyCode_ = b;
         return b;
       } else {
@@ -1220,30 +1337,35 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     *
+     *
      * <pre>
      * Transaction currency code. ISO 4217 three-letter code is used. Required.
      * </pre>
      *
      * <code>string currency_code = 10;</code>
+     *
      * @param value The currencyCode to set.
      * @return This builder for chaining.
      */
-    public Builder setCurrencyCode(
-        java.lang.String value) {
+    public Builder setCurrencyCode(java.lang.String value) {
       if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000004;
+        throw new NullPointerException();
+      }
+      bitField0_ |= 0x00000004;
       currencyCode_ = value;
       onChanged();
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * Transaction currency code. ISO 4217 three-letter code is used. Required.
      * </pre>
      *
      * <code>string currency_code = 10;</code>
+     *
      * @return This builder for chaining.
      */
     public Builder clearCurrencyCode() {
@@ -1253,20 +1375,22 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * Transaction currency code. ISO 4217 three-letter code is used. Required.
      * </pre>
      *
      * <code>string currency_code = 10;</code>
+     *
      * @param value The bytes for currencyCode to set.
      * @return This builder for chaining.
      */
-    public Builder setCurrencyCodeBytes(
-        com.google.protobuf.ByteString value) {
+    public Builder setCurrencyCodeBytes(com.google.protobuf.ByteString value) {
       if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
+        throw new NullPointerException();
+      }
+      checkByteStringIsUtf8(value);
       bitField0_ |= 0x00000004;
       currencyCode_ = value;
       onChanged();
@@ -1275,31 +1399,36 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object conversionAction_ = "";
     /**
+     *
+     *
      * <pre>
      * The resource name of conversion action to report conversions to.
      * Required.
      * </pre>
      *
      * <code>string conversion_action = 11;</code>
+     *
      * @return Whether the conversionAction field is set.
      */
     public boolean hasConversionAction() {
       return ((bitField0_ & 0x00000008) != 0);
     }
     /**
+     *
+     *
      * <pre>
      * The resource name of conversion action to report conversions to.
      * Required.
      * </pre>
      *
      * <code>string conversion_action = 11;</code>
+     *
      * @return The conversionAction.
      */
     public java.lang.String getConversionAction() {
       java.lang.Object ref = conversionAction_;
       if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
+        com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         conversionAction_ = s;
         return s;
@@ -1308,21 +1437,22 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     *
+     *
      * <pre>
      * The resource name of conversion action to report conversions to.
      * Required.
      * </pre>
      *
      * <code>string conversion_action = 11;</code>
+     *
      * @return The bytes for conversionAction.
      */
-    public com.google.protobuf.ByteString
-        getConversionActionBytes() {
+    public com.google.protobuf.ByteString getConversionActionBytes() {
       java.lang.Object ref = conversionAction_;
       if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+        com.google.protobuf.ByteString b =
+            com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
         conversionAction_ = b;
         return b;
       } else {
@@ -1330,32 +1460,37 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     *
+     *
      * <pre>
      * The resource name of conversion action to report conversions to.
      * Required.
      * </pre>
      *
      * <code>string conversion_action = 11;</code>
+     *
      * @param value The conversionAction to set.
      * @return This builder for chaining.
      */
-    public Builder setConversionAction(
-        java.lang.String value) {
+    public Builder setConversionAction(java.lang.String value) {
       if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000008;
+        throw new NullPointerException();
+      }
+      bitField0_ |= 0x00000008;
       conversionAction_ = value;
       onChanged();
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * The resource name of conversion action to report conversions to.
      * Required.
      * </pre>
      *
      * <code>string conversion_action = 11;</code>
+     *
      * @return This builder for chaining.
      */
     public Builder clearConversionAction() {
@@ -1365,21 +1500,23 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * The resource name of conversion action to report conversions to.
      * Required.
      * </pre>
      *
      * <code>string conversion_action = 11;</code>
+     *
      * @param value The bytes for conversionAction to set.
      * @return This builder for chaining.
      */
-    public Builder setConversionActionBytes(
-        com.google.protobuf.ByteString value) {
+    public Builder setConversionActionBytes(com.google.protobuf.ByteString value) {
       if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
+        throw new NullPointerException();
+      }
+      checkByteStringIsUtf8(value);
       bitField0_ |= 0x00000008;
       conversionAction_ = value;
       onChanged();
@@ -1388,31 +1525,36 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object orderId_ = "";
     /**
+     *
+     *
      * <pre>
      * Transaction order id.
      * Accessible only to customers on the allow-list.
      * </pre>
      *
      * <code>string order_id = 12;</code>
+     *
      * @return Whether the orderId field is set.
      */
     public boolean hasOrderId() {
       return ((bitField0_ & 0x00000010) != 0);
     }
     /**
+     *
+     *
      * <pre>
      * Transaction order id.
      * Accessible only to customers on the allow-list.
      * </pre>
      *
      * <code>string order_id = 12;</code>
+     *
      * @return The orderId.
      */
     public java.lang.String getOrderId() {
       java.lang.Object ref = orderId_;
       if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
+        com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         orderId_ = s;
         return s;
@@ -1421,21 +1563,22 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     *
+     *
      * <pre>
      * Transaction order id.
      * Accessible only to customers on the allow-list.
      * </pre>
      *
      * <code>string order_id = 12;</code>
+     *
      * @return The bytes for orderId.
      */
-    public com.google.protobuf.ByteString
-        getOrderIdBytes() {
+    public com.google.protobuf.ByteString getOrderIdBytes() {
       java.lang.Object ref = orderId_;
       if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+        com.google.protobuf.ByteString b =
+            com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
         orderId_ = b;
         return b;
       } else {
@@ -1443,32 +1586,37 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     *
+     *
      * <pre>
      * Transaction order id.
      * Accessible only to customers on the allow-list.
      * </pre>
      *
      * <code>string order_id = 12;</code>
+     *
      * @param value The orderId to set.
      * @return This builder for chaining.
      */
-    public Builder setOrderId(
-        java.lang.String value) {
+    public Builder setOrderId(java.lang.String value) {
       if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000010;
+        throw new NullPointerException();
+      }
+      bitField0_ |= 0x00000010;
       orderId_ = value;
       onChanged();
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * Transaction order id.
      * Accessible only to customers on the allow-list.
      * </pre>
      *
      * <code>string order_id = 12;</code>
+     *
      * @return This builder for chaining.
      */
     public Builder clearOrderId() {
@@ -1478,21 +1626,23 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * Transaction order id.
      * Accessible only to customers on the allow-list.
      * </pre>
      *
      * <code>string order_id = 12;</code>
+     *
      * @param value The bytes for orderId to set.
      * @return This builder for chaining.
      */
-    public Builder setOrderIdBytes(
-        com.google.protobuf.ByteString value) {
+    public Builder setOrderIdBytes(com.google.protobuf.ByteString value) {
       if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
+        throw new NullPointerException();
+      }
+      checkByteStringIsUtf8(value);
       bitField0_ |= 0x00000010;
       orderId_ = value;
       onChanged();
@@ -1501,36 +1651,49 @@ private static final long serialVersionUID = 0L;
 
     private com.google.ads.googleads.v6.common.StoreAttribute storeAttribute_;
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.google.ads.googleads.v6.common.StoreAttribute, com.google.ads.googleads.v6.common.StoreAttribute.Builder, com.google.ads.googleads.v6.common.StoreAttributeOrBuilder> storeAttributeBuilder_;
+            com.google.ads.googleads.v6.common.StoreAttribute,
+            com.google.ads.googleads.v6.common.StoreAttribute.Builder,
+            com.google.ads.googleads.v6.common.StoreAttributeOrBuilder>
+        storeAttributeBuilder_;
     /**
+     *
+     *
      * <pre>
      * Store attributes of the transaction.
      * Accessible only to customers on the allow-list.
      * </pre>
      *
      * <code>.google.ads.googleads.v6.common.StoreAttribute store_attribute = 6;</code>
+     *
      * @return Whether the storeAttribute field is set.
      */
     public boolean hasStoreAttribute() {
       return storeAttributeBuilder_ != null || storeAttribute_ != null;
     }
     /**
+     *
+     *
      * <pre>
      * Store attributes of the transaction.
      * Accessible only to customers on the allow-list.
      * </pre>
      *
      * <code>.google.ads.googleads.v6.common.StoreAttribute store_attribute = 6;</code>
+     *
      * @return The storeAttribute.
      */
     public com.google.ads.googleads.v6.common.StoreAttribute getStoreAttribute() {
       if (storeAttributeBuilder_ == null) {
-        return storeAttribute_ == null ? com.google.ads.googleads.v6.common.StoreAttribute.getDefaultInstance() : storeAttribute_;
+        return storeAttribute_ == null
+            ? com.google.ads.googleads.v6.common.StoreAttribute.getDefaultInstance()
+            : storeAttribute_;
       } else {
         return storeAttributeBuilder_.getMessage();
       }
     }
     /**
+     *
+     *
      * <pre>
      * Store attributes of the transaction.
      * Accessible only to customers on the allow-list.
@@ -1552,6 +1715,8 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * Store attributes of the transaction.
      * Accessible only to customers on the allow-list.
@@ -1571,6 +1736,8 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * Store attributes of the transaction.
      * Accessible only to customers on the allow-list.
@@ -1582,7 +1749,9 @@ private static final long serialVersionUID = 0L;
       if (storeAttributeBuilder_ == null) {
         if (storeAttribute_ != null) {
           storeAttribute_ =
-            com.google.ads.googleads.v6.common.StoreAttribute.newBuilder(storeAttribute_).mergeFrom(value).buildPartial();
+              com.google.ads.googleads.v6.common.StoreAttribute.newBuilder(storeAttribute_)
+                  .mergeFrom(value)
+                  .buildPartial();
         } else {
           storeAttribute_ = value;
         }
@@ -1594,6 +1763,8 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * Store attributes of the transaction.
      * Accessible only to customers on the allow-list.
@@ -1613,6 +1784,8 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * Store attributes of the transaction.
      * Accessible only to customers on the allow-list.
@@ -1621,11 +1794,13 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v6.common.StoreAttribute store_attribute = 6;</code>
      */
     public com.google.ads.googleads.v6.common.StoreAttribute.Builder getStoreAttributeBuilder() {
-      
+
       onChanged();
       return getStoreAttributeFieldBuilder().getBuilder();
     }
     /**
+     *
+     *
      * <pre>
      * Store attributes of the transaction.
      * Accessible only to customers on the allow-list.
@@ -1637,11 +1812,14 @@ private static final long serialVersionUID = 0L;
       if (storeAttributeBuilder_ != null) {
         return storeAttributeBuilder_.getMessageOrBuilder();
       } else {
-        return storeAttribute_ == null ?
-            com.google.ads.googleads.v6.common.StoreAttribute.getDefaultInstance() : storeAttribute_;
+        return storeAttribute_ == null
+            ? com.google.ads.googleads.v6.common.StoreAttribute.getDefaultInstance()
+            : storeAttribute_;
       }
     }
     /**
+     *
+     *
      * <pre>
      * Store attributes of the transaction.
      * Accessible only to customers on the allow-list.
@@ -1650,14 +1828,17 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v6.common.StoreAttribute store_attribute = 6;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.google.ads.googleads.v6.common.StoreAttribute, com.google.ads.googleads.v6.common.StoreAttribute.Builder, com.google.ads.googleads.v6.common.StoreAttributeOrBuilder> 
+            com.google.ads.googleads.v6.common.StoreAttribute,
+            com.google.ads.googleads.v6.common.StoreAttribute.Builder,
+            com.google.ads.googleads.v6.common.StoreAttributeOrBuilder>
         getStoreAttributeFieldBuilder() {
       if (storeAttributeBuilder_ == null) {
-        storeAttributeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            com.google.ads.googleads.v6.common.StoreAttribute, com.google.ads.googleads.v6.common.StoreAttribute.Builder, com.google.ads.googleads.v6.common.StoreAttributeOrBuilder>(
-                getStoreAttribute(),
-                getParentForChildren(),
-                isClean());
+        storeAttributeBuilder_ =
+            new com.google.protobuf.SingleFieldBuilderV3<
+                com.google.ads.googleads.v6.common.StoreAttribute,
+                com.google.ads.googleads.v6.common.StoreAttribute.Builder,
+                com.google.ads.googleads.v6.common.StoreAttributeOrBuilder>(
+                getStoreAttribute(), getParentForChildren(), isClean());
         storeAttribute_ = null;
       }
       return storeAttributeBuilder_;
@@ -1665,31 +1846,36 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object customValue_ = "";
     /**
+     *
+     *
      * <pre>
      * Value of the custom variable for each transaction.
      * Accessible only to customers on the allow-list.
      * </pre>
      *
      * <code>string custom_value = 13;</code>
+     *
      * @return Whether the customValue field is set.
      */
     public boolean hasCustomValue() {
       return ((bitField0_ & 0x00000020) != 0);
     }
     /**
+     *
+     *
      * <pre>
      * Value of the custom variable for each transaction.
      * Accessible only to customers on the allow-list.
      * </pre>
      *
      * <code>string custom_value = 13;</code>
+     *
      * @return The customValue.
      */
     public java.lang.String getCustomValue() {
       java.lang.Object ref = customValue_;
       if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
+        com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         customValue_ = s;
         return s;
@@ -1698,21 +1884,22 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     *
+     *
      * <pre>
      * Value of the custom variable for each transaction.
      * Accessible only to customers on the allow-list.
      * </pre>
      *
      * <code>string custom_value = 13;</code>
+     *
      * @return The bytes for customValue.
      */
-    public com.google.protobuf.ByteString
-        getCustomValueBytes() {
+    public com.google.protobuf.ByteString getCustomValueBytes() {
       java.lang.Object ref = customValue_;
       if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+        com.google.protobuf.ByteString b =
+            com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
         customValue_ = b;
         return b;
       } else {
@@ -1720,32 +1907,37 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     *
+     *
      * <pre>
      * Value of the custom variable for each transaction.
      * Accessible only to customers on the allow-list.
      * </pre>
      *
      * <code>string custom_value = 13;</code>
+     *
      * @param value The customValue to set.
      * @return This builder for chaining.
      */
-    public Builder setCustomValue(
-        java.lang.String value) {
+    public Builder setCustomValue(java.lang.String value) {
       if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000020;
+        throw new NullPointerException();
+      }
+      bitField0_ |= 0x00000020;
       customValue_ = value;
       onChanged();
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * Value of the custom variable for each transaction.
      * Accessible only to customers on the allow-list.
      * </pre>
      *
      * <code>string custom_value = 13;</code>
+     *
      * @return This builder for chaining.
      */
     public Builder clearCustomValue() {
@@ -1755,29 +1947,31 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * Value of the custom variable for each transaction.
      * Accessible only to customers on the allow-list.
      * </pre>
      *
      * <code>string custom_value = 13;</code>
+     *
      * @param value The bytes for customValue to set.
      * @return This builder for chaining.
      */
-    public Builder setCustomValueBytes(
-        com.google.protobuf.ByteString value) {
+    public Builder setCustomValueBytes(com.google.protobuf.ByteString value) {
       if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
+        throw new NullPointerException();
+      }
+      checkByteStringIsUtf8(value);
       bitField0_ |= 0x00000020;
       customValue_ = value;
       onChanged();
       return this;
     }
+
     @java.lang.Override
-    public final Builder setUnknownFields(
-        final com.google.protobuf.UnknownFieldSet unknownFields) {
+    public final Builder setUnknownFields(final com.google.protobuf.UnknownFieldSet unknownFields) {
       return super.setUnknownFields(unknownFields);
     }
 
@@ -1787,12 +1981,12 @@ private static final long serialVersionUID = 0L;
       return super.mergeUnknownFields(unknownFields);
     }
 
-
     // @@protoc_insertion_point(builder_scope:google.ads.googleads.v6.common.TransactionAttribute)
   }
 
   // @@protoc_insertion_point(class_scope:google.ads.googleads.v6.common.TransactionAttribute)
   private static final com.google.ads.googleads.v6.common.TransactionAttribute DEFAULT_INSTANCE;
+
   static {
     DEFAULT_INSTANCE = new com.google.ads.googleads.v6.common.TransactionAttribute();
   }
@@ -1801,16 +1995,16 @@ private static final long serialVersionUID = 0L;
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<TransactionAttribute>
-      PARSER = new com.google.protobuf.AbstractParser<TransactionAttribute>() {
-    @java.lang.Override
-    public TransactionAttribute parsePartialFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return new TransactionAttribute(input, extensionRegistry);
-    }
-  };
+  private static final com.google.protobuf.Parser<TransactionAttribute> PARSER =
+      new com.google.protobuf.AbstractParser<TransactionAttribute>() {
+        @java.lang.Override
+        public TransactionAttribute parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new TransactionAttribute(input, extensionRegistry);
+        }
+      };
 
   public static com.google.protobuf.Parser<TransactionAttribute> parser() {
     return PARSER;
@@ -1825,6 +2019,4 @@ private static final long serialVersionUID = 0L;
   public com.google.ads.googleads.v6.common.TransactionAttribute getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
-
 }
-

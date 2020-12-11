@@ -5,7 +5,7 @@
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
- *     https://www.apache.org/licenses/LICENSE-2.0
+ *      https://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -13,9 +13,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
 package com.google.ads.googleads.v6.services;
 
 import com.google.ads.googleads.v6.resources.ClickView;
+import com.google.ads.googleads.v6.resources.ClickViewName;
 import com.google.ads.googleads.v6.services.stub.ClickViewServiceStub;
 import com.google.ads.googleads.v6.services.stub.ClickViewServiceStubSettings;
 import com.google.api.core.BetaApi;
@@ -25,23 +27,14 @@ import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 import javax.annotation.Generated;
 
-// AUTO-GENERATED DOCUMENTATION AND SERVICE
+// AUTO-GENERATED DOCUMENTATION AND CLASS.
 /**
  * Service Description: Service to fetch click views.
  *
  * <p>This class provides the ability to make remote calls to the backing service through method
  * calls that map to API methods. Sample code to get started:
  *
- * <pre>
- * <code>
- * try (ClickViewServiceClient clickViewServiceClient = ClickViewServiceClient.create()) {
- *   ClickViewName resourceName = ClickViewName.of("[CUSTOMER_ID]", "[DATE]", "[GCLID]");
- *   ClickView response = clickViewServiceClient.getClickView(resourceName);
- * }
- * </code>
- * </pre>
- *
- * <p>Note: close() needs to be called on the clickViewServiceClient object to clean up resources
+ * <p>Note: close() needs to be called on the ClickViewServiceClient object to clean up resources
  * such as threads. In the example above, try-with-resources is used, which automatically calls
  * close().
  *
@@ -70,30 +63,28 @@ import javax.annotation.Generated;
  *
  * <p>To customize credentials:
  *
- * <pre>
- * <code>
+ * <pre>{@code
  * ClickViewServiceSettings clickViewServiceSettings =
  *     ClickViewServiceSettings.newBuilder()
  *         .setCredentialsProvider(FixedCredentialsProvider.create(myCredentials))
  *         .build();
  * ClickViewServiceClient clickViewServiceClient =
  *     ClickViewServiceClient.create(clickViewServiceSettings);
- * </code>
- * </pre>
+ * }</pre>
  *
- * To customize the endpoint:
+ * <p>To customize the endpoint:
  *
- * <pre>
- * <code>
+ * <pre>{@code
  * ClickViewServiceSettings clickViewServiceSettings =
  *     ClickViewServiceSettings.newBuilder().setEndpoint(myEndpoint).build();
  * ClickViewServiceClient clickViewServiceClient =
  *     ClickViewServiceClient.create(clickViewServiceSettings);
- * </code>
- * </pre>
+ * }</pre>
+ *
+ * <p>Please refer to the GitHub repository's samples for more quickstart code snippets.
  */
-@Generated("by gapic-generator")
 @BetaApi
+@Generated("by gapic-generator")
 public class ClickViewServiceClient implements BackgroundResource {
   private final ClickViewServiceSettings settings;
   private final ClickViewServiceStub stub;
@@ -114,7 +105,7 @@ public class ClickViewServiceClient implements BackgroundResource {
 
   /**
    * Constructs an instance of ClickViewServiceClient, using the given stub for making calls. This
-   * is for advanced usage - prefer to use ClickViewServiceSettings}.
+   * is for advanced usage - prefer using create(ClickViewServiceSettings).
    */
   @BetaApi("A restructuring of stub classes is planned, so this may break in the future")
   public static final ClickViewServiceClient create(ClickViewServiceStub stub) {
@@ -146,20 +137,11 @@ public class ClickViewServiceClient implements BackgroundResource {
     return stub;
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Returns the requested click view in full detail.
    *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (ClickViewServiceClient clickViewServiceClient = ClickViewServiceClient.create()) {
-   *   ClickViewName resourceName = ClickViewName.of("[CUSTOMER_ID]", "[DATE]", "[GCLID]");
-   *   ClickView response = clickViewServiceClient.getClickView(resourceName);
-   * }
-   * </code></pre>
-   *
-   * @param resourceName Required. The resource name of the click view to fetch.
+   * @param resource_name Required. The resource name of the click view to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final ClickView getClickView(ClickViewName resourceName) {
@@ -170,20 +152,11 @@ public class ClickViewServiceClient implements BackgroundResource {
     return getClickView(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Returns the requested click view in full detail.
    *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (ClickViewServiceClient clickViewServiceClient = ClickViewServiceClient.create()) {
-   *   ClickViewName resourceName = ClickViewName.of("[CUSTOMER_ID]", "[DATE]", "[GCLID]");
-   *   ClickView response = clickViewServiceClient.getClickView(resourceName.toString());
-   * }
-   * </code></pre>
-   *
-   * @param resourceName Required. The resource name of the click view to fetch.
+   * @param resource_name Required. The resource name of the click view to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final ClickView getClickView(String resourceName) {
@@ -192,21 +165,9 @@ public class ClickViewServiceClient implements BackgroundResource {
     return getClickView(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Returns the requested click view in full detail.
-   *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (ClickViewServiceClient clickViewServiceClient = ClickViewServiceClient.create()) {
-   *   ClickViewName resourceName = ClickViewName.of("[CUSTOMER_ID]", "[DATE]", "[GCLID]");
-   *   GetClickViewRequest request = GetClickViewRequest.newBuilder()
-   *     .setResourceName(resourceName.toString())
-   *     .build();
-   *   ClickView response = clickViewServiceClient.getClickView(request);
-   * }
-   * </code></pre>
    *
    * @param request The request object containing all of the parameters for the API call.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
@@ -215,23 +176,11 @@ public class ClickViewServiceClient implements BackgroundResource {
     return getClickViewCallable().call(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Returns the requested click view in full detail.
    *
    * <p>Sample code:
-   *
-   * <pre><code>
-   * try (ClickViewServiceClient clickViewServiceClient = ClickViewServiceClient.create()) {
-   *   ClickViewName resourceName = ClickViewName.of("[CUSTOMER_ID]", "[DATE]", "[GCLID]");
-   *   GetClickViewRequest request = GetClickViewRequest.newBuilder()
-   *     .setResourceName(resourceName.toString())
-   *     .build();
-   *   ApiFuture&lt;ClickView&gt; future = clickViewServiceClient.getClickViewCallable().futureCall(request);
-   *   // Do something
-   *   ClickView response = future.get();
-   * }
-   * </code></pre>
    */
   public final UnaryCallable<GetClickViewRequest, ClickView> getClickViewCallable() {
     return stub.getClickViewCallable();

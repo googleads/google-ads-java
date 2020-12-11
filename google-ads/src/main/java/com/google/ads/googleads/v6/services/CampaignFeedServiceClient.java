@@ -5,7 +5,7 @@
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
- *     https://www.apache.org/licenses/LICENSE-2.0
+ *      https://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -13,9 +13,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
 package com.google.ads.googleads.v6.services;
 
 import com.google.ads.googleads.v6.resources.CampaignFeed;
+import com.google.ads.googleads.v6.resources.CampaignFeedName;
 import com.google.ads.googleads.v6.services.stub.CampaignFeedServiceStub;
 import com.google.ads.googleads.v6.services.stub.CampaignFeedServiceStubSettings;
 import com.google.api.core.BetaApi;
@@ -26,23 +28,14 @@ import java.util.List;
 import java.util.concurrent.TimeUnit;
 import javax.annotation.Generated;
 
-// AUTO-GENERATED DOCUMENTATION AND SERVICE
+// AUTO-GENERATED DOCUMENTATION AND CLASS.
 /**
  * Service Description: Service to manage campaign feeds.
  *
  * <p>This class provides the ability to make remote calls to the backing service through method
  * calls that map to API methods. Sample code to get started:
  *
- * <pre>
- * <code>
- * try (CampaignFeedServiceClient campaignFeedServiceClient = CampaignFeedServiceClient.create()) {
- *   CampaignFeedName resourceName = CampaignFeedName.of("[CUSTOMER_ID]", "[CAMPAIGN_ID]", "[FEED_ID]");
- *   CampaignFeed response = campaignFeedServiceClient.getCampaignFeed(resourceName);
- * }
- * </code>
- * </pre>
- *
- * <p>Note: close() needs to be called on the campaignFeedServiceClient object to clean up resources
+ * <p>Note: close() needs to be called on the CampaignFeedServiceClient object to clean up resources
  * such as threads. In the example above, try-with-resources is used, which automatically calls
  * close().
  *
@@ -71,30 +64,28 @@ import javax.annotation.Generated;
  *
  * <p>To customize credentials:
  *
- * <pre>
- * <code>
+ * <pre>{@code
  * CampaignFeedServiceSettings campaignFeedServiceSettings =
  *     CampaignFeedServiceSettings.newBuilder()
  *         .setCredentialsProvider(FixedCredentialsProvider.create(myCredentials))
  *         .build();
  * CampaignFeedServiceClient campaignFeedServiceClient =
  *     CampaignFeedServiceClient.create(campaignFeedServiceSettings);
- * </code>
- * </pre>
+ * }</pre>
  *
- * To customize the endpoint:
+ * <p>To customize the endpoint:
  *
- * <pre>
- * <code>
+ * <pre>{@code
  * CampaignFeedServiceSettings campaignFeedServiceSettings =
  *     CampaignFeedServiceSettings.newBuilder().setEndpoint(myEndpoint).build();
  * CampaignFeedServiceClient campaignFeedServiceClient =
  *     CampaignFeedServiceClient.create(campaignFeedServiceSettings);
- * </code>
- * </pre>
+ * }</pre>
+ *
+ * <p>Please refer to the GitHub repository's samples for more quickstart code snippets.
  */
-@Generated("by gapic-generator")
 @BetaApi
+@Generated("by gapic-generator")
 public class CampaignFeedServiceClient implements BackgroundResource {
   private final CampaignFeedServiceSettings settings;
   private final CampaignFeedServiceStub stub;
@@ -115,7 +106,7 @@ public class CampaignFeedServiceClient implements BackgroundResource {
 
   /**
    * Constructs an instance of CampaignFeedServiceClient, using the given stub for making calls.
-   * This is for advanced usage - prefer to use CampaignFeedServiceSettings}.
+   * This is for advanced usage - prefer using create(CampaignFeedServiceSettings).
    */
   @BetaApi("A restructuring of stub classes is planned, so this may break in the future")
   public static final CampaignFeedServiceClient create(CampaignFeedServiceStub stub) {
@@ -147,20 +138,11 @@ public class CampaignFeedServiceClient implements BackgroundResource {
     return stub;
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Returns the requested campaign feed in full detail.
    *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (CampaignFeedServiceClient campaignFeedServiceClient = CampaignFeedServiceClient.create()) {
-   *   CampaignFeedName resourceName = CampaignFeedName.of("[CUSTOMER_ID]", "[CAMPAIGN_ID]", "[FEED_ID]");
-   *   CampaignFeed response = campaignFeedServiceClient.getCampaignFeed(resourceName);
-   * }
-   * </code></pre>
-   *
-   * @param resourceName Required. The resource name of the campaign feed to fetch.
+   * @param resource_name Required. The resource name of the campaign feed to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final CampaignFeed getCampaignFeed(CampaignFeedName resourceName) {
@@ -171,20 +153,11 @@ public class CampaignFeedServiceClient implements BackgroundResource {
     return getCampaignFeed(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Returns the requested campaign feed in full detail.
    *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (CampaignFeedServiceClient campaignFeedServiceClient = CampaignFeedServiceClient.create()) {
-   *   CampaignFeedName resourceName = CampaignFeedName.of("[CUSTOMER_ID]", "[CAMPAIGN_ID]", "[FEED_ID]");
-   *   CampaignFeed response = campaignFeedServiceClient.getCampaignFeed(resourceName.toString());
-   * }
-   * </code></pre>
-   *
-   * @param resourceName Required. The resource name of the campaign feed to fetch.
+   * @param resource_name Required. The resource name of the campaign feed to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final CampaignFeed getCampaignFeed(String resourceName) {
@@ -193,21 +166,9 @@ public class CampaignFeedServiceClient implements BackgroundResource {
     return getCampaignFeed(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Returns the requested campaign feed in full detail.
-   *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (CampaignFeedServiceClient campaignFeedServiceClient = CampaignFeedServiceClient.create()) {
-   *   CampaignFeedName resourceName = CampaignFeedName.of("[CUSTOMER_ID]", "[CAMPAIGN_ID]", "[FEED_ID]");
-   *   GetCampaignFeedRequest request = GetCampaignFeedRequest.newBuilder()
-   *     .setResourceName(resourceName.toString())
-   *     .build();
-   *   CampaignFeed response = campaignFeedServiceClient.getCampaignFeed(request);
-   * }
-   * </code></pre>
    *
    * @param request The request object containing all of the parameters for the API call.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
@@ -216,43 +177,21 @@ public class CampaignFeedServiceClient implements BackgroundResource {
     return getCampaignFeedCallable().call(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Returns the requested campaign feed in full detail.
    *
    * <p>Sample code:
-   *
-   * <pre><code>
-   * try (CampaignFeedServiceClient campaignFeedServiceClient = CampaignFeedServiceClient.create()) {
-   *   CampaignFeedName resourceName = CampaignFeedName.of("[CUSTOMER_ID]", "[CAMPAIGN_ID]", "[FEED_ID]");
-   *   GetCampaignFeedRequest request = GetCampaignFeedRequest.newBuilder()
-   *     .setResourceName(resourceName.toString())
-   *     .build();
-   *   ApiFuture&lt;CampaignFeed&gt; future = campaignFeedServiceClient.getCampaignFeedCallable().futureCall(request);
-   *   // Do something
-   *   CampaignFeed response = future.get();
-   * }
-   * </code></pre>
    */
   public final UnaryCallable<GetCampaignFeedRequest, CampaignFeed> getCampaignFeedCallable() {
     return stub.getCampaignFeedCallable();
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Creates, updates, or removes campaign feeds. Operation statuses are returned.
    *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (CampaignFeedServiceClient campaignFeedServiceClient = CampaignFeedServiceClient.create()) {
-   *   String customerId = "";
-   *   List&lt;CampaignFeedOperation&gt; operations = new ArrayList&lt;&gt;();
-   *   MutateCampaignFeedsResponse response = campaignFeedServiceClient.mutateCampaignFeeds(customerId, operations);
-   * }
-   * </code></pre>
-   *
-   * @param customerId Required. The ID of the customer whose campaign feeds are being modified.
+   * @param customer_id Required. The ID of the customer whose campaign feeds are being modified.
    * @param operations Required. The list of operations to perform on individual campaign feeds.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
@@ -266,23 +205,9 @@ public class CampaignFeedServiceClient implements BackgroundResource {
     return mutateCampaignFeeds(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Creates, updates, or removes campaign feeds. Operation statuses are returned.
-   *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (CampaignFeedServiceClient campaignFeedServiceClient = CampaignFeedServiceClient.create()) {
-   *   String customerId = "";
-   *   List&lt;CampaignFeedOperation&gt; operations = new ArrayList&lt;&gt;();
-   *   MutateCampaignFeedsRequest request = MutateCampaignFeedsRequest.newBuilder()
-   *     .setCustomerId(customerId)
-   *     .addAllOperations(operations)
-   *     .build();
-   *   MutateCampaignFeedsResponse response = campaignFeedServiceClient.mutateCampaignFeeds(request);
-   * }
-   * </code></pre>
    *
    * @param request The request object containing all of the parameters for the API call.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
@@ -291,25 +216,11 @@ public class CampaignFeedServiceClient implements BackgroundResource {
     return mutateCampaignFeedsCallable().call(request);
   }
 
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Creates, updates, or removes campaign feeds. Operation statuses are returned.
    *
    * <p>Sample code:
-   *
-   * <pre><code>
-   * try (CampaignFeedServiceClient campaignFeedServiceClient = CampaignFeedServiceClient.create()) {
-   *   String customerId = "";
-   *   List&lt;CampaignFeedOperation&gt; operations = new ArrayList&lt;&gt;();
-   *   MutateCampaignFeedsRequest request = MutateCampaignFeedsRequest.newBuilder()
-   *     .setCustomerId(customerId)
-   *     .addAllOperations(operations)
-   *     .build();
-   *   ApiFuture&lt;MutateCampaignFeedsResponse&gt; future = campaignFeedServiceClient.mutateCampaignFeedsCallable().futureCall(request);
-   *   // Do something
-   *   MutateCampaignFeedsResponse response = future.get();
-   * }
-   * </code></pre>
    */
   public final UnaryCallable<MutateCampaignFeedsRequest, MutateCampaignFeedsResponse>
       mutateCampaignFeedsCallable() {
