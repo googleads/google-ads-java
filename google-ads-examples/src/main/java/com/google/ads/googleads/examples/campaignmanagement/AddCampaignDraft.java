@@ -41,7 +41,7 @@ public class AddCampaignDraft {
     @Parameter(names = ArgumentNames.CUSTOMER_ID, required = true)
     private Long customerId;
 
-    @Parameter(names = ArgumentNames.CAMPAIGN_ID, required = true)
+    @Parameter(names = ArgumentNames.BASE_CAMPAIGN_ID, required = true)
     private Long baseCampaignId;
   }
 
@@ -52,7 +52,7 @@ public class AddCampaignDraft {
       // Either pass the required parameters for this example on the command line, or insert them
       // into the code here. See the parameter class definition above for descriptions.
       params.customerId = Long.parseLong("INSERT_CUSTOMER_ID_HERE");
-      params.baseCampaignId = Long.valueOf("INSERT_CAMPAIGN_ID_HERE");
+      params.baseCampaignId = Long.valueOf("INSERT_BASE_CAMPAIGN_ID_HERE");
     }
 
     GoogleAdsClient googleAdsClient;
