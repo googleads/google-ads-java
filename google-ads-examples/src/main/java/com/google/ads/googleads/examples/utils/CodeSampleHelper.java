@@ -26,7 +26,7 @@ public abstract class CodeSampleHelper {
 
   /** The shorter date format used for printing. */
   private static final DateTimeFormatter shortFormat =
-      DateTimeFormatter.ofPattern("yyMMddHHmmssSSS");
+      DateTimeFormatter.ofPattern("MMddHHmmssSSS");
 
   /**
    * Generates a printable string for the current date and time in local time zone.
