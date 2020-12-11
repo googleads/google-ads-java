@@ -14,7 +14,7 @@
 
 package com.google.ads.googleads.examples.basicoperations;
 
-import static com.google.ads.googleads.examples.utils.CodeSampleHelper.getPrintableDatetime;
+import static com.google.ads.googleads.examples.utils.CodeSampleHelper.getShortPrintableDatetime;
 
 import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
@@ -105,7 +105,7 @@ public class AddResponsiveSearchAd {
     // perform best will be used more often.
     AdTextAsset pinnedHeadline =
         AdTextAsset.newBuilder()
-            .setText("Cruise to Mars #" + getPrintableDatetime())
+            .setText("Cruise to Mars #" + getShortPrintableDatetime())
             .setPinnedField(ServedAssetFieldType.HEADLINE_1)
             .build();
 
