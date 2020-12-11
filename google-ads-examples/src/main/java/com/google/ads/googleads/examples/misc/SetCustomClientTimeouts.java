@@ -33,6 +33,12 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import org.threeten.bp.Duration;
 
+/**
+ * Illustrates the use of custom client timeouts in the context of server streaming and unary calls.
+ *
+ * <p>For more information about the concepts, see this documentation:
+ * https://grpc.io/docs/what-is-grpc/core-concepts/#rpc-life-cycle.
+ */
 public class SetCustomClientTimeouts {
   private static final int CLIENT_TIMEOUT_MILLIS = 5 * 60 * 1000; // 5 minutes in milliseconds.
 
@@ -119,8 +125,9 @@ public class SetCustomClientTimeouts {
         // Bubbles up if the exception is not about timeout.
         throw ex;
       }
+    } finally {
+      System.out.printf("All campaign IDs retrieved: %s.%n", output.toString());
     }
-    System.out.printf("All campaign IDs retrieved: %s.%n", output.toString());
   }
   // [END SetCustomClientTimeouts]
 
@@ -154,8 +161,9 @@ public class SetCustomClientTimeouts {
         // Bubbles up if the exception is not about timeout.
         throw ex;
       }
+    } finally {
+      System.out.printf("All campaign IDs retrieved: %s.%n", output.toString());
     }
-    System.out.printf("All campaign IDs retrieved: %s.%n", output.toString());
   }
   // [END SetCustomClientTimeouts_1]
 }
