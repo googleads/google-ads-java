@@ -6,6 +6,7 @@ import static org.junit.Assert.assertThrows;
 import com.google.ads.googleads.v6.enums.CampaignStatusEnum.CampaignStatus;
 import com.google.ads.googleads.v6.resources.Campaign;
 import com.google.common.collect.ImmutableList;
+import java.text.ParseException;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -18,9 +19,7 @@ public class FieldMasksTest {
   @Before
   public void setUp() {
     Campaign.Builder builder =
-        Campaign.newBuilder()
-            .setName("New campaign")
-            .setStatus(CampaignStatus.PAUSED);
+        Campaign.newBuilder().setName("New campaign").setStatus(CampaignStatus.PAUSED);
     builder.getManualCpcBuilder().setEnhancedCpcEnabled(false);
     campaign = builder.build();
   }
@@ -37,33 +36,33 @@ public class FieldMasksTest {
   }
 
   @Test
-  public void getFieldValue_gets_basic_field() {
+  public void getFieldValue_gets_basic_field() throws ParseException {
     assertEquals(FieldMasks.getFieldValue("name", campaign), campaign.getName());
   }
 
   @Test
-  public void getFieldValue_gets_nested_field() {
+  public void getFieldValue_gets_nested_field() throws ParseException {
     assertEquals(
         FieldMasks.getFieldValue("manual_cpc.enhanced_cpc_enabled", campaign),
         campaign.getManualCpc().getEnhancedCpcEnabled());
   }
 
   @Test
-  public void getFieldValue_gets_top_nested_field() {
+  public void getFieldValue_gets_top_nested_field() throws ParseException {
     assertEquals(FieldMasks.getFieldValue("manual_cpc", campaign), campaign.getManualCpc());
   }
 
   @Test
-  public void getFieldValue_gets_enum_field() {
+  public void getFieldValue_gets_enum_field() throws ParseException {
     assertEquals(
         FieldMasks.getFieldValue("status", campaign), campaign.getStatus().getValueDescriptor());
   }
 
   @Test
   public void getFieldValue_no_match_throws_exception() {
-    IllegalArgumentException exception =
+    ParseException exception =
         assertThrows(
-            IllegalArgumentException.class,
+            ParseException.class,
             () -> {
               FieldMasks.getFieldValue("foo.bar", campaign);
             });
@@ -75,27 +74,29 @@ public class FieldMasksTest {
 
   @Test
   public void getFieldValue_repeated_throws_exception() {
-    IllegalArgumentException exception =
+    ParseException exception =
         assertThrows(
-            IllegalArgumentException.class,
+            ParseException.class,
             () -> {
               FieldMasks.getFieldValue("url_custom_parameters.key", campaign);
             });
     assertEquals(
         exception.getMessage(),
-        "Cannot access repeated sub-field url_custom_parameters of class com.google.ads.googleads.v6.resources.Campaign");
+        "Cannot access repeated sub-field url_custom_parameters in path url_custom_parameters.key"
+            + " of class com.google.ads.googleads.v6.resources.Campaign");
   }
 
   @Test
   public void getFieldValue_non_message_throws_exception() {
-    IllegalArgumentException exception =
+    ParseException exception =
         assertThrows(
-            IllegalArgumentException.class,
+            ParseException.class,
             () -> {
               FieldMasks.getFieldValue("status.paused", campaign);
             });
     assertEquals(
         exception.getMessage(),
-        "Cannot access a field nested inside a primitive or enum status in class com.google.ads.googleads.v6.resources.Campaign");
+        "Cannot access a field nested inside a primitive or enum status in path status.paused in"
+            + " class com.google.ads.googleads.v6.resources.Campaign");
   }
 }
