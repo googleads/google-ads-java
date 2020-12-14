@@ -22,7 +22,6 @@ import com.google.protobuf.Descriptors.FieldDescriptor;
 import com.google.protobuf.FieldMask;
 import com.google.protobuf.GeneratedMessageV3;
 import com.google.protobuf.Message;
-import java.text.ParseException;
 import java.util.Arrays;
 import java.util.Deque;
 import java.util.LinkedList;
@@ -132,7 +131,7 @@ public class FieldMasks {
    * @param entity The entity to retrieve values from.
    * @return the field Object.
    */
-  public static <V> V getFieldValue(String fieldMaskPath, Message entity) throws ParseException {
+  public static <V> V getFieldValue(String fieldMaskPath, Message entity) {
     Deque<String> fieldMaskParts =
         new LinkedList<>(Arrays.asList(fieldMaskPath.trim().split("\\.")));
     Message currentEntity = entity;
@@ -145,36 +144,32 @@ public class FieldMasks {
 
       V childValue;
       if (descriptor.findFieldByName(fieldName) == null) {
-        throw new ParseException(
+        throw new IllegalArgumentException(
             String.format(
                 "Cannot retrieve field value. A matching field was not found after"
                     + " navigating %s up to %s",
-                fieldMaskPath, fieldName),
-            0);
-      } else {
-        childValue = (V) currentEntity.getField(childField);
+                fieldMaskPath, fieldName));
       }
-
+      childValue = (V) currentEntity.getField(childField);
       if (fieldMaskParts.isEmpty()) {
         return childValue;
       } else if (childValue == null) {
-        throw new ParseException(
+        throw new IllegalArgumentException(
             String.format(
                 "Attempt to access a sub-field of %s in path %s which is null",
-                fieldName, fieldMaskPath),
-            0);
+                fieldName, fieldMaskPath));
       } else if (childField.isRepeated()) {
-        throw new ParseException(
+        throw new IllegalArgumentException(
             String.format(
                 "Cannot access repeated sub-field %s in path %s of %s",
-                fieldName, fieldMaskPath, currentEntity.getClass()), 0);
+                fieldName, fieldMaskPath, currentEntity.getClass()));
       } else if (childField.getJavaType() == MESSAGE) {
         currentEntity = (Message) childValue;
       } else {
-        throw new ParseException(
+        throw new IllegalArgumentException(
             String.format(
                 "Cannot access a field nested inside a primitive or enum %s in path %s in %s",
-                fieldName, fieldMaskPath, currentEntity.getClass()), 0);
+                fieldName, fieldMaskPath, currentEntity.getClass()));
       }
     }
     return (V) currentEntity;

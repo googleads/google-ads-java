@@ -6,7 +6,6 @@ import static org.junit.Assert.assertThrows;
 import com.google.ads.googleads.v6.enums.CampaignStatusEnum.CampaignStatus;
 import com.google.ads.googleads.v6.resources.Campaign;
 import com.google.common.collect.ImmutableList;
-import java.text.ParseException;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -36,33 +35,33 @@ public class FieldMasksTest {
   }
 
   @Test
-  public void getFieldValue_gets_basic_field() throws ParseException {
+  public void getFieldValue_gets_basic_field() {
     assertEquals(FieldMasks.getFieldValue("name", campaign), campaign.getName());
   }
 
   @Test
-  public void getFieldValue_gets_nested_field() throws ParseException {
+  public void getFieldValue_gets_nested_field() {
     assertEquals(
         FieldMasks.getFieldValue("manual_cpc.enhanced_cpc_enabled", campaign),
         campaign.getManualCpc().getEnhancedCpcEnabled());
   }
 
   @Test
-  public void getFieldValue_gets_top_nested_field() throws ParseException {
+  public void getFieldValue_gets_top_nested_field() {
     assertEquals(FieldMasks.getFieldValue("manual_cpc", campaign), campaign.getManualCpc());
   }
 
   @Test
-  public void getFieldValue_gets_enum_field() throws ParseException {
+  public void getFieldValue_gets_enum_field() {
     assertEquals(
         FieldMasks.getFieldValue("status", campaign), campaign.getStatus().getValueDescriptor());
   }
 
   @Test
   public void getFieldValue_no_match_throws_exception() {
-    ParseException exception =
+    IllegalArgumentException exception =
         assertThrows(
-            ParseException.class,
+            IllegalArgumentException.class,
             () -> {
               FieldMasks.getFieldValue("foo.bar", campaign);
             });
@@ -74,9 +73,9 @@ public class FieldMasksTest {
 
   @Test
   public void getFieldValue_repeated_throws_exception() {
-    ParseException exception =
+    IllegalArgumentException exception =
         assertThrows(
-            ParseException.class,
+            IllegalArgumentException.class,
             () -> {
               FieldMasks.getFieldValue("url_custom_parameters.key", campaign);
             });
@@ -88,9 +87,9 @@ public class FieldMasksTest {
 
   @Test
   public void getFieldValue_non_message_throws_exception() {
-    ParseException exception =
+    IllegalArgumentException exception =
         assertThrows(
-            ParseException.class,
+            IllegalArgumentException.class,
             () -> {
               FieldMasks.getFieldValue("status.paused", campaign);
             });
