@@ -14,7 +14,7 @@
 
 package com.google.ads.googleads.examples.errorhandling;
 
-import static com.google.ads.googleads.examples.utils.CodeSampleHelper.getShortPrintableDatetime;
+import static com.google.ads.googleads.examples.utils.CodeSampleHelper.getShortPrintableDateTime;
 
 import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
@@ -113,7 +113,7 @@ public class HandleExpandedTextAdPolicyViolations {
         .addFinalUrls("http://www.example.com")
         // Adds an expanded text ad.
         .getExpandedTextAdBuilder()
-        .setHeadlinePart1("Cruise to Mars #" + getShortPrintableDatetime())
+        .setHeadlinePart1("Cruise to Mars #" + getShortPrintableDateTime())
         .setHeadlinePart2("Best Space Cruise Line")
         // Adds a description with too much punctuation. This will fail policy.
         .setDescription("Buy your tickets now!!!!!!!");

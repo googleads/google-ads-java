@@ -14,7 +14,7 @@
 
 package com.google.ads.googleads.examples.shoppingads;
 
-import static com.google.ads.googleads.examples.utils.CodeSampleHelper.getPrintableDatetime;
+import static com.google.ads.googleads.examples.utils.CodeSampleHelper.getPrintableDateTime;
 
 import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
@@ -179,7 +179,7 @@ public class AddShoppingProductAd {
   private String addCampaignBudget(GoogleAdsClient googleAdsClient, long customerId) {
     CampaignBudget budget =
         CampaignBudget.newBuilder()
-            .setName("Interplanetary Cruise Budget #" + getPrintableDatetime())
+            .setName("Interplanetary Cruise Budget #" + getPrintableDateTime())
             .setDeliveryMethod(BudgetDeliveryMethod.STANDARD)
             .setAmountMicros(5_000_000L)
             .build();
@@ -230,7 +230,7 @@ public class AddShoppingProductAd {
     // Create the standard shopping campaign.
     Campaign campaign =
         Campaign.newBuilder()
-            .setName("Interplanetary Cruise #" + getPrintableDatetime())
+            .setName("Interplanetary Cruise #" + getPrintableDateTime())
             // Configures settings related to shopping campaigns including advertising channel type
             // and shopping setting.
             .setAdvertisingChannelType(AdvertisingChannelType.SHOPPING)
@@ -282,7 +282,7 @@ public class AddShoppingProductAd {
     // Creates an ad group.
     AdGroup adGroup =
         AdGroup.newBuilder()
-            .setName("Earth to Mars Cruises #" + getPrintableDatetime())
+            .setName("Earth to Mars Cruises #" + getPrintableDateTime())
             .setCampaign(campaignResourceName)
             // Sets the ad group type to SHOPPING_PRODUCT_ADS. This is the only value possible for
             // ad groups that contain shopping product ads.

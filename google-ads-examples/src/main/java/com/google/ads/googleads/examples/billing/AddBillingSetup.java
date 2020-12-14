@@ -14,7 +14,7 @@
 
 package com.google.ads.googleads.examples.billing;
 
-import static com.google.ads.googleads.examples.utils.CodeSampleHelper.getPrintableDatetime;
+import static com.google.ads.googleads.examples.utils.CodeSampleHelper.getPrintableDateTime;
 
 import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
@@ -180,7 +180,7 @@ public class AddBillingSetup {
       // about payments profiles.
       billingSetupBuilder.setPaymentsAccountInfo(
           PaymentsAccountInfo.newBuilder()
-              .setPaymentsAccountName("Payments Account #" + getPrintableDatetime())
+              .setPaymentsAccountName("Payments Account #" + getPrintableDateTime())
               .setPaymentsProfileId(paymentsProfileId)
               .build());
     } else {

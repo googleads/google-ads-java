@@ -14,7 +14,7 @@
 
 package com.google.ads.googleads.examples.remarketing;
 
-import static com.google.ads.googleads.examples.utils.CodeSampleHelper.getPrintableDatetime;
+import static com.google.ads.googleads.examples.utils.CodeSampleHelper.getPrintableDateTime;
 
 import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
@@ -96,7 +96,7 @@ public class AddConversionAction {
     // Creates a ConversionAction.
     ConversionAction conversionAction =
         ConversionAction.newBuilder()
-            .setName("Earth to Mars Cruises Conversion #" + getPrintableDatetime())
+            .setName("Earth to Mars Cruises Conversion #" + getPrintableDateTime())
             .setCategory(ConversionActionCategory.DEFAULT)
             .setType(ConversionActionType.WEBPAGE)
             .setStatus(ConversionActionStatus.ENABLED)

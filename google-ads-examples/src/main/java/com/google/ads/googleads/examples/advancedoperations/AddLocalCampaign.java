@@ -14,7 +14,7 @@
 
 package com.google.ads.googleads.examples.advancedoperations;
 
-import static com.google.ads.googleads.examples.utils.CodeSampleHelper.getPrintableDatetime;
+import static com.google.ads.googleads.examples.utils.CodeSampleHelper.getPrintableDateTime;
 
 import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
@@ -148,7 +148,7 @@ public class AddLocalCampaign {
     CampaignBudget budget =
         CampaignBudget.newBuilder()
             .setAmountMicros(50000000)
-            .setName("Interplanetary Cruise Budget #" + getPrintableDatetime())
+            .setName("Interplanetary Cruise Budget #" + getPrintableDateTime())
             .setDeliveryMethod(BudgetDeliveryMethod.STANDARD)
             // A Local campaign cannot use a shared campaign budget.
             .setExplicitlyShared(false)
@@ -179,7 +179,7 @@ public class AddLocalCampaign {
     // Creates a Campaign object.
     Campaign campaign =
         Campaign.newBuilder()
-            .setName("Interplanetary Cruise Budget #" + getPrintableDatetime())
+            .setName("Interplanetary Cruise Budget #" + getPrintableDateTime())
             .setCampaignBudget(budgetResourceName)
             // Recommendation: Set the campaign to PAUSED when creating it to prevent the ads from
             // immediately serving. Set to ENABLED once you've added targeting and the ads are ready
@@ -243,7 +243,7 @@ public class AddLocalCampaign {
     //   2. you cannot add ad group criteria.
     AdGroup adGroup =
         AdGroup.newBuilder()
-            .setName("Earth to Mars Cruises #" + getPrintableDatetime())
+            .setName("Earth to Mars Cruises #" + getPrintableDateTime())
             .setStatus(AdGroupStatus.ENABLED)
             .setCampaign(campaignResourceName)
             .build();

@@ -14,7 +14,7 @@
 
 package com.google.ads.googleads.examples.remarketing;
 
-import static com.google.ads.googleads.examples.utils.CodeSampleHelper.getPrintableDatetime;
+import static com.google.ads.googleads.examples.utils.CodeSampleHelper.getPrintableDateTime;
 
 import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
@@ -172,7 +172,7 @@ public class AddMerchantCenterDynamicRemarketingCampaign {
     // Creates the campaign.
     Campaign campaign =
         Campaign.newBuilder()
-            .setName("Shopping campaign #" + getPrintableDatetime())
+            .setName("Shopping campaign #" + getPrintableDateTime())
             // Dynamic remarketing campaigns are only available on the Google Display Network.
             .setAdvertisingChannelType(AdvertisingChannelType.DISPLAY)
             .setStatus(CampaignStatus.PAUSED)

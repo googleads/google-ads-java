@@ -33,7 +33,7 @@ public abstract class CodeSampleHelper {
    *
    * @return the result string.
    */
-  public static String getPrintableDatetime() {
+  public static String getPrintableDateTime() {
     return ZonedDateTime.now().format(format);
   }
 
@@ -42,7 +42,7 @@ public abstract class CodeSampleHelper {
    *
    * @return the result string.
    */
-  public static String getShortPrintableDatetime() {
+  public static String getShortPrintableDateTime() {
     return ZonedDateTime.now().format(shortFormat);
   }
 }

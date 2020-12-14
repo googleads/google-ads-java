@@ -14,7 +14,7 @@
 
 package com.google.ads.googleads.examples.planning;
 
-import static com.google.ads.googleads.examples.utils.CodeSampleHelper.getPrintableDatetime;
+import static com.google.ads.googleads.examples.utils.CodeSampleHelper.getPrintableDateTime;
 
 import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
@@ -132,7 +132,7 @@ public class AddKeywordPlan {
   private static String createKeywordPlan(GoogleAdsClient googleAdsClient, Long customerId) {
     KeywordPlan plan =
         KeywordPlan.newBuilder()
-            .setName("Keyword plan for traffic estimate #" + getPrintableDatetime())
+            .setName("Keyword plan for traffic estimate #" + getPrintableDateTime())
             .setForecastPeriod(
                 KeywordPlanForecastPeriod.newBuilder()
                     .setDateInterval(KeywordPlanForecastInterval.NEXT_QUARTER)
@@ -166,7 +166,7 @@ public class AddKeywordPlan {
     // Creates a keyword plan campaign.
     KeywordPlanCampaign.Builder campaign =
         KeywordPlanCampaign.newBuilder()
-            .setName("Keyword plan campaign #" + getPrintableDatetime())
+            .setName("Keyword plan campaign #" + getPrintableDateTime())
             .setCpcBidMicros(1_000_000L)
             .setKeywordPlanNetwork(KeywordPlanNetwork.GOOGLE_SEARCH)
             .setKeywordPlan(keywordPlanResource);
@@ -214,7 +214,7 @@ public class AddKeywordPlan {
     KeywordPlanAdGroup.Builder adGroup =
         KeywordPlanAdGroup.newBuilder()
             .setKeywordPlanCampaign(planCampaignResource)
-            .setName("Keyword plan ad group #" + getPrintableDatetime())
+            .setName("Keyword plan ad group #" + getPrintableDateTime())
             .setCpcBidMicros(2_500_000L);
 
     KeywordPlanAdGroupOperation op =

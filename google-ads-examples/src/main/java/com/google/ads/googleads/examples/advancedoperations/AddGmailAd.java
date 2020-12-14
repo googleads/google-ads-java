@@ -14,7 +14,7 @@
 
 package com.google.ads.googleads.examples.advancedoperations;
 
-import static com.google.ads.googleads.examples.utils.CodeSampleHelper.getPrintableDatetime;
+import static com.google.ads.googleads.examples.utils.CodeSampleHelper.getPrintableDateTime;
 
 import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
@@ -216,7 +216,7 @@ public class AddGmailAd {
     // Creates the ad.
     Ad ad =
         Ad.newBuilder()
-            .setName("Gmail Ad #" + getPrintableDatetime())
+            .setName("Gmail Ad #" + getPrintableDateTime())
             .addFinalUrls("http://www.example.com")
             .setGmailAd(gmailAdInfo)
             .build();

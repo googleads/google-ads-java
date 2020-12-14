@@ -104,7 +104,7 @@ public class UploadImageAsset {
             // If you specify the name field, then both the asset name and the image being
             // uploaded should be unique, and should not match another ACTIVE asset in this
             // customer account.
-            // .setName("Jupiter Trip # " + getPrintableDatetime())
+            // .setName("Jupiter Trip # " + getPrintableDateTime())
             .setType(AssetType.IMAGE)
             .setImageAsset(imageAsset)
             .build();
