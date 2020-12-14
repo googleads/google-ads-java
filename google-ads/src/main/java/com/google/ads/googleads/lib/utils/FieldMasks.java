@@ -143,7 +143,7 @@ public class FieldMasks {
       FieldDescriptor childField = descriptor.findFieldByName(fieldName);
 
       V childValue;
-      if (descriptor.findFieldByName(fieldName) == null) {
+      if (childField == null) {
         throw new IllegalArgumentException(
             String.format(
                 "Cannot retrieve field value. A matching field was not found after"
