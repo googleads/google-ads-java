@@ -101,7 +101,7 @@ public class GetChangeSummary {
             + "change_status.feed_item "
             + "FROM change_status "
             + "WHERE change_status.last_change_date_time DURING LAST_14_DAYS "
-            + "ORDER BY change_status.last_change_date_time"
+            + "ORDER BY change_status.last_change_date_time "
             + "LIMIT 10000";
 
     try (GoogleAdsServiceClient client =

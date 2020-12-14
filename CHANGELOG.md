@@ -1,3 +1,11 @@
+10.1.0 - 2020-12-14
+-------------------
+- Switched code generation to new pipeline (a.k.a. microgenerator).
+- Added support for authenticating with service accounts.
+- Added support for loading configuration from environment variables.
+- Updated logging to scrub PII fields from Feed and CreateCustomerClientRequest.
+- Added/updated various code examples.
+
 10.0.0 - 2020-11-11
 -------------------
 - Added support and examples for Google Ads API v6.0.

@@ -19,7 +19,7 @@
 
   <groupId>com.google.api-ads</groupId>
   <artifactId>google-ads-parent</artifactId>
-  <version>10.0.1-SNAPSHOT</version>
+  <version>10.1.1-SNAPSHOT</version>
 
   <packaging>pom</packaging>
   <name>Google Ads API client library for Java project</name>
