@@ -142,7 +142,6 @@ public class FieldMasks {
       Descriptor descriptor = currentEntity.getDescriptorForType();
       FieldDescriptor childField = descriptor.findFieldByName(fieldName);
 
-      V childValue;
       if (childField == null) {
         throw new IllegalArgumentException(
             String.format(
@@ -150,7 +149,7 @@ public class FieldMasks {
                     + " navigating %s up to %s",
                 fieldMaskPath, fieldName));
       }
-      childValue = (V) currentEntity.getField(childField);
+      V childValue = (V) currentEntity.getField(childField);
       if (fieldMaskParts.isEmpty()) {
         return childValue;
       } else if (childValue == null) {
