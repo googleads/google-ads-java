@@ -149,9 +149,9 @@ public class FieldMasks {
                     + " navigating %s up to %s",
                 fieldMaskPath, fieldName));
       }
-      V childValue = (V) currentEntity.getField(childField);
+      Object childValue = currentEntity.getField(childField);
       if (fieldMaskParts.isEmpty()) {
-        return childValue;
+        return (V) childValue;
       } else if (childValue == null) {
         throw new IllegalArgumentException(
             String.format(

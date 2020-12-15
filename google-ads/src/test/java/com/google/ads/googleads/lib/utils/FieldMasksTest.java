@@ -3,9 +3,11 @@ package com.google.ads.googleads.lib.utils;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertThrows;
 
+import com.google.ads.googleads.v6.common.ManualCpc;
 import com.google.ads.googleads.v6.enums.CampaignStatusEnum.CampaignStatus;
 import com.google.ads.googleads.v6.resources.Campaign;
 import com.google.common.collect.ImmutableList;
+import com.google.protobuf.Descriptors.EnumValueDescriptor;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -40,10 +42,26 @@ public class FieldMasksTest {
   }
 
   @Test
+  public void getFieldValue_assigns_basic_field() {
+    String name = FieldMasks.getFieldValue("name", campaign);
+    Campaign campaignToCompare = campaign.toBuilder().setName(name).build();
+    assertEquals(campaign, campaignToCompare);
+  }
+
+  @Test
   public void getFieldValue_gets_nested_field() {
     assertEquals(
         FieldMasks.getFieldValue("manual_cpc.enhanced_cpc_enabled", campaign),
         campaign.getManualCpc().getEnhancedCpcEnabled());
+  }
+
+  @Test
+  public void getFieldValue_assigns_nested_field() {
+    boolean enhancedCpcEnabled =
+        FieldMasks.getFieldValue("manual_cpc.enhanced_cpc_enabled", campaign);
+    Campaign.Builder campaignToCompare = campaign.toBuilder();
+    campaignToCompare.getManualCpcBuilder().setEnhancedCpcEnabled(enhancedCpcEnabled);
+    assertEquals(campaign, campaignToCompare.build());
   }
 
   @Test
@@ -52,9 +70,24 @@ public class FieldMasksTest {
   }
 
   @Test
+  public void getFieldValue_assigns_top_nested_field() {
+    ManualCpc manualCpc = FieldMasks.getFieldValue("manual_cpc", campaign);
+    Campaign campaignToCompare = campaign.toBuilder().setManualCpc(manualCpc).build();
+    assertEquals(campaign, campaignToCompare);
+  }
+
+  @Test
   public void getFieldValue_gets_enum_field() {
     assertEquals(
         FieldMasks.getFieldValue("status", campaign), campaign.getStatus().getValueDescriptor());
+  }
+
+  @Test
+  public void getFieldValue_assigns_enum_value() {
+    EnumValueDescriptor status = FieldMasks.getFieldValue("status", campaign);
+    Campaign.Builder campaignToCompare = campaign.toBuilder();
+    campaignToCompare.setStatus(CampaignStatus.forNumber(status.getNumber()));
+    assertEquals(campaign, campaignToCompare.build());
   }
 
   @Test
