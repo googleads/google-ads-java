@@ -14,6 +14,8 @@
 
 package com.google.ads.googleads.examples.campaignmanagement;
 
+import static com.google.ads.googleads.examples.utils.CodeSampleHelper.getPrintableDateTime;
+
 import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
@@ -97,7 +99,7 @@ public class AddCampaignDraft {
     CampaignDraft draft =
         CampaignDraft.newBuilder()
             .setBaseCampaign(ResourceNames.campaign(customerId, baseCampaignId))
-            .setName("Campaign Draft #" + System.currentTimeMillis())
+            .setName("Campaign Draft #" + getPrintableDateTime())
             .build();
 
     // Creates an operation to create the draft campaign.

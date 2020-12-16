@@ -14,6 +14,8 @@
 
 package com.google.ads.googleads.examples.extensions;
 
+import static com.google.ads.googleads.examples.utils.CodeSampleHelper.getPrintableDateTime;
+
 import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
@@ -165,7 +167,7 @@ public class AddGoogleMyBusinessLocationExtensions {
     // feed.
     Feed.Builder gmbFeed =
         Feed.newBuilder()
-            .setName("Google My Business feed #" + System.currentTimeMillis())
+            .setName("Google My Business feed #" + getPrintableDateTime())
             // Configures the location feed populated from Google My Business Locations.
             .setPlacesLocationFeedData(placesLocationFeedData)
             // Since this feed's feed items will be managed by Google,

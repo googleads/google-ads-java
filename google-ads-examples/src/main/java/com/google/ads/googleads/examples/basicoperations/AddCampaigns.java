@@ -14,6 +14,8 @@
 
 package com.google.ads.googleads.examples.basicoperations;
 
+import static com.google.ads.googleads.examples.utils.CodeSampleHelper.getPrintableDateTime;
+
 import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
@@ -104,7 +106,7 @@ public class AddCampaigns {
   private static String addCampaignBudget(GoogleAdsClient googleAdsClient, long customerId) {
     CampaignBudget budget =
         CampaignBudget.newBuilder()
-            .setName("Interplanetary Cruise Budget #" + System.currentTimeMillis())
+            .setName("Interplanetary Cruise Budget #" + getPrintableDateTime())
             .setDeliveryMethod(BudgetDeliveryMethod.STANDARD)
             .setAmountMicros(500_000)
             .build();
@@ -151,7 +153,7 @@ public class AddCampaigns {
       // Creates the campaign.
       Campaign campaign =
           Campaign.newBuilder()
-              .setName("Interplanetary Cruise #" + System.currentTimeMillis())
+              .setName("Interplanetary Cruise #" + getPrintableDateTime())
               .setAdvertisingChannelType(AdvertisingChannelType.SEARCH)
               // Recommendation: Set the campaign to PAUSED when creating it to prevent
               // the ads from immediately serving. Set to ENABLED once you've added

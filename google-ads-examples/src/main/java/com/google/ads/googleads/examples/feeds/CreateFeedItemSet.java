@@ -14,6 +14,8 @@
 
 package com.google.ads.googleads.examples.feeds;
 
+import static com.google.ads.googleads.examples.utils.CodeSampleHelper.getPrintableDateTime;
+
 import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
@@ -97,7 +99,7 @@ public class CreateFeedItemSet {
     FeedItemSet.Builder feedItemSetBuilder =
         FeedItemSet.newBuilder()
             .setFeed(ResourceNames.feed(customerId, feedId))
-            .setDisplayName("Feed Item Set #" + System.currentTimeMillis());
+            .setDisplayName("Feed Item Set #" + getPrintableDateTime());
 
     // A feed item set can be created as a dynamic set by setting an optional filter field
     // below. If your feed is a location extension, uncomment the code that calls

@@ -14,6 +14,8 @@
 
 package com.google.ads.googleads.examples.campaignmanagement;
 
+import static com.google.ads.googleads.examples.utils.CodeSampleHelper.getPrintableDateTime;
+
 import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
@@ -131,7 +133,7 @@ public class CreateCampaignExperiment {
     CampaignExperiment experiment =
         CampaignExperiment.newBuilder()
             .setCampaignDraft(ResourceNames.campaignDraft(customerId, baseCampaignId, draftId))
-            .setName("Campaign experiment #" + System.currentTimeMillis())
+            .setName("Campaign experiment #" + getPrintableDateTime())
             .setTrafficSplitPercent(50)
             .setTrafficSplitType(CampaignExperimentTrafficSplitType.RANDOM_QUERY)
             .build();

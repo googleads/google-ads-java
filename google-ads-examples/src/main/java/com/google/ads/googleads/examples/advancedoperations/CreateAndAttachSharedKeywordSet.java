@@ -14,6 +14,8 @@
 
 package com.google.ads.googleads.examples.advancedoperations;
 
+import static com.google.ads.googleads.examples.utils.CodeSampleHelper.getPrintableDateTime;
+
 import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
@@ -113,7 +115,7 @@ public class CreateAndAttachSharedKeywordSet {
     // Creates shared negative keyword set.
     SharedSet sharedSet =
         SharedSet.newBuilder()
-            .setName("API Negative keyword list - " + System.currentTimeMillis())
+            .setName("API Negative keyword list - " + getPrintableDateTime())
             .setType(SharedSetType.NEGATIVE_KEYWORDS)
             .build();
 

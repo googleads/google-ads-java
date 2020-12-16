@@ -14,6 +14,8 @@
 
 package com.google.ads.googleads.examples.campaignmanagement;
 
+import static com.google.ads.googleads.examples.utils.CodeSampleHelper.getPrintableDateTime;
+
 import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
@@ -98,7 +100,7 @@ public class GraduateCampaignExperiment {
     // after it is made independent by graduation.
     CampaignBudget budget =
         CampaignBudget.newBuilder()
-            .setName("Budget #" + System.currentTimeMillis())
+            .setName("Budget #" + getPrintableDateTime())
             .setAmountMicros(50_000_000)
             .setDeliveryMethod(BudgetDeliveryMethod.STANDARD)
             .build();

@@ -14,6 +14,8 @@
 
 package com.google.ads.googleads.examples.remarketing;
 
+import static com.google.ads.googleads.examples.utils.CodeSampleHelper.getPrintableDateTime;
+
 import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
@@ -162,7 +164,7 @@ public class AddFlightsFeed {
     // Creates the feed.
     Feed feed =
         Feed.newBuilder()
-            .setName("Flights Feed #" + System.currentTimeMillis())
+            .setName("Flights Feed #" + getPrintableDateTime())
             .addAttributes(flightDescriptionAttribute)
             .addAttributes(destinationIdAttribute)
             .addAttributes(flightPriceAttribute)

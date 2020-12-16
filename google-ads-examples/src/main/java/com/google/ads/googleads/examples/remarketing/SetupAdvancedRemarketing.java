@@ -14,6 +14,8 @@
 
 package com.google.ads.googleads.examples.remarketing;
 
+import static com.google.ads.googleads.examples.utils.CodeSampleHelper.getPrintableDateTime;
+
 import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
@@ -211,7 +213,7 @@ public class SetupAdvancedRemarketing {
     // Creates a user list.
     UserList userList =
         UserList.newBuilder()
-            .setName("My expression rule user list #" + System.currentTimeMillis())
+            .setName("My expression rule user list #" + getPrintableDateTime())
             .setDescription(
                 "Users who checked out in November or December OR visited the checkout page"
                     + " with more than one item in their cart")

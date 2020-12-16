@@ -14,6 +14,8 @@
 
 package com.google.ads.googleads.examples.advancedoperations;
 
+import static com.google.ads.googleads.examples.utils.CodeSampleHelper.getPrintableDateTime;
+
 import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
@@ -173,7 +175,7 @@ public class AddDynamicPageFeed {
     // Creates the feed.
     Feed feed =
         Feed.newBuilder()
-            .setName("DSA Feed #" + System.currentTimeMillis())
+            .setName("DSA Feed #" + getPrintableDateTime())
             .addAllAttributes(ImmutableList.of(urlAttribute, labelAttribute))
             .build();
 
