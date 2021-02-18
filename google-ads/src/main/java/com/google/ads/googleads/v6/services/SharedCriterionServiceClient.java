@@ -84,8 +84,7 @@ import javax.annotation.Generated;
  *
  * <p>Please refer to the GitHub repository's samples for more quickstart code snippets.
  */
-@BetaApi
-@Generated("by gapic-generator")
+@Generated("by gapic-generator-java")
 public class SharedCriterionServiceClient implements BackgroundResource {
   private final SharedCriterionServiceSettings settings;
   private final SharedCriterionServiceStub stub;
@@ -143,7 +142,7 @@ public class SharedCriterionServiceClient implements BackgroundResource {
   /**
    * Returns the requested shared criterion in full detail.
    *
-   * @param resource_name Required. The resource name of the shared criterion to fetch.
+   * @param resourceName Required. The resource name of the shared criterion to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final SharedCriterion getSharedCriterion(SharedCriterionName resourceName) {
@@ -158,7 +157,7 @@ public class SharedCriterionServiceClient implements BackgroundResource {
   /**
    * Returns the requested shared criterion in full detail.
    *
-   * @param resource_name Required. The resource name of the shared criterion to fetch.
+   * @param resourceName Required. The resource name of the shared criterion to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final SharedCriterion getSharedCriterion(String resourceName) {
@@ -193,7 +192,7 @@ public class SharedCriterionServiceClient implements BackgroundResource {
   /**
    * Creates or removes shared criteria. Operation statuses are returned.
    *
-   * @param customer_id Required. The ID of the customer whose shared criteria are being modified.
+   * @param customerId Required. The ID of the customer whose shared criteria are being modified.
    * @param operations Required. The list of operations to perform on individual shared criteria.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */

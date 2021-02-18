@@ -59,6 +59,19 @@ private static final long serialVersionUID = 0L;
             resourceName_ = s;
             break;
           }
+          case 18: {
+            com.google.ads.googleads.v6.resources.SharedCriterion.Builder subBuilder = null;
+            if (sharedCriterion_ != null) {
+              subBuilder = sharedCriterion_.toBuilder();
+            }
+            sharedCriterion_ = input.readMessage(com.google.ads.googleads.v6.resources.SharedCriterion.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(sharedCriterion_);
+              sharedCriterion_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
           default: {
             if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -137,6 +150,50 @@ private static final long serialVersionUID = 0L;
     }
   }
 
+  public static final int SHARED_CRITERION_FIELD_NUMBER = 2;
+  private com.google.ads.googleads.v6.resources.SharedCriterion sharedCriterion_;
+  /**
+   * <pre>
+   * The mutated shared criterion with only mutable fields after mutate. The
+   * field will only be returned when response_content_type is set to
+   * "MUTABLE_RESOURCE".
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v6.resources.SharedCriterion shared_criterion = 2;</code>
+   * @return Whether the sharedCriterion field is set.
+   */
+  @java.lang.Override
+  public boolean hasSharedCriterion() {
+    return sharedCriterion_ != null;
+  }
+  /**
+   * <pre>
+   * The mutated shared criterion with only mutable fields after mutate. The
+   * field will only be returned when response_content_type is set to
+   * "MUTABLE_RESOURCE".
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v6.resources.SharedCriterion shared_criterion = 2;</code>
+   * @return The sharedCriterion.
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v6.resources.SharedCriterion getSharedCriterion() {
+    return sharedCriterion_ == null ? com.google.ads.googleads.v6.resources.SharedCriterion.getDefaultInstance() : sharedCriterion_;
+  }
+  /**
+   * <pre>
+   * The mutated shared criterion with only mutable fields after mutate. The
+   * field will only be returned when response_content_type is set to
+   * "MUTABLE_RESOURCE".
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v6.resources.SharedCriterion shared_criterion = 2;</code>
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v6.resources.SharedCriterionOrBuilder getSharedCriterionOrBuilder() {
+    return getSharedCriterion();
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -154,6 +211,9 @@ private static final long serialVersionUID = 0L;
     if (!getResourceNameBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, resourceName_);
     }
+    if (sharedCriterion_ != null) {
+      output.writeMessage(2, getSharedCriterion());
+    }
     unknownFields.writeTo(output);
   }
 
@@ -165,6 +225,10 @@ private static final long serialVersionUID = 0L;
     size = 0;
     if (!getResourceNameBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, resourceName_);
+    }
+    if (sharedCriterion_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(2, getSharedCriterion());
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -183,6 +247,11 @@ private static final long serialVersionUID = 0L;
 
     if (!getResourceName()
         .equals(other.getResourceName())) return false;
+    if (hasSharedCriterion() != other.hasSharedCriterion()) return false;
+    if (hasSharedCriterion()) {
+      if (!getSharedCriterion()
+          .equals(other.getSharedCriterion())) return false;
+    }
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -196,6 +265,10 @@ private static final long serialVersionUID = 0L;
     hash = (19 * hash) + getDescriptor().hashCode();
     hash = (37 * hash) + RESOURCE_NAME_FIELD_NUMBER;
     hash = (53 * hash) + getResourceName().hashCode();
+    if (hasSharedCriterion()) {
+      hash = (37 * hash) + SHARED_CRITERION_FIELD_NUMBER;
+      hash = (53 * hash) + getSharedCriterion().hashCode();
+    }
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -335,6 +408,12 @@ private static final long serialVersionUID = 0L;
       super.clear();
       resourceName_ = "";
 
+      if (sharedCriterionBuilder_ == null) {
+        sharedCriterion_ = null;
+      } else {
+        sharedCriterion_ = null;
+        sharedCriterionBuilder_ = null;
+      }
       return this;
     }
 
@@ -362,6 +441,11 @@ private static final long serialVersionUID = 0L;
     public com.google.ads.googleads.v6.services.MutateSharedCriterionResult buildPartial() {
       com.google.ads.googleads.v6.services.MutateSharedCriterionResult result = new com.google.ads.googleads.v6.services.MutateSharedCriterionResult(this);
       result.resourceName_ = resourceName_;
+      if (sharedCriterionBuilder_ == null) {
+        result.sharedCriterion_ = sharedCriterion_;
+      } else {
+        result.sharedCriterion_ = sharedCriterionBuilder_.build();
+      }
       onBuilt();
       return result;
     }
@@ -413,6 +497,9 @@ private static final long serialVersionUID = 0L;
       if (!other.getResourceName().isEmpty()) {
         resourceName_ = other.resourceName_;
         onChanged();
+      }
+      if (other.hasSharedCriterion()) {
+        mergeSharedCriterion(other.getSharedCriterion());
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -537,6 +624,179 @@ private static final long serialVersionUID = 0L;
       resourceName_ = value;
       onChanged();
       return this;
+    }
+
+    private com.google.ads.googleads.v6.resources.SharedCriterion sharedCriterion_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v6.resources.SharedCriterion, com.google.ads.googleads.v6.resources.SharedCriterion.Builder, com.google.ads.googleads.v6.resources.SharedCriterionOrBuilder> sharedCriterionBuilder_;
+    /**
+     * <pre>
+     * The mutated shared criterion with only mutable fields after mutate. The
+     * field will only be returned when response_content_type is set to
+     * "MUTABLE_RESOURCE".
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v6.resources.SharedCriterion shared_criterion = 2;</code>
+     * @return Whether the sharedCriterion field is set.
+     */
+    public boolean hasSharedCriterion() {
+      return sharedCriterionBuilder_ != null || sharedCriterion_ != null;
+    }
+    /**
+     * <pre>
+     * The mutated shared criterion with only mutable fields after mutate. The
+     * field will only be returned when response_content_type is set to
+     * "MUTABLE_RESOURCE".
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v6.resources.SharedCriterion shared_criterion = 2;</code>
+     * @return The sharedCriterion.
+     */
+    public com.google.ads.googleads.v6.resources.SharedCriterion getSharedCriterion() {
+      if (sharedCriterionBuilder_ == null) {
+        return sharedCriterion_ == null ? com.google.ads.googleads.v6.resources.SharedCriterion.getDefaultInstance() : sharedCriterion_;
+      } else {
+        return sharedCriterionBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * The mutated shared criterion with only mutable fields after mutate. The
+     * field will only be returned when response_content_type is set to
+     * "MUTABLE_RESOURCE".
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v6.resources.SharedCriterion shared_criterion = 2;</code>
+     */
+    public Builder setSharedCriterion(com.google.ads.googleads.v6.resources.SharedCriterion value) {
+      if (sharedCriterionBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        sharedCriterion_ = value;
+        onChanged();
+      } else {
+        sharedCriterionBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The mutated shared criterion with only mutable fields after mutate. The
+     * field will only be returned when response_content_type is set to
+     * "MUTABLE_RESOURCE".
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v6.resources.SharedCriterion shared_criterion = 2;</code>
+     */
+    public Builder setSharedCriterion(
+        com.google.ads.googleads.v6.resources.SharedCriterion.Builder builderForValue) {
+      if (sharedCriterionBuilder_ == null) {
+        sharedCriterion_ = builderForValue.build();
+        onChanged();
+      } else {
+        sharedCriterionBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The mutated shared criterion with only mutable fields after mutate. The
+     * field will only be returned when response_content_type is set to
+     * "MUTABLE_RESOURCE".
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v6.resources.SharedCriterion shared_criterion = 2;</code>
+     */
+    public Builder mergeSharedCriterion(com.google.ads.googleads.v6.resources.SharedCriterion value) {
+      if (sharedCriterionBuilder_ == null) {
+        if (sharedCriterion_ != null) {
+          sharedCriterion_ =
+            com.google.ads.googleads.v6.resources.SharedCriterion.newBuilder(sharedCriterion_).mergeFrom(value).buildPartial();
+        } else {
+          sharedCriterion_ = value;
+        }
+        onChanged();
+      } else {
+        sharedCriterionBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The mutated shared criterion with only mutable fields after mutate. The
+     * field will only be returned when response_content_type is set to
+     * "MUTABLE_RESOURCE".
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v6.resources.SharedCriterion shared_criterion = 2;</code>
+     */
+    public Builder clearSharedCriterion() {
+      if (sharedCriterionBuilder_ == null) {
+        sharedCriterion_ = null;
+        onChanged();
+      } else {
+        sharedCriterion_ = null;
+        sharedCriterionBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The mutated shared criterion with only mutable fields after mutate. The
+     * field will only be returned when response_content_type is set to
+     * "MUTABLE_RESOURCE".
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v6.resources.SharedCriterion shared_criterion = 2;</code>
+     */
+    public com.google.ads.googleads.v6.resources.SharedCriterion.Builder getSharedCriterionBuilder() {
+      
+      onChanged();
+      return getSharedCriterionFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * The mutated shared criterion with only mutable fields after mutate. The
+     * field will only be returned when response_content_type is set to
+     * "MUTABLE_RESOURCE".
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v6.resources.SharedCriterion shared_criterion = 2;</code>
+     */
+    public com.google.ads.googleads.v6.resources.SharedCriterionOrBuilder getSharedCriterionOrBuilder() {
+      if (sharedCriterionBuilder_ != null) {
+        return sharedCriterionBuilder_.getMessageOrBuilder();
+      } else {
+        return sharedCriterion_ == null ?
+            com.google.ads.googleads.v6.resources.SharedCriterion.getDefaultInstance() : sharedCriterion_;
+      }
+    }
+    /**
+     * <pre>
+     * The mutated shared criterion with only mutable fields after mutate. The
+     * field will only be returned when response_content_type is set to
+     * "MUTABLE_RESOURCE".
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v6.resources.SharedCriterion shared_criterion = 2;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v6.resources.SharedCriterion, com.google.ads.googleads.v6.resources.SharedCriterion.Builder, com.google.ads.googleads.v6.resources.SharedCriterionOrBuilder> 
+        getSharedCriterionFieldBuilder() {
+      if (sharedCriterionBuilder_ == null) {
+        sharedCriterionBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.ads.googleads.v6.resources.SharedCriterion, com.google.ads.googleads.v6.resources.SharedCriterion.Builder, com.google.ads.googleads.v6.resources.SharedCriterionOrBuilder>(
+                getSharedCriterion(),
+                getParentForChildren(),
+                isClean());
+        sharedCriterion_ = null;
+      }
+      return sharedCriterionBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

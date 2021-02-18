@@ -83,8 +83,7 @@ import javax.annotation.Generated;
  *
  * <p>Please refer to the GitHub repository's samples for more quickstart code snippets.
  */
-@BetaApi
-@Generated("by gapic-generator")
+@Generated("by gapic-generator-java")
 public class TopicConstantServiceClient implements BackgroundResource {
   private final TopicConstantServiceSettings settings;
   private final TopicConstantServiceStub stub;
@@ -141,7 +140,7 @@ public class TopicConstantServiceClient implements BackgroundResource {
   /**
    * Returns the requested topic constant in full detail.
    *
-   * @param resource_name Required. Resource name of the Topic to fetch.
+   * @param resourceName Required. Resource name of the Topic to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final TopicConstant getTopicConstant(TopicConstantName resourceName) {
@@ -156,7 +155,7 @@ public class TopicConstantServiceClient implements BackgroundResource {
   /**
    * Returns the requested topic constant in full detail.
    *
-   * @param resource_name Required. Resource name of the Topic to fetch.
+   * @param resourceName Required. Resource name of the Topic to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final TopicConstant getTopicConstant(String resourceName) {

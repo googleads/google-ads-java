@@ -75,7 +75,6 @@ import org.threeten.bp.Duration;
  *     adGroupAudienceViewServiceSettingsBuilder.build();
  * }</pre>
  */
-@BetaApi
 @Generated("by gapic-generator-java")
 public class AdGroupAudienceViewServiceStubSettings
     extends StubSettings<AdGroupAudienceViewServiceStubSettings> {

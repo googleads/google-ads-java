@@ -133,6 +133,11 @@ public class AddDisplayUploadAd {
     // The HTML5 zip file contains all the HTML, CSS, and images needed for the
     // HTML5 ad. For help on creating an HTML5 zip file, check out Google Web
     // Designer (https://www.google.com/webdesigner/).
+    //
+    // There are several types of display upload ads. For this example, we will create
+    // an HTML5 upload ad, which requires a media bundle.
+    // The DisplayUploadProductType field lists the available display upload types:
+    // https://developers.google.com/google-ads/api/reference/rpc/latest/DisplayUploadAdInfo
     byte[] html5Zip = ByteStreams.toByteArray(new URL(BUNDLE_URL).openStream());
 
     // Creates the media bundle asset.

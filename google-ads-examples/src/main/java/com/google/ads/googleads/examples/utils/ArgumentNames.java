@@ -65,6 +65,7 @@ public final class ArgumentNames {
   public static final String GMB_ACCESS_TOKEN = "--gmbAccessToken";
   public static final String GMB_EMAIL_ADDRESS = "--gmbEmailAddress";
   public static final String HOTEL_CENTER_ACCOUNT_ID = "--hotelCenterAccountId";
+  public static final String IMAGE_ASSET_ID = "--imageAssetId";
   public static final String KEYWORD_PLAN_ID = "--keywordPlanId";
   public static final String KEYWORD_TEXT = "--keywordText";
   public static final String KEYWORD_TEXTS = "--keywordTexts";

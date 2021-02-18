@@ -85,8 +85,7 @@ import javax.annotation.Generated;
  *
  * <p>Please refer to the GitHub repository's samples for more quickstart code snippets.
  */
-@BetaApi
-@Generated("by gapic-generator")
+@Generated("by gapic-generator-java")
 public class ReachPlanServiceClient implements BackgroundResource {
   private final ReachPlanServiceSettings settings;
   private final ReachPlanServiceStub stub;
@@ -166,8 +165,8 @@ public class ReachPlanServiceClient implements BackgroundResource {
   /**
    * Returns the list of per-location plannable YouTube ad formats with allowed targeting.
    *
-   * @param plannable_location_id Required. The ID of the selected location for planning. To list
-   *     the available plannable location ids use ListPlannableLocations.
+   * @param plannableLocationId Required. The ID of the selected location for planning. To list the
+   *     available plannable location ids use ListPlannableLocations.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final ListPlannableProductsResponse listPlannableProducts(String plannableLocationId) {
@@ -206,11 +205,11 @@ public class ReachPlanServiceClient implements BackgroundResource {
    * Generates a product mix ideas given a set of preferences. This method helps the advertiser to
    * obtain a good mix of ad formats and budget allocations based on its preferences.
    *
-   * @param customer_id Required. The ID of the customer.
-   * @param plannable_location_id Required. The ID of the location, this is one of the ids returned
-   *     by ListPlannableLocations.
-   * @param currency_code Required. Currency code. Three-character ISO 4217 currency code.
-   * @param budget_micros Required. Total budget. Amount in micros. One million is equivalent to one
+   * @param customerId Required. The ID of the customer.
+   * @param plannableLocationId Required. The ID of the location, this is one of the ids returned by
+   *     ListPlannableLocations.
+   * @param currencyCode Required. Currency code. Three-character ISO 4217 currency code.
+   * @param budgetMicros Required. Total budget. Amount in micros. One million is equivalent to one
    *     unit.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
@@ -255,10 +254,10 @@ public class ReachPlanServiceClient implements BackgroundResource {
   /**
    * Generates a reach forecast for a given targeting / product mix.
    *
-   * @param customer_id Required. The ID of the customer.
-   * @param campaign_duration Required. Campaign duration.
-   * @param planned_products Required. The products to be forecast. The max number of allowed
-   *     planned products is 15.
+   * @param customerId Required. The ID of the customer.
+   * @param campaignDuration Required. Campaign duration.
+   * @param plannedProducts Required. The products to be forecast. The max number of allowed planned
+   *     products is 15.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final GenerateReachForecastResponse generateReachForecast(

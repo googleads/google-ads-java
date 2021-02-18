@@ -1,0 +1,5 @@
+bars {
+  repeated_primitive_string: "test"
+  repeated_primitive_string: "test"
+  repeated_primitive_string: "test"
+}

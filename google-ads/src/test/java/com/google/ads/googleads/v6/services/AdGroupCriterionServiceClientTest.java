@@ -88,7 +88,9 @@ public class AdGroupCriterionServiceClientTest {
             .setResourceName(
                 AdGroupCriterionName.of("[CUSTOMER_ID]", "[AD_GROUP_ID]", "[CRITERION_ID]")
                     .toString())
+            .setQualityInfo(AdGroupCriterion.QualityInfo.newBuilder().build())
             .addAllDisapprovalReasons(new ArrayList<String>())
+            .setPositionEstimates(AdGroupCriterion.PositionEstimates.newBuilder().build())
             .addAllFinalUrls(new ArrayList<String>())
             .addAllFinalMobileUrls(new ArrayList<String>())
             .addAllUrlCustomParameters(new ArrayList<CustomParameter>())
@@ -134,7 +136,9 @@ public class AdGroupCriterionServiceClientTest {
             .setResourceName(
                 AdGroupCriterionName.of("[CUSTOMER_ID]", "[AD_GROUP_ID]", "[CRITERION_ID]")
                     .toString())
+            .setQualityInfo(AdGroupCriterion.QualityInfo.newBuilder().build())
             .addAllDisapprovalReasons(new ArrayList<String>())
+            .setPositionEstimates(AdGroupCriterion.PositionEstimates.newBuilder().build())
             .addAllFinalUrls(new ArrayList<String>())
             .addAllFinalMobileUrls(new ArrayList<String>())
             .addAllUrlCustomParameters(new ArrayList<CustomParameter>())

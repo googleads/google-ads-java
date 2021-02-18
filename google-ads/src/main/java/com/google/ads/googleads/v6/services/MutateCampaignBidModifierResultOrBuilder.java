@@ -26,4 +26,37 @@ public interface MutateCampaignBidModifierResultOrBuilder extends
    */
   com.google.protobuf.ByteString
       getResourceNameBytes();
+
+  /**
+   * <pre>
+   * The mutated campaign bid modifier with only mutable fields after mutate.
+   * The field will only be returned when response_content_type is set to
+   * "MUTABLE_RESOURCE".
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v6.resources.CampaignBidModifier campaign_bid_modifier = 2;</code>
+   * @return Whether the campaignBidModifier field is set.
+   */
+  boolean hasCampaignBidModifier();
+  /**
+   * <pre>
+   * The mutated campaign bid modifier with only mutable fields after mutate.
+   * The field will only be returned when response_content_type is set to
+   * "MUTABLE_RESOURCE".
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v6.resources.CampaignBidModifier campaign_bid_modifier = 2;</code>
+   * @return The campaignBidModifier.
+   */
+  com.google.ads.googleads.v6.resources.CampaignBidModifier getCampaignBidModifier();
+  /**
+   * <pre>
+   * The mutated campaign bid modifier with only mutable fields after mutate.
+   * The field will only be returned when response_content_type is set to
+   * "MUTABLE_RESOURCE".
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v6.resources.CampaignBidModifier campaign_bid_modifier = 2;</code>
+   */
+  com.google.ads.googleads.v6.resources.CampaignBidModifierOrBuilder getCampaignBidModifierOrBuilder();
 }

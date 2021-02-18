@@ -77,12 +77,22 @@ public class GrpcParentalStatusViewServiceStub extends ParentalStatusViewService
         ParentalStatusViewServiceStubSettings.newBuilder().build(), clientContext, callableFactory);
   }
 
+  /**
+   * Constructs an instance of GrpcParentalStatusViewServiceStub, using the given settings. This is
+   * protected so that it is easy to make a subclass, but otherwise, the static factory methods
+   * should be preferred.
+   */
   protected GrpcParentalStatusViewServiceStub(
       ParentalStatusViewServiceStubSettings settings, ClientContext clientContext)
       throws IOException {
     this(settings, clientContext, new GrpcParentalStatusViewServiceCallableFactory());
   }
 
+  /**
+   * Constructs an instance of GrpcParentalStatusViewServiceStub, using the given settings. This is
+   * protected so that it is easy to make a subclass, but otherwise, the static factory methods
+   * should be preferred.
+   */
   protected GrpcParentalStatusViewServiceStub(
       ParentalStatusViewServiceStubSettings settings,
       ClientContext clientContext,

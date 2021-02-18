@@ -36,7 +36,7 @@ public interface CustomerManagerLinkOrBuilder extends
    * Output only. The manager customer linked to the customer.
    * </pre>
    *
-   * <code>string manager_customer = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>string manager_customer = 6 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return Whether the managerCustomer field is set.
    */
   boolean hasManagerCustomer();
@@ -45,7 +45,7 @@ public interface CustomerManagerLinkOrBuilder extends
    * Output only. The manager customer linked to the customer.
    * </pre>
    *
-   * <code>string manager_customer = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>string manager_customer = 6 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return The managerCustomer.
    */
   java.lang.String getManagerCustomer();
@@ -54,7 +54,7 @@ public interface CustomerManagerLinkOrBuilder extends
    * Output only. The manager customer linked to the customer.
    * </pre>
    *
-   * <code>string manager_customer = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>string manager_customer = 6 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return The bytes for managerCustomer.
    */
   com.google.protobuf.ByteString

@@ -77,12 +77,22 @@ public class GrpcDisplayKeywordViewServiceStub extends DisplayKeywordViewService
         DisplayKeywordViewServiceStubSettings.newBuilder().build(), clientContext, callableFactory);
   }
 
+  /**
+   * Constructs an instance of GrpcDisplayKeywordViewServiceStub, using the given settings. This is
+   * protected so that it is easy to make a subclass, but otherwise, the static factory methods
+   * should be preferred.
+   */
   protected GrpcDisplayKeywordViewServiceStub(
       DisplayKeywordViewServiceStubSettings settings, ClientContext clientContext)
       throws IOException {
     this(settings, clientContext, new GrpcDisplayKeywordViewServiceCallableFactory());
   }
 
+  /**
+   * Constructs an instance of GrpcDisplayKeywordViewServiceStub, using the given settings. This is
+   * protected so that it is easy to make a subclass, but otherwise, the static factory methods
+   * should be preferred.
+   */
   protected GrpcDisplayKeywordViewServiceStub(
       DisplayKeywordViewServiceStubSettings settings,
       ClientContext clientContext,

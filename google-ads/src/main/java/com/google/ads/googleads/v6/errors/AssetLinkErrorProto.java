@@ -30,20 +30,30 @@ public final class AssetLinkErrorProto {
     java.lang.String[] descriptorData = {
       "\n5google/ads/googleads/v6/errors/asset_l" +
       "ink_error.proto\022\036google.ads.googleads.v6" +
-      ".errors\032\034google/api/annotations.proto\"\202\002" +
-      "\n\022AssetLinkErrorEnum\"\353\001\n\016AssetLinkError\022" +
+      ".errors\032\034google/api/annotations.proto\"\206\005" +
+      "\n\022AssetLinkErrorEnum\"\357\004\n\016AssetLinkError\022" +
       "\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\027\n\023PINNING" +
       "_UNSUPPORTED\020\002\022\032\n\026UNSUPPORTED_FIELD_TYPE" +
       "\020\003\022+\n\'FIELD_TYPE_INCOMPATIBLE_WITH_ASSET" +
       "_TYPE\020\004\022.\n*FIELD_TYPE_INCOMPATIBLE_WITH_" +
       "CAMPAIGN_TYPE\020\005\022)\n%INCOMPATIBLE_ADVERTIS" +
-      "ING_CHANNEL_TYPE\020\006B\356\001\n\"com.google.ads.go" +
-      "ogleads.v6.errorsB\023AssetLinkErrorProtoP\001" +
-      "ZDgoogle.golang.org/genproto/googleapis/" +
-      "ads/googleads/v6/errors;errors\242\002\003GAA\252\002\036G" +
-      "oogle.Ads.GoogleAds.V6.Errors\312\002\036Google\\A" +
-      "ds\\GoogleAds\\V6\\Errors\352\002\"Google::Ads::Go" +
-      "ogleAds::V6::Errorsb\006proto3"
+      "ING_CHANNEL_TYPE\020\006\022.\n*IMAGE_NOT_WITHIN_S" +
+      "PECIFIED_DIMENSION_RANGE\020\007\022\030\n\024INVALID_PI" +
+      "NNED_FIELD\020\010\022*\n&MEDIA_BUNDLE_ASSET_FILE_" +
+      "SIZE_TOO_LARGE\020\t\022:\n6NOT_ENOUGH_AVAILABLE" +
+      "_ASSET_LINKS_FOR_VALID_COMBINATION\020\n\0222\n." +
+      "NOT_ENOUGH_AVAILABLE_ASSET_LINKS_WITH_FA" +
+      "LLBACK\020\013\022H\nDNOT_ENOUGH_AVAILABLE_ASSET_L" +
+      "INKS_WITH_FALLBACK_FOR_VALID_COMBINATION" +
+      "\020\014\022\031\n\025YOUTUBE_VIDEO_REMOVED\020\r\022\032\n\026YOUTUBE" +
+      "_VIDEO_TOO_LONG\020\016\022\033\n\027YOUTUBE_VIDEO_TOO_S" +
+      "HORT\020\017B\356\001\n\"com.google.ads.googleads.v6.e" +
+      "rrorsB\023AssetLinkErrorProtoP\001ZDgoogle.gol" +
+      "ang.org/genproto/googleapis/ads/googlead" +
+      "s/v6/errors;errors\242\002\003GAA\252\002\036Google.Ads.Go" +
+      "ogleAds.V6.Errors\312\002\036Google\\Ads\\GoogleAds" +
+      "\\V6\\Errors\352\002\"Google::Ads::GoogleAds::V6:" +
+      ":Errorsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

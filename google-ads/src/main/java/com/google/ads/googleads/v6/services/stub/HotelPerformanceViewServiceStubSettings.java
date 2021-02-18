@@ -75,7 +75,6 @@ import org.threeten.bp.Duration;
  *     hotelPerformanceViewServiceSettingsBuilder.build();
  * }</pre>
  */
-@BetaApi
 @Generated("by gapic-generator-java")
 public class HotelPerformanceViewServiceStubSettings
     extends StubSettings<HotelPerformanceViewServiceStubSettings> {

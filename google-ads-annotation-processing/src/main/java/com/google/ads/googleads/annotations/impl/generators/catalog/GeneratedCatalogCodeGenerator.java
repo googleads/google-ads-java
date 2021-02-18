@@ -193,14 +193,14 @@ public class GeneratedCatalogCodeGenerator implements Generator {
             .addMethod(getLatestVersion)
             .addMethod(createAllVersionsClient);
 
-    // The generated catalog should implement the ApiCatalog class as not to be called directly.
+    // Generated catalog should implement the ApiCatalog interface.
     // This does not, however, apply to catalogs that are generated during the test-compile phase.
     // This is because the createAllVersionsClient method in ApiCatalog will not have a matching
     // implementation for test cases (specifically there will be a mismatch on
     // GoogleAdsAllVersions class name which is suffixed with the catalog name).
     if (generatedCatalogSimpleName.equals("GeneratedCatalog")) {
-      generatedCatalogBuilder.superclass(
-          ClassName.get("com.google.ads.googleads.lib.catalog", "AbstractCatalog"));
+      generatedCatalogBuilder.addSuperinterface(
+          ClassName.get("com.google.ads.googleads.lib.catalog", "ApiCatalog"));
     }
 
     // Creates a version class for each version.

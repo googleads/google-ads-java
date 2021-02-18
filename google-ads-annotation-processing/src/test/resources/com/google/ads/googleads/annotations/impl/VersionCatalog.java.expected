@@ -13,12 +13,6 @@
 // limitations under the License.
 package com.google.ads.googleads.lib.catalog;
 
-import com.google.ads.googleads.lib.utils.messageproxy.DefaultMessageProxyProvider;
-import com.google.ads.googleads.lib.utils.messageproxy.generated.v123.CreateCustomerClientRequestMessageProxy;
-import com.google.ads.googleads.lib.utils.messageproxy.generated.v123.CustomerUserAccessMessageProxy;
-import com.google.ads.googleads.lib.utils.messageproxy.generated.v123.FeedMessageProxy;
-import com.google.ads.googleads.lib.utils.messageproxy.generated.v123.SearchGoogleAdsResponseMessageProxy;
-import com.google.ads.googleads.lib.utils.messageproxy.generated.v123.SearchGoogleAdsStreamResponseMessageProxy;
 import com.google.ads.googleads.v123.errors.GoogleAdsException;
 import com.google.ads.googleads.v123.services.GoogleAdsVersion;
 import com.google.common.collect.ImmutableSet;
@@ -32,33 +26,15 @@ public class VersionCatalog_foo {
     builder.add(new Version(
           "v123",
           new GoogleAdsException.Factory(),
-          GoogleAdsVersion.class,
-          new DefaultMessageProxyProvider(
-            new SearchGoogleAdsStreamResponseMessageProxy(),
-            new SearchGoogleAdsResponseMessageProxy(),
-            new CustomerUserAccessMessageProxy(),
-            new FeedMessageProxy(),
-            new CreateCustomerClientRequestMessageProxy())));
+          GoogleAdsVersion.class));
     builder.add(new Version(
           "v456",
           new com.google.ads.googleads.v456.errors.GoogleAdsException.Factory(),
-          com.google.ads.googleads.v456.services.GoogleAdsVersion.class,
-          new DefaultMessageProxyProvider(
-            new com.google.ads.googleads.lib.utils.messageproxy.generated.v456.SearchGoogleAdsStreamResponseMessageProxy(),
-            new com.google.ads.googleads.lib.utils.messageproxy.generated.v456.SearchGoogleAdsResponseMessageProxy(),
-            new com.google.ads.googleads.lib.utils.messageproxy.generated.v456.CustomerUserAccessMessageProxy(),
-            new com.google.ads.googleads.lib.utils.messageproxy.generated.v456.FeedMessageProxy(),
-            new com.google.ads.googleads.lib.utils.messageproxy.generated.v456.CreateCustomerClientRequestMessageProxy())));
+          com.google.ads.googleads.v456.services.GoogleAdsVersion.class));
     builder.add(new Version(
           "v789",
           new com.google.ads.googleads.v789.errors.GoogleAdsException.Factory(),
-          com.google.ads.googleads.v789.services.GoogleAdsVersion.class,
-          new DefaultMessageProxyProvider(
-            new com.google.ads.googleads.lib.utils.messageproxy.generated.v789.SearchGoogleAdsStreamResponseMessageProxy(),
-            new com.google.ads.googleads.lib.utils.messageproxy.generated.v789.SearchGoogleAdsResponseMessageProxy(),
-            new com.google.ads.googleads.lib.utils.messageproxy.generated.v789.CustomerUserAccessMessageProxy(),
-            new com.google.ads.googleads.lib.utils.messageproxy.generated.v789.FeedMessageProxy(),
-            new com.google.ads.googleads.lib.utils.messageproxy.generated.v789.CreateCustomerClientRequestMessageProxy())));
+          com.google.ads.googleads.v789.services.GoogleAdsVersion.class));
     return builder.build();
   }
 }

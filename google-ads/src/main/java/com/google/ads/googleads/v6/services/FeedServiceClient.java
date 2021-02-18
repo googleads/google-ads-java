@@ -81,8 +81,7 @@ import javax.annotation.Generated;
  *
  * <p>Please refer to the GitHub repository's samples for more quickstart code snippets.
  */
-@BetaApi
-@Generated("by gapic-generator")
+@Generated("by gapic-generator-java")
 public class FeedServiceClient implements BackgroundResource {
   private final FeedServiceSettings settings;
   private final FeedServiceStub stub;
@@ -138,7 +137,7 @@ public class FeedServiceClient implements BackgroundResource {
   /**
    * Returns the requested feed in full detail.
    *
-   * @param resource_name Required. The resource name of the feed to fetch.
+   * @param resourceName Required. The resource name of the feed to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final Feed getFeed(FeedName resourceName) {
@@ -153,7 +152,7 @@ public class FeedServiceClient implements BackgroundResource {
   /**
    * Returns the requested feed in full detail.
    *
-   * @param resource_name Required. The resource name of the feed to fetch.
+   * @param resourceName Required. The resource name of the feed to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final Feed getFeed(String resourceName) {
@@ -186,7 +185,7 @@ public class FeedServiceClient implements BackgroundResource {
   /**
    * Creates, updates, or removes feeds. Operation statuses are returned.
    *
-   * @param customer_id Required. The ID of the customer whose feeds are being modified.
+   * @param customerId Required. The ID of the customer whose feeds are being modified.
    * @param operations Required. The list of operations to perform on individual feeds.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */

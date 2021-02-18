@@ -77,7 +77,6 @@ import org.threeten.bp.Duration;
  *     campaignAssetServiceSettingsBuilder.build();
  * }</pre>
  */
-@BetaApi
 @Generated("by gapic-generator-java")
 public class CampaignAssetServiceStubSettings
     extends StubSettings<CampaignAssetServiceStubSettings> {

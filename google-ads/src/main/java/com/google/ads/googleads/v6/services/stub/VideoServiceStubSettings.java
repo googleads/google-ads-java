@@ -74,7 +74,6 @@ import org.threeten.bp.Duration;
  * VideoServiceStubSettings videoServiceSettings = videoServiceSettingsBuilder.build();
  * }</pre>
  */
-@BetaApi
 @Generated("by gapic-generator-java")
 public class VideoServiceStubSettings extends StubSettings<VideoServiceStubSettings> {
   /** The default scopes of the service. */

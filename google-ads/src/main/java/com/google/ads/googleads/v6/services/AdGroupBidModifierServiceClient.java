@@ -84,8 +84,7 @@ import javax.annotation.Generated;
  *
  * <p>Please refer to the GitHub repository's samples for more quickstart code snippets.
  */
-@BetaApi
-@Generated("by gapic-generator")
+@Generated("by gapic-generator-java")
 public class AdGroupBidModifierServiceClient implements BackgroundResource {
   private final AdGroupBidModifierServiceSettings settings;
   private final AdGroupBidModifierServiceStub stub;
@@ -144,7 +143,7 @@ public class AdGroupBidModifierServiceClient implements BackgroundResource {
   /**
    * Returns the requested ad group bid modifier in full detail.
    *
-   * @param resource_name Required. The resource name of the ad group bid modifier to fetch.
+   * @param resourceName Required. The resource name of the ad group bid modifier to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final AdGroupBidModifier getAdGroupBidModifier(AdGroupBidModifierName resourceName) {
@@ -159,7 +158,7 @@ public class AdGroupBidModifierServiceClient implements BackgroundResource {
   /**
    * Returns the requested ad group bid modifier in full detail.
    *
-   * @param resource_name Required. The resource name of the ad group bid modifier to fetch.
+   * @param resourceName Required. The resource name of the ad group bid modifier to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final AdGroupBidModifier getAdGroupBidModifier(String resourceName) {
@@ -194,8 +193,7 @@ public class AdGroupBidModifierServiceClient implements BackgroundResource {
   /**
    * Creates, updates, or removes ad group bid modifiers. Operation statuses are returned.
    *
-   * @param customer_id Required. ID of the customer whose ad group bid modifiers are being
-   *     modified.
+   * @param customerId Required. ID of the customer whose ad group bid modifiers are being modified.
    * @param operations Required. The list of operations to perform on individual ad group bid
    *     modifiers.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails

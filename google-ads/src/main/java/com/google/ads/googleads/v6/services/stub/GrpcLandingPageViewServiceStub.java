@@ -77,11 +77,21 @@ public class GrpcLandingPageViewServiceStub extends LandingPageViewServiceStub {
         LandingPageViewServiceStubSettings.newBuilder().build(), clientContext, callableFactory);
   }
 
+  /**
+   * Constructs an instance of GrpcLandingPageViewServiceStub, using the given settings. This is
+   * protected so that it is easy to make a subclass, but otherwise, the static factory methods
+   * should be preferred.
+   */
   protected GrpcLandingPageViewServiceStub(
       LandingPageViewServiceStubSettings settings, ClientContext clientContext) throws IOException {
     this(settings, clientContext, new GrpcLandingPageViewServiceCallableFactory());
   }
 
+  /**
+   * Constructs an instance of GrpcLandingPageViewServiceStub, using the given settings. This is
+   * protected so that it is easy to make a subclass, but otherwise, the static factory methods
+   * should be preferred.
+   */
   protected GrpcLandingPageViewServiceStub(
       LandingPageViewServiceStubSettings settings,
       ClientContext clientContext,

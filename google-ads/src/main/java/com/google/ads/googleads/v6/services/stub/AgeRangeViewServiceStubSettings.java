@@ -75,7 +75,6 @@ import org.threeten.bp.Duration;
  *     ageRangeViewServiceSettingsBuilder.build();
  * }</pre>
  */
-@BetaApi
 @Generated("by gapic-generator-java")
 public class AgeRangeViewServiceStubSettings extends StubSettings<AgeRangeViewServiceStubSettings> {
   /** The default scopes of the service. */

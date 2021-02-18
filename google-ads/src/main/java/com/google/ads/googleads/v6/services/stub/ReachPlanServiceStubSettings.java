@@ -80,7 +80,6 @@ import org.threeten.bp.Duration;
  * ReachPlanServiceStubSettings reachPlanServiceSettings = reachPlanServiceSettingsBuilder.build();
  * }</pre>
  */
-@BetaApi
 @Generated("by gapic-generator-java")
 public class ReachPlanServiceStubSettings extends StubSettings<ReachPlanServiceStubSettings> {
   /** The default scopes of the service. */

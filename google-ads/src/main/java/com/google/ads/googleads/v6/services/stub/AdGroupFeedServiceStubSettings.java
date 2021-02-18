@@ -77,7 +77,6 @@ import org.threeten.bp.Duration;
  *     adGroupFeedServiceSettingsBuilder.build();
  * }</pre>
  */
-@BetaApi
 @Generated("by gapic-generator-java")
 public class AdGroupFeedServiceStubSettings extends StubSettings<AdGroupFeedServiceStubSettings> {
   /** The default scopes of the service. */

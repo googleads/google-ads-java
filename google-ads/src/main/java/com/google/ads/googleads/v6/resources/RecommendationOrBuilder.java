@@ -123,8 +123,8 @@ public interface RecommendationOrBuilder extends
    * This field will be set for the following recommendation types:
    * CALL_EXTENSION, CALLOUT_EXTENSION, ENHANCED_CPC_OPT_IN, KEYWORD,
    * KEYWORD_MATCH_TYPE, MAXIMIZE_CLICKS_OPT_IN, MAXIMIZE_CONVERSIONS_OPT_IN,
-   * OPTIMIZE_AD_ROTATION, SEARCH_PARTNERS_OPT_IN, SITELINK_EXTENSION,
-   * TARGET_CPA_OPT_IN, TARGET_ROAS_OPT_IN, TEXT_AD
+   * OPTIMIZE_AD_ROTATION, RESPONSIVE_SEARCH_AD, SEARCH_PARTNERS_OPT_IN,
+   * SITELINK_EXTENSION, TARGET_CPA_OPT_IN, TARGET_ROAS_OPT_IN, TEXT_AD
    * </pre>
    *
    * <code>string campaign = 25 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
@@ -138,8 +138,8 @@ public interface RecommendationOrBuilder extends
    * This field will be set for the following recommendation types:
    * CALL_EXTENSION, CALLOUT_EXTENSION, ENHANCED_CPC_OPT_IN, KEYWORD,
    * KEYWORD_MATCH_TYPE, MAXIMIZE_CLICKS_OPT_IN, MAXIMIZE_CONVERSIONS_OPT_IN,
-   * OPTIMIZE_AD_ROTATION, SEARCH_PARTNERS_OPT_IN, SITELINK_EXTENSION,
-   * TARGET_CPA_OPT_IN, TARGET_ROAS_OPT_IN, TEXT_AD
+   * OPTIMIZE_AD_ROTATION, RESPONSIVE_SEARCH_AD, SEARCH_PARTNERS_OPT_IN,
+   * SITELINK_EXTENSION, TARGET_CPA_OPT_IN, TARGET_ROAS_OPT_IN, TEXT_AD
    * </pre>
    *
    * <code>string campaign = 25 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
@@ -153,8 +153,8 @@ public interface RecommendationOrBuilder extends
    * This field will be set for the following recommendation types:
    * CALL_EXTENSION, CALLOUT_EXTENSION, ENHANCED_CPC_OPT_IN, KEYWORD,
    * KEYWORD_MATCH_TYPE, MAXIMIZE_CLICKS_OPT_IN, MAXIMIZE_CONVERSIONS_OPT_IN,
-   * OPTIMIZE_AD_ROTATION, SEARCH_PARTNERS_OPT_IN, SITELINK_EXTENSION,
-   * TARGET_CPA_OPT_IN, TARGET_ROAS_OPT_IN, TEXT_AD
+   * OPTIMIZE_AD_ROTATION, RESPONSIVE_SEARCH_AD, SEARCH_PARTNERS_OPT_IN,
+   * SITELINK_EXTENSION, TARGET_CPA_OPT_IN, TARGET_ROAS_OPT_IN, TEXT_AD
    * </pre>
    *
    * <code>string campaign = 25 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
@@ -168,7 +168,7 @@ public interface RecommendationOrBuilder extends
    * Output only. The ad group targeted by this recommendation. This will be set only when
    * the recommendation affects a single ad group.
    * This field will be set for the following recommendation types:
-   * KEYWORD, OPTIMIZE_AD_ROTATION, TEXT_AD
+   * KEYWORD, OPTIMIZE_AD_ROTATION, RESPONSIVE_SEARCH_AD, TEXT_AD
    * </pre>
    *
    * <code>string ad_group = 26 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
@@ -180,7 +180,7 @@ public interface RecommendationOrBuilder extends
    * Output only. The ad group targeted by this recommendation. This will be set only when
    * the recommendation affects a single ad group.
    * This field will be set for the following recommendation types:
-   * KEYWORD, OPTIMIZE_AD_ROTATION, TEXT_AD
+   * KEYWORD, OPTIMIZE_AD_ROTATION, RESPONSIVE_SEARCH_AD, TEXT_AD
    * </pre>
    *
    * <code>string ad_group = 26 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
@@ -192,7 +192,7 @@ public interface RecommendationOrBuilder extends
    * Output only. The ad group targeted by this recommendation. This will be set only when
    * the recommendation affects a single ad group.
    * This field will be set for the following recommendation types:
-   * KEYWORD, OPTIMIZE_AD_ROTATION, TEXT_AD
+   * KEYWORD, OPTIMIZE_AD_ROTATION, RESPONSIVE_SEARCH_AD, TEXT_AD
    * </pre>
    *
    * <code>string ad_group = 26 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
@@ -651,6 +651,33 @@ public interface RecommendationOrBuilder extends
    * <code>.google.ads.googleads.v6.resources.Recommendation.TargetRoasOptInRecommendation target_roas_opt_in_recommendation = 23 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.ads.googleads.v6.resources.Recommendation.TargetRoasOptInRecommendationOrBuilder getTargetRoasOptInRecommendationOrBuilder();
+
+  /**
+   * <pre>
+   * Output only. The add responsive search ad recommendation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v6.resources.Recommendation.ResponsiveSearchAdRecommendation responsive_search_ad_recommendation = 28 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the responsiveSearchAdRecommendation field is set.
+   */
+  boolean hasResponsiveSearchAdRecommendation();
+  /**
+   * <pre>
+   * Output only. The add responsive search ad recommendation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v6.resources.Recommendation.ResponsiveSearchAdRecommendation responsive_search_ad_recommendation = 28 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The responsiveSearchAdRecommendation.
+   */
+  com.google.ads.googleads.v6.resources.Recommendation.ResponsiveSearchAdRecommendation getResponsiveSearchAdRecommendation();
+  /**
+   * <pre>
+   * Output only. The add responsive search ad recommendation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v6.resources.Recommendation.ResponsiveSearchAdRecommendation responsive_search_ad_recommendation = 28 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   */
+  com.google.ads.googleads.v6.resources.Recommendation.ResponsiveSearchAdRecommendationOrBuilder getResponsiveSearchAdRecommendationOrBuilder();
 
   public com.google.ads.googleads.v6.resources.Recommendation.RecommendationCase getRecommendationCase();
 }

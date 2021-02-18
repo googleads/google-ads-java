@@ -80,8 +80,7 @@ import javax.annotation.Generated;
  *
  * <p>Please refer to the GitHub repository's samples for more quickstart code snippets.
  */
-@BetaApi
-@Generated("by gapic-generator")
+@Generated("by gapic-generator-java")
 public class VideoServiceClient implements BackgroundResource {
   private final VideoServiceSettings settings;
   private final VideoServiceStub stub;
@@ -137,7 +136,7 @@ public class VideoServiceClient implements BackgroundResource {
   /**
    * Returns the requested video in full detail.
    *
-   * @param resource_name Required. The resource name of the video to fetch.
+   * @param resourceName Required. The resource name of the video to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final Video getVideo(VideoName resourceName) {
@@ -152,7 +151,7 @@ public class VideoServiceClient implements BackgroundResource {
   /**
    * Returns the requested video in full detail.
    *
-   * @param resource_name Required. The resource name of the video to fetch.
+   * @param resourceName Required. The resource name of the video to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final Video getVideo(String resourceName) {

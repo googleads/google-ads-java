@@ -84,8 +84,7 @@ import javax.annotation.Generated;
  *
  * <p>Please refer to the GitHub repository's samples for more quickstart code snippets.
  */
-@BetaApi
-@Generated("by gapic-generator")
+@Generated("by gapic-generator-java")
 public class CampaignBudgetServiceClient implements BackgroundResource {
   private final CampaignBudgetServiceSettings settings;
   private final CampaignBudgetServiceStub stub;
@@ -142,7 +141,7 @@ public class CampaignBudgetServiceClient implements BackgroundResource {
   /**
    * Returns the requested Campaign Budget in full detail.
    *
-   * @param resource_name Required. The resource name of the campaign budget to fetch.
+   * @param resourceName Required. The resource name of the campaign budget to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final CampaignBudget getCampaignBudget(CampaignBudgetName resourceName) {
@@ -157,7 +156,7 @@ public class CampaignBudgetServiceClient implements BackgroundResource {
   /**
    * Returns the requested Campaign Budget in full detail.
    *
-   * @param resource_name Required. The resource name of the campaign budget to fetch.
+   * @param resourceName Required. The resource name of the campaign budget to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final CampaignBudget getCampaignBudget(String resourceName) {
@@ -191,7 +190,7 @@ public class CampaignBudgetServiceClient implements BackgroundResource {
   /**
    * Creates, updates, or removes campaign budgets. Operation statuses are returned.
    *
-   * @param customer_id Required. The ID of the customer whose campaign budgets are being modified.
+   * @param customerId Required. The ID of the customer whose campaign budgets are being modified.
    * @param operations Required. The list of operations to perform on individual campaign budgets.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */

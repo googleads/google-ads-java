@@ -84,8 +84,7 @@ import javax.annotation.Generated;
  *
  * <p>Please refer to the GitHub repository's samples for more quickstart code snippets.
  */
-@BetaApi
-@Generated("by gapic-generator")
+@Generated("by gapic-generator-java")
 public class AdGroupExtensionSettingServiceClient implements BackgroundResource {
   private final AdGroupExtensionSettingServiceSettings settings;
   private final AdGroupExtensionSettingServiceStub stub;
@@ -147,7 +146,7 @@ public class AdGroupExtensionSettingServiceClient implements BackgroundResource 
   /**
    * Returns the requested ad group extension setting in full detail.
    *
-   * @param resource_name Required. The resource name of the ad group extension setting to fetch.
+   * @param resourceName Required. The resource name of the ad group extension setting to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final AdGroupExtensionSetting getAdGroupExtensionSetting(
@@ -163,7 +162,7 @@ public class AdGroupExtensionSettingServiceClient implements BackgroundResource 
   /**
    * Returns the requested ad group extension setting in full detail.
    *
-   * @param resource_name Required. The resource name of the ad group extension setting to fetch.
+   * @param resourceName Required. The resource name of the ad group extension setting to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final AdGroupExtensionSetting getAdGroupExtensionSetting(String resourceName) {
@@ -199,7 +198,7 @@ public class AdGroupExtensionSettingServiceClient implements BackgroundResource 
   /**
    * Creates, updates, or removes ad group extension settings. Operation statuses are returned.
    *
-   * @param customer_id Required. The ID of the customer whose ad group extension settings are being
+   * @param customerId Required. The ID of the customer whose ad group extension settings are being
    *     modified.
    * @param operations Required. The list of operations to perform on individual ad group extension
    *     settings.

@@ -77,7 +77,6 @@ import org.threeten.bp.Duration;
  *     adParameterServiceSettingsBuilder.build();
  * }</pre>
  */
-@BetaApi
 @Generated("by gapic-generator-java")
 public class AdParameterServiceStubSettings extends StubSettings<AdParameterServiceStubSettings> {
   /** The default scopes of the service. */

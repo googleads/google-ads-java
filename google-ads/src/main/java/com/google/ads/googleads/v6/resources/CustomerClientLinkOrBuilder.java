@@ -36,7 +36,7 @@ public interface CustomerClientLinkOrBuilder extends
    * Immutable. The client customer linked to this customer.
    * </pre>
    *
-   * <code>string client_customer = 7 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * <code>string client_customer = 7 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return Whether the clientCustomer field is set.
    */
   boolean hasClientCustomer();
@@ -45,7 +45,7 @@ public interface CustomerClientLinkOrBuilder extends
    * Immutable. The client customer linked to this customer.
    * </pre>
    *
-   * <code>string client_customer = 7 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * <code>string client_customer = 7 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return The clientCustomer.
    */
   java.lang.String getClientCustomer();
@@ -54,7 +54,7 @@ public interface CustomerClientLinkOrBuilder extends
    * Immutable. The client customer linked to this customer.
    * </pre>
    *
-   * <code>string client_customer = 7 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * <code>string client_customer = 7 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return The bytes for clientCustomer.
    */
   com.google.protobuf.ByteString

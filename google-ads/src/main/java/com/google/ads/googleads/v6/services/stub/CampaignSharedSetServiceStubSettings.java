@@ -77,7 +77,6 @@ import org.threeten.bp.Duration;
  *     campaignSharedSetServiceSettingsBuilder.build();
  * }</pre>
  */
-@BetaApi
 @Generated("by gapic-generator-java")
 public class CampaignSharedSetServiceStubSettings
     extends StubSettings<CampaignSharedSetServiceStubSettings> {

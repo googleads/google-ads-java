@@ -242,7 +242,8 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object feed_;
   /**
    * <pre>
-   * Immutable. ID of the feed containing the feed items in the set. Immutable. Required.
+   * Immutable. The resource name of the feed containing the feed items in the set.
+   * Immutable. Required.
    * </pre>
    *
    * <code>string feed = 2 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
@@ -263,7 +264,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Immutable. ID of the feed containing the feed items in the set. Immutable. Required.
+   * Immutable. The resource name of the feed containing the feed items in the set.
+   * Immutable. Required.
    * </pre>
    *
    * <code>string feed = 2 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
@@ -1038,7 +1040,8 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object feed_ = "";
     /**
      * <pre>
-     * Immutable. ID of the feed containing the feed items in the set. Immutable. Required.
+     * Immutable. The resource name of the feed containing the feed items in the set.
+     * Immutable. Required.
      * </pre>
      *
      * <code>string feed = 2 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
@@ -1058,7 +1061,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Immutable. ID of the feed containing the feed items in the set. Immutable. Required.
+     * Immutable. The resource name of the feed containing the feed items in the set.
+     * Immutable. Required.
      * </pre>
      *
      * <code>string feed = 2 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
@@ -1079,7 +1083,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Immutable. ID of the feed containing the feed items in the set. Immutable. Required.
+     * Immutable. The resource name of the feed containing the feed items in the set.
+     * Immutable. Required.
      * </pre>
      *
      * <code>string feed = 2 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
@@ -1098,7 +1103,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Immutable. ID of the feed containing the feed items in the set. Immutable. Required.
+     * Immutable. The resource name of the feed containing the feed items in the set.
+     * Immutable. Required.
      * </pre>
      *
      * <code>string feed = 2 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
@@ -1112,7 +1118,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Immutable. ID of the feed containing the feed items in the set. Immutable. Required.
+     * Immutable. The resource name of the feed containing the feed items in the set.
+     * Immutable. Required.
      * </pre>
      *
      * <code>string feed = 2 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>

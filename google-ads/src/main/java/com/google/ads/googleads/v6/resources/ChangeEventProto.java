@@ -43,67 +43,87 @@ public final class ChangeEventProto {
       "eads/v6/enums/change_client_type.proto\032>" +
       "google/ads/googleads/v6/enums/change_eve" +
       "nt_resource_type.proto\0322google/ads/googl" +
-      "eads/v6/enums/criterion_type.proto\032=goog" +
-      "le/ads/googleads/v6/enums/resource_chang" +
-      "e_operation.proto\032*google/ads/googleads/" +
-      "v6/resources/ad.proto\0320google/ads/google" +
-      "ads/v6/resources/ad_group.proto\032=google/" +
-      "ads/googleads/v6/resources/ad_group_bid_" +
-      "modifier.proto\032:google/ads/googleads/v6/" +
-      "resources/ad_group_criterion.proto\0320goog" +
-      "le/ads/googleads/v6/resources/campaign.p" +
-      "roto\0327google/ads/googleads/v6/resources/" +
-      "campaign_budget.proto\032:google/ads/google" +
-      "ads/v6/resources/campaign_criterion.prot" +
-      "o\032\037google/api/field_behavior.proto\032\031goog" +
-      "le/api/resource.proto\032 google/protobuf/f" +
-      "ield_mask.proto\032\034google/api/annotations." +
-      "proto\"\230\014\n\013ChangeEvent\022C\n\rresource_name\030\001" +
-      " \001(\tB,\340A\003\372A&\n$googleads.googleapis.com/C" +
-      "hangeEvent\022\035\n\020change_date_time\030\002 \001(\tB\003\340A" +
-      "\003\022u\n\024change_resource_type\030\003 \001(\0162R.google" +
-      ".ads.googleads.v6.enums.ChangeEventResou" +
-      "rceTypeEnum.ChangeEventResourceTypeB\003\340A\003" +
-      "\022!\n\024change_resource_name\030\004 \001(\tB\003\340A\003\022^\n\013c" +
-      "lient_type\030\005 \001(\0162D.google.ads.googleads." +
-      "v6.enums.ChangeClientTypeEnum.ChangeClie" +
-      "ntTypeB\003\340A\003\022\027\n\nuser_email\030\006 \001(\tB\003\340A\003\022Y\n\014" +
-      "old_resource\030\007 \001(\0132>.google.ads.googlead" +
+      "eads/v6/enums/criterion_type.proto\032/goog" +
+      "le/ads/googleads/v6/enums/feed_origin.pr" +
+      "oto\032=google/ads/googleads/v6/enums/resou" +
+      "rce_change_operation.proto\032*google/ads/g" +
+      "oogleads/v6/resources/ad.proto\0320google/a" +
+      "ds/googleads/v6/resources/ad_group.proto" +
+      "\0323google/ads/googleads/v6/resources/ad_g" +
+      "roup_ad.proto\032=google/ads/googleads/v6/r" +
+      "esources/ad_group_bid_modifier.proto\032:go" +
+      "ogle/ads/googleads/v6/resources/ad_group" +
+      "_criterion.proto\0325google/ads/googleads/v" +
+      "6/resources/ad_group_feed.proto\0320google/" +
+      "ads/googleads/v6/resources/campaign.prot" +
+      "o\0327google/ads/googleads/v6/resources/cam" +
+      "paign_budget.proto\032:google/ads/googleads" +
+      "/v6/resources/campaign_criterion.proto\0325" +
+      "google/ads/googleads/v6/resources/campai" +
+      "gn_feed.proto\032,google/ads/googleads/v6/r" +
+      "esources/feed.proto\0321google/ads/googlead" +
+      "s/v6/resources/feed_item.proto\032\037google/a" +
+      "pi/field_behavior.proto\032\031google/api/reso" +
+      "urce.proto\032 google/protobuf/field_mask.p" +
+      "roto\032\034google/api/annotations.proto\"\355\017\n\013C" +
+      "hangeEvent\022C\n\rresource_name\030\001 \001(\tB,\340A\003\372A" +
+      "&\n$googleads.googleapis.com/ChangeEvent\022" +
+      "\035\n\020change_date_time\030\002 \001(\tB\003\340A\003\022u\n\024change" +
+      "_resource_type\030\003 \001(\0162R.google.ads.google" +
+      "ads.v6.enums.ChangeEventResourceTypeEnum" +
+      ".ChangeEventResourceTypeB\003\340A\003\022!\n\024change_" +
+      "resource_name\030\004 \001(\tB\003\340A\003\022^\n\013client_type\030" +
+      "\005 \001(\0162D.google.ads.googleads.v6.enums.Ch" +
+      "angeClientTypeEnum.ChangeClientTypeB\003\340A\003" +
+      "\022\027\n\nuser_email\030\006 \001(\tB\003\340A\003\022Y\n\014old_resourc" +
+      "e\030\007 \001(\0132>.google.ads.googleads.v6.resour" +
+      "ces.ChangeEvent.ChangedResourceB\003\340A\003\022Y\n\014" +
+      "new_resource\030\010 \001(\0132>.google.ads.googlead" +
       "s.v6.resources.ChangeEvent.ChangedResour" +
-      "ceB\003\340A\003\022Y\n\014new_resource\030\010 \001(\0132>.google.a" +
-      "ds.googleads.v6.resources.ChangeEvent.Ch" +
-      "angedResourceB\003\340A\003\022z\n\031resource_change_op" +
-      "eration\030\t \001(\0162R.google.ads.googleads.v6." +
-      "enums.ResourceChangeOperationEnum.Resour" +
-      "ceChangeOperationB\003\340A\003\0227\n\016changed_fields" +
-      "\030\n \001(\0132\032.google.protobuf.FieldMaskB\003\340A\003\022" +
-      ";\n\010campaign\030\013 \001(\tB)\340A\003\372A#\n!googleads.goo" +
-      "gleapis.com/Campaign\022:\n\010ad_group\030\014 \001(\tB(" +
-      "\340A\003\372A\"\n googleads.googleapis.com/AdGroup" +
-      "\032\251\004\n\017ChangedResource\0226\n\002ad\030\001 \001(\0132%.googl" +
-      "e.ads.googleads.v6.resources.AdB\003\340A\003\022A\n\010" +
-      "ad_group\030\002 \001(\0132*.google.ads.googleads.v6" +
-      ".resources.AdGroupB\003\340A\003\022T\n\022ad_group_crit" +
-      "erion\030\003 \001(\01323.google.ads.googleads.v6.re" +
-      "sources.AdGroupCriterionB\003\340A\003\022B\n\010campaig" +
-      "n\030\004 \001(\0132+.google.ads.googleads.v6.resour" +
-      "ces.CampaignB\003\340A\003\022O\n\017campaign_budget\030\005 \001" +
-      "(\01321.google.ads.googleads.v6.resources.C" +
-      "ampaignBudgetB\003\340A\003\022Y\n\025ad_group_bid_modif" +
-      "ier\030\006 \001(\01325.google.ads.googleads.v6.reso" +
-      "urces.AdGroupBidModifierB\003\340A\003\022U\n\022campaig" +
-      "n_criterion\030\007 \001(\01324.google.ads.googleads" +
-      ".v6.resources.CampaignCriterionB\003\340A\003:\201\001\352" +
-      "A~\n$googleads.googleapis.com/ChangeEvent" +
-      "\022Vcustomers/{customer_id}/changeEvents/{" +
-      "timestamp_micros}~{command_index}~{mutat" +
-      "e_index}B\375\001\n%com.google.ads.googleads.v6" +
-      ".resourcesB\020ChangeEventProtoP\001ZJgoogle.g" +
-      "olang.org/genproto/googleapis/ads/google" +
-      "ads/v6/resources;resources\242\002\003GAA\252\002!Googl" +
-      "e.Ads.GoogleAds.V6.Resources\312\002!Google\\Ad" +
-      "s\\GoogleAds\\V6\\Resources\352\002%Google::Ads::" +
-      "GoogleAds::V6::Resourcesb\006proto3"
+      "ceB\003\340A\003\022z\n\031resource_change_operation\030\t \001" +
+      "(\0162R.google.ads.googleads.v6.enums.Resou" +
+      "rceChangeOperationEnum.ResourceChangeOpe" +
+      "rationB\003\340A\003\0227\n\016changed_fields\030\n \001(\0132\032.go" +
+      "ogle.protobuf.FieldMaskB\003\340A\003\022;\n\010campaign" +
+      "\030\013 \001(\tB)\340A\003\372A#\n!googleads.googleapis.com" +
+      "/Campaign\022:\n\010ad_group\030\014 \001(\tB(\340A\003\372A\"\n goo" +
+      "gleads.googleapis.com/AdGroup\0223\n\004feed\030\r " +
+      "\001(\tB%\340A\003\372A\037\n\035googleads.googleapis.com/Fe" +
+      "ed\022<\n\tfeed_item\030\016 \001(\tB)\340A\003\372A#\n!googleads" +
+      ".googleapis.com/FeedItem\032\213\007\n\017ChangedReso" +
+      "urce\0226\n\002ad\030\001 \001(\0132%.google.ads.googleads." +
+      "v6.resources.AdB\003\340A\003\022A\n\010ad_group\030\002 \001(\0132*" +
+      ".google.ads.googleads.v6.resources.AdGro" +
+      "upB\003\340A\003\022T\n\022ad_group_criterion\030\003 \001(\01323.go" +
+      "ogle.ads.googleads.v6.resources.AdGroupC" +
+      "riterionB\003\340A\003\022B\n\010campaign\030\004 \001(\0132+.google" +
+      ".ads.googleads.v6.resources.CampaignB\003\340A" +
+      "\003\022O\n\017campaign_budget\030\005 \001(\01321.google.ads." +
+      "googleads.v6.resources.CampaignBudgetB\003\340" +
+      "A\003\022Y\n\025ad_group_bid_modifier\030\006 \001(\01325.goog" +
+      "le.ads.googleads.v6.resources.AdGroupBid" +
+      "ModifierB\003\340A\003\022U\n\022campaign_criterion\030\007 \001(" +
+      "\01324.google.ads.googleads.v6.resources.Ca" +
+      "mpaignCriterionB\003\340A\003\022:\n\004feed\030\010 \001(\0132\'.goo" +
+      "gle.ads.googleads.v6.resources.FeedB\003\340A\003" +
+      "\022C\n\tfeed_item\030\t \001(\0132+.google.ads.googlea" +
+      "ds.v6.resources.FeedItemB\003\340A\003\022K\n\rcampaig" +
+      "n_feed\030\n \001(\0132/.google.ads.googleads.v6.r" +
+      "esources.CampaignFeedB\003\340A\003\022J\n\rad_group_f" +
+      "eed\030\013 \001(\0132..google.ads.googleads.v6.reso" +
+      "urces.AdGroupFeedB\003\340A\003\022F\n\013ad_group_ad\030\014 " +
+      "\001(\0132,.google.ads.googleads.v6.resources." +
+      "AdGroupAdB\003\340A\003:\201\001\352A~\n$googleads.googleap" +
+      "is.com/ChangeEvent\022Vcustomers/{customer_" +
+      "id}/changeEvents/{timestamp_micros}~{com" +
+      "mand_index}~{mutate_index}B\375\001\n%com.googl" +
+      "e.ads.googleads.v6.resourcesB\020ChangeEven" +
+      "tProtoP\001ZJgoogle.golang.org/genproto/goo" +
+      "gleapis/ads/googleads/v6/resources;resou" +
+      "rces\242\002\003GAA\252\002!Google.Ads.GoogleAds.V6.Res" +
+      "ources\312\002!Google\\Ads\\GoogleAds\\V6\\Resourc" +
+      "es\352\002%Google::Ads::GoogleAds::V6::Resourc" +
+      "esb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -114,14 +134,20 @@ public final class ChangeEventProto {
           com.google.ads.googleads.v6.enums.ChangeClientTypeProto.getDescriptor(),
           com.google.ads.googleads.v6.enums.ChangeEventResourceTypeProto.getDescriptor(),
           com.google.ads.googleads.v6.enums.CriterionTypeProto.getDescriptor(),
+          com.google.ads.googleads.v6.enums.FeedOriginProto.getDescriptor(),
           com.google.ads.googleads.v6.enums.ResourceChangeOperationProto.getDescriptor(),
           com.google.ads.googleads.v6.resources.AdProto.getDescriptor(),
           com.google.ads.googleads.v6.resources.AdGroupProto.getDescriptor(),
+          com.google.ads.googleads.v6.resources.AdGroupAdProto.getDescriptor(),
           com.google.ads.googleads.v6.resources.AdGroupBidModifierProto.getDescriptor(),
           com.google.ads.googleads.v6.resources.AdGroupCriterionProto.getDescriptor(),
+          com.google.ads.googleads.v6.resources.AdGroupFeedProto.getDescriptor(),
           com.google.ads.googleads.v6.resources.CampaignProto.getDescriptor(),
           com.google.ads.googleads.v6.resources.CampaignBudgetProto.getDescriptor(),
           com.google.ads.googleads.v6.resources.CampaignCriterionProto.getDescriptor(),
+          com.google.ads.googleads.v6.resources.CampaignFeedProto.getDescriptor(),
+          com.google.ads.googleads.v6.resources.FeedProto.getDescriptor(),
+          com.google.ads.googleads.v6.resources.FeedItemProto.getDescriptor(),
           com.google.api.FieldBehaviorProto.getDescriptor(),
           com.google.api.ResourceProto.getDescriptor(),
           com.google.protobuf.FieldMaskProto.getDescriptor(),
@@ -132,13 +158,13 @@ public final class ChangeEventProto {
     internal_static_google_ads_googleads_v6_resources_ChangeEvent_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v6_resources_ChangeEvent_descriptor,
-        new java.lang.String[] { "ResourceName", "ChangeDateTime", "ChangeResourceType", "ChangeResourceName", "ClientType", "UserEmail", "OldResource", "NewResource", "ResourceChangeOperation", "ChangedFields", "Campaign", "AdGroup", });
+        new java.lang.String[] { "ResourceName", "ChangeDateTime", "ChangeResourceType", "ChangeResourceName", "ClientType", "UserEmail", "OldResource", "NewResource", "ResourceChangeOperation", "ChangedFields", "Campaign", "AdGroup", "Feed", "FeedItem", });
     internal_static_google_ads_googleads_v6_resources_ChangeEvent_ChangedResource_descriptor =
       internal_static_google_ads_googleads_v6_resources_ChangeEvent_descriptor.getNestedTypes().get(0);
     internal_static_google_ads_googleads_v6_resources_ChangeEvent_ChangedResource_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v6_resources_ChangeEvent_ChangedResource_descriptor,
-        new java.lang.String[] { "Ad", "AdGroup", "AdGroupCriterion", "Campaign", "CampaignBudget", "AdGroupBidModifier", "CampaignCriterion", });
+        new java.lang.String[] { "Ad", "AdGroup", "AdGroupCriterion", "Campaign", "CampaignBudget", "AdGroupBidModifier", "CampaignCriterion", "Feed", "FeedItem", "CampaignFeed", "AdGroupFeed", "AdGroupAd", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);
@@ -152,14 +178,20 @@ public final class ChangeEventProto {
     com.google.ads.googleads.v6.enums.ChangeClientTypeProto.getDescriptor();
     com.google.ads.googleads.v6.enums.ChangeEventResourceTypeProto.getDescriptor();
     com.google.ads.googleads.v6.enums.CriterionTypeProto.getDescriptor();
+    com.google.ads.googleads.v6.enums.FeedOriginProto.getDescriptor();
     com.google.ads.googleads.v6.enums.ResourceChangeOperationProto.getDescriptor();
     com.google.ads.googleads.v6.resources.AdProto.getDescriptor();
     com.google.ads.googleads.v6.resources.AdGroupProto.getDescriptor();
+    com.google.ads.googleads.v6.resources.AdGroupAdProto.getDescriptor();
     com.google.ads.googleads.v6.resources.AdGroupBidModifierProto.getDescriptor();
     com.google.ads.googleads.v6.resources.AdGroupCriterionProto.getDescriptor();
+    com.google.ads.googleads.v6.resources.AdGroupFeedProto.getDescriptor();
     com.google.ads.googleads.v6.resources.CampaignProto.getDescriptor();
     com.google.ads.googleads.v6.resources.CampaignBudgetProto.getDescriptor();
     com.google.ads.googleads.v6.resources.CampaignCriterionProto.getDescriptor();
+    com.google.ads.googleads.v6.resources.CampaignFeedProto.getDescriptor();
+    com.google.ads.googleads.v6.resources.FeedProto.getDescriptor();
+    com.google.ads.googleads.v6.resources.FeedItemProto.getDescriptor();
     com.google.api.FieldBehaviorProto.getDescriptor();
     com.google.api.ResourceProto.getDescriptor();
     com.google.protobuf.FieldMaskProto.getDescriptor();

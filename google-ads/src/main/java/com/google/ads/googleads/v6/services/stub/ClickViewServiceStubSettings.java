@@ -74,7 +74,6 @@ import org.threeten.bp.Duration;
  * ClickViewServiceStubSettings clickViewServiceSettings = clickViewServiceSettingsBuilder.build();
  * }</pre>
  */
-@BetaApi
 @Generated("by gapic-generator-java")
 public class ClickViewServiceStubSettings extends StubSettings<ClickViewServiceStubSettings> {
   /** The default scopes of the service. */

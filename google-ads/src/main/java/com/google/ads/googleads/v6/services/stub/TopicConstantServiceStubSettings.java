@@ -75,7 +75,6 @@ import org.threeten.bp.Duration;
  *     topicConstantServiceSettingsBuilder.build();
  * }</pre>
  */
-@BetaApi
 @Generated("by gapic-generator-java")
 public class TopicConstantServiceStubSettings
     extends StubSettings<TopicConstantServiceStubSettings> {

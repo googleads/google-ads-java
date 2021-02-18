@@ -83,8 +83,7 @@ import javax.annotation.Generated;
  *
  * <p>Please refer to the GitHub repository's samples for more quickstart code snippets.
  */
-@BetaApi
-@Generated("by gapic-generator")
+@Generated("by gapic-generator-java")
 public class CarrierConstantServiceClient implements BackgroundResource {
   private final CarrierConstantServiceSettings settings;
   private final CarrierConstantServiceStub stub;
@@ -142,7 +141,7 @@ public class CarrierConstantServiceClient implements BackgroundResource {
   /**
    * Returns the requested carrier constant in full detail.
    *
-   * @param resource_name Required. Resource name of the carrier constant to fetch.
+   * @param resourceName Required. Resource name of the carrier constant to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final CarrierConstant getCarrierConstant(CarrierConstantName resourceName) {
@@ -157,7 +156,7 @@ public class CarrierConstantServiceClient implements BackgroundResource {
   /**
    * Returns the requested carrier constant in full detail.
    *
-   * @param resource_name Required. Resource name of the carrier constant to fetch.
+   * @param resourceName Required. Resource name of the carrier constant to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final CarrierConstant getCarrierConstant(String resourceName) {

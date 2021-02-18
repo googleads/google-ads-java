@@ -325,7 +325,7 @@ public interface CampaignExperimentOrBuilder extends
 
   /**
    * <pre>
-   * Date when the campaign experiment ends. By default, the experiment ends on
+   * The last day of the campaign experiment. By default, the experiment ends on
    * the campaign's end date. If this field is set, then the experiment ends at
    * the end of the specified date in the customer's time zone.
    * Format: YYYY-MM-DD
@@ -338,7 +338,7 @@ public interface CampaignExperimentOrBuilder extends
   boolean hasEndDate();
   /**
    * <pre>
-   * Date when the campaign experiment ends. By default, the experiment ends on
+   * The last day of the campaign experiment. By default, the experiment ends on
    * the campaign's end date. If this field is set, then the experiment ends at
    * the end of the specified date in the customer's time zone.
    * Format: YYYY-MM-DD
@@ -351,7 +351,7 @@ public interface CampaignExperimentOrBuilder extends
   java.lang.String getEndDate();
   /**
    * <pre>
-   * Date when the campaign experiment ends. By default, the experiment ends on
+   * The last day of the campaign experiment. By default, the experiment ends on
    * the campaign's end date. If this field is set, then the experiment ends at
    * the end of the specified date in the customer's time zone.
    * Format: YYYY-MM-DD

@@ -174,7 +174,7 @@ private static final long serialVersionUID = 0L;
    * Immutable. The client customer linked to this customer.
    * </pre>
    *
-   * <code>string client_customer = 7 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * <code>string client_customer = 7 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return Whether the clientCustomer field is set.
    */
   @java.lang.Override
@@ -186,7 +186,7 @@ private static final long serialVersionUID = 0L;
    * Immutable. The client customer linked to this customer.
    * </pre>
    *
-   * <code>string client_customer = 7 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * <code>string client_customer = 7 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return The clientCustomer.
    */
   @java.lang.Override
@@ -207,7 +207,7 @@ private static final long serialVersionUID = 0L;
    * Immutable. The client customer linked to this customer.
    * </pre>
    *
-   * <code>string client_customer = 7 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * <code>string client_customer = 7 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return The bytes for clientCustomer.
    */
   @java.lang.Override
@@ -826,7 +826,7 @@ private static final long serialVersionUID = 0L;
      * Immutable. The client customer linked to this customer.
      * </pre>
      *
-     * <code>string client_customer = 7 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * <code>string client_customer = 7 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      * @return Whether the clientCustomer field is set.
      */
     public boolean hasClientCustomer() {
@@ -837,7 +837,7 @@ private static final long serialVersionUID = 0L;
      * Immutable. The client customer linked to this customer.
      * </pre>
      *
-     * <code>string client_customer = 7 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * <code>string client_customer = 7 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      * @return The clientCustomer.
      */
     public java.lang.String getClientCustomer() {
@@ -857,7 +857,7 @@ private static final long serialVersionUID = 0L;
      * Immutable. The client customer linked to this customer.
      * </pre>
      *
-     * <code>string client_customer = 7 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * <code>string client_customer = 7 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      * @return The bytes for clientCustomer.
      */
     public com.google.protobuf.ByteString
@@ -878,7 +878,7 @@ private static final long serialVersionUID = 0L;
      * Immutable. The client customer linked to this customer.
      * </pre>
      *
-     * <code>string client_customer = 7 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * <code>string client_customer = 7 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      * @param value The clientCustomer to set.
      * @return This builder for chaining.
      */
@@ -897,7 +897,7 @@ private static final long serialVersionUID = 0L;
      * Immutable. The client customer linked to this customer.
      * </pre>
      *
-     * <code>string client_customer = 7 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * <code>string client_customer = 7 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      * @return This builder for chaining.
      */
     public Builder clearClientCustomer() {
@@ -911,7 +911,7 @@ private static final long serialVersionUID = 0L;
      * Immutable. The client customer linked to this customer.
      * </pre>
      *
-     * <code>string client_customer = 7 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * <code>string client_customer = 7 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      * @param value The bytes for clientCustomer to set.
      * @return This builder for chaining.
      */

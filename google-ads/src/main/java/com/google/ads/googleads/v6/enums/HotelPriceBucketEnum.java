@@ -111,6 +111,15 @@ private static final long serialVersionUID = 0L;
     UNKNOWN(1),
     /**
      * <pre>
+     * Uniquely lowest price. Partner has the lowest price, and no other
+     * partners are within a small variance of that price.
+     * </pre>
+     *
+     * <code>LOWEST_UNIQUE = 2;</code>
+     */
+    LOWEST_UNIQUE(2),
+    /**
+     * <pre>
      * Tied for lowest price. Partner is within a small variance of the lowest
      * price.
      * </pre>
@@ -127,6 +136,14 @@ private static final long serialVersionUID = 0L;
      * <code>NOT_LOWEST = 4;</code>
      */
     NOT_LOWEST(4),
+    /**
+     * <pre>
+     * Partner was the only one shown.
+     * </pre>
+     *
+     * <code>ONLY_PARTNER_SHOWN = 5;</code>
+     */
+    ONLY_PARTNER_SHOWN(5),
     UNRECOGNIZED(-1),
     ;
 
@@ -148,6 +165,15 @@ private static final long serialVersionUID = 0L;
     public static final int UNKNOWN_VALUE = 1;
     /**
      * <pre>
+     * Uniquely lowest price. Partner has the lowest price, and no other
+     * partners are within a small variance of that price.
+     * </pre>
+     *
+     * <code>LOWEST_UNIQUE = 2;</code>
+     */
+    public static final int LOWEST_UNIQUE_VALUE = 2;
+    /**
+     * <pre>
      * Tied for lowest price. Partner is within a small variance of the lowest
      * price.
      * </pre>
@@ -164,6 +190,14 @@ private static final long serialVersionUID = 0L;
      * <code>NOT_LOWEST = 4;</code>
      */
     public static final int NOT_LOWEST_VALUE = 4;
+    /**
+     * <pre>
+     * Partner was the only one shown.
+     * </pre>
+     *
+     * <code>ONLY_PARTNER_SHOWN = 5;</code>
+     */
+    public static final int ONLY_PARTNER_SHOWN_VALUE = 5;
 
 
     public final int getNumber() {
@@ -192,8 +226,10 @@ private static final long serialVersionUID = 0L;
       switch (value) {
         case 0: return UNSPECIFIED;
         case 1: return UNKNOWN;
+        case 2: return LOWEST_UNIQUE;
         case 3: return LOWEST_TIED;
         case 4: return NOT_LOWEST;
+        case 5: return ONLY_PARTNER_SHOWN;
         default: return null;
       }
     }

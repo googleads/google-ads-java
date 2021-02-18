@@ -76,7 +76,6 @@ import org.threeten.bp.Duration;
  *     shoppingPerformanceViewServiceSettingsBuilder.build();
  * }</pre>
  */
-@BetaApi
 @Generated("by gapic-generator-java")
 public class ShoppingPerformanceViewServiceStubSettings
     extends StubSettings<ShoppingPerformanceViewServiceStubSettings> {

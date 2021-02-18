@@ -83,8 +83,7 @@ import javax.annotation.Generated;
  *
  * <p>Please refer to the GitHub repository's samples for more quickstart code snippets.
  */
-@BetaApi
-@Generated("by gapic-generator")
+@Generated("by gapic-generator-java")
 public class ManagedPlacementViewServiceClient implements BackgroundResource {
   private final ManagedPlacementViewServiceSettings settings;
   private final ManagedPlacementViewServiceStub stub;
@@ -144,7 +143,7 @@ public class ManagedPlacementViewServiceClient implements BackgroundResource {
   /**
    * Returns the requested Managed Placement view in full detail.
    *
-   * @param resource_name Required. The resource name of the Managed Placement View to fetch.
+   * @param resourceName Required. The resource name of the Managed Placement View to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final ManagedPlacementView getManagedPlacementView(ManagedPlacementViewName resourceName) {
@@ -159,7 +158,7 @@ public class ManagedPlacementViewServiceClient implements BackgroundResource {
   /**
    * Returns the requested Managed Placement view in full detail.
    *
-   * @param resource_name Required. The resource name of the Managed Placement View to fetch.
+   * @param resourceName Required. The resource name of the Managed Placement View to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final ManagedPlacementView getManagedPlacementView(String resourceName) {

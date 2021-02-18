@@ -187,6 +187,9 @@ public interface GoogleAdsVersion {
         @ServiceClientDescriptor(settingsClass = CustomerServiceSettings.class)
         CustomerServiceClient createCustomerServiceClient();
          
+        @ServiceClientDescriptor(settingsClass = CustomerUserAccessInvitationServiceSettings.class)
+        CustomerUserAccessInvitationServiceClient createCustomerUserAccessInvitationServiceClient();
+         
         @ServiceClientDescriptor(settingsClass = CustomerUserAccessServiceSettings.class)
         CustomerUserAccessServiceClient createCustomerUserAccessServiceClient();
          

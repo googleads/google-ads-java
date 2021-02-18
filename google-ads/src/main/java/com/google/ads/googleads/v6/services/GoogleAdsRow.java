@@ -1469,6 +1469,19 @@ private static final long serialVersionUID = 0L;
 
             break;
           }
+          case 1202: {
+            com.google.ads.googleads.v6.resources.CustomerUserAccessInvitation.Builder subBuilder = null;
+            if (customerUserAccessInvitation_ != null) {
+              subBuilder = customerUserAccessInvitation_.toBuilder();
+            }
+            customerUserAccessInvitation_ = input.readMessage(com.google.ads.googleads.v6.resources.CustomerUserAccessInvitation.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(customerUserAccessInvitation_);
+              customerUserAccessInvitation_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
           case 1210: {
             com.google.ads.googleads.v6.resources.FeedItemSetLink.Builder subBuilder = null;
             if (feedItemSetLink_ != null) {
@@ -1478,6 +1491,19 @@ private static final long serialVersionUID = 0L;
             if (subBuilder != null) {
               subBuilder.mergeFrom(feedItemSetLink_);
               feedItemSetLink_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 1218: {
+            com.google.ads.googleads.v6.resources.CallView.Builder subBuilder = null;
+            if (callView_ != null) {
+              subBuilder = callView_.toBuilder();
+            }
+            callView_ = input.readMessage(com.google.ads.googleads.v6.resources.CallView.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(callView_);
+              callView_ = subBuilder.buildPartial();
             }
 
             break;
@@ -2424,6 +2450,44 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public com.google.ads.googleads.v6.resources.BillingSetupOrBuilder getBillingSetupOrBuilder() {
     return getBillingSetup();
+  }
+
+  public static final int CALL_VIEW_FIELD_NUMBER = 152;
+  private com.google.ads.googleads.v6.resources.CallView callView_;
+  /**
+   * <pre>
+   * The call view referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v6.resources.CallView call_view = 152;</code>
+   * @return Whether the callView field is set.
+   */
+  @java.lang.Override
+  public boolean hasCallView() {
+    return callView_ != null;
+  }
+  /**
+   * <pre>
+   * The call view referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v6.resources.CallView call_view = 152;</code>
+   * @return The callView.
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v6.resources.CallView getCallView() {
+    return callView_ == null ? com.google.ads.googleads.v6.resources.CallView.getDefaultInstance() : callView_;
+  }
+  /**
+   * <pre>
+   * The call view referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v6.resources.CallView call_view = 152;</code>
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v6.resources.CallViewOrBuilder getCallViewOrBuilder() {
+    return getCallView();
   }
 
   public static final int CAMPAIGN_BUDGET_FIELD_NUMBER = 19;
@@ -3602,6 +3666,44 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public com.google.ads.googleads.v6.resources.CustomerUserAccessOrBuilder getCustomerUserAccessOrBuilder() {
     return getCustomerUserAccess();
+  }
+
+  public static final int CUSTOMER_USER_ACCESS_INVITATION_FIELD_NUMBER = 150;
+  private com.google.ads.googleads.v6.resources.CustomerUserAccessInvitation customerUserAccessInvitation_;
+  /**
+   * <pre>
+   * The CustomerUserAccessInvitation referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v6.resources.CustomerUserAccessInvitation customer_user_access_invitation = 150;</code>
+   * @return Whether the customerUserAccessInvitation field is set.
+   */
+  @java.lang.Override
+  public boolean hasCustomerUserAccessInvitation() {
+    return customerUserAccessInvitation_ != null;
+  }
+  /**
+   * <pre>
+   * The CustomerUserAccessInvitation referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v6.resources.CustomerUserAccessInvitation customer_user_access_invitation = 150;</code>
+   * @return The customerUserAccessInvitation.
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v6.resources.CustomerUserAccessInvitation getCustomerUserAccessInvitation() {
+    return customerUserAccessInvitation_ == null ? com.google.ads.googleads.v6.resources.CustomerUserAccessInvitation.getDefaultInstance() : customerUserAccessInvitation_;
+  }
+  /**
+   * <pre>
+   * The CustomerUserAccessInvitation referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v6.resources.CustomerUserAccessInvitation customer_user_access_invitation = 150;</code>
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v6.resources.CustomerUserAccessInvitationOrBuilder getCustomerUserAccessInvitationOrBuilder() {
+    return getCustomerUserAccessInvitation();
   }
 
   public static final int DETAIL_PLACEMENT_VIEW_FIELD_NUMBER = 118;
@@ -6035,8 +6137,14 @@ private static final long serialVersionUID = 0L;
     if (feedItemSet_ != null) {
       output.writeMessage(149, getFeedItemSet());
     }
+    if (customerUserAccessInvitation_ != null) {
+      output.writeMessage(150, getCustomerUserAccessInvitation());
+    }
     if (feedItemSetLink_ != null) {
       output.writeMessage(151, getFeedItemSetLink());
+    }
+    if (callView_ != null) {
+      output.writeMessage(152, getCallView());
     }
     unknownFields.writeTo(output);
   }
@@ -6483,9 +6591,17 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(149, getFeedItemSet());
     }
+    if (customerUserAccessInvitation_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(150, getCustomerUserAccessInvitation());
+    }
     if (feedItemSetLink_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(151, getFeedItemSetLink());
+    }
+    if (callView_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(152, getCallView());
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -6621,6 +6737,11 @@ private static final long serialVersionUID = 0L;
     if (hasBillingSetup()) {
       if (!getBillingSetup()
           .equals(other.getBillingSetup())) return false;
+    }
+    if (hasCallView() != other.hasCallView()) return false;
+    if (hasCallView()) {
+      if (!getCallView()
+          .equals(other.getCallView())) return false;
     }
     if (hasCampaignBudget() != other.hasCampaignBudget()) return false;
     if (hasCampaignBudget()) {
@@ -6776,6 +6897,11 @@ private static final long serialVersionUID = 0L;
     if (hasCustomerUserAccess()) {
       if (!getCustomerUserAccess()
           .equals(other.getCustomerUserAccess())) return false;
+    }
+    if (hasCustomerUserAccessInvitation() != other.hasCustomerUserAccessInvitation()) return false;
+    if (hasCustomerUserAccessInvitation()) {
+      if (!getCustomerUserAccessInvitation()
+          .equals(other.getCustomerUserAccessInvitation())) return false;
     }
     if (hasDetailPlacementView() != other.hasDetailPlacementView()) return false;
     if (hasDetailPlacementView()) {
@@ -7159,6 +7285,10 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + BILLING_SETUP_FIELD_NUMBER;
       hash = (53 * hash) + getBillingSetup().hashCode();
     }
+    if (hasCallView()) {
+      hash = (37 * hash) + CALL_VIEW_FIELD_NUMBER;
+      hash = (53 * hash) + getCallView().hashCode();
+    }
     if (hasCampaignBudget()) {
       hash = (37 * hash) + CAMPAIGN_BUDGET_FIELD_NUMBER;
       hash = (53 * hash) + getCampaignBudget().hashCode();
@@ -7282,6 +7412,10 @@ private static final long serialVersionUID = 0L;
     if (hasCustomerUserAccess()) {
       hash = (37 * hash) + CUSTOMER_USER_ACCESS_FIELD_NUMBER;
       hash = (53 * hash) + getCustomerUserAccess().hashCode();
+    }
+    if (hasCustomerUserAccessInvitation()) {
+      hash = (37 * hash) + CUSTOMER_USER_ACCESS_INVITATION_FIELD_NUMBER;
+      hash = (53 * hash) + getCustomerUserAccessInvitation().hashCode();
     }
     if (hasDetailPlacementView()) {
       hash = (37 * hash) + DETAIL_PLACEMENT_VIEW_FIELD_NUMBER;
@@ -7784,6 +7918,12 @@ private static final long serialVersionUID = 0L;
         billingSetup_ = null;
         billingSetupBuilder_ = null;
       }
+      if (callViewBuilder_ == null) {
+        callView_ = null;
+      } else {
+        callView_ = null;
+        callViewBuilder_ = null;
+      }
       if (campaignBudgetBuilder_ == null) {
         campaignBudget_ = null;
       } else {
@@ -7969,6 +8109,12 @@ private static final long serialVersionUID = 0L;
       } else {
         customerUserAccess_ = null;
         customerUserAccessBuilder_ = null;
+      }
+      if (customerUserAccessInvitationBuilder_ == null) {
+        customerUserAccessInvitation_ = null;
+      } else {
+        customerUserAccessInvitation_ = null;
+        customerUserAccessInvitationBuilder_ = null;
       }
       if (detailPlacementViewBuilder_ == null) {
         detailPlacementView_ = null;
@@ -8446,6 +8592,11 @@ private static final long serialVersionUID = 0L;
       } else {
         result.billingSetup_ = billingSetupBuilder_.build();
       }
+      if (callViewBuilder_ == null) {
+        result.callView_ = callView_;
+      } else {
+        result.callView_ = callViewBuilder_.build();
+      }
       if (campaignBudgetBuilder_ == null) {
         result.campaignBudget_ = campaignBudget_;
       } else {
@@ -8600,6 +8751,11 @@ private static final long serialVersionUID = 0L;
         result.customerUserAccess_ = customerUserAccess_;
       } else {
         result.customerUserAccess_ = customerUserAccessBuilder_.build();
+      }
+      if (customerUserAccessInvitationBuilder_ == null) {
+        result.customerUserAccessInvitation_ = customerUserAccessInvitation_;
+      } else {
+        result.customerUserAccessInvitation_ = customerUserAccessInvitationBuilder_.build();
       }
       if (detailPlacementViewBuilder_ == null) {
         result.detailPlacementView_ = detailPlacementView_;
@@ -8996,6 +9152,9 @@ private static final long serialVersionUID = 0L;
       if (other.hasBillingSetup()) {
         mergeBillingSetup(other.getBillingSetup());
       }
+      if (other.hasCallView()) {
+        mergeCallView(other.getCallView());
+      }
       if (other.hasCampaignBudget()) {
         mergeCampaignBudget(other.getCampaignBudget());
       }
@@ -9088,6 +9247,9 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasCustomerUserAccess()) {
         mergeCustomerUserAccess(other.getCustomerUserAccess());
+      }
+      if (other.hasCustomerUserAccessInvitation()) {
+        mergeCustomerUserAccessInvitation(other.getCustomerUserAccessInvitation());
       }
       if (other.hasDetailPlacementView()) {
         mergeDetailPlacementView(other.getDetailPlacementView());
@@ -13001,6 +13163,161 @@ private static final long serialVersionUID = 0L;
         billingSetup_ = null;
       }
       return billingSetupBuilder_;
+    }
+
+    private com.google.ads.googleads.v6.resources.CallView callView_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v6.resources.CallView, com.google.ads.googleads.v6.resources.CallView.Builder, com.google.ads.googleads.v6.resources.CallViewOrBuilder> callViewBuilder_;
+    /**
+     * <pre>
+     * The call view referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v6.resources.CallView call_view = 152;</code>
+     * @return Whether the callView field is set.
+     */
+    public boolean hasCallView() {
+      return callViewBuilder_ != null || callView_ != null;
+    }
+    /**
+     * <pre>
+     * The call view referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v6.resources.CallView call_view = 152;</code>
+     * @return The callView.
+     */
+    public com.google.ads.googleads.v6.resources.CallView getCallView() {
+      if (callViewBuilder_ == null) {
+        return callView_ == null ? com.google.ads.googleads.v6.resources.CallView.getDefaultInstance() : callView_;
+      } else {
+        return callViewBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * The call view referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v6.resources.CallView call_view = 152;</code>
+     */
+    public Builder setCallView(com.google.ads.googleads.v6.resources.CallView value) {
+      if (callViewBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        callView_ = value;
+        onChanged();
+      } else {
+        callViewBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The call view referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v6.resources.CallView call_view = 152;</code>
+     */
+    public Builder setCallView(
+        com.google.ads.googleads.v6.resources.CallView.Builder builderForValue) {
+      if (callViewBuilder_ == null) {
+        callView_ = builderForValue.build();
+        onChanged();
+      } else {
+        callViewBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The call view referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v6.resources.CallView call_view = 152;</code>
+     */
+    public Builder mergeCallView(com.google.ads.googleads.v6.resources.CallView value) {
+      if (callViewBuilder_ == null) {
+        if (callView_ != null) {
+          callView_ =
+            com.google.ads.googleads.v6.resources.CallView.newBuilder(callView_).mergeFrom(value).buildPartial();
+        } else {
+          callView_ = value;
+        }
+        onChanged();
+      } else {
+        callViewBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The call view referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v6.resources.CallView call_view = 152;</code>
+     */
+    public Builder clearCallView() {
+      if (callViewBuilder_ == null) {
+        callView_ = null;
+        onChanged();
+      } else {
+        callView_ = null;
+        callViewBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The call view referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v6.resources.CallView call_view = 152;</code>
+     */
+    public com.google.ads.googleads.v6.resources.CallView.Builder getCallViewBuilder() {
+      
+      onChanged();
+      return getCallViewFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * The call view referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v6.resources.CallView call_view = 152;</code>
+     */
+    public com.google.ads.googleads.v6.resources.CallViewOrBuilder getCallViewOrBuilder() {
+      if (callViewBuilder_ != null) {
+        return callViewBuilder_.getMessageOrBuilder();
+      } else {
+        return callView_ == null ?
+            com.google.ads.googleads.v6.resources.CallView.getDefaultInstance() : callView_;
+      }
+    }
+    /**
+     * <pre>
+     * The call view referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v6.resources.CallView call_view = 152;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v6.resources.CallView, com.google.ads.googleads.v6.resources.CallView.Builder, com.google.ads.googleads.v6.resources.CallViewOrBuilder> 
+        getCallViewFieldBuilder() {
+      if (callViewBuilder_ == null) {
+        callViewBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.ads.googleads.v6.resources.CallView, com.google.ads.googleads.v6.resources.CallView.Builder, com.google.ads.googleads.v6.resources.CallViewOrBuilder>(
+                getCallView(),
+                getParentForChildren(),
+                isClean());
+        callView_ = null;
+      }
+      return callViewBuilder_;
     }
 
     private com.google.ads.googleads.v6.resources.CampaignBudget campaignBudget_;
@@ -17806,6 +18123,161 @@ private static final long serialVersionUID = 0L;
         customerUserAccess_ = null;
       }
       return customerUserAccessBuilder_;
+    }
+
+    private com.google.ads.googleads.v6.resources.CustomerUserAccessInvitation customerUserAccessInvitation_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v6.resources.CustomerUserAccessInvitation, com.google.ads.googleads.v6.resources.CustomerUserAccessInvitation.Builder, com.google.ads.googleads.v6.resources.CustomerUserAccessInvitationOrBuilder> customerUserAccessInvitationBuilder_;
+    /**
+     * <pre>
+     * The CustomerUserAccessInvitation referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v6.resources.CustomerUserAccessInvitation customer_user_access_invitation = 150;</code>
+     * @return Whether the customerUserAccessInvitation field is set.
+     */
+    public boolean hasCustomerUserAccessInvitation() {
+      return customerUserAccessInvitationBuilder_ != null || customerUserAccessInvitation_ != null;
+    }
+    /**
+     * <pre>
+     * The CustomerUserAccessInvitation referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v6.resources.CustomerUserAccessInvitation customer_user_access_invitation = 150;</code>
+     * @return The customerUserAccessInvitation.
+     */
+    public com.google.ads.googleads.v6.resources.CustomerUserAccessInvitation getCustomerUserAccessInvitation() {
+      if (customerUserAccessInvitationBuilder_ == null) {
+        return customerUserAccessInvitation_ == null ? com.google.ads.googleads.v6.resources.CustomerUserAccessInvitation.getDefaultInstance() : customerUserAccessInvitation_;
+      } else {
+        return customerUserAccessInvitationBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * The CustomerUserAccessInvitation referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v6.resources.CustomerUserAccessInvitation customer_user_access_invitation = 150;</code>
+     */
+    public Builder setCustomerUserAccessInvitation(com.google.ads.googleads.v6.resources.CustomerUserAccessInvitation value) {
+      if (customerUserAccessInvitationBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        customerUserAccessInvitation_ = value;
+        onChanged();
+      } else {
+        customerUserAccessInvitationBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The CustomerUserAccessInvitation referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v6.resources.CustomerUserAccessInvitation customer_user_access_invitation = 150;</code>
+     */
+    public Builder setCustomerUserAccessInvitation(
+        com.google.ads.googleads.v6.resources.CustomerUserAccessInvitation.Builder builderForValue) {
+      if (customerUserAccessInvitationBuilder_ == null) {
+        customerUserAccessInvitation_ = builderForValue.build();
+        onChanged();
+      } else {
+        customerUserAccessInvitationBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The CustomerUserAccessInvitation referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v6.resources.CustomerUserAccessInvitation customer_user_access_invitation = 150;</code>
+     */
+    public Builder mergeCustomerUserAccessInvitation(com.google.ads.googleads.v6.resources.CustomerUserAccessInvitation value) {
+      if (customerUserAccessInvitationBuilder_ == null) {
+        if (customerUserAccessInvitation_ != null) {
+          customerUserAccessInvitation_ =
+            com.google.ads.googleads.v6.resources.CustomerUserAccessInvitation.newBuilder(customerUserAccessInvitation_).mergeFrom(value).buildPartial();
+        } else {
+          customerUserAccessInvitation_ = value;
+        }
+        onChanged();
+      } else {
+        customerUserAccessInvitationBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The CustomerUserAccessInvitation referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v6.resources.CustomerUserAccessInvitation customer_user_access_invitation = 150;</code>
+     */
+    public Builder clearCustomerUserAccessInvitation() {
+      if (customerUserAccessInvitationBuilder_ == null) {
+        customerUserAccessInvitation_ = null;
+        onChanged();
+      } else {
+        customerUserAccessInvitation_ = null;
+        customerUserAccessInvitationBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The CustomerUserAccessInvitation referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v6.resources.CustomerUserAccessInvitation customer_user_access_invitation = 150;</code>
+     */
+    public com.google.ads.googleads.v6.resources.CustomerUserAccessInvitation.Builder getCustomerUserAccessInvitationBuilder() {
+      
+      onChanged();
+      return getCustomerUserAccessInvitationFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * The CustomerUserAccessInvitation referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v6.resources.CustomerUserAccessInvitation customer_user_access_invitation = 150;</code>
+     */
+    public com.google.ads.googleads.v6.resources.CustomerUserAccessInvitationOrBuilder getCustomerUserAccessInvitationOrBuilder() {
+      if (customerUserAccessInvitationBuilder_ != null) {
+        return customerUserAccessInvitationBuilder_.getMessageOrBuilder();
+      } else {
+        return customerUserAccessInvitation_ == null ?
+            com.google.ads.googleads.v6.resources.CustomerUserAccessInvitation.getDefaultInstance() : customerUserAccessInvitation_;
+      }
+    }
+    /**
+     * <pre>
+     * The CustomerUserAccessInvitation referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v6.resources.CustomerUserAccessInvitation customer_user_access_invitation = 150;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v6.resources.CustomerUserAccessInvitation, com.google.ads.googleads.v6.resources.CustomerUserAccessInvitation.Builder, com.google.ads.googleads.v6.resources.CustomerUserAccessInvitationOrBuilder> 
+        getCustomerUserAccessInvitationFieldBuilder() {
+      if (customerUserAccessInvitationBuilder_ == null) {
+        customerUserAccessInvitationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.ads.googleads.v6.resources.CustomerUserAccessInvitation, com.google.ads.googleads.v6.resources.CustomerUserAccessInvitation.Builder, com.google.ads.googleads.v6.resources.CustomerUserAccessInvitationOrBuilder>(
+                getCustomerUserAccessInvitation(),
+                getParentForChildren(),
+                isClean());
+        customerUserAccessInvitation_ = null;
+      }
+      return customerUserAccessInvitationBuilder_;
     }
 
     private com.google.ads.googleads.v6.resources.DetailPlacementView detailPlacementView_;

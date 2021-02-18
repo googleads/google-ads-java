@@ -75,7 +75,6 @@ import org.threeten.bp.Duration;
  *     userLocationViewServiceSettingsBuilder.build();
  * }</pre>
  */
-@BetaApi
 @Generated("by gapic-generator-java")
 public class UserLocationViewServiceStubSettings
     extends StubSettings<UserLocationViewServiceStubSettings> {

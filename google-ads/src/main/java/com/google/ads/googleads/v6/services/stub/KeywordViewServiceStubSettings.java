@@ -75,7 +75,6 @@ import org.threeten.bp.Duration;
  *     keywordViewServiceSettingsBuilder.build();
  * }</pre>
  */
-@BetaApi
 @Generated("by gapic-generator-java")
 public class KeywordViewServiceStubSettings extends StubSettings<KeywordViewServiceStubSettings> {
   /** The default scopes of the service. */

@@ -138,11 +138,21 @@ public class GrpcBatchJobServiceStub extends BatchJobServiceStub {
         BatchJobServiceStubSettings.newBuilder().build(), clientContext, callableFactory);
   }
 
+  /**
+   * Constructs an instance of GrpcBatchJobServiceStub, using the given settings. This is protected
+   * so that it is easy to make a subclass, but otherwise, the static factory methods should be
+   * preferred.
+   */
   protected GrpcBatchJobServiceStub(
       BatchJobServiceStubSettings settings, ClientContext clientContext) throws IOException {
     this(settings, clientContext, new GrpcBatchJobServiceCallableFactory());
   }
 
+  /**
+   * Constructs an instance of GrpcBatchJobServiceStub, using the given settings. This is protected
+   * so that it is easy to make a subclass, but otherwise, the static factory methods should be
+   * preferred.
+   */
   protected GrpcBatchJobServiceStub(
       BatchJobServiceStubSettings settings,
       ClientContext clientContext,

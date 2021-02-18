@@ -15,7 +15,6 @@
 package com.google.ads.googleads.lib.catalog;
 
 import com.google.ads.googleads.lib.BaseGoogleAdsException;
-import com.google.ads.googleads.lib.utils.messageproxy.MessageProxyProvider;
 import com.google.common.base.Preconditions;
 import com.google.protobuf.Message;
 import java.util.Objects;
@@ -31,22 +30,19 @@ public final class Version implements Comparable<Version> {
 
   private final String versionName;
   private final BaseGoogleAdsException.Factory exceptionFactory;
-  private final MessageProxyProvider messageProxyProvider;
   private final int versionNumber;
   private final String packageNameIdentifier;
 
   Version(
       String versionName,
       BaseGoogleAdsException.Factory exceptionFactory,
-      Class<?> descriptorClass,
-      MessageProxyProvider messageProxyProvider) {
+      Class<?> descriptorClass) {
     Preconditions.checkArgument(
         versionName.matches("v[0-9]+"), "Invalid version name: %", versionName);
     this.versionName = Preconditions.checkNotNull(versionName);
     this.versionNumber = Preconditions.checkNotNull(extractVersionNumber(versionName));
     this.descriptorClass = Preconditions.checkNotNull(descriptorClass);
     this.exceptionFactory = Preconditions.checkNotNull(exceptionFactory);
-    this.messageProxyProvider = Preconditions.checkNotNull(messageProxyProvider);
     this.packageNameIdentifier = "." + versionName + ".";
   }
 
@@ -81,11 +77,6 @@ public final class Version implements Comparable<Version> {
    */
   public BaseGoogleAdsException.Factory getExceptionFactory() {
     return exceptionFactory;
-  }
-
-  /** Gets the {@link MessageProxyProvider} for this Version. */
-  public MessageProxyProvider getMessageProxyProvider() {
-    return messageProxyProvider;
   }
 
   /** Returns true if this Version is the same as that of the provided message. */

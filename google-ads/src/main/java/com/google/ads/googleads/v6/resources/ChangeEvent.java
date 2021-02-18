@@ -11,7 +11,7 @@ package com.google.ads.googleads.v6.resources;
  * shown externally) in the past 30 days will be shown. The change shows the old
  * values of the changed fields before the change and the new values right after
  * the change. ChangeEvent could have up to 3 minutes delay to reflect a new
- * change
+ * change.
  * </pre>
  *
  * Protobuf type {@code google.ads.googleads.v6.resources.ChangeEvent}
@@ -35,6 +35,8 @@ private static final long serialVersionUID = 0L;
     resourceChangeOperation_ = 0;
     campaign_ = "";
     adGroup_ = "";
+    feed_ = "";
+    feedItem_ = "";
   }
 
   @java.lang.Override
@@ -158,6 +160,18 @@ private static final long serialVersionUID = 0L;
             java.lang.String s = input.readStringRequireUtf8();
 
             adGroup_ = s;
+            break;
+          }
+          case 106: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            feed_ = s;
+            break;
+          }
+          case 114: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            feedItem_ = s;
             break;
           }
           default: {
@@ -384,6 +398,141 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v6.resources.CampaignCriterion campaign_criterion = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     com.google.ads.googleads.v6.resources.CampaignCriterionOrBuilder getCampaignCriterionOrBuilder();
+
+    /**
+     * <pre>
+     * Output only. Set if change_resource_type == FEED.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v6.resources.Feed feed = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the feed field is set.
+     */
+    boolean hasFeed();
+    /**
+     * <pre>
+     * Output only. Set if change_resource_type == FEED.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v6.resources.Feed feed = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The feed.
+     */
+    com.google.ads.googleads.v6.resources.Feed getFeed();
+    /**
+     * <pre>
+     * Output only. Set if change_resource_type == FEED.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v6.resources.Feed feed = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    com.google.ads.googleads.v6.resources.FeedOrBuilder getFeedOrBuilder();
+
+    /**
+     * <pre>
+     * Output only. Set if change_resource_type == FEED_ITEM.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v6.resources.FeedItem feed_item = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the feedItem field is set.
+     */
+    boolean hasFeedItem();
+    /**
+     * <pre>
+     * Output only. Set if change_resource_type == FEED_ITEM.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v6.resources.FeedItem feed_item = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The feedItem.
+     */
+    com.google.ads.googleads.v6.resources.FeedItem getFeedItem();
+    /**
+     * <pre>
+     * Output only. Set if change_resource_type == FEED_ITEM.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v6.resources.FeedItem feed_item = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    com.google.ads.googleads.v6.resources.FeedItemOrBuilder getFeedItemOrBuilder();
+
+    /**
+     * <pre>
+     * Output only. Set if change_resource_type == CAMPAIGN_FEED.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v6.resources.CampaignFeed campaign_feed = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the campaignFeed field is set.
+     */
+    boolean hasCampaignFeed();
+    /**
+     * <pre>
+     * Output only. Set if change_resource_type == CAMPAIGN_FEED.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v6.resources.CampaignFeed campaign_feed = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The campaignFeed.
+     */
+    com.google.ads.googleads.v6.resources.CampaignFeed getCampaignFeed();
+    /**
+     * <pre>
+     * Output only. Set if change_resource_type == CAMPAIGN_FEED.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v6.resources.CampaignFeed campaign_feed = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    com.google.ads.googleads.v6.resources.CampaignFeedOrBuilder getCampaignFeedOrBuilder();
+
+    /**
+     * <pre>
+     * Output only. Set if change_resource_type == AD_GROUP_FEED.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v6.resources.AdGroupFeed ad_group_feed = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the adGroupFeed field is set.
+     */
+    boolean hasAdGroupFeed();
+    /**
+     * <pre>
+     * Output only. Set if change_resource_type == AD_GROUP_FEED.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v6.resources.AdGroupFeed ad_group_feed = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The adGroupFeed.
+     */
+    com.google.ads.googleads.v6.resources.AdGroupFeed getAdGroupFeed();
+    /**
+     * <pre>
+     * Output only. Set if change_resource_type == AD_GROUP_FEED.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v6.resources.AdGroupFeed ad_group_feed = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    com.google.ads.googleads.v6.resources.AdGroupFeedOrBuilder getAdGroupFeedOrBuilder();
+
+    /**
+     * <pre>
+     * Output only. Set if change_resource_type == AD_GROUP_AD.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v6.resources.AdGroupAd ad_group_ad = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the adGroupAd field is set.
+     */
+    boolean hasAdGroupAd();
+    /**
+     * <pre>
+     * Output only. Set if change_resource_type == AD_GROUP_AD.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v6.resources.AdGroupAd ad_group_ad = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The adGroupAd.
+     */
+    com.google.ads.googleads.v6.resources.AdGroupAd getAdGroupAd();
+    /**
+     * <pre>
+     * Output only. Set if change_resource_type == AD_GROUP_AD.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v6.resources.AdGroupAd ad_group_ad = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    com.google.ads.googleads.v6.resources.AdGroupAdOrBuilder getAdGroupAdOrBuilder();
   }
   /**
    * <pre>
@@ -522,6 +671,71 @@ private static final long serialVersionUID = 0L;
               if (subBuilder != null) {
                 subBuilder.mergeFrom(campaignCriterion_);
                 campaignCriterion_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 66: {
+              com.google.ads.googleads.v6.resources.Feed.Builder subBuilder = null;
+              if (feed_ != null) {
+                subBuilder = feed_.toBuilder();
+              }
+              feed_ = input.readMessage(com.google.ads.googleads.v6.resources.Feed.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(feed_);
+                feed_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 74: {
+              com.google.ads.googleads.v6.resources.FeedItem.Builder subBuilder = null;
+              if (feedItem_ != null) {
+                subBuilder = feedItem_.toBuilder();
+              }
+              feedItem_ = input.readMessage(com.google.ads.googleads.v6.resources.FeedItem.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(feedItem_);
+                feedItem_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 82: {
+              com.google.ads.googleads.v6.resources.CampaignFeed.Builder subBuilder = null;
+              if (campaignFeed_ != null) {
+                subBuilder = campaignFeed_.toBuilder();
+              }
+              campaignFeed_ = input.readMessage(com.google.ads.googleads.v6.resources.CampaignFeed.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(campaignFeed_);
+                campaignFeed_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 90: {
+              com.google.ads.googleads.v6.resources.AdGroupFeed.Builder subBuilder = null;
+              if (adGroupFeed_ != null) {
+                subBuilder = adGroupFeed_.toBuilder();
+              }
+              adGroupFeed_ = input.readMessage(com.google.ads.googleads.v6.resources.AdGroupFeed.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(adGroupFeed_);
+                adGroupFeed_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 98: {
+              com.google.ads.googleads.v6.resources.AdGroupAd.Builder subBuilder = null;
+              if (adGroupAd_ != null) {
+                subBuilder = adGroupAd_.toBuilder();
+              }
+              adGroupAd_ = input.readMessage(com.google.ads.googleads.v6.resources.AdGroupAd.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(adGroupAd_);
+                adGroupAd_ = subBuilder.buildPartial();
               }
 
               break;
@@ -824,6 +1038,196 @@ private static final long serialVersionUID = 0L;
       return getCampaignCriterion();
     }
 
+    public static final int FEED_FIELD_NUMBER = 8;
+    private com.google.ads.googleads.v6.resources.Feed feed_;
+    /**
+     * <pre>
+     * Output only. Set if change_resource_type == FEED.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v6.resources.Feed feed = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the feed field is set.
+     */
+    @java.lang.Override
+    public boolean hasFeed() {
+      return feed_ != null;
+    }
+    /**
+     * <pre>
+     * Output only. Set if change_resource_type == FEED.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v6.resources.Feed feed = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The feed.
+     */
+    @java.lang.Override
+    public com.google.ads.googleads.v6.resources.Feed getFeed() {
+      return feed_ == null ? com.google.ads.googleads.v6.resources.Feed.getDefaultInstance() : feed_;
+    }
+    /**
+     * <pre>
+     * Output only. Set if change_resource_type == FEED.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v6.resources.Feed feed = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    @java.lang.Override
+    public com.google.ads.googleads.v6.resources.FeedOrBuilder getFeedOrBuilder() {
+      return getFeed();
+    }
+
+    public static final int FEED_ITEM_FIELD_NUMBER = 9;
+    private com.google.ads.googleads.v6.resources.FeedItem feedItem_;
+    /**
+     * <pre>
+     * Output only. Set if change_resource_type == FEED_ITEM.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v6.resources.FeedItem feed_item = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the feedItem field is set.
+     */
+    @java.lang.Override
+    public boolean hasFeedItem() {
+      return feedItem_ != null;
+    }
+    /**
+     * <pre>
+     * Output only. Set if change_resource_type == FEED_ITEM.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v6.resources.FeedItem feed_item = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The feedItem.
+     */
+    @java.lang.Override
+    public com.google.ads.googleads.v6.resources.FeedItem getFeedItem() {
+      return feedItem_ == null ? com.google.ads.googleads.v6.resources.FeedItem.getDefaultInstance() : feedItem_;
+    }
+    /**
+     * <pre>
+     * Output only. Set if change_resource_type == FEED_ITEM.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v6.resources.FeedItem feed_item = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    @java.lang.Override
+    public com.google.ads.googleads.v6.resources.FeedItemOrBuilder getFeedItemOrBuilder() {
+      return getFeedItem();
+    }
+
+    public static final int CAMPAIGN_FEED_FIELD_NUMBER = 10;
+    private com.google.ads.googleads.v6.resources.CampaignFeed campaignFeed_;
+    /**
+     * <pre>
+     * Output only. Set if change_resource_type == CAMPAIGN_FEED.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v6.resources.CampaignFeed campaign_feed = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the campaignFeed field is set.
+     */
+    @java.lang.Override
+    public boolean hasCampaignFeed() {
+      return campaignFeed_ != null;
+    }
+    /**
+     * <pre>
+     * Output only. Set if change_resource_type == CAMPAIGN_FEED.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v6.resources.CampaignFeed campaign_feed = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The campaignFeed.
+     */
+    @java.lang.Override
+    public com.google.ads.googleads.v6.resources.CampaignFeed getCampaignFeed() {
+      return campaignFeed_ == null ? com.google.ads.googleads.v6.resources.CampaignFeed.getDefaultInstance() : campaignFeed_;
+    }
+    /**
+     * <pre>
+     * Output only. Set if change_resource_type == CAMPAIGN_FEED.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v6.resources.CampaignFeed campaign_feed = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    @java.lang.Override
+    public com.google.ads.googleads.v6.resources.CampaignFeedOrBuilder getCampaignFeedOrBuilder() {
+      return getCampaignFeed();
+    }
+
+    public static final int AD_GROUP_FEED_FIELD_NUMBER = 11;
+    private com.google.ads.googleads.v6.resources.AdGroupFeed adGroupFeed_;
+    /**
+     * <pre>
+     * Output only. Set if change_resource_type == AD_GROUP_FEED.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v6.resources.AdGroupFeed ad_group_feed = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the adGroupFeed field is set.
+     */
+    @java.lang.Override
+    public boolean hasAdGroupFeed() {
+      return adGroupFeed_ != null;
+    }
+    /**
+     * <pre>
+     * Output only. Set if change_resource_type == AD_GROUP_FEED.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v6.resources.AdGroupFeed ad_group_feed = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The adGroupFeed.
+     */
+    @java.lang.Override
+    public com.google.ads.googleads.v6.resources.AdGroupFeed getAdGroupFeed() {
+      return adGroupFeed_ == null ? com.google.ads.googleads.v6.resources.AdGroupFeed.getDefaultInstance() : adGroupFeed_;
+    }
+    /**
+     * <pre>
+     * Output only. Set if change_resource_type == AD_GROUP_FEED.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v6.resources.AdGroupFeed ad_group_feed = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    @java.lang.Override
+    public com.google.ads.googleads.v6.resources.AdGroupFeedOrBuilder getAdGroupFeedOrBuilder() {
+      return getAdGroupFeed();
+    }
+
+    public static final int AD_GROUP_AD_FIELD_NUMBER = 12;
+    private com.google.ads.googleads.v6.resources.AdGroupAd adGroupAd_;
+    /**
+     * <pre>
+     * Output only. Set if change_resource_type == AD_GROUP_AD.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v6.resources.AdGroupAd ad_group_ad = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the adGroupAd field is set.
+     */
+    @java.lang.Override
+    public boolean hasAdGroupAd() {
+      return adGroupAd_ != null;
+    }
+    /**
+     * <pre>
+     * Output only. Set if change_resource_type == AD_GROUP_AD.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v6.resources.AdGroupAd ad_group_ad = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The adGroupAd.
+     */
+    @java.lang.Override
+    public com.google.ads.googleads.v6.resources.AdGroupAd getAdGroupAd() {
+      return adGroupAd_ == null ? com.google.ads.googleads.v6.resources.AdGroupAd.getDefaultInstance() : adGroupAd_;
+    }
+    /**
+     * <pre>
+     * Output only. Set if change_resource_type == AD_GROUP_AD.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v6.resources.AdGroupAd ad_group_ad = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    @java.lang.Override
+    public com.google.ads.googleads.v6.resources.AdGroupAdOrBuilder getAdGroupAdOrBuilder() {
+      return getAdGroupAd();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -858,6 +1262,21 @@ private static final long serialVersionUID = 0L;
       }
       if (campaignCriterion_ != null) {
         output.writeMessage(7, getCampaignCriterion());
+      }
+      if (feed_ != null) {
+        output.writeMessage(8, getFeed());
+      }
+      if (feedItem_ != null) {
+        output.writeMessage(9, getFeedItem());
+      }
+      if (campaignFeed_ != null) {
+        output.writeMessage(10, getCampaignFeed());
+      }
+      if (adGroupFeed_ != null) {
+        output.writeMessage(11, getAdGroupFeed());
+      }
+      if (adGroupAd_ != null) {
+        output.writeMessage(12, getAdGroupAd());
       }
       unknownFields.writeTo(output);
     }
@@ -895,6 +1314,26 @@ private static final long serialVersionUID = 0L;
       if (campaignCriterion_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(7, getCampaignCriterion());
+      }
+      if (feed_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(8, getFeed());
+      }
+      if (feedItem_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(9, getFeedItem());
+      }
+      if (campaignFeed_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(10, getCampaignFeed());
+      }
+      if (adGroupFeed_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(11, getAdGroupFeed());
+      }
+      if (adGroupAd_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(12, getAdGroupAd());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -946,6 +1385,31 @@ private static final long serialVersionUID = 0L;
         if (!getCampaignCriterion()
             .equals(other.getCampaignCriterion())) return false;
       }
+      if (hasFeed() != other.hasFeed()) return false;
+      if (hasFeed()) {
+        if (!getFeed()
+            .equals(other.getFeed())) return false;
+      }
+      if (hasFeedItem() != other.hasFeedItem()) return false;
+      if (hasFeedItem()) {
+        if (!getFeedItem()
+            .equals(other.getFeedItem())) return false;
+      }
+      if (hasCampaignFeed() != other.hasCampaignFeed()) return false;
+      if (hasCampaignFeed()) {
+        if (!getCampaignFeed()
+            .equals(other.getCampaignFeed())) return false;
+      }
+      if (hasAdGroupFeed() != other.hasAdGroupFeed()) return false;
+      if (hasAdGroupFeed()) {
+        if (!getAdGroupFeed()
+            .equals(other.getAdGroupFeed())) return false;
+      }
+      if (hasAdGroupAd() != other.hasAdGroupAd()) return false;
+      if (hasAdGroupAd()) {
+        if (!getAdGroupAd()
+            .equals(other.getAdGroupAd())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -984,6 +1448,26 @@ private static final long serialVersionUID = 0L;
       if (hasCampaignCriterion()) {
         hash = (37 * hash) + CAMPAIGN_CRITERION_FIELD_NUMBER;
         hash = (53 * hash) + getCampaignCriterion().hashCode();
+      }
+      if (hasFeed()) {
+        hash = (37 * hash) + FEED_FIELD_NUMBER;
+        hash = (53 * hash) + getFeed().hashCode();
+      }
+      if (hasFeedItem()) {
+        hash = (37 * hash) + FEED_ITEM_FIELD_NUMBER;
+        hash = (53 * hash) + getFeedItem().hashCode();
+      }
+      if (hasCampaignFeed()) {
+        hash = (37 * hash) + CAMPAIGN_FEED_FIELD_NUMBER;
+        hash = (53 * hash) + getCampaignFeed().hashCode();
+      }
+      if (hasAdGroupFeed()) {
+        hash = (37 * hash) + AD_GROUP_FEED_FIELD_NUMBER;
+        hash = (53 * hash) + getAdGroupFeed().hashCode();
+      }
+      if (hasAdGroupAd()) {
+        hash = (37 * hash) + AD_GROUP_AD_FIELD_NUMBER;
+        hash = (53 * hash) + getAdGroupAd().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -1165,6 +1649,36 @@ private static final long serialVersionUID = 0L;
           campaignCriterion_ = null;
           campaignCriterionBuilder_ = null;
         }
+        if (feedBuilder_ == null) {
+          feed_ = null;
+        } else {
+          feed_ = null;
+          feedBuilder_ = null;
+        }
+        if (feedItemBuilder_ == null) {
+          feedItem_ = null;
+        } else {
+          feedItem_ = null;
+          feedItemBuilder_ = null;
+        }
+        if (campaignFeedBuilder_ == null) {
+          campaignFeed_ = null;
+        } else {
+          campaignFeed_ = null;
+          campaignFeedBuilder_ = null;
+        }
+        if (adGroupFeedBuilder_ == null) {
+          adGroupFeed_ = null;
+        } else {
+          adGroupFeed_ = null;
+          adGroupFeedBuilder_ = null;
+        }
+        if (adGroupAdBuilder_ == null) {
+          adGroupAd_ = null;
+        } else {
+          adGroupAd_ = null;
+          adGroupAdBuilder_ = null;
+        }
         return this;
       }
 
@@ -1225,6 +1739,31 @@ private static final long serialVersionUID = 0L;
           result.campaignCriterion_ = campaignCriterion_;
         } else {
           result.campaignCriterion_ = campaignCriterionBuilder_.build();
+        }
+        if (feedBuilder_ == null) {
+          result.feed_ = feed_;
+        } else {
+          result.feed_ = feedBuilder_.build();
+        }
+        if (feedItemBuilder_ == null) {
+          result.feedItem_ = feedItem_;
+        } else {
+          result.feedItem_ = feedItemBuilder_.build();
+        }
+        if (campaignFeedBuilder_ == null) {
+          result.campaignFeed_ = campaignFeed_;
+        } else {
+          result.campaignFeed_ = campaignFeedBuilder_.build();
+        }
+        if (adGroupFeedBuilder_ == null) {
+          result.adGroupFeed_ = adGroupFeed_;
+        } else {
+          result.adGroupFeed_ = adGroupFeedBuilder_.build();
+        }
+        if (adGroupAdBuilder_ == null) {
+          result.adGroupAd_ = adGroupAd_;
+        } else {
+          result.adGroupAd_ = adGroupAdBuilder_.build();
         }
         onBuilt();
         return result;
@@ -1294,6 +1833,21 @@ private static final long serialVersionUID = 0L;
         }
         if (other.hasCampaignCriterion()) {
           mergeCampaignCriterion(other.getCampaignCriterion());
+        }
+        if (other.hasFeed()) {
+          mergeFeed(other.getFeed());
+        }
+        if (other.hasFeedItem()) {
+          mergeFeedItem(other.getFeedItem());
+        }
+        if (other.hasCampaignFeed()) {
+          mergeCampaignFeed(other.getCampaignFeed());
+        }
+        if (other.hasAdGroupFeed()) {
+          mergeAdGroupFeed(other.getAdGroupFeed());
+        }
+        if (other.hasAdGroupAd()) {
+          mergeAdGroupAd(other.getAdGroupAd());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -2408,6 +2962,781 @@ private static final long serialVersionUID = 0L;
         }
         return campaignCriterionBuilder_;
       }
+
+      private com.google.ads.googleads.v6.resources.Feed feed_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.ads.googleads.v6.resources.Feed, com.google.ads.googleads.v6.resources.Feed.Builder, com.google.ads.googleads.v6.resources.FeedOrBuilder> feedBuilder_;
+      /**
+       * <pre>
+       * Output only. Set if change_resource_type == FEED.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v6.resources.Feed feed = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @return Whether the feed field is set.
+       */
+      public boolean hasFeed() {
+        return feedBuilder_ != null || feed_ != null;
+      }
+      /**
+       * <pre>
+       * Output only. Set if change_resource_type == FEED.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v6.resources.Feed feed = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @return The feed.
+       */
+      public com.google.ads.googleads.v6.resources.Feed getFeed() {
+        if (feedBuilder_ == null) {
+          return feed_ == null ? com.google.ads.googleads.v6.resources.Feed.getDefaultInstance() : feed_;
+        } else {
+          return feedBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Output only. Set if change_resource_type == FEED.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v6.resources.Feed feed = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       */
+      public Builder setFeed(com.google.ads.googleads.v6.resources.Feed value) {
+        if (feedBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          feed_ = value;
+          onChanged();
+        } else {
+          feedBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Output only. Set if change_resource_type == FEED.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v6.resources.Feed feed = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       */
+      public Builder setFeed(
+          com.google.ads.googleads.v6.resources.Feed.Builder builderForValue) {
+        if (feedBuilder_ == null) {
+          feed_ = builderForValue.build();
+          onChanged();
+        } else {
+          feedBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Output only. Set if change_resource_type == FEED.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v6.resources.Feed feed = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       */
+      public Builder mergeFeed(com.google.ads.googleads.v6.resources.Feed value) {
+        if (feedBuilder_ == null) {
+          if (feed_ != null) {
+            feed_ =
+              com.google.ads.googleads.v6.resources.Feed.newBuilder(feed_).mergeFrom(value).buildPartial();
+          } else {
+            feed_ = value;
+          }
+          onChanged();
+        } else {
+          feedBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Output only. Set if change_resource_type == FEED.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v6.resources.Feed feed = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       */
+      public Builder clearFeed() {
+        if (feedBuilder_ == null) {
+          feed_ = null;
+          onChanged();
+        } else {
+          feed_ = null;
+          feedBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Output only. Set if change_resource_type == FEED.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v6.resources.Feed feed = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       */
+      public com.google.ads.googleads.v6.resources.Feed.Builder getFeedBuilder() {
+        
+        onChanged();
+        return getFeedFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Output only. Set if change_resource_type == FEED.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v6.resources.Feed feed = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       */
+      public com.google.ads.googleads.v6.resources.FeedOrBuilder getFeedOrBuilder() {
+        if (feedBuilder_ != null) {
+          return feedBuilder_.getMessageOrBuilder();
+        } else {
+          return feed_ == null ?
+              com.google.ads.googleads.v6.resources.Feed.getDefaultInstance() : feed_;
+        }
+      }
+      /**
+       * <pre>
+       * Output only. Set if change_resource_type == FEED.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v6.resources.Feed feed = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.ads.googleads.v6.resources.Feed, com.google.ads.googleads.v6.resources.Feed.Builder, com.google.ads.googleads.v6.resources.FeedOrBuilder> 
+          getFeedFieldBuilder() {
+        if (feedBuilder_ == null) {
+          feedBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.ads.googleads.v6.resources.Feed, com.google.ads.googleads.v6.resources.Feed.Builder, com.google.ads.googleads.v6.resources.FeedOrBuilder>(
+                  getFeed(),
+                  getParentForChildren(),
+                  isClean());
+          feed_ = null;
+        }
+        return feedBuilder_;
+      }
+
+      private com.google.ads.googleads.v6.resources.FeedItem feedItem_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.ads.googleads.v6.resources.FeedItem, com.google.ads.googleads.v6.resources.FeedItem.Builder, com.google.ads.googleads.v6.resources.FeedItemOrBuilder> feedItemBuilder_;
+      /**
+       * <pre>
+       * Output only. Set if change_resource_type == FEED_ITEM.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v6.resources.FeedItem feed_item = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @return Whether the feedItem field is set.
+       */
+      public boolean hasFeedItem() {
+        return feedItemBuilder_ != null || feedItem_ != null;
+      }
+      /**
+       * <pre>
+       * Output only. Set if change_resource_type == FEED_ITEM.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v6.resources.FeedItem feed_item = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @return The feedItem.
+       */
+      public com.google.ads.googleads.v6.resources.FeedItem getFeedItem() {
+        if (feedItemBuilder_ == null) {
+          return feedItem_ == null ? com.google.ads.googleads.v6.resources.FeedItem.getDefaultInstance() : feedItem_;
+        } else {
+          return feedItemBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Output only. Set if change_resource_type == FEED_ITEM.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v6.resources.FeedItem feed_item = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       */
+      public Builder setFeedItem(com.google.ads.googleads.v6.resources.FeedItem value) {
+        if (feedItemBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          feedItem_ = value;
+          onChanged();
+        } else {
+          feedItemBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Output only. Set if change_resource_type == FEED_ITEM.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v6.resources.FeedItem feed_item = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       */
+      public Builder setFeedItem(
+          com.google.ads.googleads.v6.resources.FeedItem.Builder builderForValue) {
+        if (feedItemBuilder_ == null) {
+          feedItem_ = builderForValue.build();
+          onChanged();
+        } else {
+          feedItemBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Output only. Set if change_resource_type == FEED_ITEM.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v6.resources.FeedItem feed_item = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       */
+      public Builder mergeFeedItem(com.google.ads.googleads.v6.resources.FeedItem value) {
+        if (feedItemBuilder_ == null) {
+          if (feedItem_ != null) {
+            feedItem_ =
+              com.google.ads.googleads.v6.resources.FeedItem.newBuilder(feedItem_).mergeFrom(value).buildPartial();
+          } else {
+            feedItem_ = value;
+          }
+          onChanged();
+        } else {
+          feedItemBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Output only. Set if change_resource_type == FEED_ITEM.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v6.resources.FeedItem feed_item = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       */
+      public Builder clearFeedItem() {
+        if (feedItemBuilder_ == null) {
+          feedItem_ = null;
+          onChanged();
+        } else {
+          feedItem_ = null;
+          feedItemBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Output only. Set if change_resource_type == FEED_ITEM.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v6.resources.FeedItem feed_item = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       */
+      public com.google.ads.googleads.v6.resources.FeedItem.Builder getFeedItemBuilder() {
+        
+        onChanged();
+        return getFeedItemFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Output only. Set if change_resource_type == FEED_ITEM.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v6.resources.FeedItem feed_item = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       */
+      public com.google.ads.googleads.v6.resources.FeedItemOrBuilder getFeedItemOrBuilder() {
+        if (feedItemBuilder_ != null) {
+          return feedItemBuilder_.getMessageOrBuilder();
+        } else {
+          return feedItem_ == null ?
+              com.google.ads.googleads.v6.resources.FeedItem.getDefaultInstance() : feedItem_;
+        }
+      }
+      /**
+       * <pre>
+       * Output only. Set if change_resource_type == FEED_ITEM.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v6.resources.FeedItem feed_item = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.ads.googleads.v6.resources.FeedItem, com.google.ads.googleads.v6.resources.FeedItem.Builder, com.google.ads.googleads.v6.resources.FeedItemOrBuilder> 
+          getFeedItemFieldBuilder() {
+        if (feedItemBuilder_ == null) {
+          feedItemBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.ads.googleads.v6.resources.FeedItem, com.google.ads.googleads.v6.resources.FeedItem.Builder, com.google.ads.googleads.v6.resources.FeedItemOrBuilder>(
+                  getFeedItem(),
+                  getParentForChildren(),
+                  isClean());
+          feedItem_ = null;
+        }
+        return feedItemBuilder_;
+      }
+
+      private com.google.ads.googleads.v6.resources.CampaignFeed campaignFeed_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.ads.googleads.v6.resources.CampaignFeed, com.google.ads.googleads.v6.resources.CampaignFeed.Builder, com.google.ads.googleads.v6.resources.CampaignFeedOrBuilder> campaignFeedBuilder_;
+      /**
+       * <pre>
+       * Output only. Set if change_resource_type == CAMPAIGN_FEED.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v6.resources.CampaignFeed campaign_feed = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @return Whether the campaignFeed field is set.
+       */
+      public boolean hasCampaignFeed() {
+        return campaignFeedBuilder_ != null || campaignFeed_ != null;
+      }
+      /**
+       * <pre>
+       * Output only. Set if change_resource_type == CAMPAIGN_FEED.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v6.resources.CampaignFeed campaign_feed = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @return The campaignFeed.
+       */
+      public com.google.ads.googleads.v6.resources.CampaignFeed getCampaignFeed() {
+        if (campaignFeedBuilder_ == null) {
+          return campaignFeed_ == null ? com.google.ads.googleads.v6.resources.CampaignFeed.getDefaultInstance() : campaignFeed_;
+        } else {
+          return campaignFeedBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Output only. Set if change_resource_type == CAMPAIGN_FEED.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v6.resources.CampaignFeed campaign_feed = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       */
+      public Builder setCampaignFeed(com.google.ads.googleads.v6.resources.CampaignFeed value) {
+        if (campaignFeedBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          campaignFeed_ = value;
+          onChanged();
+        } else {
+          campaignFeedBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Output only. Set if change_resource_type == CAMPAIGN_FEED.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v6.resources.CampaignFeed campaign_feed = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       */
+      public Builder setCampaignFeed(
+          com.google.ads.googleads.v6.resources.CampaignFeed.Builder builderForValue) {
+        if (campaignFeedBuilder_ == null) {
+          campaignFeed_ = builderForValue.build();
+          onChanged();
+        } else {
+          campaignFeedBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Output only. Set if change_resource_type == CAMPAIGN_FEED.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v6.resources.CampaignFeed campaign_feed = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       */
+      public Builder mergeCampaignFeed(com.google.ads.googleads.v6.resources.CampaignFeed value) {
+        if (campaignFeedBuilder_ == null) {
+          if (campaignFeed_ != null) {
+            campaignFeed_ =
+              com.google.ads.googleads.v6.resources.CampaignFeed.newBuilder(campaignFeed_).mergeFrom(value).buildPartial();
+          } else {
+            campaignFeed_ = value;
+          }
+          onChanged();
+        } else {
+          campaignFeedBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Output only. Set if change_resource_type == CAMPAIGN_FEED.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v6.resources.CampaignFeed campaign_feed = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       */
+      public Builder clearCampaignFeed() {
+        if (campaignFeedBuilder_ == null) {
+          campaignFeed_ = null;
+          onChanged();
+        } else {
+          campaignFeed_ = null;
+          campaignFeedBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Output only. Set if change_resource_type == CAMPAIGN_FEED.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v6.resources.CampaignFeed campaign_feed = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       */
+      public com.google.ads.googleads.v6.resources.CampaignFeed.Builder getCampaignFeedBuilder() {
+        
+        onChanged();
+        return getCampaignFeedFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Output only. Set if change_resource_type == CAMPAIGN_FEED.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v6.resources.CampaignFeed campaign_feed = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       */
+      public com.google.ads.googleads.v6.resources.CampaignFeedOrBuilder getCampaignFeedOrBuilder() {
+        if (campaignFeedBuilder_ != null) {
+          return campaignFeedBuilder_.getMessageOrBuilder();
+        } else {
+          return campaignFeed_ == null ?
+              com.google.ads.googleads.v6.resources.CampaignFeed.getDefaultInstance() : campaignFeed_;
+        }
+      }
+      /**
+       * <pre>
+       * Output only. Set if change_resource_type == CAMPAIGN_FEED.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v6.resources.CampaignFeed campaign_feed = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.ads.googleads.v6.resources.CampaignFeed, com.google.ads.googleads.v6.resources.CampaignFeed.Builder, com.google.ads.googleads.v6.resources.CampaignFeedOrBuilder> 
+          getCampaignFeedFieldBuilder() {
+        if (campaignFeedBuilder_ == null) {
+          campaignFeedBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.ads.googleads.v6.resources.CampaignFeed, com.google.ads.googleads.v6.resources.CampaignFeed.Builder, com.google.ads.googleads.v6.resources.CampaignFeedOrBuilder>(
+                  getCampaignFeed(),
+                  getParentForChildren(),
+                  isClean());
+          campaignFeed_ = null;
+        }
+        return campaignFeedBuilder_;
+      }
+
+      private com.google.ads.googleads.v6.resources.AdGroupFeed adGroupFeed_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.ads.googleads.v6.resources.AdGroupFeed, com.google.ads.googleads.v6.resources.AdGroupFeed.Builder, com.google.ads.googleads.v6.resources.AdGroupFeedOrBuilder> adGroupFeedBuilder_;
+      /**
+       * <pre>
+       * Output only. Set if change_resource_type == AD_GROUP_FEED.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v6.resources.AdGroupFeed ad_group_feed = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @return Whether the adGroupFeed field is set.
+       */
+      public boolean hasAdGroupFeed() {
+        return adGroupFeedBuilder_ != null || adGroupFeed_ != null;
+      }
+      /**
+       * <pre>
+       * Output only. Set if change_resource_type == AD_GROUP_FEED.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v6.resources.AdGroupFeed ad_group_feed = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @return The adGroupFeed.
+       */
+      public com.google.ads.googleads.v6.resources.AdGroupFeed getAdGroupFeed() {
+        if (adGroupFeedBuilder_ == null) {
+          return adGroupFeed_ == null ? com.google.ads.googleads.v6.resources.AdGroupFeed.getDefaultInstance() : adGroupFeed_;
+        } else {
+          return adGroupFeedBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Output only. Set if change_resource_type == AD_GROUP_FEED.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v6.resources.AdGroupFeed ad_group_feed = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       */
+      public Builder setAdGroupFeed(com.google.ads.googleads.v6.resources.AdGroupFeed value) {
+        if (adGroupFeedBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          adGroupFeed_ = value;
+          onChanged();
+        } else {
+          adGroupFeedBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Output only. Set if change_resource_type == AD_GROUP_FEED.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v6.resources.AdGroupFeed ad_group_feed = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       */
+      public Builder setAdGroupFeed(
+          com.google.ads.googleads.v6.resources.AdGroupFeed.Builder builderForValue) {
+        if (adGroupFeedBuilder_ == null) {
+          adGroupFeed_ = builderForValue.build();
+          onChanged();
+        } else {
+          adGroupFeedBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Output only. Set if change_resource_type == AD_GROUP_FEED.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v6.resources.AdGroupFeed ad_group_feed = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       */
+      public Builder mergeAdGroupFeed(com.google.ads.googleads.v6.resources.AdGroupFeed value) {
+        if (adGroupFeedBuilder_ == null) {
+          if (adGroupFeed_ != null) {
+            adGroupFeed_ =
+              com.google.ads.googleads.v6.resources.AdGroupFeed.newBuilder(adGroupFeed_).mergeFrom(value).buildPartial();
+          } else {
+            adGroupFeed_ = value;
+          }
+          onChanged();
+        } else {
+          adGroupFeedBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Output only. Set if change_resource_type == AD_GROUP_FEED.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v6.resources.AdGroupFeed ad_group_feed = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       */
+      public Builder clearAdGroupFeed() {
+        if (adGroupFeedBuilder_ == null) {
+          adGroupFeed_ = null;
+          onChanged();
+        } else {
+          adGroupFeed_ = null;
+          adGroupFeedBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Output only. Set if change_resource_type == AD_GROUP_FEED.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v6.resources.AdGroupFeed ad_group_feed = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       */
+      public com.google.ads.googleads.v6.resources.AdGroupFeed.Builder getAdGroupFeedBuilder() {
+        
+        onChanged();
+        return getAdGroupFeedFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Output only. Set if change_resource_type == AD_GROUP_FEED.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v6.resources.AdGroupFeed ad_group_feed = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       */
+      public com.google.ads.googleads.v6.resources.AdGroupFeedOrBuilder getAdGroupFeedOrBuilder() {
+        if (adGroupFeedBuilder_ != null) {
+          return adGroupFeedBuilder_.getMessageOrBuilder();
+        } else {
+          return adGroupFeed_ == null ?
+              com.google.ads.googleads.v6.resources.AdGroupFeed.getDefaultInstance() : adGroupFeed_;
+        }
+      }
+      /**
+       * <pre>
+       * Output only. Set if change_resource_type == AD_GROUP_FEED.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v6.resources.AdGroupFeed ad_group_feed = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.ads.googleads.v6.resources.AdGroupFeed, com.google.ads.googleads.v6.resources.AdGroupFeed.Builder, com.google.ads.googleads.v6.resources.AdGroupFeedOrBuilder> 
+          getAdGroupFeedFieldBuilder() {
+        if (adGroupFeedBuilder_ == null) {
+          adGroupFeedBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.ads.googleads.v6.resources.AdGroupFeed, com.google.ads.googleads.v6.resources.AdGroupFeed.Builder, com.google.ads.googleads.v6.resources.AdGroupFeedOrBuilder>(
+                  getAdGroupFeed(),
+                  getParentForChildren(),
+                  isClean());
+          adGroupFeed_ = null;
+        }
+        return adGroupFeedBuilder_;
+      }
+
+      private com.google.ads.googleads.v6.resources.AdGroupAd adGroupAd_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.ads.googleads.v6.resources.AdGroupAd, com.google.ads.googleads.v6.resources.AdGroupAd.Builder, com.google.ads.googleads.v6.resources.AdGroupAdOrBuilder> adGroupAdBuilder_;
+      /**
+       * <pre>
+       * Output only. Set if change_resource_type == AD_GROUP_AD.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v6.resources.AdGroupAd ad_group_ad = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @return Whether the adGroupAd field is set.
+       */
+      public boolean hasAdGroupAd() {
+        return adGroupAdBuilder_ != null || adGroupAd_ != null;
+      }
+      /**
+       * <pre>
+       * Output only. Set if change_resource_type == AD_GROUP_AD.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v6.resources.AdGroupAd ad_group_ad = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @return The adGroupAd.
+       */
+      public com.google.ads.googleads.v6.resources.AdGroupAd getAdGroupAd() {
+        if (adGroupAdBuilder_ == null) {
+          return adGroupAd_ == null ? com.google.ads.googleads.v6.resources.AdGroupAd.getDefaultInstance() : adGroupAd_;
+        } else {
+          return adGroupAdBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Output only. Set if change_resource_type == AD_GROUP_AD.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v6.resources.AdGroupAd ad_group_ad = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       */
+      public Builder setAdGroupAd(com.google.ads.googleads.v6.resources.AdGroupAd value) {
+        if (adGroupAdBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          adGroupAd_ = value;
+          onChanged();
+        } else {
+          adGroupAdBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Output only. Set if change_resource_type == AD_GROUP_AD.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v6.resources.AdGroupAd ad_group_ad = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       */
+      public Builder setAdGroupAd(
+          com.google.ads.googleads.v6.resources.AdGroupAd.Builder builderForValue) {
+        if (adGroupAdBuilder_ == null) {
+          adGroupAd_ = builderForValue.build();
+          onChanged();
+        } else {
+          adGroupAdBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Output only. Set if change_resource_type == AD_GROUP_AD.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v6.resources.AdGroupAd ad_group_ad = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       */
+      public Builder mergeAdGroupAd(com.google.ads.googleads.v6.resources.AdGroupAd value) {
+        if (adGroupAdBuilder_ == null) {
+          if (adGroupAd_ != null) {
+            adGroupAd_ =
+              com.google.ads.googleads.v6.resources.AdGroupAd.newBuilder(adGroupAd_).mergeFrom(value).buildPartial();
+          } else {
+            adGroupAd_ = value;
+          }
+          onChanged();
+        } else {
+          adGroupAdBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Output only. Set if change_resource_type == AD_GROUP_AD.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v6.resources.AdGroupAd ad_group_ad = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       */
+      public Builder clearAdGroupAd() {
+        if (adGroupAdBuilder_ == null) {
+          adGroupAd_ = null;
+          onChanged();
+        } else {
+          adGroupAd_ = null;
+          adGroupAdBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Output only. Set if change_resource_type == AD_GROUP_AD.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v6.resources.AdGroupAd ad_group_ad = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       */
+      public com.google.ads.googleads.v6.resources.AdGroupAd.Builder getAdGroupAdBuilder() {
+        
+        onChanged();
+        return getAdGroupAdFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Output only. Set if change_resource_type == AD_GROUP_AD.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v6.resources.AdGroupAd ad_group_ad = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       */
+      public com.google.ads.googleads.v6.resources.AdGroupAdOrBuilder getAdGroupAdOrBuilder() {
+        if (adGroupAdBuilder_ != null) {
+          return adGroupAdBuilder_.getMessageOrBuilder();
+        } else {
+          return adGroupAd_ == null ?
+              com.google.ads.googleads.v6.resources.AdGroupAd.getDefaultInstance() : adGroupAd_;
+        }
+      }
+      /**
+       * <pre>
+       * Output only. Set if change_resource_type == AD_GROUP_AD.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v6.resources.AdGroupAd ad_group_ad = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.ads.googleads.v6.resources.AdGroupAd, com.google.ads.googleads.v6.resources.AdGroupAd.Builder, com.google.ads.googleads.v6.resources.AdGroupAdOrBuilder> 
+          getAdGroupAdFieldBuilder() {
+        if (adGroupAdBuilder_ == null) {
+          adGroupAdBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.ads.googleads.v6.resources.AdGroupAd, com.google.ads.googleads.v6.resources.AdGroupAd.Builder, com.google.ads.googleads.v6.resources.AdGroupAdOrBuilder>(
+                  getAdGroupAd(),
+                  getParentForChildren(),
+                  isClean());
+          adGroupAd_ = null;
+        }
+        return adGroupAdBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -2938,6 +4267,98 @@ private static final long serialVersionUID = 0L;
     }
   }
 
+  public static final int FEED_FIELD_NUMBER = 13;
+  private volatile java.lang.Object feed_;
+  /**
+   * <pre>
+   * Output only. The Feed affected by this change.
+   * </pre>
+   *
+   * <code>string feed = 13 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The feed.
+   */
+  @java.lang.Override
+  public java.lang.String getFeed() {
+    java.lang.Object ref = feed_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      feed_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * Output only. The Feed affected by this change.
+   * </pre>
+   *
+   * <code>string feed = 13 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The bytes for feed.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getFeedBytes() {
+    java.lang.Object ref = feed_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      feed_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int FEED_ITEM_FIELD_NUMBER = 14;
+  private volatile java.lang.Object feedItem_;
+  /**
+   * <pre>
+   * Output only. The FeedItem affected by this change.
+   * </pre>
+   *
+   * <code>string feed_item = 14 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The feedItem.
+   */
+  @java.lang.Override
+  public java.lang.String getFeedItem() {
+    java.lang.Object ref = feedItem_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      feedItem_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * Output only. The FeedItem affected by this change.
+   * </pre>
+   *
+   * <code>string feed_item = 14 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The bytes for feedItem.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getFeedItemBytes() {
+    java.lang.Object ref = feedItem_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      feedItem_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -2987,6 +4408,12 @@ private static final long serialVersionUID = 0L;
     }
     if (!getAdGroupBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 12, adGroup_);
+    }
+    if (!getFeedBytes().isEmpty()) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 13, feed_);
+    }
+    if (!getFeedItemBytes().isEmpty()) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 14, feedItem_);
     }
     unknownFields.writeTo(output);
   }
@@ -3039,6 +4466,12 @@ private static final long serialVersionUID = 0L;
     if (!getAdGroupBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(12, adGroup_);
     }
+    if (!getFeedBytes().isEmpty()) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(13, feed_);
+    }
+    if (!getFeedItemBytes().isEmpty()) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(14, feedItem_);
+    }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
@@ -3084,6 +4517,10 @@ private static final long serialVersionUID = 0L;
         .equals(other.getCampaign())) return false;
     if (!getAdGroup()
         .equals(other.getAdGroup())) return false;
+    if (!getFeed()
+        .equals(other.getFeed())) return false;
+    if (!getFeedItem()
+        .equals(other.getFeedItem())) return false;
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -3125,6 +4562,10 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + getCampaign().hashCode();
     hash = (37 * hash) + AD_GROUP_FIELD_NUMBER;
     hash = (53 * hash) + getAdGroup().hashCode();
+    hash = (37 * hash) + FEED_FIELD_NUMBER;
+    hash = (53 * hash) + getFeed().hashCode();
+    hash = (37 * hash) + FEED_ITEM_FIELD_NUMBER;
+    hash = (53 * hash) + getFeedItem().hashCode();
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -3228,7 +4669,7 @@ private static final long serialVersionUID = 0L;
    * shown externally) in the past 30 days will be shown. The change shows the old
    * values of the changed fields before the change and the new values right after
    * the change. ChangeEvent could have up to 3 minutes delay to reflect a new
-   * change
+   * change.
    * </pre>
    *
    * Protobuf type {@code google.ads.googleads.v6.resources.ChangeEvent}
@@ -3304,6 +4745,10 @@ private static final long serialVersionUID = 0L;
 
       adGroup_ = "";
 
+      feed_ = "";
+
+      feedItem_ = "";
+
       return this;
     }
 
@@ -3354,6 +4799,8 @@ private static final long serialVersionUID = 0L;
       }
       result.campaign_ = campaign_;
       result.adGroup_ = adGroup_;
+      result.feed_ = feed_;
+      result.feedItem_ = feedItem_;
       onBuilt();
       return result;
     }
@@ -3442,6 +4889,14 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getAdGroup().isEmpty()) {
         adGroup_ = other.adGroup_;
+        onChanged();
+      }
+      if (!other.getFeed().isEmpty()) {
+        feed_ = other.feed_;
+        onChanged();
+      }
+      if (!other.getFeedItem().isEmpty()) {
+        feedItem_ = other.feedItem_;
         onChanged();
       }
       this.mergeUnknownFields(other.unknownFields);
@@ -4747,6 +6202,198 @@ private static final long serialVersionUID = 0L;
   checkByteStringIsUtf8(value);
       
       adGroup_ = value;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object feed_ = "";
+    /**
+     * <pre>
+     * Output only. The Feed affected by this change.
+     * </pre>
+     *
+     * <code>string feed = 13 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @return The feed.
+     */
+    public java.lang.String getFeed() {
+      java.lang.Object ref = feed_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        feed_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * Output only. The Feed affected by this change.
+     * </pre>
+     *
+     * <code>string feed = 13 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @return The bytes for feed.
+     */
+    public com.google.protobuf.ByteString
+        getFeedBytes() {
+      java.lang.Object ref = feed_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        feed_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * Output only. The Feed affected by this change.
+     * </pre>
+     *
+     * <code>string feed = 13 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @param value The feed to set.
+     * @return This builder for chaining.
+     */
+    public Builder setFeed(
+        java.lang.String value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
+      feed_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Output only. The Feed affected by this change.
+     * </pre>
+     *
+     * <code>string feed = 13 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearFeed() {
+      
+      feed_ = getDefaultInstance().getFeed();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Output only. The Feed affected by this change.
+     * </pre>
+     *
+     * <code>string feed = 13 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @param value The bytes for feed to set.
+     * @return This builder for chaining.
+     */
+    public Builder setFeedBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
+      feed_ = value;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object feedItem_ = "";
+    /**
+     * <pre>
+     * Output only. The FeedItem affected by this change.
+     * </pre>
+     *
+     * <code>string feed_item = 14 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @return The feedItem.
+     */
+    public java.lang.String getFeedItem() {
+      java.lang.Object ref = feedItem_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        feedItem_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * Output only. The FeedItem affected by this change.
+     * </pre>
+     *
+     * <code>string feed_item = 14 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @return The bytes for feedItem.
+     */
+    public com.google.protobuf.ByteString
+        getFeedItemBytes() {
+      java.lang.Object ref = feedItem_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        feedItem_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * Output only. The FeedItem affected by this change.
+     * </pre>
+     *
+     * <code>string feed_item = 14 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @param value The feedItem to set.
+     * @return This builder for chaining.
+     */
+    public Builder setFeedItem(
+        java.lang.String value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
+      feedItem_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Output only. The FeedItem affected by this change.
+     * </pre>
+     *
+     * <code>string feed_item = 14 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearFeedItem() {
+      
+      feedItem_ = getDefaultInstance().getFeedItem();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Output only. The FeedItem affected by this change.
+     * </pre>
+     *
+     * <code>string feed_item = 14 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @param value The bytes for feedItem to set.
+     * @return This builder for chaining.
+     */
+    public Builder setFeedItemBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
+      feedItem_ = value;
       onChanged();
       return this;
     }

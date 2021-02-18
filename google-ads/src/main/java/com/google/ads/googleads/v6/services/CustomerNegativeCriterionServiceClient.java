@@ -84,8 +84,7 @@ import javax.annotation.Generated;
  *
  * <p>Please refer to the GitHub repository's samples for more quickstart code snippets.
  */
-@BetaApi
-@Generated("by gapic-generator")
+@Generated("by gapic-generator-java")
 public class CustomerNegativeCriterionServiceClient implements BackgroundResource {
   private final CustomerNegativeCriterionServiceSettings settings;
   private final CustomerNegativeCriterionServiceStub stub;
@@ -147,7 +146,7 @@ public class CustomerNegativeCriterionServiceClient implements BackgroundResourc
   /**
    * Returns the requested criterion in full detail.
    *
-   * @param resource_name Required. The resource name of the criterion to fetch.
+   * @param resourceName Required. The resource name of the criterion to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final CustomerNegativeCriterion getCustomerNegativeCriterion(
@@ -163,7 +162,7 @@ public class CustomerNegativeCriterionServiceClient implements BackgroundResourc
   /**
    * Returns the requested criterion in full detail.
    *
-   * @param resource_name Required. The resource name of the criterion to fetch.
+   * @param resourceName Required. The resource name of the criterion to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final CustomerNegativeCriterion getCustomerNegativeCriterion(String resourceName) {
@@ -199,7 +198,7 @@ public class CustomerNegativeCriterionServiceClient implements BackgroundResourc
   /**
    * Creates or removes criteria. Operation statuses are returned.
    *
-   * @param customer_id Required. The ID of the customer whose criteria are being modified.
+   * @param customerId Required. The ID of the customer whose criteria are being modified.
    * @param operations Required. The list of operations to perform on individual criteria.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */

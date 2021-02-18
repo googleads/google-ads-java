@@ -76,11 +76,21 @@ public class GrpcLocationViewServiceStub extends LocationViewServiceStub {
         LocationViewServiceStubSettings.newBuilder().build(), clientContext, callableFactory);
   }
 
+  /**
+   * Constructs an instance of GrpcLocationViewServiceStub, using the given settings. This is
+   * protected so that it is easy to make a subclass, but otherwise, the static factory methods
+   * should be preferred.
+   */
   protected GrpcLocationViewServiceStub(
       LocationViewServiceStubSettings settings, ClientContext clientContext) throws IOException {
     this(settings, clientContext, new GrpcLocationViewServiceCallableFactory());
   }
 
+  /**
+   * Constructs an instance of GrpcLocationViewServiceStub, using the given settings. This is
+   * protected so that it is easy to make a subclass, but otherwise, the static factory methods
+   * should be preferred.
+   */
   protected GrpcLocationViewServiceStub(
       LocationViewServiceStubSettings settings,
       ClientContext clientContext,

@@ -75,7 +75,6 @@ import org.threeten.bp.Duration;
  *     languageConstantServiceSettingsBuilder.build();
  * }</pre>
  */
-@BetaApi
 @Generated("by gapic-generator-java")
 public class LanguageConstantServiceStubSettings
     extends StubSettings<LanguageConstantServiceStubSettings> {

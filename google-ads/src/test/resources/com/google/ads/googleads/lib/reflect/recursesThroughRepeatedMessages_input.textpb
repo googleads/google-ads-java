@@ -1,0 +1,6 @@
+bars {
+  primitive_string: "test"
+}
+bars {
+  primitive_string: "test again"
+}

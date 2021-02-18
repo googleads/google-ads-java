@@ -82,8 +82,7 @@ import javax.annotation.Generated;
  *
  * <p>Please refer to the GitHub repository's samples for more quickstart code snippets.
  */
-@BetaApi
-@Generated("by gapic-generator")
+@Generated("by gapic-generator-java")
 public class PaymentsAccountServiceClient implements BackgroundResource {
   private final PaymentsAccountServiceSettings settings;
   private final PaymentsAccountServiceStub stub;
@@ -142,7 +141,7 @@ public class PaymentsAccountServiceClient implements BackgroundResource {
    * Returns all payments accounts associated with all managers between the login customer ID and
    * specified serving customer in the hierarchy, inclusive.
    *
-   * @param customer_id Required. The ID of the customer to apply the PaymentsAccount list operation
+   * @param customerId Required. The ID of the customer to apply the PaymentsAccount list operation
    *     to.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */

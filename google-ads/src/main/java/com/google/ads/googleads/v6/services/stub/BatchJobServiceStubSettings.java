@@ -97,7 +97,6 @@ import org.threeten.bp.Duration;
  * BatchJobServiceStubSettings batchJobServiceSettings = batchJobServiceSettingsBuilder.build();
  * }</pre>
  */
-@BetaApi
 @Generated("by gapic-generator-java")
 public class BatchJobServiceStubSettings extends StubSettings<BatchJobServiceStubSettings> {
   /** The default scopes of the service. */

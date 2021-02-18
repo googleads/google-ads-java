@@ -85,6 +85,7 @@ public class AccountBudgetServiceClientTest {
                 AccountBudgetName.of("[CUSTOMER_ID]", "[ACCOUNT_BUDGET_ID]").toString())
             .setTotalAdjustmentsMicros(1469082819)
             .setAmountServedMicros(1848146642)
+            .setPendingProposal(AccountBudget.PendingAccountBudgetProposal.newBuilder().build())
             .build();
     mockAccountBudgetService.addResponse(expectedResponse);
 
@@ -126,6 +127,7 @@ public class AccountBudgetServiceClientTest {
                 AccountBudgetName.of("[CUSTOMER_ID]", "[ACCOUNT_BUDGET_ID]").toString())
             .setTotalAdjustmentsMicros(1469082819)
             .setAmountServedMicros(1848146642)
+            .setPendingProposal(AccountBudget.PendingAccountBudgetProposal.newBuilder().build())
             .build();
     mockAccountBudgetService.addResponse(expectedResponse);
 

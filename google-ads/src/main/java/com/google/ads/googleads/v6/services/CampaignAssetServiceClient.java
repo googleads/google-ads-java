@@ -84,8 +84,7 @@ import javax.annotation.Generated;
  *
  * <p>Please refer to the GitHub repository's samples for more quickstart code snippets.
  */
-@BetaApi
-@Generated("by gapic-generator")
+@Generated("by gapic-generator-java")
 public class CampaignAssetServiceClient implements BackgroundResource {
   private final CampaignAssetServiceSettings settings;
   private final CampaignAssetServiceStub stub;
@@ -142,7 +141,7 @@ public class CampaignAssetServiceClient implements BackgroundResource {
   /**
    * Returns the requested campaign asset in full detail.
    *
-   * @param resource_name Required. The resource name of the campaign asset to fetch.
+   * @param resourceName Required. The resource name of the campaign asset to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final CampaignAsset getCampaignAsset(CampaignAssetName resourceName) {
@@ -157,7 +156,7 @@ public class CampaignAssetServiceClient implements BackgroundResource {
   /**
    * Returns the requested campaign asset in full detail.
    *
-   * @param resource_name Required. The resource name of the campaign asset to fetch.
+   * @param resourceName Required. The resource name of the campaign asset to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final CampaignAsset getCampaignAsset(String resourceName) {
@@ -191,7 +190,7 @@ public class CampaignAssetServiceClient implements BackgroundResource {
   /**
    * Creates or removes campaign assets. Operation statuses are returned.
    *
-   * @param customer_id Required. The ID of the customer whose campaign assets are being modified.
+   * @param customerId Required. The ID of the customer whose campaign assets are being modified.
    * @param operations Required. The list of operations to perform on individual campaign assets.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */

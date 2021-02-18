@@ -250,6 +250,14 @@ private static final long serialVersionUID = 0L;
      * <code>TARGET_ROAS_OPT_IN = 17;</code>
      */
     TARGET_ROAS_OPT_IN(17),
+    /**
+     * <pre>
+     * Recommendation to add a new responsive search ad.
+     * </pre>
+     *
+     * <code>RESPONSIVE_SEARCH_AD = 18;</code>
+     */
+    RESPONSIVE_SEARCH_AD(18),
     UNRECOGNIZED(-1),
     ;
 
@@ -410,6 +418,14 @@ private static final long serialVersionUID = 0L;
      * <code>TARGET_ROAS_OPT_IN = 17;</code>
      */
     public static final int TARGET_ROAS_OPT_IN_VALUE = 17;
+    /**
+     * <pre>
+     * Recommendation to add a new responsive search ad.
+     * </pre>
+     *
+     * <code>RESPONSIVE_SEARCH_AD = 18;</code>
+     */
+    public static final int RESPONSIVE_SEARCH_AD_VALUE = 18;
 
 
     public final int getNumber() {
@@ -454,6 +470,7 @@ private static final long serialVersionUID = 0L;
         case 15: return MOVE_UNUSED_BUDGET;
         case 16: return FORECASTING_CAMPAIGN_BUDGET;
         case 17: return TARGET_ROAS_OPT_IN;
+        case 18: return RESPONSIVE_SEARCH_AD;
         default: return null;
       }
     }

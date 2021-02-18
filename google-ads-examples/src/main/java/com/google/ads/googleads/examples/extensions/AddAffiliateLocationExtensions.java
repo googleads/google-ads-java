@@ -35,7 +35,7 @@ import com.google.ads.googleads.v6.resources.Feed.AffiliateLocationFeedData;
 import com.google.ads.googleads.v6.resources.FeedMapping;
 import com.google.ads.googleads.v6.services.CampaignFeedOperation;
 import com.google.ads.googleads.v6.services.CampaignFeedServiceClient;
-import com.google.ads.googleads.v6.services.FeedName;
+import com.google.ads.googleads.v6.resources.FeedName;
 import com.google.ads.googleads.v6.services.FeedOperation;
 import com.google.ads.googleads.v6.services.FeedServiceClient;
 import com.google.ads.googleads.v6.services.GoogleAdsRow;

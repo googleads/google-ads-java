@@ -113,12 +113,22 @@ public class GrpcMerchantCenterLinkServiceStub extends MerchantCenterLinkService
         MerchantCenterLinkServiceStubSettings.newBuilder().build(), clientContext, callableFactory);
   }
 
+  /**
+   * Constructs an instance of GrpcMerchantCenterLinkServiceStub, using the given settings. This is
+   * protected so that it is easy to make a subclass, but otherwise, the static factory methods
+   * should be preferred.
+   */
   protected GrpcMerchantCenterLinkServiceStub(
       MerchantCenterLinkServiceStubSettings settings, ClientContext clientContext)
       throws IOException {
     this(settings, clientContext, new GrpcMerchantCenterLinkServiceCallableFactory());
   }
 
+  /**
+   * Constructs an instance of GrpcMerchantCenterLinkServiceStub, using the given settings. This is
+   * protected so that it is easy to make a subclass, but otherwise, the static factory methods
+   * should be preferred.
+   */
   protected GrpcMerchantCenterLinkServiceStub(
       MerchantCenterLinkServiceStubSettings settings,
       ClientContext clientContext,

@@ -83,8 +83,7 @@ import javax.annotation.Generated;
  *
  * <p>Please refer to the GitHub repository's samples for more quickstart code snippets.
  */
-@BetaApi
-@Generated("by gapic-generator")
+@Generated("by gapic-generator-java")
 public class CurrencyConstantServiceClient implements BackgroundResource {
   private final CurrencyConstantServiceSettings settings;
   private final CurrencyConstantServiceStub stub;
@@ -142,7 +141,7 @@ public class CurrencyConstantServiceClient implements BackgroundResource {
   /**
    * Returns the requested currency constant.
    *
-   * @param resource_name Required. Resource name of the currency constant to fetch.
+   * @param resourceName Required. Resource name of the currency constant to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final CurrencyConstant getCurrencyConstant(CurrencyConstantName resourceName) {
@@ -157,7 +156,7 @@ public class CurrencyConstantServiceClient implements BackgroundResource {
   /**
    * Returns the requested currency constant.
    *
-   * @param resource_name Required. Resource name of the currency constant to fetch.
+   * @param resourceName Required. Resource name of the currency constant to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final CurrencyConstant getCurrencyConstant(String resourceName) {

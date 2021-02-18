@@ -84,8 +84,7 @@ import javax.annotation.Generated;
  *
  * <p>Please refer to the GitHub repository's samples for more quickstart code snippets.
  */
-@BetaApi
-@Generated("by gapic-generator")
+@Generated("by gapic-generator-java")
 public class CustomerLabelServiceClient implements BackgroundResource {
   private final CustomerLabelServiceSettings settings;
   private final CustomerLabelServiceStub stub;
@@ -142,7 +141,7 @@ public class CustomerLabelServiceClient implements BackgroundResource {
   /**
    * Returns the requested customer-label relationship in full detail.
    *
-   * @param resource_name Required. The resource name of the customer-label relationship to fetch.
+   * @param resourceName Required. The resource name of the customer-label relationship to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final CustomerLabel getCustomerLabel(CustomerLabelName resourceName) {
@@ -157,7 +156,7 @@ public class CustomerLabelServiceClient implements BackgroundResource {
   /**
    * Returns the requested customer-label relationship in full detail.
    *
-   * @param resource_name Required. The resource name of the customer-label relationship to fetch.
+   * @param resourceName Required. The resource name of the customer-label relationship to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final CustomerLabel getCustomerLabel(String resourceName) {
@@ -191,7 +190,7 @@ public class CustomerLabelServiceClient implements BackgroundResource {
   /**
    * Creates and removes customer-label relationships. Operation statuses are returned.
    *
-   * @param customer_id Required. ID of the customer whose customer-label relationships are being
+   * @param customerId Required. ID of the customer whose customer-label relationships are being
    *     modified.
    * @param operations Required. The list of operations to perform on customer-label relationships.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails

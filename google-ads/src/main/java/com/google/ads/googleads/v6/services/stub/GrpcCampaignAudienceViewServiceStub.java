@@ -80,12 +80,22 @@ public class GrpcCampaignAudienceViewServiceStub extends CampaignAudienceViewSer
         callableFactory);
   }
 
+  /**
+   * Constructs an instance of GrpcCampaignAudienceViewServiceStub, using the given settings. This
+   * is protected so that it is easy to make a subclass, but otherwise, the static factory methods
+   * should be preferred.
+   */
   protected GrpcCampaignAudienceViewServiceStub(
       CampaignAudienceViewServiceStubSettings settings, ClientContext clientContext)
       throws IOException {
     this(settings, clientContext, new GrpcCampaignAudienceViewServiceCallableFactory());
   }
 
+  /**
+   * Constructs an instance of GrpcCampaignAudienceViewServiceStub, using the given settings. This
+   * is protected so that it is easy to make a subclass, but otherwise, the static factory methods
+   * should be preferred.
+   */
   protected GrpcCampaignAudienceViewServiceStub(
       CampaignAudienceViewServiceStubSettings settings,
       ClientContext clientContext,

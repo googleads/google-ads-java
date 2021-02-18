@@ -82,12 +82,22 @@ public class GrpcMobileAppCategoryConstantServiceStub extends MobileAppCategoryC
         callableFactory);
   }
 
+  /**
+   * Constructs an instance of GrpcMobileAppCategoryConstantServiceStub, using the given settings.
+   * This is protected so that it is easy to make a subclass, but otherwise, the static factory
+   * methods should be preferred.
+   */
   protected GrpcMobileAppCategoryConstantServiceStub(
       MobileAppCategoryConstantServiceStubSettings settings, ClientContext clientContext)
       throws IOException {
     this(settings, clientContext, new GrpcMobileAppCategoryConstantServiceCallableFactory());
   }
 
+  /**
+   * Constructs an instance of GrpcMobileAppCategoryConstantServiceStub, using the given settings.
+   * This is protected so that it is easy to make a subclass, but otherwise, the static factory
+   * methods should be preferred.
+   */
   protected GrpcMobileAppCategoryConstantServiceStub(
       MobileAppCategoryConstantServiceStubSettings settings,
       ClientContext clientContext,

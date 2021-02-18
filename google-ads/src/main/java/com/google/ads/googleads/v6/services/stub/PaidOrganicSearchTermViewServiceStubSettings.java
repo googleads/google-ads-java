@@ -76,7 +76,6 @@ import org.threeten.bp.Duration;
  *     paidOrganicSearchTermViewServiceSettingsBuilder.build();
  * }</pre>
  */
-@BetaApi
 @Generated("by gapic-generator-java")
 public class PaidOrganicSearchTermViewServiceStubSettings
     extends StubSettings<PaidOrganicSearchTermViewServiceStubSettings> {

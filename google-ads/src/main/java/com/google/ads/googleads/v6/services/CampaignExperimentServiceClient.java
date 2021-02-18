@@ -106,8 +106,7 @@ import javax.annotation.Generated;
  *
  * <p>Please refer to the GitHub repository's samples for more quickstart code snippets.
  */
-@BetaApi
-@Generated("by gapic-generator")
+@Generated("by gapic-generator-java")
 public class CampaignExperimentServiceClient implements BackgroundResource {
   private final CampaignExperimentServiceSettings settings;
   private final CampaignExperimentServiceStub stub;
@@ -177,7 +176,7 @@ public class CampaignExperimentServiceClient implements BackgroundResource {
   /**
    * Returns the requested campaign experiment in full detail.
    *
-   * @param resource_name Required. The resource name of the campaign experiment to fetch.
+   * @param resourceName Required. The resource name of the campaign experiment to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final CampaignExperiment getCampaignExperiment(CampaignExperimentName resourceName) {
@@ -192,7 +191,7 @@ public class CampaignExperimentServiceClient implements BackgroundResource {
   /**
    * Returns the requested campaign experiment in full detail.
    *
-   * @param resource_name Required. The resource name of the campaign experiment to fetch.
+   * @param resourceName Required. The resource name of the campaign experiment to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final CampaignExperiment getCampaignExperiment(String resourceName) {
@@ -235,8 +234,8 @@ public class CampaignExperimentServiceClient implements BackgroundResource {
    * operation's metadata will be a StringValue containing the resource name of the created campaign
    * experiment.
    *
-   * @param customer_id Required. The ID of the customer whose campaign experiment is being created.
-   * @param campaign_experiment Required. The campaign experiment to be created.
+   * @param customerId Required. The ID of the customer whose campaign experiment is being created.
+   * @param campaignExperiment Required. The campaign experiment to be created.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final OperationFuture<Empty, CreateCampaignExperimentMetadata>
@@ -312,7 +311,7 @@ public class CampaignExperimentServiceClient implements BackgroundResource {
   /**
    * Updates campaign experiments. Operation statuses are returned.
    *
-   * @param customer_id Required. The ID of the customer whose campaign experiments are being
+   * @param customerId Required. The ID of the customer whose campaign experiments are being
    *     modified.
    * @param operations Required. The list of operations to perform on individual campaign
    *     experiments.
@@ -356,9 +355,9 @@ public class CampaignExperimentServiceClient implements BackgroundResource {
    * Graduates a campaign experiment to a full campaign. The base and experiment campaigns will
    * start running independently with their own budgets.
    *
-   * @param campaign_experiment Required. The resource name of the campaign experiment to graduate.
-   * @param campaign_budget Required. Resource name of the budget to attach to the campaign
-   *     graduated from the experiment.
+   * @param campaignExperiment Required. The resource name of the campaign experiment to graduate.
+   * @param campaignBudget Required. Resource name of the budget to attach to the campaign graduated
+   *     from the experiment.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final GraduateCampaignExperimentResponse graduateCampaignExperiment(
@@ -404,7 +403,7 @@ public class CampaignExperimentServiceClient implements BackgroundResource {
    * long running operation that tracks the promoting of the experiment campaign. If the promoting
    * fails, a list of errors can be retrieved using the ListCampaignExperimentAsyncErrors method.
    *
-   * @param campaign_experiment Required. The resource name of the campaign experiment to promote.
+   * @param campaignExperiment Required. The resource name of the campaign experiment to promote.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final OperationFuture<Empty, Empty> promoteCampaignExperimentAsync(
@@ -467,7 +466,7 @@ public class CampaignExperimentServiceClient implements BackgroundResource {
    * Immediately ends a campaign experiment, changing the experiment's scheduled end date and
    * without waiting for end of day. End date is updated to be the time of the request.
    *
-   * @param campaign_experiment Required. The resource name of the campaign experiment to end.
+   * @param campaignExperiment Required. The resource name of the campaign experiment to end.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final void endCampaignExperiment(String campaignExperiment) {
@@ -504,7 +503,7 @@ public class CampaignExperimentServiceClient implements BackgroundResource {
    * Returns all errors that occurred during CampaignExperiment create or promote (whichever
    * occurred last). Supports standard list paging.
    *
-   * @param resource_name Required. The name of the campaign experiment from which to retrieve the
+   * @param resourceName Required. The name of the campaign experiment from which to retrieve the
    *     async errors.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
@@ -522,7 +521,7 @@ public class CampaignExperimentServiceClient implements BackgroundResource {
    * Returns all errors that occurred during CampaignExperiment create or promote (whichever
    * occurred last). Supports standard list paging.
    *
-   * @param resource_name Required. The name of the campaign experiment from which to retrieve the
+   * @param resourceName Required. The name of the campaign experiment from which to retrieve the
    *     async errors.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */

@@ -16,7 +16,6 @@ package com.google.ads.googleads.lib.logging;
 
 import com.google.ads.googleads.lib.logging.Event.Summary;
 import com.google.ads.googleads.lib.logging.scrub.LogScrubber;
-import com.google.ads.googleads.lib.utils.messageproxy.MessageEditor;
 import com.google.common.collect.ImmutableMap;
 import com.google.common.collect.ImmutableSet;
 import io.grpc.CallOptions;
@@ -47,7 +46,7 @@ public class LoggingInterceptor implements ClientInterceptor {
   private static final ImmutableSet<CharSequence> HEADERS_TO_SCRUB =
       ImmutableSet.of("developer-token", "authorization");
   private static final Logger thisClassLogger = LoggerFactory.getLogger(LoggingInterceptor.class);
-  private final MessageEditor<Object> MESSAGE_SCRUBBER = LogScrubber.getInstance();
+  private final LogScrubber LOG_SCRUBBER = LogScrubber.getInstance();
   private final RequestLogger requestLogger;
   private final ImmutableMap<String, String> requestHeaders;
   private final ImmutableMap<String, String> scrubbedRequestHeaders;
@@ -78,37 +77,41 @@ public class LoggingInterceptor implements ClientInterceptor {
             new SimpleForwardingClientCallListener<RespT>(responseListener) {
               @Override
               public void onMessage(RespT message) {
-                // Forwards the message onto other interceptors first so we don't delay processing.
                 super.onMessage(message);
-                response = (RespT) MESSAGE_SCRUBBER.edit(message);
+                response = message;
               }
 
               @Override
               public void onHeaders(Metadata headers) {
-                responseHeaders = headers;
                 super.onHeaders(headers);
+                responseHeaders = headers;
               }
 
               @Override
               public void onClose(Status status, Metadata trailers) {
                 try {
-                  logSummary(status, request, method, responseHeaders, trailers);
+                  Object scrubbedRequest = LOG_SCRUBBER.edit(request);
+                  Object scrubbedResponse = LOG_SCRUBBER.edit(response);
+                  logSummary(status, scrubbedRequest, method, responseHeaders, trailers);
                   logDetail(
                       status,
                       method,
                       requestHeaders,
                       endpoint,
-                      request,
+                      scrubbedRequest,
                       responseHeaders,
                       trailers,
-                      response);
-                } catch (Exception ex) {
+                      scrubbedResponse);
+                } catch (Throwable ex) {
                   thisClassLogger.warn("Failed to log request.", ex);
+                } finally {
+                  request = null;
+                  response = null;
+                  responseHeaders = null;
+                  // Allows the call to complete only once we're done writing logs, ensuring that
+                  // logs are printed to stdout before the RPC completes.
+                  super.onClose(status, trailers);
                 }
-                request = null;
-                response = null;
-                responseHeaders = null;
-                super.onClose(status, trailers);
               }
             },
             headers);
@@ -116,9 +119,8 @@ public class LoggingInterceptor implements ClientInterceptor {
 
       @Override
       public void sendMessage(ReqT message) {
-        // Forwards the message onto other interceptors first so we don't delay processing.
         super.sendMessage(message);
-        request = (ReqT) MESSAGE_SCRUBBER.edit(message);
+        request = message;
       }
     };
   }

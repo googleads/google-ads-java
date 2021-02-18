@@ -77,7 +77,6 @@ import org.threeten.bp.Duration;
  *     extensionFeedItemServiceSettingsBuilder.build();
  * }</pre>
  */
-@BetaApi
 @Generated("by gapic-generator-java")
 public class ExtensionFeedItemServiceStubSettings
     extends StubSettings<ExtensionFeedItemServiceStubSettings> {

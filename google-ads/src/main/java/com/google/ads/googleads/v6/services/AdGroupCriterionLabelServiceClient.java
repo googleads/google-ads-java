@@ -84,8 +84,7 @@ import javax.annotation.Generated;
  *
  * <p>Please refer to the GitHub repository's samples for more quickstart code snippets.
  */
-@BetaApi
-@Generated("by gapic-generator")
+@Generated("by gapic-generator-java")
 public class AdGroupCriterionLabelServiceClient implements BackgroundResource {
   private final AdGroupCriterionLabelServiceSettings settings;
   private final AdGroupCriterionLabelServiceStub stub;
@@ -146,7 +145,7 @@ public class AdGroupCriterionLabelServiceClient implements BackgroundResource {
   /**
    * Returns the requested ad group criterion label in full detail.
    *
-   * @param resource_name Required. The resource name of the ad group criterion label to fetch.
+   * @param resourceName Required. The resource name of the ad group criterion label to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final AdGroupCriterionLabel getAdGroupCriterionLabel(
@@ -162,7 +161,7 @@ public class AdGroupCriterionLabelServiceClient implements BackgroundResource {
   /**
    * Returns the requested ad group criterion label in full detail.
    *
-   * @param resource_name Required. The resource name of the ad group criterion label to fetch.
+   * @param resourceName Required. The resource name of the ad group criterion label to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final AdGroupCriterionLabel getAdGroupCriterionLabel(String resourceName) {
@@ -198,7 +197,7 @@ public class AdGroupCriterionLabelServiceClient implements BackgroundResource {
   /**
    * Creates and removes ad group criterion labels. Operation statuses are returned.
    *
-   * @param customer_id Required. ID of the customer whose ad group criterion labels are being
+   * @param customerId Required. ID of the customer whose ad group criterion labels are being
    *     modified.
    * @param operations Required. The list of operations to perform on ad group criterion labels.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails

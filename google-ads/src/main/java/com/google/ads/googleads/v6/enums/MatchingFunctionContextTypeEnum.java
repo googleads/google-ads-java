@@ -125,6 +125,14 @@ private static final long serialVersionUID = 0L;
      * <code>DEVICE_NAME = 3;</code>
      */
     DEVICE_NAME(3),
+    /**
+     * <pre>
+     * Feed item set id in the request context.
+     * </pre>
+     *
+     * <code>FEED_ITEM_SET_ID = 4;</code>
+     */
+    FEED_ITEM_SET_ID(4),
     UNRECOGNIZED(-1),
     ;
 
@@ -160,6 +168,14 @@ private static final long serialVersionUID = 0L;
      * <code>DEVICE_NAME = 3;</code>
      */
     public static final int DEVICE_NAME_VALUE = 3;
+    /**
+     * <pre>
+     * Feed item set id in the request context.
+     * </pre>
+     *
+     * <code>FEED_ITEM_SET_ID = 4;</code>
+     */
+    public static final int FEED_ITEM_SET_ID_VALUE = 4;
 
 
     public final int getNumber() {
@@ -190,6 +206,7 @@ private static final long serialVersionUID = 0L;
         case 1: return UNKNOWN;
         case 2: return FEED_ITEM_ID;
         case 3: return DEVICE_NAME;
+        case 4: return FEED_ITEM_SET_ID;
         default: return null;
       }
     }

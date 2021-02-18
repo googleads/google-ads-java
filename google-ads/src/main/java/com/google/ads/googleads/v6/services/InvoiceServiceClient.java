@@ -79,8 +79,7 @@ import javax.annotation.Generated;
  *
  * <p>Please refer to the GitHub repository's samples for more quickstart code snippets.
  */
-@BetaApi
-@Generated("by gapic-generator")
+@Generated("by gapic-generator-java")
 public class InvoiceServiceClient implements BackgroundResource {
   private final InvoiceServiceSettings settings;
   private final InvoiceServiceStub stub;
@@ -137,12 +136,12 @@ public class InvoiceServiceClient implements BackgroundResource {
   /**
    * Returns all invoices associated with a billing setup, for a given month.
    *
-   * @param customer_id Required. The ID of the customer to fetch invoices for.
-   * @param billing_setup Required. The billing setup resource name of the requested invoices.
+   * @param customerId Required. The ID of the customer to fetch invoices for.
+   * @param billingSetup Required. The billing setup resource name of the requested invoices.
    *     <p>`customers/{customer_id}/billingSetups/{billing_setup_id}`
-   * @param issue_year Required. The issue year to retrieve invoices, in yyyy format. Only invoices
+   * @param issueYear Required. The issue year to retrieve invoices, in yyyy format. Only invoices
    *     issued in 2019 or later can be retrieved.
-   * @param issue_month Required. The issue month to retrieve invoices.
+   * @param issueMonth Required. The issue month to retrieve invoices.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final ListInvoicesResponse listInvoices(

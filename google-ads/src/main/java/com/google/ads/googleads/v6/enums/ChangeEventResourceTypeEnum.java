@@ -88,7 +88,6 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Enum listing the resource types support by the ChangeEvent resource.
-   * Next Id: 9
    * </pre>
    *
    * Protobuf enum {@code google.ads.googleads.v6.enums.ChangeEventResourceTypeEnum.ChangeEventResourceType}
@@ -162,12 +161,52 @@ private static final long serialVersionUID = 0L;
     AD_GROUP_BID_MODIFIER(7),
     /**
      * <pre>
-     * An CampaignCriterion resource change.
+     * A CampaignCriterion resource change.
      * </pre>
      *
      * <code>CAMPAIGN_CRITERION = 8;</code>
      */
     CAMPAIGN_CRITERION(8),
+    /**
+     * <pre>
+     * A Feed resource change.
+     * </pre>
+     *
+     * <code>FEED = 9;</code>
+     */
+    FEED(9),
+    /**
+     * <pre>
+     * A FeedItem resource change.
+     * </pre>
+     *
+     * <code>FEED_ITEM = 10;</code>
+     */
+    FEED_ITEM(10),
+    /**
+     * <pre>
+     * A CampaignFeed resource change.
+     * </pre>
+     *
+     * <code>CAMPAIGN_FEED = 11;</code>
+     */
+    CAMPAIGN_FEED(11),
+    /**
+     * <pre>
+     * An AdGroupFeed resource change.
+     * </pre>
+     *
+     * <code>AD_GROUP_FEED = 12;</code>
+     */
+    AD_GROUP_FEED(12),
+    /**
+     * <pre>
+     * An AdGroupAd resource change.
+     * </pre>
+     *
+     * <code>AD_GROUP_AD = 13;</code>
+     */
+    AD_GROUP_AD(13),
     UNRECOGNIZED(-1),
     ;
 
@@ -238,12 +277,52 @@ private static final long serialVersionUID = 0L;
     public static final int AD_GROUP_BID_MODIFIER_VALUE = 7;
     /**
      * <pre>
-     * An CampaignCriterion resource change.
+     * A CampaignCriterion resource change.
      * </pre>
      *
      * <code>CAMPAIGN_CRITERION = 8;</code>
      */
     public static final int CAMPAIGN_CRITERION_VALUE = 8;
+    /**
+     * <pre>
+     * A Feed resource change.
+     * </pre>
+     *
+     * <code>FEED = 9;</code>
+     */
+    public static final int FEED_VALUE = 9;
+    /**
+     * <pre>
+     * A FeedItem resource change.
+     * </pre>
+     *
+     * <code>FEED_ITEM = 10;</code>
+     */
+    public static final int FEED_ITEM_VALUE = 10;
+    /**
+     * <pre>
+     * A CampaignFeed resource change.
+     * </pre>
+     *
+     * <code>CAMPAIGN_FEED = 11;</code>
+     */
+    public static final int CAMPAIGN_FEED_VALUE = 11;
+    /**
+     * <pre>
+     * An AdGroupFeed resource change.
+     * </pre>
+     *
+     * <code>AD_GROUP_FEED = 12;</code>
+     */
+    public static final int AD_GROUP_FEED_VALUE = 12;
+    /**
+     * <pre>
+     * An AdGroupAd resource change.
+     * </pre>
+     *
+     * <code>AD_GROUP_AD = 13;</code>
+     */
+    public static final int AD_GROUP_AD_VALUE = 13;
 
 
     public final int getNumber() {
@@ -279,6 +358,11 @@ private static final long serialVersionUID = 0L;
         case 6: return CAMPAIGN_BUDGET;
         case 7: return AD_GROUP_BID_MODIFIER;
         case 8: return CAMPAIGN_CRITERION;
+        case 9: return FEED;
+        case 10: return FEED_ITEM;
+        case 11: return CAMPAIGN_FEED;
+        case 12: return AD_GROUP_FEED;
+        case 13: return AD_GROUP_AD;
         default: return null;
       }
     }

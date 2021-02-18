@@ -104,12 +104,22 @@ public class GrpcKeywordPlanAdGroupKeywordServiceStub extends KeywordPlanAdGroup
         callableFactory);
   }
 
+  /**
+   * Constructs an instance of GrpcKeywordPlanAdGroupKeywordServiceStub, using the given settings.
+   * This is protected so that it is easy to make a subclass, but otherwise, the static factory
+   * methods should be preferred.
+   */
   protected GrpcKeywordPlanAdGroupKeywordServiceStub(
       KeywordPlanAdGroupKeywordServiceStubSettings settings, ClientContext clientContext)
       throws IOException {
     this(settings, clientContext, new GrpcKeywordPlanAdGroupKeywordServiceCallableFactory());
   }
 
+  /**
+   * Constructs an instance of GrpcKeywordPlanAdGroupKeywordServiceStub, using the given settings.
+   * This is protected so that it is easy to make a subclass, but otherwise, the static factory
+   * methods should be preferred.
+   */
   protected GrpcKeywordPlanAdGroupKeywordServiceStub(
       KeywordPlanAdGroupKeywordServiceStubSettings settings,
       ClientContext clientContext,

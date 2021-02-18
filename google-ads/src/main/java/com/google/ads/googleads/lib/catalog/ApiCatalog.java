@@ -15,11 +15,8 @@
 package com.google.ads.googleads.lib.catalog;
 
 import com.google.ads.googleads.lib.GoogleAdsAllVersions;
-import com.google.ads.googleads.lib.utils.messageproxy.MessageProxyProvider;
 import com.google.api.gax.rpc.TransportChannelProvider;
 import com.google.auth.Credentials;
-import com.google.protobuf.Message;
-import java.util.Optional;
 import java.util.SortedSet;
 
 /**
@@ -48,10 +45,4 @@ public interface ApiCatalog {
    */
   GoogleAdsAllVersions createAllVersionsClient(
       TransportChannelProvider provider, Credentials credentials);
-
-  /** Gets the {@link MessageProxyProvider} for a given message. */
-  Optional<MessageProxyProvider> getMessageProxyProvider(Message input);
-
-  /** Gets the {@link Version} for a given message. */
-  Optional<Version> getVersionForMessage(Message input);
 }

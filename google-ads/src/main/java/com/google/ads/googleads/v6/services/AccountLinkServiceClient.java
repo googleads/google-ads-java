@@ -84,8 +84,7 @@ import javax.annotation.Generated;
  *
  * <p>Please refer to the GitHub repository's samples for more quickstart code snippets.
  */
-@BetaApi
-@Generated("by gapic-generator")
+@Generated("by gapic-generator-java")
 public class AccountLinkServiceClient implements BackgroundResource {
   private final AccountLinkServiceSettings settings;
   private final AccountLinkServiceStub stub;
@@ -142,7 +141,7 @@ public class AccountLinkServiceClient implements BackgroundResource {
   /**
    * Returns the account link in full detail.
    *
-   * @param resource_name Required. Resource name of the account link.
+   * @param resourceName Required. Resource name of the account link.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final AccountLink getAccountLink(AccountLinkName resourceName) {
@@ -157,7 +156,7 @@ public class AccountLinkServiceClient implements BackgroundResource {
   /**
    * Returns the account link in full detail.
    *
-   * @param resource_name Required. Resource name of the account link.
+   * @param resourceName Required. Resource name of the account link.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final AccountLink getAccountLink(String resourceName) {
@@ -191,8 +190,8 @@ public class AccountLinkServiceClient implements BackgroundResource {
   /**
    * Creates an account link.
    *
-   * @param customer_id Required. The ID of the customer for which the account link is created.
-   * @param account_link Required. The account link to be created.
+   * @param customerId Required. The ID of the customer for which the account link is created.
+   * @param accountLink Required. The account link to be created.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final CreateAccountLinkResponse createAccountLink(
@@ -232,7 +231,7 @@ public class AccountLinkServiceClient implements BackgroundResource {
    * Creates or removes an account link. From V5, create is not supported through
    * AccountLinkService.MutateAccountLink. Please use AccountLinkService.CreateAccountLink instead.
    *
-   * @param customer_id Required. The ID of the customer being modified.
+   * @param customerId Required. The ID of the customer being modified.
    * @param operation Required. The operation to perform on the link.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */

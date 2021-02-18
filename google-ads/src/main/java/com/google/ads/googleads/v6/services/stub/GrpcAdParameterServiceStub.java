@@ -92,11 +92,21 @@ public class GrpcAdParameterServiceStub extends AdParameterServiceStub {
         AdParameterServiceStubSettings.newBuilder().build(), clientContext, callableFactory);
   }
 
+  /**
+   * Constructs an instance of GrpcAdParameterServiceStub, using the given settings. This is
+   * protected so that it is easy to make a subclass, but otherwise, the static factory methods
+   * should be preferred.
+   */
   protected GrpcAdParameterServiceStub(
       AdParameterServiceStubSettings settings, ClientContext clientContext) throws IOException {
     this(settings, clientContext, new GrpcAdParameterServiceCallableFactory());
   }
 
+  /**
+   * Constructs an instance of GrpcAdParameterServiceStub, using the given settings. This is
+   * protected so that it is easy to make a subclass, but otherwise, the static factory methods
+   * should be preferred.
+   */
   protected GrpcAdParameterServiceStub(
       AdParameterServiceStubSettings settings,
       ClientContext clientContext,

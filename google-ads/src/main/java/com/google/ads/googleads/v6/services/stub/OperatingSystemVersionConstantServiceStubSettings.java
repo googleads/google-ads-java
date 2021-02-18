@@ -77,7 +77,6 @@ import org.threeten.bp.Duration;
  *         operatingSystemVersionConstantServiceSettingsBuilder.build();
  * }</pre>
  */
-@BetaApi
 @Generated("by gapic-generator-java")
 public class OperatingSystemVersionConstantServiceStubSettings
     extends StubSettings<OperatingSystemVersionConstantServiceStubSettings> {

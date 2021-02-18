@@ -357,6 +357,14 @@ private static final long serialVersionUID = 0L;
      * <code>CUSTOM_AUDIENCE = 32;</code>
      */
     CUSTOM_AUDIENCE(32),
+    /**
+     * <pre>
+     * Combined audience
+     * </pre>
+     *
+     * <code>COMBINED_AUDIENCE = 33;</code>
+     */
+    COMBINED_AUDIENCE(33),
     UNRECOGNIZED(-1),
     ;
 
@@ -624,6 +632,14 @@ private static final long serialVersionUID = 0L;
      * <code>CUSTOM_AUDIENCE = 32;</code>
      */
     public static final int CUSTOM_AUDIENCE_VALUE = 32;
+    /**
+     * <pre>
+     * Combined audience
+     * </pre>
+     *
+     * <code>COMBINED_AUDIENCE = 33;</code>
+     */
+    public static final int COMBINED_AUDIENCE_VALUE = 33;
 
 
     public final int getNumber() {
@@ -683,6 +699,7 @@ private static final long serialVersionUID = 0L;
         case 30: return CUSTOM_INTENT;
         case 31: return LOCATION_GROUP;
         case 32: return CUSTOM_AUDIENCE;
+        case 33: return COMBINED_AUDIENCE;
         default: return null;
       }
     }

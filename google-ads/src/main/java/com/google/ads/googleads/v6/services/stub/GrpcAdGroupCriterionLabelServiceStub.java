@@ -100,12 +100,22 @@ public class GrpcAdGroupCriterionLabelServiceStub extends AdGroupCriterionLabelS
         callableFactory);
   }
 
+  /**
+   * Constructs an instance of GrpcAdGroupCriterionLabelServiceStub, using the given settings. This
+   * is protected so that it is easy to make a subclass, but otherwise, the static factory methods
+   * should be preferred.
+   */
   protected GrpcAdGroupCriterionLabelServiceStub(
       AdGroupCriterionLabelServiceStubSettings settings, ClientContext clientContext)
       throws IOException {
     this(settings, clientContext, new GrpcAdGroupCriterionLabelServiceCallableFactory());
   }
 
+  /**
+   * Constructs an instance of GrpcAdGroupCriterionLabelServiceStub, using the given settings. This
+   * is protected so that it is easy to make a subclass, but otherwise, the static factory methods
+   * should be preferred.
+   */
   protected GrpcAdGroupCriterionLabelServiceStub(
       AdGroupCriterionLabelServiceStubSettings settings,
       ClientContext clientContext,

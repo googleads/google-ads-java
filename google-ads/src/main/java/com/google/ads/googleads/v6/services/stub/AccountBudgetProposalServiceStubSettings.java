@@ -77,7 +77,6 @@ import org.threeten.bp.Duration;
  *     accountBudgetProposalServiceSettingsBuilder.build();
  * }</pre>
  */
-@BetaApi
 @Generated("by gapic-generator-java")
 public class AccountBudgetProposalServiceStubSettings
     extends StubSettings<AccountBudgetProposalServiceStubSettings> {

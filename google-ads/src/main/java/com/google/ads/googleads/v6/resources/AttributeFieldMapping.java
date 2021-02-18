@@ -189,6 +189,12 @@ private static final long serialVersionUID = 0L;
             fieldId_ = input.readInt64();
             break;
           }
+          case 208: {
+            int rawValue = input.readEnum();
+            fieldCase_ = 26;
+            field_ = rawValue;
+            break;
+          }
           default: {
             if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -248,6 +254,7 @@ private static final long serialVersionUID = 0L;
     TRAVEL_FIELD(21),
     LOCAL_FIELD(22),
     JOB_FIELD(23),
+    IMAGE_FIELD(26),
     FIELD_NOT_SET(0);
     private final int value;
     private FieldCase(int value) {
@@ -286,6 +293,7 @@ private static final long serialVersionUID = 0L;
         case 21: return TRAVEL_FIELD;
         case 22: return LOCAL_FIELD;
         case 23: return JOB_FIELD;
+        case 26: return IMAGE_FIELD;
         case 0: return FIELD_NOT_SET;
         default: return null;
       }
@@ -1054,6 +1062,39 @@ private static final long serialVersionUID = 0L;
     return com.google.ads.googleads.v6.enums.JobPlaceholderFieldEnum.JobPlaceholderField.UNSPECIFIED;
   }
 
+  public static final int IMAGE_FIELD_FIELD_NUMBER = 26;
+  /**
+   * <pre>
+   * Immutable. Image Placeholder Fields
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v6.enums.ImagePlaceholderFieldEnum.ImagePlaceholderField image_field = 26 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The enum numeric value on the wire for imageField.
+   */
+  public int getImageFieldValue() {
+    if (fieldCase_ == 26) {
+      return (java.lang.Integer) field_;
+    }
+    return 0;
+  }
+  /**
+   * <pre>
+   * Immutable. Image Placeholder Fields
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v6.enums.ImagePlaceholderFieldEnum.ImagePlaceholderField image_field = 26 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The imageField.
+   */
+  public com.google.ads.googleads.v6.enums.ImagePlaceholderFieldEnum.ImagePlaceholderField getImageField() {
+    if (fieldCase_ == 26) {
+      @SuppressWarnings("deprecation")
+      com.google.ads.googleads.v6.enums.ImagePlaceholderFieldEnum.ImagePlaceholderField result = com.google.ads.googleads.v6.enums.ImagePlaceholderFieldEnum.ImagePlaceholderField.valueOf(
+          (java.lang.Integer) field_);
+      return result == null ? com.google.ads.googleads.v6.enums.ImagePlaceholderFieldEnum.ImagePlaceholderField.UNRECOGNIZED : result;
+    }
+    return com.google.ads.googleads.v6.enums.ImagePlaceholderFieldEnum.ImagePlaceholderField.UNSPECIFIED;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -1136,6 +1177,9 @@ private static final long serialVersionUID = 0L;
     }
     if (((bitField0_ & 0x00000002) != 0)) {
       output.writeInt64(25, fieldId_);
+    }
+    if (fieldCase_ == 26) {
+      output.writeEnum(26, ((java.lang.Integer) field_));
     }
     unknownFields.writeTo(output);
   }
@@ -1237,6 +1281,10 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x00000002) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(25, fieldId_);
+    }
+    if (fieldCase_ == 26) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(26, ((java.lang.Integer) field_));
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -1349,6 +1397,10 @@ private static final long serialVersionUID = 0L;
         if (getJobFieldValue()
             != other.getJobFieldValue()) return false;
         break;
+      case 26:
+        if (getImageFieldValue()
+            != other.getImageFieldValue()) return false;
+        break;
       case 0:
       default:
     }
@@ -1457,6 +1509,10 @@ private static final long serialVersionUID = 0L;
       case 23:
         hash = (37 * hash) + JOB_FIELD_FIELD_NUMBER;
         hash = (53 * hash) + getJobFieldValue();
+        break;
+      case 26:
+        hash = (37 * hash) + IMAGE_FIELD_FIELD_NUMBER;
+        hash = (53 * hash) + getImageFieldValue();
         break;
       case 0:
       default:
@@ -1703,6 +1759,9 @@ private static final long serialVersionUID = 0L;
       if (fieldCase_ == 23) {
         result.field_ = field_;
       }
+      if (fieldCase_ == 26) {
+        result.field_ = field_;
+      }
       result.bitField0_ = to_bitField0_;
       result.fieldCase_ = fieldCase_;
       onBuilt();
@@ -1842,6 +1901,10 @@ private static final long serialVersionUID = 0L;
         }
         case JOB_FIELD: {
           setJobFieldValue(other.getJobFieldValue());
+          break;
+        }
+        case IMAGE_FIELD: {
+          setImageFieldValue(other.getImageFieldValue());
           break;
         }
         case FIELD_NOT_SET: {
@@ -3751,6 +3814,89 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearJobField() {
       if (fieldCase_ == 23) {
+        fieldCase_ = 0;
+        field_ = null;
+        onChanged();
+      }
+      return this;
+    }
+
+    /**
+     * <pre>
+     * Immutable. Image Placeholder Fields
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v6.enums.ImagePlaceholderFieldEnum.ImagePlaceholderField image_field = 26 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * @return The enum numeric value on the wire for imageField.
+     */
+    @java.lang.Override
+    public int getImageFieldValue() {
+      if (fieldCase_ == 26) {
+        return ((java.lang.Integer) field_).intValue();
+      }
+      return 0;
+    }
+    /**
+     * <pre>
+     * Immutable. Image Placeholder Fields
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v6.enums.ImagePlaceholderFieldEnum.ImagePlaceholderField image_field = 26 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * @param value The enum numeric value on the wire for imageField to set.
+     * @return This builder for chaining.
+     */
+    public Builder setImageFieldValue(int value) {
+      fieldCase_ = 26;
+      field_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Immutable. Image Placeholder Fields
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v6.enums.ImagePlaceholderFieldEnum.ImagePlaceholderField image_field = 26 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * @return The imageField.
+     */
+    @java.lang.Override
+    public com.google.ads.googleads.v6.enums.ImagePlaceholderFieldEnum.ImagePlaceholderField getImageField() {
+      if (fieldCase_ == 26) {
+        @SuppressWarnings("deprecation")
+        com.google.ads.googleads.v6.enums.ImagePlaceholderFieldEnum.ImagePlaceholderField result = com.google.ads.googleads.v6.enums.ImagePlaceholderFieldEnum.ImagePlaceholderField.valueOf(
+            (java.lang.Integer) field_);
+        return result == null ? com.google.ads.googleads.v6.enums.ImagePlaceholderFieldEnum.ImagePlaceholderField.UNRECOGNIZED : result;
+      }
+      return com.google.ads.googleads.v6.enums.ImagePlaceholderFieldEnum.ImagePlaceholderField.UNSPECIFIED;
+    }
+    /**
+     * <pre>
+     * Immutable. Image Placeholder Fields
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v6.enums.ImagePlaceholderFieldEnum.ImagePlaceholderField image_field = 26 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * @param value The imageField to set.
+     * @return This builder for chaining.
+     */
+    public Builder setImageField(com.google.ads.googleads.v6.enums.ImagePlaceholderFieldEnum.ImagePlaceholderField value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      fieldCase_ = 26;
+      field_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Immutable. Image Placeholder Fields
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v6.enums.ImagePlaceholderFieldEnum.ImagePlaceholderField image_field = 26 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearImageField() {
+      if (fieldCase_ == 26) {
         fieldCase_ = 0;
         field_ = null;
         onChanged();

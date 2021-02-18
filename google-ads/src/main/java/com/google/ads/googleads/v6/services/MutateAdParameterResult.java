@@ -59,6 +59,19 @@ private static final long serialVersionUID = 0L;
             resourceName_ = s;
             break;
           }
+          case 18: {
+            com.google.ads.googleads.v6.resources.AdParameter.Builder subBuilder = null;
+            if (adParameter_ != null) {
+              subBuilder = adParameter_.toBuilder();
+            }
+            adParameter_ = input.readMessage(com.google.ads.googleads.v6.resources.AdParameter.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(adParameter_);
+              adParameter_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
           default: {
             if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -137,6 +150,50 @@ private static final long serialVersionUID = 0L;
     }
   }
 
+  public static final int AD_PARAMETER_FIELD_NUMBER = 2;
+  private com.google.ads.googleads.v6.resources.AdParameter adParameter_;
+  /**
+   * <pre>
+   * The mutated AdParameter with only mutable fields after mutate. The field
+   * will only be returned when response_content_type is set to
+   * "MUTABLE_RESOURCE".
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v6.resources.AdParameter ad_parameter = 2;</code>
+   * @return Whether the adParameter field is set.
+   */
+  @java.lang.Override
+  public boolean hasAdParameter() {
+    return adParameter_ != null;
+  }
+  /**
+   * <pre>
+   * The mutated AdParameter with only mutable fields after mutate. The field
+   * will only be returned when response_content_type is set to
+   * "MUTABLE_RESOURCE".
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v6.resources.AdParameter ad_parameter = 2;</code>
+   * @return The adParameter.
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v6.resources.AdParameter getAdParameter() {
+    return adParameter_ == null ? com.google.ads.googleads.v6.resources.AdParameter.getDefaultInstance() : adParameter_;
+  }
+  /**
+   * <pre>
+   * The mutated AdParameter with only mutable fields after mutate. The field
+   * will only be returned when response_content_type is set to
+   * "MUTABLE_RESOURCE".
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v6.resources.AdParameter ad_parameter = 2;</code>
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v6.resources.AdParameterOrBuilder getAdParameterOrBuilder() {
+    return getAdParameter();
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -154,6 +211,9 @@ private static final long serialVersionUID = 0L;
     if (!getResourceNameBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, resourceName_);
     }
+    if (adParameter_ != null) {
+      output.writeMessage(2, getAdParameter());
+    }
     unknownFields.writeTo(output);
   }
 
@@ -165,6 +225,10 @@ private static final long serialVersionUID = 0L;
     size = 0;
     if (!getResourceNameBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, resourceName_);
+    }
+    if (adParameter_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(2, getAdParameter());
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -183,6 +247,11 @@ private static final long serialVersionUID = 0L;
 
     if (!getResourceName()
         .equals(other.getResourceName())) return false;
+    if (hasAdParameter() != other.hasAdParameter()) return false;
+    if (hasAdParameter()) {
+      if (!getAdParameter()
+          .equals(other.getAdParameter())) return false;
+    }
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -196,6 +265,10 @@ private static final long serialVersionUID = 0L;
     hash = (19 * hash) + getDescriptor().hashCode();
     hash = (37 * hash) + RESOURCE_NAME_FIELD_NUMBER;
     hash = (53 * hash) + getResourceName().hashCode();
+    if (hasAdParameter()) {
+      hash = (37 * hash) + AD_PARAMETER_FIELD_NUMBER;
+      hash = (53 * hash) + getAdParameter().hashCode();
+    }
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -335,6 +408,12 @@ private static final long serialVersionUID = 0L;
       super.clear();
       resourceName_ = "";
 
+      if (adParameterBuilder_ == null) {
+        adParameter_ = null;
+      } else {
+        adParameter_ = null;
+        adParameterBuilder_ = null;
+      }
       return this;
     }
 
@@ -362,6 +441,11 @@ private static final long serialVersionUID = 0L;
     public com.google.ads.googleads.v6.services.MutateAdParameterResult buildPartial() {
       com.google.ads.googleads.v6.services.MutateAdParameterResult result = new com.google.ads.googleads.v6.services.MutateAdParameterResult(this);
       result.resourceName_ = resourceName_;
+      if (adParameterBuilder_ == null) {
+        result.adParameter_ = adParameter_;
+      } else {
+        result.adParameter_ = adParameterBuilder_.build();
+      }
       onBuilt();
       return result;
     }
@@ -413,6 +497,9 @@ private static final long serialVersionUID = 0L;
       if (!other.getResourceName().isEmpty()) {
         resourceName_ = other.resourceName_;
         onChanged();
+      }
+      if (other.hasAdParameter()) {
+        mergeAdParameter(other.getAdParameter());
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -537,6 +624,179 @@ private static final long serialVersionUID = 0L;
       resourceName_ = value;
       onChanged();
       return this;
+    }
+
+    private com.google.ads.googleads.v6.resources.AdParameter adParameter_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v6.resources.AdParameter, com.google.ads.googleads.v6.resources.AdParameter.Builder, com.google.ads.googleads.v6.resources.AdParameterOrBuilder> adParameterBuilder_;
+    /**
+     * <pre>
+     * The mutated AdParameter with only mutable fields after mutate. The field
+     * will only be returned when response_content_type is set to
+     * "MUTABLE_RESOURCE".
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v6.resources.AdParameter ad_parameter = 2;</code>
+     * @return Whether the adParameter field is set.
+     */
+    public boolean hasAdParameter() {
+      return adParameterBuilder_ != null || adParameter_ != null;
+    }
+    /**
+     * <pre>
+     * The mutated AdParameter with only mutable fields after mutate. The field
+     * will only be returned when response_content_type is set to
+     * "MUTABLE_RESOURCE".
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v6.resources.AdParameter ad_parameter = 2;</code>
+     * @return The adParameter.
+     */
+    public com.google.ads.googleads.v6.resources.AdParameter getAdParameter() {
+      if (adParameterBuilder_ == null) {
+        return adParameter_ == null ? com.google.ads.googleads.v6.resources.AdParameter.getDefaultInstance() : adParameter_;
+      } else {
+        return adParameterBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * The mutated AdParameter with only mutable fields after mutate. The field
+     * will only be returned when response_content_type is set to
+     * "MUTABLE_RESOURCE".
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v6.resources.AdParameter ad_parameter = 2;</code>
+     */
+    public Builder setAdParameter(com.google.ads.googleads.v6.resources.AdParameter value) {
+      if (adParameterBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        adParameter_ = value;
+        onChanged();
+      } else {
+        adParameterBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The mutated AdParameter with only mutable fields after mutate. The field
+     * will only be returned when response_content_type is set to
+     * "MUTABLE_RESOURCE".
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v6.resources.AdParameter ad_parameter = 2;</code>
+     */
+    public Builder setAdParameter(
+        com.google.ads.googleads.v6.resources.AdParameter.Builder builderForValue) {
+      if (adParameterBuilder_ == null) {
+        adParameter_ = builderForValue.build();
+        onChanged();
+      } else {
+        adParameterBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The mutated AdParameter with only mutable fields after mutate. The field
+     * will only be returned when response_content_type is set to
+     * "MUTABLE_RESOURCE".
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v6.resources.AdParameter ad_parameter = 2;</code>
+     */
+    public Builder mergeAdParameter(com.google.ads.googleads.v6.resources.AdParameter value) {
+      if (adParameterBuilder_ == null) {
+        if (adParameter_ != null) {
+          adParameter_ =
+            com.google.ads.googleads.v6.resources.AdParameter.newBuilder(adParameter_).mergeFrom(value).buildPartial();
+        } else {
+          adParameter_ = value;
+        }
+        onChanged();
+      } else {
+        adParameterBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The mutated AdParameter with only mutable fields after mutate. The field
+     * will only be returned when response_content_type is set to
+     * "MUTABLE_RESOURCE".
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v6.resources.AdParameter ad_parameter = 2;</code>
+     */
+    public Builder clearAdParameter() {
+      if (adParameterBuilder_ == null) {
+        adParameter_ = null;
+        onChanged();
+      } else {
+        adParameter_ = null;
+        adParameterBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The mutated AdParameter with only mutable fields after mutate. The field
+     * will only be returned when response_content_type is set to
+     * "MUTABLE_RESOURCE".
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v6.resources.AdParameter ad_parameter = 2;</code>
+     */
+    public com.google.ads.googleads.v6.resources.AdParameter.Builder getAdParameterBuilder() {
+      
+      onChanged();
+      return getAdParameterFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * The mutated AdParameter with only mutable fields after mutate. The field
+     * will only be returned when response_content_type is set to
+     * "MUTABLE_RESOURCE".
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v6.resources.AdParameter ad_parameter = 2;</code>
+     */
+    public com.google.ads.googleads.v6.resources.AdParameterOrBuilder getAdParameterOrBuilder() {
+      if (adParameterBuilder_ != null) {
+        return adParameterBuilder_.getMessageOrBuilder();
+      } else {
+        return adParameter_ == null ?
+            com.google.ads.googleads.v6.resources.AdParameter.getDefaultInstance() : adParameter_;
+      }
+    }
+    /**
+     * <pre>
+     * The mutated AdParameter with only mutable fields after mutate. The field
+     * will only be returned when response_content_type is set to
+     * "MUTABLE_RESOURCE".
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v6.resources.AdParameter ad_parameter = 2;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v6.resources.AdParameter, com.google.ads.googleads.v6.resources.AdParameter.Builder, com.google.ads.googleads.v6.resources.AdParameterOrBuilder> 
+        getAdParameterFieldBuilder() {
+      if (adParameterBuilder_ == null) {
+        adParameterBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.ads.googleads.v6.resources.AdParameter, com.google.ads.googleads.v6.resources.AdParameter.Builder, com.google.ads.googleads.v6.resources.AdParameterOrBuilder>(
+                getAdParameter(),
+                getParentForChildren(),
+                isClean());
+        adParameter_ = null;
+      }
+      return adParameterBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

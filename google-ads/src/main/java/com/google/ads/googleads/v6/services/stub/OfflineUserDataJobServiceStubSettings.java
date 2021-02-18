@@ -86,7 +86,6 @@ import org.threeten.bp.Duration;
  *     offlineUserDataJobServiceSettingsBuilder.build();
  * }</pre>
  */
-@BetaApi
 @Generated("by gapic-generator-java")
 public class OfflineUserDataJobServiceStubSettings
     extends StubSettings<OfflineUserDataJobServiceStubSettings> {

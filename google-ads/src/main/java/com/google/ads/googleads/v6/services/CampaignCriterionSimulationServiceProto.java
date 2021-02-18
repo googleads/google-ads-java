@@ -5,73 +5,72 @@ package com.google.ads.googleads.v6.services;
 
 public final class CampaignCriterionSimulationServiceProto {
   private CampaignCriterionSimulationServiceProto() {}
-
-  public static void registerAllExtensions(com.google.protobuf.ExtensionRegistryLite registry) {}
-
-  public static void registerAllExtensions(com.google.protobuf.ExtensionRegistry registry) {
-    registerAllExtensions((com.google.protobuf.ExtensionRegistryLite) registry);
+  public static void registerAllExtensions(
+      com.google.protobuf.ExtensionRegistryLite registry) {
   }
 
+  public static void registerAllExtensions(
+      com.google.protobuf.ExtensionRegistry registry) {
+    registerAllExtensions(
+        (com.google.protobuf.ExtensionRegistryLite) registry);
+  }
   static final com.google.protobuf.Descriptors.Descriptor
-      internal_static_google_ads_googleads_v6_services_GetCampaignCriterionSimulationRequest_descriptor;
-  static final com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+    internal_static_google_ads_googleads_v6_services_GetCampaignCriterionSimulationRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_google_ads_googleads_v6_services_GetCampaignCriterionSimulationRequest_fieldAccessorTable;
 
-  public static com.google.protobuf.Descriptors.FileDescriptor getDescriptor() {
+  public static com.google.protobuf.Descriptors.FileDescriptor
+      getDescriptor() {
     return descriptor;
   }
-
-  private static com.google.protobuf.Descriptors.FileDescriptor descriptor;
-
+  private static  com.google.protobuf.Descriptors.FileDescriptor
+      descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\nLgoogle/ads/googleads/v6/services/campa"
-          + "ign_criterion_simulation_service.proto\022 "
-          + "google.ads.googleads.v6.services\032Egoogle"
-          + "/ads/googleads/v6/resources/campaign_cri"
-          + "terion_simulation.proto\032\034google/api/anno"
-          + "tations.proto\032\027google/api/client.proto\032\037"
-          + "google/api/field_behavior.proto\032\031google/"
-          + "api/resource.proto\"|\n%GetCampaignCriteri"
-          + "onSimulationRequest\022S\n\rresource_name\030\001 \001"
-          + "(\tB<\340A\002\372A6\n4googleads.googleapis.com/Cam"
-          + "paignCriterionSimulation2\357\002\n\"CampaignCri"
-          + "terionSimulationService\022\201\002\n\036GetCampaignC"
-          + "riterionSimulation\022G.google.ads.googlead"
-          + "s.v6.services.GetCampaignCriterionSimula"
-          + "tionRequest\032>.google.ads.googleads.v6.re"
-          + "sources.CampaignCriterionSimulation\"V\202\323\344"
-          + "\223\002@\022>/v6/{resource_name=customers/*/camp"
-          + "aignCriterionSimulations/*}\332A\rresource_n"
-          + "ame\032E\312A\030googleads.googleapis.com\322A\'https"
-          + "://www.googleapis.com/auth/adwordsB\216\002\n$c"
-          + "om.google.ads.googleads.v6.servicesB\'Cam"
-          + "paignCriterionSimulationServiceProtoP\001ZH"
-          + "google.golang.org/genproto/googleapis/ad"
-          + "s/googleads/v6/services;services\242\002\003GAA\252\002"
-          + " Google.Ads.GoogleAds.V6.Services\312\002 Goog"
-          + "le\\Ads\\GoogleAds\\V6\\Services\352\002$Google::A"
-          + "ds::GoogleAds::V6::Servicesb\006proto3"
+      "\nLgoogle/ads/googleads/v6/services/campa" +
+      "ign_criterion_simulation_service.proto\022 " +
+      "google.ads.googleads.v6.services\032Egoogle" +
+      "/ads/googleads/v6/resources/campaign_cri" +
+      "terion_simulation.proto\032\034google/api/anno" +
+      "tations.proto\032\027google/api/client.proto\032\037" +
+      "google/api/field_behavior.proto\032\031google/" +
+      "api/resource.proto\"|\n%GetCampaignCriteri" +
+      "onSimulationRequest\022S\n\rresource_name\030\001 \001" +
+      "(\tB<\340A\002\372A6\n4googleads.googleapis.com/Cam" +
+      "paignCriterionSimulation2\357\002\n\"CampaignCri" +
+      "terionSimulationService\022\201\002\n\036GetCampaignC" +
+      "riterionSimulation\022G.google.ads.googlead" +
+      "s.v6.services.GetCampaignCriterionSimula" +
+      "tionRequest\032>.google.ads.googleads.v6.re" +
+      "sources.CampaignCriterionSimulation\"V\202\323\344" +
+      "\223\002@\022>/v6/{resource_name=customers/*/camp" +
+      "aignCriterionSimulations/*}\332A\rresource_n" +
+      "ame\032E\312A\030googleads.googleapis.com\322A\'https" +
+      "://www.googleapis.com/auth/adwordsB\216\002\n$c" +
+      "om.google.ads.googleads.v6.servicesB\'Cam" +
+      "paignCriterionSimulationServiceProtoP\001ZH" +
+      "google.golang.org/genproto/googleapis/ad" +
+      "s/googleads/v6/services;services\242\002\003GAA\252\002" +
+      " Google.Ads.GoogleAds.V6.Services\312\002 Goog" +
+      "le\\Ads\\GoogleAds\\V6\\Services\352\002$Google::A" +
+      "ds::GoogleAds::V6::Servicesb\006proto3"
     };
-    descriptor =
-        com.google.protobuf.Descriptors.FileDescriptor.internalBuildGeneratedFileFrom(
-            descriptorData,
-            new com.google.protobuf.Descriptors.FileDescriptor[] {
-              com.google.ads.googleads.v6.resources.CampaignCriterionSimulationProto
-                  .getDescriptor(),
-              com.google.api.AnnotationsProto.getDescriptor(),
-              com.google.api.ClientProto.getDescriptor(),
-              com.google.api.FieldBehaviorProto.getDescriptor(),
-              com.google.api.ResourceProto.getDescriptor(),
-            });
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
+      .internalBuildGeneratedFileFrom(descriptorData,
+        new com.google.protobuf.Descriptors.FileDescriptor[] {
+          com.google.ads.googleads.v6.resources.CampaignCriterionSimulationProto.getDescriptor(),
+          com.google.api.AnnotationsProto.getDescriptor(),
+          com.google.api.ClientProto.getDescriptor(),
+          com.google.api.FieldBehaviorProto.getDescriptor(),
+          com.google.api.ResourceProto.getDescriptor(),
+        });
     internal_static_google_ads_googleads_v6_services_GetCampaignCriterionSimulationRequest_descriptor =
-        getDescriptor().getMessageTypes().get(0);
-    internal_static_google_ads_googleads_v6_services_GetCampaignCriterionSimulationRequest_fieldAccessorTable =
-        new com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-            internal_static_google_ads_googleads_v6_services_GetCampaignCriterionSimulationRequest_descriptor,
-            new java.lang.String[] {
-              "ResourceName",
-            });
+      getDescriptor().getMessageTypes().get(0);
+    internal_static_google_ads_googleads_v6_services_GetCampaignCriterionSimulationRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_google_ads_googleads_v6_services_GetCampaignCriterionSimulationRequest_descriptor,
+        new java.lang.String[] { "ResourceName", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.ClientProto.defaultHost);
@@ -80,8 +79,8 @@ public final class CampaignCriterionSimulationServiceProto {
     registry.add(com.google.api.ClientProto.methodSignature);
     registry.add(com.google.api.ClientProto.oauthScopes);
     registry.add(com.google.api.ResourceProto.resourceReference);
-    com.google.protobuf.Descriptors.FileDescriptor.internalUpdateFileDescriptor(
-        descriptor, registry);
+    com.google.protobuf.Descriptors.FileDescriptor
+        .internalUpdateFileDescriptor(descriptor, registry);
     com.google.ads.googleads.v6.resources.CampaignCriterionSimulationProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
     com.google.api.ClientProto.getDescriptor();

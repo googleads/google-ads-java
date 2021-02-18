@@ -76,7 +76,6 @@ import org.threeten.bp.Duration;
  * LabelServiceStubSettings labelServiceSettings = labelServiceSettingsBuilder.build();
  * }</pre>
  */
-@BetaApi
 @Generated("by gapic-generator-java")
 public class LabelServiceStubSettings extends StubSettings<LabelServiceStubSettings> {
   /** The default scopes of the service. */

@@ -84,8 +84,7 @@ import javax.annotation.Generated;
  *
  * <p>Please refer to the GitHub repository's samples for more quickstart code snippets.
  */
-@BetaApi
-@Generated("by gapic-generator")
+@Generated("by gapic-generator-java")
 public class RecommendationServiceClient implements BackgroundResource {
   private final RecommendationServiceSettings settings;
   private final RecommendationServiceStub stub;
@@ -142,7 +141,7 @@ public class RecommendationServiceClient implements BackgroundResource {
   /**
    * Returns the requested recommendation in full detail.
    *
-   * @param resource_name Required. The resource name of the recommendation to fetch.
+   * @param resourceName Required. The resource name of the recommendation to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final Recommendation getRecommendation(RecommendationName resourceName) {
@@ -157,7 +156,7 @@ public class RecommendationServiceClient implements BackgroundResource {
   /**
    * Returns the requested recommendation in full detail.
    *
-   * @param resource_name Required. The resource name of the recommendation to fetch.
+   * @param resourceName Required. The resource name of the recommendation to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final Recommendation getRecommendation(String resourceName) {
@@ -191,7 +190,7 @@ public class RecommendationServiceClient implements BackgroundResource {
   /**
    * Applies given recommendations with corresponding apply parameters.
    *
-   * @param customer_id Required. The ID of the customer with the recommendation.
+   * @param customerId Required. The ID of the customer with the recommendation.
    * @param operations Required. The list of operations to apply recommendations. If
    *     partial_failure=false all recommendations should be of the same type There is a limit of
    *     100 operations per request.
@@ -233,7 +232,7 @@ public class RecommendationServiceClient implements BackgroundResource {
   /**
    * Dismisses given recommendations.
    *
-   * @param customer_id Required. The ID of the customer with the recommendation.
+   * @param customerId Required. The ID of the customer with the recommendation.
    * @param operations Required. The list of operations to dismiss recommendations. If
    *     partial_failure=false all recommendations should be of the same type There is a limit of
    *     100 operations per request.

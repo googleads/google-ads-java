@@ -84,8 +84,7 @@ import javax.annotation.Generated;
  *
  * <p>Please refer to the GitHub repository's samples for more quickstart code snippets.
  */
-@BetaApi
-@Generated("by gapic-generator")
+@Generated("by gapic-generator-java")
 public class AdParameterServiceClient implements BackgroundResource {
   private final AdParameterServiceSettings settings;
   private final AdParameterServiceStub stub;
@@ -142,7 +141,7 @@ public class AdParameterServiceClient implements BackgroundResource {
   /**
    * Returns the requested ad parameter in full detail.
    *
-   * @param resource_name Required. The resource name of the ad parameter to fetch.
+   * @param resourceName Required. The resource name of the ad parameter to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final AdParameter getAdParameter(AdParameterName resourceName) {
@@ -157,7 +156,7 @@ public class AdParameterServiceClient implements BackgroundResource {
   /**
    * Returns the requested ad parameter in full detail.
    *
-   * @param resource_name Required. The resource name of the ad parameter to fetch.
+   * @param resourceName Required. The resource name of the ad parameter to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final AdParameter getAdParameter(String resourceName) {
@@ -191,7 +190,7 @@ public class AdParameterServiceClient implements BackgroundResource {
   /**
    * Creates, updates, or removes ad parameters. Operation statuses are returned.
    *
-   * @param customer_id Required. The ID of the customer whose ad parameters are being modified.
+   * @param customerId Required. The ID of the customer whose ad parameters are being modified.
    * @param operations Required. The list of operations to perform on individual ad parameters.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */

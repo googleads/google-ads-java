@@ -77,7 +77,6 @@ import org.threeten.bp.Duration;
  *     customerFeedServiceSettingsBuilder.build();
  * }</pre>
  */
-@BetaApi
 @Generated("by gapic-generator-java")
 public class CustomerFeedServiceStubSettings extends StubSettings<CustomerFeedServiceStubSettings> {
   /** The default scopes of the service. */

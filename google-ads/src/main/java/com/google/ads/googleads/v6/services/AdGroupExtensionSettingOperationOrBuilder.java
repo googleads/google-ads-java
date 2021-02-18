@@ -36,6 +36,27 @@ public interface AdGroupExtensionSettingOperationOrBuilder extends
 
   /**
    * <pre>
+   * The response content type setting. Determines whether the mutable resource
+   * or just the resource name should be returned post mutation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v6.enums.ResponseContentTypeEnum.ResponseContentType response_content_type = 5;</code>
+   * @return The enum numeric value on the wire for responseContentType.
+   */
+  int getResponseContentTypeValue();
+  /**
+   * <pre>
+   * The response content type setting. Determines whether the mutable resource
+   * or just the resource name should be returned post mutation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v6.enums.ResponseContentTypeEnum.ResponseContentType response_content_type = 5;</code>
+   * @return The responseContentType.
+   */
+  com.google.ads.googleads.v6.enums.ResponseContentTypeEnum.ResponseContentType getResponseContentType();
+
+  /**
+   * <pre>
    * Create operation: No resource name is expected for the new ad group
    * extension setting.
    * </pre>

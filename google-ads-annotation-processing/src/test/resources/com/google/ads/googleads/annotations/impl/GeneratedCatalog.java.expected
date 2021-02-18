@@ -23,7 +23,7 @@ import java.util.SortedSet;
 import javax.annotation.Generated;
 
 @Generated("GoogleAdsCatalogAnnotationProcessor")
-public class GeneratedCatalog extends AbstractCatalog {
+public class GeneratedCatalog implements ApiCatalog {
   private static GeneratedCatalog instance;
 
   static {

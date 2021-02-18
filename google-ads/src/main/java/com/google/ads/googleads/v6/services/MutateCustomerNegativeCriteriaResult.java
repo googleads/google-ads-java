@@ -59,6 +59,19 @@ private static final long serialVersionUID = 0L;
             resourceName_ = s;
             break;
           }
+          case 18: {
+            com.google.ads.googleads.v6.resources.CustomerNegativeCriterion.Builder subBuilder = null;
+            if (customerNegativeCriterion_ != null) {
+              subBuilder = customerNegativeCriterion_.toBuilder();
+            }
+            customerNegativeCriterion_ = input.readMessage(com.google.ads.googleads.v6.resources.CustomerNegativeCriterion.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(customerNegativeCriterion_);
+              customerNegativeCriterion_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
           default: {
             if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -137,6 +150,47 @@ private static final long serialVersionUID = 0L;
     }
   }
 
+  public static final int CUSTOMER_NEGATIVE_CRITERION_FIELD_NUMBER = 2;
+  private com.google.ads.googleads.v6.resources.CustomerNegativeCriterion customerNegativeCriterion_;
+  /**
+   * <pre>
+   * The mutated criterion with only mutable fields after mutate. The field will
+   * only be returned when response_content_type is set to "MUTABLE_RESOURCE".
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v6.resources.CustomerNegativeCriterion customer_negative_criterion = 2;</code>
+   * @return Whether the customerNegativeCriterion field is set.
+   */
+  @java.lang.Override
+  public boolean hasCustomerNegativeCriterion() {
+    return customerNegativeCriterion_ != null;
+  }
+  /**
+   * <pre>
+   * The mutated criterion with only mutable fields after mutate. The field will
+   * only be returned when response_content_type is set to "MUTABLE_RESOURCE".
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v6.resources.CustomerNegativeCriterion customer_negative_criterion = 2;</code>
+   * @return The customerNegativeCriterion.
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v6.resources.CustomerNegativeCriterion getCustomerNegativeCriterion() {
+    return customerNegativeCriterion_ == null ? com.google.ads.googleads.v6.resources.CustomerNegativeCriterion.getDefaultInstance() : customerNegativeCriterion_;
+  }
+  /**
+   * <pre>
+   * The mutated criterion with only mutable fields after mutate. The field will
+   * only be returned when response_content_type is set to "MUTABLE_RESOURCE".
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v6.resources.CustomerNegativeCriterion customer_negative_criterion = 2;</code>
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v6.resources.CustomerNegativeCriterionOrBuilder getCustomerNegativeCriterionOrBuilder() {
+    return getCustomerNegativeCriterion();
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -154,6 +208,9 @@ private static final long serialVersionUID = 0L;
     if (!getResourceNameBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, resourceName_);
     }
+    if (customerNegativeCriterion_ != null) {
+      output.writeMessage(2, getCustomerNegativeCriterion());
+    }
     unknownFields.writeTo(output);
   }
 
@@ -165,6 +222,10 @@ private static final long serialVersionUID = 0L;
     size = 0;
     if (!getResourceNameBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, resourceName_);
+    }
+    if (customerNegativeCriterion_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(2, getCustomerNegativeCriterion());
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -183,6 +244,11 @@ private static final long serialVersionUID = 0L;
 
     if (!getResourceName()
         .equals(other.getResourceName())) return false;
+    if (hasCustomerNegativeCriterion() != other.hasCustomerNegativeCriterion()) return false;
+    if (hasCustomerNegativeCriterion()) {
+      if (!getCustomerNegativeCriterion()
+          .equals(other.getCustomerNegativeCriterion())) return false;
+    }
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -196,6 +262,10 @@ private static final long serialVersionUID = 0L;
     hash = (19 * hash) + getDescriptor().hashCode();
     hash = (37 * hash) + RESOURCE_NAME_FIELD_NUMBER;
     hash = (53 * hash) + getResourceName().hashCode();
+    if (hasCustomerNegativeCriterion()) {
+      hash = (37 * hash) + CUSTOMER_NEGATIVE_CRITERION_FIELD_NUMBER;
+      hash = (53 * hash) + getCustomerNegativeCriterion().hashCode();
+    }
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -335,6 +405,12 @@ private static final long serialVersionUID = 0L;
       super.clear();
       resourceName_ = "";
 
+      if (customerNegativeCriterionBuilder_ == null) {
+        customerNegativeCriterion_ = null;
+      } else {
+        customerNegativeCriterion_ = null;
+        customerNegativeCriterionBuilder_ = null;
+      }
       return this;
     }
 
@@ -362,6 +438,11 @@ private static final long serialVersionUID = 0L;
     public com.google.ads.googleads.v6.services.MutateCustomerNegativeCriteriaResult buildPartial() {
       com.google.ads.googleads.v6.services.MutateCustomerNegativeCriteriaResult result = new com.google.ads.googleads.v6.services.MutateCustomerNegativeCriteriaResult(this);
       result.resourceName_ = resourceName_;
+      if (customerNegativeCriterionBuilder_ == null) {
+        result.customerNegativeCriterion_ = customerNegativeCriterion_;
+      } else {
+        result.customerNegativeCriterion_ = customerNegativeCriterionBuilder_.build();
+      }
       onBuilt();
       return result;
     }
@@ -413,6 +494,9 @@ private static final long serialVersionUID = 0L;
       if (!other.getResourceName().isEmpty()) {
         resourceName_ = other.resourceName_;
         onChanged();
+      }
+      if (other.hasCustomerNegativeCriterion()) {
+        mergeCustomerNegativeCriterion(other.getCustomerNegativeCriterion());
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -537,6 +621,170 @@ private static final long serialVersionUID = 0L;
       resourceName_ = value;
       onChanged();
       return this;
+    }
+
+    private com.google.ads.googleads.v6.resources.CustomerNegativeCriterion customerNegativeCriterion_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v6.resources.CustomerNegativeCriterion, com.google.ads.googleads.v6.resources.CustomerNegativeCriterion.Builder, com.google.ads.googleads.v6.resources.CustomerNegativeCriterionOrBuilder> customerNegativeCriterionBuilder_;
+    /**
+     * <pre>
+     * The mutated criterion with only mutable fields after mutate. The field will
+     * only be returned when response_content_type is set to "MUTABLE_RESOURCE".
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v6.resources.CustomerNegativeCriterion customer_negative_criterion = 2;</code>
+     * @return Whether the customerNegativeCriterion field is set.
+     */
+    public boolean hasCustomerNegativeCriterion() {
+      return customerNegativeCriterionBuilder_ != null || customerNegativeCriterion_ != null;
+    }
+    /**
+     * <pre>
+     * The mutated criterion with only mutable fields after mutate. The field will
+     * only be returned when response_content_type is set to "MUTABLE_RESOURCE".
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v6.resources.CustomerNegativeCriterion customer_negative_criterion = 2;</code>
+     * @return The customerNegativeCriterion.
+     */
+    public com.google.ads.googleads.v6.resources.CustomerNegativeCriterion getCustomerNegativeCriterion() {
+      if (customerNegativeCriterionBuilder_ == null) {
+        return customerNegativeCriterion_ == null ? com.google.ads.googleads.v6.resources.CustomerNegativeCriterion.getDefaultInstance() : customerNegativeCriterion_;
+      } else {
+        return customerNegativeCriterionBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * The mutated criterion with only mutable fields after mutate. The field will
+     * only be returned when response_content_type is set to "MUTABLE_RESOURCE".
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v6.resources.CustomerNegativeCriterion customer_negative_criterion = 2;</code>
+     */
+    public Builder setCustomerNegativeCriterion(com.google.ads.googleads.v6.resources.CustomerNegativeCriterion value) {
+      if (customerNegativeCriterionBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        customerNegativeCriterion_ = value;
+        onChanged();
+      } else {
+        customerNegativeCriterionBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The mutated criterion with only mutable fields after mutate. The field will
+     * only be returned when response_content_type is set to "MUTABLE_RESOURCE".
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v6.resources.CustomerNegativeCriterion customer_negative_criterion = 2;</code>
+     */
+    public Builder setCustomerNegativeCriterion(
+        com.google.ads.googleads.v6.resources.CustomerNegativeCriterion.Builder builderForValue) {
+      if (customerNegativeCriterionBuilder_ == null) {
+        customerNegativeCriterion_ = builderForValue.build();
+        onChanged();
+      } else {
+        customerNegativeCriterionBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The mutated criterion with only mutable fields after mutate. The field will
+     * only be returned when response_content_type is set to "MUTABLE_RESOURCE".
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v6.resources.CustomerNegativeCriterion customer_negative_criterion = 2;</code>
+     */
+    public Builder mergeCustomerNegativeCriterion(com.google.ads.googleads.v6.resources.CustomerNegativeCriterion value) {
+      if (customerNegativeCriterionBuilder_ == null) {
+        if (customerNegativeCriterion_ != null) {
+          customerNegativeCriterion_ =
+            com.google.ads.googleads.v6.resources.CustomerNegativeCriterion.newBuilder(customerNegativeCriterion_).mergeFrom(value).buildPartial();
+        } else {
+          customerNegativeCriterion_ = value;
+        }
+        onChanged();
+      } else {
+        customerNegativeCriterionBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The mutated criterion with only mutable fields after mutate. The field will
+     * only be returned when response_content_type is set to "MUTABLE_RESOURCE".
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v6.resources.CustomerNegativeCriterion customer_negative_criterion = 2;</code>
+     */
+    public Builder clearCustomerNegativeCriterion() {
+      if (customerNegativeCriterionBuilder_ == null) {
+        customerNegativeCriterion_ = null;
+        onChanged();
+      } else {
+        customerNegativeCriterion_ = null;
+        customerNegativeCriterionBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The mutated criterion with only mutable fields after mutate. The field will
+     * only be returned when response_content_type is set to "MUTABLE_RESOURCE".
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v6.resources.CustomerNegativeCriterion customer_negative_criterion = 2;</code>
+     */
+    public com.google.ads.googleads.v6.resources.CustomerNegativeCriterion.Builder getCustomerNegativeCriterionBuilder() {
+      
+      onChanged();
+      return getCustomerNegativeCriterionFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * The mutated criterion with only mutable fields after mutate. The field will
+     * only be returned when response_content_type is set to "MUTABLE_RESOURCE".
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v6.resources.CustomerNegativeCriterion customer_negative_criterion = 2;</code>
+     */
+    public com.google.ads.googleads.v6.resources.CustomerNegativeCriterionOrBuilder getCustomerNegativeCriterionOrBuilder() {
+      if (customerNegativeCriterionBuilder_ != null) {
+        return customerNegativeCriterionBuilder_.getMessageOrBuilder();
+      } else {
+        return customerNegativeCriterion_ == null ?
+            com.google.ads.googleads.v6.resources.CustomerNegativeCriterion.getDefaultInstance() : customerNegativeCriterion_;
+      }
+    }
+    /**
+     * <pre>
+     * The mutated criterion with only mutable fields after mutate. The field will
+     * only be returned when response_content_type is set to "MUTABLE_RESOURCE".
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v6.resources.CustomerNegativeCriterion customer_negative_criterion = 2;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v6.resources.CustomerNegativeCriterion, com.google.ads.googleads.v6.resources.CustomerNegativeCriterion.Builder, com.google.ads.googleads.v6.resources.CustomerNegativeCriterionOrBuilder> 
+        getCustomerNegativeCriterionFieldBuilder() {
+      if (customerNegativeCriterionBuilder_ == null) {
+        customerNegativeCriterionBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.ads.googleads.v6.resources.CustomerNegativeCriterion, com.google.ads.googleads.v6.resources.CustomerNegativeCriterion.Builder, com.google.ads.googleads.v6.resources.CustomerNegativeCriterionOrBuilder>(
+                getCustomerNegativeCriterion(),
+                getParentForChildren(),
+                isClean());
+        customerNegativeCriterion_ = null;
+      }
+      return customerNegativeCriterionBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

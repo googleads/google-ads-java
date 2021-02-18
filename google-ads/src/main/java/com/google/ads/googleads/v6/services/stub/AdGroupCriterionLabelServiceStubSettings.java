@@ -77,7 +77,6 @@ import org.threeten.bp.Duration;
  *     adGroupCriterionLabelServiceSettingsBuilder.build();
  * }</pre>
  */
-@BetaApi
 @Generated("by gapic-generator-java")
 public class AdGroupCriterionLabelServiceStubSettings
     extends StubSettings<AdGroupCriterionLabelServiceStubSettings> {

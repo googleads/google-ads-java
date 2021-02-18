@@ -74,7 +74,6 @@ import org.threeten.bp.Duration;
  * UserDataServiceStubSettings userDataServiceSettings = userDataServiceSettingsBuilder.build();
  * }</pre>
  */
-@BetaApi
 @Generated("by gapic-generator-java")
 public class UserDataServiceStubSettings extends StubSettings<UserDataServiceStubSettings> {
   /** The default scopes of the service. */

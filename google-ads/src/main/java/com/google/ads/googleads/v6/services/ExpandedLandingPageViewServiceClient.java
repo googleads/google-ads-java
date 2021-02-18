@@ -83,8 +83,7 @@ import javax.annotation.Generated;
  *
  * <p>Please refer to the GitHub repository's samples for more quickstart code snippets.
  */
-@BetaApi
-@Generated("by gapic-generator")
+@Generated("by gapic-generator-java")
 public class ExpandedLandingPageViewServiceClient implements BackgroundResource {
   private final ExpandedLandingPageViewServiceSettings settings;
   private final ExpandedLandingPageViewServiceStub stub;
@@ -146,7 +145,7 @@ public class ExpandedLandingPageViewServiceClient implements BackgroundResource 
   /**
    * Returns the requested expanded landing page view in full detail.
    *
-   * @param resource_name Required. The resource name of the expanded landing page view to fetch.
+   * @param resourceName Required. The resource name of the expanded landing page view to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final ExpandedLandingPageView getExpandedLandingPageView(
@@ -162,7 +161,7 @@ public class ExpandedLandingPageViewServiceClient implements BackgroundResource 
   /**
    * Returns the requested expanded landing page view in full detail.
    *
-   * @param resource_name Required. The resource name of the expanded landing page view to fetch.
+   * @param resourceName Required. The resource name of the expanded landing page view to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final ExpandedLandingPageView getExpandedLandingPageView(String resourceName) {

@@ -98,8 +98,7 @@ import javax.annotation.Generated;
  *
  * <p>Please refer to the GitHub repository's samples for more quickstart code snippets.
  */
-@BetaApi
-@Generated("by gapic-generator")
+@Generated("by gapic-generator-java")
 public class CampaignDraftServiceClient implements BackgroundResource {
   private final CampaignDraftServiceSettings settings;
   private final CampaignDraftServiceStub stub;
@@ -167,7 +166,7 @@ public class CampaignDraftServiceClient implements BackgroundResource {
   /**
    * Returns the requested campaign draft in full detail.
    *
-   * @param resource_name Required. The resource name of the campaign draft to fetch.
+   * @param resourceName Required. The resource name of the campaign draft to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final CampaignDraft getCampaignDraft(CampaignDraftName resourceName) {
@@ -182,7 +181,7 @@ public class CampaignDraftServiceClient implements BackgroundResource {
   /**
    * Returns the requested campaign draft in full detail.
    *
-   * @param resource_name Required. The resource name of the campaign draft to fetch.
+   * @param resourceName Required. The resource name of the campaign draft to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final CampaignDraft getCampaignDraft(String resourceName) {
@@ -216,7 +215,7 @@ public class CampaignDraftServiceClient implements BackgroundResource {
   /**
    * Creates, updates, or removes campaign drafts. Operation statuses are returned.
    *
-   * @param customer_id Required. The ID of the customer whose campaign drafts are being modified.
+   * @param customerId Required. The ID of the customer whose campaign drafts are being modified.
    * @param operations Required. The list of operations to perform on individual campaign drafts.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
@@ -264,7 +263,7 @@ public class CampaignDraftServiceClient implements BackgroundResource {
    * [CampaignDraftService.ListCampaignDraftAsyncErrors][google.ads.googleads.v6.services.CampaignDraftService.ListCampaignDraftAsyncErrors]
    * to view the list of error reasons.
    *
-   * @param campaign_draft Required. The resource name of the campaign draft to promote.
+   * @param campaignDraft Required. The resource name of the campaign draft to promote.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final OperationFuture<Empty, Empty> promoteCampaignDraftAsync(String campaignDraft) {
@@ -333,7 +332,7 @@ public class CampaignDraftServiceClient implements BackgroundResource {
    * Returns all errors that occurred during CampaignDraft promote. Throws an error if called before
    * campaign draft is promoted. Supports standard list paging.
    *
-   * @param resource_name Required. The name of the campaign draft from which to retrieve the async
+   * @param resourceName Required. The name of the campaign draft from which to retrieve the async
    *     errors.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
@@ -351,7 +350,7 @@ public class CampaignDraftServiceClient implements BackgroundResource {
    * Returns all errors that occurred during CampaignDraft promote. Throws an error if called before
    * campaign draft is promoted. Supports standard list paging.
    *
-   * @param resource_name Required. The name of the campaign draft from which to retrieve the async
+   * @param resourceName Required. The name of the campaign draft from which to retrieve the async
    *     errors.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */

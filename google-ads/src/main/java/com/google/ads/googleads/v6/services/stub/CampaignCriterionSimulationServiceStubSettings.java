@@ -76,7 +76,6 @@ import org.threeten.bp.Duration;
  *     campaignCriterionSimulationServiceSettingsBuilder.build();
  * }</pre>
  */
-@BetaApi
 @Generated("by gapic-generator-java")
 public class CampaignCriterionSimulationServiceStubSettings
     extends StubSettings<CampaignCriterionSimulationServiceStubSettings> {

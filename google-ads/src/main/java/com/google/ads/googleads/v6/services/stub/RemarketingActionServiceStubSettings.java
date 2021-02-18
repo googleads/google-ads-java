@@ -77,7 +77,6 @@ import org.threeten.bp.Duration;
  *     remarketingActionServiceSettingsBuilder.build();
  * }</pre>
  */
-@BetaApi
 @Generated("by gapic-generator-java")
 public class RemarketingActionServiceStubSettings
     extends StubSettings<RemarketingActionServiceStubSettings> {

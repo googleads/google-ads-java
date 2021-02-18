@@ -22,11 +22,6 @@ import com.google.ads.googleads.annotations.impl.generators.catalog.AbstractGoog
 import com.google.ads.googleads.annotations.impl.generators.catalog.GeneratedCatalogCodeGenerator;
 import com.google.ads.googleads.annotations.impl.generators.catalog.GoogleAdsAllVersionsCodeGenerator;
 import com.google.ads.googleads.annotations.impl.generators.catalog.VersionCatalogCodeGenerator;
-import com.google.ads.googleads.annotations.impl.generators.messageproxy.CreateCustomerClientRequestProxyGenerator;
-import com.google.ads.googleads.annotations.impl.generators.messageproxy.CustomerUserAccessMessageProxyGenerator;
-import com.google.ads.googleads.annotations.impl.generators.messageproxy.FeedMessageProxyGenerator;
-import com.google.ads.googleads.annotations.impl.generators.messageproxy.SearchPagedResponseMessageProxyGenerator;
-import com.google.ads.googleads.annotations.impl.generators.messageproxy.SearchStreamResponseMessageProxyGenerator;
 import com.google.auto.service.AutoService;
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.SortedSetMultimap;
@@ -147,12 +142,7 @@ public class GoogleAdsCatalogAnnotationProcessor extends AbstractProcessor {
         new AbstractGoogleAdsClientCodeGenerator(
             versions, latestVersion, catalogName, messager, filer),
         new GoogleAdsAllVersionsCodeGenerator(
-            versions, latestVersion, catalogName, messager, filer),
-        new SearchStreamResponseMessageProxyGenerator(versions, messager, filer),
-        new SearchPagedResponseMessageProxyGenerator(versions, messager, filer),
-        new CustomerUserAccessMessageProxyGenerator(versions, messager, filer),
-        new FeedMessageProxyGenerator(versions, messager, filer),
-        new CreateCustomerClientRequestProxyGenerator(versions, messager, filer));
+            versions, latestVersion, catalogName, messager, filer));
   }
 
   /**

@@ -77,7 +77,6 @@ import org.threeten.bp.Duration;
  *     conversionUploadServiceSettingsBuilder.build();
  * }</pre>
  */
-@BetaApi
 @Generated("by gapic-generator-java")
 public class ConversionUploadServiceStubSettings
     extends StubSettings<ConversionUploadServiceStubSettings> {

@@ -85,8 +85,7 @@ import javax.annotation.Generated;
  *
  * <p>Please refer to the GitHub repository's samples for more quickstart code snippets.
  */
-@BetaApi
-@Generated("by gapic-generator")
+@Generated("by gapic-generator-java")
 public class CombinedAudienceServiceClient implements BackgroundResource {
   private final CombinedAudienceServiceSettings settings;
   private final CombinedAudienceServiceStub stub;
@@ -144,7 +143,7 @@ public class CombinedAudienceServiceClient implements BackgroundResource {
   /**
    * Returns the requested combined audience in full detail.
    *
-   * @param resource_name Required. The resource name of the combined audience to fetch.
+   * @param resourceName Required. The resource name of the combined audience to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final CombinedAudience getCombinedAudience(CombinedAudienceName resourceName) {
@@ -159,7 +158,7 @@ public class CombinedAudienceServiceClient implements BackgroundResource {
   /**
    * Returns the requested combined audience in full detail.
    *
-   * @param resource_name Required. The resource name of the combined audience to fetch.
+   * @param resourceName Required. The resource name of the combined audience to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final CombinedAudience getCombinedAudience(String resourceName) {

@@ -84,11 +84,21 @@ public class GrpcLabelServiceStub extends LabelServiceStub {
         LabelServiceStubSettings.newBuilder().build(), clientContext, callableFactory);
   }
 
+  /**
+   * Constructs an instance of GrpcLabelServiceStub, using the given settings. This is protected so
+   * that it is easy to make a subclass, but otherwise, the static factory methods should be
+   * preferred.
+   */
   protected GrpcLabelServiceStub(LabelServiceStubSettings settings, ClientContext clientContext)
       throws IOException {
     this(settings, clientContext, new GrpcLabelServiceCallableFactory());
   }
 
+  /**
+   * Constructs an instance of GrpcLabelServiceStub, using the given settings. This is protected so
+   * that it is easy to make a subclass, but otherwise, the static factory methods should be
+   * preferred.
+   */
   protected GrpcLabelServiceStub(
       LabelServiceStubSettings settings,
       ClientContext clientContext,

@@ -20,15 +20,15 @@ import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
 import com.google.ads.googleads.v6.common.InteractionTypeInfo;
 import com.google.ads.googleads.v6.enums.InteractionTypeEnum;
+import com.google.ads.googleads.v6.enums.ResponseContentTypeEnum.ResponseContentType;
 import com.google.ads.googleads.v6.errors.GoogleAdsError;
 import com.google.ads.googleads.v6.errors.GoogleAdsException;
 import com.google.ads.googleads.v6.resources.CampaignBidModifier;
 import com.google.ads.googleads.v6.services.CampaignBidModifierOperation;
 import com.google.ads.googleads.v6.services.CampaignBidModifierServiceClient;
-import com.google.ads.googleads.v6.services.MutateCampaignBidModifierResult;
+import com.google.ads.googleads.v6.services.MutateCampaignBidModifiersRequest;
 import com.google.ads.googleads.v6.services.MutateCampaignBidModifiersResponse;
 import com.google.ads.googleads.v6.utils.ResourceNames;
-import com.google.common.collect.ImmutableList;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
@@ -118,16 +118,39 @@ public class AddCampaignBidModifier {
     CampaignBidModifierOperation op =
         CampaignBidModifierOperation.newBuilder().setCreate(campaignBidModifier).build();
 
+    // [START MutableResource]
+    // Constructs a request to add the bid modifier.
+    MutateCampaignBidModifiersRequest request =
+        MutateCampaignBidModifiersRequest.newBuilder()
+            .addOperations(op)
+            .setCustomerId(String.valueOf(customerId))
+            // Specifies that we want to the request to return the mutated object and not just its
+            // resource name.
+            .setResponseContentType(ResponseContentType.MUTABLE_RESOURCE)
+            .build();
+
     // Sends the operation in a mutate request.
     try (CampaignBidModifierServiceClient agcServiceClient =
         googleAdsClient.getLatestVersion().createCampaignBidModifierServiceClient()) {
       MutateCampaignBidModifiersResponse response =
-          agcServiceClient.mutateCampaignBidModifiers(
-              Long.toString(customerId), ImmutableList.of(op));
-      System.out.printf("Added %d campaign bid modifiers:%n", response.getResultsCount());
-      for (MutateCampaignBidModifierResult result : response.getResultsList()) {
-        System.out.printf("\t%s%n", result.getResourceName());
-      }
+          agcServiceClient.mutateCampaignBidModifiers(request);
+      /**
+       * The resource returned in the response can be accessed directly in the results list. Its
+       * fields can be read directly, and it can also be mutated further and used in subsequent
+       * requests, without needing to make additional Get or Search requests.
+       */
+      CampaignBidModifier mutableResource = response.getResults(0).getCampaignBidModifier();
+      System.out.printf(
+          "Created campaign bid modifier with resource_name "
+              + "'%s', criterion ID "
+              + "%d, and bid modifier value "
+              + "%s, under the campaign with "
+              + "resource_name '%s'.%n",
+          mutableResource.getResourceName(),
+          mutableResource.getCriterionId(),
+          mutableResource.getBidModifier(),
+          mutableResource.getCampaign());
     }
+    // [END MutableResource]
   }
 }

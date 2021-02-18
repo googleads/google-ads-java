@@ -84,8 +84,7 @@ import javax.annotation.Generated;
  *
  * <p>Please refer to the GitHub repository's samples for more quickstart code snippets.
  */
-@BetaApi
-@Generated("by gapic-generator")
+@Generated("by gapic-generator-java")
 public class AdGroupAdLabelServiceClient implements BackgroundResource {
   private final AdGroupAdLabelServiceSettings settings;
   private final AdGroupAdLabelServiceStub stub;
@@ -142,7 +141,7 @@ public class AdGroupAdLabelServiceClient implements BackgroundResource {
   /**
    * Returns the requested ad group ad label in full detail.
    *
-   * @param resource_name Required. The resource name of the ad group ad label to fetch.
+   * @param resourceName Required. The resource name of the ad group ad label to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final AdGroupAdLabel getAdGroupAdLabel(AdGroupAdLabelName resourceName) {
@@ -157,7 +156,7 @@ public class AdGroupAdLabelServiceClient implements BackgroundResource {
   /**
    * Returns the requested ad group ad label in full detail.
    *
-   * @param resource_name Required. The resource name of the ad group ad label to fetch.
+   * @param resourceName Required. The resource name of the ad group ad label to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final AdGroupAdLabel getAdGroupAdLabel(String resourceName) {
@@ -191,7 +190,7 @@ public class AdGroupAdLabelServiceClient implements BackgroundResource {
   /**
    * Creates and removes ad group ad labels. Operation statuses are returned.
    *
-   * @param customer_id Required. ID of the customer whose ad group ad labels are being modified.
+   * @param customerId Required. ID of the customer whose ad group ad labels are being modified.
    * @param operations Required. The list of operations to perform on ad group ad labels.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */

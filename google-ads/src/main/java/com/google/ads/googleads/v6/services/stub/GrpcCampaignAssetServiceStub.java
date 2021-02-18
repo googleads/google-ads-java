@@ -92,11 +92,21 @@ public class GrpcCampaignAssetServiceStub extends CampaignAssetServiceStub {
         CampaignAssetServiceStubSettings.newBuilder().build(), clientContext, callableFactory);
   }
 
+  /**
+   * Constructs an instance of GrpcCampaignAssetServiceStub, using the given settings. This is
+   * protected so that it is easy to make a subclass, but otherwise, the static factory methods
+   * should be preferred.
+   */
   protected GrpcCampaignAssetServiceStub(
       CampaignAssetServiceStubSettings settings, ClientContext clientContext) throws IOException {
     this(settings, clientContext, new GrpcCampaignAssetServiceCallableFactory());
   }
 
+  /**
+   * Constructs an instance of GrpcCampaignAssetServiceStub, using the given settings. This is
+   * protected so that it is easy to make a subclass, but otherwise, the static factory methods
+   * should be preferred.
+   */
   protected GrpcCampaignAssetServiceStub(
       CampaignAssetServiceStubSettings settings,
       ClientContext clientContext,

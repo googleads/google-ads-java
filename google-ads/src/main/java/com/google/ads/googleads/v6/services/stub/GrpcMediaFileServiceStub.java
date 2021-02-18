@@ -90,11 +90,21 @@ public class GrpcMediaFileServiceStub extends MediaFileServiceStub {
         MediaFileServiceStubSettings.newBuilder().build(), clientContext, callableFactory);
   }
 
+  /**
+   * Constructs an instance of GrpcMediaFileServiceStub, using the given settings. This is protected
+   * so that it is easy to make a subclass, but otherwise, the static factory methods should be
+   * preferred.
+   */
   protected GrpcMediaFileServiceStub(
       MediaFileServiceStubSettings settings, ClientContext clientContext) throws IOException {
     this(settings, clientContext, new GrpcMediaFileServiceCallableFactory());
   }
 
+  /**
+   * Constructs an instance of GrpcMediaFileServiceStub, using the given settings. This is protected
+   * so that it is easy to make a subclass, but otherwise, the static factory methods should be
+   * preferred.
+   */
   protected GrpcMediaFileServiceStub(
       MediaFileServiceStubSettings settings,
       ClientContext clientContext,

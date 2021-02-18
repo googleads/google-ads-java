@@ -83,8 +83,7 @@ import javax.annotation.Generated;
  *
  * <p>Please refer to the GitHub repository's samples for more quickstart code snippets.
  */
-@BetaApi
-@Generated("by gapic-generator")
+@Generated("by gapic-generator-java")
 public class CustomerServiceClient implements BackgroundResource {
   private final CustomerServiceSettings settings;
   private final CustomerServiceStub stub;
@@ -141,7 +140,7 @@ public class CustomerServiceClient implements BackgroundResource {
   /**
    * Returns the requested customer in full detail.
    *
-   * @param resource_name Required. The resource name of the customer to fetch.
+   * @param resourceName Required. The resource name of the customer to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final Customer getCustomer(CustomerName resourceName) {
@@ -156,7 +155,7 @@ public class CustomerServiceClient implements BackgroundResource {
   /**
    * Returns the requested customer in full detail.
    *
-   * @param resource_name Required. The resource name of the customer to fetch.
+   * @param resourceName Required. The resource name of the customer to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final Customer getCustomer(String resourceName) {
@@ -190,7 +189,7 @@ public class CustomerServiceClient implements BackgroundResource {
   /**
    * Updates a customer. Operation statuses are returned.
    *
-   * @param customer_id Required. The ID of the customer being modified.
+   * @param customerId Required. The ID of the customer being modified.
    * @param operation Required. The operation to perform on the customer
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
@@ -253,8 +252,8 @@ public class CustomerServiceClient implements BackgroundResource {
   /**
    * Creates a new client under manager. The new client customer is returned.
    *
-   * @param customer_id Required. The ID of the Manager under whom client customer is being created.
-   * @param customer_client Required. The new client customer to create. The resource name on this
+   * @param customerId Required. The ID of the Manager under whom client customer is being created.
+   * @param customerClient Required. The new client customer to create. The resource name on this
    *     customer will be ignored.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */

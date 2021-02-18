@@ -148,7 +148,7 @@ public interface ConversionActionOrBuilder extends
    * is a system-defined conversion action.
    * </pre>
    *
-   * <code>string owner_customer = 23 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>string owner_customer = 23 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return Whether the ownerCustomer field is set.
    */
   boolean hasOwnerCustomer();
@@ -158,7 +158,7 @@ public interface ConversionActionOrBuilder extends
    * is a system-defined conversion action.
    * </pre>
    *
-   * <code>string owner_customer = 23 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>string owner_customer = 23 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return The ownerCustomer.
    */
   java.lang.String getOwnerCustomer();
@@ -168,7 +168,7 @@ public interface ConversionActionOrBuilder extends
    * is a system-defined conversion action.
    * </pre>
    *
-   * <code>string owner_customer = 23 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>string owner_customer = 23 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return The bytes for ownerCustomer.
    */
   com.google.protobuf.ByteString

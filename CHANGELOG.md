@@ -1,10 +1,9 @@
-10.1.0 - 2020-12-14
+11.0.0 - 2021-02-18
 -------------------
-- Switched code generation to new pipeline (a.k.a. microgenerator).
-- Added support for authenticating with service accounts.
-- Added support for loading configuration from environment variables.
-- Updated logging to scrub PII fields from Feed and CreateCustomerClientRequest.
-- Added/updated various code examples.
+- Added support and examples for Google Ads API v6.1.
+- Removed support for Google Ads API v3.0.
+- Fixed FieldMasks.getFieldValue() to support repeated fields (breaking change).
+- Updated personal information log masking to support new fields.
 
 10.0.0 - 2020-11-11
 -------------------

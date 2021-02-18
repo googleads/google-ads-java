@@ -16,6 +16,9 @@ package com.google.ads.googleads.lib.logging.scrub;
 
 import static org.junit.Assert.assertEquals;
 
+import com.google.ads.googleads.v6.resources.CustomerUserAccessInvitation;
+import com.google.ads.googleads.v6.services.CreateCustomerClientRequest;
+import com.google.ads.googleads.v6.services.SearchGoogleAdsResponse;
 import com.google.ads.googleads.v6.services.SearchGoogleAdsStreamResponse;
 import com.google.common.collect.ImmutableList;
 import com.google.common.io.Resources;
@@ -69,6 +72,66 @@ public class LogScrubberTest {
           "searchStream_v6_ignoresOtherMessage_expected.textpb",
           "searchStream_v6_ignoresOtherMessage_input.textpb",
           SearchGoogleAdsStreamResponse.class
+        },
+        new Object[] {
+          "v6 search stream scrubs email",
+          "searchStream_v6_email_expected.textpb",
+          "searchStream_v6_email_input.textpb",
+          SearchGoogleAdsResponse.class
+        },
+        new Object[] {
+          "v6 search stream scrubs inviter email",
+          "searchStream_v6_inviter_email_expected.textpb",
+          "searchStream_v6_inviter_email_input.textpb",
+          SearchGoogleAdsResponse.class
+        },
+        new Object[] {
+          "v5 search stream passes through",
+          "searchStream_v5_expected.textpb",
+          "searchStream_v5_input.textpb",
+          com.google.ads.googleads.v5.services.SearchGoogleAdsResponse.class
+        },
+        new Object[] {
+          "v6 search stream ignores when not present",
+          "searchStream_v6_ignoresWhenNotPresent_expected.textpb",
+          "searchStream_v6_ignoresWhenNotPresent_input.textpb",
+          SearchGoogleAdsResponse.class
+        },
+        new Object[] {
+          "v6 ignores other message",
+          "searchStream_v6_ignoresOtherMessage_expected.textpb",
+          "searchStream_v6_ignoresOtherMessage_input.textpb",
+          SearchGoogleAdsResponse.class
+        },
+        new Object[] {
+          "CreateCustomerClient scrubs email address",
+          "createCustomerClient_scrubsEmailAddress_expected.textpb",
+          "createCustomerClient_scrubsEmailAddress_input.textpb",
+          CreateCustomerClientRequest.class
+        },
+        new Object[] {
+          "GetCustomerUserAccess scrubs email address",
+          "getCustomerUserAccess_scrubsEmailAddress_expected.textpb",
+          "getCustomerUserAccess_scrubsEmailAddress_input.textpb",
+          CreateCustomerClientRequest.class
+        },
+        new Object[] {
+          "search stream masks invitation email address",
+          "searchStream_v6_scrubsInvitationEmailAddress_expected.textpb",
+          "searchStream_v6_scrubsInvitationEmailAddress_input.textpb",
+          SearchGoogleAdsStreamResponse.class
+        },
+        new Object[] {
+          "search stream masks invitation email address",
+          "searchStream_v6_scrubsInvitationEmailAddress_expected.textpb",
+          "searchStream_v6_scrubsInvitationEmailAddress_input.textpb",
+          SearchGoogleAdsResponse.class
+        },
+        new Object[] {
+          "get CustomerUserAccessInvitation scrubs email address",
+          "getCustomerUserAccessInvitation_scrubsEmailAddress_expected.textpb",
+          "getCustomerUserAccessInvitation_scrubsEmailAddress_input.textpb",
+          CustomerUserAccessInvitation.class
         });
   }
 

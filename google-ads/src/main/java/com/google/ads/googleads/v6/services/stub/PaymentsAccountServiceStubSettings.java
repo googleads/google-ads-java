@@ -75,7 +75,6 @@ import org.threeten.bp.Duration;
  *     paymentsAccountServiceSettingsBuilder.build();
  * }</pre>
  */
-@BetaApi
 @Generated("by gapic-generator-java")
 public class PaymentsAccountServiceStubSettings
     extends StubSettings<PaymentsAccountServiceStubSettings> {

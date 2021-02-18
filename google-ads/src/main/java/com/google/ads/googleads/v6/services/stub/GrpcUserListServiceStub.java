@@ -88,11 +88,21 @@ public class GrpcUserListServiceStub extends UserListServiceStub {
         UserListServiceStubSettings.newBuilder().build(), clientContext, callableFactory);
   }
 
+  /**
+   * Constructs an instance of GrpcUserListServiceStub, using the given settings. This is protected
+   * so that it is easy to make a subclass, but otherwise, the static factory methods should be
+   * preferred.
+   */
   protected GrpcUserListServiceStub(
       UserListServiceStubSettings settings, ClientContext clientContext) throws IOException {
     this(settings, clientContext, new GrpcUserListServiceCallableFactory());
   }
 
+  /**
+   * Constructs an instance of GrpcUserListServiceStub, using the given settings. This is protected
+   * so that it is easy to make a subclass, but otherwise, the static factory methods should be
+   * preferred.
+   */
   protected GrpcUserListServiceStub(
       UserListServiceStubSettings settings,
       ClientContext clientContext,

@@ -83,8 +83,7 @@ import javax.annotation.Generated;
  *
  * <p>Please refer to the GitHub repository's samples for more quickstart code snippets.
  */
-@BetaApi
-@Generated("by gapic-generator")
+@Generated("by gapic-generator-java")
 public class CustomerUserAccessServiceClient implements BackgroundResource {
   private final CustomerUserAccessServiceSettings settings;
   private final CustomerUserAccessServiceStub stub;
@@ -143,7 +142,7 @@ public class CustomerUserAccessServiceClient implements BackgroundResource {
   /**
    * Returns the CustomerUserAccess in full detail.
    *
-   * @param resource_name Required. Resource name of the customer user access.
+   * @param resourceName Required. Resource name of the customer user access.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final CustomerUserAccess getCustomerUserAccess(CustomerUserAccessName resourceName) {
@@ -158,7 +157,7 @@ public class CustomerUserAccessServiceClient implements BackgroundResource {
   /**
    * Returns the CustomerUserAccess in full detail.
    *
-   * @param resource_name Required. Resource name of the customer user access.
+   * @param resourceName Required. Resource name of the customer user access.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final CustomerUserAccess getCustomerUserAccess(String resourceName) {
@@ -193,7 +192,7 @@ public class CustomerUserAccessServiceClient implements BackgroundResource {
   /**
    * Updates, removes permission of a user on a given customer. Operation statuses are returned.
    *
-   * @param customer_id Required. The ID of the customer being modified.
+   * @param customerId Required. The ID of the customer being modified.
    * @param operation Required. The operation to perform on the customer
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */

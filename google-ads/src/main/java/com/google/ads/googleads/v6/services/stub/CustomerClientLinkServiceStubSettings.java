@@ -77,7 +77,6 @@ import org.threeten.bp.Duration;
  *     customerClientLinkServiceSettingsBuilder.build();
  * }</pre>
  */
-@BetaApi
 @Generated("by gapic-generator-java")
 public class CustomerClientLinkServiceStubSettings
     extends StubSettings<CustomerClientLinkServiceStubSettings> {

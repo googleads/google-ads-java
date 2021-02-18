@@ -84,8 +84,7 @@ import javax.annotation.Generated;
  *
  * <p>Please refer to the GitHub repository's samples for more quickstart code snippets.
  */
-@BetaApi
-@Generated("by gapic-generator")
+@Generated("by gapic-generator-java")
 public class KeywordPlanAdGroupServiceClient implements BackgroundResource {
   private final KeywordPlanAdGroupServiceSettings settings;
   private final KeywordPlanAdGroupServiceStub stub;
@@ -144,7 +143,7 @@ public class KeywordPlanAdGroupServiceClient implements BackgroundResource {
   /**
    * Returns the requested Keyword Plan ad group in full detail.
    *
-   * @param resource_name Required. The resource name of the Keyword Plan ad group to fetch.
+   * @param resourceName Required. The resource name of the Keyword Plan ad group to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final KeywordPlanAdGroup getKeywordPlanAdGroup(KeywordPlanAdGroupName resourceName) {
@@ -159,7 +158,7 @@ public class KeywordPlanAdGroupServiceClient implements BackgroundResource {
   /**
    * Returns the requested Keyword Plan ad group in full detail.
    *
-   * @param resource_name Required. The resource name of the Keyword Plan ad group to fetch.
+   * @param resourceName Required. The resource name of the Keyword Plan ad group to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final KeywordPlanAdGroup getKeywordPlanAdGroup(String resourceName) {
@@ -194,7 +193,7 @@ public class KeywordPlanAdGroupServiceClient implements BackgroundResource {
   /**
    * Creates, updates, or removes Keyword Plan ad groups. Operation statuses are returned.
    *
-   * @param customer_id Required. The ID of the customer whose Keyword Plan ad groups are being
+   * @param customerId Required. The ID of the customer whose Keyword Plan ad groups are being
    *     modified.
    * @param operations Required. The list of operations to perform on individual Keyword Plan ad
    *     groups.

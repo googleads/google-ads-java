@@ -903,6 +903,70 @@ private static final long serialVersionUID = 0L;
      * <code>ADDRESS_NOT_TARGETABLE = 98;</code>
      */
     ADDRESS_NOT_TARGETABLE(98),
+    /**
+     * <pre>
+     * The specified asset ID does not exist.
+     * </pre>
+     *
+     * <code>INVALID_ASSET_ID = 100;</code>
+     */
+    INVALID_ASSET_ID(100),
+    /**
+     * <pre>
+     * The asset type cannot be set for the field.
+     * </pre>
+     *
+     * <code>INCOMPATIBLE_ASSET_TYPE = 101;</code>
+     */
+    INCOMPATIBLE_ASSET_TYPE(101),
+    /**
+     * <pre>
+     * The image has unexpected size.
+     * </pre>
+     *
+     * <code>IMAGE_ERROR_UNEXPECTED_SIZE = 102;</code>
+     */
+    IMAGE_ERROR_UNEXPECTED_SIZE(102),
+    /**
+     * <pre>
+     * The image aspect ratio is not allowed.
+     * </pre>
+     *
+     * <code>IMAGE_ERROR_ASPECT_RATIO_NOT_ALLOWED = 103;</code>
+     */
+    IMAGE_ERROR_ASPECT_RATIO_NOT_ALLOWED(103),
+    /**
+     * <pre>
+     * The image file is too large.
+     * </pre>
+     *
+     * <code>IMAGE_ERROR_FILE_TOO_LARGE = 104;</code>
+     */
+    IMAGE_ERROR_FILE_TOO_LARGE(104),
+    /**
+     * <pre>
+     * The image format is unsupported.
+     * </pre>
+     *
+     * <code>IMAGE_ERROR_FORMAT_NOT_ALLOWED = 105;</code>
+     */
+    IMAGE_ERROR_FORMAT_NOT_ALLOWED(105),
+    /**
+     * <pre>
+     * Image violates constraints without more details.
+     * </pre>
+     *
+     * <code>IMAGE_ERROR_CONSTRAINTS_VIOLATED = 106;</code>
+     */
+    IMAGE_ERROR_CONSTRAINTS_VIOLATED(106),
+    /**
+     * <pre>
+     * An error occurred when validating image.
+     * </pre>
+     *
+     * <code>IMAGE_ERROR_SERVER_ERROR = 107;</code>
+     */
+    IMAGE_ERROR_SERVER_ERROR(107),
     UNRECOGNIZED(-1),
     ;
 
@@ -1716,6 +1780,70 @@ private static final long serialVersionUID = 0L;
      * <code>ADDRESS_NOT_TARGETABLE = 98;</code>
      */
     public static final int ADDRESS_NOT_TARGETABLE_VALUE = 98;
+    /**
+     * <pre>
+     * The specified asset ID does not exist.
+     * </pre>
+     *
+     * <code>INVALID_ASSET_ID = 100;</code>
+     */
+    public static final int INVALID_ASSET_ID_VALUE = 100;
+    /**
+     * <pre>
+     * The asset type cannot be set for the field.
+     * </pre>
+     *
+     * <code>INCOMPATIBLE_ASSET_TYPE = 101;</code>
+     */
+    public static final int INCOMPATIBLE_ASSET_TYPE_VALUE = 101;
+    /**
+     * <pre>
+     * The image has unexpected size.
+     * </pre>
+     *
+     * <code>IMAGE_ERROR_UNEXPECTED_SIZE = 102;</code>
+     */
+    public static final int IMAGE_ERROR_UNEXPECTED_SIZE_VALUE = 102;
+    /**
+     * <pre>
+     * The image aspect ratio is not allowed.
+     * </pre>
+     *
+     * <code>IMAGE_ERROR_ASPECT_RATIO_NOT_ALLOWED = 103;</code>
+     */
+    public static final int IMAGE_ERROR_ASPECT_RATIO_NOT_ALLOWED_VALUE = 103;
+    /**
+     * <pre>
+     * The image file is too large.
+     * </pre>
+     *
+     * <code>IMAGE_ERROR_FILE_TOO_LARGE = 104;</code>
+     */
+    public static final int IMAGE_ERROR_FILE_TOO_LARGE_VALUE = 104;
+    /**
+     * <pre>
+     * The image format is unsupported.
+     * </pre>
+     *
+     * <code>IMAGE_ERROR_FORMAT_NOT_ALLOWED = 105;</code>
+     */
+    public static final int IMAGE_ERROR_FORMAT_NOT_ALLOWED_VALUE = 105;
+    /**
+     * <pre>
+     * Image violates constraints without more details.
+     * </pre>
+     *
+     * <code>IMAGE_ERROR_CONSTRAINTS_VIOLATED = 106;</code>
+     */
+    public static final int IMAGE_ERROR_CONSTRAINTS_VIOLATED_VALUE = 106;
+    /**
+     * <pre>
+     * An error occurred when validating image.
+     * </pre>
+     *
+     * <code>IMAGE_ERROR_SERVER_ERROR = 107;</code>
+     */
+    public static final int IMAGE_ERROR_SERVER_ERROR_VALUE = 107;
 
 
     public final int getNumber() {
@@ -1841,6 +1969,14 @@ private static final long serialVersionUID = 0L;
         case 96: return MISSING_LONGITUDE_VALUE;
         case 97: return ADDRESS_NOT_FOUND;
         case 98: return ADDRESS_NOT_TARGETABLE;
+        case 100: return INVALID_ASSET_ID;
+        case 101: return INCOMPATIBLE_ASSET_TYPE;
+        case 102: return IMAGE_ERROR_UNEXPECTED_SIZE;
+        case 103: return IMAGE_ERROR_ASPECT_RATIO_NOT_ALLOWED;
+        case 104: return IMAGE_ERROR_FILE_TOO_LARGE;
+        case 105: return IMAGE_ERROR_FORMAT_NOT_ALLOWED;
+        case 106: return IMAGE_ERROR_CONSTRAINTS_VIOLATED;
+        case 107: return IMAGE_ERROR_SERVER_ERROR;
         default: return null;
       }
     }

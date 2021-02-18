@@ -75,7 +75,6 @@ import org.threeten.bp.Duration;
  *     mobileDeviceConstantServiceSettingsBuilder.build();
  * }</pre>
  */
-@BetaApi
 @Generated("by gapic-generator-java")
 public class MobileDeviceConstantServiceStubSettings
     extends StubSettings<MobileDeviceConstantServiceStubSettings> {

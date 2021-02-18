@@ -5,138 +5,141 @@ package com.google.ads.googleads.v6.services;
 
 public final class SharedCriterionServiceProto {
   private SharedCriterionServiceProto() {}
-
-  public static void registerAllExtensions(com.google.protobuf.ExtensionRegistryLite registry) {}
-
-  public static void registerAllExtensions(com.google.protobuf.ExtensionRegistry registry) {
-    registerAllExtensions((com.google.protobuf.ExtensionRegistryLite) registry);
+  public static void registerAllExtensions(
+      com.google.protobuf.ExtensionRegistryLite registry) {
   }
 
+  public static void registerAllExtensions(
+      com.google.protobuf.ExtensionRegistry registry) {
+    registerAllExtensions(
+        (com.google.protobuf.ExtensionRegistryLite) registry);
+  }
   static final com.google.protobuf.Descriptors.Descriptor
-      internal_static_google_ads_googleads_v6_services_GetSharedCriterionRequest_descriptor;
-  static final com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+    internal_static_google_ads_googleads_v6_services_GetSharedCriterionRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_google_ads_googleads_v6_services_GetSharedCriterionRequest_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-      internal_static_google_ads_googleads_v6_services_MutateSharedCriteriaRequest_descriptor;
-  static final com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+    internal_static_google_ads_googleads_v6_services_MutateSharedCriteriaRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_google_ads_googleads_v6_services_MutateSharedCriteriaRequest_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-      internal_static_google_ads_googleads_v6_services_SharedCriterionOperation_descriptor;
-  static final com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+    internal_static_google_ads_googleads_v6_services_SharedCriterionOperation_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_google_ads_googleads_v6_services_SharedCriterionOperation_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-      internal_static_google_ads_googleads_v6_services_MutateSharedCriteriaResponse_descriptor;
-  static final com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+    internal_static_google_ads_googleads_v6_services_MutateSharedCriteriaResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_google_ads_googleads_v6_services_MutateSharedCriteriaResponse_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-      internal_static_google_ads_googleads_v6_services_MutateSharedCriterionResult_descriptor;
-  static final com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+    internal_static_google_ads_googleads_v6_services_MutateSharedCriterionResult_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_google_ads_googleads_v6_services_MutateSharedCriterionResult_fieldAccessorTable;
 
-  public static com.google.protobuf.Descriptors.FileDescriptor getDescriptor() {
+  public static com.google.protobuf.Descriptors.FileDescriptor
+      getDescriptor() {
     return descriptor;
   }
-
-  private static com.google.protobuf.Descriptors.FileDescriptor descriptor;
-
+  private static  com.google.protobuf.Descriptors.FileDescriptor
+      descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n?google/ads/googleads/v6/services/share"
-          + "d_criterion_service.proto\022 google.ads.go"
-          + "ogleads.v6.services\0328google/ads/googlead"
-          + "s/v6/resources/shared_criterion.proto\032\034g"
-          + "oogle/api/annotations.proto\032\027google/api/"
-          + "client.proto\032\037google/api/field_behavior."
-          + "proto\032\031google/api/resource.proto\032\027google"
-          + "/rpc/status.proto\"d\n\031GetSharedCriterionR"
-          + "equest\022G\n\rresource_name\030\001 \001(\tB0\340A\002\372A*\n(g"
-          + "oogleads.googleapis.com/SharedCriterion\""
-          + "\274\001\n\033MutateSharedCriteriaRequest\022\030\n\013custo"
-          + "mer_id\030\001 \001(\tB\003\340A\002\022S\n\noperations\030\002 \003(\0132:."
-          + "google.ads.googleads.v6.services.SharedC"
-          + "riterionOperationB\003\340A\002\022\027\n\017partial_failur"
-          + "e\030\003 \001(\010\022\025\n\rvalidate_only\030\004 \001(\010\"\177\n\030Shared"
-          + "CriterionOperation\022D\n\006create\030\001 \001(\01322.goo"
-          + "gle.ads.googleads.v6.resources.SharedCri"
-          + "terionH\000\022\020\n\006remove\030\003 \001(\tH\000B\013\n\toperation\""
-          + "\241\001\n\034MutateSharedCriteriaResponse\0221\n\025part"
-          + "ial_failure_error\030\003 \001(\0132\022.google.rpc.Sta"
-          + "tus\022N\n\007results\030\002 \003(\0132=.google.ads.google"
-          + "ads.v6.services.MutateSharedCriterionRes"
-          + "ult\"4\n\033MutateSharedCriterionResult\022\025\n\rre"
-          + "source_name\030\001 \001(\t2\242\004\n\026SharedCriterionSer"
-          + "vice\022\317\001\n\022GetSharedCriterion\022;.google.ads"
-          + ".googleads.v6.services.GetSharedCriterio"
-          + "nRequest\0322.google.ads.googleads.v6.resou"
-          + "rces.SharedCriterion\"H\202\323\344\223\0022\0220/v6/{resou"
-          + "rce_name=customers/*/sharedCriteria/*}\332A"
-          + "\rresource_name\022\356\001\n\024MutateSharedCriteria\022"
-          + "=.google.ads.googleads.v6.services.Mutat"
-          + "eSharedCriteriaRequest\032>.google.ads.goog"
-          + "leads.v6.services.MutateSharedCriteriaRe"
-          + "sponse\"W\202\323\344\223\0028\"3/v6/customers/{customer_"
-          + "id=*}/sharedCriteria:mutate:\001*\332A\026custome"
-          + "r_id,operations\032E\312A\030googleads.googleapis"
-          + ".com\322A\'https://www.googleapis.com/auth/a"
-          + "dwordsB\202\002\n$com.google.ads.googleads.v6.s"
-          + "ervicesB\033SharedCriterionServiceProtoP\001ZH"
-          + "google.golang.org/genproto/googleapis/ad"
-          + "s/googleads/v6/services;services\242\002\003GAA\252\002"
-          + " Google.Ads.GoogleAds.V6.Services\312\002 Goog"
-          + "le\\Ads\\GoogleAds\\V6\\Services\352\002$Google::A"
-          + "ds::GoogleAds::V6::Servicesb\006proto3"
+      "\n?google/ads/googleads/v6/services/share" +
+      "d_criterion_service.proto\022 google.ads.go" +
+      "ogleads.v6.services\0329google/ads/googlead" +
+      "s/v6/enums/response_content_type.proto\0328" +
+      "google/ads/googleads/v6/resources/shared" +
+      "_criterion.proto\032\034google/api/annotations" +
+      ".proto\032\027google/api/client.proto\032\037google/" +
+      "api/field_behavior.proto\032\031google/api/res" +
+      "ource.proto\032\027google/rpc/status.proto\"d\n\031" +
+      "GetSharedCriterionRequest\022G\n\rresource_na" +
+      "me\030\001 \001(\tB0\340A\002\372A*\n(googleads.googleapis.c" +
+      "om/SharedCriterion\"\247\002\n\033MutateSharedCrite" +
+      "riaRequest\022\030\n\013customer_id\030\001 \001(\tB\003\340A\002\022S\n\n" +
+      "operations\030\002 \003(\0132:.google.ads.googleads." +
+      "v6.services.SharedCriterionOperationB\003\340A" +
+      "\002\022\027\n\017partial_failure\030\003 \001(\010\022\025\n\rvalidate_o" +
+      "nly\030\004 \001(\010\022i\n\025response_content_type\030\005 \001(\016" +
+      "2J.google.ads.googleads.v6.enums.Respons" +
+      "eContentTypeEnum.ResponseContentType\"\177\n\030" +
+      "SharedCriterionOperation\022D\n\006create\030\001 \001(\013" +
+      "22.google.ads.googleads.v6.resources.Sha" +
+      "redCriterionH\000\022\020\n\006remove\030\003 \001(\tH\000B\013\n\toper" +
+      "ation\"\241\001\n\034MutateSharedCriteriaResponse\0221" +
+      "\n\025partial_failure_error\030\003 \001(\0132\022.google.r" +
+      "pc.Status\022N\n\007results\030\002 \003(\0132=.google.ads." +
+      "googleads.v6.services.MutateSharedCriter" +
+      "ionResult\"\202\001\n\033MutateSharedCriterionResul" +
+      "t\022\025\n\rresource_name\030\001 \001(\t\022L\n\020shared_crite" +
+      "rion\030\002 \001(\01322.google.ads.googleads.v6.res" +
+      "ources.SharedCriterion2\242\004\n\026SharedCriteri" +
+      "onService\022\317\001\n\022GetSharedCriterion\022;.googl" +
+      "e.ads.googleads.v6.services.GetSharedCri" +
+      "terionRequest\0322.google.ads.googleads.v6." +
+      "resources.SharedCriterion\"H\202\323\344\223\0022\0220/v6/{" +
+      "resource_name=customers/*/sharedCriteria" +
+      "/*}\332A\rresource_name\022\356\001\n\024MutateSharedCrit" +
+      "eria\022=.google.ads.googleads.v6.services." +
+      "MutateSharedCriteriaRequest\032>.google.ads" +
+      ".googleads.v6.services.MutateSharedCrite" +
+      "riaResponse\"W\202\323\344\223\0028\"3/v6/customers/{cust" +
+      "omer_id=*}/sharedCriteria:mutate:\001*\332A\026cu" +
+      "stomer_id,operations\032E\312A\030googleads.googl" +
+      "eapis.com\322A\'https://www.googleapis.com/a" +
+      "uth/adwordsB\202\002\n$com.google.ads.googleads" +
+      ".v6.servicesB\033SharedCriterionServiceProt" +
+      "oP\001ZHgoogle.golang.org/genproto/googleap" +
+      "is/ads/googleads/v6/services;services\242\002\003" +
+      "GAA\252\002 Google.Ads.GoogleAds.V6.Services\312\002" +
+      " Google\\Ads\\GoogleAds\\V6\\Services\352\002$Goog" +
+      "le::Ads::GoogleAds::V6::Servicesb\006proto3"
     };
-    descriptor =
-        com.google.protobuf.Descriptors.FileDescriptor.internalBuildGeneratedFileFrom(
-            descriptorData,
-            new com.google.protobuf.Descriptors.FileDescriptor[] {
-              com.google.ads.googleads.v6.resources.SharedCriterionProto.getDescriptor(),
-              com.google.api.AnnotationsProto.getDescriptor(),
-              com.google.api.ClientProto.getDescriptor(),
-              com.google.api.FieldBehaviorProto.getDescriptor(),
-              com.google.api.ResourceProto.getDescriptor(),
-              com.google.rpc.StatusProto.getDescriptor(),
-            });
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
+      .internalBuildGeneratedFileFrom(descriptorData,
+        new com.google.protobuf.Descriptors.FileDescriptor[] {
+          com.google.ads.googleads.v6.enums.ResponseContentTypeProto.getDescriptor(),
+          com.google.ads.googleads.v6.resources.SharedCriterionProto.getDescriptor(),
+          com.google.api.AnnotationsProto.getDescriptor(),
+          com.google.api.ClientProto.getDescriptor(),
+          com.google.api.FieldBehaviorProto.getDescriptor(),
+          com.google.api.ResourceProto.getDescriptor(),
+          com.google.rpc.StatusProto.getDescriptor(),
+        });
     internal_static_google_ads_googleads_v6_services_GetSharedCriterionRequest_descriptor =
-        getDescriptor().getMessageTypes().get(0);
-    internal_static_google_ads_googleads_v6_services_GetSharedCriterionRequest_fieldAccessorTable =
-        new com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-            internal_static_google_ads_googleads_v6_services_GetSharedCriterionRequest_descriptor,
-            new java.lang.String[] {
-              "ResourceName",
-            });
+      getDescriptor().getMessageTypes().get(0);
+    internal_static_google_ads_googleads_v6_services_GetSharedCriterionRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_google_ads_googleads_v6_services_GetSharedCriterionRequest_descriptor,
+        new java.lang.String[] { "ResourceName", });
     internal_static_google_ads_googleads_v6_services_MutateSharedCriteriaRequest_descriptor =
-        getDescriptor().getMessageTypes().get(1);
-    internal_static_google_ads_googleads_v6_services_MutateSharedCriteriaRequest_fieldAccessorTable =
-        new com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-            internal_static_google_ads_googleads_v6_services_MutateSharedCriteriaRequest_descriptor,
-            new java.lang.String[] {
-              "CustomerId", "Operations", "PartialFailure", "ValidateOnly",
-            });
+      getDescriptor().getMessageTypes().get(1);
+    internal_static_google_ads_googleads_v6_services_MutateSharedCriteriaRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_google_ads_googleads_v6_services_MutateSharedCriteriaRequest_descriptor,
+        new java.lang.String[] { "CustomerId", "Operations", "PartialFailure", "ValidateOnly", "ResponseContentType", });
     internal_static_google_ads_googleads_v6_services_SharedCriterionOperation_descriptor =
-        getDescriptor().getMessageTypes().get(2);
-    internal_static_google_ads_googleads_v6_services_SharedCriterionOperation_fieldAccessorTable =
-        new com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-            internal_static_google_ads_googleads_v6_services_SharedCriterionOperation_descriptor,
-            new java.lang.String[] {
-              "Create", "Remove", "Operation",
-            });
+      getDescriptor().getMessageTypes().get(2);
+    internal_static_google_ads_googleads_v6_services_SharedCriterionOperation_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_google_ads_googleads_v6_services_SharedCriterionOperation_descriptor,
+        new java.lang.String[] { "Create", "Remove", "Operation", });
     internal_static_google_ads_googleads_v6_services_MutateSharedCriteriaResponse_descriptor =
-        getDescriptor().getMessageTypes().get(3);
-    internal_static_google_ads_googleads_v6_services_MutateSharedCriteriaResponse_fieldAccessorTable =
-        new com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-            internal_static_google_ads_googleads_v6_services_MutateSharedCriteriaResponse_descriptor,
-            new java.lang.String[] {
-              "PartialFailureError", "Results",
-            });
+      getDescriptor().getMessageTypes().get(3);
+    internal_static_google_ads_googleads_v6_services_MutateSharedCriteriaResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_google_ads_googleads_v6_services_MutateSharedCriteriaResponse_descriptor,
+        new java.lang.String[] { "PartialFailureError", "Results", });
     internal_static_google_ads_googleads_v6_services_MutateSharedCriterionResult_descriptor =
-        getDescriptor().getMessageTypes().get(4);
-    internal_static_google_ads_googleads_v6_services_MutateSharedCriterionResult_fieldAccessorTable =
-        new com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-            internal_static_google_ads_googleads_v6_services_MutateSharedCriterionResult_descriptor,
-            new java.lang.String[] {
-              "ResourceName",
-            });
+      getDescriptor().getMessageTypes().get(4);
+    internal_static_google_ads_googleads_v6_services_MutateSharedCriterionResult_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_google_ads_googleads_v6_services_MutateSharedCriterionResult_descriptor,
+        new java.lang.String[] { "ResourceName", "SharedCriterion", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.ClientProto.defaultHost);
@@ -145,8 +148,9 @@ public final class SharedCriterionServiceProto {
     registry.add(com.google.api.ClientProto.methodSignature);
     registry.add(com.google.api.ClientProto.oauthScopes);
     registry.add(com.google.api.ResourceProto.resourceReference);
-    com.google.protobuf.Descriptors.FileDescriptor.internalUpdateFileDescriptor(
-        descriptor, registry);
+    com.google.protobuf.Descriptors.FileDescriptor
+        .internalUpdateFileDescriptor(descriptor, registry);
+    com.google.ads.googleads.v6.enums.ResponseContentTypeProto.getDescriptor();
     com.google.ads.googleads.v6.resources.SharedCriterionProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
     com.google.api.ClientProto.getDescriptor();

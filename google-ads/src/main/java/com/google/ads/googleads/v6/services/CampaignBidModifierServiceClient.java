@@ -84,8 +84,7 @@ import javax.annotation.Generated;
  *
  * <p>Please refer to the GitHub repository's samples for more quickstart code snippets.
  */
-@BetaApi
-@Generated("by gapic-generator")
+@Generated("by gapic-generator-java")
 public class CampaignBidModifierServiceClient implements BackgroundResource {
   private final CampaignBidModifierServiceSettings settings;
   private final CampaignBidModifierServiceStub stub;
@@ -144,7 +143,7 @@ public class CampaignBidModifierServiceClient implements BackgroundResource {
   /**
    * Returns the requested campaign bid modifier in full detail.
    *
-   * @param resource_name Required. The resource name of the campaign bid modifier to fetch.
+   * @param resourceName Required. The resource name of the campaign bid modifier to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final CampaignBidModifier getCampaignBidModifier(CampaignBidModifierName resourceName) {
@@ -159,7 +158,7 @@ public class CampaignBidModifierServiceClient implements BackgroundResource {
   /**
    * Returns the requested campaign bid modifier in full detail.
    *
-   * @param resource_name Required. The resource name of the campaign bid modifier to fetch.
+   * @param resourceName Required. The resource name of the campaign bid modifier to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final CampaignBidModifier getCampaignBidModifier(String resourceName) {
@@ -194,8 +193,7 @@ public class CampaignBidModifierServiceClient implements BackgroundResource {
   /**
    * Creates, updates, or removes campaign bid modifiers. Operation statuses are returned.
    *
-   * @param customer_id Required. ID of the customer whose campaign bid modifiers are being
-   *     modified.
+   * @param customerId Required. ID of the customer whose campaign bid modifiers are being modified.
    * @param operations Required. The list of operations to perform on individual campaign bid
    *     modifiers.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails

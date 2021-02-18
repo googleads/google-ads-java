@@ -83,8 +83,7 @@ import javax.annotation.Generated;
  *
  * <p>Please refer to the GitHub repository's samples for more quickstart code snippets.
  */
-@BetaApi
-@Generated("by gapic-generator")
+@Generated("by gapic-generator-java")
 public class SearchTermViewServiceClient implements BackgroundResource {
   private final SearchTermViewServiceSettings settings;
   private final SearchTermViewServiceStub stub;
@@ -141,7 +140,7 @@ public class SearchTermViewServiceClient implements BackgroundResource {
   /**
    * Returns the attributes of the requested search term view.
    *
-   * @param resource_name Required. The resource name of the search term view to fetch.
+   * @param resourceName Required. The resource name of the search term view to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final SearchTermView getSearchTermView(SearchTermViewName resourceName) {
@@ -156,7 +155,7 @@ public class SearchTermViewServiceClient implements BackgroundResource {
   /**
    * Returns the attributes of the requested search term view.
    *
-   * @param resource_name Required. The resource name of the search term view to fetch.
+   * @param resourceName Required. The resource name of the search term view to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final SearchTermView getSearchTermView(String resourceName) {

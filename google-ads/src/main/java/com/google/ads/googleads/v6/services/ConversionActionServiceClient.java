@@ -84,8 +84,7 @@ import javax.annotation.Generated;
  *
  * <p>Please refer to the GitHub repository's samples for more quickstart code snippets.
  */
-@BetaApi
-@Generated("by gapic-generator")
+@Generated("by gapic-generator-java")
 public class ConversionActionServiceClient implements BackgroundResource {
   private final ConversionActionServiceSettings settings;
   private final ConversionActionServiceStub stub;
@@ -143,7 +142,7 @@ public class ConversionActionServiceClient implements BackgroundResource {
   /**
    * Returns the requested conversion action.
    *
-   * @param resource_name Required. The resource name of the conversion action to fetch.
+   * @param resourceName Required. The resource name of the conversion action to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final ConversionAction getConversionAction(ConversionActionName resourceName) {
@@ -158,7 +157,7 @@ public class ConversionActionServiceClient implements BackgroundResource {
   /**
    * Returns the requested conversion action.
    *
-   * @param resource_name Required. The resource name of the conversion action to fetch.
+   * @param resourceName Required. The resource name of the conversion action to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final ConversionAction getConversionAction(String resourceName) {
@@ -193,8 +192,7 @@ public class ConversionActionServiceClient implements BackgroundResource {
   /**
    * Creates, updates or removes conversion actions. Operation statuses are returned.
    *
-   * @param customer_id Required. The ID of the customer whose conversion actions are being
-   *     modified.
+   * @param customerId Required. The ID of the customer whose conversion actions are being modified.
    * @param operations Required. The list of operations to perform on individual conversion actions.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */

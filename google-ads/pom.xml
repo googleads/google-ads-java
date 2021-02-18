@@ -13,7 +13,9 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
 -->
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
   <parent>
     <groupId>com.google.api-ads</groupId>
@@ -142,21 +144,29 @@
             <goals>
               <goal>run</goal>
             </goals>
-            <configuration>
-              <protocArtifact>com.google.protobuf:protoc:${protobuf.version}</protocArtifact>
-              <inputDirectories>
-                <include>src/test/resources/protos</include>
-              </inputDirectories>
-              <outputTargets>
-                <outputTarget>
-                  <type>java</type>
-                  <addSources>none</addSources>
-                  <outputDirectory>target/generated-test-sources</outputDirectory>
-                </outputTarget>
-              </outputTargets>
-            </configuration>
           </execution>
         </executions>
+
+        <configuration>
+          <!-- RC is required here for protoc. Prior to this version, it
+          requires a flag to enable presence prior to this (even though presence
+          was introduced in 3.12.2). The maven plugin doesn't support passing
+          arbitrary flags to protoc. A little more detail here:
+          https://github.com/os72/protoc-jar-maven-plugin/issues/98 -->
+          <protocArtifact>com.google.protobuf:protoc:3.15.0-rc-1
+          </protocArtifact>
+          <inputDirectories>
+            <include>src/test/resources/protos</include>
+          </inputDirectories>
+          <includeStdTypes>true</includeStdTypes>
+          <outputTargets>
+            <outputTarget>
+              <type>java</type>
+              <addSources>none</addSources>
+              <outputDirectory>target/generated-test-sources</outputDirectory>
+            </outputTarget>
+          </outputTargets>
+        </configuration>
       </plugin>
       <plugin>
         <groupId>org.codehaus.mojo</groupId>

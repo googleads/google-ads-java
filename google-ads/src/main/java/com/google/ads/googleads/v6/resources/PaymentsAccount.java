@@ -494,7 +494,7 @@ private static final long serialVersionUID = 0L;
    * Output only. Paying manager of this payment account.
    * </pre>
    *
-   * <code>string paying_manager_customer = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>string paying_manager_customer = 13 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return Whether the payingManagerCustomer field is set.
    */
   @java.lang.Override
@@ -506,7 +506,7 @@ private static final long serialVersionUID = 0L;
    * Output only. Paying manager of this payment account.
    * </pre>
    *
-   * <code>string paying_manager_customer = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>string paying_manager_customer = 13 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return The payingManagerCustomer.
    */
   @java.lang.Override
@@ -527,7 +527,7 @@ private static final long serialVersionUID = 0L;
    * Output only. Paying manager of this payment account.
    * </pre>
    *
-   * <code>string paying_manager_customer = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>string paying_manager_customer = 13 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return The bytes for payingManagerCustomer.
    */
   @java.lang.Override
@@ -1682,7 +1682,7 @@ private static final long serialVersionUID = 0L;
      * Output only. Paying manager of this payment account.
      * </pre>
      *
-     * <code>string paying_manager_customer = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>string paying_manager_customer = 13 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      * @return Whether the payingManagerCustomer field is set.
      */
     public boolean hasPayingManagerCustomer() {
@@ -1693,7 +1693,7 @@ private static final long serialVersionUID = 0L;
      * Output only. Paying manager of this payment account.
      * </pre>
      *
-     * <code>string paying_manager_customer = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>string paying_manager_customer = 13 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      * @return The payingManagerCustomer.
      */
     public java.lang.String getPayingManagerCustomer() {
@@ -1713,7 +1713,7 @@ private static final long serialVersionUID = 0L;
      * Output only. Paying manager of this payment account.
      * </pre>
      *
-     * <code>string paying_manager_customer = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>string paying_manager_customer = 13 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      * @return The bytes for payingManagerCustomer.
      */
     public com.google.protobuf.ByteString
@@ -1734,7 +1734,7 @@ private static final long serialVersionUID = 0L;
      * Output only. Paying manager of this payment account.
      * </pre>
      *
-     * <code>string paying_manager_customer = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>string paying_manager_customer = 13 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      * @param value The payingManagerCustomer to set.
      * @return This builder for chaining.
      */
@@ -1753,7 +1753,7 @@ private static final long serialVersionUID = 0L;
      * Output only. Paying manager of this payment account.
      * </pre>
      *
-     * <code>string paying_manager_customer = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>string paying_manager_customer = 13 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      * @return This builder for chaining.
      */
     public Builder clearPayingManagerCustomer() {
@@ -1767,7 +1767,7 @@ private static final long serialVersionUID = 0L;
      * Output only. Paying manager of this payment account.
      * </pre>
      *
-     * <code>string paying_manager_customer = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>string paying_manager_customer = 13 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      * @param value The bytes for payingManagerCustomer to set.
      * @return This builder for chaining.
      */

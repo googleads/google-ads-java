@@ -84,8 +84,7 @@ import javax.annotation.Generated;
  *
  * <p>Please refer to the GitHub repository's samples for more quickstart code snippets.
  */
-@BetaApi
-@Generated("by gapic-generator")
+@Generated("by gapic-generator-java")
 public class UserListServiceClient implements BackgroundResource {
   private final UserListServiceSettings settings;
   private final UserListServiceStub stub;
@@ -142,7 +141,7 @@ public class UserListServiceClient implements BackgroundResource {
   /**
    * Returns the requested user list.
    *
-   * @param resource_name Required. The resource name of the user list to fetch.
+   * @param resourceName Required. The resource name of the user list to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final UserList getUserList(UserListName resourceName) {
@@ -157,7 +156,7 @@ public class UserListServiceClient implements BackgroundResource {
   /**
    * Returns the requested user list.
    *
-   * @param resource_name Required. The resource name of the user list to fetch.
+   * @param resourceName Required. The resource name of the user list to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final UserList getUserList(String resourceName) {
@@ -191,7 +190,7 @@ public class UserListServiceClient implements BackgroundResource {
   /**
    * Creates or updates user lists. Operation statuses are returned.
    *
-   * @param customer_id Required. The ID of the customer whose user lists are being modified.
+   * @param customerId Required. The ID of the customer whose user lists are being modified.
    * @param operations Required. The list of operations to perform on individual user lists.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */

@@ -75,7 +75,6 @@ import org.threeten.bp.Duration;
  *     changeStatusServiceSettingsBuilder.build();
  * }</pre>
  */
-@BetaApi
 @Generated("by gapic-generator-java")
 public class ChangeStatusServiceStubSettings extends StubSettings<ChangeStatusServiceStubSettings> {
   /** The default scopes of the service. */

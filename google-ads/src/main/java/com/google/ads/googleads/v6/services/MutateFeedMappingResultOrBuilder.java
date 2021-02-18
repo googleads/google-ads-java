@@ -26,4 +26,37 @@ public interface MutateFeedMappingResultOrBuilder extends
    */
   com.google.protobuf.ByteString
       getResourceNameBytes();
+
+  /**
+   * <pre>
+   * The mutated feed mapping with only mutable fields after mutate. The field
+   * will only be returned when response_content_type is set to
+   * "MUTABLE_RESOURCE".
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v6.resources.FeedMapping feed_mapping = 2;</code>
+   * @return Whether the feedMapping field is set.
+   */
+  boolean hasFeedMapping();
+  /**
+   * <pre>
+   * The mutated feed mapping with only mutable fields after mutate. The field
+   * will only be returned when response_content_type is set to
+   * "MUTABLE_RESOURCE".
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v6.resources.FeedMapping feed_mapping = 2;</code>
+   * @return The feedMapping.
+   */
+  com.google.ads.googleads.v6.resources.FeedMapping getFeedMapping();
+  /**
+   * <pre>
+   * The mutated feed mapping with only mutable fields after mutate. The field
+   * will only be returned when response_content_type is set to
+   * "MUTABLE_RESOURCE".
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v6.resources.FeedMapping feed_mapping = 2;</code>
+   */
+  com.google.ads.googleads.v6.resources.FeedMappingOrBuilder getFeedMappingOrBuilder();
 }

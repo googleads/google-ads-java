@@ -82,8 +82,7 @@ import javax.annotation.Generated;
  *
  * <p>Please refer to the GitHub repository's samples for more quickstart code snippets.
  */
-@BetaApi
-@Generated("by gapic-generator")
+@Generated("by gapic-generator-java")
 public class ConversionUploadServiceClient implements BackgroundResource {
   private final ConversionUploadServiceSettings settings;
   private final ConversionUploadServiceStub stub;
@@ -141,9 +140,9 @@ public class ConversionUploadServiceClient implements BackgroundResource {
   /**
    * Processes the given click conversions.
    *
-   * @param customer_id Required. The ID of the customer performing the upload.
+   * @param customerId Required. The ID of the customer performing the upload.
    * @param conversions Required. The conversions that are being uploaded.
-   * @param partial_failure Required. If true, successful operations will be carried out and invalid
+   * @param partialFailure Required. If true, successful operations will be carried out and invalid
    *     operations will return errors. If false, all operations will be carried out in one
    *     transaction if and only if they are all valid. This should always be set to true. See
    *     https://developers.google.com/google-ads/api/docs/best-practices/partial-failures for more
@@ -188,9 +187,9 @@ public class ConversionUploadServiceClient implements BackgroundResource {
   /**
    * Processes the given call conversions.
    *
-   * @param customer_id Required. The ID of the customer performing the upload.
+   * @param customerId Required. The ID of the customer performing the upload.
    * @param conversions Required. The conversions that are being uploaded.
-   * @param partial_failure Required. If true, successful operations will be carried out and invalid
+   * @param partialFailure Required. If true, successful operations will be carried out and invalid
    *     operations will return errors. If false, all operations will be carried out in one
    *     transaction if and only if they are all valid. This should always be set to true. See
    *     https://developers.google.com/google-ads/api/docs/best-practices/partial-failures for more

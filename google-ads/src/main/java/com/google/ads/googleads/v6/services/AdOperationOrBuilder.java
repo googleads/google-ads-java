@@ -36,6 +36,33 @@ public interface AdOperationOrBuilder extends
 
   /**
    * <pre>
+   * Configuration for how policies are validated.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v6.common.PolicyValidationParameter policy_validation_parameter = 3;</code>
+   * @return Whether the policyValidationParameter field is set.
+   */
+  boolean hasPolicyValidationParameter();
+  /**
+   * <pre>
+   * Configuration for how policies are validated.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v6.common.PolicyValidationParameter policy_validation_parameter = 3;</code>
+   * @return The policyValidationParameter.
+   */
+  com.google.ads.googleads.v6.common.PolicyValidationParameter getPolicyValidationParameter();
+  /**
+   * <pre>
+   * Configuration for how policies are validated.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v6.common.PolicyValidationParameter policy_validation_parameter = 3;</code>
+   */
+  com.google.ads.googleads.v6.common.PolicyValidationParameterOrBuilder getPolicyValidationParameterOrBuilder();
+
+  /**
+   * <pre>
    * Update operation: The ad is expected to have a valid resource name
    * in this format:
    * `customers/{customer_id}/ads/{ad_id}`

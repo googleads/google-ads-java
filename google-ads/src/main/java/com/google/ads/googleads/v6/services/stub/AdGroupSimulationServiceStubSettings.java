@@ -75,7 +75,6 @@ import org.threeten.bp.Duration;
  *     adGroupSimulationServiceSettingsBuilder.build();
  * }</pre>
  */
-@BetaApi
 @Generated("by gapic-generator-java")
 public class AdGroupSimulationServiceStubSettings
     extends StubSettings<AdGroupSimulationServiceStubSettings> {

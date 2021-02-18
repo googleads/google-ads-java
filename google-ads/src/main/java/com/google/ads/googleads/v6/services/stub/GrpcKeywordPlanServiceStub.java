@@ -162,11 +162,21 @@ public class GrpcKeywordPlanServiceStub extends KeywordPlanServiceStub {
         KeywordPlanServiceStubSettings.newBuilder().build(), clientContext, callableFactory);
   }
 
+  /**
+   * Constructs an instance of GrpcKeywordPlanServiceStub, using the given settings. This is
+   * protected so that it is easy to make a subclass, but otherwise, the static factory methods
+   * should be preferred.
+   */
   protected GrpcKeywordPlanServiceStub(
       KeywordPlanServiceStubSettings settings, ClientContext clientContext) throws IOException {
     this(settings, clientContext, new GrpcKeywordPlanServiceCallableFactory());
   }
 
+  /**
+   * Constructs an instance of GrpcKeywordPlanServiceStub, using the given settings. This is
+   * protected so that it is easy to make a subclass, but otherwise, the static factory methods
+   * should be preferred.
+   */
   protected GrpcKeywordPlanServiceStub(
       KeywordPlanServiceStubSettings settings,
       ClientContext clientContext,

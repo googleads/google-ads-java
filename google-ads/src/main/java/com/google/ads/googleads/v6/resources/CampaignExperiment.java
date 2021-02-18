@@ -719,7 +719,7 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object endDate_;
   /**
    * <pre>
-   * Date when the campaign experiment ends. By default, the experiment ends on
+   * The last day of the campaign experiment. By default, the experiment ends on
    * the campaign's end date. If this field is set, then the experiment ends at
    * the end of the specified date in the customer's time zone.
    * Format: YYYY-MM-DD
@@ -735,7 +735,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Date when the campaign experiment ends. By default, the experiment ends on
+   * The last day of the campaign experiment. By default, the experiment ends on
    * the campaign's end date. If this field is set, then the experiment ends at
    * the end of the specified date in the customer's time zone.
    * Format: YYYY-MM-DD
@@ -760,7 +760,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Date when the campaign experiment ends. By default, the experiment ends on
+   * The last day of the campaign experiment. By default, the experiment ends on
    * the campaign's end date. If this field is set, then the experiment ends at
    * the end of the specified date in the customer's time zone.
    * Format: YYYY-MM-DD
@@ -2455,7 +2455,7 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object endDate_ = "";
     /**
      * <pre>
-     * Date when the campaign experiment ends. By default, the experiment ends on
+     * The last day of the campaign experiment. By default, the experiment ends on
      * the campaign's end date. If this field is set, then the experiment ends at
      * the end of the specified date in the customer's time zone.
      * Format: YYYY-MM-DD
@@ -2470,7 +2470,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Date when the campaign experiment ends. By default, the experiment ends on
+     * The last day of the campaign experiment. By default, the experiment ends on
      * the campaign's end date. If this field is set, then the experiment ends at
      * the end of the specified date in the customer's time zone.
      * Format: YYYY-MM-DD
@@ -2494,7 +2494,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Date when the campaign experiment ends. By default, the experiment ends on
+     * The last day of the campaign experiment. By default, the experiment ends on
      * the campaign's end date. If this field is set, then the experiment ends at
      * the end of the specified date in the customer's time zone.
      * Format: YYYY-MM-DD
@@ -2519,7 +2519,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Date when the campaign experiment ends. By default, the experiment ends on
+     * The last day of the campaign experiment. By default, the experiment ends on
      * the campaign's end date. If this field is set, then the experiment ends at
      * the end of the specified date in the customer's time zone.
      * Format: YYYY-MM-DD
@@ -2542,7 +2542,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Date when the campaign experiment ends. By default, the experiment ends on
+     * The last day of the campaign experiment. By default, the experiment ends on
      * the campaign's end date. If this field is set, then the experiment ends at
      * the end of the specified date in the customer's time zone.
      * Format: YYYY-MM-DD
@@ -2560,7 +2560,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Date when the campaign experiment ends. By default, the experiment ends on
+     * The last day of the campaign experiment. By default, the experiment ends on
      * the campaign's end date. If this field is set, then the experiment ends at
      * the end of the specified date in the customer's time zone.
      * Format: YYYY-MM-DD

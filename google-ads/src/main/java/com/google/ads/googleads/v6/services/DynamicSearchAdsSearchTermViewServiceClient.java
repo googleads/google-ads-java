@@ -85,8 +85,7 @@ import javax.annotation.Generated;
  *
  * <p>Please refer to the GitHub repository's samples for more quickstart code snippets.
  */
-@BetaApi
-@Generated("by gapic-generator")
+@Generated("by gapic-generator-java")
 public class DynamicSearchAdsSearchTermViewServiceClient implements BackgroundResource {
   private final DynamicSearchAdsSearchTermViewServiceSettings settings;
   private final DynamicSearchAdsSearchTermViewServiceStub stub;
@@ -152,7 +151,7 @@ public class DynamicSearchAdsSearchTermViewServiceClient implements BackgroundRe
   /**
    * Returns the requested dynamic search ads search term view in full detail.
    *
-   * @param resource_name Required. The resource name of the dynamic search ads search term view to
+   * @param resourceName Required. The resource name of the dynamic search ads search term view to
    *     fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
@@ -169,7 +168,7 @@ public class DynamicSearchAdsSearchTermViewServiceClient implements BackgroundRe
   /**
    * Returns the requested dynamic search ads search term view in full detail.
    *
-   * @param resource_name Required. The resource name of the dynamic search ads search term view to
+   * @param resourceName Required. The resource name of the dynamic search ads search term view to
    *     fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */

@@ -90,8 +90,7 @@ import javax.annotation.Generated;
  *
  * <p>Please refer to the GitHub repository's samples for more quickstart code snippets.
  */
-@BetaApi
-@Generated("by gapic-generator")
+@Generated("by gapic-generator-java")
 public class BillingSetupServiceClient implements BackgroundResource {
   private final BillingSetupServiceSettings settings;
   private final BillingSetupServiceStub stub;
@@ -148,7 +147,7 @@ public class BillingSetupServiceClient implements BackgroundResource {
   /**
    * Returns a billing setup.
    *
-   * @param resource_name Required. The resource name of the billing setup to fetch.
+   * @param resourceName Required. The resource name of the billing setup to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final BillingSetup getBillingSetup(BillingSetupName resourceName) {
@@ -163,7 +162,7 @@ public class BillingSetupServiceClient implements BackgroundResource {
   /**
    * Returns a billing setup.
    *
-   * @param resource_name Required. The resource name of the billing setup to fetch.
+   * @param resourceName Required. The resource name of the billing setup to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final BillingSetup getBillingSetup(String resourceName) {
@@ -197,7 +196,7 @@ public class BillingSetupServiceClient implements BackgroundResource {
   /**
    * Creates a billing setup, or cancels an existing billing setup.
    *
-   * @param customer_id Required. Id of the customer to apply the billing setup mutate operation to.
+   * @param customerId Required. Id of the customer to apply the billing setup mutate operation to.
    * @param operation Required. The operation to perform.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */

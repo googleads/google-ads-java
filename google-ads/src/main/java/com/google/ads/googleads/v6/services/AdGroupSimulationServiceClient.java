@@ -83,8 +83,7 @@ import javax.annotation.Generated;
  *
  * <p>Please refer to the GitHub repository's samples for more quickstart code snippets.
  */
-@BetaApi
-@Generated("by gapic-generator")
+@Generated("by gapic-generator-java")
 public class AdGroupSimulationServiceClient implements BackgroundResource {
   private final AdGroupSimulationServiceSettings settings;
   private final AdGroupSimulationServiceStub stub;
@@ -143,7 +142,7 @@ public class AdGroupSimulationServiceClient implements BackgroundResource {
   /**
    * Returns the requested ad group simulation in full detail.
    *
-   * @param resource_name Required. The resource name of the ad group simulation to fetch.
+   * @param resourceName Required. The resource name of the ad group simulation to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final AdGroupSimulation getAdGroupSimulation(AdGroupSimulationName resourceName) {
@@ -158,7 +157,7 @@ public class AdGroupSimulationServiceClient implements BackgroundResource {
   /**
    * Returns the requested ad group simulation in full detail.
    *
-   * @param resource_name Required. The resource name of the ad group simulation to fetch.
+   * @param resourceName Required. The resource name of the ad group simulation to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final AdGroupSimulation getAdGroupSimulation(String resourceName) {

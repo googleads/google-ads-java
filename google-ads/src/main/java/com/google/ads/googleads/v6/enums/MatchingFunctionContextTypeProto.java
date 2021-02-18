@@ -31,16 +31,17 @@ public final class MatchingFunctionContextTypeProto {
       "\nBgoogle/ads/googleads/v6/enums/matching" +
       "_function_context_type.proto\022\035google.ads" +
       ".googleads.v6.enums\032\034google/api/annotati" +
-      "ons.proto\"\201\001\n\037MatchingFunctionContextTyp" +
-      "eEnum\"^\n\033MatchingFunctionContextType\022\017\n\013" +
+      "ons.proto\"\227\001\n\037MatchingFunctionContextTyp" +
+      "eEnum\"t\n\033MatchingFunctionContextType\022\017\n\013" +
       "UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\020\n\014FEED_ITEM_" +
-      "ID\020\002\022\017\n\013DEVICE_NAME\020\003B\365\001\n!com.google.ads" +
-      ".googleads.v6.enumsB MatchingFunctionCon" +
-      "textTypeProtoP\001ZBgoogle.golang.org/genpr" +
-      "oto/googleapis/ads/googleads/v6/enums;en" +
-      "ums\242\002\003GAA\252\002\035Google.Ads.GoogleAds.V6.Enum" +
-      "s\312\002\035Google\\Ads\\GoogleAds\\V6\\Enums\352\002!Goog" +
-      "le::Ads::GoogleAds::V6::Enumsb\006proto3"
+      "ID\020\002\022\017\n\013DEVICE_NAME\020\003\022\024\n\020FEED_ITEM_SET_I" +
+      "D\020\004B\365\001\n!com.google.ads.googleads.v6.enum" +
+      "sB MatchingFunctionContextTypeProtoP\001ZBg" +
+      "oogle.golang.org/genproto/googleapis/ads" +
+      "/googleads/v6/enums;enums\242\002\003GAA\252\002\035Google" +
+      ".Ads.GoogleAds.V6.Enums\312\002\035Google\\Ads\\Goo" +
+      "gleAds\\V6\\Enums\352\002!Google::Ads::GoogleAds" +
+      "::V6::Enumsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

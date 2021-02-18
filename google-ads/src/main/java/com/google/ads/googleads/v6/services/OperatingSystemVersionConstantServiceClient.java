@@ -85,8 +85,7 @@ import javax.annotation.Generated;
  *
  * <p>Please refer to the GitHub repository's samples for more quickstart code snippets.
  */
-@BetaApi
-@Generated("by gapic-generator")
+@Generated("by gapic-generator-java")
 public class OperatingSystemVersionConstantServiceClient implements BackgroundResource {
   private final OperatingSystemVersionConstantServiceSettings settings;
   private final OperatingSystemVersionConstantServiceStub stub;
@@ -152,7 +151,7 @@ public class OperatingSystemVersionConstantServiceClient implements BackgroundRe
   /**
    * Returns the requested OS version constant in full detail.
    *
-   * @param resource_name Required. Resource name of the OS version to fetch.
+   * @param resourceName Required. Resource name of the OS version to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final OperatingSystemVersionConstant getOperatingSystemVersionConstant(
@@ -168,7 +167,7 @@ public class OperatingSystemVersionConstantServiceClient implements BackgroundRe
   /**
    * Returns the requested OS version constant in full detail.
    *
-   * @param resource_name Required. Resource name of the OS version to fetch.
+   * @param resourceName Required. Resource name of the OS version to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final OperatingSystemVersionConstant getOperatingSystemVersionConstant(

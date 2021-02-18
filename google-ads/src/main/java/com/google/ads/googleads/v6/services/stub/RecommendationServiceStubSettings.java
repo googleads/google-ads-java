@@ -79,7 +79,6 @@ import org.threeten.bp.Duration;
  *     recommendationServiceSettingsBuilder.build();
  * }</pre>
  */
-@BetaApi
 @Generated("by gapic-generator-java")
 public class RecommendationServiceStubSettings
     extends StubSettings<RecommendationServiceStubSettings> {

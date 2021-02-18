@@ -75,7 +75,6 @@ import org.threeten.bp.Duration;
  *     parentalStatusViewServiceSettingsBuilder.build();
  * }</pre>
  */
-@BetaApi
 @Generated("by gapic-generator-java")
 public class ParentalStatusViewServiceStubSettings
     extends StubSettings<ParentalStatusViewServiceStubSettings> {

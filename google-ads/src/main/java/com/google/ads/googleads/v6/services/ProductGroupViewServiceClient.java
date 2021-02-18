@@ -83,8 +83,7 @@ import javax.annotation.Generated;
  *
  * <p>Please refer to the GitHub repository's samples for more quickstart code snippets.
  */
-@BetaApi
-@Generated("by gapic-generator")
+@Generated("by gapic-generator-java")
 public class ProductGroupViewServiceClient implements BackgroundResource {
   private final ProductGroupViewServiceSettings settings;
   private final ProductGroupViewServiceStub stub;
@@ -142,7 +141,7 @@ public class ProductGroupViewServiceClient implements BackgroundResource {
   /**
    * Returns the requested product group view in full detail.
    *
-   * @param resource_name Required. The resource name of the product group view to fetch.
+   * @param resourceName Required. The resource name of the product group view to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final ProductGroupView getProductGroupView(ProductGroupViewName resourceName) {
@@ -157,7 +156,7 @@ public class ProductGroupViewServiceClient implements BackgroundResource {
   /**
    * Returns the requested product group view in full detail.
    *
-   * @param resource_name Required. The resource name of the product group view to fetch.
+   * @param resourceName Required. The resource name of the product group view to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final ProductGroupView getProductGroupView(String resourceName) {

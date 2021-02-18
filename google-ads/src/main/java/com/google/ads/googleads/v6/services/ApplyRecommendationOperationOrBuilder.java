@@ -279,5 +279,32 @@ public interface ApplyRecommendationOperationOrBuilder extends
    */
   com.google.ads.googleads.v6.services.ApplyRecommendationOperation.MoveUnusedBudgetParametersOrBuilder getMoveUnusedBudgetOrBuilder();
 
+  /**
+   * <pre>
+   * Parameters to use when applying a responsive search ad recommendation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v6.services.ApplyRecommendationOperation.ResponsiveSearchAdParameters responsive_search_ad = 11;</code>
+   * @return Whether the responsiveSearchAd field is set.
+   */
+  boolean hasResponsiveSearchAd();
+  /**
+   * <pre>
+   * Parameters to use when applying a responsive search ad recommendation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v6.services.ApplyRecommendationOperation.ResponsiveSearchAdParameters responsive_search_ad = 11;</code>
+   * @return The responsiveSearchAd.
+   */
+  com.google.ads.googleads.v6.services.ApplyRecommendationOperation.ResponsiveSearchAdParameters getResponsiveSearchAd();
+  /**
+   * <pre>
+   * Parameters to use when applying a responsive search ad recommendation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v6.services.ApplyRecommendationOperation.ResponsiveSearchAdParameters responsive_search_ad = 11;</code>
+   */
+  com.google.ads.googleads.v6.services.ApplyRecommendationOperation.ResponsiveSearchAdParametersOrBuilder getResponsiveSearchAdOrBuilder();
+
   public com.google.ads.googleads.v6.services.ApplyRecommendationOperation.ApplyParametersCase getApplyParametersCase();
 }

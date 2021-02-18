@@ -87,7 +87,13 @@ public class ConversionActionServiceClientTest {
         ConversionAction.newBuilder()
             .setResourceName(
                 ConversionActionName.of("[CUSTOMER_ID]", "[CONVERSION_ACTION_ID]").toString())
+            .setValueSettings(ConversionAction.ValueSettings.newBuilder().build())
+            .setAttributionModelSettings(
+                ConversionAction.AttributionModelSettings.newBuilder().build())
             .addAllTagSnippets(new ArrayList<TagSnippet>())
+            .setFirebaseSettings(ConversionAction.FirebaseSettings.newBuilder().build())
+            .setThirdPartyAppAnalyticsSettings(
+                ConversionAction.ThirdPartyAppAnalyticsSettings.newBuilder().build())
             .build();
     mockConversionActionService.addResponse(expectedResponse);
 
@@ -129,7 +135,13 @@ public class ConversionActionServiceClientTest {
         ConversionAction.newBuilder()
             .setResourceName(
                 ConversionActionName.of("[CUSTOMER_ID]", "[CONVERSION_ACTION_ID]").toString())
+            .setValueSettings(ConversionAction.ValueSettings.newBuilder().build())
+            .setAttributionModelSettings(
+                ConversionAction.AttributionModelSettings.newBuilder().build())
             .addAllTagSnippets(new ArrayList<TagSnippet>())
+            .setFirebaseSettings(ConversionAction.FirebaseSettings.newBuilder().build())
+            .setThirdPartyAppAnalyticsSettings(
+                ConversionAction.ThirdPartyAppAnalyticsSettings.newBuilder().build())
             .build();
     mockConversionActionService.addResponse(expectedResponse);
 

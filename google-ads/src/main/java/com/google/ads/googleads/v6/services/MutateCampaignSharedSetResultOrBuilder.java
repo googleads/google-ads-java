@@ -26,4 +26,37 @@ public interface MutateCampaignSharedSetResultOrBuilder extends
    */
   com.google.protobuf.ByteString
       getResourceNameBytes();
+
+  /**
+   * <pre>
+   * The mutated campaign shared set with only mutable fields after mutate. The
+   * field will only be returned when response_content_type is set to
+   * "MUTABLE_RESOURCE".
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v6.resources.CampaignSharedSet campaign_shared_set = 2;</code>
+   * @return Whether the campaignSharedSet field is set.
+   */
+  boolean hasCampaignSharedSet();
+  /**
+   * <pre>
+   * The mutated campaign shared set with only mutable fields after mutate. The
+   * field will only be returned when response_content_type is set to
+   * "MUTABLE_RESOURCE".
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v6.resources.CampaignSharedSet campaign_shared_set = 2;</code>
+   * @return The campaignSharedSet.
+   */
+  com.google.ads.googleads.v6.resources.CampaignSharedSet getCampaignSharedSet();
+  /**
+   * <pre>
+   * The mutated campaign shared set with only mutable fields after mutate. The
+   * field will only be returned when response_content_type is set to
+   * "MUTABLE_RESOURCE".
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v6.resources.CampaignSharedSet campaign_shared_set = 2;</code>
+   */
+  com.google.ads.googleads.v6.resources.CampaignSharedSetOrBuilder getCampaignSharedSetOrBuilder();
 }

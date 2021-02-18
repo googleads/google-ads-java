@@ -83,8 +83,7 @@ import javax.annotation.Generated;
  *
  * <p>Please refer to the GitHub repository's samples for more quickstart code snippets.
  */
-@BetaApi
-@Generated("by gapic-generator")
+@Generated("by gapic-generator-java")
 public class TopicViewServiceClient implements BackgroundResource {
   private final TopicViewServiceSettings settings;
   private final TopicViewServiceStub stub;
@@ -141,7 +140,7 @@ public class TopicViewServiceClient implements BackgroundResource {
   /**
    * Returns the requested topic view in full detail.
    *
-   * @param resource_name Required. The resource name of the topic view to fetch.
+   * @param resourceName Required. The resource name of the topic view to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final TopicView getTopicView(TopicViewName resourceName) {
@@ -156,7 +155,7 @@ public class TopicViewServiceClient implements BackgroundResource {
   /**
    * Returns the requested topic view in full detail.
    *
-   * @param resource_name Required. The resource name of the topic view to fetch.
+   * @param resourceName Required. The resource name of the topic view to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final TopicView getTopicView(String resourceName) {

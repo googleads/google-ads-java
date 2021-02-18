@@ -90,11 +90,21 @@ public class GrpcSharedSetServiceStub extends SharedSetServiceStub {
         SharedSetServiceStubSettings.newBuilder().build(), clientContext, callableFactory);
   }
 
+  /**
+   * Constructs an instance of GrpcSharedSetServiceStub, using the given settings. This is protected
+   * so that it is easy to make a subclass, but otherwise, the static factory methods should be
+   * preferred.
+   */
   protected GrpcSharedSetServiceStub(
       SharedSetServiceStubSettings settings, ClientContext clientContext) throws IOException {
     this(settings, clientContext, new GrpcSharedSetServiceCallableFactory());
   }
 
+  /**
+   * Constructs an instance of GrpcSharedSetServiceStub, using the given settings. This is protected
+   * so that it is easy to make a subclass, but otherwise, the static factory methods should be
+   * preferred.
+   */
   protected GrpcSharedSetServiceStub(
       SharedSetServiceStubSettings settings,
       ClientContext clientContext,

@@ -12,7 +12,7 @@ public interface BudgetCampaignAssociationStatusOrBuilder extends
    * The campaign resource name.
    * </pre>
    *
-   * <code>string campaign = 1 [(.google.api.resource_reference) = { ... }</code>
+   * <code>string campaign = 1;</code>
    * @return Whether the campaign field is set.
    */
   boolean hasCampaign();
@@ -21,7 +21,7 @@ public interface BudgetCampaignAssociationStatusOrBuilder extends
    * The campaign resource name.
    * </pre>
    *
-   * <code>string campaign = 1 [(.google.api.resource_reference) = { ... }</code>
+   * <code>string campaign = 1;</code>
    * @return The campaign.
    */
   java.lang.String getCampaign();
@@ -30,7 +30,7 @@ public interface BudgetCampaignAssociationStatusOrBuilder extends
    * The campaign resource name.
    * </pre>
    *
-   * <code>string campaign = 1 [(.google.api.resource_reference) = { ... }</code>
+   * <code>string campaign = 1;</code>
    * @return The bytes for campaign.
    */
   com.google.protobuf.ByteString

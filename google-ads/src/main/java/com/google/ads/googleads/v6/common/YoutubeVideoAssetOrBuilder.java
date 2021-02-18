@@ -38,4 +38,24 @@ public interface YoutubeVideoAssetOrBuilder extends
    */
   com.google.protobuf.ByteString
       getYoutubeVideoIdBytes();
+
+  /**
+   * <pre>
+   * YouTube video title.
+   * </pre>
+   *
+   * <code>string youtube_video_title = 3;</code>
+   * @return The youtubeVideoTitle.
+   */
+  java.lang.String getYoutubeVideoTitle();
+  /**
+   * <pre>
+   * YouTube video title.
+   * </pre>
+   *
+   * <code>string youtube_video_title = 3;</code>
+   * @return The bytes for youtubeVideoTitle.
+   */
+  com.google.protobuf.ByteString
+      getYoutubeVideoTitleBytes();
 }

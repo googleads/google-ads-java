@@ -84,8 +84,7 @@ import javax.annotation.Generated;
  *
  * <p>Please refer to the GitHub repository's samples for more quickstart code snippets.
  */
-@BetaApi
-@Generated("by gapic-generator")
+@Generated("by gapic-generator-java")
 public class FeedItemServiceClient implements BackgroundResource {
   private final FeedItemServiceSettings settings;
   private final FeedItemServiceStub stub;
@@ -142,7 +141,7 @@ public class FeedItemServiceClient implements BackgroundResource {
   /**
    * Returns the requested feed item in full detail.
    *
-   * @param resource_name Required. The resource name of the feed item to fetch.
+   * @param resourceName Required. The resource name of the feed item to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final FeedItem getFeedItem(FeedItemName resourceName) {
@@ -157,7 +156,7 @@ public class FeedItemServiceClient implements BackgroundResource {
   /**
    * Returns the requested feed item in full detail.
    *
-   * @param resource_name Required. The resource name of the feed item to fetch.
+   * @param resourceName Required. The resource name of the feed item to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final FeedItem getFeedItem(String resourceName) {
@@ -191,7 +190,7 @@ public class FeedItemServiceClient implements BackgroundResource {
   /**
    * Creates, updates, or removes feed items. Operation statuses are returned.
    *
-   * @param customer_id Required. The ID of the customer whose feed items are being modified.
+   * @param customerId Required. The ID of the customer whose feed items are being modified.
    * @param operations Required. The list of operations to perform on individual feed items.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */

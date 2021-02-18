@@ -75,7 +75,6 @@ import org.threeten.bp.Duration;
  *     geographicViewServiceSettingsBuilder.build();
  * }</pre>
  */
-@BetaApi
 @Generated("by gapic-generator-java")
 public class GeographicViewServiceStubSettings
     extends StubSettings<GeographicViewServiceStubSettings> {

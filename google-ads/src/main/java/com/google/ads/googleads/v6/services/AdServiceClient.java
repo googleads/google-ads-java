@@ -81,8 +81,7 @@ import javax.annotation.Generated;
  *
  * <p>Please refer to the GitHub repository's samples for more quickstart code snippets.
  */
-@BetaApi
-@Generated("by gapic-generator")
+@Generated("by gapic-generator-java")
 public class AdServiceClient implements BackgroundResource {
   private final AdServiceSettings settings;
   private final AdServiceStub stub;
@@ -137,7 +136,7 @@ public class AdServiceClient implements BackgroundResource {
   /**
    * Returns the requested ad in full detail.
    *
-   * @param resource_name Required. The resource name of the ad to fetch.
+   * @param resourceName Required. The resource name of the ad to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final Ad getAd(AdName resourceName) {
@@ -152,7 +151,7 @@ public class AdServiceClient implements BackgroundResource {
   /**
    * Returns the requested ad in full detail.
    *
-   * @param resource_name Required. The resource name of the ad to fetch.
+   * @param resourceName Required. The resource name of the ad to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final Ad getAd(String resourceName) {
@@ -186,7 +185,7 @@ public class AdServiceClient implements BackgroundResource {
    * Updates ads. Operation statuses are returned. Updating ads is not supported for TextAd,
    * ExpandedDynamicSearchAd, GmailAd and ImageAd.
    *
-   * @param customer_id Required. The ID of the customer whose ads are being modified.
+   * @param customerId Required. The ID of the customer whose ads are being modified.
    * @param operations Required. The list of operations to perform on individual ads.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */

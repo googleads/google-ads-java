@@ -77,7 +77,6 @@ import org.threeten.bp.Duration;
  *     customerLabelServiceSettingsBuilder.build();
  * }</pre>
  */
-@BetaApi
 @Generated("by gapic-generator-java")
 public class CustomerLabelServiceStubSettings
     extends StubSettings<CustomerLabelServiceStubSettings> {

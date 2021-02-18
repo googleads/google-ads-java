@@ -83,8 +83,7 @@ import javax.annotation.Generated;
  *
  * <p>Please refer to the GitHub repository's samples for more quickstart code snippets.
  */
-@BetaApi
-@Generated("by gapic-generator")
+@Generated("by gapic-generator-java")
 public class AdGroupCriterionSimulationServiceClient implements BackgroundResource {
   private final AdGroupCriterionSimulationServiceSettings settings;
   private final AdGroupCriterionSimulationServiceStub stub;
@@ -146,7 +145,7 @@ public class AdGroupCriterionSimulationServiceClient implements BackgroundResour
   /**
    * Returns the requested ad group criterion simulation in full detail.
    *
-   * @param resource_name Required. The resource name of the ad group criterion simulation to fetch.
+   * @param resourceName Required. The resource name of the ad group criterion simulation to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final AdGroupCriterionSimulation getAdGroupCriterionSimulation(
@@ -162,7 +161,7 @@ public class AdGroupCriterionSimulationServiceClient implements BackgroundResour
   /**
    * Returns the requested ad group criterion simulation in full detail.
    *
-   * @param resource_name Required. The resource name of the ad group criterion simulation to fetch.
+   * @param resourceName Required. The resource name of the ad group criterion simulation to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final AdGroupCriterionSimulation getAdGroupCriterionSimulation(String resourceName) {

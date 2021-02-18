@@ -75,11 +75,21 @@ public class GrpcInvoiceServiceStub extends InvoiceServiceStub {
         InvoiceServiceStubSettings.newBuilder().build(), clientContext, callableFactory);
   }
 
+  /**
+   * Constructs an instance of GrpcInvoiceServiceStub, using the given settings. This is protected
+   * so that it is easy to make a subclass, but otherwise, the static factory methods should be
+   * preferred.
+   */
   protected GrpcInvoiceServiceStub(InvoiceServiceStubSettings settings, ClientContext clientContext)
       throws IOException {
     this(settings, clientContext, new GrpcInvoiceServiceCallableFactory());
   }
 
+  /**
+   * Constructs an instance of GrpcInvoiceServiceStub, using the given settings. This is protected
+   * so that it is easy to make a subclass, but otherwise, the static factory methods should be
+   * preferred.
+   */
   protected GrpcInvoiceServiceStub(
       InvoiceServiceStubSettings settings,
       ClientContext clientContext,

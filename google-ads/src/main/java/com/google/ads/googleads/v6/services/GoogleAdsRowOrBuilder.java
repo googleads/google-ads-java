@@ -657,6 +657,33 @@ public interface GoogleAdsRowOrBuilder extends
 
   /**
    * <pre>
+   * The call view referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v6.resources.CallView call_view = 152;</code>
+   * @return Whether the callView field is set.
+   */
+  boolean hasCallView();
+  /**
+   * <pre>
+   * The call view referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v6.resources.CallView call_view = 152;</code>
+   * @return The callView.
+   */
+  com.google.ads.googleads.v6.resources.CallView getCallView();
+  /**
+   * <pre>
+   * The call view referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v6.resources.CallView call_view = 152;</code>
+   */
+  com.google.ads.googleads.v6.resources.CallViewOrBuilder getCallViewOrBuilder();
+
+  /**
+   * <pre>
    * The campaign budget referenced in the query.
    * </pre>
    *
@@ -1491,6 +1518,33 @@ public interface GoogleAdsRowOrBuilder extends
    * <code>.google.ads.googleads.v6.resources.CustomerUserAccess customer_user_access = 146;</code>
    */
   com.google.ads.googleads.v6.resources.CustomerUserAccessOrBuilder getCustomerUserAccessOrBuilder();
+
+  /**
+   * <pre>
+   * The CustomerUserAccessInvitation referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v6.resources.CustomerUserAccessInvitation customer_user_access_invitation = 150;</code>
+   * @return Whether the customerUserAccessInvitation field is set.
+   */
+  boolean hasCustomerUserAccessInvitation();
+  /**
+   * <pre>
+   * The CustomerUserAccessInvitation referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v6.resources.CustomerUserAccessInvitation customer_user_access_invitation = 150;</code>
+   * @return The customerUserAccessInvitation.
+   */
+  com.google.ads.googleads.v6.resources.CustomerUserAccessInvitation getCustomerUserAccessInvitation();
+  /**
+   * <pre>
+   * The CustomerUserAccessInvitation referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v6.resources.CustomerUserAccessInvitation customer_user_access_invitation = 150;</code>
+   */
+  com.google.ads.googleads.v6.resources.CustomerUserAccessInvitationOrBuilder getCustomerUserAccessInvitationOrBuilder();
 
   /**
    * <pre>

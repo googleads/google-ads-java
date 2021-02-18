@@ -82,12 +82,22 @@ public class GrpcPaidOrganicSearchTermViewServiceStub extends PaidOrganicSearchT
         callableFactory);
   }
 
+  /**
+   * Constructs an instance of GrpcPaidOrganicSearchTermViewServiceStub, using the given settings.
+   * This is protected so that it is easy to make a subclass, but otherwise, the static factory
+   * methods should be preferred.
+   */
   protected GrpcPaidOrganicSearchTermViewServiceStub(
       PaidOrganicSearchTermViewServiceStubSettings settings, ClientContext clientContext)
       throws IOException {
     this(settings, clientContext, new GrpcPaidOrganicSearchTermViewServiceCallableFactory());
   }
 
+  /**
+   * Constructs an instance of GrpcPaidOrganicSearchTermViewServiceStub, using the given settings.
+   * This is protected so that it is easy to make a subclass, but otherwise, the static factory
+   * methods should be preferred.
+   */
   protected GrpcPaidOrganicSearchTermViewServiceStub(
       PaidOrganicSearchTermViewServiceStubSettings settings,
       ClientContext clientContext,

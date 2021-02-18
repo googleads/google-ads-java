@@ -452,7 +452,7 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object promotionEndDate_;
   /**
    * <pre>
-   * End date of when the promotion is eligible to be redeemed.
+   * Last date when the promotion is eligible to be redeemed.
    * </pre>
    *
    * <code>string promotion_end_date = 20;</code>
@@ -464,7 +464,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * End date of when the promotion is eligible to be redeemed.
+   * Last date when the promotion is eligible to be redeemed.
    * </pre>
    *
    * <code>string promotion_end_date = 20;</code>
@@ -485,7 +485,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * End date of when the promotion is eligible to be redeemed.
+   * Last date when the promotion is eligible to be redeemed.
    * </pre>
    *
    * <code>string promotion_end_date = 20;</code>
@@ -2117,7 +2117,7 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object promotionEndDate_ = "";
     /**
      * <pre>
-     * End date of when the promotion is eligible to be redeemed.
+     * Last date when the promotion is eligible to be redeemed.
      * </pre>
      *
      * <code>string promotion_end_date = 20;</code>
@@ -2128,7 +2128,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * End date of when the promotion is eligible to be redeemed.
+     * Last date when the promotion is eligible to be redeemed.
      * </pre>
      *
      * <code>string promotion_end_date = 20;</code>
@@ -2148,7 +2148,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * End date of when the promotion is eligible to be redeemed.
+     * Last date when the promotion is eligible to be redeemed.
      * </pre>
      *
      * <code>string promotion_end_date = 20;</code>
@@ -2169,7 +2169,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * End date of when the promotion is eligible to be redeemed.
+     * Last date when the promotion is eligible to be redeemed.
      * </pre>
      *
      * <code>string promotion_end_date = 20;</code>
@@ -2188,7 +2188,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * End date of when the promotion is eligible to be redeemed.
+     * Last date when the promotion is eligible to be redeemed.
      * </pre>
      *
      * <code>string promotion_end_date = 20;</code>
@@ -2202,7 +2202,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * End date of when the promotion is eligible to be redeemed.
+     * Last date when the promotion is eligible to be redeemed.
      * </pre>
      *
      * <code>string promotion_end_date = 20;</code>

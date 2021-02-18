@@ -77,7 +77,6 @@ import org.threeten.bp.Duration;
  *     biddingStrategyServiceSettingsBuilder.build();
  * }</pre>
  */
-@BetaApi
 @Generated("by gapic-generator-java")
 public class BiddingStrategyServiceStubSettings
     extends StubSettings<BiddingStrategyServiceStubSettings> {

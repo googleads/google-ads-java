@@ -77,7 +77,6 @@ import org.threeten.bp.Duration;
  *     sharedCriterionServiceSettingsBuilder.build();
  * }</pre>
  */
-@BetaApi
 @Generated("by gapic-generator-java")
 public class SharedCriterionServiceStubSettings
     extends StubSettings<SharedCriterionServiceStubSettings> {

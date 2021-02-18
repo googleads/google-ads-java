@@ -1,0 +1,9 @@
+bars {
+  primitive_string: "abc"
+}
+bars {
+  primitive_string: "abc"
+}
+bars {
+  primitive_string: "abc"
+}

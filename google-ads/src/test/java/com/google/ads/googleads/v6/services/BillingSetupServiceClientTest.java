@@ -82,6 +82,7 @@ public class BillingSetupServiceClientTest {
     BillingSetup expectedResponse =
         BillingSetup.newBuilder()
             .setResourceName(BillingSetupName.of("[CUSTOMER_ID]", "[BILLING_SETUP_ID]").toString())
+            .setPaymentsAccountInfo(BillingSetup.PaymentsAccountInfo.newBuilder().build())
             .build();
     mockBillingSetupService.addResponse(expectedResponse);
 
@@ -120,6 +121,7 @@ public class BillingSetupServiceClientTest {
     BillingSetup expectedResponse =
         BillingSetup.newBuilder()
             .setResourceName(BillingSetupName.of("[CUSTOMER_ID]", "[BILLING_SETUP_ID]").toString())
+            .setPaymentsAccountInfo(BillingSetup.PaymentsAccountInfo.newBuilder().build())
             .build();
     mockBillingSetupService.addResponse(expectedResponse);
 

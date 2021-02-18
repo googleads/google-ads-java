@@ -151,6 +151,89 @@ private static final long serialVersionUID = 0L;
      * <code>INCOMPATIBLE_ADVERTISING_CHANNEL_TYPE = 6;</code>
      */
     INCOMPATIBLE_ADVERTISING_CHANNEL_TYPE(6),
+    /**
+     * <pre>
+     * The image asset provided is not within the dimension constraints
+     * specified for the submitted asset field.
+     * </pre>
+     *
+     * <code>IMAGE_NOT_WITHIN_SPECIFIED_DIMENSION_RANGE = 7;</code>
+     */
+    IMAGE_NOT_WITHIN_SPECIFIED_DIMENSION_RANGE(7),
+    /**
+     * <pre>
+     * The pinned field is not valid for the submitted asset field.
+     * </pre>
+     *
+     * <code>INVALID_PINNED_FIELD = 8;</code>
+     */
+    INVALID_PINNED_FIELD(8),
+    /**
+     * <pre>
+     * The media bundle asset provided is too large for the submitted asset
+     * field.
+     * </pre>
+     *
+     * <code>MEDIA_BUNDLE_ASSET_FILE_SIZE_TOO_LARGE = 9;</code>
+     */
+    MEDIA_BUNDLE_ASSET_FILE_SIZE_TOO_LARGE(9),
+    /**
+     * <pre>
+     * Not enough assets are available for use with other fields since other
+     * assets are pinned to specific fields.
+     * </pre>
+     *
+     * <code>NOT_ENOUGH_AVAILABLE_ASSET_LINKS_FOR_VALID_COMBINATION = 10;</code>
+     */
+    NOT_ENOUGH_AVAILABLE_ASSET_LINKS_FOR_VALID_COMBINATION(10),
+    /**
+     * <pre>
+     * Not enough assets with fallback are available. When validating the
+     * minimum number of assets, assets without fallback (e.g. assets that
+     * contain location tag without default value "{LOCATION(City)}") will not
+     * be counted.
+     * </pre>
+     *
+     * <code>NOT_ENOUGH_AVAILABLE_ASSET_LINKS_WITH_FALLBACK = 11;</code>
+     */
+    NOT_ENOUGH_AVAILABLE_ASSET_LINKS_WITH_FALLBACK(11),
+    /**
+     * <pre>
+     * This is a combination of the
+     * NOT_ENOUGH_AVAILABLE_ASSET_LINKS_FOR_VALID_COMBINATION and
+     * NOT_ENOUGH_AVAILABLE_ASSET_LINKS_WITH_FALLBACK errors. Not enough assets
+     * with fallback are available since some assets are pinned.
+     * </pre>
+     *
+     * <code>NOT_ENOUGH_AVAILABLE_ASSET_LINKS_WITH_FALLBACK_FOR_VALID_COMBINATION = 12;</code>
+     */
+    NOT_ENOUGH_AVAILABLE_ASSET_LINKS_WITH_FALLBACK_FOR_VALID_COMBINATION(12),
+    /**
+     * <pre>
+     * The YouTube video referenced in the provided asset has been removed.
+     * </pre>
+     *
+     * <code>YOUTUBE_VIDEO_REMOVED = 13;</code>
+     */
+    YOUTUBE_VIDEO_REMOVED(13),
+    /**
+     * <pre>
+     * The YouTube video referenced in the provided asset is too long for the
+     * field submitted.
+     * </pre>
+     *
+     * <code>YOUTUBE_VIDEO_TOO_LONG = 14;</code>
+     */
+    YOUTUBE_VIDEO_TOO_LONG(14),
+    /**
+     * <pre>
+     * The YouTube video referenced in the provided asset is too short for the
+     * field submitted.
+     * </pre>
+     *
+     * <code>YOUTUBE_VIDEO_TOO_SHORT = 15;</code>
+     */
+    YOUTUBE_VIDEO_TOO_SHORT(15),
     UNRECOGNIZED(-1),
     ;
 
@@ -212,6 +295,89 @@ private static final long serialVersionUID = 0L;
      * <code>INCOMPATIBLE_ADVERTISING_CHANNEL_TYPE = 6;</code>
      */
     public static final int INCOMPATIBLE_ADVERTISING_CHANNEL_TYPE_VALUE = 6;
+    /**
+     * <pre>
+     * The image asset provided is not within the dimension constraints
+     * specified for the submitted asset field.
+     * </pre>
+     *
+     * <code>IMAGE_NOT_WITHIN_SPECIFIED_DIMENSION_RANGE = 7;</code>
+     */
+    public static final int IMAGE_NOT_WITHIN_SPECIFIED_DIMENSION_RANGE_VALUE = 7;
+    /**
+     * <pre>
+     * The pinned field is not valid for the submitted asset field.
+     * </pre>
+     *
+     * <code>INVALID_PINNED_FIELD = 8;</code>
+     */
+    public static final int INVALID_PINNED_FIELD_VALUE = 8;
+    /**
+     * <pre>
+     * The media bundle asset provided is too large for the submitted asset
+     * field.
+     * </pre>
+     *
+     * <code>MEDIA_BUNDLE_ASSET_FILE_SIZE_TOO_LARGE = 9;</code>
+     */
+    public static final int MEDIA_BUNDLE_ASSET_FILE_SIZE_TOO_LARGE_VALUE = 9;
+    /**
+     * <pre>
+     * Not enough assets are available for use with other fields since other
+     * assets are pinned to specific fields.
+     * </pre>
+     *
+     * <code>NOT_ENOUGH_AVAILABLE_ASSET_LINKS_FOR_VALID_COMBINATION = 10;</code>
+     */
+    public static final int NOT_ENOUGH_AVAILABLE_ASSET_LINKS_FOR_VALID_COMBINATION_VALUE = 10;
+    /**
+     * <pre>
+     * Not enough assets with fallback are available. When validating the
+     * minimum number of assets, assets without fallback (e.g. assets that
+     * contain location tag without default value "{LOCATION(City)}") will not
+     * be counted.
+     * </pre>
+     *
+     * <code>NOT_ENOUGH_AVAILABLE_ASSET_LINKS_WITH_FALLBACK = 11;</code>
+     */
+    public static final int NOT_ENOUGH_AVAILABLE_ASSET_LINKS_WITH_FALLBACK_VALUE = 11;
+    /**
+     * <pre>
+     * This is a combination of the
+     * NOT_ENOUGH_AVAILABLE_ASSET_LINKS_FOR_VALID_COMBINATION and
+     * NOT_ENOUGH_AVAILABLE_ASSET_LINKS_WITH_FALLBACK errors. Not enough assets
+     * with fallback are available since some assets are pinned.
+     * </pre>
+     *
+     * <code>NOT_ENOUGH_AVAILABLE_ASSET_LINKS_WITH_FALLBACK_FOR_VALID_COMBINATION = 12;</code>
+     */
+    public static final int NOT_ENOUGH_AVAILABLE_ASSET_LINKS_WITH_FALLBACK_FOR_VALID_COMBINATION_VALUE = 12;
+    /**
+     * <pre>
+     * The YouTube video referenced in the provided asset has been removed.
+     * </pre>
+     *
+     * <code>YOUTUBE_VIDEO_REMOVED = 13;</code>
+     */
+    public static final int YOUTUBE_VIDEO_REMOVED_VALUE = 13;
+    /**
+     * <pre>
+     * The YouTube video referenced in the provided asset is too long for the
+     * field submitted.
+     * </pre>
+     *
+     * <code>YOUTUBE_VIDEO_TOO_LONG = 14;</code>
+     */
+    public static final int YOUTUBE_VIDEO_TOO_LONG_VALUE = 14;
+    /**
+     * <pre>
+     * The YouTube video referenced in the provided asset is too short for the
+     * field submitted.
+     * </pre>
+     *
+     * <code>YOUTUBE_VIDEO_TOO_SHORT = 15;</code>
+     */
+    public static final int YOUTUBE_VIDEO_TOO_SHORT_VALUE = 15;
 
 
     public final int getNumber() {
@@ -245,6 +411,15 @@ private static final long serialVersionUID = 0L;
         case 4: return FIELD_TYPE_INCOMPATIBLE_WITH_ASSET_TYPE;
         case 5: return FIELD_TYPE_INCOMPATIBLE_WITH_CAMPAIGN_TYPE;
         case 6: return INCOMPATIBLE_ADVERTISING_CHANNEL_TYPE;
+        case 7: return IMAGE_NOT_WITHIN_SPECIFIED_DIMENSION_RANGE;
+        case 8: return INVALID_PINNED_FIELD;
+        case 9: return MEDIA_BUNDLE_ASSET_FILE_SIZE_TOO_LARGE;
+        case 10: return NOT_ENOUGH_AVAILABLE_ASSET_LINKS_FOR_VALID_COMBINATION;
+        case 11: return NOT_ENOUGH_AVAILABLE_ASSET_LINKS_WITH_FALLBACK;
+        case 12: return NOT_ENOUGH_AVAILABLE_ASSET_LINKS_WITH_FALLBACK_FOR_VALID_COMBINATION;
+        case 13: return YOUTUBE_VIDEO_REMOVED;
+        case 14: return YOUTUBE_VIDEO_TOO_LONG;
+        case 15: return YOUTUBE_VIDEO_TOO_SHORT;
         default: return null;
       }
     }

@@ -109,11 +109,21 @@ public class GrpcGoogleAdsServiceStub extends GoogleAdsServiceStub {
         GoogleAdsServiceStubSettings.newBuilder().build(), clientContext, callableFactory);
   }
 
+  /**
+   * Constructs an instance of GrpcGoogleAdsServiceStub, using the given settings. This is protected
+   * so that it is easy to make a subclass, but otherwise, the static factory methods should be
+   * preferred.
+   */
   protected GrpcGoogleAdsServiceStub(
       GoogleAdsServiceStubSettings settings, ClientContext clientContext) throws IOException {
     this(settings, clientContext, new GrpcGoogleAdsServiceCallableFactory());
   }
 
+  /**
+   * Constructs an instance of GrpcGoogleAdsServiceStub, using the given settings. This is protected
+   * so that it is easy to make a subclass, but otherwise, the static factory methods should be
+   * preferred.
+   */
   protected GrpcGoogleAdsServiceStub(
       GoogleAdsServiceStubSettings settings,
       ClientContext clientContext,

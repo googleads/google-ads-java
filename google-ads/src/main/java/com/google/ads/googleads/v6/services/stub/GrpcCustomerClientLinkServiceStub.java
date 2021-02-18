@@ -95,12 +95,22 @@ public class GrpcCustomerClientLinkServiceStub extends CustomerClientLinkService
         CustomerClientLinkServiceStubSettings.newBuilder().build(), clientContext, callableFactory);
   }
 
+  /**
+   * Constructs an instance of GrpcCustomerClientLinkServiceStub, using the given settings. This is
+   * protected so that it is easy to make a subclass, but otherwise, the static factory methods
+   * should be preferred.
+   */
   protected GrpcCustomerClientLinkServiceStub(
       CustomerClientLinkServiceStubSettings settings, ClientContext clientContext)
       throws IOException {
     this(settings, clientContext, new GrpcCustomerClientLinkServiceCallableFactory());
   }
 
+  /**
+   * Constructs an instance of GrpcCustomerClientLinkServiceStub, using the given settings. This is
+   * protected so that it is easy to make a subclass, but otherwise, the static factory methods
+   * should be preferred.
+   */
   protected GrpcCustomerClientLinkServiceStub(
       CustomerClientLinkServiceStubSettings settings,
       ClientContext clientContext,

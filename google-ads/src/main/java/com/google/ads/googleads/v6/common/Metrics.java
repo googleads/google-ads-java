@@ -109,22 +109,22 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 1057: {
-            bitField3_ |= 0x00000020;
+            bitField3_ |= 0x00000080;
             videoQuartileP100Rate_ = input.readDouble();
             break;
           }
           case 1065: {
-            bitField3_ |= 0x00000040;
+            bitField3_ |= 0x00000100;
             videoQuartileP25Rate_ = input.readDouble();
             break;
           }
           case 1073: {
-            bitField3_ |= 0x00000080;
+            bitField3_ |= 0x00000200;
             videoQuartileP50Rate_ = input.readDouble();
             break;
           }
           case 1081: {
-            bitField3_ |= 0x00000100;
+            bitField3_ |= 0x00000400;
             videoQuartileP75Rate_ = input.readDouble();
             break;
           }
@@ -204,27 +204,27 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 1209: {
-            bitField3_ |= 0x00000008;
+            bitField3_ |= 0x00000010;
             valuePerConversion_ = input.readDouble();
             break;
           }
           case 1217: {
-            bitField3_ |= 0x00000010;
+            bitField3_ |= 0x00000040;
             valuePerCurrentModelAttributedConversion_ = input.readDouble();
             break;
           }
           case 1225: {
-            bitField3_ |= 0x00000200;
+            bitField3_ |= 0x00000800;
             videoViewRate_ = input.readDouble();
             break;
           }
           case 1232: {
-            bitField3_ |= 0x00000400;
+            bitField3_ |= 0x00001000;
             videoViews_ = input.readInt64();
             break;
           }
           case 1240: {
-            bitField3_ |= 0x00000800;
+            bitField3_ |= 0x00002000;
             viewThroughConversions_ = input.readInt64();
             break;
           }
@@ -645,6 +645,36 @@ private static final long serialVersionUID = 0L;
             relativeCtr_ = input.readDouble();
             break;
           }
+          case 1921: {
+
+            allConversionsValueByConversionDate_ = input.readDouble();
+            break;
+          }
+          case 1929: {
+
+            allConversionsByConversionDate_ = input.readDouble();
+            break;
+          }
+          case 1937: {
+
+            conversionsValueByConversionDate_ = input.readDouble();
+            break;
+          }
+          case 1945: {
+
+            conversionsByConversionDate_ = input.readDouble();
+            break;
+          }
+          case 1953: {
+            bitField3_ |= 0x00000008;
+            valuePerAllConversionsByConversionDate_ = input.readDouble();
+            break;
+          }
+          case 1961: {
+            bitField3_ |= 0x00000020;
+            valuePerConversionsByConversionDate_ = input.readDouble();
+            break;
+          }
           default: {
             if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -970,6 +1000,24 @@ private static final long serialVersionUID = 0L;
     return allConversionsValue_;
   }
 
+  public static final int ALL_CONVERSIONS_VALUE_BY_CONVERSION_DATE_FIELD_NUMBER = 240;
+  private double allConversionsValueByConversionDate_;
+  /**
+   * <pre>
+   * The value of all conversions. When this column is selected with date, the
+   * values in date column means the conversion date. Details for the
+   * by_conversion_date columns are available at
+   * https://support.google.com/google-ads/answer/9549009.
+   * </pre>
+   *
+   * <code>double all_conversions_value_by_conversion_date = 240;</code>
+   * @return The allConversionsValueByConversionDate.
+   */
+  @java.lang.Override
+  public double getAllConversionsValueByConversionDate() {
+    return allConversionsValueByConversionDate_;
+  }
+
   public static final int ALL_CONVERSIONS_FIELD_NUMBER = 193;
   private double allConversions_;
   /**
@@ -997,6 +1045,25 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public double getAllConversions() {
     return allConversions_;
+  }
+
+  public static final int ALL_CONVERSIONS_BY_CONVERSION_DATE_FIELD_NUMBER = 241;
+  private double allConversionsByConversionDate_;
+  /**
+   * <pre>
+   * The total number of conversions. This includes all conversions regardless
+   * of the value of include_in_conversions_metric. When this column is selected
+   * with date, the values in date column means the conversion date. Details for
+   * the by_conversion_date columns are available at
+   * https://support.google.com/google-ads/answer/9549009.
+   * </pre>
+   *
+   * <code>double all_conversions_by_conversion_date = 241;</code>
+   * @return The allConversionsByConversionDate.
+   */
+  @java.lang.Override
+  public double getAllConversionsByConversionDate() {
+    return allConversionsByConversionDate_;
   }
 
   public static final int ALL_CONVERSIONS_VALUE_PER_COST_FIELD_NUMBER = 194;
@@ -1980,6 +2047,27 @@ private static final long serialVersionUID = 0L;
     return conversionsValue_;
   }
 
+  public static final int CONVERSIONS_VALUE_BY_CONVERSION_DATE_FIELD_NUMBER = 242;
+  private double conversionsValueByConversionDate_;
+  /**
+   * <pre>
+   * The value of conversions. This only includes conversion actions which
+   * include_in_conversions_metric attribute is set to true. If you use
+   * conversion-based bidding, your bid strategies will optimize for these
+   * conversions. When this column is selected with date, the values in date
+   * column means the conversion date. Details for the by_conversion_date
+   * columns are available at
+   * https://support.google.com/google-ads/answer/9549009.
+   * </pre>
+   *
+   * <code>double conversions_value_by_conversion_date = 242;</code>
+   * @return The conversionsValueByConversionDate.
+   */
+  @java.lang.Override
+  public double getConversionsValueByConversionDate() {
+    return conversionsValueByConversionDate_;
+  }
+
   public static final int CONVERSIONS_VALUE_PER_COST_FIELD_NUMBER = 166;
   private double conversionsValuePerCost_;
   /**
@@ -2079,6 +2167,27 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public double getConversions() {
     return conversions_;
+  }
+
+  public static final int CONVERSIONS_BY_CONVERSION_DATE_FIELD_NUMBER = 243;
+  private double conversionsByConversionDate_;
+  /**
+   * <pre>
+   * The number of conversions. This only includes conversion actions which
+   * include_in_conversions_metric attribute is set to true. If you use
+   * conversion-based bidding, your bid strategies will optimize for these
+   * conversions. When this column is selected with date, the values in date
+   * column means the conversion date. Details for the by_conversion_date
+   * columns are available at
+   * https://support.google.com/google-ads/answer/9549009.
+   * </pre>
+   *
+   * <code>double conversions_by_conversion_date = 243;</code>
+   * @return The conversionsByConversionDate.
+   */
+  @java.lang.Override
+  public double getConversionsByConversionDate() {
+    return conversionsByConversionDate_;
   }
 
   public static final int COST_MICROS_FIELD_NUMBER = 169;
@@ -3935,6 +4044,39 @@ private static final long serialVersionUID = 0L;
     return valuePerAllConversions_;
   }
 
+  public static final int VALUE_PER_ALL_CONVERSIONS_BY_CONVERSION_DATE_FIELD_NUMBER = 244;
+  private double valuePerAllConversionsByConversionDate_;
+  /**
+   * <pre>
+   * The value of all conversions divided by the number of all conversions. When
+   * this column is selected with date, the values in date column means the
+   * conversion date. Details for the by_conversion_date columns are available
+   * at https://support.google.com/google-ads/answer/9549009.
+   * </pre>
+   *
+   * <code>double value_per_all_conversions_by_conversion_date = 244;</code>
+   * @return Whether the valuePerAllConversionsByConversionDate field is set.
+   */
+  @java.lang.Override
+  public boolean hasValuePerAllConversionsByConversionDate() {
+    return ((bitField3_ & 0x00000008) != 0);
+  }
+  /**
+   * <pre>
+   * The value of all conversions divided by the number of all conversions. When
+   * this column is selected with date, the values in date column means the
+   * conversion date. Details for the by_conversion_date columns are available
+   * at https://support.google.com/google-ads/answer/9549009.
+   * </pre>
+   *
+   * <code>double value_per_all_conversions_by_conversion_date = 244;</code>
+   * @return The valuePerAllConversionsByConversionDate.
+   */
+  @java.lang.Override
+  public double getValuePerAllConversionsByConversionDate() {
+    return valuePerAllConversionsByConversionDate_;
+  }
+
   public static final int VALUE_PER_CONVERSION_FIELD_NUMBER = 151;
   private double valuePerConversion_;
   /**
@@ -3950,7 +4092,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasValuePerConversion() {
-    return ((bitField3_ & 0x00000008) != 0);
+    return ((bitField3_ & 0x00000010) != 0);
   }
   /**
    * <pre>
@@ -3966,6 +4108,45 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public double getValuePerConversion() {
     return valuePerConversion_;
+  }
+
+  public static final int VALUE_PER_CONVERSIONS_BY_CONVERSION_DATE_FIELD_NUMBER = 245;
+  private double valuePerConversionsByConversionDate_;
+  /**
+   * <pre>
+   * The value of conversions divided by the number of conversions. This only
+   * includes conversion actions which include_in_conversions_metric attribute
+   * is set to true. If you use conversion-based bidding, your bid strategies
+   * will optimize for these conversions. When this column is selected with
+   * date, the values in date column means the conversion date. Details for the
+   * by_conversion_date columns are available at
+   * https://support.google.com/google-ads/answer/9549009.
+   * </pre>
+   *
+   * <code>double value_per_conversions_by_conversion_date = 245;</code>
+   * @return Whether the valuePerConversionsByConversionDate field is set.
+   */
+  @java.lang.Override
+  public boolean hasValuePerConversionsByConversionDate() {
+    return ((bitField3_ & 0x00000020) != 0);
+  }
+  /**
+   * <pre>
+   * The value of conversions divided by the number of conversions. This only
+   * includes conversion actions which include_in_conversions_metric attribute
+   * is set to true. If you use conversion-based bidding, your bid strategies
+   * will optimize for these conversions. When this column is selected with
+   * date, the values in date column means the conversion date. Details for the
+   * by_conversion_date columns are available at
+   * https://support.google.com/google-ads/answer/9549009.
+   * </pre>
+   *
+   * <code>double value_per_conversions_by_conversion_date = 245;</code>
+   * @return The valuePerConversionsByConversionDate.
+   */
+  @java.lang.Override
+  public double getValuePerConversionsByConversionDate() {
+    return valuePerConversionsByConversionDate_;
   }
 
   public static final int VALUE_PER_CURRENT_MODEL_ATTRIBUTED_CONVERSION_FIELD_NUMBER = 152;
@@ -3984,7 +4165,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasValuePerCurrentModelAttributedConversion() {
-    return ((bitField3_ & 0x00000010) != 0);
+    return ((bitField3_ & 0x00000040) != 0);
   }
   /**
    * <pre>
@@ -4015,7 +4196,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasVideoQuartileP100Rate() {
-    return ((bitField3_ & 0x00000020) != 0);
+    return ((bitField3_ & 0x00000080) != 0);
   }
   /**
    * <pre>
@@ -4042,7 +4223,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasVideoQuartileP25Rate() {
-    return ((bitField3_ & 0x00000040) != 0);
+    return ((bitField3_ & 0x00000100) != 0);
   }
   /**
    * <pre>
@@ -4069,7 +4250,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasVideoQuartileP50Rate() {
-    return ((bitField3_ & 0x00000080) != 0);
+    return ((bitField3_ & 0x00000200) != 0);
   }
   /**
    * <pre>
@@ -4096,7 +4277,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasVideoQuartileP75Rate() {
-    return ((bitField3_ & 0x00000100) != 0);
+    return ((bitField3_ & 0x00000400) != 0);
   }
   /**
    * <pre>
@@ -4125,7 +4306,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasVideoViewRate() {
-    return ((bitField3_ & 0x00000200) != 0);
+    return ((bitField3_ & 0x00000800) != 0);
   }
   /**
    * <pre>
@@ -4154,7 +4335,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasVideoViews() {
-    return ((bitField3_ & 0x00000400) != 0);
+    return ((bitField3_ & 0x00001000) != 0);
   }
   /**
    * <pre>
@@ -4184,7 +4365,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasViewThroughConversions() {
-    return ((bitField3_ & 0x00000800) != 0);
+    return ((bitField3_ & 0x00002000) != 0);
   }
   /**
    * <pre>
@@ -4236,16 +4417,16 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x40000000) != 0)) {
       output.writeInt64(131, clicks_);
     }
-    if (((bitField3_ & 0x00000020) != 0)) {
+    if (((bitField3_ & 0x00000080) != 0)) {
       output.writeDouble(132, videoQuartileP100Rate_);
     }
-    if (((bitField3_ & 0x00000040) != 0)) {
+    if (((bitField3_ & 0x00000100) != 0)) {
       output.writeDouble(133, videoQuartileP25Rate_);
     }
-    if (((bitField3_ & 0x00000080) != 0)) {
+    if (((bitField3_ & 0x00000200) != 0)) {
       output.writeDouble(134, videoQuartileP50Rate_);
     }
-    if (((bitField3_ & 0x00000100) != 0)) {
+    if (((bitField3_ & 0x00000400) != 0)) {
       output.writeDouble(135, videoQuartileP75Rate_);
     }
     if (((bitField2_ & 0x00100000) != 0)) {
@@ -4293,19 +4474,19 @@ private static final long serialVersionUID = 0L;
     if (((bitField3_ & 0x00000004) != 0)) {
       output.writeDouble(150, valuePerAllConversions_);
     }
-    if (((bitField3_ & 0x00000008) != 0)) {
+    if (((bitField3_ & 0x00000010) != 0)) {
       output.writeDouble(151, valuePerConversion_);
     }
-    if (((bitField3_ & 0x00000010) != 0)) {
+    if (((bitField3_ & 0x00000040) != 0)) {
       output.writeDouble(152, valuePerCurrentModelAttributedConversion_);
     }
-    if (((bitField3_ & 0x00000200) != 0)) {
+    if (((bitField3_ & 0x00000800) != 0)) {
       output.writeDouble(153, videoViewRate_);
     }
-    if (((bitField3_ & 0x00000400) != 0)) {
+    if (((bitField3_ & 0x00001000) != 0)) {
       output.writeInt64(154, videoViews_);
     }
-    if (((bitField3_ & 0x00000800) != 0)) {
+    if (((bitField3_ & 0x00002000) != 0)) {
       output.writeInt64(155, viewThroughConversions_);
     }
     if (((bitField0_ & 0x80000000) != 0)) {
@@ -4557,6 +4738,24 @@ private static final long serialVersionUID = 0L;
     if (((bitField2_ & 0x00080000) != 0)) {
       output.writeDouble(239, relativeCtr_);
     }
+    if (allConversionsValueByConversionDate_ != 0D) {
+      output.writeDouble(240, allConversionsValueByConversionDate_);
+    }
+    if (allConversionsByConversionDate_ != 0D) {
+      output.writeDouble(241, allConversionsByConversionDate_);
+    }
+    if (conversionsValueByConversionDate_ != 0D) {
+      output.writeDouble(242, conversionsValueByConversionDate_);
+    }
+    if (conversionsByConversionDate_ != 0D) {
+      output.writeDouble(243, conversionsByConversionDate_);
+    }
+    if (((bitField3_ & 0x00000008) != 0)) {
+      output.writeDouble(244, valuePerAllConversionsByConversionDate_);
+    }
+    if (((bitField3_ & 0x00000020) != 0)) {
+      output.writeDouble(245, valuePerConversionsByConversionDate_);
+    }
     unknownFields.writeTo(output);
   }
 
@@ -4594,19 +4793,19 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(131, clicks_);
     }
-    if (((bitField3_ & 0x00000020) != 0)) {
+    if (((bitField3_ & 0x00000080) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeDoubleSize(132, videoQuartileP100Rate_);
     }
-    if (((bitField3_ & 0x00000040) != 0)) {
+    if (((bitField3_ & 0x00000100) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeDoubleSize(133, videoQuartileP25Rate_);
     }
-    if (((bitField3_ & 0x00000080) != 0)) {
+    if (((bitField3_ & 0x00000200) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeDoubleSize(134, videoQuartileP50Rate_);
     }
-    if (((bitField3_ & 0x00000100) != 0)) {
+    if (((bitField3_ & 0x00000400) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeDoubleSize(135, videoQuartileP75Rate_);
     }
@@ -4670,23 +4869,23 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeDoubleSize(150, valuePerAllConversions_);
     }
-    if (((bitField3_ & 0x00000008) != 0)) {
+    if (((bitField3_ & 0x00000010) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeDoubleSize(151, valuePerConversion_);
     }
-    if (((bitField3_ & 0x00000010) != 0)) {
+    if (((bitField3_ & 0x00000040) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeDoubleSize(152, valuePerCurrentModelAttributedConversion_);
     }
-    if (((bitField3_ & 0x00000200) != 0)) {
+    if (((bitField3_ & 0x00000800) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeDoubleSize(153, videoViewRate_);
     }
-    if (((bitField3_ & 0x00000400) != 0)) {
+    if (((bitField3_ & 0x00001000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(154, videoViews_);
     }
-    if (((bitField3_ & 0x00000800) != 0)) {
+    if (((bitField3_ & 0x00002000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(155, viewThroughConversions_);
     }
@@ -5020,6 +5219,30 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeDoubleSize(239, relativeCtr_);
     }
+    if (allConversionsValueByConversionDate_ != 0D) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeDoubleSize(240, allConversionsValueByConversionDate_);
+    }
+    if (allConversionsByConversionDate_ != 0D) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeDoubleSize(241, allConversionsByConversionDate_);
+    }
+    if (conversionsValueByConversionDate_ != 0D) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeDoubleSize(242, conversionsValueByConversionDate_);
+    }
+    if (conversionsByConversionDate_ != 0D) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeDoubleSize(243, conversionsByConversionDate_);
+    }
+    if (((bitField3_ & 0x00000008) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeDoubleSize(244, valuePerAllConversionsByConversionDate_);
+    }
+    if (((bitField3_ & 0x00000020) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeDoubleSize(245, valuePerConversionsByConversionDate_);
+    }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
@@ -5092,12 +5315,18 @@ private static final long serialVersionUID = 0L;
           != java.lang.Double.doubleToLongBits(
               other.getAllConversionsValue())) return false;
     }
+    if (java.lang.Double.doubleToLongBits(getAllConversionsValueByConversionDate())
+        != java.lang.Double.doubleToLongBits(
+            other.getAllConversionsValueByConversionDate())) return false;
     if (hasAllConversions() != other.hasAllConversions()) return false;
     if (hasAllConversions()) {
       if (java.lang.Double.doubleToLongBits(getAllConversions())
           != java.lang.Double.doubleToLongBits(
               other.getAllConversions())) return false;
     }
+    if (java.lang.Double.doubleToLongBits(getAllConversionsByConversionDate())
+        != java.lang.Double.doubleToLongBits(
+            other.getAllConversionsByConversionDate())) return false;
     if (hasAllConversionsValuePerCost() != other.hasAllConversionsValuePerCost()) return false;
     if (hasAllConversionsValuePerCost()) {
       if (java.lang.Double.doubleToLongBits(getAllConversionsValuePerCost())
@@ -5273,6 +5502,9 @@ private static final long serialVersionUID = 0L;
           != java.lang.Double.doubleToLongBits(
               other.getConversionsValue())) return false;
     }
+    if (java.lang.Double.doubleToLongBits(getConversionsValueByConversionDate())
+        != java.lang.Double.doubleToLongBits(
+            other.getConversionsValueByConversionDate())) return false;
     if (hasConversionsValuePerCost() != other.hasConversionsValuePerCost()) return false;
     if (hasConversionsValuePerCost()) {
       if (java.lang.Double.doubleToLongBits(getConversionsValuePerCost())
@@ -5291,6 +5523,9 @@ private static final long serialVersionUID = 0L;
           != java.lang.Double.doubleToLongBits(
               other.getConversions())) return false;
     }
+    if (java.lang.Double.doubleToLongBits(getConversionsByConversionDate())
+        != java.lang.Double.doubleToLongBits(
+            other.getConversionsByConversionDate())) return false;
     if (hasCostMicros() != other.hasCostMicros()) return false;
     if (hasCostMicros()) {
       if (getCostMicros()
@@ -5606,11 +5841,23 @@ private static final long serialVersionUID = 0L;
           != java.lang.Double.doubleToLongBits(
               other.getValuePerAllConversions())) return false;
     }
+    if (hasValuePerAllConversionsByConversionDate() != other.hasValuePerAllConversionsByConversionDate()) return false;
+    if (hasValuePerAllConversionsByConversionDate()) {
+      if (java.lang.Double.doubleToLongBits(getValuePerAllConversionsByConversionDate())
+          != java.lang.Double.doubleToLongBits(
+              other.getValuePerAllConversionsByConversionDate())) return false;
+    }
     if (hasValuePerConversion() != other.hasValuePerConversion()) return false;
     if (hasValuePerConversion()) {
       if (java.lang.Double.doubleToLongBits(getValuePerConversion())
           != java.lang.Double.doubleToLongBits(
               other.getValuePerConversion())) return false;
+    }
+    if (hasValuePerConversionsByConversionDate() != other.hasValuePerConversionsByConversionDate()) return false;
+    if (hasValuePerConversionsByConversionDate()) {
+      if (java.lang.Double.doubleToLongBits(getValuePerConversionsByConversionDate())
+          != java.lang.Double.doubleToLongBits(
+              other.getValuePerConversionsByConversionDate())) return false;
     }
     if (hasValuePerCurrentModelAttributedConversion() != other.hasValuePerCurrentModelAttributedConversion()) return false;
     if (hasValuePerCurrentModelAttributedConversion()) {
@@ -5719,11 +5966,17 @@ private static final long serialVersionUID = 0L;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           java.lang.Double.doubleToLongBits(getAllConversionsValue()));
     }
+    hash = (37 * hash) + ALL_CONVERSIONS_VALUE_BY_CONVERSION_DATE_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        java.lang.Double.doubleToLongBits(getAllConversionsValueByConversionDate()));
     if (hasAllConversions()) {
       hash = (37 * hash) + ALL_CONVERSIONS_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           java.lang.Double.doubleToLongBits(getAllConversions()));
     }
+    hash = (37 * hash) + ALL_CONVERSIONS_BY_CONVERSION_DATE_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        java.lang.Double.doubleToLongBits(getAllConversionsByConversionDate()));
     if (hasAllConversionsValuePerCost()) {
       hash = (37 * hash) + ALL_CONVERSIONS_VALUE_PER_COST_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
@@ -5872,6 +6125,9 @@ private static final long serialVersionUID = 0L;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           java.lang.Double.doubleToLongBits(getConversionsValue()));
     }
+    hash = (37 * hash) + CONVERSIONS_VALUE_BY_CONVERSION_DATE_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        java.lang.Double.doubleToLongBits(getConversionsValueByConversionDate()));
     if (hasConversionsValuePerCost()) {
       hash = (37 * hash) + CONVERSIONS_VALUE_PER_COST_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
@@ -5887,6 +6143,9 @@ private static final long serialVersionUID = 0L;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           java.lang.Double.doubleToLongBits(getConversions()));
     }
+    hash = (37 * hash) + CONVERSIONS_BY_CONVERSION_DATE_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        java.lang.Double.doubleToLongBits(getConversionsByConversionDate()));
     if (hasCostMicros()) {
       hash = (37 * hash) + COST_MICROS_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
@@ -6172,10 +6431,20 @@ private static final long serialVersionUID = 0L;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           java.lang.Double.doubleToLongBits(getValuePerAllConversions()));
     }
+    if (hasValuePerAllConversionsByConversionDate()) {
+      hash = (37 * hash) + VALUE_PER_ALL_CONVERSIONS_BY_CONVERSION_DATE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          java.lang.Double.doubleToLongBits(getValuePerAllConversionsByConversionDate()));
+    }
     if (hasValuePerConversion()) {
       hash = (37 * hash) + VALUE_PER_CONVERSION_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           java.lang.Double.doubleToLongBits(getValuePerConversion()));
+    }
+    if (hasValuePerConversionsByConversionDate()) {
+      hash = (37 * hash) + VALUE_PER_CONVERSIONS_BY_CONVERSION_DATE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          java.lang.Double.doubleToLongBits(getValuePerConversionsByConversionDate()));
     }
     if (hasValuePerCurrentModelAttributedConversion()) {
       hash = (37 * hash) + VALUE_PER_CURRENT_MODEL_ATTRIBUTED_CONVERSION_FIELD_NUMBER;
@@ -6374,8 +6643,12 @@ private static final long serialVersionUID = 0L;
       bitField0_ = (bitField0_ & ~0x00000100);
       allConversionsValue_ = 0D;
       bitField0_ = (bitField0_ & ~0x00000200);
+      allConversionsValueByConversionDate_ = 0D;
+
       allConversions_ = 0D;
       bitField0_ = (bitField0_ & ~0x00000400);
+      allConversionsByConversionDate_ = 0D;
+
       allConversionsValuePerCost_ = 0D;
       bitField0_ = (bitField0_ & ~0x00000800);
       allConversionsFromClickToCall_ = 0D;
@@ -6436,12 +6709,16 @@ private static final long serialVersionUID = 0L;
       bitField1_ = (bitField1_ & ~0x00000080);
       conversionsValue_ = 0D;
       bitField1_ = (bitField1_ & ~0x00000100);
+      conversionsValueByConversionDate_ = 0D;
+
       conversionsValuePerCost_ = 0D;
       bitField1_ = (bitField1_ & ~0x00000200);
       conversionsFromInteractionsValuePerInteraction_ = 0D;
       bitField1_ = (bitField1_ & ~0x00000400);
       conversions_ = 0D;
       bitField1_ = (bitField1_ & ~0x00000800);
+      conversionsByConversionDate_ = 0D;
+
       costMicros_ = 0L;
       bitField1_ = (bitField1_ & ~0x00001000);
       costPerAllConversions_ = 0D;
@@ -6560,24 +6837,28 @@ private static final long serialVersionUID = 0L;
       bitField3_ = (bitField3_ & ~0x00000004);
       valuePerAllConversions_ = 0D;
       bitField3_ = (bitField3_ & ~0x00000008);
-      valuePerConversion_ = 0D;
+      valuePerAllConversionsByConversionDate_ = 0D;
       bitField3_ = (bitField3_ & ~0x00000010);
-      valuePerCurrentModelAttributedConversion_ = 0D;
+      valuePerConversion_ = 0D;
       bitField3_ = (bitField3_ & ~0x00000020);
-      videoQuartileP100Rate_ = 0D;
+      valuePerConversionsByConversionDate_ = 0D;
       bitField3_ = (bitField3_ & ~0x00000040);
-      videoQuartileP25Rate_ = 0D;
+      valuePerCurrentModelAttributedConversion_ = 0D;
       bitField3_ = (bitField3_ & ~0x00000080);
-      videoQuartileP50Rate_ = 0D;
+      videoQuartileP100Rate_ = 0D;
       bitField3_ = (bitField3_ & ~0x00000100);
-      videoQuartileP75Rate_ = 0D;
+      videoQuartileP25Rate_ = 0D;
       bitField3_ = (bitField3_ & ~0x00000200);
-      videoViewRate_ = 0D;
+      videoQuartileP50Rate_ = 0D;
       bitField3_ = (bitField3_ & ~0x00000400);
-      videoViews_ = 0L;
+      videoQuartileP75Rate_ = 0D;
       bitField3_ = (bitField3_ & ~0x00000800);
-      viewThroughConversions_ = 0L;
+      videoViewRate_ = 0D;
       bitField3_ = (bitField3_ & ~0x00001000);
+      videoViews_ = 0L;
+      bitField3_ = (bitField3_ & ~0x00002000);
+      viewThroughConversions_ = 0L;
+      bitField3_ = (bitField3_ & ~0x00004000);
       return this;
     }
 
@@ -6652,10 +6933,12 @@ private static final long serialVersionUID = 0L;
         result.allConversionsValue_ = allConversionsValue_;
         to_bitField0_ |= 0x00000200;
       }
+      result.allConversionsValueByConversionDate_ = allConversionsValueByConversionDate_;
       if (((from_bitField0_ & 0x00000400) != 0)) {
         result.allConversions_ = allConversions_;
         to_bitField0_ |= 0x00000400;
       }
+      result.allConversionsByConversionDate_ = allConversionsByConversionDate_;
       if (((from_bitField0_ & 0x00000800) != 0)) {
         result.allConversionsValuePerCost_ = allConversionsValuePerCost_;
         to_bitField0_ |= 0x00000800;
@@ -6776,6 +7059,7 @@ private static final long serialVersionUID = 0L;
         result.conversionsValue_ = conversionsValue_;
         to_bitField1_ |= 0x00000100;
       }
+      result.conversionsValueByConversionDate_ = conversionsValueByConversionDate_;
       if (((from_bitField1_ & 0x00000200) != 0)) {
         result.conversionsValuePerCost_ = conversionsValuePerCost_;
         to_bitField1_ |= 0x00000200;
@@ -6788,6 +7072,7 @@ private static final long serialVersionUID = 0L;
         result.conversions_ = conversions_;
         to_bitField1_ |= 0x00000800;
       }
+      result.conversionsByConversionDate_ = conversionsByConversionDate_;
       if (((from_bitField1_ & 0x00001000) != 0)) {
         result.costMicros_ = costMicros_;
         to_bitField1_ |= 0x00001000;
@@ -7017,40 +7302,48 @@ private static final long serialVersionUID = 0L;
         to_bitField3_ |= 0x00000004;
       }
       if (((from_bitField3_ & 0x00000010) != 0)) {
-        result.valuePerConversion_ = valuePerConversion_;
+        result.valuePerAllConversionsByConversionDate_ = valuePerAllConversionsByConversionDate_;
         to_bitField3_ |= 0x00000008;
       }
       if (((from_bitField3_ & 0x00000020) != 0)) {
-        result.valuePerCurrentModelAttributedConversion_ = valuePerCurrentModelAttributedConversion_;
+        result.valuePerConversion_ = valuePerConversion_;
         to_bitField3_ |= 0x00000010;
       }
       if (((from_bitField3_ & 0x00000040) != 0)) {
-        result.videoQuartileP100Rate_ = videoQuartileP100Rate_;
+        result.valuePerConversionsByConversionDate_ = valuePerConversionsByConversionDate_;
         to_bitField3_ |= 0x00000020;
       }
       if (((from_bitField3_ & 0x00000080) != 0)) {
-        result.videoQuartileP25Rate_ = videoQuartileP25Rate_;
+        result.valuePerCurrentModelAttributedConversion_ = valuePerCurrentModelAttributedConversion_;
         to_bitField3_ |= 0x00000040;
       }
       if (((from_bitField3_ & 0x00000100) != 0)) {
-        result.videoQuartileP50Rate_ = videoQuartileP50Rate_;
+        result.videoQuartileP100Rate_ = videoQuartileP100Rate_;
         to_bitField3_ |= 0x00000080;
       }
       if (((from_bitField3_ & 0x00000200) != 0)) {
-        result.videoQuartileP75Rate_ = videoQuartileP75Rate_;
+        result.videoQuartileP25Rate_ = videoQuartileP25Rate_;
         to_bitField3_ |= 0x00000100;
       }
       if (((from_bitField3_ & 0x00000400) != 0)) {
-        result.videoViewRate_ = videoViewRate_;
+        result.videoQuartileP50Rate_ = videoQuartileP50Rate_;
         to_bitField3_ |= 0x00000200;
       }
       if (((from_bitField3_ & 0x00000800) != 0)) {
-        result.videoViews_ = videoViews_;
+        result.videoQuartileP75Rate_ = videoQuartileP75Rate_;
         to_bitField3_ |= 0x00000400;
       }
       if (((from_bitField3_ & 0x00001000) != 0)) {
-        result.viewThroughConversions_ = viewThroughConversions_;
+        result.videoViewRate_ = videoViewRate_;
         to_bitField3_ |= 0x00000800;
+      }
+      if (((from_bitField3_ & 0x00002000) != 0)) {
+        result.videoViews_ = videoViews_;
+        to_bitField3_ |= 0x00001000;
+      }
+      if (((from_bitField3_ & 0x00004000) != 0)) {
+        result.viewThroughConversions_ = viewThroughConversions_;
+        to_bitField3_ |= 0x00002000;
       }
       result.bitField0_ = to_bitField0_;
       result.bitField1_ = to_bitField1_;
@@ -7134,8 +7427,14 @@ private static final long serialVersionUID = 0L;
       if (other.hasAllConversionsValue()) {
         setAllConversionsValue(other.getAllConversionsValue());
       }
+      if (other.getAllConversionsValueByConversionDate() != 0D) {
+        setAllConversionsValueByConversionDate(other.getAllConversionsValueByConversionDate());
+      }
       if (other.hasAllConversions()) {
         setAllConversions(other.getAllConversions());
+      }
+      if (other.getAllConversionsByConversionDate() != 0D) {
+        setAllConversionsByConversionDate(other.getAllConversionsByConversionDate());
       }
       if (other.hasAllConversionsValuePerCost()) {
         setAllConversionsValuePerCost(other.getAllConversionsValuePerCost());
@@ -7231,6 +7530,9 @@ private static final long serialVersionUID = 0L;
       if (other.hasConversionsValue()) {
         setConversionsValue(other.getConversionsValue());
       }
+      if (other.getConversionsValueByConversionDate() != 0D) {
+        setConversionsValueByConversionDate(other.getConversionsValueByConversionDate());
+      }
       if (other.hasConversionsValuePerCost()) {
         setConversionsValuePerCost(other.getConversionsValuePerCost());
       }
@@ -7239,6 +7541,9 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasConversions()) {
         setConversions(other.getConversions());
+      }
+      if (other.getConversionsByConversionDate() != 0D) {
+        setConversionsByConversionDate(other.getConversionsByConversionDate());
       }
       if (other.hasCostMicros()) {
         setCostMicros(other.getCostMicros());
@@ -7424,8 +7729,14 @@ private static final long serialVersionUID = 0L;
       if (other.hasValuePerAllConversions()) {
         setValuePerAllConversions(other.getValuePerAllConversions());
       }
+      if (other.hasValuePerAllConversionsByConversionDate()) {
+        setValuePerAllConversionsByConversionDate(other.getValuePerAllConversionsByConversionDate());
+      }
       if (other.hasValuePerConversion()) {
         setValuePerConversion(other.getValuePerConversion());
+      }
+      if (other.hasValuePerConversionsByConversionDate()) {
+        setValuePerConversionsByConversionDate(other.getValuePerConversionsByConversionDate());
       }
       if (other.hasValuePerCurrentModelAttributedConversion()) {
         setValuePerCurrentModelAttributedConversion(other.getValuePerCurrentModelAttributedConversion());
@@ -8066,6 +8377,58 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
+    private double allConversionsValueByConversionDate_ ;
+    /**
+     * <pre>
+     * The value of all conversions. When this column is selected with date, the
+     * values in date column means the conversion date. Details for the
+     * by_conversion_date columns are available at
+     * https://support.google.com/google-ads/answer/9549009.
+     * </pre>
+     *
+     * <code>double all_conversions_value_by_conversion_date = 240;</code>
+     * @return The allConversionsValueByConversionDate.
+     */
+    @java.lang.Override
+    public double getAllConversionsValueByConversionDate() {
+      return allConversionsValueByConversionDate_;
+    }
+    /**
+     * <pre>
+     * The value of all conversions. When this column is selected with date, the
+     * values in date column means the conversion date. Details for the
+     * by_conversion_date columns are available at
+     * https://support.google.com/google-ads/answer/9549009.
+     * </pre>
+     *
+     * <code>double all_conversions_value_by_conversion_date = 240;</code>
+     * @param value The allConversionsValueByConversionDate to set.
+     * @return This builder for chaining.
+     */
+    public Builder setAllConversionsValueByConversionDate(double value) {
+      
+      allConversionsValueByConversionDate_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The value of all conversions. When this column is selected with date, the
+     * values in date column means the conversion date. Details for the
+     * by_conversion_date columns are available at
+     * https://support.google.com/google-ads/answer/9549009.
+     * </pre>
+     *
+     * <code>double all_conversions_value_by_conversion_date = 240;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearAllConversionsValueByConversionDate() {
+      
+      allConversionsValueByConversionDate_ = 0D;
+      onChanged();
+      return this;
+    }
+
     private double allConversions_ ;
     /**
      * <pre>
@@ -8121,6 +8484,61 @@ private static final long serialVersionUID = 0L;
     public Builder clearAllConversions() {
       bitField0_ = (bitField0_ & ~0x00000400);
       allConversions_ = 0D;
+      onChanged();
+      return this;
+    }
+
+    private double allConversionsByConversionDate_ ;
+    /**
+     * <pre>
+     * The total number of conversions. This includes all conversions regardless
+     * of the value of include_in_conversions_metric. When this column is selected
+     * with date, the values in date column means the conversion date. Details for
+     * the by_conversion_date columns are available at
+     * https://support.google.com/google-ads/answer/9549009.
+     * </pre>
+     *
+     * <code>double all_conversions_by_conversion_date = 241;</code>
+     * @return The allConversionsByConversionDate.
+     */
+    @java.lang.Override
+    public double getAllConversionsByConversionDate() {
+      return allConversionsByConversionDate_;
+    }
+    /**
+     * <pre>
+     * The total number of conversions. This includes all conversions regardless
+     * of the value of include_in_conversions_metric. When this column is selected
+     * with date, the values in date column means the conversion date. Details for
+     * the by_conversion_date columns are available at
+     * https://support.google.com/google-ads/answer/9549009.
+     * </pre>
+     *
+     * <code>double all_conversions_by_conversion_date = 241;</code>
+     * @param value The allConversionsByConversionDate to set.
+     * @return This builder for chaining.
+     */
+    public Builder setAllConversionsByConversionDate(double value) {
+      
+      allConversionsByConversionDate_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The total number of conversions. This includes all conversions regardless
+     * of the value of include_in_conversions_metric. When this column is selected
+     * with date, the values in date column means the conversion date. Details for
+     * the by_conversion_date columns are available at
+     * https://support.google.com/google-ads/answer/9549009.
+     * </pre>
+     *
+     * <code>double all_conversions_by_conversion_date = 241;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearAllConversionsByConversionDate() {
+      
+      allConversionsByConversionDate_ = 0D;
       onChanged();
       return this;
     }
@@ -10097,6 +10515,67 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
+    private double conversionsValueByConversionDate_ ;
+    /**
+     * <pre>
+     * The value of conversions. This only includes conversion actions which
+     * include_in_conversions_metric attribute is set to true. If you use
+     * conversion-based bidding, your bid strategies will optimize for these
+     * conversions. When this column is selected with date, the values in date
+     * column means the conversion date. Details for the by_conversion_date
+     * columns are available at
+     * https://support.google.com/google-ads/answer/9549009.
+     * </pre>
+     *
+     * <code>double conversions_value_by_conversion_date = 242;</code>
+     * @return The conversionsValueByConversionDate.
+     */
+    @java.lang.Override
+    public double getConversionsValueByConversionDate() {
+      return conversionsValueByConversionDate_;
+    }
+    /**
+     * <pre>
+     * The value of conversions. This only includes conversion actions which
+     * include_in_conversions_metric attribute is set to true. If you use
+     * conversion-based bidding, your bid strategies will optimize for these
+     * conversions. When this column is selected with date, the values in date
+     * column means the conversion date. Details for the by_conversion_date
+     * columns are available at
+     * https://support.google.com/google-ads/answer/9549009.
+     * </pre>
+     *
+     * <code>double conversions_value_by_conversion_date = 242;</code>
+     * @param value The conversionsValueByConversionDate to set.
+     * @return This builder for chaining.
+     */
+    public Builder setConversionsValueByConversionDate(double value) {
+      
+      conversionsValueByConversionDate_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The value of conversions. This only includes conversion actions which
+     * include_in_conversions_metric attribute is set to true. If you use
+     * conversion-based bidding, your bid strategies will optimize for these
+     * conversions. When this column is selected with date, the values in date
+     * column means the conversion date. Details for the by_conversion_date
+     * columns are available at
+     * https://support.google.com/google-ads/answer/9549009.
+     * </pre>
+     *
+     * <code>double conversions_value_by_conversion_date = 242;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearConversionsValueByConversionDate() {
+      
+      conversionsValueByConversionDate_ = 0D;
+      onChanged();
+      return this;
+    }
+
     private double conversionsValuePerCost_ ;
     /**
      * <pre>
@@ -10298,6 +10777,67 @@ private static final long serialVersionUID = 0L;
     public Builder clearConversions() {
       bitField1_ = (bitField1_ & ~0x00000800);
       conversions_ = 0D;
+      onChanged();
+      return this;
+    }
+
+    private double conversionsByConversionDate_ ;
+    /**
+     * <pre>
+     * The number of conversions. This only includes conversion actions which
+     * include_in_conversions_metric attribute is set to true. If you use
+     * conversion-based bidding, your bid strategies will optimize for these
+     * conversions. When this column is selected with date, the values in date
+     * column means the conversion date. Details for the by_conversion_date
+     * columns are available at
+     * https://support.google.com/google-ads/answer/9549009.
+     * </pre>
+     *
+     * <code>double conversions_by_conversion_date = 243;</code>
+     * @return The conversionsByConversionDate.
+     */
+    @java.lang.Override
+    public double getConversionsByConversionDate() {
+      return conversionsByConversionDate_;
+    }
+    /**
+     * <pre>
+     * The number of conversions. This only includes conversion actions which
+     * include_in_conversions_metric attribute is set to true. If you use
+     * conversion-based bidding, your bid strategies will optimize for these
+     * conversions. When this column is selected with date, the values in date
+     * column means the conversion date. Details for the by_conversion_date
+     * columns are available at
+     * https://support.google.com/google-ads/answer/9549009.
+     * </pre>
+     *
+     * <code>double conversions_by_conversion_date = 243;</code>
+     * @param value The conversionsByConversionDate to set.
+     * @return This builder for chaining.
+     */
+    public Builder setConversionsByConversionDate(double value) {
+      
+      conversionsByConversionDate_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The number of conversions. This only includes conversion actions which
+     * include_in_conversions_metric attribute is set to true. If you use
+     * conversion-based bidding, your bid strategies will optimize for these
+     * conversions. When this column is selected with date, the values in date
+     * column means the conversion date. Details for the by_conversion_date
+     * columns are available at
+     * https://support.google.com/google-ads/answer/9549009.
+     * </pre>
+     *
+     * <code>double conversions_by_conversion_date = 243;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearConversionsByConversionDate() {
+      
+      conversionsByConversionDate_ = 0D;
       onChanged();
       return this;
     }
@@ -14157,6 +14697,73 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
+    private double valuePerAllConversionsByConversionDate_ ;
+    /**
+     * <pre>
+     * The value of all conversions divided by the number of all conversions. When
+     * this column is selected with date, the values in date column means the
+     * conversion date. Details for the by_conversion_date columns are available
+     * at https://support.google.com/google-ads/answer/9549009.
+     * </pre>
+     *
+     * <code>double value_per_all_conversions_by_conversion_date = 244;</code>
+     * @return Whether the valuePerAllConversionsByConversionDate field is set.
+     */
+    @java.lang.Override
+    public boolean hasValuePerAllConversionsByConversionDate() {
+      return ((bitField3_ & 0x00000010) != 0);
+    }
+    /**
+     * <pre>
+     * The value of all conversions divided by the number of all conversions. When
+     * this column is selected with date, the values in date column means the
+     * conversion date. Details for the by_conversion_date columns are available
+     * at https://support.google.com/google-ads/answer/9549009.
+     * </pre>
+     *
+     * <code>double value_per_all_conversions_by_conversion_date = 244;</code>
+     * @return The valuePerAllConversionsByConversionDate.
+     */
+    @java.lang.Override
+    public double getValuePerAllConversionsByConversionDate() {
+      return valuePerAllConversionsByConversionDate_;
+    }
+    /**
+     * <pre>
+     * The value of all conversions divided by the number of all conversions. When
+     * this column is selected with date, the values in date column means the
+     * conversion date. Details for the by_conversion_date columns are available
+     * at https://support.google.com/google-ads/answer/9549009.
+     * </pre>
+     *
+     * <code>double value_per_all_conversions_by_conversion_date = 244;</code>
+     * @param value The valuePerAllConversionsByConversionDate to set.
+     * @return This builder for chaining.
+     */
+    public Builder setValuePerAllConversionsByConversionDate(double value) {
+      bitField3_ |= 0x00000010;
+      valuePerAllConversionsByConversionDate_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The value of all conversions divided by the number of all conversions. When
+     * this column is selected with date, the values in date column means the
+     * conversion date. Details for the by_conversion_date columns are available
+     * at https://support.google.com/google-ads/answer/9549009.
+     * </pre>
+     *
+     * <code>double value_per_all_conversions_by_conversion_date = 244;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearValuePerAllConversionsByConversionDate() {
+      bitField3_ = (bitField3_ & ~0x00000010);
+      valuePerAllConversionsByConversionDate_ = 0D;
+      onChanged();
+      return this;
+    }
+
     private double valuePerConversion_ ;
     /**
      * <pre>
@@ -14171,7 +14778,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasValuePerConversion() {
-      return ((bitField3_ & 0x00000010) != 0);
+      return ((bitField3_ & 0x00000020) != 0);
     }
     /**
      * <pre>
@@ -14201,7 +14808,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setValuePerConversion(double value) {
-      bitField3_ |= 0x00000010;
+      bitField3_ |= 0x00000020;
       valuePerConversion_ = value;
       onChanged();
       return this;
@@ -14218,8 +14825,87 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearValuePerConversion() {
-      bitField3_ = (bitField3_ & ~0x00000010);
+      bitField3_ = (bitField3_ & ~0x00000020);
       valuePerConversion_ = 0D;
+      onChanged();
+      return this;
+    }
+
+    private double valuePerConversionsByConversionDate_ ;
+    /**
+     * <pre>
+     * The value of conversions divided by the number of conversions. This only
+     * includes conversion actions which include_in_conversions_metric attribute
+     * is set to true. If you use conversion-based bidding, your bid strategies
+     * will optimize for these conversions. When this column is selected with
+     * date, the values in date column means the conversion date. Details for the
+     * by_conversion_date columns are available at
+     * https://support.google.com/google-ads/answer/9549009.
+     * </pre>
+     *
+     * <code>double value_per_conversions_by_conversion_date = 245;</code>
+     * @return Whether the valuePerConversionsByConversionDate field is set.
+     */
+    @java.lang.Override
+    public boolean hasValuePerConversionsByConversionDate() {
+      return ((bitField3_ & 0x00000040) != 0);
+    }
+    /**
+     * <pre>
+     * The value of conversions divided by the number of conversions. This only
+     * includes conversion actions which include_in_conversions_metric attribute
+     * is set to true. If you use conversion-based bidding, your bid strategies
+     * will optimize for these conversions. When this column is selected with
+     * date, the values in date column means the conversion date. Details for the
+     * by_conversion_date columns are available at
+     * https://support.google.com/google-ads/answer/9549009.
+     * </pre>
+     *
+     * <code>double value_per_conversions_by_conversion_date = 245;</code>
+     * @return The valuePerConversionsByConversionDate.
+     */
+    @java.lang.Override
+    public double getValuePerConversionsByConversionDate() {
+      return valuePerConversionsByConversionDate_;
+    }
+    /**
+     * <pre>
+     * The value of conversions divided by the number of conversions. This only
+     * includes conversion actions which include_in_conversions_metric attribute
+     * is set to true. If you use conversion-based bidding, your bid strategies
+     * will optimize for these conversions. When this column is selected with
+     * date, the values in date column means the conversion date. Details for the
+     * by_conversion_date columns are available at
+     * https://support.google.com/google-ads/answer/9549009.
+     * </pre>
+     *
+     * <code>double value_per_conversions_by_conversion_date = 245;</code>
+     * @param value The valuePerConversionsByConversionDate to set.
+     * @return This builder for chaining.
+     */
+    public Builder setValuePerConversionsByConversionDate(double value) {
+      bitField3_ |= 0x00000040;
+      valuePerConversionsByConversionDate_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The value of conversions divided by the number of conversions. This only
+     * includes conversion actions which include_in_conversions_metric attribute
+     * is set to true. If you use conversion-based bidding, your bid strategies
+     * will optimize for these conversions. When this column is selected with
+     * date, the values in date column means the conversion date. Details for the
+     * by_conversion_date columns are available at
+     * https://support.google.com/google-ads/answer/9549009.
+     * </pre>
+     *
+     * <code>double value_per_conversions_by_conversion_date = 245;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearValuePerConversionsByConversionDate() {
+      bitField3_ = (bitField3_ & ~0x00000040);
+      valuePerConversionsByConversionDate_ = 0D;
       onChanged();
       return this;
     }
@@ -14239,7 +14925,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasValuePerCurrentModelAttributedConversion() {
-      return ((bitField3_ & 0x00000020) != 0);
+      return ((bitField3_ & 0x00000080) != 0);
     }
     /**
      * <pre>
@@ -14271,7 +14957,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setValuePerCurrentModelAttributedConversion(double value) {
-      bitField3_ |= 0x00000020;
+      bitField3_ |= 0x00000080;
       valuePerCurrentModelAttributedConversion_ = value;
       onChanged();
       return this;
@@ -14289,7 +14975,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearValuePerCurrentModelAttributedConversion() {
-      bitField3_ = (bitField3_ & ~0x00000020);
+      bitField3_ = (bitField3_ & ~0x00000080);
       valuePerCurrentModelAttributedConversion_ = 0D;
       onChanged();
       return this;
@@ -14306,7 +14992,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasVideoQuartileP100Rate() {
-      return ((bitField3_ & 0x00000040) != 0);
+      return ((bitField3_ & 0x00000100) != 0);
     }
     /**
      * <pre>
@@ -14330,7 +15016,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setVideoQuartileP100Rate(double value) {
-      bitField3_ |= 0x00000040;
+      bitField3_ |= 0x00000100;
       videoQuartileP100Rate_ = value;
       onChanged();
       return this;
@@ -14344,7 +15030,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearVideoQuartileP100Rate() {
-      bitField3_ = (bitField3_ & ~0x00000040);
+      bitField3_ = (bitField3_ & ~0x00000100);
       videoQuartileP100Rate_ = 0D;
       onChanged();
       return this;
@@ -14361,7 +15047,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasVideoQuartileP25Rate() {
-      return ((bitField3_ & 0x00000080) != 0);
+      return ((bitField3_ & 0x00000200) != 0);
     }
     /**
      * <pre>
@@ -14385,7 +15071,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setVideoQuartileP25Rate(double value) {
-      bitField3_ |= 0x00000080;
+      bitField3_ |= 0x00000200;
       videoQuartileP25Rate_ = value;
       onChanged();
       return this;
@@ -14399,7 +15085,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearVideoQuartileP25Rate() {
-      bitField3_ = (bitField3_ & ~0x00000080);
+      bitField3_ = (bitField3_ & ~0x00000200);
       videoQuartileP25Rate_ = 0D;
       onChanged();
       return this;
@@ -14416,7 +15102,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasVideoQuartileP50Rate() {
-      return ((bitField3_ & 0x00000100) != 0);
+      return ((bitField3_ & 0x00000400) != 0);
     }
     /**
      * <pre>
@@ -14440,7 +15126,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setVideoQuartileP50Rate(double value) {
-      bitField3_ |= 0x00000100;
+      bitField3_ |= 0x00000400;
       videoQuartileP50Rate_ = value;
       onChanged();
       return this;
@@ -14454,7 +15140,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearVideoQuartileP50Rate() {
-      bitField3_ = (bitField3_ & ~0x00000100);
+      bitField3_ = (bitField3_ & ~0x00000400);
       videoQuartileP50Rate_ = 0D;
       onChanged();
       return this;
@@ -14471,7 +15157,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasVideoQuartileP75Rate() {
-      return ((bitField3_ & 0x00000200) != 0);
+      return ((bitField3_ & 0x00000800) != 0);
     }
     /**
      * <pre>
@@ -14495,7 +15181,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setVideoQuartileP75Rate(double value) {
-      bitField3_ |= 0x00000200;
+      bitField3_ |= 0x00000800;
       videoQuartileP75Rate_ = value;
       onChanged();
       return this;
@@ -14509,7 +15195,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearVideoQuartileP75Rate() {
-      bitField3_ = (bitField3_ & ~0x00000200);
+      bitField3_ = (bitField3_ & ~0x00000800);
       videoQuartileP75Rate_ = 0D;
       onChanged();
       return this;
@@ -14528,7 +15214,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasVideoViewRate() {
-      return ((bitField3_ & 0x00000400) != 0);
+      return ((bitField3_ & 0x00001000) != 0);
     }
     /**
      * <pre>
@@ -14556,7 +15242,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setVideoViewRate(double value) {
-      bitField3_ |= 0x00000400;
+      bitField3_ |= 0x00001000;
       videoViewRate_ = value;
       onChanged();
       return this;
@@ -14572,7 +15258,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearVideoViewRate() {
-      bitField3_ = (bitField3_ & ~0x00000400);
+      bitField3_ = (bitField3_ & ~0x00001000);
       videoViewRate_ = 0D;
       onChanged();
       return this;
@@ -14589,7 +15275,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasVideoViews() {
-      return ((bitField3_ & 0x00000800) != 0);
+      return ((bitField3_ & 0x00002000) != 0);
     }
     /**
      * <pre>
@@ -14613,7 +15299,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setVideoViews(long value) {
-      bitField3_ |= 0x00000800;
+      bitField3_ |= 0x00002000;
       videoViews_ = value;
       onChanged();
       return this;
@@ -14627,7 +15313,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearVideoViews() {
-      bitField3_ = (bitField3_ & ~0x00000800);
+      bitField3_ = (bitField3_ & ~0x00002000);
       videoViews_ = 0L;
       onChanged();
       return this;
@@ -14647,7 +15333,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasViewThroughConversions() {
-      return ((bitField3_ & 0x00001000) != 0);
+      return ((bitField3_ & 0x00004000) != 0);
     }
     /**
      * <pre>
@@ -14677,7 +15363,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setViewThroughConversions(long value) {
-      bitField3_ |= 0x00001000;
+      bitField3_ |= 0x00004000;
       viewThroughConversions_ = value;
       onChanged();
       return this;
@@ -14694,7 +15380,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearViewThroughConversions() {
-      bitField3_ = (bitField3_ & ~0x00001000);
+      bitField3_ = (bitField3_ & ~0x00004000);
       viewThroughConversions_ = 0L;
       onChanged();
       return this;
