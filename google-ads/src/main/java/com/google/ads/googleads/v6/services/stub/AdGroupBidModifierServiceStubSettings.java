@@ -77,7 +77,6 @@ import org.threeten.bp.Duration;
  *     adGroupBidModifierServiceSettingsBuilder.build();
  * }</pre>
  */
-@BetaApi
 @Generated("by gapic-generator-java")
 public class AdGroupBidModifierServiceStubSettings
     extends StubSettings<AdGroupBidModifierServiceStubSettings> {

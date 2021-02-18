@@ -548,6 +548,15 @@ private static final long serialVersionUID = 0L;
      * <code>REQUESTED_METRICS_FOR_MANAGER = 59;</code>
      */
     REQUESTED_METRICS_FOR_MANAGER(59),
+    /**
+     * <pre>
+     * The number of values (right-hand-side operands) in a filter exceeds the
+     * limit.
+     * </pre>
+     *
+     * <code>FILTER_HAS_TOO_MANY_VALUES = 63;</code>
+     */
+    FILTER_HAS_TOO_MANY_VALUES(63),
     UNRECOGNIZED(-1),
     ;
 
@@ -1006,6 +1015,15 @@ private static final long serialVersionUID = 0L;
      * <code>REQUESTED_METRICS_FOR_MANAGER = 59;</code>
      */
     public static final int REQUESTED_METRICS_FOR_MANAGER_VALUE = 59;
+    /**
+     * <pre>
+     * The number of values (right-hand-side operands) in a filter exceeds the
+     * limit.
+     * </pre>
+     *
+     * <code>FILTER_HAS_TOO_MANY_VALUES = 63;</code>
+     */
+    public static final int FILTER_HAS_TOO_MANY_VALUES_VALUE = 63;
 
 
     public final int getNumber() {
@@ -1087,6 +1105,7 @@ private static final long serialVersionUID = 0L;
         case 32: return UNRECOGNIZED_FIELD;
         case 11: return UNEXPECTED_INPUT;
         case 59: return REQUESTED_METRICS_FOR_MANAGER;
+        case 63: return FILTER_HAS_TOO_MANY_VALUES;
         default: return null;
       }
     }

@@ -75,7 +75,6 @@ import org.threeten.bp.Duration;
  *     searchTermViewServiceSettingsBuilder.build();
  * }</pre>
  */
-@BetaApi
 @Generated("by gapic-generator-java")
 public class SearchTermViewServiceStubSettings
     extends StubSettings<SearchTermViewServiceStubSettings> {

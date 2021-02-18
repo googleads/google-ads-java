@@ -75,11 +75,21 @@ public class GrpcGenderViewServiceStub extends GenderViewServiceStub {
         GenderViewServiceStubSettings.newBuilder().build(), clientContext, callableFactory);
   }
 
+  /**
+   * Constructs an instance of GrpcGenderViewServiceStub, using the given settings. This is
+   * protected so that it is easy to make a subclass, but otherwise, the static factory methods
+   * should be preferred.
+   */
   protected GrpcGenderViewServiceStub(
       GenderViewServiceStubSettings settings, ClientContext clientContext) throws IOException {
     this(settings, clientContext, new GrpcGenderViewServiceCallableFactory());
   }
 
+  /**
+   * Constructs an instance of GrpcGenderViewServiceStub, using the given settings. This is
+   * protected so that it is easy to make a subclass, but otherwise, the static factory methods
+   * should be preferred.
+   */
   protected GrpcGenderViewServiceStub(
       GenderViewServiceStubSettings settings,
       ClientContext clientContext,

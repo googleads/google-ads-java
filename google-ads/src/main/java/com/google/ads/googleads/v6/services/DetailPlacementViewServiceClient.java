@@ -83,8 +83,7 @@ import javax.annotation.Generated;
  *
  * <p>Please refer to the GitHub repository's samples for more quickstart code snippets.
  */
-@BetaApi
-@Generated("by gapic-generator")
+@Generated("by gapic-generator-java")
 public class DetailPlacementViewServiceClient implements BackgroundResource {
   private final DetailPlacementViewServiceSettings settings;
   private final DetailPlacementViewServiceStub stub;
@@ -143,7 +142,7 @@ public class DetailPlacementViewServiceClient implements BackgroundResource {
   /**
    * Returns the requested Detail Placement view in full detail.
    *
-   * @param resource_name Required. The resource name of the Detail Placement view to fetch.
+   * @param resourceName Required. The resource name of the Detail Placement view to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final DetailPlacementView getDetailPlacementView(DetailPlacementViewName resourceName) {
@@ -158,7 +157,7 @@ public class DetailPlacementViewServiceClient implements BackgroundResource {
   /**
    * Returns the requested Detail Placement view in full detail.
    *
-   * @param resource_name Required. The resource name of the Detail Placement view to fetch.
+   * @param resourceName Required. The resource name of the Detail Placement view to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final DetailPlacementView getDetailPlacementView(String resourceName) {

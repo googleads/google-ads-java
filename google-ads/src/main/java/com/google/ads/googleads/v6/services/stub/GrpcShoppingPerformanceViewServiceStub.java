@@ -80,12 +80,22 @@ public class GrpcShoppingPerformanceViewServiceStub extends ShoppingPerformanceV
         callableFactory);
   }
 
+  /**
+   * Constructs an instance of GrpcShoppingPerformanceViewServiceStub, using the given settings.
+   * This is protected so that it is easy to make a subclass, but otherwise, the static factory
+   * methods should be preferred.
+   */
   protected GrpcShoppingPerformanceViewServiceStub(
       ShoppingPerformanceViewServiceStubSettings settings, ClientContext clientContext)
       throws IOException {
     this(settings, clientContext, new GrpcShoppingPerformanceViewServiceCallableFactory());
   }
 
+  /**
+   * Constructs an instance of GrpcShoppingPerformanceViewServiceStub, using the given settings.
+   * This is protected so that it is easy to make a subclass, but otherwise, the static factory
+   * methods should be preferred.
+   */
   protected GrpcShoppingPerformanceViewServiceStub(
       ShoppingPerformanceViewServiceStubSettings settings,
       ClientContext clientContext,

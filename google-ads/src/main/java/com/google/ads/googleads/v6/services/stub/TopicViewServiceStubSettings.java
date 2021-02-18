@@ -74,7 +74,6 @@ import org.threeten.bp.Duration;
  * TopicViewServiceStubSettings topicViewServiceSettings = topicViewServiceSettingsBuilder.build();
  * }</pre>
  */
-@BetaApi
 @Generated("by gapic-generator-java")
 public class TopicViewServiceStubSettings extends StubSettings<TopicViewServiceStubSettings> {
   /** The default scopes of the service. */

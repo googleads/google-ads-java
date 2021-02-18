@@ -64,7 +64,7 @@ public final class ConversionActionProto {
       "ogle/ads/googleads/v6/enums/mobile_app_v" +
       "endor.proto\032\037google/api/field_behavior.p" +
       "roto\032\031google/api/resource.proto\032\034google/" +
-      "api/annotations.proto\"\232\022\n\020ConversionActi" +
+      "api/annotations.proto\"\334\022\n\020ConversionActi" +
       "on\022H\n\rresource_name\030\001 \001(\tB1\340A\005\372A+\n)googl" +
       "eads.googleapis.com/ConversionAction\022\024\n\002" +
       "id\030\025 \001(\003B\003\340A\003H\000\210\001\001\022\021\n\004name\030\026 \001(\tH\001\210\001\001\022`\n" +
@@ -75,61 +75,63 @@ public final class ConversionActionProto {
       "peEnum.ConversionActionTypeB\003\340A\005\022f\n\010cate" +
       "gory\030\006 \001(\0162T.google.ads.googleads.v6.enu" +
       "ms.ConversionActionCategoryEnum.Conversi" +
-      "onActionCategory\022 \n\016owner_customer\030\027 \001(\t" +
-      "B\003\340A\003H\002\210\001\001\022*\n\035include_in_conversions_met" +
-      "ric\030\030 \001(\010H\003\210\001\001\022/\n\"click_through_lookback" +
-      "_window_days\030\031 \001(\003H\004\210\001\001\022.\n!view_through_" +
-      "lookback_window_days\030\032 \001(\003H\005\210\001\001\022Y\n\016value" +
-      "_settings\030\013 \001(\0132A.google.ads.googleads.v" +
-      "6.resources.ConversionAction.ValueSettin" +
-      "gs\022s\n\rcounting_type\030\014 \001(\0162\\.google.ads.g" +
-      "oogleads.v6.enums.ConversionActionCounti" +
-      "ngTypeEnum.ConversionActionCountingType\022" +
-      "p\n\032attribution_model_settings\030\r \001(\0132L.go" +
-      "ogle.ads.googleads.v6.resources.Conversi" +
-      "onAction.AttributionModelSettings\022E\n\014tag" +
-      "_snippets\030\016 \003(\0132*.google.ads.googleads.v" +
-      "6.common.TagSnippetB\003\340A\003\022(\n\033phone_call_d" +
-      "uration_seconds\030\033 \001(\003H\006\210\001\001\022\023\n\006app_id\030\034 \001" +
-      "(\tH\007\210\001\001\022b\n\021mobile_app_vendor\030\021 \001(\0162B.goo" +
-      "gle.ads.googleads.v6.enums.MobileAppVend" +
-      "orEnum.MobileAppVendorB\003\340A\003\022d\n\021firebase_" +
-      "settings\030\022 \001(\0132D.google.ads.googleads.v6" +
-      ".resources.ConversionAction.FirebaseSett" +
-      "ingsB\003\340A\003\022\203\001\n\"third_party_app_analytics_" +
-      "settings\030\023 \001(\0132R.google.ads.googleads.v6" +
-      ".resources.ConversionAction.ThirdPartyAp" +
-      "pAnalyticsSettingsB\003\340A\003\032\362\001\n\030AttributionM" +
-      "odelSettings\022_\n\021attribution_model\030\001 \001(\0162" +
-      "D.google.ads.googleads.v6.enums.Attribut" +
-      "ionModelEnum.AttributionModel\022u\n\030data_dr" +
-      "iven_model_status\030\002 \001(\0162N.google.ads.goo" +
-      "gleads.v6.enums.DataDrivenModelStatusEnu" +
-      "m.DataDrivenModelStatusB\003\340A\003\032\277\001\n\rValueSe" +
-      "ttings\022\032\n\rdefault_value\030\004 \001(\001H\000\210\001\001\022\"\n\025de" +
-      "fault_currency_code\030\005 \001(\tH\001\210\001\001\022%\n\030always" +
-      "_use_default_value\030\006 \001(\010H\002\210\001\001B\020\n\016_defaul" +
-      "t_valueB\030\n\026_default_currency_codeB\033\n\031_al" +
-      "ways_use_default_value\032M\n\036ThirdPartyAppA" +
-      "nalyticsSettings\022\034\n\nevent_name\030\002 \001(\tB\003\340A" +
-      "\003H\000\210\001\001B\r\n\013_event_name\032l\n\020FirebaseSetting" +
-      "s\022\034\n\nevent_name\030\003 \001(\tB\003\340A\003H\000\210\001\001\022\034\n\nproje" +
-      "ct_id\030\004 \001(\tB\003\340A\003H\001\210\001\001B\r\n\013_event_nameB\r\n\013" +
-      "_project_id:p\352Am\n)googleads.googleapis.c" +
-      "om/ConversionAction\022@customers/{customer" +
-      "_id}/conversionActions/{conversion_actio" +
-      "n_id}B\005\n\003_idB\007\n\005_nameB\021\n\017_owner_customer" +
-      "B \n\036_include_in_conversions_metricB%\n#_c" +
-      "lick_through_lookback_window_daysB$\n\"_vi" +
-      "ew_through_lookback_window_daysB\036\n\034_phon" +
-      "e_call_duration_secondsB\t\n\007_app_idB\202\002\n%c" +
-      "om.google.ads.googleads.v6.resourcesB\025Co" +
-      "nversionActionProtoP\001ZJgoogle.golang.org" +
-      "/genproto/googleapis/ads/googleads/v6/re" +
-      "sources;resources\242\002\003GAA\252\002!Google.Ads.Goo" +
-      "gleAds.V6.Resources\312\002!Google\\Ads\\GoogleA" +
-      "ds\\V6\\Resources\352\002%Google::Ads::GoogleAds" +
-      "::V6::Resourcesb\006proto3"
+      "onActionCategory\022F\n\016owner_customer\030\027 \001(\t" +
+      "B)\340A\003\372A#\n!googleads.googleapis.com/Custo" +
+      "merH\002\210\001\001\022*\n\035include_in_conversions_metri" +
+      "c\030\030 \001(\010H\003\210\001\001\022/\n\"click_through_lookback_w" +
+      "indow_days\030\031 \001(\003H\004\210\001\001\022.\n!view_through_lo" +
+      "okback_window_days\030\032 \001(\003H\005\210\001\001\022Y\n\016value_s" +
+      "ettings\030\013 \001(\0132A.google.ads.googleads.v6." +
+      "resources.ConversionAction.ValueSettings" +
+      "\022s\n\rcounting_type\030\014 \001(\0162\\.google.ads.goo" +
+      "gleads.v6.enums.ConversionActionCounting" +
+      "TypeEnum.ConversionActionCountingType\022p\n" +
+      "\032attribution_model_settings\030\r \001(\0132L.goog" +
+      "le.ads.googleads.v6.resources.Conversion" +
+      "Action.AttributionModelSettings\022E\n\014tag_s" +
+      "nippets\030\016 \003(\0132*.google.ads.googleads.v6." +
+      "common.TagSnippetB\003\340A\003\022(\n\033phone_call_dur" +
+      "ation_seconds\030\033 \001(\003H\006\210\001\001\022\023\n\006app_id\030\034 \001(\t" +
+      "H\007\210\001\001\022b\n\021mobile_app_vendor\030\021 \001(\0162B.googl" +
+      "e.ads.googleads.v6.enums.MobileAppVendor" +
+      "Enum.MobileAppVendorB\003\340A\003\022d\n\021firebase_se" +
+      "ttings\030\022 \001(\0132D.google.ads.googleads.v6.r" +
+      "esources.ConversionAction.FirebaseSettin" +
+      "gsB\003\340A\003\022\203\001\n\"third_party_app_analytics_se" +
+      "ttings\030\023 \001(\0132R.google.ads.googleads.v6.r" +
+      "esources.ConversionAction.ThirdPartyAppA" +
+      "nalyticsSettingsB\003\340A\003\032\362\001\n\030AttributionMod" +
+      "elSettings\022_\n\021attribution_model\030\001 \001(\0162D." +
+      "google.ads.googleads.v6.enums.Attributio" +
+      "nModelEnum.AttributionModel\022u\n\030data_driv" +
+      "en_model_status\030\002 \001(\0162N.google.ads.googl" +
+      "eads.v6.enums.DataDrivenModelStatusEnum." +
+      "DataDrivenModelStatusB\003\340A\003\032\277\001\n\rValueSett" +
+      "ings\022\032\n\rdefault_value\030\004 \001(\001H\000\210\001\001\022\"\n\025defa" +
+      "ult_currency_code\030\005 \001(\tH\001\210\001\001\022%\n\030always_u" +
+      "se_default_value\030\006 \001(\010H\002\210\001\001B\020\n\016_default_" +
+      "valueB\030\n\026_default_currency_codeB\033\n\031_alwa" +
+      "ys_use_default_value\032i\n\036ThirdPartyAppAna" +
+      "lyticsSettings\022\034\n\nevent_name\030\002 \001(\tB\003\340A\003H" +
+      "\000\210\001\001\022\032\n\rprovider_name\030\003 \001(\tB\003\340A\003B\r\n\013_eve" +
+      "nt_name\032l\n\020FirebaseSettings\022\034\n\nevent_nam" +
+      "e\030\003 \001(\tB\003\340A\003H\000\210\001\001\022\034\n\nproject_id\030\004 \001(\tB\003\340" +
+      "A\003H\001\210\001\001B\r\n\013_event_nameB\r\n\013_project_id:p\352" +
+      "Am\n)googleads.googleapis.com/ConversionA" +
+      "ction\022@customers/{customer_id}/conversio" +
+      "nActions/{conversion_action_id}B\005\n\003_idB\007" +
+      "\n\005_nameB\021\n\017_owner_customerB \n\036_include_i" +
+      "n_conversions_metricB%\n#_click_through_l" +
+      "ookback_window_daysB$\n\"_view_through_loo" +
+      "kback_window_daysB\036\n\034_phone_call_duratio" +
+      "n_secondsB\t\n\007_app_idB\202\002\n%com.google.ads." +
+      "googleads.v6.resourcesB\025ConversionAction" +
+      "ProtoP\001ZJgoogle.golang.org/genproto/goog" +
+      "leapis/ads/googleads/v6/resources;resour" +
+      "ces\242\002\003GAA\252\002!Google.Ads.GoogleAds.V6.Reso" +
+      "urces\312\002!Google\\Ads\\GoogleAds\\V6\\Resource" +
+      "s\352\002%Google::Ads::GoogleAds::V6::Resource" +
+      "sb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -169,7 +171,7 @@ public final class ConversionActionProto {
     internal_static_google_ads_googleads_v6_resources_ConversionAction_ThirdPartyAppAnalyticsSettings_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v6_resources_ConversionAction_ThirdPartyAppAnalyticsSettings_descriptor,
-        new java.lang.String[] { "EventName", "EventName", });
+        new java.lang.String[] { "EventName", "ProviderName", "EventName", });
     internal_static_google_ads_googleads_v6_resources_ConversionAction_FirebaseSettings_descriptor =
       internal_static_google_ads_googleads_v6_resources_ConversionAction_descriptor.getNestedTypes().get(3);
     internal_static_google_ads_googleads_v6_resources_ConversionAction_FirebaseSettings_fieldAccessorTable = new

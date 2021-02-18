@@ -83,8 +83,7 @@ import javax.annotation.Generated;
  *
  * <p>Please refer to the GitHub repository's samples for more quickstart code snippets.
  */
-@BetaApi
-@Generated("by gapic-generator")
+@Generated("by gapic-generator-java")
 public class DistanceViewServiceClient implements BackgroundResource {
   private final DistanceViewServiceSettings settings;
   private final DistanceViewServiceStub stub;
@@ -141,7 +140,7 @@ public class DistanceViewServiceClient implements BackgroundResource {
   /**
    * Returns the attributes of the requested distance view.
    *
-   * @param resource_name Required. The resource name of the distance view to fetch.
+   * @param resourceName Required. The resource name of the distance view to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final DistanceView getDistanceView(DistanceViewName resourceName) {
@@ -156,7 +155,7 @@ public class DistanceViewServiceClient implements BackgroundResource {
   /**
    * Returns the attributes of the requested distance view.
    *
-   * @param resource_name Required. The resource name of the distance view to fetch.
+   * @param resourceName Required. The resource name of the distance view to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final DistanceView getDistanceView(String resourceName) {

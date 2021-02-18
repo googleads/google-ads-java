@@ -78,7 +78,6 @@ import org.threeten.bp.Duration;
  *     thirdPartyAppAnalyticsLinkServiceSettingsBuilder.build();
  * }</pre>
  */
-@BetaApi
 @Generated("by gapic-generator-java")
 public class ThirdPartyAppAnalyticsLinkServiceStubSettings
     extends StubSettings<ThirdPartyAppAnalyticsLinkServiceStubSettings> {

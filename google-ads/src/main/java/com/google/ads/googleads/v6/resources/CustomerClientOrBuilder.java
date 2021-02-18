@@ -37,7 +37,7 @@ public interface CustomerClientOrBuilder extends
    * the given customer. Read only.
    * </pre>
    *
-   * <code>string client_customer = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>string client_customer = 12 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return Whether the clientCustomer field is set.
    */
   boolean hasClientCustomer();
@@ -47,7 +47,7 @@ public interface CustomerClientOrBuilder extends
    * the given customer. Read only.
    * </pre>
    *
-   * <code>string client_customer = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>string client_customer = 12 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return The clientCustomer.
    */
   java.lang.String getClientCustomer();
@@ -57,7 +57,7 @@ public interface CustomerClientOrBuilder extends
    * the given customer. Read only.
    * </pre>
    *
-   * <code>string client_customer = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>string client_customer = 12 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return The bytes for clientCustomer.
    */
   com.google.protobuf.ByteString

@@ -222,7 +222,7 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object endDate_;
   /**
    * <pre>
-   * End date of users visit. If set to 2037-12-30, then the list includes all
+   * Last date of users visit. If set to 2037-12-30, then the list includes all
    * users after start_date. The date's format should be YYYY-MM-DD.
    * Required for creating a data specific rule user list.
    * </pre>
@@ -236,7 +236,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * End date of users visit. If set to 2037-12-30, then the list includes all
+   * Last date of users visit. If set to 2037-12-30, then the list includes all
    * users after start_date. The date's format should be YYYY-MM-DD.
    * Required for creating a data specific rule user list.
    * </pre>
@@ -259,7 +259,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * End date of users visit. If set to 2037-12-30, then the list includes all
+   * Last date of users visit. If set to 2037-12-30, then the list includes all
    * users after start_date. The date's format should be YYYY-MM-DD.
    * Required for creating a data specific rule user list.
    * </pre>
@@ -943,7 +943,7 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object endDate_ = "";
     /**
      * <pre>
-     * End date of users visit. If set to 2037-12-30, then the list includes all
+     * Last date of users visit. If set to 2037-12-30, then the list includes all
      * users after start_date. The date's format should be YYYY-MM-DD.
      * Required for creating a data specific rule user list.
      * </pre>
@@ -956,7 +956,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * End date of users visit. If set to 2037-12-30, then the list includes all
+     * Last date of users visit. If set to 2037-12-30, then the list includes all
      * users after start_date. The date's format should be YYYY-MM-DD.
      * Required for creating a data specific rule user list.
      * </pre>
@@ -978,7 +978,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * End date of users visit. If set to 2037-12-30, then the list includes all
+     * Last date of users visit. If set to 2037-12-30, then the list includes all
      * users after start_date. The date's format should be YYYY-MM-DD.
      * Required for creating a data specific rule user list.
      * </pre>
@@ -1001,7 +1001,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * End date of users visit. If set to 2037-12-30, then the list includes all
+     * Last date of users visit. If set to 2037-12-30, then the list includes all
      * users after start_date. The date's format should be YYYY-MM-DD.
      * Required for creating a data specific rule user list.
      * </pre>
@@ -1022,7 +1022,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * End date of users visit. If set to 2037-12-30, then the list includes all
+     * Last date of users visit. If set to 2037-12-30, then the list includes all
      * users after start_date. The date's format should be YYYY-MM-DD.
      * Required for creating a data specific rule user list.
      * </pre>
@@ -1038,7 +1038,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * End date of users visit. If set to 2037-12-30, then the list includes all
+     * Last date of users visit. If set to 2037-12-30, then the list includes all
      * users after start_date. The date's format should be YYYY-MM-DD.
      * Required for creating a data specific rule user list.
      * </pre>

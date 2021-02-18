@@ -132,6 +132,7 @@ public class BatchJobServiceClientTest {
     BatchJob expectedResponse =
         BatchJob.newBuilder()
             .setResourceName(BatchJobName.of("[CUSTOMER_ID]", "[BATCH_JOB_ID]").toString())
+            .setMetadata(BatchJob.BatchJobMetadata.newBuilder().build())
             .build();
     mockBatchJobService.addResponse(expectedResponse);
 
@@ -170,6 +171,7 @@ public class BatchJobServiceClientTest {
     BatchJob expectedResponse =
         BatchJob.newBuilder()
             .setResourceName(BatchJobName.of("[CUSTOMER_ID]", "[BATCH_JOB_ID]").toString())
+            .setMetadata(BatchJob.BatchJobMetadata.newBuilder().build())
             .build();
     mockBatchJobService.addResponse(expectedResponse);
 

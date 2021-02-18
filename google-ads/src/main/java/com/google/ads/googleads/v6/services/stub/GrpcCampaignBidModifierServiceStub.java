@@ -98,12 +98,22 @@ public class GrpcCampaignBidModifierServiceStub extends CampaignBidModifierServi
         callableFactory);
   }
 
+  /**
+   * Constructs an instance of GrpcCampaignBidModifierServiceStub, using the given settings. This is
+   * protected so that it is easy to make a subclass, but otherwise, the static factory methods
+   * should be preferred.
+   */
   protected GrpcCampaignBidModifierServiceStub(
       CampaignBidModifierServiceStubSettings settings, ClientContext clientContext)
       throws IOException {
     this(settings, clientContext, new GrpcCampaignBidModifierServiceCallableFactory());
   }
 
+  /**
+   * Constructs an instance of GrpcCampaignBidModifierServiceStub, using the given settings. This is
+   * protected so that it is easy to make a subclass, but otherwise, the static factory methods
+   * should be preferred.
+   */
   protected GrpcCampaignBidModifierServiceStub(
       CampaignBidModifierServiceStubSettings settings,
       ClientContext clientContext,

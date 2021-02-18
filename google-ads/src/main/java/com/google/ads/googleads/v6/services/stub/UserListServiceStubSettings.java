@@ -76,7 +76,6 @@ import org.threeten.bp.Duration;
  * UserListServiceStubSettings userListServiceSettings = userListServiceSettingsBuilder.build();
  * }</pre>
  */
-@BetaApi
 @Generated("by gapic-generator-java")
 public class UserListServiceStubSettings extends StubSettings<UserListServiceStubSettings> {
   /** The default scopes of the service. */

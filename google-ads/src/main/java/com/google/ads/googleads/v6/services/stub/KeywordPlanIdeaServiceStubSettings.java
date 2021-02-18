@@ -85,7 +85,6 @@ import org.threeten.bp.Duration;
  *     keywordPlanIdeaServiceSettingsBuilder.build();
  * }</pre>
  */
-@BetaApi
 @Generated("by gapic-generator-java")
 public class KeywordPlanIdeaServiceStubSettings
     extends StubSettings<KeywordPlanIdeaServiceStubSettings> {

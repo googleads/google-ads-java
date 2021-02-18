@@ -76,7 +76,6 @@ import org.threeten.bp.Duration;
  *     expandedLandingPageViewServiceSettingsBuilder.build();
  * }</pre>
  */
-@BetaApi
 @Generated("by gapic-generator-java")
 public class ExpandedLandingPageViewServiceStubSettings
     extends StubSettings<ExpandedLandingPageViewServiceStubSettings> {

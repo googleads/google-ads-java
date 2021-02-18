@@ -31,8 +31,8 @@ public final class FeedItemValidationErrorProto {
       "\n?google/ads/googleads/v6/errors/feed_it" +
       "em_validation_error.proto\022\036google.ads.go" +
       "ogleads.v6.errors\032\034google/api/annotation" +
-      "s.proto\"\350\031\n\033FeedItemValidationErrorEnum\"" +
-      "\310\031\n\027FeedItemValidationError\022\017\n\013UNSPECIFI" +
+      "s.proto\"\356\033\n\033FeedItemValidationErrorEnum\"" +
+      "\316\033\n\027FeedItemValidationError\022\017\n\013UNSPECIFI" +
       "ED\020\000\022\013\n\007UNKNOWN\020\001\022\024\n\020STRING_TOO_SHORT\020\002\022" +
       "\023\n\017STRING_TOO_LONG\020\003\022\027\n\023VALUE_NOT_SPECIF" +
       "IED\020\004\022(\n$INVALID_DOMESTIC_PHONE_NUMBER_F" +
@@ -113,14 +113,20 @@ public final class FeedItemValidationErrorProto {
       "\020\\\022\023\n\017TOO_MANY_LABELS\020]\022\025\n\021INVALID_IMAGE" +
       "_URL\020^\022\032\n\026MISSING_LATITUDE_VALUE\020_\022\033\n\027MI" +
       "SSING_LONGITUDE_VALUE\020`\022\025\n\021ADDRESS_NOT_F" +
-      "OUND\020a\022\032\n\026ADDRESS_NOT_TARGETABLE\020bB\367\001\n\"c" +
-      "om.google.ads.googleads.v6.errorsB\034FeedI" +
-      "temValidationErrorProtoP\001ZDgoogle.golang" +
-      ".org/genproto/googleapis/ads/googleads/v" +
-      "6/errors;errors\242\002\003GAA\252\002\036Google.Ads.Googl" +
-      "eAds.V6.Errors\312\002\036Google\\Ads\\GoogleAds\\V6" +
-      "\\Errors\352\002\"Google::Ads::GoogleAds::V6::Er" +
-      "rorsb\006proto3"
+      "OUND\020a\022\032\n\026ADDRESS_NOT_TARGETABLE\020b\022\024\n\020IN" +
+      "VALID_ASSET_ID\020d\022\033\n\027INCOMPATIBLE_ASSET_T" +
+      "YPE\020e\022\037\n\033IMAGE_ERROR_UNEXPECTED_SIZE\020f\022(" +
+      "\n$IMAGE_ERROR_ASPECT_RATIO_NOT_ALLOWED\020g" +
+      "\022\036\n\032IMAGE_ERROR_FILE_TOO_LARGE\020h\022\"\n\036IMAG" +
+      "E_ERROR_FORMAT_NOT_ALLOWED\020i\022$\n IMAGE_ER" +
+      "ROR_CONSTRAINTS_VIOLATED\020j\022\034\n\030IMAGE_ERRO" +
+      "R_SERVER_ERROR\020kB\367\001\n\"com.google.ads.goog" +
+      "leads.v6.errorsB\034FeedItemValidationError" +
+      "ProtoP\001ZDgoogle.golang.org/genproto/goog" +
+      "leapis/ads/googleads/v6/errors;errors\242\002\003" +
+      "GAA\252\002\036Google.Ads.GoogleAds.V6.Errors\312\002\036G" +
+      "oogle\\Ads\\GoogleAds\\V6\\Errors\352\002\"Google::" +
+      "Ads::GoogleAds::V6::Errorsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

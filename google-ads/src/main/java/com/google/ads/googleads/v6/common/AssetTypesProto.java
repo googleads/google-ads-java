@@ -89,65 +89,66 @@ public final class AssetTypesProto {
       "m_post_submit_call_to_action_type.proto\032" +
       "-google/ads/googleads/v6/enums/mime_type" +
       ".proto\032\037google/api/field_behavior.proto\032" +
-      "\034google/api/annotations.proto\"G\n\021Youtube" +
+      "\034google/api/annotations.proto\"d\n\021Youtube" +
       "VideoAsset\022\035\n\020youtube_video_id\030\002 \001(\tH\000\210\001" +
-      "\001B\023\n\021_youtube_video_id\".\n\020MediaBundleAss" +
-      "et\022\021\n\004data\030\002 \001(\014H\000\210\001\001B\007\n\005_data\"\332\001\n\nImage" +
-      "Asset\022\021\n\004data\030\005 \001(\014H\000\210\001\001\022\026\n\tfile_size\030\006 " +
-      "\001(\003H\001\210\001\001\022G\n\tmime_type\030\003 \001(\01624.google.ads" +
-      ".googleads.v6.enums.MimeTypeEnum.MimeTyp" +
-      "e\022A\n\tfull_size\030\004 \001(\0132..google.ads.google" +
-      "ads.v6.common.ImageDimensionB\007\n\005_dataB\014\n" +
-      "\n_file_size\"\204\001\n\016ImageDimension\022\032\n\rheight" +
-      "_pixels\030\004 \001(\003H\000\210\001\001\022\031\n\014width_pixels\030\005 \001(\003" +
-      "H\001\210\001\001\022\020\n\003url\030\006 \001(\tH\002\210\001\001B\020\n\016_height_pixel" +
-      "sB\017\n\r_width_pixelsB\006\n\004_url\"\'\n\tTextAsset\022" +
-      "\021\n\004text\030\002 \001(\tH\000\210\001\001B\007\n\005_text\"\237\007\n\rLeadForm" +
-      "Asset\022\032\n\rbusiness_name\030\n \001(\tB\003\340A\002\022v\n\023cal" +
-      "l_to_action_type\030\021 \001(\0162T.google.ads.goog" +
-      "leads.v6.enums.LeadFormCallToActionTypeE" +
-      "num.LeadFormCallToActionTypeB\003\340A\002\022\'\n\032cal" +
-      "l_to_action_description\030\022 \001(\tB\003\340A\002\022\025\n\010he" +
-      "adline\030\014 \001(\tB\003\340A\002\022\030\n\013description\030\r \001(\tB\003" +
-      "\340A\002\022\037\n\022privacy_policy_url\030\016 \001(\tB\003\340A\002\022!\n\024" +
-      "post_submit_headline\030\017 \001(\tH\000\210\001\001\022$\n\027post_" +
-      "submit_description\030\020 \001(\tH\001\210\001\001\022=\n\006fields\030" +
-      "\010 \003(\0132-.google.ads.googleads.v6.common.L" +
-      "eadFormField\022P\n\020delivery_methods\030\t \003(\01326" +
-      ".google.ads.googleads.v6.common.LeadForm" +
-      "DeliveryMethod\022\221\001\n\037post_submit_call_to_a" +
-      "ction_type\030\023 \001(\0162h.google.ads.googleads." +
-      "v6.enums.LeadFormPostSubmitCallToActionT" +
-      "ypeEnum.LeadFormPostSubmitCallToActionTy" +
-      "pe\022#\n\026background_image_asset\030\024 \001(\tH\002\210\001\001\022" +
-      "f\n\016desired_intent\030\025 \001(\0162N.google.ads.goo" +
-      "gleads.v6.enums.LeadFormDesiredIntentEnu" +
-      "m.LeadFormDesiredIntent\022\036\n\021custom_disclo" +
-      "sure\030\026 \001(\tH\003\210\001\001B\027\n\025_post_submit_headline" +
-      "B\032\n\030_post_submit_descriptionB\031\n\027_backgro" +
-      "und_image_assetB\024\n\022_custom_disclosure\"\346\001" +
-      "\n\rLeadFormField\022l\n\ninput_type\030\001 \001(\0162X.go" +
-      "ogle.ads.googleads.v6.enums.LeadFormFiel" +
-      "dUserInputTypeEnum.LeadFormFieldUserInpu" +
-      "tType\022\\\n\025single_choice_answers\030\002 \001(\0132;.g" +
-      "oogle.ads.googleads.v6.common.LeadFormSi" +
-      "ngleChoiceAnswersH\000B\t\n\007answers\".\n\033LeadFo" +
-      "rmSingleChoiceAnswers\022\017\n\007answers\030\001 \003(\t\"p" +
-      "\n\026LeadFormDeliveryMethod\022B\n\007webhook\030\001 \001(" +
-      "\0132/.google.ads.googleads.v6.common.Webho" +
-      "okDeliveryH\000B\022\n\020delivery_details\"\277\001\n\017Web" +
-      "hookDelivery\022#\n\026advertiser_webhook_url\030\004" +
-      " \001(\tH\000\210\001\001\022\032\n\rgoogle_secret\030\005 \001(\tH\001\210\001\001\022#\n" +
-      "\026payload_schema_version\030\006 \001(\003H\002\210\001\001B\031\n\027_a" +
-      "dvertiser_webhook_urlB\020\n\016_google_secretB" +
-      "\031\n\027_payload_schema_version\"\023\n\021BookOnGoog" +
-      "leAssetB\352\001\n\"com.google.ads.googleads.v6." +
-      "commonB\017AssetTypesProtoP\001ZDgoogle.golang" +
-      ".org/genproto/googleapis/ads/googleads/v" +
-      "6/common;common\242\002\003GAA\252\002\036Google.Ads.Googl" +
-      "eAds.V6.Common\312\002\036Google\\Ads\\GoogleAds\\V6" +
-      "\\Common\352\002\"Google::Ads::GoogleAds::V6::Co" +
-      "mmonb\006proto3"
+      "\001\022\033\n\023youtube_video_title\030\003 \001(\tB\023\n\021_youtu" +
+      "be_video_id\".\n\020MediaBundleAsset\022\021\n\004data\030" +
+      "\002 \001(\014H\000\210\001\001B\007\n\005_data\"\332\001\n\nImageAsset\022\021\n\004da" +
+      "ta\030\005 \001(\014H\000\210\001\001\022\026\n\tfile_size\030\006 \001(\003H\001\210\001\001\022G\n" +
+      "\tmime_type\030\003 \001(\01624.google.ads.googleads." +
+      "v6.enums.MimeTypeEnum.MimeType\022A\n\tfull_s" +
+      "ize\030\004 \001(\0132..google.ads.googleads.v6.comm" +
+      "on.ImageDimensionB\007\n\005_dataB\014\n\n_file_size" +
+      "\"\204\001\n\016ImageDimension\022\032\n\rheight_pixels\030\004 \001" +
+      "(\003H\000\210\001\001\022\031\n\014width_pixels\030\005 \001(\003H\001\210\001\001\022\020\n\003ur" +
+      "l\030\006 \001(\tH\002\210\001\001B\020\n\016_height_pixelsB\017\n\r_width" +
+      "_pixelsB\006\n\004_url\"\'\n\tTextAsset\022\021\n\004text\030\002 \001" +
+      "(\tH\000\210\001\001B\007\n\005_text\"\237\007\n\rLeadFormAsset\022\032\n\rbu" +
+      "siness_name\030\n \001(\tB\003\340A\002\022v\n\023call_to_action" +
+      "_type\030\021 \001(\0162T.google.ads.googleads.v6.en" +
+      "ums.LeadFormCallToActionTypeEnum.LeadFor" +
+      "mCallToActionTypeB\003\340A\002\022\'\n\032call_to_action" +
+      "_description\030\022 \001(\tB\003\340A\002\022\025\n\010headline\030\014 \001(" +
+      "\tB\003\340A\002\022\030\n\013description\030\r \001(\tB\003\340A\002\022\037\n\022priv" +
+      "acy_policy_url\030\016 \001(\tB\003\340A\002\022!\n\024post_submit" +
+      "_headline\030\017 \001(\tH\000\210\001\001\022$\n\027post_submit_desc" +
+      "ription\030\020 \001(\tH\001\210\001\001\022=\n\006fields\030\010 \003(\0132-.goo" +
+      "gle.ads.googleads.v6.common.LeadFormFiel" +
+      "d\022P\n\020delivery_methods\030\t \003(\01326.google.ads" +
+      ".googleads.v6.common.LeadFormDeliveryMet" +
+      "hod\022\221\001\n\037post_submit_call_to_action_type\030" +
+      "\023 \001(\0162h.google.ads.googleads.v6.enums.Le" +
+      "adFormPostSubmitCallToActionTypeEnum.Lea" +
+      "dFormPostSubmitCallToActionType\022#\n\026backg" +
+      "round_image_asset\030\024 \001(\tH\002\210\001\001\022f\n\016desired_" +
+      "intent\030\025 \001(\0162N.google.ads.googleads.v6.e" +
+      "nums.LeadFormDesiredIntentEnum.LeadFormD" +
+      "esiredIntent\022\036\n\021custom_disclosure\030\026 \001(\tH" +
+      "\003\210\001\001B\027\n\025_post_submit_headlineB\032\n\030_post_s" +
+      "ubmit_descriptionB\031\n\027_background_image_a" +
+      "ssetB\024\n\022_custom_disclosure\"\346\001\n\rLeadFormF" +
+      "ield\022l\n\ninput_type\030\001 \001(\0162X.google.ads.go" +
+      "ogleads.v6.enums.LeadFormFieldUserInputT" +
+      "ypeEnum.LeadFormFieldUserInputType\022\\\n\025si" +
+      "ngle_choice_answers\030\002 \001(\0132;.google.ads.g" +
+      "oogleads.v6.common.LeadFormSingleChoiceA" +
+      "nswersH\000B\t\n\007answers\".\n\033LeadFormSingleCho" +
+      "iceAnswers\022\017\n\007answers\030\001 \003(\t\"p\n\026LeadFormD" +
+      "eliveryMethod\022B\n\007webhook\030\001 \001(\0132/.google." +
+      "ads.googleads.v6.common.WebhookDeliveryH" +
+      "\000B\022\n\020delivery_details\"\277\001\n\017WebhookDeliver" +
+      "y\022#\n\026advertiser_webhook_url\030\004 \001(\tH\000\210\001\001\022\032" +
+      "\n\rgoogle_secret\030\005 \001(\tH\001\210\001\001\022#\n\026payload_sc" +
+      "hema_version\030\006 \001(\003H\002\210\001\001B\031\n\027_advertiser_w" +
+      "ebhook_urlB\020\n\016_google_secretB\031\n\027_payload" +
+      "_schema_version\"\023\n\021BookOnGoogleAssetB\352\001\n" +
+      "\"com.google.ads.googleads.v6.commonB\017Ass" +
+      "etTypesProtoP\001ZDgoogle.golang.org/genpro" +
+      "to/googleapis/ads/googleads/v6/common;co" +
+      "mmon\242\002\003GAA\252\002\036Google.Ads.GoogleAds.V6.Com" +
+      "mon\312\002\036Google\\Ads\\GoogleAds\\V6\\Common\352\002\"G" +
+      "oogle::Ads::GoogleAds::V6::Commonb\006proto" +
+      "3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -165,7 +166,7 @@ public final class AssetTypesProto {
     internal_static_google_ads_googleads_v6_common_YoutubeVideoAsset_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v6_common_YoutubeVideoAsset_descriptor,
-        new java.lang.String[] { "YoutubeVideoId", "YoutubeVideoId", });
+        new java.lang.String[] { "YoutubeVideoId", "YoutubeVideoTitle", "YoutubeVideoId", });
     internal_static_google_ads_googleads_v6_common_MediaBundleAsset_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_google_ads_googleads_v6_common_MediaBundleAsset_fieldAccessorTable = new

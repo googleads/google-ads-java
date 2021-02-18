@@ -84,8 +84,7 @@ import javax.annotation.Generated;
  *
  * <p>Please refer to the GitHub repository's samples for more quickstart code snippets.
  */
-@BetaApi
-@Generated("by gapic-generator")
+@Generated("by gapic-generator-java")
 public class FeedMappingServiceClient implements BackgroundResource {
   private final FeedMappingServiceSettings settings;
   private final FeedMappingServiceStub stub;
@@ -142,7 +141,7 @@ public class FeedMappingServiceClient implements BackgroundResource {
   /**
    * Returns the requested feed mapping in full detail.
    *
-   * @param resource_name Required. The resource name of the feed mapping to fetch.
+   * @param resourceName Required. The resource name of the feed mapping to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final FeedMapping getFeedMapping(FeedMappingName resourceName) {
@@ -157,7 +156,7 @@ public class FeedMappingServiceClient implements BackgroundResource {
   /**
    * Returns the requested feed mapping in full detail.
    *
-   * @param resource_name Required. The resource name of the feed mapping to fetch.
+   * @param resourceName Required. The resource name of the feed mapping to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final FeedMapping getFeedMapping(String resourceName) {
@@ -191,7 +190,7 @@ public class FeedMappingServiceClient implements BackgroundResource {
   /**
    * Creates or removes feed mappings. Operation statuses are returned.
    *
-   * @param customer_id Required. The ID of the customer whose feed mappings are being modified.
+   * @param customerId Required. The ID of the customer whose feed mappings are being modified.
    * @param operations Required. The list of operations to perform on individual feed mappings.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */

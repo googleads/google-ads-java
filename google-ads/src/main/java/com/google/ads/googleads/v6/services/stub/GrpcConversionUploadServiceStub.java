@@ -96,12 +96,22 @@ public class GrpcConversionUploadServiceStub extends ConversionUploadServiceStub
         ConversionUploadServiceStubSettings.newBuilder().build(), clientContext, callableFactory);
   }
 
+  /**
+   * Constructs an instance of GrpcConversionUploadServiceStub, using the given settings. This is
+   * protected so that it is easy to make a subclass, but otherwise, the static factory methods
+   * should be preferred.
+   */
   protected GrpcConversionUploadServiceStub(
       ConversionUploadServiceStubSettings settings, ClientContext clientContext)
       throws IOException {
     this(settings, clientContext, new GrpcConversionUploadServiceCallableFactory());
   }
 
+  /**
+   * Constructs an instance of GrpcConversionUploadServiceStub, using the given settings. This is
+   * protected so that it is easy to make a subclass, but otherwise, the static factory methods
+   * should be preferred.
+   */
   protected GrpcConversionUploadServiceStub(
       ConversionUploadServiceStubSettings settings,
       ClientContext clientContext,

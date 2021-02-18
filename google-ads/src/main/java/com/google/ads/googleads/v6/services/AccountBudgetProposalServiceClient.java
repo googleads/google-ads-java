@@ -92,8 +92,7 @@ import javax.annotation.Generated;
  *
  * <p>Please refer to the GitHub repository's samples for more quickstart code snippets.
  */
-@BetaApi
-@Generated("by gapic-generator")
+@Generated("by gapic-generator-java")
 public class AccountBudgetProposalServiceClient implements BackgroundResource {
   private final AccountBudgetProposalServiceSettings settings;
   private final AccountBudgetProposalServiceStub stub;
@@ -154,7 +153,7 @@ public class AccountBudgetProposalServiceClient implements BackgroundResource {
   /**
    * Returns an account-level budget proposal in full detail.
    *
-   * @param resource_name Required. The resource name of the account-level budget proposal to fetch.
+   * @param resourceName Required. The resource name of the account-level budget proposal to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final AccountBudgetProposal getAccountBudgetProposal(
@@ -170,7 +169,7 @@ public class AccountBudgetProposalServiceClient implements BackgroundResource {
   /**
    * Returns an account-level budget proposal in full detail.
    *
-   * @param resource_name Required. The resource name of the account-level budget proposal to fetch.
+   * @param resourceName Required. The resource name of the account-level budget proposal to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final AccountBudgetProposal getAccountBudgetProposal(String resourceName) {
@@ -206,7 +205,7 @@ public class AccountBudgetProposalServiceClient implements BackgroundResource {
   /**
    * Creates, updates, or removes account budget proposals. Operation statuses are returned.
    *
-   * @param customer_id Required. The ID of the customer.
+   * @param customerId Required. The ID of the customer.
    * @param operation Required. The operation to perform on an individual account-level budget
    *     proposal.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails

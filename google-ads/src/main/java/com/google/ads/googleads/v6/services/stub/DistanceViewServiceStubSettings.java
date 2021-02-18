@@ -75,7 +75,6 @@ import org.threeten.bp.Duration;
  *     distanceViewServiceSettingsBuilder.build();
  * }</pre>
  */
-@BetaApi
 @Generated("by gapic-generator-java")
 public class DistanceViewServiceStubSettings extends StubSettings<DistanceViewServiceStubSettings> {
   /** The default scopes of the service. */

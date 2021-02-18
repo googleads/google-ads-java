@@ -75,7 +75,6 @@ import org.threeten.bp.Duration;
  *     domainCategoryServiceSettingsBuilder.build();
  * }</pre>
  */
-@BetaApi
 @Generated("by gapic-generator-java")
 public class DomainCategoryServiceStubSettings
     extends StubSettings<DomainCategoryServiceStubSettings> {

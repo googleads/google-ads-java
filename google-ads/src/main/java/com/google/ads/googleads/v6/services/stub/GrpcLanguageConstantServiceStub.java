@@ -77,12 +77,22 @@ public class GrpcLanguageConstantServiceStub extends LanguageConstantServiceStub
         LanguageConstantServiceStubSettings.newBuilder().build(), clientContext, callableFactory);
   }
 
+  /**
+   * Constructs an instance of GrpcLanguageConstantServiceStub, using the given settings. This is
+   * protected so that it is easy to make a subclass, but otherwise, the static factory methods
+   * should be preferred.
+   */
   protected GrpcLanguageConstantServiceStub(
       LanguageConstantServiceStubSettings settings, ClientContext clientContext)
       throws IOException {
     this(settings, clientContext, new GrpcLanguageConstantServiceCallableFactory());
   }
 
+  /**
+   * Constructs an instance of GrpcLanguageConstantServiceStub, using the given settings. This is
+   * protected so that it is easy to make a subclass, but otherwise, the static factory methods
+   * should be preferred.
+   */
   protected GrpcLanguageConstantServiceStub(
       LanguageConstantServiceStubSettings settings,
       ClientContext clientContext,

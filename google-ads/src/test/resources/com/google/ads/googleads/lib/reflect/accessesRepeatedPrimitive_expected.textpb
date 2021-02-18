@@ -1,0 +1,5 @@
+bars {
+  repeated_primitive_string: "REDACTED"
+  repeated_primitive_string: "REDACTED"
+  repeated_primitive_string: "REDACTED"
+}

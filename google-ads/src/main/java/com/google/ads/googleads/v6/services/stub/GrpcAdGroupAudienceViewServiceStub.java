@@ -80,12 +80,22 @@ public class GrpcAdGroupAudienceViewServiceStub extends AdGroupAudienceViewServi
         callableFactory);
   }
 
+  /**
+   * Constructs an instance of GrpcAdGroupAudienceViewServiceStub, using the given settings. This is
+   * protected so that it is easy to make a subclass, but otherwise, the static factory methods
+   * should be preferred.
+   */
   protected GrpcAdGroupAudienceViewServiceStub(
       AdGroupAudienceViewServiceStubSettings settings, ClientContext clientContext)
       throws IOException {
     this(settings, clientContext, new GrpcAdGroupAudienceViewServiceCallableFactory());
   }
 
+  /**
+   * Constructs an instance of GrpcAdGroupAudienceViewServiceStub, using the given settings. This is
+   * protected so that it is easy to make a subclass, but otherwise, the static factory methods
+   * should be preferred.
+   */
   protected GrpcAdGroupAudienceViewServiceStub(
       AdGroupAudienceViewServiceStubSettings settings,
       ClientContext clientContext,

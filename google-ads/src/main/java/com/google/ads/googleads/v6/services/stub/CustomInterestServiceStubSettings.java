@@ -77,7 +77,6 @@ import org.threeten.bp.Duration;
  *     customInterestServiceSettingsBuilder.build();
  * }</pre>
  */
-@BetaApi
 @Generated("by gapic-generator-java")
 public class CustomInterestServiceStubSettings
     extends StubSettings<CustomInterestServiceStubSettings> {

@@ -75,7 +75,6 @@ import org.threeten.bp.Duration;
  *     genderViewServiceSettingsBuilder.build();
  * }</pre>
  */
-@BetaApi
 @Generated("by gapic-generator-java")
 public class GenderViewServiceStubSettings extends StubSettings<GenderViewServiceStubSettings> {
   /** The default scopes of the service. */

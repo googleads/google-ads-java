@@ -83,8 +83,7 @@ import javax.annotation.Generated;
  *
  * <p>Please refer to the GitHub repository's samples for more quickstart code snippets.
  */
-@BetaApi
-@Generated("by gapic-generator")
+@Generated("by gapic-generator-java")
 public class CampaignCriterionSimulationServiceClient implements BackgroundResource {
   private final CampaignCriterionSimulationServiceSettings settings;
   private final CampaignCriterionSimulationServiceStub stub;
@@ -146,7 +145,7 @@ public class CampaignCriterionSimulationServiceClient implements BackgroundResou
   /**
    * Returns the requested campaign criterion simulation in full detail.
    *
-   * @param resource_name Required. The resource name of the campaign criterion simulation to fetch.
+   * @param resourceName Required. The resource name of the campaign criterion simulation to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final CampaignCriterionSimulation getCampaignCriterionSimulation(
@@ -162,7 +161,7 @@ public class CampaignCriterionSimulationServiceClient implements BackgroundResou
   /**
    * Returns the requested campaign criterion simulation in full detail.
    *
-   * @param resource_name Required. The resource name of the campaign criterion simulation to fetch.
+   * @param resourceName Required. The resource name of the campaign criterion simulation to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final CampaignCriterionSimulation getCampaignCriterionSimulation(String resourceName) {

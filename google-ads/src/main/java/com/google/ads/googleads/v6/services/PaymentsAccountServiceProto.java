@@ -5,82 +5,81 @@ package com.google.ads.googleads.v6.services;
 
 public final class PaymentsAccountServiceProto {
   private PaymentsAccountServiceProto() {}
-
-  public static void registerAllExtensions(com.google.protobuf.ExtensionRegistryLite registry) {}
-
-  public static void registerAllExtensions(com.google.protobuf.ExtensionRegistry registry) {
-    registerAllExtensions((com.google.protobuf.ExtensionRegistryLite) registry);
+  public static void registerAllExtensions(
+      com.google.protobuf.ExtensionRegistryLite registry) {
   }
 
+  public static void registerAllExtensions(
+      com.google.protobuf.ExtensionRegistry registry) {
+    registerAllExtensions(
+        (com.google.protobuf.ExtensionRegistryLite) registry);
+  }
   static final com.google.protobuf.Descriptors.Descriptor
-      internal_static_google_ads_googleads_v6_services_ListPaymentsAccountsRequest_descriptor;
-  static final com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+    internal_static_google_ads_googleads_v6_services_ListPaymentsAccountsRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_google_ads_googleads_v6_services_ListPaymentsAccountsRequest_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-      internal_static_google_ads_googleads_v6_services_ListPaymentsAccountsResponse_descriptor;
-  static final com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+    internal_static_google_ads_googleads_v6_services_ListPaymentsAccountsResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_google_ads_googleads_v6_services_ListPaymentsAccountsResponse_fieldAccessorTable;
 
-  public static com.google.protobuf.Descriptors.FileDescriptor getDescriptor() {
+  public static com.google.protobuf.Descriptors.FileDescriptor
+      getDescriptor() {
     return descriptor;
   }
-
-  private static com.google.protobuf.Descriptors.FileDescriptor descriptor;
-
+  private static  com.google.protobuf.Descriptors.FileDescriptor
+      descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n?google/ads/googleads/v6/services/payme"
-          + "nts_account_service.proto\022 google.ads.go"
-          + "ogleads.v6.services\0328google/ads/googlead"
-          + "s/v6/resources/payments_account.proto\032\034g"
-          + "oogle/api/annotations.proto\032\027google/api/"
-          + "client.proto\032\037google/api/field_behavior."
-          + "proto\"7\n\033ListPaymentsAccountsRequest\022\030\n\013"
-          + "customer_id\030\001 \001(\tB\003\340A\002\"m\n\034ListPaymentsAc"
-          + "countsResponse\022M\n\021payments_accounts\030\001 \003("
-          + "\01322.google.ads.googleads.v6.resources.Pa"
-          + "ymentsAccount2\275\002\n\026PaymentsAccountService"
-          + "\022\333\001\n\024ListPaymentsAccounts\022=.google.ads.g"
-          + "oogleads.v6.services.ListPaymentsAccount"
-          + "sRequest\032>.google.ads.googleads.v6.servi"
-          + "ces.ListPaymentsAccountsResponse\"D\202\323\344\223\0020"
-          + "\022./v6/customers/{customer_id=*}/payments"
-          + "Accounts\332A\013customer_id\032E\312A\030googleads.goo"
-          + "gleapis.com\322A\'https://www.googleapis.com"
-          + "/auth/adwordsB\202\002\n$com.google.ads.googlea"
-          + "ds.v6.servicesB\033PaymentsAccountServicePr"
-          + "otoP\001ZHgoogle.golang.org/genproto/google"
-          + "apis/ads/googleads/v6/services;services\242"
-          + "\002\003GAA\252\002 Google.Ads.GoogleAds.V6.Services"
-          + "\312\002 Google\\Ads\\GoogleAds\\V6\\Services\352\002$Go"
-          + "ogle::Ads::GoogleAds::V6::Servicesb\006prot"
-          + "o3"
+      "\n?google/ads/googleads/v6/services/payme" +
+      "nts_account_service.proto\022 google.ads.go" +
+      "ogleads.v6.services\0328google/ads/googlead" +
+      "s/v6/resources/payments_account.proto\032\034g" +
+      "oogle/api/annotations.proto\032\027google/api/" +
+      "client.proto\032\037google/api/field_behavior." +
+      "proto\"7\n\033ListPaymentsAccountsRequest\022\030\n\013" +
+      "customer_id\030\001 \001(\tB\003\340A\002\"m\n\034ListPaymentsAc" +
+      "countsResponse\022M\n\021payments_accounts\030\001 \003(" +
+      "\01322.google.ads.googleads.v6.resources.Pa" +
+      "ymentsAccount2\275\002\n\026PaymentsAccountService" +
+      "\022\333\001\n\024ListPaymentsAccounts\022=.google.ads.g" +
+      "oogleads.v6.services.ListPaymentsAccount" +
+      "sRequest\032>.google.ads.googleads.v6.servi" +
+      "ces.ListPaymentsAccountsResponse\"D\202\323\344\223\0020" +
+      "\022./v6/customers/{customer_id=*}/payments" +
+      "Accounts\332A\013customer_id\032E\312A\030googleads.goo" +
+      "gleapis.com\322A\'https://www.googleapis.com" +
+      "/auth/adwordsB\202\002\n$com.google.ads.googlea" +
+      "ds.v6.servicesB\033PaymentsAccountServicePr" +
+      "otoP\001ZHgoogle.golang.org/genproto/google" +
+      "apis/ads/googleads/v6/services;services\242" +
+      "\002\003GAA\252\002 Google.Ads.GoogleAds.V6.Services" +
+      "\312\002 Google\\Ads\\GoogleAds\\V6\\Services\352\002$Go" +
+      "ogle::Ads::GoogleAds::V6::Servicesb\006prot" +
+      "o3"
     };
-    descriptor =
-        com.google.protobuf.Descriptors.FileDescriptor.internalBuildGeneratedFileFrom(
-            descriptorData,
-            new com.google.protobuf.Descriptors.FileDescriptor[] {
-              com.google.ads.googleads.v6.resources.PaymentsAccountProto.getDescriptor(),
-              com.google.api.AnnotationsProto.getDescriptor(),
-              com.google.api.ClientProto.getDescriptor(),
-              com.google.api.FieldBehaviorProto.getDescriptor(),
-            });
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
+      .internalBuildGeneratedFileFrom(descriptorData,
+        new com.google.protobuf.Descriptors.FileDescriptor[] {
+          com.google.ads.googleads.v6.resources.PaymentsAccountProto.getDescriptor(),
+          com.google.api.AnnotationsProto.getDescriptor(),
+          com.google.api.ClientProto.getDescriptor(),
+          com.google.api.FieldBehaviorProto.getDescriptor(),
+        });
     internal_static_google_ads_googleads_v6_services_ListPaymentsAccountsRequest_descriptor =
-        getDescriptor().getMessageTypes().get(0);
-    internal_static_google_ads_googleads_v6_services_ListPaymentsAccountsRequest_fieldAccessorTable =
-        new com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-            internal_static_google_ads_googleads_v6_services_ListPaymentsAccountsRequest_descriptor,
-            new java.lang.String[] {
-              "CustomerId",
-            });
+      getDescriptor().getMessageTypes().get(0);
+    internal_static_google_ads_googleads_v6_services_ListPaymentsAccountsRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_google_ads_googleads_v6_services_ListPaymentsAccountsRequest_descriptor,
+        new java.lang.String[] { "CustomerId", });
     internal_static_google_ads_googleads_v6_services_ListPaymentsAccountsResponse_descriptor =
-        getDescriptor().getMessageTypes().get(1);
-    internal_static_google_ads_googleads_v6_services_ListPaymentsAccountsResponse_fieldAccessorTable =
-        new com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-            internal_static_google_ads_googleads_v6_services_ListPaymentsAccountsResponse_descriptor,
-            new java.lang.String[] {
-              "PaymentsAccounts",
-            });
+      getDescriptor().getMessageTypes().get(1);
+    internal_static_google_ads_googleads_v6_services_ListPaymentsAccountsResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_google_ads_googleads_v6_services_ListPaymentsAccountsResponse_descriptor,
+        new java.lang.String[] { "PaymentsAccounts", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.ClientProto.defaultHost);
@@ -88,8 +87,8 @@ public final class PaymentsAccountServiceProto {
     registry.add(com.google.api.AnnotationsProto.http);
     registry.add(com.google.api.ClientProto.methodSignature);
     registry.add(com.google.api.ClientProto.oauthScopes);
-    com.google.protobuf.Descriptors.FileDescriptor.internalUpdateFileDescriptor(
-        descriptor, registry);
+    com.google.protobuf.Descriptors.FileDescriptor
+        .internalUpdateFileDescriptor(descriptor, registry);
     com.google.ads.googleads.v6.resources.PaymentsAccountProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
     com.google.api.ClientProto.getDescriptor();

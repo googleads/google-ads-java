@@ -15,9 +15,7 @@
  */
 
 /**
- * A client to Google Ads API
- *
- * <p>The interfaces provided are listed below, along with usage samples.
+ * The interfaces provided are listed below, along with usage samples.
  *
  * <p>======================= AccountBudgetProposalServiceClient =======================
  *
@@ -380,6 +378,13 @@
  * <p>Service Description: Service to manage customers.
  *
  * <p>Sample for CustomerServiceClient:
+ *
+ * <p>======================= CustomerUserAccessInvitationServiceClient =======================
+ *
+ * <p>Service Description: This service manages the access invitation extended to users for a given
+ * customer.
+ *
+ * <p>Sample for CustomerUserAccessInvitationServiceClient:
  *
  * <p>======================= CustomerUserAccessServiceClient =======================
  *

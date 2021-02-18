@@ -75,7 +75,6 @@ import org.threeten.bp.Duration;
  *     groupPlacementViewServiceSettingsBuilder.build();
  * }</pre>
  */
-@BetaApi
 @Generated("by gapic-generator-java")
 public class GroupPlacementViewServiceStubSettings
     extends StubSettings<GroupPlacementViewServiceStubSettings> {

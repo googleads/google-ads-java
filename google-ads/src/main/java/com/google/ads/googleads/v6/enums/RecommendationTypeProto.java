@@ -30,8 +30,8 @@ public final class RecommendationTypeProto {
     java.lang.String[] descriptorData = {
       "\n7google/ads/googleads/v6/enums/recommen" +
       "dation_type.proto\022\035google.ads.googleads." +
-      "v6.enums\032\034google/api/annotations.proto\"\313" +
-      "\003\n\026RecommendationTypeEnum\"\260\003\n\022Recommenda" +
+      "v6.enums\032\034google/api/annotations.proto\"\345" +
+      "\003\n\026RecommendationTypeEnum\"\312\003\n\022Recommenda" +
       "tionType\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\023" +
       "\n\017CAMPAIGN_BUDGET\020\002\022\013\n\007KEYWORD\020\003\022\013\n\007TEXT" +
       "_AD\020\004\022\025\n\021TARGET_CPA_OPT_IN\020\005\022\037\n\033MAXIMIZE" +
@@ -42,13 +42,14 @@ public final class RecommendationTypeProto {
       "INK_EXTENSION\020\014\022\022\n\016CALL_EXTENSION\020\r\022\026\n\022K" +
       "EYWORD_MATCH_TYPE\020\016\022\026\n\022MOVE_UNUSED_BUDGE" +
       "T\020\017\022\037\n\033FORECASTING_CAMPAIGN_BUDGET\020\020\022\026\n\022" +
-      "TARGET_ROAS_OPT_IN\020\021B\354\001\n!com.google.ads." +
-      "googleads.v6.enumsB\027RecommendationTypePr" +
-      "otoP\001ZBgoogle.golang.org/genproto/google" +
-      "apis/ads/googleads/v6/enums;enums\242\002\003GAA\252" +
-      "\002\035Google.Ads.GoogleAds.V6.Enums\312\002\035Google" +
-      "\\Ads\\GoogleAds\\V6\\Enums\352\002!Google::Ads::G" +
-      "oogleAds::V6::Enumsb\006proto3"
+      "TARGET_ROAS_OPT_IN\020\021\022\030\n\024RESPONSIVE_SEARC" +
+      "H_AD\020\022B\354\001\n!com.google.ads.googleads.v6.e" +
+      "numsB\027RecommendationTypeProtoP\001ZBgoogle." +
+      "golang.org/genproto/googleapis/ads/googl" +
+      "eads/v6/enums;enums\242\002\003GAA\252\002\035Google.Ads.G" +
+      "oogleAds.V6.Enums\312\002\035Google\\Ads\\GoogleAds" +
+      "\\V6\\Enums\352\002!Google::Ads::GoogleAds::V6::" +
+      "Enumsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

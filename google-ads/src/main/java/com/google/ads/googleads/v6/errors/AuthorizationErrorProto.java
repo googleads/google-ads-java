@@ -31,7 +31,7 @@ public final class AuthorizationErrorProto {
       "\n8google/ads/googleads/v6/errors/authori" +
       "zation_error.proto\022\036google.ads.googleads" +
       ".v6.errors\032\034google/api/annotations.proto" +
-      "\"\266\003\n\026AuthorizationErrorEnum\"\233\003\n\022Authoriz" +
+      "\"\332\003\n\026AuthorizationErrorEnum\"\277\003\n\022Authoriz" +
       "ationError\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001" +
       "\022\032\n\026USER_PERMISSION_DENIED\020\002\022$\n DEVELOPE" +
       "R_TOKEN_NOT_ON_ALLOWLIST\020\r\022\036\n\032DEVELOPER_" +
@@ -42,13 +42,14 @@ public final class AuthorizationErrorProto {
       "\034DEVELOPER_TOKEN_NOT_APPROVED\020\n\022=\n9INVAL" +
       "ID_LOGIN_CUSTOMER_ID_SERVING_CUSTOMER_ID" +
       "_COMBINATION\020\013\022\031\n\025SERVICE_ACCESS_DENIED\020" +
-      "\014B\362\001\n\"com.google.ads.googleads.v6.errors" +
-      "B\027AuthorizationErrorProtoP\001ZDgoogle.gola" +
-      "ng.org/genproto/googleapis/ads/googleads" +
-      "/v6/errors;errors\242\002\003GAA\252\002\036Google.Ads.Goo" +
-      "gleAds.V6.Errors\312\002\036Google\\Ads\\GoogleAds\\" +
-      "V6\\Errors\352\002\"Google::Ads::GoogleAds::V6::" +
-      "Errorsb\006proto3"
+      "\014\022\"\n\036ACCESS_DENIED_FOR_ACCOUNT_TYPE\020\031B\362\001" +
+      "\n\"com.google.ads.googleads.v6.errorsB\027Au" +
+      "thorizationErrorProtoP\001ZDgoogle.golang.o" +
+      "rg/genproto/googleapis/ads/googleads/v6/" +
+      "errors;errors\242\002\003GAA\252\002\036Google.Ads.GoogleA" +
+      "ds.V6.Errors\312\002\036Google\\Ads\\GoogleAds\\V6\\E" +
+      "rrors\352\002\"Google::Ads::GoogleAds::V6::Erro" +
+      "rsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

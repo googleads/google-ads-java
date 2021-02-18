@@ -76,7 +76,6 @@ import org.threeten.bp.Duration;
  * MediaFileServiceStubSettings mediaFileServiceSettings = mediaFileServiceSettingsBuilder.build();
  * }</pre>
  */
-@BetaApi
 @Generated("by gapic-generator-java")
 public class MediaFileServiceStubSettings extends StubSettings<MediaFileServiceStubSettings> {
   /** The default scopes of the service. */

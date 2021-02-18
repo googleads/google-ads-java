@@ -83,8 +83,7 @@ import javax.annotation.Generated;
  *
  * <p>Please refer to the GitHub repository's samples for more quickstart code snippets.
  */
-@BetaApi
-@Generated("by gapic-generator")
+@Generated("by gapic-generator-java")
 public class HotelGroupViewServiceClient implements BackgroundResource {
   private final HotelGroupViewServiceSettings settings;
   private final HotelGroupViewServiceStub stub;
@@ -141,7 +140,7 @@ public class HotelGroupViewServiceClient implements BackgroundResource {
   /**
    * Returns the requested Hotel Group View in full detail.
    *
-   * @param resource_name Required. Resource name of the Hotel Group View to fetch.
+   * @param resourceName Required. Resource name of the Hotel Group View to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final HotelGroupView getHotelGroupView(HotelGroupViewName resourceName) {
@@ -156,7 +155,7 @@ public class HotelGroupViewServiceClient implements BackgroundResource {
   /**
    * Returns the requested Hotel Group View in full detail.
    *
-   * @param resource_name Required. Resource name of the Hotel Group View to fetch.
+   * @param resourceName Required. Resource name of the Hotel Group View to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final HotelGroupView getHotelGroupView(String resourceName) {

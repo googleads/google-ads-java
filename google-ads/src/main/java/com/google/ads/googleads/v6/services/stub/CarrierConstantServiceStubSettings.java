@@ -75,7 +75,6 @@ import org.threeten.bp.Duration;
  *     carrierConstantServiceSettingsBuilder.build();
  * }</pre>
  */
-@BetaApi
 @Generated("by gapic-generator-java")
 public class CarrierConstantServiceStubSettings
     extends StubSettings<CarrierConstantServiceStubSettings> {

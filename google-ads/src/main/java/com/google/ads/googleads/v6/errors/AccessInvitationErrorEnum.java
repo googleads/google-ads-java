@@ -125,6 +125,46 @@ private static final long serialVersionUID = 0L;
      * <code>EMAIL_ADDRESS_ALREADY_HAS_ACCESS = 3;</code>
      */
     EMAIL_ADDRESS_ALREADY_HAS_ACCESS(3),
+    /**
+     * <pre>
+     * Invalid invitation status for the operation.
+     * </pre>
+     *
+     * <code>INVALID_INVITATION_STATUS = 4;</code>
+     */
+    INVALID_INVITATION_STATUS(4),
+    /**
+     * <pre>
+     * Email address cannot be like abc+foo&#64;google.com.
+     * </pre>
+     *
+     * <code>GOOGLE_CONSUMER_ACCOUNT_NOT_ALLOWED = 5;</code>
+     */
+    GOOGLE_CONSUMER_ACCOUNT_NOT_ALLOWED(5),
+    /**
+     * <pre>
+     * Invalid invitation id.
+     * </pre>
+     *
+     * <code>INVALID_INVITATION_ID = 6;</code>
+     */
+    INVALID_INVITATION_ID(6),
+    /**
+     * <pre>
+     * Email address already has a pending invitation.
+     * </pre>
+     *
+     * <code>EMAIL_ADDRESS_ALREADY_HAS_PENDING_INVITATION = 7;</code>
+     */
+    EMAIL_ADDRESS_ALREADY_HAS_PENDING_INVITATION(7),
+    /**
+     * <pre>
+     * Pending invitation limit exceeded for the customer.
+     * </pre>
+     *
+     * <code>PENDING_INVITATIONS_LIMIT_EXCEEDED = 8;</code>
+     */
+    PENDING_INVITATIONS_LIMIT_EXCEEDED(8),
     UNRECOGNIZED(-1),
     ;
 
@@ -160,6 +200,46 @@ private static final long serialVersionUID = 0L;
      * <code>EMAIL_ADDRESS_ALREADY_HAS_ACCESS = 3;</code>
      */
     public static final int EMAIL_ADDRESS_ALREADY_HAS_ACCESS_VALUE = 3;
+    /**
+     * <pre>
+     * Invalid invitation status for the operation.
+     * </pre>
+     *
+     * <code>INVALID_INVITATION_STATUS = 4;</code>
+     */
+    public static final int INVALID_INVITATION_STATUS_VALUE = 4;
+    /**
+     * <pre>
+     * Email address cannot be like abc+foo&#64;google.com.
+     * </pre>
+     *
+     * <code>GOOGLE_CONSUMER_ACCOUNT_NOT_ALLOWED = 5;</code>
+     */
+    public static final int GOOGLE_CONSUMER_ACCOUNT_NOT_ALLOWED_VALUE = 5;
+    /**
+     * <pre>
+     * Invalid invitation id.
+     * </pre>
+     *
+     * <code>INVALID_INVITATION_ID = 6;</code>
+     */
+    public static final int INVALID_INVITATION_ID_VALUE = 6;
+    /**
+     * <pre>
+     * Email address already has a pending invitation.
+     * </pre>
+     *
+     * <code>EMAIL_ADDRESS_ALREADY_HAS_PENDING_INVITATION = 7;</code>
+     */
+    public static final int EMAIL_ADDRESS_ALREADY_HAS_PENDING_INVITATION_VALUE = 7;
+    /**
+     * <pre>
+     * Pending invitation limit exceeded for the customer.
+     * </pre>
+     *
+     * <code>PENDING_INVITATIONS_LIMIT_EXCEEDED = 8;</code>
+     */
+    public static final int PENDING_INVITATIONS_LIMIT_EXCEEDED_VALUE = 8;
 
 
     public final int getNumber() {
@@ -190,6 +270,11 @@ private static final long serialVersionUID = 0L;
         case 1: return UNKNOWN;
         case 2: return INVALID_EMAIL_ADDRESS;
         case 3: return EMAIL_ADDRESS_ALREADY_HAS_ACCESS;
+        case 4: return INVALID_INVITATION_STATUS;
+        case 5: return GOOGLE_CONSUMER_ACCOUNT_NOT_ALLOWED;
+        case 6: return INVALID_INVITATION_ID;
+        case 7: return EMAIL_ADDRESS_ALREADY_HAS_PENDING_INVITATION;
+        case 8: return PENDING_INVITATIONS_LIMIT_EXCEEDED;
         default: return null;
       }
     }

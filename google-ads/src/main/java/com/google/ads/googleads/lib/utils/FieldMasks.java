@@ -14,17 +14,14 @@
 
 package com.google.ads.googleads.lib.utils;
 
-import static com.google.protobuf.Descriptors.FieldDescriptor.JavaType.MESSAGE;
-
+import com.google.ads.googleads.lib.reflect.ReflectionFieldAccessor;
 import com.google.common.base.Preconditions;
 import com.google.protobuf.Descriptors.Descriptor;
 import com.google.protobuf.Descriptors.FieldDescriptor;
 import com.google.protobuf.FieldMask;
 import com.google.protobuf.GeneratedMessageV3;
 import com.google.protobuf.Message;
-import java.util.Arrays;
-import java.util.Deque;
-import java.util.LinkedList;
+import java.util.List;
 import java.util.Objects;
 
 /** Utility methods for working with field masks. */
@@ -129,49 +126,14 @@ public class FieldMasks {
    *
    * @param fieldMaskPath The field mask path.
    * @param entity The entity to retrieve values from.
-   * @return the field Object.
+   * @return the values referred to by the path. This is a list since the path may include a
+   *     repeated field, in which case we include all values recursively. If this method doesn't
+   *     throw it will always return a list. The list will be empty if the field isn't present in
+   *     the message.
+   * @throws IllegalStateException if the field doesn't exist in the message.
    */
-  public static <V> V getFieldValue(String fieldMaskPath, Message entity) {
-    Deque<String> fieldMaskParts =
-        new LinkedList<>(Arrays.asList(fieldMaskPath.trim().split("\\.")));
-    Message currentEntity = entity;
-    while (!fieldMaskParts.isEmpty()) {
-      String fieldName = fieldMaskParts.remove();
-      Preconditions.checkNotNull(
-          currentEntity, String.format("Cannot get field value. %s is null", fieldName));
-      Descriptor descriptor = currentEntity.getDescriptorForType();
-      FieldDescriptor childField = descriptor.findFieldByName(fieldName);
-
-      if (childField == null) {
-        throw new IllegalArgumentException(
-            String.format(
-                "Cannot retrieve field value. A matching field was not found after"
-                    + " navigating %s up to %s",
-                fieldMaskPath, fieldName));
-      }
-      Object childValue = currentEntity.getField(childField);
-      if (fieldMaskParts.isEmpty()) {
-        return (V) childValue;
-      } else if (childValue == null) {
-        throw new IllegalArgumentException(
-            String.format(
-                "Attempt to access a sub-field of %s in path %s which is null",
-                fieldName, fieldMaskPath));
-      } else if (childField.isRepeated()) {
-        throw new IllegalArgumentException(
-            String.format(
-                "Cannot access repeated sub-field %s in path %s of %s",
-                fieldName, fieldMaskPath, currentEntity.getClass()));
-      } else if (childField.getJavaType() == MESSAGE) {
-        currentEntity = (Message) childValue;
-      } else {
-        throw new IllegalArgumentException(
-            String.format(
-                "Cannot access a field nested inside a primitive or enum %s in path %s in %s",
-                fieldName, fieldMaskPath, currentEntity.getClass()));
-      }
-    }
-    return (V) currentEntity;
+  public static <T> List<T> getFieldValue(String fieldMaskPath, Message entity) {
+    return new ReflectionFieldAccessor(fieldMaskPath).getValues(entity);
   }
 
   private static String getFieldName(String currentField, FieldDescriptor field) {

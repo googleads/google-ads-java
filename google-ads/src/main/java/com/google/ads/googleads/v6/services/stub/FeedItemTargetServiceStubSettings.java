@@ -77,7 +77,6 @@ import org.threeten.bp.Duration;
  *     feedItemTargetServiceSettingsBuilder.build();
  * }</pre>
  */
-@BetaApi
 @Generated("by gapic-generator-java")
 public class FeedItemTargetServiceStubSettings
     extends StubSettings<FeedItemTargetServiceStubSettings> {

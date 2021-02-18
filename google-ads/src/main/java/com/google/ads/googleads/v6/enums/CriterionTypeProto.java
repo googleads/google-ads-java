@@ -30,8 +30,8 @@ public final class CriterionTypeProto {
     java.lang.String[] descriptorData = {
       "\n2google/ads/googleads/v6/enums/criterio" +
       "n_type.proto\022\035google.ads.googleads.v6.en" +
-      "ums\032\034google/api/annotations.proto\"\351\004\n\021Cr" +
-      "iterionTypeEnum\"\323\004\n\rCriterionType\022\017\n\013UNS" +
+      "ums\032\034google/api/annotations.proto\"\200\005\n\021Cr" +
+      "iterionTypeEnum\"\352\004\n\rCriterionType\022\017\n\013UNS" +
       "PECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\013\n\007KEYWORD\020\002\022\r\n\t" +
       "PLACEMENT\020\003\022\027\n\023MOBILE_APP_CATEGORY\020\004\022\026\n\022" +
       "MOBILE_APPLICATION\020\005\022\n\n\006DEVICE\020\006\022\014\n\010LOCA" +
@@ -46,13 +46,13 @@ public final class CriterionTypeProto {
       "_VERSION\020\032\022\025\n\021APP_PAYMENT_MODEL\020\033\022\021\n\rMOB" +
       "ILE_DEVICE\020\034\022\023\n\017CUSTOM_AFFINITY\020\035\022\021\n\rCUS" +
       "TOM_INTENT\020\036\022\022\n\016LOCATION_GROUP\020\037\022\023\n\017CUST" +
-      "OM_AUDIENCE\020 B\347\001\n!com.google.ads.googlea" +
-      "ds.v6.enumsB\022CriterionTypeProtoP\001ZBgoogl" +
-      "e.golang.org/genproto/googleapis/ads/goo" +
-      "gleads/v6/enums;enums\242\002\003GAA\252\002\035Google.Ads" +
-      ".GoogleAds.V6.Enums\312\002\035Google\\Ads\\GoogleA" +
-      "ds\\V6\\Enums\352\002!Google::Ads::GoogleAds::V6" +
-      "::Enumsb\006proto3"
+      "OM_AUDIENCE\020 \022\025\n\021COMBINED_AUDIENCE\020!B\347\001\n" +
+      "!com.google.ads.googleads.v6.enumsB\022Crit" +
+      "erionTypeProtoP\001ZBgoogle.golang.org/genp" +
+      "roto/googleapis/ads/googleads/v6/enums;e" +
+      "nums\242\002\003GAA\252\002\035Google.Ads.GoogleAds.V6.Enu" +
+      "ms\312\002\035Google\\Ads\\GoogleAds\\V6\\Enums\352\002!Goo" +
+      "gle::Ads::GoogleAds::V6::Enumsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

@@ -31,17 +31,21 @@ public final class AccessInvitationErrorProto {
       "\n<google/ads/googleads/v6/errors/access_" +
       "invitation_error.proto\022\036google.ads.googl" +
       "eads.v6.errors\032\034google/api/annotations.p" +
-      "roto\"\223\001\n\031AccessInvitationErrorEnum\"v\n\025Ac" +
-      "cessInvitationError\022\017\n\013UNSPECIFIED\020\000\022\013\n\007" +
-      "UNKNOWN\020\001\022\031\n\025INVALID_EMAIL_ADDRESS\020\002\022$\n " +
-      "EMAIL_ADDRESS_ALREADY_HAS_ACCESS\020\003B\365\001\n\"c" +
-      "om.google.ads.googleads.v6.errorsB\032Acces" +
-      "sInvitationErrorProtoP\001ZDgoogle.golang.o" +
-      "rg/genproto/googleapis/ads/googleads/v6/" +
-      "errors;errors\242\002\003GAA\252\002\036Google.Ads.GoogleA" +
-      "ds.V6.Errors\312\002\036Google\\Ads\\GoogleAds\\V6\\E" +
-      "rrors\352\002\"Google::Ads::GoogleAds::V6::Erro" +
-      "rsb\006proto3"
+      "roto\"\321\002\n\031AccessInvitationErrorEnum\"\263\002\n\025A" +
+      "ccessInvitationError\022\017\n\013UNSPECIFIED\020\000\022\013\n" +
+      "\007UNKNOWN\020\001\022\031\n\025INVALID_EMAIL_ADDRESS\020\002\022$\n" +
+      " EMAIL_ADDRESS_ALREADY_HAS_ACCESS\020\003\022\035\n\031I" +
+      "NVALID_INVITATION_STATUS\020\004\022\'\n#GOOGLE_CON" +
+      "SUMER_ACCOUNT_NOT_ALLOWED\020\005\022\031\n\025INVALID_I" +
+      "NVITATION_ID\020\006\0220\n,EMAIL_ADDRESS_ALREADY_" +
+      "HAS_PENDING_INVITATION\020\007\022&\n\"PENDING_INVI" +
+      "TATIONS_LIMIT_EXCEEDED\020\010B\365\001\n\"com.google." +
+      "ads.googleads.v6.errorsB\032AccessInvitatio" +
+      "nErrorProtoP\001ZDgoogle.golang.org/genprot" +
+      "o/googleapis/ads/googleads/v6/errors;err" +
+      "ors\242\002\003GAA\252\002\036Google.Ads.GoogleAds.V6.Erro" +
+      "rs\312\002\036Google\\Ads\\GoogleAds\\V6\\Errors\352\002\"Go" +
+      "ogle::Ads::GoogleAds::V6::Errorsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

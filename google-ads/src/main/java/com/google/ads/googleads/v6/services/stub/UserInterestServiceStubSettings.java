@@ -75,7 +75,6 @@ import org.threeten.bp.Duration;
  *     userInterestServiceSettingsBuilder.build();
  * }</pre>
  */
-@BetaApi
 @Generated("by gapic-generator-java")
 public class UserInterestServiceStubSettings extends StubSettings<UserInterestServiceStubSettings> {
   /** The default scopes of the service. */

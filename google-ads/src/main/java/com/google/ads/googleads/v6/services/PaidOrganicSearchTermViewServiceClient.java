@@ -83,8 +83,7 @@ import javax.annotation.Generated;
  *
  * <p>Please refer to the GitHub repository's samples for more quickstart code snippets.
  */
-@BetaApi
-@Generated("by gapic-generator")
+@Generated("by gapic-generator-java")
 public class PaidOrganicSearchTermViewServiceClient implements BackgroundResource {
   private final PaidOrganicSearchTermViewServiceSettings settings;
   private final PaidOrganicSearchTermViewServiceStub stub;
@@ -146,7 +145,7 @@ public class PaidOrganicSearchTermViewServiceClient implements BackgroundResourc
   /**
    * Returns the requested paid organic search term view in full detail.
    *
-   * @param resource_name Required. The resource name of the paid organic search term view to fetch.
+   * @param resourceName Required. The resource name of the paid organic search term view to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final PaidOrganicSearchTermView getPaidOrganicSearchTermView(
@@ -162,7 +161,7 @@ public class PaidOrganicSearchTermViewServiceClient implements BackgroundResourc
   /**
    * Returns the requested paid organic search term view in full detail.
    *
-   * @param resource_name Required. The resource name of the paid organic search term view to fetch.
+   * @param resourceName Required. The resource name of the paid organic search term view to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final PaidOrganicSearchTermView getPaidOrganicSearchTermView(String resourceName) {

@@ -84,8 +84,7 @@ import javax.annotation.Generated;
  *
  * <p>Please refer to the GitHub repository's samples for more quickstart code snippets.
  */
-@BetaApi
-@Generated("by gapic-generator")
+@Generated("by gapic-generator-java")
 public class KeywordPlanServiceClient implements BackgroundResource {
   private final KeywordPlanServiceSettings settings;
   private final KeywordPlanServiceStub stub;
@@ -142,7 +141,7 @@ public class KeywordPlanServiceClient implements BackgroundResource {
   /**
    * Returns the requested plan in full detail.
    *
-   * @param resource_name Required. The resource name of the plan to fetch.
+   * @param resourceName Required. The resource name of the plan to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final KeywordPlan getKeywordPlan(KeywordPlanName resourceName) {
@@ -157,7 +156,7 @@ public class KeywordPlanServiceClient implements BackgroundResource {
   /**
    * Returns the requested plan in full detail.
    *
-   * @param resource_name Required. The resource name of the plan to fetch.
+   * @param resourceName Required. The resource name of the plan to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final KeywordPlan getKeywordPlan(String resourceName) {
@@ -191,7 +190,7 @@ public class KeywordPlanServiceClient implements BackgroundResource {
   /**
    * Creates, updates, or removes keyword plans. Operation statuses are returned.
    *
-   * @param customer_id Required. The ID of the customer whose keyword plans are being modified.
+   * @param customerId Required. The ID of the customer whose keyword plans are being modified.
    * @param operations Required. The list of operations to perform on individual keyword plans.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
@@ -235,7 +234,7 @@ public class KeywordPlanServiceClient implements BackgroundResource {
    * <p>To generate a forecast at a value specified in the plan, use
    * KeywordPlanService.GenerateForecastMetrics.
    *
-   * @param keyword_plan Required. The resource name of the keyword plan to be forecasted.
+   * @param keywordPlan Required. The resource name of the keyword plan to be forecasted.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final GenerateForecastCurveResponse generateForecastCurve(KeywordPlanName keywordPlan) {
@@ -254,7 +253,7 @@ public class KeywordPlanServiceClient implements BackgroundResource {
    * <p>To generate a forecast at a value specified in the plan, use
    * KeywordPlanService.GenerateForecastMetrics.
    *
-   * @param keyword_plan Required. The resource name of the keyword plan to be forecasted.
+   * @param keywordPlan Required. The resource name of the keyword plan to be forecasted.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final GenerateForecastCurveResponse generateForecastCurve(String keywordPlan) {
@@ -302,7 +301,7 @@ public class KeywordPlanServiceClient implements BackgroundResource {
    * <p>(2) The forecast reflects seasonal trends using current and prior traffic patterns. The
    * forecast period of the plan is ignored.
    *
-   * @param keyword_plan Required. The resource name of the keyword plan to be forecasted.
+   * @param keywordPlan Required. The resource name of the keyword plan to be forecasted.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final GenerateForecastTimeSeriesResponse generateForecastTimeSeries(
@@ -322,7 +321,7 @@ public class KeywordPlanServiceClient implements BackgroundResource {
    * <p>(2) The forecast reflects seasonal trends using current and prior traffic patterns. The
    * forecast period of the plan is ignored.
    *
-   * @param keyword_plan Required. The resource name of the keyword plan to be forecasted.
+   * @param keywordPlan Required. The resource name of the keyword plan to be forecasted.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final GenerateForecastTimeSeriesResponse generateForecastTimeSeries(String keywordPlan) {
@@ -366,7 +365,7 @@ public class KeywordPlanServiceClient implements BackgroundResource {
   /**
    * Returns the requested Keyword Plan forecasts.
    *
-   * @param keyword_plan Required. The resource name of the keyword plan to be forecasted.
+   * @param keywordPlan Required. The resource name of the keyword plan to be forecasted.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final GenerateForecastMetricsResponse generateForecastMetrics(
@@ -382,7 +381,7 @@ public class KeywordPlanServiceClient implements BackgroundResource {
   /**
    * Returns the requested Keyword Plan forecasts.
    *
-   * @param keyword_plan Required. The resource name of the keyword plan to be forecasted.
+   * @param keywordPlan Required. The resource name of the keyword plan to be forecasted.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final GenerateForecastMetricsResponse generateForecastMetrics(String keywordPlan) {
@@ -418,7 +417,7 @@ public class KeywordPlanServiceClient implements BackgroundResource {
   /**
    * Returns the requested Keyword Plan historical metrics.
    *
-   * @param keyword_plan Required. The resource name of the keyword plan of which historical metrics
+   * @param keywordPlan Required. The resource name of the keyword plan of which historical metrics
    *     are requested.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
@@ -435,7 +434,7 @@ public class KeywordPlanServiceClient implements BackgroundResource {
   /**
    * Returns the requested Keyword Plan historical metrics.
    *
-   * @param keyword_plan Required. The resource name of the keyword plan of which historical metrics
+   * @param keywordPlan Required. The resource name of the keyword plan of which historical metrics
    *     are requested.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */

@@ -77,7 +77,6 @@ import org.threeten.bp.Duration;
  *     geoTargetConstantServiceSettingsBuilder.build();
  * }</pre>
  */
-@BetaApi
 @Generated("by gapic-generator-java")
 public class GeoTargetConstantServiceStubSettings
     extends StubSettings<GeoTargetConstantServiceStubSettings> {

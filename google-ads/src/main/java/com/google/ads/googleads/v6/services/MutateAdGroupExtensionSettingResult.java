@@ -59,6 +59,19 @@ private static final long serialVersionUID = 0L;
             resourceName_ = s;
             break;
           }
+          case 18: {
+            com.google.ads.googleads.v6.resources.AdGroupExtensionSetting.Builder subBuilder = null;
+            if (adGroupExtensionSetting_ != null) {
+              subBuilder = adGroupExtensionSetting_.toBuilder();
+            }
+            adGroupExtensionSetting_ = input.readMessage(com.google.ads.googleads.v6.resources.AdGroupExtensionSetting.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(adGroupExtensionSetting_);
+              adGroupExtensionSetting_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
           default: {
             if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -137,6 +150,50 @@ private static final long serialVersionUID = 0L;
     }
   }
 
+  public static final int AD_GROUP_EXTENSION_SETTING_FIELD_NUMBER = 2;
+  private com.google.ads.googleads.v6.resources.AdGroupExtensionSetting adGroupExtensionSetting_;
+  /**
+   * <pre>
+   * The mutated AdGroupExtensionSetting with only mutable fields after mutate.
+   * The field will only be returned when response_content_type is set to
+   * "MUTABLE_RESOURCE".
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v6.resources.AdGroupExtensionSetting ad_group_extension_setting = 2;</code>
+   * @return Whether the adGroupExtensionSetting field is set.
+   */
+  @java.lang.Override
+  public boolean hasAdGroupExtensionSetting() {
+    return adGroupExtensionSetting_ != null;
+  }
+  /**
+   * <pre>
+   * The mutated AdGroupExtensionSetting with only mutable fields after mutate.
+   * The field will only be returned when response_content_type is set to
+   * "MUTABLE_RESOURCE".
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v6.resources.AdGroupExtensionSetting ad_group_extension_setting = 2;</code>
+   * @return The adGroupExtensionSetting.
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v6.resources.AdGroupExtensionSetting getAdGroupExtensionSetting() {
+    return adGroupExtensionSetting_ == null ? com.google.ads.googleads.v6.resources.AdGroupExtensionSetting.getDefaultInstance() : adGroupExtensionSetting_;
+  }
+  /**
+   * <pre>
+   * The mutated AdGroupExtensionSetting with only mutable fields after mutate.
+   * The field will only be returned when response_content_type is set to
+   * "MUTABLE_RESOURCE".
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v6.resources.AdGroupExtensionSetting ad_group_extension_setting = 2;</code>
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v6.resources.AdGroupExtensionSettingOrBuilder getAdGroupExtensionSettingOrBuilder() {
+    return getAdGroupExtensionSetting();
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -154,6 +211,9 @@ private static final long serialVersionUID = 0L;
     if (!getResourceNameBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, resourceName_);
     }
+    if (adGroupExtensionSetting_ != null) {
+      output.writeMessage(2, getAdGroupExtensionSetting());
+    }
     unknownFields.writeTo(output);
   }
 
@@ -165,6 +225,10 @@ private static final long serialVersionUID = 0L;
     size = 0;
     if (!getResourceNameBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, resourceName_);
+    }
+    if (adGroupExtensionSetting_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(2, getAdGroupExtensionSetting());
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -183,6 +247,11 @@ private static final long serialVersionUID = 0L;
 
     if (!getResourceName()
         .equals(other.getResourceName())) return false;
+    if (hasAdGroupExtensionSetting() != other.hasAdGroupExtensionSetting()) return false;
+    if (hasAdGroupExtensionSetting()) {
+      if (!getAdGroupExtensionSetting()
+          .equals(other.getAdGroupExtensionSetting())) return false;
+    }
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -196,6 +265,10 @@ private static final long serialVersionUID = 0L;
     hash = (19 * hash) + getDescriptor().hashCode();
     hash = (37 * hash) + RESOURCE_NAME_FIELD_NUMBER;
     hash = (53 * hash) + getResourceName().hashCode();
+    if (hasAdGroupExtensionSetting()) {
+      hash = (37 * hash) + AD_GROUP_EXTENSION_SETTING_FIELD_NUMBER;
+      hash = (53 * hash) + getAdGroupExtensionSetting().hashCode();
+    }
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -335,6 +408,12 @@ private static final long serialVersionUID = 0L;
       super.clear();
       resourceName_ = "";
 
+      if (adGroupExtensionSettingBuilder_ == null) {
+        adGroupExtensionSetting_ = null;
+      } else {
+        adGroupExtensionSetting_ = null;
+        adGroupExtensionSettingBuilder_ = null;
+      }
       return this;
     }
 
@@ -362,6 +441,11 @@ private static final long serialVersionUID = 0L;
     public com.google.ads.googleads.v6.services.MutateAdGroupExtensionSettingResult buildPartial() {
       com.google.ads.googleads.v6.services.MutateAdGroupExtensionSettingResult result = new com.google.ads.googleads.v6.services.MutateAdGroupExtensionSettingResult(this);
       result.resourceName_ = resourceName_;
+      if (adGroupExtensionSettingBuilder_ == null) {
+        result.adGroupExtensionSetting_ = adGroupExtensionSetting_;
+      } else {
+        result.adGroupExtensionSetting_ = adGroupExtensionSettingBuilder_.build();
+      }
       onBuilt();
       return result;
     }
@@ -413,6 +497,9 @@ private static final long serialVersionUID = 0L;
       if (!other.getResourceName().isEmpty()) {
         resourceName_ = other.resourceName_;
         onChanged();
+      }
+      if (other.hasAdGroupExtensionSetting()) {
+        mergeAdGroupExtensionSetting(other.getAdGroupExtensionSetting());
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -537,6 +624,179 @@ private static final long serialVersionUID = 0L;
       resourceName_ = value;
       onChanged();
       return this;
+    }
+
+    private com.google.ads.googleads.v6.resources.AdGroupExtensionSetting adGroupExtensionSetting_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v6.resources.AdGroupExtensionSetting, com.google.ads.googleads.v6.resources.AdGroupExtensionSetting.Builder, com.google.ads.googleads.v6.resources.AdGroupExtensionSettingOrBuilder> adGroupExtensionSettingBuilder_;
+    /**
+     * <pre>
+     * The mutated AdGroupExtensionSetting with only mutable fields after mutate.
+     * The field will only be returned when response_content_type is set to
+     * "MUTABLE_RESOURCE".
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v6.resources.AdGroupExtensionSetting ad_group_extension_setting = 2;</code>
+     * @return Whether the adGroupExtensionSetting field is set.
+     */
+    public boolean hasAdGroupExtensionSetting() {
+      return adGroupExtensionSettingBuilder_ != null || adGroupExtensionSetting_ != null;
+    }
+    /**
+     * <pre>
+     * The mutated AdGroupExtensionSetting with only mutable fields after mutate.
+     * The field will only be returned when response_content_type is set to
+     * "MUTABLE_RESOURCE".
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v6.resources.AdGroupExtensionSetting ad_group_extension_setting = 2;</code>
+     * @return The adGroupExtensionSetting.
+     */
+    public com.google.ads.googleads.v6.resources.AdGroupExtensionSetting getAdGroupExtensionSetting() {
+      if (adGroupExtensionSettingBuilder_ == null) {
+        return adGroupExtensionSetting_ == null ? com.google.ads.googleads.v6.resources.AdGroupExtensionSetting.getDefaultInstance() : adGroupExtensionSetting_;
+      } else {
+        return adGroupExtensionSettingBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * The mutated AdGroupExtensionSetting with only mutable fields after mutate.
+     * The field will only be returned when response_content_type is set to
+     * "MUTABLE_RESOURCE".
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v6.resources.AdGroupExtensionSetting ad_group_extension_setting = 2;</code>
+     */
+    public Builder setAdGroupExtensionSetting(com.google.ads.googleads.v6.resources.AdGroupExtensionSetting value) {
+      if (adGroupExtensionSettingBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        adGroupExtensionSetting_ = value;
+        onChanged();
+      } else {
+        adGroupExtensionSettingBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The mutated AdGroupExtensionSetting with only mutable fields after mutate.
+     * The field will only be returned when response_content_type is set to
+     * "MUTABLE_RESOURCE".
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v6.resources.AdGroupExtensionSetting ad_group_extension_setting = 2;</code>
+     */
+    public Builder setAdGroupExtensionSetting(
+        com.google.ads.googleads.v6.resources.AdGroupExtensionSetting.Builder builderForValue) {
+      if (adGroupExtensionSettingBuilder_ == null) {
+        adGroupExtensionSetting_ = builderForValue.build();
+        onChanged();
+      } else {
+        adGroupExtensionSettingBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The mutated AdGroupExtensionSetting with only mutable fields after mutate.
+     * The field will only be returned when response_content_type is set to
+     * "MUTABLE_RESOURCE".
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v6.resources.AdGroupExtensionSetting ad_group_extension_setting = 2;</code>
+     */
+    public Builder mergeAdGroupExtensionSetting(com.google.ads.googleads.v6.resources.AdGroupExtensionSetting value) {
+      if (adGroupExtensionSettingBuilder_ == null) {
+        if (adGroupExtensionSetting_ != null) {
+          adGroupExtensionSetting_ =
+            com.google.ads.googleads.v6.resources.AdGroupExtensionSetting.newBuilder(adGroupExtensionSetting_).mergeFrom(value).buildPartial();
+        } else {
+          adGroupExtensionSetting_ = value;
+        }
+        onChanged();
+      } else {
+        adGroupExtensionSettingBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The mutated AdGroupExtensionSetting with only mutable fields after mutate.
+     * The field will only be returned when response_content_type is set to
+     * "MUTABLE_RESOURCE".
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v6.resources.AdGroupExtensionSetting ad_group_extension_setting = 2;</code>
+     */
+    public Builder clearAdGroupExtensionSetting() {
+      if (adGroupExtensionSettingBuilder_ == null) {
+        adGroupExtensionSetting_ = null;
+        onChanged();
+      } else {
+        adGroupExtensionSetting_ = null;
+        adGroupExtensionSettingBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The mutated AdGroupExtensionSetting with only mutable fields after mutate.
+     * The field will only be returned when response_content_type is set to
+     * "MUTABLE_RESOURCE".
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v6.resources.AdGroupExtensionSetting ad_group_extension_setting = 2;</code>
+     */
+    public com.google.ads.googleads.v6.resources.AdGroupExtensionSetting.Builder getAdGroupExtensionSettingBuilder() {
+      
+      onChanged();
+      return getAdGroupExtensionSettingFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * The mutated AdGroupExtensionSetting with only mutable fields after mutate.
+     * The field will only be returned when response_content_type is set to
+     * "MUTABLE_RESOURCE".
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v6.resources.AdGroupExtensionSetting ad_group_extension_setting = 2;</code>
+     */
+    public com.google.ads.googleads.v6.resources.AdGroupExtensionSettingOrBuilder getAdGroupExtensionSettingOrBuilder() {
+      if (adGroupExtensionSettingBuilder_ != null) {
+        return adGroupExtensionSettingBuilder_.getMessageOrBuilder();
+      } else {
+        return adGroupExtensionSetting_ == null ?
+            com.google.ads.googleads.v6.resources.AdGroupExtensionSetting.getDefaultInstance() : adGroupExtensionSetting_;
+      }
+    }
+    /**
+     * <pre>
+     * The mutated AdGroupExtensionSetting with only mutable fields after mutate.
+     * The field will only be returned when response_content_type is set to
+     * "MUTABLE_RESOURCE".
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v6.resources.AdGroupExtensionSetting ad_group_extension_setting = 2;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v6.resources.AdGroupExtensionSetting, com.google.ads.googleads.v6.resources.AdGroupExtensionSetting.Builder, com.google.ads.googleads.v6.resources.AdGroupExtensionSettingOrBuilder> 
+        getAdGroupExtensionSettingFieldBuilder() {
+      if (adGroupExtensionSettingBuilder_ == null) {
+        adGroupExtensionSettingBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.ads.googleads.v6.resources.AdGroupExtensionSetting, com.google.ads.googleads.v6.resources.AdGroupExtensionSetting.Builder, com.google.ads.googleads.v6.resources.AdGroupExtensionSettingOrBuilder>(
+                getAdGroupExtensionSetting(),
+                getParentForChildren(),
+                isClean());
+        adGroupExtensionSetting_ = null;
+      }
+      return adGroupExtensionSettingBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

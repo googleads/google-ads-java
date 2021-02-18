@@ -84,8 +84,7 @@ import javax.annotation.Generated;
  *
  * <p>Please refer to the GitHub repository's samples for more quickstart code snippets.
  */
-@BetaApi
-@Generated("by gapic-generator")
+@Generated("by gapic-generator-java")
 public class MerchantCenterLinkServiceClient implements BackgroundResource {
   private final MerchantCenterLinkServiceSettings settings;
   private final MerchantCenterLinkServiceStub stub;
@@ -144,8 +143,8 @@ public class MerchantCenterLinkServiceClient implements BackgroundResource {
   /**
    * Returns Merchant Center links available for this customer.
    *
-   * @param customer_id Required. The ID of the customer onto which to apply the Merchant Center
-   *     link list operation.
+   * @param customerId Required. The ID of the customer onto which to apply the Merchant Center link
+   *     list operation.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final ListMerchantCenterLinksResponse listMerchantCenterLinks(String customerId) {
@@ -181,7 +180,7 @@ public class MerchantCenterLinkServiceClient implements BackgroundResource {
   /**
    * Returns the Merchant Center link in full detail.
    *
-   * @param resource_name Required. Resource name of the Merchant Center link.
+   * @param resourceName Required. Resource name of the Merchant Center link.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final MerchantCenterLink getMerchantCenterLink(MerchantCenterLinkName resourceName) {
@@ -196,7 +195,7 @@ public class MerchantCenterLinkServiceClient implements BackgroundResource {
   /**
    * Returns the Merchant Center link in full detail.
    *
-   * @param resource_name Required. Resource name of the Merchant Center link.
+   * @param resourceName Required. Resource name of the Merchant Center link.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final MerchantCenterLink getMerchantCenterLink(String resourceName) {
@@ -231,7 +230,7 @@ public class MerchantCenterLinkServiceClient implements BackgroundResource {
   /**
    * Updates status or removes a Merchant Center link.
    *
-   * @param customer_id Required. The ID of the customer being modified.
+   * @param customerId Required. The ID of the customer being modified.
    * @param operation Required. The operation to perform on the link
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */

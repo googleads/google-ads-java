@@ -75,7 +75,6 @@ import org.threeten.bp.Duration;
  *     adScheduleViewServiceSettingsBuilder.build();
  * }</pre>
  */
-@BetaApi
 @Generated("by gapic-generator-java")
 public class AdScheduleViewServiceStubSettings
     extends StubSettings<AdScheduleViewServiceStubSettings> {

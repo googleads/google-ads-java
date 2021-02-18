@@ -190,12 +190,22 @@ public class GrpcCampaignExperimentServiceStub extends CampaignExperimentService
         CampaignExperimentServiceStubSettings.newBuilder().build(), clientContext, callableFactory);
   }
 
+  /**
+   * Constructs an instance of GrpcCampaignExperimentServiceStub, using the given settings. This is
+   * protected so that it is easy to make a subclass, but otherwise, the static factory methods
+   * should be preferred.
+   */
   protected GrpcCampaignExperimentServiceStub(
       CampaignExperimentServiceStubSettings settings, ClientContext clientContext)
       throws IOException {
     this(settings, clientContext, new GrpcCampaignExperimentServiceCallableFactory());
   }
 
+  /**
+   * Constructs an instance of GrpcCampaignExperimentServiceStub, using the given settings. This is
+   * protected so that it is easy to make a subclass, but otherwise, the static factory methods
+   * should be preferred.
+   */
   protected GrpcCampaignExperimentServiceStub(
       CampaignExperimentServiceStubSettings settings,
       ClientContext clientContext,

@@ -75,7 +75,6 @@ import org.threeten.bp.Duration;
  *     productGroupViewServiceSettingsBuilder.build();
  * }</pre>
  */
-@BetaApi
 @Generated("by gapic-generator-java")
 public class ProductGroupViewServiceStubSettings
     extends StubSettings<ProductGroupViewServiceStubSettings> {

@@ -213,6 +213,15 @@ private static final long serialVersionUID = 0L;
      * <code>SERVICE_ACCESS_DENIED = 12;</code>
      */
     SERVICE_ACCESS_DENIED(12),
+    /**
+     * <pre>
+     * The customer (or login customer) isn't in Google Ads. It belongs to
+     * another ads system.
+     * </pre>
+     *
+     * <code>ACCESS_DENIED_FOR_ACCOUNT_TYPE = 25;</code>
+     */
+    ACCESS_DENIED_FOR_ACCOUNT_TYPE(25),
     UNRECOGNIZED(-1),
     ;
 
@@ -336,6 +345,15 @@ private static final long serialVersionUID = 0L;
      * <code>SERVICE_ACCESS_DENIED = 12;</code>
      */
     public static final int SERVICE_ACCESS_DENIED_VALUE = 12;
+    /**
+     * <pre>
+     * The customer (or login customer) isn't in Google Ads. It belongs to
+     * another ads system.
+     * </pre>
+     *
+     * <code>ACCESS_DENIED_FOR_ACCOUNT_TYPE = 25;</code>
+     */
+    public static final int ACCESS_DENIED_FOR_ACCOUNT_TYPE_VALUE = 25;
 
 
     public final int getNumber() {
@@ -376,6 +394,7 @@ private static final long serialVersionUID = 0L;
         case 10: return DEVELOPER_TOKEN_NOT_APPROVED;
         case 11: return INVALID_LOGIN_CUSTOMER_ID_SERVING_CUSTOMER_ID_COMBINATION;
         case 12: return SERVICE_ACCESS_DENIED;
+        case 25: return ACCESS_DENIED_FOR_ACCOUNT_TYPE;
         default: return null;
       }
     }

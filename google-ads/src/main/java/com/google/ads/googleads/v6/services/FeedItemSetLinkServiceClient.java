@@ -84,8 +84,7 @@ import javax.annotation.Generated;
  *
  * <p>Please refer to the GitHub repository's samples for more quickstart code snippets.
  */
-@BetaApi
-@Generated("by gapic-generator")
+@Generated("by gapic-generator-java")
 public class FeedItemSetLinkServiceClient implements BackgroundResource {
   private final FeedItemSetLinkServiceSettings settings;
   private final FeedItemSetLinkServiceStub stub;
@@ -143,7 +142,7 @@ public class FeedItemSetLinkServiceClient implements BackgroundResource {
   /**
    * Returns the requested feed item set link in full detail.
    *
-   * @param resource_name Required. The resource name of the feed item set link to fetch.
+   * @param resourceName Required. The resource name of the feed item set link to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final FeedItemSetLink getFeedItemSetLink(FeedItemSetLinkName resourceName) {
@@ -158,7 +157,7 @@ public class FeedItemSetLinkServiceClient implements BackgroundResource {
   /**
    * Returns the requested feed item set link in full detail.
    *
-   * @param resource_name Required. The resource name of the feed item set link to fetch.
+   * @param resourceName Required. The resource name of the feed item set link to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final FeedItemSetLink getFeedItemSetLink(String resourceName) {
@@ -193,7 +192,7 @@ public class FeedItemSetLinkServiceClient implements BackgroundResource {
   /**
    * Creates, updates, or removes feed item set links.
    *
-   * @param customer_id Required. The ID of the customer whose feed item set links are being
+   * @param customerId Required. The ID of the customer whose feed item set links are being
    *     modified.
    * @param operations Required. The list of operations to perform on individual feed item set
    *     links.

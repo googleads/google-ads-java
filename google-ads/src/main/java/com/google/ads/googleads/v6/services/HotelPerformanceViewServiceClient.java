@@ -83,8 +83,7 @@ import javax.annotation.Generated;
  *
  * <p>Please refer to the GitHub repository's samples for more quickstart code snippets.
  */
-@BetaApi
-@Generated("by gapic-generator")
+@Generated("by gapic-generator-java")
 public class HotelPerformanceViewServiceClient implements BackgroundResource {
   private final HotelPerformanceViewServiceSettings settings;
   private final HotelPerformanceViewServiceStub stub;
@@ -144,7 +143,7 @@ public class HotelPerformanceViewServiceClient implements BackgroundResource {
   /**
    * Returns the requested Hotel Performance View in full detail.
    *
-   * @param resource_name Required. Resource name of the Hotel Performance View to fetch.
+   * @param resourceName Required. Resource name of the Hotel Performance View to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final HotelPerformanceView getHotelPerformanceView(HotelPerformanceViewName resourceName) {
@@ -159,7 +158,7 @@ public class HotelPerformanceViewServiceClient implements BackgroundResource {
   /**
    * Returns the requested Hotel Performance View in full detail.
    *
-   * @param resource_name Required. Resource name of the Hotel Performance View to fetch.
+   * @param resourceName Required. Resource name of the Hotel Performance View to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final HotelPerformanceView getHotelPerformanceView(String resourceName) {

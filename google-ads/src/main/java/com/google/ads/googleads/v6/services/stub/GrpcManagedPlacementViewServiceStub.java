@@ -80,12 +80,22 @@ public class GrpcManagedPlacementViewServiceStub extends ManagedPlacementViewSer
         callableFactory);
   }
 
+  /**
+   * Constructs an instance of GrpcManagedPlacementViewServiceStub, using the given settings. This
+   * is protected so that it is easy to make a subclass, but otherwise, the static factory methods
+   * should be preferred.
+   */
   protected GrpcManagedPlacementViewServiceStub(
       ManagedPlacementViewServiceStubSettings settings, ClientContext clientContext)
       throws IOException {
     this(settings, clientContext, new GrpcManagedPlacementViewServiceCallableFactory());
   }
 
+  /**
+   * Constructs an instance of GrpcManagedPlacementViewServiceStub, using the given settings. This
+   * is protected so that it is easy to make a subclass, but otherwise, the static factory methods
+   * should be preferred.
+   */
   protected GrpcManagedPlacementViewServiceStub(
       ManagedPlacementViewServiceStubSettings settings,
       ClientContext clientContext,

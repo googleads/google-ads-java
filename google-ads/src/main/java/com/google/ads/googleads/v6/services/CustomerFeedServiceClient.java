@@ -84,8 +84,7 @@ import javax.annotation.Generated;
  *
  * <p>Please refer to the GitHub repository's samples for more quickstart code snippets.
  */
-@BetaApi
-@Generated("by gapic-generator")
+@Generated("by gapic-generator-java")
 public class CustomerFeedServiceClient implements BackgroundResource {
   private final CustomerFeedServiceSettings settings;
   private final CustomerFeedServiceStub stub;
@@ -142,7 +141,7 @@ public class CustomerFeedServiceClient implements BackgroundResource {
   /**
    * Returns the requested customer feed in full detail.
    *
-   * @param resource_name Required. The resource name of the customer feed to fetch.
+   * @param resourceName Required. The resource name of the customer feed to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final CustomerFeed getCustomerFeed(CustomerFeedName resourceName) {
@@ -157,7 +156,7 @@ public class CustomerFeedServiceClient implements BackgroundResource {
   /**
    * Returns the requested customer feed in full detail.
    *
-   * @param resource_name Required. The resource name of the customer feed to fetch.
+   * @param resourceName Required. The resource name of the customer feed to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final CustomerFeed getCustomerFeed(String resourceName) {
@@ -191,7 +190,7 @@ public class CustomerFeedServiceClient implements BackgroundResource {
   /**
    * Creates, updates, or removes customer feeds. Operation statuses are returned.
    *
-   * @param customer_id Required. The ID of the customer whose customer feeds are being modified.
+   * @param customerId Required. The ID of the customer whose customer feeds are being modified.
    * @param operations Required. The list of operations to perform on individual customer feeds.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */

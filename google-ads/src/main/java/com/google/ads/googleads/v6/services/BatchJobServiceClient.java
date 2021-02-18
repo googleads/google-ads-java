@@ -97,8 +97,7 @@ import javax.annotation.Generated;
  *
  * <p>Please refer to the GitHub repository's samples for more quickstart code snippets.
  */
-@BetaApi
-@Generated("by gapic-generator")
+@Generated("by gapic-generator-java")
 public class BatchJobServiceClient implements BackgroundResource {
   private final BatchJobServiceSettings settings;
   private final BatchJobServiceStub stub;
@@ -166,7 +165,7 @@ public class BatchJobServiceClient implements BackgroundResource {
   /**
    * Mutates a batch job.
    *
-   * @param customer_id Required. The ID of the customer for which to create a batch job.
+   * @param customerId Required. The ID of the customer for which to create a batch job.
    * @param operation Required. The operation to perform on an individual batch job.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
@@ -206,7 +205,7 @@ public class BatchJobServiceClient implements BackgroundResource {
   /**
    * Returns the batch job.
    *
-   * @param resource_name Required. The resource name of the batch job to get.
+   * @param resourceName Required. The resource name of the batch job to get.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final BatchJob getBatchJob(BatchJobName resourceName) {
@@ -221,7 +220,7 @@ public class BatchJobServiceClient implements BackgroundResource {
   /**
    * Returns the batch job.
    *
-   * @param resource_name Required. The resource name of the batch job to get.
+   * @param resourceName Required. The resource name of the batch job to get.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final BatchJob getBatchJob(String resourceName) {
@@ -255,7 +254,7 @@ public class BatchJobServiceClient implements BackgroundResource {
   /**
    * Returns the results of the batch job. The job must be done. Supports standard list paging.
    *
-   * @param resource_name Required. The resource name of the batch job whose results are being
+   * @param resourceName Required. The resource name of the batch job whose results are being
    *     listed.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
@@ -271,7 +270,7 @@ public class BatchJobServiceClient implements BackgroundResource {
   /**
    * Returns the results of the batch job. The job must be done. Supports standard list paging.
    *
-   * @param resource_name Required. The resource name of the batch job whose results are being
+   * @param resourceName Required. The resource name of the batch job whose results are being
    *     listed.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
@@ -323,7 +322,7 @@ public class BatchJobServiceClient implements BackgroundResource {
    * operation will not contain errors or a response. Instead, use ListBatchJobResults to get the
    * results of the job.
    *
-   * @param resource_name Required. The resource name of the BatchJob to run.
+   * @param resourceName Required. The resource name of the BatchJob to run.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final OperationFuture<Empty, BatchJob.BatchJobMetadata> runBatchJobAsync(
@@ -343,7 +342,7 @@ public class BatchJobServiceClient implements BackgroundResource {
    * operation will not contain errors or a response. Instead, use ListBatchJobResults to get the
    * results of the job.
    *
-   * @param resource_name Required. The resource name of the BatchJob to run.
+   * @param resourceName Required. The resource name of the BatchJob to run.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final OperationFuture<Empty, BatchJob.BatchJobMetadata> runBatchJobAsync(
@@ -402,8 +401,8 @@ public class BatchJobServiceClient implements BackgroundResource {
   /**
    * Add operations to the batch job.
    *
-   * @param resource_name Required. The resource name of the batch job.
-   * @param mutate_operations Required. The list of mutates being added.
+   * @param resourceName Required. The resource name of the batch job.
+   * @param mutateOperations Required. The list of mutates being added.
    *     <p>Operations can use negative integers as temp ids to signify dependencies between
    *     entities created in this batch job. For example, a customer with id = 1234 can create a
    *     campaign and an ad group in that same campaign by creating a campaign in the first
@@ -426,8 +425,8 @@ public class BatchJobServiceClient implements BackgroundResource {
   /**
    * Add operations to the batch job.
    *
-   * @param resource_name Required. The resource name of the batch job.
-   * @param mutate_operations Required. The list of mutates being added.
+   * @param resourceName Required. The resource name of the batch job.
+   * @param mutateOperations Required. The list of mutates being added.
    *     <p>Operations can use negative integers as temp ids to signify dependencies between
    *     entities created in this batch job. For example, a customer with id = 1234 can create a
    *     campaign and an ad group in that same campaign by creating a campaign in the first
@@ -450,12 +449,12 @@ public class BatchJobServiceClient implements BackgroundResource {
   /**
    * Add operations to the batch job.
    *
-   * @param resource_name Required. The resource name of the batch job.
-   * @param sequence_token A token used to enforce sequencing.
+   * @param resourceName Required. The resource name of the batch job.
+   * @param sequenceToken A token used to enforce sequencing.
    *     <p>The first AddBatchJobOperations request for a batch job should not set sequence_token.
    *     Subsequent requests must set sequence_token to the value of next_sequence_token received in
    *     the previous AddBatchJobOperations response.
-   * @param mutate_operations Required. The list of mutates being added.
+   * @param mutateOperations Required. The list of mutates being added.
    *     <p>Operations can use negative integers as temp ids to signify dependencies between
    *     entities created in this batch job. For example, a customer with id = 1234 can create a
    *     campaign and an ad group in that same campaign by creating a campaign in the first
@@ -479,12 +478,12 @@ public class BatchJobServiceClient implements BackgroundResource {
   /**
    * Add operations to the batch job.
    *
-   * @param resource_name Required. The resource name of the batch job.
-   * @param sequence_token A token used to enforce sequencing.
+   * @param resourceName Required. The resource name of the batch job.
+   * @param sequenceToken A token used to enforce sequencing.
    *     <p>The first AddBatchJobOperations request for a batch job should not set sequence_token.
    *     Subsequent requests must set sequence_token to the value of next_sequence_token received in
    *     the previous AddBatchJobOperations response.
-   * @param mutate_operations Required. The list of mutates being added.
+   * @param mutateOperations Required. The list of mutates being added.
    *     <p>Operations can use negative integers as temp ids to signify dependencies between
    *     entities created in this batch job. For example, a customer with id = 1234 can create a
    *     campaign and an ad group in that same campaign by creating a campaign in the first

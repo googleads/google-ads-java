@@ -77,7 +77,6 @@ import org.threeten.bp.Duration;
  *     customAudienceServiceSettingsBuilder.build();
  * }</pre>
  */
-@BetaApi
 @Generated("by gapic-generator-java")
 public class CustomAudienceServiceStubSettings
     extends StubSettings<CustomAudienceServiceStubSettings> {

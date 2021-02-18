@@ -14,8 +14,6 @@
 
 package com.google.ads.googleads.lib.logging.scrub;
 
-import com.google.ads.googleads.lib.utils.messageproxy.MessageEditor;
-import com.google.common.collect.ImmutableList;
 import com.google.protobuf.Message;
 
 /**
@@ -25,18 +23,12 @@ import com.google.protobuf.Message;
  *
  * <p>Every RPC calls this class at least twice (once each for request + response). Be extremely
  * careful not to increase latency. This class is an exception to the "premature optimization is the
- * root of all evil" rule-of-thumb; we should be extremely proactive about optimizing performance
- * here.
+ * root of all evil" rule-of-thumb; we should be proactive about optimizing performance here.
  */
-public class LogScrubber implements MessageEditor<Object> {
+public class LogScrubber {
 
   public static final String MASK_PATTERN = "REDACTED";
-  private final ImmutableList<MessageEditor<Message>> scrubbers =
-      ImmutableList.of(
-          new SearchResponsePiiScrubber(),
-          new GetCustomerUserAccessPiiScrubber(),
-          new GetFeedPiiScrubber(),
-          new CreateCustomerClientRequestScrubber());
+  private static final ReflectionScrubber SCRUBBER = new ReflectionScrubber();
   private static final LogScrubber INSTANCE = new LogScrubber();
 
   private LogScrubber() {}
@@ -45,32 +37,21 @@ public class LogScrubber implements MessageEditor<Object> {
     return INSTANCE;
   }
 
-  @Override
+  /**
+   * Scrubs a given input. Only supports Message instances, all other objects are returned
+   * unmodified.
+   */
   public Object edit(Object input) {
-    // Provides a convenient interface for interceptors which deal with Objects rather than
-    // Messages.
-    if (Message.class.isAssignableFrom(input.getClass())) {
+    if (input != null && Message.class.isAssignableFrom(input.getClass())) {
       return scrub((Message) input);
     } else {
       return input;
     }
   }
 
-  @Override
-  public boolean supports(Object input) {
-    // Supports all messages. Rather than the O(n) check for all scrubbers, we will check them
-    // during the scrub.
-    return true;
-  }
-
   private Message scrub(Message message) {
-    for (MessageEditor<Message> scrubber : scrubbers) {
-      if (scrubber.supports(message)) {
-        // Returns early, we know that other scrubbers do not need to run on this message since
-        // scrubbers are partitioned by message type - there is never more than one scrubber per
-        // message type.
-        return scrubber.edit(message);
-      }
+    if (SCRUBBER.supports(message)) {
+      return SCRUBBER.scrub(message);
     }
     return message;
   }

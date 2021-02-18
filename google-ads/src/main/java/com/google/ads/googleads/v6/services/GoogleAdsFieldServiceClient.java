@@ -92,8 +92,7 @@ import javax.annotation.Generated;
  *
  * <p>Please refer to the GitHub repository's samples for more quickstart code snippets.
  */
-@BetaApi
-@Generated("by gapic-generator")
+@Generated("by gapic-generator-java")
 public class GoogleAdsFieldServiceClient implements BackgroundResource {
   private final GoogleAdsFieldServiceSettings settings;
   private final GoogleAdsFieldServiceStub stub;
@@ -150,7 +149,7 @@ public class GoogleAdsFieldServiceClient implements BackgroundResource {
   /**
    * Returns just the requested field.
    *
-   * @param resource_name Required. The resource name of the field to get.
+   * @param resourceName Required. The resource name of the field to get.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final GoogleAdsField getGoogleAdsField(GoogleAdsFieldName resourceName) {
@@ -165,7 +164,7 @@ public class GoogleAdsFieldServiceClient implements BackgroundResource {
   /**
    * Returns just the requested field.
    *
-   * @param resource_name Required. The resource name of the field to get.
+   * @param resourceName Required. The resource name of the field to get.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final GoogleAdsField getGoogleAdsField(String resourceName) {

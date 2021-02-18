@@ -710,7 +710,7 @@ public interface CampaignOrBuilder extends
 
   /**
    * <pre>
-   * The date when campaign ended.
+   * The last day of the campaign.
    * </pre>
    *
    * <code>string end_date = 64;</code>
@@ -719,7 +719,7 @@ public interface CampaignOrBuilder extends
   boolean hasEndDate();
   /**
    * <pre>
-   * The date when campaign ended.
+   * The last day of the campaign.
    * </pre>
    *
    * <code>string end_date = 64;</code>
@@ -728,7 +728,7 @@ public interface CampaignOrBuilder extends
   java.lang.String getEndDate();
   /**
    * <pre>
-   * The date when campaign ended.
+   * The last day of the campaign.
    * </pre>
    *
    * <code>string end_date = 64;</code>

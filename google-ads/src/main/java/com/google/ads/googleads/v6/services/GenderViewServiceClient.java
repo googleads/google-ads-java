@@ -83,8 +83,7 @@ import javax.annotation.Generated;
  *
  * <p>Please refer to the GitHub repository's samples for more quickstart code snippets.
  */
-@BetaApi
-@Generated("by gapic-generator")
+@Generated("by gapic-generator-java")
 public class GenderViewServiceClient implements BackgroundResource {
   private final GenderViewServiceSettings settings;
   private final GenderViewServiceStub stub;
@@ -141,7 +140,7 @@ public class GenderViewServiceClient implements BackgroundResource {
   /**
    * Returns the requested gender view in full detail.
    *
-   * @param resource_name Required. The resource name of the gender view to fetch.
+   * @param resourceName Required. The resource name of the gender view to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final GenderView getGenderView(GenderViewName resourceName) {
@@ -156,7 +155,7 @@ public class GenderViewServiceClient implements BackgroundResource {
   /**
    * Returns the requested gender view in full detail.
    *
-   * @param resource_name Required. The resource name of the gender view to fetch.
+   * @param resourceName Required. The resource name of the gender view to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final GenderView getGenderView(String resourceName) {

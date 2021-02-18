@@ -83,8 +83,7 @@ import javax.annotation.Generated;
  *
  * <p>Please refer to the GitHub repository's samples for more quickstart code snippets.
  */
-@BetaApi
-@Generated("by gapic-generator")
+@Generated("by gapic-generator-java")
 public class GeographicViewServiceClient implements BackgroundResource {
   private final GeographicViewServiceSettings settings;
   private final GeographicViewServiceStub stub;
@@ -141,7 +140,7 @@ public class GeographicViewServiceClient implements BackgroundResource {
   /**
    * Returns the requested geographic view in full detail.
    *
-   * @param resource_name Required. The resource name of the geographic view to fetch.
+   * @param resourceName Required. The resource name of the geographic view to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final GeographicView getGeographicView(GeographicViewName resourceName) {
@@ -156,7 +155,7 @@ public class GeographicViewServiceClient implements BackgroundResource {
   /**
    * Returns the requested geographic view in full detail.
    *
-   * @param resource_name Required. The resource name of the geographic view to fetch.
+   * @param resourceName Required. The resource name of the geographic view to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final GeographicView getGeographicView(String resourceName) {

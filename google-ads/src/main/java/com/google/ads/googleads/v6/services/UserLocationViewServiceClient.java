@@ -83,8 +83,7 @@ import javax.annotation.Generated;
  *
  * <p>Please refer to the GitHub repository's samples for more quickstart code snippets.
  */
-@BetaApi
-@Generated("by gapic-generator")
+@Generated("by gapic-generator-java")
 public class UserLocationViewServiceClient implements BackgroundResource {
   private final UserLocationViewServiceSettings settings;
   private final UserLocationViewServiceStub stub;
@@ -142,7 +141,7 @@ public class UserLocationViewServiceClient implements BackgroundResource {
   /**
    * Returns the requested user location view in full detail.
    *
-   * @param resource_name Required. The resource name of the user location view to fetch.
+   * @param resourceName Required. The resource name of the user location view to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final UserLocationView getUserLocationView(UserLocationViewName resourceName) {
@@ -157,7 +156,7 @@ public class UserLocationViewServiceClient implements BackgroundResource {
   /**
    * Returns the requested user location view in full detail.
    *
-   * @param resource_name Required. The resource name of the user location view to fetch.
+   * @param resourceName Required. The resource name of the user location view to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final UserLocationView getUserLocationView(String resourceName) {

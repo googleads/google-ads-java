@@ -77,7 +77,6 @@ import org.threeten.bp.Duration;
  *     keywordPlanAdGroupServiceSettingsBuilder.build();
  * }</pre>
  */
-@BetaApi
 @Generated("by gapic-generator-java")
 public class KeywordPlanAdGroupServiceStubSettings
     extends StubSettings<KeywordPlanAdGroupServiceStubSettings> {

@@ -84,8 +84,7 @@ import javax.annotation.Generated;
  *
  * <p>Please refer to the GitHub repository's samples for more quickstart code snippets.
  */
-@BetaApi
-@Generated("by gapic-generator")
+@Generated("by gapic-generator-java")
 public class AdGroupFeedServiceClient implements BackgroundResource {
   private final AdGroupFeedServiceSettings settings;
   private final AdGroupFeedServiceStub stub;
@@ -142,7 +141,7 @@ public class AdGroupFeedServiceClient implements BackgroundResource {
   /**
    * Returns the requested ad group feed in full detail.
    *
-   * @param resource_name Required. The resource name of the ad group feed to fetch.
+   * @param resourceName Required. The resource name of the ad group feed to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final AdGroupFeed getAdGroupFeed(AdGroupFeedName resourceName) {
@@ -157,7 +156,7 @@ public class AdGroupFeedServiceClient implements BackgroundResource {
   /**
    * Returns the requested ad group feed in full detail.
    *
-   * @param resource_name Required. The resource name of the ad group feed to fetch.
+   * @param resourceName Required. The resource name of the ad group feed to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final AdGroupFeed getAdGroupFeed(String resourceName) {
@@ -191,7 +190,7 @@ public class AdGroupFeedServiceClient implements BackgroundResource {
   /**
    * Creates, updates, or removes ad group feeds. Operation statuses are returned.
    *
-   * @param customer_id Required. The ID of the customer whose ad group feeds are being modified.
+   * @param customerId Required. The ID of the customer whose ad group feeds are being modified.
    * @param operations Required. The list of operations to perform on individual ad group feeds.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */

@@ -75,7 +75,6 @@ import org.threeten.bp.Duration;
  *     displayKeywordViewServiceSettingsBuilder.build();
  * }</pre>
  */
-@BetaApi
 @Generated("by gapic-generator-java")
 public class DisplayKeywordViewServiceStubSettings
     extends StubSettings<DisplayKeywordViewServiceStubSettings> {

@@ -83,8 +83,7 @@ import javax.annotation.Generated;
  *
  * <p>Please refer to the GitHub repository's samples for more quickstart code snippets.
  */
-@BetaApi
-@Generated("by gapic-generator")
+@Generated("by gapic-generator-java")
 public class UserInterestServiceClient implements BackgroundResource {
   private final UserInterestServiceSettings settings;
   private final UserInterestServiceStub stub;
@@ -141,7 +140,7 @@ public class UserInterestServiceClient implements BackgroundResource {
   /**
    * Returns the requested user interest in full detail
    *
-   * @param resource_name Required. Resource name of the UserInterest to fetch.
+   * @param resourceName Required. Resource name of the UserInterest to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final UserInterest getUserInterest(UserInterestName resourceName) {
@@ -156,7 +155,7 @@ public class UserInterestServiceClient implements BackgroundResource {
   /**
    * Returns the requested user interest in full detail
    *
-   * @param resource_name Required. Resource name of the UserInterest to fetch.
+   * @param resourceName Required. Resource name of the UserInterest to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final UserInterest getUserInterest(String resourceName) {

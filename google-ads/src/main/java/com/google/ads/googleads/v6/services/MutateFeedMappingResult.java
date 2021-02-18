@@ -59,6 +59,19 @@ private static final long serialVersionUID = 0L;
             resourceName_ = s;
             break;
           }
+          case 18: {
+            com.google.ads.googleads.v6.resources.FeedMapping.Builder subBuilder = null;
+            if (feedMapping_ != null) {
+              subBuilder = feedMapping_.toBuilder();
+            }
+            feedMapping_ = input.readMessage(com.google.ads.googleads.v6.resources.FeedMapping.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(feedMapping_);
+              feedMapping_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
           default: {
             if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -137,6 +150,50 @@ private static final long serialVersionUID = 0L;
     }
   }
 
+  public static final int FEED_MAPPING_FIELD_NUMBER = 2;
+  private com.google.ads.googleads.v6.resources.FeedMapping feedMapping_;
+  /**
+   * <pre>
+   * The mutated feed mapping with only mutable fields after mutate. The field
+   * will only be returned when response_content_type is set to
+   * "MUTABLE_RESOURCE".
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v6.resources.FeedMapping feed_mapping = 2;</code>
+   * @return Whether the feedMapping field is set.
+   */
+  @java.lang.Override
+  public boolean hasFeedMapping() {
+    return feedMapping_ != null;
+  }
+  /**
+   * <pre>
+   * The mutated feed mapping with only mutable fields after mutate. The field
+   * will only be returned when response_content_type is set to
+   * "MUTABLE_RESOURCE".
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v6.resources.FeedMapping feed_mapping = 2;</code>
+   * @return The feedMapping.
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v6.resources.FeedMapping getFeedMapping() {
+    return feedMapping_ == null ? com.google.ads.googleads.v6.resources.FeedMapping.getDefaultInstance() : feedMapping_;
+  }
+  /**
+   * <pre>
+   * The mutated feed mapping with only mutable fields after mutate. The field
+   * will only be returned when response_content_type is set to
+   * "MUTABLE_RESOURCE".
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v6.resources.FeedMapping feed_mapping = 2;</code>
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v6.resources.FeedMappingOrBuilder getFeedMappingOrBuilder() {
+    return getFeedMapping();
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -154,6 +211,9 @@ private static final long serialVersionUID = 0L;
     if (!getResourceNameBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, resourceName_);
     }
+    if (feedMapping_ != null) {
+      output.writeMessage(2, getFeedMapping());
+    }
     unknownFields.writeTo(output);
   }
 
@@ -165,6 +225,10 @@ private static final long serialVersionUID = 0L;
     size = 0;
     if (!getResourceNameBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, resourceName_);
+    }
+    if (feedMapping_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(2, getFeedMapping());
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -183,6 +247,11 @@ private static final long serialVersionUID = 0L;
 
     if (!getResourceName()
         .equals(other.getResourceName())) return false;
+    if (hasFeedMapping() != other.hasFeedMapping()) return false;
+    if (hasFeedMapping()) {
+      if (!getFeedMapping()
+          .equals(other.getFeedMapping())) return false;
+    }
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -196,6 +265,10 @@ private static final long serialVersionUID = 0L;
     hash = (19 * hash) + getDescriptor().hashCode();
     hash = (37 * hash) + RESOURCE_NAME_FIELD_NUMBER;
     hash = (53 * hash) + getResourceName().hashCode();
+    if (hasFeedMapping()) {
+      hash = (37 * hash) + FEED_MAPPING_FIELD_NUMBER;
+      hash = (53 * hash) + getFeedMapping().hashCode();
+    }
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -335,6 +408,12 @@ private static final long serialVersionUID = 0L;
       super.clear();
       resourceName_ = "";
 
+      if (feedMappingBuilder_ == null) {
+        feedMapping_ = null;
+      } else {
+        feedMapping_ = null;
+        feedMappingBuilder_ = null;
+      }
       return this;
     }
 
@@ -362,6 +441,11 @@ private static final long serialVersionUID = 0L;
     public com.google.ads.googleads.v6.services.MutateFeedMappingResult buildPartial() {
       com.google.ads.googleads.v6.services.MutateFeedMappingResult result = new com.google.ads.googleads.v6.services.MutateFeedMappingResult(this);
       result.resourceName_ = resourceName_;
+      if (feedMappingBuilder_ == null) {
+        result.feedMapping_ = feedMapping_;
+      } else {
+        result.feedMapping_ = feedMappingBuilder_.build();
+      }
       onBuilt();
       return result;
     }
@@ -413,6 +497,9 @@ private static final long serialVersionUID = 0L;
       if (!other.getResourceName().isEmpty()) {
         resourceName_ = other.resourceName_;
         onChanged();
+      }
+      if (other.hasFeedMapping()) {
+        mergeFeedMapping(other.getFeedMapping());
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -537,6 +624,179 @@ private static final long serialVersionUID = 0L;
       resourceName_ = value;
       onChanged();
       return this;
+    }
+
+    private com.google.ads.googleads.v6.resources.FeedMapping feedMapping_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v6.resources.FeedMapping, com.google.ads.googleads.v6.resources.FeedMapping.Builder, com.google.ads.googleads.v6.resources.FeedMappingOrBuilder> feedMappingBuilder_;
+    /**
+     * <pre>
+     * The mutated feed mapping with only mutable fields after mutate. The field
+     * will only be returned when response_content_type is set to
+     * "MUTABLE_RESOURCE".
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v6.resources.FeedMapping feed_mapping = 2;</code>
+     * @return Whether the feedMapping field is set.
+     */
+    public boolean hasFeedMapping() {
+      return feedMappingBuilder_ != null || feedMapping_ != null;
+    }
+    /**
+     * <pre>
+     * The mutated feed mapping with only mutable fields after mutate. The field
+     * will only be returned when response_content_type is set to
+     * "MUTABLE_RESOURCE".
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v6.resources.FeedMapping feed_mapping = 2;</code>
+     * @return The feedMapping.
+     */
+    public com.google.ads.googleads.v6.resources.FeedMapping getFeedMapping() {
+      if (feedMappingBuilder_ == null) {
+        return feedMapping_ == null ? com.google.ads.googleads.v6.resources.FeedMapping.getDefaultInstance() : feedMapping_;
+      } else {
+        return feedMappingBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * The mutated feed mapping with only mutable fields after mutate. The field
+     * will only be returned when response_content_type is set to
+     * "MUTABLE_RESOURCE".
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v6.resources.FeedMapping feed_mapping = 2;</code>
+     */
+    public Builder setFeedMapping(com.google.ads.googleads.v6.resources.FeedMapping value) {
+      if (feedMappingBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        feedMapping_ = value;
+        onChanged();
+      } else {
+        feedMappingBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The mutated feed mapping with only mutable fields after mutate. The field
+     * will only be returned when response_content_type is set to
+     * "MUTABLE_RESOURCE".
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v6.resources.FeedMapping feed_mapping = 2;</code>
+     */
+    public Builder setFeedMapping(
+        com.google.ads.googleads.v6.resources.FeedMapping.Builder builderForValue) {
+      if (feedMappingBuilder_ == null) {
+        feedMapping_ = builderForValue.build();
+        onChanged();
+      } else {
+        feedMappingBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The mutated feed mapping with only mutable fields after mutate. The field
+     * will only be returned when response_content_type is set to
+     * "MUTABLE_RESOURCE".
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v6.resources.FeedMapping feed_mapping = 2;</code>
+     */
+    public Builder mergeFeedMapping(com.google.ads.googleads.v6.resources.FeedMapping value) {
+      if (feedMappingBuilder_ == null) {
+        if (feedMapping_ != null) {
+          feedMapping_ =
+            com.google.ads.googleads.v6.resources.FeedMapping.newBuilder(feedMapping_).mergeFrom(value).buildPartial();
+        } else {
+          feedMapping_ = value;
+        }
+        onChanged();
+      } else {
+        feedMappingBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The mutated feed mapping with only mutable fields after mutate. The field
+     * will only be returned when response_content_type is set to
+     * "MUTABLE_RESOURCE".
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v6.resources.FeedMapping feed_mapping = 2;</code>
+     */
+    public Builder clearFeedMapping() {
+      if (feedMappingBuilder_ == null) {
+        feedMapping_ = null;
+        onChanged();
+      } else {
+        feedMapping_ = null;
+        feedMappingBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The mutated feed mapping with only mutable fields after mutate. The field
+     * will only be returned when response_content_type is set to
+     * "MUTABLE_RESOURCE".
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v6.resources.FeedMapping feed_mapping = 2;</code>
+     */
+    public com.google.ads.googleads.v6.resources.FeedMapping.Builder getFeedMappingBuilder() {
+      
+      onChanged();
+      return getFeedMappingFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * The mutated feed mapping with only mutable fields after mutate. The field
+     * will only be returned when response_content_type is set to
+     * "MUTABLE_RESOURCE".
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v6.resources.FeedMapping feed_mapping = 2;</code>
+     */
+    public com.google.ads.googleads.v6.resources.FeedMappingOrBuilder getFeedMappingOrBuilder() {
+      if (feedMappingBuilder_ != null) {
+        return feedMappingBuilder_.getMessageOrBuilder();
+      } else {
+        return feedMapping_ == null ?
+            com.google.ads.googleads.v6.resources.FeedMapping.getDefaultInstance() : feedMapping_;
+      }
+    }
+    /**
+     * <pre>
+     * The mutated feed mapping with only mutable fields after mutate. The field
+     * will only be returned when response_content_type is set to
+     * "MUTABLE_RESOURCE".
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v6.resources.FeedMapping feed_mapping = 2;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v6.resources.FeedMapping, com.google.ads.googleads.v6.resources.FeedMapping.Builder, com.google.ads.googleads.v6.resources.FeedMappingOrBuilder> 
+        getFeedMappingFieldBuilder() {
+      if (feedMappingBuilder_ == null) {
+        feedMappingBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.ads.googleads.v6.resources.FeedMapping, com.google.ads.googleads.v6.resources.FeedMapping.Builder, com.google.ads.googleads.v6.resources.FeedMappingOrBuilder>(
+                getFeedMapping(),
+                getParentForChildren(),
+                isClean());
+        feedMapping_ = null;
+      }
+      return feedMappingBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

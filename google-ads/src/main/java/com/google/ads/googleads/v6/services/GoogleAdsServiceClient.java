@@ -91,8 +91,7 @@ import javax.annotation.Generated;
  *
  * <p>Please refer to the GitHub repository's samples for more quickstart code snippets.
  */
-@BetaApi
-@Generated("by gapic-generator")
+@Generated("by gapic-generator-java")
 public class GoogleAdsServiceClient implements BackgroundResource {
   private final GoogleAdsServiceSettings settings;
   private final GoogleAdsServiceStub stub;
@@ -149,7 +148,7 @@ public class GoogleAdsServiceClient implements BackgroundResource {
   /**
    * Returns all rows that match the search query.
    *
-   * @param customer_id Required. The ID of the customer being queried.
+   * @param customerId Required. The ID of the customer being queried.
    * @param query Required. The query string.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
@@ -247,8 +246,8 @@ public class GoogleAdsServiceClient implements BackgroundResource {
    * in resource type is a new call. For example, mutating 10 campaigns then 10 ad groups is like 2
    * calls, while mutating 1 campaign, 1 ad group, 1 campaign, 1 ad group is like 4 calls.
    *
-   * @param customer_id Required. The ID of the customer whose resources are being modified.
-   * @param mutate_operations Required. The list of operations to perform on individual resources.
+   * @param customerId Required. The ID of the customer whose resources are being modified.
+   * @param mutateOperations Required. The list of operations to perform on individual resources.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final MutateGoogleAdsResponse mutate(

@@ -75,7 +75,6 @@ import org.threeten.bp.Duration;
  *     locationViewServiceSettingsBuilder.build();
  * }</pre>
  */
-@BetaApi
 @Generated("by gapic-generator-java")
 public class LocationViewServiceStubSettings extends StubSettings<LocationViewServiceStubSettings> {
   /** The default scopes of the service. */

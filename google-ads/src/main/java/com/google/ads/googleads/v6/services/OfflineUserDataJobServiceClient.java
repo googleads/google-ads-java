@@ -89,8 +89,7 @@ import javax.annotation.Generated;
  *
  * <p>Please refer to the GitHub repository's samples for more quickstart code snippets.
  */
-@BetaApi
-@Generated("by gapic-generator")
+@Generated("by gapic-generator-java")
 public class OfflineUserDataJobServiceClient implements BackgroundResource {
   private final OfflineUserDataJobServiceSettings settings;
   private final OfflineUserDataJobServiceStub stub;
@@ -160,7 +159,7 @@ public class OfflineUserDataJobServiceClient implements BackgroundResource {
   /**
    * Creates an offline user data job.
    *
-   * @param customer_id Required. The ID of the customer for which to create an offline user data
+   * @param customerId Required. The ID of the customer for which to create an offline user data
    *     job.
    * @param job Required. The offline user data job to be created.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
@@ -199,7 +198,7 @@ public class OfflineUserDataJobServiceClient implements BackgroundResource {
   /**
    * Returns the offline user data job.
    *
-   * @param resource_name Required. The resource name of the OfflineUserDataJob to get.
+   * @param resourceName Required. The resource name of the OfflineUserDataJob to get.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final OfflineUserDataJob getOfflineUserDataJob(OfflineUserDataJobName resourceName) {
@@ -214,7 +213,7 @@ public class OfflineUserDataJobServiceClient implements BackgroundResource {
   /**
    * Returns the offline user data job.
    *
-   * @param resource_name Required. The resource name of the OfflineUserDataJob to get.
+   * @param resourceName Required. The resource name of the OfflineUserDataJob to get.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final OfflineUserDataJob getOfflineUserDataJob(String resourceName) {
@@ -249,7 +248,7 @@ public class OfflineUserDataJobServiceClient implements BackgroundResource {
   /**
    * Adds operations to the offline user data job.
    *
-   * @param resource_name Required. The resource name of the OfflineUserDataJob.
+   * @param resourceName Required. The resource name of the OfflineUserDataJob.
    * @param operations Required. The list of operations to be done.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
@@ -267,7 +266,7 @@ public class OfflineUserDataJobServiceClient implements BackgroundResource {
   /**
    * Adds operations to the offline user data job.
    *
-   * @param resource_name Required. The resource name of the OfflineUserDataJob.
+   * @param resourceName Required. The resource name of the OfflineUserDataJob.
    * @param operations Required. The list of operations to be done.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
@@ -312,7 +311,7 @@ public class OfflineUserDataJobServiceClient implements BackgroundResource {
    * <p>When finished, the long running operation will contain the processing result or failure
    * information, if any.
    *
-   * @param resource_name Required. The resource name of the OfflineUserDataJob to run.
+   * @param resourceName Required. The resource name of the OfflineUserDataJob to run.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final OperationFuture<Empty, Empty> runOfflineUserDataJobAsync(
@@ -331,7 +330,7 @@ public class OfflineUserDataJobServiceClient implements BackgroundResource {
    * <p>When finished, the long running operation will contain the processing result or failure
    * information, if any.
    *
-   * @param resource_name Required. The resource name of the OfflineUserDataJob to run.
+   * @param resourceName Required. The resource name of the OfflineUserDataJob to run.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final OperationFuture<Empty, Empty> runOfflineUserDataJobAsync(String resourceName) {

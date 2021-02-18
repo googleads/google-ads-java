@@ -93,11 +93,21 @@ public class GrpcSharedCriterionServiceStub extends SharedCriterionServiceStub {
         SharedCriterionServiceStubSettings.newBuilder().build(), clientContext, callableFactory);
   }
 
+  /**
+   * Constructs an instance of GrpcSharedCriterionServiceStub, using the given settings. This is
+   * protected so that it is easy to make a subclass, but otherwise, the static factory methods
+   * should be preferred.
+   */
   protected GrpcSharedCriterionServiceStub(
       SharedCriterionServiceStubSettings settings, ClientContext clientContext) throws IOException {
     this(settings, clientContext, new GrpcSharedCriterionServiceCallableFactory());
   }
 
+  /**
+   * Constructs an instance of GrpcSharedCriterionServiceStub, using the given settings. This is
+   * protected so that it is easy to make a subclass, but otherwise, the static factory methods
+   * should be preferred.
+   */
   protected GrpcSharedCriterionServiceStub(
       SharedCriterionServiceStubSettings settings,
       ClientContext clientContext,

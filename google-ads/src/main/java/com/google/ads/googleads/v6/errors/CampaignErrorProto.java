@@ -30,8 +30,8 @@ public final class CampaignErrorProto {
     java.lang.String[] descriptorData = {
       "\n3google/ads/googleads/v6/errors/campaig" +
       "n_error.proto\022\036google.ads.googleads.v6.e" +
-      "rrors\032\034google/api/annotations.proto\"\256\r\n\021" +
-      "CampaignErrorEnum\"\230\r\n\rCampaignError\022\017\n\013U" +
+      "rrors\032\034google/api/annotations.proto\"\312\r\n\021" +
+      "CampaignErrorEnum\"\264\r\n\rCampaignError\022\017\n\013U" +
       "NSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022!\n\035CANNOT_TARG" +
       "ET_CONTENT_NETWORK\020\003\022 \n\034CANNOT_TARGET_SE" +
       "ARCH_NETWORK\020\004\0226\n2CANNOT_TARGET_SEARCH_N" +
@@ -73,13 +73,14 @@ public final class CampaignErrorProto {
       "_SUPPORTED_FOR_CAMPAIGN_TYPE\020*\0223\n/MERCHA" +
       "NT_NOT_ALLOWED_FOR_COMPARISON_LISTING_AD" +
       "S\020+\022#\n\037INSUFFICIENT_APP_INSTALLS_COUNT\020," +
-      "\022\032\n\026SENSITIVE_CATEGORY_APP\020-B\355\001\n\"com.goo" +
-      "gle.ads.googleads.v6.errorsB\022CampaignErr" +
-      "orProtoP\001ZDgoogle.golang.org/genproto/go" +
-      "ogleapis/ads/googleads/v6/errors;errors\242" +
-      "\002\003GAA\252\002\036Google.Ads.GoogleAds.V6.Errors\312\002" +
-      "\036Google\\Ads\\GoogleAds\\V6\\Errors\352\002\"Google" +
-      "::Ads::GoogleAds::V6::Errorsb\006proto3"
+      "\022\032\n\026SENSITIVE_CATEGORY_APP\020-\022\032\n\026HEC_AGRE" +
+      "EMENT_REQUIRED\020.B\355\001\n\"com.google.ads.goog" +
+      "leads.v6.errorsB\022CampaignErrorProtoP\001ZDg" +
+      "oogle.golang.org/genproto/googleapis/ads" +
+      "/googleads/v6/errors;errors\242\002\003GAA\252\002\036Goog" +
+      "le.Ads.GoogleAds.V6.Errors\312\002\036Google\\Ads\\" +
+      "GoogleAds\\V6\\Errors\352\002\"Google::Ads::Googl" +
+      "eAds::V6::Errorsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

@@ -83,8 +83,7 @@ import javax.annotation.Generated;
  *
  * <p>Please refer to the GitHub repository's samples for more quickstart code snippets.
  */
-@BetaApi
-@Generated("by gapic-generator")
+@Generated("by gapic-generator-java")
 public class MobileAppCategoryConstantServiceClient implements BackgroundResource {
   private final MobileAppCategoryConstantServiceSettings settings;
   private final MobileAppCategoryConstantServiceStub stub;
@@ -146,7 +145,7 @@ public class MobileAppCategoryConstantServiceClient implements BackgroundResourc
   /**
    * Returns the requested mobile app category constant.
    *
-   * @param resource_name Required. Resource name of the mobile app category constant to fetch.
+   * @param resourceName Required. Resource name of the mobile app category constant to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final MobileAppCategoryConstant getMobileAppCategoryConstant(
@@ -162,7 +161,7 @@ public class MobileAppCategoryConstantServiceClient implements BackgroundResourc
   /**
    * Returns the requested mobile app category constant.
    *
-   * @param resource_name Required. Resource name of the mobile app category constant to fetch.
+   * @param resourceName Required. Resource name of the mobile app category constant to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final MobileAppCategoryConstant getMobileAppCategoryConstant(String resourceName) {

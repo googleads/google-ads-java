@@ -21,6 +21,7 @@ private static final long serialVersionUID = 0L;
   }
   private YoutubeVideoAsset() {
     youtubeVideoId_ = "";
+    youtubeVideoTitle_ = "";
   }
 
   @java.lang.Override
@@ -58,6 +59,12 @@ private static final long serialVersionUID = 0L;
             java.lang.String s = input.readStringRequireUtf8();
             bitField0_ |= 0x00000001;
             youtubeVideoId_ = s;
+            break;
+          }
+          case 26: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            youtubeVideoTitle_ = s;
             break;
           }
           default: {
@@ -154,6 +161,52 @@ private static final long serialVersionUID = 0L;
     }
   }
 
+  public static final int YOUTUBE_VIDEO_TITLE_FIELD_NUMBER = 3;
+  private volatile java.lang.Object youtubeVideoTitle_;
+  /**
+   * <pre>
+   * YouTube video title.
+   * </pre>
+   *
+   * <code>string youtube_video_title = 3;</code>
+   * @return The youtubeVideoTitle.
+   */
+  @java.lang.Override
+  public java.lang.String getYoutubeVideoTitle() {
+    java.lang.Object ref = youtubeVideoTitle_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      youtubeVideoTitle_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * YouTube video title.
+   * </pre>
+   *
+   * <code>string youtube_video_title = 3;</code>
+   * @return The bytes for youtubeVideoTitle.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getYoutubeVideoTitleBytes() {
+    java.lang.Object ref = youtubeVideoTitle_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      youtubeVideoTitle_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -171,6 +224,9 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x00000001) != 0)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 2, youtubeVideoId_);
     }
+    if (!getYoutubeVideoTitleBytes().isEmpty()) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 3, youtubeVideoTitle_);
+    }
     unknownFields.writeTo(output);
   }
 
@@ -182,6 +238,9 @@ private static final long serialVersionUID = 0L;
     size = 0;
     if (((bitField0_ & 0x00000001) != 0)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, youtubeVideoId_);
+    }
+    if (!getYoutubeVideoTitleBytes().isEmpty()) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, youtubeVideoTitle_);
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -203,6 +262,8 @@ private static final long serialVersionUID = 0L;
       if (!getYoutubeVideoId()
           .equals(other.getYoutubeVideoId())) return false;
     }
+    if (!getYoutubeVideoTitle()
+        .equals(other.getYoutubeVideoTitle())) return false;
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -218,6 +279,8 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + YOUTUBE_VIDEO_ID_FIELD_NUMBER;
       hash = (53 * hash) + getYoutubeVideoId().hashCode();
     }
+    hash = (37 * hash) + YOUTUBE_VIDEO_TITLE_FIELD_NUMBER;
+    hash = (53 * hash) + getYoutubeVideoTitle().hashCode();
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -357,6 +420,8 @@ private static final long serialVersionUID = 0L;
       super.clear();
       youtubeVideoId_ = "";
       bitField0_ = (bitField0_ & ~0x00000001);
+      youtubeVideoTitle_ = "";
+
       return this;
     }
 
@@ -389,6 +454,7 @@ private static final long serialVersionUID = 0L;
         to_bitField0_ |= 0x00000001;
       }
       result.youtubeVideoId_ = youtubeVideoId_;
+      result.youtubeVideoTitle_ = youtubeVideoTitle_;
       result.bitField0_ = to_bitField0_;
       onBuilt();
       return result;
@@ -441,6 +507,10 @@ private static final long serialVersionUID = 0L;
       if (other.hasYoutubeVideoId()) {
         bitField0_ |= 0x00000001;
         youtubeVideoId_ = other.youtubeVideoId_;
+        onChanged();
+      }
+      if (!other.getYoutubeVideoTitle().isEmpty()) {
+        youtubeVideoTitle_ = other.youtubeVideoTitle_;
         onChanged();
       }
       this.mergeUnknownFields(other.unknownFields);
@@ -582,6 +652,102 @@ private static final long serialVersionUID = 0L;
   checkByteStringIsUtf8(value);
       bitField0_ |= 0x00000001;
       youtubeVideoId_ = value;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object youtubeVideoTitle_ = "";
+    /**
+     * <pre>
+     * YouTube video title.
+     * </pre>
+     *
+     * <code>string youtube_video_title = 3;</code>
+     * @return The youtubeVideoTitle.
+     */
+    public java.lang.String getYoutubeVideoTitle() {
+      java.lang.Object ref = youtubeVideoTitle_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        youtubeVideoTitle_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * YouTube video title.
+     * </pre>
+     *
+     * <code>string youtube_video_title = 3;</code>
+     * @return The bytes for youtubeVideoTitle.
+     */
+    public com.google.protobuf.ByteString
+        getYoutubeVideoTitleBytes() {
+      java.lang.Object ref = youtubeVideoTitle_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        youtubeVideoTitle_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * YouTube video title.
+     * </pre>
+     *
+     * <code>string youtube_video_title = 3;</code>
+     * @param value The youtubeVideoTitle to set.
+     * @return This builder for chaining.
+     */
+    public Builder setYoutubeVideoTitle(
+        java.lang.String value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
+      youtubeVideoTitle_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * YouTube video title.
+     * </pre>
+     *
+     * <code>string youtube_video_title = 3;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearYoutubeVideoTitle() {
+      
+      youtubeVideoTitle_ = getDefaultInstance().getYoutubeVideoTitle();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * YouTube video title.
+     * </pre>
+     *
+     * <code>string youtube_video_title = 3;</code>
+     * @param value The bytes for youtubeVideoTitle to set.
+     * @return This builder for chaining.
+     */
+    public Builder setYoutubeVideoTitleBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
+      youtubeVideoTitle_ = value;
       onChanged();
       return this;
     }

@@ -84,8 +84,7 @@ import javax.annotation.Generated;
  *
  * <p>Please refer to the GitHub repository's samples for more quickstart code snippets.
  */
-@BetaApi
-@Generated("by gapic-generator")
+@Generated("by gapic-generator-java")
 public class CampaignSharedSetServiceClient implements BackgroundResource {
   private final CampaignSharedSetServiceSettings settings;
   private final CampaignSharedSetServiceStub stub;
@@ -144,7 +143,7 @@ public class CampaignSharedSetServiceClient implements BackgroundResource {
   /**
    * Returns the requested campaign shared set in full detail.
    *
-   * @param resource_name Required. The resource name of the campaign shared set to fetch.
+   * @param resourceName Required. The resource name of the campaign shared set to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final CampaignSharedSet getCampaignSharedSet(CampaignSharedSetName resourceName) {
@@ -159,7 +158,7 @@ public class CampaignSharedSetServiceClient implements BackgroundResource {
   /**
    * Returns the requested campaign shared set in full detail.
    *
-   * @param resource_name Required. The resource name of the campaign shared set to fetch.
+   * @param resourceName Required. The resource name of the campaign shared set to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final CampaignSharedSet getCampaignSharedSet(String resourceName) {
@@ -194,7 +193,7 @@ public class CampaignSharedSetServiceClient implements BackgroundResource {
   /**
    * Creates or removes campaign shared sets. Operation statuses are returned.
    *
-   * @param customer_id Required. The ID of the customer whose campaign shared sets are being
+   * @param customerId Required. The ID of the customer whose campaign shared sets are being
    *     modified.
    * @param operations Required. The list of operations to perform on individual campaign shared
    *     sets.

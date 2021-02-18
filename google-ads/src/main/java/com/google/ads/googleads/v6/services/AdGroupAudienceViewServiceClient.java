@@ -83,8 +83,7 @@ import javax.annotation.Generated;
  *
  * <p>Please refer to the GitHub repository's samples for more quickstart code snippets.
  */
-@BetaApi
-@Generated("by gapic-generator")
+@Generated("by gapic-generator-java")
 public class AdGroupAudienceViewServiceClient implements BackgroundResource {
   private final AdGroupAudienceViewServiceSettings settings;
   private final AdGroupAudienceViewServiceStub stub;
@@ -143,7 +142,7 @@ public class AdGroupAudienceViewServiceClient implements BackgroundResource {
   /**
    * Returns the requested ad group audience view in full detail.
    *
-   * @param resource_name Required. The resource name of the ad group audience view to fetch.
+   * @param resourceName Required. The resource name of the ad group audience view to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final AdGroupAudienceView getAdGroupAudienceView(AdGroupAudienceViewName resourceName) {
@@ -158,7 +157,7 @@ public class AdGroupAudienceViewServiceClient implements BackgroundResource {
   /**
    * Returns the requested ad group audience view in full detail.
    *
-   * @param resource_name Required. The resource name of the ad group audience view to fetch.
+   * @param resourceName Required. The resource name of the ad group audience view to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final AdGroupAudienceView getAdGroupAudienceView(String resourceName) {

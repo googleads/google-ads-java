@@ -59,6 +59,19 @@ private static final long serialVersionUID = 0L;
             resourceName_ = s;
             break;
           }
+          case 18: {
+            com.google.ads.googleads.v6.resources.CampaignBidModifier.Builder subBuilder = null;
+            if (campaignBidModifier_ != null) {
+              subBuilder = campaignBidModifier_.toBuilder();
+            }
+            campaignBidModifier_ = input.readMessage(com.google.ads.googleads.v6.resources.CampaignBidModifier.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(campaignBidModifier_);
+              campaignBidModifier_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
           default: {
             if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -137,6 +150,50 @@ private static final long serialVersionUID = 0L;
     }
   }
 
+  public static final int CAMPAIGN_BID_MODIFIER_FIELD_NUMBER = 2;
+  private com.google.ads.googleads.v6.resources.CampaignBidModifier campaignBidModifier_;
+  /**
+   * <pre>
+   * The mutated campaign bid modifier with only mutable fields after mutate.
+   * The field will only be returned when response_content_type is set to
+   * "MUTABLE_RESOURCE".
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v6.resources.CampaignBidModifier campaign_bid_modifier = 2;</code>
+   * @return Whether the campaignBidModifier field is set.
+   */
+  @java.lang.Override
+  public boolean hasCampaignBidModifier() {
+    return campaignBidModifier_ != null;
+  }
+  /**
+   * <pre>
+   * The mutated campaign bid modifier with only mutable fields after mutate.
+   * The field will only be returned when response_content_type is set to
+   * "MUTABLE_RESOURCE".
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v6.resources.CampaignBidModifier campaign_bid_modifier = 2;</code>
+   * @return The campaignBidModifier.
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v6.resources.CampaignBidModifier getCampaignBidModifier() {
+    return campaignBidModifier_ == null ? com.google.ads.googleads.v6.resources.CampaignBidModifier.getDefaultInstance() : campaignBidModifier_;
+  }
+  /**
+   * <pre>
+   * The mutated campaign bid modifier with only mutable fields after mutate.
+   * The field will only be returned when response_content_type is set to
+   * "MUTABLE_RESOURCE".
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v6.resources.CampaignBidModifier campaign_bid_modifier = 2;</code>
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v6.resources.CampaignBidModifierOrBuilder getCampaignBidModifierOrBuilder() {
+    return getCampaignBidModifier();
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -154,6 +211,9 @@ private static final long serialVersionUID = 0L;
     if (!getResourceNameBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, resourceName_);
     }
+    if (campaignBidModifier_ != null) {
+      output.writeMessage(2, getCampaignBidModifier());
+    }
     unknownFields.writeTo(output);
   }
 
@@ -165,6 +225,10 @@ private static final long serialVersionUID = 0L;
     size = 0;
     if (!getResourceNameBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, resourceName_);
+    }
+    if (campaignBidModifier_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(2, getCampaignBidModifier());
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -183,6 +247,11 @@ private static final long serialVersionUID = 0L;
 
     if (!getResourceName()
         .equals(other.getResourceName())) return false;
+    if (hasCampaignBidModifier() != other.hasCampaignBidModifier()) return false;
+    if (hasCampaignBidModifier()) {
+      if (!getCampaignBidModifier()
+          .equals(other.getCampaignBidModifier())) return false;
+    }
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -196,6 +265,10 @@ private static final long serialVersionUID = 0L;
     hash = (19 * hash) + getDescriptor().hashCode();
     hash = (37 * hash) + RESOURCE_NAME_FIELD_NUMBER;
     hash = (53 * hash) + getResourceName().hashCode();
+    if (hasCampaignBidModifier()) {
+      hash = (37 * hash) + CAMPAIGN_BID_MODIFIER_FIELD_NUMBER;
+      hash = (53 * hash) + getCampaignBidModifier().hashCode();
+    }
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -335,6 +408,12 @@ private static final long serialVersionUID = 0L;
       super.clear();
       resourceName_ = "";
 
+      if (campaignBidModifierBuilder_ == null) {
+        campaignBidModifier_ = null;
+      } else {
+        campaignBidModifier_ = null;
+        campaignBidModifierBuilder_ = null;
+      }
       return this;
     }
 
@@ -362,6 +441,11 @@ private static final long serialVersionUID = 0L;
     public com.google.ads.googleads.v6.services.MutateCampaignBidModifierResult buildPartial() {
       com.google.ads.googleads.v6.services.MutateCampaignBidModifierResult result = new com.google.ads.googleads.v6.services.MutateCampaignBidModifierResult(this);
       result.resourceName_ = resourceName_;
+      if (campaignBidModifierBuilder_ == null) {
+        result.campaignBidModifier_ = campaignBidModifier_;
+      } else {
+        result.campaignBidModifier_ = campaignBidModifierBuilder_.build();
+      }
       onBuilt();
       return result;
     }
@@ -413,6 +497,9 @@ private static final long serialVersionUID = 0L;
       if (!other.getResourceName().isEmpty()) {
         resourceName_ = other.resourceName_;
         onChanged();
+      }
+      if (other.hasCampaignBidModifier()) {
+        mergeCampaignBidModifier(other.getCampaignBidModifier());
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -537,6 +624,179 @@ private static final long serialVersionUID = 0L;
       resourceName_ = value;
       onChanged();
       return this;
+    }
+
+    private com.google.ads.googleads.v6.resources.CampaignBidModifier campaignBidModifier_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v6.resources.CampaignBidModifier, com.google.ads.googleads.v6.resources.CampaignBidModifier.Builder, com.google.ads.googleads.v6.resources.CampaignBidModifierOrBuilder> campaignBidModifierBuilder_;
+    /**
+     * <pre>
+     * The mutated campaign bid modifier with only mutable fields after mutate.
+     * The field will only be returned when response_content_type is set to
+     * "MUTABLE_RESOURCE".
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v6.resources.CampaignBidModifier campaign_bid_modifier = 2;</code>
+     * @return Whether the campaignBidModifier field is set.
+     */
+    public boolean hasCampaignBidModifier() {
+      return campaignBidModifierBuilder_ != null || campaignBidModifier_ != null;
+    }
+    /**
+     * <pre>
+     * The mutated campaign bid modifier with only mutable fields after mutate.
+     * The field will only be returned when response_content_type is set to
+     * "MUTABLE_RESOURCE".
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v6.resources.CampaignBidModifier campaign_bid_modifier = 2;</code>
+     * @return The campaignBidModifier.
+     */
+    public com.google.ads.googleads.v6.resources.CampaignBidModifier getCampaignBidModifier() {
+      if (campaignBidModifierBuilder_ == null) {
+        return campaignBidModifier_ == null ? com.google.ads.googleads.v6.resources.CampaignBidModifier.getDefaultInstance() : campaignBidModifier_;
+      } else {
+        return campaignBidModifierBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * The mutated campaign bid modifier with only mutable fields after mutate.
+     * The field will only be returned when response_content_type is set to
+     * "MUTABLE_RESOURCE".
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v6.resources.CampaignBidModifier campaign_bid_modifier = 2;</code>
+     */
+    public Builder setCampaignBidModifier(com.google.ads.googleads.v6.resources.CampaignBidModifier value) {
+      if (campaignBidModifierBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        campaignBidModifier_ = value;
+        onChanged();
+      } else {
+        campaignBidModifierBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The mutated campaign bid modifier with only mutable fields after mutate.
+     * The field will only be returned when response_content_type is set to
+     * "MUTABLE_RESOURCE".
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v6.resources.CampaignBidModifier campaign_bid_modifier = 2;</code>
+     */
+    public Builder setCampaignBidModifier(
+        com.google.ads.googleads.v6.resources.CampaignBidModifier.Builder builderForValue) {
+      if (campaignBidModifierBuilder_ == null) {
+        campaignBidModifier_ = builderForValue.build();
+        onChanged();
+      } else {
+        campaignBidModifierBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The mutated campaign bid modifier with only mutable fields after mutate.
+     * The field will only be returned when response_content_type is set to
+     * "MUTABLE_RESOURCE".
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v6.resources.CampaignBidModifier campaign_bid_modifier = 2;</code>
+     */
+    public Builder mergeCampaignBidModifier(com.google.ads.googleads.v6.resources.CampaignBidModifier value) {
+      if (campaignBidModifierBuilder_ == null) {
+        if (campaignBidModifier_ != null) {
+          campaignBidModifier_ =
+            com.google.ads.googleads.v6.resources.CampaignBidModifier.newBuilder(campaignBidModifier_).mergeFrom(value).buildPartial();
+        } else {
+          campaignBidModifier_ = value;
+        }
+        onChanged();
+      } else {
+        campaignBidModifierBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The mutated campaign bid modifier with only mutable fields after mutate.
+     * The field will only be returned when response_content_type is set to
+     * "MUTABLE_RESOURCE".
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v6.resources.CampaignBidModifier campaign_bid_modifier = 2;</code>
+     */
+    public Builder clearCampaignBidModifier() {
+      if (campaignBidModifierBuilder_ == null) {
+        campaignBidModifier_ = null;
+        onChanged();
+      } else {
+        campaignBidModifier_ = null;
+        campaignBidModifierBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The mutated campaign bid modifier with only mutable fields after mutate.
+     * The field will only be returned when response_content_type is set to
+     * "MUTABLE_RESOURCE".
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v6.resources.CampaignBidModifier campaign_bid_modifier = 2;</code>
+     */
+    public com.google.ads.googleads.v6.resources.CampaignBidModifier.Builder getCampaignBidModifierBuilder() {
+      
+      onChanged();
+      return getCampaignBidModifierFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * The mutated campaign bid modifier with only mutable fields after mutate.
+     * The field will only be returned when response_content_type is set to
+     * "MUTABLE_RESOURCE".
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v6.resources.CampaignBidModifier campaign_bid_modifier = 2;</code>
+     */
+    public com.google.ads.googleads.v6.resources.CampaignBidModifierOrBuilder getCampaignBidModifierOrBuilder() {
+      if (campaignBidModifierBuilder_ != null) {
+        return campaignBidModifierBuilder_.getMessageOrBuilder();
+      } else {
+        return campaignBidModifier_ == null ?
+            com.google.ads.googleads.v6.resources.CampaignBidModifier.getDefaultInstance() : campaignBidModifier_;
+      }
+    }
+    /**
+     * <pre>
+     * The mutated campaign bid modifier with only mutable fields after mutate.
+     * The field will only be returned when response_content_type is set to
+     * "MUTABLE_RESOURCE".
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v6.resources.CampaignBidModifier campaign_bid_modifier = 2;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v6.resources.CampaignBidModifier, com.google.ads.googleads.v6.resources.CampaignBidModifier.Builder, com.google.ads.googleads.v6.resources.CampaignBidModifierOrBuilder> 
+        getCampaignBidModifierFieldBuilder() {
+      if (campaignBidModifierBuilder_ == null) {
+        campaignBidModifierBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.ads.googleads.v6.resources.CampaignBidModifier, com.google.ads.googleads.v6.resources.CampaignBidModifier.Builder, com.google.ads.googleads.v6.resources.CampaignBidModifierOrBuilder>(
+                getCampaignBidModifier(),
+                getParentForChildren(),
+                isClean());
+        campaignBidModifier_ = null;
+      }
+      return campaignBidModifierBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

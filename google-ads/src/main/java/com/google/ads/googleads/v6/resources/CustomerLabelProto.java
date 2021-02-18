@@ -32,20 +32,22 @@ public final class CustomerLabelProto {
       "omer_label.proto\022!google.ads.googleads.v" +
       "6.resources\032\037google/api/field_behavior.p" +
       "roto\032\031google/api/resource.proto\032\034google/" +
-      "api/annotations.proto\"\202\002\n\rCustomerLabel\022" +
+      "api/annotations.proto\"\313\002\n\rCustomerLabel\022" +
       "E\n\rresource_name\030\001 \001(\tB.\340A\005\372A(\n&googlead" +
-      "s.googleapis.com/CustomerLabel\022\032\n\010custom" +
-      "er\030\004 \001(\tB\003\340A\003H\000\210\001\001\022\027\n\005label\030\005 \001(\tB\003\340A\003H\001" +
-      "\210\001\001:^\352A[\n&googleads.googleapis.com/Custo" +
-      "merLabel\0221customers/{customer_id}/custom" +
-      "erLabels/{label_id}B\013\n\t_customerB\010\n\006_lab" +
-      "elB\377\001\n%com.google.ads.googleads.v6.resou" +
-      "rcesB\022CustomerLabelProtoP\001ZJgoogle.golan" +
-      "g.org/genproto/googleapis/ads/googleads/" +
-      "v6/resources;resources\242\002\003GAA\252\002!Google.Ad" +
-      "s.GoogleAds.V6.Resources\312\002!Google\\Ads\\Go" +
-      "ogleAds\\V6\\Resources\352\002%Google::Ads::Goog" +
-      "leAds::V6::Resourcesb\006proto3"
+      "s.googleapis.com/CustomerLabel\022@\n\010custom" +
+      "er\030\004 \001(\tB)\340A\003\372A#\n!googleads.googleapis.c" +
+      "om/CustomerH\000\210\001\001\022:\n\005label\030\005 \001(\tB&\340A\003\372A \n" +
+      "\036googleads.googleapis.com/LabelH\001\210\001\001:^\352A" +
+      "[\n&googleads.googleapis.com/CustomerLabe" +
+      "l\0221customers/{customer_id}/customerLabel" +
+      "s/{label_id}B\013\n\t_customerB\010\n\006_labelB\377\001\n%" +
+      "com.google.ads.googleads.v6.resourcesB\022C" +
+      "ustomerLabelProtoP\001ZJgoogle.golang.org/g" +
+      "enproto/googleapis/ads/googleads/v6/reso" +
+      "urces;resources\242\002\003GAA\252\002!Google.Ads.Googl" +
+      "eAds.V6.Resources\312\002!Google\\Ads\\GoogleAds" +
+      "\\V6\\Resources\352\002%Google::Ads::GoogleAds::" +
+      "V6::Resourcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

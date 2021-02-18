@@ -90,9 +90,20 @@ public class CampaignServiceClientTest {
             .setResourceName(CampaignName.of("[CUSTOMER_ID]", "[CAMPAIGN_ID]").toString())
             .addAllUrlCustomParameters(new ArrayList<CustomParameter>())
             .setRealTimeBiddingSetting(RealTimeBiddingSetting.newBuilder().build())
+            .setNetworkSettings(Campaign.NetworkSettings.newBuilder().build())
+            .setHotelSetting(Campaign.HotelSettingInfo.newBuilder().build())
+            .setDynamicSearchAdsSetting(Campaign.DynamicSearchAdsSetting.newBuilder().build())
+            .setShoppingSetting(Campaign.ShoppingSetting.newBuilder().build())
             .setTargetingSetting(TargetingSetting.newBuilder().build())
+            .setGeoTargetTypeSetting(Campaign.GeoTargetTypeSetting.newBuilder().build())
+            .setLocalCampaignSetting(Campaign.LocalCampaignSetting.newBuilder().build())
+            .setAppCampaignSetting(Campaign.AppCampaignSetting.newBuilder().build())
             .addAllLabels(new ArrayList<String>())
             .addAllFrequencyCaps(new ArrayList<FrequencyCapEntry>())
+            .setVanityPharma(Campaign.VanityPharma.newBuilder().build())
+            .setSelectiveOptimization(Campaign.SelectiveOptimization.newBuilder().build())
+            .setOptimizationGoalSetting(Campaign.OptimizationGoalSetting.newBuilder().build())
+            .setTrackingSetting(Campaign.TrackingSetting.newBuilder().build())
             .build();
     mockCampaignService.addResponse(expectedResponse);
 
@@ -133,9 +144,20 @@ public class CampaignServiceClientTest {
             .setResourceName(CampaignName.of("[CUSTOMER_ID]", "[CAMPAIGN_ID]").toString())
             .addAllUrlCustomParameters(new ArrayList<CustomParameter>())
             .setRealTimeBiddingSetting(RealTimeBiddingSetting.newBuilder().build())
+            .setNetworkSettings(Campaign.NetworkSettings.newBuilder().build())
+            .setHotelSetting(Campaign.HotelSettingInfo.newBuilder().build())
+            .setDynamicSearchAdsSetting(Campaign.DynamicSearchAdsSetting.newBuilder().build())
+            .setShoppingSetting(Campaign.ShoppingSetting.newBuilder().build())
             .setTargetingSetting(TargetingSetting.newBuilder().build())
+            .setGeoTargetTypeSetting(Campaign.GeoTargetTypeSetting.newBuilder().build())
+            .setLocalCampaignSetting(Campaign.LocalCampaignSetting.newBuilder().build())
+            .setAppCampaignSetting(Campaign.AppCampaignSetting.newBuilder().build())
             .addAllLabels(new ArrayList<String>())
             .addAllFrequencyCaps(new ArrayList<FrequencyCapEntry>())
+            .setVanityPharma(Campaign.VanityPharma.newBuilder().build())
+            .setSelectiveOptimization(Campaign.SelectiveOptimization.newBuilder().build())
+            .setOptimizationGoalSetting(Campaign.OptimizationGoalSetting.newBuilder().build())
+            .setTrackingSetting(Campaign.TrackingSetting.newBuilder().build())
             .build();
     mockCampaignService.addResponse(expectedResponse);
 

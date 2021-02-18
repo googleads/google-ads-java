@@ -76,7 +76,6 @@ import org.threeten.bp.Duration;
  * CampaignServiceStubSettings campaignServiceSettings = campaignServiceSettingsBuilder.build();
  * }</pre>
  */
-@BetaApi
 @Generated("by gapic-generator-java")
 public class CampaignServiceStubSettings extends StubSettings<CampaignServiceStubSettings> {
   /** The default scopes of the service. */

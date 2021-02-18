@@ -20,6 +20,7 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private AdGroupExtensionSettingOperation() {
+    responseContentType_ = 0;
   }
 
   @java.lang.Override
@@ -97,6 +98,12 @@ private static final long serialVersionUID = 0L;
               updateMask_ = subBuilder.buildPartial();
             }
 
+            break;
+          }
+          case 40: {
+            int rawValue = input.readEnum();
+
+            responseContentType_ = rawValue;
             break;
           }
           default: {
@@ -210,6 +217,35 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public com.google.protobuf.FieldMaskOrBuilder getUpdateMaskOrBuilder() {
     return getUpdateMask();
+  }
+
+  public static final int RESPONSE_CONTENT_TYPE_FIELD_NUMBER = 5;
+  private int responseContentType_;
+  /**
+   * <pre>
+   * The response content type setting. Determines whether the mutable resource
+   * or just the resource name should be returned post mutation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v6.enums.ResponseContentTypeEnum.ResponseContentType response_content_type = 5;</code>
+   * @return The enum numeric value on the wire for responseContentType.
+   */
+  @java.lang.Override public int getResponseContentTypeValue() {
+    return responseContentType_;
+  }
+  /**
+   * <pre>
+   * The response content type setting. Determines whether the mutable resource
+   * or just the resource name should be returned post mutation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v6.enums.ResponseContentTypeEnum.ResponseContentType response_content_type = 5;</code>
+   * @return The responseContentType.
+   */
+  @java.lang.Override public com.google.ads.googleads.v6.enums.ResponseContentTypeEnum.ResponseContentType getResponseContentType() {
+    @SuppressWarnings("deprecation")
+    com.google.ads.googleads.v6.enums.ResponseContentTypeEnum.ResponseContentType result = com.google.ads.googleads.v6.enums.ResponseContentTypeEnum.ResponseContentType.valueOf(responseContentType_);
+    return result == null ? com.google.ads.googleads.v6.enums.ResponseContentTypeEnum.ResponseContentType.UNRECOGNIZED : result;
   }
 
   public static final int CREATE_FIELD_NUMBER = 1;
@@ -387,6 +423,9 @@ private static final long serialVersionUID = 0L;
     if (updateMask_ != null) {
       output.writeMessage(4, getUpdateMask());
     }
+    if (responseContentType_ != com.google.ads.googleads.v6.enums.ResponseContentTypeEnum.ResponseContentType.UNSPECIFIED.getNumber()) {
+      output.writeEnum(5, responseContentType_);
+    }
     unknownFields.writeTo(output);
   }
 
@@ -411,6 +450,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(4, getUpdateMask());
     }
+    if (responseContentType_ != com.google.ads.googleads.v6.enums.ResponseContentTypeEnum.ResponseContentType.UNSPECIFIED.getNumber()) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(5, responseContentType_);
+    }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
@@ -431,6 +474,7 @@ private static final long serialVersionUID = 0L;
       if (!getUpdateMask()
           .equals(other.getUpdateMask())) return false;
     }
+    if (responseContentType_ != other.responseContentType_) return false;
     if (!getOperationCase().equals(other.getOperationCase())) return false;
     switch (operationCase_) {
       case 1:
@@ -463,6 +507,8 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + UPDATE_MASK_FIELD_NUMBER;
       hash = (53 * hash) + getUpdateMask().hashCode();
     }
+    hash = (37 * hash) + RESPONSE_CONTENT_TYPE_FIELD_NUMBER;
+    hash = (53 * hash) + responseContentType_;
     switch (operationCase_) {
       case 1:
         hash = (37 * hash) + CREATE_FIELD_NUMBER;
@@ -622,6 +668,8 @@ private static final long serialVersionUID = 0L;
         updateMask_ = null;
         updateMaskBuilder_ = null;
       }
+      responseContentType_ = 0;
+
       operationCase_ = 0;
       operation_ = null;
       return this;
@@ -655,6 +703,7 @@ private static final long serialVersionUID = 0L;
       } else {
         result.updateMask_ = updateMaskBuilder_.build();
       }
+      result.responseContentType_ = responseContentType_;
       if (operationCase_ == 1) {
         if (createBuilder_ == null) {
           result.operation_ = operation_;
@@ -723,6 +772,9 @@ private static final long serialVersionUID = 0L;
       if (other == com.google.ads.googleads.v6.services.AdGroupExtensionSettingOperation.getDefaultInstance()) return this;
       if (other.hasUpdateMask()) {
         mergeUpdateMask(other.getUpdateMask());
+      }
+      if (other.responseContentType_ != 0) {
+        setResponseContentTypeValue(other.getResponseContentTypeValue());
       }
       switch (other.getOperationCase()) {
         case CREATE: {
@@ -940,6 +992,85 @@ private static final long serialVersionUID = 0L;
         updateMask_ = null;
       }
       return updateMaskBuilder_;
+    }
+
+    private int responseContentType_ = 0;
+    /**
+     * <pre>
+     * The response content type setting. Determines whether the mutable resource
+     * or just the resource name should be returned post mutation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v6.enums.ResponseContentTypeEnum.ResponseContentType response_content_type = 5;</code>
+     * @return The enum numeric value on the wire for responseContentType.
+     */
+    @java.lang.Override public int getResponseContentTypeValue() {
+      return responseContentType_;
+    }
+    /**
+     * <pre>
+     * The response content type setting. Determines whether the mutable resource
+     * or just the resource name should be returned post mutation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v6.enums.ResponseContentTypeEnum.ResponseContentType response_content_type = 5;</code>
+     * @param value The enum numeric value on the wire for responseContentType to set.
+     * @return This builder for chaining.
+     */
+    public Builder setResponseContentTypeValue(int value) {
+      
+      responseContentType_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The response content type setting. Determines whether the mutable resource
+     * or just the resource name should be returned post mutation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v6.enums.ResponseContentTypeEnum.ResponseContentType response_content_type = 5;</code>
+     * @return The responseContentType.
+     */
+    @java.lang.Override
+    public com.google.ads.googleads.v6.enums.ResponseContentTypeEnum.ResponseContentType getResponseContentType() {
+      @SuppressWarnings("deprecation")
+      com.google.ads.googleads.v6.enums.ResponseContentTypeEnum.ResponseContentType result = com.google.ads.googleads.v6.enums.ResponseContentTypeEnum.ResponseContentType.valueOf(responseContentType_);
+      return result == null ? com.google.ads.googleads.v6.enums.ResponseContentTypeEnum.ResponseContentType.UNRECOGNIZED : result;
+    }
+    /**
+     * <pre>
+     * The response content type setting. Determines whether the mutable resource
+     * or just the resource name should be returned post mutation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v6.enums.ResponseContentTypeEnum.ResponseContentType response_content_type = 5;</code>
+     * @param value The responseContentType to set.
+     * @return This builder for chaining.
+     */
+    public Builder setResponseContentType(com.google.ads.googleads.v6.enums.ResponseContentTypeEnum.ResponseContentType value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      
+      responseContentType_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The response content type setting. Determines whether the mutable resource
+     * or just the resource name should be returned post mutation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v6.enums.ResponseContentTypeEnum.ResponseContentType response_content_type = 5;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearResponseContentType() {
+      
+      responseContentType_ = 0;
+      onChanged();
+      return this;
     }
 
     private com.google.protobuf.SingleFieldBuilderV3<

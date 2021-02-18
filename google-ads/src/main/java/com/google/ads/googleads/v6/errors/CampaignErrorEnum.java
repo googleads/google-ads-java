@@ -444,6 +444,15 @@ private static final long serialVersionUID = 0L;
      * <code>SENSITIVE_CATEGORY_APP = 45;</code>
      */
     SENSITIVE_CATEGORY_APP(45),
+    /**
+     * <pre>
+     * Customers with Housing, Employment, or Credit ads must accept updated
+     * personalized ads policy to continue creating campaigns.
+     * </pre>
+     *
+     * <code>HEC_AGREEMENT_REQUIRED = 46;</code>
+     */
+    HEC_AGREEMENT_REQUIRED(46),
     UNRECOGNIZED(-1),
     ;
 
@@ -798,6 +807,15 @@ private static final long serialVersionUID = 0L;
      * <code>SENSITIVE_CATEGORY_APP = 45;</code>
      */
     public static final int SENSITIVE_CATEGORY_APP_VALUE = 45;
+    /**
+     * <pre>
+     * Customers with Housing, Employment, or Credit ads must accept updated
+     * personalized ads policy to continue creating campaigns.
+     * </pre>
+     *
+     * <code>HEC_AGREEMENT_REQUIRED = 46;</code>
+     */
+    public static final int HEC_AGREEMENT_REQUIRED_VALUE = 46;
 
 
     public final int getNumber() {
@@ -866,6 +884,7 @@ private static final long serialVersionUID = 0L;
         case 43: return MERCHANT_NOT_ALLOWED_FOR_COMPARISON_LISTING_ADS;
         case 44: return INSUFFICIENT_APP_INSTALLS_COUNT;
         case 45: return SENSITIVE_CATEGORY_APP;
+        case 46: return HEC_AGREEMENT_REQUIRED;
         default: return null;
       }
     }

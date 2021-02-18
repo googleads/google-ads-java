@@ -83,8 +83,7 @@ import javax.annotation.Generated;
  *
  * <p>Please refer to the GitHub repository's samples for more quickstart code snippets.
  */
-@BetaApi
-@Generated("by gapic-generator")
+@Generated("by gapic-generator-java")
 public class DisplayKeywordViewServiceClient implements BackgroundResource {
   private final DisplayKeywordViewServiceSettings settings;
   private final DisplayKeywordViewServiceStub stub;
@@ -143,7 +142,7 @@ public class DisplayKeywordViewServiceClient implements BackgroundResource {
   /**
    * Returns the requested display keyword view in full detail.
    *
-   * @param resource_name Required. The resource name of the display keyword view to fetch.
+   * @param resourceName Required. The resource name of the display keyword view to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final DisplayKeywordView getDisplayKeywordView(DisplayKeywordViewName resourceName) {
@@ -158,7 +157,7 @@ public class DisplayKeywordViewServiceClient implements BackgroundResource {
   /**
    * Returns the requested display keyword view in full detail.
    *
-   * @param resource_name Required. The resource name of the display keyword view to fetch.
+   * @param resourceName Required. The resource name of the display keyword view to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final DisplayKeywordView getDisplayKeywordView(String resourceName) {

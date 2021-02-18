@@ -150,25 +150,10 @@ public class VersionCatalogCodeGenerator implements Generator {
               "CreateCustomerClientRequestMessageProxy");
       // Adds a Version instance to the builder with the params as defined above.
       getCatalogBuilder.addStatement(
-          "builder.add(new Version(\n"
-              + "  $S,\n"
-              + "  new $T(),\n"
-              + "  $T.class,\n"
-              + "  new $T(\n"
-              + "    new $T(),\n"
-              + "    new $T(),\n"
-              + "    new $T(),\n"
-              + "    new $T(),\n"
-              + "    new $T())))",
+          "builder.add(new Version(\n" + "  $S,\n" + "  new $T(),\n" + "  $T.class))",
           "v" + version,
           exceptionFactoryName,
-          versionClassName,
-          messageProxyProviderClassName,
-          searchStreamResponseProxyName,
-          searchPagedResponseProxyName,
-          customerUserAccessProxyName,
-          feedMessageProxyName,
-          createCustomerClientRequestProxyName);
+          versionClassName);
     }
 
     getCatalogBuilder.addStatement("return builder.build()");

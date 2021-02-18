@@ -77,7 +77,6 @@ import org.threeten.bp.Duration;
  *     feedMappingServiceSettingsBuilder.build();
  * }</pre>
  */
-@BetaApi
 @Generated("by gapic-generator-java")
 public class FeedMappingServiceStubSettings extends StubSettings<FeedMappingServiceStubSettings> {
   /** The default scopes of the service. */

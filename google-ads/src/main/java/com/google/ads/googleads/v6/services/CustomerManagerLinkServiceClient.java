@@ -84,8 +84,7 @@ import javax.annotation.Generated;
  *
  * <p>Please refer to the GitHub repository's samples for more quickstart code snippets.
  */
-@BetaApi
-@Generated("by gapic-generator")
+@Generated("by gapic-generator-java")
 public class CustomerManagerLinkServiceClient implements BackgroundResource {
   private final CustomerManagerLinkServiceSettings settings;
   private final CustomerManagerLinkServiceStub stub;
@@ -144,7 +143,7 @@ public class CustomerManagerLinkServiceClient implements BackgroundResource {
   /**
    * Returns the requested CustomerManagerLink in full detail.
    *
-   * @param resource_name Required. The resource name of the CustomerManagerLink to fetch.
+   * @param resourceName Required. The resource name of the CustomerManagerLink to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final CustomerManagerLink getCustomerManagerLink(CustomerManagerLinkName resourceName) {
@@ -159,7 +158,7 @@ public class CustomerManagerLinkServiceClient implements BackgroundResource {
   /**
    * Returns the requested CustomerManagerLink in full detail.
    *
-   * @param resource_name Required. The resource name of the CustomerManagerLink to fetch.
+   * @param resourceName Required. The resource name of the CustomerManagerLink to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final CustomerManagerLink getCustomerManagerLink(String resourceName) {
@@ -194,7 +193,7 @@ public class CustomerManagerLinkServiceClient implements BackgroundResource {
   /**
    * Creates or updates customer manager links. Operation statuses are returned.
    *
-   * @param customer_id Required. The ID of the customer whose customer manager links are being
+   * @param customerId Required. The ID of the customer whose customer manager links are being
    *     modified.
    * @param operations Required. The list of operations to perform on individual customer manager
    *     links.
@@ -240,12 +239,12 @@ public class CustomerManagerLinkServiceClient implements BackgroundResource {
    * with Status INACTIVE (previous manager) and, 2. Update operation with Status ACTIVE (new
    * manager).
    *
-   * @param customer_id Required. The ID of the client customer that is being moved.
-   * @param previous_customer_manager_link Required. The resource name of the previous
+   * @param customerId Required. The ID of the client customer that is being moved.
+   * @param previousCustomerManagerLink Required. The resource name of the previous
    *     CustomerManagerLink. The resource name has the form:
    *     `customers/{customer_id}/customerManagerLinks/{manager_customer_id}~{manager_link_id}`
-   * @param new_manager Required. The resource name of the new manager customer that the client
-   *     wants to move to. Customer resource names have the format: "customers/{customer_id}"
+   * @param newManager Required. The resource name of the new manager customer that the client wants
+   *     to move to. Customer resource names have the format: "customers/{customer_id}"
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final MoveManagerLinkResponse moveManagerLink(

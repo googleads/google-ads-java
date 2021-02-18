@@ -26,4 +26,34 @@ public interface MutateCustomerNegativeCriteriaResultOrBuilder extends
    */
   com.google.protobuf.ByteString
       getResourceNameBytes();
+
+  /**
+   * <pre>
+   * The mutated criterion with only mutable fields after mutate. The field will
+   * only be returned when response_content_type is set to "MUTABLE_RESOURCE".
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v6.resources.CustomerNegativeCriterion customer_negative_criterion = 2;</code>
+   * @return Whether the customerNegativeCriterion field is set.
+   */
+  boolean hasCustomerNegativeCriterion();
+  /**
+   * <pre>
+   * The mutated criterion with only mutable fields after mutate. The field will
+   * only be returned when response_content_type is set to "MUTABLE_RESOURCE".
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v6.resources.CustomerNegativeCriterion customer_negative_criterion = 2;</code>
+   * @return The customerNegativeCriterion.
+   */
+  com.google.ads.googleads.v6.resources.CustomerNegativeCriterion getCustomerNegativeCriterion();
+  /**
+   * <pre>
+   * The mutated criterion with only mutable fields after mutate. The field will
+   * only be returned when response_content_type is set to "MUTABLE_RESOURCE".
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v6.resources.CustomerNegativeCriterion customer_negative_criterion = 2;</code>
+   */
+  com.google.ads.googleads.v6.resources.CustomerNegativeCriterionOrBuilder getCustomerNegativeCriterionOrBuilder();
 }

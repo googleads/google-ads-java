@@ -79,7 +79,6 @@ import org.threeten.bp.Duration;
  *     accountLinkServiceSettingsBuilder.build();
  * }</pre>
  */
-@BetaApi
 @Generated("by gapic-generator-java")
 public class AccountLinkServiceStubSettings extends StubSettings<AccountLinkServiceStubSettings> {
   /** The default scopes of the service. */

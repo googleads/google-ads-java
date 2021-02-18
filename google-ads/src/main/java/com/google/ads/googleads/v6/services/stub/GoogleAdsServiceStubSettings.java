@@ -89,7 +89,6 @@ import org.threeten.bp.Duration;
  * GoogleAdsServiceStubSettings googleAdsServiceSettings = googleAdsServiceSettingsBuilder.build();
  * }</pre>
  */
-@BetaApi
 @Generated("by gapic-generator-java")
 public class GoogleAdsServiceStubSettings extends StubSettings<GoogleAdsServiceStubSettings> {
   /** The default scopes of the service. */

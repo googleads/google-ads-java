@@ -215,6 +215,19 @@ public interface MetricsOrBuilder extends
 
   /**
    * <pre>
+   * The value of all conversions. When this column is selected with date, the
+   * values in date column means the conversion date. Details for the
+   * by_conversion_date columns are available at
+   * https://support.google.com/google-ads/answer/9549009.
+   * </pre>
+   *
+   * <code>double all_conversions_value_by_conversion_date = 240;</code>
+   * @return The allConversionsValueByConversionDate.
+   */
+  double getAllConversionsValueByConversionDate();
+
+  /**
+   * <pre>
    * The total number of conversions. This includes all conversions regardless
    * of the value of include_in_conversions_metric.
    * </pre>
@@ -233,6 +246,20 @@ public interface MetricsOrBuilder extends
    * @return The allConversions.
    */
   double getAllConversions();
+
+  /**
+   * <pre>
+   * The total number of conversions. This includes all conversions regardless
+   * of the value of include_in_conversions_metric. When this column is selected
+   * with date, the values in date column means the conversion date. Details for
+   * the by_conversion_date columns are available at
+   * https://support.google.com/google-ads/answer/9549009.
+   * </pre>
+   *
+   * <code>double all_conversions_by_conversion_date = 241;</code>
+   * @return The allConversionsByConversionDate.
+   */
+  double getAllConversionsByConversionDate();
 
   /**
    * <pre>
@@ -935,6 +962,22 @@ public interface MetricsOrBuilder extends
 
   /**
    * <pre>
+   * The value of conversions. This only includes conversion actions which
+   * include_in_conversions_metric attribute is set to true. If you use
+   * conversion-based bidding, your bid strategies will optimize for these
+   * conversions. When this column is selected with date, the values in date
+   * column means the conversion date. Details for the by_conversion_date
+   * columns are available at
+   * https://support.google.com/google-ads/answer/9549009.
+   * </pre>
+   *
+   * <code>double conversions_value_by_conversion_date = 242;</code>
+   * @return The conversionsValueByConversionDate.
+   */
+  double getConversionsValueByConversionDate();
+
+  /**
+   * <pre>
    * The value of conversions divided by the cost of ad interactions. This only
    * includes conversion actions which include_in_conversions_metric attribute
    * is set to true. If you use conversion-based bidding, your bid strategies
@@ -1009,6 +1052,22 @@ public interface MetricsOrBuilder extends
    * @return The conversions.
    */
   double getConversions();
+
+  /**
+   * <pre>
+   * The number of conversions. This only includes conversion actions which
+   * include_in_conversions_metric attribute is set to true. If you use
+   * conversion-based bidding, your bid strategies will optimize for these
+   * conversions. When this column is selected with date, the values in date
+   * column means the conversion date. Details for the by_conversion_date
+   * columns are available at
+   * https://support.google.com/google-ads/answer/9549009.
+   * </pre>
+   *
+   * <code>double conversions_by_conversion_date = 243;</code>
+   * @return The conversionsByConversionDate.
+   */
+  double getConversionsByConversionDate();
 
   /**
    * <pre>
@@ -2373,6 +2432,31 @@ public interface MetricsOrBuilder extends
 
   /**
    * <pre>
+   * The value of all conversions divided by the number of all conversions. When
+   * this column is selected with date, the values in date column means the
+   * conversion date. Details for the by_conversion_date columns are available
+   * at https://support.google.com/google-ads/answer/9549009.
+   * </pre>
+   *
+   * <code>double value_per_all_conversions_by_conversion_date = 244;</code>
+   * @return Whether the valuePerAllConversionsByConversionDate field is set.
+   */
+  boolean hasValuePerAllConversionsByConversionDate();
+  /**
+   * <pre>
+   * The value of all conversions divided by the number of all conversions. When
+   * this column is selected with date, the values in date column means the
+   * conversion date. Details for the by_conversion_date columns are available
+   * at https://support.google.com/google-ads/answer/9549009.
+   * </pre>
+   *
+   * <code>double value_per_all_conversions_by_conversion_date = 244;</code>
+   * @return The valuePerAllConversionsByConversionDate.
+   */
+  double getValuePerAllConversionsByConversionDate();
+
+  /**
+   * <pre>
    * The value of conversions divided by the number of conversions. This only
    * includes conversion actions which include_in_conversions_metric attribute
    * is set to true. If you use conversion-based bidding, your bid strategies
@@ -2395,6 +2479,37 @@ public interface MetricsOrBuilder extends
    * @return The valuePerConversion.
    */
   double getValuePerConversion();
+
+  /**
+   * <pre>
+   * The value of conversions divided by the number of conversions. This only
+   * includes conversion actions which include_in_conversions_metric attribute
+   * is set to true. If you use conversion-based bidding, your bid strategies
+   * will optimize for these conversions. When this column is selected with
+   * date, the values in date column means the conversion date. Details for the
+   * by_conversion_date columns are available at
+   * https://support.google.com/google-ads/answer/9549009.
+   * </pre>
+   *
+   * <code>double value_per_conversions_by_conversion_date = 245;</code>
+   * @return Whether the valuePerConversionsByConversionDate field is set.
+   */
+  boolean hasValuePerConversionsByConversionDate();
+  /**
+   * <pre>
+   * The value of conversions divided by the number of conversions. This only
+   * includes conversion actions which include_in_conversions_metric attribute
+   * is set to true. If you use conversion-based bidding, your bid strategies
+   * will optimize for these conversions. When this column is selected with
+   * date, the values in date column means the conversion date. Details for the
+   * by_conversion_date columns are available at
+   * https://support.google.com/google-ads/answer/9549009.
+   * </pre>
+   *
+   * <code>double value_per_conversions_by_conversion_date = 245;</code>
+   * @return The valuePerConversionsByConversionDate.
+   */
+  double getValuePerConversionsByConversionDate();
 
   /**
    * <pre>

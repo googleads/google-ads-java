@@ -76,11 +76,21 @@ public class GrpcAdScheduleViewServiceStub extends AdScheduleViewServiceStub {
         AdScheduleViewServiceStubSettings.newBuilder().build(), clientContext, callableFactory);
   }
 
+  /**
+   * Constructs an instance of GrpcAdScheduleViewServiceStub, using the given settings. This is
+   * protected so that it is easy to make a subclass, but otherwise, the static factory methods
+   * should be preferred.
+   */
   protected GrpcAdScheduleViewServiceStub(
       AdScheduleViewServiceStubSettings settings, ClientContext clientContext) throws IOException {
     this(settings, clientContext, new GrpcAdScheduleViewServiceCallableFactory());
   }
 
+  /**
+   * Constructs an instance of GrpcAdScheduleViewServiceStub, using the given settings. This is
+   * protected so that it is easy to make a subclass, but otherwise, the static factory methods
+   * should be preferred.
+   */
   protected GrpcAdScheduleViewServiceStub(
       AdScheduleViewServiceStubSettings settings,
       ClientContext clientContext,

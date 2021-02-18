@@ -78,7 +78,6 @@ import org.threeten.bp.Duration;
  *     customerNegativeCriterionServiceSettingsBuilder.build();
  * }</pre>
  */
-@BetaApi
 @Generated("by gapic-generator-java")
 public class CustomerNegativeCriterionServiceStubSettings
     extends StubSettings<CustomerNegativeCriterionServiceStubSettings> {

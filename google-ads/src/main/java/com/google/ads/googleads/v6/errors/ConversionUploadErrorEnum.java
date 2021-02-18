@@ -249,7 +249,7 @@ private static final long serialVersionUID = 0L;
     DUPLICATE_ORDER_ID(16),
     /**
      * <pre>
-     * The call occurred too recently. Please try uploading again after 6 hours
+     * The call occurred too recently. Please try uploading again after 12 hours
      * have passed since the call occurred.
      * </pre>
      *
@@ -459,7 +459,7 @@ private static final long serialVersionUID = 0L;
     public static final int DUPLICATE_ORDER_ID_VALUE = 16;
     /**
      * <pre>
-     * The call occurred too recently. Please try uploading again after 6 hours
+     * The call occurred too recently. Please try uploading again after 12 hours
      * have passed since the call occurred.
      * </pre>
      *

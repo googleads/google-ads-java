@@ -79,7 +79,6 @@ import org.threeten.bp.Duration;
  *     merchantCenterLinkServiceSettingsBuilder.build();
  * }</pre>
  */
-@BetaApi
 @Generated("by gapic-generator-java")
 public class MerchantCenterLinkServiceStubSettings
     extends StubSettings<MerchantCenterLinkServiceStubSettings> {

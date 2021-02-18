@@ -89,7 +89,7 @@ public interface PromotionFeedItemOrBuilder extends
 
   /**
    * <pre>
-   * End date of when the promotion is eligible to be redeemed.
+   * Last date when the promotion is eligible to be redeemed.
    * </pre>
    *
    * <code>string promotion_end_date = 20;</code>
@@ -98,7 +98,7 @@ public interface PromotionFeedItemOrBuilder extends
   boolean hasPromotionEndDate();
   /**
    * <pre>
-   * End date of when the promotion is eligible to be redeemed.
+   * Last date when the promotion is eligible to be redeemed.
    * </pre>
    *
    * <code>string promotion_end_date = 20;</code>
@@ -107,7 +107,7 @@ public interface PromotionFeedItemOrBuilder extends
   java.lang.String getPromotionEndDate();
   /**
    * <pre>
-   * End date of when the promotion is eligible to be redeemed.
+   * Last date when the promotion is eligible to be redeemed.
    * </pre>
    *
    * <code>string promotion_end_date = 20;</code>

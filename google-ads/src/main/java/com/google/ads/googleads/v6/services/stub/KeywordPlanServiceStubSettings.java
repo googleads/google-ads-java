@@ -85,7 +85,6 @@ import org.threeten.bp.Duration;
  *     keywordPlanServiceSettingsBuilder.build();
  * }</pre>
  */
-@BetaApi
 @Generated("by gapic-generator-java")
 public class KeywordPlanServiceStubSettings extends StubSettings<KeywordPlanServiceStubSettings> {
   /** The default scopes of the service. */

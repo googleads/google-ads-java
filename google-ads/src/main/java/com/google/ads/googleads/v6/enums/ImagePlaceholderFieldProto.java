@@ -14,6 +14,11 @@ public final class ImagePlaceholderFieldProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_google_ads_googleads_v6_enums_ImagePlaceholderFieldEnum_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_google_ads_googleads_v6_enums_ImagePlaceholderFieldEnum_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -26,19 +31,27 @@ public final class ImagePlaceholderFieldProto {
       "\n;google/ads/googleads/v6/enums/image_pl" +
       "aceholder_field.proto\022\035google.ads.google" +
       "ads.v6.enums\032\034google/api/annotations.pro" +
-      "toB\357\001\n!com.google.ads.googleads.v6.enums" +
-      "B\032ImagePlaceholderFieldProtoP\001ZBgoogle.g" +
-      "olang.org/genproto/googleapis/ads/google" +
-      "ads/v6/enums;enums\242\002\003GAA\252\002\035Google.Ads.Go" +
-      "ogleAds.V6.Enums\312\002\035Google\\Ads\\GoogleAds\\" +
-      "V6\\Enums\352\002!Google::Ads::GoogleAds::V6::E" +
-      "numsb\006proto3"
+      "to\"`\n\031ImagePlaceholderFieldEnum\"C\n\025Image" +
+      "PlaceholderField\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNK" +
+      "NOWN\020\001\022\014\n\010ASSET_ID\020\002B\357\001\n!com.google.ads." +
+      "googleads.v6.enumsB\032ImagePlaceholderFiel" +
+      "dProtoP\001ZBgoogle.golang.org/genproto/goo" +
+      "gleapis/ads/googleads/v6/enums;enums\242\002\003G" +
+      "AA\252\002\035Google.Ads.GoogleAds.V6.Enums\312\002\035Goo" +
+      "gle\\Ads\\GoogleAds\\V6\\Enums\352\002!Google::Ads" +
+      "::GoogleAds::V6::Enumsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.api.AnnotationsProto.getDescriptor(),
         });
+    internal_static_google_ads_googleads_v6_enums_ImagePlaceholderFieldEnum_descriptor =
+      getDescriptor().getMessageTypes().get(0);
+    internal_static_google_ads_googleads_v6_enums_ImagePlaceholderFieldEnum_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_google_ads_googleads_v6_enums_ImagePlaceholderFieldEnum_descriptor,
+        new java.lang.String[] { });
     com.google.api.AnnotationsProto.getDescriptor();
   }
 

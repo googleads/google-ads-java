@@ -77,7 +77,6 @@ import org.threeten.bp.Duration;
  *         dynamicSearchAdsSearchTermViewServiceSettingsBuilder.build();
  * }</pre>
  */
-@BetaApi
 @Generated("by gapic-generator-java")
 public class DynamicSearchAdsSearchTermViewServiceStubSettings
     extends StubSettings<DynamicSearchAdsSearchTermViewServiceStubSettings> {

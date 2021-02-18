@@ -1973,6 +1973,26 @@ private static final long serialVersionUID = 0L;
      */
     com.google.protobuf.ByteString
         getEventNameBytes();
+
+    /**
+     * <pre>
+     * Output only. Name of the third-party app analytics provider.
+     * </pre>
+     *
+     * <code>string provider_name = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The providerName.
+     */
+    java.lang.String getProviderName();
+    /**
+     * <pre>
+     * Output only. Name of the third-party app analytics provider.
+     * </pre>
+     *
+     * <code>string provider_name = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The bytes for providerName.
+     */
+    com.google.protobuf.ByteString
+        getProviderNameBytes();
   }
   /**
    * <pre>
@@ -1992,6 +2012,7 @@ private static final long serialVersionUID = 0L;
     }
     private ThirdPartyAppAnalyticsSettings() {
       eventName_ = "";
+      providerName_ = "";
     }
 
     @java.lang.Override
@@ -2029,6 +2050,12 @@ private static final long serialVersionUID = 0L;
               java.lang.String s = input.readStringRequireUtf8();
               bitField0_ |= 0x00000001;
               eventName_ = s;
+              break;
+            }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              providerName_ = s;
               break;
             }
             default: {
@@ -2122,6 +2149,52 @@ private static final long serialVersionUID = 0L;
       }
     }
 
+    public static final int PROVIDER_NAME_FIELD_NUMBER = 3;
+    private volatile java.lang.Object providerName_;
+    /**
+     * <pre>
+     * Output only. Name of the third-party app analytics provider.
+     * </pre>
+     *
+     * <code>string provider_name = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The providerName.
+     */
+    @java.lang.Override
+    public java.lang.String getProviderName() {
+      java.lang.Object ref = providerName_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        providerName_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Output only. Name of the third-party app analytics provider.
+     * </pre>
+     *
+     * <code>string provider_name = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The bytes for providerName.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getProviderNameBytes() {
+      java.lang.Object ref = providerName_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        providerName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -2139,6 +2212,9 @@ private static final long serialVersionUID = 0L;
       if (((bitField0_ & 0x00000001) != 0)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, eventName_);
       }
+      if (!getProviderNameBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, providerName_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -2150,6 +2226,9 @@ private static final long serialVersionUID = 0L;
       size = 0;
       if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, eventName_);
+      }
+      if (!getProviderNameBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, providerName_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -2171,6 +2250,8 @@ private static final long serialVersionUID = 0L;
         if (!getEventName()
             .equals(other.getEventName())) return false;
       }
+      if (!getProviderName()
+          .equals(other.getProviderName())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -2186,6 +2267,8 @@ private static final long serialVersionUID = 0L;
         hash = (37 * hash) + EVENT_NAME_FIELD_NUMBER;
         hash = (53 * hash) + getEventName().hashCode();
       }
+      hash = (37 * hash) + PROVIDER_NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getProviderName().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -2325,6 +2408,8 @@ private static final long serialVersionUID = 0L;
         super.clear();
         eventName_ = "";
         bitField0_ = (bitField0_ & ~0x00000001);
+        providerName_ = "";
+
         return this;
       }
 
@@ -2357,6 +2442,7 @@ private static final long serialVersionUID = 0L;
           to_bitField0_ |= 0x00000001;
         }
         result.eventName_ = eventName_;
+        result.providerName_ = providerName_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -2409,6 +2495,10 @@ private static final long serialVersionUID = 0L;
         if (other.hasEventName()) {
           bitField0_ |= 0x00000001;
           eventName_ = other.eventName_;
+          onChanged();
+        }
+        if (!other.getProviderName().isEmpty()) {
+          providerName_ = other.providerName_;
           onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
@@ -2544,6 +2634,102 @@ private static final long serialVersionUID = 0L;
   checkByteStringIsUtf8(value);
         bitField0_ |= 0x00000001;
         eventName_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object providerName_ = "";
+      /**
+       * <pre>
+       * Output only. Name of the third-party app analytics provider.
+       * </pre>
+       *
+       * <code>string provider_name = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @return The providerName.
+       */
+      public java.lang.String getProviderName() {
+        java.lang.Object ref = providerName_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          providerName_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Output only. Name of the third-party app analytics provider.
+       * </pre>
+       *
+       * <code>string provider_name = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @return The bytes for providerName.
+       */
+      public com.google.protobuf.ByteString
+          getProviderNameBytes() {
+        java.lang.Object ref = providerName_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          providerName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Output only. Name of the third-party app analytics provider.
+       * </pre>
+       *
+       * <code>string provider_name = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @param value The providerName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setProviderName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        providerName_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Output only. Name of the third-party app analytics provider.
+       * </pre>
+       *
+       * <code>string provider_name = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearProviderName() {
+        
+        providerName_ = getDefaultInstance().getProviderName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Output only. Name of the third-party app analytics provider.
+       * </pre>
+       *
+       * <code>string provider_name = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @param value The bytes for providerName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setProviderNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        providerName_ = value;
         onChanged();
         return this;
       }
@@ -3717,7 +3903,7 @@ private static final long serialVersionUID = 0L;
    * is a system-defined conversion action.
    * </pre>
    *
-   * <code>string owner_customer = 23 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>string owner_customer = 23 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return Whether the ownerCustomer field is set.
    */
   @java.lang.Override
@@ -3730,7 +3916,7 @@ private static final long serialVersionUID = 0L;
    * is a system-defined conversion action.
    * </pre>
    *
-   * <code>string owner_customer = 23 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>string owner_customer = 23 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return The ownerCustomer.
    */
   @java.lang.Override
@@ -3752,7 +3938,7 @@ private static final long serialVersionUID = 0L;
    * is a system-defined conversion action.
    * </pre>
    *
-   * <code>string owner_customer = 23 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>string owner_customer = 23 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return The bytes for ownerCustomer.
    */
   @java.lang.Override
@@ -5497,7 +5683,7 @@ private static final long serialVersionUID = 0L;
      * is a system-defined conversion action.
      * </pre>
      *
-     * <code>string owner_customer = 23 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>string owner_customer = 23 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      * @return Whether the ownerCustomer field is set.
      */
     public boolean hasOwnerCustomer() {
@@ -5509,7 +5695,7 @@ private static final long serialVersionUID = 0L;
      * is a system-defined conversion action.
      * </pre>
      *
-     * <code>string owner_customer = 23 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>string owner_customer = 23 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      * @return The ownerCustomer.
      */
     public java.lang.String getOwnerCustomer() {
@@ -5530,7 +5716,7 @@ private static final long serialVersionUID = 0L;
      * is a system-defined conversion action.
      * </pre>
      *
-     * <code>string owner_customer = 23 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>string owner_customer = 23 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      * @return The bytes for ownerCustomer.
      */
     public com.google.protobuf.ByteString
@@ -5552,7 +5738,7 @@ private static final long serialVersionUID = 0L;
      * is a system-defined conversion action.
      * </pre>
      *
-     * <code>string owner_customer = 23 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>string owner_customer = 23 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      * @param value The ownerCustomer to set.
      * @return This builder for chaining.
      */
@@ -5572,7 +5758,7 @@ private static final long serialVersionUID = 0L;
      * is a system-defined conversion action.
      * </pre>
      *
-     * <code>string owner_customer = 23 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>string owner_customer = 23 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      * @return This builder for chaining.
      */
     public Builder clearOwnerCustomer() {
@@ -5587,7 +5773,7 @@ private static final long serialVersionUID = 0L;
      * is a system-defined conversion action.
      * </pre>
      *
-     * <code>string owner_customer = 23 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>string owner_customer = 23 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      * @param value The bytes for ownerCustomer to set.
      * @return This builder for chaining.
      */

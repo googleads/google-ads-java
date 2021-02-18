@@ -77,7 +77,6 @@ import org.threeten.bp.Duration;
  *     customerUserAccessServiceSettingsBuilder.build();
  * }</pre>
  */
-@BetaApi
 @Generated("by gapic-generator-java")
 public class CustomerUserAccessServiceStubSettings
     extends StubSettings<CustomerUserAccessServiceStubSettings> {

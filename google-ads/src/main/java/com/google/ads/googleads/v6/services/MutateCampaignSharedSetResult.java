@@ -59,6 +59,19 @@ private static final long serialVersionUID = 0L;
             resourceName_ = s;
             break;
           }
+          case 18: {
+            com.google.ads.googleads.v6.resources.CampaignSharedSet.Builder subBuilder = null;
+            if (campaignSharedSet_ != null) {
+              subBuilder = campaignSharedSet_.toBuilder();
+            }
+            campaignSharedSet_ = input.readMessage(com.google.ads.googleads.v6.resources.CampaignSharedSet.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(campaignSharedSet_);
+              campaignSharedSet_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
           default: {
             if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -137,6 +150,50 @@ private static final long serialVersionUID = 0L;
     }
   }
 
+  public static final int CAMPAIGN_SHARED_SET_FIELD_NUMBER = 2;
+  private com.google.ads.googleads.v6.resources.CampaignSharedSet campaignSharedSet_;
+  /**
+   * <pre>
+   * The mutated campaign shared set with only mutable fields after mutate. The
+   * field will only be returned when response_content_type is set to
+   * "MUTABLE_RESOURCE".
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v6.resources.CampaignSharedSet campaign_shared_set = 2;</code>
+   * @return Whether the campaignSharedSet field is set.
+   */
+  @java.lang.Override
+  public boolean hasCampaignSharedSet() {
+    return campaignSharedSet_ != null;
+  }
+  /**
+   * <pre>
+   * The mutated campaign shared set with only mutable fields after mutate. The
+   * field will only be returned when response_content_type is set to
+   * "MUTABLE_RESOURCE".
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v6.resources.CampaignSharedSet campaign_shared_set = 2;</code>
+   * @return The campaignSharedSet.
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v6.resources.CampaignSharedSet getCampaignSharedSet() {
+    return campaignSharedSet_ == null ? com.google.ads.googleads.v6.resources.CampaignSharedSet.getDefaultInstance() : campaignSharedSet_;
+  }
+  /**
+   * <pre>
+   * The mutated campaign shared set with only mutable fields after mutate. The
+   * field will only be returned when response_content_type is set to
+   * "MUTABLE_RESOURCE".
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v6.resources.CampaignSharedSet campaign_shared_set = 2;</code>
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v6.resources.CampaignSharedSetOrBuilder getCampaignSharedSetOrBuilder() {
+    return getCampaignSharedSet();
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -154,6 +211,9 @@ private static final long serialVersionUID = 0L;
     if (!getResourceNameBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, resourceName_);
     }
+    if (campaignSharedSet_ != null) {
+      output.writeMessage(2, getCampaignSharedSet());
+    }
     unknownFields.writeTo(output);
   }
 
@@ -165,6 +225,10 @@ private static final long serialVersionUID = 0L;
     size = 0;
     if (!getResourceNameBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, resourceName_);
+    }
+    if (campaignSharedSet_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(2, getCampaignSharedSet());
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -183,6 +247,11 @@ private static final long serialVersionUID = 0L;
 
     if (!getResourceName()
         .equals(other.getResourceName())) return false;
+    if (hasCampaignSharedSet() != other.hasCampaignSharedSet()) return false;
+    if (hasCampaignSharedSet()) {
+      if (!getCampaignSharedSet()
+          .equals(other.getCampaignSharedSet())) return false;
+    }
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -196,6 +265,10 @@ private static final long serialVersionUID = 0L;
     hash = (19 * hash) + getDescriptor().hashCode();
     hash = (37 * hash) + RESOURCE_NAME_FIELD_NUMBER;
     hash = (53 * hash) + getResourceName().hashCode();
+    if (hasCampaignSharedSet()) {
+      hash = (37 * hash) + CAMPAIGN_SHARED_SET_FIELD_NUMBER;
+      hash = (53 * hash) + getCampaignSharedSet().hashCode();
+    }
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -335,6 +408,12 @@ private static final long serialVersionUID = 0L;
       super.clear();
       resourceName_ = "";
 
+      if (campaignSharedSetBuilder_ == null) {
+        campaignSharedSet_ = null;
+      } else {
+        campaignSharedSet_ = null;
+        campaignSharedSetBuilder_ = null;
+      }
       return this;
     }
 
@@ -362,6 +441,11 @@ private static final long serialVersionUID = 0L;
     public com.google.ads.googleads.v6.services.MutateCampaignSharedSetResult buildPartial() {
       com.google.ads.googleads.v6.services.MutateCampaignSharedSetResult result = new com.google.ads.googleads.v6.services.MutateCampaignSharedSetResult(this);
       result.resourceName_ = resourceName_;
+      if (campaignSharedSetBuilder_ == null) {
+        result.campaignSharedSet_ = campaignSharedSet_;
+      } else {
+        result.campaignSharedSet_ = campaignSharedSetBuilder_.build();
+      }
       onBuilt();
       return result;
     }
@@ -413,6 +497,9 @@ private static final long serialVersionUID = 0L;
       if (!other.getResourceName().isEmpty()) {
         resourceName_ = other.resourceName_;
         onChanged();
+      }
+      if (other.hasCampaignSharedSet()) {
+        mergeCampaignSharedSet(other.getCampaignSharedSet());
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -537,6 +624,179 @@ private static final long serialVersionUID = 0L;
       resourceName_ = value;
       onChanged();
       return this;
+    }
+
+    private com.google.ads.googleads.v6.resources.CampaignSharedSet campaignSharedSet_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v6.resources.CampaignSharedSet, com.google.ads.googleads.v6.resources.CampaignSharedSet.Builder, com.google.ads.googleads.v6.resources.CampaignSharedSetOrBuilder> campaignSharedSetBuilder_;
+    /**
+     * <pre>
+     * The mutated campaign shared set with only mutable fields after mutate. The
+     * field will only be returned when response_content_type is set to
+     * "MUTABLE_RESOURCE".
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v6.resources.CampaignSharedSet campaign_shared_set = 2;</code>
+     * @return Whether the campaignSharedSet field is set.
+     */
+    public boolean hasCampaignSharedSet() {
+      return campaignSharedSetBuilder_ != null || campaignSharedSet_ != null;
+    }
+    /**
+     * <pre>
+     * The mutated campaign shared set with only mutable fields after mutate. The
+     * field will only be returned when response_content_type is set to
+     * "MUTABLE_RESOURCE".
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v6.resources.CampaignSharedSet campaign_shared_set = 2;</code>
+     * @return The campaignSharedSet.
+     */
+    public com.google.ads.googleads.v6.resources.CampaignSharedSet getCampaignSharedSet() {
+      if (campaignSharedSetBuilder_ == null) {
+        return campaignSharedSet_ == null ? com.google.ads.googleads.v6.resources.CampaignSharedSet.getDefaultInstance() : campaignSharedSet_;
+      } else {
+        return campaignSharedSetBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * The mutated campaign shared set with only mutable fields after mutate. The
+     * field will only be returned when response_content_type is set to
+     * "MUTABLE_RESOURCE".
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v6.resources.CampaignSharedSet campaign_shared_set = 2;</code>
+     */
+    public Builder setCampaignSharedSet(com.google.ads.googleads.v6.resources.CampaignSharedSet value) {
+      if (campaignSharedSetBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        campaignSharedSet_ = value;
+        onChanged();
+      } else {
+        campaignSharedSetBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The mutated campaign shared set with only mutable fields after mutate. The
+     * field will only be returned when response_content_type is set to
+     * "MUTABLE_RESOURCE".
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v6.resources.CampaignSharedSet campaign_shared_set = 2;</code>
+     */
+    public Builder setCampaignSharedSet(
+        com.google.ads.googleads.v6.resources.CampaignSharedSet.Builder builderForValue) {
+      if (campaignSharedSetBuilder_ == null) {
+        campaignSharedSet_ = builderForValue.build();
+        onChanged();
+      } else {
+        campaignSharedSetBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The mutated campaign shared set with only mutable fields after mutate. The
+     * field will only be returned when response_content_type is set to
+     * "MUTABLE_RESOURCE".
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v6.resources.CampaignSharedSet campaign_shared_set = 2;</code>
+     */
+    public Builder mergeCampaignSharedSet(com.google.ads.googleads.v6.resources.CampaignSharedSet value) {
+      if (campaignSharedSetBuilder_ == null) {
+        if (campaignSharedSet_ != null) {
+          campaignSharedSet_ =
+            com.google.ads.googleads.v6.resources.CampaignSharedSet.newBuilder(campaignSharedSet_).mergeFrom(value).buildPartial();
+        } else {
+          campaignSharedSet_ = value;
+        }
+        onChanged();
+      } else {
+        campaignSharedSetBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The mutated campaign shared set with only mutable fields after mutate. The
+     * field will only be returned when response_content_type is set to
+     * "MUTABLE_RESOURCE".
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v6.resources.CampaignSharedSet campaign_shared_set = 2;</code>
+     */
+    public Builder clearCampaignSharedSet() {
+      if (campaignSharedSetBuilder_ == null) {
+        campaignSharedSet_ = null;
+        onChanged();
+      } else {
+        campaignSharedSet_ = null;
+        campaignSharedSetBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The mutated campaign shared set with only mutable fields after mutate. The
+     * field will only be returned when response_content_type is set to
+     * "MUTABLE_RESOURCE".
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v6.resources.CampaignSharedSet campaign_shared_set = 2;</code>
+     */
+    public com.google.ads.googleads.v6.resources.CampaignSharedSet.Builder getCampaignSharedSetBuilder() {
+      
+      onChanged();
+      return getCampaignSharedSetFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * The mutated campaign shared set with only mutable fields after mutate. The
+     * field will only be returned when response_content_type is set to
+     * "MUTABLE_RESOURCE".
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v6.resources.CampaignSharedSet campaign_shared_set = 2;</code>
+     */
+    public com.google.ads.googleads.v6.resources.CampaignSharedSetOrBuilder getCampaignSharedSetOrBuilder() {
+      if (campaignSharedSetBuilder_ != null) {
+        return campaignSharedSetBuilder_.getMessageOrBuilder();
+      } else {
+        return campaignSharedSet_ == null ?
+            com.google.ads.googleads.v6.resources.CampaignSharedSet.getDefaultInstance() : campaignSharedSet_;
+      }
+    }
+    /**
+     * <pre>
+     * The mutated campaign shared set with only mutable fields after mutate. The
+     * field will only be returned when response_content_type is set to
+     * "MUTABLE_RESOURCE".
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v6.resources.CampaignSharedSet campaign_shared_set = 2;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v6.resources.CampaignSharedSet, com.google.ads.googleads.v6.resources.CampaignSharedSet.Builder, com.google.ads.googleads.v6.resources.CampaignSharedSetOrBuilder> 
+        getCampaignSharedSetFieldBuilder() {
+      if (campaignSharedSetBuilder_ == null) {
+        campaignSharedSetBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.ads.googleads.v6.resources.CampaignSharedSet, com.google.ads.googleads.v6.resources.CampaignSharedSet.Builder, com.google.ads.googleads.v6.resources.CampaignSharedSetOrBuilder>(
+                getCampaignSharedSet(),
+                getParentForChildren(),
+                isClean());
+        campaignSharedSet_ = null;
+      }
+      return campaignSharedSetBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

@@ -76,7 +76,6 @@ import org.threeten.bp.Duration;
  *     mobileAppCategoryConstantServiceSettingsBuilder.build();
  * }</pre>
  */
-@BetaApi
 @Generated("by gapic-generator-java")
 public class MobileAppCategoryConstantServiceStubSettings
     extends StubSettings<MobileAppCategoryConstantServiceStubSettings> {

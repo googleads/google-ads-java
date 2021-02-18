@@ -88,11 +88,21 @@ public class GrpcFeedItemServiceStub extends FeedItemServiceStub {
         FeedItemServiceStubSettings.newBuilder().build(), clientContext, callableFactory);
   }
 
+  /**
+   * Constructs an instance of GrpcFeedItemServiceStub, using the given settings. This is protected
+   * so that it is easy to make a subclass, but otherwise, the static factory methods should be
+   * preferred.
+   */
   protected GrpcFeedItemServiceStub(
       FeedItemServiceStubSettings settings, ClientContext clientContext) throws IOException {
     this(settings, clientContext, new GrpcFeedItemServiceCallableFactory());
   }
 
+  /**
+   * Constructs an instance of GrpcFeedItemServiceStub, using the given settings. This is protected
+   * so that it is easy to make a subclass, but otherwise, the static factory methods should be
+   * preferred.
+   */
   protected GrpcFeedItemServiceStub(
       FeedItemServiceStubSettings settings,
       ClientContext clientContext,

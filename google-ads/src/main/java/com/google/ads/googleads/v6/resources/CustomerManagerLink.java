@@ -169,7 +169,7 @@ private static final long serialVersionUID = 0L;
    * Output only. The manager customer linked to the customer.
    * </pre>
    *
-   * <code>string manager_customer = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>string manager_customer = 6 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return Whether the managerCustomer field is set.
    */
   @java.lang.Override
@@ -181,7 +181,7 @@ private static final long serialVersionUID = 0L;
    * Output only. The manager customer linked to the customer.
    * </pre>
    *
-   * <code>string manager_customer = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>string manager_customer = 6 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return The managerCustomer.
    */
   @java.lang.Override
@@ -202,7 +202,7 @@ private static final long serialVersionUID = 0L;
    * Output only. The manager customer linked to the customer.
    * </pre>
    *
-   * <code>string manager_customer = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>string manager_customer = 6 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return The bytes for managerCustomer.
    */
   @java.lang.Override
@@ -764,7 +764,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The manager customer linked to the customer.
      * </pre>
      *
-     * <code>string manager_customer = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>string manager_customer = 6 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      * @return Whether the managerCustomer field is set.
      */
     public boolean hasManagerCustomer() {
@@ -775,7 +775,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The manager customer linked to the customer.
      * </pre>
      *
-     * <code>string manager_customer = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>string manager_customer = 6 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      * @return The managerCustomer.
      */
     public java.lang.String getManagerCustomer() {
@@ -795,7 +795,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The manager customer linked to the customer.
      * </pre>
      *
-     * <code>string manager_customer = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>string manager_customer = 6 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      * @return The bytes for managerCustomer.
      */
     public com.google.protobuf.ByteString
@@ -816,7 +816,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The manager customer linked to the customer.
      * </pre>
      *
-     * <code>string manager_customer = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>string manager_customer = 6 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      * @param value The managerCustomer to set.
      * @return This builder for chaining.
      */
@@ -835,7 +835,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The manager customer linked to the customer.
      * </pre>
      *
-     * <code>string manager_customer = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>string manager_customer = 6 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      * @return This builder for chaining.
      */
     public Builder clearManagerCustomer() {
@@ -849,7 +849,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The manager customer linked to the customer.
      * </pre>
      *
-     * <code>string manager_customer = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>string manager_customer = 6 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      * @param value The bytes for managerCustomer to set.
      * @return This builder for chaining.
      */

@@ -75,7 +75,6 @@ import org.threeten.bp.Duration;
  *     managedPlacementViewServiceSettingsBuilder.build();
  * }</pre>
  */
-@BetaApi
 @Generated("by gapic-generator-java")
 public class ManagedPlacementViewServiceStubSettings
     extends StubSettings<ManagedPlacementViewServiceStubSettings> {

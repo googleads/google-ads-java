@@ -82,8 +82,7 @@ import javax.annotation.Generated;
  *
  * <p>Please refer to the GitHub repository's samples for more quickstart code snippets.
  */
-@BetaApi
-@Generated("by gapic-generator")
+@Generated("by gapic-generator-java")
 public class AssetServiceClient implements BackgroundResource {
   private final AssetServiceSettings settings;
   private final AssetServiceStub stub;
@@ -139,7 +138,7 @@ public class AssetServiceClient implements BackgroundResource {
   /**
    * Returns the requested asset in full detail.
    *
-   * @param resource_name Required. The resource name of the asset to fetch.
+   * @param resourceName Required. The resource name of the asset to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final Asset getAsset(AssetName resourceName) {
@@ -154,7 +153,7 @@ public class AssetServiceClient implements BackgroundResource {
   /**
    * Returns the requested asset in full detail.
    *
-   * @param resource_name Required. The resource name of the asset to fetch.
+   * @param resourceName Required. The resource name of the asset to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final Asset getAsset(String resourceName) {
@@ -187,7 +186,7 @@ public class AssetServiceClient implements BackgroundResource {
   /**
    * Creates assets. Operation statuses are returned.
    *
-   * @param customer_id Required. The ID of the customer whose assets are being modified.
+   * @param customerId Required. The ID of the customer whose assets are being modified.
    * @param operations Required. The list of operations to perform on individual assets.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */

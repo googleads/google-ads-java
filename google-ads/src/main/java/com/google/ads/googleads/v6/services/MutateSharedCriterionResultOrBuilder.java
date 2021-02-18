@@ -26,4 +26,37 @@ public interface MutateSharedCriterionResultOrBuilder extends
    */
   com.google.protobuf.ByteString
       getResourceNameBytes();
+
+  /**
+   * <pre>
+   * The mutated shared criterion with only mutable fields after mutate. The
+   * field will only be returned when response_content_type is set to
+   * "MUTABLE_RESOURCE".
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v6.resources.SharedCriterion shared_criterion = 2;</code>
+   * @return Whether the sharedCriterion field is set.
+   */
+  boolean hasSharedCriterion();
+  /**
+   * <pre>
+   * The mutated shared criterion with only mutable fields after mutate. The
+   * field will only be returned when response_content_type is set to
+   * "MUTABLE_RESOURCE".
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v6.resources.SharedCriterion shared_criterion = 2;</code>
+   * @return The sharedCriterion.
+   */
+  com.google.ads.googleads.v6.resources.SharedCriterion getSharedCriterion();
+  /**
+   * <pre>
+   * The mutated shared criterion with only mutable fields after mutate. The
+   * field will only be returned when response_content_type is set to
+   * "MUTABLE_RESOURCE".
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v6.resources.SharedCriterion shared_criterion = 2;</code>
+   */
+  com.google.ads.googleads.v6.resources.SharedCriterionOrBuilder getSharedCriterionOrBuilder();
 }

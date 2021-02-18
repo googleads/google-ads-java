@@ -83,8 +83,7 @@ import javax.annotation.Generated;
  *
  * <p>Please refer to the GitHub repository's samples for more quickstart code snippets.
  */
-@BetaApi
-@Generated("by gapic-generator")
+@Generated("by gapic-generator-java")
 public class LanguageConstantServiceClient implements BackgroundResource {
   private final LanguageConstantServiceSettings settings;
   private final LanguageConstantServiceStub stub;
@@ -142,7 +141,7 @@ public class LanguageConstantServiceClient implements BackgroundResource {
   /**
    * Returns the requested language constant.
    *
-   * @param resource_name Required. Resource name of the language constant to fetch.
+   * @param resourceName Required. Resource name of the language constant to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final LanguageConstant getLanguageConstant(LanguageConstantName resourceName) {
@@ -157,7 +156,7 @@ public class LanguageConstantServiceClient implements BackgroundResource {
   /**
    * Returns the requested language constant.
    *
-   * @param resource_name Required. Resource name of the language constant to fetch.
+   * @param resourceName Required. Resource name of the language constant to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final LanguageConstant getLanguageConstant(String resourceName) {

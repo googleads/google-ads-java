@@ -30,8 +30,8 @@ public final class QueryErrorProto {
     java.lang.String[] descriptorData = {
       "\n0google/ads/googleads/v6/errors/query_e" +
       "rror.proto\022\036google.ads.googleads.v6.erro" +
-      "rs\032\034google/api/annotations.proto\"\323\r\n\016Que" +
-      "ryErrorEnum\"\300\r\n\nQueryError\022\017\n\013UNSPECIFIE" +
+      "rs\032\034google/api/annotations.proto\"\363\r\n\016Que" +
+      "ryErrorEnum\"\340\r\n\nQueryError\022\017\n\013UNSPECIFIE" +
       "D\020\000\022\013\n\007UNKNOWN\020\001\022\017\n\013QUERY_ERROR\0202\022\025\n\021BAD" +
       "_ENUM_CONSTANT\020\022\022\027\n\023BAD_ESCAPE_SEQUENCE\020" +
       "\007\022\022\n\016BAD_FIELD_NAME\020\014\022\023\n\017BAD_LIMIT_VALUE" +
@@ -74,13 +74,14 @@ public final class QueryErrorProto {
       "TS\020\"\022\033\n\027UNEXPECTED_END_OF_QUERY\020\t\022\032\n\026UNE" +
       "XPECTED_FROM_CLAUSE\020/\022\026\n\022UNRECOGNIZED_FI" +
       "ELD\020 \022\024\n\020UNEXPECTED_INPUT\020\013\022!\n\035REQUESTED" +
-      "_METRICS_FOR_MANAGER\020;B\352\001\n\"com.google.ad" +
-      "s.googleads.v6.errorsB\017QueryErrorProtoP\001" +
-      "ZDgoogle.golang.org/genproto/googleapis/" +
-      "ads/googleads/v6/errors;errors\242\002\003GAA\252\002\036G" +
-      "oogle.Ads.GoogleAds.V6.Errors\312\002\036Google\\A" +
-      "ds\\GoogleAds\\V6\\Errors\352\002\"Google::Ads::Go" +
-      "ogleAds::V6::Errorsb\006proto3"
+      "_METRICS_FOR_MANAGER\020;\022\036\n\032FILTER_HAS_TOO" +
+      "_MANY_VALUES\020?B\352\001\n\"com.google.ads.google" +
+      "ads.v6.errorsB\017QueryErrorProtoP\001ZDgoogle" +
+      ".golang.org/genproto/googleapis/ads/goog" +
+      "leads/v6/errors;errors\242\002\003GAA\252\002\036Google.Ad" +
+      "s.GoogleAds.V6.Errors\312\002\036Google\\Ads\\Googl" +
+      "eAds\\V6\\Errors\352\002\"Google::Ads::GoogleAds:" +
+      ":V6::Errorsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

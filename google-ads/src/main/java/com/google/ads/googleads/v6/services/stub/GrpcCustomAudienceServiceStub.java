@@ -92,11 +92,21 @@ public class GrpcCustomAudienceServiceStub extends CustomAudienceServiceStub {
         CustomAudienceServiceStubSettings.newBuilder().build(), clientContext, callableFactory);
   }
 
+  /**
+   * Constructs an instance of GrpcCustomAudienceServiceStub, using the given settings. This is
+   * protected so that it is easy to make a subclass, but otherwise, the static factory methods
+   * should be preferred.
+   */
   protected GrpcCustomAudienceServiceStub(
       CustomAudienceServiceStubSettings settings, ClientContext clientContext) throws IOException {
     this(settings, clientContext, new GrpcCustomAudienceServiceCallableFactory());
   }
 
+  /**
+   * Constructs an instance of GrpcCustomAudienceServiceStub, using the given settings. This is
+   * protected so that it is easy to make a subclass, but otherwise, the static factory methods
+   * should be preferred.
+   */
   protected GrpcCustomAudienceServiceStub(
       CustomAudienceServiceStubSettings settings,
       ClientContext clientContext,

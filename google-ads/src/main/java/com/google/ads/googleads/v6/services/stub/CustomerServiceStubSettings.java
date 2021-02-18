@@ -80,7 +80,6 @@ import org.threeten.bp.Duration;
  * CustomerServiceStubSettings customerServiceSettings = customerServiceSettingsBuilder.build();
  * }</pre>
  */
-@BetaApi
 @Generated("by gapic-generator-java")
 public class CustomerServiceStubSettings extends StubSettings<CustomerServiceStubSettings> {
   /** The default scopes of the service. */

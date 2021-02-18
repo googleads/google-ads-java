@@ -84,8 +84,7 @@ import javax.annotation.Generated;
  *
  * <p>Please refer to the GitHub repository's samples for more quickstart code snippets.
  */
-@BetaApi
-@Generated("by gapic-generator")
+@Generated("by gapic-generator-java")
 public class CampaignFeedServiceClient implements BackgroundResource {
   private final CampaignFeedServiceSettings settings;
   private final CampaignFeedServiceStub stub;
@@ -142,7 +141,7 @@ public class CampaignFeedServiceClient implements BackgroundResource {
   /**
    * Returns the requested campaign feed in full detail.
    *
-   * @param resource_name Required. The resource name of the campaign feed to fetch.
+   * @param resourceName Required. The resource name of the campaign feed to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final CampaignFeed getCampaignFeed(CampaignFeedName resourceName) {
@@ -157,7 +156,7 @@ public class CampaignFeedServiceClient implements BackgroundResource {
   /**
    * Returns the requested campaign feed in full detail.
    *
-   * @param resource_name Required. The resource name of the campaign feed to fetch.
+   * @param resourceName Required. The resource name of the campaign feed to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final CampaignFeed getCampaignFeed(String resourceName) {
@@ -191,7 +190,7 @@ public class CampaignFeedServiceClient implements BackgroundResource {
   /**
    * Creates, updates, or removes campaign feeds. Operation statuses are returned.
    *
-   * @param customer_id Required. The ID of the customer whose campaign feeds are being modified.
+   * @param customerId Required. The ID of the customer whose campaign feeds are being modified.
    * @param operations Required. The list of operations to perform on individual campaign feeds.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */

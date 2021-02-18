@@ -84,12 +84,22 @@ public class GrpcConversionAdjustmentUploadServiceStub
         callableFactory);
   }
 
+  /**
+   * Constructs an instance of GrpcConversionAdjustmentUploadServiceStub, using the given settings.
+   * This is protected so that it is easy to make a subclass, but otherwise, the static factory
+   * methods should be preferred.
+   */
   protected GrpcConversionAdjustmentUploadServiceStub(
       ConversionAdjustmentUploadServiceStubSettings settings, ClientContext clientContext)
       throws IOException {
     this(settings, clientContext, new GrpcConversionAdjustmentUploadServiceCallableFactory());
   }
 
+  /**
+   * Constructs an instance of GrpcConversionAdjustmentUploadServiceStub, using the given settings.
+   * This is protected so that it is easy to make a subclass, but otherwise, the static factory
+   * methods should be preferred.
+   */
   protected GrpcConversionAdjustmentUploadServiceStub(
       ConversionAdjustmentUploadServiceStubSettings settings,
       ClientContext clientContext,

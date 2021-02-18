@@ -30,16 +30,17 @@ public final class HotelPriceBucketProto {
     java.lang.String[] descriptorData = {
       "\n6google/ads/googleads/v6/enums/hotel_pr" +
       "ice_bucket.proto\022\035google.ads.googleads.v" +
-      "6.enums\032\034google/api/annotations.proto\"i\n" +
-      "\024HotelPriceBucketEnum\"Q\n\020HotelPriceBucke" +
-      "t\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\017\n\013LOWES" +
-      "T_TIED\020\003\022\016\n\nNOT_LOWEST\020\004B\352\001\n!com.google." +
-      "ads.googleads.v6.enumsB\025HotelPriceBucket" +
-      "ProtoP\001ZBgoogle.golang.org/genproto/goog" +
-      "leapis/ads/googleads/v6/enums;enums\242\002\003GA" +
-      "A\252\002\035Google.Ads.GoogleAds.V6.Enums\312\002\035Goog" +
-      "le\\Ads\\GoogleAds\\V6\\Enums\352\002!Google::Ads:" +
-      ":GoogleAds::V6::Enumsb\006proto3"
+      "6.enums\032\034google/api/annotations.proto\"\224\001" +
+      "\n\024HotelPriceBucketEnum\"|\n\020HotelPriceBuck" +
+      "et\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\021\n\rLOWE" +
+      "ST_UNIQUE\020\002\022\017\n\013LOWEST_TIED\020\003\022\016\n\nNOT_LOWE" +
+      "ST\020\004\022\026\n\022ONLY_PARTNER_SHOWN\020\005B\352\001\n!com.goo" +
+      "gle.ads.googleads.v6.enumsB\025HotelPriceBu" +
+      "cketProtoP\001ZBgoogle.golang.org/genproto/" +
+      "googleapis/ads/googleads/v6/enums;enums\242" +
+      "\002\003GAA\252\002\035Google.Ads.GoogleAds.V6.Enums\312\002\035" +
+      "Google\\Ads\\GoogleAds\\V6\\Enums\352\002!Google::" +
+      "Ads::GoogleAds::V6::Enumsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

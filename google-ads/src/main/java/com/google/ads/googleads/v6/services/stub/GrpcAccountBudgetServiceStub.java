@@ -76,11 +76,21 @@ public class GrpcAccountBudgetServiceStub extends AccountBudgetServiceStub {
         AccountBudgetServiceStubSettings.newBuilder().build(), clientContext, callableFactory);
   }
 
+  /**
+   * Constructs an instance of GrpcAccountBudgetServiceStub, using the given settings. This is
+   * protected so that it is easy to make a subclass, but otherwise, the static factory methods
+   * should be preferred.
+   */
   protected GrpcAccountBudgetServiceStub(
       AccountBudgetServiceStubSettings settings, ClientContext clientContext) throws IOException {
     this(settings, clientContext, new GrpcAccountBudgetServiceCallableFactory());
   }
 
+  /**
+   * Constructs an instance of GrpcAccountBudgetServiceStub, using the given settings. This is
+   * protected so that it is easy to make a subclass, but otherwise, the static factory methods
+   * should be preferred.
+   */
   protected GrpcAccountBudgetServiceStub(
       AccountBudgetServiceStubSettings settings,
       ClientContext clientContext,

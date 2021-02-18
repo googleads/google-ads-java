@@ -76,7 +76,6 @@ import org.threeten.bp.Duration;
  * SharedSetServiceStubSettings sharedSetServiceSettings = sharedSetServiceSettingsBuilder.build();
  * }</pre>
  */
-@BetaApi
 @Generated("by gapic-generator-java")
 public class SharedSetServiceStubSettings extends StubSettings<SharedSetServiceStubSettings> {
   /** The default scopes of the service. */

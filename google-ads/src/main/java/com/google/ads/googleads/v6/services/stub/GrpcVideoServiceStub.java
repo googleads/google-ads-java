@@ -71,11 +71,21 @@ public class GrpcVideoServiceStub extends VideoServiceStub {
         VideoServiceStubSettings.newBuilder().build(), clientContext, callableFactory);
   }
 
+  /**
+   * Constructs an instance of GrpcVideoServiceStub, using the given settings. This is protected so
+   * that it is easy to make a subclass, but otherwise, the static factory methods should be
+   * preferred.
+   */
   protected GrpcVideoServiceStub(VideoServiceStubSettings settings, ClientContext clientContext)
       throws IOException {
     this(settings, clientContext, new GrpcVideoServiceCallableFactory());
   }
 
+  /**
+   * Constructs an instance of GrpcVideoServiceStub, using the given settings. This is protected so
+   * that it is easy to make a subclass, but otherwise, the static factory methods should be
+   * preferred.
+   */
   protected GrpcVideoServiceStub(
       VideoServiceStubSettings settings,
       ClientContext clientContext,

@@ -83,8 +83,7 @@ import javax.annotation.Generated;
  *
  * <p>Please refer to the GitHub repository's samples for more quickstart code snippets.
  */
-@BetaApi
-@Generated("by gapic-generator")
+@Generated("by gapic-generator-java")
 public class AgeRangeViewServiceClient implements BackgroundResource {
   private final AgeRangeViewServiceSettings settings;
   private final AgeRangeViewServiceStub stub;
@@ -141,7 +140,7 @@ public class AgeRangeViewServiceClient implements BackgroundResource {
   /**
    * Returns the requested age range view in full detail.
    *
-   * @param resource_name Required. The resource name of the age range view to fetch.
+   * @param resourceName Required. The resource name of the age range view to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final AgeRangeView getAgeRangeView(AgeRangeViewName resourceName) {
@@ -156,7 +155,7 @@ public class AgeRangeViewServiceClient implements BackgroundResource {
   /**
    * Returns the requested age range view in full detail.
    *
-   * @param resource_name Required. The resource name of the age range view to fetch.
+   * @param resourceName Required. The resource name of the age range view to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final AgeRangeView getAgeRangeView(String resourceName) {

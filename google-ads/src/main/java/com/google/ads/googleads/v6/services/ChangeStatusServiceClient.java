@@ -83,8 +83,7 @@ import javax.annotation.Generated;
  *
  * <p>Please refer to the GitHub repository's samples for more quickstart code snippets.
  */
-@BetaApi
-@Generated("by gapic-generator")
+@Generated("by gapic-generator-java")
 public class ChangeStatusServiceClient implements BackgroundResource {
   private final ChangeStatusServiceSettings settings;
   private final ChangeStatusServiceStub stub;
@@ -141,7 +140,7 @@ public class ChangeStatusServiceClient implements BackgroundResource {
   /**
    * Returns the requested change status in full detail.
    *
-   * @param resource_name Required. The resource name of the change status to fetch.
+   * @param resourceName Required. The resource name of the change status to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final ChangeStatus getChangeStatus(ChangeStatusName resourceName) {
@@ -156,7 +155,7 @@ public class ChangeStatusServiceClient implements BackgroundResource {
   /**
    * Returns the requested change status in full detail.
    *
-   * @param resource_name Required. The resource name of the change status to fetch.
+   * @param resourceName Required. The resource name of the change status to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final ChangeStatus getChangeStatus(String resourceName) {

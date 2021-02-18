@@ -450,5 +450,24 @@ public interface AttributeFieldMappingOrBuilder extends
    */
   com.google.ads.googleads.v6.enums.JobPlaceholderFieldEnum.JobPlaceholderField getJobField();
 
+  /**
+   * <pre>
+   * Immutable. Image Placeholder Fields
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v6.enums.ImagePlaceholderFieldEnum.ImagePlaceholderField image_field = 26 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The enum numeric value on the wire for imageField.
+   */
+  int getImageFieldValue();
+  /**
+   * <pre>
+   * Immutable. Image Placeholder Fields
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v6.enums.ImagePlaceholderFieldEnum.ImagePlaceholderField image_field = 26 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The imageField.
+   */
+  com.google.ads.googleads.v6.enums.ImagePlaceholderFieldEnum.ImagePlaceholderField getImageField();
+
   public com.google.ads.googleads.v6.resources.AttributeFieldMapping.FieldCase getFieldCase();
 }

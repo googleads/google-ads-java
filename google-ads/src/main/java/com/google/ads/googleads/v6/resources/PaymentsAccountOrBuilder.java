@@ -193,7 +193,7 @@ public interface PaymentsAccountOrBuilder extends
    * Output only. Paying manager of this payment account.
    * </pre>
    *
-   * <code>string paying_manager_customer = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>string paying_manager_customer = 13 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return Whether the payingManagerCustomer field is set.
    */
   boolean hasPayingManagerCustomer();
@@ -202,7 +202,7 @@ public interface PaymentsAccountOrBuilder extends
    * Output only. Paying manager of this payment account.
    * </pre>
    *
-   * <code>string paying_manager_customer = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>string paying_manager_customer = 13 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return The payingManagerCustomer.
    */
   java.lang.String getPayingManagerCustomer();
@@ -211,7 +211,7 @@ public interface PaymentsAccountOrBuilder extends
    * Output only. Paying manager of this payment account.
    * </pre>
    *
-   * <code>string paying_manager_customer = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>string paying_manager_customer = 13 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return The bytes for payingManagerCustomer.
    */
   com.google.protobuf.ByteString

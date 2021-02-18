@@ -75,7 +75,6 @@ import org.threeten.bp.Duration;
  *     incomeRangeViewServiceSettingsBuilder.build();
  * }</pre>
  */
-@BetaApi
 @Generated("by gapic-generator-java")
 public class IncomeRangeViewServiceStubSettings
     extends StubSettings<IncomeRangeViewServiceStubSettings> {

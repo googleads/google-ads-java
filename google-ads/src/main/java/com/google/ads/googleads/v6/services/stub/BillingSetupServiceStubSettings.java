@@ -77,7 +77,6 @@ import org.threeten.bp.Duration;
  *     billingSetupServiceSettingsBuilder.build();
  * }</pre>
  */
-@BetaApi
 @Generated("by gapic-generator-java")
 public class BillingSetupServiceStubSettings extends StubSettings<BillingSetupServiceStubSettings> {
   /** The default scopes of the service. */

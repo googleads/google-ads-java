@@ -148,7 +148,7 @@ public class GetChangeSummary {
         resourceName = changeStatus.getAdGroupBidModifier();
         break;
       case AD_GROUP_CRITERION:
-        resourceName = changeStatus.getAdGroup();
+        resourceName = changeStatus.getAdGroupCriterion();
         break;
       case AD_GROUP_FEED:
         resourceName = changeStatus.getAdGroupFeed();

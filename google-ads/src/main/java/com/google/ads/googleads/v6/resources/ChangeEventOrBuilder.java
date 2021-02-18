@@ -270,4 +270,44 @@ public interface ChangeEventOrBuilder extends
    */
   com.google.protobuf.ByteString
       getAdGroupBytes();
+
+  /**
+   * <pre>
+   * Output only. The Feed affected by this change.
+   * </pre>
+   *
+   * <code>string feed = 13 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The feed.
+   */
+  java.lang.String getFeed();
+  /**
+   * <pre>
+   * Output only. The Feed affected by this change.
+   * </pre>
+   *
+   * <code>string feed = 13 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The bytes for feed.
+   */
+  com.google.protobuf.ByteString
+      getFeedBytes();
+
+  /**
+   * <pre>
+   * Output only. The FeedItem affected by this change.
+   * </pre>
+   *
+   * <code>string feed_item = 14 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The feedItem.
+   */
+  java.lang.String getFeedItem();
+  /**
+   * <pre>
+   * Output only. The FeedItem affected by this change.
+   * </pre>
+   *
+   * <code>string feed_item = 14 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The bytes for feedItem.
+   */
+  com.google.protobuf.ByteString
+      getFeedItemBytes();
 }

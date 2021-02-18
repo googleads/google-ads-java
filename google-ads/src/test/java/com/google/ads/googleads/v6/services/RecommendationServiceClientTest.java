@@ -86,6 +86,7 @@ public class RecommendationServiceClientTest {
         Recommendation.newBuilder()
             .setResourceName(
                 RecommendationName.of("[CUSTOMER_ID]", "[RECOMMENDATION_ID]").toString())
+            .setImpact(Recommendation.RecommendationImpact.newBuilder().build())
             .build();
     mockRecommendationService.addResponse(expectedResponse);
 
@@ -126,6 +127,7 @@ public class RecommendationServiceClientTest {
         Recommendation.newBuilder()
             .setResourceName(
                 RecommendationName.of("[CUSTOMER_ID]", "[RECOMMENDATION_ID]").toString())
+            .setImpact(Recommendation.RecommendationImpact.newBuilder().build())
             .build();
     mockRecommendationService.addResponse(expectedResponse);
 

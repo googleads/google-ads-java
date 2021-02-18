@@ -77,7 +77,6 @@ import org.threeten.bp.Duration;
  *         productBiddingCategoryConstantServiceSettingsBuilder.build();
  * }</pre>
  */
-@BetaApi
 @Generated("by gapic-generator-java")
 public class ProductBiddingCategoryConstantServiceStubSettings
     extends StubSettings<ProductBiddingCategoryConstantServiceStubSettings> {

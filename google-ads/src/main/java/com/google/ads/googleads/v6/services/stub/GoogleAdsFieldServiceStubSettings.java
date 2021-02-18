@@ -86,7 +86,6 @@ import org.threeten.bp.Duration;
  *     googleAdsFieldServiceSettingsBuilder.build();
  * }</pre>
  */
-@BetaApi
 @Generated("by gapic-generator-java")
 public class GoogleAdsFieldServiceStubSettings
     extends StubSettings<GoogleAdsFieldServiceStubSettings> {

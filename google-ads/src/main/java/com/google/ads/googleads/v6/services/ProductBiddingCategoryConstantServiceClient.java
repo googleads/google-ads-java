@@ -85,8 +85,7 @@ import javax.annotation.Generated;
  *
  * <p>Please refer to the GitHub repository's samples for more quickstart code snippets.
  */
-@BetaApi
-@Generated("by gapic-generator")
+@Generated("by gapic-generator-java")
 public class ProductBiddingCategoryConstantServiceClient implements BackgroundResource {
   private final ProductBiddingCategoryConstantServiceSettings settings;
   private final ProductBiddingCategoryConstantServiceStub stub;
@@ -152,7 +151,7 @@ public class ProductBiddingCategoryConstantServiceClient implements BackgroundRe
   /**
    * Returns the requested Product Bidding Category in full detail.
    *
-   * @param resource_name Required. Resource name of the Product Bidding Category to fetch.
+   * @param resourceName Required. Resource name of the Product Bidding Category to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final ProductBiddingCategoryConstant getProductBiddingCategoryConstant(
@@ -168,7 +167,7 @@ public class ProductBiddingCategoryConstantServiceClient implements BackgroundRe
   /**
    * Returns the requested Product Bidding Category in full detail.
    *
-   * @param resource_name Required. Resource name of the Product Bidding Category to fetch.
+   * @param resourceName Required. Resource name of the Product Bidding Category to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final ProductBiddingCategoryConstant getProductBiddingCategoryConstant(

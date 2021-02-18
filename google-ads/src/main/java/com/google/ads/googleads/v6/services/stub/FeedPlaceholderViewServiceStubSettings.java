@@ -75,7 +75,6 @@ import org.threeten.bp.Duration;
  *     feedPlaceholderViewServiceSettingsBuilder.build();
  * }</pre>
  */
-@BetaApi
 @Generated("by gapic-generator-java")
 public class FeedPlaceholderViewServiceStubSettings
     extends StubSettings<FeedPlaceholderViewServiceStubSettings> {

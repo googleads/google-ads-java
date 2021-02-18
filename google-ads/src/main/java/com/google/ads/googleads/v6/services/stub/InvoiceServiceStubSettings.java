@@ -74,7 +74,6 @@ import org.threeten.bp.Duration;
  * InvoiceServiceStubSettings invoiceServiceSettings = invoiceServiceSettingsBuilder.build();
  * }</pre>
  */
-@BetaApi
 @Generated("by gapic-generator-java")
 public class InvoiceServiceStubSettings extends StubSettings<InvoiceServiceStubSettings> {
   /** The default scopes of the service. */

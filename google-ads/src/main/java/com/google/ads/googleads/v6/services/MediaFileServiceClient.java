@@ -84,8 +84,7 @@ import javax.annotation.Generated;
  *
  * <p>Please refer to the GitHub repository's samples for more quickstart code snippets.
  */
-@BetaApi
-@Generated("by gapic-generator")
+@Generated("by gapic-generator-java")
 public class MediaFileServiceClient implements BackgroundResource {
   private final MediaFileServiceSettings settings;
   private final MediaFileServiceStub stub;
@@ -142,7 +141,7 @@ public class MediaFileServiceClient implements BackgroundResource {
   /**
    * Returns the requested media file in full detail.
    *
-   * @param resource_name Required. The resource name of the media file to fetch.
+   * @param resourceName Required. The resource name of the media file to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final MediaFile getMediaFile(MediaFileName resourceName) {
@@ -157,7 +156,7 @@ public class MediaFileServiceClient implements BackgroundResource {
   /**
    * Returns the requested media file in full detail.
    *
-   * @param resource_name Required. The resource name of the media file to fetch.
+   * @param resourceName Required. The resource name of the media file to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final MediaFile getMediaFile(String resourceName) {
@@ -191,7 +190,7 @@ public class MediaFileServiceClient implements BackgroundResource {
   /**
    * Creates media files. Operation statuses are returned.
    *
-   * @param customer_id Required. The ID of the customer whose media files are being modified.
+   * @param customerId Required. The ID of the customer whose media files are being modified.
    * @param operations Required. The list of operations to perform on individual media file.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */

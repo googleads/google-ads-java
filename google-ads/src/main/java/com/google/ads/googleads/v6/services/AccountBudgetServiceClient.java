@@ -85,8 +85,7 @@ import javax.annotation.Generated;
  *
  * <p>Please refer to the GitHub repository's samples for more quickstart code snippets.
  */
-@BetaApi
-@Generated("by gapic-generator")
+@Generated("by gapic-generator-java")
 public class AccountBudgetServiceClient implements BackgroundResource {
   private final AccountBudgetServiceSettings settings;
   private final AccountBudgetServiceStub stub;
@@ -143,7 +142,7 @@ public class AccountBudgetServiceClient implements BackgroundResource {
   /**
    * Returns an account-level budget in full detail.
    *
-   * @param resource_name Required. The resource name of the account-level budget to fetch.
+   * @param resourceName Required. The resource name of the account-level budget to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final AccountBudget getAccountBudget(AccountBudgetName resourceName) {
@@ -158,7 +157,7 @@ public class AccountBudgetServiceClient implements BackgroundResource {
   /**
    * Returns an account-level budget in full detail.
    *
-   * @param resource_name Required. The resource name of the account-level budget to fetch.
+   * @param resourceName Required. The resource name of the account-level budget to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final AccountBudget getAccountBudget(String resourceName) {

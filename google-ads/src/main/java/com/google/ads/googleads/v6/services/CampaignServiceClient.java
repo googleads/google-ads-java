@@ -84,8 +84,7 @@ import javax.annotation.Generated;
  *
  * <p>Please refer to the GitHub repository's samples for more quickstart code snippets.
  */
-@BetaApi
-@Generated("by gapic-generator")
+@Generated("by gapic-generator-java")
 public class CampaignServiceClient implements BackgroundResource {
   private final CampaignServiceSettings settings;
   private final CampaignServiceStub stub;
@@ -142,7 +141,7 @@ public class CampaignServiceClient implements BackgroundResource {
   /**
    * Returns the requested campaign in full detail.
    *
-   * @param resource_name Required. The resource name of the campaign to fetch.
+   * @param resourceName Required. The resource name of the campaign to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final Campaign getCampaign(CampaignName resourceName) {
@@ -157,7 +156,7 @@ public class CampaignServiceClient implements BackgroundResource {
   /**
    * Returns the requested campaign in full detail.
    *
-   * @param resource_name Required. The resource name of the campaign to fetch.
+   * @param resourceName Required. The resource name of the campaign to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final Campaign getCampaign(String resourceName) {
@@ -191,7 +190,7 @@ public class CampaignServiceClient implements BackgroundResource {
   /**
    * Creates, updates, or removes campaigns. Operation statuses are returned.
    *
-   * @param customer_id Required. The ID of the customer whose campaigns are being modified.
+   * @param customerId Required. The ID of the customer whose campaigns are being modified.
    * @param operations Required. The list of operations to perform on individual campaigns.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */

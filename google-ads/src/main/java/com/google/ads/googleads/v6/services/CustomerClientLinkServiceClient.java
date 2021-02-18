@@ -83,8 +83,7 @@ import javax.annotation.Generated;
  *
  * <p>Please refer to the GitHub repository's samples for more quickstart code snippets.
  */
-@BetaApi
-@Generated("by gapic-generator")
+@Generated("by gapic-generator-java")
 public class CustomerClientLinkServiceClient implements BackgroundResource {
   private final CustomerClientLinkServiceSettings settings;
   private final CustomerClientLinkServiceStub stub;
@@ -143,7 +142,7 @@ public class CustomerClientLinkServiceClient implements BackgroundResource {
   /**
    * Returns the requested CustomerClientLink in full detail.
    *
-   * @param resource_name Required. The resource name of the customer client link to fetch.
+   * @param resourceName Required. The resource name of the customer client link to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final CustomerClientLink getCustomerClientLink(CustomerClientLinkName resourceName) {
@@ -158,7 +157,7 @@ public class CustomerClientLinkServiceClient implements BackgroundResource {
   /**
    * Returns the requested CustomerClientLink in full detail.
    *
-   * @param resource_name Required. The resource name of the customer client link to fetch.
+   * @param resourceName Required. The resource name of the customer client link to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final CustomerClientLink getCustomerClientLink(String resourceName) {
@@ -193,7 +192,7 @@ public class CustomerClientLinkServiceClient implements BackgroundResource {
   /**
    * Creates or updates a customer client link. Operation statuses are returned.
    *
-   * @param customer_id Required. The ID of the customer whose customer link are being modified.
+   * @param customerId Required. The ID of the customer whose customer link are being modified.
    * @param operation Required. The operation to perform on the individual CustomerClientLink.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */

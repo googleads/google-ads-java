@@ -74,7 +74,7 @@ public interface DateSpecificRuleUserListInfoOrBuilder extends
 
   /**
    * <pre>
-   * End date of users visit. If set to 2037-12-30, then the list includes all
+   * Last date of users visit. If set to 2037-12-30, then the list includes all
    * users after start_date. The date's format should be YYYY-MM-DD.
    * Required for creating a data specific rule user list.
    * </pre>
@@ -85,7 +85,7 @@ public interface DateSpecificRuleUserListInfoOrBuilder extends
   boolean hasEndDate();
   /**
    * <pre>
-   * End date of users visit. If set to 2037-12-30, then the list includes all
+   * Last date of users visit. If set to 2037-12-30, then the list includes all
    * users after start_date. The date's format should be YYYY-MM-DD.
    * Required for creating a data specific rule user list.
    * </pre>
@@ -96,7 +96,7 @@ public interface DateSpecificRuleUserListInfoOrBuilder extends
   java.lang.String getEndDate();
   /**
    * <pre>
-   * End date of users visit. If set to 2037-12-30, then the list includes all
+   * Last date of users visit. If set to 2037-12-30, then the list includes all
    * users after start_date. The date's format should be YYYY-MM-DD.
    * Required for creating a data specific rule user list.
    * </pre>
