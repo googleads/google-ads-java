@@ -83,14 +83,14 @@ public class ExampleRunnerTask extends JavaExec {
     @Override
     public void exec() {
         if (!(exampleArguments?.trim())) {
-            throw new GradleException('\033[0;31mMissing example!\033[0m Please rerun with one provided, e.g. \033[0;35m--example=basicoperations.GetCampaigns\033[0m')
+            throw new GradleException('\033[0;31mMissing example!\033[0m Please rerun with one provided, e.g. \033[0;35m--example="basicoperations.GetCampaigns"\033[0m')
         }
         logQuietMessage('Running example: ' + main + ', args: ' + getArgs().toString())
         try {
             super.exec()
         }
         catch(Exception e) {
-            logQuietMessage('\n\033[0;31mrunExample exception!\033[0m Did you provide a valid example identifier? E.g. \033[0;35m--example=basicoperations.GetCampaigns\033[0m\n\n' + e.getMessage())
+            logQuietMessage('\n\033[0;31mrunExample exception!\033[0m Did you provide a valid example identifier? E.g. \033[0;35m--example="basicoperations.GetCampaigns"\033[0m\n\n' + e.getMessage())
         }
     }
 }
