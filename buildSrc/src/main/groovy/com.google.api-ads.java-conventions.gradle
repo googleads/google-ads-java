@@ -56,3 +56,93 @@ dependencies {
     annotationProcessor 'com.google.auto.service:auto-service:1.0-rc2'
     testImplementation 'junit:junit:4.13.1'
 }
+
+public class ExampleRunnerTask extends JavaExec {
+
+    @Input
+    public String basePackage = 'com.google.ads.googleads.examples.'
+
+    @Optional
+    @Input
+    private String exampleArguments
+
+    public ExampleRunnerTask() {
+        group = 'Execution'
+        description = 'Run a Google Ads API example.'
+        errorOutput = System.err
+    }
+
+    @Option(option = 'example', description = 'Sets the example to launch and' +
+        ' any arguments. Required for execution. E.g. ' +
+        '"basicoperations.GetCampaigns --customerId 1234567890"')
+    public void setExampleArguments(String exampleArguments) {
+        this.exampleArguments = exampleArguments.trim()
+        int firstSpaceIndex = this.exampleArguments.indexOf(' ')
+
+        // No additional arguments were passed, just the example name.
+        if (firstSpaceIndex == -1) {
+            main = basePackage + this.exampleArguments
+        }
+        // Otherwise, separate the input and set the arguments to pass to the
+        // main class.
+        else {
+            main = basePackage + this.exampleArguments[0..firstSpaceIndex - 1]
+            argsString(exampleArguments[(firstSpaceIndex + 1)..-1])
+        }
+    }
+
+    @TaskAction
+    @Override
+    public void exec() {
+        if (!(exampleArguments?.trim())) {
+            throw new GradleException('\033[0;31mMissing example!\033[0m ' +
+                'Please rerun with one provided, e.g. ' +
+                '\033[0;35m--example="basicoperations.GetCampaigns"\033[0m')
+        }
+        logQuietMessage('Running example: ' + main + ', args: ' +
+            args.toString())
+        try {
+            super.exec()
+        }
+        catch (Exception e) {
+            logQuietMessage('\n\033[0;31mrunExample exception!\033[0m Did ' +
+                'you provide a valid example identifier? E.g. ' +
+                '\033[0;35m--example="basicoperations.GetCampaigns"\033[0m\n\n' +
+                e.message)
+        }
+    }
+
+    public String getExampleArguments() {
+        return exampleArguments
+    }
+
+    private void logQuietMessage(String message) {
+        logger.quiet(message)
+    }
+
+}
+
+// task runExample(type: ExampleRunnerTask) {
+//     classpath = sourceSets.main.runtimeClasspath
+// }
+
+// allprojects.findAll { it.name in ['google-ads-examples', 'google-ads-migration-examples'] }.each { p ->
+//     configure(p) {
+//         task runExample(type: ExampleRunnerTask) {
+//             classpath = sourceSets.main.runtimeClasspath
+//         }
+//     }
+// }
+
+// configure('google-ads-examples') {
+//         task runExample(type: ExampleRunnerTask) {
+//             classpath = sourceSets.main.runtimeClasspath
+//         }
+//     }
+
+// configure('google-ads-migration-examples') {
+//     task runMigrationExample(type: ExampleRunnerTask) {
+//         classpath = sourceSets.main.runtimeClasspath
+//         basePackage = 'com.google.ads.googleads.migration.'
+//     }
+// }

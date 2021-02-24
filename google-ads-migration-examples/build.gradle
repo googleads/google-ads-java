@@ -32,3 +32,8 @@ dependencies {
 }
 
 description = 'Google Ads API client library for Java migration examples'
+
+task runMigrationExample(type: ExampleRunnerTask) {
+        classpath = sourceSets.main.runtimeClasspath
+        basePackage = 'com.google.ads.googleads.migration.'
+    }
