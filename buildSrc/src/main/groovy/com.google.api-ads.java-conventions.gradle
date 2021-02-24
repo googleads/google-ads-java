@@ -121,28 +121,3 @@ public class ExampleRunnerTask extends JavaExec {
     }
 
 }
-
-// task runExample(type: ExampleRunnerTask) {
-//     classpath = sourceSets.main.runtimeClasspath
-// }
-
-// allprojects.findAll { it.name in ['google-ads-examples', 'google-ads-migration-examples'] }.each { p ->
-//     configure(p) {
-//         task runExample(type: ExampleRunnerTask) {
-//             classpath = sourceSets.main.runtimeClasspath
-//         }
-//     }
-// }
-
-// configure('google-ads-examples') {
-//         task runExample(type: ExampleRunnerTask) {
-//             classpath = sourceSets.main.runtimeClasspath
-//         }
-//     }
-
-// configure('google-ads-migration-examples') {
-//     task runMigrationExample(type: ExampleRunnerTask) {
-//         classpath = sourceSets.main.runtimeClasspath
-//         basePackage = 'com.google.ads.googleads.migration.'
-//     }
-// }
