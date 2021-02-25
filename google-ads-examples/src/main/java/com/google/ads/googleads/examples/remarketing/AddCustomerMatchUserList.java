@@ -230,14 +230,18 @@ public class AddCustomerMatchUserList {
         System.out.printf(
             "Successfully added %d operations to the offline user data job.%n",
             userDataJobOperations.size());
-
-        // Offline user data jobs may take up to 24 hours to complete, so instead of waiting for the
-        // job to complete, retrieves and displays the job status once. If the job is completed
-        // successfully, prints information about the user list. Otherwise, prints the query to use
-        // to check the job again later.
-        checkJobStatus(
-            googleAdsClient, customerId, offlineUserDataJobResourceName, userListResourceName);
       }
+
+      // Issues an asynchronous request to run the offline user data job for executing
+      // all added operations.
+      offlineUserDataJobServiceClient.runOfflineUserDataJobAsync(offlineUserDataJobResourceName);
+
+      // Offline user data jobs may take up to 24 hours to complete, so instead of waiting for the
+      // job to complete, retrieves and displays the job status once. If the job is completed
+      // successfully, prints information about the user list. Otherwise, prints the query to use
+      // to check the job again later.
+      checkJobStatus(
+          googleAdsClient, customerId, offlineUserDataJobResourceName, userListResourceName);
     }
   }
   // [END AddCustomerMatchUserList]
