@@ -1,0 +1,39 @@
+/*
+ * Copyright 2020 Google LLC
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     https://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * This is the build configuration for the google-ads-migration-examples
+ * subproject. It depends on the google-ads subproject.
+ */
+
+plugins {
+    id 'com.google.api-ads.java-conventions'
+}
+
+dependencies {
+    implementation project(':google-ads')
+    implementation 'com.google.api-ads:ads-lib:4.4.0'
+    implementation 'com.google.api-ads:adwords-axis:4.4.0'
+    implementation 'com.beust:jcommander:1.72'
+    implementation 'joda-time:joda-time:2.8.2'
+    runtimeOnly 'org.apache.logging.log4j:log4j-slf4j-impl:2.11.1'
+    testImplementation 'org.mockito:mockito-core:2.27.0'
+}
+
+description = 'Google Ads API client library for Java migration examples'
+
+task runMigrationExample(type: ExampleRunnerTask) {
+    classpath = sourceSets.main.runtimeClasspath
+    basePackage = 'com.google.ads.googleads.migration.'
+}

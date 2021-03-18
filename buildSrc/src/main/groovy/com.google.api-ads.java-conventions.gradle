@@ -1,0 +1,123 @@
+/*
+ * Copyright 2020 Google LLC
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     https://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * These are shared settings common to all Google Ads Java library subprojects.
+ */
+
+plugins {
+    id 'java-library'
+    id 'maven-publish'
+}
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+}
+
+group = 'com.google.api-ads'
+version = '11.0.1-SNAPSHOT'
+java.sourceCompatibility = JavaVersion.VERSION_1_8
+java.targetCompatibility = JavaVersion.VERSION_1_8
+
+java {
+    withSourcesJar()
+}
+
+publishing {
+    publications {
+        maven(MavenPublication) {
+            from(components.java)
+        }
+    }
+}
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
+
+dependencies {
+    implementation 'com.google.guava:guava:26.0-android'
+    implementation 'com.google.auto.service:auto-service:1.0-rc2'
+    implementation 'com.google.api:gax:1.60.1'
+    implementation 'com.google.api:gax-grpc:1.60.1'
+    implementation 'com.google.protobuf:protobuf-java:3.14.0'
+    annotationProcessor 'com.google.auto.service:auto-service:1.0-rc2'
+    testImplementation 'junit:junit:4.13.1'
+}
+
+public class ExampleRunnerTask extends JavaExec {
+
+    @Input
+    public String basePackage = 'com.google.ads.googleads.examples.'
+
+    @Optional
+    @Input
+    private String exampleArguments
+
+    public ExampleRunnerTask() {
+        group = 'Execution'
+        description = 'Run a Google Ads API example.'
+        errorOutput = System.err
+    }
+
+    @Option(option = 'example', description = 'Sets the example to launch and' +
+        ' any arguments. Required for execution. E.g. ' +
+        '"basicoperations.GetCampaigns --customerId 1234567890"')
+    public void setExampleArguments(String exampleArguments) {
+        this.exampleArguments = exampleArguments.trim()
+        int firstSpaceIndex = this.exampleArguments.indexOf(' ')
+
+        // No additional arguments were passed, just the example name.
+        if (firstSpaceIndex == -1) {
+            main = basePackage + this.exampleArguments
+        }
+        // Otherwise, separate the input and set the arguments to pass to the
+        // main class.
+        else {
+            main = basePackage + this.exampleArguments[0..firstSpaceIndex - 1]
+            argsString(exampleArguments[(firstSpaceIndex + 1)..-1])
+        }
+    }
+
+    @TaskAction
+    @Override
+    public void exec() {
+        if (!(exampleArguments?.trim())) {
+            throw new GradleException('\033[0;31mMissing example!\033[0m ' +
+                'Please rerun with one provided, e.g. ' +
+                '\033[0;35m--example="basicoperations.GetCampaigns"\033[0m')
+        }
+        logQuietMessage('Running example: ' + main + ', args: ' +
+            args.toString())
+        try {
+            super.exec()
+        }
+        catch (Exception e) {
+            logQuietMessage('\n\033[0;31mrunExample exception!\033[0m Did ' +
+                'you provide a valid example identifier? E.g. ' +
+                '\033[0;35m--example="basicoperations.GetCampaigns"\033[0m\n\n' +
+                e.message)
+        }
+    }
+
+    public String getExampleArguments() {
+        return exampleArguments
+    }
+
+    private void logQuietMessage(String message) {
+        logger.quiet(message)
+    }
+
+}
