@@ -99,7 +99,7 @@ public class ApplyRecommendation {
    * @param recommendationId the recommendation ID.
    * @throws GoogleAdsException if an API request failed with one or more service errors.
    */
-  // [START ApplyRecommendation]
+  // [START apply_recommendation]
   private void runExample(
       GoogleAdsClient googleAdsClient, long customerId, String recommendationId) {
     String recommendationResourceName = ResourceNames.recommendation(customerId, recommendationId);
@@ -130,5 +130,5 @@ public class ApplyRecommendation {
       }
     }
   }
-  // [END ApplyRecommendation]
+  // [END apply_recommendation]
 }

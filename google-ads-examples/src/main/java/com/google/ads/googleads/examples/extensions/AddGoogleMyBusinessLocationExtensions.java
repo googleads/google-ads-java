@@ -161,7 +161,7 @@ public class AddGoogleMyBusinessLocationExtensions {
       placesLocationFeedData.setBusinessAccountId(businessAccountIdentifier);
     }
 
-    // [START AddGoogleMyBusinessLocationExtensions]
+    // [START add_google_my_business_location_extensions]
     // Creates a feed that will sync to the Google My Business account. Do not add FeedAttributes to
     // this object as Google Ads will add them automatically because this will be a system generated
     // feed.
@@ -175,9 +175,9 @@ public class AddGoogleMyBusinessLocationExtensions {
             .setOrigin(FeedOrigin.GOOGLE);
 
     FeedOperation operation = FeedOperation.newBuilder().setCreate(gmbFeed).build();
-    // [END AddGoogleMyBusinessLocationExtensions]
+    // [END add_google_my_business_location_extensions]
 
-    // [START AddGoogleMyBusinessLocationExtensions_1]
+    // [START add_google_my_business_location_extensions_1]
     try (FeedServiceClient feedServiceClient =
         googleAdsClient.getLatestVersion().createFeedServiceClient()) {
       // Adds the feed. Since it is a system generated feed, Google Ads will automatically:
@@ -188,9 +188,9 @@ public class AddGoogleMyBusinessLocationExtensions {
           feedServiceClient.mutateFeeds(Long.toString(customerId), ImmutableList.of(operation));
       String gmbFeedResourceName = response.getResults(0).getResourceName();
       System.out.printf("GMB feed created with resource name: %s%n", gmbFeedResourceName);
-      // [END AddGoogleMyBusinessLocationExtensions_1]
+      // [END add_google_my_business_location_extensions_1]
 
-      // [START AddGoogleMyBusinessLocationExtensions_2]
+      // [START add_google_my_business_location_extensions_2]
       // Adds a CustomerFeed that associates the feed with this customer for
       // the LOCATION placeholder type.
       CustomerFeed customerFeed =
@@ -212,9 +212,9 @@ public class AddGoogleMyBusinessLocationExtensions {
 
       CustomerFeedOperation customerFeedOperation =
           CustomerFeedOperation.newBuilder().setCreate(customerFeed).build();
-      // [END AddGoogleMyBusinessLocationExtensions_2]
+      // [END add_google_my_business_location_extensions_2]
 
-      // [START AddGoogleMyBusinessLocationExtensions_3]
+      // [START add_google_my_business_location_extensions_3]
       try (CustomerFeedServiceClient customerFeedServiceClient =
           googleAdsClient.getLatestVersion().createCustomerFeedServiceClient()) {
 
@@ -249,7 +249,7 @@ public class AddGoogleMyBusinessLocationExtensions {
             Thread.sleep(sleepSeconds * 1000);
           }
         } while (numberOfAttempts < MAX_CUSTOMER_FEED_ADD_ATTEMPTS && addedCustomerFeed == null);
-        // [END AddGoogleMyBusinessLocationExtensions_3]
+        // [END add_google_my_business_location_extensions_3]
 
         if (addedCustomerFeed == null) {
           throw new RuntimeException(

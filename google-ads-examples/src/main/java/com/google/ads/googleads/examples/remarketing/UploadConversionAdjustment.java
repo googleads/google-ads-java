@@ -150,7 +150,7 @@ public class UploadConversionAdjustment {
    * @param adjustmentDateTime date and time of the adjustment.
    * @param restatementValue the adjusted value for adjustment type RESTATEMENT.
    */
-  // [START UploadConversionAdjustment]
+  // [START upload_conversion_adjustment]
   private void runExample(
       GoogleAdsClient googleAdsClient,
       long customerId,
@@ -214,5 +214,5 @@ public class UploadConversionAdjustment {
       }
     }
   }
-  // [END UploadConversionAdjustment]
+  // [END upload_conversion_adjustment]
 }

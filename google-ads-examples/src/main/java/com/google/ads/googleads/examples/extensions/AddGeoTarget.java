@@ -52,7 +52,7 @@ public class AddGeoTarget {
     private Long geoTargetConstantId = GEO_TARGET_CONSTANT_ID;
   }
 
-  // [START AddGeoTarget]
+  // [START add_geo_target]
   public static void main(String[] args) {
     AddGeoTargetParams params = new AddGeoTargetParams();
     if (!params.parseArguments(args)) {
@@ -97,7 +97,7 @@ public class AddGeoTarget {
       System.exit(1);
     }
   }
-  // [END AddGeoTarget]
+  // [END add_geo_target]
 
   /**
    * Runs the example.

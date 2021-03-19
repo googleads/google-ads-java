@@ -94,7 +94,7 @@ public class SetCustomClientTimeouts {
   }
 
   /** Makes a server streaming call using a custom client timeout. */
-  // [START SetCustomClientTimeouts]
+  // [START set_custom_client_timeouts]
   private void makeServerStreamingCall(GoogleAdsClient googleAdsClient, Long customerId) {
     StringBuilder output = new StringBuilder();
     try (GoogleAdsServiceClient serviceClient =
@@ -129,10 +129,10 @@ public class SetCustomClientTimeouts {
       System.out.printf("All campaign IDs retrieved: %s.%n", output.toString());
     }
   }
-  // [END SetCustomClientTimeouts]
+  // [END set_custom_client_timeouts]
 
   /** Makes an unary call using a custom client timeout. */
-  // [START SetCustomClientTimeouts_1]
+  // [START set_custom_client_timeouts_1]
   private void makeUnaryCall(GoogleAdsClient googleAdsClient, Long customerId) {
     StringBuilder output = new StringBuilder();
     try (GoogleAdsServiceClient serviceClient =
@@ -165,5 +165,5 @@ public class SetCustomClientTimeouts {
       System.out.printf("All campaign IDs retrieved: %s.%n", output.toString());
     }
   }
-  // [END SetCustomClientTimeouts_1]
+  // [END set_custom_client_timeouts_1]
 }

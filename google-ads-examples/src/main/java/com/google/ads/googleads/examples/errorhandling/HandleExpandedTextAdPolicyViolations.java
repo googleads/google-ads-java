@@ -148,7 +148,7 @@ public class HandleExpandedTextAdPolicyViolations {
    * @param gae the Google Ads exception.
    * @return the ignorable policy topics.
    */
-  // [START HandleExpandedTextAdPolicyViolations]
+  // [START handle_expanded_text_ad_policy_violations]
   private List<String> fetchIgnorablePolicyTopics(GoogleAdsException gae) {
     System.out.println("Google Ads failure details:");
 
@@ -187,7 +187,7 @@ public class HandleExpandedTextAdPolicyViolations {
     }
     return ignorableTopics;
   }
-  // [END HandleExpandedTextAdPolicyViolations]
+  // [END handle_expanded_text_ad_policy_violations]
 
   /**
    * Sends exemption requests for creating an expanded text ad.
@@ -197,7 +197,7 @@ public class HandleExpandedTextAdPolicyViolations {
    * @param operation operation which generated original violations.
    * @param customerID the customer ID to operate on.
    */
-  // [START HandleExpandedTextAdPolicyViolations_1]
+  // [START handle_expanded_text_ad_policy_violations_1]
   private void requestExemption(
       List<String> ignorablePolicyTopics,
       AdGroupAdServiceClient client,
@@ -225,5 +225,5 @@ public class HandleExpandedTextAdPolicyViolations {
             + " violation exemption.%n",
         response.getResults(0).getResourceName());
   }
-  // [END HandleExpandedTextAdPolicyViolations_1]
+  // [END handle_expanded_text_ad_policy_violations_1]
 }

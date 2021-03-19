@@ -104,7 +104,7 @@ public class AddLogicalUserList {
    * @param userListIds the IDs of the lists to be used for the new combination user list.
    * @throws GoogleAdsException if an API request failed with one or more service errors.
    */
-  // [START AddLogicalUserList]
+  // [START add_logical_user_list]
   private void runExample(
       GoogleAdsClient googleAdsClient, long customerId, List<Long> userListIds) {
     // Adds each of the provided list IDs to a list of rule operands specifying which lists the
@@ -152,5 +152,5 @@ public class AddLogicalUserList {
           response.getResults(0).getResourceName());
     }
   }
-  // [END AddLogicalUserList]
+  // [END add_logical_user_list]
 }

@@ -152,7 +152,7 @@ public class AddCompleteCampaignsUsingBatchJob {
    * @param customerId the client customer ID.
    * @return the resource name of the created mutate job.
    */
-  // [START AddCompleteCampaignsUsingBatchJob]
+  // [START add_complete_campaigns_using_batch_job]
   private String createBatchJob(BatchJobServiceClient batchJobServiceClient, long customerId) {
     BatchJobOperation operation =
         BatchJobOperation.newBuilder().setCreate(BatchJob.newBuilder().build()).build();
@@ -165,7 +165,7 @@ public class AddCompleteCampaignsUsingBatchJob {
 
     return batchJobResourceName;
   }
-  // [END AddCompleteCampaignsUsingBatchJob]
+  // [END add_complete_campaigns_using_batch_job]
 
   /**
    * Adds all mutate job operations to the mutate job. As this is the first time for this mutate
@@ -177,7 +177,7 @@ public class AddCompleteCampaignsUsingBatchJob {
    * @param batchJobResourceName the resource name of mutate job to which the mutate job operations
    *     will be added.
    */
-  // [START AddCompleteCampaignsUsingBatchJob_1]
+  // [START add_complete_campaigns_using_batch_job_1]
   private void addAllBatchJobOperations(
       BatchJobServiceClient batchJobServiceClient, long customerId, String batchJobResourceName) {
     AddBatchJobOperationsResponse response =
@@ -194,7 +194,7 @@ public class AddCompleteCampaignsUsingBatchJob {
         "Next sequence token for adding next operations is '%s'.%n",
         response.getNextSequenceToken());
   }
-  // [END AddCompleteCampaignsUsingBatchJob_1]
+  // [END add_complete_campaigns_using_batch_job_1]
 
   /**
    * Requests the API to run the mutate job for executing all uploaded mutate job operations.
@@ -203,7 +203,7 @@ public class AddCompleteCampaignsUsingBatchJob {
    * @param batchJobResourceName the resource name of mutate job to be run.
    * @return the operation response from running mutate job.
    */
-  // [START AddCompleteCampaignsUsingBatchJob_2]
+  // [START add_complete_campaigns_using_batch_job_2]
   private OperationFuture runBatchJob(
       BatchJobServiceClient batchJobServiceClient, String batchJobResourceName) {
     OperationFuture operationResponse =
@@ -213,7 +213,7 @@ public class AddCompleteCampaignsUsingBatchJob {
 
     return operationResponse;
   }
-  // [END AddCompleteCampaignsUsingBatchJob_2]
+  // [END add_complete_campaigns_using_batch_job_2]
 
   /**
    * Polls the server until the mutate job execution finishes by setting the total time to wait
@@ -221,7 +221,7 @@ public class AddCompleteCampaignsUsingBatchJob {
    *
    * @param operationResponse the operation response used to poll the server.
    */
-  // [START AddCompleteCampaignsUsingBatchJob_3]
+  // [START add_complete_campaigns_using_batch_job_3]
   private void pollBatchJob(OperationFuture operationResponse) {
     try {
       operationResponse.get(MAX_TOTAL_POLL_INTERVAL_SECONDS, TimeUnit.SECONDS);
@@ -230,7 +230,7 @@ public class AddCompleteCampaignsUsingBatchJob {
       System.exit(1);
     }
   }
-  // [END AddCompleteCampaignsUsingBatchJob_3]
+  // [END add_complete_campaigns_using_batch_job_3]
 
   /**
    * Prints all the results from running the mutate job.
@@ -238,7 +238,7 @@ public class AddCompleteCampaignsUsingBatchJob {
    * @param batchJobServiceClient the mutate job service client.
    * @param batchJobResourceName the resource name of mutate job to get its results.
    */
-  // [START AddCompleteCampaignsUsingBatchJob_4]
+  // [START add_complete_campaigns_using_batch_job_4]
   private void fetchAndPrintResults(
       BatchJobServiceClient batchJobServiceClient, String batchJobResourceName) {
     System.out.printf(
@@ -266,7 +266,7 @@ public class AddCompleteCampaignsUsingBatchJob {
               : batchJobResult.getMutateOperationResponse().getResponseCase());
     }
   }
-  // [END AddCompleteCampaignsUsingBatchJob_4]
+  // [END add_complete_campaigns_using_batch_job_4]
 
   /**
    * Builds all operations for creating a complete campaign and return an array of their

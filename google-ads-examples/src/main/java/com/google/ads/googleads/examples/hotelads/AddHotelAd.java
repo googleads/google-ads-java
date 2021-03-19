@@ -132,7 +132,7 @@ public class AddHotelAd {
    *     using the Percent CPC bidding strategy.
    * @throws GoogleAdsException if an API request failed with one or more service errors.
    */
-  // [START AddHotelAd]
+  // [START add_hotel_ad]
   private void runExample(
       GoogleAdsClient googleAdsClient,
       long customerId,
@@ -157,7 +157,7 @@ public class AddHotelAd {
     // Creates a hotel ad group ad.
     addHotelAdGroupAd(googleAdsClient, customerId, adGroupResourceName);
   }
-  // [END AddHotelAd]
+  // [END add_hotel_ad]
 
   /**
    * Creates a new campaign budget in the specified client account.
@@ -216,7 +216,7 @@ public class AddHotelAd {
     NetworkSettings networkSettings =
         NetworkSettings.newBuilder().setTargetGoogleSearch(true).build();
 
-    // [START AddHotelAd_1]
+    // [START add_hotel_ad_1]
     // Creates the campaign.
     Campaign campaign =
         Campaign.newBuilder()
@@ -238,7 +238,7 @@ public class AddHotelAd {
             // Adds the networkSettings configured above.
             .setNetworkSettings(networkSettings)
             .build();
-    // [END AddHotelAd_1]
+    // [END add_hotel_ad_1]
 
     // Creates a campaign operation.
     CampaignOperation operation = CampaignOperation.newBuilder().setCreate(campaign).build();
@@ -266,7 +266,7 @@ public class AddHotelAd {
    * @return resource name of the newly created ad group.
    * @throws GoogleAdsException if an API request failed with one or more service errors.
    */
-  // [START AddHotelAd_2]
+  // [START add_hotel_ad_2]
   private String addHotelAdGroup(
       GoogleAdsClient googleAdsClient, long customerId, String campaignResourceName) {
     // Creates an ad group.
@@ -296,7 +296,7 @@ public class AddHotelAd {
       return mutateAdGroupResult.getResourceName();
     }
   }
-  // [END AddHotelAd_2]
+  // [END add_hotel_ad_2]
 
   /**
    * Creates a new hotel ad group ad in the specified ad group.
@@ -308,7 +308,7 @@ public class AddHotelAd {
    * @return resource name of the newly created ad group ad.
    * @throws GoogleAdsException if an API request failed with one or more service errors.
    */
-  // [START AddHotelAd_3]
+  // [START add_hotel_ad_3]
   private String addHotelAdGroupAd(
       GoogleAdsClient googleAdsClient, long customerId, String adGroupResourceName) {
     // Creates a new hotel ad.
@@ -342,5 +342,5 @@ public class AddHotelAd {
       return mutateAdGroupAdResult.getResourceName();
     }
   }
-  // [END AddHotelAd_3]
+  // [END add_hotel_ad_3]
 }

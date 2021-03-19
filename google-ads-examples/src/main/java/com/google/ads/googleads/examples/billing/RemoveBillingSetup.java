@@ -90,7 +90,7 @@ public class RemoveBillingSetup {
    * @param customerId the customer ID containing the BillingSetup to remove.
    * @param billingSetupId the BillingSetup ID to remove.
    */
-  // [START RemoveBillingSetup]
+  // [START remove_billing_setup]
   private void runExample(GoogleAdsClient googleAdsClient, long customerId, long billingSetupId) {
     // Formats the customerId and billingSetupId into a resource name.
     String billingSetupResourceName = ResourceNames.billingSetup(customerId, billingSetupId);
@@ -110,5 +110,5 @@ public class RemoveBillingSetup {
           response.getResult().getResourceName());
     }
   }
-  // [END RemoveBillingSetup]
+  // [END remove_billing_setup]
 }

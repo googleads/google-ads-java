@@ -363,7 +363,7 @@ public class AddDynamicPageFeed {
    * @param feedResourceName the resource name of the feed.
    * @param campaignId the campaign ID of the campaign to update.
    */
-  // [START AddDynamicPageFeed_1]
+  // [START add_dynamic_page_feed_1]
   private static void updateCampaignDsaSetting(
       GoogleAdsClient googleAdsClient, long customerId, String feedResourceName, long campaignId) {
     // Retrieves the existing dynamic search ads settings for the campaign.
@@ -397,7 +397,7 @@ public class AddDynamicPageFeed {
           "Updated campaign with resource name '%s'.%n", response.getResults(0).getResourceName());
     }
   }
-  // [END AddDynamicPageFeed_1]
+  // [END add_dynamic_page_feed_1]
 
   /**
    * Returns the DSA settings for a campaign. Throws an error if the campaign does not exist or is
@@ -408,7 +408,7 @@ public class AddDynamicPageFeed {
    * @param campaignId the campaign ID of the campaign to update.
    * @return the DSA settings for the campaign.
    */
-  // [START AddDynamicPageFeed]
+  // [START add_dynamic_page_feed]
   private static DynamicSearchAdsSetting getDsaSetting(
       GoogleAdsClient googleAdsClient, long customerId, long campaignId) {
     // Creates the query.
@@ -459,7 +459,7 @@ public class AddDynamicPageFeed {
           .getDynamicSearchAdsSetting();
     }
   }
-  // [END AddDynamicPageFeed]
+  // [END add_dynamic_page_feed]
 
   /**
    * Creates an ad group criterion targeting the DSA label.
@@ -469,7 +469,7 @@ public class AddDynamicPageFeed {
    * @param adGroupId the ad group ID.
    * @param dsaPageUrlLabel the label for the DSA page URLs.
    */
-  // [START AddDynamicPageFeed_2]
+  // [START add_dynamic_page_feed_2]
   private static void addDsaTarget(
       GoogleAdsClient googleAdsClient, long customerId, long adGroupId, String dsaPageUrlLabel) {
     String adGroupResourceName = ResourceNames.adGroup(customerId, adGroupId);
@@ -515,5 +515,5 @@ public class AddDynamicPageFeed {
           response.getResults(0).getResourceName());
     }
   }
-  // [END AddDynamicPageFeed_2]
+  // [END add_dynamic_page_feed_2]
 }

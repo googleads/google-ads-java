@@ -108,7 +108,7 @@ public class ApproveMerchantCenterLink {
     // Center account with merchantCenterAccountId.
     try (MerchantCenterLinkServiceClient merchantCenterLinkService =
         googleAdsClient.getLatestVersion().createMerchantCenterLinkServiceClient()) {
-      // [START ApproveMerchantCenterLink]
+      // [START approve_merchant_center_link]
       ListMerchantCenterLinksResponse response =
           merchantCenterLinkService.listMerchantCenterLinks(
               ListMerchantCenterLinksRequest.newBuilder()
@@ -118,14 +118,14 @@ public class ApproveMerchantCenterLink {
       System.out.printf(
           "%d Merchant Center link(s) found with the following details:%n",
           response.getMerchantCenterLinksCount());
-      // [END ApproveMerchantCenterLink]
+      // [END approve_merchant_center_link]
 
       for (MerchantCenterLink merchantCenterLink : response.getMerchantCenterLinksList()) {
-        // [START ApproveMerchantCenterLink_1]
+        // [START approve_merchant_center_link_1]
         System.out.printf(
             "Link '%s' has status '%s'.%n",
             merchantCenterLink.getResourceName(), merchantCenterLink.getStatus());
-        // [END ApproveMerchantCenterLink_1]
+        // [END approve_merchant_center_link_1]
 
         // Checks if there is a link for the Merchant Center account we are looking for, then only
         // approves the link if it is in a 'PENDING' state.
@@ -151,7 +151,7 @@ public class ApproveMerchantCenterLink {
    * @param status the new status to set on the link.
    * @throws GoogleAdsException if an API request failed with one or more service errors.
    */
-  // [START ApproveMerchantCenterLink_2]
+  // [START approve_merchant_center_link_2]
   private void updateMerchantCenterLinkStatus(
       MerchantCenterLinkServiceClient merchantCenterLinkServiceClient,
       long customerId,
@@ -183,5 +183,5 @@ public class ApproveMerchantCenterLink {
         "Updated Merchant Center link with resource name: '%s'.%n",
         merchantCenterLinkResult.getResourceName());
   }
-  // [END ApproveMerchantCenterLink_2]
+  // [END approve_merchant_center_link_2]
 }

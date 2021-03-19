@@ -115,7 +115,7 @@ public class UploadOfflineConversion {
    * @param conversionDateTime date and time of the conversion.
    * @param conversionValue the value of the conversion.
    */
-  // [START UploadOfflineConversion]
+  // [START upload_offline_conversion]
   private void runExample(
       GoogleAdsClient googleAdsClient,
       long customerId,
@@ -166,5 +166,5 @@ public class UploadOfflineConversion {
       }
     }
   }
-  // [END UploadOfflineConversion]
+  // [END upload_offline_conversion]
 }
