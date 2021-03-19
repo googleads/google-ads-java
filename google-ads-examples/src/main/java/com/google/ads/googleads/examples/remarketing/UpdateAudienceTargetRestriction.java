@@ -109,13 +109,13 @@ public class UpdateAudienceTargetRestriction {
     try (GoogleAdsServiceClient googleAdsServiceClient =
         googleAdsClient.getLatestVersion().createGoogleAdsServiceClient()) {
       // Creates a search request that retrieves the targeting settings from a given ad group.
-      // [START UpdateAudienceTargetRestriction]
+      // [START update_audience_target_restriction]
       String searchQuery =
           "SELECT ad_group.id, ad_group.name, ad_group.targeting_setting.target_restrictions "
               + "FROM ad_group "
               + "WHERE ad_group.id = "
               + adGroupId;
-      // [END UpdateAudienceTargetRestriction]
+      // [END update_audience_target_restriction]
 
       // Creates a request that will retrieve all ad groups using pages of the specified page size.
       SearchGoogleAdsRequest request =
@@ -144,7 +144,7 @@ public class UpdateAudienceTargetRestriction {
         // Reconstructs the TargetingSetting object with the updated audience target restriction
         // because Google will overwrite the entire targeting_setting field of the ad group when
         // the field mask includes targeting_setting in an update operation.
-        // [START UpdateAudienceTargetRestriction_1]
+        // [START update_audience_target_restriction_1]
         for (TargetRestriction targetRestriction : targetRestrictions) {
           TargetingDimension targetingDimension = targetRestriction.getTargetingDimension();
           boolean bidOnly = targetRestriction.getBidOnly();
@@ -167,7 +167,7 @@ public class UpdateAudienceTargetRestriction {
                     .setBidOnly(true));
           }
         }
-        // [END UpdateAudienceTargetRestriction_1]
+        // [END update_audience_target_restriction_1]
       }
       // Only updates the TargetingSetting on the ad group if there is an AUDIENCE TargetRestriction
       // with bid_only set to false.
@@ -188,7 +188,7 @@ public class UpdateAudienceTargetRestriction {
    * @param adGroupId the ID of the ad group to update.
    * @param targetingSetting the updated targeting setting.
    */
-  // [START UpdateAudienceTargetRestriction_2]
+  // [START update_audience_target_restriction_2]
   private void updateTargetingSetting(
       GoogleAdsClient googleAdsClient,
       long customerId,
@@ -222,5 +222,5 @@ public class UpdateAudienceTargetRestriction {
           response.getResults(0).getResourceName());
     }
   }
-  // [END UpdateAudienceTargetRestriction_2]
+  // [END update_audience_target_restriction_2]
 }

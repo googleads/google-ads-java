@@ -116,7 +116,7 @@ public class HandlePartialFailure {
    * Attempts to create 3 ad groups with partial failure enabled. One of the ad groups will succeed,
    * while the other will fail.
    */
-  // [START HandlePartialFailure]
+  // [START handle_partial_failure]
   private MutateAdGroupsResponse createAdGroups(
       GoogleAdsClient googleAdsClient, long customerId, long campaignId) {
     // This AdGroup should be created successfully - assuming the campaign in the params exists.
@@ -154,17 +154,17 @@ public class HandlePartialFailure {
               .build());
     }
   }
-  // [END HandlePartialFailure]
+  // [END handle_partial_failure]
 
   /** Inspects a response to check for presence of partial failure errors. */
-  // [START HandlePartialFailure_1]
+  // [START handle_partial_failure_1]
   private boolean checkIfPartialFailureErrorExists(MutateAdGroupsResponse response) {
     return response.hasPartialFailureError();
   }
-  // [END HandlePartialFailure_1]
+  // [END handle_partial_failure_1]
 
   /** Displays the result from the mutate operation. */
-  // [START HandlePartialFailure_2]
+  // [START handle_partial_failure_2]
   private void printResults(MutateAdGroupsResponse response) throws InvalidProtocolBufferException {
     int operationIndex = 0;
     for (MutateAdGroupResult result : response.getResultsList()) {
@@ -182,5 +182,5 @@ public class HandlePartialFailure {
       ++operationIndex;
     }
   }
-  // [END HandlePartialFailure_2]
+  // [END handle_partial_failure_2]
 }

@@ -83,7 +83,7 @@ public class GetBillingSetup {
    * @param googleAdsClient the Google Ads API client.
    * @param customerId the customer ID for which to retrieve BillingSetups.
    */
-  // [START GetBillingSetup]
+  // [START get_billing_setup]
   private void runExample(GoogleAdsClient googleAdsClient, long customerId) {
     // Defines a GAQL query to retrieve all billing setup information.
     String searchQuery =
@@ -135,5 +135,5 @@ public class GetBillingSetup {
       }
     }
   }
-  // [END GetBillingSetup]
+  // [END get_billing_setup]
 }

@@ -207,7 +207,7 @@ public class AddShoppingProductAd {
    * @return resource name of the newly created campaign.
    * @throws GoogleAdsException if an API request failed with one or more service errors.
    */
-  // [START AddShoppingProductAd_2]
+  // [START add_shopping_product_ad_2]
   private String addStandardShoppingCampaign(
       GoogleAdsClient googleAdsClient,
       long customerId,
@@ -264,7 +264,7 @@ public class AddShoppingProductAd {
       return result.getResourceName();
     }
   }
-  // [END AddShoppingProductAd_2]
+  // [END add_shopping_product_ad_2]
 
   /**
    * Creates a new shopping product ad group in the specified campaign.
@@ -276,7 +276,7 @@ public class AddShoppingProductAd {
    * @return resource name of the newly created ad group.
    * @throws GoogleAdsException if an API request failed with one or more service errors.
    */
-  // [START AddShoppingProductAd_1]
+  // [START add_shopping_product_ad_1]
   private String addShoppingProductAdGroup(
       GoogleAdsClient googleAdsClient, long customerId, String campaignResourceName) {
     // Creates an ad group.
@@ -307,7 +307,7 @@ public class AddShoppingProductAd {
       return mutateAdGroupResult.getResourceName();
     }
   }
-  // [END AddShoppingProductAd_1]
+  // [END add_shopping_product_ad_1]
 
   /**
    * Creates a new shopping product ad group ad in the specified ad group.
@@ -319,7 +319,7 @@ public class AddShoppingProductAd {
    * @return resource name of the newly created ad group ad.
    * @throws GoogleAdsException if an API request failed with one or more service errors.
    */
-  // [START AddShoppingProductAd]
+  // [START add_shopping_product_ad]
   private String addShoppingProductAdGroupAd(
       GoogleAdsClient googleAdsClient, long customerId, String adGroupResourceName) {
     // Creates a new shopping product ad.
@@ -351,7 +351,7 @@ public class AddShoppingProductAd {
       return mutateAdGroupAdResult.getResourceName();
     }
   }
-  // [END AddShoppingProductAd]
+  // [END add_shopping_product_ad]
 
   /**
    * Creates a new default shopping listing group for the specified ad group. A listing group is the

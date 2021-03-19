@@ -144,7 +144,7 @@ public class RejectMerchantCenterLink {
    * @param merchantCenterLink the MerchantCenterLink object to remove.
    * @throws GoogleAdsException if an API request failed with one or more service errors.
    */
-  // [START RejectMerchantCenterLink]
+  // [START reject_merchant_center_link]
   private void removeMerchantCenterLink(
       MerchantCenterLinkServiceClient merchantCenterLinkServiceClient,
       long customerId,
@@ -163,5 +163,5 @@ public class RejectMerchantCenterLink {
     System.out.printf(
         "Removed Merchant Center link with resource name: '%s'.%n", result.getResourceName());
   }
-  // [END RejectMerchantCenterLink]
+  // [END reject_merchant_center_link]
 }

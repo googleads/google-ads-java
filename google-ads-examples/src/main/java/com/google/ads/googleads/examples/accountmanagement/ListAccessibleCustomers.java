@@ -67,7 +67,7 @@ public class ListAccessibleCustomers {
    *
    * @param client the GoogleAdsClient instance to use.
    */
-  // [START ListAccessibleCustomers]
+  // [START list_accessible_customers]
   private void runExample(GoogleAdsClient client) {
     // Optional: Change credentials to use a different refresh token, to retrieve customers
     //           available for a specific user.
@@ -94,5 +94,5 @@ public class ListAccessibleCustomers {
       }
     }
   }
-  // [END ListAccessibleCustomers]
+  // [END list_accessible_customers]
 }

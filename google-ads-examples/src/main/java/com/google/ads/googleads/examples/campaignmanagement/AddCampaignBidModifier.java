@@ -118,7 +118,7 @@ public class AddCampaignBidModifier {
     CampaignBidModifierOperation op =
         CampaignBidModifierOperation.newBuilder().setCreate(campaignBidModifier).build();
 
-    // [START MutableResource]
+    // [START mutable_resource]
     // Constructs a request to add the bid modifier.
     MutateCampaignBidModifiersRequest request =
         MutateCampaignBidModifiersRequest.newBuilder()
@@ -151,6 +151,6 @@ public class AddCampaignBidModifier {
           mutableResource.getBidModifier(),
           mutableResource.getCampaign());
     }
-    // [END MutableResource]
+    // [END mutable_resource]
   }
 }

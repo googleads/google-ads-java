@@ -167,7 +167,7 @@ public class SetupRemarketing {
    * @param customerId the client customer ID.
    * @return the user list resource name.
    */
-  // [START SetupRemarketing]
+  // [START setup_remarketing]
   private String createUserList(GoogleAdsClient googleAdsClient, long customerId) {
     // Creates a rule targeting any user that visited a url containing 'example.com'.
     UserListRuleItemInfo rule =
@@ -226,7 +226,7 @@ public class SetupRemarketing {
       return userListResourceName;
     }
   }
-  // [END SetupRemarketing]
+  // [END setup_remarketing]
 
   /**
    * Creates an ad group criterion that targets a user list with an ad group.
@@ -237,7 +237,7 @@ public class SetupRemarketing {
    * @param userList the resource name of the user list to be targeted.
    * @return the ad group criterion resource name.
    */
-  // [START SetupRemarketing_1]
+  // [START setup_remarketing_1]
   private String targetAdsInAdGroupToUserList(
       GoogleAdsClient googleAdsClient, long customerId, long adGroupId, String userList) {
     // Creates the ad group criterion targeting members of the user list.
@@ -267,7 +267,7 @@ public class SetupRemarketing {
       return adGroupCriterionResourceName;
     }
   }
-  // [END SetupRemarketing_1]
+  // [END setup_remarketing_1]
 
   /**
    * Updates the bid modifier value on an ad group criterion.
@@ -319,7 +319,7 @@ public class SetupRemarketing {
    * @param customerId the client customer ID.
    * @param campaignId the campaign under which to remove the ad group criteria.
    */
-  // [START SetupRemarketing_3]
+  // [START setup_remarketing_3]
   private void removeExistingListCriteriaFromAdGroup(
       GoogleAdsClient googleAdsClient, long customerId, long campaignId) {
     // Retrieves all of the ad group criteria under a campaign.
@@ -349,7 +349,7 @@ public class SetupRemarketing {
       }
     }
   }
-  // [END SetupRemarketing_3]
+  // [END setup_remarketing_3]
 
   /**
    * Finds all of user list ad group criteria under a campaign.
@@ -359,7 +359,7 @@ public class SetupRemarketing {
    * @param campaignId the campaign under which to search the ad group criteria.
    * @return a list of the ad group criteria resource names.
    */
-  // [START SetupRemarketing_2]
+  // [START setup_remarketing_2]
   private List<String> getUserListAdGroupCriterion(
       GoogleAdsClient googleAdsClient, long customerId, long campaignId) {
     List<String> userListCriteria = new ArrayList<>();
@@ -392,7 +392,7 @@ public class SetupRemarketing {
     }
     return userListCriteria;
   }
-  // [END SetupRemarketing_2]
+  // [END setup_remarketing_2]
 
   /**
    * Creates a campaign criterion that targets a user list with a campaign.
@@ -403,7 +403,7 @@ public class SetupRemarketing {
    * @param userList the resource name of the user list to be targeted.
    * @return the campaign criterion resource name.
    */
-  // [START SetupRemarketing_4]
+  // [START setup_remarketing_4]
   private String targetAdsInCampaignToUserList(
       GoogleAdsClient googleAdsClient, long customerId, long campaignId, String userList) {
     // Creates the campaign criterion.
@@ -433,7 +433,7 @@ public class SetupRemarketing {
       return campaignCriterionResourceName;
     }
   }
-  // [END SetupRemarketing_4]
+  // [END setup_remarketing_4]
 
   /**
    * Updates the bid modifier value on a campaign criterion.

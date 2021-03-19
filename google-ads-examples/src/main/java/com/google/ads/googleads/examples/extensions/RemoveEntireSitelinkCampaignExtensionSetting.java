@@ -101,7 +101,7 @@ public class RemoveEntireSitelinkCampaignExtensionSetting {
   }
 
   /** Runs the example. */
-  // [START RemoveEntireSitelinkCampaignExtensionSetting]
+  // [START remove_entire_sitelink_campaign_extension_setting]
   private void runExample(GoogleAdsClient googleAdsClient, long customerId, long campaignId) {
 
     // Retrieves all sitelink extension feed items for a customer and campaign.
@@ -163,10 +163,10 @@ public class RemoveEntireSitelinkCampaignExtensionSetting {
       }
     }
   }
-  // [END RemoveEntireSitelinkCampaignExtensionSetting]
+  // [END remove_entire_sitelink_campaign_extension_setting]
 
   /** Retrieves all sitelink extension feed items for a customer + campaign combination. */
-  // [START RemoveEntireSitelinkCampaignExtensionSetting_1]
+  // [START remove_entire_sitelink_campaign_extension_setting_1]
   private List<String> getSitelinkExtensionFeedItems(
       GoogleAdsClient googleAdsClient, long customerId, long campaignId) {
     // Defines a query to retrieve the sitelink extension feed items.
@@ -208,5 +208,5 @@ public class RemoveEntireSitelinkCampaignExtensionSetting {
       return result;
     }
   }
-  // [END RemoveEntireSitelinkCampaignExtensionSetting_1]
+  // [END remove_entire_sitelink_campaign_extension_setting_1]
 }

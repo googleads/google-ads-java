@@ -89,7 +89,7 @@ public class GetCampaignsByLabel {
    * @param labelId the label ID.
    * @throws GoogleAdsException if an API request failed with one or more service errors.
    */
-  // [START GetCampaignsByLabel]
+  // [START get_campaigns_by_label]
   private void runExample(GoogleAdsClient googleAdsClient, long customerId, long labelId) {
     try (GoogleAdsServiceClient googleAdsServiceClient =
         googleAdsClient.getLatestVersion().createGoogleAdsServiceClient()) {
@@ -124,5 +124,5 @@ public class GetCampaignsByLabel {
       }
     }
   }
-  // [END GetCampaignsByLabel]
+  // [END get_campaigns_by_label]
 }

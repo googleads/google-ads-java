@@ -158,7 +158,7 @@ public class HandleKeywordPolicyViolations {
         errorCount = e.getGoogleAdsFailure().getErrorsCount();
       }
 
-      // [START HandleKeywordPolicyViolations_1]
+      // [START handle_keyword_policy_violations_1]
       // Tries sending exemption requests for creating the keyword. However, if your keyword
       // contains many policy violations, but not all of them are exemptible, the request will not
       // be sent.
@@ -178,7 +178,7 @@ public class HandleKeywordPolicyViolations {
                 + "policy violation exemptions.%n",
             response.getResults(0).getResourceName());
       } else {
-        // [END HandleKeywordPolicyViolations_1]
+        // [END handle_keyword_policy_violations_1]
         System.out.println("No exemption request was sent because either:");
         System.out.println("1) your keyword contained some non-exemptible policy violations, or");
         System.out.println("2) other non-policy related errors were thrown");
@@ -192,7 +192,7 @@ public class HandleKeywordPolicyViolations {
    * @param googleAdsException the exception to extract the keys from.
    * @return the list of extracted exemptible keys.
    */
-  // [START HandleKeywordPolicyViolations]
+  // [START handle_keyword_policy_violations]
   private List<PolicyViolationKey> extractExemptiblePolicyViolationKeys(
       GoogleAdsException googleAdsException) {
     List<PolicyViolationKey> exemptibleKeys = new ArrayList<>();
@@ -220,5 +220,5 @@ public class HandleKeywordPolicyViolations {
     }
     return exemptibleKeys;
   }
-  // [END HandleKeywordPolicyViolations]
+  // [END handle_keyword_policy_violations]
 }

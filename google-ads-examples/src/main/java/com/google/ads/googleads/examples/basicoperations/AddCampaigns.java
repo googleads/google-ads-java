@@ -102,7 +102,7 @@ public class AddCampaigns {
    * @return resource name of the newly created budget.
    * @throws GoogleAdsException if an API request failed with one or more service errors.
    */
-  // [START AddCampaigns]
+  // [START add_campaigns]
   private static String addCampaignBudget(GoogleAdsClient googleAdsClient, long customerId) {
     CampaignBudget budget =
         CampaignBudget.newBuilder()
@@ -123,7 +123,7 @@ public class AddCampaigns {
       return budgetResourceName;
     }
   }
-  // [END AddCampaigns]
+  // [END add_campaigns]
 
   /**
    * Runs the example.
@@ -149,7 +149,7 @@ public class AddCampaigns {
               .setTargetPartnerSearchNetwork(false)
               .build();
 
-      // [START AddCampaigns_1]
+      // [START add_campaigns_1]
       // Creates the campaign.
       Campaign campaign =
           Campaign.newBuilder()
@@ -168,7 +168,7 @@ public class AddCampaigns {
               .setStartDate(new DateTime().plusDays(1).toString("yyyyMMdd"))
               .setEndDate(new DateTime().plusDays(30).toString("yyyyMMdd"))
               .build();
-      // [END AddCampaigns_1]
+      // [END add_campaigns_1]
 
       CampaignOperation op = CampaignOperation.newBuilder().setCreate(campaign).build();
       operations.add(op);

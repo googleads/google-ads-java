@@ -82,7 +82,7 @@ public class GetChangeSummary {
    * @param googleAdsClient the client instance.
    * @param customerId the customerId for which to retrieve change status.
    */
-  // [START GetAccountChanges]
+  // [START get_account_changes]
   private void runExample(GoogleAdsClient googleAdsClient, long customerId) {
     String query =
         "SELECT change_status.resource_name, "
@@ -123,7 +123,7 @@ public class GetChangeSummary {
       }
     }
   }
-  // [END GetAccountChanges]
+  // [END get_account_changes]
 
   /**
    * Each returned row contains all possible changed fields. This function returns the resource name

@@ -100,7 +100,7 @@ public class AddConversionBasedUserList {
    * @param conversionActionIds the IDs of the conversion actions for the basic user list.
    * @throws GoogleAdsException if an API request failed with one or more service errors.
    */
-  // [START AddConversionBasedUserList]
+  // [START add_conversion_based_user_list]
   private void runExample(
       GoogleAdsClient googleAdsClient, long customerId, List<Long> conversionActionIds) {
     List<UserListActionInfo> userListActionInfoList = new ArrayList<>();
@@ -144,5 +144,5 @@ public class AddConversionBasedUserList {
           response.getResults(0).getResourceName());
     }
   }
-  // [END AddConversionBasedUserList]
+  // [END add_conversion_based_user_list]
 }

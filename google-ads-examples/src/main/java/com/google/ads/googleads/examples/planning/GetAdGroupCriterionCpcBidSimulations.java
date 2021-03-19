@@ -95,7 +95,7 @@ public class GetAdGroupCriterionCpcBidSimulations {
    * @param adGroupId the ad group ID to get the ad group criterion CPC bid simulations for.
    * @throws GoogleAdsException if an API request failed with one or more service errors.
    */
-  // [START GetAdGroupCriterionCpcBidSimulations]
+  // [START get_ad_group_criterion_cpc_bid_simulations]
   private void runExample(GoogleAdsClient googleAdsClient, long customerId, long adGroupId) {
     try (GoogleAdsServiceClient googleAdsServiceClient =
         googleAdsClient.getLatestVersion().createGoogleAdsServiceClient()) {
@@ -149,5 +149,5 @@ public class GetAdGroupCriterionCpcBidSimulations {
       }
     }
   }
-  // [END GetAdGroupCriterionCpcBidSimulations]
+  // [END get_ad_group_criterion_cpc_bid_simulations]
 }

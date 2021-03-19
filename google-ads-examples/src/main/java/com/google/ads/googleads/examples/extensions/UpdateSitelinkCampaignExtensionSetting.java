@@ -97,7 +97,7 @@ public class UpdateSitelinkCampaignExtensionSetting {
   }
 
   /** Runs the example. */
-  // [START UpdateSitelinkCampaignExtensionSetting]
+  // [START update_sitelink_campaign_extension_setting]
   private void runExample(
       GoogleAdsClient googleAdsClient, long customerId, long campaignId, List<Long> feedItemIds) {
     // Converts the feed item IDs into resource names.
@@ -136,5 +136,5 @@ public class UpdateSitelinkCampaignExtensionSetting {
           "Updated a campaign extension setting with resource name: '%s'.%n", resourceName);
     }
   }
-  // [END UpdateSitelinkCampaignExtensionSetting]
+  // [END update_sitelink_campaign_extension_setting]
 }
