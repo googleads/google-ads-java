@@ -14,6 +14,8 @@
 
 package com.google.ads.googleads.examples.remarketing;
 
+import static com.google.ads.googleads.examples.utils.CodeSampleHelper.getPrintableDateTime;
+
 import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
@@ -89,7 +91,7 @@ public class AddCustomAudience {
     // Creates a CustomAudience object to represent the new audience.
     CustomAudience customAudience =
         CustomAudience.newBuilder()
-            .setName("Example CustomAudience #" + System.currentTimeMillis())
+            .setName("Example CustomAudience #" + getPrintableDateTime())
             .setDescription("Custom audiences who have searched specific terms on Google Search")
             // Matches customers by what they searched on Google Search.
             // Note: "INTEREST" OR "PURCHASE_INTENT" is not allowed for the type field
