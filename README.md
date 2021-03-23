@@ -12,6 +12,7 @@ This project hosts the Java client library for the Google Ads API.
 
   * Java 1.8+
   * Maven 3.0+
+  * Protobuf >= 3.12.2
 
 ## Maven artifacts
 
