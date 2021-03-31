@@ -283,7 +283,7 @@ public class AddHotelListingGroupTree {
       List<AdGroupCriterionOperation> operations,
       long percentCpcBidMicroAmount) {
     // The criterion ID for Japan is 2392.
-    // See https://developers.google.com/google-ads/api/reference/data/geotargets for criteria ID
+    // See https://developers.google.com/google-ads/api/reference/data/geotargets for criteria IDs
     // of other countries.
     long japanGeoTargetConstantId = 2392;
     ListingDimensionInfo japanDimensionInfo =

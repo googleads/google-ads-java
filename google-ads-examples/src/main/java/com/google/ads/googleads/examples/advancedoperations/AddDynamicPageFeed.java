@@ -414,7 +414,6 @@ public class AddDynamicPageFeed {
   private static DynamicSearchAdsSetting getDsaSetting(
       GoogleAdsClient googleAdsClient, long customerId, long campaignId) {
     // Creates the query.
-    // You must request all DSA fields in order to update the DSA settings in the following step.
     String query =
         String.format(
             "SELECT campaign.id, "
