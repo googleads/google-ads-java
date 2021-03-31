@@ -53,7 +53,7 @@ public class SearchForLanguageAndCarrierConstants {
         description =
             "Country code for carrier constant filtering. A list of country codes can be"
                 + " referenced here:"
-                + " https://developers.google.com/adwords/api/docs/appendix/geotargeting.")
+                + " https://developers.google.com/google-ads/api/reference/data/geotargets.")
     private String countryCode = "US";
   }
 

@@ -67,7 +67,9 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-/** Adds a page feed with URLs for a Dynamic Search Ads Campaign. */
+/**
+ * Adds a page feed with URLs for a Dynamic Search Ads Campaign.
+ */
 public class AddDynamicPageFeed {
 
   private static final int PAGE_SIZE = 1_000;
@@ -412,11 +414,10 @@ public class AddDynamicPageFeed {
   private static DynamicSearchAdsSetting getDsaSetting(
       GoogleAdsClient googleAdsClient, long customerId, long campaignId) {
     // Creates the query.
-    // You must request all DSA fields in order to update the DSA settings in the following step.
     String query =
         String.format(
-            "SELECT campaign.id, campaign.name, campaign.dynamic_search_ads_setting.domain_name,"
-                + " campaign.dynamic_search_ads_setting.language_code,"
+            "SELECT campaign.id, "
+                + " campaign.name, "
                 + " campaign.dynamic_search_ads_setting.use_supplied_urls_only "
                 + "FROM campaign "
                 + "WHERE campaign.id = '%s'",
@@ -446,8 +447,7 @@ public class AddDynamicPageFeed {
           .getResults(0)
           .getCampaign()
           .hasDynamicSearchAdsSetting()) {
-        throw new IllegalArgumentException(
-            String.format("Campaign with ID '%s' is not a " + "DSA campaign.", campaignId));
+        throw new IllegalArgumentException("Campaign with ID '%s' is not a DSA campaign.");
       }
 
       // Retrieves and returns the DSA setting.

@@ -77,7 +77,7 @@ public class GetGeoTargetConstantsByNames {
       requestBuilder.setLocale("en");
 
       // A list of country codes can be referenced here:
-      // https://developers.google.com/adwords/api/docs/appendix/geotargeting
+      // https://developers.google.com/google-ads/api/reference/data/geotargets
       requestBuilder.setCountryCode("FR");
 
       requestBuilder

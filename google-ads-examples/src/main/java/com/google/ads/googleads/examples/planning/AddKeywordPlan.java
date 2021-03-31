@@ -171,7 +171,7 @@ public class AddKeywordPlan {
             .setKeywordPlanNetwork(KeywordPlanNetwork.GOOGLE_SEARCH)
             .setKeywordPlan(keywordPlanResource);
 
-    // See https://developers.google.com/adwords/api/docs/appendix/geotargeting
+    // See https://developers.google.com/google-ads/api/reference/data/geotargets
     // for the list of geo target IDs.
     campaign.addGeoTargets(
         KeywordPlanGeoTarget.newBuilder()
@@ -179,7 +179,7 @@ public class AddKeywordPlan {
             .setGeoTargetConstant(ResourceNames.geoTargetConstant(2840))
             .build());
 
-    // See https://developers.google.com/adwords/api/docs/appendix/codes-formats#languages
+    // See https://developers.google.com/google-ads/api/reference/data/codes-formats#languages
     // for the list of language criteria IDs.
     //
     // Language criteria 1000 is for English.

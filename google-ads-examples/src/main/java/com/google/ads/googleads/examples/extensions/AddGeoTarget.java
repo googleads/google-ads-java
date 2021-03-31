@@ -34,7 +34,7 @@ import java.io.IOException;
 public class AddGeoTarget {
 
   // A list of country codes can be referenced here:
-  // https://developers.google.com/adwords/api/docs/appendix/geotargeting
+  // https://developers.google.com/google-ads/api/reference/data/geotargets
   private static long GEO_TARGET_CONSTANT_ID = 2840L; // US
 
   private static class AddGeoTargetParams extends CodeSampleParams {

@@ -257,7 +257,7 @@ public class ForecastReach {
    * @param reachPlanServiceClient instance of Reach Plan Service client.
    * @param customerId the customer ID for the reach forecast.
    * @param locationId location ID to plan for. To find a valid location ID, either see
-   *     https://developers.google.com/adwords/api/docs/appendix/geotargeting or call
+   *     https://developers.google.com/google-ads/api/reference/data/geotargets or call
    *     ReachPlanServiceClient.listPlannableLocations().
    * @param currencyCode three-character ISO 4217 currency code.
    * @param budgetMicros budget in currency to plan for.

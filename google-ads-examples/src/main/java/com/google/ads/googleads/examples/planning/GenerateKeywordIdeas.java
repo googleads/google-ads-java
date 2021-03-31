@@ -47,7 +47,7 @@ public class GenerateKeywordIdeas {
         description =
             "Location criteria IDs. For example, specify 21167 for New York. For more information"
                 + " on determining this value, see: "
-                + " https://developers.google.com/adwords/api/docs/appendix/geotargeting.")
+                + " https://developers.google.com/google-ads/api/reference/data/geotargets.")
     private List<Long> locationIds;
 
     @Parameter(

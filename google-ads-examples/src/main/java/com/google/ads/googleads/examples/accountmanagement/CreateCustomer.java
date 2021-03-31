@@ -96,7 +96,6 @@ public class CreateCustomer {
             // Optional: Sets additional attributes of the customer.
             .setTrackingUrlTemplate("{lpurl}?device={device}")
             .setFinalUrlSuffix("keyword={keyword}&matchtype={matchtype}&adgroupid={adgroupid}")
-            .setHasPartnersBadge(false)
             .build();
 
     // Sends the request to create the customer.
