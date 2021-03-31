@@ -183,7 +183,7 @@ public class AddSitelinks {
 
     // Targets this sitelink for United States only.
     // A list of country codes can be referenced here:
-    // https://developers.google.com/adwords/api/docs/appendix/geotargeting
+    // https://developers.google.com/google-ads/api/reference/data/geotargets
     String unitedStates = ResourceNames.geoTargetConstant(2840);
 
     ExtensionFeedItem extensionFeedItem2 =

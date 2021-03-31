@@ -75,7 +75,7 @@ public class AddAffiliateLocationExtensions {
         names = ArgumentNames.CHAIN_ID,
         description =
             "The retail chain ID. See"
-                + " https://developers.google.com/adwords/api/docs/appendix/codes-formats#chain-idsfor"
+                + " https://developers.google.com/google-ads/api/reference/data/codes-formats#chain-ids"
                 + " a complete list of valid retail chain IDs",
         required = true)
     private long chainId;

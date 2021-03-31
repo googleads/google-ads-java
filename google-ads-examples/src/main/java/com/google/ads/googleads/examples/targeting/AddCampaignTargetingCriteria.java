@@ -60,7 +60,7 @@ public class AddCampaignTargetingCriteria {
         description =
             "A location criterion ID. For example, specify 21167 for New York. For more information"
                 + " on determining this value, see: "
-                + " https://developers.google.com/adwords/api/docs/appendix/geotargeting.")
+                + " https://developers.google.com/google-ads/api/reference/data/geotargets.")
     private Long locationId;
   }
 
