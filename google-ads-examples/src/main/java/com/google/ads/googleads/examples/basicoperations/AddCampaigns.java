@@ -106,7 +106,7 @@ public class AddCampaigns {
   private static String addCampaignBudget(GoogleAdsClient googleAdsClient, long customerId) {
     CampaignBudget budget =
         CampaignBudget.newBuilder()
-            .setName("Interplanetary Cruise Budget #" + getPrintableDateTime())
+            .setName("Interplanetary Cruise Budget #" )
             .setDeliveryMethod(BudgetDeliveryMethod.STANDARD)
             .setAmountMicros(500_000)
             .build();
