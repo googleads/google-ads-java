@@ -78,8 +78,7 @@ public final class ArgumentNames {
   public static final String LOGIN_CUSTOMER_ID = "--loginCustomerId";
   public static final String MANAGER_CUSTOMER_ID = "--managerCustomerId";
   public static final String MANAGER_ID = "--managerId";
-  public static final String MARKETING_IMAGE_ASSET_RESOURCE_NAME =
-      "--marketingImageAssetResourceName";
+  public static final String MARKETING_IMAGE_ASSET_ID = "--marketingImageAssetId";
   public static final String MERCHANT_CENTER_ACCOUNT_ID = "--merchantCenterAccountId";
   public static final String OFFLINE_USER_DATA_JOB_TYPE = "--offlineUserDataJobType";
   public static final String PAGE_URL = "--pageUrl";
@@ -91,8 +90,7 @@ public final class ArgumentNames {
   public static final String REPLACE_EXISTING_TREE = "--replaceExistingTree";
   public static final String RESTATEMENT_VALUE = "--restatementValue";
   public static final String SITELINK_TEXT = "--sitelinkText";
-  public static final String SQUARE_MARKETING_IMAGE_ASSET_RESOURCE_NAME =
-      "--squareMarketingImageAssetResourceName";
+  public static final String SQUARE_MARKETING_IMAGE_ID = "--squareMarketingImageAssetId";
   public static final String USER_LIST_ID = "--userListId";
   public static final String USER_LIST_IDS = "--userListIds";
 }
