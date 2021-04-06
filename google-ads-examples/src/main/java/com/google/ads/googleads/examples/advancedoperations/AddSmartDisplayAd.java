@@ -20,6 +20,7 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
+import com.google.ads.googleads.v6.utils.ResourceNames;
 import com.google.ads.googleads.v6.common.AdImageAsset;
 import com.google.ads.googleads.v6.common.AdTextAsset;
 import com.google.ads.googleads.v6.common.ImageAsset;
@@ -88,11 +89,11 @@ public class AddSmartDisplayAd {
     @Parameter(names = ArgumentNames.CUSTOMER_ID, required = true)
     private Long customerId;
 
-    @Parameter(names = ArgumentNames.MARKETING_IMAGE_ASSET_RESOURCE_NAME, required = false)
-    private String marketingImageAssetResourceName;
+    @Parameter(names = ArgumentNames.MARKETING_IMAGE_ASSET_ID, required = false)
+    private Long marketingImageAssetResourceName;
 
-    @Parameter(names = ArgumentNames.SQUARE_MARKETING_IMAGE_ASSET_RESOURCE_NAME, required = false)
-    private String squareMarketingImageAssetResourceName;
+    @Parameter(names = ArgumentNames.SQUARE_MARKETING_IMAGE_ID, required = false)
+    private Long squareMarketingImageAssetResourceName;
   }
 
   public static void main(String[] args) throws IOException {
@@ -148,26 +149,31 @@ public class AddSmartDisplayAd {
    *
    * @param googleAdsClient the Google Ads API client.
    * @param customerId the client customer ID.
-   * @param marketingImageAssetResourceName
-   * @param squareMarketingImageAssetResourceName
+   * @param marketingImageAssetId
+   * @param squareMarketingImageAssetId
    * @throws GoogleAdsException if an API request failed with one or more service errors.
    */
   private void runExample(
       GoogleAdsClient googleAdsClient,
       long customerId,
-      String marketingImageAssetResourceName,
-      String squareMarketingImageAssetResourceName)
+      Long marketingImageAssetId,
+      Long squareMarketingImageAssetId)
       throws IOException {
     String budgetResourceName = createCampaignBudget(googleAdsClient, customerId);
     String campaignResourceName =
         createSmartDisplayCampaign(googleAdsClient, customerId, budgetResourceName);
     String adGroupResourceName = createAdGroup(googleAdsClient, customerId, campaignResourceName);
+
     createResponsiveDisplayAd(
         googleAdsClient,
         customerId,
         adGroupResourceName,
-        marketingImageAssetResourceName,
-        squareMarketingImageAssetResourceName);
+        marketingImageAssetId == null
+            ? null
+            : ResourceNames.asset(customerId, marketingImageAssetId),
+        squareMarketingImageAssetId == null
+            ? null
+            : ResourceNames.asset(customerId, squareMarketingImageAssetId));
   }
 
   /**
