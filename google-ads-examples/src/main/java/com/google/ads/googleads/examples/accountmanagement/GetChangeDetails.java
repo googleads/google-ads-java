@@ -88,6 +88,7 @@ public class GetChangeDetails {
   }
 
   /** Runs the example. */
+  // [START get_change_details]
   private void runExample(GoogleAdsClient googleAdsClient, long customerId) {
     // Defines a GAQL query to retrieve change_event instances from the last 14 days.
     String query =
@@ -166,6 +167,7 @@ public class GetChangeDetails {
       }
     }
   }
+  // [END get_change_details]
 
   /** Retrieves the resource from a {@link ChangeEvent.ChangedResource} instance. */
   private Optional<Message> getResourceByType(

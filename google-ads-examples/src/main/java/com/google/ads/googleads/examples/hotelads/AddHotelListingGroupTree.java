@@ -213,7 +213,7 @@ public class AddHotelListingGroupTree {
    * @return the "other hotel classes" node's resource name, which serves as a parent node for the
    *     next level.
    */
-  // [START add_level1_nodes]
+  // [START add_hotel_listing_group_tree]
   private static String addLevel1Nodes(
       long customerId,
       long adGroupId,
@@ -264,7 +264,7 @@ public class AddHotelListingGroupTree {
 
     return otherHotelsAdGroupCriterion.getResourceName();
   }
-  // [END add_level1_nodes]
+  // [END add_hotel_listing_group_tree]
 
   /**
    * Creates child nodes of level 2, partitioned by the country region.

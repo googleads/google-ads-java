@@ -143,6 +143,7 @@ public class AddLocalCampaign {
   }
 
   /** Creates a campaign budget. */
+  // [START add_local_campaign]
   private String createCampaignBudget(GoogleAdsClient googleAdsClient, long customerId) {
     // Creates a CampaignBudget object.
     CampaignBudget budget =
@@ -172,8 +173,10 @@ public class AddLocalCampaign {
       return resourceName;
     }
   }
+  // [END add_local_campaign]
 
   /** Creates a local campaign. */
+  // [START add_local_campaign_1]
   private String createLocalCampaign(
       GoogleAdsClient googleAdsClient, long customerId, String budgetResourceName) {
     // Creates a Campaign object.
@@ -233,8 +236,10 @@ public class AddLocalCampaign {
       return resourceName;
     }
   }
+  // [END add_local_campaign_1]
 
   /** Creates a local campaign ad-group. */
+  // [START add_local_campaign_2]
   private String createAdGroup(
       GoogleAdsClient googleAdsClient, long customerId, String campaignResourceName) {
     // Creates an ad group. Note that the ad group type must not be set.
@@ -264,8 +269,10 @@ public class AddLocalCampaign {
       return resourceName;
     }
   }
+  // [END add_local_campaign_2]
 
   /** Creates a local ad. */
+  // [START add_local_campaign_3]
   private void createLocalAd(
       GoogleAdsClient googleAdsClient, long customerId, String adGroupResourceName)
       throws IOException {
@@ -322,6 +329,7 @@ public class AddLocalCampaign {
       System.out.printf("Created ad group ad with resource name: '%s'.%n", resourceName);
     }
   }
+  // [END add_local_campaign_3]
 
   // --------------------------------- Utility functions -------------------------------------------
 
@@ -331,6 +339,7 @@ public class AddLocalCampaign {
   }
 
   /** Creates an {@link AdImageAsset}. */
+  // [START add_local_campaign_4]
   private static AdImageAsset createImageAsset(
       GoogleAdsClient googleAdsClient, long customerId, String imageUrl, String imageName)
       throws IOException {
@@ -359,8 +368,10 @@ public class AddLocalCampaign {
       return AdImageAsset.newBuilder().setAsset(imageResourceName).build();
     }
   }
+  // [END add_local_campaign_4]
 
   /** Creates a {@link AdVideoAsset}. */
+  // [START add_local_campaign_5]
   private AdVideoAsset createYoutubeVideoAsset(
       GoogleAdsClient googleAdsClient, long customerId, String youtubeVideoId, String videoName) {
     // Creates an Asset object.
@@ -390,4 +401,5 @@ public class AddLocalCampaign {
       return AdVideoAsset.newBuilder().setAsset(resourceName).build();
     }
   }
+  // [END add_local_campaign_5]
 }
