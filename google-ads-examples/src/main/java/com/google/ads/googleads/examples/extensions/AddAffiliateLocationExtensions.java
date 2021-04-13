@@ -137,6 +137,7 @@ public class AddAffiliateLocationExtensions {
   }
 
   /** Creates an affiliate location extension feed. */
+  // [START add_affiliate_location_extensions]
   private String createAffiliateLocationExtensionFeed(
       GoogleAdsClient googleAdsClient, long customerId, long chainId) {
     // Removes all existing location extension feeds. This is an optional step, but is required for
@@ -179,6 +180,7 @@ public class AddAffiliateLocationExtensions {
       return resourceName;
     }
   }
+  // [END add_affiliate_location_extensions]
 
   /** Removes all location extension feeds. */
   private void removeLocationExtensionFeeds(GoogleAdsClient googleAdsClient, long customerId) {
@@ -200,6 +202,7 @@ public class AddAffiliateLocationExtensions {
   }
 
   /** Creates a CampaignFeed. This links a preexisting {@link Feed} to a campaign. */
+  // [START add_affiliate_location_extensions_3]
   private void createCampaignFeed(
       GoogleAdsClient googleAdsClient,
       long customerId,
@@ -244,8 +247,10 @@ public class AddAffiliateLocationExtensions {
           response.getResultsList().get(0).getResourceName());
     }
   }
+  // [END add_affiliate_location_extensions_3]
 
   /** Gets the feed item attribute ID that specifies the chain ID. */
+  // [START add_affiliate_location_extensions_4]
   private long getAttributeIdForChainId(FeedMapping feedMapping) {
     Optional<AttributeFieldMapping> fieldMapping =
         feedMapping.getAttributeFieldMappingsList().stream()
@@ -257,6 +262,7 @@ public class AddAffiliateLocationExtensions {
     }
     return fieldMapping.get().getFeedAttributeId();
   }
+  // [END add_affiliate_location_extensions_4]
 
   /** Removes a list of feeds from the customerID. */
   private void removeFeeds(GoogleAdsClient googleAdsClient, long customerId, List<Feed> feeds) {
@@ -334,6 +340,7 @@ public class AddAffiliateLocationExtensions {
   }
 
   /** Waits for a feed (identified by it's feedResourceName) to become ready. */
+  // [START add_affiliate_location_extensions_2]
   private FeedMapping waitForFeedToBeReady(
       GoogleAdsClient googleAdsServiceClient, long customerId, String feedResourceName) {
     int numAttempts = 0;
@@ -370,8 +377,10 @@ public class AddAffiliateLocationExtensions {
         GrpcStatusCode.of(Code.DEADLINE_EXCEEDED),
         true);
   }
+  // [END add_affiliate_location_extensions_2]
 
   /** Retrieves the {@link FeedMapping} for a given feed. */
+  // [START add_affiliate_location_extensions_1]
   private Optional<FeedMapping> getFeedMapping(
       GoogleAdsClient googleAdsServiceClient, long customerId, String feedResourceName) {
     String query =
@@ -397,4 +406,5 @@ public class AddAffiliateLocationExtensions {
       return Optional.empty();
     }
   }
+  // [END add_affiliate_location_extensions_1]
 }

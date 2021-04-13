@@ -148,6 +148,7 @@ public class ForecastReach {
    *     https://developers.google.com/google-ads/api/reference/data/geotargets or call
    *     ReachPlanServiceClient.listPlannableLocations().
    */
+  // [START forecast_reach_2]
   private void showPlannableProducts(
       ReachPlanServiceClient reachPlanServiceClient, String locationId) {
     ListPlannableProductsRequest request =
@@ -172,6 +173,7 @@ public class ForecastReach {
       }
     }
   }
+  // [END forecast_reach_2]
 
   /**
    * Creates a base request to generate a reach forecast.
@@ -225,6 +227,7 @@ public class ForecastReach {
    * @param reachPlanServiceClient instance of Reach Plan Service client.
    * @param request an already-populated reach curve request.
    */
+  // [START forecast_reach]
   private void getReachCurve(
       ReachPlanServiceClient reachPlanServiceClient, GenerateReachForecastRequest request) {
     GenerateReachForecastResponse response = reachPlanServiceClient.generateReachForecast(request);
@@ -250,6 +253,7 @@ public class ForecastReach {
       System.out.printf("\"%n");
     }
   }
+  // [END forecast_reach]
 
   /**
    * Pulls a forecast for a budget split 15% and 85% between two products.
@@ -262,6 +266,7 @@ public class ForecastReach {
    * @param currencyCode three-character ISO 4217 currency code.
    * @param budgetMicros budget in currency to plan for.
    */
+  // [START forecast_reach_3]
   private void forecastManualMix(
       ReachPlanServiceClient reachPlanServiceClient,
       long customerId,
@@ -293,6 +298,7 @@ public class ForecastReach {
 
     getReachCurve(reachPlanServiceClient, request);
   }
+  // [END forecast_reach_3]
 
   /**
    * Pulls a forecast for a product mix suggested based on preferences for whether the ad would have
@@ -307,6 +313,7 @@ public class ForecastReach {
    * @param currencyCode three-character ISO 4217 currency code.
    * @param budgetMicros budget in currency to plan for.
    */
+  // [START forecast_reach_1]
   private void forecastSuggestedMix(
       ReachPlanServiceClient reachPlanServiceClient,
       long customerId,
@@ -349,4 +356,5 @@ public class ForecastReach {
 
     getReachCurve(reachPlanServiceClient, curveRequest);
   }
+  // [END forecast_reach_1]
 }
