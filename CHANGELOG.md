@@ -1,3 +1,12 @@
+12.0.0 - 2021-05-04
+-------------------
+- Added support and examples for Google Ads API v7.0.
+- Added support for building with Gradle. This improves build times
+  substantially, particularly for incremental builds. Also makes it easier to
+  run examples:
+    ./gradlew google-ads-examples:runExample --example="basicoperations.GetCampaigns"
+- Removed support for Google Ads API v4.0.
+
 11.0.0 - 2021-02-18
 -------------------
 - Added support and examples for Google Ads API v6.1.
