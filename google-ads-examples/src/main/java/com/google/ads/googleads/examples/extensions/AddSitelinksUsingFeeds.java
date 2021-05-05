@@ -60,7 +60,6 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
-import org.apache.commons.lang3.StringUtils;
 
 /**
  * Adds sitelinks to a campaign using feed services. To create a campaign, run AddCampaigns.java.
@@ -379,11 +378,11 @@ public class AddSitelinksUsingFeeds {
   private void createCampaignFeed(
       GoogleAdsClient googleAdsClient, long customerId, Feed feed, long campaignId) {
     // Creates a comma separated list of feed attribute IDs for the matching function.
-    List<Long> feedAttributesIds =
+    List<String> feedAttributesIds =
         feed.getAttributesList().stream()
-            .map(feedAttribute -> feedAttribute.getId())
+            .map(feedAttribute -> String.valueOf(feedAttribute.getId()))
             .collect(Collectors.toList());
-    String feedAttributesString = StringUtils.join(feedAttributesIds, ",");
+    String feedAttributesString = String.join( ",", feedAttributesIds);
 
     // Creates the campaign feed.
     CampaignFeed campaignFeed =
