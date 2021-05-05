@@ -19,15 +19,15 @@ import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
 import com.google.ads.googleads.lib.utils.FieldMasks;
-import com.google.ads.googleads.v6.enums.ChangeEventResourceTypeEnum.ChangeEventResourceType;
-import com.google.ads.googleads.v6.enums.ResourceChangeOperationEnum.ResourceChangeOperation;
-import com.google.ads.googleads.v6.errors.GoogleAdsError;
-import com.google.ads.googleads.v6.errors.GoogleAdsException;
-import com.google.ads.googleads.v6.resources.ChangeEvent;
-import com.google.ads.googleads.v6.resources.ChangeEvent.ChangedResource;
-import com.google.ads.googleads.v6.services.GoogleAdsRow;
-import com.google.ads.googleads.v6.services.GoogleAdsServiceClient;
-import com.google.ads.googleads.v6.services.GoogleAdsServiceClient.SearchPagedResponse;
+import com.google.ads.googleads.v7.enums.ChangeEventResourceTypeEnum.ChangeEventResourceType;
+import com.google.ads.googleads.v7.enums.ResourceChangeOperationEnum.ResourceChangeOperation;
+import com.google.ads.googleads.v7.errors.GoogleAdsError;
+import com.google.ads.googleads.v7.errors.GoogleAdsException;
+import com.google.ads.googleads.v7.resources.ChangeEvent;
+import com.google.ads.googleads.v7.resources.ChangeEvent.ChangedResource;
+import com.google.ads.googleads.v7.services.GoogleAdsRow;
+import com.google.ads.googleads.v7.services.GoogleAdsServiceClient;
+import com.google.ads.googleads.v7.services.GoogleAdsServiceClient.SearchPagedResponse;
 import com.google.protobuf.Message;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -88,6 +88,7 @@ public class GetChangeDetails {
   }
 
   /** Runs the example. */
+  // [START get_change_details]
   private void runExample(GoogleAdsClient googleAdsClient, long customerId) {
     // Defines a GAQL query to retrieve change_event instances from the last 14 days.
     String query =
@@ -166,6 +167,7 @@ public class GetChangeDetails {
       }
     }
   }
+  // [END get_change_details]
 
   /** Retrieves the resource from a {@link ChangeEvent.ChangedResource} instance. */
   private Optional<Message> getResourceByType(

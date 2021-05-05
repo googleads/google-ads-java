@@ -18,20 +18,20 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.v6.common.HotelClassInfo;
-import com.google.ads.googleads.v6.common.HotelCountryRegionInfo;
-import com.google.ads.googleads.v6.common.ListingDimensionInfo;
-import com.google.ads.googleads.v6.common.ListingGroupInfo;
-import com.google.ads.googleads.v6.enums.AdGroupCriterionStatusEnum.AdGroupCriterionStatus;
-import com.google.ads.googleads.v6.enums.ListingGroupTypeEnum.ListingGroupType;
-import com.google.ads.googleads.v6.errors.GoogleAdsError;
-import com.google.ads.googleads.v6.errors.GoogleAdsException;
-import com.google.ads.googleads.v6.resources.AdGroupCriterion;
-import com.google.ads.googleads.v6.services.AdGroupCriterionOperation;
-import com.google.ads.googleads.v6.services.AdGroupCriterionServiceClient;
-import com.google.ads.googleads.v6.services.MutateAdGroupCriteriaResponse;
-import com.google.ads.googleads.v6.services.MutateAdGroupCriterionResult;
-import com.google.ads.googleads.v6.utils.ResourceNames;
+import com.google.ads.googleads.v7.common.HotelClassInfo;
+import com.google.ads.googleads.v7.common.HotelCountryRegionInfo;
+import com.google.ads.googleads.v7.common.ListingDimensionInfo;
+import com.google.ads.googleads.v7.common.ListingGroupInfo;
+import com.google.ads.googleads.v7.enums.AdGroupCriterionStatusEnum.AdGroupCriterionStatus;
+import com.google.ads.googleads.v7.enums.ListingGroupTypeEnum.ListingGroupType;
+import com.google.ads.googleads.v7.errors.GoogleAdsError;
+import com.google.ads.googleads.v7.errors.GoogleAdsException;
+import com.google.ads.googleads.v7.resources.AdGroupCriterion;
+import com.google.ads.googleads.v7.services.AdGroupCriterionOperation;
+import com.google.ads.googleads.v7.services.AdGroupCriterionServiceClient;
+import com.google.ads.googleads.v7.services.MutateAdGroupCriteriaResponse;
+import com.google.ads.googleads.v7.services.MutateAdGroupCriterionResult;
+import com.google.ads.googleads.v7.utils.ResourceNames;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -213,7 +213,7 @@ public class AddHotelListingGroupTree {
    * @return the "other hotel classes" node's resource name, which serves as a parent node for the
    *     next level.
    */
-  // [START add_level1_nodes]
+  // [START add_hotel_listing_group_tree]
   private static String addLevel1Nodes(
       long customerId,
       long adGroupId,
@@ -264,7 +264,7 @@ public class AddHotelListingGroupTree {
 
     return otherHotelsAdGroupCriterion.getResourceName();
   }
-  // [END add_level1_nodes]
+  // [END add_hotel_listing_group_tree]
 
   /**
    * Creates child nodes of level 2, partitioned by the country region.

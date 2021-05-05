@@ -18,32 +18,32 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.v6.common.DeviceInfo;
-import com.google.ads.googleads.v6.common.GenderInfo;
-import com.google.ads.googleads.v6.enums.DeviceEnum.Device;
-import com.google.ads.googleads.v6.enums.GenderTypeEnum.GenderType;
-import com.google.ads.googleads.v6.enums.ReachPlanAdLengthEnum.ReachPlanAdLength;
-import com.google.ads.googleads.v6.enums.ReachPlanAgeRangeEnum.ReachPlanAgeRange;
-import com.google.ads.googleads.v6.errors.GoogleAdsError;
-import com.google.ads.googleads.v6.errors.GoogleAdsException;
-import com.google.ads.googleads.v6.services.CampaignDuration;
-import com.google.ads.googleads.v6.services.GenerateProductMixIdeasRequest;
-import com.google.ads.googleads.v6.services.GenerateProductMixIdeasResponse;
-import com.google.ads.googleads.v6.services.GenerateReachForecastRequest;
-import com.google.ads.googleads.v6.services.GenerateReachForecastResponse;
-import com.google.ads.googleads.v6.services.ListPlannableLocationsRequest;
-import com.google.ads.googleads.v6.services.ListPlannableLocationsResponse;
-import com.google.ads.googleads.v6.services.ListPlannableProductsRequest;
-import com.google.ads.googleads.v6.services.ListPlannableProductsResponse;
-import com.google.ads.googleads.v6.services.PlannableLocation;
-import com.google.ads.googleads.v6.services.PlannedProduct;
-import com.google.ads.googleads.v6.services.PlannedProductReachForecast;
-import com.google.ads.googleads.v6.services.Preferences;
-import com.google.ads.googleads.v6.services.ProductAllocation;
-import com.google.ads.googleads.v6.services.ProductMetadata;
-import com.google.ads.googleads.v6.services.ReachForecast;
-import com.google.ads.googleads.v6.services.ReachPlanServiceClient;
-import com.google.ads.googleads.v6.services.Targeting;
+import com.google.ads.googleads.v7.common.DeviceInfo;
+import com.google.ads.googleads.v7.common.GenderInfo;
+import com.google.ads.googleads.v7.enums.DeviceEnum.Device;
+import com.google.ads.googleads.v7.enums.GenderTypeEnum.GenderType;
+import com.google.ads.googleads.v7.enums.ReachPlanAdLengthEnum.ReachPlanAdLength;
+import com.google.ads.googleads.v7.enums.ReachPlanAgeRangeEnum.ReachPlanAgeRange;
+import com.google.ads.googleads.v7.errors.GoogleAdsError;
+import com.google.ads.googleads.v7.errors.GoogleAdsException;
+import com.google.ads.googleads.v7.services.CampaignDuration;
+import com.google.ads.googleads.v7.services.GenerateProductMixIdeasRequest;
+import com.google.ads.googleads.v7.services.GenerateProductMixIdeasResponse;
+import com.google.ads.googleads.v7.services.GenerateReachForecastRequest;
+import com.google.ads.googleads.v7.services.GenerateReachForecastResponse;
+import com.google.ads.googleads.v7.services.ListPlannableLocationsRequest;
+import com.google.ads.googleads.v7.services.ListPlannableLocationsResponse;
+import com.google.ads.googleads.v7.services.ListPlannableProductsRequest;
+import com.google.ads.googleads.v7.services.ListPlannableProductsResponse;
+import com.google.ads.googleads.v7.services.PlannableLocation;
+import com.google.ads.googleads.v7.services.PlannedProduct;
+import com.google.ads.googleads.v7.services.PlannedProductReachForecast;
+import com.google.ads.googleads.v7.services.Preferences;
+import com.google.ads.googleads.v7.services.ProductAllocation;
+import com.google.ads.googleads.v7.services.ProductMetadata;
+import com.google.ads.googleads.v7.services.ReachForecast;
+import com.google.ads.googleads.v7.services.ReachPlanServiceClient;
+import com.google.ads.googleads.v7.services.Targeting;
 import com.google.common.base.Joiner;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -148,6 +148,7 @@ public class ForecastReach {
    *     https://developers.google.com/google-ads/api/reference/data/geotargets or call
    *     ReachPlanServiceClient.listPlannableLocations().
    */
+  // [START forecast_reach_2]
   private void showPlannableProducts(
       ReachPlanServiceClient reachPlanServiceClient, String locationId) {
     ListPlannableProductsRequest request =
@@ -172,6 +173,7 @@ public class ForecastReach {
       }
     }
   }
+  // [END forecast_reach_2]
 
   /**
    * Creates a base request to generate a reach forecast.
@@ -225,6 +227,7 @@ public class ForecastReach {
    * @param reachPlanServiceClient instance of Reach Plan Service client.
    * @param request an already-populated reach curve request.
    */
+  // [START forecast_reach]
   private void getReachCurve(
       ReachPlanServiceClient reachPlanServiceClient, GenerateReachForecastRequest request) {
     GenerateReachForecastResponse response = reachPlanServiceClient.generateReachForecast(request);
@@ -250,6 +253,7 @@ public class ForecastReach {
       System.out.printf("\"%n");
     }
   }
+  // [END forecast_reach]
 
   /**
    * Pulls a forecast for a budget split 15% and 85% between two products.
@@ -262,6 +266,7 @@ public class ForecastReach {
    * @param currencyCode three-character ISO 4217 currency code.
    * @param budgetMicros budget in currency to plan for.
    */
+  // [START forecast_reach_3]
   private void forecastManualMix(
       ReachPlanServiceClient reachPlanServiceClient,
       long customerId,
@@ -293,6 +298,7 @@ public class ForecastReach {
 
     getReachCurve(reachPlanServiceClient, request);
   }
+  // [END forecast_reach_3]
 
   /**
    * Pulls a forecast for a product mix suggested based on preferences for whether the ad would have
@@ -307,6 +313,7 @@ public class ForecastReach {
    * @param currencyCode three-character ISO 4217 currency code.
    * @param budgetMicros budget in currency to plan for.
    */
+  // [START forecast_reach_1]
   private void forecastSuggestedMix(
       ReachPlanServiceClient reachPlanServiceClient,
       long customerId,
@@ -349,4 +356,5 @@ public class ForecastReach {
 
     getReachCurve(reachPlanServiceClient, curveRequest);
   }
+  // [END forecast_reach_1]
 }

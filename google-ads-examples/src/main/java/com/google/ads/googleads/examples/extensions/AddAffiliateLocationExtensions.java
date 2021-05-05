@@ -20,30 +20,30 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.v6.common.MatchingFunction;
-import com.google.ads.googleads.v6.enums.AffiliateLocationFeedRelationshipTypeEnum.AffiliateLocationFeedRelationshipType;
-import com.google.ads.googleads.v6.enums.AffiliateLocationPlaceholderFieldEnum.AffiliateLocationPlaceholderField;
-import com.google.ads.googleads.v6.enums.FeedOriginEnum.FeedOrigin;
-import com.google.ads.googleads.v6.enums.PlaceholderTypeEnum.PlaceholderType;
-import com.google.ads.googleads.v6.errors.GoogleAdsError;
-import com.google.ads.googleads.v6.errors.GoogleAdsException;
-import com.google.ads.googleads.v6.resources.AttributeFieldMapping;
-import com.google.ads.googleads.v6.resources.CampaignFeed;
-import com.google.ads.googleads.v6.resources.CustomerFeed;
-import com.google.ads.googleads.v6.resources.Feed;
-import com.google.ads.googleads.v6.resources.Feed.AffiliateLocationFeedData;
-import com.google.ads.googleads.v6.resources.FeedMapping;
-import com.google.ads.googleads.v6.services.CampaignFeedOperation;
-import com.google.ads.googleads.v6.services.CampaignFeedServiceClient;
-import com.google.ads.googleads.v6.resources.FeedName;
-import com.google.ads.googleads.v6.services.FeedOperation;
-import com.google.ads.googleads.v6.services.FeedServiceClient;
-import com.google.ads.googleads.v6.services.GoogleAdsRow;
-import com.google.ads.googleads.v6.services.GoogleAdsServiceClient;
-import com.google.ads.googleads.v6.services.GoogleAdsServiceClient.SearchPagedResponse;
-import com.google.ads.googleads.v6.services.MutateCampaignFeedsResponse;
-import com.google.ads.googleads.v6.services.MutateFeedsResponse;
-import com.google.ads.googleads.v6.utils.ResourceNames;
+import com.google.ads.googleads.v7.common.MatchingFunction;
+import com.google.ads.googleads.v7.enums.AffiliateLocationFeedRelationshipTypeEnum.AffiliateLocationFeedRelationshipType;
+import com.google.ads.googleads.v7.enums.AffiliateLocationPlaceholderFieldEnum.AffiliateLocationPlaceholderField;
+import com.google.ads.googleads.v7.enums.FeedOriginEnum.FeedOrigin;
+import com.google.ads.googleads.v7.enums.PlaceholderTypeEnum.PlaceholderType;
+import com.google.ads.googleads.v7.errors.GoogleAdsError;
+import com.google.ads.googleads.v7.errors.GoogleAdsException;
+import com.google.ads.googleads.v7.resources.AttributeFieldMapping;
+import com.google.ads.googleads.v7.resources.CampaignFeed;
+import com.google.ads.googleads.v7.resources.CustomerFeed;
+import com.google.ads.googleads.v7.resources.Feed;
+import com.google.ads.googleads.v7.resources.Feed.AffiliateLocationFeedData;
+import com.google.ads.googleads.v7.resources.FeedMapping;
+import com.google.ads.googleads.v7.services.CampaignFeedOperation;
+import com.google.ads.googleads.v7.services.CampaignFeedServiceClient;
+import com.google.ads.googleads.v7.resources.FeedName;
+import com.google.ads.googleads.v7.services.FeedOperation;
+import com.google.ads.googleads.v7.services.FeedServiceClient;
+import com.google.ads.googleads.v7.services.GoogleAdsRow;
+import com.google.ads.googleads.v7.services.GoogleAdsServiceClient;
+import com.google.ads.googleads.v7.services.GoogleAdsServiceClient.SearchPagedResponse;
+import com.google.ads.googleads.v7.services.MutateCampaignFeedsResponse;
+import com.google.ads.googleads.v7.services.MutateFeedsResponse;
+import com.google.ads.googleads.v7.utils.ResourceNames;
 import com.google.api.gax.grpc.GrpcStatusCode;
 import com.google.api.gax.rpc.ApiException;
 import com.google.common.collect.ImmutableList;
@@ -137,6 +137,7 @@ public class AddAffiliateLocationExtensions {
   }
 
   /** Creates an affiliate location extension feed. */
+  // [START add_affiliate_location_extensions]
   private String createAffiliateLocationExtensionFeed(
       GoogleAdsClient googleAdsClient, long customerId, long chainId) {
     // Removes all existing location extension feeds. This is an optional step, but is required for
@@ -179,6 +180,7 @@ public class AddAffiliateLocationExtensions {
       return resourceName;
     }
   }
+  // [END add_affiliate_location_extensions]
 
   /** Removes all location extension feeds. */
   private void removeLocationExtensionFeeds(GoogleAdsClient googleAdsClient, long customerId) {
@@ -200,6 +202,7 @@ public class AddAffiliateLocationExtensions {
   }
 
   /** Creates a CampaignFeed. This links a preexisting {@link Feed} to a campaign. */
+  // [START add_affiliate_location_extensions_3]
   private void createCampaignFeed(
       GoogleAdsClient googleAdsClient,
       long customerId,
@@ -244,8 +247,10 @@ public class AddAffiliateLocationExtensions {
           response.getResultsList().get(0).getResourceName());
     }
   }
+  // [END add_affiliate_location_extensions_3]
 
   /** Gets the feed item attribute ID that specifies the chain ID. */
+  // [START add_affiliate_location_extensions_4]
   private long getAttributeIdForChainId(FeedMapping feedMapping) {
     Optional<AttributeFieldMapping> fieldMapping =
         feedMapping.getAttributeFieldMappingsList().stream()
@@ -257,6 +262,7 @@ public class AddAffiliateLocationExtensions {
     }
     return fieldMapping.get().getFeedAttributeId();
   }
+  // [END add_affiliate_location_extensions_4]
 
   /** Removes a list of feeds from the customerID. */
   private void removeFeeds(GoogleAdsClient googleAdsClient, long customerId, List<Feed> feeds) {
@@ -334,6 +340,7 @@ public class AddAffiliateLocationExtensions {
   }
 
   /** Waits for a feed (identified by it's feedResourceName) to become ready. */
+  // [START add_affiliate_location_extensions_2]
   private FeedMapping waitForFeedToBeReady(
       GoogleAdsClient googleAdsServiceClient, long customerId, String feedResourceName) {
     int numAttempts = 0;
@@ -370,8 +377,10 @@ public class AddAffiliateLocationExtensions {
         GrpcStatusCode.of(Code.DEADLINE_EXCEEDED),
         true);
   }
+  // [END add_affiliate_location_extensions_2]
 
   /** Retrieves the {@link FeedMapping} for a given feed. */
+  // [START add_affiliate_location_extensions_1]
   private Optional<FeedMapping> getFeedMapping(
       GoogleAdsClient googleAdsServiceClient, long customerId, String feedResourceName) {
     String query =
@@ -397,4 +406,5 @@ public class AddAffiliateLocationExtensions {
       return Optional.empty();
     }
   }
+  // [END add_affiliate_location_extensions_1]
 }

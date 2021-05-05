@@ -20,47 +20,47 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.v6.common.AdImageAsset;
-import com.google.ads.googleads.v6.common.AdTextAsset;
-import com.google.ads.googleads.v6.common.AdVideoAsset;
-import com.google.ads.googleads.v6.common.ImageAsset;
-import com.google.ads.googleads.v6.common.LocalAdInfo;
-import com.google.ads.googleads.v6.common.MaximizeConversionValue;
-import com.google.ads.googleads.v6.common.YoutubeVideoAsset;
-import com.google.ads.googleads.v6.enums.AdGroupAdStatusEnum.AdGroupAdStatus;
-import com.google.ads.googleads.v6.enums.AdGroupStatusEnum.AdGroupStatus;
-import com.google.ads.googleads.v6.enums.AdvertisingChannelSubTypeEnum.AdvertisingChannelSubType;
-import com.google.ads.googleads.v6.enums.AdvertisingChannelTypeEnum.AdvertisingChannelType;
-import com.google.ads.googleads.v6.enums.AssetTypeEnum.AssetType;
-import com.google.ads.googleads.v6.enums.BudgetDeliveryMethodEnum.BudgetDeliveryMethod;
-import com.google.ads.googleads.v6.enums.CampaignStatusEnum.CampaignStatus;
-import com.google.ads.googleads.v6.enums.LocationSourceTypeEnum.LocationSourceType;
-import com.google.ads.googleads.v6.enums.OptimizationGoalTypeEnum.OptimizationGoalType;
-import com.google.ads.googleads.v6.errors.GoogleAdsError;
-import com.google.ads.googleads.v6.errors.GoogleAdsException;
-import com.google.ads.googleads.v6.resources.Ad;
-import com.google.ads.googleads.v6.resources.AdGroup;
-import com.google.ads.googleads.v6.resources.AdGroupAd;
-import com.google.ads.googleads.v6.resources.Asset;
-import com.google.ads.googleads.v6.resources.Campaign;
-import com.google.ads.googleads.v6.resources.Campaign.LocalCampaignSetting;
-import com.google.ads.googleads.v6.resources.Campaign.OptimizationGoalSetting;
-import com.google.ads.googleads.v6.resources.CampaignBudget;
-import com.google.ads.googleads.v6.services.AdGroupAdOperation;
-import com.google.ads.googleads.v6.services.AdGroupAdServiceClient;
-import com.google.ads.googleads.v6.services.AdGroupOperation;
-import com.google.ads.googleads.v6.services.AdGroupServiceClient;
-import com.google.ads.googleads.v6.services.AssetOperation;
-import com.google.ads.googleads.v6.services.AssetServiceClient;
-import com.google.ads.googleads.v6.services.CampaignBudgetOperation;
-import com.google.ads.googleads.v6.services.CampaignBudgetServiceClient;
-import com.google.ads.googleads.v6.services.CampaignOperation;
-import com.google.ads.googleads.v6.services.CampaignServiceClient;
-import com.google.ads.googleads.v6.services.MutateAdGroupAdsResponse;
-import com.google.ads.googleads.v6.services.MutateAdGroupsResponse;
-import com.google.ads.googleads.v6.services.MutateAssetsResponse;
-import com.google.ads.googleads.v6.services.MutateCampaignBudgetsResponse;
-import com.google.ads.googleads.v6.services.MutateCampaignsResponse;
+import com.google.ads.googleads.v7.common.AdImageAsset;
+import com.google.ads.googleads.v7.common.AdTextAsset;
+import com.google.ads.googleads.v7.common.AdVideoAsset;
+import com.google.ads.googleads.v7.common.ImageAsset;
+import com.google.ads.googleads.v7.common.LocalAdInfo;
+import com.google.ads.googleads.v7.common.MaximizeConversionValue;
+import com.google.ads.googleads.v7.common.YoutubeVideoAsset;
+import com.google.ads.googleads.v7.enums.AdGroupAdStatusEnum.AdGroupAdStatus;
+import com.google.ads.googleads.v7.enums.AdGroupStatusEnum.AdGroupStatus;
+import com.google.ads.googleads.v7.enums.AdvertisingChannelSubTypeEnum.AdvertisingChannelSubType;
+import com.google.ads.googleads.v7.enums.AdvertisingChannelTypeEnum.AdvertisingChannelType;
+import com.google.ads.googleads.v7.enums.AssetTypeEnum.AssetType;
+import com.google.ads.googleads.v7.enums.BudgetDeliveryMethodEnum.BudgetDeliveryMethod;
+import com.google.ads.googleads.v7.enums.CampaignStatusEnum.CampaignStatus;
+import com.google.ads.googleads.v7.enums.LocationSourceTypeEnum.LocationSourceType;
+import com.google.ads.googleads.v7.enums.OptimizationGoalTypeEnum.OptimizationGoalType;
+import com.google.ads.googleads.v7.errors.GoogleAdsError;
+import com.google.ads.googleads.v7.errors.GoogleAdsException;
+import com.google.ads.googleads.v7.resources.Ad;
+import com.google.ads.googleads.v7.resources.AdGroup;
+import com.google.ads.googleads.v7.resources.AdGroupAd;
+import com.google.ads.googleads.v7.resources.Asset;
+import com.google.ads.googleads.v7.resources.Campaign;
+import com.google.ads.googleads.v7.resources.Campaign.LocalCampaignSetting;
+import com.google.ads.googleads.v7.resources.Campaign.OptimizationGoalSetting;
+import com.google.ads.googleads.v7.resources.CampaignBudget;
+import com.google.ads.googleads.v7.services.AdGroupAdOperation;
+import com.google.ads.googleads.v7.services.AdGroupAdServiceClient;
+import com.google.ads.googleads.v7.services.AdGroupOperation;
+import com.google.ads.googleads.v7.services.AdGroupServiceClient;
+import com.google.ads.googleads.v7.services.AssetOperation;
+import com.google.ads.googleads.v7.services.AssetServiceClient;
+import com.google.ads.googleads.v7.services.CampaignBudgetOperation;
+import com.google.ads.googleads.v7.services.CampaignBudgetServiceClient;
+import com.google.ads.googleads.v7.services.CampaignOperation;
+import com.google.ads.googleads.v7.services.CampaignServiceClient;
+import com.google.ads.googleads.v7.services.MutateAdGroupAdsResponse;
+import com.google.ads.googleads.v7.services.MutateAdGroupsResponse;
+import com.google.ads.googleads.v7.services.MutateAssetsResponse;
+import com.google.ads.googleads.v7.services.MutateCampaignBudgetsResponse;
+import com.google.ads.googleads.v7.services.MutateCampaignsResponse;
 import com.google.common.collect.ImmutableList;
 import com.google.common.io.ByteStreams;
 import com.google.protobuf.ByteString;
@@ -143,6 +143,7 @@ public class AddLocalCampaign {
   }
 
   /** Creates a campaign budget. */
+  // [START add_local_campaign]
   private String createCampaignBudget(GoogleAdsClient googleAdsClient, long customerId) {
     // Creates a CampaignBudget object.
     CampaignBudget budget =
@@ -172,8 +173,10 @@ public class AddLocalCampaign {
       return resourceName;
     }
   }
+  // [END add_local_campaign]
 
   /** Creates a local campaign. */
+  // [START add_local_campaign_1]
   private String createLocalCampaign(
       GoogleAdsClient googleAdsClient, long customerId, String budgetResourceName) {
     // Creates a Campaign object.
@@ -233,8 +236,10 @@ public class AddLocalCampaign {
       return resourceName;
     }
   }
+  // [END add_local_campaign_1]
 
   /** Creates a local campaign ad-group. */
+  // [START add_local_campaign_2]
   private String createAdGroup(
       GoogleAdsClient googleAdsClient, long customerId, String campaignResourceName) {
     // Creates an ad group. Note that the ad group type must not be set.
@@ -264,8 +269,10 @@ public class AddLocalCampaign {
       return resourceName;
     }
   }
+  // [END add_local_campaign_2]
 
   /** Creates a local ad. */
+  // [START add_local_campaign_3]
   private void createLocalAd(
       GoogleAdsClient googleAdsClient, long customerId, String adGroupResourceName)
       throws IOException {
@@ -322,6 +329,7 @@ public class AddLocalCampaign {
       System.out.printf("Created ad group ad with resource name: '%s'.%n", resourceName);
     }
   }
+  // [END add_local_campaign_3]
 
   // --------------------------------- Utility functions -------------------------------------------
 
@@ -331,6 +339,7 @@ public class AddLocalCampaign {
   }
 
   /** Creates an {@link AdImageAsset}. */
+  // [START add_local_campaign_4]
   private static AdImageAsset createImageAsset(
       GoogleAdsClient googleAdsClient, long customerId, String imageUrl, String imageName)
       throws IOException {
@@ -359,8 +368,10 @@ public class AddLocalCampaign {
       return AdImageAsset.newBuilder().setAsset(imageResourceName).build();
     }
   }
+  // [END add_local_campaign_4]
 
   /** Creates a {@link AdVideoAsset}. */
+  // [START add_local_campaign_5]
   private AdVideoAsset createYoutubeVideoAsset(
       GoogleAdsClient googleAdsClient, long customerId, String youtubeVideoId, String videoName) {
     // Creates an Asset object.
@@ -390,4 +401,5 @@ public class AddLocalCampaign {
       return AdVideoAsset.newBuilder().setAsset(resourceName).build();
     }
   }
+  // [END add_local_campaign_5]
 }

@@ -18,17 +18,17 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.v6.common.HotelCheckInDayInfo;
-import com.google.ads.googleads.v6.common.HotelLengthOfStayInfo;
-import com.google.ads.googleads.v6.enums.DayOfWeekEnum.DayOfWeek;
-import com.google.ads.googleads.v6.errors.GoogleAdsError;
-import com.google.ads.googleads.v6.errors.GoogleAdsException;
-import com.google.ads.googleads.v6.resources.AdGroupBidModifier;
-import com.google.ads.googleads.v6.services.AdGroupBidModifierOperation;
-import com.google.ads.googleads.v6.services.AdGroupBidModifierServiceClient;
-import com.google.ads.googleads.v6.services.MutateAdGroupBidModifierResult;
-import com.google.ads.googleads.v6.services.MutateAdGroupBidModifiersResponse;
-import com.google.ads.googleads.v6.utils.ResourceNames;
+import com.google.ads.googleads.v7.common.HotelCheckInDayInfo;
+import com.google.ads.googleads.v7.common.HotelLengthOfStayInfo;
+import com.google.ads.googleads.v7.enums.DayOfWeekEnum.DayOfWeek;
+import com.google.ads.googleads.v7.errors.GoogleAdsError;
+import com.google.ads.googleads.v7.errors.GoogleAdsException;
+import com.google.ads.googleads.v7.resources.AdGroupBidModifier;
+import com.google.ads.googleads.v7.services.AdGroupBidModifierOperation;
+import com.google.ads.googleads.v7.services.AdGroupBidModifierServiceClient;
+import com.google.ads.googleads.v7.services.MutateAdGroupBidModifierResult;
+import com.google.ads.googleads.v7.services.MutateAdGroupBidModifiersResponse;
+import com.google.ads.googleads.v7.utils.ResourceNames;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -101,6 +101,7 @@ public class AddHotelAdGroupBidModifiers {
    * @param adGroupId the ID of the ad group.
    * @throws GoogleAdsException if an API request failed with one or more service errors.
    */
+  // [START add_hotel_ad_group_bid_modifiers]
   private void runExample(GoogleAdsClient googleAdsClient, long customerId, long adGroupId) {
     List<AdGroupBidModifierOperation> operations = new ArrayList<>();
 
@@ -149,4 +150,5 @@ public class AddHotelAdGroupBidModifiers {
       }
     }
   }
+  // [END add_hotel_ad_group_bid_modifiers]
 }

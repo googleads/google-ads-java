@@ -48,7 +48,7 @@ tasks.withType(JavaCompile) {
 }
 
 dependencies {
-    implementation 'com.google.guava:guava:26.0-android'
+    implementation 'com.google.guava:guava:30.0-android'
     implementation 'com.google.auto.service:auto-service:1.0-rc2'
     implementation 'com.google.api:gax:1.63.0'
     implementation 'com.google.api:gax-grpc:1.63.0'
