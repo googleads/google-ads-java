@@ -28,7 +28,7 @@ This project hosts the Java client library for the Google Ads API.
 
 ## Gradle dependency
 
-implementation 'com.google.api-ads:google-ads:12.0.0'
+    implementation 'com.google.api-ads:google-ads:12.0.0'
     
 ## Documentation
 
