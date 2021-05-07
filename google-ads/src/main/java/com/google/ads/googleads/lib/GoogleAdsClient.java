@@ -552,9 +552,7 @@ public abstract class GoogleAdsClient extends AbstractGoogleAdsClient {
       Primer.getInstance().ifPresent(p -> p.primeCredentialsAsync(getCredentials()));
       // Proceeds with creating the client library instance.
       TransportChannelProvider transportChannelProvider = getTransportChannelProvider();
-      if (transportChannelProvider.needsHeaders()) {
-        transportChannelProvider = transportChannelProvider.withHeaders(getHeaders());
-      }
+      transportChannelProvider = transportChannelProvider.withHeaders(getHeaders());
       if (transportChannelProvider.needsEndpoint()) {
         transportChannelProvider = transportChannelProvider.withEndpoint(getEndpoint());
       }
