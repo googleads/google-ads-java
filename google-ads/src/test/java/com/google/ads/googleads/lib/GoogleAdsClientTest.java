@@ -195,7 +195,10 @@ public class GoogleAdsClientTest {
     assertGoogleAdsClient(client, null, true);
   }
 
-  /** Tests setting the login customer ID after the GoogleAdsClient is already built succeeds. */
+  /**
+   * Tests creating a new GoogleAdsClient with a new login customer ID after the GoogleAdsClient is
+   * already built succeeds.
+   */
   @Test
   public void testSetLoginCustomerIdAfterCreatingClient() throws IOException {
     // Create a properties file in the temporary folder.
@@ -210,7 +213,7 @@ public class GoogleAdsClientTest {
             .fromPropertiesFile(propertiesFile)
             .setTransportChannelProvider(localChannelProvider)
             .build();
-    // Set a custom loginCustomerId on the previously created GoogleAdsClient.
+    // Create a new GoogleAdsClient with a new loginCustomerId.
     long loginCustomerId = 987654321L;
     client = client.toBuilder().setLoginCustomerId(loginCustomerId).build();
     assertGoogleAdsClient(client, loginCustomerId, true);
