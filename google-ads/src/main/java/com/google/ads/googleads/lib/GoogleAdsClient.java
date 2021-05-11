@@ -77,28 +77,7 @@ public abstract class GoogleAdsClient extends AbstractGoogleAdsClient {
 
   /** Returns a new builder for {@link GoogleAdsClient} with only default values set. */
   public static Builder newBuilder() {
-    AutoValue_GoogleAdsClient.Builder clientBuilder = new AutoValue_GoogleAdsClient.Builder();
-    // Constructs the channel provider.
-    InstantiatingGrpcChannelProvider transportChannelProvider =
-        InstantiatingGrpcChannelProvider.newBuilder()
-            .setInterceptorProvider(
-                () ->
-                    ImmutableList.of(
-                        new LoggingInterceptor(
-                            new RequestLogger(),
-                            clientBuilder.getHeaders(),
-                            clientBuilder.getEndpoint())))
-            // Issue 131: inbound headers may exceed default (8kb) max header size.
-            // Sets max header size to 16MB, which should be more than necessary.
-            .setMaxInboundMetadataSize(16 * 1024 * 1024)
-            // Sets max response size to 64MB, since large responses will often exceed the default
-            // (4MB).
-            .setMaxInboundMessageSize(64 * 1024 * 1024)
-            .build();
-    clientBuilder
-        .setEndpoint(DEFAULT_ENDPOINT)
-        .setTransportChannelProvider(transportChannelProvider);
-    return clientBuilder;
+    return new AutoValue_GoogleAdsClient.Builder().setEndpoint(DEFAULT_ENDPOINT);
   }
 
   /**
@@ -551,8 +530,26 @@ public abstract class GoogleAdsClient extends AbstractGoogleAdsClient {
       // Provides the credentials to the primer to preemptively get these ready for usage.
       Primer.getInstance().ifPresent(p -> p.primeCredentialsAsync(getCredentials()));
       // Proceeds with creating the client library instance.
+      // Constructs the channel provider.
       TransportChannelProvider transportChannelProvider =
-          getTransportChannelProvider().withHeaders(getHeaders());
+          InstantiatingGrpcChannelProvider.newBuilder()
+              .setInterceptorProvider(
+                  () ->
+                      ImmutableList.of(
+                          new LoggingInterceptor(
+                              new RequestLogger(),
+                              getHeaders(),
+                              getEndpoint())))
+              // Issue 131: inbound headers may exceed default (8kb) max header size.
+              // Sets max header size to 16MB, which should be more than necessary.
+              .setMaxInboundMetadataSize(16 * 1024 * 1024)
+              // Sets max response size to 64MB, since large responses will often exceed the default
+              // (4MB).
+              .setMaxInboundMessageSize(64 * 1024 * 1024)
+              .build();
+
+      transportChannelProvider = transportChannelProvider.withHeaders(getHeaders());
+
       if (transportChannelProvider.needsEndpoint()) {
         transportChannelProvider = transportChannelProvider.withEndpoint(getEndpoint());
       }
