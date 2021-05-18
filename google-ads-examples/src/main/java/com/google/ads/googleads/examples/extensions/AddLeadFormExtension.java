@@ -120,6 +120,7 @@ public class AddLeadFormExtension {
    * @param customerId the customer ID for which to add the lead form asset.
    * @return the resource name of the newly created lead form asset.
    */
+  // [START add_lead_form_extension]
   private static String createLeadFormAsset(GoogleAdsClient googleAdsClient, long customerId) {
     // Creates the lead form asset.
     Asset leadFormAsset =
@@ -205,6 +206,7 @@ public class AddLeadFormExtension {
       return resourceName;
     }
   }
+  // [END add_lead_form_extension]
 
   /**
    * Creates the lead form extension.
@@ -214,6 +216,7 @@ public class AddLeadFormExtension {
    * @param campaignId the campaign ID for which to add the lead form extension.
    * @param leadFormAssetResourceName the resource name of the lead form asset to be added.
    */
+  // [START add_lead_form_extension_1]
   private static void createLeadFormExtension(
       GoogleAdsClient googleAdsClient,
       long customerId,
@@ -241,4 +244,5 @@ public class AddLeadFormExtension {
           response.getResultsList().get(0).getResourceName(), campaignId);
     }
   }
+  // [END add_lead_form_extension_1]
 }
