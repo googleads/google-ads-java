@@ -536,10 +536,7 @@ public abstract class GoogleAdsClient extends AbstractGoogleAdsClient {
               .setInterceptorProvider(
                   () ->
                       ImmutableList.of(
-                          new LoggingInterceptor(
-                              new RequestLogger(),
-                              getHeaders(),
-                              getEndpoint())))
+                          new LoggingInterceptor(new RequestLogger(), getHeaders(), getEndpoint())))
               // Issue 131: inbound headers may exceed default (8kb) max header size.
               // Sets max header size to 16MB, which should be more than necessary.
               .setMaxInboundMetadataSize(16 * 1024 * 1024)

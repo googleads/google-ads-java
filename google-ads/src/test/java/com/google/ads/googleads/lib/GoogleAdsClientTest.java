@@ -37,12 +37,15 @@ import com.google.ads.googleads.v7.services.MockGoogleAdsService;
 import com.google.ads.googleads.v7.services.SearchGoogleAdsResponse;
 import com.google.ads.googleads.v7.services.SearchGoogleAdsStreamRequest;
 import com.google.ads.googleads.v7.services.SearchGoogleAdsStreamResponse;
+import com.google.api.gax.grpc.ChannelPrimer;
 import com.google.api.gax.grpc.GaxGrpcProperties;
 import com.google.api.gax.grpc.GrpcStatusCode;
+import com.google.api.gax.grpc.InstantiatingGrpcChannelProvider;
 import com.google.api.gax.grpc.testing.LocalChannelProvider;
 import com.google.api.gax.grpc.testing.MockServiceHelper;
 import com.google.api.gax.rpc.ApiClientHeaderProvider;
 import com.google.api.gax.rpc.ApiException;
+import com.google.api.gax.rpc.TransportChannelProvider;
 import com.google.auth.Credentials;
 import com.google.auth.oauth2.ServiceAccountCredentials;
 import com.google.auth.oauth2.UserCredentials;
@@ -58,6 +61,7 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
 import java.nio.charset.StandardCharsets;
 import java.util.Collections;
@@ -218,6 +222,46 @@ public class GoogleAdsClientTest {
     client = client.toBuilder().setLoginCustomerId(loginCustomerId).build();
     assertGoogleAdsClient(client, loginCustomerId, true);
     assertEquals(client.getLoginCustomerId().longValue(), loginCustomerId);
+  }
+
+  /**
+   * Tests creating a new GoogleAdsClient with a new login customer ID after the GoogleAdsClient
+   * does not override a transport channel created with setTransportChannelProvider.
+   */
+  @Test
+  public void testSetLoginCustomerDoesNotOverrideTransporChannelProvider() throws IOException {
+    // Create a properties file in the temporary folder.
+    File propertiesFile = folder.newFile("ads.properties");
+    try (FileWriter propertiesFileWriter = new FileWriter(propertiesFile)) {
+      testProperties.store(propertiesFileWriter, null);
+    }
+
+    // Build a new client from the file.
+    GoogleAdsClient client1 =
+        GoogleAdsClient.newBuilder()
+            .fromPropertiesFile(propertiesFile)
+            .setTransportChannelProvider(localChannelProvider)
+            .build();
+    // Create a new GoogleAdsClient with a new loginCustomerId.
+    // long loginCustomerId = 987654321L;
+    // client1 = client1.toBuilder().setLoginCustomerId(loginCustomerId).build();
+    // assertGoogleAdsClient(client1, loginCustomerId, true);
+
+    GoogleAdsClient client2 =
+        GoogleAdsClient.newBuilder()
+            .fromPropertiesFile(propertiesFile)
+            .setTransportChannelProvider(localChannelProvider)
+            .build();
+
+    TransportChannelProvider expected = client1.getTransportChannelProvider();
+    Field[] fields = expected.getClass().getDeclaredFields();
+      // for (Field field: fields) {
+      //   Object value = expected.get(field);
+      // }
+
+    Object actual = client2.getTransportChannelProvider().toString();
+    // assertTrue(client1.equals(client2));
+    assertTrue(expected.equals(actual));
   }
 
   /**
