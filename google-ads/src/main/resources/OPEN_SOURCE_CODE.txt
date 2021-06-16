@@ -1,0 +1,13 @@
+Google Ads API - Client Library for Java
+----------------------------------------
+
+Per licensing obligations for redistributing open source code (e.g. shadow jar)
+
+Source code for open source dependencies can be downloaded from:
+  https://github.com/googleads/google-ads-java/tree/<VERSION>/third_party
+
+For example:
+  https://github.com/googleads/google-ads-java/tree/master/third_party
+
+If you have any questions, please reach out to us on the bug tracker:
+  https://github.com/googleads/google-ads-java/issues

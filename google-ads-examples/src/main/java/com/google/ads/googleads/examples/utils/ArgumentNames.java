@@ -32,6 +32,8 @@ public final class ArgumentNames {
   public static final String BILLING_SETUP_ID = "--billingSetupId";
   public static final String BRIDGE_MAP_VERSION_ID = "--bridgeMapVersionId";
   public static final String BUSINESS_ACCOUNT_IDENTIFIER = "--businessAccountIdentifier";
+  public static final String BUSINESS_NAME = "--businessName";
+  public static final String BUSINESS_LOCATION_ID = "--businessLocationId";
   public static final String CALLER_ID = "--callerId";
   public static final String CALLOUT_TEXT = "--calloutText";
   public static final String CALL_START_DATE_TIME = "--callStartDateTime";
@@ -45,6 +47,7 @@ public final class ArgumentNames {
   public static final String CONVERSION_ACTION_IDS = "--conversionActionIds";
   public static final String CONVERSION_DATE_TIME = "--conversionDateTime";
   public static final String CONVERSION_VALUE = "--conversionValue";
+  public static final String COUNTRY_CODE = "--countryCode";
   public static final String CPC_BID_CEILING_MICRO_AMOUNT = "--cpcBidCeilingMicroAmount";
   public static final String CPC_BID_MICRO_AMOUNT = "--cpcBidMicroAmount";
   public static final String CREATE_DEFAULT_LISTING_GROUP = "--createDefaultListingGroup";
@@ -66,6 +69,7 @@ public final class ArgumentNames {
   public static final String GMB_EMAIL_ADDRESS = "--gmbEmailAddress";
   public static final String HOTEL_CENTER_ACCOUNT_ID = "--hotelCenterAccountId";
   public static final String IMAGE_ASSET_ID = "--imageAssetId";
+  public static final String ITEM_ID = "--itemId";
   public static final String KEYWORD_PLAN_ID = "--keywordPlanId";
   public static final String KEYWORD_TEXT = "--keywordText";
   public static final String KEYWORD_TEXTS = "--keywordTexts";
@@ -86,6 +90,7 @@ public final class ArgumentNames {
   public static final String PAYMENTS_ACCOUNT_ID_ID = "--paymentsAccountId";
   public static final String PAYMENTS_PROFILE_ID = "--paymentsProfileId";
   public static final String PERCENT_CPC_BID_MICRO_AMOUNT = "--percentCpcBidMicroAmount";
+  public static final String QUANTITY = "--quantity";
   public static final String RECOMMENDATION_ID = "--recommendationId";
   public static final String REPLACE_EXISTING_TREE = "--replaceExistingTree";
   public static final String RESTATEMENT_VALUE = "--restatementValue";

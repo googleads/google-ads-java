@@ -18,25 +18,25 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.v7.common.OfflineUserAddressInfo;
-import com.google.ads.googleads.v7.common.StoreSalesMetadata;
-import com.google.ads.googleads.v7.common.StoreSalesThirdPartyMetadata;
-import com.google.ads.googleads.v7.common.TransactionAttribute;
-import com.google.ads.googleads.v7.common.UserData;
-import com.google.ads.googleads.v7.common.UserIdentifier;
-import com.google.ads.googleads.v7.enums.OfflineUserDataJobStatusEnum.OfflineUserDataJobStatus;
-import com.google.ads.googleads.v7.enums.OfflineUserDataJobTypeEnum.OfflineUserDataJobType;
-import com.google.ads.googleads.v7.errors.GoogleAdsError;
-import com.google.ads.googleads.v7.errors.GoogleAdsException;
-import com.google.ads.googleads.v7.resources.OfflineUserDataJob;
-import com.google.ads.googleads.v7.services.AddOfflineUserDataJobOperationsRequest;
-import com.google.ads.googleads.v7.services.AddOfflineUserDataJobOperationsResponse;
-import com.google.ads.googleads.v7.services.CreateOfflineUserDataJobResponse;
-import com.google.ads.googleads.v7.services.GoogleAdsRow;
-import com.google.ads.googleads.v7.services.GoogleAdsServiceClient;
-import com.google.ads.googleads.v7.services.OfflineUserDataJobOperation;
-import com.google.ads.googleads.v7.services.OfflineUserDataJobServiceClient;
-import com.google.ads.googleads.v7.utils.ResourceNames;
+import com.google.ads.googleads.v8.common.OfflineUserAddressInfo;
+import com.google.ads.googleads.v8.common.StoreSalesMetadata;
+import com.google.ads.googleads.v8.common.StoreSalesThirdPartyMetadata;
+import com.google.ads.googleads.v8.common.TransactionAttribute;
+import com.google.ads.googleads.v8.common.UserData;
+import com.google.ads.googleads.v8.common.UserIdentifier;
+import com.google.ads.googleads.v8.enums.OfflineUserDataJobStatusEnum.OfflineUserDataJobStatus;
+import com.google.ads.googleads.v8.enums.OfflineUserDataJobTypeEnum.OfflineUserDataJobType;
+import com.google.ads.googleads.v8.errors.GoogleAdsError;
+import com.google.ads.googleads.v8.errors.GoogleAdsException;
+import com.google.ads.googleads.v8.resources.OfflineUserDataJob;
+import com.google.ads.googleads.v8.services.AddOfflineUserDataJobOperationsRequest;
+import com.google.ads.googleads.v8.services.AddOfflineUserDataJobOperationsResponse;
+import com.google.ads.googleads.v8.services.CreateOfflineUserDataJobResponse;
+import com.google.ads.googleads.v8.services.GoogleAdsRow;
+import com.google.ads.googleads.v8.services.GoogleAdsServiceClient;
+import com.google.ads.googleads.v8.services.OfflineUserDataJobOperation;
+import com.google.ads.googleads.v8.services.OfflineUserDataJobServiceClient;
+import com.google.ads.googleads.v8.utils.ResourceNames;
 import com.google.common.collect.ImmutableList;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -107,7 +107,49 @@ public class UploadStoreSalesTransactions {
         names = ArgumentNames.PARTNER_ID,
         description = "Only required if uploading third party data")
     private Long partnerId;
+
+    @Parameter(
+        names = ArgumentNames.ITEM_ID,
+        description =
+            "Specify a unique identifier of a product, either the Merchant Center Item ID or"
+                + " Global Trade Item Number (GTIN). Only required if uploading with item"
+                + " attributes.")
+    private String itemId;
+
+    @Parameter(
+        names = ArgumentNames.MERCHANT_CENTER_ACCOUNT_ID,
+        description =
+            "A Merchant Center Account ID. Only required if uploading with item attributes.")
+    private Long merchantCenterAccountId;
+
+    @Parameter(
+        names = ArgumentNames.COUNTRY_CODE,
+        description =
+            "A two-letter country code of the location associated with the feed where your items"
+                + " are uploaded. Only required if uploading with item attributes. For a list of"
+                + " country codes see the country codes here:"
+                + " https://developers.google.com/google-ads/api/reference/data/codes-formats#country-codes")
+    private String countryCode;
+
+    @Parameter(
+        names = ArgumentNames.LANGUAGE_CODE,
+        description =
+            "A two-letter language code of the language associated with the feed where your items"
+                + " are uploaded. Only required if uploading with item attributes. For a list of"
+                + " language codes see:"
+                + " https://developers.google.com/google-ads/api/reference/data/codes-formats#languages")
+    private String languageCode;
+
+    @Parameter(
+        names = ArgumentNames.QUANTITY,
+        description =
+            "The number of items sold. Can only be set when at least one other item attribute has"
+                + " been provided. Only required if uploading with item attributes.")
+    private int quantity;
   }
+
+  /** Specifies the value to use if uploading data with custom key and values. */
+  private static final String CUSTOM_VALUE = null;
 
   public static void main(String[] args)
       throws InterruptedException, ExecutionException, TimeoutException,
@@ -123,12 +165,37 @@ public class UploadStoreSalesTransactions {
       params.conversionActionId = Long.parseLong("INSERT_CONVERSION_ACTION_ID_HERE");
       // OPTIONAL (but recommended): Specify an external ID for the job.
       // params.externalId = Long.parseLong("INSERT_EXTERNAL_ID_HERE");
+
       // OPTIONAL: If uploading data with custom key and values, also specify the following value:
       // params.customKey = "INSERT_CUSTOM_KEY_HERE";
+
       // OPTIONAL: If uploading third party data, also specify the following values:
       // params.advertiserUploadDateTime = "INSERT_ADVERTISER_UPLOAD_DATE_TIME_HERE";
       // params.bridgeMapVersionId = "INSERT_BRIDGE_MAP_VERSION_ID_HERE";
       // params.partnerId = Long.parseLong("INSERT_PARTNER_ID_HERE");
+
+      // OPTIONAL: Specify a unique identifier of a product, either the Merchant Center
+      // Item ID or Global Trade Item Number (GTIN). Only required if uploading with
+      // item attributes.
+      // params.itemId = Long.parseLong("INSERT_ITEM_ID_HERE");
+
+      // OPTIONAL: Specify a Merchant Center Account ID. Only required if uploading
+      // with item attributes.
+      // params.merchantCenterAccountId = Long.parseLong("INSERT_MERCHANT_CENTER_ID_HERE");
+
+      // OPTIONAL: Specify a two-letter country code of the location associated with the
+      // feed where your items are uploaded. Only required if uploading with item
+      // attributes.
+      // params.countryCode = "INSERT_COUNTRY_CODE_HERE";
+
+      // OPTIONAL: Specify a two-letter language code of the language associated with
+      // the feed where your items are uploaded. Only required if uploading with item
+      // attributes.
+      // params.languageCode = "INSERT_LANGUAGE_CODE_HERE";
+
+      // OPTIONAL: Specify a number of items sold. Only required if uploading with item
+      // attributes.
+      // params.quantity = 1;
     }
 
     GoogleAdsClient googleAdsClient = null;
@@ -154,7 +221,12 @@ public class UploadStoreSalesTransactions {
               params.customKey,
               params.advertiserUploadDateTime,
               params.bridgeMapVersionId,
-              params.partnerId);
+              params.partnerId,
+              params.itemId,
+              params.merchantCenterAccountId,
+              params.countryCode,
+              params.languageCode,
+              params.quantity);
     } catch (GoogleAdsException gae) {
       // GoogleAdsException is the base class for most exceptions thrown by an API request.
       // Instances of this exception have a message and a GoogleAdsFailure that contains a
@@ -188,6 +260,11 @@ public class UploadStoreSalesTransactions {
    * @param bridgeMapVersionId version of partner IDs to be used for uploads. Only required for
    *     third party uploads.
    * @param partnerId ID of the third party partner. Only required for third party uploads.
+   * @param itemId the ID of the item in merchant center (optional).
+   * @param merchantCenterAccountId the ID of the merchant center account (optional).
+   * @param countryCode the country code of the item for sale in merchant center.
+   * @param languageCode the language of the item for sale in merchant center.
+   * @param quantity the number of items that we sold.
    * @throws GoogleAdsException if an API request failed with one or more service errors.
    */
   private void runExample(
@@ -199,7 +276,12 @@ public class UploadStoreSalesTransactions {
       String customKey,
       String advertiserUploadDateTime,
       String bridgeMapVersionId,
-      Long partnerId)
+      Long partnerId,
+      String itemId,
+      Long merchantCenterAccountId,
+      String countryCode,
+      String languageCode,
+      int quantity)
       throws InterruptedException, ExecutionException, TimeoutException,
           UnsupportedEncodingException {
     String offlineUserDataJobResourceName;
@@ -222,7 +304,13 @@ public class UploadStoreSalesTransactions {
           offlineUserDataJobServiceClient,
           customerId,
           offlineUserDataJobResourceName,
-          conversionActionId);
+          conversionActionId,
+          customKey,
+          itemId,
+          merchantCenterAccountId,
+          countryCode,
+          languageCode,
+          quantity);
 
       // Issues an asynchronous request to run the offline user data job.
       offlineUserDataJobServiceClient.runOfflineUserDataJobAsync(offlineUserDataJobResourceName);
@@ -342,12 +430,26 @@ public class UploadStoreSalesTransactions {
       OfflineUserDataJobServiceClient offlineUserDataJobServiceClient,
       long customerId,
       String offlineUserDataJobResourceName,
-      long conversionActionId)
+      long conversionActionId,
+      String customKey,
+      String itemId,
+      Long merchantId,
+      String countryCode,
+      String languageCode,
+      Integer quantity)
       throws InterruptedException, ExecutionException, TimeoutException,
           UnsupportedEncodingException {
     // Constructs the operation for each transaction.
     List<OfflineUserDataJobOperation> userDataJobOperations =
-        buildOfflineUserDataJobOperations(customerId, conversionActionId);
+        buildOfflineUserDataJobOperations(
+            customerId,
+            conversionActionId,
+            customKey,
+            itemId,
+            merchantId,
+            countryCode,
+            languageCode,
+            quantity);
 
     // Issues a request to add the operations to the offline user data job.
     AddOfflineUserDataJobOperationsResponse response =
@@ -382,7 +484,15 @@ public class UploadStoreSalesTransactions {
    * @return a list of operations.
    */
   private List<OfflineUserDataJobOperation> buildOfflineUserDataJobOperations(
-      long customerId, long conversionActionId) throws UnsupportedEncodingException {
+      long customerId,
+      long conversionActionId,
+      String customKey,
+      String itemId,
+      Long merchantId,
+      String countryCode,
+      String languageCode,
+      Integer quantity)
+      throws UnsupportedEncodingException {
     MessageDigest sha256Digest;
     try {
       // Gets a digest for generating hashed values using SHA-256. You must normalize and hash the
@@ -394,7 +504,7 @@ public class UploadStoreSalesTransactions {
     }
 
     // Create the first transaction for upload based on an email address and state.
-    UserData userDataWithEmailAddress =
+    UserData.Builder userDataWithEmailAddress =
         UserData.newBuilder()
             .addAllUserIdentifiers(
                 ImmutableList.of(
@@ -418,15 +528,15 @@ public class UploadStoreSalesTransactions {
                     // timezone offset from UTC. If the offset is absent, the API will
                     // use the account's timezone as default. Examples: "2018-03-05 09:15:00"
                     // or "2018-02-01 14:34:30+03:00".
-                    .setTransactionDateTime("2020-05-01 23:52:12")
-                // OPTIONAL: If uploading data with custom key and values, also specify the
-                // following value:
-                // .setCustomValue("INSERT_CUSTOM_VALUE_HERE")
-                )
-            .build();
+                    .setTransactionDateTime("2020-05-01 23:52:12"));
+
+    // Optional: If uploading data with custom key and values, also assign the custom value.
+    if (customKey != null) {
+      userDataWithEmailAddress.getTransactionAttributeBuilder().setCustomValue(CUSTOM_VALUE);
+    }
 
     // Creates the second transaction for upload based on a physical address.
-    UserData userDataWithPhysicalAddress =
+    UserData.Builder userDataWithPhysicalAddress =
         UserData.newBuilder()
             .addUserIdentifiers(
                 UserIdentifier.newBuilder()
@@ -446,16 +556,23 @@ public class UploadStoreSalesTransactions {
                     // Specifies the date and time of the transaction. This date and time will be
                     // interpreted by the API using the Google Ads customer's time zone.
                     // The date/time must be in the format "yyyy-MM-dd hh:mm:ss".
-                    .setTransactionDateTime("2020-05-14 19:07:02")
-                // OPTIONAL: If uploading data with custom key and values, also specify the
-                // following value:
-                // .setCustomValue("INSERT_CUSTOM_VALUE_HERE")
-                )
-            .build();
+                    .setTransactionDateTime("2020-05-14 19:07:02"));
+
+    if (itemId != null) {
+      userDataWithPhysicalAddress
+          .getTransactionAttributeBuilder()
+          .getItemAttributeBuilder()
+          .setItemId(itemId)
+          .setMerchantId(merchantId)
+          .setCountryCode(countryCode)
+          .setLanguageCode(languageCode)
+          .setQuantity(quantity);
+    }
 
     // Creates the operations to add the two transactions.
     List<OfflineUserDataJobOperation> operations = new ArrayList<>();
-    for (UserData userData : Arrays.asList(userDataWithEmailAddress, userDataWithPhysicalAddress)) {
+    for (UserData userData :
+        Arrays.asList(userDataWithEmailAddress.build(), userDataWithPhysicalAddress.build())) {
       operations.add(OfflineUserDataJobOperation.newBuilder().setCreate(userData).build());
     }
 

@@ -15,7 +15,7 @@
 package com.google.ads.googleads.examples.library;
 
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.v7.services.GoogleAdsServiceClient;
+import com.google.ads.googleads.v8.services.GoogleAdsServiceClient;
 import com.google.auth.oauth2.UserCredentials;
 
 /**
