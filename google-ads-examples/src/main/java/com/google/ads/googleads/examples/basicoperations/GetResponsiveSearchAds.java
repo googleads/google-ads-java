@@ -42,7 +42,7 @@ public class GetResponsiveSearchAds {
 
   private static final int PAGE_SIZE = 1_000;
 
-  private static class GetAdGroupsParams extends CodeSampleParams {
+  private static class GetResponsiveSearchAdsParams extends CodeSampleParams {
 
     @Parameter(names = ArgumentNames.CUSTOMER_ID, required = true)
     private Long customerId;
@@ -52,7 +52,7 @@ public class GetResponsiveSearchAds {
   }
 
   public static void main(String[] args) {
-    GetAdGroupsParams params = new GetAdGroupsParams();
+    GetResponsiveSearchAdsParams params = new GetResponsiveSearchAdsParams();
     if (!params.parseArguments(args)) {
 
       // Either pass the required parameters for this example on the command line, or insert them
