@@ -1,3 +1,9 @@
+13.0.0 - 2021-06-17
+-------------------
+- Added support and examples for Google Ads API v8.0.
+- Added functionality to generate shadow jar and third party license tracking
+  in gradle build.
+
 12.0.0 - 2021-05-04
 -------------------
 - Added support and examples for Google Ads API v7.0.
