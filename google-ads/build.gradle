@@ -181,9 +181,9 @@ task copyLicenses(type: Copy) {
     // with legal obligations.
     if (tasks.generateLicenses.licenseFiles.size() != inputs.sourceFiles.size()) {
       throw new GradleException(
-              "Failed to locate files to copy from. Expected: "
-                      + tasks.generateLicenses.licenseFiles
-                      + " but was: " + inputs.sourceFiles.toList())
+          "Failed to locate files to copy from. Expected: "
+              + tasks.generateLicenses.licenseFiles
+              + " but was: " + inputs.sourceFiles.toList())
     }
   }
 }
@@ -320,6 +320,8 @@ def configurePom(publication, nameToSet, descriptionToSet) {
   }
 }
 
+final def sonatypeCredentialsConfig = file(System.properties['user.home'] + '/.sonatype-creds')
+
 publishing {
   publications {
     shadow(MavenPublication) { publication ->
@@ -338,17 +340,26 @@ publishing {
   repositories {
     maven {
       url 'https://oss.sonatype.org/service/local/staging/deploy/maven2'
+      name = "sonatype"
 
-      def credentialsConfig = file(System.properties['user.home'] + '/.sonatype-creds')
-      if (credentialsConfig.exists()) {
+      if (sonatypeCredentialsConfig.exists()) {
         def props = new Properties()
-        credentialsConfig.withInputStream { props.load(it) }
+        sonatypeCredentialsConfig.withInputStream { props.load(it) }
         credentials {
           username props['username']
           password props['password']
         }
-      } else {
-        logger.warn("Unable to load Sonatype credentials from ~/.sonatype-creds. Publishing will fail.")
+      }
+    }
+  }
+}
+
+// Provide a helpful error message for missing sonatype credentials.
+tasks.findAll {
+  if (it.name.matches("publish.+ToSonatypeRepository")) {
+    it.doLast {
+      if (!sonatypeCredentialsConfig.exists()) {
+        throw new GradleException("Unable to load Sonatype credentials from ${sonatypeCredentialsConfig}.")
       }
     }
   }
