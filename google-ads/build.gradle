@@ -357,7 +357,7 @@ publishing {
 // Provide a helpful error message for missing sonatype credentials.
 tasks.findAll {
   if (it.name.matches("publish.+ToSonatypeRepository")) {
-    it.doLast {
+    it.doFirst {
       if (!sonatypeCredentialsConfig.exists()) {
         throw new GradleException("Unable to load Sonatype credentials from ${sonatypeCredentialsConfig}.")
       }
