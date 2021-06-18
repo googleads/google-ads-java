@@ -442,6 +442,7 @@ public class AddSmartCampaign {
   }
   // [END add_smart_campaign_6]
 
+  // [START add_smart_campaign_8]
   /**
    * Creates {@link com.google.ads.googleads.v8.resources.CampaignCriterion} operations for add each
    * {@link KeywordThemeInfo}.
@@ -462,7 +463,9 @@ public class AddSmartCampaign {
             })
         .collect(Collectors.toList());
   }
+  // [END add_smart_campaign_8]
 
+  // [START add_smart_campaign_7]
   /**
    * Sends a mutate request with a group of mutate operations.
    *
@@ -496,6 +499,7 @@ public class AddSmartCampaign {
       }
     }
   }
+  // [END add_smart_campaign_7]
 
   /**
    * Provides a helper method to convert {@link KeywordThemeConstant} to {@link KeywordThemeInfo}.
