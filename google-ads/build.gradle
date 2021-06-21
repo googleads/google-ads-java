@@ -88,8 +88,24 @@ task generateThirdPartyDirectory() {
   description = "Generates the third_party directory (containing dependencies" +
       " + licenses)"
 
+  ext {
+    thirdPartyDir = file '../third_party'
+  }
+  dependsOn 'createThirdPartyDirectory'
   dependsOn 'copyThirdPartyArtifacts'
   dependsOn 'copyLicenses'
+}
+
+task createThirdPartyDirectory() {
+  doLast {
+    def thirdPartyDir = tasks.generateThirdPartyDirectory.thirdPartyDir
+    if (thirdPartyDir.exists() && !thirdPartyDir.deleteDir()) {
+      throw new GradleException('third_party exists but failed to delete')
+    }
+    if (!thirdPartyDir.mkdir()) {
+      throw new GradleException("Failed to create third_party directory")
+    }
+  }
 }
 
 task generateLicenses(type: nl.javadude.gradle.plugins.license.DownloadLicenses) {
@@ -163,9 +179,10 @@ Googlers, there is a company policy for this available internally.""")
 task copyLicenses(type: Copy) {
   description = "Copies licenses from build directory to third_party"
   dependsOn 'generateLicenses'
+  mustRunAfter 'createThirdPartyDirectory'
 
   from tasks.generateLicenses.licenseFiles
-  into '../third_party'
+  into tasks.generateThirdPartyDirectory.thirdPartyDir
   // Rename files to LICENSES.*
   eachFile {
     if (!path.contains("dependency-license")) {
@@ -180,27 +197,21 @@ task copyLicenses(type: Copy) {
     // with legal obligations.
     if (tasks.generateLicenses.licenseFiles.size() != inputs.sourceFiles.size()) {
       throw new GradleException(
-              "Failed to locate files to copy from. Expected: "
-                      + tasks.generateLicenses.licenseFiles
-                      + " but was: " + inputs.sourceFiles.toList())
+          "Failed to locate files to copy from. Expected: "
+              + tasks.generateLicenses.licenseFiles
+              + " but was: " + inputs.sourceFiles.toList())
     }
   }
 }
 
 task copyThirdPartyArtifacts(type: Copy) {
   description = "Copies the sources and binaries of dependencies to third_party"
+  mustRunAfter 'createThirdPartyDirectory'
 
   // Requires that this task is always run since it's hard to detect when the
   // dependencies have changed.
   outputs.upToDateWhen { false }
 
-  def thirdPartyDir = file '../third_party'
-  if (thirdPartyDir.exists() && !thirdPartyDir.deleteDir()) {
-    throw new GradleException('third_party exists but failed to delete')
-  }
-  if (!thirdPartyDir.mkdir()) {
-    throw new GradleException("Failed to create third_party directory")
-  }
   def dependencies = configurations.runtimeClasspath
       .resolvedConfiguration
       .resolvedArtifacts
@@ -224,7 +235,7 @@ task copyThirdPartyArtifacts(type: Copy) {
         "dependencies, ${files.size()} < ${dependencies.size()}")
   }
   from files
-  into thirdPartyDir
+  into tasks.generateThirdPartyDirectory.thirdPartyDir
   doLast {
     logger.info('Resolved third party dependencies')
     files.each {
