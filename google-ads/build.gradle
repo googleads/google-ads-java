@@ -305,14 +305,14 @@ def configurePom(publication, nameToSet, descriptionToSet) {
       developer {
         id = 'nick'
         name = 'Nick Birnie'
-        email = 'jradcliff@users.noreply.github.com'
+        email = 'nbirnie@users.noreply.github.com'
         organization = 'Google'
         organizationUrl = 'https://www.google.com'
       }
       developer {
         id = 'devin'
         name = 'Devin Chasanoff'
-        email = 'jradcliff@users.noreply.github.com'
+        email = 'dchasanoff@users.noreply.github.com'
         organization = 'Google'
         organizationUrl = 'https://www.google.com'
       }
