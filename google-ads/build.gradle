@@ -22,6 +22,7 @@ import com.google.common.collect.Sets
 
 plugins {
   id 'com.google.api-ads.java-conventions'
+  id 'maven-publish'
   id 'com.google.protobuf' version '0.8.15'
   id "com.github.hierynomus.license-report" version "0.15.0"
   id 'com.github.johnrengelman.shadow' version '6.1.0'
@@ -249,7 +250,8 @@ task copyThirdPartyArtifacts(type: Copy) {
 shadowJar {
   description = "Generates a jar with dependencies"
 
-  archiveClassifier.set "jar-with-dependencies"
+  // Removes the default -all classifier.
+  archiveClassifier = ''
 
   // Requires that this task is always run and does not build from the cache.
   outputs.upToDateWhen { false }
@@ -283,6 +285,93 @@ task testShadowJar {
           // the artifact we're trying to ignore).
           files(sourceSets.functionalTest.output.classesDirs.files,
               shadowJar.outputs.files)
+    }
+  }
+}
+
+def configurePom(publication, nameToSet, descriptionToSet) {
+  publication.pom {
+    name = nameToSet
+    description = descriptionToSet
+    url = 'https://github.com/googleads/google-ads-java'
+    licenses {
+      license {
+        name = 'The Apache License, Version 2.0'
+        url = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+      }
+    }
+    scm {
+      connection = 'scm:git:https://github.com/googleads/google-ads-java'
+      developerConnection = 'scm:git:https://github.com/googleads/google-ads-java'
+      url = 'https://github.com/googleads/google-ads-java'
+    }
+    developers {
+      developer {
+        id = 'josh'
+        name = 'Josh Radcliff'
+        email = 'jradcliff@users.noreply.github.com'
+        organization = 'Google'
+        organizationUrl = 'https://www.google.com'
+      }
+      developer {
+        id = 'nick'
+        name = 'Nick Birnie'
+        email = 'nwbirnie@users.noreply.github.com'
+        organization = 'Google'
+        organizationUrl = 'https://www.google.com'
+      }
+      developer {
+        id = 'devin'
+        name = 'Devin Chasanoff'
+        email = 'devchas@users.noreply.github.com'
+        organization = 'Google'
+        organizationUrl = 'https://www.google.com'
+      }
+    }
+  }
+}
+
+final def sonatypeCredentialsConfig = file(System.properties['user.home'] + '/.sonatype-creds')
+
+publishing {
+  publications {
+    shadow(MavenPublication) { publication ->
+      project.shadow.component(publication)
+
+      groupId = 'com.google.api-ads'
+      artifactId = 'google-ads-shadowjar'
+      version = '0.0.1-alpha'
+
+      configurePom(publication,
+          "Google Ads API client library for java - shadow jar",
+          "Provides a jar with all dependencies")
+    }
+  }
+
+  repositories {
+    maven {
+      url 'https://oss.sonatype.org/service/local/staging/deploy/maven2'
+      name = "sonatype"
+
+      if (sonatypeCredentialsConfig.exists()) {
+        def props = new Properties()
+        sonatypeCredentialsConfig.withInputStream { props.load(it) }
+        credentials {
+          username props['username']
+          password props['password']
+        }
+      }
+    }
+  }
+}
+
+// Provide a helpful error message for missing sonatype credentials.
+tasks.findAll {
+  if (it.name.matches("publish.+ToSonatypeRepository")) {
+    it.doFirst {
+      if (!sonatypeCredentialsConfig.exists()) {
+        throw new GradleException("Unable to load Sonatype credentials from ${sonatypeCredentialsConfig}.")
+      }
     }
   }
 }
