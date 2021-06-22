@@ -423,7 +423,7 @@ public abstract class GoogleAdsClient extends AbstractGoogleAdsClient {
     public abstract String getEndpoint();
 
     /**
-     * Optional: Overrides the default endpoint. For the default value see {@see #DEFAULT_ENDPOINT}
+     * Optional: Overrides the default endpoint. For the default value see {@link GoogleAdsClient#DEFAULT_ENDPOINT}.
      */
     public abstract Builder setEndpoint(String endpoint);
 

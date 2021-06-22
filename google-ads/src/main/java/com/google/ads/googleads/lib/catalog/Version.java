@@ -60,7 +60,9 @@ public final class Version implements Comparable<Version> {
     return versionName;
   }
 
-  /** Allows sorting of versions, higher version numbers have lower sorting rank, as in v1 < v0. */
+  /**
+   * Allows sorting of versions, higher version numbers have lower sorting rank, as in v1 &lt; v0.
+   */
   @Override
   public int compareTo(Version o) {
     return o.versionName.compareTo(versionName);
