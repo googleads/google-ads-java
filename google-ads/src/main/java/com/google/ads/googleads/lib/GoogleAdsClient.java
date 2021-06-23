@@ -550,13 +550,34 @@ public abstract class GoogleAdsClient extends AbstractGoogleAdsClient {
 
       // Provides the credentials to the primer to preemptively get these ready for usage.
       Primer.getInstance().ifPresent(p -> p.primeCredentialsAsync(getCredentials()));
-      // Proceeds with creating the client library instance.
-      TransportChannelProvider transportChannelProvider =
-          getTransportChannelProvider().withHeaders(getHeaders());
-      if (transportChannelProvider.needsEndpoint()) {
-        transportChannelProvider = transportChannelProvider.withEndpoint(getEndpoint());
+      try {
+        InstantiatingGrpcChannelProvider transportChannelProvider =
+            (InstantiatingGrpcChannelProvider) getTransportChannelProvider();
+        transportChannelProvider =
+            transportChannelProvider.toBuilder()
+                .setInterceptorProvider(
+                    () ->
+                        ImmutableList.of(
+                            new LoggingInterceptor(
+                                new RequestLogger(), getHeaders(), getEndpoint())))
+                .build();
+        // Proceeds with creating the client library instance.
+        transportChannelProvider =
+            (InstantiatingGrpcChannelProvider) transportChannelProvider.withHeaders(getHeaders());
+        if (transportChannelProvider.needsEndpoint()) {
+          transportChannelProvider =
+              (InstantiatingGrpcChannelProvider)
+                  transportChannelProvider.withEndpoint(getEndpoint());
+        }
+        setTransportChannelProvider(transportChannelProvider);
+      } catch (Exception e) {
+        TransportChannelProvider transportChannelProvider =
+            getTransportChannelProvider().withHeaders(getHeaders());
+        if (transportChannelProvider.needsEndpoint()) {
+          transportChannelProvider = transportChannelProvider.withEndpoint(getEndpoint());
+        }
+        setTransportChannelProvider(transportChannelProvider);
       }
-      setTransportChannelProvider(transportChannelProvider);
 
       GoogleAdsAllVersions allVersionsClient =
           ApiCatalog.getDefault()
