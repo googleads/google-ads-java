@@ -550,7 +550,20 @@ public abstract class GoogleAdsClient extends AbstractGoogleAdsClient {
 
       // Provides the credentials to the primer to preemptively get these ready for usage.
       Primer.getInstance().ifPresent(p -> p.primeCredentialsAsync(getCredentials()));
-      try {
+      // Checks if the TransportChannelProvider is of type LocalChannelProvider in which case we
+      // cannot cast to InstantiatingGrpcChannelProvider.
+      if (getTransportChannelProvider()
+          .getClass()
+          .toString()
+          .equals("class com.google.api.gax.grpc.testing.LocalChannelProvider")) {
+        TransportChannelProvider transportChannelProviderTesting =
+            getTransportChannelProvider().withHeaders(getHeaders());
+        if (transportChannelProviderTesting.needsEndpoint()) {
+          transportChannelProviderTesting =
+              transportChannelProviderTesting.withEndpoint(getEndpoint());
+        }
+        setTransportChannelProvider(transportChannelProviderTesting);
+      } else {
         InstantiatingGrpcChannelProvider transportChannelProvider =
             (InstantiatingGrpcChannelProvider) getTransportChannelProvider();
         transportChannelProvider =
@@ -568,13 +581,6 @@ public abstract class GoogleAdsClient extends AbstractGoogleAdsClient {
           transportChannelProvider =
               (InstantiatingGrpcChannelProvider)
                   transportChannelProvider.withEndpoint(getEndpoint());
-        }
-        setTransportChannelProvider(transportChannelProvider);
-      } catch (Exception e) {
-        TransportChannelProvider transportChannelProvider =
-            getTransportChannelProvider().withHeaders(getHeaders());
-        if (transportChannelProvider.needsEndpoint()) {
-          transportChannelProvider = transportChannelProvider.withEndpoint(getEndpoint());
         }
         setTransportChannelProvider(transportChannelProvider);
       }
