@@ -16,6 +16,11 @@
  * These are shared settings common to all Google Ads Java library subprojects.
  */
 
+import org.gradle.api.DefaultTask
+import groovy.io.FileType
+import groovy.io.FileVisitResult
+import java.util.regex.Matcher
+
 plugins {
   id 'java-library'
   id 'maven-publish'
@@ -58,67 +63,165 @@ dependencies {
   testImplementation 'junit:junit:4.13.1'
 }
 
-public class ExampleRunnerTask extends JavaExec {
+class ExampleRunnerTask extends JavaExec {
 
-  @Input
-  public String basePackage = 'com.google.ads.googleads.examples.'
+  // The base package for all examples.
+  private String basePackage = 'com.google.ads.googleads.examples.'
 
+  // The package.ClassName and any arguments required to launch an example,
+  // e.g. "basicoperations.GetCampaigns --customerId 1234567890".
   @Optional
   @Input
   private String exampleArguments
 
-  public ExampleRunnerTask() {
+  ExampleRunnerTask() {
     group = 'Execution'
     description = 'Run a Google Ads API example.'
     errorOutput = System.err
   }
 
+  String getBasePackage() {
+    return this.basePackage
+  }
+
+  void setBasePackage(String basePackage) {
+    this.basePackage = basePackage
+  }
+
+  String getExampleArguments() {
+    return this.exampleArguments
+  }
+
   @Option(option = 'example', description = 'Sets the example to launch and' +
-      ' any arguments. Required for execution. E.g. ' +
-      '"basicoperations.GetCampaigns --customerId 1234567890"')
-  public void setExampleArguments(String exampleArguments) {
+    ' any arguments. Required for execution. E.g. ' +
+    '"basicoperations.GetCampaigns --customerId 1234567890"')
+  void setExampleArguments(String exampleArguments) {
     this.exampleArguments = exampleArguments.trim()
     int firstSpaceIndex = this.exampleArguments.indexOf(' ')
 
     // No additional arguments were passed, just the example name.
     if (firstSpaceIndex == -1) {
-      main = basePackage + this.exampleArguments
+      main = this.basePackage + this.exampleArguments
     }
     // Otherwise, separate the input and set the arguments to pass to the
     // main class.
     else {
-      main = basePackage + this.exampleArguments[0..firstSpaceIndex - 1]
+      main = this.basePackage + this.exampleArguments[0..firstSpaceIndex - 1]
       argsString(exampleArguments[(firstSpaceIndex + 1)..-1])
     }
   }
 
   @TaskAction
   @Override
-  public void exec() {
+  void exec() {
     if (!(exampleArguments?.trim())) {
       throw new GradleException('\033[0;31mMissing example!\033[0m ' +
-          'Please rerun with one provided, e.g. ' +
-          '\033[0;35m--example="basicoperations.GetCampaigns"\033[0m')
+        'Please rerun with one provided, e.g. ' +
+        '\033[0;35m--example="basicoperations.GetCampaigns"\033[0m')
     }
     logQuietMessage('Running example: ' + main + ', args: ' +
-        args.toString())
+      args.toString())
     try {
       super.exec()
     }
     catch (Exception e) {
       logQuietMessage('\n\033[0;31mrunExample exception!\033[0m Did ' +
-          'you provide a valid example identifier? E.g. ' +
-          '\033[0;35m--example="basicoperations.GetCampaigns"\033[0m\n\n' +
-          e.message)
+        'you provide a valid example identifier? E.g. ' +
+        '\033[0;35m--example="basicoperations.GetCampaigns"\033[0m\n\n' +
+        e.message)
     }
-  }
-
-  public String getExampleArguments() {
-    return exampleArguments
   }
 
   private void logQuietMessage(String message) {
     logger.quiet(message)
   }
+}
 
+class ListExamplesTask extends DefaultTask {
+
+  // The base directory containing all examples.
+  private final String examplesDirectory =
+    'google-ads-examples/src/main/java/com/google/ads/googleads/examples/'
+
+  // Regex for extracting descriptions.
+  @Input
+  private final String regex =
+    '(?s)(/\\*\\*(?:(?!/\\*\\*).)*?\\*/)(?:(?:(?!\\*/).)*?)(?=public class )'
+
+  // Regex for comment markers.
+  @Input
+  private final String commentMarkers = '(/\\*\\*\\s+|\\*\\s|\\*/)'
+
+  // A list of subdirectories to exclude from the printout.
+  @Input
+  List<String> directoriesToExclude = ['utils']
+
+  // An optional subdirectory; if non-null, only examples in the specified
+  // subdirectory will be printed.
+  @Optional
+  @Input
+  private String subdirectory = null
+
+  ListExamplesTask() {
+    description = 'List all available code examples with package name ' +
+      'and description.'
+  }
+
+  String getSubdirectory() {
+    return this.subdirectory
+  }
+
+  String getRegex() {
+    return this.regex
+  }
+
+  String getCommentMarkers() {
+    return this.commentMarkers
+  }
+
+  List<String> getDirectoriesToExclude() {
+    return this.directoriesToExclude
+  }
+
+  @Option(option = 'subdirectory', description = 'Sets a subdirectory of ' +
+    'google-ads-examples, e.g. "basicoperations". Only examples in this ' +
+    'subdirectory will be printed. If not specified, all the examples ' +
+    ' will be printed.')
+  void setSubdirectory(String subdirectory) {
+    this.subdirectory = subdirectory.trim()
+  }
+
+  @TaskAction
+  void exec() {
+    String dir = subdirectory != null ?
+      examplesDirectory + subdirectory + '/' : examplesDirectory
+    int count = 0
+    int baseLength = examplesDirectory.length()
+
+    new File(dir).traverse(
+        type                : FileType.FILES,
+        preDir              : { if (it.name in directoriesToExclude)
+                                return FileVisitResult.SKIP_SUBTREE },
+        excludeNameFilter   : { it in directoriesToExclude },
+        nameFilter          : { it.endsWith('.java') },
+        sort                : { a, b -> a.name <=> b.name }
+    ) {
+        // Strip out the base directory, truncate the .java file extension,
+        // and replace the / with . to indicate package name.
+        String className = it.path.substring(baseLength,
+          it.path.length()-5).replaceAll('/','.')
+
+        // Fetch the example description.
+        Matcher matcher = it.text =~ getRegex()
+        String description =
+          matcher ? matcher[0][0] : "*description missing*"
+
+        // Print the count, package.class name, and description (without
+        // comment markers and trailing newlines).
+        println '' + (++count) + ': ' + className + ' - ' +
+          description.replaceAll(getCommentMarkers(),'').strip()
+    }
+
+    println "\nTotal examples: $count"
+  }
 }

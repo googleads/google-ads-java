@@ -16,32 +16,38 @@
  * This is the build file for the google-ads-examples subproject. It depends on
  * the google-ads subproject.
  *
- * This project contains examples for using the Google Ads API. You can launch
- * examples by navigating to the google-ads-examples folder and running the
- * provided runExample gradle task. Note that we recommend running with the
- * quiet flag (-q) to reduce screen clutter:
- *     -- Mac/Linux --
- *     ./gradlew -q runExample --example='basicoperations.GetCampaigns --customerId 1234567890'
+ * This project contains examples for using the Google Ads API. You can interact
+ * with the examples by running the provided listExamples and runExample gradle
+ * tasks. Note that we recommend running with the quiet flag (-q) to reduce
+ * screen clutter:
+ *   -- Mac/Linux --
+ *   ./gradlew -q runExample --example='basicoperations.GetCampaigns --customerId 1234567890'
+ *   ./gradlew -q listExamples
+ *   ./gradlew -q listExamples --subdirectory="basicoperations"
  *
- *     -- Windows --
- *     gradlew -q runExample --example='basicoperations.GetCampaigns --customerId 1234567890'
+ *   -- Windows --
+ *   gradlew -q runExample --example='basicoperations.GetCampaigns --customerId 1234567890'
+ *   gradlew -q listExamples
+ *   gradlew -q listExamples --subdirectory="basicoperations"
  */
 
 plugins {
-    id 'com.google.api-ads.java-conventions'
+  id 'com.google.api-ads.java-conventions'
 }
 
 dependencies {
-    implementation project(':google-ads')
-    implementation 'org.apache.commons:commons-lang3:3.11'
-    implementation 'com.beust:jcommander:1.72'
-    implementation 'joda-time:joda-time:2.8.2'
-    runtimeOnly 'org.apache.logging.log4j:log4j-slf4j-impl:2.11.1'
-    testImplementation 'org.mockito:mockito-core:2.27.0'
+  implementation project(':google-ads')
+  implementation 'org.apache.commons:commons-lang3:3.11'
+  implementation 'com.beust:jcommander:1.72'
+  implementation 'joda-time:joda-time:2.8.2'
+  runtimeOnly 'org.apache.logging.log4j:log4j-slf4j-impl:2.11.1'
+  testImplementation 'org.mockito:mockito-core:2.27.0'
 }
 
 description = 'Google Ads API client library for Java examples'
 
 task runExample(type: ExampleRunnerTask) {
-    classpath = sourceSets.main.runtimeClasspath
+  classpath = sourceSets.main.runtimeClasspath
 }
+
+task listExamples(type: ListExamplesTask)
