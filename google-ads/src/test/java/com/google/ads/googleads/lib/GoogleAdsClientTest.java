@@ -211,7 +211,6 @@ public class GoogleAdsClientTest {
     GoogleAdsClient client =
         GoogleAdsClient.newBuilder()
             .fromPropertiesFile(propertiesFile)
-            .setTransportChannelProvider(localChannelProvider)
             .build();
     // Create a new GoogleAdsClient with a new loginCustomerId.
     long loginCustomerId = 987654321L;

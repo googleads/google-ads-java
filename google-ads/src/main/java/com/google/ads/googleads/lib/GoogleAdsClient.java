@@ -550,20 +550,10 @@ public abstract class GoogleAdsClient extends AbstractGoogleAdsClient {
 
       // Provides the credentials to the primer to preemptively get these ready for usage.
       Primer.getInstance().ifPresent(p -> p.primeCredentialsAsync(getCredentials()));
-      // Checks if the TransportChannelProvider is of type LocalChannelProvider in which case we
-      // cannot cast to InstantiatingGrpcChannelProvider.
-      if (getTransportChannelProvider()
-          .getClass()
-          .toString()
-          .equals("class com.google.api.gax.grpc.testing.LocalChannelProvider")) {
-        TransportChannelProvider transportChannelProviderTesting =
-            getTransportChannelProvider().withHeaders(getHeaders());
-        if (transportChannelProviderTesting.needsEndpoint()) {
-          transportChannelProviderTesting =
-              transportChannelProviderTesting.withEndpoint(getEndpoint());
-        }
-        setTransportChannelProvider(transportChannelProviderTesting);
-      } else {
+      // Checks if the TransportChannelProvider is able to be cast to
+      // InstantiatingGrpcChannelProvider.
+      if (InstantiatingGrpcChannelProvider.class.isAssignableFrom(
+          getTransportChannelProvider().getClass())) {
         InstantiatingGrpcChannelProvider transportChannelProvider =
             (InstantiatingGrpcChannelProvider) getTransportChannelProvider();
         transportChannelProvider =
@@ -574,16 +564,15 @@ public abstract class GoogleAdsClient extends AbstractGoogleAdsClient {
                             new LoggingInterceptor(
                                 new RequestLogger(), getHeaders(), getEndpoint())))
                 .build();
-        // Proceeds with creating the client library instance.
-        transportChannelProvider =
-            (InstantiatingGrpcChannelProvider) transportChannelProvider.withHeaders(getHeaders());
-        if (transportChannelProvider.needsEndpoint()) {
-          transportChannelProvider =
-              (InstantiatingGrpcChannelProvider)
-                  transportChannelProvider.withEndpoint(getEndpoint());
-        }
         setTransportChannelProvider(transportChannelProvider);
       }
+      // Proceeds with creating the client library instance.
+      TransportChannelProvider transportChannelProvider1 = getTransportChannelProvider();
+      transportChannelProvider1 = transportChannelProvider1.withHeaders(getHeaders());
+      if (transportChannelProvider1.needsEndpoint()) {
+        transportChannelProvider1 = transportChannelProvider1.withEndpoint(getEndpoint());
+      }
+      setTransportChannelProvider(transportChannelProvider1);
 
       GoogleAdsAllVersions allVersionsClient =
           ApiCatalog.getDefault()
