@@ -22,7 +22,7 @@ import com.google.common.collect.Sets
 
 plugins {
   id 'com.google.api-ads.java-conventions'
-  id 'maven-publish'
+  id 'signing'
   id 'com.google.protobuf' version '0.8.15'
   id "com.github.hierynomus.license-report" version "0.15.0"
   id 'com.github.johnrengelman.shadow' version '6.1.0'
@@ -337,6 +337,13 @@ publishing {
   publications {
     shadow(MavenPublication) { publication ->
       project.shadow.component(publication)
+      // Publishes the javadoc + sources with the shadowjar.
+      configurations.javadocElements.artifacts.each {
+        artifact it
+      }
+      configurations.sourcesElements.artifacts.each {
+        artifact it
+      }
 
       groupId = 'com.google.api-ads'
       artifactId = 'google-ads-shadowjar'
@@ -365,6 +372,10 @@ publishing {
   }
 }
 
+signing {
+  sign publishing.publications.shadow
+}
+
 // Provide a helpful error message for missing sonatype credentials.
 tasks.findAll {
   if (it.name.matches("publish.+ToSonatypeRepository")) {
@@ -375,3 +386,4 @@ tasks.findAll {
     }
   }
 }
+
