@@ -69,14 +69,14 @@ class ExampleRunnerTask extends JavaExec {
   private String basePackage = 'com.google.ads.googleads.examples.'
 
   // Hints for failed executions.
-  private final String exampleInvocation = 'E.g. ' +
+  private final String exampleInvocation = 'For example, ' +
     '\033[0;35m--example="basicoperations.GetCampaigns"\033[0m.\n' +
     'Run \033[0;35m./gradlew -q listExamples\033[0m to list all examples, or ' +
     '\033[0;35m./gradlew -q listExamples --subdirectory="basicoperations"\033[0m ' +
     'to list examples in a specific subdirectory.\n\n'
 
   // The package.ClassName and any arguments required to launch an example,
-  // e.g. "basicoperations.GetCampaigns --customerId 1234567890".
+  // for example "basicoperations.GetCampaigns --customerId 1234567890".
   @Optional
   @Input
   private String exampleArguments
@@ -100,7 +100,7 @@ class ExampleRunnerTask extends JavaExec {
   }
 
   @Option(option = 'example', description = 'Sets the example to launch and' +
-    ' any arguments. Required for execution. E.g. ' +
+    ' any arguments. Required for execution. For example, ' +
     '"basicoperations.GetCampaigns --customerId 1234567890"')
   void setExampleArguments(String exampleArguments) {
     this.exampleArguments = exampleArguments.trim()
@@ -177,6 +177,12 @@ class ListExamplesTask extends DefaultTask {
   @Input
   private String subdirectory = null
 
+  // An optional case-sensitive search string; if non-null, only examples whose
+  // name or description contains the specified term will be printed.
+  @Optional
+  @Input
+  private String searchTerm = null
+
   ListExamplesTask() {
     description = 'List all available code examples with package name ' +
       'and description.'
@@ -190,12 +196,23 @@ class ListExamplesTask extends DefaultTask {
     return this.directoriesToExclude
   }
 
+  String getSearchTerm() {
+    return this.searchTerm
+  }
+
   @Option(option = 'subdirectory', description = 'Sets a subdirectory of ' +
-    'google-ads-examples, e.g. "basicoperations". Only examples in this ' +
+    'google-ads-examples, for example "basicoperations". Only examples in this ' +
     'subdirectory will be printed. If not specified, all the examples ' +
     'will be printed.')
   void setSubdirectory(String subdirectory) {
     this.subdirectory = subdirectory.trim()
+  }
+
+  @Option(option = 'searchTerm', description = 'Sets a case-sensitive search term, ' +
+    'for example "conversion". If set, only examples whose name or description ' +
+    'contains the specified term will be printed.')
+  void setSearchTerm(String searchTerm) {
+    this.searchTerm = searchTerm.trim()
   }
 
   // Traverse a given directory, printing the information for each example.
@@ -220,10 +237,13 @@ class ListExamplesTask extends DefaultTask {
         String description =
           matcher ? matcher[0][0] : "*description missing*"
 
-        // Print the count, package.class name, and description (without
-        // comment markers and trailing newlines).
-        println '' + (++count + offset) + ': ' + className + ' - ' +
-          description.replaceAll(COMMENT_MARKERS,'').strip()
+        if (searchTerm == null || className.contains(searchTerm) ||
+          description.contains(searchTerm)) {
+          // Print the count, package.class name, and description (without
+          // comment markers and trailing newlines).
+          println '' + (++count + offset) + ': ' + className + ' - ' +
+            description.replaceAll(COMMENT_MARKERS,'').strip()
+        }
     }
 
     return count
