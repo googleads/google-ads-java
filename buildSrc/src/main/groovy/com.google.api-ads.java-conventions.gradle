@@ -68,6 +68,13 @@ class ExampleRunnerTask extends JavaExec {
   // The base package for all examples.
   private String basePackage = 'com.google.ads.googleads.examples.'
 
+  // Hints for failed executions.
+  private final String exampleInvocation = 'E.g. ' +
+    '\033[0;35m--example="basicoperations.GetCampaigns"\033[0m.\n' +
+    'Run \033[0;35m./gradlew -q listExamples\033[0m to list all examples, or ' +
+    '\033[0;35m./gradlew -q listExamples --subdirectory="basicoperations"\033[0m ' +
+    'to list examples in a specific subdirectory.\n\n'
+
   // The package.ClassName and any arguments required to launch an example,
   // e.g. "basicoperations.GetCampaigns --customerId 1234567890".
   @Optional
@@ -116,8 +123,7 @@ class ExampleRunnerTask extends JavaExec {
   void exec() {
     if (!(exampleArguments?.trim())) {
       throw new GradleException('\033[0;31mMissing example!\033[0m ' +
-        'Please rerun with one provided, e.g. ' +
-        '\033[0;35m--example="basicoperations.GetCampaigns"\033[0m')
+        'Please rerun with one provided. ' + exampleInvocation)
     }
     logQuietMessage('Running example: ' + main + ', args: ' +
       args.toString())
@@ -126,12 +132,12 @@ class ExampleRunnerTask extends JavaExec {
     }
     catch (Exception e) {
       logQuietMessage('\n\033[0;31mrunExample exception!\033[0m Did ' +
-        'you provide a valid example identifier? E.g. ' +
-        '\033[0;35m--example="basicoperations.GetCampaigns"\033[0m\n\n' +
+        'you provide a valid example identifier? ' + exampleInvocation +
         e.message)
     }
   }
 
+  // Prints a message to the console, even in quiet mode.
   private void logQuietMessage(String message) {
     logger.quiet(message)
   }
@@ -139,18 +145,27 @@ class ExampleRunnerTask extends JavaExec {
 
 class ListExamplesTask extends DefaultTask {
 
-  // The base directory containing all examples.
-  private final String examplesDirectory =
-    'google-ads-examples/src/main/java/com/google/ads/googleads/examples/'
-
-  // Regex for extracting descriptions.
+  // Regex for extracting descriptions. Isolates the Javadoc comment immediately
+  // preceeding the class definition.
   @Input
-  private final String regex =
+  private static final String COMMENT_REGEX =
     '(?s)(/\\*\\*(?:(?!/\\*\\*).)*?\\*/)(?:(?:(?!\\*/).)*?)(?=public class )'
 
   // Regex for comment markers.
   @Input
-  private final String commentMarkers = '(/\\*\\*\\s+|\\*\\s|\\*/)'
+  private static final String COMMENT_MARKERS = '(/\\*\\*\\s+|\\*\\s|\\*/)'
+
+  // The base directory containing all examples.
+  private static final String MAIN_EXAMPLES_BASE_DIRECTORY =
+    'google-ads-examples/src/main/java/com/google/ads/googleads/examples/'
+
+  // The base directory containing all examples.
+  private static final String MIGRATION_EXAMPLES_BASE_DIRECTORY =
+    'google-ads-migration-examples/src/main/java/com/google/ads/googleads/migration/'
+
+  // The name of the package with the migration examples (currently only one
+  // such package exists).
+  private static final String MIGRATION_PACKAGE_NAME = 'campaignmanagement'
 
   // A list of subdirectories to exclude from the printout.
   @Input
@@ -171,14 +186,6 @@ class ListExamplesTask extends DefaultTask {
     return this.subdirectory
   }
 
-  String getRegex() {
-    return this.regex
-  }
-
-  String getCommentMarkers() {
-    return this.commentMarkers
-  }
-
   List<String> getDirectoriesToExclude() {
     return this.directoriesToExclude
   }
@@ -186,17 +193,14 @@ class ListExamplesTask extends DefaultTask {
   @Option(option = 'subdirectory', description = 'Sets a subdirectory of ' +
     'google-ads-examples, e.g. "basicoperations". Only examples in this ' +
     'subdirectory will be printed. If not specified, all the examples ' +
-    ' will be printed.')
+    'will be printed.')
   void setSubdirectory(String subdirectory) {
     this.subdirectory = subdirectory.trim()
   }
 
-  @TaskAction
-  void exec() {
-    String dir = subdirectory != null ?
-      examplesDirectory + subdirectory + '/' : examplesDirectory
+  // Traverse a given directory, printing the information for each example.
+  int traverseDirectory(String dir, int baseLength, int offset) {
     int count = 0
-    int baseLength = examplesDirectory.length()
 
     new File(dir).traverse(
         type                : FileType.FILES,
@@ -212,14 +216,35 @@ class ListExamplesTask extends DefaultTask {
           it.path.length()-5).replaceAll('/','.')
 
         // Fetch the example description.
-        Matcher matcher = it.text =~ getRegex()
+        Matcher matcher = it.text =~ COMMENT_REGEX
         String description =
           matcher ? matcher[0][0] : "*description missing*"
 
         // Print the count, package.class name, and description (without
         // comment markers and trailing newlines).
-        println '' + (++count) + ': ' + className + ' - ' +
-          description.replaceAll(getCommentMarkers(),'').strip()
+        println '' + (++count + offset) + ': ' + className + ' - ' +
+          description.replaceAll(COMMENT_MARKERS,'').strip()
+    }
+
+    return count
+  }
+
+  @TaskAction
+  void exec() {
+    String mainExamplesDirectory = subdirectory != null ?
+      MAIN_EXAMPLES_BASE_DIRECTORY + subdirectory + '/' : MAIN_EXAMPLES_BASE_DIRECTORY
+    String migrationExamplesDirectory = subdirectory != null ?
+      MIGRATION_EXAMPLES_BASE_DIRECTORY + subdirectory + '/' : MIGRATION_EXAMPLES_BASE_DIRECTORY
+    int count = 0
+
+    count += traverseDirectory(mainExamplesDirectory,
+      MAIN_EXAMPLES_BASE_DIRECTORY.length(), count)
+
+    // Only print the migration examples if printing all examples or examples
+    // with the campaignmanagement package name.
+    if (subdirectory == null || subdirectory.equals(MIGRATION_PACKAGE_NAME)) {
+      count += traverseDirectory(migrationExamplesDirectory,
+        MIGRATION_EXAMPLES_BASE_DIRECTORY.length(), count)
     }
 
     println "\nTotal examples: $count"
