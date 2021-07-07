@@ -147,21 +147,19 @@ class ListExamplesTask extends DefaultTask {
 
   // Regex for extracting descriptions. Isolates the Javadoc comment immediately
   // preceeding the class definition.
-  @Input
   private static final String COMMENT_REGEX =
     '(?s)(/\\*\\*(?:(?!/\\*\\*).)*?\\*/)(?:(?:(?!\\*/).)*?)(?=public class )'
 
   // Regex for comment markers.
-  @Input
   private static final String COMMENT_MARKERS = '(/\\*\\*\\s+|\\*\\s|\\*/)'
 
   // The base directory containing all examples.
   private static final String MAIN_EXAMPLES_BASE_DIRECTORY =
-    'google-ads-examples/src/main/java/com/google/ads/googleads/examples/'
+    'src/main/java/com/google/ads/googleads/examples/'
 
   // The base directory containing all examples.
   private static final String MIGRATION_EXAMPLES_BASE_DIRECTORY =
-    'google-ads-migration-examples/src/main/java/com/google/ads/googleads/migration/'
+    '../google-ads-migration-examples/src/main/java/com/google/ads/googleads/migration/'
 
   // The name of the package with the migration examples (currently only one
   // such package exists).
@@ -219,7 +217,7 @@ class ListExamplesTask extends DefaultTask {
   int traverseDirectory(String dir, int baseLength, int offset) {
     int count = 0
 
-    new File(dir).traverse(
+    project.file(dir).traverse(
         type                : FileType.FILES,
         preDir              : { if (it.name in directoriesToExclude)
                                 return FileVisitResult.SKIP_SUBTREE },
