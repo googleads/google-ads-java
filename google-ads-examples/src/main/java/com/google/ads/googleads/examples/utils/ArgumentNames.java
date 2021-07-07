@@ -45,6 +45,8 @@ public final class ArgumentNames {
   public static final String CHAIN_ID = "--chainId";
   public static final String CONVERSION_ACTION_ID = "--conversionActionId";
   public static final String CONVERSION_ACTION_IDS = "--conversionActionIds";
+  public static final String CONVERSION_CUSTOM_VARIABLE_ID = "--conversionCustomVariableId";
+  public static final String CONVERSION_CUSTOM_VARIABLE_VALUE = "--conversionCustomVariableValue";
   public static final String CONVERSION_DATE_TIME = "--conversionDateTime";
   public static final String CONVERSION_VALUE = "--conversionValue";
   public static final String COUNTRY_CODE = "--countryCode";

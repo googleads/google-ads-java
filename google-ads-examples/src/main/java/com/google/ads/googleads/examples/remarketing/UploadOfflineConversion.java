@@ -23,6 +23,7 @@ import com.google.ads.googleads.v8.errors.GoogleAdsException;
 import com.google.ads.googleads.v8.services.ClickConversion;
 import com.google.ads.googleads.v8.services.ClickConversionResult;
 import com.google.ads.googleads.v8.services.ConversionUploadServiceClient;
+import com.google.ads.googleads.v8.services.CustomVariable;
 import com.google.ads.googleads.v8.services.UploadClickConversionsRequest;
 import com.google.ads.googleads.v8.services.UploadClickConversionsResponse;
 import com.google.ads.googleads.v8.utils.ResourceNames;
@@ -53,6 +54,14 @@ public class UploadOfflineConversion {
 
     @Parameter(names = ArgumentNames.CONVERSION_VALUE, required = true)
     private Double conversionValue;
+
+    // Optional: Specify the conversion custom variable ID and value you want to
+    // associate with the call conversion upload.
+    @Parameter(names = ArgumentNames.CONVERSION_CUSTOM_VARIABLE_ID)
+    private Long conversionCustomVariableId;
+
+    @Parameter(names = ArgumentNames.CONVERSION_CUSTOM_VARIABLE_VALUE)
+    private String conversionCustomVariableValue;
   }
 
   public static void main(String[] args) {
@@ -66,6 +75,10 @@ public class UploadOfflineConversion {
       params.gclid = "INSERT_GCL_ID_HERE";
       params.conversionDateTime = "INSERT_CONVERSION_DATE_TIME_HERE";
       params.conversionValue = Double.parseDouble("INSERT_CONVERSION_VALUE_HERE");
+      // Optionally specify the conversion custom variable ID and value you want to
+      // associate with the call conversion upload.
+      params.conversionCustomVariableId = null;
+      params.conversionCustomVariableValue = null;
     }
 
     GoogleAdsClient googleAdsClient = null;
@@ -88,7 +101,9 @@ public class UploadOfflineConversion {
               params.conversionActionId,
               params.gclid,
               params.conversionDateTime,
-              params.conversionValue);
+              params.conversionValue,
+              params.conversionCustomVariableId,
+              params.conversionCustomVariableValue);
     } catch (GoogleAdsException gae) {
       // GoogleAdsException is the base class for most exceptions thrown by an API request.
       // Instances of this exception have a message and a GoogleAdsFailure that contains a
@@ -114,6 +129,10 @@ public class UploadOfflineConversion {
    * @param gclid the GCLID for the conversion.
    * @param conversionDateTime date and time of the conversion.
    * @param conversionValue the value of the conversion.
+   * @param conversionCustomVariableId the ID of the conversion custom variable to associate with
+   *     the upload.
+   * @param conversionCustomVariableValue the value of the conversion custom variable to associate
+   *     with the upload.
    */
   // [START upload_offline_conversion]
   private void runExample(
@@ -122,20 +141,31 @@ public class UploadOfflineConversion {
       long conversionActionId,
       String gclid,
       String conversionDateTime,
-      Double conversionValue) {
+      Double conversionValue,
+      Long conversionCustomVariableId,
+      String conversionCustomVariableValue) {
     // Gets the conversion action resource name.
     String conversionActionResourceName =
         ResourceNames.conversionAction(customerId, conversionActionId);
 
     // Creates the click conversion.
-    ClickConversion clickConversion =
+    ClickConversion.Builder clickConversionBuilder =
         ClickConversion.newBuilder()
             .setConversionAction(conversionActionResourceName)
             .setConversionDateTime(conversionDateTime)
             .setConversionValue(conversionValue)
             .setCurrencyCode("USD")
-            .setGclid(gclid)
-            .build();
+            .setGclid(gclid);
+
+    if (conversionCustomVariableId != null && conversionCustomVariableValue != null) {
+      clickConversionBuilder.addCustomVariables(
+          CustomVariable.newBuilder()
+              .setConversionCustomVariable(
+                  ResourceNames.conversionCustomVariable(customerId, conversionCustomVariableId))
+              .setValue(conversionCustomVariableValue));
+    }
+
+    ClickConversion clickConversion = clickConversionBuilder.build();
 
     // Creates the conversion upload service client.
     try (ConversionUploadServiceClient conversionUploadServiceClient =

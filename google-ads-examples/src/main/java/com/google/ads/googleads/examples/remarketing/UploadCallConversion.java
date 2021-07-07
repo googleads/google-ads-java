@@ -23,8 +23,10 @@ import com.google.ads.googleads.v8.errors.GoogleAdsException;
 import com.google.ads.googleads.v8.services.CallConversion;
 import com.google.ads.googleads.v8.services.CallConversionResult;
 import com.google.ads.googleads.v8.services.ConversionUploadServiceClient;
+import com.google.ads.googleads.v8.services.CustomVariable;
 import com.google.ads.googleads.v8.services.UploadCallConversionsRequest;
 import com.google.ads.googleads.v8.services.UploadCallConversionsResponse;
+import com.google.ads.googleads.v8.utils.ResourceNames;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
@@ -59,6 +61,14 @@ public class UploadCallConversion {
 
     @Parameter(names = ArgumentNames.CONVERSION_VALUE)
     private double conversionValue;
+
+    // Optional: Specify the conversion custom variable ID and value you want to
+    // associate with the call conversion upload.
+    @Parameter(names = ArgumentNames.CONVERSION_CUSTOM_VARIABLE_ID)
+    private Long conversionCustomVariableId;
+
+    @Parameter(names = ArgumentNames.CONVERSION_CUSTOM_VARIABLE_VALUE)
+    private String conversionCustomVariableValue;
   }
 
   public static void main(String[] args) {
@@ -67,11 +77,15 @@ public class UploadCallConversion {
       // Either pass the required parameters for this example on the command line, or insert them
       // into the code here. See the parameter class definition above for descriptions.
       params.customerId = Long.parseLong("INSERT_CUSTOMER_ID");
-      params.conversionActionId = "INSERT_CONVERSAION_ACTION_ID";
+      params.conversionActionId = "INSERT_CONVERSION_ACTION_ID";
       params.callerId = "INSERT_CALLER_ID";
       params.callStartDateTime = "INSERT_CALL_START_DATE_TIME";
       params.conversionDateTime = "INSERT_CONVERSION_DATE_TIME";
       params.conversionValue = Double.parseDouble("INSERT_CONVERSION_VALUE");
+      // Optionally specify the conversion custom variable ID and value you want to
+      // associate with the call conversion upload.
+      params.conversionCustomVariableId = null;
+      params.conversionCustomVariableValue = null;
     }
 
     GoogleAdsClient googleAdsClient = null;
@@ -94,7 +108,9 @@ public class UploadCallConversion {
               params.conversionActionId,
               params.callerId,
               params.callStartDateTime,
-              params.conversionValue);
+              params.conversionValue,
+              params.conversionCustomVariableId,
+              params.conversionCustomVariableValue);
     } catch (GoogleAdsException gae) {
       // GoogleAdsException is the base class for most exceptions thrown by an API request.
       // Instances of this exception have a message and a GoogleAdsFailure that contains a
@@ -120,6 +136,10 @@ public class UploadCallConversion {
    * @param callerId the caller ID.
    * @param callStartDateTime the call start date time
    * @param conversionValue the value of the conversion in USD.
+   * @param conversionCustomVariableId the ID of the conversion custom variable to associate with
+   *     the upload.
+   * @param conversionCustomVariableValue the value of the conversion custom variable to associate
+   *     with the upload.
    */
   // [START upload_call_conversion]
   private void runExample(
@@ -128,16 +148,27 @@ public class UploadCallConversion {
       String conversionActionId,
       String callerId,
       String callStartDateTime,
-      double conversionValue) {
+      double conversionValue,
+      Long conversionCustomVariableId,
+      String conversionCustomVariableValue) {
     // Create a call conversion by specifying currency as USD.
-    CallConversion conversion =
+    CallConversion.Builder conversionBuilder =
         CallConversion.newBuilder()
             .setConversionAction(conversionActionId)
             .setCallerId(callerId)
             .setCallStartDateTime(callStartDateTime)
             .setConversionValue(conversionValue)
-            .setCurrencyCode("USD")
-            .build();
+            .setCurrencyCode("USD");
+
+    if (conversionCustomVariableId != null && conversionCustomVariableValue != null) {
+      conversionBuilder.addCustomVariables(
+          CustomVariable.newBuilder()
+              .setConversionCustomVariable(
+                  ResourceNames.conversionCustomVariable(customerId, conversionCustomVariableId))
+              .setValue(conversionCustomVariableValue));
+    }
+
+    CallConversion conversion = conversionBuilder.build();
 
     // Uploads the call conversion to the API.
     try (ConversionUploadServiceClient conversionUploadServiceClient =

@@ -1,3 +1,11 @@
+14.0.0 - 2021-07-07
+-------------------
+- Added and updated examples for Google Ads API v8.0.
+- Removed support for Google Ads API v5.0.
+- Moved generateThirdPartyDirectory execution out of configure phase (#444).
+- Added sonatype publish for shadow jar (#445).
+- Add required artifacts for central repo (#446).
+
 13.0.0 - 2021-06-17
 -------------------
 - Added support and examples for Google Ads API v8.0.
