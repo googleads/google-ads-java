@@ -26,6 +26,8 @@ import com.google.protobuf.Message;
 import com.google.protobuf.TextFormat;
 import java.io.IOException;
 import java.nio.charset.Charset;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -42,7 +44,7 @@ public class LogScrubberTest {
 
   @Parameters(name = "{0}")
   public static List<Object[]> parameters() {
-    return ImmutableList.of(
+    return Arrays.asList(
         new Object[] {
           "v6 search stream scrubs email",
           "searchStream_v6_email_expected.textpb",
@@ -54,12 +56,6 @@ public class LogScrubberTest {
           "searchStream_v6_inviter_email_expected.textpb",
           "searchStream_v6_inviter_email_input.textpb",
           SearchGoogleAdsStreamResponse.class
-        },
-        new Object[] {
-          "v5 search stream passes through",
-          "searchStream_v5_expected.textpb",
-          "searchStream_v5_input.textpb",
-          com.google.ads.googleads.v5.services.SearchGoogleAdsStreamResponse.class
         },
         new Object[] {
           "v6 search stream ignores when not present",
@@ -84,12 +80,6 @@ public class LogScrubberTest {
           "searchStream_v6_inviter_email_expected.textpb",
           "searchStream_v6_inviter_email_input.textpb",
           SearchGoogleAdsResponse.class
-        },
-        new Object[] {
-          "v5 search stream passes through",
-          "searchStream_v5_expected.textpb",
-          "searchStream_v5_input.textpb",
-          com.google.ads.googleads.v5.services.SearchGoogleAdsResponse.class
         },
         new Object[] {
           "v6 search stream ignores when not present",

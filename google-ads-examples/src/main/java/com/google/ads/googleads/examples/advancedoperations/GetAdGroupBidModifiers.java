@@ -115,7 +115,8 @@ public class GetAdGroupBidModifiers {
               + "  ad_group_bid_modifier.hotel_check_in_day.day_of_week,"
               + "  ad_group_bid_modifier.preferred_content.type "
               + "FROM"
-              + "  ad_group_bid_modifier";
+              + "  ad_group_bid_modifier"
+              + "LIMIT 10000";
       if (adGroupId != null) {
         searchQuery += String.format(" WHERE ad_group.id = %d", adGroupId);
       }
