@@ -241,7 +241,7 @@ class ListExamplesTask extends DefaultTask {
         String description =
           matcher ? matcher[0][0] : "*description missing*"
 
-        if (searchTerm == null || className.contains(searchTerm) ||
+        if (!searchTerm || className.contains(searchTerm) ||
           description.contains(searchTerm)) {
           // Print the count, package.class name, and description (without
           // comment markers and trailing newlines).
@@ -255,9 +255,9 @@ class ListExamplesTask extends DefaultTask {
 
   @TaskAction
   void exec() {
-    String mainExamplesDirectory = subdirectory != null ?
+    String mainExamplesDirectory = subdirectory ?
       MAIN_EXAMPLES_BASE_DIRECTORY + subdirectory + '/' : MAIN_EXAMPLES_BASE_DIRECTORY
-    String migrationExamplesDirectory = subdirectory != null ?
+    String migrationExamplesDirectory = subdirectory ?
       MIGRATION_EXAMPLES_BASE_DIRECTORY + subdirectory + '/' : MIGRATION_EXAMPLES_BASE_DIRECTORY
     int count = 0
 
@@ -265,7 +265,7 @@ class ListExamplesTask extends DefaultTask {
 
     // Only print the migration examples if printing all examples or examples
     // with the campaignmanagement package name.
-    if (subdirectory == null || subdirectory.equals(MIGRATION_PACKAGE_NAME)) {
+    if (!subdirectory || subdirectory == MIGRATION_PACKAGE_NAME) {
       count += traverseDirectory(migrationExamplesDirectory, count)
     }
 
