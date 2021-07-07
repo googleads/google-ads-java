@@ -29,6 +29,11 @@
  *   gradlew -q runExample --example='basicoperations.GetCampaigns --customerId 1234567890'
  *   gradlew -q listExamples
  *   gradlew -q listExamples --subdirectory="basicoperations"
+ *
+ * The listExamples task can also search for a specific term in example names
+ * and descriptions using the --search argument. Note that these search terms
+ * are case-sensitive:
+ *  ./gradlew -q listExamples --subdirectory="basicoperations" --searchTerm="REMOVE"
  */
 
 plugins {

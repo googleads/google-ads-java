@@ -214,8 +214,14 @@ class ListExamplesTask extends DefaultTask {
   }
 
   // Traverse a given directory, printing the information for each example.
-  int traverseDirectory(String dir, int baseLength, int offset) {
+  int traverseDirectory(String dir, int offset) {
     int count = 0
+
+    // Determine the number of leading characters in the directory path. This
+    // value is different depending on which subproject we are traversing.
+    int baseLength = (subdirectory ?
+      project.file(dir).absolutePath.lastIndexOf('/') :
+      project.file(dir).absolutePath.length()) + 1
 
     project.file(dir).traverse(
         type                : FileType.FILES,
@@ -255,14 +261,12 @@ class ListExamplesTask extends DefaultTask {
       MIGRATION_EXAMPLES_BASE_DIRECTORY + subdirectory + '/' : MIGRATION_EXAMPLES_BASE_DIRECTORY
     int count = 0
 
-    count += traverseDirectory(mainExamplesDirectory,
-      MAIN_EXAMPLES_BASE_DIRECTORY.length(), count)
+    count += traverseDirectory(mainExamplesDirectory, count)
 
     // Only print the migration examples if printing all examples or examples
     // with the campaignmanagement package name.
     if (subdirectory == null || subdirectory.equals(MIGRATION_PACKAGE_NAME)) {
-      count += traverseDirectory(migrationExamplesDirectory,
-        MIGRATION_EXAMPLES_BASE_DIRECTORY.length(), count)
+      count += traverseDirectory(migrationExamplesDirectory, count)
     }
 
     println "\nTotal examples: $count"
