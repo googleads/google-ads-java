@@ -115,11 +115,11 @@ public class GetAdGroupBidModifiers {
               + "  ad_group_bid_modifier.hotel_check_in_day.day_of_week,"
               + "  ad_group_bid_modifier.preferred_content.type "
               + "FROM"
-              + "  ad_group_bid_modifier"
-              + "LIMIT 10000";
+              + "  ad_group_bid_modifier";
       if (adGroupId != null) {
         searchQuery += String.format(" WHERE ad_group.id = %d", adGroupId);
       }
+      searchQuery += " LIMIT 10000";
 
       // Creates a request that will retrieve ad group bid modifiers using pages of the specified
       // page size.
