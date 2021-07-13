@@ -32,7 +32,7 @@ repositories {
 }
 
 group = 'com.google.api-ads'
-version = '11.0.1-SNAPSHOT'
+version = '14.0.1-SNAPSHOT'
 java.sourceCompatibility = JavaVersion.VERSION_1_8
 java.targetCompatibility = JavaVersion.VERSION_1_8
 
