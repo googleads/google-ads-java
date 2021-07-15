@@ -550,15 +550,29 @@ public abstract class GoogleAdsClient extends AbstractGoogleAdsClient {
 
       // Provides the credentials to the primer to preemptively get these ready for usage.
       Primer.getInstance().ifPresent(p -> p.primeCredentialsAsync(getCredentials()));
+      // Checks if the TransportChannelProvider is able to be cast to
+      // InstantiatingGrpcChannelProvider.
+      if (InstantiatingGrpcChannelProvider.class.isAssignableFrom(
+          getTransportChannelProvider().getClass())) {
+        InstantiatingGrpcChannelProvider transportChannelProvider =
+            (InstantiatingGrpcChannelProvider) getTransportChannelProvider();
+        transportChannelProvider =
+            transportChannelProvider.toBuilder()
+                .setInterceptorProvider(
+                    () ->
+                        ImmutableList.of(
+                            new LoggingInterceptor(
+                                new RequestLogger(), getHeaders(), getEndpoint())))
+                .build();
+        setTransportChannelProvider(transportChannelProvider);
+      }
       // Proceeds with creating the client library instance.
-      TransportChannelProvider transportChannelProvider = getTransportChannelProvider();
-      if (transportChannelProvider.needsHeaders()) {
-        transportChannelProvider = transportChannelProvider.withHeaders(getHeaders());
+      TransportChannelProvider transportChannelProvider1 = getTransportChannelProvider();
+      transportChannelProvider1 = transportChannelProvider1.withHeaders(getHeaders());
+      if (transportChannelProvider1.needsEndpoint()) {
+        transportChannelProvider1 = transportChannelProvider1.withEndpoint(getEndpoint());
       }
-      if (transportChannelProvider.needsEndpoint()) {
-        transportChannelProvider = transportChannelProvider.withEndpoint(getEndpoint());
-      }
-      setTransportChannelProvider(transportChannelProvider);
+      setTransportChannelProvider(transportChannelProvider1);
 
       GoogleAdsAllVersions allVersionsClient =
           ApiCatalog.getDefault()

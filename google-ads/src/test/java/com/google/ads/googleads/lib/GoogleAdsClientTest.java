@@ -196,6 +196,30 @@ public class GoogleAdsClientTest {
   }
 
   /**
+   * Tests creating a new GoogleAdsClient with a new login customer ID after the GoogleAdsClient is
+   * already built succeeds.
+   */
+  @Test
+  public void testSetLoginCustomerIdAfterCreatingClient() throws IOException {
+    // Create a properties file in the temporary folder.
+    File propertiesFile = folder.newFile("ads.properties");
+    try (FileWriter propertiesFileWriter = new FileWriter(propertiesFile)) {
+      testProperties.store(propertiesFileWriter, null);
+    }
+
+    // Build a new client from the file.
+    GoogleAdsClient client =
+        GoogleAdsClient.newBuilder()
+            .fromPropertiesFile(propertiesFile)
+            .build();
+    // Create a new GoogleAdsClient with a new loginCustomerId.
+    long loginCustomerId = 987654321L;
+    client = client.toBuilder().setLoginCustomerId(loginCustomerId).build();
+    assertGoogleAdsClient(client, loginCustomerId, true);
+    assertEquals(client.getLoginCustomerId().longValue(), loginCustomerId);
+  }
+
+  /**
    * Verifies reading config from a Java properties file where the path is specified from the
    * environment variable.
    */
