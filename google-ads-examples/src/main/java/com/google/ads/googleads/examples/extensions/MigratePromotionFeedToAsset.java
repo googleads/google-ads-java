@@ -18,18 +18,17 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.lib.utils.FieldMasks;
-import com.google.ads.googleads.v8.resources.AdGroupAsset;
-import com.google.ads.googleads.v8.resources.CampaignAsset;
 import com.google.ads.googleads.v8.common.PromotionAsset;
 import com.google.ads.googleads.v8.common.PromotionFeedItem;
 import com.google.ads.googleads.v8.enums.AssetFieldTypeEnum.AssetFieldType;
 import com.google.ads.googleads.v8.errors.GoogleAdsError;
 import com.google.ads.googleads.v8.errors.GoogleAdsException;
 import com.google.ads.googleads.v8.resources.AdGroup;
+import com.google.ads.googleads.v8.resources.AdGroupAsset;
 import com.google.ads.googleads.v8.resources.AdGroupExtensionSetting;
 import com.google.ads.googleads.v8.resources.Asset;
 import com.google.ads.googleads.v8.resources.Campaign;
+import com.google.ads.googleads.v8.resources.CampaignAsset;
 import com.google.ads.googleads.v8.resources.CampaignExtensionSetting;
 import com.google.ads.googleads.v8.resources.ExtensionFeedItem;
 import com.google.ads.googleads.v8.resources.FeedItem;
@@ -39,17 +38,13 @@ import com.google.ads.googleads.v8.services.AssetOperation;
 import com.google.ads.googleads.v8.services.AssetServiceClient;
 import com.google.ads.googleads.v8.services.CampaignAssetOperation;
 import com.google.ads.googleads.v8.services.CampaignAssetServiceClient;
-import com.google.ads.googleads.v8.services.ExtensionFeedItemOperation;
-import com.google.ads.googleads.v8.services.ExtensionFeedItemServiceClient;
 import com.google.ads.googleads.v8.services.GoogleAdsRow;
 import com.google.ads.googleads.v8.services.GoogleAdsServiceClient;
-import com.google.ads.googleads.v8.services.GoogleAdsServiceClient.SearchPagedResponse;
 import com.google.ads.googleads.v8.services.MutateAdGroupAssetResult;
 import com.google.ads.googleads.v8.services.MutateAdGroupAssetsResponse;
 import com.google.ads.googleads.v8.services.MutateAssetsResponse;
 import com.google.ads.googleads.v8.services.MutateCampaignAssetResult;
 import com.google.ads.googleads.v8.services.MutateCampaignAssetsResponse;
-import com.google.ads.googleads.v8.services.MutateExtensionFeedItemsResponse;
 import com.google.ads.googleads.v8.services.SearchGoogleAdsStreamRequest;
 import com.google.ads.googleads.v8.services.SearchGoogleAdsStreamResponse;
 import com.google.ads.googleads.v8.utils.ResourceNames;
@@ -58,7 +53,6 @@ import com.google.common.collect.ImmutableList;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
@@ -69,6 +63,8 @@ import java.util.stream.StreamSupport;
  * asset-based extension. The new Asset-based extension will then be associated with the same
  * campaigns and ad groups as the original Feed-based extension. Finally, the Feed-based extension
  * will be mutated to no longer serve.
+ * Once copied, you should remove the Feed-based extension; see
+ * RemoveEntireSitelinkCampaignExtensionSetting.java for an example.
  */
 public class MigratePromotionFeedToAsset {
 
@@ -148,8 +144,6 @@ public class MigratePromotionFeedToAsset {
       // Associates the new Promotion asset with the same ad groups as the original.
       associateAssetWithAdGroups(
           googleAdsClient, customerId, promotionAssetResourceName, adGroupIds);
-      // Prevents the extension feed item from serving.
-      clearExtensionFeedItemServingDates(googleAdsClient, customerId, extensionFeedItem);
     }
   }
 
@@ -470,43 +464,4 @@ public class MigratePromotionFeedToAsset {
       }
     }
   }
-
-  /**
-   * Prevent an ExtensionFeedItem from serving by clearing its start and end dates. This allows the
-   * ExtensionFeedItem to still appear in reports while not generating new data.
-   */
-  // [START migrate_promotion_feed_to_asset_3]
-  private void clearExtensionFeedItemServingDates(
-      GoogleAdsClient googleAdsClient, Long customerId, ExtensionFeedItem extensionFeedItem) {
-    ExtensionFeedItem.Builder updatedExtensionFeedItem =
-        ExtensionFeedItem.newBuilder().setResourceName(extensionFeedItem.getResourceName());
-
-    ExtensionFeedItemOperation.Builder operation =
-        ExtensionFeedItemOperation.newBuilder()
-            .setUpdate(updatedExtensionFeedItem)
-            .setUpdateMask(FieldMasks.allSetFieldsOf(updatedExtensionFeedItem.build()));
-
-    // Clears all start and end dates to prevent the extension feed item from serving.
-    // Alternatively, remove the extension feed item completely. Note that doing so may
-    // affect this extension's reporting history.
-    // See RemoveEntireSitelinkCampaignExtensionSetting.java for an example.
-    // Note also that we must explicitly add the fields to the Update Mask;
-    // FieldMasks.allSetFieldsOf() won't pick up cleared fields.
-    operation.getUpdateMaskBuilder().addPaths("start_date_time");
-    operation.getUpdateMaskBuilder().addPaths("end_date_time");
-    operation.getUpdateMaskBuilder().addPaths("promotion_feed_item.promotion_start_date");
-    operation.getUpdateMaskBuilder().addPaths("promotion_feed_item.promotion_end_date");
-
-    try (ExtensionFeedItemServiceClient client =
-        googleAdsClient.getLatestVersion().createExtensionFeedItemServiceClient()) {
-      // Issues the request to disable the extension feed item and report success.
-      MutateExtensionFeedItemsResponse response =
-          client.mutateExtensionFeedItems(
-              String.valueOf(customerId), ImmutableList.of(operation.build()));
-      System.out.println(
-          "Cleared serving dates for extension feed item "
-              + response.getResults(0).getResourceName());
-    }
-  }
-  // [END migrate_promotion_feed_to_asset_3]
 }
