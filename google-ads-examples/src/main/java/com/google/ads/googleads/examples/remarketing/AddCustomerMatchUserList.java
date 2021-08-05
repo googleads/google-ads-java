@@ -260,6 +260,7 @@ public class AddCustomerMatchUserList {
       throw new RuntimeException("Missing SHA-256 algorithm implementation", e);
     }
 
+    // [START add_customer_match_user_list_2]
     // Creates the first user data based on an email address.
     UserData userDataWithEmailAddress =
         UserData.newBuilder()
@@ -280,6 +281,7 @@ public class AddCustomerMatchUserList {
                             .setCountryCode("US")
                             .setPostalCode("10011")))
             .build();
+    // [END add_customer_match_user_list_2]
 
     // Creates the operations to add the two users.
     List<OfflineUserDataJobOperation> operations = new ArrayList<>();
