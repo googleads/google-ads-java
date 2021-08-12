@@ -586,7 +586,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * The conversion action to attribute a call conversion to. If not set a
    * default conversion action is used. This field only has effect if
-   * call_tracked is set to true. Otherwise this field is ignored.
+   * `call_tracked` is set to `true`. Otherwise this field is ignored.
    * </pre>
    *
    * <code>string conversion_action = 9;</code>
@@ -609,7 +609,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * The conversion action to attribute a call conversion to. If not set a
    * default conversion action is used. This field only has effect if
-   * call_tracked is set to true. Otherwise this field is ignored.
+   * `call_tracked` is set to `true`. Otherwise this field is ignored.
    * </pre>
    *
    * <code>string conversion_action = 9;</code>
@@ -663,8 +663,7 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object path1_;
   /**
    * <pre>
-   * First part of text that may appear appended to the url displayed to in
-   * the ad. Optional.
+   * First part of text that can be appended to the URL in the ad. Optional.
    * </pre>
    *
    * <code>string path1 = 13;</code>
@@ -685,8 +684,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * First part of text that may appear appended to the url displayed to in
-   * the ad. Optional.
+   * First part of text that can be appended to the URL in the ad. Optional.
    * </pre>
    *
    * <code>string path1 = 13;</code>
@@ -711,8 +709,8 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object path2_;
   /**
    * <pre>
-   * Second part of text that may appear appended to the url displayed to in
-   * the ad. This field can only be set when path1 is set. Optional.
+   * Second part of text that can be appended to the URL in the ad. This field
+   * can only be set when `path1` is also set. Optional.
    * </pre>
    *
    * <code>string path2 = 14;</code>
@@ -733,8 +731,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Second part of text that may appear appended to the url displayed to in
-   * the ad. This field can only be set when path1 is set. Optional.
+   * Second part of text that can be appended to the URL in the ad. This field
+   * can only be set when `path1` is also set. Optional.
    * </pre>
    *
    * <code>string path2 = 14;</code>
@@ -2154,7 +2152,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The conversion action to attribute a call conversion to. If not set a
      * default conversion action is used. This field only has effect if
-     * call_tracked is set to true. Otherwise this field is ignored.
+     * `call_tracked` is set to `true`. Otherwise this field is ignored.
      * </pre>
      *
      * <code>string conversion_action = 9;</code>
@@ -2176,7 +2174,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The conversion action to attribute a call conversion to. If not set a
      * default conversion action is used. This field only has effect if
-     * call_tracked is set to true. Otherwise this field is ignored.
+     * `call_tracked` is set to `true`. Otherwise this field is ignored.
      * </pre>
      *
      * <code>string conversion_action = 9;</code>
@@ -2199,7 +2197,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The conversion action to attribute a call conversion to. If not set a
      * default conversion action is used. This field only has effect if
-     * call_tracked is set to true. Otherwise this field is ignored.
+     * `call_tracked` is set to `true`. Otherwise this field is ignored.
      * </pre>
      *
      * <code>string conversion_action = 9;</code>
@@ -2220,7 +2218,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The conversion action to attribute a call conversion to. If not set a
      * default conversion action is used. This field only has effect if
-     * call_tracked is set to true. Otherwise this field is ignored.
+     * `call_tracked` is set to `true`. Otherwise this field is ignored.
      * </pre>
      *
      * <code>string conversion_action = 9;</code>
@@ -2236,7 +2234,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The conversion action to attribute a call conversion to. If not set a
      * default conversion action is used. This field only has effect if
-     * call_tracked is set to true. Otherwise this field is ignored.
+     * `call_tracked` is set to `true`. Otherwise this field is ignored.
      * </pre>
      *
      * <code>string conversion_action = 9;</code>
@@ -2337,8 +2335,7 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object path1_ = "";
     /**
      * <pre>
-     * First part of text that may appear appended to the url displayed to in
-     * the ad. Optional.
+     * First part of text that can be appended to the URL in the ad. Optional.
      * </pre>
      *
      * <code>string path1 = 13;</code>
@@ -2358,8 +2355,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * First part of text that may appear appended to the url displayed to in
-     * the ad. Optional.
+     * First part of text that can be appended to the URL in the ad. Optional.
      * </pre>
      *
      * <code>string path1 = 13;</code>
@@ -2380,8 +2376,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * First part of text that may appear appended to the url displayed to in
-     * the ad. Optional.
+     * First part of text that can be appended to the URL in the ad. Optional.
      * </pre>
      *
      * <code>string path1 = 13;</code>
@@ -2400,8 +2395,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * First part of text that may appear appended to the url displayed to in
-     * the ad. Optional.
+     * First part of text that can be appended to the URL in the ad. Optional.
      * </pre>
      *
      * <code>string path1 = 13;</code>
@@ -2415,8 +2409,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * First part of text that may appear appended to the url displayed to in
-     * the ad. Optional.
+     * First part of text that can be appended to the URL in the ad. Optional.
      * </pre>
      *
      * <code>string path1 = 13;</code>
@@ -2438,8 +2431,8 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object path2_ = "";
     /**
      * <pre>
-     * Second part of text that may appear appended to the url displayed to in
-     * the ad. This field can only be set when path1 is set. Optional.
+     * Second part of text that can be appended to the URL in the ad. This field
+     * can only be set when `path1` is also set. Optional.
      * </pre>
      *
      * <code>string path2 = 14;</code>
@@ -2459,8 +2452,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Second part of text that may appear appended to the url displayed to in
-     * the ad. This field can only be set when path1 is set. Optional.
+     * Second part of text that can be appended to the URL in the ad. This field
+     * can only be set when `path1` is also set. Optional.
      * </pre>
      *
      * <code>string path2 = 14;</code>
@@ -2481,8 +2474,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Second part of text that may appear appended to the url displayed to in
-     * the ad. This field can only be set when path1 is set. Optional.
+     * Second part of text that can be appended to the URL in the ad. This field
+     * can only be set when `path1` is also set. Optional.
      * </pre>
      *
      * <code>string path2 = 14;</code>
@@ -2501,8 +2494,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Second part of text that may appear appended to the url displayed to in
-     * the ad. This field can only be set when path1 is set. Optional.
+     * Second part of text that can be appended to the URL in the ad. This field
+     * can only be set when `path1` is also set. Optional.
      * </pre>
      *
      * <code>string path2 = 14;</code>
@@ -2516,8 +2509,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Second part of text that may appear appended to the url displayed to in
-     * the ad. This field can only be set when path1 is set. Optional.
+     * Second part of text that can be appended to the URL in the ad. This field
+     * can only be set when `path1` is also set. Optional.
      * </pre>
      *
      * <code>string path2 = 14;</code>

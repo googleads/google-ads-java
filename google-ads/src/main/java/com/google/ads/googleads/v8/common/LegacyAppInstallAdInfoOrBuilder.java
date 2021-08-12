@@ -9,7 +9,7 @@ public interface LegacyAppInstallAdInfoOrBuilder extends
 
   /**
    * <pre>
-   * The id of the mobile app.
+   * The ID of the mobile app.
    * </pre>
    *
    * <code>string app_id = 6;</code>
@@ -18,7 +18,7 @@ public interface LegacyAppInstallAdInfoOrBuilder extends
   boolean hasAppId();
   /**
    * <pre>
-   * The id of the mobile app.
+   * The ID of the mobile app.
    * </pre>
    *
    * <code>string app_id = 6;</code>
@@ -27,7 +27,7 @@ public interface LegacyAppInstallAdInfoOrBuilder extends
   java.lang.String getAppId();
   /**
    * <pre>
-   * The id of the mobile app.
+   * The ID of the mobile app.
    * </pre>
    *
    * <code>string app_id = 6;</code>

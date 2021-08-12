@@ -85,102 +85,108 @@ public final class ConversionUploadServiceProto {
     java.lang.String[] descriptorData = {
       "\n@google/ads/googleads/v8/services/conve" +
       "rsion_upload_service.proto\022 google.ads.g" +
-      "oogleads.v8.services\032\034google/api/annotat" +
-      "ions.proto\032\027google/api/client.proto\032\037goo" +
-      "gle/api/field_behavior.proto\032\031google/api" +
-      "/resource.proto\032\027google/rpc/status.proto" +
-      "\"\273\001\n\035UploadClickConversionsRequest\022\030\n\013cu" +
-      "stomer_id\030\001 \001(\tB\003\340A\002\022K\n\013conversions\030\002 \003(" +
-      "\01321.google.ads.googleads.v8.services.Cli" +
-      "ckConversionB\003\340A\002\022\034\n\017partial_failure\030\003 \001" +
-      "(\010B\003\340A\002\022\025\n\rvalidate_only\030\004 \001(\010\"\235\001\n\036Uploa" +
-      "dClickConversionsResponse\0221\n\025partial_fai" +
-      "lure_error\030\001 \001(\0132\022.google.rpc.Status\022H\n\007" +
-      "results\030\002 \003(\01327.google.ads.googleads.v8." +
-      "services.ClickConversionResult\"\271\001\n\034Uploa" +
-      "dCallConversionsRequest\022\030\n\013customer_id\030\001" +
-      " \001(\tB\003\340A\002\022J\n\013conversions\030\002 \003(\01320.google." +
-      "ads.googleads.v8.services.CallConversion" +
-      "B\003\340A\002\022\034\n\017partial_failure\030\003 \001(\010B\003\340A\002\022\025\n\rv" +
-      "alidate_only\030\004 \001(\010\"\233\001\n\035UploadCallConvers" +
-      "ionsResponse\0221\n\025partial_failure_error\030\001 " +
-      "\001(\0132\022.google.rpc.Status\022G\n\007results\030\002 \003(\013" +
-      "26.google.ads.googleads.v8.services.Call" +
-      "ConversionResult\"\220\004\n\017ClickConversion\022\022\n\005" +
-      "gclid\030\t \001(\tH\000\210\001\001\022\036\n\021conversion_action\030\n " +
-      "\001(\tH\001\210\001\001\022!\n\024conversion_date_time\030\013 \001(\tH\002" +
-      "\210\001\001\022\035\n\020conversion_value\030\014 \001(\001H\003\210\001\001\022\032\n\rcu" +
-      "rrency_code\030\r \001(\tH\004\210\001\001\022\025\n\010order_id\030\016 \001(\t" +
-      "H\005\210\001\001\022\\\n\031external_attribution_data\030\007 \001(\013" +
-      "29.google.ads.googleads.v8.services.Exte" +
-      "rnalAttributionData\022J\n\020custom_variables\030" +
-      "\017 \003(\01320.google.ads.googleads.v8.services" +
-      ".CustomVariable\022=\n\tcart_data\030\020 \001(\0132*.goo" +
-      "gle.ads.googleads.v8.services.CartDataB\010" +
-      "\n\006_gclidB\024\n\022_conversion_actionB\027\n\025_conve" +
-      "rsion_date_timeB\023\n\021_conversion_valueB\020\n\016" +
-      "_currency_codeB\013\n\t_order_id\"\222\003\n\016CallConv" +
-      "ersion\022\026\n\tcaller_id\030\007 \001(\tH\000\210\001\001\022!\n\024call_s" +
-      "tart_date_time\030\010 \001(\tH\001\210\001\001\022\036\n\021conversion_" +
-      "action\030\t \001(\tH\002\210\001\001\022!\n\024conversion_date_tim" +
-      "e\030\n \001(\tH\003\210\001\001\022\035\n\020conversion_value\030\013 \001(\001H\004" +
-      "\210\001\001\022\032\n\rcurrency_code\030\014 \001(\tH\005\210\001\001\022J\n\020custo" +
-      "m_variables\030\r \003(\01320.google.ads.googleads" +
-      ".v8.services.CustomVariableB\014\n\n_caller_i" +
-      "dB\027\n\025_call_start_date_timeB\024\n\022_conversio" +
-      "n_actionB\027\n\025_conversion_date_timeB\023\n\021_co" +
-      "nversion_valueB\020\n\016_currency_code\"\253\001\n\027Ext" +
-      "ernalAttributionData\022(\n\033external_attribu" +
-      "tion_credit\030\003 \001(\001H\000\210\001\001\022\'\n\032external_attri" +
-      "bution_model\030\004 \001(\tH\001\210\001\001B\036\n\034_external_att" +
-      "ribution_creditB\035\n\033_external_attribution" +
-      "_model\"\247\001\n\025ClickConversionResult\022\022\n\005gcli" +
-      "d\030\004 \001(\tH\000\210\001\001\022\036\n\021conversion_action\030\005 \001(\tH" +
-      "\001\210\001\001\022!\n\024conversion_date_time\030\006 \001(\tH\002\210\001\001B" +
-      "\010\n\006_gclidB\024\n\022_conversion_actionB\027\n\025_conv" +
-      "ersion_date_time\"\352\001\n\024CallConversionResul" +
-      "t\022\026\n\tcaller_id\030\005 \001(\tH\000\210\001\001\022!\n\024call_start_" +
-      "date_time\030\006 \001(\tH\001\210\001\001\022\036\n\021conversion_actio" +
-      "n\030\007 \001(\tH\002\210\001\001\022!\n\024conversion_date_time\030\010 \001" +
-      "(\tH\003\210\001\001B\014\n\n_caller_idB\027\n\025_call_start_dat" +
-      "e_timeB\024\n\022_conversion_actionB\027\n\025_convers" +
-      "ion_date_time\"{\n\016CustomVariable\022Z\n\032conve" +
-      "rsion_custom_variable\030\001 \001(\tB6\372A3\n1google" +
-      "ads.googleapis.com/ConversionCustomVaria" +
-      "ble\022\r\n\005value\030\002 \001(\t\"\370\001\n\010CartData\022\023\n\013merch" +
-      "ant_id\030\001 \001(\t\022\031\n\021feed_country_code\030\002 \001(\t\022" +
-      "\032\n\022feed_language_code\030\003 \001(\t\022\036\n\026local_tra" +
-      "nsaction_cost\030\004 \001(\001\022>\n\005items\030\005 \003(\0132/.goo" +
-      "gle.ads.googleads.v8.services.CartData.I" +
-      "tem\032@\n\004Item\022\022\n\nproduct_id\030\001 \001(\t\022\020\n\010quant" +
-      "ity\030\002 \001(\005\022\022\n\nunit_price\030\003 \001(\0012\356\004\n\027Conver" +
-      "sionUploadService\022\206\002\n\026UploadClickConvers" +
-      "ions\022?.google.ads.googleads.v8.services." +
-      "UploadClickConversionsRequest\032@.google.a" +
-      "ds.googleads.v8.services.UploadClickConv" +
-      "ersionsResponse\"i\202\323\344\223\0029\"4/v8/customers/{" +
-      "customer_id=*}:uploadClickConversions:\001*" +
-      "\332A\'customer_id,conversions,partial_failu" +
-      "re\022\202\002\n\025UploadCallConversions\022>.google.ad" +
-      "s.googleads.v8.services.UploadCallConver" +
-      "sionsRequest\032?.google.ads.googleads.v8.s" +
-      "ervices.UploadCallConversionsResponse\"h\202" +
-      "\323\344\223\0028\"3/v8/customers/{customer_id=*}:upl" +
-      "oadCallConversions:\001*\332A\'customer_id,conv" +
-      "ersions,partial_failure\032E\312A\030googleads.go" +
-      "ogleapis.com\322A\'https://www.googleapis.co" +
-      "m/auth/adwordsB\203\002\n$com.google.ads.google" +
-      "ads.v8.servicesB\034ConversionUploadService" +
-      "ProtoP\001ZHgoogle.golang.org/genproto/goog" +
-      "leapis/ads/googleads/v8/services;service" +
-      "s\242\002\003GAA\252\002 Google.Ads.GoogleAds.V8.Servic" +
-      "es\312\002 Google\\Ads\\GoogleAds\\V8\\Services\352\002$" +
-      "Google::Ads::GoogleAds::V8::Servicesb\006pr" +
-      "oto3"
+      "oogleads.v8.services\0326google/ads/googlea" +
+      "ds/v8/common/offline_user_data.proto\032\034go" +
+      "ogle/api/annotations.proto\032\027google/api/c" +
+      "lient.proto\032\037google/api/field_behavior.p" +
+      "roto\032\031google/api/resource.proto\032\027google/" +
+      "rpc/status.proto\"\273\001\n\035UploadClickConversi" +
+      "onsRequest\022\030\n\013customer_id\030\001 \001(\tB\003\340A\002\022K\n\013" +
+      "conversions\030\002 \003(\01321.google.ads.googleads" +
+      ".v8.services.ClickConversionB\003\340A\002\022\034\n\017par" +
+      "tial_failure\030\003 \001(\010B\003\340A\002\022\025\n\rvalidate_only" +
+      "\030\004 \001(\010\"\235\001\n\036UploadClickConversionsRespons" +
+      "e\0221\n\025partial_failure_error\030\001 \001(\0132\022.googl" +
+      "e.rpc.Status\022H\n\007results\030\002 \003(\01327.google.a" +
+      "ds.googleads.v8.services.ClickConversion" +
+      "Result\"\271\001\n\034UploadCallConversionsRequest\022" +
+      "\030\n\013customer_id\030\001 \001(\tB\003\340A\002\022J\n\013conversions" +
+      "\030\002 \003(\01320.google.ads.googleads.v8.service" +
+      "s.CallConversionB\003\340A\002\022\034\n\017partial_failure" +
+      "\030\003 \001(\010B\003\340A\002\022\025\n\rvalidate_only\030\004 \001(\010\"\233\001\n\035U" +
+      "ploadCallConversionsResponse\0221\n\025partial_" +
+      "failure_error\030\001 \001(\0132\022.google.rpc.Status\022" +
+      "G\n\007results\030\002 \003(\01326.google.ads.googleads." +
+      "v8.services.CallConversionResult\"\332\004\n\017Cli" +
+      "ckConversion\022\022\n\005gclid\030\t \001(\tH\000\210\001\001\022\036\n\021conv" +
+      "ersion_action\030\n \001(\tH\001\210\001\001\022!\n\024conversion_d" +
+      "ate_time\030\013 \001(\tH\002\210\001\001\022\035\n\020conversion_value\030" +
+      "\014 \001(\001H\003\210\001\001\022\032\n\rcurrency_code\030\r \001(\tH\004\210\001\001\022\025" +
+      "\n\010order_id\030\016 \001(\tH\005\210\001\001\022\\\n\031external_attrib" +
+      "ution_data\030\007 \001(\01329.google.ads.googleads." +
+      "v8.services.ExternalAttributionData\022J\n\020c" +
+      "ustom_variables\030\017 \003(\01320.google.ads.googl" +
+      "eads.v8.services.CustomVariable\022=\n\tcart_" +
+      "data\030\020 \001(\0132*.google.ads.googleads.v8.ser" +
+      "vices.CartData\022H\n\020user_identifiers\030\021 \003(\013" +
+      "2..google.ads.googleads.v8.common.UserId" +
+      "entifierB\010\n\006_gclidB\024\n\022_conversion_action" +
+      "B\027\n\025_conversion_date_timeB\023\n\021_conversion" +
+      "_valueB\020\n\016_currency_codeB\013\n\t_order_id\"\222\003" +
+      "\n\016CallConversion\022\026\n\tcaller_id\030\007 \001(\tH\000\210\001\001" +
+      "\022!\n\024call_start_date_time\030\010 \001(\tH\001\210\001\001\022\036\n\021c" +
+      "onversion_action\030\t \001(\tH\002\210\001\001\022!\n\024conversio" +
+      "n_date_time\030\n \001(\tH\003\210\001\001\022\035\n\020conversion_val" +
+      "ue\030\013 \001(\001H\004\210\001\001\022\032\n\rcurrency_code\030\014 \001(\tH\005\210\001" +
+      "\001\022J\n\020custom_variables\030\r \003(\01320.google.ads" +
+      ".googleads.v8.services.CustomVariableB\014\n" +
+      "\n_caller_idB\027\n\025_call_start_date_timeB\024\n\022" +
+      "_conversion_actionB\027\n\025_conversion_date_t" +
+      "imeB\023\n\021_conversion_valueB\020\n\016_currency_co" +
+      "de\"\253\001\n\027ExternalAttributionData\022(\n\033extern" +
+      "al_attribution_credit\030\003 \001(\001H\000\210\001\001\022\'\n\032exte" +
+      "rnal_attribution_model\030\004 \001(\tH\001\210\001\001B\036\n\034_ex" +
+      "ternal_attribution_creditB\035\n\033_external_a" +
+      "ttribution_model\"\361\001\n\025ClickConversionResu" +
+      "lt\022\022\n\005gclid\030\004 \001(\tH\000\210\001\001\022\036\n\021conversion_act" +
+      "ion\030\005 \001(\tH\001\210\001\001\022!\n\024conversion_date_time\030\006" +
+      " \001(\tH\002\210\001\001\022H\n\020user_identifiers\030\007 \003(\0132..go" +
+      "ogle.ads.googleads.v8.common.UserIdentif" +
+      "ierB\010\n\006_gclidB\024\n\022_conversion_actionB\027\n\025_" +
+      "conversion_date_time\"\352\001\n\024CallConversionR" +
+      "esult\022\026\n\tcaller_id\030\005 \001(\tH\000\210\001\001\022!\n\024call_st" +
+      "art_date_time\030\006 \001(\tH\001\210\001\001\022\036\n\021conversion_a" +
+      "ction\030\007 \001(\tH\002\210\001\001\022!\n\024conversion_date_time" +
+      "\030\010 \001(\tH\003\210\001\001B\014\n\n_caller_idB\027\n\025_call_start" +
+      "_date_timeB\024\n\022_conversion_actionB\027\n\025_con" +
+      "version_date_time\"{\n\016CustomVariable\022Z\n\032c" +
+      "onversion_custom_variable\030\001 \001(\tB6\372A3\n1go" +
+      "ogleads.googleapis.com/ConversionCustomV" +
+      "ariable\022\r\n\005value\030\002 \001(\t\"\370\001\n\010CartData\022\023\n\013m" +
+      "erchant_id\030\001 \001(\t\022\031\n\021feed_country_code\030\002 " +
+      "\001(\t\022\032\n\022feed_language_code\030\003 \001(\t\022\036\n\026local" +
+      "_transaction_cost\030\004 \001(\001\022>\n\005items\030\005 \003(\0132/" +
+      ".google.ads.googleads.v8.services.CartDa" +
+      "ta.Item\032@\n\004Item\022\022\n\nproduct_id\030\001 \001(\t\022\020\n\010q" +
+      "uantity\030\002 \001(\005\022\022\n\nunit_price\030\003 \001(\0012\356\004\n\027Co" +
+      "nversionUploadService\022\206\002\n\026UploadClickCon" +
+      "versions\022?.google.ads.googleads.v8.servi" +
+      "ces.UploadClickConversionsRequest\032@.goog" +
+      "le.ads.googleads.v8.services.UploadClick" +
+      "ConversionsResponse\"i\202\323\344\223\0029\"4/v8/custome" +
+      "rs/{customer_id=*}:uploadClickConversion" +
+      "s:\001*\332A\'customer_id,conversions,partial_f" +
+      "ailure\022\202\002\n\025UploadCallConversions\022>.googl" +
+      "e.ads.googleads.v8.services.UploadCallCo" +
+      "nversionsRequest\032?.google.ads.googleads." +
+      "v8.services.UploadCallConversionsRespons" +
+      "e\"h\202\323\344\223\0028\"3/v8/customers/{customer_id=*}" +
+      ":uploadCallConversions:\001*\332A\'customer_id," +
+      "conversions,partial_failure\032E\312A\030googlead" +
+      "s.googleapis.com\322A\'https://www.googleapi" +
+      "s.com/auth/adwordsB\203\002\n$com.google.ads.go" +
+      "ogleads.v8.servicesB\034ConversionUploadSer" +
+      "viceProtoP\001ZHgoogle.golang.org/genproto/" +
+      "googleapis/ads/googleads/v8/services;ser" +
+      "vices\242\002\003GAA\252\002 Google.Ads.GoogleAds.V8.Se" +
+      "rvices\312\002 Google\\Ads\\GoogleAds\\V8\\Service" +
+      "s\352\002$Google::Ads::GoogleAds::V8::Services" +
+      "b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          com.google.ads.googleads.v8.common.OfflineUserDataProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
           com.google.api.ClientProto.getDescriptor(),
           com.google.api.FieldBehaviorProto.getDescriptor(),
@@ -216,7 +222,7 @@ public final class ConversionUploadServiceProto {
     internal_static_google_ads_googleads_v8_services_ClickConversion_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v8_services_ClickConversion_descriptor,
-        new java.lang.String[] { "Gclid", "ConversionAction", "ConversionDateTime", "ConversionValue", "CurrencyCode", "OrderId", "ExternalAttributionData", "CustomVariables", "CartData", "Gclid", "ConversionAction", "ConversionDateTime", "ConversionValue", "CurrencyCode", "OrderId", });
+        new java.lang.String[] { "Gclid", "ConversionAction", "ConversionDateTime", "ConversionValue", "CurrencyCode", "OrderId", "ExternalAttributionData", "CustomVariables", "CartData", "UserIdentifiers", "Gclid", "ConversionAction", "ConversionDateTime", "ConversionValue", "CurrencyCode", "OrderId", });
     internal_static_google_ads_googleads_v8_services_CallConversion_descriptor =
       getDescriptor().getMessageTypes().get(5);
     internal_static_google_ads_googleads_v8_services_CallConversion_fieldAccessorTable = new
@@ -234,7 +240,7 @@ public final class ConversionUploadServiceProto {
     internal_static_google_ads_googleads_v8_services_ClickConversionResult_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v8_services_ClickConversionResult_descriptor,
-        new java.lang.String[] { "Gclid", "ConversionAction", "ConversionDateTime", "Gclid", "ConversionAction", "ConversionDateTime", });
+        new java.lang.String[] { "Gclid", "ConversionAction", "ConversionDateTime", "UserIdentifiers", "Gclid", "ConversionAction", "ConversionDateTime", });
     internal_static_google_ads_googleads_v8_services_CallConversionResult_descriptor =
       getDescriptor().getMessageTypes().get(8);
     internal_static_google_ads_googleads_v8_services_CallConversionResult_fieldAccessorTable = new
@@ -269,6 +275,7 @@ public final class ConversionUploadServiceProto {
     registry.add(com.google.api.ResourceProto.resourceReference);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
+    com.google.ads.googleads.v8.common.OfflineUserDataProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
     com.google.api.ClientProto.getDescriptor();
     com.google.api.FieldBehaviorProto.getDescriptor();

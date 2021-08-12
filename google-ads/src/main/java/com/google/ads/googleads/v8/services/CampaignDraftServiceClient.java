@@ -20,7 +20,6 @@ import com.google.ads.googleads.v8.resources.CampaignDraft;
 import com.google.ads.googleads.v8.resources.CampaignDraftName;
 import com.google.ads.googleads.v8.services.stub.CampaignDraftServiceStub;
 import com.google.ads.googleads.v8.services.stub.CampaignDraftServiceStubSettings;
-import com.google.api.core.ApiFunction;
 import com.google.api.core.ApiFuture;
 import com.google.api.core.ApiFutures;
 import com.google.api.core.BetaApi;
@@ -755,14 +754,7 @@ public class CampaignDraftServiceClient implements BackgroundResource {
               .createPageAsync(context, futureResponse);
       return ApiFutures.transform(
           futurePage,
-          new ApiFunction<
-              ListCampaignDraftAsyncErrorsPage, ListCampaignDraftAsyncErrorsPagedResponse>() {
-            @Override
-            public ListCampaignDraftAsyncErrorsPagedResponse apply(
-                ListCampaignDraftAsyncErrorsPage input) {
-              return new ListCampaignDraftAsyncErrorsPagedResponse(input);
-            }
-          },
+          input -> new ListCampaignDraftAsyncErrorsPagedResponse(input),
           MoreExecutors.directExecutor());
     }
 

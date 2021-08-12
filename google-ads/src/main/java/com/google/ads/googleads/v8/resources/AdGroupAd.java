@@ -24,6 +24,7 @@ private static final long serialVersionUID = 0L;
     status_ = 0;
     adGroup_ = "";
     adStrength_ = 0;
+    actionItems_ = com.google.protobuf.LazyStringArrayList.EMPTY;
     labels_ = com.google.protobuf.LazyStringArrayList.EMPTY;
   }
 
@@ -110,11 +111,20 @@ private static final long serialVersionUID = 0L;
           }
           case 82: {
             java.lang.String s = input.readStringRequireUtf8();
-            if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+            if (!((mutable_bitField0_ & 0x00000004) != 0)) {
               labels_ = new com.google.protobuf.LazyStringArrayList();
-              mutable_bitField0_ |= 0x00000002;
+              mutable_bitField0_ |= 0x00000004;
             }
             labels_.add(s);
+            break;
+          }
+          case 106: {
+            java.lang.String s = input.readStringRequireUtf8();
+            if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+              actionItems_ = new com.google.protobuf.LazyStringArrayList();
+              mutable_bitField0_ |= 0x00000002;
+            }
+            actionItems_.add(s);
             break;
           }
           default: {
@@ -132,8 +142,11 @@ private static final long serialVersionUID = 0L;
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
     } finally {
-      if (((mutable_bitField0_ & 0x00000002) != 0)) {
+      if (((mutable_bitField0_ & 0x00000004) != 0)) {
         labels_ = labels_.getUnmodifiableView();
+      }
+      if (((mutable_bitField0_ & 0x00000002) != 0)) {
+        actionItems_ = actionItems_.getUnmodifiableView();
       }
       this.unknownFields = unknownFields.build();
       makeExtensionsImmutable();
@@ -391,6 +404,65 @@ private static final long serialVersionUID = 0L;
     return result == null ? com.google.ads.googleads.v8.enums.AdStrengthEnum.AdStrength.UNRECOGNIZED : result;
   }
 
+  public static final int ACTION_ITEMS_FIELD_NUMBER = 13;
+  private com.google.protobuf.LazyStringList actionItems_;
+  /**
+   * <pre>
+   * Output only. A list of recommendations to improve the ad strength. For example, a
+   * recommendation could be "Your headlines are a little too similar.
+   * Try adding more distinct headlines.".
+   * </pre>
+   *
+   * <code>repeated string action_items = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return A list containing the actionItems.
+   */
+  public com.google.protobuf.ProtocolStringList
+      getActionItemsList() {
+    return actionItems_;
+  }
+  /**
+   * <pre>
+   * Output only. A list of recommendations to improve the ad strength. For example, a
+   * recommendation could be "Your headlines are a little too similar.
+   * Try adding more distinct headlines.".
+   * </pre>
+   *
+   * <code>repeated string action_items = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The count of actionItems.
+   */
+  public int getActionItemsCount() {
+    return actionItems_.size();
+  }
+  /**
+   * <pre>
+   * Output only. A list of recommendations to improve the ad strength. For example, a
+   * recommendation could be "Your headlines are a little too similar.
+   * Try adding more distinct headlines.".
+   * </pre>
+   *
+   * <code>repeated string action_items = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @param index The index of the element to return.
+   * @return The actionItems at the given index.
+   */
+  public java.lang.String getActionItems(int index) {
+    return actionItems_.get(index);
+  }
+  /**
+   * <pre>
+   * Output only. A list of recommendations to improve the ad strength. For example, a
+   * recommendation could be "Your headlines are a little too similar.
+   * Try adding more distinct headlines.".
+   * </pre>
+   *
+   * <code>repeated string action_items = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @param index The index of the value to return.
+   * @return The bytes of the actionItems at the given index.
+   */
+  public com.google.protobuf.ByteString
+      getActionItemsBytes(int index) {
+    return actionItems_.getByteString(index);
+  }
+
   public static final int LABELS_FIELD_NUMBER = 10;
   private com.google.protobuf.LazyStringList labels_;
   /**
@@ -477,6 +549,9 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < labels_.size(); i++) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 10, labels_.getRaw(i));
     }
+    for (int i = 0; i < actionItems_.size(); i++) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 13, actionItems_.getRaw(i));
+    }
     unknownFields.writeTo(output);
   }
 
@@ -516,6 +591,14 @@ private static final long serialVersionUID = 0L;
       size += dataSize;
       size += 1 * getLabelsList().size();
     }
+    {
+      int dataSize = 0;
+      for (int i = 0; i < actionItems_.size(); i++) {
+        dataSize += computeStringSizeNoTag(actionItems_.getRaw(i));
+      }
+      size += dataSize;
+      size += 1 * getActionItemsList().size();
+    }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
@@ -550,6 +633,8 @@ private static final long serialVersionUID = 0L;
           .equals(other.getPolicySummary())) return false;
     }
     if (adStrength_ != other.adStrength_) return false;
+    if (!getActionItemsList()
+        .equals(other.getActionItemsList())) return false;
     if (!getLabelsList()
         .equals(other.getLabelsList())) return false;
     if (!unknownFields.equals(other.unknownFields)) return false;
@@ -581,6 +666,10 @@ private static final long serialVersionUID = 0L;
     }
     hash = (37 * hash) + AD_STRENGTH_FIELD_NUMBER;
     hash = (53 * hash) + adStrength_;
+    if (getActionItemsCount() > 0) {
+      hash = (37 * hash) + ACTION_ITEMS_FIELD_NUMBER;
+      hash = (53 * hash) + getActionItemsList().hashCode();
+    }
     if (getLabelsCount() > 0) {
       hash = (37 * hash) + LABELS_FIELD_NUMBER;
       hash = (53 * hash) + getLabelsList().hashCode();
@@ -742,8 +831,10 @@ private static final long serialVersionUID = 0L;
       }
       adStrength_ = 0;
 
-      labels_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      actionItems_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       bitField0_ = (bitField0_ & ~0x00000002);
+      labels_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      bitField0_ = (bitField0_ & ~0x00000004);
       return this;
     }
 
@@ -790,8 +881,13 @@ private static final long serialVersionUID = 0L;
       }
       result.adStrength_ = adStrength_;
       if (((bitField0_ & 0x00000002) != 0)) {
-        labels_ = labels_.getUnmodifiableView();
+        actionItems_ = actionItems_.getUnmodifiableView();
         bitField0_ = (bitField0_ & ~0x00000002);
+      }
+      result.actionItems_ = actionItems_;
+      if (((bitField0_ & 0x00000004) != 0)) {
+        labels_ = labels_.getUnmodifiableView();
+        bitField0_ = (bitField0_ & ~0x00000004);
       }
       result.labels_ = labels_;
       result.bitField0_ = to_bitField0_;
@@ -864,10 +960,20 @@ private static final long serialVersionUID = 0L;
       if (other.adStrength_ != 0) {
         setAdStrengthValue(other.getAdStrengthValue());
       }
+      if (!other.actionItems_.isEmpty()) {
+        if (actionItems_.isEmpty()) {
+          actionItems_ = other.actionItems_;
+          bitField0_ = (bitField0_ & ~0x00000002);
+        } else {
+          ensureActionItemsIsMutable();
+          actionItems_.addAll(other.actionItems_);
+        }
+        onChanged();
+      }
       if (!other.labels_.isEmpty()) {
         if (labels_.isEmpty()) {
           labels_ = other.labels_;
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000004);
         } else {
           ensureLabelsIsMutable();
           labels_.addAll(other.labels_);
@@ -1575,11 +1681,175 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
+    private com.google.protobuf.LazyStringList actionItems_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    private void ensureActionItemsIsMutable() {
+      if (!((bitField0_ & 0x00000002) != 0)) {
+        actionItems_ = new com.google.protobuf.LazyStringArrayList(actionItems_);
+        bitField0_ |= 0x00000002;
+       }
+    }
+    /**
+     * <pre>
+     * Output only. A list of recommendations to improve the ad strength. For example, a
+     * recommendation could be "Your headlines are a little too similar.
+     * Try adding more distinct headlines.".
+     * </pre>
+     *
+     * <code>repeated string action_items = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return A list containing the actionItems.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getActionItemsList() {
+      return actionItems_.getUnmodifiableView();
+    }
+    /**
+     * <pre>
+     * Output only. A list of recommendations to improve the ad strength. For example, a
+     * recommendation could be "Your headlines are a little too similar.
+     * Try adding more distinct headlines.".
+     * </pre>
+     *
+     * <code>repeated string action_items = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The count of actionItems.
+     */
+    public int getActionItemsCount() {
+      return actionItems_.size();
+    }
+    /**
+     * <pre>
+     * Output only. A list of recommendations to improve the ad strength. For example, a
+     * recommendation could be "Your headlines are a little too similar.
+     * Try adding more distinct headlines.".
+     * </pre>
+     *
+     * <code>repeated string action_items = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @param index The index of the element to return.
+     * @return The actionItems at the given index.
+     */
+    public java.lang.String getActionItems(int index) {
+      return actionItems_.get(index);
+    }
+    /**
+     * <pre>
+     * Output only. A list of recommendations to improve the ad strength. For example, a
+     * recommendation could be "Your headlines are a little too similar.
+     * Try adding more distinct headlines.".
+     * </pre>
+     *
+     * <code>repeated string action_items = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the actionItems at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getActionItemsBytes(int index) {
+      return actionItems_.getByteString(index);
+    }
+    /**
+     * <pre>
+     * Output only. A list of recommendations to improve the ad strength. For example, a
+     * recommendation could be "Your headlines are a little too similar.
+     * Try adding more distinct headlines.".
+     * </pre>
+     *
+     * <code>repeated string action_items = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @param index The index to set the value at.
+     * @param value The actionItems to set.
+     * @return This builder for chaining.
+     */
+    public Builder setActionItems(
+        int index, java.lang.String value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureActionItemsIsMutable();
+      actionItems_.set(index, value);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Output only. A list of recommendations to improve the ad strength. For example, a
+     * recommendation could be "Your headlines are a little too similar.
+     * Try adding more distinct headlines.".
+     * </pre>
+     *
+     * <code>repeated string action_items = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @param value The actionItems to add.
+     * @return This builder for chaining.
+     */
+    public Builder addActionItems(
+        java.lang.String value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureActionItemsIsMutable();
+      actionItems_.add(value);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Output only. A list of recommendations to improve the ad strength. For example, a
+     * recommendation could be "Your headlines are a little too similar.
+     * Try adding more distinct headlines.".
+     * </pre>
+     *
+     * <code>repeated string action_items = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @param values The actionItems to add.
+     * @return This builder for chaining.
+     */
+    public Builder addAllActionItems(
+        java.lang.Iterable<java.lang.String> values) {
+      ensureActionItemsIsMutable();
+      com.google.protobuf.AbstractMessageLite.Builder.addAll(
+          values, actionItems_);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Output only. A list of recommendations to improve the ad strength. For example, a
+     * recommendation could be "Your headlines are a little too similar.
+     * Try adding more distinct headlines.".
+     * </pre>
+     *
+     * <code>repeated string action_items = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearActionItems() {
+      actionItems_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      bitField0_ = (bitField0_ & ~0x00000002);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Output only. A list of recommendations to improve the ad strength. For example, a
+     * recommendation could be "Your headlines are a little too similar.
+     * Try adding more distinct headlines.".
+     * </pre>
+     *
+     * <code>repeated string action_items = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @param value The bytes of the actionItems to add.
+     * @return This builder for chaining.
+     */
+    public Builder addActionItemsBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      ensureActionItemsIsMutable();
+      actionItems_.add(value);
+      onChanged();
+      return this;
+    }
+
     private com.google.protobuf.LazyStringList labels_ = com.google.protobuf.LazyStringArrayList.EMPTY;
     private void ensureLabelsIsMutable() {
-      if (!((bitField0_ & 0x00000002) != 0)) {
+      if (!((bitField0_ & 0x00000004) != 0)) {
         labels_ = new com.google.protobuf.LazyStringArrayList(labels_);
-        bitField0_ |= 0x00000002;
+        bitField0_ |= 0x00000004;
        }
     }
     /**
@@ -1696,7 +1966,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearLabels() {
       labels_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000002);
+      bitField0_ = (bitField0_ & ~0x00000004);
       onChanged();
       return this;
     }

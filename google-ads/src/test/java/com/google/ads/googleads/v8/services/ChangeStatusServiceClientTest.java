@@ -17,17 +17,23 @@
 package com.google.ads.googleads.v8.services;
 
 import com.google.ads.googleads.v8.resources.AdGroupAdName;
+import com.google.ads.googleads.v8.resources.AdGroupAssetName;
 import com.google.ads.googleads.v8.resources.AdGroupBidModifierName;
 import com.google.ads.googleads.v8.resources.AdGroupCriterionName;
 import com.google.ads.googleads.v8.resources.AdGroupFeedName;
 import com.google.ads.googleads.v8.resources.AdGroupName;
+import com.google.ads.googleads.v8.resources.AssetName;
+import com.google.ads.googleads.v8.resources.CampaignAssetName;
 import com.google.ads.googleads.v8.resources.CampaignCriterionName;
 import com.google.ads.googleads.v8.resources.CampaignFeedName;
 import com.google.ads.googleads.v8.resources.CampaignName;
+import com.google.ads.googleads.v8.resources.CampaignSharedSetName;
 import com.google.ads.googleads.v8.resources.ChangeStatus;
 import com.google.ads.googleads.v8.resources.ChangeStatusName;
+import com.google.ads.googleads.v8.resources.CustomerAssetName;
 import com.google.ads.googleads.v8.resources.FeedItemName;
 import com.google.ads.googleads.v8.resources.FeedName;
+import com.google.ads.googleads.v8.resources.SharedSetName;
 import com.google.api.gax.core.NoCredentialsProvider;
 import com.google.api.gax.grpc.GaxGrpcProperties;
 import com.google.api.gax.grpc.testing.LocalChannelProvider;
@@ -111,6 +117,19 @@ public class ChangeStatusServiceClientTest {
             .setAdGroupBidModifier(
                 AdGroupBidModifierName.of("[CUSTOMER_ID]", "[AD_GROUP_ID]", "[CRITERION_ID]")
                     .toString())
+            .setSharedSet(SharedSetName.of("[CUSTOMER_ID]", "[SHARED_SET_ID]").toString())
+            .setCampaignSharedSet(
+                CampaignSharedSetName.of("[CUSTOMER_ID]", "[CAMPAIGN_ID]", "[SHARED_SET_ID]")
+                    .toString())
+            .setAsset(AssetName.of("[CUSTOMER_ID]", "[ASSET_ID]").toString())
+            .setCustomerAsset(
+                CustomerAssetName.of("[CUSTOMER_ID]", "[ASSET_ID]", "[FIELD_TYPE]").toString())
+            .setCampaignAsset(
+                CampaignAssetName.of("[CUSTOMER_ID]", "[CAMPAIGN_ID]", "[ASSET_ID]", "[FIELD_TYPE]")
+                    .toString())
+            .setAdGroupAsset(
+                AdGroupAssetName.of("[CUSTOMER_ID]", "[AD_GROUP_ID]", "[ASSET_ID]", "[FIELD_TYPE]")
+                    .toString())
             .build();
     mockChangeStatusService.addResponse(expectedResponse);
 
@@ -167,6 +186,19 @@ public class ChangeStatusServiceClientTest {
                 CampaignFeedName.of("[CUSTOMER_ID]", "[CAMPAIGN_ID]", "[FEED_ID]").toString())
             .setAdGroupBidModifier(
                 AdGroupBidModifierName.of("[CUSTOMER_ID]", "[AD_GROUP_ID]", "[CRITERION_ID]")
+                    .toString())
+            .setSharedSet(SharedSetName.of("[CUSTOMER_ID]", "[SHARED_SET_ID]").toString())
+            .setCampaignSharedSet(
+                CampaignSharedSetName.of("[CUSTOMER_ID]", "[CAMPAIGN_ID]", "[SHARED_SET_ID]")
+                    .toString())
+            .setAsset(AssetName.of("[CUSTOMER_ID]", "[ASSET_ID]").toString())
+            .setCustomerAsset(
+                CustomerAssetName.of("[CUSTOMER_ID]", "[ASSET_ID]", "[FIELD_TYPE]").toString())
+            .setCampaignAsset(
+                CampaignAssetName.of("[CUSTOMER_ID]", "[CAMPAIGN_ID]", "[ASSET_ID]", "[FIELD_TYPE]")
+                    .toString())
+            .setAdGroupAsset(
+                AdGroupAssetName.of("[CUSTOMER_ID]", "[AD_GROUP_ID]", "[ASSET_ID]", "[FIELD_TYPE]")
                     .toString())
             .build();
     mockChangeStatusService.addResponse(expectedResponse);

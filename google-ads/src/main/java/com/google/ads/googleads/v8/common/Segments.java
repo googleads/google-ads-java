@@ -87,6 +87,7 @@ private static final long serialVersionUID = 0L;
     searchEngineResultsPageType_ = 0;
     searchTermMatchType_ = 0;
     slot_ = 0;
+    conversionValueRulePrimaryDimension_ = 0;
     webpage_ = "";
     week_ = "";
   }
@@ -610,6 +611,12 @@ private static final long serialVersionUID = 0L;
           case 1096: {
             bitField1_ |= 0x01000000;
             skAdNetworkConversionValue_ = input.readInt64();
+            break;
+          }
+          case 1104: {
+            int rawValue = input.readEnum();
+
+            conversionValueRulePrimaryDimension_ = rawValue;
             break;
           }
           case 1114: {
@@ -4191,6 +4198,45 @@ private static final long serialVersionUID = 0L;
     return result == null ? com.google.ads.googleads.v8.enums.SlotEnum.Slot.UNRECOGNIZED : result;
   }
 
+  public static final int CONVERSION_VALUE_RULE_PRIMARY_DIMENSION_FIELD_NUMBER = 138;
+  private int conversionValueRulePrimaryDimension_;
+  /**
+   * <pre>
+   * Primary dimension of applied conversion value rules.
+   * NO_RULE_APPLIED shows the total recorded value of conversions that
+   * do not have a value rule applied.
+   * ORIGINAL shows the original value of conversions to which a value rule
+   * has been applied.
+   * GEO_LOCATION, DEVICE, AUDIENCE show the net adjustment after value
+   * rules were applied.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v8.enums.ConversionValueRulePrimaryDimensionEnum.ConversionValueRulePrimaryDimension conversion_value_rule_primary_dimension = 138;</code>
+   * @return The enum numeric value on the wire for conversionValueRulePrimaryDimension.
+   */
+  @java.lang.Override public int getConversionValueRulePrimaryDimensionValue() {
+    return conversionValueRulePrimaryDimension_;
+  }
+  /**
+   * <pre>
+   * Primary dimension of applied conversion value rules.
+   * NO_RULE_APPLIED shows the total recorded value of conversions that
+   * do not have a value rule applied.
+   * ORIGINAL shows the original value of conversions to which a value rule
+   * has been applied.
+   * GEO_LOCATION, DEVICE, AUDIENCE show the net adjustment after value
+   * rules were applied.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v8.enums.ConversionValueRulePrimaryDimensionEnum.ConversionValueRulePrimaryDimension conversion_value_rule_primary_dimension = 138;</code>
+   * @return The conversionValueRulePrimaryDimension.
+   */
+  @java.lang.Override public com.google.ads.googleads.v8.enums.ConversionValueRulePrimaryDimensionEnum.ConversionValueRulePrimaryDimension getConversionValueRulePrimaryDimension() {
+    @SuppressWarnings("deprecation")
+    com.google.ads.googleads.v8.enums.ConversionValueRulePrimaryDimensionEnum.ConversionValueRulePrimaryDimension result = com.google.ads.googleads.v8.enums.ConversionValueRulePrimaryDimensionEnum.ConversionValueRulePrimaryDimension.valueOf(conversionValueRulePrimaryDimension_);
+    return result == null ? com.google.ads.googleads.v8.enums.ConversionValueRulePrimaryDimensionEnum.ConversionValueRulePrimaryDimension.UNRECOGNIZED : result;
+  }
+
   public static final int WEBPAGE_FIELD_NUMBER = 129;
   private volatile java.lang.Object webpage_;
   /**
@@ -4685,6 +4731,9 @@ private static final long serialVersionUID = 0L;
     if (((bitField1_ & 0x01000000) != 0)) {
       output.writeInt64(137, skAdNetworkConversionValue_);
     }
+    if (conversionValueRulePrimaryDimension_ != com.google.ads.googleads.v8.enums.ConversionValueRulePrimaryDimensionEnum.ConversionValueRulePrimaryDimension.UNSPECIFIED.getNumber()) {
+      output.writeEnum(138, conversionValueRulePrimaryDimension_);
+    }
     if (((bitField1_ & 0x02000000) != 0)) {
       output.writeMessage(139, getAssetInteractionTarget());
     }
@@ -4977,6 +5026,10 @@ private static final long serialVersionUID = 0L;
     if (((bitField1_ & 0x01000000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(137, skAdNetworkConversionValue_);
+    }
+    if (conversionValueRulePrimaryDimension_ != com.google.ads.googleads.v8.enums.ConversionValueRulePrimaryDimensionEnum.ConversionValueRulePrimaryDimension.UNSPECIFIED.getNumber()) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(138, conversionValueRulePrimaryDimension_);
     }
     if (((bitField1_ & 0x02000000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
@@ -5299,6 +5352,7 @@ private static final long serialVersionUID = 0L;
     if (searchEngineResultsPageType_ != other.searchEngineResultsPageType_) return false;
     if (searchTermMatchType_ != other.searchTermMatchType_) return false;
     if (slot_ != other.slot_) return false;
+    if (conversionValueRulePrimaryDimension_ != other.conversionValueRulePrimaryDimension_) return false;
     if (hasWebpage() != other.hasWebpage()) return false;
     if (hasWebpage()) {
       if (!getWebpage()
@@ -5607,6 +5661,8 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + searchTermMatchType_;
     hash = (37 * hash) + SLOT_FIELD_NUMBER;
     hash = (53 * hash) + slot_;
+    hash = (37 * hash) + CONVERSION_VALUE_RULE_PRIMARY_DIMENSION_FIELD_NUMBER;
+    hash = (53 * hash) + conversionValueRulePrimaryDimension_;
     if (hasWebpage()) {
       hash = (37 * hash) + WEBPAGE_FIELD_NUMBER;
       hash = (53 * hash) + getWebpage().hashCode();
@@ -5930,6 +5986,8 @@ private static final long serialVersionUID = 0L;
 
       slot_ = 0;
 
+      conversionValueRulePrimaryDimension_ = 0;
+
       webpage_ = "";
       bitField1_ = (bitField1_ & ~0x00200000);
       week_ = "";
@@ -6219,6 +6277,7 @@ private static final long serialVersionUID = 0L;
       result.searchEngineResultsPageType_ = searchEngineResultsPageType_;
       result.searchTermMatchType_ = searchTermMatchType_;
       result.slot_ = slot_;
+      result.conversionValueRulePrimaryDimension_ = conversionValueRulePrimaryDimension_;
       if (((from_bitField1_ & 0x00200000) != 0)) {
         to_bitField1_ |= 0x00200000;
       }
@@ -6614,6 +6673,9 @@ private static final long serialVersionUID = 0L;
       }
       if (other.slot_ != 0) {
         setSlotValue(other.getSlotValue());
+      }
+      if (other.conversionValueRulePrimaryDimension_ != 0) {
+        setConversionValueRulePrimaryDimensionValue(other.getConversionValueRulePrimaryDimensionValue());
       }
       if (other.hasWebpage()) {
         bitField1_ |= 0x00200000;
@@ -13946,6 +14008,110 @@ private static final long serialVersionUID = 0L;
     public Builder clearSlot() {
       
       slot_ = 0;
+      onChanged();
+      return this;
+    }
+
+    private int conversionValueRulePrimaryDimension_ = 0;
+    /**
+     * <pre>
+     * Primary dimension of applied conversion value rules.
+     * NO_RULE_APPLIED shows the total recorded value of conversions that
+     * do not have a value rule applied.
+     * ORIGINAL shows the original value of conversions to which a value rule
+     * has been applied.
+     * GEO_LOCATION, DEVICE, AUDIENCE show the net adjustment after value
+     * rules were applied.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v8.enums.ConversionValueRulePrimaryDimensionEnum.ConversionValueRulePrimaryDimension conversion_value_rule_primary_dimension = 138;</code>
+     * @return The enum numeric value on the wire for conversionValueRulePrimaryDimension.
+     */
+    @java.lang.Override public int getConversionValueRulePrimaryDimensionValue() {
+      return conversionValueRulePrimaryDimension_;
+    }
+    /**
+     * <pre>
+     * Primary dimension of applied conversion value rules.
+     * NO_RULE_APPLIED shows the total recorded value of conversions that
+     * do not have a value rule applied.
+     * ORIGINAL shows the original value of conversions to which a value rule
+     * has been applied.
+     * GEO_LOCATION, DEVICE, AUDIENCE show the net adjustment after value
+     * rules were applied.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v8.enums.ConversionValueRulePrimaryDimensionEnum.ConversionValueRulePrimaryDimension conversion_value_rule_primary_dimension = 138;</code>
+     * @param value The enum numeric value on the wire for conversionValueRulePrimaryDimension to set.
+     * @return This builder for chaining.
+     */
+    public Builder setConversionValueRulePrimaryDimensionValue(int value) {
+      
+      conversionValueRulePrimaryDimension_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Primary dimension of applied conversion value rules.
+     * NO_RULE_APPLIED shows the total recorded value of conversions that
+     * do not have a value rule applied.
+     * ORIGINAL shows the original value of conversions to which a value rule
+     * has been applied.
+     * GEO_LOCATION, DEVICE, AUDIENCE show the net adjustment after value
+     * rules were applied.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v8.enums.ConversionValueRulePrimaryDimensionEnum.ConversionValueRulePrimaryDimension conversion_value_rule_primary_dimension = 138;</code>
+     * @return The conversionValueRulePrimaryDimension.
+     */
+    @java.lang.Override
+    public com.google.ads.googleads.v8.enums.ConversionValueRulePrimaryDimensionEnum.ConversionValueRulePrimaryDimension getConversionValueRulePrimaryDimension() {
+      @SuppressWarnings("deprecation")
+      com.google.ads.googleads.v8.enums.ConversionValueRulePrimaryDimensionEnum.ConversionValueRulePrimaryDimension result = com.google.ads.googleads.v8.enums.ConversionValueRulePrimaryDimensionEnum.ConversionValueRulePrimaryDimension.valueOf(conversionValueRulePrimaryDimension_);
+      return result == null ? com.google.ads.googleads.v8.enums.ConversionValueRulePrimaryDimensionEnum.ConversionValueRulePrimaryDimension.UNRECOGNIZED : result;
+    }
+    /**
+     * <pre>
+     * Primary dimension of applied conversion value rules.
+     * NO_RULE_APPLIED shows the total recorded value of conversions that
+     * do not have a value rule applied.
+     * ORIGINAL shows the original value of conversions to which a value rule
+     * has been applied.
+     * GEO_LOCATION, DEVICE, AUDIENCE show the net adjustment after value
+     * rules were applied.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v8.enums.ConversionValueRulePrimaryDimensionEnum.ConversionValueRulePrimaryDimension conversion_value_rule_primary_dimension = 138;</code>
+     * @param value The conversionValueRulePrimaryDimension to set.
+     * @return This builder for chaining.
+     */
+    public Builder setConversionValueRulePrimaryDimension(com.google.ads.googleads.v8.enums.ConversionValueRulePrimaryDimensionEnum.ConversionValueRulePrimaryDimension value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      
+      conversionValueRulePrimaryDimension_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Primary dimension of applied conversion value rules.
+     * NO_RULE_APPLIED shows the total recorded value of conversions that
+     * do not have a value rule applied.
+     * ORIGINAL shows the original value of conversions to which a value rule
+     * has been applied.
+     * GEO_LOCATION, DEVICE, AUDIENCE show the net adjustment after value
+     * rules were applied.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v8.enums.ConversionValueRulePrimaryDimensionEnum.ConversionValueRulePrimaryDimension conversion_value_rule_primary_dimension = 138;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearConversionValueRulePrimaryDimension() {
+      
+      conversionValueRulePrimaryDimension_ = 0;
       onChanged();
       return this;
     }

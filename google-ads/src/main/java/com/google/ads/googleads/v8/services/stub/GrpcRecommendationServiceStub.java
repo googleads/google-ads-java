@@ -27,7 +27,6 @@ import com.google.api.gax.core.BackgroundResourceAggregation;
 import com.google.api.gax.grpc.GrpcCallSettings;
 import com.google.api.gax.grpc.GrpcStubCallableFactory;
 import com.google.api.gax.rpc.ClientContext;
-import com.google.api.gax.rpc.RequestParamsExtractor;
 import com.google.api.gax.rpc.UnaryCallable;
 import com.google.common.collect.ImmutableMap;
 import com.google.longrunning.stub.GrpcOperationsStub;
@@ -135,13 +134,10 @@ public class GrpcRecommendationServiceStub extends RecommendationServiceStub {
         GrpcCallSettings.<GetRecommendationRequest, Recommendation>newBuilder()
             .setMethodDescriptor(getRecommendationMethodDescriptor)
             .setParamsExtractor(
-                new RequestParamsExtractor<GetRecommendationRequest>() {
-                  @Override
-                  public Map<String, String> extract(GetRecommendationRequest request) {
-                    ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
-                    params.put("resource_name", String.valueOf(request.getResourceName()));
-                    return params.build();
-                  }
+                request -> {
+                  ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
+                  params.put("resource_name", String.valueOf(request.getResourceName()));
+                  return params.build();
                 })
             .build();
     GrpcCallSettings<ApplyRecommendationRequest, ApplyRecommendationResponse>
@@ -149,13 +145,10 @@ public class GrpcRecommendationServiceStub extends RecommendationServiceStub {
             GrpcCallSettings.<ApplyRecommendationRequest, ApplyRecommendationResponse>newBuilder()
                 .setMethodDescriptor(applyRecommendationMethodDescriptor)
                 .setParamsExtractor(
-                    new RequestParamsExtractor<ApplyRecommendationRequest>() {
-                      @Override
-                      public Map<String, String> extract(ApplyRecommendationRequest request) {
-                        ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
-                        params.put("customer_id", String.valueOf(request.getCustomerId()));
-                        return params.build();
-                      }
+                    request -> {
+                      ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
+                      params.put("customer_id", String.valueOf(request.getCustomerId()));
+                      return params.build();
                     })
                 .build();
     GrpcCallSettings<DismissRecommendationRequest, DismissRecommendationResponse>
@@ -164,13 +157,10 @@ public class GrpcRecommendationServiceStub extends RecommendationServiceStub {
                 .<DismissRecommendationRequest, DismissRecommendationResponse>newBuilder()
                 .setMethodDescriptor(dismissRecommendationMethodDescriptor)
                 .setParamsExtractor(
-                    new RequestParamsExtractor<DismissRecommendationRequest>() {
-                      @Override
-                      public Map<String, String> extract(DismissRecommendationRequest request) {
-                        ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
-                        params.put("customer_id", String.valueOf(request.getCustomerId()));
-                        return params.build();
-                      }
+                    request -> {
+                      ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
+                      params.put("customer_id", String.valueOf(request.getCustomerId()));
+                      return params.build();
                     })
                 .build();
 
@@ -217,7 +207,13 @@ public class GrpcRecommendationServiceStub extends RecommendationServiceStub {
 
   @Override
   public final void close() {
-    shutdown();
+    try {
+      backgroundResources.close();
+    } catch (RuntimeException e) {
+      throw e;
+    } catch (Exception e) {
+      throw new IllegalStateException("Failed to close resource", e);
+    }
   }
 
   @Override

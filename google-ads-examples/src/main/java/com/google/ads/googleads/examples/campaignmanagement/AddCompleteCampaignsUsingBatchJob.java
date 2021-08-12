@@ -208,6 +208,12 @@ public class AddCompleteCampaignsUsingBatchJob {
       BatchJobServiceClient batchJobServiceClient, String batchJobResourceName) {
     OperationFuture operationResponse =
         batchJobServiceClient.runBatchJobAsync(batchJobResourceName);
+
+    // BEWARE! The above call returns an OperationFuture. The execution of that future depends on
+    // the thread pool which is owned by batchJobServiceClient. If you use this future, you *must*
+    // keep the service client in scope too.
+    // See https://developers.google.com/google-ads/api/docs/client-libs/java/lro for more detail.
+
     System.out.printf(
         "Mutate job with resource name '%s' has been executed.%n", batchJobResourceName);
 

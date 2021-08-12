@@ -256,10 +256,10 @@ public class FeedItemSetLinkName implements ResourceName {
     }
 
     private Builder(FeedItemSetLinkName feedItemSetLinkName) {
-      customerId = feedItemSetLinkName.customerId;
-      feedId = feedItemSetLinkName.feedId;
-      feedItemSetId = feedItemSetLinkName.feedItemSetId;
-      feedItemId = feedItemSetLinkName.feedItemId;
+      this.customerId = feedItemSetLinkName.customerId;
+      this.feedId = feedItemSetLinkName.feedId;
+      this.feedItemSetId = feedItemSetLinkName.feedItemSetId;
+      this.feedItemId = feedItemSetLinkName.feedItemId;
     }
 
     public FeedItemSetLinkName build() {

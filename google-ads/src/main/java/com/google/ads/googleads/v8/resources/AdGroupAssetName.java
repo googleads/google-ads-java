@@ -253,10 +253,10 @@ public class AdGroupAssetName implements ResourceName {
     }
 
     private Builder(AdGroupAssetName adGroupAssetName) {
-      customerId = adGroupAssetName.customerId;
-      adGroupId = adGroupAssetName.adGroupId;
-      assetId = adGroupAssetName.assetId;
-      fieldType = adGroupAssetName.fieldType;
+      this.customerId = adGroupAssetName.customerId;
+      this.adGroupId = adGroupAssetName.adGroupId;
+      this.assetId = adGroupAssetName.assetId;
+      this.fieldType = adGroupAssetName.fieldType;
     }
 
     public AdGroupAssetName build() {

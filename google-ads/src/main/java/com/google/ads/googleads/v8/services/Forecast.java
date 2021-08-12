@@ -20,6 +20,7 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private Forecast() {
+    effectiveFrequencyBreakdowns_ = java.util.Collections.emptyList();
   }
 
   @java.lang.Override
@@ -78,6 +79,15 @@ private static final long serialVersionUID = 0L;
             viewableImpressions_ = input.readInt64();
             break;
           }
+          case 82: {
+            if (!((mutable_bitField0_ & 0x00000020) != 0)) {
+              effectiveFrequencyBreakdowns_ = new java.util.ArrayList<com.google.ads.googleads.v8.services.EffectiveFrequencyBreakdown>();
+              mutable_bitField0_ |= 0x00000020;
+            }
+            effectiveFrequencyBreakdowns_.add(
+                input.readMessage(com.google.ads.googleads.v8.services.EffectiveFrequencyBreakdown.parser(), extensionRegistry));
+            break;
+          }
           default: {
             if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -93,6 +103,9 @@ private static final long serialVersionUID = 0L;
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
     } finally {
+      if (((mutable_bitField0_ & 0x00000020) != 0)) {
+        effectiveFrequencyBreakdowns_ = java.util.Collections.unmodifiableList(effectiveFrequencyBreakdowns_);
+      }
       this.unknownFields = unknownFields.build();
       makeExtensionsImmutable();
     }
@@ -116,8 +129,12 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Number of unique people reached at least
-   * GenerateReachForecastRequest.min_effective_frequency times that exactly
+   * GenerateReachForecastRequest.min_effective_frequency or
+   * GenerateReachForecastRequest.effective_frequency_limit times that exactly
    * matches the Targeting.
+   * Note that a minimum number of unique people must be reached in order for
+   * data to be reported. If the minimum number is not met, the on_target_reach
+   * value will be rounded to 0.
    * </pre>
    *
    * <code>int64 on_target_reach = 5;</code>
@@ -130,8 +147,12 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Number of unique people reached at least
-   * GenerateReachForecastRequest.min_effective_frequency times that exactly
+   * GenerateReachForecastRequest.min_effective_frequency or
+   * GenerateReachForecastRequest.effective_frequency_limit times that exactly
    * matches the Targeting.
+   * Note that a minimum number of unique people must be reached in order for
+   * data to be reported. If the minimum number is not met, the on_target_reach
+   * value will be rounded to 0.
    * </pre>
    *
    * <code>int64 on_target_reach = 5;</code>
@@ -147,8 +168,12 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Total number of unique people reached at least
-   * GenerateReachForecastRequest.min_effective_frequency times. This includes
+   * GenerateReachForecastRequest.min_effective_frequency or
+   * GenerateReachForecastRequest.effective_frequency_limit times. This includes
    * people that may fall outside the specified Targeting.
+   * Note that a minimum number of unique people must be reached in order for
+   * data to be reported. If the minimum number is not met, the total_reach
+   * value will be rounded to 0.
    * </pre>
    *
    * <code>int64 total_reach = 6;</code>
@@ -161,8 +186,12 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Total number of unique people reached at least
-   * GenerateReachForecastRequest.min_effective_frequency times. This includes
+   * GenerateReachForecastRequest.min_effective_frequency or
+   * GenerateReachForecastRequest.effective_frequency_limit times. This includes
    * people that may fall outside the specified Targeting.
+   * Note that a minimum number of unique people must be reached in order for
+   * data to be reported. If the minimum number is not met, the total_reach
+   * value will be rounded to 0.
    * </pre>
    *
    * <code>int64 total_reach = 6;</code>
@@ -264,6 +293,81 @@ private static final long serialVersionUID = 0L;
     return viewableImpressions_;
   }
 
+  public static final int EFFECTIVE_FREQUENCY_BREAKDOWNS_FIELD_NUMBER = 10;
+  private java.util.List<com.google.ads.googleads.v8.services.EffectiveFrequencyBreakdown> effectiveFrequencyBreakdowns_;
+  /**
+   * <pre>
+   * A list of effective frequency forecasts. The list is ordered starting with
+   * 1+ and ending with the value set in
+   * GenerateReachForecastRequest.effective_frequency_limit. If no
+   * effective_frequency_limit was set, this list will be empty.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v8.services.EffectiveFrequencyBreakdown effective_frequency_breakdowns = 10;</code>
+   */
+  @java.lang.Override
+  public java.util.List<com.google.ads.googleads.v8.services.EffectiveFrequencyBreakdown> getEffectiveFrequencyBreakdownsList() {
+    return effectiveFrequencyBreakdowns_;
+  }
+  /**
+   * <pre>
+   * A list of effective frequency forecasts. The list is ordered starting with
+   * 1+ and ending with the value set in
+   * GenerateReachForecastRequest.effective_frequency_limit. If no
+   * effective_frequency_limit was set, this list will be empty.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v8.services.EffectiveFrequencyBreakdown effective_frequency_breakdowns = 10;</code>
+   */
+  @java.lang.Override
+  public java.util.List<? extends com.google.ads.googleads.v8.services.EffectiveFrequencyBreakdownOrBuilder> 
+      getEffectiveFrequencyBreakdownsOrBuilderList() {
+    return effectiveFrequencyBreakdowns_;
+  }
+  /**
+   * <pre>
+   * A list of effective frequency forecasts. The list is ordered starting with
+   * 1+ and ending with the value set in
+   * GenerateReachForecastRequest.effective_frequency_limit. If no
+   * effective_frequency_limit was set, this list will be empty.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v8.services.EffectiveFrequencyBreakdown effective_frequency_breakdowns = 10;</code>
+   */
+  @java.lang.Override
+  public int getEffectiveFrequencyBreakdownsCount() {
+    return effectiveFrequencyBreakdowns_.size();
+  }
+  /**
+   * <pre>
+   * A list of effective frequency forecasts. The list is ordered starting with
+   * 1+ and ending with the value set in
+   * GenerateReachForecastRequest.effective_frequency_limit. If no
+   * effective_frequency_limit was set, this list will be empty.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v8.services.EffectiveFrequencyBreakdown effective_frequency_breakdowns = 10;</code>
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v8.services.EffectiveFrequencyBreakdown getEffectiveFrequencyBreakdowns(int index) {
+    return effectiveFrequencyBreakdowns_.get(index);
+  }
+  /**
+   * <pre>
+   * A list of effective frequency forecasts. The list is ordered starting with
+   * 1+ and ending with the value set in
+   * GenerateReachForecastRequest.effective_frequency_limit. If no
+   * effective_frequency_limit was set, this list will be empty.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v8.services.EffectiveFrequencyBreakdown effective_frequency_breakdowns = 10;</code>
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v8.services.EffectiveFrequencyBreakdownOrBuilder getEffectiveFrequencyBreakdownsOrBuilder(
+      int index) {
+    return effectiveFrequencyBreakdowns_.get(index);
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -293,6 +397,9 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x00000010) != 0)) {
       output.writeInt64(9, viewableImpressions_);
     }
+    for (int i = 0; i < effectiveFrequencyBreakdowns_.size(); i++) {
+      output.writeMessage(10, effectiveFrequencyBreakdowns_.get(i));
+    }
     unknownFields.writeTo(output);
   }
 
@@ -321,6 +428,10 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x00000010) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(9, viewableImpressions_);
+    }
+    for (int i = 0; i < effectiveFrequencyBreakdowns_.size(); i++) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(10, effectiveFrequencyBreakdowns_.get(i));
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -362,6 +473,8 @@ private static final long serialVersionUID = 0L;
       if (getViewableImpressions()
           != other.getViewableImpressions()) return false;
     }
+    if (!getEffectiveFrequencyBreakdownsList()
+        .equals(other.getEffectiveFrequencyBreakdownsList())) return false;
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -397,6 +510,10 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + VIEWABLE_IMPRESSIONS_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getViewableImpressions());
+    }
+    if (getEffectiveFrequencyBreakdownsCount() > 0) {
+      hash = (37 * hash) + EFFECTIVE_FREQUENCY_BREAKDOWNS_FIELD_NUMBER;
+      hash = (53 * hash) + getEffectiveFrequencyBreakdownsList().hashCode();
     }
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
@@ -530,6 +647,7 @@ private static final long serialVersionUID = 0L;
     private void maybeForceBuilderInitialization() {
       if (com.google.protobuf.GeneratedMessageV3
               .alwaysUseFieldBuilders) {
+        getEffectiveFrequencyBreakdownsFieldBuilder();
       }
     }
     @java.lang.Override
@@ -545,6 +663,12 @@ private static final long serialVersionUID = 0L;
       bitField0_ = (bitField0_ & ~0x00000008);
       viewableImpressions_ = 0L;
       bitField0_ = (bitField0_ & ~0x00000010);
+      if (effectiveFrequencyBreakdownsBuilder_ == null) {
+        effectiveFrequencyBreakdowns_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000020);
+      } else {
+        effectiveFrequencyBreakdownsBuilder_.clear();
+      }
       return this;
     }
 
@@ -592,6 +716,15 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000010) != 0)) {
         result.viewableImpressions_ = viewableImpressions_;
         to_bitField0_ |= 0x00000010;
+      }
+      if (effectiveFrequencyBreakdownsBuilder_ == null) {
+        if (((bitField0_ & 0x00000020) != 0)) {
+          effectiveFrequencyBreakdowns_ = java.util.Collections.unmodifiableList(effectiveFrequencyBreakdowns_);
+          bitField0_ = (bitField0_ & ~0x00000020);
+        }
+        result.effectiveFrequencyBreakdowns_ = effectiveFrequencyBreakdowns_;
+      } else {
+        result.effectiveFrequencyBreakdowns_ = effectiveFrequencyBreakdownsBuilder_.build();
       }
       result.bitField0_ = to_bitField0_;
       onBuilt();
@@ -657,6 +790,32 @@ private static final long serialVersionUID = 0L;
       if (other.hasViewableImpressions()) {
         setViewableImpressions(other.getViewableImpressions());
       }
+      if (effectiveFrequencyBreakdownsBuilder_ == null) {
+        if (!other.effectiveFrequencyBreakdowns_.isEmpty()) {
+          if (effectiveFrequencyBreakdowns_.isEmpty()) {
+            effectiveFrequencyBreakdowns_ = other.effectiveFrequencyBreakdowns_;
+            bitField0_ = (bitField0_ & ~0x00000020);
+          } else {
+            ensureEffectiveFrequencyBreakdownsIsMutable();
+            effectiveFrequencyBreakdowns_.addAll(other.effectiveFrequencyBreakdowns_);
+          }
+          onChanged();
+        }
+      } else {
+        if (!other.effectiveFrequencyBreakdowns_.isEmpty()) {
+          if (effectiveFrequencyBreakdownsBuilder_.isEmpty()) {
+            effectiveFrequencyBreakdownsBuilder_.dispose();
+            effectiveFrequencyBreakdownsBuilder_ = null;
+            effectiveFrequencyBreakdowns_ = other.effectiveFrequencyBreakdowns_;
+            bitField0_ = (bitField0_ & ~0x00000020);
+            effectiveFrequencyBreakdownsBuilder_ = 
+              com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                 getEffectiveFrequencyBreakdownsFieldBuilder() : null;
+          } else {
+            effectiveFrequencyBreakdownsBuilder_.addAllMessages(other.effectiveFrequencyBreakdowns_);
+          }
+        }
+      }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
       return this;
@@ -691,8 +850,12 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Number of unique people reached at least
-     * GenerateReachForecastRequest.min_effective_frequency times that exactly
+     * GenerateReachForecastRequest.min_effective_frequency or
+     * GenerateReachForecastRequest.effective_frequency_limit times that exactly
      * matches the Targeting.
+     * Note that a minimum number of unique people must be reached in order for
+     * data to be reported. If the minimum number is not met, the on_target_reach
+     * value will be rounded to 0.
      * </pre>
      *
      * <code>int64 on_target_reach = 5;</code>
@@ -705,8 +868,12 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Number of unique people reached at least
-     * GenerateReachForecastRequest.min_effective_frequency times that exactly
+     * GenerateReachForecastRequest.min_effective_frequency or
+     * GenerateReachForecastRequest.effective_frequency_limit times that exactly
      * matches the Targeting.
+     * Note that a minimum number of unique people must be reached in order for
+     * data to be reported. If the minimum number is not met, the on_target_reach
+     * value will be rounded to 0.
      * </pre>
      *
      * <code>int64 on_target_reach = 5;</code>
@@ -719,8 +886,12 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Number of unique people reached at least
-     * GenerateReachForecastRequest.min_effective_frequency times that exactly
+     * GenerateReachForecastRequest.min_effective_frequency or
+     * GenerateReachForecastRequest.effective_frequency_limit times that exactly
      * matches the Targeting.
+     * Note that a minimum number of unique people must be reached in order for
+     * data to be reported. If the minimum number is not met, the on_target_reach
+     * value will be rounded to 0.
      * </pre>
      *
      * <code>int64 on_target_reach = 5;</code>
@@ -736,8 +907,12 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Number of unique people reached at least
-     * GenerateReachForecastRequest.min_effective_frequency times that exactly
+     * GenerateReachForecastRequest.min_effective_frequency or
+     * GenerateReachForecastRequest.effective_frequency_limit times that exactly
      * matches the Targeting.
+     * Note that a minimum number of unique people must be reached in order for
+     * data to be reported. If the minimum number is not met, the on_target_reach
+     * value will be rounded to 0.
      * </pre>
      *
      * <code>int64 on_target_reach = 5;</code>
@@ -754,8 +929,12 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Total number of unique people reached at least
-     * GenerateReachForecastRequest.min_effective_frequency times. This includes
+     * GenerateReachForecastRequest.min_effective_frequency or
+     * GenerateReachForecastRequest.effective_frequency_limit times. This includes
      * people that may fall outside the specified Targeting.
+     * Note that a minimum number of unique people must be reached in order for
+     * data to be reported. If the minimum number is not met, the total_reach
+     * value will be rounded to 0.
      * </pre>
      *
      * <code>int64 total_reach = 6;</code>
@@ -768,8 +947,12 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Total number of unique people reached at least
-     * GenerateReachForecastRequest.min_effective_frequency times. This includes
+     * GenerateReachForecastRequest.min_effective_frequency or
+     * GenerateReachForecastRequest.effective_frequency_limit times. This includes
      * people that may fall outside the specified Targeting.
+     * Note that a minimum number of unique people must be reached in order for
+     * data to be reported. If the minimum number is not met, the total_reach
+     * value will be rounded to 0.
      * </pre>
      *
      * <code>int64 total_reach = 6;</code>
@@ -782,8 +965,12 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Total number of unique people reached at least
-     * GenerateReachForecastRequest.min_effective_frequency times. This includes
+     * GenerateReachForecastRequest.min_effective_frequency or
+     * GenerateReachForecastRequest.effective_frequency_limit times. This includes
      * people that may fall outside the specified Targeting.
+     * Note that a minimum number of unique people must be reached in order for
+     * data to be reported. If the minimum number is not met, the total_reach
+     * value will be rounded to 0.
      * </pre>
      *
      * <code>int64 total_reach = 6;</code>
@@ -799,8 +986,12 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Total number of unique people reached at least
-     * GenerateReachForecastRequest.min_effective_frequency times. This includes
+     * GenerateReachForecastRequest.min_effective_frequency or
+     * GenerateReachForecastRequest.effective_frequency_limit times. This includes
      * people that may fall outside the specified Targeting.
+     * Note that a minimum number of unique people must be reached in order for
+     * data to be reported. If the minimum number is not met, the total_reach
+     * value will be rounded to 0.
      * </pre>
      *
      * <code>int64 total_reach = 6;</code>
@@ -996,6 +1187,372 @@ private static final long serialVersionUID = 0L;
       viewableImpressions_ = 0L;
       onChanged();
       return this;
+    }
+
+    private java.util.List<com.google.ads.googleads.v8.services.EffectiveFrequencyBreakdown> effectiveFrequencyBreakdowns_ =
+      java.util.Collections.emptyList();
+    private void ensureEffectiveFrequencyBreakdownsIsMutable() {
+      if (!((bitField0_ & 0x00000020) != 0)) {
+        effectiveFrequencyBreakdowns_ = new java.util.ArrayList<com.google.ads.googleads.v8.services.EffectiveFrequencyBreakdown>(effectiveFrequencyBreakdowns_);
+        bitField0_ |= 0x00000020;
+       }
+    }
+
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        com.google.ads.googleads.v8.services.EffectiveFrequencyBreakdown, com.google.ads.googleads.v8.services.EffectiveFrequencyBreakdown.Builder, com.google.ads.googleads.v8.services.EffectiveFrequencyBreakdownOrBuilder> effectiveFrequencyBreakdownsBuilder_;
+
+    /**
+     * <pre>
+     * A list of effective frequency forecasts. The list is ordered starting with
+     * 1+ and ending with the value set in
+     * GenerateReachForecastRequest.effective_frequency_limit. If no
+     * effective_frequency_limit was set, this list will be empty.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v8.services.EffectiveFrequencyBreakdown effective_frequency_breakdowns = 10;</code>
+     */
+    public java.util.List<com.google.ads.googleads.v8.services.EffectiveFrequencyBreakdown> getEffectiveFrequencyBreakdownsList() {
+      if (effectiveFrequencyBreakdownsBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(effectiveFrequencyBreakdowns_);
+      } else {
+        return effectiveFrequencyBreakdownsBuilder_.getMessageList();
+      }
+    }
+    /**
+     * <pre>
+     * A list of effective frequency forecasts. The list is ordered starting with
+     * 1+ and ending with the value set in
+     * GenerateReachForecastRequest.effective_frequency_limit. If no
+     * effective_frequency_limit was set, this list will be empty.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v8.services.EffectiveFrequencyBreakdown effective_frequency_breakdowns = 10;</code>
+     */
+    public int getEffectiveFrequencyBreakdownsCount() {
+      if (effectiveFrequencyBreakdownsBuilder_ == null) {
+        return effectiveFrequencyBreakdowns_.size();
+      } else {
+        return effectiveFrequencyBreakdownsBuilder_.getCount();
+      }
+    }
+    /**
+     * <pre>
+     * A list of effective frequency forecasts. The list is ordered starting with
+     * 1+ and ending with the value set in
+     * GenerateReachForecastRequest.effective_frequency_limit. If no
+     * effective_frequency_limit was set, this list will be empty.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v8.services.EffectiveFrequencyBreakdown effective_frequency_breakdowns = 10;</code>
+     */
+    public com.google.ads.googleads.v8.services.EffectiveFrequencyBreakdown getEffectiveFrequencyBreakdowns(int index) {
+      if (effectiveFrequencyBreakdownsBuilder_ == null) {
+        return effectiveFrequencyBreakdowns_.get(index);
+      } else {
+        return effectiveFrequencyBreakdownsBuilder_.getMessage(index);
+      }
+    }
+    /**
+     * <pre>
+     * A list of effective frequency forecasts. The list is ordered starting with
+     * 1+ and ending with the value set in
+     * GenerateReachForecastRequest.effective_frequency_limit. If no
+     * effective_frequency_limit was set, this list will be empty.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v8.services.EffectiveFrequencyBreakdown effective_frequency_breakdowns = 10;</code>
+     */
+    public Builder setEffectiveFrequencyBreakdowns(
+        int index, com.google.ads.googleads.v8.services.EffectiveFrequencyBreakdown value) {
+      if (effectiveFrequencyBreakdownsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureEffectiveFrequencyBreakdownsIsMutable();
+        effectiveFrequencyBreakdowns_.set(index, value);
+        onChanged();
+      } else {
+        effectiveFrequencyBreakdownsBuilder_.setMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * A list of effective frequency forecasts. The list is ordered starting with
+     * 1+ and ending with the value set in
+     * GenerateReachForecastRequest.effective_frequency_limit. If no
+     * effective_frequency_limit was set, this list will be empty.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v8.services.EffectiveFrequencyBreakdown effective_frequency_breakdowns = 10;</code>
+     */
+    public Builder setEffectiveFrequencyBreakdowns(
+        int index, com.google.ads.googleads.v8.services.EffectiveFrequencyBreakdown.Builder builderForValue) {
+      if (effectiveFrequencyBreakdownsBuilder_ == null) {
+        ensureEffectiveFrequencyBreakdownsIsMutable();
+        effectiveFrequencyBreakdowns_.set(index, builderForValue.build());
+        onChanged();
+      } else {
+        effectiveFrequencyBreakdownsBuilder_.setMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * A list of effective frequency forecasts. The list is ordered starting with
+     * 1+ and ending with the value set in
+     * GenerateReachForecastRequest.effective_frequency_limit. If no
+     * effective_frequency_limit was set, this list will be empty.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v8.services.EffectiveFrequencyBreakdown effective_frequency_breakdowns = 10;</code>
+     */
+    public Builder addEffectiveFrequencyBreakdowns(com.google.ads.googleads.v8.services.EffectiveFrequencyBreakdown value) {
+      if (effectiveFrequencyBreakdownsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureEffectiveFrequencyBreakdownsIsMutable();
+        effectiveFrequencyBreakdowns_.add(value);
+        onChanged();
+      } else {
+        effectiveFrequencyBreakdownsBuilder_.addMessage(value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * A list of effective frequency forecasts. The list is ordered starting with
+     * 1+ and ending with the value set in
+     * GenerateReachForecastRequest.effective_frequency_limit. If no
+     * effective_frequency_limit was set, this list will be empty.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v8.services.EffectiveFrequencyBreakdown effective_frequency_breakdowns = 10;</code>
+     */
+    public Builder addEffectiveFrequencyBreakdowns(
+        int index, com.google.ads.googleads.v8.services.EffectiveFrequencyBreakdown value) {
+      if (effectiveFrequencyBreakdownsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureEffectiveFrequencyBreakdownsIsMutable();
+        effectiveFrequencyBreakdowns_.add(index, value);
+        onChanged();
+      } else {
+        effectiveFrequencyBreakdownsBuilder_.addMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * A list of effective frequency forecasts. The list is ordered starting with
+     * 1+ and ending with the value set in
+     * GenerateReachForecastRequest.effective_frequency_limit. If no
+     * effective_frequency_limit was set, this list will be empty.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v8.services.EffectiveFrequencyBreakdown effective_frequency_breakdowns = 10;</code>
+     */
+    public Builder addEffectiveFrequencyBreakdowns(
+        com.google.ads.googleads.v8.services.EffectiveFrequencyBreakdown.Builder builderForValue) {
+      if (effectiveFrequencyBreakdownsBuilder_ == null) {
+        ensureEffectiveFrequencyBreakdownsIsMutable();
+        effectiveFrequencyBreakdowns_.add(builderForValue.build());
+        onChanged();
+      } else {
+        effectiveFrequencyBreakdownsBuilder_.addMessage(builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * A list of effective frequency forecasts. The list is ordered starting with
+     * 1+ and ending with the value set in
+     * GenerateReachForecastRequest.effective_frequency_limit. If no
+     * effective_frequency_limit was set, this list will be empty.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v8.services.EffectiveFrequencyBreakdown effective_frequency_breakdowns = 10;</code>
+     */
+    public Builder addEffectiveFrequencyBreakdowns(
+        int index, com.google.ads.googleads.v8.services.EffectiveFrequencyBreakdown.Builder builderForValue) {
+      if (effectiveFrequencyBreakdownsBuilder_ == null) {
+        ensureEffectiveFrequencyBreakdownsIsMutable();
+        effectiveFrequencyBreakdowns_.add(index, builderForValue.build());
+        onChanged();
+      } else {
+        effectiveFrequencyBreakdownsBuilder_.addMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * A list of effective frequency forecasts. The list is ordered starting with
+     * 1+ and ending with the value set in
+     * GenerateReachForecastRequest.effective_frequency_limit. If no
+     * effective_frequency_limit was set, this list will be empty.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v8.services.EffectiveFrequencyBreakdown effective_frequency_breakdowns = 10;</code>
+     */
+    public Builder addAllEffectiveFrequencyBreakdowns(
+        java.lang.Iterable<? extends com.google.ads.googleads.v8.services.EffectiveFrequencyBreakdown> values) {
+      if (effectiveFrequencyBreakdownsBuilder_ == null) {
+        ensureEffectiveFrequencyBreakdownsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, effectiveFrequencyBreakdowns_);
+        onChanged();
+      } else {
+        effectiveFrequencyBreakdownsBuilder_.addAllMessages(values);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * A list of effective frequency forecasts. The list is ordered starting with
+     * 1+ and ending with the value set in
+     * GenerateReachForecastRequest.effective_frequency_limit. If no
+     * effective_frequency_limit was set, this list will be empty.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v8.services.EffectiveFrequencyBreakdown effective_frequency_breakdowns = 10;</code>
+     */
+    public Builder clearEffectiveFrequencyBreakdowns() {
+      if (effectiveFrequencyBreakdownsBuilder_ == null) {
+        effectiveFrequencyBreakdowns_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000020);
+        onChanged();
+      } else {
+        effectiveFrequencyBreakdownsBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * A list of effective frequency forecasts. The list is ordered starting with
+     * 1+ and ending with the value set in
+     * GenerateReachForecastRequest.effective_frequency_limit. If no
+     * effective_frequency_limit was set, this list will be empty.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v8.services.EffectiveFrequencyBreakdown effective_frequency_breakdowns = 10;</code>
+     */
+    public Builder removeEffectiveFrequencyBreakdowns(int index) {
+      if (effectiveFrequencyBreakdownsBuilder_ == null) {
+        ensureEffectiveFrequencyBreakdownsIsMutable();
+        effectiveFrequencyBreakdowns_.remove(index);
+        onChanged();
+      } else {
+        effectiveFrequencyBreakdownsBuilder_.remove(index);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * A list of effective frequency forecasts. The list is ordered starting with
+     * 1+ and ending with the value set in
+     * GenerateReachForecastRequest.effective_frequency_limit. If no
+     * effective_frequency_limit was set, this list will be empty.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v8.services.EffectiveFrequencyBreakdown effective_frequency_breakdowns = 10;</code>
+     */
+    public com.google.ads.googleads.v8.services.EffectiveFrequencyBreakdown.Builder getEffectiveFrequencyBreakdownsBuilder(
+        int index) {
+      return getEffectiveFrequencyBreakdownsFieldBuilder().getBuilder(index);
+    }
+    /**
+     * <pre>
+     * A list of effective frequency forecasts. The list is ordered starting with
+     * 1+ and ending with the value set in
+     * GenerateReachForecastRequest.effective_frequency_limit. If no
+     * effective_frequency_limit was set, this list will be empty.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v8.services.EffectiveFrequencyBreakdown effective_frequency_breakdowns = 10;</code>
+     */
+    public com.google.ads.googleads.v8.services.EffectiveFrequencyBreakdownOrBuilder getEffectiveFrequencyBreakdownsOrBuilder(
+        int index) {
+      if (effectiveFrequencyBreakdownsBuilder_ == null) {
+        return effectiveFrequencyBreakdowns_.get(index);  } else {
+        return effectiveFrequencyBreakdownsBuilder_.getMessageOrBuilder(index);
+      }
+    }
+    /**
+     * <pre>
+     * A list of effective frequency forecasts. The list is ordered starting with
+     * 1+ and ending with the value set in
+     * GenerateReachForecastRequest.effective_frequency_limit. If no
+     * effective_frequency_limit was set, this list will be empty.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v8.services.EffectiveFrequencyBreakdown effective_frequency_breakdowns = 10;</code>
+     */
+    public java.util.List<? extends com.google.ads.googleads.v8.services.EffectiveFrequencyBreakdownOrBuilder> 
+         getEffectiveFrequencyBreakdownsOrBuilderList() {
+      if (effectiveFrequencyBreakdownsBuilder_ != null) {
+        return effectiveFrequencyBreakdownsBuilder_.getMessageOrBuilderList();
+      } else {
+        return java.util.Collections.unmodifiableList(effectiveFrequencyBreakdowns_);
+      }
+    }
+    /**
+     * <pre>
+     * A list of effective frequency forecasts. The list is ordered starting with
+     * 1+ and ending with the value set in
+     * GenerateReachForecastRequest.effective_frequency_limit. If no
+     * effective_frequency_limit was set, this list will be empty.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v8.services.EffectiveFrequencyBreakdown effective_frequency_breakdowns = 10;</code>
+     */
+    public com.google.ads.googleads.v8.services.EffectiveFrequencyBreakdown.Builder addEffectiveFrequencyBreakdownsBuilder() {
+      return getEffectiveFrequencyBreakdownsFieldBuilder().addBuilder(
+          com.google.ads.googleads.v8.services.EffectiveFrequencyBreakdown.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     * A list of effective frequency forecasts. The list is ordered starting with
+     * 1+ and ending with the value set in
+     * GenerateReachForecastRequest.effective_frequency_limit. If no
+     * effective_frequency_limit was set, this list will be empty.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v8.services.EffectiveFrequencyBreakdown effective_frequency_breakdowns = 10;</code>
+     */
+    public com.google.ads.googleads.v8.services.EffectiveFrequencyBreakdown.Builder addEffectiveFrequencyBreakdownsBuilder(
+        int index) {
+      return getEffectiveFrequencyBreakdownsFieldBuilder().addBuilder(
+          index, com.google.ads.googleads.v8.services.EffectiveFrequencyBreakdown.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     * A list of effective frequency forecasts. The list is ordered starting with
+     * 1+ and ending with the value set in
+     * GenerateReachForecastRequest.effective_frequency_limit. If no
+     * effective_frequency_limit was set, this list will be empty.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v8.services.EffectiveFrequencyBreakdown effective_frequency_breakdowns = 10;</code>
+     */
+    public java.util.List<com.google.ads.googleads.v8.services.EffectiveFrequencyBreakdown.Builder> 
+         getEffectiveFrequencyBreakdownsBuilderList() {
+      return getEffectiveFrequencyBreakdownsFieldBuilder().getBuilderList();
+    }
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        com.google.ads.googleads.v8.services.EffectiveFrequencyBreakdown, com.google.ads.googleads.v8.services.EffectiveFrequencyBreakdown.Builder, com.google.ads.googleads.v8.services.EffectiveFrequencyBreakdownOrBuilder> 
+        getEffectiveFrequencyBreakdownsFieldBuilder() {
+      if (effectiveFrequencyBreakdownsBuilder_ == null) {
+        effectiveFrequencyBreakdownsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+            com.google.ads.googleads.v8.services.EffectiveFrequencyBreakdown, com.google.ads.googleads.v8.services.EffectiveFrequencyBreakdown.Builder, com.google.ads.googleads.v8.services.EffectiveFrequencyBreakdownOrBuilder>(
+                effectiveFrequencyBreakdowns_,
+                ((bitField0_ & 0x00000020) != 0),
+                getParentForChildren(),
+                isClean());
+        effectiveFrequencyBreakdowns_ = null;
+      }
+      return effectiveFrequencyBreakdownsBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

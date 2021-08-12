@@ -48,6 +48,7 @@ public final class ArgumentNames {
   public static final String CONVERSION_CUSTOM_VARIABLE_ID = "--conversionCustomVariableId";
   public static final String CONVERSION_CUSTOM_VARIABLE_VALUE = "--conversionCustomVariableValue";
   public static final String CONVERSION_DATE_TIME = "--conversionDateTime";
+  public static final String CONVERSION_RATE_MODIFIER = "--conversionRateModifier";
   public static final String CONVERSION_VALUE = "--conversionValue";
   public static final String COUNTRY_CODE = "--countryCode";
   public static final String CPC_BID_CEILING_MICRO_AMOUNT = "--cpcBidCeilingMicroAmount";
@@ -59,6 +60,7 @@ public final class ArgumentNames {
   public static final String CUSTOMER_IDS = "--customerIds";
   public static final String DRAFT_ID = "--draftId";
   public static final String EMAIL_ADDRESS = "--emailAddress";
+  public static final String END_DATE_TIME = "--endDateTime";
   public static final String EXTERNAL_ID = "--externalId";
   public static final String FEED_ID = "--feedId";
   public static final String FEED_ITEM_ID = "--feedItemId";
@@ -98,6 +100,7 @@ public final class ArgumentNames {
   public static final String RESTATEMENT_VALUE = "--restatementValue";
   public static final String SITELINK_TEXT = "--sitelinkText";
   public static final String SQUARE_MARKETING_IMAGE_ID = "--squareMarketingImageAssetId";
+  public static final String START_DATE_TIME = "--startDateTime";
   public static final String USER_LIST_ID = "--userListId";
   public static final String USER_LIST_IDS = "--userListIds";
 }

@@ -213,9 +213,9 @@ public class SmartCampaignSearchTermViewName implements ResourceName {
     }
 
     private Builder(SmartCampaignSearchTermViewName smartCampaignSearchTermViewName) {
-      customerId = smartCampaignSearchTermViewName.customerId;
-      campaignId = smartCampaignSearchTermViewName.campaignId;
-      query = smartCampaignSearchTermViewName.query;
+      this.customerId = smartCampaignSearchTermViewName.customerId;
+      this.campaignId = smartCampaignSearchTermViewName.campaignId;
+      this.query = smartCampaignSearchTermViewName.query;
     }
 
     public SmartCampaignSearchTermViewName build() {

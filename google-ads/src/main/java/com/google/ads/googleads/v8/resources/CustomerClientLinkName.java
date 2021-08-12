@@ -226,9 +226,9 @@ public class CustomerClientLinkName implements ResourceName {
     }
 
     private Builder(CustomerClientLinkName customerClientLinkName) {
-      customerId = customerClientLinkName.customerId;
-      clientCustomerId = customerClientLinkName.clientCustomerId;
-      managerLinkId = customerClientLinkName.managerLinkId;
+      this.customerId = customerClientLinkName.customerId;
+      this.clientCustomerId = customerClientLinkName.clientCustomerId;
+      this.managerLinkId = customerClientLinkName.managerLinkId;
     }
 
     public CustomerClientLinkName build() {

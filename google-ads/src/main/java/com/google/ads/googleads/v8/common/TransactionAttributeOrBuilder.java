@@ -51,6 +51,7 @@ public interface TransactionAttributeOrBuilder extends
   /**
    * <pre>
    * Transaction amount in micros. Required.
+   * Transaction amount in micros needs to be greater than 1000.
    * If item Attributes are provided, it represents the total value of the
    * items, after multiplying the unit price per item by the quantity provided
    * in the ItemAttributes.
@@ -63,6 +64,7 @@ public interface TransactionAttributeOrBuilder extends
   /**
    * <pre>
    * Transaction amount in micros. Required.
+   * Transaction amount in micros needs to be greater than 1000.
    * If item Attributes are provided, it represents the total value of the
    * items, after multiplying the unit price per item by the quantity provided
    * in the ItemAttributes.

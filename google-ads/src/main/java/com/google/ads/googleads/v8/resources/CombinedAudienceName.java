@@ -187,8 +187,8 @@ public class CombinedAudienceName implements ResourceName {
     }
 
     private Builder(CombinedAudienceName combinedAudienceName) {
-      customerId = combinedAudienceName.customerId;
-      combinedAudienceId = combinedAudienceName.combinedAudienceId;
+      this.customerId = combinedAudienceName.customerId;
+      this.combinedAudienceId = combinedAudienceName.combinedAudienceId;
     }
 
     public CombinedAudienceName build() {

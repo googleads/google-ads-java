@@ -130,6 +130,20 @@ private static final long serialVersionUID = 0L;
     ENHANCED_CPC(2),
     /**
      * <pre>
+     * Used for return value only. Indicates that a campaign does not have a
+     * bidding strategy. This prevents the campaign from serving. For example,
+     * a campaign may be attached to a manager bidding strategy and the serving
+     * account is subsequently unlinked from the manager account. In this case
+     * the campaign will automatically be detached from the now inaccessible
+     * manager bidding strategy and transition to the INVALID bidding strategy
+     * type.
+     * </pre>
+     *
+     * <code>INVALID = 17;</code>
+     */
+    INVALID(17),
+    /**
+     * <pre>
      * Manual click based bidding where user pays per click.
      * </pre>
      *
@@ -290,6 +304,20 @@ private static final long serialVersionUID = 0L;
     public static final int ENHANCED_CPC_VALUE = 2;
     /**
      * <pre>
+     * Used for return value only. Indicates that a campaign does not have a
+     * bidding strategy. This prevents the campaign from serving. For example,
+     * a campaign may be attached to a manager bidding strategy and the serving
+     * account is subsequently unlinked from the manager account. In this case
+     * the campaign will automatically be detached from the now inaccessible
+     * manager bidding strategy and transition to the INVALID bidding strategy
+     * type.
+     * </pre>
+     *
+     * <code>INVALID = 17;</code>
+     */
+    public static final int INVALID_VALUE = 17;
+    /**
+     * <pre>
      * Manual click based bidding where user pays per click.
      * </pre>
      *
@@ -440,6 +468,7 @@ private static final long serialVersionUID = 0L;
         case 1: return UNKNOWN;
         case 16: return COMMISSION;
         case 2: return ENHANCED_CPC;
+        case 17: return INVALID;
         case 3: return MANUAL_CPC;
         case 4: return MANUAL_CPM;
         case 13: return MANUAL_CPV;

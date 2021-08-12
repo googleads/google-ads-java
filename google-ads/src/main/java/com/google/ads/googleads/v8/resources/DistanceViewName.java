@@ -224,9 +224,9 @@ public class DistanceViewName implements ResourceName {
     }
 
     private Builder(DistanceViewName distanceViewName) {
-      customerId = distanceViewName.customerId;
-      placeholderChainId = distanceViewName.placeholderChainId;
-      distanceBucket = distanceViewName.distanceBucket;
+      this.customerId = distanceViewName.customerId;
+      this.placeholderChainId = distanceViewName.placeholderChainId;
+      this.distanceBucket = distanceViewName.distanceBucket;
     }
 
     public DistanceViewName build() {

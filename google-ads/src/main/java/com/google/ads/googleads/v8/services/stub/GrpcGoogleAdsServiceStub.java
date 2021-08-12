@@ -29,7 +29,6 @@ import com.google.api.gax.core.BackgroundResourceAggregation;
 import com.google.api.gax.grpc.GrpcCallSettings;
 import com.google.api.gax.grpc.GrpcStubCallableFactory;
 import com.google.api.gax.rpc.ClientContext;
-import com.google.api.gax.rpc.RequestParamsExtractor;
 import com.google.api.gax.rpc.ServerStreamingCallable;
 import com.google.api.gax.rpc.UnaryCallable;
 import com.google.common.collect.ImmutableMap;
@@ -136,13 +135,10 @@ public class GrpcGoogleAdsServiceStub extends GoogleAdsServiceStub {
         GrpcCallSettings.<SearchGoogleAdsRequest, SearchGoogleAdsResponse>newBuilder()
             .setMethodDescriptor(searchMethodDescriptor)
             .setParamsExtractor(
-                new RequestParamsExtractor<SearchGoogleAdsRequest>() {
-                  @Override
-                  public Map<String, String> extract(SearchGoogleAdsRequest request) {
-                    ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
-                    params.put("customer_id", String.valueOf(request.getCustomerId()));
-                    return params.build();
-                  }
+                request -> {
+                  ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
+                  params.put("customer_id", String.valueOf(request.getCustomerId()));
+                  return params.build();
                 })
             .build();
     GrpcCallSettings<SearchGoogleAdsStreamRequest, SearchGoogleAdsStreamResponse>
@@ -151,26 +147,20 @@ public class GrpcGoogleAdsServiceStub extends GoogleAdsServiceStub {
                 .<SearchGoogleAdsStreamRequest, SearchGoogleAdsStreamResponse>newBuilder()
                 .setMethodDescriptor(searchStreamMethodDescriptor)
                 .setParamsExtractor(
-                    new RequestParamsExtractor<SearchGoogleAdsStreamRequest>() {
-                      @Override
-                      public Map<String, String> extract(SearchGoogleAdsStreamRequest request) {
-                        ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
-                        params.put("customer_id", String.valueOf(request.getCustomerId()));
-                        return params.build();
-                      }
+                    request -> {
+                      ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
+                      params.put("customer_id", String.valueOf(request.getCustomerId()));
+                      return params.build();
                     })
                 .build();
     GrpcCallSettings<MutateGoogleAdsRequest, MutateGoogleAdsResponse> mutateTransportSettings =
         GrpcCallSettings.<MutateGoogleAdsRequest, MutateGoogleAdsResponse>newBuilder()
             .setMethodDescriptor(mutateMethodDescriptor)
             .setParamsExtractor(
-                new RequestParamsExtractor<MutateGoogleAdsRequest>() {
-                  @Override
-                  public Map<String, String> extract(MutateGoogleAdsRequest request) {
-                    ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
-                    params.put("customer_id", String.valueOf(request.getCustomerId()));
-                    return params.build();
-                  }
+                request -> {
+                  ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
+                  params.put("customer_id", String.valueOf(request.getCustomerId()));
+                  return params.build();
                 })
             .build();
 
@@ -218,7 +208,13 @@ public class GrpcGoogleAdsServiceStub extends GoogleAdsServiceStub {
 
   @Override
   public final void close() {
-    shutdown();
+    try {
+      backgroundResources.close();
+    } catch (RuntimeException e) {
+      throw e;
+    } catch (Exception e) {
+      throw new IllegalStateException("Failed to close resource", e);
+    }
   }
 
   @Override

@@ -23,6 +23,8 @@ private static final long serialVersionUID = 0L;
     conversionAction_ = "";
     adjustmentDateTime_ = "";
     adjustmentType_ = 0;
+    userIdentifiers_ = java.util.Collections.emptyList();
+    userAgent_ = "";
   }
 
   @java.lang.Override
@@ -107,6 +109,21 @@ private static final long serialVersionUID = 0L;
             adjustmentDateTime_ = s;
             break;
           }
+          case 82: {
+            if (!((mutable_bitField0_ & 0x00000004) != 0)) {
+              userIdentifiers_ = new java.util.ArrayList<com.google.ads.googleads.v8.common.UserIdentifier>();
+              mutable_bitField0_ |= 0x00000004;
+            }
+            userIdentifiers_.add(
+                input.readMessage(com.google.ads.googleads.v8.common.UserIdentifier.parser(), extensionRegistry));
+            break;
+          }
+          case 90: {
+            java.lang.String s = input.readStringRequireUtf8();
+            bitField0_ |= 0x00000004;
+            userAgent_ = s;
+            break;
+          }
           default: {
             if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -122,6 +139,9 @@ private static final long serialVersionUID = 0L;
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
     } finally {
+      if (((mutable_bitField0_ & 0x00000004) != 0)) {
+        userIdentifiers_ = java.util.Collections.unmodifiableList(userIdentifiers_);
+      }
       this.unknownFields = unknownFields.build();
       makeExtensionsImmutable();
     }
@@ -395,6 +415,148 @@ private static final long serialVersionUID = 0L;
     return getRestatementValue();
   }
 
+  public static final int USER_IDENTIFIERS_FIELD_NUMBER = 10;
+  private java.util.List<com.google.ads.googleads.v8.common.UserIdentifier> userIdentifiers_;
+  /**
+   * <pre>
+   * The user identifiers to enhance the original conversion.
+   * ConversionAdjustmentUploadService only accepts user identifiers in
+   * enhancements. The maximum number of user identifiers for each
+   * enhancement is 5.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v8.common.UserIdentifier user_identifiers = 10;</code>
+   */
+  @java.lang.Override
+  public java.util.List<com.google.ads.googleads.v8.common.UserIdentifier> getUserIdentifiersList() {
+    return userIdentifiers_;
+  }
+  /**
+   * <pre>
+   * The user identifiers to enhance the original conversion.
+   * ConversionAdjustmentUploadService only accepts user identifiers in
+   * enhancements. The maximum number of user identifiers for each
+   * enhancement is 5.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v8.common.UserIdentifier user_identifiers = 10;</code>
+   */
+  @java.lang.Override
+  public java.util.List<? extends com.google.ads.googleads.v8.common.UserIdentifierOrBuilder> 
+      getUserIdentifiersOrBuilderList() {
+    return userIdentifiers_;
+  }
+  /**
+   * <pre>
+   * The user identifiers to enhance the original conversion.
+   * ConversionAdjustmentUploadService only accepts user identifiers in
+   * enhancements. The maximum number of user identifiers for each
+   * enhancement is 5.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v8.common.UserIdentifier user_identifiers = 10;</code>
+   */
+  @java.lang.Override
+  public int getUserIdentifiersCount() {
+    return userIdentifiers_.size();
+  }
+  /**
+   * <pre>
+   * The user identifiers to enhance the original conversion.
+   * ConversionAdjustmentUploadService only accepts user identifiers in
+   * enhancements. The maximum number of user identifiers for each
+   * enhancement is 5.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v8.common.UserIdentifier user_identifiers = 10;</code>
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v8.common.UserIdentifier getUserIdentifiers(int index) {
+    return userIdentifiers_.get(index);
+  }
+  /**
+   * <pre>
+   * The user identifiers to enhance the original conversion.
+   * ConversionAdjustmentUploadService only accepts user identifiers in
+   * enhancements. The maximum number of user identifiers for each
+   * enhancement is 5.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v8.common.UserIdentifier user_identifiers = 10;</code>
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v8.common.UserIdentifierOrBuilder getUserIdentifiersOrBuilder(
+      int index) {
+    return userIdentifiers_.get(index);
+  }
+
+  public static final int USER_AGENT_FIELD_NUMBER = 11;
+  private volatile java.lang.Object userAgent_;
+  /**
+   * <pre>
+   * The user agent to enhance the original conversion. This can be found in
+   * your user's HTTP request header when they convert on your web page.
+   * Example, "Mozilla/5.0 (iPhone; CPU iPhone OS 12_2 like Mac OS X)". User
+   * agent can only be specified in enhancements with user identifiers.
+   * </pre>
+   *
+   * <code>string user_agent = 11;</code>
+   * @return Whether the userAgent field is set.
+   */
+  @java.lang.Override
+  public boolean hasUserAgent() {
+    return ((bitField0_ & 0x00000004) != 0);
+  }
+  /**
+   * <pre>
+   * The user agent to enhance the original conversion. This can be found in
+   * your user's HTTP request header when they convert on your web page.
+   * Example, "Mozilla/5.0 (iPhone; CPU iPhone OS 12_2 like Mac OS X)". User
+   * agent can only be specified in enhancements with user identifiers.
+   * </pre>
+   *
+   * <code>string user_agent = 11;</code>
+   * @return The userAgent.
+   */
+  @java.lang.Override
+  public java.lang.String getUserAgent() {
+    java.lang.Object ref = userAgent_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      userAgent_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * The user agent to enhance the original conversion. This can be found in
+   * your user's HTTP request header when they convert on your web page.
+   * Example, "Mozilla/5.0 (iPhone; CPU iPhone OS 12_2 like Mac OS X)". User
+   * agent can only be specified in enhancements with user identifiers.
+   * </pre>
+   *
+   * <code>string user_agent = 11;</code>
+   * @return The bytes for userAgent.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getUserAgentBytes() {
+    java.lang.Object ref = userAgent_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      userAgent_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
   public static final int GCLID_DATE_TIME_PAIR_FIELD_NUMBER = 1;
   /**
    * <pre>
@@ -446,7 +608,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * The order ID of the conversion to be adjusted. If the conversion was
    * reported with an order ID specified, that order ID must be used as the
-   * identifier here.
+   * identifier here. The order ID is required for enhancements.
    * </pre>
    *
    * <code>string order_id = 7;</code>
@@ -459,7 +621,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * The order ID of the conversion to be adjusted. If the conversion was
    * reported with an order ID specified, that order ID must be used as the
-   * identifier here.
+   * identifier here. The order ID is required for enhancements.
    * </pre>
    *
    * <code>string order_id = 7;</code>
@@ -486,7 +648,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * The order ID of the conversion to be adjusted. If the conversion was
    * reported with an order ID specified, that order ID must be used as the
-   * identifier here.
+   * identifier here. The order ID is required for enhancements.
    * </pre>
    *
    * <code>string order_id = 7;</code>
@@ -543,6 +705,12 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x00000002) != 0)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 9, adjustmentDateTime_);
     }
+    for (int i = 0; i < userIdentifiers_.size(); i++) {
+      output.writeMessage(10, userIdentifiers_.get(i));
+    }
+    if (((bitField0_ & 0x00000004) != 0)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 11, userAgent_);
+    }
     unknownFields.writeTo(output);
   }
 
@@ -572,6 +740,13 @@ private static final long serialVersionUID = 0L;
     }
     if (((bitField0_ & 0x00000002) != 0)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, adjustmentDateTime_);
+    }
+    for (int i = 0; i < userIdentifiers_.size(); i++) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(10, userIdentifiers_.get(i));
+    }
+    if (((bitField0_ & 0x00000004) != 0)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(11, userAgent_);
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -603,6 +778,13 @@ private static final long serialVersionUID = 0L;
     if (hasRestatementValue()) {
       if (!getRestatementValue()
           .equals(other.getRestatementValue())) return false;
+    }
+    if (!getUserIdentifiersList()
+        .equals(other.getUserIdentifiersList())) return false;
+    if (hasUserAgent() != other.hasUserAgent()) return false;
+    if (hasUserAgent()) {
+      if (!getUserAgent()
+          .equals(other.getUserAgent())) return false;
     }
     if (!getConversionIdentifierCase().equals(other.getConversionIdentifierCase())) return false;
     switch (conversionIdentifierCase_) {
@@ -641,6 +823,14 @@ private static final long serialVersionUID = 0L;
     if (hasRestatementValue()) {
       hash = (37 * hash) + RESTATEMENT_VALUE_FIELD_NUMBER;
       hash = (53 * hash) + getRestatementValue().hashCode();
+    }
+    if (getUserIdentifiersCount() > 0) {
+      hash = (37 * hash) + USER_IDENTIFIERS_FIELD_NUMBER;
+      hash = (53 * hash) + getUserIdentifiersList().hashCode();
+    }
+    if (hasUserAgent()) {
+      hash = (37 * hash) + USER_AGENT_FIELD_NUMBER;
+      hash = (53 * hash) + getUserAgent().hashCode();
     }
     switch (conversionIdentifierCase_) {
       case 1:
@@ -786,6 +976,7 @@ private static final long serialVersionUID = 0L;
     private void maybeForceBuilderInitialization() {
       if (com.google.protobuf.GeneratedMessageV3
               .alwaysUseFieldBuilders) {
+        getUserIdentifiersFieldBuilder();
       }
     }
     @java.lang.Override
@@ -803,6 +994,14 @@ private static final long serialVersionUID = 0L;
         restatementValue_ = null;
         restatementValueBuilder_ = null;
       }
+      if (userIdentifiersBuilder_ == null) {
+        userIdentifiers_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000004);
+      } else {
+        userIdentifiersBuilder_.clear();
+      }
+      userAgent_ = "";
+      bitField0_ = (bitField0_ & ~0x00000008);
       conversionIdentifierCase_ = 0;
       conversionIdentifier_ = null;
       return this;
@@ -847,6 +1046,19 @@ private static final long serialVersionUID = 0L;
       } else {
         result.restatementValue_ = restatementValueBuilder_.build();
       }
+      if (userIdentifiersBuilder_ == null) {
+        if (((bitField0_ & 0x00000004) != 0)) {
+          userIdentifiers_ = java.util.Collections.unmodifiableList(userIdentifiers_);
+          bitField0_ = (bitField0_ & ~0x00000004);
+        }
+        result.userIdentifiers_ = userIdentifiers_;
+      } else {
+        result.userIdentifiers_ = userIdentifiersBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        to_bitField0_ |= 0x00000004;
+      }
+      result.userAgent_ = userAgent_;
       if (conversionIdentifierCase_ == 1) {
         if (gclidDateTimePairBuilder_ == null) {
           result.conversionIdentifier_ = conversionIdentifier_;
@@ -922,6 +1134,37 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasRestatementValue()) {
         mergeRestatementValue(other.getRestatementValue());
+      }
+      if (userIdentifiersBuilder_ == null) {
+        if (!other.userIdentifiers_.isEmpty()) {
+          if (userIdentifiers_.isEmpty()) {
+            userIdentifiers_ = other.userIdentifiers_;
+            bitField0_ = (bitField0_ & ~0x00000004);
+          } else {
+            ensureUserIdentifiersIsMutable();
+            userIdentifiers_.addAll(other.userIdentifiers_);
+          }
+          onChanged();
+        }
+      } else {
+        if (!other.userIdentifiers_.isEmpty()) {
+          if (userIdentifiersBuilder_.isEmpty()) {
+            userIdentifiersBuilder_.dispose();
+            userIdentifiersBuilder_ = null;
+            userIdentifiers_ = other.userIdentifiers_;
+            bitField0_ = (bitField0_ & ~0x00000004);
+            userIdentifiersBuilder_ = 
+              com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                 getUserIdentifiersFieldBuilder() : null;
+          } else {
+            userIdentifiersBuilder_.addAllMessages(other.userIdentifiers_);
+          }
+        }
+      }
+      if (other.hasUserAgent()) {
+        bitField0_ |= 0x00000008;
+        userAgent_ = other.userAgent_;
+        onChanged();
       }
       switch (other.getConversionIdentifierCase()) {
         case GCLID_DATE_TIME_PAIR: {
@@ -1510,6 +1753,497 @@ private static final long serialVersionUID = 0L;
       return restatementValueBuilder_;
     }
 
+    private java.util.List<com.google.ads.googleads.v8.common.UserIdentifier> userIdentifiers_ =
+      java.util.Collections.emptyList();
+    private void ensureUserIdentifiersIsMutable() {
+      if (!((bitField0_ & 0x00000004) != 0)) {
+        userIdentifiers_ = new java.util.ArrayList<com.google.ads.googleads.v8.common.UserIdentifier>(userIdentifiers_);
+        bitField0_ |= 0x00000004;
+       }
+    }
+
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        com.google.ads.googleads.v8.common.UserIdentifier, com.google.ads.googleads.v8.common.UserIdentifier.Builder, com.google.ads.googleads.v8.common.UserIdentifierOrBuilder> userIdentifiersBuilder_;
+
+    /**
+     * <pre>
+     * The user identifiers to enhance the original conversion.
+     * ConversionAdjustmentUploadService only accepts user identifiers in
+     * enhancements. The maximum number of user identifiers for each
+     * enhancement is 5.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v8.common.UserIdentifier user_identifiers = 10;</code>
+     */
+    public java.util.List<com.google.ads.googleads.v8.common.UserIdentifier> getUserIdentifiersList() {
+      if (userIdentifiersBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(userIdentifiers_);
+      } else {
+        return userIdentifiersBuilder_.getMessageList();
+      }
+    }
+    /**
+     * <pre>
+     * The user identifiers to enhance the original conversion.
+     * ConversionAdjustmentUploadService only accepts user identifiers in
+     * enhancements. The maximum number of user identifiers for each
+     * enhancement is 5.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v8.common.UserIdentifier user_identifiers = 10;</code>
+     */
+    public int getUserIdentifiersCount() {
+      if (userIdentifiersBuilder_ == null) {
+        return userIdentifiers_.size();
+      } else {
+        return userIdentifiersBuilder_.getCount();
+      }
+    }
+    /**
+     * <pre>
+     * The user identifiers to enhance the original conversion.
+     * ConversionAdjustmentUploadService only accepts user identifiers in
+     * enhancements. The maximum number of user identifiers for each
+     * enhancement is 5.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v8.common.UserIdentifier user_identifiers = 10;</code>
+     */
+    public com.google.ads.googleads.v8.common.UserIdentifier getUserIdentifiers(int index) {
+      if (userIdentifiersBuilder_ == null) {
+        return userIdentifiers_.get(index);
+      } else {
+        return userIdentifiersBuilder_.getMessage(index);
+      }
+    }
+    /**
+     * <pre>
+     * The user identifiers to enhance the original conversion.
+     * ConversionAdjustmentUploadService only accepts user identifiers in
+     * enhancements. The maximum number of user identifiers for each
+     * enhancement is 5.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v8.common.UserIdentifier user_identifiers = 10;</code>
+     */
+    public Builder setUserIdentifiers(
+        int index, com.google.ads.googleads.v8.common.UserIdentifier value) {
+      if (userIdentifiersBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureUserIdentifiersIsMutable();
+        userIdentifiers_.set(index, value);
+        onChanged();
+      } else {
+        userIdentifiersBuilder_.setMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * The user identifiers to enhance the original conversion.
+     * ConversionAdjustmentUploadService only accepts user identifiers in
+     * enhancements. The maximum number of user identifiers for each
+     * enhancement is 5.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v8.common.UserIdentifier user_identifiers = 10;</code>
+     */
+    public Builder setUserIdentifiers(
+        int index, com.google.ads.googleads.v8.common.UserIdentifier.Builder builderForValue) {
+      if (userIdentifiersBuilder_ == null) {
+        ensureUserIdentifiersIsMutable();
+        userIdentifiers_.set(index, builderForValue.build());
+        onChanged();
+      } else {
+        userIdentifiersBuilder_.setMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * The user identifiers to enhance the original conversion.
+     * ConversionAdjustmentUploadService only accepts user identifiers in
+     * enhancements. The maximum number of user identifiers for each
+     * enhancement is 5.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v8.common.UserIdentifier user_identifiers = 10;</code>
+     */
+    public Builder addUserIdentifiers(com.google.ads.googleads.v8.common.UserIdentifier value) {
+      if (userIdentifiersBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureUserIdentifiersIsMutable();
+        userIdentifiers_.add(value);
+        onChanged();
+      } else {
+        userIdentifiersBuilder_.addMessage(value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * The user identifiers to enhance the original conversion.
+     * ConversionAdjustmentUploadService only accepts user identifiers in
+     * enhancements. The maximum number of user identifiers for each
+     * enhancement is 5.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v8.common.UserIdentifier user_identifiers = 10;</code>
+     */
+    public Builder addUserIdentifiers(
+        int index, com.google.ads.googleads.v8.common.UserIdentifier value) {
+      if (userIdentifiersBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureUserIdentifiersIsMutable();
+        userIdentifiers_.add(index, value);
+        onChanged();
+      } else {
+        userIdentifiersBuilder_.addMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * The user identifiers to enhance the original conversion.
+     * ConversionAdjustmentUploadService only accepts user identifiers in
+     * enhancements. The maximum number of user identifiers for each
+     * enhancement is 5.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v8.common.UserIdentifier user_identifiers = 10;</code>
+     */
+    public Builder addUserIdentifiers(
+        com.google.ads.googleads.v8.common.UserIdentifier.Builder builderForValue) {
+      if (userIdentifiersBuilder_ == null) {
+        ensureUserIdentifiersIsMutable();
+        userIdentifiers_.add(builderForValue.build());
+        onChanged();
+      } else {
+        userIdentifiersBuilder_.addMessage(builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * The user identifiers to enhance the original conversion.
+     * ConversionAdjustmentUploadService only accepts user identifiers in
+     * enhancements. The maximum number of user identifiers for each
+     * enhancement is 5.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v8.common.UserIdentifier user_identifiers = 10;</code>
+     */
+    public Builder addUserIdentifiers(
+        int index, com.google.ads.googleads.v8.common.UserIdentifier.Builder builderForValue) {
+      if (userIdentifiersBuilder_ == null) {
+        ensureUserIdentifiersIsMutable();
+        userIdentifiers_.add(index, builderForValue.build());
+        onChanged();
+      } else {
+        userIdentifiersBuilder_.addMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * The user identifiers to enhance the original conversion.
+     * ConversionAdjustmentUploadService only accepts user identifiers in
+     * enhancements. The maximum number of user identifiers for each
+     * enhancement is 5.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v8.common.UserIdentifier user_identifiers = 10;</code>
+     */
+    public Builder addAllUserIdentifiers(
+        java.lang.Iterable<? extends com.google.ads.googleads.v8.common.UserIdentifier> values) {
+      if (userIdentifiersBuilder_ == null) {
+        ensureUserIdentifiersIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, userIdentifiers_);
+        onChanged();
+      } else {
+        userIdentifiersBuilder_.addAllMessages(values);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * The user identifiers to enhance the original conversion.
+     * ConversionAdjustmentUploadService only accepts user identifiers in
+     * enhancements. The maximum number of user identifiers for each
+     * enhancement is 5.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v8.common.UserIdentifier user_identifiers = 10;</code>
+     */
+    public Builder clearUserIdentifiers() {
+      if (userIdentifiersBuilder_ == null) {
+        userIdentifiers_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+      } else {
+        userIdentifiersBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * The user identifiers to enhance the original conversion.
+     * ConversionAdjustmentUploadService only accepts user identifiers in
+     * enhancements. The maximum number of user identifiers for each
+     * enhancement is 5.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v8.common.UserIdentifier user_identifiers = 10;</code>
+     */
+    public Builder removeUserIdentifiers(int index) {
+      if (userIdentifiersBuilder_ == null) {
+        ensureUserIdentifiersIsMutable();
+        userIdentifiers_.remove(index);
+        onChanged();
+      } else {
+        userIdentifiersBuilder_.remove(index);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * The user identifiers to enhance the original conversion.
+     * ConversionAdjustmentUploadService only accepts user identifiers in
+     * enhancements. The maximum number of user identifiers for each
+     * enhancement is 5.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v8.common.UserIdentifier user_identifiers = 10;</code>
+     */
+    public com.google.ads.googleads.v8.common.UserIdentifier.Builder getUserIdentifiersBuilder(
+        int index) {
+      return getUserIdentifiersFieldBuilder().getBuilder(index);
+    }
+    /**
+     * <pre>
+     * The user identifiers to enhance the original conversion.
+     * ConversionAdjustmentUploadService only accepts user identifiers in
+     * enhancements. The maximum number of user identifiers for each
+     * enhancement is 5.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v8.common.UserIdentifier user_identifiers = 10;</code>
+     */
+    public com.google.ads.googleads.v8.common.UserIdentifierOrBuilder getUserIdentifiersOrBuilder(
+        int index) {
+      if (userIdentifiersBuilder_ == null) {
+        return userIdentifiers_.get(index);  } else {
+        return userIdentifiersBuilder_.getMessageOrBuilder(index);
+      }
+    }
+    /**
+     * <pre>
+     * The user identifiers to enhance the original conversion.
+     * ConversionAdjustmentUploadService only accepts user identifiers in
+     * enhancements. The maximum number of user identifiers for each
+     * enhancement is 5.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v8.common.UserIdentifier user_identifiers = 10;</code>
+     */
+    public java.util.List<? extends com.google.ads.googleads.v8.common.UserIdentifierOrBuilder> 
+         getUserIdentifiersOrBuilderList() {
+      if (userIdentifiersBuilder_ != null) {
+        return userIdentifiersBuilder_.getMessageOrBuilderList();
+      } else {
+        return java.util.Collections.unmodifiableList(userIdentifiers_);
+      }
+    }
+    /**
+     * <pre>
+     * The user identifiers to enhance the original conversion.
+     * ConversionAdjustmentUploadService only accepts user identifiers in
+     * enhancements. The maximum number of user identifiers for each
+     * enhancement is 5.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v8.common.UserIdentifier user_identifiers = 10;</code>
+     */
+    public com.google.ads.googleads.v8.common.UserIdentifier.Builder addUserIdentifiersBuilder() {
+      return getUserIdentifiersFieldBuilder().addBuilder(
+          com.google.ads.googleads.v8.common.UserIdentifier.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     * The user identifiers to enhance the original conversion.
+     * ConversionAdjustmentUploadService only accepts user identifiers in
+     * enhancements. The maximum number of user identifiers for each
+     * enhancement is 5.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v8.common.UserIdentifier user_identifiers = 10;</code>
+     */
+    public com.google.ads.googleads.v8.common.UserIdentifier.Builder addUserIdentifiersBuilder(
+        int index) {
+      return getUserIdentifiersFieldBuilder().addBuilder(
+          index, com.google.ads.googleads.v8.common.UserIdentifier.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     * The user identifiers to enhance the original conversion.
+     * ConversionAdjustmentUploadService only accepts user identifiers in
+     * enhancements. The maximum number of user identifiers for each
+     * enhancement is 5.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v8.common.UserIdentifier user_identifiers = 10;</code>
+     */
+    public java.util.List<com.google.ads.googleads.v8.common.UserIdentifier.Builder> 
+         getUserIdentifiersBuilderList() {
+      return getUserIdentifiersFieldBuilder().getBuilderList();
+    }
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        com.google.ads.googleads.v8.common.UserIdentifier, com.google.ads.googleads.v8.common.UserIdentifier.Builder, com.google.ads.googleads.v8.common.UserIdentifierOrBuilder> 
+        getUserIdentifiersFieldBuilder() {
+      if (userIdentifiersBuilder_ == null) {
+        userIdentifiersBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+            com.google.ads.googleads.v8.common.UserIdentifier, com.google.ads.googleads.v8.common.UserIdentifier.Builder, com.google.ads.googleads.v8.common.UserIdentifierOrBuilder>(
+                userIdentifiers_,
+                ((bitField0_ & 0x00000004) != 0),
+                getParentForChildren(),
+                isClean());
+        userIdentifiers_ = null;
+      }
+      return userIdentifiersBuilder_;
+    }
+
+    private java.lang.Object userAgent_ = "";
+    /**
+     * <pre>
+     * The user agent to enhance the original conversion. This can be found in
+     * your user's HTTP request header when they convert on your web page.
+     * Example, "Mozilla/5.0 (iPhone; CPU iPhone OS 12_2 like Mac OS X)". User
+     * agent can only be specified in enhancements with user identifiers.
+     * </pre>
+     *
+     * <code>string user_agent = 11;</code>
+     * @return Whether the userAgent field is set.
+     */
+    public boolean hasUserAgent() {
+      return ((bitField0_ & 0x00000008) != 0);
+    }
+    /**
+     * <pre>
+     * The user agent to enhance the original conversion. This can be found in
+     * your user's HTTP request header when they convert on your web page.
+     * Example, "Mozilla/5.0 (iPhone; CPU iPhone OS 12_2 like Mac OS X)". User
+     * agent can only be specified in enhancements with user identifiers.
+     * </pre>
+     *
+     * <code>string user_agent = 11;</code>
+     * @return The userAgent.
+     */
+    public java.lang.String getUserAgent() {
+      java.lang.Object ref = userAgent_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        userAgent_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * The user agent to enhance the original conversion. This can be found in
+     * your user's HTTP request header when they convert on your web page.
+     * Example, "Mozilla/5.0 (iPhone; CPU iPhone OS 12_2 like Mac OS X)". User
+     * agent can only be specified in enhancements with user identifiers.
+     * </pre>
+     *
+     * <code>string user_agent = 11;</code>
+     * @return The bytes for userAgent.
+     */
+    public com.google.protobuf.ByteString
+        getUserAgentBytes() {
+      java.lang.Object ref = userAgent_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        userAgent_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * The user agent to enhance the original conversion. This can be found in
+     * your user's HTTP request header when they convert on your web page.
+     * Example, "Mozilla/5.0 (iPhone; CPU iPhone OS 12_2 like Mac OS X)". User
+     * agent can only be specified in enhancements with user identifiers.
+     * </pre>
+     *
+     * <code>string user_agent = 11;</code>
+     * @param value The userAgent to set.
+     * @return This builder for chaining.
+     */
+    public Builder setUserAgent(
+        java.lang.String value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000008;
+      userAgent_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The user agent to enhance the original conversion. This can be found in
+     * your user's HTTP request header when they convert on your web page.
+     * Example, "Mozilla/5.0 (iPhone; CPU iPhone OS 12_2 like Mac OS X)". User
+     * agent can only be specified in enhancements with user identifiers.
+     * </pre>
+     *
+     * <code>string user_agent = 11;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearUserAgent() {
+      bitField0_ = (bitField0_ & ~0x00000008);
+      userAgent_ = getDefaultInstance().getUserAgent();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The user agent to enhance the original conversion. This can be found in
+     * your user's HTTP request header when they convert on your web page.
+     * Example, "Mozilla/5.0 (iPhone; CPU iPhone OS 12_2 like Mac OS X)". User
+     * agent can only be specified in enhancements with user identifiers.
+     * </pre>
+     *
+     * <code>string user_agent = 11;</code>
+     * @param value The bytes for userAgent to set.
+     * @return This builder for chaining.
+     */
+    public Builder setUserAgentBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      bitField0_ |= 0x00000008;
+      userAgent_ = value;
+      onChanged();
+      return this;
+    }
+
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v8.services.GclidDateTimePair, com.google.ads.googleads.v8.services.GclidDateTimePair.Builder, com.google.ads.googleads.v8.services.GclidDateTimePairOrBuilder> gclidDateTimePairBuilder_;
     /**
@@ -1700,7 +2434,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The order ID of the conversion to be adjusted. If the conversion was
      * reported with an order ID specified, that order ID must be used as the
-     * identifier here.
+     * identifier here. The order ID is required for enhancements.
      * </pre>
      *
      * <code>string order_id = 7;</code>
@@ -1714,7 +2448,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The order ID of the conversion to be adjusted. If the conversion was
      * reported with an order ID specified, that order ID must be used as the
-     * identifier here.
+     * identifier here. The order ID is required for enhancements.
      * </pre>
      *
      * <code>string order_id = 7;</code>
@@ -1742,7 +2476,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The order ID of the conversion to be adjusted. If the conversion was
      * reported with an order ID specified, that order ID must be used as the
-     * identifier here.
+     * identifier here. The order ID is required for enhancements.
      * </pre>
      *
      * <code>string order_id = 7;</code>
@@ -1771,7 +2505,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The order ID of the conversion to be adjusted. If the conversion was
      * reported with an order ID specified, that order ID must be used as the
-     * identifier here.
+     * identifier here. The order ID is required for enhancements.
      * </pre>
      *
      * <code>string order_id = 7;</code>
@@ -1792,7 +2526,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The order ID of the conversion to be adjusted. If the conversion was
      * reported with an order ID specified, that order ID must be used as the
-     * identifier here.
+     * identifier here. The order ID is required for enhancements.
      * </pre>
      *
      * <code>string order_id = 7;</code>
@@ -1810,7 +2544,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The order ID of the conversion to be adjusted. If the conversion was
      * reported with an order ID specified, that order ID must be used as the
-     * identifier here.
+     * identifier here. The order ID is required for enhancements.
      * </pre>
      *
      * <code>string order_id = 7;</code>

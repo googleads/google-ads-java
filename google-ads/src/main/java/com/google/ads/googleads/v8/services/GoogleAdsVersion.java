@@ -97,6 +97,12 @@ public interface GoogleAdsVersion {
         @ServiceClientDescriptor(settingsClass = BatchJobServiceSettings.class)
         BatchJobServiceClient createBatchJobServiceClient();
          
+        @ServiceClientDescriptor(settingsClass = BiddingDataExclusionServiceSettings.class)
+        BiddingDataExclusionServiceClient createBiddingDataExclusionServiceClient();
+         
+        @ServiceClientDescriptor(settingsClass = BiddingSeasonalityAdjustmentServiceSettings.class)
+        BiddingSeasonalityAdjustmentServiceClient createBiddingSeasonalityAdjustmentServiceClient();
+         
         @ServiceClientDescriptor(settingsClass = BiddingStrategyServiceSettings.class)
         BiddingStrategyServiceClient createBiddingStrategyServiceClient();
          
@@ -171,6 +177,12 @@ public interface GoogleAdsVersion {
          
         @ServiceClientDescriptor(settingsClass = ConversionUploadServiceSettings.class)
         ConversionUploadServiceClient createConversionUploadServiceClient();
+         
+        @ServiceClientDescriptor(settingsClass = ConversionValueRuleServiceSettings.class)
+        ConversionValueRuleServiceClient createConversionValueRuleServiceClient();
+         
+        @ServiceClientDescriptor(settingsClass = ConversionValueRuleSetServiceSettings.class)
+        ConversionValueRuleSetServiceClient createConversionValueRuleSetServiceClient();
          
         @ServiceClientDescriptor(settingsClass = CurrencyConstantServiceSettings.class)
         CurrencyConstantServiceClient createCurrencyConstantServiceClient();

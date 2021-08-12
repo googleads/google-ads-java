@@ -216,9 +216,9 @@ public class KeywordViewName implements ResourceName {
     }
 
     private Builder(KeywordViewName keywordViewName) {
-      customerId = keywordViewName.customerId;
-      adGroupId = keywordViewName.adGroupId;
-      criterionId = keywordViewName.criterionId;
+      this.customerId = keywordViewName.customerId;
+      this.adGroupId = keywordViewName.adGroupId;
+      this.criterionId = keywordViewName.criterionId;
     }
 
     public KeywordViewName build() {

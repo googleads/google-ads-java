@@ -93,7 +93,8 @@ task generateThirdPartyDirectory() {
     thirdPartyDir = file '../third_party'
   }
   dependsOn 'createThirdPartyDirectory'
-  dependsOn 'copyThirdPartyArtifacts'
+  dependsOn 'copyThirdPartySources'
+  dependsOn 'copyThirdPartyBinaries'
   dependsOn 'copyLicenses'
 }
 
@@ -205,7 +206,7 @@ task copyLicenses(type: Copy) {
   }
 }
 
-task copyThirdPartyArtifacts(type: Copy) {
+task copyThirdPartySources(type: Copy) {
   description = "Copies the sources and binaries of dependencies to third_party"
   mustRunAfter 'createThirdPartyDirectory'
 
@@ -213,36 +214,57 @@ task copyThirdPartyArtifacts(type: Copy) {
   // dependencies have changed.
   outputs.upToDateWhen { false }
 
-  def dependencies = configurations.runtimeClasspath
-      .resolvedConfiguration
-      .resolvedArtifacts
-      .collect {
-        project.dependencies.create([
-            group     : it.moduleVersion.id.group,
-            name      : it.moduleVersion.id.name,
-            version   : it.moduleVersion.id.version,
-            classifier: "sources"
-        ])
-      }
-  def files = configurations.detachedConfiguration(dependencies as Dependency[])
-      .resolvedConfiguration
-      .lenientConfiguration
-      .getFiles(Specs.SATISFIES_ALL)
-  if (files.isEmpty()) {
-    throw new GradleException("No source files provided")
-  }
-  if (files.size() < dependencies.size()) {
-    throw new GradleException("Missing dependencies num files < num " +
-        "dependencies, ${files.size()} < ${dependencies.size()}")
+  def componentIds = configurations.runtimeClasspath
+      .incoming
+      .resolutionResult
+      .allDependencies
+      .collect { it.selected.id } as Set
+  // Avoids attempting to download sources for projects in the build.
+  componentIds.removeIf { it instanceof ProjectComponentIdentifier }
+
+  def resolvedComponents = project.dependencies.createArtifactResolutionQuery()
+      .forComponents(componentIds)
+      .withArtifacts(JvmLibrary, SourcesArtifact)
+      .execute()
+      .resolvedComponents
+
+  // Allows a dependency to be excluded from having its sources cached.
+  // There should be a _very_ good reason for anything being in here.
+  final def exemptionEligible = [
+      // Google owned dummy module which doens't need any code.
+      "com.google.guava:listenablefuture:9999.0-empty-to-avoid-conflict-with-guava"
+  ]
+
+  // Grabs the source jars.
+  def files = []
+  for (componentId in componentIds) {
+    def resolvedComponentsForId = resolvedComponents.findAll { (it.id == componentId) }
+    if (resolvedComponentsForId.size() != 1) {
+      throw new GradleException("Failed to resolve component for ${componentId}. Got: " + resolvedComponentsForId)
+    }
+    def sources = resolvedComponentsForId[0].getArtifacts(SourcesArtifact)
+    if (sources.size() == 1) {
+      files.add(sources[0].file)
+    } else if (exemptionEligible.contains(componentId.toString())) {
+      logger.debug("Allowing exemption for ${componentId}")
+    } else {
+      throw new RuntimeException("Unable to resolve sources for ${componentId}. Got: ${sources}")
+    }
   }
   from files
   into tasks.generateThirdPartyDirectory.thirdPartyDir
   doLast {
-    logger.info('Resolved third party dependencies')
+    logger.info('Resolved third party sources')
     files.each {
       logger.debug(" - ${it.path}")
     }
   }
+}
+
+// Copies the third party binaries to the third_party folder.
+task copyThirdPartyBinaries(type: Copy) {
+  from configurations.runtimeClasspath
+  into tasks.generateThirdPartyDirectory.thirdPartyDir
 }
 
 // ------------------------------ Shadow jar -----------------------------------

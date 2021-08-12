@@ -20,7 +20,6 @@ import com.google.ads.googleads.v8.resources.BatchJob;
 import com.google.ads.googleads.v8.resources.BatchJobName;
 import com.google.ads.googleads.v8.services.stub.BatchJobServiceStub;
 import com.google.ads.googleads.v8.services.stub.BatchJobServiceStubSettings;
-import com.google.api.core.ApiFunction;
 import com.google.api.core.ApiFuture;
 import com.google.api.core.ApiFutures;
 import com.google.api.core.BetaApi;
@@ -945,12 +944,7 @@ public class BatchJobServiceClient implements BackgroundResource {
           ListBatchJobResultsPage.createEmptyPage().createPageAsync(context, futureResponse);
       return ApiFutures.transform(
           futurePage,
-          new ApiFunction<ListBatchJobResultsPage, ListBatchJobResultsPagedResponse>() {
-            @Override
-            public ListBatchJobResultsPagedResponse apply(ListBatchJobResultsPage input) {
-              return new ListBatchJobResultsPagedResponse(input);
-            }
-          },
+          input -> new ListBatchJobResultsPagedResponse(input),
           MoreExecutors.directExecutor());
     }
 

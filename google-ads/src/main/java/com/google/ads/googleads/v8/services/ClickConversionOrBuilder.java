@@ -295,4 +295,58 @@ public interface ClickConversionOrBuilder extends
    * <code>.google.ads.googleads.v8.services.CartData cart_data = 16;</code>
    */
   com.google.ads.googleads.v8.services.CartDataOrBuilder getCartDataOrBuilder();
+
+  /**
+   * <pre>
+   * The user identifiers associated with this conversion. Only hashed_email and
+   * hashed_phone_number are supported for conversion uploads. The maximum
+   * number of user identifiers for each conversion is 5.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v8.common.UserIdentifier user_identifiers = 17;</code>
+   */
+  java.util.List<com.google.ads.googleads.v8.common.UserIdentifier> 
+      getUserIdentifiersList();
+  /**
+   * <pre>
+   * The user identifiers associated with this conversion. Only hashed_email and
+   * hashed_phone_number are supported for conversion uploads. The maximum
+   * number of user identifiers for each conversion is 5.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v8.common.UserIdentifier user_identifiers = 17;</code>
+   */
+  com.google.ads.googleads.v8.common.UserIdentifier getUserIdentifiers(int index);
+  /**
+   * <pre>
+   * The user identifiers associated with this conversion. Only hashed_email and
+   * hashed_phone_number are supported for conversion uploads. The maximum
+   * number of user identifiers for each conversion is 5.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v8.common.UserIdentifier user_identifiers = 17;</code>
+   */
+  int getUserIdentifiersCount();
+  /**
+   * <pre>
+   * The user identifiers associated with this conversion. Only hashed_email and
+   * hashed_phone_number are supported for conversion uploads. The maximum
+   * number of user identifiers for each conversion is 5.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v8.common.UserIdentifier user_identifiers = 17;</code>
+   */
+  java.util.List<? extends com.google.ads.googleads.v8.common.UserIdentifierOrBuilder> 
+      getUserIdentifiersOrBuilderList();
+  /**
+   * <pre>
+   * The user identifiers associated with this conversion. Only hashed_email and
+   * hashed_phone_number are supported for conversion uploads. The maximum
+   * number of user identifiers for each conversion is 5.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v8.common.UserIdentifier user_identifiers = 17;</code>
+   */
+  com.google.ads.googleads.v8.common.UserIdentifierOrBuilder getUserIdentifiersOrBuilder(
+      int index);
 }

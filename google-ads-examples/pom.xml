@@ -82,5 +82,17 @@
       <version>4.13.1</version>
       <scope>test</scope>
     </dependency>
+    <dependency>
+      <groupId>org.reflections</groupId>
+      <artifactId>reflections</artifactId>
+      <version>0.9.11</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.hamcrest</groupId>
+      <artifactId>hamcrest</artifactId>
+      <version>2.2</version>
+      <scope>test</scope>
+    </dependency>
   </dependencies>
 </project>

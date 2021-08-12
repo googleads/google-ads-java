@@ -165,6 +165,7 @@ public interface GenerateReachForecastRequestOrBuilder extends
    * exposed to the ad) for the reported reach metrics [1-10].
    * This won't affect the targeting, but just the reporting.
    * If not specified, a default of 1 is applied.
+   * This field cannot be combined with the effective_frequency_limit field.
    * </pre>
    *
    * <code>int32 min_effective_frequency = 11;</code>
@@ -177,12 +178,61 @@ public interface GenerateReachForecastRequestOrBuilder extends
    * exposed to the ad) for the reported reach metrics [1-10].
    * This won't affect the targeting, but just the reporting.
    * If not specified, a default of 1 is applied.
+   * This field cannot be combined with the effective_frequency_limit field.
    * </pre>
    *
    * <code>int32 min_effective_frequency = 11;</code>
    * @return The minEffectiveFrequency.
    */
   int getMinEffectiveFrequency();
+
+  /**
+   * <pre>
+   * The highest minimum effective frequency (the number of times a person was
+   * exposed to the ad) value [1-10] to include in
+   * Forecast.effective_frequency_breakdowns.
+   * If not specified, Forecast.effective_frequency_breakdowns will not be
+   * provided.
+   * The effective frequency value provided here will also be used as the
+   * minimum effective frequency for the reported reach metrics.
+   * This field cannot be combined with the min_effective_frequency field.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v8.services.EffectiveFrequencyLimit effective_frequency_limit = 12;</code>
+   * @return Whether the effectiveFrequencyLimit field is set.
+   */
+  boolean hasEffectiveFrequencyLimit();
+  /**
+   * <pre>
+   * The highest minimum effective frequency (the number of times a person was
+   * exposed to the ad) value [1-10] to include in
+   * Forecast.effective_frequency_breakdowns.
+   * If not specified, Forecast.effective_frequency_breakdowns will not be
+   * provided.
+   * The effective frequency value provided here will also be used as the
+   * minimum effective frequency for the reported reach metrics.
+   * This field cannot be combined with the min_effective_frequency field.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v8.services.EffectiveFrequencyLimit effective_frequency_limit = 12;</code>
+   * @return The effectiveFrequencyLimit.
+   */
+  com.google.ads.googleads.v8.services.EffectiveFrequencyLimit getEffectiveFrequencyLimit();
+  /**
+   * <pre>
+   * The highest minimum effective frequency (the number of times a person was
+   * exposed to the ad) value [1-10] to include in
+   * Forecast.effective_frequency_breakdowns.
+   * If not specified, Forecast.effective_frequency_breakdowns will not be
+   * provided.
+   * The effective frequency value provided here will also be used as the
+   * minimum effective frequency for the reported reach metrics.
+   * This field cannot be combined with the min_effective_frequency field.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v8.services.EffectiveFrequencyLimit effective_frequency_limit = 12;</code>
+   */
+  com.google.ads.googleads.v8.services.EffectiveFrequencyLimitOrBuilder getEffectiveFrequencyLimitOrBuilder();
 
   /**
    * <pre>

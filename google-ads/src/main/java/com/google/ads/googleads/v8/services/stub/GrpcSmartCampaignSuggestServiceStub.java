@@ -16,6 +16,8 @@
 
 package com.google.ads.googleads.v8.services.stub;
 
+import com.google.ads.googleads.v8.services.SuggestSmartCampaignAdRequest;
+import com.google.ads.googleads.v8.services.SuggestSmartCampaignAdResponse;
 import com.google.ads.googleads.v8.services.SuggestSmartCampaignBudgetOptionsRequest;
 import com.google.ads.googleads.v8.services.SuggestSmartCampaignBudgetOptionsResponse;
 import com.google.api.gax.core.BackgroundResource;
@@ -23,7 +25,6 @@ import com.google.api.gax.core.BackgroundResourceAggregation;
 import com.google.api.gax.grpc.GrpcCallSettings;
 import com.google.api.gax.grpc.GrpcStubCallableFactory;
 import com.google.api.gax.rpc.ClientContext;
-import com.google.api.gax.rpc.RequestParamsExtractor;
 import com.google.api.gax.rpc.UnaryCallable;
 import com.google.common.collect.ImmutableMap;
 import com.google.longrunning.stub.GrpcOperationsStub;
@@ -59,9 +60,25 @@ public class GrpcSmartCampaignSuggestServiceStub extends SmartCampaignSuggestSer
                       SuggestSmartCampaignBudgetOptionsResponse.getDefaultInstance()))
               .build();
 
+  private static final MethodDescriptor<
+          SuggestSmartCampaignAdRequest, SuggestSmartCampaignAdResponse>
+      suggestSmartCampaignAdMethodDescriptor =
+          MethodDescriptor
+              .<SuggestSmartCampaignAdRequest, SuggestSmartCampaignAdResponse>newBuilder()
+              .setType(MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(
+                  "google.ads.googleads.v8.services.SmartCampaignSuggestService/SuggestSmartCampaignAd")
+              .setRequestMarshaller(
+                  ProtoUtils.marshaller(SuggestSmartCampaignAdRequest.getDefaultInstance()))
+              .setResponseMarshaller(
+                  ProtoUtils.marshaller(SuggestSmartCampaignAdResponse.getDefaultInstance()))
+              .build();
+
   private final UnaryCallable<
           SuggestSmartCampaignBudgetOptionsRequest, SuggestSmartCampaignBudgetOptionsResponse>
       suggestSmartCampaignBudgetOptionsCallable;
+  private final UnaryCallable<SuggestSmartCampaignAdRequest, SuggestSmartCampaignAdResponse>
+      suggestSmartCampaignAdCallable;
 
   private final BackgroundResource backgroundResources;
   private final GrpcOperationsStub operationsStub;
@@ -119,14 +136,22 @@ public class GrpcSmartCampaignSuggestServiceStub extends SmartCampaignSuggestSer
                     newBuilder()
                 .setMethodDescriptor(suggestSmartCampaignBudgetOptionsMethodDescriptor)
                 .setParamsExtractor(
-                    new RequestParamsExtractor<SuggestSmartCampaignBudgetOptionsRequest>() {
-                      @Override
-                      public Map<String, String> extract(
-                          SuggestSmartCampaignBudgetOptionsRequest request) {
-                        ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
-                        params.put("customer_id", String.valueOf(request.getCustomerId()));
-                        return params.build();
-                      }
+                    request -> {
+                      ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
+                      params.put("customer_id", String.valueOf(request.getCustomerId()));
+                      return params.build();
+                    })
+                .build();
+    GrpcCallSettings<SuggestSmartCampaignAdRequest, SuggestSmartCampaignAdResponse>
+        suggestSmartCampaignAdTransportSettings =
+            GrpcCallSettings
+                .<SuggestSmartCampaignAdRequest, SuggestSmartCampaignAdResponse>newBuilder()
+                .setMethodDescriptor(suggestSmartCampaignAdMethodDescriptor)
+                .setParamsExtractor(
+                    request -> {
+                      ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
+                      params.put("customer_id", String.valueOf(request.getCustomerId()));
+                      return params.build();
                     })
                 .build();
 
@@ -134,6 +159,11 @@ public class GrpcSmartCampaignSuggestServiceStub extends SmartCampaignSuggestSer
         callableFactory.createUnaryCallable(
             suggestSmartCampaignBudgetOptionsTransportSettings,
             settings.suggestSmartCampaignBudgetOptionsSettings(),
+            clientContext);
+    this.suggestSmartCampaignAdCallable =
+        callableFactory.createUnaryCallable(
+            suggestSmartCampaignAdTransportSettings,
+            settings.suggestSmartCampaignAdSettings(),
             clientContext);
 
     this.backgroundResources =
@@ -152,8 +182,20 @@ public class GrpcSmartCampaignSuggestServiceStub extends SmartCampaignSuggestSer
   }
 
   @Override
+  public UnaryCallable<SuggestSmartCampaignAdRequest, SuggestSmartCampaignAdResponse>
+      suggestSmartCampaignAdCallable() {
+    return suggestSmartCampaignAdCallable;
+  }
+
+  @Override
   public final void close() {
-    shutdown();
+    try {
+      backgroundResources.close();
+    } catch (RuntimeException e) {
+      throw e;
+    } catch (Exception e) {
+      throw new IllegalStateException("Failed to close resource", e);
+    }
   }
 
   @Override

@@ -45,7 +45,7 @@ public final class AdGroupAdProto {
       "ogle/ads/googleads/v8/resources/ad.proto" +
       "\032\037google/api/field_behavior.proto\032\031googl" +
       "e/api/resource.proto\032\034google/api/annotat" +
-      "ions.proto\"\370\004\n\tAdGroupAd\022A\n\rresource_nam" +
+      "ions.proto\"\223\005\n\tAdGroupAd\022A\n\rresource_nam" +
       "e\030\001 \001(\tB*\340A\005\372A$\n\"googleads.googleapis.co" +
       "m/AdGroupAd\022R\n\006status\030\003 \001(\0162B.google.ads" +
       ".googleads.v8.enums.AdGroupAdStatusEnum." +
@@ -56,26 +56,27 @@ public final class AdGroupAdProto {
       "29.google.ads.googleads.v8.resources.AdG" +
       "roupAdPolicySummaryB\003\340A\003\022R\n\013ad_strength\030" +
       "\007 \001(\01628.google.ads.googleads.v8.enums.Ad" +
-      "StrengthEnum.AdStrengthB\003\340A\003\022?\n\006labels\030\n" +
-      " \003(\tB/\340A\003\372A)\n\'googleads.googleapis.com/A" +
-      "dGroupAdLabel:a\352A^\n\"googleads.googleapis" +
-      ".com/AdGroupAd\0228customers/{customer_id}/" +
-      "adGroupAds/{ad_group_id}~{ad_id}B\013\n\t_ad_" +
-      "group\"\277\002\n\026AdGroupAdPolicySummary\022S\n\024poli" +
-      "cy_topic_entries\030\001 \003(\01320.google.ads.goog" +
-      "leads.v8.common.PolicyTopicEntryB\003\340A\003\022d\n" +
-      "\rreview_status\030\002 \001(\0162H.google.ads.google" +
-      "ads.v8.enums.PolicyReviewStatusEnum.Poli" +
-      "cyReviewStatusB\003\340A\003\022j\n\017approval_status\030\003" +
-      " \001(\0162L.google.ads.googleads.v8.enums.Pol" +
-      "icyApprovalStatusEnum.PolicyApprovalStat" +
-      "usB\003\340A\003B\373\001\n%com.google.ads.googleads.v8." +
-      "resourcesB\016AdGroupAdProtoP\001ZJgoogle.gola" +
-      "ng.org/genproto/googleapis/ads/googleads" +
-      "/v8/resources;resources\242\002\003GAA\252\002!Google.A" +
-      "ds.GoogleAds.V8.Resources\312\002!Google\\Ads\\G" +
-      "oogleAds\\V8\\Resources\352\002%Google::Ads::Goo" +
-      "gleAds::V8::Resourcesb\006proto3"
+      "StrengthEnum.AdStrengthB\003\340A\003\022\031\n\014action_i" +
+      "tems\030\r \003(\tB\003\340A\003\022?\n\006labels\030\n \003(\tB/\340A\003\372A)\n" +
+      "\'googleads.googleapis.com/AdGroupAdLabel" +
+      ":a\352A^\n\"googleads.googleapis.com/AdGroupA" +
+      "d\0228customers/{customer_id}/adGroupAds/{a" +
+      "d_group_id}~{ad_id}B\013\n\t_ad_group\"\277\002\n\026AdG" +
+      "roupAdPolicySummary\022S\n\024policy_topic_entr" +
+      "ies\030\001 \003(\01320.google.ads.googleads.v8.comm" +
+      "on.PolicyTopicEntryB\003\340A\003\022d\n\rreview_statu" +
+      "s\030\002 \001(\0162H.google.ads.googleads.v8.enums." +
+      "PolicyReviewStatusEnum.PolicyReviewStatu" +
+      "sB\003\340A\003\022j\n\017approval_status\030\003 \001(\0162L.google" +
+      ".ads.googleads.v8.enums.PolicyApprovalSt" +
+      "atusEnum.PolicyApprovalStatusB\003\340A\003B\373\001\n%c" +
+      "om.google.ads.googleads.v8.resourcesB\016Ad" +
+      "GroupAdProtoP\001ZJgoogle.golang.org/genpro" +
+      "to/googleapis/ads/googleads/v8/resources" +
+      ";resources\242\002\003GAA\252\002!Google.Ads.GoogleAds." +
+      "V8.Resources\312\002!Google\\Ads\\GoogleAds\\V8\\R" +
+      "esources\352\002%Google::Ads::GoogleAds::V8::R" +
+      "esourcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -95,7 +96,7 @@ public final class AdGroupAdProto {
     internal_static_google_ads_googleads_v8_resources_AdGroupAd_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v8_resources_AdGroupAd_descriptor,
-        new java.lang.String[] { "ResourceName", "Status", "AdGroup", "Ad", "PolicySummary", "AdStrength", "Labels", "AdGroup", });
+        new java.lang.String[] { "ResourceName", "Status", "AdGroup", "Ad", "PolicySummary", "AdStrength", "ActionItems", "Labels", "AdGroup", });
     internal_static_google_ads_googleads_v8_resources_AdGroupAdPolicySummary_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_google_ads_googleads_v8_resources_AdGroupAdPolicySummary_fieldAccessorTable = new

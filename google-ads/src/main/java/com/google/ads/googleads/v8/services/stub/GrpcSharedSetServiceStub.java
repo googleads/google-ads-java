@@ -25,7 +25,6 @@ import com.google.api.gax.core.BackgroundResourceAggregation;
 import com.google.api.gax.grpc.GrpcCallSettings;
 import com.google.api.gax.grpc.GrpcStubCallableFactory;
 import com.google.api.gax.rpc.ClientContext;
-import com.google.api.gax.rpc.RequestParamsExtractor;
 import com.google.api.gax.rpc.UnaryCallable;
 import com.google.common.collect.ImmutableMap;
 import com.google.longrunning.stub.GrpcOperationsStub;
@@ -117,13 +116,10 @@ public class GrpcSharedSetServiceStub extends SharedSetServiceStub {
         GrpcCallSettings.<GetSharedSetRequest, SharedSet>newBuilder()
             .setMethodDescriptor(getSharedSetMethodDescriptor)
             .setParamsExtractor(
-                new RequestParamsExtractor<GetSharedSetRequest>() {
-                  @Override
-                  public Map<String, String> extract(GetSharedSetRequest request) {
-                    ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
-                    params.put("resource_name", String.valueOf(request.getResourceName()));
-                    return params.build();
-                  }
+                request -> {
+                  ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
+                  params.put("resource_name", String.valueOf(request.getResourceName()));
+                  return params.build();
                 })
             .build();
     GrpcCallSettings<MutateSharedSetsRequest, MutateSharedSetsResponse>
@@ -131,13 +127,10 @@ public class GrpcSharedSetServiceStub extends SharedSetServiceStub {
             GrpcCallSettings.<MutateSharedSetsRequest, MutateSharedSetsResponse>newBuilder()
                 .setMethodDescriptor(mutateSharedSetsMethodDescriptor)
                 .setParamsExtractor(
-                    new RequestParamsExtractor<MutateSharedSetsRequest>() {
-                      @Override
-                      public Map<String, String> extract(MutateSharedSetsRequest request) {
-                        ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
-                        params.put("customer_id", String.valueOf(request.getCustomerId()));
-                        return params.build();
-                      }
+                    request -> {
+                      ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
+                      params.put("customer_id", String.valueOf(request.getCustomerId()));
+                      return params.build();
                     })
                 .build();
 
@@ -169,7 +162,13 @@ public class GrpcSharedSetServiceStub extends SharedSetServiceStub {
 
   @Override
   public final void close() {
-    shutdown();
+    try {
+      backgroundResources.close();
+    } catch (RuntimeException e) {
+      throw e;
+    } catch (Exception e) {
+      throw new IllegalStateException("Failed to close resource", e);
+    }
   }
 
   @Override

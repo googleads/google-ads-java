@@ -48,6 +48,37 @@ public final class SmartCampaignSuggestServiceGrpc {
     return getSuggestSmartCampaignBudgetOptionsMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.google.ads.googleads.v8.services.SuggestSmartCampaignAdRequest,
+      com.google.ads.googleads.v8.services.SuggestSmartCampaignAdResponse> getSuggestSmartCampaignAdMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "SuggestSmartCampaignAd",
+      requestType = com.google.ads.googleads.v8.services.SuggestSmartCampaignAdRequest.class,
+      responseType = com.google.ads.googleads.v8.services.SuggestSmartCampaignAdResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.google.ads.googleads.v8.services.SuggestSmartCampaignAdRequest,
+      com.google.ads.googleads.v8.services.SuggestSmartCampaignAdResponse> getSuggestSmartCampaignAdMethod() {
+    io.grpc.MethodDescriptor<com.google.ads.googleads.v8.services.SuggestSmartCampaignAdRequest, com.google.ads.googleads.v8.services.SuggestSmartCampaignAdResponse> getSuggestSmartCampaignAdMethod;
+    if ((getSuggestSmartCampaignAdMethod = SmartCampaignSuggestServiceGrpc.getSuggestSmartCampaignAdMethod) == null) {
+      synchronized (SmartCampaignSuggestServiceGrpc.class) {
+        if ((getSuggestSmartCampaignAdMethod = SmartCampaignSuggestServiceGrpc.getSuggestSmartCampaignAdMethod) == null) {
+          SmartCampaignSuggestServiceGrpc.getSuggestSmartCampaignAdMethod = getSuggestSmartCampaignAdMethod =
+              io.grpc.MethodDescriptor.<com.google.ads.googleads.v8.services.SuggestSmartCampaignAdRequest, com.google.ads.googleads.v8.services.SuggestSmartCampaignAdResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "SuggestSmartCampaignAd"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.google.ads.googleads.v8.services.SuggestSmartCampaignAdRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.google.ads.googleads.v8.services.SuggestSmartCampaignAdResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new SmartCampaignSuggestServiceMethodDescriptorSupplier("SuggestSmartCampaignAd"))
+              .build();
+        }
+      }
+    }
+    return getSuggestSmartCampaignAdMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -109,6 +140,17 @@ public final class SmartCampaignSuggestServiceGrpc {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSuggestSmartCampaignBudgetOptionsMethod(), responseObserver);
     }
 
+    /**
+     * <pre>
+     * Suggests a Smart campaign ad compatible with the Ad family of resources,
+     * based on data points such as targeting and the business to advertise.
+     * </pre>
+     */
+    public void suggestSmartCampaignAd(com.google.ads.googleads.v8.services.SuggestSmartCampaignAdRequest request,
+        io.grpc.stub.StreamObserver<com.google.ads.googleads.v8.services.SuggestSmartCampaignAdResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSuggestSmartCampaignAdMethod(), responseObserver);
+    }
+
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
@@ -118,6 +160,13 @@ public final class SmartCampaignSuggestServiceGrpc {
                 com.google.ads.googleads.v8.services.SuggestSmartCampaignBudgetOptionsRequest,
                 com.google.ads.googleads.v8.services.SuggestSmartCampaignBudgetOptionsResponse>(
                   this, METHODID_SUGGEST_SMART_CAMPAIGN_BUDGET_OPTIONS)))
+          .addMethod(
+            getSuggestSmartCampaignAdMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.google.ads.googleads.v8.services.SuggestSmartCampaignAdRequest,
+                com.google.ads.googleads.v8.services.SuggestSmartCampaignAdResponse>(
+                  this, METHODID_SUGGEST_SMART_CAMPAIGN_AD)))
           .build();
     }
   }
@@ -149,6 +198,18 @@ public final class SmartCampaignSuggestServiceGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getSuggestSmartCampaignBudgetOptionsMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * Suggests a Smart campaign ad compatible with the Ad family of resources,
+     * based on data points such as targeting and the business to advertise.
+     * </pre>
+     */
+    public void suggestSmartCampaignAd(com.google.ads.googleads.v8.services.SuggestSmartCampaignAdRequest request,
+        io.grpc.stub.StreamObserver<com.google.ads.googleads.v8.services.SuggestSmartCampaignAdResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getSuggestSmartCampaignAdMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -176,6 +237,17 @@ public final class SmartCampaignSuggestServiceGrpc {
     public com.google.ads.googleads.v8.services.SuggestSmartCampaignBudgetOptionsResponse suggestSmartCampaignBudgetOptions(com.google.ads.googleads.v8.services.SuggestSmartCampaignBudgetOptionsRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getSuggestSmartCampaignBudgetOptionsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Suggests a Smart campaign ad compatible with the Ad family of resources,
+     * based on data points such as targeting and the business to advertise.
+     * </pre>
+     */
+    public com.google.ads.googleads.v8.services.SuggestSmartCampaignAdResponse suggestSmartCampaignAd(com.google.ads.googleads.v8.services.SuggestSmartCampaignAdRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getSuggestSmartCampaignAdMethod(), getCallOptions(), request);
     }
   }
 
@@ -206,9 +278,22 @@ public final class SmartCampaignSuggestServiceGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getSuggestSmartCampaignBudgetOptionsMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * Suggests a Smart campaign ad compatible with the Ad family of resources,
+     * based on data points such as targeting and the business to advertise.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.google.ads.googleads.v8.services.SuggestSmartCampaignAdResponse> suggestSmartCampaignAd(
+        com.google.ads.googleads.v8.services.SuggestSmartCampaignAdRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getSuggestSmartCampaignAdMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_SUGGEST_SMART_CAMPAIGN_BUDGET_OPTIONS = 0;
+  private static final int METHODID_SUGGEST_SMART_CAMPAIGN_AD = 1;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -230,6 +315,10 @@ public final class SmartCampaignSuggestServiceGrpc {
         case METHODID_SUGGEST_SMART_CAMPAIGN_BUDGET_OPTIONS:
           serviceImpl.suggestSmartCampaignBudgetOptions((com.google.ads.googleads.v8.services.SuggestSmartCampaignBudgetOptionsRequest) request,
               (io.grpc.stub.StreamObserver<com.google.ads.googleads.v8.services.SuggestSmartCampaignBudgetOptionsResponse>) responseObserver);
+          break;
+        case METHODID_SUGGEST_SMART_CAMPAIGN_AD:
+          serviceImpl.suggestSmartCampaignAd((com.google.ads.googleads.v8.services.SuggestSmartCampaignAdRequest) request,
+              (io.grpc.stub.StreamObserver<com.google.ads.googleads.v8.services.SuggestSmartCampaignAdResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -293,6 +382,7 @@ public final class SmartCampaignSuggestServiceGrpc {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new SmartCampaignSuggestServiceFileDescriptorSupplier())
               .addMethod(getSuggestSmartCampaignBudgetOptionsMethod())
+              .addMethod(getSuggestSmartCampaignAdMethod())
               .build();
         }
       }

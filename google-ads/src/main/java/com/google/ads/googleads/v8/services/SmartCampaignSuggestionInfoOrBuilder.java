@@ -29,21 +29,6 @@ public interface SmartCampaignSuggestionInfoOrBuilder extends
 
   /**
    * <pre>
-   * Optional. The ID of the Google My Business (GMB) Location.
-   * The location ID can be fetched by GMB API with its form:
-   * accounts/{accountId}/locations/{locationId}. The last {locationId}
-   * component from the GMB API represents the business_location_id.
-   * See the [Google My Business API]
-   * (https://developers.google.com/my-business/reference/rest/v4/accounts.locations)
-   * </pre>
-   *
-   * <code>int64 business_location_id = 2 [(.google.api.field_behavior) = OPTIONAL];</code>
-   * @return The businessLocationId.
-   */
-  long getBusinessLocationId();
-
-  /**
-   * <pre>
    * Optional. The two letter advertising language for the Smart campaign to be
    * constructed, default to 'en' if not set.
    * </pre>
@@ -159,6 +144,62 @@ public interface SmartCampaignSuggestionInfoOrBuilder extends
 
   /**
    * <pre>
+   * Optional. Context describing the business to advertise.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v8.services.SmartCampaignSuggestionInfo.BusinessContext business_context = 8 [(.google.api.field_behavior) = OPTIONAL];</code>
+   * @return Whether the businessContext field is set.
+   */
+  boolean hasBusinessContext();
+  /**
+   * <pre>
+   * Optional. Context describing the business to advertise.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v8.services.SmartCampaignSuggestionInfo.BusinessContext business_context = 8 [(.google.api.field_behavior) = OPTIONAL];</code>
+   * @return The businessContext.
+   */
+  com.google.ads.googleads.v8.services.SmartCampaignSuggestionInfo.BusinessContext getBusinessContext();
+  /**
+   * <pre>
+   * Optional. Context describing the business to advertise.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v8.services.SmartCampaignSuggestionInfo.BusinessContext business_context = 8 [(.google.api.field_behavior) = OPTIONAL];</code>
+   */
+  com.google.ads.googleads.v8.services.SmartCampaignSuggestionInfo.BusinessContextOrBuilder getBusinessContextOrBuilder();
+
+  /**
+   * <pre>
+   * Optional. The ID of the Google My Business (GMB) Location.
+   * The location ID can be fetched by GMB API with its form:
+   * accounts/{accountId}/locations/{locationId}. The last {locationId}
+   * component from the GMB API represents the business_location_id.
+   * See the [Google My Business API]
+   * (https://developers.google.com/my-business/reference/rest/v4/accounts.locations)
+   * </pre>
+   *
+   * <code>int64 business_location_id = 2 [(.google.api.field_behavior) = OPTIONAL];</code>
+   * @return Whether the businessLocationId field is set.
+   */
+  boolean hasBusinessLocationId();
+  /**
+   * <pre>
+   * Optional. The ID of the Google My Business (GMB) Location.
+   * The location ID can be fetched by GMB API with its form:
+   * accounts/{accountId}/locations/{locationId}. The last {locationId}
+   * component from the GMB API represents the business_location_id.
+   * See the [Google My Business API]
+   * (https://developers.google.com/my-business/reference/rest/v4/accounts.locations)
+   * </pre>
+   *
+   * <code>int64 business_location_id = 2 [(.google.api.field_behavior) = OPTIONAL];</code>
+   * @return The businessLocationId.
+   */
+  long getBusinessLocationId();
+
+  /**
+   * <pre>
    * Optional. The targeting geo location by locations.
    * </pre>
    *
@@ -210,6 +251,8 @@ public interface SmartCampaignSuggestionInfoOrBuilder extends
    * <code>.google.ads.googleads.v8.common.ProximityInfo proximity = 5 [(.google.api.field_behavior) = OPTIONAL];</code>
    */
   com.google.ads.googleads.v8.common.ProximityInfoOrBuilder getProximityOrBuilder();
+
+  public com.google.ads.googleads.v8.services.SmartCampaignSuggestionInfo.BusinessSettingCase getBusinessSettingCase();
 
   public com.google.ads.googleads.v8.services.SmartCampaignSuggestionInfo.GeoTargetCase getGeoTargetCase();
 }

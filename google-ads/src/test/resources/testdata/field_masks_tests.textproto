@@ -1,0 +1,947 @@
+# Serialized FieldMasksTests proto
+
+#### Epic 1. Singular Scalar & Enum Fields
+
+## Scenario 1.1: The field values are not present in the original object.
+
+test_cases {
+  epic: "Epic 1. Singular Scalar & Enum Fields"
+  scenario: "Scenario 1.1: The field values are not present in the original object."
+  description: "Test 1.1.1: The field values are not present in the modified object."
+  original_resource {
+  }
+  modified_resource {
+  }
+  expected_mask {
+    paths: []
+  }
+  all_set_fields_mask {
+    paths: []
+  }
+}
+
+test_cases {
+  epic: "Epic 1. Singular Scalar & Enum Fields"
+  scenario: "Scenario 1.1: The field values are not present in the original object."
+  description: "Test 1.1.2: The field values (optional, non-optional) are present in the modified object."
+  original_resource {
+  }
+  modified_resource {
+    id: 123
+    name: "resource name"
+    description: "resource desc"
+    status: PAUSED
+    optimization_score: 99.9
+  }
+  expected_mask {
+    paths: ["id", "name", "description", "status", "optimization_score"]
+  }
+  all_set_fields_mask {
+    paths: ["id", "name", "description", "status", "optimization_score"]
+  }
+  expected_field_values {
+    key: "id"
+    value {
+      int64_value: 123
+    }
+  }
+  expected_field_values {
+    key: "name"
+    value {
+      string_value: "resource name"
+    }
+  }
+  expected_field_values {
+    key: "status"
+    value {
+      resource_status_value: PAUSED
+    }
+  }
+  expected_field_values {
+    key: "optimization_score"
+    value {
+      double_value: 99.90
+    }
+  }
+}
+
+test_cases {
+  epic: "Epic 1. Singular Scalar & Enum Fields"
+  scenario: "Scenario 1.1: The field values are not present in the original object."
+  description: "Test 1.1.3: The field values (optional) are set to default in the modified object."
+  original_resource {
+  }
+  modified_resource {
+    description: ""
+    optimization_score: 0
+  }
+  expected_mask {
+    paths: ["description", "optimization_score"]
+  }
+  all_set_fields_mask {
+    paths: ["description", "optimization_score"]
+  }
+  expected_field_values {
+    key: "description"
+    value {
+      string_value: ""
+    }
+  }
+  expected_field_values {
+    key: "optimization_score"
+    value {
+      double_value: 0
+    }
+  }
+}
+
+test_cases {
+  epic: "Epic 1. Singular Scalar & Enum Fields"
+  scenario: "Scenario 1.1: The field values are not present in the original object."
+  description: "Test 1.1.4: The field values (non-optional) are set to default in the modified object."
+  original_resource {
+  }
+  modified_resource {
+    id: 0
+    name: ""
+    status: UNSPECIFIED
+  }
+  expected_mask {
+    paths: []
+  }
+  all_set_fields_mask {
+    paths: []
+  }
+  expected_field_values {
+    key: "id"
+    value {
+      int64_value: 0
+    }
+  }
+  expected_field_values {
+    key: "status"
+    value {
+      resource_status_value: UNSPECIFIED
+    }
+  }
+}
+
+## Scenario 1.2: The field values (optional, non-optional) are present in the original object.
+
+test_cases {
+  epic: "Epic 1. Singular Scalar & Enum Fields"
+  scenario: "Scenario 1.2: The field values (optional, non-optional) are present in the original object."
+  description: "Test 1.2.1: The field values are not present in the modified object."
+  original_resource {
+    id: 123
+    name: "resource name"
+    description: "resource desc"
+    status: PAUSED
+    optimization_score: 99.9
+  }
+  modified_resource {
+  }
+  expected_mask {
+    paths: ["id", "name", "description", "status", "optimization_score"]
+  }
+  all_set_fields_mask {
+    paths: []
+  }
+}
+
+test_cases {
+  epic: "Epic 1. Singular Scalar & Enum Fields"
+  scenario: "Scenario 1.2: The field values (optional, non-optional) are present in the original object."
+  description: "Test 1.2.2: The field values (optional, non-optional) are unchanged in the modified object."
+  original_resource {
+    id: 123
+    name: "resource name"
+    description: "resource desc"
+    status: PAUSED
+    optimization_score: 99.9
+  }
+  modified_resource {
+    id: 123
+    name: "resource name"
+    description: "resource desc"
+    status: PAUSED
+    optimization_score: 99.9
+  }
+  expected_mask {
+    paths: []
+  }
+  all_set_fields_mask {
+    paths: ["id", "name", "description", "status", "optimization_score"]
+  }
+}
+
+test_cases {
+  epic: "Epic 1. Singular Scalar & Enum Fields"
+  scenario: "Scenario 1.2: The field values (optional, non-optional) are present in the original object."
+  description: "Test 1.2.3: The field values (optional, non-optional) are changed in the modified object."
+  original_resource {
+    id: 123
+    name: "resource name"
+    description: "resource desc"
+    status: PAUSED
+    optimization_score: 99.9
+  }
+  modified_resource {
+    name: "new name"
+    status: ENABLED
+    optimization_score: 49.9
+  }
+  expected_mask {
+    paths: ["id", "name", "description", "status", "optimization_score"]
+  }
+  all_set_fields_mask {
+    paths: ["name", "status", "optimization_score"]
+  }
+}
+
+test_cases {
+  epic: "Epic 1. Singular Scalar & Enum Fields"
+  scenario: "Scenario 1.2: The field values (optional, non-optional) are present in the original object."
+  description: "Test 1.2.4: The field values (optional, non-optional) are set to default in the original object, not present in the modified object."
+  original_resource {
+    id: 0
+    description: ""
+    status: UNSPECIFIED
+    optimization_score: 0
+  }
+  modified_resource {
+  }
+  expected_mask {
+    paths: ["description", "optimization_score"]
+  }
+  all_set_fields_mask {
+    paths: []
+  }
+}
+
+#### Epic 2: Singular Message Fields
+
+### Scenario 2.1: The message field values are not present in the original object.
+
+test_cases {
+  epic: "Epic 2: Singular Message Fields"
+  scenario: "Scenario 2.1: The message field values are not present in the original object."
+  description: "Test 2.1.1: The message field values (optional, non-optional) are present in the modified object."
+  original_resource {
+  }
+  modified_resource {
+    dynamic_setting {
+      domain_name: "google.com"
+      use_supplied_urls_only: false
+      tracking_setting {
+        tracking_url: "tracking.com"
+      }
+    }
+    selective_optimization {
+      conversion_action: "ca"
+    }
+  }
+  expected_mask {
+    paths: ["dynamic_setting.domain_name", "dynamic_setting.use_supplied_urls_only", "dynamic_setting.tracking_setting.tracking_url", "selective_optimization.conversion_action"]
+  }
+  all_set_fields_mask {
+    paths: ["dynamic_setting.domain_name", "dynamic_setting.use_supplied_urls_only", "dynamic_setting.tracking_setting.tracking_url", "selective_optimization.conversion_action"]
+  }
+  expected_field_values {
+    key: "dynamic_setting.domain_name"
+    value {
+      string_value: "google.com"
+    }
+  }
+  expected_field_values {
+    key: "dynamic_setting.use_supplied_urls_only"
+    value {
+      bool_value: false
+    }
+  }
+  expected_field_values {
+    key: "dynamic_setting.tracking_setting.tracking_url"
+    value {
+      string_value: "tracking.com"
+    }
+  }
+}
+
+test_cases {
+  epic: "Epic 2: Singular Message Fields"
+  scenario: "Scenario 2.1: The message field values are not present in the original object."
+  description: "Test 2.1.2: The message field values (optional, non-optional) are partially present in the modified object."
+  original_resource {
+  }
+  modified_resource {
+    dynamic_setting {
+      domain_name: "google.com"
+      tracking_setting {
+      }
+    }
+    selective_optimization {
+      conversion_action: "ca"
+    }
+  }
+  expected_mask {
+    paths: ["dynamic_setting.domain_name", "selective_optimization.conversion_action"]
+  }
+  all_set_fields_mask {
+    paths: ["dynamic_setting.domain_name", "selective_optimization.conversion_action"]
+  }
+}
+
+test_cases {
+  epic: "Epic 2: Singular Message Fields"
+  scenario: "Scenario 2.1: The message field values are not present in the original object."
+  description: "Test 2.1.3: The message field values (optional, non-optional) are set to default in the modified object."
+  original_resource {
+  }
+  modified_resource {
+    dynamic_setting {
+      domain_name: ""
+      use_supplied_urls_only: false
+      tracking_setting {
+        tracking_url: ""
+      }
+    }
+    selective_optimization {
+    }
+  }
+  expected_mask {
+    paths: ["dynamic_setting.use_supplied_urls_only", "dynamic_setting.tracking_setting.tracking_url"]
+  }
+  all_set_fields_mask {
+    paths: ["dynamic_setting.use_supplied_urls_only", "dynamic_setting.tracking_setting.tracking_url"]
+  }
+}
+
+### Scenario 2.2: The message field values (optional, non-optional) are present in the original object.
+
+test_cases {
+  epic: "Epic 2: Singular Message Fields"
+  scenario: "Scenario 2.2: The message field values (optional, non-optional) are present in the original object."
+  description: "Test 2.2.1: The message field values are not present in the modified object."
+  original_resource {
+    dynamic_setting {
+      domain_name: "google.com"
+      tracking_setting {
+        tracking_url: "tracking.com"
+      }
+    }
+    selective_optimization {
+      conversion_action: "ca"
+    }
+  }
+  modified_resource {
+  }
+  expected_mask {
+    paths: ["dynamic_setting.domain_name", "dynamic_setting.tracking_setting.tracking_url", "selective_optimization.conversion_action"]
+  }
+  all_set_fields_mask {
+    paths: []
+  }
+}
+
+test_cases {
+  epic: "Epic 2: Singular Message Fields"
+  scenario: "Scenario 2.2: The message field values (optional, non-optional) are present in the original object."
+  description: "Test 2.2.2: The message field values (optional, non-optional) are changed and added in the modified object."
+  original_resource {
+    dynamic_setting {
+      domain_name: "google.com"
+      tracking_setting {
+        tracking_url: "tracking.com"
+      }
+    }
+    selective_optimization {
+      conversion_action: "ca"
+    }
+  }
+  modified_resource {
+    dynamic_setting {
+      domain_name: "google.com"
+      use_supplied_urls_only: false
+      tracking_setting {
+        tracking_url: ""
+      }
+    }
+    selective_optimization {
+      conversion_action: "new_ca"
+    }
+  }
+  expected_mask {
+    paths: ["dynamic_setting.use_supplied_urls_only", "dynamic_setting.tracking_setting.tracking_url", "selective_optimization.conversion_action"]
+  }
+  all_set_fields_mask {
+    paths: ["dynamic_setting.domain_name", "dynamic_setting.use_supplied_urls_only", "dynamic_setting.tracking_setting.tracking_url", "selective_optimization.conversion_action"]
+  }
+  expected_field_values {
+    key: "dynamic_setting"
+    value {
+      dynamic_setting_value {
+        domain_name: "google.com"
+        use_supplied_urls_only: false
+        tracking_setting {
+          tracking_url: ""
+        }
+      }
+    }
+  }
+  expected_field_values {
+    key: "selective_optimization"
+    value {
+      selective_optimization_value {
+        conversion_action: "new_ca"
+      }
+    }
+  }
+}
+
+test_cases {
+  epic: "Epic 2: Singular Message Fields"
+  scenario: "Scenario 2.2: The message field values (optional, non-optional) are present in the original object."
+  description: "Test 2.2.3: The message field values (optional, non-optional) are unchanged in the modified object."
+  original_resource {
+    dynamic_setting {
+      domain_name: "google.com"
+      tracking_setting {
+        tracking_url: "tracking.com"
+      }
+    }
+    selective_optimization {
+      conversion_action: "ca"
+    }
+  }
+  modified_resource {
+    dynamic_setting {
+      domain_name: "google.com"
+      tracking_setting {
+        tracking_url: "tracking.com"
+      }
+    }
+    selective_optimization {
+      conversion_action: "ca"
+    }
+  }
+  expected_mask {
+    paths: []
+  }
+  all_set_fields_mask {
+    paths: ["dynamic_setting.domain_name", "dynamic_setting.tracking_setting.tracking_url", "selective_optimization.conversion_action"]
+  }
+}
+
+test_cases {
+  epic: "Epic 2: Singular Message Fields"
+  scenario: "Scenario 2.2: The message field values (optional, non-optional) are present in the original object."
+  description: "Test 2.2.4: The message field values (optional, non-optional) are set to empty in the modified object."
+  original_resource {
+    dynamic_setting {
+      domain_name: "google.com"
+      tracking_setting {
+        tracking_url: "tracking.com"
+      }
+    }
+    selective_optimization {
+      conversion_action: "ca"
+    }
+  }
+  modified_resource {
+    dynamic_setting {
+    }
+    selective_optimization {
+    }
+  }
+  expected_mask {
+    paths: ["dynamic_setting.domain_name", "dynamic_setting.tracking_setting.tracking_url", "selective_optimization.conversion_action"]
+  }
+  all_set_fields_mask {
+    paths: []
+  }
+  expected_field_values {
+    key: "selective_optimization"
+    value: {
+      selective_optimization_value: {
+      }
+    }
+  }
+  expected_field_values {
+    key: "dynamic_setting"
+    value: {
+      dynamic_setting_value: {
+      }
+    }
+  }
+}
+
+#### Epic 3. Repeated Fields
+
+### Scenario 3.1: The repeated field values (string, message) are not present in the original object.
+
+test_cases {
+  epic: "Epic 3. Repeated Fields"
+  scenario: "Scenario 3.1: The repeated field values (string, message) are not present in the original object."
+  description: "Test 3.1.1: The repeated field values (string, message) are present in the modified object."
+  original_resource {
+  }
+  modified_resource {
+    labels: ["a", "b"]
+    custom_parameters: [
+      {
+        key: "key1"
+        value: "value1"
+      }
+    ]
+  }
+  expected_mask {
+    paths: ["labels", "custom_parameters"]
+  }
+  all_set_fields_mask {
+    paths: ["labels", "custom_parameters"]
+  }
+  expected_field_values {
+    key: "labels"
+    value: {
+      string_values: ["a", "b"]
+    }
+  }
+  expected_field_values {
+    key: "custom_parameters"
+    value: {
+      custom_parameter_values: [
+        {
+          key: "key1"
+          value: "value1"
+        }
+      ]
+    }
+  }
+}
+
+test_cases {
+  epic: "Epic 3. Repeated Fields"
+  scenario: "Scenario 3.1: The repeated field values (string, message) are not present in the original object."
+  description: "Test 3.1.2: The repeated field values (string, message) are set to an empty array in the modified object."
+  original_resource {
+  }
+  modified_resource {
+    labels: []
+    custom_parameters: []
+  }
+  expected_mask {
+    paths: []
+  }
+  all_set_fields_mask {
+    paths: []
+  }
+  expected_field_values {
+    key: "labels"
+    value: {
+      string_values: []
+    }
+  }
+  expected_field_values {
+    key: "custom_parameters"
+    value: {
+      custom_parameter_values: []
+    }
+  }
+}
+
+### Scenario 3.2: The repeated field values (string, message) are present in the original object.
+
+test_cases {
+  epic: "Epic 3. Repeated Fields"
+  scenario: "Scenario 3.2: The repeated field values (string, message) are present in the original object."
+  description: "Test 3.2.1: The repeated field values (string, message) are not present in the modified object."
+  original_resource {
+    labels: ["a", "b"]
+    custom_parameters: [
+      {
+        key: "key1"
+        value: "value1"
+      },
+      {
+        key: "key2"
+        value: "value2"
+      }
+    ]
+  }
+  modified_resource {
+  }
+  expected_mask {
+    paths: ["labels", "custom_parameters"]
+  }
+  all_set_fields_mask {
+    paths: []
+  }
+}
+
+test_cases {
+  epic: "Epic 3. Repeated Fields"
+  scenario: "Scenario 3.2: The repeated field values (string, message) are present in the original object."
+  description: "Test 3.2.2: The repeated field values (string, message) are changed and added in the modified object."
+  original_resource {
+    labels: ["a", "b"]
+    custom_parameters: [
+      {
+        key: "key1"
+        value: "value1"
+      },
+      {
+        key: "key2"
+        value: "value2"
+      }
+    ]
+  }
+  modified_resource {
+    labels: ["a", "c"]
+    custom_parameters: [
+      {
+        key: "key1"
+        value: "value1"
+      },
+      {
+        key: "key3"
+        value: "value3"
+      }
+    ]
+  }
+  expected_mask {
+    paths: ["labels", "custom_parameters"]
+  }
+  all_set_fields_mask {
+    paths: ["labels", "custom_parameters"]
+  }
+}
+
+test_cases {
+  epic: "Epic 3. Repeated Fields"
+  scenario: "Scenario 3.2: The repeated field values (string, message) are present in the original object."
+  description: "Test 3.2.3:The repeated field values (string, message) are unchanged in the modified object."
+  original_resource {
+    labels: ["a", "b"]
+    custom_parameters: [
+      {
+        key: "key1"
+        value: "value1"
+      },
+      {
+        key: "key2"
+        value: "value2"
+      }
+    ]
+  }
+  modified_resource {
+    labels: ["a", "b"]
+    custom_parameters: [
+      {
+        key: "key1"
+        value: "value1"
+      },
+      {
+        key: "key2"
+        value: "value2"
+      }
+    ]
+  }
+  expected_mask {
+    paths: []
+  }
+  all_set_fields_mask {
+    paths: ["labels", "custom_parameters"]
+  }
+}
+
+test_cases {
+  epic: "Epic 3. Repeated Fields"
+  scenario: "Scenario 3.2: The repeated field values (string, message) are present in the original object."
+  description: "Test 3.2.4:The repeated field values (string, message) are reordered in the modified object."
+  original_resource {
+    labels: ["a", "b"]
+    custom_parameters: [
+      {
+        key: "key1"
+        value: "value1"
+      },
+      {
+        key: "key2"
+        value: "value2"
+      }
+    ]
+  }
+  modified_resource {
+    labels: ["b", "a"]
+    custom_parameters: [
+      {
+        key: "key2"
+        value: "value2"
+      },
+      {
+        key: "key1"
+        value: "value1"
+      }
+    ]
+  }
+  expected_mask {
+    paths: ["labels", "custom_parameters"]
+  }
+  all_set_fields_mask {
+    paths: ["labels", "custom_parameters"]
+  }
+}
+
+test_cases {
+  epic: "Epic 3. Repeated Fields"
+  scenario: "Scenario 3.2: The repeated field values (string, message) are present in the original object."
+  description: "Test 3.2.5:The repeated field values (string, message) are set to empty to clean the fields in the modified object."
+  original_resource {
+    labels: ["a", "b"]
+    custom_parameters: [
+      {
+        key: "key1"
+        value: "value1"
+      },
+      {
+        key: "key2"
+        value: "value2"
+      }
+    ]
+  }
+  modified_resource {
+    labels: []
+    custom_parameters: []
+  }
+  expected_mask {
+    paths: ["labels", "custom_parameters"]
+  }
+  all_set_fields_mask {
+    paths: []
+  }
+}
+
+### Scenario 3.3: The repeated field values (enum) are under a sub-message field.
+
+test_cases {
+  epic: "Epic 3. Repeated Fields"
+  scenario: "Scenario 3.3: The repeated field values (enum) are under a sub-message field."
+  description: "Test 3.3.1: The repeated field values (enum) are changed and added in the modified object."
+  original_resource {
+    optimization_setting: {
+      optimization_types: [UNKNOWN, CALL_CLICKS]
+    }
+  }
+  modified_resource {
+    optimization_setting: {
+      optimization_types: [DRIVING_DIRECTIONS]
+    }
+  }
+  expected_mask {
+    paths: ["optimization_setting.optimization_types"]
+  }
+  all_set_fields_mask {
+    paths: ["optimization_setting.optimization_types"]
+  }
+  expected_field_values {
+    key: "optimization_setting"
+    value {
+      optimization_setting_value {
+        optimization_types: [DRIVING_DIRECTIONS]
+      }
+    }
+  }
+}
+
+test_cases {
+  epic: "Epic 3. Repeated Fields"
+  scenario: "Scenario 3.3: The repeated field values (enum) are under a sub-message field."
+  description: "Test 3.3.2: The repeated field values (enum) are reordered in the modified object."
+  original_resource {
+    optimization_setting: {
+      optimization_types: [UNKNOWN, CALL_CLICKS]
+    }
+  }
+  modified_resource {
+    optimization_setting: {
+      optimization_types: [CALL_CLICKS, UNKNOWN]
+    }
+  }
+  expected_mask {
+    paths: ["optimization_setting.optimization_types"]
+  }
+  all_set_fields_mask {
+    paths: ["optimization_setting.optimization_types"]
+  }
+  expected_field_values {
+    key: "optimization_setting.optimization_types"
+    value {
+      optimization_type_values: [CALL_CLICKS, UNKNOWN]
+    }
+  }
+}
+
+test_cases {
+  epic: "Epic 3. Repeated Fields"
+  scenario: "Scenario 3.3: The repeated field values (enum) are under a sub-message field."
+  description: "Test 3.3.3: The repeated field values (enum) are set to empty to clean the fields in the modified object."
+  original_resource {
+    optimization_setting: {
+      optimization_types: [UNKNOWN, CALL_CLICKS]
+    }
+  }
+  modified_resource {
+    optimization_setting: {
+      optimization_types: []
+    }
+  }
+  expected_mask {
+    paths: ["optimization_setting.optimization_types"]
+  }
+  all_set_fields_mask {
+    paths: []
+  }
+}
+
+#### Epic 4: Oneof Fields
+
+### Scenario 4.1: The oneof field value is not present in the original object.
+
+test_cases {
+  epic: "Epic 4: Oneof Fields"
+  scenario: "Scenario 4.1: The oneof field value is not present in the original object."
+  description: "Test 4.1.1: The oneof field value (string) is present in the modified object."
+  original_resource {
+  }
+  modified_resource {
+    bidding_strategy: "bidding strategy"
+  }
+  expected_mask {
+    paths: ["bidding_strategy"]
+  }
+  all_set_fields_mask {
+    paths: ["bidding_strategy"]
+  }
+  expected_field_values {
+    key: "bidding_strategy"
+    value {
+      string_value: "bidding strategy"
+    }
+  }
+}
+
+test_cases {
+  epic: "Epic 4: Oneof Fields"
+  scenario: "Scenario 4.1: The oneof field value is not present in the original object."
+  description: "Test 4.1.2: The oneof field value (string) is set to default in the modified object."
+  original_resource {
+  }
+  modified_resource {
+    bidding_strategy: ""
+  }
+  expected_mask {
+    paths: ["bidding_strategy"]
+  }
+  all_set_fields_mask {
+    paths: ["bidding_strategy"]
+  }
+}
+
+test_cases {
+  epic: "Epic 4: Oneof Fields"
+  scenario: "Scenario 4.1: The oneof field value is not present in the original object."
+  description: "Test 4.1.3: The oneof field value (message with sub-field) is present in the modified object."
+  original_resource {
+  }
+  modified_resource {
+    manual_cpc: {
+      enhanced_cpc_enabled: false
+    }
+  }
+  expected_mask {
+    paths: ["manual_cpc.enhanced_cpc_enabled"]
+  }
+  all_set_fields_mask {
+    paths: ["manual_cpc.enhanced_cpc_enabled"]
+  }
+  expected_field_values {
+    key: "manual_cpc.enhanced_cpc_enabled"
+    value {
+      bool_value: false
+    }
+  }
+  expected_field_values {
+    key: "manual_cpc"
+    value {
+      manual_cpc_value {
+        enhanced_cpc_enabled: false
+      }
+    }
+  }
+}
+
+test_cases {
+  epic: "Epic 4: Oneof Fields"
+  scenario: "Scenario 4.1: The oneof field value is not present in the original object."
+  description: "Test 4.1.4: The oneof field value (empty message) is present in the modified object."
+  original_resource {
+  }
+  modified_resource {
+    manual_cpm: {
+    }
+  }
+  expected_mask {
+    paths: ["manual_cpm"]
+  }
+  all_set_fields_mask {
+    paths: ["manual_cpm"]
+  }
+  expected_field_values {
+    key: "manual_cpm"
+    value {
+      manual_cpm_value {
+      }
+    }
+  }
+}
+
+### Scenario 4.2: The oneof field value (string) is present in the original object.
+
+test_cases {
+  epic: "Epic 4: Oneof Fields"
+  scenario: "Scenario 4.2: The oneof field value (string) is present in the original object."
+  description: "Test 4.2.1: The oneof field value is changed (message with sub-field) in the modified object."
+  original_resource {
+    bidding_strategy: "bidding strategy"
+  }
+  modified_resource {
+    manual_cpc: {
+      enhanced_cpc_enabled: false
+    }
+  }
+  expected_mask {
+    paths: ["bidding_strategy", "manual_cpc.enhanced_cpc_enabled"]
+  }
+  all_set_fields_mask {
+    paths: ["manual_cpc.enhanced_cpc_enabled"]
+  }
+}
+
+test_cases {
+  epic: "Epic 4: Oneof Fields"
+  scenario: "Scenario 4.2: The oneof field value (string) is present in the original object."
+  description: "Test 4.2.2: The oneof field value is changed (empty-message) in the modified object."
+  original_resource {
+    bidding_strategy: "bidding strategy"
+  }
+  modified_resource {
+    manual_cpm: {
+    }
+  }
+  expected_mask {
+    paths: ["bidding_strategy", "manual_cpm"]
+  }
+  all_set_fields_mask {
+    paths: ["manual_cpm"]
+  }
+}

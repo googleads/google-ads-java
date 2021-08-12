@@ -190,8 +190,8 @@ public class DetailedDemographicName implements ResourceName {
     }
 
     private Builder(DetailedDemographicName detailedDemographicName) {
-      customerId = detailedDemographicName.customerId;
-      detailedDemographicId = detailedDemographicName.detailedDemographicId;
+      this.customerId = detailedDemographicName.customerId;
+      this.detailedDemographicId = detailedDemographicName.detailedDemographicId;
     }
 
     public DetailedDemographicName build() {

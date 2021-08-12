@@ -1573,6 +1573,32 @@ private static final long serialVersionUID = 0L;
 
             break;
           }
+          case 1274: {
+            com.google.ads.googleads.v8.resources.BiddingDataExclusion.Builder subBuilder = null;
+            if (biddingDataExclusion_ != null) {
+              subBuilder = biddingDataExclusion_.toBuilder();
+            }
+            biddingDataExclusion_ = input.readMessage(com.google.ads.googleads.v8.resources.BiddingDataExclusion.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(biddingDataExclusion_);
+              biddingDataExclusion_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 1282: {
+            com.google.ads.googleads.v8.resources.BiddingSeasonalityAdjustment.Builder subBuilder = null;
+            if (biddingSeasonalityAdjustment_ != null) {
+              subBuilder = biddingSeasonalityAdjustment_.toBuilder();
+            }
+            biddingSeasonalityAdjustment_ = input.readMessage(com.google.ads.googleads.v8.resources.BiddingSeasonalityAdjustment.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(biddingSeasonalityAdjustment_);
+              biddingSeasonalityAdjustment_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
           case 1290: {
             com.google.ads.googleads.v8.resources.LifeEvent.Builder subBuilder = null;
             if (lifeEvent_ != null) {
@@ -1608,6 +1634,32 @@ private static final long serialVersionUID = 0L;
             if (subBuilder != null) {
               subBuilder.mergeFrom(keywordThemeConstant_);
               keywordThemeConstant_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 1314: {
+            com.google.ads.googleads.v8.resources.ConversionValueRule.Builder subBuilder = null;
+            if (conversionValueRule_ != null) {
+              subBuilder = conversionValueRule_.toBuilder();
+            }
+            conversionValueRule_ = input.readMessage(com.google.ads.googleads.v8.resources.ConversionValueRule.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(conversionValueRule_);
+              conversionValueRule_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 1322: {
+            com.google.ads.googleads.v8.resources.ConversionValueRuleSet.Builder subBuilder = null;
+            if (conversionValueRuleSet_ != null) {
+              subBuilder = conversionValueRuleSet_.toBuilder();
+            }
+            conversionValueRuleSet_ = input.readMessage(com.google.ads.googleads.v8.resources.ConversionValueRuleSet.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(conversionValueRuleSet_);
+              conversionValueRuleSet_ = subBuilder.buildPartial();
             }
 
             break;
@@ -2621,6 +2673,82 @@ private static final long serialVersionUID = 0L;
     return getBatchJob();
   }
 
+  public static final int BIDDING_DATA_EXCLUSION_FIELD_NUMBER = 159;
+  private com.google.ads.googleads.v8.resources.BiddingDataExclusion biddingDataExclusion_;
+  /**
+   * <pre>
+   * The bidding data exclusion referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v8.resources.BiddingDataExclusion bidding_data_exclusion = 159;</code>
+   * @return Whether the biddingDataExclusion field is set.
+   */
+  @java.lang.Override
+  public boolean hasBiddingDataExclusion() {
+    return biddingDataExclusion_ != null;
+  }
+  /**
+   * <pre>
+   * The bidding data exclusion referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v8.resources.BiddingDataExclusion bidding_data_exclusion = 159;</code>
+   * @return The biddingDataExclusion.
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v8.resources.BiddingDataExclusion getBiddingDataExclusion() {
+    return biddingDataExclusion_ == null ? com.google.ads.googleads.v8.resources.BiddingDataExclusion.getDefaultInstance() : biddingDataExclusion_;
+  }
+  /**
+   * <pre>
+   * The bidding data exclusion referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v8.resources.BiddingDataExclusion bidding_data_exclusion = 159;</code>
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v8.resources.BiddingDataExclusionOrBuilder getBiddingDataExclusionOrBuilder() {
+    return getBiddingDataExclusion();
+  }
+
+  public static final int BIDDING_SEASONALITY_ADJUSTMENT_FIELD_NUMBER = 160;
+  private com.google.ads.googleads.v8.resources.BiddingSeasonalityAdjustment biddingSeasonalityAdjustment_;
+  /**
+   * <pre>
+   * The bidding seasonality adjustment referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v8.resources.BiddingSeasonalityAdjustment bidding_seasonality_adjustment = 160;</code>
+   * @return Whether the biddingSeasonalityAdjustment field is set.
+   */
+  @java.lang.Override
+  public boolean hasBiddingSeasonalityAdjustment() {
+    return biddingSeasonalityAdjustment_ != null;
+  }
+  /**
+   * <pre>
+   * The bidding seasonality adjustment referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v8.resources.BiddingSeasonalityAdjustment bidding_seasonality_adjustment = 160;</code>
+   * @return The biddingSeasonalityAdjustment.
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v8.resources.BiddingSeasonalityAdjustment getBiddingSeasonalityAdjustment() {
+    return biddingSeasonalityAdjustment_ == null ? com.google.ads.googleads.v8.resources.BiddingSeasonalityAdjustment.getDefaultInstance() : biddingSeasonalityAdjustment_;
+  }
+  /**
+   * <pre>
+   * The bidding seasonality adjustment referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v8.resources.BiddingSeasonalityAdjustment bidding_seasonality_adjustment = 160;</code>
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v8.resources.BiddingSeasonalityAdjustmentOrBuilder getBiddingSeasonalityAdjustmentOrBuilder() {
+    return getBiddingSeasonalityAdjustment();
+  }
+
   public static final int BIDDING_STRATEGY_FIELD_NUMBER = 18;
   private com.google.ads.googleads.v8.resources.BiddingStrategy biddingStrategy_;
   /**
@@ -3531,6 +3659,82 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public com.google.ads.googleads.v8.resources.ConversionCustomVariableOrBuilder getConversionCustomVariableOrBuilder() {
     return getConversionCustomVariable();
+  }
+
+  public static final int CONVERSION_VALUE_RULE_FIELD_NUMBER = 164;
+  private com.google.ads.googleads.v8.resources.ConversionValueRule conversionValueRule_;
+  /**
+   * <pre>
+   * The conversion value rule referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v8.resources.ConversionValueRule conversion_value_rule = 164;</code>
+   * @return Whether the conversionValueRule field is set.
+   */
+  @java.lang.Override
+  public boolean hasConversionValueRule() {
+    return conversionValueRule_ != null;
+  }
+  /**
+   * <pre>
+   * The conversion value rule referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v8.resources.ConversionValueRule conversion_value_rule = 164;</code>
+   * @return The conversionValueRule.
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v8.resources.ConversionValueRule getConversionValueRule() {
+    return conversionValueRule_ == null ? com.google.ads.googleads.v8.resources.ConversionValueRule.getDefaultInstance() : conversionValueRule_;
+  }
+  /**
+   * <pre>
+   * The conversion value rule referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v8.resources.ConversionValueRule conversion_value_rule = 164;</code>
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v8.resources.ConversionValueRuleOrBuilder getConversionValueRuleOrBuilder() {
+    return getConversionValueRule();
+  }
+
+  public static final int CONVERSION_VALUE_RULE_SET_FIELD_NUMBER = 165;
+  private com.google.ads.googleads.v8.resources.ConversionValueRuleSet conversionValueRuleSet_;
+  /**
+   * <pre>
+   * The conversion value rule set referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v8.resources.ConversionValueRuleSet conversion_value_rule_set = 165;</code>
+   * @return Whether the conversionValueRuleSet field is set.
+   */
+  @java.lang.Override
+  public boolean hasConversionValueRuleSet() {
+    return conversionValueRuleSet_ != null;
+  }
+  /**
+   * <pre>
+   * The conversion value rule set referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v8.resources.ConversionValueRuleSet conversion_value_rule_set = 165;</code>
+   * @return The conversionValueRuleSet.
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v8.resources.ConversionValueRuleSet getConversionValueRuleSet() {
+    return conversionValueRuleSet_ == null ? com.google.ads.googleads.v8.resources.ConversionValueRuleSet.getDefaultInstance() : conversionValueRuleSet_;
+  }
+  /**
+   * <pre>
+   * The conversion value rule set referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v8.resources.ConversionValueRuleSet conversion_value_rule_set = 165;</code>
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v8.resources.ConversionValueRuleSetOrBuilder getConversionValueRuleSetOrBuilder() {
+    return getConversionValueRuleSet();
   }
 
   public static final int CLICK_VIEW_FIELD_NUMBER = 122;
@@ -6824,6 +7028,12 @@ private static final long serialVersionUID = 0L;
     if (biddingStrategySimulation_ != null) {
       output.writeMessage(158, getBiddingStrategySimulation());
     }
+    if (biddingDataExclusion_ != null) {
+      output.writeMessage(159, getBiddingDataExclusion());
+    }
+    if (biddingSeasonalityAdjustment_ != null) {
+      output.writeMessage(160, getBiddingSeasonalityAdjustment());
+    }
     if (lifeEvent_ != null) {
       output.writeMessage(161, getLifeEvent());
     }
@@ -6832,6 +7042,12 @@ private static final long serialVersionUID = 0L;
     }
     if (keywordThemeConstant_ != null) {
       output.writeMessage(163, getKeywordThemeConstant());
+    }
+    if (conversionValueRule_ != null) {
+      output.writeMessage(164, getConversionValueRule());
+    }
+    if (conversionValueRuleSet_ != null) {
+      output.writeMessage(165, getConversionValueRuleSet());
     }
     if (detailedDemographic_ != null) {
       output.writeMessage(166, getDetailedDemographic());
@@ -7325,6 +7541,14 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(158, getBiddingStrategySimulation());
     }
+    if (biddingDataExclusion_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(159, getBiddingDataExclusion());
+    }
+    if (biddingSeasonalityAdjustment_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(160, getBiddingSeasonalityAdjustment());
+    }
     if (lifeEvent_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(161, getLifeEvent());
@@ -7336,6 +7560,14 @@ private static final long serialVersionUID = 0L;
     if (keywordThemeConstant_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(163, getKeywordThemeConstant());
+    }
+    if (conversionValueRule_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(164, getConversionValueRule());
+    }
+    if (conversionValueRuleSet_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(165, getConversionValueRuleSet());
     }
     if (detailedDemographic_ != null) {
       size += com.google.protobuf.CodedOutputStream
@@ -7492,6 +7724,16 @@ private static final long serialVersionUID = 0L;
       if (!getBatchJob()
           .equals(other.getBatchJob())) return false;
     }
+    if (hasBiddingDataExclusion() != other.hasBiddingDataExclusion()) return false;
+    if (hasBiddingDataExclusion()) {
+      if (!getBiddingDataExclusion()
+          .equals(other.getBiddingDataExclusion())) return false;
+    }
+    if (hasBiddingSeasonalityAdjustment() != other.hasBiddingSeasonalityAdjustment()) return false;
+    if (hasBiddingSeasonalityAdjustment()) {
+      if (!getBiddingSeasonalityAdjustment()
+          .equals(other.getBiddingSeasonalityAdjustment())) return false;
+    }
     if (hasBiddingStrategy() != other.hasBiddingStrategy()) return false;
     if (hasBiddingStrategy()) {
       if (!getBiddingStrategy()
@@ -7611,6 +7853,16 @@ private static final long serialVersionUID = 0L;
     if (hasConversionCustomVariable()) {
       if (!getConversionCustomVariable()
           .equals(other.getConversionCustomVariable())) return false;
+    }
+    if (hasConversionValueRule() != other.hasConversionValueRule()) return false;
+    if (hasConversionValueRule()) {
+      if (!getConversionValueRule()
+          .equals(other.getConversionValueRule())) return false;
+    }
+    if (hasConversionValueRuleSet() != other.hasConversionValueRuleSet()) return false;
+    if (hasConversionValueRuleSet()) {
+      if (!getConversionValueRuleSet()
+          .equals(other.getConversionValueRuleSet())) return false;
     }
     if (hasClickView() != other.hasClickView()) return false;
     if (hasClickView()) {
@@ -8104,6 +8356,14 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + BATCH_JOB_FIELD_NUMBER;
       hash = (53 * hash) + getBatchJob().hashCode();
     }
+    if (hasBiddingDataExclusion()) {
+      hash = (37 * hash) + BIDDING_DATA_EXCLUSION_FIELD_NUMBER;
+      hash = (53 * hash) + getBiddingDataExclusion().hashCode();
+    }
+    if (hasBiddingSeasonalityAdjustment()) {
+      hash = (37 * hash) + BIDDING_SEASONALITY_ADJUSTMENT_FIELD_NUMBER;
+      hash = (53 * hash) + getBiddingSeasonalityAdjustment().hashCode();
+    }
     if (hasBiddingStrategy()) {
       hash = (37 * hash) + BIDDING_STRATEGY_FIELD_NUMBER;
       hash = (53 * hash) + getBiddingStrategy().hashCode();
@@ -8199,6 +8459,14 @@ private static final long serialVersionUID = 0L;
     if (hasConversionCustomVariable()) {
       hash = (37 * hash) + CONVERSION_CUSTOM_VARIABLE_FIELD_NUMBER;
       hash = (53 * hash) + getConversionCustomVariable().hashCode();
+    }
+    if (hasConversionValueRule()) {
+      hash = (37 * hash) + CONVERSION_VALUE_RULE_FIELD_NUMBER;
+      hash = (53 * hash) + getConversionValueRule().hashCode();
+    }
+    if (hasConversionValueRuleSet()) {
+      hash = (37 * hash) + CONVERSION_VALUE_RULE_SET_FIELD_NUMBER;
+      hash = (53 * hash) + getConversionValueRuleSet().hashCode();
     }
     if (hasClickView()) {
       hash = (37 * hash) + CLICK_VIEW_FIELD_NUMBER;
@@ -8789,6 +9057,18 @@ private static final long serialVersionUID = 0L;
         batchJob_ = null;
         batchJobBuilder_ = null;
       }
+      if (biddingDataExclusionBuilder_ == null) {
+        biddingDataExclusion_ = null;
+      } else {
+        biddingDataExclusion_ = null;
+        biddingDataExclusionBuilder_ = null;
+      }
+      if (biddingSeasonalityAdjustmentBuilder_ == null) {
+        biddingSeasonalityAdjustment_ = null;
+      } else {
+        biddingSeasonalityAdjustment_ = null;
+        biddingSeasonalityAdjustmentBuilder_ = null;
+      }
       if (biddingStrategyBuilder_ == null) {
         biddingStrategy_ = null;
       } else {
@@ -8932,6 +9212,18 @@ private static final long serialVersionUID = 0L;
       } else {
         conversionCustomVariable_ = null;
         conversionCustomVariableBuilder_ = null;
+      }
+      if (conversionValueRuleBuilder_ == null) {
+        conversionValueRule_ = null;
+      } else {
+        conversionValueRule_ = null;
+        conversionValueRuleBuilder_ = null;
+      }
+      if (conversionValueRuleSetBuilder_ == null) {
+        conversionValueRuleSet_ = null;
+      } else {
+        conversionValueRuleSet_ = null;
+        conversionValueRuleSetBuilder_ = null;
       }
       if (clickViewBuilder_ == null) {
         clickView_ = null;
@@ -9541,6 +9833,16 @@ private static final long serialVersionUID = 0L;
       } else {
         result.batchJob_ = batchJobBuilder_.build();
       }
+      if (biddingDataExclusionBuilder_ == null) {
+        result.biddingDataExclusion_ = biddingDataExclusion_;
+      } else {
+        result.biddingDataExclusion_ = biddingDataExclusionBuilder_.build();
+      }
+      if (biddingSeasonalityAdjustmentBuilder_ == null) {
+        result.biddingSeasonalityAdjustment_ = biddingSeasonalityAdjustment_;
+      } else {
+        result.biddingSeasonalityAdjustment_ = biddingSeasonalityAdjustmentBuilder_.build();
+      }
       if (biddingStrategyBuilder_ == null) {
         result.biddingStrategy_ = biddingStrategy_;
       } else {
@@ -9660,6 +9962,16 @@ private static final long serialVersionUID = 0L;
         result.conversionCustomVariable_ = conversionCustomVariable_;
       } else {
         result.conversionCustomVariable_ = conversionCustomVariableBuilder_.build();
+      }
+      if (conversionValueRuleBuilder_ == null) {
+        result.conversionValueRule_ = conversionValueRule_;
+      } else {
+        result.conversionValueRule_ = conversionValueRuleBuilder_.build();
+      }
+      if (conversionValueRuleSetBuilder_ == null) {
+        result.conversionValueRuleSet_ = conversionValueRuleSet_;
+      } else {
+        result.conversionValueRuleSet_ = conversionValueRuleSetBuilder_.build();
       }
       if (clickViewBuilder_ == null) {
         result.clickView_ = clickView_;
@@ -10166,6 +10478,12 @@ private static final long serialVersionUID = 0L;
       if (other.hasBatchJob()) {
         mergeBatchJob(other.getBatchJob());
       }
+      if (other.hasBiddingDataExclusion()) {
+        mergeBiddingDataExclusion(other.getBiddingDataExclusion());
+      }
+      if (other.hasBiddingSeasonalityAdjustment()) {
+        mergeBiddingSeasonalityAdjustment(other.getBiddingSeasonalityAdjustment());
+      }
       if (other.hasBiddingStrategy()) {
         mergeBiddingStrategy(other.getBiddingStrategy());
       }
@@ -10237,6 +10555,12 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasConversionCustomVariable()) {
         mergeConversionCustomVariable(other.getConversionCustomVariable());
+      }
+      if (other.hasConversionValueRule()) {
+        mergeConversionValueRule(other.getConversionValueRule());
+      }
+      if (other.hasConversionValueRuleSet()) {
+        mergeConversionValueRuleSet(other.getConversionValueRuleSet());
       }
       if (other.hasClickView()) {
         mergeClickView(other.getClickView());
@@ -14218,6 +14542,316 @@ private static final long serialVersionUID = 0L;
       return batchJobBuilder_;
     }
 
+    private com.google.ads.googleads.v8.resources.BiddingDataExclusion biddingDataExclusion_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v8.resources.BiddingDataExclusion, com.google.ads.googleads.v8.resources.BiddingDataExclusion.Builder, com.google.ads.googleads.v8.resources.BiddingDataExclusionOrBuilder> biddingDataExclusionBuilder_;
+    /**
+     * <pre>
+     * The bidding data exclusion referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v8.resources.BiddingDataExclusion bidding_data_exclusion = 159;</code>
+     * @return Whether the biddingDataExclusion field is set.
+     */
+    public boolean hasBiddingDataExclusion() {
+      return biddingDataExclusionBuilder_ != null || biddingDataExclusion_ != null;
+    }
+    /**
+     * <pre>
+     * The bidding data exclusion referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v8.resources.BiddingDataExclusion bidding_data_exclusion = 159;</code>
+     * @return The biddingDataExclusion.
+     */
+    public com.google.ads.googleads.v8.resources.BiddingDataExclusion getBiddingDataExclusion() {
+      if (biddingDataExclusionBuilder_ == null) {
+        return biddingDataExclusion_ == null ? com.google.ads.googleads.v8.resources.BiddingDataExclusion.getDefaultInstance() : biddingDataExclusion_;
+      } else {
+        return biddingDataExclusionBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * The bidding data exclusion referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v8.resources.BiddingDataExclusion bidding_data_exclusion = 159;</code>
+     */
+    public Builder setBiddingDataExclusion(com.google.ads.googleads.v8.resources.BiddingDataExclusion value) {
+      if (biddingDataExclusionBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        biddingDataExclusion_ = value;
+        onChanged();
+      } else {
+        biddingDataExclusionBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The bidding data exclusion referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v8.resources.BiddingDataExclusion bidding_data_exclusion = 159;</code>
+     */
+    public Builder setBiddingDataExclusion(
+        com.google.ads.googleads.v8.resources.BiddingDataExclusion.Builder builderForValue) {
+      if (biddingDataExclusionBuilder_ == null) {
+        biddingDataExclusion_ = builderForValue.build();
+        onChanged();
+      } else {
+        biddingDataExclusionBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The bidding data exclusion referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v8.resources.BiddingDataExclusion bidding_data_exclusion = 159;</code>
+     */
+    public Builder mergeBiddingDataExclusion(com.google.ads.googleads.v8.resources.BiddingDataExclusion value) {
+      if (biddingDataExclusionBuilder_ == null) {
+        if (biddingDataExclusion_ != null) {
+          biddingDataExclusion_ =
+            com.google.ads.googleads.v8.resources.BiddingDataExclusion.newBuilder(biddingDataExclusion_).mergeFrom(value).buildPartial();
+        } else {
+          biddingDataExclusion_ = value;
+        }
+        onChanged();
+      } else {
+        biddingDataExclusionBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The bidding data exclusion referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v8.resources.BiddingDataExclusion bidding_data_exclusion = 159;</code>
+     */
+    public Builder clearBiddingDataExclusion() {
+      if (biddingDataExclusionBuilder_ == null) {
+        biddingDataExclusion_ = null;
+        onChanged();
+      } else {
+        biddingDataExclusion_ = null;
+        biddingDataExclusionBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The bidding data exclusion referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v8.resources.BiddingDataExclusion bidding_data_exclusion = 159;</code>
+     */
+    public com.google.ads.googleads.v8.resources.BiddingDataExclusion.Builder getBiddingDataExclusionBuilder() {
+      
+      onChanged();
+      return getBiddingDataExclusionFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * The bidding data exclusion referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v8.resources.BiddingDataExclusion bidding_data_exclusion = 159;</code>
+     */
+    public com.google.ads.googleads.v8.resources.BiddingDataExclusionOrBuilder getBiddingDataExclusionOrBuilder() {
+      if (biddingDataExclusionBuilder_ != null) {
+        return biddingDataExclusionBuilder_.getMessageOrBuilder();
+      } else {
+        return biddingDataExclusion_ == null ?
+            com.google.ads.googleads.v8.resources.BiddingDataExclusion.getDefaultInstance() : biddingDataExclusion_;
+      }
+    }
+    /**
+     * <pre>
+     * The bidding data exclusion referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v8.resources.BiddingDataExclusion bidding_data_exclusion = 159;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v8.resources.BiddingDataExclusion, com.google.ads.googleads.v8.resources.BiddingDataExclusion.Builder, com.google.ads.googleads.v8.resources.BiddingDataExclusionOrBuilder> 
+        getBiddingDataExclusionFieldBuilder() {
+      if (biddingDataExclusionBuilder_ == null) {
+        biddingDataExclusionBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.ads.googleads.v8.resources.BiddingDataExclusion, com.google.ads.googleads.v8.resources.BiddingDataExclusion.Builder, com.google.ads.googleads.v8.resources.BiddingDataExclusionOrBuilder>(
+                getBiddingDataExclusion(),
+                getParentForChildren(),
+                isClean());
+        biddingDataExclusion_ = null;
+      }
+      return biddingDataExclusionBuilder_;
+    }
+
+    private com.google.ads.googleads.v8.resources.BiddingSeasonalityAdjustment biddingSeasonalityAdjustment_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v8.resources.BiddingSeasonalityAdjustment, com.google.ads.googleads.v8.resources.BiddingSeasonalityAdjustment.Builder, com.google.ads.googleads.v8.resources.BiddingSeasonalityAdjustmentOrBuilder> biddingSeasonalityAdjustmentBuilder_;
+    /**
+     * <pre>
+     * The bidding seasonality adjustment referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v8.resources.BiddingSeasonalityAdjustment bidding_seasonality_adjustment = 160;</code>
+     * @return Whether the biddingSeasonalityAdjustment field is set.
+     */
+    public boolean hasBiddingSeasonalityAdjustment() {
+      return biddingSeasonalityAdjustmentBuilder_ != null || biddingSeasonalityAdjustment_ != null;
+    }
+    /**
+     * <pre>
+     * The bidding seasonality adjustment referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v8.resources.BiddingSeasonalityAdjustment bidding_seasonality_adjustment = 160;</code>
+     * @return The biddingSeasonalityAdjustment.
+     */
+    public com.google.ads.googleads.v8.resources.BiddingSeasonalityAdjustment getBiddingSeasonalityAdjustment() {
+      if (biddingSeasonalityAdjustmentBuilder_ == null) {
+        return biddingSeasonalityAdjustment_ == null ? com.google.ads.googleads.v8.resources.BiddingSeasonalityAdjustment.getDefaultInstance() : biddingSeasonalityAdjustment_;
+      } else {
+        return biddingSeasonalityAdjustmentBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * The bidding seasonality adjustment referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v8.resources.BiddingSeasonalityAdjustment bidding_seasonality_adjustment = 160;</code>
+     */
+    public Builder setBiddingSeasonalityAdjustment(com.google.ads.googleads.v8.resources.BiddingSeasonalityAdjustment value) {
+      if (biddingSeasonalityAdjustmentBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        biddingSeasonalityAdjustment_ = value;
+        onChanged();
+      } else {
+        biddingSeasonalityAdjustmentBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The bidding seasonality adjustment referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v8.resources.BiddingSeasonalityAdjustment bidding_seasonality_adjustment = 160;</code>
+     */
+    public Builder setBiddingSeasonalityAdjustment(
+        com.google.ads.googleads.v8.resources.BiddingSeasonalityAdjustment.Builder builderForValue) {
+      if (biddingSeasonalityAdjustmentBuilder_ == null) {
+        biddingSeasonalityAdjustment_ = builderForValue.build();
+        onChanged();
+      } else {
+        biddingSeasonalityAdjustmentBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The bidding seasonality adjustment referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v8.resources.BiddingSeasonalityAdjustment bidding_seasonality_adjustment = 160;</code>
+     */
+    public Builder mergeBiddingSeasonalityAdjustment(com.google.ads.googleads.v8.resources.BiddingSeasonalityAdjustment value) {
+      if (biddingSeasonalityAdjustmentBuilder_ == null) {
+        if (biddingSeasonalityAdjustment_ != null) {
+          biddingSeasonalityAdjustment_ =
+            com.google.ads.googleads.v8.resources.BiddingSeasonalityAdjustment.newBuilder(biddingSeasonalityAdjustment_).mergeFrom(value).buildPartial();
+        } else {
+          biddingSeasonalityAdjustment_ = value;
+        }
+        onChanged();
+      } else {
+        biddingSeasonalityAdjustmentBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The bidding seasonality adjustment referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v8.resources.BiddingSeasonalityAdjustment bidding_seasonality_adjustment = 160;</code>
+     */
+    public Builder clearBiddingSeasonalityAdjustment() {
+      if (biddingSeasonalityAdjustmentBuilder_ == null) {
+        biddingSeasonalityAdjustment_ = null;
+        onChanged();
+      } else {
+        biddingSeasonalityAdjustment_ = null;
+        biddingSeasonalityAdjustmentBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The bidding seasonality adjustment referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v8.resources.BiddingSeasonalityAdjustment bidding_seasonality_adjustment = 160;</code>
+     */
+    public com.google.ads.googleads.v8.resources.BiddingSeasonalityAdjustment.Builder getBiddingSeasonalityAdjustmentBuilder() {
+      
+      onChanged();
+      return getBiddingSeasonalityAdjustmentFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * The bidding seasonality adjustment referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v8.resources.BiddingSeasonalityAdjustment bidding_seasonality_adjustment = 160;</code>
+     */
+    public com.google.ads.googleads.v8.resources.BiddingSeasonalityAdjustmentOrBuilder getBiddingSeasonalityAdjustmentOrBuilder() {
+      if (biddingSeasonalityAdjustmentBuilder_ != null) {
+        return biddingSeasonalityAdjustmentBuilder_.getMessageOrBuilder();
+      } else {
+        return biddingSeasonalityAdjustment_ == null ?
+            com.google.ads.googleads.v8.resources.BiddingSeasonalityAdjustment.getDefaultInstance() : biddingSeasonalityAdjustment_;
+      }
+    }
+    /**
+     * <pre>
+     * The bidding seasonality adjustment referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v8.resources.BiddingSeasonalityAdjustment bidding_seasonality_adjustment = 160;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v8.resources.BiddingSeasonalityAdjustment, com.google.ads.googleads.v8.resources.BiddingSeasonalityAdjustment.Builder, com.google.ads.googleads.v8.resources.BiddingSeasonalityAdjustmentOrBuilder> 
+        getBiddingSeasonalityAdjustmentFieldBuilder() {
+      if (biddingSeasonalityAdjustmentBuilder_ == null) {
+        biddingSeasonalityAdjustmentBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.ads.googleads.v8.resources.BiddingSeasonalityAdjustment, com.google.ads.googleads.v8.resources.BiddingSeasonalityAdjustment.Builder, com.google.ads.googleads.v8.resources.BiddingSeasonalityAdjustmentOrBuilder>(
+                getBiddingSeasonalityAdjustment(),
+                getParentForChildren(),
+                isClean());
+        biddingSeasonalityAdjustment_ = null;
+      }
+      return biddingSeasonalityAdjustmentBuilder_;
+    }
+
     private com.google.ads.googleads.v8.resources.BiddingStrategy biddingStrategy_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v8.resources.BiddingStrategy, com.google.ads.googleads.v8.resources.BiddingStrategy.Builder, com.google.ads.googleads.v8.resources.BiddingStrategyOrBuilder> biddingStrategyBuilder_;
@@ -17936,6 +18570,316 @@ private static final long serialVersionUID = 0L;
         conversionCustomVariable_ = null;
       }
       return conversionCustomVariableBuilder_;
+    }
+
+    private com.google.ads.googleads.v8.resources.ConversionValueRule conversionValueRule_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v8.resources.ConversionValueRule, com.google.ads.googleads.v8.resources.ConversionValueRule.Builder, com.google.ads.googleads.v8.resources.ConversionValueRuleOrBuilder> conversionValueRuleBuilder_;
+    /**
+     * <pre>
+     * The conversion value rule referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v8.resources.ConversionValueRule conversion_value_rule = 164;</code>
+     * @return Whether the conversionValueRule field is set.
+     */
+    public boolean hasConversionValueRule() {
+      return conversionValueRuleBuilder_ != null || conversionValueRule_ != null;
+    }
+    /**
+     * <pre>
+     * The conversion value rule referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v8.resources.ConversionValueRule conversion_value_rule = 164;</code>
+     * @return The conversionValueRule.
+     */
+    public com.google.ads.googleads.v8.resources.ConversionValueRule getConversionValueRule() {
+      if (conversionValueRuleBuilder_ == null) {
+        return conversionValueRule_ == null ? com.google.ads.googleads.v8.resources.ConversionValueRule.getDefaultInstance() : conversionValueRule_;
+      } else {
+        return conversionValueRuleBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * The conversion value rule referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v8.resources.ConversionValueRule conversion_value_rule = 164;</code>
+     */
+    public Builder setConversionValueRule(com.google.ads.googleads.v8.resources.ConversionValueRule value) {
+      if (conversionValueRuleBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        conversionValueRule_ = value;
+        onChanged();
+      } else {
+        conversionValueRuleBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The conversion value rule referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v8.resources.ConversionValueRule conversion_value_rule = 164;</code>
+     */
+    public Builder setConversionValueRule(
+        com.google.ads.googleads.v8.resources.ConversionValueRule.Builder builderForValue) {
+      if (conversionValueRuleBuilder_ == null) {
+        conversionValueRule_ = builderForValue.build();
+        onChanged();
+      } else {
+        conversionValueRuleBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The conversion value rule referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v8.resources.ConversionValueRule conversion_value_rule = 164;</code>
+     */
+    public Builder mergeConversionValueRule(com.google.ads.googleads.v8.resources.ConversionValueRule value) {
+      if (conversionValueRuleBuilder_ == null) {
+        if (conversionValueRule_ != null) {
+          conversionValueRule_ =
+            com.google.ads.googleads.v8.resources.ConversionValueRule.newBuilder(conversionValueRule_).mergeFrom(value).buildPartial();
+        } else {
+          conversionValueRule_ = value;
+        }
+        onChanged();
+      } else {
+        conversionValueRuleBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The conversion value rule referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v8.resources.ConversionValueRule conversion_value_rule = 164;</code>
+     */
+    public Builder clearConversionValueRule() {
+      if (conversionValueRuleBuilder_ == null) {
+        conversionValueRule_ = null;
+        onChanged();
+      } else {
+        conversionValueRule_ = null;
+        conversionValueRuleBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The conversion value rule referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v8.resources.ConversionValueRule conversion_value_rule = 164;</code>
+     */
+    public com.google.ads.googleads.v8.resources.ConversionValueRule.Builder getConversionValueRuleBuilder() {
+      
+      onChanged();
+      return getConversionValueRuleFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * The conversion value rule referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v8.resources.ConversionValueRule conversion_value_rule = 164;</code>
+     */
+    public com.google.ads.googleads.v8.resources.ConversionValueRuleOrBuilder getConversionValueRuleOrBuilder() {
+      if (conversionValueRuleBuilder_ != null) {
+        return conversionValueRuleBuilder_.getMessageOrBuilder();
+      } else {
+        return conversionValueRule_ == null ?
+            com.google.ads.googleads.v8.resources.ConversionValueRule.getDefaultInstance() : conversionValueRule_;
+      }
+    }
+    /**
+     * <pre>
+     * The conversion value rule referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v8.resources.ConversionValueRule conversion_value_rule = 164;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v8.resources.ConversionValueRule, com.google.ads.googleads.v8.resources.ConversionValueRule.Builder, com.google.ads.googleads.v8.resources.ConversionValueRuleOrBuilder> 
+        getConversionValueRuleFieldBuilder() {
+      if (conversionValueRuleBuilder_ == null) {
+        conversionValueRuleBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.ads.googleads.v8.resources.ConversionValueRule, com.google.ads.googleads.v8.resources.ConversionValueRule.Builder, com.google.ads.googleads.v8.resources.ConversionValueRuleOrBuilder>(
+                getConversionValueRule(),
+                getParentForChildren(),
+                isClean());
+        conversionValueRule_ = null;
+      }
+      return conversionValueRuleBuilder_;
+    }
+
+    private com.google.ads.googleads.v8.resources.ConversionValueRuleSet conversionValueRuleSet_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v8.resources.ConversionValueRuleSet, com.google.ads.googleads.v8.resources.ConversionValueRuleSet.Builder, com.google.ads.googleads.v8.resources.ConversionValueRuleSetOrBuilder> conversionValueRuleSetBuilder_;
+    /**
+     * <pre>
+     * The conversion value rule set referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v8.resources.ConversionValueRuleSet conversion_value_rule_set = 165;</code>
+     * @return Whether the conversionValueRuleSet field is set.
+     */
+    public boolean hasConversionValueRuleSet() {
+      return conversionValueRuleSetBuilder_ != null || conversionValueRuleSet_ != null;
+    }
+    /**
+     * <pre>
+     * The conversion value rule set referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v8.resources.ConversionValueRuleSet conversion_value_rule_set = 165;</code>
+     * @return The conversionValueRuleSet.
+     */
+    public com.google.ads.googleads.v8.resources.ConversionValueRuleSet getConversionValueRuleSet() {
+      if (conversionValueRuleSetBuilder_ == null) {
+        return conversionValueRuleSet_ == null ? com.google.ads.googleads.v8.resources.ConversionValueRuleSet.getDefaultInstance() : conversionValueRuleSet_;
+      } else {
+        return conversionValueRuleSetBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * The conversion value rule set referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v8.resources.ConversionValueRuleSet conversion_value_rule_set = 165;</code>
+     */
+    public Builder setConversionValueRuleSet(com.google.ads.googleads.v8.resources.ConversionValueRuleSet value) {
+      if (conversionValueRuleSetBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        conversionValueRuleSet_ = value;
+        onChanged();
+      } else {
+        conversionValueRuleSetBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The conversion value rule set referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v8.resources.ConversionValueRuleSet conversion_value_rule_set = 165;</code>
+     */
+    public Builder setConversionValueRuleSet(
+        com.google.ads.googleads.v8.resources.ConversionValueRuleSet.Builder builderForValue) {
+      if (conversionValueRuleSetBuilder_ == null) {
+        conversionValueRuleSet_ = builderForValue.build();
+        onChanged();
+      } else {
+        conversionValueRuleSetBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The conversion value rule set referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v8.resources.ConversionValueRuleSet conversion_value_rule_set = 165;</code>
+     */
+    public Builder mergeConversionValueRuleSet(com.google.ads.googleads.v8.resources.ConversionValueRuleSet value) {
+      if (conversionValueRuleSetBuilder_ == null) {
+        if (conversionValueRuleSet_ != null) {
+          conversionValueRuleSet_ =
+            com.google.ads.googleads.v8.resources.ConversionValueRuleSet.newBuilder(conversionValueRuleSet_).mergeFrom(value).buildPartial();
+        } else {
+          conversionValueRuleSet_ = value;
+        }
+        onChanged();
+      } else {
+        conversionValueRuleSetBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The conversion value rule set referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v8.resources.ConversionValueRuleSet conversion_value_rule_set = 165;</code>
+     */
+    public Builder clearConversionValueRuleSet() {
+      if (conversionValueRuleSetBuilder_ == null) {
+        conversionValueRuleSet_ = null;
+        onChanged();
+      } else {
+        conversionValueRuleSet_ = null;
+        conversionValueRuleSetBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The conversion value rule set referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v8.resources.ConversionValueRuleSet conversion_value_rule_set = 165;</code>
+     */
+    public com.google.ads.googleads.v8.resources.ConversionValueRuleSet.Builder getConversionValueRuleSetBuilder() {
+      
+      onChanged();
+      return getConversionValueRuleSetFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * The conversion value rule set referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v8.resources.ConversionValueRuleSet conversion_value_rule_set = 165;</code>
+     */
+    public com.google.ads.googleads.v8.resources.ConversionValueRuleSetOrBuilder getConversionValueRuleSetOrBuilder() {
+      if (conversionValueRuleSetBuilder_ != null) {
+        return conversionValueRuleSetBuilder_.getMessageOrBuilder();
+      } else {
+        return conversionValueRuleSet_ == null ?
+            com.google.ads.googleads.v8.resources.ConversionValueRuleSet.getDefaultInstance() : conversionValueRuleSet_;
+      }
+    }
+    /**
+     * <pre>
+     * The conversion value rule set referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v8.resources.ConversionValueRuleSet conversion_value_rule_set = 165;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v8.resources.ConversionValueRuleSet, com.google.ads.googleads.v8.resources.ConversionValueRuleSet.Builder, com.google.ads.googleads.v8.resources.ConversionValueRuleSetOrBuilder> 
+        getConversionValueRuleSetFieldBuilder() {
+      if (conversionValueRuleSetBuilder_ == null) {
+        conversionValueRuleSetBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.ads.googleads.v8.resources.ConversionValueRuleSet, com.google.ads.googleads.v8.resources.ConversionValueRuleSet.Builder, com.google.ads.googleads.v8.resources.ConversionValueRuleSetOrBuilder>(
+                getConversionValueRuleSet(),
+                getParentForChildren(),
+                isClean());
+        conversionValueRuleSet_ = null;
+      }
+      return conversionValueRuleSetBuilder_;
     }
 
     private com.google.ads.googleads.v8.resources.ClickView clickView_;

@@ -345,6 +345,50 @@ private static final long serialVersionUID = 0L;
      * <code>CONVERSION_NOT_COMPLIANT_WITH_ATT_POLICY = 32;</code>
      */
     CONVERSION_NOT_COMPLIANT_WITH_ATT_POLICY(32),
+    /**
+     * <pre>
+     * No click was found for the provided user identifiers that could be
+     * applied to the specified conversion action.
+     * </pre>
+     *
+     * <code>CLICK_NOT_FOUND = 33;</code>
+     */
+    CLICK_NOT_FOUND(33),
+    /**
+     * <pre>
+     * The provided user identifier is not a SHA-256 hash. It is either unhashed
+     * or hashed using a different hash function.
+     * </pre>
+     *
+     * <code>INVALID_USER_IDENTIFIER = 34;</code>
+     */
+    INVALID_USER_IDENTIFIER(34),
+    /**
+     * <pre>
+     * Conversion actions which use an external attribution model cannot be used
+     * with UserIdentifier.
+     * </pre>
+     *
+     * <code>EXTERNALLY_ATTRIBUTED_CONVERSION_ACTION_NOT_PERMITTED_WITH_USER_IDENTIFIER = 35;</code>
+     */
+    EXTERNALLY_ATTRIBUTED_CONVERSION_ACTION_NOT_PERMITTED_WITH_USER_IDENTIFIER(35),
+    /**
+     * <pre>
+     * The provided user identifier is not supported. ConversionUploadService
+     * only supports hashed_email and hashed_phone_number.
+     * </pre>
+     *
+     * <code>UNSUPPORTED_USER_IDENTIFIER = 36;</code>
+     */
+    UNSUPPORTED_USER_IDENTIFIER(36),
+    /**
+     * <pre>
+     * The user_identifier_source must be FIRST_PARTY for conversion uploads.
+     * </pre>
+     *
+     * <code>INVALID_USER_IDENTIFIER_SOURCE = 37;</code>
+     */
+    INVALID_USER_IDENTIFIER_SOURCE(37),
     UNRECOGNIZED(-1),
     ;
 
@@ -600,6 +644,50 @@ private static final long serialVersionUID = 0L;
      * <code>CONVERSION_NOT_COMPLIANT_WITH_ATT_POLICY = 32;</code>
      */
     public static final int CONVERSION_NOT_COMPLIANT_WITH_ATT_POLICY_VALUE = 32;
+    /**
+     * <pre>
+     * No click was found for the provided user identifiers that could be
+     * applied to the specified conversion action.
+     * </pre>
+     *
+     * <code>CLICK_NOT_FOUND = 33;</code>
+     */
+    public static final int CLICK_NOT_FOUND_VALUE = 33;
+    /**
+     * <pre>
+     * The provided user identifier is not a SHA-256 hash. It is either unhashed
+     * or hashed using a different hash function.
+     * </pre>
+     *
+     * <code>INVALID_USER_IDENTIFIER = 34;</code>
+     */
+    public static final int INVALID_USER_IDENTIFIER_VALUE = 34;
+    /**
+     * <pre>
+     * Conversion actions which use an external attribution model cannot be used
+     * with UserIdentifier.
+     * </pre>
+     *
+     * <code>EXTERNALLY_ATTRIBUTED_CONVERSION_ACTION_NOT_PERMITTED_WITH_USER_IDENTIFIER = 35;</code>
+     */
+    public static final int EXTERNALLY_ATTRIBUTED_CONVERSION_ACTION_NOT_PERMITTED_WITH_USER_IDENTIFIER_VALUE = 35;
+    /**
+     * <pre>
+     * The provided user identifier is not supported. ConversionUploadService
+     * only supports hashed_email and hashed_phone_number.
+     * </pre>
+     *
+     * <code>UNSUPPORTED_USER_IDENTIFIER = 36;</code>
+     */
+    public static final int UNSUPPORTED_USER_IDENTIFIER_VALUE = 36;
+    /**
+     * <pre>
+     * The user_identifier_source must be FIRST_PARTY for conversion uploads.
+     * </pre>
+     *
+     * <code>INVALID_USER_IDENTIFIER_SOURCE = 37;</code>
+     */
+    public static final int INVALID_USER_IDENTIFIER_SOURCE_VALUE = 37;
 
 
     public final int getNumber() {
@@ -654,6 +742,11 @@ private static final long serialVersionUID = 0L;
         case 30: return INVALID_CUSTOMER_FOR_CLICK;
         case 31: return INVALID_CUSTOMER_FOR_CALL;
         case 32: return CONVERSION_NOT_COMPLIANT_WITH_ATT_POLICY;
+        case 33: return CLICK_NOT_FOUND;
+        case 34: return INVALID_USER_IDENTIFIER;
+        case 35: return EXTERNALLY_ATTRIBUTED_CONVERSION_ACTION_NOT_PERMITTED_WITH_USER_IDENTIFIER;
+        case 36: return UNSUPPORTED_USER_IDENTIFIER;
+        case 37: return INVALID_USER_IDENTIFIER_SOURCE;
         default: return null;
       }
     }

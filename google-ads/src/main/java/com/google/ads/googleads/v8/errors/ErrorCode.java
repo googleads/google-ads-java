@@ -766,6 +766,18 @@ private static final long serialVersionUID = 0L;
             errorCode_ = rawValue;
             break;
           }
+          case 1160: {
+            int rawValue = input.readEnum();
+            errorCodeCase_ = 145;
+            errorCode_ = rawValue;
+            break;
+          }
+          case 1168: {
+            int rawValue = input.readEnum();
+            errorCodeCase_ = 146;
+            errorCode_ = rawValue;
+            break;
+          }
           default: {
             if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -867,6 +879,8 @@ private static final long serialVersionUID = 0L;
     CONVERSION_ADJUSTMENT_UPLOAD_ERROR(115),
     CONVERSION_CUSTOM_VARIABLE_ERROR(143),
     CONVERSION_UPLOAD_ERROR(111),
+    CONVERSION_VALUE_RULE_ERROR(145),
+    CONVERSION_VALUE_RULE_SET_ERROR(146),
     HEADER_ERROR(66),
     DATABASE_ERROR(67),
     POLICY_FINDING_ERROR(68),
@@ -1003,6 +1017,8 @@ private static final long serialVersionUID = 0L;
         case 115: return CONVERSION_ADJUSTMENT_UPLOAD_ERROR;
         case 143: return CONVERSION_CUSTOM_VARIABLE_ERROR;
         case 111: return CONVERSION_UPLOAD_ERROR;
+        case 145: return CONVERSION_VALUE_RULE_ERROR;
+        case 146: return CONVERSION_VALUE_RULE_SET_ERROR;
         case 66: return HEADER_ERROR;
         case 67: return DATABASE_ERROR;
         case 68: return POLICY_FINDING_ERROR;
@@ -3889,6 +3905,94 @@ private static final long serialVersionUID = 0L;
     return com.google.ads.googleads.v8.errors.ConversionUploadErrorEnum.ConversionUploadError.UNSPECIFIED;
   }
 
+  public static final int CONVERSION_VALUE_RULE_ERROR_FIELD_NUMBER = 145;
+  /**
+   * <pre>
+   * The reasons for the conversion value rule error
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v8.errors.ConversionValueRuleErrorEnum.ConversionValueRuleError conversion_value_rule_error = 145;</code>
+   * @return Whether the conversionValueRuleError field is set.
+   */
+  public boolean hasConversionValueRuleError() {
+    return errorCodeCase_ == 145;
+  }
+  /**
+   * <pre>
+   * The reasons for the conversion value rule error
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v8.errors.ConversionValueRuleErrorEnum.ConversionValueRuleError conversion_value_rule_error = 145;</code>
+   * @return The enum numeric value on the wire for conversionValueRuleError.
+   */
+  public int getConversionValueRuleErrorValue() {
+    if (errorCodeCase_ == 145) {
+      return (java.lang.Integer) errorCode_;
+    }
+    return 0;
+  }
+  /**
+   * <pre>
+   * The reasons for the conversion value rule error
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v8.errors.ConversionValueRuleErrorEnum.ConversionValueRuleError conversion_value_rule_error = 145;</code>
+   * @return The conversionValueRuleError.
+   */
+  public com.google.ads.googleads.v8.errors.ConversionValueRuleErrorEnum.ConversionValueRuleError getConversionValueRuleError() {
+    if (errorCodeCase_ == 145) {
+      @SuppressWarnings("deprecation")
+      com.google.ads.googleads.v8.errors.ConversionValueRuleErrorEnum.ConversionValueRuleError result = com.google.ads.googleads.v8.errors.ConversionValueRuleErrorEnum.ConversionValueRuleError.valueOf(
+          (java.lang.Integer) errorCode_);
+      return result == null ? com.google.ads.googleads.v8.errors.ConversionValueRuleErrorEnum.ConversionValueRuleError.UNRECOGNIZED : result;
+    }
+    return com.google.ads.googleads.v8.errors.ConversionValueRuleErrorEnum.ConversionValueRuleError.UNSPECIFIED;
+  }
+
+  public static final int CONVERSION_VALUE_RULE_SET_ERROR_FIELD_NUMBER = 146;
+  /**
+   * <pre>
+   * The reasons for the conversion value rule set error
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v8.errors.ConversionValueRuleSetErrorEnum.ConversionValueRuleSetError conversion_value_rule_set_error = 146;</code>
+   * @return Whether the conversionValueRuleSetError field is set.
+   */
+  public boolean hasConversionValueRuleSetError() {
+    return errorCodeCase_ == 146;
+  }
+  /**
+   * <pre>
+   * The reasons for the conversion value rule set error
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v8.errors.ConversionValueRuleSetErrorEnum.ConversionValueRuleSetError conversion_value_rule_set_error = 146;</code>
+   * @return The enum numeric value on the wire for conversionValueRuleSetError.
+   */
+  public int getConversionValueRuleSetErrorValue() {
+    if (errorCodeCase_ == 146) {
+      return (java.lang.Integer) errorCode_;
+    }
+    return 0;
+  }
+  /**
+   * <pre>
+   * The reasons for the conversion value rule set error
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v8.errors.ConversionValueRuleSetErrorEnum.ConversionValueRuleSetError conversion_value_rule_set_error = 146;</code>
+   * @return The conversionValueRuleSetError.
+   */
+  public com.google.ads.googleads.v8.errors.ConversionValueRuleSetErrorEnum.ConversionValueRuleSetError getConversionValueRuleSetError() {
+    if (errorCodeCase_ == 146) {
+      @SuppressWarnings("deprecation")
+      com.google.ads.googleads.v8.errors.ConversionValueRuleSetErrorEnum.ConversionValueRuleSetError result = com.google.ads.googleads.v8.errors.ConversionValueRuleSetErrorEnum.ConversionValueRuleSetError.valueOf(
+          (java.lang.Integer) errorCode_);
+      return result == null ? com.google.ads.googleads.v8.errors.ConversionValueRuleSetErrorEnum.ConversionValueRuleSetError.UNRECOGNIZED : result;
+    }
+    return com.google.ads.googleads.v8.errors.ConversionValueRuleSetErrorEnum.ConversionValueRuleSetError.UNSPECIFIED;
+  }
+
   public static final int HEADER_ERROR_FIELD_NUMBER = 66;
   /**
    * <pre>
@@ -6680,6 +6784,12 @@ private static final long serialVersionUID = 0L;
     if (errorCodeCase_ == 143) {
       output.writeEnum(143, ((java.lang.Integer) errorCode_));
     }
+    if (errorCodeCase_ == 145) {
+      output.writeEnum(145, ((java.lang.Integer) errorCode_));
+    }
+    if (errorCodeCase_ == 146) {
+      output.writeEnum(146, ((java.lang.Integer) errorCode_));
+    }
     unknownFields.writeTo(output);
   }
 
@@ -7165,6 +7275,14 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(143, ((java.lang.Integer) errorCode_));
     }
+    if (errorCodeCase_ == 145) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(145, ((java.lang.Integer) errorCode_));
+    }
+    if (errorCodeCase_ == 146) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(146, ((java.lang.Integer) errorCode_));
+    }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
@@ -7437,6 +7555,14 @@ private static final long serialVersionUID = 0L;
       case 111:
         if (getConversionUploadErrorValue()
             != other.getConversionUploadErrorValue()) return false;
+        break;
+      case 145:
+        if (getConversionValueRuleErrorValue()
+            != other.getConversionValueRuleErrorValue()) return false;
+        break;
+      case 146:
+        if (getConversionValueRuleSetErrorValue()
+            != other.getConversionValueRuleSetErrorValue()) return false;
         break;
       case 66:
         if (getHeaderErrorValue()
@@ -7928,6 +8054,14 @@ private static final long serialVersionUID = 0L;
       case 111:
         hash = (37 * hash) + CONVERSION_UPLOAD_ERROR_FIELD_NUMBER;
         hash = (53 * hash) + getConversionUploadErrorValue();
+        break;
+      case 145:
+        hash = (37 * hash) + CONVERSION_VALUE_RULE_ERROR_FIELD_NUMBER;
+        hash = (53 * hash) + getConversionValueRuleErrorValue();
+        break;
+      case 146:
+        hash = (37 * hash) + CONVERSION_VALUE_RULE_SET_ERROR_FIELD_NUMBER;
+        hash = (53 * hash) + getConversionValueRuleSetErrorValue();
         break;
       case 66:
         hash = (37 * hash) + HEADER_ERROR_FIELD_NUMBER;
@@ -8509,6 +8643,12 @@ private static final long serialVersionUID = 0L;
       if (errorCodeCase_ == 111) {
         result.errorCode_ = errorCode_;
       }
+      if (errorCodeCase_ == 145) {
+        result.errorCode_ = errorCode_;
+      }
+      if (errorCodeCase_ == 146) {
+        result.errorCode_ = errorCode_;
+      }
       if (errorCodeCase_ == 66) {
         result.errorCode_ = errorCode_;
       }
@@ -8978,6 +9118,14 @@ private static final long serialVersionUID = 0L;
         }
         case CONVERSION_UPLOAD_ERROR: {
           setConversionUploadErrorValue(other.getConversionUploadErrorValue());
+          break;
+        }
+        case CONVERSION_VALUE_RULE_ERROR: {
+          setConversionValueRuleErrorValue(other.getConversionValueRuleErrorValue());
+          break;
+        }
+        case CONVERSION_VALUE_RULE_SET_ERROR: {
+          setConversionValueRuleSetErrorValue(other.getConversionValueRuleSetErrorValue());
           break;
         }
         case HEADER_ERROR: {
@@ -15321,6 +15469,196 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearConversionUploadError() {
       if (errorCodeCase_ == 111) {
+        errorCodeCase_ = 0;
+        errorCode_ = null;
+        onChanged();
+      }
+      return this;
+    }
+
+    /**
+     * <pre>
+     * The reasons for the conversion value rule error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v8.errors.ConversionValueRuleErrorEnum.ConversionValueRuleError conversion_value_rule_error = 145;</code>
+     * @return Whether the conversionValueRuleError field is set.
+     */
+    @java.lang.Override
+    public boolean hasConversionValueRuleError() {
+      return errorCodeCase_ == 145;
+    }
+    /**
+     * <pre>
+     * The reasons for the conversion value rule error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v8.errors.ConversionValueRuleErrorEnum.ConversionValueRuleError conversion_value_rule_error = 145;</code>
+     * @return The enum numeric value on the wire for conversionValueRuleError.
+     */
+    @java.lang.Override
+    public int getConversionValueRuleErrorValue() {
+      if (errorCodeCase_ == 145) {
+        return ((java.lang.Integer) errorCode_).intValue();
+      }
+      return 0;
+    }
+    /**
+     * <pre>
+     * The reasons for the conversion value rule error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v8.errors.ConversionValueRuleErrorEnum.ConversionValueRuleError conversion_value_rule_error = 145;</code>
+     * @param value The enum numeric value on the wire for conversionValueRuleError to set.
+     * @return This builder for chaining.
+     */
+    public Builder setConversionValueRuleErrorValue(int value) {
+      errorCodeCase_ = 145;
+      errorCode_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The reasons for the conversion value rule error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v8.errors.ConversionValueRuleErrorEnum.ConversionValueRuleError conversion_value_rule_error = 145;</code>
+     * @return The conversionValueRuleError.
+     */
+    @java.lang.Override
+    public com.google.ads.googleads.v8.errors.ConversionValueRuleErrorEnum.ConversionValueRuleError getConversionValueRuleError() {
+      if (errorCodeCase_ == 145) {
+        @SuppressWarnings("deprecation")
+        com.google.ads.googleads.v8.errors.ConversionValueRuleErrorEnum.ConversionValueRuleError result = com.google.ads.googleads.v8.errors.ConversionValueRuleErrorEnum.ConversionValueRuleError.valueOf(
+            (java.lang.Integer) errorCode_);
+        return result == null ? com.google.ads.googleads.v8.errors.ConversionValueRuleErrorEnum.ConversionValueRuleError.UNRECOGNIZED : result;
+      }
+      return com.google.ads.googleads.v8.errors.ConversionValueRuleErrorEnum.ConversionValueRuleError.UNSPECIFIED;
+    }
+    /**
+     * <pre>
+     * The reasons for the conversion value rule error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v8.errors.ConversionValueRuleErrorEnum.ConversionValueRuleError conversion_value_rule_error = 145;</code>
+     * @param value The conversionValueRuleError to set.
+     * @return This builder for chaining.
+     */
+    public Builder setConversionValueRuleError(com.google.ads.googleads.v8.errors.ConversionValueRuleErrorEnum.ConversionValueRuleError value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      errorCodeCase_ = 145;
+      errorCode_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The reasons for the conversion value rule error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v8.errors.ConversionValueRuleErrorEnum.ConversionValueRuleError conversion_value_rule_error = 145;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearConversionValueRuleError() {
+      if (errorCodeCase_ == 145) {
+        errorCodeCase_ = 0;
+        errorCode_ = null;
+        onChanged();
+      }
+      return this;
+    }
+
+    /**
+     * <pre>
+     * The reasons for the conversion value rule set error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v8.errors.ConversionValueRuleSetErrorEnum.ConversionValueRuleSetError conversion_value_rule_set_error = 146;</code>
+     * @return Whether the conversionValueRuleSetError field is set.
+     */
+    @java.lang.Override
+    public boolean hasConversionValueRuleSetError() {
+      return errorCodeCase_ == 146;
+    }
+    /**
+     * <pre>
+     * The reasons for the conversion value rule set error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v8.errors.ConversionValueRuleSetErrorEnum.ConversionValueRuleSetError conversion_value_rule_set_error = 146;</code>
+     * @return The enum numeric value on the wire for conversionValueRuleSetError.
+     */
+    @java.lang.Override
+    public int getConversionValueRuleSetErrorValue() {
+      if (errorCodeCase_ == 146) {
+        return ((java.lang.Integer) errorCode_).intValue();
+      }
+      return 0;
+    }
+    /**
+     * <pre>
+     * The reasons for the conversion value rule set error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v8.errors.ConversionValueRuleSetErrorEnum.ConversionValueRuleSetError conversion_value_rule_set_error = 146;</code>
+     * @param value The enum numeric value on the wire for conversionValueRuleSetError to set.
+     * @return This builder for chaining.
+     */
+    public Builder setConversionValueRuleSetErrorValue(int value) {
+      errorCodeCase_ = 146;
+      errorCode_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The reasons for the conversion value rule set error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v8.errors.ConversionValueRuleSetErrorEnum.ConversionValueRuleSetError conversion_value_rule_set_error = 146;</code>
+     * @return The conversionValueRuleSetError.
+     */
+    @java.lang.Override
+    public com.google.ads.googleads.v8.errors.ConversionValueRuleSetErrorEnum.ConversionValueRuleSetError getConversionValueRuleSetError() {
+      if (errorCodeCase_ == 146) {
+        @SuppressWarnings("deprecation")
+        com.google.ads.googleads.v8.errors.ConversionValueRuleSetErrorEnum.ConversionValueRuleSetError result = com.google.ads.googleads.v8.errors.ConversionValueRuleSetErrorEnum.ConversionValueRuleSetError.valueOf(
+            (java.lang.Integer) errorCode_);
+        return result == null ? com.google.ads.googleads.v8.errors.ConversionValueRuleSetErrorEnum.ConversionValueRuleSetError.UNRECOGNIZED : result;
+      }
+      return com.google.ads.googleads.v8.errors.ConversionValueRuleSetErrorEnum.ConversionValueRuleSetError.UNSPECIFIED;
+    }
+    /**
+     * <pre>
+     * The reasons for the conversion value rule set error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v8.errors.ConversionValueRuleSetErrorEnum.ConversionValueRuleSetError conversion_value_rule_set_error = 146;</code>
+     * @param value The conversionValueRuleSetError to set.
+     * @return This builder for chaining.
+     */
+    public Builder setConversionValueRuleSetError(com.google.ads.googleads.v8.errors.ConversionValueRuleSetErrorEnum.ConversionValueRuleSetError value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      errorCodeCase_ = 146;
+      errorCode_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The reasons for the conversion value rule set error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v8.errors.ConversionValueRuleSetErrorEnum.ConversionValueRuleSetError conversion_value_rule_set_error = 146;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearConversionValueRuleSetError() {
+      if (errorCodeCase_ == 146) {
         errorCodeCase_ = 0;
         errorCode_ = null;
         onChanged();

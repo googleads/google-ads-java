@@ -31,16 +31,16 @@ public final class ConversionAdjustmentTypeProto {
       "\n>google/ads/googleads/v8/enums/conversi" +
       "on_adjustment_type.proto\022\035google.ads.goo" +
       "gleads.v8.enums\032\034google/api/annotations." +
-      "proto\"y\n\034ConversionAdjustmentTypeEnum\"Y\n" +
-      "\030ConversionAdjustmentType\022\017\n\013UNSPECIFIED" +
-      "\020\000\022\013\n\007UNKNOWN\020\001\022\016\n\nRETRACTION\020\002\022\017\n\013RESTA" +
-      "TEMENT\020\003B\362\001\n!com.google.ads.googleads.v8" +
-      ".enumsB\035ConversionAdjustmentTypeProtoP\001Z" +
-      "Bgoogle.golang.org/genproto/googleapis/a" +
-      "ds/googleads/v8/enums;enums\242\002\003GAA\252\002\035Goog" +
-      "le.Ads.GoogleAds.V8.Enums\312\002\035Google\\Ads\\G" +
-      "oogleAds\\V8\\Enums\352\002!Google::Ads::GoogleA" +
-      "ds::V8::Enumsb\006proto3"
+      "proto\"\212\001\n\034ConversionAdjustmentTypeEnum\"j" +
+      "\n\030ConversionAdjustmentType\022\017\n\013UNSPECIFIE" +
+      "D\020\000\022\013\n\007UNKNOWN\020\001\022\016\n\nRETRACTION\020\002\022\017\n\013REST" +
+      "ATEMENT\020\003\022\017\n\013ENHANCEMENT\020\004B\362\001\n!com.googl" +
+      "e.ads.googleads.v8.enumsB\035ConversionAdju" +
+      "stmentTypeProtoP\001ZBgoogle.golang.org/gen" +
+      "proto/googleapis/ads/googleads/v8/enums;" +
+      "enums\242\002\003GAA\252\002\035Google.Ads.GoogleAds.V8.En" +
+      "ums\312\002\035Google\\Ads\\GoogleAds\\V8\\Enums\352\002!Go" +
+      "ogle::Ads::GoogleAds::V8::Enumsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

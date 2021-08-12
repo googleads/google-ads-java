@@ -188,8 +188,8 @@ public class AccessibleBiddingStrategyName implements ResourceName {
     }
 
     private Builder(AccessibleBiddingStrategyName accessibleBiddingStrategyName) {
-      customerId = accessibleBiddingStrategyName.customerId;
-      biddingStrategyId = accessibleBiddingStrategyName.biddingStrategyId;
+      this.customerId = accessibleBiddingStrategyName.customerId;
+      this.biddingStrategyId = accessibleBiddingStrategyName.biddingStrategyId;
     }
 
     public AccessibleBiddingStrategyName build() {

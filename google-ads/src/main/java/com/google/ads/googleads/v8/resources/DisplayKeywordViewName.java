@@ -216,9 +216,9 @@ public class DisplayKeywordViewName implements ResourceName {
     }
 
     private Builder(DisplayKeywordViewName displayKeywordViewName) {
-      customerId = displayKeywordViewName.customerId;
-      adGroupId = displayKeywordViewName.adGroupId;
-      criterionId = displayKeywordViewName.criterionId;
+      this.customerId = displayKeywordViewName.customerId;
+      this.adGroupId = displayKeywordViewName.adGroupId;
+      this.criterionId = displayKeywordViewName.criterionId;
     }
 
     public DisplayKeywordViewName build() {

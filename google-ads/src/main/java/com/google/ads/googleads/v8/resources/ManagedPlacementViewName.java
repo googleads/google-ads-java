@@ -217,9 +217,9 @@ public class ManagedPlacementViewName implements ResourceName {
     }
 
     private Builder(ManagedPlacementViewName managedPlacementViewName) {
-      customerId = managedPlacementViewName.customerId;
-      adGroupId = managedPlacementViewName.adGroupId;
-      criterionId = managedPlacementViewName.criterionId;
+      this.customerId = managedPlacementViewName.customerId;
+      this.adGroupId = managedPlacementViewName.adGroupId;
+      this.criterionId = managedPlacementViewName.criterionId;
     }
 
     public ManagedPlacementViewName build() {

@@ -6,8 +6,8 @@ package com.google.ads.googleads.v8.services;
 /**
  * <pre>
  * Response message for
- * [SmartCampaignBudgetSuggestService.SuggestSmartCampaignBudgets][]. Depending
- * on whether the system could suggest the options, either all of the options or
+ * [SmartCampaignSuggestService.SuggestSmartCampaignBudgets][]. Depending on
+ * whether the system could suggest the options, either all of the options or
  * none of them might be returned.
  * </pre>
  *
@@ -1850,8 +1850,8 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Response message for
-   * [SmartCampaignBudgetSuggestService.SuggestSmartCampaignBudgets][]. Depending
-   * on whether the system could suggest the options, either all of the options or
+   * [SmartCampaignSuggestService.SuggestSmartCampaignBudgets][]. Depending on
+   * whether the system could suggest the options, either all of the options or
    * none of them might be returned.
    * </pre>
    *

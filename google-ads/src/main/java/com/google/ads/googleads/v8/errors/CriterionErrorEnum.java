@@ -1142,6 +1142,15 @@ private static final long serialVersionUID = 0L;
      * <code>HOTEL_CHECK_IN_DATE_RANGE_REVERSED = 134;</code>
      */
     HOTEL_CHECK_IN_DATE_RANGE_REVERSED(134),
+    /**
+     * <pre>
+     * Broad match modifier (BMM) keywords can no longer be created. Please see
+     * https://ads-developers.googleblog.com/2021/06/broad-match-modifier-upcoming-changes.html.
+     * </pre>
+     *
+     * <code>BROAD_MATCH_MODIFIER_KEYWORD_NOT_ALLOWED = 135;</code>
+     */
+    BROAD_MATCH_MODIFIER_KEYWORD_NOT_ALLOWED(135),
     UNRECOGNIZED(-1),
     ;
 
@@ -2194,6 +2203,15 @@ private static final long serialVersionUID = 0L;
      * <code>HOTEL_CHECK_IN_DATE_RANGE_REVERSED = 134;</code>
      */
     public static final int HOTEL_CHECK_IN_DATE_RANGE_REVERSED_VALUE = 134;
+    /**
+     * <pre>
+     * Broad match modifier (BMM) keywords can no longer be created. Please see
+     * https://ads-developers.googleblog.com/2021/06/broad-match-modifier-upcoming-changes.html.
+     * </pre>
+     *
+     * <code>BROAD_MATCH_MODIFIER_KEYWORD_NOT_ALLOWED = 135;</code>
+     */
+    public static final int BROAD_MATCH_MODIFIER_KEYWORD_NOT_ALLOWED_VALUE = 135;
 
 
     public final int getNumber() {
@@ -2347,6 +2365,7 @@ private static final long serialVersionUID = 0L;
         case 132: return HOTEL_CHECK_IN_DATE_RANGE_START_DATE_TOO_EARLY;
         case 133: return HOTEL_CHECK_IN_DATE_RANGE_END_DATE_TOO_LATE;
         case 134: return HOTEL_CHECK_IN_DATE_RANGE_REVERSED;
+        case 135: return BROAD_MATCH_MODIFIER_KEYWORD_NOT_ALLOWED;
         default: return null;
       }
     }

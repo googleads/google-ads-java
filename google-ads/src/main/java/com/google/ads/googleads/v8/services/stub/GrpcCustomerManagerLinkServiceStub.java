@@ -27,7 +27,6 @@ import com.google.api.gax.core.BackgroundResourceAggregation;
 import com.google.api.gax.grpc.GrpcCallSettings;
 import com.google.api.gax.grpc.GrpcStubCallableFactory;
 import com.google.api.gax.rpc.ClientContext;
-import com.google.api.gax.rpc.RequestParamsExtractor;
 import com.google.api.gax.rpc.UnaryCallable;
 import com.google.common.collect.ImmutableMap;
 import com.google.longrunning.stub.GrpcOperationsStub;
@@ -143,13 +142,10 @@ public class GrpcCustomerManagerLinkServiceStub extends CustomerManagerLinkServi
             GrpcCallSettings.<GetCustomerManagerLinkRequest, CustomerManagerLink>newBuilder()
                 .setMethodDescriptor(getCustomerManagerLinkMethodDescriptor)
                 .setParamsExtractor(
-                    new RequestParamsExtractor<GetCustomerManagerLinkRequest>() {
-                      @Override
-                      public Map<String, String> extract(GetCustomerManagerLinkRequest request) {
-                        ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
-                        params.put("resource_name", String.valueOf(request.getResourceName()));
-                        return params.build();
-                      }
+                    request -> {
+                      ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
+                      params.put("resource_name", String.valueOf(request.getResourceName()));
+                      return params.build();
                     })
                 .build();
     GrpcCallSettings<MutateCustomerManagerLinkRequest, MutateCustomerManagerLinkResponse>
@@ -158,13 +154,10 @@ public class GrpcCustomerManagerLinkServiceStub extends CustomerManagerLinkServi
                 .<MutateCustomerManagerLinkRequest, MutateCustomerManagerLinkResponse>newBuilder()
                 .setMethodDescriptor(mutateCustomerManagerLinkMethodDescriptor)
                 .setParamsExtractor(
-                    new RequestParamsExtractor<MutateCustomerManagerLinkRequest>() {
-                      @Override
-                      public Map<String, String> extract(MutateCustomerManagerLinkRequest request) {
-                        ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
-                        params.put("customer_id", String.valueOf(request.getCustomerId()));
-                        return params.build();
-                      }
+                    request -> {
+                      ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
+                      params.put("customer_id", String.valueOf(request.getCustomerId()));
+                      return params.build();
                     })
                 .build();
     GrpcCallSettings<MoveManagerLinkRequest, MoveManagerLinkResponse>
@@ -172,13 +165,10 @@ public class GrpcCustomerManagerLinkServiceStub extends CustomerManagerLinkServi
             GrpcCallSettings.<MoveManagerLinkRequest, MoveManagerLinkResponse>newBuilder()
                 .setMethodDescriptor(moveManagerLinkMethodDescriptor)
                 .setParamsExtractor(
-                    new RequestParamsExtractor<MoveManagerLinkRequest>() {
-                      @Override
-                      public Map<String, String> extract(MoveManagerLinkRequest request) {
-                        ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
-                        params.put("customer_id", String.valueOf(request.getCustomerId()));
-                        return params.build();
-                      }
+                    request -> {
+                      ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
+                      params.put("customer_id", String.valueOf(request.getCustomerId()));
+                      return params.build();
                     })
                 .build();
 
@@ -223,7 +213,13 @@ public class GrpcCustomerManagerLinkServiceStub extends CustomerManagerLinkServi
 
   @Override
   public final void close() {
-    shutdown();
+    try {
+      backgroundResources.close();
+    } catch (RuntimeException e) {
+      throw e;
+    } catch (Exception e) {
+      throw new IllegalStateException("Failed to close resource", e);
+    }
   }
 
   @Override

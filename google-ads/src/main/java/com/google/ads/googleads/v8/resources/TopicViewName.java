@@ -216,9 +216,9 @@ public class TopicViewName implements ResourceName {
     }
 
     private Builder(TopicViewName topicViewName) {
-      customerId = topicViewName.customerId;
-      adGroupId = topicViewName.adGroupId;
-      criterionId = topicViewName.criterionId;
+      this.customerId = topicViewName.customerId;
+      this.adGroupId = topicViewName.adGroupId;
+      this.criterionId = topicViewName.criterionId;
     }
 
     public TopicViewName build() {

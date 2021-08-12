@@ -10,8 +10,12 @@ public interface ForecastOrBuilder extends
   /**
    * <pre>
    * Number of unique people reached at least
-   * GenerateReachForecastRequest.min_effective_frequency times that exactly
+   * GenerateReachForecastRequest.min_effective_frequency or
+   * GenerateReachForecastRequest.effective_frequency_limit times that exactly
    * matches the Targeting.
+   * Note that a minimum number of unique people must be reached in order for
+   * data to be reported. If the minimum number is not met, the on_target_reach
+   * value will be rounded to 0.
    * </pre>
    *
    * <code>int64 on_target_reach = 5;</code>
@@ -21,8 +25,12 @@ public interface ForecastOrBuilder extends
   /**
    * <pre>
    * Number of unique people reached at least
-   * GenerateReachForecastRequest.min_effective_frequency times that exactly
+   * GenerateReachForecastRequest.min_effective_frequency or
+   * GenerateReachForecastRequest.effective_frequency_limit times that exactly
    * matches the Targeting.
+   * Note that a minimum number of unique people must be reached in order for
+   * data to be reported. If the minimum number is not met, the on_target_reach
+   * value will be rounded to 0.
    * </pre>
    *
    * <code>int64 on_target_reach = 5;</code>
@@ -33,8 +41,12 @@ public interface ForecastOrBuilder extends
   /**
    * <pre>
    * Total number of unique people reached at least
-   * GenerateReachForecastRequest.min_effective_frequency times. This includes
+   * GenerateReachForecastRequest.min_effective_frequency or
+   * GenerateReachForecastRequest.effective_frequency_limit times. This includes
    * people that may fall outside the specified Targeting.
+   * Note that a minimum number of unique people must be reached in order for
+   * data to be reported. If the minimum number is not met, the total_reach
+   * value will be rounded to 0.
    * </pre>
    *
    * <code>int64 total_reach = 6;</code>
@@ -44,8 +56,12 @@ public interface ForecastOrBuilder extends
   /**
    * <pre>
    * Total number of unique people reached at least
-   * GenerateReachForecastRequest.min_effective_frequency times. This includes
+   * GenerateReachForecastRequest.min_effective_frequency or
+   * GenerateReachForecastRequest.effective_frequency_limit times. This includes
    * people that may fall outside the specified Targeting.
+   * Note that a minimum number of unique people must be reached in order for
+   * data to be reported. If the minimum number is not met, the total_reach
+   * value will be rounded to 0.
    * </pre>
    *
    * <code>int64 total_reach = 6;</code>
@@ -119,4 +135,63 @@ public interface ForecastOrBuilder extends
    * @return The viewableImpressions.
    */
   long getViewableImpressions();
+
+  /**
+   * <pre>
+   * A list of effective frequency forecasts. The list is ordered starting with
+   * 1+ and ending with the value set in
+   * GenerateReachForecastRequest.effective_frequency_limit. If no
+   * effective_frequency_limit was set, this list will be empty.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v8.services.EffectiveFrequencyBreakdown effective_frequency_breakdowns = 10;</code>
+   */
+  java.util.List<com.google.ads.googleads.v8.services.EffectiveFrequencyBreakdown> 
+      getEffectiveFrequencyBreakdownsList();
+  /**
+   * <pre>
+   * A list of effective frequency forecasts. The list is ordered starting with
+   * 1+ and ending with the value set in
+   * GenerateReachForecastRequest.effective_frequency_limit. If no
+   * effective_frequency_limit was set, this list will be empty.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v8.services.EffectiveFrequencyBreakdown effective_frequency_breakdowns = 10;</code>
+   */
+  com.google.ads.googleads.v8.services.EffectiveFrequencyBreakdown getEffectiveFrequencyBreakdowns(int index);
+  /**
+   * <pre>
+   * A list of effective frequency forecasts. The list is ordered starting with
+   * 1+ and ending with the value set in
+   * GenerateReachForecastRequest.effective_frequency_limit. If no
+   * effective_frequency_limit was set, this list will be empty.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v8.services.EffectiveFrequencyBreakdown effective_frequency_breakdowns = 10;</code>
+   */
+  int getEffectiveFrequencyBreakdownsCount();
+  /**
+   * <pre>
+   * A list of effective frequency forecasts. The list is ordered starting with
+   * 1+ and ending with the value set in
+   * GenerateReachForecastRequest.effective_frequency_limit. If no
+   * effective_frequency_limit was set, this list will be empty.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v8.services.EffectiveFrequencyBreakdown effective_frequency_breakdowns = 10;</code>
+   */
+  java.util.List<? extends com.google.ads.googleads.v8.services.EffectiveFrequencyBreakdownOrBuilder> 
+      getEffectiveFrequencyBreakdownsOrBuilderList();
+  /**
+   * <pre>
+   * A list of effective frequency forecasts. The list is ordered starting with
+   * 1+ and ending with the value set in
+   * GenerateReachForecastRequest.effective_frequency_limit. If no
+   * effective_frequency_limit was set, this list will be empty.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v8.services.EffectiveFrequencyBreakdown effective_frequency_breakdowns = 10;</code>
+   */
+  com.google.ads.googleads.v8.services.EffectiveFrequencyBreakdownOrBuilder getEffectiveFrequencyBreakdownsOrBuilder(
+      int index);
 }

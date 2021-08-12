@@ -70,8 +70,8 @@ public interface DisplayCallToActionOrBuilder extends
 
   /**
    * <pre>
-   * Identifies the url collection in the ad.url_collections field. If not set
-   * the url defaults to final_url.
+   * Identifies the URL collection in the `ad.url_collections` field. If not
+   * set, the URL defaults to `final_url`.
    * </pre>
    *
    * <code>string url_collection_id = 7;</code>
@@ -80,8 +80,8 @@ public interface DisplayCallToActionOrBuilder extends
   boolean hasUrlCollectionId();
   /**
    * <pre>
-   * Identifies the url collection in the ad.url_collections field. If not set
-   * the url defaults to final_url.
+   * Identifies the URL collection in the `ad.url_collections` field. If not
+   * set, the URL defaults to `final_url`.
    * </pre>
    *
    * <code>string url_collection_id = 7;</code>
@@ -90,8 +90,8 @@ public interface DisplayCallToActionOrBuilder extends
   java.lang.String getUrlCollectionId();
   /**
    * <pre>
-   * Identifies the url collection in the ad.url_collections field. If not set
-   * the url defaults to final_url.
+   * Identifies the URL collection in the `ad.url_collections` field. If not
+   * set, the URL defaults to `final_url`.
    * </pre>
    *
    * <code>string url_collection_id = 7;</code>

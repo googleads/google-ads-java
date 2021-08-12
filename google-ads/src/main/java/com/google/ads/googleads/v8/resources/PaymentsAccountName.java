@@ -187,8 +187,8 @@ public class PaymentsAccountName implements ResourceName {
     }
 
     private Builder(PaymentsAccountName paymentsAccountName) {
-      customerId = paymentsAccountName.customerId;
-      paymentsAccountId = paymentsAccountName.paymentsAccountId;
+      this.customerId = paymentsAccountName.customerId;
+      this.paymentsAccountId = paymentsAccountName.paymentsAccountId;
     }
 
     public PaymentsAccountName build() {

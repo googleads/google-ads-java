@@ -143,7 +143,7 @@ private static final long serialVersionUID = 0L;
     UPDATE_OPERATION_NOT_PERMITTED(5),
     /**
      * <pre>
-     * A mutate action is not allowed on this campaign, from this client.
+     * A mutate action is not allowed on this resource, from this client.
      * </pre>
      *
      * <code>MUTATE_ACTION_NOT_PERMITTED_FOR_CLIENT = 6;</code>
@@ -167,7 +167,7 @@ private static final long serialVersionUID = 0L;
     CREATE_AS_REMOVED_NOT_PERMITTED(8),
     /**
      * <pre>
-     * This operation is not allowed because the campaign or adgroup is removed.
+     * This operation is not allowed because the resource is removed.
      * </pre>
      *
      * <code>OPERATION_NOT_PERMITTED_FOR_REMOVED_RESOURCE = 9;</code>
@@ -242,7 +242,7 @@ private static final long serialVersionUID = 0L;
     public static final int UPDATE_OPERATION_NOT_PERMITTED_VALUE = 5;
     /**
      * <pre>
-     * A mutate action is not allowed on this campaign, from this client.
+     * A mutate action is not allowed on this resource, from this client.
      * </pre>
      *
      * <code>MUTATE_ACTION_NOT_PERMITTED_FOR_CLIENT = 6;</code>
@@ -266,7 +266,7 @@ private static final long serialVersionUID = 0L;
     public static final int CREATE_AS_REMOVED_NOT_PERMITTED_VALUE = 8;
     /**
      * <pre>
-     * This operation is not allowed because the campaign or adgroup is removed.
+     * This operation is not allowed because the resource is removed.
      * </pre>
      *
      * <code>OPERATION_NOT_PERMITTED_FOR_REMOVED_RESOURCE = 9;</code>

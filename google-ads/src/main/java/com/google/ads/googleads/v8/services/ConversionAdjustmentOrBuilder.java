@@ -146,6 +146,103 @@ public interface ConversionAdjustmentOrBuilder extends
 
   /**
    * <pre>
+   * The user identifiers to enhance the original conversion.
+   * ConversionAdjustmentUploadService only accepts user identifiers in
+   * enhancements. The maximum number of user identifiers for each
+   * enhancement is 5.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v8.common.UserIdentifier user_identifiers = 10;</code>
+   */
+  java.util.List<com.google.ads.googleads.v8.common.UserIdentifier> 
+      getUserIdentifiersList();
+  /**
+   * <pre>
+   * The user identifiers to enhance the original conversion.
+   * ConversionAdjustmentUploadService only accepts user identifiers in
+   * enhancements. The maximum number of user identifiers for each
+   * enhancement is 5.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v8.common.UserIdentifier user_identifiers = 10;</code>
+   */
+  com.google.ads.googleads.v8.common.UserIdentifier getUserIdentifiers(int index);
+  /**
+   * <pre>
+   * The user identifiers to enhance the original conversion.
+   * ConversionAdjustmentUploadService only accepts user identifiers in
+   * enhancements. The maximum number of user identifiers for each
+   * enhancement is 5.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v8.common.UserIdentifier user_identifiers = 10;</code>
+   */
+  int getUserIdentifiersCount();
+  /**
+   * <pre>
+   * The user identifiers to enhance the original conversion.
+   * ConversionAdjustmentUploadService only accepts user identifiers in
+   * enhancements. The maximum number of user identifiers for each
+   * enhancement is 5.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v8.common.UserIdentifier user_identifiers = 10;</code>
+   */
+  java.util.List<? extends com.google.ads.googleads.v8.common.UserIdentifierOrBuilder> 
+      getUserIdentifiersOrBuilderList();
+  /**
+   * <pre>
+   * The user identifiers to enhance the original conversion.
+   * ConversionAdjustmentUploadService only accepts user identifiers in
+   * enhancements. The maximum number of user identifiers for each
+   * enhancement is 5.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v8.common.UserIdentifier user_identifiers = 10;</code>
+   */
+  com.google.ads.googleads.v8.common.UserIdentifierOrBuilder getUserIdentifiersOrBuilder(
+      int index);
+
+  /**
+   * <pre>
+   * The user agent to enhance the original conversion. This can be found in
+   * your user's HTTP request header when they convert on your web page.
+   * Example, "Mozilla/5.0 (iPhone; CPU iPhone OS 12_2 like Mac OS X)". User
+   * agent can only be specified in enhancements with user identifiers.
+   * </pre>
+   *
+   * <code>string user_agent = 11;</code>
+   * @return Whether the userAgent field is set.
+   */
+  boolean hasUserAgent();
+  /**
+   * <pre>
+   * The user agent to enhance the original conversion. This can be found in
+   * your user's HTTP request header when they convert on your web page.
+   * Example, "Mozilla/5.0 (iPhone; CPU iPhone OS 12_2 like Mac OS X)". User
+   * agent can only be specified in enhancements with user identifiers.
+   * </pre>
+   *
+   * <code>string user_agent = 11;</code>
+   * @return The userAgent.
+   */
+  java.lang.String getUserAgent();
+  /**
+   * <pre>
+   * The user agent to enhance the original conversion. This can be found in
+   * your user's HTTP request header when they convert on your web page.
+   * Example, "Mozilla/5.0 (iPhone; CPU iPhone OS 12_2 like Mac OS X)". User
+   * agent can only be specified in enhancements with user identifiers.
+   * </pre>
+   *
+   * <code>string user_agent = 11;</code>
+   * @return The bytes for userAgent.
+   */
+  com.google.protobuf.ByteString
+      getUserAgentBytes();
+
+  /**
+   * <pre>
    * Uniquely identifies a conversion that was reported without an order ID
    * specified.
    * </pre>
@@ -178,7 +275,7 @@ public interface ConversionAdjustmentOrBuilder extends
    * <pre>
    * The order ID of the conversion to be adjusted. If the conversion was
    * reported with an order ID specified, that order ID must be used as the
-   * identifier here.
+   * identifier here. The order ID is required for enhancements.
    * </pre>
    *
    * <code>string order_id = 7;</code>
@@ -189,7 +286,7 @@ public interface ConversionAdjustmentOrBuilder extends
    * <pre>
    * The order ID of the conversion to be adjusted. If the conversion was
    * reported with an order ID specified, that order ID must be used as the
-   * identifier here.
+   * identifier here. The order ID is required for enhancements.
    * </pre>
    *
    * <code>string order_id = 7;</code>
@@ -200,7 +297,7 @@ public interface ConversionAdjustmentOrBuilder extends
    * <pre>
    * The order ID of the conversion to be adjusted. If the conversion was
    * reported with an order ID specified, that order ID must be used as the
-   * identifier here.
+   * identifier here. The order ID is required for enhancements.
    * </pre>
    *
    * <code>string order_id = 7;</code>

@@ -91,6 +91,7 @@ public class AdGroupAdServiceClientTest {
             .setAdGroup(AdGroupName.of("[CUSTOMER_ID]", "[AD_GROUP_ID]").toString())
             .setAd(Ad.newBuilder().build())
             .setPolicySummary(AdGroupAdPolicySummary.newBuilder().build())
+            .addAllActionItems(new ArrayList<String>())
             .addAllLabels(new ArrayList<String>())
             .build();
     mockAdGroupAdService.addResponse(expectedResponse);
@@ -134,6 +135,7 @@ public class AdGroupAdServiceClientTest {
             .setAdGroup(AdGroupName.of("[CUSTOMER_ID]", "[AD_GROUP_ID]").toString())
             .setAd(Ad.newBuilder().build())
             .setPolicySummary(AdGroupAdPolicySummary.newBuilder().build())
+            .addAllActionItems(new ArrayList<String>())
             .addAllLabels(new ArrayList<String>())
             .build();
     mockAdGroupAdService.addResponse(expectedResponse);

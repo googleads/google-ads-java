@@ -327,12 +327,12 @@ public class DynamicSearchAdsSearchTermViewName implements ResourceName {
     }
 
     private Builder(DynamicSearchAdsSearchTermViewName dynamicSearchAdsSearchTermViewName) {
-      customerId = dynamicSearchAdsSearchTermViewName.customerId;
-      adGroupId = dynamicSearchAdsSearchTermViewName.adGroupId;
-      searchTermFingerprint = dynamicSearchAdsSearchTermViewName.searchTermFingerprint;
-      headlineFingerprint = dynamicSearchAdsSearchTermViewName.headlineFingerprint;
-      landingPageFingerprint = dynamicSearchAdsSearchTermViewName.landingPageFingerprint;
-      pageUrlFingerprint = dynamicSearchAdsSearchTermViewName.pageUrlFingerprint;
+      this.customerId = dynamicSearchAdsSearchTermViewName.customerId;
+      this.adGroupId = dynamicSearchAdsSearchTermViewName.adGroupId;
+      this.searchTermFingerprint = dynamicSearchAdsSearchTermViewName.searchTermFingerprint;
+      this.headlineFingerprint = dynamicSearchAdsSearchTermViewName.headlineFingerprint;
+      this.landingPageFingerprint = dynamicSearchAdsSearchTermViewName.landingPageFingerprint;
+      this.pageUrlFingerprint = dynamicSearchAdsSearchTermViewName.pageUrlFingerprint;
     }
 
     public DynamicSearchAdsSearchTermViewName build() {

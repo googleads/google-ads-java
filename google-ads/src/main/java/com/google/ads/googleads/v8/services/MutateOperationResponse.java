@@ -766,6 +766,34 @@ private static final long serialVersionUID = 0L;
             responseCase_ = 57;
             break;
           }
+          case 466: {
+            com.google.ads.googleads.v8.services.MutateBiddingDataExclusionsResult.Builder subBuilder = null;
+            if (responseCase_ == 58) {
+              subBuilder = ((com.google.ads.googleads.v8.services.MutateBiddingDataExclusionsResult) response_).toBuilder();
+            }
+            response_ =
+                input.readMessage(com.google.ads.googleads.v8.services.MutateBiddingDataExclusionsResult.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.google.ads.googleads.v8.services.MutateBiddingDataExclusionsResult) response_);
+              response_ = subBuilder.buildPartial();
+            }
+            responseCase_ = 58;
+            break;
+          }
+          case 474: {
+            com.google.ads.googleads.v8.services.MutateBiddingSeasonalityAdjustmentsResult.Builder subBuilder = null;
+            if (responseCase_ == 59) {
+              subBuilder = ((com.google.ads.googleads.v8.services.MutateBiddingSeasonalityAdjustmentsResult) response_).toBuilder();
+            }
+            response_ =
+                input.readMessage(com.google.ads.googleads.v8.services.MutateBiddingSeasonalityAdjustmentsResult.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.google.ads.googleads.v8.services.MutateBiddingSeasonalityAdjustmentsResult) response_);
+              response_ = subBuilder.buildPartial();
+            }
+            responseCase_ = 59;
+            break;
+          }
           case 490: {
             com.google.ads.googleads.v8.services.MutateSmartCampaignSettingResult.Builder subBuilder = null;
             if (responseCase_ == 61) {
@@ -778,6 +806,34 @@ private static final long serialVersionUID = 0L;
               response_ = subBuilder.buildPartial();
             }
             responseCase_ = 61;
+            break;
+          }
+          case 506: {
+            com.google.ads.googleads.v8.services.MutateConversionValueRuleResult.Builder subBuilder = null;
+            if (responseCase_ == 63) {
+              subBuilder = ((com.google.ads.googleads.v8.services.MutateConversionValueRuleResult) response_).toBuilder();
+            }
+            response_ =
+                input.readMessage(com.google.ads.googleads.v8.services.MutateConversionValueRuleResult.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.google.ads.googleads.v8.services.MutateConversionValueRuleResult) response_);
+              response_ = subBuilder.buildPartial();
+            }
+            responseCase_ = 63;
+            break;
+          }
+          case 514: {
+            com.google.ads.googleads.v8.services.MutateConversionValueRuleSetResult.Builder subBuilder = null;
+            if (responseCase_ == 64) {
+              subBuilder = ((com.google.ads.googleads.v8.services.MutateConversionValueRuleSetResult) response_).toBuilder();
+            }
+            response_ =
+                input.readMessage(com.google.ads.googleads.v8.services.MutateConversionValueRuleSetResult.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.google.ads.googleads.v8.services.MutateConversionValueRuleSetResult) response_);
+              response_ = subBuilder.buildPartial();
+            }
+            responseCase_ = 64;
             break;
           }
           default: {
@@ -830,6 +886,8 @@ private static final long serialVersionUID = 0L;
     AD_PARAMETER_RESULT(22),
     AD_RESULT(49),
     ASSET_RESULT(23),
+    BIDDING_DATA_EXCLUSION_RESULT(58),
+    BIDDING_SEASONALITY_ADJUSTMENT_RESULT(59),
     BIDDING_STRATEGY_RESULT(6),
     CAMPAIGN_ASSET_RESULT(52),
     CAMPAIGN_BID_MODIFIER_RESULT(7),
@@ -844,6 +902,8 @@ private static final long serialVersionUID = 0L;
     CAMPAIGN_SHARED_SET_RESULT(11),
     CONVERSION_ACTION_RESULT(12),
     CONVERSION_CUSTOM_VARIABLE_RESULT(55),
+    CONVERSION_VALUE_RULE_RESULT(63),
+    CONVERSION_VALUE_RULE_SET_RESULT(64),
     CUSTOMER_ASSET_RESULT(57),
     CUSTOMER_EXTENSION_SETTING_RESULT(30),
     CUSTOMER_FEED_RESULT(31),
@@ -899,6 +959,8 @@ private static final long serialVersionUID = 0L;
         case 22: return AD_PARAMETER_RESULT;
         case 49: return AD_RESULT;
         case 23: return ASSET_RESULT;
+        case 58: return BIDDING_DATA_EXCLUSION_RESULT;
+        case 59: return BIDDING_SEASONALITY_ADJUSTMENT_RESULT;
         case 6: return BIDDING_STRATEGY_RESULT;
         case 52: return CAMPAIGN_ASSET_RESULT;
         case 7: return CAMPAIGN_BID_MODIFIER_RESULT;
@@ -913,6 +975,8 @@ private static final long serialVersionUID = 0L;
         case 11: return CAMPAIGN_SHARED_SET_RESULT;
         case 12: return CONVERSION_ACTION_RESULT;
         case 55: return CONVERSION_CUSTOM_VARIABLE_RESULT;
+        case 63: return CONVERSION_VALUE_RULE_RESULT;
+        case 64: return CONVERSION_VALUE_RULE_SET_RESULT;
         case 57: return CUSTOMER_ASSET_RESULT;
         case 30: return CUSTOMER_EXTENSION_SETTING_RESULT;
         case 31: return CUSTOMER_FEED_RESULT;
@@ -1510,6 +1574,92 @@ private static final long serialVersionUID = 0L;
        return (com.google.ads.googleads.v8.services.MutateAssetResult) response_;
     }
     return com.google.ads.googleads.v8.services.MutateAssetResult.getDefaultInstance();
+  }
+
+  public static final int BIDDING_DATA_EXCLUSION_RESULT_FIELD_NUMBER = 58;
+  /**
+   * <pre>
+   * The result for the bidding data exclusion mutate.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v8.services.MutateBiddingDataExclusionsResult bidding_data_exclusion_result = 58;</code>
+   * @return Whether the biddingDataExclusionResult field is set.
+   */
+  @java.lang.Override
+  public boolean hasBiddingDataExclusionResult() {
+    return responseCase_ == 58;
+  }
+  /**
+   * <pre>
+   * The result for the bidding data exclusion mutate.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v8.services.MutateBiddingDataExclusionsResult bidding_data_exclusion_result = 58;</code>
+   * @return The biddingDataExclusionResult.
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v8.services.MutateBiddingDataExclusionsResult getBiddingDataExclusionResult() {
+    if (responseCase_ == 58) {
+       return (com.google.ads.googleads.v8.services.MutateBiddingDataExclusionsResult) response_;
+    }
+    return com.google.ads.googleads.v8.services.MutateBiddingDataExclusionsResult.getDefaultInstance();
+  }
+  /**
+   * <pre>
+   * The result for the bidding data exclusion mutate.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v8.services.MutateBiddingDataExclusionsResult bidding_data_exclusion_result = 58;</code>
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v8.services.MutateBiddingDataExclusionsResultOrBuilder getBiddingDataExclusionResultOrBuilder() {
+    if (responseCase_ == 58) {
+       return (com.google.ads.googleads.v8.services.MutateBiddingDataExclusionsResult) response_;
+    }
+    return com.google.ads.googleads.v8.services.MutateBiddingDataExclusionsResult.getDefaultInstance();
+  }
+
+  public static final int BIDDING_SEASONALITY_ADJUSTMENT_RESULT_FIELD_NUMBER = 59;
+  /**
+   * <pre>
+   * The result for the bidding seasonality adjustment mutate.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v8.services.MutateBiddingSeasonalityAdjustmentsResult bidding_seasonality_adjustment_result = 59;</code>
+   * @return Whether the biddingSeasonalityAdjustmentResult field is set.
+   */
+  @java.lang.Override
+  public boolean hasBiddingSeasonalityAdjustmentResult() {
+    return responseCase_ == 59;
+  }
+  /**
+   * <pre>
+   * The result for the bidding seasonality adjustment mutate.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v8.services.MutateBiddingSeasonalityAdjustmentsResult bidding_seasonality_adjustment_result = 59;</code>
+   * @return The biddingSeasonalityAdjustmentResult.
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v8.services.MutateBiddingSeasonalityAdjustmentsResult getBiddingSeasonalityAdjustmentResult() {
+    if (responseCase_ == 59) {
+       return (com.google.ads.googleads.v8.services.MutateBiddingSeasonalityAdjustmentsResult) response_;
+    }
+    return com.google.ads.googleads.v8.services.MutateBiddingSeasonalityAdjustmentsResult.getDefaultInstance();
+  }
+  /**
+   * <pre>
+   * The result for the bidding seasonality adjustment mutate.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v8.services.MutateBiddingSeasonalityAdjustmentsResult bidding_seasonality_adjustment_result = 59;</code>
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v8.services.MutateBiddingSeasonalityAdjustmentsResultOrBuilder getBiddingSeasonalityAdjustmentResultOrBuilder() {
+    if (responseCase_ == 59) {
+       return (com.google.ads.googleads.v8.services.MutateBiddingSeasonalityAdjustmentsResult) response_;
+    }
+    return com.google.ads.googleads.v8.services.MutateBiddingSeasonalityAdjustmentsResult.getDefaultInstance();
   }
 
   public static final int BIDDING_STRATEGY_RESULT_FIELD_NUMBER = 6;
@@ -2112,6 +2262,92 @@ private static final long serialVersionUID = 0L;
        return (com.google.ads.googleads.v8.services.MutateConversionCustomVariableResult) response_;
     }
     return com.google.ads.googleads.v8.services.MutateConversionCustomVariableResult.getDefaultInstance();
+  }
+
+  public static final int CONVERSION_VALUE_RULE_RESULT_FIELD_NUMBER = 63;
+  /**
+   * <pre>
+   * The result for the conversion value rule mutate.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v8.services.MutateConversionValueRuleResult conversion_value_rule_result = 63;</code>
+   * @return Whether the conversionValueRuleResult field is set.
+   */
+  @java.lang.Override
+  public boolean hasConversionValueRuleResult() {
+    return responseCase_ == 63;
+  }
+  /**
+   * <pre>
+   * The result for the conversion value rule mutate.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v8.services.MutateConversionValueRuleResult conversion_value_rule_result = 63;</code>
+   * @return The conversionValueRuleResult.
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v8.services.MutateConversionValueRuleResult getConversionValueRuleResult() {
+    if (responseCase_ == 63) {
+       return (com.google.ads.googleads.v8.services.MutateConversionValueRuleResult) response_;
+    }
+    return com.google.ads.googleads.v8.services.MutateConversionValueRuleResult.getDefaultInstance();
+  }
+  /**
+   * <pre>
+   * The result for the conversion value rule mutate.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v8.services.MutateConversionValueRuleResult conversion_value_rule_result = 63;</code>
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v8.services.MutateConversionValueRuleResultOrBuilder getConversionValueRuleResultOrBuilder() {
+    if (responseCase_ == 63) {
+       return (com.google.ads.googleads.v8.services.MutateConversionValueRuleResult) response_;
+    }
+    return com.google.ads.googleads.v8.services.MutateConversionValueRuleResult.getDefaultInstance();
+  }
+
+  public static final int CONVERSION_VALUE_RULE_SET_RESULT_FIELD_NUMBER = 64;
+  /**
+   * <pre>
+   * The result for the conversion value rule set mutate.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v8.services.MutateConversionValueRuleSetResult conversion_value_rule_set_result = 64;</code>
+   * @return Whether the conversionValueRuleSetResult field is set.
+   */
+  @java.lang.Override
+  public boolean hasConversionValueRuleSetResult() {
+    return responseCase_ == 64;
+  }
+  /**
+   * <pre>
+   * The result for the conversion value rule set mutate.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v8.services.MutateConversionValueRuleSetResult conversion_value_rule_set_result = 64;</code>
+   * @return The conversionValueRuleSetResult.
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v8.services.MutateConversionValueRuleSetResult getConversionValueRuleSetResult() {
+    if (responseCase_ == 64) {
+       return (com.google.ads.googleads.v8.services.MutateConversionValueRuleSetResult) response_;
+    }
+    return com.google.ads.googleads.v8.services.MutateConversionValueRuleSetResult.getDefaultInstance();
+  }
+  /**
+   * <pre>
+   * The result for the conversion value rule set mutate.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v8.services.MutateConversionValueRuleSetResult conversion_value_rule_set_result = 64;</code>
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v8.services.MutateConversionValueRuleSetResultOrBuilder getConversionValueRuleSetResultOrBuilder() {
+    if (responseCase_ == 64) {
+       return (com.google.ads.googleads.v8.services.MutateConversionValueRuleSetResult) response_;
+    }
+    return com.google.ads.googleads.v8.services.MutateConversionValueRuleSetResult.getDefaultInstance();
   }
 
   public static final int CUSTOMER_ASSET_RESULT_FIELD_NUMBER = 57;
@@ -3356,8 +3592,20 @@ private static final long serialVersionUID = 0L;
     if (responseCase_ == 57) {
       output.writeMessage(57, (com.google.ads.googleads.v8.services.MutateCustomerAssetResult) response_);
     }
+    if (responseCase_ == 58) {
+      output.writeMessage(58, (com.google.ads.googleads.v8.services.MutateBiddingDataExclusionsResult) response_);
+    }
+    if (responseCase_ == 59) {
+      output.writeMessage(59, (com.google.ads.googleads.v8.services.MutateBiddingSeasonalityAdjustmentsResult) response_);
+    }
     if (responseCase_ == 61) {
       output.writeMessage(61, (com.google.ads.googleads.v8.services.MutateSmartCampaignSettingResult) response_);
+    }
+    if (responseCase_ == 63) {
+      output.writeMessage(63, (com.google.ads.googleads.v8.services.MutateConversionValueRuleResult) response_);
+    }
+    if (responseCase_ == 64) {
+      output.writeMessage(64, (com.google.ads.googleads.v8.services.MutateConversionValueRuleSetResult) response_);
     }
     unknownFields.writeTo(output);
   }
@@ -3572,9 +3820,25 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(57, (com.google.ads.googleads.v8.services.MutateCustomerAssetResult) response_);
     }
+    if (responseCase_ == 58) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(58, (com.google.ads.googleads.v8.services.MutateBiddingDataExclusionsResult) response_);
+    }
+    if (responseCase_ == 59) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(59, (com.google.ads.googleads.v8.services.MutateBiddingSeasonalityAdjustmentsResult) response_);
+    }
     if (responseCase_ == 61) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(61, (com.google.ads.googleads.v8.services.MutateSmartCampaignSettingResult) response_);
+    }
+    if (responseCase_ == 63) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(63, (com.google.ads.googleads.v8.services.MutateConversionValueRuleResult) response_);
+    }
+    if (responseCase_ == 64) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(64, (com.google.ads.googleads.v8.services.MutateConversionValueRuleSetResult) response_);
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -3645,6 +3909,14 @@ private static final long serialVersionUID = 0L;
         if (!getAssetResult()
             .equals(other.getAssetResult())) return false;
         break;
+      case 58:
+        if (!getBiddingDataExclusionResult()
+            .equals(other.getBiddingDataExclusionResult())) return false;
+        break;
+      case 59:
+        if (!getBiddingSeasonalityAdjustmentResult()
+            .equals(other.getBiddingSeasonalityAdjustmentResult())) return false;
+        break;
       case 6:
         if (!getBiddingStrategyResult()
             .equals(other.getBiddingStrategyResult())) return false;
@@ -3700,6 +3972,14 @@ private static final long serialVersionUID = 0L;
       case 55:
         if (!getConversionCustomVariableResult()
             .equals(other.getConversionCustomVariableResult())) return false;
+        break;
+      case 63:
+        if (!getConversionValueRuleResult()
+            .equals(other.getConversionValueRuleResult())) return false;
+        break;
+      case 64:
+        if (!getConversionValueRuleSetResult()
+            .equals(other.getConversionValueRuleSetResult())) return false;
         break;
       case 57:
         if (!getCustomerAssetResult()
@@ -3868,6 +4148,14 @@ private static final long serialVersionUID = 0L;
         hash = (37 * hash) + ASSET_RESULT_FIELD_NUMBER;
         hash = (53 * hash) + getAssetResult().hashCode();
         break;
+      case 58:
+        hash = (37 * hash) + BIDDING_DATA_EXCLUSION_RESULT_FIELD_NUMBER;
+        hash = (53 * hash) + getBiddingDataExclusionResult().hashCode();
+        break;
+      case 59:
+        hash = (37 * hash) + BIDDING_SEASONALITY_ADJUSTMENT_RESULT_FIELD_NUMBER;
+        hash = (53 * hash) + getBiddingSeasonalityAdjustmentResult().hashCode();
+        break;
       case 6:
         hash = (37 * hash) + BIDDING_STRATEGY_RESULT_FIELD_NUMBER;
         hash = (53 * hash) + getBiddingStrategyResult().hashCode();
@@ -3923,6 +4211,14 @@ private static final long serialVersionUID = 0L;
       case 55:
         hash = (37 * hash) + CONVERSION_CUSTOM_VARIABLE_RESULT_FIELD_NUMBER;
         hash = (53 * hash) + getConversionCustomVariableResult().hashCode();
+        break;
+      case 63:
+        hash = (37 * hash) + CONVERSION_VALUE_RULE_RESULT_FIELD_NUMBER;
+        hash = (53 * hash) + getConversionValueRuleResult().hashCode();
+        break;
+      case 64:
+        hash = (37 * hash) + CONVERSION_VALUE_RULE_SET_RESULT_FIELD_NUMBER;
+        hash = (53 * hash) + getConversionValueRuleSetResult().hashCode();
         break;
       case 57:
         hash = (37 * hash) + CUSTOMER_ASSET_RESULT_FIELD_NUMBER;
@@ -4283,6 +4579,20 @@ private static final long serialVersionUID = 0L;
           result.response_ = assetResultBuilder_.build();
         }
       }
+      if (responseCase_ == 58) {
+        if (biddingDataExclusionResultBuilder_ == null) {
+          result.response_ = response_;
+        } else {
+          result.response_ = biddingDataExclusionResultBuilder_.build();
+        }
+      }
+      if (responseCase_ == 59) {
+        if (biddingSeasonalityAdjustmentResultBuilder_ == null) {
+          result.response_ = response_;
+        } else {
+          result.response_ = biddingSeasonalityAdjustmentResultBuilder_.build();
+        }
+      }
       if (responseCase_ == 6) {
         if (biddingStrategyResultBuilder_ == null) {
           result.response_ = response_;
@@ -4379,6 +4689,20 @@ private static final long serialVersionUID = 0L;
           result.response_ = response_;
         } else {
           result.response_ = conversionCustomVariableResultBuilder_.build();
+        }
+      }
+      if (responseCase_ == 63) {
+        if (conversionValueRuleResultBuilder_ == null) {
+          result.response_ = response_;
+        } else {
+          result.response_ = conversionValueRuleResultBuilder_.build();
+        }
+      }
+      if (responseCase_ == 64) {
+        if (conversionValueRuleSetResultBuilder_ == null) {
+          result.response_ = response_;
+        } else {
+          result.response_ = conversionValueRuleSetResultBuilder_.build();
         }
       }
       if (responseCase_ == 57) {
@@ -4658,6 +4982,14 @@ private static final long serialVersionUID = 0L;
           mergeAssetResult(other.getAssetResult());
           break;
         }
+        case BIDDING_DATA_EXCLUSION_RESULT: {
+          mergeBiddingDataExclusionResult(other.getBiddingDataExclusionResult());
+          break;
+        }
+        case BIDDING_SEASONALITY_ADJUSTMENT_RESULT: {
+          mergeBiddingSeasonalityAdjustmentResult(other.getBiddingSeasonalityAdjustmentResult());
+          break;
+        }
         case BIDDING_STRATEGY_RESULT: {
           mergeBiddingStrategyResult(other.getBiddingStrategyResult());
           break;
@@ -4712,6 +5044,14 @@ private static final long serialVersionUID = 0L;
         }
         case CONVERSION_CUSTOM_VARIABLE_RESULT: {
           mergeConversionCustomVariableResult(other.getConversionCustomVariableResult());
+          break;
+        }
+        case CONVERSION_VALUE_RULE_RESULT: {
+          mergeConversionValueRuleResult(other.getConversionValueRuleResult());
+          break;
+        }
+        case CONVERSION_VALUE_RULE_SET_RESULT: {
+          mergeConversionValueRuleSetResult(other.getConversionValueRuleSetResult());
           break;
         }
         case CUSTOMER_ASSET_RESULT: {
@@ -7161,6 +7501,360 @@ private static final long serialVersionUID = 0L;
       responseCase_ = 23;
       onChanged();;
       return assetResultBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v8.services.MutateBiddingDataExclusionsResult, com.google.ads.googleads.v8.services.MutateBiddingDataExclusionsResult.Builder, com.google.ads.googleads.v8.services.MutateBiddingDataExclusionsResultOrBuilder> biddingDataExclusionResultBuilder_;
+    /**
+     * <pre>
+     * The result for the bidding data exclusion mutate.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v8.services.MutateBiddingDataExclusionsResult bidding_data_exclusion_result = 58;</code>
+     * @return Whether the biddingDataExclusionResult field is set.
+     */
+    @java.lang.Override
+    public boolean hasBiddingDataExclusionResult() {
+      return responseCase_ == 58;
+    }
+    /**
+     * <pre>
+     * The result for the bidding data exclusion mutate.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v8.services.MutateBiddingDataExclusionsResult bidding_data_exclusion_result = 58;</code>
+     * @return The biddingDataExclusionResult.
+     */
+    @java.lang.Override
+    public com.google.ads.googleads.v8.services.MutateBiddingDataExclusionsResult getBiddingDataExclusionResult() {
+      if (biddingDataExclusionResultBuilder_ == null) {
+        if (responseCase_ == 58) {
+          return (com.google.ads.googleads.v8.services.MutateBiddingDataExclusionsResult) response_;
+        }
+        return com.google.ads.googleads.v8.services.MutateBiddingDataExclusionsResult.getDefaultInstance();
+      } else {
+        if (responseCase_ == 58) {
+          return biddingDataExclusionResultBuilder_.getMessage();
+        }
+        return com.google.ads.googleads.v8.services.MutateBiddingDataExclusionsResult.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * The result for the bidding data exclusion mutate.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v8.services.MutateBiddingDataExclusionsResult bidding_data_exclusion_result = 58;</code>
+     */
+    public Builder setBiddingDataExclusionResult(com.google.ads.googleads.v8.services.MutateBiddingDataExclusionsResult value) {
+      if (biddingDataExclusionResultBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        response_ = value;
+        onChanged();
+      } else {
+        biddingDataExclusionResultBuilder_.setMessage(value);
+      }
+      responseCase_ = 58;
+      return this;
+    }
+    /**
+     * <pre>
+     * The result for the bidding data exclusion mutate.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v8.services.MutateBiddingDataExclusionsResult bidding_data_exclusion_result = 58;</code>
+     */
+    public Builder setBiddingDataExclusionResult(
+        com.google.ads.googleads.v8.services.MutateBiddingDataExclusionsResult.Builder builderForValue) {
+      if (biddingDataExclusionResultBuilder_ == null) {
+        response_ = builderForValue.build();
+        onChanged();
+      } else {
+        biddingDataExclusionResultBuilder_.setMessage(builderForValue.build());
+      }
+      responseCase_ = 58;
+      return this;
+    }
+    /**
+     * <pre>
+     * The result for the bidding data exclusion mutate.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v8.services.MutateBiddingDataExclusionsResult bidding_data_exclusion_result = 58;</code>
+     */
+    public Builder mergeBiddingDataExclusionResult(com.google.ads.googleads.v8.services.MutateBiddingDataExclusionsResult value) {
+      if (biddingDataExclusionResultBuilder_ == null) {
+        if (responseCase_ == 58 &&
+            response_ != com.google.ads.googleads.v8.services.MutateBiddingDataExclusionsResult.getDefaultInstance()) {
+          response_ = com.google.ads.googleads.v8.services.MutateBiddingDataExclusionsResult.newBuilder((com.google.ads.googleads.v8.services.MutateBiddingDataExclusionsResult) response_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          response_ = value;
+        }
+        onChanged();
+      } else {
+        if (responseCase_ == 58) {
+          biddingDataExclusionResultBuilder_.mergeFrom(value);
+        }
+        biddingDataExclusionResultBuilder_.setMessage(value);
+      }
+      responseCase_ = 58;
+      return this;
+    }
+    /**
+     * <pre>
+     * The result for the bidding data exclusion mutate.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v8.services.MutateBiddingDataExclusionsResult bidding_data_exclusion_result = 58;</code>
+     */
+    public Builder clearBiddingDataExclusionResult() {
+      if (biddingDataExclusionResultBuilder_ == null) {
+        if (responseCase_ == 58) {
+          responseCase_ = 0;
+          response_ = null;
+          onChanged();
+        }
+      } else {
+        if (responseCase_ == 58) {
+          responseCase_ = 0;
+          response_ = null;
+        }
+        biddingDataExclusionResultBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * The result for the bidding data exclusion mutate.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v8.services.MutateBiddingDataExclusionsResult bidding_data_exclusion_result = 58;</code>
+     */
+    public com.google.ads.googleads.v8.services.MutateBiddingDataExclusionsResult.Builder getBiddingDataExclusionResultBuilder() {
+      return getBiddingDataExclusionResultFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * The result for the bidding data exclusion mutate.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v8.services.MutateBiddingDataExclusionsResult bidding_data_exclusion_result = 58;</code>
+     */
+    @java.lang.Override
+    public com.google.ads.googleads.v8.services.MutateBiddingDataExclusionsResultOrBuilder getBiddingDataExclusionResultOrBuilder() {
+      if ((responseCase_ == 58) && (biddingDataExclusionResultBuilder_ != null)) {
+        return biddingDataExclusionResultBuilder_.getMessageOrBuilder();
+      } else {
+        if (responseCase_ == 58) {
+          return (com.google.ads.googleads.v8.services.MutateBiddingDataExclusionsResult) response_;
+        }
+        return com.google.ads.googleads.v8.services.MutateBiddingDataExclusionsResult.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * The result for the bidding data exclusion mutate.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v8.services.MutateBiddingDataExclusionsResult bidding_data_exclusion_result = 58;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v8.services.MutateBiddingDataExclusionsResult, com.google.ads.googleads.v8.services.MutateBiddingDataExclusionsResult.Builder, com.google.ads.googleads.v8.services.MutateBiddingDataExclusionsResultOrBuilder> 
+        getBiddingDataExclusionResultFieldBuilder() {
+      if (biddingDataExclusionResultBuilder_ == null) {
+        if (!(responseCase_ == 58)) {
+          response_ = com.google.ads.googleads.v8.services.MutateBiddingDataExclusionsResult.getDefaultInstance();
+        }
+        biddingDataExclusionResultBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.ads.googleads.v8.services.MutateBiddingDataExclusionsResult, com.google.ads.googleads.v8.services.MutateBiddingDataExclusionsResult.Builder, com.google.ads.googleads.v8.services.MutateBiddingDataExclusionsResultOrBuilder>(
+                (com.google.ads.googleads.v8.services.MutateBiddingDataExclusionsResult) response_,
+                getParentForChildren(),
+                isClean());
+        response_ = null;
+      }
+      responseCase_ = 58;
+      onChanged();;
+      return biddingDataExclusionResultBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v8.services.MutateBiddingSeasonalityAdjustmentsResult, com.google.ads.googleads.v8.services.MutateBiddingSeasonalityAdjustmentsResult.Builder, com.google.ads.googleads.v8.services.MutateBiddingSeasonalityAdjustmentsResultOrBuilder> biddingSeasonalityAdjustmentResultBuilder_;
+    /**
+     * <pre>
+     * The result for the bidding seasonality adjustment mutate.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v8.services.MutateBiddingSeasonalityAdjustmentsResult bidding_seasonality_adjustment_result = 59;</code>
+     * @return Whether the biddingSeasonalityAdjustmentResult field is set.
+     */
+    @java.lang.Override
+    public boolean hasBiddingSeasonalityAdjustmentResult() {
+      return responseCase_ == 59;
+    }
+    /**
+     * <pre>
+     * The result for the bidding seasonality adjustment mutate.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v8.services.MutateBiddingSeasonalityAdjustmentsResult bidding_seasonality_adjustment_result = 59;</code>
+     * @return The biddingSeasonalityAdjustmentResult.
+     */
+    @java.lang.Override
+    public com.google.ads.googleads.v8.services.MutateBiddingSeasonalityAdjustmentsResult getBiddingSeasonalityAdjustmentResult() {
+      if (biddingSeasonalityAdjustmentResultBuilder_ == null) {
+        if (responseCase_ == 59) {
+          return (com.google.ads.googleads.v8.services.MutateBiddingSeasonalityAdjustmentsResult) response_;
+        }
+        return com.google.ads.googleads.v8.services.MutateBiddingSeasonalityAdjustmentsResult.getDefaultInstance();
+      } else {
+        if (responseCase_ == 59) {
+          return biddingSeasonalityAdjustmentResultBuilder_.getMessage();
+        }
+        return com.google.ads.googleads.v8.services.MutateBiddingSeasonalityAdjustmentsResult.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * The result for the bidding seasonality adjustment mutate.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v8.services.MutateBiddingSeasonalityAdjustmentsResult bidding_seasonality_adjustment_result = 59;</code>
+     */
+    public Builder setBiddingSeasonalityAdjustmentResult(com.google.ads.googleads.v8.services.MutateBiddingSeasonalityAdjustmentsResult value) {
+      if (biddingSeasonalityAdjustmentResultBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        response_ = value;
+        onChanged();
+      } else {
+        biddingSeasonalityAdjustmentResultBuilder_.setMessage(value);
+      }
+      responseCase_ = 59;
+      return this;
+    }
+    /**
+     * <pre>
+     * The result for the bidding seasonality adjustment mutate.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v8.services.MutateBiddingSeasonalityAdjustmentsResult bidding_seasonality_adjustment_result = 59;</code>
+     */
+    public Builder setBiddingSeasonalityAdjustmentResult(
+        com.google.ads.googleads.v8.services.MutateBiddingSeasonalityAdjustmentsResult.Builder builderForValue) {
+      if (biddingSeasonalityAdjustmentResultBuilder_ == null) {
+        response_ = builderForValue.build();
+        onChanged();
+      } else {
+        biddingSeasonalityAdjustmentResultBuilder_.setMessage(builderForValue.build());
+      }
+      responseCase_ = 59;
+      return this;
+    }
+    /**
+     * <pre>
+     * The result for the bidding seasonality adjustment mutate.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v8.services.MutateBiddingSeasonalityAdjustmentsResult bidding_seasonality_adjustment_result = 59;</code>
+     */
+    public Builder mergeBiddingSeasonalityAdjustmentResult(com.google.ads.googleads.v8.services.MutateBiddingSeasonalityAdjustmentsResult value) {
+      if (biddingSeasonalityAdjustmentResultBuilder_ == null) {
+        if (responseCase_ == 59 &&
+            response_ != com.google.ads.googleads.v8.services.MutateBiddingSeasonalityAdjustmentsResult.getDefaultInstance()) {
+          response_ = com.google.ads.googleads.v8.services.MutateBiddingSeasonalityAdjustmentsResult.newBuilder((com.google.ads.googleads.v8.services.MutateBiddingSeasonalityAdjustmentsResult) response_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          response_ = value;
+        }
+        onChanged();
+      } else {
+        if (responseCase_ == 59) {
+          biddingSeasonalityAdjustmentResultBuilder_.mergeFrom(value);
+        }
+        biddingSeasonalityAdjustmentResultBuilder_.setMessage(value);
+      }
+      responseCase_ = 59;
+      return this;
+    }
+    /**
+     * <pre>
+     * The result for the bidding seasonality adjustment mutate.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v8.services.MutateBiddingSeasonalityAdjustmentsResult bidding_seasonality_adjustment_result = 59;</code>
+     */
+    public Builder clearBiddingSeasonalityAdjustmentResult() {
+      if (biddingSeasonalityAdjustmentResultBuilder_ == null) {
+        if (responseCase_ == 59) {
+          responseCase_ = 0;
+          response_ = null;
+          onChanged();
+        }
+      } else {
+        if (responseCase_ == 59) {
+          responseCase_ = 0;
+          response_ = null;
+        }
+        biddingSeasonalityAdjustmentResultBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * The result for the bidding seasonality adjustment mutate.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v8.services.MutateBiddingSeasonalityAdjustmentsResult bidding_seasonality_adjustment_result = 59;</code>
+     */
+    public com.google.ads.googleads.v8.services.MutateBiddingSeasonalityAdjustmentsResult.Builder getBiddingSeasonalityAdjustmentResultBuilder() {
+      return getBiddingSeasonalityAdjustmentResultFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * The result for the bidding seasonality adjustment mutate.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v8.services.MutateBiddingSeasonalityAdjustmentsResult bidding_seasonality_adjustment_result = 59;</code>
+     */
+    @java.lang.Override
+    public com.google.ads.googleads.v8.services.MutateBiddingSeasonalityAdjustmentsResultOrBuilder getBiddingSeasonalityAdjustmentResultOrBuilder() {
+      if ((responseCase_ == 59) && (biddingSeasonalityAdjustmentResultBuilder_ != null)) {
+        return biddingSeasonalityAdjustmentResultBuilder_.getMessageOrBuilder();
+      } else {
+        if (responseCase_ == 59) {
+          return (com.google.ads.googleads.v8.services.MutateBiddingSeasonalityAdjustmentsResult) response_;
+        }
+        return com.google.ads.googleads.v8.services.MutateBiddingSeasonalityAdjustmentsResult.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * The result for the bidding seasonality adjustment mutate.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v8.services.MutateBiddingSeasonalityAdjustmentsResult bidding_seasonality_adjustment_result = 59;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v8.services.MutateBiddingSeasonalityAdjustmentsResult, com.google.ads.googleads.v8.services.MutateBiddingSeasonalityAdjustmentsResult.Builder, com.google.ads.googleads.v8.services.MutateBiddingSeasonalityAdjustmentsResultOrBuilder> 
+        getBiddingSeasonalityAdjustmentResultFieldBuilder() {
+      if (biddingSeasonalityAdjustmentResultBuilder_ == null) {
+        if (!(responseCase_ == 59)) {
+          response_ = com.google.ads.googleads.v8.services.MutateBiddingSeasonalityAdjustmentsResult.getDefaultInstance();
+        }
+        biddingSeasonalityAdjustmentResultBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.ads.googleads.v8.services.MutateBiddingSeasonalityAdjustmentsResult, com.google.ads.googleads.v8.services.MutateBiddingSeasonalityAdjustmentsResult.Builder, com.google.ads.googleads.v8.services.MutateBiddingSeasonalityAdjustmentsResultOrBuilder>(
+                (com.google.ads.googleads.v8.services.MutateBiddingSeasonalityAdjustmentsResult) response_,
+                getParentForChildren(),
+                isClean());
+        response_ = null;
+      }
+      responseCase_ = 59;
+      onChanged();;
+      return biddingSeasonalityAdjustmentResultBuilder_;
     }
 
     private com.google.protobuf.SingleFieldBuilderV3<
@@ -9639,6 +10333,360 @@ private static final long serialVersionUID = 0L;
       responseCase_ = 55;
       onChanged();;
       return conversionCustomVariableResultBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v8.services.MutateConversionValueRuleResult, com.google.ads.googleads.v8.services.MutateConversionValueRuleResult.Builder, com.google.ads.googleads.v8.services.MutateConversionValueRuleResultOrBuilder> conversionValueRuleResultBuilder_;
+    /**
+     * <pre>
+     * The result for the conversion value rule mutate.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v8.services.MutateConversionValueRuleResult conversion_value_rule_result = 63;</code>
+     * @return Whether the conversionValueRuleResult field is set.
+     */
+    @java.lang.Override
+    public boolean hasConversionValueRuleResult() {
+      return responseCase_ == 63;
+    }
+    /**
+     * <pre>
+     * The result for the conversion value rule mutate.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v8.services.MutateConversionValueRuleResult conversion_value_rule_result = 63;</code>
+     * @return The conversionValueRuleResult.
+     */
+    @java.lang.Override
+    public com.google.ads.googleads.v8.services.MutateConversionValueRuleResult getConversionValueRuleResult() {
+      if (conversionValueRuleResultBuilder_ == null) {
+        if (responseCase_ == 63) {
+          return (com.google.ads.googleads.v8.services.MutateConversionValueRuleResult) response_;
+        }
+        return com.google.ads.googleads.v8.services.MutateConversionValueRuleResult.getDefaultInstance();
+      } else {
+        if (responseCase_ == 63) {
+          return conversionValueRuleResultBuilder_.getMessage();
+        }
+        return com.google.ads.googleads.v8.services.MutateConversionValueRuleResult.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * The result for the conversion value rule mutate.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v8.services.MutateConversionValueRuleResult conversion_value_rule_result = 63;</code>
+     */
+    public Builder setConversionValueRuleResult(com.google.ads.googleads.v8.services.MutateConversionValueRuleResult value) {
+      if (conversionValueRuleResultBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        response_ = value;
+        onChanged();
+      } else {
+        conversionValueRuleResultBuilder_.setMessage(value);
+      }
+      responseCase_ = 63;
+      return this;
+    }
+    /**
+     * <pre>
+     * The result for the conversion value rule mutate.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v8.services.MutateConversionValueRuleResult conversion_value_rule_result = 63;</code>
+     */
+    public Builder setConversionValueRuleResult(
+        com.google.ads.googleads.v8.services.MutateConversionValueRuleResult.Builder builderForValue) {
+      if (conversionValueRuleResultBuilder_ == null) {
+        response_ = builderForValue.build();
+        onChanged();
+      } else {
+        conversionValueRuleResultBuilder_.setMessage(builderForValue.build());
+      }
+      responseCase_ = 63;
+      return this;
+    }
+    /**
+     * <pre>
+     * The result for the conversion value rule mutate.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v8.services.MutateConversionValueRuleResult conversion_value_rule_result = 63;</code>
+     */
+    public Builder mergeConversionValueRuleResult(com.google.ads.googleads.v8.services.MutateConversionValueRuleResult value) {
+      if (conversionValueRuleResultBuilder_ == null) {
+        if (responseCase_ == 63 &&
+            response_ != com.google.ads.googleads.v8.services.MutateConversionValueRuleResult.getDefaultInstance()) {
+          response_ = com.google.ads.googleads.v8.services.MutateConversionValueRuleResult.newBuilder((com.google.ads.googleads.v8.services.MutateConversionValueRuleResult) response_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          response_ = value;
+        }
+        onChanged();
+      } else {
+        if (responseCase_ == 63) {
+          conversionValueRuleResultBuilder_.mergeFrom(value);
+        }
+        conversionValueRuleResultBuilder_.setMessage(value);
+      }
+      responseCase_ = 63;
+      return this;
+    }
+    /**
+     * <pre>
+     * The result for the conversion value rule mutate.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v8.services.MutateConversionValueRuleResult conversion_value_rule_result = 63;</code>
+     */
+    public Builder clearConversionValueRuleResult() {
+      if (conversionValueRuleResultBuilder_ == null) {
+        if (responseCase_ == 63) {
+          responseCase_ = 0;
+          response_ = null;
+          onChanged();
+        }
+      } else {
+        if (responseCase_ == 63) {
+          responseCase_ = 0;
+          response_ = null;
+        }
+        conversionValueRuleResultBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * The result for the conversion value rule mutate.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v8.services.MutateConversionValueRuleResult conversion_value_rule_result = 63;</code>
+     */
+    public com.google.ads.googleads.v8.services.MutateConversionValueRuleResult.Builder getConversionValueRuleResultBuilder() {
+      return getConversionValueRuleResultFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * The result for the conversion value rule mutate.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v8.services.MutateConversionValueRuleResult conversion_value_rule_result = 63;</code>
+     */
+    @java.lang.Override
+    public com.google.ads.googleads.v8.services.MutateConversionValueRuleResultOrBuilder getConversionValueRuleResultOrBuilder() {
+      if ((responseCase_ == 63) && (conversionValueRuleResultBuilder_ != null)) {
+        return conversionValueRuleResultBuilder_.getMessageOrBuilder();
+      } else {
+        if (responseCase_ == 63) {
+          return (com.google.ads.googleads.v8.services.MutateConversionValueRuleResult) response_;
+        }
+        return com.google.ads.googleads.v8.services.MutateConversionValueRuleResult.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * The result for the conversion value rule mutate.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v8.services.MutateConversionValueRuleResult conversion_value_rule_result = 63;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v8.services.MutateConversionValueRuleResult, com.google.ads.googleads.v8.services.MutateConversionValueRuleResult.Builder, com.google.ads.googleads.v8.services.MutateConversionValueRuleResultOrBuilder> 
+        getConversionValueRuleResultFieldBuilder() {
+      if (conversionValueRuleResultBuilder_ == null) {
+        if (!(responseCase_ == 63)) {
+          response_ = com.google.ads.googleads.v8.services.MutateConversionValueRuleResult.getDefaultInstance();
+        }
+        conversionValueRuleResultBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.ads.googleads.v8.services.MutateConversionValueRuleResult, com.google.ads.googleads.v8.services.MutateConversionValueRuleResult.Builder, com.google.ads.googleads.v8.services.MutateConversionValueRuleResultOrBuilder>(
+                (com.google.ads.googleads.v8.services.MutateConversionValueRuleResult) response_,
+                getParentForChildren(),
+                isClean());
+        response_ = null;
+      }
+      responseCase_ = 63;
+      onChanged();;
+      return conversionValueRuleResultBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v8.services.MutateConversionValueRuleSetResult, com.google.ads.googleads.v8.services.MutateConversionValueRuleSetResult.Builder, com.google.ads.googleads.v8.services.MutateConversionValueRuleSetResultOrBuilder> conversionValueRuleSetResultBuilder_;
+    /**
+     * <pre>
+     * The result for the conversion value rule set mutate.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v8.services.MutateConversionValueRuleSetResult conversion_value_rule_set_result = 64;</code>
+     * @return Whether the conversionValueRuleSetResult field is set.
+     */
+    @java.lang.Override
+    public boolean hasConversionValueRuleSetResult() {
+      return responseCase_ == 64;
+    }
+    /**
+     * <pre>
+     * The result for the conversion value rule set mutate.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v8.services.MutateConversionValueRuleSetResult conversion_value_rule_set_result = 64;</code>
+     * @return The conversionValueRuleSetResult.
+     */
+    @java.lang.Override
+    public com.google.ads.googleads.v8.services.MutateConversionValueRuleSetResult getConversionValueRuleSetResult() {
+      if (conversionValueRuleSetResultBuilder_ == null) {
+        if (responseCase_ == 64) {
+          return (com.google.ads.googleads.v8.services.MutateConversionValueRuleSetResult) response_;
+        }
+        return com.google.ads.googleads.v8.services.MutateConversionValueRuleSetResult.getDefaultInstance();
+      } else {
+        if (responseCase_ == 64) {
+          return conversionValueRuleSetResultBuilder_.getMessage();
+        }
+        return com.google.ads.googleads.v8.services.MutateConversionValueRuleSetResult.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * The result for the conversion value rule set mutate.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v8.services.MutateConversionValueRuleSetResult conversion_value_rule_set_result = 64;</code>
+     */
+    public Builder setConversionValueRuleSetResult(com.google.ads.googleads.v8.services.MutateConversionValueRuleSetResult value) {
+      if (conversionValueRuleSetResultBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        response_ = value;
+        onChanged();
+      } else {
+        conversionValueRuleSetResultBuilder_.setMessage(value);
+      }
+      responseCase_ = 64;
+      return this;
+    }
+    /**
+     * <pre>
+     * The result for the conversion value rule set mutate.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v8.services.MutateConversionValueRuleSetResult conversion_value_rule_set_result = 64;</code>
+     */
+    public Builder setConversionValueRuleSetResult(
+        com.google.ads.googleads.v8.services.MutateConversionValueRuleSetResult.Builder builderForValue) {
+      if (conversionValueRuleSetResultBuilder_ == null) {
+        response_ = builderForValue.build();
+        onChanged();
+      } else {
+        conversionValueRuleSetResultBuilder_.setMessage(builderForValue.build());
+      }
+      responseCase_ = 64;
+      return this;
+    }
+    /**
+     * <pre>
+     * The result for the conversion value rule set mutate.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v8.services.MutateConversionValueRuleSetResult conversion_value_rule_set_result = 64;</code>
+     */
+    public Builder mergeConversionValueRuleSetResult(com.google.ads.googleads.v8.services.MutateConversionValueRuleSetResult value) {
+      if (conversionValueRuleSetResultBuilder_ == null) {
+        if (responseCase_ == 64 &&
+            response_ != com.google.ads.googleads.v8.services.MutateConversionValueRuleSetResult.getDefaultInstance()) {
+          response_ = com.google.ads.googleads.v8.services.MutateConversionValueRuleSetResult.newBuilder((com.google.ads.googleads.v8.services.MutateConversionValueRuleSetResult) response_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          response_ = value;
+        }
+        onChanged();
+      } else {
+        if (responseCase_ == 64) {
+          conversionValueRuleSetResultBuilder_.mergeFrom(value);
+        }
+        conversionValueRuleSetResultBuilder_.setMessage(value);
+      }
+      responseCase_ = 64;
+      return this;
+    }
+    /**
+     * <pre>
+     * The result for the conversion value rule set mutate.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v8.services.MutateConversionValueRuleSetResult conversion_value_rule_set_result = 64;</code>
+     */
+    public Builder clearConversionValueRuleSetResult() {
+      if (conversionValueRuleSetResultBuilder_ == null) {
+        if (responseCase_ == 64) {
+          responseCase_ = 0;
+          response_ = null;
+          onChanged();
+        }
+      } else {
+        if (responseCase_ == 64) {
+          responseCase_ = 0;
+          response_ = null;
+        }
+        conversionValueRuleSetResultBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * The result for the conversion value rule set mutate.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v8.services.MutateConversionValueRuleSetResult conversion_value_rule_set_result = 64;</code>
+     */
+    public com.google.ads.googleads.v8.services.MutateConversionValueRuleSetResult.Builder getConversionValueRuleSetResultBuilder() {
+      return getConversionValueRuleSetResultFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * The result for the conversion value rule set mutate.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v8.services.MutateConversionValueRuleSetResult conversion_value_rule_set_result = 64;</code>
+     */
+    @java.lang.Override
+    public com.google.ads.googleads.v8.services.MutateConversionValueRuleSetResultOrBuilder getConversionValueRuleSetResultOrBuilder() {
+      if ((responseCase_ == 64) && (conversionValueRuleSetResultBuilder_ != null)) {
+        return conversionValueRuleSetResultBuilder_.getMessageOrBuilder();
+      } else {
+        if (responseCase_ == 64) {
+          return (com.google.ads.googleads.v8.services.MutateConversionValueRuleSetResult) response_;
+        }
+        return com.google.ads.googleads.v8.services.MutateConversionValueRuleSetResult.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * The result for the conversion value rule set mutate.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v8.services.MutateConversionValueRuleSetResult conversion_value_rule_set_result = 64;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v8.services.MutateConversionValueRuleSetResult, com.google.ads.googleads.v8.services.MutateConversionValueRuleSetResult.Builder, com.google.ads.googleads.v8.services.MutateConversionValueRuleSetResultOrBuilder> 
+        getConversionValueRuleSetResultFieldBuilder() {
+      if (conversionValueRuleSetResultBuilder_ == null) {
+        if (!(responseCase_ == 64)) {
+          response_ = com.google.ads.googleads.v8.services.MutateConversionValueRuleSetResult.getDefaultInstance();
+        }
+        conversionValueRuleSetResultBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.ads.googleads.v8.services.MutateConversionValueRuleSetResult, com.google.ads.googleads.v8.services.MutateConversionValueRuleSetResult.Builder, com.google.ads.googleads.v8.services.MutateConversionValueRuleSetResultOrBuilder>(
+                (com.google.ads.googleads.v8.services.MutateConversionValueRuleSetResult) response_,
+                getParentForChildren(),
+                isClean());
+        response_ = null;
+      }
+      responseCase_ = 64;
+      onChanged();;
+      return conversionValueRuleSetResultBuilder_;
     }
 
     private com.google.protobuf.SingleFieldBuilderV3<

@@ -217,9 +217,9 @@ public class DetailPlacementViewName implements ResourceName {
     }
 
     private Builder(DetailPlacementViewName detailPlacementViewName) {
-      customerId = detailPlacementViewName.customerId;
-      adGroupId = detailPlacementViewName.adGroupId;
-      base64Placement = detailPlacementViewName.base64Placement;
+      this.customerId = detailPlacementViewName.customerId;
+      this.adGroupId = detailPlacementViewName.adGroupId;
+      this.base64Placement = detailPlacementViewName.base64Placement;
     }
 
     public DetailPlacementViewName build() {

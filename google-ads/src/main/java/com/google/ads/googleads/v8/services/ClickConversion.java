@@ -26,6 +26,7 @@ private static final long serialVersionUID = 0L;
     currencyCode_ = "";
     orderId_ = "";
     customVariables_ = java.util.Collections.emptyList();
+    userIdentifiers_ = java.util.Collections.emptyList();
   }
 
   @java.lang.Override
@@ -129,6 +130,15 @@ private static final long serialVersionUID = 0L;
 
             break;
           }
+          case 138: {
+            if (!((mutable_bitField0_ & 0x00000080) != 0)) {
+              userIdentifiers_ = new java.util.ArrayList<com.google.ads.googleads.v8.common.UserIdentifier>();
+              mutable_bitField0_ |= 0x00000080;
+            }
+            userIdentifiers_.add(
+                input.readMessage(com.google.ads.googleads.v8.common.UserIdentifier.parser(), extensionRegistry));
+            break;
+          }
           default: {
             if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -146,6 +156,9 @@ private static final long serialVersionUID = 0L;
     } finally {
       if (((mutable_bitField0_ & 0x00000040) != 0)) {
         customVariables_ = java.util.Collections.unmodifiableList(customVariables_);
+      }
+      if (((mutable_bitField0_ & 0x00000080) != 0)) {
+        userIdentifiers_ = java.util.Collections.unmodifiableList(userIdentifiers_);
       }
       this.unknownFields = unknownFields.build();
       makeExtensionsImmutable();
@@ -645,6 +658,76 @@ private static final long serialVersionUID = 0L;
     return getCartData();
   }
 
+  public static final int USER_IDENTIFIERS_FIELD_NUMBER = 17;
+  private java.util.List<com.google.ads.googleads.v8.common.UserIdentifier> userIdentifiers_;
+  /**
+   * <pre>
+   * The user identifiers associated with this conversion. Only hashed_email and
+   * hashed_phone_number are supported for conversion uploads. The maximum
+   * number of user identifiers for each conversion is 5.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v8.common.UserIdentifier user_identifiers = 17;</code>
+   */
+  @java.lang.Override
+  public java.util.List<com.google.ads.googleads.v8.common.UserIdentifier> getUserIdentifiersList() {
+    return userIdentifiers_;
+  }
+  /**
+   * <pre>
+   * The user identifiers associated with this conversion. Only hashed_email and
+   * hashed_phone_number are supported for conversion uploads. The maximum
+   * number of user identifiers for each conversion is 5.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v8.common.UserIdentifier user_identifiers = 17;</code>
+   */
+  @java.lang.Override
+  public java.util.List<? extends com.google.ads.googleads.v8.common.UserIdentifierOrBuilder> 
+      getUserIdentifiersOrBuilderList() {
+    return userIdentifiers_;
+  }
+  /**
+   * <pre>
+   * The user identifiers associated with this conversion. Only hashed_email and
+   * hashed_phone_number are supported for conversion uploads. The maximum
+   * number of user identifiers for each conversion is 5.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v8.common.UserIdentifier user_identifiers = 17;</code>
+   */
+  @java.lang.Override
+  public int getUserIdentifiersCount() {
+    return userIdentifiers_.size();
+  }
+  /**
+   * <pre>
+   * The user identifiers associated with this conversion. Only hashed_email and
+   * hashed_phone_number are supported for conversion uploads. The maximum
+   * number of user identifiers for each conversion is 5.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v8.common.UserIdentifier user_identifiers = 17;</code>
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v8.common.UserIdentifier getUserIdentifiers(int index) {
+    return userIdentifiers_.get(index);
+  }
+  /**
+   * <pre>
+   * The user identifiers associated with this conversion. Only hashed_email and
+   * hashed_phone_number are supported for conversion uploads. The maximum
+   * number of user identifiers for each conversion is 5.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v8.common.UserIdentifier user_identifiers = 17;</code>
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v8.common.UserIdentifierOrBuilder getUserIdentifiersOrBuilder(
+      int index) {
+    return userIdentifiers_.get(index);
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -686,6 +769,9 @@ private static final long serialVersionUID = 0L;
     if (cartData_ != null) {
       output.writeMessage(16, getCartData());
     }
+    for (int i = 0; i < userIdentifiers_.size(); i++) {
+      output.writeMessage(17, userIdentifiers_.get(i));
+    }
     unknownFields.writeTo(output);
   }
 
@@ -725,6 +811,10 @@ private static final long serialVersionUID = 0L;
     if (cartData_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(16, getCartData());
+    }
+    for (int i = 0; i < userIdentifiers_.size(); i++) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(17, userIdentifiers_.get(i));
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -784,6 +874,8 @@ private static final long serialVersionUID = 0L;
       if (!getCartData()
           .equals(other.getCartData())) return false;
     }
+    if (!getUserIdentifiersList()
+        .equals(other.getUserIdentifiersList())) return false;
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -831,6 +923,10 @@ private static final long serialVersionUID = 0L;
     if (hasCartData()) {
       hash = (37 * hash) + CART_DATA_FIELD_NUMBER;
       hash = (53 * hash) + getCartData().hashCode();
+    }
+    if (getUserIdentifiersCount() > 0) {
+      hash = (37 * hash) + USER_IDENTIFIERS_FIELD_NUMBER;
+      hash = (53 * hash) + getUserIdentifiersList().hashCode();
     }
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
@@ -965,6 +1061,7 @@ private static final long serialVersionUID = 0L;
       if (com.google.protobuf.GeneratedMessageV3
               .alwaysUseFieldBuilders) {
         getCustomVariablesFieldBuilder();
+        getUserIdentifiersFieldBuilder();
       }
     }
     @java.lang.Override
@@ -999,6 +1096,12 @@ private static final long serialVersionUID = 0L;
       } else {
         cartData_ = null;
         cartDataBuilder_ = null;
+      }
+      if (userIdentifiersBuilder_ == null) {
+        userIdentifiers_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000080);
+      } else {
+        userIdentifiersBuilder_.clear();
       }
       return this;
     }
@@ -1070,6 +1173,15 @@ private static final long serialVersionUID = 0L;
         result.cartData_ = cartData_;
       } else {
         result.cartData_ = cartDataBuilder_.build();
+      }
+      if (userIdentifiersBuilder_ == null) {
+        if (((bitField0_ & 0x00000080) != 0)) {
+          userIdentifiers_ = java.util.Collections.unmodifiableList(userIdentifiers_);
+          bitField0_ = (bitField0_ & ~0x00000080);
+        }
+        result.userIdentifiers_ = userIdentifiers_;
+      } else {
+        result.userIdentifiers_ = userIdentifiersBuilder_.build();
       }
       result.bitField0_ = to_bitField0_;
       onBuilt();
@@ -1179,6 +1291,32 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasCartData()) {
         mergeCartData(other.getCartData());
+      }
+      if (userIdentifiersBuilder_ == null) {
+        if (!other.userIdentifiers_.isEmpty()) {
+          if (userIdentifiers_.isEmpty()) {
+            userIdentifiers_ = other.userIdentifiers_;
+            bitField0_ = (bitField0_ & ~0x00000080);
+          } else {
+            ensureUserIdentifiersIsMutable();
+            userIdentifiers_.addAll(other.userIdentifiers_);
+          }
+          onChanged();
+        }
+      } else {
+        if (!other.userIdentifiers_.isEmpty()) {
+          if (userIdentifiersBuilder_.isEmpty()) {
+            userIdentifiersBuilder_.dispose();
+            userIdentifiersBuilder_ = null;
+            userIdentifiers_ = other.userIdentifiers_;
+            bitField0_ = (bitField0_ & ~0x00000080);
+            userIdentifiersBuilder_ = 
+              com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                 getUserIdentifiersFieldBuilder() : null;
+          } else {
+            userIdentifiersBuilder_.addAllMessages(other.userIdentifiers_);
+          }
+        }
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -2480,6 +2618,354 @@ private static final long serialVersionUID = 0L;
         cartData_ = null;
       }
       return cartDataBuilder_;
+    }
+
+    private java.util.List<com.google.ads.googleads.v8.common.UserIdentifier> userIdentifiers_ =
+      java.util.Collections.emptyList();
+    private void ensureUserIdentifiersIsMutable() {
+      if (!((bitField0_ & 0x00000080) != 0)) {
+        userIdentifiers_ = new java.util.ArrayList<com.google.ads.googleads.v8.common.UserIdentifier>(userIdentifiers_);
+        bitField0_ |= 0x00000080;
+       }
+    }
+
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        com.google.ads.googleads.v8.common.UserIdentifier, com.google.ads.googleads.v8.common.UserIdentifier.Builder, com.google.ads.googleads.v8.common.UserIdentifierOrBuilder> userIdentifiersBuilder_;
+
+    /**
+     * <pre>
+     * The user identifiers associated with this conversion. Only hashed_email and
+     * hashed_phone_number are supported for conversion uploads. The maximum
+     * number of user identifiers for each conversion is 5.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v8.common.UserIdentifier user_identifiers = 17;</code>
+     */
+    public java.util.List<com.google.ads.googleads.v8.common.UserIdentifier> getUserIdentifiersList() {
+      if (userIdentifiersBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(userIdentifiers_);
+      } else {
+        return userIdentifiersBuilder_.getMessageList();
+      }
+    }
+    /**
+     * <pre>
+     * The user identifiers associated with this conversion. Only hashed_email and
+     * hashed_phone_number are supported for conversion uploads. The maximum
+     * number of user identifiers for each conversion is 5.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v8.common.UserIdentifier user_identifiers = 17;</code>
+     */
+    public int getUserIdentifiersCount() {
+      if (userIdentifiersBuilder_ == null) {
+        return userIdentifiers_.size();
+      } else {
+        return userIdentifiersBuilder_.getCount();
+      }
+    }
+    /**
+     * <pre>
+     * The user identifiers associated with this conversion. Only hashed_email and
+     * hashed_phone_number are supported for conversion uploads. The maximum
+     * number of user identifiers for each conversion is 5.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v8.common.UserIdentifier user_identifiers = 17;</code>
+     */
+    public com.google.ads.googleads.v8.common.UserIdentifier getUserIdentifiers(int index) {
+      if (userIdentifiersBuilder_ == null) {
+        return userIdentifiers_.get(index);
+      } else {
+        return userIdentifiersBuilder_.getMessage(index);
+      }
+    }
+    /**
+     * <pre>
+     * The user identifiers associated with this conversion. Only hashed_email and
+     * hashed_phone_number are supported for conversion uploads. The maximum
+     * number of user identifiers for each conversion is 5.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v8.common.UserIdentifier user_identifiers = 17;</code>
+     */
+    public Builder setUserIdentifiers(
+        int index, com.google.ads.googleads.v8.common.UserIdentifier value) {
+      if (userIdentifiersBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureUserIdentifiersIsMutable();
+        userIdentifiers_.set(index, value);
+        onChanged();
+      } else {
+        userIdentifiersBuilder_.setMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * The user identifiers associated with this conversion. Only hashed_email and
+     * hashed_phone_number are supported for conversion uploads. The maximum
+     * number of user identifiers for each conversion is 5.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v8.common.UserIdentifier user_identifiers = 17;</code>
+     */
+    public Builder setUserIdentifiers(
+        int index, com.google.ads.googleads.v8.common.UserIdentifier.Builder builderForValue) {
+      if (userIdentifiersBuilder_ == null) {
+        ensureUserIdentifiersIsMutable();
+        userIdentifiers_.set(index, builderForValue.build());
+        onChanged();
+      } else {
+        userIdentifiersBuilder_.setMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * The user identifiers associated with this conversion. Only hashed_email and
+     * hashed_phone_number are supported for conversion uploads. The maximum
+     * number of user identifiers for each conversion is 5.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v8.common.UserIdentifier user_identifiers = 17;</code>
+     */
+    public Builder addUserIdentifiers(com.google.ads.googleads.v8.common.UserIdentifier value) {
+      if (userIdentifiersBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureUserIdentifiersIsMutable();
+        userIdentifiers_.add(value);
+        onChanged();
+      } else {
+        userIdentifiersBuilder_.addMessage(value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * The user identifiers associated with this conversion. Only hashed_email and
+     * hashed_phone_number are supported for conversion uploads. The maximum
+     * number of user identifiers for each conversion is 5.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v8.common.UserIdentifier user_identifiers = 17;</code>
+     */
+    public Builder addUserIdentifiers(
+        int index, com.google.ads.googleads.v8.common.UserIdentifier value) {
+      if (userIdentifiersBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureUserIdentifiersIsMutable();
+        userIdentifiers_.add(index, value);
+        onChanged();
+      } else {
+        userIdentifiersBuilder_.addMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * The user identifiers associated with this conversion. Only hashed_email and
+     * hashed_phone_number are supported for conversion uploads. The maximum
+     * number of user identifiers for each conversion is 5.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v8.common.UserIdentifier user_identifiers = 17;</code>
+     */
+    public Builder addUserIdentifiers(
+        com.google.ads.googleads.v8.common.UserIdentifier.Builder builderForValue) {
+      if (userIdentifiersBuilder_ == null) {
+        ensureUserIdentifiersIsMutable();
+        userIdentifiers_.add(builderForValue.build());
+        onChanged();
+      } else {
+        userIdentifiersBuilder_.addMessage(builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * The user identifiers associated with this conversion. Only hashed_email and
+     * hashed_phone_number are supported for conversion uploads. The maximum
+     * number of user identifiers for each conversion is 5.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v8.common.UserIdentifier user_identifiers = 17;</code>
+     */
+    public Builder addUserIdentifiers(
+        int index, com.google.ads.googleads.v8.common.UserIdentifier.Builder builderForValue) {
+      if (userIdentifiersBuilder_ == null) {
+        ensureUserIdentifiersIsMutable();
+        userIdentifiers_.add(index, builderForValue.build());
+        onChanged();
+      } else {
+        userIdentifiersBuilder_.addMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * The user identifiers associated with this conversion. Only hashed_email and
+     * hashed_phone_number are supported for conversion uploads. The maximum
+     * number of user identifiers for each conversion is 5.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v8.common.UserIdentifier user_identifiers = 17;</code>
+     */
+    public Builder addAllUserIdentifiers(
+        java.lang.Iterable<? extends com.google.ads.googleads.v8.common.UserIdentifier> values) {
+      if (userIdentifiersBuilder_ == null) {
+        ensureUserIdentifiersIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, userIdentifiers_);
+        onChanged();
+      } else {
+        userIdentifiersBuilder_.addAllMessages(values);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * The user identifiers associated with this conversion. Only hashed_email and
+     * hashed_phone_number are supported for conversion uploads. The maximum
+     * number of user identifiers for each conversion is 5.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v8.common.UserIdentifier user_identifiers = 17;</code>
+     */
+    public Builder clearUserIdentifiers() {
+      if (userIdentifiersBuilder_ == null) {
+        userIdentifiers_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000080);
+        onChanged();
+      } else {
+        userIdentifiersBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * The user identifiers associated with this conversion. Only hashed_email and
+     * hashed_phone_number are supported for conversion uploads. The maximum
+     * number of user identifiers for each conversion is 5.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v8.common.UserIdentifier user_identifiers = 17;</code>
+     */
+    public Builder removeUserIdentifiers(int index) {
+      if (userIdentifiersBuilder_ == null) {
+        ensureUserIdentifiersIsMutable();
+        userIdentifiers_.remove(index);
+        onChanged();
+      } else {
+        userIdentifiersBuilder_.remove(index);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * The user identifiers associated with this conversion. Only hashed_email and
+     * hashed_phone_number are supported for conversion uploads. The maximum
+     * number of user identifiers for each conversion is 5.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v8.common.UserIdentifier user_identifiers = 17;</code>
+     */
+    public com.google.ads.googleads.v8.common.UserIdentifier.Builder getUserIdentifiersBuilder(
+        int index) {
+      return getUserIdentifiersFieldBuilder().getBuilder(index);
+    }
+    /**
+     * <pre>
+     * The user identifiers associated with this conversion. Only hashed_email and
+     * hashed_phone_number are supported for conversion uploads. The maximum
+     * number of user identifiers for each conversion is 5.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v8.common.UserIdentifier user_identifiers = 17;</code>
+     */
+    public com.google.ads.googleads.v8.common.UserIdentifierOrBuilder getUserIdentifiersOrBuilder(
+        int index) {
+      if (userIdentifiersBuilder_ == null) {
+        return userIdentifiers_.get(index);  } else {
+        return userIdentifiersBuilder_.getMessageOrBuilder(index);
+      }
+    }
+    /**
+     * <pre>
+     * The user identifiers associated with this conversion. Only hashed_email and
+     * hashed_phone_number are supported for conversion uploads. The maximum
+     * number of user identifiers for each conversion is 5.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v8.common.UserIdentifier user_identifiers = 17;</code>
+     */
+    public java.util.List<? extends com.google.ads.googleads.v8.common.UserIdentifierOrBuilder> 
+         getUserIdentifiersOrBuilderList() {
+      if (userIdentifiersBuilder_ != null) {
+        return userIdentifiersBuilder_.getMessageOrBuilderList();
+      } else {
+        return java.util.Collections.unmodifiableList(userIdentifiers_);
+      }
+    }
+    /**
+     * <pre>
+     * The user identifiers associated with this conversion. Only hashed_email and
+     * hashed_phone_number are supported for conversion uploads. The maximum
+     * number of user identifiers for each conversion is 5.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v8.common.UserIdentifier user_identifiers = 17;</code>
+     */
+    public com.google.ads.googleads.v8.common.UserIdentifier.Builder addUserIdentifiersBuilder() {
+      return getUserIdentifiersFieldBuilder().addBuilder(
+          com.google.ads.googleads.v8.common.UserIdentifier.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     * The user identifiers associated with this conversion. Only hashed_email and
+     * hashed_phone_number are supported for conversion uploads. The maximum
+     * number of user identifiers for each conversion is 5.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v8.common.UserIdentifier user_identifiers = 17;</code>
+     */
+    public com.google.ads.googleads.v8.common.UserIdentifier.Builder addUserIdentifiersBuilder(
+        int index) {
+      return getUserIdentifiersFieldBuilder().addBuilder(
+          index, com.google.ads.googleads.v8.common.UserIdentifier.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     * The user identifiers associated with this conversion. Only hashed_email and
+     * hashed_phone_number are supported for conversion uploads. The maximum
+     * number of user identifiers for each conversion is 5.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v8.common.UserIdentifier user_identifiers = 17;</code>
+     */
+    public java.util.List<com.google.ads.googleads.v8.common.UserIdentifier.Builder> 
+         getUserIdentifiersBuilderList() {
+      return getUserIdentifiersFieldBuilder().getBuilderList();
+    }
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        com.google.ads.googleads.v8.common.UserIdentifier, com.google.ads.googleads.v8.common.UserIdentifier.Builder, com.google.ads.googleads.v8.common.UserIdentifierOrBuilder> 
+        getUserIdentifiersFieldBuilder() {
+      if (userIdentifiersBuilder_ == null) {
+        userIdentifiersBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+            com.google.ads.googleads.v8.common.UserIdentifier, com.google.ads.googleads.v8.common.UserIdentifier.Builder, com.google.ads.googleads.v8.common.UserIdentifierOrBuilder>(
+                userIdentifiers_,
+                ((bitField0_ & 0x00000080) != 0),
+                getParentForChildren(),
+                isClean());
+        userIdentifiers_ = null;
+      }
+      return userIdentifiersBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

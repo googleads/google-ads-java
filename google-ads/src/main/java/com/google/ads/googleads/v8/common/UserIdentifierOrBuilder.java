@@ -9,8 +9,11 @@ public interface UserIdentifierOrBuilder extends
 
   /**
    * <pre>
-   * Source of the user identifier when the upload is from Store Sales third
-   * party partners.
+   * Source of the user identifier when the upload is from Store Sales,
+   * ConversionUploadService, or ConversionAdjustmentUploadService. For
+   * ConversionUploadService and ConversionAdjustmentUploadService, the source
+   * of the user identifier must be specified as FIRST_PARTY, otherwise an error
+   * will be returned.
    * </pre>
    *
    * <code>.google.ads.googleads.v8.enums.UserIdentifierSourceEnum.UserIdentifierSource user_identifier_source = 6;</code>
@@ -19,8 +22,11 @@ public interface UserIdentifierOrBuilder extends
   int getUserIdentifierSourceValue();
   /**
    * <pre>
-   * Source of the user identifier when the upload is from Store Sales third
-   * party partners.
+   * Source of the user identifier when the upload is from Store Sales,
+   * ConversionUploadService, or ConversionAdjustmentUploadService. For
+   * ConversionUploadService and ConversionAdjustmentUploadService, the source
+   * of the user identifier must be specified as FIRST_PARTY, otherwise an error
+   * will be returned.
    * </pre>
    *
    * <code>.google.ads.googleads.v8.enums.UserIdentifierSourceEnum.UserIdentifierSource user_identifier_source = 6;</code>
@@ -31,6 +37,8 @@ public interface UserIdentifierOrBuilder extends
   /**
    * <pre>
    * Hashed email address using SHA-256 hash function after normalization.
+   * Accepted for Customer Match, Store Sales, ConversionUploadService, and
+   * ConversionAdjustmentUploadService.
    * </pre>
    *
    * <code>string hashed_email = 7;</code>
@@ -40,6 +48,8 @@ public interface UserIdentifierOrBuilder extends
   /**
    * <pre>
    * Hashed email address using SHA-256 hash function after normalization.
+   * Accepted for Customer Match, Store Sales, ConversionUploadService, and
+   * ConversionAdjustmentUploadService.
    * </pre>
    *
    * <code>string hashed_email = 7;</code>
@@ -49,6 +59,8 @@ public interface UserIdentifierOrBuilder extends
   /**
    * <pre>
    * Hashed email address using SHA-256 hash function after normalization.
+   * Accepted for Customer Match, Store Sales, ConversionUploadService, and
+   * ConversionAdjustmentUploadService.
    * </pre>
    *
    * <code>string hashed_email = 7;</code>
@@ -60,7 +72,8 @@ public interface UserIdentifierOrBuilder extends
   /**
    * <pre>
    * Hashed phone number using SHA-256 hash function after normalization
-   * (E164 standard).
+   * (E164 standard). Accepted for Customer Match, Store Sales,
+   * ConversionUploadService, and ConversionAdjustmentUploadService.
    * </pre>
    *
    * <code>string hashed_phone_number = 8;</code>
@@ -70,7 +83,8 @@ public interface UserIdentifierOrBuilder extends
   /**
    * <pre>
    * Hashed phone number using SHA-256 hash function after normalization
-   * (E164 standard).
+   * (E164 standard). Accepted for Customer Match, Store Sales,
+   * ConversionUploadService, and ConversionAdjustmentUploadService.
    * </pre>
    *
    * <code>string hashed_phone_number = 8;</code>
@@ -80,7 +94,8 @@ public interface UserIdentifierOrBuilder extends
   /**
    * <pre>
    * Hashed phone number using SHA-256 hash function after normalization
-   * (E164 standard).
+   * (E164 standard). Accepted for Customer Match, Store Sales,
+   * ConversionUploadService, and ConversionAdjustmentUploadService.
    * </pre>
    *
    * <code>string hashed_phone_number = 8;</code>
@@ -91,7 +106,7 @@ public interface UserIdentifierOrBuilder extends
 
   /**
    * <pre>
-   * Mobile device ID (advertising ID/IDFA).
+   * Mobile device ID (advertising ID/IDFA). Accepted only for Customer Match.
    * </pre>
    *
    * <code>string mobile_id = 9;</code>
@@ -100,7 +115,7 @@ public interface UserIdentifierOrBuilder extends
   boolean hasMobileId();
   /**
    * <pre>
-   * Mobile device ID (advertising ID/IDFA).
+   * Mobile device ID (advertising ID/IDFA). Accepted only for Customer Match.
    * </pre>
    *
    * <code>string mobile_id = 9;</code>
@@ -109,7 +124,7 @@ public interface UserIdentifierOrBuilder extends
   java.lang.String getMobileId();
   /**
    * <pre>
-   * Mobile device ID (advertising ID/IDFA).
+   * Mobile device ID (advertising ID/IDFA). Accepted only for Customer Match.
    * </pre>
    *
    * <code>string mobile_id = 9;</code>
@@ -121,7 +136,8 @@ public interface UserIdentifierOrBuilder extends
   /**
    * <pre>
    * Advertiser-assigned user ID for Customer Match upload, or
-   * third-party-assigned user ID for SSD.
+   * third-party-assigned user ID for Store Sales. Accepted only for Customer
+   * Match and Store Sales.
    * </pre>
    *
    * <code>string third_party_user_id = 10;</code>
@@ -131,7 +147,8 @@ public interface UserIdentifierOrBuilder extends
   /**
    * <pre>
    * Advertiser-assigned user ID for Customer Match upload, or
-   * third-party-assigned user ID for SSD.
+   * third-party-assigned user ID for Store Sales. Accepted only for Customer
+   * Match and Store Sales.
    * </pre>
    *
    * <code>string third_party_user_id = 10;</code>
@@ -141,7 +158,8 @@ public interface UserIdentifierOrBuilder extends
   /**
    * <pre>
    * Advertiser-assigned user ID for Customer Match upload, or
-   * third-party-assigned user ID for SSD.
+   * third-party-assigned user ID for Store Sales. Accepted only for Customer
+   * Match and Store Sales.
    * </pre>
    *
    * <code>string third_party_user_id = 10;</code>
@@ -152,7 +170,8 @@ public interface UserIdentifierOrBuilder extends
 
   /**
    * <pre>
-   * Address information.
+   * Address information. Accepted only for Customer Match, Store Sales, and
+   * ConversionAdjustmentUploadService.
    * </pre>
    *
    * <code>.google.ads.googleads.v8.common.OfflineUserAddressInfo address_info = 5;</code>
@@ -161,7 +180,8 @@ public interface UserIdentifierOrBuilder extends
   boolean hasAddressInfo();
   /**
    * <pre>
-   * Address information.
+   * Address information. Accepted only for Customer Match, Store Sales, and
+   * ConversionAdjustmentUploadService.
    * </pre>
    *
    * <code>.google.ads.googleads.v8.common.OfflineUserAddressInfo address_info = 5;</code>
@@ -170,7 +190,8 @@ public interface UserIdentifierOrBuilder extends
   com.google.ads.googleads.v8.common.OfflineUserAddressInfo getAddressInfo();
   /**
    * <pre>
-   * Address information.
+   * Address information. Accepted only for Customer Match, Store Sales, and
+   * ConversionAdjustmentUploadService.
    * </pre>
    *
    * <code>.google.ads.googleads.v8.common.OfflineUserAddressInfo address_info = 5;</code>

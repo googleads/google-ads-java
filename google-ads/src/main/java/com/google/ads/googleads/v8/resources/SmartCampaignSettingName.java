@@ -183,8 +183,8 @@ public class SmartCampaignSettingName implements ResourceName {
     }
 
     private Builder(SmartCampaignSettingName smartCampaignSettingName) {
-      customerId = smartCampaignSettingName.customerId;
-      campaignId = smartCampaignSettingName.campaignId;
+      this.customerId = smartCampaignSettingName.customerId;
+      this.campaignId = smartCampaignSettingName.campaignId;
     }
 
     public SmartCampaignSettingName build() {

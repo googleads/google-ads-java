@@ -216,9 +216,9 @@ public class HotelGroupViewName implements ResourceName {
     }
 
     private Builder(HotelGroupViewName hotelGroupViewName) {
-      customerId = hotelGroupViewName.customerId;
-      adGroupId = hotelGroupViewName.adGroupId;
-      criterionId = hotelGroupViewName.criterionId;
+      this.customerId = hotelGroupViewName.customerId;
+      this.adGroupId = hotelGroupViewName.adGroupId;
+      this.criterionId = hotelGroupViewName.criterionId;
     }
 
     public HotelGroupViewName build() {

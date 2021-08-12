@@ -187,8 +187,8 @@ public class CustomerClientName implements ResourceName {
     }
 
     private Builder(CustomerClientName customerClientName) {
-      customerId = customerClientName.customerId;
-      clientCustomerId = customerClientName.clientCustomerId;
+      this.customerId = customerClientName.customerId;
+      this.clientCustomerId = customerClientName.clientCustomerId;
     }
 
     public CustomerClientName build() {

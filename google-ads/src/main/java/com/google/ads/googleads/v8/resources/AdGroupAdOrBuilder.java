@@ -154,6 +154,55 @@ public interface AdGroupAdOrBuilder extends
 
   /**
    * <pre>
+   * Output only. A list of recommendations to improve the ad strength. For example, a
+   * recommendation could be "Your headlines are a little too similar.
+   * Try adding more distinct headlines.".
+   * </pre>
+   *
+   * <code>repeated string action_items = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return A list containing the actionItems.
+   */
+  java.util.List<java.lang.String>
+      getActionItemsList();
+  /**
+   * <pre>
+   * Output only. A list of recommendations to improve the ad strength. For example, a
+   * recommendation could be "Your headlines are a little too similar.
+   * Try adding more distinct headlines.".
+   * </pre>
+   *
+   * <code>repeated string action_items = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The count of actionItems.
+   */
+  int getActionItemsCount();
+  /**
+   * <pre>
+   * Output only. A list of recommendations to improve the ad strength. For example, a
+   * recommendation could be "Your headlines are a little too similar.
+   * Try adding more distinct headlines.".
+   * </pre>
+   *
+   * <code>repeated string action_items = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @param index The index of the element to return.
+   * @return The actionItems at the given index.
+   */
+  java.lang.String getActionItems(int index);
+  /**
+   * <pre>
+   * Output only. A list of recommendations to improve the ad strength. For example, a
+   * recommendation could be "Your headlines are a little too similar.
+   * Try adding more distinct headlines.".
+   * </pre>
+   *
+   * <code>repeated string action_items = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @param index The index of the value to return.
+   * @return The bytes of the actionItems at the given index.
+   */
+  com.google.protobuf.ByteString
+      getActionItemsBytes(int index);
+
+  /**
+   * <pre>
    * Output only. The resource names of labels attached to this ad group ad.
    * </pre>
    *

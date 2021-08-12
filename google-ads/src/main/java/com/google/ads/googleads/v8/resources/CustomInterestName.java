@@ -187,8 +187,8 @@ public class CustomInterestName implements ResourceName {
     }
 
     private Builder(CustomInterestName customInterestName) {
-      customerId = customInterestName.customerId;
-      customInterestId = customInterestName.customInterestId;
+      this.customerId = customInterestName.customerId;
+      this.customInterestId = customInterestName.customInterestId;
     }
 
     public CustomInterestName build() {

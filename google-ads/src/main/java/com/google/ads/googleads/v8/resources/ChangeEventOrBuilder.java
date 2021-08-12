@@ -310,4 +310,24 @@ public interface ChangeEventOrBuilder extends
    */
   com.google.protobuf.ByteString
       getFeedItemBytes();
+
+  /**
+   * <pre>
+   * Output only. The Asset affected by this change.
+   * </pre>
+   *
+   * <code>string asset = 20 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The asset.
+   */
+  java.lang.String getAsset();
+  /**
+   * <pre>
+   * Output only. The Asset affected by this change.
+   * </pre>
+   *
+   * <code>string asset = 20 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The bytes for asset.
+   */
+  com.google.protobuf.ByteString
+      getAssetBytes();
 }
