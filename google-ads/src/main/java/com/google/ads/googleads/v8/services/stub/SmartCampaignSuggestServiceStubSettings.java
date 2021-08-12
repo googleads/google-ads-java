@@ -16,6 +16,8 @@
 
 package com.google.ads.googleads.v8.services.stub;
 
+import com.google.ads.googleads.v8.services.SuggestSmartCampaignAdRequest;
+import com.google.ads.googleads.v8.services.SuggestSmartCampaignAdResponse;
 import com.google.ads.googleads.v8.services.SuggestSmartCampaignBudgetOptionsRequest;
 import com.google.ads.googleads.v8.services.SuggestSmartCampaignBudgetOptionsResponse;
 import com.google.api.core.ApiFunction;
@@ -85,12 +87,20 @@ public class SmartCampaignSuggestServiceStubSettings
   private final UnaryCallSettings<
           SuggestSmartCampaignBudgetOptionsRequest, SuggestSmartCampaignBudgetOptionsResponse>
       suggestSmartCampaignBudgetOptionsSettings;
+  private final UnaryCallSettings<SuggestSmartCampaignAdRequest, SuggestSmartCampaignAdResponse>
+      suggestSmartCampaignAdSettings;
 
   /** Returns the object with the settings used for calls to suggestSmartCampaignBudgetOptions. */
   public UnaryCallSettings<
           SuggestSmartCampaignBudgetOptionsRequest, SuggestSmartCampaignBudgetOptionsResponse>
       suggestSmartCampaignBudgetOptionsSettings() {
     return suggestSmartCampaignBudgetOptionsSettings;
+  }
+
+  /** Returns the object with the settings used for calls to suggestSmartCampaignAd. */
+  public UnaryCallSettings<SuggestSmartCampaignAdRequest, SuggestSmartCampaignAdResponse>
+      suggestSmartCampaignAdSettings() {
+    return suggestSmartCampaignAdSettings;
   }
 
   @BetaApi("A restructuring of stub classes is planned, so this may break in the future")
@@ -169,6 +179,7 @@ public class SmartCampaignSuggestServiceStubSettings
 
     suggestSmartCampaignBudgetOptionsSettings =
         settingsBuilder.suggestSmartCampaignBudgetOptionsSettings().build();
+    suggestSmartCampaignAdSettings = settingsBuilder.suggestSmartCampaignAdSettings().build();
   }
 
   /** Builder for SmartCampaignSuggestServiceStubSettings. */
@@ -178,6 +189,9 @@ public class SmartCampaignSuggestServiceStubSettings
     private final UnaryCallSettings.Builder<
             SuggestSmartCampaignBudgetOptionsRequest, SuggestSmartCampaignBudgetOptionsResponse>
         suggestSmartCampaignBudgetOptionsSettings;
+    private final UnaryCallSettings.Builder<
+            SuggestSmartCampaignAdRequest, SuggestSmartCampaignAdResponse>
+        suggestSmartCampaignAdSettings;
     private static final ImmutableMap<String, ImmutableSet<StatusCode.Code>>
         RETRYABLE_CODE_DEFINITIONS;
 
@@ -219,10 +233,11 @@ public class SmartCampaignSuggestServiceStubSettings
       super(clientContext);
 
       suggestSmartCampaignBudgetOptionsSettings = UnaryCallSettings.newUnaryCallSettingsBuilder();
+      suggestSmartCampaignAdSettings = UnaryCallSettings.newUnaryCallSettingsBuilder();
 
       unaryMethodSettingsBuilders =
           ImmutableList.<UnaryCallSettings.Builder<?, ?>>of(
-              suggestSmartCampaignBudgetOptionsSettings);
+              suggestSmartCampaignBudgetOptionsSettings, suggestSmartCampaignAdSettings);
       initDefaults(this);
     }
 
@@ -231,10 +246,11 @@ public class SmartCampaignSuggestServiceStubSettings
 
       suggestSmartCampaignBudgetOptionsSettings =
           settings.suggestSmartCampaignBudgetOptionsSettings.toBuilder();
+      suggestSmartCampaignAdSettings = settings.suggestSmartCampaignAdSettings.toBuilder();
 
       unaryMethodSettingsBuilders =
           ImmutableList.<UnaryCallSettings.Builder<?, ?>>of(
-              suggestSmartCampaignBudgetOptionsSettings);
+              suggestSmartCampaignBudgetOptionsSettings, suggestSmartCampaignAdSettings);
     }
 
     private static Builder createDefault() {
@@ -256,17 +272,21 @@ public class SmartCampaignSuggestServiceStubSettings
           .setRetryableCodes(RETRYABLE_CODE_DEFINITIONS.get("retry_policy_0_codes"))
           .setRetrySettings(RETRY_PARAM_DEFINITIONS.get("retry_policy_0_params"));
 
+      builder
+          .suggestSmartCampaignAdSettings()
+          .setRetryableCodes(RETRYABLE_CODE_DEFINITIONS.get("retry_policy_0_codes"))
+          .setRetrySettings(RETRY_PARAM_DEFINITIONS.get("retry_policy_0_params"));
+
       return builder;
     }
 
-    // NEXT_MAJOR_VER: remove 'throws Exception'.
     /**
      * Applies the given settings updater function to all of the unary API methods in this service.
      *
      * <p>Note: This method does not support applying settings to streaming methods.
      */
     public Builder applyToAllUnaryMethods(
-        ApiFunction<UnaryCallSettings.Builder<?, ?>, Void> settingsUpdater) throws Exception {
+        ApiFunction<UnaryCallSettings.Builder<?, ?>, Void> settingsUpdater) {
       super.applyToAllUnaryMethods(unaryMethodSettingsBuilders, settingsUpdater);
       return this;
     }
@@ -280,6 +300,12 @@ public class SmartCampaignSuggestServiceStubSettings
             SuggestSmartCampaignBudgetOptionsRequest, SuggestSmartCampaignBudgetOptionsResponse>
         suggestSmartCampaignBudgetOptionsSettings() {
       return suggestSmartCampaignBudgetOptionsSettings;
+    }
+
+    /** Returns the builder for the settings used for calls to suggestSmartCampaignAd. */
+    public UnaryCallSettings.Builder<SuggestSmartCampaignAdRequest, SuggestSmartCampaignAdResponse>
+        suggestSmartCampaignAdSettings() {
+      return suggestSmartCampaignAdSettings;
     }
 
     @Override

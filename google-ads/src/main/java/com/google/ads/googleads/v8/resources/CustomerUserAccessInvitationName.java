@@ -184,8 +184,8 @@ public class CustomerUserAccessInvitationName implements ResourceName {
     }
 
     private Builder(CustomerUserAccessInvitationName customerUserAccessInvitationName) {
-      customerId = customerUserAccessInvitationName.customerId;
-      invitationId = customerUserAccessInvitationName.invitationId;
+      this.customerId = customerUserAccessInvitationName.customerId;
+      this.invitationId = customerUserAccessInvitationName.invitationId;
     }
 
     public CustomerUserAccessInvitationName build() {

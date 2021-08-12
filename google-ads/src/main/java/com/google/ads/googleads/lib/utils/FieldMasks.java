@@ -49,6 +49,17 @@ public class FieldMasks {
     Preconditions.checkNotNull(original, "original is null");
     Preconditions.checkNotNull(modified, "modified is null");
 
+    if (!original
+        .getDescriptorForType()
+        .getFullName()
+        .equals(modified.getDescriptorForType().getFullName())) {
+      throw new IllegalArgumentException(
+          String.format(
+              "Parameters of types %s and %s must be of the same type.",
+              original.getDescriptorForType().getFullName(),
+              modified.getDescriptorForType().getFullName()));
+    }
+
     FieldMask.Builder mask = FieldMask.newBuilder();
     compare(mask, "", original, modified);
     return mask.build();
@@ -70,30 +81,27 @@ public class FieldMasks {
     Descriptor descriptor = original.getDescriptorForType();
     for (FieldDescriptor field : descriptor.getFields()) {
       String fieldName = getFieldName(currentField, field);
-      Object originalValue = original.getField(field);
-      Object modifiedValue = modified.getField(field);
+      Object fieldValueOriginal = original.getField(field);
+      Object fieldValueModified = modified.getField(field);
       if (field.isRepeated()) {
-        if (!Objects.equals(originalValue, modifiedValue)) {
+        if (!Objects.equals(fieldValueOriginal, fieldValueModified)) {
           mask.addPaths(fieldName);
         }
       } else {
+        // Because getField never returns null, we use hasField to distinguish null
+        // from empty message when getType() == MESSAGE
         boolean hasValueChanged =
             original.hasField(field) != modified.hasField(field)
-                || !Objects.equals(originalValue, modifiedValue);
+                || !Objects.equals(fieldValueOriginal, fieldValueModified);
         switch (field.getJavaType()) {
           case MESSAGE:
-            // Because getField never returns null, we use hasField to distinguish null
-            // from empty message when getType() == MESSAGE
             if (hasValueChanged) {
-              if (isWrapperType(field.getMessageType())) {
-                // For wrapper types, just emit the field name.
-                mask.addPaths(fieldName);
-              } else if (!modified.hasField(field)) {
-                // Just emit the deleted field name
+              if (shouldAddTopLevelMessageToPath(original, modified, field)) {
                 mask.addPaths(fieldName);
               } else {
                 // Recursively compare to find different values
-                compare(mask, fieldName, (Message) originalValue, (Message) modifiedValue);
+                compare(
+                    mask, fieldName, (Message) fieldValueOriginal, (Message) fieldValueModified);
               }
             }
             break;
@@ -119,6 +127,42 @@ public class FieldMasks {
         }
       }
     }
+  }
+
+  /** Returns true if the field parameter should be added to the UpdateMask. */
+  private static boolean shouldAddTopLevelMessageToPath(
+      Message original, Message modified, FieldDescriptor field) {
+    return isWrapperType(field.getMessageType())
+        || isClearingMessage(original, modified, field)
+        || isSettingEmptyOneOf(original, modified, field);
+  }
+
+  /**
+   * Returns true if the original message contains an empty message field that is not present on the
+   * modified message, in which case the user is clearing the top level message field.
+   */
+  private static boolean isClearingMessage(
+      Message original, Message modified, FieldDescriptor field) {
+    Message originalValueMessage = (Message) original.getField(field);
+    // Use getAllFields to check if there are any fields set, not whether or not the field exists.
+    return !modified.hasField(field)
+        && original.hasField(field)
+        && originalValueMessage.getAllFields().isEmpty();
+  }
+
+  /**
+   * Returns true if the modified message contains an empty oneOf message that is not present in the
+   * original message. In this case, we must add the field parameter to the paths list to clear the
+   * oneOf field.
+   */
+  private static boolean isSettingEmptyOneOf(
+      Message original, Message modified, FieldDescriptor field) {
+    Message fieldValueModifiedMsg = (Message) modified.getField(field);
+    return !original.hasField(field)
+        && modified.hasField(field)
+        && field.getContainingOneof() != null
+        // Checks if the message has fields, regardless of whether or not they are set.
+        && fieldValueModifiedMsg.getDescriptorForType().getFields().isEmpty();
   }
 
   /**

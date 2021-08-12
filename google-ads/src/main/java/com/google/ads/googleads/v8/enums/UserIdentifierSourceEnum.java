@@ -6,7 +6,7 @@ package com.google.ads.googleads.v8.enums;
 /**
  * <pre>
  * Container for enum describing the source of the user identifier for offline
- * Store Sales third party uploads.
+ * Store Sales, click conversion, and conversion adjustment uploads.
  * </pre>
  *
  * Protobuf type {@code google.ads.googleads.v8.enums.UserIdentifierSourceEnum}
@@ -87,8 +87,8 @@ private static final long serialVersionUID = 0L;
 
   /**
    * <pre>
-   * The type of user identifier source for offline Store Sales third party
-   * uploads.
+   * The type of user identifier source for offline Store Sales, click
+   * conversion, and conversion adjustment uploads.
    * </pre>
    *
    * Protobuf enum {@code google.ads.googleads.v8.enums.UserIdentifierSourceEnum.UserIdentifierSource}
@@ -399,7 +399,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Container for enum describing the source of the user identifier for offline
-   * Store Sales third party uploads.
+   * Store Sales, click conversion, and conversion adjustment uploads.
    * </pre>
    *
    * Protobuf type {@code google.ads.googleads.v8.enums.UserIdentifierSourceEnum}

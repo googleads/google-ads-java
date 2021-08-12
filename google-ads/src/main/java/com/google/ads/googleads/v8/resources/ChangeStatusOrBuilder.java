@@ -391,4 +391,124 @@ public interface ChangeStatusOrBuilder extends
    */
   com.google.protobuf.ByteString
       getAdGroupBidModifierBytes();
+
+  /**
+   * <pre>
+   * Output only. The SharedSet affected by this change.
+   * </pre>
+   *
+   * <code>string shared_set = 33 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The sharedSet.
+   */
+  java.lang.String getSharedSet();
+  /**
+   * <pre>
+   * Output only. The SharedSet affected by this change.
+   * </pre>
+   *
+   * <code>string shared_set = 33 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The bytes for sharedSet.
+   */
+  com.google.protobuf.ByteString
+      getSharedSetBytes();
+
+  /**
+   * <pre>
+   * Output only. The CampaignSharedSet affected by this change.
+   * </pre>
+   *
+   * <code>string campaign_shared_set = 34 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The campaignSharedSet.
+   */
+  java.lang.String getCampaignSharedSet();
+  /**
+   * <pre>
+   * Output only. The CampaignSharedSet affected by this change.
+   * </pre>
+   *
+   * <code>string campaign_shared_set = 34 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The bytes for campaignSharedSet.
+   */
+  com.google.protobuf.ByteString
+      getCampaignSharedSetBytes();
+
+  /**
+   * <pre>
+   * Output only. The Asset affected by this change.
+   * </pre>
+   *
+   * <code>string asset = 35 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The asset.
+   */
+  java.lang.String getAsset();
+  /**
+   * <pre>
+   * Output only. The Asset affected by this change.
+   * </pre>
+   *
+   * <code>string asset = 35 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The bytes for asset.
+   */
+  com.google.protobuf.ByteString
+      getAssetBytes();
+
+  /**
+   * <pre>
+   * Output only. The CustomerAsset affected by this change.
+   * </pre>
+   *
+   * <code>string customer_asset = 36 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The customerAsset.
+   */
+  java.lang.String getCustomerAsset();
+  /**
+   * <pre>
+   * Output only. The CustomerAsset affected by this change.
+   * </pre>
+   *
+   * <code>string customer_asset = 36 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The bytes for customerAsset.
+   */
+  com.google.protobuf.ByteString
+      getCustomerAssetBytes();
+
+  /**
+   * <pre>
+   * Output only. The CampaignAsset affected by this change.
+   * </pre>
+   *
+   * <code>string campaign_asset = 37 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The campaignAsset.
+   */
+  java.lang.String getCampaignAsset();
+  /**
+   * <pre>
+   * Output only. The CampaignAsset affected by this change.
+   * </pre>
+   *
+   * <code>string campaign_asset = 37 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The bytes for campaignAsset.
+   */
+  com.google.protobuf.ByteString
+      getCampaignAssetBytes();
+
+  /**
+   * <pre>
+   * Output only. The AdGroupAsset affected by this change.
+   * </pre>
+   *
+   * <code>string ad_group_asset = 38 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The adGroupAsset.
+   */
+  java.lang.String getAdGroupAsset();
+  /**
+   * <pre>
+   * Output only. The AdGroupAsset affected by this change.
+   * </pre>
+   *
+   * <code>string ad_group_asset = 38 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The bytes for adGroupAsset.
+   */
+  com.google.protobuf.ByteString
+      getAdGroupAssetBytes();
 }

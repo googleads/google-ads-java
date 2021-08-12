@@ -31,7 +31,7 @@ public final class ConversionUploadErrorProto {
       "\n<google/ads/googleads/v8/errors/convers" +
       "ion_upload_error.proto\022\036google.ads.googl" +
       "eads.v8.errors\032\034google/api/annotations.p" +
-      "roto\"\212\010\n\031ConversionUploadErrorEnum\"\354\007\n\025C" +
+      "roto\"\321\t\n\031ConversionUploadErrorEnum\"\263\t\n\025C" +
       "onversionUploadError\022\017\n\013UNSPECIFIED\020\000\022\013\n" +
       "\007UNKNOWN\020\001\022#\n\037TOO_MANY_CONVERSIONS_IN_RE" +
       "QUEST\020\002\022\025\n\021UNPARSEABLE_GCLID\020\003\022\035\n\031CONVER" +
@@ -57,13 +57,18 @@ public final class ConversionUploadErrorProto {
       "NTAINS_PII\020\035\022\036\n\032INVALID_CUSTOMER_FOR_CLI" +
       "CK\020\036\022\035\n\031INVALID_CUSTOMER_FOR_CALL\020\037\022,\n(C" +
       "ONVERSION_NOT_COMPLIANT_WITH_ATT_POLICY\020" +
-      " B\365\001\n\"com.google.ads.googleads.v8.errors" +
-      "B\032ConversionUploadErrorProtoP\001ZDgoogle.g" +
-      "olang.org/genproto/googleapis/ads/google" +
-      "ads/v8/errors;errors\242\002\003GAA\252\002\036Google.Ads." +
-      "GoogleAds.V8.Errors\312\002\036Google\\Ads\\GoogleA" +
-      "ds\\V8\\Errors\352\002\"Google::Ads::GoogleAds::V" +
-      "8::Errorsb\006proto3"
+      " \022\023\n\017CLICK_NOT_FOUND\020!\022\033\n\027INVALID_USER_I" +
+      "DENTIFIER\020\"\022N\nJEXTERNALLY_ATTRIBUTED_CON" +
+      "VERSION_ACTION_NOT_PERMITTED_WITH_USER_I" +
+      "DENTIFIER\020#\022\037\n\033UNSUPPORTED_USER_IDENTIFI" +
+      "ER\020$\022\"\n\036INVALID_USER_IDENTIFIER_SOURCE\020%" +
+      "B\365\001\n\"com.google.ads.googleads.v8.errorsB" +
+      "\032ConversionUploadErrorProtoP\001ZDgoogle.go" +
+      "lang.org/genproto/googleapis/ads/googlea" +
+      "ds/v8/errors;errors\242\002\003GAA\252\002\036Google.Ads.G" +
+      "oogleAds.V8.Errors\312\002\036Google\\Ads\\GoogleAd" +
+      "s\\V8\\Errors\352\002\"Google::Ads::GoogleAds::V8" +
+      "::Errorsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

@@ -187,8 +187,8 @@ public class KeywordPlanName implements ResourceName {
     }
 
     private Builder(KeywordPlanName keywordPlanName) {
-      customerId = keywordPlanName.customerId;
-      keywordPlanId = keywordPlanName.keywordPlanId;
+      this.customerId = keywordPlanName.customerId;
+      this.keywordPlanId = keywordPlanName.keywordPlanId;
     }
 
     public KeywordPlanName build() {

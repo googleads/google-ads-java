@@ -34,56 +34,68 @@ public final class ChangeStatusProto {
       "s/ad_type.proto\032@google/ads/googleads/v8" +
       "/enums/advertising_channel_sub_type.prot" +
       "o\032<google/ads/googleads/v8/enums/adverti" +
-      "sing_channel_type.proto\032;google/ads/goog" +
-      "leads/v8/enums/change_status_operation.p" +
-      "roto\032?google/ads/googleads/v8/enums/chan" +
-      "ge_status_resource_type.proto\0322google/ad" +
-      "s/googleads/v8/enums/criterion_type.prot" +
-      "o\032/google/ads/googleads/v8/enums/feed_or" +
-      "igin.proto\032\037google/api/field_behavior.pr" +
-      "oto\032\031google/api/resource.proto\032\034google/a" +
-      "pi/annotations.proto\"\346\n\n\014ChangeStatus\022D\n" +
-      "\rresource_name\030\001 \001(\tB-\340A\003\372A\'\n%googleads." +
-      "googleapis.com/ChangeStatus\022\'\n\025last_chan" +
-      "ge_date_time\030\030 \001(\tB\003\340A\003H\000\210\001\001\022p\n\rresource" +
-      "_type\030\004 \001(\0162T.google.ads.googleads.v8.en" +
-      "ums.ChangeStatusResourceTypeEnum.ChangeS" +
-      "tatusResourceTypeB\003\340A\003\022@\n\010campaign\030\021 \001(\t" +
-      "B)\340A\003\372A#\n!googleads.googleapis.com/Campa" +
-      "ignH\001\210\001\001\022?\n\010ad_group\030\022 \001(\tB(\340A\003\372A\"\n goog" +
-      "leads.googleapis.com/AdGroupH\002\210\001\001\022l\n\017res" +
-      "ource_status\030\010 \001(\0162N.google.ads.googlead" +
-      "s.v8.enums.ChangeStatusOperationEnum.Cha" +
-      "ngeStatusOperationB\003\340A\003\022D\n\013ad_group_ad\030\031" +
-      " \001(\tB*\340A\003\372A$\n\"googleads.googleapis.com/A" +
-      "dGroupAdH\003\210\001\001\022R\n\022ad_group_criterion\030\032 \001(" +
-      "\tB1\340A\003\372A+\n)googleads.googleapis.com/AdGr" +
-      "oupCriterionH\004\210\001\001\022S\n\022campaign_criterion\030" +
-      "\033 \001(\tB2\340A\003\372A,\n*googleads.googleapis.com/" +
-      "CampaignCriterionH\005\210\001\001\0228\n\004feed\030\034 \001(\tB%\340A" +
-      "\003\372A\037\n\035googleads.googleapis.com/FeedH\006\210\001\001" +
-      "\022A\n\tfeed_item\030\035 \001(\tB)\340A\003\372A#\n!googleads.g" +
-      "oogleapis.com/FeedItemH\007\210\001\001\022H\n\rad_group_" +
-      "feed\030\036 \001(\tB,\340A\003\372A&\n$googleads.googleapis" +
-      ".com/AdGroupFeedH\010\210\001\001\022I\n\rcampaign_feed\030\037" +
-      " \001(\tB-\340A\003\372A\'\n%googleads.googleapis.com/C" +
-      "ampaignFeedH\t\210\001\001\022W\n\025ad_group_bid_modifie" +
-      "r\030  \001(\tB3\340A\003\372A-\n+googleads.googleapis.co" +
-      "m/AdGroupBidModifierH\n\210\001\001:c\352A`\n%googlead" +
-      "s.googleapis.com/ChangeStatus\0227customers" +
-      "/{customer_id}/changeStatus/{change_stat" +
-      "us_id}B\030\n\026_last_change_date_timeB\013\n\t_cam" +
-      "paignB\013\n\t_ad_groupB\016\n\014_ad_group_adB\025\n\023_a" +
-      "d_group_criterionB\025\n\023_campaign_criterion" +
-      "B\007\n\005_feedB\014\n\n_feed_itemB\020\n\016_ad_group_fee" +
-      "dB\020\n\016_campaign_feedB\030\n\026_ad_group_bid_mod" +
-      "ifierB\376\001\n%com.google.ads.googleads.v8.re" +
-      "sourcesB\021ChangeStatusProtoP\001ZJgoogle.gol" +
-      "ang.org/genproto/googleapis/ads/googlead" +
-      "s/v8/resources;resources\242\002\003GAA\252\002!Google." +
-      "Ads.GoogleAds.V8.Resources\312\002!Google\\Ads\\" +
-      "GoogleAds\\V8\\Resources\352\002%Google::Ads::Go" +
-      "ogleAds::V8::Resourcesb\006proto3"
+      "sing_channel_type.proto\032.google/ads/goog" +
+      "leads/v8/enums/asset_type.proto\032;google/" +
+      "ads/googleads/v8/enums/change_status_ope" +
+      "ration.proto\032?google/ads/googleads/v8/en" +
+      "ums/change_status_resource_type.proto\0322g" +
+      "oogle/ads/googleads/v8/enums/criterion_t" +
+      "ype.proto\032/google/ads/googleads/v8/enums" +
+      "/feed_origin.proto\032\037google/api/field_beh" +
+      "avior.proto\032\031google/api/resource.proto\032\034" +
+      "google/api/annotations.proto\"\205\016\n\014ChangeS" +
+      "tatus\022D\n\rresource_name\030\001 \001(\tB-\340A\003\372A\'\n%go" +
+      "ogleads.googleapis.com/ChangeStatus\022\'\n\025l" +
+      "ast_change_date_time\030\030 \001(\tB\003\340A\003H\000\210\001\001\022p\n\r" +
+      "resource_type\030\004 \001(\0162T.google.ads.googlea" +
+      "ds.v8.enums.ChangeStatusResourceTypeEnum" +
+      ".ChangeStatusResourceTypeB\003\340A\003\022@\n\010campai" +
+      "gn\030\021 \001(\tB)\340A\003\372A#\n!googleads.googleapis.c" +
+      "om/CampaignH\001\210\001\001\022?\n\010ad_group\030\022 \001(\tB(\340A\003\372" +
+      "A\"\n googleads.googleapis.com/AdGroupH\002\210\001" +
+      "\001\022l\n\017resource_status\030\010 \001(\0162N.google.ads." +
+      "googleads.v8.enums.ChangeStatusOperation" +
+      "Enum.ChangeStatusOperationB\003\340A\003\022D\n\013ad_gr" +
+      "oup_ad\030\031 \001(\tB*\340A\003\372A$\n\"googleads.googleap" +
+      "is.com/AdGroupAdH\003\210\001\001\022R\n\022ad_group_criter" +
+      "ion\030\032 \001(\tB1\340A\003\372A+\n)googleads.googleapis." +
+      "com/AdGroupCriterionH\004\210\001\001\022S\n\022campaign_cr" +
+      "iterion\030\033 \001(\tB2\340A\003\372A,\n*googleads.googlea" +
+      "pis.com/CampaignCriterionH\005\210\001\001\0228\n\004feed\030\034" +
+      " \001(\tB%\340A\003\372A\037\n\035googleads.googleapis.com/F" +
+      "eedH\006\210\001\001\022A\n\tfeed_item\030\035 \001(\tB)\340A\003\372A#\n!goo" +
+      "gleads.googleapis.com/FeedItemH\007\210\001\001\022H\n\ra" +
+      "d_group_feed\030\036 \001(\tB,\340A\003\372A&\n$googleads.go" +
+      "ogleapis.com/AdGroupFeedH\010\210\001\001\022I\n\rcampaig" +
+      "n_feed\030\037 \001(\tB-\340A\003\372A\'\n%googleads.googleap" +
+      "is.com/CampaignFeedH\t\210\001\001\022W\n\025ad_group_bid" +
+      "_modifier\030  \001(\tB3\340A\003\372A-\n+googleads.googl" +
+      "eapis.com/AdGroupBidModifierH\n\210\001\001\022>\n\nsha" +
+      "red_set\030! \001(\tB*\340A\003\372A$\n\"googleads.googlea" +
+      "pis.com/SharedSet\022O\n\023campaign_shared_set" +
+      "\030\" \001(\tB2\340A\003\372A,\n*googleads.googleapis.com" +
+      "/CampaignSharedSet\0225\n\005asset\030# \001(\tB&\340A\003\372A" +
+      " \n\036googleads.googleapis.com/Asset\022F\n\016cus" +
+      "tomer_asset\030$ \001(\tB.\340A\003\372A(\n&googleads.goo" +
+      "gleapis.com/CustomerAsset\022F\n\016campaign_as" +
+      "set\030% \001(\tB.\340A\003\372A(\n&googleads.googleapis." +
+      "com/CampaignAsset\022E\n\016ad_group_asset\030& \001(" +
+      "\tB-\340A\003\372A\'\n%googleads.googleapis.com/AdGr" +
+      "oupAsset:c\352A`\n%googleads.googleapis.com/" +
+      "ChangeStatus\0227customers/{customer_id}/ch" +
+      "angeStatus/{change_status_id}B\030\n\026_last_c" +
+      "hange_date_timeB\013\n\t_campaignB\013\n\t_ad_grou" +
+      "pB\016\n\014_ad_group_adB\025\n\023_ad_group_criterion" +
+      "B\025\n\023_campaign_criterionB\007\n\005_feedB\014\n\n_fee" +
+      "d_itemB\020\n\016_ad_group_feedB\020\n\016_campaign_fe" +
+      "edB\030\n\026_ad_group_bid_modifierB\376\001\n%com.goo" +
+      "gle.ads.googleads.v8.resourcesB\021ChangeSt" +
+      "atusProtoP\001ZJgoogle.golang.org/genproto/" +
+      "googleapis/ads/googleads/v8/resources;re" +
+      "sources\242\002\003GAA\252\002!Google.Ads.GoogleAds.V8." +
+      "Resources\312\002!Google\\Ads\\GoogleAds\\V8\\Reso" +
+      "urces\352\002%Google::Ads::GoogleAds::V8::Reso" +
+      "urcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -91,6 +103,7 @@ public final class ChangeStatusProto {
           com.google.ads.googleads.v8.enums.AdTypeProto.getDescriptor(),
           com.google.ads.googleads.v8.enums.AdvertisingChannelSubTypeProto.getDescriptor(),
           com.google.ads.googleads.v8.enums.AdvertisingChannelTypeProto.getDescriptor(),
+          com.google.ads.googleads.v8.enums.AssetTypeProto.getDescriptor(),
           com.google.ads.googleads.v8.enums.ChangeStatusOperationProto.getDescriptor(),
           com.google.ads.googleads.v8.enums.ChangeStatusResourceTypeProto.getDescriptor(),
           com.google.ads.googleads.v8.enums.CriterionTypeProto.getDescriptor(),
@@ -104,7 +117,7 @@ public final class ChangeStatusProto {
     internal_static_google_ads_googleads_v8_resources_ChangeStatus_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v8_resources_ChangeStatus_descriptor,
-        new java.lang.String[] { "ResourceName", "LastChangeDateTime", "ResourceType", "Campaign", "AdGroup", "ResourceStatus", "AdGroupAd", "AdGroupCriterion", "CampaignCriterion", "Feed", "FeedItem", "AdGroupFeed", "CampaignFeed", "AdGroupBidModifier", "LastChangeDateTime", "Campaign", "AdGroup", "AdGroupAd", "AdGroupCriterion", "CampaignCriterion", "Feed", "FeedItem", "AdGroupFeed", "CampaignFeed", "AdGroupBidModifier", });
+        new java.lang.String[] { "ResourceName", "LastChangeDateTime", "ResourceType", "Campaign", "AdGroup", "ResourceStatus", "AdGroupAd", "AdGroupCriterion", "CampaignCriterion", "Feed", "FeedItem", "AdGroupFeed", "CampaignFeed", "AdGroupBidModifier", "SharedSet", "CampaignSharedSet", "Asset", "CustomerAsset", "CampaignAsset", "AdGroupAsset", "LastChangeDateTime", "Campaign", "AdGroup", "AdGroupAd", "AdGroupCriterion", "CampaignCriterion", "Feed", "FeedItem", "AdGroupFeed", "CampaignFeed", "AdGroupBidModifier", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);
@@ -115,6 +128,7 @@ public final class ChangeStatusProto {
     com.google.ads.googleads.v8.enums.AdTypeProto.getDescriptor();
     com.google.ads.googleads.v8.enums.AdvertisingChannelSubTypeProto.getDescriptor();
     com.google.ads.googleads.v8.enums.AdvertisingChannelTypeProto.getDescriptor();
+    com.google.ads.googleads.v8.enums.AssetTypeProto.getDescriptor();
     com.google.ads.googleads.v8.enums.ChangeStatusOperationProto.getDescriptor();
     com.google.ads.googleads.v8.enums.ChangeStatusResourceTypeProto.getDescriptor();
     com.google.ads.googleads.v8.enums.CriterionTypeProto.getDescriptor();

@@ -657,6 +657,60 @@ public interface GoogleAdsRowOrBuilder extends
 
   /**
    * <pre>
+   * The bidding data exclusion referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v8.resources.BiddingDataExclusion bidding_data_exclusion = 159;</code>
+   * @return Whether the biddingDataExclusion field is set.
+   */
+  boolean hasBiddingDataExclusion();
+  /**
+   * <pre>
+   * The bidding data exclusion referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v8.resources.BiddingDataExclusion bidding_data_exclusion = 159;</code>
+   * @return The biddingDataExclusion.
+   */
+  com.google.ads.googleads.v8.resources.BiddingDataExclusion getBiddingDataExclusion();
+  /**
+   * <pre>
+   * The bidding data exclusion referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v8.resources.BiddingDataExclusion bidding_data_exclusion = 159;</code>
+   */
+  com.google.ads.googleads.v8.resources.BiddingDataExclusionOrBuilder getBiddingDataExclusionOrBuilder();
+
+  /**
+   * <pre>
+   * The bidding seasonality adjustment referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v8.resources.BiddingSeasonalityAdjustment bidding_seasonality_adjustment = 160;</code>
+   * @return Whether the biddingSeasonalityAdjustment field is set.
+   */
+  boolean hasBiddingSeasonalityAdjustment();
+  /**
+   * <pre>
+   * The bidding seasonality adjustment referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v8.resources.BiddingSeasonalityAdjustment bidding_seasonality_adjustment = 160;</code>
+   * @return The biddingSeasonalityAdjustment.
+   */
+  com.google.ads.googleads.v8.resources.BiddingSeasonalityAdjustment getBiddingSeasonalityAdjustment();
+  /**
+   * <pre>
+   * The bidding seasonality adjustment referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v8.resources.BiddingSeasonalityAdjustment bidding_seasonality_adjustment = 160;</code>
+   */
+  com.google.ads.googleads.v8.resources.BiddingSeasonalityAdjustmentOrBuilder getBiddingSeasonalityAdjustmentOrBuilder();
+
+  /**
+   * <pre>
    * The bidding strategy referenced in the query.
    * </pre>
    *
@@ -1302,6 +1356,60 @@ public interface GoogleAdsRowOrBuilder extends
    * <code>.google.ads.googleads.v8.resources.ConversionCustomVariable conversion_custom_variable = 153;</code>
    */
   com.google.ads.googleads.v8.resources.ConversionCustomVariableOrBuilder getConversionCustomVariableOrBuilder();
+
+  /**
+   * <pre>
+   * The conversion value rule referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v8.resources.ConversionValueRule conversion_value_rule = 164;</code>
+   * @return Whether the conversionValueRule field is set.
+   */
+  boolean hasConversionValueRule();
+  /**
+   * <pre>
+   * The conversion value rule referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v8.resources.ConversionValueRule conversion_value_rule = 164;</code>
+   * @return The conversionValueRule.
+   */
+  com.google.ads.googleads.v8.resources.ConversionValueRule getConversionValueRule();
+  /**
+   * <pre>
+   * The conversion value rule referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v8.resources.ConversionValueRule conversion_value_rule = 164;</code>
+   */
+  com.google.ads.googleads.v8.resources.ConversionValueRuleOrBuilder getConversionValueRuleOrBuilder();
+
+  /**
+   * <pre>
+   * The conversion value rule set referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v8.resources.ConversionValueRuleSet conversion_value_rule_set = 165;</code>
+   * @return Whether the conversionValueRuleSet field is set.
+   */
+  boolean hasConversionValueRuleSet();
+  /**
+   * <pre>
+   * The conversion value rule set referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v8.resources.ConversionValueRuleSet conversion_value_rule_set = 165;</code>
+   * @return The conversionValueRuleSet.
+   */
+  com.google.ads.googleads.v8.resources.ConversionValueRuleSet getConversionValueRuleSet();
+  /**
+   * <pre>
+   * The conversion value rule set referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v8.resources.ConversionValueRuleSet conversion_value_rule_set = 165;</code>
+   */
+  com.google.ads.googleads.v8.resources.ConversionValueRuleSetOrBuilder getConversionValueRuleSetOrBuilder();
 
   /**
    * <pre>

@@ -182,8 +182,8 @@ public class AssetFieldTypeViewName implements ResourceName {
     }
 
     private Builder(AssetFieldTypeViewName assetFieldTypeViewName) {
-      customerId = assetFieldTypeViewName.customerId;
-      fieldType = assetFieldTypeViewName.fieldType;
+      this.customerId = assetFieldTypeViewName.customerId;
+      this.fieldType = assetFieldTypeViewName.fieldType;
     }
 
     public AssetFieldTypeViewName build() {

@@ -211,9 +211,9 @@ public class AdGroupAdName implements ResourceName {
     }
 
     private Builder(AdGroupAdName adGroupAdName) {
-      customerId = adGroupAdName.customerId;
-      adGroupId = adGroupAdName.adGroupId;
-      adId = adGroupAdName.adId;
+      this.customerId = adGroupAdName.customerId;
+      this.adGroupId = adGroupAdName.adGroupId;
+      this.adId = adGroupAdName.adId;
     }
 
     public AdGroupAdName build() {

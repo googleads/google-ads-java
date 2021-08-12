@@ -268,7 +268,7 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object path1_;
   /**
    * <pre>
-   * First part of text that may appear appended to the url displayed in the ad.
+   * First part of text that can be appended to the URL in the ad.
    * </pre>
    *
    * <code>string path1 = 5;</code>
@@ -280,7 +280,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * First part of text that may appear appended to the url displayed in the ad.
+   * First part of text that can be appended to the URL in the ad.
    * </pre>
    *
    * <code>string path1 = 5;</code>
@@ -301,7 +301,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * First part of text that may appear appended to the url displayed in the ad.
+   * First part of text that can be appended to the URL in the ad.
    * </pre>
    *
    * <code>string path1 = 5;</code>
@@ -326,8 +326,8 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object path2_;
   /**
    * <pre>
-   * Second part of text that may appear appended to the url displayed in the
-   * ad. This field can only be set when path1 is also set.
+   * Second part of text that can be appended to the URL in the ad. This field
+   * can only be set when `path1` is also set.
    * </pre>
    *
    * <code>string path2 = 6;</code>
@@ -339,8 +339,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Second part of text that may appear appended to the url displayed in the
-   * ad. This field can only be set when path1 is also set.
+   * Second part of text that can be appended to the URL in the ad. This field
+   * can only be set when `path1` is also set.
    * </pre>
    *
    * <code>string path2 = 6;</code>
@@ -361,8 +361,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Second part of text that may appear appended to the url displayed in the
-   * ad. This field can only be set when path1 is also set.
+   * Second part of text that can be appended to the URL in the ad. This field
+   * can only be set when `path1` is also set.
    * </pre>
    *
    * <code>string path2 = 6;</code>
@@ -1509,7 +1509,7 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object path1_ = "";
     /**
      * <pre>
-     * First part of text that may appear appended to the url displayed in the ad.
+     * First part of text that can be appended to the URL in the ad.
      * </pre>
      *
      * <code>string path1 = 5;</code>
@@ -1520,7 +1520,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * First part of text that may appear appended to the url displayed in the ad.
+     * First part of text that can be appended to the URL in the ad.
      * </pre>
      *
      * <code>string path1 = 5;</code>
@@ -1540,7 +1540,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * First part of text that may appear appended to the url displayed in the ad.
+     * First part of text that can be appended to the URL in the ad.
      * </pre>
      *
      * <code>string path1 = 5;</code>
@@ -1561,7 +1561,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * First part of text that may appear appended to the url displayed in the ad.
+     * First part of text that can be appended to the URL in the ad.
      * </pre>
      *
      * <code>string path1 = 5;</code>
@@ -1580,7 +1580,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * First part of text that may appear appended to the url displayed in the ad.
+     * First part of text that can be appended to the URL in the ad.
      * </pre>
      *
      * <code>string path1 = 5;</code>
@@ -1594,7 +1594,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * First part of text that may appear appended to the url displayed in the ad.
+     * First part of text that can be appended to the URL in the ad.
      * </pre>
      *
      * <code>string path1 = 5;</code>
@@ -1616,8 +1616,8 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object path2_ = "";
     /**
      * <pre>
-     * Second part of text that may appear appended to the url displayed in the
-     * ad. This field can only be set when path1 is also set.
+     * Second part of text that can be appended to the URL in the ad. This field
+     * can only be set when `path1` is also set.
      * </pre>
      *
      * <code>string path2 = 6;</code>
@@ -1628,8 +1628,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Second part of text that may appear appended to the url displayed in the
-     * ad. This field can only be set when path1 is also set.
+     * Second part of text that can be appended to the URL in the ad. This field
+     * can only be set when `path1` is also set.
      * </pre>
      *
      * <code>string path2 = 6;</code>
@@ -1649,8 +1649,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Second part of text that may appear appended to the url displayed in the
-     * ad. This field can only be set when path1 is also set.
+     * Second part of text that can be appended to the URL in the ad. This field
+     * can only be set when `path1` is also set.
      * </pre>
      *
      * <code>string path2 = 6;</code>
@@ -1671,8 +1671,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Second part of text that may appear appended to the url displayed in the
-     * ad. This field can only be set when path1 is also set.
+     * Second part of text that can be appended to the URL in the ad. This field
+     * can only be set when `path1` is also set.
      * </pre>
      *
      * <code>string path2 = 6;</code>
@@ -1691,8 +1691,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Second part of text that may appear appended to the url displayed in the
-     * ad. This field can only be set when path1 is also set.
+     * Second part of text that can be appended to the URL in the ad. This field
+     * can only be set when `path1` is also set.
      * </pre>
      *
      * <code>string path2 = 6;</code>
@@ -1706,8 +1706,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Second part of text that may appear appended to the url displayed in the
-     * ad. This field can only be set when path1 is also set.
+     * Second part of text that can be appended to the URL in the ad. This field
+     * can only be set when `path1` is also set.
      * </pre>
      *
      * <code>string path2 = 6;</code>

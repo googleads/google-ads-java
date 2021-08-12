@@ -187,8 +187,8 @@ public class RecommendationName implements ResourceName {
     }
 
     private Builder(RecommendationName recommendationName) {
-      customerId = recommendationName.customerId;
-      recommendationId = recommendationName.recommendationId;
+      this.customerId = recommendationName.customerId;
+      this.recommendationId = recommendationName.recommendationId;
     }
 
     public RecommendationName build() {

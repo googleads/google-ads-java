@@ -1,3 +1,10 @@
+15.0.0 - 2021-08-12
+-------------------
+- Added and updated examples for Google Ads API v8.1.
+- Removed support for Google Ads API v6.0.
+- Fixed bugs and added tests for the FieldMasks utility.
+- Fixed issues with third_party directory generation.
+
 14.0.0 - 2021-07-07
 -------------------
 - Added and updated examples for Google Ads API v8.0.

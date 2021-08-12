@@ -195,8 +195,8 @@ public class ConversionCustomVariableName implements ResourceName {
     }
 
     private Builder(ConversionCustomVariableName conversionCustomVariableName) {
-      customerId = conversionCustomVariableName.customerId;
-      conversionCustomVariableId = conversionCustomVariableName.conversionCustomVariableId;
+      this.customerId = conversionCustomVariableName.customerId;
+      this.conversionCustomVariableId = conversionCustomVariableName.conversionCustomVariableId;
     }
 
     public ConversionCustomVariableName build() {

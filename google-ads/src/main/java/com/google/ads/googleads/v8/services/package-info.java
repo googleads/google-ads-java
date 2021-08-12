@@ -415,6 +415,38 @@
  * }
  * }</pre>
  *
+ * <p>======================= BiddingDataExclusionServiceClient =======================
+ *
+ * <p>Service Description: Service to manage bidding data exclusions.
+ *
+ * <p>Sample for BiddingDataExclusionServiceClient:
+ *
+ * <pre>{@code
+ * try (BiddingDataExclusionServiceClient biddingDataExclusionServiceClient =
+ *     BiddingDataExclusionServiceClient.create()) {
+ *   BiddingDataExclusionName resourceName =
+ *       BiddingDataExclusionName.of("[CUSTOMER_ID]", "[SEASONALITY_EVENT_ID]");
+ *   BiddingDataExclusion response =
+ *       biddingDataExclusionServiceClient.getBiddingDataExclusion(resourceName);
+ * }
+ * }</pre>
+ *
+ * <p>======================= BiddingSeasonalityAdjustmentServiceClient =======================
+ *
+ * <p>Service Description: Service to manage bidding seasonality adjustments.
+ *
+ * <p>Sample for BiddingSeasonalityAdjustmentServiceClient:
+ *
+ * <pre>{@code
+ * try (BiddingSeasonalityAdjustmentServiceClient biddingSeasonalityAdjustmentServiceClient =
+ *     BiddingSeasonalityAdjustmentServiceClient.create()) {
+ *   BiddingSeasonalityAdjustmentName resourceName =
+ *       BiddingSeasonalityAdjustmentName.of("[CUSTOMER_ID]", "[SEASONALITY_EVENT_ID]");
+ *   BiddingSeasonalityAdjustment response =
+ *       biddingSeasonalityAdjustmentServiceClient.getBiddingSeasonalityAdjustment(resourceName);
+ * }
+ * }</pre>
+ *
  * <p>======================= BiddingStrategyServiceClient =======================
  *
  * <p>Service Description: Service to manage bidding strategies.
@@ -830,6 +862,38 @@
  *   UploadClickConversionsResponse response =
  *       conversionUploadServiceClient.uploadClickConversions(
  *           customerId, conversions, partialFailure);
+ * }
+ * }</pre>
+ *
+ * <p>======================= ConversionValueRuleServiceClient =======================
+ *
+ * <p>Service Description: Service to manage conversion value rules.
+ *
+ * <p>Sample for ConversionValueRuleServiceClient:
+ *
+ * <pre>{@code
+ * try (ConversionValueRuleServiceClient conversionValueRuleServiceClient =
+ *     ConversionValueRuleServiceClient.create()) {
+ *   ConversionValueRuleName resourceName =
+ *       ConversionValueRuleName.of("[CUSTOMER_ID]", "[CONVERSION_VALUE_RULE_ID]");
+ *   ConversionValueRule response =
+ *       conversionValueRuleServiceClient.getConversionValueRule(resourceName);
+ * }
+ * }</pre>
+ *
+ * <p>======================= ConversionValueRuleSetServiceClient =======================
+ *
+ * <p>Service Description: Service to manage conversion value rule sets.
+ *
+ * <p>Sample for ConversionValueRuleSetServiceClient:
+ *
+ * <pre>{@code
+ * try (ConversionValueRuleSetServiceClient conversionValueRuleSetServiceClient =
+ *     ConversionValueRuleSetServiceClient.create()) {
+ *   ConversionValueRuleSetName resourceName =
+ *       ConversionValueRuleSetName.of("[CUSTOMER_ID]", "[CONVERSION_VALUE_RULE_SET_ID]");
+ *   ConversionValueRuleSet response =
+ *       conversionValueRuleSetServiceClient.getConversionValueRuleSet(resourceName);
  * }
  * }</pre>
  *
@@ -2043,8 +2107,7 @@
  *
  * <p>======================= UserDataServiceClient =======================
  *
- * <p>Service Description: Service to manage user data uploads. Accessible only to customers on the
- * allow-list.
+ * <p>Service Description: Service to manage user data uploads.
  *
  * <p>Sample for UserDataServiceClient:
  *

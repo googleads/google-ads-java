@@ -158,7 +158,7 @@ public class LanguageConstantName implements ResourceName {
     }
 
     private Builder(LanguageConstantName languageConstantName) {
-      criterionId = languageConstantName.criterionId;
+      this.criterionId = languageConstantName.criterionId;
     }
 
     public LanguageConstantName build() {

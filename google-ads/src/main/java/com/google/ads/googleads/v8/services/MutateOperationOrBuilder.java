@@ -360,6 +360,60 @@ public interface MutateOperationOrBuilder extends
 
   /**
    * <pre>
+   * A bidding data exclusion mutate operation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v8.services.BiddingDataExclusionOperation bidding_data_exclusion_operation = 58;</code>
+   * @return Whether the biddingDataExclusionOperation field is set.
+   */
+  boolean hasBiddingDataExclusionOperation();
+  /**
+   * <pre>
+   * A bidding data exclusion mutate operation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v8.services.BiddingDataExclusionOperation bidding_data_exclusion_operation = 58;</code>
+   * @return The biddingDataExclusionOperation.
+   */
+  com.google.ads.googleads.v8.services.BiddingDataExclusionOperation getBiddingDataExclusionOperation();
+  /**
+   * <pre>
+   * A bidding data exclusion mutate operation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v8.services.BiddingDataExclusionOperation bidding_data_exclusion_operation = 58;</code>
+   */
+  com.google.ads.googleads.v8.services.BiddingDataExclusionOperationOrBuilder getBiddingDataExclusionOperationOrBuilder();
+
+  /**
+   * <pre>
+   * A bidding seasonality adjustment mutate operation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v8.services.BiddingSeasonalityAdjustmentOperation bidding_seasonality_adjustment_operation = 59;</code>
+   * @return Whether the biddingSeasonalityAdjustmentOperation field is set.
+   */
+  boolean hasBiddingSeasonalityAdjustmentOperation();
+  /**
+   * <pre>
+   * A bidding seasonality adjustment mutate operation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v8.services.BiddingSeasonalityAdjustmentOperation bidding_seasonality_adjustment_operation = 59;</code>
+   * @return The biddingSeasonalityAdjustmentOperation.
+   */
+  com.google.ads.googleads.v8.services.BiddingSeasonalityAdjustmentOperation getBiddingSeasonalityAdjustmentOperation();
+  /**
+   * <pre>
+   * A bidding seasonality adjustment mutate operation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v8.services.BiddingSeasonalityAdjustmentOperation bidding_seasonality_adjustment_operation = 59;</code>
+   */
+  com.google.ads.googleads.v8.services.BiddingSeasonalityAdjustmentOperationOrBuilder getBiddingSeasonalityAdjustmentOperationOrBuilder();
+
+  /**
+   * <pre>
    * A bidding strategy mutate operation.
    * </pre>
    *
@@ -735,6 +789,60 @@ public interface MutateOperationOrBuilder extends
    * <code>.google.ads.googleads.v8.services.ConversionCustomVariableOperation conversion_custom_variable_operation = 55;</code>
    */
   com.google.ads.googleads.v8.services.ConversionCustomVariableOperationOrBuilder getConversionCustomVariableOperationOrBuilder();
+
+  /**
+   * <pre>
+   * A conversion value rule mutate operation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v8.services.ConversionValueRuleOperation conversion_value_rule_operation = 63;</code>
+   * @return Whether the conversionValueRuleOperation field is set.
+   */
+  boolean hasConversionValueRuleOperation();
+  /**
+   * <pre>
+   * A conversion value rule mutate operation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v8.services.ConversionValueRuleOperation conversion_value_rule_operation = 63;</code>
+   * @return The conversionValueRuleOperation.
+   */
+  com.google.ads.googleads.v8.services.ConversionValueRuleOperation getConversionValueRuleOperation();
+  /**
+   * <pre>
+   * A conversion value rule mutate operation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v8.services.ConversionValueRuleOperation conversion_value_rule_operation = 63;</code>
+   */
+  com.google.ads.googleads.v8.services.ConversionValueRuleOperationOrBuilder getConversionValueRuleOperationOrBuilder();
+
+  /**
+   * <pre>
+   * A conversion value rule set mutate operation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v8.services.ConversionValueRuleSetOperation conversion_value_rule_set_operation = 64;</code>
+   * @return Whether the conversionValueRuleSetOperation field is set.
+   */
+  boolean hasConversionValueRuleSetOperation();
+  /**
+   * <pre>
+   * A conversion value rule set mutate operation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v8.services.ConversionValueRuleSetOperation conversion_value_rule_set_operation = 64;</code>
+   * @return The conversionValueRuleSetOperation.
+   */
+  com.google.ads.googleads.v8.services.ConversionValueRuleSetOperation getConversionValueRuleSetOperation();
+  /**
+   * <pre>
+   * A conversion value rule set mutate operation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v8.services.ConversionValueRuleSetOperation conversion_value_rule_set_operation = 64;</code>
+   */
+  com.google.ads.googleads.v8.services.ConversionValueRuleSetOperationOrBuilder getConversionValueRuleSetOperationOrBuilder();
 
   /**
    * <pre>

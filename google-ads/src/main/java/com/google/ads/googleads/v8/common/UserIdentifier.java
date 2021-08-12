@@ -5,7 +5,7 @@ package com.google.ads.googleads.v8.common;
 
 /**
  * <pre>
- * Hashed user identifying information.
+ * User identifying information.
  * </pre>
  *
  * Protobuf type {@code google.ads.googleads.v8.common.UserIdentifier}
@@ -180,8 +180,11 @@ private static final long serialVersionUID = 0L;
   private int userIdentifierSource_;
   /**
    * <pre>
-   * Source of the user identifier when the upload is from Store Sales third
-   * party partners.
+   * Source of the user identifier when the upload is from Store Sales,
+   * ConversionUploadService, or ConversionAdjustmentUploadService. For
+   * ConversionUploadService and ConversionAdjustmentUploadService, the source
+   * of the user identifier must be specified as FIRST_PARTY, otherwise an error
+   * will be returned.
    * </pre>
    *
    * <code>.google.ads.googleads.v8.enums.UserIdentifierSourceEnum.UserIdentifierSource user_identifier_source = 6;</code>
@@ -192,8 +195,11 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Source of the user identifier when the upload is from Store Sales third
-   * party partners.
+   * Source of the user identifier when the upload is from Store Sales,
+   * ConversionUploadService, or ConversionAdjustmentUploadService. For
+   * ConversionUploadService and ConversionAdjustmentUploadService, the source
+   * of the user identifier must be specified as FIRST_PARTY, otherwise an error
+   * will be returned.
    * </pre>
    *
    * <code>.google.ads.googleads.v8.enums.UserIdentifierSourceEnum.UserIdentifierSource user_identifier_source = 6;</code>
@@ -209,6 +215,8 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Hashed email address using SHA-256 hash function after normalization.
+   * Accepted for Customer Match, Store Sales, ConversionUploadService, and
+   * ConversionAdjustmentUploadService.
    * </pre>
    *
    * <code>string hashed_email = 7;</code>
@@ -220,6 +228,8 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Hashed email address using SHA-256 hash function after normalization.
+   * Accepted for Customer Match, Store Sales, ConversionUploadService, and
+   * ConversionAdjustmentUploadService.
    * </pre>
    *
    * <code>string hashed_email = 7;</code>
@@ -245,6 +255,8 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Hashed email address using SHA-256 hash function after normalization.
+   * Accepted for Customer Match, Store Sales, ConversionUploadService, and
+   * ConversionAdjustmentUploadService.
    * </pre>
    *
    * <code>string hashed_email = 7;</code>
@@ -273,7 +285,8 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Hashed phone number using SHA-256 hash function after normalization
-   * (E164 standard).
+   * (E164 standard). Accepted for Customer Match, Store Sales,
+   * ConversionUploadService, and ConversionAdjustmentUploadService.
    * </pre>
    *
    * <code>string hashed_phone_number = 8;</code>
@@ -285,7 +298,8 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Hashed phone number using SHA-256 hash function after normalization
-   * (E164 standard).
+   * (E164 standard). Accepted for Customer Match, Store Sales,
+   * ConversionUploadService, and ConversionAdjustmentUploadService.
    * </pre>
    *
    * <code>string hashed_phone_number = 8;</code>
@@ -311,7 +325,8 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Hashed phone number using SHA-256 hash function after normalization
-   * (E164 standard).
+   * (E164 standard). Accepted for Customer Match, Store Sales,
+   * ConversionUploadService, and ConversionAdjustmentUploadService.
    * </pre>
    *
    * <code>string hashed_phone_number = 8;</code>
@@ -339,7 +354,7 @@ private static final long serialVersionUID = 0L;
   public static final int MOBILE_ID_FIELD_NUMBER = 9;
   /**
    * <pre>
-   * Mobile device ID (advertising ID/IDFA).
+   * Mobile device ID (advertising ID/IDFA). Accepted only for Customer Match.
    * </pre>
    *
    * <code>string mobile_id = 9;</code>
@@ -350,7 +365,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Mobile device ID (advertising ID/IDFA).
+   * Mobile device ID (advertising ID/IDFA). Accepted only for Customer Match.
    * </pre>
    *
    * <code>string mobile_id = 9;</code>
@@ -375,7 +390,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Mobile device ID (advertising ID/IDFA).
+   * Mobile device ID (advertising ID/IDFA). Accepted only for Customer Match.
    * </pre>
    *
    * <code>string mobile_id = 9;</code>
@@ -404,7 +419,8 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Advertiser-assigned user ID for Customer Match upload, or
-   * third-party-assigned user ID for SSD.
+   * third-party-assigned user ID for Store Sales. Accepted only for Customer
+   * Match and Store Sales.
    * </pre>
    *
    * <code>string third_party_user_id = 10;</code>
@@ -416,7 +432,8 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Advertiser-assigned user ID for Customer Match upload, or
-   * third-party-assigned user ID for SSD.
+   * third-party-assigned user ID for Store Sales. Accepted only for Customer
+   * Match and Store Sales.
    * </pre>
    *
    * <code>string third_party_user_id = 10;</code>
@@ -442,7 +459,8 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Advertiser-assigned user ID for Customer Match upload, or
-   * third-party-assigned user ID for SSD.
+   * third-party-assigned user ID for Store Sales. Accepted only for Customer
+   * Match and Store Sales.
    * </pre>
    *
    * <code>string third_party_user_id = 10;</code>
@@ -470,7 +488,8 @@ private static final long serialVersionUID = 0L;
   public static final int ADDRESS_INFO_FIELD_NUMBER = 5;
   /**
    * <pre>
-   * Address information.
+   * Address information. Accepted only for Customer Match, Store Sales, and
+   * ConversionAdjustmentUploadService.
    * </pre>
    *
    * <code>.google.ads.googleads.v8.common.OfflineUserAddressInfo address_info = 5;</code>
@@ -482,7 +501,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Address information.
+   * Address information. Accepted only for Customer Match, Store Sales, and
+   * ConversionAdjustmentUploadService.
    * </pre>
    *
    * <code>.google.ads.googleads.v8.common.OfflineUserAddressInfo address_info = 5;</code>
@@ -497,7 +517,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Address information.
+   * Address information. Accepted only for Customer Match, Store Sales, and
+   * ConversionAdjustmentUploadService.
    * </pre>
    *
    * <code>.google.ads.googleads.v8.common.OfflineUserAddressInfo address_info = 5;</code>
@@ -746,7 +767,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Hashed user identifying information.
+   * User identifying information.
    * </pre>
    *
    * Protobuf type {@code google.ads.googleads.v8.common.UserIdentifier}
@@ -968,8 +989,11 @@ private static final long serialVersionUID = 0L;
     private int userIdentifierSource_ = 0;
     /**
      * <pre>
-     * Source of the user identifier when the upload is from Store Sales third
-     * party partners.
+     * Source of the user identifier when the upload is from Store Sales,
+     * ConversionUploadService, or ConversionAdjustmentUploadService. For
+     * ConversionUploadService and ConversionAdjustmentUploadService, the source
+     * of the user identifier must be specified as FIRST_PARTY, otherwise an error
+     * will be returned.
      * </pre>
      *
      * <code>.google.ads.googleads.v8.enums.UserIdentifierSourceEnum.UserIdentifierSource user_identifier_source = 6;</code>
@@ -980,8 +1004,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Source of the user identifier when the upload is from Store Sales third
-     * party partners.
+     * Source of the user identifier when the upload is from Store Sales,
+     * ConversionUploadService, or ConversionAdjustmentUploadService. For
+     * ConversionUploadService and ConversionAdjustmentUploadService, the source
+     * of the user identifier must be specified as FIRST_PARTY, otherwise an error
+     * will be returned.
      * </pre>
      *
      * <code>.google.ads.googleads.v8.enums.UserIdentifierSourceEnum.UserIdentifierSource user_identifier_source = 6;</code>
@@ -996,8 +1023,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Source of the user identifier when the upload is from Store Sales third
-     * party partners.
+     * Source of the user identifier when the upload is from Store Sales,
+     * ConversionUploadService, or ConversionAdjustmentUploadService. For
+     * ConversionUploadService and ConversionAdjustmentUploadService, the source
+     * of the user identifier must be specified as FIRST_PARTY, otherwise an error
+     * will be returned.
      * </pre>
      *
      * <code>.google.ads.googleads.v8.enums.UserIdentifierSourceEnum.UserIdentifierSource user_identifier_source = 6;</code>
@@ -1011,8 +1041,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Source of the user identifier when the upload is from Store Sales third
-     * party partners.
+     * Source of the user identifier when the upload is from Store Sales,
+     * ConversionUploadService, or ConversionAdjustmentUploadService. For
+     * ConversionUploadService and ConversionAdjustmentUploadService, the source
+     * of the user identifier must be specified as FIRST_PARTY, otherwise an error
+     * will be returned.
      * </pre>
      *
      * <code>.google.ads.googleads.v8.enums.UserIdentifierSourceEnum.UserIdentifierSource user_identifier_source = 6;</code>
@@ -1030,8 +1063,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Source of the user identifier when the upload is from Store Sales third
-     * party partners.
+     * Source of the user identifier when the upload is from Store Sales,
+     * ConversionUploadService, or ConversionAdjustmentUploadService. For
+     * ConversionUploadService and ConversionAdjustmentUploadService, the source
+     * of the user identifier must be specified as FIRST_PARTY, otherwise an error
+     * will be returned.
      * </pre>
      *
      * <code>.google.ads.googleads.v8.enums.UserIdentifierSourceEnum.UserIdentifierSource user_identifier_source = 6;</code>
@@ -1047,6 +1083,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Hashed email address using SHA-256 hash function after normalization.
+     * Accepted for Customer Match, Store Sales, ConversionUploadService, and
+     * ConversionAdjustmentUploadService.
      * </pre>
      *
      * <code>string hashed_email = 7;</code>
@@ -1059,6 +1097,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Hashed email address using SHA-256 hash function after normalization.
+     * Accepted for Customer Match, Store Sales, ConversionUploadService, and
+     * ConversionAdjustmentUploadService.
      * </pre>
      *
      * <code>string hashed_email = 7;</code>
@@ -1085,6 +1125,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Hashed email address using SHA-256 hash function after normalization.
+     * Accepted for Customer Match, Store Sales, ConversionUploadService, and
+     * ConversionAdjustmentUploadService.
      * </pre>
      *
      * <code>string hashed_email = 7;</code>
@@ -1112,6 +1154,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Hashed email address using SHA-256 hash function after normalization.
+     * Accepted for Customer Match, Store Sales, ConversionUploadService, and
+     * ConversionAdjustmentUploadService.
      * </pre>
      *
      * <code>string hashed_email = 7;</code>
@@ -1131,6 +1175,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Hashed email address using SHA-256 hash function after normalization.
+     * Accepted for Customer Match, Store Sales, ConversionUploadService, and
+     * ConversionAdjustmentUploadService.
      * </pre>
      *
      * <code>string hashed_email = 7;</code>
@@ -1147,6 +1193,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Hashed email address using SHA-256 hash function after normalization.
+     * Accepted for Customer Match, Store Sales, ConversionUploadService, and
+     * ConversionAdjustmentUploadService.
      * </pre>
      *
      * <code>string hashed_email = 7;</code>
@@ -1168,7 +1216,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Hashed phone number using SHA-256 hash function after normalization
-     * (E164 standard).
+     * (E164 standard). Accepted for Customer Match, Store Sales,
+     * ConversionUploadService, and ConversionAdjustmentUploadService.
      * </pre>
      *
      * <code>string hashed_phone_number = 8;</code>
@@ -1181,7 +1230,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Hashed phone number using SHA-256 hash function after normalization
-     * (E164 standard).
+     * (E164 standard). Accepted for Customer Match, Store Sales,
+     * ConversionUploadService, and ConversionAdjustmentUploadService.
      * </pre>
      *
      * <code>string hashed_phone_number = 8;</code>
@@ -1208,7 +1258,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Hashed phone number using SHA-256 hash function after normalization
-     * (E164 standard).
+     * (E164 standard). Accepted for Customer Match, Store Sales,
+     * ConversionUploadService, and ConversionAdjustmentUploadService.
      * </pre>
      *
      * <code>string hashed_phone_number = 8;</code>
@@ -1236,7 +1287,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Hashed phone number using SHA-256 hash function after normalization
-     * (E164 standard).
+     * (E164 standard). Accepted for Customer Match, Store Sales,
+     * ConversionUploadService, and ConversionAdjustmentUploadService.
      * </pre>
      *
      * <code>string hashed_phone_number = 8;</code>
@@ -1256,7 +1308,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Hashed phone number using SHA-256 hash function after normalization
-     * (E164 standard).
+     * (E164 standard). Accepted for Customer Match, Store Sales,
+     * ConversionUploadService, and ConversionAdjustmentUploadService.
      * </pre>
      *
      * <code>string hashed_phone_number = 8;</code>
@@ -1273,7 +1326,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Hashed phone number using SHA-256 hash function after normalization
-     * (E164 standard).
+     * (E164 standard). Accepted for Customer Match, Store Sales,
+     * ConversionUploadService, and ConversionAdjustmentUploadService.
      * </pre>
      *
      * <code>string hashed_phone_number = 8;</code>
@@ -1294,7 +1348,7 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * Mobile device ID (advertising ID/IDFA).
+     * Mobile device ID (advertising ID/IDFA). Accepted only for Customer Match.
      * </pre>
      *
      * <code>string mobile_id = 9;</code>
@@ -1306,7 +1360,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Mobile device ID (advertising ID/IDFA).
+     * Mobile device ID (advertising ID/IDFA). Accepted only for Customer Match.
      * </pre>
      *
      * <code>string mobile_id = 9;</code>
@@ -1332,7 +1386,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Mobile device ID (advertising ID/IDFA).
+     * Mobile device ID (advertising ID/IDFA). Accepted only for Customer Match.
      * </pre>
      *
      * <code>string mobile_id = 9;</code>
@@ -1359,7 +1413,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Mobile device ID (advertising ID/IDFA).
+     * Mobile device ID (advertising ID/IDFA). Accepted only for Customer Match.
      * </pre>
      *
      * <code>string mobile_id = 9;</code>
@@ -1378,7 +1432,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Mobile device ID (advertising ID/IDFA).
+     * Mobile device ID (advertising ID/IDFA). Accepted only for Customer Match.
      * </pre>
      *
      * <code>string mobile_id = 9;</code>
@@ -1394,7 +1448,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Mobile device ID (advertising ID/IDFA).
+     * Mobile device ID (advertising ID/IDFA). Accepted only for Customer Match.
      * </pre>
      *
      * <code>string mobile_id = 9;</code>
@@ -1416,7 +1470,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Advertiser-assigned user ID for Customer Match upload, or
-     * third-party-assigned user ID for SSD.
+     * third-party-assigned user ID for Store Sales. Accepted only for Customer
+     * Match and Store Sales.
      * </pre>
      *
      * <code>string third_party_user_id = 10;</code>
@@ -1429,7 +1484,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Advertiser-assigned user ID for Customer Match upload, or
-     * third-party-assigned user ID for SSD.
+     * third-party-assigned user ID for Store Sales. Accepted only for Customer
+     * Match and Store Sales.
      * </pre>
      *
      * <code>string third_party_user_id = 10;</code>
@@ -1456,7 +1512,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Advertiser-assigned user ID for Customer Match upload, or
-     * third-party-assigned user ID for SSD.
+     * third-party-assigned user ID for Store Sales. Accepted only for Customer
+     * Match and Store Sales.
      * </pre>
      *
      * <code>string third_party_user_id = 10;</code>
@@ -1484,7 +1541,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Advertiser-assigned user ID for Customer Match upload, or
-     * third-party-assigned user ID for SSD.
+     * third-party-assigned user ID for Store Sales. Accepted only for Customer
+     * Match and Store Sales.
      * </pre>
      *
      * <code>string third_party_user_id = 10;</code>
@@ -1504,7 +1562,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Advertiser-assigned user ID for Customer Match upload, or
-     * third-party-assigned user ID for SSD.
+     * third-party-assigned user ID for Store Sales. Accepted only for Customer
+     * Match and Store Sales.
      * </pre>
      *
      * <code>string third_party_user_id = 10;</code>
@@ -1521,7 +1580,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Advertiser-assigned user ID for Customer Match upload, or
-     * third-party-assigned user ID for SSD.
+     * third-party-assigned user ID for Store Sales. Accepted only for Customer
+     * Match and Store Sales.
      * </pre>
      *
      * <code>string third_party_user_id = 10;</code>
@@ -1544,7 +1604,8 @@ private static final long serialVersionUID = 0L;
         com.google.ads.googleads.v8.common.OfflineUserAddressInfo, com.google.ads.googleads.v8.common.OfflineUserAddressInfo.Builder, com.google.ads.googleads.v8.common.OfflineUserAddressInfoOrBuilder> addressInfoBuilder_;
     /**
      * <pre>
-     * Address information.
+     * Address information. Accepted only for Customer Match, Store Sales, and
+     * ConversionAdjustmentUploadService.
      * </pre>
      *
      * <code>.google.ads.googleads.v8.common.OfflineUserAddressInfo address_info = 5;</code>
@@ -1556,7 +1617,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Address information.
+     * Address information. Accepted only for Customer Match, Store Sales, and
+     * ConversionAdjustmentUploadService.
      * </pre>
      *
      * <code>.google.ads.googleads.v8.common.OfflineUserAddressInfo address_info = 5;</code>
@@ -1578,7 +1640,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Address information.
+     * Address information. Accepted only for Customer Match, Store Sales, and
+     * ConversionAdjustmentUploadService.
      * </pre>
      *
      * <code>.google.ads.googleads.v8.common.OfflineUserAddressInfo address_info = 5;</code>
@@ -1598,7 +1661,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Address information.
+     * Address information. Accepted only for Customer Match, Store Sales, and
+     * ConversionAdjustmentUploadService.
      * </pre>
      *
      * <code>.google.ads.googleads.v8.common.OfflineUserAddressInfo address_info = 5;</code>
@@ -1616,7 +1680,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Address information.
+     * Address information. Accepted only for Customer Match, Store Sales, and
+     * ConversionAdjustmentUploadService.
      * </pre>
      *
      * <code>.google.ads.googleads.v8.common.OfflineUserAddressInfo address_info = 5;</code>
@@ -1642,7 +1707,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Address information.
+     * Address information. Accepted only for Customer Match, Store Sales, and
+     * ConversionAdjustmentUploadService.
      * </pre>
      *
      * <code>.google.ads.googleads.v8.common.OfflineUserAddressInfo address_info = 5;</code>
@@ -1665,7 +1731,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Address information.
+     * Address information. Accepted only for Customer Match, Store Sales, and
+     * ConversionAdjustmentUploadService.
      * </pre>
      *
      * <code>.google.ads.googleads.v8.common.OfflineUserAddressInfo address_info = 5;</code>
@@ -1675,7 +1742,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Address information.
+     * Address information. Accepted only for Customer Match, Store Sales, and
+     * ConversionAdjustmentUploadService.
      * </pre>
      *
      * <code>.google.ads.googleads.v8.common.OfflineUserAddressInfo address_info = 5;</code>
@@ -1693,7 +1761,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Address information.
+     * Address information. Accepted only for Customer Match, Store Sales, and
+     * ConversionAdjustmentUploadService.
      * </pre>
      *
      * <code>.google.ads.googleads.v8.common.OfflineUserAddressInfo address_info = 5;</code>

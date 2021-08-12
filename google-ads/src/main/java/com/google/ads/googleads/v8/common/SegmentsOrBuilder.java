@@ -1981,6 +1981,37 @@ public interface SegmentsOrBuilder extends
 
   /**
    * <pre>
+   * Primary dimension of applied conversion value rules.
+   * NO_RULE_APPLIED shows the total recorded value of conversions that
+   * do not have a value rule applied.
+   * ORIGINAL shows the original value of conversions to which a value rule
+   * has been applied.
+   * GEO_LOCATION, DEVICE, AUDIENCE show the net adjustment after value
+   * rules were applied.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v8.enums.ConversionValueRulePrimaryDimensionEnum.ConversionValueRulePrimaryDimension conversion_value_rule_primary_dimension = 138;</code>
+   * @return The enum numeric value on the wire for conversionValueRulePrimaryDimension.
+   */
+  int getConversionValueRulePrimaryDimensionValue();
+  /**
+   * <pre>
+   * Primary dimension of applied conversion value rules.
+   * NO_RULE_APPLIED shows the total recorded value of conversions that
+   * do not have a value rule applied.
+   * ORIGINAL shows the original value of conversions to which a value rule
+   * has been applied.
+   * GEO_LOCATION, DEVICE, AUDIENCE show the net adjustment after value
+   * rules were applied.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v8.enums.ConversionValueRulePrimaryDimensionEnum.ConversionValueRulePrimaryDimension conversion_value_rule_primary_dimension = 138;</code>
+   * @return The conversionValueRulePrimaryDimension.
+   */
+  com.google.ads.googleads.v8.enums.ConversionValueRulePrimaryDimensionEnum.ConversionValueRulePrimaryDimension getConversionValueRulePrimaryDimension();
+
+  /**
+   * <pre>
    * Resource name of the ad group criterion that represents webpage criterion.
    * </pre>
    *

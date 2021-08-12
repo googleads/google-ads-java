@@ -340,7 +340,7 @@ private static final long serialVersionUID = 0L;
     INVALID_VALUE_WITH_DURING_OPERATOR(22),
     /**
      * <pre>
-     * A non-string value was passed to the LIKE operator.
+     * An invalid value was passed to the LIKE operator.
      * </pre>
      *
      * <code>INVALID_VALUE_WITH_LIKE_OPERATOR = 56;</code>
@@ -807,7 +807,7 @@ private static final long serialVersionUID = 0L;
     public static final int INVALID_VALUE_WITH_DURING_OPERATOR_VALUE = 22;
     /**
      * <pre>
-     * A non-string value was passed to the LIKE operator.
+     * An invalid value was passed to the LIKE operator.
      * </pre>
      *
      * <code>INVALID_VALUE_WITH_LIKE_OPERATOR = 56;</code>

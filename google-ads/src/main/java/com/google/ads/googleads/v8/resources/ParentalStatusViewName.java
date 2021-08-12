@@ -216,9 +216,9 @@ public class ParentalStatusViewName implements ResourceName {
     }
 
     private Builder(ParentalStatusViewName parentalStatusViewName) {
-      customerId = parentalStatusViewName.customerId;
-      adGroupId = parentalStatusViewName.adGroupId;
-      criterionId = parentalStatusViewName.criterionId;
+      this.customerId = parentalStatusViewName.customerId;
+      this.adGroupId = parentalStatusViewName.adGroupId;
+      this.criterionId = parentalStatusViewName.criterionId;
     }
 
     public ParentalStatusViewName build() {

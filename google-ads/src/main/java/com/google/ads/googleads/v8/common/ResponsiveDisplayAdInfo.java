@@ -263,8 +263,8 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Marketing images to be used in the ad. Valid image types are GIF,
    * JPEG, and PNG. The minimum size is 600x314 and the aspect ratio must
-   * be 1.91:1 (+-1%). At least one marketing_image is required. Combined with
-   * square_marketing_images the maximum is 15.
+   * be 1.91:1 (+-1%). At least one `marketing_image` is required. Combined
+   * with `square_marketing_images`, the maximum is 15.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v8.common.AdImageAsset marketing_images = 1;</code>
@@ -277,8 +277,8 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Marketing images to be used in the ad. Valid image types are GIF,
    * JPEG, and PNG. The minimum size is 600x314 and the aspect ratio must
-   * be 1.91:1 (+-1%). At least one marketing_image is required. Combined with
-   * square_marketing_images the maximum is 15.
+   * be 1.91:1 (+-1%). At least one `marketing_image` is required. Combined
+   * with `square_marketing_images`, the maximum is 15.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v8.common.AdImageAsset marketing_images = 1;</code>
@@ -292,8 +292,8 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Marketing images to be used in the ad. Valid image types are GIF,
    * JPEG, and PNG. The minimum size is 600x314 and the aspect ratio must
-   * be 1.91:1 (+-1%). At least one marketing_image is required. Combined with
-   * square_marketing_images the maximum is 15.
+   * be 1.91:1 (+-1%). At least one `marketing_image` is required. Combined
+   * with `square_marketing_images`, the maximum is 15.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v8.common.AdImageAsset marketing_images = 1;</code>
@@ -306,8 +306,8 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Marketing images to be used in the ad. Valid image types are GIF,
    * JPEG, and PNG. The minimum size is 600x314 and the aspect ratio must
-   * be 1.91:1 (+-1%). At least one marketing_image is required. Combined with
-   * square_marketing_images the maximum is 15.
+   * be 1.91:1 (+-1%). At least one `marketing_image` is required. Combined
+   * with `square_marketing_images`, the maximum is 15.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v8.common.AdImageAsset marketing_images = 1;</code>
@@ -320,8 +320,8 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Marketing images to be used in the ad. Valid image types are GIF,
    * JPEG, and PNG. The minimum size is 600x314 and the aspect ratio must
-   * be 1.91:1 (+-1%). At least one marketing_image is required. Combined with
-   * square_marketing_images the maximum is 15.
+   * be 1.91:1 (+-1%). At least one `marketing_image` is required. Combined
+   * with `square_marketing_images`, the maximum is 15.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v8.common.AdImageAsset marketing_images = 1;</code>
@@ -338,8 +338,8 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Square marketing images to be used in the ad. Valid image types are GIF,
    * JPEG, and PNG. The minimum size is 300x300 and the aspect ratio must
-   * be 1:1 (+-1%). At least one square marketing_image is required. Combined
-   * with marketing_images the maximum is 15.
+   * be 1:1 (+-1%). At least one square `marketing_image` is required. Combined
+   * with `marketing_images`, the maximum is 15.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v8.common.AdImageAsset square_marketing_images = 2;</code>
@@ -352,8 +352,8 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Square marketing images to be used in the ad. Valid image types are GIF,
    * JPEG, and PNG. The minimum size is 300x300 and the aspect ratio must
-   * be 1:1 (+-1%). At least one square marketing_image is required. Combined
-   * with marketing_images the maximum is 15.
+   * be 1:1 (+-1%). At least one square `marketing_image` is required. Combined
+   * with `marketing_images`, the maximum is 15.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v8.common.AdImageAsset square_marketing_images = 2;</code>
@@ -367,8 +367,8 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Square marketing images to be used in the ad. Valid image types are GIF,
    * JPEG, and PNG. The minimum size is 300x300 and the aspect ratio must
-   * be 1:1 (+-1%). At least one square marketing_image is required. Combined
-   * with marketing_images the maximum is 15.
+   * be 1:1 (+-1%). At least one square `marketing_image` is required. Combined
+   * with `marketing_images`, the maximum is 15.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v8.common.AdImageAsset square_marketing_images = 2;</code>
@@ -381,8 +381,8 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Square marketing images to be used in the ad. Valid image types are GIF,
    * JPEG, and PNG. The minimum size is 300x300 and the aspect ratio must
-   * be 1:1 (+-1%). At least one square marketing_image is required. Combined
-   * with marketing_images the maximum is 15.
+   * be 1:1 (+-1%). At least one square `marketing_image` is required. Combined
+   * with `marketing_images`, the maximum is 15.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v8.common.AdImageAsset square_marketing_images = 2;</code>
@@ -395,8 +395,8 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Square marketing images to be used in the ad. Valid image types are GIF,
    * JPEG, and PNG. The minimum size is 300x300 and the aspect ratio must
-   * be 1:1 (+-1%). At least one square marketing_image is required. Combined
-   * with marketing_images the maximum is 15.
+   * be 1:1 (+-1%). At least one square `marketing_image` is required. Combined
+   * with `marketing_images`, the maximum is 15.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v8.common.AdImageAsset square_marketing_images = 2;</code>
@@ -413,7 +413,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Logo images to be used in the ad. Valid image types are GIF,
    * JPEG, and PNG. The minimum size is 512x128 and the aspect ratio must
-   * be 4:1 (+-1%). Combined with square_logo_images the maximum is 5.
+   * be 4:1 (+-1%). Combined with `square_logo_images`, the maximum is 5.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v8.common.AdImageAsset logo_images = 3;</code>
@@ -426,7 +426,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Logo images to be used in the ad. Valid image types are GIF,
    * JPEG, and PNG. The minimum size is 512x128 and the aspect ratio must
-   * be 4:1 (+-1%). Combined with square_logo_images the maximum is 5.
+   * be 4:1 (+-1%). Combined with `square_logo_images`, the maximum is 5.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v8.common.AdImageAsset logo_images = 3;</code>
@@ -440,7 +440,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Logo images to be used in the ad. Valid image types are GIF,
    * JPEG, and PNG. The minimum size is 512x128 and the aspect ratio must
-   * be 4:1 (+-1%). Combined with square_logo_images the maximum is 5.
+   * be 4:1 (+-1%). Combined with `square_logo_images`, the maximum is 5.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v8.common.AdImageAsset logo_images = 3;</code>
@@ -453,7 +453,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Logo images to be used in the ad. Valid image types are GIF,
    * JPEG, and PNG. The minimum size is 512x128 and the aspect ratio must
-   * be 4:1 (+-1%). Combined with square_logo_images the maximum is 5.
+   * be 4:1 (+-1%). Combined with `square_logo_images`, the maximum is 5.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v8.common.AdImageAsset logo_images = 3;</code>
@@ -466,7 +466,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Logo images to be used in the ad. Valid image types are GIF,
    * JPEG, and PNG. The minimum size is 512x128 and the aspect ratio must
-   * be 4:1 (+-1%). Combined with square_logo_images the maximum is 5.
+   * be 4:1 (+-1%). Combined with `square_logo_images`, the maximum is 5.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v8.common.AdImageAsset logo_images = 3;</code>
@@ -483,7 +483,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Square logo images to be used in the ad. Valid image types are GIF,
    * JPEG, and PNG. The minimum size is 128x128 and the aspect ratio must
-   * be 1:1 (+-1%). Combined with square_logo_images the maximum is 5.
+   * be 1:1 (+-1%). Combined with `square_logo_images`, the maximum is 5.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v8.common.AdImageAsset square_logo_images = 4;</code>
@@ -496,7 +496,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Square logo images to be used in the ad. Valid image types are GIF,
    * JPEG, and PNG. The minimum size is 128x128 and the aspect ratio must
-   * be 1:1 (+-1%). Combined with square_logo_images the maximum is 5.
+   * be 1:1 (+-1%). Combined with `square_logo_images`, the maximum is 5.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v8.common.AdImageAsset square_logo_images = 4;</code>
@@ -510,7 +510,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Square logo images to be used in the ad. Valid image types are GIF,
    * JPEG, and PNG. The minimum size is 128x128 and the aspect ratio must
-   * be 1:1 (+-1%). Combined with square_logo_images the maximum is 5.
+   * be 1:1 (+-1%). Combined with `square_logo_images`, the maximum is 5.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v8.common.AdImageAsset square_logo_images = 4;</code>
@@ -523,7 +523,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Square logo images to be used in the ad. Valid image types are GIF,
    * JPEG, and PNG. The minimum size is 128x128 and the aspect ratio must
-   * be 1:1 (+-1%). Combined with square_logo_images the maximum is 5.
+   * be 1:1 (+-1%). Combined with `square_logo_images`, the maximum is 5.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v8.common.AdImageAsset square_logo_images = 4;</code>
@@ -536,7 +536,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Square logo images to be used in the ad. Valid image types are GIF,
    * JPEG, and PNG. The minimum size is 128x128 and the aspect ratio must
-   * be 1:1 (+-1%). Combined with square_logo_images the maximum is 5.
+   * be 1:1 (+-1%). Combined with `square_logo_images`, the maximum is 5.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v8.common.AdImageAsset square_logo_images = 4;</code>
@@ -838,7 +838,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * The main color of the ad in hexadecimal, e.g. #ffffff for white.
-   * If one of main_color and accent_color is set, the other is required as
+   * If one of `main_color` and `accent_color` is set, the other is required as
    * well.
    * </pre>
    *
@@ -852,7 +852,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * The main color of the ad in hexadecimal, e.g. #ffffff for white.
-   * If one of main_color and accent_color is set, the other is required as
+   * If one of `main_color` and `accent_color` is set, the other is required as
    * well.
    * </pre>
    *
@@ -875,7 +875,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * The main color of the ad in hexadecimal, e.g. #ffffff for white.
-   * If one of main_color and accent_color is set, the other is required as
+   * If one of `main_color` and `accent_color` is set, the other is required as
    * well.
    * </pre>
    *
@@ -902,7 +902,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * The accent color of the ad in hexadecimal, e.g. #ffffff for white.
-   * If one of main_color and accent_color is set, the other is required as
+   * If one of `main_color` and `accent_color` is set, the other is required as
    * well.
    * </pre>
    *
@@ -916,7 +916,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * The accent color of the ad in hexadecimal, e.g. #ffffff for white.
-   * If one of main_color and accent_color is set, the other is required as
+   * If one of `main_color` and `accent_color` is set, the other is required as
    * well.
    * </pre>
    *
@@ -939,7 +939,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * The accent color of the ad in hexadecimal, e.g. #ffffff for white.
-   * If one of main_color and accent_color is set, the other is required as
+   * If one of `main_color` and `accent_color` is set, the other is required as
    * well.
    * </pre>
    *
@@ -968,8 +968,8 @@ private static final long serialVersionUID = 0L;
    * Advertiser's consent to allow flexible color. When true, the ad may be
    * served with different color if necessary. When false, the ad will be served
    * with the specified colors or a neutral color.
-   * The default value is true.
-   * Must be true if main_color and accent_color are not set.
+   * The default value is `true`.
+   * Must be true if `main_color` and `accent_color` are not set.
    * </pre>
    *
    * <code>bool allow_flexible_color = 20;</code>
@@ -984,8 +984,8 @@ private static final long serialVersionUID = 0L;
    * Advertiser's consent to allow flexible color. When true, the ad may be
    * served with different color if necessary. When false, the ad will be served
    * with the specified colors or a neutral color.
-   * The default value is true.
-   * Must be true if main_color and accent_color are not set.
+   * The default value is `true`.
+   * Must be true if `main_color` and `accent_color` are not set.
    * </pre>
    *
    * <code>bool allow_flexible_color = 20;</code>
@@ -2190,8 +2190,8 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Marketing images to be used in the ad. Valid image types are GIF,
      * JPEG, and PNG. The minimum size is 600x314 and the aspect ratio must
-     * be 1.91:1 (+-1%). At least one marketing_image is required. Combined with
-     * square_marketing_images the maximum is 15.
+     * be 1.91:1 (+-1%). At least one `marketing_image` is required. Combined
+     * with `square_marketing_images`, the maximum is 15.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v8.common.AdImageAsset marketing_images = 1;</code>
@@ -2207,8 +2207,8 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Marketing images to be used in the ad. Valid image types are GIF,
      * JPEG, and PNG. The minimum size is 600x314 and the aspect ratio must
-     * be 1.91:1 (+-1%). At least one marketing_image is required. Combined with
-     * square_marketing_images the maximum is 15.
+     * be 1.91:1 (+-1%). At least one `marketing_image` is required. Combined
+     * with `square_marketing_images`, the maximum is 15.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v8.common.AdImageAsset marketing_images = 1;</code>
@@ -2224,8 +2224,8 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Marketing images to be used in the ad. Valid image types are GIF,
      * JPEG, and PNG. The minimum size is 600x314 and the aspect ratio must
-     * be 1.91:1 (+-1%). At least one marketing_image is required. Combined with
-     * square_marketing_images the maximum is 15.
+     * be 1.91:1 (+-1%). At least one `marketing_image` is required. Combined
+     * with `square_marketing_images`, the maximum is 15.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v8.common.AdImageAsset marketing_images = 1;</code>
@@ -2241,8 +2241,8 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Marketing images to be used in the ad. Valid image types are GIF,
      * JPEG, and PNG. The minimum size is 600x314 and the aspect ratio must
-     * be 1.91:1 (+-1%). At least one marketing_image is required. Combined with
-     * square_marketing_images the maximum is 15.
+     * be 1.91:1 (+-1%). At least one `marketing_image` is required. Combined
+     * with `square_marketing_images`, the maximum is 15.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v8.common.AdImageAsset marketing_images = 1;</code>
@@ -2265,8 +2265,8 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Marketing images to be used in the ad. Valid image types are GIF,
      * JPEG, and PNG. The minimum size is 600x314 and the aspect ratio must
-     * be 1.91:1 (+-1%). At least one marketing_image is required. Combined with
-     * square_marketing_images the maximum is 15.
+     * be 1.91:1 (+-1%). At least one `marketing_image` is required. Combined
+     * with `square_marketing_images`, the maximum is 15.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v8.common.AdImageAsset marketing_images = 1;</code>
@@ -2286,8 +2286,8 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Marketing images to be used in the ad. Valid image types are GIF,
      * JPEG, and PNG. The minimum size is 600x314 and the aspect ratio must
-     * be 1.91:1 (+-1%). At least one marketing_image is required. Combined with
-     * square_marketing_images the maximum is 15.
+     * be 1.91:1 (+-1%). At least one `marketing_image` is required. Combined
+     * with `square_marketing_images`, the maximum is 15.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v8.common.AdImageAsset marketing_images = 1;</code>
@@ -2309,8 +2309,8 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Marketing images to be used in the ad. Valid image types are GIF,
      * JPEG, and PNG. The minimum size is 600x314 and the aspect ratio must
-     * be 1.91:1 (+-1%). At least one marketing_image is required. Combined with
-     * square_marketing_images the maximum is 15.
+     * be 1.91:1 (+-1%). At least one `marketing_image` is required. Combined
+     * with `square_marketing_images`, the maximum is 15.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v8.common.AdImageAsset marketing_images = 1;</code>
@@ -2333,8 +2333,8 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Marketing images to be used in the ad. Valid image types are GIF,
      * JPEG, and PNG. The minimum size is 600x314 and the aspect ratio must
-     * be 1.91:1 (+-1%). At least one marketing_image is required. Combined with
-     * square_marketing_images the maximum is 15.
+     * be 1.91:1 (+-1%). At least one `marketing_image` is required. Combined
+     * with `square_marketing_images`, the maximum is 15.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v8.common.AdImageAsset marketing_images = 1;</code>
@@ -2354,8 +2354,8 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Marketing images to be used in the ad. Valid image types are GIF,
      * JPEG, and PNG. The minimum size is 600x314 and the aspect ratio must
-     * be 1.91:1 (+-1%). At least one marketing_image is required. Combined with
-     * square_marketing_images the maximum is 15.
+     * be 1.91:1 (+-1%). At least one `marketing_image` is required. Combined
+     * with `square_marketing_images`, the maximum is 15.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v8.common.AdImageAsset marketing_images = 1;</code>
@@ -2375,8 +2375,8 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Marketing images to be used in the ad. Valid image types are GIF,
      * JPEG, and PNG. The minimum size is 600x314 and the aspect ratio must
-     * be 1.91:1 (+-1%). At least one marketing_image is required. Combined with
-     * square_marketing_images the maximum is 15.
+     * be 1.91:1 (+-1%). At least one `marketing_image` is required. Combined
+     * with `square_marketing_images`, the maximum is 15.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v8.common.AdImageAsset marketing_images = 1;</code>
@@ -2397,8 +2397,8 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Marketing images to be used in the ad. Valid image types are GIF,
      * JPEG, and PNG. The minimum size is 600x314 and the aspect ratio must
-     * be 1.91:1 (+-1%). At least one marketing_image is required. Combined with
-     * square_marketing_images the maximum is 15.
+     * be 1.91:1 (+-1%). At least one `marketing_image` is required. Combined
+     * with `square_marketing_images`, the maximum is 15.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v8.common.AdImageAsset marketing_images = 1;</code>
@@ -2417,8 +2417,8 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Marketing images to be used in the ad. Valid image types are GIF,
      * JPEG, and PNG. The minimum size is 600x314 and the aspect ratio must
-     * be 1.91:1 (+-1%). At least one marketing_image is required. Combined with
-     * square_marketing_images the maximum is 15.
+     * be 1.91:1 (+-1%). At least one `marketing_image` is required. Combined
+     * with `square_marketing_images`, the maximum is 15.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v8.common.AdImageAsset marketing_images = 1;</code>
@@ -2437,8 +2437,8 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Marketing images to be used in the ad. Valid image types are GIF,
      * JPEG, and PNG. The minimum size is 600x314 and the aspect ratio must
-     * be 1.91:1 (+-1%). At least one marketing_image is required. Combined with
-     * square_marketing_images the maximum is 15.
+     * be 1.91:1 (+-1%). At least one `marketing_image` is required. Combined
+     * with `square_marketing_images`, the maximum is 15.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v8.common.AdImageAsset marketing_images = 1;</code>
@@ -2451,8 +2451,8 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Marketing images to be used in the ad. Valid image types are GIF,
      * JPEG, and PNG. The minimum size is 600x314 and the aspect ratio must
-     * be 1.91:1 (+-1%). At least one marketing_image is required. Combined with
-     * square_marketing_images the maximum is 15.
+     * be 1.91:1 (+-1%). At least one `marketing_image` is required. Combined
+     * with `square_marketing_images`, the maximum is 15.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v8.common.AdImageAsset marketing_images = 1;</code>
@@ -2468,8 +2468,8 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Marketing images to be used in the ad. Valid image types are GIF,
      * JPEG, and PNG. The minimum size is 600x314 and the aspect ratio must
-     * be 1.91:1 (+-1%). At least one marketing_image is required. Combined with
-     * square_marketing_images the maximum is 15.
+     * be 1.91:1 (+-1%). At least one `marketing_image` is required. Combined
+     * with `square_marketing_images`, the maximum is 15.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v8.common.AdImageAsset marketing_images = 1;</code>
@@ -2486,8 +2486,8 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Marketing images to be used in the ad. Valid image types are GIF,
      * JPEG, and PNG. The minimum size is 600x314 and the aspect ratio must
-     * be 1.91:1 (+-1%). At least one marketing_image is required. Combined with
-     * square_marketing_images the maximum is 15.
+     * be 1.91:1 (+-1%). At least one `marketing_image` is required. Combined
+     * with `square_marketing_images`, the maximum is 15.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v8.common.AdImageAsset marketing_images = 1;</code>
@@ -2500,8 +2500,8 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Marketing images to be used in the ad. Valid image types are GIF,
      * JPEG, and PNG. The minimum size is 600x314 and the aspect ratio must
-     * be 1.91:1 (+-1%). At least one marketing_image is required. Combined with
-     * square_marketing_images the maximum is 15.
+     * be 1.91:1 (+-1%). At least one `marketing_image` is required. Combined
+     * with `square_marketing_images`, the maximum is 15.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v8.common.AdImageAsset marketing_images = 1;</code>
@@ -2515,8 +2515,8 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Marketing images to be used in the ad. Valid image types are GIF,
      * JPEG, and PNG. The minimum size is 600x314 and the aspect ratio must
-     * be 1.91:1 (+-1%). At least one marketing_image is required. Combined with
-     * square_marketing_images the maximum is 15.
+     * be 1.91:1 (+-1%). At least one `marketing_image` is required. Combined
+     * with `square_marketing_images`, the maximum is 15.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v8.common.AdImageAsset marketing_images = 1;</code>
@@ -2556,8 +2556,8 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Square marketing images to be used in the ad. Valid image types are GIF,
      * JPEG, and PNG. The minimum size is 300x300 and the aspect ratio must
-     * be 1:1 (+-1%). At least one square marketing_image is required. Combined
-     * with marketing_images the maximum is 15.
+     * be 1:1 (+-1%). At least one square `marketing_image` is required. Combined
+     * with `marketing_images`, the maximum is 15.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v8.common.AdImageAsset square_marketing_images = 2;</code>
@@ -2573,8 +2573,8 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Square marketing images to be used in the ad. Valid image types are GIF,
      * JPEG, and PNG. The minimum size is 300x300 and the aspect ratio must
-     * be 1:1 (+-1%). At least one square marketing_image is required. Combined
-     * with marketing_images the maximum is 15.
+     * be 1:1 (+-1%). At least one square `marketing_image` is required. Combined
+     * with `marketing_images`, the maximum is 15.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v8.common.AdImageAsset square_marketing_images = 2;</code>
@@ -2590,8 +2590,8 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Square marketing images to be used in the ad. Valid image types are GIF,
      * JPEG, and PNG. The minimum size is 300x300 and the aspect ratio must
-     * be 1:1 (+-1%). At least one square marketing_image is required. Combined
-     * with marketing_images the maximum is 15.
+     * be 1:1 (+-1%). At least one square `marketing_image` is required. Combined
+     * with `marketing_images`, the maximum is 15.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v8.common.AdImageAsset square_marketing_images = 2;</code>
@@ -2607,8 +2607,8 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Square marketing images to be used in the ad. Valid image types are GIF,
      * JPEG, and PNG. The minimum size is 300x300 and the aspect ratio must
-     * be 1:1 (+-1%). At least one square marketing_image is required. Combined
-     * with marketing_images the maximum is 15.
+     * be 1:1 (+-1%). At least one square `marketing_image` is required. Combined
+     * with `marketing_images`, the maximum is 15.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v8.common.AdImageAsset square_marketing_images = 2;</code>
@@ -2631,8 +2631,8 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Square marketing images to be used in the ad. Valid image types are GIF,
      * JPEG, and PNG. The minimum size is 300x300 and the aspect ratio must
-     * be 1:1 (+-1%). At least one square marketing_image is required. Combined
-     * with marketing_images the maximum is 15.
+     * be 1:1 (+-1%). At least one square `marketing_image` is required. Combined
+     * with `marketing_images`, the maximum is 15.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v8.common.AdImageAsset square_marketing_images = 2;</code>
@@ -2652,8 +2652,8 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Square marketing images to be used in the ad. Valid image types are GIF,
      * JPEG, and PNG. The minimum size is 300x300 and the aspect ratio must
-     * be 1:1 (+-1%). At least one square marketing_image is required. Combined
-     * with marketing_images the maximum is 15.
+     * be 1:1 (+-1%). At least one square `marketing_image` is required. Combined
+     * with `marketing_images`, the maximum is 15.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v8.common.AdImageAsset square_marketing_images = 2;</code>
@@ -2675,8 +2675,8 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Square marketing images to be used in the ad. Valid image types are GIF,
      * JPEG, and PNG. The minimum size is 300x300 and the aspect ratio must
-     * be 1:1 (+-1%). At least one square marketing_image is required. Combined
-     * with marketing_images the maximum is 15.
+     * be 1:1 (+-1%). At least one square `marketing_image` is required. Combined
+     * with `marketing_images`, the maximum is 15.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v8.common.AdImageAsset square_marketing_images = 2;</code>
@@ -2699,8 +2699,8 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Square marketing images to be used in the ad. Valid image types are GIF,
      * JPEG, and PNG. The minimum size is 300x300 and the aspect ratio must
-     * be 1:1 (+-1%). At least one square marketing_image is required. Combined
-     * with marketing_images the maximum is 15.
+     * be 1:1 (+-1%). At least one square `marketing_image` is required. Combined
+     * with `marketing_images`, the maximum is 15.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v8.common.AdImageAsset square_marketing_images = 2;</code>
@@ -2720,8 +2720,8 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Square marketing images to be used in the ad. Valid image types are GIF,
      * JPEG, and PNG. The minimum size is 300x300 and the aspect ratio must
-     * be 1:1 (+-1%). At least one square marketing_image is required. Combined
-     * with marketing_images the maximum is 15.
+     * be 1:1 (+-1%). At least one square `marketing_image` is required. Combined
+     * with `marketing_images`, the maximum is 15.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v8.common.AdImageAsset square_marketing_images = 2;</code>
@@ -2741,8 +2741,8 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Square marketing images to be used in the ad. Valid image types are GIF,
      * JPEG, and PNG. The minimum size is 300x300 and the aspect ratio must
-     * be 1:1 (+-1%). At least one square marketing_image is required. Combined
-     * with marketing_images the maximum is 15.
+     * be 1:1 (+-1%). At least one square `marketing_image` is required. Combined
+     * with `marketing_images`, the maximum is 15.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v8.common.AdImageAsset square_marketing_images = 2;</code>
@@ -2763,8 +2763,8 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Square marketing images to be used in the ad. Valid image types are GIF,
      * JPEG, and PNG. The minimum size is 300x300 and the aspect ratio must
-     * be 1:1 (+-1%). At least one square marketing_image is required. Combined
-     * with marketing_images the maximum is 15.
+     * be 1:1 (+-1%). At least one square `marketing_image` is required. Combined
+     * with `marketing_images`, the maximum is 15.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v8.common.AdImageAsset square_marketing_images = 2;</code>
@@ -2783,8 +2783,8 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Square marketing images to be used in the ad. Valid image types are GIF,
      * JPEG, and PNG. The minimum size is 300x300 and the aspect ratio must
-     * be 1:1 (+-1%). At least one square marketing_image is required. Combined
-     * with marketing_images the maximum is 15.
+     * be 1:1 (+-1%). At least one square `marketing_image` is required. Combined
+     * with `marketing_images`, the maximum is 15.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v8.common.AdImageAsset square_marketing_images = 2;</code>
@@ -2803,8 +2803,8 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Square marketing images to be used in the ad. Valid image types are GIF,
      * JPEG, and PNG. The minimum size is 300x300 and the aspect ratio must
-     * be 1:1 (+-1%). At least one square marketing_image is required. Combined
-     * with marketing_images the maximum is 15.
+     * be 1:1 (+-1%). At least one square `marketing_image` is required. Combined
+     * with `marketing_images`, the maximum is 15.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v8.common.AdImageAsset square_marketing_images = 2;</code>
@@ -2817,8 +2817,8 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Square marketing images to be used in the ad. Valid image types are GIF,
      * JPEG, and PNG. The minimum size is 300x300 and the aspect ratio must
-     * be 1:1 (+-1%). At least one square marketing_image is required. Combined
-     * with marketing_images the maximum is 15.
+     * be 1:1 (+-1%). At least one square `marketing_image` is required. Combined
+     * with `marketing_images`, the maximum is 15.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v8.common.AdImageAsset square_marketing_images = 2;</code>
@@ -2834,8 +2834,8 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Square marketing images to be used in the ad. Valid image types are GIF,
      * JPEG, and PNG. The minimum size is 300x300 and the aspect ratio must
-     * be 1:1 (+-1%). At least one square marketing_image is required. Combined
-     * with marketing_images the maximum is 15.
+     * be 1:1 (+-1%). At least one square `marketing_image` is required. Combined
+     * with `marketing_images`, the maximum is 15.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v8.common.AdImageAsset square_marketing_images = 2;</code>
@@ -2852,8 +2852,8 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Square marketing images to be used in the ad. Valid image types are GIF,
      * JPEG, and PNG. The minimum size is 300x300 and the aspect ratio must
-     * be 1:1 (+-1%). At least one square marketing_image is required. Combined
-     * with marketing_images the maximum is 15.
+     * be 1:1 (+-1%). At least one square `marketing_image` is required. Combined
+     * with `marketing_images`, the maximum is 15.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v8.common.AdImageAsset square_marketing_images = 2;</code>
@@ -2866,8 +2866,8 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Square marketing images to be used in the ad. Valid image types are GIF,
      * JPEG, and PNG. The minimum size is 300x300 and the aspect ratio must
-     * be 1:1 (+-1%). At least one square marketing_image is required. Combined
-     * with marketing_images the maximum is 15.
+     * be 1:1 (+-1%). At least one square `marketing_image` is required. Combined
+     * with `marketing_images`, the maximum is 15.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v8.common.AdImageAsset square_marketing_images = 2;</code>
@@ -2881,8 +2881,8 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Square marketing images to be used in the ad. Valid image types are GIF,
      * JPEG, and PNG. The minimum size is 300x300 and the aspect ratio must
-     * be 1:1 (+-1%). At least one square marketing_image is required. Combined
-     * with marketing_images the maximum is 15.
+     * be 1:1 (+-1%). At least one square `marketing_image` is required. Combined
+     * with `marketing_images`, the maximum is 15.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v8.common.AdImageAsset square_marketing_images = 2;</code>
@@ -2922,7 +2922,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Logo images to be used in the ad. Valid image types are GIF,
      * JPEG, and PNG. The minimum size is 512x128 and the aspect ratio must
-     * be 4:1 (+-1%). Combined with square_logo_images the maximum is 5.
+     * be 4:1 (+-1%). Combined with `square_logo_images`, the maximum is 5.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v8.common.AdImageAsset logo_images = 3;</code>
@@ -2938,7 +2938,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Logo images to be used in the ad. Valid image types are GIF,
      * JPEG, and PNG. The minimum size is 512x128 and the aspect ratio must
-     * be 4:1 (+-1%). Combined with square_logo_images the maximum is 5.
+     * be 4:1 (+-1%). Combined with `square_logo_images`, the maximum is 5.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v8.common.AdImageAsset logo_images = 3;</code>
@@ -2954,7 +2954,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Logo images to be used in the ad. Valid image types are GIF,
      * JPEG, and PNG. The minimum size is 512x128 and the aspect ratio must
-     * be 4:1 (+-1%). Combined with square_logo_images the maximum is 5.
+     * be 4:1 (+-1%). Combined with `square_logo_images`, the maximum is 5.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v8.common.AdImageAsset logo_images = 3;</code>
@@ -2970,7 +2970,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Logo images to be used in the ad. Valid image types are GIF,
      * JPEG, and PNG. The minimum size is 512x128 and the aspect ratio must
-     * be 4:1 (+-1%). Combined with square_logo_images the maximum is 5.
+     * be 4:1 (+-1%). Combined with `square_logo_images`, the maximum is 5.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v8.common.AdImageAsset logo_images = 3;</code>
@@ -2993,7 +2993,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Logo images to be used in the ad. Valid image types are GIF,
      * JPEG, and PNG. The minimum size is 512x128 and the aspect ratio must
-     * be 4:1 (+-1%). Combined with square_logo_images the maximum is 5.
+     * be 4:1 (+-1%). Combined with `square_logo_images`, the maximum is 5.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v8.common.AdImageAsset logo_images = 3;</code>
@@ -3013,7 +3013,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Logo images to be used in the ad. Valid image types are GIF,
      * JPEG, and PNG. The minimum size is 512x128 and the aspect ratio must
-     * be 4:1 (+-1%). Combined with square_logo_images the maximum is 5.
+     * be 4:1 (+-1%). Combined with `square_logo_images`, the maximum is 5.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v8.common.AdImageAsset logo_images = 3;</code>
@@ -3035,7 +3035,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Logo images to be used in the ad. Valid image types are GIF,
      * JPEG, and PNG. The minimum size is 512x128 and the aspect ratio must
-     * be 4:1 (+-1%). Combined with square_logo_images the maximum is 5.
+     * be 4:1 (+-1%). Combined with `square_logo_images`, the maximum is 5.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v8.common.AdImageAsset logo_images = 3;</code>
@@ -3058,7 +3058,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Logo images to be used in the ad. Valid image types are GIF,
      * JPEG, and PNG. The minimum size is 512x128 and the aspect ratio must
-     * be 4:1 (+-1%). Combined with square_logo_images the maximum is 5.
+     * be 4:1 (+-1%). Combined with `square_logo_images`, the maximum is 5.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v8.common.AdImageAsset logo_images = 3;</code>
@@ -3078,7 +3078,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Logo images to be used in the ad. Valid image types are GIF,
      * JPEG, and PNG. The minimum size is 512x128 and the aspect ratio must
-     * be 4:1 (+-1%). Combined with square_logo_images the maximum is 5.
+     * be 4:1 (+-1%). Combined with `square_logo_images`, the maximum is 5.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v8.common.AdImageAsset logo_images = 3;</code>
@@ -3098,7 +3098,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Logo images to be used in the ad. Valid image types are GIF,
      * JPEG, and PNG. The minimum size is 512x128 and the aspect ratio must
-     * be 4:1 (+-1%). Combined with square_logo_images the maximum is 5.
+     * be 4:1 (+-1%). Combined with `square_logo_images`, the maximum is 5.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v8.common.AdImageAsset logo_images = 3;</code>
@@ -3119,7 +3119,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Logo images to be used in the ad. Valid image types are GIF,
      * JPEG, and PNG. The minimum size is 512x128 and the aspect ratio must
-     * be 4:1 (+-1%). Combined with square_logo_images the maximum is 5.
+     * be 4:1 (+-1%). Combined with `square_logo_images`, the maximum is 5.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v8.common.AdImageAsset logo_images = 3;</code>
@@ -3138,7 +3138,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Logo images to be used in the ad. Valid image types are GIF,
      * JPEG, and PNG. The minimum size is 512x128 and the aspect ratio must
-     * be 4:1 (+-1%). Combined with square_logo_images the maximum is 5.
+     * be 4:1 (+-1%). Combined with `square_logo_images`, the maximum is 5.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v8.common.AdImageAsset logo_images = 3;</code>
@@ -3157,7 +3157,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Logo images to be used in the ad. Valid image types are GIF,
      * JPEG, and PNG. The minimum size is 512x128 and the aspect ratio must
-     * be 4:1 (+-1%). Combined with square_logo_images the maximum is 5.
+     * be 4:1 (+-1%). Combined with `square_logo_images`, the maximum is 5.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v8.common.AdImageAsset logo_images = 3;</code>
@@ -3170,7 +3170,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Logo images to be used in the ad. Valid image types are GIF,
      * JPEG, and PNG. The minimum size is 512x128 and the aspect ratio must
-     * be 4:1 (+-1%). Combined with square_logo_images the maximum is 5.
+     * be 4:1 (+-1%). Combined with `square_logo_images`, the maximum is 5.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v8.common.AdImageAsset logo_images = 3;</code>
@@ -3186,7 +3186,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Logo images to be used in the ad. Valid image types are GIF,
      * JPEG, and PNG. The minimum size is 512x128 and the aspect ratio must
-     * be 4:1 (+-1%). Combined with square_logo_images the maximum is 5.
+     * be 4:1 (+-1%). Combined with `square_logo_images`, the maximum is 5.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v8.common.AdImageAsset logo_images = 3;</code>
@@ -3203,7 +3203,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Logo images to be used in the ad. Valid image types are GIF,
      * JPEG, and PNG. The minimum size is 512x128 and the aspect ratio must
-     * be 4:1 (+-1%). Combined with square_logo_images the maximum is 5.
+     * be 4:1 (+-1%). Combined with `square_logo_images`, the maximum is 5.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v8.common.AdImageAsset logo_images = 3;</code>
@@ -3216,7 +3216,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Logo images to be used in the ad. Valid image types are GIF,
      * JPEG, and PNG. The minimum size is 512x128 and the aspect ratio must
-     * be 4:1 (+-1%). Combined with square_logo_images the maximum is 5.
+     * be 4:1 (+-1%). Combined with `square_logo_images`, the maximum is 5.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v8.common.AdImageAsset logo_images = 3;</code>
@@ -3230,7 +3230,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Logo images to be used in the ad. Valid image types are GIF,
      * JPEG, and PNG. The minimum size is 512x128 and the aspect ratio must
-     * be 4:1 (+-1%). Combined with square_logo_images the maximum is 5.
+     * be 4:1 (+-1%). Combined with `square_logo_images`, the maximum is 5.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v8.common.AdImageAsset logo_images = 3;</code>
@@ -3270,7 +3270,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Square logo images to be used in the ad. Valid image types are GIF,
      * JPEG, and PNG. The minimum size is 128x128 and the aspect ratio must
-     * be 1:1 (+-1%). Combined with square_logo_images the maximum is 5.
+     * be 1:1 (+-1%). Combined with `square_logo_images`, the maximum is 5.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v8.common.AdImageAsset square_logo_images = 4;</code>
@@ -3286,7 +3286,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Square logo images to be used in the ad. Valid image types are GIF,
      * JPEG, and PNG. The minimum size is 128x128 and the aspect ratio must
-     * be 1:1 (+-1%). Combined with square_logo_images the maximum is 5.
+     * be 1:1 (+-1%). Combined with `square_logo_images`, the maximum is 5.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v8.common.AdImageAsset square_logo_images = 4;</code>
@@ -3302,7 +3302,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Square logo images to be used in the ad. Valid image types are GIF,
      * JPEG, and PNG. The minimum size is 128x128 and the aspect ratio must
-     * be 1:1 (+-1%). Combined with square_logo_images the maximum is 5.
+     * be 1:1 (+-1%). Combined with `square_logo_images`, the maximum is 5.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v8.common.AdImageAsset square_logo_images = 4;</code>
@@ -3318,7 +3318,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Square logo images to be used in the ad. Valid image types are GIF,
      * JPEG, and PNG. The minimum size is 128x128 and the aspect ratio must
-     * be 1:1 (+-1%). Combined with square_logo_images the maximum is 5.
+     * be 1:1 (+-1%). Combined with `square_logo_images`, the maximum is 5.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v8.common.AdImageAsset square_logo_images = 4;</code>
@@ -3341,7 +3341,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Square logo images to be used in the ad. Valid image types are GIF,
      * JPEG, and PNG. The minimum size is 128x128 and the aspect ratio must
-     * be 1:1 (+-1%). Combined with square_logo_images the maximum is 5.
+     * be 1:1 (+-1%). Combined with `square_logo_images`, the maximum is 5.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v8.common.AdImageAsset square_logo_images = 4;</code>
@@ -3361,7 +3361,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Square logo images to be used in the ad. Valid image types are GIF,
      * JPEG, and PNG. The minimum size is 128x128 and the aspect ratio must
-     * be 1:1 (+-1%). Combined with square_logo_images the maximum is 5.
+     * be 1:1 (+-1%). Combined with `square_logo_images`, the maximum is 5.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v8.common.AdImageAsset square_logo_images = 4;</code>
@@ -3383,7 +3383,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Square logo images to be used in the ad. Valid image types are GIF,
      * JPEG, and PNG. The minimum size is 128x128 and the aspect ratio must
-     * be 1:1 (+-1%). Combined with square_logo_images the maximum is 5.
+     * be 1:1 (+-1%). Combined with `square_logo_images`, the maximum is 5.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v8.common.AdImageAsset square_logo_images = 4;</code>
@@ -3406,7 +3406,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Square logo images to be used in the ad. Valid image types are GIF,
      * JPEG, and PNG. The minimum size is 128x128 and the aspect ratio must
-     * be 1:1 (+-1%). Combined with square_logo_images the maximum is 5.
+     * be 1:1 (+-1%). Combined with `square_logo_images`, the maximum is 5.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v8.common.AdImageAsset square_logo_images = 4;</code>
@@ -3426,7 +3426,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Square logo images to be used in the ad. Valid image types are GIF,
      * JPEG, and PNG. The minimum size is 128x128 and the aspect ratio must
-     * be 1:1 (+-1%). Combined with square_logo_images the maximum is 5.
+     * be 1:1 (+-1%). Combined with `square_logo_images`, the maximum is 5.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v8.common.AdImageAsset square_logo_images = 4;</code>
@@ -3446,7 +3446,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Square logo images to be used in the ad. Valid image types are GIF,
      * JPEG, and PNG. The minimum size is 128x128 and the aspect ratio must
-     * be 1:1 (+-1%). Combined with square_logo_images the maximum is 5.
+     * be 1:1 (+-1%). Combined with `square_logo_images`, the maximum is 5.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v8.common.AdImageAsset square_logo_images = 4;</code>
@@ -3467,7 +3467,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Square logo images to be used in the ad. Valid image types are GIF,
      * JPEG, and PNG. The minimum size is 128x128 and the aspect ratio must
-     * be 1:1 (+-1%). Combined with square_logo_images the maximum is 5.
+     * be 1:1 (+-1%). Combined with `square_logo_images`, the maximum is 5.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v8.common.AdImageAsset square_logo_images = 4;</code>
@@ -3486,7 +3486,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Square logo images to be used in the ad. Valid image types are GIF,
      * JPEG, and PNG. The minimum size is 128x128 and the aspect ratio must
-     * be 1:1 (+-1%). Combined with square_logo_images the maximum is 5.
+     * be 1:1 (+-1%). Combined with `square_logo_images`, the maximum is 5.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v8.common.AdImageAsset square_logo_images = 4;</code>
@@ -3505,7 +3505,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Square logo images to be used in the ad. Valid image types are GIF,
      * JPEG, and PNG. The minimum size is 128x128 and the aspect ratio must
-     * be 1:1 (+-1%). Combined with square_logo_images the maximum is 5.
+     * be 1:1 (+-1%). Combined with `square_logo_images`, the maximum is 5.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v8.common.AdImageAsset square_logo_images = 4;</code>
@@ -3518,7 +3518,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Square logo images to be used in the ad. Valid image types are GIF,
      * JPEG, and PNG. The minimum size is 128x128 and the aspect ratio must
-     * be 1:1 (+-1%). Combined with square_logo_images the maximum is 5.
+     * be 1:1 (+-1%). Combined with `square_logo_images`, the maximum is 5.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v8.common.AdImageAsset square_logo_images = 4;</code>
@@ -3534,7 +3534,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Square logo images to be used in the ad. Valid image types are GIF,
      * JPEG, and PNG. The minimum size is 128x128 and the aspect ratio must
-     * be 1:1 (+-1%). Combined with square_logo_images the maximum is 5.
+     * be 1:1 (+-1%). Combined with `square_logo_images`, the maximum is 5.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v8.common.AdImageAsset square_logo_images = 4;</code>
@@ -3551,7 +3551,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Square logo images to be used in the ad. Valid image types are GIF,
      * JPEG, and PNG. The minimum size is 128x128 and the aspect ratio must
-     * be 1:1 (+-1%). Combined with square_logo_images the maximum is 5.
+     * be 1:1 (+-1%). Combined with `square_logo_images`, the maximum is 5.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v8.common.AdImageAsset square_logo_images = 4;</code>
@@ -3564,7 +3564,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Square logo images to be used in the ad. Valid image types are GIF,
      * JPEG, and PNG. The minimum size is 128x128 and the aspect ratio must
-     * be 1:1 (+-1%). Combined with square_logo_images the maximum is 5.
+     * be 1:1 (+-1%). Combined with `square_logo_images`, the maximum is 5.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v8.common.AdImageAsset square_logo_images = 4;</code>
@@ -3578,7 +3578,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Square logo images to be used in the ad. Valid image types are GIF,
      * JPEG, and PNG. The minimum size is 128x128 and the aspect ratio must
-     * be 1:1 (+-1%). Combined with square_logo_images the maximum is 5.
+     * be 1:1 (+-1%). Combined with `square_logo_images`, the maximum is 5.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v8.common.AdImageAsset square_logo_images = 4;</code>
@@ -4840,7 +4840,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The main color of the ad in hexadecimal, e.g. #ffffff for white.
-     * If one of main_color and accent_color is set, the other is required as
+     * If one of `main_color` and `accent_color` is set, the other is required as
      * well.
      * </pre>
      *
@@ -4853,7 +4853,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The main color of the ad in hexadecimal, e.g. #ffffff for white.
-     * If one of main_color and accent_color is set, the other is required as
+     * If one of `main_color` and `accent_color` is set, the other is required as
      * well.
      * </pre>
      *
@@ -4875,7 +4875,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The main color of the ad in hexadecimal, e.g. #ffffff for white.
-     * If one of main_color and accent_color is set, the other is required as
+     * If one of `main_color` and `accent_color` is set, the other is required as
      * well.
      * </pre>
      *
@@ -4898,7 +4898,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The main color of the ad in hexadecimal, e.g. #ffffff for white.
-     * If one of main_color and accent_color is set, the other is required as
+     * If one of `main_color` and `accent_color` is set, the other is required as
      * well.
      * </pre>
      *
@@ -4919,7 +4919,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The main color of the ad in hexadecimal, e.g. #ffffff for white.
-     * If one of main_color and accent_color is set, the other is required as
+     * If one of `main_color` and `accent_color` is set, the other is required as
      * well.
      * </pre>
      *
@@ -4935,7 +4935,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The main color of the ad in hexadecimal, e.g. #ffffff for white.
-     * If one of main_color and accent_color is set, the other is required as
+     * If one of `main_color` and `accent_color` is set, the other is required as
      * well.
      * </pre>
      *
@@ -4959,7 +4959,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The accent color of the ad in hexadecimal, e.g. #ffffff for white.
-     * If one of main_color and accent_color is set, the other is required as
+     * If one of `main_color` and `accent_color` is set, the other is required as
      * well.
      * </pre>
      *
@@ -4972,7 +4972,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The accent color of the ad in hexadecimal, e.g. #ffffff for white.
-     * If one of main_color and accent_color is set, the other is required as
+     * If one of `main_color` and `accent_color` is set, the other is required as
      * well.
      * </pre>
      *
@@ -4994,7 +4994,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The accent color of the ad in hexadecimal, e.g. #ffffff for white.
-     * If one of main_color and accent_color is set, the other is required as
+     * If one of `main_color` and `accent_color` is set, the other is required as
      * well.
      * </pre>
      *
@@ -5017,7 +5017,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The accent color of the ad in hexadecimal, e.g. #ffffff for white.
-     * If one of main_color and accent_color is set, the other is required as
+     * If one of `main_color` and `accent_color` is set, the other is required as
      * well.
      * </pre>
      *
@@ -5038,7 +5038,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The accent color of the ad in hexadecimal, e.g. #ffffff for white.
-     * If one of main_color and accent_color is set, the other is required as
+     * If one of `main_color` and `accent_color` is set, the other is required as
      * well.
      * </pre>
      *
@@ -5054,7 +5054,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The accent color of the ad in hexadecimal, e.g. #ffffff for white.
-     * If one of main_color and accent_color is set, the other is required as
+     * If one of `main_color` and `accent_color` is set, the other is required as
      * well.
      * </pre>
      *
@@ -5080,8 +5080,8 @@ private static final long serialVersionUID = 0L;
      * Advertiser's consent to allow flexible color. When true, the ad may be
      * served with different color if necessary. When false, the ad will be served
      * with the specified colors or a neutral color.
-     * The default value is true.
-     * Must be true if main_color and accent_color are not set.
+     * The default value is `true`.
+     * Must be true if `main_color` and `accent_color` are not set.
      * </pre>
      *
      * <code>bool allow_flexible_color = 20;</code>
@@ -5096,8 +5096,8 @@ private static final long serialVersionUID = 0L;
      * Advertiser's consent to allow flexible color. When true, the ad may be
      * served with different color if necessary. When false, the ad will be served
      * with the specified colors or a neutral color.
-     * The default value is true.
-     * Must be true if main_color and accent_color are not set.
+     * The default value is `true`.
+     * Must be true if `main_color` and `accent_color` are not set.
      * </pre>
      *
      * <code>bool allow_flexible_color = 20;</code>
@@ -5112,8 +5112,8 @@ private static final long serialVersionUID = 0L;
      * Advertiser's consent to allow flexible color. When true, the ad may be
      * served with different color if necessary. When false, the ad will be served
      * with the specified colors or a neutral color.
-     * The default value is true.
-     * Must be true if main_color and accent_color are not set.
+     * The default value is `true`.
+     * Must be true if `main_color` and `accent_color` are not set.
      * </pre>
      *
      * <code>bool allow_flexible_color = 20;</code>
@@ -5131,8 +5131,8 @@ private static final long serialVersionUID = 0L;
      * Advertiser's consent to allow flexible color. When true, the ad may be
      * served with different color if necessary. When false, the ad will be served
      * with the specified colors or a neutral color.
-     * The default value is true.
-     * Must be true if main_color and accent_color are not set.
+     * The default value is `true`.
+     * Must be true if `main_color` and `accent_color` are not set.
      * </pre>
      *
      * <code>bool allow_flexible_color = 20;</code>

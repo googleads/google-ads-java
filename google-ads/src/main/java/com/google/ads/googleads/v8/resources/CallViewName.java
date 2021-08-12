@@ -182,8 +182,8 @@ public class CallViewName implements ResourceName {
     }
 
     private Builder(CallViewName callViewName) {
-      customerId = callViewName.customerId;
-      callDetailId = callViewName.callDetailId;
+      this.customerId = callViewName.customerId;
+      this.callDetailId = callViewName.callDetailId;
     }
 
     public CallViewName build() {

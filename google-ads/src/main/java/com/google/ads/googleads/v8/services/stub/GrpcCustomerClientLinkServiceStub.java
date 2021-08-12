@@ -25,7 +25,6 @@ import com.google.api.gax.core.BackgroundResourceAggregation;
 import com.google.api.gax.grpc.GrpcCallSettings;
 import com.google.api.gax.grpc.GrpcStubCallableFactory;
 import com.google.api.gax.rpc.ClientContext;
-import com.google.api.gax.rpc.RequestParamsExtractor;
 import com.google.api.gax.rpc.UnaryCallable;
 import com.google.common.collect.ImmutableMap;
 import com.google.longrunning.stub.GrpcOperationsStub;
@@ -124,13 +123,10 @@ public class GrpcCustomerClientLinkServiceStub extends CustomerClientLinkService
             GrpcCallSettings.<GetCustomerClientLinkRequest, CustomerClientLink>newBuilder()
                 .setMethodDescriptor(getCustomerClientLinkMethodDescriptor)
                 .setParamsExtractor(
-                    new RequestParamsExtractor<GetCustomerClientLinkRequest>() {
-                      @Override
-                      public Map<String, String> extract(GetCustomerClientLinkRequest request) {
-                        ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
-                        params.put("resource_name", String.valueOf(request.getResourceName()));
-                        return params.build();
-                      }
+                    request -> {
+                      ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
+                      params.put("resource_name", String.valueOf(request.getResourceName()));
+                      return params.build();
                     })
                 .build();
     GrpcCallSettings<MutateCustomerClientLinkRequest, MutateCustomerClientLinkResponse>
@@ -139,13 +135,10 @@ public class GrpcCustomerClientLinkServiceStub extends CustomerClientLinkService
                 .<MutateCustomerClientLinkRequest, MutateCustomerClientLinkResponse>newBuilder()
                 .setMethodDescriptor(mutateCustomerClientLinkMethodDescriptor)
                 .setParamsExtractor(
-                    new RequestParamsExtractor<MutateCustomerClientLinkRequest>() {
-                      @Override
-                      public Map<String, String> extract(MutateCustomerClientLinkRequest request) {
-                        ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
-                        params.put("customer_id", String.valueOf(request.getCustomerId()));
-                        return params.build();
-                      }
+                    request -> {
+                      ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
+                      params.put("customer_id", String.valueOf(request.getCustomerId()));
+                      return params.build();
                     })
                 .build();
 
@@ -182,7 +175,13 @@ public class GrpcCustomerClientLinkServiceStub extends CustomerClientLinkService
 
   @Override
   public final void close() {
-    shutdown();
+    try {
+      backgroundResources.close();
+    } catch (RuntimeException e) {
+      throw e;
+    } catch (Exception e) {
+      throw new IllegalStateException("Failed to close resource", e);
+    }
   }
 
   @Override

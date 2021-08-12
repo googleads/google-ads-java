@@ -181,8 +181,8 @@ public class AdGroupName implements ResourceName {
     }
 
     private Builder(AdGroupName adGroupName) {
-      customerId = adGroupName.customerId;
-      adGroupId = adGroupName.adGroupId;
+      this.customerId = adGroupName.customerId;
+      this.adGroupId = adGroupName.adGroupId;
     }
 
     public AdGroupName build() {

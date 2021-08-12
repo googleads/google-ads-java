@@ -216,9 +216,9 @@ public class SharedCriterionName implements ResourceName {
     }
 
     private Builder(SharedCriterionName sharedCriterionName) {
-      customerId = sharedCriterionName.customerId;
-      sharedSetId = sharedCriterionName.sharedSetId;
-      criterionId = sharedCriterionName.criterionId;
+      this.customerId = sharedCriterionName.customerId;
+      this.sharedSetId = sharedCriterionName.sharedSetId;
+      this.criterionId = sharedCriterionName.criterionId;
     }
 
     public SharedCriterionName build() {

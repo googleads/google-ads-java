@@ -190,8 +190,8 @@ public class KeywordThemeConstantName implements ResourceName {
     }
 
     private Builder(KeywordThemeConstantName keywordThemeConstantName) {
-      expressCategoryId = keywordThemeConstantName.expressCategoryId;
-      expressSubCategoryId = keywordThemeConstantName.expressSubCategoryId;
+      this.expressCategoryId = keywordThemeConstantName.expressCategoryId;
+      this.expressSubCategoryId = keywordThemeConstantName.expressSubCategoryId;
     }
 
     public KeywordThemeConstantName build() {

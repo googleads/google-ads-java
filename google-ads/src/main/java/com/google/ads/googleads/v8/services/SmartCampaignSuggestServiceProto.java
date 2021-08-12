@@ -30,6 +30,11 @@ public final class SmartCampaignSuggestServiceProto {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_google_ads_googleads_v8_services_SmartCampaignSuggestionInfo_LocationList_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_google_ads_googleads_v8_services_SmartCampaignSuggestionInfo_BusinessContext_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_google_ads_googleads_v8_services_SmartCampaignSuggestionInfo_BusinessContext_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
     internal_static_google_ads_googleads_v8_services_SuggestSmartCampaignBudgetOptionsResponse_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -44,6 +49,16 @@ public final class SmartCampaignSuggestServiceProto {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_google_ads_googleads_v8_services_SuggestSmartCampaignBudgetOptionsResponse_BudgetOption_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_google_ads_googleads_v8_services_SuggestSmartCampaignAdRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_google_ads_googleads_v8_services_SuggestSmartCampaignAdRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_google_ads_googleads_v8_services_SuggestSmartCampaignAdResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_google_ads_googleads_v8_services_SuggestSmartCampaignAdResponse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -55,67 +70,86 @@ public final class SmartCampaignSuggestServiceProto {
     java.lang.String[] descriptorData = {
       "\nEgoogle/ads/googleads/v8/services/smart" +
       "_campaign_suggest_service.proto\022 google." +
-      "ads.googleads.v8.services\032-google/ads/go" +
-      "ogleads/v8/common/criteria.proto\032\034google" +
-      "/api/annotations.proto\032\037google/api/field" +
-      "_behavior.proto\032\031google/api/resource.pro" +
-      "to\032\027google/api/client.proto\"\365\001\n(SuggestS" +
-      "martCampaignBudgetOptionsRequest\022\030\n\013cust" +
-      "omer_id\030\001 \001(\tB\003\340A\002\022=\n\010campaign\030\002 \001(\tB)\340A" +
-      "\002\372A#\n!googleads.googleapis.com/CampaignH" +
-      "\000\022]\n\017suggestion_info\030\003 \001(\0132=.google.ads." +
-      "googleads.v8.services.SmartCampaignSugge" +
-      "stionInfoB\003\340A\002H\000B\021\n\017suggestion_data\"\245\004\n\033" +
-      "SmartCampaignSuggestionInfo\022\026\n\tfinal_url" +
-      "\030\001 \001(\tB\003\340A\001\022!\n\024business_location_id\030\002 \001(" +
-      "\003B\003\340A\001\022\032\n\rlanguage_code\030\003 \001(\tB\003\340A\001\022I\n\014ad" +
-      "_schedules\030\006 \003(\0132..google.ads.googleads." +
-      "v8.common.AdScheduleInfoB\003\340A\001\022M\n\016keyword" +
-      "_themes\030\007 \003(\01320.google.ads.googleads.v8." +
-      "common.KeywordThemeInfoB\003\340A\001\022h\n\rlocation" +
-      "_list\030\004 \001(\0132J.google.ads.googleads.v8.se" +
-      "rvices.SmartCampaignSuggestionInfo.Locat" +
-      "ionListB\003\340A\001H\000\022G\n\tproximity\030\005 \001(\0132-.goog" +
-      "le.ads.googleads.v8.common.ProximityInfo" +
-      "B\003\340A\001H\000\032T\n\014LocationList\022D\n\tlocations\030\001 \003" +
-      "(\0132,.google.ads.googleads.v8.common.Loca" +
-      "tionInfoB\003\340A\002B\014\n\ngeo_target\"\373\004\n)SuggestS" +
-      "martCampaignBudgetOptionsResponse\022o\n\003low" +
-      "\030\001 \001(\0132X.google.ads.googleads.v8.service" +
-      "s.SuggestSmartCampaignBudgetOptionsRespo" +
-      "nse.BudgetOptionB\003\340A\001H\000\210\001\001\022w\n\013recommende" +
-      "d\030\002 \001(\0132X.google.ads.googleads.v8.servic" +
-      "es.SuggestSmartCampaignBudgetOptionsResp" +
-      "onse.BudgetOptionB\003\340A\001H\001\210\001\001\022p\n\004high\030\003 \001(" +
-      "\0132X.google.ads.googleads.v8.services.Sug" +
-      "gestSmartCampaignBudgetOptionsResponse.B" +
-      "udgetOptionB\003\340A\001H\002\210\001\001\032=\n\007Metrics\022\030\n\020min_" +
-      "daily_clicks\030\001 \001(\003\022\030\n\020max_daily_clicks\030\002" +
-      " \001(\003\032\221\001\n\014BudgetOption\022\033\n\023daily_amount_mi" +
-      "cros\030\001 \001(\003\022d\n\007metrics\030\002 \001(\0132S.google.ads" +
-      ".googleads.v8.services.SuggestSmartCampa" +
-      "ignBudgetOptionsResponse.MetricsB\006\n\004_low" +
-      "B\016\n\014_recommendedB\007\n\005_high2\357\002\n\033SmartCampa" +
-      "ignSuggestService\022\210\002\n!SuggestSmartCampai" +
-      "gnBudgetOptions\022J.google.ads.googleads.v" +
-      "8.services.SuggestSmartCampaignBudgetOpt" +
-      "ionsRequest\032K.google.ads.googleads.v8.se" +
-      "rvices.SuggestSmartCampaignBudgetOptions" +
-      "Response\"J\202\323\344\223\002D\"?/v8/customers/{custome" +
-      "r_id=*}:suggestSmartCampaignBudgetOption" +
-      "s:\001*\032E\312A\030googleads.googleapis.com\322A\'http" +
-      "s://www.googleapis.com/auth/adwordsB\207\002\n$" +
-      "com.google.ads.googleads.v8.servicesB Sm" +
-      "artCampaignSuggestServiceProtoP\001ZHgoogle" +
-      ".golang.org/genproto/googleapis/ads/goog" +
-      "leads/v8/services;services\242\002\003GAA\252\002 Googl" +
-      "e.Ads.GoogleAds.V8.Services\312\002 Google\\Ads" +
-      "\\GoogleAds\\V8\\Services\352\002$Google::Ads::Go" +
-      "ogleAds::V8::Servicesb\006proto3"
+      "ads.googleads.v8.services\0322google/ads/go" +
+      "ogleads/v8/common/ad_type_infos.proto\032-g" +
+      "oogle/ads/googleads/v8/common/criteria.p" +
+      "roto\032\034google/api/annotations.proto\032\037goog" +
+      "le/api/field_behavior.proto\032\031google/api/" +
+      "resource.proto\032\027google/api/client.proto\"" +
+      "\365\001\n(SuggestSmartCampaignBudgetOptionsReq" +
+      "uest\022\030\n\013customer_id\030\001 \001(\tB\003\340A\002\022=\n\010campai" +
+      "gn\030\002 \001(\tB)\340A\002\372A#\n!googleads.googleapis.c" +
+      "om/CampaignH\000\022]\n\017suggestion_info\030\003 \001(\0132=" +
+      ".google.ads.googleads.v8.services.SmartC" +
+      "ampaignSuggestionInfoB\003\340A\002H\000B\021\n\017suggesti" +
+      "on_data\"\332\005\n\033SmartCampaignSuggestionInfo\022" +
+      "\026\n\tfinal_url\030\001 \001(\tB\003\340A\001\022\032\n\rlanguage_code" +
+      "\030\003 \001(\tB\003\340A\001\022I\n\014ad_schedules\030\006 \003(\0132..goog" +
+      "le.ads.googleads.v8.common.AdScheduleInf" +
+      "oB\003\340A\001\022M\n\016keyword_themes\030\007 \003(\01320.google." +
+      "ads.googleads.v8.common.KeywordThemeInfo" +
+      "B\003\340A\001\022n\n\020business_context\030\010 \001(\0132M.google" +
+      ".ads.googleads.v8.services.SmartCampaign" +
+      "SuggestionInfo.BusinessContextB\003\340A\001H\000\022#\n" +
+      "\024business_location_id\030\002 \001(\003B\003\340A\001H\000\022h\n\rlo" +
+      "cation_list\030\004 \001(\0132J.google.ads.googleads" +
+      ".v8.services.SmartCampaignSuggestionInfo" +
+      ".LocationListB\003\340A\001H\001\022G\n\tproximity\030\005 \001(\0132" +
+      "-.google.ads.googleads.v8.common.Proximi" +
+      "tyInfoB\003\340A\001H\001\032T\n\014LocationList\022D\n\tlocatio" +
+      "ns\030\001 \003(\0132,.google.ads.googleads.v8.commo" +
+      "n.LocationInfoB\003\340A\002\032-\n\017BusinessContext\022\032" +
+      "\n\rbusiness_name\030\001 \001(\tB\003\340A\001B\022\n\020business_s" +
+      "ettingB\014\n\ngeo_target\"\373\004\n)SuggestSmartCam" +
+      "paignBudgetOptionsResponse\022o\n\003low\030\001 \001(\0132" +
+      "X.google.ads.googleads.v8.services.Sugge" +
+      "stSmartCampaignBudgetOptionsResponse.Bud" +
+      "getOptionB\003\340A\001H\000\210\001\001\022w\n\013recommended\030\002 \001(\013" +
+      "2X.google.ads.googleads.v8.services.Sugg" +
+      "estSmartCampaignBudgetOptionsResponse.Bu" +
+      "dgetOptionB\003\340A\001H\001\210\001\001\022p\n\004high\030\003 \001(\0132X.goo" +
+      "gle.ads.googleads.v8.services.SuggestSma" +
+      "rtCampaignBudgetOptionsResponse.BudgetOp" +
+      "tionB\003\340A\001H\002\210\001\001\032=\n\007Metrics\022\030\n\020min_daily_c" +
+      "licks\030\001 \001(\003\022\030\n\020max_daily_clicks\030\002 \001(\003\032\221\001" +
+      "\n\014BudgetOption\022\033\n\023daily_amount_micros\030\001 " +
+      "\001(\003\022d\n\007metrics\030\002 \001(\0132S.google.ads.google" +
+      "ads.v8.services.SuggestSmartCampaignBudg" +
+      "etOptionsResponse.MetricsB\006\n\004_lowB\016\n\014_re" +
+      "commendedB\007\n\005_high\"\226\001\n\035SuggestSmartCampa" +
+      "ignAdRequest\022\030\n\013customer_id\030\001 \001(\tB\003\340A\002\022[" +
+      "\n\017suggestion_info\030\002 \001(\0132=.google.ads.goo" +
+      "gleads.v8.services.SmartCampaignSuggesti" +
+      "onInfoB\003\340A\002\"k\n\036SuggestSmartCampaignAdRes" +
+      "ponse\022I\n\007ad_info\030\001 \001(\01323.google.ads.goog" +
+      "leads.v8.common.SmartCampaignAdInfoB\003\340A\001" +
+      "2\316\004\n\033SmartCampaignSuggestService\022\210\002\n!Sug" +
+      "gestSmartCampaignBudgetOptions\022J.google." +
+      "ads.googleads.v8.services.SuggestSmartCa" +
+      "mpaignBudgetOptionsRequest\032K.google.ads." +
+      "googleads.v8.services.SuggestSmartCampai" +
+      "gnBudgetOptionsResponse\"J\202\323\344\223\002D\"?/v8/cus" +
+      "tomers/{customer_id=*}:suggestSmartCampa" +
+      "ignBudgetOptions:\001*\022\334\001\n\026SuggestSmartCamp" +
+      "aignAd\022?.google.ads.googleads.v8.service" +
+      "s.SuggestSmartCampaignAdRequest\032@.google" +
+      ".ads.googleads.v8.services.SuggestSmartC" +
+      "ampaignAdResponse\"?\202\323\344\223\0029\"4/v8/customers" +
+      "/{customer_id=*}:suggestSmartCampaignAd:" +
+      "\001*\032E\312A\030googleads.googleapis.com\322A\'https:" +
+      "//www.googleapis.com/auth/adwordsB\207\002\n$co" +
+      "m.google.ads.googleads.v8.servicesB Smar" +
+      "tCampaignSuggestServiceProtoP\001ZHgoogle.g" +
+      "olang.org/genproto/googleapis/ads/google" +
+      "ads/v8/services;services\242\002\003GAA\252\002 Google." +
+      "Ads.GoogleAds.V8.Services\312\002 Google\\Ads\\G" +
+      "oogleAds\\V8\\Services\352\002$Google::Ads::Goog" +
+      "leAds::V8::Servicesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          com.google.ads.googleads.v8.common.AdTypeInfosProto.getDescriptor(),
           com.google.ads.googleads.v8.common.CriteriaProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
           com.google.api.FieldBehaviorProto.getDescriptor(),
@@ -133,13 +167,19 @@ public final class SmartCampaignSuggestServiceProto {
     internal_static_google_ads_googleads_v8_services_SmartCampaignSuggestionInfo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v8_services_SmartCampaignSuggestionInfo_descriptor,
-        new java.lang.String[] { "FinalUrl", "BusinessLocationId", "LanguageCode", "AdSchedules", "KeywordThemes", "LocationList", "Proximity", "GeoTarget", });
+        new java.lang.String[] { "FinalUrl", "LanguageCode", "AdSchedules", "KeywordThemes", "BusinessContext", "BusinessLocationId", "LocationList", "Proximity", "BusinessSetting", "GeoTarget", });
     internal_static_google_ads_googleads_v8_services_SmartCampaignSuggestionInfo_LocationList_descriptor =
       internal_static_google_ads_googleads_v8_services_SmartCampaignSuggestionInfo_descriptor.getNestedTypes().get(0);
     internal_static_google_ads_googleads_v8_services_SmartCampaignSuggestionInfo_LocationList_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v8_services_SmartCampaignSuggestionInfo_LocationList_descriptor,
         new java.lang.String[] { "Locations", });
+    internal_static_google_ads_googleads_v8_services_SmartCampaignSuggestionInfo_BusinessContext_descriptor =
+      internal_static_google_ads_googleads_v8_services_SmartCampaignSuggestionInfo_descriptor.getNestedTypes().get(1);
+    internal_static_google_ads_googleads_v8_services_SmartCampaignSuggestionInfo_BusinessContext_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_google_ads_googleads_v8_services_SmartCampaignSuggestionInfo_BusinessContext_descriptor,
+        new java.lang.String[] { "BusinessName", });
     internal_static_google_ads_googleads_v8_services_SuggestSmartCampaignBudgetOptionsResponse_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_google_ads_googleads_v8_services_SuggestSmartCampaignBudgetOptionsResponse_fieldAccessorTable = new
@@ -158,6 +198,18 @@ public final class SmartCampaignSuggestServiceProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v8_services_SuggestSmartCampaignBudgetOptionsResponse_BudgetOption_descriptor,
         new java.lang.String[] { "DailyAmountMicros", "Metrics", });
+    internal_static_google_ads_googleads_v8_services_SuggestSmartCampaignAdRequest_descriptor =
+      getDescriptor().getMessageTypes().get(3);
+    internal_static_google_ads_googleads_v8_services_SuggestSmartCampaignAdRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_google_ads_googleads_v8_services_SuggestSmartCampaignAdRequest_descriptor,
+        new java.lang.String[] { "CustomerId", "SuggestionInfo", });
+    internal_static_google_ads_googleads_v8_services_SuggestSmartCampaignAdResponse_descriptor =
+      getDescriptor().getMessageTypes().get(4);
+    internal_static_google_ads_googleads_v8_services_SuggestSmartCampaignAdResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_google_ads_googleads_v8_services_SuggestSmartCampaignAdResponse_descriptor,
+        new java.lang.String[] { "AdInfo", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.ClientProto.defaultHost);
@@ -167,6 +219,7 @@ public final class SmartCampaignSuggestServiceProto {
     registry.add(com.google.api.ResourceProto.resourceReference);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
+    com.google.ads.googleads.v8.common.AdTypeInfosProto.getDescriptor();
     com.google.ads.googleads.v8.common.CriteriaProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
     com.google.api.FieldBehaviorProto.getDescriptor();

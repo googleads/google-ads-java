@@ -46,7 +46,9 @@ dependencies {
   implementation 'com.beust:jcommander:1.72'
   implementation 'joda-time:joda-time:2.8.2'
   runtimeOnly 'org.apache.logging.log4j:log4j-slf4j-impl:2.11.1'
+  testImplementation 'org.reflections:reflections:0.9.11'
   testImplementation 'org.mockito:mockito-core:2.27.0'
+  testImplementation 'org.hamcrest:hamcrest:2.2'
 }
 
 description = 'Google Ads API client library for Java examples'

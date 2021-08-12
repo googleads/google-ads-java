@@ -25,7 +25,6 @@ import com.google.api.gax.core.BackgroundResourceAggregation;
 import com.google.api.gax.grpc.GrpcCallSettings;
 import com.google.api.gax.grpc.GrpcStubCallableFactory;
 import com.google.api.gax.rpc.ClientContext;
-import com.google.api.gax.rpc.RequestParamsExtractor;
 import com.google.api.gax.rpc.UnaryCallable;
 import com.google.common.collect.ImmutableMap;
 import com.google.longrunning.stub.GrpcOperationsStub;
@@ -124,13 +123,10 @@ public class GrpcKeywordPlanAdGroupServiceStub extends KeywordPlanAdGroupService
             GrpcCallSettings.<GetKeywordPlanAdGroupRequest, KeywordPlanAdGroup>newBuilder()
                 .setMethodDescriptor(getKeywordPlanAdGroupMethodDescriptor)
                 .setParamsExtractor(
-                    new RequestParamsExtractor<GetKeywordPlanAdGroupRequest>() {
-                      @Override
-                      public Map<String, String> extract(GetKeywordPlanAdGroupRequest request) {
-                        ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
-                        params.put("resource_name", String.valueOf(request.getResourceName()));
-                        return params.build();
-                      }
+                    request -> {
+                      ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
+                      params.put("resource_name", String.valueOf(request.getResourceName()));
+                      return params.build();
                     })
                 .build();
     GrpcCallSettings<MutateKeywordPlanAdGroupsRequest, MutateKeywordPlanAdGroupsResponse>
@@ -139,13 +135,10 @@ public class GrpcKeywordPlanAdGroupServiceStub extends KeywordPlanAdGroupService
                 .<MutateKeywordPlanAdGroupsRequest, MutateKeywordPlanAdGroupsResponse>newBuilder()
                 .setMethodDescriptor(mutateKeywordPlanAdGroupsMethodDescriptor)
                 .setParamsExtractor(
-                    new RequestParamsExtractor<MutateKeywordPlanAdGroupsRequest>() {
-                      @Override
-                      public Map<String, String> extract(MutateKeywordPlanAdGroupsRequest request) {
-                        ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
-                        params.put("customer_id", String.valueOf(request.getCustomerId()));
-                        return params.build();
-                      }
+                    request -> {
+                      ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
+                      params.put("customer_id", String.valueOf(request.getCustomerId()));
+                      return params.build();
                     })
                 .build();
 
@@ -182,7 +175,13 @@ public class GrpcKeywordPlanAdGroupServiceStub extends KeywordPlanAdGroupService
 
   @Override
   public final void close() {
-    shutdown();
+    try {
+      backgroundResources.close();
+    } catch (RuntimeException e) {
+      throw e;
+    } catch (Exception e) {
+      throw new IllegalStateException("Failed to close resource", e);
+    }
   }
 
   @Override

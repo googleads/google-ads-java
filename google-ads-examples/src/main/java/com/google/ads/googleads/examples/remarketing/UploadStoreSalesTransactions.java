@@ -315,6 +315,11 @@ public class UploadStoreSalesTransactions {
       // Issues an asynchronous request to run the offline user data job.
       offlineUserDataJobServiceClient.runOfflineUserDataJobAsync(offlineUserDataJobResourceName);
 
+      // BEWARE! The above call returns an OperationFuture. The execution of that future depends on
+      // the thread pool which is owned by offlineUserDataJobServiceClient. If you use this future,
+      // you *must* keep the service client in scope too.
+      // See https://developers.google.com/google-ads/api/docs/client-libs/java/lro for more detail.
+
       System.out.printf(
           "Sent request to asynchronously run offline user data job: %s%n",
           offlineUserDataJobResourceName);

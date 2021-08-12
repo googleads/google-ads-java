@@ -207,6 +207,38 @@ private static final long serialVersionUID = 0L;
      * <code>AD_GROUP_AD = 13;</code>
      */
     AD_GROUP_AD(13),
+    /**
+     * <pre>
+     * An Asset resource change.
+     * </pre>
+     *
+     * <code>ASSET = 14;</code>
+     */
+    ASSET(14),
+    /**
+     * <pre>
+     * A CustomerAsset resource change.
+     * </pre>
+     *
+     * <code>CUSTOMER_ASSET = 15;</code>
+     */
+    CUSTOMER_ASSET(15),
+    /**
+     * <pre>
+     * A CampaignAsset resource change.
+     * </pre>
+     *
+     * <code>CAMPAIGN_ASSET = 16;</code>
+     */
+    CAMPAIGN_ASSET(16),
+    /**
+     * <pre>
+     * An AdGroupAsset resource change.
+     * </pre>
+     *
+     * <code>AD_GROUP_ASSET = 17;</code>
+     */
+    AD_GROUP_ASSET(17),
     UNRECOGNIZED(-1),
     ;
 
@@ -323,6 +355,38 @@ private static final long serialVersionUID = 0L;
      * <code>AD_GROUP_AD = 13;</code>
      */
     public static final int AD_GROUP_AD_VALUE = 13;
+    /**
+     * <pre>
+     * An Asset resource change.
+     * </pre>
+     *
+     * <code>ASSET = 14;</code>
+     */
+    public static final int ASSET_VALUE = 14;
+    /**
+     * <pre>
+     * A CustomerAsset resource change.
+     * </pre>
+     *
+     * <code>CUSTOMER_ASSET = 15;</code>
+     */
+    public static final int CUSTOMER_ASSET_VALUE = 15;
+    /**
+     * <pre>
+     * A CampaignAsset resource change.
+     * </pre>
+     *
+     * <code>CAMPAIGN_ASSET = 16;</code>
+     */
+    public static final int CAMPAIGN_ASSET_VALUE = 16;
+    /**
+     * <pre>
+     * An AdGroupAsset resource change.
+     * </pre>
+     *
+     * <code>AD_GROUP_ASSET = 17;</code>
+     */
+    public static final int AD_GROUP_ASSET_VALUE = 17;
 
 
     public final int getNumber() {
@@ -363,6 +427,10 @@ private static final long serialVersionUID = 0L;
         case 11: return CAMPAIGN_FEED;
         case 12: return AD_GROUP_FEED;
         case 13: return AD_GROUP_AD;
+        case 14: return ASSET;
+        case 15: return CUSTOMER_ASSET;
+        case 16: return CAMPAIGN_ASSET;
+        case 17: return AD_GROUP_ASSET;
         default: return null;
       }
     }

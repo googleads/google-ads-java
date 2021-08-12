@@ -3,11 +3,16 @@ package com.google.ads.googleads.lib.utils;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertThrows;
 
-import com.google.ads.googleads.v6.common.ManualCpc;
-import com.google.ads.googleads.v6.enums.CampaignStatusEnum.CampaignStatus;
-import com.google.ads.googleads.v6.resources.Campaign;
+import com.google.ads.googleads.v7.common.ManualCpc;
+import com.google.ads.googleads.v7.enums.CampaignStatusEnum.CampaignStatus;
+import com.google.ads.googleads.v7.resources.Campaign;
+import com.google.ads.googleads.v7.common.ManualCpm;
+import com.google.ads.googleads.v7.resources.Campaign.DynamicSearchAdsSetting;
+import com.google.ads.googleads.v7.resources.Campaign.SelectiveOptimization;
+import com.google.ads.googleads.v7.resources.Campaign.TrackingSetting;
 import com.google.common.collect.ImmutableList;
 import com.google.protobuf.Descriptors.EnumValueDescriptor;
+import java.util.Arrays;
 import java.util.List;
 import org.junit.Before;
 import org.junit.Test;
@@ -127,8 +132,32 @@ public class FieldMasksTest {
               FieldMasks.getFieldValue("status.paused", campaign);
             });
     assertEquals(
-        "Unable to access subfield of google.ads.googleads.v6.resources.Campaign.status which is"
+        "Unable to access subfield of google.ads.googleads.v7.resources.Campaign.status which is"
             + " not a Message",
         exception.getMessage());
+  }
+
+  @Test
+  public void allSetFieldsOf_empty_list_empty_oneof() {
+    Campaign campaign = Campaign.newBuilder().setManualCpm(ManualCpm.newBuilder().build()).build();
+    assertEquals(FieldMasks.allSetFieldsOf(campaign).getPathsList(), Arrays.asList("manual_cpm"));
+  }
+
+  @Test
+  public void optimal_fields_do_not_list_subfields() {
+    Campaign campaign =
+        Campaign.newBuilder()
+            .setDynamicSearchAdsSetting(
+                DynamicSearchAdsSetting.newBuilder().setDomainName("google.com").build())
+            .setTrackingSetting(TrackingSetting.newBuilder().setTrackingUrl("tracking.com").build())
+            .setSelectiveOptimization(
+                SelectiveOptimization.newBuilder().addConversionActions("ca").build())
+            .build();
+    assertEquals(
+        FieldMasks.allSetFieldsOf(campaign).getPathsList(),
+        Arrays.asList(
+            "dynamic_search_ads_setting.domain_name",
+            "selective_optimization.conversion_actions",
+            "tracking_setting.tracking_url"));
   }
 }

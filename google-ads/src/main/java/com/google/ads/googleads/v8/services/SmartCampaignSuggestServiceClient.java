@@ -203,6 +203,61 @@ public class SmartCampaignSuggestServiceClient implements BackgroundResource {
     return stub.suggestSmartCampaignBudgetOptionsCallable();
   }
 
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
+  /**
+   * Suggests a Smart campaign ad compatible with the Ad family of resources, based on data points
+   * such as targeting and the business to advertise.
+   *
+   * <p>Sample code:
+   *
+   * <pre>{@code
+   * try (SmartCampaignSuggestServiceClient smartCampaignSuggestServiceClient =
+   *     SmartCampaignSuggestServiceClient.create()) {
+   *   SuggestSmartCampaignAdRequest request =
+   *       SuggestSmartCampaignAdRequest.newBuilder()
+   *           .setCustomerId("customerId-1581184615")
+   *           .setSuggestionInfo(SmartCampaignSuggestionInfo.newBuilder().build())
+   *           .build();
+   *   SuggestSmartCampaignAdResponse response =
+   *       smartCampaignSuggestServiceClient.suggestSmartCampaignAd(request);
+   * }
+   * }</pre>
+   *
+   * @param request The request object containing all of the parameters for the API call.
+   * @throws com.google.api.gax.rpc.ApiException if the remote call fails
+   */
+  public final SuggestSmartCampaignAdResponse suggestSmartCampaignAd(
+      SuggestSmartCampaignAdRequest request) {
+    return suggestSmartCampaignAdCallable().call(request);
+  }
+
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
+  /**
+   * Suggests a Smart campaign ad compatible with the Ad family of resources, based on data points
+   * such as targeting and the business to advertise.
+   *
+   * <p>Sample code:
+   *
+   * <pre>{@code
+   * try (SmartCampaignSuggestServiceClient smartCampaignSuggestServiceClient =
+   *     SmartCampaignSuggestServiceClient.create()) {
+   *   SuggestSmartCampaignAdRequest request =
+   *       SuggestSmartCampaignAdRequest.newBuilder()
+   *           .setCustomerId("customerId-1581184615")
+   *           .setSuggestionInfo(SmartCampaignSuggestionInfo.newBuilder().build())
+   *           .build();
+   *   ApiFuture<SuggestSmartCampaignAdResponse> future =
+   *       smartCampaignSuggestServiceClient.suggestSmartCampaignAdCallable().futureCall(request);
+   *   // Do something.
+   *   SuggestSmartCampaignAdResponse response = future.get();
+   * }
+   * }</pre>
+   */
+  public final UnaryCallable<SuggestSmartCampaignAdRequest, SuggestSmartCampaignAdResponse>
+      suggestSmartCampaignAdCallable() {
+    return stub.suggestSmartCampaignAdCallable();
+  }
+
   @Override
   public final void close() {
     stub.close();

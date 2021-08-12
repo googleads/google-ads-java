@@ -183,8 +183,8 @@ public class ExtensionFeedItemName implements ResourceName {
     }
 
     private Builder(ExtensionFeedItemName extensionFeedItemName) {
-      customerId = extensionFeedItemName.customerId;
-      feedItemId = extensionFeedItemName.feedItemId;
+      this.customerId = extensionFeedItemName.customerId;
+      this.feedItemId = extensionFeedItemName.feedItemId;
     }
 
     public ExtensionFeedItemName build() {

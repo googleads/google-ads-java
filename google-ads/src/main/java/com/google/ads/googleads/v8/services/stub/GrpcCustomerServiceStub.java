@@ -29,7 +29,6 @@ import com.google.api.gax.core.BackgroundResourceAggregation;
 import com.google.api.gax.grpc.GrpcCallSettings;
 import com.google.api.gax.grpc.GrpcStubCallableFactory;
 import com.google.api.gax.rpc.ClientContext;
-import com.google.api.gax.rpc.RequestParamsExtractor;
 import com.google.api.gax.rpc.UnaryCallable;
 import com.google.common.collect.ImmutableMap;
 import com.google.longrunning.stub.GrpcOperationsStub;
@@ -148,13 +147,10 @@ public class GrpcCustomerServiceStub extends CustomerServiceStub {
         GrpcCallSettings.<GetCustomerRequest, Customer>newBuilder()
             .setMethodDescriptor(getCustomerMethodDescriptor)
             .setParamsExtractor(
-                new RequestParamsExtractor<GetCustomerRequest>() {
-                  @Override
-                  public Map<String, String> extract(GetCustomerRequest request) {
-                    ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
-                    params.put("resource_name", String.valueOf(request.getResourceName()));
-                    return params.build();
-                  }
+                request -> {
+                  ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
+                  params.put("resource_name", String.valueOf(request.getResourceName()));
+                  return params.build();
                 })
             .build();
     GrpcCallSettings<MutateCustomerRequest, MutateCustomerResponse>
@@ -162,13 +158,10 @@ public class GrpcCustomerServiceStub extends CustomerServiceStub {
             GrpcCallSettings.<MutateCustomerRequest, MutateCustomerResponse>newBuilder()
                 .setMethodDescriptor(mutateCustomerMethodDescriptor)
                 .setParamsExtractor(
-                    new RequestParamsExtractor<MutateCustomerRequest>() {
-                      @Override
-                      public Map<String, String> extract(MutateCustomerRequest request) {
-                        ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
-                        params.put("customer_id", String.valueOf(request.getCustomerId()));
-                        return params.build();
-                      }
+                    request -> {
+                      ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
+                      params.put("customer_id", String.valueOf(request.getCustomerId()));
+                      return params.build();
                     })
                 .build();
     GrpcCallSettings<ListAccessibleCustomersRequest, ListAccessibleCustomersResponse>
@@ -182,13 +175,10 @@ public class GrpcCustomerServiceStub extends CustomerServiceStub {
             GrpcCallSettings.<CreateCustomerClientRequest, CreateCustomerClientResponse>newBuilder()
                 .setMethodDescriptor(createCustomerClientMethodDescriptor)
                 .setParamsExtractor(
-                    new RequestParamsExtractor<CreateCustomerClientRequest>() {
-                      @Override
-                      public Map<String, String> extract(CreateCustomerClientRequest request) {
-                        ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
-                        params.put("customer_id", String.valueOf(request.getCustomerId()));
-                        return params.build();
-                      }
+                    request -> {
+                      ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
+                      params.put("customer_id", String.valueOf(request.getCustomerId()));
+                      return params.build();
                     })
                 .build();
 
@@ -241,7 +231,13 @@ public class GrpcCustomerServiceStub extends CustomerServiceStub {
 
   @Override
   public final void close() {
-    shutdown();
+    try {
+      backgroundResources.close();
+    } catch (RuntimeException e) {
+      throw e;
+    } catch (Exception e) {
+      throw new IllegalStateException("Failed to close resource", e);
+    }
   }
 
   @Override

@@ -16,6 +16,8 @@
 
 package com.google.ads.googleads.v8.services.stub;
 
+import com.google.ads.googleads.v8.services.SuggestSmartCampaignAdRequest;
+import com.google.ads.googleads.v8.services.SuggestSmartCampaignAdResponse;
 import com.google.ads.googleads.v8.services.SuggestSmartCampaignBudgetOptionsRequest;
 import com.google.ads.googleads.v8.services.SuggestSmartCampaignBudgetOptionsResponse;
 import com.google.api.gax.core.BackgroundResource;
@@ -36,6 +38,11 @@ public abstract class SmartCampaignSuggestServiceStub implements BackgroundResou
       suggestSmartCampaignBudgetOptionsCallable() {
     throw new UnsupportedOperationException(
         "Not implemented: suggestSmartCampaignBudgetOptionsCallable()");
+  }
+
+  public UnaryCallable<SuggestSmartCampaignAdRequest, SuggestSmartCampaignAdResponse>
+      suggestSmartCampaignAdCallable() {
+    throw new UnsupportedOperationException("Not implemented: suggestSmartCampaignAdCallable()");
   }
 
   @Override

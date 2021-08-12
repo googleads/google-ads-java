@@ -119,7 +119,7 @@ private static final long serialVersionUID = 0L;
     AUTHENTICATION_ERROR(2),
     /**
      * <pre>
-     * Client Customer Id is not a number.
+     * Client Customer ID is not a number.
      * </pre>
      *
      * <code>CLIENT_CUSTOMER_ID_INVALID = 5;</code>
@@ -127,7 +127,7 @@ private static final long serialVersionUID = 0L;
     CLIENT_CUSTOMER_ID_INVALID(5),
     /**
      * <pre>
-     * No customer found for the provided customer id.
+     * No customer found for the provided customer ID.
      * </pre>
      *
      * <code>CUSTOMER_NOT_FOUND = 8;</code>
@@ -159,7 +159,7 @@ private static final long serialVersionUID = 0L;
     GOOGLE_ACCOUNT_AUTHENTICATION_FAILED(25),
     /**
      * <pre>
-     * The user in the google account login token does not match the UserId in
+     * The user in the Google account login token does not match the user ID in
      * the cookie.
      * </pre>
      *
@@ -287,7 +287,7 @@ private static final long serialVersionUID = 0L;
     public static final int AUTHENTICATION_ERROR_VALUE = 2;
     /**
      * <pre>
-     * Client Customer Id is not a number.
+     * Client Customer ID is not a number.
      * </pre>
      *
      * <code>CLIENT_CUSTOMER_ID_INVALID = 5;</code>
@@ -295,7 +295,7 @@ private static final long serialVersionUID = 0L;
     public static final int CLIENT_CUSTOMER_ID_INVALID_VALUE = 5;
     /**
      * <pre>
-     * No customer found for the provided customer id.
+     * No customer found for the provided customer ID.
      * </pre>
      *
      * <code>CUSTOMER_NOT_FOUND = 8;</code>
@@ -327,7 +327,7 @@ private static final long serialVersionUID = 0L;
     public static final int GOOGLE_ACCOUNT_AUTHENTICATION_FAILED_VALUE = 25;
     /**
      * <pre>
-     * The user in the google account login token does not match the UserId in
+     * The user in the Google account login token does not match the user ID in
      * the cookie.
      * </pre>
      *

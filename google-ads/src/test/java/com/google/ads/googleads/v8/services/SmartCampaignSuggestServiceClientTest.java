@@ -16,6 +16,7 @@
 
 package com.google.ads.googleads.v8.services;
 
+import com.google.ads.googleads.v8.common.SmartCampaignAdInfo;
 import com.google.api.gax.core.NoCredentialsProvider;
 import com.google.api.gax.grpc.GaxGrpcProperties;
 import com.google.api.gax.grpc.testing.LocalChannelProvider;
@@ -121,6 +122,54 @@ public class SmartCampaignSuggestServiceClientTest {
               .setCustomerId("customerId-1581184615")
               .build();
       client.suggestSmartCampaignBudgetOptions(request);
+      Assert.fail("No exception raised");
+    } catch (InvalidArgumentException e) {
+      // Expected exception.
+    }
+  }
+
+  @Test
+  public void suggestSmartCampaignAdTest() throws Exception {
+    SuggestSmartCampaignAdResponse expectedResponse =
+        SuggestSmartCampaignAdResponse.newBuilder()
+            .setAdInfo(SmartCampaignAdInfo.newBuilder().build())
+            .build();
+    mockSmartCampaignSuggestService.addResponse(expectedResponse);
+
+    SuggestSmartCampaignAdRequest request =
+        SuggestSmartCampaignAdRequest.newBuilder()
+            .setCustomerId("customerId-1581184615")
+            .setSuggestionInfo(SmartCampaignSuggestionInfo.newBuilder().build())
+            .build();
+
+    SuggestSmartCampaignAdResponse actualResponse = client.suggestSmartCampaignAd(request);
+    Assert.assertEquals(expectedResponse, actualResponse);
+
+    List<AbstractMessage> actualRequests = mockSmartCampaignSuggestService.getRequests();
+    Assert.assertEquals(1, actualRequests.size());
+    SuggestSmartCampaignAdRequest actualRequest =
+        ((SuggestSmartCampaignAdRequest) actualRequests.get(0));
+
+    Assert.assertEquals(request.getCustomerId(), actualRequest.getCustomerId());
+    Assert.assertEquals(request.getSuggestionInfo(), actualRequest.getSuggestionInfo());
+    Assert.assertTrue(
+        channelProvider.isHeaderSent(
+            ApiClientHeaderProvider.getDefaultApiClientHeaderKey(),
+            GaxGrpcProperties.getDefaultApiClientHeaderPattern()));
+  }
+
+  @Test
+  public void suggestSmartCampaignAdExceptionTest() throws Exception {
+    StatusRuntimeException exception = new StatusRuntimeException(io.grpc.Status.INVALID_ARGUMENT);
+    mockSmartCampaignSuggestService.addException(exception);
+
+    try {
+      SuggestSmartCampaignAdRequest request =
+          SuggestSmartCampaignAdRequest.newBuilder()
+              .setCustomerId("customerId-1581184615")
+              .setSuggestionInfo(SmartCampaignSuggestionInfo.newBuilder().build())
+              .build();
+      client.suggestSmartCampaignAd(request);
       Assert.fail("No exception raised");
     } catch (InvalidArgumentException e) {
       // Expected exception.

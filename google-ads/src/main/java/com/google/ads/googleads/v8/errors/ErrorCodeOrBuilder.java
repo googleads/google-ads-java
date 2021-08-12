@@ -1801,6 +1801,62 @@ public interface ErrorCodeOrBuilder extends
 
   /**
    * <pre>
+   * The reasons for the conversion value rule error
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v8.errors.ConversionValueRuleErrorEnum.ConversionValueRuleError conversion_value_rule_error = 145;</code>
+   * @return Whether the conversionValueRuleError field is set.
+   */
+  boolean hasConversionValueRuleError();
+  /**
+   * <pre>
+   * The reasons for the conversion value rule error
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v8.errors.ConversionValueRuleErrorEnum.ConversionValueRuleError conversion_value_rule_error = 145;</code>
+   * @return The enum numeric value on the wire for conversionValueRuleError.
+   */
+  int getConversionValueRuleErrorValue();
+  /**
+   * <pre>
+   * The reasons for the conversion value rule error
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v8.errors.ConversionValueRuleErrorEnum.ConversionValueRuleError conversion_value_rule_error = 145;</code>
+   * @return The conversionValueRuleError.
+   */
+  com.google.ads.googleads.v8.errors.ConversionValueRuleErrorEnum.ConversionValueRuleError getConversionValueRuleError();
+
+  /**
+   * <pre>
+   * The reasons for the conversion value rule set error
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v8.errors.ConversionValueRuleSetErrorEnum.ConversionValueRuleSetError conversion_value_rule_set_error = 146;</code>
+   * @return Whether the conversionValueRuleSetError field is set.
+   */
+  boolean hasConversionValueRuleSetError();
+  /**
+   * <pre>
+   * The reasons for the conversion value rule set error
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v8.errors.ConversionValueRuleSetErrorEnum.ConversionValueRuleSetError conversion_value_rule_set_error = 146;</code>
+   * @return The enum numeric value on the wire for conversionValueRuleSetError.
+   */
+  int getConversionValueRuleSetErrorValue();
+  /**
+   * <pre>
+   * The reasons for the conversion value rule set error
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v8.errors.ConversionValueRuleSetErrorEnum.ConversionValueRuleSetError conversion_value_rule_set_error = 146;</code>
+   * @return The conversionValueRuleSetError.
+   */
+  com.google.ads.googleads.v8.errors.ConversionValueRuleSetErrorEnum.ConversionValueRuleSetError getConversionValueRuleSetError();
+
+  /**
+   * <pre>
    * The reasons for the header error.
    * </pre>
    *

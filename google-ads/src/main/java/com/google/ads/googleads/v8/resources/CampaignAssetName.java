@@ -253,10 +253,10 @@ public class CampaignAssetName implements ResourceName {
     }
 
     private Builder(CampaignAssetName campaignAssetName) {
-      customerId = campaignAssetName.customerId;
-      campaignId = campaignAssetName.campaignId;
-      assetId = campaignAssetName.assetId;
-      fieldType = campaignAssetName.fieldType;
+      this.customerId = campaignAssetName.customerId;
+      this.campaignId = campaignAssetName.campaignId;
+      this.assetId = campaignAssetName.assetId;
+      this.fieldType = campaignAssetName.fieldType;
     }
 
     public CampaignAssetName build() {

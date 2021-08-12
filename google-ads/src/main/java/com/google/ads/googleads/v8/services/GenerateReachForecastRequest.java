@@ -89,9 +89,9 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 58: {
-            if (!((mutable_bitField0_ & 0x00000008) != 0)) {
+            if (!((mutable_bitField0_ & 0x00000010) != 0)) {
               plannedProducts_ = new java.util.ArrayList<com.google.ads.googleads.v8.services.PlannedProduct>();
-              mutable_bitField0_ |= 0x00000008;
+              mutable_bitField0_ |= 0x00000010;
             }
             plannedProducts_.add(
                 input.readMessage(com.google.ads.googleads.v8.services.PlannedProduct.parser(), extensionRegistry));
@@ -126,6 +126,19 @@ private static final long serialVersionUID = 0L;
             minEffectiveFrequency_ = input.readInt32();
             break;
           }
+          case 98: {
+            com.google.ads.googleads.v8.services.EffectiveFrequencyLimit.Builder subBuilder = null;
+            if (((bitField0_ & 0x00000008) != 0)) {
+              subBuilder = effectiveFrequencyLimit_.toBuilder();
+            }
+            effectiveFrequencyLimit_ = input.readMessage(com.google.ads.googleads.v8.services.EffectiveFrequencyLimit.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(effectiveFrequencyLimit_);
+              effectiveFrequencyLimit_ = subBuilder.buildPartial();
+            }
+            bitField0_ |= 0x00000008;
+            break;
+          }
           default: {
             if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -141,7 +154,7 @@ private static final long serialVersionUID = 0L;
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
     } finally {
-      if (((mutable_bitField0_ & 0x00000008) != 0)) {
+      if (((mutable_bitField0_ & 0x00000010) != 0)) {
         plannedProducts_ = java.util.Collections.unmodifiableList(plannedProducts_);
       }
       this.unknownFields = unknownFields.build();
@@ -407,6 +420,7 @@ private static final long serialVersionUID = 0L;
    * exposed to the ad) for the reported reach metrics [1-10].
    * This won't affect the targeting, but just the reporting.
    * If not specified, a default of 1 is applied.
+   * This field cannot be combined with the effective_frequency_limit field.
    * </pre>
    *
    * <code>int32 min_effective_frequency = 11;</code>
@@ -422,6 +436,7 @@ private static final long serialVersionUID = 0L;
    * exposed to the ad) for the reported reach metrics [1-10].
    * This won't affect the targeting, but just the reporting.
    * If not specified, a default of 1 is applied.
+   * This field cannot be combined with the effective_frequency_limit field.
    * </pre>
    *
    * <code>int32 min_effective_frequency = 11;</code>
@@ -430,6 +445,65 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public int getMinEffectiveFrequency() {
     return minEffectiveFrequency_;
+  }
+
+  public static final int EFFECTIVE_FREQUENCY_LIMIT_FIELD_NUMBER = 12;
+  private com.google.ads.googleads.v8.services.EffectiveFrequencyLimit effectiveFrequencyLimit_;
+  /**
+   * <pre>
+   * The highest minimum effective frequency (the number of times a person was
+   * exposed to the ad) value [1-10] to include in
+   * Forecast.effective_frequency_breakdowns.
+   * If not specified, Forecast.effective_frequency_breakdowns will not be
+   * provided.
+   * The effective frequency value provided here will also be used as the
+   * minimum effective frequency for the reported reach metrics.
+   * This field cannot be combined with the min_effective_frequency field.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v8.services.EffectiveFrequencyLimit effective_frequency_limit = 12;</code>
+   * @return Whether the effectiveFrequencyLimit field is set.
+   */
+  @java.lang.Override
+  public boolean hasEffectiveFrequencyLimit() {
+    return ((bitField0_ & 0x00000008) != 0);
+  }
+  /**
+   * <pre>
+   * The highest minimum effective frequency (the number of times a person was
+   * exposed to the ad) value [1-10] to include in
+   * Forecast.effective_frequency_breakdowns.
+   * If not specified, Forecast.effective_frequency_breakdowns will not be
+   * provided.
+   * The effective frequency value provided here will also be used as the
+   * minimum effective frequency for the reported reach metrics.
+   * This field cannot be combined with the min_effective_frequency field.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v8.services.EffectiveFrequencyLimit effective_frequency_limit = 12;</code>
+   * @return The effectiveFrequencyLimit.
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v8.services.EffectiveFrequencyLimit getEffectiveFrequencyLimit() {
+    return effectiveFrequencyLimit_ == null ? com.google.ads.googleads.v8.services.EffectiveFrequencyLimit.getDefaultInstance() : effectiveFrequencyLimit_;
+  }
+  /**
+   * <pre>
+   * The highest minimum effective frequency (the number of times a person was
+   * exposed to the ad) value [1-10] to include in
+   * Forecast.effective_frequency_breakdowns.
+   * If not specified, Forecast.effective_frequency_breakdowns will not be
+   * provided.
+   * The effective frequency value provided here will also be used as the
+   * minimum effective frequency for the reported reach metrics.
+   * This field cannot be combined with the min_effective_frequency field.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v8.services.EffectiveFrequencyLimit effective_frequency_limit = 12;</code>
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v8.services.EffectiveFrequencyLimitOrBuilder getEffectiveFrequencyLimitOrBuilder() {
+    return effectiveFrequencyLimit_ == null ? com.google.ads.googleads.v8.services.EffectiveFrequencyLimit.getDefaultInstance() : effectiveFrequencyLimit_;
   }
 
   public static final int TARGETING_FIELD_NUMBER = 6;
@@ -582,6 +656,9 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x00000004) != 0)) {
       output.writeInt32(11, minEffectiveFrequency_);
     }
+    if (((bitField0_ & 0x00000008) != 0)) {
+      output.writeMessage(12, getEffectiveFrequencyLimit());
+    }
     unknownFields.writeTo(output);
   }
 
@@ -620,6 +697,10 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x00000004) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeInt32Size(11, minEffectiveFrequency_);
+    }
+    if (((bitField0_ & 0x00000008) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(12, getEffectiveFrequencyLimit());
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -663,6 +744,11 @@ private static final long serialVersionUID = 0L;
       if (getMinEffectiveFrequency()
           != other.getMinEffectiveFrequency()) return false;
     }
+    if (hasEffectiveFrequencyLimit() != other.hasEffectiveFrequencyLimit()) return false;
+    if (hasEffectiveFrequencyLimit()) {
+      if (!getEffectiveFrequencyLimit()
+          .equals(other.getEffectiveFrequencyLimit())) return false;
+    }
     if (hasTargeting() != other.hasTargeting()) return false;
     if (hasTargeting()) {
       if (!getTargeting()
@@ -702,6 +788,10 @@ private static final long serialVersionUID = 0L;
     if (hasMinEffectiveFrequency()) {
       hash = (37 * hash) + MIN_EFFECTIVE_FREQUENCY_FIELD_NUMBER;
       hash = (53 * hash) + getMinEffectiveFrequency();
+    }
+    if (hasEffectiveFrequencyLimit()) {
+      hash = (37 * hash) + EFFECTIVE_FREQUENCY_LIMIT_FIELD_NUMBER;
+      hash = (53 * hash) + getEffectiveFrequencyLimit().hashCode();
     }
     if (hasTargeting()) {
       hash = (37 * hash) + TARGETING_FIELD_NUMBER;
@@ -843,6 +933,7 @@ private static final long serialVersionUID = 0L;
     private void maybeForceBuilderInitialization() {
       if (com.google.protobuf.GeneratedMessageV3
               .alwaysUseFieldBuilders) {
+        getEffectiveFrequencyLimitFieldBuilder();
         getPlannedProductsFieldBuilder();
       }
     }
@@ -869,6 +960,12 @@ private static final long serialVersionUID = 0L;
       }
       minEffectiveFrequency_ = 0;
       bitField0_ = (bitField0_ & ~0x00000004);
+      if (effectiveFrequencyLimitBuilder_ == null) {
+        effectiveFrequencyLimit_ = null;
+      } else {
+        effectiveFrequencyLimitBuilder_.clear();
+      }
+      bitField0_ = (bitField0_ & ~0x00000008);
       if (targetingBuilder_ == null) {
         targeting_ = null;
       } else {
@@ -877,7 +974,7 @@ private static final long serialVersionUID = 0L;
       }
       if (plannedProductsBuilder_ == null) {
         plannedProducts_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000008);
+        bitField0_ = (bitField0_ & ~0x00000010);
       } else {
         plannedProductsBuilder_.clear();
       }
@@ -932,15 +1029,23 @@ private static final long serialVersionUID = 0L;
         result.minEffectiveFrequency_ = minEffectiveFrequency_;
         to_bitField0_ |= 0x00000004;
       }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        if (effectiveFrequencyLimitBuilder_ == null) {
+          result.effectiveFrequencyLimit_ = effectiveFrequencyLimit_;
+        } else {
+          result.effectiveFrequencyLimit_ = effectiveFrequencyLimitBuilder_.build();
+        }
+        to_bitField0_ |= 0x00000008;
+      }
       if (targetingBuilder_ == null) {
         result.targeting_ = targeting_;
       } else {
         result.targeting_ = targetingBuilder_.build();
       }
       if (plannedProductsBuilder_ == null) {
-        if (((bitField0_ & 0x00000008) != 0)) {
+        if (((bitField0_ & 0x00000010) != 0)) {
           plannedProducts_ = java.util.Collections.unmodifiableList(plannedProducts_);
-          bitField0_ = (bitField0_ & ~0x00000008);
+          bitField0_ = (bitField0_ & ~0x00000010);
         }
         result.plannedProducts_ = plannedProducts_;
       } else {
@@ -1016,6 +1121,9 @@ private static final long serialVersionUID = 0L;
       if (other.hasMinEffectiveFrequency()) {
         setMinEffectiveFrequency(other.getMinEffectiveFrequency());
       }
+      if (other.hasEffectiveFrequencyLimit()) {
+        mergeEffectiveFrequencyLimit(other.getEffectiveFrequencyLimit());
+      }
       if (other.hasTargeting()) {
         mergeTargeting(other.getTargeting());
       }
@@ -1023,7 +1131,7 @@ private static final long serialVersionUID = 0L;
         if (!other.plannedProducts_.isEmpty()) {
           if (plannedProducts_.isEmpty()) {
             plannedProducts_ = other.plannedProducts_;
-            bitField0_ = (bitField0_ & ~0x00000008);
+            bitField0_ = (bitField0_ & ~0x00000010);
           } else {
             ensurePlannedProductsIsMutable();
             plannedProducts_.addAll(other.plannedProducts_);
@@ -1036,7 +1144,7 @@ private static final long serialVersionUID = 0L;
             plannedProductsBuilder_.dispose();
             plannedProductsBuilder_ = null;
             plannedProducts_ = other.plannedProducts_;
-            bitField0_ = (bitField0_ & ~0x00000008);
+            bitField0_ = (bitField0_ & ~0x00000010);
             plannedProductsBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getPlannedProductsFieldBuilder() : null;
@@ -1725,6 +1833,7 @@ private static final long serialVersionUID = 0L;
      * exposed to the ad) for the reported reach metrics [1-10].
      * This won't affect the targeting, but just the reporting.
      * If not specified, a default of 1 is applied.
+     * This field cannot be combined with the effective_frequency_limit field.
      * </pre>
      *
      * <code>int32 min_effective_frequency = 11;</code>
@@ -1740,6 +1849,7 @@ private static final long serialVersionUID = 0L;
      * exposed to the ad) for the reported reach metrics [1-10].
      * This won't affect the targeting, but just the reporting.
      * If not specified, a default of 1 is applied.
+     * This field cannot be combined with the effective_frequency_limit field.
      * </pre>
      *
      * <code>int32 min_effective_frequency = 11;</code>
@@ -1755,6 +1865,7 @@ private static final long serialVersionUID = 0L;
      * exposed to the ad) for the reported reach metrics [1-10].
      * This won't affect the targeting, but just the reporting.
      * If not specified, a default of 1 is applied.
+     * This field cannot be combined with the effective_frequency_limit field.
      * </pre>
      *
      * <code>int32 min_effective_frequency = 11;</code>
@@ -1773,6 +1884,7 @@ private static final long serialVersionUID = 0L;
      * exposed to the ad) for the reported reach metrics [1-10].
      * This won't affect the targeting, but just the reporting.
      * If not specified, a default of 1 is applied.
+     * This field cannot be combined with the effective_frequency_limit field.
      * </pre>
      *
      * <code>int32 min_effective_frequency = 11;</code>
@@ -1783,6 +1895,225 @@ private static final long serialVersionUID = 0L;
       minEffectiveFrequency_ = 0;
       onChanged();
       return this;
+    }
+
+    private com.google.ads.googleads.v8.services.EffectiveFrequencyLimit effectiveFrequencyLimit_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v8.services.EffectiveFrequencyLimit, com.google.ads.googleads.v8.services.EffectiveFrequencyLimit.Builder, com.google.ads.googleads.v8.services.EffectiveFrequencyLimitOrBuilder> effectiveFrequencyLimitBuilder_;
+    /**
+     * <pre>
+     * The highest minimum effective frequency (the number of times a person was
+     * exposed to the ad) value [1-10] to include in
+     * Forecast.effective_frequency_breakdowns.
+     * If not specified, Forecast.effective_frequency_breakdowns will not be
+     * provided.
+     * The effective frequency value provided here will also be used as the
+     * minimum effective frequency for the reported reach metrics.
+     * This field cannot be combined with the min_effective_frequency field.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v8.services.EffectiveFrequencyLimit effective_frequency_limit = 12;</code>
+     * @return Whether the effectiveFrequencyLimit field is set.
+     */
+    public boolean hasEffectiveFrequencyLimit() {
+      return ((bitField0_ & 0x00000008) != 0);
+    }
+    /**
+     * <pre>
+     * The highest minimum effective frequency (the number of times a person was
+     * exposed to the ad) value [1-10] to include in
+     * Forecast.effective_frequency_breakdowns.
+     * If not specified, Forecast.effective_frequency_breakdowns will not be
+     * provided.
+     * The effective frequency value provided here will also be used as the
+     * minimum effective frequency for the reported reach metrics.
+     * This field cannot be combined with the min_effective_frequency field.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v8.services.EffectiveFrequencyLimit effective_frequency_limit = 12;</code>
+     * @return The effectiveFrequencyLimit.
+     */
+    public com.google.ads.googleads.v8.services.EffectiveFrequencyLimit getEffectiveFrequencyLimit() {
+      if (effectiveFrequencyLimitBuilder_ == null) {
+        return effectiveFrequencyLimit_ == null ? com.google.ads.googleads.v8.services.EffectiveFrequencyLimit.getDefaultInstance() : effectiveFrequencyLimit_;
+      } else {
+        return effectiveFrequencyLimitBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * The highest minimum effective frequency (the number of times a person was
+     * exposed to the ad) value [1-10] to include in
+     * Forecast.effective_frequency_breakdowns.
+     * If not specified, Forecast.effective_frequency_breakdowns will not be
+     * provided.
+     * The effective frequency value provided here will also be used as the
+     * minimum effective frequency for the reported reach metrics.
+     * This field cannot be combined with the min_effective_frequency field.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v8.services.EffectiveFrequencyLimit effective_frequency_limit = 12;</code>
+     */
+    public Builder setEffectiveFrequencyLimit(com.google.ads.googleads.v8.services.EffectiveFrequencyLimit value) {
+      if (effectiveFrequencyLimitBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        effectiveFrequencyLimit_ = value;
+        onChanged();
+      } else {
+        effectiveFrequencyLimitBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000008;
+      return this;
+    }
+    /**
+     * <pre>
+     * The highest minimum effective frequency (the number of times a person was
+     * exposed to the ad) value [1-10] to include in
+     * Forecast.effective_frequency_breakdowns.
+     * If not specified, Forecast.effective_frequency_breakdowns will not be
+     * provided.
+     * The effective frequency value provided here will also be used as the
+     * minimum effective frequency for the reported reach metrics.
+     * This field cannot be combined with the min_effective_frequency field.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v8.services.EffectiveFrequencyLimit effective_frequency_limit = 12;</code>
+     */
+    public Builder setEffectiveFrequencyLimit(
+        com.google.ads.googleads.v8.services.EffectiveFrequencyLimit.Builder builderForValue) {
+      if (effectiveFrequencyLimitBuilder_ == null) {
+        effectiveFrequencyLimit_ = builderForValue.build();
+        onChanged();
+      } else {
+        effectiveFrequencyLimitBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000008;
+      return this;
+    }
+    /**
+     * <pre>
+     * The highest minimum effective frequency (the number of times a person was
+     * exposed to the ad) value [1-10] to include in
+     * Forecast.effective_frequency_breakdowns.
+     * If not specified, Forecast.effective_frequency_breakdowns will not be
+     * provided.
+     * The effective frequency value provided here will also be used as the
+     * minimum effective frequency for the reported reach metrics.
+     * This field cannot be combined with the min_effective_frequency field.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v8.services.EffectiveFrequencyLimit effective_frequency_limit = 12;</code>
+     */
+    public Builder mergeEffectiveFrequencyLimit(com.google.ads.googleads.v8.services.EffectiveFrequencyLimit value) {
+      if (effectiveFrequencyLimitBuilder_ == null) {
+        if (((bitField0_ & 0x00000008) != 0) &&
+            effectiveFrequencyLimit_ != null &&
+            effectiveFrequencyLimit_ != com.google.ads.googleads.v8.services.EffectiveFrequencyLimit.getDefaultInstance()) {
+          effectiveFrequencyLimit_ =
+            com.google.ads.googleads.v8.services.EffectiveFrequencyLimit.newBuilder(effectiveFrequencyLimit_).mergeFrom(value).buildPartial();
+        } else {
+          effectiveFrequencyLimit_ = value;
+        }
+        onChanged();
+      } else {
+        effectiveFrequencyLimitBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00000008;
+      return this;
+    }
+    /**
+     * <pre>
+     * The highest minimum effective frequency (the number of times a person was
+     * exposed to the ad) value [1-10] to include in
+     * Forecast.effective_frequency_breakdowns.
+     * If not specified, Forecast.effective_frequency_breakdowns will not be
+     * provided.
+     * The effective frequency value provided here will also be used as the
+     * minimum effective frequency for the reported reach metrics.
+     * This field cannot be combined with the min_effective_frequency field.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v8.services.EffectiveFrequencyLimit effective_frequency_limit = 12;</code>
+     */
+    public Builder clearEffectiveFrequencyLimit() {
+      if (effectiveFrequencyLimitBuilder_ == null) {
+        effectiveFrequencyLimit_ = null;
+        onChanged();
+      } else {
+        effectiveFrequencyLimitBuilder_.clear();
+      }
+      bitField0_ = (bitField0_ & ~0x00000008);
+      return this;
+    }
+    /**
+     * <pre>
+     * The highest minimum effective frequency (the number of times a person was
+     * exposed to the ad) value [1-10] to include in
+     * Forecast.effective_frequency_breakdowns.
+     * If not specified, Forecast.effective_frequency_breakdowns will not be
+     * provided.
+     * The effective frequency value provided here will also be used as the
+     * minimum effective frequency for the reported reach metrics.
+     * This field cannot be combined with the min_effective_frequency field.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v8.services.EffectiveFrequencyLimit effective_frequency_limit = 12;</code>
+     */
+    public com.google.ads.googleads.v8.services.EffectiveFrequencyLimit.Builder getEffectiveFrequencyLimitBuilder() {
+      bitField0_ |= 0x00000008;
+      onChanged();
+      return getEffectiveFrequencyLimitFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * The highest minimum effective frequency (the number of times a person was
+     * exposed to the ad) value [1-10] to include in
+     * Forecast.effective_frequency_breakdowns.
+     * If not specified, Forecast.effective_frequency_breakdowns will not be
+     * provided.
+     * The effective frequency value provided here will also be used as the
+     * minimum effective frequency for the reported reach metrics.
+     * This field cannot be combined with the min_effective_frequency field.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v8.services.EffectiveFrequencyLimit effective_frequency_limit = 12;</code>
+     */
+    public com.google.ads.googleads.v8.services.EffectiveFrequencyLimitOrBuilder getEffectiveFrequencyLimitOrBuilder() {
+      if (effectiveFrequencyLimitBuilder_ != null) {
+        return effectiveFrequencyLimitBuilder_.getMessageOrBuilder();
+      } else {
+        return effectiveFrequencyLimit_ == null ?
+            com.google.ads.googleads.v8.services.EffectiveFrequencyLimit.getDefaultInstance() : effectiveFrequencyLimit_;
+      }
+    }
+    /**
+     * <pre>
+     * The highest minimum effective frequency (the number of times a person was
+     * exposed to the ad) value [1-10] to include in
+     * Forecast.effective_frequency_breakdowns.
+     * If not specified, Forecast.effective_frequency_breakdowns will not be
+     * provided.
+     * The effective frequency value provided here will also be used as the
+     * minimum effective frequency for the reported reach metrics.
+     * This field cannot be combined with the min_effective_frequency field.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v8.services.EffectiveFrequencyLimit effective_frequency_limit = 12;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v8.services.EffectiveFrequencyLimit, com.google.ads.googleads.v8.services.EffectiveFrequencyLimit.Builder, com.google.ads.googleads.v8.services.EffectiveFrequencyLimitOrBuilder> 
+        getEffectiveFrequencyLimitFieldBuilder() {
+      if (effectiveFrequencyLimitBuilder_ == null) {
+        effectiveFrequencyLimitBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.ads.googleads.v8.services.EffectiveFrequencyLimit, com.google.ads.googleads.v8.services.EffectiveFrequencyLimit.Builder, com.google.ads.googleads.v8.services.EffectiveFrequencyLimitOrBuilder>(
+                getEffectiveFrequencyLimit(),
+                getParentForChildren(),
+                isClean());
+        effectiveFrequencyLimit_ = null;
+      }
+      return effectiveFrequencyLimitBuilder_;
     }
 
     private com.google.ads.googleads.v8.services.Targeting targeting_;
@@ -1970,9 +2301,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.google.ads.googleads.v8.services.PlannedProduct> plannedProducts_ =
       java.util.Collections.emptyList();
     private void ensurePlannedProductsIsMutable() {
-      if (!((bitField0_ & 0x00000008) != 0)) {
+      if (!((bitField0_ & 0x00000010) != 0)) {
         plannedProducts_ = new java.util.ArrayList<com.google.ads.googleads.v8.services.PlannedProduct>(plannedProducts_);
-        bitField0_ |= 0x00000008;
+        bitField0_ |= 0x00000010;
        }
     }
 
@@ -2177,7 +2508,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearPlannedProducts() {
       if (plannedProductsBuilder_ == null) {
         plannedProducts_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000008);
+        bitField0_ = (bitField0_ & ~0x00000010);
         onChanged();
       } else {
         plannedProductsBuilder_.clear();
@@ -2289,7 +2620,7 @@ private static final long serialVersionUID = 0L;
         plannedProductsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.google.ads.googleads.v8.services.PlannedProduct, com.google.ads.googleads.v8.services.PlannedProduct.Builder, com.google.ads.googleads.v8.services.PlannedProductOrBuilder>(
                 plannedProducts_,
-                ((bitField0_ & 0x00000008) != 0),
+                ((bitField0_ & 0x00000010) != 0),
                 getParentForChildren(),
                 isClean());
         plannedProducts_ = null;

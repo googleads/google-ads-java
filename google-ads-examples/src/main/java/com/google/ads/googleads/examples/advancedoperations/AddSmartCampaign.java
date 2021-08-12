@@ -20,9 +20,11 @@ import com.google.ads.googleads.examples.utils.CodeSampleHelper;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
 import com.google.ads.googleads.lib.utils.FieldMasks;
+import com.google.ads.googleads.v8.common.AdScheduleInfo;
 import com.google.ads.googleads.v8.common.AdTextAsset;
 import com.google.ads.googleads.v8.common.KeywordThemeInfo;
 import com.google.ads.googleads.v8.common.LocationInfo;
+import com.google.ads.googleads.v8.common.SmartCampaignAdInfo;
 import com.google.ads.googleads.v8.enums.AdGroupTypeEnum.AdGroupType;
 import com.google.ads.googleads.v8.enums.AdTypeEnum.AdType;
 import com.google.ads.googleads.v8.enums.AdvertisingChannelSubTypeEnum.AdvertisingChannelSubType;
@@ -44,8 +46,13 @@ import com.google.ads.googleads.v8.services.MutateGoogleAdsResponse;
 import com.google.ads.googleads.v8.services.MutateOperation;
 import com.google.ads.googleads.v8.services.MutateOperationResponse;
 import com.google.ads.googleads.v8.services.SmartCampaignSuggestServiceClient;
+import com.google.ads.googleads.v8.services.SmartCampaignSuggestionInfo;
+import com.google.ads.googleads.v8.services.SmartCampaignSuggestionInfo.BusinessContext;
+import com.google.ads.googleads.v8.services.SmartCampaignSuggestionInfo.LocationList;
 import com.google.ads.googleads.v8.services.SuggestKeywordThemeConstantsRequest;
 import com.google.ads.googleads.v8.services.SuggestKeywordThemeConstantsResponse;
+import com.google.ads.googleads.v8.services.SuggestSmartCampaignAdRequest;
+import com.google.ads.googleads.v8.services.SuggestSmartCampaignAdResponse;
 import com.google.ads.googleads.v8.services.SuggestSmartCampaignBudgetOptionsRequest;
 import com.google.ads.googleads.v8.services.SuggestSmartCampaignBudgetOptionsResponse;
 import com.google.ads.googleads.v8.services.SuggestSmartCampaignBudgetOptionsResponse.BudgetOption;
@@ -172,9 +179,17 @@ public class AddSmartCampaign {
     // Converts the KeywordThemeConstants to KeywordThemeInfos.
     List<KeywordThemeInfo> keywordThemeInfos = getKeywordThemeInfos(keywordThemeConstants);
 
+    SmartCampaignSuggestionInfo suggestionInfo =
+        getSmartCampaignSuggestionInfo(
+            googleAdsClient, locationId, businessName, keywordThemeInfos);
+
     // Generates a suggested daily budget.
     long suggestedDailyBudgetMicros =
-        getBudgetSuggestions(googleAdsClient, customerId, locationId, keywordThemeInfos);
+        getBudgetSuggestions(googleAdsClient, customerId, suggestionInfo);
+
+    // Creates adSuggestions.
+    SmartCampaignAdInfo adSuggestions =
+        getAdSuggestions(googleAdsClient, customerId, suggestionInfo);
 
     // Creates an array of operations which will create the campaign and related entities.
     List<MutateOperation> operations =
@@ -184,7 +199,7 @@ public class AddSmartCampaign {
                 createSmartCampaignOperation(customerId),
                 createSmartCampaignSettingOperation(customerId, locationId, businessName),
                 createAdGroupOperation(customerId),
-                createAdGroupAdOperation(customerId)));
+                createAdGroupAdOperation(customerId, adSuggestions)));
     operations.addAll(createCampaignCriterionOperations(customerId, keywordThemeInfos));
 
     // Issues a mutate request to add the various entities required for a smart campaign.
@@ -210,6 +225,92 @@ public class AddSmartCampaign {
   // [END add_smart_campaign]
 
   /**
+   * Builds a SmartCampaignSuggestionInfo object with business details.
+   *
+   * <p>The details are used by the SmartCampaignSuggestService to suggest a budget amount as well
+   * as creatives for the ad.
+   *
+   * <p>Note that when retrieving ad creative suggestions it's required that the "final_url",
+   * "language_code" and "keyword_themes" fields are set on the SmartCampaignSuggestionInfo
+   * instance.
+   *
+   * @return SmartCampaignSuggestionInfo a SmartCampaignSuggestionInfo instance.
+   */
+  // [START add_smart_campaign_9]
+  private SmartCampaignSuggestionInfo getSmartCampaignSuggestionInfo(
+      GoogleAdsClient googleAdsClient,
+      Long locationId,
+      String businessName,
+      List<KeywordThemeInfo> keywordThemeInfos) {
+    SmartCampaignSuggestionInfo.Builder suggestionInfoBuilder =
+        SmartCampaignSuggestionInfo.newBuilder()
+            // Adds the URL of the campaign's landing page.
+            .setFinalUrl(LANDING_PAGE_URL)
+            // Adds the language code for the campaign.
+            .setLanguageCode(LANGUAGE_CODE)
+            // Constructs location information using the given geo target constant. It's also
+            // possible to provide a geographic proximity using the "proximity" field,
+            // for example:
+            // .setProximity(
+            //     ProximityInfo.newBuilder()
+            //         .setAddress(
+            //             AddressInfo.newBuilder()
+            //                 .setPostalCode(INSERT_POSTAL_CODE)
+            //                 .setProvinceCode(INSERT_PROVINCE_CODE)
+            //                 .setCountryCode(INSERT_COUNTRY_CODE)
+            //                 .setProvinceName(INSERT_PROVINCE_NAME)
+            //                 .setStreetAddress(INSERT_STREET_ADDRESS)
+            //                 .setStreetAddress2(INSERT_STREET_ADDRESS_2)
+            //                 .setCityName(INSERT_CITY_NAME)
+            //                 .build())
+            //         .setRadius(INSERT_RADIUS)
+            //         .setRadiusUnits(INSERT_RADIUS_UNITS)
+            //         .build())
+            // For more information on proximities see:
+            // https://developers.google.com/google-ads/api/reference/rpc/latest/ProximityInfo
+            //
+            // Adds LocationInfo objects to the list of locations. You have the option of
+            // providing multiple locations when using location-based suggestions.
+            .setLocationList(
+                LocationList.newBuilder()
+                    // Sets one location to the resource name of the given geo target constant.
+                    .addLocations(
+                        LocationInfo.newBuilder()
+                            .setGeoTargetConstant(
+                                ResourceNames.geoTargetConstant(GEO_TARGET_CONSTANT))
+                            .build())
+                    .build())
+            // Adds the KeywordThemeInfo objects.
+            .addAllKeywordThemes(keywordThemeInfos)
+            // Adds a schedule detailing which days of the week the business is open.
+            // This schedule describes a schedule in which the business is open on
+            // Mondays from 9am to 5pm.
+            .addAdSchedules(
+                AdScheduleInfo.newBuilder()
+                    // Sets the day of this schedule as Monday.
+                    .setDayOfWeek(DayOfWeek.MONDAY)
+                    // Sets the start hour to 9am.
+                    .setStartHour(9)
+                    // Sets the end hour to 5pm.
+                    .setEndHour(17)
+                    // Sets the start and end minute of zero, for example: 9:00 and 5:00.
+                    .setStartMinute(MinuteOfHour.ZERO)
+                    .setEndMinute(MinuteOfHour.ZERO)
+                    .build());
+
+    // Sets either of the business_location_id or business_name, depending on whichever is
+    // provided.
+    if (locationId != null) {
+      suggestionInfoBuilder.setBusinessLocationId(locationId);
+    } else {
+      suggestionInfoBuilder.setBusinessContext(
+          BusinessContext.newBuilder().setBusinessName(businessName).build());
+    }
+    return suggestionInfoBuilder.build();
+  }
+  // [END add_smart_campaign_9]
+
+  /**
    * Retrieves a suggested budget amount for a new budget.
    *
    * <p>Using the SmartCampaignSuggestService to determine a daily budget for new and existing Smart
@@ -221,8 +322,7 @@ public class AddSmartCampaign {
   private long getBudgetSuggestions(
       GoogleAdsClient googleAdsClient,
       long customerId,
-      Long locationId,
-      List<KeywordThemeInfo> keywordThemeInfos) {
+      SmartCampaignSuggestionInfo suggestionInfo) {
     SuggestSmartCampaignBudgetOptionsRequest.Builder request =
         SuggestSmartCampaignBudgetOptionsRequest.newBuilder()
             .setCustomerId(String.valueOf(customerId));
@@ -233,59 +333,7 @@ public class AddSmartCampaign {
     // request.setCampaign("INSERT_CAMPAIGN_RESOURCE_NAME_HERE");
 
     // Uses the suggestion_info field instead, since these suggestions are for a new campaign.
-    request
-        .getSuggestionInfoBuilder()
-        // Adds the URL of the campaign's landing page.
-        .setFinalUrl(LANDING_PAGE_URL)
-        // Appends keyword theme constants by mapping them to KeywordThemeInfos.
-        .addAllKeywordThemes(keywordThemeInfos);
-
-    // Constructs location information using the given geo target constant. It's
-    // also possible to provide a geographic proximity using the "proximity"
-    // field on suggestion_info, for example:
-    // request
-    //     .getSuggestionInfoBuilder()
-    //     .getProximityBuilder()
-    //     .getAddressBuilder()
-    //     .setPostalCode("INSERT_POSTAL_CODE")
-    //     .setProvinceCode("INSERT_PROVINCE_CODE")
-    //     .setCountryCode("INSERT_COUNTRY_CODE")
-    //     .setProvinceName("INSERT_PROVINCE_NAME")
-    //     .setStreetAddress("INSERT_STREET_ADDRESS")
-    //     .setStreetAddress2("INSERT_STREET_ADDRESS_2")
-    //     .setCityName("INSERT_CITY_NAME");
-    // request
-    //     .getSuggestionInfoBuilder()
-    //     .getProximityBuilder()
-    //     .setRadius(INSERT_RADIUS)
-    //     .setradiusunits(RADIUS_UNITS);
-    //
-    // For more information on proximities see:
-    // https://developers.google.com/google-ads/api/reference/rpc/latest/ProximityInfo
-    request
-        .getSuggestionInfoBuilder()
-        .getLocationListBuilder()
-        .addLocations(
-            LocationInfo.newBuilder()
-                // Sets the location to the resource name of the given geo target constant.
-                .setGeoTargetConstant(ResourceNames.geoTargetConstant(GEO_TARGET_CONSTANT))
-                .build());
-
-    // Adds a schedule detailing which days of the week the business is open.
-    // The schedule below is for a business that is open on Mondays from 9am to 5pm.
-    request
-        .getSuggestionInfoBuilder()
-        .addAdSchedulesBuilder()
-        .setDayOfWeek(DayOfWeek.MONDAY)
-        .setStartHour(9)
-        .setEndHour(17)
-        .setStartMinute(MinuteOfHour.ZERO)
-        .setEndMinute(MinuteOfHour.ZERO);
-
-    // Adds the GMB location ID, if provided.
-    if (locationId != null) {
-      request.getSuggestionInfoBuilder().setBusinessLocationId(locationId);
-    }
+    request.setSuggestionInfo(suggestionInfo);
 
     // Issues a request to retrieve a budget suggestion.
     try (SmartCampaignSuggestServiceClient client =
@@ -303,6 +351,48 @@ public class AddSmartCampaign {
     }
   }
   // [END add_smart_campaign_1]
+
+  /**
+   * Retrieves creative suggestions for a Smart campaign ad.
+   *
+   * <p>Using the SmartCampaignSuggestService to suggest creatives for new and existing Smart
+   * campaigns is highly recommended because it helps the campaigns achieve optimal performance.
+   *
+   * @return SmartCampaignAdInfo a SmartCampaignAdInfo instance with suggested headlines and
+   *     descriptions.
+   */
+  // [START add_smart_campaign_10]
+  private SmartCampaignAdInfo getAdSuggestions(
+      GoogleAdsClient googleAdsClient,
+      long customerId,
+      SmartCampaignSuggestionInfo suggestionInfo) {
+    // Unlike the SuggestSmartCampaignBudgetOptions method, it's only possible to use
+    // suggestion_info to retrieve ad creative suggestions.
+
+    // Issues a request to retrieve ad creative suggestions.
+    try (SmartCampaignSuggestServiceClient smartCampaignSuggestService =
+        googleAdsClient.getLatestVersion().createSmartCampaignSuggestServiceClient()) {
+      SuggestSmartCampaignAdResponse response =
+          smartCampaignSuggestService.suggestSmartCampaignAd(
+              SuggestSmartCampaignAdRequest.newBuilder()
+                  .setCustomerId(Long.toString(customerId))
+                  .setSuggestionInfo(suggestionInfo)
+                  .build());
+
+      // The SmartCampaignAdInfo object in the response contains a list of up to three headlines
+      // and two descriptions. Note that some of the suggestions may have empty strings as text.
+      // Before setting these on the ad you should review them and filter out any empty values.
+      SmartCampaignAdInfo adSuggestions = response.getAdInfo();
+      for (AdTextAsset headline : adSuggestions.getHeadlinesList()) {
+        System.out.println(!headline.getText().isEmpty() ? headline.getText() : "None");
+      }
+      for (AdTextAsset description : adSuggestions.getDescriptionsList()) {
+        System.out.println(!description.getText().isEmpty() ? description.getText() : "None");
+      }
+      return adSuggestions;
+    }
+  }
+  // [END add_smart_campaign_10]
 
   /**
    * Creates a MutateOperation that creates a new CampaignBudget.
@@ -335,8 +425,6 @@ public class AddSmartCampaign {
    *
    * <p>A temporary ID will be assigned to this campaign so that it can be referenced by other
    * objects being created in the same Mutate request.
-   *
-   * @return
    */
   // [START add_smart_campaign_3]
   private MutateOperation createSmartCampaignOperation(long customerId) {
@@ -370,7 +458,8 @@ public class AddSmartCampaign {
         builder
             .getSmartCampaignSettingOperationBuilder()
             .getUpdateBuilder()
-            .setResourceName(ResourceNames.smartCampaignSetting(customerId, SMART_CAMPAIGN_TEMPORARY_ID))
+            .setResourceName(
+                ResourceNames.smartCampaignSetting(customerId, SMART_CAMPAIGN_TEMPORARY_ID))
             .setFinalUrl(LANDING_PAGE_URL)
             .setAdvertisingLanguageCode(LANGUAGE_CODE);
     settingBuilder
@@ -419,19 +508,30 @@ public class AddSmartCampaign {
    * it with the ad group created in earlier steps.
    */
   // [START add_smart_campaign_6]
-  private MutateOperation createAdGroupAdOperation(long customerId) {
+  private MutateOperation createAdGroupAdOperation(
+      long customerId, SmartCampaignAdInfo adSuggestions) {
     MutateOperation.Builder opBuilder = MutateOperation.newBuilder();
 
     // Constructs an Ad instance containing a SmartCampaignAd.
     Ad.Builder adBuilder = Ad.newBuilder();
     adBuilder
         .setType(AdType.SMART_CAMPAIGN_AD)
+        // The SmartCampaignAdInfo object includes headlines and descriptions retrieved
+        // from the suggestSmartCampaignAd method. It's recommended that users review and approve or
+        // update these creatives before they're set on the ad. It's possible that some or all of
+        // these assets may contain empty texts, which should not be set on the ad and instead
+        // should be replaced with meaningful texts from the user. Below we just accept the
+        // creatives that were suggested while filtering out empty assets, but individual workflows
+        // will vary here.
         .getSmartCampaignAdBuilder()
-        .addHeadlines(AdTextAsset.newBuilder().setText("Headline number one"))
-        .addHeadlines(AdTextAsset.newBuilder().setText("Headline number two"))
-        .addHeadlines(AdTextAsset.newBuilder().setText("Headline number three"))
-        .addDescriptions(AdTextAsset.newBuilder().setText("Description number one"))
-        .addDescriptions(AdTextAsset.newBuilder().setText("Description number two"));
+        .addAllHeadlines(
+            adSuggestions.getHeadlinesList().stream()
+                .filter(h -> h.hasText())
+                .collect(Collectors.toList()))
+        .addAllDescriptions(
+            adSuggestions.getDescriptionsList().stream()
+                .filter(d -> d.hasText())
+                .collect(Collectors.toList()));
 
     opBuilder
         .getAdGroupAdOperationBuilder()

@@ -18,7 +18,6 @@ package com.google.ads.googleads.v8.services;
 
 import com.google.ads.googleads.v8.services.stub.KeywordPlanIdeaServiceStub;
 import com.google.ads.googleads.v8.services.stub.KeywordPlanIdeaServiceStubSettings;
-import com.google.api.core.ApiFunction;
 import com.google.api.core.ApiFuture;
 import com.google.api.core.ApiFutures;
 import com.google.api.core.BetaApi;
@@ -339,12 +338,7 @@ public class KeywordPlanIdeaServiceClient implements BackgroundResource {
           GenerateKeywordIdeasPage.createEmptyPage().createPageAsync(context, futureResponse);
       return ApiFutures.transform(
           futurePage,
-          new ApiFunction<GenerateKeywordIdeasPage, GenerateKeywordIdeasPagedResponse>() {
-            @Override
-            public GenerateKeywordIdeasPagedResponse apply(GenerateKeywordIdeasPage input) {
-              return new GenerateKeywordIdeasPagedResponse(input);
-            }
-          },
+          input -> new GenerateKeywordIdeasPagedResponse(input),
           MoreExecutors.directExecutor());
     }
 

@@ -205,6 +205,51 @@ private static final long serialVersionUID = 0L;
      * <code>TOO_MANY_ADJUSTMENTS = 12;</code>
      */
     TOO_MANY_ADJUSTMENTS(12),
+    /**
+     * <pre>
+     * The customer has not accepted the customer data terms in the conversion
+     * settings page.
+     * </pre>
+     *
+     * <code>CUSTOMER_NOT_ACCEPTED_CUSTOMER_DATA_TERMS = 15;</code>
+     */
+    CUSTOMER_NOT_ACCEPTED_CUSTOMER_DATA_TERMS(15),
+    /**
+     * <pre>
+     * The enhanced conversion settings of the conversion action supplied is
+     * not eligible for enhancements.
+     * </pre>
+     *
+     * <code>CONVERSION_ACTION_NOT_ELIGIBLE_FOR_ENHANCEMENT = 16;</code>
+     */
+    CONVERSION_ACTION_NOT_ELIGIBLE_FOR_ENHANCEMENT(16),
+    /**
+     * <pre>
+     * The provided user identifier is not a SHA-256 hash. It is either unhashed
+     * or hashed using a different hash function.
+     * </pre>
+     *
+     * <code>INVALID_USER_IDENTIFIER = 17;</code>
+     */
+    INVALID_USER_IDENTIFIER(17),
+    /**
+     * <pre>
+     * The provided user identifier is not supported.
+     * ConversionAdjustmentUploadService only supports hashed_email,
+     * hashed_phone_number, and address_info.
+     * </pre>
+     *
+     * <code>UNSUPPORTED_USER_IDENTIFIER = 18;</code>
+     */
+    UNSUPPORTED_USER_IDENTIFIER(18),
+    /**
+     * <pre>
+     * The user_identifier_source must be FIRST_PARTY for enhancements.
+     * </pre>
+     *
+     * <code>INVALID_USER_IDENTIFIER_SOURCE = 19;</code>
+     */
+    INVALID_USER_IDENTIFIER_SOURCE(19),
     UNRECOGNIZED(-1),
     ;
 
@@ -320,6 +365,51 @@ private static final long serialVersionUID = 0L;
      * <code>TOO_MANY_ADJUSTMENTS = 12;</code>
      */
     public static final int TOO_MANY_ADJUSTMENTS_VALUE = 12;
+    /**
+     * <pre>
+     * The customer has not accepted the customer data terms in the conversion
+     * settings page.
+     * </pre>
+     *
+     * <code>CUSTOMER_NOT_ACCEPTED_CUSTOMER_DATA_TERMS = 15;</code>
+     */
+    public static final int CUSTOMER_NOT_ACCEPTED_CUSTOMER_DATA_TERMS_VALUE = 15;
+    /**
+     * <pre>
+     * The enhanced conversion settings of the conversion action supplied is
+     * not eligible for enhancements.
+     * </pre>
+     *
+     * <code>CONVERSION_ACTION_NOT_ELIGIBLE_FOR_ENHANCEMENT = 16;</code>
+     */
+    public static final int CONVERSION_ACTION_NOT_ELIGIBLE_FOR_ENHANCEMENT_VALUE = 16;
+    /**
+     * <pre>
+     * The provided user identifier is not a SHA-256 hash. It is either unhashed
+     * or hashed using a different hash function.
+     * </pre>
+     *
+     * <code>INVALID_USER_IDENTIFIER = 17;</code>
+     */
+    public static final int INVALID_USER_IDENTIFIER_VALUE = 17;
+    /**
+     * <pre>
+     * The provided user identifier is not supported.
+     * ConversionAdjustmentUploadService only supports hashed_email,
+     * hashed_phone_number, and address_info.
+     * </pre>
+     *
+     * <code>UNSUPPORTED_USER_IDENTIFIER = 18;</code>
+     */
+    public static final int UNSUPPORTED_USER_IDENTIFIER_VALUE = 18;
+    /**
+     * <pre>
+     * The user_identifier_source must be FIRST_PARTY for enhancements.
+     * </pre>
+     *
+     * <code>INVALID_USER_IDENTIFIER_SOURCE = 19;</code>
+     */
+    public static final int INVALID_USER_IDENTIFIER_SOURCE_VALUE = 19;
 
 
     public final int getNumber() {
@@ -359,6 +449,11 @@ private static final long serialVersionUID = 0L;
         case 10: return CANNOT_RESTATE_CONVERSION_ACTION_THAT_ALWAYS_USES_DEFAULT_CONVERSION_VALUE;
         case 11: return TOO_MANY_ADJUSTMENTS_IN_REQUEST;
         case 12: return TOO_MANY_ADJUSTMENTS;
+        case 15: return CUSTOMER_NOT_ACCEPTED_CUSTOMER_DATA_TERMS;
+        case 16: return CONVERSION_ACTION_NOT_ELIGIBLE_FOR_ENHANCEMENT;
+        case 17: return INVALID_USER_IDENTIFIER;
+        case 18: return UNSUPPORTED_USER_IDENTIFIER;
+        case 19: return INVALID_USER_IDENTIFIER_SOURCE;
         default: return null;
       }
     }

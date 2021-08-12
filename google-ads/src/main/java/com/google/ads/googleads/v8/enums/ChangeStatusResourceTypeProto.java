@@ -31,20 +31,23 @@ public final class ChangeStatusResourceTypeProto {
       "\n?google/ads/googleads/v8/enums/change_s" +
       "tatus_resource_type.proto\022\035google.ads.go" +
       "ogleads.v8.enums\032\034google/api/annotations" +
-      ".proto\"\220\002\n\034ChangeStatusResourceTypeEnum\"" +
-      "\357\001\n\030ChangeStatusResourceType\022\017\n\013UNSPECIF" +
+      ".proto\"\200\003\n\034ChangeStatusResourceTypeEnum\"" +
+      "\337\002\n\030ChangeStatusResourceType\022\017\n\013UNSPECIF" +
       "IED\020\000\022\013\n\007UNKNOWN\020\001\022\014\n\010AD_GROUP\020\003\022\017\n\013AD_G" +
       "ROUP_AD\020\004\022\026\n\022AD_GROUP_CRITERION\020\005\022\014\n\010CAM" +
       "PAIGN\020\006\022\026\n\022CAMPAIGN_CRITERION\020\007\022\010\n\004FEED\020" +
       "\t\022\r\n\tFEED_ITEM\020\n\022\021\n\rAD_GROUP_FEED\020\013\022\021\n\rC" +
       "AMPAIGN_FEED\020\014\022\031\n\025AD_GROUP_BID_MODIFIER\020" +
-      "\rB\362\001\n!com.google.ads.googleads.v8.enumsB" +
-      "\035ChangeStatusResourceTypeProtoP\001ZBgoogle" +
-      ".golang.org/genproto/googleapis/ads/goog" +
-      "leads/v8/enums;enums\242\002\003GAA\252\002\035Google.Ads." +
-      "GoogleAds.V8.Enums\312\002\035Google\\Ads\\GoogleAd" +
-      "s\\V8\\Enums\352\002!Google::Ads::GoogleAds::V8:" +
-      ":Enumsb\006proto3"
+      "\r\022\016\n\nSHARED_SET\020\016\022\027\n\023CAMPAIGN_SHARED_SET" +
+      "\020\017\022\t\n\005ASSET\020\020\022\022\n\016CUSTOMER_ASSET\020\021\022\022\n\016CAM" +
+      "PAIGN_ASSET\020\022\022\022\n\016AD_GROUP_ASSET\020\023B\362\001\n!co" +
+      "m.google.ads.googleads.v8.enumsB\035ChangeS" +
+      "tatusResourceTypeProtoP\001ZBgoogle.golang." +
+      "org/genproto/googleapis/ads/googleads/v8" +
+      "/enums;enums\242\002\003GAA\252\002\035Google.Ads.GoogleAd" +
+      "s.V8.Enums\312\002\035Google\\Ads\\GoogleAds\\V8\\Enu" +
+      "ms\352\002!Google::Ads::GoogleAds::V8::Enumsb\006" +
+      "proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

@@ -215,9 +215,9 @@ public class CustomerAssetName implements ResourceName {
     }
 
     private Builder(CustomerAssetName customerAssetName) {
-      customerId = customerAssetName.customerId;
-      assetId = customerAssetName.assetId;
-      fieldType = customerAssetName.fieldType;
+      this.customerId = customerAssetName.customerId;
+      this.assetId = customerAssetName.assetId;
+      this.fieldType = customerAssetName.fieldType;
     }
 
     public CustomerAssetName build() {

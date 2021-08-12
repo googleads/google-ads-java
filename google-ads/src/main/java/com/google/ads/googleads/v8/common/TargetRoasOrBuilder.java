@@ -32,6 +32,7 @@ public interface TargetRoasOrBuilder extends
    * <pre>
    * Maximum bid limit that can be set by the bid strategy.
    * The limit applies to all keywords managed by the strategy.
+   * This should only be set for portfolio bid strategies.
    * </pre>
    *
    * <code>int64 cpc_bid_ceiling_micros = 5;</code>
@@ -42,6 +43,7 @@ public interface TargetRoasOrBuilder extends
    * <pre>
    * Maximum bid limit that can be set by the bid strategy.
    * The limit applies to all keywords managed by the strategy.
+   * This should only be set for portfolio bid strategies.
    * </pre>
    *
    * <code>int64 cpc_bid_ceiling_micros = 5;</code>
@@ -53,6 +55,7 @@ public interface TargetRoasOrBuilder extends
    * <pre>
    * Minimum bid limit that can be set by the bid strategy.
    * The limit applies to all keywords managed by the strategy.
+   * This should only be set for portfolio bid strategies.
    * </pre>
    *
    * <code>int64 cpc_bid_floor_micros = 6;</code>
@@ -63,6 +66,7 @@ public interface TargetRoasOrBuilder extends
    * <pre>
    * Minimum bid limit that can be set by the bid strategy.
    * The limit applies to all keywords managed by the strategy.
+   * This should only be set for portfolio bid strategies.
    * </pre>
    *
    * <code>int64 cpc_bid_floor_micros = 6;</code>

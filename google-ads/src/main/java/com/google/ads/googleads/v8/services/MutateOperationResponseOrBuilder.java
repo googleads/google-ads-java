@@ -360,6 +360,60 @@ public interface MutateOperationResponseOrBuilder extends
 
   /**
    * <pre>
+   * The result for the bidding data exclusion mutate.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v8.services.MutateBiddingDataExclusionsResult bidding_data_exclusion_result = 58;</code>
+   * @return Whether the biddingDataExclusionResult field is set.
+   */
+  boolean hasBiddingDataExclusionResult();
+  /**
+   * <pre>
+   * The result for the bidding data exclusion mutate.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v8.services.MutateBiddingDataExclusionsResult bidding_data_exclusion_result = 58;</code>
+   * @return The biddingDataExclusionResult.
+   */
+  com.google.ads.googleads.v8.services.MutateBiddingDataExclusionsResult getBiddingDataExclusionResult();
+  /**
+   * <pre>
+   * The result for the bidding data exclusion mutate.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v8.services.MutateBiddingDataExclusionsResult bidding_data_exclusion_result = 58;</code>
+   */
+  com.google.ads.googleads.v8.services.MutateBiddingDataExclusionsResultOrBuilder getBiddingDataExclusionResultOrBuilder();
+
+  /**
+   * <pre>
+   * The result for the bidding seasonality adjustment mutate.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v8.services.MutateBiddingSeasonalityAdjustmentsResult bidding_seasonality_adjustment_result = 59;</code>
+   * @return Whether the biddingSeasonalityAdjustmentResult field is set.
+   */
+  boolean hasBiddingSeasonalityAdjustmentResult();
+  /**
+   * <pre>
+   * The result for the bidding seasonality adjustment mutate.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v8.services.MutateBiddingSeasonalityAdjustmentsResult bidding_seasonality_adjustment_result = 59;</code>
+   * @return The biddingSeasonalityAdjustmentResult.
+   */
+  com.google.ads.googleads.v8.services.MutateBiddingSeasonalityAdjustmentsResult getBiddingSeasonalityAdjustmentResult();
+  /**
+   * <pre>
+   * The result for the bidding seasonality adjustment mutate.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v8.services.MutateBiddingSeasonalityAdjustmentsResult bidding_seasonality_adjustment_result = 59;</code>
+   */
+  com.google.ads.googleads.v8.services.MutateBiddingSeasonalityAdjustmentsResultOrBuilder getBiddingSeasonalityAdjustmentResultOrBuilder();
+
+  /**
+   * <pre>
    * The result for the bidding strategy mutate.
    * </pre>
    *
@@ -735,6 +789,60 @@ public interface MutateOperationResponseOrBuilder extends
    * <code>.google.ads.googleads.v8.services.MutateConversionCustomVariableResult conversion_custom_variable_result = 55;</code>
    */
   com.google.ads.googleads.v8.services.MutateConversionCustomVariableResultOrBuilder getConversionCustomVariableResultOrBuilder();
+
+  /**
+   * <pre>
+   * The result for the conversion value rule mutate.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v8.services.MutateConversionValueRuleResult conversion_value_rule_result = 63;</code>
+   * @return Whether the conversionValueRuleResult field is set.
+   */
+  boolean hasConversionValueRuleResult();
+  /**
+   * <pre>
+   * The result for the conversion value rule mutate.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v8.services.MutateConversionValueRuleResult conversion_value_rule_result = 63;</code>
+   * @return The conversionValueRuleResult.
+   */
+  com.google.ads.googleads.v8.services.MutateConversionValueRuleResult getConversionValueRuleResult();
+  /**
+   * <pre>
+   * The result for the conversion value rule mutate.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v8.services.MutateConversionValueRuleResult conversion_value_rule_result = 63;</code>
+   */
+  com.google.ads.googleads.v8.services.MutateConversionValueRuleResultOrBuilder getConversionValueRuleResultOrBuilder();
+
+  /**
+   * <pre>
+   * The result for the conversion value rule set mutate.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v8.services.MutateConversionValueRuleSetResult conversion_value_rule_set_result = 64;</code>
+   * @return Whether the conversionValueRuleSetResult field is set.
+   */
+  boolean hasConversionValueRuleSetResult();
+  /**
+   * <pre>
+   * The result for the conversion value rule set mutate.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v8.services.MutateConversionValueRuleSetResult conversion_value_rule_set_result = 64;</code>
+   * @return The conversionValueRuleSetResult.
+   */
+  com.google.ads.googleads.v8.services.MutateConversionValueRuleSetResult getConversionValueRuleSetResult();
+  /**
+   * <pre>
+   * The result for the conversion value rule set mutate.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v8.services.MutateConversionValueRuleSetResult conversion_value_rule_set_result = 64;</code>
+   */
+  com.google.ads.googleads.v8.services.MutateConversionValueRuleSetResultOrBuilder getConversionValueRuleSetResultOrBuilder();
 
   /**
    * <pre>

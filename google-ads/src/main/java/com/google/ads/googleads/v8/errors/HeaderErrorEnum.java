@@ -111,7 +111,7 @@ private static final long serialVersionUID = 0L;
     UNKNOWN(1),
     /**
      * <pre>
-     * The login customer id could not be validated.
+     * The login customer ID could not be validated.
      * </pre>
      *
      * <code>INVALID_LOGIN_CUSTOMER_ID = 3;</code>
@@ -119,7 +119,7 @@ private static final long serialVersionUID = 0L;
     INVALID_LOGIN_CUSTOMER_ID(3),
     /**
      * <pre>
-     * The linked customer id could not be validated.
+     * The linked customer ID could not be validated.
      * </pre>
      *
      * <code>INVALID_LINKED_CUSTOMER_ID = 7;</code>
@@ -146,7 +146,7 @@ private static final long serialVersionUID = 0L;
     public static final int UNKNOWN_VALUE = 1;
     /**
      * <pre>
-     * The login customer id could not be validated.
+     * The login customer ID could not be validated.
      * </pre>
      *
      * <code>INVALID_LOGIN_CUSTOMER_ID = 3;</code>
@@ -154,7 +154,7 @@ private static final long serialVersionUID = 0L;
     public static final int INVALID_LOGIN_CUSTOMER_ID_VALUE = 3;
     /**
      * <pre>
-     * The linked customer id could not be validated.
+     * The linked customer ID could not be validated.
      * </pre>
      *
      * <code>INVALID_LINKED_CUSTOMER_ID = 7;</code>

@@ -158,7 +158,7 @@ public class CustomerName implements ResourceName {
     }
 
     private Builder(CustomerName customerName) {
-      customerId = customerName.customerId;
+      this.customerId = customerName.customerId;
     }
 
     public CustomerName build() {

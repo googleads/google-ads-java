@@ -30,8 +30,8 @@ public final class CriterionErrorProto {
     java.lang.String[] descriptorData = {
       "\n4google/ads/googleads/v8/errors/criteri" +
       "on_error.proto\022\036google.ads.googleads.v8." +
-      "errors\032\034google/api/annotations.proto\"\225\'\n" +
-      "\022CriterionErrorEnum\"\376&\n\016CriterionError\022\017" +
+      "errors\032\034google/api/annotations.proto\"\304\'\n" +
+      "\022CriterionErrorEnum\"\255\'\n\016CriterionError\022\017" +
       "\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\032\n\026CONCRETE" +
       "_TYPE_REQUIRED\020\002\022\035\n\031INVALID_EXCLUDED_CAT" +
       "EGORY\020\003\022\030\n\024INVALID_KEYWORD_TEXT\020\004\022\031\n\025KEY" +
@@ -156,13 +156,14 @@ public final class CriterionErrorProto {
       "ECK_IN_DATE_RANGE_START_DATE_TOO_EARLY\020\204" +
       "\001\0220\n+HOTEL_CHECK_IN_DATE_RANGE_END_DATE_" +
       "TOO_LATE\020\205\001\022\'\n\"HOTEL_CHECK_IN_DATE_RANGE" +
-      "_REVERSED\020\206\001B\356\001\n\"com.google.ads.googlead" +
-      "s.v8.errorsB\023CriterionErrorProtoP\001ZDgoog" +
-      "le.golang.org/genproto/googleapis/ads/go" +
-      "ogleads/v8/errors;errors\242\002\003GAA\252\002\036Google." +
-      "Ads.GoogleAds.V8.Errors\312\002\036Google\\Ads\\Goo" +
-      "gleAds\\V8\\Errors\352\002\"Google::Ads::GoogleAd" +
-      "s::V8::Errorsb\006proto3"
+      "_REVERSED\020\206\001\022-\n(BROAD_MATCH_MODIFIER_KEY" +
+      "WORD_NOT_ALLOWED\020\207\001B\356\001\n\"com.google.ads.g" +
+      "oogleads.v8.errorsB\023CriterionErrorProtoP" +
+      "\001ZDgoogle.golang.org/genproto/googleapis" +
+      "/ads/googleads/v8/errors;errors\242\002\003GAA\252\002\036" +
+      "Google.Ads.GoogleAds.V8.Errors\312\002\036Google\\" +
+      "Ads\\GoogleAds\\V8\\Errors\352\002\"Google::Ads::G" +
+      "oogleAds::V8::Errorsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

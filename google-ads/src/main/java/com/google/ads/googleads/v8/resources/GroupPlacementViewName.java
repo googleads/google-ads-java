@@ -217,9 +217,9 @@ public class GroupPlacementViewName implements ResourceName {
     }
 
     private Builder(GroupPlacementViewName groupPlacementViewName) {
-      customerId = groupPlacementViewName.customerId;
-      adGroupId = groupPlacementViewName.adGroupId;
-      base64Placement = groupPlacementViewName.base64Placement;
+      this.customerId = groupPlacementViewName.customerId;
+      this.adGroupId = groupPlacementViewName.adGroupId;
+      this.base64Placement = groupPlacementViewName.base64Placement;
     }
 
     public GroupPlacementViewName build() {

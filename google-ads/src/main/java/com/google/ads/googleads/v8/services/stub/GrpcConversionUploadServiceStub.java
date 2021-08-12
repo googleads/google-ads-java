@@ -25,7 +25,6 @@ import com.google.api.gax.core.BackgroundResourceAggregation;
 import com.google.api.gax.grpc.GrpcCallSettings;
 import com.google.api.gax.grpc.GrpcStubCallableFactory;
 import com.google.api.gax.rpc.ClientContext;
-import com.google.api.gax.rpc.RequestParamsExtractor;
 import com.google.api.gax.rpc.UnaryCallable;
 import com.google.common.collect.ImmutableMap;
 import com.google.longrunning.stub.GrpcOperationsStub;
@@ -126,13 +125,10 @@ public class GrpcConversionUploadServiceStub extends ConversionUploadServiceStub
                 .<UploadClickConversionsRequest, UploadClickConversionsResponse>newBuilder()
                 .setMethodDescriptor(uploadClickConversionsMethodDescriptor)
                 .setParamsExtractor(
-                    new RequestParamsExtractor<UploadClickConversionsRequest>() {
-                      @Override
-                      public Map<String, String> extract(UploadClickConversionsRequest request) {
-                        ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
-                        params.put("customer_id", String.valueOf(request.getCustomerId()));
-                        return params.build();
-                      }
+                    request -> {
+                      ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
+                      params.put("customer_id", String.valueOf(request.getCustomerId()));
+                      return params.build();
                     })
                 .build();
     GrpcCallSettings<UploadCallConversionsRequest, UploadCallConversionsResponse>
@@ -141,13 +137,10 @@ public class GrpcConversionUploadServiceStub extends ConversionUploadServiceStub
                 .<UploadCallConversionsRequest, UploadCallConversionsResponse>newBuilder()
                 .setMethodDescriptor(uploadCallConversionsMethodDescriptor)
                 .setParamsExtractor(
-                    new RequestParamsExtractor<UploadCallConversionsRequest>() {
-                      @Override
-                      public Map<String, String> extract(UploadCallConversionsRequest request) {
-                        ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
-                        params.put("customer_id", String.valueOf(request.getCustomerId()));
-                        return params.build();
-                      }
+                    request -> {
+                      ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
+                      params.put("customer_id", String.valueOf(request.getCustomerId()));
+                      return params.build();
                     })
                 .build();
 
@@ -184,7 +177,13 @@ public class GrpcConversionUploadServiceStub extends ConversionUploadServiceStub
 
   @Override
   public final void close() {
-    shutdown();
+    try {
+      backgroundResources.close();
+    } catch (RuntimeException e) {
+      throw e;
+    } catch (Exception e) {
+      throw new IllegalStateException("Failed to close resource", e);
+    }
   }
 
   @Override

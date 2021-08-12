@@ -191,6 +191,54 @@ private static final long serialVersionUID = 0L;
      * <code>AD_GROUP_BID_MODIFIER = 13;</code>
      */
     AD_GROUP_BID_MODIFIER(13),
+    /**
+     * <pre>
+     * A SharedSet resource change.
+     * </pre>
+     *
+     * <code>SHARED_SET = 14;</code>
+     */
+    SHARED_SET(14),
+    /**
+     * <pre>
+     * A CampaignSharedSet resource change.
+     * </pre>
+     *
+     * <code>CAMPAIGN_SHARED_SET = 15;</code>
+     */
+    CAMPAIGN_SHARED_SET(15),
+    /**
+     * <pre>
+     * An Asset resource change.
+     * </pre>
+     *
+     * <code>ASSET = 16;</code>
+     */
+    ASSET(16),
+    /**
+     * <pre>
+     * A CustomerAsset resource change.
+     * </pre>
+     *
+     * <code>CUSTOMER_ASSET = 17;</code>
+     */
+    CUSTOMER_ASSET(17),
+    /**
+     * <pre>
+     * A CampaignAsset resource change.
+     * </pre>
+     *
+     * <code>CAMPAIGN_ASSET = 18;</code>
+     */
+    CAMPAIGN_ASSET(18),
+    /**
+     * <pre>
+     * An AdGroupAsset resource change.
+     * </pre>
+     *
+     * <code>AD_GROUP_ASSET = 19;</code>
+     */
+    AD_GROUP_ASSET(19),
     UNRECOGNIZED(-1),
     ;
 
@@ -291,6 +339,54 @@ private static final long serialVersionUID = 0L;
      * <code>AD_GROUP_BID_MODIFIER = 13;</code>
      */
     public static final int AD_GROUP_BID_MODIFIER_VALUE = 13;
+    /**
+     * <pre>
+     * A SharedSet resource change.
+     * </pre>
+     *
+     * <code>SHARED_SET = 14;</code>
+     */
+    public static final int SHARED_SET_VALUE = 14;
+    /**
+     * <pre>
+     * A CampaignSharedSet resource change.
+     * </pre>
+     *
+     * <code>CAMPAIGN_SHARED_SET = 15;</code>
+     */
+    public static final int CAMPAIGN_SHARED_SET_VALUE = 15;
+    /**
+     * <pre>
+     * An Asset resource change.
+     * </pre>
+     *
+     * <code>ASSET = 16;</code>
+     */
+    public static final int ASSET_VALUE = 16;
+    /**
+     * <pre>
+     * A CustomerAsset resource change.
+     * </pre>
+     *
+     * <code>CUSTOMER_ASSET = 17;</code>
+     */
+    public static final int CUSTOMER_ASSET_VALUE = 17;
+    /**
+     * <pre>
+     * A CampaignAsset resource change.
+     * </pre>
+     *
+     * <code>CAMPAIGN_ASSET = 18;</code>
+     */
+    public static final int CAMPAIGN_ASSET_VALUE = 18;
+    /**
+     * <pre>
+     * An AdGroupAsset resource change.
+     * </pre>
+     *
+     * <code>AD_GROUP_ASSET = 19;</code>
+     */
+    public static final int AD_GROUP_ASSET_VALUE = 19;
 
 
     public final int getNumber() {
@@ -329,6 +425,12 @@ private static final long serialVersionUID = 0L;
         case 11: return AD_GROUP_FEED;
         case 12: return CAMPAIGN_FEED;
         case 13: return AD_GROUP_BID_MODIFIER;
+        case 14: return SHARED_SET;
+        case 15: return CAMPAIGN_SHARED_SET;
+        case 16: return ASSET;
+        case 17: return CUSTOMER_ASSET;
+        case 18: return CAMPAIGN_ASSET;
+        case 19: return AD_GROUP_ASSET;
         default: return null;
       }
     }

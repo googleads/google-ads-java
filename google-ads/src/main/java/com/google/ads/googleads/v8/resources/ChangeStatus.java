@@ -35,6 +35,12 @@ private static final long serialVersionUID = 0L;
     adGroupFeed_ = "";
     campaignFeed_ = "";
     adGroupBidModifier_ = "";
+    sharedSet_ = "";
+    campaignSharedSet_ = "";
+    asset_ = "";
+    customerAsset_ = "";
+    campaignAsset_ = "";
+    adGroupAsset_ = "";
   }
 
   @java.lang.Override
@@ -150,6 +156,42 @@ private static final long serialVersionUID = 0L;
             java.lang.String s = input.readStringRequireUtf8();
             bitField0_ |= 0x00000400;
             adGroupBidModifier_ = s;
+            break;
+          }
+          case 266: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            sharedSet_ = s;
+            break;
+          }
+          case 274: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            campaignSharedSet_ = s;
+            break;
+          }
+          case 282: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            asset_ = s;
+            break;
+          }
+          case 290: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            customerAsset_ = s;
+            break;
+          }
+          case 298: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            campaignAsset_ = s;
+            break;
+          }
+          case 306: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            adGroupAsset_ = s;
             break;
           }
           default: {
@@ -931,6 +973,282 @@ private static final long serialVersionUID = 0L;
     }
   }
 
+  public static final int SHARED_SET_FIELD_NUMBER = 33;
+  private volatile java.lang.Object sharedSet_;
+  /**
+   * <pre>
+   * Output only. The SharedSet affected by this change.
+   * </pre>
+   *
+   * <code>string shared_set = 33 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The sharedSet.
+   */
+  @java.lang.Override
+  public java.lang.String getSharedSet() {
+    java.lang.Object ref = sharedSet_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      sharedSet_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * Output only. The SharedSet affected by this change.
+   * </pre>
+   *
+   * <code>string shared_set = 33 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The bytes for sharedSet.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getSharedSetBytes() {
+    java.lang.Object ref = sharedSet_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      sharedSet_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int CAMPAIGN_SHARED_SET_FIELD_NUMBER = 34;
+  private volatile java.lang.Object campaignSharedSet_;
+  /**
+   * <pre>
+   * Output only. The CampaignSharedSet affected by this change.
+   * </pre>
+   *
+   * <code>string campaign_shared_set = 34 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The campaignSharedSet.
+   */
+  @java.lang.Override
+  public java.lang.String getCampaignSharedSet() {
+    java.lang.Object ref = campaignSharedSet_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      campaignSharedSet_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * Output only. The CampaignSharedSet affected by this change.
+   * </pre>
+   *
+   * <code>string campaign_shared_set = 34 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The bytes for campaignSharedSet.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getCampaignSharedSetBytes() {
+    java.lang.Object ref = campaignSharedSet_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      campaignSharedSet_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int ASSET_FIELD_NUMBER = 35;
+  private volatile java.lang.Object asset_;
+  /**
+   * <pre>
+   * Output only. The Asset affected by this change.
+   * </pre>
+   *
+   * <code>string asset = 35 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The asset.
+   */
+  @java.lang.Override
+  public java.lang.String getAsset() {
+    java.lang.Object ref = asset_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      asset_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * Output only. The Asset affected by this change.
+   * </pre>
+   *
+   * <code>string asset = 35 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The bytes for asset.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getAssetBytes() {
+    java.lang.Object ref = asset_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      asset_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int CUSTOMER_ASSET_FIELD_NUMBER = 36;
+  private volatile java.lang.Object customerAsset_;
+  /**
+   * <pre>
+   * Output only. The CustomerAsset affected by this change.
+   * </pre>
+   *
+   * <code>string customer_asset = 36 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The customerAsset.
+   */
+  @java.lang.Override
+  public java.lang.String getCustomerAsset() {
+    java.lang.Object ref = customerAsset_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      customerAsset_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * Output only. The CustomerAsset affected by this change.
+   * </pre>
+   *
+   * <code>string customer_asset = 36 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The bytes for customerAsset.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getCustomerAssetBytes() {
+    java.lang.Object ref = customerAsset_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      customerAsset_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int CAMPAIGN_ASSET_FIELD_NUMBER = 37;
+  private volatile java.lang.Object campaignAsset_;
+  /**
+   * <pre>
+   * Output only. The CampaignAsset affected by this change.
+   * </pre>
+   *
+   * <code>string campaign_asset = 37 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The campaignAsset.
+   */
+  @java.lang.Override
+  public java.lang.String getCampaignAsset() {
+    java.lang.Object ref = campaignAsset_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      campaignAsset_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * Output only. The CampaignAsset affected by this change.
+   * </pre>
+   *
+   * <code>string campaign_asset = 37 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The bytes for campaignAsset.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getCampaignAssetBytes() {
+    java.lang.Object ref = campaignAsset_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      campaignAsset_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int AD_GROUP_ASSET_FIELD_NUMBER = 38;
+  private volatile java.lang.Object adGroupAsset_;
+  /**
+   * <pre>
+   * Output only. The AdGroupAsset affected by this change.
+   * </pre>
+   *
+   * <code>string ad_group_asset = 38 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The adGroupAsset.
+   */
+  @java.lang.Override
+  public java.lang.String getAdGroupAsset() {
+    java.lang.Object ref = adGroupAsset_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      adGroupAsset_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * Output only. The AdGroupAsset affected by this change.
+   * </pre>
+   *
+   * <code>string ad_group_asset = 38 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The bytes for adGroupAsset.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getAdGroupAssetBytes() {
+    java.lang.Object ref = adGroupAsset_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      adGroupAsset_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -987,6 +1305,24 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x00000400) != 0)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 32, adGroupBidModifier_);
     }
+    if (!getSharedSetBytes().isEmpty()) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 33, sharedSet_);
+    }
+    if (!getCampaignSharedSetBytes().isEmpty()) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 34, campaignSharedSet_);
+    }
+    if (!getAssetBytes().isEmpty()) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 35, asset_);
+    }
+    if (!getCustomerAssetBytes().isEmpty()) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 36, customerAsset_);
+    }
+    if (!getCampaignAssetBytes().isEmpty()) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 37, campaignAsset_);
+    }
+    if (!getAdGroupAssetBytes().isEmpty()) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 38, adGroupAsset_);
+    }
     unknownFields.writeTo(output);
   }
 
@@ -1039,6 +1375,24 @@ private static final long serialVersionUID = 0L;
     }
     if (((bitField0_ & 0x00000400) != 0)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(32, adGroupBidModifier_);
+    }
+    if (!getSharedSetBytes().isEmpty()) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(33, sharedSet_);
+    }
+    if (!getCampaignSharedSetBytes().isEmpty()) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(34, campaignSharedSet_);
+    }
+    if (!getAssetBytes().isEmpty()) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(35, asset_);
+    }
+    if (!getCustomerAssetBytes().isEmpty()) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(36, customerAsset_);
+    }
+    if (!getCampaignAssetBytes().isEmpty()) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(37, campaignAsset_);
+    }
+    if (!getAdGroupAssetBytes().isEmpty()) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(38, adGroupAsset_);
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -1114,6 +1468,18 @@ private static final long serialVersionUID = 0L;
       if (!getAdGroupBidModifier()
           .equals(other.getAdGroupBidModifier())) return false;
     }
+    if (!getSharedSet()
+        .equals(other.getSharedSet())) return false;
+    if (!getCampaignSharedSet()
+        .equals(other.getCampaignSharedSet())) return false;
+    if (!getAsset()
+        .equals(other.getAsset())) return false;
+    if (!getCustomerAsset()
+        .equals(other.getCustomerAsset())) return false;
+    if (!getCampaignAsset()
+        .equals(other.getCampaignAsset())) return false;
+    if (!getAdGroupAsset()
+        .equals(other.getAdGroupAsset())) return false;
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -1175,6 +1541,18 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + AD_GROUP_BID_MODIFIER_FIELD_NUMBER;
       hash = (53 * hash) + getAdGroupBidModifier().hashCode();
     }
+    hash = (37 * hash) + SHARED_SET_FIELD_NUMBER;
+    hash = (53 * hash) + getSharedSet().hashCode();
+    hash = (37 * hash) + CAMPAIGN_SHARED_SET_FIELD_NUMBER;
+    hash = (53 * hash) + getCampaignSharedSet().hashCode();
+    hash = (37 * hash) + ASSET_FIELD_NUMBER;
+    hash = (53 * hash) + getAsset().hashCode();
+    hash = (37 * hash) + CUSTOMER_ASSET_FIELD_NUMBER;
+    hash = (53 * hash) + getCustomerAsset().hashCode();
+    hash = (37 * hash) + CAMPAIGN_ASSET_FIELD_NUMBER;
+    hash = (53 * hash) + getCampaignAsset().hashCode();
+    hash = (37 * hash) + AD_GROUP_ASSET_FIELD_NUMBER;
+    hash = (53 * hash) + getAdGroupAsset().hashCode();
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -1341,6 +1719,18 @@ private static final long serialVersionUID = 0L;
       bitField0_ = (bitField0_ & ~0x00000200);
       adGroupBidModifier_ = "";
       bitField0_ = (bitField0_ & ~0x00000400);
+      sharedSet_ = "";
+
+      campaignSharedSet_ = "";
+
+      asset_ = "";
+
+      customerAsset_ = "";
+
+      campaignAsset_ = "";
+
+      adGroupAsset_ = "";
+
       return this;
     }
 
@@ -1416,6 +1806,12 @@ private static final long serialVersionUID = 0L;
         to_bitField0_ |= 0x00000400;
       }
       result.adGroupBidModifier_ = adGroupBidModifier_;
+      result.sharedSet_ = sharedSet_;
+      result.campaignSharedSet_ = campaignSharedSet_;
+      result.asset_ = asset_;
+      result.customerAsset_ = customerAsset_;
+      result.campaignAsset_ = campaignAsset_;
+      result.adGroupAsset_ = adGroupAsset_;
       result.bitField0_ = to_bitField0_;
       onBuilt();
       return result;
@@ -1528,6 +1924,30 @@ private static final long serialVersionUID = 0L;
       if (other.hasAdGroupBidModifier()) {
         bitField0_ |= 0x00000400;
         adGroupBidModifier_ = other.adGroupBidModifier_;
+        onChanged();
+      }
+      if (!other.getSharedSet().isEmpty()) {
+        sharedSet_ = other.sharedSet_;
+        onChanged();
+      }
+      if (!other.getCampaignSharedSet().isEmpty()) {
+        campaignSharedSet_ = other.campaignSharedSet_;
+        onChanged();
+      }
+      if (!other.getAsset().isEmpty()) {
+        asset_ = other.asset_;
+        onChanged();
+      }
+      if (!other.getCustomerAsset().isEmpty()) {
+        customerAsset_ = other.customerAsset_;
+        onChanged();
+      }
+      if (!other.getCampaignAsset().isEmpty()) {
+        campaignAsset_ = other.campaignAsset_;
+        onChanged();
+      }
+      if (!other.getAdGroupAsset().isEmpty()) {
+        adGroupAsset_ = other.adGroupAsset_;
         onChanged();
       }
       this.mergeUnknownFields(other.unknownFields);
@@ -2997,6 +3417,582 @@ private static final long serialVersionUID = 0L;
   checkByteStringIsUtf8(value);
       bitField0_ |= 0x00000400;
       adGroupBidModifier_ = value;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object sharedSet_ = "";
+    /**
+     * <pre>
+     * Output only. The SharedSet affected by this change.
+     * </pre>
+     *
+     * <code>string shared_set = 33 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @return The sharedSet.
+     */
+    public java.lang.String getSharedSet() {
+      java.lang.Object ref = sharedSet_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        sharedSet_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * Output only. The SharedSet affected by this change.
+     * </pre>
+     *
+     * <code>string shared_set = 33 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @return The bytes for sharedSet.
+     */
+    public com.google.protobuf.ByteString
+        getSharedSetBytes() {
+      java.lang.Object ref = sharedSet_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        sharedSet_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * Output only. The SharedSet affected by this change.
+     * </pre>
+     *
+     * <code>string shared_set = 33 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @param value The sharedSet to set.
+     * @return This builder for chaining.
+     */
+    public Builder setSharedSet(
+        java.lang.String value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
+      sharedSet_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Output only. The SharedSet affected by this change.
+     * </pre>
+     *
+     * <code>string shared_set = 33 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearSharedSet() {
+      
+      sharedSet_ = getDefaultInstance().getSharedSet();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Output only. The SharedSet affected by this change.
+     * </pre>
+     *
+     * <code>string shared_set = 33 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @param value The bytes for sharedSet to set.
+     * @return This builder for chaining.
+     */
+    public Builder setSharedSetBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
+      sharedSet_ = value;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object campaignSharedSet_ = "";
+    /**
+     * <pre>
+     * Output only. The CampaignSharedSet affected by this change.
+     * </pre>
+     *
+     * <code>string campaign_shared_set = 34 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @return The campaignSharedSet.
+     */
+    public java.lang.String getCampaignSharedSet() {
+      java.lang.Object ref = campaignSharedSet_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        campaignSharedSet_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * Output only. The CampaignSharedSet affected by this change.
+     * </pre>
+     *
+     * <code>string campaign_shared_set = 34 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @return The bytes for campaignSharedSet.
+     */
+    public com.google.protobuf.ByteString
+        getCampaignSharedSetBytes() {
+      java.lang.Object ref = campaignSharedSet_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        campaignSharedSet_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * Output only. The CampaignSharedSet affected by this change.
+     * </pre>
+     *
+     * <code>string campaign_shared_set = 34 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @param value The campaignSharedSet to set.
+     * @return This builder for chaining.
+     */
+    public Builder setCampaignSharedSet(
+        java.lang.String value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
+      campaignSharedSet_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Output only. The CampaignSharedSet affected by this change.
+     * </pre>
+     *
+     * <code>string campaign_shared_set = 34 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearCampaignSharedSet() {
+      
+      campaignSharedSet_ = getDefaultInstance().getCampaignSharedSet();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Output only. The CampaignSharedSet affected by this change.
+     * </pre>
+     *
+     * <code>string campaign_shared_set = 34 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @param value The bytes for campaignSharedSet to set.
+     * @return This builder for chaining.
+     */
+    public Builder setCampaignSharedSetBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
+      campaignSharedSet_ = value;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object asset_ = "";
+    /**
+     * <pre>
+     * Output only. The Asset affected by this change.
+     * </pre>
+     *
+     * <code>string asset = 35 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @return The asset.
+     */
+    public java.lang.String getAsset() {
+      java.lang.Object ref = asset_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        asset_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * Output only. The Asset affected by this change.
+     * </pre>
+     *
+     * <code>string asset = 35 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @return The bytes for asset.
+     */
+    public com.google.protobuf.ByteString
+        getAssetBytes() {
+      java.lang.Object ref = asset_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        asset_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * Output only. The Asset affected by this change.
+     * </pre>
+     *
+     * <code>string asset = 35 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @param value The asset to set.
+     * @return This builder for chaining.
+     */
+    public Builder setAsset(
+        java.lang.String value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
+      asset_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Output only. The Asset affected by this change.
+     * </pre>
+     *
+     * <code>string asset = 35 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearAsset() {
+      
+      asset_ = getDefaultInstance().getAsset();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Output only. The Asset affected by this change.
+     * </pre>
+     *
+     * <code>string asset = 35 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @param value The bytes for asset to set.
+     * @return This builder for chaining.
+     */
+    public Builder setAssetBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
+      asset_ = value;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object customerAsset_ = "";
+    /**
+     * <pre>
+     * Output only. The CustomerAsset affected by this change.
+     * </pre>
+     *
+     * <code>string customer_asset = 36 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @return The customerAsset.
+     */
+    public java.lang.String getCustomerAsset() {
+      java.lang.Object ref = customerAsset_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        customerAsset_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * Output only. The CustomerAsset affected by this change.
+     * </pre>
+     *
+     * <code>string customer_asset = 36 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @return The bytes for customerAsset.
+     */
+    public com.google.protobuf.ByteString
+        getCustomerAssetBytes() {
+      java.lang.Object ref = customerAsset_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        customerAsset_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * Output only. The CustomerAsset affected by this change.
+     * </pre>
+     *
+     * <code>string customer_asset = 36 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @param value The customerAsset to set.
+     * @return This builder for chaining.
+     */
+    public Builder setCustomerAsset(
+        java.lang.String value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
+      customerAsset_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Output only. The CustomerAsset affected by this change.
+     * </pre>
+     *
+     * <code>string customer_asset = 36 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearCustomerAsset() {
+      
+      customerAsset_ = getDefaultInstance().getCustomerAsset();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Output only. The CustomerAsset affected by this change.
+     * </pre>
+     *
+     * <code>string customer_asset = 36 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @param value The bytes for customerAsset to set.
+     * @return This builder for chaining.
+     */
+    public Builder setCustomerAssetBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
+      customerAsset_ = value;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object campaignAsset_ = "";
+    /**
+     * <pre>
+     * Output only. The CampaignAsset affected by this change.
+     * </pre>
+     *
+     * <code>string campaign_asset = 37 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @return The campaignAsset.
+     */
+    public java.lang.String getCampaignAsset() {
+      java.lang.Object ref = campaignAsset_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        campaignAsset_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * Output only. The CampaignAsset affected by this change.
+     * </pre>
+     *
+     * <code>string campaign_asset = 37 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @return The bytes for campaignAsset.
+     */
+    public com.google.protobuf.ByteString
+        getCampaignAssetBytes() {
+      java.lang.Object ref = campaignAsset_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        campaignAsset_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * Output only. The CampaignAsset affected by this change.
+     * </pre>
+     *
+     * <code>string campaign_asset = 37 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @param value The campaignAsset to set.
+     * @return This builder for chaining.
+     */
+    public Builder setCampaignAsset(
+        java.lang.String value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
+      campaignAsset_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Output only. The CampaignAsset affected by this change.
+     * </pre>
+     *
+     * <code>string campaign_asset = 37 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearCampaignAsset() {
+      
+      campaignAsset_ = getDefaultInstance().getCampaignAsset();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Output only. The CampaignAsset affected by this change.
+     * </pre>
+     *
+     * <code>string campaign_asset = 37 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @param value The bytes for campaignAsset to set.
+     * @return This builder for chaining.
+     */
+    public Builder setCampaignAssetBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
+      campaignAsset_ = value;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object adGroupAsset_ = "";
+    /**
+     * <pre>
+     * Output only. The AdGroupAsset affected by this change.
+     * </pre>
+     *
+     * <code>string ad_group_asset = 38 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @return The adGroupAsset.
+     */
+    public java.lang.String getAdGroupAsset() {
+      java.lang.Object ref = adGroupAsset_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        adGroupAsset_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * Output only. The AdGroupAsset affected by this change.
+     * </pre>
+     *
+     * <code>string ad_group_asset = 38 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @return The bytes for adGroupAsset.
+     */
+    public com.google.protobuf.ByteString
+        getAdGroupAssetBytes() {
+      java.lang.Object ref = adGroupAsset_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        adGroupAsset_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * Output only. The AdGroupAsset affected by this change.
+     * </pre>
+     *
+     * <code>string ad_group_asset = 38 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @param value The adGroupAsset to set.
+     * @return This builder for chaining.
+     */
+    public Builder setAdGroupAsset(
+        java.lang.String value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
+      adGroupAsset_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Output only. The AdGroupAsset affected by this change.
+     * </pre>
+     *
+     * <code>string ad_group_asset = 38 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearAdGroupAsset() {
+      
+      adGroupAsset_ = getDefaultInstance().getAdGroupAsset();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Output only. The AdGroupAsset affected by this change.
+     * </pre>
+     *
+     * <code>string ad_group_asset = 38 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @param value The bytes for adGroupAsset to set.
+     * @return This builder for chaining.
+     */
+    public Builder setAdGroupAssetBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
+      adGroupAsset_ = value;
       onChanged();
       return this;
     }

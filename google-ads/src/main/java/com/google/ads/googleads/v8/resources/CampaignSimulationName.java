@@ -324,12 +324,12 @@ public class CampaignSimulationName implements ResourceName {
     }
 
     private Builder(CampaignSimulationName campaignSimulationName) {
-      customerId = campaignSimulationName.customerId;
-      campaignId = campaignSimulationName.campaignId;
-      type = campaignSimulationName.type;
-      modificationMethod = campaignSimulationName.modificationMethod;
-      startDate = campaignSimulationName.startDate;
-      endDate = campaignSimulationName.endDate;
+      this.customerId = campaignSimulationName.customerId;
+      this.campaignId = campaignSimulationName.campaignId;
+      this.type = campaignSimulationName.type;
+      this.modificationMethod = campaignSimulationName.modificationMethod;
+      this.startDate = campaignSimulationName.startDate;
+      this.endDate = campaignSimulationName.endDate;
     }
 
     public CampaignSimulationName build() {

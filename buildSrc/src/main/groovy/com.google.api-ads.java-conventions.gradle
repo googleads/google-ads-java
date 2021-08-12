@@ -26,9 +26,12 @@ plugins {
   id 'maven-publish'
 }
 
+// The order of the repositories here is important. If mavenLocal() is first,
+// then when we attempt to resolve artifacts like sources for the third_party
+// directory, gradle will not even attempt to look for them in mavenCentral.
 repositories {
-  mavenLocal()
-  mavenCentral()
+    mavenCentral()
+    mavenLocal()
 }
 
 group = 'com.google.api-ads'

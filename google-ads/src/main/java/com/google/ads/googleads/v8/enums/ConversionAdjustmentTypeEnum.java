@@ -127,6 +127,15 @@ private static final long serialVersionUID = 0L;
      * <code>RESTATEMENT = 3;</code>
      */
     RESTATEMENT(3),
+    /**
+     * <pre>
+     * Supplements an existing conversion with provided user identifiers and
+     * user agent, which can be used by Google to enhance the conversion count.
+     * </pre>
+     *
+     * <code>ENHANCEMENT = 4;</code>
+     */
+    ENHANCEMENT(4),
     UNRECOGNIZED(-1),
     ;
 
@@ -162,6 +171,15 @@ private static final long serialVersionUID = 0L;
      * <code>RESTATEMENT = 3;</code>
      */
     public static final int RESTATEMENT_VALUE = 3;
+    /**
+     * <pre>
+     * Supplements an existing conversion with provided user identifiers and
+     * user agent, which can be used by Google to enhance the conversion count.
+     * </pre>
+     *
+     * <code>ENHANCEMENT = 4;</code>
+     */
+    public static final int ENHANCEMENT_VALUE = 4;
 
 
     public final int getNumber() {
@@ -192,6 +210,7 @@ private static final long serialVersionUID = 0L;
         case 1: return UNKNOWN;
         case 2: return RETRACTION;
         case 3: return RESTATEMENT;
+        case 4: return ENHANCEMENT;
         default: return null;
       }
     }

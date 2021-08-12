@@ -444,6 +444,7 @@ public class ReachPlanServiceClient implements BackgroundResource {
    *           .setCookieFrequencyCap(-1372585004)
    *           .setCookieFrequencyCapSetting(FrequencyCap.newBuilder().build())
    *           .setMinEffectiveFrequency(-1801725097)
+   *           .setEffectiveFrequencyLimit(EffectiveFrequencyLimit.newBuilder().build())
    *           .setTargeting(Targeting.newBuilder().build())
    *           .addAllPlannedProducts(new ArrayList<PlannedProduct>())
    *           .build();
@@ -480,6 +481,7 @@ public class ReachPlanServiceClient implements BackgroundResource {
    *           .setCookieFrequencyCap(-1372585004)
    *           .setCookieFrequencyCapSetting(FrequencyCap.newBuilder().build())
    *           .setMinEffectiveFrequency(-1801725097)
+   *           .setEffectiveFrequencyLimit(EffectiveFrequencyLimit.newBuilder().build())
    *           .setTargeting(Targeting.newBuilder().build())
    *           .addAllPlannedProducts(new ArrayList<PlannedProduct>())
    *           .build();

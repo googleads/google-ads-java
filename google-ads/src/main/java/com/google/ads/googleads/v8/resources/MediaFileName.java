@@ -182,8 +182,8 @@ public class MediaFileName implements ResourceName {
     }
 
     private Builder(MediaFileName mediaFileName) {
-      customerId = mediaFileName.customerId;
-      mediaFileId = mediaFileName.mediaFileId;
+      this.customerId = mediaFileName.customerId;
+      this.mediaFileId = mediaFileName.mediaFileId;
     }
 
     public MediaFileName build() {

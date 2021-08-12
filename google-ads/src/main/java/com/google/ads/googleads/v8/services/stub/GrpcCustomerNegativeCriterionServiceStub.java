@@ -25,7 +25,6 @@ import com.google.api.gax.core.BackgroundResourceAggregation;
 import com.google.api.gax.grpc.GrpcCallSettings;
 import com.google.api.gax.grpc.GrpcStubCallableFactory;
 import com.google.api.gax.rpc.ClientContext;
-import com.google.api.gax.rpc.RequestParamsExtractor;
 import com.google.api.gax.rpc.UnaryCallable;
 import com.google.common.collect.ImmutableMap;
 import com.google.longrunning.stub.GrpcOperationsStub;
@@ -133,14 +132,10 @@ public class GrpcCustomerNegativeCriterionServiceStub extends CustomerNegativeCr
                 .<GetCustomerNegativeCriterionRequest, CustomerNegativeCriterion>newBuilder()
                 .setMethodDescriptor(getCustomerNegativeCriterionMethodDescriptor)
                 .setParamsExtractor(
-                    new RequestParamsExtractor<GetCustomerNegativeCriterionRequest>() {
-                      @Override
-                      public Map<String, String> extract(
-                          GetCustomerNegativeCriterionRequest request) {
-                        ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
-                        params.put("resource_name", String.valueOf(request.getResourceName()));
-                        return params.build();
-                      }
+                    request -> {
+                      ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
+                      params.put("resource_name", String.valueOf(request.getResourceName()));
+                      return params.build();
                     })
                 .build();
     GrpcCallSettings<MutateCustomerNegativeCriteriaRequest, MutateCustomerNegativeCriteriaResponse>
@@ -150,14 +145,10 @@ public class GrpcCustomerNegativeCriterionServiceStub extends CustomerNegativeCr
                     newBuilder()
                 .setMethodDescriptor(mutateCustomerNegativeCriteriaMethodDescriptor)
                 .setParamsExtractor(
-                    new RequestParamsExtractor<MutateCustomerNegativeCriteriaRequest>() {
-                      @Override
-                      public Map<String, String> extract(
-                          MutateCustomerNegativeCriteriaRequest request) {
-                        ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
-                        params.put("customer_id", String.valueOf(request.getCustomerId()));
-                        return params.build();
-                      }
+                    request -> {
+                      ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
+                      params.put("customer_id", String.valueOf(request.getCustomerId()));
+                      return params.build();
                     })
                 .build();
 
@@ -195,7 +186,13 @@ public class GrpcCustomerNegativeCriterionServiceStub extends CustomerNegativeCr
 
   @Override
   public final void close() {
-    shutdown();
+    try {
+      backgroundResources.close();
+    } catch (RuntimeException e) {
+      throw e;
+    } catch (Exception e) {
+      throw new IllegalStateException("Failed to close resource", e);
+    }
   }
 
   @Override

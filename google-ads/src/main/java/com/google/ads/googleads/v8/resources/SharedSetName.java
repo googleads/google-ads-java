@@ -182,8 +182,8 @@ public class SharedSetName implements ResourceName {
     }
 
     private Builder(SharedSetName sharedSetName) {
-      customerId = sharedSetName.customerId;
-      sharedSetId = sharedSetName.sharedSetId;
+      this.customerId = sharedSetName.customerId;
+      this.sharedSetId = sharedSetName.sharedSetId;
     }
 
     public SharedSetName build() {

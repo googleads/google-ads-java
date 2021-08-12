@@ -31,20 +31,22 @@ public final class ChangeEventResourceTypeProto {
       "\n>google/ads/googleads/v8/enums/change_e" +
       "vent_resource_type.proto\022\035google.ads.goo" +
       "gleads.v8.enums\032\034google/api/annotations." +
-      "proto\"\253\002\n\033ChangeEventResourceTypeEnum\"\213\002" +
+      "proto\"\362\002\n\033ChangeEventResourceTypeEnum\"\322\002" +
       "\n\027ChangeEventResourceType\022\017\n\013UNSPECIFIED" +
       "\020\000\022\013\n\007UNKNOWN\020\001\022\006\n\002AD\020\002\022\014\n\010AD_GROUP\020\003\022\026\n" +
       "\022AD_GROUP_CRITERION\020\004\022\014\n\010CAMPAIGN\020\005\022\023\n\017C" +
       "AMPAIGN_BUDGET\020\006\022\031\n\025AD_GROUP_BID_MODIFIE" +
       "R\020\007\022\026\n\022CAMPAIGN_CRITERION\020\010\022\010\n\004FEED\020\t\022\r\n" +
       "\tFEED_ITEM\020\n\022\021\n\rCAMPAIGN_FEED\020\013\022\021\n\rAD_GR" +
-      "OUP_FEED\020\014\022\017\n\013AD_GROUP_AD\020\rB\361\001\n!com.goog" +
-      "le.ads.googleads.v8.enumsB\034ChangeEventRe" +
-      "sourceTypeProtoP\001ZBgoogle.golang.org/gen" +
-      "proto/googleapis/ads/googleads/v8/enums;" +
-      "enums\242\002\003GAA\252\002\035Google.Ads.GoogleAds.V8.En" +
-      "ums\312\002\035Google\\Ads\\GoogleAds\\V8\\Enums\352\002!Go" +
-      "ogle::Ads::GoogleAds::V8::Enumsb\006proto3"
+      "OUP_FEED\020\014\022\017\n\013AD_GROUP_AD\020\r\022\t\n\005ASSET\020\016\022\022" +
+      "\n\016CUSTOMER_ASSET\020\017\022\022\n\016CAMPAIGN_ASSET\020\020\022\022" +
+      "\n\016AD_GROUP_ASSET\020\021B\361\001\n!com.google.ads.go" +
+      "ogleads.v8.enumsB\034ChangeEventResourceTyp" +
+      "eProtoP\001ZBgoogle.golang.org/genproto/goo" +
+      "gleapis/ads/googleads/v8/enums;enums\242\002\003G" +
+      "AA\252\002\035Google.Ads.GoogleAds.V8.Enums\312\002\035Goo" +
+      "gle\\Ads\\GoogleAds\\V8\\Enums\352\002!Google::Ads" +
+      "::GoogleAds::V8::Enumsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

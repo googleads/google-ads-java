@@ -158,7 +158,7 @@ public class HotelPerformanceViewName implements ResourceName {
     }
 
     private Builder(HotelPerformanceViewName hotelPerformanceViewName) {
-      customerId = hotelPerformanceViewName.customerId;
+      this.customerId = hotelPerformanceViewName.customerId;
     }
 
     public HotelPerformanceViewName build() {

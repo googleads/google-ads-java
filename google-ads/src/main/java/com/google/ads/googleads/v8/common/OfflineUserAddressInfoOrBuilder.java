@@ -76,7 +76,8 @@ public interface OfflineUserAddressInfoOrBuilder extends
 
   /**
    * <pre>
-   * City of the address. Only accepted for Store Sales Direct data.
+   * City of the address. Only accepted for Store Sales and
+   * ConversionAdjustmentUploadService.
    * </pre>
    *
    * <code>string city = 9;</code>
@@ -85,7 +86,8 @@ public interface OfflineUserAddressInfoOrBuilder extends
   boolean hasCity();
   /**
    * <pre>
-   * City of the address. Only accepted for Store Sales Direct data.
+   * City of the address. Only accepted for Store Sales and
+   * ConversionAdjustmentUploadService.
    * </pre>
    *
    * <code>string city = 9;</code>
@@ -94,7 +96,8 @@ public interface OfflineUserAddressInfoOrBuilder extends
   java.lang.String getCity();
   /**
    * <pre>
-   * City of the address. Only accepted for Store Sales Direct data.
+   * City of the address. Only accepted for Store Sales and
+   * ConversionAdjustmentUploadService.
    * </pre>
    *
    * <code>string city = 9;</code>
@@ -105,7 +108,8 @@ public interface OfflineUserAddressInfoOrBuilder extends
 
   /**
    * <pre>
-   * State code of the address. Only accepted for Store Sales Direct data.
+   * State code of the address. Only accepted for Store Sales and
+   * ConversionAdjustmentUploadService.
    * </pre>
    *
    * <code>string state = 10;</code>
@@ -114,7 +118,8 @@ public interface OfflineUserAddressInfoOrBuilder extends
   boolean hasState();
   /**
    * <pre>
-   * State code of the address. Only accepted for Store Sales Direct data.
+   * State code of the address. Only accepted for Store Sales and
+   * ConversionAdjustmentUploadService.
    * </pre>
    *
    * <code>string state = 10;</code>
@@ -123,7 +128,8 @@ public interface OfflineUserAddressInfoOrBuilder extends
   java.lang.String getState();
   /**
    * <pre>
-   * State code of the address. Only accepted for Store Sales Direct data.
+   * State code of the address. Only accepted for Store Sales and
+   * ConversionAdjustmentUploadService.
    * </pre>
    *
    * <code>string state = 10;</code>
@@ -189,4 +195,39 @@ public interface OfflineUserAddressInfoOrBuilder extends
    */
   com.google.protobuf.ByteString
       getPostalCodeBytes();
+
+  /**
+   * <pre>
+   * The street address of the user hashed using SHA-256 hash function after
+   * normalization (lower case only). Only accepted for
+   * ConversionAdjustmentUploadService.
+   * </pre>
+   *
+   * <code>string hashed_street_address = 13;</code>
+   * @return Whether the hashedStreetAddress field is set.
+   */
+  boolean hasHashedStreetAddress();
+  /**
+   * <pre>
+   * The street address of the user hashed using SHA-256 hash function after
+   * normalization (lower case only). Only accepted for
+   * ConversionAdjustmentUploadService.
+   * </pre>
+   *
+   * <code>string hashed_street_address = 13;</code>
+   * @return The hashedStreetAddress.
+   */
+  java.lang.String getHashedStreetAddress();
+  /**
+   * <pre>
+   * The street address of the user hashed using SHA-256 hash function after
+   * normalization (lower case only). Only accepted for
+   * ConversionAdjustmentUploadService.
+   * </pre>
+   *
+   * <code>string hashed_street_address = 13;</code>
+   * @return The bytes for hashedStreetAddress.
+   */
+  com.google.protobuf.ByteString
+      getHashedStreetAddressBytes();
 }

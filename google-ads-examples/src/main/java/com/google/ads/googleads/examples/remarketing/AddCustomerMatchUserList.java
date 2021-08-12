@@ -236,6 +236,11 @@ public class AddCustomerMatchUserList {
       // all added operations.
       offlineUserDataJobServiceClient.runOfflineUserDataJobAsync(offlineUserDataJobResourceName);
 
+      // BEWARE! The above call returns an OperationFuture. The execution of that future depends on
+      // the thread pool which is owned by offlineUserDataJobServiceClient. If you use this future,
+      // you *must* keep the service client in scope too.
+      // See https://developers.google.com/google-ads/api/docs/client-libs/java/lro for more detail.
+
       // Offline user data jobs may take up to 24 hours to complete, so instead of waiting for the
       // job to complete, retrieves and displays the job status once. If the job is completed
       // successfully, prints information about the user list. Otherwise, prints the query to use
