@@ -20,7 +20,7 @@ import static org.hamcrest.Matchers.lessThan;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertThat;
 
-import com.google.ads.googleads.lib.BaseGoogleAdsException;
+import com.google.ads.googleads.lib.stubs.exceptions.BaseGoogleAdsException;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;

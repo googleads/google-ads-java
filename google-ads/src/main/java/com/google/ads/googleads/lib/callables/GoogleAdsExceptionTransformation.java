@@ -14,16 +14,19 @@
 
 package com.google.ads.googleads.lib.callables;
 
-import com.google.ads.googleads.lib.BaseGoogleAdsException;
 import com.google.ads.googleads.lib.catalog.ApiCatalog;
 import com.google.ads.googleads.lib.catalog.Version;
+import com.google.ads.googleads.lib.stubs.callables.ExceptionTransformation;
+import com.google.ads.googleads.lib.stubs.exceptions.BaseGoogleAdsException;
 import com.google.api.gax.rpc.ApiException;
+import com.google.auto.service.AutoService;
 import java.util.Optional;
 
 /**
  * Transforms an ApiException into a GoogleAdsException whenever a binary GoogleAdsFailure message
  * was sent in the RPC trailers.
  */
+@AutoService(ExceptionTransformation.class)
 public class GoogleAdsExceptionTransformation implements ExceptionTransformation {
 
   private static final ApiCatalog catalog = ApiCatalog.getDefault();

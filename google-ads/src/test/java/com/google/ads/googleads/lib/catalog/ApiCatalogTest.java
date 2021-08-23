@@ -19,10 +19,10 @@ import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
 
-import com.google.ads.googleads.lib.BaseGoogleAdsException;
 import com.google.ads.googleads.lib.FakeCredential;
 import com.google.ads.googleads.lib.GoogleAdsAllVersions;
-import com.google.ads.googleads.v7.services.MockGoogleAdsService;
+import com.google.ads.googleads.lib.stubs.exceptions.BaseGoogleAdsException;
+import com.google.ads.googleads.v8.services.MockGoogleAdsService;
 import com.google.api.gax.grpc.GrpcStatusCode;
 import com.google.api.gax.grpc.testing.LocalChannelProvider;
 import com.google.api.gax.grpc.testing.MockServiceHelper;

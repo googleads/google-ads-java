@@ -17,6 +17,7 @@ package com.google.ads.googleads.lib.callables;
 import static org.junit.Assert.fail;
 import static org.mockito.Mockito.when;
 
+import com.google.ads.googleads.lib.stubs.callables.ExceptionTransformingUnaryCallable;
 import com.google.api.core.ApiFuture;
 import com.google.api.core.SettableApiFuture;
 import com.google.api.gax.grpc.GrpcCallContext;

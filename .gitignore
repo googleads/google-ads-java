@@ -48,8 +48,5 @@ google-ads/*/buildNumber.properties
 # Gradle build output
 .gradle/
 buildSrc/.gradle/
-buildSrc/build/
-google-ads-annotation-processing/build/
-google-ads-examples/build/
-google-ads-migration-examples/build/
-google-ads/build/
+*/build/
+

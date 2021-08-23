@@ -24,6 +24,7 @@ import java.util.regex.Matcher
 plugins {
   id 'java-library'
   id 'maven-publish'
+  id 'java-test-fixtures'
   id 'signing'
 }
 
@@ -156,6 +157,7 @@ dependencies {
   implementation 'io.grpc:grpc-stub'
   implementation 'io.grpc:grpc-protobuf'
   implementation 'com.google.auth:google-auth-library-oauth2-http'
+  implementation 'javax.annotation:javax.annotation-api'
   annotationProcessor 'com.google.auto.service:auto-service:1.0-rc2'
   testImplementation 'junit:junit:4.13.1'
 }
