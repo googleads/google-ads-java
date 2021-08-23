@@ -369,7 +369,7 @@ publishing {
 
       groupId = 'com.google.api-ads'
       artifactId = 'google-ads-shadowjar'
-      version = '0.0.1-alpha'
+      version = '1.0.0'
 
       configurePom(publication,
           "Google Ads API client library for java - shadow jar",
