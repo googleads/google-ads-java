@@ -70,6 +70,12 @@ dependencies {
   testImplementation 'junit:junit:4.13.1'
 }
 
+// Disables javadoc unless we're publishing something.
+tasks.javadoc.enabled = false
+tasks.findAll {it.group == "publishing" }
+    .removeIf {!it.enabled }
+    .any {tasks.javadoc.enabled = true }
+
 class ExampleRunnerTask extends JavaExec {
 
   // The base package for all examples.
