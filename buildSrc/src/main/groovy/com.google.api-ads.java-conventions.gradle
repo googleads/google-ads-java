@@ -70,11 +70,18 @@ dependencies {
   testImplementation 'junit:junit:4.13.1'
 }
 
-// Disables javadoc unless we're publishing something.
-tasks.javadoc.enabled = false
-tasks.findAll { it.group == "publishing" }
-    .removeIf { !it.enabled }
-    .any { tasks.javadoc.enabled = true }
+// Disables a task unless we're publishing something.
+def disableUnlessPublishing(toDisable) {
+  toDisable.enabled = false
+  gradle.taskGraph.whenReady {
+    gradle.taskGraph.allTasks
+            .findAll { it.group == "publishing" }
+            .any { toDisable.enabled = true }
+  }
+}
+disableUnlessPublishing(tasks.javadocJar)
+disableUnlessPublishing(tasks.javadoc)
+disableUnlessPublishing(tasks.sourcesJar)
 
 class ExampleRunnerTask extends JavaExec {
 
