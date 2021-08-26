@@ -70,6 +70,19 @@ dependencies {
   testImplementation 'junit:junit:4.13.1'
 }
 
+// Disables a task unless we're publishing something.
+def disableUnlessPublishing(toDisable) {
+  toDisable.enabled = false
+  gradle.taskGraph.whenReady {
+    gradle.taskGraph.allTasks
+            .findAll { it.group == "publishing" }
+            .any { toDisable.enabled = true }
+  }
+}
+disableUnlessPublishing(tasks.javadocJar)
+disableUnlessPublishing(tasks.javadoc)
+disableUnlessPublishing(tasks.sourcesJar)
+
 class ExampleRunnerTask extends JavaExec {
 
   // The base package for all examples.
