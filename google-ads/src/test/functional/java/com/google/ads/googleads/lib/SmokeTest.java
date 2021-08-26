@@ -26,11 +26,13 @@ import com.google.ads.googleads.v8.services.ListAccessibleCustomersResponse;
 import com.google.api.gax.grpc.GrpcCallContext;
 import java.io.IOException;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 import java.util.stream.Collectors;
 import java.util.stream.StreamSupport;
+import org.junit.Rule;
 import org.junit.Test;
+import org.junit.rules.Timeout;
 import org.junit.runner.JUnitCore;
-import org.junit.runner.Result;
 import org.junit.runner.RunWith;
 import org.junit.runners.JUnit4;
 import org.threeten.bp.Duration;
@@ -45,6 +47,8 @@ import org.threeten.bp.Duration;
 @RunWith(JUnit4.class)
 public class SmokeTest {
 
+  @Rule public Timeout timeout = new Timeout(20_000, TimeUnit.MILLISECONDS);
+
   /**
    * Provides a main method to run these tests. Useful for testing artifacts such as shadow jar
    * which require modifying the runtime classpath.
@@ -53,15 +57,7 @@ public class SmokeTest {
     System.out.println(
         "Running SmokeTest. This expects you have ads.properties configured with credentials for"
             + " accessing ads API.");
-    setupTimeout();
-    Result result = JUnitCore.runClasses(SmokeTest.class);
-    if (!result.wasSuccessful()) {
-      System.out.println(
-          "Smoke test failed for " + result.getFailures().size() + "/" + result.getRunCount());
-      result.getFailures().forEach(System.out::println);
-      System.exit(1);
-    }
-    System.out.println("Successfully completed SmokeTest");
+    JUnitCore.main(SmokeTest.class.getCanonicalName());
   }
 
   @Test
@@ -109,26 +105,5 @@ public class SmokeTest {
     }
     System.out.println("Retrieved " + numCampaigns + " campaigns");
     assertTrue("Expected to read at least one campaign for smoke test.", numCampaigns > 0);
-  }
-
-  /**
-   * Configures the application to exit if the tasks haven't completed within a timeframe.
-   */
-  private static void setupTimeout() {
-    // Creates a thread which will sleep for a timeout. Then if we're still running will kill the
-    // JVM. This works around the infinite retry issues that can happen with OAuth credentials.
-    new Thread(
-        () -> {
-          try {
-            Thread.sleep(20_000);
-            System.out.println("Reached timeout for SmokeTest. Failing the test suite.");
-            System.exit(1);
-          } catch (InterruptedException e) {
-          }
-        }) {
-      {
-        setDaemon(true);
-      }
-    }.start();
   }
 }
