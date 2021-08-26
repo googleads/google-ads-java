@@ -30,6 +30,7 @@ import java.util.stream.Collectors;
 import java.util.stream.StreamSupport;
 import org.junit.Test;
 import org.junit.runner.JUnitCore;
+import org.junit.runner.Result;
 import org.junit.runner.RunWith;
 import org.junit.runners.JUnit4;
 import org.threeten.bp.Duration;
@@ -49,8 +50,17 @@ public class SmokeTest {
    * which require modifying the runtime classpath.
    */
   public static void main(String[] args) {
-    System.out.println("Running SmokeTest");
-    JUnitCore.runClasses(SmokeTest.class);
+    System.out.println(
+        "Running SmokeTest. This expects you have ads.properties configured with credentials for"
+            + " accessing ads API.");
+    setupTimeout();
+    Result result = JUnitCore.runClasses(SmokeTest.class);
+    if (!result.wasSuccessful()) {
+      System.out.println(
+          "Smoke test failed for " + result.getFailures().size() + "/" + result.getRunCount());
+      result.getFailures().forEach(System.out::println);
+      System.exit(1);
+    }
     System.out.println("Successfully completed SmokeTest");
   }
 
@@ -99,5 +109,26 @@ public class SmokeTest {
     }
     System.out.println("Retrieved " + numCampaigns + " campaigns");
     assertTrue("Expected to read at least one campaign for smoke test.", numCampaigns > 0);
+  }
+
+  /**
+   * Configures the application to exit if the tasks haven't completed within a timeframe.
+   */
+  private static void setupTimeout() {
+    // Creates a thread which will sleep for a timeout. Then if we're still running will kill the
+    // JVM. This works around the infinite retry issues that can happen with OAuth credentials.
+    new Thread(
+        () -> {
+          try {
+            Thread.sleep(20_000);
+            System.out.println("Reached timeout for SmokeTest. Failing the test suite.");
+            System.exit(1);
+          } catch (InterruptedException e) {
+          }
+        }) {
+      {
+        setDaemon(true);
+      }
+    }.start();
   }
 }
