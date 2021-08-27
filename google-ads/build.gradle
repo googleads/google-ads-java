@@ -287,7 +287,12 @@ task testShadowJar {
 
   doLast {
     javaexec {
-      mainClass = "com.google.ads.googleads.lib.SmokeTest"
+      // Runs the JUnit main method.
+      mainClass = "org.junit.runner.JUnitCore"
+
+      // Passes the class name of the test to run.
+      args "com.google.ads.googleads.lib.SmokeTest"
+
       // Uses a special configuration to run the smoke tests. Allows us to
       // replace the google-ads dependency with the shaded artifact so we can
       // test it. Otherwise we'd just run end up running the smoke tests on

@@ -32,7 +32,6 @@ import java.util.stream.StreamSupport;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.Timeout;
-import org.junit.runner.JUnitCore;
 import org.junit.runner.RunWith;
 import org.junit.runners.JUnit4;
 import org.threeten.bp.Duration;
@@ -48,17 +47,6 @@ import org.threeten.bp.Duration;
 public class SmokeTest {
 
   @Rule public Timeout timeout = new Timeout(20_000, TimeUnit.MILLISECONDS);
-
-  /**
-   * Provides a main method to run these tests. Useful for testing artifacts such as shadow jar
-   * which require modifying the runtime classpath.
-   */
-  public static void main(String[] args) {
-    System.out.println(
-        "Running SmokeTest. This expects you have ads.properties configured with credentials for"
-            + " accessing ads API.");
-    JUnitCore.main(SmokeTest.class.getCanonicalName());
-  }
 
   @Test
   public void ensureCanReadAllAvailableCustomersCampaigns() throws IOException {
