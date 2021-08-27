@@ -26,10 +26,12 @@ import com.google.ads.googleads.v8.services.ListAccessibleCustomersResponse;
 import com.google.api.gax.grpc.GrpcCallContext;
 import java.io.IOException;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 import java.util.stream.Collectors;
 import java.util.stream.StreamSupport;
+import org.junit.Rule;
 import org.junit.Test;
-import org.junit.runner.JUnitCore;
+import org.junit.rules.Timeout;
 import org.junit.runner.RunWith;
 import org.junit.runners.JUnit4;
 import org.threeten.bp.Duration;
@@ -44,15 +46,7 @@ import org.threeten.bp.Duration;
 @RunWith(JUnit4.class)
 public class SmokeTest {
 
-  /**
-   * Provides a main method to run these tests. Useful for testing artifacts such as shadow jar
-   * which require modifying the runtime classpath.
-   */
-  public static void main(String[] args) {
-    System.out.println("Running SmokeTest");
-    JUnitCore.runClasses(SmokeTest.class);
-    System.out.println("Successfully completed SmokeTest");
-  }
+  @Rule public Timeout timeout = new Timeout(20_000, TimeUnit.MILLISECONDS);
 
   @Test
   public void ensureCanReadAllAvailableCustomersCampaigns() throws IOException {
