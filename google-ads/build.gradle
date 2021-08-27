@@ -396,6 +396,16 @@ signing {
   sign publishing.publications.shadow
 }
 
+// Disables signing tasks except on sonatype deploy. Avoids failing build for
+// users without GPG configured.
+gradle.taskGraph.whenReady {
+  if (gradle.taskGraph.allTasks
+      .findAll { it.name.matches("publish.+ToSonatypeRepository") }
+      .isEmpty()) {
+    tasks.findByName("signShadowPublication").enabled = false
+  }
+}
+
 // Provide a helpful error message for missing sonatype credentials.
 tasks.findAll {
   if (it.name.matches("publish.+ToSonatypeRepository")) {
