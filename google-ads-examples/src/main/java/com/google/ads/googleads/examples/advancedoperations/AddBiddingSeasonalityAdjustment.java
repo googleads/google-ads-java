@@ -72,7 +72,7 @@ public class AddBiddingSeasonalityAdjustment {
         required = true,
         description =
             "The conversion rate modifier that will be applied during the adjustment interval.")
-    private Double conversionRateModifer;
+    private Double conversionRateModifier;
   }
 
   public static void main(String[] args) throws IOException {
@@ -83,7 +83,7 @@ public class AddBiddingSeasonalityAdjustment {
       params.customerId = Long.parseLong("INSERT_CUSTOMER_ID_HERE");
       params.startDateTime = "INSERT_START_DATE_TIME_HERE";
       params.endDateTime = "INSERT_END_DATE_TIME_HERE";
-      params.conversionRateModifer = Double.parseDouble("INSERT_CONVERSION_RATE_MODIFIER_HERE");
+      params.conversionRateModifier = Double.parseDouble("INSERT_CONVERSION_RATE_MODIFIER_HERE");
     }
 
     GoogleAdsClient googleAdsClient = null;
@@ -105,7 +105,7 @@ public class AddBiddingSeasonalityAdjustment {
               params.customerId,
               params.startDateTime,
               params.endDateTime,
-              params.conversionRateModifer);
+              params.conversionRateModifier);
     } catch (GoogleAdsException gae) {
       // GoogleAdsException is the base class for most exceptions thrown by an API request.
       // Instances of this exception have a message and a GoogleAdsFailure that contains a

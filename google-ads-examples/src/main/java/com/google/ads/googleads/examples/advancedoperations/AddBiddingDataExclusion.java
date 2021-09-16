@@ -129,7 +129,7 @@ public class AddBiddingDataExclusion {
               // A unique name is required for every data exclusion.
               .setName("Data exclusion #" + getPrintableDateTime())
               // The CHANNEL scope applies the data exclusion to all campaigns of specific
-              // advertising channel types. In this example, the the exclusion will only apply to
+              // advertising channel types. In this example, the exclusion will only apply to
               // Search campaigns. Use the CAMPAIGN scope to instead limit the scope to specific
               // campaigns.
               .setScope(SeasonalityEventScope.CHANNEL)
