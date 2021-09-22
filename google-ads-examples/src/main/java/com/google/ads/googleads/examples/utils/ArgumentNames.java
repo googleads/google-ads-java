@@ -55,6 +55,7 @@ public final class ArgumentNames {
   public static final String CPC_BID_MICRO_AMOUNT = "--cpcBidMicroAmount";
   public static final String CREATE_DEFAULT_LISTING_GROUP = "--createDefaultListingGroup";
   public static final String CRITERION_ID = "--criterionId";
+  public static final String CURRENCY_CODE = "--currencyCode";
   public static final String CUSTOMER_ID = "--customerId";
   public static final String CUSTOM_KEY = "--customKey";
   public static final String CUSTOMER_IDS = "--customerIds";
@@ -89,6 +90,7 @@ public final class ArgumentNames {
   public static final String MARKETING_IMAGE_ASSET_ID = "--marketingImageAssetId";
   public static final String MERCHANT_CENTER_ACCOUNT_ID = "--merchantCenterAccountId";
   public static final String OFFLINE_USER_DATA_JOB_TYPE = "--offlineUserDataJobType";
+  public static final String ORDER_ID = "--orderId";
   public static final String PAGE_URL = "--pageUrl";
   public static final String PARTNER_ID = "--partnerId";
   public static final String PAYMENTS_ACCOUNT_ID_ID = "--paymentsAccountId";
@@ -101,6 +103,7 @@ public final class ArgumentNames {
   public static final String SITELINK_TEXT = "--sitelinkText";
   public static final String SQUARE_MARKETING_IMAGE_ID = "--squareMarketingImageAssetId";
   public static final String START_DATE_TIME = "--startDateTime";
+  public static final String USER_AGENT = "--userAgent";
   public static final String USER_LIST_ID = "--userListId";
   public static final String USER_LIST_IDS = "--userListIds";
 }
