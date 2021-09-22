@@ -47,9 +47,6 @@ public class UploadConversionWithIdentifiers {
     @Parameter(names = ArgumentNames.EMAIL_ADDRESS, required = true)
     private String emailAddress;
 
-    @Parameter(names = ArgumentNames.ORDER_ID, required = false)
-    private String orderId;
-
     @Parameter(
         names = ArgumentNames.CONVERSION_DATE_TIME,
         required = true,
@@ -61,6 +58,9 @@ public class UploadConversionWithIdentifiers {
 
     @Parameter(names = ArgumentNames.CONVERSION_VALUE, required = true)
     private Double conversionValue;
+
+    @Parameter(names = ArgumentNames.ORDER_ID, required = false)
+    private String orderId;
   }
 
   public static void main(String[] args)
@@ -98,9 +98,9 @@ public class UploadConversionWithIdentifiers {
               params.customerId,
               params.conversionActionId,
               params.emailAddress,
-              params.orderId,
               params.conversionDateTime,
-              params.conversionValue);
+              params.conversionValue,
+              params.orderId);
     } catch (GoogleAdsException gae) {
       // GoogleAdsException is the base class for most exceptions thrown by an API request.
       // Instances of this exception have a message and a GoogleAdsFailure that contains a
@@ -124,9 +124,9 @@ public class UploadConversionWithIdentifiers {
    * @param customerId the client customer ID.
    * @param conversionActionId conversion action ID associated with this conversion.
    * @param emailAddress email address for the conversion.
-   * @param orderId the unique ID (transaction ID) of the conversion.
    * @param conversionDateTime date and time of the conversion.
    * @param conversionValue the value of the conversion.
+   * @param orderId the unique ID (transaction ID) of the conversion.
    */
   // [START upload_conversion_with_identifiers]
   private void runExample(
@@ -134,9 +134,9 @@ public class UploadConversionWithIdentifiers {
       long customerId,
       long conversionActionId,
       String emailAddress,
-      String orderId,
       String conversionDateTime,
-      Double conversionValue)
+      Double conversionValue,
+      String orderId)
       throws UnsupportedEncodingException, NoSuchAlgorithmException {
     // [START create_conversion]
     // Gets the conversion action resource name.

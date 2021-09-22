@@ -129,8 +129,8 @@ public class UploadConversionEnhancement {
    * @param conversionActionId conversion action ID associated with this conversion.
    * @param orderId unique order ID (transaction ID) of the conversion.
    * @param userAgent the HTTP user agent of the conversion.
-   * @param restatementValue the enhancement value
-   * @param restatementCurrencyCode the currency of the enhancement value
+   * @param restatementValue the enhancement value.
+   * @param restatementCurrencyCode the currency of the enhancement value.
    */
   // [START upload_conversion_enhancement]
   private void runExample(
