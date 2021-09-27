@@ -25,11 +25,11 @@ Please check existing issues to see if your bug has already been reported before
 **Client library version and API version:**
 Client library version:
 Google Ads API version:
-<!-- [LIB_SPECIFIC_HINTS, e.g.: Paste the list of dependencies you're using (i.e. `pip freeze`).] -->
+JDK version:
 
 **Request/Response Logs:**
 <!--
-To enable logging see this page: https://developers.google.com/google-ads/api/docs/client-libs/[LIB_LANGUAGE]/logging
+To enable logging see this page: https://developers.google.com/google-ads/api/docs/client-libs/java/logging
 
 NOTE: Make sure to include a Request ID when possible, and to redact personally
 identifiable information, including developer tokens, client IDs, customer IDs, etc.
