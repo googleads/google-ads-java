@@ -33,8 +33,8 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 
 /**
- * Adds a customer-level seasonality adjustment that adjusts Smart Bidding behavior by the expected
- * change in conversion rate for the given future time interval.
+ * Adds a seasonality adjustment for all search campaigns that adjusts Smart Bidding behavior by the
+ * expected change in conversion rate for the given future time interval.
  *
  * <p>For more information on using seasonality adjustments, see
  * https://developers.google.com/google-ads/api/docs/campaigns/bidding/seasonality-adjustments.
@@ -123,7 +123,7 @@ public class AddBiddingSeasonalityAdjustment {
   }
 
   /**
-   * Adds a "CUSTOMER" scoped seasonality adjustment for the client customer ID, dates, and
+   * Adds a "CHANNEL" scoped seasonality adjustment for the client customer ID, dates, and
    * conversion modifier rate specified.
    *
    * @param googleAdsClient the GoogleAdsClient
