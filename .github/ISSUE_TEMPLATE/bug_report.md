@@ -1,34 +1,40 @@
 ---
-name: Bug report
-about: Report a bug in this library
+name: Library-specific Bug Report
+about: Report a problem with this library that needs to be fixed.
 title: ''
-labels: bug
+labels: bug, triage
 assignees: ''
 
 ---
+<!-- PLEASE READ
+This form is for bug reports specific to this library.
 
-<!--
-This form is for bug reports for this library only.
-For general, language-agnostic questions and troubleshooting, please ask/look for answers [here](https://groups.google.com/g/adwords-api).
+For troubleshooting tips, see: https://developers.google.com/google-ads/api/docs/best-practices/troubleshooting
+
+For issues that are related to the Google Ads API itself and not specific to this library, please reach out to one of our support channels: https://developers.google.com/google-ads/api/support. 
 
 Please check existing issues to see if your bug has already been reported before creating a new issue. We encourage you to add any relevant information to the existing issue if one already exists.
 -->
 
-**Which version of the client library are you using?**
+**Describe the bug:**
 
-**Which version of Java are you using?**
+**Steps to Reproduce:**
 
-**Which operating system (Linux, Windows, ...) and version?**
+**Expected behavior:**
 
-**Actions taken**
-Please provide a code snippet or steps to consistently reproduce the experienced behavior.
-[DO NOT INCLUDE ANY PERSONAL OR SENSITIVE DATA IN YOUR SUBMITTED CODE]
+**Client library version and API version:**
+Client library version:
+Google Ads API version:
+JDK version:
 
-**Expected result**
+**Request/Response Logs:**
+<!--
+To enable logging see this page: https://developers.google.com/google-ads/api/docs/client-libs/java/logging
 
-**Actual result**
+NOTE: Make sure to include a Request ID when possible, and to redact personally
+identifiable information, including developer tokens, client IDs, customer IDs, etc.
+-->
 
-Make sure you include information that can help us debug (full error message, exception listing, stack trace, logs).
-See [troubleshooting](https://developers.google.com/google-ads/api/docs/best-practices/troubleshooting) for how to diagnose problems better.
  
-**Anything else we should know about your project / environment**
+**Anything else we should know about your project / environment:**
+
