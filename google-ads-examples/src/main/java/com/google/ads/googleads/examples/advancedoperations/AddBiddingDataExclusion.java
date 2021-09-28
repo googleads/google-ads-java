@@ -33,8 +33,8 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 
 /**
- * Adds a customer-level data exclusion that excludes conversions from being used by Smart Bidding
- * for the time interval specified.
+ * Adds a data exclusion for all search campaigns that excludes conversions from being used by Smart
+ * Bidding for the time interval specified.
  *
  * <p>For more information on using data exclusions, see
  * https://developers.google.com/google-ads/api/docs/campaigns/bidding/data-exclusions.
@@ -108,7 +108,7 @@ public class AddBiddingDataExclusion {
   }
 
   /**
-   * Adds a "CUSTOMER" scoped data exclusion for the client customer ID and dates specified.
+   * Adds a "CHANNEL" scoped data exclusion for the client customer ID and dates specified.
    *
    * @param googleAdsClient the GoogleAdsClient
    * @param customerId the client ID of the Google Ads account
