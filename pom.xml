@@ -19,7 +19,7 @@
 
   <groupId>com.google.api-ads</groupId>
   <artifactId>google-ads-parent</artifactId>
-  <version>15.0.1-SNAPSHOT</version>
+  <version>15.0.0.003</version>
 
   <packaging>pom</packaging>
   <name>Google Ads API client library for Java project</name>
@@ -53,7 +53,7 @@
     <url>
       https://github.com/googleads/google-ads-java
     </url>
-    <tag>HEAD</tag>
+    <tag>15.0.0.003</tag>
   </scm>
 
   <developers>

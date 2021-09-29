@@ -18,7 +18,7 @@
   <parent>
     <groupId>com.google.api-ads</groupId>
     <artifactId>google-ads-parent</artifactId>
-    <version>15.0.1-SNAPSHOT</version>
+    <version>15.0.0.003</version>
     <relativePath>../pom.xml</relativePath>
   </parent>
 
@@ -26,7 +26,7 @@
   <groupId>com.google.api-ads</groupId>
   <artifactId>google-ads-annotation-processing</artifactId>
   <packaging>jar</packaging>
-  <version>15.0.1-SNAPSHOT</version>
+  <version>15.0.0.003</version>
   <name>Google Ads API client library for Java annotation processor</name>
   <description>
     Handles code generation via annotation processing for the client
