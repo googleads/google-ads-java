@@ -20,12 +20,14 @@ import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
 import com.google.ads.googleads.v8.errors.GoogleAdsError;
 import com.google.ads.googleads.v8.errors.GoogleAdsException;
+import com.google.ads.googleads.v8.errors.GoogleAdsFailure;
 import com.google.ads.googleads.v8.services.CallConversion;
 import com.google.ads.googleads.v8.services.CallConversionResult;
 import com.google.ads.googleads.v8.services.ConversionUploadServiceClient;
 import com.google.ads.googleads.v8.services.CustomVariable;
 import com.google.ads.googleads.v8.services.UploadCallConversionsRequest;
 import com.google.ads.googleads.v8.services.UploadCallConversionsResponse;
+import com.google.ads.googleads.v8.utils.ErrorUtils;
 import com.google.ads.googleads.v8.utils.ResourceNames;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -185,6 +187,11 @@ public class UploadCallConversion {
 
       // Prints any partial failure errors returned.
       if (response.hasPartialFailureError()) {
+        GoogleAdsFailure googleAdsFailure =
+            ErrorUtils.getInstance().getGoogleAdsFailure(response.getPartialFailureError());
+        googleAdsFailure
+            .getErrorsList()
+            .forEach(e -> System.out.println("Partial failure occurred: " + e.getMessage()));
         throw new RuntimeException(
             "Partial failure occurred " + response.getPartialFailureError().getMessage());
       }

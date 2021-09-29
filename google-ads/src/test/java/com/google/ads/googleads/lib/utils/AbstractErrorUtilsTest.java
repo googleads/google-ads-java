@@ -176,6 +176,53 @@ public class AbstractErrorUtilsTest {
     assertEquals(error1, result.get(1));
   }
 
+  @Test
+  public void getFailedOperationIndices_returnsOperation() {
+    MockPath path0 =
+        MockPath.newBuilder()
+            .setIndex(Int64Value.newBuilder().setValue(123))
+            .setFieldName(operationsFieldName)
+            .build();
+    MockError error0 = MockError.newBuilder().addLocation(path0).build();
+    MockFailure failure = MockFailure.newBuilder().addErrors(error0).build();
+    List<Long> result = impl.getFailedOperationIndices(failure);
+    assertEquals(1, result.size());
+    assertEquals(123L, (long) result.get(0));
+  }
+
+  @Test
+  public void getFailedOperationIndices_removesDuplicates() {
+    MockPath path0 =
+        MockPath.newBuilder()
+            .setIndex(Int64Value.newBuilder().setValue(123))
+            .setFieldName(operationsFieldName)
+            .build();
+    MockPath path1 =
+        MockPath.newBuilder()
+            .setIndex(Int64Value.newBuilder().setValue(123))
+            .setFieldName(operationsFieldName)
+            .build();
+    MockError error0 = MockError.newBuilder().addLocation(path0).build();
+    MockError error1 = MockError.newBuilder().addLocation(path1).build();
+    MockFailure failure = MockFailure.newBuilder().addErrors(error0).addErrors(error1).build();
+    List<Long> result = impl.getFailedOperationIndices(failure);
+    assertEquals(1, result.size());
+    assertEquals(123L, (long) result.get(0));
+  }
+
+  @Test
+  public void getFailedOperationIndices_ignoresNonOperationErrors() {
+    MockPath path0 =
+        MockPath.newBuilder()
+            .setIndex(Int64Value.newBuilder().setValue(123))
+            .setFieldName("someotherfield")
+            .build();
+    MockError error0 = MockError.newBuilder().addLocation(path0).build();
+    MockFailure failure = MockFailure.newBuilder().addErrors(error0).build();
+    List<Long> result = impl.getFailedOperationIndices(failure);
+    assertEquals(0, result.size());
+  }
+
   // We do want a dummy here for the version specific code, rather than a mock, so we can test the
   // base class methods.
   private static class TestImpl extends AbstractErrorUtils<MockFailure, MockError, MockPath> {

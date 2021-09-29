@@ -28,6 +28,7 @@ import com.google.ads.googleads.v8.enums.OfflineUserDataJobStatusEnum.OfflineUse
 import com.google.ads.googleads.v8.enums.OfflineUserDataJobTypeEnum.OfflineUserDataJobType;
 import com.google.ads.googleads.v8.errors.GoogleAdsError;
 import com.google.ads.googleads.v8.errors.GoogleAdsException;
+import com.google.ads.googleads.v8.errors.GoogleAdsFailure;
 import com.google.ads.googleads.v8.resources.OfflineUserDataJob;
 import com.google.ads.googleads.v8.services.AddOfflineUserDataJobOperationsRequest;
 import com.google.ads.googleads.v8.services.AddOfflineUserDataJobOperationsResponse;
@@ -36,6 +37,7 @@ import com.google.ads.googleads.v8.services.GoogleAdsRow;
 import com.google.ads.googleads.v8.services.GoogleAdsServiceClient;
 import com.google.ads.googleads.v8.services.OfflineUserDataJobOperation;
 import com.google.ads.googleads.v8.services.OfflineUserDataJobServiceClient;
+import com.google.ads.googleads.v8.utils.ErrorUtils;
 import com.google.ads.googleads.v8.utils.ResourceNames;
 import com.google.common.collect.ImmutableList;
 import java.io.FileNotFoundException;
@@ -469,11 +471,16 @@ public class UploadStoreSalesTransactions {
     // NOTE: The details of each partial failure error are not printed here, you can refer to
     // the example HandlePartialFailure.java to learn more.
     if (response.hasPartialFailureError()) {
+      GoogleAdsFailure googleAdsFailure =
+          ErrorUtils.getInstance().getGoogleAdsFailure(response.getPartialFailureError());
+      googleAdsFailure
+          .getErrorsList()
+          .forEach(e -> System.out.println("Partial failure occurred: " + e.getMessage()));
       System.out.printf(
           "Encountered %d partial failure errors while adding %d operations to the offline user "
               + "data job: '%s'. Only the successfully added operations will be executed when "
               + "the job runs.%n",
-          response.getPartialFailureError().getDetailsCount(),
+          ErrorUtils.getInstance().getFailedOperationIndices(googleAdsFailure).size(),
           userDataJobOperations.size(),
           response.getPartialFailureError().getMessage());
     } else {

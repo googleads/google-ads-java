@@ -49,6 +49,7 @@ sourceSets {
     runtimeClasspath += sourceSets.main.output
   }
 }
+sourceSets.test.java.srcDir new File(buildDir, 'generated/source/proto/test')
 
 protobuf {
   protoc {
