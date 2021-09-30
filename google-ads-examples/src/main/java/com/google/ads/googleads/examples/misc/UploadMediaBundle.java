@@ -39,7 +39,7 @@ import java.util.Arrays;
  */
 public class UploadMediaBundle {
 
-  private static final String BUNDLE_URL = "https://goo.gl/9Y7qI2";
+  private static final String BUNDLE_URL = "https://gaagl.page.link/ib87";
 
   private static class UploadMediaBundleParams extends CodeSampleParams {
 

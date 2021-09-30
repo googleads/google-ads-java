@@ -91,7 +91,7 @@ public class UploadImage {
    */
   private void runExample(GoogleAdsClient googleAdsClient, long customerId) throws IOException {
 
-    byte[] imageData = ByteStreams.toByteArray(new URL("https://goo.gl/3b9Wfh").openStream());
+    byte[] imageData = ByteStreams.toByteArray(new URL("https://gaagl.page.link/Eit5").openStream());
 
     MediaImage image = MediaImage.newBuilder().setData(ByteString.copyFrom(imageData)).build();
 
@@ -99,7 +99,7 @@ public class UploadImage {
         MediaFile.newBuilder()
             .setName("Ad Image")
             .setType(MediaType.IMAGE)
-            .setSourceUrl("https://goo.gl/3b9Wfh")
+            .setSourceUrl("https://gaagl.page.link/Eit5")
             .setImage(image)
             .build();
 

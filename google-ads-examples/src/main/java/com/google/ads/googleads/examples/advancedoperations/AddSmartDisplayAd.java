@@ -81,8 +81,8 @@ public class AddSmartDisplayAd {
   // See the descriptions of the 'marketingImages' and 'squareMarketingImages' fields in
   // ResponsiveDisplayAdInfo for specifications of marketing and square marketing images.
   // They can be used to create an image asset for your customer account only once.
-  private static final String MARKETING_IMAGE_URL = "https://goo.gl/3b9Wfh";
-  private static final String SQUARE_MARKETING_IMAGE_URL = "https://goo.gl/mtt54n";
+  private static final String MARKETING_IMAGE_URL = "https://gaagl.page.link/Eit5";
+  private static final String SQUARE_MARKETING_IMAGE_URL = "https://gaagl.page.link/bjYi";
 
   private static class AddSmartDisplayAdParams extends CodeSampleParams {
 
