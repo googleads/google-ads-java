@@ -258,12 +258,12 @@ public class AddMerchantCenterDynamicRemarketingCampaign {
   private void createAd(
       GoogleAdsClient googleAdsClient, long customerId, String adGroupResourceName)
       throws IOException {
-    String marketingImageUrl = "https://goo.gl/3b9Wfh";
+    String marketingImageUrl = "https://gaagl.page.link/Eit5";
     String marketingImageName = "Marketing Image";
     String marketingImageResourceName =
         uploadAsset(googleAdsClient, customerId, marketingImageUrl, marketingImageName);
     String squareMarketingImageName = "Square Marketing Image";
-    String squareMarketingImageUrl = "https://goo.gl/mtt54n";
+    String squareMarketingImageUrl = "https://gaagl.page.link/bjYi";
     String squareMarketingImageResourceName =
         uploadAsset(googleAdsClient, customerId, squareMarketingImageUrl, squareMarketingImageName);
 

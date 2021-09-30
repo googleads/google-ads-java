@@ -78,8 +78,8 @@ import java.net.URL;
  */
 public class AddLocalCampaign {
 
-  private static final String MARKETING_IMAGE_URL = "https://goo.gl/3b9Wfh";
-  private static final String LOGO_IMAGE_URL = "https://goo.gl/mtt54n";
+  private static final String MARKETING_IMAGE_URL = "https://gaagl.page.link/Eit5";
+  private static final String LOGO_IMAGE_URL = "https://gaagl.page.link/bjYi";
   private static final String YOUTUBE_VIDEO_ID = "ECpDzH9gXh8";
 
   private static class AddLocalCampaignParams extends CodeSampleParams {

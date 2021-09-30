@@ -36,7 +36,7 @@ import java.net.URL;
 /** Uploads an image asset. To get image assets, run GetAllImageAssets.java */
 public class UploadImageAsset {
 
-  private static final String IMAGE_URL = "https://goo.gl/3b9Wfh";
+  private static final String IMAGE_URL = "https://gaagl.page.link/Eit5";
 
   private static class UploadImageAssetParams extends CodeSampleParams {
 

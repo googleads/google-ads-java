@@ -46,7 +46,7 @@ import java.net.URL;
 /** Adds a display upload ad to a given ad group. To get ad groups, run GetAdGroups.java. */
 public class AddDisplayUploadAd {
 
-  private static final String BUNDLE_URL = "https://goo.gl/9Y7qI2";
+  private static final String BUNDLE_URL = "https://gaagl.page.link/ib87";
 
   private static class AddDisplayUploadAdParams extends CodeSampleParams {
 
