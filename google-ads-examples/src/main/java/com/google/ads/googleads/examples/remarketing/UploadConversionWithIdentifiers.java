@@ -166,9 +166,9 @@ public class UploadConversionWithIdentifiers {
     String hashedEmail = normalizeAndHashEmailAddress(sha256Digest, emailAddress);
     UserIdentifier userIdentifier =
         UserIdentifier.newBuilder()
-            // User identifiers for conversion enhancements MUST use first party data.
-            .setUserIdentifierSource(UserIdentifierSource.FIRST_PARTY)
             .setHashedEmail(hashedEmail)
+            // Optional: Specifies the user identifier source.
+            .setUserIdentifierSource(UserIdentifierSource.FIRST_PARTY)
             .build();
 
     // Adds the user identifier to the conversion.

@@ -160,8 +160,6 @@ public class UploadConversionEnhancement {
     // Creates a user identifier using sample values for the user address.
     UserIdentifier addressIdentifier =
         UserIdentifier.newBuilder()
-            // User identifiers for conversion enhancements MUST use first party data.
-            .setUserIdentifierSource(UserIdentifierSource.FIRST_PARTY)
             .setAddressInfo(
                 OfflineUserAddressInfo.newBuilder()
                     .setHashedFirstName(normalizeAndHash(sha256Digest, "Joanna"))
@@ -172,6 +170,8 @@ public class UploadConversionEnhancement {
                     .setState("CA")
                     .setPostalCode("94043")
                     .setCountryCode("US"))
+            // Optional: Specifies the user identifier source.
+            .setUserIdentifierSource(UserIdentifierSource.FIRST_PARTY)
             .build();
 
     // Creates a user identifier using the hashed email address.
