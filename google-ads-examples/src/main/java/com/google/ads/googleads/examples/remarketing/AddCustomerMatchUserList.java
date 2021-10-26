@@ -30,6 +30,7 @@ import com.google.ads.googleads.v8.enums.OfflineUserDataJobStatusEnum.OfflineUse
 import com.google.ads.googleads.v8.enums.OfflineUserDataJobTypeEnum.OfflineUserDataJobType;
 import com.google.ads.googleads.v8.errors.GoogleAdsError;
 import com.google.ads.googleads.v8.errors.GoogleAdsException;
+import com.google.ads.googleads.v8.errors.GoogleAdsFailure;
 import com.google.ads.googleads.v8.resources.OfflineUserDataJob;
 import com.google.ads.googleads.v8.resources.UserList;
 import com.google.ads.googleads.v8.services.AddOfflineUserDataJobOperationsRequest;
@@ -44,6 +45,7 @@ import com.google.ads.googleads.v8.services.SearchGoogleAdsStreamRequest;
 import com.google.ads.googleads.v8.services.SearchGoogleAdsStreamResponse;
 import com.google.ads.googleads.v8.services.UserListOperation;
 import com.google.ads.googleads.v8.services.UserListServiceClient;
+import com.google.ads.googleads.v8.utils.ErrorUtils;
 import com.google.api.gax.rpc.ServerStream;
 import com.google.common.collect.ImmutableList;
 import java.io.FileNotFoundException;
@@ -219,11 +221,13 @@ public class AddCustomerMatchUserList {
       // NOTE: The details of each partial failure error are not printed here, you can refer to
       // the example HandlePartialFailure.java to learn more.
       if (response.hasPartialFailureError()) {
+        GoogleAdsFailure googleAdsFailure =
+            ErrorUtils.getInstance().getGoogleAdsFailure(response.getPartialFailureError());
         System.out.printf(
             "Encountered %d partial failure errors while adding %d operations to the offline user "
                 + "data job: '%s'. Only the successfully added operations will be executed when "
                 + "the job runs.%n",
-            response.getPartialFailureError().getDetailsCount(),
+            googleAdsFailure.getErrorsCount(),
             userDataJobOperations.size(),
             response.getPartialFailureError().getMessage());
       } else {

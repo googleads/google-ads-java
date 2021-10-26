@@ -21,6 +21,8 @@ import com.google.rpc.Status;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
+import java.util.stream.StreamSupport;
 
 /** Contains utility methods for handling partial failure of operations. */
 public abstract class AbstractErrorUtils<
@@ -77,9 +79,9 @@ public abstract class AbstractErrorUtils<
    * empty list otherwise.
    *
    * <p>This method supports <code>XXXService.mutate(request)</code> where the request contains a
-   * list of operations named "operations". It also supports
-   * <code>GoogleAdsService.mutateGoogleAds(request)</code>, where the request contains a list of
-   * <code>MutateOperation</code>s named "mutate_operations".
+   * list of operations named "operations". It also supports <code>
+   * GoogleAdsService.mutateGoogleAds(request)</code>, where the request contains a list of <code>
+   * MutateOperation</code>s named "mutate_operations".
    *
    * @param operationIndex the index of the operation, starting from 0.
    * @param partialFailureStatus a partialFailure status, with the detail list containing {@link
@@ -108,8 +110,7 @@ public abstract class AbstractErrorUtils<
     List<GoogleAdsErrorT> result = new ArrayList();
     // Searches all the errors for one relating to the specified operation.
     for (ErrorPath<GoogleAdsErrorT> path : getErrorPaths(googleAdsFailure)) {
-      if (("operations".equals(path.getFieldName())
-              || "mutate_operations".equals(path.getFieldName()))
+      if (path.isOperationIndex()
           && path.getIndex().isPresent()
           && path.getIndex().get() == operationIndex) {
         GoogleAdsErrorT error = path.getError();
@@ -121,15 +122,49 @@ public abstract class AbstractErrorUtils<
     return result;
   }
 
+  /** Provides a convenience method to get all failed operation indices. */
+  public List<Long> getFailedOperationIndices(GoogleAdsFailureT googleAdsFailureT) {
+    return StreamSupport.stream(getErrorPaths(googleAdsFailureT).spliterator(), false)
+        .filter(ErrorPath::isOperationIndex)
+        .filter(p -> p.getIndex().isPresent())
+        .map(p -> (Long) p.getIndex().get())
+        .distinct()
+        .collect(Collectors.toList());
+  }
+
   /**
    * Unpacks a single {@link GoogleAdsFailureT} from an {@link Any} instance.
    *
-   * @throws InvalidProtocolBufferException if {@link GoogleAdsFailureT} is not able to unpack the
-   *     protocol buffer. This is most likely due to using the wrong version of <code>ErrorUtils
-   *     </code> being used.
+   * @throws DeserializeException if an {@link InvalidProtocolBufferException} is encountered. This
+   *     would indicate that the detail object was not-null, but the contents couldn't be
+   *     deserialized to the target type. This may indicate that the target type is incorrect, or
+   *     that the content of the Any message is incorrect.
+   * @throws NullPointerException if detail is null.
    */
-  public GoogleAdsFailureT getGoogleAdsFailure(Any detail) throws InvalidProtocolBufferException {
-    return detail.unpack(getGoogleAdsFailureClass());
+  public GoogleAdsFailureT getGoogleAdsFailure(Any detail) {
+    try {
+      return detail.unpack(getGoogleAdsFailureClass());
+    } catch (InvalidProtocolBufferException e) {
+      throw new DeserializeException(e);
+    }
+  }
+
+  /**
+   * Unpacks the GoogleAdsFailureT instance form a partial failure status object.
+   *
+   * <p>The status object contains a details repeated field. This contains at most 1 Any protos
+   * which encode a GoogleAdsFailure instance.
+   *
+   * @param partialFailureStatus the partial failure Status object returned in the repsponse.
+   * @return the GoogleAdsFailure instance describing the partial failures, or null if none is
+   *     found.
+   * @throws DeserializeException if an {@link InvalidProtocolBufferException} is encountered.
+   * @throws NullPointerException if partialFailureStatus is null.
+   */
+  public GoogleAdsFailureT getGoogleAdsFailure(Status partialFailureStatus) {
+    return partialFailureStatus.getDetailsCount() == 0
+        ? null
+        : getGoogleAdsFailure(partialFailureStatus.getDetails(0));
   }
 
   /** Checks if a result in a mutate response is a partial failure. */
@@ -192,8 +227,7 @@ public abstract class AbstractErrorUtils<
     private final String fieldName;
     private final Optional<Long> index;
 
-    public ErrorPath(
-        GoogleAdsErrorType error, String fieldName, Optional<Long> index) {
+    public ErrorPath(GoogleAdsErrorType error, String fieldName, Optional<Long> index) {
       this.error = error;
       this.fieldName = fieldName;
       this.index = index;
@@ -209,6 +243,18 @@ public abstract class AbstractErrorUtils<
 
     public Optional<Long> getIndex() {
       return index;
+    }
+
+    public boolean isOperationIndex() {
+      return "operations".equals(getFieldName()) || "mutate_operations".equals(getFieldName());
+    }
+  }
+
+  /** Indicates an error occurred deserializing an API error object. */
+  public static class DeserializeException extends RuntimeException {
+
+    public DeserializeException(Throwable cause) {
+      super(cause);
     }
   }
 }

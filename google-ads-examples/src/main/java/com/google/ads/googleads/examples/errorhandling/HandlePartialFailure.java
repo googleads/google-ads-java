@@ -22,6 +22,7 @@ import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
 import com.google.ads.googleads.v8.errors.GoogleAdsError;
 import com.google.ads.googleads.v8.errors.GoogleAdsException;
+import com.google.ads.googleads.v8.errors.GoogleAdsFailure;
 import com.google.ads.googleads.v8.resources.AdGroup;
 import com.google.ads.googleads.v8.services.AdGroupOperation;
 import com.google.ads.googleads.v8.services.AdGroupServiceClient;
@@ -30,7 +31,6 @@ import com.google.ads.googleads.v8.services.MutateAdGroupsRequest;
 import com.google.ads.googleads.v8.services.MutateAdGroupsResponse;
 import com.google.ads.googleads.v8.utils.ErrorUtils;
 import com.google.ads.googleads.v8.utils.ResourceNames;
-import com.google.protobuf.InvalidProtocolBufferException;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Arrays;
@@ -57,7 +57,7 @@ public class HandlePartialFailure {
     private Long campaignId;
   }
 
-  public static void main(String[] args) throws InvalidProtocolBufferException {
+  public static void main(String[] args) {
     HandlePartialFailureParams params = new HandlePartialFailureParams();
     if (!params.parseArguments(args)) {
       // Either pass the required parameters for this example on the command line, or insert them
@@ -96,8 +96,7 @@ public class HandlePartialFailure {
   }
 
   /** Runs the example. */
-  public void runExample(GoogleAdsClient googleAdsClient, long customerId, long campaignId)
-      throws InvalidProtocolBufferException {
+  public void runExample(GoogleAdsClient googleAdsClient, long customerId, long campaignId) {
     MutateAdGroupsResponse response = createAdGroups(googleAdsClient, customerId, campaignId);
 
     // Checks for existence of any partial failures in the response.
@@ -165,15 +164,18 @@ public class HandlePartialFailure {
 
   /** Displays the result from the mutate operation. */
   // [START handle_partial_failure_2]
-  private void printResults(MutateAdGroupsResponse response) throws InvalidProtocolBufferException {
+  private void printResults(MutateAdGroupsResponse response) {
     int operationIndex = 0;
     for (MutateAdGroupResult result : response.getResultsList()) {
       if (ErrorUtils.getInstance().isPartialFailureResult(result)) {
         // May throw on this line. Most likely this means the wrong version of the ErrorUtils
         // class has been used.
+        GoogleAdsFailure googleAdsFailure = ErrorUtils.getInstance()
+            .getGoogleAdsFailure(response.getPartialFailureError());
+
         for (GoogleAdsError error :
             ErrorUtils.getInstance()
-                .getGoogleAdsErrors(operationIndex, response.getPartialFailureError())) {
+                .getGoogleAdsErrors(operationIndex, googleAdsFailure)) {
           System.out.printf("Operation %d failed with error: %s%n", operationIndex, error);
         }
       } else {

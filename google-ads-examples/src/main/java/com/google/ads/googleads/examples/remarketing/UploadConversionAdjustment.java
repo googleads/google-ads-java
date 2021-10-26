@@ -21,6 +21,7 @@ import com.google.ads.googleads.lib.GoogleAdsClient;
 import com.google.ads.googleads.v8.enums.ConversionAdjustmentTypeEnum.ConversionAdjustmentType;
 import com.google.ads.googleads.v8.errors.GoogleAdsError;
 import com.google.ads.googleads.v8.errors.GoogleAdsException;
+import com.google.ads.googleads.v8.errors.GoogleAdsFailure;
 import com.google.ads.googleads.v8.services.ConversionAdjustment;
 import com.google.ads.googleads.v8.services.ConversionAdjustmentResult;
 import com.google.ads.googleads.v8.services.ConversionAdjustmentUploadServiceClient;
@@ -28,6 +29,7 @@ import com.google.ads.googleads.v8.services.GclidDateTimePair;
 import com.google.ads.googleads.v8.services.RestatementValue;
 import com.google.ads.googleads.v8.services.UploadConversionAdjustmentsRequest;
 import com.google.ads.googleads.v8.services.UploadConversionAdjustmentsResponse;
+import com.google.ads.googleads.v8.utils.ErrorUtils;
 import com.google.ads.googleads.v8.utils.ResourceNames;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -203,8 +205,11 @@ public class UploadConversionAdjustment {
 
       // Prints any partial errors returned.
       if (response.hasPartialFailureError()) {
-        System.out.printf(
-            "Partial error encountered: '%s'.%n", response.getPartialFailureError().getMessage());
+        GoogleAdsFailure googleAdsFailure =
+            ErrorUtils.getInstance().getGoogleAdsFailure(response.getPartialFailureError());
+        googleAdsFailure
+            .getErrorsList()
+            .forEach(e -> System.out.println("Partial failure occurred: " + e.getMessage()));
       } else {
         // Prints the result.
         ConversionAdjustmentResult result = response.getResults(0);
