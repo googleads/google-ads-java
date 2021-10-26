@@ -135,7 +135,11 @@ public abstract class AbstractErrorUtils<
   /**
    * Unpacks a single {@link GoogleAdsFailureT} from an {@link Any} instance.
    *
-   * @throws DeserializeException if an {@link InvalidProtocolBufferException} is encountered.
+   * @throws DeserializeException if an {@link InvalidProtocolBufferException} is encountered. This
+   *     would indicate that the detail object was not-null, but the contents couldn't be
+   *     deserialized to the target type. This may indicate that the target type is incorrect, or
+   *     that the content of the Any message is incorrect.
+   * @throws NullPointerException if detail is null.
    */
   public GoogleAdsFailureT getGoogleAdsFailure(Any detail) {
     try {
@@ -155,6 +159,7 @@ public abstract class AbstractErrorUtils<
    * @return the GoogleAdsFailure instance describing the partial failures, or null if none is
    *     found.
    * @throws DeserializeException if an {@link InvalidProtocolBufferException} is encountered.
+   * @throws NullPointerException if partialFailureStatus is null.
    */
   public GoogleAdsFailureT getGoogleAdsFailure(Status partialFailureStatus) {
     return partialFailureStatus.getDetailsCount() == 0
