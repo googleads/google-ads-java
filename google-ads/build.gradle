@@ -22,7 +22,6 @@ import com.google.common.collect.Sets
 
 plugins {
   id 'com.google.api-ads.java-conventions'
-  id 'signing'
   id 'com.google.protobuf' version '0.8.15'
   id "com.github.hierynomus.license-report" version "0.15.0"
   id 'com.github.johnrengelman.shadow' version '6.1.0'
@@ -311,50 +310,13 @@ task testShadowJar {
   }
 }
 
-def configurePom(publication, nameToSet, descriptionToSet) {
-  publication.pom {
-    name = nameToSet
-    description = descriptionToSet
-    url = 'https://github.com/googleads/google-ads-java'
-    licenses {
-      license {
-        name = 'The Apache License, Version 2.0'
-        url = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
-      }
-    }
-    scm {
-      connection = 'scm:git:https://github.com/googleads/google-ads-java'
-      developerConnection = 'scm:git:https://github.com/googleads/google-ads-java'
-      url = 'https://github.com/googleads/google-ads-java'
-    }
-    developers {
-      developer {
-        id = 'josh'
-        name = 'Josh Radcliff'
-        email = 'jradcliff@users.noreply.github.com'
-        organization = 'Google'
-        organizationUrl = 'https://www.google.com'
-      }
-      developer {
-        id = 'nick'
-        name = 'Nick Birnie'
-        email = 'nwbirnie@users.noreply.github.com'
-        organization = 'Google'
-        organizationUrl = 'https://www.google.com'
-      }
-      developer {
-        id = 'devin'
-        name = 'Devin Chasanoff'
-        email = 'devchas@users.noreply.github.com'
-        organization = 'Google'
-        organizationUrl = 'https://www.google.com'
-      }
-    }
-  }
-}
-
 publishing {
   publications {
+    maven(MavenPublication) { publication ->
+      configurePom(publication,
+          "Google Ads API client library for java - main library",
+          "Main library for the Google Ads API client library for Java")
+    }
     shadow(MavenPublication) { publication ->
       project.shadow.component(publication)
       // Publishes the javadoc + sources with the shadowjar.
@@ -372,19 +334,5 @@ publishing {
           "Google Ads API client library for java - shadow jar",
           "Provides a jar with all dependencies")
     }
-  }
-}
-
-signing {
-  sign publishing.publications.shadow
-}
-
-// Disables signing tasks except on sonatype deploy. Avoids failing build for
-// users without GPG configured.
-gradle.taskGraph.whenReady {
-  if (gradle.taskGraph.allTasks
-      .findAll { it.name.matches("publish.+ToSonatypeRepository") }
-      .isEmpty()) {
-    tasks.findByName("signShadowPublication").enabled = false
   }
 }
