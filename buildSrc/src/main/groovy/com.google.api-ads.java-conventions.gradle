@@ -48,10 +48,38 @@ javadoc {
   options.addStringOption('Xdoclint:none', '-quiet')
 }
 
+final def sonatypeCredentialsConfig = file(System.properties['user.home'] + '/.sonatype-creds')
+
 publishing {
   publications {
     maven(MavenPublication) {
       from(components.java)
+    }
+  }
+  repositories {
+    maven {
+      url 'https://oss.sonatype.org/service/local/staging/deploy/maven2'
+      name = "sonatype"
+
+      if (sonatypeCredentialsConfig.exists()) {
+        def props = new Properties()
+        sonatypeCredentialsConfig.withInputStream { props.load(it) }
+        credentials {
+          username props['username']
+          password props['password']
+        }
+      }
+    }
+  }
+}
+
+// Provide a helpful error message for missing sonatype credentials.
+tasks.findAll {
+  if (it.name.matches("publish.+ToSonatypeRepository")) {
+    it.doFirst {
+      if (!sonatypeCredentialsConfig.exists()) {
+        throw new GradleException("Unable to load Sonatype credentials from ${sonatypeCredentialsConfig}.")
+      }
     }
   }
 }
