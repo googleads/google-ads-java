@@ -1,0 +1,47 @@
+import java.util.regex.Pattern
+
+/** Defines a custom task for updating version numbers. */
+abstract class UpdateVersionTask extends DefaultTask {
+
+    static final def VERSION_REGEX = "([0-9]+)\\.([0-9]+)\\.([0-9]+)(-SNAPSHOT)?"
+
+    @Input
+    String newVersion
+
+    @InputFile
+    File propertiesFile = project.file("${project.projectDir}/gradle.properties")
+
+    @TaskAction
+    def update() {
+        if (newVersion == null) {
+            throw new GradleException("Need to specify newVersion")
+        }
+        if (propertiesFile == null) {
+            throw new GradleException("Need to specify gradlePropertiesFile")
+        }
+        if (!newVersion.matches(VERSION_REGEX)) {
+            throw new GradleException("Invalid format for -PnewVersion. Expecting: ${VERSION_REGEX}")
+        }
+        def toSet = new Properties()
+        propertiesFile.withInputStream { toSet.load(it) }
+        toSet.version = newVersion
+        propertiesFile.withOutputStream { toSet.store(it, "See LICENSE for license terms") }
+    }
+}
+
+/** Updates the version to version specified with -PnewVersion=foo. */
+task updateVersion(type: UpdateVersionTask) {
+    newVersion = project.properties.newVersion
+}
+
+/** Updates the version to the next snapshot. */
+task updateVersionToNextSnapshot(type: UpdateVersionTask) {
+    def current = new Properties()
+    propertiesFile.withInputStream { current.load(it) }
+    def matcher = Pattern.compile(VERSION_REGEX).matcher(current.version)
+    if (!matcher.find()) {
+        throw new GradleException("Current version cannot be parsed: ${current.version} expected match of: ${VERSION_REGEX}")
+    }
+    def toSet = "${matcher.group(1)}.${matcher.group(2)}.${Integer.parseInt(matcher.group(3)) + 1}-SNAPSHOT"
+    newVersion = toSet
+}
