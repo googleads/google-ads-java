@@ -314,7 +314,7 @@ publishing {
   publications {
     maven(MavenPublication) { publication ->
       configurePom(publication,
-          "Google Ads API client library for java - main library",
+          "Google Ads API client library for Java - main library",
           "Main library for the Google Ads API client library for Java")
     }
     shadow(MavenPublication) { publication ->
