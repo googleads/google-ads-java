@@ -174,12 +174,10 @@ task copyLicenses(type: Copy) {
   dependsOn 'generateLicenses'
   mustRunAfter 'createThirdPartyDirectory'
 
-  def inputFiles = tasks.generateLicenses.outputs.files.asFileTree.files
-      .findAll { it.path.contains "dependency-license"}
-
-  from inputFiles
+  from new File(tasks.generateLicenses.xmlDestination.getAbsolutePath(), "dependency-license.json"),
+          new File(tasks.generateLicenses.xmlDestination.getAbsolutePath(), "dependency-license.html"),
+          new File(tasks.generateLicenses.xmlDestination.getAbsolutePath(), "dependency-license.xml")
   into tasks.generateThirdPartyDirectory.thirdPartyDir
-  // Rename files to LICENSES.*
   eachFile {
     if (!path.contains("dependency-license")) {
       throw new GradleException(
@@ -191,11 +189,13 @@ task copyLicenses(type: Copy) {
     // Fails the build if we didn't copy everything. Gradle will fail silently if
     // it cannot copy one of the inputs which is dangerous when you're dealing
     // with legal obligations.
-    if (inputFiles.size() != inputs.sourceFiles.size()) {
+    //
+    // We're expecting exactly 3 input files, a JSON, XML and HTML version of
+    // the license report.
+    if (3 != inputs.sourceFiles.size()) {
       throw new GradleException(
-          "Failed to locate files to copy from. Expected: "
-              + inputFiles
-              + " but was: " + inputs.sourceFiles.toList())
+          "Failed to locate files to copy from. Expected: 3 but was: "
+                  + inputs.sourceFiles.toList())
     }
   }
 }
