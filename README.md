@@ -23,7 +23,7 @@ This project hosts the Java client library for the Google Ads API.
     <dependency>
       <groupId>com.google.api-ads</groupId>
       <artifactId>google-ads</artifactId>
-      <version>15.0.0</version>
+      <version>16.0.0</version>
     </dependency>
 
 ## Gradle dependency
